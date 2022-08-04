@@ -1,4 +1,8 @@
-# Feature release 10.1.12
+---
+uid: General_Feature_Release_10.1.12
+---
+
+# General Feature Release 10.1.12
 
 ## New features
 
@@ -46,39 +50,29 @@ When an Automation script is triggered as part of an redundancy group action, th
 
 #### DataMiner Cube - System Center: New & updated user permissions \[ID_30989\]\[ID_31208\]
 
-In the *Users/Groups* section of System Center, new user permissions have been added and existing user permissions have been updated.
+In the *Users/Groups* section of System Center, new user permissions have been added and existing user permissions have been updated.
 
 **New user permissions**
 
-- Modules \> Process Automation \> Add/Edit
-
-- Modules \> Process Automation \> Delete
-
-- Modules \> Process Automation \> Read
-
-- Modules \> Services \> Profiles \> Definitions \> Delete
-
-- Modules \> Services \> Profiles \> Instances \> Delete
+- Modules \> Process Automation \> Add/Edit
+- Modules \> Process Automation \> Delete
+- Modules \> Process Automation \> Read
+- Modules \> Services \> Profiles \> Definitions \> Delete
+- Modules \> Services \> Profiles \> Instances \> Delete
 
 **New and restructured user permissions**
 
-- Modules \> Profiles \> UI available
-
-- Modules \> Profiles \> All except instances \> Add/Edit
-
-- Modules \> Profiles \> All except instances \> Delete (NEW)
-
-- Modules \> Profiles \> Instances \> Add/Edit
-
-- Modules \> Profiles \> Instances \> Delete (NEW)
-
-- Modules \> Profiles \> Configure (with tooltip providing more information) (NEW)
+- Modules \> Profiles \> UI available
+- Modules \> Profiles \> All except instances \> Add/Edit
+- Modules \> Profiles \> All except instances \> Delete (NEW)
+- Modules \> Profiles \> Instances \> Add/Edit
+- Modules \> Profiles \> Instances \> Delete (NEW)
+- Modules \> Profiles \> Configure (with tooltip providing more information) (NEW)
 
 **Updated user permissions**
 
 - Users are no longer allowed to add an instance to a newly created service profile definition that has not yet been saved.
-
-- When a user who has been granted the Modules \> Services \> Profiles \> Definitions \> Delete permission deletes a service profile definition, all instances of that definition must also be deleted. A confirmation box will now appear to make the user aware of this. Also, a confirmation box will now appear when you try to delete definition instances.
+- When a user who has been granted the Modules \> Services \> Profiles \> Definitions \> Delete permission deletes a service profile definition, all instances of that definition must also be deleted. A confirmation box will now appear to make the user aware of this. Also, a confirmation box will now appear when you try to delete definition instances.
 
 #### UDP port 162 opened by default \[ID_31035\]
 
@@ -97,20 +91,24 @@ Users authenticated by Azure AD using SAML can now automatically be created and 
 To configure DataMiner to automatically (a) create users authenticated by Azure AD using SAML and (b) assign them to groups, proceed as follows:
 
 1. Make sure DataMiner is registered as an Enterprise Application in Azure AD.
-
-2. Go to *Users and groups* and add the necessary users and groups to the Enterprise Application.
-
+2. Go to *Users and groups* and add the necessary users and groups to the Enterprise Application.
 3. Go to *Single sign-on*, select *SAML*, and edit the following settings in “Basic SAML Configuration”:
 
-    - Set *Entity ID* to “https://\[your application name\]”.
-
+    - Set *Entity ID* to `https://[your application name]`.
     - Under *Reply URL*, specify the following URLs:
 
-```txt
-https://[your application name]/root/ https://[your application name]/ticketing https://[your application name]/jobs https://[your application name]/monitoring https://[your application name]/dashboard https://[your application name]/root https://[your application name]/login https://[your application name]
-```
+        ```txt
+        https://[your application name]/root/
+        https://[your application name]/ticketing
+        https://[your application name]/jobs
+        https://[your application name]/monitoring
+        https://[your application name]/dashboard
+        https://[your application name]/root
+        https://[your application name]/login
+        https://[your application name]
+        ```
 
-    - Set *Sign on URL* to “https://\[your application name\]”.
+    - Set *Sign on URL* to `https://[your application name]`.
 
 4. Go to *User Attributes & Claims* and add a group claim.
 
@@ -124,7 +122,7 @@ https://[your application name]/root/ https://[your application name]/ticketing 
     ```xml
     <DataMiner ...>
       ...
-      <ExternalAuthentication      type="SAML"      ipMetadata="[Path/URL of the identity provider’s metadata file]"      spMetadata="[Path/URL of the service provider’s metadata file]"      timeout="300">
+      <ExternalAuthentication      type="SAML"      ipMetadata="[Path/URL of the identity provider’s metadata file]"      spMetadata="[Path/URL of the service provider’s metadata file]"      timeout="300">
         <AutomaticUserCreation enabled="true">
           <EmailClaim>http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress</EmailClaim>
           <Givenname>http://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname</Givenname>
@@ -138,8 +136,8 @@ https://[your application name]/root/ https://[your application name]/ticketing 
 
     > [!NOTE]
     > -  In Azure AD, the ipMetadata URL can be found under *Single sign-on \> SAML Signing Certificate – App Federation Metadata*.
-    > -  If, in the *Groups* element, you set the *claims* attribute to “false”, no claims will be used to add users to groups. In that case, the name of the group as specified in Cube will be used instead. A user can only be added to a single group this way.
-    > -  If, in the *Groups* element, you set the *claims* attribute to “false”, the user information that is created will not be updated.
+    > -  If, in the *Groups* element, you set the *claims* attribute to “false”, no claims will be used to add users to groups. In that case, the name of the group as specified in Cube will be used instead. A user can only be added to a single group this way.
+    > -  If, in the *Groups* element, you set the *claims* attribute to “false”, the user information that is created will not be updated.
 
 7. Save the DataMiner.xml file.
 
@@ -168,19 +166,16 @@ In Visual Overview, you can now use the new “\[Element:\<input>,\<output>\]”
 \<input> can be set to
 
 - an element name, or
-
 - an element ID (dmaID/elementID).
 
 \<output> can be set to
 
 - “Name”, or
-
 - “ID”.
 
 Examples:
 
 - \[Element:MyElement,ID\] will be resolved to the ID of the element with the name “MyElement”.
-
 - \[Element:2/125,Name\] will be resolved to the name of the element with ID 2/125.
 
 #### DataMiner Cube - Visual Overview: Service connectivity chains now support “lite contributing” resources \[ID_31196\]
@@ -201,72 +196,45 @@ Available shortcuts:
 
 | Shortcut     | Alternative shortcut | Command       |
 |--------------|----------------------|---------------|
-| Ctrl-F       |                      | Find          |
+| Ctrl-F       |                      | Find          |
 | Ctrl-G       | F3                   | Find next     |
 | Shift-Ctrl-G | Shift-F3             | Find previous |
-| Escape       |                      | Cancel find   |
+| Escape       |                      | Cancel find   |
 | Ctrl-Plus    | Ctrl-MouseScrollUp   | Zoom in       |
 | Ctrl-Minus   | Ctrl-MouseScrollDown | Zoom out      |
-| Ctrl-0       |                      | Reset zoom    |
+| Ctrl-0       |                      | Reset zoom    |
 
 #### Visual Overview: New icons added to Icons stencils \[ID_31271\]
 
 The following icons have been added to the Icons stencil:
 
 - Action
-
 - Cloudy
-
 - Cloud Formation
-
 - Response
-
 - Request
-
 - Media Connect
-
 - Groups
-
 - Media Live
-
 - Media Package
-
 - Mist
-
 - Moon
-
 - Pairs
-
 - Parameter
-
 - Rain And Snow
-
 - Qactions
-
 - Rain
-
 - Rain Percentage
-
 - Snow
-
 - Semi Cloudy
-
 - Storm
-
 - Snowflake
-
 - Sunset
-
 - Sun
-
 - Umbrella
-
 - Thunder
-
 - Wind Direction
-
 - Weather Forecast
-
 - Wind
 
 #### Legacy Reports, Dashboards and Annotations modules will by default be hidden in new installations \[ID_31329\]
@@ -284,18 +252,13 @@ It is now possible to share dashboards with other users via the DataMiner Cloud.
 **Prerequisites:**
 
 - The DataMiner Cloud Pack must be installed on the DataMiner Agent.
-
 - The DataMiner Agent must be connected to the DataMiner Cloud.
-
 - To be able to share items, users must have the following permissions:
 
-    - Modules \> Reports & Dashboards \> Dashboards \> Edit
-
-    - General \> Live sharing \> Share
-
-    - General \> Live sharing \> Edit
-
-    - General \> Live sharing \> Unshare
+    - Modules \> Reports & Dashboards \> Dashboards \> Edit
+    - General \> Live sharing \> Share
+    - General \> Live sharing \> Edit
+    - General \> Live sharing \> Unshare
 
 **To share a dashboard:**
 
@@ -303,13 +266,13 @@ It is now possible to share dashboards with other users via the DataMiner Cloud.
 
 2. Click the “...” button in the top-right corner of the dashboard, and select *Start sharing*.
 
-3. If it is the first time you are sharing the dashboard, you may be asked to confirm that you want to link your account to the cloud. Select *I want to link the above users* and click *Link accounts*.
+3. If it is the first time you are sharing the dashboard, you may be asked to confirm that you want to link your account to the cloud. Select *I want to link the above users* and click *Link accounts*.
 
 4. In the pop-up window, fill in the email address of the person you want to share the dashboard with.
 
-5. Optionally, in the *Message* field, add a message you want to send to the person you are sharing the dashboard with, in order to provide additional information.
+5. Optionally, in the *Message* field, add a message you want to send to the person you are sharing the dashboard with, in order to provide additional information.
 
-6. If you do not want the dashboard to remain permanently available, select the *Expires* option and specify the expiration date.
+6. If you do not want the dashboard to remain permanently available, select the *Expires* option and specify the expiration date.
 
 7. Click *Share*. An email will be sent to the person you are sharing the dashboard with, to inform them that they now have access to the dashboard.
 
@@ -320,7 +283,7 @@ It is now possible to share dashboards with other users via the DataMiner Cloud.
 
 **To access the Sharing module that lists the dashboards that others have shared with you:**
 
-1. Open an internet browser (other than Microsoft Internet Explorer), go to<br>https://dataminer.services/, and sign in.
+1. Open an internet browser (other than Microsoft Internet Explorer), go to <https://dataminer.services/>, and sign in.
 
 2. On the landing page of the DataMiner Cloud Platform, click *Sharing*.<br>You will now see all data that others have shared with you.
 
@@ -354,7 +317,7 @@ An error will now be thrown when you try to add a file that is larger than the a
 
 #### DataMiner landing page: Browser title changed to “DataMiner” \[ID_31373\]
 
-The browser title of the DataMiner landing page (e.g. https://\<MyDMA>/root/) has been changed from “DataMiner Services” to “DataMiner”.
+The browser title of the DataMiner landing page (e.g. `https://<MyDMA>/root/`) has been changed from “DataMiner Services” to “DataMiner”.
 
 Also, the error message shown when you try to log in to a web application with a user account that has not been granted the “DataMiner Web Apps” user permission has now been changed to “You have no access to the DataMiner Web Apps”.
 
@@ -442,11 +405,8 @@ A number of enhancements have been made to the automatic incident tracking featu
 In DataMiner version 10.1.9, the following methods were introduced to create, update, delete and assign alarm templates:
 
 - CreateAlarmTemplate
-
 - UpdateAlarmTemplate
-
 - DeleteAlarmTemplate
-
 - AssignAlarmTemplate
 
 From now on, if no baseline configuration is provided in the request, the alarm information configured in the protocol for the chosen parameter will be passed along, and if no alarm information could be found, then a default baseline will be passed along instead.
@@ -470,7 +430,6 @@ A number of minor enhancements have been made to a number of DataMiner processes
 When a Cassandra cluster is starting up, the following scheduled tasks will automatically be deleted in Windows Task Scheduler:
 
 - DBGatewayMaintenance/SLDefaultCassandraCompaction
-
 - DBGatewayMaintenance/SLCassandraDefaultRepair
 
 #### DataMiner Cube - Update Center: Enhanced error handling \[ID_31191\]
@@ -484,7 +443,6 @@ Notice events will now be generated to inform users in case of reduced accuracy 
 Other changes:
 
 - The pattern matching notice events that inform users when the memory limit has been reached will now be cleared as soon as memory usage drops below the limit.
-
 - A notice event will now also be generated when the number of trended numeric parameters is too high to be monitored by behavioral anomaly detection and proactive cap detection. The maximum number of parameters that can be monitored by those features is 100,000. When this limit is reached, the rest of the parameters will be ignored.
 
 #### BPA framework: Cluster BPAs can now execute code across the entire cluster \[ID_31266\]
@@ -493,7 +451,7 @@ Cluster BPAs can now call an InvokeCluster method to execute code across the ent
 
 #### Standalone BPA Executor: UI enhancements \[ID_31303\]
 
-In the *Run from DMA* tab, the *Delete* and *Save* commands have been removed from the right-click menu and replaced by the following buttons:
+In the *Run from DMA* tab, the *Delete* and *Save* commands have been removed from the right-click menu and replaced by the following buttons:
 
 | Button             | Function                                |
 |--------------------|-----------------------------------------|
@@ -501,7 +459,7 @@ In the *Run from DMA* tab, the *Delete* and *Save* commands have been removed 
 | Save Tests Results | Save the results of all selected tests. |
 
 > [!NOTE]
-> The *Get Last Results* button will now only fetch the most recent results for any selected tests that are run on a schedule.
+> The *Get Last Results* button will now only fetch the most recent results for any selected tests that are run on a schedule.
 
 #### DataMiner Cube - Services app: Enhanced performance when saving all changes made to ser­vice definitions \[ID_31355\]
 
@@ -601,11 +559,8 @@ Due to a deserializing/serializing issue, in some cases, datetime values could b
 Up to now, in some cases, the following methods would return an empty array, even when a valid timespan had been specified.
 
 - GetInformationEvents
-
 - GetInformationEventsV2
-
 - GetInformationEventsSorted
-
 - GetInformationEventsSortedV2
 
 #### DataMiner Cube - Profiles: Profile parameter mediation snippet would fail to compile \[ID_31197\]
@@ -653,11 +608,8 @@ In some cases, the “Auto RBW Factor” and “Auto VBW Factor” values would 
 The initial checked/unchecked state of a non-recursive tree item would be incorrect when
 
 - the state of the item in question was “checked”,
-
 - there was no recursive checking,
-
 - the item had children, and
-
 - none of those children were checked.
 
 #### Interactive Automation scripts: Dialog items could incorrectly inherit the dimensions of a dialog item shown earlier \[ID_31311\]
@@ -678,7 +630,7 @@ When the alarm focus feature was used for the first time, in some cases, all ala
 
 #### DataMiner Cube - Services app: Contents of “Configure groups” window would be arranged incorrectly \[ID_31344\]
 
-When you right-clicked a Service Definition diagram and selected *Configure groups*, the contents of the *Configure groups* window would be arranged incorrectly. For example, the *Add group* button would be positioned at an incorrect location.
+When you right-clicked a Service Definition diagram and selected *Configure groups*, the contents of the *Configure groups* window would be arranged incorrectly. For example, the *Add group* button would be positioned at an incorrect location.
 
 #### Jobs app: Date values saved in UTC format would be parsed incorrectly \[ID_31345\]
 
@@ -702,7 +654,7 @@ When an SLAnalytics feature had been restarted or when a setting of such a featu
 
 #### DataMiner Cube - Alarm Console: “Saved filters” option would incorrectly be missing on systems with a MySQL database \[ID_31375\]
 
-When, on a system with a MySQL database, you selected *Apply filter...* in a newly created alarm tab, in some cases, the *Saved filters* options would incorrectly be missing.
+When, on a system with a MySQL database, you selected *Apply filter...* in a newly created alarm tab, in some cases, the *Saved filters* options would incorrectly be missing.
 
 #### DataMiner Cube - Visual Overview: Sorting of automatically generated shapes sorted by alarm severity would not get updated when the alarm level of any of the shapes was updated \[ID_31378\]
 

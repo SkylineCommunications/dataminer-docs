@@ -1,4 +1,8 @@
-# Feature release 10.1.10
+---
+uid: General_Feature_Release_10.1.10
+---
+
+# General Feature Release 10.1.10
 
 ## New features
 
@@ -9,13 +13,9 @@
 The following improvements have been implemented to average trending:
 
 - Because of improved performance and throughput, you will now be able to activate average trending for a larger number of parameters.
-
 - Previously, average trending was discouraged in case there were a lot of different instances of a specific parameter. This is no longer the case. You can now use average trending even if millions of instances of the parameter are polled.
-
 - Unexpected gaps in trend graphs, e.g. because an element is started or stopped, or because a parameter is cleared, will now be prevented.
-
 - Issues with history sets not being averaged, e.g. when an element had been recently restarted, will now be prevent.
-
 - Average data will be available more quickly. When parameter changes are averaged from 00:00:00 to 00:05:00, the average point is now guaranteed to become available in the database between 00:06:00 and 00:07:00, while previously this could take up to 5 minutes or longer. However, note that this does not apply if the parameter changes were pushed as a history set.
 
 However, note that this results in a number of breaking changes:
@@ -31,7 +31,6 @@ However, note that this results in a number of breaking changes:
 Two special types of field descriptors have been added to the DataMiner Object Model:
 
 - DomInstanceFieldDescriptor
-
 - ElementFieldDescriptor
 
 From now on, the following special types of field descriptors are available:
@@ -54,14 +53,13 @@ When a calculated baseline value is outside the baseline value range, from now o
 Examples:
 
 - If the baseline value range is 10-50 and the calculated value is 7, it will be set to 10.
-
 - If the baseline value range is 10-50 and the calculated value is 58, it will be set to 50.
 
 ### DMS Security
 
 #### New user permission to send emails via DataMiner \[ID_30425\]
 
-A new user permission *Email* > *Send via DataMiner System* is now available under the general user permissions in Users/Groups section of System Center. This user permission determines whether a user is allowed to send emails via the DataMiner System.
+A new user permission *Email* > *Send via DataMiner System* is now available under the general user permissions in Users/Groups section of System Center. This user permission determines whether a user is allowed to send emails via the DataMiner System.
 
 ### DMS Protocols
 
@@ -78,7 +76,7 @@ To use this new polling scheme, add the “multipleGet” to the SNMP options of
     ```xml
     <SNMP>
       <Enabled>true</Enabled>
-      <OID type="complete"     options="instance;multipleGet">1.3.6.1.4.1.34086.2.2.17.5.1</OID>
+      <OID type="complete"     options="instance;multipleGet">1.3.6.1.4.1.34086.2.2.17.5.1</OID>
     </SNMP>
     ```
 
@@ -87,7 +85,7 @@ To use this new polling scheme, add the “multipleGet” to the SNMP options of
     ```xml
     <SNMP>
       <Enabled>true</Enabled>
-      <OID type="complete"     options="instance;multipleGet:5">1.3.6.1.4.1.34086.2.2.17.5.1</OID>
+      <OID type="complete"     options="instance;multipleGet:5">1.3.6.1.4.1.34086.2.2.17.5.1</OID>
     </SNMP>
     ```
 
@@ -104,7 +102,7 @@ It is now possible to make an element shape in Visual Overview show the paramete
 
 To retrieve the value, DataMiner will use the trend record stored for the selected time. To know whether real-time or average trending should be retrieved, the latest trending configuration will be taken into consideration. If both types of trending are available, by default real-time trending will be used.
 
-To configure this history mode, add the shape data *HistoryMode* to the element shape or to the entire page. The value of the shape data field should consist of a state indication and a timestamp, separated by a pipe character ("\|"). The *State* can be *On* or *Off*. *On* means history mode is active, *Off* means real-time alarm information should be shown instead. Both the state value and the timestamp value can be configured using placeholders.
+To configure this history mode, add the shape data *HistoryMode* to the element shape or to the entire page. The value of the shape data field should consist of a state indication and a timestamp, separated by a pipe character ("\|"). The *State* can be *On* or *Off*. *On* means history mode is active, *Off* means real-time alarm information should be shown instead. Both the state value and the timestamp value can be configured using placeholders.
 
 For example:
 
@@ -112,19 +110,19 @@ For example:
 |------------------|------------------------------------|
 | HistoryMode      | State=On\|TimeStamp=\[var:myTime\] |
 
-A number of options can also be added to the *HistoryMode* shape, again using a pipe character (“\|”) as separator:
+A number of options can also be added to the *HistoryMode* shape, again using a pipe character (“\|”) as separator:
 
 | HistoryMode option         | Description                                                                                                                                                                                                                                                                                     |
 |----------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | NoDataValue=               | This option allows you to specify the text that should be displayed in case no trending is available. If this option is not specified, the default value “N/A” is displayed.<br> For example: *State=On\|TimeStamp=\[var:myTime\]\|NoDataValue=\<No data available>* |
-| TrendDataType              | This option allows you to determine which kind of trend data should be used, if available: *Realtime* (default), *Average* or *RealtimeAndAverage*.                                                |
-| AverageTrendDataIndication | This option allows you to specify a prefix to the parameter value in case it represents an average value. By default, no prefix is shown. <br> For example:  *State=On\|TimeStamp=\[var:myTime\]\|<br>AverageTrendDataIndication=\[AVG\]*                            |
+| TrendDataType              | This option allows you to determine which kind of trend data should be used, if available: *Realtime* (default), *Average* or *RealtimeAndAverage*.                                                |
+| AverageTrendDataIndication | This option allows you to specify a prefix to the parameter value in case it represents an average value. By default, no prefix is shown. <br> For example:  *State=On\|TimeStamp=\[var:myTime\]\|<br>AverageTrendDataIndication=\[AVG\]*                            |
 
 > [!NOTE]
 > - You can override history mode on shape level. In case there are shapes within shapes, the lowest level will be checked first. However, the full shape data of this lowest level is used, so you must make sure that the shape data is fully configured even if you only want to change one option (e.g. NoDataValue).
 > - At present, for history values no unit is displayed. In addition, only updating the element or parameter shape data will not update the history mode result.
 
-If you are using a datetime control to set the date and time, use the *SetVarOptions* shape data and set the value to *Control= DateTime*. Optionally, you can also add *DateTimeCulture=* followed by *Current* or *Invariant*. The latter is the default value.
+If you are using a datetime control to set the date and time, use the *SetVarOptions* shape data and set the value to *Control= DateTime*. Optionally, you can also add *DateTimeCulture=* followed by *Current* or *Invariant*. The latter is the default value.
 
 For example:
 
@@ -133,12 +131,10 @@ For example:
 | SetVar           | myTime                                    |
 | SetVarOptions    | Control=DateTime\|DateTimeCulture=Current |
 
-The following new placeholders are now also supported in an *Element* shape. These will only contain values in case history parameter values based on average trend data are displayed:
+The following new placeholders are now also supported in an *Element* shape. These will only contain values in case history parameter values based on average trend data are displayed:
 
 - \[average value\]
-
 - \[minimum value\]
-
 - \[maximum value\]
 
 #### Aggregation rule conditions can now be specified in the form of a regular expression \[ID_30640\]
@@ -150,7 +146,6 @@ Aggregation rule conditions can now be specified in the form of a regular expres
 2. Choose “by value” or “by reference”.
 
     - If you chose “by value” (i.e. the default setting), then enter a regular expression.
-
     - If you chose “by reference”, then select a single-value parameter of type “string” containing a regular expression.
 
 #### DataMiner Cube will now take into account ResourceManagerEventMessages sent when ReservationInstance properties were updated \[ID_30668\]
@@ -224,19 +219,18 @@ Full syntax: \[Reservation:\<Service ID or Booking ID>,ServiceDefinitionID\]
 
 #### Interactive Automation scripts: New "TreeViewItemCheckingBehavior" property of TreeViewItem \[ID_29993\]\[ID_30603\]
 
-You can now configure what happens when you select a tree view item in an interactive Automation script, using the new *TreeViewItemCheckingBehavior* enum property of the *TreeViewItem* object.
+You can now configure what happens when you select a tree view item in an interactive Automation script, using the new *TreeViewItemCheckingBehavior* enum property of the *TreeViewItem* object.
 
 This property can have the following values:
 
 - *FullRecursion*: All child items will automatically be selected when this item is selected, and vice versa.
-
 - *None*: Only this item will be selected. The selection state of child items will not change. In addition, if all child items are selected, this tree view item will not be automatically selected.
 
 Regardless of which type of behavior you choose, if one or more child items of a tree view item are selected, the checkbox of the tree view item will be colored.
 
 For example:
 
-```txt
+```csharp
 UIBuilder uib = new UIBuilder();
     uib.Title = "Treeview - Regular";
     uib.RequireResponse = true;
@@ -255,10 +249,10 @@ UIBuilder uib = new UIBuilder();
             {
                 new TreeViewItem("Brian", "Brian (Member)", false) { CheckingBehavior = TreeViewItem.TreeViewItemCheckingBehavior.None },
                 new TreeViewItem("Gilles", "Gilles (Member)", true) { CheckingBehavior = TreeViewItem.TreeViewItemCheckingBehavior.None },
-                new TreeViewItem("KevinM", "KevinM  (Member)", true) { CheckingBehavior = TreeViewItem.TreeViewItemCheckingBehavior.None },
-                new TreeViewItem("KevinV", "KevinV  (Member)", false) { CheckingBehavior = TreeViewItem.TreeViewItemCheckingBehavior.None },
-                new TreeViewItem("Seba", "Seba  (Member)", false) { CheckingBehavior = TreeViewItem.TreeViewItemCheckingBehavior.None },
-                new TreeViewItem("Ward", "Ward  (Member)", true) { CheckingBehavior = TreeViewItem.TreeViewItemCheckingBehavior.None },
+                new TreeViewItem("KevinM", "KevinM  (Member)", true) { CheckingBehavior = TreeViewItem.TreeViewItemCheckingBehavior.None },
+                new TreeViewItem("KevinV", "KevinV  (Member)", false) { CheckingBehavior = TreeViewItem.TreeViewItemCheckingBehavior.None },
+                new TreeViewItem("Seba", "Seba  (Member)", false) { CheckingBehavior = TreeViewItem.TreeViewItemCheckingBehavior.None },
+                new TreeViewItem("Ward", "Ward  (Member)", true) { CheckingBehavior = TreeViewItem.TreeViewItemCheckingBehavior.None },
             }) { CheckingBehavior = TreeViewItem.TreeViewItemCheckingBehavior.None },
             new TreeViewItem("Nitro", "Nitro (Squad)", true, new List<TreeViewItem>
             {
@@ -277,32 +271,22 @@ UIBuilder uib = new UIBuilder();
 
 #### Interactive Automation scripts: Input components now have a “WantsOnFocusLost” property & other input component enhancements \[ID_30638\]
 
-In an interactive Automation script that is used in the DataMiner web apps, the following components now have a *WantsOnFocusLost* property. If you set this property to true, then an *OnChange* event will be triggered when the component loses focus.
+In an interactive Automation script that is used in the DataMiner web apps, the following components now have a *WantsOnFocusLost* property. If you set this property to true, then an *OnChange* event will be triggered when the component loses focus.
 
 - Calendar
-
 - Checkbox
-
 - CheckboxList
-
 - Dropdown
-
 - Numeric
-
 - Passwordbox
-
 - RadioButtonList
-
 - Textbox
-
 - Time
 
 Other enhancements:
 
 - A Dropdown component will now keep the focus after an option was selected. This will enable users to still browse through the options using the arrow keys even when the options popup window is closed.
-
 - In a Checkbox, a CheckboxList or a RadioButtonList component, users can now select or clear options using the spacebar.
-
 - In a CheckboxList or a RadioButtonList component, users can now go from one checkbox or radio button to another using the TAB keys.
 
 #### Interactive Automation scripts: File selector component can now be configured to only allow a script to continue after a file has been uploaded \[ID_30728\]
@@ -311,7 +295,7 @@ In an interactive Automation script that is used in Dashboards, you can now conf
 
 For example:
 
-```txt
+```csharp
 UIBlockDefinition uibDef = new UIBlockDefinition();
 uibDef.Type = UIBlockType.FileSelector;
 ...
@@ -328,7 +312,7 @@ The SetParameter and SetParameterRow methods of the DataMiner Web Services API v
 
 #### Automation - Service & Resource Management: Option to return time-dependent capabilities when requesting eligible resources \[ID_30576\]
 
-When the eligible resources for a booking are requested, it is now possible to calculate all booked time-dependent capabilities for the eligible resources. For this purpose, the *CalculateAllCapabilities* flag should be set to true on *EligibleResourceContext*. This feature is intended to be used in the DataMiner Booking Manager app.
+When the eligible resources for a booking are requested, it is now possible to calculate all booked time-dependent capabilities for the eligible resources. For this purpose, the *CalculateAllCapabilities* flag should be set to true on *EligibleResourceContext*. This feature is intended to be used in the DataMiner Booking Manager app.
 
 ### DMS Mobile Gateway
 
@@ -339,19 +323,16 @@ It is now possible to get and set values of table column parameters using text m
 Syntax:
 
 - GET:\<ElementName>:\<ParameterName>\|\<TableIndex>
-
 - SET:\<ElementName>:\<ParameterName>\|\<TableIndex>:\<Value>
 
 Examples:
 
 - Use “GET:MyElement:MyParam\|10113” to get the value stored in row 10113 of parameter “MyParam” of element “MyElement”.
-
 - Use “SET:MyElement:MyParam\|10113:100” to set the value stored in row 10113 of parameter “MyParam” of element “MyElement” to 100.
 
 Using special characters:
 
 - If an argument contains a colon (“:”), a backslash character (“\\”) must be put in front of it. For example, the command “SET:MyElement:MyParam\|a\\:b:100” will set the value stored in row a:b to 100.
-
 - If the table index contains a pipe character (“\|”), a backslash character (“\\”) must be put in front of it. For example, the command “SET:MyElement:MyParam\|a\\:b\\\|c:100” will set the value stored in row a:b\|c to value 100.
 
 > [!WARNING]
@@ -390,9 +371,7 @@ In DataMiner Cube, the Resource Manager and the Booking Manager always run side 
 A number of small improvements have been implemented to the list of parameters in the Profiles module:
 
 - When you open the list of parameters, by default no parameter will be selected.
-
 - When you create a new parameter, that parameter is automatically selected.
-
 - It is now possible to search for a parameter in the list by typing its first characters.
 
 #### Service & Resource Management: Interface state calculation for virtual function interfaces dis­abled \[ID_30537\]
@@ -412,9 +391,7 @@ If a password is encrypted in DB.xml but for some reason (e.g. syncing issue) Da
 When unsupported characters are found in TicketFieldDescriptors at the start of a ticket data migration from Cassandra to Elasticsearch, from now on,
 
 - a notice with a link to a “known issues” Dojo article will be generated,
-
 - an entry listing the invalid TicketFieldDescriptors will be added to the SLMigrationManager.txt log file, and
-
 - the migration will be aborted.
 
 See also: <https://community.dataminer.services/documentation/migration-of-ticketing-data-from-cassandra-to-elasticsearch-fails/>
@@ -466,7 +443,6 @@ In some cases, it would no longer be possible to disable a Failover setup.
 From now on, when you disable a Failover setup
 
 - the offline agent will be reset to factory settings using SLReset, and
-
 - the online agent will be reconfigured to become a standalone agent.
 
 #### Not possible to log in to web app using SAML \[ID_30469\]
@@ -503,7 +479,7 @@ When an exception was thrown because invalid characters were used in dictionary 
 
 #### Automation: CheckboxList and RadiobuttonList not decoding "\\" correctly \[ID_30605\]
 
-In an interactive Automation script, it could occur that the *CheckboxList* and *RadiobuttonList* components did not correctly decode a backslash ("\\") character.
+In an interactive Automation script, it could occur that the *CheckboxList* and *RadiobuttonList* components did not correctly decode a backslash ("\\") character.
 
 #### Automation: Problems with datetime filters in scripts \[ID_30611\]
 
@@ -523,7 +499,7 @@ In some rare cases, an unhandled exception could cause a problem in the SLNet pr
 
 #### DataMiner Cube: /Bootstrap command line argument not copying files \[ID_30632\]
 
-In some cases, it could occur that the */Bootstrap* command line argument for the DataMiner Cube launcher did not copy the files *DataMinerCube.exe.config* and *CubeLauncherConfig.json* to the target location.
+In some cases, it could occur that the */Bootstrap* command line argument for the DataMiner Cube launcher did not copy the files *DataMinerCube.exe.config* and *CubeLauncherConfig.json* to the target location.
 
 #### DataMiner Cube - Spectrum Analysis: Problem when retrieved client session data contained duplicate keys \[ID_30644\]
 
@@ -531,14 +507,14 @@ When you open a spectrum analyzer element in Cube, it will retrieve all client s
 
 #### GetAlarmFilterResponse and GetTrendFilterResponse messages caused protocol buffer serial­ization errors \[ID_30650\]
 
-In some cases, it could occur that the *GetAlarmFilterResponse* and *GetTrendFilterResponse* messages failed to be serialized even though these were marked as eligible for protocol buffer serialization. An error similar to the following could be displayed in the Cube logging:
+In some cases, it could occur that the *GetAlarmFilterResponse* and *GetTrendFilterResponse* messages failed to be serialized even though these were marked as eligible for protocol buffer serialization. An error similar to the following could be displayed in the Cube logging:
 
 ```txt
 Message : Index was outside the bounds of the array.
 Exception : (Code: 0x80131508) Skyline.DataMiner.Net.Exceptions.DataMinerException: Index was outside the bounds of the array. ---> System.IndexOutOfRangeException: Index was outside the bounds of the array.
-   at System.Collections.Generic.List\`1.Add(T item)
-   at Skyline.DataMiner.Net.Serialization.ProtoBufSerializationManager.Log(String method, String text)
-   at Skyline.DataMiner.Net.Serialization.ProtoBufSerializationManager.ProtoBufPackMessage(DMSMessage rawMessage)
+   at System.Collections.Generic.List\`1.Add(T item)
+   at Skyline.DataMiner.Net.Serialization.ProtoBufSerializationManager.Log(String method, String text)
+   at Skyline.DataMiner.Net.Serialization.ProtoBufSerializationManager.ProtoBufPackMessage(DMSMessage rawMessage)
 ```
 
 The scenarios where these messages cannot be serialized will now be handled better, so that they can no longer cause errors. In addition, to make it easier to troubleshoot errors with protocol buffer serialization, a new *SLProtobufSerialization.txt* log file is now available.
@@ -579,7 +555,7 @@ If a table component showed a query with multiple pages of data, it could occur 
 
 The State component would incorrectly show the ID of a GQI query instead of its display name.
 
-From now on, when you select the *Display query name* option in the *Layout* tab of the State component, the component will show the display name of the query.
+From now on, when you select the *Display query name* option in the *Layout* tab of the State component, the component will show the display name of the query.
 
 #### Deadlock in SLDataGateway could cause data to not get written to the database \[ID_30717\]
 

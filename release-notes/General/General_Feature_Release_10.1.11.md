@@ -1,4 +1,8 @@
-# Feature release 10.1.11
+---
+uid: General_Feature_Release_10.1.11
+---
+
+# General Feature Release 10.1.11
 
 ## New features
 
@@ -25,7 +29,7 @@ A DomBehaviorDefinition object has the following properties.
 | Status<br>Transitions            | List\<DomStatus<br>Transition>                    | No         | A list of all allowed status transitions.                                                                         |
 
 > [!NOTE]
-> Properties of which the *Filterable* column contains “Yes” can be used for filtering using DomBehaviorDefinitionExposers.
+> Properties of which the *Filterable* column contains “Yes” can be used for filtering using DomBehaviorDefinitionExposers.
 
 **DomBehaviorDefinition inheritance**
 
@@ -34,7 +38,6 @@ One DomBehaviorDefinition can inherit from another.
 Limitations:
 
 - A DomBehaviorDefinition can only inherit from the DomBehaviorDefinition that is specified in the ModuleBehaviorDefinition property of the ModuleSettings object.
-
 - A DomBehaviorDefinition that inherits from another DomBehaviorDefinition can only contain an ID, a parent ID and a list of additional DomStatusSectionDefinitionLinks to SectionDefinitions that are not defined in the module definition. Adding additional statuses or status transitions is not allowed.
 
 **Requirements**
@@ -42,15 +45,10 @@ Limitations:
 Create & update:
 
 - The string IDs of the statuses and status transitions must not contain duplicates and should all be lowercase.
-
 - When a ModuleDomBehaviorDefinition has been defined, the definition that is being created or updated must inherit from it. When no ModuleDomBehaviorDefinition has been defined, the ParentId property should be empty.
-
 - The InitialStatusId property must contain the ID of an existing status.
-
 - All status transitions must contain IDs of existing statuses.
-
 - For each SectionDefinition/status pair, only one DomStatusSectionDefinitionLink is allowed.
-
 - All DomStatusSectionDefinitionLinks must refer to existing status IDs.
 
 Delete:
@@ -81,7 +79,6 @@ The TraceData can contain one or more DomDefinitionErrors. For each error, the I
 Security checks are performed on CRUD actions when user permissions are configured on the DomManagerSecuritySettings (of the ModuleSettings).
 
 - To read DomBehaviorDefinitions, users must be granted the DomManagerSecuritySettings.<br>ViewPermission.
-
 - To create, update or delete DomBehaviorDefinitions, users must be granted the DomManagerSecuritySettings.ConfigurePermission.
 
 > [!NOTE]
@@ -103,11 +100,8 @@ To set up a status system, do the following:
 1. Create a new DomBehaviorDefinition.
 
     - Add all statuses.
-
     - Define the initial status.
-
     - Add all status transitions.
-
     - Configure all fields.
 
 2. Link a DomDefinition to the DomBehaviorDefinition.
@@ -118,7 +112,7 @@ Configuration:
 
 - To configure the statuses, for each status add a DomStatus object to the Statuses list property of the DomBehaviorDefinition. A DomStatus has the following properties:
 
-    | Property  | Type   | Explanation                                                                                  |
+    | Property    | Type   | Explanation                                                                                  |
     |-------------|--------|----------------------------------------------------------------------------------------------|
     | Id          | string | The ID of the status, consisting of lowercase characters only.<br> Example: “initial_status” |
     | DisplayName | string | The display name of the status.<br> Example: “Initial”                                       |
@@ -176,7 +170,7 @@ If a DomInstance is created without a status, the DomManager will automatically 
 
 Transitioning to another status can only be done by means of a specific transition request. Changing the status by performing a status update is not allowed. A transition request requires the ID of the DomInstance and the ID of the transition. These requests can be sent using the helper.
 
-```txt
+```csharp
 domHelper.DomInstances.DoStatusTransition(domInstance.ID, "initial_to_acceptance");
 ```
 
@@ -217,7 +211,7 @@ Currently, you can only define actions of type ExecuteScriptDomActionDefinition,
 
 The scripts that will be executed using this action require a custom entry point of type OnDomAction. This entry point method should have two arguments: the IEngine object and an ExecuteScriptDomActionContext object. See the following example.
 
-```txt
+```csharp
 using Skyline.DataMiner.Automation;
 using Skyline.DataMiner.Net.Apps.DataMinerObjectModel.Actions;
 namespace DOM_Action_Example
@@ -248,7 +242,7 @@ If the executed script added script output to the engine object, that output wil
 
 Action script code snippet:
 
-```txt
+```csharp
 [AutomationEntryPoint(AutomationEntryPointType.Types.OnDomAction)]
 public void OnDomActionMethod(IEngine engine, ExecuteScriptDomActionContext context)
 {
@@ -260,7 +254,7 @@ public void OnDomActionMethod(IEngine engine, ExecuteScriptDomActionContext cont
 
 Calling script code snippet:
 
-```txt
+```csharp
 // Execute action
 domHelper.DomInstances.ExecuteAction(domInstance.ID, "do_something_action");
 // Check if the TraceData contains info
@@ -277,7 +271,7 @@ if (info != null && info.InfoType == DomActionInfo.Type.ScriptOutput)
 
 An action can be executed by calling the ExecuteAction method on the DomInstance CrudHelperComponent of the DomHelper. The following IDs must be passed along: the ID of the DomInstance for which the action will be executed and the ID of the action that has to be executed.
 
-```txt
+```csharp
 domHelper.DomInstances.ExecuteAction(domInstance.ID, "some_action_id");
 ```
 
@@ -296,18 +290,17 @@ The execute call will return TraceData when the action failed or when the condit
 When you define an action, you can specify the following types of conditions:
 
 - StatusCondition
-
 - ValidForStatusTransitionCondition
 
 A StatusCondition is a type of condition that is met when a DomInstance has one of the defined statuses. The list of required statuses can be specified via the constructor or by adding them to the Statuses list property. When this type of condition is not met, no extra TraceData will be returned.
 
-```txt
+```csharp
 var condition = new StatusCondition(new List<string> { "first_status" });
 ```
 
 A ValidForStatusTransitionCondition is a type of condition that is met when a DomInstance is valid for a given status transition. The required transition ID must be assigned to the TransitionId property. When this type of condition is not met, extra TraceData will be returned via the InnerTraceData property of the DomActionError. This TraceData should contain an error of type DomStatusTransitionError.
 
-```txt
+```csharp
 var condition = new ValidForStatusTransitionCondition("first_to_second_transition");
 ```
 
@@ -351,7 +344,7 @@ Syntax:
 ```
 
 > [!NOTE]
-> - For more information on HLS, see <https://github.com/video-dev/hls.js/>
+> - For more information on HLS, see <https://github.com/video-dev/hls.js/>.
 > - All HLS resources must be delivered with CORS headers that permit GET requests.
 > - If you access a video thumbnail player that is using HTTPS, then the media must also be served over HTTPS.
 > - When the video starts automatically, in order to comply with the browser's autoplay policy, it will be muted until the user turns on the sound.
@@ -385,7 +378,6 @@ In the MaintenanceSettings.xml file of a newly installed DataMiner Agent, the Wa
 From now on, the DataMiner installer will by default only enable
 
 - ICMP (ping) and
-
 - HTTP ports 80 and 8004.
 
 > [!NOTE]
@@ -396,7 +388,6 @@ From now on, the DataMiner installer will by default only enable
 By default, DataMiner Cube provides two methods to log in to a DataMiner Agent:
 
 - Logging in “automatically” using your Windows domain credentials.
-
 - Entering an explicit username/password combination.
 
 When external authentication is activated on a DataMiner Agent, bypassing the external authentication provider by entering an explicit username/password combination is only allowed for the Administrator user. However, from now on, when using external authentication via SAML, bypassing the external authentication by entering a username/password combination will be allowed for any local DataMiner user account.
@@ -410,7 +401,6 @@ From now on, a DataMiner Agent will no longer need a user name and password to c
 For this feature to work, the following permissions must be set in Azure AD:
 
 - Application permission for User.Read.All and GroupMember.Read.All
-
 - Delegated permission for User.Read
 
 ### DMS Protocols
@@ -432,9 +422,9 @@ The ListView component can now also be used to list resources. To do so, add a s
 |------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Component        | ListView                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 | Source           | Resources                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| ComponentOptions | List of options, separated by pipe characters.<br> For an overview of all possible component options, see [Component options](https://help.dataminer.services/dataminer/DataMinerUserGuide/part_2/visio/Creating_a_list_view.htm?rhhlterm=listview&rhsyns=%20#component-options).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| ComponentOptions | List of options, separated by pipe characters.<br> For an overview of all possible component options, see [Component options](xref:Creating_a_list_view#component-options).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 | Columns          | The list of columns that have to be displayed. Preferably, this should be configured by specifying the name of a saved column configuration, e.g. MyColumnConfig.<br> Saving a column configuration is possible via the right-click menu of the list header in DataMiner Cube. This right-click menu also allows you to load a column configuration.<br> If you do not specify this shape data field or leave it empty, all columns will be displayed.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
-| Filter           | Examples:<br> -  Resource.Name\[string\]== 'Encoder'<br> -  Resource.Name contains 'res'<br> -  Resource.Name notContains 'res'<br> -  Resource.ID\[Guid\] == fad6a6dd-ca3a-4b6f-9ca7-b68fd2071786<br> -  Resource.MainDVEDmaID == 113<br> -  Resource.PoolGUIDs contains<br>0fb47f51-ad81-47f2-9e69-3d9477bdc961<br> -  Resource.MaxConcurrency != 1<br> -  Resource.PropertiesDict.Location\[string\] == '3'<br> -  Resource.Name\[string\] notContains 'RS' AND Resource.Name\[string\] notContains 'RT' AND Resource.Name\[string\] notContains 'ExposeFlow'<br> For more information on list view filters, see [List view filters](https://help.dataminer.services/dataminer/DataMinerUserGuide/part_2/visio/Creating_a_list_view.htm?rhhlterm=listview&rhsyns=%20#list-view-filters). |
+| Filter           | Examples:<br> -  Resource.Name\[string\]== 'Encoder'<br> -  Resource.Name contains 'res'<br> -  Resource.Name notContains 'res'<br> -  Resource.ID\[Guid\] == fad6a6dd-ca3a-4b6f-9ca7-b68fd2071786<br> -  Resource.MainDVEDmaID == 113<br> -  Resource.PoolGUIDs contains<br>0fb47f51-ad81-47f2-9e69-3d9477bdc961<br> -  Resource.MaxConcurrency != 1<br> -  Resource.PropertiesDict.Location\[string\] == '3'<br> -  Resource.Name\[string\] notContains 'RS' AND Resource.Name\[string\] notContains 'RT' AND Resource.Name\[string\] notContains 'ExposeFlow'<br> For more information on list view filters, see [List view filters](xref:Creating_a_list_view#list-view-filters). |
 
 > [!NOTE]
 > The IDOfSelection session variable contains a list of the IDs or GUIDs of the selected items, separated by pipe characters.
@@ -458,9 +448,8 @@ The Logging module now also allows you to access the Sharing Manager log file.
 
 When configuring a matrix in the Router Control module, you can now set it to either “preset mode” (i.e. the default mode) or “direct take mode”.
 
-- In preset mode, you need to click the *Connect* button to create or delete a crosspoint between an input and an output.
-
-- In direct take mode, you don’t need to click the *Connect* button to create or delete a crosspoint between an input and an output. When you select an input and an output, they will automatically be connected or disconnected.
+- In preset mode, you need to click the *Connect* button to create or delete a crosspoint between an input and an output.
+- In direct take mode, you don’t need to click the *Connect* button to create or delete a crosspoint between an input and an output. When you select an input and an output, they will automatically be connected or disconnected.
 
 > [!NOTE]
 > When you use direct take mode in combination with the “Use output-first workflow” option
@@ -487,14 +476,12 @@ In DataMiner Cube, up to now, embedded webpages could be displayed using either 
 Using this new Edge browser engine offers a number of advantages:
 
 - The web content is rendered directly to the graphics card.
-
 - The browser engine automatically receives updates via Windows Update, independent of DataMiner or Cube version.
-
 - Proprietary codecs such as H.264 and AAC are supported.
 
 To set this browser engine as the system default for all users, go to *System Center \> System Settings \> Plugins*, and set the *Web browser Engine* option to “Edge”.
 
-If you want a shape to display a webpage using the Edge web browser regardless of Cube’s default browser engine setting, add a shape data field of type *Options* to the shape containing the web browser control, and set its value to “UseEdge”.
+If you want a shape to display a webpage using the Edge web browser regardless of Cube’s default browser engine setting, add a shape data field of type *Options* to the shape containing the web browser control, and set its value to “UseEdge”.
 
 > [!NOTE]
 > - Currently, the Edge web browser engine cannot be used in DataMiner web apps like Ticketing, Dashboards, etc.
@@ -505,7 +492,6 @@ If you want a shape to display a webpage using the Edge web browser regardless o
 It is now possible to pin and unpin items in the sidebar.
 
 - To pin an item, click the ellipsis button (“...”), and then click the item you want to pin to the sidebar.
-
 - To unpin an item, right-click the item in the sidebar, and click *Unpin*.
 
 > [!NOTE]
@@ -513,7 +499,7 @@ It is now possible to pin and unpin items in the sidebar.
 
 #### Visual Overview: Setting the background color of a static shape using a shape data field of type “BackgroundColor” \[ID_30964\]
 
-Using a shape data field of type *BackgroundColor* it is now possible to set the background color of a static shape, i.e. a shape that is not linked to an element, a service or a view.
+Using a shape data field of type *BackgroundColor* it is now possible to set the background color of a static shape, i.e. a shape that is not linked to an element, a service or a view.
 
 | Shape data field | Value    |
 |------------------|----------|
@@ -522,13 +508,9 @@ Using a shape data field of type *BackgroundColor* it is now possible to set th
 The \<color> value in the example above can be specified as follows:
 
 - An HTML color code (e.g. #FF102030)
-
 - An RGB color code (e.g. 40,50,60)
-
 - A standard color name (e.g. magenta)
-
 - A color placeholder referring to one of the configured DataMiner alarm colors<br>(e.g. \[color:severity=minor\])
-
 - A placeholder referring to a variable containing a color value<br>(e.g. \[PageVar:MyColorSessionVar\])
 
 > [!NOTE]
@@ -537,14 +519,14 @@ The \<color> value in the example above can be specified as follows:
 
 #### System Center - Analytics config: New setting “Maximum group size” \[ID_30993\] \[ID_31093\]
 
-In the *System settings \> Analytics config* section of *System Center*, a new setting has been added for automatic incident tracking. The *Maximum group size* setting will now allow you to limit the size of the alarm groups.
+In the *System settings \> Analytics config* section of *System Center*, a new setting has been added for automatic incident tracking. The *Maximum group size* setting will now allow you to limit the size of the alarm groups.
 
 When an alarm group reaches the maximum size specified in this setting, a new group will be created with all remaining alarms that belong to the same incident.
 
 Default value: 1000
 
 > [!NOTE]
-> In the *System settings \> Analytics config* section of *System Center*, the setting names have been adjusted to improve consistency. “Minimal” has been replaced with “Minimum” and “Maximal” has been replaced with “Maximum”.
+> In the *System settings \> Analytics config* section of *System Center*, the setting names have been adjusted to improve consistency. “Minimal” has been replaced with “Minimum” and “Maximal” has been replaced with “Maximum”.
 
 ### DMS Reports & Dashboards
 
@@ -553,30 +535,29 @@ Default value: 1000
 When, in the Data tab, you add a filter node to a GQI query, a new option named “Return no rows when feed is empty” will allow you to specify what should be returned when the filter yields no rows.
 
 - When you enable this option, an empty table will be returned when the filter yields no rows.
-
 - When you disable this option, the entire table (i.e. all rows) will be returned when the filter yields no rows.
 
 #### Dashboards app - State component: Enhanced scrolling behavior when Layout flow is set to “Columns” \[ID_30765\]
 
-When the *Layout flow* setting of a State component is set to “Columns” and there is either a single group or no grouping at all, from now on, the states will always be displayed at full width.
+When the *Layout flow* setting of a State component is set to “Columns” and there is either a single group or no grouping at all, from now on, the states will always be displayed at full width.
 
 #### Dashboards app - Node edge graph component: New “Bidirectional configuration” option \[ID_30910\]
 
-When configuring a node edge graph component, you can now use the *Bidirectional configuration* option to specify how you want multiple edges between two nodes to be mapped.
+When configuring a node edge graph component, you can now use the *Bidirectional configuration* option to specify how you want multiple edges between two nodes to be mapped.
 
 #### Dashboards app - Node edge graph component: “Filtering & highlighting” section \[ID_31065\]
 
-In the *Layout* pane of a node-edge component, the *Column filters* section has been renamed to *Filtering & highlighting* and now contains the following options:
+In the *Layout* pane of a node-edge component, the *Column filters* section has been renamed to *Filtering & highlighting* and now contains the following options:
 
 | Option                     | Description                                                                                                                                                                                                                                                                                                                                                                               |
 |----------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Conditional coloring       | Previously named *Column filters*, this option allows you to specify color filters for specific columns, so that these can be used for highlighting in case analytical coloring is used.                                                                                                                                                                   |
 | Highlight                  | When this option is enabled, the nodes that match the filter will be highlighted.<br> Default: Enabled                                                                                                                                                                                                                                                                                    |
-| Opacity                    | When the *Highlight* option is enabled, this option will allow you to set the level of transparency of the nodes and edges that do not match the filter.<br> Note: When you disable the *Highlight* option, the nodes that do not match the filter will no longer be displayed and the remaining nodes will be reorganized. |
+| Opacity                    | When the *Highlight* option is enabled, this option will allow you to set the level of transparency of the nodes and edges that do not match the filter.<br> Note: When you disable the *Highlight* option, the nodes that do not match the filter will no longer be displayed and the remaining nodes will be reorganized. |
 | Highlight/Show entire path | When this option is enabled, not only the nodes matching the filter will be highlighted, but also the entire tree structure of which they are a part (from root to leaves).                                                                                                                                                                                                               |
 
 > [!NOTE]
-> The filtering options mentioned above require the *Query filter* component, which is currently still in [soft launch](https://community.dataminer.services/documentation/soft-launch-options/).
+> The filtering options mentioned above require the *Query filter* component, which is currently still in [soft launch](https://community.dataminer.services/documentation/soft-launch-options/).
 
 ### DMS Service & Resource Management
 
@@ -604,8 +585,8 @@ When deleting resources by means of a RemoveResources call, it is now possible t
 
 If you set the ignoreCanceledReservations flag to true, no errors will be generated when deleting a resource that is being used in canceled reservations.
 
-```txt
-Resource[] RemoveResources(Resource[] resources, bool ignorePassedReservations, bool ignoreCanceledReservations)
+```csharp
+Resource[] RemoveResources(Resource[] resources, bool ignorePassedReservations, bool ignoreCanceledReservations);
 ```
 
 ### DMS tools
@@ -688,28 +669,18 @@ Also, a number of issues have been fixed with regard to displaying statuses of v
 
 #### DataMiner Cube - Alarm Console: Availability of “Count alarms” button now depends on the alarm filter that was specified \[ID_30810\]
 
-When, in the Alarm Console, you add a new history or sliding window tab page, you can add a filter by clicking *Apply filter*. After configuring that filter, you can click *Count alarms* to see how many alarms will be retrieved when that filter is applied. However, up to now, when the filter contained one of the following items, it would not be possible to count the number of alarms that matched the filter:
+When, in the Alarm Console, you add a new history or sliding window tab page, you can add a filter by clicking *Apply filter*. After configuring that filter, you can click *Count alarms* to see how many alarms will be retrieved when that filter is applied. However, up to now, when the filter contained one of the following items, it would not be possible to count the number of alarms that matched the filter:
 
 - ElementType
-
 - InterfaceImpact
-
 - ParameterDescription
-
 - Protocol
-
 - ServiceImpact
-
 - ViewID
-
 - ViewImpact
-
 - ViewName
-
 - VirtualFunctionID
-
 - VirtualFunctionImpact
-
 - VirtualFunctionName
 
 From now on, when the alarm filter contains one of the above-mentioned items, the *Count alarms* button will not be available.
@@ -730,11 +701,11 @@ Performance has improved for all write and delete queries on Cassandra clusters.
 
 The following web pages have been removed as they are related to deprecated features:
 
-- http://\<DMA>/Tools/CustomerLogoCheck.asp
-
-- http://\<DMA>/Weather/VerifiyWeathericon.html
-
-- http://\<DMA>/Weather/WeatherIcon.aspx
+```txt
+http://<DMA>/Tools/CustomerLogoCheck.asp
+http://<DMA>/Weather/VerifiyWeathericon.html
+http://<DMA>/Weather/WeatherIcon.aspx
+```
 
 #### DataMiner Cube - Aggregation: Enhanced performance \[ID_30917\]
 
@@ -753,7 +724,6 @@ A number of enhancements will now allow the SLDataGateway process to handle Cass
 A number of enhancements have been made to the Router Control app with regard to IO button highlighting.
 
 - When you connected an input to an output with multiple connections to other inputs and the “output first workflow” option was enabled, in some cases, those other connected inputs would no longer be highlighted. From now on, inputs connected to an output will no longer lose their highlighting when you connect a new input to that same output.
-
 - When you selected an input of a matrix that did not have the “output first workflow” option enabled, up to now, the connected outputs would not be highlighted. From now on, these will be highlighted.
 
 #### DataMiner backup: User-generated dashboards now included in “Configuration Backup” & “Configuration Backup without Database” \[ID_30957\]
@@ -761,7 +731,6 @@ A number of enhancements have been made to the Router Control app with regard to
 From now on, user-generated dashboards will by default be included in the following types of backups:
 
 - Configuration Backup
-
 - Configuration Backup without Database
 
 #### Ticketing: FieldName of TicketFieldDescriptor can no longer contain certain characters [ID_30962]
@@ -783,9 +752,7 @@ From now on, the FieldName of a TicketFieldDescriptor has to meet the following 
 From now on, Process Automation data will be included in the following types of backups:
 
 - Full backup
-
 - Custom backup with “Create a backup of the database” and “Include Process Automation data in backup” options enabled
-
 - Backup via the StandaloneElasticBackup tool
 
 #### Security: Enhanced import of users and groups from Azure AD \[ID_31038\]
@@ -794,10 +761,13 @@ Up to now, a maximum of 100 users or groups could be imported from Azure AD. Fro
 
 #### DataMiner Cube - System Center: Enhanced “Limited administrator” tooltip \[ID_31042\]
 
-When, in the *Users/Groups* section of *System Center*, you hover over the *Modules \> System configuration \> Security \> Specific \> Limited administrator* permission, a tooltip gives you more information about that permission. That tooltip now contains the following updated text:
+When, in the *Users/Groups* section of *System Center*, you hover over the *Modules \> System configuration \> Security \> Specific \> Limited administrator* permission, a tooltip gives you more information about that permission. That tooltip now contains the following updated text:
 
 ```txt
-* Read-only access on all groups * Read-only access to users in your groups * Create new DataMiner users * Editing your own user properties
+* Read-only access on all groups
+* Read-only access to users in your groups
+* Create new DataMiner users
+* Editing your own user properties
 ```
 
 #### DataMiner upgrade packages will now include Microsoft .NET Framework 4.8 \[ID_31120\]
@@ -904,9 +874,7 @@ When you disabled a virtual function and then enabled it again, in some rare cas
 A number of problems with Children shape updates have been fixed:
 
 - When a Children shape was sorted on alarm severity, in some cases, updates to the alarm level of the shape would no longer be processed and the sorting would not be updated.
-
 - When a shape no longer matched a filter, in some cases, it would not be removed from the list of generated shapes.
-
 - In some cases, the (configurable) maximum amount of child shapes would no longer be applied when updates were received.
 
 #### Problem with SLDataMiner when deleting a service or a redundancy group \[ID_30925\]
@@ -983,9 +951,9 @@ In some cases, the result of a GetElementConfiguration method would be missing p
 
 #### DataMiner Cube: Problem when adding/deleting DataMiner Agent to/from a DMS \[ID_31078\]
 
-In the *Agents* section of *System Center*, up to now, users with *Agents \> Add* permission but without *Agents \> Add DMA to cluster* permission seemed to able to add a DMA to a DMS. However, after *System Center* had been refreshed, the added DMA would not be listed. Also, users with *Agents \> Delete* permission but without *Agents \> Delete DMA to cluster* permission seemed to able to delete a DMA to a DMS. However, after *System Center* had been refreshed, the deleted DMA would still be listed.
+In the *Agents* section of *System Center*, up to now, users with *Agents \> Add* permission but without *Agents \> Add DMA to cluster* permission seemed to able to add a DMA to a DMS. However, after *System Center* had been refreshed, the added DMA would not be listed. Also, users with *Agents \> Delete* permission but without *Agents \> Delete DMA to cluster* permission seemed to able to delete a DMA to a DMS. However, after *System Center* had been refreshed, the deleted DMA would still be listed.
 
-From now on, users with only *Agents \> Add* permission or *Agents \> Delete* permission will be able to correctly add or delete DMAs from a DMS.
+From now on, users with only *Agents \> Add* permission or *Agents \> Delete* permission will be able to correctly add or delete DMAs from a DMS.
 
 #### Dashboards app - GQI: Problem when migrating queries that contain joins \[ID_31080\]
 

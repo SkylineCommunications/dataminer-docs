@@ -31,12 +31,12 @@
         topicUid: General_Main_Release_10.2.0
     - name: v10.1
       items:
-      - name: SLC_RN_DMSv10.1.12_REV002
-        href: General/SLC_RN_DMSv10.1.12_REV002.md
-      - name: SLC_RN_DMSv10.1.11_REV001
-        href: General/SLC_RN_DMSv10.1.11_REV001.md
-      - name: SLC_RN_DMSv10.1.10_REV000
-        href: General/SLC_RN_DMSv10.1.10_REV000.md
+      - name: General Feature Release 10.1.12
+        topicUid: General_Feature_Release_10.1.12
+      - name: General Feature Release 10.1.11
+        topicUid: General_Feature_Release_10.1.11
+      - name: General Feature Release 10.1.10
+        topicUid: General_Feature_Release_10.1.10
       - name: SLC_RN_DMSv10.1.9_REV000
         href: General/SLC_RN_DMSv10.1.9_REV000.md
       - name: SLC_RN_DMSv10.1.8_REV000
