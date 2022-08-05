@@ -58,9 +58,7 @@ Alias-"Alias"|"Target"|"What"|"Condition"
 
 - **Alias**: \<A>, \<B>, \<C>, ...
 
-- **Target**: The DataMiner object to which the action should be applied.
-
-  Use the following syntax (optionally using wildcards or placeholders):
+- **Target**: The object to which the action should be applied. Use the following syntax (optionally using wildcards or placeholders):
 
   - For an element: *Element:[Element name or ID]*
   - For a service: *Service:[Service name or ID]*
@@ -95,6 +93,8 @@ Alias-"Alias"|"Target"|"What"|"Condition"
 - **Condition**: The condition that determines whether the shape manipulation is applied. If you want to check if the specified "What" matches with a regular expression, start the condition with "Regex=", followed by the regular expression.
 
   Multiple conditions can be combined within this part of the condition, using a semicolon. In that case, each condition should include an operator and a value. The complete condition component will only function correctly if all conditions within it are correctly configured.
+
+  For an overview of the supported operators in the condition, see [Condition operators](xref:Basic_conditional_shape_manipulation_actions#condition-operators). However, note that if the target is an EPM object, only the operators =, !=, >, >=, <, and <= are supported.
 
 ### Using an asterisk in a condition
 
@@ -274,10 +274,16 @@ Conditions using alarm statistics:
 <A>or<B>-A|View:myView|#MinorServices|>0-B|Element:myElement|Property:Enabled|=true
 ```
 
-Conditions using the target "Value" (available from DataMiner 9.5.4 onwards):
+Conditions using the target "Value":
 
 ```txt
 <A>-A|Value|10|<=20
 <A>-A|Value|5|>2
 <A>-A|Value|[var:MyVar01]|>=[var:MyVar02]
+```
+
+Condition with EPM target (supported from DataMiner 10.2.9/10.3.0 onwards:
+
+```txt
+<A>-A|SystemType= Cable;SystemName=SF Cable1|#TotalAlarms|>0
 ```
