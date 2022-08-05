@@ -105,11 +105,14 @@
     - name: Cloud Platform release notes
       items:
       - name: DataMiner Cloud Platform change log
+        topicUid: DCP_change_log
+
       - name: DataMiner Cloud Pack 2.5
       - name: DataMiner Cloud Pack 2.4
       - name: DataMiner Cloud Pack 2.3
       - name: DataMiner Cloud Pack 2.2
       - name: DataMiner Cloud Pack 2.0
+      
     - name: DIS release notes
       items:
       - name: DIS 2.38
@@ -370,3 +373,7 @@
         topicUid: SRM_1.2.1
       - name: SRM 1.2.0 
         topicUid: SRM_1.2.0
+      - name: SRM 1.1.1
+        topicUid: SRM_1.1.1
+      - name: SRM 1.1.0
+        topicUid: SRM_1.1.0
