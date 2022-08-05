@@ -286,6 +286,8 @@
         topicUid: IDP_1.0.0
     - name: MbgNMS release notes
       items:
+      - name: MbgNMS 1.1.1
+        topicUid: MbgNMS_1.1.1
       - name: MbgNMS 1.1.0
         topicUid: MbgNMS_1.1.0
       - name: MbgNMS 1.0.1
@@ -314,6 +316,8 @@
         topicUid: PTP_1.1.0
     - name: SRM release notes
       items:
+      - name: SRM 1.2.26
+        topicUid: SRM_1.2.26
       - name: SRM 1.2.25
         topicUid: SRM_1.2.25
       - name: SRM 1.2.24
