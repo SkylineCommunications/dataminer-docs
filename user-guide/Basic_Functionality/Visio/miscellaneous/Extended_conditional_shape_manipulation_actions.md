@@ -58,15 +58,21 @@ Alias-"Alias"|"Target"|"What"|"Condition"
 
 - **Alias**: \<A>, \<B>, \<C>, ...
 
-- **Target**: The DataMiner object to which the action should be applied. This can be an element, service, view or connection.
+- **Target**: The DataMiner object to which the action should be applied.
 
   Use the following syntax (optionally using wildcards or placeholders):
 
-  - *Element:Element name or ID*
-  - *Service:Service name or ID*
-  - *View:View name or ID*
-  - *Connection*
-  - *Value*
+  - For an element: *Element:[Element name or ID]*
+  - For a service: *Service:[Service name or ID]*
+  - For a view: *View:[View name or ID]*
+  - For a connection (see [Conditional manipulation of connection shapes](#conditional-manipulation-of-connection-shapes): *Connection*
+  - For an EPM object (supported from DataMiner 10.2.9/10.3.0 onwards), the following are supported:
+
+    - *SystemType=[system type];SystemName=[system name]*
+    - *SystemType=[system type]*
+    - *SystemName=[system name]*
+
+  - Depending on a value: *Value*
 
   The default target is *Element*, so if only a name or ID is specified, without a preceding keyword, this will be considered an element name or ID.
   
@@ -125,36 +131,36 @@ In addition, from DataMiner 9.5.13 onwards, it is possible to use the \[sep:XY\]
 
 From DataMiner 9.0.2 onwards, you can use alarm statistics in the "What" part of the condition. The following table lists the available items, and indicates whether they can be used to retrieve data for a view, a service or an element.
 
-| Statistical data      | View | Service | Element |
-| --------------------- | ---- | ------- | ------- |
-| #CriticalElements     | X    | X       |         |
-| #MajorElements        | X    | X       |         |
-| #MinorElements        | X    | X       |         |
-| #WarningElements      | X    | X       |         |
-| #NormalElements       | X    | X       |         |
-| #TimeoutElements      | X    | X       |         |
-| #NoticeElements       | X    | X       |         |
-| #ErrorElements        | X    | X       |         |
-| #MaskedElements       | X    | X       |         |
-| #TotalElements        | X    | X       |         |
-| #TotalElementsInAlarm | X    | X       |         |
-| #CriticalServices     | X    |         |         |
-| #MajorServices        | X    |         |         |
-| #MinorServices        | X    |         |         |
-| #WarningServices      | X    |         |         |
-| #NormalServices       | X    |         |         |
-| #TotalServices        | X    |         |         |
-| #TotalServicesInAlarm | X    |         |         |
-| #CriticalAlarms       | X    | X       | X       |
-| #MajorAlarms          | X    | X       | X       |
-| #MinorAlarms          | X    | X       | X       |
-| #WarningAlarms        | X    | X       | X       |
-| #NormalAlarms         | X    | X       | X       |
-| #TimeoutAlarms        | X    | X       | X       |
-| #NoticeAlarms         | X    | X       | X       |
-| #ErrorAlarms          | X    | X       | X       |
-| #MaskedAlarms         | X    | X       | X       |
-| #TotalAlarms          | X    | X       | X       |
+| Statistical data      | View | Service | Element | EPM object |
+| --------------------- | ---- | ------- | ------- |------------|
+| #CriticalElements     | X    | X       |         |            |
+| #MajorElements        | X    | X       |         |            |
+| #MinorElements        | X    | X       |         |            |
+| #WarningElements      | X    | X       |         |            |
+| #NormalElements       | X    | X       |         |            |
+| #TimeoutElements      | X    | X       |         |            |
+| #NoticeElements       | X    | X       |         |            |
+| #ErrorElements        | X    | X       |         |            |
+| #MaskedElements       | X    | X       |         |            |
+| #TotalElements        | X    | X       |         |            |
+| #TotalElementsInAlarm | X    | X       |         |            |
+| #CriticalServices     | X    |         |         |            |
+| #MajorServices        | X    |         |         |            |
+| #MinorServices        | X    |         |         |            |
+| #WarningServices      | X    |         |         |            |
+| #NormalServices       | X    |         |         |            |
+| #TotalServices        | X    |         |         |            |
+| #TotalServicesInAlarm | X    |         |         |            |
+| #CriticalAlarms       | X    | X       | X       | X          |
+| #MajorAlarms          | X    | X       | X       | X          |
+| #MinorAlarms          | X    | X       | X       | X          |
+| #WarningAlarms        | X    | X       | X       | X          |
+| #NormalAlarms         | X    | X       | X       | X          |
+| #TimeoutAlarms        | X    | X       | X       | X          |
+| #NoticeAlarms         | X    | X       | X       | X          |
+| #ErrorAlarms          | X    | X       | X       | X          |
+| #MaskedAlarms         | X    | X       | X       |            |
+| #TotalAlarms          | X    | X       | X       | X          |
 
 > [!NOTE]
 >
