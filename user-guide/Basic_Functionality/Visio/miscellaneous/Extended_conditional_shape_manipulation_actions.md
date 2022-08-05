@@ -6,44 +6,44 @@ uid: Extended_conditional_shape_manipulation_actions
 
 To apply conditional shape manipulation actions to any type of linked shape, or to combine multiple conditions, a different configuration is required than for the basic conditional shape manipulation actions.
 
-In this section:
-
-- [Configuring the shape data fields](#configuring-the-shape-data-fields)
-- [Changing the separator character in the condition](#changing-the-separator-character-in-the-condition)
-- [Using statistics in the condition](#using-statistics-in-the-condition)
-- [Specifying a default return value](#specifying-a-default-return-value)
-- [Conditional manipulation of connection shapes](#conditional-manipulation-of-connection-shapes)
-- [Examples](#examples)
-
 > [!NOTE]
+>
 > - These kinds of conditional shape manipulation actions must be configured on shapes linked to an element, service or view. However, note that from DataMiner 10.0.13 onwards, the *Show*, *Hide*, *FlipX*, *FlipY* and *Enabled* actions are supported on shapes that are not linked to an element, service or view. The same goes for the *Collapse* action, available from DataMiner 10.1.8 onwards. For the *Enabled* action, the shape does have to be clickable.
 > - For more information on the more limited basic conditional shape manipulation actions, see [Basic conditional shape manipulation actions](xref:Basic_conditional_shape_manipulation_actions).
 > - For an example, see [Ziine](xref:ZiineDemoSystem) > *[Linking Shapes]* view > *[misc > MANIPULATION]* page.
 
 ## Configuring the shape data fields
 
-Depending on the action or actions you want to apply, create the following shape data fields.
+Depending on the action or actions you want to apply, create the following shape data fields:
 
-| Shape data field | Description |
-| ---------------- | ----------- |
-| Blink | Makes a shape blink when the condition is true. |
-| Collapse | Hides a shape when the condition is true, without actually removing the shape.<br>This can be convenient as an alternative to the **ChildrenFilter** shape data, as it will keep all shapes in memory instead of removing and recreating them, allowing better performance but leading to more memory usage. It can also be convenient in a grid layout, as a collapsed shape will not take up room in a grid, unlike a shape hidden using **Hide** shape data.<br>Available from DataMiner 10.1.8/10.2.0 onwards. |
-| Enabled | Enables user interaction when the condition is true. |
-| FlipX | Makes a shape flip horizontally when the condition is true. |
-| FlipY | Makes a shape flip vertically when the condition is true. |
-| Hide  | Makes a shape disappear when the condition is true. |
-| Highlight | Highlights the shape when the condition is true.<br>Available from DataMiner 9.0.1 onwards. |
-| Show | Makes a shape appear when the condition is true. |
+- **Blink**: Makes a shape blink when the condition is true.
+
+- **Collapse**: Available from DataMiner 10.1.8/10.2.0 onwards. Hides a shape when the condition is true, without actually removing the shape.
+
+  > [!NOTE]
+  > This can be convenient as an alternative to the **ChildrenFilter** shape data, as it will keep all shapes in memory instead of removing and recreating them, allowing better performance but leading to more memory usage. It can also be convenient in a grid layout, as a collapsed shape will not take up room in a grid, unlike a shape hidden using **Hide** shape data.
+
+- **Enabled**: Enables user interaction when the condition is true.
+
+- **FlipX**: Makes a shape flip horizontally when the condition is true.
+
+- **FlipY**: Makes a shape flip vertically when the condition is true.
+
+- **Hide**: Makes a shape disappear when the condition is true.
+
+- **Highlight**: Highlights the shape when the condition is true.
+
+- **Show**: Makes a shape appear when the condition is true.
 
 As the value for the above-mentioned shape data fields, you need to enter a single condition or multiple conditions combined into one. Regardless of whether a single or multiple conditions are used, each condition has to be assigned an alias.
 
-#### Single condition
+### Single condition
 
 ```txt
 Alias-"Alias"|"Target"|"What"|"Condition"
 ```
 
-#### Multiple conditions combined
+### Multiple conditions combined
 
 ```txt
 "Logical expression"-"Alias1"|"Target"|"What"|"Condition"
@@ -52,17 +52,45 @@ Alias-"Alias"|"Target"|"What"|"Condition"
                             -...
 ```
 
-#### Condition components
+### Condition components
 
-| Condition component | Description |
-| ------------------- | ----------- |
-| Logical expression | The expression that combines the defined aliases using "and", "or", "(", ")" or "not". Example: \<A>or\<B> |
-| Alias | \<A>, \<B>, \<C>, ... |
-| Target | The DataMiner object to which the action should be applied. This can be an element, service, view or connection. Use the following syntax (optionally using wildcards or placeholders):<br>- *Element:Element name or ID*<br>- *Service:Service name or ID*<br>- *View:View name or ID*<br>- *Connection*<br>- *Value*<br>The default target is *Element*, so if only a name or ID is specified, without a preceding keyword, this will be considered an element name or ID.<br>If the target is set to *Value*, the "What" has to contain the value to be evaluated. The latter can also be a placeholder referring to a session variable. |
-| What | Can be configured as follows:<br>- *ALARMLEVEL*<br>- *NAME:* *\[Name of the element, view or service specified in the Target\]*<br>- *PARAMETER:* \[Parameter ID\]<br>Alternatively, you can simply specify the parameter ID without the prefix, as a reference without prefix will by default be interpreted as a parameter reference.<br>- *PROPERTY:* *\[Property name\]*<br>- *Protocol* (from DataMiner 9.6.4 onwards)<br>- From DataMiner 9.0.2 onwards, it is also possible to use statistics in this part of the condition. See [Using statistics in the condition](#using-statistics-in-the-condition). |
-| Condition | The condition that determines whether the shape manipulation is applied. If you want to check if the specified "What" matches with a regular expression, start the condition with "Regex=", followed by the regular expression.<br>Multiple conditions can be combined within this part of the condition, using a semicolon. In that case, each condition should include an operator and a value. The complete condition component will only function correctly if all conditions within it are correctly configured. |
+- **Logical expression**: The expression that combines the defined aliases using "and", "or", "(", ")" or "not". Example: \<A>or\<B>
 
-#### Using an asterisk in a condition
+- **Alias**: \<A>, \<B>, \<C>, ...
+
+- **Target**: The DataMiner object to which the action should be applied. This can be an element, service, view or connection.
+
+  Use the following syntax (optionally using wildcards or placeholders):
+
+  - *Element:Element name or ID*
+  - *Service:Service name or ID*
+  - *View:View name or ID*
+  - *Connection*
+  - *Value*
+
+  The default target is *Element*, so if only a name or ID is specified, without a preceding keyword, this will be considered an element name or ID.
+  
+  If the target is set to *Value*, the "What" condition component has to contain the value to be evaluated. The latter can also be a placeholder referring to a session variable.
+
+- **What**: Can be configured as follows:
+
+  - *ALARMLEVEL*
+  - *NAME:* *\[Name of the element, view or service specified in the Target\]*
+  - *PARAMETER:* \[Parameter ID\]
+
+    Alternatively, you can specify the parameter ID without the prefix, as a reference without prefix will by default be interpreted as a parameter reference.
+
+  - *PROPERTY:* *\[Property name\]*
+  - *Protocol* (from DataMiner 9.6.4 onwards)
+  
+  > [!NOTE]
+  > From DataMiner 9.0.2 onwards, it is also possible to use statistics in this part of the condition. See [Using statistics in the condition](#using-statistics-in-the-condition).
+
+- **Condition**: The condition that determines whether the shape manipulation is applied. If you want to check if the specified "What" matches with a regular expression, start the condition with "Regex=", followed by the regular expression.
+
+  Multiple conditions can be combined within this part of the condition, using a semicolon. In that case, each condition should include an operator and a value. The complete condition component will only function correctly if all conditions within it are correctly configured.
+
+### Using an asterisk in a condition
 
 Up to DataMiner 9.5.4, when an asterisk ("\*") is used in shape data to refer to an element, view or service, the asterisk is replaced with the first element ID, view ID or service ID that is found from the parent shape upwards, but the current shape is not checked.
 
@@ -129,6 +157,7 @@ From DataMiner 9.0.2 onwards, you can use alarm statistics in the "What" part of
 | #TotalAlarms          | X    | X       | X       |
 
 > [!NOTE]
+>
 > - #NormalAlarms can only be used if, in the *MaintenanceSettings.xml* file, the *\<AutoClear>* tag is set to "false".
 > - On a DMA with a Ticketing module, you can also use the placeholder *#Tickets* to create a condition based on the number of tickets. This is possible for views, services and elements. From DataMiner 9.5.3 onwards, you can also add a domain name to the placeholder to only take the tickets from a particular domain into account. For example *#Tickets:Internal*.
 
