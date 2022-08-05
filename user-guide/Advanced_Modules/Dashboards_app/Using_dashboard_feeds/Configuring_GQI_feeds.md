@@ -29,6 +29,9 @@ You can create a query as follows:
 
 When you create a query, you can use one or more of the data sources detailed below.
 
+> [!NOTE]
+> Custom properties that are marked as read-only, e.g. the *System Name* and *System Type* alarm properties, can be retrieved with a GQI query from DataMinder 10.2.0 \[CU6]/10.2.9 onwards.
+
 ### Get alarms
 
 Available from DataMiner 10.2.0/10.1.9 onwards. Retrieves the alarms in the DataMiner System. Several columns, such as *Element Name*, *Parameter Description*, *Value* and *Time*, are included by default. Others can be added with a *Select* operation (see [Query operators](#query-operators)).
