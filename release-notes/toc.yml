@@ -212,6 +212,8 @@
           topicUid: EPM_5.0.0_D-DOCSIS
       - name: I-DOCSIS
         items:
+        - name: EPM 6.1.4 I-DOCSIS 
+          topicUid: EPM_6.1.4_I-DOCSIS
         - name: EPM 6.1.3 I-DOCSIS 
           topicUid: EPM_6.1.3_I-DOCSIS
         - name: EPM 6.1.2 I-DOCSIS 
