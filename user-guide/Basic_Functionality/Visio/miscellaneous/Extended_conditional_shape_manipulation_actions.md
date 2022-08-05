@@ -282,7 +282,7 @@ Conditions using the target "Value":
 <A>-A|Value|[var:MyVar01]|>=[var:MyVar02]
 ```
 
-Condition with EPM target (supported from DataMiner 10.2.9/10.3.0 onwards:
+Condition with EPM target (supported from DataMiner 10.2.9/10.3.0 onwards):
 
 ```txt
 <A>-A|SystemType= Cable;SystemName=SF Cable1|#TotalAlarms|>0
