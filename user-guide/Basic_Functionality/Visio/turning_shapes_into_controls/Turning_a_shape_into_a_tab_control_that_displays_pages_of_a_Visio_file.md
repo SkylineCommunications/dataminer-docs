@@ -9,7 +9,7 @@ When a shape is linked to a view, a service or an element, it can be turned into
 > [!TIP]
 >
 > - See also: [Making a shape display a particular page of the current Visio drawing](xref:Making_a_shape_display_a_particular_page_of_the_current_Visio_drawing)
-> - For an example, see [Ziine](xref:ZiineDemoSystem) > *[Linking Shapes]* view.
+> - For an example, see [Ziine](xref:ZiineDemoSystem) > *Visual Overview Design Examples* view.
 
 ## Configuring a tab control that displays all pages of a Visio drawing
 

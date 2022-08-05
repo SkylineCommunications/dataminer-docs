@@ -7,7 +7,7 @@ uid: Linking_a_shape_to_the_alarm_state_of_a_Data_Display_page
 If you have linked a shape to an element, that shape can be set to indicate the current alarm state of a particular Data Display page of that element.
 
 > [!TIP]
-> For an example, see [Ziine](xref:ZiineDemoSystem) > *[Linking Shapes]* view > *[linking > ALARM]* page.
+> For an example, see [Ziine](xref:ZiineDemoSystem) > *Visual Overview Design Examples* view > *[linking > ALARM]* page.
 
 ## Configuring the shape data field
 

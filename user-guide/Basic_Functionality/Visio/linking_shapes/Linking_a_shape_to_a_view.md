@@ -10,12 +10,14 @@ By default, this will cause the Visio drawing linked to that view to be opened e
 
 > [!TIP]
 > See also:
+>
 > - [Disabling the default hyperlink behavior of a linked shape](xref:Disabling_the_default_hyperlink_behavior_of_a_linked_shape)
 > - [Making a shape launch the Device Discovery app](xref:Making_a_shape_launch_the_Device_Discovery_app)
 
 > [!NOTE]
+>
 > - Visio shapes linked to views will not be displayed if, for any reason, those links cannot be resolved. Link problems can occur due to insufficient user rights, missing DataMiner items, invalid parameter values, etc.
-> - For an example, see [Ziine](xref:ZiineDemoSystem) > *[Linking Shapes]* view > *[linking > OBJECTS]* page.
+> - For an example, see [Ziine](xref:ZiineDemoSystem) > *Visual Overview Design Examples* view > *[linking > OBJECTS]* page.
 
 ## Configuring the shape data field
 
@@ -38,6 +40,7 @@ View ID|tab page index
 ```
 
 > [!NOTE]
+>
 > - If you want to link the shape to the root of the Surveyor, enter "-1", "root", or the name of the root.
 > - While using the name of a view might be more convenient, we advise you to always use its (unique) ID. If, in a Visio drawing, you use the name of a view, the link to that view will be broken the moment someone changes that name. If, on the other hand, you use the view ID, the link to that view will remain, even if its name is changed.
 

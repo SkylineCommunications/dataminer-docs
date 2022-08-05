@@ -7,7 +7,7 @@ uid: Making_shapes_selectable
 It is possible to tag a shape as "Selectable", so that instead of displaying the default hyperlink behavior, it will adopt a specially defined selection style when clicked.
 
 > [!TIP]
-> For an example, see [Ziine](xref:ZiineDemoSystem) > *[Linking Shapes]* view > *[misc > SELECTABLE]* page.
+> For an example, see [Ziine](xref:ZiineDemoSystem) > *Visual Overview Design Examples* view > *[misc > SELECTABLE]* page.
 
 ## Tagging a shape as selectable
 

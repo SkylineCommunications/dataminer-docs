@@ -19,7 +19,7 @@ When, inside a Microsoft Visio drawing, you specify placeholders like \[Param: .
 >
 > - It is also possible to make the shapes use a different index than that of the original row. See [Making a shape use a different index than that of the original row](#making-a-shape-use-a-different-index-than-that-of-the-original-row).
 > - Just like for shape positioning based on dynamic tables, you can also use the "LinkElement" and "DynamicData" ColumnOptions in the protocol when generating shapes based on table rows. If the "LinkElement" option is used, the newly created shapes can be linked to a specified element. With the "DynamicData" option, they can have their interface placeholders resolved by dynamic data. For more information, see [Shape positioning based on coordinates stored in dynamic tables](xref:Positioning_shapes_dynamically1#shape-positioning-based-on-coordinates-stored-in-dynamic-tables).
-> - For an example, see [Ziine](xref:ZiineDemoSystem) > *[Linking Shapes]* view > *[children > TABLE ROWS]* page.
+> - For an example, see [Ziine](xref:ZiineDemoSystem) > *Visual Overview Design Examples* view > *[children > TABLE ROWS]* page.
 
 ## Child-level shape data
 

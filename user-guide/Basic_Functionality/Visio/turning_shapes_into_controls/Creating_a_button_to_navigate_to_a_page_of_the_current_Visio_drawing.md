@@ -7,7 +7,7 @@ uid: Creating_a_button_to_navigate_to_a_page_of_the_current_Visio_drawing
 If a Visio drawing contains multiple pages, you can configure a shape that, when clicked, will make a particular page of the drawing be displayed.
 
 > [!TIP]
-> For an example, see [Ziine](xref:ZiineDemoSystem) > *[Linking Shapes]* view > *[linking > OTHER]* page.
+> For an example, see [Ziine](xref:ZiineDemoSystem) > *Visual Overview Design Examples* view > *[linking > OTHER]* page.
 
 ## Configuring the shape data field
 

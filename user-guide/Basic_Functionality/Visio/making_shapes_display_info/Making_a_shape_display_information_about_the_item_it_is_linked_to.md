@@ -17,7 +17,7 @@ Using a shape data field of type **Info**, you can make shapes display informati
   > See also: [Generating the connectivity chain for an SRM service instance](xref:Generating_the_connectivity_chain_for_an_SRM_service_instance)
 
 > [!TIP]
-> For an example, see [Ziine](xref:ZiineDemoSystem) > *[Linking Shapes]* view > *[data > PROPERTIES]* page.
+> For an example, see [Ziine](xref:ZiineDemoSystem) > *Visual Overview Design Examples* view > *[data > PROPERTIES]* page.
 
 ## Configuring the shape data field
 

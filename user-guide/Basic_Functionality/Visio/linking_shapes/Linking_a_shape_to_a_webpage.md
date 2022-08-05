@@ -9,7 +9,7 @@ Using a shape data field of type **Link**, you can link a shape to a webpage.
 When you link a shape to a webpage, that page will be opened each time a user clicks that shape.
 
 > [!TIP]
-> For an example, see [Ziine](xref:ZiineDemoSystem) > *[Linking Shapes]* view > *[linking > WEB]* page.
+> For an example, see [Ziine](xref:ZiineDemoSystem) > *Visual Overview Design Examples* view > *[linking > WEB]* page.
 
 ## Configuring the shape data field
 

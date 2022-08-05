@@ -7,9 +7,10 @@ uid: Linking_a_shape_to_an_alarm
 Using a shape data field of type **Alarm**, you can link a shape to an active alarm.
 
 > [!NOTE]
+>
 > - Shape data fields of type **Alarm** are mostly used in combination with shape data fields of type **Info**. See [Making a shape display information about the item it is linked to](xref:Making_a_shape_display_information_about_the_item_it_is_linked_to).
 > - If you want to link to the alarm state of a parameter, use a shape data field of type **Parameter** instead of **Alarm**. See [Linking a shape to an element parameter](xref:Linking_a_shape_to_an_element_parameter).
-> - For an example, see [Ziine](xref:ZiineDemoSystem) > *[Linking Shapes]* view > *[linking > ALARM]* page.
+> - For an example, see [Ziine](xref:ZiineDemoSystem) > *Visual Overview Design Examples* view > *[linking > ALARM]* page.
 > - If a shape is linked to an alarm, from DataMiner 10.0.2 onwards, you can use *Info* keywords in the shape text, by placing them in square brackets in the text. For example: "The value of the alarm is **\[value\]**." See [Making a shape display information about the item it is linked to](xref:Making_a_shape_display_information_about_the_item_it_is_linked_to).
 
 ## Configuring the shape data field
@@ -33,6 +34,7 @@ Add a shape data field of type **Alarm** to the shape.
   See [ElementReference](#elementreference) and [Options](#options)
 
   > [!NOTE]
+  >
   > - Table rows can be referenced either by primary key or by display key.
   > - The table row key can contain "\*" and "?" wildcards. Example: "2/36/114:Equip\* 4\|Alarm"
 
@@ -71,6 +73,7 @@ In the field value, you can use the following options.
 - **HIDE;condition**: The shape will be hidden if the condition is TRUE.
 
 > [!NOTE]
+>
 > - If you specify a SHOW or HIDE condition, the shape has to have a shape data field of type **Info** of which the value is set to the alarm property to be tested.<br>Example: If you specify "SHOW;!=critical high" in the **Alarm** field, then you have to specify "SEVERITY" in the **Info** field.
 > - SHOW and HIDE conditions cannot be combined in one single **Alarm** field.
 > - In conditions, both single equal signs ("=") and double equal signs ("==") are supported.
