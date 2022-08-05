@@ -9,7 +9,7 @@ A shape can be docked to one or more borders of a Visio drawing. This is only po
 > [!NOTE]
 >
 > - Docked shapes are resized relative to the size (aspect ratio) of the drawing.
-> - For an example, see [Ziine](xref:ZiineDemoSystem) > *[Linking Shapes]* view > *[positioning > DOCKING]* page.
+> - For an example, see [Ziine](xref:ZiineDemoSystem) > *Visual Overview Design Examples* view > *[positioning > DOCKING]* page.
 
 ## Configuring the shape data field
 

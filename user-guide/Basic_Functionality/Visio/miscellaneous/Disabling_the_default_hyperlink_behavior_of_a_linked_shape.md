@@ -9,4 +9,4 @@ By default, when users click a shape linked to an element, service, redundancy g
 To disable this default hyperlink behavior of a shape, add a shape data field to it of type **Enabled** and set its value to "FALSE".
 
 > [!TIP]
-> For an example, see [Ziine](xref:ZiineDemoSystem) > *[Linking Shapes]* view > *[misc > OTHER]* page.
+> For an example, see [Ziine](xref:ZiineDemoSystem) > *Visual Overview Design Examples* view > *[misc > OTHER]* page.

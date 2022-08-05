@@ -7,8 +7,9 @@ uid: Basic_conditional_shape_manipulation_actions
 In some shape data fields, especially fields that display the current value of a parameter, property or session variable, you can specify conditional shape manipulation actions. These allow you to have a shape shown, hidden, flipped, rotated or colored based on the current value of the parameter, property or session variable to which that shape is linked.
 
 > [!NOTE]
+>
 > - To also apply conditional shape manipulation actions on other linked shapes, e.g. shapes linked to Automation scripts, or to combine multiple conditions, see [Extended conditional shape manipulation actions](xref:Extended_conditional_shape_manipulation_actions).
-> - For an example, see [Ziine](xref:ZiineDemoSystem) > *[Linking Shapes]* view > *[misc > MANIPULATION]* page.
+> - For an example, see [Ziine](xref:ZiineDemoSystem) > *Visual Overview Design Examples* view > *[misc > MANIPULATION]* page.
 
 ## Action overview
 

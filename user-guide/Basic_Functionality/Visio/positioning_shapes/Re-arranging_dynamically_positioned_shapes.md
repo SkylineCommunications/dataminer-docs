@@ -16,4 +16,4 @@ When, in a Visio drawing, shapes have been positioned dynamically based on prope
 > [!TIP]
 >
 > - See also: [ArrangeMode](xref:Overview_of_page_and_shape_options)
-> - For an example, see [Ziine](xref:ZiineDemoSystem) > *[Linking Shapes]* view > *[positioning > DYNAMIC]* page.
+> - For an example, see [Ziine](xref:ZiineDemoSystem) > *Visual Overview Design Examples* view > *[positioning > DYNAMIC]* page.

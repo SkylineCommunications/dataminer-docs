@@ -19,4 +19,4 @@ Add the following shape data fields to the shape:
 - a shape data field of type **Enabled**, set to "false"
 
 > [!NOTE]
-> For an example, see [Ziine](xref:ZiineDemoSystem) > *[Linking Shapes]* view > *[controls > CUSTOM]* page.
+> For an example, see [Ziine](xref:ZiineDemoSystem) > *Visual Overview Design Examples* view > *[controls > CUSTOM]* page.

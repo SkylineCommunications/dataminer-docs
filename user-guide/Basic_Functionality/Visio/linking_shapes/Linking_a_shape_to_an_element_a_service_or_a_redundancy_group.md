@@ -10,14 +10,16 @@ When a user clicks such a shape, by default, the Visio drawing linked to the ele
 
 > [!TIP]
 > See also:
+>
 > - [Disabling the default hyperlink behavior of a linked shape](xref:Disabling_the_default_hyperlink_behavior_of_a_linked_shape)
 > - [Adding options to shapes linked to elements or services](xref:Adding_options_to_shapes_linked_to_elements_or_services)
 > - [Linking a shape to an element based on DCF connections](xref:Linking_a_shape_to_an_element_based_on_DCF_connections)
 
 > [!NOTE]
+>
 > - Visio shapes linked to elements, services or redundancy groups will not be displayed if, for any reason, those links cannot be resolved. Link problems can occur because of insufficient user rights, missing DataMiner items, invalid parameter values, etc.
 > - Depending on the configuration of a redundancy group, the right-click menu of a shape that is linked to it may contain switching options.
-> - For an example, see [Ziine](xref:ZiineDemoSystem) > *[Linking Shapes]* view > *[linking > OBJECTS]* page.
+> - For an example, see [Ziine](xref:ZiineDemoSystem) > *Visual Overview Design Examples* view > *[linking > OBJECTS]* page.
 
 In this section:
 
@@ -54,6 +56,7 @@ You can refer to an element, service or redundancy group in the following ways:
   If wildcard characters are used, the shape dynamically refers to the first element in the view to which the Visio file is linked. If no element matches the name mask in that view, then the elements in the services and subservices in that view (and, if necessary, all subviews) are also checked.
 
 > [!NOTE]
+>
 > - If the Visio drawing is linked to an element, you can link the shape to that same element by using an asterisk ("\*") as element reference.
 > - The item reference can contain placeholders like \[param\], \[this view\] or \[this service\].
 

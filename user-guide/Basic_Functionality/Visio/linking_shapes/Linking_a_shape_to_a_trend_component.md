@@ -7,9 +7,10 @@ uid: Linking_a_shape_to_a_trend_component
 Using a shape data field of type **Component**, you can configure a Visio shape to display a trend component.
 
 > [!NOTE]
+>
 > - It is also possible to turn a shape into a parameter chart instead of linking it to a trend component. See [Creating a parameter chart](xref:Creating_a_parameter_chart).
 > - In a Visio trend component, the alarm timeline along the X-axis is only displayed if the graph initially shows only one parameter, and only as long as that parameter is displayed.
-> - For examples, see [Ziine](xref:ZiineDemoSystem) > *[Linking Shapes]* view > *[linking > TREND1, TR2 and TR3]* pages.
+> - For examples, see [Ziine](xref:ZiineDemoSystem) > *Visual Overview Design Examples* view > *[linking > TREND1, TR2 and TR3]* pages.
 > - In the Monitoring and Dashboards apps, trend components in a visual overview are only supported from DataMiner 10.0.12 onwards.
 
 In this section:
@@ -42,6 +43,7 @@ Add the following shape data fields to the shape:
     ```
 
     > [!NOTE]
+    >
     > - Instead of specifying the DMA ID/Element ID in the **Parameters** shape data field, you can also specify an **Element** shape data field and set it to the element name, and then only list the parameters in the **Parameters** shape data field, separated by pipe characters.
     > - You can use element wildcards, e.g. "\*:1010:0" for index 0 on parameter 1010 of a table.
     > - By default no more than 10 results can be displayed if a wildcard is used. If more results are available than this default limit, a notification will be displayed.

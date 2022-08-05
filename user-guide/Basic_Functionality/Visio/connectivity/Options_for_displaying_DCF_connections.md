@@ -22,7 +22,7 @@ A number of different options are available for connections displayed in Visual 
 | LinkConnectionProperty | [Linking connection properties](#linking-connection-properties) |
 
 > [!TIP]
-> For examples, see [Ziine](xref:ZiineDemoSystem) > *[Linking Shapes]* view > *[dcf]* page.
+> For examples, see [Ziine](xref:ZiineDemoSystem) > *Visual Overview Design Examples* view > *[dcf]* page.
 
 ## Using existing lines as connectivity lines
 
@@ -31,6 +31,7 @@ By default, straight lines will be drawn automatically to visualize connectivity
 If you want to use existing lines to visualize connectivity, then add a shape data field of type **Options** to the page and set its value to "ConnectivityLines\|Highlightpath".
 
 > [!NOTE]
+>
 > - Make sure the manually drawn lines are connected to the correct interfaces. If a line is connected to the parent shape of an interface instead of the interface itself, the path will not be used.
 > - If you draw a connection line to a shape that is not linked to a DataMiner object, you will need to make sure a connection point is configured on the shape, as otherwise it will not be clickable and highlightable in DataMiner. To add a connection point, in Visio, select the connection point tool in the ribbon (displayed as a blue X in the *Home* tab), select the shape, and then click the shape again while keeping the *CTRL* key pressed.
 
@@ -111,6 +112,7 @@ To have a connection property displayed on top of every connection that contains
     | Options          | ConnectionProperty:Speed;Avg |
 
 > [!NOTE]
+>
 > - On connection property shapes, conditional shape manipulation actions can be defined that check conditions such as the value of the property, whether a connection is highlighted, and whether the mouse pointer is on a connection.<br>See [Conditional manipulation of connection shapes](xref:Extended_conditional_shape_manipulation_actions#conditional-manipulation-of-connection-shapes).
 > - Displaying connection properties between dynamically generated shapes is only supported from DataMiner 9.0.5 CU1 onwards.
 
@@ -134,6 +136,7 @@ To have a pop-up box displayed with connection property information:
 
 > [!NOTE]
 > If a user clicks a line that represents multiple connections, the connection properties window will list all connections represented by that line, along with the following information for each connection:
+>
 > - The alarm colors of both connected interfaces.
 > - The names of both connected interfaces, each followed by the element name.
 > - An arrow that indicates the direction of the connection.

@@ -10,12 +10,12 @@ To implement this feature, do the following:
 
 1. Create the shapes representing the child items, and add the necessary child-level shape data fields to them. See [Child-level shape data](#child-level-shape-data).
 
-    Either create one general shape for all types of children (element, services, redundancy groups and views) or four different shapes (one for each type of child: element, service, redundancy group or view).
+   Either create one general shape for all types of children (element, services, redundancy groups and views) or four different shapes (one for each type of child: element, service, redundancy group or view).
 
 1. Group those shapes, and add the necessary group-level shape data fields to the group. See [Group-level shape data](#group-level-shape-data).
 
 > [!TIP]
-> For an example, see [Ziine](xref:ZiineDemoSystem) > *[Linking Shapes]* view > *[children > ELEMENTS AND VIEWS]* page.
+> For an example, see [Ziine](xref:ZiineDemoSystem) > *Visual Overview Design Examples* view > *[children > ELEMENTS AND VIEWS]* page.
 
 ## Child-level shape data
 

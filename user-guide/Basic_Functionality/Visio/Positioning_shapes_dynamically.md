@@ -7,7 +7,7 @@ uid: Positioning_shapes_dynamically
 There are several ways to configure shapes in Visio so that they are positioned dynamically in Visual Overview.
 
 > [!TIP]
-> For examples, see [Ziine](xref:ZiineDemoSystem) > *[Linking Shapes]* view > *[positioning > DYNAMIC]* page.
+> For examples, see [Ziine](xref:ZiineDemoSystem) > *Visual Overview Design Examples* view > *[positioning > DYNAMIC]* page.
 
 This section consists of the following topics:
 
