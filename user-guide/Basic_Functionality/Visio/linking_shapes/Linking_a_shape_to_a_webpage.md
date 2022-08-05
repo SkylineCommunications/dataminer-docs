@@ -113,12 +113,12 @@ http://localhost/foo/test.php?id=123&action=save#SL_ALLOW_POPUPS#
 | \<ElementName> | Name of the element |
 | \<DataMinerID> | DataMiner ID |
 | \<DMAIP> | The certificate address, hostname or IP address of the DataMiner Agent to which the user is connected. See [\<DMAIP>](xref:Placeholders_for_variables_in_shape_data_values#dmaip) |
-| \<PageFilter> | Value of the drop-down filter box in the top-right corner of the Visio drawing.<br>See [Specifying an EPM parameter that can be used to filter](xref:Specifying_an_EPM_parameter_that_can_be_used_to_filter). |
+| \<PageFilter> | Value of the drop-down filter box in the top-right corner of the Visio drawing. See [Specifying an EPM parameter that can be used to filter](xref:Specifying_an_EPM_parameter_that_can_be_used_to_filter). |
 
 > [!NOTE]
 >
 > - \<ElementID>, \<ElementIP> and \<ElementName> are only to be used if the shape is also linked to an element.
-> - From DataMiner version 9.0.5 onwards, these placeholders can also be used inside another placeholder in the URL, e.g. *#http://www.skyline.be?MyParam=\[param:\<elementname>,1\]*
+> - From DataMiner version 9.0.5 onwards, these placeholders can also be used inside another placeholder in the URL, e.g. `#http://www.skyline.be?MyParam=[param:<elementname>,1]`
 
 ## Configuring a link to a DataMiner element or view within a webpage embedded in Visual Overview
 

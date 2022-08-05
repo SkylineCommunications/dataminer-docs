@@ -6,15 +6,17 @@ uid: LineAndAreaChart
 
 This component can be used to display a trend graph.
 
-From DataMiner 9.6.13 onwards, it is possible to export the trend data to CSV. To do so, click the ... icon in the top-right corner of the component and select *Export to CSV*. The CSV file will then be generated in the background. To ensure that it is generated correctly, do not change the configuration of the component until the CSV export is completed.
-
 > [!NOTE]
-> - The separator used in CSV exports is based on the *CSV separator* setting in Cube. If this setting cannot be retrieved, the local browser settings are used instead.
-> - From DataMiner 10.0.11 onwards, if a line chart component is added, the time span displayed by the component is available as feed in the data pane, so that this can be applied to other components.
+> From DataMiner 10.0.11 onwards, if this type of component is added, the time span displayed by the component is available as a feed in the data pane, so that this can be applied to other components.
+
+## Configuration
 
 To configure the component:
 
 1. Apply one or more parameter data feeds. See [Applying a data feed](xref:Configuring_dashboard_components#applying-a-data-feed).
+
+   > [!NOTE]
+   > If a query is used as the data feed, additional configuration is required. See [Configuration with query data feed](#configuration-with-query-data-feed).
 
 1. Optionally, apply a filter feed:
 
@@ -104,3 +106,27 @@ To configure the component:
      > From DataMiner 10.2.0/10.1.1 onwards, the percentile calculation takes into account how long the parameter had a specific value. This means that if a particular value is present for a longer time than other values, it will get more weight in the calculation. For discrete parameters or graphs showing multiple parameters, no percentile is calculated.
 
    - *Additional lines* > *Show boundary lines*: Allows you to display one or more boundary lines. You can configure where a line should be displayed by adding a Y-axis value in the *Boundary value* box. The color of a boundary line can be customized in the *Boundary line color* box. The *Add boundary line* option below this allows you to add additional boundary lines. To remove a boundary line, click the x to the right of the line name.
+
+## Configuration with query data feed
+
+Query results are supported as a data feed for this component from DataMiner 10.2.9/10.3.0 onwards. To configure the component to use a GQI query as its data feed:
+
+1. Create a query data feed. See [Configuring query data feeds](xref:Configuring_GQI_feeds).
+
+1. In the *Component* > *Settings* tab, configure the following fields in the *Dimensions* section:
+
+   - *Query*: The query data feed you want to use.
+   - *X axis*: The column that should be used for the X-axis data.
+   - *Y axis*: The column that should be used for the Y-axis data.
+
+   > [!NOTE]
+   > Data points are connected by a line in the order they appear in the query result. If you want to create a trend line, make sure the query results are sorted on the desired axis column.
+
+1. Fine-tune the component layout and settings like for a regular line and area chart. See [Configuration](#configuration).
+
+## Export to CSV
+
+From DataMiner 9.6.13 onwards, it is possible to export the trend data to CSV. To do so, click the ... icon in the top-right corner of the component and select *Export to CSV*. The CSV file will then be generated in the background. To ensure that it is generated correctly, do not change the configuration of the component until the CSV export is completed.
+
+> [!NOTE]
+> The separator used in CSV exports is based on the *CSV separator* setting in Cube. If this setting cannot be retrieved, the local browser settings are used instead.
