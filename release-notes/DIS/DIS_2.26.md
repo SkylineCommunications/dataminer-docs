@@ -33,6 +33,7 @@ To edit a QAction, you now have two options:
 - Open Visual Studio’s Solution Explorer window, go to the QAction\_\<id> project and open the QAction\_\<id>.cs file.
 
 > [!NOTE]
+>
 > - A QAction project can contain several \*.cs files. These files will then be combined when compiling the protocol.
 > - It is recommended to place all “using” directives inside the namespace instead of at the top of the file.
 > - DLL imports now need to be configured by adding references on the C# project itself. Those references can either refer to external DLL files (in C:\\DataMiner\\ProtocolScripts or C:\\DataMiner\\Files) or to other QActions in the solution. The latter will at compilation be translated to “\[ProtocolName\].\[ProtocolVersion\].QAction.\<id>.dll” imports in the protocol.
@@ -92,6 +93,7 @@ ITableFilterItem filter = new TableFilterItem
 ```
 
 > [!NOTE]
+>
 > - Using GetData will retrieve the entire table in one request. If you only need to retrieve a portion of a table, consider using QueryData instead.
 > - Using QueryData without a filter will retrieve the entire table in multiple requests (one request per page).
 > - Using QueryData with a filter will retrieve the table rows matching the filter in one request.

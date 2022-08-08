@@ -29,7 +29,7 @@ To do so, use the following syntax:
 > [!NOTE]
 > If SLScripting is registered as a service, this functionality is not available. Elements running a protocol.xml file in which RunInSeparateInstance is set to true will then create a notification alarm to indicate a potential memory problem.
 
-**DataMiner.xml: scriptingProcesses option now accepts integer values**
+##### DataMiner.xml: scriptingProcesses option now accepts integer values
 
 From now on, in DataMiner.xml, you can set the scriptingProcesses option to an integer value, indicating the exact number of SLScripting processes that have to be launched. The SLProtocol processes will then be assigned one of the available SLScripting processes in a round-robin way.
 
@@ -40,6 +40,7 @@ For example, if protocolProcesses is set to 5 (i.e. the default value), and scri
 - SLScripting 3 will host SLProtocol #3
 
 > [!NOTE]
+>
 > - Assigning more SLScripting processes than SLProtocol processes will simply give every SLProtocol its own instance without launching additional SLScripting processes.
 > - Up to now, the allowed values for scriptingProcesses were “\[service\]” and “protocol”. If scriptingProcesses is set to “protocol”, an SLScripting process is initialized for every SLProtocol process. This should not be confused with setting protocolProcesses to “protocol”. In that case, an SLProtocol process is launched for every protocol name.
 
@@ -60,6 +61,7 @@ For example, a hyperlink of type “openelement” could contain the following c
 ```
 
 > [!NOTE]
+>
 > - If you want to use a view property, a service property or an element property in a hyperlink, then you must enable its “Make this property available for alarm filtering” setting in DataMiner Cube.
 > - If you want to use a view property on an alarm of an element that has been added to multiple views, the property that will be used in the hyperlink will be the property of the view with the lowest ID that contains the element.
 
@@ -67,7 +69,7 @@ For example, a hyperlink of type “openelement” could contain the following c
 
 A number of enhancements have been made to the Failover Config window. See below for a summary.
 
-**General**
+##### General
 
 - The status indicator is now clickable and opens the status page when clicked.
 
@@ -75,16 +77,16 @@ A number of enhancements have been made to the Failover Config window. See below
 
 - When the second agent is added,
 
-    - the IP address or hostname of that second agent is checked to determine whether it refers to a valid DataMiner Agent, and
-    - the DataMiner IDs of both agents are checked. In a Failover setup, both must be identical.
+  - the IP address or hostname of that second agent is checked to determine whether it refers to a valid DataMiner Agent, and
+  - the DataMiner IDs of both agents are checked. In a Failover setup, both must be identical.
 
 - Advanced options:
 
-    - Synchronization NICs are automatically suggested for new setups. The list will now display the actual NIC names instead of the corporate/acquisition names.
-    - Heartbeats are automatically suggested for new setups. The list will now display the actual NIC names instead of the corporate/acquisition names.
-    - When a new heartbeat is added, the first NIC will automatically be selected.
+  - Synchronization NICs are automatically suggested for new setups. The list will now display the actual NIC names instead of the corporate/acquisition names.
+  - Heartbeats are automatically suggested for new setups. The list will now display the actual NIC names instead of the corporate/acquisition names.
+  - When a new heartbeat is added, the first NIC will automatically be selected.
 
-**Failover with virtual IP address**
+##### Failover with virtual IP address
 
 - Subnet masks for IP inputs will be suggested based on the current subnet of the DMA.
 - The local IP address will no longer be suggested as virtual IP address.
@@ -94,7 +96,7 @@ A number of enhancements have been made to the Failover Config window. See below
 
 - In the advanced options, the (virtual) IP address information will be automatically filled in for new setups.
 
-**Failover with hostnames**
+##### Failover with hostnames
 
 - When setting up a new Failover with hostnames, in the hostname setup, the hostname will now be displayed instead of the IP address. If Failover with hostnames has already been set up, the hostname setup will display the currently used hostnames.
 
@@ -145,10 +147,11 @@ To do so, add a FunctionTypes option to the ComponentOptions shape data field.
 | ComponentOptions | FunctionTypes=\[comma-separated list of values\]<br> Possible values:<br> -  Undefined (i.e. NULL value)<br> -  UserTask<br> -  ScriptTask<br> -  ResourceTask<br> -  Gateway<br> -  NoneStartEvent<br> -  TimeStartEvent<br> -  EndEvent |
 
 > [!NOTE]
+>
 > - The FunctionTypes option
->     - only works in conjunction with the options Interface=definition or Interface=definitions.
->     - can be used in combination with the HideChildFunctions option.
->     - can be set dynamically using session variables.
+>   - only works in conjunction with the options Interface=definition or Interface=definitions.
+>   - can be used in combination with the HideChildFunctions option.
+>   - can be set dynamically using session variables.
 > - The filter will be cleared when no FunctionTypes option is specified or when the FunctionTypes option is set to an empty list of values.
 > - Parent functions that do not match the filter but have child functions that match the filter will be displayed in the function tree to allow you to navigate to one of the child functions.
 
@@ -182,7 +185,11 @@ if (script.HadError)
 
 > [!NOTE]
 > Up to now, when an element was not running, the following error message would be thrown:
-> *Element {elementName} is not active, not available or does not exist*<br> From now, when an element is not running, the following error message (in which elementState will have one of the following values: paused, stopped, in timeout or not active) will be thrown instead:
+>
+> *Element {elementName} is not active, not available or does not exist*
+>
+> From now, when an element is not running, the following error message (in which elementState will have one of the following values: paused, stopped, in timeout or not active) will be thrown instead:
+>
 > *Element {elementName} is {elementState}*
 
 ### DMS web apps
@@ -223,6 +230,7 @@ When you right-click a column header of a data table component (e.g. a GQI table
 | Boolean          | True or false                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 
 > [!NOTE]
+>
 > - You can specify multiple column filters. If you do, they will be combined with AND.
 > - Column filters can be used in combination with the component’s search box.
 > - Grouping and column filters are not persistent. When you leave the page, all grouping and filtering will be cleared.
@@ -234,6 +242,7 @@ When you right-click a non-empty cell in a data table component (e.g. a GQI tabl
 If you choose to copy the entire row or the entire table, the data will be copied in CSV format.
 
 > [!NOTE]
+>
 > - If you copy a cell or an entire column, the values will not be enclosed in double quotes.
 > - If you copy an entire row or an entire table, the values will be enclosed in double quotes.
 > - If a value contains double quotes, they will be escaped upon copying.
@@ -299,7 +308,7 @@ From now on, the deletion of a function resource will be blocked when the deleti
 
 The ResourceManagerHelper now contains a new method to delete resources:
 
-*public Resource\[\] RemoveResources(Resource\[\] resources, ResourceDeleteOptions options)*
+`public Resource[] RemoveResources(Resource[] resources, ResourceDeleteOptions options)`
 
 > [!NOTE]
 > Contributing resources can be deleted even when no parent element can be found. The parent element of a contributing resource is an enhanced service element. When the contributing booking is no longer running, the enhanced service element will no longer exist.

@@ -20,11 +20,11 @@ However, if you do wish to use DataMiner Cube in a browser, this remains possibl
 
 ### DMS core functionality
 
-#### DataMiner Application packages \[ID_25911\]\[ID_26027\]\[ID_26169\]\[ID_26243\]\[ID_26271\]\[ID_26338\]<br>\[ID_26351\]\[ID_26371\]
+#### DataMiner Application packages \[ID_25911\]\[ID_26027\]\[ID_26169\]\[ID_26243\]\[ID_26271\]\[ID_26338\]\[ID_26351\]\[ID_26371\]
 
 From now on, it is possible to install a DataMiner application or solution on an existing DataMiner system by uploading and installing a so-called “application package”.
 
-**Creating an application package**
+##### Creating an application package
 
 To create an application package, create the following files and folders, and compress them into a zip file (e.g. AppPackage.zip):
 
@@ -33,16 +33,14 @@ AppInfo.xml
 Scripts
 
 - Install.xml
-
 - Config.xml
-
 - InstallDependencies
 
-    - ...
+  - ...
 
 - ConfigureDependencies
 
-    - ...
+  - ...
 
 AppInstallContent
 
@@ -55,10 +53,11 @@ AppInstallContent
 | AppInstallContents | All auxiliary files needed by the installation script.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 
 > [!NOTE]
+>
 > - The Install.xml script, which must be able to access all data stored in the AppInstallContents folder, should check whether the system contains an earlier version of the application or solution in question and upgrade it. A full installation from scratch is to be avoided.
 > - All configuration parameters used by the Config.xml script can be specified in the AppInfo.xml file.
 
-**Structure of the AppInfo.xml file**
+##### Structure of the AppInfo.xml file
 
 ```xml
 <AppInfo>
@@ -81,7 +80,7 @@ AppInstallContent
 </AppInfo>
 ```
 
-**Script entry points**
+##### Script entry points
 
 In both the Install.xml and Config.xml scripts, an entry point has to be defined.
 
@@ -115,12 +114,13 @@ In both the Install.xml and Config.xml scripts, an entry point has to be defined
 
     AppConfigurationContext has to contain the configuration entry values.
 
-**Installing an application package**
+##### Installing an application package
 
 Application packages can be uploaded, viewed, installed and configured using the DataMiner SLNetClientTest tool. All commands related to application packages can be found under Advanced \> Apps \> AppPackages.
 
 > [!NOTE]
 > To be allowed to install application packages, you must be granted the following user permission:
+>
 > - Modules \> System configuration \> Agents \> Install App packages
 
 Although the above-mentioned method is to be preferred, it is also possible to embed an application package into a .dmupgrade package. To install an application package this way, do the following:
@@ -136,12 +136,13 @@ Although the above-mentioned method is to be preferred, it is also possible to e
 3. Install the .dmupgrade package on a DataMiner Agent that is running.
 
     > [!NOTE]
-    > -  Make sure the .dmupgrade package does not contain any instructions to stop the DataMiner Agent.
-    > -  If you intend to install the .dmupgrade package using the DataMiner Taskbar Utility, make sure the DataMiner Agent is running.
-    > -  If you install the .dmupgrade package onto a DataMiner System, the DataMiner Agent on which the upgrade is launched will run the installation script found in the application package. If the upgrade is launched from a DataMiner Agent that is not a member of the DataMiner System, then the DataMiner Agent with the first IP address (in alphabetical order) will run the installation script.
-    > -  It is not possible to install an application package on multiple Agents of the same DataMiner System by adding their IP addresses to the “external IPs” list in DataMiner Cube. This would cause the installation script to be launched on each of the Agents in that list. If you want to install an application package on multiple Agents, you can select the Agents to be upgraded while connected to one of the Agents in the DataMiner System (which makes it unnecessary to have an external IPs list) or you can install it using the DataMiner Taskbar Utility.
+    >
+    > - Make sure the .dmupgrade package does not contain any instructions to stop the DataMiner Agent.
+    > - If you intend to install the .dmupgrade package using the DataMiner Taskbar Utility, make sure the DataMiner Agent is running.
+    > - If you install the .dmupgrade package onto a DataMiner System, the DataMiner Agent on which the upgrade is launched will run the installation script found in the application package. If the upgrade is launched from a DataMiner Agent that is not a member of the DataMiner System, then the DataMiner Agent with the first IP address (in alphabetical order) will run the installation script.
+    > - It is not possible to install an application package on multiple Agents of the same DataMiner System by adding their IP addresses to the “external IPs” list in DataMiner Cube. This would cause the installation script to be launched on each of the Agents in that list. If you want to install an application package on multiple Agents, you can select the Agents to be upgraded while connected to one of the Agents in the DataMiner System (which makes it unnecessary to have an external IPs list) or you can install it using the DataMiner Taskbar Utility.
 
-**AppPackageHelper**
+##### AppPackageHelper
 
 An AppPackageHelper class has been made available, containing a series of methods to manage application packages. The current methods include:
 
@@ -313,17 +314,13 @@ From now on, you can use the Cube Launcher to install DataMiner Cube as a deskto
 This new tool offers a number of advantages. It allows you to deploy multiple Cube versions side by side, and it will automatically select the correct Cube version when you connect to a DMA.
 
 1. Browse to your DMA using a different browser than Internet Explorer.
+1. Enter your username and password to log in.
+1. Select *Desktop installation* and run the downloaded file.
+1. In the installation window, open the *Options* section and adjust the options depending on whether you want a shortcut to be added to the desktop and/or start menu and on whether you want DataMiner Cube to start with Windows.
+1. Click *Install*.
 
-2. Enter your username and password to log in.
-
-3. Select *Desktop installation* and run the downloaded file.
-
-4. In the installation window, open the *Options* section and adjust the options depending on whether you want a shortcut to be added to the desktop and/or start menu and on whether you want DataMiner Cube to start with Windows.
-
-5. Click *Install*.
-
-    > [!NOTE]
-    > Although it is still possible to install a DataMiner Cube desktop applica-tion using an MSI installation package, it is strongly advised to use the new Cube Launcher instead.
+   > [!NOTE]
+   > Although it is still possible to install a DataMiner Cube desktop applica-tion using an MSI installation package, it is strongly advised to use the new Cube Launcher instead.
 
 #### SNMP Managers: Polling IP address can now be added as a custom trap binding \[ID_26339\]
 
@@ -441,15 +438,16 @@ In the SLNetClientTest tool, it is now possible to configure the following param
 
 In the Web Services API v1, the job management methods have all been modified to support job domains.
 
-**Changes to classes**
+##### Changes to classes
 
 The DMAJobDomain class, which now extends from the newly added DMAJobDomainLite class, contains a new SectionDefinitions property. That property will contain an array of DMASectionDefinitions that are linked to the JobDomain.
 
 > [!NOTE]
+>
 > - Configuration has been marked obsolete. All client information will be available in the Info property of each SectionDefinition.
 > - In DMASectionDefinitionInfo, the CustomSectionDefinitionExtensionID property has been marked obsolete.
 
-**Methods to manage job domains**
+##### Methods to manage job domains
 
 - CreateJobsDomain(string connection, string name)
 
@@ -475,7 +473,7 @@ The DMAJobDomain class, which now extends from the newly added DMAJobDomainLite 
 
     This method, which was formerly named SaveJobsSectionDomainConfig, updates all client information of each section definition in JobDomain.VisualStructure.
 
-**Methods to manage job section definitions**
+##### Methods to manage job section definitions
 
 - CreateJobsSectionDefinition(string connection, string domainID, string name, DMABookingLink bookingLinkInfo, DMASectionDefinitionInfo info)
 
@@ -527,7 +525,7 @@ The DMAJobDomain class, which now extends from the newly added DMAJobDomainLite 
 
     Updates the field order in the specified section definition of the specified domain.
 
-**Methods to manage job section definition fields**
+##### Methods to manage job section definition fields
 
 - AddOrUpdateJobsSectionDefinitionField(string connection, string domainID, string sectionDefinitionID, DMASectionDefinitionField field, DMAJobFieldPossibleValueUpdate\[\] possibleValueUpdates)
 
@@ -541,13 +539,13 @@ The DMAJobDomain class, which now extends from the newly added DMAJobDomainLite 
 
     Unhides the specified section definition field in the specified section definition of the specified domain.
 
-**Methods to manage jobs**
+##### Methods to manage jobs
 
 - DeleteJobs(string connection, string domainID, string\[\] jobIDs)
 
     Deletes the specified jobs and returns an DMARemoveInfo object containing an array with all successful and failed removals.
 
-**Methods to manage job templates**
+##### Methods to manage job templates
 
 - GetJobTemplates(string connection)
 
@@ -608,6 +606,7 @@ A FieldValueChange object has the following properties:
 | ValueAfter        | The value after the change.<br> When CrudType is “Deleted”, this property will be Null.  |
 
 > [!NOTE]
+>
 > - If, for some reason, tracking changes to jobs would fail, an error will be logged in SLHistoryManager.txt each time a HistoryChange record could not be saved. To prevent users from receiving too many notices, a notice will only be generated every hour.
 > - When a job is deleted, all HistoryChange records associated with this job will also be deleted, and a new HistoryChange record will be added to indicate when the job was deleted and by whom.
 
@@ -696,7 +695,7 @@ From now on, text will be written to the log files using UTF-8 encoding.
 
 Due to a number of enhancements, overall performance of the Profiles app has increased when loading, especially on systems with a large amount of profiles.
 
-#### DataMiner Maps: Enhanced performance when retrieving EPM-related data \[ID_26216\]<br>\[ID_26233\]
+#### DataMiner Maps: Enhanced performance when retrieving EPM-related data \[ID_26216\]\[ID_26233\]
 
 Due to a number of enhancements, overall performance has increased when retrieving EPM-related data.
 
@@ -823,7 +822,7 @@ After a DataMiner upgrade operation, in some cases, a “DataMiner is currently 
 
 When, in a Failover setup, the first switch-over occurred after migrating from MySQL to Cassandra, in some cases, a DataMiner run-time error alarm would be generated.
 
-#### ResourceManager module would no longer initialize after a DataMiner restart \[ID_26117\]<br>\[ID_26309\]
+#### ResourceManager module would no longer initialize after a DataMiner restart \[ID_26117\]\[ID_26309\]
 
 In some cases, the ResourceManager module would no longer initialize after a DataMiner restart.
 

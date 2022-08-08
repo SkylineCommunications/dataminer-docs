@@ -18,14 +18,14 @@ To switch to using one Cassandra cluster for your DMS, follow the procedure belo
 
 1. Make sure the Cassandra cluster software is installed on each DMA. A [standalone installer](https://community.dataminer.services/documentation/standalone-cassandra-cluster-installer/) is available for this on DataMiner Dojo.
 
-2. [Install Elasticsearch](xref:Installing_Elasticsearch_via_DataMiner) on each DMA in the cluster if you have not done so already.
+1. [Install Elasticsearch](xref:Installing_Elasticsearch_via_DataMiner) on each DMA in the cluster if you have not done so already.
 
-3. Migrate the database data to the Cassandra cluster. See [Migrating the general database to a DMS Cassandra cluster](xref:Migrating_the_general_database_to_a_DMS_Cassandra_cluster).
+1. Migrate the database data to the Cassandra cluster. See [Migrating the general database to a DMS Cassandra cluster](xref:Migrating_the_general_database_to_a_DMS_Cassandra_cluster).
 
     > [!NOTE]
     > We recommend that DataMiner is stopped before the migration is started. While it is possible to run the migration while DataMiner is running, any data that is stored in the source database during the migration may not be migrated to the target database.
 
-4. In DataMiner Cube, go to System Center \> Database and select *CassandraCluster* in the Database box. Then specify the name, DB server and credentials to connect to the Cassandra cluster.
+1. In DataMiner Cube, go to System Center \> Database and select *CassandraCluster* in the Database box. Then specify the name, DB server and credentials to connect to the Cassandra cluster.
 
 ##### DB.xml changes
 
@@ -48,7 +48,7 @@ If a Cassandra node goes down or when a node is down when DataMiner starts up, a
 
 The DataMiner Object Model (DOM) is a collection of generic objects and a generic DomManager that can be used to perform a series of operations.
 
-**Object overview**
+##### Object overview
 
 | Object            | Description                                                                                             |
 |-------------------|---------------------------------------------------------------------------------------------------------|
@@ -68,14 +68,14 @@ If, for example, you want to build a system that will store the time that employ
     - FieldDescriptor 3: Name = “Start time” & Type = “DateTime”
     - FieldDescriptor 4: Name = “Stop time” & Type = “DateTime”
 
-2. Create a DomDefinition (Name = PunchInfoDomDefinition) that contains a link to the PunchInfoSectionDefinition.
+1. Create a DomDefinition (Name = PunchInfoDomDefinition) that contains a link to the PunchInfoSectionDefinition.
 
 Employees will now be able to log their time spent by creating a new DomInstance
 
 - that is linked to the PunchInfoDomDefinition, and
 - that has one Section linked to the PunchInfoSectionDefinition, which contains a FieldValue for each FieldDescriptor.
 
-**DomManager**
+##### DomManager
 
 A DomManager manages the create/read/update/delete actions performed on the DOM objects, which are stored in an Elasticsearch index.
 
@@ -115,17 +115,17 @@ view=linkedPid:elementkeycolumnpid:remotedatatablepid:remotedatacolumnidx
 
 This option can be configured in three different ways. See the table below. In the examples, table 11000 is a (direct) view on table 1000.
 
-| Type of filtering     | Example               | Description                                                                                                                                                                                                                                                                                                                                    |
-|-----------------------|-----------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Local filtering       | view=:1004:1000:1     | The elementkeycolumnpid refers to another column of the same table.<br> Each row will be requested from the element referred to by the DMAID/EID found in parameter 1004.                                                                                                                                                                      |
-| Foreign key filtering | view=1003:1105:1000:2 | The elementkeycolumnpid refers to a column of the table linked by the foreign key found in parameter 1003.<br> Each row will be requested from the element referred to by the DMAID/EID found in parameter 1105, which is linked via the foreign key in parameter 1003.                                                                        |
-| No filtering          | view=:1401:1000:1     | The elementkeycolumnpid refers to a column of another table, which is not linked to the local table (no linkedPid is provided).<br> Each row will be requested from the elements referred to by the DMAID/EID items found in column 1401.<br> Note: If the remote elements contain duplicate keys, then this can cause data to be overwritten. |
+| Type of filtering | Example | Description |
+|--|--|--|
+| Local filtering | view=:1004:1000:1 | The elementkeycolumnpid refers to another column of the same table. Each row will be requested from the element referred to by the DMAID/EID found in parameter 1004. |
+| Foreign key filtering | view=1003:1105:1000:2 | The elementkeycolumnpid refers to a column of the table linked by the foreign key found in parameter 1003. Each row will be requested from the element referred to by the DMAID/EID found in parameter 1105, which is linked via the foreign key in parameter 1003. |
+| No filtering | view=:1401:1000:1 | The elementkeycolumnpid refers to a column of another table, which is not linked to the local table (no linkedPid is provided). Each row will be requested from the elements referred to by the DMAID/EID items found in column 1401. Note: If the remote elements contain duplicate keys, then this can cause data to be overwritten. |
 
 ### DMS Cube
 
 #### Visual Overview: New icons added to DataMiner stencils \[ID_27571\]
 
-**New icons**
+##### New icons
 
 The following additional icons are now available in the DataMiner stencils:
 
@@ -177,13 +177,13 @@ The following additional icons are now available in the DataMiner stencils:
 - Encoder
 - Close Caption Encoder
 
-**Renamed icons**
+##### Renamed icons
 
 In the DataMiner stencils, the following existing icons have been renamed:
 
 | Old name            | New name          |
 |---------------------|-------------------|
-| no Acces            | No Access.2       |
+| no Access            | No Access.2       |
 | dmcube_cubemobile   | DM Cube Mobile    |
 | IP alt              | IP.2              |
 | Rotate 2            | Rotate            |
@@ -193,7 +193,7 @@ In the DataMiner stencils, the following existing icons have been renamed:
 | th                  | Apps              |
 | Virtual-Machine     | Virtual Machine   |
 
-**Capital Case**
+##### Capital Case
 
 All icon names are now in capital case.
 
@@ -235,25 +235,25 @@ This growing list of tests will allow you to check hardware and software require
 
 A number of enhancements have been made to the bar chart component.
 
-**Two additional chart layouts**
+##### Two additional chart layouts
 
 There are now four chart layouts to choose from:
 
-| Chart layout                                             | Description                                                                |
-|----------------------------------------------------------|----------------------------------------------------------------------------|
-| Absolute                                                 | Shows the absolute value.                                                  |
-| Relative per category<br> (new)                          | Shows the value as a percentage of all the variables within that category. |
-| Relative per variable<br> (previously called “Relative”) | Shows the value as a percentage of the variable across all categories.     |
-| Relative total                                           | Shows the value as a percentage of the total sum of all values.            |
+| Chart layout                                         | Description                                                                |
+|------------------------------------------------------|----------------------------------------------------------------------------|
+| Absolute                                             | Shows the absolute value.                                                  |
+| Relative per category (new)                          | Shows the value as a percentage of all the variables within that category. |
+| Relative per variable (previously called “Relative”) | Shows the value as a percentage of the variable across all categories.     |
+| Relative total                                       | Shows the value as a percentage of the total sum of all values.            |
 
-**Stacked bars**
+##### Stacked bars
 
 If you select the *Stack bars* option, the bars in the graph will be displayed one on top of the other instead of one next to the other.
 
 > [!NOTE]
 > This option will be especially useful in combination with the “Relative per category” chart layout.
 
-**Additional highlighting possibilities**
+##### Additional highlighting possibilities
 
 Apart from highlighting all bars belonging to a specific variable, you can now also highlight a single category by hovering over the label of the category or by hovering over empty space in a stacked bar chart.
 
@@ -292,7 +292,7 @@ All web applications\* will now connect to SLNet with the “AllowMessageThrottl
 
 It is now possible to have an Automation script triggered when a profile instance update affects running bookings. That script can then reconfigure the bookings.
 
-**Configuring the script**
+##### Configuring the script
 
 The script to reconfigure the bookings can be set on the ProfileManagerConfiguration. See the example below.
 
@@ -311,19 +311,19 @@ The script will be triggered using a new OnSrmBookingsUpdatedByReference entrypo
 
 - reservationIds will contain the IDs of all running ReservationInstances that were reconfigured because of the update.
 
-    This list does not have to include the IDs of the ReservationInstances that, although they did not reference the ProfileInstance, had usages quarantined because the update caused an overbooking.
+  This list does not have to include the IDs of the ReservationInstances that, although they did not reference the ProfileInstance, had usages quarantined because the update caused an overbooking.
 
-    ```csharp
-    public class Script
-    {
-        [AutomationEntryPoint(AutomationEntryPointType.Types.OnSrmBookingsUpdatedByReference)]
-        public void RunEntryPoint(Engine engine, Guid profileInstanceId, List<Guid> reservationIds)
-        {
-        }
-    }
-    ```
+  ```csharp
+  public class Script
+  {
+      [AutomationEntryPoint(AutomationEntryPointType.Types.OnSrmBookingsUpdatedByReference)]
+      public void RunEntryPoint(Engine engine, Guid profileInstanceId, List<Guid> reservationIds)
+      {
+      }
+  }
+  ```
 
-**New errors**
+##### New errors
 
 The UpdateAndApply call for a ProfileInstance can now return a number of additional errors.
 
@@ -331,19 +331,19 @@ When calling UpdateAndApply without forcing quarantine (i.e. with forceQuarantin
 
 - If no instances need to be quarantined, the update will be applied and the following warning will be returned:
 
-    - A warning of type ProfileInstanceChangeCausedBookingReconfiguration, listing the running reservations that were reconfigured because of the update.
+  - A warning of type ProfileInstanceChangeCausedBookingReconfiguration, listing the running reservations that were reconfigured because of the update.
 
 - If instances need to be quarantined, the update will not proceed and the following errors will be returned:
 
-    - An error with reason ReservationsMustMovedToQuarantine, listing the reservations that need to be quarantined as well as the usages.
-    - An error with reason ReservationsMustBeReconfigured, listing the bookings that will be affected by the ProfileInstance update.
+  - An error with reason ReservationsMustMovedToQuarantine, listing the reservations that need to be quarantined as well as the usages.
+  - An error with reason ReservationsMustBeReconfigured, listing the bookings that will be affected by the ProfileInstance update.
 
 When calling UpdateAndApply and forcing quarantine (i.e. with forceQuarantine set to true), the update will proceed and the following TraceData will be returned:
 
 - A warning of type ReservationInstancesMovedToQuarantine, listing the reservations and the usages that were quarantined.
 - A warning of type ProfileInstanceChangeCausedBookingReconfiguration, listing the reservations that were reconfigured because of the update.
 
-**New RequiredProfileInstanceReconfiguration property**
+##### New RequiredProfileInstanceReconfiguration property
 
 A new RequiredProfileInstanceReconfiguration property has been added to the ServiceReservationInstance class. When a ProfileInstance has been updated, all ReservationInstances referencing this ProfileInstance in any of their usages will have this property set to true. This way, solutions can keep track of the bookings that have been reconfigured in case the custom script was interrupted.
 
@@ -356,19 +356,19 @@ var filter = ServiceReservationInstanceExposers.RequiredProfileReconfiguration.E
 var instancesThatRequiredReconfig = rmHelper.GetReservationInstances(filter);
 ```
 
-**Additional information**
+##### Additional information
 
 - If triggering the configured script fails, a notice will be generated with the following text:
 
-    ```txt
-    Failed to run script to reconfigure bookings after updating ProfileInstance because an exception occurred. See SLProfileManager.txt logging for more details.
-    ```
+  ```txt
+  Failed to run script to reconfigure bookings after updating ProfileInstance because an exception occurred. See SLProfileManager.txt logging for more details.
+  ```
 
 - When the UpdateBookingConfigByReferenceScript is not configured (i.e. when the setting is empty or null in the profile manager configuration):
 
-    - No attempt will be made to trigger a script.
-    - The RequiredProfileInstanceReconfiguration property will not be set to true on the instances.
-    - No additional error or warning will be returned in the calls.
+  - No attempt will be made to trigger a script.
+  - The RequiredProfileInstanceReconfiguration property will not be set to true on the instances.
+  - No additional error or warning will be returned in the calls.
 
 ### DMS tools
 
@@ -388,6 +388,7 @@ In the SLNetClientTest program, it is now possible to view and delete trend data
 In the Alarm template editor, it is possible to configure hysteresis values for a monitored parameter. From now on, you will be able to enter hysteresis values that are lower than the polling interval of the parameter or the protocol. This will allow hysteresis to also work correctly for protocols in which SNMP traps are defined.
 
 > [!NOTE]
+>
 > - In general, it remains recommended to specify hysteresis values that are greater than the polling interval of the parameter. Only for parameters updated via SNMP traps or smart-serial parameters should you consider specifying hysteresis intervals that are lower than the polling interval.
 > - Up to now, when you entered a hysteresis value that was lower than the polling interval, an error message would be displayed. From now on, a warning message will be displayed instead.
 
@@ -471,7 +472,7 @@ A set of 6 new colored LED icons has been added to the file Icons.xml, located i
 
 #### TypeForwarding added to make sure libraries compiled against DataMiner versions prior to 10.1.1 will continue working \[ID_28675\]
 
-In DMS version 10.1.1, a number of extension methods were moved from the QActionHelperBaseClasses libary to the SLManagedScripting library.
+In DMS version 10.1.1, a number of extension methods were moved from the QActionHelperBaseClasses library to the SLManagedScripting library.
 
 Typeforwarding has now been added to make sure that libraries that still expect the types to be present in the QActionHelperBaseClasses DLL file will continue working when compiled against DataMiner versions prior to 10.1.1.
 

@@ -87,17 +87,17 @@ From now on, a CPE feed will no longer pass along all selected fields. Instead, 
 
 It is now possible to inject DLL files into an Automation script.
 
-**To inject a DLL**
+##### To inject a DLL
 
 1. Create an *AutomationDllInjectionItem* object that contains the following data:
 
     | Item     | Description                                                                                              |
     |------------|----------------------------------------------------------------------------------------------------------|
     | ScriptName | The name of the script into which the DLL will be injected.                                              |
-    | ExeId      | The ID of the script action that will be replaced.<br> Note: This script action must be a C# code block. |
-    | Path       | The path to the DLL that will be injected.<br> Note: This file must have the extension “.dll”.           |
+    | ExeId      | The ID of the script action that will be replaced. Note: This script action must be a C# code block. |
+    | Path       | The path to the DLL that will be injected. Note: This file must have the extension “.dll”.           |
 
-2. Send the object to the server using an *InjectAutomationDllRequestMessage*.
+1. Send the object to the server using an *InjectAutomationDllRequestMessage*.
 
 The server will send back an *InjectAutomationDllResponseMessage*. If any errors would have occurred, they will be included as errors of type *AutomationErrorData* in the message’s *TraceData* object. Possible errors include:
 
@@ -107,34 +107,35 @@ The server will send back an *InjectAutomationDllResponseMessage*. If any errors
 | NotAllowed      | The user who sent the message does not have the correct permissions.                                                                              |
 | DllPathInvalid  | The DLL path is invalid. The file does not exist or does not have the extension “.dll”.                                                           |
 | NotLicensed     | The DataMiner Agent is not licensed to use the Automation module.                                                                                 |
-| InjectionFailed | The injection operation failed in SLAutomation.<br> For more information, check the *SLAutomationErrors* property. |
+| InjectionFailed | The injection operation failed in SLAutomation. For more information, check the *SLAutomationErrors* property. |
 
 To determine whether the injection was successful, you can check TraceData.HasSucceeded.
 
-**To request an overview of the injected DLLs**
+##### To request an overview of the injected DLLs
 
 Send a *GetAutomationDllOverviewRequestMessage* to the server. This message does not have any properties.
 
 The server will send back a *GetAutomationDllOverviewResponseMessage* containing a list of *AutomationDllInjectionItem* objects.
 
-**To eject a DLL**
+##### To eject a DLL
 
 If you eject a previously injected DLL from an Automation script, this will cause the script to behave as it did before the injection. To do so, send an *EjectAutomationDllRequestMessage* containing the name of the script and the Exe ID (i.e. the ID of the script action).
 
 The server will send back a EjectAutomationDllResponseMessage. If any errors would have occurred, they will be included as errors of type *AutomationErrorData* in the message’s *TraceData* object. Possible errors include:
 
-| Value          | Description                                                                                                                                                                                                                                     |
-|----------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Unknown        | An unknown error occurred.                                                                                                                                                                                                                      |
-| NotAllowed     | The user who sent the message does not have the correct permissions.                                                                                                                                                                            |
-| NotLicensed    | The DataMiner Agent is not licensed to use the Automation module.                                                                                                                                                                               |
-| EjectionFailed | The ejection operation failed in SLAutomation.<br> For more information, check the *SLAutomationErrors* property.<br> Note: This error will never be returned after injecting a DLL. See “To eject a DLL” below. |
+| Value | Description |
+|--|--|
+| Unknown | An unknown error occurred. |
+| NotAllowed | The user who sent the message does not have the correct permissions. |
+| NotLicensed | The DataMiner Agent is not licensed to use the Automation module. |
+| EjectionFailed | The ejection operation failed in SLAutomation. For more information, check the *SLAutomationErrors* property. Note: This error will never be returned after injecting a DLL. See “To eject a DLL” below. |
 
-**To execute a script**
+##### To execute a script
 
 Send an ExecuteScriptMessage to the server.
 
 > [!NOTE]
+>
 > - Users who send the above-mentioned messages must have the “Automation \> Edit” permission to be able to inject or eject DLLs.
 > - DLLs can be injected in scripts that have not yet been run.
 > - When you restart the DataMiner Agent, the injected DLL will no longer be applied.
@@ -181,6 +182,7 @@ When you import profile parameters from a file, the following exceptions can be 
 | InvalidMediationSnippetException | One of the mediation snippets to be imported does not have the correct format. |
 
 > [!NOTE]
+>
 > - If you export a profile parameter, all the mediation snippets linked to that parameter will also be exported.
 > - When you import profile parameters and their mediation snippets, all existing profile parameters and mediation snippets with the same ID will be overwritten.
 
@@ -200,6 +202,7 @@ A HistoryChange records contains the following fields:
 | Changes      | List of changes that were made. In case of a ReservationInstance, this can be a resource usage change or a status change.            |
 
 > [!NOTE]
+>
 > - If, for some reason, tracking changes to ReservationInstances would fail, an error will be logged in SLHistoryManager.txt each time a HistoryChange record could not be saved. To prevent users from receiving too many notices, a notice will only be generated every hour.
 > - When a backup is configured to include the Service & Resource Management module, this will also include the chistory-reservationinstance table.
 > - When a ReservationInstance is deleted, all HistoryChange records associated with this ReservationInstance will also be deleted, and a new HistoryChange record will be added to indicate when the ReservationInstance was deleted and by whom.
@@ -297,6 +300,7 @@ When checking whether a boolean ReservationInstance property is set to true or f
 ```
 
 > [!NOTE]
+>
 > - Do not enclose the values true and false in single quotes. This would cause those values to be interpreted as string values instead of boolean values.
 > - Do not enclose the filter in round brackets (...).
 

@@ -80,6 +80,7 @@ When the DataMiner Indexing Engine installation is complete, the *Db.xml* file w
 ```
 
 > [!NOTE]
+>
 > - Changes to the settings of an indexing database in DataMiner Cube will take effect immediately and do not require a DataMiner restart. A DataMiner restart is only required when a named database is deleted.
 > - When the Indexing Engine has been installed, the file *Indexing.xml* file is also added to the Skyline DataMiner folder, containing the configuration of the engine itself.
 
@@ -96,6 +97,7 @@ A number of restrictions apply for the backup path. For more information on thes
 Once DataMiner Indexing has been installed, it is possible to change the backup path using the *Backup path* parameter on the *Backup* page in System Center.
 
 > [!NOTE]
+>
 > - After you have changed the path in System Center, it is possible that the UI is temporarily disabled while the Indexing nodes are restarted to implement the change. As such, we recommend to only change the backup path if this is absolutely necessary.
 > - Only one Indexing data backup can be made per day.
 > - Deleting any files from the backup file location will cause a restore to fail.
@@ -220,12 +222,13 @@ Here is example of a value mapping defined in a device protocol:
 ```
 
 > [!NOTE]
+>
 > - Value mappings can be defined for both single-value and column parameters of type string or double. If you define them for parameters with Interprete type “high nibble”, they will be ignored.
 > - In case of read/write parameters, value mappings have to be defined on both. Note, however, that they should not be identical. If a value mapping match is found when reading or writing a parameter, then the *ops* attribute of the *LinkTo* tag will be ignored. However, if no relevant mappings could be found for the value in question, the *ops* attribute will be taken into account. This can prove useful in case of exception values.
 
 ### DMS Cube
 
-#### DataMiner Analytics: Behavioral anomaly detection and suggestion events \[ID_15723\]\[ID_15914\]\[ID_15916\]\[ID_15951\]\[ID_15952\]\[ID_15976\]\[ID_16001\]<br>\[ID_16050\]\[ID_16163\]\[ID_17279\]\[ID_17462\]\[ID_19224\]\[ID_24095\]\[ID_24126\]<br>\[ID_24147\]
+#### DataMiner Analytics: Behavioral anomaly detection and suggestion events \[ID_15723\]\[ID_15914\]\[ID_15916\]\[ID_15951\]\[ID_15952\]\[ID_15976\]\[ID_16001\]\[ID_16050\]\[ID_16163\]\[ID_17279\]\[ID_17462\]\[ID_19224\]\[ID_24095\]\[ID_24126\]\[ID_24147\]
 
 The DataMiner Analytics software now allows you to configure behavioral anomaly detection and to display suggestion events in the Alarm Console.
 
@@ -234,26 +237,36 @@ The purpose of this new feature is to detect anomalous changes in the behavior o
 > [!NOTE]
 > Behavioral anomaly detection and suggestion events are only available on DMAs using a Cassandra database. If none of the DMAs in a cluster use Cassandra, the anomaly configuration options are not displayed.
 
-**Current limitations**
+##### Current limitations
 
 - Only possible for trended parameters with numeric values.
 - Not possible for partial table parameters.
 - Anomaly detection is limited to 100,000 parameters per DataMiner Agent.
 - Processing of change points (see below) is limited to 1,000 points per second. If the buffer receives more than 100,000 change points in rapid succession, some of those may be disregarded.
 
-**Change points**
+##### Change points
 
 Any change in behavior is called a change point. At present, there are five types of change points:
 
-| Type             | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
-|------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Outlier          | A value which suddenly spikes upwards or downwards, but returns to its previous, normal behavior after a few points.                                                                                                                                                                                                                                                                                                                                                                                               |
-| Level shift      | A value which shifts upwards or downwards (similar to an outlier) and then stays at that new level.<br> Example: A value fluctuating around 0 which starts fluctuating around 10.                                                                                                                                                                                                                                                                                                                                  |
-| Variance change  | A value of which the variance either increases or decreases.<br> Example: A series like 0.5, 0.6,-0.5,-0.2, 1,… 5,8,9,-5,-6,-2.1,… indicates a variance increase. At some point, a value that is fluctuating around 0 between 1 and -1, starts fluctuating around 0 between 10 and -10.                                                                                                                                                                                                                            |
-| Trend change     | A value which suddenly starts increasing or decreasing at a rate different from the normal behavior.<br> Examples:<br> -  A value fluctuating around 10 (i.e. a trend slope of 0) which suddenly starts increasing 1 unit per second (i.e. a trend slope of 1).<br> -  A value fluctuating around a line with slope 1 which suddenly starts fluctuating around a line with slope -1. |
-| Unlabeled change | If a change point cannot be classified as one of the above-mentioned change points, it is considered an unlabeled change.                                                                                                                                                                                                                                                                                                                                                                                          |
+- **Outlier**: A value that suddenly spikes upwards or downwards, but returns to its previous, normal behavior after a few points.
+- **Level shift**: A value that shifts upwards or downwards (similar to an outlier) and then stays at that new level.
 
-**Behavioral anomalies**
+  Example: A value fluctuating around 0 which starts fluctuating around 10.
+
+- **Variance change**: A value of which the variance either increases or decreases.
+
+  Example: A series like 0.5, 0.6,-0.5,-0.2, 1,… 5,8,9,-5,-6,-2.1,… indicates a variance increase. At some point, a value that is fluctuating around 0 between 1 and -1, starts fluctuating around 0 between 10 and -10.
+
+- **Trend change**: A value that suddenly starts increasing or decreasing at a rate different from the normal behavior.
+
+  Examples:
+
+  - A value fluctuating around 10 (i.e. a trend slope of 0) which suddenly starts increasing 1 unit per second (i.e. a trend slope of 1).
+  - A value fluctuating around a line with slope 1 which suddenly starts fluctuating around a line with slope -1.
+
+- **Unlabeled change**: If a change point cannot be classified as one of the above-mentioned change points, it is considered an unlabeled change.
+
+##### Behavioral anomalies
 
 Some change points are more significant or unexpected than others. The stranger the current change point is compared to past change points, the higher its significance will be.
 
@@ -263,7 +276,7 @@ Level shifts which are higher or which have a different direction than previous 
 
 Currently, no change points of type “outlier” or “unlabeled” will be labeled “anomalous”.
 
-**Change points visible in trend graphs**
+##### Change points visible in trend graphs
 
 On a trend graph, a change point is indicated by a bar below the graph. The length of the bar indicates the approximate time frame in which the change started, the height of the bar indicates the importance of the change, and the color of the bar indicates the severity.
 
@@ -271,24 +284,24 @@ When you hover the mouse pointer over a change point bar, a semi-transparent rib
 
 Labels of change points of type “trend change” will indicate the level of increase or decrease in seconds, minutes, hours or days depending on the value. If, for example, the value increases by 0.01 per second (i.e. 0.6 per minute, 36 per hour or 864 per day), the label will show an increase of 36 per hour as it is the smallest amount greater than 1.
 
-**Trend state icons next to parameters in DATA pages**
+##### Trend state icons next to parameters in DATA pages
 
 When you open an element card, each trended parameter on that card gets one of the following trend state icons. When you hover over one of those icons, a popup will open, showing additional information.
 
-| Icon                                                                                                                                                                                                  | Description               |
-|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------|
-| ![](~/release-notes/images/StandardTrendGraphIcon.png)                                                                                                          | Standard trend graph icon |
-| ![](~/release-notes/images/ArrowRight60.png)                                                                                                                              | Upward arrow              |
-| ![](~/release-notes/images/ArrowRight120.png)                                                                                                                            | Downward arrow            |
-| ![](~/release-notes/images/ArrowRight.png)                                                                                                                                  | Flat arrow                |
-| ![](~/release-notes/images/LevelShiftIncrease.png) ![](~/release-notes/images/LevelShiftIncreaseRed.png)                       | Upward level shift        |
-| ![](~/release-notes/images/LevelShiftDecrease.png) ![](~/release-notes/images/LevelShiftDecreaseRed.png)                       | Downward level shift      |
-| ![](~/release-notes/images/ArrowTrendChangeUp.png) ![](~/release-notes/images/ArrowTrendChangeUpRed.png)                      | Upward trend change       |
-| ![](~/release-notes/images/ArrowTrendChangeDown.png) ![](~/release-notes/images/ArrowTrendChangeDownRed.png)             | Downward trend change     |
-| ![](~/release-notes/images/ArrowVarianceChangeUp.png) ![](~/release-notes/images/ArrowVarianceChangeUpRed.png)         | Variance increase         |
-| ![](~/release-notes/images/ArrowVarianceChangeDown.png) ![](~/release-notes/images/ArrowVarianceChangeDownRed.png) | Variance decrease         |
-| ![](~/release-notes/images/ArrowOutlierUp.png) ![](~/release-notes/images/ArrowOutlierUpRed.png)                                     | Upward outlier            |
-| ![](~/release-notes/images/ArrowOutlierDown.png) ![](~/release-notes/images/ArrowOutlierDownRed.png)                             | Downward outlier          |
+| Icon | Description |
+|--|--|
+| ![trend graph icon](~/release-notes/images/StandardTrendGraphIcon.png) | Standard trend graph icon |
+| ![upward arrow icon](~/release-notes/images/ArrowRight60.png) | Upward arrow |
+| ![downward arrow icon](~/release-notes/images/ArrowRight120.png) | Downward arrow |
+| ![flat arrow icon](~/release-notes/images/ArrowRight.png) | Flat arrow |
+| ![upward level shift icon](~/release-notes/images/LevelShiftIncrease.png) ![red upward level shift icon](~/release-notes/images/LevelShiftIncreaseRed.png) | Upward level shift |
+| ![downward level shift icon](~/release-notes/images/LevelShiftDecrease.png) ![red downward level shift icon](~/release-notes/images/LevelShiftDecreaseRed.png) | Downward level shift |
+| ![upward trend change icon](~/release-notes/images/ArrowTrendChangeUp.png) ![red upward trend change icon](~/release-notes/images/ArrowTrendChangeUpRed.png) | Upward trend change |
+| ![downward trend change icon](~/release-notes/images/ArrowTrendChangeDown.png) ![red downward trend change icon](~/release-notes/images/ArrowTrendChangeDownRed.png) | Downward trend change |
+| ![variance increase icon](~/release-notes/images/ArrowVarianceChangeUp.png) ![red variance increase icon](~/release-notes/images/ArrowVarianceChangeUpRed.png) | Variance increase |
+| ![variance decrease icon](~/release-notes/images/ArrowVarianceChangeDown.png) ![red variance decrease icon](~/release-notes/images/ArrowVarianceChangeDownRed.png) | Variance decrease |
+| ![upward outlier icon](~/release-notes/images/ArrowOutlierUp.png) ![red upward outlier icon](~/release-notes/images/ArrowOutlierUpRed.png) | Upward outlier |
+| ![downward outlier icon](~/release-notes/images/ArrowOutlierDown.png) ![red downward outlier icon](~/release-notes/images/ArrowOutlierDownRed.png) | Downward outlier |
 
 DataMiner will do the following to select a trend state icon for a particular parameter:
 
@@ -311,7 +324,7 @@ DataMiner will do the following to select a trend state icon for a particular pa
 
 4. In all other cases, one of the following trend state icons is selected, based on the behavior of the parameter value in the last *arrowWindowLength* seconds: a flat arrow, an upward arrow, a downward arrow, or the standard trend graph icon.
 
-**Suggestion events**
+##### Suggestion events
 
 By default, a so-called “suggestion event” is generated whenever an anomalous level shift, trend change or variance change is detected for a particular parameter.
 
@@ -320,6 +333,7 @@ In case of a level shift, for example, the value of the suggestion event will be
 To view these suggestion events, you can create a new tab in the Alarm Console and select to display suggestion events. This is possible for tabs displaying current alarms, history alarms and alarms in a sliding window.
 
 > [!NOTE]
+>
 > - Currently, no suggestion events are generated for outliers and unlabeled change points.
 > - Suggestion events have severity “Information” and source “Suggestion Engine”.
 > - Suggestion events generated to indicate a behavioral anomaly are automatically cleared 2 hours after their creation time or their last update time.
@@ -332,22 +346,23 @@ To enable TLS, do the following on every DataMiner Agent in a DataMiner System c
 
 1. In the C:\\Skyline DataMiner\\Certificates folder, place a PKCS12 file with (default) name “server.pfx”, containing the certificates and the private key.
 
-2. Send a ConfigureTLSMessage with the following arguments:
+1. Send a ConfigureTLSMessage with the following arguments:
 
-    | Argument        | Description                                                                                                                                                       |
-    |-------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-    | DataMinerID       | ID of the DataMiner Agent ID.                                                                                                                                     |
-    | EncryptedPassword | Encrypted\* password that will be used with the certificate in question.<br> *\*Encrypted using the public key of the connection.* |
-    | Certificate       | Name of the certificate for which the password is set.<br> Default: server.pfx                                                                                    |
-    | ID                | ID of the certificate for which the password is set.<br> Currently, DataMiner will always use the certificate with ID 0.                                          |
+   | Argument        | Description                                                                                                                        |
+   |-------------------|----------------------------------------------------------------------------------------------------------------------------------|
+   | DataMinerID       | ID of the DataMiner Agent ID.                                                                                                    |
+   | EncryptedPassword | Encrypted password that will be used with the certificate in question. This is encrypted using the public key of the connection. |
+   | Certificate       | Name of the certificate for which the password is set. Default: server.pfx                                                       |
+   | ID                | ID of the certificate for which the password is set. Currently, DataMiner will always use the certificate with ID 0.             |
 
 > [!NOTE]
+>
 > - DataMiner currently supports all TLS versions up to TLS 1.3 (i.e. all TLS versions supported by OpenSSL 1.1.1). It will negotiate the highest supported TLS version with the client. If the client supports TLS up to version 1.2, DataMiner will use version 1.2.
 > - PFX files are not synchronized among the agents in a cluster.
 > - When, on a DataMiner Agent, you replace a PKCS12 file, then all elements using the TCP/IP port in question have to be stopped and restarted for the changes to take effect.
 > - TLS elements and non-TLS elements sharing the same TCP/IP port is not supported.
 
-#### Redesigned DataMiner Cube layout \[ID_23427\]\[ID_23486\]\[ID_23540\]\[ID_23628\]<br>\[ID_23646\]\[ID_23813\]\[ID_23822\]\[ID_23904\]\[ID_23982\]\[ID_24036\]\[ID_24044\]<br>\[ID_24079\]\[ID_24086\]\[ID_24129\]\[ID_24143\]\[ID_24160\]\[ID_24165\]\[ID_24189\]<br>\[ID_24218\]\[ID_24518\]
+#### Redesigned DataMiner Cube layout \[ID_23427\]\[ID_23486\]\[ID_23540\]\[ID_23628\]\[ID_23646\]\[ID_23813\]\[ID_23822\]\[ID_23904\]\[ID_23982\]\[ID_24036\]\[ID_24044\]\[ID_24079\]\[ID_24086\]\[ID_24129\]\[ID_24143\]\[ID_24160\]\[ID_24165\]\[ID_24189\]\[ID_24218\]\[ID_24518\]
 
 The design of DataMiner Cube has been updated to be more user-friendly and more in line with other DataMiner apps. Aside from numerous small layout changes, there have been a number of large changes, as detailed below.
 
@@ -374,19 +389,21 @@ The design of DataMiner Cube has been updated to be more user-friendly and more 
 
 - The icons in the Surveyor and apps panel have been updated. These are now the most commonly used icons:
 
-    | Icon                                             | Description      |
-    |--------------------------------------------------|------------------|
-    | ![](~/release-notes/images/CubeXElement.png)     | Element          |
-    | ![](~/release-notes/images/CubeXService.png)     | Service          |
-    | ![](~/release-notes/images/CubeXRedunGroup.png)  | Redundancy group |
-    | ![](~/release-notes/images/CubeXSLA.png)         | SLA              |
-    | ![](~/release-notes/images/CubeXView.png)        | View             |
+  | Icon                                                                  | Description      |
+  |-----------------------------------------------------------------------|------------------|
+  | ![element icon](~/release-notes/images/CubeXElement.png)              | Element          |
+  | ![service icon](~/release-notes/images/CubeXService.png)              | Service          |
+  | ![redundancy group icon](~/release-notes/images/CubeXRedunGroup.png)  | Redundancy group |
+  | ![SLA icon](~/release-notes/images/CubeXSLA.png)                      | SLA              |
+  | ![view icon](~/release-notes/images/CubeXView.png)                    | View             |
 
-    If an alarm is present on an element, service, redundancy group or SLA, this is indicated by a colored circle in the bottom-right corner of the icon. For a view, the entire icon is colored according to the alarm severity.     However, note that these new icons do not support latch level, aggregation level and split view level indications. As such, a new user setting is available, *Use modern icons*, which can be cleared to use the previous icons again.
+  If an alarm is present on an element, service, redundancy group or SLA, this is indicated by a colored circle in the bottom-right corner of the icon. For a view, the entire icon is colored according to the alarm severity.
+
+  However, note that these new icons do not support latch level, aggregation level and split view level indications. As such, a new user setting is available, *Use modern icons*, which can be cleared to use the previous icons again.
 
 ##### Redesigned logon screen
 
-- The logon screen now features a minimalistic design, showing only the DataMiner logo, the IP of the DMA, the login info and a configuration button. With a button at the bottom of the window, you can switch between the current Windows user and a different user profile. The configuration button provides access to options, the "about" information and logging.
+- The logon screen now features a minimalist design, showing only the DataMiner logo, the IP of the DMA, the login info and a configuration button. With a button at the bottom of the window, you can switch between the current Windows user and a different user profile. The configuration button provides access to options, the "about" information and logging.
 
 - A number of buttons are now available, based on the status of the logon and the DMA. While you are logging onto a DMA, you can click *Back* to return to the logon screen. If a DMA is upgrading or migrating when you log on, you can click the *Monitor* button to monitor the progress. If a DMA is stopped, you can click *Start*, and if a DMA is offline, you can click *Set online*.
 
@@ -408,10 +425,11 @@ The decision whether an alarm is expected is based on likelihood and frequency:
 The focus score that is assigned to an alarm is a combination of likelihood, frequency and severity.
 
 > [!NOTE]
+>
 > - Currently, every DataMiner Agent is responsible for calculating the focus scores of the alarms it is hosting.
 > - Currently, no focus score is assigned to the following types of alarms: Correlation alarms, external alarms and information events. By default, those alarms are assigned a focus score equal to null.
 
-**New column in Alarm Console: Focus**
+##### New column in Alarm Console: Focus
 
 In the *Active alarms* tab page, for each alarm that can be considered “unexpected”, an icon will be displayed in the new *Focus* column, which is located between the *Icon* column and the *Element name* column.
 
@@ -420,13 +438,13 @@ Also, in the blue footer of the *Active alarms* tab page, you will notice a new 
 > [!NOTE]
 > If an alarm template changes, all alarms of the parameters that were assigned that alarm template will have their focus score reset and will get the focus icon. All historical focus data for those alarms will be lost.
 
-**In the event of an alarm storm**
+##### In the event of an alarm storm
 
 During an alarm storm, focus scores of persistent alarms will not be updated, but as soon as a storm has ceased, all active alarms will have their focus scores updated with the most recent values.
 
 Also, an information event will be generated when alarm focus calculation goes into and out of alarm storm mode.
 
-**When will alarm focus values be recalculated from scratch?**
+##### When will alarm focus values be recalculated from scratch?
 
 Alarm focus values will be calculated for the first time after an upgrade to DataMiner version 10.0.2. They will only be recalculated from scratch when SLAnalytics notices that, for whatever reason, the Alarm Focus database table has been cleared.
 
@@ -442,7 +460,7 @@ Default value: False
 
 By adding a data field of type ‘ServiceInstance’ to a shape, it is possible to have the connectivity chain of a service instance drawn automatically in Visual Overview.
 
-When configuring such a shape, from now on, you can use the *CollapseEmptyRowsAnd<br>Columns* option to automatically collapse all empty rows and columns in the connectivity chain.
+When configuring such a shape, from now on, you can use the *CollapseEmptyRowsAndColumns* option to automatically collapse all empty rows and columns in the connectivity chain.
 
 Example:
 
@@ -458,6 +476,7 @@ The *Table export column separator* setting (on the *User \> Data Display* page 
 The separator you select in this new setting will be used in all CSV files exported from Cube.
 
 > [!NOTE]
+>
 > - This *CSV separator* setting is a Cube-only setting. When a CSV file export is initiated directly by a DataMiner Agent, this setting will be disregarded.
 > - Before you import a CSV file that was exported using a previous version of Cube, make sure to check the separator used in that file.
 > - When you copy data to the Windows clipboard, that data will always be delimited by TAB characters, regardless of the delimiter specified in the CSV separator setting.
@@ -475,7 +494,7 @@ As from DataMiner X, DataMiner Cube will be built as an AnyCPU application.
 ClickOnce StandAlone and MSI versions will run as 64-bit processes on 64-bit systems and as 32-bit processes on 32-bit systems.
 
 > [!NOTE]
-> - Microsoft Internet Explorer always launches PresentationHost.exe as a 32-bit process. As a result, ClickOnce XBAP versions of Cube will always run as 32-bit processes.
+> Microsoft Internet Explorer always launches PresentationHost.exe as a 32-bit process. As a result, ClickOnce XBAP versions of Cube will always run as 32-bit processes.
 
 #### New sidebar docking position setting \[ID_24178\]
 
@@ -522,6 +541,7 @@ Example:
 | Info             | ROOT ALARM ID     |
 
 > [!NOTE]
+>
 > - If a shape is linked to an alarm, you can now also use the Info keywords in the shape text (enclosed in square brackets). For example: “The value of the alarm is \[value\].”
 > - Note that, when you link shapes to alarms, only active alarms can currently be shown.
 
@@ -555,6 +575,7 @@ Example:
 | SetVar           | MyVariable:\[root alarm id\] |
 
 > [!NOTE]
+>
 > - To prevent infinite loops, do not specify alarm keywords in a shape data item of type *Alarm*.
 > - Currently, it is not yet possible to use these keywords inside other keywords.
 
@@ -679,7 +700,7 @@ scriptOptions.InheritScriptOutput = true;
 scriptOptions.StartScript();
 ```
 
-#### Interactive Automation scripts: Uploading files from a client computer \[ID_23950\]<br>\[ID_24144\]\[ID_24164\]
+#### Interactive Automation scripts: Uploading files from a client computer \[ID_23950\]\[ID_24144\]\[ID_24164\]
 
 In an interactive Automation script, it is now possible to upload files from a client computer.
 
@@ -740,7 +761,7 @@ To enable KPI option filtering when calling the *GetTableForParameterV2* method,
 
 ### DMS Mobile apps
 
-#### New Monitoring & Control app \[ID_21736\]\[ID_22023\]\[ID_22209\]\[ID_22750\]<br>\[ID_22801\]\[ID_22888\]\[ID_22943\]\[ID_23025\]\[ID_23036\]\[ID_23090\]\[ID_23387\]<br>\[ID_23798\]\[ID_23874\]\[ID_24017\]\[ID_24059\]\[ID_24072\]\[ID_24080\]\[ID_24114\]<br>\[ID_24134\]\[ID_24180\]\[ID_24192\]
+#### New Monitoring & Control app \[ID_21736\]\[ID_22023\]\[ID_22209\]\[ID_22750\]\[ID_22801\]\[ID_22888\]\[ID_22943\]\[ID_23025\]\[ID_23036\]\[ID_23090\]\[ID_23387\]\[ID_23798\]\[ID_23874\]\[ID_24017\]\[ID_24059\]\[ID_24072\]\[ID_24080\]\[ID_24114\]\[ID_24134\]\[ID_24180\]\[ID_24192\]
 
 The DataMiner HTML5 app has now been replaced by the new Monitoring & Control app, of which the overall look and feels closely resembles that of the newly redesigned Cube X.
 
@@ -801,12 +822,13 @@ As some booking property names can contain characters that are considered invali
 When you have successfully migrated all booking data, the button to start the wizard will disappear from the UI. Also, when the migration has finished, a *Retrieve report* button will allow you to generate a report showing a summary of that migration.
 
 > [!NOTE]
+>
 > - After migrating the booking data to the Indexing database, make sure to check your Automation scripts and Visio files and adjust the booking property names where necessary.
 > - When configuring backup settings in the *Backup* section of *System Center*, a new *Include SRM in backup* option is now available under the *Create a backup of the database* option. Select this option if you want the booking data in the Indexing database to be included in the backup package.
 > - An Indexing database takes about twice as much disk space to store booking data compared to a Cassandra database.
 > - A number of methods in the ServiceManagerHelper and ResourceManagerHelper classes have been adapted to allow them to manage booking data stored in an Indexing database.
 
-#### Improvements ResourceManagerHelper class for deletion of resources \[ID_24002\]<br>\[ID_24563\]
+#### Improvements ResourceManagerHelper class for deletion of resources \[ID_24002\]\[ID_24563\]
 
 If there is an error deleting resources using the *ResourceManagerHelper* class, additional feedback is now returned:
 
@@ -1702,7 +1724,7 @@ When you opened a dashboard with a multiple parameter feed using a URL that cont
 
 When an interactive Automation script was run from within an HTML5 app, in some cases, selection box values containing “\\” characters could be displayed incorrectly.
 
-#### Failover: Problem with Indexing database after a Failover switch \[ID_23945\]<br>\[ID_24562\]
+#### Failover: Problem with Indexing database after a Failover switch \[ID_23945\]\[ID_24562\]
 
 When an Indexing database was installed on a pair of DataMiner Agents in a Failover setup, in some cases, the Indexing database could no longer be reached after a Failover switch.
 

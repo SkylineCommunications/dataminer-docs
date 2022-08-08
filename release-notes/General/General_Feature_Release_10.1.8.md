@@ -25,16 +25,25 @@ In a Failover system, which consists of two redundant DataMiner Agents, the offl
 | No additional IIS rules need to be created             | A "URL Rewrite" IIS rule will be created automatically (Reverse Proxy) |
 | 2 NICs can be configured <br>(Corporate & Acquisition) | Only one hostname (address)                                            |
 
-**Configuration**
+##### Configuration
 
 In DataMiner Cube, after opening the *Failover Config* window, you can now select either "Failover (Virtual IP)" or "Failover (hostname)".
 
 Note that, in the DMS.xml file, two extra elements can now be specified:
 
-| Element | Description |
-|---------|----------------------|
-| FailoverType | The type of Failover system: "VirtualIP" or "HostName". |
-| Hostname | The shared hostname (only applicable when FailoverType is set to "HostName".<br>Note:<br>- The hostname you specify must be configured in the network. In other words, a corresponding DNS record must exist.<br>- The hostname must resolve to both primary IP addresses of the Failover agents. Example output of an nslookup of the hostname:<br>*Name: ResetPlease.FailoverZone<br>Addresses: 10.11.5.52<br>10.11.4.52* |
+- **FailoverType**: The type of Failover system: "VirtualIP" or "HostName".
+- **Hostname**: The shared hostname (only applicable when FailoverType is set to "HostName".
+
+  > [!NOTE]
+  >
+  > - The hostname you specify must be configured in the network. In other words, a corresponding DNS record must exist.
+  > - The hostname must resolve to both primary IP addresses of the Failover agents. Example output of an nslookup of the hostname:
+  >
+  >   ```txt
+  >   Name: ResetPlease.FailoverZone
+  >   Addresses: 10.11.5.52
+  >   10.11.4.52
+  >   ```
 
 When you set up a Failover system using a shared hostname, in IIS, a URL Rewrite rule will be created in order to forward all HTTP traffic to the online agent.
 
@@ -73,7 +82,7 @@ For example:
 
 It is now possible to a regular expression in the filtering options of an aggregate action.
 
-**Syntax 1: Equation with a regular expression defined in a regex attribute**
+##### Syntax 1: Equation with a regular expression defined in a regex attribute
 
 When using this syntax, add “equation:regex,” to the *options* attribute and specify the regular expression in a separate *regex* attribute.
 
@@ -87,7 +96,7 @@ Example:
 </Action>
 ```
 
-**Syntax 2: Equation with a regular expression defined in a parameter**
+##### Syntax 2: Equation with a regular expression defined in a parameter
 
 When using this syntax, to the *options* attribute add “equation:regex,”, followed by the ID of the parameter containing the regular expression.
 
@@ -101,7 +110,7 @@ Example:
 </Action>
 ```
 
-**Syntax 3: Equation value with a regular expression defined in a regex attribute**
+##### Syntax 3: Equation value with a regular expression defined in a regex attribute
 
 When using this syntax, to the *options* attribute add “equationvalue:”, followed by four comma-separated arguments, and specify the regular expression in a separate *regex* attribute.
 
@@ -122,7 +131,7 @@ Example:
 </Action>
 ```
 
-**Syntax 4: Equation value with a regular expression defined in a parameter**
+##### Syntax 4: Equation value with a regular expression defined in a parameter
 
 When using this syntax, to the *options* attribute add “equationvalue:”, followed by four comma-separated arguments.
 
@@ -264,6 +273,7 @@ public class Script
 ```
 
 > [!NOTE]
+>
 > - Save operations will always be executed synchronously. In other words, the method will only return once the data has been written to the database.
 > - At present, bulk operations are not yet supported.
 > - Both PaProcess and PaToken now have a new LastModifiedAt property, filled in by SLNet. It will be used to compare cached versions with versions retrieved from the database.
@@ -311,9 +321,9 @@ From now on, the GetEligibleResources and AddOrUpdateReservationInstances calls 
 - If the contributing booking linked to the resource has Status set to “Canceled”, “Disconnected”, “Interrupted” or “Undefined”, then the resource will be considered unavailable.
 - If the contributing booking linked to the resource has Status set to a value other than “Canceled”, “Disconnected”, “Interrupted” or “Undefined”:
 
-    - If the contributing booking linked to the resource has LockLifeCycle set to “Locked”, then the contributing resource will be considered available if the time range of the contributing booking is entire inside the time range.
-    - If the contributing booking linked to the resource has LockLifeCycle set to “Unlocked”, then the contributing resource will be considered available if the timing of the contributing booking intersects with the passed time.
-    - If the contributing booking linked to the resource has LockLifeCycle set to “Undefined”, then the contributing resource will be considered not available.
+  - If the contributing booking linked to the resource has LockLifeCycle set to “Locked”, then the contributing resource will be considered available if the time range of the contributing booking is entire inside the time range.
+  - If the contributing booking linked to the resource has LockLifeCycle set to “Unlocked”, then the contributing resource will be considered available if the timing of the contributing booking intersects with the passed time.
+  - If the contributing booking linked to the resource has LockLifeCycle set to “Undefined”, then the contributing resource will be considered not available.
 
 Based on those criteria, the GetEligibleResource call will not return any resources that are unavailable.
 
@@ -373,6 +383,7 @@ Example:
 ```
 
 > [!NOTE]
+>
 > - If no DBConfiguration.xml file exists in C:\\Skyline DataMiner\\Database, then create one with the content of the example above.
 > - If no limit is set in DBConfiguration.xml or if the file offload configuration is invalid, the size of the database offload files will by default be limited to 10 GB.
 > - When the specified limit has been reached, an alarm with the following text will be generated: “Max file offload disk usage for certain storages has been reached, new data for these storages will be dropped.” Also, the following entry will be added to the SLDBConnection log file: “\|INF\|0\|112\|2021-04-14T13:34:19.559\|DEBUG\|DataGateway.FileOffload\|Max disk usage reached: True for storage Cassandra.TimeTrace (timetrace)”.

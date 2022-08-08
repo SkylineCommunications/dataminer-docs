@@ -20,7 +20,7 @@ If you do so, DataMiner Agents leaving the DataMiner System (i.e. cluster) will 
 </SLNet>
 ```
 
-#### Dynamic table filters: New component type “recursivefullfilter” \[ID_24672\]<br>\[ID_24676\]
+#### Dynamic table filters: New component type “recursivefullfilter” \[ID_24672\]\[ID_24676\]
 
 When configuring a dynamic table filter, you can now add a filter component of type “recursivefullfilter”.
 
@@ -142,7 +142,7 @@ If you have configured the shape to open an alarm tab in the Alarm Console when 
 
 #### Visual Overview: New Set option “SetTrigger=Event” & additional IOClicked event arguments \[ID_24582\]
 
-**New Set option “SetTrigger=Event”**
+##### New Set option 'SetTrigger=Event'
 
 Up to now, in a page-level shape data field of type *Execute*, you could specify the “SetTrigger=ValueChanged” option in a *Set* command to have parameters or session variables updated on an open Visual Overview page when a specific value changes.
 
@@ -157,7 +157,7 @@ In the following example, every time the event is triggered from the router cont
 > [!NOTE]
 > All *Set* commands with a “SetTrigger=Event” option will be triggered when an event occurs, even those that do not contain an \[Event:\] placeholder.
 
-**Additional IOClicked event arguments**
+##### Additional IOClicked event arguments
 
 The following additional arguments can now be specified when configuring the router control event “IOClicked” in an \[Event:\] placeholder:
 
@@ -202,7 +202,7 @@ Because it is now possible to use a booking data filter, the *Reservation instan
 
 The following methods have been added to the CPECollector API:
 
-**GetMaskedDMAObjectRefTrees(FilterElement\<IDMAObjectRef>)**
+`GetMaskedDMAObjectRefTrees(FilterElement<IDMAObjectRef>)`
 
 This method returns all masked object trees that match the specified filter. If no filter is passed, then all masked object trees are returned.
 

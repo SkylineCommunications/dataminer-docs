@@ -6,13 +6,14 @@ uid: General_Main_Release_10.2.0
 
 > [!NOTE]
 > A DataMiner Installer v10.2 is available on [DataMiner Dojo](https://community.dataminer.services/download/dataminer-installer-v10-2/).
+>
 > - For 64-bit systems only.
 > - No longer contains the necessary files to install MySQL.
 > - Unattended cluster installation is not supported.
 > - On Windows Server 2022, an “Internal server error” is thrown after installation. Workaround:
->     - Go to <https://www.iis.net/downloads/microsoft/url-rewrite>.
->     - Download and install the URL rewrite module.
->     - Go to <http://localhost/root> and verify whether the root page is shown.
+>   - Go to <https://www.iis.net/downloads/microsoft/url-rewrite>.
+>   - Download and install the URL rewrite module.
+>   - Go to <http://localhost/root> and verify whether the root page is shown.
 
 ## New features
 
@@ -35,7 +36,7 @@ Note that, from now on, alarms will only be grouped on location or view if the p
 
 The DataMiner Object Model (DOM) is a collection of generic objects and a generic DomManager that can be used to perform a series of operations.
 
-**Object overview**
+##### Object overview
 
 | Object            | Description                                                                                             |
 |-------------------|---------------------------------------------------------------------------------------------------------|
@@ -50,14 +51,14 @@ If, for example, you want to build a system that will store the time that employ
 
     ```csharp
     SectionDefinition (Name = "PunchInfoSectionDefinition")
-    ```    
+    ```
 
     - FieldDescriptor 1: Name = “Task ID” & Type = “Guid”
     - FieldDescriptor 2: Name = “Username” & Type = “String”
     - FieldDescriptor 3: Name = “Start time” & Type = “DateTime”
     - FieldDescriptor 4: Name = “Stop time” & Type = “DateTime”
 
-2. Create a DomDefinition (Name = PunchInfoDomDefinition) that contains a link to the PunchInfoSectionDefinition.
+1. Create a DomDefinition (Name = PunchInfoDomDefinition) that contains a link to the PunchInfoSectionDefinition.
 
 Employees will now be able to log their time spent by creating a new DomInstance
 
@@ -67,10 +68,11 @@ Employees will now be able to log their time spent by creating a new DomInstance
     > [!NOTE]
     > The SectionDefinitionId, DomDefinitionId, DomInstanceId and DomTemplateId objects all have a ModuleId property. This property will automatically be filled in when a SectionDefinition, DomDefinition, DomInstance or DomTemplate object is added or updated.
     > Note:
-    > -  SectionDefinitions linked to the JobManager will have their ModuleId set to null.
-    > -  Existing objects will only have their ModuleId property filled in the first time they are updated.
+    >
+    > - SectionDefinitions linked to the JobManager will have their ModuleId set to null.
+    > - Existing objects will only have their ModuleId property filled in the first time they are updated.
 
-**DomManager**
+##### DomManager
 
 A DomManager manages the create/read/update/delete actions performed on the DOM objects, which are stored in an Elasticsearch index.
 
@@ -80,7 +82,7 @@ Create, read, update and delete calls on a DomManager can be initiated using a D
 
 If you want an information event to be generated for every create, read, update or delete action performed on a DOM object, in the DomManager settings, you can enable the EnableInformationEvents property. Default value: false
 
-**DomManager event messages**
+##### DomManager event messages
 
 Every DomManager can send out the following event messages:
 
@@ -93,7 +95,7 @@ Every DomManager can send out the following event messages:
 
 Since multiple DomManager instances can send out the above-mentioned event messages (each with their own unique module ID), the ModuleEventSubscriptionFilter\<T>(string moduleId) subscription filter can be used to return events of type T sent by the DomManager with ID moduleId.
 
-**DomInstance history**
+##### DomInstance history
 
 A DomManager will keep track of the DomInstance history. A DomInstance change will be created after each successful create, read, update or delete action performed on a DOM object.
 
@@ -135,12 +137,13 @@ var history = domHelper.DomInstanceHistory.Read(filter);
 ```
 
 > [!NOTE]
+>
 > - If the history storage were to work incorrectly, this will not affect the create, read, update or delete actions performed on the DomInstances. An error will be logged each time a history object could not be saved. A notice will only be generated once every hour.
 > - It is not possible to manually create, update or delete history objects.
 > - All history changes related to a DomInstance will automatically be deleted when that DomInstance is deleted.
 > - History data is stored in a separate index per module (chistory_dominstance\_\*module id\*).
 
-**Adding attachments to DomInstances**
+##### Adding attachments to DomInstances
 
 It is possible to add attachments to DomInstance objects. See the examples below.
 
@@ -158,6 +161,7 @@ domHelper.DomInstances.Attachments.Delete(domInstanceId, "filename");
 ```
 
 > [!NOTE]
+>
 > - The maximum size of the attachments is determined by the Documents.MaxSize setting, located in the MaintenanceSettings.xml file. Default: 20 Mb. Trying to upload a larger file will result in a DataMinerException.
 > - If a DomInstance is deleted, all its attachments will physically be deleted from disk. They will not be recoverable.
 > - Manipulating DomInstance attachments requires the same user permissions as normal DomInstance management operations: Read permission to view and download attachments and Edit permission to add and delete attachments.
@@ -184,6 +188,7 @@ In a video thumbnail URL, you can now specify an authorization header in an “a
 This option has to be used when the video server expects an authentication token (e.g. OAuth2).
 
 > [!NOTE]
+>
 > - When the authentication token expires, the URL has to be updated with the new token.
 > - URLs that request video thumbnails should use HTTPS instead of HTTP. That way, you can prevent the authentication token from being stolen.
 > - It is now also possible to request thumbnails from video servers that only accept TLS 1.2.
@@ -196,6 +201,7 @@ When a Failover Agent claims or releases a virtual IP address, the following Pow
 - C:\\Skyline DataMiner\\Tools\\VIPReleased.ps1
 
 > [!NOTE]
+>
 > - The VIPAcquired script will also be triggered when the online Agent starts, but the VIPReleased script will not be triggered when the offline Agent starts.
 > - The content of the Failover scripts can be read and modified using the FailoverScriptManagerHelper.
 
@@ -207,13 +213,14 @@ Read actions are sent to the main cluster only, while write, delete and other mo
 
 When an error occurs on one of the replicated clusters, a single alarm will be generated, indicating that there is a chance that not all data was replicated. If subsequent errors occur on the replicated clusters, no new similar alarms will be generated until after the DMA has been restarted.
 
-**Configuration**
+##### Configuration
 
 The configuration of the Elasticsearch clusters can be stored in a new *DBConfiguration.xml* file, located in the *C:\\Skyline DataMiner\\Database* folder. This configuration file takes priority over the existing *DB.xml* file when it comes to Elasticsearch.
 
 At DataMiner startup, when the *DBConfiguration.xml* file exists and an Elasticsearch connection is defined in the *DB.xml* file, the Elasticsearch connection is commented out in the *DB.xml* file and an additional comment is added, indicating that the Elasticsearch configuration is taken from the *DBConfiguration.xml* file instead.
 
 > [!NOTE]
+>
 > - The cluster with the lowest “priorityOrder” value is considered the main cluster. All other clusters are considered the replicated clusters.
 > - The *DBConfiguration.xml* file is not synchronized among the DMAs in a DMS.
 
@@ -281,6 +288,7 @@ var historyRecords = historyHelper.ServiceDeletionHistory.Read(recordsPastDay);
 ```
 
 > [!NOTE]
+>
 > - Service history records are stored in Elasticsearch. This means that an Elasticsearch database has to be available for this feature to work.
 > - If you want the service history records to be included in a DataMiner backup, select the *Include service history data in backup* option. In case of a full backup, this option will be selected by default.
 
@@ -317,7 +325,7 @@ From now on, automatic incident tracking can also take into account any alarm, e
 
 Alarms are grouped as soon as they have the same value for one of the configured alarm, service or view properties, the same focus value and approximately the same timestamp. However, in case of grouping on element property, a threshold needs to be set and alarms will only be grouped when a certain amount of elements with the given property value are in alarm. In other words, alarms on elements with the same property value will be grouped when the proportion of elements in alarm among all elements with that property value is greater than the configured threshold.
 
-**Configuration**
+##### Configuration
 
 If you want automatic incident tracking to take into account a certain alarm, element, view or service property, you will need to add that property to the \<Value>\</Value> tag in the following section of the \[DataMiner installation folder\]\\analytics\\configuration.xml file.
 
@@ -405,25 +413,32 @@ In a Failover system, which consists of two redundant DataMiner Agents, the offl
 |--------------------------------------------------------|------------------------------------------------------------------------|
 | DataMiner creates a virtual IP address on the NIC      | No modifications are needed on the NIC                                 |
 | No additional IIS rules need to be created             | A "URL Rewrite" IIS rule will be created automatically (Reverse Proxy) |
-| 2 NICs can be configured <br>(Corporate & Acquisition) | Only one hostname (address)                                            |
+| 2 NICs can be configured (Corporate & Acquisition) | Only one hostname (address)                                            |
 
-**Configuration**
+##### Configuration
 
 In DataMiner Cube, after opening the *Failover Config* window, you can now select either "Failover (Virtual IP)" or "Failover (hostname)".
 
 Note that, in the DMS.xml file, two extra elements can now be specified:
 
-| Element | Description |
-|---------|----------------------|
-| FailoverType | The type of Failover system: "VirtualIP" or "HostName". |
-| Hostname | The shared hostname (only applicable when FailoverType is set to "HostName".<br>Note:<br>- The hostname you specify must be configured in the network. In other words, a corresponding DNS record must exist.<br>- The hostname must resolve to both primary IP addresses of the Failover agents. Example output of an nslookup of the hostname:<br>*Name: ResetPlease.FailoverZone<br>Addresses: 10.11.5.52<br>10.11.4.52* |
+- **FailoverType**: The type of Failover system: "VirtualIP" or "HostName".
+- **Hostname**: The shared hostname (only applicable when FailoverType is set to "HostName".
+
+  > [!NOTE]
+  >
+  > - The hostname you specify must be configured in the network. In other words, a corresponding DNS record must exist.
+  > - The hostname must resolve to both primary IP addresses of the Failover agents. Example output of an nslookup of the hostname:
+  >
+  >   ```txt
+  >   Name: ResetPlease.FailoverZone
+  >   Addresses: 10.11.5.52
+  >   10.11.4.52
+  >   ```
 
 When you set up a Failover system using a shared hostname, in IIS, a URL Rewrite rule will be created in order to forward all HTTP traffic to the online agent.
 
 > [!NOTE]
-> In order for this URL Rewrite rule to be created and enabled/disable automatically, the IIS extension "Application Request Routing" needs to be installed manually on both Failover agents.
->
-> See: <https://www.iis.net/downloads/microsoft/application-request-routing>
+> In order for this URL Rewrite rule to be created and enabled/disable automatically, the IIS extension "Application Request Routing" needs to be installed manually on both Failover agents. See <https://www.iis.net/downloads/microsoft/application-request-routing>.
 
 #### External alarms can now also have general alarm properties \[ID_29231\]
 
@@ -448,6 +463,7 @@ Default setting: unicode=”false”
 On MySQL and Microsoft SQL Server databases, the alarm table now has an extra field of type BIGINT: ExtraStatusId.
 
 > [!NOTE]
+>
 > - This change will cause a small increase in latency when retrieving alarms from the database.
 > - From now on, using a filter with an AlarmFilterItemExtraStatus in the GetAlarmDetailsFromDbMessage from within an Automation script will not work correctly in conjunction with a MySQL or Microsoft SQL Server database.
 
@@ -528,6 +544,7 @@ In the *C:\\Skyline DataMiner\\* folder, create an *EPMConfig.xml* file that con
 ```
 
 > [!NOTE]
+>
 > - If you want the aliases to be applied on every DMA in a DMS, then make sure every DMA contains a copy of the same *EPMConfig.xml* file.
 > - When you update the *EPMConfig.xml* file on a particular DMA, delete the \*.txf files on that DMA and restart DataMiner.
 > - Currently, the *EPMConfig.xml* file is only read at DataMiner startup.
@@ -591,7 +608,7 @@ Currently, there are two types of concatenation items:
     | bool              | ‘True’                                                 |
     | GenericEnumEntry  | ‘SomeDisplayValue’ (the DisplayValue will be used)     |
 
-**Example**
+##### Example
 
 In the following example, we want to create DomInstances for switches in a network and created FieldDescriptors for the following data:
 
@@ -629,6 +646,7 @@ var settings = new ModuleSettings()
 ```
 
 > [!NOTE]
+>
 > - When no concatenation is defined (i.e. when DomInstanceNameDefinition is empty or null), the ID of the DomInstance will be used as DomInstance name.
 > - When multiple values are defined for the same FieldDescriptor (i.e. when there are multiple Sections for the same SectionDefinition), the first value will be used for the concatenation.
 > - The DomInstanceNameDefinition can be overridden by a DomDefinition on the ModuleSettingsOverrides property.
@@ -639,24 +657,24 @@ The DataMiner Object Model can now also contain objects of type DomBehaviorDefin
 
 A DomBehaviorDefinition is a standalone object that extends a normal DomDefinition and contains configuration settings for special behavior, including the configuration of the status system. In a ModuleSettings object, the ModuleBehaviorDefinition property will contain the ID of the DomBehaviorDefinition that includes all the configuration settings that must be used in that particular module.
 
-**DomBehaviorDefinition properties**
+##### DomBehaviorDefinition properties
 
 A DomBehaviorDefinition object has the following properties.
 
-| Property                         | Type                                              | Filterable | Description                                                                                                       |
-|----------------------------------|---------------------------------------------------|------------|-------------------------------------------------------------------------------------------------------------------|
-| ID                               | DomBehavior<br>DefinitionId                       | Yes        | The unique ID of the definition.                                                                                  |
-| Name                             | string                                            | Yes        | The name of the definition.                                                                                       |
-| ParentId                         | DomBehavior<br>DefinitionId                       | Yes        | The ID of the parent DomBehavior-Definition (when using inheritance).                                             |
-| InitialStatusId                  | string                                            | No         | The ID of the status that should be used when new DomInstances are created.                                       |
-| Statuses                         | List<br>\<DomStatus>                              | No         | A list of all statuses.                                                                                           |
-| StatusSection<br>DefinitionLinks | List<br>\<DomStatus<br>SectionDefinition<br>Link> | No         | A list of links to SectionDefinitions that define which fields are required, allowed, etc. for a specific status. |
-| Status<br>Transitions            | List\<DomStatus<br>Transition>                    | No         | A list of all allowed status transitions.                                                                         |
+| Property | Type | Filterable | Description |
+|--|--|--|--|
+| ID | DomBehaviorDefinitionId | Yes | The unique ID of the definition. |
+| Name | string | Yes | The name of the definition. |
+| ParentId | DomBehaviorDefinitionId | Yes | The ID of the parent DomBehavior-Definition (when using inheritance). |
+| InitialStatusId | string | No | The ID of the status that should be used when new DomInstances are created. |
+| Statuses | List\<DomStatus> | No | A list of all statuses. |
+| StatusSectionDefinitionLinks | List\<DomStatusSectionDefinitionLink> | No | A list of links to SectionDefinitions that define which fields are required, allowed, etc. for a specific status. |
+| StatusTransitions | List\<DomStatusTransition> | No | A list of all allowed status transitions. |
 
 > [!NOTE]
 > Properties of which the *Filterable* column contains “Yes” can be used for filtering using DomBehaviorDefinitionExposers.
 
-**DomBehaviorDefinition inheritance**
+##### DomBehaviorDefinition inheritance
 
 One DomBehaviorDefinition can inherit from another.
 
@@ -665,7 +683,7 @@ Limitations:
 - A DomBehaviorDefinition can only inherit from the DomBehaviorDefinition that is specified in the ModuleBehaviorDefinition property of the ModuleSettings object.
 - A DomBehaviorDefinition that inherits from another DomBehaviorDefinition can only contain an ID, a parent ID and a list of additional DomStatusSectionDefinitionLinks to SectionDefinitions that are not defined in the module definition. Adding additional statuses or status transitions is not allowed.
 
-**Requirements**
+##### Requirements
 
 Create & update:
 
@@ -680,36 +698,36 @@ Delete:
 
 - A DomBehaviorDefinition can only be deleted when no DomDefinitions or other DomBehaviorDefinitions link to it.
 
-**Errors**
+##### Errors
 
 The TraceData can contain one or more DomDefinitionErrors. For each error, the Id and Name properties will be filled in alongside any other property mentioned in the description. See below for a list of all possible ErrorReasons:
 
-| Reason                                                       | Description                                                                                                                                                                                                                              |
-|--------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| InvalidParentId                                              | The DomBehaviorDefinition.ParentId property contains an unexpected ID. If a ModuleDomBehaviorDefinition is defined, it must contain the ID of that definition. If not, it should be empty.                                               |
-| InheritingDefinition<br>ContainsInvalidData                  | The DomBehaviorDefinition inherits from another one, but it contains data that is not allowed. Only the DomBehaviorDefinition.StatusSectionDefinitionLinks can contain additional objects.                                               |
-| StatusTransitionsReference<br>NonExistingStatuses            | At least one DomStatusTransition refers to a status that does not exist. The ID(s) of the invalid transition(s) can be found in StatusTransitionsIds.                                                                                    |
-| StatusSectionDefinitionLinks<br>ReferenceNonExistingStatuses | At least one DomStatusSectionDefinitionLink refers to a status that does not exist. The ID(s) of the invalid DomStatusSectionDefinitionLink(s) can be found in DomStatusSectionDefinitionLinkIds.                                        |
-| InvalidStatusIds                                             | At least one status has an invalid ID (IDs should only contain lowercase characters). The ID(s) of the invalid status(es) can be found in StatusIds.                                                                                     |
-| DuplicateStatusIds                                           | Some statuses have duplicate status IDs. The ID(s) of the duplicate status(es) can be found in StatusIds.                                                                                                                                |
-| InvalidTransitionIds                                         | At least one transition has an invalid transition ID (IDs should only contain lowercase characters). The ID(s) of the invalid transition(s) can be found in StatusTransitionsIds.                                                        |
-| DuplicateTransitionIds                                       | Some transitions have duplicate transition IDs. The ID(s) of the duplicate transition(s) can be found in StatusTransitionsIds.                                                                                                           |
-| InUseByDomDefinitions                                        | The DomBehaviorDefinition cannot be deleted because it is being used by at least one DomDefinition. The ID(s) of these DomDefinition(s) can be found in DomDefinitionIds.                                                                |
-| InUseByDomBehaviorDefinitions                                | The DomBehaviorDefinition cannot be deleted because it is being used by at least one DomBehaviorDefinition. The ID(s) of these DomBehaviorDefinition(s) can be found in DomBehaviorDefinitionIds.                                        |
-| InvalidInitialStatusId                                       | The DomBehaviorDefinition defines at least one status, but does not define a valid initial status. The ID of the invalid initial status (which can be empty) can be found in StatusIds.                                                  |
-| DuplicateSectionDefinitionLinks                              | The DomBehaviorDefinition defines more than one DomStatusSectionDefinitionLink for the same SectionDefinition/status pair. The ID(s) of the duplicate DomStatusSectionDefinitionLinks can be found in DomStatusSectionDefinitionLinkIds. |
+| Reason | Description |
+|--|--|
+| InvalidParentId | The DomBehaviorDefinition.ParentId property contains an unexpected ID. If a ModuleDomBehaviorDefinition is defined, it must contain the ID of that definition. If not, it should be empty. |
+| InheritingDefinitionContainsInvalidData | The DomBehaviorDefinition inherits from another one, but it contains data that is not allowed. Only the DomBehaviorDefinition.StatusSectionDefinitionLinks can contain additional objects. |
+| StatusTransitionsReferenceNonExistingStatuses | At least one DomStatusTransition refers to a status that does not exist. The ID(s) of the invalid transition(s) can be found in StatusTransitionsIds. |
+| StatusSectionDefinitionLinksReferenceNonExistingStatuses | At least one DomStatusSectionDefinitionLink refers to a status that does not exist. The ID(s) of the invalid DomStatusSectionDefinitionLink(s) can be found in DomStatusSectionDefinitionLinkIds. |
+| InvalidStatusIds | At least one status has an invalid ID (IDs should only contain lowercase characters). The ID(s) of the invalid status(es) can be found in StatusIds. |
+| DuplicateStatusIds | Some statuses have duplicate status IDs. The ID(s) of the duplicate status(es) can be found in StatusIds. |
+| InvalidTransitionIds | At least one transition has an invalid transition ID (IDs should only contain lowercase characters). The ID(s) of the invalid transition(s) can be found in StatusTransitionsIds. |
+| DuplicateTransitionIds | Some transitions have duplicate transition IDs. The ID(s) of the duplicate transition(s) can be found in StatusTransitionsIds. |
+| InUseByDomDefinitions | The DomBehaviorDefinition cannot be deleted because it is being used by at least one DomDefinition. The ID(s) of these DomDefinition(s) can be found in DomDefinitionIds. |
+| InUseByDomBehaviorDefinitions | The DomBehaviorDefinition cannot be deleted because it is being used by at least one DomBehaviorDefinition. The ID(s) of these DomBehaviorDefinition(s) can be found in DomBehaviorDefinitionIds. |
+| InvalidInitialStatusId | The DomBehaviorDefinition defines at least one status, but does not define a valid initial status. The ID of the invalid initial status (which can be empty) can be found in StatusIds. |
+| DuplicateSectionDefinitionLinks | The DomBehaviorDefinition defines more than one DomStatusSectionDefinitionLink for the same SectionDefinition/status pair. The ID(s) of the duplicate DomStatusSectionDefinitionLinks can be found in DomStatusSectionDefinitionLinkIds. |
 
-**Security**
+##### Security
 
 Security checks are performed on CRUD actions when user permissions are configured on the DomManagerSecuritySettings (of the ModuleSettings).
 
-- To read DomBehaviorDefinitions, users must be granted the DomManagerSecuritySettings.<br>ViewPermission.
+- To read DomBehaviorDefinitions, users must be granted the DomManagerSecuritySettings.ViewPermission.
 - To create, update or delete DomBehaviorDefinitions, users must be granted the DomManagerSecuritySettings.ConfigurePermission.
 
 > [!NOTE]
 > To create, update or delete the ModuleDomBehaviorDefinition, users must be granted the ModuleSettingsConfiguration permission.
 
-**Status system**
+##### Status system
 
 In a DomManager, you can now configure a DomDefinition to use the status system.
 
@@ -739,31 +757,32 @@ Configuration:
 
     | Property  | Type   | Explanation                                                                                  |
     |-------------|--------|----------------------------------------------------------------------------------------------|
-    | Id          | string | The ID of the status, consisting of lowercase characters only.<br> Example: “initial_status” |
-    | DisplayName | string | The display name of the status.<br> Example: “Initial”                                       |
+    | Id          | string | The ID of the status, consisting of lowercase characters only. Example: “initial_status” |
+    | DisplayName | string | The display name of the status. Example: “Initial”                                       |
 
     > [!NOTE]
-    > -  The Statuses collection should not contain any DomStatus objects with identical IDs.
-    > -  InitialStatusId must contain the ID of an existing status. When a DomInstance is created and no status is assigned to it, it will automatically be assigned the status specified in InitialStatusId.
+    >
+    > - The Statuses collection should not contain any DomStatus objects with identical IDs.
+    > - InitialStatusId must contain the ID of an existing status. When a DomInstance is created and no status is assigned to it, it will automatically be assigned the status specified in InitialStatusId.
 
 - To configure the allowed status transitions, for each transition add a DomStatusTransition object to the Transitions list property of the DomBehaviorDefinition. A DomStatusTransition has the following properties:
 
     | Property   | Type   | Explanation                                                                                                                                                                                                           |
     |--------------|--------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-    | Id           | string | The ID of the transition, consisting of lowercase characters only.<br> Example: “initial_to_accepted_status”                                                                                                          |
+    | Id           | string | The ID of the transition, consisting of lowercase characters only. Example: “initial_to_accepted_status”                                                                                                          |
     | FromStatusId | string | The ID of the status from which the DomInstance will transition.                                                                                                                                                      |
     | ToStatusId   | string | The ID of the status to which the DomInstance will transition.                                                                                                                                                        |
-    | FlowLevel    | int    | The flow level of the transition compared to other transitions.<br> The main transition will have FlowLevel 0 (the highest priority), while alternate transitions from the same status will have FlowLevel 1 or more. |
+    | FlowLevel    | int    | The flow level of the transition compared to other transitions. The main transition will have FlowLevel 0 (the highest priority), while alternate transitions from the same status will have FlowLevel 1 or more. |
 
     > [!NOTE]
     > The Transitions collection should not contain any DomStatusTransition objects with identical IDs.
 
 - For each status, you can configure the requirements of a specific field. To do so, create DomStatusSectionDefinitionLinks that each include DomStatusFieldDescriptorLinks. A DomStatusSectionDefinitionLink has the following properties:
 
-    | Property           | Type                                    | Explanation                                                           |
-    |----------------------|-----------------------------------------|-----------------------------------------------------------------------|
-    | Id                   | DomStatus<br>SectionDefinitionLinkId    | The SectionDefinitionID and the status ID.                            |
-    | FieldDescriptorLinks | List\<DomStatus<br>FieldDescriptorLink> | The links to FieldDescriptors that are part of the SectionDefinition. |
+    | Property             | Type                                | Explanation                                                           |
+    |----------------------|-------------------------------------|-----------------------------------------------------------------------|
+    | Id                   | DomStatusSectionDefinitionLinkId    | The SectionDefinitionID and the status ID.                            |
+    | FieldDescriptorLinks | List\<DomStatusFieldDescriptorLink> | The links to FieldDescriptors that are part of the SectionDefinition. |
 
     A DomStatusFieldDescriptorLink contains the following properties:
 
@@ -775,21 +794,22 @@ Configuration:
     | ReadOnly          | bool              | Whether values of this field are read-only in this status.               |
 
     > [!NOTE]
-    > -  When there is no FieldDescriptorLink for an existing FieldDescriptor, then no values will be allowed for this FieldDescriptor in that specific status.
-    > -  The Visible property is only used to tell the UI whether the field should be visible or not.
-    > -  When a field is marked as required, then at least one value for this FieldDescriptor should be present in a DomInstance and all values for this FieldDescriptor should be valid according to the validators of that descriptor (if any were defined).
-    > -  When a field is marked as read-only for a specified status, the values cannot be changed. If none were present before transitioning to that status, none can be added anymore once the DomInstance is in that status.
-    > -  The existence of the SectionDefinitions and FieldDescriptors are not checked when a DomBehaviorDefinition is saved.
+    >
+    > - When there is no FieldDescriptorLink for an existing FieldDescriptor, then no values will be allowed for this FieldDescriptor in that specific status.
+    > - The Visible property is only used to tell the UI whether the field should be visible or not.
+    > - When a field is marked as required, then at least one value for this FieldDescriptor should be present in a DomInstance and all values for this FieldDescriptor should be valid according to the validators of that descriptor (if any were defined).
+    > - When a field is marked as read-only for a specified status, the values cannot be changed. If none were present before transitioning to that status, none can be added anymore once the DomInstance is in that status.
+    > - The existence of the SectionDefinitions and FieldDescriptors are not checked when a DomBehaviorDefinition is saved.
 
     Some examples of fields you can define:
 
     | Case                       | RequiredForStatus | ReadOnly | Note                                                                                                                                                              |
     |------------------------------|-------------------|----------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
     | Not allowed                  | N/A               | N/A      | When no values are allowed to be present, no FieldDescriptorLink should be added to the list.                                                                     |
-    | Optional &<br> editable      | false             | false    | A value can optionally be added or an existing value can be updated or deleted.                                                                                   |
-    | Optional &<br> not editable  | false             | true     | A value may be present but it is not required. None can be added, edited or deleted.                                                                              |
-    | Required &<br> editable      | true              | false    | A valid value must be present when transitioning to the status in question and it can be updated as long as there is at least one value and all values are valid. |
-    | Required & <br> not editable | true              | true     | A valid value must be present when transitioning and it can no longer be changed in this status.                                                                  |
+    | Optional & editable      | false             | false    | A value can optionally be added or an existing value can be updated or deleted.                                                                                   |
+    | Optional & not editable  | false             | true     | A value may be present but it is not required. None can be added, edited or deleted.                                                                              |
+    | Required & editable      | true              | false    | A valid value must be present when transitioning to the status in question and it can be updated as long as there is at least one value and all values are valid. |
+    | Required & not editable | true              | true     | A valid value must be present when transitioning and it can no longer be changed in this status.                                                                  |
 
 If a DomInstance is created without a status, the DomManager will automatically assign the initial status when it detects that the instance is linked to a DomDefinition that uses the status system.
 
@@ -801,14 +821,14 @@ domHelper.DomInstances.DoStatusTransition(domInstance.ID, "initial_to_acceptance
 
 When something goes wrong while performing a status transition, a DomStatusTransitionError will be returned in the TraceData of the request. This error can contain the following reasons:
 
-| Reason                                                   | Description                                                                                                                                                                                                                                                                                                                     |
-|----------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| StatusTransition<br>NotFound                             | The transition ID does not match any of the IDs defined on the associated DomBehaviorDefinition. This error can also occur when no valid DomBehaviorDefinition is linked.<br> StatusTransitionId contains the ID of the transition that could not be found.                                                                     |
-| StatusTransition<br>IncompatibleWith<br>CurrentStatus    | The current status of the DomInstance does not match the “from” status defined by the transition.<br> StatusTransitionId contains the ID of the transition that could not be completed.                                                                                                                                         |
-| DomInstance<br>ContainsUnknownFieldsForNextStatus        | At least one FieldValue was defined on the DomInstance for which in the DomBehaviorDefinition no link could be found to the next status.<br> AssociatedFields contains the SectionDefinitionID/FieldDescriptorID pairs of the unknown fields.                                                                                   |
-| DomInstance<br>HasInvalidFields<br>ForNextStatus         | The DomInstance contains fields that are required but are not valid according to at least one validator. If there are multiple values for the same SectionDefinition and FieldDescriptor, only one entry will be included.<br> AssociatedFields contains the SectionDefinitionID/FieldDescriptorID pairs of the invalid fields. |
-| DomInstance<br>HasMissingRequired<br>FieldsForNextStatus | The DomInstance does not contain all fields that are required for the next status.<br> AssociatedFields contains the SectionDefinitionID/FieldDescriptorID pairs of the missing fields.                                                                                                                                         |
-| CrudFailedException<br>Occurred                          | When saving the DomInstance, a CrudFailedException occurred.<br> InnerTraceData will contain the TraceData included in the exception.                                                                                                                                                                                           |
+| Reason | Description |
+|--|--|
+| StatusTransitionNotFound | The transition ID does not match any of the IDs defined on the associated DomBehaviorDefinition. This error can also occur when no valid DomBehaviorDefinition is linked. StatusTransitionId contains the ID of the transition that could not be found. |
+| StatusTransitionIncompatibleWithCurrentStatus | The current status of the DomInstance does not match the “from” status defined by the transition. StatusTransitionId contains the ID of the transition that could not be completed. |
+| DomInstanceContainsUnknownFieldsForNextStatus | At least one FieldValue was defined on the DomInstance for which in the DomBehaviorDefinition no link could be found to the next status. AssociatedFields contains the SectionDefinitionID/FieldDescriptorID pairs of the unknown fields. |
+| DomInstanceHasInvalidFieldsForNextStatus | The DomInstance contains fields that are required but are not valid according to at least one validator. If there are multiple values for the same SectionDefinition and FieldDescriptor, only one entry will be included. AssociatedFields contains the SectionDefinitionID/FieldDescriptorID pairs of the invalid fields. |
+| DomInstanceHasMissingRequiredFieldsForNextStatus | The DomInstance does not contain all fields that are required for the next status. AssociatedFields contains the SectionDefinitionID/FieldDescriptorID pairs of the missing fields. |
+| CrudFailedExceptionOccurred | When saving the DomInstance, a CrudFailedException occurred. InnerTraceData will contain the TraceData included in the exception. |
 
 It is possible to mark one DomBehaviorDefinition as the main “Module” definition. This will force all other DomBehaviorDefinitions to inherit from it, forcing them all to use the same status system. The inheriting definitions can only add extra DomStatusSectionDefinitionLinks.
 
@@ -856,19 +876,19 @@ From now on, all processing with regard to system performance indicators (SPIs) 
 
 It is now possible to define actions on a DomBehaviorDefinition, which can be triggered via the DomHelper, and buttons that will execute one or more actions when clicked.
 
-**Defining an action**
+##### Defining an action
 
 You can define an action by adding an IDomActionDefinition to the ActionDefinitions list of a DomBehaviorDefinition. Each action definition has an ID of type string and a condition of type IDomCondition. The ID must be unique for the DomBehaviorDefinition in question and can only contain lower-case characters.
 
 Currently, you can only define actions of type ExecuteScriptDomActionDefinition, i.e. actions that execute a specified script. This type of action has the following properties.
 
-| Property      | Type          | Description                                                                                                                                                                                                                                     |
-|---------------|---------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Id            | string        | The ID of the action.                                                                                                                                                                                                                           |
-| Condition     | IDomCondition | The condition that should be met before the action is allowed to be executed.<br> Note: When you do not define a condition, it will always be allowed to execute the action.                                                                    |
-| Script        | string        | The name of the script to be executed.                                                                                                                                                                                                          |
-| Async         | bool          | Whether the script will be run asynchronously (true) or synchronously (false). When true, no errors or info data from the script will be returned.                                                                                              |
-| ScriptOptions | List\<string> | A list of options (e.g. “PARAMETER:1:MyValue”) that will be passed to the SLAutomation process during execution.<br> Note: Do not add the “DEFER” option. This option will be added automatically depending on the value of the Async property. |
+| Property | Type | Description |
+|--|--|--|
+| Id | string | The ID of the action. |
+| Condition | IDomCondition | The condition that should be met before the action is allowed to be executed. Note: When you do not define a condition, it will always be allowed to execute the action. |
+| Script | string | The name of the script to be executed. |
+| Async | bool | Whether the script will be run asynchronously (true) or synchronously (false). When true, no errors or info data from the script will be returned. |
+| ScriptOptions | List\<string> | A list of options (e.g. “PARAMETER:1:MyValue”) that will be passed to the SLAutomation process during execution. Note: Do not add the “DEFER” option. This option will be added automatically depending on the value of the Async property. |
 
 The scripts that will be executed using this action require a custom entry point of type OnDomAction. This entry point method should have two arguments: the IEngine object and an ExecuteScriptDomActionContext object. See the following example.
 
@@ -894,10 +914,10 @@ namespace DOM_Action_Example
 
 The ExecuteScriptDomActionContext object has the following properties:
 
-| Property  | Type          | Description                                                                                                         |
-|-----------|---------------|---------------------------------------------------------------------------------------------------------------------|
-| ContextId | IDMAObjectRef | The ID of the object for which the action was executed.<br> Note: Currently, only DomInstance IDs can be specified. |
-| ActionId  | string        | The ID of the action that triggered the script.                                                                     |
+| Property  | Type          | Description                                                                                                     |
+|-----------|---------------|-----------------------------------------------------------------------------------------------------------------|
+| ContextId | IDMAObjectRef | The ID of the object for which the action was executed. Note: Currently, only DomInstance IDs can be specified. |
+| ActionId  | string        | The ID of the action that triggered the script.                                                                 |
 
 If the executed script added script output to the engine object, that output will be returned in a DomActionInfo InfoData via the TraceData. See the example below, which shows how data can be added to the script and how it can be retrieved in the other script/application.
 
@@ -928,7 +948,7 @@ if (info != null && info.InfoType == DomActionInfo.Type.ScriptOutput)
 }
 ```
 
-**Executing an action**
+##### Executing an action
 
 An action can be executed by calling the ExecuteAction method on the DomInstance CrudHelperComponent of the DomHelper. The following IDs must be passed along: the ID of the DomInstance for which the action will be executed and the ID of the action that has to be executed.
 
@@ -941,12 +961,12 @@ The execute call will return TraceData when the action failed or when the condit
 | Reason                          | Description                                                                                                                                 |
 |---------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------|
 | Unknown                         | An unknown error has occurred. Check the logging for more information.                                                                      |
-| UnexpectedException<br>Occurred | An unexpected exception has occurred when executing an action.<br> ExceptionMessage will contain the message of the exception.              |
-| ScriptReturnedErrors            | A script has returned errors.<br> ErrorData will contain a list of all the errors that were returned.                                       |
-| ActionDefinition<br>NotFound    | The action that had to be executed could not be found by means of the IDMAObjectRef context ID.                                             |
-| ConditionNotMet                 | The condition that was specified was not met.<br> InnerTraceData may contain additional TraceData explaining why the condition was not met. |
+| UnexpectedExceptionOccurred | An unexpected exception has occurred when executing an action. ExceptionMessage will contain the message of the exception.              |
+| ScriptReturnedErrors            | A script has returned errors. ErrorData will contain a list of all the errors that were returned.                                       |
+| ActionDefinitionNotFound    | The action that had to be executed could not be found by means of the IDMAObjectRef context ID.                                             |
+| ConditionNotMet                 | The condition that was specified was not met. InnerTraceData may contain additional TraceData explaining why the condition was not met. |
 
-**Conditions**
+##### Conditions
 
 When you define an action, you can specify the following types of conditions:
 
@@ -965,18 +985,18 @@ A ValidForStatusTransitionCondition is a type of condition that is met when a Do
 var condition = new ValidForStatusTransitionCondition("first_to_second_transition");
 ```
 
-**Defining buttons**
+##### Defining buttons
 
 A DomBehaviorDefinition contains a list of IDomButtonDefinitions. These can be used to define buttons to be shown in the UI.
 
 Currently, it is only possible to define buttons to be shown for a DomInstance by using a DomInstanceButtonDefinition. These buttons can be linked to one or more actions that will be executed when the buttons are clicked. A DomInstanceButtonDefinition also has a condition that determines whether a button is shown or not. When no condition is specified, a button will by default be shown. A DomInstanceButtonDefinition has the following properties:
 
-| Property            | Type                      | Description                                                                                                                            |
-|---------------------|---------------------------|----------------------------------------------------------------------------------------------------------------------------------------|
-| Id                  | string                    | The ID of the button.<br> This ID must be unique for the DomBehaviorDefinition in question and can only contain lower-case characters. |
-| Layout              | DomButtonDefinitionLayout | Additional properties that define how the button will be displayed.<br> See below.                                                     |
-| VisibilityCondition | IDomInstanceCondition     | The condition that defines when the button will be shown.                                                                              |
-| ActionDefinitionIds | List\<string>             | The IDs of the actions that should be executed.                                                                                        |
+| Property            | Type                      | Description                                                                                                                        |
+|---------------------|---------------------------|------------------------------------------------------------------------------------------------------------------------------------|
+| Id                  | string                    | The ID of the button. This ID must be unique for the DomBehaviorDefinition in question and can only contain lower-case characters. |
+| Layout              | DomButtonDefinitionLayout | Additional properties that define how the button will be displayed. See below.                                                     |
+| VisibilityCondition | IDomInstanceCondition     | The condition that defines when the button will be shown.                                                                          |
+| ActionDefinitionIds | List\<string>             | The IDs of the actions that should be executed.                                                                                    |
 
 The DomButtonDefinitionLayout class has the following properties:
 
@@ -1005,6 +1025,7 @@ Syntax:
 ```
 
 > [!NOTE]
+>
 > - For more information on HLS, see <https://github.com/video-dev/hls.js/>
 > - All HLS resources must be delivered with CORS headers that permit GET requests.
 > - If you access a video thumbnail player that is using HTTPS, then the media must also be served over HTTPS.
@@ -1036,7 +1057,7 @@ In the *MaintenanceSettings.xml* file of a newly installed DataMiner Agent, the 
 
 When elements within a redundancy group are switched, from now on, additional information will be added both to the information events and to the Automation scripts that are executed.
 
-**Information events**
+##### Information events
 
 The following information will be added to the information events.
 
@@ -1055,17 +1076,17 @@ The following information will be added to the information events.
 
 - When DataMiner intervenes in the switching process, an information event with parameter description “Linked to” is generated. From now on, this event will also mention the element from which the switch occurred. It will now contain e.g. “RDG1, Unlinked from RDG3” instead of just “RDG1”.
 
-**Automation scripts**
+##### Automation scripts
 
 When an Automation script is triggered as part of an redundancy group action, that script will now have the following additional parameters. These can then be requested from within the Automation script using the GetScriptParam(\<id>) method on the engine object.
 
-| ID    | Name                             | Description                                                                                                                                                                                                                                                            |
-|-------|----------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 65007 | \<Redundancy User>               | In case of manual switching, this parameter will contain the name of the user who performed the switch.                                                                                                                                                                |
-| 65008 | \<Redundancy Trigger>            | In case of automatic switching, this parameter will contain the ID of the trigger that caused the switch to be performed.<br> To look up the trigger, send a GetRedundancyGroup-ByID or GetRedundancyGroupByName message and check the Triggers array in the response. |
-| 65009 | \<Redundancy Triggering Element> | In case of automatic switching, this parameter will contain the ID of the element that has caused the trigger to be fired.<br> ID format: \<DataMinerID>/\<ElementID>                                                                                                  |
-| 65010 | \<Redundancy Primary>            | This parameter will contain the ID of the primary element involved in the switch.<br> ID format: \<DataMinerID>/\<ElementID>                                                                                                                                           |
-| 65011 | \<Redundancy Backup>             | This parameter will contain the ID of the backup element involved in the switch.<br> ID format: \<DataMinerID>/\<ElementID>                                                                                                                                            |
+| ID | Name | Description |
+|--|--|--|
+| 65007 | \<Redundancy User> | In case of manual switching, this parameter will contain the name of the user who performed the switch. |
+| 65008 | \<Redundancy Trigger> | In case of automatic switching, this parameter will contain the ID of the trigger that caused the switch to be performed. To look up the trigger, send a GetRedundancyGroup-ByID or GetRedundancyGroupByName message and check the Triggers array in the response. |
+| 65009 | \<Redundancy Triggering Element> | In case of automatic switching, this parameter will contain the ID of the element that has caused the trigger to be fired. ID format: `<DataMinerID>/<ElementID>` |
+| 65010 | \<Redundancy Primary> | This parameter will contain the ID of the primary element involved in the switch. ID format: `<DataMinerID>/<ElementID>` |
+| 65011 | \<Redundancy Backup> | This parameter will contain the ID of the backup element involved in the switch. ID format: `<DataMinerID>/<ElementID>` |
 
 #### Automatic Incident Tracking enabled by default on new systems \[ID_31617\]
 
@@ -1107,6 +1128,7 @@ In the *DataMiner.xml* file, an \<AzureAD> element should be present. See the fo
 ```
 
 > [!NOTE]
+>
 > - Currently, users imported from an Azure AD can only log in via SAML.
 > - In an upcoming release, functionality will be added so that this can be configured directly in DataMiner Cube instead.
 
@@ -1151,6 +1173,7 @@ Under *System configuration \> Cloud gateway*, you can now find the following us
 - Configure gateway service
 
 > [!NOTE]
+>
 > - The user permissions listed under *Live sharing* are included in the *Power users* preset and higher.
 > - The user permissions under *Cloud gateway* are included in the *Administrators (read-only access to Security)* preset and higher.
 
@@ -1165,7 +1188,7 @@ In the *Users/Groups* section of System Center, you can now configure the follow
 
 #### New functions user permissions \[ID_29659\] \[ID_30114\] \[ID_30122\]
 
-Under* Modules* > *Functions*, you can now find the following user permissions:
+Under *Modules* > *Functions*, you can now find the following user permissions:
 
 - Read
 - Add
@@ -1202,7 +1225,7 @@ When external authentication is activated on a DataMiner Agent, bypassing the ex
 
 In the *Users/Groups* section of System Center, new user permissions have been added and existing user permissions have been updated.
 
-**New user permissions**
+##### New user permissions
 
 - Modules \> Process Automation \> Add/Edit
 - Modules \> Process Automation \> Delete
@@ -1210,7 +1233,7 @@ In the *Users/Groups* section of System Center, new user permissions have been a
 - Modules \> Services \> Profiles \> Definitions \> Delete
 - Modules \> Services \> Profiles \> Instances \> Delete
 
-**New and restructured user permissions**
+##### New and restructured user permissions
 
 - Modules \> Profiles \> UI available
 - Modules \> Profiles \> All except instances \> Add/Edit
@@ -1219,7 +1242,7 @@ In the *Users/Groups* section of System Center, new user permissions have been a
 - Modules \> Profiles \> Instances \> Delete (NEW)
 - Modules \> Profiles \> Configure (with tooltip providing more information) (NEW)
 
-**Updated user permissions**
+##### Updated user permissions
 
 - Users are no longer allowed to add an instance to a newly created service profile definition that has not yet been saved.
 - When a user who has been granted the Modules \> Services \> Profiles \> Definitions \> Delete permission deletes a service profile definition, all instances of that definition must also be deleted. A confirmation box will now appear to make the user aware of this. Also, a confirmation box will now appear when you try to delete definition instances.
@@ -1234,57 +1257,56 @@ Users authenticated by Azure AD using SAML can now automatically be created and 
 To configure DataMiner to automatically (a) create users authenticated by Azure AD using SAML and (b) assign them to groups, proceed as follows:
 
 1. Make sure DataMiner is registered as an Enterprise Application in Azure AD.
+1. Go to *Users and groups* and add the necessary users and groups to the Enterprise Application.
+1. Go to *Single sign-on*, select *SAML*, and edit the following settings in “Basic SAML Configuration”:
 
-2. Go to *Users and groups* and add the necessary users and groups to the Enterprise Application.
+   - Set *Entity ID* to `https://[your application name]`.
+   - Under *Reply URL*, specify the following URLs:
 
-3. Go to *Single sign-on*, select *SAML*, and edit the following settings in “Basic SAML Configuration”:
+     ```txt
+     https://[your application name]/root/ https://[your application name]/ticketing https://[your application name]/jobs https://[your application name]/monitoring https://[your application name]/dashboard https://[your application name]/root https://[your application name]/login https://[your application name]
+     ```
 
-    - Set *Entity ID* to “https://\[your application name\]”.
-    - Under *Reply URL*, specify the following URLs:
+   - Set *Sign on URL* to `https://[your application name]`.
 
-        ```txt
-        https://[your application name]/root/ https://[your application name]/ticketing https://[your application name]/jobs https://[your application name]/monitoring https://[your application name]/dashboard https://[your application name]/root https://[your application name]/login https://[your application name]
-        ```
+1. Go to *User Attributes & Claims* and add a group claim.
 
-    - Set *Sign on URL* to “https://\[your application name\]”.
+   > [!NOTE]
+   > If you add a group claim, the account name of the group will only be sent via SAML when the groups are synchronized. Otherwise, the ID of the group will be sent instead.
 
-4. Go to *User Attributes & Claims* and add a group claim.
+1. In DataMiner Cube, add the necessary groups.
 
-    > [!NOTE]
-    > If you add a group claim, the account name of the group will only be sent via SAML when the groups are synchronized. Otherwise, the ID of the group will be sent instead.
+1. In the DataMiner.xml, configure the \<ExternalAuthentication> element as shown in the following example.
 
-5. In DataMiner Cube, add the necessary groups.
+   ```xml
+   <DataMiner ...>
+     ...
+     <ExternalAuthentication      type="SAML"      ipMetadata="[Path/URL of the identity provider’s metadata file]"      spMetadata="[Path/URL of the service provider’s metadata file]"      timeout="300">
+       <AutomaticUserCreation enabled="true">
+         <EmailClaim>http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress</EmailClaim>
+         <Givenname>http://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname</Givenname>
+         <Surname>http://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname</Surname>
+         <Groups claims=“true”>[group claim name]</Groups>
+       </AutomaticUserCreation>
+     </ExternalAuthentication>
+     ...
+   </DataMiner>
+   ```
 
-6. In the DataMiner.xml, configure the \<ExternalAuthentication> element as shown in the following example.
+   > [!NOTE]
+   >
+   > - In Azure AD, the ipMetadata URL can be found under *Single sign-on \> SAML Signing Certificate – App Federation Metadata*.
+   > - If, in the *Groups* element, you set the *claims* attribute to “false”, no claims will be used to add users to groups. In that case, the name of the group as specified in Cube will be used instead. A user can only be added to a single group this way.
+   > - If, in the *Groups* element, you set the *claims* attribute to “false”, the user information that is created will not be updated.
 
-    ```xml
-    <DataMiner ...>
-      ...
-      <ExternalAuthentication      type="SAML"      ipMetadata="[Path/URL of the identity provider’s metadata file]"      spMetadata="[Path/URL of the service provider’s metadata file]"      timeout="300">
-        <AutomaticUserCreation enabled="true">
-          <EmailClaim>http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress</EmailClaim>
-          <Givenname>http://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname</Givenname>
-          <Surname>http://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname</Surname>
-          <Groups claims=“true”>[group claim name]</Groups>
-        </AutomaticUserCreation>
-      </ExternalAuthentication>
-      ...
-    </DataMiner>
-    ```
+1. Save the DataMiner.xml file.
 
-    > [!NOTE]
-    > -  In Azure AD, the ipMetadata URL can be found under *Single sign-on \> SAML Signing Certificate – App Federation Metadata*.
-    > -  If, in the *Groups* element, you set the *claims* attribute to “false”, no claims will be used to add users to groups. In that case, the name of the group as specified in Cube will be used instead. A user can only be added to a single group this way.
-    > -  If, in the *Groups* element, you set the *claims* attribute to “false”, the user information that is created will not be updated.
+1. Create an spMetadata file as described in the DataMiner Help section “Creating a DataMiner metadata file”.
 
-7. Save the DataMiner.xml file.
+   > [!NOTE]
+   > In Azure AD, the EntityID can be found under *Single sign-on*. It is not the application ID.
 
-8. Create an spMetadata file as described in the DataMiner Help section “Creating a DataMiner metadata file”.
-
-    > [!NOTE]
-    > In Azure AD, the EntityID can be found under *Single sign-on*. It is not the application ID.
-
-9. Restart the DataMiner Agent.
+1. Restart the DataMiner Agent.
 
 #### Azure AD application query support \[ID_31059\]
 
@@ -1310,9 +1332,9 @@ As a result, it will now be possible to configure custom HTTP headers in IIS Man
 
 #### Extension methods moved from QActionHelperBaseClasses to SLManagedScripting \[ID_27995\] \[ID_28675\]
 
-The following extension methods have now been moved from the QActionHelperBaseClasses libary to the SLManagedScripting library and are now instance methods of the SLProtocol interface.
+The following extension methods have now been moved from the QActionHelperBaseClasses library to the SLManagedScripting library and are now instance methods of the SLProtocol interface.
 
-**static class NotifyProtocol**
+##### static class NotifyProtocol
 
 - AddRow(this SLProtocol protocol, int tableId, string row)
 - AddRow(this SLProtocol protocol, int tableId, object\[\] row)
@@ -1336,17 +1358,18 @@ The following extension methods have now been moved from the QActionHelperBaseCl
 - FillArrayWithColumn(this SLProtocol protocol, int tableId, int columnPid, object\[\] keys, object\[\] values, DateTime? timeInfo = null)
 - SetParameterBinary(this SLProtocol protocol, int pid, byte\[\] data)
 
-**static class ProtocolExtenders**
+##### static class ProtocolExtenders
 
 - void Log(this SLProtocol protocol, string message, LogType logType = LogType.Allways, LogLevel logLevel = LogLevel.DevelopmentLogging)
 
 > [!NOTE]
+>
 > - All overloads of the above-mentioned methods, which take in a QActionTableRow object instead of an object\[\], have been deleted.
 > - The static methods could not be deleted. They have been marked obsolete instead.
 > - The following types have moved from the QActionHelperBaseClasses DLL file to the SLManagedScripting DLL file:
->     - class NotifyProtocol
->     - enum LogType
->     - enum LogLevel
+>   - class NotifyProtocol
+>   - enum LogType
+>   - enum LogLevel
 
 #### Enhanced (direct) view column option “view” \[ID_28448\]
 
@@ -1358,11 +1381,11 @@ view=linkedPid:elementkeycolumnpid:remotedatatablepid:remotedatacolumnidx
 
 This option can be configured in three different ways. See the table below. In the examples, table 11000 is a (direct) view on table 1000.
 
-| Type of filtering     | Example               | Description                                                                                                                                                                                                                                                                                                                                    |
-|-----------------------|-----------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Local filtering       | view=:1004:1000:1     | The elementkeycolumnpid refers to another column of the same table.<br> Each row will be requested from the element referred to by the DMAID/EID found in parameter 1004.                                                                                                                                                                      |
-| Foreign key filtering | view=1003:1105:1000:2 | The elementkeycolumnpid refers to a column of the table linked by the foreign key found in parameter 1003.<br> Each row will be requested from the element referred to by the DMAID/EID found in parameter 1105, which is linked via the foreign key in parameter 1003.                                                                        |
-| No filtering          | view=:1401:1000:1     | The elementkeycolumnpid refers to a column of another table, which is not linked to the local table (no linkedPid is provided).<br> Each row will be requested from the elements referred to by the DMAID/EID items found in column 1401.<br> Note: If the remote elements contain duplicate keys, then this can cause data to be overwritten. |
+| Type of filtering | Example | Description |
+|--|--|--|
+| Local filtering | view=:1004:1000:1 | The elementkeycolumnpid refers to another column of the same table. Each row will be requested from the element referred to by the DMAID/EID found in parameter 1004. |
+| Foreign key filtering | view=1003:1105:1000:2 | The elementkeycolumnpid refers to a column of the table linked by the foreign key found in parameter 1003. Each row will be requested from the element referred to by the DMAID/EID found in parameter 1105, which is linked via the foreign key in parameter 1003. |
+| No filtering | view=:1401:1000:1 | The elementkeycolumnpid refers to a column of another table, which is not linked to the local table (no linkedPid is provided). Each row will be requested from the elements referred to by the DMAID/EID items found in column 1401. Note: If the remote elements contain duplicate keys, then this can cause data to be overwritten. |
 
 #### New “FlushPerDatagram” option for smart-serial UDP connections \[ID_28999\]
 
@@ -1434,18 +1457,19 @@ The notify protocol command NT_GET_BITRATE_DELTA, which can be launched from wit
 
 It is advised to enable this feature at startup using the notify protocol command NT_SET_BITRATE_DELTA_INDEX_TRACKING with either a single parameter ID or multiple parameter IDs. This information will not be saved and will only be kept as long as the element is running. See the following examples. The first call will enable the tracking for parameters 100 and 200. The second call will disable the tracking for parameter 100.
 
-- *protocol.NotifyProtocol(/\*NT_SET_BITRATE_DELTA_INDEX_TRACKING\*/ 448, new int\[\] {100, 200}, true);*
-- *protocol.NotifyProtocol(/\*NT_SET_BITRATE_DELTA_INDEX_TRACKING\*/ 448, 100, false);*
+- `protocol.NotifyProtocol(/*NT_SET_BITRATE_DELTA_INDEX_TRACKING*/ 448, new int[] {100, 200}, true);`
+- `protocol.NotifyProtocol(/*NT_SET_BITRATE_DELTA_INDEX_TRACKING*/ 448, 100, false);`
 
 Once tracking has been enabled, the information can be retrieved by using the notify protocol command NT_GET_BITRATE_DELTA with a string as second argument. In the following example, the command will return the delta value for the specified key (“1”) of the specified parameter (100). If you set the second argument to an empty string (“”), then the command will return all currently tracked keys for the parameter in question.
 
-*object delta = protocol.NotifyProtocol(269 /\*NT_GET_BITRATE_DELTA\*/, 100, "1");*
+`object delta = protocol.NotifyProtocol(269 /*NT_GET_BITRATE_DELTA*/, 100, "1");`
 
 The information will be returned in the following format. If only a single key is requested, the initial array will have a length of 1:
 
-*object\[\] { object\[\] {string key1, int delta1}, object\[\] {string key2, int delta2} }*
+`object[] { object[] {string key1, int delta1}, object[] {string key2, int delta2} }`
 
 > [!NOTE]
+>
 > - If the requested key could not be found, or if no polling happened since the tracking was enabled, an empty array will be returned.
 > - If there were no 2 poll cycles, or if the requested key was only present in 1 poll cycle, then the delta value will be returned as -1.
 
@@ -1453,7 +1477,7 @@ The information will be returned in the following format. If only a single key i
 
 It is now possible to a regular expression in the filtering options of an aggregate action.
 
-**Syntax 1: Equation with a regular expression defined in a regex attribute**
+##### Syntax 1: Equation with a regular expression defined in a regex attribute
 
 When you use this syntax, add “equation:regex,” to the *options* attribute and specify the regular expression in a separate *regex* attribute.
 
@@ -1467,7 +1491,7 @@ Example:
 </Action>
 ```
 
-**Syntax 2: Equation with a regular expression defined in a parameter**
+##### Syntax 2: Equation with a regular expression defined in a parameter
 
 When you use this syntax, add “equation:regex,” to the *options* attribute, followed by the ID of the parameter containing the regular expression.
 
@@ -1481,7 +1505,7 @@ Example:
 </Action>
 ```
 
-**Syntax 3: Equation value with a regular expression defined in a regex attribute**
+##### Syntax 3: Equation value with a regular expression defined in a regex attribute
 
 When you use this syntax, add “equationvalue:” to the *options* attribute, followed by four comma-separated arguments, and specify the regular expression in a separate *regex* attribute.
 
@@ -1502,7 +1526,7 @@ Example:
 </Action>
 ```
 
-**Syntax 4: Equation value with a regular expression defined in a parameter**
+##### Syntax 4: Equation value with a regular expression defined in a parameter
 
 When you use this syntax, add “equationvalue:” to the *options* attribute, followed by four comma-separated arguments.
 
@@ -1531,6 +1555,7 @@ Example:
 View tables containing a column with view options like “view=:x:y:z” or “view=a:b:c:z” now allow that column to be filtered by means of a “VALUE=” filter (e.g. VALUE=5 == abc).
 
 > [!NOTE]
+>
 > - These filters will also work when filtering on a column of a view table that refers to a column of another view table.
 > - When a directview table links to a view table with remote columns (i.e. view=:x:y:z), it is not yet possible to filter on those columns.
 > - Combining filters with AND or OR is not supported.
@@ -1562,6 +1587,7 @@ To use this new polling scheme, add “multipleGet” to the SNMP options of the
     ```
 
 > [!NOTE]
+>
 > - The multipleGet option cannot be used together with the multipleGetNext, multipleGetBulk and bulk options.
 > - The multipleGet keyword can be used together with options like Subtable.
 > - The notify protocol command NT_GET_BITRATE_DELTA, which can be launched from within a QAction, was expanded to be able to retrieve the delta times per row when polling an SNMP table. For more information, see [SNMP polling: Retrieving polling delta time per row \[ID_29445\]](#snmp-polling-retrieving-polling-delta-time-per-row-id_29445). This functionality will now also work in conjunction with the new multipleGet option.
@@ -1591,7 +1617,7 @@ Example:
 Script:ScriptName|DummyName=ElementName or DmaID/ElementID;...| ParameterName1=[var:myVar];ParameterName2=#ValueFile;...| MemoryName=MemoryFileName;...|ToolTip|Options|Trigger=ValueChanged
 ```
 
-**Reserved prefixes can now mark each of the syntax components**
+##### Reserved prefixes can now mark each of the syntax components
 
 In the syntax to be used in Automation script shapes as well as page-level Automation script triggers, each component can now be marked by a prefix. That way, you will no longer have to define empty components in case there are no dummies, no memory files, etc.
 
@@ -1610,10 +1636,11 @@ Script:<myScript>|Tooltip:<myTooltip>|Parameters:paramA=<myParam>|Options:NoConf
 ```
 
 > [!NOTE]
+>
 > - If you choose to use prefixes to mark syntax components, you must use them for every component.
 > - When you use prefixes to mark syntax components, the components can be added in whatever order you choose.
 
-**New NodeDoubleClicked event**
+##### New NodeDoubleClicked event
 
 In an \[Event:\] placeholder, you can now add a new event named *NodeDoubleClicked*, followed by the argument *ID* or *Label*.
 
@@ -1625,7 +1652,7 @@ Example:
 [event:NodeDoubleClicked,ID]
 ```
 
-**Use case**
+##### Use case
 
 Using the new features described above, it is possible to configure that when a user clicks a service definition node in an embedded Service Manager component, an Automation script is executed with e.g. the node ID as a parameter.
 
@@ -1662,6 +1689,7 @@ In the DataMiner Cube start window, tiles representing DataMiner Systems or Data
     > When a search does not yield any results, you can click the plus icon or press ENTER to add the hostname or IP address you were looking for.
 
 > [!NOTE]
+>
 > - The start window now has keyboard support. Use the arrow keys to move from one tile to the next, and press ENTER to launch.
 > - The start window can now be resized. When you resize and/or reposition the window, its new size and position will be saved.
 
@@ -1671,7 +1699,7 @@ It is now possible to have page variables and card variables saved across sessio
 
 To do so, place the following prefix before the variable name:
 
-*\_\_saved\_*
+`__saved_`
 
 The variable is then saved in a separate .dat file located in the following folder on the client machine: *C:\\Users\\{Username}\\AppData\\Roaming\\Skyline\\DataMiner*. When a variable is saved, if a user reopens a card with that variable, the variable will be set to the last saved value.
 
@@ -1743,13 +1771,13 @@ Translations have now been added for two new reasons:
 
 The ListView component can now also be used to list resources. To do so, add a shape data field of type “Source” and set its value to “Resources”.
 
-| Shape data field | Value                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-|------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Component        | ListView                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-| Source           | Resources                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| ComponentOptions | List of options, separated by pipe characters.<br> For an overview of all possible component options, see [Component options](https://help.dataminer.services/dataminer/DataMinerUserGuide/part_2/visio/Creating_a_list_view.htm?rhhlterm=listview&rhsyns=%20#component-options).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-| Columns          | The list of columns that have to be displayed. Preferably, this should be configured by specifying the name of a saved column configuration, e.g. MyColumnConfig.<br> Saving a column configuration is possible via the right-click menu of the list header in DataMiner Cube. This right-click menu also allows you to load a column configuration.<br> If you do not specify this shape data field or leave it empty, all columns will be displayed.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
-| Filter           | Examples:<br> -  Resource.Name\[string\]== 'Encoder'<br> -  Resource.Name contains 'res'<br> -  Resource.Name notContains 'res'<br> -  Resource.ID\[Guid\] == fad6a6dd-ca3a-4b6f-9ca7-b68fd2071786<br> -  Resource.MainDVEDmaID == 113<br> -  Resource.PoolGUIDs contains<br>0fb47f51-ad81-47f2-9e69-3d9477bdc961<br> -  Resource.MaxConcurrency != 1<br> -  Resource.PropertiesDict.Location\[string\] == '3'<br> -  Resource.Name\[string\] notContains 'RS' AND Resource.Name\[string\] notContains 'RT' AND Resource.Name\[string\] notContains 'ExposeFlow'<br> For more information on list view filters, see [List view filters](https://help.dataminer.services/dataminer/DataMinerUserGuide/part_2/visio/Creating_a_list_view.htm?rhhlterm=listview&rhsyns=%20#list-view-filters). |
+| Shape data field | Value |
+|--|--|
+| Component | ListView |
+| Source | Resources |
+| ComponentOptions | List of options, separated by pipe characters. For an overview of all possible component options, see [Component options](xref:Creating_a_list_view#component-options). |
+| Columns | The list of columns that have to be displayed. Preferably, this should be configured by specifying the name of a saved column configuration, e.g. MyColumnConfig.<br> Saving a column configuration is possible via the right-click menu of the list header in DataMiner Cube. This right-click menu also allows you to load a column configuration.<br> If you do not specify this shape data field or leave it empty, all columns will be displayed. |
+| Filter | Examples:<br> - Resource.Name\[string\]== 'Encoder'<br> - Resource.Name contains 'res'<br> - Resource.Name notContains 'res'<br> - Resource.ID\[Guid\] == fad6a6dd-ca3a-4b6f-9ca7-b68fd2071786<br> - Resource.MainDVEDmaID == 113<br> - Resource.PoolGUIDs contains<br>0fb47f51-ad81-47f2-9e69-3d9477bdc961<br> - Resource.MaxConcurrency != 1<br> - Resource.PropertiesDict.Location\[string\] == '3'<br> - Resource.Name\[string\] notContains 'RS' AND Resource.Name\[string\] notContains 'RT' AND Resource.Name\[string\] notContains 'ExposeFlow' <br>For more information on list view filters, see [List view filters](xref:Creating_a_list_view#list-view-filters). |
 
 > [!NOTE]
 > The IDOfSelection session variable contains a list of the IDs or GUIDs of the selected items, separated by pipe characters.
@@ -1760,7 +1788,7 @@ In DataMiner Cube, EPM chains with the same value in the protocol’s Chain@grou
 
 Also, it is now possible to specify one filter value per chain that should be selected by default in filter boxes that contain only that specific value.
 
-**Example of a Protocol.Chains.Chain element with a group name and a default filter value**
+##### Example of a Protocol.Chains.Chain element with a group name and a default filter value
 
 See the following example. The chain named “MyChain” will be part of the group named “MyChainGroup”, and if the filter named “MyField” only has one value, it will automatically be selected when you open the chain in the CPE manager or the topology tab in the sidebar.
 
@@ -1775,6 +1803,7 @@ See the following example. The chain named “MyChain” will be part of the gro
 ```
 
 > [!NOTE]
+>
 > - Each chain can only be part of a single chain group.
 > - Chains that are not part of a group will be displayed as top-level tabs (on the same level as the group tabs).
 
@@ -1784,10 +1813,15 @@ When, in DataMiner Cube, you open a context menu of a table and select an option
 
 This information event will contain the following data:
 
-| Item                  | Description                                                                                                                                                                                                                                                                                               |
-|-----------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Parameter description | The full display name of the context menu parameter.<br> Format: *\<TableName>\_ContextMenu*                                                                                                                                                                                   |
-| Parameter value       | A value in the following format: <br> *Set by \<user> to \<command display value>*<br> If there are dependency values, the value will have the following format: *Set by \<user> to \<command display value>: “\<dependency 1>”; “\<dependency 2>”* |
+- **Parameter description**: The full display name of the context menu parameter. Format: *\<TableName>\_ContextMenu*
+
+- **Parameter value**: A value in the following format:
+
+  `Set by <user> to <command display value>`
+
+  If there are dependency values, the value will have the following format:
+
+  `Set by <user> to <command display value>: “<dependency 1>”; “<dependency 2>”`
 
 #### Settings window: “Surveyor” section renamed to “Sidebar” & New “Launch EPM card on filter selection” setting added \[ID_28788\]
 
@@ -1850,10 +1884,10 @@ Next to the serviceTimeoutMode and viewTimeoutMode attributes, the AlarmSettings
 
 Similar to the other two attributes, it can be set to one of the following values.
 
-| Value          | Description                                                                                                                                     |
-|----------------|-------------------------------------------------------------------------------------------------------------------------------------------------|
-| displayTimeout | Shapes linked to elements will only show the timeout color. The current alarm color will not be shown.<br> (Default setting)                    |
-| displayBoth    | Shapes linked to elements will show both the current alarm color and the timeout color.<br> The timeout color will be shown as a hatch pattern. |
+| Value          | Description                                                                                                                                 |
+|----------------|---------------------------------------------------------------------------------------------------------------------------------------------|
+| displayTimeout | Shapes linked to elements will only show the timeout color. The current alarm color will not be shown. (Default setting.)                   |
+| displayBoth    | Shapes linked to elements will show both the current alarm color and the timeout color. The timeout color will be shown as a hatch pattern. |
 
 #### Visual Overview: Prevent a child shape from inheriting the service context of its parent shape \[ID_29503\]
 
@@ -1869,12 +1903,12 @@ When a ProfileInstance is updated without quarantine being forced (i.e. with for
 
 - If no instances need to be quarantined, the update will be applied and the following warning will be returned:
 
-    - A warning of type ProfileInstanceChangeCausedBookingReconfiguration, listing the running reservations that were reconfigured because of the update.
+  - A warning of type ProfileInstanceChangeCausedBookingReconfiguration, listing the running reservations that were reconfigured because of the update.
 
 - If instances need to be quarantined, the update will not proceed and the following errors will be returned:
 
-    - An error with reason ReservationsMustMovedToQuarantine, listing the reservations that need to be quarantined as well as the usages.
-    - An error with reason ReservationsMustBeReconfigured, listing the bookings that will be affected by the ProfileInstance update.
+  - An error with reason ReservationsMustMovedToQuarantine, listing the reservations that need to be quarantined as well as the usages.
+  - An error with reason ReservationsMustBeReconfigured, listing the bookings that will be affected by the ProfileInstance update.
 
 When a ProfileInstance is updated with quarantine being forced (i.e. with forceQuarantine set to true), the update will proceed and the following TraceData will be returned:
 
@@ -1891,7 +1925,7 @@ DataMiner Cube now supports hiding specific chains (normal chains and search cha
 
 Below, you can find examples of how to configure conditional visibility in an element protocol.
 
-**Chain visibility**
+##### Chain visibility
 
 Example:
 
@@ -1909,10 +1943,11 @@ Example:
 ```
 
 > [!NOTE]
+>
 > - The default visibility defines the visibility when none of the conditions are met. Default: true
 > - Multiple \<Standalone> elements are possible. Each one has to contain a parameter ID that refers to the trigger parameter and a set of values that toggle the visibility to the opposite setting of the one defined in the default attribute.
 
-**Chain field visibility**
+##### Chain field visibility
 
 Example:
 
@@ -1934,10 +1969,11 @@ Example:
 ```
 
 > [!NOTE]
+>
 > - The default visibility defines the visibility when none of the conditions are met. Default: true
 > - Multiple \<Standalone> elements are possible. Each one has to contain a parameter ID that refers to the trigger parameter and a set of values that toggle the visibility to the opposite setting of the one defined in the default attribute.
 
-**Search chain visibility**
+##### Search chain visibility
 
 Example:
 
@@ -1955,6 +1991,7 @@ Example:
 ```
 
 > [!NOTE]
+>
 > - The default visibility defines the visibility when none of the conditions are met. Default: true
 > - Multiple \<Standalone> elements are possible. Each one has to contain a parameter ID that refers to the trigger parameter and a set of values that toggle the visibility to the opposite setting of the one defined in the default attribute.
 
@@ -2052,7 +2089,7 @@ For example:
 
 #### Visual Overview: New Collapse shape data field \[ID_30149\]
 
-In Visual Overview, you can now hide a shape in a different way than with the *Hide* shape data field, using the new *Collapse* shape data field. This field is configured in the same way, as detailed under [Extended conditional shape manipulation actions](https://help.dataminer.services/dataminer/) in the DataMiner Help. While on the face of it, the result of the *Collapse* action will be the same as for a *Hide* action, the shape is hidden in a different way, i.e. its visibility is collapsed.
+In Visual Overview, you can now hide a shape in a different way than with the *Hide* shape data field, using the new *Collapse* shape data field. This field is configured in the same way, as detailed under [Extended conditional shape manipulation actions](xref:Extended_conditional_shape_manipulation_actions) in the DataMiner Help. While on the face of it, the result of the *Collapse* action will be the same as for a *Hide* action, the shape is hidden in a different way, i.e. its visibility is collapsed.
 
 This makes it a convenient alternative to the *ChildrenFilter* shape data, as it will keep all shapes in memory instead of removing and recreating them. This will allow better performance, though it will lead to slightly increased memory usage.
 
@@ -2083,11 +2120,12 @@ A number of options can also be added to the *HistoryMode* shape, again using a 
 
 | HistoryMode option         | Description                                                                                                                                                                                                                                                                                     |
 |----------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| NoDataValue=               | This option allows you to specify the text that should be displayed in case no trending is available. If this option is not specified, the default value “N/A” is displayed.<br> For example: *State=On\|TimeStamp=\[var:myTime\]\|NoDataValue=\<No data available>* |
+| NoDataValue=               | This option allows you to specify the text that should be displayed in case no trending is available. If this option is not specified, the default value “N/A” is displayed. For example: *State=On\|TimeStamp=\[var:myTime\]\|NoDataValue=\<No data available>* |
 | TrendDataType              | This option allows you to determine which kind of trend data should be used, if available: *Realtime* (default), *Average* or *RealtimeAndAverage*.                                                |
-| AverageTrendDataIndication | This option allows you to specify a prefix to the parameter value in case it represents an average value. By default, no prefix is shown. <br> For example:  *State=On\|TimeStamp=\[var:myTime\]\|<br>AverageTrendDataIndication=\[AVG\]*                            |
+| AverageTrendDataIndication | This option allows you to specify a prefix to the parameter value in case it represents an average value. By default, no prefix is shown. For example:  *State=On\|TimeStamp=\[var:myTime\]\|AverageTrendDataIndication=\[AVG\]*                            |
 
 > [!NOTE]
+>
 > - You can override history mode on shape level. In case there are shapes within shapes, the lowest level will be checked first. However, the full shape data of this lowest level is used, so you must make sure that the shape data is fully configured even if you only want to change one option (e.g. NoDataValue).
 > - At present, for history values no unit is displayed. In addition, only updating the element or parameter shape data will not update the history mode result.
 
@@ -2108,7 +2146,7 @@ The following new placeholders are now also supported in an *Element* shape. The
 
 #### DataMiner Cube start window: Cleanup Cube Installation window \[ID_30351\]
 
-When you click the cogwheel icon in the bottom-right corner of the DataMiner Cube start window, you can now select the *Cleanup... *option to open the *Cleanup Cube Installation* window. That window will allow you to remove old and/or unused Cube versions as well as to clear the Visio cache and the protocol cache.
+When you click the cogwheel icon in the bottom-right corner of the DataMiner Cube start window, you can now select the *Cleanup* option to open the *Cleanup Cube Installation* window. That window will allow you to remove old and/or unused Cube versions as well as to clear the Visio cache and the protocol cache.
 
 #### Data Display: Extended support for launching elements, services, redundancy groups and views by clicking buttons in Data Display table cells \[ID_30413\]
 
@@ -2186,36 +2224,37 @@ To link an element shape to the last-known resource using the element in questio
 | Options          | UseResource=True |
 
 > [!NOTE]
+>
 > - Within a service instance connectivity chain, the elements will automatically be linked to the resource.
 > - Children of an element shape in which the “UseResource” option is specified will automatically inherit this setting unless overridden.
 
-**Placeholders that can retrieve resource-related data**
+##### Placeholders that can retrieve resource-related data
 
 When a resource is linked to an element shape, you can use the following placeholders to retrieve data from that resource.
 
-| Placeholder       | Data                                                                                                                                                                                           |
-|-------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| \[Element Name\]  | The name of the resource’s function element, if such an element could be found.<br> If none could be found, this placeholder will contain the name of the element linked to the element shape. |
-| \[Function Name\] | The name of the resource function.                                                                                                                                                             |
-| \[Name\]          | The name of the element linked to the element shape.                                                                                                                                           |
-| \[Resource ID\]   | The ID of the resource (GUID).                                                                                                                                                                 |
-| \[Resource Name\] | The name of the resource.                                                                                                                                                                      |
+| Placeholder | Data |
+|--|--|
+| \[Element Name\] | The name of the resource’s function element, if such an element could be found. If none could be found, this placeholder will contain the name of the element linked to the element shape. |
+| \[Function Name\] | The name of the resource function. |
+| \[Name\] | The name of the element linked to the element shape. |
+| \[Resource ID\] | The ID of the resource (GUID). |
+| \[Resource Name\] | The name of the resource. |
 
 #### Visual Overview: New \[ServiceDefinition:\] placeholder & new \[Reservation:\] placeholder property “ServiceDefinitionID” \[ID_30757\]
 
-**New \[ServiceDefinition:\] placeholder**
+##### New \[ServiceDefinition:\] placeholder
 
 The new \[ServiceDefinition:\] placeholder allows you to retrieve one of the following properties of a service definition:
 
 | Property                 | Description                                                                                                                                                                                                  |
 |--------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Name                     | The name of the service definition.                                                                                                                                                                          |
-| Actions                  | The name of the scripts that are defined on the service definition.<br> Names of multiple actions will be separated by colons (“:”). This will allows them to be inserted directly into e.g. a setvar shape. |
+| Actions                  | The name of the scripts that are defined on the service definition. Names of multiple actions will be separated by colons (“:”). This will allows them to be inserted directly into e.g. a setvar shape. |
 | Property=\<propertyName> | The value of any of the custom properties of the service definition.                                                                                                                                         |
 
 Full syntax: \[ServiceDefinition:\<ServiceDefinitionID>,\<Property>\]
 
-**New \[Reservation:\] placeholder property “ServiceDefinitionID”**
+##### New \[Reservation:\] placeholder property “ServiceDefinitionID”
 
 The \[Reservation:\] placeholder now allows you to retrieve the service definition ID of a specific booking.
 
@@ -2241,6 +2280,7 @@ When configuring a matrix in the Router Control module, you can now set it to ei
 
 > [!NOTE]
 > When you use direct take mode in combination with the “Use output-first workflow” option
+>
 > - selecting an output will not cause crosspoints to be created or deleted, and
 > - input selections will only be cleared when you select another output.
 
@@ -2272,6 +2312,7 @@ To set this browser engine as the system default for all users, go to *System Ce
 If you want a shape to display a webpage using the Edge web browser regardless of Cube’s default browser engine setting, add a shape data field of type *Options* to the shape containing the web browser control, and set its value to “UseEdge”.
 
 > [!NOTE]
+>
 > - Currently, the Edge web browser engine cannot be used in DataMiner web apps like Ticketing, Dashboards, etc.
 > - The WebView2 Runtime will automatically be installed when using Office 365 Apps. It will also come pre-installed with Windows 11. It will not be included in DataMiner upgrade packages.
 
@@ -2298,10 +2339,11 @@ The \<color> value in the example above can be specified as follows:
 - An HTML color code (e.g. #FF102030)
 - An RGB color code (e.g. 40,50,60)
 - A standard color name (e.g. magenta)
-- A color placeholder referring to one of the configured DataMiner alarm colors<br>(e.g. \[color:severity=minor\])
-- A placeholder referring to a variable containing a color value<br>(e.g. \[PageVar:MyColorSessionVar\])
+- A color placeholder referring to one of the configured DataMiner alarm colors (e.g. \[color:severity=minor\])
+- A placeholder referring to a variable containing a color value (e.g. \[PageVar:MyColorSessionVar\])
 
 > [!NOTE]
+>
 > - If you specified a valid color or if the placeholder resolves correctly, the color you specified will overrule the shape’s default background color. Note that if blinking was enabled, it will be disabled.
 > - If you specify a custom BackgroundColor, shape transparency will work as before.
 
@@ -2386,7 +2428,7 @@ The following icons have been added to the Icons stencil:
 
 In the Services app, a number of security enhancements have been made with regard to service definitions.
 
-- In the *Users/Groups* section of System Center, the *Add*, *Edit* and *Delete* permissions under *Modules \> Services \> Definitions* have now been replaced by one single *Edit actions *permission. If a user had at least one of those previous *Add*, *Edit* or *Delete* permissions, they will now automatically be granted the new permission.
+- In the *Users/Groups* section of System Center, the *Add*, *Edit* and *Delete* permissions under *Modules \> Services \> Definitions* have now been replaced by one single *Edit actions* permission. If a user had at least one of those previous *Add*, *Edit* or *Delete* permissions, they will now automatically be granted the new permission.
 
 - In some cases, the *Diagram* and *Properties* permission under *Modules \> Services \> Definitions* would be applied incorrectly.
 
@@ -2408,7 +2450,7 @@ Up to now, when you filtered a table and then exported it, the filter would not 
 
 #### DataMiner Cube - Views: “Below this view” list has a new column “Communication protocols” \[ID_31590\]
 
-A “Communication protocols” column has been added to the list on the *Below this view *page of a view card. This column will show the communication protocols used by an element.
+A “Communication protocols” column has been added to the list on the *Below this view* page of a view card. This column will show the communication protocols used by an element.
 
 #### System Center - Users/Groups: New user permission “Monitoring web app” \[ID_31706\] \[ID_31961\]
 
@@ -2475,6 +2517,7 @@ You can combine these view parameters with other types of parameters in the same
 In the Generic Query Interface, a new “DCF connections” data source is now available. It will return all DCF connections in the DMS.
 
 > [!NOTE]
+>
 > - The “Is Internal” column indicates whether a connection has been marked internal (i.e. virtual) or external (i.e. physical).
 > - External connections are configured both on the source element and the destination element. Hence, each external connection will be listed twice.
 > - Connections of which both the source element and the destination element are stopped will not be listed.
@@ -2501,11 +2544,11 @@ You can now add a trigger feed to a dashboard. This is a feed that allows you to
 
 Currently, the trigger feed can only be linked to components that can visualize a database query. In that case, when a trigger feed is triggered, the data displayed in the other component will be refreshed.
 
-**Settings**
+##### Settings
 
 When, in the *Settings* tab, you enable the *Trigger timer* setting, a countdown bar will be displayed, and triggering will occur automatically when the counter reaches 0. The *Time* setting allows you to specify a counter interval (default: 60 seconds).
 
-**Layout**
+##### Layout
 
 In the *Layout* tab, you find three additional sections:
 
@@ -2513,10 +2556,10 @@ In the *Layout* tab, you find three additional sections:
 
 - In the *Time label* section, select the *Show when the last trigger happened* option if you want the time of the last triggering displayed. When this option is selected, in the *Time description format* box, you can enter the message to be displayed. It can contain the following placeholders:
 
-    | Placeholder | Description                                                                                                        |
-    |---------------|--------------------------------------------------------------------------------------------------------------------|
-    | {duration}    | An estimated indication of the time past since the last triggering.<br> Example: “2 minutes ago”                   |
-    | {time}        | The exact textual representation of the time when the last triggering occurred.<br> Example: “Nov 20, 2020, 12:33” |
+    | Placeholder | Description                                                                                                       |
+    |---------------|-----------------------------------------------------------------------------------------------------------------|
+    | {duration}    | An estimated indication of the time past since the last triggering. Example: “2 minutes ago”.                   |
+    | {time}        | The exact textual representation of the time when the last triggering occurred. Example: “Nov 20, 2020, 12:33”. |
 
 - In the *Layout* section, you can specify how you want the trigger label and time label to be aligned: left, center or right.
 
@@ -2550,9 +2593,10 @@ From now on, when you create or import a new dashboard, you will be able to rest
 |----------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Public         | Every user is allowed to view, edit and share the dashboard.                                                                                                                    |
 | Protected      | Every user is allowed to view the dashboard, but only the user who created it is allowed to edit or share it.                                                                   |
-| Private        | Only the user who created the dashboard is allowed to view and edit it.<br> Note: In the Automation app, it will not be possible to attach private dashboards to report emails. |
+| Private        | Only the user who created the dashboard is allowed to view and edit it. Note: In the Automation app, it will not be possible to attach private dashboards to report emails. |
 
 > [!NOTE]
+>
 > - When users with edit permission are editing a dashboard, they will now be able to indicate which users are allowed to view and/or edit that dashboard.
 > - Users will not be able to rename or delete a dashboard folder when it contains dashboards they are not allowed to edit.
 > - By default, the built-in Administrator account is allowed to view and edit all dashboards.
@@ -2573,6 +2617,7 @@ Examples:
 - fullfilter=((value=PK \> 36) and (value=518 in_range 1/5 )) or (VALUE=DK == Brus\*)
 
 > [!NOTE]
+>
 > - Currently, only line chart components support the use of parameter table filters.
 > - Parameter table filters can only be configured when you have started the Dashboards app with the *showAdvancedSettings* URL parameter set to true.
 > - When you update a filter, you have to re-add it to the component.
@@ -2628,11 +2673,11 @@ When building a GQI query, it is now possible to use a feed as a column filter.
 
 Instead of providing a fixed value to filter a specific column, you can now select the *From feed* option and configure a filter by specifying the following items:
 
-| Filter item | Description                                                                                                                    |
-|-------------|--------------------------------------------------------------------------------------------------------------------------------|
-| Feed        | The name of the feed that will provide the data.<br> If only one feed is available, it will automatically be selected.         |
-| Type        | The type of data that needs to be selected.<br> If the feed only provides one type of data, it will automatically be selected. |
-| Property    | The property by which the column will be filtered (depending on the type of data).                                             |
+| Filter item | Description                                                                                                                |
+|-------------|----------------------------------------------------------------------------------------------------------------------------|
+| Feed        | The name of the feed that will provide the data. If only one feed is available, it will automatically be selected.         |
+| Type        | The type of data that needs to be selected. If the feed only provides one type of data, it will automatically be selected. |
+| Property    | The property by which the column will be filtered (depending on the type of data).                                         |
 
 Example: If the column in question has to be filtered using the element name found in the URL of the dashboard, then you can set *Feed* to “URL”, *Type* to “Elements” and *Property* to “Name”.
 
@@ -2690,50 +2735,51 @@ It is now possible to import queries from another dashboard into the current das
 
 It is now possible to share dashboards with other users via the DataMiner Cloud.
 
-**Prerequisites:**
+##### Prerequisites
 
 - The DataMiner Cloud Pack must be installed on the DataMiner Agent.
-
 - The DataMiner Agent must be connected to the DataMiner Cloud.
-
 - To be able to share items, users must have the following permissions:
 
-    - Modules \> Reports & Dashboards \> Dashboards \> Edit
-    - General \> Live sharing \> Share
-    - General \> Live sharing \> Edit
-    - General \> Live sharing \> Unshare
+  - Modules \> Reports & Dashboards \> Dashboards \> Edit
+  - General \> Live sharing \> Share
+  - General \> Live sharing \> Edit
+  - General \> Live sharing \> Unshare
 
-**To share a dashboard:**
+##### To share a dashboard
 
 1. In the Dashboards app, go to the list of dashboards on the left, and select the dashboard you want to share.
 
-2. Click the “...” button in the top-right corner of the dashboard, and select *Start sharing*.
+1. Click the “...” button in the top-right corner of the dashboard, and select *Start sharing*.
 
-3. If it is the first time you are sharing the dashboard, you may be asked to confirm that you want to link your account to the cloud. Select *I want to link the above users* and click *Link accounts*.
+1. If it is the first time you are sharing the dashboard, you may be asked to confirm that you want to link your account to the cloud. Select *I want to link the above users* and click *Link accounts*.
 
-4. In the pop-up window, fill in the email address of the person you want to share the dashboard with.
+1. In the pop-up window, fill in the email address of the person you want to share the dashboard with.
 
-5. Optionally, in the *Message* field, add a message you want to send to the person you are sharing the dashboard with, in order to provide additional information.
+1. Optionally, in the *Message* field, add a message you want to send to the person you are sharing the dashboard with, in order to provide additional information.
 
-6. If you do not want the dashboard to remain permanently available, select the *Expires* option and specify the expiration date.
+1. If you do not want the dashboard to remain permanently available, select the *Expires* option and specify the expiration date.
 
-7. Click *Share*. An email will be sent to the person you are sharing the dashboard with, to inform them that they now have access to the dashboard.
+1. Click *Share*. An email will be sent to the person you are sharing the dashboard with, to inform them that they now have access to the dashboard.
 
 > [!NOTE]
+>
 > - If access to a dashboard is limited to some users only, it will not be possible to share this dashboard.
 > - You can stop sharing a dashboard by clicking the “...” button again and selecting *Manage share*. This will open a pop-up box where you can delete the share or update the message.
 > - At present, sharing dashboards that use the following components is not supported: spectrum components, Maps, SRM components (service definition and resource usage line graph), queries using feeds and visualizations based on query feeds (e.g. node edge graph, table), trend components with subscription filters and pivot table components. If you attempt to share a dashboard with content that is not supported for sharing, a message will be displayed with more information.
 
-**To access the Sharing module that lists the dashboards that others have shared with you:**
+##### To access the Sharing module that lists the dashboards that others have shared with you
 
-1. Open an internet browser (other than Microsoft Internet Explorer), go to<br>https://dataminer.services/, and sign in.
+1. Open an internet browser (other than Microsoft Internet Explorer), go to <https://dataminer.services/>, and sign in.
 
-2. On the landing page of the DataMiner Cloud Platform, click *Sharing*.<br>You will now see all data that others have shared with you.
+1. On the landing page of the DataMiner Cloud Platform, click *Sharing*.
+
+   You will now see all data that others have shared with you.
 
 > [!NOTE]
 > When somebody has shared a dashboard with you, you will receive an email informing you of this. You can then click the link in the email to immediately access the dashboard, provided that you already have a DataMiner Cloud Platform account.
 
-**Security layers:**
+##### Security layers
 
 - User authentication via Microsoft B2C login.
 
@@ -2795,7 +2841,7 @@ The new node edge graph component allows you to visualize any type of objects (i
 
 The data necessary to create a node edge graph can to be provided by means of GQI queries. Node queries provide data that will be visualized as nodes (i.e. objects), whereas edge queries provide data that will be visualized as edges (i.e. connections between objects).
 
-For more detailed information, refer to the [DataMiner Help](https://help.dataminer.services/dataminer/DataMinerUserGuide/part_4/newR_D/Other.htm?rhsyns=%20#dataminer-help).
+For more detailed information, see [Node edge graph](xref:DashboardNodeEdgeGraph).
 
 #### Dashboards app - GQI: Regular expressions in column filters will now be converted to standard table filters \[ID_29458\]
 
@@ -2815,12 +2861,12 @@ Root
 
 - child 1
 
-    - child 3
-    - child 4
+  - child 3
+  - child 4
 
 - child 2
 
-    - child 5
+  - child 5
 
 From now on...
 
@@ -2836,12 +2882,13 @@ Metadata will now be added to columns created by an aggregation or manipulation 
 
 #### Dashboards app - Line chart component: New “Fill graph” and “Stack trend lines” options \[ID_29527\]
 
-When configuring a line chart component, you will now find two new options in the *Styling and Information* section of the *Layout* tab.
+When configuring a line chart component, you will now find two new options in the *Styling and Information* section of the *Layout* tab:
 
-| Option            | Description                                                                                                                                                                                                                                                                                                                                                                                                                        |
-|-------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Fill graph        | When you select this option, the space underneath the line will be filled with the line color.                                                                                                                                                                                                                                                                                                                                     |
-| Stack trend lines | When you select this option, all lines in a graph will be stacked on top of each other.<br> Note: This option is not compatible with the *Show min/max shading*, *Show minimum* and *Show maximum* options. When you select the *Stack trend lines* option, those options will be disabled and hidden. |
+- **Fill graph**: When you select this option, the space underneath the line will be filled with the line color.
+- **Stack trend lines**: When you select this option, all lines in a graph will be stacked on top of each other.
+
+  > [!NOTE]
+  > This option is not compatible with the *Show min/max shading*, *Show minimum*, and *Show maximum* options. When you select the *Stack trend lines* option, those options will be disabled and hidden.
 
 Also, the following chart components have been renamed:
 
@@ -2865,6 +2912,7 @@ The State, Gauge and Ring components can now be used as feeds by other component
 In other words, components using a State, Gauge and Ring component as a feed will now be able to ingest data (element, redundancy group, service, view, protocol, index) selected in that State, Gauge or Ring component.
 
 > [!NOTE]
+>
 > - When a State, Gauge or Ring component is used as a feed, the data selected will be highlighted.
 > - A State component can even be used by other components as a GQI data feed.
 
@@ -2883,28 +2931,29 @@ GQI query results can now be fetched page by page.
 Before executing a query, the system will send a GenIfOpenSessionRequest message to open a session. That request will return a session ID that then has to be passed along with a series of GenIfNextPageRequest messages to fetch the next pages. Finally, a GenIfCloseSessionRequest message will be sent to close the session.
 
 > [!NOTE]
+>
 > - A new session must be opened for each query that has to be executed.
 > - When a session is opened/used, a timestamp will be added/updated. This timestamp will be used to check whether a session has expired. Sessions can be kept alive by sending a GenIfSessionHeartbeatRequest message.
 
-**Overview of the request messages**
+##### Overview of the request messages
 
-| Request message              | Function                                                                                                                                                                                                                                                                                                                                                       | Properties                          |
-|------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------|
-| GenIfOpenSessionRequest      | Opens a session                                                                                                                                                                                                                                                                                                                                                | Query<br> QueryOptions              |
-| GenIfNextPageRequest         | Fetches the next page                                                                                                                                                                                                                                                                                                                                          | SessionID (Guid)<br> PageSize (int) |
-| GenIfCloseSessionRequest     | Closes a session                                                                                                                                                                                                                                                                                                                                               | SessionIDs: Guid\[\]                |
-| GenIfSessionHeartbeatRequest | Prevents a session from expiring                                                                                                                                                                                                                                                                                                                               | SessionIDs: Guid\[\]                |
-| GenIfGetOpenSessionsRequest  | Returns a response containing a list of all open sessions, together with the following properties:<br> -  SessionID (Guid)<br> -  CreationTime<br> -  LastUpdated |                                     |
+| Request message | Function | Properties |
+|--|--|--|
+| GenIfOpenSessionRequest | Opens a session | Query<br> QueryOptions |
+| GenIfNextPageRequest | Fetches the next page | SessionID (Guid)<br> PageSize (int) |
+| GenIfCloseSessionRequest | Closes a session | SessionIDs: Guid\[\] |
+| GenIfSessionHeartbeatRequest | Prevents a session from expiring | SessionIDs: Guid\[\] |
+| GenIfGetOpenSessionsRequest | Returns a response containing a list of all open sessions, together with the following properties:<br> - SessionID (Guid)<br> - CreationTime<br> - LastUpdated |  |
 
-**Variables**
+##### Variables
 
-| Variable                                                                                   | Default value    |
-|--------------------------------------------------------------------------------------------|------------------|
-| Maximum concurrent sessions                                                                | 500              |
-| Time before a session is expired<br> (without receiving heartbeat/update for that session) | 5 minutes        |
-| Internal check cycle if a session is expired                                               | Every 30 seconds |
-| Minimum pageSize (rows)                                                                    | 1                |
-| Maximum pageSize (rows)                                                                    | 2000             |
+| Variable                                                                               | Default value    |
+|----------------------------------------------------------------------------------------|------------------|
+| Maximum concurrent sessions                                                            | 500              |
+| Time before a session is expired (without receiving heartbeat/update for that session) | 5 minutes        |
+| Internal check cycle if a session is expired                                           | Every 30 seconds |
+| Minimum pageSize (rows)                                                                | 1                |
+| Maximum pageSize (rows)                                                                | 2000             |
 
 #### Dashboards app - GQI: Linking columns with values of type double or datetime to feeds in query filters \[ID_29902\]
 
@@ -2982,12 +3031,12 @@ When configuring a node edge graph component, you can now use the *Bidirectional
 
 In the *Layout* pane of a node edge graph component, the *Column filters* section has been renamed to *Filtering & highlighting* and now contains the following options:
 
-| Option                     | Description                                                                                                                                                                                                                                                                                                                                                                               |
-|----------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Conditional coloring       | Previously named *Column filters*, this option allows you to specify color filters for specific columns, so that these can be used for highlighting in case analytical coloring is used.                                                                                                                                                                   |
-| Highlight                  | When this option is enabled, the nodes that match the filter will be highlighted.<br> Default: Enabled                                                                                                                                                                                                                                                                                    |
-| Opacity                    | When the *Highlight* option is enabled, this option will allow you to set the level of transparency of the nodes and edges that do not match the filter.<br> Note: When you disable the *Highlight* option, the nodes that do not match the filter will no longer be displayed and the remaining nodes will be reorganized. |
-| Highlight/Show entire path | When this option is enabled, not only the nodes matching the filter will be highlighted, but also the entire tree structure of which they are a part (from root to leaves).                                                                                                                                                                                                               |
+| Option | Description |
+|--|--|
+| Conditional coloring | Previously named *Column filters*, this option allows you to specify color filters for specific columns, so that these can be used for highlighting in case analytical coloring is used. |
+| Highlight | When this option is enabled, the nodes that match the filter will be highlighted. Default: Enabled |
+| Opacity | When the *Highlight* option is enabled, this option will allow you to set the level of transparency of the nodes and edges that do not match the filter. Note: When you disable the *Highlight* option, the nodes that do not match the filter will no longer be displayed and the remaining nodes will be reorganized. |
+| Highlight/Show entire path | When this option is enabled, not only the nodes matching the filter will be highlighted, but also the entire tree structure of which they are a part (from root to leaves). |
 
 > [!NOTE]
 > The filtering options mentioned above require the *Query filter* component, which is currently still in [soft launch](https://community.dataminer.services/documentation/soft-launch-options/).
@@ -3044,7 +3093,7 @@ There are now two ways of passing data in the URL of a dashboard:
 - As a dataset containing a number of items to be selected in all components (legacy method)
 - As a JSON object containing a number of items to be selected in specific components (new method)
 
-**Dataset (legacy method)**
+##### Dataset (legacy method)
 
 Up to now, data could be passed to a dashboard using the following syntax:
 
@@ -3054,7 +3103,7 @@ url?<datatype1>=<datakeys1>&<datatype2>=<datakeys2>&...
 
 Using this method, the dataset, which consists of a list of datatype/datakey(s) expressions, will provide data that will be selected in all relevant components of the dashboard.
 
-**JSON object (new method)**
+##### JSON object (new method)
 
 Next to the legacy method, it is now also possible to pass data to a dashboard in a JSON object.
 
@@ -3202,6 +3251,7 @@ public class Script
 ```
 
 > [!NOTE]
+>
 > - Save operations will always be executed synchronously. In other words, the method will only return once the data has been written to the database.
 > - At present, bulk operations are not yet supported.
 > - Both PaProcess and PaToken now have a new LastModifiedAt property, filled in by SLNet. It will be used to compare cached versions with versions retrieved from the database.
@@ -3400,7 +3450,7 @@ From now on, when you hover the mouse pointer over a tooltip of an input compone
 
 #### DataMiner landing page: Browser title changed to “DataMiner” \[ID_31373\]
 
-The browser title of the DataMiner landing page (e.g. https://\<MyDMA>/root/) has been changed from “DataMiner Services” to “DataMiner”.
+The browser title of the DataMiner landing page (e.g. `https://<MyDMA>/root/`) has been changed from “DataMiner Services” to “DataMiner”.
 
 Also, the error message shown when you try to log in to a web application with a user account that has not been granted the “DataMiner Web Apps” user permission has now been changed to “You have no access to the DataMiner Web Apps”.
 
@@ -3445,6 +3495,7 @@ instance.ResourcesInReservationInstance.Add(new ResourceUsageDefinition(resource
 When a ReservationInstance is added with absolute quarantine priority, an error with reason “ReservationUpdateCausedReservationsToGoToQuarantine” will be returned if this causes any bookings to be quarantined. In that case, the update must be executed using the “forceQuarantine” flag.
 
 > [!NOTE]
+>
 > - It is possible to add multiple overlapping bookings with AbsoluteQuarantinePriority. If they book the same resource and if results in an overbooking of the resource, one of the instances will be quarantined. If there is no overbooking of the resources between the two bookings with AbsoluteQuarantinePriorit, both bookings will be scheduled.
 > - When a booking with AbsoluteQuarantinePriority is removed, the other bookings using the resources will not automatically be taken out of quarantine.
 > - Resources that are in quarantine because they overlap with a booking that reserves them with AbsoluteQuarantinePriority will have a QuarantineTrigger with reason “AbsoluteQuarantinePriorityReservationInstance”.
@@ -3454,6 +3505,7 @@ When a ReservationInstance is added with absolute quarantine priority, an error 
 The EligibleResourceResult returned by the various GetEligibleResources calls will now contain information about the available capacity of the resources. The ResourceUsageDetails object now includes a CapacityUsageDetails list that contains the maximum available capacities for the requested time frame.
 
 > [!NOTE]
+>
 > - The available capacity does not take into account the requested capacity.
 > - The available capacity for capacities that were not requested in the GetEligible call, but which are present on the resource, will not be calculated, and will therefore not be present in the CapacityUsageDetails list.
 
@@ -3461,7 +3513,7 @@ The EligibleResourceResult returned by the various GetEligibleResources calls wi
 
 It is now possible to have an Automation script triggered when a profile instance update affects running bookings. That script can then reconfigure the bookings.
 
-**Configuring the script**
+##### Configuring the script
 
 The script to reconfigure the bookings can be set on the ProfileManagerConfiguration. See the example below.
 
@@ -3479,7 +3531,7 @@ The script will be triggered using a new OnSrmBookingsUpdatedByReference entrypo
 - ProfileInstanceId will contain the ID of the ProfileInstance that was updated.
 - reservationIds will contain the IDs of all running ReservationInstances that were reconfigured because of the update.
 
-    This list does not have to include the IDs of the ReservationInstances that, although they did not reference the ProfileInstance, had usages quarantined because the update caused an overbooking.
+  This list does not have to include the IDs of the ReservationInstances that, although they did not reference the ProfileInstance, had usages quarantined because the update caused an overbooking.
 
 ```csharp
 public class Script
@@ -3491,7 +3543,7 @@ public class Script
 }
 ```
 
-**New errors**
+##### New errors
 
 The UpdateAndApply call for a ProfileInstance can now return a number of additional errors.
 
@@ -3499,19 +3551,19 @@ When calling UpdateAndApply without forcing quarantine (i.e. with forceQuarantin
 
 - If no instances need to be quarantined, the update will be applied and the following warning will be returned:
 
-    - A warning of type ProfileInstanceChangeCausedBookingReconfiguration, listing the running reservations that were reconfigured because of the update.
+  - A warning of type ProfileInstanceChangeCausedBookingReconfiguration, listing the running reservations that were reconfigured because of the update.
 
 - If instances need to be quarantined, the update will not proceed and the following errors will be returned:
 
-    - An error with reason ReservationsMustMovedToQuarantine, listing the reservations that need to be quarantined as well as the usages.
-    - An error with reason ReservationsMustBeReconfigured, listing the bookings that will be affected by the ProfileInstance update.
+  - An error with reason ReservationsMustMovedToQuarantine, listing the reservations that need to be quarantined as well as the usages.
+  - An error with reason ReservationsMustBeReconfigured, listing the bookings that will be affected by the ProfileInstance update.
 
 When calling UpdateAndApply and forcing quarantine (i.e. with forceQuarantine set to true), the update will proceed and the following TraceData will be returned:
 
 - A warning of type ReservationInstancesMovedToQuarantine, listing the reservations and the usages that were quarantined.
 - A warning of type ProfileInstanceChangeCausedBookingReconfiguration, listing the reservations that were reconfigured because of the update.
 
-**New RequiredProfileInstanceReconfiguration property**
+##### New RequiredProfileInstanceReconfiguration property
 
 A new RequiredProfileInstanceReconfiguration property has been added to the ServiceReservationInstance class. When a ProfileInstance has been updated, all ReservationInstances referencing this ProfileInstance in any of their usages will have this property set to true. This way, solutions can keep track of the bookings that have been reconfigured in case the custom script was interrupted.
 
@@ -3524,19 +3576,19 @@ var filter = ServiceReservationInstanceExposers.RequiredProfileReconfiguration.E
 var instancesThatRequiredReconfig = rmHelper.GetReservationInstances(filter);
 ```
 
-**Additional information**
+##### Additional information
 
 - If triggering the configured script fails, a notice will be generated with the following text:
 
-    ```txt
-    Failed to run script to reconfigure bookings after updating ProfileInstance because an exception occurred. See SLProfileManager.txt logging for more details.
-    ```
+  ```txt
+  Failed to run script to reconfigure bookings after updating ProfileInstance because an exception occurred. See SLProfileManager.txt logging for more details.
+  ```
 
 - When the UpdateBookingConfigByReferenceScript is not configured (i.e. when the setting is empty or null in the profile manager configuration):
 
-    - No attempt will be made to trigger a script.
-    - The RequiredProfileInstanceReconfiguration property will not be set to true on the instances.
-    - No additional error or warning will be returned in the calls.
+  - No attempt will be made to trigger a script.
+  - The RequiredProfileInstanceReconfiguration property will not be set to true on the instances.
+  - No additional error or warning will be returned in the calls.
 
 #### ResourceManagerHelper.SetReservationDefinitionsAndOverrides method has been rendered obsolete \[ID_28261\]
 
@@ -3703,11 +3755,9 @@ When the GenerateRequiredCapas method is called on a ProfileInstance, the respon
 From now on, the automatic server retrieval can be bypassed by
 
 1. creating a retrieval method that tries to return the parameters that are already cached in the script or application before retrieving them from the server (see the example below), and
-2. passing that method to the GenerateRequiredCapas(Func\<ProfileParameterEntry, Parameter> parameterResolver) call.
+1. passing that method to the GenerateRequiredCapas(Func\<ProfileParameterEntry, Parameter> parameterResolver) call.
 
-**Example of a method that tries to return the parameters that are already cached in the script or application before retrieving them from the server**
-
-In the following example, we first check whether a certain parameter can be found in the local “\_profileParameterCache”. If not, we then retrieve it using the built-in AutoSync collection by means of a get operation on Parameter property.
+The following example shows a method that tries to return the parameters that are already cached in the script or application before retrieving them from the server. We first check whether a certain parameter can be found in the local “\_profileParameterCache”. If not, we then retrieve it using the built-in AutoSync collection by means of a get operation on Parameter property.
 
 ```csharp
 private Parameter GetParameterForParameterEntry(ProfileParameterEntry entry)
@@ -3745,18 +3795,18 @@ All these log entries will have log level 5.
 
 A caching mechanism involving three separate caches will now be used when retrieving ReservationInstances from an Elasticsearch database, especially when the already saved ReservationInstances have to be checked, e.g. when saving a new ReservationInstance or when requesting the availability of resources in a certain time frame.
 
-**Overview of the caches**
+##### Overview of the caches
 
-| Cache                            | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
-|----------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Hosted ReservationInstance cache | When the ResourceManager module starts, this cache loads the ReservationInstances that are hosted on the agent and schedules the start/stop actions and booking events for these ReservationInstances. Any new instances hosted on the agent that are added or updated while the ResourceManager module is running will also be added to this cache so they can be scheduled.<br> On startup, only the instances starting before a certain point in the future are loaded (default: 1 day). At regular intervals, the database will be checked for instances further in the future. |
-| ID cache                         | When a specific ReservationInstance is requested by ID, the result is cached in this ID cache. When an internal request is made for a specific ID, the cached ReservationInstance will be returned.<br> Used when adding or editing ReservationInstances and when executing start/stop actions and ReservationEvents.                                                                                                                                                                                                                                                               |
-| Time range cache                 | When ReservationInstances within a specific time range are requested, all instances in that time range will be cached in this cache.<br> Used when new bookings are created or when eligible resources are requested.                                                                                                                                                                                                                                                                                                                                                               |
+| Cache | Description |
+|--|--|
+| Hosted ReservationInstance cache | When the ResourceManager module starts, this cache loads the ReservationInstances that are hosted on the agent and schedules the start/stop actions and booking events for these ReservationInstances. Any new instances hosted on the agent that are added or updated while the ResourceManager module is running will also be added to this cache so they can be scheduled. On startup, only the instances starting before a certain point in the future are loaded (default: 1 day). At regular intervals, the database will be checked for instances further in the future. |
+| ID cache | When a specific ReservationInstance is requested by ID, the result is cached in this ID cache. When an internal request is made for a specific ID, the cached ReservationInstance will be returned. Used when adding or editing ReservationInstances and when executing start/stop actions and ReservationEvents. |
+| Time range cache | When ReservationInstances within a specific time range are requested, all instances in that time range will be cached in this cache. Used when new bookings are created or when eligible resources are requested. |
 
 > [!NOTE]
 > GetReservationInstances calls from scripts or clients will go straight to the database. They will not use the caching mechanism.
 
-**Configuration of the caches**
+##### Configuration of the caches
 
 The caches can be configured in the *C:\\Skyline DataMiner\\ResourceManager\\Config.xml* file. See the following example.
 
@@ -3783,27 +3833,27 @@ The caches can be configured in the *C:\\Skyline DataMiner\\ResourceManager\\Con
 
 Overview of the different settings:
 
-| Cache                                               | Setting                  | Description                                                                                                                                                                                                | Default value |
-|-----------------------------------------------------|--------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------|
-| IdCache<br>Configuration                            | MaxObjects<br>InCache    | The maximum amount of objects that will be kept in this cache. When this threshold is exceeded, the oldest objects will be removed.                                                                        | 500           |
-|                                                     | Object<br>LifeSpan       | The maximum period of time an entry will be kept in the cache. Each time the entry is hit, this timer is reset.<br> This setting has to be formatted according to ISO 8601.                                | 10 minutes    |
-| TimeRangeCache<br>Configuration                     | MaxObjects<br>InCache    | The maximum amount of objects that will be kept in this cache. When this threshold is exceeded, the oldest time ranges will be removed.                                                                    | 3000          |
-|                                                     | TimeRange<br>LifeSpan    | The maximum period of time a time range will be kept in the cache. Each time a query hitting this time range is resolved, this timer is reset.<br> This setting has to be formatted according to ISO 8601. | 10 minutes    |
-|                                                     | Cleanup<br>CheckInterval | The interval at which the time ranges to be removed are checked.<br> This setting has to be formatted according to ISO 8601.                                                                               | 1 minute      |
-| Hosted<br>ReservationInstance<br>CacheConfiguration | InitialLoad<br>Days      | The setting that controls how long into the future the ReservationInstances will be loaded at ResourceManager startup.<br> This setting has to be formatted according to ISO 8601.                         | 1 day         |
-|                                                     | CheckInterval            | The period of time after which the ResourceManager will load new bookings from the database.                                                                                                               | 6 hours       |
+| Cache | Setting | Description | Default value |
+|--|--|--|--|
+| IdCacheConfiguration | MaxObjectsInCache | The maximum amount of objects that will be kept in this cache. When this threshold is exceeded, the oldest objects will be removed. | 500 |
+|  | ObjectLifeSpan | The maximum period of time an entry will be kept in the cache. Each time the entry is hit, this timer is reset. This setting has to be formatted according to ISO 8601. | 10 minutes |
+| TimeRangeCacheConfiguration | MaxObjectsInCache | The maximum amount of objects that will be kept in this cache. When this threshold is exceeded, the oldest time ranges will be removed. | 3000 |
+|  | TimeRangeLifeSpan | The maximum period of time a time range will be kept in the cache. Each time a query hitting this time range is resolved, this timer is reset. This setting has to be formatted according to ISO 8601. | 10 minutes |
+|  | CleanupCheckInterval | The interval at which the time ranges to be removed are checked. This setting has to be formatted according to ISO 8601. | 1 minute |
+| HostedReservationInstanceCacheConfiguration | InitialLoadDays | The setting that controls how long into the future the ReservationInstances will be loaded at ResourceManager startup. This setting has to be formatted according to ISO 8601. | 1 day |
+|  | CheckInterval | The period of time after which the ResourceManager will load new bookings from the database. | 6 hours |
 
 > [!NOTE]
 > The ResourceManagerConfig.InitialLoadDays setting no longer has any use, as the ReservationInstances will now be loaded according to the settings in HostedReservationInstanceCacheConfiguration.
 
-**ClientTest tool**
+##### ClientTest tool
 
 The SLNetClientTest tool now allows you to retrieve the IDs of the currently cached ReservationInstances. To do so, go to *Advanced \> Apps \> SRMSurveyor \> Inspect ReservationInstance Cache*.
 
 > [!WARNING]
 > Always be extremely careful when using this tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
 
-**Logging**
+##### Logging
 
 If loglevel 6 is enabled, the caches will log any added, updated or removed items in the SLResourceManagerStorage.txt file.
 
@@ -3812,7 +3862,10 @@ If loglevel 6 is enabled, the caches will log any added, updated or removed item
 Overall performance has increased by implementing ISerializable on the ReservationInstance class using protocol buffer serialization.
 
 > [!WARNING]
-> Breaking changes:<br> -  The Children and Parent property of a ReservationInstance will no longer be serialized between client and server. When the ResourceManagerHelper is used, backwards compatibility is implemented. However, if you use the messages yourself and receive ResourceManagerEventMessages via subscriptions (which is NOT recommended), you will need to call the GetStitched method on the ReservationInstance class. Saving ReservationInstances with a parent or child instance using messages may also cause issues.<br> -  When the SetReservationInstances method is called on the ResourceManagerHelper, a random ID will now be assigned before the instances are saved to the server. This could be an issue if scripts expect the ID to be empty and try to reuse the object.
+> Breaking changes:
+>
+> - The Children and Parent property of a ReservationInstance will no longer be serialized between client and server. When the ResourceManagerHelper is used, backwards compatibility is implemented. However, if you use the messages yourself and receive ResourceManagerEventMessages via subscriptions (which is NOT recommended), you will need to call the GetStitched method on the ReservationInstance class. Saving ReservationInstances with a parent or child instance using messages may also cause issues.
+> - When the SetReservationInstances method is called on the ResourceManagerHelper, a random ID will now be assigned before the instances are saved to the server. This could be an issue if scripts expect the ID to be empty and try to reuse the object.
 
 #### ResourceUsageDetails object now has a ConcurrencyLeft property \[ID_29592\]
 
@@ -3833,7 +3886,7 @@ It is now also possible to bind a VirtualFunctionResource using the primary key 
 
 Using the ProfileHelper, it is now possible to export and import ServiceProfileInstances and ServiceProfileDefinitions.
 
-**Exporting ServiceProfileDefinitions and ServiceProfileInstances**
+##### Exporting ServiceProfileDefinitions and ServiceProfileInstances
 
 The ExportServiceProfiles method allows you to export ServiceProfileDefinitions and ServiceProfileInstances. See the following example.
 
@@ -3856,6 +3909,7 @@ Based on the information in those lists, the following data will be exported:
 - All ServiceProfileInstances that are linked to the ServiceProfileDefinitions found in the first list.
 
 > [!NOTE]
+>
 > - IDs of non-existing objects will be ignored.
 > - If you only want to export the ServiceProfileInstances, you can leave the definitionsToExport list empty.
 
@@ -3864,15 +3918,16 @@ The ExportServiceProfiles method returns a ServiceProfilesExportResult object th
 | Property                              | Type                             | Description                                                                  |
 |---------------------------------------|----------------------------------|------------------------------------------------------------------------------|
 | ZippedData                            | byte\[\]                         | A ZIP file containing all the exported data.                                 |
-| ExportedService<br>ProfileDefinitions | List\<ServiceProfilesObjectInfo> | All ServiceProfileDefinitions that were successfully exported (ID and name). |
-| ExportedService<br>ProfileInstances   | List\<ServiceProfilesObjectInfo> | All ServiceProfileInstances that were successfully exported (ID and name).   |
+| ExportedServiceProfileDefinitions | List\<ServiceProfilesObjectInfo> | All ServiceProfileDefinitions that were successfully exported (ID and name). |
+| ExportedServiceProfileInstances   | List\<ServiceProfilesObjectInfo> | All ServiceProfileInstances that were successfully exported (ID and name).   |
 
 > [!NOTE]
+>
 > - When something goes wrong during an export operation, an unknown error will be added to the TraceData. which can be retrieved using profileHelper.ImportExport.GetTraceDataLastCall().
 > - To pinpoint any non-existing objects, you can compare the list of IDs you provided to the list of IDs that was returned.
 > - When two empty lists are passed to the export method, an ArgumentException will be thrown.
 
-**Importing ServiceProfileDefinitions and ServiceProfileInstances**
+##### Importing ServiceProfileDefinitions and ServiceProfileInstances
 
 The ImportServiceProfiles method allows you to import ServiceProfileDefinitions and ServiceProfileInstances. See the following example.
 
@@ -3903,38 +3958,40 @@ The ImportServiceProfiles method returns a ServiceProfilesImportResult object th
 | Property                              | Type                             | Description                                                                  |
 |---------------------------------------|----------------------------------|------------------------------------------------------------------------------|
 | TraceData                             | TraceData                        | All errors that occurred when importing the objects.                         |
-| ImportedService<br>ProfileDefinitions | List\<ServiceProfilesObjectInfo> | All ServiceProfileDefinitions that were successfully imported (ID and name). |
-| ImportedService<br>ProfileInstances   | List\<ServiceProfilesObjectInfo> | All ServiceProfileInstances that were successfully imported (ID and name).   |
+| ImportedServiceProfileDefinitions | List\<ServiceProfilesObjectInfo> | All ServiceProfileDefinitions that were successfully imported (ID and name). |
+| ImportedServiceProfileInstances   | List\<ServiceProfilesObjectInfo> | All ServiceProfileInstances that were successfully imported (ID and name).   |
 
 > [!NOTE]
+>
 > - The TraceData returned by profileHelper.ImportExport.GetTraceDataLastCall() will match the TraceData included in the ServiceProfilesImportResult object.
 > - If you want to know why an object was not imported, you can check the TraceData.
 > - When an empty byte array is passed to the import method, an ArgumentException will be thrown.
 
-**ServiceProfilesImportError**
+##### ServiceProfilesImportError
 
 When an object cannot be saved to the database during an import operation, a ServiceProfilesImportError will be added to the TraceData. Below, you can find the list of all possible error reasons.
 
-| Error reason                                                      | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-|-------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Unknown                                                           | An unknown error occurred.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-| GeneralFailure                                                    | An unexpected exception occurred while importing. The zipped data that was provided is probably invalid.<br> -  Exception: The full exception message.                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
-| UnrecognizedType                                                  | The zip file contained an object with an unrecognized type.<br> -  EntryName: The name of the unrecognized entry.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-| ExtractingJsonFailed                                              | Something went wrong when trying to extract the JSON data associated with an entry.<br> -  Exception: The exception that occurred while extracting.<br> -  ObjectType: The type of the entry for which the JSON data was extracted.<br> -  ObjectId: The ID of the entry for which the JSON data was extracted.                                                                                                                                                                                    |
-| DeserializationFailed                                             | Something went wrong when trying to deserialize the JSON data.<br> -  Exception: The exception that occurred while deserializing.<br> -  ObjectType: The type of the entry for which the JSON data was deserialized.<br> -  ObjectId: The ID of the entry for which the JSON data was deserialized.                                                                                                                                                                                                |
-| ErrorOccuredSaving<br>ServiceProfileDefinition                    | An error occurred while saving the ServiceProfileDefinition.<br> -  ServiceProfileDefinitionError: The error message.<br> -  ObjectId: The ID of the ServiceProfileDefinition.<br> -  ObjectName: The name of the ServiceProfileDefinition.                                                                                                                                                                                                                                                        |
-| ErrorOccuredSaving<br>ServiceProfileInstance                      | An error occurred while saving the ServiceProfileInstance.<br> -  ServiceProfileInstanceError: The error message.<br> -  ObjectId: The ID of the ServiceProfileInstance.<br> -  ObjectName: The name of the ServiceProfileInstance.                                                                                                                                                                                                                                                                |
-| ServiceProfileDefinition<br>NameInUse                             | The name of a ServiceProfileDefinition that is being imported is being used by another ServiceProfileDefinition.<br> -  ObjectId: The ID of the ServiceProfileDefinition that is being imported.<br> -  ObjectName: The name of the ServiceProfileDefinition that is being imported.<br> -  ConflictingId: The ID of the ServiceProfileDefinition that is using the same name.<br> -  ConflictingName: The name that is being used. |
-| ServiceProfileDefinition<br>RefersToNonExisting<br>Parameters     | The NodeDefinitionConfiguration of a NodeDefinition references parameters that do not exist in this system.<br> -  ObjectId: The ID of the ServiceProfileDefinition that is being imported.<br> -  ObjectName: The name of the ServiceProfileDefinition that is being imported.<br> -  MissingIds: The IDs of the missing parameters.                                                                                                                                                              |
-| ServiceProfileInstance<br>NameInUse                               | The name of a ServiceProfileInstance that is being imported is being used by another ServiceProfileInstance.<br> -  ObjectId: The ID of the ServiceProfileInstance that is being imported.<br> -  ObjectName: The name of the ServiceProfileInstance that is being imported.<br> -  ConflictingId: The ID of the ServiceProfileInstance that is using the same name.<br> -  ConflictingName: The name that is being used.           |
-| ServiceProfileInstance<br>RefersToNonExisting<br>Parameters       | Either the NodeInstanceConfiguration or the InterfaceConfiguration contains parameter overrides that refer to parameters that do not exist in the system.<br> -  ObjectId: The ID of the ServiceProfileInstance that is being imported.<br> -  ObjectName: The name of the ServiceProfileInstance that is being imported.<br> -  MissingIds: The IDs of the missing parameters.                                                                                                                    |
-| ServiceProfileInstance<br>RefersToNonExisting<br>ProfileInstances | Either the NodeInstanceConfiguration or the InterfaceConfiguration contains references to ProfileInstances that do not exist in this system.<br> -  ObjectId: The ID of the ServiceProfileInstance that is being imported.<br> -  ObjectName: The name of the ServiceProfileInstance that is being imported.<br> -  MissingIds: The IDs of the missing ProfileInstances.                                                                                                                           |
+| Error reason | Description |
+|--|--|
+| Unknown | An unknown error occurred. |
+| GeneralFailure | An unexpected exception occurred while importing. The zipped data that was provided is probably invalid.<br> - Exception: The full exception message. |
+| UnrecognizedType | The zip file contained an object with an unrecognized type.<br> - EntryName: The name of the unrecognized entry. |
+| ExtractingJsonFailed | Something went wrong when trying to extract the JSON data associated with an entry.<br> - Exception: The exception that occurred while extracting.<br> - ObjectType: The type of the entry for which the JSON data was extracted.<br> - ObjectId: The ID of the entry for which the JSON data was extracted. |
+| DeserializationFailed | Something went wrong when trying to deserialize the JSON data.<br> - Exception: The exception that occurred while deserializing.<br> - ObjectType: The type of the entry for which the JSON data was deserialized.<br> - ObjectId: The ID of the entry for which the JSON data was deserialized. |
+| ErrorOccuredSavingServiceProfileDefinition | An error occurred while saving the ServiceProfileDefinition.<br> - ServiceProfileDefinitionError: The error message.<br> - ObjectId: The ID of the ServiceProfileDefinition.<br> - ObjectName: The name of the ServiceProfileDefinition. |
+| ErrorOccuredSavingServiceProfileInstance | An error occurred while saving the ServiceProfileInstance.<br> - ServiceProfileInstanceError: The error message.<br> - ObjectId: The ID of the ServiceProfileInstance.<br> - ObjectName: The name of the ServiceProfileInstance. |
+| ServiceProfileDefinitionNameInUse | The name of a ServiceProfileDefinition that is being imported is being used by another ServiceProfileDefinition.<br> - ObjectId: The ID of the ServiceProfileDefinition that is being imported.<br> - ObjectName: The name of the ServiceProfileDefinition that is being imported.<br> - ConflictingId: The ID of the ServiceProfileDefinition that is using the same name.<br> - ConflictingName: The name that is being used. |
+| ServiceProfileDefinitionRefersToNonExistingParameters | The NodeDefinitionConfiguration of a NodeDefinition references parameters that do not exist in this system.<br> - ObjectId: The ID of the ServiceProfileDefinition that is being imported.<br> - ObjectName: The name of the ServiceProfileDefinition that is being imported.<br> - MissingIds: The IDs of the missing parameters. |
+| ServiceProfileInstanceNameInUse | The name of a ServiceProfileInstance that is being imported is being used by another ServiceProfileInstance.<br> - ObjectId: The ID of the ServiceProfileInstance that is being imported.<br> - ObjectName: The name of the ServiceProfileInstance that is being imported.<br> - ConflictingId: The ID of the ServiceProfileInstance that is using the same name.<br> - ConflictingName: The name that is being used. |
+| ServiceProfileInstanceRefersToNonExistingParameters | Either the NodeInstanceConfiguration or the InterfaceConfiguration contains parameter overrides that refer to parameters that do not exist in the system.<br> - ObjectId: The ID of the ServiceProfileInstance that is being imported.<br> - ObjectName: The name of the ServiceProfileInstance that is being imported.<br> - MissingIds: The IDs of the missing parameters. |
+| ServiceProfileInstanceRefersToNonExistingProfileInstances | Either the NodeInstanceConfiguration or the InterfaceConfiguration contains references to ProfileInstances that do not exist in this system.<br> - ObjectId: The ID of the ServiceProfileInstance that is being imported.<br> - ObjectName: The name of the ServiceProfileInstance that is being imported.<br> - MissingIds: The IDs of the missing ProfileInstances. |
 
 #### Generating contributing functions for service definitions that use mediated virtual functions on one of more nodes \[ID_29752\]
 
 It is now possible to generate contributing functions for service definitions that use a mediated virtual function on one or more nodes.
 
 > [!NOTE]
+>
 > - For the replication to work, the profile parameter used to generate the parameter in the contributing protocol needs to contain a ProtocolParameterReference to the parameter in the protocol of the VirtualFunctionDefinition.
 > - If a service definition node has both the VirtualFunctionID property (to use a mediated virtual function) and the FunctionID property (to use a protocol function) filled in, the VirtualFunctionID will be used during generation.
 > - Only the profile definition of the VirtualFunctionDefinition’s VirtualNode will be taken into account when creating parameters.
@@ -3943,13 +4000,13 @@ It is now possible to generate contributing functions for service definitions th
 
 When an SRM object is created, updated or deleted, an event message is sent via the SLNet subscription system to notify everyone. The NATS forwarding logic also receives these event messages and will now publish a ProtoBuf event on the NATS bus each time it receives such a message.
 
-**Proto files**
+##### Proto files
 
 The ProtoBuf event messages are defined by ProtoBuf files, which can be obtained on request.
 
 The events themselves are defined in the API protos, which import shared messages from the main shared folder.
 
-**Subscribing to the NATS event messages**
+##### Subscribing to the NATS event messages
 
 To subscribe to one of the event messages you will need to compile the required proto files. In general, you need to compile the API proto of the event and the complete shared folder. For example, when you want to subscribe to the ReservationInstanceEvent, you need to compile the *reservation_instance_api.proto* file and everything in the general shared folder.
 
@@ -3974,29 +4031,29 @@ private void Handler(object sender, HandlerEventArgs e)
 }
 ```
 
-**Errors**
+##### Errors
 
 When an SRM event is sent out, in some cases, it cannot be forwarded to NATS because of issues related to the SLMessageBroker. In that case, an error will be logged in the SLResourceManager.txt file, stating that an event could not be forwarded.
 
 Note that no retries will occur and that no messages will be queued.
 
-**Supported events**
+##### Supported events
 
 - ResourceManagerEventMessage
 
     When a ResourceManagerEventMessage contains multiple types of objects, it will be split up into multiple proto events. When the ResourceManager sends out one ResourceManagerEvent containing e.g. 2 ReservationInstances and 3 Resources, the forwarder logic will publish one ReservationInstanceEvent (with the 2 objects) and one ResourceEvent (with the 3 objects).
 
-**ReservationInstance object**
+##### ReservationInstance object
 
-| Event message name           | Proto file                         | NATS Topic                                                                                      |
-|------------------------------|------------------------------------|-------------------------------------------------------------------------------------------------|
-| ReservationInstance<br>Event | reservation_instance_api.<br>proto | Skyline.DataMiner.Protobuf.Apps.<br>Srm.ReservationInstance.Api.v1.<br>ReservationInstanceEvent |
+| Event message name       | Proto file                         | NATS Topic                                                                          |
+|--------------------------|------------------------------------|-------------------------------------------------------------------------------------|
+| ReservationInstanceEvent | reservation_instance_api.proto | Skyline.DataMiner.Protobuf.Apps.Srm.ReservationInstance.Api.v1.ReservationInstanceEvent |
 
-**Resource object**
+##### Resource object
 
-| Event message name | Proto file             | NATS Topic                                                            |
-|--------------------|------------------------|-----------------------------------------------------------------------|
-| ResourceEvent      | resource_api.<br>proto | Skyline.DataMiner.Protobuf.Apps.<br>Srm.Resource.Api.v1.ResourceEvent |
+| Event message name | Proto file             | NATS Topic                                                    |
+|--------------------|------------------------|---------------------------------------------------------------|
+| ResourceEvent      | resource_api.proto | Skyline.DataMiner.Protobuf.Apps.Srm.Resource.Api.v1.ResourceEvent |
 
 #### Profile manager errors with ErrorReason “ReservationsMustBeReconfigured” now include a ReservationInstanceDetails list \[ID_29914\]
 
@@ -4040,10 +4097,10 @@ From now on, the GetEligibleResources and AddOrUpdateReservationInstances calls 
 - If the contributing booking linked to the resource has Status set to “Canceled”, “Disconnected”, “Interrupted” or “Undefined”, then the resource will be considered unavailable.
 - If the contributing booking linked to the resource has Status set to a value other than “Canceled”, “Disconnected”, “Interrupted” or “Undefined”:
 
-    - If the contributing booking linked to the resource has LockLifeCycle set to “Locked”, then the contributing resource will be considered available if the time range of the contributing booking is entire inside the time range.
-    - If the contributing booking linked to the resource has LockLifeCycle set to “Locked” and the main booking has a start time in the past but an end time in the future, then the contributing resource will be considered available if the time range of the contributing booking only overlaps the future part of the time range of the main booking.
-    - If the contributing booking linked to the resource has LockLifeCycle set to “Unlocked”, then the contributing resource will be considered available if the timing of the contributing booking intersects with the passed time.
-    - If the contributing booking linked to the resource has LockLifeCycle set to “Undefined”, then the contributing resource will be considered not available.
+  - If the contributing booking linked to the resource has LockLifeCycle set to “Locked”, then the contributing resource will be considered available if the time range of the contributing booking is entire inside the time range.
+  - If the contributing booking linked to the resource has LockLifeCycle set to “Locked” and the main booking has a start time in the past but an end time in the future, then the contributing resource will be considered available if the time range of the contributing booking only overlaps the future part of the time range of the main booking.
+  - If the contributing booking linked to the resource has LockLifeCycle set to “Unlocked”, then the contributing resource will be considered available if the timing of the contributing booking intersects with the passed time.
+  - If the contributing booking linked to the resource has LockLifeCycle set to “Undefined”, then the contributing resource will be considered not available.
 
 Based on those criteria, the GetEligibleResource call will not return any resources that are unavailable.
 
@@ -4121,7 +4178,11 @@ The following new permissions will automatically be assigned to existing user gr
 | ProfileManagerConfiguration            | groups with the ProfileManagerEditAll permission.                |
 
 > [!NOTE]
-> - The AddOrUpdateBulk, RemoveBulk and Create, Read, Update and Delete calls on single objects in the ProfileHelper will throw CrudFailedExceptions if the ThrowExceptionsOnErrorData property is true on the CrudComponent. If not, the TraceData will contain a ManagerStoreError with reason NoPermission.<br>The AddOrUpdateBulk and RemoveBulk calls normally never throw exceptions regardless of the ThrowExceptionsOnErrorData property. However, NoPermission is an exception since this makes the entire call fail.
+>
+> - The AddOrUpdateBulk, RemoveBulk and Create, Read, Update and Delete calls on single objects in the ProfileHelper will throw CrudFailedExceptions if the ThrowExceptionsOnErrorData property is true on the CrudComponent. If not, the TraceData will contain a ManagerStoreError with reason NoPermission.
+>
+>   The AddOrUpdateBulk and RemoveBulk calls normally never throw exceptions regardless of the ThrowExceptionsOnErrorData property. However, NoPermission is an exception since this makes the entire call fail.
+>
 > - The calls in the ProfileManagerHelper will always return TraceData (except for the CrudComponent properties on the helper).
 > - Import/export of ProfileParameters and mediation messages will throw a DataMinerException.
 > - Import/export of the ServiceProfiles will return TraceData. This helper does not have an option to throw exceptions on error data.
@@ -4130,17 +4191,17 @@ The following new permissions will automatically be assigned to existing user gr
 
 The following messages now have server-side permission checks:
 
-| Operation                                                                          | Required flags              | Helper calls                                                                                                                                                                            |
-|------------------------------------------------------------------------------------|-----------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Read calls of Resources and ResourcePools                                          | ResManResourceUI            | GetResources<br> GetEligibleResources<br> GetResourceUsage<br> GetAvailableResources<br> GetResourcePools                                                                               |
-| Adding Resources or ResourcePools                                                  | ResManResourceAdd           | AddOrUpdateResources<br> AddOrUpdateResourcePools                                                                                                                                       |
-| Updating the status of a Resource                                                  | ResManResourceEditStatus    | AddOrUpdateResources                                                                                                                                                                    |
-| Updating a Resource (unless only the status is updated) or updating a ResourcePool | ResManResourceEditOther     | AddOrUpdateResources<br> AddOrUpdateResourcePools                                                                                                                                       |
-| Removing a Resource or ResourcePool                                                | ResManResourceDelete        | RemoveResources<br> RemoveResourcePools                                                                                                                                                 |
-| Read calls of ReservationInstances and ReservationDefinitions                      | ResManReservationUITimeline | GetReservationInstances<br> GetReservationDefinitions                                                                                                                                   |
-| Adding ReservationInstances or ReservationDefinitions                              | ResManReservationAdd        | AddOrUpdateReservation<br>Instances<br> AddOrUpdateReservation<br>Definitions                                                                                                           |
-| Editing ReservationInstances or ReservationDefinitions                             | ResManReservationEdit       | AddOrUpdateReservation<br>Instances<br> AddOrUpdateReservation<br>Definitions<br> (Safely)UpdateReservation<br>InstanceProperties<br> (Safely)UpdateReservation<br>DefinitionProperties |
-| Removing ReservationInstances or ReservationDefinitions                            | ResManReservationDelete     | RemoveReservationInstances<br> RemoveReservationDefinitions                                                                                                                             |
+| Operation | Required flags | Helper calls |
+|--|--|--|
+| Read calls of Resources and ResourcePools | ResManResourceUI | GetResources<br> GetEligibleResources<br> GetResourceUsage<br> GetAvailableResources<br> GetResourcePools |
+| Adding Resources or ResourcePools | ResManResourceAdd | AddOrUpdateResources<br> AddOrUpdateResourcePools |
+| Updating the status of a Resource | ResManResourceEditStatus | AddOrUpdateResources |
+| Updating a Resource (unless only the status is updated) or updating a ResourcePool | ResManResourceEditOther | AddOrUpdateResources<br> AddOrUpdateResourcePools |
+| Removing a Resource or ResourcePool | ResManResourceDelete | RemoveResources<br> RemoveResourcePools |
+| Read calls of ReservationInstances and ReservationDefinitions | ResManReservationUITimeline | GetReservationInstances<br> GetReservationDefinitions |
+| Adding ReservationInstances or ReservationDefinitions | ResManReservationAdd | AddOrUpdateReservation<br>Instances<br> AddOrUpdateReservation<br>Definitions |
+| Editing ReservationInstances or ReservationDefinitions | ResManReservationEdit | AddOrUpdateReservation<br>Instances<br> AddOrUpdateReservation<br>Definitions<br> (Safely)UpdateReservation<br>InstanceProperties<br> (Safely)UpdateReservation<br>DefinitionProperties |
+| Removing ReservationInstances or ReservationDefinitions | ResManReservationDelete | RemoveReservationInstances<br> RemoveReservationDefinitions |
 
 All operations will now return a ResourceManagerErrorData with reason NotAllowed if the user does not have the correct permissions.
 
@@ -4321,19 +4382,19 @@ To enable TLS for a particular Cassandra database, do the following:
 
 1. Enable TLS in the settings of the Cassandra database.
 
-2. Enable TLS in the settings of that database in Db.xml. See the following example:
+1. Enable TLS in the settings of that database in Db.xml. See the following example:
 
-    ```xml
-    <DataBase active="true" local="true" type="Cassandra">
-      <DBServer>10.10.10.10</DBServer>
-      <UID>myUserId</UID>
-      <PWD>myPassword</PWD>
-      <DB>SLDMADB</DB>
-      <TLSEnabled>true</TLSEnabled>
-    </DataBase>
-    ```
+   ```xml
+   <DataBase active="true" local="true" type="Cassandra">
+     <DBServer>10.10.10.10</DBServer>
+     <UID>myUserId</UID>
+     <PWD>myPassword</PWD>
+     <DB>SLDMADB</DB>
+     <TLSEnabled>true</TLSEnabled>
+   </DataBase>
+   ```
 
-3. Make sure DataMiner is able to use TCP port 7001.
+1. Make sure DataMiner is able to use TCP port 7001.
 
 > [!NOTE]
 > Currently, the above-mentioned procedure only enables TLS on the database connection. It does not enable client authentication.
@@ -4444,7 +4505,7 @@ GQI is now able to detect any redundant operations contained within a query. As 
 
 #### Dashboards app - State component: Enhanced auto-size behavior \[ID_29654\]
 
-When, in the *Layout* tab of the State component, you select “Auto size” in the *Advanced \> Style *section, an attempt will now always be made to fill up the entire component area with the information to be displayed.
+When, in the *Layout* tab of the State component, you select “Auto size” in the *Advanced \> Style* section, an attempt will now always be made to fill up the entire component area with the information to be displayed.
 
 Also, a number of other enhancements have been made with regard to auto-sizing.
 
@@ -4487,9 +4548,9 @@ The following information will be logged
 - The time that is needed to load a module after it is launched, including the initialization, the fetching of data from the server, and the creation of module data.
 - The duration of each server call, including the message, the interval, and the filter used in the request, if any. The following server calls are taken into account for this:
 
-    - Resource helper: Retrieving a resource, resource pool, booking definition, or booking instance.
-    - Service helper: Retrieving a service definition, service state, or information.
-    - Function helper: Retrieving a virtual function, or protocol metadata.
+  - Resource helper: Retrieving a resource, resource pool, booking definition, or booking instance.
+  - Service helper: Retrieving a service definition, service state, or information.
+  - Function helper: Retrieving a virtual function, or protocol metadata.
 
 #### Dashboards app - GQI: Enhanced performance when processing GQI query results \[ID_29977\]
 
@@ -5336,7 +5397,7 @@ In some cases, Azure AD access tokens would incorrectly not get refreshed.
 
 #### DataMiner Cube: Problem when adding/deleting DataMiner Agent to/from a DMS \[ID_31078\]
 
-In the *Agents* section of *System Center*, up to now, users with *Agents \> Add* permission but without *Agents \> Add DMA to cluster* permission seemed to able to add a DMA to a DMS. However, after *System Center* had been refreshed, the added DMA would not be listed. Also, users with *Agents \> Delete* permission but without *Agents \> Delete DMA to cluster *permission seemed to able to delete a DMA to a DMS. However, after *System Center *had been refreshed, the deleted DMA would still be listed.
+In the *Agents* section of *System Center*, up to now, users with *Agents \> Add* permission but without *Agents \> Add DMA to cluster* permission seemed to able to add a DMA to a DMS. However, after *System Center* had been refreshed, the added DMA would not be listed. Also, users with *Agents \> Delete* permission but without *Agents \> Delete DMA to cluster* permission seemed to able to delete a DMA to a DMS. However, after *System Center* had been refreshed, the deleted DMA would still be listed.
 
 From now on, users with only *Agents \> Add* permission or *Agents \> Delete* permission will be able to correctly add or delete DMAs from a DMS.
 
@@ -5429,7 +5490,7 @@ In some cases, a parameter feed could incorrectly continue to feed data even tho
 
 #### Dashboards Sharing: Incorrect login screen when the shared dashboard you were viewing was unshared \[ID_31503\]
 
-When a shared dashboard was unshared while you were viewing it, up to now, you would incorrectly be redirected to the login screen of the Dashboards app. From now on, you will be redirected to the DataMiner Cloud login screen (i.e. https://shares.dataminer.services) instead.
+When a shared dashboard was unshared while you were viewing it, up to now, you would incorrectly be redirected to the login screen of the Dashboards app. From now on, you will be redirected to the DataMiner Cloud login screen (i.e. <https://shares.dataminer.services>) instead.
 
 #### Dashboards app: Value for EPM components with only one chain filter not displayed in PDF report \[ID_31563\]
 
@@ -5601,7 +5662,7 @@ When your opened a web app (e.g. Dashboards, Monitoring, Ticketing, etc.) that d
 
 ## Addendum CU1
 
-### Enhancements
+### CU1 enhancements
 
 #### DataMiner is now able to connect to Cassandra databases that require TLS 1.2 \[ID_31852\]
 
@@ -5667,6 +5728,7 @@ Up to now, when an SNMP Manager was configured to resend all active alarms every
 - If the grouping option is not enabled, no alarms will be resent during the alarm storm.
 
 > [!NOTE]
+>
 > - When you manually request all alarms to be resent, the logic described above will also apply.
 > - When inform messages are used instead of traps and the receiving party does not return an acknowledgment, then the retry messages will still be sent, even when an alarm storm starts while those retry messages are being sent.
 
@@ -5691,9 +5753,9 @@ In the following example, parameters 201 and 301 each contain a list of remote e
 
 #### Service & Resource Management: Updated exceptions thrown when the time range of a child ReservationInstance or child ReservationDefinition is invalid \[ID_32581\]
 
-The following exception messages have been enhanced:
+The following exception messages have been enhanced.
 
-**Exception thrown when the time range of a child ReservationInstance is invalid**
+##### Exception thrown when the time range of a child ReservationInstance is invalid
 
 This message now includes the ID, the name and the time range of both the parent and the child.
 
@@ -5701,7 +5763,7 @@ This message now includes the ID, the name and the time range of both the parent
 The TimeRange of the child is not within the boundaries of the parent ReservationInstance (Child: '{Child Name}' ({Child ID}) has range '{Child Range}' & Parent: '{Parent Name}' ({Parent ID}) has range '{Parent Range}')
 ```
 
-**Exception thrown when the time range of a child ReservationDefinition is invalid**
+##### Exception thrown when the time range of a child ReservationDefinition is invalid
 
 This message now includes the ID, the name and the time range of both the parent and the child. For the child, the offset has now also been added.
 
@@ -5767,11 +5829,11 @@ Up to now, for a write parameter configured as a toggle button, an information t
 
 The HTML5 video player and the VLC player have a number of new options.
 
-**HTML5 video player**
+##### HTML5 video player
 
 The HTML5 video player will now by default mute videos when played automatically.
 
-**VLC player**
+##### VLC player
 
 When playing videos using the VLC player, it is now possible to specify the volume in the URL. See the following example. The volume has to be specified as a percentage (0 to 100). Default: 0 (i.e. muted).
 
@@ -5779,7 +5841,7 @@ When playing videos using the VLC player, it is now possible to specify the volu
 https://dma.local/VideoThumbnails/Video.htm?type=VLC&source=https://videoserver/video.mp4&volume=50
 ```
 
-**HTML5 video player & VLC player**
+##### HTML5 video player & VLC player
 
 Using the HTML video player or the VLC player, it is now possible to specify whether a video should be played in a loop. See the following example. Default: false
 
@@ -5791,7 +5853,7 @@ https://dma.local/VideoThumbnails/Video.htm?type=HTML5&source=https://videoserve
 
 When, after selecting a component in edit mode, you open the *Data* tab and go to the *All available data \> Parameters* section, you can select an element and then filter the list of parameters of that element by clicking a number of preset filters. The preset filter “Write”, which was used to filter out the parameters of type “write”, has now been removed.
 
-#### Enhanced performance of the interprocess communication between SLDataGateway and SLA­nalytics \[ID_32653\] \[ID_32709\]
+#### Enhanced performance of the interprocess communication between SLDataGateway and SLAnalytics \[ID_32653\] \[ID_32709\]
 
 Due to a number of enhancements, overall performance of the interprocess communication between SLDataGateway and SLAnalytics has increased.
 
@@ -5820,7 +5882,7 @@ The size of the SLMessageBroker.txt log file is now limited to 3MB.
 
 A number of enhancements have been made with regard to the handling of serialization issues.
 
-### Fixes
+### CU1 fixes
 
 #### Cassandra: Problem when reading DVEElementInfo rows that contained NULL values \[ID_32357\]
 
@@ -5867,7 +5929,7 @@ When you assign a Visio drawing to a view or a service, you can specify a defaul
 
 Also, when the *How to show element card Data pages* setting was set to “Show in drop-down box”, initial page selection would no longer work.
 
-#### Dashboards: Problem when sharing a dashboard created in an earlier version of the Dash­boards app \[ID_32551\]
+#### Dashboards: Problem when sharing a dashboard created in an earlier version of the Dashboards app \[ID_32551\]
 
 If you tried to share a dashboard that was created in an earlier version of the Dashboards app, in some cases, an error could occur.
 
@@ -5939,13 +6001,13 @@ When a profile instance is modified, the existing instance is copied and the mod
 
 When, in an alarm template, you specified table conditions, in some cases, those conditions would no longer be saved correctly.
 
-#### Dashboards: Missing sidebar when navigating to a dashboard URL for edit mode without hav­ing edit access \[ID_32706\]
+#### Dashboards: Missing sidebar when navigating to a dashboard URL for edit mode without having edit access \[ID_32706\]
 
 When you navigate to a dashboard via a URL containing the edit=true parameter, and you do not have permission to edit that dashboard, the dashboard will not be opened in edit mode.
 
 However, up to now, when you navigated to dashboard using a URL with an edit=true parameter and you did not have permission to edit it, although you were not in edit mode the side pane would incorrectly not appear.
 
-#### DataMiner Cube - Asset Manager: UI could become unresponsive when the database configura­tion was being retrieved \[ID_32766\]
+#### DataMiner Cube - Asset Manager: UI could become unresponsive when the database configuration was being retrieved \[ID_32766\]
 
 When, in DataMiner Cube, you opened the Asset Manager app, in some cases, the UI could become unresponsive when the database configuration was being retrieved.
 
@@ -5955,7 +6017,7 @@ When alarms had been retrieved from the database page by page, in some cases, th
 
 ## Addendum CU2
 
-### Enhancements
+### CU2 enhancements
 
 #### Security enhancements \[ID_32849\] \[ID_32954\] \[ID_32992\] \[ID_33014\] \[ID_33052\]
 
@@ -5973,7 +6035,7 @@ Because of a number of enhancements, overall performance has increased with rega
 
 The loading indicator when GQI data are loaded for a bar or pie chart component has been improved to be more in line with the usual dashboard style. Instead of a spinner, now a loading bar is shown at the top of the component.
 
-#### Dashboards app: Live sharing no longer requires users to have permission to edit the dash­boards they are sharing \[ID_32812\]
+#### Dashboards app: Live sharing no longer requires users to have permission to edit the dashboards they are sharing \[ID_32812\]
 
 Up to now, when users wanted to share a dashboard, they also needed to have permission to edit the dashboard in question. From now on, users who want to share a dashboard will no longer need permission to edit that dashboard.
 
@@ -6024,7 +6086,7 @@ If this check fails, you will need to execute the VerifyClusterPorts.dmupgrade p
 
 A number of enhancements have been made with regard to the setup of serial connections with SSL/TLS enabled.
 
-### Fixes
+### CU2 fixes
 
 #### Elasticsearch: Casing will now be ignored when sorting fields of type string \[ID_32437\]
 
@@ -6043,7 +6105,7 @@ A number of issues have been fixed with regard to alarm templates.
 
 Also, a number of enhancements have been made with regard to the calculation of smart baselines.
 
-#### Cassandra Cluster Migrator tool would incorrectly not allow multiple IP addresses in the “Cas­sandra IP(s)” field \[ID_32554\]
+#### Cassandra Cluster Migrator tool would incorrectly not allow multiple IP addresses in the “Cassandra IP(s)” field \[ID_32554\]
 
 When configuring the Cassandra settings in the Cassandra Cluster Migrator tool, it would incorrectly not be possible to specify multiple IP addresses in the *Cassandra IP(s)* field.
 
@@ -6183,7 +6245,7 @@ In some cases, it would incorrectly no longer be possible to move DVE elements t
 
 In some cases, a NATS issue could cause a DataMiner Agent to not start up correctly.
 
-#### Dashboards app - GQI: Problem while creating or updating a query when users did not have per­mission to view objects retrieved by a data source \[ID_33029\]
+#### Dashboards app - GQI: Problem while creating or updating a query when users did not have permission to view objects retrieved by a data source \[ID_33029\]
 
 When users were creating or modifying a GQI query, in some cases, an exception could be thrown when those users did not have permission to view objects retrieved by a data source.
 
@@ -6205,19 +6267,20 @@ In some cases, an error could occur in the SLLog process when a log file was clo
 
 When a shape was linked to a spectrum parameter with an ID between 50,000 and 60,000, in some cases, the shape would incorrectly show a grid instead of text.
 
-#### Interactive Automation scripts: Slider linked to a numeric text box would incorrectly keep fol­lowing the mouse pointer \[ID_33204\]
+#### Interactive Automation scripts: Slider linked to a numeric text box would incorrectly keep following the mouse pointer \[ID_33204\]
 
 In interactive Automation scripts, in some cases, the slider linked to a numeric text box would incorrectly keep following the mouse pointer, even after the mouse button had been released.
 
 ## Addendum CU3
 
-### Enhancements
+### CU3 enhancements
 
 #### DataMiner Cube - Resources app: Function instance name can now be updated \[ID_32811\]
 
 When updating a resource in the Resources app, it is now possible to change the function instance name, i.e. the name of the DVE element linked to a function resource.
 
 > [!NOTE]
+>
 > - It is recommended to modify DVE names via the resource instead of via the main DVE element.
 > - Names of DVE elements can also be modified in *General Parameters \> Resource Info \> DVE Table*.
 
@@ -6230,6 +6293,7 @@ In the DataMiner Taskbar Utility, the following options have been removed:
 
 > [!NOTE]
 > The following option has been kept:
+>
 > - Opening Windows file explorer in the C:\\Skyline DataMiner\\ folder by double-clicking while pressing the CTRL key.
 
 #### Enhanced performance when starting up elements \[ID_33023\]
@@ -6288,7 +6352,7 @@ In *System Center \> System settings \> Analytics config*, the *Automatic incide
 
 When you connect DataMiner Cube to a DataMiner Agent with main release version 10.2.0 CU3 (or newer) or feature release version 10.2.6 (or newer), from now on, it will automatically update to the most recent version. This will allow you to use the latest Cube features as soon as they are released without having to wait for a DMA upgrade.
 
-**Client configuration**
+##### Client configuration
 
 If you do not want to wait for the next automatic Cube update, in the start window of the Cube desktop app, click the cogwheel icon in the bottom-right corner, and select *Check for updates*. If a new Cube version is available, it will be downloaded. When the download has finished, a *Restart now* button will appear. Click it to start using the new version.
 
@@ -6301,7 +6365,7 @@ Two update tracks are available. Click the cogwheel icon in the bottom-right cor
 
 If you want to use a specific Cube version to connect to a particular agent or cluster, then right-click an agent or cluster in the start window, and select a specific Cube version.
 
-**Server configuration**
+##### Server configuration
 
 When connected to a particular DataMiner System, users with *Manage client versions* permission can go to *System Center \> System settings \> Manage client versions*, and select one of the following Cube update modes:
 
@@ -6311,7 +6375,7 @@ When connected to a particular DataMiner System, users with *Manage client versi
 
 By default, the setting chosen here will apply to all agents in the DMS, including Failover setups. However, it is possible (but not recommended) to configure the Cube update mode per agent.
 
-### Fixes
+### CU3 fixes
 
 #### QActionHelper DLL file could incorrectly be loaded twice \[ID_32647\]
 
@@ -6343,7 +6407,7 @@ When you entered a search string in the filter box, all tickets would incorrectl
 
 When, in the Automation app, you validated an Automation script that either contained an empty line in the DLL references or had a DLL reference removed, in some cases, an “Empty path name is not legal” error could be thrown.
 
-#### DataMiner Cube: REPORTS page of a masked element would incorrectly indicate that the ele­ment was in alarm instead of masked \[ID_33087\]
+#### DataMiner Cube: REPORTS page of a masked element would incorrectly indicate that the element was in alarm instead of masked \[ID_33087\]
 
 When you masked an alarm as well as its associated element, in DataMiner Cube, the REPORTS page of the element in question would incorrectly indicate that the element was in alarm instead of masked.
 
@@ -6399,7 +6463,7 @@ When a dynamic IP parameter was set to a value that contained only an IP address
 
 From now on, when no IP port is specified, the last port set will be used. And if no port has been set yet, then the port configured in the element wizard will be used.
 
-#### Application framework: Pages could not be loaded when previewing a draft version of an appli­cation that had not yet been published \[ID_33241\]
+#### Application framework: Pages could not be loaded when previewing a draft version of an application that had not yet been published \[ID_33241\]
 
 When previewing a draft version of an application, in some cases, pages could not be loaded when there was no published version yet.
 
@@ -6439,7 +6503,7 @@ When a table with a foreign key relation to a remote table was filtered using a 
 
 When you zoomed out on a trend graph with a large number of data points, in some cases, the UI would become unresponsive.
 
-#### Problem with SLDataMiner when a DMA started up while another DMA in the DMS was register­ing the SLAs \[ID_33303\]
+#### Problem with SLDataMiner when a DMA started up while another DMA in the DMS was registering the SLAs \[ID_33303\]
 
 When a DataMiner Agent started up while another DataMiner Agent in the DMS was registering the SLAs, in some cases, an error could occur in the SLDataMiner process.
 
@@ -6461,7 +6525,7 @@ When a GQI query did not return any rows, the data table component would incorre
 
 ## Addendum CU4
 
-### Enhancements
+### CU4 enhancements
 
 #### Security enhancements \[ID_33242\] \[ID_33373\] \[ID_33479\]
 
@@ -6484,6 +6548,7 @@ From now on, you will also be able to enable or disable this setting on system l
 ```
 
 > [!NOTE]
+>
 > - This setting can only be configured in MaintenanceSettings.xml.
 > - When you change this setting, the change will only be applied after a DataMiner restart.
 > - The protocol-level setting will overrule the system-level setting.
@@ -6508,22 +6573,22 @@ From now on, the SetParameterIndexByKey and SetParametersIndexByKey methods can 
 
 A number of enhancements have been made to the Failover Config window. See below for a summary.
 
-**General**
+##### General
 
 - The status indicator is now clickable and opens the status page when clicked.
 - When the status page opens, the status indicator will now show the last known status until the first refresh.
 - When the second agent is added,
 
-    - the IP address or hostname of that second agent is checked to determine whether it refers to a valid DataMiner Agent, and
-    - the DataMiner IDs of both agents are checked. In a Failover setup, both must be identical.
+  - the IP address or hostname of that second agent is checked to determine whether it refers to a valid DataMiner Agent, and
+  - the DataMiner IDs of both agents are checked. In a Failover setup, both must be identical.
 
 - Advanced options:
 
-    - Synchronization NICs are automatically suggested for new setups. The list will now display the actual NIC names instead of the corporate/acquisition names.
-    - Heartbeats are automatically suggested for new setups. The list will now display the actual NIC names instead of the corporate/acquisition names.
-    - When a new heartbeat is added, the first NIC will automatically be selected.
+  - Synchronization NICs are automatically suggested for new setups. The list will now display the actual NIC names instead of the corporate/acquisition names.
+  - Heartbeats are automatically suggested for new setups. The list will now display the actual NIC names instead of the corporate/acquisition names.
+  - When a new heartbeat is added, the first NIC will automatically be selected.
 
-**Failover with virtual IP address**
+##### Failover with virtual IP address
 
 - Subnet masks for IP inputs will be suggested based on the current subnet of the DMA.
 - The local IP address will no longer be suggested as virtual IP address.
@@ -6532,7 +6597,7 @@ A number of enhancements have been made to the Failover Config window. See below
 - It is no longer possible to switch from Failover with virtual IP address to Failover with hostnames when Failover with virtual IP address is active.
 - In the advanced options, the (virtual) IP address information will be automatically filled in for new setups.
 
-**Failover with hostnames**
+##### Failover with hostnames
 
 - When setting up a new Failover with hostnames, in the hostname setup, the hostname will now be displayed instead of the IP address. If Failover with hostnames has already been set up, the hostname setup will display the currently used hostnames.
 - It is now mandatory to fill in all three hostnames.
@@ -6566,7 +6631,7 @@ When you run the package on a single agent, the results may be incorrect or conf
 
 Because of a number of enhancements, overall performance of SLDataGateway has increased.
 
-#### DataMiner Cube - Visual Overview: Shape that displays a page of the Visio drawing linked to a view, service or element will no longer be displayed when the element, service or view in ques­tion does not exist \[ID_33484\]
+#### DataMiner Cube - Visual Overview: Shape that displays a page of the Visio drawing linked to a view, service or element will no longer be displayed when the element, service or view in question does not exist \[ID_33484\]
 
 From now on, a shape that displays a page of the Visio drawing linked to a view, service or element (i.e. a shape with a shape data field of type VdxPage) will no longer be displayed when the view, service or element in question does not exist.
 
@@ -6581,7 +6646,7 @@ SLLogCollector will now also collect the following VerifyClusterPorts files:
 
 Because of a number of enhancements, overall performance has increased when using the search box in the Cube header.
 
-#### SLLogCollector will now also collect the log files of the ArtifactDeployer, CloudFeed and Orches­trator processes \[ID_33514\]
+#### SLLogCollector will now also collect the log files of the ArtifactDeployer, CloudFeed and Orchestrator processes \[ID_33514\]
 
 SLLogCollector will now also collect the log files of the following cloud processes:
 
@@ -6593,7 +6658,7 @@ SLLogCollector will now also collect the log files of the following cloud proces
 
 Because of a number of enhancements, overall performance of SLElement has improved when processing service and DCF information.
 
-### Fixes
+### CU4 fixes
 
 #### Protocol QActions: Problem when calling FillArray or FillArrayNoDelete with List\<object\[\]\> as columns value \[ID_28573\]
 
@@ -6652,7 +6717,7 @@ Up to now, it would not be possible for users to share dashboards that contained
 
 When, inside a replicated DVE parent element, the exporting DVE table that contained the column with DVE element IDs also contained a column with a \<Sequence>, then that sequence would incorrectly be executed twice on the replicated element.
 
-#### DataMiner Cube - Trending: Legend would incorrectly show a unit when hovering over an excep­tion value \[ID_33280\]
+#### DataMiner Cube - Trending: Legend would incorrectly show a unit when hovering over an exception value \[ID_33280\]
 
 When, in a trend graph, you hovered the mouse pointer over an exception value, the legend would not only show the minimum value, the maximum value and the value of the data point, but also incorrectly a unit. From now on, when you hover over an exception value, the legend will no longer show a unit.
 
@@ -6758,7 +6823,7 @@ When a shape linked to a parameter had a *History Mode* shape data field set to 
 
 When, in a tree view component of an interactive Automation script, you selected an item that unselected the previously selected item, in some cases, the entire tree view component would incorrectly collapse.
 
-#### Automatic Incident Tracking: Clearable base alarms of an incident were cleared when the inci­dent was cleared \[ID_33481\]
+#### Automatic Incident Tracking: Clearable base alarms of an incident were cleared when the incident was cleared \[ID_33481\]
 
 When an incident (i.e. alarm group) was cleared, in some cases, its clearable base alarms would incorrectly be cleared as well when the AutoClear option was disabled.
 
@@ -6784,7 +6849,7 @@ From now on, the name of the package is allowed to have a prefix and/or a suffix
 
 In some rare cases, an error could occur in SLElement when updating the bubble-up levels.
 
-#### DataMiner Cube - Resources app: prevent updating new unsaved resource with updated exist­ing resource \[ID_33543\]
+#### DataMiner Cube - Resources app: prevent updating new unsaved resource with updated existing resource \[ID_33543\]
 
 In some cases, when the data related to a newly created resource was not yet saved on the DataMiner Agent, in the UI, that data would incorrectly be replaced by data related to another resource.
 
@@ -6805,7 +6870,7 @@ When using a DataMiner Cube desktop application that had been installed by means
 
 ## Addendum CU5
 
-### Enhancements
+### CU5 enhancements
 
 #### Security enhancements \[ID_33684\]
 
@@ -6856,7 +6921,7 @@ In DataMiner Cube, the following enhancements have been made to the *Failover Co
 
 When a DataMiner Agent could not be reached, in some cases, an “Attempt to use an unauthenticated connection” error would appear in the log files or on the UI. From now on, a clearer error message will appear instead.
 
-### Fixes
+### CU5 fixes
 
 #### Problem with SLPort when the last serial element using a specific IpAddress:IpPort connection was stopped \[ID_33437\]
 
@@ -6871,7 +6936,7 @@ In some cases, the following issues could occur when migrating data from SQL to 
 
 Also, Cube will no longer throw “System.InvalidOperationException: Collection was modified” errors.
 
-#### DataMiner Cube: Properties of exported elements would not be added to the CSV file in the cor­rect order \[ID_33528\]
+#### DataMiner Cube: Properties of exported elements would not be added to the CSV file in the correct order \[ID_33528\]
 
 When you had exported elements to a CSV file, the element properties would not be added to the CSV file in the correct order.
 
@@ -6992,9 +7057,9 @@ In the following example, the second connection would incorrectly be ignored.
 
 ## Addendum CU6
 
-### Enhancements
+### CU6 enhancements
 
-#### Security enhancements 
+#### Security enhancements
 
 A number of security enhancements have been made.
 
@@ -7029,14 +7094,15 @@ A number of enhancements have been made to the NATS configuration:
 
 - New NATSForceManualConfig option to disable the automatic reset timer in NATSCustodian.
 
-    Disabling the timer can be done in one of the following ways:
+  Disabling the timer can be done in one of the following ways:
 
-    - Set the SLNet option **NATSForceManualConfig** to true in the SLNetClientTest tool (default = false).
-    - Set the **SLNet.NATSForceManualConfig** tag to true in *MaintenanceSettings.xml*.
+  - Set the SLNet option **NATSForceManualConfig** to true in the SLNetClientTest tool (default = false).
+  - Set the **SLNet.NATSForceManualConfig** tag to true in *MaintenanceSettings.xml*.
 
-    > [!NOTE]
-    > - Changing this option in the SLNetClientTest tool can be done at run-time. The change will be applied immediately.
-    > - Forcing manual configuration will disable the automatic NATS configuration on the DataMiner System. It will then be up to the user to either manually configure a NATS cluster or manually call NatsCustodianResetNatsMessage when changes are made to the DMS.
+  > [!NOTE]
+  >
+  > - Changing this option in the SLNetClientTest tool can be done at run-time. The change will be applied immediately.
+  > - Forcing manual configuration will disable the automatic NATS configuration on the DataMiner System. It will then be up to the user to either manually configure a NATS cluster or manually call NatsCustodianResetNatsMessage when changes are made to the DMS.
 
 - On DataMiner startup, NAS and NATS will now automatically be started if they are not running.
 
@@ -7185,7 +7251,7 @@ Because of a number of enhancements, overall performance has increased when retr
 
 When, in the Dashboards app, you switched to edit mode, all columns of all GQI queries on the dashboard in question would be retrieved. From now, only when you open a specific query on the dashboard you are editing will the columns of that specific query be retrieved.
 
-### Fixes
+### CU6 fixes
 
 #### SLAnalytics - Pattern matching: No 'suggestion event' type alarm would be triggered in case of DVE elements [ID_32671]
 
@@ -7283,7 +7349,7 @@ When a Visual Overview component was loading, up to now, a large loading message
 
 When you open DataMiner Cube, it will load the alarms and try to link the existing tickets to them so it can show the ticket information in the Alarm Console.
 
-While this process was ongoing, in some rare cases, the Alarm Console would incorrectly keep on loading. 
+While this process was ongoing, in some rare cases, the Alarm Console would incorrectly keep on loading.
 
 #### Dashboards app - Service definition component: Function nodes not displaying number of Process Automation tokens in queue or in progress [ID_33848]
 
@@ -7363,7 +7429,7 @@ When, in Visual Overview, you clicked a shape that executed two Automation scrip
 When a spectrum recording was being played, the following issues could occur:
 
 - The *Forward* and *Backward* buttons would not work after starting and pausing the recording.
-- When you adapted the speed of the recording, the new speed would incorrectly only be applied to the next frame and not to the current frame. 
+- When you adapted the speed of the recording, the new speed would incorrectly only be applied to the next frame and not to the current frame.
 - When the recording was being played, the slider could incorrectly not be used.
 
 #### Problems when exporting tables with an IncludedPids option or with a ClientSideRowFilter [ID_33934]
@@ -7437,4 +7503,4 @@ When a stopped element was deleted, logger tables associated with that element w
 
 In some cases, an exception could be thrown when removing a query that was used as "start from" query by another query.
 
-From now on, when you try to remove a query that is used as "start from" query, a confirmation box will appear, asking you to confirm the removal of that query. 
+From now on, when you try to remove a query that is used as "start from" query, a confirmation box will appear, asking you to confirm the removal of that query.

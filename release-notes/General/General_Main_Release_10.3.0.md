@@ -28,7 +28,8 @@ When a service is created or updated, the following read-only properties will no
 | Modified by | User name of the user who last modified the service.       |
 
 > [!NOTE]
-> - When you upgrade to DataMiner version 10.3.0, a check will be performed to make sure your system includes an up-to-date SRM solution. If the installed SRM solution is not up-to-date, you will be asked to update it before continuing with the DataMiner upgrade.
+>
+> - When you upgrade to DataMiner version 10.3.0, a check will be performed to make sure your system includes an up-to-date SRM solution. If the installed SRM solution is not up to date, you will be asked to update it before you continue with the DataMiner upgrade.
 > - These properties will only be added to existing services the first time those services are updated.
 > - These properties will not be available in alarms that are included in a service.
 
@@ -36,7 +37,7 @@ When a service is created or updated, the following read-only properties will no
 
 <!-- Main Release Version 10.3.0 - Feature Release Version 10.2.2 -->
 
-When using a GetSpectrumTrendTraceDataMessage to retrieve spectrum data, up to now, it was possible to pass an optional time range (i.e. RangeStart and RangeEnd) next to an ID (i.e. RecordID). From now on, passing a time range next to an ID will be mandatory.
+When a GetSpectrumTrendTraceDataMessage was used to retrieve spectrum data, up to now, it was possible to pass an optional time range (i.e. RangeStart and RangeEnd) next to an ID (i.e. RecordID). From now on, passing a time range next to an ID will be mandatory.
 
 #### DataMiner Object Model: FieldDescriptors can now be configured to allow multiple values \[ID_31905\] \[ID_32904\]
 
@@ -69,9 +70,9 @@ To make a FieldDescriptor allow multiple values, set its FieldType to “List\<t
 
 <!-- Main Release Version 10.3.0 - Feature Release Version 10.2.2 -->
 
-In an EPM environment, since DataMiner feature release version 10.1.7, it has been possible to override the names of topology cells, chains and search chains specified in a protocol with aliases specified in a system-level EPMConfig.xml file stored in the C:\\Skyline DataMiner\\ folder. Now, it is also possible to add EPMConfig.xml files on element level.
+In an EPM environment, since DataMiner feature release version 10.1.7, it has been possible to override the names of topology cells, chains, and search chains specified in a protocol with aliases specified in a system-level *EPMConfig.xml* file stored in the C:\\Skyline DataMiner\\ folder. Now, it is also possible to add *EPMConfig.xml* files on element level.
 
-If you want certain aliases for topology cells, chains and search chains to only be applied to a particular element, then create an EPMConfig.xml file and place it in the folder of that element (e.g. C:\\Skyline DataMiner\\Elements\\\<ElementName>\\).
+If you want certain aliases for topology cells, chains and search chains to only be applied to a particular element, then create an *EPMConfig.xml* file and place it in the folder of that element (e.g. C:\\Skyline DataMiner\\Elements\\\<ElementName>\\).
 
 > [!NOTE]
 > Aliases specified in an element-level EPMConfig.xml file will override aliases specified in the system-level EPMConfig.xml file.
@@ -92,29 +93,30 @@ The configuration of this new descriptor is identical to that of the DomInstance
 
 The SLNet process can now use the following new messages to upload files to the DataMiner System.
 
-**StartUploadMessage**
+##### StartUploadMessage
 
-Initiates an upload and returns a StartUploadResponse message containing an upload cookie of type int.
+This message initiates an upload and returns a *StartUploadResponse* message containing an upload cookie of type int.
 
 | Argument     | Type     | Description                                                                                                                     |
 |--------------|----------|---------------------------------------------------------------------------------------------------------------------------------|
 | DataChunk    | byte\[\] | The initial chunk of data to be uploaded.                                                                                       |
 | ReservedSize | long     | The total size (in bytes) that should be reserved for the full dataset.                                                         |
-| Name         | string   | Optional name of the upload.<br> Naming an upload allows you to retrieve its upload status by means of a FindUploadSlotMessage. |
+| Name         | string   | Optional name of the upload. Naming an upload allows you to retrieve its upload status by means of a FindUploadSlotMessage. |
 
-**ContinueUploadMessage**
+##### ContinueUploadMessage
 
-Continues an already initiated upload and returns an empty ContinueUploadResponse message.
+This message continues an already initiated upload and returns an empty *ContinueUploadResponse* message.
 
-| Argument        | Type     | Description                                                                                                                                                                                                                              |
-|-----------------|----------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Cookie          | int      | The cookie returned by the StartUploadMessage.                                                                                                                                                                                           |
-| DataChunk       | byte\[\] | The next chunk of data to be uploaded.                                                                                                                                                                                                   |
-| CurrentPosition | long     | Optional index location that specifies where the next chunk of data should be appended. Allows you to perform a basic data integrity check.<br> When this location does not match the actual server-side location, the upload will fail. |
+| Argument | Type | Description |
+|--|--|--|
+| Cookie | int | The cookie returned by the StartUploadMessage. |
+| DataChunk | byte\[\] | The next chunk of data to be uploaded. |
+| CurrentPosition | long | Optional index location that specifies where the next chunk of data should be appended. Allows you to perform a basic data integrity check. When this location does not match the actual server-side location, the upload will fail. |
 
 > [!NOTE]
+>
 > - The above-mentioned messages will be used when uploading a large data stream by means of the SendLargeStream method in the SLNetTypes FileUploader helper class.
-> - The existing SendFile method will use SendLargeStream in the background when it detects a file larger than 2GB.<br>The default chunk size is 100KB. When sending large files, it is recommended to slightly increase this default chunk size to prevent a large number of small messages.
+> - The existing SendFile method will use SendLargeStream in the background when it detects a file larger than 2 GB. The default chunk size is 100 KB. When sending large files, it is recommended to slightly increase this default chunk size to prevent a large number of small messages.
 > - As the AppPackageHelper uses the FileUploader helper class to upload DataMiner packages, it will now also support uploading larger packages.
 
 #### DataMiner Object Model: New event message for DomInstance status transitions \[ID_32418\]
@@ -147,15 +149,15 @@ This is intended to be used in the Process Automation framework.
 
 <!-- Main Release Version 10.3.0 - Feature Release Version 10.2.4 -->
 
-A new Process Automation object class has been created (which inherits the regular ResourcePool class): ProcessAutomationResourcePool
+A new Process Automation object class has been created (which inherits the regular ResourcePool class): *ProcessAutomationResourcePool*
 
-This new object has a property that will be used to store the queue element associated with a resource pool: public ElementId QueueElement
+This new object has a property that will be used to store the queue element associated with a resource pool: *public ElementId QueueElement*
 
 #### DataMiner Object Model: Defining a TLL for DomTemplates, DomInstances and DomInstance history \[ID_32662\]
 
 <!-- Main Release Version 10.3.0 - Feature Release Version 10.2.6 -->
 
-It is now possible to define a time to live property for the following types of DomManager objects:
+It is now possible to define a "time to live" property for the following types of DomManager objects:
 
 | Object type                        | Property              |
 |------------------------------------|-----------------------|
@@ -222,9 +224,13 @@ Example:
 See also [Making all elements using a particular protocol.xml run in separate SLScripting and SLProtocol instances \[ID_33358\]](#making-all-elements-using-a-particular-protocolxml-run-in-separate-slscripting-and-slprotocol-instances-id_33358).
 
 > [!NOTE]
+>
 > - It is recommended to stop the DataMiner Agent before changing its DataMiner.xml file. Besides, any changes made to the DataMiner.xml will only be applied when starting the DataMiner Agent.
 > - Using the protocolProcesses option, you can specify how many SLProtocol processes will be launched to host the other elements in.
-> - Currently, a separate SLScripting process must be launched for every SLProtocol process. This means that when at least one protocol name is specified in the SeparateProcesses tag, the configured or default behavior of the scriptingProcesses attribute will be overridden to “protocol”. Note that when the scriptingProcesses attribute is set to “\[Service\]”, the following system notice will be generated.<br>*\[n\] separate protocols have been configured in the DataMiner.xml, while SLScripting is configured as service, which is not a compatible setup. To run the elements of these protocols in a separate SLProtocol and SLScripting instance, please unregister SLScripting and remove the scriptingProcesses=\\"\[Service\]\\" tag from DataMiner.xml.*
+> - Currently, a separate SLScripting process must be launched for every SLProtocol process. This means that when at least one protocol name is specified in the SeparateProcesses tag, the configured or default behavior of the scriptingProcesses attribute will be overridden to “protocol”. Note that when the scriptingProcesses attribute is set to “\[Service\]”, the following system notice will be generated:
+>
+>   *\[n\] separate protocols have been configured in the DataMiner.xml, while SLScripting is configured as service, which is not a compatible setup. To run the elements of these protocols in a separate SLProtocol and SLScripting instance, please unregister SLScripting and remove the scriptingProcesses=\\"\[Service\]\\" tag from DataMiner.xml.*
+>
 > - DataMiner.xml files are not synchronized among the different agents in a DataMiner System. If your DMS includes different agents, then you will need to edit the DataMiner.xml file on each of the agents.
 
 #### SetAlarmStateMessage can no longer be used to change the alarm state of an incident \[ID_33273\]
@@ -243,14 +249,14 @@ Process:
 
 1. A client requests the execution of a DOM action in which the execution of an interactive Automation script has been defined via the domHelper.DomInstances.ExecuteAction() method.
 
-    To indicate that the Automation script is an interactive Automation script, the IsInteractive property of the ExecuteScriptDomActionDefinition must be set to true.
+   To indicate that the Automation script is an interactive Automation script, the IsInteractive property of the ExecuteScriptDomActionDefinition must be set to true.
 
-2. The domHelper.DomInstances.ExecuteAction() method replies immediately.
+1. The domHelper.DomInstances.ExecuteAction() method replies immediately.
 
-    - Its TraceData contains a DomActionInfo object in which type is set to DomActionInfo.Type.ScriptExecutionId.
-    - The info object has an ExecutionId property that contains the execution ID of the script that was triggered by the DOM action.
+   - Its TraceData contains a DomActionInfo object in which type is set to DomActionInfo.Type.ScriptExecutionId.
+   - The info object has an ExecutionId property that contains the execution ID of the script that was triggered by the DOM action.
 
-3. The client sends a ScriptControlMessage of type Launch using the script ID that was returned and will then receive ScriptProgressEventMessages.
+1. The client sends a ScriptControlMessage of type Launch using the script ID that was returned and will then receive ScriptProgressEventMessages.
 
 > [!NOTE]
 > The connection used by the DomHelper sending the DOM action execution request should also be used to interact with the script.
@@ -275,16 +281,16 @@ SLSSH now supports the following additional HMAC, cyphers and key exchange algor
 - ECDHSHA2NISTP384
 - ECDHSHA2NISTP521
 
-DataMiner now supports the following encryption methods (in order of preference):
+DataMiner now supports the encryption methods detailed below (in order of preference).
 
-**HMACs**
+##### HMACs
 
 - HMAC-SHA2-512
 - HMAC-SHA2-256
 - HMAC-SHA1
 - HMAC-MD5
 
-**Key exchange algorithms**
+##### Key exchange algorithms
 
 - ecdh-sha2-nistp521
 - ecdh-sha2-nistp384
@@ -293,7 +299,7 @@ DataMiner now supports the following encryption methods (in order of preference)
 - diffie-hellman-group1-sha1
 - diffie-hellman-group-exchange-sha1
 
-**Ciphers**
+##### Ciphers
 
 - Aes-256-CTR
 - Aes-128-CTR
@@ -325,6 +331,7 @@ Also, more detailed entries will now be added to the logs when setup errors have
 
 > [!IMPORTANT]
 > Note that, for this enhancement to work, the following changes have to be made to the Azure configuration and the DataMiner.xml file.
+>
 > - In Azure, add the API permission Application.Read.All.
 > - Copy the Azure app object ID (Azure AD \> App registrations \> \[your application\] \> Object ID) and, in DataMiner.xml, add it to the objectId attribute of the AzureAD element.
 
@@ -357,25 +364,25 @@ See the following example:
 </Param>
 ```
 
-**Overview of the possible ArrayOptions@index and Connection.Type combinations**
+##### Overview of the possible ArrayOptions@index and Connection.Type combinations
 
 - Connection type: DirectConnection
 
-    - No index defined: The data will be pushed via the direct connection and the ID will be assigned by the database. Updating the data will not be possible in this case.
-    - Index defined: The data will be pushed via the direct connection and the ID will be assigned by the column template that is being sent via the direct connection by means of an “InitializeWriteAction”.
+  - No index defined: The data will be pushed via the direct connection and the ID will be assigned by the database. Updating the data will not be possible in this case.
+  - Index defined: The data will be pushed via the direct connection and the ID will be assigned by the column template that is being sent via the direct connection by means of an “InitializeWriteAction”.
 
-    > [!NOTE]
-    > When using directconnection in combination with a defined index, the TTL of the table should always be infinite.
+  > [!NOTE]
+  > When using directconnection in combination with a defined index, the TTL of the table should always be infinite.
 
 - Connection type: SLProtocol
 
-    - No index defined: Currently not supported.
-    - Index defined: Default logger table configuration.
+  - No index defined: Currently not supported.
+  - Index defined: Default logger table configuration.
 
 - No connection type defined
 
-    - No index defined: Fallback to connection type “DirectConnection” with no index defined.
-    - Index defined: Fallback to connection type “SLProtocol” with index defined.
+  - No index defined: Fallback to connection type “DirectConnection” with no index defined.
+  - Index defined: Fallback to connection type “SLProtocol” with index defined.
 
 #### NT_UPDATE_DESCRIPTION_XML (127) now supports overriding parameter units \[ID_32891\]
 
@@ -430,7 +437,7 @@ To do so, use the following syntax:
 
 See also [Running memory-intensive elements in separate SLProtocol and SLScripting instances \[ID_32742\] \[ID_32917\]](#running-memory-intensive-elements-in-separate-slprotocol-and-slscripting-instances-id_32742-id_32917).
 
-**DataMiner.xml: scriptingProcesses option now accepts integer values**
+##### DataMiner.xml: scriptingProcesses option now accepts integer values
 
 From now on, in DataMiner.xml, you can set the scriptingProcesses option to an integer value, indicating the exact number of SLScripting processes that have to be launched. The SLProtocol processes will then be assigned one of the available SLScripting processes in a round-robin way.
 
@@ -441,6 +448,7 @@ For example, if protocolProcesses is set to 5 (i.e. the default value), and scri
 - SLScripting 3 will host SLProtocol #3
 
 > [!NOTE]
+>
 > - Assigning more SLScripting processes than SLProtocol processes will simply give every SLProtocol its own instance without launching additional SLScripting processes.
 > - Up to now, the allowed values for scriptingProcesses were “\[service\]” and “protocol”. If scriptingProcesses is set to “protocol”, an SLScripting process is initialized for every SLProtocol process. This should not be confused with setting protocolProcesses to “protocol”. In that case, an SLProtocol process is launched for every protocol name.
 
@@ -480,6 +488,7 @@ This subscription filter can be any filter that can be passed to a parameter cha
 When you export average trend data, selecting the new *Fixed interval* option will make sure that the data points are equally distributed and that gaps smaller than a time slot (e.g. 5 minutes) are ignored.
 
 > [!NOTE]
+>
 > - The “fixed interval” option can only be used when exporting average trend data for double, number or analog parameters.
 > - When you select the *Fixed interval* option, the *Exclude gaps* option will automatically be selected and disabled to indicate that the latter option is included in the former.
 > - When you select the *Line graph* option, from now on, that option will no longer add intermediary data points. Those will now by default be added when you select the *Fixed interval* option.
@@ -505,7 +514,7 @@ RN 32394: Main Release Version 10.3.0 - Feature Release Version 10.2.3 -->
 
 The following changes have been made with regard to session variables that can be used in embedded Resource Manager components.
 
-**New variable “SelectedTimeRange”**
+##### New variable 'SelectedTimeRange'
 
 When you select a time range, that range will be stored in the SelectedTimeRange variable.
 
@@ -513,13 +522,13 @@ The value can be set in serialized form (e.g. “5248098399646517511;52483923539
 
 This variable will be cleared whenever you select another time range in the timeline.
 
-**Updated variable “SelectedResource”**
+##### Updated variable 'SelectedResource'
 
 The SelectedResource variable will now also be filled in when you select a resource band.
 
 Note that, when you select a resource band, the SelectedPool variable will contain the first pool of the selected resource.
 
-**Problem with “SelectedReservation” variables**
+##### Problem with 'SelectedReservation' variables
 
 When you select a booking, the following variables are filled in:
 
@@ -583,7 +592,9 @@ If you specify a filter context like the one above, the shape will be linked to 
 > [!NOTE]
 > It is also possible to specify a filter context in which both system name and system type are combined. To do so, use the following syntax:
 >
-> *FilterContext=SystemName=X;SystemType=Y*<br> If you specify a filter context like the one above, the shape will be linked to the alarms of which the “System Name” is set to “X” and “System Type” is set to “Y”.
+> *FilterContext=SystemName=X;SystemType=Y*
+>
+> If you specify a filter context like the one above, the shape will be linked to the alarms of which the “System Name” is set to “X” and “System Type” is set to “Y”.
 
 #### Visual Overview: Use of dynamic units now depends on value of DynamicUnits soft-launch option \[ID_32256\]
 
@@ -654,10 +665,11 @@ In short,
 If you want to replace the separator inside the name, you must specify both the first \[sep:XY\] and the second \[sep:XY\], even if there are no arguments.
 
 > [!NOTE]
+>
 > - In each of the examples above, the card will be opened on a particular page:
->     - “Topology:Total” or “t:Total” will open the topology page named “Total”.
->     - “BelowThisObject:STB” or “bto:STB” will open the CPE card page named “STB”.
->     - “BelowThisView:Elements” or “btv:Elements” will open the view card page named “Elements”.
+>   - “Topology:Total” or “t:Total” will open the topology page named “Total”.
+>   - “BelowThisObject:STB” or “bto:STB” will open the CPE card page named “STB”.
+>   - “BelowThisView:Elements” or “btv:Elements” will open the view card page named “Elements”.
 > - When the card layout is set to “Tab layout”, it is now possible to save EPM cards in workspaces.
 
 #### New “IN USE” info tag to be used in element shapes linked to resources \[ID_32393\]
@@ -680,25 +692,25 @@ In shapes linked to an object, it is now possible to change the text wrapping an
 
 To do so, add a shape data field of type TextStyle, and set its value to “TextWrapping=...” and/or “TextTrimming=...” (separated by a pipe character).
 
-| Shape data field | Value                                                                                            |
-|------------------|--------------------------------------------------------------------------------------------------|
-| TextStyle        | TextWrapping=NoWrap/Wrap/WrapWithOverflow\|<br> TextTrimming=CharacterEllipsis/WordEllipsis/None |
+| Shape data field | Value                                                                                       |
+|------------------|---------------------------------------------------------------------------------------------|
+| TextStyle        | TextWrapping=NoWrap/Wrap/WrapWithOverflow\|TextTrimming=CharacterEllipsis/WordEllipsis/None |
 
-**TextWrapping options**
+##### TextWrapping options
 
-| Option           | Behavior                                                                                                                                                                         |
-|------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| NoWrap           | The text will not wrap onto a new line, unless one was explicitly configured with a line break. Text that exceeds the bounds of the shape width and/or height will not be shown. |
-| Wrap             | The text will automatically be wrapped onto new lines when the width of the shape is exceeded. The text past the boundaries of the shape height will not be shown.               |
-| WrapWithOverflow | The text will be shown as before. (default option)                                                                                                                               |
+| Option | Behavior |
+|--|--|
+| NoWrap | The text will not wrap onto a new line, unless one was explicitly configured with a line break. Text that exceeds the bounds of the shape width and/or height will not be shown. |
+| Wrap | The text will automatically be wrapped onto new lines when the width of the shape is exceeded. The text past the boundaries of the shape height will not be shown. |
+| WrapWithOverflow | The text will be shown as before. (default option) |
 
-**TextTrimming options**
+##### TextTrimming options
 
-| Option            | Description                                                                                                                                                              |
-|-------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Option | Description |
+|--|--|
 | CharacterEllipsis | The text will be cut off a bit earlier than when TextTrimming is set to “None”, and “...” will be added to indicate that the text is longer than what fits in the shape. |
-| WordEllipsis      | The text will be cut off at the nearest full word, and “...” will be added to indicate that the text is longer than what fits in the shape.                              |
-| None              | The text will be cut off when necessary. (default option)                                                                                                                |
+| WordEllipsis | The text will be cut off at the nearest full word, and “...” will be added to indicate that the text is longer than what fits in the shape. |
+| None | The text will be cut off when necessary. (default option) |
 
 Setting TextTrimming to either “CharacterEllipsis” or “WordEllipsis” will have no effect when TextWrapping is set to its default value (i.e. “WrapWithOverflow”).
 
@@ -728,12 +740,16 @@ Enabling this cache has the following advantages:
 
 When, in DataMiner Cube, you right-click a visual overview and select “Edit in Visio”, an advanced edit panel will appear. When no shape is selected, you can now click an ellipsis button (“...”) in the top-right corner of the panel. This will open a menu with the following options.
 
-| Option           | Description                                                                                                                                                                                                                   |
-|------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Add theming      | If you click this option, the following theme options will be added to the page-level “Options” data field\*:<br> *#000000=ThemeForeground\|#FF0000=ThemeAccentColor\|#FFFFFF=ThemeBackground* |
-| Add pretty hover | If you click this option, the following option will be added to the page-level “Options” data field\*:<br> *HoverType=Geometry*                                                                |
+- Add theming: If you click this option, the following theme options will be added to the page-level “Options” data field:
 
-*\*If no page-level “Options” data field exists, one will be created.*
+  *#000000=ThemeForeground\|#FF0000=ThemeAccentColor\|#FFFFFF=ThemeBackground*
+
+- Add pretty hover: If you click this option, the following option will be added to the page-level “Options” data field:
+
+  *HoverType=Geometry*
+
+> [!NOTE]
+> If no page-level “Options” data field exists, one will be created.
 
 #### Services app: Service definition type \[ID_32667\]
 
@@ -763,6 +779,7 @@ Up to now, open trend graphs were automatically refreshed every 2 minutes. From 
 Default: 2 minutes
 
 > [!NOTE]
+>
 > - Changing this refresh rate can have a minor effect on overall performance, especially when opening trend graphs with more than 10 parameters.
 > - If you change the *Update interval* setting, then open trend graphs need to be closed and re-opened if you want them to use the new interval.
 
@@ -783,17 +800,17 @@ To do so, add the following shape data fields to the shape:
 | SetVar           | \<name of session variable>                 |
 | SetVarOptions    | Control=Duration\|\<option>\|\<option>\|... |
 
-**Options**
+##### Options
 
 Next to “Control=Duration”, you can specify the following options (separated by pipe characters).
 
-| Option                  | Description                                                                                                                                                                                                                               |
-|-------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| ShowInfinity=true/false | When this option is set to true, next to the duration selector, a checkbox is displayed that can be used to set the duration to infinity, which will replace the value of the session variable with TimeSpan.MaxValue.<br> Default: False |
-| Minimum=                | The minimum duration.<br> Default: 1 minute                                                                                                                                                                                               |
-| Maximum=                | The maximum duration.<br> Default: 1 week                                                                                                                                                                                                 |
+| Option | Description |
+|--|--|
+| ShowInfinity=true/false | When this option is set to true, next to the duration selector, a checkbox is displayed that can be used to set the duration to infinity, which will replace the value of the session variable with TimeSpan.MaxValue. Default: False. |
+| Minimum= | The minimum duration. Default: 1 minute. |
+| Maximum= | The maximum duration. Default: 1 week. |
 
-**Setting the initial value of the duration in the session variable**
+##### Setting the initial value of the duration in the session variable
 
 Use a page-level InitVar field to set the initial value of the duration in the session variable.
 
@@ -802,7 +819,7 @@ If you set the initial value to “Infinity”, the value in the session variabl
 > [!NOTE]
 > Using an InitVar or SetVar field, it is possible to set a duration that is outside of the specified minimum/maximum range.
 
-**Specifying a duration**
+##### Specifying a duration
 
 When specifying the minimum duration, the maximum duration and the InitVar value, you can use the following units:
 
@@ -825,8 +842,8 @@ When, in the Alarm Console, you enable the “Automatic incident tracking” opt
 
 - When you right-click an alarm that is not part of any alarm group, you will be able to click the “Add to incident” option. If you do so, a window will appear, asking you
 
-    - to create a new incident (i.e. a new alarm group) and add the alarm to it, or
-    - to add the alarm to an existing alarm group.
+  - to create a new incident (i.e. a new alarm group) and add the alarm to it, or
+  - to add the alarm to an existing alarm group.
 
 - When you right-click an alarm that is already part of an alarm group, you will be able to click the “Remove from incident” option. If you do so, the alarm will be removed from the alarm group of which it was a part.
 
@@ -835,6 +852,7 @@ When, in the Alarm Console, you enable the “Automatic incident tracking” opt
 - By default, automatically created alarm groups are named “View group:X” and manually created alarm groups are named “User defined group”. To rename an alarm group, click the pencil icon next to the name and enter a new name.
 
 > [!NOTE]
+>
 > - From the moment a user manually adds or removes an alarm to or from an alarm group or renames an alarm group, that group will no longer be updated automatically.
 > - Manually created incidents (alarm groups) will have their alarm focus score set to 0.
 > - When Cube is connected to a DataMiner Agent that does not yet support manually creating, updating and renaming incidents (alarm groups), the menu commands to manipulate alarm groups will not be available.
@@ -893,8 +911,8 @@ From now on, in the Alarm Console, you will be able to manually create incident 
 
 - When you right-click an alarm that is not part of any alarm group, you will be able to click the “Add to incident” option. If you do so, a window\* will appear, asking you
 
-    - to create a new incident (i.e. a new alarm group) and add the alarm to it, or
-    - to add the alarm to an existing alarm group.
+  - to create a new incident (i.e. a new alarm group) and add the alarm to it, or
+  - to add the alarm to an existing alarm group.
 
 These manually created groups will always be visible in active alarm tabs, even when the “Automatic incident tracking” option is disabled.
 
@@ -921,7 +939,7 @@ From now on, when you right-click an incident (alarm group), you will be able to
 - Force release ownership
 - Add a comment
 
-If you right-click a manually created incident, you will also be able to select *Clear alarm... *When you clear a manually created incident, the alarm group will be cleared and all the base alarms will again be added to the Alarm Console.
+If you right-click a manually created incident, you will also be able to select *Clear alarm*. When you clear a manually created incident, the alarm group will be cleared and all the base alarms will again be added to the Alarm Console.
 
 #### Alarm templates - Anomaly detection: Configuring alarms for flatline changes \[ID_33123\] \[ID_33139\] \[ID_33171\]
 
@@ -946,6 +964,7 @@ For example, a hyperlink of type “openelement” could contain the following c
 ```
 
 > [!NOTE]
+>
 > - If you want to use a view property, a service property or an element property in a hyperlink, then you must enable its “Make this property available for alarm filtering” setting in DataMiner Cube.
 > - If you want to use a view property on an alarm of an element that has been added to multiple views, the property that will be used in the hyperlink will be the property of the view with the lowest ID that contains the element.
 
@@ -976,9 +995,9 @@ If you use the *interface=definitions* component option described above, you can
 - Properties (IDictionary\<string, dynamic>)
 - ServiceDefinitionType (Int): This is an enum with the following possible values:
 
-    - 0 = Default (representing the type "SRM" in Cube)
-    - 1 = ProcessAutomation (representing the type "Skyline Process Automation" in Cube)
-    - 2 = CustomProcessAutomation (representing the type "Custom Process Automation" in Cube)
+  - 0 = Default (representing the type "SRM" in Cube)
+  - 1 = ProcessAutomation (representing the type "Skyline Process Automation" in Cube)
+  - 2 = CustomProcessAutomation (representing the type "Custom Process Automation" in Cube)
 
 Examples:
 
@@ -1018,13 +1037,13 @@ A number of enhancements have been made to the start window of the DataMiner Cub
 
 - Settings menu (cogwheel icon in bottom-right corner)
 
-    - New *About* box with version information.
-    - All menu items now have icons in front of them.
+  - New *About* box with version information.
+  - All menu items now have icons in front of them.
 
 - When you right-click an agent,
 
-    - you can now click *Open in browser* to connect to that agent using a browser version of Cube, and
-    - all context menu items now have icons in front of them.
+  - you can now click *Open in browser* to connect to that agent using a browser version of Cube, and
+  - all context menu items now have icons in front of them.
 
 - When agents/clusters are arranged in named groups, the context menu of the DataMiner Cube system tray icon will now contain submenus per named group.
 
@@ -1053,10 +1072,12 @@ When you add a DataMiner Agent to the start window, in the Advanced settings, yo
 
 In Data Display, the context menu of a URL parameter will now contain the following copy commands:
 
-| Command              | Function                                                                                                                       |
-|----------------------|--------------------------------------------------------------------------------------------------------------------------------|
-| Copy ‘\<URL>’        | Copies the URL to the Windows Clipboard.                                                                                       |
-| Copy value to editor | Copies the URL to the write parameter edit box.<br> Note: This command will only be available when there is a write parameter. |
+- Copy ‘\<URL>’: Copies the URL to the Windows Clipboard.
+
+- Copy value to editor: Copies the URL to the write parameter edit box.
+
+  > [!NOTE]
+  > This command will only be available when there is a write parameter.
 
 #### Visual Overview: Adding a “Refresh” and/or a “Sort” button to a table control \[ID_33346\]
 
@@ -1068,34 +1089,34 @@ Example of how to add both a *Refresh* button and a *Sort* button:
 
 1. Create three shapes and group them:
 
-    - the first shape will contain the table,
-    - the second shape will contain the *Refresh* button, and
+   - the first shape will contain the table,
+   - the second shape will contain the *Refresh* button, and
    - the third shape will contain the *Sort* button.
 
-2. Add the following shape data field to the shape that has to contain the table:
+1. Add the following shape data field to the shape that has to contain the table:
 
-    | Shape data field      | Value |
-    |-------------------------|-------|
-    | ParameterControlOptions | Table |
+   | Shape data field      | Value |
+   |-------------------------|-------|
+   | ParameterControlOptions | Table |
 
-3. Add the following shape data field to the shape that has to contain the Refresh button:
+1. Add the following shape data field to the shape that has to contain the Refresh button:
 
-    | Shape data field      | Value   |
-    |-------------------------|---------|
-    | ParameterControlOptions | Refresh |
+   | Shape data field      | Value   |
+   |-------------------------|---------|
+   | ParameterControlOptions | Refresh |
 
-4. Add the following shape data field to the shape that has to contain the Sort button:
+1. Add the following shape data field to the shape that has to contain the Sort button:
 
-    | Shape data field      | Value |
-    |-------------------------|-------|
-    | ParameterControlOptions | Sort  |
+   | Shape data field      | Value |
+   |-------------------------|-------|
+   | ParameterControlOptions | Sort  |
 
-5. Add the following shape data fields to the group:
+1. Add the following shape data fields to the group:
 
-    | Shape data field | Value                      |
-    |--------------------|----------------------------|
-    | Element            | Element ID or element name |
-    | ParameterControl   | ID of the table parameter  |
+   | Shape data field | Value                      |
+   |--------------------|----------------------------|
+   | Element            | Element ID or element name |
+   | ParameterControl   | ID of the table parameter  |
 
 > [!NOTE]
 > The *Refresh* button and the *Sort* button will only be displayed when necessary.
@@ -1112,7 +1133,7 @@ When users manually create an incident, change the display value of a manually c
 
 From now on, you can pass elements, services, or views to the YAxisResources session variable in order to show the corresponding resource bands.
 
-**Passing elements**
+##### Passing elements
 
 You can pass elements by name or by ID as a string of comma-separated values.
 
@@ -1126,7 +1147,7 @@ YAxisResources:Element=MyElement,[this element],123/456
 
 The corresponding resource bands are not updated automatically in case there is a change to the configuration of the elements.
 
-**Passing services**
+##### Passing services
 
 You can pass services by name or by ID as a string of comma-separated values.
 
@@ -1142,7 +1163,7 @@ To also show resources for contributing bookings, in the ComponentOptions shape 
 
 The resource band will be updated in real time, based on the linked booking. This means that when you add or remove resources in a booking, you will immediately see the effect on the timeline.
 
-**Passing views**
+##### Passing views
 
 You can pass views by name or by ID as a string of comma-separated values.
 
@@ -1188,16 +1209,17 @@ When you embed a Service Manager component in Visual Overview, it is now possibl
 
 To do so, add a FunctionTypes option to the ComponentOptions shape data field.
 
-| Shape data field | Value                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-|------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Component        | ServiceManager                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| Shape data field | Value |
+|--|--|
+| Component | ServiceManager |
 | ComponentOptions | FunctionTypes=\[comma-separated list of values\]<br> Possible values:<br> -  Undefined (i.e. NULL value)<br> -  UserTask<br> -  ScriptTask<br> -  ResourceTask<br> -  Gateway<br> -  NoneStartEvent<br> -  TimeStartEvent<br> -  EndEvent |
 
 > [!NOTE]
+>
 > - The FunctionTypes option
->     - only works in conjunction with the options Interface=definition or Interface=definitions.
->     - can be used in combination with the HideChildFunctions option.
->     - can be set dynamically using session variables.
+>   - only works in conjunction with the options Interface=definition or Interface=definitions.
+>   - can be used in combination with the HideChildFunctions option.
+>   - can be set dynamically using session variables.
 > - The filter will be cleared when no FunctionTypes option is specified or when the FunctionTypes option is set to an empty list of values.
 > - Parent functions that do not match the filter but have child functions that match the filter will be displayed in the function tree to allow you to navigate to one of the child functions.
 
@@ -1241,9 +1263,9 @@ In shape data or shape text of shapes linked to a booking (e.g. dynamically gene
 
 See the following examples:
 
-*\[Resource:\[reservation:\[this reservationID\],ResourceID\|NodeID=18\|\],Name\]*
+`[Resource:[reservation:[this reservationID],ResourceID|NodeID=18|],Name]`
 
-*\[reservation:\[this reservationID\],Property=Monitoring\]*
+`[reservation:[this reservationID],Property=Monitoring]`
 
 #### Alarm Console - Incident tracking: Some types of alarms can now be manually added to incidents even when they do not contain any focus data \[ID_33771\] \[ID_33803\]
 
@@ -1288,6 +1310,7 @@ These new password boxes can be found in the following locations:
 - Interactive Automation scripts (UIBlock of type PasswordBox)
 
 > [!NOTE]
+>
 > - If a value received from the server has been automatically entered in a password box, the strength indicator and peek button will not be available until you enter a completely new password.
 > - If the value received from the server is a fixed 8-asterisk-long placeholder instead of an actual password, you will not be able to modify it. You will be forced to replace the entire value.
 
@@ -1358,7 +1381,10 @@ if (script.HadError)
 > [!NOTE]
 > Up to now, when an element was not running, the following error message would be thrown:
 >
-> *Element {elementName} is not active, not available or does not exist*<br> From now, when an element is not running, the following error message (in which elementState will have one of the following values: paused, stopped, in timeout or not active) will be thrown instead:
+> *Element {elementName} is not active, not available or does not exist*
+>
+> From now, when an element is not running, the following error message (in which elementState will have one of the following values: paused, stopped, in timeout or not active) will be thrown instead:
+>
 > *Element {elementName} is {elementState}*
 
 #### Added the option to skip the 'script started' information event \[ID_33666\]
@@ -1393,11 +1419,11 @@ options.StartScript();
 
 ### DMS Maps
 
-
+*No DMS Maps release notes have been added to this release yet.*
 
 ### DMS EPM
 
-
+*No DMS EPM release notes have been added to this release yet.*
 
 ### DMS Web Services
 
@@ -1460,7 +1486,7 @@ To do so, enable the *Visualize directions* setting and select one of the follow
 | Option         | Description                                                                                                                                                           |
 |----------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Flow (default) | The direction is visualized by means of animated edges.                                                                                                               |
-| Arrows         | The direction is visualized by means of arrows drawn on the edges.<br> If you select this option, you can also specify the exact position of the arrows on the edges. |
+| Arrows         | The direction is visualized by means of arrows drawn on the edges. If you select this option, you can also specify the exact position of the arrows on the edges. |
 
 #### Dashboards app: Default index filter for parameter feed component \[ID_32595\]
 
@@ -1468,7 +1494,7 @@ To do so, enable the *Visualize directions* setting and select one of the follow
 
 It is now possible to add a default index filter to a parameter feed component. This way, it's not necessary to apply your filter to the component again whenever the dashboard is refreshed.
 
-This new option is available as an advanced setting that is not displayed by default. To be able to configure it, you therefore first need to add the *showAdvancedSettings=true* option to the dashboard URL. In the *Data* pane of the dashboard edit mode, a new *Parameter table filters *section will then become available. You can configure the default filter in this section and then drag it to a component to apply it.
+This new option is available as an advanced setting that is not displayed by default. To be able to configure it, you therefore first need to add the *showAdvancedSettings=true* option to the dashboard URL. In the *Data* pane of the dashboard edit mode, a new *Parameter table filters* section will then become available. You can configure the default filter in this section and then drag it to a component to apply it.
 
 #### Dashboards app: GQI now supports external data \[ID_32656\] \[ID_32659\] \[ID_32930\] \[ID_33795\]
 
@@ -1555,11 +1581,11 @@ All methods discussed above are called at some point during the GQI life cycle, 
 
 The following flowchart illustrates the GQI life cycle when a query is created:
 
-![](~/release-notes/images/GQI_-_Create_query.png)
+![GQI life cycle when query is created](~/release-notes/images/GQI_-_Create_query.png)
 
 The following flowchart illustrates the GQI life cycle when a query is fetched:
 
-![](~/release-notes/images/GQI_-_Fetch_query.png)
+![GQI life cycle when query is fetched](~/release-notes/images/GQI_-_Fetch_query.png)
 
 ##### Objects
 
@@ -1755,7 +1781,7 @@ These applications can be created on the root web page of a DataMiner System and
 > [!NOTE]
 > As the “Low-code Apps” license is required to use the DataMiner Application Framework, you will not have access to the framework if you do not have this license.
 
-**Pages and panels**
+##### Pages and panels
 
 Pages and panels are the basic building blocks of an application. On a page or a panel, or even between pages and panels, data can be fed between components to create dynamic visualizations. Pages and panels can also each have a header bar with different buttons that are used to execute actions via events. Each button can have a customized icon and label.
 
@@ -1763,7 +1789,7 @@ The application sidebar allows you to navigate between the different pages, whic
 
 Panels are used to group data on a page. They can be displayed on the left side of a page, on the right side of a page or as a popup, and can be shown or hidden via actions that are executed when an event occurs. Panels can be reused on different pages.
 
-**Events and actions**
+##### Events and actions
 
 In an application, you can configure actions that will be executed each time one of the following events occur:
 
@@ -1777,16 +1803,16 @@ At present, the following actions can be configured:
 | Launch a script          | Launch an Automation script with a specific configuration and a specific number of inputs (which can be linked to feeds like e.g. the Query Row feed). |
 | Navigate to a URL        | Navigate to a specific URL (in a new tab).                                                                                                             |
 | Open a page              | Open a (hidden) page in the same application.                                                                                                          |
-| Open a panel             | Open a panel on the current page.<br> Panels can appear on the left side of a page, on the right side of the page or as a popup.                       |
+| Open a panel             | Open a panel on the current page. Panels can appear on the left side of a page, on the right side of the page or as a popup.                       |
 | Close a panel            | Close a panel that was open on the current page.                                                                                                       |
 | Open an app              | Navigate to another application.                                                                                                                       |
-| Execute component action | Execute a component action.<br> E.g. select an item in a table, create a new instance, etc.                                                            |
+| Execute component action | Execute a component action. E.g. select an item in a table, create a new instance, etc.                                                            |
 
 By default, actions are executed asynchronously. However, it is also possible to configure chains of actions that should be executed synchronously, i.e. only when the preceding action was executed successfully.
 
 Also, by combining different actions into one, you can create complex behavior. For example, open a page, open a panel and launch an Automation script that updates parameters displayed on that panel while it is being opened. This complex action can then be linked to e.g. a header bar button.
 
-**Versioning**
+##### Versioning
 
 The DataMiner Application Framework includes a versioning system that allows different versions of the same application to exist simultaneously. These different versions can be accessed via the versions panel of the application, which also allows the versions to be edited.
 
@@ -1794,7 +1820,7 @@ When you create a new application, a first draft version of that application is 
 
 Per application, there can be up to 15 versions: 14 draft versions and one published version. When a 16th version is created, the oldest draft version will automatically be deleted. The published version will never be deleted. As there can be only one published version, whenever you publish a version, the previously published version will automatically be demoted to draft version.
 
-**Security**
+##### Security
 
 The application framework has two levels of security:
 
@@ -1853,9 +1879,10 @@ When you right-click a column header of a data table component (e.g. a GQI table
     | Boolean          | True or false                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 
     > [!NOTE]
-    > -  You can specify multiple column filters. If you do, they will be combined with AND.
-    > -  Column filters can be used in combination with the component’s search box.
-    > -  Grouping and column filters are not persistent. When you leave the page, all grouping and filtering will be cleared.
+    >
+    > - You can specify multiple column filters. If you do, they will be combined with AND.
+    > - Column filters can be used in combination with the component’s search box.
+    > - Grouping and column filters are not persistent. When you leave the page, all grouping and filtering will be cleared.
 
 #### Web apps - Data table component: Copy cell/row/column/table \[ID_33440\]
 
@@ -1866,6 +1893,7 @@ When you right-click a non-empty cell in a data table component (e.g. a GQI tabl
 If you choose to copy the entire row or the entire table, the data will be copied in CSV format.
 
 > [!NOTE]
+>
 > - If you copy a cell or an entire column, the values will not be enclosed in double quotes.
 > - If you copy an entire row or an entire table, the values will be enclosed in double quotes.
 > - If a value contains double quotes, they will be escaped upon copying.
@@ -1932,6 +1960,7 @@ It is now possible to retrieve bookings in a paged way and sorted by one of the 
 
 > [!NOTE]
 > Depending on the configuration of the Elasticsearch database, DataMiner Agents running one of the following DataMiner versions may potentially not be able to sort by the above-mentioned properties.
+>
 > - v10.0.0 (CU10)
 > - v10.1.0 (CU0)
 > - v10.1.1 (CU0)
@@ -1960,6 +1989,7 @@ pfHelper.ReplaceActiveSystemFunctionDefinitions(xmlcontent);
 ```
 
 > [!NOTE]
+>
 > - If the uploaded file is not a valid XML file, a DataMinerException will be thrown and the system functions will not be replaced.
 > - Each function in the XML file must have a valid ID. Functions without a valid ID will be ignored.
 
@@ -1986,6 +2016,7 @@ When configuring a ReservationInstance, you now have to specify a ReservationIns
 - Custom Process Automation
 
 > [!NOTE]
+>
 > - In case of a ServiceReservationInstance, the type of the instance must be identical to the type of the ServiceDefinition. Otherwise, the ResourceManager will throw a “ServiceDefinitionTypeDoesNotMatch” error.
 > - A new exposer has been added to allow filter ReservationInstanceType.
 
@@ -2007,19 +2038,19 @@ The behavior of the *AbsoluteQuarantinePriority* property has been modified. Up 
 To implement a quarantine, overbooked capacity is now removed from bookings according to the following order of priority:
 
 1. Bookings that are already in the quarantined state.
-2. Bookings for which *AbsoluteQuarantinePriority* is not specified or false.
-3. Bookings that are in a "Pending" state.
-4. Bookings with the latest start time.
-5. Booking of which the name comes last alphabetically.
-6. Bookings of which the GUID comes last alphabetically.
+1. Bookings for which *AbsoluteQuarantinePriority* is not specified or false.
+1. Bookings that are in a "Pending" state.
+1. Bookings with the latest start time.
+1. Booking of which the name comes last alphabetically.
+1. Bookings of which the GUID comes last alphabetically.
 
 The image below illustrates a situation where the quarantine behavior has changed. Previously, booking A would have been quarantined, as it uses resource 1. Now this will no longer happen as the capacity is actually not overbooked.
 
-![](~/release-notes/images/32654_1.png)
+![Quarantine behavior example](~/release-notes/images/32654_1.png)
 
 The following image also illustrates the modified behavior. If booking B does not have *AbsoluteQuarantinePriority* set to true, its capacity will be moved, as it has a later start time. If *AbsoluteQuarantinePriority* is set to true, the overbooking will be resolved by moving the capacity from booking A.
 
-![](~/release-notes/images/32654_2.png)
+![Quarantine behavior example](~/release-notes/images/32654_2.png)
 
 ##### New ConcurrencyUsageType property for ResourceUsageDefinition
 
@@ -2467,7 +2498,7 @@ From now on, the deletion of a function resource will be blocked when the deleti
 
 The ResourceManagerHelper now contains a new method to delete resources:
 
-*public Resource\[\] RemoveResources(Resource\[\] resources, ResourceDeleteOptions options)*
+`public Resource[] RemoveResources(Resource[] resources, ResourceDeleteOptions options)`
 
 > [!NOTE]
 > Contributing resources can be deleted even when no parent element can be found. The parent element of a contributing resource is an enhanced service element. When the contributing booking is no longer running, the enhanced service element will no longer exist.
@@ -2737,7 +2768,7 @@ Also, the name of a group could get lost when you deleted the first agent/cluste
 
 #### CSLCloudBridge library would incorrectly not take into account the connection timeout specified in SLCloud.xml \[ID_33322\]
 
-<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.6 [CU0]  --> 
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.6 [CU0]  -->
 
 Up to now, the CSLCloudBridge library would incorrectly not take into account the connection timeout specified in the SLCloud.xml file. In some cases, this could lead to run-time errors in the MessageBrokerReconnectThread.
 

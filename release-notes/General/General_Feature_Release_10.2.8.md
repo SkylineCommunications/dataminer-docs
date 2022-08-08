@@ -16,14 +16,14 @@ Process:
 
 1. A client requests the execution of a DOM action in which the execution of an interactive Automation script has been defined via the domHelper.DomInstances.ExecuteAction() method.
 
-    To indicate that the Automation script is an interactive Automation script, the IsInteractive property of the ExecuteScriptDomActionDefinition must be set to true.
+   To indicate that the Automation script is an interactive Automation script, the IsInteractive property of the ExecuteScriptDomActionDefinition must be set to true.
 
-2. The domHelper.DomInstances.ExecuteAction() method replies immediately.
+1. The domHelper.DomInstances.ExecuteAction() method replies immediately.
 
-    - Its TraceData contains a DomActionInfo object in which type is set to DomActionInfo.Type.ScriptExecutionId.
-    - The info object has an ExecutionId property that contains the execution ID of the script that was triggered by the DOM action.
+   - Its TraceData contains a DomActionInfo object in which type is set to DomActionInfo.Type.ScriptExecutionId.
+   - The info object has an ExecutionId property that contains the execution ID of the script that was triggered by the DOM action.
 
-3. The client sends a ScriptControlMessage of type Launch using the script ID that was returned and will then receive ScriptProgressEventMessages.
+1. The client sends a ScriptControlMessage of type Launch using the script ID that was returned and will then receive ScriptProgressEventMessages.
 
 > [!NOTE]
 > The connection used by the DomHelper sending the DOM action execution request should also be used to interact with the script.
@@ -46,7 +46,7 @@ When, during a DataMiner upgrade, the VerifyClusterPorts prerequisite fails, you
 
 From now on, you can pass elements, services, or views to the YAxisResources session variable in order to show the corresponding resource bands.
 
-**Passing elements**
+##### Passing elements
 
 You can pass elements by name or by ID as a string of comma-separated values.
 
@@ -60,7 +60,7 @@ YAxisResources:Element=MyElement,[this element],123/456
 
 The corresponding resource bands are not updated automatically in case there is a change to the configuration of the elements.
 
-**Passing services**
+##### Passing services
 
 You can pass services by name or by ID as a string of comma-separated values.
 
@@ -76,7 +76,7 @@ To also show resources for contributing bookings, in the ComponentOptions shape 
 
 The resource band will be updated in real time, based on the linked booking. This means that when you add or remove resources in a booking, you will immediately see the effect on the timeline.
 
-**Passing views**
+##### Passing views
 
 You can pass views by name or by ID as a string of comma-separated values.
 
@@ -134,10 +134,9 @@ In shape data or shape text of shapes linked to a booking (e.g. dynamically gene
 
 See the following examples:
 
-```txt
-[Resource:[reservation:[this reservationID],ResourceID|NodeID=18|],Name]*
-[reservation:[this reservationID],Property=Monitoring]*
-```
+`[Resource:[reservation:[this reservationID],ResourceID|NodeID=18|],Name]`
+
+`[reservation:[this reservationID],Property=Monitoring]`
 
 ### DMS Automation
 
@@ -241,12 +240,13 @@ A number of enhancements have been made to the NATS configuration:
 
 - New NATSForceManualConfig option to disable the automatic reset timer in NATSCustodian.
 
-    Disabling the timer can be done in one of the following ways:
+  Disabling the timer can be done in one of the following ways:
 
-    - Set the SLNet option “NATSForceManualConfig” to true in the SLNetClientTest tool (default = false).
-    - Set the SLNet.NATSForceManualConfig tag to true in MaintenanceSettings.xml.
+  - Set the SLNet option “NATSForceManualConfig” to true in the SLNetClientTest tool (default = false).
+  - Set the SLNet.NATSForceManualConfig tag to true in MaintenanceSettings.xml.
 
 > [!NOTE]
+>
 > - Changing this option in the SLNetClientTest tool can be done at run-time. The change will be applied immediately.
 > - Forcing manual configuration will disable the automatic NATS configuration on the DataMiner System. It will then be up to the user to either manually configure a NATS cluster or manually call NatsCustodianResetNatsMessage when changes are made to the DMS.
 

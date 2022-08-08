@@ -12,7 +12,7 @@ uid: General_Feature_Release_10.1.12
 
 When switching elements within a redundancy group, from now on, additional information will be added both to the information events and the Automation scripts that are executed.
 
-**Information events**
+##### Information events
 
 The following information will be added to the information events.
 
@@ -34,17 +34,17 @@ The following information will be added to the information events.
 
 - When DataMiner intervenes in the switching process, an information event with parameter description “Linked to” is generated. From now on, this event will also mention the element from which the switch occurred. It will now contain e.g. “RDG1, Unlinked from RDG3” instead of just “RDG1”.
 
-**Automation scripts**
+##### Automation scripts
 
 When an Automation script is triggered as part of an redundancy group action, that script will now have the following additional parameters. These can then be requested from within the Automation script using the GetScriptParam(\<id>) method on the engine object.
 
-| ID    | Name                             | Description                                                                                                                                                                                                                                                            |
-|-------|----------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 65007 | \<Redundancy User>               | In case of manual switching, this parameter will contain the name of the user who performed the switch.                                                                                                                                                                |
-| 65008 | \<Redundancy Trigger>            | In case of automatic switching, this parameter will contain the ID of the trigger that caused the switch to be performed.<br> To look up the trigger, send a GetRedundancyGroup-ByID or GetRedundancyGroupByName message and check the Triggers array in the response. |
-| 65009 | \<Redundancy Triggering Element> | In case of automatic switching, this parameter will contain the ID of the element that has caused the trigger to be fired.<br> ID format: \<DataMinerID>/\<ElementID>                                                                                                  |
-| 65010 | \<Redundancy Primary>            | This parameter will contain the ID of the primary element involved in the switch.<br> ID format: \<DataMinerID>/\<ElementID>                                                                                                                                           |
-| 65011 | \<Redundancy Backup>             | This parameter will contain the ID of the backup element involved in the switch.<br> ID format: \<DataMinerID>/\<ElementID>                                                                                                                                            |
+| ID | Name | Description |
+|--|--|--|
+| 65007 | \<Redundancy User> | In case of manual switching, this parameter will contain the name of the user who performed the switch. |
+| 65008 | \<Redundancy Trigger> | In case of automatic switching, this parameter will contain the ID of the trigger that caused the switch to be performed. To look up the trigger, send a GetRedundancyGroup-ByID or GetRedundancyGroupByName message and check the Triggers array in the response. |
+| 65009 | \<Redundancy Triggering Element> | In case of automatic switching, this parameter will contain the ID of the element that has caused the trigger to be fired. ID format: `<DataMinerID>/<ElementID>` |
+| 65010 | \<Redundancy Primary> | This parameter will contain the ID of the primary element involved in the switch. ID format: `<DataMinerID>/<ElementID>` |
+| 65011 | \<Redundancy Backup> | This parameter will contain the ID of the backup element involved in the switch. ID format: `<DataMinerID>/<ElementID>` |
 
 ### DMS Security
 
@@ -52,7 +52,7 @@ When an Automation script is triggered as part of an redundancy group action, th
 
 In the *Users/Groups* section of System Center, new user permissions have been added and existing user permissions have been updated.
 
-**New user permissions**
+##### New user permissions
 
 - Modules \> Process Automation \> Add/Edit
 - Modules \> Process Automation \> Delete
@@ -60,7 +60,7 @@ In the *Users/Groups* section of System Center, new user permissions have been a
 - Modules \> Services \> Profiles \> Definitions \> Delete
 - Modules \> Services \> Profiles \> Instances \> Delete
 
-**New and restructured user permissions**
+##### New and restructured user permissions
 
 - Modules \> Profiles \> UI available
 - Modules \> Profiles \> All except instances \> Add/Edit
@@ -69,7 +69,7 @@ In the *Users/Groups* section of System Center, new user permissions have been a
 - Modules \> Profiles \> Instances \> Delete (NEW)
 - Modules \> Profiles \> Configure (with tooltip providing more information) (NEW)
 
-**Updated user permissions**
+##### Updated user permissions
 
 - Users are no longer allowed to add an instance to a newly created service profile definition that has not yet been saved.
 - When a user who has been granted the Modules \> Services \> Profiles \> Definitions \> Delete permission deletes a service profile definition, all instances of that definition must also be deleted. A confirmation box will now appear to make the user aware of this. Also, a confirmation box will now appear when you try to delete definition instances.
@@ -135,9 +135,10 @@ To configure DataMiner to automatically (a) create users authenticated by Azure 
     ```
 
     > [!NOTE]
-    > -  In Azure AD, the ipMetadata URL can be found under *Single sign-on \> SAML Signing Certificate – App Federation Metadata*.
-    > -  If, in the *Groups* element, you set the *claims* attribute to “false”, no claims will be used to add users to groups. In that case, the name of the group as specified in Cube will be used instead. A user can only be added to a single group this way.
-    > -  If, in the *Groups* element, you set the *claims* attribute to “false”, the user information that is created will not be updated.
+    >
+    > - In Azure AD, the ipMetadata URL can be found under *Single sign-on \> SAML Signing Certificate – App Federation Metadata*.
+    > - If, in the *Groups* element, you set the *claims* attribute to “false”, no claims will be used to add users to groups. In that case, the name of the group as specified in Cube will be used instead. A user can only be added to a single group this way.
+    > - If, in the *Groups* element, you set the *claims* attribute to “false”, the user information that is created will not be updated.
 
 7. Save the DataMiner.xml file.
 
@@ -249,48 +250,51 @@ If you do not want these modules to be hidden, you can set the LegacyReportsAndD
 
 It is now possible to share dashboards with other users via the DataMiner Cloud.
 
-**Prerequisites:**
+##### Prerequisites
 
 - The DataMiner Cloud Pack must be installed on the DataMiner Agent.
 - The DataMiner Agent must be connected to the DataMiner Cloud.
 - To be able to share items, users must have the following permissions:
 
-    - Modules \> Reports & Dashboards \> Dashboards \> Edit
-    - General \> Live sharing \> Share
-    - General \> Live sharing \> Edit
-    - General \> Live sharing \> Unshare
+  - Modules \> Reports & Dashboards \> Dashboards \> Edit
+  - General \> Live sharing \> Share
+  - General \> Live sharing \> Edit
+  - General \> Live sharing \> Unshare
 
-**To share a dashboard:**
+##### Sharing a dashboard
 
 1. In the Dashboards app, go to the list of dashboards on the left, and select the dashboard you want to share.
 
-2. Click the “...” button in the top-right corner of the dashboard, and select *Start sharing*.
+1. Click the “...” button in the top-right corner of the dashboard, and select *Start sharing*.
 
-3. If it is the first time you are sharing the dashboard, you may be asked to confirm that you want to link your account to the cloud. Select *I want to link the above users* and click *Link accounts*.
+1. If it is the first time you are sharing the dashboard, you may be asked to confirm that you want to link your account to the cloud. Select *I want to link the above users* and click *Link accounts*.
 
-4. In the pop-up window, fill in the email address of the person you want to share the dashboard with.
+1. In the pop-up window, fill in the email address of the person you want to share the dashboard with.
 
-5. Optionally, in the *Message* field, add a message you want to send to the person you are sharing the dashboard with, in order to provide additional information.
+1. Optionally, in the *Message* field, add a message you want to send to the person you are sharing the dashboard with, in order to provide additional information.
 
-6. If you do not want the dashboard to remain permanently available, select the *Expires* option and specify the expiration date.
+1. If you do not want the dashboard to remain permanently available, select the *Expires* option and specify the expiration date.
 
-7. Click *Share*. An email will be sent to the person you are sharing the dashboard with, to inform them that they now have access to the dashboard.
+1. Click *Share*. An email will be sent to the person you are sharing the dashboard with, to inform them that they now have access to the dashboard.
 
 > [!NOTE]
+>
 > - If access to a dashboard is limited to some users only, it will not be possible to share this dashboard.
 > - You can stop sharing a dashboard by clicking the “...” button again and selecting *Manage share*. This will open a pop-up box where you can delete the share or update the message.
 > - At present, sharing dashboards that use the following components is not supported: spectrum components, Maps, SRM components (service definition and resource usage line graph), queries using feeds and visualizations based on query feeds (e.g. node edge graph, table), trend components with subscription filters and pivot table components. If you attempt to share a dashboard with content that is not supported for sharing, a message will be displayed with more information.
 
-**To access the Sharing module that lists the dashboards that others have shared with you:**
+##### Accessing the Sharing module that lists the dashboards that others have shared with you
 
 1. Open an internet browser (other than Microsoft Internet Explorer), go to <https://dataminer.services/>, and sign in.
 
-2. On the landing page of the DataMiner Cloud Platform, click *Sharing*.<br>You will now see all data that others have shared with you.
+1. On the landing page of the DataMiner Cloud Platform, click *Sharing*.
+
+   You will now see all data that others have shared with you.
 
 > [!NOTE]
 > When somebody has shared a dashboard with you, you will receive an email informing you of this. You can then click the link in the email to immediately access the dashboard, provided that you already have a DataMiner Cloud Platform account.
 
-**Security layers:**
+##### Security layers
 
 - User authentication via Microsoft B2C login.
 
@@ -356,7 +360,11 @@ The following new permissions will automatically be assigned to existing user gr
 | ProfileManagerConfiguration            | groups with the ProfileManagerEditAll permission.                |
 
 > [!NOTE]
-> - The AddOrUpdateBulk, RemoveBulk and Create, Read, Update and Delete calls on single objects in the ProfileHelper will throw CrudFailedExceptions if the ThrowExceptionsOnErrorData property is true on the CrudComponent. If not, the TraceData will contain a ManagerStoreError with reason NoPermission.<br>The AddOrUpdateBulk and RemoveBulk calls normally never throw exceptions regardless of the ThrowExceptionsOnErrorData property. However, NoPermission is an exception since this makes the entire call fail.
+>
+> - The AddOrUpdateBulk, RemoveBulk and Create, Read, Update and Delete calls on single objects in the ProfileHelper will throw CrudFailedExceptions if the ThrowExceptionsOnErrorData property is true on the CrudComponent. If not, the TraceData will contain a ManagerStoreError with reason NoPermission.
+>
+>   The AddOrUpdateBulk and RemoveBulk calls normally never throw exceptions regardless of the ThrowExceptionsOnErrorData property. However, NoPermission is an exception since this makes the entire call fail.
+>
 > - The calls in the ProfileManagerHelper will always return TraceData (except for the CrudComponent properties on the helper).
 > - Import/export of ProfileParameters and mediation messages will throw a DataMinerException.
 > - Import/export of the ServiceProfiles will return TraceData. This helper does not have an option to throw exceptions on error data.
@@ -697,7 +705,7 @@ In some cases, the status of a newly installed Failover system would incorrectly
 
 ## Addendum CU1
 
-### Fixes
+### CU1 fixes
 
 #### Problem when using Class Library monitors in DataMiner Integration Studio \[ID_31685\]
 
@@ -705,7 +713,7 @@ Critical errors could be thrown when using Class Library monitors in DataMiner I
 
 ## Addendum CU2
 
-### Fixes
+### CU2 fixes
 
 #### Elements of which the second port was incorrectly configured would no longer start up \[ID_31882\]
 

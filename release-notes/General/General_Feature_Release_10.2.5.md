@@ -45,6 +45,7 @@ Example:
 ```
 
 > [!NOTE]
+>
 > - It is recommended to stop the DataMiner Agent before changing its DataMiner.xml file. Besides, any changes made to the DataMiner.xml will only be applied when starting the DataMiner Agent..
 > - Using the protocolProcesses option, you can specify how many SLProtocol processes will be launched to host the other elements in.
 > - Currently, a separate SLScripting process must be launched for every SLProtocol process. This means that when at least one protocol name is specified in the SeparateProcesses tag, the configured or default behavior of the scriptingProcesses attribute will be overridden to “protocol”. Note that when the scriptingProcesses attribute is set to “\[Service\]”, the following system notice will be generated.<br>*\[n\] separate protocols have been configured in the DataMiner.xml, while SLScripting is configured as service, which is not a compatible setup. To run the elements of these protocols in a separate SLProtocol and SLScripting instance, please unregister SLScripting and remove the scriptingProcesses=\\"\[Service\]\\" tag from DataMiner.xml.*
@@ -101,12 +102,16 @@ Example:
 
 When, in DataMiner Cube, you right-click a visual overview and select “Edit in Visio”, an advanced edit panel will appear. When no shape is selected, you can now click an ellipsis button (“...”) in the top-right corner of the panel. This will open a menu with the following options.
 
-| Option           | Description                                                                                                                                                                                                                   |
-|------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Add theming      | If you click this option, the following theme options will be added to the page-level “Options” data field\*:<br> *#000000=ThemeForeground\|#FF0000=ThemeAccentColor\|#FFFFFF=ThemeBackground* |
-| Add pretty hover | If you click this option, the following option will be added to the page-level “Options” data field\*:<br> *HoverType=Geometry*                                                                |
+- Add theming: If you click this option, the following theme options will be added to the page-level “Options” data field:
 
-*\*If no page-level “Options” data field exists, one will be created.*
+  *#000000=ThemeForeground\|#FF0000=ThemeAccentColor\|#FFFFFF=ThemeBackground*
+
+- Add pretty hover: If you click this option, the following option will be added to the page-level “Options” data field:
+
+  *HoverType=Geometry*
+
+> [!NOTE]
+> If no page-level “Options” data field exists, one will be created.
 
 #### Alarm Console - Automatic incident tracking: Manually add/remove alarms to/from alarm groups and rename alarm groups \[ID_32729\] \[ID_32819\] \[ID_32875\] \[ID_32914\] \[ID_32940\] \[ID_32957\] \[ID_33027\]
 
@@ -184,7 +189,7 @@ The DataMiner application framework allows you to create custom low-code applica
 
 These applications can be created on the root web page of a DataMiner System and can be organized into sections. To place an application in one or more specific sections, open the App.info.json file in the correct application folder (C:\\Skyline DataMiner\\applications\\APP_ID) and add the section names to the Sections array.
 
-**Pages and panels**
+##### Pages and panels
 
 Pages and panels are the basic building blocks of an application. On a page or a panel, or even between pages and panels, data can be fed between components to create dynamic visualizations. Pages and panels can also each have a header bar with different buttons that are used to execute actions via events. Each button can have a customized icon and label.
 
@@ -192,7 +197,7 @@ The application sidebar allows you to navigate between the different pages, whic
 
 Panels are used to group data on a page. They can be displayed on the left side of a page, on the right side of a page or as a popup, and can be shown or hidden via actions that are executed when an event occurs. Panels can be reused on different pages.
 
-**Events and actions**
+##### Events and actions
 
 In an application, you can configure actions that will be executed each time one of the following events occur:
 
@@ -206,16 +211,16 @@ At present, the following actions can be configured:
 | Launch a script          | Launch an Automation script with a specific configuration and a specific number of inputs (which can be linked to feeds like e.g. the Query Row feed). |
 | Navigate to a URL        | Navigate to a specific URL (in a new tab).                                                                                                             |
 | Open a page              | Open a (hidden) page in the same application.                                                                                                          |
-| Open a panel             | Open a panel on the current page.<br> Panels can appear on the left side of a page, on the right side of the page or as a popup.                       |
+| Open a panel             | Open a panel on the current page. Panels can appear on the left side of a page, on the right side of the page or as a popup.                       |
 | Close a panel            | Close a panel that was open on the current page.                                                                                                       |
 | Open an app              | Navigate to another application.                                                                                                                       |
-| Execute component action | Execute a component action.<br> E.g. select an item in a table, create a new instance, etc.                                                            |
+| Execute component action | Execute a component action. E.g. select an item in a table, create a new instance, etc.                                                            |
 
 By default, actions are executed asynchronously. However, it is also possible to configure chains of actions that should be executed synchronously, i.e. only when the preceding action was executed successfully.
 
 Also, by combining different actions into one, you can create complex behavior. For example, open a page, open a panel and launch an Automation script that updates parameters displayed on that panel while it is being opened. This complex action can then be linked to e.g. a header bar button.
 
-**Versioning**
+##### Versioning
 
 The application framework includes a versioning system that allows different versions of the same application to exist simultaneously. These different versions can be accessed via the versions panel of the application, which also allows the versions to be edited.
 
@@ -223,7 +228,7 @@ When you create a new application, a first draft version of that application is 
 
 Per application, there can be up to 15 versions: 14 draft versions and one published version. When a 16th version is created, the oldest draft version will automatically be deleted. The published version will never be deleted. As there can be only one published version, whenever you publish a version, the previously published version will automatically be demoted to draft version.
 
-**Security**
+##### Security
 
 The application framework has two levels of security:
 

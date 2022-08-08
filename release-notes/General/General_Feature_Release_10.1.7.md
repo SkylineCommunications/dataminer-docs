@@ -10,9 +10,9 @@ uid: General_Feature_Release_10.1.7
 
 #### EPM: Aliases for topology cells, chains and search chains can now be specified in EPMConfig.xml \[ID_29766\]\[ID_29841\]
 
-In an EPM environment, it is now possible to override the names of topology cells, chains and search chains specified in a protocol with aliases specified in a separate file.
+In an EPM environment, it is now possible to override the names of topology cells, chains, and search chains specified in a protocol with aliases specified in a separate file.
 
-In the C:\\Skyline DataMiner\\ folder, create an EPMConfig.xml file that contains a \<Topologies> and/or \<Chains> configuration identical to the one in the protocol, and specify the necessary aliases in override attributes. See the following example.
+In the C:\\Skyline DataMiner\\ folder, create an *EPMConfig.xml* file that contains a \<Topologies> and/or \<Chains> configuration identical to the one in the protocol, and specify the necessary aliases in override attributes. See the following example.
 
 ```xml
 <Protocol>
@@ -42,9 +42,10 @@ In the C:\\Skyline DataMiner\\ folder, create an EPMConfig.xml file that contain
 ```
 
 > [!NOTE]
-> - If you want the aliases to be applied on every DMA in a DMS, then make sure every DMA contains a copy of the same EPMConfig.xml file.
-> - When you update the EPMConfig.xml file on a particular DMA, then delete the \*.txf files on that DMA and restart DataMiner.
-> - Currently, the EPMConfig.xml file is only read at DataMiner startup.
+>
+> - If you want the aliases to be applied on every DMA in a DMS, then make sure every DMA contains a copy of the same *EPMConfig.xml* file.
+> - When you update the *EPMConfig.xml* file on a particular DMA, then delete the \*.txf files on that DMA and restart DataMiner.
+> - Currently, the *EPMConfig.xml* file is only read at DataMiner startup.
 
 #### SLSpectrum: Refactoring of code used to play back spectrum recordings \[ID_29785\]
 
@@ -139,20 +140,21 @@ GQI query results can now be fetched page by page.
 Before executing a query, the system will send a GenIfOpenSessionRequest message to open a session. That request will return a session ID that then has to be passed along with a series of GenIfNextPageRequest messages to fetch the next pages. Finally, a GenIfCloseSessionRequest message will be sent to close the session.
 
 > [!NOTE]
+>
 > - A new session must be opened for each query that has to be executed.
 > - When a session is opened/used, a timestamp will be added/updated. This timestamp will be used to check whether a session has expired. Sessions can be kept alive by sending a GenIfSessionHeartbeatRequest message.
 
-**Overview of the request messages**
+##### Overview of the request messages
 
-| Request message              | Function                                                                                                                                                                                                                                                                                                                                                       | Properties                          |
-|------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------|
-| GenIfOpenSessionRequest      | Opens a session                                                                                                                                                                                                                                                                                                                                                | Query<br> QueryOptions              |
-| GenIfNextPageRequest         | Fetches the next page                                                                                                                                                                                                                                                                                                                                          | SessionID (Guid)<br> PageSize (int) |
-| GenIfCloseSessionRequest     | Closes a session                                                                                                                                                                                                                                                                                                                                               | SessionIDs: Guid\[\]                |
-| GenIfSessionHeartbeatRequest | Prevents a session from expiring                                                                                                                                                                                                                                                                                                                               | SessionIDs: Guid\[\]                |
-| GenIfGetOpenSessionsRequest  | Returns a response containing a list of all open sessions, together with the following properties:<br> -  SessionID (Guid)<br> -  CreationTime<br> -  LastUpdated |                                     |
+| Request message | Function | Properties |
+|--|--|--|
+| GenIfOpenSessionRequest | Opens a session | Query<br> QueryOptions |
+| GenIfNextPageRequest | Fetches the next page | SessionID (Guid)<br> PageSize (int) |
+| GenIfCloseSessionRequest | Closes a session | SessionIDs: Guid\[\] |
+| GenIfSessionHeartbeatRequest | Prevents a session from expiring | SessionIDs: Guid\[\] |
+| GenIfGetOpenSessionsRequest | Returns a response containing a list of all open sessions, together with the following properties:<br> -  SessionID (Guid)<br> -  CreationTime<br> -  LastUpdated |  |
 
-**Variables**
+##### Variables
 
 | Variable                                                                                   | Default value    |
 |--------------------------------------------------------------------------------------------|------------------|
@@ -188,6 +190,7 @@ It is now also possible to bind a VirtualFunctionResource using the primary key 
 It is now possible to generate contributing functions for service definitions that use a mediated virtual function on one or more nodes.
 
 > [!NOTE]
+>
 > - For the replication to work, the profile parameter used to generate the parameter in the contributing protocol needs to contain a ProtocolParameterReference to the parameter in the protocol of the VirtualFunctionDefinition.
 > - If a service definition node has both the VirtualFunctionID property (to use a mediated virtual function) and the FunctionID property (to use a protocol function) filled in, the VirtualFunctionID will be used during generation.
 > - Only the profile definition of the VirtualFunctionDefinition’s VirtualNode will be taken into account when creating parameters.
@@ -196,13 +199,13 @@ It is now possible to generate contributing functions for service definitions th
 
 When an SRM object is created, updated or deleted, an event message is sent via the SLNet subscription system to notify everyone. The NATS forwarding logic also receives these event messages and will now publish a ProtoBuf event on the NATS bus each time it receives such a message.
 
-**Proto files**
+##### Proto files
 
 The ProtoBuf event messages are defined by ProtoBuf files, which can be obtained on request.
 
 The events themselves are defined in the API protos, which import shared messages from the main shared folder.
 
-**Subscribing to the NATS event messages**
+##### Subscribing to the NATS event messages
 
 To subscribe to one of the event messages you will need to compile the required proto files. In general, you need to compile the API proto of the event and the complete shared folder. For example, when you want to subscribe to the ReservationInstanceEvent, you need to compile the reservation_instance_api.proto file and everything in the general shared folder.
 
@@ -227,29 +230,29 @@ private void Handler(object sender, HandlerEventArgs e)
 }
 ```
 
-**Errors**
+##### Errors
 
 When an SRM event is sent out, in some cases, it cannot be forwarded to NATS due to issues related to the SLMessageBroker. In that case, an error will be logged in the SLResourceManager.txt file, stating that an event could not be forwarded.
 
 Note that no retries will occur and that no messages will be queued.
 
-**Supported events**
+##### Supported events
 
 - ResourceManagerEventMessage
 
     When a ResourceManagerEventMessage contains multiple types of objects, it will be split up into multiple proto events. When the ResourceManager sends out one ResourceManagerEvent containing e.g. 2 ReservationInstances and 3 Resources, the forwarder logic will publish one ReservationInstanceEvent (with the 2 objects) and one ResourceEvent (with the 3 objects).
 
-**ReservationInstance object**
+##### ReservationInstance object
 
-| Event message name           | Proto file                         | NATS Topic                                                                                      |
-|------------------------------|------------------------------------|-------------------------------------------------------------------------------------------------|
-| ReservationInstance<br>Event | reservation_instance_api.<br>proto | Skyline.DataMiner.Protobuf.Apps.<br>Srm.ReservationInstance.Api.v1.<br>ReservationInstanceEvent |
+| Event message name       | Proto file                     | NATS Topic                                                                              |
+|--------------------------|--------------------------------|-----------------------------------------------------------------------------------------|
+| ReservationInstanceEvent | reservation_instance_api.proto | Skyline.DataMiner.Protobuf.Apps.Srm.ReservationInstance.Api.v1.ReservationInstanceEvent |
 
-**Resource object**
+##### Resource object
 
-| Event message name | Proto file             | NATS Topic                                                            |
-|--------------------|------------------------|-----------------------------------------------------------------------|
-| ResourceEvent      | resource_api.<br>proto | Skyline.DataMiner.Protobuf.Apps.<br>Srm.Resource.Api.v1.ResourceEvent |
+| Event message name | Proto file         | NATS Topic                                                        |
+|--------------------|--------------------|-------------------------------------------------------------------|
+| ResourceEvent      | resource_api.proto | Skyline.DataMiner.Protobuf.Apps.Srm.Resource.Api.v1.ResourceEvent |
 
 #### Returning all available capacities when requesting the eligible resources \[ID_29939\]
 

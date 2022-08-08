@@ -54,6 +54,7 @@ These new password boxes can be found in the following locations:
 - Interactive Automation scripts (`UIBlock` of type "PasswordBox")
 
 > [!NOTE]
+>
 > - If a value received from the server has been automatically entered in a password box, the strength indicator and peek button will not be available until you enter a completely new password.
 > - If the value received from the server is a fixed 8-asterisk-long placeholder instead of an actual password, you will not be able to modify it. You will be forced to replace the entire value.
 

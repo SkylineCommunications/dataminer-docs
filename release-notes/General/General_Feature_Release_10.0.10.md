@@ -16,7 +16,7 @@ The new LogHelper API, which combines the SLLoggerUtil API and the LogEntry repo
 - ILogHelper#LogEntries can be used to retrieve log entries from the database.
 - LogEntries.Exposers can be used to create filters used when retrieving entries.
 
-**Using statement**
+##### Using statement
 
 LogHelper should always be created within a using statement. See the following examples.
 
@@ -38,7 +38,7 @@ using(var logHelper = LogHelper.Create(protocol.GetUserConnection()))
  }
 ```
 
-**Automation**
+##### Automation
 
 A new method was added to Engine and IEngine:
 
@@ -46,7 +46,7 @@ A new method was added to Engine and IEngine:
 
 It returns a connection that impersonates the user who ran the script based on Engine#UserCookie. If no user cookie is present on the script, the returned IConnection will act as the SLManagedAutomation connection.
 
-**QActions**
+##### QActions
 
 A new method was added on SLProtocol interface:
 
@@ -54,7 +54,7 @@ A new method was added on SLProtocol interface:
 
 It returns a connection that impersonates the user who triggered the QAction based on SLProtocol#UserCookie. If no user cookie is present within the QAction context, the returned IConnection will act as the SLManagedScripting connection.
 
-**Script and QAction compilation**
+##### Script and QAction compilation
 
 Automation scripts and QActions will now by default be compiled with a reference to SLLoggerUtil.dll (C:\\Skyline DataMiner\\Files\\SLLoggerUtil.dll).
 
@@ -86,6 +86,7 @@ By default, the DLL files in the package will be copied to the C:\\Skyline DataM
     > When a DLL file is referenced using the dllImport attribute of a QAction (e.g. \<QAction id="5" dllImport="somedll.dll" encoding="csharp" triggers="1">), then the dllImport folder will be checked first. If the DLL file cannot be found in that folder, then the ProtocolScripts folder will be checked.
 
 > [!NOTE]
+>
 > - If an uploaded DLL dependency would break existing QActions, no errors will be returned.
 > - It is advised to strong-name DLL files when referring to multiple versions of the same file in different QActions. Not strong-naming DLL files could lead to unexpected behavior.
 
@@ -101,15 +102,15 @@ In the *Overview* tab of the *Services* app, the booking state of a service is i
 
 - A new icon has been added to indicate service permanent bookings that start somewhere in the future:
 
-    ![](~/release-notes/images/BookingOngoingPermanentFuture.png)
+  ![Future permanent booking icon](~/release-notes/images/BookingOngoingPermanentFuture.png)
 
 - The icons used to indicate the state of one or more bookings linked to a service will now be displayed in the following order:
 
-    - Permanent ongoing
-    - Ongoing
-    - Permanent in future
-    - Future
-    - Past/None
+  - Permanent ongoing
+  - Ongoing
+  - Permanent in future
+  - Future
+  - Past/None
 
 #### Service & Resource Management - Profiles app: Value of a capability of type “text” can now be changed regardless of the “User time-dependent" option \[ID_26538\]
 
@@ -123,6 +124,7 @@ To do so, go to the *Notification* tab of the SNMP manager in question, open the
 
 > [!NOTE]
 > The *Generate MIB file...* button will only be enabled when
+>
 > - *Notification OID* is set to “Use custom bindings”,
 > - the list of custom bindings contains at least one entry, and
 > - all changes to the SNMP manager in question have been saved.
@@ -172,10 +174,10 @@ From now on, when using the *DynamicUnits* option, it is also possible to factor
 
 The first time you start Cube Launcher, a task named “Update DataMiner Cube” will be added to Windows Task Scheduler. Every 3 days, that task will start Cube Launcher with the /Update argument. The /Update argument combines the /UpdateClients and /UpdateLauncher arguments. See below.
 
-| Argument        | Function                                                                                                                                                                                                                                                                                                                  |
-|-----------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| /UpdateClients  | Checks, for all the DataMiner Systems to which you have connected in the last 100 days, whether a new Cube version is available. If so, it will immediately be downloaded.                                                                                                                                                |
-| /UpdateLauncher | Checks for a newer version of Cube Launcher on https://dataminer.services. If a newer version is found, it will immediately be downloaded and installed.<br> If no newer version can be found on https://dataminer.services, then the 10 DataMiner Systems to which you connected last will be checked for a new version. |
+| Argument | Function |
+|--|--|
+| /UpdateClients | Checks, for all the DataMiner Systems to which you have connected in the last 100 days, whether a new Cube version is available. If so, it will immediately be downloaded. |
+| /UpdateLauncher | Checks for a newer version of Cube Launcher on `https://dataminer.services`. If a newer version is found, it will immediately be downloaded and installed. If no newer version can be found on `https://dataminer.services`, then the 10 DataMiner Systems to which you connected last will be checked for a new version. |
 
 The scheduled task is checked each time you start Cube Launcher, and is removed when you uninstall Cube Launcher. Periodic updates can be suspended by disabling the task in Windows Task Scheduler.
 
@@ -193,17 +195,17 @@ In DataMiner v.10.0.9, the layout options for a State component displaying a par
 
 - *Design*: Allows you to choose one of the following options:
 
-    - *Small:* The component displays a single line containing a label and value.
-    - *Large*: The component displays multiple lines with one value and up to three labels.
-    - *Auto size*: Similar to the *Large* option, but automatically adjusts the content to fill the entire component.
+  - *Small:* The component displays a single line containing a label and value.
+  - *Large*: The component displays multiple lines with one value and up to three labels.
+  - *Auto size*: Similar to the *Large* option, but automatically adjusts the content to fill the entire component.
 
 - *Alarm state coloring*: Allows you to select one of the following options to determine how alarm coloring is displayed:
 
-    - *LED*: The alarm color is displayed by a circular LED to the left of the first label.
-    - *Line*: The alarm color is displayed by a bar along the left side of the component.
-    - *Text*: The text color of the value matches the alarm color.
-    - *Background*: The background of the component displays the alarm color. If this option is selected, an additional option, *Automatically adjust text color to alarm color*, can be selected to make sure the text color is adapted if necessary.
-    - *None*: No alarm color is displayed.
+  - *LED*: The alarm color is displayed by a circular LED to the left of the first label.
+  - *Line*: The alarm color is displayed by a bar along the left side of the component.
+  - *Text*: The text color of the value matches the alarm color.
+  - *Background*: The background of the component displays the alarm color. If this option is selected, an additional option, *Automatically adjust text color to alarm color*, can be selected to make sure the text color is adapted if necessary.
+  - *None*: No alarm color is displayed.
 
 #### Dashboard app: New setting to configure number of dashboard columns \[ID_26530\]
 
@@ -219,7 +221,7 @@ A Spectrum Analyzer component, linked to a Spectrum Analyzer element, will open 
 
 Also, in the DATA pane, you can select a spectrum preset and, for example, have it act as a filter. It is even possible to link a drop-down feed component to a Spectrum Analyzer component and use it to select the preset to be used in the latter.
 
-**Trigger action to open a new dashboard**
+##### Trigger action to open a new dashboard
 
 For Spectrum Analyzer components, a *Triggers* tab is available in the pane on the right. This tab allows you to configure that another dashboard should be opened when the spectrum graph is clicked. To do so, make sure *Enable trigger* is activated, and select the trigger action *Open dashboard*. Then select the dashboard that should be opened and specify whether it should be opened in a pop-up window, in the current tab (replacing the dashboard that was clicked) or in a new tab.
 
@@ -290,14 +292,15 @@ By default, the DLL file will be uploaded to the C:\\Skyline DataMiner\\scripts\
 
 - When a script dependency is uploaded using an UploadScriptDependencyMessage
 
-    - all scripts that directly reference the file will be recompiled when executed, and
-    - all libraries that reference the file (and all libraries that use those libraries) will be recompiled immediately.
+  - all scripts that directly reference the file will be recompiled when executed, and
+  - all libraries that reference the file (and all libraries that use those libraries) will be recompiled immediately.
 
 - When you reference a DLL file stored in C:\\Skyline DataMiner\\Scripts\\DllImport while a DLL file with the same name is present in C:\\Skyline DataMiner\\Files, the former will take precedence.
 
 - Users need the *Modules \> Automation \> Edit* permission to be able to upload Automation script dependencies.
 
 > [!NOTE]
+>
 > - If an uploaded DLL dependency would break existing scripts and/or libraries, no errors will be returned.
 > - It is advised to strong-name DLL files when referring to multiple versions of the same file in different scripts. Not strong-naming DLL files could lead to unexpected behavior.
 
@@ -329,7 +332,7 @@ App packages can now be uninstalled using the new AppPackageHelper method Uninst
 public void UninstallApp(AppID appId, bool force)
 ```
 
-**Uninstall script**
+##### Uninstall script
 
 Inside every app package, an uninstall script named *uninstall.xml* should be available in the Scripts folder.
 
@@ -343,7 +346,7 @@ public void Uninstall(Engine engine, AppUninstallContext context)
 }
 ```
 
-**Remarks**
+##### Remarks
 
 - When an app package does not contain an uninstall script (or when the uninstall script is not a valid XML file), triggering the non-existing uninstall script will cause the installation folder of the app in question to be removed on all agents in the DMS.
 
@@ -461,39 +464,39 @@ Up to now, in configuration mode, when you edited a job domain, it was only poss
 
 In configuration mode, next to the *New*, *Edit* and *Delete* buttons on the right of the job domain selection box, there is now also a *Duplicate* button. Clicking that button will allow you to select one of the following options:
 
-| Option                           | Function                                                                                                                                                                                                                                                                                                                                                                                       |
-|----------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Option | Function |
+|--|--|
 | Share sections<br>across domains | Creates a new domain that shares its sections with the original domain.<br> Note: Changes made to the sections of the new domain will also be applied to the sections of the original domain (except changes made to the *Color*, *Icon* and *Allow multiple instances* properties of a section). |
-| Create copies of<br>the sections | Creates a new domain by duplicating the entire original domain, including its sections.<br> Note: Changes made to the sections of the new domain will not be applied to the sections of the original domain.                                                                                                                                                                                   |
+| Create copies of<br>the sections | Creates a new domain by duplicating the entire original domain, including its sections.<br> Note: Changes made to the sections of the new domain will not be applied to the sections of the original domain. |
 
 When the duplication operation has finished, you will automatically be redirected to the newly created domain.
 
 As a result of the above-mentioned changes, adding a new section to a domain has also been changed. The *Add section definition* window now has a *New* tab and an *Existing* tab.
 
-| Tab      | Function                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-|----------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| New      | Use this tab if you want to create a new section from scratch.                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| Tab | Function |
+|--|--|
+| New | Use this tab if you want to create a new section from scratch. |
 | Existing | Use this tab if you want to add an existing section to the domain in question. In this case, apart from having to select the section to be added, you will also have to indicate whether you want to<br> -  share the section with the other domain(s) containing that section, or<br> -  make a separate copy of the section (with a new name). |
 
-**New web methods**
+##### New web methods
 
 - **DuplicateJobsDomain(string connection, DMAJobDomain domain, string domainID, bool byRef)**
 
-    This method will duplicate a job domain, either by reference or by hard copy, and return the ID of the new job domain if the duplication operation was successful.
+  This method will duplicate a job domain, either by reference or by hard copy, and return the ID of the new job domain if the duplication operation was successful.
 
-    - If the *byRef* parameter is set to false, the method will create an entire new job domain that is in no way linked to the original job domain.
-    - If the *byRef* parameter is set to true, the method will create a new job domain that shares its sections with the original job domain.
+  - If the *byRef* parameter is set to false, the method will create an entire new job domain that is in no way linked to the original job domain.
+  - If the *byRef* parameter is set to true, the method will create a new job domain that shares its sections with the original job domain.
 
 - **DuplicateJobsSectionDefinition(string connection, string domainID, string sourceDomainID, DMASectionDefinition sectionDefinition, bool byRef)**
 
-    This method will duplicate a job section definition, either by reference or by hard copy.
+  This method will duplicate a job section definition, either by reference or by hard copy.
 
-    - If the *byRef* parameter is set to false, the method will add an entire new job section definition to the job domain specified by *domainID*. This job section definition will no way be linked to the original job section definition in the domain specified by *sourceDomainID*.
-    - If the *byRef* parameter is set to true, the method will link the existing job section definition specified by *sectionDefinition* to the job domain specified by *domainID*. This same job section definition will then be shared between the two job domains.
+  - If the *byRef* parameter is set to false, the method will add an entire new job section definition to the job domain specified by *domainID*. This job section definition will no way be linked to the original job section definition in the domain specified by *sourceDomainID*.
+  - If the *byRef* parameter is set to true, the method will link the existing job section definition specified by *sectionDefinition* to the job domain specified by *domainID*. This same job section definition will then be shared between the two job domains.
 
 - **GetAffectedJobDomains(string connection, string sectionDefinitionID)**
 
-    This method will return the names of all the job domains that contain the job section definition specified by *sectionDefinitionID*.
+  This method will return the names of all the job domains that contain the job section definition specified by *sectionDefinitionID*.
 
 ### DMS Service & Resource Management
 
@@ -505,13 +508,13 @@ To configure mediated virtual functions, do the following:
 
 1. For every parameter, every column and/or every cell you want to see in the virtual function element, create a profile parameter.
 
-2. If, in the virtual function element, the value of a profile parameter should be transformed, then add a mediation snippet to that profile parameter.
+1. If, in the virtual function element, the value of a profile parameter should be transformed, then add a mediation snippet to that profile parameter.
 
-3. Create a profile definition for the node of the function and a profile definition for every interface of the function.
+1. Create a profile definition for the node of the function and a profile definition for every interface of the function.
 
     - In a profile definition, you can group profile parameters in tables if you want them to be shown as tables in the virtual function element.
 
-4. Create a virtual function definition. In it, you can define the following:
+1. Create a virtual function definition. In it, you can define the following:
 
     - The profile definition for the node.
 
@@ -542,18 +545,18 @@ To configure mediated virtual functions, do the following:
     - to be able to re-use parameter IDs when a new version of the protocol is generated
     - to validate the new versions of the generated protocol
 
-5. Create a virtual function resource with a specific virtual function definition.
+1. Create a virtual function resource with a specific virtual function definition.
 
     The virtual function element with automatically be created using the generated virtual function protocol.
 
-6. Bind the virtual element to an element by updating the virtual resource:
+1. Bind the virtual element to an element by updating the virtual resource:
 
     - Specify the element ID.
     - Specify the entry point table index (if an entry point table was defined).
 
     All the parameters and tables of the virtual function element, which were set to “not-initialized/empty”, will now be set to the replicated/mediated values of the bound element.
 
-**Virtual function definitions**
+##### Virtual function definitions
 
 Virtual function definitions can be used on service definition nodes. They can be managed by means of the ProtocolFunctionHelper.VirtualFunctionDefinitions API.
 
@@ -561,11 +564,11 @@ Virtual function definitions are stored in Indexing Engine under the cvirtualfun
 
 All logging with regard to virtual function definitions will be added to SLFunctionManager.txt.
 
-**Virtual function protocol metadata**
+##### Virtual function protocol metadata
 
 Virtual function protocol metadata is stored in Indexing Engine under the cvirtualfunctionprotocolmeta index. When you create a database backup, this metadata will automatically be included in the package when the *Include SRM in backup* option is enabled.
 
-**Virtual function resources**
+##### Virtual function resources
 
 A virtual function resource is an extension of a normal resource. It has the following additional properties:
 
@@ -580,7 +583,7 @@ Virtual function resources can be used on ReservationInstances and ServiceReserv
 
 All logging with regard to virtual function resources will be added to SLResourceManager.txt.
 
-**Logging with regard to element binding**
+##### Logging with regard to element binding
 
 Logging with regard to element binding will be added to the following log files:
 
@@ -615,6 +618,7 @@ var query =HistoryChangeExposers.SubjectID.Equal(someResourceID.ToFileFriendlySt
 ```
 
 > [!NOTE]
+>
 > - If, for some reason, tracking changes to VirtualFunctionResources would fail, an error will be logged in SLHistoryManager.txt each time a HistoryChange record could not be saved. To prevent users from receiving too many notices, a notice will only be generated every hour.
 > - When a backup is configured to include the Service & Resource Management module, this will also include the chistory-resource table.
 > - When a VirtualFunctionResource is deleted, all HistoryChange records associated with this VirtualFunctionResource will also be deleted.
@@ -636,6 +640,7 @@ To support adding attachments to booking instances (i.e. ReservationInstance obj
 | byte\[\] Get(ReservationInstanceID reservationInstanceID, string attachmentName)      | Retrieves the content of the attachment with the specified name as a byte array. |
 
 > [!NOTE]
+>
 > - If a booking is deleted, all its attachments will be deleted as well. They will not be recoverable.
 > - The maximum size of booking attachments is determined by the Documents.MaxSize setting, located in the MaintenanceSettings.xml file. Default: 20 Mb. Trying to upload a larger file will result in a DataMinerException.
 > - Manipulating booking attachments requires security permissions on the ReservationInstance. If a SecurityViewId is specified, the view permission on the view is required to retrieve or download attachments, and the write permission on the view is required to add or delete attachments.
@@ -699,6 +704,7 @@ Files related to Best Practice Analysis (BPA) tests will now be synchronized amo
 When adding or updating an element, it is now allowed to enter pipe characters (“\|”) and tab characters in the fields of that element.
 
 > [!NOTE]
+>
 > - By default, DataMiner Cube will automatically replace tab characters by spaces.
 > - Tab characters in port settings could cause problems when exporting or importing to or from a CSV file.
 

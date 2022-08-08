@@ -12,29 +12,30 @@ uid: General_Feature_Release_10.2.4
 
 The SLNet process can now use the following new messages to upload files to the DataMiner System.
 
-**StartUploadMessage**
+##### StartUploadMessage
 
-Initiates an upload and returns a StartUploadResponse message containing an upload cookie of type int.
+This message initiates an upload and returns a *StartUploadResponse* message containing an upload cookie of type int.
 
 | Argument     | Type     | Description                                                                                                                     |
 |--------------|----------|---------------------------------------------------------------------------------------------------------------------------------|
 | DataChunk    | byte\[\] | The initial chunk of data to be uploaded.                                                                                       |
 | ReservedSize | long     | The total size (in bytes) that should be reserved for the full dataset.                                                         |
-| Name         | string   | Optional name of the upload.<br> Naming an upload allows you to retrieve its upload status by means of a FindUploadSlotMessage. |
+| Name         | string   | Optional name of the upload. Naming an upload allows you to retrieve its upload status by means of a FindUploadSlotMessage. |
 
-**ContinueUploadMessage**
+##### ContinueUploadMessage
 
-Continues an already initiated upload and returns an empty ContinueUploadResponse message.
+This message continues an already initiated upload and returns an empty *ContinueUploadResponse* message.
 
-| Argument        | Type     | Description                                                                                                                                                                                                                              |
-|-----------------|----------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Cookie          | int      | The cookie returned by the StartUploadMessage.                                                                                                                                                                                           |
-| DataChunk       | byte\[\] | The next chunk of data to be uploaded.                                                                                                                                                                                                   |
-| CurrentPosition | long     | Optional index location that specifies where the next chunk of data should be appended. Allows you to perform a basic data integrity check.<br> When this location does not match the actual server-side location, the upload will fail. |
+| Argument | Type | Description |
+|--|--|--|
+| Cookie | int | The cookie returned by the StartUploadMessage. |
+| DataChunk | byte\[\] | The next chunk of data to be uploaded. |
+| CurrentPosition | long | Optional index location that specifies where the next chunk of data should be appended. Allows you to perform a basic data integrity check. When this location does not match the actual server-side location, the upload will fail. |
 
 > [!NOTE]
+>
 > - The above-mentioned messages will be used when uploading a large data stream by means of the SendLargeStream method in the SLNetTypes FileUploader helper class.
-> - The existing SendFile method will use SendLargeStream in the background when it detects a file larger than 2GB.<br>The default chunk size is 100KB. When sending large files, it is recommended to slightly increase this default chunk size to prevent a large number of small messages.
+> - The existing SendFile method will use SendLargeStream in the background when it detects a file larger than 2 GB. The default chunk size is 100 KB. When sending large files, it is recommended to slightly increase this default chunk size to prevent a large number of small messages.
 > - As the AppPackageHelper uses the FileUploader helper class to upload DataMiner packages, it will now also support uploading larger packages.
 
 #### SNMP forwarding will now take into account alarm storms when resending alarms \[ID_32543\]
@@ -45,6 +46,7 @@ Up to now, when an SNMP Manager was configured to resend all active alarms every
 - If the grouping option is not enabled, no alarms will be resent during the alarm storm.
 
 > [!NOTE]
+>
 > - When you manually request all alarms to be resent, the logic described above will also apply.
 > - When inform messages are used instead of traps and the receiving party does not return an acknowledgment, then the retry messages will still be sent, even when an alarm storm starts while those retry messages are being sent.
 
@@ -64,9 +66,9 @@ This is intended to be used in the Process Automation framework.
 
 #### Process Automation: New ProcessAutomationResourcePool object \[ID_32657\]
 
-A new Process Automation object class has been created (which inherits the regular ResourcePool class): ProcessAutomationResourcePool
+A new Process Automation object class has been created (which inherits the regular ResourcePool class): *ProcessAutomationResourcePool*
 
-This new object has a property that will be used to store the queue element associated with a resource pool: public ElementId QueueElement
+This new object has a property that will be used to store the queue element associated with a resource pool: *public ElementId QueueElement*
 
 #### Service & Resource Management: Service templates now also accept ServiceID and ReservationID as input data \[ID_32668\]
 
@@ -82,15 +84,15 @@ SLSSH now supports the following additional cyphers and key exchange algorithms:
 - ECDHSHA2NISTP384
 - ECDHSHA2NISTP521
 
-DataMiner now supports the following encryption methods (in order of preference):
+DataMiner now supports the encryption methods detailed below (in order of preference).
 
-**HMACs**
+##### HMACs
 
 - HMAC-SHA2-256
 - HMAC-SHA1
 - HMAC-MD5
 
-**Key exchange algorithms**
+##### Key exchange algorithms
 
 - ecdh-sha2-nistp521
 - ecdh-sha2-nistp384
@@ -99,7 +101,7 @@ DataMiner now supports the following encryption methods (in order of preference)
 - diffie-hellman-group1-sha1
 - diffie-hellman-group-exchange-sha1
 
-**Ciphers**
+##### Ciphers
 
 - Aes-256-CTR
 - Aes-128-CTR
@@ -170,7 +172,10 @@ If you specify a filter context like the one above, the shape will be linked to 
 
 > [!NOTE]
 > It is also possible to specify a filter context in which both system name and system type are combined. To do so, use the following syntax:
-> *FilterContext=SystemName=X;SystemType=Y*<br> If you specify a filter context like the one above, the shape will be linked to the alarms of which the “System Name” is set to “X” and “System Type” is set to “Y”.
+>
+> *FilterContext=SystemName=X;SystemType=Y*
+>
+> If you specify a filter context like the one above, the shape will be linked to the alarms of which the “System Name” is set to “X” and “System Type” is set to “Y”.
 
 #### DataMiner Cube - Data Display: Row filter will now be shown when opening the alarm template, trend template or information template for a particular parameter table row \[ID_32555\]
 
@@ -208,6 +213,7 @@ Up to now, open trend graphs were automatically refreshed every 2 minutes. From 
 Default: 2 minutes
 
 > [!NOTE]
+>
 > - Changing this refresh rate can have a minor effect on overall performance, especially when opening trend graphs with more than 10 parameters.
 > - If you change the *Update interval* setting, then open trend graphs need to be closed and re-opened if you want them to use the new interval.
 
@@ -225,17 +231,17 @@ To do so, add the following shape data fields to the shape:
 | SetVar           | \<name of session variable>                 |
 | SetVarOptions    | Control=Duration\|\<option>\|\<option>\|... |
 
-**Options**
+##### Options
 
 Next to “Control=Duration”, you can specify the following options (separated by pipe characters).
 
-| Option                  | Description                                                                                                                                                                                                                               |
-|-------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| ShowInfinity=true/false | When this option is set to true, next to the duration selector, a checkbox is displayed that can be used to set the duration to infinity, which will replace the value of the session variable with TimeSpan.MaxValue.<br> Default: False |
-| Minimum=                | The minimum duration.<br> Default: 1 minute                                                                                                                                                                                               |
-| Maximum=                | The maximum duration.<br> Default: 1 week                                                                                                                                                                                                 |
+| Option | Description |
+|--|--|
+| ShowInfinity=true/false | When this option is set to true, next to the duration selector, a checkbox is displayed that can be used to set the duration to infinity, which will replace the value of the session variable with TimeSpan.MaxValue. Default: False. |
+| Minimum= | The minimum duration. Default: 1 minute. |
+| Maximum= | The maximum duration. Default: 1 week. |
 
-**Setting the initial value of the duration in the session variable**
+##### Setting the initial value of the duration in the session variable
 
 Use a page-level InitVar field to set the initial value of the duration in the session variable.
 
@@ -244,7 +250,7 @@ If you set the initial value to “Infinity”, the value in the session variabl
 > [!NOTE]
 > Using an InitVar or SetVar field, it is possible to set a duration that is outside of the specified minimum/maximum range.
 
-**Specifying a duration**
+##### Specifying a duration
 
 When specifying the minimum duration, the maximum duration and the InitVar value, you can use the following units:
 
@@ -269,7 +275,7 @@ To do so, enable the *Visualize directions* setting and select one of the follow
 | Option         | Description                                                                                                                                                           |
 |----------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Flow (default) | The direction is visualized by means of animated edges.                                                                                                               |
-| Arrows         | The direction is visualized by means of arrows drawn on the edges.<br> If you select this option, you can also specify the exact position of the arrows on the edges. |
+| Arrows         | The direction is visualized by means of arrows drawn on the edges. If you select this option, you can also specify the exact position of the arrows on the edges. |
 
 #### Dashboards app - Parameter feed: “Selected only” toggle button has been removed \[ID_32541\]
 
@@ -311,7 +317,7 @@ The following example shows a JSON object that contains an “epm-selections” 
 
 It is now possible to add a default index filter to a parameter feed component. This way, it's not necessary to apply your filter to the component again whenever the dashboard is refreshed.
 
-This new option is available as an advanced setting that is not displayed by default. To be able to configure it, you therefore first need to add the *showAdvancedSettings=true* option to the dashboard URL. In the *Data* pane of the dashboard edit mode, a new *Parameter table filters *section will then become available. You can configure the default filter in this section and then drag it to a component to apply it.
+This new option is available as an advanced setting that is not displayed by default. To be able to configure it, you therefore first need to add the *showAdvancedSettings=true* option to the dashboard URL. In the *Data* pane of the dashboard edit mode, a new *Parameter table filters* section will then become available. You can configure the default filter in this section and then drag it to a component to apply it.
 
 #### Dashboards app: “Write” filter removed from Data \> All available data \> Parameters \[ID_32643\]
 
@@ -399,11 +405,11 @@ All methods discussed above are called at some point during the GQI life cycle, 
 
 The following flowchart illustrates the GQI life cycle when a query is created:
 
-![](~/release-notes/images/GQI_-_Create_query.png)
+![GQI life cycle when query is created](~/release-notes/images/GQI_-_Create_query.png)
 
 The following flowchart illustrates the GQI life cycle when a query is fetched:
 
-![](~/release-notes/images/GQI_-_Fetch_query.png)
+![GQI life cycle when query is fetched](~/release-notes/images/GQI_-_Fetch_query.png)
 
 ##### Objects
 
@@ -545,9 +551,9 @@ From now on, the *Delete* button will only be visible to users who have been gra
 
 #### Service & Resource Management: Updated exceptions thrown when the time range of a child ReservationInstance or child ReservationDefinition is invalid \[ID_32581\]
 
-The following exception messages have been enhanced:
+The following exception messages have been enhanced.
 
-**Exception thrown when the time range of a child ReservationInstance is invalid**
+##### Exception thrown when the time range of a child ReservationInstance is invalid
 
 This message now includes the ID, the name and the time range of both the parent and the child.
 
@@ -555,7 +561,7 @@ This message now includes the ID, the name and the time range of both the parent
 The TimeRange of the child is not within the boundaries of the parent ReservationInstance (Child: '{Child Name}' ({Child ID}) has range '{Child Range}' & Parent: '{Parent Name}' ({Parent ID}) has range '{Parent Range}')
 ```
 
-**Exception thrown when the time range of a child ReservationDefinition is invalid**
+##### Exception thrown when the time range of a child ReservationDefinition is invalid
 
 This message now includes the ID, the name and the time range of both the parent and the child. For the child, the offset has now also been added.
 
@@ -572,6 +578,7 @@ When configuring a ReservationInstance, you now have to specify a ReservationIns
 - Custom Process Automation
 
 > [!NOTE]
+>
 > - In case of a ServiceReservationInstance, the type of the instance must be identical to the type of the ServiceDefinition. Otherwise, the ResourceManager will throw a “ServiceDefinitionTypeDoesNotMatch” error.
 > - A new exposer has been added to allow filter ReservationInstanceType.
 
@@ -591,19 +598,19 @@ The behavior of the *AbsoluteQuarantinePriority* property has been modified. Up 
 To implement a quarantine, overbooked capacity is now removed from bookings according to the following order of priority:
 
 1. Bookings that are already in the quarantined state.
-2. Bookings for which *AbsoluteQuarantinePriority* is not specified or false.
-3. Bookings that are in a "Pending" state.
-4. Bookings with the latest start time.
-5. Booking of which the name comes last alphabetically.
-6. Bookings of which the GUID comes last alphabetically.
+1. Bookings for which *AbsoluteQuarantinePriority* is not specified or false.
+1. Bookings that are in a "Pending" state.
+1. Bookings with the latest start time.
+1. Booking of which the name comes last alphabetically.
+1. Bookings of which the GUID comes last alphabetically.
 
 The image below illustrates a situation where the quarantine behavior has changed. Previously, booking A would have been quarantined, as it uses resource 1. Now this will no longer happen as the capacity is actually not overbooked.
 
-![](~/release-notes/images/32654_1.png)
+![Quarantine behavior example](~/release-notes/images/32654_1.png)
 
 The following image also illustrates the modified behavior. If booking B does not have *AbsoluteQuarantinePriority* set to true, its capacity will be moved, as it has a later start time. If *AbsoluteQuarantinePriority* is set to true, the overbooking will be resolved by moving the capacity from booking A.
 
-![](~/release-notes/images/32654_2.png)
+![Quarantine behavior example](~/release-notes/images/32654_2.png)
 
 ##### New ConcurrencyUsageType property for ResourceUsageDefinition
 
@@ -771,11 +778,11 @@ Up to now, for a write parameter configured as a toggle button, an information t
 
 The HTML5 video player and the VLC player have a number of new options.
 
-**HTML5 video player**
+##### HTML5 video player
 
 The HTML5 video player will now by default mute videos when played automatically.
 
-**VLC player**
+##### VLC player
 
 When playing videos using the VLC player, it is now possible to specify the volume in the URL. See the following example. The volume has to be specified as a percentage (0 to 100). Default: 0 (i.e. muted).
 
@@ -783,7 +790,7 @@ When playing videos using the VLC player, it is now possible to specify the volu
 https://dma.local/VideoThumbnails/Video.htm?type=VLC&source=https://videoserver/video.mp4&volume=50
 ```
 
-**HTML5 video player & VLC player**
+##### HTML5 video player & VLC player
 
 Using the HTML video player or the VLC player, it is now possible to specify whether a video should be played in a loop. See the following example. Default: false
 

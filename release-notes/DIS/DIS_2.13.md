@@ -42,6 +42,7 @@ To compare two protocols, do the following:
 3. In the *Major Change Check* window, select the two protocols to be compared, and click *Check*.
 
 > [!NOTE]
+>
 > - Both protocol selection boxes will contain all protocols that are currently open in the XML editor.
 > - By default, the protocol in the currently selected XML editor tab will be selected in the *New protocol* box, and the protocol that best resembles it will be selected in the *Previous protocol* box.
 
@@ -66,6 +67,7 @@ Also, when in the *Write ID* column a suggested parameter ID is not available, y
 DIS will now define a default set of analysis rules for QAction projects. These rules can then be used by Visual Studio extensions like e.g. SonarLint to analyze the code.
 
 > [!NOTE]
+>
 > - When, in Visual Studio, your solution is in release mode, analysis is disabled for performance reasons.
 > - Analysis is always disabled for the QAction_Helper and QAction_Library projects.
 

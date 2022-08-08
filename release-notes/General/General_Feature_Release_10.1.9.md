@@ -60,7 +60,7 @@ Currently, there are two types of concatenation items:
     | bool              | ‘True’                                                 |
     | GenericEnumEntry  | ‘SomeDisplayValue’ (the DisplayValue will be used)     |
 
-**Example**
+##### Example
 
 In the following example, we want to create DomInstances for switches in a network and created FieldDescriptors for the following data:
 
@@ -98,6 +98,7 @@ var settings = new ModuleSettings()
 ```
 
 > [!NOTE]
+>
 > - When no concatenation is defined (i.e. when DomInstanceNameDefinition is empty or null), the ID of the DomInstance will be used as DomInstance name.
 > - When multiple values are defined for the same FieldDescriptor (i.e. when there are multiple Sections for the same SectionDefinition), the first value will be used for the concatenation.
 > - The DomInstanceNameDefinition can be overridden by a DomDefinition on the ModuleSettingsOverrides property.
@@ -107,6 +108,7 @@ var settings = new ModuleSettings()
 The SectionDefinitionId, DomDefinitionId, DomInstanceId and DomTemplateId objects will now all have a ModuleId property. This property will automatically be filled in when a SectionDefinition, DomDefinition, DomInstance or DomTemplate object is added or updated.
 
 > [!NOTE]
+>
 > - SectionDefinitions linked to the JobManager will have their ModuleId set to null.
 > - Existing objects will only have their ModuleId property filled in the first time they are updated.
 
@@ -180,13 +182,14 @@ Up to now, while a spectrum trace recording was playing, you could select the pl
 
 #### DataMiner Cube start window: Cleanup Cube Installation window \[ID_30351\]
 
-When you click the cogwheel icon in the bottom-right corner of the DataMiner Cube start window, you can now select the *Cleanup... *option to open the *Cleanup Cube Installation* window. That window will allow you to remove old and/or unused Cube versions as well as to clear the Visio cache and the protocol cache.
+When you click the cogwheel icon in the bottom-right corner of the DataMiner Cube start window, you can now select the *Cleanup* option to open the *Cleanup Cube Installation* window. That window will allow you to remove old and/or unused Cube versions as well as to clear the Visio cache and the protocol cache.
 
 #### Alarm templates: Baseline editor now allows you to configure baselines and smart baselines specified in protocols \[ID_30388\] \[ID_30461\]
 
 Up to now, when a parameter had a (smart) baseline value specified in the protocol, it was not possible to update that (smart) baseline value in Cube’s alarm template baseline editor. From now on, that editor will allow you to configure (smart) baselines specified in protocols.
 
 > [!NOTE]
+>
 > - The alarm template baseline editor will not allow you to change the monitoring type (Normal, Relative, Absolute or Rate).
 > - When a baseline is specified in a protocol, the baseline value is stored in a separate parameter. Although you should specify a read parameter (e.g. `<Alarm type="absolute:READ_PARAM_ID,108">`), make sure that read parameter has an associated write parameter. Otherwise, it will not be possible to update the baseline value stored in that parameter. Also, the parameter in which the baseline value is stored must be free of any restrictions (e.g. step size, number of decimals, high/low range, etc.)
 

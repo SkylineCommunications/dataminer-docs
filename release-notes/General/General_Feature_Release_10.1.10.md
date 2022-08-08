@@ -90,6 +90,7 @@ To use this new polling scheme, add the “multipleGet” to the SNMP options of
     ```
 
 > [!NOTE]
+>
 > - The multipleGet option cannot be used together with the multipleGetNext, multipleGetBulk and bulk options.
 > - The multipleGet keyword can be used together with options like Subtable.
 > - The notify protocol command NT_GET_BITRATE_DELTA, which can be launched from within a QAction, was expanded in DataMiner version 10.1.6 to be able to retrieve the delta times per row when polling an SNMP table. This functionality will now also work in conjunction with the new multipleGet option.
@@ -119,6 +120,7 @@ A number of options can also be added to the *HistoryMode* shape, again using a 
 | AverageTrendDataIndication | This option allows you to specify a prefix to the parameter value in case it represents an average value. By default, no prefix is shown. <br> For example:  *State=On\|TimeStamp=\[var:myTime\]\|<br>AverageTrendDataIndication=\[AVG\]*                            |
 
 > [!NOTE]
+>
 > - You can override history mode on shape level. In case there are shapes within shapes, the lowest level will be checked first. However, the full shape data of this lowest level is used, so you must make sure that the shape data is fully configured even if you only want to change one option (e.g. NoDataValue).
 > - At present, for history values no unit is displayed. In addition, only updating the element or parameter shape data will not update the history mode result.
 
@@ -180,36 +182,37 @@ To link an element shape to the last-known resource using the element in questio
 | Options          | UseResource=True |
 
 > [!NOTE]
+>
 > - Within a service instance connectivity chain, the elements will automatically be linked to the resource.
 > - Children of an element shape in which the “UseResource” option is specified will automatically inherit this setting unless overridden.
 
-**Placeholders that can retrieve resource-related data**
+##### Placeholders that can retrieve resource-related data
 
 When a resource is linked to an element shape, you can use the following placeholders to retrieve data from that resource.
 
-| Placeholder       | Data                                                                                                                                                                                           |
-|-------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| \[Element Name\]  | The name of the resource’s function element, if such an element could be found.<br> If none could be found, this placeholder will contain the name of the element linked to the element shape. |
-| \[Function Name\] | The name of the resource function.                                                                                                                                                             |
-| \[Name\]          | The name of the element linked to the element shape.                                                                                                                                           |
-| \[Resource ID\]   | The ID of the resource (GUID).                                                                                                                                                                 |
-| \[Resource Name\] | The name of the resource.                                                                                                                                                                      |
+| Placeholder | Data |
+|--|--|
+| \[Element Name\] | The name of the resource’s function element, if such an element could be found. If none could be found, this placeholder will contain the name of the element linked to the element shape. |
+| \[Function Name\] | The name of the resource function. |
+| \[Name\] | The name of the element linked to the element shape. |
+| \[Resource ID\] | The ID of the resource (GUID). |
+| \[Resource Name\] | The name of the resource. |
 
-#### Visual Overview: New \[ServiceDefinition:\] placeholder & new \[Reservation:\] placeholder property “ServiceDefinitionID” \[ID_30757\]
+#### Visual Overview: New \[ServiceDefinition:\] placeholder & new \[Reservation:\] placeholder property 'ServiceDefinitionID' \[ID_30757\]
 
-**New \[ServiceDefinition:\] placeholder**
+##### New \[ServiceDefinition:\] placeholder
 
 The new \[ServiceDefinition:\] placeholder allows you to retrieve one of the following properties of a service definition:
 
-| Property                 | Description                                                                                                                                                                                                  |
-|--------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Name                     | The name of the service definition.                                                                                                                                                                          |
-| Actions                  | The name of the scripts that are defined on the service definition.<br> Names of multiple actions will be separated by colons (“:”). This will allows them to be inserted directly into e.g. a setvar shape. |
-| Property=\<propertyName> | The value of any of the custom properties of the service definition.                                                                                                                                         |
+| Property | Description |
+|--|--|
+| Name | The name of the service definition. |
+| Actions | The name of the scripts that are defined on the service definition. Names of multiple actions will be separated by colons (“:”). This will allows them to be inserted directly into e.g. a setvar shape. |
+| Property=\<propertyName> | The value of any of the custom properties of the service definition. |
 
 Full syntax: \[ServiceDefinition:\<ServiceDefinitionID>,\<Property>\]
 
-**New \[Reservation:\] placeholder property “ServiceDefinitionID”**
+##### New \[Reservation:\] placeholder property 'ServiceDefinitionID'
 
 The \[Reservation:\] placeholder now allows you to retrieve the service definition ID of a specific booking.
 

@@ -188,10 +188,11 @@ If you want to specify the page to be selected by default, add a suffix to the i
 - VIEW=436:BelowThisView:Elements
 
 > [!NOTE]
+>
 > - In each of the examples above, the card will be opened on a particular page:
->     - “Topology:Total” or “t:Total” will open the topology page named “Total”.
->     - “BelowThisObject:STB” or “bto:STB” will open the CPE card page named “STB”.
->     - “BelowThisView:Elements” or “btv:Elements” will open the view card page named “Elements”.
+>   - “Topology:Total” or “t:Total” will open the topology page named “Total”.
+>   - “BelowThisObject:STB” or “bto:STB” will open the CPE card page named “STB”.
+>   - “BelowThisView:Elements” or “btv:Elements” will open the view card page named “Elements”.
 > - When the card layout is set to “Tab layout”, it is now possible to save EPM cards in workspaces.
 
 #### New “IN USE” info tag to be used in element shapes linked to resources \[ID_32393\]
@@ -210,25 +211,25 @@ In shapes linked to an object, it is now possible to change the text wrapping an
 
 To do so, add a shape data field of type TextStyle, and set its value to “TextWrapping=...” and/or “TextTrimming=...” (separated by a pipe character).
 
-| Shape data field | Value                                                                                            |
-|------------------|--------------------------------------------------------------------------------------------------|
-| TextStyle        | TextWrapping=NoWrap/Wrap/WrapWithOverflow\|<br> TextTrimming=CharacterEllipsis/WordEllipsis/None |
+| Shape data field | Value                                                                                       |
+|------------------|---------------------------------------------------------------------------------------------|
+| TextStyle        | TextWrapping=NoWrap/Wrap/WrapWithOverflow\|TextTrimming=CharacterEllipsis/WordEllipsis/None |
 
-**TextWrapping options**
+##### TextWrapping options
 
-| Option           | Behavior                                                                                                                                                                         |
-|------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| NoWrap           | The text will not wrap onto a new line, unless one was explicitly configured with a line break. Text that exceeds the bounds of the shape width and/or height will not be shown. |
-| Wrap             | The text will automatically be wrapped onto new lines when the width of the shape is exceeded. The text past the boundaries of the shape height will not be shown.               |
-| WrapWithOverflow | The text will be shown as before. (default option)                                                                                                                               |
+| Option | Behavior |
+|--|--|
+| NoWrap | The text will not wrap onto a new line, unless one was explicitly configured with a line break. Text that exceeds the bounds of the shape width and/or height will not be shown. |
+| Wrap | The text will automatically be wrapped onto new lines when the width of the shape is exceeded. The text past the boundaries of the shape height will not be shown. |
+| WrapWithOverflow | The text will be shown as before. (default option) |
 
-**TextTrimming options**
+##### TextTrimming options
 
-| Option            | Description                                                                                                                                                              |
-|-------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Option | Description |
+|--|--|
 | CharacterEllipsis | The text will be cut off a bit earlier than when TextTrimming is set to “None”, and “...” will be added to indicate that the text is longer than what fits in the shape. |
-| WordEllipsis      | The text will be cut off at the nearest full word, and “...” will be added to indicate that the text is longer than what fits in the shape.                              |
-| None              | The text will be cut off when necessary. (default option)                                                                                                                |
+| WordEllipsis | The text will be cut off at the nearest full word, and “...” will be added to indicate that the text is longer than what fits in the shape. |
+| None | The text will be cut off when necessary. (default option) |
 
 Setting TextTrimming to either “CharacterEllipsis” or “WordEllipsis” will have no effect when TextWrapping is set to its default value (i.e. “WrapWithOverflow”).
 
@@ -270,6 +271,7 @@ pfHelper.ReplaceActiveSystemFunctionDefinitions(xmlcontent);
 ```
 
 > [!NOTE]
+>
 > - If the uploaded file is not a valid XML file, a DataMinerException will be thrown and the system functions will not be replaced.
 > - Each function in the XML file must have a valid ID. Functions without a valid ID will be ignored.
 

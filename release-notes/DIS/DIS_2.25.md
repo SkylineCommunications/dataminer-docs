@@ -60,6 +60,7 @@ Up to now, when you clicked *Publish* (in a file tab header) or *Connect* (in th
 From now on, DIS will remember the DMA to which you were last connected. Whenever it needs to reconnect, it will now reconnect to that DMA instead of to the default DMA.
 
 > [!NOTE]
+>
 > - When you click *Publish* or *Connect* either for the first time after starting Visual Studio or after a manual disconnect, DIS will always connect to the default DMA.
 > - Up to now, the settings for remote debugging were only configurable on a global level. In other words, the same settings were applicable to all DMAs defined in the *DIS* tab of the *DIS Settings* window. Now, you can configure those settings per DMA.
 

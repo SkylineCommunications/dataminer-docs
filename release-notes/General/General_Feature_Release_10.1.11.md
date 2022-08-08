@@ -14,24 +14,24 @@ The DataMiner Object Model can now also contain objects of type DomBehaviorDefin
 
 A DomBehaviorDefinition is a standalone object that extends a normal DomDefinition and contains configuration settings for special behavior, including the configuration of the status system. In a ModuleSettings object, the ModuleBehaviorDefinition property will contain the ID of the DomBehaviorDefinition that includes all the configuration settings that must be used in that particular module.
 
-**DomBehaviorDefinition properties**
+##### DomBehaviorDefinition properties
 
 A DomBehaviorDefinition object has the following properties.
 
-| Property                         | Type                                              | Filterable | Description                                                                                                       |
-|----------------------------------|---------------------------------------------------|------------|-------------------------------------------------------------------------------------------------------------------|
-| ID                               | DomBehavior<br>DefinitionId                       | Yes        | The unique ID of the definition.                                                                                  |
-| Name                             | string                                            | Yes        | The name of the definition.                                                                                       |
-| ParentId                         | DomBehavior<br>DefinitionId                       | Yes        | The ID of the parent DomBehavior-Definition (when using inheritance).                                             |
-| InitialStatusId                  | string                                            | No         | The ID of the status that should be used when new DomInstances are created.                                       |
-| Statuses                         | List<br>\<DomStatus>                              | No         | A list of all statuses.                                                                                           |
-| StatusSection<br>DefinitionLinks | List<br>\<DomStatus<br>SectionDefinition<br>Link> | No         | A list of links to SectionDefinitions that define which fields are required, allowed, etc. for a specific status. |
-| Status<br>Transitions            | List\<DomStatus<br>Transition>                    | No         | A list of all allowed status transitions.                                                                         |
+| Property | Type | Filterable | Description |
+|--|--|--|--|
+| ID | DomBehaviorDefinitionId | Yes | The unique ID of the definition. |
+| Name | string | Yes | The name of the definition. |
+| ParentId | DomBehaviorDefinitionId | Yes | The ID of the parent DomBehavior-Definition (when using inheritance). |
+| InitialStatusId | string | No | The ID of the status that should be used when new DomInstances are created. |
+| Statuses | List\<DomStatus> | No | A list of all statuses. |
+| StatusSectionDefinitionLinks | List\<DomStatusSectionDefinitionLink> | No | A list of links to SectionDefinitions that define which fields are required, allowed, etc. for a specific status. |
+| StatusTransitions | List\<DomStatusTransition> | No | A list of all allowed status transitions. |
 
 > [!NOTE]
 > Properties of which the *Filterable* column contains “Yes” can be used for filtering using DomBehaviorDefinitionExposers.
 
-**DomBehaviorDefinition inheritance**
+##### DomBehaviorDefinition inheritance
 
 One DomBehaviorDefinition can inherit from another.
 
@@ -40,7 +40,7 @@ Limitations:
 - A DomBehaviorDefinition can only inherit from the DomBehaviorDefinition that is specified in the ModuleBehaviorDefinition property of the ModuleSettings object.
 - A DomBehaviorDefinition that inherits from another DomBehaviorDefinition can only contain an ID, a parent ID and a list of additional DomStatusSectionDefinitionLinks to SectionDefinitions that are not defined in the module definition. Adding additional statuses or status transitions is not allowed.
 
-**Requirements**
+##### Requirements
 
 Create & update:
 
@@ -55,36 +55,36 @@ Delete:
 
 - A DomBehaviorDefinition can only be deleted when no DomDefinitions or other DomBehaviorDefinitions link to it.
 
-**Errors**
+##### Errors
 
 The TraceData can contain one or more DomDefinitionErrors. For each error, the Id and Name properties will be filled in alongside any other property mentioned in the description. See below for a list of all possible ErrorReasons:
 
-| Reason                                                       | Description                                                                                                                                                                                                                              |
-|--------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| InvalidParentId                                              | The DomBehaviorDefinition.ParentId property contains an unexpected ID. If a ModuleDomBehaviorDefinition is defined, it must contain the ID of that definition. If not, it should be empty.                                               |
-| InheritingDefinition<br>ContainsInvalidData                  | The DomBehaviorDefinition inherits from another one, but it contains data that is not allowed. Only the DomBehaviorDefinition.StatusSectionDefinitionLinks can contain additional objects.                                               |
-| StatusTransitionsReference<br>NonExistingStatuses            | At least one DomStatusTransition refers to a status that does not exist. The ID(s) of the invalid transition(s) can be found in StatusTransitionsIds.                                                                                    |
-| StatusSectionDefinitionLinks<br>ReferenceNonExistingStatuses | At least one DomStatusSectionDefinitionLink refers to a status that does not exist. The ID(s) of the invalid DomStatusSectionDefinitionLink(s) can be found in DomStatusSectionDefinitionLinkIds.                                        |
-| InvalidStatusIds                                             | At least one status has an invalid ID (IDs should only contain lowercase characters). The ID(s) of the invalid status(es) can be found in StatusIds.                                                                                     |
-| DuplicateStatusIds                                           | Some statuses have duplicate status IDs. The ID(s) of the duplicate status(es) can be found in StatusIds.                                                                                                                                |
-| InvalidTransitionIds                                         | At least one transition has an invalid transition ID (IDs should only contain lowercase characters). The ID(s) of the invalid transition(s) can be found in StatusTransitionsIds.                                                        |
-| DuplicateTransitionIds                                       | Some transitions have duplicate transition IDs. The ID(s) of the duplicate transition(s) can be found in StatusTransitionsIds.                                                                                                           |
-| InUseByDomDefinitions                                        | The DomBehaviorDefinition cannot be deleted because it is being used by at least one DomDefinition. The ID(s) of these DomDefinition(s) can be found in DomDefinitionIds.                                                                |
-| InUseByDomBehaviorDefinitions                                | The DomBehaviorDefinition cannot be deleted because it is being used by at least one DomBehaviorDefinition. The ID(s) of these DomBehaviorDefinition(s) can be found in DomBehaviorDefinitionIds.                                        |
-| InvalidInitialStatusId                                       | The DomBehaviorDefinition defines at least one status, but does not define a valid initial status. The ID of the invalid initial status (which can be empty) can be found in StatusIds.                                                  |
-| DuplicateSectionDefinitionLinks                              | The DomBehaviorDefinition defines more than one DomStatusSectionDefinitionLink for the same SectionDefinition/status pair. The ID(s) of the duplicate DomStatusSectionDefinitionLinks can be found in DomStatusSectionDefinitionLinkIds. |
+| Reason | Description |
+|--|--|
+| InvalidParentId | The DomBehaviorDefinition.ParentId property contains an unexpected ID. If a ModuleDomBehaviorDefinition is defined, it must contain the ID of that definition. If not, it should be empty. |
+| InheritingDefinitionContainsInvalidData | The DomBehaviorDefinition inherits from another one, but it contains data that is not allowed. Only the DomBehaviorDefinition.StatusSectionDefinitionLinks can contain additional objects. |
+| StatusTransitionsReferenceNonExistingStatuses | At least one DomStatusTransition refers to a status that does not exist. The ID(s) of the invalid transition(s) can be found in StatusTransitionsIds. |
+| StatusSectionDefinitionLinksReferenceNonExistingStatuses | At least one DomStatusSectionDefinitionLink refers to a status that does not exist. The ID(s) of the invalid DomStatusSectionDefinitionLink(s) can be found in DomStatusSectionDefinitionLinkIds. |
+| InvalidStatusIds | At least one status has an invalid ID (IDs should only contain lowercase characters). The ID(s) of the invalid status(es) can be found in StatusIds. |
+| DuplicateStatusIds | Some statuses have duplicate status IDs. The ID(s) of the duplicate status(es) can be found in StatusIds. |
+| InvalidTransitionIds | At least one transition has an invalid transition ID (IDs should only contain lowercase characters). The ID(s) of the invalid transition(s) can be found in StatusTransitionsIds. |
+| DuplicateTransitionIds | Some transitions have duplicate transition IDs. The ID(s) of the duplicate transition(s) can be found in StatusTransitionsIds. |
+| InUseByDomDefinitions | The DomBehaviorDefinition cannot be deleted because it is being used by at least one DomDefinition. The ID(s) of these DomDefinition(s) can be found in DomDefinitionIds. |
+| InUseByDomBehaviorDefinitions | The DomBehaviorDefinition cannot be deleted because it is being used by at least one DomBehaviorDefinition. The ID(s) of these DomBehaviorDefinition(s) can be found in DomBehaviorDefinitionIds. |
+| InvalidInitialStatusId | The DomBehaviorDefinition defines at least one status, but does not define a valid initial status. The ID of the invalid initial status (which can be empty) can be found in StatusIds. |
+| DuplicateSectionDefinitionLinks | The DomBehaviorDefinition defines more than one DomStatusSectionDefinitionLink for the same SectionDefinition/status pair. The ID(s) of the duplicate DomStatusSectionDefinitionLinks can be found in DomStatusSectionDefinitionLinkIds. |
 
-**Security**
+##### Security
 
 Security checks are performed on CRUD actions when user permissions are configured on the DomManagerSecuritySettings (of the ModuleSettings).
 
-- To read DomBehaviorDefinitions, users must be granted the DomManagerSecuritySettings.<br>ViewPermission.
+- To read DomBehaviorDefinitions, users must be granted the DomManagerSecuritySettings.ViewPermission.
 - To create, update or delete DomBehaviorDefinitions, users must be granted the DomManagerSecuritySettings.ConfigurePermission.
 
 > [!NOTE]
 > To create, update or delete the ModuleDomBehaviorDefinition, users must be granted the ModuleSettingsConfiguration permission.
 
-**Status system**
+##### Status system
 
 In a DomManager, you can now configure a DomDefinition to use the status system.
 
@@ -114,35 +114,36 @@ Configuration:
 
     | Property    | Type   | Explanation                                                                                  |
     |-------------|--------|----------------------------------------------------------------------------------------------|
-    | Id          | string | The ID of the status, consisting of lowercase characters only.<br> Example: “initial_status” |
-    | DisplayName | string | The display name of the status.<br> Example: “Initial”                                       |
+    | Id          | string | The ID of the status, consisting of lowercase characters only. Example: “initial_status” |
+    | DisplayName | string | The display name of the status. Example: “Initial”                                       |
 
     > [!NOTE]
-    > -  The Statuses collection should not contain any DomStatus objects with identical IDs.
-    > -  InitialStatusId must contain the ID of an existing status. When a DomInstance is created and no status is assigned to it, it will automatically be assigned the status specified in InitialStatusId.
+    >
+    > - The Statuses collection should not contain any DomStatus objects with identical IDs.
+    > - InitialStatusId must contain the ID of an existing status. When a DomInstance is created and no status is assigned to it, it will automatically be assigned the status specified in InitialStatusId.
 
 - To configure the allowed status transitions, for each transition add a DomStatusTransition object to the Transitions list property of the DomBehaviorDefinition. A DomStatusTransition has the following properties:
 
     | Property   | Type   | Explanation                                                                                                                                                                                                           |
     |--------------|--------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-    | Id           | string | The ID of the transition, consisting of lowercase characters only.<br> Example: “initial_to_accepted_status”                                                                                                          |
+    | Id           | string | The ID of the transition, consisting of lowercase characters only. Example: “initial_to_accepted_status”                                                                                                          |
     | FromStatusId | string | The ID of the status from which the DomInstance will transition.                                                                                                                                                      |
     | ToStatusId   | string | The ID of the status to which the DomInstance will transition.                                                                                                                                                        |
-    | FlowLevel    | int    | The flow level of the transition compared to other transitions.<br> The main transition will have FlowLevel 0 (the highest priority), while alternate transitions from the same status will have FlowLevel 1 or more. |
+    | FlowLevel    | int    | The flow level of the transition compared to other transitions. The main transition will have FlowLevel 0 (the highest priority), while alternate transitions from the same status will have FlowLevel 1 or more. |
 
     > [!NOTE]
     > The Transitions collection should not contain any DomStatusTransition objects with identical IDs.
 
 - For each status, you can configure the requirements of a specific field. To do so, create DomStatusSectionDefinitionLinks that each include DomStatusFieldDescriptorLinks. A DomStatusSectionDefinitionLink has the following properties:
 
-    | Property           | Type                                    | Explanation                                                           |
-    |----------------------|-----------------------------------------|-----------------------------------------------------------------------|
-    | Id                   | DomStatus<br>SectionDefinitionLinkId    | The SectionDefinitionID and the status ID.                            |
-    | FieldDescriptorLinks | List\<DomStatus<br>FieldDescriptorLink> | The links to FieldDescriptors that are part of the SectionDefinition. |
+    | Property             | Type                                | Explanation                                                           |
+    |----------------------|-------------------------------------|-----------------------------------------------------------------------|
+    | Id                   | DomStatusSectionDefinitionLinkId    | The SectionDefinitionID and the status ID.                            |
+    | FieldDescriptorLinks | List\<DomStatusFieldDescriptorLink> | The links to FieldDescriptors that are part of the SectionDefinition. |
 
     A DomStatusFieldDescriptorLink contains the following properties:
 
-    | Property        | Type              | Explanation                                                              |
+    | Property          | Type              | Explanation                                                              |
     |-------------------|-------------------|--------------------------------------------------------------------------|
     | FieldDescriptorId | FieldDescriptorID | The ID of the linked FieldDescriptor.                                    |
     | Visible           | bool              | Whether this field should be visible in the UI for this status.          |
@@ -150,21 +151,22 @@ Configuration:
     | ReadOnly          | bool              | Whether values of this field are read-only in this status.               |
 
     > [!NOTE]
-    > -  When there is no FieldDescriptorLink for an existing FieldDescriptor, then no values will be allowed for this FieldDescriptor in that specific status.
-    > -  The Visible property is only used to tell the UI whether the field should be visible or not.
-    > -  When a field is marked as required, then at least one value for this FieldDescriptor should be present in a DomInstance and all values for this FieldDescriptor should be valid according to the validators of that descriptor (if any were defined).
-    > -  When a field is marked as read-only for a specified status, the values cannot be changed. If none were present before transitioning to that status, none can be added anymore once the DomInstance is in that status.
-    > -  The existence of the SectionDefinitions and FieldDescriptors are not checked when a DomBehaviorDefinition is saved.
+    >
+    > - When there is no FieldDescriptorLink for an existing FieldDescriptor, then no values will be allowed for this FieldDescriptor in that specific status.
+    > - The Visible property is only used to tell the UI whether the field should be visible or not.
+    > - When a field is marked as required, then at least one value for this FieldDescriptor should be present in a DomInstance and all values for this FieldDescriptor should be valid according to the validators of that descriptor (if any were defined).
+    > - When a field is marked as read-only for a specified status, the values cannot be changed. If none were present before transitioning to that status, none can be added anymore once the DomInstance is in that status.
+    > - The existence of the SectionDefinitions and FieldDescriptors are not checked when a DomBehaviorDefinition is saved.
 
     Some examples of fields you can define:
 
     | Case                       | RequiredForStatus | ReadOnly | Note                                                                                                                                                              |
     |------------------------------|-------------------|----------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
     | Not allowed                  | N/A               | N/A      | When no values are allowed to be present, no FieldDescriptorLink should be added to the list.                                                                     |
-    | Optional &<br> editable      | false             | false    | A value can optionally be added or an existing value can be updated or deleted.                                                                                   |
-    | Optional &<br> not editable  | false             | true     | A value may be present but it is not required. None can be added, edited or deleted.                                                                              |
-    | Required &<br> editable      | true              | false    | A valid value must be present when transitioning to the status in question and it can be updated as long as there is at least one value and all values are valid. |
-    | Required & <br> not editable | true              | true     | A valid value must be present when transitioning and it can no longer be changed in this status.                                                                  |
+    | Optional & editable      | false             | false    | A value can optionally be added or an existing value can be updated or deleted.                                                                                   |
+    | Optional & not editable  | false             | true     | A value may be present but it is not required. None can be added, edited or deleted.                                                                              |
+    | Required & editable      | true              | false    | A valid value must be present when transitioning to the status in question and it can be updated as long as there is at least one value and all values are valid. |
+    | Required & not editable | true              | true     | A valid value must be present when transitioning and it can no longer be changed in this status.                                                                  |
 
 If a DomInstance is created without a status, the DomManager will automatically assign the initial status when it detects that the instance is linked to a DomDefinition that uses the status system.
 
@@ -176,14 +178,14 @@ domHelper.DomInstances.DoStatusTransition(domInstance.ID, "initial_to_acceptance
 
 When something goes wrong while performing a status transition, a DomStatusTransitionError will be returned in the TraceData of the request. This error can contain the following reasons:
 
-| Reason                                                   | Description                                                                                                                                                                                                                                                                                                                     |
-|----------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| StatusTransition<br>NotFound                             | The transition ID does not match any of the IDs defined on the associated DomBehaviorDefinition. This error can also occur when no valid DomBehaviorDefinition is linked.<br> StatusTransitionId contains the ID of the transition that could not be found.                                                                     |
-| StatusTransition<br>IncompatibleWith<br>CurrentStatus    | The current status of the DomInstance does not match the “from” status defined by the transition.<br> StatusTransitionId contains the ID of the transition that could not be completed.                                                                                                                                         |
-| DomInstance<br>ContainsUnknownFieldsForNextStatus        | At least one FieldValue was defined on the DomInstance for which in the DomBehaviorDefinition no link could be found to the next status.<br> AssociatedFields contains the SectionDefinitionID/FieldDescriptorID pairs of the unknown fields.                                                                                   |
-| DomInstance<br>HasInvalidFields<br>ForNextStatus         | The DomInstance contains fields that are required but are not valid according to at least one validator. If there are multiple values for the same SectionDefinition and FieldDescriptor, only one entry will be included.<br> AssociatedFields contains the SectionDefinitionID/FieldDescriptorID pairs of the invalid fields. |
-| DomInstance<br>HasMissingRequired<br>FieldsForNextStatus | The DomInstance does not contain all fields that are required for the next status.<br> AssociatedFields contains the SectionDefinitionID/FieldDescriptorID pairs of the missing fields.                                                                                                                                         |
-| CrudFailedException<br>Occurred                          | When saving the DomInstance, a CrudFailedException occurred.<br> InnerTraceData will contain the TraceData included in the exception.                                                                                                                                                                                           |
+| Reason | Description |
+|--|--|
+| StatusTransitionNotFound | The transition ID does not match any of the IDs defined on the associated DomBehaviorDefinition. This error can also occur when no valid DomBehaviorDefinition is linked. StatusTransitionId contains the ID of the transition that could not be found. |
+| StatusTransitionIncompatibleWithCurrentStatus | The current status of the DomInstance does not match the “from” status defined by the transition. StatusTransitionId contains the ID of the transition that could not be completed. |
+| DomInstanceContainsUnknownFieldsForNextStatus | At least one FieldValue was defined on the DomInstance for which in the DomBehaviorDefinition no link could be found to the next status. AssociatedFields contains the SectionDefinitionID/FieldDescriptorID pairs of the unknown fields. |
+| DomInstanceHasInvalidFieldsForNextStatus | The DomInstance contains fields that are required but are not valid according to at least one validator. If there are multiple values for the same SectionDefinition and FieldDescriptor, only one entry will be included. AssociatedFields contains the SectionDefinitionID/FieldDescriptorID pairs of the invalid fields. |
+| DomInstanceHasMissingRequiredFieldsForNextStatus | The DomInstance does not contain all fields that are required for the next status. AssociatedFields contains the SectionDefinitionID/FieldDescriptorID pairs of the missing fields. |
+| CrudFailedExceptionOccurred | When saving the DomInstance, a CrudFailedException occurred. InnerTraceData will contain the TraceData included in the exception. |
 
 It is possible to mark one DomBehaviorDefinition as the main “Module” definition. This will force all other DomBehaviorDefinitions to inherit from it, forcing them all to use the same status system. The inheriting definitions can only add extra DomStatusSectionDefinitionLinks.
 
@@ -195,19 +197,19 @@ From now on, all processing with regard to system performance indicators (SPIs) 
 
 It is now possible to define actions on a DomBehaviorDefinition, which can be triggered via the DomHelper, and buttons that will execute one or more actions when clicked.
 
-**Defining an action**
+##### Defining an action
 
 An action can be defined by adding an IDomActionDefinition to the ActionDefinitions list of a DomBehaviorDefinition. Each action definition has an ID of type string and a condition of type IDomCondition. The ID must be unique for the DomBehaviorDefinition in question and can only contain lower-case characters.
 
 Currently, you can only define actions of type ExecuteScriptDomActionDefinition, i.e. actions that execute a specified script. This type of action has the following properties.
 
-| Property      | Type          | Description                                                                                                                                                                                                                                     |
-|---------------|---------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Id            | string        | The ID of the action.                                                                                                                                                                                                                           |
-| Condition     | IDomCondition | The condition that should be met before the action is allowed to be executed.<br> Note: When you do not define a condition, it will always be allowed to execute the action.                                                                    |
-| Script        | string        | The name of the script to be executed.                                                                                                                                                                                                          |
-| Async         | bool          | Whether the script will be run asynchronously (true) or synchronously (false). When true, no errors or info data from the script will be returned.                                                                                              |
-| ScriptOptions | List\<string> | A list of options (e.g. “PARAMETER:1:MyValue”) that will be passed to the SLAutomation process during execution.<br> Note: Do not add the “DEFER” option. This option will be added automatically depending on the value of the Async property. |
+| Property | Type | Description |
+|--|--|--|
+| Id | string | The ID of the action. |
+| Condition | IDomCondition | The condition that should be met before the action is allowed to be executed. Note: When you do not define a condition, it will always be allowed to execute the action. |
+| Script | string | The name of the script to be executed. |
+| Async | bool | Whether the script will be run asynchronously (true) or synchronously (false). When true, no errors or info data from the script will be returned. |
+| ScriptOptions | List\<string> | A list of options (e.g. “PARAMETER:1:MyValue”) that will be passed to the SLAutomation process during execution. Note: Do not add the “DEFER” option. This option will be added automatically depending on the value of the Async property. |
 
 The scripts that will be executed using this action require a custom entry point of type OnDomAction. This entry point method should have two arguments: the IEngine object and an ExecuteScriptDomActionContext object. See the following example.
 
@@ -233,10 +235,10 @@ namespace DOM_Action_Example
 
 The ExecuteScriptDomActionContext object has the following properties:
 
-| Property  | Type          | Description                                                                                                         |
-|-----------|---------------|---------------------------------------------------------------------------------------------------------------------|
-| ContextId | IDMAObjectRef | The ID of the object for which the action was executed.<br> Note: Currently, only DomInstance IDs can be specified. |
-| ActionId  | string        | The ID of the action that triggered the script.                                                                     |
+| Property  | Type          | Description                                                                                                     |
+|-----------|---------------|-----------------------------------------------------------------------------------------------------------------|
+| ContextId | IDMAObjectRef | The ID of the object for which the action was executed. Note: Currently, only DomInstance IDs can be specified. |
+| ActionId  | string        | The ID of the action that triggered the script.                                                                 |
 
 If the executed script added script output to the engine object, that output will be returned in a DomActionInfo InfoData via the TraceData. See the example below, which shows how data can be added to the script and how it can be retrieved in the other script/application.
 
@@ -267,7 +269,7 @@ if (info != null && info.InfoType == DomActionInfo.Type.ScriptOutput)
 }
 ```
 
-**Executing an action**
+##### Executing an action
 
 An action can be executed by calling the ExecuteAction method on the DomInstance CrudHelperComponent of the DomHelper. The following IDs must be passed along: the ID of the DomInstance for which the action will be executed and the ID of the action that has to be executed.
 
@@ -280,12 +282,12 @@ The execute call will return TraceData when the action failed or when the condit
 | Reason                          | Description                                                                                                                                 |
 |---------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------|
 | Unknown                         | An unknown error has occurred. Check the logging for more information.                                                                      |
-| UnexpectedException<br>Occurred | An unexpected exception has occurred when executing an action.<br> ExceptionMessage will contain the message of the exception.              |
-| ScriptReturnedErrors            | A script has returned errors.<br> ErrorData will contain a list of all the errors that were returned.                                       |
-| ActionDefinition<br>NotFound    | The action that had to be executed could not be found by means of the IDMAObjectRef context ID.                                             |
-| ConditionNotMet                 | The condition that was specified was not met.<br> InnerTraceData may contain additional TraceData explaining why the condition was not met. |
+| UnexpectedExceptionOccurred | An unexpected exception has occurred when executing an action. ExceptionMessage will contain the message of the exception.              |
+| ScriptReturnedErrors            | A script has returned errors. ErrorData will contain a list of all the errors that were returned.                                       |
+| ActionDefinitionNotFound    | The action that had to be executed could not be found by means of the IDMAObjectRef context ID.                                             |
+| ConditionNotMet                 | The condition that was specified was not met. InnerTraceData may contain additional TraceData explaining why the condition was not met. |
 
-**Conditions**
+##### Conditions
 
 When you define an action, you can specify the following types of conditions:
 
@@ -304,18 +306,18 @@ A ValidForStatusTransitionCondition is a type of condition that is met when a Do
 var condition = new ValidForStatusTransitionCondition("first_to_second_transition");
 ```
 
-**Defining buttons**
+##### Defining buttons
 
 A DomBehaviorDefinition contains a list of IDomButtonDefinitions. These can be used to define buttons to be shown in the UI.
 
 Currently, it is only possible to define buttons to be shown for a DomInstance by using a DomInstanceButtonDefinition. These buttons can be linked to one or more actions that will be executed when the buttons are clicked. A DomInstanceButtonDefinition also has a condition that determines whether a button is shown or not. When no condition is specified, a button will by default be shown. A DomInstanceButtonDefinition has the following properties:
 
-| Property            | Type                      | Description                                                                                                                            |
-|---------------------|---------------------------|----------------------------------------------------------------------------------------------------------------------------------------|
-| Id                  | string                    | The ID of the button.<br> This ID must be unique for the DomBehaviorDefinition in question and can only contain lower-case characters. |
-| Layout              | DomButtonDefinitionLayout | Additional properties that define how the button will be displayed.<br> See below.                                                     |
-| VisibilityCondition | IDomInstanceCondition     | The condition that defines when the button will be shown.                                                                              |
-| ActionDefinitionIds | List\<string>             | The IDs of the actions that should be executed.                                                                                        |
+| Property            | Type                      | Description                                                                                                                        |
+|---------------------|---------------------------|------------------------------------------------------------------------------------------------------------------------------------|
+| Id                  | string                    | The ID of the button. This ID must be unique for the DomBehaviorDefinition in question and can only contain lower-case characters. |
+| Layout              | DomButtonDefinitionLayout | Additional properties that define how the button will be displayed. See below.                                                     |
+| VisibilityCondition | IDomInstanceCondition     | The condition that defines when the button will be shown.                                                                          |
+| ActionDefinitionIds | List\<string>             | The IDs of the actions that should be executed.                                                                                    |
 
 The DomButtonDefinitionLayout class has the following properties:
 
@@ -344,6 +346,7 @@ Syntax:
 ```
 
 > [!NOTE]
+>
 > - For more information on HLS, see <https://github.com/video-dev/hls.js/>.
 > - All HLS resources must be delivered with CORS headers that permit GET requests.
 > - If you access a video thumbnail player that is using HTTPS, then the media must also be served over HTTPS.
@@ -418,13 +421,13 @@ As from DataMiner feature release version 10.1.9, view tables containing a colum
 
 The ListView component can now also be used to list resources. To do so, add a shape data field of type “Source” and set its value to “Resources”.
 
-| Shape data field | Value                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-|------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Component        | ListView                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-| Source           | Resources                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| ComponentOptions | List of options, separated by pipe characters.<br> For an overview of all possible component options, see [Component options](xref:Creating_a_list_view#component-options).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-| Columns          | The list of columns that have to be displayed. Preferably, this should be configured by specifying the name of a saved column configuration, e.g. MyColumnConfig.<br> Saving a column configuration is possible via the right-click menu of the list header in DataMiner Cube. This right-click menu also allows you to load a column configuration.<br> If you do not specify this shape data field or leave it empty, all columns will be displayed.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
-| Filter           | Examples:<br> -  Resource.Name\[string\]== 'Encoder'<br> -  Resource.Name contains 'res'<br> -  Resource.Name notContains 'res'<br> -  Resource.ID\[Guid\] == fad6a6dd-ca3a-4b6f-9ca7-b68fd2071786<br> -  Resource.MainDVEDmaID == 113<br> -  Resource.PoolGUIDs contains<br>0fb47f51-ad81-47f2-9e69-3d9477bdc961<br> -  Resource.MaxConcurrency != 1<br> -  Resource.PropertiesDict.Location\[string\] == '3'<br> -  Resource.Name\[string\] notContains 'RS' AND Resource.Name\[string\] notContains 'RT' AND Resource.Name\[string\] notContains 'ExposeFlow'<br> For more information on list view filters, see [List view filters](xref:Creating_a_list_view#list-view-filters). |
+| Shape data field | Value |
+|--|--|
+| Component | ListView |
+| Source | Resources |
+| ComponentOptions | List of options, separated by pipe characters. For an overview of all possible component options, see [Component options](xref:Creating_a_list_view#component-options). |
+| Columns | The list of columns that have to be displayed. Preferably, this should be configured by specifying the name of a saved column configuration, e.g. MyColumnConfig.<br> Saving a column configuration is possible via the right-click menu of the list header in DataMiner Cube. This right-click menu also allows you to load a column configuration.<br> If you do not specify this shape data field or leave it empty, all columns will be displayed. |
+| Filter | Examples:<br> - Resource.Name\[string\]== 'Encoder'<br> - Resource.Name contains 'res'<br> - Resource.Name notContains 'res'<br> - Resource.ID\[Guid\] == fad6a6dd-ca3a-4b6f-9ca7-b68fd2071786<br> - Resource.MainDVEDmaID == 113<br> - Resource.PoolGUIDs contains<br>0fb47f51-ad81-47f2-9e69-3d9477bdc961<br> - Resource.MaxConcurrency != 1<br> - Resource.PropertiesDict.Location\[string\] == '3'<br> - Resource.Name\[string\] notContains 'RS' AND Resource.Name\[string\] notContains 'RT' AND Resource.Name\[string\] notContains 'ExposeFlow' <br>For more information on list view filters, see [List view filters](xref:Creating_a_list_view#list-view-filters). |
 
 > [!NOTE]
 > The IDOfSelection session variable contains a list of the IDs or GUIDs of the selected items, separated by pipe characters.
@@ -453,6 +456,7 @@ When configuring a matrix in the Router Control module, you can now set it to ei
 
 > [!NOTE]
 > When you use direct take mode in combination with the “Use output-first workflow” option
+>
 > - selecting an output will not cause crosspoints to be created or deleted, and
 > - input selections will only be cleared when you select another output.
 
@@ -484,6 +488,7 @@ To set this browser engine as the system default for all users, go to *System Ce
 If you want a shape to display a webpage using the Edge web browser regardless of Cube’s default browser engine setting, add a shape data field of type *Options* to the shape containing the web browser control, and set its value to “UseEdge”.
 
 > [!NOTE]
+>
 > - Currently, the Edge web browser engine cannot be used in DataMiner web apps like Ticketing, Dashboards, etc.
 > - The WebView2 Runtime will automatically be installed when using Office 365 Apps. It will also come pre-installed with Windows 11. It will not be included in DataMiner upgrade packages.
 
@@ -510,10 +515,11 @@ The \<color> value in the example above can be specified as follows:
 - An HTML color code (e.g. #FF102030)
 - An RGB color code (e.g. 40,50,60)
 - A standard color name (e.g. magenta)
-- A color placeholder referring to one of the configured DataMiner alarm colors<br>(e.g. \[color:severity=minor\])
-- A placeholder referring to a variable containing a color value<br>(e.g. \[PageVar:MyColorSessionVar\])
+- A color placeholder referring to one of the configured DataMiner alarm colors (e.g. \[color:severity=minor\])
+- A placeholder referring to a variable containing a color value (e.g. \[PageVar:MyColorSessionVar\])
 
 > [!NOTE]
+>
 > - If you specified a valid color or if the placeholder resolves correctly, the color you specified will overrule the shape’s default background color. Note that if blinking was enabled, it will be disabled.
 > - If you specify a custom BackgroundColor, shape transparency will work as before.
 

@@ -13,6 +13,7 @@ uid: General_Feature_Release_10.1.6
 On MySQL and Microsoft SQL Server databases, the alarm table now has an extra field of type BIGINT: ExtraStatusId.
 
 > [!NOTE]
+>
 > - This change will cause a small increase in latency when retrieving alarms from the database.
 > - From now on, using a filter with an AlarmFilterItemExtraStatus in the GetAlarmDetailsFromDbMessage from within an Automation script will not work correctly in conjunction with a MySQL or Microsoft SQL Server database.
 
@@ -90,18 +91,19 @@ The notify protocol command NT_GET_BITRATE_DELTA, which can be launched from wit
 
 It is advised to enable this feature at startup using the notify protocol command NT_SET_BITRATE_DELTA_INDEX_TRACKING with either a single parameter ID or multiple parameter IDs. This information will not be saved and will only be kept as long as the element is running. See the following examples. The first call will enable the tracking for parameters 100 and 200. The second call will disable the tracking for parameter 100.
 
-- *protocol.NotifyProtocol(/\*NT_SET_BITRATE_DELTA_INDEX_TRACKING\*/ 448, new int\[\] {100, 200}, true);*
-- *protocol.NotifyProtocol(/\*NT_SET_BITRATE_DELTA_INDEX_TRACKING\*/ 448, 100, false);*
+- `protocol.NotifyProtocol(/*NT_SET_BITRATE_DELTA_INDEX_TRACKING*/ 448, new int[] {100, 200}, true);`
+- `protocol.NotifyProtocol(/*NT_SET_BITRATE_DELTA_INDEX_TRACKING*/ 448, 100, false);`
 
 Once tracking has been enabled, the information can be retrieved by using the notify protocol command NT_GET_BITRATE_DELTA with a string as second argument. In the following example, the command will return the delta value for the specified key (“1”) of the specified parameter (100). If you set the second argument to an empty string (“”), then the command will return all currently tracked keys for the parameter in question.
 
-*object delta = protocol.NotifyProtocol(269 /\*NT_GET_BITRATE_DELTA\*/, 100, "1");*
+`object delta = protocol.NotifyProtocol(269 /*NT_GET_BITRATE_DELTA*/, 100, "1");`
 
 The information will be returned in the following format. If only a single key is requested, the initial array will have a length of 1:
 
-*object\[\] { object\[\] {string key1, int delta1}, object\[\] {string key2, int delta2} }*
+`object[] { object[] {string key1, int delta1}, object[] {string key2, int delta2} }`
 
 > [!NOTE]
+>
 > - If the requested key could not be found, or if no polling happened since the tracking was enabled, an empty array will be returned.
 > - If there were no 2 poll cycles, or if the requested key was only present in 1 poll cycle, then the delta value will be returned as -1.
 
@@ -156,12 +158,12 @@ When a ProfileInstance is updated without quarantine being forced (i.e. with for
 
 - If no instances need to be quarantined, the update will be applied and the following warning will be returned:
 
-    - A warning of type ProfileInstanceChangeCausedBookingReconfiguration, listing the running reservations that were reconfigured because of the update.
+  - A warning of type ProfileInstanceChangeCausedBookingReconfiguration, listing the running reservations that were reconfigured because of the update.
 
 - If instances need to be quarantined, the update will not proceed and the following errors will be returned:
 
-    - An error with reason ReservationsMustMovedToQuarantine, listing the reservations that need to be quarantined as well as the usages.
-    - An error with reason ReservationsMustBeReconfigured, listing the bookings that will be affected by the ProfileInstance update.
+  - An error with reason ReservationsMustMovedToQuarantine, listing the reservations that need to be quarantined as well as the usages.
+  - An error with reason ReservationsMustBeReconfigured, listing the bookings that will be affected by the ProfileInstance update.
 
 When a ProfileInstance is updated with quarantine being forced (i.e. with forceQuarantine set to true), the update will proceed and the following TraceData will be returned:
 
@@ -178,7 +180,7 @@ DataMiner Cube now supports hiding specific chains (normal chains and search cha
 
 Below, you can find examples of how to configure conditional visibility in an element protocol.
 
-**Chain visibility**
+##### Chain visibility
 
 Example:
 
@@ -196,10 +198,11 @@ Example:
 ```
 
 > [!NOTE]
+>
 > - The default visibility defines the visibility when none of the conditions are met. Default: true
 > - Multiple \<Standalone> elements are possible. Each one has to contain a parameter ID that refers to the trigger parameter and a set of values that toggle the visibility to the opposite setting of the one defined in the default attribute.
 
-**Chain field visibility**
+##### Chain field visibility
 
 Example:
 
@@ -221,10 +224,11 @@ Example:
 ```
 
 > [!NOTE]
+>
 > - The default visibility defines the visibility when none of the conditions are met. Default: true
 > - Multiple \<Standalone> elements are possible. Each one has to contain a parameter ID that refers to the trigger parameter and a set of values that toggle the visibility to the opposite setting of the one defined in the default attribute.
 
-**Search chain visibility**
+##### Search chain visibility
 
 Example:
 
@@ -242,6 +246,7 @@ Example:
 ```
 
 > [!NOTE]
+>
 > - The default visibility defines the visibility when none of the conditions are met. Default: true
 > - Multiple \<Standalone> elements are possible. Each one has to contain a parameter ID that refers to the trigger parameter and a set of values that toggle the visibility to the opposite setting of the one defined in the default attribute.
 
@@ -252,6 +257,7 @@ Example:
 In the Generic Query Interface, a new “DCF connections” data source is now available. It will return all DCF connections in the DMS.
 
 > [!NOTE]
+>
 > - The “Is Internal” column indicates whether a connection has been marked internal (i.e. virtual) or external (i.e. physical).
 > - External connections are configured both on the source element and the destination element. Hence, each external connection will be listed twice.
 > - Connections of which both the source element and the destination element are stopped will not be listed.
@@ -306,10 +312,11 @@ Metadata will now be added to columns created by an aggregation or manipulation 
 
 When configuring a line chart component, you will now find two new options in the *Styling and Information* section of the *Layout* tab.
 
-| Option            | Description                                                                                                                                                                                                                                                                                                                                                                                                                        |
-|-------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Fill graph        | When you select this option, the space underneath the line will be filled with the line color.                                                                                                                                                                                                                                                                                                                                     |
-| Stack trend lines | When you select this option, all lines in a graph will be stacked on top of each other.<br> Note: This option is not compatible with the *Show min/max shading*, *Show minimum* and *Show maximum* options. When you select the *Stack trend lines* option, those options will be disabled and hidden. |
+- **Fill graph**: When you select this option, the space underneath the line will be filled with the line color.
+- **Stack trend lines**: When you select this option, all lines in a graph will be stacked on top of each other.
+
+  > [!NOTE]
+  > This option is not compatible with the *Show min/max shading*, *Show minimum*, and *Show maximum* options. When you select the *Stack trend lines* option, those options will be disabled and hidden.
 
 Also, the following chart components have been renamed:
 
@@ -408,7 +415,7 @@ When ResourceUsageDetails is equal to null, ConcurrencyLeft will be equal to 0.
 
 Using the ProfileHelper, it is now possible to export and import ServiceProfileInstances and ServiceProfileDefinitions.
 
-**Exporting ServiceProfileDefinitions and ServiceProfileInstances**
+##### Exporting ServiceProfileDefinitions and ServiceProfileInstances
 
 The ExportServiceProfiles method allows you to export ServiceProfileDefinitions and ServiceProfileInstances. See the following example.
 
@@ -431,6 +438,7 @@ Based on the information in those lists, the following data will be exported:
 - All ServiceProfileInstances that are linked to the ServiceProfileDefinitions found in the first list.
 
 > [!NOTE]
+>
 > - IDs of non-existing objects will be ignored.
 > - If you only want to export the ServiceProfileInstances, you can leave the definitionsToExport list empty.
 
@@ -439,15 +447,16 @@ The ExportServiceProfiles method returns a ServiceProfilesExportResult object th
 | Property                              | Type                             | Description                                                                  |
 |---------------------------------------|----------------------------------|------------------------------------------------------------------------------|
 | ZippedData                            | byte\[\]                         | A ZIP file containing all the exported data.                                 |
-| ExportedService<br>ProfileDefinitions | List\<ServiceProfilesObjectInfo> | All ServiceProfileDefinitions that were successfully exported (ID and name). |
-| ExportedService<br>ProfileInstances   | List\<ServiceProfilesObjectInfo> | All ServiceProfileInstances that were successfully exported (ID and name).   |
+| ExportedServiceProfileDefinitions | List\<ServiceProfilesObjectInfo> | All ServiceProfileDefinitions that were successfully exported (ID and name). |
+| ExportedServiceProfileInstances   | List\<ServiceProfilesObjectInfo> | All ServiceProfileInstances that were successfully exported (ID and name).   |
 
 > [!NOTE]
+>
 > - When something goes wrong during an export operation, an unknown error will be added to the TraceData. which can be retrieved using profileHelper.ImportExport.GetTraceDataLastCall().
 > - To pinpoint any non-existing objects, you can compare the list of IDs you provided to the list of IDs that was returned.
 > - When two empty lists are passed to the export method, an ArgumentException will be thrown.
 
-**Importing ServiceProfileDefinitions and ServiceProfileInstances**
+##### Importing ServiceProfileDefinitions and ServiceProfileInstances
 
 The ImportServiceProfiles method allows you to import ServiceProfileDefinitions and ServiceProfileInstances. See the following example.
 
@@ -467,7 +476,7 @@ Checks performed before saving a ServiceProfileDefinition:
 Checks performed before saving a ServiceProfileInstance:
 
 - When a ServiceProfileInstance already exist with the same name but a different ID, the ServiceProfileInstance will not be imported and an error with reason ServiceProfileInstanceNameInUse will be returned.
-- When not all ParameterOverrides on the NodeInstanceConfigurations and InterfaceConfigurations refer to existing ProfileParameters, the ServiceProfileInstance will not be imported and an error with reason ServiceProfileInstnaceRefersToNonExistingParameters will be returned.
+- When not all ParameterOverrides on the NodeInstanceConfigurations and InterfaceConfigurations refer to existing ProfileParameters, the ServiceProfileInstance will not be imported and an error with reason ServiceProfileInstanceRefersToNonExistingParameters will be returned.
 - When not all NodeInstanceConfigurations and InterfaceConfigurations refer to existing ProfileInstances, the ServiceProfileInstance will not be imported and an error with reason ServiceProfileInstanceRefersToNonExistingProfileInstances will be returned.
 
 The ImportServiceProfiles method returns a ServiceProfilesImportResult object that contains the following data:
@@ -475,32 +484,33 @@ The ImportServiceProfiles method returns a ServiceProfilesImportResult object th
 | Property                              | Type                             | Description                                                                  |
 |---------------------------------------|----------------------------------|------------------------------------------------------------------------------|
 | TraceData                             | TraceData                        | All errors that occurred when importing the objects.                         |
-| ImportedService<br>ProfileDefinitions | List\<ServiceProfilesObjectInfo> | All ServiceProfileDefinitions that were successfully imported (ID and name). |
-| ImportedService<br>ProfileInstances   | List\<ServiceProfilesObjectInfo> | All ServiceProfileInstances that were successfully imported (ID and name).   |
+| ImportedServiceProfileDefinitions | List\<ServiceProfilesObjectInfo> | All ServiceProfileDefinitions that were successfully imported (ID and name). |
+| ImportedServiceProfileInstances   | List\<ServiceProfilesObjectInfo> | All ServiceProfileInstances that were successfully imported (ID and name).   |
 
 > [!NOTE]
+>
 > - The TraceData returned by profileHelper.ImportExport.GetTraceDataLastCall() will match the TraceData included in the ServiceProfilesImportResult object.
 > - If you want to know why an object was not imported, you can check the TraceData.
 > - When an empty byte array is passed to the import method, an ArgumentException will be thrown.
 
-**ServiceProfilesImportError**
+##### ServiceProfilesImportError
 
 When an object cannot be saved to the database during an import operation, a ServiceProfilesImportError will be added to the TraceData. Below, you can find the list of all possible error reasons.
 
-| Error reason                                                      | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-|-------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Unknown                                                           | An unknown error occurred.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-| GeneralFailure                                                    | An unexpected exception occurred while importing. The zipped data that was provided is probably invalid.<br> -  Exception: The full exception message.                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
-| UnrecognizedType                                                  | The zip file contained an object with an unrecognized type.<br> -  EntryName: The name of the unrecognized entry.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-| ExtractingJsonFailed                                              | Something went wrong when trying to extract the JSON data associated with an entry.<br> -  Exception: The exception that occurred while extracting.<br> -  ObjectType: The type of the entry for which the JSON data was extracted.<br> -  ObjectId: The ID of the entry for which the JSON data was extracted.                                                                                                                                                                                    |
-| DeserializationFailed                                             | Something went wrong when trying to deserialize the JSON data.<br> -  Exception: The exception that occurred while deserializing.<br> -  ObjectType: The type of the entry for which the JSON data was deserialized.<br> -  ObjectId: The ID of the entry for which the JSON data was deserialized.                                                                                                                                                                                                |
-| ErrorOccuredSaving<br>ServiceProfileDefinition                    | An error occurred while saving the ServiceProfileDefinition.<br> -  ServiceProfileDefinitionError: The error message.<br> -  ObjectId: The ID of the ServiceProfileDefinition.<br> -  ObjectName: The name of the ServiceProfileDefinition.                                                                                                                                                                                                                                                        |
-| ErrorOccuredSaving<br>ServiceProfileInstance                      | An error occurred while saving the ServiceProfileInstance.<br> -  ServiceProfileInstanceError: The error message.<br> -  ObjectId: The ID of the ServiceProfileInstance.<br> -  ObjectName: The name of the ServiceProfileInstance.                                                                                                                                                                                                                                                                |
-| ServiceProfileDefinition<br>NameInUse                             | The name of a ServiceProfileDefinition that is being imported is being used by another ServiceProfileDefinition.<br> -  ObjectId: The ID of the ServiceProfileDefinition that is being imported.<br> -  ObjectName: The name of the ServiceProfileDefinition that is being imported.<br> -  ConflictingId: The ID of the ServiceProfileDefinition that is using the same name.<br> -  ConflictingName: The name that is being used. |
-| ServiceProfileDefinition<br>RefersToNonExisting<br>Parameters     | The NodeDefinitionConfiguration of a NodeDefinition references parameters that do not exist in this system.<br> -  ObjectId: The ID of the ServiceProfileDefinition that is being imported.<br> -  ObjectName: The name of the ServiceProfileDefinition that is being imported.<br> -  MissingIds: The IDs of the missing parameters.                                                                                                                                                              |
-| ServiceProfileInstance<br>NameInUse                               | The name of a ServiceProfileInstance that is being imported is being used by another ServiceProfileInstance.<br> -  ObjectId: The ID of the ServiceProfileInstance that is being imported.<br> -  ObjectName: The name of the ServiceProfileInstance that is being imported.<br> -  ConflictingId: The ID of the ServiceProfileInstance that is using the same name.<br> -  ConflictingName: The name that is being used.           |
-| ServiceProfileInstance<br>RefersToNonExisting<br>Parameters       | Either the NodeInstanceConfiguration or the InterfaceConfiguration contains parameter overrides that refer to parameters that do not exist in the system.<br> -  ObjectId: The ID of the ServiceProfileInstance that is being imported.<br> -  ObjectName: The name of the ServiceProfileInstance that is being imported.<br> -  MissingIds: The IDs of the missing parameters.                                                                                                                    |
-| ServiceProfileInstance<br>RefersToNonExisting<br>ProfileInstances | Either the NodeInstanceConfiguration or the InterfaceConfiguration contains references to ProfileInstances that do not exist in this system.<br> -  ObjectId: The ID of the ServiceProfileInstance that is being imported.<br> -  ObjectName: The name of the ServiceProfileInstance that is being imported.<br> -  MissingIds: The IDs of the missing ProfileInstances.                                                                                                                           |
+| Error reason | Description |
+|--|--|
+| Unknown | An unknown error occurred. |
+| GeneralFailure | An unexpected exception occurred while importing. The zipped data that was provided is probably invalid.<br> - Exception: The full exception message. |
+| UnrecognizedType | The zip file contained an object with an unrecognized type.<br> - EntryName: The name of the unrecognized entry. |
+| ExtractingJsonFailed | Something went wrong when trying to extract the JSON data associated with an entry.<br> - Exception: The exception that occurred while extracting.<br> - ObjectType: The type of the entry for which the JSON data was extracted.<br> - ObjectId: The ID of the entry for which the JSON data was extracted. |
+| DeserializationFailed | Something went wrong when trying to deserialize the JSON data.<br> - Exception: The exception that occurred while deserializing.<br> - ObjectType: The type of the entry for which the JSON data was deserialized.<br> - ObjectId: The ID of the entry for which the JSON data was deserialized. |
+| ErrorOccuredSavingServiceProfileDefinition | An error occurred while saving the ServiceProfileDefinition.<br> - ServiceProfileDefinitionError: The error message.<br> - ObjectId: The ID of the ServiceProfileDefinition.<br> - ObjectName: The name of the ServiceProfileDefinition. |
+| ErrorOccuredSavingServiceProfileInstance | An error occurred while saving the ServiceProfileInstance.<br> - ServiceProfileInstanceError: The error message.<br> - ObjectId: The ID of the ServiceProfileInstance.<br> - ObjectName: The name of the ServiceProfileInstance. |
+| ServiceProfileDefinitionNameInUse | The name of a ServiceProfileDefinition that is being imported is being used by another ServiceProfileDefinition.<br> - ObjectId: The ID of the ServiceProfileDefinition that is being imported.<br> - ObjectName: The name of the ServiceProfileDefinition that is being imported.<br> - ConflictingId: The ID of the ServiceProfileDefinition that is using the same name.<br> - ConflictingName: The name that is being used. |
+| ServiceProfileDefinitionRefersToNonExistingParameters | The NodeDefinitionConfiguration of a NodeDefinition references parameters that do not exist in this system.<br> - ObjectId: The ID of the ServiceProfileDefinition that is being imported.<br> - ObjectName: The name of the ServiceProfileDefinition that is being imported.<br> - MissingIds: The IDs of the missing parameters. |
+| ServiceProfileInstanceNameInUse | The name of a ServiceProfileInstance that is being imported is being used by another ServiceProfileInstance.<br> - ObjectId: The ID of the ServiceProfileInstance that is being imported.<br> - ObjectName: The name of the ServiceProfileInstance that is being imported.<br> - ConflictingId: The ID of the ServiceProfileInstance that is using the same name.<br> - ConflictingName: The name that is being used. |
+| ServiceProfileInstanceRefersToNonExistingParameters | Either the NodeInstanceConfiguration or the InterfaceConfiguration contains parameter overrides that refer to parameters that do not exist in the system.<br> - ObjectId: The ID of the ServiceProfileInstance that is being imported.<br> - ObjectName: The name of the ServiceProfileInstance that is being imported.<br> - MissingIds: The IDs of the missing parameters. |
+| ServiceProfileInstanceRefersToNonExistingProfileInstances | Either the NodeInstanceConfiguration or the InterfaceConfiguration contains references to ProfileInstances that do not exist in this system.<br> - ObjectId: The ID of the ServiceProfileInstance that is being imported.<br> - ObjectName: The name of the ServiceProfileInstance that is being imported.<br> - MissingIds: The IDs of the missing ProfileInstances. |
 
 ### DMS tools
 
@@ -658,7 +668,7 @@ Due to a number of enhancements made to the Element Connections app, the mechani
 
 #### Dashboards app - State component: Enhanced auto-size behavior \[ID_29654\]
 
-When, in the *Layout* tab of the State component, you select “Auto size” in the *Advanced \> Style *section, an attempt will now always be made to fill up the entire component area with the information to be displayed.
+When, in the *Layout* tab of the State component, you select “Auto size” in the *Advanced \> Style* section, an attempt will now always be made to fill up the entire component area with the information to be displayed.
 
 Also, a number of other enhancements have been made with regard to auto-sizing.
 
@@ -692,7 +702,7 @@ Up to now, when a selected row was removed or when the selection was cleared in 
 
 When you exported average trend data to a CSV file, in some cases, extra data points would incorrectly be added to the exported trend data.
 
-#### Protocols: Problem with SLProtocol when the save attribute of a table parameter was incor­rectly set to “true” \[ID_29214\]
+#### Protocols: Problem with SLProtocol when the save attribute of a table parameter was incorrectly set to “true” \[ID_29214\]
 
 When, in a protocol.xml file, the save attribute of a table parameter was incorrectly set to “true”, in some rare cases, an error could occur in SLProtocol.
 
@@ -872,7 +882,7 @@ In some cases, the following problems could occur with regard to Chromium web br
 
 #### SLNetComNotificationThread: Delay between notifications \[ID_29599\]
 
-In SLNet, up to now, the SLNetComNotificationThread had a delay of 15 ms between notifica-tions. In cases where a large number of notifications had to be processed, the total delay could be significant.
+In SLNet, up to now, the SLNetComNotificationThread had a delay of 15 ms between notifications. In cases where a large number of notifications had to be processed, the total delay could be significant.
 
 #### Elasticsearch: Problem with postfilters \[ID_29602\]
 
@@ -923,7 +933,7 @@ When trend data was exported to a CSV file, in some cases, zero values would inc
 
 When you opened a Spectrum element card, in some rare cases, the start, stop and center frequencies would incorrectly be displayed without decimals.
 
-#### DataMiner Cube: No views visible in the Surveyor after clicking the “Start” button on the mes­sage box saying that the agent was not running \[ID_29665\]
+#### DataMiner Cube: No views visible in the Surveyor after clicking the “Start” button on the message box saying that the agent was not running \[ID_29665\]
 
 When you opened DataMiner Cube and clicked Start on the message box saying that the agent was not running, the agent would start up but, in some cases, no views would be visible in the Surveyor.
 

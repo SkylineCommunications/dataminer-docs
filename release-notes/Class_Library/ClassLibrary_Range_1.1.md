@@ -107,13 +107,13 @@ From now on, the Class Library will no longer throw an exception when an error o
 
 The Class Library is now able to retrieve data from partial tables.
 
-**GetData method**
+##### GetData method
 
 The IDmsTable GetData method will now return the entire contents of a partial table.
 
 Up to now, it would only return the first page of such a table.
 
-**QueryData method**
+##### QueryData method
 
 The new IDmsTable QueryData method will return an IEnumerable\<object\[\]\>, i.e. a collection of row objects.
 
@@ -129,6 +129,7 @@ ITableFilterItem filter = new TableFilterItem
 ```
 
 > [!NOTE]
+>
 > - Using GetData will retrieve the entire table in one request. If you only need to retrieve a portion of a table, consider using QueryData instead.
 > - Using QueryData without a filter will retrieve the entire table in multiple requests (one request per page).
 > - Using QueryData with a filter will retrieve the table rows matching the filter in one request.

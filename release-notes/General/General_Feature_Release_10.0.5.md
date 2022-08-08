@@ -31,6 +31,7 @@ If, for a particular job or ReservationInstance, this property contains a view I
 - Users who try to create, update or delete a job or a ReservationInstance will only be able to do so if they have Write access to the view associated with that job or ReservationInstance.
 
 > [!NOTE]
+>
 > - In case of ReservationInstances, it will still be possible to put other ReservationInstances (by updating a ReservationInstance, Resource or ProfileInstance) into quarantine to which you do not have access.
 > - When performing scheduling checks, the ReservationInstances to which a user does not have access will still be taken into account.
 > - All ReservationInstances in a particular tree must have the same SecurityViewID.
@@ -77,22 +78,22 @@ You can define the following:
 
 - A condition on a column parameter receiving its data from an unrelated table.
 
-    In this case, the primary keys of both tables will be matched, and the condition will apply when, in the column used in the condition, the row with the same key is changed.
+  In this case, the primary keys of both tables will be matched, and the condition will apply when, in the column used in the condition, the row with the same key is changed.
 
 - A condition on a specific cell of a column parameter.
 
-    - If the two tables are unrelated, the condition will apply to all cells in the monitored column, but only when the cell specified in the condition has changed.
+  - If the two tables are unrelated, the condition will apply to all cells in the monitored column, but only when the cell specified in the condition has changed.
 
-        When any other cell in the same column as the cell specified in the condition changes, it will not have any impact on the monitoring.
+    When any other cell in the same column as the cell specified in the condition changes, it will not have any impact on the monitoring.
 
-    - If the two tables are related, the condition will apply to all cells in the monitored column linked to the row containing the cell specified in the condition.
+  - If the two tables are related, the condition will apply to all cells in the monitored column linked to the row containing the cell specified in the condition.
 
-        All other cells in the monitored column will not be impacted by the condition as they are not linked to the cell specified in the condition.
+    All other cells in the monitored column will not be impacted by the condition as they are not linked to the cell specified in the condition.
 
 > [!NOTE]
 > When the cell specified in the condition is located in a column of the same table, the behavior will be identical to that of unrelated tables. In other words, the entire monitored column will be impacted.
 
-**New rule attributes: keyType and keyValue**
+##### New rule attributes: keyType and keyValue
 
 This new feature relies on two new rule attributes: *keyType* and *keyValue*.
 
@@ -158,13 +159,13 @@ When you export element data to a CSV file, from now on, the export file will in
 
 #### Visual Overview - ListView: Enhanced filter capabilities \[ID_25114\]
 
-**View filters**
+##### View filters
 
 When specifying view filters using the view name instead of the view ID, an alternative syntax can now be used: *ViewName=\<name>*
 
 Also, you can now use the "==" operator instead of the "=" operator. If the *ViewName* syntax is used, DataMiner will first try to filter by name, and then by ID in case the name cannot be found. If the *View* syntax is used, DataMiner will first try to filter by ID ,and then by name if the ID cannot be found. The filter can contain only one *View* or *ViewName* part.
 
-**Element/service filters**
+##### Element/service filters
 
 From now on, if you set the *Source* shape data field to “Elements” or “Services”, additional possibilities are available to add an element or service filter in the *Filter* shape data field:
 
@@ -172,33 +173,33 @@ From now on, if you set the *Source* shape data field to “Elements” or “Se
 
 - The following terms can be used to filter on:
 
-    | Filter term                                                  | Description                                                                                                                                                                                                                                                                                                              |
-    |----------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-    | Element.ID                                                     | The ID of an element.                                                                                                                                                                                                                                                                                                    |
-    | Element.Name                                                   | The name of an element.                                                                                                                                                                                                                                                                                                  |
-    | Element.Description                                            | The description of an element.                                                                                                                                                                                                                                                                                           |
-    | Element.DataMiner                                              | The name of the DMA on which an element is located.                                                                                                                                                                                                                                                                      |
-    | Element.AlarmLevel                                             | The technical alarm level of the element. This is the non-localized, DataMiner-internal equivalent of the alarm state. For example, the alarm level "Undefined" is the same as the alarm state "Not monitored, the alarm level "Normal" is equivalent to the alarm state "Normaal" if the Dutch version of Cube is used. |
-    | Element.AlarmState                                             | The alarm state of the element. For the difference with the alarm level, see "Element.AlarmLevel".                                                                                                                                                                                                                       |
-    | Element.AlarmCount                                             | The number of alarms of the element.                                                                                                                                                                                                                                                                                     |
-    | Element.Type                                                   | The type of element as defined in the protocol.                                                                                                                                                                                                                                                                          |
-    | Element.DisplayType                                            | The display type of the element as defined in the protocol, e.g. *spectrum analyzer*, *element manager*.                                                                                                                                                           |
-    | Element.IP                                                     | The IP of the element.                                                                                                                                                                                                                                                                                                   |
-    | Element.State                                                  | The current state of the element, e.g. Paused, Stopped.                                                                                                                                                                                                                                                                  |
-    | Element.Protocol                                               | The protocol used by the element.                                                                                                                                                                                                                                                                                        |
-    | Element.ProtocolVersion                                        | The protocol version used by the element.                                                                                                                                                                                                                                                                                |
-    | Element.ProtocolType                                           | The protocol type used by the element.                                                                                                                                                                                                                                                                                   |
-    | Element.AlarmTemplate                                          | The alarm template used by the element.                                                                                                                                                                                                                                                                                  |
-    | Element.TrendTemplate                                          | The trend template used by the element.                                                                                                                                                                                                                                                                                  |
-    | Element.Property.*PropertyName* | The property of the element with the specified property name.                                                                                                                                                                                                                                                            |
-    | Service.ID                                                     | The ID of a service.                                                                                                                                                                                                                                                                                                     |
-    | Service.Name                                                   | The name of a service.                                                                                                                                                                                                                                                                                                   |
-    | Service.Description                                            | The description of a service.                                                                                                                                                                                                                                                                                            |
-    | Service.DataMiner                                              | The name of the DMA on which a service is located.                                                                                                                                                                                                                                                                       |
-    | Service.AlarmLevel                                             | The technical alarm level of the service. This is the non-localized, DataMiner-internal equivalent of the alarm state. For example, the alarm level "Undefined" is the same as the alarm state "Not monitored, the alarm level "Normal" is equivalent to the alarm state "Normaal" if the Dutch version of Cube is used. |
-    | Service.AlarmState                                             | The alarm state of the service. For the difference with the alarm level, see "Service.AlarmLevel".                                                                                                                                                                                                                       |
-    | Service.AlarmCount                                             | The number of alarms of the service.                                                                                                                                                                                                                                                                                     |
-    | Service.Property.*PropertyName* | The property of the service with the specified property name.                                                                                                                                                                                                                                                            |
+  | Filter term | Description |
+  |-------------|-------------|
+  | Element.ID | The ID of an element. |
+  | Element.Name | The name of an element. |
+  | Element.Description | The description of an element. |
+  | Element.DataMiner | The name of the DMA on which an element is located. |
+  | Element.AlarmLevel | The technical alarm level of the element. This is the non-localized, DataMiner-internal equivalent of the alarm state. For example, the alarm level "Undefined" is the same as the alarm state "Not monitored, the alarm level "Normal" is equivalent to the alarm state "Normaal" if the Dutch version of Cube is used. |
+  | Element.AlarmState | The alarm state of the element. For the difference with the alarm level, see "Element.AlarmLevel". |
+  | Element.AlarmCount | The number of alarms of the element. |
+  | Element.Type | The type of element as defined in the protocol. |
+  | Element.DisplayType | The display type of the element as defined in the protocol, e.g. *spectrum analyzer*, *element manager*. |
+  | Element.IP | The IP of the element. |
+  | Element.State | The current state of the element, e.g. Paused, Stopped. |
+  | Element.Protocol | The protocol used by the element. |
+  | Element.ProtocolVersion | The protocol version used by the element. |
+  | Element.ProtocolType | The protocol type used by the element. |
+  | Element.AlarmTemplate | The alarm template used by the element. |
+  | Element.TrendTemplate | The trend template used by the element. |
+  | Element.Property.*PropertyName* | The property of the element with the specified property name. |
+  | Service.ID | The ID of a service. |
+  | Service.Name | The name of a service. |
+  | Service.Description | The description of a service. |
+  | Service.DataMiner | The name of the DMA on which a service is located. |
+  | Service.AlarmLevel | The technical alarm level of the service. This is the non-localized, DataMiner-internal equivalent of the alarm state. For example, the alarm level "Undefined" is the same as the alarm state "Not monitored, the alarm level "Normal" is equivalent to the alarm state "Normaal" if the Dutch version of Cube is used. |
+  | Service.AlarmState | The alarm state of the service. For the difference with the alarm level, see "Service.AlarmLevel". |
+  | Service.AlarmCount | The number of alarms of the service. |
+  | Service.Property.*PropertyName* | The property of the service with the specified property name. |
 
 - You can combine different search terms with each other and with one view filter, using pipe characters ("\|"). The pipe character is used as an AND operator.
 
@@ -206,29 +207,29 @@ From now on, if you set the *Source* shape data field to “Elements” or “Se
 
 - Examples:
 
-    - To filter on all elements of which the name contains the word "function" and the element property IDP is set to "Source":
+  - To filter on all elements of which the name contains the word "function" and the element property IDP is set to "Source":
 
-        ```txt
-        Element.Name contains 'function'|Element.Property.IDP == 'Source'
-        ```
+    ```txt
+    Element.Name contains 'function'|Element.Property.IDP == 'Source'
+    ```
 
-    - To filter on all services of which the name contains the word "\_booking" and that are hosted by the DataMiner Agent "MyDMA":
+  - To filter on all services of which the name contains the word "\_booking" and that are hosted by the DataMiner Agent "MyDMA":
 
-        ```txt
-        Service.DataMiner == 'MyDMA'|Service.Name contains '_booking'
-        ```
+    ```txt
+    Service.DataMiner == 'MyDMA'|Service.Name contains '_booking'
+    ```
 
-    - To filter on all elements using the protocol "MyProtocol" with the protocol type "serial" which are not of element type "Relay":
+  - To filter on all elements using the protocol "MyProtocol" with the protocol type "serial" which are not of element type "Relay":
 
-        ```txt
-        Element.Protocol == 'MyProtocol'|Element.ProtocolType == 'serial'|Element.Type notContains 'Relay'
-        ```
+    ```txt
+    Element.Protocol == 'MyProtocol'|Element.ProtocolType == 'serial'|Element.Type notContains 'Relay'
+    ```
 
-    - To filter on all element using the property IDP with a property value equal to that of the session variable "MySelectedValue":
+  - To filter on all element using the property IDP with a property value equal to that of the session variable "MySelectedValue":
 
-        ```txt
-        Element.Property.IDP == [var:MySelectedValue]
-        ```
+    ```txt
+    Element.Property.IDP == [var:MySelectedValue]
+    ```
 
 > [!NOTE]
 > The filters are not case-sensitive. For example, a service with the name "MyName" will be found when the filter *Service.Name == 'myname'* is used
@@ -266,7 +267,7 @@ Two new SLProtocol methods now allow QActions to execute Automation scripts:
 
 Also, the Engine object has a new UserCookie property.
 
-**ExecuteScript(string scriptName)**
+##### ExecuteScript(string scriptName)
 
 This method will execute an Automation script of which the name is passed in the “scriptName” argument.
 
@@ -283,7 +284,7 @@ public static void Run(SLProtocol protocol)
 }
 ```
 
-**ExecuteScript(ExecuteScriptMessage message)**
+##### ExecuteScript(ExecuteScriptMessage message)
 
 This method will execute an Automation script of which all details and execution settings are passed in the “ExecuteScriptMessage”.
 
@@ -313,12 +314,12 @@ When you execute an Automation script using the “DEFER:FALSE” option, be awa
 
 - Use “DEFER:TRUE” instead of “DEFER:FALSE”.
 
-    | If you use... | then...                                                                                                                              |
+    | If you use...   | then...                                                                                                                              |
     |-----------------|--------------------------------------------------------------------------------------------------------------------------------------|
     | DEFER:FALSE     | the QAction will halt while the Automation script is being executed, and will only continue once the Automation script has finished. |
     | DEFER:TRUE      | the QAction will continue while the Automation script is being executed asynchronously.                                              |
 
-**New property on Engine object: UserCookie**
+##### New property on Engine object: UserCookie
 
 ```csharp
 string Engine.UserCookie;
@@ -348,18 +349,18 @@ var ticketLinkFilter = new[] {ticketLink};
 var tickets = ticketingGatewayHelper.GetTickets(ticketLinkFilter);
 ```
 
-#### Interactive Automation scripts: Properties added to UIBlockDefinition class \[ID_25183\]<br>\[ID_25253\]
+#### Interactive Automation scripts: Properties added to UIBlockDefinition class \[ID_25183\]\[ID_25253\]
 
 The following properties have been added to the UIBlockDefinition class:
 
-| Property        | Description                                                                                                                                                                                                                                                                                                                                                                                                                               |
-|-----------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| IsRequired      | Indicates whether the input control requires a value.<br> Possible value:<br> -  true<br> -  false<br> If “true”, the control will be marked “Invalid” when empty.                                                                                                                                          |
-| PlaceholderText | Text that will be displayed as long as the control is empty.<br> (e.g. “In this box, enter...”)                                                                                                                                                                                                                                                                                                                                           |
+| Property | Description |
+|--|--|
+| IsRequired | Indicates whether the input control requires a value.<br> Possible value:<br> -  true<br> -  false<br> If “true”, the control will be marked “Invalid” when empty. |
+| PlaceholderText | Text that will be displayed as long as the control is empty.<br> (e.g. “In this box, enter...”) |
 | ValidationState | Indicates whether the value was validated and whether that value is valid.<br> Possible values:<br> -  NotValidated<br> -  Valid<br> -  Invalid<br> Note: This property can be used to indicate to users that they entered an invalid value. |
-| ValidationText  | Text that will be displayed when ValidationState is “Invalid”.                                                                                                                                                                                                                                                                                                                                                                            |
+| ValidationText | Text that will be displayed when ValidationState is “Invalid”. |
 
-**Using the ValidationState and ValidationText properties**
+##### Using the ValidationState and ValidationText properties
 
 The ValidationState and ValidationText properties should be used in combination with the WantsOnChange property.
 
@@ -367,7 +368,7 @@ If WantsOnChange is true, the interactive Automation script will have its Engine
 
 This functionality will allow you to offer clear feedback on user input.
 
-**Which input controls support which properties?**
+##### Which input controls support which properties?
 
 |              | IsRequired | Placeholder | ValidationText |
 |--------------|------------|-------------|----------------|
@@ -461,9 +462,10 @@ MediationSnippet objects, defined on profile parameter level, consist of an ID a
 To a particular profile parameter, you can add only one mediation snippet per protocol version. In other words, linking to both parameter 10 and parameter 20 in version 1.0.0.0 of Protocol X in the same profile parameter is not allowed. However, it is possible to specify a single wildcard character at the end of a protocol version (e.g. “1.0.0.\*”). When there are multiple matches, the most specific entry will be chosen (i.e. “1.0.0.\*” will take precedence over “1.\*”).
 
 > [!NOTE]
+>
 > - Inside a snippet, it is possible to
->     - mediate multiple device parameters to a single profile parameter, and
->     - mediate a single profile parameter to multiple device parameters.
+>   - mediate multiple device parameters to a single profile parameter, and
+>   - mediate a single profile parameter to multiple device parameters.
 > - When a mediation snippet is updated or deleted, all DataMiner Agents in the DMS will unload that snippet. In case of a snippet update, the next mediation request will trigger a re-load of the updated version.
 > - When an attempt is made to delete a mediation snippet used by a profile parameter, a MediationSnippetError will be thrown (with reason ExistingProfileParameters).
 > - When a profile parameter is deleted, all the mediation snippets linked to that profile parameter will also be deleted.
@@ -478,10 +480,11 @@ To use a mediation snippet, you can send one of the following requests:
 Both requests require the profile parameter ID, the element ID and the parameter value to be passed along, and will return either the mediated value(s) or a MediationError (which will also be logged in SLProfileManager.txt).
 
 > [!NOTE]
+>
 > - Using mediation snippets requires a ServiceManager license and requires Indexing Engine to be installed.
 > - In Indexing Engine, all mediation snippets are stored under the “cmediationsnippet” index. The compiled snippets are stored in C:\\Skyline DataMiner\\MediationSnippets\\Compiled.
->     - All DLL files are deleted from this folder when the DataMiner Agent starts up.
->     - Snippets are compiled per DataMiner Agent. Snippet DLLs are not synchronized among the agents in a DMS.
+>   - All DLL files are deleted from this folder when the DataMiner Agent starts up.
+>   - Snippets are compiled per DataMiner Agent. Snippet DLLs are not synchronized among the agents in a DMS.
 > - If you want the mediation snippets to be included in DataMiner backups, make sure to select the “Include the ProfileManager in backup” option.
 
 #### Support for capabilities of type string and for time-dynamic capabilities \[ID_25217\]
@@ -513,6 +516,7 @@ As a time-dynamic capability will be treated as a string capability that can hav
 When a time-dynamic capability is booked by a ReservationInstance that requires a specific value, the Resource capability will keep that value for the entire duration of the ReservationInstance. This means that overlapping ReservationInstances will be able to use the same time-dynamic capability on the same resource, as long as they require the same string capability.
 
 > [!NOTE]
+>
 > - It is not possible to schedule multiple overlapping ReservationInstances using the same time-dynamic capability on the same resource with a different required string. This would cause quarantine conflicts. When you try to save a ReservationInstance that conflicts with existing ReservationInstances, the software will resolve the conflict by comparing the quarantine priority of all existing ReservationInstances to the one of the ReservationInstance you are trying to save. If the quarantine priority of the ReservationInstance you are trying to save is higher than that of all existing ones, then all existing ones will go into quarantine. Otherwise, the new ReservationInstance will go into quarantine.
 > - Whether a capability is time-dynamic is defined on resource level.
 

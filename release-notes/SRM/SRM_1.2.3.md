@@ -39,6 +39,7 @@ The way properties are updated when a new booking is created has been made more 
 It is now possible to have multiple generic source nodes in a service definition. In the Booking Wizard, the generic resource selection has been moved from the initial step to the step where resources are selected.
 
 > [!NOTE]
+>
 > - Version 1.1.0.12 or higher of the *Skyline Generic Source* driver is required for this.
 > - If the properties *Logo* and *Tag* are needed in the generated service, a data transfer rule must be configured to trigger the script *SRM_GenericSourceCopyLogoAndTag*.
 

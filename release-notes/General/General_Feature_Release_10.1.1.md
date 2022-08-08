@@ -15,6 +15,7 @@ From now on, more and more DataMiner processes will start to communicate with ea
 The NATS and NAS services will automatically be installed on each NATS-enabled DataMiner Agent, and if NATS is enabled on every agent in a DataMiner System, all NATS installations in that system will be consolidated into a single NATS cluster.
 
 > [!NOTE]
+>
 > - When NATS is enabled on a DataMiner Agent, firewall rules will automatically be added for ports 4222, 6222, 8222 and 9090.
 > - Automatic detection and triggering of NATS cluster self healing can be activated or deactivated by setting the \<NATSDisasterCheck> option to true of false in the MaintenanceSettings.xml file.
 > - Only users who have been granted the *Admin tools* permission (Modules \> System configuration \> Tools) are allowed to reset the NATS service.
@@ -40,6 +41,7 @@ In a video thumbnail URL, you can now specify an authorization header in an “a
 This option has to be used when the video server expects an authentication token (e.g. OAuth2).
 
 > [!NOTE]
+>
 > - When the authentication token expires, the URL has to be updated with the new token.
 > - URLs that request video thumbnails should use HTTPS instead of HTTP. That way, you can prevent the authentication token from being stolen.
 > - It is now also possible to request thumbnails from video servers that only accept TLS 1.2.
@@ -63,9 +65,9 @@ For example, users with Read access to the view with ID 10 who display a list of
 
 #### Extension methods moved from QActionHelperBaseClasses to SLManagedScripting \[ID_27995\]
 
-The following extension methods have now been moved from the QActionHelperBaseClasses libary to the SLManagedScripting library, and are now instance methods of the SLProtocol interface.
+The following extension methods have now been moved from the QActionHelperBaseClasses library to the SLManagedScripting library, and are now instance methods of the SLProtocol interface.
 
-**static class NotifyProtocol**
+##### static class NotifyProtocol
 
 - AddRow(this SLProtocol protocol, int tableId, string row)
 - AddRow(this SLProtocol protocol, int tableId, object\[\] row)
@@ -89,11 +91,12 @@ The following extension methods have now been moved from the QActionHelperBaseCl
 - FillArrayWithColumn(this SLProtocol protocol, int tableId, int columnPid, object\[\] keys, object\[\] values, DateTime? timeInfo = null)
 - SetParameterBinary(this SLProtocol protocol, int pid, byte\[\] data)
 
-**static class ProtocolExtenders**
+##### static class ProtocolExtenders
 
 - void Log(this SLProtocol protocol, string message, LogType logType = LogType.Allways, LogLevel logLevel = LogLevel.DevelopmentLogging)
 
 > [!NOTE]
+>
 > - All overloads of the above-mentioned methods, which take in a QActionTableRow object instead of an object\[\], have been deleted.
 > - The static methods could not be deleted. They have been marked obsolete instead.
 
@@ -115,7 +118,7 @@ Example:
 Script:ScriptName|DummyName=ElementName or DmaID/ElementID;...| ParameterName1=[var:myVar];ParameterName2=#ValueFile;...| MemoryName=MemoryFileName;...|ToolTip|Options|Trigger=ValueChanged
 ```
 
-**Reserved prefixes can now mark each of the syntax components**
+##### Reserved prefixes can now mark each of the syntax components
 
 In the syntax to be used in Automation script shapes as well as page-level Automation script triggers, each component can now be marked by a prefix. That way, you will no longer have to define empty components in case there are no dummies, no memory files, etc.
 
@@ -134,10 +137,11 @@ Script:<myScript>|Tooltip:<myTooltip>|Parameters:paramA=<myParam>|Options:NoConf
 ```
 
 > [!NOTE]
+>
 > - If you choose to use prefixes to mark syntax components, you must use them for every component.
 > - When you use prefixes to mark syntax components, the components can be added in whatever order you choose.
 
-**New NodeDoubleClicked event**
+##### New NodeDoubleClicked event
 
 In an \[Event:\] placeholder, you can now add a new event named *NodeDoubleClicked*, followed by the argument *ID* or *Label*.
 
@@ -149,7 +153,7 @@ Example:
 [event:NodeDoubleClicked,ID]
 ```
 
-**Use case**
+##### Use case
 
 Using the new features described above, it is possible to configure that, when a user clicks a service definition node in an embedded Service Manager component, an Automation script is executed with e.g. the node ID as a parameter.
 
@@ -216,11 +220,11 @@ To a dashboard, you can now add a trigger feed, i.e. a feed that allows you to t
 
 Currently, the trigger feed can only be linked to components that can visualize a database query. In that case, when a trigger feed is triggered, the data displayed in the other component will be refreshed.
 
-**Settings**
+##### Settings
 
 When, in the *Settings* tab, you enable the *Trigger timer* setting, a countdown bar will be displayed, and triggering will occur automatically when the counter reaches 0. The *Time* setting allows you to specify a counter interval (default: 60 seconds).
 
-**Layout**
+##### Layout
 
 In the *Layout* tab, you find three additional sections:
 
@@ -230,8 +234,8 @@ In the *Layout* tab, you find three additional sections:
 
     | Placeholder | Description                                                                                                        |
     |---------------|--------------------------------------------------------------------------------------------------------------------|
-    | {duration}    | An estimated indication of the time past since the last triggering.<br> Example: “2 minutes ago”                   |
-    | {time}        | The exact textual representation of the time when the last triggering occurred.<br> Example: “Nov 20, 2020, 12:33” |
+    | {duration}    | An estimated indication of the time past since the last triggering. Example: “2 minutes ago”.                   |
+    | {time}        | The exact textual representation of the time when the last triggering occurred. Example: “Nov 20, 2020, 12:33”. |
 
 - In the *Layout* section, you can specify how you want the trigger label and time label to be aligned: left, center or right.
 
@@ -268,6 +272,7 @@ From now on, when you create or import a new dashboard, you will be able to rest
 | Private        | Only the user who created the dashboard is allowed to view and edit it.<br> Note: In the Automation app, it will not be possible to attach private dashboards to report emails. |
 
 > [!NOTE]
+>
 > - When users with edit permission are editing a dashboard, they will now be able to indicate which users are allowed to view and/or edit that dashboard.
 > - Users will not be able to rename or delete a dashboard folder when it contains dashboards they are not allowed to edit.
 > - By default, the built-in Administrator account is allowed to view and edit all dashboards.
@@ -304,6 +309,7 @@ instance.ResourcesInReservationInstance.Add(new ResourceUsageDefinition(resource
 When adding a ReservationInstance with absolute quarantine priority, an error with reason “ReservationUpdateCausedReservationsToGoToQuarantine” will be returned if this causes any bookings to be quarantined. In that case, the update must be executed using the “forceQuarantine” flag.
 
 > [!NOTE]
+>
 > - It is possible to add multiple overlapping bookings with AbsoluteQuarantinePriority. If they book the same resource and if results in an overbooking of the resource, one of the instances will be quarantined. If there is no overbooking of the resources between the two bookings with AbsoluteQuarantinePriority, both bookings will be scheduled.
 > - When a booking with AbsoluteQuarantinePriority is removed, the other bookings using the resources will not automatically be taken out of quarantine.
 > - Resources that are in quarantine because they overlap with a booking that reserves them with AbsoluteQuarantinePriority will have a QuarantineTrigger with reason “AbsoluteQuarantinePriorityReservationInstance”.
@@ -313,6 +319,7 @@ When adding a ReservationInstance with absolute quarantine priority, an error wi
 The EligibleResourceResult returned by the various GetEligibleResources calls will now contain information about the available capacity of the resources. The ResourceUsageDetails object now includes a CapacityUsageDetails list that contains the maximum available capacities for the requested time frame.
 
 > [!NOTE]
+>
 > - The available capacity does not take into account the requested capacity.
 > - The available capacity for capacities that were not requested in the GetEligible call, but which are present on the resource, will not be calculated, and will therefore not be present in the CapacityUsageDetails list.
 

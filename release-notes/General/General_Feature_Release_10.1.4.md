@@ -27,6 +27,7 @@ var historyRecords = historyHelper.ServiceDeletionHistory.Read(recordsPastDay);
 ```
 
 > [!NOTE]
+>
 > - Service history records are stored in ElasticSearch. This means, that an ElasticSearch database has to be available for this feature to work.
 > - If you want the service history records to be included in a DataMiner backup, select the *Include service history data in backup* option. In case of a full backup, this option will be selected by default.
 
@@ -135,6 +136,7 @@ In the *DataMiner.xml* file, you can customize how many inform messages are stor
 ```
 
 > [!NOTE]
+>
 > - If you set *informCacheSize* to 0, the cache will be disabled.
 > - Only inform messages are stored in this cache, not traps.
 > - When an inform message is discarded, this is logged in *SLSNMPManager.txt* on information level 3.
@@ -159,6 +161,7 @@ Under *System configuration \> Cloud gateway*, you can now find the following us
 - Configure gateway service
 
 > [!NOTE]
+>
 > - The user permissions listed under *Live sharing* are included in the *Power users* preset and higher.
 > - The user permissions under *Cloud gateway* are included in the *Administrators (read-only access to Security)* preset and higher.
 > - The *Account linking* permission, which was added in DataMiner feature release version 10.1.3, has been removed.
@@ -187,7 +190,7 @@ Example:
 
 The KPI stencil and the Button stencil have been restyled.
 
-**KPI stencil**
+##### KPI stencil
 
 - Apart from being restyled, the following shapes have also been renamed:
 
@@ -207,7 +210,7 @@ The KPI stencil and the Button stencil have been restyled.
     |-----------|----------------------------------------------------------------|
     | kpi-icon  | Focus on the parameter alarm state, with an icon on top of it. |
     | kpi-icon2 | Fixed background (dark blue), with an icon on top of it.       |
-    
+
     > [!NOTE]
     > Make sure to replace the icon by one that suits the requirements.
     >
@@ -217,7 +220,7 @@ The KPI stencil and the Button stencil have been restyled.
 
 - The write icon in the top-right corner of a shape has been changed from a black triangle to a cogwheel.
 
-**Button stencil**
+##### Button stencil
 
 - The style of the toggle buttons now matches the style of the toggle button in DataMiner Cube.
 
@@ -227,7 +230,7 @@ The KPI stencil and the Button stencil have been restyled.
     > It is advised to add an ellipsis (...) to the text on a button if user interaction is required after clicking the button in question.
 
 > [!NOTE]
-> The toggle buttons now use the theme accent color. This means that you will need an additional Options shape data field on page level with, for example, the following value: *#000000=ThemeForeground\|#FF0000=ThemeAccentColor\|<br>#FFFFFF=ThemeBackground*
+> The toggle buttons now use the theme accent color. This means that you will need an additional Options shape data field on page level with, for example, the following value: *#000000=ThemeForeground\|#FF0000=ThemeAccentColor\|#FFFFFF=ThemeBackground*
 
 #### Visual Overview: New icon added to Icons stencils \[ID_28696\]
 
@@ -241,10 +244,15 @@ When, in DataMiner Cube, you open a context menu of a table and select an option
 
 This information event will contain the following data:
 
-| Item                  | Description                                                                                                                                                                                                                                                                                               |
-|-----------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Parameter description | The full display name of the context menu parameter.<br> Format: *\<TableName>\_ContextMenu*                                                                                                                                                                                   |
-| Parameter value       | A value in the following format: <br> *Set by \<user> to \<command display value>*<br> If there are dependency values, the value will have the following format: *Set by \<user> to \<command display value>: “\<dependency 1>”; “\<dependency 2>”* |
+- **Parameter description**: The full display name of the context menu parameter. Format: *\<TableName>\_ContextMenu*
+
+- **Parameter value**: A value in the following format:
+
+  `Set by <user> to <command display value>`
+
+  If there are dependency values, the value will have the following format:
+
+  `Set by <user> to <command display value>: “<dependency 1>”; “<dependency 2>”`
 
 #### DataMiner Cube - Visual Overview: Parameter value will now be cleared from the shape text when the dynamic part of its Parameter shape data field changes \[ID_28901\]
 

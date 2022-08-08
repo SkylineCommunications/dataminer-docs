@@ -33,6 +33,7 @@ See the table below for an overview of those new features.
 |         | Add QAction Reference | Automatically add a *\[ProtocolName\].\[ProtocolVersion\].QAction.X.dll* reference to the *dllImport* attribute.<br>Note: The list only contains QActions with “options=precompiled”. |
 
 > [!NOTE]
+>
 > - If, in an “Include in ...” list or an “Add Existing ...” list, you select an item that is already included, then that item will be removed.
 > - From now on, “Include in ...” and “Add Existing ...” lists no longer close when you have selected an item. They will now stay open to allow you to select multiple items.
 

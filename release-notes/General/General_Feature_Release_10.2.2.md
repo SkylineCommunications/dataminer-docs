@@ -27,12 +27,12 @@ When using a GetSpectrumTrendTraceDataMessage to retrieve spectrum data, up to n
 
 #### EPM: Aliases for topology cells, chains and search chains can now be specified on element level \[ID_32028\]
 
-In an EPM environment, since DataMiner feature release version 10.1.7, it has been possible to override the names of topology cells, chains and search chains specified in a protocol with aliases specified in a system-level EPMConfig.xml file stored in the C:\\Skyline DataMiner\\ folder. Now, it is also possible to add EPMConfig.xml files on element level.
+In an EPM environment, since DataMiner feature release version 10.1.7, it has been possible to override the names of topology cells, chains, and search chains specified in a protocol with aliases specified in a system-level *EPMConfig.xml* file stored in the C:\\Skyline DataMiner\\ folder. Now, it is also possible to add *EPMConfig.xml* files on element level.
 
-If you want certain aliases for topology cells, chains and search chains to only be applied to a particular element, then create an EPMConfig.xml file and place it in the folder of that element (e.g. C:\\Skyline DataMiner\\Elements\\\<ElementName>\\).
+If you want certain aliases for topology cells, chains and search chains to only be applied to a particular element, then create an *EPMConfig.xml* file and place it in the folder of that element (e.g. C:\\Skyline DataMiner\\Elements\\\<ElementName>\\).
 
 > [!NOTE]
-> Aliases specified in an element-level EPMConfig.xml file will override aliases specified in the system-level EPMConfig.xml file.
+> Aliases specified in an element-level *EPMConfig.xml* file will override aliases specified in the system-level *EPMConfig.xml* file.
 
 ### DMS Cube
 
@@ -41,6 +41,7 @@ If you want certain aliases for topology cells, chains and search chains to only
 When you export average trend data, selecting the new *Fixed interval* option will make sure that the data points are equally distributed and that gaps smaller than a time slot (e.g. 5 minutes) are ignored.
 
 > [!NOTE]
+>
 > - The “fixed interval” option can only be used when exporting average trend data for double, number or analog parameters.
 > - When you select the *Fixed interval* option, the *Exclude gaps* option will automatically be selected and disabled to indicate that the latter option is included in the former.
 > - When you select the *Line graph* option, from now on, that option will no longer add intermediary data points. Those will now by default be added when you select the *Fixed interval* option.
@@ -87,7 +88,7 @@ There are now two ways of passing data in the URL of a dashboard:
 - As a dataset containing a number of items to be selected in all components (legacy method)
 - As a JSON object containing a number of items to be selected in specific components (new method)
 
-**Dataset (legacy method)**
+##### Dataset (legacy method)
 
 Up to now, data could be passed to a dashboard using the following syntax:
 
@@ -97,7 +98,7 @@ url?<datatype1>=<datakeys1>&<datatype2>=<datakeys2>&...
 
 Using this method, the dataset, which consists of a list of datatype/datakey(s) expressions, will provide data that will be selected in all relevant components of the dashboard.
 
-**JSON object (new method)**
+##### JSON object (new method)
 
 Next to the legacy method, it is now also possible to pass data to a dashboard in a JSON object.
 
@@ -705,4 +706,4 @@ In some cases, newly created elements would incorrectly be assigned an ID equal 
 
 #### SLNet would no longer correctly take into account the system-level EPMConfig.xml file \[ID_32220\]
 
-SLNet would no longer correctly take into account the system-level EPMConfig.xml file. As a result, the protocol information received by SLNet would contain topology and search chains with incorrect names.
+SLNet would no longer correctly take into account the system-level *EPMConfig.xml* file. As a result, the protocol information received by SLNet would contain topology and search chains with incorrect names.

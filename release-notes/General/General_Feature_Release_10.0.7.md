@@ -15,8 +15,7 @@ On systems with a Cassandra database and an Indexing Engine, from now on, DataMi
 To define a tag:
 
 1. In a trend graph showing trend information for one single parameter, select the portion of the graph that you identify as being a recurring pattern.
-
-2. Enter a tag name and click the check mark to save.
+1. Enter a tag name and click the check mark to save.
 
 Any matching patterns in the current trend graph will immediately be highlighted in orange. Matches found for the same element/parameter as the one for which a tag was defined will appear in bright orange, whereas matches associated with tags created for another element/parameter will appear in a slightly lighter hue.
 
@@ -26,9 +25,9 @@ Any matching patterns in the current trend graph will immediately be highlighted
 To edit a tag:
 
 1. Click the tag button above the (highlighted) pattern you want to edit.
-2. To edit the tag name, click the pencil icon and change the name.
-3. To redefine the pattern, adjust its boundaries.
-4. To save any modifications, click the check mark.
+1. To edit the tag name, click the pencil icon and change the name.
+1. To redefine the pattern, adjust its boundaries.
+1. To save any modifications, click the check mark.
 
 > [!NOTE]
 > If you edit a tag, the pattern will always be overwritten, even if you did not redefine the pattern in any way.
@@ -36,14 +35,15 @@ To edit a tag:
 To delete a tag:
 
 1. Click the tag button above the (highlighted) pattern you want to delete.
-2. Click the delete icon.
-3. In the confirmation box, click *Yes*.
+1. Click the delete icon.
+1. In the confirmation box, click *Yes*.
 
 > [!NOTE]
+>
 > - If you delete a tag, all pattern matches associated with that tag will also be deleted.
 > - If a protocol is deleted, all patterns defined for parameters of that protocol will also be deleted the first time the SLAnalytics service restarts.
 
-**Current limitations**
+##### Current limitations
 
 Currently, automatic pattern matching has the following limitations:
 
@@ -51,7 +51,7 @@ Currently, automatic pattern matching has the following limitations:
 - Pattern matching can only be performed on trended parameters containing numeric values.
 - If pattern matching is performed on a trend graph showing more than 100,000 data points, an aggregated level of detail will be used to improve performance at the cost of accuracy. If, at the most aggregated level, the number of data points exceeds 100,000 data points, no pattern matching will be performed.
 
-**Changes as to trend graph mouse button actions**
+##### Changes as to trend graph mouse button actions
 
 In the *User \> Trending* section of the *Settings* window, the *Left mouse button action on graph* and *Right mouse button action on graph* settings can now be set to one of four values:
 
@@ -117,6 +117,7 @@ On the *Layout* tab of the service definition component, two new options now all
     When you select this check box, the component will also show the nodes that have no resource assigned. By default, this check box will not be selected.
 
 > [!NOTE]
+>
 > - When the service definition component does not show any node, an animation will indicate the reason why none are shown.
 > - When actions are defined on a certain node, the group labels will now be moved to the top of that node.
 

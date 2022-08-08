@@ -37,20 +37,21 @@ In the *Logging* section of *System Center*, it is now possible to set log level
 
 1. In the tab listing the DataMiner log files (default tab name: “dataminer”), select the log file in the left-hand pane.
 
-2. At the top of the right-hand pane, open the *Log settings* section, select the *Override log levels* option, specify a level for each of the three log levels (info, debug and error), and click *Apply levels*.
+1. At the top of the right-hand pane, open the *Log settings* section, select the *Override log levels* option, specify a level for each of the three log levels (info, debug and error), and click *Apply levels*.
 
 > [!NOTE]
+>
 > - If you want to set the same non-default log levels for multiple log files, then note that you can select more than one file in step 1. To select more than one file, click one, and then click another while holding down the CTRL key, etc. To select a list of consecutive files, click the first one in the list and then click the last one while holding down the SHIFT key.
 > - In the left-hand pane, the current log levels for each of the DataMiner log files are displayed next to the name of the file.
->     - If a file inherits the system-wide log levels, the log levels displayed next to the file will appear in gray.
->     - If a file has specific log levels defined (i.e. if the system-wide levels are overridden), the log levels displayed next to the file will appear in black.
+>   - If a file inherits the system-wide log levels, the log levels displayed next to the file will appear in gray.
+>   - If a file has specific log levels defined (i.e. if the system-wide levels are overridden), the log levels displayed next to the file will appear in black.
 > - If you clear the *Override log levels* option for a particular log file, that file will again inherit the system-wide log levels.
 
 **Setting the system-wide log levels**
 
 1. In the tab listing the DataMiner log files (default tab name: “dataminer”), select the first entry in the left-hand pane, marked “\<Default>”.
 
-2. At the top of the right-hand pane, open the *Log settings* section, specify a level for each of the three log levels (info, debug and error), and click *Apply levels*.
+1. At the top of the right-hand pane, open the *Log settings* section, specify a level for each of the three log levels (info, debug and error), and click *Apply levels*.
 
 #### Service & Resource Management - ListView: Alarm count column can now indicate the number of alarms as a colored icon \[ID_24598\]
 
@@ -107,6 +108,7 @@ The DataMiner landing page now contains a drop-down menu on the right that allow
 Up to now, when users wanted to configure a service reservation, they each time had to select profiles for every node and interface of the service definition. From now on, when configuring a service reservation, users will in most cases only have to select a single predefined service profile. That profile will then automatically configure most of the nodes and interfaces necessary for the service reservation in question.
 
 > [!NOTE]
+>
 > - You can define a single service profile for a series of almost identical service definitions.
 > - Service profile logging is stored in SLProfileManager.txt.
 > - To make sure service profile data is included in DataMiner backup packages, select *Profile Manager objects and configuration* when configuring backups in System Center.
@@ -257,7 +259,7 @@ From now on, events associated with alarms of elements that are paused or stoppe
 
 When life cycle management is enabled, then the services list allows you to change the state of the service by clicking an icon. From now on, you will only be able to click icons that are configured to perform a valid state change.
 
-#### DataMiner Cube - Visual Overview: Advanced editing pane improvements \[ID_24772\]<br>\[ID_24794\]
+#### DataMiner Cube - Visual Overview: Advanced editing pane improvements \[ID_24772\]\[ID_24794\]
 
 The “Advanced Editing” pane now provides better support for DataMiner stencils.
 

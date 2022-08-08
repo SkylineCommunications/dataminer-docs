@@ -8,12 +8,13 @@ uid: General_Feature_Release_10.0.13
 
 ### DMS core functionality
 
-#### SLSNMPAgent will now also use the SNMP++ library to forward SNMPv2 traps and inform mes­sages \[ID_27590\]
+#### SLSNMPAgent will now also use the SNMP++ library to forward SNMPv2 traps and inform messages \[ID_27590\]
 
 From now on, SLSNMPAgent will also use the SNMP++ library to forward SNMPv2 traps and inform messages. This means that it will now use the same library to send SNMPv1 traps, SNMPv2 traps and inform messages and SNMPv3 traps and inform messages.
 
 > [!NOTE]
-> - Due to limitations of the SNMP++ library, the inform message resend time cannot be set to a value less than 10ms. If you set it to a value less than 10ms, the default setting will be used instead (i.e. 30 ms).
+>
+> - Because of limitations of the SNMP++ library, the inform message resend time cannot be set to a value less than 10ms. If you set it to a value less than 10ms, the default setting will be used instead (i.e. 30 ms).
 > - From now on, all SNMPv2 traps and inform messages will by default include the “1.3.6.1.2.1.1.3.0” (sysUpTime) and “1.3.6.1.6.3.1.1.4.1.0” (snmpTrapOID) bindings.
 
 #### All client-server communication will now be encrypted by default \[ID_27747\]
@@ -90,6 +91,7 @@ Example:
 | ParametersOptions | Range:Start=\<dateTimeTextA>,End=\<dateTimeTextB> |
 
 > [!NOTE]
+>
 > - You do not have to specify two time values. You can specify a start time, an end time or both (separated by a comma).
 > - The datetime text strings need to be formatted according to the current or invariant culture.
 
@@ -97,7 +99,7 @@ Example:
 
 Using the following command-line arguments, it is now possible to use the Cube launcher tool to silently install, modify and uninstall DataMiner Cube without any user interface.
 
-**General syntax**
+##### General syntax
 
 ```txt
 PathToCubeExe.exe <arguments>
@@ -106,13 +108,13 @@ PathToCubeExe.exe <arguments>
 > [!NOTE]
 > All arguments and options are case insensitive.
 
-**Arguments to install DataMiner Cube**
+##### Arguments to install DataMiner Cube
 
-| Argument         | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-|------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| /Install         | Check whether DataMiner is installed, and if not, open the installation wizard.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-| /Install /Silent | Check whether DataMiner is installed, and if not, install DataMiner Cube and exit when done.<br> If no options are specified using an /InstallOptions argument, the default installation options will be used.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-| /InstallOptions  | Comma-separated list of additional installation options:<br> -  DesktopShortcut (add a desktop shortcut)<br> -  NoDesktopShortcut (do not add a desktop shortcut)<br> -  StartMenuShortcut (add a start menu shortcut)<br> -  NoStartMenuShortcut (do not add a start menu shortcut)<br> -  StartOnLogin (start Cube in the system tray after login)<br> -  NoStartOnLogin (do not start Cube in the system tray after login)<br> -  OpenAfterInstall (open Cube launcher tool after installation)<br> -  NoOpenAfterInstall\* (do not open Cube launcher tool after installation)<br> \* Default option for silent installs |
+| Argument | Description |
+|--|--|
+| /Install | Check whether DataMiner is installed, and if not, open the installation wizard. |
+| /Install /Silent | Check whether DataMiner is installed, and if not, install DataMiner Cube and exit when done. If no options are specified using an /InstallOptions argument, the default installation options will be used. |
+| /InstallOptions | Comma-separated list of additional installation options:<br> - DesktopShortcut (add a desktop shortcut)<br> - NoDesktopShortcut (do not add a desktop shortcut)<br> - StartMenuShortcut (add a start menu shortcut)<br> - NoStartMenuShortcut (do not add a start menu shortcut)<br> - StartOnLogin (start Cube in the system tray after login)<br> - NoStartOnLogin (do not start Cube in the system tray after login)<br> - OpenAfterInstall (open Cube launcher tool after installation)<br> - NoOpenAfterInstall\* (do not open Cube launcher tool after installation)<br> \* Default option for silent installs |
 
 Example of a silent command to install DataMiner Cube when no installation could be found:
 
@@ -120,13 +122,13 @@ Example of a silent command to install DataMiner Cube when no installation could
 PathToCubeExe.exe /Install /Silent /InstallOptions:StartOnLogin
 ```
 
-**Arguments to modify DataMiner Cube after installation**
+##### Arguments to modify DataMiner Cube after installation
 
-| Argument        | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-|-----------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| /Modify         | Open the “Modify installation” window.<br> If there is a /ModifyOptions argument, the options specified in that argument will be preselected.                                                                                                                                                                                                                                                                                                                                                     |
-| /Modify /Silent | Silently modify the DataMiner Cube installation using the options specified in the /ModifyOptions argument.                                                                                                                                                                                                                                                                                                                                                                                       |
-| /ModifyOptions  | Comma-separated list of modification options:<br> -  ClearProtocolCache<br> -  ClearVisioCache<br> -  ClearVersionCache (remove all cached versions)<br> -  RemoveVersion:versionnumber (remove the specified version from the cache) |
+| Argument | Description |
+|--|--|
+| /Modify | Open the “Modify installation” window. If there is a /ModifyOptions argument, the options specified in that argument will be preselected. |
+| /Modify /Silent | Silently modify the DataMiner Cube installation using the options specified in the /ModifyOptions argument. |
+| /ModifyOptions | Comma-separated list of modification options:<br> - ClearProtocolCache<br> - ClearVisioCache<br> - ClearVersionCache (remove all cached versions)<br> - RemoveVersion:versionnumber (remove the specified version from the cache) |
 
 Example of a silent command that will clear the protocol cache, clear the Visio cache and remove two versions from the cache:
 
@@ -134,7 +136,7 @@ Example of a silent command that will clear the protocol cache, clear the Visio 
 PathToCubeExe.exe /Modify /Silent /ModifyOptions:ClearProtocolCache,ClearVisioCache,RemoveVersion:9.5.1638.4080,RemoveVersion:10.0.2042.1636
 ```
 
-**Arguments to uninstall DataMiner Cube**
+##### Arguments to uninstall DataMiner Cube
 
 | Argument          | Description                        |
 |-------------------|------------------------------------|
@@ -168,7 +170,7 @@ Example: \[var:\[NAME\]\]
 
 In Visual Overview, it is now possible to pass Automation script output to session variables. Also, you can now use the page-level shape data field OnClosing to configure whether a Visual Overview window should automatically be closed or not.
 
-**Passing Automation script output to session variables**
+##### Passing Automation script output to session variables
 
 When an Automation script executed in Visual Overview finishes successfully, it is now possible to pass the output values of that script to session variables in Visual Overview using the new CreateKey(string variablename) method (namespace: Skyline.DataMiner.Automation, class name: UIVariables.VisualOverview).
 
@@ -184,7 +186,7 @@ engine.AddScriptOutput(UIVariables.VisualOverview.CreateKey("MyOutput"), "MyValu
 
 - When you set the SetVarOnFail option to true (either on page level or shape level), then the session variables in question will always be created, regardless of whether the script finishes successfully or not.
 
-**New “OnClosing” shape data field**
+##### New “OnClosing” shape data field
 
 From now on, you can use the page-level shape data field OnClosing to configure whether a Visual Overview window should automatically be closed or not.
 
@@ -201,6 +203,7 @@ If ClosingWindow_Result is set to “Stop”, a message box of type “Yes/No”
 Note that, in the session variable named ClosingWindow_Message, you can specify a custom message to be displayed. If you specify such a message, then it will be shown in a message box of type “OK”, regardless of the value of the ClosingWindow_Result variable. However, if ClosingWindow_Result is set to “Stop”, then this custom message will be displayed in the message box of type “Yes/No” mentioned above.
 
 > [!NOTE]
+>
 > - The OnClosing shape data field only works for windows. It does not work for popups or tooltips.
 > - The OnClosing and OnClose shape data fields do not influence each other. Both function independently from each other.
 > - If you want to combine OnClosing and OnClose, then in Visual Overview, you can pass session variable X to the OnClosing script and make it return session variable Y. That variable can then be passed to the OnClose script, which can optionally be made to return session variable Z.
@@ -213,6 +216,7 @@ Both options will keep the information bar from being displayed at the bottom of
 
 > [!NOTE]
 > If you specify both options, then AutoLoadExternalChanges will take precedence over AutoIgnoreExternalChanges:
+>
 > - As long as there are no (unsaved) client-side changes, external changes will be loaded automatically.
 > - As soon as there are (unsaved) client-side changes, external changes will be discarded.
 
@@ -253,11 +257,10 @@ The *Database* section of *System Center* now has three main tab pages.
 
 - In the *General* tab page, you can select “Database per agent” or “Database per cluster”.
 
-    - When you select “Database per agent”, you can configure the local databases per agent.
-    - When you select “Database per cluster”, you can configure a Cassandra cluster acting as a shared local database.
+  - When you select “Database per agent”, you can configure the local databases per agent.
+  - When you select “Database per cluster”, you can configure a Cassandra cluster acting as a shared local database.
 
 - In the *Offload* tab page, you can configure the data offloads to a central database.
-
 - In the *Other* tab page, you can configure an additional database.
 
 #### Trending: Real-time pattern matching \[ID_28054\]
@@ -268,38 +271,40 @@ When you create a pattern in DataMiner Cube, you can now select the following ne
 
 - When you select the *Generate an alarm when detected* option, DataMiner will track the pattern in real time and trigger a suggestion event each time it detects the pattern.
 
-    When you do not select this option, DataMiner will behave as before and use static pattern matching instead.
+  When you do not select this option, DataMiner will behave as before and use static pattern matching instead.
 
 - When specifying the parameter, in case of a table parameter, you can now also add the display key.
 
 > [!NOTE]
 > This option is not linked to the type of pattern matching that is being used (static or real-time).
 
-**Limitations**
+##### Limitations
 
 - If you tag a pattern for a parameter of which the polling time is specified in the protocol, then the pattern must have less than 5000 real-time points. If the polling time is not specified in the protocol, then the pattern must be shorter than 24 hours. When you select a longer pattern, DataMiner Cube will display a warning and revert to static pattern matching for that specific pattern.
 
 - For real-time pattern matching, DataMiner will only use a maximum of 2 GB of internal memory.
 
-    - As soon as DataMiner uses more than 1.5 GB of internal memory for real-time pattern matching, the following notice will appear in the Alarm Console:
+  - As soon as DataMiner uses more than 1.5 GB of internal memory for real-time pattern matching, the following notice will appear in the Alarm Console:
 
-        `Pattern matching memory high, adding more patterns or parameters might reduce matching accuracy.`
+    `Pattern matching memory high, adding more patterns or parameters might reduce matching accuracy.`
 
-        This notice will appear at most every 2 weeks or after a DataMiner restart.
-        In order to reduce memory usage, users can either remove patterns that are being tracked in real time or restrict the number of parameters for which patterns are being tracked in real time (e.g. by specifying a display key in case of table parameters).
+    This notice will appear at most every 2 weeks or after a DataMiner restart.
 
-    - As soon as DataMiner uses more than 2 GB of internal memory for real-time pattern matching, the following notice will appear in the Alarm Console:
+    In order to reduce memory usage, users can either remove patterns that are being tracked in real time or restrict the number of parameters for which patterns are being tracked in real time (e.g. by specifying a display key in case of table parameters).
 
-        `Pattern matching memory critical, patterns with suggestion events enabled may not match properly.`
+  - As soon as DataMiner uses more than 2 GB of internal memory for real-time pattern matching, the following notice will appear in the Alarm Console:
 
-        This notice will appear at most every 2 weeks or after a DataMiner restart.
-        Also, when users create a pattern, DataMiner will now always revert to static pattern matching, even if they selected the *Generate an alarm when detected* option.
+    `Pattern matching memory critical, patterns with suggestion events enabled may not match properly.`
 
-    - DataMiner checks all changes made to parameters for which patterns are being tracked in real time. If there are more than 6000 parameter changes per second, the following notice will appear in the Alarm Console:
+    This notice will appear at most every 2 weeks or after a DataMiner restart.
 
-        `High load on pattern matching functionality: reduced pattern match accuracy.`
+    Also, when users create a pattern, DataMiner will now always revert to static pattern matching, even if they selected the *Generate an alarm when detected* option.
 
-**Suggestion events**
+  - DataMiner checks all changes made to parameters for which patterns are being tracked in real time. If there are more than 6000 parameter changes per second, the following notice will appear in the Alarm Console:
+
+    `High load on pattern matching functionality: reduced pattern match accuracy.`
+
+##### Suggestion events
 
 In case of real-time pattern matching, pattern occurrences are communicated to the user by means of suggestion events in the Alarm Console, i.e. alarms with severity “Information” and source “Suggestion Engine”. These events can be displayed in a separate *Suggestion events* alarm tab.
 
@@ -315,11 +320,11 @@ You can construct a query to use as data input for a component by following thes
 
 1. In edit mode, select the dashboard component for which you want to use a query as a data input. At present, this is support for Bar chart, State and Table components.
 
-2. In the data pane, select *Queries* and click the + icon to add a new query.
+1. In the data pane, select *Queries* and click the + icon to add a new query.
 
-3. Specify a name for the query.
+1. Specify a name for the query.
 
-4. In the drop-down box below this, select the data source you want to use. At present, the following options are available:
+1. In the drop-down box below this, select the data source you want to use. At present, the following options are available:
 
     - *Get elements*: The elements in the DataMiner System.
     - *Get parameter table by alias*: The parameter table using the specified alias in the Elasticsearch database.
@@ -327,7 +332,7 @@ You can construct a query to use as data input for a component by following thes
     - *Get parameters for element where*: The selected parameters for the specified protocol or the parameters linked to the specified profile definition. Note that if parameters are displayed based on a specific protocol, it is not possible to combine a table parameter with other parameters, and only column parameters from the same table can be displayed in the same query.
     - *Get services*: The services in the DataMiner System.
 
-5. Select an operator. This step is optional; if you do not select an operator, the entire data set will be used. The following operators are available:
+1. Select an operator. This step is optional; if you do not select an operator, the entire data set will be used. The following operators are available:
 
     - *Aggregate*: Allows you to aggregate data from the data source. After you have selected this option, first select the aggregation column, and the method that should be used. Depending on the type of data available in the selected column, different methods are available, e.g. Average, Count, Distinct Count, Maximum, Median, Minimum, Percentile 90/95/98 or Standard deviation.
 
@@ -351,9 +356,10 @@ You can construct a query to use as data input for a component by following thes
 
     - *Top X*: Displays the top or bottom items of a specific column, with X being the number of items to display. When you select this option, you will need to specify the column from which items should be displayed and the number of items that should be displayed. By default, the top items are displayed. To display the bottom items instead, select the *Ascending* check box.
 
-6. Drag the configured query to the component in order to use it.
+1. Drag the configured query to the component in order to use it.
 
 > [!NOTE]
+>
 > - It is possible to refer to a query in the dashboard URL, using the following format: *?queries=\[***alias***\]\\x1F\[***queryJsonString***\] <br>*In this format, \[alias\] is the name of the query and \[queryJsonString\] is the query in the format of a JSON string, for example: <br>*?queries=Get Elements/{"ID": "Elements"}*.
 > - When a query has been created, the columns from the table that results from the query are available as individual data items in the data pane, so that you can use them to filter or group a component.
 > - It is not possible to retrieve data from a stopped element.
@@ -544,21 +550,21 @@ When you interact with the Ticketing Manager in scripts, keep the following chan
 
 - To check if a request was successful, you can now retrieve the *TraceData* using the *GetTraceDataLastCall()* method on the *CrudComponentHelper* type used for the request. This returns the TraceData object, which can contain TicketingManagerError objects, each containing a reason for the error and extra data on what caused it. These are the possible errors:
 
-    - * TicketFieldResolverInUseByTickets*: The ticket field resolver still has tickets linked to it. (The property *RelatedTickets* contains the IDs of the tickets.)
+  - *TicketFieldResolverInUseByTickets*: The ticket field resolver still has tickets linked to it. (The property *RelatedTickets* contains the IDs of the tickets.)
 
-    - *NotInitialized*: The Ticketing Manager is not initialized.
+  - *NotInitialized*: The Ticketing Manager is not initialized.
 
-    - *LegacyError*: A legacy error has occurred. (The property *LegacyErrorMessage* contains the error message.)
+  - *LegacyError*: A legacy error has occurred. (The property *LegacyErrorMessage* contains the error message.)
 
-    - * TicketLinkedToNonExistingTicketFieldResolver*: The created/updated ticket has a link to a ticket field resolver that does not exist. (The property *TicketFieldResolverId* contains the ID of that ticket field resolver.)
+  - *TicketLinkedToNonExistingTicketFieldResolver*: The created/updated ticket has a link to a ticket field resolver that does not exist. (The property *TicketFieldResolverId* contains the ID of that ticket field resolver.)
 
-    -  *TicketFieldResolverIsUnknownOrNotMasked*: The ticket field resolver is unknown or not masked.
+  - *TicketFieldResolverIsUnknownOrNotMasked*: The ticket field resolver is unknown or not masked.
 
-    - *UnexpectedException*: An unexpected exception occurred. (The property *Exception* contains the exception.)
+  - *UnexpectedException*: An unexpected exception occurred. (The property *Exception* contains the exception.)
 
-    - * TicketLinkedToMaskedTicketFieldResolver*: The created/updated ticket has a link to a ticket field resolver that is masked. (The property *TicketFieldResolverId* contains the ID of that ticket field resolver.
+  - *TicketLinkedToMaskedTicketFieldResolver*: The created/updated ticket has a link to a ticket field resolver that is masked. (The property *TicketFieldResolverId* contains the ID of that ticket field resolver.
 
-    Calling *ToString()* on the *TraceData* object will return a formatted string that shows all errors and associated data.
+  Calling *ToString()* on the *TraceData* object will return a formatted string that shows all errors and associated data.
 
 - When paging is started using *TicketingGatewayHelper.NewPagingRequest()*, the out parameter will no longer return the total number of tickets.
 
@@ -578,7 +584,7 @@ When you interact with the Ticketing Manager in scripts, keep the following chan
 
 The following changes have been implemented in the web services API v1:
 
-- The *DMATicket*,* DMATicketSelection* and *DMATicketUpdate* objects have a new *UID* property which contains the new GUID identifier of a ticket.
+- The *DMATicket*, *DMATicketSelection* and *DMATicketUpdate* objects have a new *UID* property which contains the new GUID identifier of a ticket.
 
 - The *PageSessionID* and *TotalTicketsCount* properties of the *DMATicketsPage* object are now obsolete.
 
@@ -611,7 +617,7 @@ When values are being loaded into a selection box, from now on, the loading indi
 
 ### DMS Service & Resource Management
 
-#### Binding between a VirtualFunctionResource and a physical device element will now automati­cally be updated when the protocol of the device element changes \[ID_27466\]
+#### Binding between a VirtualFunctionResource and a physical device element will now automatically be updated when the protocol of the device element changes \[ID_27466\]
 
 When a virtual function resource is bound to a physical device element, that binding will now automatically be updated when the protocol of the physical device element changes.
 
@@ -629,13 +635,13 @@ When a virtual function resource is bound to a physical device element, that bin
 
 The StandaloneElasticBackup.exe tool allows you to back up and restore Elasticsearch database clusters.
 
-**General syntax**
+##### General syntax
 
 ```txt
 StandaloneElasticBackup.exe <action> <arguments>
 ```
 
-**Actions**
+##### Actions
 
 This tool allows you to perform the following actions:
 
@@ -651,16 +657,16 @@ Example:
 StandaloneElasticBackup.exe backup --host 127.0.0.1 -u elastic --pw mypw123 -r reponame
 ```
 
-**General arguments**
+##### General arguments
 
-| Option     |     | Description                                                                                                                 |
-|------------|-----|-----------------------------------------------------------------------------------------------------------------------------|
-| --host     | -h  | The host on which the command has to be run.<br> Default: 127.0.0.1                                                         |
-| --port     | -p  | The port on which Elasticsearch will be contacted.<br> Default: 9200                                                        |
-| --username | -u  | The credentials that have to used to connect to Elasticsearch.<br> Only use these options when credentials have to be used. |
-| --pw       |     |                                                                                                                             |
+| Option     |     | Description                                                                                                             |
+|------------|-----|-------------------------------------------------------------------------------------------------------------------------|
+| --host     | -h  | The host on which the command has to be run. Default: 127.0.0.1.                                                        |
+| --port     | -p  | The port on which Elasticsearch will be contacted. Default: 9200.                                                       |
+| --username | -u  | The credentials that have to used to connect to Elasticsearch. Only use these options when credentials have to be used. |
+| --pw       |     |                                                                                                                         |
 
-**Arguments to add when you want to initialize the repository**
+##### Arguments to add when you want to initialize the repository
 
 Run StandaloneElasticBackup.exe with the following two (mandatory) arguments to initialize the repository that should be made to take a snapshot.
 
@@ -670,10 +676,11 @@ Run StandaloneElasticBackup.exe with the following two (mandatory) arguments to 
 | --path |     | The path of the repository as defined in the yaml.xml file of the Elasticsearch cluster, enclosed by “”.<br> This is the location where the snapshot will be placed. |
 
 > [!NOTE]
+>
 > - Snapshots are incremental. Do not delete any of them.
 > - See also: <https://www.elastic.co/guide/en/elasticsearch/reference/current/snapshots-register-repository.html>
 
-**Arguments to add when you want to take a backup/snapshot**
+##### Arguments to add when you want to take a backup/snapshot
 
 Run StandaloneElasticBackup.exe with the following two (mandatory) arguments to take a backup/snapshot.
 
@@ -682,16 +689,17 @@ Run StandaloneElasticBackup.exe with the following two (mandatory) arguments to 
 | --repo         | -r  | The repository in which to take the backup.<br> -  If none is defined and only one repository is found in the Elasticsearch cluster, then that one will be used.<br> -  If none is defined and none can be found, then no backup will be taken. |
 | --snapshotname | -n  | The (lowercase) name of the snapshot to be taken.<br> Default: DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss");                                                                                                                                                                                                                                                                  |
 
-**Arguments to add when you want to restore a backup/snapshot**
+##### Arguments to add when you want to restore a backup/snapshot
 
 Run StandaloneElasticBackup.exe with the following two (mandatory) arguments to restore a backup/snapshot.
 
-| Option         |     | Description                                                                                                                                                                                                                                                                                                                                                                            |
-|----------------|-----|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| --repo         | -r  | The repository containing the backup to be restored.<br> -  If none is defined and only one repository is found in the Elasticsearch cluster, then that one will be used.<br> -  If none is defined and none can be found, then an error will be thrown. |
-| --snapshotname | -n  | The name of the snapshot to be restored.                                                                                                                                                                                                                                                                                                                                               |
+| Option |  | Description |
+|--|--|--|
+| --repo | -r | The repository containing the backup to be restored.<br> -  If none is defined and only one repository is found in the Elasticsearch cluster, then that one will be used.<br> -  If none is defined and none can be found, then an error will be thrown. |
+| --snapshotname | -n | The name of the snapshot to be restored. |
 
 > [!NOTE]
+>
 > - If, before restoring a backup, you notice that all data was deleted from the database, then re-initialize the repository.
 > - It is advised to disable security when restoring a backup with security enabled. To do so, comment the security setting in the yaml file.
 
@@ -866,7 +874,7 @@ If you exited edit mode in the Dashboards app after refreshing while edit mode w
 
 When a highlight condition was configured on a Visual Overview shape based on the name of an element, service or view, an unnecessary property subscription was also made. This will no longer occur.
 
-#### DataMiner Cube - Visual Overview: No log entry would get created when a Visio shape con­tained a reference to an element on a disconnected DMA \[ID_27527\]
+#### DataMiner Cube - Visual Overview: No log entry would get created when a Visio shape contained a reference to an element on a disconnected DMA \[ID_27527\]
 
 No log entry would get created when a Visio shape displaying a chart contained a reference to an element located on a disconnected DataMiner Agent.
 
@@ -881,7 +889,7 @@ When no domains had been configured, in some cases, the jobs list would incorrec
 > [!NOTE]
 > Up to now, when no domains were configured, a popup message would be displayed, asking you to create one. From now on, visual indication and a button will be displayed instead.
 
-#### DataMiner Cube: When one client forcefully disconnected another client, the latter would incor­rectly reconnect \[ID_27638\]\[ID_27671\]
+#### DataMiner Cube: When one client forcefully disconnected another client, the latter would incorrectly reconnect \[ID_27638\]\[ID_27671\]
 
 When two different Cube clients were connected to the same DataMiner Agent, and one forcefully disconnected the other, up to now, that forceful disconnection would incorrectly be considered as abnormal, causing the disconnected client to immediately reconnect.
 
@@ -919,7 +927,7 @@ In some cases, when you exported a trend graph multiple times in a row using tha
 
 In some cases, when users logged in with domain administrator credentials, they would incorrectly log in with the local, built-in administrator account instead.
 
-#### Problem with SLDataMiner when importing a CSV file created with a previous DataMiner ver­sion \[ID_27722\]
+#### Problem with SLDataMiner when importing a CSV file created with a previous DataMiner version \[ID_27722\]
 
 When you imported a CSV file that was created with a previous DataMiner version, in some cases, an error could occur in SLDataMiner.
 
@@ -1054,7 +1062,7 @@ Also, a selection box problem could occur when multiple conditions were configur
 
 When, in a DataMiner System with multiple agents, information events were retrieved by an Automation script, in some cases, not all information events would be retrieved.
 
-#### Dashboards app - Time range component: Default range would be used even after being over­written afterwards \[ID_27941\]
+#### Dashboards app - Time range component: Default range would be used even after being overwritten afterwards \[ID_27941\]
 
 If the default values of a time range component had been set to a custom range, in some cases, those values would incorrectly still be used after being overwritten afterwards (e.g. by means of URL arguments or another feed).
 
@@ -1074,7 +1082,7 @@ When you configured a new DataMiner Agent, in some cases, an error could occur w
 
 In some cases, making a shape display or set the Surveyor search text using the Surveyor-SearchText session variable would no longer work.
 
-#### DataMiner Cube - Visual Overview: Save button no longer working in embedded Service Man­ager component \[ID_28003\]
+#### DataMiner Cube - Visual Overview: Save button no longer working in embedded Service Manager component \[ID_28003\]
 
 In an embedded Service Manager component, in some cases, the Save button would no longer work.
 
@@ -1112,7 +1120,7 @@ When an agent was restarted in a DataMiner System, certain SLNet threads could g
 
 ## Addendum CU1
 
-### Fixes
+### CU1 fixes
 
 #### SLWatchDog2.txt: Total number of processes of which at least one thread has a run-time error was incorrectly replaced by total number of threads with a run-time error \[ID_28360\]
 

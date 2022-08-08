@@ -43,6 +43,7 @@ From now on, you will also be able to enable or disable this setting on system l
 ```
 
 > [!NOTE]
+>
 > - This setting can only be configured in MaintenanceSettings.xml.
 > - When you change this setting, the change will only be applied after a DataMiner restart.
 > - The protocol-level setting will overrule the system-level setting.
@@ -63,7 +64,7 @@ Default value of the “Maximum group events rate” setting: 100
 
 In the Services app, a number of security enhancements have been made with regard to service definitions.
 
-- In the *Users/Groups* section of System Center, the *Add*, *Edit* and *Delete* permissions under *Modules \> Services \> Definitions* have now been replaced by one single *Edit actions *permission. If a user had at least one of those previous *Add*, *Edit* or *Delete* permissions, they will now automatically be granted the new permission.
+- In the *Users/Groups* section of System Center, the *Add*, *Edit* and *Delete* permissions under *Modules \> Services \> Definitions* have now been replaced by one single *Edit actions* permission. If a user had at least one of those previous *Add*, *Edit* or *Delete* permissions, they will now automatically be granted the new permission.
 - In some cases, the *Diagram* and *Properties* permission under *Modules \> Services \> Definitions* would be applied incorrectly.
 - Users who do not have read permission on functions will now be able to correctly save function nodes when configuring service definitions.
 
@@ -77,7 +78,7 @@ Up to now, when you filtered a table and then exported it, the filter would not 
 
 #### DataMiner Cube - Views: “Below this view” list has a new column “Communication protocols” \[ID_31590\]
 
-A “Communication protocols” column has been added to the list on the *Below this view *page of a view card. This column will show the communication protocols used by an element.
+A “Communication protocols” column has been added to the list on the *Below this view* page of a view card. This column will show the communication protocols used by an element.
 
 #### Visual Overview: Shape data fields of type “ParametersSummary” can now also handle subscription filters specified in the index part of a parameter section \[ID_31609\]
 

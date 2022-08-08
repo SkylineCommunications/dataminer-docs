@@ -25,11 +25,12 @@ object[] httpRequestInfo = new object[3] { "http", new string[6] { sVerb, sURL, 
 ```
 
 > [!NOTE]
+>
 > - The old syntax can still be used. If you use the old syntax, no message bodies will be sent. If you use the new syntax for a single resource, no message body needs to be added. In that case, you should define an empty string instead.
 > - By adding the message bodies to the last array in the request, the new syntax allows you to send a different message body to each of the different subpages.
 > - Using the new syntax, the last array can be an object array of string arrays of size 2:
->     - The first part of each string array is the subpage to which the request needs to be sent.
->     - The second part of each string array is the message body that needs to be sent to that specific subpage.
+>   - The first part of each string array is the subpage to which the request needs to be sent.
+>   - The second part of each string array is the message body that needs to be sent to that specific subpage.
 > - DataMiner does not format the given message body in any way. It is forwarded as received from within the QAction. It is up to the user to correctly format the message body.
 
 #### Updating direct views showing data from elements on remote DMAs \[ID_27547\]
@@ -82,6 +83,7 @@ From now on, when an alarm tree contains alarm events that did not change the se
 When you open an alarm card that shows an alarm tree containing consolidated events, you can click *Show all alarm updates* to have the tree expanded to show all events.
 
 > [!NOTE]
+>
 > - The maximum alarm limit is calculated after alarm event consolidation.
 > - Alarm consolidation is disabled by default. To enable it, add an *AlarmSettings.MustSquashAlarms* element to the *MaintenanceSettings.xml* file, and set its value to True.
 
@@ -93,15 +95,15 @@ To configure a converter, do the following:
 
 1. Open the *Profiles* app and go to the *Parameters* tab.
 
-2. Open a parameter (or create a new one).
+1. Open a parameter (or create a new one).
 
-3. In the *Linked with* table at the bottom, add, edit or duplicate an entry.
+1. In the *Linked with* table at the bottom, add, edit or duplicate an entry.
 
-4. In the *Edit link with protocol* box, activate the *Converter* setting, enter the converter code in the code window, and click *OK*.
+1. In the *Edit link with protocol* box, activate the *Converter* setting, enter the converter code in the code window, and click *OK*.
 
-    In the *Linked with* table, the *Converter* column will now show either the class name of the converter or, if no class name could be found, the first line of the converter code.
+   In the *Linked with* table, the *Converter* column will now show either the class name of the converter or, if no class name could be found, the first line of the converter code.
 
-5. Click *Save* to apply the changes you made.
+1. Click *Save* to apply the changes you made.
 
 > [!NOTE]
 > When you edit a linked parameter with a converter, the *Converter* setting will automatically be activated.
@@ -111,9 +113,10 @@ To configure a converter, do the following:
 Up to now, when a DataMiner Agent disconnected from the DataMiner System, the elements hosted by it would disappear from the Cube’s Surveyor. From now on, they will remain visible (read-only), and will be indicated as being disconnected by means of a special icon.
 
 > [!NOTE]
+>
 > - The cache is not persistent.
->     - When the disconnected DMA restarts, its elements will no longer be available to the other DMAs in the DMS.
->     - When another DMA joins the DMS, the elements of the disconnected DMA will not be available to the new DMA.
+>   - When the disconnected DMA restarts, its elements will no longer be available to the other DMAs in the DMS.
+>   - When another DMA joins the DMS, the elements of the disconnected DMA will not be available to the new DMA.
 > - Any messages sent to the disconnected DMA (e.g. to retrieve or update information) will result in an exception being thrown.
 
 #### DataMiner Cube will now always connect to a DataMiner Agent via .NET Remoting \[ID_27354\]
@@ -178,6 +181,7 @@ In Alarm Console hyperlinks, these filters can be used in the FilterElement prop
 ```
 
 > [!NOTE]
+>
 > - This type of filters will be applied after the data has been retrieved from the database.
 > - It is not recommended to use these filters when retrieving data from Cassandra or ElasticSearch.
 
@@ -254,23 +258,21 @@ There are two main reasons to consider a Dashboard Gateway setup:
 
 - Security
 
-    Users are allowed to connect to the Dashboard Gateway, but not to the DataMiner Agents directly. Also, it is possible to install only the web applications on the Dashboard Gateway web server(s) to which you want users to have access. If you only install the Dashboards and the Monitoring app, users will not be able to access the Jobs app, the Ticketing or any other app.
+  Users are allowed to connect to the Dashboard Gateway, but not to the DataMiner Agents directly. Also, it is possible to install only the web applications on the Dashboard Gateway web server(s) to which you want users to have access. If you only install the Dashboards and the Monitoring app, users will not be able to access the Jobs app, the Ticketing or any other app.
 
 - Performance
 
-    Allowing multiple users to connect to the web applications increases the overall load on the DataMiner Agents. When using a Dashboard Gateway, the direct load of the web applications and the HTTP requests shifts to a separate web server, leaving more resources available on the DataMiner Agents. Also, if more performance is needed, multiple Dashboard Gateway web servers can be used in combination with a load balancer.
+  Allowing multiple users to connect to the web applications increases the overall load on the DataMiner Agents. When using a Dashboard Gateway, the direct load of the web applications and the HTTP requests shifts to a separate web server, leaving more resources available on the DataMiner Agents. Also, if more performance is needed, multiple Dashboard Gateway web servers can be used in combination with a load balancer.
 
 Requirements:
 
 - At least one web server (running Windows Server)
-
 - A valid SSL certificate signed by a public certificate authority for the FQDN of the Dashboard Gateway (e.g. “gateway.mycompany.com”)
-
 - A DataMiner user account with
 
-    - access to all views, elements and alarms,
-    - permission to access the Alarm Console and Data Display, and
-    - permission to create, edit and delete dashboards.
+  - access to all views, elements and alarms,
+  - permission to access the Alarm Console and Data Display, and
+  - permission to create, edit and delete dashboards.
 
 - The Dashboard Gateway web server(s) should be able to communicate with a DMA using both a .NET Remoting connection and an HTTP(S) connection (using port 80 or 443, depending on the HTTP(S) configuration of the DataMiner Agent)
 
@@ -280,32 +282,32 @@ Configuration:
 
     For IIS, make sure to install Classic ASP, ASP.NET 4.6+, and the WebSocket protocol.
 
-2. In IIS Manager, import the certificate, and update the site binding to use HTTPS with this certificate.
+1. In IIS Manager, import the certificate, and update the site binding to use HTTPS with this certificate.
 
-3. Configure URL Rewrite to forward all HTTP traffic to HTTPS
+1. Configure URL Rewrite to forward all HTTP traffic to HTTPS
 
-4. From a DataMiner Agent, copy the C:\\Skyline DataMiner\\Webpages\\API folder to the web root folder of the Dashboard Gateway web server (default: C:\\inetpub\\wwwroot) and, in IIS Manager, convert the API into an application.
+1. From a DataMiner Agent, copy the C:\\Skyline DataMiner\\Webpages\\API folder to the web root folder of the Dashboard Gateway web server (default: C:\\inetpub\\wwwroot) and, in IIS Manager, convert the API into an application.
 
-5. From a DataMiner Agent, copy over the web application(s) (e.g. C:\\Skyline DataMiner\\Webpages\\Dashboard, C:\\Skyline DataMiner\\Webpages\\Monitoring, C:\\Skyline DataMiner\\Webpages\\Jobs, C:\\Skyline DataMiner\\Webpages\\Ticketing, etc.) to the web root folder of the Dashboard Gateway web server.
+1. From a DataMiner Agent, copy over the web application(s) (e.g. C:\\Skyline DataMiner\\Webpages\\Dashboard, C:\\Skyline DataMiner\\Webpages\\Monitoring, C:\\Skyline DataMiner\\Webpages\\Jobs, C:\\Skyline DataMiner\\Webpages\\Ticketing, etc.) to the web root folder of the Dashboard Gateway web server.
 
-6. On the Dashboard Gateway web server, edit the web.config in the API folder, and specify the following settings:
+1. On the Dashboard Gateway web server, edit the web.config in the API folder, and specify the following settings:
 
-    | Setting          | Description                                                                                                              |
-    |--------------------|--------------------------------------------------------------------------------------------------------------------------|
-    | connectionString   | Host name or IP address of the DataMiner Agent to which the Dashboard Gateway has to connect.                            |
-    | connectionUser     | DataMiner user account that the Dashboard Gateway has to use to connect to the DataMiner Agent (user name and password). |
-    | connectionPassword |                                                                                                                          |
+   | Setting          | Description                                                                                                              |
+   |--------------------|--------------------------------------------------------------------------------------------------------------------------|
+   | connectionString   | Host name or IP address of the DataMiner Agent to which the Dashboard Gateway has to connect.                            |
+   | connectionUser     | DataMiner user account that the Dashboard Gateway has to use to connect to the DataMiner Agent (user name and password). |
+   | connectionPassword |                                                                                                                          |
 
 Known limitations:
 
 - The URL folder structure of the web applications should remain the same as on a DataMiner Agent. The applications have to be accessed using the following URL:
  
-    ```txt
-    https://gateway.somecompany.com/dashboard
-    https://gateway.somecompany.com/monitoring
-    https://gateway.somecompany.com/ticketing
-    https://gateway.somecompany.com/jobs
-    ```
+  ```txt
+  https://gateway.somecompany.com/dashboard
+  https://gateway.somecompany.com/monitoring
+  https://gateway.somecompany.com/ticketing
+  https://gateway.somecompany.com/jobs
+  ```
 
 - The DataMiner user account used by the Dashboard Gateway web server should not have multi-factor authentication enabled.
 
@@ -469,6 +471,7 @@ This tool, when run with the factory-reset argument, resets the currently active
 | --timeout     |                         |           | Timeout (milliseconds)<br> If execution takes longer than the specified timeout, the program is killed.<br> Default: int.MaxValue (\~2 billion)                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 
 > [!NOTE]
+>
 > - When you perform a factory reset, no backup of the DataMiner Agent will be taken.
 > - SLReset must be run with administrative privileges.
 
@@ -533,19 +536,20 @@ When creating a BPA test capable of taking corrective actions, developers have t
 
 1. Implement a class that inherits the BpaCorrectiveTest class.
 
-2. Create an implementation of the Verify() method that will return
+1. Create an implementation of the Verify() method that will return
 
-    - True when no issues were detected, and
-    - False when issues were detected.
+   - True when no issues were detected, and
+   - False when issues were detected.
 
-3. Create an implementation of the CorrectiveAction() method that will return
+1. Create an implementation of the CorrectiveAction() method that will return
 
-    - True when the corrective action was performed successfully, and
-    - False when issues prevented the action from being performed.
+   - True when the corrective action was performed successfully, and
+   - False when issues prevented the action from being performed.
 
 A BPA test that was set to take corrected actions will run the Verify() method, which will run the CorrectiveAction() method in case of failure, and will then run the Verify() method again.
 
 > [!NOTE]
+>
 > - The result returned by a test will tell whether corrective actions were taken and whether they were successful.
 > - By default, no corrective actions will be taken in any of the tests that are run, unless requested in the beginning of the test run.
 

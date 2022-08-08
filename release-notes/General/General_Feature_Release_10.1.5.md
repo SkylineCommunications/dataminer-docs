@@ -60,6 +60,7 @@ In the DataMiner.xml file, an \<AzureAD> element should be present. See the foll
 ```
 
 > [!NOTE]
+>
 > - Currently, users imported from an Azure AD can only log in via SAML.
 > - In an upcoming release, functionality will be added so that this can be configured directly in DataMiner Cube instead.
 
@@ -253,9 +254,8 @@ From now on, the automatic server retrieval can be bypassed by
 1. creating a retrieval method that tries to return the parameters that are already cached in the script or application before retrieving them from the server (see the example below), and
 2. passing that method to the GenerateRequiredCapas(Func\<ProfileParameterEntry, Parameter> parameterResolver) call.
 
-**Example of a method that tries to return the parameters that are already cached in the script or application before retrieving them from the server**
+The following example shows a method that tries to return the parameters that are already cached in the script or application before retrieving them from the server. We first check whether a certain parameter can be found in the local “\_profileParameterCache”. If not, we then retrieve it using the built-in AutoSync collection by means of a get operation on Parameter property.
 
-In the following example, we first check whether a certain parameter can be found in the local “\_profileParameterCache”. If not, we then retrieve it using the built-in AutoSync collection by means of a get operation on Parameter property.
 
 ```csharp
 private Parameter GetParameterForParameterEntry(ProfileParameterEntry entry)
@@ -293,18 +293,18 @@ All these log entries will have log level 5.
 
 A caching mechanism involving three separate caches will now be used when retrieving ReservationInstances from an Elasticsearch database, especially when the already saved ReservationInstances have to be checked, e.g. when saving a new ReservationInstance or when requesting the availability of resources in a certain time frame.
 
-**Overview of the caches**
+##### Overview of the caches
 
-| Cache                            | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
-|----------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Hosted ReservationInstance cache | When the ResourceManager module starts, this cache loads the ReservationInstances that are hosted on the agent and schedules the start/stop actions and booking events for these ReservationInstances. Any new instances hosted on the agent that are added or updated while the ResourceManager module is running will also be added to this cache so they can be scheduled.<br> On startup, only the instances starting before a certain point in the future are loaded (default: 1 day). At regular intervals, the database will be checked for instances further in the future. |
-| ID cache                         | When a specific ReservationInstance is requested by ID, the result is cached in this ID cache. When an internal request is made for a specific ID, the cached ReservationInstance will be returned.<br> Used when adding or editing ReservationInstances and when executing start/stop actions and ReservationEvents.                                                                                                                                                                                                                                                               |
-| Time range cache                 | When ReservationInstances within a specific time range are requested, all instances in that time range will be cached in this cache.<br> Used when new bookings are created or when eligible resources are requested.                                                                                                                                                                                                                                                                                                                                                               |
+| Cache | Description |
+|--|--|
+| Hosted ReservationInstance cache | When the ResourceManager module starts, this cache loads the ReservationInstances that are hosted on the agent and schedules the start/stop actions and booking events for these ReservationInstances. Any new instances hosted on the agent that are added or updated while the ResourceManager module is running will also be added to this cache so they can be scheduled. On startup, only the instances starting before a certain point in the future are loaded (default: 1 day). At regular intervals, the database will be checked for instances further in the future. |
+| ID cache | When a specific ReservationInstance is requested by ID, the result is cached in this ID cache. When an internal request is made for a specific ID, the cached ReservationInstance will be returned. Used when adding or editing ReservationInstances and when executing start/stop actions and ReservationEvents. |
+| Time range cache | When ReservationInstances within a specific time range are requested, all instances in that time range will be cached in this cache. Used when new bookings are created or when eligible resources are requested. |
 
 > [!NOTE]
 > GetReservationInstances calls from scripts or clients will go straight to the database. They will not use the caching mechanism.
 
-**Configuration of the caches**
+##### Configuration of the caches
 
 The caches can be configured in the C:\\Skyline DataMiner\\ResourceManager\\Config.xml file. See the following example.
 
@@ -331,27 +331,27 @@ The caches can be configured in the C:\\Skyline DataMiner\\ResourceManager\\Conf
 
 Overview of the different settings:
 
-| Cache                                               | Setting                  | Description                                                                                                                                                                                                | Default value |
-|-----------------------------------------------------|--------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------|
-| IdCache<br>Configuration                            | MaxObjects<br>InCache    | The maximum amount of objects that will be kept in this cache. When this threshold is exceeded, the oldest objects will be removed.                                                                        | 500           |
-|                                                     | Object<br>LifeSpan       | The maximum period of time an entry will be kept in the cache. Each time the entry is hit, this timer is reset.<br> This setting has to be formatted according to ISO 8601.                                | 10 minutes    |
-| TimeRangeCache<br>Configuration                     | MaxObjects<br>InCache    | The maximum amount of objects that will be kept in this cache. When this threshold is exceeded, the oldest time ranges will be removed.                                                                    | 3000          |
-|                                                     | TimeRange<br>LifeSpan    | The maximum period of time a time range will be kept in the cache. Each time a query hitting this time range is resolved, this timer is reset.<br> This setting has to be formatted according to ISO 8601. | 10 minutes    |
-|                                                     | Cleanup<br>CheckInterval | The interval at which the time ranges to be removed are checked.<br> This setting has to be formatted according to ISO 8601.                                                                               | 1 minute      |
-| Hosted<br>ReservationInstance<br>CacheConfiguration | InitialLoad<br>Days      | The setting that controls how long into the future the ReservationInstances will be loaded at ResourceManager startup.<br> This setting has to be formatted according to ISO 8601.                         | 1 day         |
-|                                                     | CheckInterval            | The period of time after which the ResourceManager will load new bookings from the database.                                                                                                               | 6 hours       |
+| Cache | Setting | Description | Default value |
+|--|--|--|--|
+| IdCacheConfiguration | MaxObjectsInCache | The maximum amount of objects that will be kept in this cache. When this threshold is exceeded, the oldest objects will be removed. | 500 |
+|  | ObjectLifeSpan | The maximum period of time an entry will be kept in the cache. Each time the entry is hit, this timer is reset. This setting has to be formatted according to ISO 8601. | 10 minutes |
+| TimeRangeCacheConfiguration | MaxObjectsInCache | The maximum amount of objects that will be kept in this cache. When this threshold is exceeded, the oldest time ranges will be removed. | 3000 |
+|  | TimeRangeLifeSpan | The maximum period of time a time range will be kept in the cache. Each time a query hitting this time range is resolved, this timer is reset. This setting has to be formatted according to ISO 8601. | 10 minutes |
+|  | CleanupCheckInterval | The interval at which the time ranges to be removed are checked. This setting has to be formatted according to ISO 8601. | 1 minute |
+| HostedReservationInstanceCacheConfiguration | InitialLoadDays | The setting that controls how long into the future the ReservationInstances will be loaded at ResourceManager startup. This setting has to be formatted according to ISO 8601. | 1 day |
+|  | CheckInterval | The period of time after which the ResourceManager will load new bookings from the database. | 6 hours |
 
 > [!NOTE]
 > The ResourceManagerConfig.InitialLoadDays setting no longer has any use, as the ReservationInstances will now be loaded according to the settings in HostedReservationInstanceCacheConfiguration.
 
-**ClientTest tool**
+##### ClientTest tool
 
 The SLNetClientTest tool now allows you to retrieve the IDs of the currently cached ReservationInstances. To do so, go to *Advanced \> Apps \> SRMSurveyor \> Inspect ReservationInstance Cache*.
 
 > [!WARNING]
 > Always be extremely careful when using this tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
 
-**Logging**
+##### Logging
 
 If loglevel 6 is enabled, the caches will log any added, updated or removed items in the  SLResourceManagerStorage.txt file.
 
@@ -361,6 +361,7 @@ Overall performance has increased by implementing ISerializable on the Reservati
 
 > [!WARNING]
 > Breaking changes:
+>
 > - The Children and Parent property of a ReservationInstance will no longer be serialized between client and server. When the ResourceManagerHelper is used, backwards compatibility is implemented. However, if you use the messages yourself and receive ResourceManagerEventMessages via subscriptions (which is NOT recommended), you will need to call the GetStitched method on the ReservationInstance class. Saving ReservationInstances with a parent or child instance using messages may also cause issues.
 > - When the SetReservationInstances method is called on the ResourceManagerHelper, a random ID will now be assigned before the instances are saved to the server. This could be an issue if scripts expect the ID to be empty and try to reuse the object.
 

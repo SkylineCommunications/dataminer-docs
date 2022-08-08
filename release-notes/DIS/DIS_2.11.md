@@ -72,6 +72,7 @@ In the *Generate Write Parameters* window, each read parameter in the list now h
 As is the case with duplicate parameter IDs, duplicate parameter names will now also be indicated by a red border.
 
 > [!NOTE]
+>
 > - As long as there is at least one row showing a duplicate parameter ID or duplicate parameter name, the *OK* button will be disabled and a warning icon will be displayed in the top-right corner of the window.
 > - Only rows of which the check box is selected are taken into account when performing the above-mentioned validation.
 

@@ -181,6 +181,7 @@ You can create new component themes in the following ways:
 - Save a component’s theme after having customized it.
 
 > [!NOTE]
+>
 > - By default, a component will use the read-only default theme from the dashboard on which it is placed.
 > - For backwards compatibility, components that previously inherited their styles from the dashboard theme will now use the default component theme instead.
 
@@ -192,9 +193,9 @@ Do the following:
 
 1. In the Dashboards app, open the dashboard that contains the component you want to embed.
 
-2. Right-click the component and select *Copy embed URL*.
+1. Right-click the component and select *Copy embed URL*.
 
-3. Use the URL of the component in either a Visio page (e.g. in a shape with a data field of type “Link”) or a web page (e.g. in an \<img> tag).
+1. Use the URL of the component in either a Visio page (e.g. in a shape with a data field of type “Link”) or a web page (e.g. in an \<img> tag).
 
 A component URL has the following syntax:
 
@@ -203,6 +204,7 @@ http://<DMA>/embed?component=<SERIALIZED-COMPONENT>
 ```
 
 > [!NOTE]
+>
 > - “SERIALIZED-COMPONENT” is a serialized representation of the component in JSON format.
 > - If the component contains data, that data will automatically be included into the URL.
 
@@ -222,6 +224,7 @@ In the TicketingHelper class and TicketingGatewayHelper, the “AttachmentsHelpe
 | byte\[\] Get(TicketID ticketID, string attachmentName)      | Retrieves the content of the attachment with the specified name as a byte array.             |
 
 > [!NOTE]
+>
 > - The maximum size of ticket attachments is determined by the Documents.MaxSize setting, located in the MaintenanceSettings.xml file. Default: 20 Mb. Trying to upload a larger file will result in a DataMinerException.
 > - Manipulating ticket attachments requires the same user permissions as normal ticket management operations: Read permission to view and download attachments and Edit permission to add and delete attachments.
 > - If a ticket is deleted, all its attachments will physically be deleted from disk. They will not be recoverable.

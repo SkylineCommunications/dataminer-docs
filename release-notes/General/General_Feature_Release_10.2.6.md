@@ -20,13 +20,14 @@ When a service is created or updated, the following read-only properties will no
 | Modified by | User name of the user who last modified the service.       |
 
 > [!NOTE]
+>
 > - When you upgrade to DataMiner version 10.2.6, a check will be performed to make sure your system includes an up-to-date SRM solution. If the installed SRM solution is not up-to-date, you will be asked to update it before continuing with the DataMiner upgrade.
 > - These properties will only be added to existing services the first time those services are updated.
 > - These properties will not be available in alarms that are included in a service.
 
 #### DataMiner Object Model: Defining a TTL for DomTemplates, DomInstances and DomInstance history \[ID_32662\]
 
-It is now possible to define a time to live property for the following types of DomManager objects:
+It is now possible to define a "time to live" property for the following types of DomManager objects:
 
 | Object type                        | Property              |
 |------------------------------------|-----------------------|
@@ -99,6 +100,7 @@ When acting as an SSH client, DataMiner now supports the following host key veri
 When updating a resource in the Resources app, it is now possible to change the function instance name, i.e. the name of the DVE element linked to a function resource.
 
 > [!NOTE]
+>
 > - It is recommended to modify DVE names via the resource instead of via the main DVE element.
 > - Names of DVE elements can also be modified in *General Parameters \> Resource Info \> DVE Table*.
 
@@ -128,8 +130,8 @@ From now on, in the Alarm Console, you will be able to manually create incident 
 
 - When you right-click an alarm that is not part of any alarm group, you will be able to click the “Add to incident” option. If you do so, a window\* will appear, asking you
 
-    - to create a new incident (i.e. a new alarm group) and add the alarm to it, or
-    - to add the alarm to an existing alarm group.
+  - to create a new incident (i.e. a new alarm group) and add the alarm to it, or
+  - to add the alarm to an existing alarm group.
 
 These manually created groups will always be visible in active alarm tabs, even when the “Automatic incident tracking” option is disabled.
 
@@ -156,15 +158,15 @@ From now on, when you right-click an incident (alarm group), you will be able to
 - Force release ownership
 - Add a comment
 
-If you right-click a manually created incident, you will also be able to select *Clear alarm... *When you clear a manually created incident, the alarm group will be cleared and all the base alarms will again be added to the Alarm Console.
+If you right-click a manually created incident, you will also be able to select *Clear alarm*. When you clear a manually created incident, the alarm group will be cleared and all the base alarms will again be added to the Alarm Console.
 
 #### Alarm templates - Anomaly detection: Configuring alarms for flatline changes \[ID_33123\] \[ID_33139\] \[ID_33171\]
 
 From DataMiner 10.0.3 onwards, you can configure an alarm template so that alarms are generated instead of suggestion events when anomalies are detected for specific parameters. From now on, you can also enable this for flatline changes.
 
 1. Click the cogwheel button in the top-right corner of the alarm template editor.
-2. Select the option *Advanced configuration of anomaly detection*. Four extra columns will be displayed in the template editor.
-3. In the *Flatline monitor* column, click the toggle button to enable or disable alarms for flatline changes.
+1. Select the option *Advanced configuration of anomaly detection*. Four extra columns will be displayed in the template editor.
+1. In the *Flatline monitor* column, click the toggle button to enable or disable alarms for flatline changes.
 
 #### Alarm Console - Automatic incident tracking: Manually created incidents (alarm groups) will have their alarm focus score set to 0 \[ID_33130\]
 
@@ -194,9 +196,9 @@ If you use the *interface=definitions* component option described above, you can
 - Properties (IDictionary\<string, dynamic>)
 - ServiceDefinitionType (Int): This is an enum with the following possible values:
 
-    - 0 = Default (representing the type "SRM" in Cube)
-    - 1 = ProcessAutomation (representing the type "Skyline Process Automation" in Cube)
-    - 2 = CustomProcessAutomation (representing the type "Custom Process Automation" in Cube)
+  - 0 = Default (representing the type "SRM" in Cube)
+  - 1 = ProcessAutomation (representing the type "Skyline Process Automation" in Cube)
+  - 2 = CustomProcessAutomation (representing the type "Custom Process Automation" in Cube)
 
 Examples:
 
@@ -236,13 +238,13 @@ A number of enhancements have been made to the start window of the DataMiner Cub
 
 - Settings menu (cogwheel icon in bottom-right corner)
 
-    - New *About* box with version information.
-    - All menu items now have icons in front of them.
+  - New *About* box with version information.
+  - All menu items now have icons in front of them.
 
 - When you right-click an agent,
 
-    - you can now click *Open in browser* to connect to that agent using a browser version of Cube, and
-    - all context menu items now have icons in front of them.
+  - you can now click *Open in browser* to connect to that agent using a browser version of Cube, and
+  - all context menu items now have icons in front of them.
 
 - When agents/clusters are arranged in named groups, the context menu of the DataMiner Cube system tray icon will now contain submenus per named group.
 
@@ -293,10 +295,12 @@ If the SystemName contains colons (e.g. a MAC address), then you can now replace
 
 In Data Display, the context menu of a URL parameter will now contain the following copy commands:
 
-| Command              | Function                                                                                                                       |
-|----------------------|--------------------------------------------------------------------------------------------------------------------------------|
-| Copy ‘\<URL>’        | Copies the URL to the Windows Clipboard.                                                                                       |
-| Copy value to editor | Copies the URL to the write parameter edit box.<br> Note: This command will only be available when there is a write parameter. |
+- Copy ‘\<URL>’: Copies the URL to the Windows Clipboard.
+
+- Copy value to editor: Copies the URL to the write parameter edit box.
+
+  > [!NOTE]
+  > This command will only be available when there is a write parameter.
 
 #### Visual Overview: Adding a “Refresh” and/or a “Sort” button to a table control \[ID_33346\]
 
@@ -306,34 +310,34 @@ Example of how to add both a *Refresh* button and a *Sort* button:
 
 1. Create three shapes and group them:
 
-    - the first shape will contain the table,
-    - the second shape will contain the *Refresh* button, and
-    - the third shape will contain the *Sort* button.
+   - the first shape will contain the table,
+   - the second shape will contain the *Refresh* button, and
+   - the third shape will contain the *Sort* button.
 
-2. Add the following shape data field to the shape that has to contain the table:
+1. Add the following shape data field to the shape that has to contain the table:
 
-    | Shape data field      | Value |
-    |-------------------------|-------|
-    | ParameterControlOptions | Table |
+   | Shape data field      | Value |
+   |-------------------------|-------|
+   | ParameterControlOptions | Table |
 
-3. Add the following shape data field to the shape that has to contain the Refresh button:
+1. Add the following shape data field to the shape that has to contain the Refresh button:
 
-    | Shape data field      | Value   |
-    |-------------------------|---------|
-    | ParameterControlOptions | Refresh |
+   | Shape data field      | Value   |
+   |-------------------------|---------|
+   | ParameterControlOptions | Refresh |
 
-4. Add the following shape data field to the shape that has to contain the Sort button:
+1. Add the following shape data field to the shape that has to contain the Sort button:
 
-    | Shape data field      | Value |
-    |-------------------------|-------|
-    | ParameterControlOptions | Sort  |
+   | Shape data field      | Value |
+   |-------------------------|-------|
+   | ParameterControlOptions | Sort  |
 
-5. Add the following shape data fields to the group:
+1. Add the following shape data fields to the group:
 
-    | Shape data field | Value                      |
-    |--------------------|----------------------------|
-    | Element            | Element ID or element name |
-    | ParameterControl   | ID of the table parameter  |
+   | Shape data field | Value                      |
+   |--------------------|----------------------------|
+   | Element            | Element ID or element name |
+   | ParameterControl   | ID of the table parameter  |
 
 > [!NOTE]
 > The *Refresh* button and the *Sort* button will only be displayed when necessary.
@@ -342,7 +346,7 @@ Example of how to add both a *Refresh* button and a *Sort* button:
 
 When you connect DataMiner Cube to a DataMiner Agent with main release version 10.2.0 CU3 (or newer) or feature release version 10.2.6 (or newer), from now on, it will automatically update to the most recent version. This will allow you to use the latest Cube features as soon as they are released without having to wait for a DMA upgrade.
 
-**Client configuration**
+##### Client configuration
 
 If you do not want to wait for the next automatic Cube update, in the start window of the Cube desktop app, click the cogwheel icon in the bottom-right corner, and select *Check for updates*. If a new Cube version is available, it will be downloaded. When the download has finished, a *Restart now* button will appear. Click it to start using the new version.
 
@@ -355,7 +359,7 @@ Two update tracks are available. Click the cogwheel icon in the bottom-right cor
 
 If you want to use a specific Cube version to connect to a particular agent or cluster, then right-click an agent or cluster in the start window, and select a specific Cube version.
 
-**Server configuration**
+##### Server configuration
 
 When connected to a particular DataMiner System, users with *Manage client versions* permission can go to *System Center \> System settings \> Manage client versions*, and select one of the following Cube update modes:
 
@@ -446,6 +450,7 @@ In the DataMiner Taskbar Utility, the following options have been removed:
 
 > [!NOTE]
 > The following option has been kept:
+>
 > - Opening Windows file explorer in the C:\\Skyline DataMiner\\ folder by double-clicking while pressing the CTRL key.
 
 #### Enhanced performance when starting up elements \[ID_33023\]
@@ -548,7 +553,7 @@ When you entered a search string in the filter box, all tickets would incorrectl
 
 When, in the Automation app, you validated an Automation script that either contained an empty line in the DLL references or had a DLL reference removed, in some cases, an “Empty path name is not legal” error could be thrown.
 
-#### DataMiner Cube: REPORTS page of a masked element would incorrectly indicate that the ele­ment was in alarm instead of masked \[ID_33087\]
+#### DataMiner Cube: REPORTS page of a masked element would incorrectly indicate that the element was in alarm instead of masked \[ID_33087\]
 
 When you masked an alarm as well as its associated element, in DataMiner Cube, the REPORTS page of the element in question would incorrectly indicate that the element was in alarm instead of masked.
 
@@ -627,7 +632,7 @@ When a dynamic IP parameter was set to a value that contained only an IP address
 
 From now on, when no IP port is specified, the last port set will be used. And if no port has been set yet, then the port configured in the element wizard will be used.
 
-#### Application framework: Pages could not be loaded when previewing a draft version of an appli­cation that had not yet been published \[ID_33241\]
+#### Application framework: Pages could not be loaded when previewing a draft version of an application that had not yet been published \[ID_33241\]
 
 When previewing a draft version of an application, in some cases, pages could not be loaded when there was no published version yet.
 
@@ -635,7 +640,7 @@ When previewing a draft version of an application, in some cases, pages could no
 
 When configuring a “close a panel” action, in some cases, the “This panel” option would incorrectly not be available. From now on, this option will always be available and selected by default.
 
-#### Application framework: New page and panel created automatically when editing an unpub­lished application \[ID_33251\]
+#### Application framework: New page and panel created automatically when editing an unpublished application \[ID_33251\]
 
 When you edited an unpublished application, in some cases, a new page and panel would incorrectly be created automatically.
 
@@ -710,7 +715,7 @@ Also, the name of a group could get lost when you deleted the first agent/cluste
 
 When, in the application framework, you opened an action that launches an Automation script, up to now, a request to update the application would incorrectly be sent as soon as the script was loaded.
 
-#### Problem with SLDataMiner when a DMA started up while another DMA in the DMS was register­ing the SLAs \[ID_33303\]
+#### Problem with SLDataMiner when a DMA started up while another DMA in the DMS was registering the SLAs \[ID_33303\]
 
 When a DataMiner Agent started up while another DataMiner Agent in the DMS was registering the SLAs, in some cases, an error could occur in the SLDataMiner process.
 

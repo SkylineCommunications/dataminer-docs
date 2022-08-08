@@ -35,6 +35,7 @@ ITableFilterItem filter = new TableFilterItem
 ```
 
 > [!NOTE]
+>
 > - Using GetData will retrieve the entire table in one request. If you only need to retrieve a portion of a table, consider using QueryData instead.
 > - Using QueryData without a filter will retrieve the entire table in multiple requests (one request per page).
 > - Using QueryData with a filter will retrieve the table rows matching the filter in one request.

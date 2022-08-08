@@ -37,6 +37,7 @@ To suppress a result, right-click it, choose *Suppress...*, enter a (mandatory) 
 Suppressed results will, by default, not be displayed in the *DIS Validator* tool window. If you want suppressed results to be displayed, then click the *Show/hide suppressed results* toggle button at the top of the window.
 
 > [!NOTE]
+>
 > - When you choose to display suppressed results, they will appear in gray.
 > - When you right-click a suppressed result and choose *Show details...*, the reason why this result was suppressed will be shown in red.
 

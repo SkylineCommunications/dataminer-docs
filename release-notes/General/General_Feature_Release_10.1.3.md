@@ -16,6 +16,7 @@ When a Failover agent claims or releases a virtual IP address, the following Pow
 - C:\\Skyline DataMiner\\Tools\\VIPReleased.ps1
 
 > [!NOTE]
+>
 > - The VIPAcquired script will also be triggered when the online agent starts, but the VIPReleased script will not be triggered when the offline agent starts.
 > - The content of the Failover scripts can be read and modified using the FailoverScriptManagerHelper.
 
@@ -34,6 +35,7 @@ The configuration of the Elasticsearch clusters can be stored in a new DBConfigu
 At DataMiner startup, when the DBConfiguration.xml file exists and an Elasticsearch connection is defined in the Db.xml file, the Elasticsearch connection is commented out in the Db.xml file and an additional comment is added, indicating that the Elasticsearch configuration is taken from the DBConfiguration.xml file instead.
 
 > [!NOTE]
+>
 > - The cluster with the lowest “priorityOrder” value is considered the main cluster. All other clusters are considered the replicated clusters.
 > - The DBConfiguration.xml file is not synchronized among the DMAs in a DMS.
 
@@ -125,6 +127,7 @@ var history = domHelper.DomInstanceHistory.Read(filter);
 ```
 
 > [!NOTE]
+>
 > - If the history storage were to work incorrectly, this will not affect the create, read, update or delete actions performed on the DomInstances. An error will be logged each time a history object could not be saved. A notice will only be generated once every hour.
 > - It is not possible to manually create, update or delete history objects.
 > - All history changes related to a DomInstance will automatically be deleted when that DomInstance is deleted.
@@ -148,6 +151,7 @@ domHelper.DomInstances.Attachments.Delete(domInstanceId, "filename");
 ```
 
 > [!NOTE]
+>
 > - The maximum size of the attachments is determined by the Documents.MaxSize setting, located in the MaintenanceSettings.xml file. Default: 20 Mb. Trying to upload a larger file will result in a DataMinerException.
 > - If a DomInstance is deleted, all its attachments will physically be deleted from disk. They will not be recoverable.
 > - Manipulating DomInstance attachments requires the same user permissions as normal DomInstance management operations: Read permission to view and download attachments and Edit permission to add and delete attachments.
@@ -187,6 +191,7 @@ In the DataMiner Cube start window, tiles representing DataMiner Systems or Data
     > When a search does not yield any results, you can click the plus icon or press ENTER to add the host name or IP address you were looking for.
 
 > [!NOTE]
+>
 > - The start window now has keyboard support. Use the arrow keys to move from one tile to the next, and press ENTER to launch.
 > - The start window can now be resized. When you resize and/or reposition the window, its new size and position will be saved.
 
@@ -253,6 +258,7 @@ See the following example. The chain named “MyChain” will be part of the gro
 ```
 
 > [!NOTE]
+>
 > - Each chain can only be part of a single chain group.
 > - Chains that are not part of a group will be displayed as top-level tabs (on the same level as the group tabs).
 
@@ -279,6 +285,7 @@ Examples:
 - fullfilter=((value=PK \> 36) and (value=518 in_range 1/5 )) or (VALUE=DK == Brus\*)
 
 > [!NOTE]
+>
 > - Currently, only line chart components support the use of parameter table filters.
 > - Parameter table filters can only be configured when you have started the Dashboards app with the *showAdvancedSettings* URL parameter set to true.
 > - When you update a filter, you have to re-add it to the component.
@@ -295,6 +302,7 @@ In GQI operators, up to now, exception values were processed as regular values. 
 - Sum
 
 > [!NOTE]
+>
 > - The *Count* and *Distinct count* aggregation methods will take exception values into account.
 > - Exception values will not be taken into account when calculating the minimum and maximum value for columns using GenIfColumnFetch-Requests.
 
@@ -435,6 +443,7 @@ When building a GQI query, it is now possible to click the up and down arrows on
 Also, by clicking the up and down arrows while holding the CTRL key, you can make a column swap places with the nearest selected column above or below it.
 
 > [!NOTE]
+>
 > - Columns marked as a datasource’s default columns will be selected by default.
 > - When a column selector node with values is reloaded (e.g. when an existing query is opened), the selected columns will be displayed before the unselected ones.
 
