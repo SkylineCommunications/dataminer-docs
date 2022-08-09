@@ -4,7 +4,7 @@ uid: Granting_admin_consent
 
 # Granting admin consent
 
-In order to use the Chat Integration functionality for Microsoft Teams, admin consent has to be granted for some permissions, e.g. to create Teams and Channels. After consent is granted, the Microsoft tenant has to be configured for your Cloud Connected organization.
+In order to use the Chat Integration functionality for Microsoft Teams, admin consent has to be granted for some permissions, e.g. to create Teams, Channels and add members to a Team. After consent is granted, the Microsoft tenant has to be configured for your Cloud Connected organization.
 
 To grant admin consent and configure your tenant:
 
