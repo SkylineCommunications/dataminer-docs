@@ -75,7 +75,7 @@ In an alarm template, it is now possible to configure monitoring conditions that
 
 A drop-down box now allows you to choose between “Value” (default) and “Not initialized”. Note that, when you choose “Value” and enter a parameter value, that value will not be cleared when you later select “Not initialized”.
 
-#### Alarm Console: Special Indexing Engine search tab is now available without enabling the “Sys­tem configuration \> Indexing Engine \> UI Available” user permission \[ID_25429\]
+#### Alarm Console: Special Indexing Engine search tab is now available without enabling the “System configuration \> Indexing Engine \> UI Available” user permission \[ID_25429\]
 
 On systems on which the alarms were migrated to an Indexing Engine, up to now the special Indexing Engine search tab would only be available in the Alarm Console of users who had been granted the “System configuration \> Indexing Engine \> UI Available” user permission. From now on, that search tab will be available to all users, regardless of whether they were granted the above-mentioned user permission.
 
@@ -288,7 +288,7 @@ Also, due to a number of enhancements, overall performance has increased when op
 
 When an SNMP trap was sent from an element that was being restarting, in some cases, an error could occur.
 
-#### Alarm file offload serialization would fail due to a protocol buffer error on a PropertyAccess­Type enum value \[ID_25459\]
+#### Alarm file offload serialization would fail due to a protocol buffer error on a PropertyAccessType enum value \[ID_25459\]
 
 In some cases, alarm file offload serialization would fail due to a protocol buffer error on a PropertyAccessType enum value.
 
@@ -336,7 +336,7 @@ When an alarm had a hyperlink configured that was displayed in a hyperlink colum
 
 When an element with an SNMP connection was exported to CSV, an exception could be thrown, causing the export to fail.
 
-#### DataMiner Cube - Visual Overview: Alarm timeline component did not correctly aggregate dif­ferent alarm timelines into a single band \[ID_25590\]
+#### DataMiner Cube - Visual Overview: Alarm timeline component did not correctly aggregate different alarm timelines into a single band \[ID_25590\]
 
 In an alarm timeline component, in some cases, an error could occur when different alarm timelines had to be aggregated into a single band.
 
@@ -408,11 +408,11 @@ From now on, a backup that includes an Indexing database with a red index will f
 
 In some cases, an SNMP table without polling rate defined on any of its columns would no longer be polled.
 
-#### Service & Resource Management: Existing occurrences of updated ReservationDefinition incor­rectly only deleted on the hosting agent \[ID_25661\]
+#### Service & Resource Management: Existing occurrences of updated ReservationDefinition incorrectly only deleted on the hosting agent \[ID_25661\]
 
 When a confirmed ReservationDefinition was updated, the existing occurrences would only be deleted on the hosting agent, not on the other agents in the DataMiner System. This would cause occurrences to get duplicated on those agents.
 
-#### DataMiner Cube: When exporting an element to CSV, only the timeout of the first communica­tion layer would get exported \[ID_25664\]
+#### DataMiner Cube: When exporting an element to CSV, only the timeout of the first communication layer would get exported \[ID_25664\]
 
 When you exported an element to a CSV file, and that element had timeouts defined for each of its communication layers, in some cases, only the timeout of the first communication layer would get exported. When you then imported that element from the CSV file, it would immediately go into timeout.
 
@@ -434,7 +434,7 @@ In some cases, parameter updates that did not change the parameter value would n
 
 From now on, history sets will always be considered value changes, regardless of whether the value is updated or not.
 
-#### DataMiner Cube - Service templates: Empty selection box when right-clicking a view and select­ing Actions \> Apply service template... \[ID_25741\]
+#### DataMiner Cube - Service templates: Empty selection box when right-clicking a view and selecting Actions \> Apply service template... \[ID_25741\]
 
 When you right-clicked a view in the Surveyor, and selected Actions \> Apply service template..., in some cases, the selection box containing the list of service templates to choose from would be empty due to a problem with the selection box filter.
 
@@ -450,11 +450,11 @@ In some cases, a service definition selected in an embedded ServiceManager compo
 
 In some cases, DataMiner Cube would freeze when you opened an EPM diagram that used the “DiagramPids” option.
 
-#### DataMiner Cube - Spectrum analysis: Hamburger menu of spectrum card still contained a dep­recated link to the legacy Data Display UI \[ID_25799\]
+#### DataMiner Cube - Spectrum analysis: Hamburger menu of spectrum card still contained a deprecated link to the legacy Data Display UI \[ID_25799\]
 
 The hamburger menu of a spectrum card still contained a deprecated link to the legacy Data Display UI. This link has now been removed.
 
-#### DataMiner Cube: Login algorithm would incorrectly try to use TLS 1.0 when browser was config­ured to use TLS 1.2 \[ID_25803\]
+#### DataMiner Cube: Login algorithm would incorrectly try to use TLS 1.0 when browser was configured to use TLS 1.2 \[ID_25803\]
 
 When the Internet browser was configured to only use TLS 1.2, in some cases, the Cube login algorithm would incorrectly try to use TLS 1.0 instead.
 

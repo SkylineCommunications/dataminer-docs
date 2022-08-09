@@ -236,11 +236,11 @@ On that page, you can select a parameter of any protocol associated with an elem
 
 The following options can be configured:
 
-| Option                 | Description                                                                                                                                                       |
-|------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Include subviews       | Select this option if you want to be able to also select parameters belonging to protocols associated with elements only found in subviews.<br> Default: Selected |
-| Use relative frequency | Select this option if you want the Y-axis frequencies to be shown as percentages.<br> Default: Not selected                                                       |
-| Use custom intervals   | Select this option if you want to be able to specify the amount of intervals and the interval range (minimum and maximum value).<br> Default: Not selected        |
+| Option | Description |
+|--|--|
+| Include subviews | Select this option if you want to be able to also select parameters belonging to protocols associated with elements only found in subviews. Default: Selected. |
+| Use relative frequency | Select this option if you want the Y-axis frequencies to be shown as percentages. Default: Not selected. |
+| Use custom intervals | Select this option if you want to be able to specify the amount of intervals and the interval range (minimum and maximum value). Default: Not selected. |
 
 > [!NOTE]
 > The selected parameter and the histogram options are also added to the URL. That way, you can easily save or share a link to a specific histogram view.
@@ -249,11 +249,11 @@ The following options can be configured:
 
 The following pages have now been added to both the view card and the service card:
 
-| Page    | Description                                                                                                                                                                        |
-|---------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Alarms  | Page that lists the active alarms of the view or service in question.<br> Hidden when the user does not have access to alarms.                                                     |
-| Notes   | Page where users can add, edit or delete notes regarding the view or service in question.                                                                                          |
-| Reports | Page that shows a basic report for the view or service in question (from the legacy Reporter module).<br> Hidden when the user does not have access to the legacy Reporter module. |
+| Page | Description |
+|--|--|
+| Alarms | Page that lists the active alarms of the view or service in question. Hidden when the user does not have access to alarms. |
+| Notes | Page where users can add, edit or delete notes regarding the view or service in question. |
+| Reports | Page that shows a basic report for the view or service in question (from the legacy Reporter module). Hidden when the user does not have access to the legacy Reporter module. |
 
 > [!NOTE]
 > The above-mentioned pages can all be accessed directly via a URL.
@@ -325,8 +325,8 @@ In the Resource Manager app, it is now possible to instantiate functions without
 
 - The names of the resource and the function DVE will need to be changed in the *Edit resource* window.
 
-    - Default resource name: The name of the function.
-    - Default function DVE name: The name of the function with an automatically incremented suffix.
+  - Default resource name: The name of the function.
+  - Default function DVE name: The name of the function with an automatically incremented suffix.
 
 #### DataMiner Cube - Visual Overview: Signal path update enhancements \[ID_24599\]
 
@@ -403,7 +403,7 @@ A problem could occur in the SLDataMiner process after it handled a large number
 
 In some cases, elements would be missing from the SLElementInProtocol.txt log file.
 
-#### Service & Resource Management: ReservationInstances after midnight would be generated incorrectly when a DailyRecurrance was defined \[ID_24166\]
+#### Service & Resource Management: ReservationInstances after midnight would be generated incorrectly when a DailyRecurrence was defined \[ID_24166\]
 
 When a DailyRecurrence was defined in a ReservationDefinition, in some cases, the ReservationInstances after midnight would be generated incorrectly depending on the time zone.
 
@@ -459,7 +459,7 @@ Also, when an SNMP manager was updated while it was sending a trap, in some case
 
 In some cases, a problem could occur when SLProtocol retrieved data from a logger table using an integer value as primary key.
 
-#### DataMiner Cube - Automation: IF action’s “Wait for positive result for at most” values not read­able in entry box \[ID_24497\]
+#### DataMiner Cube - Automation: IF action’s “Wait for positive result for at most” values not readable in entry box \[ID_24497\]
 
 When configuring an IF action in an Automation script, it is possible to select the *Wait for positive result for at most* option and enter a time span, in order to make the script wait during the specified period before evaluating the If condition. Due to a font color issue, the values in that entry box would not be readable.
 
@@ -527,7 +527,7 @@ In some cases, this would no longer work correctly when the rows displayed in a 
 
 When you created a new element, service, view or redundancy group, in some cases, the breadcrumbs displayed at the top of the card would incorrectly not include the object itself.
 
-#### DataMiner Cube - Visual Overview: Not possible to click DCF connection lines when a place­holder was used in the Connection shape \[ID_24618\]
+#### DataMiner Cube - Visual Overview: Not possible to click DCF connection lines when a placeholder was used in the Connection shape \[ID_24618\]
 
 In some rare cases, it would not be possible to click DCF connection lines when a placeholder was specified in the *Connection* shape. Also, connection lines would no longer become transparent when hovering the mouse pointer over them.
 
@@ -609,7 +609,7 @@ Also, in case of commands that did not require a response, in some cases, the se
 
 In some cases, it would no longer be possible to mask cells or rows in view tables or direct views.
 
-#### DataMiner Cube - Automation: Problem when an Automation script tried to send an e-mail con­taining a report \[ID_24775\]
+#### DataMiner Cube - Automation: Problem when an Automation script tried to send an e-mail containing a report \[ID_24775\]
 
 In some cases, an error could occur when an Automation script tried to send an e-email containing a report.
 
@@ -655,7 +655,7 @@ In some cases, users of whom the password had expired would not be able to enter
 
 ## Changes in DataMiner 10.0.3 CU1
 
-### Fixes
+### CU1 fixes
 
 #### Problem with SLProtocol when calling “NT_LOAD_TABLE” \[ID_24780\]
 
@@ -663,7 +663,7 @@ In some cases, an error could occur in SLProtocol when calling the NotifyProtoco
 
 ## Changes in DataMiner 10.0.3 CU2
 
-### Fixes
+### CU2 fixes
 
 #### Deleting a monitored table row could cause an incorrect alarm to be generated \[ID_24957\]
 

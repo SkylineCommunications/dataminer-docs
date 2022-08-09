@@ -24,11 +24,11 @@ This option allows you to select a particular piece of text and have it copied a
 4. At the bottom of the window, select *Overwrite Selection*, if you want the text you selected to be overwritten by the text that is currently displayed in the *Preview* box.
 5. Click *OK* to have the text in the *Preview* box pasted in the editor.
 
-**Using “$” characters inside a formula**
+##### Using '$' characters inside a formula
 
 When you insert a variable or a formula into the text to be copied, that variable or formula is delimited by “$” characters. If you want to use a “$” character inside a formula, you have to put an escape character in front of it. Example: $(x\*10)+"\\$"$.
 
-**Defining the range of value “x”**
+##### Defining the range of value 'x'
 
 The range of value “x” can be defined using the range definition boxes at the top of the window.
 

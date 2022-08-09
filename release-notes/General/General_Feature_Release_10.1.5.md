@@ -4,8 +4,6 @@ uid: General_Feature_Release_10.1.5
 
 # General Feature Release 10.1.5
 
-# Feature release 10.1.5
-
 ## New features
 
 ### DMS core functionality
@@ -252,10 +250,9 @@ When the GenerateRequiredCapas method is called on a ProfileInstance, the respon
 From now on, the automatic server retrieval can be bypassed by
 
 1. creating a retrieval method that tries to return the parameters that are already cached in the script or application before retrieving them from the server (see the example below), and
-2. passing that method to the GenerateRequiredCapas(Func\<ProfileParameterEntry, Parameter> parameterResolver) call.
+1. passing that method to the GenerateRequiredCapas(Func\<ProfileParameterEntry, Parameter> parameterResolver) call.
 
 The following example shows a method that tries to return the parameters that are already cached in the script or application before retrieving them from the server. We first check whether a certain parameter can be found in the local “\_profileParameterCache”. If not, we then retrieve it using the built-in AutoSync collection by means of a get operation on Parameter property.
-
 
 ```csharp
 private Parameter GetParameterForParameterEntry(ProfileParameterEntry entry)
@@ -455,7 +452,7 @@ When you moved a dashboard from one folder to another, and then selected the des
 
 In DataMiner Cube, clicking the *Migrate booking data to Indexing Engine* button starts a wizard that allows you to migrate booking data from the Cassandra database to the Indexing database. In some cases, this button would incorrectly still be displayed after the booking data had already been migrated.
 
-#### DataMiner Cube - Visual Overview: Element shapes would incorrectly not inherit the service con­text of their parent element shape \[ID_28867\]
+#### DataMiner Cube - Visual Overview: Element shapes would incorrectly not inherit the service context of their parent element shape \[ID_28867\]
 
 Up to now, an element shape that was a child of another element shape would not inherit the service context of its parent.
 
@@ -475,9 +472,9 @@ When you generated a PDF report with the options “No grouping” and “Includ
 
 When you discarded a newly created Automation script, in some cases, it would incorrectly not be deleted although it had disappeared from the UI. As a result, trying to create a new script with the same name would fail.
 
-#### No trigger keys listed when debugging a QAction due to a compatibility issue between Data­Miner and DataMiner Integration Studio \[ID_29049\]
+#### No trigger keys listed when debugging a QAction due to a compatibility issue between DataMiner and DataMiner Integration Studio \[ID_29049\]
 
-Due to a compatibility issue between DataMiner and DataMiner Integration Studio, in some cases, when debugging a QAction, the *Trigger key* box in the *DIS Inject *window would incorrectly not list any trigger keys.
+Due to a compatibility issue between DataMiner and DataMiner Integration Studio, in some cases, when debugging a QAction, the *Trigger key* box in the *DIS Inject* window would incorrectly not list any trigger keys.
 
 #### NATS service would no longer start up after being reset when a DataMiner Agent was removed from the DMS \[ID_29075\]
 
@@ -561,9 +558,9 @@ Also, when a dashboard URL containing a selection was refreshed, in some cases, 
 
 #### Dashboards app - GQI: Colors set for exception values of numeric parameters would not get applied \[ID_29244\]
 
-In the *Layout* tab of the Table component, the *Column filters *option allows you to highlight cells based on a condition. In some cases, colors set for exception values of numeric parameters with a range would not get applied.
+In the *Layout* tab of the Table component, the *Column filters* option allows you to highlight cells based on a condition. In some cases, colors set for exception values of numeric parameters with a range would not get applied.
 
-Also, the *Column filters *option now allows you to highlight “Not initialized” values.
+Also, the *Column filters* option now allows you to highlight “Not initialized” values.
 
 #### Dashboards app - GQI: Problem when performing an aggregation operation on an additional column \[ID_29249\]
 
@@ -649,7 +646,7 @@ On systems with a Cassandra database, in some cases, elements that had a large a
 
 Due to incorrect filtering, in some cases, the selection box in the CPE feed would contain too much data.
 
-#### DataMiner Cube: Problem when selecting a value from a drop-down parameter in a custom con­text menu of a table \[ID_29383\]
+#### DataMiner Cube: Problem when selecting a value from a drop-down parameter in a custom context menu of a table \[ID_29383\]
 
 If a parameter of type “drop-down” in a custom context menu of a table retrieved its values from a dependency parameter, in some cases, the first time a value was selected, the selection would not be applied.
 

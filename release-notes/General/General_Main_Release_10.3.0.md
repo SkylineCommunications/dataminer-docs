@@ -1212,7 +1212,7 @@ To do so, add a FunctionTypes option to the ComponentOptions shape data field.
 | Shape data field | Value |
 |--|--|
 | Component | ServiceManager |
-| ComponentOptions | FunctionTypes=\[comma-separated list of values\]<br> Possible values:<br> -  Undefined (i.e. NULL value)<br> -  UserTask<br> -  ScriptTask<br> -  ResourceTask<br> -  Gateway<br> -  NoneStartEvent<br> -  TimeStartEvent<br> -  EndEvent |
+| ComponentOptions | FunctionTypes=\[comma-separated list of values\]<br> Possible values:<br> - Undefined (i.e. NULL value)<br> - UserTask<br> -  ScriptTask<br> - ResourceTask<br> - Gateway<br> - NoneStartEvent<br> - TimeStartEvent<br> - EndEvent |
 
 > [!NOTE]
 >
@@ -1545,14 +1545,14 @@ An ad hoc data source is represented as a class that implements predefined inter
     | Method    | Input arguments       | Output arguments | Description                       |
     |-------------|-----------------------|------------------|-----------------------------------|
     | GetColumns  |                       | GQIColumn\[\]    | The GQI will request the columns. |
-    | GetNextPage | GetNextPage­InputArgs | GQIPage          | The GQI will request data.        |
+    | GetNextPage | GetNextPageInputArgs | GQIPage          | The GQI will request data.        |
 
 - **IGQIInputArguments**: This interface can be used to have the user specify an argument, for example the CSV file from which data should be parsed, or a filter that should be applied. This interface has the following methods:
 
     | Method              | Input arguments                | Output arguments                | Description                                                                       |
     |-----------------------|--------------------------------|---------------------------------|-----------------------------------------------------------------------------------|
-    | GetInputArgu­ments    | \-                             | GQIArgument\[\]                 | Asks for additional information from the user when the data source is configured. |
-    | OnArguments­Processed | OnArgumentsPro­cessedInputArgs | OnArgumentsPro­cessedOutputArgs | Event to indicate that the arguments have been processed.                         |
+    | GetInputArguments    | \-                             | GQIArgument\[\]                 | Asks for additional information from the user when the data source is configured. |
+    | OnArgumentsProcessed | OnArgumentsProcessedInputArgs | OnArgumentsProcessedOutputArgs | Event to indicate that the arguments have been processed.                         |
 
     > [!NOTE]
     > The GQI does not validate the input arguments specified by the user. For example, a user can input an SQL query as a string input argument, and the content of the string argument will be forwarded to the ad hoc data source implementation without validation.
@@ -1567,13 +1567,13 @@ An ad hoc data source is represented as a class that implements predefined inter
 
     | Method       | Input arguments          | Output arguments          | Description                                     |
     |----------------|--------------------------|---------------------------|-------------------------------------------------|
-    | OnPrepareFetch | OnPrepareFetch­InputArgs | OnPrepareFetch­OutputArgs | Indicated that the GQI has processed the query. |
+    | OnPrepareFetch | OnPrepareFetchInputArgs | OnPrepareFetchOutputArgs | Indicated that the GQI has processed the query. |
 
 - **IGQIOnDestroy**: This interface is called when the instance object is destroyed, which happens when the session is closed, e.g. in case of inactivity or when all the necessary data has been retrieved. It can for instance be used to end the connection with a database. This interface has one method:
 
     | Method  | Input arguments     | Output arguments     | Description                                    |
     |-----------|---------------------|----------------------|------------------------------------------------|
-    | OnDestroy | OnDestroy­InputArgs | OnDestroy­OutputArgs | Indicates that the GQI will close the session. |
+    | OnDestroy | OnDestroyInputArgs | OnDestroyOutputArgs | Indicates that the GQI will close the session. |
 
 ##### Life cycle
 
@@ -1596,7 +1596,7 @@ To build the ad hoc data source, you can use the objects detailed below.
     | Property | Type           | Required | Description                                                                                                                                                                                                                                                                                                                                  |
     |------------|----------------|----------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
     | Name       | String         | Yes      | The column name.                                                                                                                                                                                                                                                                                                                             |
-    | Type       | GQIColumn­Type | Yes      | The type of data in the column. *GQIColumnType* is an enum that contains the following values: *String*, *Int*, *DateTime*, *Boolean* or *Double*. |
+    | Type       | GQIColumnType | Yes      | The type of data in the column. *GQIColumnType* is an enum that contains the following values: *String*, *Int*, *DateTime*, *Boolean* or *Double*. |
 
 - **GQIPage**, with the following properties:
 
@@ -1874,7 +1874,7 @@ When you right-click a column header of a data table component (e.g. a GQI table
 
     | Column type    | Filter option                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
     |------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-    | String/GUID      | One or more of the following conditions (combined with OR):<br> -  contains some text (case insensitive)<br> -  does not contains some text (case insensitive)<br> -  matches a regular expression<br> -  does not match a regular expression<br> -  equals some text (case insensitive)<br> -  does not equal some text (case insensitive) |
+    | String/GUID      | One or more of the following conditions (combined with OR):<br> - contains some text (case insensitive)<br> - does not contains some text (case insensitive)<br> - matches a regular expression<br> - does not match a regular expression<br> - equals some text (case insensitive)<br> - does not equal some text (case insensitive) |
     | Numeric/DateTime | One or more ranges (combined with OR)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
     | Boolean          | True or false                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 
@@ -2352,12 +2352,6 @@ A number of enhancements have now been made to this pattern matching mechanism. 
 
 Due to a number of enhancements, overall performance has increased when adding alarm templates with smart baselines.
 
-#### DataMiner Cube desktop app: Enhanced host detection \[ID_31829\]
-
-<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.2 -->
-
-In the DataMiner Cube desktop app, a number of enhancements have been made with regard to host detection.
-
 #### Cassandra will no longer store ArrowWindowRecords and PatternMatchOccurrenceRecords \[ID_31944\]
 
 <!-- Main Release Version 10.3.0 - Feature Release Version 10.2.4 -->
@@ -2380,12 +2374,6 @@ The notice will contain the following message:
 ```txt
 Detection of behavioral anomalies temporarily disabled on DMA ...: maximum allowed rate of behavioral change points reached.
 ```
-
-#### Start window of DataMiner Cube desktop app now has a look and feel that is identical to that of the other Cube apps \[ID_32161\]
-
-<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.3 -->
-
-The start window of the DataMiner Cube desktop app has now been adapted so that its overall look and feel is identical to that of the other Cube apps.
 
 #### SLAnalytics - Alarm focus: Enhanced performance \[ID_32270\]
 
@@ -2430,15 +2418,10 @@ Also, the interval at which another reconnect is attempted has been increased fr
 A number of enhancements have been made with regard to Automation scripts.
 
 - When a script is launched, from now on, only the parameters/dummies with missing values will be shown. Automatically filled in values will no longer be shown.
-
 - When script input is filled in with feed data, users will no longer be asked to change that input manually.
-
 - Script input (parameters/dummies) linked to a feed is now filled in at the moment a script action is triggered. Subsequent changes in the feed will have no effect.
-
 - In the DataMiner Application Framework, the option to mark specific script parameters and dummies as required has been removed.
-
 - When, in the Dashboards app, users mark a script parameter as required, they no longer need to fill in a value.
-
 - From now on, a page load event will only trigger after the application page has been fully initialized. This will ensure that, when launching script actions with input linked to feeds, those feeds have been initialized.
 
 #### Service & Resource Management: Enhanced logging \[ID_33183\]
@@ -2484,12 +2467,6 @@ Because of a number of enhancements, overall CPU usage of the QADeviceSimulator 
 > [!CAUTION]
 > This tool is provided “As Is” with no representation or warranty whatsoever. Skyline Communications will not provide any maintenance or support for this tool.
 
-#### Desktop app - Start window: Performance enhancements \[ID_33384\]
-
-<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.7 -->
-
-Because of a number of enhancements, overall performance has increased when opening the start window of the DataMiner Cube desktop app from the system tray icon.
-
 #### Service & Resource Management: Function resources will no longer be deleted when their parent DVE element cannot be reached \[ID_33415\] \[ID_33668\]
 
 <!-- Main Release Version 10.3.0 - Feature Release Version 10.2.7 -->
@@ -2502,12 +2479,6 @@ The ResourceManagerHelper now contains a new method to delete resources:
 
 > [!NOTE]
 > Contributing resources can be deleted even when no parent element can be found. The parent element of a contributing resource is an enhanced service element. When the contributing booking is no longer running, the enhanced service element will no longer exist.
-
-#### DataMiner Cube - Alarm Console: Pencil icon now identical to that used in Data Display tables \[ID_33442\]
-
-<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.7 -->
-
-The pencil icon used in the Alarm Console is now identical to that used in Data Display tables.
 
 #### SLAnalytics: Enhanced performance when retrieving parameter information \[ID_33458\]
 
@@ -2562,23 +2533,6 @@ Minimum value: 1 minute - Default value: 5 minutes
 
 > [!WARNING]
 > Always be extremely careful when using this tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
-
-#### DataMiner Cube - Alarm Console: “Add to incident” menu option no longer available when right-clicking alarms that cannot be added to an incident \[ID_33591\]
-
-<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.8 -->
-
-From now on, the “Add to incident” menu option will no longer be available when you right-click an alarm that cannot be added to an incident:
-
-- Active alarms with severity “normal” (i.e. clearable alarms that have not been cleared yet)
-- Alarms with a source other “DataMiner System” (e.g. correlation alarms)
-- Alarms associated with DataMiner itself
-- Notices, errors, information events and suggestion events
-
-#### DataMiner Cube - Profiles app: Selected list items not visible on the UI would incorrectly not be validated after being edited \[ID_33753\]
-
-<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.9 -->
-
-When, in the Profiles app, you edited a profile definition, a profile instance, a profile parameter or a service definition, the change would incorrectly not be validated if the item in question was not visible in the list.
 
 #### QA Device Simulator: Enhanced performance \[ID_33761\]
 
@@ -2652,33 +2606,11 @@ When a list of ReservationInstances were retrieved sorted by a property of type 
 
 When new items were added in one client, in some cases, those items would not immediately appear in other clients. For example, when a user created a ticket for a particular domain, other users viewing the list of tickets for that same domain would not immediately have their ticket list updated.
 
-#### DataMiner Cube - Visual Overview: Problem when navigating inside EPM cards \[ID_32288\]
-
-<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.3 -->
-
-When working inside an EPM card, in some cases, it would no longer be possible to navigate to a data page or a subpage.
-
 #### Cassandra: Problem when a NULL value was encountered in a logger table during a database migration \[ID_32358\]
 
 <!-- Main Release Version 10.3.0 - Feature Release Version 10.2.3 -->
 
 When migrating a database to a Cassandra cluster, in some cases, an error could be thrown when a NULL value was encountered in a logger table.
-
-#### DataMiner Cube - Visual Overview: Card buttons in an EPM card would no longer work when the Topology sidebar was selected \[ID_32372\]
-
-<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.3 -->
-
-When an EPM card was opened from a visual overview, and the Topology tab was selected in the sidebar, a number of buttons inside that EPM card would no longer work.
-
-#### DataMiner Cube: Properties not shown in the Surveyor \[ID_32429\]
-
-<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.3 -->
-
-In some cases, properties with the “Display this property in the Surveyor” option enabled would incorrectly not be displayed in the Surveyor.
-
-From now on, when you create a new property and enable its “Display this property in the Surveyor” option, it will immediately show up in the Surveyor, and when you enable that option for an existing property, the property will show up in the Surveyor the first time its value is updated or the next time the user logs in.
-
-When users enable the option for an existing property, a tooltip will now inform them that the value will only appear after logging off and logging in again.
 
 #### Jobs app: No “loading” indication when job sections were being loaded \[ID_32616\]
 
@@ -2750,22 +2682,6 @@ Up to now, when SLPort received a WebSocket message larger than the WebSocket bu
 
 When you created an element with an alarm template in which anomaly detection alarms were configured for table parameters, in some cases, none of the enabled types of change points would trigger an alarm.
 
-#### DataMiner Cube - Alarm templates: Anomaly detection alarms would incorrectly disappear after a DataMiner restart \[ID_33278\]
-
-<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.6 -->
-
-From DataMiner 10.0.3 onwards, you can configure an alarm template so that alarms are generated instead of suggestion events when anomalies are detected for specific parameters.
-
-Up to now, these anomaly detection alarms would incorrectly disappear from the Alarm Console after a DataMiner restart.
-
-#### DataMiner Cube desktop app: Problem when creating a new group in the start window \[ID_33300\]
-
-<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.6 -->
-
-In some rare cases, an error could occur when you created a new group in the start window of the DataMiner Cube desktop app.
-
-Also, the name of a group could get lost when you deleted the first agent/cluster in that group.
-
 #### CSLCloudBridge library would incorrectly not take into account the connection timeout specified in SLCloud.xml \[ID_33322\]
 
 <!-- Main Release Version 10.3.0 - Feature Release Version 10.2.6 [CU0]  -->
@@ -2824,21 +2740,6 @@ If, in the Ticketing app, you tried to edit a ticket of a domain linked to an el
 
 A number of issues with NATS request/response actions have been solved.
 
-#### DataMiner Cube - Visual Overview: Session variables of Resource Manager component would incorrectly be set to NULL when cleared \[ID_33527\]
-
-<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.7 -->
-
-When the following session variables of an embedded Resource Manager component were cleared, up to now, they would incorrectly be set to NULL. From now on, they will be set to an empty value instead.
-
-- ResourcesInSelectedReservation
-- SelectedOccurrence
-- SelectedPool
-- SelectedReservation
-- SelectedReservationDefinition
-- SelectedResource
-- SelectedSession
-- TimerangeOfSelectedReservation
-
 #### Problem with SLDataGateway when updating parameters \[ID_33535\]
 
 <!-- Main Release Version 10.3.0 - Feature Release Version 10.2.7 -->
@@ -2854,12 +2755,6 @@ When you tried to add a new value to the State field of a ticket domain, the fol
 ```txt
 Error trapped: Unable to cast object of type 'Skyline.DataMiner.Web.Common.v1.DMATicketFieldPossibleValue' to type 'Skyline.DataMiner.Web.Common.v1.DMATicketStateFieldPossibleState'.
 ```
-
-#### DataMiner Cube - Resources app: Empty Occupancy tab \[ID_33540\]
-
-<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.8 -->
-
-The first time you clicked the *Occupancy* tab after opening the *Resources* app, in some rare cases, that tab would incorrectly be empty.
 
 #### Dashboards app: Dashboard would incorrectly scroll up when you selected a field in an EPM feed \[ID_33650\]
 
@@ -2879,29 +2774,11 @@ In some cases, run-time errors could occur due to MessageBrokerReconnectThread p
 
 When a large number of parameter changes were being processed, up to now, communication entering or leaving SLDataGateway via NATS could get stopped.
 
-#### DataMiner Cube - Profiles app: No validation errors were displayed when no discrete values had been added yet for a profile parameter of type discrete \[ID_33756\]
-
-<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.9 -->
-
-When an error occurred while configuring a profile parameter of type “discrete”, up to now, that error would not be displayed on the UI when no discrete values had been added yet.
-
-#### DataMiner Cube - Resources app: Warning messages were incorrectly shown in the footer when resource manager configuration requests returned error trace data \[ID_33780\]
-
-<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.9 -->
-
-When you open the *Resources* app, a warning will be shown in the footer when error trace data was found when fetching resource manager data from the server. Up to now, such a warning would incorrectly also be shown when resource manager configuration requests returned error trace data.
-
 #### Problem with SLAnalytics when an element or a parameter was deleted \[ID_33788\]
 
 <!-- Main Release Version 10.3.0 - Feature Release Version 10.2.9 -->
 
 When an element or a parameter was deleted, in some rare cases, an error could occur in the SLAnalytics process.
-
-#### DataMiner Cube - Resources app: Updating a session variable in a Resource Manager component would incorrectly cause that same session variable to be updated in the Occupancy tab of the Resources app \[ID_33800\]
-
-<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.9 -->
-
-When a session variable (e.g. YAxisResources) was updated in an embedded Resource Manager component, in some cases, that same session variable would also incorrectly be updated in the *Occupancy* tab of the Resources app.
 
 #### SLAnalytics: Error messages could get added to the log file due to a problem with the automatic incident tracking algorithm \[ID_33820\]
 

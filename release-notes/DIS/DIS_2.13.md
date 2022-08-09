@@ -16,11 +16,11 @@ The DIS Inject functionality now also supports debugging of code related to enha
 
 When editing a protocol XML file or QAction code block, you can now insert the following new snippets:
 
-**Protocol snippets**
+##### Protocol snippets
 
 - Param \> Table ContextMenu
 
-**QAction snippets**
+##### QAction snippets
 
 - Code Library \> Get DMS
 - Retry
@@ -53,14 +53,23 @@ At present, the following checks will be performed when you compare two protocol
 
 #### Enhanced “Generate Write Parameters” window \[ID_19588\]
 
-The *Generate Write Parameters* window, which allows you to automatically generate parameters of type “write” for existing parameters of type “read”, now has two additional columns:
+The *Generate Write Parameters* window, which allows you to automatically generate parameters of type "write" for existing parameters of type “read”, now has two additional columns:
 
-| Column           | Description                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-|------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Setter           | Allows you to enable the ‘setter’ attribute for a particular write parameter.<br> If you want to enable this attribute for all non-SNMP parameters in the list, then you can select the ‘select all’ check box in the column header.<br> Note that, when the protocol does not contain any non-SNMP parameters, this ‘select all’ check box will be disabled. As will all ‘setter’ check boxes for the SNMP parameters in the list.              |
-| SNMP Set and Get | Allows you to enable the ‘snmpSetAndGet’ attribute for a particular write parameter.<br> If you want to enable this attribute for all SNMP parameters in the list, then you can select the ‘select all’ check box in the column header.<br> Note that, when the protocol does not contain any SNMP parameters, this ‘select all’ check box will be disabled. As will all ‘SNMP Set and Get’ check boxes for the non-SNMP parameters in the list. |
+- **Setter**: Allows you to enable the "setter" attribute for a particular write parameter.
 
-Also, when in the *Write ID* column a suggested parameter ID is not available, you can now click a “search for next available Write ID” button in the form of an arrow to replace the non-available ID by an available one.
+  If you want to enable this attribute for all non-SNMP parameters in the list, you can select the "select all" checkbox in the column header.
+
+  > [!NOTE]
+  > When the protocol does not contain any non-SNMP parameters, the "select all" checkbox will be disabled, as will all "setter" checkboxes for the SNMP parameters in the list.
+
+- **SNMP Set and Get**: Allows you to enable the "snmpSetAndGet" attribute for a particular write parameter.
+
+  If you want to enable this attribute for all SNMP parameters in the list, you can select the "select all" checkbox in the column header.
+  
+  > [!NOTE]
+  > When the protocol does not contain any non-SNMP parameters, the "select all" checkbox will be disabled, as will all "SNMP Set and Get" checkboxes for the non-SNMP parameters in the list.
+
+Also, when in the *Write ID* column a suggested parameter ID is not available, you can now click a "search for next available Write ID" button in the form of an arrow to replace the non-available ID by an available one.
 
 #### Analysis rules for QAction projects \[ID_19726\]
 
@@ -103,15 +112,15 @@ Also, the *DIS.JumpToDisTree* keyboard shortcut (i.e. CTRL+1) has been enhanced.
 
 The Validator is now able to automatically fix a number of common errors: replace all invalid characters in a parameter name with an underscore, trimming tag contents, etc.
 
-In the *DIS Validator* pane, all errors that can be fixed will be marked by the following ‘wrench and screwdriver’ icon:
+In the *DIS Validator* pane, all errors that can be fixed will be marked by the following "wrench and screwdriver" icon:
 
-![](~/release-notes/images/wrench_screwdriver.jpg)
+![Wrench and screwdriver icon](~/release-notes/images/wrench_screwdriver.jpg)
 
 To fix an error marked by a ‘wrench and screwdriver’ icon, do the following:
 
 - Right-click the error, and select *Fix \> This error*.
 
-    If the error has successfully been fixed, it will be removed from the *DIS Validator* pane.
+  If the error has successfully been fixed, it will be removed from the *DIS Validator* pane.
 
 If, instead of fixing just one error, you want to fix all errors of one particular type or severity, do the following:
 
@@ -135,7 +144,7 @@ Also, the error messages shown in the UI have been redesigned. These now include
 > [!NOTE]
 > When you hover over the columns containing this additional information, tool tips will appear, describing what is meant with e.g. “Breaking” or “Minor”.
 
-**List of possible error messages**
+##### List of possible error messages
 
 | ID     | Check                               | Error message                           |
 |--------|-------------------------------------|-----------------------------------------|
@@ -168,7 +177,7 @@ Also, the error messages shown in the UI have been redesigned. These now include
 | 2.1.5  | Param.CheckIdAttribute              | OutOfRangeId                            |
 | 2.1.6  | Param.CheckIdAttribute              | InvalidUseOfSpectrumIdRange             |
 | 2.1.7  | Param.CheckIdAttribute              | InvalidUseOfMediationIdRange            |
-| 2.1.8  | Param.CheckIdAttribute              | InvalidUseOfDataMinerModules<br>IdRange |
+| 2.1.8  | Param.CheckIdAttribute              | InvalidUseOfDataMinerModulesIdRange     |
 | 2.1.9  | Param.CheckIdAttribute              | InvalidUseOfEnhancedServiceIdRange      |
 | 2.1.10 | Param.CheckIdAttribute              | InvalidUseOfSlaIdRange                  |
 | 2.1.11 | Param.CheckIdAttribute              | DuplicatedId                            |
@@ -437,29 +446,29 @@ From now on, ‘disable...’ column options (e.g. ‘disableHistogram’) will 
 
 A number of snippets have been enhanced:
 
-**Protocol snippets**
+##### Protocol snippets
 
 - Protocol root
 
-    - General page is now the default page
-    - Recommended timers have been added
-    - A precompiled QAction has been added
-    - An “After Startup” procedure has been added
+  - General page is now the default page
+  - Recommended timers have been added
+  - A precompiled QAction has been added
+  - An “After Startup” procedure has been added
 
 > [!NOTE]
 > The same changes have been made to the default protocol template.
 
-**QAction snippets**
+##### QAction snippets
 
 - All snippets that add a NotifyProtocol call
 
-    - These now all use NotifyType Enums instead of hardcoded numbers
+  - These now all use NotifyType Enums instead of hardcoded numbers
 
 - All snippets that check if an element is fully started up and loaded in DataMiner processes have been optimized:
 
-    - IsElementActiveInSLDms
-    - IsElementLoadedInSLElement
-    - IsElementLoadedInSLNet
+  - IsElementActiveInSLDms
+  - IsElementLoadedInSLElement
+  - IsElementLoadedInSLNet
 
 #### SLNetTypes.dll updated to version 9.5.13 \[ID_19948\]
 

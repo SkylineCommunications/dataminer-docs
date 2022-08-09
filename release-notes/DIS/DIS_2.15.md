@@ -14,7 +14,7 @@ When working in the XML editor or the C# editor, you can press a key combination
 
 From now on, instead of pressing this key combination, you can also click the following button, which is situated in the top-left corner of the DIS Tree tool window:
 
-![](~/release-notes/images/SyncArrow_16x.jpg)
+![Sync arrow button](~/release-notes/images/SyncArrow_16x.jpg)
 
 #### DIS Tree: Pin XML nodes \[ID_20690\]
 
@@ -35,15 +35,15 @@ When you select the *DLL Imports* menu option, a submenu will now list
 - all QActions of which the *options* attribute contains the “precompile” option, as well as
 - all commonly used system DLL files:
 
-    - Newtonsoft.Json.dll
-    - SLDatabase.dll
-    - SLProtocolScripts.dll
-    - System.Data.dll
-    - System.Runtime.Serialization.dll
-    - System.Web.dll
-    - System.Web.Extensions.dll
-    - System.Xml.dll
-    - System.Xml.Linq.dll
+  - Newtonsoft.Json.dll
+  - SLDatabase.dll
+  - SLProtocolScripts.dll
+  - System.Data.dll
+  - System.Runtime.Serialization.dll
+  - System.Web.dll
+  - System.Web.Extensions.dll
+  - System.Xml.dll
+  - System.Xml.Linq.dll
 
 > [!NOTE]
 > In the submenu, all DLL files already inserted into the *dllimport* attribute of the \<QAction> element will be indicated by a check mark.
@@ -127,9 +127,9 @@ The syntax rules for the following elements and/or attributes have been updated:
 
 | Element/attribute | Syntax rule |
 |-------------------|-------------|
-| PingInterval.DefaultValue | \-  Range: 1000 - 300,000<br> -  Value must be a multiple of 1000. |
+| PingInterval.DefaultValue | \- Range: 1000 - 300,000<br> - Value must be a multiple of 1000. |
 | PortSettings.TimeoutTime | Range: 10 - 120,000 |
-| PortSettings.TimeoutTimeElement | \-  Range: 1000 - 120,000<br> -  Value must be a multiple of 1000. |
+| PortSettings.TimeoutTimeElement | \- Range: 1000 - 120,000<br> - Value must be a multiple of 1000. |
 
 #### Protocol Schema: New elements and attributes \[ID_20802\]
 
@@ -148,7 +148,7 @@ The following changes have been made to attributes of the ArrayOptions element.
 |-----------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | index           | Type was changed from xs:string to xs:unsignedInteger.                                                                                                                                     |
 | displayColumn   | Type was changed from xs:string to xs:unsignedInteger.                                                                                                                                     |
-| partial         | Type was changed from xs:string to regex.<br> The regular expression must match either “false” or “true”. “true” can optionally be followed by a semicolon and a number (e.g. “true:200”). |
+| partial         | Type was changed from xs:string to regex. The regular expression must match either “false” or “true”. “true” can optionally be followed by a semicolon and a number (e.g. “true:200”). |
 | processingOrder | Removed. This is an option to be added to the value of the options attribute.                                                                                                              |
 
 #### UOM Schema: New unit added \[ID_20977\]
@@ -173,7 +173,7 @@ Up to now, when parameters were created by importing XML/JSON code, no parameter
 
 A number of improvements have been made with regard to item linking, virtual comments and DIS Tree information.
 
-**Item linking**
+##### Item linking
 
 Next to certain XML elements or attributes, you will find a “jump to linked items” button in the shape of a paper clip. When you hover over this paper clip, a list box will appear, listing all items that are in some way linked to the element in question. From now on, you will also find a paper clip button next to the following elements or attributes:
 
@@ -195,7 +195,7 @@ If, for example, an \<Action> element contains the following \<Condition> elemen
 <Condition><![CDATA[id:10 == 1]]></Condition>
 ```
 
-**Virtual comments**
+##### Virtual comments
 
 The following elements and/or attributes now also have virtual comments:
 
@@ -204,7 +204,7 @@ The following elements and/or attributes now also have virtual comments:
 - Protocol.ParameterGroups.Group.Params.Param
 - Protocol.Params.Param.Dependencies.Id
 
-**More information in DIS Tree tool window**
+##### More information in DIS Tree tool window
 
 From now on, the DIS Tree will show more information on the following elements:
 

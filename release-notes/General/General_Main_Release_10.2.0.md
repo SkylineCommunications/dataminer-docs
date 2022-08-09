@@ -2937,13 +2937,37 @@ Before executing a query, the system will send a GenIfOpenSessionRequest message
 
 ##### Overview of the request messages
 
-| Request message | Function | Properties |
-|--|--|--|
-| GenIfOpenSessionRequest | Opens a session | Query<br> QueryOptions |
-| GenIfNextPageRequest | Fetches the next page | SessionID (Guid)<br> PageSize (int) |
-| GenIfCloseSessionRequest | Closes a session | SessionIDs: Guid\[\] |
-| GenIfSessionHeartbeatRequest | Prevents a session from expiring | SessionIDs: Guid\[\] |
-| GenIfGetOpenSessionsRequest | Returns a response containing a list of all open sessions, together with the following properties:<br> - SessionID (Guid)<br> - CreationTime<br> - LastUpdated |  |
+- **GenIfOpenSessionRequest**: Opens a session.
+
+  Properties:
+
+  - Query
+  - QueryOptions
+
+- **GenIfNextPageRequest**: Fetches the next page.
+
+  Properties:
+
+  - SessionID (Guid)
+  - PageSize (int)
+
+- **GenIfCloseSessionRequest**: Closes a session.
+
+  Properties:
+
+  - SessionIDs: Guid\[\]
+
+- **GenIfSessionHeartbeatRequest**: Prevents a session from expiring.
+
+  Properties:
+
+  - SessionIDs: Guid\[\]
+
+- **GenIfGetOpenSessionsRequest**: Returns a response containing a list of all open sessions, together with the following properties:
+
+  - SessionID (Guid)
+  - CreationTime
+  - LastUpdated
 
 ##### Variables
 
@@ -5221,9 +5245,9 @@ In some cases, when an interactive Automation script detached on closure, an exc
 
 When multiple bookings started at the same time, and each of those bookings required function DVE elements to be enabled, in some cases, the start of the bookings would be delayed.
 
-#### Dashboards - Table component: Problem with scrollbars when using Firefox \[ID_29892\]
+#### Dashboards - Table component: Problem with scroll bars when using Firefox \[ID_29892\]
 
-When Mozilla Firefox was used, the table component would show scrollbars even in situations where it was not necessary.
+When Mozilla Firefox was used, the table component would show scroll bars even in situations where it was not necessary.
 
 Also, in some cases, columns would not resize correctly.
 

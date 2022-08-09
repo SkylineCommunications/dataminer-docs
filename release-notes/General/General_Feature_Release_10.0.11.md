@@ -91,7 +91,7 @@ In the Db.xml file, it will now also be possible to configure an Elasticsearch u
 
 ### DMS Protocols
 
-#### NT_SNMP_RAW_GET, NT_SNMP_RAW_SET, NT_SNMP_GET and NT_SNMP_SET requests now sup­port the credential library \[ID_27275\]
+#### NT_SNMP_RAW_GET, NT_SNMP_RAW_SET, NT_SNMP_GET and NT_SNMP_SET requests now support the credential library \[ID_27275\]
 
 The NT_SNMP_RAW_GET, NT_SNMP_RAW_SET, NT_SNMP_GET and NT_SNMP_SET requests now support the credential library.
 
@@ -199,19 +199,19 @@ In the header bar menu of an element card, you will now have two “set as activ
 
 If you pick the protocol Visio file option, the following options are available:
 
-| Option           | Function                                                                                                                                                                   |
-|------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Custom           | Assigns the available custom protocol drawing to all elements using this protocol.                                                                                         |
-| Protocol default | Assigns the protocol default drawing to all elements using this protocol.<br> Protocol default drawings are Visio drawings that are included in certain protocol packages. |
-| General default  | Assigns the general default drawing to all elements using this protocol.<br> This is the drawing shipped with the DataMiner software.                                      |
+| Option | Function |
+|--|--|
+| Custom | Assigns the available custom protocol drawing to all elements using this protocol. |
+| Protocol default | Assigns the protocol default drawing to all elements using this protocol. Protocol default drawings are Visio drawings that are included in certain protocol packages. |
+| General default | Assigns the general default drawing to all elements using this protocol. This is the drawing shipped with the DataMiner software. |
 
 If you pick the element Visio file option, the following options are available:
 
-| Option     | Function                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
-|------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| New blank  | Opens a new, blank drawing in Microsoft Visio, which will automatically be assigned to the current element.                                                                                                                                                                                                                                                                                                                                                                                |
-| New upload | Opens the *Open* dialog box, which allows you to upload a new drawing to the DMS and automatically assign it to the current element.                                                                                                                                                                                                                                                                                                                        |
-| Existing   | Opens the *Custom* dialog box, which allows you to assign a previously uploaded drawing to the current element:<br> -  Click a drawing in the list, set the default page, and click *OK*.<br> -  Click *Other File...* to upload additional drawings to the DMS |
+| Option | Function |
+|--|--|
+| New blank | Opens a new, blank drawing in Microsoft Visio, which will automatically be assigned to the current element. |
+| New upload | Opens the *Open* dialog box, which allows you to upload a new drawing to the DMS and automatically assign it to the current element. |
+| Existing | Opens the *Custom* dialog box, which allows you to assign a previously uploaded drawing to the current element:<br> - Click a drawing in the list, set the default page, and click *OK*.<br> - Click *Other File...* to upload additional drawings to the DMS. |
 
 #### Alarm Console: “Show in banner” option can now also be set in the Settings window \[ID_26993\]
 
@@ -345,10 +345,11 @@ ServiceReservationInstance objects now have a LockLifeCycle property, which can 
 
     > [!NOTE]
     > When checking whether the concurrency limit set in the DataMiner License has been reached, a booking will not be taken into account when
-    > -  it is a ServiceReservationInstance,
-    > -  the ContributingResourceID is filled in,
-    > -  the Contributing Resource exists, and
-    > -  the Contributing Resource is used in an overlapping booking.
+    >
+    > - it is a ServiceReservationInstance,
+    > - the ContributingResourceID is filled in,
+    > - the Contributing Resource exists, and
+    > - the Contributing Resource is used in an overlapping booking.
     >
     > A booking that is not taken into account when checking the concurrency limit will not be taken into account for the entire duration of the booking, even if the overlapping booking (see above) has already ended.
 
@@ -557,7 +558,7 @@ When you rapidly switched between two spectrum element cards, in some cases, the
 
 In some cases, a null reference exception could be thrown when you closed an alarm tab in the Alarm Console.
 
-#### DataMiner Cube - Alarm Console: Service names visible even to user without access to those ser­vices \[ID_27050\]
+#### DataMiner Cube - Alarm Console: Service names visible even to user without access to those services \[ID_27050\]
 
 When a user viewed an alarm that affected a number of services, up to now, the Services column would incorrectly list all impacted services, including those to which the user in question did not have access. From now on, the Services column will only list the services to which the user has access. However, the Service impact column will continue to show the total amount of affected services.
 
@@ -692,9 +693,9 @@ When a shape in Visual Overview was linked to a Data Display page, it could occu
 
 In some rare cases, a problem could occur in the SLNet process when the alarm states of views were calculated.
 
-#### Dashboards app: Double scrollbars in dashboard with State component \[ID_27272\]
+#### Dashboards app: Double scroll bars in dashboard with State component \[ID_27272\]
 
-If a dashboard contained a State component, in some cases double scrollbars could be displayed.
+If a dashboard contained a State component, in some cases double scroll bars could be displayed.
 
 #### DataMiner Cube - EPM: Problem when selecting a node in another chain \[ID_27278\]
 

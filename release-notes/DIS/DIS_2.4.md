@@ -114,6 +114,7 @@ You can now use the following compliance subtags inside a *Protocol.Compliancies
 
 > [!NOTE]
 > The version number specified in the *MinimumRequiredVersion* tag has to have the following syntax:
+>
 > - major.minor.month.week, or
 > - major.minor.month.week-xxxx (in which xxxx is the four-digit build number)
 >

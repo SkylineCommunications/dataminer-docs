@@ -23,7 +23,7 @@ In a Failover system, which consists of two redundant DataMiner Agents, the offl
 |--------------------------------------------------------|------------------------------------------------------------------------|
 | DataMiner creates a virtual IP address on the NIC      | No modifications are needed on the NIC                                 |
 | No additional IIS rules need to be created             | A "URL Rewrite" IIS rule will be created automatically (Reverse Proxy) |
-| 2 NICs can be configured <br>(Corporate & Acquisition) | Only one hostname (address)                                            |
+| 2 NICs can be configured (Corporate & Acquisition) | Only one hostname (address)                                            |
 
 ##### Configuration
 
@@ -441,9 +441,9 @@ From now on, the following error message will be displayed instead:
 Could not find capability parameter {oneCapabilityUsage.CapabilityProfileID} on resource {resource.ID}.
 ```
 
-#### DataMiner backup packages will now also include the softlaunchoptions.xml file \[ID_30076\]
+#### DataMiner backup packages will now also include the SoftLaunchOptions.xml file \[ID_30076\]
 
-From now on, DataMiner backup packages will also include the softlaunchoptions.xml file.
+From now on, DataMiner backup packages will also include the SoftLaunchOptions.xml file.
 
 #### Service & Resource Management: Enhanced performance when creating bookings \[ID_30116\]
 
@@ -530,7 +530,7 @@ On systems with a Cassandra database, errors similar to the one below would inco
 
 In some cases, using the FollowPathColor option would cause Cube to become unresponsive.
 
-#### Dashboards app - Group component: Visualizations would incorrectly be removed when open­ing the Layout tab \[ID_29962\]
+#### Dashboards app - Group component: Visualizations would incorrectly be removed when opening the Layout tab \[ID_29962\]
 
 When you opened the Layout tab of a Group component, in some cases, the visualizations will incorrectly be removed.
 
@@ -542,7 +542,7 @@ When you changed a protocol that had a production version, in some rare cases, e
 Initializing the protocol for X failed. The XML module is not initialized. (hr = 0x80040216)
 ```
 
-#### Data offloading would incorrectly be disabled when saving the settings of the offload data­base \[ID_29985\]
+#### Data offloading would incorrectly be disabled when saving the settings of the offload database \[ID_29985\]
 
 When, in DataMiner Cube, you saved the settings of the offload database, the settings for offloading the real-time trend data would not be applied correctly. As a result, offloading would be disabled until the DataMiner Agent was restarted.
 
@@ -567,7 +567,7 @@ However, this event would be logged as a “window change”, causing the SLA to
 
 In interactive Automation scripts, in some rare cases, the value shown in a datetime control would be out of sync with the value sent to the server. Also, in some cases, datetime controls could trigger updates even when their WantsOnChange property was set to false.
 
-#### Synchronization of a cleared DMS.xml file would incorrectly cause all agents to remove them­selves from the DataMiner System \[ID_30023\] \[ID_30163\]
+#### Synchronization of a cleared DMS.xml file would incorrectly cause all agents to remove themselves from the DataMiner System \[ID_30023\] \[ID_30163\]
 
 When a DataMiner Agent is starting up, it checks whether the DMS.xml file was changed while it was down. If changes are found, these are then synchronized among the other agents in the DataMiner System. However, up to now, when the DMS.xml file had been cleared and only contained either the IP address of the DataMiner Agent that was starting up or the name of the DataMiner System, this would incorrectly cause a cascade of delete operations throughout the DataMiner System, resulting in all the agents slowly removing themselves from the DataMiner System.
 
@@ -597,7 +597,7 @@ When, in a user card, you opened the *Group membership* tab, both the *Available
 
 In a parameter feed, in some rare cases, the selection would not be set.
 
-#### DataMiner Cube - Alarm Console: Problem when reconnecting after adding the “Severity Dura­tion” column \[ID_30099\]
+#### DataMiner Cube - Alarm Console: Problem when reconnecting after adding the “Severity Duration” column \[ID_30099\]
 
 When, in the Alarm Console, you added the Severity Duration column and then reconnected, on a large DataMiner System, Cube could become unresponsive.
 
@@ -651,7 +651,7 @@ From now on, when a DataMiner Agent starts up after being upgraded and the nats-
 
 #### Dashboards app - GQI: “Start from” option would not be available when the Queries.json file was empty or missing \[ID_30157\]
 
-When building a GQI query, in some cases, the “Start from” option would not be avaiIable when the C:\\Skyline DataMiner\\Generic Interface\\Queries.json file was empty or missing.
+When building a GQI query, in some cases, the “Start from” option would not be available when the C:\\Skyline DataMiner\\Generic Interface\\Queries.json file was empty or missing.
 
 #### DataMiner Cube - Users/Groups: Duplicate activity log entries \[ID_30162\]
 

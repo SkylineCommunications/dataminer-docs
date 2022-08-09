@@ -43,7 +43,7 @@ Similar to protocols, it is now also possible to develop Automation scripts as V
 - C# projects that contain the code for the Exe blocks of an Automation script can contain multiple .cs files. At compilation, the contents of those files will be combined into one Exe block.
 - DLL imports need to be configured on the C# project itself by adding references to the external components. These can be external DLL files (located in C:\\DataMiner\\ProtocolScripts or C:\\DataMiner\\Files) or other scripts in the same solution.
 
-**Creating an Automation Script solution**
+##### Creating an Automation Script solution
 
 To create a new Automation script solution containing one dummy Automation script, do the following:
 
@@ -60,7 +60,7 @@ To create a new Automation script solution containing one dummy Automation scrip
 > [!NOTE]
 > If another solution is open when you perform step 1, you will be asked whether you want to save unsaved changes.
 
-**Creating a new script in a solution**
+##### Creating a new script in a solution
 
 To create a new script in an Automation script solution, do the following:
 
@@ -69,7 +69,7 @@ To create a new script in an Automation script solution, do the following:
 3. Enter the name of the new script.
 4. Click *OK*.
 
-**Adding an existing script to a solution**
+##### Adding an existing script to a solution
 
 To add an existing Automation script to an Automation script solution, do the following:
 
@@ -81,7 +81,7 @@ To add an existing Automation script to an Automation script solution, do the fo
 > [!NOTE]
 > When you add existing scripts to an Automation script solution, they are automatically converted to the correct format. For each Exe block, a C# project is created, and the code in that Exe block is transferred to the newly created C# project.
 
-**Saving a compiled script**
+##### Saving a compiled script
 
 To save a compiled version of an Automation script to a file (with all C# code in its Exe block), do the following:
 
@@ -90,7 +90,7 @@ To save a compiled version of an Automation script to a file (with all C# code i
 3. Enter a file name and a folder.
 4. Click *Save*.
 
-**Uploading a script to a DataMiner Agent**
+##### Uploading a script to a DataMiner Agent
 
 To upload an Automation script to a DataMiner Agent, do the following:
 
@@ -173,11 +173,11 @@ From now on, when the validator throws a series of the following errors, they wi
 
 Up to now, the validator would incorrectly throw an error when the values of a newly added exception were outside the range of possible parameter values.
 
-#### Validator: Incorrect suggestion to replace a write parameter of type discrete by a toggle but­ton \[ID_28367\]
+#### Validator: Incorrect suggestion to replace a write parameter of type discrete by a toggle button \[ID_28367\]
 
 Up to now, when the validator found a write parameter of type discrete with only two discrete values, in some cases, it would suggest to replace the parameter by a toggle button even when the write parameter in question did not have a corresponding read parameter.
 
-#### Validator: False positives when Group.Content.Param elements contained parameter ID suf­fixes \[ID_28368\]
+#### Validator: False positives when Group.Content.Param elements contained parameter ID suffixes \[ID_28368\]
 
 Up to now, in some cases, the validator would incorrectly throw an InvalidParamTag error when a Group.Content.Param element contained a parameter ID suffix.
 
@@ -197,7 +197,7 @@ When, after checking parameter names, the validator returned an UnrecommendedCha
 
 From now on, the validator will be able to return any of those errors independently from each other.
 
-#### Validator: MissingTableNameAsPrefix errors would incorrectly only be returned for read col­umns \[ID_28455\]
+#### Validator: MissingTableNameAsPrefix errors would incorrectly only be returned for read columns \[ID_28455\]
 
 Up to now, the validator would incorrectly only return MissingTableNameAsPrefix (2.53.2) errors for read columns, not for write columns.
 
@@ -219,7 +219,7 @@ Also, when neither Group@dynamicId nor Group.Params were used, the validator wou
 
 See also: [New checks and error messages \[ID_28368\]\[ID_28490\]\[ID_28497\]\[ID_28500\]\[ID_28502\]](#new-checks-and-error-messages-id_28368id_28490id_28497id_28500id_28502)
 
-#### Validator: Generic MissingDefaultThreshold error did not allow users to pinpoint the parame­ters that did not have default thresholds defined \[ID_28500\]
+#### Validator: Generic MissingDefaultThreshold error did not allow users to pinpoint the parameters that did not have default thresholds defined \[ID_28500\]
 
 Up to now, the validator would throw the generic legacy error 1401 when monitored parameters did not have default threshold defined.
 
@@ -233,7 +233,7 @@ Up to now, the validator would incorrectly throw an InvalidValueInTag error when
 
 See also: [New checks and error messages \[ID_28368\]\[ID_28490\]\[ID_28497\]\[ID_28500\]\[ID_28502\]](#new-checks-and-error-messages-id_28368id_28490id_28497id_28500id_28502)
 
-#### Validator: False positives on return options of aggregate actions were provided a comma-sepa­rated list of parameter IDs instead of a single parameter ID \[ID_28506\]
+#### Validator: False positives on return options of aggregate actions were provided a comma-separated list of parameter IDs instead of a single parameter ID \[ID_28506\]
 
 Up to now, the validator would incorrectly throw an error when a comma-separated list of parameter IDs were provided to the return option of an aggregate action.
 

@@ -12,11 +12,11 @@ uid: DIS_2.26
 
 It is now possible to develop DataMiner protocols as Visual Studio solutions.
 
-**Creating a new protocol solution**
+##### Creating a new protocol solution
 
 To create a new protocol solution containing a basic protocol with one precompiled, basic QAction, select *File \> New \> DataMiner Protocol Solution…*
 
-**Converting an existing protocol XML file to a protocol solution**
+##### Converting an existing protocol XML file to a protocol solution
 
 To convert an existing protocol XML file to a protocol solution, select *DIS \> Protocol \> Convert to Solution...*
 
@@ -25,7 +25,7 @@ A new protocol solution will be created, and the existing protocol XML file will
 > [!NOTE]
 > When you open a protocol, DIS will automatically detect whether the protocol is solution-based. A protocol will be considered solution-based when the solution has a “Solution Items” folder containing a “protocol.xml” file and a “QActions” folder containing at least one C# project named “QAction\_\<id>”.
 
-**Editing QActions**
+##### Editing QActions
 
 To edit a QAction, you now have two options:
 
@@ -38,13 +38,13 @@ To edit a QAction, you now have two options:
 > - It is recommended to place all “using” directives inside the namespace instead of at the top of the file.
 > - DLL imports now need to be configured by adding references on the C# project itself. Those references can either refer to external DLL files (in C:\\DataMiner\\ProtocolScripts or C:\\DataMiner\\Files) or to other QActions in the solution. The latter will at compilation be translated to “\[ProtocolName\].\[ProtocolVersion\].QAction.\<id>.dll” imports in the protocol.
 
-**Uploading a protocol to a DataMiner Agent**
+##### Uploading a protocol to a DataMiner Agent
 
 Because the QActions of a solution-based protocol are empty in the protocol XML file, the protocol first needs to be compiled before it can be uploaded to a DataMiner Agent. Only at compilation will the code in all QAction projects and files found in the solution be copied to the correct \<QAction> tags in the protocol XML file.
 
 A protocol will automatically be compiled when you click the *Publish* button at the top of the file tab, or when you right-click and select *Copy Protocol to Clipboard*.
 
-**Saving a compiled protocol to a file**
+##### Saving a compiled protocol to a file
 
 To save a compiled protocol to a file, select *File \> Save Compiled Protocol As...*
 
@@ -71,13 +71,13 @@ The Protocol XML Schema now accepts the value “certificate” for the Session@
 
 The Class Library is now able to retrieve data from partial tables.
 
-**GetData method**
+##### GetData method
 
 The IDmsTable GetData method will now return the entire contents of a partial table.
 
 Up to now, it would only return the first page of such a table.
 
-**QueryData method**
+##### QueryData method
 
 The new IDmsTable QueryData method will return an IEnumerable\<object\[\]\>, i.e. a collection of row objects.
 

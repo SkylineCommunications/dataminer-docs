@@ -47,13 +47,13 @@ Several improvements have been implemented in the Generic DOCSIS CM Collector co
 
 - On the *Threshold Settings* page, similar thresholds are now grouped together.
 - Existing threshold parameters have been repurposed with adjusted names, tooltips, ranges and default values.
-- The following new threshold parameters have been added: *Downstream Channel Minimum *and *Downstream Channel Maximum Rx Power Level*.
+- The following new threshold parameters have been added: *Downstream Channel Minimum* and *Downstream Channel Maximum Rx Power Level*.
 - An apply button has been added to all threshold groups for ad-hoc processing of the thresholds.
-- New threshold execution settings are available, which allow the user to control how fre­quently the threshold logic is executed.
+- New threshold execution settings are available, which allow the user to control how frequently the threshold logic is executed.
 - A new parameter, *DS Rx Power Status*, has been added, and the descriptions and tooltips of other status parameters within the CM table have been adjusted.
 - A new *US Time Offset* parameter has been added to the US Channels tables.
 - The descriptions and tooltips of parameters in the QAM Channels table have been adjusted.
-- A *General* page has been added, with basic information about how many entities are man­aged within the connector. This includes an *Apply* button to update these parameters ad hoc.
+- A *General* page has been added, with basic information about how many entities are managed within the connector. This includes an *Apply* button to update these parameters ad hoc.
 
 ## Changes
 

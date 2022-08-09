@@ -146,20 +146,44 @@ Before executing a query, the system will send a GenIfOpenSessionRequest message
 
 ##### Overview of the request messages
 
-| Request message | Function | Properties |
-|--|--|--|
-| GenIfOpenSessionRequest | Opens a session | Query<br> QueryOptions |
-| GenIfNextPageRequest | Fetches the next page | SessionID (Guid)<br> PageSize (int) |
-| GenIfCloseSessionRequest | Closes a session | SessionIDs: Guid\[\] |
-| GenIfSessionHeartbeatRequest | Prevents a session from expiring | SessionIDs: Guid\[\] |
-| GenIfGetOpenSessionsRequest | Returns a response containing a list of all open sessions, together with the following properties:<br> -  SessionID (Guid)<br> -  CreationTime<br> -  LastUpdated |  |
+- **GenIfOpenSessionRequest**: Opens a session.
+
+  Properties:
+
+  - Query
+  - QueryOptions
+
+- **GenIfNextPageRequest**: Fetches the next page.
+
+  Properties:
+
+  - SessionID (Guid)
+  - PageSize (int)
+
+- **GenIfCloseSessionRequest**: Closes a session.
+
+  Properties:
+
+  - SessionIDs: Guid\[\]
+
+- **GenIfSessionHeartbeatRequest**: Prevents a session from expiring.
+
+  Properties:
+
+  - SessionIDs: Guid\[\]
+
+- **GenIfGetOpenSessionsRequest**: Returns a response containing a list of all open sessions, together with the following properties:
+
+  - SessionID (Guid)
+  - CreationTime
+  - LastUpdated
 
 ##### Variables
 
 | Variable                                                                                   | Default value    |
 |--------------------------------------------------------------------------------------------|------------------|
 | Maximum concurrent sessions                                                                | 500              |
-| Time before a session is expired<br> (without receiving heartbeat/update for that session) | 5 minutes        |
+| Time before a session is expired (without receiving heartbeat/update for that session) | 5 minutes        |
 | Internal check cycle if a session is expired                                               | Every 30 seconds |
 | Minimum pageSize (rows)                                                                    | 1                |
 | Maximum pageSize (rows)                                                                    | 2000             |
@@ -371,9 +395,9 @@ The following information will be logged
 - The time that is needed to load a module after it is launched, including the initialization, the fetching of data from the server, and the creation of module data.
 - The duration of each server call, including the message, the interval, and the filter used in the request, if any. The following server calls are taken into account for this:
 
-    - Resource helper: Retrieving a resource, resource pool, booking definition, or booking instance.
-    - Service helper: Retrieving a service definition, service state, or information.
-    - Function helper: Retrieving a virtual function, or protocol metadata.
+  - Resource helper: Retrieving a resource, resource pool, booking definition, or booking instance.
+  - Service helper: Retrieving a service definition, service state, or information.
+  - Function helper: Retrieving a virtual function, or protocol metadata.
 
 #### SLManagedAutomation: Locking mechanism will now prevent exceptions from being thrown when reading or writing items in the dummies collection \[ID_29930\]
 
@@ -415,7 +439,7 @@ Due to a serialization issue involving the AvailableTo and AvailableFrom propert
 
 In some cases, a Group component would incorrectly not show all included components. The components that were not shown had no height defined or an error had prevented the styling from being applied correctly.
 
-#### Problem when using GetPropertyValueMessage to request properties from an element or ser­vice hosted on a DMA other than the one to which you were connected \[ID_29655\]
+#### Problem when using GetPropertyValueMessage to request properties from an element or service hosted on a DMA other than the one to which you were connected \[ID_29655\]
 
 When GetPropertyValueMessage was used to request properties from an element or service that was hosted on a DataMiner Agent other than the one to which you were connected, in some cases, no response would be returned.
 
@@ -483,7 +507,7 @@ When the legacy Reporter app had to display a trend graph for a table column par
 
 In some cases, an error could occur in SLSpectrum when you closed a spectrum element card.
 
-#### Not all references to child elements were removed from the original DMA after a DELT migra­tion of main DVE elements \[ID_29831\]
+#### Not all references to child elements were removed from the original DMA after a DELT migration of main DVE elements \[ID_29831\]
 
 After a DELT migration of main DVE elements from one DMA to another, in some cases, not all references to the child elements would be removed from the original DMA.
 
@@ -519,9 +543,9 @@ When multiple bookings started at the same time, and each of those bookings requ
 
 In some cases, opening the Services app could take a long time due to a problem while loading the SRM icons.
 
-#### Dashboards - Table component: Problem with scrollbars when using Firefox \[ID_29892\]
+#### Dashboards - Table component: Problem with scroll bars when using Firefox \[ID_29892\]
 
-When using Mozilla Firefox, the table component would should scrollbars even in situations where it was not necessary.
+When using Mozilla Firefox, the table component would should scroll bars even in situations where it was not necessary.
 
 Also, in some cases, columns would not resize correctly.
 

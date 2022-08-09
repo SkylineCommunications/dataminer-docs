@@ -4,8 +4,6 @@ uid: DIS_2.27
 
 # DIS 2.27
 
-# Release 2.27
-
 ## New features
 
 ### IDE
@@ -19,8 +17,8 @@ The editor contains the following main tabs:
 | Tab | Description |
 |-----|-------------|
 | Current version | In this tab, you can specify the general properties of the current (minor) version (ID, author, date, etc.) as well as a list of all features, changes and fixes in this version. |
-| Current range | In this tab, you can find an overview of all versions in the current range.<br> Clicking a version number will allow you to edit the information stored for that particular version. |
-| All versions | In this tab, you can find an overview of all versions of the current protocol.<br> In the tree structure on the left, you can add and delete branches representing system versions, major versions and minor versions, and in the edit pane on the right, you can edit the properties of the version selected on the left. |
+| Current range | In this tab, you can find an overview of all versions in the current range. Clicking a version number will allow you to edit the information stored for that particular version. |
+| All versions | In this tab, you can find an overview of all versions of the current protocol. In the tree structure on the left, you can add and delete branches representing system versions, major versions and minor versions, and in the edit pane on the right, you can edit the properties of the version selected on the left. |
 
 #### New “Delete QAction” command in shortcut menu of QAction elements \[ID_26007\]
 
@@ -46,20 +44,20 @@ The following checks and error messages have been added.
 
 The Protocol XML schema has been updated.
 
-**New element**
+##### New element
 
 - Protocol.Params.Param.Database.IndexingOptions
 
-**New element value**
+##### New element value
 
 - Protocol.Params.Param.Database.Partition can now be set to “infinite”
 
-**Attributes made mandatory**
+##### Attributes made mandatory
 
 - Protocol.PortSettings@name
 - Protocol.Ports.PortSettings@name
 
-**Restricted ID range**
+##### Restricted ID range
 
 - Allowed range of Protocol.ParameterGroups.Group@id: 1 to 100,000
 

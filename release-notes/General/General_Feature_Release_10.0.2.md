@@ -191,7 +191,7 @@ elementInfo\[13\] should contain a 32-bit integer value (Int32) of at least 1. I
 > [!NOTE]
 > Apart from the maximum value of an Int32 (2^31-1), there are no constraints as to maximum value you can specify. So, use this option with caution. The higher this value is set, the higher the stress on the network and the device in question will be.
 
-#### DataMiner Mediation Layer: Base protocols and device protocols can now contain value map­pings \[ID_24127\]
+#### DataMiner Mediation Layer: Base protocols and device protocols can now contain value mappings \[ID_24127\]
 
 In base protocols and device protocols linked to base protocols, you can now specify \<ValueMapping> tags inside \<LinkTo> tags.
 
@@ -767,28 +767,22 @@ The DataMiner HTML5 app has now been replaced by the new Monitoring & Control ap
 
 - Redesigned header bar:
 
-    - The app title “Monitoring & Control” is now a button that redirects the user to the app’s homepage.
+  - The app title “Monitoring & Control” is now a button that redirects the user to the app’s homepage.
+  - Like in Cube X, the Search box has now been moved from the side panel to the middle of the header bar.
+  - On the right, there is now one single user icon, which, when clicked, opens a menu that allows users to access to the settings window and the About box.
 
-    - Like in Cube X, the Search box has now been moved from the side panel to the middle of the header bar.
-
-    - On the right, there is now one single user icon, which, when clicked, opens a menu that allows users to access to the settings window and the About box.
-
-        Currently, the settings window allows you to specify the default pages for element and view cards.
+    Currently, the settings window allows you to specify the default pages for element and view cards.
 
 - A new homepage similar to the Cube X homepage, listing recently used items.
-
-- Redesigned (collapsible) side panel, on which alarm states are now indicated by colored circled.
-
+- Redesigned (collapsible) side panel, on which alarm states are now indicated by colored circles.
 - Redesigned element, service, view and alarm cards, which can be accessed directly using the following URLs:
 
-    ```txt
-    http://<DMAIP>/monitoring/element/<DMAID>/<EID>/data/<PAGENAME>
-    http://<DMAIP>/monitoring/element/<DMAID>/<EID>/visual/<PAGENAME>
-    http://<DMAIP>/monitoring/element/<DMAID>/\<EID>/chain/\<CHAINNAME>
-    http://<DMAIP>/monitoring/view/<VIEWID>/<PAGENAME>
-    http://<DMAIP>/monitoring/view/<VIEWID>/visual/<PAGENAME>
-    http://<DMAIP>/monitoring/alarm/<DMAID>/<ALARMID>
-    ```
+  - `http://<DMAIP>/monitoring/element/<DMAID>/<EID>/data/<PAGENAME>`
+  - `http://<DMAIP>/monitoring/element/<DMAID>/<EID>/visual/<PAGENAME>`
+  - `http://<DMAIP>/monitoring/element/<DMAID>/<EID>/chain/<CHAINNAME>`
+  - `http://<DMAIP>/monitoring/view/<VIEWID>/<PAGENAME>`
+  - `http://<DMAIP>/monitoring/view/<VIEWID>/visual/<PAGENAME>`
+  - `http://<DMAIP>/monitoring/alarm/<DMAID>/<ALARMID>`
 
 > [!NOTE]
 > To open this new Monitoring & Control app from the address bar of your internet browser, enter the IP address of the DataMiner Agent, followed by “/monitoring”.
@@ -838,11 +832,11 @@ If there is an error deleting resources using the *ResourceManagerHelper* class,
 
 If a resource that is used in past bookings is deleted, the deletion now fails by default, returning the error *ResourceDeleteInUseOrMaintenanceMode* with the boolean property *HasPastBookings* set to true.
 
-In addition, the following new method is now available in the *ResourceManagerHelper* class: <br>*Resource\[\] RemoveResources(Resource\[\] resources, bool ignorePastReservations);*
+In addition, the following new method is now available in the *ResourceManagerHelper* class: `Resource[] RemoveResources(Resource[] resources, bool ignorePastReservations);`
 
 If *ignorePastReservations* is false, this method works in the same way as existing calls to remove resources. If it is set to true, past bookings will be ignored during the deletion checks. This can be used to delete resources that are only used in past bookings; however, note that these bookings may then contain invalid references to resources.
 
-#### DataMiner will now generated an error when it detects a ServiceManager license but no Elastic­Search instance \[ID_24329\]
+#### DataMiner will now generated an error when it detects a ServiceManager license but no ElasticSearch instance \[ID_24329\]
 
 From now on, a DataMiner Agent will generated the following DataMiner run-time error when it detects a ServiceManager license but no Elasticsearch instance:
 
@@ -1033,7 +1027,7 @@ Error handling when adding jobs has been enhanced.
 
 From now on, the services list in the Services app will no longer be initialized when Visual Overview only shows the service definition editor.
 
-#### DataMiner Cube: Enhanced performance when generating authentication tickets for embed­ded web browsers \[ID_24261\]
+#### DataMiner Cube: Enhanced performance when generating authentication tickets for embedded web browsers \[ID_24261\]
 
 Due to a number of enhancements, overall performance has increased when generating authentication tickets for embedded web browsers in apps like Ticketing, Dashboards, Maps, etc.
 
@@ -1085,7 +1079,7 @@ All HTML5 apps (Dashboards, Monitoring, Jobs, etc.) now have enhanced icons.
 
 When a booking is saved and there is another booking that overlaps it, previously all overlapping bookings would be returned in the error message. Now the error message will only return the bookings that conflict with the booking that is being saved.
 
-#### Service & Resource Management: Enhanced processing of event messages related to Reserva­tionInstances and ReservationDefinitions \[ID_24350\]
+#### Service & Resource Management: Enhanced processing of event messages related to ReservationInstances and ReservationDefinitions \[ID_24350\]
 
 Due to a number of enhancements, the processing of event messages related to ReservationInstances or ReservationDefinitions has improved.
 
@@ -1154,7 +1148,7 @@ The following fields have been removed from the *DMAScatterAxisInfo* object:
 - ParameterID
 - TableIndex
 
-#### Service & Resource Management: Enhanced performance when updating active function defini­tions \[ID_24554\]
+#### Service & Resource Management: Enhanced performance when updating active function definitions \[ID_24554\]
 
 Due to a number of enhancements, overall performance has increased when updating active function definitions.
 
@@ -1176,7 +1170,7 @@ When connected to a DataMiner System with multiple DataMiner Agents, you opened 
 
 When an alarm template group listed multiple table column parameters, in some cases, those parameters would be sorted incorrectly.
 
-#### Problem with protocol buffer serialization when server and client were running different Data­Miner versions \[ID_23679\]\[ID_24035\]
+#### Problem with protocol buffer serialization when server and client were running different DataMiner versions \[ID_23679\]\[ID_24035\]
 
 When protocol buffer serialization was being used, a number of issues could occur when a DMA and a client were running different DataMiner versions.
 
@@ -1224,11 +1218,11 @@ In some rare cases, NotifyDataMiner calls would include insufficient information
 
 If a service definition was duplicated, it could occur that the interface configuration of the duplicate was not the same as that of the original.
 
-#### Service & Resource Management: Problem when sorting a ListView by a custom property col­umn \[ID_23876\]
+#### Service & Resource Management: Problem when sorting a ListView by a custom property column \[ID_23876\]
 
 When you sorted a bookings list or a services list by a custom property column, in some cases, the sort order would not be remembered. The next time you opened the *Bookings* app or the *Services* app, the list would be sorted as before.
 
-#### Dashboards app: Selected items in the feeds of a dashboard would be unselected after renam­ing that dashboard \[ID_23877\]
+#### Dashboards app: Selected items in the feeds of a dashboard would be unselected after renaming that dashboard \[ID_23877\]
 
 When you renamed a dashboard after selecting a number of items in its feeds, in some cases, all items selected in those feeds would incorrectly be unselected after the dashboard had been renamed.
 
@@ -1240,7 +1234,7 @@ If an element with a smart-serial connection was configured to only allow commun
 
 If a dashboard contained a component using an indices data feed, and another indices data feed with the same primary key was added to a different component of the dashboard, it could occur that this second indices feed overwrote the indices for the first component.
 
-#### Aggregation rules operating on views would generate an excessive amount of calls to SLData­Miner \[ID_23892\]
+#### Aggregation rules operating on views would generate an excessive amount of calls to SLDataMiner \[ID_23892\]
 
 When an aggregation rule that operates recursively on a view was executed, in some cases, an excessive amount of calls from SLProtocol to SLDataMiner were generated.
 
@@ -1256,7 +1250,7 @@ If a dynamic list component was opened and closed in DataMiner Cube, for instanc
 
 When a DELT package containing alarms was imported, in some cases, alarm properties would incorrectly be added to alarms to which they did not belong.
 
-#### Redundancy groups with multiple primary and multiple backup elements could go into an unde­fined state after switching \[ID_23924\]
+#### Redundancy groups with multiple primary and multiple backup elements could go into an undefined state after switching \[ID_23924\]
 
 In some cases, redundancy groups with multiple primary elements and multiple backup elements could incorrectly go into an undefined state after switching.
 
@@ -1342,7 +1336,7 @@ In some rare cases, a problem could occur in SLNet when protocol buffer serializ
 
 In some cases, a paged database query against a Cassandra database would incorrectly only return the first two pages instead of the entire result set.
 
-#### Parameters exported to multiple types of DVE elements would not be updated in all DVE ele­ments \[ID_24103\]
+#### Parameters exported to multiple types of DVE elements would not be updated in all DVE elements \[ID_24103\]
 
 When a parameter that was not directly linked to a DVE element via primary or foreign key was exported to multiple types of DVE elements sharing the same parent DVE element, it could occur that updates of that parameter did not get pushed to all the DVE elements to which it had been exported.
 
@@ -1362,7 +1356,7 @@ In some cases, DCF connection lines between dynamically positioned shapes would 
 
 When the element filter of a parameter state component was changed, in some cases, that change would not get applied. When a parameter state component was linked to an element feed, only the initial filter would be applied. Any changed to the element feed would not be passed to the parameter state component.
 
-#### Problem when changing a foreign key value in a table linked to a DVE element or a Virtual Func­tion \[ID_24141\]
+#### Problem when changing a foreign key value in a table linked to a DVE element or a Virtual Function \[ID_24141\]
 
 When a foreign key value was changed in a table linked to a DVE element or a Virtual Function, in some cases, only the primary key and foreign key value would be passed along with the update message. As a result, all other values would incorrectly be shown as “not initialized”.
 
@@ -1412,11 +1406,11 @@ When, in the *Agents* section of *System Center*, you click *Upgrade*, you can c
 
 However, up to now, the list of available agents would also incorrectly be expanded when you clicked “No” in the confirmation box. This will no longer occur.
 
-#### Service & Resource Management: Resources in service of child booking not updated after book­ing resources were updated \[ID_24224\]
+#### Service & Resource Management: Resources in service of child booking not updated after booking resources were updated \[ID_24224\]
 
 When an SRM script updated the resources for a child booking but it only passed the main booking to the *AddOrUpdateReservationInstances* call, it could occur that the resources in the service of the child booking were not updated.
 
-#### DataMiner Cube: Version conflict error after logging in with an incorrect Administrator pass­word \[ID_24229\]
+#### DataMiner Cube: Version conflict error after logging in with an incorrect Administrator password \[ID_24229\]
 
 When you tried to log in to DataMiner Cube with an incorrect Administrator password, in some cases, a version conflict error could be thrown.
 
@@ -1454,7 +1448,7 @@ In some cases, alarm filters that contained session variables would no longer be
 
 When an interactive Automation script running inside the Dashboards app went into timeout, in some cases, a success message would incorrectly be displayed instead of an error message.
 
-#### DataMiner Cube - Profiles app: Protocol version not set to “Production” when linking a parame­ter \[ID_24260\]
+#### DataMiner Cube - Profiles app: Protocol version not set to “Production” when linking a parameter \[ID_24260\]
 
 When, in the Profiles app, you dragged an element using the production version of a protocol onto the parameter list and linked a protocol parameter to a profile parameter, in some cases, the protocol version would incorrectly not be set to “Production”.
 
@@ -1504,11 +1498,11 @@ When a view table was filtered, in some cases, the table would incorrectly be em
 
 When the number of alarms stored in the database reaches a certain threshold, the oldest, non-active alarms are automatically removed from the system. However, on a Failover system with MySQL databases, in some cases, the alarm cleaning process would not be able to correctly separate active from non-active alarms.
 
-#### Problem when DVE creation was being disabled while updating a table with an “;element” col­umn option \[ID_24309\]
+#### Problem when DVE creation was being disabled while updating a table with an “;element” column option \[ID_24309\]
 
 In some rare cases, an error could occur when a table with an “;element” column option was being updated while a request was being processed to disable the DVE creation on that element.
 
-#### Problem with a FullFilter on a direct view that retrieved data from elements with different pro­tocols \[ID_24313\]
+#### Problem with a FullFilter on a direct view that retrieved data from elements with different protocols \[ID_24313\]
 
 When a FullFilter was used on a direct view that retrieved data from elements with different protocols, in some cases, no results would be returned.
 
@@ -1552,7 +1546,7 @@ When you used the legacy Reporter app to generate a report containing a status q
 
 In the Alarm Console, in some cases, the alarm hyperlinks would disappear from the right-click menu after an element restart or a DataMiner restart.
 
-#### Alarm templates: Problem when changing the condition of a conditionally monitored parame­ter \[ID_24338\]
+#### Alarm templates: Problem when changing the condition of a conditionally monitored parameter \[ID_24338\]
 
 When, in an alarm template, a conditionally monitored parameter had its condition changed, in some cases, alarms associated with that parameter would incorrectly be cleared using the current time instead of the time at which the condition was changed.
 
@@ -1578,7 +1572,7 @@ In some cases, the header of a CPE card did not show the correct alarm color. In
 
 If an element had multiple serial, smart-serial or HTTP port connections, it could occur that the connection type of the first port was applied to all other serial, smart-serial or HTTP ports as well.
 
-#### DataMiner Cube - Automation: Variables not linked to an input parameter would not be dis­played \[ID_24358\]
+#### DataMiner Cube - Automation: Variables not linked to an input parameter would not be displayed \[ID_24358\]
 
 In Automation, in some cases, referenced variables would incorrectly not be displayed if they were not linked to a script input parameter.
 
@@ -1746,7 +1740,7 @@ When you dragged an element onto the Alarm Console, in some cases, the alarm tab
 
 ## Changes in DataMiner 10.0.2 CU1
 
-### Fixes
+### CU1 fixes
 
 #### Problem when logging in to a DataMiner mobile app \[ID_24333\]
 
@@ -1770,13 +1764,13 @@ When you tried to back up an Elastic database (which is used by the DataMiner In
 
 ## Changes in DataMiner 10.0.2 CU2
 
-### Enhancements
+### CU2 enhancements
 
 #### Service & Resource Management: Enhanced performance when deleting service definitions \[ID_24860\]
 
 Due to a number of enhancements, overall performance has increased when deleting service definitions, especially on systems with a large number of booking instances.
 
-### Fixes
+### CU2 fixes
 
 #### DataMiner Cube - Services app: Service definition not loaded correctly when Services app is opened \[ID_24735\]
 
@@ -1790,6 +1784,6 @@ In some cases, an error could occur when you tried to save a service definition.
 
 If service definition properties had null values, it could occur that migrating booking data to DataMiner Indexing failed.
 
-#### Failover - Service & Resource management: Problem when migrating booking data to Data­Miner Indexing after performing a Failover switch twice \[ID_24883\]
+#### Failover - Service & Resource management: Problem when migrating booking data to DataMiner Indexing after performing a Failover switch twice \[ID_24883\]
 
 When you started a booking data migration to DataMiner Indexing on a Failover Agent that had previously been switched twice, in some cases, the migration operation would never get marked as completed.

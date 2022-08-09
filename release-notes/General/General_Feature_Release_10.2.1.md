@@ -119,7 +119,7 @@ When, in the start window of the DataMiner Cube desktop app, you try to connect 
 
 The following changes have been made with regard to session variables that can be used in embedded Resource Manager components.
 
-**New variable “SelectedTimeRange”**
+##### New variable 'SelectedTimeRange'
 
 When you select a time range, that range will be stored in the SelectedTimeRange variable.
 
@@ -127,13 +127,13 @@ The value can be set in serialized form (e.g. “5248098399646517511;52483923539
 
 This variable will be cleared whenever you select another item in the component.
 
-**Updated variable “SelectedResource”**
+##### Updated variable 'SelectedResource'
 
 The SelectedResource variable will now also be filled in when you select a resource band.
 
 Note that, when you select a resource band, the SelectedPool variable will contain the first pool of the selected resource.
 
-**Problem with “SelectedReservation” variables**
+##### Problem with 'SelectedReservation' variables
 
 When you select a booking, the following variables are filled in:
 
@@ -339,7 +339,7 @@ When alarm monitoring of type “rate” was used to monitor a column parameter,
 
 From now on, alarm limit change events will only be sent for standalone parameters and column parameters that are exported as standalone parameters in a virtual function or DVE child element.
 
-#### DataMiner Cube - Correlation: Incorrect background color when creating or opening an ana­lyzer or a correlation rule \[ID_31482\]
+#### DataMiner Cube - Correlation: Incorrect background color when creating or opening an analyzer or a correlation rule \[ID_31482\]
 
 When, in the Correlation app, you created or opened an analyzer in the Analyzers tab or you created or opened a legacy correlation rule in the Correlation rules tab, the tab would incorrectly have a gray background.
 
@@ -353,9 +353,9 @@ When the discreet values and the display values of a certain parameter overlappe
 
 #### Dashboards Sharing: Incorrect login screen would appear when the shared dashboard you were viewing was unshared \[ID_31503\]
 
-When a shared dashboard was unshared while you were viewing it, up to now, you would incorrectly be redirected to the login screen of the Dashboards app. From now on, you will be redirected to the DataMiner Cloud login screen (i.e. https://shares.dataminer.services) instead.
+When a shared dashboard was unshared while you were viewing it, up to now, you would incorrectly be redirected to the login screen of the Dashboards app. From now on, you will be redirected to the DataMiner Cloud login screen (i.e. <https://shares.dataminer.services>) instead.
 
-#### Web Services API v1: Problem when using GetTableForParameterFiltered or GetTableForParam­eterSorted to retrieve part of a parameter table \[ID_31504\]
+#### Web Services API v1: Problem when using GetTableForParameterFiltered or GetTableForParameterSorted to retrieve part of a parameter table \[ID_31504\]
 
 When the GetTableForParameterFiltered orGetTableForParameterSorted method was used to retrieve part of a parameter table by specifying a non-zero start index and a specific number of rows, in some cases, not all requested rows would be returned.
 
@@ -375,7 +375,7 @@ From now on, cell content will be parsed as follows:
 
 - When no quotes are present, the cell will not have its spaces trimmed. When quotes are present around the cell's data, spaces will be trimmed outside of the quotes.
 
-- Quotes inside a cell are expected to be escaped by another quote.<br>Example: “A “”value”” inside a cell”.
+- Quotes inside a cell are expected to be escaped by another quote. Example: “A “”value”” inside a cell”.
 
 - When there are quotes inside a cell, it is not allowed to have anything besides spaces outside of the quotes. The cell will be parsed as if no quotes are used and the first separator will close the cell. See the following example.
 
@@ -452,7 +452,7 @@ In some cases, the *Service Templates* app would incorrectly not list generated 
 
 In some rare cases, an error could occur in SLDataMiner when an alarm template or a trend template was deleted.
 
-#### bypassProxy option would incorrectly not be taken into account in case of a websocket connec­tion \[ID_31584\]
+#### bypassProxy option would incorrectly not be taken into account in case of a websocket connection \[ID_31584\]
 
 When the bypassproxy option had been set in a bus address field, this setting would incorrectly not be taken into account in case of a websocket connection.
 
@@ -484,7 +484,7 @@ When you opened an alarm card, in some cases, the services affected by the alarm
 
 In some cases, job templates linked to a job domain would incorrectly not be deleted when the job domain in question was deleted.
 
-#### DataMiner Cube - Visual Overview: Embedded page would incorrectly not show DCF connec­tions \[ID_31627\]
+#### DataMiner Cube - Visual Overview: Embedded page would incorrectly not show DCF connections \[ID_31627\]
 
 When you opened a visual overview with only one visible page containing an embedded hidden page with DCF connections, in some cases, those DCF connections would incorrectly not be shown.
 

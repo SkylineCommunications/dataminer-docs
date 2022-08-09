@@ -48,16 +48,16 @@ The new *DIS Macros* tool window allows developers to create C# scripts that can
 
 To open the tool window, open the DIS menu, and click *Tool Windows \> DIS Macros*.
 
-- In the tool window, you can set up a folder structure into which you can then store the mac­ros you create. It is also possible to export a macro folder to a zip file and to import a zip file containing macros as a child folder of an existing folder.
+- In the tool window, you can set up a folder structure into which you can then store the macros you create. It is also possible to export a macro folder to a zip file and to import a zip file containing macros as a child folder of an existing folder.
 - At the top of the tool window, you find two buttons: *Run* and *Open*.
 
-    - Click *Run* to run the selected macro.
-    - Click *Open* to edit the selected macro.
+  - Click *Run* to run the selected macro.
+  - Click *Open* to edit the selected macro.
 
-    > [!NOTE]
-    > When you run a macro, it will always affect the last XML or C# document that was active.
+  > [!NOTE]
+  > When you run a macro, it will always affect the last XML or C# document that was active.
 
-**Structure of a macro file**
+##### Structure of a macro file
 
 In essence, a DIS macro consists of a Script class containing a Run() method that passes an Engine object. That object provides access to input data and allows you to modify the document, write log entries, etc.
 
@@ -69,8 +69,8 @@ The following input data is available in the “engine.Input” object:
 - Selected text blocks (start, length and contents)
 - If the macro is run on a Protocol.xml file:
 
-    - Parsed XML object structure
-    - Parsed protocol model
+  - Parsed XML object structure
+  - Parsed protocol model
 
 The following methods are available in the “engine” object:
 
@@ -188,7 +188,7 @@ Exception handling (try-catch) has now been added to
 
 #### Validator: Text in Description column now wraps to the next line \[ID_20306\]
 
-When the *Description* column of an error message in the *DIS Validator *window contains a large amount of text, from now on, that text will automatically wrap to the next line.
+When the *Description* column of an error message in the *DIS Validator* window contains a large amount of text, from now on, that text will automatically wrap to the next line.
 
 #### XML editor: Enhanced behavior when opening a QAction for editing \[ID_20336\]
 

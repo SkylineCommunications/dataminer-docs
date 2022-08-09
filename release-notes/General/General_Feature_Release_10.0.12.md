@@ -76,7 +76,7 @@ From now on, DirectView updates are supported in the following scenarios:
 
 ### DMS Cube
 
-#### Alarm Console: Alarm events without a severity change can now be consolidated in the preced­ing event in the alarm tree \[ID_23234\]\[ID_23526\]\[ID_24462\]\[ID_27413\]
+#### Alarm Console: Alarm events without a severity change can now be consolidated in the preceding event in the alarm tree \[ID_23234\]\[ID_23526\]\[ID_24462\]\[ID_27413\]
 
 From now on, when an alarm tree contains alarm events that did not change the severity, these events can be consolidated in the previous event.
 
@@ -301,7 +301,7 @@ Configuration:
 Known limitations:
 
 - The URL folder structure of the web applications should remain the same as on a DataMiner Agent. The applications have to be accessed using the following URL:
- 
+
   ```txt
   https://gateway.somecompany.com/dashboard
   https://gateway.somecompany.com/monitoring
@@ -394,23 +394,23 @@ Also, a number of minor changes were done to make sure that the EligibleResource
 
 SLReset.exe is a new tool that can be used to fully reset a DataMiner Agent to its state immediately after installation. It is located in the C:\\Skyline DataMiner\\Files\\ folder.
 
-**Optional argument**
+##### Optional argument
 
 | Argument | Description                                                         |
 |----------|---------------------------------------------------------------------|
 | -y       | Skip any prompts that ask you whether to run online/offline actions |
 
-**Online actions (i.e. actions that are only run when the DMA being reset is running)**
+##### Online actions (i.e. actions that are only run when the DMA being reset is running)
 
 - ResetFailoverOnline
 
-    Deletes the Failover configuration of the DMA if one is present.
+  Deletes the Failover configuration of the DMA if one is present.
 
 - ResetClusterOnline
 
-    Removes the DMA from the DMS if it is part of one.
+  Removes the DMA from the DMS if it is part of one.
 
-**Offline actions (i.e. actions that are always run whether or not the DMA being reset is running)**
+##### Offline actions (i.e. actions that are always run whether or not the DMA being reset is running)
 
 - StopTaskbarUtility
 - StopDataMiner
@@ -421,14 +421,14 @@ SLReset.exe is a new tool that can be used to fully reset a DataMiner Agent to i
 - DeleteTaskbarAppSettings
 - FileCleanup
 
-    > [!NOTE]
-    > Deletes any unnecessary files in the C:\\Skyline DataMiner\\ folder.
-    >
-    > This action uses a whitelist to determine what to keep.
-    >
-    > On first execution, the default whitelist is added to the C:\\Skyline DataMiner\\Files\\ResetConfig.txt file. Subsequent executions will then check the whitelist found in that text file, to which you can add any file you want to keep.
-    >
-    > If you delete ResetConfig.txt, SLReset will again use the default whitelist.
+  > [!NOTE]
+  > Deletes any unnecessary files in the C:\\Skyline DataMiner\\ folder.
+  >
+  > This action uses a whitelist to determine what to keep.
+  >
+  > On first execution, the default whitelist is added to the C:\\Skyline DataMiner\\Files\\ResetConfig.txt file. Subsequent executions will then check the whitelist found in that text file, to which you can add any file you want to keep.
+  >
+  > If you delete ResetConfig.txt, SLReset will again use the default whitelist.
 
 - ResetDataMinerXml
 - ResetNotifyMail
@@ -440,10 +440,10 @@ SLReset.exe is a new tool that can be used to fully reset a DataMiner Agent to i
 - DeleteExecutableEvents
 - DBReset
 
-    > [!NOTE]
-    > This action runs the SLDataGateway.Tools.Database.exe located in the C:\\Skyline DataMiner\\Files\\x64\\ folder, and uses the input arguments harvested from DataMiner (DB.xml, credentials,...).
-    >
-    > For more information on SLDataGateway.Tools.Database.exe, see below.
+  > [!NOTE]
+  > This action runs the SLDataGateway.Tools.Database.exe located in the C:\\Skyline DataMiner\\Files\\x64\\ folder, and uses the input arguments harvested from DataMiner (DB.xml, credentials,...).
+  >
+  > For more information on SLDataGateway.Tools.Database.exe, see below.
 
 - Register
 - DcomConfig
@@ -453,22 +453,51 @@ SLReset.exe is a new tool that can be used to fully reset a DataMiner Agent to i
 - StartSLTaskbarUtility
 - StartDataMiner
 
-**SLDataGateway.Tools.Database.exe**
+##### SLDataGateway.Tools.Database.exe
 
 This tool, when run with the factory-reset argument, resets the currently active MySQL, Cassandra or ElasticSearch database(s). When running this tool, you can specify the following arguments:
 
-| Argument      |                         | Mandatory | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
-|---------------|-------------------------|-----------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| factory-reset |                         | X         | Argument specifying that a factory reset must be done.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| -t            | --database-type \<type> | X         | Type of database:<br> -  SQL (i.e. MySQL)<br> -  Cassandra<br> -  Elastic (i.e. ElasticSearch)                                                                                                                                                                                                                                                                                                         |
-| -i            | --ip \<ip>              | X         | IP address of the database host                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| -u            | --username \<username>  |           | User account (user name and password)<br> If no account is specified, the following default credentials will be used:<br> -  MySQL: root (empty password)<br> -  Cassandra: root/root<br> -  ElasticSearch: no security                                                                                                                                                                                |
-| -p            | --password \<password>  |           |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| -f            | --forced                |           | Skip all prompts.<br> If this argument is not used, the user will be asked for a final confirmation.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-| -d            | --Database \<keyspace>  |           | Database/keyspace to be cleaned.<br> If this argument is not used, everything will be cleaned.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-| -k            | --keepcustomcredentials |           | Preserve the specified Cassandra credentials (user and password) throughout the factory reset process                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
-| -l            |                         |           | Log level:<br> -  0 = Off<br> -  1 = Trace (default)<br> -  2 = Debug<br> -  3 = Info<br> -  4 = Warning<br> -  5 = Error<br> -  6 = Fatal |
-| --timeout     |                         |           | Timeout (milliseconds)<br> If execution takes longer than the specified timeout, the program is killed.<br> Default: int.MaxValue (\~2 billion)                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+- `factory-reset`: Mandatory. Argument specifying that a factory reset must be done.
+
+- `-t` or `--database-type <type>`: Mandatory. The type of database:
+
+  - SQL (i.e. MySQL)
+  - Cassandra
+  - Elastic (i.e. ElasticSearch)
+
+- `-i` or `--ip <ip>`: Mandatory. The IP address of the database host.
+
+- `-u` or `--username <username>`: The username.
+
+  If no account is specified, the following default credentials will be used:
+
+  - MySQL: root (empty password)
+  - Cassandra: root/root
+  - ElasticSearch: no security
+
+- `-p` or `--password <password>`: The password to be used with the specified username.
+
+- `-f` or `--forced`: Skips all prompts.
+
+  If this argument is not used, the user will be asked for a final confirmation.
+
+- `-d` or `--Database <keyspace>`: The database/keyspace to be cleaned. If this argument is not used, everything will be cleaned.
+
+- `-k` or `--keepcustomcredentials`: Preserves the specified Cassandra credentials (user and password) throughout the factory reset process.
+
+- `-l`: The log level:
+
+  - 0 = Off
+  - 1 = Trace (default)
+  - 2 = Debug
+  - 3 = Info
+  - 4 = Warning
+  - 5 = Error
+  - 6 = Fatal
+
+- `--timeout`: Timeout (in milliseconds). If execution takes longer than the specified timeout, the program is killed.
+
+  Default: int.MaxValue (\~2 billion)
 
 > [!NOTE]
 >
@@ -597,7 +626,7 @@ Up to now, all Visual pages of an EPM card with a matching *Field* property were
 > [!NOTE]
 > Setting the *Chain* property of a Visio page to “\*” will display that page on all chains of the CPE Manager.
 
-#### More detailed information in exception message when a BPA test fails to load due to dependen­cies not being able to load \[ID_27403\]
+#### More detailed information in exception message when a BPA test fails to load due to dependencies not being able to load \[ID_27403\]
 
 When a BPA test fails to load due to one or more dependencies not being able to load, from now on, more detailed information will be provided in the exception message.
 
@@ -725,7 +754,7 @@ When, in the *Profiles* app, you duplicated a profile parameter of type “discr
 
 In some cases, after a DataMiner process had generated a crashdump, it could occur that no DataMiner restart was triggered even though this should have been the case.
 
-#### Interactive Automation scripts: Problems with the UIBlockDefinition.IsEnabled and UIBlockDefi­nition.InitialValue properties \[ID_27326\]
+#### Interactive Automation scripts: Problems with the UIBlockDefinition.IsEnabled and UIBlockDefinition.InitialValue properties \[ID_27326\]
 
 Up to now, UIBlockDefinition.IsEnabled was not applied for blocks of type “checkbox”. From now on, a block of type “checkbox” will be disabled when the UIBlockDefinition.IsEnabled property is set to False.
 
@@ -788,7 +817,7 @@ If a column parameter entry that was set to *Excluded* was duplicated in an alar
 
 When a QAction launched an Automation script immediately after the element had been started, in some cases, an exception could be thrown.
 
-#### DataMiner Cube would no longer receive data updates from the DataMiner Agent it was con­nected to \[ID_27434\]
+#### DataMiner Cube would no longer receive data updates from the DataMiner Agent it was connected to \[ID_27434\]
 
 In some cases, DataMiner Cube would no longer receive data updates from the DataMiner Agent it was connected to.
 
@@ -811,7 +840,7 @@ A number of problems with regard to enhanced services have been fixed:
 - When an enhanced service was renamed, in some cases, all open alarms associated with that service would incorrectly disappear.
 - After an enhanced service had been reloaded, in some cases, element state changes would no longer be forwarded to that enhanced service.
 
-#### Service & Resource Management: A daylight saving time change would incorrectly cause book­ing durations to get changed \[ID_27468\]
+#### Service & Resource Management: A daylight saving time change would incorrectly cause booking durations to get changed \[ID_27468\]
 
 When a daylight saving time change occurred while a booking was active, in some cases, the duration of that booking would incorrectly get changed.
 
@@ -1006,6 +1035,6 @@ In DataMiner Cube, in some cases, an error could occur when you viewed a discret
 
 In some cases, an embedded alarm timeline component would not show its summary timeline.
 
-#### DataMiner Cube - Correlation: Number of occurrences in “Sliding window” section could incor­rectly not be changed \[ID_27909\]
+#### DataMiner Cube - Correlation: Number of occurrences in “Sliding window” section could incorrectly not be changed \[ID_27909\]
 
 When you tried to define that a correlation rule had to be triggered when a situation occurred a specific number of times in a specified period of time, in some cases, it would not be possible to change the default number of times (i.e. 1).

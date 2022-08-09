@@ -45,7 +45,7 @@ Up to now, all DIS macros were stored in a subfolder of the *%LocalAppData%* fol
 
 Former macro folder:
 
-- *%LocalAppData%\\Microsoft\\VisualStudio\\\<Visual Studio version>\\Skyline\\<br>DataMinerIntegrationStudio\\Macros\\*
+- *%LocalAppData%\\Microsoft\\VisualStudio\\\<Visual Studio version>\\Skyline\\DataMinerIntegrationStudio\\Macros\\*
 
 New macro folder:
 
@@ -68,7 +68,7 @@ When, in *DIS Settings \> Class Library*, you had selected the *Automatically ge
 
 When validating an enhanced service protocol or an SLA protocol, DIS will check whether any custom parameters were incorrectly added within the parameter range reserved for predefined parameters.
 
-- If, in an enhanced service protocol, custom parameters are found in reserved range 1-999, DIS will throw an “Invalid use of Enhanced Service ID range for Param with ID<br>'{paramId}'.” error (ID 2.1.9).
+- If, in an enhanced service protocol, custom parameters are found in reserved range 1-999, DIS will throw an “Invalid use of Enhanced Service ID range for Param with ID '{paramId}'.” error (ID 2.1.9).
 - If, in an SLA protocol, custom parameters are found in reserved range 1-2999, DIS will throw an “Invalid use of SLA ID range for Param with ID '{paramId}'.” error (ID 2.1.10).
 
 In some cases, those checks would return false positives.

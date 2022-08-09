@@ -32,7 +32,7 @@ DataMiner EPM now supports combining CCAPs and CM collectors hosted on different
 
 The following general improvements have been implemented:
 
-- Settings for subscribers, taps, amplifiers and node tables will now all be done in the back end. In the front end, they will be displayed via view tables. The tables were also made vola­tile.
+- Settings for subscribers, taps, amplifiers and node tables will now all be done in the back end. In the front end, they will be displayed via view tables. The tables were also made volatile.
 - To prevent possible issues, the importing logic in the back end now uses an impersonated user only during the reading of the files.
 - The timing of the aggregation actions for the front and back end has been adjusted from 20 seconds to 5 minutes
 
@@ -41,7 +41,7 @@ The following general improvements have been implemented:
 The following changes have been implemented in the Skyline EPM Platform DOCSIS connector to improve the passive logic in the DOCSIS back end:
 
 - The logic of the connector has been adjusted to prevent invalid data from being set in the Subscribers table.
-- An exception has been added to the passive tables (Subscribers, Taps, Nodes and Amplifi­ers) to show "Not available" if parameters within those tables have not been initialized.
+- An exception has been added to the passive tables (Subscribers, Taps, Nodes and Amplifiers) to show "Not available" if parameters within those tables have not been initialized.
 - The *avoidZeroInResult* option has been added on the aggregate action for the Nodes and Amplifiers tables, so the connector does not aggregate empty rows and create a -1 primary key in those tables.
 
 ### Fixes

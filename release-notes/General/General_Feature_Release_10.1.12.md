@@ -385,7 +385,7 @@ Due to a number of enhancements, overall performance of the correlation mechanis
 
 Communication between SLNet and SLHelper will now use NATS instead of .NET remoting.
 
-#### Restoring a DataMiner backup package will no longer be possible when the package was cre­ated on a system with a different DataMiner version \[ID_30921\]
+#### Restoring a DataMiner backup package will no longer be possible when the package was created on a system with a different DataMiner version \[ID_30921\]
 
 From now on, it will no longer be possible to restore a DataMiner backup package on a system with a DataMiner version that is different from the one on which the backup was taken.
 
@@ -469,7 +469,7 @@ In the *Run from DMA* tab, the *Delete* and *Save* commands have been removed fr
 > [!NOTE]
 > The *Get Last Results* button will now only fetch the most recent results for any selected tests that are run on a schedule.
 
-#### DataMiner Cube - Services app: Enhanced performance when saving all changes made to ser­vice definitions \[ID_31355\]
+#### DataMiner Cube - Services app: Enhanced performance when saving all changes made to service definitions \[ID_31355\]
 
 Due to a number of enhancements, overall performance has increased when clicking *Save all changes* to save all changes made to service definitions in the Services app.
 
@@ -497,7 +497,7 @@ The migration has failed.DBGatewayException(SLCassandraClassLibrary.DBGateway.Ca
 
 In some cases, an error could occur in SLAutomation when trying to run Automation scripts on elements for which no protocol information could be retrieved.
 
-#### Problem during DataMiner startup when retrieving alarms for multiple elements from an Elas­ticsearch database \[ID_31039\]
+#### Problem during DataMiner startup when retrieving alarms for multiple elements from an Elasticsearch database \[ID_31039\]
 
 In some cases, the DataMiner startup process could become unresponsive and the CPU usage could rise to 100% when alarms for multiple elements were being retrieved simultaneously from an Elasticsearch database.
 
@@ -521,7 +521,7 @@ In some cases, Azure AD access tokens would incorrectly not get refreshed.
 
 When, in a web app, you opened a selection box and selected the value that was selected, in some cases, that value would incorrectly be cleared.
 
-#### DataMiner Cube - Trending: Alarm colors on the Y axis of a trend graph would be shown incor­rectly when exceptions and numeric values were combined in the same severity \[ID_31124\]
+#### DataMiner Cube - Trending: Alarm colors on the Y axis of a trend graph would be shown incorrectly when exceptions and numeric values were combined in the same severity \[ID_31124\]
 
 In case of a numeric parameter with exceptions, an alarm template allows you to combine an exception value and a numeric threshold in one severity. Up to now, when an exception value and a numeric threshold were combined in one severity, in some cases, the alarm colors shown on the Y axis of a trend graph would not be correct.
 
@@ -591,11 +591,11 @@ Up to now, the “park source” feature would incorrectly not work on matrices 
 
 In some cases, a DataMiner Agent could get stuck in offload mode after the database had been unreachable for a period of time.
 
-#### Memory leak in SLElement when stopping or deleting an element with a protocol of type “vir­tual” \[ID_31252\]
+#### Memory leak in SLElement when stopping or deleting an element with a protocol of type “virtual” \[ID_31252\]
 
 In some cases, SLElement could leak memory when stopping or deleting elements with a protocol of type “virtual”.
 
-#### Automation: Problem when calling Engine.CreateExtraDummy or Engine.FindElement from mul­tiple threads or tasks within the same script \[ID_31253\]
+#### Automation: Problem when calling Engine.CreateExtraDummy or Engine.FindElement from multiple threads or tasks within the same script \[ID_31253\]
 
 In some cases, errors could occur in SLAutomation when Engine.CreateExtraDummy or Engine.FindElement were called from multiple threads or tasks within the same script.
 

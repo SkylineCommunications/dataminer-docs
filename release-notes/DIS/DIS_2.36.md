@@ -52,12 +52,12 @@ The following checks and error messages have been added.
 | 1.9.9    | UntrimmedAttribute                     | Untrimmed attribute 'Protocol/Type@options'. Current value '{currentValue}'.                                                                               |
 | 1.9.11   | NonExistingId                          | Attribute 'Protocol/Type@options' references a non-existing 'Param' with ID '{paramId}'.                                                                   |
 | 1.9.12   | ReferencedParamWrongType               | Invalid DVE Param Type '{paramType}'. Expected Type 'array'. Param ID '{paramId}'.                                                                         |
-| 1.9.13   | ReferencedParamExpecting<br>RTDisplay  | RTDisplay(true) expected on DVE Table. Table PID '{dveTablePid}'.                                                                                          |
+| 1.9.13   | ReferencedParamExpectingRTDisplay  | RTDisplay(true) expected on DVE Table. Table PID '{dveTablePid}'.                                                                                          |
 | 1.22.11  | NonExistingId                          | Attribute 'Protocol/Display@pageOrder' references a non-existing 'Param' with ID '{paramId}'.                                                              |
-| 1.22.12  | ReferencedParamRTDisplay<br>Expected   | RTDisplay(true) expected on Param '{referencedPid}' referenced by the 'Protocol/Display@pageOrder' attribute.                                              |
-| 2.1.14   | RTDisplayExpectedOnSpectrum<br>Param   | RTDisplay(true) expected on Spectrum Params. Param ID '{pid}'.                                                                                             |
-| 2.2.10   | RTDisplayExpectedOnContext<br>Menu     | RTDisplay(true) expected on Param '{contextMenuPid}' used as context menu for table.                                                                       |
-| 2.2.11   | RTDisplayExpectedOnQAction<br>Feedback | RTDisplay(true) expected on Param '{qactionFeedbackPid}' used for QAction feedback.                                                                        |
+| 1.22.12  | ReferencedParamRTDisplayExpected   | RTDisplay(true) expected on Param '{referencedPid}' referenced by the 'Protocol/Display@pageOrder' attribute.                                              |
+| 2.1.14   | RTDisplayExpectedOnSpectrumParam   | RTDisplay(true) expected on Spectrum Params. Param ID '{pid}'.                                                                                             |
+| 2.2.10   | RTDisplayExpectedOnContextMenu     | RTDisplay(true) expected on Param '{contextMenuPid}' used as context menu for table.                                                                       |
+| 2.2.11   | RTDisplayExpectedOnQActionFeedback | RTDisplay(true) expected on Param '{qactionFeedbackPid}' used for QAction feedback.                                                                        |
 | 2.7.4    | RTDisplayExpected                      | RTDisplay(true) expected on Param '{pid}'.                                                                                                                 |
 | 2.7.5    | RTDisplayUnexpected                    | Unexpected RTDisplay(true) on Param '{pid}'.                                                                                                               |
 | 2.8.2    | EmptyAttribute                         | Empty attribute 'Param@trending' in Param '{pid}'.                                                                                                         |
@@ -68,13 +68,13 @@ The following checks and error messages have been added.
 | 2.24.4   | InvalidTag                             | Invalid value '{tagValue}' in tag 'Alarm/Monitored'. Possible values 'true, false'. Param ID '{pid}'.                                                      |
 | 2.24.5   | UntrimmedTag                           | Untrimmed tag 'Alarm/Monitored' in Param '{pid}'. Current value '{untrimmedValue}'.                                                                        |
 | 2.24.6   | RTDisplayExpected                      | RTDisplay(true) expected on alarmed (monitored) parameters. Param ID '{paramId}'.                                                                          |
-| 2.31.10  | ReferencedParamRTDisplay<br>Expected   | RTDisplay(true) expected on Param '{columnPid}' displayed as table column. Table PID '{tablePid}'.                                                         |
+| 2.31.10  | ReferencedParamRTDisplayExpected   | RTDisplay(true) expected on Param '{columnPid}' displayed as table column. Table PID '{tablePid}'.                                                         |
 | 2.34.4   | EmptyAttribute                         | Empty attribute 'Alarm@option' in Param '{pid}'.                                                                                                           |
 | 2.34.5   | UntrimmedAttribute                     | Untrimmed attribute 'Alarm@option' in Param '{pid}'. Current value '{untrimmedValue}'.                                                                     |
 | 2.34.6   | NonExistingId                          | Attribute 'Alarm@option' references a non-existing 'Param' with ID '{referencedPid}'. Param ID '{pid}'.                                                    |
-| 2.34.7   | ReferencedParamRTDisplay<br>Expected   | RTDisplay(true) expected on Param '{referencedPid}' referenced by a 'Alarm@option' attribute. Param ID '{referencingPid}'.                                 |
-| 2.38.5   | ColumnOptionExpecting<br>RTDisplay     | RTDisplay(true) expected on column Param '{columnPid}' due to '{option}' in 'ColumnOption@options' attribute. Table PID '{tablePid}'.                      |
-| 2.38.6   | ForeignKeyExpectingRTDisplay<br>OnPK   | RTDisplay(true) expected on PK column Param '{pkColumnPid}' due to '{foreignKeyOption}' in 'ColumnOption@options' attribute. Table PID '{tablePid}'.       |
+| 2.34.7   | ReferencedParamRTDisplayExpected   | RTDisplay(true) expected on Param '{referencedPid}' referenced by a 'Alarm@option' attribute. Param ID '{referencingPid}'.                                 |
+| 2.38.5   | ColumnOptionExpectingRTDisplay     | RTDisplay(true) expected on column Param '{columnPid}' due to '{option}' in 'ColumnOption@options' attribute. Table PID '{tablePid}'.                      |
+| 2.38.6   | ForeignKeyExpectingRTDisplayOnPK   | RTDisplay(true) expected on PK column Param '{pkColumnPid}' due to '{foreignKeyOption}' in 'ColumnOption@options' attribute. Table PID '{tablePid}'.       |
 | 2.43.1   | MissingTag                             | Missing tag 'Position/Row' in Param '{pid}'.                                                                                                               |
 | 2.43.2   | EmptyTag                               | Empty tag 'Position/Row' in Param '{pid}'.                                                                                                                 |
 | 2.43.3   | InvalidTag                             | Invalid value '{tagValue}' in tag 'Position/Row'. Param ID '{pid}'.                                                                                        |
@@ -84,7 +84,7 @@ The following checks and error messages have been added.
 | 2.54.3   | InvalidValue                           | Invalid value '{attributeValue}' in attribute 'Discreets@dependencyId'. Param ID '{pid}'.                                                                  |
 | 2.54.4   | NonExistingId                          | Attribute 'Discreets@dependencyId' references a non-existing 'Param' with ID '{referencedPid}'. Param ID '{pid}'.                                          |
 | 2.54.5   | ReferencedParamWrongType               | Invalid Param Type '{referencedParamType}' on Param referenced by a 'Discreets@dependencyId' attribute. Param ID '{referencedPid}'.                        |
-| 2.54.6   | ReferencedParamRTDisplay<br>Expected   | RTDisplay(true) expected on Param '{referencedPid}' referenced by a 'Discreets@dependencyId' attribute. Param ID '{referencingPid}'.                       |
+| 2.54.6   | ReferencedParamRTDisplayExpected   | RTDisplay(true) expected on Param '{referencedPid}' referenced by a 'Discreets@dependencyId' attribute. Param ID '{referencingPid}'.                       |
 | 2.55.1   | EmptyAttribute                         | Empty attribute 'SNMP/TrapOID@mapAlarm' in Param '{pid}'.                                                                                                  |
 | 2.55.2   | UntrimmedAttribute                     | Untrimmed attribute 'SNMP/TrapOID@mapAlarm' in Param '{pid}'. Current value '{untrimmedValue}'.                                                            |
 | 2.55.3   | RTDisplayExpected                      | RTDisplay(true) expected on Param '{pid}' generating alarms based on traps.                                                                                |
@@ -92,7 +92,7 @@ The following checks and error messages have been added.
 | 2.56.2   | UntrimmedAttribute                     | Untrimmed attribute 'Params@loadSequence'. Current value '{untrimmedValue}'.                                                                               |
 | 2.56.3   | NonExistingId                          | Attribute 'Params@loadSequence' references a non-existing 'Param' with ID '{pid}'.                                                                         |
 | 2.56.5   | ReferencedParamSaveExpected            | Param '{referencedPid}' referenced by 'Params@loadSequence' attribute is expected to be saved.                                                             |
-| 2.56.6   | ReferencedParamRTDisplay<br>Expected   | RTDisplay(true) expected on Param '{referencedPid}' referenced by 'Params@loadSequence' attribute.                                                         |
+| 2.56.6   | ReferencedParamRTDisplayExpected   | RTDisplay(true) expected on Param '{referencedPid}' referenced by 'Params@loadSequence' attribute.                                                         |
 | 2.57.1   | EmptyTag                               | Missing tag 'Display/Positions' in Param '{pid}'.                                                                                                          |
 | 2.57.2   | RTDisplayExpected                      | RTDisplay(true) expected on Param '{pid}' which is positioned.                                                                                             |
 | 2.58.1   | EmptyAttribute                         | Empty attribute 'Type@virtual' in Param '{pid}'.                                                                                                           |
@@ -101,17 +101,17 @@ The following checks and error messages have been added.
 | 2.59.1   | EmptyAttribute                         | Empty attribute 'Discreet@dependencyValues' in Param '{pid}'.                                                                                              |
 | 2.59.2   | UntrimmedAttribute                     | Untrimmed attribute 'Discreet@dependencyValues' in Param '{pid}'. Current value '{untrimmedValue}'.                                                        |
 | 2.59.3   | NonExistingId                          | Attribute 'Discreet@dependencyValues' references a non-existing 'Param' with ID '{referencePid}'. Param ID '{pid}'.                                        |
-| 2.59.4   | ReferencedParamExpecting<br>RTDisplay  | RTDisplay(true) expected on Param '{referencePid}' referenced in 'Discreet@dependencyValues' attribute. Param ID '{pid}'.                                  |
+| 2.59.4   | ReferencedParamExpectingRTDisplay  | RTDisplay(true) expected on Param '{referencePid}' referenced in 'Discreet@dependencyValues' attribute. Param ID '{pid}'.                                  |
 | 13.2.7   | ReferencedParamWrongType               | Invalid Param Type '{paramType}' in relation. Expected Type 'array'. Param ID '{paramId}'.                                                                 |
-| 13.2.8   | ReferencedParamExpecting<br>RTDisplay  | RTDisplay(true) expected on Param referenced in a relation path. Param ID '{paramId}'.                                                                     |
+| 13.2.8   | ReferencedParamExpectingRTDisplay  | RTDisplay(true) expected on Param referenced in a relation path. Param ID '{paramId}'.                                                                     |
 | 18.1.6   | ReferencedParamWrongType               | Invalid TreeControl Param Type '{paramType}'. Expected Type 'dummy'. Param ID '{paramId}'.                                                                 |
-| 18.1.7   | ReferencedParamExpecting<br>RTDisplay  | RTDisplay(true) expected on TreeControl Param. Param ID '{paramId}'.                                                                                       |
-| 18.2.9   | ReferencedParamExpecting<br>RTDisplay  | RTDisplay(true) expected on table displayed in TreeControl Hierarchy. Table PID '{tablePid}'.                                                              |
-| 18.3.6   | ReferencedParamExpecting<br>RTDisplay  | RTDisplay(true) expected on table displayed in TreeControl Hierarchy. Table PID '{tablePid}'.                                                              |
-| 18.5.7   | ReferencedColumnExpecting<br>RTDisplay | RTDisplay(true) expected on Param '{columnPid}' referred as condition column in 'Hierarchy/Table@condition' attribute. TreeControl PID '{treeControlPid}'. |
-| 18.6.6   | ReferencedTableExpecting<br>RTDisplay  | RTDisplay(true) expected on TreeControl/ExtraDetails table. Table PID '{tablePid}'.                                                                        |
-| 18.7.6   | ReferencedColumnExpecting<br>RTDisplay | RTDisplay(true) expected on column referenced by TreeControl 'LinkedDetails@discreetColumnId' attribute. Column PID '{columnPid}'.                         |
-| 18.8.6   | ReferencedParamExpecting<br>RTDisplay  | RTDisplay(true) expected on 'TreeControl/ExtraTabs/Tab\@parameters' Param. Param ID '{paramId}'.                                                            |
+| 18.1.7   | ReferencedParamExpectingRTDisplay  | RTDisplay(true) expected on TreeControl Param. Param ID '{paramId}'.                                                                                       |
+| 18.2.9   | ReferencedParamExpectingRTDisplay  | RTDisplay(true) expected on table displayed in TreeControl Hierarchy. Table PID '{tablePid}'.                                                              |
+| 18.3.6   | ReferencedParamExpectingRTDisplay  | RTDisplay(true) expected on table displayed in TreeControl Hierarchy. Table PID '{tablePid}'.                                                              |
+| 18.5.7   | ReferencedColumnExpectingRTDisplay | RTDisplay(true) expected on Param '{columnPid}' referred as condition column in 'Hierarchy/Table@condition' attribute. TreeControl PID '{treeControlPid}'. |
+| 18.6.6   | ReferencedTableExpectingRTDisplay  | RTDisplay(true) expected on TreeControl/ExtraDetails table. Table PID '{tablePid}'.                                                                        |
+| 18.7.6   | ReferencedColumnExpectingRTDisplay | RTDisplay(true) expected on column referenced by TreeControl 'LinkedDetails@discreetColumnId' attribute. Column PID '{columnPid}'.                         |
+| 18.8.6   | ReferencedParamExpectingRTDisplay  | RTDisplay(true) expected on 'TreeControl/ExtraTabs/Tab\@parameters' Param. Param ID '{paramId}'.                                                            |
 
 ### XML Schema
 
@@ -153,9 +153,9 @@ A number of enhancements have been made to the protocol version editor.
 - All four parts of a version number (branch, system, major and minor) are now editable anywhere in the tree. When you update a version number, all child items will be updated accordingly and recursively.
 - Enhanced field validation:
 
-    - All fields will now allow any kind of value and will get a red border in case of an error.
-    - The *Author* field will now get a red border when empty or set to the default value.
-    - The *Based On* field will now get a red border when the version has an unexpected format, when the selected version is illogical, or when no version has been selected in situations where this is necessary (e.g. the first version of a new range).
+  - All fields will now allow any kind of value and will get a red border in case of an error.
+  - The *Author* field will now get a red border when empty or set to the default value.
+  - The *Based On* field will now get a red border when the version has an unexpected format, when the selected version is illogical, or when no version has been selected in situations where this is necessary (e.g. the first version of a new range).
 
 - All validation remarks will now cause a warning icon to appear in the tree. These warning icons will automatically bubble up to the higher tree levels. That way, errors will be visible even when tree items are collapsed.
 - When you create a new version, the *Based On* field will now automatically be populated when possible.

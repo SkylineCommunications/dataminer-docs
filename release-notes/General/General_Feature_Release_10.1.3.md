@@ -28,7 +28,7 @@ Read actions are sent to the main cluster only, while write, delete and other mo
 
 When an error occurs on one of the replicated clusters, a single alarm will be generated, indicating that there is a chance that not all data was replicated. If subsequent errors occur on the replicated clusters, no new similar alarms will be generated until after the DMA has been restarted.
 
-**Configuration**
+##### Configuration
 
 The configuration of the Elasticsearch clusters can be stored in a new DBConfiguration.xml file, located in the C:\\Skyline DataMiner\\Database folder. This configuration file takes priority over the existing Db.xml file when it comes to Elasticsearch.
 
@@ -243,7 +243,7 @@ In DataMiner Cube, EPM chains with the same value in the protocol’s Chain@grou
 
 Also, it is now possible to specify one filter value per chain that should be selected by default in filter boxes that contain only that specific value.
 
-**Example of a Protocol.Chains.Chain element with a group name and a default filter value**
+##### Example of a Protocol.Chains.Chain element with a group name and a default filter value
 
 See the following example. The chain named “MyChain” will be part of the group named “MyChainGroup”, and if the filter named “MyField” only has one value, it will automatically be selected when you open the chain in the CPE manager or the topology tab in the sidebar.
 
@@ -372,11 +372,11 @@ When building a GQI query, it is now possible to use a feed as a column filter.
 
 Instead of providing a fixed value to filter a specific column, you can now select the *From feed* option and configure a filter by specifying the following items:
 
-| Filter item | Description                                                                                                                    |
-|-------------|--------------------------------------------------------------------------------------------------------------------------------|
-| Feed        | The name of the feed that will provide the data.<br> If only one feed is available, it will automatically be selected.         |
-| Type        | The type of data that needs to be selected.<br> If the feed only provides one type of data, it will automatically be selected. |
-| Property    | The property by which the column will be filtered (depending on the type of data).                                             |
+| Filter item | Description                                                                                                                |
+|-------------|----------------------------------------------------------------------------------------------------------------------------|
+| Feed        | The name of the feed that will provide the data. If only one feed is available, it will automatically be selected.         |
+| Type        | The type of data that needs to be selected. If the feed only provides one type of data, it will automatically be selected. |
+| Property    | The property by which the column will be filtered (depending on the type of data).                                         |
 
 Example: If the column in question has to be filtered using the element name found in the URL of the dashboard, then you can set *Feed* to “URL”, *Type* to “Elements” and *Property* to “Name”.
 
@@ -572,7 +572,7 @@ Up to now, when parameters were grouped in a line chart, trend statistics or par
 
 From now on, due to a number of enhancements, it is also possible to include profile parameters when grouping parameters on component level.
 
-#### DataMiner Cube - Profiles app: A warning will now appear when no value is assigned to a man­datory parameter \[ID_28787\]
+#### DataMiner Cube - Profiles app: A warning will now appear when no value is assigned to a mandatory parameter \[ID_28787\]
 
 When, in the Profiles app, you indicate that a profile parameter is mandatory, if that parameter does not have a value assigned, a warning will now appear, saying that it is recommended to assign a value to mandatory parameters.
 
@@ -810,7 +810,7 @@ In some cases, saved GQI queries containing deprecated identifiers could no long
 
 #### SyncInfo agent IP address file would incorrectly be updated with the current timestamp on DMA startup \[ID_28809\]
 
-At DataMiner startup, the IP address entries in the C:\\Skyline DataMiner\\Files\\SyncInfo\\<br>{DO_NOT_REMOVE_DC5A2A6C-4583-493C-A9CD-7AEBBF905D1E}.xml file would incorrectly be updated with the current timestamp. In some cases, this could cause IP addresses to re-appear in DMS.xml files across the DMS after starting up a stopped DataMiner Agent that still had those IP addresses listed as active.
+At DataMiner startup, the IP address entries in the C:\\Skyline DataMiner\\Files\\SyncInfo\\{DO_NOT_REMOVE_DC5A2A6C-4583-493C-A9CD-7AEBBF905D1E}.xml file would incorrectly be updated with the current timestamp. In some cases, this could cause IP addresses to re-appear in DMS.xml files across the DMS after starting up a stopped DataMiner Agent that still had those IP addresses listed as active.
 
 #### Dashboards app - Line chart component: Problem with the “Minimum visible gap size” setting \[ID_28810\]
 

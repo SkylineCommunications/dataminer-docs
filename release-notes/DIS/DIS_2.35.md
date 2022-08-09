@@ -21,7 +21,7 @@ Available installation packages:
 | Microsoft Visual Studio version           | DIS installation package                     |
 |-------------------------------------------|----------------------------------------------|
 | Visual Studio 2022                        | DataMinerIntegrationStudio17 \<version>.vsix |
-| Visual Studio 2019<br> Visual Studio 2017 | DataMinerIntegrationStudio16 \<version>.vsix |
+| Visual Studio 2019 or Visual Studio 2017  | DataMinerIntegrationStudio16 \<version>.vsix |
 
 > [!NOTE]
 > Support for Microsoft Visual Studio 2015 has been dropped. The last DIS version supporting Visual Studio 2015 is DIS version 2.34.
@@ -32,25 +32,25 @@ Available installation packages:
 
 The following checks and error messages have been added.
 
-| Check ID | Error message name                 | Error message                                                                                                                                                       |
-|----------|------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 1.26.1   | InvalidPingGroupType               | Ping group for '{connectionType}' connection is not a '{connectionType}' poll group. Group ID '{groupId}'.<br> (replaces legacy check 2701)                         |
-| 1.26.2   | PingSerialPairHasNoResponse        | Ping pair for '{connectionType}' connection contains no response. Pair ID '{pairId}'.<br> (replaces legacy check 2704)                                              |
-| 1.26.3   | MultiplePingPairsForConnection     | Multiple ping pairs for connection with name '{connectionName}' and type '{connectionType}'. Connection ID '{connectionId}'.<br> (replaces legacy checks 2702/2703) |
-| 1.26.4   | MultiplePingPairsForConnection_Sub | Multiple ping pairs for connection '{connectionId}'. Pair '{pairId}'.<br> (replaces legacy checks 2702/2703)                                                        |
-| 3.35.1   | InvalidCondition                   | Invalid condition '{conditionString}'. Reason '{invalidityReason}'. QAction ID '{qactionId}'.                                                                       |
-| 3.35.2   | NonExistingId                      | Tag 'QAction/Condition' references a non-existing 'Param' with PID '{paramId}'. QAction ID '{qactionId}'.                                                           |
-| 4.9.1    | InvalidCondition                   | Invalid condition '{conditionString}'. Reason '{invalidityReason}'. Group ID '{groupId}'.                                                                           |
-| 4.9.2    | NonExistingId                      | Tag 'Group/Condition' references a non-existing 'Param' with PID '{paramId}'. Group ID '{groupId}'.                                                                 |
-| 5.5.1    | InvalidCondition                   | Invalid condition '{conditionString}'. Reason '{invalidityReason}'. Trigger ID '{triggerId}'.                                                                       |
-| 5.5.2    | NonExistingId                      | Tag 'Trigger/Condition' references a non-existing 'Param' with PID '{paramId}'. Trigger ID '{triggerId}'.                                                           |
-| 6.4.1    | InvalidCondition                   | Invalid condition '{conditionString}'. Reason '{invalidityReason}'. Action ID '{actionId}'.                                                                         |
-| 6.4.2    | NonExistingId                      | Tag 'Action/Condition' references a non-existing 'Param' with PID '{paramId}'. Action ID '{actionId}'.                                                              |
-| 7.4.1    | InvalidCondition                   | Invalid condition '{conditionString}'. Reason '{invalidityReason}'. Timer ID '{timerId}'.                                                                           |
-| 7.4.2    | NonExistingId                      | Tag 'Timer/Condition' references a non-existing 'Param' with PID '{paramId}'. Timer ID '{timerId}'.                                                                 |
-| 7.4.3    | UnrecommendedCondition             | Unrecommended condition on Timer. Timer ID '{timerId}'.                                                                                                             |
-| 9.7.1    | InvalidCondition                   | Invalid condition '{conditionString}'. Reason '{invalidityReason}'. Pair ID '{pairId}'.                                                                             |
-| 9.7.2    | NonExistingId                      | Tag 'Pair/Condition' references a non-existing 'Param' with PID '{paramId}'. Pair ID '{pairId}'.                                                                    |
+| Check ID | Error message name | Error message |
+|--|--|--|
+| 1.26.1 | InvalidPingGroupType | Ping group for '{connectionType}' connection is not a '{connectionType}' poll group. Group ID '{groupId}'. (Replaces legacy check 2701.) |
+| 1.26.2 | PingSerialPairHasNoResponse | Ping pair for '{connectionType}' connection contains no response. Pair ID '{pairId}'. (Replaces legacy check 2704.) |
+| 1.26.3 | MultiplePingPairsForConnection | Multiple ping pairs for connection with name '{connectionName}' and type '{connectionType}'. Connection ID '{connectionId}'. (Replaces legacy checks 2702/2703.) |
+| 1.26.4 | MultiplePingPairsForConnection_Sub | Multiple ping pairs for connection '{connectionId}'. Pair '{pairId}'. (Replaces legacy checks 2702/2703.) |
+| 3.35.1 | InvalidCondition | Invalid condition '{conditionString}'. Reason '{invalidityReason}'. QAction ID '{qactionId}'. |
+| 3.35.2 | NonExistingId | Tag 'QAction/Condition' references a non-existing 'Param' with PID '{paramId}'. QAction ID '{qactionId}'. |
+| 4.9.1 | InvalidCondition | Invalid condition '{conditionString}'. Reason '{invalidityReason}'. Group ID '{groupId}'. |
+| 4.9.2 | NonExistingId | Tag 'Group/Condition' references a non-existing 'Param' with PID '{paramId}'. Group ID '{groupId}'. |
+| 5.5.1 | InvalidCondition | Invalid condition '{conditionString}'. Reason '{invalidityReason}'. Trigger ID '{triggerId}'. |
+| 5.5.2 | NonExistingId | Tag 'Trigger/Condition' references a non-existing 'Param' with PID '{paramId}'. Trigger ID '{triggerId}'. |
+| 6.4.1 | InvalidCondition | Invalid condition '{conditionString}'. Reason '{invalidityReason}'. Action ID '{actionId}'. |
+| 6.4.2 | NonExistingId | Tag 'Action/Condition' references a non-existing 'Param' with PID '{paramId}'. Action ID '{actionId}'. |
+| 7.4.1 | InvalidCondition | Invalid condition '{conditionString}'. Reason '{invalidityReason}'. Timer ID '{timerId}'. |
+| 7.4.2 | NonExistingId | Tag 'Timer/Condition' references a non-existing 'Param' with PID '{paramId}'. Timer ID '{timerId}'. |
+| 7.4.3 | UnrecommendedCondition | Unrecommended condition on Timer. Timer ID '{timerId}'. |
+| 9.7.1 | InvalidCondition | Invalid condition '{conditionString}'. Reason '{invalidityReason}'. Pair ID '{pairId}'. |
+| 9.7.2 | NonExistingId | Tag 'Pair/Condition' references a non-existing 'Param' with PID '{paramId}'. Pair ID '{pairId}'. |
 
 ### XML Schema
 

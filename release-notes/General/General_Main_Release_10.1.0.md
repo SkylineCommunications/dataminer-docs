@@ -458,8 +458,8 @@ AppInstallContent
 
 | File/Folder | Contents |
 |--|--|
-| AppInfo.xml | General information about the application:<br> -  Name<br> -  Version<br> -  Description<br> -  Minimum DataMiner version<br>Format: x.x.x.x-xxxx (e.g 10.0.11.0-9451)<br> -  Configuration parameters<br> -  … |
-| Scripts | \-  Install.xml: a script containing all installation instructions<br> -  Config.xml: a script that will be launched when the application or solution is configured or reconfigured<br> -  InstallDependencies: a folder containing all DLL files used by the installation script<br> -  ConfigureDependencies: a folder containing all DLL files used by the configuration script |
+| AppInfo.xml | General information about the application:<br> - Name<br> - Version<br> - Description<br> - Minimum DataMiner version (format: x.x.x.x-xxxx, e.g 10.0.11.0-9451)<br> - Configuration parameters<br> - … |
+| Scripts | \-  Install.xml: a script containing all installation instructions<br> - Config.xml: a script that will be launched when the application or solution is configured or reconfigured<br> - InstallDependencies: a folder containing all DLL files used by the installation script<br> - ConfigureDependencies: a folder containing all DLL files used by the configuration script |
 | AppInstallContents | All auxiliary files needed by the installation script. |
 
 > [!NOTE]
@@ -1839,7 +1839,7 @@ If you pick the element Visio file option, the following options are available:
 |--|--|
 | New blank | Opens a new, blank drawing in Microsoft Visio, which will automatically be assigned to the current element. |
 | New upload | Opens the *Open* dialog box, which allows you to upload a new drawing to the DMS and automatically assign it to the current element. |
-| Existing | Opens the *Custom* dialog box, which allows you to assign a previously uploaded drawing to the current element:<br> -  Click a drawing in the list, set the default page, and click *OK*.<br> -  Click *Other File...* to upload additional drawings to the DMS |
+| Existing | Opens the *Custom* dialog box, which allows you to assign a previously uploaded drawing to the current element:<br> - Click a drawing in the list, set the default page, and click *OK*.<br> - Click *Other File...* to upload additional drawings to the DMS. |
 
 #### Default browser engine is now Chromium \[ID_26662\]
 
@@ -2804,7 +2804,7 @@ Component settings can now be marked as advanced. When marked as such, they will
 
 - “showAdvancedSettings=true”
 
-#### Dashboards app: Optimalization of component visualizations \[ID_26751\]
+#### Dashboards app: Optimization of component visualizations \[ID_26751\]
 
 After adding a component to a dashboard, you can apply a specific visualization. The list of available visualizations has now been optimized.
 
@@ -2836,7 +2836,7 @@ In the Dashboards app, it is now possible to show multiple states with the same 
 
 For the *State* component, the *Layout flow* options in the *Layout* panel allow you to select whether the different states should be displayed in rows or columns. If they are displayed in rows, they will displayed next to each other until there is no more space and a new row is started. If they are displayed as columns, they will be displayed below each other until there is no more space and a new column is started.
 
-For the *Ring* and *Gauge* component, if parameter feeds are used, additional options in the layout panel allow you to configure whether the differeynt parameters are displayed next to each other or below each other, and how many rows and columns of parameters can be displayed at the same time. These options are not available for other types of feeds; for those only one item is displayed at the same time and you need to scroll to see the next item.
+For the *Ring* and *Gauge* component, if parameter feeds are used, additional options in the layout panel allow you to configure whether the different parameters are displayed next to each other or below each other, and how many rows and columns of parameters can be displayed at the same time. These options are not available for other types of feeds; for those only one item is displayed at the same time and you need to scroll to see the next item.
 
 #### Dashboards app: Dashboards created by users will now be included in DataMiner backup packages \[ID_26836\]
 
@@ -3468,7 +3468,7 @@ App packages can now be uninstalled using the new AppPackageHelper method Uninst
 public void UninstallApp(AppID appId, bool force)
 ```
 
-**Uninstall script**
+##### Uninstall script
 
 Inside every app package, an uninstall script named *uninstall.xml* should be available in the Scripts folder.
 
@@ -3482,7 +3482,7 @@ public void Uninstall(Engine engine, AppUninstallContext context)
 }
 ```
 
-**Remarks**
+##### Remarks
 
 - When an app package does not contain an uninstall script (or when the uninstall script is not a valid XML file), triggering the non-existing uninstall script will cause the installation folder of the app in question to be removed on all agents in the DMS.
 
@@ -3524,9 +3524,8 @@ Each TreeViewItem has the following properties:
 
 - *ItemType*: Determines the type of item in the tree view. The following values are possible:
 
-    - *Empty*: Only the DisplayValue will be displayed for this item.
-
-    - *CheckBox*: A check box will be shown next to the DisplayValue.
+  - *Empty*: Only the DisplayValue will be displayed for this item.
+  - *CheckBox*: A check box will be shown next to the DisplayValue.
 
 - *ChildItems*: List of TreeViewItems that are child items of this item.
 
@@ -3535,9 +3534,7 @@ Optionally, you can enable the WantsOnChange option for the tree view control, i
 To retrieve the results:
 
 - The UIResult, which can be returned using *engine.ShowUI()*, contains the KeyValue of the selected items.
-
 - The GetString(UIBlockDefinition *destvar*) method to retrieve a semicolon-separated string of the KeyValues.
-
 - The GetChecked(UIBlockDefinition *destvar*, KeyValue *value*) method can be used to check if a specific KeyValue was selected.
 
 Example:
@@ -3664,7 +3661,7 @@ When multiple columns have different discreet values, all these values will be d
 
 When a call is performed via the CPECollectorHelper API, a timeout is calculated based on the amount of requested items using the following formula:
 
-*Total Timeout = ((requested number of items / EPMBulkCount) + 1) \* EPMASyncTimeout*
+`Total Timeout = ((requested number of items / EPMBulkCount) + 1) * EPMASyncTimeout`
 
 In the SLNetClientTest tool, it is now possible to configure the following parameters:
 
@@ -3882,21 +3879,15 @@ When you interact with the Ticketing Manager in scripts, keep the following chan
 
 - To check if a request was successful, you can now retrieve the *TraceData* using the *GetTraceDataLastCall()* method on the *CrudComponentHelper* type used for the request. This returns the TraceData object, which can contain TicketingManagerError objects, each containing a reason for the error and extra data on what caused it. These are the possible errors:
 
-    - *TicketFieldResolverInUseByTickets*: The ticket field resolver still has tickets linked to it. (The property *RelatedTickets* contains the IDs of the tickets.)
+  - *TicketFieldResolverInUseByTickets*: The ticket field resolver still has tickets linked to it. (The property *RelatedTickets* contains the IDs of the tickets.)
+  - *NotInitialized*: The Ticketing Manager is not initialized.
+  - *LegacyError*: A legacy error has occurred. (The property *LegacyErrorMessage* contains the error message.)
+  - *TicketLinkedToNonExistingTicketFieldResolver*: The created/updated ticket has a link to a ticket field resolver that does not exist. (The property *TicketFieldResolverId* contains the ID of that ticket field resolver.)
+  - *TicketFieldResolverIsUnknownOrNotMasked*: The ticket field resolver is unknown or not masked.
+  - *UnexpectedException*: An unexpected exception occurred. (The property *Exception* contains the exception.)
+  - *TicketLinkedToMaskedTicketFieldResolver*: The created/updated ticket has a link to a ticket field resolver that is masked. (The property *TicketFieldResolverId* contains the ID of that ticket field resolver.
 
-    - *NotInitialized*: The Ticketing Manager is not initialized.
-
-    - *LegacyError*: A legacy error has occurred. (The property *LegacyErrorMessage* contains the error message.)
-
-    - *TicketLinkedToNonExistingTicketFieldResolver*: The created/updated ticket has a link to a ticket field resolver that does not exist. (The property *TicketFieldResolverId* contains the ID of that ticket field resolver.)
-
-    -  *TicketFieldResolverIsUnknownOrNotMasked*: The ticket field resolver is unknown or not masked.
-
-    - *UnexpectedException*: An unexpected exception occurred. (The property *Exception* contains the exception.)
-
-    - *TicketLinkedToMaskedTicketFieldResolver*: The created/updated ticket has a link to a ticket field resolver that is masked. (The property *TicketFieldResolverId* contains the ID of that ticket field resolver.
-
-    Calling *ToString()* on the *TraceData* object will return a formatted string that shows all errors and associated data.
+  Calling *ToString()* on the *TraceData* object will return a formatted string that shows all errors and associated data.
 
 - When paging is started using *TicketingGatewayHelper.NewPagingRequest()*, the out parameter will no longer return the total number of tickets.
 
@@ -3910,7 +3901,7 @@ When you interact with the Ticketing Manager in scripts, keep the following chan
 
 - The open state of a ticket can no longer be linked to the state of an alarm.
 
-- If *GenericEnumEntry\<int>* is used in *VisualData* on a* TicketFieldResolver*, this will now always be returned as a long integer instead of an integer.
+- If *GenericEnumEntry\<int>* is used in *VisualData* on a *TicketFieldResolver*, this will now always be returned as a long integer instead of an integer.
 
 - If the ticket field resolver defines a state *TicketFieldDescriptor*, tickets must now always contain a field indicating their state. When tickets are initially migrated to Elasticsearch, a state will automatically be defined for any tickets where this was not yet the case.
 
@@ -3940,8 +3931,8 @@ Finally, the following changes have also been implemented:
 
 - The log file SLTicketingGateway.txt has now been replaced by SLTicketingManager.txt.
 
-    > [!NOTE]
-    > The Ticketing Gateway entry in the Cube Logging app now refers to the new file.
+  > [!NOTE]
+  > The Ticketing Gateway entry in the Cube Logging app now refers to the new file.
 
 #### Jobs app: New methods to manage job attachments \[ID_24791\]\[ID_25961\]
 
@@ -3957,7 +3948,7 @@ The *JobManagerHelper* has been expanded with new methods that can be used to m
 
 Please note the following regarding job attachments:
 
-- The size limit of job attachments depends on the *Documents.MaxSize* setting in the file* MaintenanceSettings.xml*. By default, this is set to 20 MB.
+- The size limit of job attachments depends on the *Documents.MaxSize* setting in the file *MaintenanceSettings.xml*. By default, this is set to 20 MB.
 
 - Deleting a job will remove all attachments of this job from the system. These cannot be recovered afterwards.
 
@@ -3980,11 +3971,11 @@ In the Monitoring app, Spectrum Analyzer elements now have a spectrum page that 
 
 The following tabs are available:
 
-| Tab         | Content                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-|-------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Information | Shows basic information regarding measurement points, markers, thresholds and parameters.                                                                                                                                                                                                                                                                                                                                                                                                    |
-| Traces      | Allows you to display or hide the current trace, the minimum trace, the maximum trace and the average trace.                                                                                                                                                                                                                                                                                                                                                                                 |
-| Presets     | Lists the available presets.<br> By default, only the private presets are listed (i.e. the presets that are only available to the current user). To also have the shared presets listed, select the *Show shared presets* option. Those will be indicated with a *Shared* tag.<br> When you select a preset, below the list, a *Load preset* button will allow you to load the selected preset. |
+| Tab | Content |
+|--|--|
+| Information | Shows basic information regarding measurement points, markers, thresholds and parameters. |
+| Traces | Allows you to display or hide the current trace, the minimum trace, the maximum trace and the average trace. |
+| Presets | Lists the available presets. By default, only the private presets are listed (i.e. the presets that are only available to the current user). To also have the shared presets listed, select the *Show shared presets* option. Those will be indicated with a *Shared* tag. When you select a preset, below the list, a *Load preset* button will allow you to load the selected preset. |
 
 #### Monitoring app: Alarm history now also available \[ID_25002\]
 
@@ -4030,45 +4021,49 @@ In the Jobs app, it is now possible to have different job domains, each with the
 
 - In configuration mode, you can select the job domain in the top-left corner of the screen, and then configure the job sections within the selected domain. The *New*, *Edit*, *Duplicate* and *Delete* buttons on the right of the job domain selection box allow you to add a new domain, edit the selected domain (change its name and/or hide it), duplicate a domain or delete the selected domain.
 
-**Duplicating job domains**
+##### Duplicating job domains
 
 Clicking the *Duplicate* button will allow you to select one of the following options:
 
-| Option                           | Function                                                                                                                                                                                                                                                                                                                                                                                       |
-|----------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Share sections<br>across domains | Creates a new domain that shares its sections with the original domain.<br> Note: Changes made to the sections of the new domain will also be applied to the sections of the original domain (except changes made to the *Color*, *Icon* and *Allow multiple instances* properties of a section). |
-| Create copies of<br>the sections | Creates a new domain by duplicating the entire original domain, including its sections.<br> Note: Changes made to the sections of the new domain will not be applied to the sections of the original domain.                                                                                                                                                                                   |
+- **Share sections across domains**: Creates a new domain that shares its sections with the original domain.
+
+  > [!NOTE]
+  > Changes made to the sections of the new domain will also be applied to the sections of the original domain (except changes made to the *Color*, *Icon* and *Allow multiple instances* properties of a section).
+
+- **Create copies of the sections**: Creates a new domain by duplicating the entire original domain, including its sections.
+
+  > [!NOTE]
+  > Changes made to the sections of the new domain will not be applied to the sections of the original domain.
 
 When the duplication operation has finished, you will automatically be redirected to the newly created domain.
 
 As a result of the above-mentioned changes, adding a new section to a domain has also been changed. The *Add section definition* window now has a *New* tab and an *Existing* tab.
 
-| Tab      | Function                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-|----------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| New      | Use this tab if you want to create a new section from scratch.                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| Existing | Use this tab if you want to add an existing section to the domain in question. In this case, apart from having to select the section to be added, you will also have to indicate whether you want to<br> -  share the section with the other domain(s) containing that section, or<br> -  make a separate copy of the section (with a new name). |
+- **New**: Use this tab if you want to create a new section from scratch.
+- **Existing**: Use this tab if you want to add an existing section to the domain in question. In this case, apart from having to select the section to be added, you will also have to indicate whether you want to:
 
-**New web methods to be used when duplicating job domains**
+  - share the section with the other domain(s) containing that section, or
+  - make a separate copy of the section (with a new name).
+
+##### New web methods to be used when duplicating job domains
 
 - **DuplicateJobsDomain(string connection, DMAJobDomain domain, string domainID, bool byRef)**
 
-    This method will duplicate a job domain, either by reference or by hard copy, and return the ID of the new job domain if the duplication operation was successful.
+  This method will duplicate a job domain, either by reference or by hard copy, and return the ID of the new job domain if the duplication operation was successful.
 
-    - If the *byRef* parameter is set to false, the method will create an entire new job domain that is in no way linked to the original job domain.
-
-    - If the *byRef* parameter is set to true, the method will create a new job domain that shares its sections with the original job domain.
+  - If the *byRef* parameter is set to false, the method will create an entire new job domain that is in no way linked to the original job domain.
+  - If the *byRef* parameter is set to true, the method will create a new job domain that shares its sections with the original job domain.
 
 - **DuplicateJobsSectionDefinition(string connection, string domainID, string sourceDomainID, DMASectionDefinition sectionDefinition, bool byRef)**
 
-    This method will duplicate a job section definition, either by reference or by hard copy.
+  This method will duplicate a job section definition, either by reference or by hard copy.
 
-    - If the *byRef* parameter is set to false, the method will add an entire new job section definition to the job domain specified by *domainID*. This job section definition will no way be linked to the original job section definition in the domain specified by *sourceDomainID*.
-
-    - If the *byRef* parameter is set to true, the method will link the existing job section definition specified by *sectionDefinition* to the job domain specified by *domainID*. This same job section definition will then be shared between the two job domains.
+  - If the *byRef* parameter is set to false, the method will add an entire new job section definition to the job domain specified by *domainID*. This job section definition will no way be linked to the original job section definition in the domain specified by *sourceDomainID*.
+  - If the *byRef* parameter is set to true, the method will link the existing job section definition specified by *sectionDefinition* to the job domain specified by *domainID*. This same job section definition will then be shared between the two job domains.
 
 - **GetAffectedJobDomains(string connection, string sectionDefinitionID)**
 
-    This method will return the names of all the job domains that contain the job section definition specified by *sectionDefinitionID*.
+  This method will return the names of all the job domains that contain the job section definition specified by *sectionDefinitionID*.
 
 > [!NOTE]
 >
@@ -4209,7 +4204,7 @@ If there is an error deleting resources using the *ResourceManagerHelper* class
 
 If a resource that is used in past bookings is deleted, the deletion now fails by default, returning the error *ResourceDeleteInUseOrMaintenanceMode* with the boolean property *HasPastBookings* set to true.
 
-In addition, the following new method is now available in the *ResourceManagerHelper* class: <br>*Resource\[\] RemoveResources(Resource\[\] resources, bool ignorePastReservations);*
+In addition, the following new method is now available in the *ResourceManagerHelper* class: `Resource[] RemoveResources(Resource[] resources, bool ignorePastReservations);`
 
 If *ignorePastReservations* is false, this method works in the same way as existing calls to remove resources. If it is set to true, past bookings will be ignored during the deletion checks. This can be used to delete resources that are only used in past bookings; however, note that these bookings may then contain invalid references to resources.
 
@@ -4253,28 +4248,28 @@ It is now possible to export and import profile parameters to and from a file.
 
 The following methods have been added to the ProfileManagerHelper:
 
-**export(IEnumerable\<Guid> ids)**
+- `export(IEnumerable<Guid> ids)`
 
-This method returns an object of type “ProfileParameterExportResult”, which contains the bytes of the export file. These bytes can then be saved to a file. To view the contents of that file, first unzip it.
+  This method returns an object of type “ProfileParameterExportResult”, which contains the bytes of the export file. These bytes can then be saved to a file. To view the contents of that file, first unzip it.
 
-When you export profile parameters to a file, the following exceptions can be thrown:
+  When you export profile parameters to a file, the following exceptions can be thrown:
 
-| Exception                         | Description                                                                                                            |
-|-----------------------------------|------------------------------------------------------------------------------------------------------------------------|
-| ProfileParameterNotFoundException | The ID of one of the profile parameters that was passed to the method could not be found.                              |
-| MediationSnippetNotFoundException | One of the profile parameters that was passed to the method has a link to a mediation snippet that could not be found. |
+  | Exception | Description |
+  |--|--|
+  | ProfileParameterNotFoundException | The ID of one of the profile parameters that was passed to the method could not be found. |
+  | MediationSnippetNotFoundException | One of the profile parameters that was passed to the method has a link to a mediation snippet that could not be found. |
 
-**import(byte\[\] file)**
+- `import(byte[] file)`
 
-This method returns an object of type “ProfileParameterImportResult”, which contains the imported profile parameters and mediation snippets.
+  This method returns an object of type “ProfileParameterImportResult”, which contains the imported profile parameters and mediation snippets.
 
-When you import profile parameters from a file, the following exceptions can be thrown:
+  When you import profile parameters from a file, the following exceptions can be thrown:
 
-| Exception                        | Description                                                                    |
-|----------------------------------|--------------------------------------------------------------------------------|
-| InvalidDataException             | The file to be imported does not have the correct format.                      |
-| InvalidProfileParameterException | One of the profile parameters to be imported does not have the correct format. |
-| InvalidMediationSnippetException | One of the mediation snippets to be imported does not have the correct format. |
+  | Exception                        | Description                                                                    |
+  |----------------------------------|--------------------------------------------------------------------------------|
+  | InvalidDataException             | The file to be imported does not have the correct format.                      |
+  | InvalidProfileParameterException | One of the profile parameters to be imported does not have the correct format. |
+  | InvalidMediationSnippetException | One of the mediation snippets to be imported does not have the correct format. |
 
 > [!NOTE]
 >
@@ -4288,63 +4283,52 @@ Server-side support has been added for mediated virtual functions.
 To configure mediated virtual functions, do the following:
 
 1. For every parameter, every column and/or every cell you want to see in the virtual function element, create a profile parameter.
+1. If, in the virtual function element, the value of a profile parameter should be transformed, then add a mediation snippet to that profile parameter.
+1. Create a profile definition for the node of the function and a profile definition for every interface of the function.
 
-2. If, in the virtual function element, the value of a profile parameter should be transformed, then add a mediation snippet to that profile parameter.
+   - In a profile definition, you can group profile parameters in tables if you want them to be shown as tables in the virtual function element.
 
-3. Create a profile definition for the node of the function and a profile definition for every interface of the function.
+1. Create a virtual function definition. In it, you can define the following:
 
-    - In a profile definition, you can group profile parameters in tables if you want them to be shown as tables in the virtual function element.
+   - The profile definition for the node.
+   - The amount and type of interfaces and their profile definition.
+   - The protocols supported. For every supported protocol, the following can to be defined:
 
-4. Create a virtual function definition. In it, you can define the following:
+     | Items             | Description                                                                               |
+     |-------------------|-------------------------------------------------------------------------------------------|
+     | Entry-point table | The (optional) table that holds the multiple instances of a function in a single element. |
+     | Interface filters | The (optional) additional table filters that have to be used for the interface tables.    |
 
-    - The profile definition for the node.
+   Next to that, you can also define what the virtual protocol should look like:
 
-    - The amount and type of interfaces and their profile definition.
+   - Define the pages you want to see in the protocol.
+   - Define which profile parameters from the profile definitions of the node/interfaces should be on each page.
+   - Define which tables from the profile definitions of the node/interfaces should be on each page.
 
-    - The protocols supported. For every supported protocol, the following can to be defined:
+   When you save the virtual function definition, a virtual function protocol is generated (with type “virtual-function”) and the metadata associated with that protocol is stored in an automatically created “virtual function protocol meta” object. That object will contain the following information:
 
-        | Items           | Description                                                                               |
-        |-------------------|-------------------------------------------------------------------------------------------|
-        | Entry-point table | The (optional) table that holds the multiple instances of a function in a single element. |
-        | Interface filters | The (optional) additional table filters that have to be used for the interface tables.    |
+   - The IDs of the read/write parameters that were generated for the different profile parameters and nodes/interfaces.
+   - The tables that were generated.
+   - Profile parameter information (type, ...)
 
-    Next to that, you can also define how the virtual protocol should look like:
+   This protocol metadata will be used:
 
-    - Define the pages you want to see in the protocol.
+   - to resolve IDs of generated parameters when binding a resource
+   - to be able to re-use parameter IDs when a new version of the protocol is generated
+   - to validate the new versions of the generated protocol
 
-    - Define which profile parameters from the profile definitions of the node/interfaces should be on each page.
+1. Create a virtual function resource with a specific virtual function definition.
 
-    - Define which tables from the profile definitions of the node/interfaces should be on each page.
+   The virtual function element with automatically be created using the generated virtual function protocol.
 
-    When you save the virtual function definition, a virtual function protocol is generated (with type “virtual-function”) and the metadata associated with that protocol is stored in an automatically created “virtual function protocol meta” object. That object will contain the following information:
+1. Bind the virtual element to an element by updating the virtual resource:
 
-    - The IDs of the read/write parameters that were generated for the different profile parameters and nodes/interfaces.
+   - Specify the element ID.
+   - Specify the entry point table index (if an entry point table was defined).
 
-    - The tables that were generated.
+   All the parameters and tables of the virtual function element, which were set to “not-initialized/empty”, will now be set to the replicated/mediated values of the bound element.
 
-    - Profile parameter information (type, ...)
-
-    This protocol metadata will be used:
-
-    - to resolve IDs of generated parameters when binding a resource
-
-    - to be able to re-use parameter IDs when a new version of the protocol is generated
-
-    - to validate the new versions of the generated protocol
-
-5. Create a virtual function resource with a specific virtual function definition.
-
-    The virtual function element with automatically be created using the generated virtual function protocol.
-
-6. Bind the virtual element to an element by updating the virtual resource:
-
-    - Specify the element ID.
-
-    - Specify the entry point table index (if an entry point table was defined).
-
-    All the parameters and tables of the virtual function element, which were set to “not-initialized/empty”, will now be set to the replicated/mediated values of the bound element.
-
-**Virtual function definitions**
+##### Virtual function definitions
 
 Virtual function definitions can be used on service definition nodes. They can be managed by means of the ProtocolFunctionHelper.VirtualFunctionDefinitions API.
 
@@ -4352,35 +4336,32 @@ Virtual function definitions are stored in Indexing Engine under the cvirtualfun
 
 All logging with regard to virtual function definitions will be added to SLFunctionManager.txt.
 
-**Virtual function protocol metadata**
+##### Virtual function protocol metadata
 
 Virtual function protocol metadata is stored in Indexing Engine under the cvirtualfunctionprotocolmeta index. When you create a database backup, this metadata will automatically be included in the package when the *Include SRM in backup* option is enabled.
 
-**Virtual function resources**
+##### Virtual function resources
 
 A virtual function resource is an extension of a normal resource. It has the following additional properties:
 
-| Property                | Content                                                                                                                             |
-|-------------------------|-------------------------------------------------------------------------------------------------------------------------------------|
-| VirtualFunctionID       | The ID of the VirtualFunctionDefinition of which it is an instance.                                                                 |
-| PhysicalDeviceDmaId     | The ID of the element that is currently bound to the VirtualFunctionElement.                                                        |
-| PhysicalDeviceElementId |                                                                                                                                     |
-| ElementName             | The name of the VirtualFunctionElement that will be created.<br> If none is specified, then the resource name will be used instead. |
+| Property | Content |
+|--|--|
+| VirtualFunctionID | The ID of the VirtualFunctionDefinition of which it is an instance. |
+| PhysicalDeviceDmaId | The ID of the element that is currently bound to the VirtualFunctionElement. |
+| PhysicalDeviceElementId |  |
+| ElementName | The name of the VirtualFunctionElement that will be created. If none is specified, then the resource name will be used instead. |
 
 Virtual function resources can be used on ReservationInstances and ServiceReservation-Instances, and can be managed by means of the ResourceManagerHelper API. They are saved in Resources.xml.
 
 All logging with regard to virtual function resources will be added to SLResourceManager.txt.
 
-**Logging with regard to element binding**
+##### Logging with regard to element binding
 
 Logging with regard to element binding will be added to the following log files:
 
 - SLResourceManager.txt can contain information about errors that occurred during the element orchestration or during binding/unbinding operations.
-
 - SLFunctionManager.txt can contain information about errors that occurred during binding/unbinding operations. If the resource update request was sent from another agent than the one hosting the virtual function element, then the log file of the hosting agent might contain the error. You might also have to check SLDataMiner.txt.
-
 - SLProfileManager.txt can contain information about errors that occurred during the mediation step of the parameter replication.
-
 - The log file of the virtual function element can contain information about errors that occurred during binding, unbinding or replication operations in general.
 
 #### OnStartActionsFailureEvent will now be executed when the start actions of a ReservationInstance fail \[ID_24790\]
@@ -4396,15 +4377,21 @@ public void OnSrmStartActionsFailure(Engine engine, List<StartActionsFailureErro
 }
 ```
 
-A StartActionsFailureErrorData instance contains an ErrorReason, which explains what went wrong with the start actions. These are the possible error reasons:
+A StartActionsFailureErrorData instance contains an *ErrorReason*, which explains what went wrong with the start actions. These are the possible error reasons:
 
-| ErrorReason                 | Description                                                                                                                                                                                                                       |
-|-----------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| ResourceElementNotActive    | The element linked to the resource was not active when the booking was started.<br> Note: The resource (as well as the element ID) can be retrieved from the Resource property. The ReservationInstanceId will also be filled in. |
-| ReservationInstanceNotFound | The ReservationInstance could not be retrieved when the start actions were launched.                                                                                                                                              |
-| UnexpectedException         | An exception was thrown while executing the start actions.<br> Note: This exception can be retrieved from the Exception property. The ReservationInstanceId is available in the ErrorData object.                                 |
+- **ResourceElementNotActive**: The element linked to the resource was not active when the booking was started.
 
-**Assigning an Automation script to the OnStartActionsFailureEvent**
+  > [!NOTE]
+  > The resource (as well as the element ID) can be retrieved from the *Resource* property. The ReservationInstanceId will also be filled in.
+
+- **ReservationInstanceNotFound**: The ReservationInstance could not be retrieved when the start actions were launched.
+
+- **UnexpectedException**: An exception was thrown while executing the start actions.
+
+  > [!NOTE]
+  > This exception can be retrieved from the Exception property. The ReservationInstanceId is available in the ErrorData object.
+
+##### Assigning an Automation script to the OnStartActionsFailureEvent
 
 The following example shows how to assign an Automation script to the OnStartActionsFailureEvent.
 
@@ -4438,14 +4425,14 @@ All changes made to ReservationInstances will now be logged by means of HistoryC
 
 A HistoryChange records contains the following fields:
 
-| Field        | Description                                                                                                                          |
-|--------------|--------------------------------------------------------------------------------------------------------------------------------------|
-| ID           | ID of the HistoryChange record.                                                                                                      |
-| SubjectId    | ID of the ReservationInstance that was changed.                                                                                      |
-| Time         | Time at which the change was made.                                                                                                   |
-| FullUsername | Full user name of the person who made the change.<br> If the change was triggered by the DataMiner system, this will be “DataMiner”. |
-| DmaId        | ID of the DataMiner Agent on which the change was triggered.                                                                         |
-| Changes      | List of changes that were made. In case of a ReservationInstance, this can be a resource usage change or a status change.            |
+| Field | Description |
+|--|--|
+| ID | ID of the HistoryChange record. |
+| SubjectId | ID of the ReservationInstance that was changed. |
+| Time | Time at which the change was made. |
+| FullUsername | Full user name of the person who made the change. If the change was triggered by the DataMiner System, this will be “DataMiner”. |
+| DmaId | ID of the DataMiner Agent on which the change was triggered. |
+| Changes | List of changes that were made. In case of a ReservationInstance, this can be a resource usage change or a status change. |
 
 > [!NOTE]
 >
@@ -4466,7 +4453,7 @@ Service & Resource Management now supports
 
 - time-dependent capabilities.
 
-**Capabilities of type string**
+##### Capabilities of type string
 
 It is now possible to define capabilities of type string:
 
@@ -4479,7 +4466,7 @@ It is now possible to define capabilities of type string:
 > [!NOTE]
 > From now on, three types of capabilities can be defined: discreet, rangepoint and string. Up to now, when the value provided/required was a number, a rangepoint capability was used, and if it was not a number, a discreet capability was used. String capabilities will now be used when the value provided/required for a rangepoint capability is not a number and the value provided/required for a discreet capability is NULL or an empty string.
 
-**Time-dynamic capabilities**
+##### Time-dynamic capabilities
 
 Time-dynamic capabilities are capabilities of which the value can differ over time, depending on the reservations that are using the capability. Currently, only capabilities of type string can be turned into time-dynamic capabilities (by setting their “IsTimeDynamic” property to true).
 
@@ -4492,7 +4479,7 @@ When a time-dynamic capability is booked by a ReservationInstance that requires 
 > - It is not possible to schedule multiple overlapping ReservationInstances using the same time-dynamic capability on the same resource with a different required string. This would cause quarantine conflicts. When you try to save a ReservationInstance that conflicts with existing ReservationInstances, the software will resolve the conflict by comparing the quarantine priority of all existing ReservationInstances to the one of the ReservationInstance you are trying to save. If the quarantine priority of the ReservationInstance you are trying to save is higher than that of all existing ones, then all existing ones will go into quarantine. Otherwise, the new ReservationInstance will go into quarantine.
 > - Whether a capability is time-dynamic is defined on resource level.
 
-**New ResourceManagerHelper methods**
+##### New ResourceManagerHelper methods
 
 In the context of time-dynamic capabilities, two new methods have been added to the ResourceManagerHelper:
 
@@ -4529,14 +4516,14 @@ The rebinding history of VirtualFunctionResources will now be logged by means of
 
 A HistoryChange records contains the following fields:
 
-| Field        | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-|--------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| ID           | ID of the HistoryChange record.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-| SubjectId    | ID of the VirtualFunctionResource that was changed.                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| Time         | Time at which the change was made.                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-| FullUsername | Full user name of the person who made the change.<br> If the change was triggered by the DataMiner system, this will be “DataMiner”.                                                                                                                                                                                                                                                                                                                                                                           |
-| DmaId        | ID of the DataMiner Agent on which the change was triggered.                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
-| Changes      | List of changes that were made. In case of a VirtualFunctionResource, this can be a RebindChange containing the following information about the binding:<br> -  BindBefore (the element ID before the rebind)<br> -  BindAfter (the element ID after the rebind)<br> -  the type of change (Create/Update/Delete) |
+| Field | Description |
+|--|--|
+| ID | ID of the HistoryChange record. |
+| SubjectId | ID of the VirtualFunctionResource that was changed. |
+| Time | Time at which the change was made. |
+| FullUsername | Full user name of the person who made the change. If the change was triggered by the DataMiner System, this will be “DataMiner”. |
+| DmaId | ID of the DataMiner Agent on which the change was triggered. |
+| Changes | List of changes that were made. In case of a VirtualFunctionResource, this can be a RebindChange containing the following information about the binding:<br> - BindBefore (the element ID before the rebind)<br> - BindAfter (the element ID after the rebind)<br> - the type of change (Create/Update/Delete) |
 
 Using the HistoryHelper#Resources API you can read all the history objects for resources. See the following example:
 
@@ -4589,13 +4576,14 @@ This same notice will also be added to the ResourceManager log file.
 
 The GetEligibleResources call has been extended with two new arguments:
 
-| Argument                       | Description                                                                                                                                                                                                                |
-|--------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| ResourceFilter                 | New (optional) argument to filter the eligible resources.<br> Resources that do not match the specified filter will not be returned as eligible resource.                                                                  |
+| Argument | Description |
+|--|--|
+| ResourceFilter | New (optional) argument to filter the eligible resources. Resources that do not match the specified filter will not be returned as eligible resource. |
 | RequiredCapabilitiesOrFiltered | Apart from the RequiredCapabilities argument, which can be used to specify an “AND” list of capabilities, this new (optional) RequiredCapabilitiesOrFiltered argument can be used to specify an “OR” list of capabilities. |
 
 > [!NOTE]
 > The following new API call has been added to the ResourceManager-Helper:
+>
 > - public EligibleResourceResult GetEligibleResources(EligibleResourceContext context)
 >
 > This new call allows you to combine all existing and new parameters of the GetEligibleResources calls. The legacy GetEligibleResources and GetEligibleResourceForServiceNodeWithUsageInfo calls will now link to this new call.
@@ -4610,6 +4598,7 @@ ServiceReservationInstance objects now have a LockLifeCycle property, which can 
 
 > [!NOTE]
 > When checking whether the concurrency limit set in the DataMiner License has been reached, a booking will not be taken into account when
+>
 > - it is a ServiceReservationInstance,
 > - the ContributingResourceID is filled in,
 > - the Contributing Resource exists, and
@@ -4737,102 +4726,110 @@ When you launch the tool, the following options will be selected by default:
 
 SLReset.exe is a new tool that can be used to fully reset a DataMiner Agent to its state immediately after installation. It is located in the C:\\Skyline DataMiner\\Files\\ folder.
 
-**Optional argument**
+##### Optional argument
 
 | Argument | Description                                                         |
 |----------|---------------------------------------------------------------------|
 | -y       | Skip any prompts that ask you whether to run online/offline actions |
 
-**Online actions (i.e. actions that are only run when the DMA being reset is running)**
+##### Online actions (i.e. actions that are only run when the DMA being reset is running)
 
 - ResetFailoverOnline
 
-    Deletes the Failover configuration of the DMA if one is present.
+  Deletes the Failover configuration of the DMA if one is present.
 
 - ResetClusterOnline
 
-    Removes the DMA from the DMS if it is part of one.
+  Removes the DMA from the DMS if it is part of one.
 
-**Offline actions (i.e. actions that are always run whether or not the DMA being reset is running)**
+##### Offline actions (i.e. actions that are always run whether or not the DMA being reset is running)
 
 - StopTaskbarUtility
-
 - StopDataMiner
-
 - UndoIISConfig
-
 - UndoFirewallConfig
-
 - Unregister
-
 - UninstallEndpoints
-
 - DeleteTaskbarAppSettings
-
 - FileCleanup
 
-    > [!NOTE]
-    > Deletes any unnecessary files in the C:\\Skyline DataMiner\\ folder.
-    >
-    > This action uses a whitelist to determine what to keep.
-    >
-    > On first execution, the default whitelist is added to the C:\\Skyline DataMiner\\Files\\ResetConfig.txt file. Subsequent executions will then check the whitelist found in that text file, to which you can add any file you want to keep.
-    >
-    > If you delete ResetConfig.txt, SLReset will again use the default whitelist.
+  > [!NOTE]
+  > Deletes any unnecessary files in the C:\\Skyline DataMiner\\ folder.
+  >
+  > This action uses a whitelist to determine what to keep.
+  >
+  > On first execution, the default whitelist is added to the C:\\Skyline DataMiner\\Files\\ResetConfig.txt file. Subsequent executions will then check the whitelist found in that text file, to which you can add any file you want to keep.
+  >
+  > If you delete ResetConfig.txt, SLReset will again use the default whitelist.
 
 - ResetDataMinerXml
-
 - ResetNotifyMail
-
 - ResetDoNotRemoveFiles
-
 - ResetSLNetExeConfig
-
 - ResetProtocolsIconXml
-
 - ResetReportTemplatesXml
-
 - ResetWebpagesWebConfigs
-
 - DeleteExecutableEvents
-
 - DBReset
 
-    > [!NOTE]
-    > This action runs the SLDataGateway.Tools.Database.exe located in the C:\\Skyline DataMiner\\Files\\x64\\ folder, and uses the input arguments harvested from DataMiner (DB.xml, credentials,...).
-    >
-    > For more information on SLDataGateway.Tools.Database.exe, see below.
+  > [!NOTE]
+  > This action runs the SLDataGateway.Tools.Database.exe located in the C:\\Skyline DataMiner\\Files\\x64\\ folder, and uses the input arguments harvested from DataMiner (DB.xml, credentials,...).
+  >
+  > For more information on SLDataGateway.Tools.Database.exe, see below.
 
 - Register
-
 - DcomConfig
-
 - ConfigureServices
-
 - FirewallConfig
-
 - IISConfig
-
 - StartSLTaskbarUtility
-
 - StartDataMiner
 
-**SLDataGateway.Tools.Database.exe**
+##### SLDataGateway.Tools.Database.exe
 
 This tool, when run with the factory-reset argument, resets the currently active MySQL, Cassandra or ElasticSearch database(s). When running this tool, you can specify the following arguments:
 
-| Argument      |                         | Mandatory | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
-|---------------|-------------------------|-----------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| factory-reset |                         | X         | Argument specifying that a factory reset must be done.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| -t            | --database-type \<type> | X         | Type of database:<br> -  SQL (i.e. MySQL)<br> -  Cassandra<br> -  Elastic (i.e. ElasticSearch)                                                                                                                                                                                                                                                                                                         |
-| -i            | --ip \<ip>              | X         | IP address of the database host                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| -u            | --username \<username>  |           | User account (user name and password)<br> If no account is specified, the following default credentials will be used:<br> -  MySQL: root (empty password)<br> -  Cassandra: root/root<br> -  ElasticSearch: no security                                                                                                                                                                                |
-| -p            | --password \<password>  |           |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| -f            | --forced                |           | Skip all prompts.<br> If this argument is not used, the user will be asked for a final confirmation.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-| -d            | --Database \<keyspace>  |           | Database/keyspace to be cleaned.<br> If this argument is not used, everything will be cleaned.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-| -k            | --keepcustomcredentials |           | Preserve the specified Cassandra credentials (user and password) throughout the factory reset process                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
-| -l            |                         |           | Log level:<br> -  0 = Off<br> -  1 = Trace (default)<br> -  2 = Debug<br> -  3 = Info<br> -  4 = Warning<br> -  5 = Error<br> -  6 = Fatal |
-| --timeout     |                         |           | Timeout (milliseconds)<br> If execution takes longer than the specified timeout, the program is killed.<br> Default: int.MaxValue (\~2 billion)                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+- `factory-reset`: Mandatory. Argument specifying that a factory reset must be done.
+
+- `-t` or `--database-type <type>`: Mandatory. The type of database:
+
+  - SQL (i.e. MySQL)
+  - Cassandra
+  - Elastic (i.e. ElasticSearch)
+
+- `-i` or `--ip <ip>`: Mandatory. The IP address of the database host.
+
+- `-u` or `--username <username>`: The username.
+
+  If no account is specified, the following default credentials will be used:
+
+  - MySQL: root (empty password)
+  - Cassandra: root/root
+  - ElasticSearch: no security
+
+- `-p` or `--password <password>`: The password to be used with the specified username.
+
+- `-f` or `--forced`: Skips all prompts.
+
+  If this argument is not used, the user will be asked for a final confirmation.
+
+- `-d` or `--Database <keyspace>`: The database/keyspace to be cleaned. If this argument is not used, everything will be cleaned.
+
+- `-k` or `--keepcustomcredentials`: Preserves the specified Cassandra credentials (user and password) throughout the factory reset process.
+
+- `-l`: The log level:
+
+  - 0 = Off
+  - 1 = Trace (default)
+  - 2 = Debug
+  - 3 = Info
+  - 4 = Warning
+  - 5 = Error
+  - 6 = Fatal
+
+- `--timeout`: Timeout (in milliseconds). If execution takes longer than the specified timeout, the program is killed.
+
+  Default: int.MaxValue (\~2 billion)
 
 > [!NOTE]
 >
@@ -4887,21 +4884,17 @@ StandaloneElasticBackup.exe backup --host 127.0.0.1 -u elastic --pw mypw123 -r r
 
 ##### General arguments
 
-| Option     |     | Description                                                                                                             |
-|------------|-----|-------------------------------------------------------------------------------------------------------------------------|
-| --host     | -h  | The host on which the command has to be run. Default: 127.0.0.1.                                                        |
-| --port     | -p  | The port on which Elasticsearch will be contacted. Default: 9200.                                                       |
-| --username | -u  | The credentials that have to used to connect to Elasticsearch. Only use these options when credentials have to be used. |
-| --pw       |     |                                                                                                                         |
+- `--host` or `-h`: The host on which the command has to be run. Default: 127.0.0.1.
+- `--port` or `-p`: The port on which Elasticsearch will be contacted. Default: 9200.
+- `--username` or `-u`: The username that has to used to connect to Elasticsearch. Only use this option when credentials have to be used.
+- `--pw`: The password that has to used to connect to Elasticsearch. Only use this option when credentials have to be used.
 
 ##### Arguments to add when you want to initialize the repository
 
 Run StandaloneElasticBackup.exe with the following two (mandatory) arguments to initialize the repository that should be made to take a snapshot.
 
-| Option |     | Description                                                                                                                                                      |
-|--------|-----|------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| --repo | -r  | The name of the repository to be created.                                                                                                                        |
-| --path |     | The path of the repository as defined in the yaml.xml file of the Elasticsearch cluster, enclosed by “”. This is the location where the snapshot will be placed. |
+- `--repo` or `-r`: The name of the repository to be created.
+- `--path`: The path of the repository as defined in the yaml.xml file of the Elasticsearch cluster, enclosed by “”. This is the location where the snapshot will be placed.
 
 > [!NOTE]
 >
@@ -4912,19 +4905,23 @@ Run StandaloneElasticBackup.exe with the following two (mandatory) arguments to 
 
 Run StandaloneElasticBackup.exe with the following two (mandatory) arguments to take a backup/snapshot.
 
-| Option |  | Description |
-|--|--|--|
-| --repo | -r | The repository in which to take the backup.<br> - If none is defined and only one repository is found in the Elasticsearch cluster, then that one will be used.<br> - If none is defined and none can be found, then no backup will be taken. |
-| --snapshotname | -n | The (lowercase) name of the snapshot to be taken. Default: DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss"); |
+- `--repo` or `-r`: The repository in which to take the backup.
+
+  - If none is defined and only one repository is found in the Elasticsearch cluster, then that one will be used.
+  - If none is defined and none can be found, then no backup will be taken.
+
+- `--snapshotname` or `-n`: The (lowercase) name of the snapshot to be taken. Default: DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss"); |
 
 ##### Arguments to add when you want to restore a backup/snapshot
 
 Run StandaloneElasticBackup.exe with the following two (mandatory) arguments to restore a backup/snapshot.
 
-| Option |  | Description |
-|--|--|--|
-| --repo | -r | The repository containing the backup to be restored.<br> - If none is defined and only one repository is found in the Elasticsearch cluster, then that one will be used.<br> - If none is defined and none can be found, then an error will be thrown. |
-| --snapshotname | -n | The name of the snapshot to be restored. |
+- `--repo` or `-r`: The repository containing the backup to be restored.
+
+  - If none is defined and only one repository is found in the Elasticsearch cluster, then that one will be used.
+  - If none is defined and none can be found, then an error will be thrown.
+
+- `--snapshotname` or `-n`: The name of the snapshot to be restored.
 
 > [!NOTE]
 >
@@ -6331,9 +6328,9 @@ In some cases, it could occur that a pivot table component only retrieved data f
 
 When, in the *Profiles* app, you duplicated a profile parameter of type “discrete” and discreteType “number”, in some cases, the discreteType and the raw discrete values would not be copied correctly.
 
-#### Dashboards app: Double scrollbars in dashboard with State component \[ID_27272\]
+#### Dashboards app: Double scroll bars in dashboard with State component \[ID_27272\]
 
-If a dashboard contained a State component, in some cases double scrollbars could be displayed.
+If a dashboard contained a State component, in some cases double scroll bars could be displayed.
 
 #### DataMiner Cube - Trending: Problem when calculating trend predictions \[ID_27292\]
 
@@ -6345,7 +6342,7 @@ In some cases, it could occur that the dashboard grid was not resized when neces
 
 #### Dashboards app: Duplicate “Delete component” button \[ID_27295\]
 
-When a dasboard contained a Group component, it could occur that two *Delete component* buttons were displayed when the dashboard was in edit mode.
+When a dashboard contained a Group component, it could occur that two *Delete component* buttons were displayed when the dashboard was in edit mode.
 
 #### Interactive Automation scripts: Problems with the UIBlockDefinition.IsEnabled and UIBlockDefinition.InitialValue properties \[ID_27326\]
 
@@ -6733,7 +6730,7 @@ In some cases, locking issues could occur in the SLNet, SLASPConnection and SLDM
 
 ## Addendum CU1
 
-### Enhancements
+### CU1 enhancements
 
 #### Dashboards app - GQI: Column selection enhancements \[ID_28202\]
 
@@ -6826,7 +6823,7 @@ In GQI query results, from now on, empty parameter values will be displayed as �
 
 When two agents in a Failover setup synchronize, their DataMiner versions are compared to make sure those versions are compatible. A number of enhancements have now been made to this version check.
 
-### Fixes
+### CU1 fixes
 
 #### Problem when multiple network interfaces shared the same MAC address \[ID_27971\]
 
@@ -7015,7 +7012,7 @@ In some cases, it was not possible to delete GQI queries.
 
 #### DataMiner landing page: Clicking the waffle icon did not open the sidebar \[ID_29050\]
 
-When you clicked the waffle icon in the top-left corner of a DataMiner landing page (i.e. https://\<DmaAddress>/root/), in some cases, the sidebar listing the available apps would not open.
+When you clicked the waffle icon in the top-left corner of a DataMiner landing page (i.e. `https://<DmaAddress>/root/`), in some cases, the sidebar listing the available apps would not open.
 
 #### Updating an element via a CSV export/import would not work properly when that element had an empty port type value \[ID_29052\]
 
@@ -7051,7 +7048,7 @@ In some cases, an error could occur in SLAnalytics when a connection was lost wh
 
 ## Addendum CU2
 
-### Enhancements
+### CU2 enhancements
 
 #### Improved performance when writing trend data in Cassandra \[ID_27777\]
 
@@ -7228,7 +7225,7 @@ When the internal file change repository of the SLDMS process reached a consider
 
 Due to a number of enhancements, overall performance of the file synchronization operations has now been optimized.
 
-### Fixes
+### CU2 fixes
 
 #### DataMiner Cube: 'Migrate booking data to Indexing Engine' button would still be displayed after the booking data had already been migrated \[ID_28813\]
 
@@ -7260,7 +7257,7 @@ When you discarded a newly created Automation script, in some cases, it would in
 
 #### No trigger keys listed when debugging a QAction due to a compatibility issue between DataMiner and DataMiner Integration Studio \[ID_29049\]
 
-Due to a compatibility issue between DataMiner and DataMiner Integration Studio, in some cases, when debugging a QAction, the *Trigger key* box in the *DIS Inject *window would incorrectly not list any trigger keys.
+Due to a compatibility issue between DataMiner and DataMiner Integration Studio, in some cases, when debugging a QAction, the *Trigger key* box in the *DIS Inject* window would incorrectly not list any trigger keys.
 
 #### SNMPAgent: Engine ID and engine boots counter of local agent would incorrectly be cleared when the users were cleared \[ID_29081\]
 
@@ -7432,7 +7429,7 @@ In the legacy Reporter app, in some cases, the status query would no longer show
 
 ## Addendum CU3
 
-### Enhancements
+### CU3 enhancements
 
 #### DataMiner Cube - Visual Overview: Viewport and Navigate variables of a Resource Manager timeline will now be read and applied upon opening \[ID_29299\]
 
@@ -7569,6 +7566,7 @@ This allows C# blocks that contain alarm squashing functionality to also be comp
 
 > [!NOTE]
 > Up to now, the following directives would only be added to QActions. These will now also be added to C# blocks of Automation scripts.
+>
 > - #define DBInfo
 > - #define DCFv1
 
@@ -7596,7 +7594,7 @@ For more information on the Standalone Elastic Backup tool, see [Standalone Elas
 
 Due to a number of enhancements, especially with regard to the loading of services into the Surveyor, overall performance of DataMiner Cube has increased when starting up.
 
-### Fixes
+### CU3 fixes
 
 #### Problem when retrieving protocol-level TTL settings from the database \[ID_28023\]
 
@@ -7634,9 +7632,9 @@ Also, when a dashboard URL containing a selection was refreshed, in some cases, 
 
 #### Dashboards app - GQI: Colors set for exception values of numeric parameters would not get applied \[ID_29244\]
 
-In the *Layout* tab of the Table component, the *Column filters *option allows you to highlight cells based on a condition. In some cases, colors set for exception values of numeric parameters with a range would not get applied.
+In the *Layout* tab of the Table component, the *Column filters* option allows you to highlight cells based on a condition. In some cases, colors set for exception values of numeric parameters with a range would not get applied.
 
-Also, the *Column filters *option now allows you to highlight “Not initialized” values.
+Also, the *Column filters* option now allows you to highlight “Not initialized” values.
 
 #### At DMA startup, NT_CLEAN_SUBSCRIPTION_FOR_STOPPED_ELEMENT would incorrectly be called before all elements were fully loaded \[ID_29257\]
 
@@ -7798,7 +7796,7 @@ When you had configured Alerter to play a sound when the alarm displayed in the 
 
 ## Addendum CU4
 
-### Enhancements
+### CU4 enhancements
 
 #### Security enhancements \[ID_29848\]\[ID_29887\]\[ID_29889\]
 
@@ -7872,7 +7870,7 @@ The following new BPA tests have been added to the default test set:
 
 - View Recursion
 
-### Fixes
+### CU4 fixes
 
 #### Service & Resource Management: Problem when trying to retrieve a resource with status “Maintenance” or “Unavailable” \[ID_29511\]
 
@@ -7994,7 +7992,7 @@ From now on, when an entire table was exported to a DVE element, the column para
 
 ## Addendum CU5
 
-### Enhancements
+### CU5 enhancements
 
 #### Security enhancements \[ID_29980\] \[ID_30012\] \[ID_30195\]
 
@@ -8063,9 +8061,9 @@ Up to now, when the number of items on the parameter update stack was divisible 
 
 From now on, when the parameter update stack exceeds 5000 items, log entries will be added to the log files of all elements for which there are items on the stack. Also, similar log entries will be added to the same log files each time the number of items on the stack is divisible by 1000 until the number of items on the stack drops below 1000.
 
-#### DataMiner backup packages will now also include the softlaunchoptions.xml file \[ID_30076\]
+#### DataMiner backup packages will now also include the SoftLaunchOptions.xml file \[ID_30076\]
 
-From now on, DataMiner backup packages will also include the softlaunchoptions.xml file.
+From now on, DataMiner backup packages will also include the SoftLaunchOptions.xml file.
 
 #### Enhanced performance when updating user information \[ID_30102\]
 
@@ -8091,7 +8089,7 @@ The following default BPA tests were updated:
 
 - View Recursion: Description updated
 
-### Fixes
+### CU5 fixes
 
 #### DMS Alerter: Problem when closing Alerter while balloons are popping up \[ID_29725\]
 
@@ -8231,7 +8229,7 @@ When executing the start actions of a ReservationInstance, DataMiner locks that 
 
 ## Addendum CU6
 
-### Enhancements
+### CU6 enhancements
 
 #### Security enhancements \[ID_30200\] \[ID_30323\] \[ID_30362\] \[ID_30363\] \[ID_30417\] \[ID_30422\] \[ID_30423\] \[ID_30561\]
 
@@ -8251,15 +8249,13 @@ From now on, it will no longer be possible to add a resource with invalid capaci
 
 - When you try to add a resource with “NULL” instead of a Capacity or with a Capacity of which the value is set to “NULL”, an error with reason ResourceCapacityInvalid will be added to the TraceData. The error’s ResourceManagerErrorData will contain the following properties:
 
-    - ResourceId: The ID of the resource.
-
-    - ResourceCapacity: The capacity object that did not reference a correct capacity profile.
+  - ResourceId: The ID of the resource.
+  - ResourceCapacity: The capacity object that did not reference a correct capacity profile.
 
 - When you try to add a resource with “NULL” instead of a Capability or with a Capability of which the value is set to “NULL” and IsTimeDynamic set to FALSE, an error with reason ResourceCapabalityInvalid will be added to the TraceData. The error’s ResourceManagerErrorData will contain the following properties:
 
-    - ResourceId: The ID of the resource.
-
-    - ResourceCapability: The capability object that did not reference a correct capability profile.
+  - ResourceId: The ID of the resource.
+  - ResourceCapability: The capability object that did not reference a correct capability profile.
 
 #### Enhanced performance when creating function resources \[ID_30248\]
 
@@ -8281,7 +8277,7 @@ Due to a number of enhancements, overall performance has increased when includin
 
 DataMiner Cube files are now signed with a SECTIGO certificate.
 
-You can install that certificate by clicking a hyperlink in the *DataMiner tools* section of the http://\[dma\]/root/tools/ page.
+You can install that certificate by clicking a hyperlink in the *DataMiner tools* section of the `http://[dma\]/root/tools/` page.
 
 #### SLElement: Enhanced performance when starting up elements \[ID_30315\] \[ID_30316\]
 
@@ -8309,7 +8305,7 @@ Up to now, when SLNet updated the DataMiner version in VersionHistory.txt while 
 
 #### DataMiner Cube: Links to deprecated DCP platform replaced by links to the new https://dataminer.services platform \[ID_30430\]
 
-Throughout the Cube UI, all links to the deprecated DataMiner Collaboration Platform have been replaced by links to the new https://dataminer.services platform.
+Throughout the Cube UI, all links to the deprecated DataMiner Collaboration Platform have been replaced by links to the new <https://dataminer.services> platform.
 
 #### DataMiner Cube - Data Display: Memory consumption of tables showing service impact has been reduced \[ID_30433\]
 
@@ -8339,7 +8335,7 @@ In the Dashboards app, when you open a GQI query to edit it, it will now first b
 
 When you opened or refreshed a dashboard, up to now, the chart components on that dashboard would show “no data” until the data had been fully loaded. From now on, when data is being loaded into a state component or a chart component using data from a query, a loading indicator will be shown instead.
 
-### Fixes
+### CU6 fixes
 
 #### Dashboards app: Error messages would incorrectly be displayed multiple times \[ID_28544\]
 
@@ -8353,9 +8349,8 @@ Also, when an alarm template schedule was started, in some cases, either the act
 
 - When an alarm template with a schedule was edited while, according to its schedule, it was inactive, the following would happen:
 
-    - The template would temporarily be activated, causing alarms to be created which would immediately be cleared.
-
-    - When no active window was scheduled that day, the first window of the upcoming days would be used for that day.
+  - The template would temporarily be activated, causing alarms to be created which would immediately be cleared.
+  - When no active window was scheduled that day, the first window of the upcoming days would be used for that day.
 
 - When an alarm template with a schedule was assigned to an element while, according to its schedule, it was inactive, it would be activated until the first window had passed.
 
@@ -8448,14 +8443,11 @@ A BPA test can only be executed if it has been digitally signed by Skyline, and 
 The version compatibility test has now been adapted:
 
 - When no minimum and/or maximum DataMiner version is specified, the BPA test will run regardless of the version.
-
 - When a minimum and/or maximum DataMiner version is specified, the BPA test will run when the DataMiner Agent has
 
-    - a Main Release version greater than the minimum Main Release version and smaller than or equal to the maximum Main Release version, or
-
-    - a Feature Release version greater than the minimum Feature Release version and smaller than or equal to the maximum Feature Release version, or
-
-    - a Release version of which the Main Release on which it is based is greater than the minimum Feature Release version and smaller or equal to the maximum Feature Release version.
+  - a Main Release version greater than the minimum Main Release version and smaller than or equal to the maximum Main Release version, or
+  - a Feature Release version greater than the minimum Feature Release version and smaller than or equal to the maximum Feature Release version, or
+  - a Release version of which the Main Release on which it is based is greater than the minimum Feature Release version and smaller or equal to the maximum Feature Release version.
 
 #### SLNet would fail to initialize when external authentication via SAML was configured incorrectly \[ID_30318\]
 
@@ -8554,7 +8546,7 @@ In the Dashboards app and the Monitoring app, in some cases, no popup would appe
 
 ## Addendum CU7
 
-### Enhancements
+### CU7 enhancements
 
 #### Security enhancements \[ID_30124\] \[ID_30479\] \[ID_30570\] \[ID_30581\] \[ID_30597\] \[ID_30600\] \[ID_30604\] \[ID_30786\]
 
@@ -8592,7 +8584,7 @@ Due to a number of enhancements, overall performance of SLElement has increased 
 
 The SetParameter and SetParameterRow methods of the DataMiner Web Services API v1 can now also be used to update parameters of enhanced services.
 
-### Fixes
+### CU7 fixes
 
 #### Ticketing app: Problem with drop-down fields \[ID_29478\]
 
@@ -8658,7 +8650,7 @@ The scenarios where these messages cannot be serialized will now be handled bett
 
 In Data Display and Visual Overview, in some cases, table filters could yield incorrect results when they contained numeric column filters with a “\<=”, “=”, or “=>” operator.
 
-####  DataMiner Cube: No reports or alarm heatlines shown for view table parameters \[ID_30667\]
+#### DataMiner Cube: No reports or alarm heatlines shown for view table parameters \[ID_30667\]
 
 Up to now, for view table parameters, no reports were shown on the details page for the parameter in DataMiner Cube. In addition, no alarm heatline was shown for these parameters in trend graphs.
 
@@ -8670,23 +8662,23 @@ When an app package was installed on a DMA but the minimum software version requ
 Could not install the package because it requires DataMiner version {appInfo.MinDmaVersion}, but this agent us running version {dataMinerVersion}.
 ```
 
-####  Dashboards app: Trace not displayed for spectrum buffer \[ID_30686\]
+#### Dashboards app: Trace not displayed for spectrum buffer \[ID_30686\]
 
 If a Spectrum analyzer component in the Dashboards app was used to visualize a spectrum buffer, it could occur that the buffer trace was not displayed.
 
-####  CRC parameter with LengthType “fixed” and RawType “other”, “text” or ”numeric text” would incorrectly always be set to 0x20 or 0x30 \[ID_30730\]
+#### CRC parameter with LengthType “fixed” and RawType “other”, “text” or ”numeric text” would incorrectly always be set to 0x20 or 0x30 \[ID_30730\]
 
 When a CRC parameter with LengthType “fixed” and RawType “other”, “text” or “numeric text” was used in a command, it would incorrectly always be set to 0x20 characters for parameter of type “string” or 0x30 characters for parameters of type “double”.
 
-####  Problem with SLDataMiner when using alarm templates with a monitoring schedule \[ID_30732\]
+#### Problem with SLDataMiner when using alarm templates with a monitoring schedule \[ID_30732\]
 
 In some cases, an error could occur in SLDataMiner when alarm templates with a monitoring schedule were being used.
 
-####  Problem with SLDataMiner when an element was restarted while a protocol exporting DVE or function protocols was being uploaded \[ID_30743\]
+#### Problem with SLDataMiner when an element was restarted while a protocol exporting DVE or function protocols was being uploaded \[ID_30743\]
 
 In some cases, an error could occur in SLDataMIner when an element was restarted while a protocol exporting DVE or function protocols was being uploaded.
 
-####  DataMiner Cube - Visual Overview: Cube could become unresponsive while retrieving service states \[ID_30762\]
+#### DataMiner Cube - Visual Overview: Cube could become unresponsive while retrieving service states \[ID_30762\]
 
 When a visual overview with at least one service shape was open when you opened a Cube, and the initial service states had not yet been received, in some cases, Cube could become unresponsive while retrieving the service states.
 
@@ -8694,25 +8686,25 @@ When a visual overview with at least one service shape was open when you opened 
 
 When, during an alarm storm, you hovered the mouse pointer over the alarm storm warning, in some cases, an exception could be thrown.
 
-####  DataMiner Cube - Alarm Console: Comments containing a new line would be displayed incorrectly \[ID_30801\]
+#### DataMiner Cube - Alarm Console: Comments containing a new line would be displayed incorrectly \[ID_30801\]
 
 When an alarm contains one or more comments, you can right-click it and select “View comments” to see all comments in the alarm tree in question. In that list, up to now, comments containing a new line would not be displayed correctly.
 
 ## Addendum CU8
 
-### Enhancements
+### CU8 enhancements
 
-####  SLLogCollector: Command line support \[ID_26293\]
+#### SLLogCollector: Command line support \[ID_26293\]
 
 The SLLogCollector tool now supports the following command line options:
 
-| Option             | Function                                                                                         |
-|--------------------|--------------------------------------------------------------------------------------------------|
-| -c, --console      | Use the SLLogCollector console.                                                                  |
-| -h, -?, --help     | List syntax and available options.                                                               |
-| -f, --folder=VALUE | Specify the folder in which the zipped log files will be stored.<br> Default: C:\\Skyline_Data\\ |
-| -d, --dumps=VALUE  | Specify the comma-separated list of processes from which dumps should be taken (IDs or names).   |
-| -m, --memory=VALUE | Take an extra dump as soon as the process uses the specified amount of memory (in MB).           |
+| Option             | Function                                                                                       |
+|--------------------|------------------------------------------------------------------------------------------------|
+| -c, --console      | Use the SLLogCollector console.                                                                |
+| -h, -?, --help     | List syntax and available options.                                                             |
+| -f, --folder=VALUE | Specify the folder in which the zipped log files will be stored. Default: C:\\Skyline_Data\\   |
+| -d, --dumps=VALUE  | Specify the comma-separated list of processes from which dumps should be taken (IDs or names). |
+| -m, --memory=VALUE | Take an extra dump as soon as the process uses the specified amount of memory (in MB).         |
 
 #### StandAloneBPAExecutor: New command line option to save test result to file \[ID_27776\]
 
@@ -8800,7 +8792,7 @@ When, in the Alarm Console, you add a new history or sliding window tab page, yo
 
 From now on, when the alarm filter contains one of the above-mentioned items, the *Count alarms* button will not be available.
 
-####  Automation scripts: SLAnalyticsTypes.dll added to the list of default DLL references \[ID_30821\]
+#### Automation scripts: SLAnalyticsTypes.dll added to the list of default DLL references \[ID_30821\]
 
 All Automation scripts will now by default have a reference to the SLAnalyticsTypes.dll file.
 
@@ -8830,12 +8822,12 @@ From now on, the FieldName of a TicketFieldDescriptor has to meet the following 
 - It cannot start with an underscore character ("\_").
 - It cannot contain any of the following characters:
 
-    - . (period)
-    - \# (number sign)
-    - \* (asterisk)
-    - , (comma)
-    - " (double quote)
-    - ' (single quote)
+  - . (period)
+  - \# (number sign)
+  - \* (asterisk)
+  - , (comma)
+  - " (double quote)
+  - ' (single quote)
 
 #### DataMiner Cube - System Center: Enhanced “Limited administrator” tooltip \[ID_31042\]
 
@@ -8845,9 +8837,9 @@ When, in the *Users/Groups* section of *System Center*, you hover over the *Modu
 * Read-only access on all groups * Read-only access to users in your groups * Create new DataMiner users * Editing your own user properties
 ```
 
-### Fixes
+### CU8 fixes
 
-####  Problem when starting Kibana after restoring an Elasticsearch backup \[ID_29943\]
+#### Problem when starting Kibana after restoring an Elasticsearch backup \[ID_29943\]
 
 After restoring an Elasticsearch backup that was taken with the StandaloneElasticBackup tool, in some cases, it would no longer be possible to start Kibana when Elasticsearch had security enabled.
 
@@ -8859,11 +8851,11 @@ When you hovered over a node, parameter values shown in the node tooltip would i
 
 On systems on which Cassandra was installed remotely, in some cases, Elasticsearch installations would fail.
 
-####  DataMiner Cube - Settings: User group settings not taken into account when applying regional settings \[ID_30813\]
+#### DataMiner Cube - Settings: User group settings not taken into account when applying regional settings \[ID_30813\]
 
 When starting up, up to now, Cube would load the regional settings before loading the user group settings. As a result, it would only take into account the user settings when applying the regional settings. From now on, Cube will also take into account the user group settings when applying the regional settings.
 
-####  SLSNMPManager: Problem when using MultipleGetBulk to poll a table containing only a single row \[ID_30815\]
+#### SLSNMPManager: Problem when using MultipleGetBulk to poll a table containing only a single row \[ID_30815\]
 
 When MultipleGetBulk was used to poll a table that contained only a single row and the response from the device was cut because it exceeded the maximum package size, in some cases, the algorithm would get stuck into an infinite loop.
 
@@ -8889,7 +8881,7 @@ When a protocol was deleted, up to now, the compiled QAction DLL files would inc
 
 In some cases, a ParameterThread error could occur in SLElement.
 
-####  Interactive Automation scripts: Value returned by the client would incorrectly be considered as an invalid file path selected in a file selector block \[ID_30879\]
+#### Interactive Automation scripts: Value returned by the client would incorrectly be considered as an invalid file path selected in a file selector block \[ID_30879\]
 
 When, in an interactive Automation script, a file selector block was defined after another type of input block (e.g. a checkbox), in some cases, the input block value returned by the client would incorrectly be considered as an invalid file path selected in the file selector. As a result, an “Invalid Data” error would be thrown.
 
@@ -8901,11 +8893,11 @@ In some rare cases, notices like “!! Unknown \<Type> RE!D for parameter 123”
 
 In some cases, double values with leading zeros would not be displayed correctly when using scientific notation.
 
-####  Protocols: QActions and their compiled versions could get linked incorrectly \[ID_30896\]
+#### Protocols: QActions and their compiled versions could get linked incorrectly \[ID_30896\]
 
 In some rare cases, errors occurring in SLScripting or SLProtocol could cause QActions and their compiled versions to be linked incorrectly.
 
-####  SLReset tool would incorrectly stop deleting files when it encountered a locked file \[ID_30906\]
+#### SLReset tool would incorrectly stop deleting files when it encountered a locked file \[ID_30906\]
 
 In some cases, the SLReset tool would incorrectly stop deleting files when it encountered a locked file.
 
@@ -8929,7 +8921,7 @@ In some cases, an error could occur in SLDataMiner when a service or a redundanc
 
 In some cases, calling the ScriptEntry.GetHashCode method could cause a NullReference-Exception to be thrown.
 
-####  Problem with SLAutomation when a Timespan.MaxValue timeout had been defined \[ID_30946\]
+#### Problem with SLAutomation when a Timespan.MaxValue timeout had been defined \[ID_30946\]
 
 In some cases, SLAutomation would throw an ArgumentOutOfRangeException when a Timespan.MaxValue timeout had been defined.
 
@@ -8941,11 +8933,11 @@ In some cases, an error could occur in SLASPConnection when requesting trend sta
 
 In some cases, an alarm in a table that was part of multiple relation paths would not get re-evaluated when a DVE in one of those paths exported that alarm. As a result, the alarm would not get exported to the DVE child element, causing the element state to become incorrect.
 
-####  DVE element information would no longer be written to the database \[ID_31004\]
+#### DVE element information would no longer be written to the database \[ID_31004\]
 
 In some cases, DVE element information would no longer be written to the database due to a NullReferenceException in SLDBConnection.
 
-####  DataMiner Cube - Visual Overview: Problem with navigation buttons on visual pages after clicking a card’s Back button \[ID_31012\]
+#### DataMiner Cube - Visual Overview: Problem with navigation buttons on visual pages after clicking a card’s Back button \[ID_31012\]
 
 When you clicked a card’s Back button, in some cases, the navigation buttons on the card’s visual pages could start to behave incorrectly.
 
@@ -8963,7 +8955,7 @@ In some cases, table row exports for DVEs and virtual functions would trigger up
 
 ## Addendum CU9
 
-### Enhancements
+### CU9 enhancements
 
 #### Security enhancements \[ID_31048\] \[ID_31122\]
 
@@ -8973,7 +8965,7 @@ A number of security enhancements have been made.
 
 From now on, it will no longer be possible to restore a DataMiner backup package on a system with a DataMiner version that is different from the one on which the backup was taken.
 
-####  DataMiner upgrade: All agents in the DataMiner System must now meet the requirements before an upgrade of the entire DataMiner System can proceed \[ID_31002\]
+#### DataMiner upgrade: All agents in the DataMiner System must now meet the requirements before an upgrade of the entire DataMiner System can proceed \[ID_31002\]
 
 When you start an upgrade of an entire DataMiner System, from now on, all agents in that DataMiner System will be checked to determine if they meet the requirements specified in the upgrade package. If one of the agents does not meet the requirements, the entire upgrade will be aborted.
 
@@ -8988,11 +8980,11 @@ Up to now, when an internet connection was available on the DMA, the SLLogCollec
 
 Due to a number of enhancements, overall performance of DataMiner Cube has increased when opening an element with a tree control parameter.
 
-####  DataMiner Cube - Visual Overview: Enhanced updating of resource, booking and service booking information \[ID_31153\]
+#### DataMiner Cube - Visual Overview: Enhanced updating of resource, booking and service booking information \[ID_31153\]
 
 A number of enhancements have been made with regard to updating resource, booking and service booking information in Visual Overview.
 
-####  Minor enhancements to several DataMiner processes \[ID_31155\]
+#### Minor enhancements to several DataMiner processes \[ID_31155\]
 
 A number of minor enhancements have been made to a number of DataMiner processes (e.g. SLXml, SLWatchdog, SLDMS, SLASPConnection and SLNet).
 
@@ -9021,14 +9013,14 @@ For example:
 </MaintenanceSettings>
 ```
 
-####  UDP port 162 opened by default \[ID_31035\]
+#### UDP port 162 opened by default \[ID_31035\]
 
 In the default firewall configuration, from now on, UDP port 162 will again be opened by default.
 
 > [!NOTE]
 > On systems that do not rely on SNMP traps, it is recommended to close this port.
 
-####  Cassandra cluster: Unnecessary scheduled maintenance tasks will automatically be deleted \[ID_31180\]
+#### Cassandra cluster: Unnecessary scheduled maintenance tasks will automatically be deleted \[ID_31180\]
 
 When a Cassandra cluster is starting up, the following scheduled tasks will automatically be deleted in Windows Task Scheduler:
 
@@ -9036,11 +9028,11 @@ When a Cassandra cluster is starting up, the following scheduled tasks will auto
 
 - DBGatewayMaintenance/SLCassandraDefaultRepair
 
-####  DataMiner Cube - Update Center: Enhanced error handling \[ID_31191\]
+#### DataMiner Cube - Update Center: Enhanced error handling \[ID_31191\]
 
 A number of enhancements have been made with regard to error handling and the rendering of error messages in Update Center.
 
-####  DataMiner Cube - Visual Overview: Chromium web browser engine now supports find and zoom functionality \[ID_31232\]
+#### DataMiner Cube - Visual Overview: Chromium web browser engine now supports find and zoom functionality \[ID_31232\]
 
 The Chromium web browser engine now support find and zoom functionalities.
 
@@ -9056,7 +9048,7 @@ Available shortcuts:
 | Ctrl-Minus   | Ctrl-MouseScrollDown | Zoom out      |
 | Ctrl-0       |                      | Reset zoom    |
 
-####  BPA framework: Cluster BPAs can now execute code across the entire cluster \[ID_31266\]
+#### BPA framework: Cluster BPAs can now execute code across the entire cluster \[ID_31266\]
 
 Cluster BPAs can now call an InvokeCluster method to execute code across the entire cluster.
 
@@ -9072,13 +9064,13 @@ In the *Run from DMA* tab, the *Delete* and *Save* commands have been removed 
 > [!NOTE]
 > The *Get Last Results* button will now only fetch the most recent results for any selected tests that are run on a schedule.
 
-####  DataMiner Cube - Services app: Enhanced performance when saving all changes made to service definitions \[ID_31355\]
+#### DataMiner Cube - Services app: Enhanced performance when saving all changes made to service definitions \[ID_31355\]
 
 Due to a number of enhancements, overall performance has increased when clicking *Save all changes* to save all changes made to service definitions in the Services app.
 
-### Fixes
+### CU9 fixes
 
-####  DataMiner Cube - Visual Overview: No longer possible to display aggregated parameter values in shapes \[ID_30864\]
+#### DataMiner Cube - Visual Overview: No longer possible to display aggregated parameter values in shapes \[ID_30864\]
 
 In Visual Overview, it was no longer possible to display aggregated parameter values in shapes by specifying either the DMA and element ID of an aggregation element or an \[AggregationRule:...\] placeholder in a shape data field of type Aggregation.
 
@@ -9128,7 +9120,7 @@ Up to now, when a smart-serial or smart-IP protocol received large data packets,
 
 When a scheduled task had been deleted from Windows scheduler but was still present on the DataMiner Agent, in some cases, an error could be thrown. From now on, when that type of error is thrown after a manually executed task was deleted, the task in question will be recreated.
 
-####  DataMiner Cube: View updates and element removals would incorrectly not trigger an update of the “Below this view” list in a view card \[ID_31141\]
+#### DataMiner Cube: View updates and element removals would incorrectly not trigger an update of the “Below this view” list in a view card \[ID_31141\]
 
 In some cases, view updates and element removals would incorrectly not trigger an update of the “Below this view” list in a view card.
 
@@ -9163,7 +9155,7 @@ When, in an interactive Automation script, you had configured the DateTimeKind p
 
 Up to now, the “park source” feature would incorrectly not work on matrices with IO table structures.
 
-####  Memory leak in SLElement when stopping or deleting an element with a protocol of type “virtual” \[ID_31252\]
+#### Memory leak in SLElement when stopping or deleting an element with a protocol of type “virtual” \[ID_31252\]
 
 In some cases, SLElement could leak memory when stopping or deleting elements with a protocol of type “virtual”.
 
@@ -9175,11 +9167,11 @@ In some cases, errors could occur in SLAutomation when Engine.CreateExtraDummy o
 
 In Visual Overview, in some cases, property values would not get updated correctly.
 
-####  Failover: Full synchronization incorrectly not run at setup \[ID_31296\]
+#### Failover: Full synchronization incorrectly not run at setup \[ID_31296\]
 
 When a Failover system was set up, in some cases, a full synchronization would incorrectly not be run.
 
-####  DataMiner Cube - Spectrum analysis: “Auto RBW Factor” and “Auto VBW Factor” values stored incorrectly in spectrum preset \[ID_31299\]
+#### DataMiner Cube - Spectrum analysis: “Auto RBW Factor” and “Auto VBW Factor” values stored incorrectly in spectrum preset \[ID_31299\]
 
 In some cases, the “Auto RBW Factor” and “Auto VBW Factor” values would be stored in spectrum presets in an incorrect way. This would then lead to an incorrect auto RBW/VBW calculation.
 
@@ -9187,19 +9179,19 @@ In some cases, the “Auto RBW Factor” and “Auto VBW Factor” values would 
 
 When using dynamic positioning in combination with dynamic zooming, shape grouping and table connections, in some cases, the connection lines could disappear at certain zoom levels.
 
-####  DataMiner Cube - Services app: Contents of “Configure groups” window would be arranged incorrectly \[ID_31344\]
+#### DataMiner Cube - Services app: Contents of “Configure groups” window would be arranged incorrectly \[ID_31344\]
 
 When you right-clicked a Service Definition diagram and selected *Configure groups*, the contents of the *Configure groups* window would be arranged incorrectly. For example, the *Add group* button would be positioned at an incorrect location.
 
-####  Jobs app: Date values saved in UTC format would be parsed incorrectly \[ID_31345\]
+#### Jobs app: Date values saved in UTC format would be parsed incorrectly \[ID_31345\]
 
 In the Jobs app, in some cases, date values saved in UTC format would be parsed incorrectly.
 
-####  Web apps: Setvar controls in visual overviews would no longer be rendered correctly \[ID_31351\]
+#### Web apps: Setvar controls in visual overviews would no longer be rendered correctly \[ID_31351\]
 
 In web apps (e.g. Monitoring), in some cases, SetVar controls in visual overviews would no longer be rendered correctly.
 
-####  STARTTLS/SSL options for SMTP would not get applied when sending generic emails \[ID_31592\]
+#### STARTTLS/SSL options for SMTP would not get applied when sending generic emails \[ID_31592\]
 
 When generic emails were sent via the SLASPConnection process, some of the SMTP options related to the connection type (STARTTLS/SSL) would not get applied, potentially causing failures when trying to send emails.
 
@@ -9208,9 +9200,9 @@ When generic emails were sent via the SLASPConnection process, some of the SMTP 
 
 ## Addendum CU10
 
-### Enhancements
+### CU10 enhancements
 
-####  Security enhancements \[ID_31784\]
+#### Security enhancements \[ID_31784\]
 
 A number of security enhancements have been made.
 
@@ -9218,11 +9210,11 @@ A number of security enhancements have been made.
 
 SLLogCollector will now also collect the log and configuration files from the NATS\\nats-account-server and NATS\\nats-streaming-server.
 
-####  Security: New NATS installations will no longer open IP port 8222 \[ID_31422\]
+#### Security: New NATS installations will no longer open IP port 8222 \[ID_31422\]
 
 During a NATS installation, from now on, only ports 4222 and 6222 will be opened. IP port 8222 will be left closed.
 
-####  DataMiner Cube: Enhanced performance when logging in \[ID_31541\]
+#### DataMiner Cube: Enhanced performance when logging in \[ID_31541\]
 
 Due to a number of enhancements, overall performance has increased when logging in to Cube.
 
@@ -9240,7 +9232,7 @@ In DataMiner versions prior to 10.1.11, when MultipleGetBulk was used to poll a 
 
 A number of enhancements have been made with regard to automatic SLA data clean-up.
 
-### Fixes
+### CU10 fixes
 
 #### DataMiner Connectivity Framework: Virtual functions would incorrectly inherit interfaces from the main element \[ID_30715\]
 
@@ -9310,7 +9302,7 @@ From now on, cell content will be parsed as follows:
 
 - When no quotes are present, the cell will not have its spaces trimmed. When quotes are present around the cell's data, spaces will be trimmed outside of the quotes.
 
-- Quotes inside a cell are expected to be escaped by another quote.<br>Example: “A “”value”” inside a cell”.
+- Quotes inside a cell are expected to be escaped by another quote. Example: “A “”value”” inside a cell”.
 
 - When there are quotes inside a cell, it is not allowed to have anything besides spaces outside of the quotes. The cell will be parsed as if no quotes are used and the first separator will close the cell. See the following example.
 
@@ -9449,7 +9441,7 @@ When a view contained invalid element IDs, up to now, an exception would be thro
 
 ## Addendum CU11
 
-### Enhancements
+### CU11 enhancements
 
 #### SLElement: Enhanced service impact calculation \[ID_31163\]
 
@@ -9490,55 +9482,53 @@ Example of a configuration file:
 In the example above, three collectors have been defined:
 
 - Collector1 is a collector of type “File”, and will order SLLogCollector to retrieve a set of files (e.g. log files).
-
 - Collector2 is a collector of type “Http”, and will order SLLogCollector to send an HTTP request to a server and to store the response.
-
 - Collector3 is a collector of type “Exe”, and will order SLLogCollector to run an executable file and to store the output.
 
-**Collectors of type “File”**
+##### Collectors of type File
 
 Collectors of type “File” can be configured using the following XML elements and attributes:
 
-| Element/attribute                    | Type   | Mandatory | Description                                                                                                                                        |
-|--------------------------------------|--------|-----------|----------------------------------------------------------------------------------------------------------------------------------------------------|
-| File@name                            | String | Yes       | The name for the collector.                                                                                                                        |
-| File.Source                          |        | Yes       | The folder in which SLLogCollector will search for files and folders.                                                                              |
-| File.Destination                     |        | Yes       | The (relative) path to the destination folder in the archive.                                                                                      |
-| File.Patterns                        |        | Yes       | The element containing all search patterns.                                                                                                        |
-| File.Patterns.Pattern                |        | Yes       | A Microsoft .Net search pattern to filter file names or file paths.                                                                                |
-| File.Patterns.Pattern<br> @amount    | Int    | No        | The X most recent items to be copied.                                                                                                              |
-| File.Patterns.Pattern<br> @recursive | Bool   | No        | Whether to search recursively or not. Default: false                                                                                               |
-| File.Patterns.Pattern<br> @isFolder  | Bool   | No        | If true, then SLLogCollector will search for folders matching the pattern and will copy the entire content of the matching folders. Default: false |
+| Element/attribute | Type | Mandatory | Description |
+|--|--|--|--|
+| File@name | String | Yes | The name for the collector. |
+| File.Source |  | Yes | The folder in which SLLogCollector will search for files and folders. |
+| File.Destination |  | Yes | The (relative) path to the destination folder in the archive. |
+| File.Patterns |  | Yes | The element containing all search patterns. |
+| File.Patterns.Pattern |  | Yes | A Microsoft .Net search pattern to filter file names or file paths. |
+| File.Patterns.Pattern@amount | Int | No | The X most recent items to be copied. |
+| File.Patterns.Pattern@recursive | Bool | No | Whether to search recursively or not. Default: false |
+| File.Patterns.Pattern@isFolder | Bool | No | If true, then SLLogCollector will search for folders matching the pattern and will copy the entire content of the matching folders. Default: false |
 
-**Collectors of type “Http”**
+##### Collectors of type Http
 
 Collectors of type “Http” can be configured using the following XML elements and attributes:
 
-| Element/attribute                                           | Type   | Mandatory | Description                                                                                                                |
-|-------------------------------------------------------------|--------|-----------|----------------------------------------------------------------------------------------------------------------------------|
-| Http@name                                                   | String | Yes       | The name for the collector.                                                                                                |
-| Http.Source                                                 |        | Yes       | The IP address and port to which the requests have to be sent.<br> Format: http://ip:port                                  |
-| Http.Destination                                            |        | Yes       | The (relative) path to the destination folder in the archive.                                                              |
-| Http.Endpoints                                              |        | Yes       | The element containing all endpoints.                                                                                      |
-| Http.Endpoints.Endpoint                                     |        | Yes       | The element grouping all information on a particular endpoint.                                                             |
-| Http.Endpoints.Endpoint<br> @name                           | String | Yes       | The name of the endpoint.                                                                                                  |
-| Http.Endpoints.Endpoint<br> .Requests                       |        | Yes       | The element containing all requests to be sent to the endpoint.                                                            |
-| Http.Endpoints.Endpoint<br> .Requests.Request               |        | Yes       | The request to be sent.                                                                                                    |
-| Http.Endpoints.Endpoint<br> .Requests.Request<br> .fileName | String | No        | The name of the file in which the response has to be saved.<br> Default: \<Endpoint.name> \<Endpoint.Requests.Request>.txt |
+| Element/attribute | Type | Mandatory | Description |
+|--|--|--|--|
+| Http@name | String | Yes | The name for the collector. |
+| Http.Source |  | Yes | The IP address and port to which the requests have to be sent. Format: `http://ip:port` |
+| Http.Destination |  | Yes | The (relative) path to the destination folder in the archive. |
+| Http.Endpoints |  | Yes | The element containing all endpoints. |
+| Http.Endpoints.Endpoint |  | Yes | The element grouping all information on a particular endpoint. |
+| Http.Endpoints.Endpoint@name | String | Yes | The name of the endpoint. |
+| Http.Endpoints.Endpoint.Requests |  | Yes | The element containing all requests to be sent to the endpoint. |
+| Http.Endpoints.Endpoint.Requests.Request |  | Yes | The request to be sent. |
+| Http.Endpoints.Endpoint.Requests.Request.fileName | String | No | The name of the file in which the response has to be saved. Default: \<Endpoint.name> \<Endpoint.Requests.Request>.txt |
 
-**Collectors of type “Exe”**
+##### Collectors of type Exe
 
 Collectors of type “Exe” can be configured using the following XML elements and attributes:
 
-| Element/attribute                  | Type   | Mandatory | Description                                                                                         |
-|------------------------------------|--------|-----------|-----------------------------------------------------------------------------------------------------|
-| Exe@name                           | String | Yes       | The name for the collector.                                                                         |
-| Exe.Source                         |        | Yes       | The folder in which the executable is located.                                                      |
-| Exe.Executable                     |        | Yes       | The name of the executable.                                                                         |
-| Exe.Destination                    |        | Yes       | The (relative) path to the destination folder in the archive.                                       |
-| Exe.Commands                       |        | Yes       | The element containing all commands to be run.                                                      |
-| Exe.Commands<br> .Command          |        | Yes       | The command to be run.                                                                              |
-| Exe.Commands<br> .Command@fileName | String | No        | The name of the file in which the result has to be saved.<br> Default: \<executable> \<command>.txt |
+| Element/attribute | Type | Mandatory | Description |
+|--|--|--|--|
+| Exe@name | String | Yes | The name for the collector. |
+| Exe.Source |  | Yes | The folder in which the executable is located. |
+| Exe.Executable |  | Yes | The name of the executable. |
+| Exe.Destination |  | Yes | The (relative) path to the destination folder in the archive. |
+| Exe.Commands |  | Yes | The element containing all commands to be run. |
+| Exe.Commands.Command |  | Yes | The command to be run. |
+| Exe.Commands.Command@fileName | String | No | The name of the file in which the result has to be saved. Default: \<executable> \<command>.txt |
 
 #### DataMiner Cube: Minor enhancements with regard to views, elements and services \[ID_31742\]
 
@@ -9632,7 +9622,7 @@ From now on, SLLogCollector will also by default collect the following files:
 
 - All \*.xml configuration files in C:\\Skyline Dataminer\\Database
 
-### Fixes
+### CU11 fixes
 
 #### Cassandra: Problem when creating user-defined types \[ID_31001\]
 
@@ -9811,7 +9801,7 @@ When a GetAnalogTrendDataMessage was used to retrieve more than 48 hours of tren
 
 When, in a visual overview that showed a table with trended columns, you opened a trend graph by clicking a trend icon, in some cases, the trend graph would incorrectly not be loaded and a “Trending is currently not enabled for this parameter” message would appear.
 
-####  Cassandra: Incorrect “null statement” messages would be added to SLDBConnection.txt \[ID_31979\]
+#### Cassandra: Incorrect “null statement” messages would be added to SLDBConnection.txt \[ID_31979\]
 
 In some cases, the following message would repeatedly be added to the SLDBConnection.txt log file:
 
@@ -9839,7 +9829,7 @@ In DataMiner Cube, in some cases, it would no longer be possible to edit informa
 
 In some rare cases, alarms coming in while you were grouping or sorting the alarms on an alarm tab would incorrectly not appear on that alarm tab, especially on heavy-duty systems.
 
-####  Legacy Dashboards: Using “Add to dashboard” in Cube would no longer work when the DataMiner Agent was only accessible via HTTPS \[ID_32083\]
+#### Legacy Dashboards: Using “Add to dashboard” in Cube would no longer work when the DataMiner Agent was only accessible via HTTPS \[ID_32083\]
 
 From DataMiner 9.0 onwards, it is possible to add items to a legacy dashboard directly from the Cube UI, for instance from the Surveyor or an element card.
 
@@ -9859,13 +9849,13 @@ Up to now, SLReset would incorrectly delete the following folders:
 
 From now on, SLReset will no longer delete these folders.
 
-####  Newly created elements would incorrectly be assigned an ID equal to -1 \[ID_32178\]
+#### Newly created elements would incorrectly be assigned an ID equal to -1 \[ID_32178\]
 
 In some cases, newly created elements would incorrectly be assigned an ID equal to -1.
 
 ## Addendum CU12
 
-### Enhancements
+### CU12 enhancements
 
 #### Security enhancements \[ID_32125\]
 
@@ -9919,7 +9909,7 @@ Up to now, when clients sent messages to the web socket interface of the Web Ser
 
 The Skyline Black theme now features improved support for function icons.
 
-### Fixes
+### CU12 fixes
 
 #### Cassandra: Incorrect health status \[ID_29502\]
 
@@ -10064,7 +10054,7 @@ When a workspace was saved, the pinned state of alarm tab cards was not included
 
 ## Addendum CU13
 
-### Enhancements
+### CU13 enhancements
 
 #### SLElement: Enhanced performance when resolving table relationships \[ID_32176\]
 
@@ -10089,7 +10079,7 @@ When opening their user card, from now on, users will only be able to edit group
 > [!NOTE]
 > Users only need to have the “Edit own groups” permission to be able to configure a group of which they are a member.
 
-####  Dashboards app - Parameter page component: WebSocket subscriptions will now be used for parameter tables when possible \[ID_32476\]
+#### Dashboards app - Parameter page component: WebSocket subscriptions will now be used for parameter tables when possible \[ID_32476\]
 
 When a parameter table is being displayed in a parameter page component, when possible, the underlying table component will now make use of WebSocket subscriptions.
 
@@ -10115,7 +10105,7 @@ Also, when a dashboard is loaded with an initial selection (either configured or
 
 When, in Data Display, you drill down to a specific row of a parameter table, you can open the alarm template, trend template or information template for that specific row. From now on, if a filter was configured for the table row in question, it will also be shown in the UI.
 
-####  DataMiner Cube - Automation: SaveAutomationScriptXmlMessage will now be used when importing, saving and updating Automation scripts \[ID_32557\]
+#### DataMiner Cube - Automation: SaveAutomationScriptXmlMessage will now be used when importing, saving and updating Automation scripts \[ID_32557\]
 
 Up to now, when an Automation script was imported, the file would not be processed in the same way as when an Automation script was saved or updated. From now on, the same SaveAutomationScriptXmlMessage will be used when importing, saving and updating Automation scripts.
 
@@ -10142,7 +10132,7 @@ This message now includes the ID, the name and the time range of both the parent
 The TimeRange of the child is not within the boundaries of the parent ReservationInstance (Child: '{Child Name}' ({Child ID}) has range '{Child Range}' & Parent: '{Parent Name}' ({Parent ID}) has range '{Parent Range}')
 ```
 
-##### Exception thrown when the time range of a child ReservationDefinition is invalid.
+##### Exception thrown when the time range of a child ReservationDefinition is invalid
 
 This message now includes the ID, the name and the time range of both the parent and the child. For the child, the offset has now also been added.
 
@@ -10150,7 +10140,7 @@ This message now includes the ID, the name and the time range of both the parent
 The timing of the child is not within the boundaries of the parent ReservationDefinition (Child: '{Child Name}' ({Child ID}) has timing with duration '{Child Timing Duration}' and offset '{Child offset}' & Parent: '{Parent Name}' ({Parent ID}) has timing with duration '{Parent Timing Duration}')
 ```
 
-####  Hanging threads in SLNet will now be logged in SLHangingCalls.txt \[ID_32582\]
+#### Hanging threads in SLNet will now be logged in SLHangingCalls.txt \[ID_32582\]
 
 Up to now, hanging threads in SLNet would be logged in the SLNet.txt file. From now on, these will be logged in the new SLHangingCalls.txt file instead (without the stack trace).
 
@@ -10187,7 +10177,7 @@ When, in an Automation script, you configured a Set action for which an offset v
 
 Default: “without value offset”
 
-### Fixes
+### CU13 fixes
 
 #### SNMP forwarding: Problem when deleting an SNMP manager and immediately creating an identical one \[ID_32406\]
 
@@ -10267,9 +10257,9 @@ When, in DataMiner Cube, you opened the Asset Manager app, in some cases, the UI
 
 ## Addendum CU14
 
-### Enhancements
+### CU14 enhancements
 
-####  Security enhancements \[ID_32954\] \[ID_32992\] \[ID_33052\]
+#### Security enhancements \[ID_32954\] \[ID_32992\] \[ID_33052\]
 
 A number of security enhancements have been made.
 
@@ -10277,7 +10267,7 @@ A number of security enhancements have been made.
 
 A number of enhancements have been made with regard to the setup of serial connections with SSL/TLS enabled.
 
-### Fixes
+### CU14 fixes
 
 #### Alarm templates: Miscellaneous fixes \[ID_32462\]
 
@@ -10301,7 +10291,7 @@ Up to now, in some cases, the Cube UI could become unresponsive when you opened 
 
 When a page that was displayed in a VdxPage window of type “Popup” contained a shape linked to a SET command, clicking that shape would incorrectly not execute the SET command.
 
-####  DataMiner Cube - Resources app: No resources or resource pools would be loaded when opening the Resources app \[ID_32790\]
+#### DataMiner Cube - Resources app: No resources or resource pools would be loaded when opening the Resources app \[ID_32790\]
 
 When you opened the Resources app, in some cases, no resources or resource pools would be loaded.
 
@@ -10313,11 +10303,11 @@ When a DataMiner upgrade included a reboot (either explicitly requested, or e.g.
 
 In some rare cases, the SLDMS hosting agent cache could get corrupted. As a result, it would no longer contain the correct data when processing element updates.
 
-####  NAS: Incorrect default settings in nas.config file \[ID_32840\]
+#### NAS: Incorrect default settings in nas.config file \[ID_32840\]
 
 The default settings in the nas.config file would be incorrect.
 
-####  Memory leak in SLElement \[ID_32885\]
+#### Memory leak in SLElement \[ID_32885\]
 
 In some cases, a problem with subscriptions on views with remote data would cause SLElement to leak memory, which could eventually lead to run-time errors in the parameter thread.
 
@@ -10339,13 +10329,13 @@ In some cases, an error could occur in the SLLog process when a log file was clo
 
 ## Addendum CU15
 
-### Enhancements
+### CU15 enhancements
 
 #### Security enhancements \[ID_33014\]
 
 A number of security enhancements have been made.
 
-####  DataMiner Taskbar Utility: Deprecated launch options for System Display and Cube removed \[ID_32877\]
+#### DataMiner Taskbar Utility: Deprecated launch options for System Display and Cube removed \[ID_32877\]
 
 In the DataMiner Taskbar Utility, the following options have been removed:
 
@@ -10355,6 +10345,7 @@ In the DataMiner Taskbar Utility, the following options have been removed:
 
 > [!NOTE]
 > The following option has been kept:
+>
 > - Opening Windows file explorer in the C:\\Skyline DataMiner\\ folder by double-clicking while pressing the CTRL key.
 
 #### Enhanced performance when starting up elements \[ID_33023\]
@@ -10367,7 +10358,7 @@ From now on, the alarm state change graphs (pie chart and time line) in the lega
 
 Also, in the legacy Reporter app, the default colors have now been aligned with the default DataMiner alarm colors.
 
-####  Monitoring app now also takes into account Param.Message tags \[ID_33162\]
+#### Monitoring app now also takes into account Param.Message tags \[ID_33162\]
 
 In a protocol.xml file, for every write parameter, you can specify a message to be displayed when users change that parameter on the UI.
 
@@ -10385,7 +10376,7 @@ Because of a number of enhancements, overall performance has increased when proc
 
 IPC channel port names will now always be unique.
 
-### Fixes
+### CU15 fixes
 
 #### QActionHelper DLL file could incorrectly be loaded twice \[ID_32647\]
 
@@ -10449,7 +10440,7 @@ When a DataMiner Agent started up while another DataMiner Agent in the DMS was r
 
 ## Addendum CU16
 
-### Enhancements
+### CU16 enhancements
 
 #### QActionTable class - FillArray and FillArrayNoDelete methods: Argument “row” renamed to “columns” \[ID_33034\]
 
@@ -10489,7 +10480,7 @@ SLLogCollector will now also collect the log files of the following cloud proces
 
 Because of a number of enhancements, overall performance of SLElement has improved when processing service and DCF information.
 
-### Fixes
+### CU16 fixes
 
 #### Protocol QActions: Problem when calling FillArray or FillArrayNoDelete with List\<object\[\]\> as columns value \[ID_28573\]
 
@@ -10630,9 +10621,9 @@ When an element using SNMP polling was stopped, a problem could occur in the SLS
 
 ## Addendum CU17
 
-### Enhancements
+### CU17 enhancements
 
-####  Security enhancements \[ID_33684\]
+#### Security enhancements \[ID_33684\]
 
 A number of security enhancements have been made.
 
@@ -10640,7 +10631,7 @@ A number of security enhancements have been made.
 
 A number of enhancements have been made to the automatic SLA data clean-up mechanism.
 
-### Fixes
+### CU17 fixes
 
 #### Problem with SLPort when the last serial element using a specific IpAddress:IpPort connection was stopped \[ID_33437\]
 
@@ -10666,7 +10657,7 @@ In some cases, the width of a button would not automatically be adapted to the t
 
 Also, in date/time picker controls, the buttons to pick or clear a date/time would not be displayed correctly.
 
-####  DataMiner Cube - Annotations: Images would get removed when saving an annotation \[ID_33623\]
+#### DataMiner Cube - Annotations: Images would get removed when saving an annotation \[ID_33623\]
 
 When you saved an annotation, in some cases, any images added to the annotation would incorrectly get removed.
 
@@ -10684,7 +10675,7 @@ Example:
 AlarmEventMessageExposers.PropertiesDict.DictStringField($"Booking Manager Element ID").Matches(".+")
 ```
 
-####  Service & Resource Management: Problem when adding, updating or deleting a resource \[ID_33678\]
+#### Service & Resource Management: Problem when adding, updating or deleting a resource \[ID_33678\]
 
 When you tried to add, update or delete a resource, a NullReferenceException could be thrown when the Resources.xml file was locked by another process.
 
@@ -10722,7 +10713,7 @@ In the following example, the second connection would incorrectly be ignored.
 
 ## Addendum CU18
 
-### Enhancements
+### CU18 enhancements
 
 #### Security enhancements
 
@@ -10798,7 +10789,7 @@ Up to now, parameter changes would always be pushed from SLProtocol to SLElement
 
 In order to prevent SLPort from running out of memory, from now on, the size of the WebSocket messages sent from SLPort to SLProtocol will be limited to 1024 packets.
 
-### Fixes
+### CU18 fixes
 
 #### SLAnalytics - Pattern matching: No 'suggestion event' type alarm would be triggered in case of DVE elements [ID_32671]
 
@@ -10834,7 +10825,7 @@ SLProtocol would leak memory each time a parameter of a replicated element was u
 
 <!-- Main Release Version 10.0.0 [CU22]/10.1.0 [CU18]/10.2.0 [CU6] - Feature Release Version 10.2.9 -->
 
-When the element debug log level was equal to or higher than 1, an error could occur in SLElement when resolving foreign keys took a long time. 
+When the element debug log level was equal to or higher than 1, an error could occur in SLElement when resolving foreign keys took a long time.
 
 #### Element card - REPORTS page: Masking and unmasking would not be shown correctly in the different graphs [ID_33832]
 

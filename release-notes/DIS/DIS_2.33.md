@@ -15,17 +15,17 @@ The *Major Change Check* window has been replaced by a new *DIS Comparer* tool w
 When you click *Compare* at the top of an XML editor tab containing a protocol.xml file, the DIS Comparer tool window will now allow you to compare a base protocol (on the left) with another protocol (on the right).
 
 1. Select two protocols by either clicking *Select* and selecting one of the protocols currently opened in the XML editor or clicking *File* and opening a protocol.xml file located in a file folder. If you do the latter when working inside a solution, the protocol.xml file you select will not be added to the solution.
-2. Click *Compare* to have the two protocols compared.
-3. If necessary, click *Export* to have the result of the comparison exported to a CSV file.
+1. Click *Compare* to have the two protocols compared.
+1. If necessary, click *Export* to have the result of the comparison exported to a CSV file.
 
 When you right-click an error in the list, a shortcut menu offers you the following options:
 
-| Command         | Function                                                                                                                                                                |
-|-----------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Navigate        | Go to the line in the protocol that triggered the error.                                                                                                                |
-| Copy            | Copy the error to the Windows Clipboard.                                                                                                                                |
-| Show Details... | Show all details of the error in a separate window.                                                                                                                     |
-| Suppress...     | Suppress the error.<br> Note: Click the *Show/hide suppressed results* button to include/exclude the suppressed errors in/from the list. |
+| Command | Function |
+|--|--|
+| Navigate | Go to the line in the protocol that triggered the error. |
+| Copy | Copy the error to the Windows Clipboard. |
+| Show Details... | Show all details of the error in a separate window. |
+| Suppress... | Suppress the error. Note: Click the *Show/hide suppressed results* button to include/exclude the suppressed errors in/from the list. |
 
 #### Class Library errors will now be shown in a banner instead of a popup window \[ID_29609\]
 

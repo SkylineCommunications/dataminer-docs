@@ -4,17 +4,17 @@ uid: General_Feature_Release_10.0.9
 
 # General Feature Release 10.0.9
 
-**Internet Explorer Support**
-
-Though DataMiner Cube is available as a desktop application, many users still like to use the DataMiner browser application that requires Internet Explorer. However, Microsoft no longer recommends using Internet Explorer, and support for Internet Explorer is expected to cease in 2025, though currently the program is still maintained as part of the support policy for the versions of Windows it is included in. For more information, see <https://docs.microsoft.com/en-us/lifecycle/faq/internet-explorer-microsoft-edge>.
-
-The preferred way to use DataMiner Cube is as a desktop application, which can be downloaded from each DMA’s landing page in any other browser than Internet Explorer. From DataMiner 10.0.9 onwards, this application also comes with a new start window for increased ease of use.
-
-However, if you do wish to use DataMiner Cube in a browser, this remains possible:
-
-- Microsoft Edge can be configured to open specific URLs in IE compatibility mode. If you configure Edge to open the DataMiner Cube URLs of DMAs in this mode, you will be able to access the DMAs with DataMiner Cube in Edge. However, make sure you only do this for the exact URLs of DataMiner Cube, as other DataMiner apps will not function optimally in IE compatibility mode. For more information see, <https://docs.microsoft.com/en-us/DeployEdge/edge-ie-mode-policies>.
-
-- You can still continue to use Internet Explorer to access DataMiner Cube as long as Microsoft support continues. However, in this case we highly recommend to use a different browser to access any other websites on the internet.
+> [!NOTE]
+> **Internet Explorer Support**
+>
+> Though DataMiner Cube is available as a desktop application, many users still like to use the DataMiner browser application that requires Internet Explorer. However, Microsoft no longer recommends using Internet Explorer, and support for Internet Explorer is expected to cease in 2025, though currently the program is still maintained as part of the support policy for the versions of Windows it is included in. For more information, see <https://docs.microsoft.com/en-us/lifecycle/faq/internet-explorer-microsoft-edge>.
+>
+> The preferred way to use DataMiner Cube is as a desktop application, which can be downloaded from each DMA’s landing page in any other browser than Internet Explorer. From DataMiner 10.0.9 onwards, this application also comes with a new start window for increased ease of use.
+>
+> However, if you do wish to use DataMiner Cube in a browser, this remains possible:
+>
+> - Microsoft Edge can be configured to open specific URLs in IE compatibility mode. If you configure Edge to open the DataMiner Cube URLs of DMAs in this mode, you will be able to access the DMAs with DataMiner Cube in Edge. However, make sure you only do this for the exact URLs of DataMiner Cube, as other DataMiner apps will not function optimally in IE compatibility mode. For more information see, <https://docs.microsoft.com/en-us/DeployEdge/edge-ie-mode-policies>.
+> - You can still continue to use Internet Explorer to access DataMiner Cube as long as Microsoft support continues. However, in this case we highly recommend to use a different browser to access any other websites on the internet
 
 ## New features
 
@@ -46,11 +46,11 @@ AppInstallContent
 
 - ...
 
-| File/Folder        | Contents                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-|--------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| AppInfo.xml        | General information about the application:<br> -  Name<br> -  Version<br> -  Description<br> -  Minimum DataMiner version<br> -  Configuration parameters<br> -  …                                                                                   |
-| Scripts            | \-  Install.xml: a script containing all installation instructions<br> -  Config.xml: a script that will be launched when the application or solution is configured or reconfigured<br> -  InstallDependencies: a folder containing all DLL files used by the installation script<br> -  ConfigureDependencies: a folder containing all DLL files used by the configuration script |
-| AppInstallContents | All auxiliary files needed by the installation script.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| File/Folder | Contents |
+|--|--|
+| AppInfo.xml | General information about the application:<br> - Name<br> - Version<br> - Description<br> - Minimum DataMiner version<br> - Configuration parameters<br> - ... |
+| Scripts | \-  Install.xml: a script containing all installation instructions<br> - Config.xml: a script that will be launched when the application or solution is configured or reconfigured<br> - InstallDependencies: a folder containing all DLL files used by the installation script<br> - ConfigureDependencies: a folder containing all DLL files used by the configuration script |
+| AppInstallContents | All auxiliary files needed by the installation script. |
 
 > [!NOTE]
 >
@@ -400,17 +400,17 @@ In the Dashboards app, the layout options for the State component have been adju
 
 - *Design*: Allows you to choose one of the following options:
 
-    - *Small:* The component displays a single line containing a label and value.
-    - *Large*: The component displays multiple lines with one value and up to three labels.
-    - *Auto size*: Similar to the *Large* option, but automatically adjusts the content to fill the entire component.
+  - *Small:* The component displays a single line containing a label and value.
+  - *Large*: The component displays multiple lines with one value and up to three labels.
+  - *Auto size*: Similar to the *Large* option, but automatically adjusts the content to fill the entire component.
 
 - *Alarm state coloring*: Allows you to select one of the following options to determine how alarm coloring is displayed:
 
-    - *LED*: The alarm color is displayed by a circular LED to the left of the first label.
-    - *Line*: The alarm color is displayed by a bar along the left side of the component.
-    - *Text*: The text color of the value matches the alarm color.
-    - *Background*: The background of the component displays the alarm color. If this option is selected, an additional option, *Automatically adjust text color to alarm color*, can be selected to make sure the text color is adapted if necessary.
-    - *None*: No alarm color is displayed.
+  - *LED*: The alarm color is displayed by a circular LED to the left of the first label.
+  - *Line*: The alarm color is displayed by a bar along the left side of the component.
+  - *Text*: The text color of the value matches the alarm color.
+  - *Background*: The background of the component displays the alarm color. If this option is selected, an additional option, *Automatically adjust text color to alarm color*, can be selected to make sure the text color is adapted if necessary.
+  - *None*: No alarm color is displayed.
 
 If the component displays a different DataMiner object, such as an element or service, the same options as before are available.
 
@@ -598,12 +598,12 @@ A SectionChange object has the following properties:
 
 A FieldValueChange object has the following properties:
 
-| Field             | Description                                                                              |
-|-------------------|------------------------------------------------------------------------------------------|
-| FieldDescriptorID | The ID of the FieldDescriptor.                                                           |
-| CrudType          | The type of change, indicating whether the field was added, updated or deleted.          |
-| ValueBefore       | The value before the change.<br> When CrudType is “Created”, this property will be Null. |
-| ValueAfter        | The value after the change.<br> When CrudType is “Deleted”, this property will be Null.  |
+| Field             | Description                                                                          |
+|-------------------|--------------------------------------------------------------------------------------|
+| FieldDescriptorID | The ID of the FieldDescriptor.                                                       |
+| CrudType          | The type of change, indicating whether the field was added, updated or deleted.      |
+| ValueBefore       | The value before the change. When CrudType is “Created”, this property will be Null. |
+| ValueAfter        | The value after the change. When CrudType is “Deleted”, this property will be Null.  |
 
 > [!NOTE]
 >
@@ -974,13 +974,13 @@ In some cases, an exception could be thrown when opening a Visio file in an HTML
 
 ## Addendum CU1
 
-### Enhancements
+### CU1 enhancements
 
 #### Cassandra: Enhanced performance when deleting element data \[ID_26639\]
 
 Due to a number of enhancements, overall performance has increased when deleting element data from a Cassandra database.
 
-### Fixes
+### CU1 fixes
 
 #### Cassandra: Alarm information would incorrectly be saved in the timetrace table when multiple alarms were generated simultaneously \[ID_26768\]
 

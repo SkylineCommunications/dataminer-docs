@@ -27,7 +27,7 @@ This macro shows you how to create a basic user interface using WPF code.
 
 Up to now, DIS only supported C# version 4. From now on, it also supports C# version 6 and above.
 
-When you open a Protocol.xml file of which the DMA version specified in the *Protocol.<br>Compliancies.MinimumRequired* tag is equal to or higher than “9.6.11”, DIS will now set the language version of the C# projects to one of the following versions:
+When you open a Protocol.xml file of which the DMA version specified in the *Protocol.Compliancies.MinimumRequired* tag is equal to or higher than “9.6.11”, DIS will now set the language version of the C# projects to one of the following versions:
 
 - C# 6.0 (when using Visual Studio 2015)
 - C# 7.3 (when using Visual Studio 2017 or above)
@@ -158,7 +158,7 @@ The Protocol XML schema now supports the following elements:
 - Protocol.Params.Param.Dashboard
 - Protocol.Params.Param.Measurement.Discreets.Discreet.Tooltip
 
-#### Protocol Schema: ArrayOptions.ColumnOption now preferred above ArrayOptions.<br>ColumnOptions.ColumnOption \[ID_23741\]
+#### Protocol Schema: ArrayOptions.ColumnOption now preferred above ArrayOptions.ColumnOptions.ColumnOption \[ID_23741\]
 
 When defining a table in a *Protocol.xml* file, there are two ways to specify *\<ColumnOption>* elements:
 

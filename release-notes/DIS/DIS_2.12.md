@@ -34,13 +34,13 @@ The *DIS Grid* window has been enhanced. This tool window allows you to manage a
 Important changes:
 
 - A *Sequence* tag has been added.
-- When a range tag is generated, a *Low* and a *High* tag is automatically included<br>(default values: 0).
+- When a range tag is generated, a *Low* and a *High* tag is automatically included (default values: 0).
 - When a position tag is generated, a *Row* and *Column* tag is automatically included (default values: 0).
 - The right-click menu now also contains a *Duplicate* command.
 
 #### QActions can now be built and maintained on a computer without a local DataMiner Agent \[ID_18457\]
 
-The DataMiner DLL files that are necessary to build and maintain QActions are now included into the DIS installation file. Hence, it is now possible to build and maintain<br>QActions on a computer that has no local DataMiner Agent installed.
+The DataMiner DLL files that are necessary to build and maintain QActions are now included into the DIS installation file. Hence, it is now possible to build and maintain QActions on a computer that has no local DataMiner Agent installed.
 
 The following DLL files are included:
 
@@ -122,14 +122,14 @@ A number of additional content model restrictions have been added to the protoco
 | Protocol.Actions.Action.Name            | must now contain a unique non-empty string if present                        |
 | Protocol.Commands.Command.Name          | must now contain a unique non-empty string if present                        |
 | Protocol.Display@defaultPage            | must now contain a non-empty string if present                               |
-| Protocol.Groups.Group.Content.Action    | now has to refer to an existing Protocol.<br>Actions.Action@id value         |
-| Protocol.Groups.Group.Content.Pair      | now has to refer to an existing Protocol.<br>Pairs.Pair@id value             |
-| Protocol.Groups.Group.Content.Session   | now has to refer to an existing Protocol.<br>HTTP.Session@id value           |
-| Protocol.Groups.Group.Content.Trigger   | now has to refer to an existing Protocol.<br>Triggers.Trigger@id value       |
+| Protocol.Groups.Group.Content.Action    | now has to refer to an existing Protocol.Actions.Action@id value         |
+| Protocol.Groups.Group.Content.Pair      | now has to refer to an existing Protocol.Pairs.Pair@id value             |
+| Protocol.Groups.Group.Content.Session   | now has to refer to an existing Protocol.HTTP.Session@id value           |
+| Protocol.Groups.Group.Content.Trigger   | now has to refer to an existing Protocol.Triggers.Trigger@id value       |
 | Protocol.Groups.Group.Name              | must now contain a unique non-empty string if present                        |
 | Protocol.HTTP.Session@name              | must now contain a unique non-empty string if present                        |
 | Protocol.Name                           | must contain a non-empty string                                              |
-| Protocol.Params.Param.Display.Range.Low | must now precede a Protocol.Params.<br>Param.Display.Range.High element      |
+| Protocol.Params.Param.Display.Range.Low | must now precede a Protocol.Params.Param.Display.Range.High element      |
 | Protocol.Params.Param.Name              | must be a non-empty string and must be unique for a given type               |
 | Protocol.QActions.QAction@name          | must now contain a unique non-empty string if present                        |
 | Protocol.Responses.Response.Name        | must now contain a unique non-empty string if present                        |

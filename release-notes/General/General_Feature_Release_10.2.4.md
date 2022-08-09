@@ -369,14 +369,14 @@ A custom data source is represented as a class that implements predefined interf
     | Method    | Input arguments       | Output arguments | Description                       |
     |-------------|-----------------------|------------------|-----------------------------------|
     | GetColumns  |                       | GQIColumn\[\]    | The GQI will request the columns. |
-    | GetNextPage | GetNextPage­InputArgs | GQIPage          | The GQI will request data.        |
+    | GetNextPage | GetNextPageInputArgs | GQIPage          | The GQI will request data.        |
 
 - **IGQIInputArguments**: This interface can be used to have the user specify an argument, for example the CSV file from which data should be parsed, or a filter that should be applied. This interface has the following methods:
 
     | Method              | Input arguments                | Output arguments                | Description                                                                       |
     |-----------------------|--------------------------------|---------------------------------|-----------------------------------------------------------------------------------|
-    | GetInputArgu­ments    | \-                             | GQIArgument\[\]                 | Asks for additional information from the user when the data source is configured. |
-    | OnArguments­Processed | OnArgumentsPro­cessedInputArgs | OnArgumentsPro­cessedOutputArgs | Event to indicate that the arguments have been processed.                         |
+    | GetInputArguments    | \-                             | GQIArgument\[\]                 | Asks for additional information from the user when the data source is configured. |
+    | OnArgumentsProcessed | OnArgumentsProcessedInputArgs | OnArgumentsProcessedOutputArgs | Event to indicate that the arguments have been processed.                         |
 
     > [!NOTE]
     > The GQI does not validate the input arguments specified by the user. For example, a user can input an SQL query as a string input argument, and the content of the string argument will be forwarded to the custom data source implementation without validation.
@@ -391,13 +391,13 @@ A custom data source is represented as a class that implements predefined interf
 
     | Method       | Input arguments          | Output arguments          | Description                                     |
     |----------------|--------------------------|---------------------------|-------------------------------------------------|
-    | OnPrepareFetch | OnPrepareFetch­InputArgs | OnPrepareFetch­OutputArgs | Indicated that the GQI has processed the query. |
+    | OnPrepareFetch | OnPrepareFetchInputArgs | OnPrepareFetchOutputArgs | Indicated that the GQI has processed the query. |
 
 - **IGQIOnDestroy**: This interface is called when the instance object is destroyed, which happens when the session is closed, e.g. in case of inactivity or when all the necessary data has been retrieved. It can for instance be used to end the connection with a database. This interface has one method:
 
     | Method  | Input arguments     | Output arguments     | Description                                    |
     |-----------|---------------------|----------------------|------------------------------------------------|
-    | OnDestroy | OnDestroy­InputArgs | OnDestroy­OutputArgs | Indicates that the GQI will close the session. |
+    | OnDestroy | OnDestroyInputArgs | OnDestroyOutputArgs | Indicates that the GQI will close the session. |
 
 ##### Life cycle
 
@@ -420,7 +420,7 @@ To build the custom data source, you can use the objects detailed below.
     | Property | Type           | Required | Description                                                                                                                                                                                                                                                                                                                                  |
     |------------|----------------|----------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
     | Name       | String         | Yes      | The column name.                                                                                                                                                                                                                                                                                                                             |
-    | Type       | GQIColumn­Type | Yes      | The type of data in the column. *GQIColumnType* is an enum that contains the following values: *String*, *Int*, *DateTime*, *Boolean* or *Double*. |
+    | Type       | GQIColumnType | Yes      | The type of data in the column. *GQIColumnType* is an enum that contains the following values: *String*, *Int*, *DateTime*, *Boolean* or *Double*. |
 
 - **GQIPage**, with the following properties:
 
@@ -798,7 +798,7 @@ Using the HTML video player or the VLC player, it is now possible to specify whe
 https://dma.local/VideoThumbnails/Video.htm?type=HTML5&source=https://videoserver/video.mp4&loop=true
 ```
 
-#### Enhanced performance of the interprocess communication between SLDataGateway and SLA­nalytics \[ID_32653\] \[ID_32709\]
+#### Enhanced performance of the interprocess communication between SLDataGateway and SLAnalytics \[ID_32653\] \[ID_32709\]
 
 Due to a number of enhancements, overall performance of the interprocess communication between SLDataGateway and SLAnalytics has increased.
 
@@ -875,7 +875,7 @@ In some cases, an error could occur when you tried to delete a protocol.
 
 When you tried to share a dashboard immediately after the DataMiner Agent had been connected to the cloud, in some cases, an error would appear, saying that the DataMiner Agent was not connected to the cloud.
 
-#### Dashboards: Problem when sharing a dashboard created in an earlier version of the Dash­boards app \[ID_32551\]
+#### Dashboards: Problem when sharing a dashboard created in an earlier version of the Dashboards app \[ID_32551\]
 
 If you tried to share a dashboard that was created in an earlier version of the Dashboards app, in some cases, an error could occur.
 
@@ -966,7 +966,7 @@ When a profile instance is modified, the existing instance is copied and the mod
 
 When, in an alarm template, you specified table conditions, in some cases, those conditions would no longer be saved correctly.
 
-#### Dashboards: Missing sidebar when navigating to a dashboard URL for edit mode without hav­ing edit access \[ID_32706\]
+#### Dashboards: Missing sidebar when navigating to a dashboard URL for edit mode without having edit access \[ID_32706\]
 
 When you navigate to a dashboard via a URL containing the edit=true parameter, and you do not have permission to edit that dashboard, the dashboard will not be opened in edit mode.
 
@@ -986,7 +986,7 @@ From now on, when SLAnalytics is unable to check the status of the Elasticsearch
 
 When a DataMiner cluster with multiple DMAs was migrated to a Cassandra Cluster database, it could occur that the migration of alarms and information events failed because the DMAs tried to truncate the same table at the same time. Truncation will now take place in the initialization phase to prevent this problem, and if it fails, this will be logged but will not stop the migration. This will also prevent a rare problem where data could be missing after DMAs were migrated one by one.
 
-#### DataMiner Cube - Asset Manager: UI could become unresponsive when the database configura­tion was being retrieved \[ID_32766\]
+#### DataMiner Cube - Asset Manager: UI could become unresponsive when the database configuration was being retrieved \[ID_32766\]
 
 When, in DataMiner Cube, you opened the Asset Manager app, in some cases, the UI could become unresponsive when the database configuration was being retrieved.
 

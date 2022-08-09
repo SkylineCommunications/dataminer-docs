@@ -153,6 +153,7 @@ If your DMS was already connected to the cloud using the earlier soft-launch ver
 
 > [!NOTE]
 > Make sure that all users that should be able to share data with the cloud have the following user permissions:
+>
 > - *System configuration* > *Cloud sharing* > *Share item*
 > - *System configuration* > *Cloud sharing* > *Account linking*
 
@@ -351,13 +352,13 @@ From now on, it will no longer be possible to add a resource with invalid capaci
 
 - When you try to add a resource with “NULL” instead of a Capacity or with a Capacity of which the value is set to “NULL”, an error with reason ResourceCapacityInvalid will be added to the TraceData. The error’s ResourceManagerErrorData will contain the following properties:
 
-    - ResourceId: The ID of the resource.
-    - ResourceCapacity: The capacity object that did not reference a correct capacity profile.
+  - ResourceId: The ID of the resource.
+  - ResourceCapacity: The capacity object that did not reference a correct capacity profile.
 
 - When you try to add a resource with “NULL” instead of a Capability or with a Capability of which the value is set to “NULL” and IsTimeDynamic set to FALSE, an error with reason ResourceCapabilityInvalid will be added to the TraceData. The error’s ResourceManagerErrorData will contain the following properties:
 
-    - ResourceId: The ID of the resource.
-    - ResourceCapability: The capability object that did not reference a correct capability profile.
+  - ResourceId: The ID of the resource.
+  - ResourceCapability: The capability object that did not reference a correct capability profile.
 
 #### Automation - Service & Resource Management: New ServiceResourceUsageDefinition.Role property \[ID_30214\]
 
@@ -412,7 +413,7 @@ Due to a number of enhancements with regard to the caching of key links, overall
 
 Due to a number of enhancements, overall performance has increased when adding and updating function resources, especially when adding a large number of resources on the same parent element.
 
-#### Enhanced performance when including/excluding elements in services based on parameter val­ues \[ID_30284\]
+#### Enhanced performance when including/excluding elements in services based on parameter values \[ID_30284\]
 
 Due to a number of enhancements, overall performance has increased when including/excluding elements in/from services based on parameter values, especially when the same parameter is used in a large number of element inclusion conditions.
 
@@ -484,8 +485,8 @@ Also, when an alarm template schedule was started, in some cases, either the act
 
 - When an alarm template with a schedule was edited while, according to its schedule, it was inactive, the following would happen:
 
-    - The template would temporarily be activated, causing alarms to be created which would immediately be cleared.
-    - When no active window was scheduled that day, the first window of the upcoming days would be used for that day.
+  - The template would temporarily be activated, causing alarms to be created which would immediately be cleared.
+  - When no active window was scheduled that day, the first window of the upcoming days would be used for that day.
 
 - When an alarm template with a schedule was assigned to an element while, according to its schedule, it was inactive, it would be activated until the first window had passed.
 
@@ -502,7 +503,7 @@ NT_ADD_FILE (99) has now been adapted in order to better handle alarm template c
 
 When you navigated from the configuration pane to the jobs overview, in some cases, the current job domain would incorrectly be refreshed.
 
-#### DataMiner Cube - Alarm templates: Hysteresis could incorrectly be applied to “low” severity lev­els for parameters of type string \[ID_30117\]
+#### DataMiner Cube - Alarm templates: Hysteresis could incorrectly be applied to “low” severity levels for parameters of type string \[ID_30117\]
 
 When applying hysteresis to specific alarm severity level for parameters of type string, up to now, it would incorrectly be possible to do so for “low” severity levels. From now on, for parameters of type string, it will only be possible to apply hysteresis to “high” severity levels.
 
@@ -543,7 +544,7 @@ When a newly created element was in multiple views, and at least two of these vi
 
 In some cases, DataMiner Cube could become unresponsive when you closed the Bookings app.
 
-#### DataMiner Cube - Visual Overview: Problem when the parent shape of a shape with an embed­ded Chromium web browser control had a show/hide condition configured \[ID_30270\]
+#### DataMiner Cube - Visual Overview: Problem when the parent shape of a shape with an embedded Chromium web browser control had a show/hide condition configured \[ID_30270\]
 
 In some rare cases, an exception could occur when, in a visual overview, the parent shape of a shape with an embedded Chromium web browser control had a show/hide condition configured.
 
@@ -583,15 +584,15 @@ The version compatibility test has now been adapted:
 - When no minimum and/or maximum DataMiner version is specified, the BPA test will run regardless of the version.
 - When a minimum and/or maximum DataMiner version is specified, the BPA test will run when the DataMiner Agent has
 
-    - a Main Release version greater than the minimum Main Release version and smaller than or equal to the maximum Main Release version, or
-    - a Feature Release version greater than the minimum Feature Release version and smaller than or equal to the maximum Feature Release version, or
-    - a Release version of which the Main Release on which it is based is greater than the minimum Feature Release version and smaller or equal to the maximum Feature Release version.
+  - a Main Release version greater than the minimum Main Release version and smaller than or equal to the maximum Main Release version, or
+  - a Feature Release version greater than the minimum Feature Release version and smaller than or equal to the maximum Feature Release version, or
+  - a Release version of which the Main Release on which it is based is greater than the minimum Feature Release version and smaller or equal to the maximum Feature Release version.
 
 #### SLNet would fail to initialize when external authentication via SAML was configured incorrectly \[ID_30318\]
 
 When external authentication via SAML was configured incorrectly, up to now, SLNet would fail to initialize. From now on, a “Failed to build External Authentication for SAML” notice will be generated instead and SLNet will continue its initialization routine.
 
-#### SLAnalytics: “Division by zero” error when encountering an invalid polling time in legacy param­eterInfo records \[ID_30321\]
+#### SLAnalytics: “Division by zero” error when encountering an invalid polling time in legacy parameterInfo records \[ID_30321\]
 
 In some cases, a “division by zero” error could occur in SLAnalytics when encountering an invalid polling time in legacy parameterInfo records.
 
@@ -719,7 +720,7 @@ When the shape text of an “Info” shape contained more than just an asterisk 
 
 #### DataMiner Cube - System Center: Clicking “Failover...” would incorrectly show the Failover configuration of the DMA to which you were connected \[ID_30535\]
 
-When, in the *Agents* section of *System Center*, you selected a DataMiner Agent and clicked *Failover... *to check its Failover configuration, the *Failover Config* window would incorrectly always show the Failover configuration of the DataMiner Agent to which you were connected.
+When, in the *Agents* section of *System Center*, you selected a DataMiner Agent and clicked *Failover* to check its Failover configuration, the *Failover Config* window would incorrectly always show the Failover configuration of the DataMiner Agent to which you were connected.
 
 #### DataMiner Cube - Tab layout: Clicking e.g. an element multiple times would incorrectly each time open a new instance of the card in question \[ID_30541\]
 

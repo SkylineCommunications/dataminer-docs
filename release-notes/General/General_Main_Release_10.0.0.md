@@ -3062,7 +3062,7 @@ The DataMiner HTML5 app has now been replaced by the new Monitoring & Control ap
     Currently, the settings window allows you to specify the default pages for element and view cards.
 
 - A new homepage similar to the Cube X homepage, listing recently used items.
-- Redesigned (collapsible) side panel, on which alarm states are now indicated by colored circled.
+- Redesigned (collapsible) side panel, on which alarm states are now indicated by colored circles.
 - Redesigned element, service, view and alarm cards, which can be accessed directly using the following URLs:
 
   - `http://<DMAIP>/monitoring/element/<DMAID>/<EID>/data/<PAGENAME>`
@@ -9807,9 +9807,9 @@ Up to now, when the number of items on the parameter update stack was divisible 
 
 From now on, when the parameter update stack exceeds 5000 items, log entries will be added to the log files of all elements for which there are items on the stack. Also, similar log entries will be added to the same log files each time the number of items on the stack is divisible by 1000 until the number of items on the stack drops below 1000.
 
-#### DataMiner backup packages will now also include the softlaunchoptions.xml file \[ID_30076\]
+#### DataMiner backup packages will now also include the SoftLaunchOptions.xml file \[ID_30076\]
 
-From now on, DataMiner backup packages will also include the softlaunchoptions.xml file.
+From now on, DataMiner backup packages will also include the SoftLaunchOptions.xml file.
 
 #### Enhanced performance when updating user information \[ID_30102\]
 

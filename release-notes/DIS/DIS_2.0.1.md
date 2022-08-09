@@ -16,9 +16,9 @@ Also, a number of changes have been made to the *DMA* tab page of the *DIS Setti
 
 - The *Host* box now only has to contain the IP address of the DataMiner Agent to which you want DIS to connect.
 
-    - Both HTTP and HTTPS are supported.
-    - Specifying the IP port is now optional. Default port: 8004
-    - Specifying the suffix “/SLNetService” is now optional.
+  - Both HTTP and HTTPS are supported.
+  - Specifying the IP port is now optional. Default port: 8004
+  - Specifying the suffix “/SLNetService” is now optional.
 
 - After having changed the host name, the user name and/or the password, you can now click the *Test connection* button to check the new login settings.
 
@@ -41,22 +41,22 @@ In the protocol editor, you can now click a small *Down* arrow in front of certa
 
 | Protocol tag | Command | Function |
 |--------------|---------|----------|
-| Param | Edit Table | Open the parameter in the table editor.<br>(only for table parameters) |
-|       | Generate Write For Read Param | Create an identical parameter of type “Write”.<br>(only for read parameters) |
+| Param | Edit Table | Open the parameter in the table editor. (Only for table parameters.) |
+|       | Generate Write For Read Param | Create an identical parameter of type “Write”. (Only for read parameters.) |
 |       | Include in Group | Include the parameter in one of the listed groups of type “poll”. |
 |       | Generate new Trigger | Create a new “on change” trigger that will get activated when the parameter changes. |
 |       | Generate new QAction | Creates a new blank QAction that will be run when the parameter changes. |
 | Trigger | Include in Group | Include the trigger in one of the listed groups of type “trigger” or “poll trigger”. |
-|         | Generate new Action | Create a new action.<br>(only if the trigger is of type “action”) |
+|         | Generate new Action | Create a new action. (Only if the trigger is of type “action”.) |
 | Action | Include in Group | Include the action in one of the listed groups of type “action” or “poll action”. |
 |        | Include in Trigger | Include the action in one of the listed triggers. |
 | Session | Include in Group | Include the session in one of the listed groups of type “poll”. |
 | Group | Include in Timer | Include the group in one of the listed timers. |
 |       | Generate new Trigger (after group) | Create a new “after group” trigger. |
-|       | Generate new Parameter | Create a new parameter.<br>(only if the group is of type “poll”) |
-|       | Generate new Pair | Create a new pair.<br>(only if the group is of type “poll”) |
-|       | Generate new Session | Create a new session.<br> (only if the group is of type “poll”) |
-|       | Generate new Action | Create a new action.<br>(only if the group is of type “action” or “poll action”) |
+|       | Generate new Parameter | Create a new parameter. (Only if the group is of type “poll”.) |
+|       | Generate new Pair | Create a new pair. (Only if the group is of type “poll”.) |
+|       | Generate new Session | Create a new session. (Only if the group is of type “poll”.) |
+|       | Generate new Action | Create a new action. (Only if the group is of type “action” or “poll action”.) |
 | Timer | Generate new Group | Create a new group. |
 | Pair | Include in Group | Include the pair in one of the listed groups of type “poll”. |
 |      | Generate new Command | Create a new command. |
@@ -66,7 +66,7 @@ In the protocol editor, you can now click a small *Down* arrow in front of certa
 | Response | Include in Pair | Include the response in one of the listed pairs. |
 |          | Generate new Parameter | Create a new parameter. |
 
-**IntelliSense**
+##### IntelliSense
 
 When adding content to Commands, Responses, Pairs, Groups, Triggers, and Timers, an IntelliSense popup will now appear, listing all existing items that can be added.
 
@@ -140,7 +140,7 @@ In the new *Params.Param.Database* tag, you can now group a number of database-r
 | CQLOptions | Tag that groups a number of Cassandra database options. |
 | Clustering | The semicolon-separated list of clustering columns, i.e. the columns that are part of the compound primary key definition. |
 | TableProperty | The WITH clause you want to use to set the necessary table properties. |
-| Finalizer | The query that has to be executed after the creation of the table.<br> This can be, for example, a query that will preload data or create indexes. |
+| Finalizer | The query that has to be executed after the creation of the table. This can be, for example, a query that will preload data or create indexes. |
 
 Example:
 

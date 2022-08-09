@@ -12,7 +12,7 @@ uid: DIS_2.21
 
 In the *DMA* tab of the *DIS Settings* window, it is now possible to configure multiple DMA connections and to organize them in groups. That way, developers will be able to quickly connect to another DMA without having to change any of the settings.
 
-**Default connection**
+##### Default connection
 
 After having configured a number of DMA connections in the *DMA* tab of the *DIS Settings* window, you can set one of them as default connection by right-clicking it and selecting *Set as Default*.
 
@@ -22,7 +22,7 @@ After having configured a number of DMA connections in the *DMA* tab of the *DIS
 > [!NOTE]
 > The title of the *DIS Inject* tool window now includes the name of the DMA to which DIS is connected (between brackets). When DIS is not connected to any DMA, the tool window title will include “(not connected)”.
 
-**Production DMA**
+##### Production DMA
 
 When configuring a DMA connection, you can now indicate whether this DMA is a production DMA. When you try to publish a protocol or an Automation script to a production DMA, a confirmation box will appear to prevent you from accidentally publishing that file to it.
 
@@ -30,7 +30,7 @@ When configuring a DMA connection, you can now indicate whether this DMA is a pr
 
 In the *DIS Validator* tool window, it is now possible to suppress validation and protocol comparison results.
 
-**Suppressing a result in the DIS Validator tool window**
+##### Suppressing a result in the DIS Validator tool window
 
 To suppress a result, right-click it, choose *Suppress...*, enter a (mandatory) reason of at least 5 characters, and click *OK*.
 
@@ -41,7 +41,7 @@ Suppressed results will, by default, not be displayed in the *DIS Validator* too
 > - When you choose to display suppressed results, they will appear in gray.
 > - When you right-click a suppressed result and choose *Show details...*, the reason why this result was suppressed will be shown in red.
 
-**How suppressed items are marked in a protocol.xml file**
+##### How suppressed items are marked in a protocol.xml file
 
 When you suppress a result in the *DIS Validator* tool window, the following comment tags are added to the protocol.xml file.
 
@@ -84,8 +84,8 @@ The following checks and error messages have been added or updated.
 | 2.47.1 | Param.CheckOidTagIdAttrCombo | Excessive attribute 'SNMP/OID@id' in Param '{pid}'.                                                       |
 | 2.47.2 | Param.CheckOidTagIdAttrCombo | Invalid combination of OID value '{oidValue}' and SNMP/OID@id value '{idValue}' in Param '{pid}'.         |
 | 2.48.1 | Param.CheckIdAttribute       | Empty attribute 'SNMP/OID@id' in Param '{pid}'.                                                           |
-| 2.48.2 | Param.CheckIdAttribute       | Invalid attribute 'SNMP/OID@id' in Param '{pid}'. Current value<br>'{currentValue}'.                      |
-| 2.48.3 | Param.CheckIdAttribute       | Attribute 'SNMP/OID@id' references a non-existing 'Param' with ID<br>'{referencedPid}'. Param ID '{pid}'. |
+| 2.48.2 | Param.CheckIdAttribute       | Invalid attribute 'SNMP/OID@id' in Param '{pid}'. Current value '{currentValue}'.                      |
+| 2.48.3 | Param.CheckIdAttribute       | Attribute 'SNMP/OID@id' references a non-existing 'Param' with ID '{referencedPid}'. Param ID '{pid}'. |
 | 2.48.4 | Param.CheckIdAttribute       | Unsupported Param '{idAttributeValue}' reference in attribute 'SNMP/OID@id' in Param '{pid}'.             |
 | 2.48.5 | Param.CheckIdAttribute       | Untrimmed attribute 'SNMP/OID@id' in Param '{pid}'. Current value '{untrimmedValue}'.                     |
 

@@ -10,13 +10,13 @@ uid: DIS_2.34
 
 #### DIS Comparer tool window now allows you to download a previous release of a selected protocol and compare both \[ID_30088\]
 
-Up to now, when you wanted to compare a protocol to one of its previous versions, you first had to download that previous version, save it in a random folder and then select both in the *DIS Comparer* tool window. From now on, after having selected a protocol on one side of the *DIS Comparer *window, on the other side of the window you can now immediately select one of its previous versions to compare it to.
+Up to now, when you wanted to compare a protocol to one of its previous versions, you first had to download that previous version, save it in a random folder and then select both in the *DIS Comparer* tool window. From now on, after having selected a protocol on one side of the *DIS Comparer* window, on the other side of the window you can now immediately select one of its previous versions to compare it to.
 
 To select a previous version of a protocol you already opened in the DIS Comparer tool window, do the following:
 
 1. Click *Select protocol...*
-2. In the *Select Protocol...* window, select *Previous release*, and select one of the releases from the list.
-3. Click *OK*.
+1. In the *Select Protocol...* window, select *Previous release*, and select one of the releases from the list.
+1. Click *OK*.
 
 > [!NOTE]
 > For the *Previous release* option to work, the DataMiner Integration Studio has to be able to connect to `https://api.skyline.be/`.
@@ -27,7 +27,7 @@ The following enhancements will make using the class library in a serialization/
 
 - Interfaces, base classes and their implementations will now all be copied together into the generated QAction or Automation script.
 
-    If the generator detects that an interface is being used while the class that implements it is not, then the latter will now be copied along into the generated code. Also, if a class is being used while the interface is not, then both will now be copied into the generated code.
+  If the generator detects that an interface is being used while the class that implements it is not, then the latter will now be copied along into the generated code. Also, if a class is being used while the interface is not, then both will now be copied into the generated code.
 
 - The generated code will now contain all fields and properties of classes, unless they are private, even when those fields and properties are not being used.
 
@@ -57,17 +57,17 @@ The following checks and error messages have been added.
 |----------|-------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | 1.25.1   | MinVersionTooLow                                                  | Minimum required version '{currentMinDmVersion}' too low.                                                                                                                  |
 | 1.25.2   | MinVersionTooLow_Sub                                              | Expected value '{expectedMinDmVersion}'. '{requiredDmVersion}' : '{usedFeature}'                                                                                           |
-| 1.25.3   | MinVersionFeatureUsedInItem<br>WithId_Sub                         | Feature used in '{itemKind}' with '{identifierType}' '{itemId}'.                                                                                                           |
-| 1.25.4   | MinVersionFeatureUsedInItem<br>\_Sub                              | Feature used in '{itemKind}'.                                                                                                                                              |
+| 1.25.3   | MinVersionFeatureUsedInItemWithId_Sub                         | Feature used in '{itemKind}' with '{identifierType}' '{itemId}'.                                                                                                           |
+| 1.25.4   | MinVersionFeatureUsedInItem_Sub                              | Feature used in '{itemKind}'.                                                                                                                                              |
 | 1.25.5   | UntrimmedTag                                                      | Untrimmed tag 'MinimumRequiredVersion'. Current value '{tagValue}'.                                                                                                        |
 | 2.38.4   | MissingRelation                                                   | Missing Relation between table '{fkToTablePid}' and table '{fkFromTablePid}' due to foreignKey on column '{fkColumnPid}'.                                                  |
 | 2.49.1   | MissingTag                                                        | Missing tag 'Param/Message' in Param '{pid}'.                                                                                                                              |
 | 2.50.1   | MisconfiguredConfirmOptions                                       | Misconfigured 'confirm' option(s) in 'Discreet@options' for ContextMenu. Param ID '{pid}'.                                                                                 |
 | 3.11.6   | ColumnManagedByDataMiner                                          | Unsupported set on column '{columnPid}' with '{optionLocation}' containing '{optionName}'.                                                                                 |
-| 3.11.7   | ColumnManagedByProtocol<br>Item                                   | Unsupported set on column '{columnPid}' managed by {managedByItemKind} '{managedByItemId}' with '{optionLocation}' containing '{optionName}'.                              |
-| 3.12.2   | UnexpectedAccessModifier<br>ForEntryPointMethod                   | Entry point method '{entryPointClass}.{entryPointMethod}' has unexpected access modifier '{currentAccessModifier}'. QAction ID {qactionId}.                                |
-| 3.12.3   | UnexpectedAccessModifier<br>ForEntryPointClass                    | Entry point class '{entryPointClass}' has unexpected access modifier '{currentAccessModifier}'. QAction ID {qactionId}.                                                    |
-| 3.12.4   | UnexpectedArg0Type<br>ForEntryPointMethod                         | Entry point method '{entryPointClass}.{entryPointMethod}' has a first argument with unexpected type '{arg0Type}'. QAction ID {qactionId}.                                  |
+| 3.11.7   | ColumnManagedByProtocolItem                                   | Unsupported set on column '{columnPid}' managed by {managedByItemKind} '{managedByItemId}' with '{optionLocation}' containing '{optionName}'.                              |
+| 3.12.2   | UnexpectedAccessModifierForEntryPointMethod                   | Entry point method '{entryPointClass}.{entryPointMethod}' has unexpected access modifier '{currentAccessModifier}'. QAction ID {qactionId}.                                |
+| 3.12.3   | UnexpectedAccessModifierForEntryPointClass                    | Entry point class '{entryPointClass}' has unexpected access modifier '{currentAccessModifier}'. QAction ID {qactionId}.                                                    |
+| 3.12.4   | UnexpectedArg0TypeForEntryPointMethod                         | Entry point method '{entryPointClass}.{entryPointMethod}' has a first argument with unexpected type '{arg0Type}'. QAction ID {qactionId}.                                  |
 | 3.15.7   | UnrecommendedNotifyProtocol<br>NTDeleteRow                        | Method 'SLProtocol.NotifyProtocol(156/\*NT_DELETE_ROW\*/, ...)' is unrecommended. QAction ID {qactionId}.                                                                  |
 | 3.15.8   | UnrecommendedNotifyProtocol<br>NTAddRow                           | Method 'SLProtocol.NotifyProtocol(149/\*NT_ADD_ROW\*/, ...)' is unrecommended. QAction ID {qactionId}.                                                                     |
 | 3.15.9   | UnrecommendedNotifyProtocol<br>NT_CHECK_TRIGGER                   | Method 'SLProtocol.NotifyProtocol(134/\*NT_CHECK_TRIGGER\*/, ...)' is unrecommended. QAction ID {qactionId}.                                                               |
@@ -82,7 +82,7 @@ The following checks and error messages have been added.
 | 3.15.18  | UnrecommendedNotifyProtocol<br>NT_GET_ROW                         | Method 'SLProtocol.NotifyProtocol(215/\*NT_GET_ROW\*/, ...)' is unrecommended. QAction ID {qactionId}.                                                                     |
 | 3.15.19  | UnrecommendedNotifyProtocol<br>NT_ARRAY_ROW_COUNT                 | Method 'SLProtocol.NotifyProtocol(195/\*NT_ARRAY_ROW_COUNT\*/, ...)' is unrecommended. QAction ID {qactionId}.                                                             |
 | 3.15.20  | UnrecommendedNotifyProtocol<br>NT_NOTIFY_DISPLAY                  | Method 'SLProtocol.NotifyProtocol(123/\*NT_NOTIFY_DISPLAY\*/, ...)' is unrecommended. QAction ID {qactionId}.                                                              |
-| 3.15.21  | UnrecommendedNotifyProtocol<br>NT_SET_PARAMETER_WITH\_<br>HISTORY | Method 'SLProtocol.NotifyProtocol(256/\*NT_SET_PARAMETER_WITH_HISTORY\*/, ...)' is unrecommended. QAction ID {qactionId}.                                                  |
+| 3.15.21  | UnrecommendedNotifyProtocol<br>NT_SET_PARAMETER_WITH_HISTORY | Method 'SLProtocol.NotifyProtocol(256/\*NT_SET_PARAMETER_WITH_HISTORY\*/, ...)' is unrecommended. QAction ID {qactionId}.                                                  |
 | 3.15.22  | UnrecommendedNotifyProtocol<br>NT_SET_PARAMETER_BY_DATA           | Method 'SLProtocol.NotifyProtocol(86/\*NT_SET_PARAMETER_BY_DATA\*/, ...)' is unrecommended. QAction ID {qactionId}.                                                        |
 | 3.15.23  | UnrecommendedNotifyProtocol<br>NT_SET_PARAMETER_BY_NAME           | Method 'SLProtocol.NotifyProtocol(84/\*NT_SET_PARAMETER_BY_NAME\*/, ...)' is unrecommended. QAction ID {qactionId}.                                                        |
 | 3.15.24  | UnrecommendedNotifyProtocol<br>NT_SET_DESCRIPTION                 | Method 'SLProtocol.NotifyProtocol(131/\*NT_SET_DESCRIPTION\*/, ...)' is unrecommended. QAction ID {qactionId}.                                                             |
@@ -91,7 +91,7 @@ The following checks and error messages have been added.
 | 3.33.1   | UnexpectedImplementation                                          | Method 'SLProtocol.GetParameters' with arguments '{arguments}' is not implemented as expected. QAction ID '{qactionId}'.                                                   |
 | 3.33.2   | NonExistingParam                                                  | Method 'SLProtocol.GetParameters' references a non-existing 'Param' with ID '{paramId}'. QAction ID '{qactionId}'.                                                         |
 | 3.33.3   | HardCodedPid                                                      | Unrecommended use of magic number '{hardCodedPid}', use 'Parameter' class instead. QAction ID '{qactionId}'.                                                               |
-| 3.33.4   | UnsupportedArgumentType<br>ForIds                                 | Invocation of method 'SLProtocol.GetParameters' has an invalid type '{argumentType}' for the argument 'ids'. QAction ID '{qactionId}'.                                     |
+| 3.33.4   | UnsupportedArgumentTypeForIds                                 | Invocation of method 'SLProtocol.GetParameters' has an invalid type '{argumentType}' for the argument 'ids'. QAction ID '{qactionId}'.                                     |
 | 3.34.1   | UnexpectedImplementation                                          | Method 'NotifyProtocol(220/\*NT_FILL_ARRAY_WITH_COLUMN\*/, ...)' with arguments '{arguments}' is not implemented as expected. QAction ID '{qactionId}'.                    |
 | 3.34.2   | NonExistingTable                                                  | Method 'NotifyProtocol(220/\*NT_FILL_ARRAY_WITH_COLUMN\*/, ...)' references a non-existing 'table' with PID '{tablePid}'. QAction ID '{qactionId}'.                        |
 | 3.34.3   | NonExistingColumn                                                 | Method 'NotifyProtocol(220/\*NT_FILL_ARRAY_WITH_COLUMN\*/, ...)' references a non-existing 'column' with PID '{columnPid}'. QAction ID '{qactionId}'.                      |
@@ -99,7 +99,7 @@ The following checks and error messages have been added.
 | 3.34.5   | HardCodedTablePid                                                 | Unrecommended use of magic number '{hardCodedTablePid}', use 'Parameter' class instead. QAction ID '{qactionId}'.                                                          |
 | 3.34.6   | HardCodedColumnPid                                                | Unrecommended use of magic number '{hardCodedColumnPid}', use 'Parameter' class instead. QAction ID '{qactionId}'.                                                         |
 | 3.34.7   | ColumnManagedByDataMiner                                          | Unsupported set on column '{columnPid}' with '{optionLocation}' containing '{optionName}'.                                                                                 |
-| 3.34.8   | ColumnManagedByProtocol<br>Item                                   | Unsupported set on column '{columnPid}' managed by {managedByItemKind} '{managedByItemId}' with '{optionLocation}' containing '{optionName}'.                              |
+| 3.34.8   | ColumnManagedByProtocolItem                                   | Unsupported set on column '{columnPid}' managed by {managedByItemKind} '{managedByItemId}' with '{optionLocation}' containing '{optionName}'.                              |
 | 13.2.5   | MissingForeignKeyForRelation                                      | Missing foreignKey(s) detected for relation '{relationNameOrPath}'.                                                                                                        |
 | 13.2.6   | MissingForeignKeyInTable_Sub                                      | Missing foreignKey between table '{table1Pid}' and table '{table2Pid}'.                                                                                                    |
 

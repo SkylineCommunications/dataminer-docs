@@ -158,10 +158,10 @@ The Protocol XML schema file has been reviewed.
 |--------------------------------------------------------------|------------------------------------------------------------------|
 | Protocol.DeviceOID                                           | Type changed from xs:string to xs:unsignedInt                    |
 | Protocol.Http.Session.Connection.Request                     | This tag can no longer contain both a Parameters and a Data tag. |
-| Protocol.Http.Session.Connection.Response.<br>Headers.Header | pid attribute is now required                                    |
-| Protocol.Params.Param.ArrayOptions.<br>ColumnOption          | pid, idx and type attributes are now required                    |
+| Protocol.Http.Session.Connection.Response.Headers.Header | pid attribute is now required                                    |
+| Protocol.Params.Param.ArrayOptions.ColumnOption          | pid, idx and type attributes are now required                    |
 | Protocol.Params.Param.Snmp.Oid                               | type attribute now also accepts “auto” and “composed”            |
-| Protocol.Params.Param.Snmp.Type                              | Additional type:<br> “Counter64String”                           |
+| Protocol.Params.Param.Snmp.Type                              | Additional type: “Counter64String”                           |
 | Protocol.PortSettings.Ipport.DefaultValue                    | Type changed from xs:string to TypePortNumber                    |
 | Protocol.PortSettings.LocalIPPort.DefaultValue               | Type changed from xs:string to TypePortNumber                    |
 | Protocol.Timers.Timer                                        | id attribute is now required                                     |

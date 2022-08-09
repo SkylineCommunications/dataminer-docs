@@ -42,7 +42,7 @@ Since [DataMiner 10.2.2](xref:General_Feature_Release_10.2.2) (RN 32028), it is 
 
 #### Clicking fiber node now navigates to corresponding data page \[ID_32924\]
 
-When you click a fiber node in the Network visual overview, this will now open the *Fiber Node *data page. At present there is no visual overview page linked to the fiber node.
+When you click a fiber node in the Network visual overview, this will now open the *Fiber Node* data page. At present there is no visual overview page linked to the fiber node.
 
 #### Fine-tuned DMA security \[ID_32927\]
 

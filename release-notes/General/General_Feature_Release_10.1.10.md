@@ -35,16 +35,15 @@ Two special types of field descriptors have been added to the DataMiner Object M
 
 From now on, the following special types of field descriptors are available:
 
-| Field descriptor                 | Function                                                                                                                                                                                                                                                                                                                                                                                                        |
-|----------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| AutoIncrementFieldDescriptor     | Defines a field of which the value will automatically be incremented when saved.                                                                                                                                                                                                                                                                                                                                |
-| DomInstanceFieldDescriptor       | Defines a field that should contain the ID of a DomInstance.<br> This descriptor also contains a ModuleId property, which defines where the instance can be found, and a DomDefinitionIds list property, which can be used to define whether DomInstances should be linked to the defined definitions. Note that the validity and existence of these properties is not checked. FieldValues are of type “Guid”. |
-| ElementFieldDescriptor           | Defines a field that should contain the ID of an element.<br> The ID must be saved as a string using the “\[DMA ID\]/\[ELEMENT ID\]” format (e.g. “868/65874”).<br> The descriptor contains a ViewIds list property, which can be used to specify the views in which the element is located. FieldValues are of type “string”.                                                                                  |
-| GenericEnumFieldDescriptor       | Defines a field that has a list of possible preset values.                                                                                                                                                                                                                                                                                                                                                      |
-| ReservationFieldDescriptor       | Defines a field that should contain the ID of a ReservationInstance.                                                                                                                                                                                                                                                                                                                                            |
-| ResourceFieldDescriptor          | Defines a field that should contain the ID of a Resource.<br> The descriptor contains a ResourcePoolIds property, which can be used to define the ResourcePools from which users can select a Resource.                                                                                                                                                                                                         |
-| ServiceDefinitionFieldDescriptor | Defines a field that should contain the ID of a ServiceDefinition.<br> The descriptor contains a ServiceDefinitionFilter property, which has a FilterElement that can be used to determine the ServiceDefinitions that will be presented to the user.                                                                                                                                                           |
-| StaticTextFieldDescriptor        | Defines a field that should contain a static value defined by the StaticText property.                                                                                                                                                                                                                                                                                                                          |
+| Field descriptor | Function |
+|--|--|
+| AutoIncrementFieldDescriptor | Defines a field of which the value will automatically be incremented when saved. |
+| DomInstanceFieldDescriptor | Defines a field that should contain the ID of a DomInstance. This descriptor also contains a ModuleId property, which defines where the instance can be found, and a DomDefinitionIds list property, which can be used to define whether DomInstances should be linked to the defined definitions. Note that the validity and existence of these properties is not checked. FieldValues are of type “Guid”. |
+| ElementFieldDescriptor | Defines a field that should contain the ID of an element. The ID must be saved as a string using the “\[DMA ID\]/\[ELEMENT ID\]” format (e.g. “868/65874”). The descriptor contains a ViewIds list property, which can be used to specify the views in which the element is located. FieldValues are of type “string”. |
+| GenericEnumFieldDescriptor | Defines a field that has a list of possible preset values. |
+| ResourceFieldDescriptor | Defines a field that should contain the ID of a Resource. The descriptor contains a ResourcePoolIds property, which can be used to define the ResourcePools from which users can select a Resource. |
+| ServiceDefinitionFieldDescriptor | Defines a field that should contain the ID of a ServiceDefinition. The descriptor contains a ServiceDefinitionFilter property, which has a FilterElement that can be used to determine the ServiceDefinitions that will be presented to the user. |
+| StaticTextFieldDescriptor | Defines a field that should contain a static value defined by the StaticText property. |
 
 #### Alarm templates - Smart baselines: Calculated baseline values outside the value range will automatically be set to the nearest value in the range \[ID_30704\]
 
@@ -115,9 +114,9 @@ A number of options can also be added to the *HistoryMode* shape, again using a 
 
 | HistoryMode option         | Description                                                                                                                                                                                                                                                                                     |
 |----------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| NoDataValue=               | This option allows you to specify the text that should be displayed in case no trending is available. If this option is not specified, the default value “N/A” is displayed.<br> For example: *State=On\|TimeStamp=\[var:myTime\]\|NoDataValue=\<No data available>* |
+| NoDataValue=               | This option allows you to specify the text that should be displayed in case no trending is available. If this option is not specified, the default value “N/A” is displayed. For example: *State=On\|TimeStamp=\[var:myTime\]\|NoDataValue=\<No data available>* |
 | TrendDataType              | This option allows you to determine which kind of trend data should be used, if available: *Realtime* (default), *Average* or *RealtimeAndAverage*.                                                |
-| AverageTrendDataIndication | This option allows you to specify a prefix to the parameter value in case it represents an average value. By default, no prefix is shown. <br> For example:  *State=On\|TimeStamp=\[var:myTime\]\|<br>AverageTrendDataIndication=\[AVG\]*                            |
+| AverageTrendDataIndication | This option allows you to specify a prefix to the parameter value in case it represents an average value. By default, no prefix is shown. For example:  *State=On\|TimeStamp=\[var:myTime\]\|AverageTrendDataIndication=\[AVG\]*                            |
 
 > [!NOTE]
 >
@@ -144,8 +143,7 @@ The following new placeholders are now also supported in an *Element* shape. The
 Aggregation rule conditions can now be specified in the form of a regular expression.
 
 1. Set the condition type to “regular expression”.
-
-2. Choose “by value” or “by reference”.
+1. Choose “by value” or “by reference”.
 
     - If you chose “by value” (i.e. the default setting), then enter a regular expression.
     - If you chose “by reference”, then select a single-value parameter of type “string” containing a regular expression.
@@ -289,7 +287,7 @@ In an interactive Automation script that is used in the DataMiner web apps, the 
 Other enhancements:
 
 - A Dropdown component will now keep the focus after an option was selected. This will enable users to still browse through the options using the arrow keys even when the options popup window is closed.
-- In a Checkbox, a CheckboxList or a RadioButtonList component, users can now select or clear options using the spacebar.
+- In a Checkbox, a CheckboxList or a RadioButtonList component, users can now select or clear options using the space bar.
 - In a CheckboxList or a RadioButtonList component, users can now go from one checkbox or radio button to another using the TAB keys.
 
 #### Interactive Automation scripts: File selector component can now be configured to only allow a script to continue after a file has been uploaded \[ID_30728\]
@@ -349,7 +347,7 @@ Using special characters:
 
 A number of security enhancements have been made.
 
-#### Improved performance when including/excluding elements in services based on alarm or ele­ment alarm state \[ID_30303\]
+#### Improved performance when including/excluding elements in services based on alarm or element alarm state \[ID_30303\]
 
 Performance has improved when elements are dynamically included or excluded in a service based on alarm state or element alarm state.
 
@@ -377,7 +375,7 @@ A number of small improvements have been implemented to the list of parameters i
 - When you create a new parameter, that parameter is automatically selected.
 - It is now possible to search for a parameter in the list by typing its first characters.
 
-#### Service & Resource Management: Interface state calculation for virtual function interfaces dis­abled \[ID_30537\]
+#### Service & Resource Management: Interface state calculation for virtual function interfaces disabled \[ID_30537\]
 
 As the interfaces of virtual functions are generated from a table that cannot be monitored, the interface state calculation for these interfaces is now disabled. This may result in improved performance.
 
@@ -508,7 +506,7 @@ In some cases, it could occur that the */Bootstrap* command line argument for th
 
 When you open a spectrum analyzer element in Cube, it will retrieve all client sessions of that spectrum element. Up to now, when the retrieved client session data contained duplicate keys, an exception could be thrown. From now on, a log entry will be generated instead.
 
-#### GetAlarmFilterResponse and GetTrendFilterResponse messages caused protocol buffer serial­ization errors \[ID_30650\]
+#### GetAlarmFilterResponse and GetTrendFilterResponse messages caused protocol buffer serialization errors \[ID_30650\]
 
 In some cases, it could occur that the *GetAlarmFilterResponse* and *GetTrendFilterResponse* messages failed to be serialized even though these were marked as eligible for protocol buffer serialization. An error similar to the following could be displayed in the Cube logging:
 

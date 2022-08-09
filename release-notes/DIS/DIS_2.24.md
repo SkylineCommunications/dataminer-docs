@@ -24,7 +24,7 @@ When DIS detects that code from a loaded Class Library package is used in EXE bl
 
 In the C# editor, you can now use the following additional snippets:
 
-**DIS \> Automation Script**
+##### DIS \> Automation Script
 
 - CreateInformationEvent
 - EditSpectrumPreset
@@ -35,7 +35,7 @@ In the C# editor, you can now use the following additional snippets:
 - MaskElementsInView
 - RunAutomationScript
 
-**DIS \> Protocol \> Class Library**
+##### DIS \> Protocol \> Class Library
 
 - Get DMS With Monitor
 
@@ -56,7 +56,7 @@ The following checks and error messages have been added, updated or removed.
 | 1.23.3  | CheckConnections                                                  | Duplicated Connection Name '{name}'.                                                                                                                                                                                         |
 | 1.23.4  | CheckConnections                                                  | Duplicated Connection Name '{name}'. Connection IDs '{connectionIds}'.                                                                                                                                                       |
 | 1.23.5  | CheckConnections                                                  | Connection count in 'Protocol/Type' tag '{connectionCount}' doesn't match with PortSettings count '{portSettingCount}'.                                                                                                      |
-| 2.13.2  | CheckDisplayTag                                                   | Invalid pagebutton caption format '{displayValue}'. Suggested fix '{suggestedValue}'. Param ID '{paramId}'.                                                                                                                  |
+| 2.13.2  | CheckDisplayTag                                                   | Invalid page button caption format '{displayValue}'. Suggested fix '{suggestedValue}'. Param ID '{paramId}'.                                                                                                                  |
 | 2.13.3  | CheckDisplayTag                                                   | Missing tag 'Discreet/Display' in Param '{paramId}'.                                                                                                                                                                         |
 | 2.13.4  | CheckDisplayTag                                                   | Empty tag 'Discreet/Display' in Param '{paramId}'.                                                                                                                                                                           |
 | 2.13.5  | CheckDisplayTag                                                   | Untrimmed tag 'Discreet/Display' in Param '{paramId}'. Current value '{untrimmedValue}'.                                                                                                                                     |
@@ -204,17 +204,17 @@ The following units have been added to the UOM Schema:
 
 #### Automation Schema: Additional values for DMSScript.Exe.Param@type attribute \[ID_23952\]
 
-The *DMSScript.Script.Exe.Param@type* attribute can now be set to the following additional val­ues:
+The *DMSScript.Script.Exe.Param@type* attribute can now be set to the following additional values:
 
-| Value       | Description                                                                                                                                                                                                                                                                                                                                                               |
-|-------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| libraryName | The name of the library.                                                                                                                                                                                                                                                                                                                                                  |
-| precompile  | Whether this C# action must be compiled as a library.<br> Default: “false”                                                                                                                                                                                                                                                                                                |
+| Value       | Description |
+|-------------|--------------------------|
+| libraryName | The name of the library. |
+| precompile  | Whether this C# action must be compiled as a library. Default: “false”. |
 | scriptRef   | A reference to another library.<br> Format: The name of the Automation script, followed by a colon and the name of the library (e.g. ScriptName:LibraryName).<br> To refer to a library in the current Automation script, you can replace the name of the Automation script by the \[AutomationScriptName\] placeholder (e.g. “\[AutomationScriptName\]:MyCSharpAction”). |
 
 #### Automation Schema: List of possible bit flags added to documentation tag of the DMSScript.Exe.Param@options attribute \[ID_23953\]
 
-In the Automation Schema, the documentation tag of the *DMSScript.Exe.Param@options* attri­bute now contains a list of all hexadecimal bit flags that can be represented by the decimal value specified in that attribute:
+In the Automation Schema, the documentation tag of the *DMSScript.Exe.Param@options* attribute now contains a list of all hexadecimal bit flags that can be represented by the decimal value specified in that attribute:
 
 - 0x000: None
 - 0x008: Debug mode

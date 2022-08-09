@@ -457,19 +457,19 @@ Now, the above-mentioned options have been replaced by the “Auto-select all”
 
 When configuring a line chart component, you can now use the *Chart limit behavior* setting to indicate what needs to happen when the number of parameters in the chart exceeds the defined chart limit:
 
-| Option                       | Behavior                                                                                                                                                                             |
-|------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Disable parameters in legend | The excess parameters are disabled in the chart but remain available in the chart legend, so that they can be enabled again manually. <br> This option is selected by default.       |
-| Create additional charts     | Additional charts are displayed that include the parameters that exceed the limit. If necessary, multiple additional charts will be displayed, each respecting the configured limit. |
+| Option | Behavior |
+|--|--|
+| Disable parameters in legend | The excess parameters are disabled in the chart but remain available in the chart legend, so that they can be enabled again manually. This option is selected by default. |
+| Create additional charts | Additional charts are displayed that include the parameters that exceed the limit. If necessary, multiple additional charts will be displayed, each respecting the configured limit. |
 
 #### Dashboards app - Pivot table component: Sort ascending/descending \[ID_27862\]
 
 When configuring a pivot table component, you can now find the following settings in the Sort section of the Settings tab:
 
-| Setting        | Description                                                                                                                           |
-|----------------|---------------------------------------------------------------------------------------------------------------------------------------|
-| Sort           | Allows you to select a protocol (if the pivot table contains multiple protocols) and a parameter by which the table should be sorted. |
-| Sort ascending | Determines the order in which the pivot table is sorted.<br> If you clear this check box, it is sorted in descending order.           |
+| Setting | Description |
+|--|--|
+| Sort | Allows you to select a protocol (if the pivot table contains multiple protocols) and a parameter by which the table should be sorted. |
+| Sort ascending | Determines the order in which the pivot table is sorted. If you clear this check box, it is sorted in descending order. |
 
 > [!NOTE]
 > Using these sort settings in conjunction with the *Limit* setting in the *Configure indices* section, you can produce a top X or bottom X list.
@@ -578,7 +578,7 @@ When you interact with the Ticketing Manager in scripts, keep the following chan
 
 - The open state of a ticket can no longer be linked to the state of an alarm.
 
-- If *GenericEnumEntry\<int>* is used in *VisualData* on a* TicketFieldResolver*, this will now always be returned as a long integer instead of an integer.
+- If *GenericEnumEntry\<int>* is used in *VisualData* on a *TicketFieldResolver*, this will now always be returned as a long integer instead of an integer.
 
 - If the ticket field resolver defines a state *TicketFieldDescriptor*, tickets must now always contain a field indicating their state. When tickets are initially migrated to Elasticsearch, a state will automatically be defined for any tickets where this was not yet the case.
 
@@ -659,21 +659,17 @@ StandaloneElasticBackup.exe backup --host 127.0.0.1 -u elastic --pw mypw123 -r r
 
 ##### General arguments
 
-| Option     |     | Description                                                                                                             |
-|------------|-----|-------------------------------------------------------------------------------------------------------------------------|
-| --host     | -h  | The host on which the command has to be run. Default: 127.0.0.1.                                                        |
-| --port     | -p  | The port on which Elasticsearch will be contacted. Default: 9200.                                                       |
-| --username | -u  | The credentials that have to used to connect to Elasticsearch. Only use these options when credentials have to be used. |
-| --pw       |     |                                                                                                                         |
+- `--host` or `-h`: The host on which the command has to be run. Default: 127.0.0.1.
+- `--port` or `-p`: The port on which Elasticsearch will be contacted. Default: 9200.
+- `--username` or `-u`: The username that has to used to connect to Elasticsearch. Only use this option when credentials have to be used.
+- `--pw`: The password that has to used to connect to Elasticsearch. Only use this option when credentials have to be used.
 
 ##### Arguments to add when you want to initialize the repository
 
 Run StandaloneElasticBackup.exe with the following two (mandatory) arguments to initialize the repository that should be made to take a snapshot.
 
-| Option |     | Description                                                                                                                                                          |
-|--------|-----|----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| --repo | -r  | The name of the repository to be created.                                                                                                                            |
-| --path |     | The path of the repository as defined in the yaml.xml file of the Elasticsearch cluster, enclosed by “”.<br> This is the location where the snapshot will be placed. |
+- `--repo` or `-r`: The name of the repository to be created.
+- `--path`: The path of the repository as defined in the yaml.xml file of the Elasticsearch cluster, enclosed by “”. This is the location where the snapshot will be placed.
 
 > [!NOTE]
 >
@@ -684,19 +680,23 @@ Run StandaloneElasticBackup.exe with the following two (mandatory) arguments to 
 
 Run StandaloneElasticBackup.exe with the following two (mandatory) arguments to take a backup/snapshot.
 
-| Option         |     | Description                                                                                                                                                                                                                                                                                                                                                                   |
-|----------------|-----|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| --repo         | -r  | The repository in which to take the backup.<br> -  If none is defined and only one repository is found in the Elasticsearch cluster, then that one will be used.<br> -  If none is defined and none can be found, then no backup will be taken. |
-| --snapshotname | -n  | The (lowercase) name of the snapshot to be taken.<br> Default: DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss");                                                                                                                                                                                                                                                                  |
+- `--repo` or `-r`: The repository in which to take the backup.
+
+  - If none is defined and only one repository is found in the Elasticsearch cluster, then that one will be used.
+  - If none is defined and none can be found, then no backup will be taken.
+
+- `--snapshotname` or `-n`: The (lowercase) name of the snapshot to be taken. Default: DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss"); |
 
 ##### Arguments to add when you want to restore a backup/snapshot
 
 Run StandaloneElasticBackup.exe with the following two (mandatory) arguments to restore a backup/snapshot.
 
-| Option |  | Description |
-|--|--|--|
-| --repo | -r | The repository containing the backup to be restored.<br> -  If none is defined and only one repository is found in the Elasticsearch cluster, then that one will be used.<br> -  If none is defined and none can be found, then an error will be thrown. |
-| --snapshotname | -n | The name of the snapshot to be restored. |
+- `--repo` or `-r`: The repository containing the backup to be restored.
+
+  - If none is defined and only one repository is found in the Elasticsearch cluster, then that one will be used.
+  - If none is defined and none can be found, then an error will be thrown.
+
+- `--snapshotname` or `-n`: The name of the snapshot to be restored.
 
 > [!NOTE]
 >

@@ -36,11 +36,11 @@ The following checks and error messages have been added.
 | 3.13.1   | ObsoleteDcfV1                                       | Obsolete preprocessor directive 'DCFv1' used in QAction. QAction ID '{qactionId}'.                                                      |
 | 3.14.1   | UnsupportedIDisposable                              | Entry point class {entryPointClass} implements unsupported interface IDisposable. QAction ID '{qactionId}'.                             |
 | 3.15.1   | UnrecommendedThreadAbort                            | Method 'System.Threading.Thread.Abort' is unrecommended. QAction ID {qactionId}.                                                        |
-| 3.15.2   | UnrecommendedSlProtocol<br>GetParameterIndex        | Method 'SLProtocol.GetParameterIndex' is unrecommended. QAction ID {qactionId}.                                                         |
-| 3.15.3   | UnrecommendedSlProtocol<br>SetParameterIndex        | Method 'SLProtocol.SetParameterIndex' is unrecommended. QAction ID {qactionId}.                                                         |
-| 3.15.4   | UnrecommendedSlProtocol<br>SetParametersIndex       | Method 'SLProtocol.SetParametersIndex' is unrecommended. QAction ID {qactionId}.                                                        |
-| 3.15.5   | UnrecommendedNotifyDataMiner<br>NTGetRemoteTrend    | Method 'SLProtocol.NotifyDataMiner(216/\*NT_GET_REMOTE_TREND\*/, ...)' is unrecommended. QAction ID {qactionId}.                        |
-| 3.15.6   | UnrecommendedNotifyDataMiner<br>NTGetRemoteTrendAvg | Method 'SLProtocol.NotifyDataMiner(260/\*NT_GET_REMOTE_TREND_AVG\*/, ...)' is unrecommended. QAction ID {qactionId}.                    |
+| 3.15.2   | UnrecommendedSlProtocolGetParameterIndex        | Method 'SLProtocol.GetParameterIndex' is unrecommended. QAction ID {qactionId}.                                                         |
+| 3.15.3   | UnrecommendedSlProtocolSetParameterIndex        | Method 'SLProtocol.SetParameterIndex' is unrecommended. QAction ID {qactionId}.                                                         |
+| 3.15.4   | UnrecommendedSlProtocolSetParametersIndex       | Method 'SLProtocol.SetParametersIndex' is unrecommended. QAction ID {qactionId}.                                                        |
+| 3.15.5   | UnrecommendedNotifyDataMinerNTGetRemoteTrend    | Method 'SLProtocol.NotifyDataMiner(216/\*NT_GET_REMOTE_TREND\*/, ...)' is unrecommended. QAction ID {qactionId}.                        |
+| 3.15.6   | UnrecommendedNotifyDataMinerNTGetRemoteTrendAvg | Method 'SLProtocol.NotifyDataMiner(260/\*NT_GET_REMOTE_TREND_AVG\*/, ...)' is unrecommended. QAction ID {qactionId}.                    |
 
 ### XML Schema
 
@@ -51,14 +51,14 @@ The following elements and element attributes have been added to the Protocol XM
 - Protocol.Params.Param.Display.DynamicUnits
 - Protocol.Params.Param.Display.DynamicUnits.Unit
 - Protocol.Params.Param.Display.DynamicUnits.Unit@decimals
-- Protocol.VersionHistory.Branches.Branch.SystemVersions.SystemVersion.MajorVersions.<br>MajorVersion.Changes.Change@coversMajorChanges
-- Protocol.VersionHistory.Branches.Branch.SystemVersions.SystemVersion.MajorVersions.<br>MajorVersion.MinorVersions.MinorVersion.Change@suppressMajorChanges
-- Protocol.VersionHistory.Branches.Branch.SystemVersions.SystemVersion.MajorVersions.<br>MajorVersion.MinorVersions.MinorVersion.Fix@suppressMajorChanges
-- Protocol.VersionHistory.Branches.Branch.SystemVersions.SystemVersion.MajorVersions.<br>MajorVersion.MinorVersions.MinorVersion.NewFeature@suppressMajorChanges
-- Protocol.VersionHistory.Branches.Branch.SystemVersions.SystemVersion.MajorVersions.<br>MajorVersion.MinorVersions.MinorVersion.References
-- Protocol.VersionHistory.Branches.Branch.SystemVersions.SystemVersion.MajorVersions.<br>MajorVersion.MinorVersions.MinorVersion.References.TaskId
-- Protocol.VersionHistory.Branches.Branch.SystemVersions.SystemVersion.MajorVersions.<br>MajorVersion.MinorVersions.MinorVersion.References.Reference
-- Protocol.VersionHistory.Branches.Branch.SystemVersions.SystemVersion.MajorVersions.<br>MajorVersion.MinorVersions.MinorVersion.References.Reference@type
+- Protocol.VersionHistory.Branches.Branch.SystemVersions.SystemVersion.MajorVersions.MajorVersion.Changes.Change@coversMajorChanges
+- Protocol.VersionHistory.Branches.Branch.SystemVersions.SystemVersion.MajorVersions.MajorVersion.MinorVersions.MinorVersion.Change@suppressMajorChanges
+- Protocol.VersionHistory.Branches.Branch.SystemVersions.SystemVersion.MajorVersions.MajorVersion.MinorVersions.MinorVersion.Fix@suppressMajorChanges
+- Protocol.VersionHistory.Branches.Branch.SystemVersions.SystemVersion.MajorVersions.MajorVersion.MinorVersions.MinorVersion.NewFeature@suppressMajorChanges
+- Protocol.VersionHistory.Branches.Branch.SystemVersions.SystemVersion.MajorVersions.MajorVersion.MinorVersions.MinorVersion.References
+- Protocol.VersionHistory.Branches.Branch.SystemVersions.SystemVersion.MajorVersions.MajorVersion.MinorVersions.MinorVersion.References.TaskId
+- Protocol.VersionHistory.Branches.Branch.SystemVersions.SystemVersion.MajorVersions.MajorVersion.MinorVersions.MinorVersion.References.Reference
+- Protocol.VersionHistory.Branches.Branch.SystemVersions.SystemVersion.MajorVersions.MajorVersion.MinorVersions.MinorVersion.References.Reference@type
 
 ## Changes
 
@@ -68,41 +68,41 @@ The following elements and element attributes have been added to the Protocol XM
 
 A number of enhancements have been made to the Display editor and the Table editor.
 
-**Display editor**
+##### Display editor
 
 - The height of the parameters on the Display editor pages will now better reflects the height of those parameters in DataMiner Cube. See below for a number of examples.
 
-    | Type of parameter     | Height                         |
-    |-----------------------|--------------------------------|
-    | Read                  | 1 unit                         |
-    | Write                 | 1 unit                         |
-    | Read + Write          | 2 units                        |
-    | Analog Read           | 2 units                        |
-    | Group box             | 1 unit                         |
-    | Spacer (white space)  | 1 unit                         |
-    | Multi-line parameters | depends on the number of lines |
+  | Type of parameter     | Height                         |
+  |-----------------------|--------------------------------|
+  | Read                  | 1 unit                         |
+  | Write                 | 1 unit                         |
+  | Read + Write          | 2 units                        |
+  | Analog Read           | 2 units                        |
+  | Group box             | 1 unit                         |
+  | Spacer (white space)  | 1 unit                         |
+  | Multi-line parameters | depends on the number of lines |
 
 - Although, in DataMiner Cube, the height of a table is automatically adapted, tables in Display editor will have a fixed height of 2 units.
 
-**Table editor**
+##### Table editor
 
 - When calculating a column width, the Table editor will now also take into account the width of the expected values (depending on the measurement type of the parameters). See below.
 
-    | Measurement type | Behavior |
-    |------------------|----------|
-    | Discreet | The width of the column will depend on the largest width found among the discreet values. |
-    | Button | The widths of all displayed values will be combined and a margin will be added to make sure all buttons are properly displayed. |
-    | Number (Datetime, Date/Time) | A datetime column will always adapt its width to accommodate values displayed in “YYYY-MM-DD hh:mm:ss tt” format. |
+  | Measurement type | Behavior |
+  |------------------|----------|
+  | Discreet | The width of the column will depend on the largest width found among the discreet values. |
+  | Button | The widths of all displayed values will be combined and a margin will be added to make sure all buttons are properly displayed. |
+  | Number (Datetime, Date/Time) | A datetime column will always adapt its width to accommodate values displayed in “YYYY-MM-DD hh:mm:ss tt” format. |
 
 - When calculating a column width, the Table editor will now also take into account the width of the exception values (if such values are defined).
 - When calculating a column width, the Table editor will now also take into account the spaces DataMiner Cube inserts into large numbers to make them more readable.
 - When a numeric parameter has ranges defined, the Table editor will now take into account the longest value (along with any decimals or unit) when calculating a column width.
 - With regard to column titles, the following enhancements have been made:
 
-    - DataMiner Cube will now truncate the column descriptions if all columns have the same suffix or if a column has the table description as suffix.
-    - Room for key icons (primary keys, display keys or foreign keys) will now only be reserved when neither of the columns has any header option defined (if header options are defined, the key icon will be displayed on another line).
-    - In case of columns of type “displaykey”, room for key icons will be reserved when needed.
-    - Room will now also be reserved for sorting icons.
+  - DataMiner Cube will now truncate the column descriptions if all columns have the same suffix or if a column has the table description as suffix.
+  - Room for key icons (primary keys, display keys or foreign keys) will now only be reserved when neither of the columns has any header option defined (if header options are defined, the key icon will be displayed on another line).
+  - In case of columns of type “displaykey”, room for key icons will be reserved when needed.
+  - Room will now also be reserved for sorting icons.
 
 #### IDE - XML editor: Restructuring of the “DIS \> Protocol \> Param” snippets \[ID_26706\]
 

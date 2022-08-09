@@ -119,8 +119,8 @@ When, in the Alarm Console, you enable the “Automatic incident tracking” opt
 
 - When you right-click an alarm that is not part of any alarm group, you will be able to click the “Add to incident” option. If you do so, a window will appear, asking you
 
-    - to create a new incident (i.e. a new alarm group) and add the alarm to it, or
-    - to add the alarm to an existing alarm group.
+  - to create a new incident (i.e. a new alarm group) and add the alarm to it, or
+  - to add the alarm to an existing alarm group.
 
 - When you right-click an alarm that is already part of an alarm group, you will be able to click the “Remove from incident” option. If you do so, the alarm will be removed from the alarm group of which it was a part.
 
@@ -262,6 +262,7 @@ It is now possible to retrieve bookings in a paged way and sorted by one of the 
 
 > [!NOTE]
 > Depending on the configuration of the Elasticsearch database, DataMiner Agents running one of the following DataMiner versions may potentially not be able to sort by the above-mentioned properties.
+>
 > - v10.0.0 (CU10)
 > - v10.1.0 (CU0)
 > - v10.1.1 (CU0)
@@ -417,7 +418,7 @@ A number of issues have been fixed with regard to alarm templates.
 
 Also, a number of enhancements have been made with regard to the calculation of smart baselines.
 
-#### Cassandra Cluster Migrator tool would incorrectly not allow multiple IP addresses in the “Cas­sandra IP(s)” field \[ID_32554\]
+#### Cassandra Cluster Migrator tool would incorrectly not allow multiple IP addresses in the “Cassandra IP(s)” field \[ID_32554\]
 
 When configuring the Cassandra settings in the Cassandra Cluster Migrator tool, it would incorrectly not be possible to specify multiple IP addresses in the *Cassandra IP(s)* field.
 
@@ -581,7 +582,7 @@ In some cases, an error could occur in the SLLog process when a log file was clo
 
 ## Addendum CU1
 
-### Fixes
+### CU1 fixes
 
 #### Remote direct views would no longer work when the DirectViewRemoteDataUpdates soft-launch option was disabled \[ID_33326\]
 

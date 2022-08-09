@@ -33,7 +33,7 @@ In the following example, a TTL setting was specified for job objects stored in 
 
 In the *Logging* section of *System Center*, it is now possible to set log levels per DataMiner log file, overriding the ones specified on system level.
 
-**Overriding the system-wide log levels for a specific log file**
+##### Overriding the system-wide log levels for a specific log file
 
 1. In the tab listing the DataMiner log files (default tab name: “dataminer”), select the log file in the left-hand pane.
 
@@ -47,10 +47,9 @@ In the *Logging* section of *System Center*, it is now possible to set log level
 >   - If a file has specific log levels defined (i.e. if the system-wide levels are overridden), the log levels displayed next to the file will appear in black.
 > - If you clear the *Override log levels* option for a particular log file, that file will again inherit the system-wide log levels.
 
-**Setting the system-wide log levels**
+##### Setting the system-wide log levels
 
 1. In the tab listing the DataMiner log files (default tab name: “dataminer”), select the first entry in the left-hand pane, marked “\<Default>”.
-
 1. At the top of the right-hand pane, open the *Log settings* section, specify a level for each of the three log levels (info, debug and error), and click *Apply levels*.
 
 #### Service & Resource Management - ListView: Alarm count column can now indicate the number of alarms as a colored icon \[ID_24598\]
@@ -74,7 +73,7 @@ The following additional icons are now available in the DataMiner stencils:
 
 ### DMS Reports & Dashboards
 
-#### Legacy Reporter app will now also use the CSV separator specified in Cube’s CSV separator set­ting \[ID_24855\]
+#### Legacy Reporter app will now also use the CSV separator specified in Cube’s CSV separator setting \[ID_24855\]
 
 Similar to the new Dashboards app, the legacy Reporter app will now also use the CSV separator specified in Cube’s “CSV separator” setting when generating CSV reports.
 
@@ -113,7 +112,7 @@ Up to now, when users wanted to configure a service reservation, they each time 
 > - Service profile logging is stored in SLProfileManager.txt.
 > - To make sure service profile data is included in DataMiner backup packages, select *Profile Manager objects and configuration* when configuring backups in System Center.
 
-#### OnStartActionsFailureEvent will now be executed when the start actions of a ReservationIn­stance fail \[ID_24790\]
+#### OnStartActionsFailureEvent will now be executed when the start actions of a ReservationInstance fail \[ID_24790\]
 
 From now on, an OnStartActionsFailureEvent will be executed when the start actions of a ReservationInstance fail.
 
@@ -126,15 +125,21 @@ public void OnSrmStartActionsFailure(Engine engine, List<StartActionsFailureErro
 }
 ```
 
-A StartActionsFailureErrorData instance contains an ErrorReason, which explains what went wrong with the start actions. These are the possible error reasons:
+A StartActionsFailureErrorData instance contains an *ErrorReason*, which explains what went wrong with the start actions. These are the possible error reasons:
 
-| ErrorReason                 | Description                                                                                                                                                                                                                       |
-|-----------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| ResourceElementNotActive    | The element linked to the resource was not active when the booking was started.<br> Note: The resource (as well as the element ID) can be retrieved from the Resource property. The ReservationInstanceId will also be filled in. |
-| ReservationInstanceNotFound | The ReservationInstance could not be retrieved when the start actions were launched.                                                                                                                                              |
-| UnexpectedException         | An exception was thrown while executing the start actions.<br> Note: This exception can be retrieved from the Exception property. The ReservationInstanceId is available in the ErrorData object.                                 |
+- **ResourceElementNotActive**: The element linked to the resource was not active when the booking was started.
 
-**Assigning an Automation script to the OnStartActionsFailureEvent**
+  > [!NOTE]
+  > The resource (as well as the element ID) can be retrieved from the *Resource* property. The ReservationInstanceId will also be filled in.
+
+- **ReservationInstanceNotFound**: The ReservationInstance could not be retrieved when the start actions were launched.
+
+- **UnexpectedException**: An exception was thrown while executing the start actions.
+
+  > [!NOTE]
+  > This exception can be retrieved from the Exception property. The ReservationInstanceId is available in the ErrorData object.
+
+##### Assigning an Automation script to the OnStartActionsFailureEvent
 
 The following example shows how to assign an Automation script to the OnStartActionsFailureEvent.
 
@@ -342,7 +347,7 @@ A number of enhancements have been made to the file locking mechanism in SLDMS.
 
 In some cases, when a new alarm or trend template was assigned to a DVE child element, properties on that element could be lost.
 
-#### DataMiner Cube - Protocols & Templates: Problem when trying to select another protocol ver­sion in the “List based on protocol version” box \[ID_24499\]
+#### DataMiner Cube - Protocols & Templates: Problem when trying to select another protocol version in the “List based on protocol version” box \[ID_24499\]
 
 If an information template is based on an older protocol version that does not have the same parameters as the latest protocol version, a warning is displayed at the bottom of the information template. Above the warning, a drop-down list allows you to select a different protocol version to load those parameters instead.
 
@@ -404,7 +409,7 @@ In the *Services* app, in some cases, the diagram of a service definition would 
 
 In some rare cases, an error could occur in SLDMS when synchronizing services to other agents in the DataMiner System.
 
-#### DataMiner Cube - Data Display: Problem with lite drop-down controls when the listed parame­ter values were dependent on other parameter values \[ID_24743\]
+#### DataMiner Cube - Data Display: Problem with lite drop-down controls when the listed parameter values were dependent on other parameter values \[ID_24743\]
 
 In some cases, lite drop-down controls would not contain the correct values, especially when the listed parameter values were dependent on other parameter values.
 
@@ -480,7 +485,7 @@ When you log in to a DataMiner Cube of which the sidebar was collapsed, in some 
 
 When, in an HTML5 app, a value had been updated manually, in some cases, the input control would not take into account subsequent updates of that same value made by the program.
 
-#### When an unmonitored element in timeout was masked and then unmasked when it was no lon­ger in timeout, its alarm state would be set to “normal” instead of “undefined” \[ID_24838\]
+#### When an unmonitored element in timeout was masked and then unmasked when it was no longer in timeout, its alarm state would be set to “normal” instead of “undefined” \[ID_24838\]
 
 When an unmonitored element in timeout was masked and then unmasked after it had gone out of timeout, its alarm state would incorrectly be set to “normal” instead of “undefined/not monitored”.
 
@@ -544,7 +549,7 @@ From now on, upgrade packages will ignore the “SetOption NoRollback” command
 
 In some cases, the SLNet process would leak memory when logging was enabled or disabled.
 
-#### DataMiner Cube: “Spectrum settings:” label incorrectly displayed on “Advanced element set­tings” pane of element without Spectrum Analyzer settings \[ID_24956\]
+#### DataMiner Cube: “Spectrum settings:” label incorrectly displayed on “Advanced element settings” pane of element without Spectrum Analyzer settings \[ID_24956\]
 
 When editing an element without any Spectrum Analyzer settings, in some cases, when you opened the *Advanced element settings* pane, a “Spectrum settings:” label would incorrectly be displayed at the bottom of the pane.
 
@@ -590,19 +595,19 @@ If a CRC trailer was returned in a separate IP packet, it could occur that it wa
 
 ## Changes in DataMiner 10.0.4 CU1
 
-### Fixes
+### CU1 fixes
 
 #### Ticketing app: Deleting a ticket would incorrectly cause all tickets to be deleted \[ID_25211\]
 
 In some cases, deleting a ticket would incorrectly cause all tickets to be deleted.
 
-#### ReservationInstance property updates would not get saved to the database when a DMS con­sisted of a single DMA \[ID_25221\]
+#### ReservationInstance property updates would not get saved to the database when a DMS consisted of a single DMA \[ID_25221\]
 
-When a DataMiner System consisted of a single DataMiner Agent, in some cases, Reservation­Instance property updates would not get saved to the database.
+When a DataMiner System consisted of a single DataMiner Agent, in some cases, ReservationInstance property updates would not get saved to the database.
 
 ## Changes in DataMiner 10.0.4 CU2
 
-### Fixes
+### CU2 fixes
 
 #### Memory leak in SLDataGateway \[ID_25395\]
 

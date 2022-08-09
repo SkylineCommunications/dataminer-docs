@@ -70,7 +70,7 @@ NotifyDataMiner(128 /* NT_UPDATE_PORTS */,"10;[ELEMENT_ID];[MATRIX_PARAM_ID];[DM
 
 In a protocol, it is now possible to specify which compression algorithm(s) should be used when performing a HTTP GET request. See the following examples.
 
-**Example 1: Using compression algorithm “deflate”**
+##### Example 1: Using compression algorithm 'deflate'
 
 ```xml
 <Session id="2">
@@ -89,7 +89,7 @@ In a protocol, it is now possible to specify which compression algorithm(s) shou
 </Session>
 ```
 
-**Example 2: Using compression algorithm “gzip”**
+##### Example 2: Using compression algorithm 'gzip'
 
 ```xml
 <Session id="4">
@@ -108,7 +108,7 @@ In a protocol, it is now possible to specify which compression algorithm(s) shou
 </Session>
 ```
 
-**Example 3: Using compression algorithms “deflate” and “gzip”**
+##### Example 3: Using compression algorithms 'deflate' and 'gzip"
 
 ```xml
 <Session id="6">
@@ -317,13 +317,14 @@ This same notice will also be added to the ResourceManager log file.
 
 The GetEligibleResources call has been extended with two new arguments:
 
-| Argument                       | Description                                                                                                                                                                                                                |
-|--------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| ResourceFilter                 | New (optional) argument to filter the eligible resources.<br> Resources that do not match the specified filter will not be returned as eligible resource.                                                                  |
+| Argument | Description |
+|--|--|
+| ResourceFilter | New (optional) argument to filter the eligible resources. Resources that do not match the specified filter will not be returned as eligible resource. |
 | RequiredCapabilitiesOrFiltered | Apart from the RequiredCapabilities argument, which can be used to specify an “AND” list of capabilities, this new (optional) RequiredCapabilitiesOrFiltered argument can be used to specify an “OR” list of capabilities. |
 
 > [!NOTE]
 > The following new API call has been added to the ResourceManager-Helper:
+>
 > - public EligibleResourceResult GetEligibleResources(EligibleResourceContext context)
 >
 > This new call allows you to combine all existing and new parameters of the GetEligibleResources calls. The legacy GetEligibleResources and GetEligibleResourceForServiceNodeWithUsageInfo calls will now link to this new call.
@@ -419,7 +420,7 @@ From now on, viewing and creating recurring patterns in trend data (i.e. “tags
 
 #### DataMiner.xml: XML namespace now set during DataMiner installation \[ID_26011\]
 
-In the DataMiner.xml file, from now on, the XML namespace will by default be set to   “xmlns=http://www.skyline.be/config/dataminer” during a DataMiner installation.
+In the *DataMiner.xml* file, from now on, the XML namespace will by default be set to `xmlns=http://www.skyline.be/config/dataminer` during a DataMiner installation.
 
 ### Fixes
 
@@ -464,7 +465,7 @@ A number of small fixes have been made, including the following:
 - In some cases, the following errors could be added to the SLErrors.txt log file during DataMiner startup for each exported protocol:
 
     ```txt
-    CDataMiner::NotifySLElementProcess|ERR|-1|Notify SLELement process failed (86): 0x8004024c: The element is unknown.
+    CDataMiner::NotifySLElementProcess|ERR|-1|Notify SLElement process failed (86): 0x8004024c: The element is unknown.
     CExportProtocolsHandler::ExportProtocols|ERR|0|Failed exporting protocol with 0x8004024c The element is unknown.
     ```
 
@@ -475,7 +476,7 @@ A number of small fixes have been made, including the following:
     XSD URI was empty for: C:\Skyline DataMiner\Elements\xxxxxxxxx\Description.xml
     ```
 
-#### DataMiner Cube - Visual Overview: Problem with session variables used by the Resource Man­ager timeline component \[ID_25718\]
+#### DataMiner Cube - Visual Overview: Problem with session variables used by the Resource Manager timeline component \[ID_25718\]
 
 In some cases, certain session variables used by the Resource Manager timeline component (e.g. YAxisResources) would not work properly when the page contained a setvar shape but no initvar action.
 
@@ -501,7 +502,7 @@ Also, an additional upgrade action will now be run at every upgrade. The “Cass
 
 When using a parameter chart, in some rare cases, that chart’s update interval would incorrectly be set to 0 seconds. As a result, it would be updated constantly. From now on, setting the update interval of a parameter chart to 0 seconds will no longer be possible.
 
-#### DataMiner Cube - Profiles app: Modification of profile instance field “applies to” would incor­rectly be disregarded \[ID_25790\]
+#### DataMiner Cube - Profiles app: Modification of profile instance field “applies to” would incorrectly be disregarded \[ID_25790\]
 
 When configuring a profile instance in the Profiles module, you can indicate to which profile definition the instance applies. In some cases, when you changed this field, the modification would be disregarded.
 
@@ -513,7 +514,7 @@ When an SNMP trap was sent from an element that was being restarting, in some ca
 
 When, in an Automation script, you added an email action that sent an PDF report and used an aggregation rule, in some cases, the action’s aggregation rule information would not be saved correctly.
 
-#### Service & Resource Management: Problem when updating multiple ReservationInstance proper­ties in rapid succession \[ID_25808\]
+#### Service & Resource Management: Problem when updating multiple ReservationInstance properties in rapid succession \[ID_25808\]
 
 When multiple ReservationInstance properties were updated in rapid succession, in some cases, “PropertiesWereAlreadyModified” errors could be thrown.
 
@@ -525,7 +526,7 @@ When you enabled or disabled history tracking while viewing an alarm tab page th
 
 In some cases, the \[profile:xxx\] placeholder would no longer be resolved correctly.
 
-#### DataMiner Cube - Router Control: Options field of InfoPanel block would incorrectly be disre­garded \[ID_25818\]
+#### DataMiner Cube - Router Control: Options field of InfoPanel block would incorrectly be disregarded \[ID_25818\]
 
 When, while configuring an InfoPanel block in the Router Control app, options had been specified in the Options field, those options would incorrectly be disregarded when the matrix configuration was loaded.
 
@@ -545,7 +546,7 @@ While a SmartIPHeader UDP socket was receiving data from multiple clients, in so
 
 In some cases, the SLNet.exe.config file would contain an unnecessary “codedom” tag. On certain DataMiner Agents, this could lead to issues when generating functions.
 
-#### Disabling the “Enable DVE child creation” option in the “Advanced element settings” would pre­vent the creation of virtual functions \[ID_25869\]
+#### Disabling the “Enable DVE child creation” option in the “Advanced element settings” would prevent the creation of virtual functions \[ID_25869\]
 
 In some cases, disabling the Enable DVE child creation option in the Advanced element settings would incorrectly prevent the creation of virtual functions.
 
@@ -577,7 +578,7 @@ From now on, when the MaintenanceSettings.xml file does not contain a \<BackupSe
 
 Up to now, when you opened the card of a Dynamic Virtual Element, it incorrectly had a Notes page. As DVE elements currently cannot have notes, this page has been removed.
 
-#### Dashboards app - Service Definition component: Booking ID not passed to the script when click­ing a node \[ID_25912\]
+#### Dashboards app - Service Definition component: Booking ID not passed to the script when clicking a node \[ID_25912\]
 
 When, in a service definition component linked to a booking, you clicked a node that launched an Automation script, in some cases, the booking ID would not be passed to the script.
 
@@ -605,7 +606,7 @@ When the FindElements method was called with a “WarningOnly” element filter,
 
 In some rare cases, an error could occur when multiple smart-serial elements using the same port restarted.
 
-#### DataMiner Cube - Visual Overview: Tree view with “SingleSelectionMode” option would incor­rectly allow multiple values to be selected after a filter had been applied \[ID_25986\]
+#### DataMiner Cube - Visual Overview: Tree view with “SingleSelectionMode” option would incorrectly allow multiple values to be selected after a filter had been applied \[ID_25986\]
 
 When, on a Visio page, you selected an item in a tree view to which you had added the “SingleSelectionMode” option, applied a filter and then selected another item, in some cases, the item you selected previously would incorrectly remain selected.
 

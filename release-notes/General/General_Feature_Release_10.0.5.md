@@ -128,9 +128,9 @@ Additionally, a number of enhancements have been made with respect to severity d
 
 To a shape linked to a view, you can now add a shape data field of type “AlarmLevel” to configure which of the view’s alarm levels you want the shape’s background color to display.
 
-| Shape data field | Value                                                                                                                                                                                                                                                                                                                                                                                                                                           |
-|------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| AlarmLevel       | Instance/BubbleUp/Summary<br> -  Instance: Alarm level of the monitored aggregation rules on the view.<br> -  BubbleUp: Highest alarm level of any child element or child view.<br> -  Summary: Highest of the Instance and BubbleUp alarm levels. |
+| Shape data field | Value |
+|--|--|
+| AlarmLevel | Instance/BubbleUp/Summary<br> - Instance: Alarm level of the monitored aggregation rules on the view.<br> - BubbleUp: Highest alarm level of any child element or child view.<br> - Summary: Highest of the Instance and BubbleUp alarm levels. |
 
 #### Visual Overview: Using subscription filters when subscribing to tree control tables \[ID_24995\]
 
@@ -152,10 +152,10 @@ When you export element data to a CSV file, from now on, the export file will in
 |-------------|----------------------|--------------------------------------------------------------------------------------------------------|
 | \[49\]      | ReplicationMaxBuffer | *(for future use, currently empty)*                                     |
 | \[50\]      | ReplicationMinBuffer | *(for future use, currently empty)*                                     |
-| \[51\]      | ProtocolType         | Protocol type per port<br> (can be a list of tab-separated values)                                     |
-| \[52\]      | CredentialGUID       | Credential GUID per port<br> (can be a list of tab-separated values)                                   |
-| \[53\]      | TLS                  | SSL TLS setting per port<br> (can be a list of tab-separated values)                                   |
-| \[54\]      | AllowedIpAddresses   | Comma-separated list of allowed IP addresses per interface<br> (can be a list of tab-separated values) |
+| \[51\]      | ProtocolType         | Protocol type per port (can be a list of tab-separated values)                                     |
+| \[52\]      | CredentialGUID       | Credential GUID per port (can be a list of tab-separated values)                                   |
+| \[53\]      | TLS                  | SSL TLS setting per port (can be a list of tab-separated values)                                   |
+| \[54\]      | AllowedIpAddresses   | Comma-separated list of allowed IP addresses per interface (can be a list of tab-separated values) |
 
 #### Visual Overview - ListView: Enhanced filter capabilities \[ID_25114\]
 
@@ -240,7 +240,7 @@ From now on, if you set the *Source* shape data field to “Elements” or “Se
 
 The *Node edge graph* visualization is no longer available in the Dashboards app. Instead, a *Service definition* visualization is now available, which is very similar to the node edge graph visualization, but specifically adjusted to display service definitions only.
 
-A new service definition data feed is now also available. The *Service definition* component can be configured with a booking data feed or with this new service definition data feed. In the dashboard URL, the service definition data feed can be specified using the argument “service definitions”, by specifying the service definition ID(s), for example: <br>*service definitions=serviceDefinitionID1%2FserviceDefinitionID2*
+A new service definition data feed is now also available. The *Service definition* component can be configured with a booking data feed or with this new service definition data feed. In the dashboard URL, the service definition data feed can be specified using the argument “service definitions”, by specifying the service definition ID(s), for example: *service definitions=serviceDefinitionID1%2FserviceDefinitionID2*
 
 In case a feed component is used to provide a booking feed to the *Service definition* component, it is possible to use a service definition filter feed on this feed component, so that a booking is only included in the feed if it is based on one the service definitions in the filter.
 
@@ -252,7 +252,7 @@ In the settings for the *Service definition* component, one or more actions can 
 
 To configure the data input of the *CPE feed* component in the Dashboards app, you now have to use a regular element data feed instead of specifying the element in the component settings. This change makes it possible to provide the data input of the *CPE feed* component dynamically using another feed component.
 
-#### Legacy Reporter app: Alarm list component now also returns alarms of enhanced service ele­ments \[ID_25232\]
+#### Legacy Reporter app: Alarm list component now also returns alarms of enhanced service elements \[ID_25232\]
 
 In the legacy Reporter app, the alarm list component will now also return alarms of enhanced service elements.
 
@@ -273,7 +273,7 @@ This method will execute an Automation script of which the name is passed in the
 
 The script will be executed by the user who is performing the QAction. It will return an “ExecuteScriptResponseMessage”, containing information about the execution of the script.
 
-If you execute a script using this method, it will be executed with all script execution settings set to the default values. If more control is needed, then use the E*xecuteScript<br>(ExecuteScriptMessage message)* method described below.
+If you execute a script using this method, it will be executed with all script execution settings set to the default values. If more control is needed, then use the *ExecuteScript(ExecuteScriptMessage message)* method described below.
 
 Example:
 
@@ -355,9 +355,9 @@ The following properties have been added to the UIBlockDefinition class:
 
 | Property | Description |
 |--|--|
-| IsRequired | Indicates whether the input control requires a value.<br> Possible value:<br> -  true<br> -  false<br> If “true”, the control will be marked “Invalid” when empty. |
-| PlaceholderText | Text that will be displayed as long as the control is empty.<br> (e.g. “In this box, enter...”) |
-| ValidationState | Indicates whether the value was validated and whether that value is valid.<br> Possible values:<br> -  NotValidated<br> -  Valid<br> -  Invalid<br> Note: This property can be used to indicate to users that they entered an invalid value. |
+| IsRequired | Indicates whether the input control requires a value.<br> Possible value:<br> - true<br> - false<br> If “true”, the control will be marked “Invalid” when empty. |
+| PlaceholderText | Text that will be displayed as long as the control is empty (e.g. “In this box, enter...”). |
+| ValidationState | Indicates whether the value was validated and whether that value is valid.<br> Possible values:<br> - NotValidated<br> - Valid<br> - Invalid<br> Note: This property can be used to indicate to users that they entered an invalid value. |
 | ValidationText | Text that will be displayed when ValidationState is “Invalid”. |
 
 ##### Using the ValidationState and ValidationText properties
@@ -381,7 +381,7 @@ This functionality will allow you to offer clear feedback on user input.
 
 #### UnSetFlag method now also added to IEngine interface \[ID_25188\]
 
-Since DataMiner 10.0.0/10.0.1, you can use the engine.UnSetFlag method to clear the AllowUn­def, NoInformationEvents and NoKeyCaching run-time flags in an Automation script.
+Since DataMiner 10.0.0/10.0.1, you can use the engine.UnSetFlag method to clear the AllowUndef, NoInformationEvents and NoKeyCaching run-time flags in an Automation script.
 
 This method has now also been added to the IEngine interface.
 
@@ -398,7 +398,7 @@ The *JobManagerHelper* has been expanded with new methods that can be used to ma
 
 Please note the following regarding job attachments:
 
-- The size limit of job attachments depends on the *Documents.MaxSize* setting in the file* MaintenanceSettings.xml*. By default, this is 20 MB.
+- The size limit of job attachments depends on the *Documents.MaxSize* setting in the file *MaintenanceSettings.xml*. By default, this is 20 MB.
 - Deleting a job will remove all attachments of this job from the system. These cannot be recovered afterwards.
 - Managing job attachments requires the *Jobs* > *UI available* and *Jobs* > *Add/Edit user permissions*.
 - Job attachments are backed up with the backup option *All documented located on this DMA*.
@@ -407,15 +407,15 @@ Please note the following regarding job attachments:
 > [!WARNING]
 > Always be extremely careful when using the SLNetClientTest tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
 
-#### Monitoring app: “Information”, “Traces” and “Presets” tabs added to spectrum page of Spec­trum Analyzer elements \[ID_25028\]\[ID_25059\]
+#### Monitoring app: “Information”, “Traces” and “Presets” tabs added to spectrum page of Spectrum Analyzer elements \[ID_25028\]\[ID_25059\]
 
 The following tabs were added to the spectrum page of Spectrum Analyzer elements:
 
-| Tab         | Content                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-|-------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Information | Shows basic information regarding measurement points, markers, thresholds and parameters.                                                                                                                                                                                                                                                                                                                                                                                                    |
-| Traces      | Allows you to display or hide the current trace, the minimum trace, the maximum trace and the average trace.                                                                                                                                                                                                                                                                                                                                                                                 |
-| Presets     | Lists the available presets.<br> By default, only the private presets are listed (i.e. the presets that are only available to the current user). To also have the shared presets listed, select the *Show shared presets* option. Those will be indicated with a *Shared* tag.<br> When you select a preset, below the list, a *Load preset* button will allow you to load the selected preset. |
+| Tab | Content |
+|--|--|
+| Information | Shows basic information regarding measurement points, markers, thresholds and parameters. |
+| Traces | Allows you to display or hide the current trace, the minimum trace, the maximum trace and the average trace. |
+| Presets | Lists the available presets. By default, only the private presets are listed (i.e. the presets that are only available to the current user). To also have the shared presets listed, select the *Show shared presets* option. Those will be indicated with a *Shared* tag. When you select a preset, below the list, a *Load preset* button will allow you to load the selected preset. |
 
 #### Monitoring app: Card header, sidebar and menu available on mobile devices \[ID_25156\]
 
@@ -494,7 +494,7 @@ Service & Resource Management now supports
 - capabilities of type string, and
 - time-dependent capabilities.
 
-**Capabilities of type string**
+##### Capabilities of type string
 
 It is now possible to define capabilities of type string:
 
@@ -507,7 +507,7 @@ It is now possible to define capabilities of type string:
 > [!NOTE]
 > From now on, three types of capabilities can be defined: discreet, rangepoint and string. Up to now, when the value provided/required was a number, a rangepoint capability was used, and if it was not a number, a discreet capability was used. String capabilities will now be used when the value provided/required for a rangepoint capability is not a number and the value provided/required for a discreet capability is NULL or an empty string.
 
-**Time-dynamic capabilities**
+##### Time-dynamic capabilities
 
 Time-dynamic capabilities are capabilities of which the value can differ over time, depending on the reservations that are using the capability. Currently, only capabilities of type string can be turned into time-dynamic capabilities (by setting their “IsTimeDynamic” property to true).
 
@@ -520,7 +520,7 @@ When a time-dynamic capability is booked by a ReservationInstance that requires 
 > - It is not possible to schedule multiple overlapping ReservationInstances using the same time-dynamic capability on the same resource with a different required string. This would cause quarantine conflicts. When you try to save a ReservationInstance that conflicts with existing ReservationInstances, the software will resolve the conflict by comparing the quarantine priority of all existing ReservationInstances to the one of the ReservationInstance you are trying to save. If the quarantine priority of the ReservationInstance you are trying to save is higher than that of all existing ones, then all existing ones will go into quarantine. Otherwise, the new ReservationInstance will go into quarantine.
 > - Whether a capability is time-dynamic is defined on resource level.
 
-**New ResourceManagerHelper methods**
+##### New ResourceManagerHelper methods
 
 In the context of time-dynamic capabilities, two new methods have been added to the ResourceManagerHelper:
 
@@ -546,7 +546,7 @@ This usage info currently only contains information about the already booked cap
 > [!NOTE]
 > The GetEligibleResources and GetEligibleResourcesForServiceNode methods will continue to work correctly, but they will only return the eligible Resources without the extra information.
 
-#### Service & Resource Management: New EmptyResourceInReservation property for Reservation­Instance/ServiceReservationInstance \[ID_25220\]
+#### Service & Resource Management: New EmptyResourceInReservation property for ReservationInstance/ServiceReservationInstance \[ID_25220\]
 
 In Service & Resource Management scripts, you can now configure nodes on a ReservationInstance while the resource is not known yet, by using the new *EmptyResourceInReservation* property.
 
@@ -562,7 +562,7 @@ If the reference level is shown in dBm and no decimal accuracy is being used, fr
 
 ### DMS tools
 
-#### SLLogCollector: New tool to collect log files and memory dumps and send them to Skyline sup­port \[ID_25346\]
+#### SLLogCollector: New tool to collect log files and memory dumps and send them to Skyline support \[ID_25346\]
 
 From now on, the SLLogCollector tool will be available on all DataMiner Agents.
 
@@ -632,7 +632,7 @@ All page buttons have now been redesigned in order to match the new DataMiner X 
 
 A number of enhancements have been made to the mechanism used to delete data from the Indexing Engine, especially when using large filters.
 
-#### Automation: SetPropertyValue method will now only return after having checked that the prop­erty was set correctly \[ID_25025\]\[ID_25195\]
+#### Automation: SetPropertyValue method will now only return after having checked that the property was set correctly \[ID_25025\]\[ID_25195\]
 
 From now on, the *SetPropertyValue* method will only return after having checked that the property was set correctly.
 
@@ -640,12 +640,13 @@ Up to now, when the value of an element property was updated using the *SetPrope
 
 > [!NOTE]
 > The *SetPropertyValue* method will only perform the above-mentioned check when the “check sets” option is enabled.
+>
 > - Before launching a script in Cube, select the “After executing a SET command, check if the read parameter or property has been set to the new value” check box in the script execution window.
 > - When launching a script using *ExecuteScriptMessage*, make sure to activate the CHECKSETS option (“CHECKSETS:TRUE”).
 >
 > With this option enabled, the *SetPropertyValue* method will take slightly longer to execute. When a large number of properties need to be updated which do not need to be retrieved immediately, you can disable this option in order to increase performance.
 
-#### Mobile apps: Confirmation message when leaving page with interactive script or job configura­tion \[ID_25078\]
+#### Mobile apps: Confirmation message when leaving page with interactive script or job configuration \[ID_25078\]
 
 When a user leaves a DataMiner mobile app page while in an interactive Automation script or while configuring jobs, a confirmation message will now be displayed. However, note that this is message is not displayed when the mobile apps are used on iOS.
 
@@ -687,7 +688,7 @@ In a *ListView* component in Visual Overview that has been configured to display
 
 In addition, it is now also possible to configure a filter on the *ListView* shape using the term "Element.PollingIP", for example *Element.PollingIP == '127.0.0.1'*.
 
-#### DataMiner Cube - Trending: Behavioral anomaly detection will no longer generate nor clear sug­gestion events when its flood mode is activated \[ID_25244\]
+#### DataMiner Cube - Trending: Behavioral anomaly detection will no longer generate nor clear suggestion events when its flood mode is activated \[ID_25244\]
 
 From now on, behavioral anomaly detection will no longer generate nor clear suggestion events when its flood mode is activated.
 
@@ -697,7 +698,7 @@ In the Profiles and Services apps, a number of enhancements have been made with 
 
 #### Failover: Prevent new elements from receiving the same ID as a deleted element or a disabled function \[ID_25306\]
 
-From now on, when a DataMiner Agent in a Failover setup goes online, SLDataMiner will now retrieve the highest element ID from dataminer.xml. This will prevent new elements from receiv­ing the same ID as an element that was deleted or a function that was disabled.
+From now on, when a DataMiner Agent in a Failover setup goes online, SLDataMiner will now retrieve the highest element ID from dataminer.xml. This will prevent new elements from receiving the same ID as an element that was deleted or a function that was disabled.
 
 #### SLDataGateway: Enhanced retrieval of alarms from a MySQL database \[ID_25318\]
 
@@ -769,7 +770,7 @@ When, in the Alarm Console, the list of information events in the *Information e
 
 When that automatic removal mechanism was triggered, in some rare cases, DataMiner Cube could become unresponsive.
 
-#### Invalid values in SNMPv3 element configurations would cause DataMiner Agents to get discon­nected from each other \[ID_24979\]
+#### Invalid values in SNMPv3 element configurations would cause DataMiner Agents to get disconnected from each other \[ID_24979\]
 
 When SNMPv3 element configurations contained invalid values, in some cases, DataMiner Agents could get disconnected from each other.
 
@@ -851,7 +852,7 @@ If there were multiple trend points in the same second, it could occur that thes
 
 #### DataMiner Cube: Problem when clicking several times in rapid succession or when a log folder was created on a clean client computer \[ID_25099\]
 
-In DataMiner Cube, in some cases, an exception could be thrown when clicking several times in rapid succession or when the *C:\\ProgramData\\Skyline\\DataMiner\\DataMinerCube\\<br>CubeLogging* folder was created on a clean client computer.
+In DataMiner Cube, in some cases, an exception could be thrown when clicking several times in rapid succession or when the *C:\\ProgramData\\Skyline\\DataMiner\\DataMinerCube\\CubeLogging* folder was created on a clean client computer.
 
 #### Monitoring app: Severity color indication not displayed in Alarm Console and on alarms pages \[ID_25106\]
 
@@ -911,7 +912,7 @@ In some cases, the SLLoggerUtil process would leak memory. For instance, when th
 
 #### Problem with SLPort when closing a serial connection or when changing the security keys of an SSH connection \[ID_25213\]
 
-In some cases, an error could occur in SLPort when closing a serial connection or when chang­ing the security keys of an SSH connection.
+In some cases, an error could occur in SLPort when closing a serial connection or when changing the security keys of an SSH connection.
 
 #### Problem with SLProtocol when starting a DVE element or a virtual function \[ID_25215\]
 
@@ -935,7 +936,7 @@ In some cases, an error could occur in SLElement when the element incorrectly id
 
 #### SLProtocol would incorrectly flush timetrace data when only element data had to be flushed \[ID_25273\]
 
-In some cases, when SLProtocol had to flush element data, it would also incorrectly flush time­trace data.
+In some cases, when SLProtocol had to flush element data, it would also incorrectly flush timetrace data.
 
 #### Problem when retrieving a large number of alarms from a MySQL database \[ID_25298\]
 

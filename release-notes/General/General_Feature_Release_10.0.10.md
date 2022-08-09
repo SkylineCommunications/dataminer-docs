@@ -233,7 +233,7 @@ Component settings can now be marked as advanced. When marked as such, they will
 
 - “showAdvancedSettings=true”
 
-#### Dashboards app: Optimalization of component visualizations \[ID_26751\]
+#### Dashboards app: Optimization of component visualizations \[ID_26751\]
 
 After adding a component to a dashboard, you can apply a specific visualization. The list of available visualizations has now been optimized.
 
@@ -383,8 +383,8 @@ Each TreeViewItem has the following properties:
 
 - *ItemType*: Determines the type of item in the tree view. The following values are possible:
 
-    - *Empty*: Only the DisplayValue will be displayed for this item.
-    - *CheckBox*: A check box will be shown next to the DisplayValue.
+  - *Empty*: Only the DisplayValue will be displayed for this item.
+  - *CheckBox*: A check box will be shown next to the DisplayValue.
 
 - *ChildItems*: List of TreeViewItems that are child items of this item.
 
@@ -464,19 +464,25 @@ Up to now, in configuration mode, when you edited a job domain, it was only poss
 
 In configuration mode, next to the *New*, *Edit* and *Delete* buttons on the right of the job domain selection box, there is now also a *Duplicate* button. Clicking that button will allow you to select one of the following options:
 
-| Option | Function |
-|--|--|
-| Share sections<br>across domains | Creates a new domain that shares its sections with the original domain.<br> Note: Changes made to the sections of the new domain will also be applied to the sections of the original domain (except changes made to the *Color*, *Icon* and *Allow multiple instances* properties of a section). |
-| Create copies of<br>the sections | Creates a new domain by duplicating the entire original domain, including its sections.<br> Note: Changes made to the sections of the new domain will not be applied to the sections of the original domain. |
+- **Share sections across domains**: Creates a new domain that shares its sections with the original domain.
+
+  > [!NOTE]
+  > Changes made to the sections of the new domain will also be applied to the sections of the original domain (except changes made to the *Color*, *Icon* and *Allow multiple instances* properties of a section).
+
+- **Create copies of the sections**: Creates a new domain by duplicating the entire original domain, including its sections.
+
+  > [!NOTE]
+  > Changes made to the sections of the new domain will not be applied to the sections of the original domain.
 
 When the duplication operation has finished, you will automatically be redirected to the newly created domain.
 
 As a result of the above-mentioned changes, adding a new section to a domain has also been changed. The *Add section definition* window now has a *New* tab and an *Existing* tab.
 
-| Tab | Function |
-|--|--|
-| New | Use this tab if you want to create a new section from scratch. |
-| Existing | Use this tab if you want to add an existing section to the domain in question. In this case, apart from having to select the section to be added, you will also have to indicate whether you want to<br> -  share the section with the other domain(s) containing that section, or<br> -  make a separate copy of the section (with a new name). |
+- **New**: Use this tab if you want to create a new section from scratch.
+- **Existing**: Use this tab if you want to add an existing section to the domain in question. In this case, apart from having to select the section to be added, you will also have to indicate whether you want to:
+
+  - share the section with the other domain(s) containing that section, or
+  - make a separate copy of the section (with a new name).
 
 ##### New web methods
 
@@ -507,54 +513,50 @@ Server-side support has been added for mediated virtual functions.
 To configure mediated virtual functions, do the following:
 
 1. For every parameter, every column and/or every cell you want to see in the virtual function element, create a profile parameter.
-
 1. If, in the virtual function element, the value of a profile parameter should be transformed, then add a mediation snippet to that profile parameter.
-
 1. Create a profile definition for the node of the function and a profile definition for every interface of the function.
 
-    - In a profile definition, you can group profile parameters in tables if you want them to be shown as tables in the virtual function element.
+   - In a profile definition, you can group profile parameters in tables if you want them to be shown as tables in the virtual function element.
 
 1. Create a virtual function definition. In it, you can define the following:
 
-    - The profile definition for the node.
+   - The profile definition for the node.
+   - The amount and type of interfaces and their profile definition.
+   - The protocols supported. For every supported protocol, the following can to be defined:
 
-    - The amount and type of interfaces and their profile definition.
+     | Items             | Description                                                                               |
+     |-------------------|-------------------------------------------------------------------------------------------|
+     | Entry-point table | The (optional) table that holds the multiple instances of a function in a single element. |
+     | Interface filters | The (optional) additional table filters that have to be used for the interface tables.    |
 
-    - The protocols supported. For every supported protocol, the following can to be defined:
+   Next to that, you can also define what the virtual protocol should look like:
 
-        | Items           | Description                                                                               |
-        |-------------------|-------------------------------------------------------------------------------------------|
-        | Entry-point table | The (optional) table that holds the multiple instances of a function in a single element. |
-        | Interface filters | The (optional) additional table filters that have to be used for the interface tables.    |
+   - Define the pages you want to see in the protocol.
+   - Define which profile parameters from the profile definitions of the node/interfaces should be on each page.
+   - Define which tables from the profile definitions of the node/interfaces should be on each page.
 
-    Next to that, you can also define how the virtual protocol should look like:
+   When you save the virtual function definition, a virtual function protocol is generated (with type “virtual-function”) and the metadata associated with that protocol is stored in an automatically created “virtual function protocol meta” object. That object will contain the following information:
 
-    - Define the pages you want to see in the protocol.
-    - Define which profile parameters from the profile definitions of the node/interfaces should be on each page.
-    - Define which tables from the profile definitions of the node/interfaces should be on each page.
+   - The IDs of the read/write parameters that were generated for the different profile parameters and nodes/interfaces.
+   - The tables that were generated.
+   - Profile parameter information (type, ...)
 
-    When you save the virtual function definition, a virtual function protocol is generated (with type “virtual-function”) and the metadata associated with that protocol is stored in an automatically created “virtual function protocol meta” object. That object will contain the following information:
+   This protocol metadata will be used:
 
-    - The IDs of the read/write parameters that were generated for the different profile parameters and nodes/interfaces.
-    - The tables that were generated.
-    - Profile parameter information (type, ...)
-
-    This protocol metadata will be used:
-
-    - to resolve IDs of generated parameters when binding a resource
-    - to be able to re-use parameter IDs when a new version of the protocol is generated
-    - to validate the new versions of the generated protocol
+   - to resolve IDs of generated parameters when binding a resource
+   - to be able to re-use parameter IDs when a new version of the protocol is generated
+   - to validate the new versions of the generated protocol
 
 1. Create a virtual function resource with a specific virtual function definition.
 
-    The virtual function element with automatically be created using the generated virtual function protocol.
+   The virtual function element with automatically be created using the generated virtual function protocol.
 
 1. Bind the virtual element to an element by updating the virtual resource:
 
-    - Specify the element ID.
-    - Specify the entry point table index (if an entry point table was defined).
+   - Specify the element ID.
+   - Specify the entry point table index (if an entry point table was defined).
 
-    All the parameters and tables of the virtual function element, which were set to “not-initialized/empty”, will now be set to the replicated/mediated values of the bound element.
+   All the parameters and tables of the virtual function element, which were set to “not-initialized/empty”, will now be set to the replicated/mediated values of the bound element.
 
 ##### Virtual function definitions
 
@@ -572,12 +574,12 @@ Virtual function protocol metadata is stored in Indexing Engine under the cvirtu
 
 A virtual function resource is an extension of a normal resource. It has the following additional properties:
 
-| Property                | Content                                                                                                                             |
-|-------------------------|-------------------------------------------------------------------------------------------------------------------------------------|
-| VirtualFunctionID       | The ID of the VirtualFunctionDefinition of which it is an instance.                                                                 |
-| PhysicalDeviceDmaId     | The ID of the element that is currently bound to the VirtualFunctionElement.                                                        |
-| PhysicalDeviceElementId |                                                                                                                                     |
-| ElementName             | The name of the VirtualFunctionElement that will be created.<br> If none is specified, then the resource name will be used instead. |
+| Property | Content |
+|--|--|
+| VirtualFunctionID | The ID of the VirtualFunctionDefinition of which it is an instance. |
+| PhysicalDeviceDmaId | The ID of the element that is currently bound to the VirtualFunctionElement. |
+| PhysicalDeviceElementId |  |
+| ElementName | The name of the VirtualFunctionElement that will be created. If none is specified, the resource name will be used instead. |
 
 Virtual function resources can be used on ReservationInstances and ServiceReservation-Instances, and can be managed by means of the ResourceManagerHelper API. They are saved in Resources.xml.
 
@@ -588,11 +590,8 @@ All logging with regard to virtual function resources will be added to SLResourc
 Logging with regard to element binding will be added to the following log files:
 
 - SLResourceManager.txt can contain information about errors that occurred during the element orchestration or during binding/unbinding operations.
-
 - SLFunctionManager.txt can contain information about errors that occurred during binding/unbinding operations. If the resource update request was sent from another agent than the one hosting the virtual function element, then the log file of the hosting agent might contain the error. You might also have to check SLDataMiner.txt.
-
 - SLProfileManager.txt can contain information about errors that occurred during the mediation step of the parameter replication.
-
 - The log file of the virtual function element can contain information about errors that occurred during binding, unbinding or replication operations in general.
 
 #### Tracking the rebinding history of VirtualFunctionResources \[ID_25307\]
@@ -601,14 +600,14 @@ The rebinding history of VirtualFunctionResources will now be logged by means of
 
 A HistoryChange records contains the following fields:
 
-| Field        | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-|--------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| ID           | ID of the HistoryChange record.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-| SubjectId    | ID of the VirtualFunctionResource that was changed.                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| Time         | Time at which the change was made.                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-| FullUsername | Full user name of the person who made the change.<br> If the change was triggered by the DataMiner system, this will be “DataMiner”.                                                                                                                                                                                                                                                                                                                                                                           |
-| DmaId        | ID of the DataMiner Agent on which the change was triggered.                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
-| Changes      | List of changes that were made. In case of a VirtualFunctionResource, this can be a RebindChange containing the following information about the binding:<br> -  BindBefore (the element ID before the rebind)<br> -  BindAfter (the element ID after the rebind)<br> -  the type of change (Create/Update/Delete) |
+| Field | Description |
+|--|--|
+| ID | ID of the HistoryChange record. |
+| SubjectId | ID of the VirtualFunctionResource that was changed. |
+| Time | Time at which the change was made. |
+| FullUsername | Full user name of the person who made the change. If the change was triggered by the DataMiner System, this will be “DataMiner”. |
+| DmaId | ID of the DataMiner Agent on which the change was triggered. |
+| Changes | List of changes that were made. In case of a VirtualFunctionResource, this can be a RebindChange containing the following information about the binding:<br> - BindBefore (the element ID before the rebind)<br> - BindAfter (the element ID after the rebind)<br> - the type of change (Create/Update/Delete) |
 
 Using the HistoryHelper#Resources API you can read all the history objects for resources. See the following example:
 
@@ -1425,7 +1424,7 @@ In some cases, if a delay was applied to a tab in the Alarm Console, it could oc
 
 When a new Failover pair was configured, it could occur that the existing dashboards from the legacy Dashboards app were not synced from the online DMA to the offline DMA.
 
-#### DataMiner Cube: Automation script executed from Visual Overview still displayed as "Execut­ing" when finished \[ID_26925\]
+#### DataMiner Cube: Automation script executed from Visual Overview still displayed as "Executing" when finished \[ID_26925\]
 
 When an Automation script was executed from a shape in Visual Overview, it could occur that it continued to be displayed as being executed even when the script was finished.
 

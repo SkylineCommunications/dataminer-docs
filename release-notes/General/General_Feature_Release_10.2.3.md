@@ -66,25 +66,25 @@ See the following example:
 </Param>
 ```
 
-**Overview of the possible ArrayOptions@index and Connection.Type combinations**
+##### Overview of the possible ArrayOptions@index and Connection.Type combinations
 
 - Connection type: DirectConnection
 
-    - No index defined: The data will be pushed via the direct connection and the ID will be assigned by the database. Updating the data will not be possible in this case.
-    - Index defined: The data will be pushed via the direct connection and the ID will be assigned by the column template that is being sent via the direct connection by means of an “InitializeWriteAction”.
+  - No index defined: The data will be pushed via the direct connection and the ID will be assigned by the database. Updating the data will not be possible in this case.
+  - Index defined: The data will be pushed via the direct connection and the ID will be assigned by the column template that is being sent via the direct connection by means of an “InitializeWriteAction”.
 
-    > [!NOTE]
-    > When using directconnection in combination with a defined index, the TTL of the table should always be infinite.
+  > [!NOTE]
+  > When using directconnection in combination with a defined index, the TTL of the table should always be infinite.
 
 - Connection type: SLProtocol
 
-    - No index defined: Currently not supported.
-    - Index defined: Default logger table configuration.
+  - No index defined: Currently not supported.
+  - Index defined: Default logger table configuration.
 
 - No connection type defined
 
-    - No index defined: Fallback to connection type “DirectConnection” with no index defined.
-    - Index defined: Fallback to connection type “SLProtocol” with index defined.
+  - No index defined: Fallback to connection type “DirectConnection” with no index defined.
+  - Index defined: Fallback to connection type “SLProtocol” with index defined.
 
 ### DMS Cube
 
@@ -283,7 +283,7 @@ pfHelper.ReplaceActiveSystemFunctionDefinitions(xmlcontent);
 
 A number of security enhancements have been made.
 
-#### SLElement: Enhanced performance when working with tables using the “naming” or “naming­format” option \[ID_30973\]
+#### SLElement: Enhanced performance when working with tables using the “naming” or “namingformat” option \[ID_30973\]
 
 Due to a number of enhancements, overall performance of SLElement has increased, especially when working with tables using the “naming” or “namingformat” option.
 
@@ -359,7 +359,7 @@ From DataMiner 10.0.0/10.0.2 onwards, the DataMiner Analytics software assigns a
 
 A number of enhancements have been made to the SLSNMPAgent process, especially with regard to error handling.
 
-#### DataMiner Cube - System Center: Enhanced performance when opening the Users/Groups sec­tion \[ID_32307\]
+#### DataMiner Cube - System Center: Enhanced performance when opening the Users/Groups section \[ID_32307\]
 
 Due to a number of enhancements, overall performance has increased when opening the Users/Groups section of System Center.
 
@@ -404,11 +404,11 @@ The DomActionError class has now been marked as serializable.
 
 ### Fixes
 
-#### DataMiner Cube: When opening an email report, certain parameters would not be loaded cor­rectly \[ID_31969\]
+#### DataMiner Cube: When opening an email report, certain parameters would not be loaded correctly \[ID_31969\]
 
 When you created an email report in Scheduler, Automation or Correlation, and then added a number of parameters to it, in some rare cases, some of those parameters would not be loaded correctly when you reopened Scheduler, Automation or Correlation.
 
-#### DataMiner Cube: Trend graph of a parameter updated via history sets would be drawn incor­rectly \[ID_31994\] \[ID_32001\]
+#### DataMiner Cube: Trend graph of a parameter updated via history sets would be drawn incorrectly \[ID_31994\] \[ID_32001\]
 
 Up to now, the trend graph of a parameter updated via history sets would be drawn incorrectly. From now on, for history set parameters, the line indicating parameter updates will no longer be drawn up to the current time. Instead, it will be drawn up to the time of the last parameter update.
 
@@ -581,7 +581,7 @@ When you duplicated a profile parameter with a mediation snippet on one of the c
 
 When, in the Alarm Console, you created a new private alarm filter, in some cases, that new filter would not automatically be selected after saving it. The filter selection box would incorrectly show “\<Click to select>” instead of the name of the newly created filter.
 
-#### Spectrum Analysis: Presets not saved/loaded correctly in spectrum card launched from spec­trum thumbnail \[ID_32404\]
+#### Spectrum Analysis: Presets not saved/loaded correctly in spectrum card launched from spectrum thumbnail \[ID_32404\]
 
 When a spectrum element card is launched from a spectrum thumbnail in Visual Overview, it is displayed in buffer mode. Up to now, in this buffer mode, markers, reference lines, and thresholds were not taken into account when presets were saved or loaded. These will now be included. Note that the initial preset content checkboxes will be different in this buffer mode compared to the regular spectrum analyzer mode.
 
@@ -589,7 +589,7 @@ When a spectrum element card is launched from a spectrum thumbnail in Visual Ove
 
 In some cases, automatic incident tracking would not start up when an alarm was cleared during the startup routine.
 
-#### SLAnalytics: Problem with alarm grouping when alarms were generated while automatic inci­dent tracking was starting up \[ID_32410\]
+#### SLAnalytics: Problem with alarm grouping when alarms were generated while automatic incident tracking was starting up \[ID_32410\]
 
 When alarms were generated while automatic incident tracking was starting up, in some cases, an alarm could internally be duplicated, leading to incorrect alarm groups (e.g. groups containing only a single alarm).
 

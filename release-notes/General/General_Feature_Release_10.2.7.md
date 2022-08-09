@@ -141,10 +141,10 @@ When you embed a Service Manager component in Visual Overview, it is now possibl
 
 To do so, add a FunctionTypes option to the ComponentOptions shape data field.
 
-| Shape data field | Value                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-|------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Component        | ServiceManager                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| ComponentOptions | FunctionTypes=\[comma-separated list of values\]<br> Possible values:<br> -  Undefined (i.e. NULL value)<br> -  UserTask<br> -  ScriptTask<br> -  ResourceTask<br> -  Gateway<br> -  NoneStartEvent<br> -  TimeStartEvent<br> -  EndEvent |
+| Shape data field | Value |
+|--|--|
+| Component | ServiceManager |
+| ComponentOptions | FunctionTypes=\[comma-separated list of values\]<br> Possible values:<br> - Undefined (i.e. NULL value)<br> - UserTask<br> - ScriptTask<br> - ResourceTask<br> - Gateway<br> - NoneStartEvent<br> - TimeStartEvent<br> - EndEvent |
 
 > [!NOTE]
 >
@@ -155,7 +155,7 @@ To do so, add a FunctionTypes option to the ComponentOptions shape data field.
 > - The filter will be cleared when no FunctionTypes option is specified or when the FunctionTypes option is set to an empty list of values.
 > - Parent functions that do not match the filter but have child functions that match the filter will be displayed in the function tree to allow you to navigate to one of the child functions.
 
-#### DataMiner Cube - Visual Overview: Shape that displays a page of the Visio drawing linked to a view, service or element will no longer be displayed when the element, service or view in ques­tion does not exist \[ID_33484\]
+#### DataMiner Cube - Visual Overview: Shape that displays a page of the Visio drawing linked to a view, service or element will no longer be displayed when the element, service or view in question does not exist \[ID_33484\]
 
 From now on, a shape that displays a page of the Visio drawing linked to a view, service or element (i.e. a shape with a shape data field of type VdxPage) will no longer be displayed when the view, service or element in question does not exist.
 
@@ -223,11 +223,11 @@ When you right-click a column header of a data table component (e.g. a GQI table
 - To group by the column in question, select *Group*.
 - To filter the data in the table, construct a single or composite condition depending on the column type:
 
-| Column type      | Filter option                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
-|------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| String/GUID      | One or more of the following conditions (combined with OR):<br> -  contains some text (case insensitive)<br> -  does not contains some text (case insensitive)<br> -  matches a regular expression<br> -  does not match a regular expression<br> -  equals some text (case insensitive)<br> -  does not equal some text (case insensitive) |
-| Numeric/DateTime | One or more ranges (combined with OR)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| Boolean          | True or false                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| Column type | Filter option |
+|--|--|
+| String/GUID | One or more of the following conditions (combined with OR):<br> - contains some text (case insensitive)<br> - does not contains some text (case insensitive)<br> - matches a regular expression<br> - does not match a regular expression<br> - equals some text (case insensitive)<br> - does not equal some text (case insensitive) |
+| Numeric/DateTime | One or more ranges (combined with OR) |
+| Boolean | True or false |
 
 > [!NOTE]
 >
@@ -344,7 +344,7 @@ SLLogCollector will now also collect the following VerifyClusterPorts files:
 
 Because of a number of enhancements, overall performance has increased when using the search box in the Cube header.
 
-#### SLLogCollector will now also collect the log files of the ArtifactDeployer, CloudFeed and Orches­trator processes \[ID_33514\]
+#### SLLogCollector will now also collect the log files of the ArtifactDeployer, CloudFeed and Orchestrator processes \[ID_33514\]
 
 SLLogCollector will now also collect the log files of the following cloud processes:
 
@@ -423,7 +423,7 @@ When you created an element with a protocol in which a WebSocket connection was 
 
 When, in the Alarm Console, you enable the alarm storm mode, the alarms are grouped into one summary alarm per parameter. In some rare cases, the values shown in those summary alarms could be incorrect.
 
-#### DataMiner Cube - Trending: Legend would incorrectly show a unit when hovering over an excep­tion value \[ID_33280\]
+#### DataMiner Cube - Trending: Legend would incorrectly show a unit when hovering over an exception value \[ID_33280\]
 
 When, in a trend graph, you hovered the mouse pointer over an exception value, the legend would not only show the minimum value, the maximum value and the value of the data point, but also incorrectly a unit. From now on, when you hover over an exception value, the legend will no longer show a unit.
 
@@ -590,7 +590,7 @@ Error trapped: Unable to cast object of type 'Skyline.DataMiner.Web.Common.v1.DM
 
 In some rare cases, an error could occur in SLElement when updating the bubble-up levels.
 
-#### DataMiner Cube - Resources app: prevent updating new unsaved resource with updated exist­ing resource \[ID_33543\]
+#### DataMiner Cube - Resources app: prevent updating new unsaved resource with updated existing resource \[ID_33543\]
 
 In some cases, when the data related to a newly created resource was not yet saved on the DataMiner Agent, in the UI, that data would incorrectly be replaced by data related to another resource.
 

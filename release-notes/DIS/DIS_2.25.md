@@ -74,7 +74,7 @@ The following protocol XML tags now have new or updated virtual comments:
 
 | Tag | Virtual comment |
 |-----|-----------------|
-| Protocol.Params.Param.Interprete.Value | The length of the tag content.<br> If the value is a correctly formatted hexadecimal string, it will be converted to a more readable format. |
+| Protocol.Params.Param.Interprete.Value | The length of the tag content. If the value is a correctly formatted hexadecimal string, it will be converted to a more readable format. |
 | Protocol.Commands.Command.Content.Id<br>Protocol.Responses.Response.Content.Id | The virtual comments next to these tags now also contain a summary of the parameter content (length and fixed value when available). |
 
 #### Validator: Error message enhancements \[ID_24635\]

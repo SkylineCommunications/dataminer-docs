@@ -269,7 +269,7 @@ From now on, when you create or import a new dashboard, you will be able to rest
 |----------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Public         | Every user is allowed to view, edit and share the dashboard.                                                                                                                    |
 | Protected      | Every user is allowed to view the dashboard, but only the user who created it is allowed to edit or share it.                                                                   |
-| Private        | Only the user who created the dashboard is allowed to view and edit it.<br> Note: In the Automation app, it will not be possible to attach private dashboards to report emails. |
+| Private        | Only the user who created the dashboard is allowed to view and edit it. Note: In the Automation app, it will not be possible to attach private dashboards to report emails. |
 
 > [!NOTE]
 >
@@ -457,7 +457,7 @@ A number of enhancements have been made to the page selector of embedded visual 
 
 For example, when a visual overview with multiple pages is embedded in a dashboard, the page selector will now also inherit the dashboard theme colors. Also, when a page is selected, the page selector will now display the name of the page.
 
-#### Ticketing app: No automatic redirection anymore when ticket creation or ticket update has fin­ished \[ID_28310\]
+#### Ticketing app: No automatic redirection anymore when ticket creation or ticket update has finished \[ID_28310\]
 
 Up to now, when, after creating or editing a ticket, you navigated to another part of the Ticketing app, you would automatically be navigated back to the ticket when the ticket creation of ticket update was finished. From now on, this will no longer be the case.
 
@@ -549,7 +549,7 @@ When you exported real-time trend data to a CSV file, that file would incorrectl
 
 When you opened a dashboard, clicked *Start sharing*, and entered a message, in some cases, the *Share* window would incorrectly be resized.
 
-#### DataMiner Cube - Profiles app: Regular expression of a profile instance parameter would incor­rectly not be checked \[ID_28094\]
+#### DataMiner Cube - Profiles app: Regular expression of a profile instance parameter would incorrectly not be checked \[ID_28094\]
 
 In the Profiles app, it is possible to define a parameter of type text and add a regular expression that values have to match.
 
@@ -665,7 +665,7 @@ In some case, an error could occur in SLAnalytics when trying to process a param
 
 In the Ticketing app, in some cases, headers would not be cleared when you switched domains.
 
-#### Web Services API v0: Serialization error when using the GetActiveAlarmsFromView and GetAc­tiveAlarmsFromElement methods \[ID_28293\]
+#### Web Services API v0: Serialization error when using the GetActiveAlarmsFromView and GetActiveAlarmsFromElement methods \[ID_28293\]
 
 Due to a serialization error, in some cases, the following Web Services API v0 methods would no longer work:
 
@@ -706,7 +706,7 @@ In some cases, an exception could be thrown when using an inter-element query to
 
 ## Addendum CU1
 
-### Enhancements
+### CU1 enhancements
 
 #### Installation output of NAS/NATS will now be logged in SLCloudEndpointManager.txt instead of SLNet.txt \[ID_28577\]
 
@@ -716,7 +716,7 @@ When CloudEndpointManager installs NATS, it will now log the full installation o
 
 From now on, automatic detection and triggering of NATS cluster self healing will be deactivated by default.
 
-### Fixes
+### CU1 fixes
 
 #### Issues fixed in NATS server cluster configuration and in NATS clustering logic of offline agents in a Failover setup \[ID_28503\]
 

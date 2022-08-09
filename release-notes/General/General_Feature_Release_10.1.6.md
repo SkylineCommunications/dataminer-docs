@@ -131,10 +131,10 @@ Next to the serviceTimeoutMode and viewTimeoutMode attributes, the AlarmSettings
 
 Similar to the other two attributes, it can be set to one of the following values.
 
-| Value          | Description                                                                                                                                     |
-|----------------|-------------------------------------------------------------------------------------------------------------------------------------------------|
-| displayTimeout | Shapes linked to elements will only show the timeout color. The current alarm color will not be shown.<br> (Default setting)                    |
-| displayBoth    | Shapes linked to elements will show both the current alarm color and the timeout color.<br> The timeout color will be shown as a hatch pattern. |
+| Value | Description |
+|--|--|
+| displayTimeout | Shapes linked to elements will only show the timeout color. The current alarm color will not be shown. (Default setting.) |
+| displayBoth | Shapes linked to elements will show both the current alarm color and the timeout color. The timeout color will be shown as a hatch pattern. |
 
 #### Visual Overview: Prevent a child shape from inheriting the service context of its parent shape \[ID_29503\]
 
@@ -289,12 +289,12 @@ Root
 
 - child 1
 
-    - child 3
-    - child 4
+  - child 3
+  - child 4
 
 - child 2
 
-    - child 5
+  - child 5
 
 From now on...
 
@@ -352,6 +352,7 @@ This allows C# blocks that contain alarm squashing functionality to also be comp
 
 > [!NOTE]
 > Up to now, the following directives would only be added to QActions. These will now also be added to C# blocks of Automation scripts.
+>
 > - #define DBInfo
 > - #define DCFv1
 
@@ -955,13 +956,13 @@ When you tried to install an Elasticsearch database from within DataMiner Cube, 
 
 ## Addendum CU1
 
-### Enhancements
+### CU1 enhancements
 
 #### DataMiner Cube - Service & Resource Management: Enhanced performance when fetching initial data \[ID_29799\]
 
 Due to a number of enhancements, overall performance of the different Service & Resource Management modules has increased, especially when fetching initial data.
 
-### Fixes
+### CU1 fixes
 
 #### DataMiner Cube - Data Display: Problem when copying data from a table \[ID_29934\]
 
@@ -977,7 +978,7 @@ When you opened a service definition in the Services app, in some cases, the fun
 
 ## Addendum CU2
 
-### Fixes
+### CU2 fixes
 
 #### DataMiner Cube could become unresponsive when you opened the Services app \[ID_30001\]
 
@@ -989,7 +990,7 @@ When, at initialization, a booking placeholder was not able to resolve its booki
 
 ## Addendum CU3
 
-### Fixes
+### CU2 fixes
 
 #### DataMiner Cube - Services app: Profile parameters not displayed when clicking a node of a service definition \[ID_30059\]
 

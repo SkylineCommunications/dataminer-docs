@@ -256,50 +256,50 @@ In the example above, three collectors have been defined:
 - Collector2 is a collector of type “Http”, and will order SLLogCollector to send an HTTP request to a server and to store the response.
 - Collector3 is a collector of type “Exe”, and will order SLLogCollector to run an executable file and to store the output.
 
-**Collectors of type “File”**
+##### Collectors of type File
 
 Collectors of type “File” can be configured using the following XML elements and attributes:
 
-| Element/attribute                    | Type   | Mandatory | Description                                                                                                                                        |
-|--------------------------------------|--------|-----------|----------------------------------------------------------------------------------------------------------------------------------------------------|
-| File@name                            | String | Yes       | The name for the collector.                                                                                                                        |
-| File.Source                          |        | Yes       | The folder in which SLLogCollector will search for files and folders.                                                                              |
-| File.Destination                     |        | Yes       | The (relative) path to the destination folder in the archive.                                                                                      |
-| File.Patterns                        |        | Yes       | The element containing all search patterns.                                                                                                        |
-| File.Patterns.Pattern                |        | Yes       | A Microsoft .Net search pattern to filter file names or file paths.                                                                                |
-| File.Patterns.Pattern<br> @amount    | Int    | No        | The X most recent items to be copied.                                                                                                              |
-| File.Patterns.Pattern<br> @recursive | Bool   | No        | Whether to search recursively or not. Default: false                                                                                               |
-| File.Patterns.Pattern<br> @isFolder  | Bool   | No        | If true, then SLLogCollector will search for folders matching the pattern and will copy the entire content of the matching folders. Default: false |
+| Element/attribute | Type | Mandatory | Description |
+|--|--|--|--|
+| File@name | String | Yes | The name for the collector. |
+| File.Source |  | Yes | The folder in which SLLogCollector will search for files and folders. |
+| File.Destination |  | Yes | The (relative) path to the destination folder in the archive. |
+| File.Patterns |  | Yes | The element containing all search patterns. |
+| File.Patterns.Pattern |  | Yes | A Microsoft .Net search pattern to filter file names or file paths. |
+| File.Patterns.Pattern@amount | Int | No | The X most recent items to be copied. |
+| File.Patterns.Pattern@recursive | Bool | No | Whether to search recursively or not. Default: false |
+| File.Patterns.Pattern@isFolder | Bool | No | If true, then SLLogCollector will search for folders matching the pattern and will copy the entire content of the matching folders. Default: false |
 
-**Collectors of type “Http”**
+##### Collectors of type Http
 
 Collectors of type “Http” can be configured using the following XML elements and attributes:
 
-| Element/attribute                                           | Type   | Mandatory | Description                                                                                                                |
-|-------------------------------------------------------------|--------|-----------|----------------------------------------------------------------------------------------------------------------------------|
-| Http@name                                                   | String | Yes       | The name for the collector.                                                                                                |
-| Http.Source                                                 |        | Yes       | The IP address and port to which the requests have to be sent.<br> Format: http://ip:port                                  |
-| Http.Destination                                            |        | Yes       | The (relative) path to the destination folder in the archive.                                                              |
-| Http.Endpoints                                              |        | Yes       | The element containing all endpoints.                                                                                      |
-| Http.Endpoints.Endpoint                                     |        | Yes       | The element grouping all information on a particular endpoint.                                                             |
-| Http.Endpoints.Endpoint<br> @name                           | String | Yes       | The name of the endpoint.                                                                                                  |
-| Http.Endpoints.Endpoint<br> .Requests                       |        | Yes       | The element containing all requests to be sent to the endpoint.                                                            |
-| Http.Endpoints.Endpoint<br> .Requests.Request               |        | Yes       | The request to be sent.                                                                                                    |
-| Http.Endpoints.Endpoint<br> .Requests.Request<br> .fileName | String | No        | The name of the file in which the response has to be saved.<br> Default: \<Endpoint.name> \<Endpoint.Requests.Request>.txt |
+| Element/attribute | Type | Mandatory | Description |
+|--|--|--|--|
+| Http@name | String | Yes | The name for the collector. |
+| Http.Source |  | Yes | The IP address and port to which the requests have to be sent. Format: `http://ip:port` |
+| Http.Destination |  | Yes | The (relative) path to the destination folder in the archive. |
+| Http.Endpoints |  | Yes | The element containing all endpoints. |
+| Http.Endpoints.Endpoint |  | Yes | The element grouping all information on a particular endpoint. |
+| Http.Endpoints.Endpoint@name | String | Yes | The name of the endpoint. |
+| Http.Endpoints.Endpoint.Requests |  | Yes | The element containing all requests to be sent to the endpoint. |
+| Http.Endpoints.Endpoint.Requests.Request |  | Yes | The request to be sent. |
+| Http.Endpoints.Endpoint.Requests.Request.fileName | String | No | The name of the file in which the response has to be saved. Default: \<Endpoint.name> \<Endpoint.Requests.Request>.txt |
 
-**Collectors of type “Exe”**
+##### Collectors of type Exe
 
 Collectors of type “Exe” can be configured using the following XML elements and attributes:
 
-| Element/attribute                  | Type   | Mandatory | Description                                                                                         |
-|------------------------------------|--------|-----------|-----------------------------------------------------------------------------------------------------|
-| Exe@name                           | String | Yes       | The name for the collector.                                                                         |
-| Exe.Source                         |        | Yes       | The folder in which the executable is located.                                                      |
-| Exe.Executable                     |        | Yes       | The name of the executable.                                                                         |
-| Exe.Destination                    |        | Yes       | The (relative) path to the destination folder in the archive.                                       |
-| Exe.Commands                       |        | Yes       | The element containing all commands to be run.                                                      |
-| Exe.Commands<br> .Command          |        | Yes       | The command to be run.                                                                              |
-| Exe.Commands<br> .Command@fileName | String | No        | The name of the file in which the result has to be saved.<br> Default: \<executable> \<command>.txt |
+| Element/attribute | Type | Mandatory | Description |
+|--|--|--|--|
+| Exe@name | String | Yes | The name for the collector. |
+| Exe.Source |  | Yes | The folder in which the executable is located. |
+| Exe.Executable |  | Yes | The name of the executable. |
+| Exe.Destination |  | Yes | The (relative) path to the destination folder in the archive. |
+| Exe.Commands |  | Yes | The element containing all commands to be run. |
+| Exe.Commands.Command |  | Yes | The command to be run. |
+| Exe.Commands.Command@fileName | String | No | The name of the file in which the result has to be saved. Default: \<executable> \<command>.txt |
 
 #### Chromium web browser control: Enhancements with regard to the translations of the find and zoom commands \[ID_31755\]
 
@@ -377,7 +377,7 @@ Due to a number of enhancements, overall performance has increased when opening 
 
 Due to a number of enhancements, overall performance has increased when loading domain users from Azure AD.
 
-#### DataMiner Taskbar Utility: Improved entering of credentials before testing the SLNet connec­tion \[ID_32079\]
+#### DataMiner Taskbar Utility: Improved entering of credentials before testing the SLNet connection \[ID_32079\]
 
 When you right-click the Taskbar Utility icon and select *Options*, in the *SLNet* tab, you can enter your credentials and click *Test & Save Connection* to test the connection to SLNet.
 
@@ -394,7 +394,7 @@ The following BPA tests have been updated:
 - Cassandra DB Size
 - Check Antivirus DLLs
 
-#### Replication: Name of the local element will now be logged in SLReplication.txt when a replica­tion connection is set up \[ID_32109\]
+#### Replication: Name of the local element will now be logged in SLReplication.txt when a replication connection is set up \[ID_32109\]
 
 When a replication connection is set up to another DataMiner Agent, from now on, the name of the local element for which that connection is set up will be logged in the SLReplication.txt file.
 
@@ -546,7 +546,7 @@ When an embedded multi-page Visio file with hidden pages was viewed in a web app
 
 In some cases, a DCF signal path would not be visualized correctly on Visio pages with a grid layout.
 
-#### SLNet would thrown an “Arithmetic operation resulted in an overflow” exception when perfor­mance information was being calculated \[ID_31894\]
+#### SLNet would thrown an “Arithmetic operation resulted in an overflow” exception when performance information was being calculated \[ID_31894\]
 
 In some cases, SLNet would thrown an “Arithmetic operation resulted in an overflow” exception when performance information was being calculated.
 
@@ -570,7 +570,7 @@ Since DataMiner version 10.0.10, a Dashboard Gateway would no longer be able to 
 
 From now on, a Dashboard Gateway will be able to access the dashboard configuration files of all users when the user account that is used to set up the Dashboard Gateway connection has been granted the *Modules \> System configuration \> Tools \> Admin tools* permission.
 
-#### DataMiner Cube - Visual Overview: DCF connections incorrectly not shown when opening a sec­ond visual overview for the same element \[ID_31931\]
+#### DataMiner Cube - Visual Overview: DCF connections incorrectly not shown when opening a second visual overview for the same element \[ID_31931\]
 
 When you had opened a visual overview with DCF information for a particular element, and you opened another visual overview with DCF information for that same element, in some rare cases, the latter would incorrectly not show any DCF connections.
 
@@ -646,7 +646,7 @@ In the DataMiner.xml file, you can configure to have separate SLScripting proces
 
 When a Failover system was set up, certain system files (e.g. PropertyConfiguration.xml) would incorrectly not get synchronized to the offline agent during the initial sync.
 
-#### DataMiner Cube: Information templates could no longer be edited when connected to a Data­Miner Agent installed on Windows Server 2016 \[ID_32035\]
+#### DataMiner Cube: Information templates could no longer be edited when connected to a DataMiner Agent installed on Windows Server 2016 \[ID_32035\]
 
 In DataMiner Cube, in some cases, it would no longer be possible to edit information templates; especially when connected to a DataMiner Agent installed on Windows Server 2016.
 
@@ -658,7 +658,7 @@ When new items were added in one client, in some cases, those items would not im
 
 In some rare cases, alarms coming in while you were grouping or sorting the alarms on an alarm tab would incorrectly not appear on that alarm tab, especially on heavy-duty systems.
 
-#### Legacy Dashboards: Using “Add to dashboard” in Cube would no longer work when the Data­Miner Agent was only accessible via HTTPS \[ID_32083\]
+#### Legacy Dashboards: Using “Add to dashboard” in Cube would no longer work when the DataMiner Agent was only accessible via HTTPS \[ID_32083\]
 
 From DataMiner 9.0 onwards, it is possible to add items to a legacy dashboard directly from the Cube UI, for instance from the Surveyor or an element card.
 

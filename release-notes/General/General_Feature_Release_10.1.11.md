@@ -555,12 +555,12 @@ When configuring a node edge graph component, you can now use the *Bidirectional
 
 In the *Layout* pane of a node-edge component, the *Column filters* section has been renamed to *Filtering & highlighting* and now contains the following options:
 
-| Option                     | Description                                                                                                                                                                                                                                                                                                                                                                               |
-|----------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Conditional coloring       | Previously named *Column filters*, this option allows you to specify color filters for specific columns, so that these can be used for highlighting in case analytical coloring is used.                                                                                                                                                                   |
-| Highlight                  | When this option is enabled, the nodes that match the filter will be highlighted.<br> Default: Enabled                                                                                                                                                                                                                                                                                    |
-| Opacity                    | When the *Highlight* option is enabled, this option will allow you to set the level of transparency of the nodes and edges that do not match the filter.<br> Note: When you disable the *Highlight* option, the nodes that do not match the filter will no longer be displayed and the remaining nodes will be reorganized. |
-| Highlight/Show entire path | When this option is enabled, not only the nodes matching the filter will be highlighted, but also the entire tree structure of which they are a part (from root to leaves).                                                                                                                                                                                                               |
+| Option | Description |
+|--|--|
+| Conditional coloring | Previously named *Column filters*, this option allows you to specify color filters for specific columns, so that these can be used for highlighting in case analytical coloring is used. |
+| Highlight | When this option is enabled, the nodes that match the filter will be highlighted. Default: Enabled |
+| Opacity | When the *Highlight* option is enabled, this option will allow you to set the level of transparency of the nodes and edges that do not match the filter. Note: When you disable the *Highlight* option, the nodes that do not match the filter will no longer be displayed and the remaining nodes will be reorganized. |
+| Highlight/Show entire path | When this option is enabled, not only the nodes matching the filter will be highlighted, but also the entire tree structure of which they are a part (from root to leaves). |
 
 > [!NOTE]
 > The filtering options mentioned above require the *Query filter* component, which is currently still in [soft launch](https://community.dataminer.services/documentation/soft-launch-options/).
@@ -609,13 +609,13 @@ Up to now, when an internet connection was available on the DMA, the SLLogCollec
 
 The SLLogCollector tool now supports the following command line options:
 
-| Option             | Function                                                                                         |
-|--------------------|--------------------------------------------------------------------------------------------------|
-| -c, --console      | Use the SLLogCollector console.                                                                  |
-| -h, -?, --help     | List syntax and available options.                                                               |
-| -f, --folder=VALUE | Specify the folder in which the zipped log files will be stored.<br> Default: C:\\Skyline_Data\\ |
-| -d, --dumps=VALUE  | Specify the comma-separated list of processes from which dumps should be taken (IDs or names).   |
-| -m, --memory=VALUE | Take an extra dump as soon as the process uses the specified amount of memory (in MB).           |
+| Option             | Function                                                                                       |
+|--------------------|------------------------------------------------------------------------------------------------|
+| -c, --console      | Use the SLLogCollector console.                                                                |
+| -h, -?, --help     | List syntax and available options.                                                             |
+| -f, --folder=VALUE | Specify the folder in which the zipped log files will be stored. Default: C:\\Skyline_Data\\   |
+| -d, --dumps=VALUE  | Specify the comma-separated list of processes from which dumps should be taken (IDs or names). |
+| -m, --memory=VALUE | Take an extra dump as soon as the process uses the specified amount of memory (in MB).         |
 
 #### Security enhancements \[ID_30674\] \[ID_31081\]
 
@@ -746,12 +746,12 @@ From now on, the FieldName of a TicketFieldDescriptor has to meet the following 
 - It cannot start with an underscore character ("\_").
 - It cannot contain any of the following characters:
 
-    - . (period)
-    - \# (number sign)
-    - \* (asterisk)
-    - , (comma)
-    - " (double quote)
-    - ' (single quote)
+  - . (period)
+  - \# (number sign)
+  - \* (asterisk)
+  - , (comma)
+  - " (double quote)
+  - ' (single quote)
 
 #### DataMiner backup: Process Automation data now included in “Full Backup” \[ID_30999\]
 
@@ -851,7 +851,7 @@ In some rare cases, notices like “!! Unknown \<Type> RE!D for parameter 123”
 
 In some cases, the “Automatic incident tracking” option would no longer be visible in the hamburger menu of the Alarm Console.
 
-#### Protocols: Double values with leading zeros would not be displayed correctly when using scien­tific notation \[ID_30892\]
+#### Protocols: Double values with leading zeros would not be displayed correctly when using scientific notation \[ID_30892\]
 
 In some cases, double values with leading zeros would not be displayed correctly when using scientific notation.
 
@@ -927,7 +927,7 @@ In some cases, DVE element information would no longer be written to the databas
 
 During a Failover switch, in some cases, the Resources.xml file would constantly be updated.
 
-#### DataMiner Cube - Visual Overview: Problem with navigation buttons on visual pages after click­ing a card’s Back button \[ID_31012\]
+#### DataMiner Cube - Visual Overview: Problem with navigation buttons on visual pages after clicking a card’s Back button \[ID_31012\]
 
 When you clicked a card’s Back button, in some cases, the navigation buttons on the card’s visual pages could start to behave incorrectly.
 
@@ -991,7 +991,7 @@ When a Failover system was set up, in some cases, a full synchronization would i
 
 ## Addendum CU1
 
-### Fixes
+### CU1 fixes
 
 #### Problem when the \<NatsCredsFile> tag was removed from SLCloud.xml after running SLReset \[ID_31379\]
 

@@ -43,6 +43,7 @@ Also, more detailed entries will now be added to the logs when setup errors have
 
 > [!IMPORTANT]
 > Note that, for this enhancement to work, the following changes have to be made to the Azure configuration and the *DataMiner.xml* file.
+>
 > 1. In Azure, add the API permission *Application.Read.All*.
 > 1. Copy the Azure app object ID (*Azure AD > App registrations > [your application] > Object ID*) and, in *DataMiner.xml*, add it to the *objectId* attribute of the *AzureAD* element.
 
@@ -259,7 +260,7 @@ When you tried to create a booking with a child DVE element linked to a main DVE
 
 <!-- Main Release Version 10.3.0 - Feature Release Version 10.2.9 -->
 
-When an element or a parameter was deleted, in some rare cases, an error could occur in the SLAnalytics process. 
+When an element or a parameter was deleted, in some rare cases, an error could occur in the SLAnalytics process.
 
 #### GQI: Columns of type 'decimal' would incorrectly not be treated as columns of type 'numeric' [ID_33792]
 
@@ -293,7 +294,7 @@ Due to a problem with the automatic incident tracking algorithm, error messages 
 
 <!-- Main Release Version 10.0.0 [CU22]/10.1.0 [CU18]/10.2.0 [CU6] - Feature Release Version 10.2.9 -->
 
-When the element debug log level was equal to or higher than 1, an error could occur in SLElement when resolving foreign keys took a long time. 
+When the element debug log level was equal to or higher than 1, an error could occur in SLElement when resolving foreign keys took a long time.
 
 #### Dashboards app - Service definition component: Function nodes not displaying number of Process Automation tokens in queue or in progress [ID_33848]
 
@@ -460,7 +461,4 @@ During a DataMiner upgrade, in some cases, the *AnalyticsDropUnusedCassandraTabl
 
 In some cases, an exception could be thrown when removing a query that was used as "start from" query by another query.
 
-From now on, when you try to remove a query that is used as "start from" query, a confirmation box will appear, asking you to confirm the removal of that query. 
-
-
-
+From now on, when you try to remove a query that is used as "start from" query, a confirmation box will appear, asking you to confirm the removal of that query.

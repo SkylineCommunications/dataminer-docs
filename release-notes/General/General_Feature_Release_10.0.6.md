@@ -37,7 +37,7 @@ It is now possible to save the layout of a table column after having customized 
 
 After changing the width, the position and/or the visibility of a column, right-click its header, and select *Save layout*. To reset the column layout to the default settings, select *Reset layout*.
 
-#### Alarm hyperlinks: \[DisplayValue\] keywords now allows to display the value of a discreet param­eter \[ID_25294\]
+#### Alarm hyperlinks: \[DisplayValue\] keywords now allows to display the value of a discreet parameter \[ID_25294\]
 
 In second-generation alarm hyperlinks, you can now use the \[DISPLAYVALUE\] keyword to display the value of a discreet parameter.
 
@@ -158,28 +158,28 @@ It is now possible to export and import profile parameters to and from a file.
 
 The following methods have been added to the ProfileManagerHelper:
 
-**export(IEnumerable\<Guid> ids)**
+- `export(IEnumerable<Guid> ids)`
 
-This method returns an object of type “ProfileParameterExportResult”, which contains the bytes of the export file. These bytes can then be saved to a file. To view the contents of that file, first unzip it.
+  This method returns an object of type “ProfileParameterExportResult”, which contains the bytes of the export file. These bytes can then be saved to a file. To view the contents of that file, first unzip it.
 
-When you export profile parameters to a file, the following exceptions can be thrown:
+  When you export profile parameters to a file, the following exceptions can be thrown:
 
-| Exception                         | Description                                                                                                            |
-|-----------------------------------|------------------------------------------------------------------------------------------------------------------------|
-| ProfileParameterNotFoundException | The ID of one of the profile parameters that was passed to the method could not be found.                              |
-| MediationSnippetNotFoundException | One of the profile parameters that was passed to the method has a link to a mediation snippet that could not be found. |
+  | Exception | Description |
+  |--|--|
+  | ProfileParameterNotFoundException | The ID of one of the profile parameters that was passed to the method could not be found. |
+  | MediationSnippetNotFoundException | One of the profile parameters that was passed to the method has a link to a mediation snippet that could not be found. |
 
-**import(byte\[\] file)**
+- `import(byte[] file)`
 
-This method returns an object of type “ProfileParameterImportResult”, which contains the imported profile parameters and mediation snippets.
+  This method returns an object of type “ProfileParameterImportResult”, which contains the imported profile parameters and mediation snippets.
 
-When you import profile parameters from a file, the following exceptions can be thrown:
+  When you import profile parameters from a file, the following exceptions can be thrown:
 
-| Exception                        | Description                                                                    |
-|----------------------------------|--------------------------------------------------------------------------------|
-| InvalidDataException             | The file to be imported does not have the correct format.                      |
-| InvalidProfileParameterException | One of the profile parameters to be imported does not have the correct format. |
-| InvalidMediationSnippetException | One of the mediation snippets to be imported does not have the correct format. |
+  | Exception                        | Description                                                                    |
+  |----------------------------------|--------------------------------------------------------------------------------|
+  | InvalidDataException             | The file to be imported does not have the correct format.                      |
+  | InvalidProfileParameterException | One of the profile parameters to be imported does not have the correct format. |
+  | InvalidMediationSnippetException | One of the mediation snippets to be imported does not have the correct format. |
 
 > [!NOTE]
 >
@@ -192,14 +192,14 @@ All changes made to ReservationInstances will now be logged by means of HistoryC
 
 A HistoryChange records contains the following fields:
 
-| Field        | Description                                                                                                                          |
-|--------------|--------------------------------------------------------------------------------------------------------------------------------------|
-| ID           | ID of the HistoryChange record.                                                                                                      |
-| SubjectId    | ID of the ReservationInstance that was changed.                                                                                      |
-| Time         | Time at which the change was made.                                                                                                   |
-| FullUsername | Full user name of the person who made the change.<br> If the change was triggered by the DataMiner system, this will be “DataMiner”. |
-| DmaId        | ID of the DataMiner Agent on which the change was triggered.                                                                         |
-| Changes      | List of changes that were made. In case of a ReservationInstance, this can be a resource usage change or a status change.            |
+| Field | Description |
+|--|--|
+| ID | ID of the HistoryChange record. |
+| SubjectId | ID of the ReservationInstance that was changed. |
+| Time | Time at which the change was made. |
+| FullUsername | Full user name of the person who made the change. If the change was triggered by the DataMiner System, this will be “DataMiner”. |
+| DmaId | ID of the DataMiner Agent on which the change was triggered. |
+| Changes | List of changes that were made. In case of a ReservationInstance, this can be a resource usage change or a status change. |
 
 > [!NOTE]
 >
@@ -267,7 +267,7 @@ Due to a number of enhancements, the overall memory consumption of the Alarm Con
 
 When a backup package is created, from now on, the log information regarding the creation of that package will now be stored in the Backup.log file, which will be included in the package.
 
-#### Default alarm bubble-up behavior in recursive tables changed from “recursive=none” to “recur­sive=up” \[ID_25349\]
+#### Default alarm bubble-up behavior in recursive tables changed from “recursive=none” to “recursive=up” \[ID_25349\]
 
 The default alarm bubble-up behavior in recursive tables has been changed from “recursive=none” to “recursive=up”, i.e. from child nodes up to parent nodes (following the foreign key in the direction it is in).
 
@@ -291,7 +291,7 @@ From now on, when you perform a search using the header box search box, the resu
 
 Due to a number of enhancements, overall performance has increased when writing data to the Indexing Engine.
 
-#### Service & Resource Management: When checking whether a boolean ReservationInstance prop­erty is true or false, it is now also possible to specify the type as “Bool” \[ID_25415\]
+#### Service & Resource Management: When checking whether a boolean ReservationInstance property is true or false, it is now also possible to specify the type as “Bool” \[ID_25415\]
 
 When checking whether a boolean ReservationInstance property is set to true or false, you can now specify the type as “Bool” as well as “Boolean”. See the following example:
 
@@ -304,7 +304,7 @@ When checking whether a boolean ReservationInstance property is set to true or f
 > - Do not enclose the values true and false in single quotes. This would cause those values to be interpreted as string values instead of boolean values.
 > - Do not enclose the filter in round brackets (...).
 
-#### Dashboards app - Line chart component: Timestamp will now always remain visible in the leg­end \[ID_25421\]
+#### Dashboards app - Line chart component: Timestamp will now always remain visible in the legend \[ID_25421\]
 
 When hovering over trend graph values in a line chart component, the associated timestamp will now always remain visible in the legend.
 
@@ -324,7 +324,7 @@ The *Pivot table* dashboard component now supports mediation protocols.
 
 In the *Agents* section of *System Center*, after a Failover switch, in some cases, the agent name would not get updated to the name of the online agent.
 
-#### DataMiner Cube - Scheduler: No “next runtime”, “last runtime” or “last runtime result” informa­tion displayed when a DMA in the DMS was unreachable \[ID_24894\]
+#### DataMiner Cube - Scheduler: No “next runtime”, “last runtime” or “last runtime result” information displayed when a DMA in the DMS was unreachable \[ID_24894\]
 
 On the List tab of the Scheduler app, in some cases, no “next runtime”, “last runtime” or “last runtime result” information would be displayed when one of the DataMiner Agent in the DMS was unreachable or disconnected.
 
@@ -346,7 +346,7 @@ When reading from a logger table, in some cases, the primary key(s) would be par
 
 #### SLNetClientTest tool: Messages/events displayed incorrectly in follow session \[ID_25184\]
 
-In some cases, in a follow session of the SLNetClientTest tool, it could occur that some messages or events were displayed as "*Skyline.DataMiner.Net.Serialization.<br>ProtoBufSerializedMessage*", making it impossible to check their content.
+In some cases, in a follow session of the SLNetClientTest tool, it could occur that some messages or events were displayed as "*Skyline.DataMiner.Net.Serialization.ProtoBufSerializedMessage*", making it impossible to check their content.
 
 #### DataMiner Cube - EPM: EPM filter not loaded when topology cell was not linked to topology cell of selected object \[ID_25191\]
 
@@ -368,7 +368,7 @@ In some cases, it could occur that the *ActiveDirectory.txt* log file was not ge
 
 In some cases, an error could occur in SLNet when you performed a diagnostic request (*Diagnostics \> Connections \> OpenConnections*) in the SLNetClientTest tool while view states were being recalculated.
 
-#### Memory leak in SLNet when multiple documents were being added or deleted in rapid succes­sion \[ID_25234\]
+#### Memory leak in SLNet when multiple documents were being added or deleted in rapid succession \[ID_25234\]
 
 When multiple documents were being added or deleted in rapid succession, in some rare cases, SLNet could start leaking memory.
 
@@ -376,7 +376,7 @@ When multiple documents were being added or deleted in rapid succession, in some
 
 When SLGSMGateway updated its cache after an element had been added, updated or deleted, in some cases, an error could occur due to a locking issue.
 
-#### Problem when the view column of a table containing DVE child elements to be created con­tained single view IDs \[ID_25255\]
+#### Problem when the view column of a table containing DVE child elements to be created contained single view IDs \[ID_25255\]
 
 A table containing DVE child elements to be created can have a column that contains the view(s) the child element has to be created in (i.e. a column with option=”view”). In the cells of this column, you can enter a single view ID, a single view name, a list of view IDs separated by semicolons, a list of view names separated by semicolons or a mixed list of view IDs and view names separated by semicolons.
 
@@ -444,7 +444,7 @@ When real-time trend data was retrieved from a MySQL database, in some cases, du
 
 In some cases, EPM filters linked to a diagram would not correctly handle partial table pages and user filters. Only the first page of the result set would be loaded into the selection box, and a custom filter entered by the user would not be applied.
 
-#### When a function resource was deleted, its row in the \[Generic DVE Linker Table\] would incor­rectly not be removed \[ID_25356\]
+#### When a function resource was deleted, its row in the \[Generic DVE Linker Table\] would incorrectly not be removed \[ID_25356\]
 
 When a function resource is created, a row is added to both the \[Generic DVE Table\] and the \[Generic DVE Linker table\]. When a function resource was deleted, in some cases, only the row in the \[Generic DVE Table\] was deleted. The row in the \[Generic DVE Linker table\] would incorrectly not get deleted.
 
@@ -460,7 +460,7 @@ When you exported a trend graph to a CSV file, in some cases, that CSV file woul
 
 When the bubble-up severity was identical to that of the table row itself, and one of those was cleared, in some cases, an invalid alarm level would be passed to the parent items.
 
-#### Web Services API v0: GetActiveAlarmsFromView SOAP call would return alarms from parame­ters not included in the services found in the specified view \[ID_25391\]
+#### Web Services API v0: GetActiveAlarmsFromView SOAP call would return alarms from parameters not included in the services found in the specified view \[ID_25391\]
 
 When a GetActiveAlarmsFromView SOAP call was performed, all alarms of all elements in the services found in the specified view would be returned, even those associated with parameters that were not included in the services in question.
 
@@ -498,11 +498,11 @@ Up to now, in some cases, user initials in DataMiner Cube would be inconsistent.
 
 Note that, by design, the user selector at the bottom of the login screen will still display only one letter (i.e. the first letter of the full name).
 
-#### DataMiner Cube - Services app: Items in diagram would still appear to be selected after switch­ing from one tab to another \[ID_25468\]
+#### DataMiner Cube - Services app: Items in diagram would still appear to be selected after switching from one tab to another \[ID_25468\]
 
 When, in the Services app, you switched from one tab to another, in some cases, the items selected in the diagram would still appear to be selected although they were not.
 
-#### DataMiner Cube - Data Display: Problem with filtering on discreet or numerical column parame­ters using wildcards \[ID_25472\]
+#### DataMiner Cube - Data Display: Problem with filtering on discreet or numerical column parameters using wildcards \[ID_25472\]
 
 In some cases, it would no longer be possible to filter on discreet or numerical column parameters using wildcards.
 
@@ -518,7 +518,7 @@ When a script was launched from the service definition component, in some cases,
 
 If the *MaintenanceSettings.xml* file contained a *Trending* tag that did not contain a *TimeSpan* tag, a problem could occur with the file.
 
-#### Monitoring app: Problem when viewing a trend histogram for a column parameter with a pri­mary key containing lowercase characters \[ID_25481\]
+#### Monitoring app: Problem when viewing a trend histogram for a column parameter with a primary key containing lowercase characters \[ID_25481\]
 
 In the Monitoring app, in some cases, no data would be returned when viewing a trend histogram for a column parameter with a primary key containing lowercase characters.
 
@@ -536,7 +536,7 @@ When you saved the column layout of a table that contained a hidden column (i.e.
 
 #### Web Services API v0/v1: Methods would return parameters to which users had not been granted access \[ID_25544\]
 
-Some of the web methods would incorrectly return parameters to which users had not been granted access. From now on, a number of parameter-related methods will also require the “SDElementOveview” flag.
+Some of the web methods would incorrectly return parameters to which users had not been granted access. From now on, a number of parameter-related methods will also require the “SDElementOverview” flag.
 
 Also, the GetTableForParameterV2 method would incorrectly return table columns that had “width=0” defined in the protocol, and, in some cases, it would incorrectly be possible to update a parameter of an element marked as “read only”.
 

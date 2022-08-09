@@ -95,12 +95,11 @@ The XML Schema will now accept the following additional units of measure:
 A number of enhancements have been made to the MIB browser:
 
 - Up to now, when you imported an SNMP parameter with base syntax ‘OBJECT IDENTIFIER’, DIS imported a parameter of type “numeric text/double”. From now on, DIS will import a parameter of type “other/string” instead.
-
 - From now on, the MIB browser will allow you to import only files with the following extensions:
 
-    - *.mib*
-    - *.smi*
-    - *.txt*
+  - *.mib*
+  - *.smi*
+  - *.txt*
 
 - It is now possible to scroll through the list of loaded, pending and missing modules.
 

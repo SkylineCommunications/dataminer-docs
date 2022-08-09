@@ -40,6 +40,7 @@ To remove a reference, do the following:
 
 > [!NOTE]
 > In the *Interface* tab of the *DIS Settings* window, you can define the URL format of the two types of references in the following fields:
+>
 > - *Task URL String Format*
 > - *Reference URL String Format*
 >
@@ -57,10 +58,16 @@ DIS now uses Azure B2C authentication. This means, that users will now have to p
 
 In the *DIS Settings* window, the *DCP* tab has been replaced by the following tabs:
 
-| Tab     | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-|---------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Account | \-  Shows the name of the user who is currently signed in.<br> -  Has a *Sign out* button that allows you to sign out (and sign in again).<br> -  Shows the current license status.                                                                                                                                                                                                                             |
-| Updates | \-  If you select the *Check for plug-in updates* option, DIS will check once every hour whether a more recent version of the DataMinerIntegrationStudio.vsix extension file is available. If so, an update banner will appear at the top of the editor window.<br> -  If you select the *Get insider builds* option, DIS will not only check for main updates, but also for “insider” updates, i.e. pre-release versions for testing purposes. |
+- **Account**:
+
+  - Shows the name of the user who is currently signed in.
+  - Has a *Sign out* button that allows you to sign out (and sign in again).
+  - Shows the current license status.
+
+- **Updates**:
+
+  - If you select the *Check for plug-in updates* option, DIS will check once every hour whether a more recent version of the DataMinerIntegrationStudio.vsix extension file is available. If so, an update banner will appear at the top of the editor window.
+  - If you select the *Get insider builds* option, DIS will not only check for main updates, but also for “insider” updates, i.e. pre-release versions for testing purposes.
 
 > [!NOTE]
 > Users who upgrade to DIS version 2.32 will be asked to log in with their dataminer.services account.
@@ -142,17 +149,17 @@ SLNet wrapper methods now allow you to safely communicate with the SLScheduler a
 
 A number of enhancements have been made to the version editor.
 
-**Current Version tab and All Versions tab**
+##### Current Version tab and All Versions tab
 
 - On the *Current Version* tab and the *All Versions* tab, the *Based On* selection box no longer contains the current version. Also, when editing version 1.0.0.1, the *Based On* selection box is now disabled.
 - On the *Current Version* tab and the *All Versions* tab, the label “Modified date” has now been replaced by “Date”, and the date selector button has been right-aligned.
 - On the *Current Version* tab and the *All Versions* tab, all four parts of a version number (branch, system, major and minor) are now editable. When you change one of those four numbers of a particular version, its entire version tree will be adapted.
 
-**Current Version tab**
+##### Current Version tab
 
 - On the *Current Version* tab, you can now click *Go to this version in All Versions tree* to open the *All Versions* tab and select the current version in the version tree.
 
-**All Versions tab**
+##### All Versions tab
 
 - When, on the *All Versions* tab, you select a version that is not the current version, then you can click the *Set this version as current* button to make that version the current version. Also, in the version tree on the left, you can right-click a version and select *Set as current version*.
 - In the tree view on the *All Versions* tab, the current version and all its parent versions are now marked in bold.
@@ -160,7 +167,7 @@ A number of enhancements have been made to the version editor.
 - If, on the *All Versions* tab, you add a requirement to a system version, you can optionally specify a minimum and a maximum version. Up to now, when you did not specify a minimum or a maximum version, in the protocol XML file, an empty min or max attribute was added to the Version element in question. From now on, when you do not specify a minimum or a maximum version, no min or max attribute will be added.
 - On the *All Versions* tab, when you select a version in the version tree, that version is highlighted. Up to now, in some cases, when you right-clicked a version other than the one that was highlighted, the version you right-clicked would incorrectly not get highlighted.
 
-**Other changes**
+##### Other changes
 
 - When, in the protocol XML, you had changed the system version or major version number of the version specified in the Protocol.Version element to a system or major version that did not exist in the Protocol.VersionHistory element tree, in some cases, an exception could be thrown when you opened the version editor. From now on, the version you specified in the protocol XML file will be added to the Protocol.VersionHistory element tree and set as the new current version. Also, the entire tree will be adapted where needed.
 - In all text boxes of the version editor, it is now possible to copy/paste text.
