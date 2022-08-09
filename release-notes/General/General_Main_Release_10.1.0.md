@@ -5,6 +5,9 @@ uid: General_Main_Release_10.1.0
 # General Main Release 10.1.0
 
 > [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
+
+> [!NOTE]
 > **Internet Explorer Support**
 >
 > Though DataMiner Cube is available as a desktop application, many users still like to use the DataMiner browser application that requires Internet Explorer. However, Microsoft no longer recommends using Internet Explorer, and support for Internet Explorer is expected to cease in 2025, though currently the program is still maintained as part of the support policy for the versions of Windows it is included in. For more information, see <https://docs.microsoft.com/en-us/lifecycle/faq/internet-explorer-microsoft-edge>.
@@ -1205,8 +1208,7 @@ Elements that request data from a device via a serial port of type TCP/IP now su
 If you want such an element to use SSL/TLS encryption, then do the following:
 
 1. Right-click the element, and select *Edit*.
-
-2. In the *Edit* tab, go to the *Serial connection* section containing the settings of the port in question, and select the *SSL/TLS* check box.
+1. In the *Edit* tab, go to the *Serial connection* section containing the settings of the port in question, and select the *SSL/TLS* checkbox.
 
 > [!NOTE]
 > DataMiner currently supports all TLS versions up to TLS 1.3 (i.e. all TLS versions supported by OpenSSL 1.1.1).
@@ -1658,7 +1660,7 @@ Using the following syntax, it is now possible to retrieve the ID of a booking b
 
 #### Analytics tables in Elasticsearch database can now be included or excluded in custom DataMiner backup \[ID_25572\]
 
-When you configure a custom backup in Cube, you can now select whether the Analytics tables in the Elasticsearch database, which are used for pattern matching, should be included. To do so, in System Center, go to the *content* tab of the *Backup* page, select the *Use custom backup* option, select *Create a backup of the database*, and either select or clear the selection of the check box *Include analytics tables in backup*. By default, this option is selected.
+When you configure a custom backup in Cube, you can now select whether the Analytics tables in the Elasticsearch database, which are used for pattern matching, should be included. To do so, in System Center, go to the *content* tab of the *Backup* page, select the *Use custom backup* option, select *Create a backup of the database*, and either select or clear the selection of the checkbox *Include analytics tables in backup*. By default, this option is selected.
 
 #### View cards: New columns added to view card list view \[ID_25715\]
 
@@ -2472,7 +2474,7 @@ You can construct a query to use as data input for a component by following thes
 
     - *Select*: Displays the selected columns only. When you have selected the columns to display, you can apply another operator to refine the query.
 
-    - *Top X*: Displays the top or bottom items of a specific column, with X being the number of items to display. When you select this option, you will need to specify the column from which items should be displayed and the number of items that should be displayed. By default, the top items are displayed. To display the bottom items instead, select the *Ascending* check box.
+    - *Top X*: Displays the top or bottom items of a specific column, with X being the number of items to display. When you select this option, you will need to specify the column from which items should be displayed and the number of items that should be displayed. By default, the top items are displayed. To display the bottom items instead, select the *Ascending* checkbox.
 
 6. Drag the configured query to the component in order to use it.
 
@@ -2665,7 +2667,7 @@ On the *Layout* tab of the service definition component, two new options now al
 
 - **Show nodes without a resource assigned**
 
-    When you select this check box, the component will also show the nodes that have no resource assigned. By default, this check box will not be selected.
+    When you select this checkbox, the component will also show the nodes that have no resource assigned. By default, this checkbox will not be selected.
 
 > [!NOTE]
 >
@@ -3064,7 +3066,7 @@ When configuring a pivot table component, you can now find the following setting
 | Setting        | Description                                                                                                                           |
 |----------------|---------------------------------------------------------------------------------------------------------------------------------------|
 | Sort           | Allows you to select a protocol (if the pivot table contains multiple protocols) and a parameter by which the table should be sorted. |
-| Sort ascending | Determines the order in which the pivot table is sorted. If you clear this check box, it is sorted in descending order.           |
+| Sort ascending | Determines the order in which the pivot table is sorted. If you clear this checkbox, it is sorted in descending order.           |
 
 > [!NOTE]
 > Using these sort settings in conjunction with the *Limit* setting in the *Configure indices* section, you can produce a top X or bottom X list.
@@ -3525,7 +3527,7 @@ Each TreeViewItem has the following properties:
 - *ItemType*: Determines the type of item in the tree view. The following values are possible:
 
   - *Empty*: Only the DisplayValue will be displayed for this item.
-  - *CheckBox*: A check box will be shown next to the DisplayValue.
+  - *CheckBox*: A checkbox will be shown next to the DisplayValue.
 
 - *ChildItems*: List of TreeViewItems that are child items of this item.
 
@@ -4965,29 +4967,17 @@ A number of enhancements have been made to the alarm sorting mechanisms in the S
 Current alarm levels (in order of increasing priority):
 
 - Undefined
-
 - Initial
-
 - Suggestion
-
 - Information
-
 - Normal
-
 - Masked
-
 - Notice
-
 - Warning
-
 - Minor
-
 - Major
-
 - Critical
-
 - Timeout
-
 - Error
 
 #### Improvements to Change Element States Offline tool \[ID_23833\]
@@ -4995,15 +4985,10 @@ Current alarm levels (in order of increasing priority):
 Numerous improvements have been implemented to the Change Element States Offline tool:
 
 - The overall layout of the tool has been improved.
-
 - The state of elements is now added as a suffix to element names.
-
 - A CSV and XML export option for element states is now available in the *File* menu.
-
-- A new *Elements by Protocol* tab has been added, with a tree view showing elements by protocol and protocol version. Check boxes allow the quick selection of all elements in a node of the tree view.
-
+- A new *Elements by Protocol* tab has been added, with a tree view showing elements by protocol and protocol version. Checkboxes allow the quick selection of all elements in a node of the tree view.
 - A search box has been added to make it easier to find elements in the *Elements by Name* and *Elements by Protocol* tabs. The wildcards "\*" (for any number of characters) and "?" (for exactly one character) can be used in this box. The element state can be included in the search
-
 - The Ctrl+A key combination is now supported to select all elements.
 
 #### Jobs app: Enhanced error handling when adding jobs \[ID_24238\]

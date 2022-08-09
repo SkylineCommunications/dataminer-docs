@@ -10,7 +10,7 @@ uid: SRM_1.1.0
 
 #### New ConvertToContributing option in Contributing Config service definition property [ID_23538]
 
-In the *Contributing Config* property of a service definition, you can now add a *ConvertToContributing* option. If this option is specified and set to true, a check box is included in the Booking Wizard that can be selected to automatically convert the booking to a contributing booking.
+In the *Contributing Config* property of a service definition, you can now add a *ConvertToContributing* option. If this option is specified and set to true, a checkbox is included in the Booking Wizard that can be selected to automatically convert the booking to a contributing booking.
 
 For example:
 

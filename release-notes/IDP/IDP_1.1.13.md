@@ -61,7 +61,7 @@ On both pages, *New* and *Edit* buttons are available above the overviews, which
 
 #### Configuration IP address/host and accepted IP addresses for smart-serial connection in CI type \[ID_29411\]
 
-When you edit a CI type containing a smart-serial connection (by going to *Admin* > *CI types* > *Overview* in the IDP app, and clicking *Edit* for the CI type in the table), new options are now available to specify the IP address/host and accepted IP addresses. To configure these options, in the CI type wizard, click the* Configure* button next to *Provisioning* and then the *Details* button next to *Element Details*. Then select the *Server Mode* check box to see the new options.
+When you edit a CI type containing a smart-serial connection (by going to *Admin* > *CI types* > *Overview* in the IDP app, and clicking *Edit* for the CI type in the table), new options are now available to specify the IP address/host and accepted IP addresses. To configure these options, in the CI type wizard, click the *Configure* button next to *Provisioning* and then the *Details* button next to *Element Details*. Then select the *Server Mode* checkbox to see the new options.
 
 The *IP Address/Host* option can be set either to *any* or to *127.0.0.1*, to indicate that the elements will be listening to requests from the network
 
@@ -71,7 +71,7 @@ Note that DNS domain names are not supported for the *Accepted IP Address*. It i
 
 #### CI types now support TLS connection \[ID_29427\]
 
-When you create or edit a CI type with a serial or smart-serial connection with TCP/IP connection type, and you click the *Configure* button next to *Provisioning* and then the *Details* button next to *Element Details*, a new check box is now available that allows you to enable SSL/TLS support for any elements provisioned using the CI type. To also apply this for existing elements, reapply the CI type after you have modified it.
+When you create or edit a CI type with a serial or smart-serial connection with TCP/IP connection type, and you click the *Configure* button next to *Provisioning* and then the *Details* button next to *Element Details*, a new checkbox is now available that allows you to enable SSL/TLS support for any elements provisioned using the CI type. To also apply this for existing elements, reapply the CI type after you have modified it.
 
 #### Support for IS-04 registry \[ID_29436\]\[ID_29462\]\[ID_29562\]
 

@@ -26,22 +26,23 @@ To install the DataMiner Cloud Pack and connect your DMS to the cloud:
 1. In DataMiner Cube, go to *System Center > Users/Groups* and make sure you have the following user permissions.
 
     ### [From DataMiner 10.1.4 onwards](#tab/tabid-1)
-    
+
     - *System configuration > Tools > Admin tools* (no longer required from DataMiner 10.1.9 onwards)
     - *System configuration > Cloud gateway > Connect to DCP*
     - *System configuration > Cloud gateway > Disconnect from DCP*
-    
+
     ### [Prior to DataMiner 10.1.4](#tab/tabid-2)
-    
+
     - *System configuration > Tools > Admin tools*
     - *System configuration > Cloud sharing > Connect to cloud*
     - *System configuration > Cloud sharing > Disconnect from cloud*
-    
+
     ***
 
 1. Click the Register button. A pop-up browser window will open.
 
     > [!NOTE]
+    >
     > - In DataMiner versions prior to DataMiner 10.1.9, checkboxes are available to select a DMA to connect to the cloud. However, these will no longer be used, and they are no longer available from DataMiner 10.1.9 onwards. **If you are using an older DataMiner version, make sure none of these checkboxes are selected.**
     > - Internet Explorer is not supported for this. If your default browser is Internet Explorer, you may need to change this temporarily in order to continue with this procedure.
 

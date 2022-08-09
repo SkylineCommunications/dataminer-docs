@@ -5,6 +5,9 @@ uid: General_Main_Release_10.2.0
 # General Main Release 10.2.0
 
 > [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
+
+> [!NOTE]
 > A DataMiner Installer v10.2 is available on [DataMiner Dojo](https://community.dataminer.services/download/dataminer-installer-v10-2/).
 >
 > - For 64-bit systems only.

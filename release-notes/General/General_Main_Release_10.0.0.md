@@ -4,6 +4,9 @@ uid: General_Main_Release_10.0.0
 
 # General Main Release 10.0.0
 
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
+
 > [!IMPORTANT]
 > From DataMiner 10.0.0/10.0.2 onwards, DataMiner Service & Resource Management also requires DataMiner Indexing.
 
@@ -123,7 +126,7 @@ After you press Enter or select a suggestion, the alarms matching your search ph
 
 Once the first 50 alarms have been retrieved, a graphical representation of the alarm distribution will also be displayed.
 
-By default, different instances of the same alarm will be combined in a single alarm tree in the search results. If you want them to be displayed separately, disable the *History tracking* check box.
+By default, different instances of the same alarm will be combined in a single alarm tree in the search results. If you want them to be displayed separately, disable the *History tracking* checkbox.
 
 In the search box, you can use the following special keywords, followed by a colon (“:”) and a search phrase:
 
@@ -1232,7 +1235,7 @@ On the *Cube* tab of System Center’s *Logging* section:
 
 - When you click a message in the list, more information about that message will appear in the details pane at the bottom. Clicking the *Open* button in that details pane will make a new card appear, showing all information about that message.
 
-- The *Show debug logging* check box now allows you to have the list also display debug log items. By default, this check box is not selected.
+- The *Show debug logging* checkbox now allows you to have the list also display debug log items. By default, this checkbox is not selected.
 
 - At the bottom of the screen, the *Open log folder...* button now allows you to open the folder on the client PC in which the client-side log files are stored.
 
@@ -1341,8 +1344,8 @@ List of options that can be entered in the *ComponentOptions* data item:
 
 | Component option | Description |
 |--------|----------------|
-| DisableInUseItems=true/false | When a list view is in edit mode, all list items have a check box in front of them. If you set the "Disable-InUseItems" option to "true", the check boxes that should not be accessible will be shown as disabled. Default: false |
-| EditMode=true/false | This option can be used to enable or disable the list view’s edit mode. If set to "true", check boxes will appear in front of every row. |
+| DisableInUseItems=true/false | When a list view is in edit mode, all list items have a checkbox in front of them. If you set the "Disable-InUseItems" option to "true", the checkboxes that should not be accessible will be shown as disabled. Default: false |
+| EditMode=true/false | This option can be used to enable or disable the list view’s edit mode. If set to "true", checkboxes will appear in front of every row. |
 | Recursive | This option can be used to link a list view to another list view. If, for example, a ListView component lists the services, and two other ListView components list the source and destination resources available and in use for the services in the first ListView component, then the "recursive" option will allow the source and destination resource ListView components to link to the service ListView component, supporting any type of service hierarchy. |
 | SessionVariablePrefix=\[prefix\] | When you specify this option, a unique prefix is assigned to the session variable names. This option allows you to avoid having multiple ListView components using the exact same session variables. |
 | StartTime=<br>EndTime= | If the list view is configured to list bookings, then you can use these options to specify a time range.<br>Example: MM/DD/YYYY HH:MM:SS<br>Default settings:<br>- StartTime = NOW - 1 day<br>- EndTime = NOW + 2 days<br>Note: SetVar controls of type DateTime will automatically return a date/time in the correct format.<br> For more information, see: <https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings> |
@@ -1356,9 +1359,9 @@ List of session variables that can be used in conjunction with this *ListView* c
 
 | Session variable | Contents |
 |------------------|----------------------|
-| DynamicList_CheckedItems | When a list view is in edit mode, all list items have a check box in front of them.<br>This session variable will contain the ID and the values of all editable columns of all list items of which the check box is selected. |
+| DynamicList_CheckedItems | When a list view is in edit mode, all list items have a checkbox in front of them.<br>This session variable will contain the ID and the values of all editable columns of all list items of which the checkbox is selected. |
 | FilterMode | In situations with multiple linked ListView components, set the FilterMode variable to "true" if you want a second, linked ListView to be filtered based on the item selected in the first ListView. Default: false. |
-| ListViewCheckingChanged | When a list view is in edit mode, all list items have a check box in front of them.<br>This session variable will contain the ID and the values of all editable columns of all list items of which the check box state has been changed. |
+| ListViewCheckingChanged | When a list view is in edit mode, all list items have a checkbox in front of them.<br>This session variable will contain the ID and the values of all editable columns of all list items of which the checkbox state has been changed. |
 | ListViewDataChanged | This session variable will indicate whether data has been changed in the list view. |
 | ListViewSelectionChanged | This session variable will indicate whether an item has been selected in the list view. |
 | IDOfSelection | This session variable contains a list of IDs or GUIDs of the selected items, separated by pipe characters. |
@@ -2039,7 +2042,7 @@ The separator you select in this new setting will be used in all CSV files expor
 
 #### Automation/Correlation/Scheduler - Email action: List of reports to be included now indicates whether a report is a legacy report or a Dashboards app report \[ID_24015\]
 
-When, in Automation, Correlation or Scheduler, you configure an email action, you can specify whether the email message has to include a report. To do so, you select the *Include report or dashboard* check box and select a report from the list.
+When, in Automation, Correlation or Scheduler, you configure an email action, you can specify whether the email message has to include a report. To do so, you select the *Include report or dashboard* checkbox and select a report from the list.
 
 From now on, each report listed in the report selection box will have an icon that indicates whether it is a legacy report or a Dashboards app report.
 
@@ -3187,7 +3190,7 @@ When you open the new *Services* tab, it lists all services in a dynamic, filte
 
 When you right-click the list header, and select *Add/remove column \> More*, the *Choose details* window opens. In that window, you can do the following:
 
-- Show or hide a column by selecting or clearing its check box, or by clicking *Show* or *Hide*.
+- Show or hide a column by selecting or clearing its checkbox, or by clicking *Show* or *Hide*.
 - Move a column up or down by clicking *Move up* or *Move down*.
 - Set the column type of a column (which, by default, is set to “Text”):
 
@@ -4592,7 +4595,7 @@ If a service or view had been imported via a .dmimport package, it could occur t
 
 #### DataMiner Cube - Trending: Enabling or disabling statistics would not update the trend graph \[ID_19358\]
 
-When, in the Statistics window of a trend graph, you enabled or disabled one of the check boxes (Average, Mean deviation, etc.), in some cases, the trend graph would not be updated unless you forced a redraw by panning or zooming.
+When, in the Statistics window of a trend graph, you enabled or disabled one of the checkboxes (Average, Mean deviation, etc.), in some cases, the trend graph would not be updated unless you forced a redraw by panning or zooming.
 
 #### Service & Resource Management - Service Chain: Problem when restarting an element \[ID_19368\]
 
@@ -5849,7 +5852,7 @@ Up to now, when the value of an element property was updated using the *SetPrope
 > [!NOTE]
 > The *SetPropertyValue* method will only perform the above-mentioned check when the “check sets” option is enabled.
 >
-> - Before launching a script in Cube, select the “After executing a SET command, check if the read parameter or property has been set to the new value” check box in the script execution window.
+> - Before launching a script in Cube, select the “After executing a SET command, check if the read parameter or property has been set to the new value” checkbox in the script execution window.
 > - When launching a script using *ExecuteScriptMessage*, make sure to activate the CHECKSETS option (“CHECKSETS:TRUE”).
 >
 > With this option enabled, the *SetPropertyValue* method will take slightly longer to execute. When a large number of properties need to be updated which do not need to be retrieved immediately, you can disable this option in order to increase performance.
@@ -6264,9 +6267,9 @@ The URL argument “cpes” now has the following extended format:
 ?cpes=dmaID%2FeID%2FFieldPID%2FFieldValue%2FTableIndexPID%2FIndexValue
 ```
 
-#### Interactive Automation scripts: Problem with check box updates \[ID_25054\]
+#### Interactive Automation scripts: Problem with checkbox updates \[ID_25054\]
 
-In interactive Automation scripts, in some cases, check box components would not be updated correctly.
+In interactive Automation scripts, in some cases, checkbox components would not be updated correctly.
 
 #### SLDMS run-time errors when connection with remote DMA could not be initialized \[ID_25068\]
 
@@ -7240,9 +7243,9 @@ When, in DataMiner Cube, the UI language was set to a language other than Englis
 
 ### CU5 enhancements
 
-#### DataMiner Installer will now automatically select a check box to create an additional DataMiner user when not being executed by a user with administrative privileges \[ID_25414\]
+#### DataMiner Installer will now automatically select a checkbox to create an additional DataMiner user when not being executed by a user with administrative privileges \[ID_25414\]
 
-From now on, if DataMiner Installer is not being executed by a user with administrative privileges, it will automatically select a check box to add the current user to the DataMiner Administrators group. This will ensure that at least one user account is available to log in to DataMiner when the installation has finished.
+From now on, if DataMiner Installer is not being executed by a user with administrative privileges, it will automatically select a checkbox to add the current user to the DataMiner Administrators group. This will ensure that at least one user account is available to log in to DataMiner when the installation has finished.
 
 #### Enhanced communication between agents using HTTP and agents using HTTPS \[ID_26122\]
 
@@ -7291,11 +7294,11 @@ When creating or updating an Automation script in the Automation app, the parame
 
 Due to a number of enhancements, overall performance has increased when notifying SLElement of service updates.
 
-#### DataMiner Cube - System Center: “Include SLNet” check box removed from restart confirmation window \[ID_26685\]
+#### DataMiner Cube - System Center: “Include SLNet” checkbox removed from restart confirmation window \[ID_26685\]
 
-When, in the *Agents* section of *System Center*, you clicked *(Re)start* to restart a DataMiner Agent, up to now, it was possible to select the *Include SLNet* check box in the confirmation window.
+When, in the *Agents* section of *System Center*, you clicked *(Re)start* to restart a DataMiner Agent, up to now, it was possible to select the *Include SLNet* checkbox in the confirmation window.
 
-This check box has now been removed.
+This checkbox has now been removed.
 
 #### DataMiner Cube - Visual Overview: New option to show table name in parameter control shape \[ID_26694\]
 
@@ -8659,9 +8662,9 @@ When retrieving composite instances using the SNMP polling option “partialSNMP
 
 When a SetVar shape had its SetVarOptions data field set to “Control=Shape” and contained a legacy tooltip configuration (e.g. ‘\<MyVar>:\<MyValue>:\<MyToolTip>’), in some cases, the variable would not be updated when you clicked the control on a mobile device.
 
-#### DataMiner Cube - Element connections app: Problem with “Include element state” check box \[ID_28188\]
+#### DataMiner Cube - Element connections app: Problem with “Include element state” checkbox \[ID_28188\]
 
-In the *Element connections* app, in some cases, the value of the *Include element state* check box would be saved incorrectly.
+In the *Element connections* app, in some cases, the value of the *Include element state* checkbox would be saved incorrectly.
 
 #### DataMiner Cube - System Center/Backup: “Use one network path for all Agents” setting would be saved correctly but displayed incorrectly \[ID_28192\]
 

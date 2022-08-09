@@ -157,9 +157,9 @@ When a booking was created with a start time in the past, it could occur that th
 
 If a user aborted the wizard to edit a booking, it could occur that the booking remained locked for editing, so that it was not possible to edit it again.
 
-#### State of Convert to Contributing check box not saved when going back in wizard \[ID_28425\]
+#### State of Convert to Contributing checkbox not saved when going back in wizard \[ID_28425\]
 
-In some cases, when you returned to a previous page of the wizard to create a booking based on service profiles, it could occur that the selected state of the *Convert to Contributing* check box was not saved.
+In some cases, when you returned to a previous page of the wizard to create a booking based on service profiles, it could occur that the selected state of the *Convert to Contributing* checkbox was not saved.
 
 #### Not possible to edit booking using resource pool inheritance \[ID_28524\]
 

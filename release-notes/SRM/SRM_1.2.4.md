@@ -18,7 +18,7 @@ The *SRM_ReservationAction* script now has an EXTEND action that can be used to 
 
 #### Service definition node property to determine profile assignment mode \[ID_26322\]
 
-The service definition node property *ByProfileInstanceReference* (dedicated field on each service definition node) now determines whether the *By Reference* check box is selected for profile assignment in the Booking Wizard.
+The service definition node property *ByProfileInstanceReference* (dedicated field on each service definition node) now determines whether the *By Reference* checkbox is selected for profile assignment in the Booking Wizard.
 
 ## Changes
 

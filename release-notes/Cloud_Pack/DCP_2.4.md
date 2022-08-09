@@ -32,7 +32,7 @@ The CloudFeed DxM will handle all cloud feed functionality.
 
 ### New ArtifactDeployer DxM
 
-A new ArtifactDeployer DxM is now available. Thanks to this DxM, the 2.4.0 cloud pack wil allow you to deploy new protocols from the catalog directly to your DMA.
+A new ArtifactDeployer DxM is now available. Thanks to this DxM, the 2.4.0 cloud pack will allow you to deploy new protocols from the catalog directly to your DMA.
 
 However, note that in order to have access to this feature, you will first need to verify your DCP organization by sending an email to <licensing@skyline.be>.
 

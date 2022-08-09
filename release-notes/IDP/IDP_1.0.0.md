@@ -4,36 +4,163 @@ uid: IDP_1.0.0
 
 # IDP 1.0.0
 
-# Version 1.0.0
-
 ## New features
 
 #### Skyline Generic Provisioning: API Implementation \[ID_19307\]\[ID_19310\]\[ID_20225\] \[ID_21324\]
 
 A web service has been implemented for the Skyline Generic Provisioning driver. This API includes the following methods:
 
-| Method                   | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-|--------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| About                    | Returns an overview of information about the Solution platform.<br> Parameters:<br> -  Cookie: The access token (required).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
-| ConfigureElement         | Configures a particular element<br> Parameters:<br> -  Cookie: The access token (required).<br> -  DMAId: The DMA ID of the element that is to be configured (required).<br> -  ElementId: The element ID of the element that is to be configured (required).<br> -  DMAElementConfiguration array (required), including at least the Name, ProtocolName and ProtocolVersion (for more information on this array, refer to the DataMiner Web Services reference guide).                                                                                                               |
-| ConfigureView            | Configures a particular view.<br> Parameters: <br> -  Cookie: The access token (required).<br> -  Id: The ID of the view (required).<br> -  Name: The name of the view (required).<br> -  Elements: Array of string in the format DMA ID/Element ID (e.g. 515/124).<br> -  VisioFile: E.g. Visio.vsdx.<br> -  ParentViewId.<br> -  Properties: Array consisting of Name and Value pairs. |
-| CreateElement            | Creates a new element.<br> Parameters:<br> -  Cookie: The access token (required).<br> -  DMAElementConfiguration array (required), including at least the Name, ProtocolName and ProtocolVersion (for more information on this array, refer to the DataMiner Web Services reference guide).                                                                                                                                                                                                                                                                                                                                                                                                                        |
-| CreateView               | Creates a new view.<br> Parameters: <br> -  Cookie: The access token (required).<br> -  ViewName (required)<br> -  ParentViewId<br> -  ParentViewName<br> -  Elements: Array of string in the format DMA ID/Element ID (e.g. 515/124).<br> -  Properties: Array consisting of Name and Value pairs.<br> -  VisioFileName                                                                 |
-| DeleteElement            | Removes one or more elements from the DMA.<br> Parameters:<br> -  Cookie: The access token (required).<br> -  Dmaeid: List of DMA element IDs, e.g. 515/102;505/141 (required).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| DeleteView               | Removes the specified views from the DMA.<br> Parameters: <br> -  Cookie: The access token (required).<br> -  ViewIds: The IDs of the views that should be deleted, e.g. 12;23 (required).<br> -  ViewNames: The names of the views that should be deleted, e.g. View 1;View 2 (required).                                                                                                                                                                                                                                                                                                                                                           |
-| GetElement­Configuration | Returns the configuration of the element.<br> Parameters:<br> -  Cookie: The access token (required).<br> -  DMAId: The DMA ID of the element (required).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
-| GetElements              | Returns element information for the DMA.<br> Parameters:<br> -  Cookie: The access token (required).<br> -  ProtocolName: The protocol for which element information should be returned.<br> -  Dmaeid: List of DMA element IDs, e.g. 515/102;505/141.                                                                                                                                                                                                                                                                                                                                                                                               |
-| GetStructure             | Returns information on the view structure on the DMA.<br> Parameters:<br> -  Cookie: The access token (required).<br> -  RootViewID: The ID of the root view for which view structure information should be retrieved.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| GetViews                 | Returns information on the views on the DMA.<br> Parameters:<br> -  Cookie: The access token (required).<br> -  RootViewID: The ID of the root view for which views information should be retrieved.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-| Logging                  | Returns logging information of the Solution platform.<br> Parameters:<br> -  Cookie: The access token (required).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-| Login                    | Allows you to log in to the API, using the username and password of a user account with the appropriate rights on the DMA hosting the *Skyline Generic Provisioning* element.<br> Parameters:<br> -  Password (required)<br> -  Username (required)<br> Returns: AccessToken (i.e. a token to be used for other requests)                                                                                                                                                                                                                                                                                                                                                            |
-| Pause                    | Pauses the solution platform manager element.<br> Parameters:<br> -  Cookie: The access token (required).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-| ReplaceView              | Moves an element to a particular view.<br> Parameters: <br> -  Cookie: The access token (required).<br> -  Dmaeid: The DMA element ID (required).<br> -  ToViewId: The ID of the view to which the element is moved (required).<br> -  FromViewId: The ID of the view from which the element is moved.                                                                                                                                                                                                                                                                                |
-| SetVisioForViews         | Sets a particular Visio file for one or more views.<br> Parameters: <br> -  Cookie: The access token (required).<br> -  ViewIds: The IDs of the views for which the Visio file will be set, e.g. 12;23 (required).<br> -  VisioFileName: The complete file name of the Visio file, e.g. Visio.vsdx (required).                                                                                                                                                                                                                                                                                                                                       |
-| Start                    | Starts the Solution platform manager element.<br> Parameters:<br> -  Cookie: The access token (required).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-| Status                   | Returns status information of the solution platform.<br> Parameters:<br> -  Cookie: The access token (required).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
-| Stop                     | Stops the Solution platform manager element.<br> Parameters:<br> -  Cookie: The access token (required).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
-| Update                   | Starts the update procedure.<br> Parameters:<br> -  Cookie: The access token (required).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+- **About**: Returns an overview of information about the Solution platform.
+
+  Parameters:
+
+  - Cookie: The access token (required).
+
+- **ConfigureElement**: Configures a particular element
+
+  Parameters:
+
+  - Cookie: The access token (required).
+  - DMAId: The DMA ID of the element that is to be configured (required).
+  - ElementId: The element ID of the element that is to be configured (required).
+  - DMAElementConfiguration array (required), including at least the Name, ProtocolName and ProtocolVersion (for more information on this array, refer to the DataMiner Web Services reference guide).
+
+- **ConfigureView**: Configures a particular view.
+
+  Parameters:
+
+  - Cookie: The access token (required).
+  - Id: The ID of the view (required).
+  - Name: The name of the view (required).
+  - Elements: Array of string in the format DMA ID/Element ID (e.g. 515/124).
+  - VisioFile: E.g. Visio.vsdx.
+  - ParentViewId.
+  - Properties: Array consisting of Name and Value pairs.
+
+- **CreateElement**: Creates a new element.
+
+  Parameters:
+
+  - Cookie: The access token (required).
+  - [DMAElementConfiguration](xref:DMAElementConfiguration) array (required), including at least the Name, ProtocolName and ProtocolVersion.
+
+- **CreateView**: Creates a new view.
+
+  Parameters:
+
+  - Cookie: The access token (required).
+  - ViewName (required)
+  - ParentViewId
+  - ParentViewName
+  - Elements: Array of string in the format DMA ID/Element ID (e.g. 515/124).
+  - Properties: Array consisting of Name and Value pairs.
+  - VisioFileName
+
+- **DeleteElement**: Removes one or more elements from the DMA.
+
+  Parameters:
+
+  - Cookie: The access token (required).
+  - Dmaeid: List of DMA element IDs, e.g. 515/102;505/141 (required).
+
+- **DeleteView**: Removes the specified views from the DMA.
+
+  Parameters:
+
+  - Cookie: The access token (required).
+  - ViewIds: The IDs of the views that should be deleted, e.g. 12;23 (required).
+  - ViewNames: The names of the views that should be deleted, e.g. View 1;View 2 (required).
+
+- **GetElement­Configuration**: Returns the configuration of the element.
+
+  Parameters:
+
+  - Cookie: The access token (required).
+  - DMAId: The DMA ID of the element (required).
+
+- **GetElements**: Returns element information for the DMA.
+
+  Parameters:
+
+  - Cookie: The access token (required).
+  - ProtocolName: The protocol for which element information should be returned.
+  - Dmaeid: List of DMA element IDs, e.g. 515/102;505/141.
+
+- **GetStructure**: Returns information on the view structure on the DMA.
+
+  Parameters:
+
+  - Cookie: The access token (required).
+  - RootViewID: The ID of the root view for which view structure information should be retrieved.
+
+- **GetViews**: Returns information on the views on the DMA.
+
+  Parameters:
+
+  - Cookie: The access token (required).
+  - RootViewID: The ID of the root view for which views information should be retrieved.
+
+- **Logging**: Returns logging information of the Solution platform.
+
+  Parameters:
+
+  - Cookie: The access token (required).
+
+- **Login**: Allows you to log in to the API, using the username and password of a user account with the appropriate rights on the DMA hosting the *Skyline Generic Provisioning* element.
+
+  Parameters:
+
+  - Password (required)
+  - Username (required)
+  
+  Returns: AccessToken (i.e. a token to be used for other requests)
+
+- **Pause**: Pauses the solution platform manager element.
+
+  Parameters:
+
+  - Cookie: The access token (required).
+
+- **ReplaceView**: Moves an element to a particular view.
+
+  Parameters:
+
+  - Cookie: The access token (required).
+  - Dmaeid: The DMA element ID (required).
+  - ToViewId: The ID of the view to which the element is moved (required).
+  - FromViewId: The ID of the view from which the element is moved.
+
+- **SetVisioForViews**: Sets a particular Visio file for one or more views.
+
+  Parameters:
+
+  - Cookie: The access token (required).
+  - ViewIds: The IDs of the views for which the Visio file will be set, e.g. 12;23 (required).
+  - VisioFileName: The complete file name of the Visio file, e.g. Visio.vsdx (required).
+
+- **Start**: Starts the Solution platform manager element.
+
+  Parameters:
+
+  - Cookie: The access token (required).
+
+- **Status**: Returns status information of the solution platform.
+
+  Parameters:
+
+  - Cookie: The access token (required).
+
+- **Stop**: Stops the Solution platform manager element.
+
+  Parameters:
+
+  - Cookie: The access token (required).
+
+- **Update**: Starts the update procedure.
+
+  Parameters:
+
+  - Cookie: The access token (required).
 
 > [!NOTE]
 > The methods all return an extra "Timestamp" tag, which mentions the date and time of the request and response.
@@ -42,7 +169,7 @@ A web service has been implemented for the Skyline Generic Provisioning driver. 
 
 It is now possible to configure which DMA can host devices in a particular IP range. The provisioning API can then create new devices on specific DMAs based on their IP.
 
-This can be configured on the page *Admin* > *Provisioning* of the IDP app (available via the following icon: ![](~/release-notes/images/IDP_Provisioning.png)).
+This can be configured on the page *Admin* > *Provisioning* of the IDP app (available via the following icon: ![Provisioning icon](~/release-notes/images/IDP_Provisioning.png)).
 
 On this page, the IP ranges are displayed in the table *Configured IP Ranges*. This table displays the start IP, the end IP and the DMA name for each configured IP range. If one of the IP ranges is selected in the table, more detailed information is displayed above the table, including the DMA ID for the IP range. Next to the table header, a “+” button is available, which can be used to add an IP range. If an IP range is selected, a “-” button becomes available next to this, which can be used to remove the selected IP range.
 

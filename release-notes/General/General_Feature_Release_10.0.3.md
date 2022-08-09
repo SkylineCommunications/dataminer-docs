@@ -4,6 +4,9 @@ uid: General_Feature_Release_10.0.3
 
 # General Feature Release 10.0.3
 
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
+
 ## New features
 
 ### DMS core functionality
@@ -92,7 +95,7 @@ Elements that request data from a device via a serial port of type TCP/IP now su
 If you want such an element to use SSL/TLS encryption, then do the following:
 
 1. Right-click the element, and select *Edit*.
-2. In the *Edit* tab, go to the *Serial connection* section containing the settings of the port in question, and select the *SSL/TLS* check box.
+1. In the *Edit* tab, go to the *Serial connection* section containing the settings of the port in question, and select the *SSL/TLS* checkbox.
 
 > [!NOTE]
 > DataMiner currently supports all TLS versions up to TLS 1.3 (i.e. all TLS versions supported by OpenSSL 1.1.1).

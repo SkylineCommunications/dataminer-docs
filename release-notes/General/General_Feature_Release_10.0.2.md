@@ -4,6 +4,9 @@ uid: General_Feature_Release_10.0.2
 
 # General Feature Release 10.0.2
 
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
+
 ## New features
 
 ### DMS core functionality
@@ -120,7 +123,7 @@ After you press Enter or select a suggestion, the alarms matching your search ph
 
 Once the first 50 alarms have been retrieved, a graphical representation of the alarm distribution will also be displayed.
 
-By default, different instances of the same alarm will be combined in a single alarm tree in the search results. If you want them to be displayed separately, disable the *History tracking* check box.
+By default, different instances of the same alarm will be combined in a single alarm tree in the search results. If you want them to be displayed separately, disable the *History tracking* checkbox.
 
 In the search box, you can use the following special keywords, followed by a colon (“:”) and a search phrase:
 
@@ -483,7 +486,7 @@ The separator you select in this new setting will be used in all CSV files expor
 
 #### Automation/Correlation/Scheduler - Email action: List of reports to be included now indicates whether a report is a legacy report or a Dashboards app report \[ID_24015\]
 
-When, in Automation, Correlation or Scheduler, you configure an email action, you can specify whether the email message has to include a report. To do so, you select the *Include report or dashboard* check box and select a report from the list.
+When, in Automation, Correlation or Scheduler, you configure an email action, you can specify whether the email message has to include a report. To do so, you select the *Include report or dashboard* checkbox and select a report from the list.
 
 From now on, each report listed in the report selection box will have an icon that indicates whether it is a legacy report or a Dashboards app report.
 

@@ -4,6 +4,9 @@ uid: General_Feature_Release_10.1.11
 
 # General Feature Release 10.1.11
 
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
+
 ## New features
 
 ### DMS core functionality

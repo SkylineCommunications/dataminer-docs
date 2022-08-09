@@ -24,7 +24,7 @@ It is now possible to duplicate and save bookings with unmapped resources. These
 
 A new script, *SRM_ApplyProfileToResource*, is now available. This script allows you to apply a profile configuration to a resource without creating a booking. The script requires a single resource ID as its input.
 
-The script allows you to select the full configuration for the resource. You can select a profile for the resource as well as for the interfaces. You can apply a state transition by selecting a profile instance that has state profiles configured, selecting the *State Transition* check box, and selecting the corresponding state in a drop-down box. To combine profiles and state profile data, you should select the *Full Config* check box, which only becomes available if *State Transition* is selected.
+The script allows you to select the full configuration for the resource. You can select a profile for the resource as well as for the interfaces. You can apply a state transition by selecting a profile instance that has state profiles configured, selecting the *State Transition* checkbox, and selecting the corresponding state in a drop-down box. To combine profiles and state profile data, you should select the *Full Config* checkbox, which only becomes available if *State Transition* is selected.
 
 When a configuration is applied, this can affect existing bookings. The script will therefore first display a window with the ongoing bookings before you can confirm the configuration change.
 

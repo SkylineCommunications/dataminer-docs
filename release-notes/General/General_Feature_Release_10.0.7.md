@@ -4,6 +4,9 @@ uid: General_Feature_Release_10.0.7
 
 # General Feature Release 10.0.7
 
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
+
 ## New features
 
 ### DMS Cube
@@ -114,7 +117,7 @@ On the *Layout* tab of the service definition component, two new options now all
 
 - **Show nodes without a resource assigned**
 
-    When you select this check box, the component will also show the nodes that have no resource assigned. By default, this check box will not be selected.
+    When you select this checkbox, the component will also show the nodes that have no resource assigned. By default, this checkbox will not be selected.
 
 > [!NOTE]
 >

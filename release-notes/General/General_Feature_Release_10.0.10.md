@@ -4,6 +4,9 @@ uid: General_Feature_Release_10.0.10
 
 # General Feature Release 10.0.10
 
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
+
 ## New features
 
 ### DMS core functionality
@@ -384,7 +387,7 @@ Each TreeViewItem has the following properties:
 - *ItemType*: Determines the type of item in the tree view. The following values are possible:
 
   - *Empty*: Only the DisplayValue will be displayed for this item.
-  - *CheckBox*: A check box will be shown next to the DisplayValue.
+  - *CheckBox*: A checkbox will be shown next to the DisplayValue.
 
 - *ChildItems*: List of TreeViewItems that are child items of this item.
 
@@ -670,9 +673,9 @@ A new setting, *Hide the comment window when acknowledging an alarm*, is availab
 
 Overall performance has increased due to a number of enhancements made to the locking behavior of the SLElement EPM cache.
 
-#### DataMiner Installer will now automatically select a check box to create an additional DataMiner user when not being executed by a user with administrative privileges \[ID_25414\]
+#### DataMiner Installer will now automatically select a checkbox to create an additional DataMiner user when not being executed by a user with administrative privileges \[ID_25414\]
 
-From now on, if DataMiner Installer is not being executed by a user with administrative privileges, it will automatically select a check box to add the current user to the DataMiner Administrators group. This will ensure that at least one user account is available to log in to DataMiner when the installation has finished.
+From now on, if DataMiner Installer is not being executed by a user with administrative privileges, it will automatically select a checkbox to add the current user to the DataMiner Administrators group. This will ensure that at least one user account is available to log in to DataMiner when the installation has finished.
 
 #### SLPort logging enhancements \[ID_25806\]
 
@@ -809,11 +812,11 @@ When adding a new DataMiner System to Cube Launcher, the host name you enter wil
 
 Due to a number of enhancements, overall performance has increased when notifying SLElement of service updates.
 
-#### DataMiner Cube - System Center: “Include SLNet” check box removed from restart confirmation window \[ID_26685\]
+#### DataMiner Cube - System Center: “Include SLNet” checkbox removed from restart confirmation window \[ID_26685\]
 
-When, in the *Agents* section of *System Center*, you clicked *(Re)start* to restart a DataMiner Agent, up to now, it was possible to select the *Include SLNet* check box in the confirmation window.
+When, in the *Agents* section of *System Center*, you clicked *(Re)start* to restart a DataMiner Agent, up to now, it was possible to select the *Include SLNet* checkbox in the confirmation window.
 
-This check box has now been removed.
+This checkbox has now been removed.
 
 #### Jobs app: No longer possible to edit or delete hidden job sections \[ID_26687\]
 

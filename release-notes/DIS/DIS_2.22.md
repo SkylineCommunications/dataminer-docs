@@ -62,7 +62,7 @@ DIS defines a default set of analysis rules for QAction projects. These rules, w
 
 #### IDE: Problem with “Automatically generate Class Library code” setting \[ID_23527\]
 
-When, in *DIS Settings \> Class Library*, you had selected the *Automatically generate Class Library code* check box, in some cases, the Class Library code would only be regenerated after other code in the protocol was changed.
+When, in *DIS Settings \> Class Library*, you had selected the *Automatically generate Class Library code* checkbox, in some cases, the Class Library code would only be regenerated after other code in the protocol was changed.
 
 #### Validator: Checks verifying parameter IDs in enhanced service protocols and SLA protocols would return false positives \[ID_23542\]
 

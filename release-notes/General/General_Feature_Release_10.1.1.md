@@ -4,6 +4,9 @@ uid: General_Feature_Release_10.1.1
 
 # General Feature Release 10.1.1
 
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
+
 ## New features
 
 ### DMS core functionality
@@ -591,9 +594,9 @@ In some cases, a null reference exception could be thrown when creating a ticket
 
 When the DeleteJobsDomain method was used to delete the last job domain, in some cases, it would incorrectly try to delete the default job domain instead.
 
-#### DataMiner Cube - Element connections app: Problem with “Include element state” check box \[ID_28188\]
+#### DataMiner Cube - Element connections app: Problem with “Include element state” checkbox \[ID_28188\]
 
-In the *Element connections* app, in some cases, the value of the *Include element state* check box would be saved incorrectly.
+In the *Element connections* app, in some cases, the value of the *Include element state* checkbox would be saved incorrectly.
 
 #### DataMiner Cube - System Center/Backup: “Use one network path for all Agents” setting would be saved correctly but displayed incorrectly \[ID_28192\]
 

@@ -56,7 +56,6 @@ To create such a DMZ:
     }
     ```
 
-
     - *IsHttpsEnabled*: Indicates whether the communication between the DMZ and the DMA is encrypted. This can only be the case if the IIS is configured to support TLS.
     - *Domain*: The domain name of your DataMiner System, configured through the IIS settings.
     - *DataMinerAgentName*: The name of the DataMiner Agent you are connecting to. This should be the same DMA as the one used for the domain setting.

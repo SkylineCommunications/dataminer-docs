@@ -13,13 +13,13 @@ uid: ClassLibrary_Range_1.2
 
 The Class Library is now able to retrieve data from partial tables.
 
-**GetData method**
+##### GetData method
 
 The IDmsTable GetData method will now return the entire contents of a partial table.
 
 Up to now, it would only return the first page of such a table.
 
-**QueryData method**
+##### QueryData method
 
 The new IDmsTable QueryData method will return an IEnumerable\<object\[\]\>, i.e. a collection of row objects.
 

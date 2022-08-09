@@ -67,14 +67,14 @@ The following tag has been added to the Protocol Schema:
 
 When you select the \<Param> tags of one or more read parameters, you can select the shortcut menu option *Generate Write for Read Parameter...* to have a write parameter created for each of the read parameters you selected.
 
-In the *Generate Write Parameters* window, each read parameter in the list now has a check box in front of it. This check box will by default be selected, meaning that a write parameter will be created when you click *OK*. If, however, a read parameter already has an associated write parameter, then its check box will by default not be selected. This will prevent you from creating duplicate write parameters.
+In the *Generate Write Parameters* window, each read parameter in the list now has a checkbox in front of it. This checkbox will by default be selected, meaning that a write parameter will be created when you click *OK*. If, however, a read parameter already has an associated write parameter, then its checkbox will by default not be selected. This will prevent you from creating duplicate write parameters.
 
 As is the case with duplicate parameter IDs, duplicate parameter names will now also be indicated by a red border.
 
 > [!NOTE]
 >
 > - As long as there is at least one row showing a duplicate parameter ID or duplicate parameter name, the *OK* button will be disabled and a warning icon will be displayed in the top-right corner of the window.
-> - Only rows of which the check box is selected are taken into account when performing the above-mentioned validation.
+> - Only rows of which the checkbox is selected are taken into account when performing the above-mentioned validation.
 
 #### IDE - XML editor: XML declaration now also updated when encoding is changed to UTF-8 \[ID_18253\]
 

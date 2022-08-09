@@ -4,6 +4,9 @@ uid: General_Feature_Release_10.0.13
 
 # General Feature Release 10.0.13
 
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
+
 ## New features
 
 ### DMS core functionality
@@ -354,7 +357,7 @@ You can construct a query to use as data input for a component by following thes
 
     - *Select*: Displays the selected columns only. When you have selected the columns to display, you can apply another operator to refine the query.
 
-    - *Top X*: Displays the top or bottom items of a specific column, with X being the number of items to display. When you select this option, you will need to specify the column from which items should be displayed and the number of items that should be displayed. By default, the top items are displayed. To display the bottom items instead, select the *Ascending* check box.
+    - *Top X*: Displays the top or bottom items of a specific column, with X being the number of items to display. When you select this option, you will need to specify the column from which items should be displayed and the number of items that should be displayed. By default, the top items are displayed. To display the bottom items instead, select the *Ascending* checkbox.
 
 1. Drag the configured query to the component in order to use it.
 
@@ -469,7 +472,7 @@ When configuring a pivot table component, you can now find the following setting
 | Setting | Description |
 |--|--|
 | Sort | Allows you to select a protocol (if the pivot table contains multiple protocols) and a parameter by which the table should be sorted. |
-| Sort ascending | Determines the order in which the pivot table is sorted. If you clear this check box, it is sorted in descending order. |
+| Sort ascending | Determines the order in which the pivot table is sorted. If you clear this checkbox, it is sorted in descending order. |
 
 > [!NOTE]
 > Using these sort settings in conjunction with the *Limit* setting in the *Configure indices* section, you can produce a top X or bottom X list.

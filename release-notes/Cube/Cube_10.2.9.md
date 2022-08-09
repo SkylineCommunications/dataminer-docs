@@ -7,27 +7,10 @@ uid: Cube_Feature_Release_10.2.9
 > [!IMPORTANT]
 > We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
 
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
+
 ## Highlights
-
-## Other new features
-
-#### Alarm Console - Incident tracking: Some types of alarms can now be manually added to incidents even when they do not contain any focus data [ID_33771] [ID_33803]
-
-<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.9 -->
-
-Up to now, alarms that did not contain any focus information were not allowed to be the base alarm of an incident. From now on, alarms that do not contain any focus data can be manually added to an incident, provided they are not one of the following types of alarms:
-
-- correlation alarms
-- clearable alarms
-- information events
-- suggestion events
-- other incidents
-
-#### Trending: Prediction type selection has now moved to the context menu [ID_33861]
-
-<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.9 -->
-
-In a trend graph, up to now, a drop-down list in the top-right corner allowed you to select one of the available trend prediction types or "Auto". This drop-down list has now been removed. Instead, you can now right-click the graph and select one of the available trend prediction types or "Auto" from the context menu.
 
 #### Tab layout: Closing a card tab by clicking it with the middle mouse button [ID_33883]
 
@@ -65,6 +48,26 @@ These new password boxes can be found in the following locations:
 A new theme has been added to DataMiner Cube: "Light".
 
 Also, the Apps list now contains links to the Catalog, the Cloud Admin app and custom web apps.
+
+## Other new features
+
+#### Alarm Console - Incident tracking: Some types of alarms can now be manually added to incidents even when they do not contain any focus data [ID_33771] [ID_33803]
+
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.9 -->
+
+Up to now, alarms that did not contain any focus information were not allowed to be the base alarm of an incident. From now on, alarms that do not contain any focus data can be manually added to an incident, provided they are not one of the following types of alarms:
+
+- correlation alarms
+- clearable alarms
+- information events
+- suggestion events
+- other incidents
+
+#### Trending: Prediction type selection has now moved to the context menu [ID_33861]
+
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.9 -->
+
+In a trend graph, up to now, a drop-down list in the top-right corner allowed you to select one of the available trend prediction types or "Auto". This drop-down list has now been removed. Instead, you can now right-click the graph and select one of the available trend prediction types or "Auto" from the context menu.
 
 #### Browser callbacks can now open EPM objects via SystemName or SystemType [ID_33963]
 
@@ -185,7 +188,7 @@ When trend data is often getting close to the low or high value of a data range,
 
 In the Automation app, it is now possible to change the casing of a script name.
 
-Also, if you change the casing of a script name that was selected, it will remain selected. 
+Also, if you change the casing of a script name that was selected, it will remain selected.
 
 #### Alarm Console: A run-time error will now appear when the Resource Manager failed to initialize [ID_34024]
 
@@ -213,6 +216,7 @@ A number of enhancements have been made to the DataMiner Cube start window:
 - When you check for updates (by clicking the cogwheel icon in the bottom-right corner and selecting *Check for updates*), the last-known server version will now be taken into account to avoid having to contact every configured cluster. If a DataMiner Agent has been upgraded since the last background update, the new client version will be downloaded from the agent the first time you connect to it or from the cloud during the next background update (if that version is newer that the current version).
 
     > [!NOTE]
+    >
     > - If you hold the SHIFT key when clicking *Check for updates*, a full update will start. Depending on the number of clusters in your configuration, this can take some time.
     > - An update triggered by the *Update DataMiner Cube_ [userID]* task in Windows Task Scheduler will always be a full update.
 
@@ -302,7 +306,7 @@ When, in Visual Overview, you clicked a shape that executed two Automation scrip
 When a spectrum recording was being played, the following issues could occur:
 
 - The *Forward* and *Backward* buttons would not work after starting and pausing the recording.
-- When you adapted the speed of the recording, the new speed would incorrectly only be applied to the next frame and not to the current frame. 
+- When you adapted the speed of the recording, the new speed would incorrectly only be applied to the next frame and not to the current frame.
 - When the recording was being played, the slider could incorrectly not be used.
 
 #### Problems when exporting tables with an IncludedPids option or with a ClientSideRowFilter [ID_33934]
@@ -350,9 +354,3 @@ When the Cube starter window software tried to download a DataMiner Cube for a D
 ```txt
 Something went wrong: Error downloading ClickOnce version: Error downloading manifest file from uri ...
 ```
-
-
-
-
-
-

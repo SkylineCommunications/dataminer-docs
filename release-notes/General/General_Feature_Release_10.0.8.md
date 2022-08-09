@@ -4,6 +4,9 @@ uid: General_Feature_Release_10.0.8
 
 # General Feature Release 10.0.8
 
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
+
 ## New features
 
 ### DMS core functionality
@@ -134,7 +137,7 @@ In a protocol, it is now possible to specify which compression algorithm(s) shou
 
 #### Analytics tables in Elasticsearch database can now be included or excluded in custom DataMiner backup \[ID_25572\]
 
-When you configure a custom backup in Cube, you can now select whether the Analytics tables in the Elasticsearch database, which are used for pattern matching, should be included. To do so, in System Center, go to the *content* tab of the *Backup* page, select the *Use custom backup* option, select *Create a backup of the database*, and either select or clear the selection of the check box *Include analytics tables in backup*. By default, this option is selected.
+When you configure a custom backup in Cube, you can now select whether the Analytics tables in the Elasticsearch database, which are used for pattern matching, should be included. To do so, in System Center, go to the *content* tab of the *Backup* page, select the *Use custom backup* option, select *Create a backup of the database*, and either select or clear the selection of the checkbox *Include analytics tables in backup*. By default, this option is selected.
 
 #### View cards: New columns added to view card list view \[ID_25715\]
 

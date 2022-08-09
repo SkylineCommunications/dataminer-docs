@@ -4,6 +4,9 @@ uid: General_Feature_Release_10.0.5
 
 # General Feature Release 10.0.5
 
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
+
 ## New features
 
 ### DMS core functionality
@@ -641,7 +644,7 @@ Up to now, when the value of an element property was updated using the *SetPrope
 > [!NOTE]
 > The *SetPropertyValue* method will only perform the above-mentioned check when the “check sets” option is enabled.
 >
-> - Before launching a script in Cube, select the “After executing a SET command, check if the read parameter or property has been set to the new value” check box in the script execution window.
+> - Before launching a script in Cube, select the “After executing a SET command, check if the read parameter or property has been set to the new value” checkbox in the script execution window.
 > - When launching a script using *ExecuteScriptMessage*, make sure to activate the CHECKSETS option (“CHECKSETS:TRUE”).
 >
 > With this option enabled, the *SetPropertyValue* method will take slightly longer to execute. When a large number of properties need to be updated which do not need to be retrieved immediately, you can disable this option in order to increase performance.
@@ -828,9 +831,9 @@ The URL argument “cpes” now has the following extended format:
 
 When, after restarting an element, the alarms associated with that element were retrieved from the database, in some cases, the view impact information in those alarms would be incorrect.
 
-#### Interactive Automation scripts: Problem with check box updates \[ID_25054\]
+#### Interactive Automation scripts: Problem with checkbox updates \[ID_25054\]
 
-In interactive Automation scripts, in some cases, check box components would not be updated correctly.
+In interactive Automation scripts, in some cases, checkbox components would not be updated correctly.
 
 #### SLDMS run-time errors when connection with remote DMA could not be initialized \[ID_25068\]
 

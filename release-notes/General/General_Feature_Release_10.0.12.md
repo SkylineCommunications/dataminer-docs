@@ -4,6 +4,9 @@ uid: General_Feature_Release_10.0.12
 
 # General Feature Release 10.0.12
 
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
+
 ## New features
 
 ### DMS Protocols
@@ -543,7 +546,7 @@ Numerous improvements have been implemented to the Change Element States Offline
 
 - A CSV and XML export option for element states is now available in the *File* menu.
 
-- A new *Elements by Protocol* tab has been added, with a tree view showing elements by protocol and protocol version. Check boxes allow the quick selection of all elements in a node of the tree view.
+- A new *Elements by Protocol* tab has been added, with a tree view showing elements by protocol and protocol version. Checkboxes allow the quick selection of all elements in a node of the tree view.
 
 - A search box has been added to make it easier to find elements in the *Elements by Name* and *Elements by Protocol* tabs. The wildcards "\*" (for any number of characters) and "?" (for exactly one character) can be used in this box. The element state can be included in the search
 

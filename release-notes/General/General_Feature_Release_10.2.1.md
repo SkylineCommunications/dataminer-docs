@@ -4,6 +4,9 @@ uid: General_Feature_Release_10.2.1
 
 # General Feature Release 10.2.1
 
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
+
 ## New features
 
 ### DMS core functionality
@@ -105,7 +108,7 @@ This subscription filter can be any filter that can be passed to a parameter cha
 > [!NOTE]
 > Up to now, when the index part of a parameter section contained a wildcard, no results would be returned whenever cells were set to “not initialized”. From now on, cells set to “not initialized” will be skipped.
 
-#### Trending: New “Custom” button allows to specify a custom X-axis range \[ID_31705\]
+#### Trending: New “Custom” button allows you to specify a custom X-axis range \[ID_31705\]
 
 At the top of a trend graph, a new “Custom” button has been added next to the existing “Last 24 hours”, “Last week” and “Last month” buttons.
 

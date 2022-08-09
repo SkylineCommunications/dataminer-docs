@@ -12,9 +12,9 @@ When creating a booking, you can now select a so-called pool resource instead of
 
 To enable this feature, the option *Pool Resource* must be enabled in the Booking Manager. In addition, the property *Allow Resource Type* must be added to the service definition node for which you want to use a pool resource. This property must have the value *PoolResource*. Finally, the resource must be created manually with the capability *Resource Type* set to the value *PoolResource*.
 
-#### Possibility to display discrete custom property values with check boxes in the Booking Wizard \[ID_26756\]
+#### Possibility to display discrete custom property values with checkboxes in the Booking Wizard \[ID_26756\]
 
-On the *Configuration* page of the Booking Manager, you can now configure custom properties with discrete values to be displayed with check boxes in the Booking Wizard instead of with the usual drop-down box. To do so, in the *Type* column of the *Properties* table, select *Discreet Checkboxes* in the drop-down box for the custom property.
+On the *Configuration* page of the Booking Manager, you can now configure custom properties with discrete values to be displayed with checkboxes in the Booking Wizard instead of with the usual drop-down box. To do so, in the *Type* column of the *Properties* table, select *Discreet Checkboxes* in the drop-down box for the custom property.
 
 This way, users will be able to select multiple values for this property in the Booking Wizard. If multiple values are selected, they will be combined using a semicolon (";") as separator.
 

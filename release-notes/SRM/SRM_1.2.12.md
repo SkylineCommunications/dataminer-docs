@@ -30,7 +30,7 @@ On the *Bookings* page of the Booking Manager app, the following settings will n
 - Show/Hide Filter Pane
 - Show/Hide Bookings List
 - Show/Hide Contributing
-- Booking State filter (check boxes)
+- Booking State filter (checkboxes)
 
 #### Option to disable logger element \[ID_29426\]
 

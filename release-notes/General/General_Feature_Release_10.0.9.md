@@ -5,6 +5,9 @@ uid: General_Feature_Release_10.0.9
 # General Feature Release 10.0.9
 
 > [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
+
+> [!NOTE]
 > **Internet Explorer Support**
 >
 > Though DataMiner Cube is available as a desktop application, many users still like to use the DataMiner browser application that requires Internet Explorer. However, Microsoft no longer recommends using Internet Explorer, and support for Internet Explorer is expected to cease in 2025, though currently the program is still maintained as part of the support policy for the versions of Windows it is included in. For more information, see <https://docs.microsoft.com/en-us/lifecycle/faq/internet-explorer-microsoft-edge>.

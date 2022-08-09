@@ -47,9 +47,9 @@ It is now possible to finish a booking while it is in pre-roll state. In this ca
 
 Dijkstra path nodes can now be configured to be optional. Previously, these were always mandatory.
 
-#### Booking Wizard: Convert to Contributing check box automatically selected for contributing bookings \[ID_28069\]
+#### Booking Wizard: Convert to Contributing checkbox automatically selected for contributing bookings \[ID_28069\]
 
-The Booking Wizard has been adjusted so that the *Convert to Contributing* check box can be automatically selected for a contributing booking. This is determined based on the *ConvertToContributing* JSON property, which is included in the *Contributing Config* service definition JSON property. If this property is present and set to "true", the check box is automatically selected.
+The Booking Wizard has been adjusted so that the *Convert to Contributing* checkbox can be automatically selected for a contributing booking. This is determined based on the *ConvertToContributing* JSON property, which is included in the *Contributing Config* service definition JSON property. If this property is present and set to "true", the checkbox is automatically selected.
 
 #### SRM_DefineBookingMainInfo script: Support for custom text labels \[ID_28117\]
 

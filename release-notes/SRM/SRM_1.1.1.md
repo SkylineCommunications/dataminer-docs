@@ -12,7 +12,7 @@ uid: SRM_1.1.1
 
 When a filter is selected in the Booking Wizard to only display available resources with a particular capability, this will now also affect the list of available profile instances for the target node and the corresponding interfaces. However, note that this is only the case if the filter capability parameter is present in the profile definition.
 
-#### "By Reference" check box removed for function with Path parameter [ID_24122]
+#### "By Reference" checkbox removed for function with Path parameter [ID_24122]
 
 If a function contains at least one Path parameter, the By Reference functionality is not supported. As such, this option will no longer be available in the Booking Wizard in that case.
 

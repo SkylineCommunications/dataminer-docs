@@ -4,6 +4,9 @@ uid: General_Feature_Release_10.1.6
 
 # General Feature Release 10.1.6
 
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
+
 ## New features
 
 ### DMS core functionality
@@ -172,7 +175,7 @@ When a ProfileInstance is updated with quarantine being forced (i.e. with forceQ
 
 #### Profiles app: Profile parameters can now have settings configured \[ID_29580\]
 
-It is now possible to configure a profile parameter to be hidden in scripts using the profile, with a new *Hide from scripts* check box for profile definitions and profile instances in the Profiles app.
+It is now possible to configure a profile parameter to be hidden in scripts using the profile, with a new *Hide from scripts* checkbox for profile definitions and profile instances in the Profiles app.
 
 #### EPM: Hiding chains and chain fields based on parameter values \[ID_29640\]\[ID_29656\]
 
