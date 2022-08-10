@@ -127,7 +127,7 @@ A number of enhancements have been made with regard to selecting bookings in the
 
 Flatline change points can now also be detected for history set parameters that are set nearly in real time, i.e. parameters of which the incoming changes never have a delay larger than 10 minutes.
 
-#### Alarm Console: Manually creating incident alarms even when “Automatic incident tracking” is disabled \[ID_33000\]
+#### Alarm Console: Manually creating incident alarms even when 'Automatic incident tracking' is disabled \[ID_33000\]
 
 From now on, in the Alarm Console, you will be able to manually create incident alarms (i.e. alarm groups) even when the “Automatic incident tracking” option is disabled.
 
@@ -259,7 +259,7 @@ From DataMiner 10.0.3 onwards, you can configure an alarm template so that alarm
 
 Up to now, this type of alarm would only be generated if a behavioral change of a parameter was considered large enough compared to previous behavioral changes. From now on, as soon as you enable anomaly detection for a certain type of change point, these alarms will be generated, regardless of the level of change.
 
-#### Desktop app - Start window: New “HTTP or HTTPS” setting \[ID_33289\]
+#### Desktop app - Start window: New 'HTTP or HTTPS' setting \[ID_33289\]
 
 Up to now, when a DataMiner Agent had been added to the start window of the DataMiner Cube desktop app at a time when only HTTP was available, Cube would no longer switch to HTTPS when that protocol became available and HTTP got blocked.
 
@@ -305,7 +305,7 @@ In Data Display, the context menu of a URL parameter will now contain the follow
   > [!NOTE]
   > This command will only be available when there is a write parameter.
 
-#### Visual Overview: Adding a “Refresh” and/or a “Sort” button to a table control \[ID_33346\]
+#### Visual Overview: Adding a 'Refresh' and/or a 'Sort' button to a table control \[ID_33346\]
 
 When using a shape of type *ParameterControls* to visualize a table in a Visio drawing, you can now add a *Refresh* button and/or a *Sort* button to that shape.
 
@@ -392,7 +392,7 @@ In a protocol.xml file, for every write parameter, you can specify a message to 
 
 Up to now, this *Param.Message* tag was only taken into account by DataMiner Cube. From now on, the Monitoring app will also take it into account.
 
-#### DataMiner Application Framework now requires the “Low-code Apps” license \[ID_33208\]
+#### DataMiner Application Framework now requires the 'Low-code Apps' license \[ID_33208\]
 
 As the “Low-code Apps” license is required to use the DataMiner Application Framework, you will now no longer have access to the framework if you do not have this license.
 
@@ -505,7 +505,7 @@ IPC channel port names will now always be unique.
 
 Because of a number of enhancements, overall performance has increased when generating anomaly detection suggestion events and alarms.
 
-#### DataMiner Cube - System Center: “Automatic incident tracking” feature will now be enabled by default \[ID_33286\]
+#### DataMiner Cube - System Center: 'Automatic incident tracking' feature will now be enabled by default \[ID_33286\]
 
 In *System Center \> System settings \> Analytics config*, the *Automatic incident tracking* feature will now be enabled by default.
 
@@ -574,7 +574,7 @@ In some cases, the display key cache of SLElement would not get properly cleaned
 
 When a Visio file of type VDX contained bitmap images, in some cases, those images would be missing when you opened a cached version of that file.
 
-#### Application Framework: Two button components would incorrectly be displayed when the “ReportsAndDashboardsButton” soft-launch flag was enabled \[ID_33124\]
+#### Application Framework: Two button components would incorrectly be displayed when the 'ReportsAndDashboardsButton' soft-launch flag was enabled \[ID_33124\]
 
 In the Application framework, in some cases, two button component would incorrectly be displayed when the “ReportsAndDashboardsButton” soft-launch flag was enabled.
 
@@ -594,7 +594,7 @@ When a feed used by a GQI query was changed while the query table was being sort
 
 In some cases, column references could not be created for columns of which the name contained underscore characters.
 
-#### Web apps - GQI: Problem when retrieving ticket fields of type “drop-down list” \[ID_33177\]
+#### Web apps - GQI: Problem when retrieving ticket fields of type 'drop-down list' \[ID_33177\]
 
 When ticket fields of type “drop-down list” were retrieved using a GQI query, in some cases, those fields would incorrectly not contain any values.
 
@@ -617,7 +617,7 @@ When a shape was linked to a spectrum parameter with an ID between 50,000 and 60
 
 When you removed an alarm from a manually created incident (alarm group), in some cases, the removed alarm would be grouped incorrectly.
 
-#### SNMP polling: Group with multiple tables of which some had the “partialSNMP” option enabled would get re-polled indefinitely \[ID_33197\]
+#### SNMP polling: Group with multiple tables of which some had the 'partialSNMP' option enabled would get re-polled indefinitely \[ID_33197\]
 
 When a group that contained multiple tables of which some had the partialSNMP option enabled was polled, in some cases, that same group would incorrectly get re-polled indefinitely.
 
@@ -639,7 +639,7 @@ From now on, when no IP port is specified, the last port set will be used. And i
 
 When previewing a draft version of an application, in some cases, pages could not be loaded when there was no published version yet.
 
-#### Application framework: “This panel” option not available when configuring a “close a panel” action \[ID_33243\]
+#### Application framework: 'This panel' option not available when configuring a 'close a panel' action \[ID_33243\]
 
 When configuring a “close a panel” action, in some cases, the “This panel” option would incorrectly not be available. From now on, this option will always be available and selected by default.
 
@@ -670,11 +670,11 @@ As from DataMiner version 10.2.3, the SLNetTypes protocol buffer contract was no
 
 Up to now, the action editor would incorrectly update the application each time it detected a change. From now on, an application will only be updated when its configuration changes.
 
-#### Application framework: An “http://” prefix would incorrectly be added to any URL that did not start with “http://” \[ID_33262\]
+#### Application framework: An 'http://' prefix would incorrectly be added to any URL that did not start with 'http://' \[ID_33262\]
 
 Up to now, the application framework would incorrectly add an “http://” prefix to any URL that did not start with “http://”. From now on, all URLs will be validated first. Only if the URL is invalid (e.g. “skyline.be”) will an “http://” prefix be added.
 
-#### Dashboards: Not possible to share dashboards that contained query components of which the “Update data” option was enabled \[ID_33267\]
+#### Dashboards: Not possible to share dashboards that contained query components of which the 'Update data' option was enabled \[ID_33267\]
 
 Up to now, it would not be possible for users to share dashboards that contained GQI components of which the *Update data* option was enabled.
 
@@ -756,7 +756,7 @@ When you refreshed an application, in some cases, action chains in which a post 
 
 When a GQI query did not return any rows, the data table component would incorrectly display the query placeholders as values. From now on, when a GQI query does not return any rows, the data table component will display a message, saying that no data is available.
 
-#### DataMiner Cube - Alarm Console: Menu command “Copy \> cell ‘\<value>’” would incorrectly be missing \[ID_33378\]
+#### DataMiner Cube - Alarm Console: Menu command to copy cell value missing \[ID_33378\]
 
 When, in the Alarm Console, you right-click an alarm, you can copy the value in the cell you right-clicked by selecting *Copy \> cell “\<value>”*. In some cases, this *Copy \> cell “\<value>”* command would incorrectly be missing.
 

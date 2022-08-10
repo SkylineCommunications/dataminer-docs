@@ -11,7 +11,7 @@ uid: General_Feature_Release_10.2.2
 
 ### DMS core functionality
 
-#### Table filters of type “fullfilter” now support filtering by means of regular expressions \[ID_31893\]
+#### Table filters of type 'fullfilter' now support filtering by means of regular expressions \[ID_31893\]
 
 Inside a table filter of type “fullfilter”, it is now possible to filter by means of regular expressions.
 
@@ -39,7 +39,7 @@ If you want certain aliases for topology cells, chains and search chains to only
 
 ### DMS Cube
 
-#### Trending: New “Fixed interval” option when exporting average trend data \[ID_31699\]
+#### Trending: New 'Fixed interval' option when exporting average trend data \[ID_31699\]
 
 When you export average trend data, selecting the new *Fixed interval* option will make sure that the data points are equally distributed and that gaps smaller than a time slot (e.g. 5 minutes) are ignored.
 
@@ -49,7 +49,7 @@ When you export average trend data, selecting the new *Fixed interval* option wi
 > - When you select the *Fixed interval* option, the *Exclude gaps* option will automatically be selected and disabled to indicate that the latter option is included in the former.
 > - When you select the *Line graph* option, from now on, that option will no longer add intermediary data points. Those will now by default be added when you select the *Fixed interval* option.
 
-#### System Center - Users/Groups: New user permission “Monitoring web app” \[ID_31706\] \[ID_31961\]
+#### System Center - Users/Groups: New user permission 'Monitoring web app' \[ID_31706\] \[ID_31961\]
 
 In the *General* section of the user permissions list, a new “Monitoring web app” permission has now been added next to the existing “DataMiner web apps” permission. This permission can be used to control access to the Monitoring web app.
 
@@ -72,7 +72,7 @@ The DataMiner Cube desktop app now supports system-wide installation via MSI.
 
 ### DMS Reports & Dashboards
 
-#### Dashboards app: “Start sharing” button replaced by “Share” button \[ID_31822\]
+#### Dashboards app: 'Start sharing' button replaced by 'Share' button \[ID_31822\]
 
 The “Start sharing” button has been replaced by a “Share” button. Clicking that button will open a popup that allows you
 
@@ -339,11 +339,11 @@ Due to a number of enhancements, overall performance has increased when editing 
 
 Also, up to now, when an element was edited, all tab characters (“\\t”) in field content would be replaced by spaces. From now on, tab characters will be left untouched.
 
-#### Unclear “version of the protocol is not correct” notice replaced by “DataMiner version is too low to use this protocol. Please check the protocol's Compliancies tag.” notice \[ID_31855\]
+#### Unclear 'version of the protocol is not correct' notice replaced by 'DataMiner version is too low to use this protocol. Please check the protocol's Compliancies tag.' notice \[ID_31855\]
 
 When a protocol had a minimum DataMiner version that was higher than the DataMiner version of the DMA, up to now, an unclear “version of the protocol is not correct” notice would appear in the Alarm Console and the log files. From now on, that unclear notice will be replaced by a clearer “DataMiner version is too low to use this protocol. Please check the protocol's Compliancies tag.” notice.
 
-#### SLLogCollector: Process list will now also include processes of which the name starts with “DataMiner” \[ID_31883\]
+#### SLLogCollector: Process list will now also include processes of which the name starts with 'DataMiner' \[ID_31883\]
 
 The SLLogCollector tool will now also list all processes of which the name starts with “DataMiner”. This will allow you to also take memory dumps of processes like “DataMiner CloudGateway”, “DataMiner CoreGateway”, “DataMiner FieldControl”, “DataMinerCube”, etc.
 
@@ -429,7 +429,7 @@ When a trigger to reload service settings was delayed, in some cases, a run-time
 
 Also, SLElement could leak memory when services were configured with a delayed trigger or a redundancy condition that persisted for a period of time.
 
-#### Problem with SLElement after restarting an element with a subscription that had a “resolve” or “filter” option configured \[ID_31741\]
+#### Problem with SLElement after restarting an element with a subscription that had a 'resolve' or 'filter' option configured \[ID_31741\]
 
 When there was an active element subscription with a “resolve=x” or “sort=x” filter option configured, in some cases, an error could occur in SLElement when processing table changes after an element restart.
 
@@ -443,7 +443,7 @@ From now on, if a payload contains only a trailer, the socket buffer will be rea
 
 When an update of an SLA setting (e.g. Base timestamp, Monitor span, Window size, Window Unit, Window type, Validity start or Validity end) coincided with a window change, in some rare cases, the next window would incorrectly be taken instead of the window that triggered the change. This would cause calculations to incorrectly use a timestamp in the future.
 
-#### Web apps: “Refresh now” instead of “Reconnecting...” message after communication was interrupted \[ID_31753\]
+#### Web apps: 'Refresh now' instead of 'Reconnecting...' message after communication was interrupted \[ID_31753\]
 
 Up now on, when a web app (e.g. Dashboards, Monitoring, Ticketing, etc.) lost communication, a “Reconnecting...” message would appear in the UI. From now on, a “Refresh now” message will appear instead, prompting users to refresh the web page.
 
@@ -463,7 +463,7 @@ Up to now, a NewPagingSearchRequest was incorrectly not able to retrieve data fr
 
 When the Alarm Console had an alarm tab that was linked to an element of which an alarm was the base alarm of a correlated alarm, that alarm would incorrectly not be shown.
 
-#### “Duplicate name detected” notice would incorrectly be generated when turning a service into an enhanced service or vice versa \[ID_31801\]
+#### 'Duplicate name detected' notice would incorrectly be generated when turning a service into an enhanced service or vice versa \[ID_31801\]
 
 When a service was turned into an enhanced service, or when an enhanced service was turned into a regular service, a “Duplicate name detected” notice would incorrectly be generated.
 
@@ -529,7 +529,7 @@ In some cases, the following exception could be thrown when a Failover system wi
 System.Exception: Unexpected error from nodetool.
 ```
 
-#### SLPhotoManager would incorrectly log “PrincipalServerDown” exceptions in SLErrors.txt when trying to retrieve pictures of local users \[ID_31865\]
+#### SLPhotoManager would incorrectly log 'PrincipalServerDown' exceptions in SLErrors.txt when trying to retrieve pictures of local users \[ID_31865\]
 
 Up to now, when SLPhotoManager was unable to retrieve pictures of local (i.e. non-LDAP) users, it would incorrectly log “PrincipalServerDown” exceptions in the SLErrors.txt log file. From now on, it will log those exceptions in the SLPhotoManager.txt log file when the debug level is set to 5.
 
@@ -549,7 +549,7 @@ When an embedded multi-page Visio file with hidden pages was viewed in a web app
 
 In some cases, a DCF signal path would not be visualized correctly on Visio pages with a grid layout.
 
-#### SLNet would thrown an “Arithmetic operation resulted in an overflow” exception when performance information was being calculated \[ID_31894\]
+#### SLNet would thrown an 'Arithmetic operation resulted in an overflow' exception when performance information was being calculated \[ID_31894\]
 
 In some cases, SLNet would thrown an “Arithmetic operation resulted in an overflow” exception when performance information was being calculated.
 
@@ -589,15 +589,15 @@ Could not read element latch for DMAID/EID. 0x80131533
 
 When you selected an item in a tree view, in some cases, the value of the corresponding variable would not be updated, especially when the parent item was also selected and was configured to not use recursion.
 
-#### Dashboards app: “Top X alarms” chart would incorrectly not include a graph in a PDF report \[ID_31949\]
+#### Dashboards app: 'Top X alarms' chart would incorrectly not include a graph in a PDF report \[ID_31949\]
 
 When a PDF report was generated of a dashboard containing a “top X alarms” chart based on alarm state duration, in some cases, that chart would incorrectly not include a graph when set to stacked mode.
 
-#### Information event with parameter value “Set by \<user>...” would incorrectly be generated when an SNMP trap was processed \[ID_31953\]
+#### Information event with parameter value 'Set by \<user>...' would incorrectly be generated when an SNMP trap was processed \[ID_31953\]
 
 In some cases, an information event with parameter value “Set by \<user> ...” would incorrectly be generated when an SNMP trap was processed.
 
-#### “Service Manager not licensed” error when synchronizing files on DataMiner Agents that do not have a Service Manager license \[ID_31958\]
+#### 'Service Manager not licensed' error when synchronizing files on DataMiner Agents that do not have a Service Manager license \[ID_31958\]
 
 In some cases, when a DataMiner Agent did not have a Service Manager license, a “Service Manager not licensed” error would be thrown when synchronizing files. From now on, when a DataMiner Agent does not have a Service Manager license, no attempt will be made to synchronize system function definitions when synchronizing files.
 
@@ -617,7 +617,7 @@ In some cases, an error could occur in SLNet when updating ReservationInstance p
 
 When, in a visual overview that showed a table with trended columns, you opened a trend graph by clicking a trend icon, in some cases, the trend graph would incorrectly not be loaded and a “Trending is currently not enabled for this parameter” message would appear.
 
-#### Cassandra: Incorrect “null statement” messages would be added to SLDBConnection.txt \[ID_31979\]
+#### Cassandra: Incorrect 'null statement' messages would be added to SLDBConnection.txt \[ID_31979\]
 
 In some cases, the following message would repeatedly be added to the SLDBConnection.txt log file:
 
@@ -637,7 +637,7 @@ When a standalone DataMiner Agent had been added to a Failover setup, in some ca
 
 When a DataMiner Failover setup was configured, in some rare cases, the configuration would incorrectly only be saved on the online agent and not on the offline agent.
 
-#### Failover: Offline agent would not execute its “go offline” routine after a Failover setup was configured \[ID_32014\]
+#### Failover: Offline agent would not execute its 'go offline' routine after a Failover setup was configured \[ID_32014\]
 
 When a DataMiner Failover setup was configured, in some cases, the offline agent would not execute its “go offline” routine. As a result, certain clean-up actions would not be performed and active Cube clients would stay connected instead of being automatically disconnected.
 
@@ -661,13 +661,13 @@ When new items were added in one client, in some cases, those items would not im
 
 In some rare cases, alarms coming in while you were grouping or sorting the alarms on an alarm tab would incorrectly not appear on that alarm tab, especially on heavy-duty systems.
 
-#### Legacy Dashboards: Using “Add to dashboard” in Cube would no longer work when the DataMiner Agent was only accessible via HTTPS \[ID_32083\]
+#### Legacy Dashboards: Using 'Add to dashboard' in Cube would no longer work when the DataMiner Agent was only accessible via HTTPS \[ID_32083\]
 
 From DataMiner 9.0 onwards, it is possible to add items to a legacy dashboard directly from the Cube UI, for instance from the Surveyor or an element card.
 
 This functionality would no longer work when the DataMiner Agent was only accessible via HTTPS.
 
-#### Dashboards app: A “not allowed” message would incorrectly appear when opening a shared dashboard containing EPM components \[ID_32093\]
+#### Dashboards app: A 'not allowed' message would incorrectly appear when opening a shared dashboard containing EPM components \[ID_32093\]
 
 When you opened a shared dashboard that contained EPM components, in some cases, a “not allowed” message would incorrectly appear.
 

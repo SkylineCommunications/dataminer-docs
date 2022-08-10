@@ -175,7 +175,7 @@ See the following tables for an overview of the new tags and attributes.
 | Protocol.SNMP@includePages | Protocol.Options.GenerateMIB<br>@includePages<br>- true<br>- false |
 | Protocol.Type | Protocol.Connections.Connection.Type |
 | Protocol.Type@advanced | Protocol.Connections |
-| Protocol.Type@advancedConnections<br>(“names:” section) | Protocol.Connections.Connection@Name |
+| Protocol.Type@advancedConnections (“names:” section) | Protocol.Connections.Connection@Name |
 | Protocol.Type@communicationOptions | \[see separate section below\] |
 | Protocol.Type@databaseOptions | \[see separate section below\] |
 | Protocol.Type@options | \[see separate section below\] |

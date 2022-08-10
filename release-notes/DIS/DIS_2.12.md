@@ -18,7 +18,7 @@ The advantage of this approach is that no additional DLL files need to be copied
 
 In the *DIS Settings* window, a new *Code Library* tab has been added. In that tab, you can specify custom directories containing additional .cs code files to be added to the QAction code library.
 
-#### Generate Parameters Wizard: New input type “WSDL” \[ID_17747\]
+#### Generate Parameters Wizard: New input type 'WSDL' \[ID_17747\]
 
 The *Generate Parameters Wizard* window now also allows you to generate \<Param> tag (as well as all the necessary \<Timer>, \<Group>, \<Trigger> and \<Action> tags) based on parameter data in a WSDL file.
 
@@ -100,7 +100,7 @@ The Protocol XML schema now supports the following tags and/or tag attributes:
 | Protocol.Params.Param.ArrayOptions.ColumnOptions.ColumnOption | pollingRate   |
 | Protocol.Params.Param.Interprete.Rounding                     | \-            |
 
-#### EnumTriggerOn: New value “session” \[ID_18954\]
+#### EnumTriggerOn: New value 'session' \[ID_18954\]
 
 The value “session” has been added to the list of allowed values for the Trigger.On tag (EnumTriggerOn).
 

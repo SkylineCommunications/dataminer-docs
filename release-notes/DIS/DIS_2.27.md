@@ -20,7 +20,7 @@ The editor contains the following main tabs:
 | Current range | In this tab, you can find an overview of all versions in the current range. Clicking a version number will allow you to edit the information stored for that particular version. |
 | All versions | In this tab, you can find an overview of all versions of the current protocol. In the tree structure on the left, you can add and delete branches representing system versions, major versions and minor versions, and in the edit pane on the right, you can edit the properties of the version selected on the left. |
 
-#### New “Delete QAction” command in shortcut menu of QAction elements \[ID_26007\]
+#### New 'Delete QAction' command in shortcut menu of QAction elements \[ID_26007\]
 
 When you open a Protocol.QActions.QAction element’s shortcut menu when editing a protocol XML file, you can now select *Delete QAction*. This will delete the entire QAction element as well as the associated C# project.
 
@@ -78,7 +78,7 @@ The following units have been added to the UOM Schema:
 
 ### Fixes
 
-#### Validator: Checking the Trigger.On@id attribute would fail when set to “each” \[ID_25872\]
+#### Validator: Checking the Trigger.On@id attribute would fail when set to 'each' \[ID_25872\]
 
 Up to now, checking the Trigger.On@id attribute would fail when it was set to “each”.
 
@@ -92,7 +92,7 @@ Up to now, when multiple MIB modules defined the same OID path, but each with a 
 
 From now on, all nodes will be displayed in the tree, even those sharing the same OID. Moreover, duplicate OIDs will now be indicated with a special warning icon.
 
-#### Class Library: Deserialization would fail when “System.” classes were used \[ID_25933\]
+#### Class Library: Deserialization would fail when 'System.' classes were used \[ID_25933\]
 
 In some cases, collection interface deserialization could fail if some of the classes were “System.” classes located in System.dll.
 

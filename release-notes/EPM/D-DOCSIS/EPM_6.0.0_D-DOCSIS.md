@@ -32,7 +32,7 @@ Alarm monitoring and trending has been added for DPA links that are over-utilize
 
 When DCF link filtering was used, it could occur that this did not show the right connections. The DCF logic in the Automation script for connectivity discovery and in the Cox IDP EPM Connectivity connector has now been improved to prevent this.
 
-#### “Connected RPDs” links updated \[ID_30954\]
+#### 'Connected RPDs' links updated \[ID_30954\]
 
 The *Connected RPDs* links in the topology have been updated to lead to the Node Leaf RPD Association pages.
 

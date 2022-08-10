@@ -104,7 +104,7 @@ A number of enhancements have been made to the Display editor and the Table edit
   - In case of columns of type “displaykey”, room for key icons will be reserved when needed.
   - Room will now also be reserved for sorting icons.
 
-#### IDE - XML editor: Restructuring of the “DIS \> Protocol \> Param” snippets \[ID_26706\]
+#### IDE - XML editor: Restructuring of the 'DIS \> Protocol \> Param' snippets \[ID_26706\]
 
 The extensive list of snippets in the *DIS \> Protocol \> Param* folder have now been restructured into the following subfolders:
 

@@ -46,7 +46,7 @@ To remove a reference, do the following:
 >
 > In both values, you can use the “{ref}” placeholder. When, in the version editor, you click the link button of a particular reference, that placeholder will then be replaced by the contents of the *Reference* column.
 
-#### “Copy File Content to Clipboard” renamed to “Copy Code to Clipboard” \[ID_28860\]
+#### 'Copy File Content to Clipboard' renamed to 'Copy Code to Clipboard' \[ID_28860\]
 
 The right-click menu option *Copy File Content to Clipboard* has been renamed to *Copy Code to Clipboard*.
 
@@ -230,7 +230,7 @@ When a table column is not monitored, by default, DIS automatically removes all 
 
 From now on, DIS will no longer automatically remove header options specified for view table columns.
 
-#### IDE - Table Editor: A Measurement element with an incorrectly set “lines” option would be added to a table without a Measurement element \[ID_28844\]
+#### IDE - Table Editor: A Measurement element with an incorrectly set 'lines' option would be added to a table without a Measurement element \[ID_28844\]
 
 When, in the table editor, you opened a table that did not have a Measurement element, DIS would add a Measurement element with the “lines” option incorrectly set to 0 instead of 20.
 

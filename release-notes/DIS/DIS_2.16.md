@@ -8,14 +8,14 @@ uid: DIS_2.16
 
 ### IDE
 
-#### Table editor now also allows ‘RTDisplay’ settings to be edited \[ID_20200\]
+#### Table editor now also allows 'RTDisplay' settings to be edited \[ID_20200\]
 
-In the table editor, it is now also possible to edit ‘RTDisplay’ settings.
+In the table editor, it is now also possible to edit "RTDisplay" settings.
 
 - In the *Options* section, you can enable or disable the RTDisplay setting on table level.
 - In the *All Columns* section, you can enable or disable RTDisplay settings on column level.
 
-When you enable or disable the RTDisplay setting of a particular table parameter, a popup window will appear, asking whether you also want to enable or disable the RTDisplay settings of all columns of that parameter.
+When you enable or disable the RTDisplay setting of a particular table parameter, a pop-up window will appear, asking whether you also want to enable or disable the RTDisplay settings of all columns of that parameter.
 
 Also, in the *Tables* list on the left, warning icons will now appear next to table parameters with configuration errors.
 
@@ -91,7 +91,7 @@ The syntax rules for the following elements and/or attributes have been updated:
 | Protocol.Chains.SearchChain.Tabs.Tab.Fields.Field@columnPid | No longer needs to refer to a defined parameter ID. |
 | Protocol.Params.Param.SNMP.TrapOID@setBindings              | Suggested value: “allBindingInfo”                   |
 
-#### Action type “power” has been changed to “pow” \[ID_21127\]
+#### Action type 'power' has been changed to 'pow' \[ID_21127\]
 
 The action type “power” has been changed to “pow”.
 
@@ -121,7 +121,7 @@ The base type of the following types is now “xs:int”:
 
 ### Enhancements
 
-#### IDE - Display editor: Title labels more visible when using color theme “Dark” \[ID_20667\]
+#### IDE - Display editor: Title labels more visible when using color theme 'Dark' \[ID_20667\]
 
 When, in Visual Studio, you have selected the color theme “Dark”, then title labels like “Options” and “Filter” will now be more visible in the *Display Editor* window.
 

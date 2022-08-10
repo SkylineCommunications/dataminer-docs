@@ -281,7 +281,7 @@ The following additional icons are now available in the DataMiner stencils:
 - SLA DMX
 - View DMX
 
-#### Visual Overview: New parameter control option “ClientSidePollingInterval” \[ID_26223\]
+#### Visual Overview: New parameter control option 'ClientSidePollingInterval' \[ID_26223\]
 
 When you have turned a shape into a table control that displays a direct view table, you can now use the *ClientSidePollingInterval* option to specify that this table should be refreshed at regular intervals.
 
@@ -329,13 +329,13 @@ This new tool offers a number of advantages. It allows you to deploy multiple Cu
 
 When configuring an SNMP manager, you can now add the polling IP address as a custom trap binding.
 
-#### Profiles app: Display value configuration possible for capability profile parameters of type dis­crete \[ID_26379\]
+#### Profiles app: Display value configuration possible for capability profile parameters of type discrete \[ID_26379\]
 
 Previously, when you configured a capability profile parameter of type discrete, it was not possible to specify display values for the raw values of the parameter. Now, with the *Discrete type* drop-down box, you can specify whether the display values are text or a number. Depending on this selection, the selection box for the discrete parameter will be either a text box or a spin box. When you specify the possible values for the parameter, there is now also an additional *Display value* column where you can specify the display value corresponding with each raw value. Both a raw value and a display value always need to be specified. The raw values always have to be unique, but this limitation does not apply for the display values.
 
 Capability profile parameters of type discrete that were configured before this change will have no discrete type selected. For these parameters, the display value will remain equal to the raw value, unless they are reconfigured.
 
-#### System Center: New “Analytics config” system settings section \[ID_25124\]\[ID_26388\]
+#### System Center: New 'Analytics config' system settings section \[ID_25124\]\[ID_26388\]
 
 In *System Center*, the *System settings* section now contains a new *Analytics config* page, which allows you to configure a number of SLAnalytics settings.
 
@@ -359,7 +359,7 @@ This new option will allow you to specify the number of indices that should be s
 
 If the number of indices specified is greater than the number of indices that are being displayed, they will not be shown but selected in memory.
 
-#### Dashboards app - Line chart component: New “Hide parameters without trend data in the leg­end” option \[ID_26133\]
+#### Dashboards app - Line chart component: New 'Hide parameters without trend data in the legend' option \[ID_26133\]
 
 The line chart component has a new setting: Layout \> Styling and information \> Hide parameters without trend data in the legend.
 
@@ -617,11 +617,11 @@ A FieldValueChange object has the following properties:
 
 Disabled text boxes in e.g. interactive Automation scripts will now automatically be optimized as to size and will have a scrollbar when needed.
 
-#### User menu now has a “Sign out” command \[ID_26254\]
+#### User menu now has a 'Sign out' command \[ID_26254\]
 
 In all mobile apps (Monitoring, Dashboards, Jobs, etc.), the user menu in the top-right corner of the screen now has a “Sign out” command.
 
-#### Monitoring & Dashboards apps: Number groups in numeric parameter values will now be sepa­rated by a thin space \[ID_26394\]
+#### Monitoring & Dashboards apps: Number groups in numeric parameter values will now be separated by a thin space \[ID_26394\]
 
 In the Monitoring app and the Dashboards app, three-digit number groups in numeric parameter values will now by default be separated by a thin space. This will make large numbers more legible.
 
@@ -666,7 +666,7 @@ Up to now, the dummies, parameters and memory files added to an Automation scrip
 
 Due to a number of enhancements, sending messages asynchronously has been optimized.
 
-#### DataMiner Cube - Visual Overview: Colors linked to the Cube theme will now be changed imme­diately when you change the Cube theme \[ID_26045\]
+#### DataMiner Cube - Visual Overview: Colors linked to the Cube theme will now be changed immediately when you change the Cube theme \[ID_26045\]
 
 When, in a Visio drawing, you linked some colors to the colors used in the DataMiner Cube theme, then those colors will now immediately be changed when you change the DataMiner Cube theme. You will no longer have to close and re-open the Visio drawing to have the changes take effect.
 
@@ -702,11 +702,11 @@ Due to a number of enhancements, overall performance of the Profiles app has inc
 
 Due to a number of enhancements, overall performance has increased when retrieving EPM-related data.
 
-#### Trending of column parameters with measurement type “string” is now also supported \[ID_26230\]
+#### Trending of column parameters with measurement type 'string' is now also supported \[ID_26230\]
 
 From now on, trending of column parameters with measurement type set to “string” is also supported.
 
-#### Dashboards: Column parameters with advanced naming supported for trend statistics visual­ization \[ID_26240\]
+#### Dashboards: Column parameters with advanced naming supported for trend statistics visualization \[ID_26240\]
 
 The *Trend statistics* visualization in the new Dashboards app now supports column parameters from tables that use advanced naming.
 
@@ -764,7 +764,7 @@ When history sets were used in combination with table updates, in some cases, du
 
 In some cases, it could occur that hotfixes were not properly validated during installation, so that a hotfix could be installed on an incompatible version of DataMiner.
 
-#### When adding or editing an element, some fields would not correctly be saved into the ele­ment.xml file \[ID_25994\]
+#### When adding or editing an element, some fields would not correctly be saved into the element.xml file \[ID_25994\]
 
 When adding or editing an element, in some cases, the contents of a number of fields (e.g. GetCommunity, SetCommunity, etc.) would not correctly be saved into the element.xml file.
 
@@ -813,7 +813,7 @@ In some cases, no tool tip would be shown when you had used legacy syntax to con
 
 When, in the Element Connections app, you swapped two connections, in some cases, the connection configuration would be incorrect or a connection would incorrectly be duplicated.
 
-#### Service & Resource Management: It was incorrectly possible to create or update profile param­eters that linked to non-existing mediation snippets \[ID_26110\]
+#### Service & Resource Management: It was incorrectly possible to create or update profile parameters that linked to non-existing mediation snippets \[ID_26110\]
 
 Up to now, it would incorrectly be possible to create or update profile parameters that linked to non-existing mediation snippets.
 
@@ -837,7 +837,7 @@ In some rare cases, threads could get stuck in SLScripting due to a locking issu
 
 When, in an EPM environment, you opened a view card without linked EPM object, in some cases, an incorrect error would be logged.
 
-#### Dashboards app - Service definition component: When a node action was executed, all action buttons of other nodes with the same action configured would be set to “loading” \[ID_26145\]
+#### Dashboards app - Service definition component: When a node action was executed, all action buttons of other nodes with the same action configured would be set to 'loading' \[ID_26145\]
 
 In a service definition component, in some cases, all nodes with the same action configured would set the state of their action button to “loading” when the action was executed on one of those nodes.
 
@@ -857,15 +857,15 @@ When a new alarm was generated while SLAnalytics was stopped, in some cases, tha
 
 On large DataMiner systems, in some cases, a view synchronization could cause SLDataMiner to leak memory.
 
-#### Dashboards: Clicking the icon of a parameter component would incorrectly not open the associ­ated trend card in the Monitoring app \[ID_26213\]
+#### Dashboards: Clicking the icon of a parameter component would incorrectly not open the associated trend card in the Monitoring app \[ID_26213\]
 
 When, in the Dashboards app, you click the icon of a parameter component, the trend card of the parameter in question should open in the Monitoring app. However, in some cases, this did not happen due to an incorrect key being passed from the Dashboards app to the Monitoring app.
 
-#### Problem with user permissions caused certain parameters of an enhanced service not to be dis­played \[ID_26222\]
+#### Problem with user permissions caused certain parameters of an enhanced service not to be displayed \[ID_26222\]
 
 In some cases, the user permissions configured for the hidden element of an enhanced service would differ from those configured for the enhanced service itself. This would cause certain parameters of the enhanced service not to be displayed.
 
-#### Problem with protocol buffer serialization when server and client were running different Data­Miner versions \[ID_26227\]
+#### Problem with protocol buffer serialization when server and client were running different DataMiner versions \[ID_26227\]
 
 When protocol buffer serialization was being used, a “Failed to set up ProtoBuf” error could be thrown when a DMA and a client were running different DataMiner versions.
 
@@ -941,7 +941,7 @@ A number of minor issues have been fixes in the Alarm Console:
 
 - In some cases, similar alarms would have different parameter descriptions. One alarm would e.g. show “Temperature” while another alarm would show “Temperature A”.
 
-#### DataMiner Cube: Module names in side bar not translated when UI language was set to a lan­guage other than English \[ID_26402\]
+#### DataMiner Cube: Module names in side bar not translated when UI language was set to a language other than English \[ID_26402\]
 
 When, in DataMiner Cube, the UI language was set to a language other than English, in some cases, the names of the modules in the side bar would not be translated.
 
@@ -949,7 +949,7 @@ When, in DataMiner Cube, the UI language was set to a language other than Englis
 
 In some cases, an internal exception could be thrown, causing the active alarms not to be retrieved correctly from the database.
 
-#### Jobs app: Problem with “New” and “Save” buttons \[ID_26474\]
+#### Jobs app: Problem with 'New' and 'Save' buttons \[ID_26474\]
 
 In the Jobs app, in some cases, the *New* button would not be shown in the subheader.
 
@@ -963,7 +963,7 @@ In some cases, it would not be possible to export a job to a PDF file.
 
 In some cases, an error could occur when you updated a job with bookings.
 
-#### Jobs app: Bookings list would not be updated correctly after adding, editing or deleting a book­ing \[ID_26487\]
+#### Jobs app: Bookings list would not be updated correctly after adding, editing or deleting a booking \[ID_26487\]
 
 In the Jobs app, in some cases, the bookings list would not be updated correctly after adding, editing or deleting a booking.
 
@@ -989,7 +989,7 @@ Due to a number of enhancements, overall performance has increased when deleting
 
 When multiple alarms were generated at the same time, in some rare cases, alarm information would not correctly be saved in the timetrace table.
 
-#### DataMiner Cube: Legacy resources and legacy bookings could no longer be managed on sys­tems with a MySQL database \[ID_26774\]
+#### DataMiner Cube: Legacy resources and legacy bookings could no longer be managed on systems with a MySQL database \[ID_26774\]
 
 On systems with a MySQL database, in some cases, it would no longer be possible to use the Resources and Bookings apps to manage legacy resources and legacy bookings.
 

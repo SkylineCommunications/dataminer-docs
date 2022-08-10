@@ -236,11 +236,11 @@ In a cassandra.yaml file, the Cassandra cluster name will no longer be configura
 > [!NOTE]
 > The Cassandra cluster name is not linked to the DMS cluster name. The latter is still configurable.
 
-#### Jobs app: Fields marked “Show in list view” will now always be shown in the jobs list, even when those fields do not have values \[ID_24708\]
+#### Jobs app: Fields marked 'Show in list view' will now always be shown in the jobs list, even when those fields do not have values \[ID_24708\]
 
 Fields that are marked “Show in list view” will now always be shown in the jobs list, even when none of the listed jobs have a value set in those fields.
 
-#### Migrating booking data to Indexing Engine: “Show all properties” option will now by default not be selected \[ID_24717\]
+#### Migrating booking data to Indexing Engine: 'Show all properties' option will now by default not be selected \[ID_24717\]
 
 When migrating booking data to Indexing Engine, up to now, the “Show all properties” option would be selected even when there were no properties to be changed. From now on, this option will by default not be selected.
 
@@ -364,7 +364,7 @@ In some cases, when duplicating a service definition, some data would not get co
 
 In some cases, alarm level linking would not be initialized or updated correctly.
 
-#### Failover: “AlwaysBruteForceOffline” option would not work correctly when releasing virtual IP addresses took more than 10 seconds \[ID_24535\]
+#### Failover: 'AlwaysBruteForceOffline' option would not work correctly when releasing virtual IP addresses took more than 10 seconds \[ID_24535\]
 
 When a Failover setup with the *AlwaysBruteForceOffline* option enabled had to go offline, in some cases, the agent would not be restarted when releasing the virtual IP addresses took more than 10 seconds. The agent would incorrectly remain in an undefined state. Also, when the agent eventually went online at a later stage, problems could occur. On systems with a MySQL database, for example, incorrect element alarms would start to appear.
 
@@ -386,7 +386,7 @@ From now on, the following message will appear instead:
 The migration has successfully been completed.
 ```
 
-#### DataMiner Cube - Alarm Console: Not possible to have the “Focus” column displayed in “active alarms” tabs listing different types of alarms and events \[ID_24680\]
+#### DataMiner Cube - Alarm Console: Not possible to have the 'Focus' column displayed in 'active alarms' tabs listing different types of alarms and events \[ID_24680\]
 
 In an “active alarms” tab showing masked alarms, non-masked alarms, information events and suggestion events, in some cases, it would not be possible to have the Focus column displayed.
 
@@ -402,7 +402,7 @@ When you exported a trend graph to a CSV file after selecting the *Everything* o
 
 #### DataMiner Cube - Bookings app: Problem when zooming to last/next month in the bookings timeline \[ID_24704\]
 
-When, in the bookings timeline, you zoomed to last/next month, in some cases, the timeliine would zoom to an incorrect time range (e.g. one day).
+When, in the bookings timeline, you zoomed to last/next month, in some cases, the timeline would zoom to an incorrect time range (e.g. one day).
 
 #### DataMiner Cube - Services app: Problem with service definition diagram updates \[ID_24707\]
 
@@ -488,7 +488,7 @@ When you log in to a DataMiner Cube of which the sidebar was collapsed, in some 
 
 When, in an HTML5 app, a value had been updated manually, in some cases, the input control would not take into account subsequent updates of that same value made by the program.
 
-#### When an unmonitored element in timeout was masked and then unmasked when it was no longer in timeout, its alarm state would be set to “normal” instead of “undefined” \[ID_24838\]
+#### When an unmonitored element in timeout was masked and then unmasked when it was no longer in timeout, its alarm state would be set to 'normal' instead of 'undefined' \[ID_24838\]
 
 When an unmonitored element in timeout was masked and then unmasked after it had gone out of timeout, its alarm state would incorrectly be set to “normal” instead of “undefined/not monitored”.
 
@@ -500,13 +500,13 @@ In some rare cases, an exception could be thrown when the Element Connections mo
 
 In some cases, a ListView component embedded on a Visio page would not correctly display booking property updates.
 
-#### DataMiner Cube - Trending: Problem when exporting real-time trend data to CSV using the “Line graph” option \[ID_24861\]
+#### DataMiner Cube - Trending: Problem when exporting real-time trend data to CSV using the 'Line graph' option \[ID_24861\]
 
 When you exported real-time trend data to CSV with the *Line graph instead of block graph* option selected, in some cases, no intermediary points would be added if no data was available at certain timestamps.
 
 Also, points that fell outside of the selected time range would not get exported.
 
-#### “Address length of 0” error added to SLErrors.txt when loopback network adapters were found during a DataMiner startup \[ID_24864\]
+#### 'Address length of 0' error added to SLErrors.txt when loopback network adapters were found during a DataMiner startup \[ID_24864\]
 
 When DataMiner was started on a system with loopback network adapters, the following error would be added to the SLErrors.txt log file:
 
@@ -538,11 +538,11 @@ After trying to save a job that contained errors (e.g. missing fields), in some 
 
 When a GetParameter method was called in an Automation script on the virtual element of a redundancy group, in some cases, a CreateDummyFailedException could be thrown.
 
-#### Db.xml: “oldstyle” argument of \<Offload> tags would be removed when database settings were updated via Cube \[ID_24895\]
+#### Db.xml: 'oldstyle' argument of \<Offload> tags would be removed when database settings were updated via Cube \[ID_24895\]
 
 When a user had manually specified an *oldstyle* argument in an *\<Offload>* tag of the *Db.xml* file, that argument would be removed the first time the central database settings were updated via DataMiner Cube. From now on, Cube will no longer remove manually added *oldstyle* arguments.
 
-#### “Unknown Parameter: Rollback” notice when installing Cassandra or Indexing Engine \[ID_24913\]
+#### 'Unknown Parameter: Rollback' notice when installing Cassandra or Indexing Engine \[ID_24913\]
 
 During a Cassandra or Indexing Engine installation, in some cases, an “Unknown parameter: NoRollback” notice would be generated.
 
@@ -552,7 +552,7 @@ From now on, upgrade packages will ignore the “SetOption NoRollback” command
 
 In some cases, the SLNet process would leak memory when logging was enabled or disabled.
 
-#### DataMiner Cube: “Spectrum settings:” label incorrectly displayed on “Advanced element settings” pane of element without Spectrum Analyzer settings \[ID_24956\]
+#### DataMiner Cube: 'Spectrum settings:' label incorrectly displayed on 'Advanced element settings' pane of element without Spectrum Analyzer settings \[ID_24956\]
 
 When editing an element without any Spectrum Analyzer settings, in some cases, when you opened the *Advanced element settings* pane, a “Spectrum settings:” label would incorrectly be displayed at the bottom of the pane.
 
@@ -564,7 +564,7 @@ When a monitored table row was deleted, in some cases, an incorrect alarm with a
 
 In some cases, an error could occur in SLDataGateway when installing Indexing Engine.
 
-#### Problem with SLDMS when synchronizing a file with a name containing “%” while the log level was set to 5 or 6 \[ID_24985\]
+#### Problem with SLDMS when synchronizing a file with a name containing percentage character while the log level was set to 5 or 6 \[ID_24985\]
 
 During a midnight synchronization, in some cases, an error could occur in the SLDMS process when a file with a name containing “%” was being synchronized while the log level was set to 5 or 6.
 

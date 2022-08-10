@@ -26,7 +26,7 @@ It is now possible to pin XML nodes to a special pin section at the top of the D
 
 When you hover over a pinned node in the pin section, a tooltip will appear, showing you more information about the node in question.
 
-#### XML editor: Shortcut menu option “Add QAction Reference” renamed to “‘DLL Imports” \[ID_20702\]
+#### XML editor: Shortcut menu option 'Add QAction Reference' renamed to 'DLL Imports' \[ID_20702\]
 
 Up to now, when you clicked the small Down arrow in front of a \<QAction> element, you could select the *Add QAction Reference* menu option to insert references to pre-compiled QActions into the *dllImport* attribute of the \<QAction> element. That *Add QAction Reference* menu option has now been renamed to *DLL Imports*.
 
@@ -218,7 +218,7 @@ Up to now, the Automation script schema contained ID uniqueness constraints for 
 
 Also, the type of the Exe@id attribute has been changed to “xs:positiveInteger”.
 
-#### XML editor: Enhanced ‘Title Begin’ snippet \[ID_20967\]
+#### XML editor: Enhanced 'Title Begin' snippet \[ID_20967\]
 
 The ‘Title Begin’ snippet now contains two placeholders:
 

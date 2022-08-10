@@ -139,7 +139,7 @@ The following unit have been added to the UOM Schema:
 
 ### Enhancements
 
-#### Validator: Endless loop check will now also indicate whether actions of type “aggregate” are likely to cause endless loops \[ID_27640\]
+#### Validator: Endless loop check will now also indicate whether actions of type 'aggregate' are likely to cause endless loops \[ID_27640\]
 
 From now on, the endless loop check will also indicate whether actions of type “aggregate” are likely to cause endless loops.
 
@@ -152,7 +152,7 @@ The following checks and error messages have been enhanced:
 - Check 7.3 (CheckOptionsAttribute) has been refactored.
 - Error message 8.3.1 renamed from “InvalidHeaderKey” to “UnknownHeaderKey”,
 
-#### IDE - “DIS Validator” window: After having an error fixed, the next error in the list will get selected instead of the first error in the list \[ID_28418\]
+#### IDE - 'DIS Validator' window: After having an error fixed, the next error in the list will get selected instead of the first error in the list \[ID_28418\]
 
 In the DIS Validator window, when you had an error automatically fixed (e.g. by right-clicking the error and selecting Fix \> This error), up to now, the first error in the list would get selected. From now on, after having an error automatically fixed, the next error in the list will now get selected instead.
 

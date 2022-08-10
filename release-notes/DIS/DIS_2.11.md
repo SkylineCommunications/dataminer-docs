@@ -105,7 +105,7 @@ Removed values:
 
 - CONNECT
 
-#### Schema - EnumSNMP: Value “true” removed \[ID_18285\]
+#### Schema - EnumSNMP: Value 'true' removed \[ID_18285\]
 
 The value “true” has been removed from the list of allowed values for the Protocol.SNMP tag (EnumSNMP). This value is not supported by DataMiner.
 
@@ -126,6 +126,6 @@ The table snippets “Table Basic” and “Table SNMP” have been improved.
 - The bulk option has been replaced by the multipleGetNext option.
 - The Instance option has been added to “Table SNMP”.
 
-#### IDE - Exceptions snippet: ‘state’ attribute of Display tag now set to “disabled” by default \[ID_18326\]
+#### IDE - Exceptions snippet: ‘state’ attribute of Display tag now set to 'disabled' by default \[ID_18326\]
 
 When you insert an Exceptions snippet in a Protocol.xml file, the state attribute of the Exception.Display tag will now by default be set to “disabled”.

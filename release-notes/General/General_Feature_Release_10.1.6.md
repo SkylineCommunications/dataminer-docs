@@ -255,7 +255,7 @@ Example:
 
 ### DMS Reports & Dashboards
 
-#### Dashboards app - GQI: New “DCF connections” data source \[ID_25827\]\[ID_26491\]\[ID_26744\] \[ID_29505\]\[ID_29703\]
+#### Dashboards app - GQI: New 'DCF connections' data source \[ID_25827\]\[ID_26491\]\[ID_26744\] \[ID_29505\]\[ID_29703\]
 
 In the Generic Query Interface, a new “DCF connections” data source is now available. It will return all DCF connections in the DMS.
 
@@ -311,7 +311,7 @@ From now on...
 
 Metadata will now be added to columns created by an aggregation or manipulation operation within the GQI environment. This metadata will provide information regarding the operation (aggregation or manipulation) and the columns involved.
 
-#### Dashboards app - Line chart component: New “Fill graph” and “Stack trend lines” options \[ID_29527\]
+#### Dashboards app - Line chart component: New 'Fill graph' and 'Stack trend lines' options \[ID_29527\]
 
 When configuring a line chart component, you will now find two new options in the *Styling and Information* section of the *Layout* tab.
 
@@ -684,7 +684,7 @@ Up to now, each time SLDataMiner.xml was updated, SLDMS.xml would also be refres
 
 Due to a number of enhancements, especially with regard to the loading of services into the Surveyor, overall performance of DataMiner Cube has increased when starting up.
 
-#### SLDMS will now perform DNS lookups using “getaddrinfo” instead of “gethostbyname” \[ID_29740\]
+#### SLDMS will now perform DNS lookups using 'getaddrinfo' instead of 'gethostbyname' \[ID_29740\]
 
 From now on, SLDMS will perform DNS lookups using the getaddrinfo function instead of the deprecated gethostbyname function.
 
@@ -706,7 +706,7 @@ Up to now, when a selected row was removed or when the selection was cleared in 
 
 When you exported average trend data to a CSV file, in some cases, extra data points would incorrectly be added to the exported trend data.
 
-#### Protocols: Problem with SLProtocol when the save attribute of a table parameter was incorrectly set to “true” \[ID_29214\]
+#### Protocols: Problem with SLProtocol when the save attribute of a table parameter was incorrectly set to 'true' \[ID_29214\]
 
 When, in a protocol.xml file, the save attribute of a table parameter was incorrectly set to “true”, in some rare cases, an error could occur in SLProtocol.
 
@@ -726,7 +726,7 @@ When a DataMiner Agent was started in a DataMiner System, in some cases, errors 
 
 When using an element card search box on a system with an Elasticsearch database, in some cases, no search results would appear.
 
-#### Interactive Automation scripts: “continue script” action triggered after the script had already been detached \[ID_29357\]
+#### Interactive Automation scripts: 'continue script' action triggered after the script had already been detached \[ID_29357\]
 
 In some rare cases, a “continue script” action could incorrectly be triggered after the script in question had already been detached.
 
@@ -750,7 +750,7 @@ When configuring certain components, a number of input boxes would not resize co
 
 In some cases, filters in GQI queries would not be applied when requesting aggregated values from an Elasticsearch logger table. This would cause the values to be aggregated over the entire table instead of a subset of that table.
 
-#### Jobs app: Name of default job section would incorrectly be set to “DefaultJobDomain” when the section was updated \[ID_29460\]
+#### Jobs app: Name of default job section would incorrectly be set to 'DefaultJobDomain' when the section was updated \[ID_29460\]
 
 When the default section was updated, its name would incorrectly be changed to “DefaultJobDomain” instead of “DefaultJobSection”.
 
@@ -766,13 +766,13 @@ Up to now, when the *ShowSiblings* option was combined with the *ShowChildren* o
 
 In some cases, a query would not get rebuilt correctly after being edited, especially when it contained nodes that were linked to feeds.
 
-#### DataMiner Cube - Alarm Console: Problem when clicking the “Alarm storm” button \[ID_29472\]
+#### DataMiner Cube - Alarm Console: Problem when clicking the 'Alarm storm' button \[ID_29472\]
 
 If alarm storm protection by delaying is activated, during an alarm storm you can click the red *Alarm storm* button in the alarm bar to open a new card with a list of the delayed alarms.
 
 In some cases, when you clicked that button, an exception would be thrown and no alarms would be displayed.
 
-#### Dashboards app - GQI: Inconsistent column order when “select” or “get parameters” nodes were linked to a feed \[ID_29479\]
+#### Dashboards app - GQI: Inconsistent column order when 'select' or 'get parameters' nodes were linked to a feed \[ID_29479\]
 
 When the “Select” or “Get parameters for element where” nodes of a query were linked to a feed, in some cases, the order of the selected parameter columns would not be consistent with the feed selection.
 
@@ -786,7 +786,7 @@ In the legacy Dashboards app, the “Custom low range” and “Custom high rang
 
 When you dragged a data item (e.g. the entire Elements dataset) onto a component, in some rare cases, that item would not appear in the component’s edit panel.
 
-#### Dashboards app: Index feed would remain in status “Loading” when an error occurred while fetching the indices \[ID_29487\]
+#### Dashboards app: Index feed would remain in status 'Loading' when an error occurred while fetching the indices \[ID_29487\]
 
 When an error occurred while fetching the indices, in some cases, the index feed would remain in status “Loading”. From now on, when an error occurs while fetching the indices, the reason of the failure will be displayed.
 
@@ -937,7 +937,7 @@ When trend data was exported to a CSV file, in some cases, zero values would inc
 
 When you opened a Spectrum element card, in some rare cases, the start, stop and center frequencies would incorrectly be displayed without decimals.
 
-#### DataMiner Cube: No views visible in the Surveyor after clicking the “Start” button on the message box saying that the agent was not running \[ID_29665\]
+#### DataMiner Cube: No views visible in the Surveyor after clicking the 'Start' button on the message box saying that the agent was not running \[ID_29665\]
 
 When you opened DataMiner Cube and clicked Start on the message box saying that the agent was not running, the agent would start up but, in some cases, no views would be visible in the Surveyor.
 
@@ -993,7 +993,7 @@ When, at initialization, a booking placeholder was not able to resolve its booki
 
 ## Addendum CU3
 
-### CU2 fixes
+### CU3 fixes
 
 #### DataMiner Cube - Services app: Profile parameters not displayed when clicking a node of a service definition \[ID_30059\]
 

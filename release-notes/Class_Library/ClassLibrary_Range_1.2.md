@@ -23,7 +23,7 @@ Up to now, it would only return the first page of such a table.
 
 The new IDmsTable QueryData method will return an IEnumerable\<object\[\]\>, i.e. a collection of row objects.
 
-To this method, you can pass a column filter as an ICollection\<ITableFilter>, in which each ITableFilter item contains a ColumnPid, a ColumnValue and a CompareType property. If, for example, you only want to retrieve the rows in which column parameter 1003 is set to “test”, you can specify the following:
+To this method, you can pass a column filter as an ICollection\<ITableFilter>, in which each ITableFilter item contains a ColumnPid, a ColumnValue and a CompareType property. If, for example, you only want to retrieve the rows in which column parameter 1003 is set to "test", you can specify the following:
 
 ```csharp
 ITableFilterItem filter = new TableFilterItem
@@ -131,7 +131,7 @@ Monitors have been added to subscribe to service alarm level and service state.
 
 #### RemotePort would throw 'null reference' exceptions when trying to retrieve a replicated element \[ID_30053\]
 
-RemotePort would throw “null reference” exceptions when trying to retrieve a replicated element.
+RemotePort would throw "null reference" exceptions when trying to retrieve a replicated element.
 
 #### Monitors that subscribe to a table can now execute code whenever data in that table is updated \[ID_30055\]
 
@@ -194,7 +194,7 @@ From now on, you can use
 
 #### 'Skyline.DataMiner.' prefix shortened to 'SLC.Lib.' \[ID_33257\]
 
-The “Skyline.DataMiner.” prefix for Class Library exceeded to 260-character path length limit of Microsoft Windows. This prefix has now been shortened to “SLC.Lib.”.
+The "Skyline.DataMiner." prefix for Class Library exceeded to 260-character path length limit of Microsoft Windows. This prefix has now been shortened to "SLC.Lib.".
 
 > [!WARNING]
 > For code using NuGets, this is a breaking change.
@@ -247,11 +247,11 @@ The Class Library now contains new bit rate calculation classes.
 
 #### Class Library is now able to process elements of which the RemoteElement property of the ElementInfoEventMessage is set to the maximum value \[ID_33751\]
 
-The Class Library is now able to process elements of which the RemoteElement property of the ElementInfoEventMessage is set to the maximum value (i.e. “4294967295/4294967295”).
+The Class Library is now able to process elements of which the RemoteElement property of the ElementInfoEventMessage is set to the maximum value (i.e. "4294967295/4294967295").
 
 #### Class Library folder structure has been updated \[ID_33872\]
 
-The folder structure of the Class Library has been updated. “DataMiner\\Library” has been removed from the root path.
+The folder structure of the Class Library has been updated. "DataMiner\\Library" has been removed from the root path.
 
 #### DllImport statement added to RateHelper class \[ID_33878\]
 

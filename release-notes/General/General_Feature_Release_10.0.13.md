@@ -189,7 +189,7 @@ engine.AddScriptOutput(UIVariables.VisualOverview.CreateKey("MyOutput"), "MyValu
 
 - When you set the SetVarOnFail option to true (either on page level or shape level), then the session variables in question will always be created, regardless of whether the script finishes successfully or not.
 
-##### New “OnClosing” shape data field
+##### New 'OnClosing' shape data field
 
 From now on, you can use the page-level shape data field OnClosing to configure whether a Visual Overview window should automatically be closed or not.
 
@@ -414,7 +414,7 @@ In addition, the following layout options can now be configured for this visuali
 - *Legend*: The legend can be hidden. If it is set to be displayed, you can select whether it should be displayed on the left, on the right, at the top or at the bottom of the visualization.
 - *Tooltips*: Tooltips can be hidden. If they are set to be displayed, you can select whether these should include the label, dimension and/or value.
 
-#### Dashboards app: Selecting an empty folder will now cause a “Create dashboard” button and a “Import dashboard” button to appear \[ID_27579\]\[ID_27844\]
+#### Dashboards app: Selecting an empty folder will now cause a 'Create dashboard' button and a 'Import dashboard' button to appear \[ID_27579\]\[ID_27844\]
 
 When, in the sidebar of the Dashboards app, you select an empty folder, two large buttons will now appear in the large pane on the right.
 
@@ -444,7 +444,7 @@ When configuring a line chart component that does not show real-time trend data,
 - Show minimum (default setting: switched off)
 - Show maximum (default setting: switched off)
 
-#### Dashboards app - Parameter feed: “Auto-select all” option \[ID_27816\]\[ID_28033\]
+#### Dashboards app - Parameter feed: 'Auto-select all' option \[ID_27816\]\[ID_28033\]
 
 When configuring the Parameter feed, up to now, it was possible to either have a specific number of indices selected automatically or have all indices selected automatically.
 
@@ -456,7 +456,7 @@ Now, the above-mentioned options have been replaced by the “Auto-select all”
 - If you select the “Select all items” option, "Select all" will select all items. For a partial table, only the items from the first page will be selected.
 - If you select the “Select specific number of items” option, a box is displayed below it. In this box, you should specify how many items "Select all" should select. For a partial table, these items will be selected across different pages.
 
-#### Dashboards app - Line chart component: New “Chart limit behavior” setting \[ID_27841\]
+#### Dashboards app - Line chart component: New 'Chart limit behavior' setting \[ID_27841\]
 
 When configuring a line chart component, you can now use the *Chart limit behavior* setting to indicate what needs to happen when the number of parameters in the chart exceeds the defined chart limit:
 
@@ -710,7 +710,7 @@ Run StandaloneElasticBackup.exe with the following two (mandatory) arguments to 
 
 ### Enhancements
 
-#### Dashboards app: Right-clicking a component now only shows “Copy embed URL” in edit mode \[ID_27629\]
+#### Dashboards app: Right-clicking a component now only shows 'Copy embed URL' in edit mode \[ID_27629\]
 
 Previously, when a dashboard component was right-clicked, this always showed the option *Copy embed URL*. However, as this option is not as useful for a dashboard operator as the default right-click menu, it will now only be displayed when the component is right-clicked in edit mode. Otherwise, the default right-click menu will be displayed.
 
@@ -790,7 +790,7 @@ In the Skyline Black theme, the background color of tree control table tabs has 
 
 From now on, the SLPort process will automatically resize the socket buffer before receiving data from a socket.
 
-#### DataMiner Cube - Settings: No longer possible to set Connection type to “Web services” \[ID_27904\]
+#### DataMiner Cube - Settings: No longer possible to set Connection type to 'Web services' \[ID_27904\]
 
 Since Web Services Enhancements (WSE) for Microsoft .NET has been deprecated, the only way for DataMiner Cube to connect to a DataMiner Agent is by using .NET Remoting. As a result, in the *Settings* window, it is no longer possible to set the *Computer \> Connection \> Connection type* setting to “Web services”.
 
@@ -834,7 +834,7 @@ When a service profile definition is created, DataMiner will check if the virtua
 
 Note that this property can currently not yet be configured in DataMiner Cube.
 
-#### Ticketing app: Enhanced “Edit ticket field” window \[ID_27962\]
+#### Ticketing app: Enhanced 'Edit ticket field' window \[ID_27962\]
 
 Due to a number of enhancements to the *Edit ticket field* window, especially the section that allows you to define the possible values, configuring a ticket state field has been made more intuitive.
 
@@ -856,7 +856,7 @@ When creating a BPA test, it is now possible to indicate the most recent DataMin
 
 When a DataMiner Agent is upgraded to a version equal to or above the one specified in the MaxVersion setting of a test, that test will no longer be executed. Also, you will not be able to upload a BPA test to a DataMiner Agent with a version equal to or above the one specified in the MaxVersion setting.
 
-#### Dashboards app - Parameter feed: “partial table” renamed to “paged table” \[ID_28048\]
+#### Dashboards app - Parameter feed: 'partial table' renamed to 'paged table' \[ID_28048\]
 
 In the tool tip of the “Select all items” and “Select specific number of items” options, “partial table” has been renamed to “paged table”.
 
@@ -967,7 +967,7 @@ Also, it will now be indicated more clearly that a highlighted IO button is sele
 
 When you updated an ongoing ReservationInstance, in some cases, all ongoing and future events (i.e. scripts) of that instance would incorrectly be canceled and the timeout scripts would be run on all DataMiner Agents instead.
 
-#### DataMiner Cube: "Show all alarm updates" option not working with alarm for migrated element \[ID_27761\]
+#### DataMiner Cube: 'Show all alarm updates' option not working with alarm for migrated element \[ID_27761\]
 
 If several alarm updates for an element that had been migrated from one DMA to another were combined in a consolidated alarm event, it could occur that the *Show all alarm updates* option on the corresponding alarm card did not work.
 

@@ -73,7 +73,7 @@ Please note the following regarding the indexing database:
 
 ##### DB.xml Indexing configuration
 
-When the DataMiner Indexing Engine installation is complete, the *Db.xml* file will contain an additional \<DataBase> section with the connection information of the indexing database. The “search” attribute will be set to true.
+When the DataMiner Indexing Engine installation is complete, the *Db.xml* file will contain an additional \<DataBase> section with the connection information of the indexing database. The "search" attribute will be set to true.
 
 ```xml
 <DataBases xmlns="http://www.skyline.be/config/db">
@@ -115,7 +115,7 @@ There is also a button available that can be used to migrate booking data to the
 
 When you open a new alarm tab page in the Alarm Console while connected to a DataMiner Agent that has indexing enabled on alarms, a search box at the top of that alarm tab page will now allow you to search for particular alarms or information events.
 
-You can also right-click text in the Alarm Console while holding the left CTRL key (or a different key depending on the *Mouse word highlighting in Alarm Console* user setting), and select “Search for \<text> in new tab”. This will open a new tab with the text in question filled in in the search box.
+You can also right-click text in the Alarm Console while holding the left CTRL key (or a different key depending on the *Mouse word highlighting in Alarm Console* user setting), and select *Search for \<text> in new tab*. This will open a new tab with the text in question filled in in the search box.
 
 Next to the search box, you can select a timespan (default: last 24 hours). When you start typing in the search box, the most relevant suggestions that are returned by the server will be displayed below. If a suggestion is too large to be displayed completely, you will be able to view it completely by hovering the mouse over it. However, if it consists of multiple lines, only the first line will be displayed.
 
@@ -472,7 +472,7 @@ Example:
 | ServiceInstance  | \[this service\]                 |
 | Options          | CollapseEmptyRowsAndColumns=True |
 
-#### Settings: ‘Table export column separator’ setting replaced by ‘CSV separator’ setting \[ID_23986\]
+#### Settings: 'Table export column separator' setting replaced by 'CSV separator' setting \[ID_23986\]
 
 The *Table export column separator* setting (on the *User \> Data Display* page of the *Settings* window) has now been replaced by the *CSV separator* setting (on the *User \> Regional* page of the *Settings* window).
 
@@ -561,7 +561,7 @@ When you click the shape, Cube will open the specified alarm tab (if it has a fi
 | AlarmSummary     | type\|sharedfiltername\|ApplyLinkedViewServiceOrElementFilter\|Alarm |
 | AlarmTab         | Name=AlarmTabName                                                    |
 
-#### Visual Overview: Using “info keywords” in all data items of a shape linked to an alarm \[ID_24485\]
+#### Visual Overview: Using 'info keywords' in all data items of a shape linked to an alarm \[ID_24485\]
 
 Up to now, there were two ways to have a shape linked to an alarm show information about that alarm:
 
@@ -636,7 +636,7 @@ The separator used in the CSV exports is based on the “CSV separator” settin
 
 The header, sidebar and login screen of the Dashboards app have now been adapted to the new DataMiner X style.
 
-#### Dashboards app: New “Clear all” action + settings to pin actions \[ID_24356\]
+#### Dashboards app: New 'Clear all' action + settings to pin actions \[ID_24356\]
 
 In the dashboard settings, you can now "pin" actions to the header bar. When they are pinned, actions will be displayed as full buttons in the dashboard header bar, e.g. the *Start editing* button. When they are not pinned, the actions can be accessed via an arrow button in the top-right corner of the dashboard.
 
@@ -646,7 +646,7 @@ It is possible to view this new action even when the dashboard is embedded, if "
 
 For example: `http://[DMA IP]/dashboard/#/MyDashboards/dashboard.dmadb?embed=true&subheader=true`
 
-#### Dashboards app: New "Node edge graph" visualization \[ID_24433\]
+#### Dashboards app: New 'Node edge graph' visualization \[ID_24433\]
 
 A new *Node edge graph* visualization is now available in the *Other* category in the Dashboards app. This visualization can be used to display a service definition as a node edge graph. It can display the graph based on a service data filter, based on a service definition ID, or based on a reservation instance ID. If several of these inputs are specified, the input that was specified last will be used.
 
@@ -749,7 +749,7 @@ public void SetParameterSilent(int pid, object value) {
 
 ### DMS Web Services
 
-#### Web Services API v1: “GetTableForParameterV2” method has new “as-kpi” table filter option \[ID_23928\]
+#### Web Services API v1: 'GetTableForParameterV2' method has new 'as-kpi' table filter option \[ID_23928\]
 
 The GetTableForParameterV2 method now supports filtering based on the following table column KPI options:
 
@@ -890,7 +890,7 @@ From now on, at initial Failover setup, the following folders under *C:\\Skyline
 
 Tooltips are now available for the quick menu below a dashboard component, so that a user can see what the icons in the quick menu can be used for by hovering the mouse pointer over them.
 
-#### Logging: Log entry type of LDAP notifications changed from “error” to “debug” \[ID_23915\]
+#### Logging: Log entry type of LDAP notifications changed from 'error' to 'debug' \[ID_23915\]
 
 Up to now, LDAP notifications were of log entry type “error”. From now on, those notifications will be of type “debug”.
 
@@ -904,7 +904,7 @@ To set maxJSONLength to a specific value, do the following:
 
 1. Open the *Web.config* file located in the *C:\\Skyline DataMiner\\Webpages\\API* folder.
 
-2. Make sure that the *configuration.appSettings* section contains an element similar to the following one:
+1. Make sure that the *configuration.appSettings* section contains an element similar to the following one:
 
     ```xml
     <add key="maxJsonLength" value="?10485760?" />
@@ -1002,7 +1002,7 @@ The time-out for the Cassandra service to change from “starting” to “start
 
 Due to a number of enhancements, overall performance has increased when opening the Services app or the Profiles app on systems with a large number of service definitions and profile definitions.
 
-#### Dashboards app - Parameter table component: Columns of which the ‘disableHistogram’ option is set will no longer have a histogram icon in their header \[ID_24131\]
+#### Dashboards app - Parameter table component: Columns of which the 'disableHistogram' option is set will no longer have a histogram icon in their header \[ID_24131\]
 
 In a parameter table component, from now on, table columns of which the “disableHistogram” option is set will no longer have a histogram icon displayed in their header.
 
@@ -1054,7 +1054,7 @@ Due to a number of enhancements, overall performance has increased when opening 
 
 Logging has improved when a protocol is uploaded that requires a higher DataMiner version than the one currently installed in the system. The following error message will now be logged: "DataMiner version is too low to use this protocol. Please check the protocol's Compliancies tag."
 
-#### DataMiner Cube - Visual Overview: Enhanced performance when using “FollowPathColor” and “InternalInterfaceHopping” \[ID_24305\]
+#### DataMiner Cube - Visual Overview: Enhanced performance when using 'FollowPathColor' and 'InternalInterfaceHopping' \[ID_24305\]
 
 Due to a number of enhancements, overall performance has increased when using “FollowPathColor” and “InternalInterfaceHopping”, especially when a large number of shapes are linked to elements containing many interfaces and connections.
 
@@ -1229,7 +1229,7 @@ When you sorted a bookings list or a services list by a custom property column, 
 
 When you renamed a dashboard after selecting a number of items in its feeds, in some cases, all items selected in those feeds would incorrectly be unselected after the dashboard had been renamed.
 
-#### Connection not closed when element with "Accepted IP address" configuration was stopped \[ID_23882\]
+#### Connection not closed when element with 'Accepted IP address' configuration was stopped \[ID_23882\]
 
 If an element with a smart-serial connection was configured to only allow communication from certain IP addresses and this element was stopped, it could occur that the connection with those IP addresses was not properly closed.
 
@@ -1277,11 +1277,11 @@ In some rare cases, an error could occur in SLAnalytics when an element was remo
 
 In some cases, icons defined in system functions would not be displayed in DataMiner Cube.
 
-#### DataMiner Cube - Service templates: Incorrect combination values in “Conditions” section of “Edit child element” window \[ID_23979\]
+#### DataMiner Cube - Service templates: Incorrect combination values in 'Conditions' section of 'Edit child element' window \[ID_23979\]
 
 When configuring conditions in the *Conditions* section of an *Edit child element* window, in some cases, the *Combination* selection boxes would contain incorrect values. Also, no value would be selected by default.
 
-#### Table cells could no longer be set to “invalid” & problem with SLElement when a user subscribed to a view table \[ID_23997\]
+#### Table cells could no longer be set to 'invalid' & problem with SLElement when a user subscribed to a view table \[ID_23997\]
 
 Due to a validation check problem, table cells could no longer be set to “invalid”.
 
@@ -1307,7 +1307,7 @@ In some cases, it could occur that custom branding was not applied to a DataMine
 
 In some rare cases, an error could occur in SLPort when a serial port or a GPIB port was closed.
 
-#### DataMiner Cube - Trending: Problem with “Enable trend logging (debug)” setting \[ID_24065\]
+#### DataMiner Cube - Trending: Problem with 'Enable trend logging (debug)' setting \[ID_24065\]
 
 When the “Enable trend logging (debug)” setting was deactivated, in some cases, certain log data would incorrectly still be kept in memory.
 
@@ -1451,7 +1451,7 @@ In some cases, alarm filters that contained session variables would no longer be
 
 When an interactive Automation script running inside the Dashboards app went into timeout, in some cases, a success message would incorrectly be displayed instead of an error message.
 
-#### DataMiner Cube - Profiles app: Protocol version not set to “Production” when linking a parameter \[ID_24260\]
+#### DataMiner Cube - Profiles app: Protocol version not set to 'Production' when linking a parameter \[ID_24260\]
 
 When, in the Profiles app, you dragged an element using the production version of a protocol onto the parameter list and linked a protocol parameter to a profile parameter, in some cases, the protocol version would incorrectly not be set to “Production”.
 
@@ -1501,7 +1501,7 @@ When a view table was filtered, in some cases, the table would incorrectly be em
 
 When the number of alarms stored in the database reaches a certain threshold, the oldest, non-active alarms are automatically removed from the system. However, on a Failover system with MySQL databases, in some cases, the alarm cleaning process would not be able to correctly separate active from non-active alarms.
 
-#### Problem when DVE creation was being disabled while updating a table with an “;element” column option \[ID_24309\]
+#### Problem when DVE creation was being disabled while updating a table with an ';element' column option \[ID_24309\]
 
 In some rare cases, an error could occur when a table with an “;element” column option was being updated while a request was being processed to disable the DVE creation on that element.
 
@@ -1513,7 +1513,7 @@ When a FullFilter was used on a direct view that retrieved data from elements wi
 
 In some cases, an exception could be thrown when a tabbed table was displayed on a DATA page.
 
-#### DataMiner Cube: Masked alarms included in "Unassigned active alarms" or "My active alarms" tab page \[ID_24319\]
+#### DataMiner Cube: Masked alarms included in 'Unassigned active alarms' or 'My active alarms' tab page \[ID_24319\]
 
 When an "Unassigned active alarms" or "My active alarms" tab page was added in the Alarm Console, it could occur that this tab page also included masked alarms.
 
@@ -1521,7 +1521,7 @@ When an "Unassigned active alarms" or "My active alarms" tab page was added in t
 
 On legacy dashboard, in some cases, tables containing data would incorrectly be displayed as empty.
 
-#### DataMiner Cube: Not possible to connect to another DMA after starting Cube with a “host=” argument \[ID_24322\]
+#### DataMiner Cube: Not possible to connect to another DMA after starting Cube with a 'host=' argument \[ID_24322\]
 
 When DataMiner Cube was started with a “host=” argument, in some cases, the user would not be able to connect to another DataMiner Agent.
 
@@ -1587,7 +1587,7 @@ When multiple profile instances or profile definitions containing an empty field
 
 In some cases, it could occur that view table data were refreshed even when this was not necessary, which could cause data pages or visual overview pages to load very slowly in Cube.
 
-#### DataMiner Cube - Correlation: Problem with “Send email” actions in Correlation rules \[ID_24361\]
+#### DataMiner Cube - Correlation: Problem with 'Send email' actions in Correlation rules \[ID_24361\]
 
 When triggered, in some cases, “Send email” actions in Correlation rules would not send an email when the recipient was a DataMiner user.
 
@@ -1655,7 +1655,7 @@ When protocol buffer serialization was enabled, in some cases, tables would show
 
 When, in a line chart component, you selected a second parameter, in some cases, each trend graph would incorrectly be displayed twice.
 
-#### Service & Resource Management: ReservationInstances did incorrectly not have their status set to “interrupted” \[ID_24434\]
+#### Service & Resource Management: ReservationInstances did incorrectly not have their status set to 'interrupted' \[ID_24434\]
 
 In some rare cases, ReservationInstances that should have had their status set to “interrupted”, had their status set to an incorrect value.
 
@@ -1717,7 +1717,7 @@ When working with the Dashboards app in Chrome, in some cases, a mouse click cou
 
 When you opened a dashboard with a multiple parameter feed using a URL that contained the parameters to be loaded in that feed, in some cases, the parameters in the URL would not correctly be loaded into the multiple parameter feed.
 
-#### HTML5 apps: Selection box values containing “\\” characters displayed incorrectly in interactive Automation scripts \[ID_24541\]
+#### HTML5 apps: Selection box values containing backslash characters displayed incorrectly in interactive Automation scripts \[ID_24541\]
 
 When an interactive Automation script was run from within an HTML5 app, in some cases, selection box values containing “\\” characters could be displayed incorrectly.
 
@@ -1753,7 +1753,7 @@ In some cases, the following exception could be thrown when logging in to any Da
 Failed to setup a connection with the DataMiner Agent: Method not found:'SLLoggerUtil.ILogger SLLoggerUtil.LoggerUtil.GetLogger(SLLoggerUtil.LoggerCategoryUtil.ILoggerCategory)'.
 ```
 
-#### Problem with SLProtocol when calling “NT_LOAD_TABLE” \[ID_24780\]
+#### Problem with SLProtocol when calling 'NT_LOAD_TABLE' \[ID_24780\]
 
 In some cases, an error could occur in SLProtocol when calling the NotifyProtocol method “NT_LOAD_TABLE”.
 

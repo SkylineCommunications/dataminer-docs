@@ -21,13 +21,13 @@ In the table editor, the *New Table* button now allows you to create an entirely
 To create a new table:
 
 1. Click the *New Table* button.
-2. Specify a parameter ID, a table name, and a table description, and click *OK*.
-3. In the *Parameters* list, select the parameters that you want to assign to the columns of the table, and drag them onto the *All Columns* or the *Displayed Columns Layout* section.
-4. Click *Apply Changes*.
+1. Specify a parameter ID, a table name, and a table description, and click *OK*.
+1. In the *Parameters* list, select the parameters that you want to assign to the columns of the table, and drag them onto the *All Columns* or the *Displayed Columns Layout* section.
+1. Click *Apply Changes*.
 
 ### Validator
 
-#### Additional result codes for ‘Command Response Pair Group’ and ‘Attribute Contents’ checks \[ID_13856\]
+#### Additional result codes for 'Command Response Pair Group' and 'Attribute Contents' checks \[ID_13856\]
 
 The ‘Command Response Pair Group’ and ‘Attribute Contents’ checks can now throw a number of additional errors.
 
@@ -40,7 +40,7 @@ The ‘Command Response Pair Group’ and ‘Attribute Contents’ checks can no
 | 2971        | Error | InputParameter parameter \[Parameter ID\] does not exist.                       |
 | 2972        | Error | Non existing QAction DLL reference \[DLL Reference\].                           |
 
-#### New ‘Check Interprete Measurement’ check \[ID_13862\]
+#### New 'Check Interprete Measurement' check \[ID_13862\]
 
 A new check has been added that will throw a warning whenever a parameter does not have matching Interprete and Measurement types.
 
@@ -50,7 +50,7 @@ A new check has been added that will throw a warning whenever a parameter does n
 | 5001        | Warning     | Verify Measurement - Interprete Combination for {0} : {1}      |
 | 5002        | Warning     | Verify Interprete RawType - Type Combination: {0} - {1}        |
 
-#### ‘Main display tag integrity’ check now also checks the content of the defaultPage attribute of the Display tag \[ID_13863\]
+#### 'Main display tag integrity' check now also checks the content of the defaultPage attribute of the Display tag \[ID_13863\]
 
 The ‘Main display tag integrity’ check now also checks the content of the defaultPage attribute of the main Display tag. As a result, the text of warning 1101 has been updated.
 
@@ -58,7 +58,7 @@ The ‘Main display tag integrity’ check now also checks the content of the de
 |-------------|---------|--------------------------------------------------------------------------|
 | 1101        | Warning | Main Display tag attribute “defaultPage” is missing, malformed or empty. |
 
-#### New ‘Check Protocol Names’ check \[ID_13864\]
+#### New 'Check Protocol Names' check \[ID_13864\]
 
 A new check has been added that will throw an error whenever an exported DVE protocol has an incorrect protocol name.
 
@@ -69,7 +69,7 @@ A new check has been added that will throw an error whenever an exported DVE pro
 | 4902 | Error | Exported protocol name \[Protocol Name\] contains illegal characters. |
 | 4903 | Error | Exported protocol name \[Protocol Name\] has an incorrect format. Expected format is “\[Parent Protocol Name\] - \[Name\]” |
 
-#### ‘Check Trend Alarm’ check: New return codes \[ID_13872\]
+#### 'Check Trend Alarm' check: New return codes \[ID_13872\]
 
 The ‘Check Trend Alarm’ check can now thrown two additional errors:
 
@@ -78,7 +78,7 @@ The ‘Check Trend Alarm’ check can now thrown two additional errors:
 | 2405 | Error | Write parameter is trended and monitored. |
 | 2406 | Error | Parameter {0} has trending="true" and is monitored. However, it is not displayed on any page, which is inconsistent. Please verify. |
 
-#### ‘Check RTDisplay True’ check: New return code \[ID_15136\]
+#### 'Check RTDisplay True' check: New return code \[ID_15136\]
 
 The ‘Check RTDisplay True’ check can now thrown the following additional error when a table without export attribute and without ‘RTDisplay=”true”’ setting has a column with an export attribute.
 

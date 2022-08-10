@@ -78,7 +78,7 @@ In an alarm template, it is now possible to configure monitoring conditions that
 
 A drop-down box now allows you to choose between “Value” (default) and “Not initialized”. Note that, when you choose “Value” and enter a parameter value, that value will not be cleared when you later select “Not initialized”.
 
-#### Alarm Console: Special Indexing Engine search tab is now available without enabling the “System configuration \> Indexing Engine \> UI Available” user permission \[ID_25429\]
+#### Alarm Console: Special Indexing Engine search tab is now available without enabling the 'System configuration \> Indexing Engine \> UI Available' user permission \[ID_25429\]
 
 On systems on which the alarms were migrated to an Indexing Engine, up to now the special Indexing Engine search tab would only be available in the Alarm Console of users who had been granted the “System configuration \> Indexing Engine \> UI Available” user permission. From now on, that search tab will be available to all users, regardless of whether they were granted the above-mentioned user permission.
 
@@ -154,7 +154,7 @@ The HTML5 apps (e.g. Monitoring), which make use of the Web Services API, will i
 
 Up to now, all DMAObjectRefTreeRequestMessage request were processed sequentially. From now on, only those that update information will be processed as such.
 
-#### SLDataMiner will no longer try to send status updates to the Mobile Gateway if the latter has its location set to “\<none>” \[ID_24972\]
+#### SLDataMiner will no longer try to send status updates to the Mobile Gateway if the latter has its location set to none \[ID_24972\]
 
 When the Mobile Gateway location was set to “\<none>”, up to now, SLDataMiner would incorrectly try to send status updates to the Mobile Gateway’s non-existing IP address 0.0.0.0.
 
@@ -163,7 +163,7 @@ From now on, when the Mobile Gateway location is set to “\<none>”, SLDataMin
 > [!NOTE]
 > From now on, when a user changes the cellphone location, an information event will be generated.
 
-#### SLAnalytics: Logging will no longer contain “Unexpected number of responses returned while sending getInfoMessage” notices \[ID_25240\]
+#### SLAnalytics: Logging will no longer contain 'Unexpected number of responses returned while sending getInfoMessage' notices \[ID_25240\]
 
 The SLAnalytics logging will no longer contain lines mentioning the following notice:
 
@@ -206,7 +206,7 @@ Also, when you open a Visio page containing a ListView component, a notice will 
 - If the ListView is configured to list elements, a notice will appear when you do not have access to the listed elements.
 - If the ListView is configured to list bookings, a notice will appear when the DataMiner System has nor the required software licenses (ResourceManager, ServiceManager, SRM Concurrency) nor an Indexing Engine installed.
 
-#### DataMiner Cube - Visual Overview: ListView component will only show “clear filter” button when FilterMode option is set to true \[ID_25560\]
+#### DataMiner Cube - Visual Overview: ListView component will only show 'clear filter' button when FilterMode option is set to true \[ID_25560\]
 
 From now on, the ListView component will only show the “clear filter” button when the FilterMode option has been set to true.
 
@@ -251,7 +251,7 @@ A number of performance enhancements have been made with regard to the \[profile
 
 ### Fixes
 
-#### Problem when sending a GetInfoMessage of type “IndexConfigurationMessage” while an agent is offline \[ID_24898\]
+#### Problem when sending a GetInfoMessage of type 'IndexConfigurationMessage' while an agent is offline \[ID_24898\]
 
 When, in the DataMiner System, a GetInfoMessage of type “IndexConfigurationMessage” was sent to all agents while one of them was offline, in some cases, the method would return an exception instead of the information received from the online agents.
 
@@ -273,7 +273,7 @@ When you had selected one or more users or groups in the Add existing user or Ad
 
 In some cases, DataMiner Cube could leak memory due to an incorrect internal clean-up of items removed from the Scheduler timeline.
 
-#### DataMiner Cube - Alarm Console: Severity duration of cleared alarms was not set to “N/A” \[ID_25370\]
+#### DataMiner Cube - Alarm Console: Severity duration of cleared alarms was not set to 'N/A' \[ID_25370\]
 
 When you added the *Severity Duration* column to the Alarm Console, up to now, the duration for a cleared alarm was incorrectly shown as the difference between the time of the alarm and the current time. From now on, the duration of a cleared alarm will always be shown as “N/A”.
 
@@ -319,7 +319,7 @@ When, using a particular pollingRate configuration, there was a polling cycle du
 
 In some cases, placeholders in Correlation emails would not be filled in correctly.
 
-#### SNMP: Problem when using a specific polling rate in conjunction with the “SNMP set and get” or “dynamic SNMP get” options \[ID_25514\]
+#### SNMP: Problem when using a specific polling rate in conjunction with the 'SNMP set and get' or 'dynamic SNMP get' options \[ID_25514\]
 
 When a protocol configured to poll SNMP columns at a specific polling rate has write parameters that use the “SNMP set and get” option or parameters that use the “dynamic SNMP get” option, in some cases, values could appear to be toggling in the user interface.
 
@@ -347,7 +347,7 @@ In an alarm timeline component, in some cases, an error could occur when differe
 
 When, in the Dashboards app, no page had been selected in the settings of a Visual Overview component, in some cases, that component would show a “Could not retrieve the image for the Visual Overview” error message.
 
-#### Legacy Reporter: Report with trend graph block would incorrectly show a “No parameters were provided for this element” notice \[ID_25595\]
+#### Legacy Reporter: Report with trend graph block would incorrectly show a 'No parameters were provided for this element' notice \[ID_25595\]
 
 When, in the legacy Reporter, you generated a report with a “trend graph” block, it would incorrectly display a “No parameters were provided for this element” notice when the parameters in question only had real-time trending enabled.
 
@@ -423,7 +423,7 @@ When you exported an element to a CSV file, and that element had timeouts define
 
 In the Resources app, it is possible to add capabilities and capacities to resources. When you deleted a capability or a capacity in the user interface, in some cases, the deletion would incorrectly not be implemented on the DataMiner Agent.
 
-#### DataMiner Cube - Trending: Problem with invalid “NaN” points \[ID_25698\]
+#### DataMiner Cube - Trending: Problem with invalid 'NaN' points \[ID_25698\]
 
 When, in a trend graph, an invalid “NaN” point had to be drawn immediately after a gap, in some cases, an error could occur.
 
@@ -449,7 +449,7 @@ When, in an Automation script, you added an email action and included a report t
 
 In some cases, a service definition selected in an embedded ServiceManager component would incorrectly get unselected when another service definition was modified in another Cube session.
 
-#### DataMiner Cube - EPM: Problem when opening an EPM diagram that used the “DiagramPids” option \[ID_25797\]
+#### DataMiner Cube - EPM: Problem when opening an EPM diagram that used the 'DiagramPids' option \[ID_25797\]
 
 In some cases, DataMiner Cube would freeze when you opened an EPM diagram that used the “DiagramPids” option.
 
@@ -465,7 +465,7 @@ When the Internet browser was configured to only use TLS 1.2, in some cases, the
 
 In some rare cases, an error could occur in SLDMS when connecting to another DataMiner Agent.
 
-#### Jobs app: Problem when adding a field of type “Static Text” \[ID_25930\]
+#### Jobs app: Problem when adding a field of type 'Static Text' \[ID_25930\]
 
 In some cases, an exception could be thrown when you added a field of type “Static Text” to a job section.
 

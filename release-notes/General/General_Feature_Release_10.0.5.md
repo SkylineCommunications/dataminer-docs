@@ -127,7 +127,7 @@ DataMiner Cube will calculate severity durations based on the alarms listed on t
 
 Additionally, a number of enhancements have been made with respect to severity durations. For instance, it is now also possible to display the severity duration when history tracking is disabled.
 
-#### Visual Overview: Shapes linked to views can now have an “AlarmLevel” shape data field \[ID_24952\]
+#### Visual Overview: Shapes linked to views can now have an 'AlarmLevel' shape data field \[ID_24952\]
 
 To a shape linked to a view, you can now add a shape data field of type “AlarmLevel” to configure which of the view’s alarm levels you want the shape’s background color to display.
 
@@ -410,7 +410,7 @@ Please note the following regarding job attachments:
 > [!WARNING]
 > Always be extremely careful when using the SLNetClientTest tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
 
-#### Monitoring app: “Information”, “Traces” and “Presets” tabs added to spectrum page of Spectrum Analyzer elements \[ID_25028\]\[ID_25059\]
+#### Monitoring app: 'Information', 'Traces' and 'Presets' tabs added to spectrum page of Spectrum Analyzer elements \[ID_25028\]\[ID_25059\]
 
 The following tabs were added to the spectrum page of Spectrum Analyzer elements:
 
@@ -579,7 +579,7 @@ On the DataMiner Agent, the tool itself can be found at the following location:
 
 ### Enhancements
 
-#### SLNet setting “FlushQueudMessagesInterval” no longer has a minimum value \[ID_24205\]
+#### SLNet setting 'FlushQueudMessagesInterval' no longer has a minimum value \[ID_24205\]
 
 The “FlushQueuedMessagesInterval” setting controls the interval at which pending messages are flushed to clients through the callback connection. The larger this interval, the less calls will be made, but the longer the delay will be between events being generated and clients receiving them. This setting is a global setting that can be configured per DataMiner Agent, and applies to any client connecting to SLNet.
 
@@ -611,7 +611,7 @@ A number of minor enhancements have been made to the *Advanced Editing* pane:
 
 - The current selection will now be taken into account when starting the *Advanced Editing* extension.
 
-#### DataMiner Cube - Correlation: Enhancements with regard to the use of placeholders in “Send Email” actions of Correlation rules \[ID_24816\]
+#### DataMiner Cube - Correlation: Enhancements with regard to the use of placeholders in 'Send Email' actions of Correlation rules \[ID_24816\]
 
 A number of minor enhancements have been made with regard to the use of placeholders in “Send Email” actions of correlation rules.
 
@@ -661,7 +661,7 @@ When you add a *ListView* component to a Visio page, from now on, that component
 
 The third-party library used to generated PDFs in the legacy Reports & Dashboards app (Winnovative) has been updated to version 15.
 
-#### SLTaskBarUtility: Default Agents to upgrade now set to "cluster" \[ID_25118\]
+#### SLTaskBarUtility: Default Agents to upgrade now set to 'cluster' \[ID_25118\]
 
 Previously, "Agents to upgrade" was by default set to "localhost" in the SLTaskBarUtility upgrade window. In order to ensure that clusters are upgraded completely, now "cluster" is selected by default. However, not that in case the Agent is not running, localhost will still be selected.
 
@@ -695,7 +695,7 @@ In addition, it is now also possible to configure a filter on the *ListView* sha
 
 From now on, behavioral anomaly detection will no longer generate nor clear suggestion events when its flood mode is activated.
 
-#### DataMiner Cube: Enhanced behavior of “Save all changes” and “Discard all changes” commands in Profiles and Services apps \[ID_25259\]
+#### DataMiner Cube: Enhanced behavior of 'Save all changes' and 'Discard all changes' commands in Profiles and Services apps \[ID_25259\]
 
 In the Profiles and Services apps, a number of enhancements have been made with regard to the “Save all changes” and “Discard all changes” commands.
 

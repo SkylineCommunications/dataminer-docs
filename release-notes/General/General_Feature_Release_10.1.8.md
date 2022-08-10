@@ -307,13 +307,13 @@ There have also been a number of enhancements to the file selector control in ge
 
 ### DMS web apps
 
-#### Visual Overview: Links starting with “mailto:” now also work in web apps \[ID_30109\]
+#### Visual Overview: Links starting with 'mailto:' now also work in web apps \[ID_30109\]
 
 When, in shape data, you specify links starting with “mailto:”, those links will now also work in web apps.
 
 ### DMS Service & Resource Management
 
-#### Profile manager errors with ErrorReason “ReservationsMustBeReconfigured” now include a ReservationInstanceDetails list \[ID_29914\]
+#### Profile manager errors with ErrorReason 'ReservationsMustBeReconfigured' now include a ReservationInstanceDetails list \[ID_29914\]
 
 From now on, an error with ErrorReason “ReservationsMustBeReconfigured” will now include a ReservationInstanceDetails list containing the ID, the name and the start time of every affected ReservationInstance.
 
@@ -462,7 +462,7 @@ CDataMiner::LoadSimulations|ERR|0|Failed to query directory 'C:\Skyline DataMine
 
 From now on, such entries will no longer by default be added to the above-mentioned log files at DataMiner startup.
 
-#### DataMiner Cube: “DataMiner Cube mobile” changed to “DataMiner web apps” \[ID_30201\]
+#### DataMiner Cube: 'DataMiner Cube mobile' changed to 'DataMiner web apps' \[ID_30201\]
 
 Throughout the Cube UI, the term “DataMiner Cube mobile” has been replaced by the term “DataMiner web apps”.
 
@@ -474,11 +474,11 @@ Since DataMiner version 10.0.0 CU11/10.1.3, when a ReservationInstance was creat
 
 In a protocol.xml file, it is possible to specify that a Data Display page should either be shown or hidden based on a parameter value. Service cards now also support this feature.
 
-#### BPA test “Report Active RTE” will now run more frequently \[ID_30250\]
+#### BPA test 'Report Active RTE' will now run more frequently \[ID_30250\]
 
 The BPA test “Report Active RTE” will now run once every 8 minutes instead of once every hour.
 
-#### Updated BPA tests: “Minimum Requirements Check” & “View Recursion” \[ID_30259\]
+#### Updated BPA tests: 'Minimum Requirements Check' & 'View Recursion' \[ID_30259\]
 
 The following default BPA tests were updated:
 
@@ -491,7 +491,7 @@ The following default BPA tests were updated:
 
 When, in a DataMiner System with at least three agents, a DataMiner Agent was starting up, in some cases, the NATS service would fail to start without any log entry explaining the reason for this failure.
 
-#### Dashboards app - Time range feed: Value passed along incorrectly when “Use quick picks” option was selected \[ID_29471\]
+#### Dashboards app - Time range feed: Value passed along incorrectly when 'Use quick picks' option was selected \[ID_29471\]
 
 When the “Use quick picks” option was selected, a time range feed would pass along the selected value incorrectly.
 
@@ -513,15 +513,15 @@ When you increased the log level of SLDataMiner, high-level log entries would in
 
 When, in Visual Overview, a table control had the SelectionSetVar option specified, in some cases, it would not be possible to select a row.
 
-#### DataMiner Cube - Resources app: No scrollbars would appear when a pane was not able to show all content \[ID_29836\]
+#### DataMiner Cube - Resources app: No scroll bars would appear when a pane was not able to show all content \[ID_29836\]
 
-When, in the Resources app, you selected a resource with e.g. a large number of capacity and/or capability parameters, no scrollbars would appear, even when the pane was not able to show all content.
+When, in the Resources app, you selected a resource with e.g. a large number of capacity and/or capability parameters, no scroll bars would appear, even when the pane was not able to show all content.
 
 #### HTML5 apps: Incorrect overlay could appear when a timespan field got the focus \[ID_29849\]
 
 When, in an HTML5 app, a timespan field got the focus, in some cases, an incorrect overlay could appear on top of the field.
 
-#### Cassandra: “tried to execute null statement” errors incorrectly added to SLDBConnection.txt log file \[ID_29947\]
+#### Cassandra: 'tried to execute null statement' errors incorrectly added to SLDBConnection.txt log file \[ID_29947\]
 
 On systems with a Cassandra database, errors similar to the one below would incorrectly be added to the SLDBConnection.txt log file:
 
@@ -560,7 +560,7 @@ When a client disconnected while the DMA was starting up, in some rare cases, pa
 
 When, in interactive Automation scripts, you rapidly entered values in multiple text boxes, in some rare cases, only the value entered in the last text box would be saved.
 
-#### Stopping an SLA would cause a “window change” event that would lead to outages being closed when history set alarms were received \[ID_29998\]
+#### Stopping an SLA would cause a 'window change' event that would lead to outages being closed when history set alarms were received \[ID_29998\]
 
 When an SLA is stopped while it has an open outage, the open outage will be closed with a timestamp containing the time at which the SLA was stopped. This ensures that all outages are closed in case the SLA starts again when no impacting alarms are present to open and later close the outage.
 
@@ -600,7 +600,7 @@ When, in a user card, you opened the *Group membership* tab, both the *Available
 
 In a parameter feed, in some rare cases, the selection would not be set.
 
-#### DataMiner Cube - Alarm Console: Problem when reconnecting after adding the “Severity Duration” column \[ID_30099\]
+#### DataMiner Cube - Alarm Console: Problem when reconnecting after adding the 'Severity Duration' column \[ID_30099\]
 
 When, in the Alarm Console, you added the Severity Duration column and then reconnected, on a large DataMiner System, Cube could become unresponsive.
 
@@ -612,7 +612,7 @@ When you started the DataMiner Cube desktop app, in some cases, the start window
 
 In table visualizations, in some cases, primary key columns would have an incorrect background color. From now on, the Dashboards app will visualize primary key columns in the same way as they are visualized in DataMiner Cube.
 
-#### BPA tests could fail with a “BPA has an invalid signature” error \[ID_30118\]
+#### BPA tests could fail with a 'BPA has an invalid signature' error \[ID_30118\]
 
 On DataMiner Agents on which the latest Windows updates had not been installed, in some cases, BPA tests would fail with the following error:
 
@@ -638,7 +638,7 @@ When you change the IP address of an SNMPv1 or SNMPv2 element that is polled usi
 
 Also, from now on, when an SNMP-related failure occurs, the log entry will include the error code. Where previously a log entry like “Unable to set destination port” would be added, DataMiner will now add a log entry like “Unable to set destination port (error code: 3)”.
 
-#### DataMiner Cube - Backup: Users without “Backup \> Configure” permission would incorrectly be allowed to update the “Indexing Engine location” backup path \[ID_30131\]
+#### DataMiner Cube - Backup: Users without 'Backup \> Configure' permission would incorrectly be allowed to update the “Indexing Engine location” backup path \[ID_30131\]
 
 In the *Backup* section of *System Center*, users without *Modules \> System configuration \> Backup \> Configure* permission would incorrectly be allowed to update the *Indexing Engine location* backup path.
 
@@ -652,7 +652,7 @@ When a DataMiner Agent using NATS was upgraded to a version containing the logfi
 
 From now on, when a DataMiner Agent starts up after being upgraded and the nats-server.config does not contain the logfile_size_limit setting, it will be added at SLNet startup. Its value will by default be set to 10 MB.
 
-#### Dashboards app - GQI: “Start from” option would not be available when the Queries.json file was empty or missing \[ID_30157\]
+#### Dashboards app - GQI: 'Start from' option would not be available when the Queries.json file was empty or missing \[ID_30157\]
 
 When building a GQI query, in some cases, the “Start from” option would not be available when the C:\\Skyline DataMiner\\Generic Interface\\Queries.json file was empty or missing.
 
@@ -664,7 +664,7 @@ When, in the *Users/groups* section of *System Center*, you opened a user card a
 
 When, on a visual overview, you clicked a button to navigate to another card and then clicked the Back button, in some cases, clicking the button to navigate to another card a second time would no longer open that other card.
 
-#### DataMiner Cube - EPM: Problem opening an EPM card from an alarm when the “System Name” alarm property contained a trailing space \[ID_30169\]
+#### DataMiner Cube - EPM: Problem opening an EPM card from an alarm when the 'System Name' alarm property contained a trailing space \[ID_30169\]
 
 When the “System Name” property of an alarm contained a trailing space, in some cases, it would not be possible to open the EPM card from the alarm in question.
 

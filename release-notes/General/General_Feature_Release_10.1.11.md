@@ -446,11 +446,11 @@ The Cube log files will now contain more information regarding system performanc
 > [!NOTE]
 > A new checkbox at the top of System Center’s Logging page will allow you to show or hide these System Performance Indicator (SPI) log entries.
 
-#### Logging: New log file “Sharing Manager” \[ID_30826\]
+#### Logging: New log file 'Sharing Manager' \[ID_30826\]
 
 The Logging module now also allows you to access the Sharing Manager log file.
 
-#### DataMiner Cube - Router Control: “Direct take” mode \[ID_30865\]
+#### DataMiner Cube - Router Control: 'Direct take' mode \[ID_30865\]
 
 When configuring a matrix in the Router Control module, you can now set it to either “preset mode” (i.e. the default mode) or “direct take mode”.
 
@@ -463,7 +463,7 @@ When configuring a matrix in the Router Control module, you can now set it to ei
 > - selecting an output will not cause crosspoints to be created or deleted, and
 > - input selections will only be cleared when you select another output.
 
-#### Sidebar: “Advanced search” improvements \[ID_30885\]
+#### Sidebar: 'Advanced search' improvements \[ID_30885\]
 
 Up to now, the advanced search pane was only added to the sidebar after you entered a search string in the search box in the middle of the Cube header bar and then clicked the “Advanced search for” option at the bottom of the suggestions list. From now on, you can directly open the advanced search pane by clicking the ellipsis button (“...”) in the sidebar and selecting the *Search* button.
 
@@ -505,7 +505,7 @@ It is now possible to pin and unpin items in the sidebar.
 > [!NOTE]
 > One of the items you can pin after clicking the ellipsis button (“...”) is the “Overview” button. Clicking this button after it has been pinned will open a card showing the root view (Below this view \> All).
 
-#### Visual Overview: Setting the background color of a static shape using a shape data field of type “BackgroundColor” \[ID_30964\]
+#### Visual Overview: Setting the background color of a static shape using a shape data field of type 'BackgroundColor' \[ID_30964\]
 
 Using a shape data field of type *BackgroundColor* it is now possible to set the background color of a static shape, i.e. a shape that is not linked to an element, a service or a view.
 
@@ -526,7 +526,7 @@ The \<color> value in the example above can be specified as follows:
 > - If you specified a valid color or if the placeholder resolves correctly, the color you specified will overrule the shape’s default background color. Note that if blinking was enabled, it will be disabled.
 > - If you specify a custom BackgroundColor, shape transparency will work as before.
 
-#### System Center - Analytics config: New setting “Maximum group size” \[ID_30993\] \[ID_31093\]
+#### System Center - Analytics config: New setting 'Maximum group size' \[ID_30993\] \[ID_31093\]
 
 In the *System settings \> Analytics config* section of *System Center*, a new setting has been added for automatic incident tracking. The *Maximum group size* setting will now allow you to limit the size of the alarm groups.
 
@@ -539,7 +539,7 @@ Default value: 1000
 
 ### DMS Reports & Dashboards
 
-#### Dashboards app - GQI: New filter node option “Return no rows when feed is empty” \[ID_29557\]
+#### Dashboards app - GQI: New filter node option 'Return no rows when feed is empty' \[ID_29557\]
 
 When, in the Data tab, you add a filter node to a GQI query, a new option named “Return no rows when feed is empty” will allow you to specify what should be returned when the filter yields no rows.
 
@@ -550,11 +550,11 @@ When, in the Data tab, you add a filter node to a GQI query, a new option named 
 
 When the *Layout flow* setting of a State component is set to “Columns” and there is either a single group or no grouping at all, from now on, the states will always be displayed at full width.
 
-#### Dashboards app - Node edge graph component: New “Bidirectional configuration” option \[ID_30910\]
+#### Dashboards app - Node edge graph component: New 'Bidirectional configuration' option \[ID_30910\]
 
 When configuring a node edge graph component, you can now use the *Bidirectional configuration* option to specify how you want multiple edges between two nodes to be mapped.
 
-#### Dashboards app - Node edge graph component: “Filtering & highlighting” section \[ID_31065\]
+#### Dashboards app - Node edge graph component: 'Filtering & highlighting' section \[ID_31065\]
 
 In the *Layout* pane of a node-edge component, the *Column filters* section has been renamed to *Filtering & highlighting* and now contains the following options:
 
@@ -600,7 +600,7 @@ Resource[] RemoveResources(Resource[] resources, bool ignorePassedReservations, 
 
 ### DMS tools
 
-#### SLLogCollector: Option “Upload to Skyline” removed \[ID_31032\]
+#### SLLogCollector: Option 'Upload to Skyline' removed \[ID_31032\]
 
 Up to now, when an internet connection was available on the DMA, the SLLogCollector tool provided an option to upload the collected information to Skyline via email. This “Upload to Skyline” option has now been removed.
 
@@ -676,7 +676,7 @@ Overall performance has increased when determining the virtual function impact o
 
 Also, a number of issues have been fixed with regard to displaying statuses of virtual function alarms, exporting alarms to DVE child elements, masking of external alarms and updating virtual function states when alarms are cleared.
 
-#### DataMiner Cube - Alarm Console: Availability of “Count alarms” button now depends on the alarm filter that was specified \[ID_30810\]
+#### DataMiner Cube - Alarm Console: Availability of 'Count alarms' button now depends on the alarm filter that was specified \[ID_30810\]
 
 When, in the Alarm Console, you add a new history or sliding window tab page, you can add a filter by clicking *Apply filter*. After configuring that filter, you can click *Count alarms* to see how many alarms will be retrieved when that filter is applied. However, up to now, when the filter contained one of the following items, it would not be possible to count the number of alarms that matched the filter:
 
@@ -735,7 +735,7 @@ A number of enhancements have been made to the Router Control app with regard to
 - When you connected an input to an output with multiple connections to other inputs and the “output first workflow” option was enabled, in some cases, those other connected inputs would no longer be highlighted. From now on, inputs connected to an output will no longer lose their highlighting when you connect a new input to that same output.
 - When you selected an input of a matrix that did not have the “output first workflow” option enabled, up to now, the connected outputs would not be highlighted. From now on, these will be highlighted.
 
-#### DataMiner backup: User-generated dashboards now included in “Configuration Backup” & “Configuration Backup without Database” \[ID_30957\]
+#### DataMiner backup: User-generated dashboards now included in 'Configuration Backup' & 'Configuration Backup without Database' \[ID_30957\]
 
 From now on, user-generated dashboards will by default be included in the following types of backups:
 
@@ -756,7 +756,7 @@ From now on, the FieldName of a TicketFieldDescriptor has to meet the following 
   - " (double quote)
   - ' (single quote)
 
-#### DataMiner backup: Process Automation data now included in “Full Backup” \[ID_30999\]
+#### DataMiner backup: Process Automation data now included in 'Full Backup' \[ID_30999\]
 
 From now on, Process Automation data will be included in the following types of backups:
 
@@ -768,7 +768,7 @@ From now on, Process Automation data will be included in the following types of 
 
 Up to now, a maximum of 100 users or groups could be imported from Azure AD. From now on, the number of users or groups that can be imported from Azure AD is no longer limited.
 
-#### DataMiner Cube - System Center: Enhanced “Limited administrator” tooltip \[ID_31042\]
+#### DataMiner Cube - System Center: Enhanced 'Limited administrator' tooltip \[ID_31042\]
 
 When, in the *Users/Groups* section of *System Center*, you hover over the *Modules \> System configuration \> Security \> Specific \> Limited administrator* permission, a tooltip gives you more information about that permission. That tooltip now contains the following updated text:
 
@@ -796,7 +796,7 @@ After restoring an Elasticsearch backup that was taken with the StandaloneElasti
 
 When the properties of a ReservationInstance were updated in an asynchronous event script while the end actions were running, in some cases, the end actions could overwrite the updated properties, causing the event script’s property update to fail and throw a “PropertiesAlreadyModified” exception.
 
-#### Dashboards app - Node edge graphs: Parameter values in node tooltips would incorrectly show “not initialized” \[ID_30694\]
+#### Dashboards app - Node edge graphs: Parameter values in node tooltips would incorrectly show 'not initialized' \[ID_30694\]
 
 When you hovered over a node, parameter values shown in the node tooltip would incorrectly be set to “not initialized”.
 
@@ -822,7 +822,7 @@ When generating child shapes that represent alarms, up to now, those child shape
 
 From now on, generated child shapes that represent alarms will appear on a transparent background instead.
 
-#### Confusing “Already authenticated error” would be thrown when an error occurred during an authentication process \[ID_30827\]
+#### Confusing 'Already authenticated error' would be thrown when an error occurred during an authentication process \[ID_30827\]
 
 When an error occurred during an authentication process, in some cases, a confusing “Already authenticated” exception would be thrown instead of the actual error message. From now on, the actual error message will be thrown.
 
@@ -846,11 +846,11 @@ In some cases, a ParameterThread error could occur in SLElement.
 
 When, in an interactive Automation script, a file selector block was defined after another type of input block (e.g. a checkbox), in some cases, the input block value returned by the client would incorrectly be considered as an invalid file path selected in the file selector. As a result, an “Invalid Data” error would be thrown.
 
-#### DataMiner Cube - Alarm Console: Incorrect notices like “!! Unknown \<Type> R!AD for parameter xxx” \[ID_30884\]
+#### DataMiner Cube - Alarm Console: Incorrect notices like '!! Unknown \<Type> R!AD for parameter xxx' \[ID_30884\]
 
 In some rare cases, notices like “!! Unknown \<Type> RE!D for parameter 123” would incorrectly appear in the Alarm Console.
 
-#### DataMiner Cube - Alarm Console: “Automatic incident tracking” option would no longer be visible in the hamburger menu \[ID_30890\]
+#### DataMiner Cube - Alarm Console: 'Automatic incident tracking' option would no longer be visible in the hamburger menu \[ID_30890\]
 
 In some cases, the “Automatic incident tracking” option would no longer be visible in the hamburger menu of the Alarm Console.
 

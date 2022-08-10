@@ -265,7 +265,7 @@ See the following example. The chain named “MyChain” will be part of the gro
 > - Each chain can only be part of a single chain group.
 > - Chains that are not part of a group will be displayed as top-level tabs (on the same level as the group tabs).
 
-#### Settings window: “Surveyor” section renamed to “Sidebar” & New “Launch EPM card on filter selection” setting added \[ID_28788\]
+#### Settings window: 'Surveyor' section renamed to 'Sidebar' & New 'Launch EPM card on filter selection' setting added \[ID_28788\]
 
 In the user settings tab of the *Settings* window, the *Surveyor* section has been renamed to *Sidebar*.
 
@@ -583,7 +583,7 @@ When, in the Profiles app, you indicate that a profile parameter is mandatory, i
 
 Up to now, GQI queries were stored in a separate JSON file. From now on, they will be stored in the dashboards.
 
-#### “Register DataMiner as Service32.bat” removed from the C:\\Skyline DataMiner\\Tools folder \[ID_28808\]
+#### 'Register DataMiner as Service32.bat' removed from the C:\\Skyline DataMiner\\Tools folder \[ID_28808\]
 
 The “Register DataMiner as Service32.bat” file has been deprecated. It has been removed from the C:\\Skyline DataMiner\\Tools folder.
 
@@ -593,7 +593,7 @@ A number of enhancements have been made to the default Cassandra Cluster table c
 
 ### Fixes
 
-#### DataMiner Cube - Alarm Console: Problem with “unread alarms” counter \[ID_28063\]
+#### DataMiner Cube - Alarm Console: Problem with 'unread alarms' counter \[ID_28063\]
 
 In some cases, the number of unread alarms displayed in the header of an alarm tab would be incorrect, especially on history tabs, on filtered tabs or when e.g. masking an alarm immediately after it was set to read.
 
@@ -683,7 +683,7 @@ Due to a file locking issue, in some cases, it would not be possible to create n
 
 If, in Db.xml, the \<DBServer> element of an Elasticsearch database configuration contained multiple IP addresses separated by spaces, in some cases, an error could occur.
 
-#### Problem when compiling QActions when “System.xxxx” and “Microsoft.xxx” DLL files could not be found in the Windows System Assemblies folders \[ID_28653\]
+#### Problem when compiling QActions when 'System.xxxx' and 'Microsoft.xxx' DLL files could not be found in the Windows System Assemblies folders \[ID_28653\]
 
 When a QAction was defined with dllImport=”System.xxxxx.dll” or dllImport=”Microsoft.xxxx.dll”, in some cases, the QAction would fail to compile when the referenced DLL file could not be found in the Windows System Assemblies folders.
 
@@ -767,7 +767,7 @@ When the domain server was not available, DataMiner would incorrectly remove all
 
 When a DMA temporarily lost its connection to another DMA, in some cases, remote connections of other DMAs would incorrectly also get removed from its local cache.
 
-#### DataMiner Cube desktop app: Problem when started with the “/Hostname=xyz” command line argument \[ID_28774\]
+#### DataMiner Cube desktop app: Problem when started with the '/Hostname=xyz' command line argument \[ID_28774\]
 
 When you started the DataMiner Cube desktop app with the “/Hostname=xyz” command line argument, in some cases, an error could occur when its configuration file was empty or could not be found.
 
@@ -775,7 +775,7 @@ When you started the DataMiner Cube desktop app with the “/Hostname=xyz” com
 
 When you added a feed component to a dashboard (e.g. a dropdown feed) and gave it a title, in the Feeds section of the edit pane’s Data tab, the feed would incorrectly have the name you gave to the component instead of the actual name of the feed.
 
-#### DataMiner Cube - Alarm Console: Alarms in alarm tab of type “Active alarms linked to cards” would be filtered incorrectly when opening an EPM card \[ID_28780\]
+#### DataMiner Cube - Alarm Console: Alarms in alarm tab of type 'Active alarms linked to cards' would be filtered incorrectly when opening an EPM card \[ID_28780\]
 
 When, in your Alarm Console, you had an alarm tab of type “Active alarms linked to cards”, in some cases, when you opened an EPM card, the alarms in that alarm tab would not be filtered correctly. Also, the name of the alarm tab would not be displayed correctly.
 
@@ -787,7 +787,7 @@ When the NAS and NATS services had been deleted manually, in some cases, re-inst
 
 When a DMS.xml file contained multiple addresses referring to the same DataMiner Agent, up to now, this could lead to various problems, one of them being disconnects/reconnects of type “XXXX state has changed from XXX to XXXXX” in DataMiner Cube.
 
-#### Invalid “Failed to read out schedules: XML response was not in the correct format.” errors added to SLErrors.txt log file \[ID_28795\]
+#### Invalid 'Failed to read out schedules: XML response was not in the correct format.' errors added to SLErrors.txt log file \[ID_28795\]
 
 In some cases, a “Failed to read out schedules: XML response was not in the correct format.” error message would be added to the SLErrors.txt log file for every alarm template on the system that did not have a schedule defined.
 
@@ -803,9 +803,9 @@ In some cases, it was no longer possible to install the DataMiner Cube desktop a
 
 In the metadata of a BPA test result, you can find the start time and end time of the test. In some cases, both would incorrectly have the same timestamp and the end time would be returned in local time instead of UTC.
 
-#### Dashboards app: Problem when all data was removed from a table column parameter that acted as datasource for a Gauge, Ring or State component \[ID_28806\]
+#### Dashboards app: Problem when all data was removed from a table column parameter that acted as data source for a Gauge, Ring or State component \[ID_28806\]
 
-When a Gauge, Ring or State component had a table column parameter as datasource, in some cases, an error could be thrown when, in DataMiner Cube, all data was removed from that table.
+When a Gauge, Ring or State component had a table column parameter as data source, in some cases, an error could be thrown when, in DataMiner Cube, all data was removed from that table.
 
 #### Dashboards app: Saved GQI queries containing deprecated identifiers could no longer be rebuilt \[ID_28807\]
 
@@ -815,7 +815,7 @@ In some cases, saved GQI queries containing deprecated identifiers could no long
 
 At DataMiner startup, the IP address entries in the C:\\Skyline DataMiner\\Files\\SyncInfo\\{DO_NOT_REMOVE_DC5A2A6C-4583-493C-A9CD-7AEBBF905D1E}.xml file would incorrectly be updated with the current timestamp. In some cases, this could cause IP addresses to re-appear in DMS.xml files across the DMS after starting up a stopped DataMiner Agent that still had those IP addresses listed as active.
 
-#### Dashboards app - Line chart component: Problem with the “Minimum visible gap size” setting \[ID_28810\]
+#### Dashboards app - Line chart component: Problem with the 'Minimum visible gap size' setting \[ID_28810\]
 
 When, while configuring a line chart component, you opened the selection box containing the values of the *Minimum visible gap size* setting, in some cases, that selection box would not be displayed correctly.
 

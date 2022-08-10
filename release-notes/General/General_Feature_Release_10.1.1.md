@@ -37,7 +37,7 @@ See the example below, showing how this can be configured in the Db.xml file.
 </DataBase>
 ```
 
-#### Video thumbnails: Authentication header can now be specified in an “auth=” option \[ID_28116\]
+#### Video thumbnails: Authentication header can now be specified in an 'auth=' option \[ID_28116\]
 
 In a video thumbnail URL, you can now specify an authorization header in an “auth=” option when requesting a thumbnail image from a video server using type “Generic Images”.
 
@@ -105,7 +105,7 @@ The following extension methods have now been moved from the QActionHelperBaseCl
 
 ### DMS Cube
 
-#### Trending: “Ignore gaps” option in export window renamed to “Exclude gaps” \[ID_28067\]
+#### Trending: 'Ignore gaps' option in export window renamed to 'Exclude gaps' \[ID_28067\]
 
 Up to now, when you exported a trend graph to CSV, it was possible to select the *Ignore gaps* option to make the export skip any gaps in the trend data. This option has now been renamed to *Exclude gaps*.
 
@@ -174,7 +174,7 @@ Using a data field of type “Info” set to the value “PARAMETER KEY”, a sh
 
 In the *Database* section of *System Center*, you can now also opt to offload database data to a file instead of a database.
 
-#### Visual Overview: Group-level shape data fields of type “ChildrenSort” now support placeholders \[ID_28289\]
+#### Visual Overview: Group-level shape data fields of type 'ChildrenSort' now support placeholders \[ID_28289\]
 
 In a group-level shape data field of type *ChildrenSort*, it is now possible to use placeholders.
 
@@ -203,11 +203,11 @@ Current limitations:
 - Changing a query will not trigger a revalidation of the queries that are using the updated query. A component will only re-fetch a query when the dashboard is refreshed or when the final query is changed.
 - If queries are running in a loop, a circular dependency error will be displayed.
 
-#### Dashboards app - GQI: Datasources now have a default column set \[ID_28103\]
+#### Dashboards app - GQI: Data sources now have a default column set \[ID_28103\]
 
-Each of the different datasources now has a default column set, which, if necessary, can be extended with every possible column in that datasource by adding column selector nodes to the query.
+Each of the different data sources now has a default column set, which, if necessary, can be extended with every possible column in that data source by adding column selector nodes to the query.
 
-| Datasource         | Default column set                                                 |
+| Data source        | Default column set                                                 |
 |--------------------|--------------------------------------------------------------------|
 | Alarms             | Visible columns in the Alarm Console of the Monitoring app.        |
 | Parameter tables   | Visible columns of the table definition in the protocol (max. 10). |
@@ -289,7 +289,7 @@ When, in the Jobs app or the Ticketing app, you change the widths of the columns
 
 ### DMS Service & Resource Management
 
-#### ReservationInstances now have an “AbsoluteQuarantinePriority” property \[ID_28080\]
+#### ReservationInstances now have an 'AbsoluteQuarantinePriority' property \[ID_28080\]
 
 ReservationInstances now have an “AbsoluteQuarantinePriority” property.
 
@@ -385,7 +385,7 @@ From now on, automatic incident tracking will ignore parameter name changes. The
 
 This will prevent parameters with different names ending up in the same alarm group.
 
-#### DataMiner Jobs: New field type “ServiceDefinitionFieldDescriptor” \[ID_28086\]
+#### DataMiner Jobs: New field type 'ServiceDefinitionFieldDescriptor' \[ID_28086\]
 
 A new field type “ServiceDefinitionFieldDescriptor” has been added, which will always require a GUID value referring to a service definition.
 
@@ -446,7 +446,7 @@ When automatic incident tracking is activated, active alarms that are related to
 
 A number of enhancements have been made to the animations in the Cube launcher tool.
 
-#### DataMiner Cube: “Central database” replaced by “Offload database” in all modules \[ID_28196\]
+#### DataMiner Cube: 'Central database' replaced by 'Offload database' in all modules \[ID_28196\]
 
 Throughout DataMiner Cube, the term “central database” has now been replaced by “offload database”.
 
@@ -536,11 +536,11 @@ In some cases, a trending percentile would be calculated incorrectly when the da
 
 When you changed both the profile definition and the service profile instance when editing a profile instance, after saving, the service profile instance selection box would be empty, although the data was saved correctly.
 
-#### Problem when retrieving composite instances using the “partialSNMP” option \[ID_28087\]
+#### Problem when retrieving composite instances using the 'partialSNMP' option \[ID_28087\]
 
 When retrieving composite instances using the SNMP polling option “partialSNMP”, in some cases, only the first set of the table would be polled correctly. Other rows would either be empty or not polled at all.
 
-#### DataMiner Cube - Profiles app: “Based on” selection box would be empty \[ID_28089\]
+#### DataMiner Cube - Profiles app: 'Based on' selection box would be empty \[ID_28089\]
 
 When, in the *Definitions* tab of the Profiles app, you selected a profile definition and then clicked *Add* to select another profile definition in the *Based on* selection box, in some cases, that selection box would be empty.
 
@@ -594,11 +594,11 @@ In some cases, a null reference exception could be thrown when creating a ticket
 
 When the DeleteJobsDomain method was used to delete the last job domain, in some cases, it would incorrectly try to delete the default job domain instead.
 
-#### DataMiner Cube - Element connections app: Problem with “Include element state” checkbox \[ID_28188\]
+#### DataMiner Cube - Element connections app: Problem with 'Include element state' checkbox \[ID_28188\]
 
 In the *Element connections* app, in some cases, the value of the *Include element state* checkbox would be saved incorrectly.
 
-#### DataMiner Cube - System Center/Backup: “Use one network path for all Agents” setting would be saved correctly but displayed incorrectly \[ID_28192\]
+#### DataMiner Cube - System Center/Backup: 'Use one network path for all Agents' setting would be saved correctly but displayed incorrectly \[ID_28192\]
 
 In the Backup section of System Center, it is possible to specify that a backup has to be stored on a network path. In some cases, when you specified one shared network path for all DataMiner Agents, this would be saved correctly, but displayed incorrectly in the user interface.
 
@@ -675,7 +675,7 @@ Due to a serialization error, in some cases, the following Web Services API v0 m
 - GetActiveAlarmsFromView
 - GetActiveAlarmsFromElement
 
-#### DataMiner Cube: No popup messages would appear when users logged in again after logging out \[ID_28306\]
+#### DataMiner Cube: No pop-up messages when users logged in again after logging out \[ID_28306\]
 
 When users logged in again after having logged out, in some cases, popup messages would no longer appear.
 

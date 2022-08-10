@@ -24,9 +24,9 @@ The table editor will now enforce the use of a semicolon as default column optio
 - If the first character in a column option string is a separator other than a semicolon, that character will be replaced by a semicolon.
 - If a column option string does not start with a separator character, then a semicolon will be added in front of the option string.
 
-#### Protocol tree: Parameters of type “group”, “read bit” and “write bit” are now indicated in parameter list \[ID_17332\]
+#### Protocol tree: Parameters of type 'group', 'read bit' and 'write bit' are now indicated in parameter list \[ID_17332\]
 
-Up to now, when you opened the *Params* node in the *Protocol Tree* window, table parameters and write parameters were indicated by “\[Table\]” and “\[W\]” respectively.
+Up to now, when you opened the *Params* node in the *Protocol Tree* window, table parameters and write parameters were indicated by "\[Table\]" and "\[W\]" respectively.
 
 Now, the following types of parameters will also have a special indication:
 
@@ -36,7 +36,7 @@ Now, the following types of parameters will also have a special indication:
 | read bit               | \[RB\]     |
 | write bit              | \[WB\]     |
 
-In a protocol editing window, ‘jump to linked item’ buttons (also known as paper clip buttons) will now also indicate relationships between group parameters and bit parameters.
+In a protocol editing window, "jump to linked item" buttons (also known as paper clip buttons) will now also indicate relationships between group parameters and bit parameters.
 
 ### Validator
 
@@ -44,8 +44,8 @@ In a protocol editing window, ‘jump to linked item’ buttons (also known as p
 
 The Validator will now issue
 
-- a warning when DefaultValue is defined on a column parameter of type “read”, and
-- an error when DefaultValue is defined on a parameter that is not of type “read” (e.g. write, fixed, etc.).
+- a warning when DefaultValue is defined on a column parameter of type "read", and
+- an error when DefaultValue is defined on a parameter that is not of type "read" (e.g. write, fixed, etc.).
 
 | Result code | Class       | Description                                                                                   |
 |-------------|-------------|-----------------------------------------------------------------------------------------------|
@@ -53,9 +53,9 @@ The Validator will now issue
 | 5101        | Error       | Parameter with Type \[Type\] should not contain a Default Value tag.                          |
 | 5102        | Warning     | Column Parameter should not contain a Default Value tag. This is currently not yet supported. |
 
-#### Error in case a button or page button was defined on a parameter of which the type is not “write” \[ID_17445\]
+#### Error in case a button or page button was defined on a parameter of which the type is not 'write' \[ID_17445\]
 
-The Validator will now issue an error when a button or page button was defined on a parameter of which the type is not “write”.
+The Validator will now issue an error when a button or page button was defined on a parameter of which the type is not "write".
 
 | Result code | Class       | Description                                 |
 |-------------|-------------|---------------------------------------------|

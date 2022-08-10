@@ -49,9 +49,9 @@ Due to a number of enhancements, overall performance has increased when developi
 
 ### Fixes
 
-#### Validator: Incorrect “endless loop” errors would be thrown when actions of type “run actions” or “set” were encountered \[ID_26242\]
+#### Validator: Incorrect 'endless loop' errors would be thrown when actions of type 'run actions' or 'set' were encountered \[ID_26242\]
 
-In some cases, the Validator would throw incorrect “endless loop” errors when it encountered actions of type "run actions" or "set".
+In some cases, the Validator would throw incorrect "endless loop" errors when it encountered actions of type "run actions" or "set".
 
 #### Broken DLL references in protocol solutions when using community packages \[ID_26326\]
 

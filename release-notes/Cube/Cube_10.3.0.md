@@ -12,7 +12,7 @@ uid: Cube_Main_Release_10.3.0
 
 ## Highlights
 
-#### Trending: New “Custom” button allows you to specify a custom X-axis range \[ID_31705\]
+#### Trending: New'Custom' button allows you to specify a custom X-axis range \[ID_31705\]
 
 <!-- Main Release Version 10.3.0 - Feature Release Version 10.2.1 -->
 
@@ -50,7 +50,7 @@ To do so, add a shape data field of type TextStyle, and set its value to “Text
 
 Setting TextTrimming to either “CharacterEllipsis” or “WordEllipsis” will have no effect when TextWrapping is set to its default value (i.e. “WrapWithOverflow”).
 
-#### Visual Overview - Edit in Visio: New options “Add theming” and “Add pretty hover” \[ID_32660\]
+#### Visual Overview - Edit in Visio: New options 'Add theming' and 'Add pretty hover' \[ID_32660\]
 
 <!-- Main Release Version 10.3.0 - Feature Release Version 10.2.5 -->
 
@@ -161,7 +161,7 @@ When, in the Alarm Console, you enable the “Automatic incident tracking” opt
 > - When Cube is connected to a DataMiner Agent that does not yet support manually creating, updating and renaming incidents (alarm groups), the menu commands to manipulate alarm groups will not be available.
 > - See also [Alarm Console: Manually creating incident alarms even when “Automatic incident tracking” is disabled \[ID_33000\]](#alarm-console-manually-creating-incident-alarms-even-when-automatic-incident-tracking-is-disabled-id_33000)
 
-#### Trending - Behavioral anomaly detection: New type of change point “flatline” \[ID_32839\] \[ID_32856\] \[ID_32950\] \[ID_32993\] \[ID_33559\]
+#### Trending - Behavioral anomaly detection: New type of change point 'flatline' \[ID_32839\] \[ID_32856\] \[ID_32950\] \[ID_32993\] \[ID_33559\]
 
 <!-- Main Release Version 10.3.0 - Feature Release Version 10.2.5
 RN 32993: Main Release Version 10.3.0 - Feature Release Version 10.2.6
@@ -232,7 +232,7 @@ The following options can now also be specified in the *ComponentOptions* shape 
 - **HideAddButton=**: If this option is set to "true", no options to add a service definition will be displayed.
 - **HideDeleteButton=**: If this option is set to "true", no options to delete a service definition will be displayed.
 
-#### Desktop app - Start window: New “HTTP or HTTPS” setting \[ID_33289\]
+#### Desktop app - Start window: New 'HTTP or HTTPS' setting \[ID_33289\]
 
 <!-- Main Release Version 10.3.0 - Feature Release Version 10.2.6 -->
 
@@ -243,7 +243,7 @@ When you add a DataMiner Agent to the start window, in the Advanced settings, yo
 > [!NOTE]
 > If a DataMiner Agent is configured to use only HTTPS, Cube will not fall back to HTTP, even when you have chosen the “HTTP or HTTPS” option.
 
-#### Visual Overview: Adding a “Refresh” and/or a “Sort” button to a table control \[ID_33346\]
+#### Visual Overview: Adding a 'Refresh' and/or a 'Sort' button to a table control \[ID_33346\]
 
 <!-- Main Release Version 10.3.0 - Feature Release Version 10.2.6 -->
 
@@ -330,7 +330,7 @@ These new password boxes can be found in the following locations:
 > - If a value received from the server has been automatically entered in a password box, the strength indicator and peek button will not be available until you enter a completely new password.
 > - If the value received from the server is a fixed 8-asterisk-long placeholder instead of an actual password, you will not be able to modify it. You will be forced to replace the entire value.
 
-#### New “Light” theme & new links in the Apps list \[ID_33944\]
+#### New 'Light' theme & new links in the Apps list \[ID_33944\]
 
 <!-- Main Release Version 10.3.0 - Feature Release Version 10.2.9 -->
 
@@ -340,7 +340,7 @@ Also, the Apps list now contains links to the Catalog, the Cloud Admin app and c
 
 ## Other new features
 
-#### Visual Overview: Shape data fields of type “ParametersSummary” can now also handle subscription filters specified in the index part of a parameter section \[ID_31609\]
+#### Visual Overview: Shape data fields of type 'ParametersSummary' can now also handle subscription filters specified in the index part of a parameter section \[ID_31609\]
 
 <!-- Main Release Version 10.3.0 - Feature Release Version 10.2.1 -->
 
@@ -367,7 +367,7 @@ This subscription filter can be any filter that can be passed to a parameter cha
 > [!NOTE]
 > Up to now, when the index part of a parameter section contained a wildcard, no results would be returned whenever cells were set to “not initialized”. From now on, cells set to “not initialized” will be skipped.
 
-#### Trending: New “Fixed interval” option when exporting average trend data \[ID_31699\]
+#### Trending: New 'Fixed interval' option when exporting average trend data \[ID_31699\]
 
 <!-- Main Release Version 10.3.0 - Feature Release Version 10.2.2 -->
 
@@ -451,7 +451,7 @@ The \[Resource:...\] placeholder can be used to retrieve a property of a resourc
 > [!NOTE]
 > Currently, this check will only be performed when the visual overview is opened or when the GUID or the resource itself is changed.
 
-See also: [New “IN USE” info tag to be used in element shapes linked to resources \[ID_32393\]](#new-in-use-info-tag-to-be-used-in-element-shapes-linked-to-resources-id_32393)
+See also: [New 'IN USE' info tag to be used in element shapes linked to resources \[ID_32393\]](#new-in-use-info-tag-to-be-used-in-element-shapes-linked-to-resources-id_32393)
 
 #### Visual Overview: Linking a shape to an alarm filter with a System Name or System Type filter context \[ID_32252\] \[ID_32548\]
 
@@ -550,7 +550,7 @@ If you want to replace the separator inside the name, you must specify both the 
 >   - “BelowThisView:Elements” or “btv:Elements” will open the view card page named “Elements”.
 > - When the card layout is set to “Tab layout”, it is now possible to save EPM cards in workspaces.
 
-#### New “IN USE” info tag to be used in element shapes linked to resources \[ID_32393\]
+#### New 'IN USE' info tag to be used in element shapes linked to resources \[ID_32393\]
 
 <!-- Main Release Version 10.3.0 - Feature Release Version 10.2.3 -->
 
@@ -615,13 +615,13 @@ A number of enhancements have been made with regard to selecting bookings in the
 - The reservation variable and the resource variable will always contain the booking and the resource selected in the timeline.
 - When you remove a resource band, the corresponding resource variable will be cleared.
 
-#### DataMiner Cube - Alarm Console: Users can now manually create incidents even when “Automatic incident tracking” is disabled in System Center \[ID_32990\] \[ID_33354\]
+#### DataMiner Cube - Alarm Console: Users can now manually create incidents even when 'Automatic incident tracking' is disabled in System Center \[ID_32990\] \[ID_33354\]
 
 <!-- Main Release Version 10.3.0 - Feature Release Version 10.2.7 -->
 
 From now on, users will be able to manually create incidents even when “Automatic incident tracking” is disabled in System Center.
 
-#### Alarm Console: Manually creating incident alarms even when “Automatic incident tracking” is disabled \[ID_33000\]
+#### Alarm Console: Manually creating incident alarms even when 'Automatic incident tracking' is disabled \[ID_33000\]
 
 <!-- Main Release Version 10.3.0 - Feature Release Version 10.2.6 -->
 
@@ -669,7 +669,7 @@ From DataMiner 10.0.3 onwards, you can configure an alarm template so that alarm
 2. Select the option *Advanced configuration of anomaly detection*. Four extra columns will be displayed in the template editor.
 3. In the *Flatline monitor* column, click the toggle button to enable or disable alarms for flatline changes.
 
-#### Alarm Console: Second-generation hyperlinks of type “openview”, “openservice”, “openelement” and “openparameter” now support “\[PROPERTY:\]” keywords \[ID_33166\]
+#### Alarm Console: Second-generation hyperlinks of type 'openview', 'openservice', 'openelement' and 'openparameter' now support '\[PROPERTY:\]' keywords \[ID_33166\]
 
 <!-- Main Release Version 10.3.0 - Feature Release Version 10.2.7 -->
 
@@ -969,7 +969,7 @@ Because of a number of enhancements, overall performance has increased when open
 
 The pencil icon used in the Alarm Console is now identical to that used in Data Display tables.
 
-#### Alarm Console: “Add to incident” menu option no longer available when right-clicking alarms that cannot be added to an incident \[ID_33591\]
+#### Alarm Console: 'Add to incident' menu option no longer available when right-clicking alarms that cannot be added to an incident \[ID_33591\]
 
 <!-- Main Release Version 10.3.0 - Feature Release Version 10.2.8 -->
 

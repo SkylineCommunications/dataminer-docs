@@ -174,7 +174,7 @@ The class library now includes classes to easily parse the trap information when
 
 In some cases, the CheckOptionsAttribute and CheckDisplayTag checks would throw an exception.
 
-#### IDE - Table editor: Extra options “;xpos” and “;ypos” would incorrectly be considered as unknown options \[ID_22131\]
+#### IDE - Table editor: Extra options ';xpos' and ';ypos' would incorrectly be considered as unknown options \[ID_22131\]
 
 In some cases, the “;xpos” and “;ypos” column options would incorrectly be considered as unknown options.
 

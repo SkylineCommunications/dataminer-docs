@@ -200,7 +200,7 @@ In DataMiner Cube, the name of the DataMiner System can now be displayed in the 
 
 ### DMS Reports & Dashboards
 
-#### Dashboards app: New “Enable pinning as quick pick” option + support for timespans as input for time range feed \[ID_27357\]
+#### Dashboards app: New 'Enable pinning as quick pick' option + support for timespans as input for time range feed \[ID_27357\]
 
 In the Dashboards app, if the layout option *Use quick picks* is selected for a time range component, you can now enable the additional option *Enable pinning as quick pick*. When you do so, a pin icon is displayed next to the time summary in the component. Clicking the icon will add the current time selection as a custom quick pick button. If the current time selection matches the custom quick pick button, clicking the pin icon again will remove the button. You can also remove the button using the garbage can icon on the button itself.
 
@@ -208,7 +208,7 @@ The custom quick pick button is saved on component level, which means it will re
 
 As an additional change, the time range feed has been updated to also accept timespans as input data now. Adding a timespan as input will set the active time range in the feed.
 
-#### Dashboards app: Selecting an empty folder will now cause an “Add a new dashboard” button to appear \[ID_27362\]
+#### Dashboards app: Selecting an empty folder will now cause an 'Add a new dashboard' button to appear \[ID_27362\]
 
 When, in the sidebar of the Dashboards app, you select an empty folder, an *Add a new dashboard* button will now appear in the large pane on the right.
 
@@ -322,7 +322,7 @@ The UIResults.GetDateTime method now also supports datetime values in ISO 8601 f
 
 Up to now, only datetime values in “dd/MM/yyyy HH:mm:ss” were supported.
 
-#### Interactive Automation scripts: TreeViewItem now has an “IsCollapsed” property \[ID_27567\]
+#### Interactive Automation scripts: TreeViewItem now has an 'IsCollapsed' property \[ID_27567\]
 
 Each TreeViewItem in a TreeView component now has an “IsCollapsed” property.
 
@@ -598,11 +598,11 @@ Before running a BPA test, the scope of the test should now always be specified 
 | BpaRunMode.ClusterOnly | the test(s) will be run on all agents in the DMS. |
 | BpaRunMode.LocalOnly   | the test(s) will be run on the local agent only.  |
 
-#### Service & Resource Management - Profile parameters: Default value of “IsOptional” field has changed from “Undefined” to “Yes” \[ID_27286\]
+#### Service & Resource Management - Profile parameters: Default value of 'IsOptional' field has changed from 'Undefined' to 'Yes' \[ID_27286\]
 
 Up to now, the *IsOptional* field of a profile parameter was by default set to “Undefined”. From now on, this field will by default be set to “Yes”.
 
-#### Only the most recent synchronization file will now be kept in the “C:\\Skyline DataMiner\\system cache\\sync” folder \[ID_27323\]
+#### Only the most recent synchronization file will now be kept in the 'C:\\Skyline DataMiner\\system cache\\sync' folder \[ID_27323\]
 
 To prevent too many synchronization files from getting stored in the “C:\\Skyline DataMiner\\system cache” folder, from now on, only the most recent file will be kept in the “C:\\Skyline DataMiner\\system cache\\sync” subfolder.
 
@@ -620,7 +620,7 @@ Due to a number of enhancements, the way to resize dashboard components has been
 
 From now on, the StandAloneBpaExecutor executable has to be run with administrative privileges. When the executable is run, a UAC box will now appear, asking for administrative access.
 
-#### DataMiner Cube - Visual Overview: EPM card Visual pages now only displayed when page-level properties “Chain” and “Field” both match \[ID_27392\]
+#### DataMiner Cube - Visual Overview: EPM card Visual pages now only displayed when page-level properties 'Chain' and 'Field' both match \[ID_27392\]
 
 In an EPM environment, you can assign Visual Overview pages to chains and fields by setting the page-level *Chain* and *Field* properties.
 
@@ -658,7 +658,7 @@ From now on, the C:\\Skyline DataMiner\\BPA folder will also be included when yo
 
 Previously, the Services module only listed virtual functions that had been uploaded to DataMiner via a Functions.xml file. Now it also includes virtual function definitions that were fully configured in DataMiner.
 
-#### BPA test results now contain an “Outcome” property \[ID_27476\]
+#### BPA test results now contain an 'Outcome' property \[ID_27476\]
 
 The IBpaTestResult interface now contains an additional property named “Outcome”. This property can have the following values:
 
@@ -694,7 +694,7 @@ The Monitoring app and Dashboards app now support the use of embedded trend grap
 
 When interfacing with a DataMiner Agent and its installed BPA tests using the *BpaManagerHelper* object, you can now request the execution of one or more BPA tests across the cluster.
 
-#### Cube launcher tool: Popup windows can be closed by pressing ESC & main window title changed to “DataMiner Cube” \[ID_27582\]
+#### Cube launcher tool: Popup windows can be closed by pressing ESC & main window title changed to 'DataMiner Cube' \[ID_27582\]
 
 In the Cube launcher tool, popup windows can now be closed by pressing the ESC button.
 
@@ -778,7 +778,7 @@ The following minor issues could occur with a time range feed component in a das
 - In some cases, the clock icon was not displayed next to the time summary.
 - It could occur that the configuration pane of the time range feed was not correctly aligned with the time summary.
 
-#### DataMiner Cube - Profiles app: “Modified” label would not disappear after saving \[ID_27373\]
+#### DataMiner Cube - Profiles app: 'Modified' label would not disappear after saving \[ID_27373\]
 
 When, in the *Profiles* app, you saved a profile definition, a profile instance or a profile parameter, in some cases, the “Modified” tag would incorrectly not disappear.
 
@@ -865,7 +865,7 @@ On a system with a large amount of alarm properties, in some cases, an error cou
 
 In the quick filter boxes for tables in DataMiner Cube, previously it was only possible to filter on the raw value of the cells, i.e. the value used by the protocol, which is not necessarily the same as the displayed value. Now filtering on the displayed value is also possible.
 
-#### Jobs app: When applying a template, job section fields of type “User” would incorrectly not be overwritten \[ID_27495\]
+#### Jobs app: When applying a template, job section fields of type 'User' would incorrectly not be overwritten \[ID_27495\]
 
 When, in the Jobs app, you applied a template to a job, values in job section fields of type “User” would incorrectly not get overwritten with the values from the template.
 
@@ -939,7 +939,7 @@ In some cases, it could occur that a ticketing resolver could not be deleted.
 
 In some cases, a line chart component would not draw the trend graph of a resource capacity.
 
-#### Service & Resource Management: Parameters of type double in generated SRM protocols will now have their lengthtype set to “next param” instead of 8. \[ID_27617\]
+#### Service & Resource Management: Parameters of type double in generated SRM protocols will now have their lengthtype set to 'next param' instead of 8. \[ID_27617\]
 
 Up to now, parameters of type double in generated SRM protocols would have their rawtype set to “numeric text” and their lengthtype set to 8. As a result, if a parameter of a generated SRM protocol contained a value of more than 8 characters, that value would incorrectly be replicated to 0.
 
@@ -962,7 +962,7 @@ The following minor issues could occur in the BPA framework:
 - In some cases, it could occur that BPA tests were not updated correctly if BpaManager.BPAs.Update was used. The BPA info was not stored.
 - BpaManager did not always include trace data on exceptions, causing BpaManagerHelper not to throw ManagerStoreExceptions.
 
-#### DataMiner Cube - Alarm Console: Problem with alarm hyperlinks when the first character of the parameter name is “#” \[ID_27641\]
+#### DataMiner Cube - Alarm Console: Problem with alarm hyperlinks when the first character of the parameter name is hash character \[ID_27641\]
 
 When you right-clicked an alarm associated with a parameter of which the name started with a “#” character and then clicked an alarm hyperlink that ran an Automation script that used that parameter name as input, in some cases, an error could occur.
 
@@ -996,7 +996,7 @@ In case a pivot table component of a dashboard displayed different table paramet
 
 When you switched from an alarm template with conditions that were not used to an alarm template with identical conditions that were used, in some rare cases, conditional monitoring would incorrectly not get reapplied for the parameters using those conditions.
 
-#### On DMAs with a MySQL database, alarms based on parameters of type “analog” or “progress” would have an incorrect display value after an element restart \[ID_27715\]
+#### On DMAs with a MySQL database, alarms based on parameters of type 'analog' or 'progress' would have an incorrect display value after an element restart \[ID_27715\]
 
 On DataMiner Agents using a MySQL database, in some cases, alarms based on parameters with measurement type “analog” or “progress” would have an incorrect display value after an element restart.
 
@@ -1038,6 +1038,6 @@ In DataMiner Cube, in some cases, an error could occur when you viewed a discret
 
 In some cases, an embedded alarm timeline component would not show its summary timeline.
 
-#### DataMiner Cube - Correlation: Number of occurrences in “Sliding window” section could incorrectly not be changed \[ID_27909\]
+#### DataMiner Cube - Correlation: Number of occurrences in 'Sliding window' section could incorrectly not be changed \[ID_27909\]
 
 When you tried to define that a correlation rule had to be triggered when a situation occurred a specific number of times in a specified period of time, in some cases, it would not be possible to change the default number of times (i.e. 1).

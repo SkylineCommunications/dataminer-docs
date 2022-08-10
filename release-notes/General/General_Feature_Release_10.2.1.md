@@ -53,7 +53,7 @@ From now on, you will also be able to enable or disable this setting on system l
 
 ### DMS Cube
 
-#### Automatic Incident Tracking: New setting “Maximum group events rate” \[ID_31203\]
+#### Automatic Incident Tracking: New setting 'Maximum group events rate' \[ID_31203\]
 
 In *System Center*, a new setting has been added to the *Analytics config* section: “Maximum group events rate”. With this setting, you can limit the maximal number of alarm group events that will be generated and thus avoid any possible performance issues during alarm floods.
 
@@ -71,7 +71,7 @@ In the Services app, a number of security enhancements have been made with regar
 - In some cases, the *Diagram* and *Properties* permission under *Modules \> Services \> Definitions* would be applied incorrectly.
 - Users who do not have read permission on functions will now be able to correctly save function nodes when configuring service definitions.
 
-#### Alarm Console - Context menu: Links to elements, services and views in “Open” submenu now have an element, service or view icon in front of them \[ID_31499\]
+#### Alarm Console - Context menu: Links to elements, services and views in 'Open' submenu now have an element, service or view icon in front of them \[ID_31499\]
 
 When you right-click an alarm in the Alarm Console, the *Open* submenu contains a link to the alarm card as well as links to all elements, services and views affected by the alarm. From now on, the links to the elements, services and views will each have an element, service or view icon in front of them.
 
@@ -79,11 +79,11 @@ When you right-click an alarm in the Alarm Console, the *Open* submenu contains 
 
 Up to now, when you filtered a table and then exported it, the filter would not be taken into account and the entire table would be exported. From now on, the filtered table will be exported instead.
 
-#### DataMiner Cube - Views: “Below this view” list has a new column “Communication protocols” \[ID_31590\]
+#### DataMiner Cube - Views: 'Below this view' list has a new column 'Communication protocols' \[ID_31590\]
 
 A “Communication protocols” column has been added to the list on the *Below this view* page of a view card. This column will show the communication protocols used by an element.
 
-#### Visual Overview: Shape data fields of type “ParametersSummary” can now also handle subscription filters specified in the index part of a parameter section \[ID_31609\]
+#### Visual Overview: Shape data fields of type 'ParametersSummary' can now also handle subscription filters specified in the index part of a parameter section \[ID_31609\]
 
 The value of a ParametersSummary shape data field has to consist of a number of delimited sections:
 
@@ -108,7 +108,7 @@ This subscription filter can be any filter that can be passed to a parameter cha
 > [!NOTE]
 > Up to now, when the index part of a parameter section contained a wildcard, no results would be returned whenever cells were set to “not initialized”. From now on, cells set to “not initialized” will be skipped.
 
-#### Trending: New “Custom” button allows you to specify a custom X-axis range \[ID_31705\]
+#### Trending: New 'Custom' button allows you to specify a custom X-axis range \[ID_31705\]
 
 At the top of a trend graph, a new “Custom” button has been added next to the existing “Last 24 hours”, “Last week” and “Last month” buttons.
 
@@ -149,7 +149,7 @@ However, up to now, when the current booking selection was cleared, those variab
 
 ### DMS Reports & Dashboards
 
-#### Dashboards app - GQI: New “Update data” option \[ID_31445\] \[ID_31450\]
+#### Dashboards app - GQI: New 'Update data' option \[ID_31445\] \[ID_31450\]
 
 When configuring a GQI query, you can now enable the “Update data” option if you want the component to automatically refresh the data when changes to that data are detected.
 
@@ -162,7 +162,7 @@ By default, the “Update data” option is disabled.
 
 As it is not possible to share private dashboards, the “Share” button will now be disabled when you make a dashboard private.
 
-#### Dashboards app - GQI: Element, service and view data sources now also return an “In timeout” column \[ID_31671\]
+#### Dashboards app - GQI: Element, service and view data sources now also return an 'In timeout' column \[ID_31671\]
 
 The element, service and view data sources now return an additional “In timeout” column.
 
@@ -199,7 +199,7 @@ From now on, the system name of a ticket will no longer be allowed to start with
 
 When the system name contains one of these illegal characters, an error message will appear.
 
-#### Jobs app: Fields will automatically be set to “not required” when hidden \[ID_31513\]
+#### Jobs app: Fields will automatically be set to 'not required' when hidden \[ID_31513\]
 
 From now on, when you hide a job field, you will receive a message that it will automatically be set to “not required”.
 
@@ -391,11 +391,11 @@ From now on, cell content will be parsed as follows:
 > [!NOTE]
 > When you import a CSV file via DataMiner Cube, DataMiner Cube will send the imported data to the DataMiner Agent without performing any kind of preprocessing.
 
-#### SLPort would leak a socket when executing an action of type “open” via a socket that had already been opened \[ID_31512\]
+#### SLPort would leak a socket when executing an action of type 'open' via a socket that had already been opened \[ID_31512\]
 
 When an action of type “open” was executed on a smart-serial interface via a socket that had already been opened, SLPort would leak a socket as well as a port in the ephemeral port range. This would eventually lead to a situation in which no more ports were available and no more sockets could be created. From now on, SLPort will close the socket when it receives an action of type “open” on a socket that is already open.
 
-#### Failover using a shared hostname: Cube would not always send the “bring online” message to the offline agent \[ID_31516\]
+#### Failover using a shared hostname: Cube would not always send the 'bring online' message to the offline agent \[ID_31516\]
 
 When, on a Failover system using a shared hostname with manual switchover, the active agent went down or became unreachable, in some cases, DataMiner Cube would send the message to bring the offline agent online to the incorrect agent.
 
@@ -439,11 +439,11 @@ When, in a single process, multiple threads have a run-time error, those errors 
 
 When you changed the type of a custom section field that was being used a job filter, in some cases, that field would incorrectly still be used as a filter, even when it was not possible to use that type of field as a filter.
 
-#### DataMiner Cube - Settings: Changes made in “Alarm Console \> Card-specific” section would incorrectly not get applied \[ID_31566\]
+#### DataMiner Cube - Settings: Changes made in 'Alarm Console \> Card-specific' section would incorrectly not get applied \[ID_31566\]
 
 In the *Alarm Console \> Card-specific* section of the *Settings* app, you can configure which alarm tabs should be shown on element, service and view cards. Up to now, when you made changes to the settings on that page, those changes would incorrectly not get applied.
 
-#### NATS: Incorrect “Timed out on heartbeats” entries would be added to the nats-server.log file \[ID_31572\]
+#### NATS: Incorrect 'Timed out on heartbeats' entries would be added to the nats-server.log file \[ID_31572\]
 
 In some cases, a large number of incorrect “Timed out on heartbeats” entries would be added to the nats-server.log file.
 
@@ -507,7 +507,7 @@ When an error of type “thread problem” occurs, the contents of the C:\\Skyli
 
 When, in the *Logging* section of *System Center*, you opened a log file, scrolled down beyond the first 50 KB of data, and then refreshed the file, the vertical scroll position would incorrectly not be restored.
 
-#### DataMiner Cube - Settings: Turning an alarm tab of type “sliding window” into a normal alarm tab would cause this change to be reverted as soon as another change was made to it \[ID_31664\]
+#### DataMiner Cube - Settings: Turning an alarm tab of type 'sliding window' into a normal alarm tab would cause this change to be reverted as soon as another change was made to it \[ID_31664\]
 
 When, in the group settings, you added an alarm tab of type “sliding window” and enforced it, as soon as a user had turned this tab into a normal alarm tab, the slightest change made to the tab afterwards would cause the tab to be changed back into a tab of type “sliding window”.
 

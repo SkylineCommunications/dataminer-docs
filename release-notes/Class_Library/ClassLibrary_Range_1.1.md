@@ -83,7 +83,7 @@ Up to now, table cell subscriptions were established using the display key. From
 
 In some cases, it would not be possible to retrieve the alarm template or the trend template of a protocol via IDms when that protocol was a production protocol.
 
-Also, the IDmsProtocol interface now has a new “ReferencedVersion” property.
+Also, the IDmsProtocol interface now has a new "ReferencedVersion" property.
 
 ### 1.1.2.2
 
@@ -97,7 +97,7 @@ From now on, the Class Library will no longer throw an exception when an error o
 
 - When element replication is not enabled for a particular element, then the replication properties of that element will no longer be parsed.
 
-- When element replication is enabled for a particular element, and an error occurs while parsing the replicated remote element, then the incorrect ID will be logged, and the default remote element ID “-1/-1” will be used instead. This will make sure the element is included in the list of elements returned by the GetElements method.
+- When element replication is enabled for a particular element, and an error occurs while parsing the replicated remote element, then the incorrect ID will be logged, and the default remote element ID "-1/-1" will be used instead. This will make sure the element is included in the list of elements returned by the GetElements method.
 
 - When a general error occurs while parsing the information of an element, then an entry will be added to the log, and the GetElements method will return all elements of which the information was parsed successfully.
 
@@ -117,7 +117,7 @@ Up to now, it would only return the first page of such a table.
 
 The new IDmsTable QueryData method will return an IEnumerable\<object\[\]\>, i.e. a collection of row objects.
 
-To this method, you can pass a column filter as an ICollection\<ITableFilter>, in which each ITableFilter item contains a ColumnPid, a ColumnValue and a CompareType property. If, for example, you only want to retrieve the rows in which column parameter 1003 is set to “test”, you can specify the following:
+To this method, you can pass a column filter as an ICollection\<ITableFilter>, in which each ITableFilter item contains a ColumnPid, a ColumnValue and a CompareType property. If, for example, you only want to retrieve the rows in which column parameter 1003 is set to "test", you can specify the following:
 
 ```csharp
 ITableFilterItem filter = new TableFilterItem
@@ -225,9 +225,9 @@ When an element is updated, it will be restarted whenever its port settings have
 
 ### 1.1.2.11
 
-#### RemotePort would throw “null reference” exceptions when trying to retrieve a replicated element \[ID_30053\]
+#### RemotePort would throw 'null reference' exceptions when trying to retrieve a replicated element \[ID_30053\]
 
-RemotePort would throw “null reference” exceptions when trying to retrieve a replicated element.
+RemotePort would throw "null reference" exceptions when trying to retrieve a replicated element.
 
 #### Monitors that subscribe to a table can now execute code whenever data in that table is updated \[ID_30055\]
 
@@ -288,9 +288,9 @@ From now on, you can use
 - the Reply method on the incoming message to update the GUID of the return message, followed by
 - the Send method with the ReturnAddress information from the incoming message.
 
-#### 'Skyline.DataMiner.' prefix shortened to “SLC.Lib.” \[ID_33257\]
+#### 'Skyline.DataMiner.' prefix shortened to 'SLC.Lib.' \[ID_33257\]
 
-The “Skyline.DataMiner.” prefix for Class Library exceeded to 260-character path length limit of Microsoft Windows. This prefix has now been shortened to “SLC.Lib.”.
+The "Skyline.DataMiner." prefix for Class Library exceeded to 260-character path length limit of Microsoft Windows. This prefix has now been shortened to "SLC.Lib.".
 
 > [!WARNING]
 > For code using NuGets, this is a breaking change.
@@ -343,11 +343,11 @@ The Class Library now contains new bit rate calculation classes.
 
 #### Class Library is now able to process elements of which the RemoteElement property of the ElementInfoEventMessage is set to the maximum value \[ID_33751\]
 
-The Class Library is now able to process elements of which the RemoteElement property of the ElementInfoEventMessage is set to the maximum value (i.e. “4294967295/4294967295”).
+The Class Library is now able to process elements of which the RemoteElement property of the ElementInfoEventMessage is set to the maximum value (i.e. "4294967295/4294967295").
 
 #### Class Library folder structure has been updated \[ID_33872\]
 
-The folder structure of the Class Library has been updated. “DataMiner\\Library” has been removed from the root path.
+The folder structure of the Class Library has been updated. "DataMiner\\Library" has been removed from the root path.
 
 #### DllImport statement added to RateHelper class \[ID_33878\]
 

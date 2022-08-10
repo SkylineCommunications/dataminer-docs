@@ -48,9 +48,9 @@ In second-generation alarm hyperlinks, you can now use the \[DISPLAYVALUE\] keyw
 
 Client machines running DataMiner Cube now require Microsoft .NET Framework 4.6.2.
 
-#### Profiles app: Support for capability parameters of type “text” \[ID_25345\]
+#### Profiles app: Support for capability parameters of type 'text' \[ID_25345\]
 
-The *Profiles* app now also allows you to create and edit profile parameters of category “Capability” and type “Text”.
+The *Profiles* app now also allows you to create and edit profile parameters of category "Capability" and type "Text".
 
 #### Creating an element simulation file \[ID_25353\]
 
@@ -66,9 +66,9 @@ The simulation file will be stored on the DataMiner Agent, in the protocol folde
 
 When, in the *Resources* app, you assign a capability parameter to a resource, instead of specifying a fixed value for that parameter, you can now indicate that its value will be time-dependent, i.e. that the capability of the resource can change over time.
 
-#### Visual Overview: SetVar controls “ListBox” and “FilterComboBox” now use virtualization \[ID_25436\]
+#### Visual Overview: SetVar controls 'ListBox' and 'FilterComboBox' now use virtualization \[ID_25436\]
 
-The SetVar controls “ListBox” and “FilterComboBox” now both use virtualization. This will allow those controls to load large data sets without major performance loss.
+The SetVar controls "ListBox" and "FilterComboBox" now both use virtualization. This will allow those controls to load large data sets without major performance loss.
 
 #### Visual Overview: Retrieving a booking ID using the \[Reservation:\] placeholder \[ID_25447\]
 
@@ -222,7 +222,7 @@ It is now possible to link an ID of a contributing resource to a ServiceReservat
 
 Due to a number of enhancements, DataMiner processes will now get notified in a more uniform way when a DataMiner Agent leaves the DataMiner System. This will allow them to execute the necessary tasks when such an event occurs.
 
-#### DataMiner Cube - Visual Overview: “Textblock” control now inherits text alignment of shape \[ID_24929\]
+#### DataMiner Cube - Visual Overview: 'Textblock' control now inherits text alignment of shape \[ID_24929\]
 
 When you turned a shape into a text block control by adding a shape data item of type *Options* set to “Control=Textblock”, up to now, the text alignment of that control would by default be set to Left Center. From now on, “Textblock” controls will inherit the text alignment configuration of the shape.
 
@@ -270,7 +270,7 @@ Due to a number of enhancements, the overall memory consumption of the Alarm Con
 
 When a backup package is created, from now on, the log information regarding the creation of that package will now be stored in the Backup.log file, which will be included in the package.
 
-#### Default alarm bubble-up behavior in recursive tables changed from “recursive=none” to “recursive=up” \[ID_25349\]
+#### Default alarm bubble-up behavior in recursive tables changed from 'recursive=none' to 'recursive=up' \[ID_25349\]
 
 The default alarm bubble-up behavior in recursive tables has been changed from “recursive=none” to “recursive=up”, i.e. from child nodes up to parent nodes (following the foreign key in the direction it is in).
 
@@ -294,7 +294,7 @@ From now on, when you perform a search using the header box search box, the resu
 
 Due to a number of enhancements, overall performance has increased when writing data to the Indexing Engine.
 
-#### Service & Resource Management: When checking whether a boolean ReservationInstance property is true or false, it is now also possible to specify the type as “Bool” \[ID_25415\]
+#### Service & Resource Management: When checking whether a boolean ReservationInstance property is true or false, it is now also possible to specify the type as 'Bool' \[ID_25415\]
 
 When checking whether a boolean ReservationInstance property is set to true or false, you can now specify the type as “Bool” as well as “Boolean”. See the following example:
 
@@ -327,7 +327,7 @@ The *Pivot table* dashboard component now supports mediation protocols.
 
 In the *Agents* section of *System Center*, after a Failover switch, in some cases, the agent name would not get updated to the name of the online agent.
 
-#### DataMiner Cube - Scheduler: No “next runtime”, “last runtime” or “last runtime result” information displayed when a DMA in the DMS was unreachable \[ID_24894\]
+#### DataMiner Cube - Scheduler: No 'next runtime', 'last runtime' or 'last runtime result' information displayed when a DMA in the DMS was unreachable \[ID_24894\]
 
 On the List tab of the Scheduler app, in some cases, no “next runtime”, “last runtime” or “last runtime result” information would be displayed when one of the DataMiner Agent in the DMS was unreachable or disconnected.
 
@@ -467,7 +467,7 @@ When the bubble-up severity was identical to that of the table row itself, and o
 
 When a GetActiveAlarmsFromView SOAP call was performed, all alarms of all elements in the services found in the specified view would be returned, even those associated with parameters that were not included in the services in question.
 
-#### Element connections: Problem with “Include element state” option \[ID_25418\]
+#### Element connections: Problem with 'Include element state' option \[ID_25418\]
 
 In the *Element Connections* app, in some cases, the states of the source element would incorrectly be passed to the destination element(s) when the *Include element state* option was not selected.
 

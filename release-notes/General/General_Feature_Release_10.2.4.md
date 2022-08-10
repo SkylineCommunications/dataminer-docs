@@ -280,7 +280,7 @@ To do so, enable the *Visualize directions* setting and select one of the follow
 | Flow (default) | The direction is visualized by means of animated edges.                                                                                                               |
 | Arrows         | The direction is visualized by means of arrows drawn on the edges. If you select this option, you can also specify the exact position of the arrows on the edges. |
 
-#### Dashboards app - Parameter feed: “Selected only” toggle button has been removed \[ID_32541\]
+#### Dashboards app - Parameter feed: 'Selected only' toggle button has been removed \[ID_32541\]
 
 Up to now, a parameter feed had a *Selected only* toggle button that allowed you to show or hide items that were not selected. Now, this toggle button has been removed.
 
@@ -290,7 +290,7 @@ Also, when a dashboard is loaded with an initial selection (either configured or
 
 In a filter node of a dashboard query, you can now choose to filter by query rows from a feed. To do so, select the *Use feeds* option, select the feed, select the type *Query rows*, and then select the appropriate column of the table containing the rows. Note that only the columns compatible with the type of column you are filtering will be available for selection.
 
-#### Dashboards app: Specifying data input for an EPM feed in a URL using “epm-selections” instead of “cpes” \[ID_32594\]
+#### Dashboards app: Specifying data input for an EPM feed in a URL using 'epm-selections' instead of 'cpes' \[ID_32594\]
 
 Up to now, in a dashboard URL, it was possible to specify data input for an EPM feed by means of a “cpes” data key. This key has now been deprecated in favor of the new “epm-selections” key.
 
@@ -322,7 +322,7 @@ It is now possible to add a default index filter to a parameter feed component. 
 
 This new option is available as an advanced setting that is not displayed by default. To be able to configure it, you therefore first need to add the *showAdvancedSettings=true* option to the dashboard URL. In the *Data* pane of the dashboard edit mode, a new *Parameter table filters* section will then become available. You can configure the default filter in this section and then drag it to a component to apply it.
 
-#### Dashboards app: “Write” filter removed from Data \> All available data \> Parameters \[ID_32643\]
+#### Dashboards app: 'Write' filter removed from Data \> All available data \> Parameters \[ID_32643\]
 
 When, after selecting a component in edit mode, you open the *Data* tab and go to the *All available data \> Parameters* section, you can select an element and then filter the list of parameters of that element by clicking a number of preset filters. The preset filter “Write”, which was used to filter out the parameters of type “write”, has now been removed.
 
@@ -886,7 +886,7 @@ If you tried to share a dashboard that was created in an earlier version of the 
 
 When web sockets were disabled on the DataMiner Agent, in some cases, internal GQI calls could throw exceptions.
 
-#### SLProtocol would leak memory when using a “change after response“ trigger \[ID_32572\]
+#### SLProtocol would leak memory when using a 'change after response' trigger \[ID_32572\]
 
 When using a “change after response” trigger, SLProtocol would leak memory on every incoming response. See the following example.
 
@@ -909,11 +909,11 @@ In some cases, Elasticsearch would return an incorrect number of records when a 
 
 When the next page of naturally sorted data was requested from an Elasticsearch database, up to now, that page would return empty.
 
-#### Jobs app: No “loading” indication when job sections were being loaded \[ID_32616\]
+#### Jobs app: No 'loading' indication when job sections were being loaded \[ID_32616\]
 
 When configuring jobs, no “loading” indication would appear when job sections were being loaded.
 
-#### Dashboards app: Shared dashboards still showed “Share” option \[ID_32618\]
+#### Dashboards app: Shared dashboards still showed 'Share' option \[ID_32618\]
 
 When you clicked the “...” button in the top-right corner of a shared dashboard, the menu would incorrectly include a “Share” command.
 
@@ -954,7 +954,7 @@ Up to now, when a payload with data before the header was received (e.g. aaaa\<h
 
 When the Cassandra Cluster Migrator tool was used to transform a Failover system consisting of DMAs with separate SQL or Cassandra databases into a Failover system consisting of DMAs that are all connected to a shared Cassandra and Elasticsearch cluster, in some cases, the migration process would incorrectly be initiated on the offline DMA instead of the online DMA. When that happened, the data written during the migration process would not be written to the destination Cassandra Cluster database.
 
-#### SLNetClientTest: Problems with “Agent Connections” window \[ID_32679\]
+#### SLNetClientTest: Problems with 'Agent Connections' window \[ID_32679\]
 
 When, in the SLNetClientTest tool, you opened the *Agent Connections* window (by selecting *Diagnostics \> Connections \> View DMA Connections*),
 

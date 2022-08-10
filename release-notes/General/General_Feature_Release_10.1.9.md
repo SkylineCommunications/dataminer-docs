@@ -171,7 +171,7 @@ Up to now, when Active Directory was used, DataMiner would automatically receive
 
 ### DMS Protocols
 
-#### View table columns with options like “view=:x:y:z” or “view=a:b:c:z” can now be filtered by means of a “VALUE=” filter \[ID_30237\]
+#### View table columns with options like 'view=:x:y:z' or 'view=a:b:c:z' can now be filtered by means of a 'VALUE=' filter \[ID_30237\]
 
 View tables containing a column with view options like “view=:x:y:z” or “view=a:b:c:z” now allow that column to be filtered by means of a “VALUE=” filter (e.g. VALUE=5 == abc).
 
@@ -180,7 +180,7 @@ View tables containing a column with view options like “view=:x:y:z” or “v
 
 ### DMS Cube
 
-#### Spectrum recording playback: Play modes “Play once” and “Loop” replaced by “Keep repeating the recording” checkbox \[ID_30218\]
+#### Spectrum recording playback: Play modes 'Play once' and 'Loop' replaced by 'Keep repeating the recording' checkbox \[ID_30218\]
 
 Up to now, while a spectrum trace recording was playing, you could select the play modes *Play once* or *Loop*. Those play modes have now been replaced by the *Keep repeating the recording* checkbox.
 
@@ -234,7 +234,7 @@ A new */Bootstrap* command line argument is now supported for the DataMiner Cube
 
 ### DMS Reports & Dashboards
 
-#### Dashboards app - GQI: New “Get alarms” data source \[ID_30320\] \[ID_30420\]
+#### Dashboards app - GQI: New 'Get alarms' data source \[ID_30320\] \[ID_30420\]
 
 In the Generic Query Interface, a new “Get alarms” data source is now available. It will return all alarms in the DMS.
 
@@ -279,7 +279,7 @@ The following columns can be added using a column selector node:
 
 - A column for every custom alarm property
 
-#### Dashboards app - State component: “Show units” option \[ID_30322\]
+#### Dashboards app - State component: 'Show units' option \[ID_30322\]
 
 In the *Settings* tab of a *State* component, it is now possible to select or clear the *Show units* option to show or hide the unit of the parameter.
 
@@ -293,7 +293,7 @@ When you opened or refreshed a dashboard, up to now, the chart components on tha
 
 ### DMS Maps
 
-#### Filtering on alarm severity: \<Checkbox> tags now have a “checked” attribute \[ID_30429\]
+#### Filtering on alarm severity: \<Checkbox> tags now have a 'checked' attribute \[ID_30429\]
 
 If you want a map to contain a filter box that allows users to filter map items based on their alarm severity level, then you add a \<FilterBox> tag that contains a checkbox for every alarm severity level. From now on, it is possible to indicate whether those checkboxes should be selected or cleared by default. To do so, add a “checked” attribute to each of the checkboxes, and set their value to either true or false.
 
@@ -420,7 +420,7 @@ Due to a number of enhancements, overall performance has increased when adding a
 
 Due to a number of enhancements, overall performance has increased when including/excluding elements in/from services based on parameter values, especially when the same parameter is used in a large number of element inclusion conditions.
 
-#### http://[dma]/root/tools/ page now allows you to install SECTIGO certificate \[ID_30297\]
+#### Tools page now allows you to install SECTIGO certificate \[ID_30297\]
 
 DataMiner Cube files are now signed with a SECTIGO certificate.
 
@@ -450,7 +450,7 @@ When the SLWatchdog process is started, it checks the VersionHistory.txt file to
 
 Up to now, when SLNet updated the DataMiner version in VersionHistory.txt while SLWatchdog was running, the latter would not be aware of that change until it was restarted. From now on, SLNet will notify SLWatchdog when it has updated VersionHistory.txt.
 
-#### DataMiner Cube: Links to deprecated DCP platform replaced by links to the new https://dataminer.services platform \[ID_30430\]
+#### DataMiner Cube: Links to deprecated DCP platform replaced by links to the new dataminer.services platform \[ID_30430\]
 
 Throughout the Cube UI, all links to the deprecated DataMiner Collaboration Platform have been replaced by links to the new <https://dataminer.services> platform.
 
@@ -506,14 +506,14 @@ NT_ADD_FILE (99) has now been adapted in order to better handle alarm template c
 
 When you navigated from the configuration pane to the jobs overview, in some cases, the current job domain would incorrectly be refreshed.
 
-#### DataMiner Cube - Alarm templates: Hysteresis could incorrectly be applied to “low” severity levels for parameters of type string \[ID_30117\]
+#### DataMiner Cube - Alarm templates: Hysteresis could incorrectly be applied to 'low' severity levels for parameters of type string \[ID_30117\]
 
 When applying hysteresis to specific alarm severity level for parameters of type string, up to now, it would incorrectly be possible to do so for “low” severity levels. From now on, for parameters of type string, it will only be possible to apply hysteresis to “high” severity levels.
 
 > [!NOTE]
 > If, for a string parameter, Hysteresis is set to “On” or “Off”, then the High and Low levels must be consistent. Both should either be enabled or disabled.
 
-#### DataMiner Cube - Scheduler: Tasks with a type other than “Once” would incorrectly allow you to enter a date and a time in the start date box \[ID_30140\]
+#### DataMiner Cube - Scheduler: Tasks with a type other than 'Once' would incorrectly allow you to enter a date and a time in the start date box \[ID_30140\]
 
 When you configure a scheduled task with a type other than “Once”, you can specify a start date and an end date. Up to now, the start date box would allow you to enter a date and a time. As this is not relevant, from now on, the start date box will only allow you to enter a date.
 
@@ -527,7 +527,7 @@ Normally, the bands must be updated before a new selection is set. However, in s
 
 In some rare cases, an error could occur in SLElement when the hysteresis timer was activated at the moment when an element was restarted.
 
-#### SLDataGateway: “Connection was closed” error \[ID_30213\]
+#### SLDataGateway: 'Connection was closed' error \[ID_30213\]
 
 In some cases, a “connection was closed” error could occur in the SLDataGateway process.
 
@@ -595,7 +595,7 @@ The version compatibility test has now been adapted:
 
 When external authentication via SAML was configured incorrectly, up to now, SLNet would fail to initialize. From now on, a “Failed to build External Authentication for SAML” notice will be generated instead and SLNet will continue its initialization routine.
 
-#### SLAnalytics: “Division by zero” error when encountering an invalid polling time in legacy parameterInfo records \[ID_30321\]
+#### SLAnalytics: 'Division by zero' error when encountering an invalid polling time in legacy parameterInfo records \[ID_30321\]
 
 In some cases, a “division by zero” error could occur in SLAnalytics when encountering an invalid polling time in legacy parameterInfo records.
 
@@ -615,7 +615,7 @@ In some cases, alarms in tables would not get re-evaluated when foreign keys lin
 
 When the polling IP address of an element or a custom property of a view, service or element was updated, the times of arrival of all alarm groups would incorrectly be updated internally. From now on, only the times of arrival of the alarm groups affected by the change will be updated.
 
-#### Dashboards app: “Loading” bar would stay visible longer than necessary \[ID_30343\]
+#### Dashboards app: 'Loading' bar would stay visible longer than necessary \[ID_30343\]
 
 In some cases, the “Loading” bar, which is visible while the Dashboards app is busy loading all components, would stay visible longer than necessary. From now on, it will disappear immediately after all components have been loaded.
 
@@ -631,7 +631,7 @@ In some cases, the SLDataMiner process could become unresponsive due to a proble
 
 When either enabling or disabling a Failover setup using a Cassandra cluster, in some cases, the Cassandra cluster would break.
 
-#### Failover: “DB forwarding is failing” alarm would incorrectly be generated when using Cassandra Cluster \[ID_30392\]
+#### Failover: 'DB forwarding is failing' alarm would incorrectly be generated when using Cassandra Cluster \[ID_30392\]
 
 In a Failover environment using a Cassandra Cluster, in some cases, the following alarm would incorrectly be generated:
 
@@ -703,7 +703,7 @@ Failed getting the timeline data from the DMA agent: Empty server response
 
 This error will now be replaced by a message that clearly indicates that the table index is still missing and should be specified.
 
-#### Dashboards app - Tree feed & Parameter feed: Problem with “Selected only” option \[ID_30510\]
+#### Dashboards app - Tree feed & Parameter feed: Problem with 'Selected only' option \[ID_30510\]
 
 When you open a dashboard containing a tree feed or a parameter feed with a preset selection in the URL, the “Selected only” option of those feeds is selected by default.
 
@@ -717,11 +717,11 @@ When you install a DataMiner upgrade package, a number of checks are performed b
 
 When you opened a dashboard containing a parameter feed with a preset selection, in some cases, the indices of the selected items would not all be selected.
 
-#### DataMiner Cube - Visual Overview: Asterisk in shape text of an “Info” shape would not be replaced when the shape text contained more than just the asterisk \[ID_30534\]
+#### DataMiner Cube - Visual Overview: Asterisk in shape text of an 'Info' shape would not be replaced when the shape text contained more than just the asterisk \[ID_30534\]
 
 When the shape text of an “Info” shape contained more than just an asterisk (“\*”), in some cases, the asterisk would not be replaced with the information specified in the Info shape data field.
 
-#### DataMiner Cube - System Center: Clicking “Failover...” would incorrectly show the Failover configuration of the DMA to which you were connected \[ID_30535\]
+#### DataMiner Cube - System Center: Clicking 'Failover...' would incorrectly show the Failover configuration of the DMA to which you were connected \[ID_30535\]
 
 When, in the *Agents* section of *System Center*, you selected a DataMiner Agent and clicked *Failover* to check its Failover configuration, the *Failover Config* window would incorrectly always show the Failover configuration of the DataMiner Agent to which you were connected.
 

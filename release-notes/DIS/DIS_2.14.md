@@ -61,7 +61,7 @@ To open the tool window, open the DIS menu, and click *Tool Windows \> DIS Macro
 
 In essence, a DIS macro consists of a Script class containing a Run() method that passes an Engine object. That object provides access to input data and allows you to modify the document, write log entries, etc.
 
-The following input data is available in the “engine.Input” object:
+The following input data is available in the "engine.Input" object:
 
 - File name
 - File content
@@ -72,7 +72,7 @@ The following input data is available in the “engine.Input” object:
   - Parsed XML object structure
   - Parsed protocol model
 
-The following methods are available in the “engine” object:
+The following methods are available in the "engine" object:
 
 | Method              | Function                                                                   |
 |---------------------|----------------------------------------------------------------------------|
@@ -87,11 +87,11 @@ The following methods are available in the “engine” object:
 
 ### Validator
 
-#### Protocol.CheckNameTag check now also returns an error if the protocol name starts with “Production” \[ID_20285\]
+#### Protocol.CheckNameTag check now also returns an error if the protocol name starts with 'Production' \[ID_20285\]
 
-From now on, the Protocol.CheckNameTag check will also return an error if the name of a protocol starts with “Production”.
+From now on, the Protocol.CheckNameTag check will also return an error if the name of a protocol starts with "Production".
 
-If an error of this type appears in the *DIS Validation* window, you will be able to fix it right away. If you right-click the error and select *Fix \> This error*, the “Production” prefix will be removed.
+If an error of this type appears in the *DIS Validation* window, you will be able to fix it right away. If you right-click the error and select *Fix \> This error*, the "Production" prefix will be removed.
 
 | ID    | Check                 | Error message |
 |-------|-----------------------|---------------|
@@ -161,7 +161,7 @@ It is now also possible to debug elements that were migrated from one DataMiner 
 
 A number of enhancements have been made to the Automation script publication process.
 
-#### XML editor: Enhanced ‘Automation Root’ snippet and ‘DataMiner Automation Script Template’ file \[ID_20265\]
+#### XML editor: Enhanced 'Automation Root' snippet and 'DataMiner Automation Script Template' file \[ID_20265\]
 
 The following enhancements have been made to the ‘Automation Root’ snippet and the ‘DataMiner Automation Script Template’ file:
 
@@ -179,7 +179,7 @@ The following enhancements have been made to the ‘Automation Root’ snippet a
     <!--<Param type="debug">true</Param>-->
     ```
 
-#### XML editor: Exception handling added to “QAction” snippet and “After Startup” QAction of ‘Protocol Root’ snippet \[ID_20266\]
+#### XML editor: Exception handling added to 'QAction' snippet and 'After Startup' QAction of 'Protocol Root' snippet \[ID_20266\]
 
 Exception handling (try-catch) has now been added to
 
@@ -216,6 +216,6 @@ When you created a new protocol or Automation script file via *File \> New \> Fi
 
 When a CDATA element in a QAction had two closing tags (“\]\]\>\]\]\>”), and the DIS tree window indicated that it had found a syntax error in the QAction in question, the moment you removed one of those closing tags and closed the QAction, in some cases, it would become impossible to open the QAction again.
 
-#### IDE: Problem when using “Repeat selected text...” option \[ID_20546\]
+#### IDE: Problem when using 'Repeat selected text...' option \[ID_20546\]
 
 In some cases, an “out of memory” exception could be thrown when you used the shortcut menu option “Repeat selected text...”.

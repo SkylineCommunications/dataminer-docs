@@ -78,7 +78,7 @@ From now on, when an element has duplicate properties, no exception will be thro
 
 In some cases, it would not be possible to retrieve the alarm template or the trend template of a protocol via IDms when that protocol was a production protocol.
 
-Also, the IDmsProtocol interface now has a new “ReferencedVersion” property.
+Also, the IDmsProtocol interface now has a new "ReferencedVersion" property.
 
 ### 1.0.1.2
 
@@ -92,7 +92,7 @@ From now on, the Class Library will no longer throw an exception when an error o
 
 - When element replication is not enabled for a particular element, then the replication properties of that element will no longer be parsed.
 
-- When element replication is enabled for a particular element, and an error occurs while parsing the replicated remote element, then the incorrect ID will be logged, and the default remote element ID “-1/-1” will be used instead. This will make sure the element is included in the list of elements returned by the GetElements method.
+- When element replication is enabled for a particular element, and an error occurs while parsing the replicated remote element, then the incorrect ID will be logged, and the default remote element ID "-1/-1" will be used instead. This will make sure the element is included in the list of elements returned by the GetElements method.
 
 - When a general error occurs while parsing the information of an element, then an entry will be added to the log, and the GetElements method will return all elements of which the information was parsed successfully.
 

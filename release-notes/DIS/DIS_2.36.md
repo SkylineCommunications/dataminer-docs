@@ -175,7 +175,7 @@ When developing Automation scripts as Visual Studio solutions, it is good practi
 
 In cases where the same DLL was referenced both via the solution explorer and via an Exe or Param tag, up to now, a script would end up containing duplicate references when compiled. From now on, when the compiler finds duplicate references, it will disregard the ones added via an Exe or Param tag and only keep the ones added via the solution explorer.
 
-#### Protocols: Enhanced “Add New Column” command \[ID_32465\]
+#### Protocols: Enhanced 'Add New Column' command \[ID_32465\]
 
 When editing a protocol.xml file, in front of every \<Param> element that defines a table parameter, you can click the small *Down* arrow and select the *Add New Column* command to add a column to that table parameter. That command has now been enhanced.
 

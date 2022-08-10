@@ -157,7 +157,7 @@ As from DataMiner feature release version 10.1.9, a ResourceManagerEventMessage 
 
 DataMiner Cube has now been adapted accordingly.
 
-#### Visual Overview: New ChildrenFilter “ResourceMapping” \[ID_30751\]
+#### Visual Overview: New ChildrenFilter 'ResourceMapping' \[ID_30751\]
 
 When, within a service context, child shapes are automatically generated, it is now possible to use a ResourceMapping filter. This will allow you to only show shapes that have a certain role (mapped, unmapped, inheritance) within the booking.
 
@@ -221,7 +221,7 @@ Full syntax: \[Reservation:\<Service ID or Booking ID>,ServiceDefinitionID\]
 
 ### DMS Automation
 
-#### Interactive Automation scripts: New "TreeViewItemCheckingBehavior" property of TreeViewItem \[ID_29993\]\[ID_30603\]
+#### Interactive Automation scripts: New 'TreeViewItemCheckingBehavior' property of TreeViewItem \[ID_29993\]\[ID_30603\]
 
 You can now configure what happens when you select a tree view item in an interactive Automation script, using the new *TreeViewItemCheckingBehavior* enum property of the *TreeViewItem* object.
 
@@ -273,7 +273,7 @@ UIBuilder uib = new UIBuilder();
     _treeResults = _engine.ShowUI(uib);
 ```
 
-#### Interactive Automation scripts: Input components now have a “WantsOnFocusLost” property & other input component enhancements \[ID_30638\]
+#### Interactive Automation scripts: Input components now have a 'WantsOnFocusLost' property & other input component enhancements \[ID_30638\]
 
 In an interactive Automation script that is used in the DataMiner web apps, the following components now have a *WantsOnFocusLost* property. If you set this property to true, then an *OnChange* event will be triggered when the component loses focus.
 
@@ -569,7 +569,7 @@ In some cases, a deadlock in the SLDataGateway process could cause e.g. correlat
 
 In some cases, the Protocol.ShowInformationMessage() method would not work properly.
 
-#### CRC parameter with LengthType “fixed” and RawType “other”, “text” or ”numeric text” would incorrectly always be set to 0x20 or 0x30 \[ID_30730\]
+#### CRC parameter with LengthType 'fixed' and RawType 'other', 'text' or 'numeric text' would incorrectly always be set to 0x20 or 0x30 \[ID_30730\]
 
 When a CRC parameter with LengthType “fixed” and RawType “other”, “text” or “numeric text” was used in a command, it would incorrectly always be set to 0x20 characters for parameter of type “string” or 0x30 characters for parameters of type “double”.
 

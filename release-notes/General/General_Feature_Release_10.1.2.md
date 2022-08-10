@@ -32,7 +32,7 @@ To switch to using one Cassandra cluster for your DMS, follow the procedure belo
 
 ##### DB.xml changes
 
-In the file DB.xml, the new database type “CassandraCluster” is now supported for the general (previously known as local) database. While previously, information in this file related to the general database was not synced in a cluster, if this database type is used, DB.xml is now completely synchronized throughout the cluster.
+In the file *DB.xml*, the new database type “CassandraCluster” is now supported for the general (previously known as local) database. While previously, information in this file related to the general database was not synced in a cluster, if this database type is used, *DB.xml* is now completely synchronized throughout the cluster.
 
 ##### Cluster health monitoring
 
@@ -41,7 +41,6 @@ If a Cassandra node goes down or when a node is down when DataMiner starts up, a
 ##### Limitations
 
 - .dmimport packages created on a DMS using a Cassandra Cluster do not contain any database data, and it is not possible to import database data from such packages in such a DMS.
-
 - If the Cassandra cluster feature is used, alarm and information event information is always migrated to Elasticsearch. It is not possible to use this feature without enabling indexing on alarms.
 
 > [!NOTE]
@@ -108,7 +107,7 @@ In the *Users/Groups* section of *System Center*, the following has been changed
 
 ### DMS Protocols
 
-#### Enhanced (direct) view column option “view” \[ID_28448\]
+#### Enhanced (direct) view column option 'view' \[ID_28448\]
 
 The following (direct) view column option has been enhanced.
 
@@ -186,7 +185,7 @@ In the DataMiner stencils, the following existing icons have been renamed:
 
 | Old name            | New name          |
 |---------------------|-------------------|
-| no Access            | No Access.2       |
+| no Access           | No Access.2       |
 | dmcube_cubemobile   | DM Cube Mobile    |
 | IP alt              | IP.2              |
 | Rotate 2            | Rotate            |
@@ -399,7 +398,7 @@ In the Alarm template editor, it is possible to configure hysteresis values for 
 
 Due to a number of enhancements, overall performance has increased when loading the default page after opening a card.
 
-#### DataMiner Maps: Style attribute of TableSourceInfo tags will now by default be set “markers” \[ID_28313\]
+#### DataMiner Maps: Style attribute of TableSourceInfo tags will now by default be set 'markers' \[ID_28313\]
 
 In a map configuration file, the style attribute of a TableSourceInfo tag can be set to either “markers” or “lines”.
 
@@ -426,7 +425,7 @@ From now on, the display keys will also be taken into account. As a result, indi
 
 Up to now, when you left a name empty, one of two different error messages could appear. These messages have now been consolidated into one single error message.
 
-#### Log level of “!! No link found for ...” errors has been lowered from 0 to 5 \[ID_28353\]
+#### Log level of '!! No link found for ...' errors has been lowered from 0 to 5 \[ID_28353\]
 
 Up to now, when SLElement tried to resolve a relation path in an element, it would throw a “!! No link found for ...” error with log level 0 and log type “Error”. As this error occurs very frequently in case of virtual functions, its log level has now been lowered from 0 to 5.
 
@@ -615,7 +614,7 @@ During a file offload, in some cases, a large number of deserialization exceptio
 
 When, in a line chart component, only one parameter was selected, in some cases, the parameter header would not be displayed.
 
-#### Dashboards app - Line chart component: Problem with “Expand legend initially” option \[ID_28487\]
+#### Dashboards app - Line chart component: Problem with 'Expand legend initially' option \[ID_28487\]
 
 When you refreshed a line chart component that had the “Expand legend initially” option selected, in some cases, the legend would incorrectly not be expanded.
 

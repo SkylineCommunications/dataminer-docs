@@ -198,7 +198,7 @@ If you want to specify the page to be selected by default, add a suffix to the i
 >   - “BelowThisView:Elements” or “btv:Elements” will open the view card page named “Elements”.
 > - When the card layout is set to “Tab layout”, it is now possible to save EPM cards in workspaces.
 
-#### New “IN USE” info tag to be used in element shapes linked to resources \[ID_32393\]
+#### New 'IN USE' info tag to be used in element shapes linked to resources \[ID_32393\]
 
 Shapes that are linked to an element can automatically be linked to corresponding resources by adding “UseResource=True” in a shape data field of type Options.
 
@@ -238,7 +238,7 @@ Setting TextTrimming to either “CharacterEllipsis” or “WordEllipsis” wil
 
 ### DMS Reports & Dashboards
 
-#### Dashboards app - Line chart component: New “Trend points” setting \[ID_31751\]
+#### Dashboards app - Line chart component: New 'Trend points' setting \[ID_31751\]
 
 When configuring a line chart component, you can now indicate how trend data points should be added to the graph by setting the *Trend points* option to one of the following values:
 
@@ -254,7 +254,7 @@ When you select a time range in an embedded Resource Manager component, that ran
 
 ### DMS Service & Resource Management
 
-#### ProfileInstances: New parameter property “InheritIsHidden” \[ID_32131\]
+#### ProfileInstances: New parameter property 'InheritIsHidden' \[ID_32131\]
 
 In the ParameterSettings property of a profile instance, you can now use the “InheritIsHidden” property to indicate whether a profile instance should inherit the “IsHidden” property of a profile parameter. This property is false by default.
 
@@ -286,7 +286,7 @@ pfHelper.ReplaceActiveSystemFunctionDefinitions(xmlcontent);
 
 A number of security enhancements have been made.
 
-#### SLElement: Enhanced performance when working with tables using the “naming” or “namingformat” option \[ID_30973\]
+#### SLElement: Enhanced performance when working with tables using the 'naming' or 'namingformat' option \[ID_30973\]
 
 Due to a number of enhancements, overall performance of SLElement has increased, especially when working with tables using the “naming” or “namingformat” option.
 
@@ -427,7 +427,7 @@ In the Dashboards app, a number of issues with regard to GQI have been resolved.
 - Column manipulation by concatenation would concatenate the raw values instead of the display values.
 - When data was being aggregated, “group by” operations would use the raw value instead of the display value.
 
-#### Dashboards app: Problem when double-clicking the “Start editing” button \[ID_32159\]
+#### Dashboards app: Problem when double-clicking the 'Start editing' button \[ID_32159\]
 
 When, in the Dashboards app, you double-clicked the *Start editing* button, in some cases, the dashboard would keep on going in and out of edit mode.
 
@@ -457,7 +457,7 @@ Now an EPM item can only be unmasked if all underlying items are unmasked. When 
 
 In some cases, an error could occur in the SLAnalytics process due to a stack overflow exception.
 
-#### DataMiner Cube - Alarm Console: “Audible alert” option was not saved correctly when an alarm tab was added to a workspace \[ID_32191\]
+#### DataMiner Cube - Alarm Console: 'Audible alert' option was not saved correctly when an alarm tab was added to a workspace \[ID_32191\]
 
 When you undocked an alarm tab in which the “audible alert” option was selected, and then saved the workspace, the “audible alert” option would not be saved correctly.
 
@@ -473,7 +473,7 @@ At startup, the SLLogCollector tool checks for issues by reading the SLWatchDog2
 
 When you created an “active alarms” tab for a certain object (element, service or view) by dropping that object onto the Alarm Console, and then made the tab show history alarms instead of active alarms, the automatically generated tab name was incorrectly set to “Alarms of the last 0 hours” instead of “\~Last hour (up till X)”.
 
-#### DataMiner Cube - Alarm Console: Not possible to change the “automatic incident tracking” option in an alarm tab that was enforced by group settings \[ID_32218\]
+#### DataMiner Cube - Alarm Console: Not possible to change the 'Automatic incident tracking' option in an alarm tab that was enforced by group settings \[ID_32218\]
 
 In an alarm tab that was enforced by group settings, up to now, it would not be possible to change the “automatic incident tracking” option.
 
@@ -596,7 +596,7 @@ In some cases, automatic incident tracking would not start up when an alarm was 
 
 When alarms were generated while automatic incident tracking was starting up, in some cases, an alarm could internally be duplicated, leading to incorrect alarm groups (e.g. groups containing only a single alarm).
 
-#### DataMiner Cube - Alarm Console: Problem with “new alarms” counter when alarms were grouped by service \[ID_32427\]
+#### DataMiner Cube - Alarm Console: Problem with 'new alarms' counter when alarms were grouped by service \[ID_32427\]
 
 When, in an alarm tab in which the alarms were grouped by service, an alarm affecting at least two services was cleared, then the “new alarms” counter in the tab header would show an incorrect number of alarms.
 
@@ -650,6 +650,6 @@ When you assign a Visio drawing to a view or a service, you can specify a defaul
 
 Also, when the *How to show element card Data pages* setting was set to “Show in drop-down box”, initial page selection would no longer work.
 
-#### Web apps: “Refresh now” message would incorrectly appear when opening a web app that did not have an active websocket connection \[ID_32585\]
+#### Web apps: 'Refresh now' message would incorrectly appear when opening a web app that did not have an active websocket connection \[ID_32585\]
 
 When your opened a web app (e.g. Dashboards, Monitoring, Ticketing, etc.) that did not have an active websocket connection, a “Refresh now” message would incorrectly appear. From now on, this message will only appear when an active websocket connection was broken.

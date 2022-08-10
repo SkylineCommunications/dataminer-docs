@@ -136,9 +136,9 @@ The names of the DIS tool windows have been made more consistent:
 | Protocol Grid     | DIS Grid        |
 | \-                | DIS Validator   |
 
-#### XSD: Protocol.Actions.Action.On tag no longer supports “action” value \[ID_17654\]
+#### XSD: Protocol.Actions.Action.On tag no longer supports 'action' value \[ID_17654\]
 
-The Protocol.Actions.Action.On tag no longer supports its value to be set to “action”.
+The Protocol.Actions.Action.On tag no longer supports its value to be set to "action".
 
 #### XSD: Protocol.HTTP.Session.Connection.Response.Headers.Header tags no longer accept any content \[ID_17655\]
 

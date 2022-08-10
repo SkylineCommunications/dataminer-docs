@@ -65,7 +65,7 @@ When not all CI Types were found, up to now the workflow manager stopped process
 
 ### Fixes
 
-#### “-1” displayed instead of “N/A” on RPD details page \[ID_31963\]
+#### '-1' displayed instead of 'N/A' on RPD details page \[ID_31963\]
 
 On the RPD details page, it could occur that parameters displayed *-1* instead of the *N/A* exception value.
 

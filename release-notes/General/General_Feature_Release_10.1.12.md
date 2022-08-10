@@ -182,11 +182,11 @@ Examples:
 - \[Element:MyElement,ID\] will be resolved to the ID of the element with the name “MyElement”.
 - \[Element:2/125,Name\] will be resolved to the name of the element with ID 2/125.
 
-#### DataMiner Cube - Visual Overview: Service connectivity chains now support “lite contributing” resources \[ID_31196\]
+#### DataMiner Cube - Visual Overview: Service connectivity chains now support 'lite contributing' resources \[ID_31196\]
 
 In Visual Overview, it is possible to have the connectivity chain of a service instance (from the Service & Resource Management module) drawn automatically in Visual Overview. Now, this feature supports so-called “lite” contributing resources, i.e. resources for which no enhanced elements have to be created.
 
-#### Sidebar: Click “+” to pin sidebar items \[ID_31207\]
+#### Sidebar: Click '+' to pin sidebar items \[ID_31207\]
 
 Since DataMiner feature release version 10.1.11, it is possible to pin and unpin items in the sidebar.
 
@@ -322,7 +322,7 @@ An error will now be thrown when you try to add a file that is larger than the a
 
 ### DMS web apps
 
-#### DataMiner landing page: Browser title changed to “DataMiner” \[ID_31373\]
+#### DataMiner landing page: Browser title changed to 'DataMiner' \[ID_31373\]
 
 The browser title of the DataMiner landing page (e.g. `https://<MyDMA>/root/`) has been changed from “DataMiner Services” to “DataMiner”.
 
@@ -508,7 +508,7 @@ In some cases, the DataMiner startup process could become unresponsive and the C
 
 When the SLAnalytics process was starting up, in some cases, an error could occur when one of its dependencies was not available. From now on, if an error were to occur during the initialization of the SLAnalytics process, the process will shut down gracefully.
 
-#### “Not a matrix update” exceptions would appear in the Alarm Console \[ID_31052\]
+#### 'Not a matrix update' exceptions would appear in the Alarm Console \[ID_31052\]
 
 In some cases, the parameter throttling mechanism would incorrectly try to interpret full table changes as matrix updates, causing “Unexpected Exception \[Not a matrix update.\]: Sending an event to subscribers (see comment)” alarm events to appear in the Alarm Console.
 
@@ -550,7 +550,7 @@ Up to now, when a smart-serial or smart-IP protocol received large data packets,
 
 When a scheduled task had been deleted from Windows scheduler but was still present on the DataMiner Agent, in some cases, an error could be thrown. From now on, when that type of error is thrown after a manually executed task was deleted, the task in question will be recreated.
 
-#### DataMiner Cube: View updates and element removals would incorrectly not trigger an update of the “Below this view” list in a view card \[ID_31141\]
+#### DataMiner Cube: View updates and element removals would incorrectly not trigger an update of the 'Below this view' list in a view card \[ID_31141\]
 
 In some cases, view updates and element removals would incorrectly not trigger an update of the “Below this view” list in a view card.
 
@@ -586,7 +586,7 @@ When, in an interactive Automation script, you had configured the DateTimeKind p
 
 In some cases, options added to GQI queries would incorrectly be added twice.
 
-#### DataMiner Cube - Router Control: “park source” feature would incorrectly not work on matrices with IO table structures \[ID_31239\]
+#### DataMiner Cube - Router Control: 'park source' feature would incorrectly not work on matrices with IO table structures \[ID_31239\]
 
 Up to now, the “park source” feature would incorrectly not work on matrices with IO table structures.
 
@@ -594,7 +594,7 @@ Up to now, the “park source” feature would incorrectly not work on matrices 
 
 In some cases, a DataMiner Agent could get stuck in offload mode after the database had been unreachable for a period of time.
 
-#### Memory leak in SLElement when stopping or deleting an element with a protocol of type “virtual” \[ID_31252\]
+#### Memory leak in SLElement when stopping or deleting an element with a protocol of type 'virtual' \[ID_31252\]
 
 In some cases, SLElement could leak memory when stopping or deleting elements with a protocol of type “virtual”.
 
@@ -610,7 +610,7 @@ In some cases, it would no longer be possible for users without access to elemen
 
 In Visual Overview, in some cases, property values would not get updated correctly.
 
-#### DataMiner Cube - Spectrum analysis: “Auto RBW Factor” and “Auto VBW Factor” values stored incorrectly in spectrum preset \[ID_31299\]
+#### DataMiner Cube - Spectrum analysis: 'Auto RBW Factor' and 'Auto VBW Factor' values stored incorrectly in spectrum preset \[ID_31299\]
 
 In some cases, the “Auto RBW Factor” and “Auto VBW Factor” values would be stored in spectrum presets in an incorrect way. This would then lead to an incorrect auto RBW/VBW calculation.
 
@@ -639,7 +639,7 @@ When you had updated server settings in System Center (e.g. the default browser 
 
 When the alarm focus feature was used for the first time, in some cases, all alarm events would incorrectly be marked with an icon in the *Focus* column.
 
-#### DataMiner Cube - Services app: Contents of “Configure groups” window would be arranged incorrectly \[ID_31344\]
+#### DataMiner Cube - Services app: Contents of 'Configure groups' window would be arranged incorrectly \[ID_31344\]
 
 When you right-clicked a Service Definition diagram and selected *Configure groups*, the contents of the *Configure groups* window would be arranged incorrectly. For example, the *Add group* button would be positioned at an incorrect location.
 
@@ -647,7 +647,7 @@ When you right-clicked a Service Definition diagram and selected *Configure grou
 
 In the Jobs app, in some cases, date values saved in UTC format would be parsed incorrectly.
 
-#### Dashboards app - GQI: Problem when enabling the “Use feed” option of a select node \[ID_31349\]
+#### Dashboards app - GQI: Problem when enabling the 'Use feed' option of a select node \[ID_31349\]
 
 When, in a GQI query, the “Use feed” option of a select node had been enabled, in some cases, an error could occur when selecting the default columns.
 
@@ -663,7 +663,7 @@ In some rare cases, the ProfileManager module could get stuck during its initial
 
 When an SLAnalytics feature had been restarted or when a setting of such a feature had been changed, in some cases, an exception could be thrown when data was written to the database.
 
-#### DataMiner Cube - Alarm Console: “Saved filters” option would incorrectly be missing on systems with a MySQL database \[ID_31375\]
+#### DataMiner Cube - Alarm Console: 'Saved filters' option would incorrectly be missing on systems with a MySQL database \[ID_31375\]
 
 When, on a system with a MySQL database, you selected *Apply filter...* in a newly created alarm tab, in some cases, the *Saved filters* options would incorrectly be missing.
 
@@ -681,7 +681,7 @@ When you tried to import a dashboard, in some cases, the system would incorrectl
 
 Also, when you tried to import a dashboard on a DataMiner Agent that did not have an “ImportDashboards” folder, the Dashboards app would incorrectly look for the dashboard to be imported in the “Dashboards” folder instead. From now on, when the “ImportDashboards” folder does not exist, a message will appear, saying that no dashboards are available for import.
 
-#### DataMiner Cube - Visual Overview: Session variable “IDOfSelection” of ListView would be updated incorrectly \[ID_31395\]
+#### DataMiner Cube - Visual Overview: Session variable 'IDOfSelection' of ListView would be updated incorrectly \[ID_31395\]
 
 When you embed a list view component in a visual overview and set the Source field to “Bookings”, then the session variable IDOfSelection will contain the ID of the currently selected booking. In some cases, this session variable would be updated incorrectly, especially when you selected a booking in the future after having selected a booking in the past.
 
@@ -696,13 +696,13 @@ When generic emails were sent via the SLASPConnection process, some of the SMTP 
 > [!NOTE]
 > Since DataMiner version 10.1.10, sending emails via the SLAutomation process would also fail when using STARTTLS or non-default SSL port configurations.
 
-#### Dashboards app - GQI: Problem when migrating “start from” queries \[ID_31544\]
+#### Dashboards app - GQI: Problem when migrating 'start from' queries \[ID_31544\]
 
 When you opened a query that was created using an older GQI version, and that query was configured to start from another query, in some cases, it would incorrectly be migrated to the current GQI version.
 
 Also, in some cases, a server query would not be translated correctly to a client query.
 
-#### Failover: Status of newly installed Failover system would incorrectly not be set to “No problems detected” \[ID_31604\]
+#### Failover: Status of newly installed Failover system would incorrectly not be set to 'No problems detected' \[ID_31604\]
 
 In some cases, the status of a newly installed Failover system would incorrectly not be set to “No problems detected” (i.e. green LED).
 

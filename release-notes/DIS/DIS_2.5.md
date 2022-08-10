@@ -16,7 +16,7 @@ Up to now, when DIS opened a QAction and created the necessary C# projects, it u
 
 When a QAction refers to another QAction in a DllImport attribute, then that referenced QAction will now also automatically be injected when you debug a protocol in DIS.
 
-#### Table editor: New ‘Header’, ‘Histogram’ and ‘Heatmap’ options \[ID_16098\]
+#### Table editor: New 'Header', 'Histogram' and 'Heatmap' options \[ID_16098\]
 
 If, in the table editor, you add a monitored parameter of Interprete type “double” and measurement type “number” or “analog”, you can now set three additional options in the *Displayed Columns Layout* section.
 

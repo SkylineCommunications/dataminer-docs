@@ -101,7 +101,7 @@ Example:
 
 ### DMS Cube
 
-#### Visual Overview - Edit in Visio: New options “Add theming” and “Add pretty hover” \[ID_32660\]
+#### Visual Overview - Edit in Visio: New options 'Add theming' and 'Add pretty hover' \[ID_32660\]
 
 When, in DataMiner Cube, you right-click a visual overview and select “Edit in Visio”, an advanced edit panel will appear. When no shape is selected, you can now click an ellipsis button (“...”) in the top-right corner of the panel. This will open a menu with the following options.
 
@@ -132,7 +132,7 @@ When, in the Alarm Console, you enable the “Automatic incident tracking” opt
 > [!NOTE]
 > From the moment a user manually adds or removes an alarm to or from an alarm group or renames an alarm group, that group will no longer be updated automatically.
 
-#### Trending - Behavioral anomaly detection: New type of change point “flatline” \[ID_32839\] \[ID_32856\] \[ID_32950\]
+#### Trending - Behavioral anomaly detection: New type of change point 'flatline' \[ID_32839\] \[ID_32856\] \[ID_32950\]
 
 The DataMiner Analytics software can detect a number of changes in the behavior of a trend, also known as “change points”. From now on, it will also be able to detect change points of type “flatline”. A flatline is detected when a fluctuating value suddenly remains constant.
 
@@ -321,7 +321,7 @@ Example:
 
 ### DMS Mobile Gateway
 
-#### Additional logging after sending a “send SMS” request to an SMSEagle device \[ID_32785\] \[ID_32911\]
+#### Additional logging after sending a 'send SMS' request to an SMSEagle device \[ID_32785\] \[ID_32911\]
 
 When an HTTP request of type “send SMS” is sent to an SMSEagle device, the following information will now be logged in the SLGSMGateway log file:
 
@@ -421,11 +421,11 @@ A number of issues have been fixed with regard to alarm templates.
 
 Also, a number of enhancements have been made with regard to the calculation of smart baselines.
 
-#### Cassandra Cluster Migrator tool would incorrectly not allow multiple IP addresses in the “Cassandra IP(s)” field \[ID_32554\]
+#### Cassandra Cluster Migrator tool would incorrectly not allow multiple IP addresses in the 'Cassandra IP(s)' field \[ID_32554\]
 
 When configuring the Cassandra settings in the Cassandra Cluster Migrator tool, it would incorrectly not be possible to specify multiple IP addresses in the *Cassandra IP(s)* field.
 
-#### SLAnalytics - Pattern matching: No “suggestion event” type alarm would be triggered in case of DVE elements \[ID_32671\]
+#### SLAnalytics - Pattern matching: No 'suggestion event' type alarm would be triggered in case of DVE elements \[ID_32671\]
 
 From DataMiner 10.0.13 onwards, you can activate alarm monitoring of trend patterns, so that a “suggestion event” type alarm is triggered whenever a specific pattern is detected. In case of dynamic virtual elements, in some cases, no “suggestion event” type alarm would be triggered.
 
@@ -441,7 +441,7 @@ Up to now, when GetEligibleResources was called, the eligible resources would in
 
 Up to now, in some cases, the Cube UI could become unresponsive when you opened the Ticketing app.
 
-#### DataMiner Cube - Visual Overview: SET command linked to a shape would not be executed when the page was displayed in a VdxPage window of type “Popup” \[ID_32780\]
+#### DataMiner Cube - Visual Overview: SET command linked to a shape would not be executed when the page was displayed in a VdxPage window of type 'Popup' \[ID_32780\]
 
 When a page that was displayed in a VdxPage window of type “Popup” contained a shape linked to a SET command, clicking that shape would incorrectly not execute the SET command.
 

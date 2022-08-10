@@ -66,17 +66,17 @@ Up to now, lists of items linked to items selected in the protocol editor (e.g. 
 
 In some cases, warnings were incorrectly generated for timeouts of serial responses if those responses contained a “next param” parameter and had a trailer followed by a CRC.
 
-#### Validator - Invalid warnings for exported parameters with “RTDisplay=false” \[ID_12450\]
+#### Validator - Invalid warnings for exported parameters with 'RTDisplay=false' \[ID_12450\]
 
 Previously, warnings were generated for exported parameters with “RTDisplay=false”.
 
 As it is allowed to specify “RTDisplay=false” for exported parameters, such warnings will no longer be generated.
 
-#### Validator - Invalid “Unexpected RTDisplay=true” warnings \[ID_12451\]
+#### Validator - Invalid 'Unexpected RTDisplay=true' warnings \[ID_12451\]
 
 Previously, “Unexpected RTDisplay=true” warnings were incorrectly generated for Write parameters associated with Read parameters used in dependency values. Now, an additional check will be performed to prevent such warnings from being generated.
 
-#### Validator - Invalid “Unexpected RTDisplay=true” warnings \[ID_12457\]
+#### Validator - Invalid 'Unexpected RTDisplay=true' warnings \[ID_12457\]
 
 From now on, “Unexpected RTDisplay=true” warnings will no longer be generated for table parameters with a *duplicateAs* attribute.
 
@@ -84,10 +84,10 @@ From now on, “Unexpected RTDisplay=true” warnings will no longer be generate
 
 Up to now, when verifying group contents, comments were also evaluated. This could result in either a program error or an incorrect count of the items in the group.
 
-#### Validator - Invalid “Unexpected RTDisplay=true” warnings \[ID_12464\]
+#### Validator - Invalid 'Unexpected RTDisplay=true' warnings \[ID_12464\]
 
 From now on, “Unexpected RTDisplay=true” warnings will no longer be generated for tables used in tree control “extratabs”.
 
-#### Validator - Invalid “Unexpected RTDisplay=true” warnings \[ID_12466\]
+#### Validator - Invalid 'Unexpected RTDisplay=true' warnings \[ID_12466\]
 
 From now on, “Unexpected RTDisplay=true” warnings will no longer be generated for parameters of which the *\<Type>* tag has a *virtual=”source”* attribute.

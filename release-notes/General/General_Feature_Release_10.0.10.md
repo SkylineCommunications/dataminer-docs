@@ -115,7 +115,7 @@ In the *Overview* tab of the *Services* app, the booking state of a service is i
   - Future
   - Past/None
 
-#### Service & Resource Management - Profiles app: Value of a capability of type “text” can now be changed regardless of the “User time-dependent" option \[ID_26538\]
+#### Service & Resource Management - Profiles app: Value of a capability of type 'text' can now be changed regardless of the 'User time-dependent' option \[ID_26538\]
 
 Up to now, when you configured a profile instance, the value of a capability of type “text” could only be changed when the “Use time-dependent" option was selected. From now on, it will be possible to change the value of a capability of type “text” regardless of the “User time-dependent" option.
 
@@ -455,7 +455,7 @@ ShowResult();
 
 ### DMS Mobile apps
 
-#### HTML5 apps: Sidebar settings will now be stored per user account in the browser’s local storage \[ID_26719\]
+#### HTML5 apps: Sidebar settings will now be stored per user account in the browser's local storage \[ID_26719\]
 
 For each of the HTML5 apps (Monitoring, Jobs, etc.), the size and expand/collapse state of the sidebar will now be stored per user account in the browser’s local storage.
 
@@ -654,14 +654,14 @@ To support adding attachments to booking instances (i.e. ReservationInstance obj
 
 The StandAloneBpaExecutor tool, which can be used to execute BPA (Best Practice Analysis) tests, is now by default included in the folder C:\\Skyline DataMiner\\Tools of a DMA.
 
-#### DMS Alerter: New “Set the alarm as read in Cube after the alarm has been acknowledged” setting \[ID_26579\]
+#### DMS Alerter: New 'Set the alarm as read in Cube after the alarm has been acknowledged' setting \[ID_26579\]
 
 When, in DMS Alerter, the new *Set the alarm as read in Cube after the alarm has been acknowledged* setting is enabled, each time you acknowledge an alarm in DMS Alerter, that same alarm will automatically be marked as “read” in DataMiner Cube.
 
 > [!NOTE]
 > This feature will only work if one and the same user is running both DMS Alerter and DataMiner Cube on the same client machine.
 
-#### DMS Alerter: New “Hide the comment window when acknowledging an alarm” setting \[ID_26621\]
+#### DMS Alerter: New 'Hide the comment window when acknowledging an alarm' setting \[ID_26621\]
 
 A new setting, *Hide the comment window when acknowledging an alarm*, is available in the Alerter app. If this setting is enabled, you can take ownership of an alarm in an Alerter pop-up balloon without having to add a comment.
 
@@ -812,7 +812,7 @@ When adding a new DataMiner System to Cube Launcher, the host name you enter wil
 
 Due to a number of enhancements, overall performance has increased when notifying SLElement of service updates.
 
-#### DataMiner Cube - System Center: “Include SLNet” checkbox removed from restart confirmation window \[ID_26685\]
+#### DataMiner Cube - System Center: 'Include SLNet' checkbox removed from restart confirmation window \[ID_26685\]
 
 When, in the *Agents* section of *System Center*, you clicked *(Re)start* to restart a DataMiner Agent, up to now, it was possible to select the *Include SLNet* checkbox in the confirmation window.
 
@@ -848,7 +848,7 @@ When you add a new DataMiner Agent or DataMiner System to Cube Launcher, the hos
 
 - Is it a DataMiner Agent?
 
-#### Cube Launcher application will appear under the name “DataMiner Cube” \[ID_26788\]
+#### Cube Launcher application will appear under the name 'DataMiner Cube' \[ID_26788\]
 
 When you start the Cube Launcher tool, the application will be shown as “DataMiner Cube” in e.g. the Windows Task Manager.
 
@@ -958,7 +958,7 @@ After a hotfix installation, in some cases, the version number in the VersionHis
 
 During a DMA startup or a Failover switch, in some cases, exceptions related to correlation data flushing would be logged in SLErrors.txt.
 
-#### DataMiner Cube - Alarm Console: “Earlier this month” and “Last month” were sorted incorrectly \[ID_26209\]
+#### DataMiner Cube - Alarm Console: 'Earlier this month' and 'Last month' were sorted incorrectly \[ID_26209\]
 
 When, in the Alarm Console, you sorted and grouped alarms by Time/descending, the “earlier this month” group would incorrectly be sorted after the “last month” group (and vice versa when sorted and grouped by Time/ascending).
 
@@ -986,7 +986,7 @@ When you created a new DataMiner System, in some cases, certain existing files w
 
 When you saved an Automation script that contained a long line, in some cases, an error could occur in all SLAutomation processes in the DataMiner System.
 
-#### Source OID of forwarded aggregation alarm would not contain “Aggregation” \[ID_26369\]
+#### Source OID of forwarded aggregation alarm would not contain 'Aggregation' \[ID_26369\]
 
 When an aggregation alarm was forwarded, in some cases, OID 1.3.6.1.4.1.8813.1.1.2.2.11 (Source) would incorrectly not contain “Aggregation”.
 
@@ -996,7 +996,7 @@ In some cases, processing service additions, service updates and dynamic service
 
 Also, service impact indications could in some cases be displayed incorrectly.
 
-#### Unnecessary DataMiner restart after DataMiner startup with process in "Suspended" state \[ID_26407\]
+#### Unnecessary DataMiner restart after DataMiner startup with process in 'Suspended' state \[ID_26407\]
 
 When DataMiner started up while a DataMiner process was still in "Suspended" state, this could cause an unnecessary DMA restart later.
 
@@ -1084,7 +1084,7 @@ When you opened the Services app, in some rare cases, the services list would no
 
 In some cases, if refreshing LDAP took a long time, it could occur that this blocked the SLDMS notification thread.
 
-#### Parts of a table polled via SNMP could be set to “not initialized” when errors had occurred during polling \[ID_26551\]
+#### Parts of a table polled via SNMP could be set to 'not initialized' when errors had occurred during polling \[ID_26551\]
 
 When a table with columns that had a specific polling rate configured was polled via SNMP, in some cases, parts of that table could get set to “not initialized” when errors had occurred during polling.
 
@@ -1104,7 +1104,7 @@ When, in a shape data field of type ParameterControlOptions, a ColumnWidth optio
 
 In some cases, no exception would be thrown when part of an SLDataGateway filter could not be parsed.
 
-#### DataMiner Cube: Alarms would incorrectly be updated with a “View Impact Changed” event when the Name field in System Info was emptied \[ID_26575\]
+#### DataMiner Cube: Alarms would incorrectly be updated with a 'View Impact Changed' event when the Name field in System Info was emptied \[ID_26575\]
 
 When, in DataMiner Cube, you went to *System Center \> Agents \> System \> System info*, and emptied the *Name* field, the alarms would incorrectly be updated with a “View Impact Changed” event.
 
@@ -1152,7 +1152,7 @@ When a DVE parent element was deleted from a MySQL database, in some cases, its 
 
 In some cases, an exception could be thrown when a tree element was unmasked.
 
-#### DataMiner Cube - Data Display: “CPEOnly” option would not be applied correctly \[ID_26624\]
+#### DataMiner Cube - Data Display: 'CPEOnly' option would not be applied correctly \[ID_26624\]
 
 In some cases, the “CPEOnly” protocol option would not be applied correctly when opening a card.
 
@@ -1255,7 +1255,7 @@ When the generation of a ReservationDefinition occurrence failed, in some cases,
 
 In some rare cases, an error could occur in SLDataMiner when an SNMP manager was deleted.
 
-#### DataMiner Cube - Visual Overview: Empty “Parameter” shape data field could cause DataMiner Cube to become unresponsive \[ID_26750\]
+#### DataMiner Cube - Visual Overview: Empty 'Parameter' shape data field could cause DataMiner Cube to become unresponsive \[ID_26750\]
 
 When, on a Visio page, you had defined an element shape with an empty Parameter data field, in some rare cases, this could cause DataMiner Cube to become unresponsive. From now on, empty Parameter data fields will be disregarded.
 
@@ -1297,7 +1297,7 @@ When you opened the *Profiles* app, in some cases, an error could occur when ret
 
 In the Monitoring app, when users had been granted the “View notes” permission, in some cases, a Notes page would incorrectly be shown when they opened the card of a DVE element although it is not possible to create notes linked to DVE elements.
 
-#### DataMiner tasks in Windows Task Scheduler would incorrectly remain in a “Running” status when DataMiner was not running \[ID_26791\]
+#### DataMiner tasks in Windows Task Scheduler would incorrectly remain in a 'Running' status when DataMiner was not running \[ID_26791\]
 
 When DataMiner was not running, in some cases, the following scheduled tasks would incorrectly remain in a “Running” state:
 
@@ -1315,7 +1315,7 @@ In some cases, users would no longer be able to delete dashboards.
 
 If a history alarms tab was filtered using an element filter combined with a table column filter, it could occur that no alarms were displayed.
 
-#### Dashboards app - Pivot table component: Problem with “Auto-expand rows” option \[ID_26803\]
+#### Dashboards app - Pivot table component: Problem with 'Auto-expand rows' option \[ID_26803\]
 
 In some cases, the pivot table component’s “Auto-expand rows” option would not work properly when exiting edit mode.
 
@@ -1343,7 +1343,7 @@ In some cases, it could occur that if an Automation script sent an email report 
 
 If a non-linked table was used in an alarm template condition for a table column parameter, it could occur that this condition could not be selected in the condition drop-down box for other table column parameters in the alarm template.
 
-#### CSV export of table parameter trend graph empty for custom data set other than "Real-time" \[ID_26818\]
+#### CSV export of table parameter trend graph empty for custom data set other than 'Real-time' \[ID_26818\]
 
 When a trend graph of a table cell for which the display key was different from the primary key was exported to CSV, and a custom data set other than "Real-time" was selected, it could occur that the export was empty.
 
@@ -1359,7 +1359,7 @@ If a trend graph showed an exception value, it could occur that the correspondin
 
 In the Dashboards app, it could occur that the configuration of a Group component was not saved.
 
-#### Axis name displayed incorrectly after “Split to new Y-axis” option was used \[ID_26831\]
+#### Axis name displayed incorrectly after 'Split to new Y-axis' option was used \[ID_26831\]
 
 If a trend graph displayed multiple parameters and the *Split to new Y-axis* option was used for the first parameter that had been added to the graph, it could occur that in the *Y-axis settings* box both axes were displayed with the name of the first parameter.
 
@@ -1405,7 +1405,7 @@ In some cases, it could occur that it was not possible to connect an input and o
 
 If a table parameter was included in a service using multiple filters, one of which contained a closing parenthesis, it could occur that no data were shown for this parameter.
 
-#### Service & Resource Management: Virtual function elements would remain in an “Undefined” state \[ID_26898\]
+#### Service & Resource Management: Virtual function elements would remain in an 'Undefined' state \[ID_26898\]
 
 In some cases, the element state of a virtual function element would remain “Undefined”. As a result, bookings using the resource in question could not be started.
 

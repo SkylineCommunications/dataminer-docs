@@ -146,7 +146,7 @@ In the *DataMiner.xml* file, you can customize how many inform messages are stor
 
 ### DMS Security
 
-#### DataMiner Cube - System Center: User permissions for “Live Sharing” and “Cloud Connected Agents” features have been reorganized \[ID_29004\]
+#### DataMiner Cube - System Center: User permissions for 'Live Sharing' and 'Cloud Connected Agents' features have been reorganized \[ID_29004\]
 
 In the *Users/Groups* section of *System Center*, the user permissions for the Live Sharing and Cloud Connected Agents features, which are currently still in soft launch, have been reorganized.
 
@@ -171,7 +171,7 @@ Under *System configuration \> Cloud gateway*, you can now find the following us
 
 ### DMS Protocols
 
-#### New “FlushPerDatagram” option for smart-serial UDP connections \[ID_28999\]
+#### New 'FlushPerDatagram' option for smart-serial UDP connections \[ID_28999\]
 
 When configuring the port settings of a smart-serial UDP connection, it is now possible to specify a *FlushPerDatagram* option.
 
@@ -317,7 +317,7 @@ The generic query interface now features a new *Views* data source, which can be
 - Enhanced element ID
 - Custom view property columns
 
-#### Dashboards app - GQI: New “View relations” data source \[ID_28797\]\[ID_28877\]
+#### Dashboards app - GQI: New 'View relations' data source \[ID_28797\]\[ID_28877\]
 
 In the Generic Query Interface, a new “View relations” data source is now available. It contains all DataMiner objects that are part of a view.
 
@@ -409,7 +409,7 @@ var profileInstance = new ProfileInstance
 };
 ```
 
-#### ServiceDefinitions of type “ProcessAutomation” \[ID_28799\]
+#### ServiceDefinitions of type 'ProcessAutomation' \[ID_28799\]
 
 The ServiceDefinition object now has a ServiceDefinitionType property, which can be used to distinguish ProcessAutomation ServiceDefinitions from default ServiceDefinitions.
 
@@ -590,7 +590,7 @@ When SLAnalytics detects a sudden rise in the amount of data to be processed, it
 
 A similar entry will be added to the log file when SLAnalytics goes out of flood mode.
 
-#### Dashboards app - GQI: Empty parameter values in query results will now be displayed as “Not initialized” \[ID_29045\]
+#### Dashboards app - GQI: Empty parameter values in query results will now be displayed as 'Not initialized' \[ID_29045\]
 
 In GQI query results, from now on, empty parameter values will be displayed as “Not initialized”.
 
@@ -646,7 +646,7 @@ In some cases, alarms for an element that is partially included in a service wou
 
 From now on, this will no longer the case when you do not have access to the element itself. Also, you will no longer be able to an element card of an element to which you do not have explicit access.
 
-#### DataMiner Cube - Trend templates: Problem with “Allow offload database configuration” setting \[ID_28794\]
+#### DataMiner Cube - Trend templates: Problem with 'Allow offload database configuration' setting \[ID_28794\]
 
 When, in a trend template, you changed the Allow offload database configuration setting, in some cases, the setting would not be applied correctly.
 
@@ -676,7 +676,7 @@ When an interactive Automation script was communicating with the client app, in 
 
 Due to an incorrect ID check, in some cases, it would not be possible to create or update a service profile definition after defining virtual function IDs.
 
-#### DataMiner Cube - Interactive Automation scripts: Multiple “Continue” messages would be sent to the DataMiner Agent \[ID_28872\]
+#### DataMiner Cube - Interactive Automation scripts: Multiple 'Continue' messages would be sent to the DataMiner Agent \[ID_28872\]
 
 When an interactive Automation script was running, DataMiner Cube would incorrectly send multiple identical “Continue” messages to the DataMiner Agent. In some cases, this would cause an error in SLAutomation.
 
@@ -694,7 +694,7 @@ When you pressed CTRL+TAB while an item inside a Visio page had the focus, in so
 
 When, in the Services app, you saved a newly created service definition, in some cases, the UI would still display data belonging to the service definition that was selected before.
 
-#### Legacy Reporter: Service definition image in the “Booking Details” report would exceed the width of the report \[ID_28886\]
+#### Legacy Reporter: Service definition image in the 'Booking Details' report would exceed the width of the report \[ID_28886\]
 
 In the legacy Reporter, the service definition image in the “Booking Details” report would exceed the width of the report. That image has now been assigned a maximum width.
 
@@ -758,15 +758,15 @@ In some cases, a GetEligibleResources call could incorrectly return resources th
 
 Also, in some cases, a GetEligibleResources call would not return resources that were available because the system would incorrectly think no more capacity was available.
 
-#### DataMiner Cube: A “debug.log” file would incorrectly be created when initializing the CefSharp library \[ID_28963\]
+#### DataMiner Cube: A 'debug.log' file would incorrectly be created when initializing the CefSharp library \[ID_28963\]
 
 In some cases, a “debug.log” file would incorrectly be created in the %LocalAppData%\\Skyline\\DataMiner\\DataMinerCube folder when the CefSharp library was initialized.
 
-#### SLAnalytics - Automatic incident tracking: Incorrect error messages when the timer switched to the next hour while there are active alarms of type “Property changed” \[ID_28968\]
+#### SLAnalytics - Automatic incident tracking: Incorrect error messages when the timer switched to the next hour while there are active alarms of type 'Property changed' \[ID_28968\]
 
 When there were active alarms of type “Property changed” when the timer switched to the next hour, in some cases, automatic incident tracking would generate incorrect error messages.
 
-#### Dashboards app: A “debug.log” file would incorrectly be created when generating a PDF report via Automation \[ID_28969\]
+#### Dashboards app: A 'debug.log' file would incorrectly be created when generating a PDF report via Automation \[ID_28969\]
 
 In some cases, a “debug.log” file would incorrectly be created in the C:\\Skyline DataMiner\\Files folder when a PDF report was generated via Automation.
 
@@ -838,7 +838,7 @@ When the Cube start window was not running in the system tray, and you added a D
 
 In some cases, an error could occur in SLAutomation when its internal parameter cache was being cleared.
 
-#### DataMiner Cube - Alarm Console: Incorrect “Not a matrix update” notice in case of message throttling \[ID_29241\]
+#### DataMiner Cube - Alarm Console: Incorrect 'Not a matrix update' notice in case of message throttling \[ID_29241\]
 
 When message throttling was activated, in some cases, an incorrect “Not a matrix update” notice could appear in the Alarm Console when an element was restarted or when, after a DMA reconnection, initial table values were received while a table update was still being processed.
 

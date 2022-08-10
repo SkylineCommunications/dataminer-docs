@@ -61,7 +61,7 @@ The following checks and error messages have been added.
 
 ### XML Schema
 
-#### Protocol XML Schema now accepts “certificate” for Session@loginMethod attribute \[ID_25384\]
+#### Protocol XML Schema now accepts 'certificate' for Session@loginMethod attribute \[ID_25384\]
 
 The Protocol XML Schema now accepts the value “certificate” for the Session@loginMethod attribute.
 

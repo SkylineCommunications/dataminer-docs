@@ -8,7 +8,7 @@ uid: DIS_2.33
 
 ### IDE
 
-#### New “DIS Comparer” tool window \[ID_29124\]
+#### New 'DIS Comparer' tool window \[ID_29124\]
 
 The *Major Change Check* window has been replaced by a new *DIS Comparer* tool window. Also, the *Validate and compare* option has been removed.
 
@@ -43,9 +43,9 @@ To do so, proceed as follows:
 When you change the ID of a QAction, the following items will be updated:
 
 - The id attribute of the \<QAction> tag
-- The name of the C# project (“QAction_ID”)
-- The name of the main C# file (“QAction_ID.cs”)
-- The name of the default namespace (“QAction_ID”)
+- The name of the C# project ("QAction_ID")
+- The name of the main C# file ("QAction_ID.cs")
+- The name of the default namespace ("QAction_ID")
 - The AssemblyInfo.cs file
 - The name of the project folder on disk
 
@@ -180,16 +180,16 @@ When an element is updated, it will be restarted whenever its port settings have
 
 When an element port was updated, up to now, the IsSslTlsEnabled property of all ports of that element would incorrectly be reset to false.
 
-#### IDE - XML editor: Problems with the QAction option “dllName” \[ID_29587\]
+#### IDE - XML editor: Problems with the QAction option 'dllName' \[ID_29587\]
 
 When you had specified the *dllName* option in the *Protocol.QActions.QAction@options* attribute, up to now, the following issues could occur:
 
-- When a solution-based protocol was compiled, QActions would incorrectly be referred to using the default DLL name “QAction.ID.dll”, even when a custom DLL name had been specified.
-- When, in a non-solution-based protocol, a custom DLL name was specified in a \<QAction> tag, the Validator would incorrectly thrown a “Could not find DLL: \[ProtocolName\].\[protocolVersion\].Test.dll” error.
+- When a solution-based protocol was compiled, QActions would incorrectly be referred to using the default DLL name "QAction.ID.dll", even when a custom DLL name had been specified.
+- When, in a non-solution-based protocol, a custom DLL name was specified in a \<QAction> tag, the Validator would incorrectly thrown a "Could not find DLL: \[ProtocolName\].\[protocolVersion\].Test.dll" error.
 
-#### Class Library: RemotePort would throw “null reference” exceptions when trying to retrieve a replicated element \[ID_30053\]
+#### Class Library: RemotePort would throw 'null reference' exceptions when trying to retrieve a replicated element \[ID_30053\]
 
-RemotePort would throw “null reference” exceptions when trying to retrieve a replicated element.
+RemotePort would throw "null reference" exceptions when trying to retrieve a replicated element.
 
 #### Class Library: SLSpectrum wrappers were missing a GetMonitor call with the correct return format \[ID_30056\]
 

@@ -216,7 +216,7 @@ If you pick the element Visio file option, the following options are available:
 | New upload | Opens the *Open* dialog box, which allows you to upload a new drawing to the DMS and automatically assign it to the current element. |
 | Existing | Opens the *Custom* dialog box, which allows you to assign a previously uploaded drawing to the current element:<br> - Click a drawing in the list, set the default page, and click *OK*.<br> - Click *Other File...* to upload additional drawings to the DMS. |
 
-#### Alarm Console: “Show in banner” option can now also be set in the Settings window \[ID_26993\]
+#### Alarm Console: 'Show in banner' option can now also be set in the Settings window \[ID_26993\]
 
 The *Show in banner* option, which up to now could only be set in the hamburger menu of the Alarm Console, can now also be set in *Alarm Console* section of the *Settings* window, both as a user setting and a group setting.
 
@@ -385,7 +385,7 @@ From now on, when DataMiner forwards data using an AlarmSocket or a PollSocket, 
 > [!NOTE]
 > From now on, all data sent to a PollSocket must also be encoded using UTF-8.
 
-#### DataMiner Cube - System Center: Enhanced “Analytics config” system settings section \[ID_27087\]
+#### DataMiner Cube - System Center: Enhanced 'Analytics config' system settings section \[ID_27087\]
 
 In the *Analytics config* section in System Center, drop-down boxes that allow the selection of a DMA now allow you to select the option *None* when appropriate. In addition, other drop-down boxes in this section have been improved to no longer show irrelevant values.
 
@@ -493,11 +493,11 @@ Now the system will enforce the permissions as follows:
 
 In addition, within DataMiner Cube, up to now there could be a problem when you made changes to the memory files in the Automation app. This has now been resolved. To bring the memory files tab in line with the rest of the Automation app, the *Cancel* button in this tab has also been replaced by a *Discard* button.
 
-#### “Authentication took too long” error added to SLNet logging when trying to log on to DataMiner using an incorrect user name and password \[ID_26586\]
+#### 'Authentication took too long' error added to SLNet logging when trying to log on to DataMiner using an incorrect user name and password \[ID_26586\]
 
 When you tried to log on to DataMiner using an incorrect user name or password, in some cases, an “Authentication took too long” error would be added to the SLNet logging after about 30 seconds.
 
-#### Incorrect run-time errors of type “SLDMS ConnectionThread Problem” would appear when an agent responded slower than expected \[ID_26596\]
+#### Incorrect run-time errors of type 'SLDMS ConnectionThread Problem' would appear when an agent responded slower than expected \[ID_26596\]
 
 When a particular agent in a DataMiner System responded slower than expected, in some cases, incorrect run-time errors of type “SLDMS ConnectionThread Problem” could start to appear on other agents in the same DataMiner System.
 
@@ -517,7 +517,7 @@ Also, the Failover status window will show a red color and will indicate that th
 
 When a filtered alarm tab page contained a correlated alarm, in some cases, the base alarms would not be shown when Correlation tracking was disabled.
 
-#### Jobs app: No error message when deleting all templates in the Load from template window & job fields could incorrectly be marked both “Required” and “Read only” \[ID_26868\]
+#### Jobs app: No error message when deleting all templates in the Load from template window & job fields could incorrectly be marked both 'Required' and 'Read only' \[ID_26868\]
 
 When, in the *Load from template* window, you deleted all templates, up to now, no error message would be displayed, saying that there are no templates to be applied.
 
@@ -527,9 +527,9 @@ Also, when you configured a job field, up to now, it was possible to mark a fiel
 
 When you opened the Profiles or Resources app, in some cases, an incorrect exception would be thrown when fetching discreet values for profile parameters.
 
-#### DataMiner Cube - Settings: Alarm tab page of type “sliding window” added for a particular group would not be shown to the users in that group \[ID_26902\]
+#### DataMiner Cube - Settings: Alarm tab page of type 'sliding window' added for a particular group would not be shown to the users in that group \[ID_26902\]
 
-When, in the settings for a particular group, you created a new alarm tab page of type “sliding window” and then changed the size of the sliding window, in some cases, the tab page would not be shown to the users in that group, even when the Enforce Alarm Console pages option was enabled.
+When, in the settings for a particular group, you created a new alarm tab page of type "sliding window" and then changed the size of the sliding window, in some cases, the tab page would not be shown to the users in that group, even when the Enforce Alarm Console pages option was enabled.
 
 #### DataMiner Cube - Alarm templates: Problem when duplicating table column rows in an alarm template \[ID_26985\]
 
@@ -545,7 +545,7 @@ When you tried to open a non-existing dashboard (e.g. by using an incorrect URL)
 
 When you tried to install Indexing Engine on a system with a remote Cassandra database, in some cases, an error could be thrown when the recommendations were being retrieved.
 
-#### Indexing Engine: Incorrect “Sequence contains no elements” error \[ID_27010\]
+#### Indexing Engine: Incorrect 'Sequence contains no elements' error \[ID_27010\]
 
 On systems running Indexing Engine, in some cases, an incorrect “Sequence contains no elements” error would regularly be added to the logs.
 
@@ -572,7 +572,7 @@ When a user viewed an alarm that affected a number of services, up to now, the S
 
 When text like “\[param:...\]\|Alarm” was specified in a shape data item of type Parameter, in some cases, the alarm color would not be updated correctly while the Visio page was open, especially in situations where the alarm state changed but the parameter value did not.
 
-#### Bookings app: Hidden “Booking state” column could no longer be set visible again \[ID_27058\]
+#### Bookings app: Hidden 'Booking state' column could no longer be set visible again \[ID_27058\]
 
 When, in the *Bookings* app, the *Booking state* column was set hidden, in some cases, it would no longer be possible to set it visible again.
 
@@ -624,7 +624,7 @@ After a DMA was restarted, it could occur that LinkerTableEntries were missing i
 
 When you dragged a table column parameter onto a trend statistics component and then also dragged table indices onto it to act as a filter, in some cases, an error message would appear, saying that no trend data was available.
 
-#### Dashboards app: “Delete component” button would not immediately get updated when you selected multiple components \[ID_27148\]
+#### Dashboards app: 'Delete component' button would not immediately get updated when you selected multiple components \[ID_27148\]
 
 When you selected multiple components, the *Delete component* button at the top of the screen would incorrectly only get updated to *Delete X components* when you hovered over it.
 
@@ -636,7 +636,7 @@ In some cases, it would no longer be possible to click inside a scrollbar track 
 
 The SLHelper process keeps a set of actions in memory to be able to track what action should be taken when a Visio shape is clicked. In some cases, that set of actions would never get cleared and new actions would be added each time a Visio file was updated.
 
-#### DataMiner Cube: No context menu would appear when right-clicking a suggestion in the header search box after right-clicking the “Advanced search” button \[ID_27166\]
+#### DataMiner Cube: No context menu would appear when right-clicking a suggestion in the header search box after right-clicking the 'Advanced search' button \[ID_27166\]
 
 When, in the Cube header bar, you first right-clicked the *Advanced search for...* option at the bottom of the suggestions list, and then right-clicked any of the listed suggestions, no context menu would appear.
 
@@ -676,7 +676,7 @@ When behavioral anomaly detection was enabled, in some cases, only standard tren
 
 In some cases, it could occur that it was not possible to show the grid lines in a dashboard while in edit mode.
 
-#### Not possible to specify username for "other user" to log in to mobile app \[ID_27229\]
+#### Not possible to specify username for 'other user' to log in to mobile app \[ID_27229\]
 
 In some cases, it could occur that after you logged out of a DataMiner mobile app, it was not possible to specify a username to log in as "Other user".
 
@@ -724,7 +724,7 @@ When the install, config or uninstall script in a DataMiner Application package 
 
 Also, an exception could be thrown when DataMiner tried to use an empty uninstall script. From now on, empty uninstall scripts will be ignored.
 
-#### Dashboards app: Duplicate “Delete component” button \[ID_27295\]
+#### Dashboards app: Duplicate 'Delete component' button \[ID_27295\]
 
 When a dashboard contained a Group component, it could occur that two *Delete component* buttons were displayed when the dashboard was in edit mode.
 
@@ -742,7 +742,7 @@ Up to now, a service child would always blink when its parent element blinked. A
 
 From now on, whether a service child blinks will depend on the included parameters.
 
-#### Failover: Incorrect alarm event of type “properties changed” would be generated for alarms with multiple identical view properties \[ID_27374\]
+#### Failover: Incorrect alarm event of type 'properties changed' would be generated for alarms with multiple identical view properties \[ID_27374\]
 
 When, in a Failover setup, an alarm had multiple identical view properties defined, in some cases, an incorrect alarm event of type “properties changed” would be generated each time a switchover occurred.
 

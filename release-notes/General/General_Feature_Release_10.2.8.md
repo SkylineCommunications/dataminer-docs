@@ -107,7 +107,7 @@ To select more than one resource band, click one, and then click another while h
 
 When you select more than one resource band, the SelectedResource session variable will contain the GUIDs of all selected resources, separated by commas.
 
-#### Trending - Behavioral anomaly detection: Enhanced detection of change points of type “flatline” \[ID_33559\]
+#### Trending - Behavioral anomaly detection: Enhanced detection of change points of type 'flatline' \[ID_33559\]
 
 Up to now, a change point of type “flatline” would be detected when the parameter value remained constant for more than 3 polling times. From now on, instead of counting polling times, a running estimate will be kept of how long the parameter typically remains constant.
 
@@ -180,7 +180,7 @@ The Service Definition component now supports both types of process automation s
 - Skyline Process Automation
 - Custom Process Automation
 
-#### GQI: Data source “Get custom data” renamed to “Get ad hoc data” \[ID_33795\]
+#### GQI: Data source 'Get custom data' renamed to 'Get ad hoc data' \[ID_33795\]
 
 The data source “Get custom data” has been renamed to “Get ad hoc data”.
 
@@ -194,7 +194,7 @@ The action editor window can now be closed by clicking the *OK* button.
 
 ### DMS tools
 
-#### QA Device Simulator: Help link now directs users to the QA Device Simulator help pages on <https://docs.dataminer.services/> [ID_33680]
+#### QA Device Simulator: Help link now directs users to the QA Device Simulator help pages on docs.dataminer.services [ID_33680]
 
 In the UI of the QA Device Simulator, the help link now directs users to the QA Device Simulator help pages on <https://docs.dataminer.services/>.
 
@@ -257,13 +257,13 @@ A number of enhancements have been made to the NATS configuration:
 
 Also, the nats-streaming-server binary has been updated to v0.24.6. However, note that it will not be updated automatically via upgrade actions. It will only be installed during fresh NATS installations or when reinstalling NATS via SLEndpointTool_Console. The previous version (v0.22.0) and the new version (v0.24.6) version are compatible and are able to communicate with each other.
 
-#### Service & Resource Management: A booking will now be set to “interrupted” when whatever event related to that booking could not be executed \[ID_33576\]
+#### Service & Resource Management: A booking will now be set to 'interrupted' when whatever event related to that booking could not be executed \[ID_33576\]
 
 Up to now, when DataMiner was unavailable when a booking was supposed to start or stop, its state was set to “interrupted” when DataMiner started up again.
 
 This functionality has now been extended. A booking will now also be set to “interrupted” when whatever event related to that booking could not be executed.
 
-#### DataMiner Cube - Alarm Console: “Add to incident” menu option no longer available when right-clicking alarms that cannot be added to an incident \[ID_33591\]
+#### DataMiner Cube - Alarm Console: 'Add to incident' menu option no longer available when right-clicking alarms that cannot be added to an incident \[ID_33591\]
 
 From now on, the “Add to incident” menu option will no longer be available when you right-click an alarm that cannot be added to an incident:
 
@@ -276,7 +276,7 @@ From now on, the “Add to incident” menu option will no longer be available w
 
 In DataMiner main version 10.0.0 CU11 and feature version 10.1.1, new Elasticsearch templates for custom data indices were introduced to support adding new fields after index creation. An upgrade action has now been added to remove all legacy Elasticsearch templates from the system. During the first DataMiner startup after the upgrade, the templates will then be recreated.
 
-#### Dashboards app: Enhanced “loading” indication when state component linked to a GQI query receives an update \[ID_33640\]
+#### Dashboards app: Enhanced 'loading' indication when state component linked to a GQI query receives an update \[ID_33640\]
 
 Up to now, each time a state component linked to a GQI query received an update, a “loading” indication would be displayed over the entire component. From now on, when such a component receives an update, a more subtle loader bar will be displayed instead.
 
@@ -301,7 +301,7 @@ In DataMiner Cube, the following enhancements have been made to the *Failover Co
 
 When a DataMiner Agent could not be reached, in some cases, an “Attempt to use an unauthenticated connection” error would appear in the log files or on the UI. From now on, a clearer error message will appear instead.
 
-#### DataMiner Application Framework: Splash screen of apps now show “Low-code apps” instead of “Apps” \[ID_33798\]
+#### DataMiner Application Framework: Splash screen of apps now show 'Low-code apps' instead of 'Apps' \[ID_33798\]
 
 When you start up a custom low-code application created using the DataMiner Application Framework, its splash screen will now show “Low-code apps” instead of “Apps”.
 
@@ -407,7 +407,7 @@ When you tried to add, update or delete a resource, a NullReferenceException cou
 
 In some cases, run-time errors could occur due to MessageBrokerReconnectThread problems in the SLCloudBridge process.
 
-#### DataMiner Cube - Spectrum Analysis: Problem with “Next trace” button and slider after a spectrum recording had been paused \[ID_33718\]
+#### DataMiner Cube - Spectrum Analysis: Problem with 'Next trace' button and slider after a spectrum recording had been paused \[ID_33718\]
 
 When you had paused the replay of a spectrum recording, in some cases, the “next trace” button and the slider would not work correctly.
 
@@ -484,7 +484,7 @@ When a cell in a table with “pollingrate” enabled had been updated, the firs
 
 During a DataMiner upgrade, the *VerifyNatsRunning* prerequisite could fail due to the *SLCloudBridge.dll* file having been renamed to *SLMessageBroker.dll* in DataMiner versions 10.2.0/10.1.5.
 
-#### Protocols: Additional connections with a “Type” defined would incorrectly be ignored \[ID_33941\]
+#### Protocols: Additional connections with a 'Type' defined would incorrectly be ignored \[ID_33941\]
 
 Additional connections that had a “\<Type>” defined would incorrectly no longer be taken into account.
 

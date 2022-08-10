@@ -17,7 +17,7 @@ uid: EPM_6.1.1_I-DOCSIS
 A number of changes have been implemented to the CCAP connectors to improve performance:
 
 - To reduce the load on the server and client, the Data pages for the CCAP connectors can now only be opened by the Administrator user.
-- The “volatile” option has been added to the following tables: *CM overview*, *CM US QAM*, *CM DS QAM*, *CM Registration*, *CM Upstream Channels*, *CM US Status DOCSIS 3* and *CM US Status*.
+- The "volatile" option has been added to the following tables: *CM overview*, *CM US QAM*, *CM DS QAM*, *CM Registration*, *CM Upstream Channels*, *CM US Status DOCSIS 3* and *CM US Status*.
 - When the *CM Upstream* page is disabled on the *Configuration/Other* settings page, polling for the *CM Upstream Channels* table is now disabled.
 
 #### EPM manager improvements \[ID_32964\]

@@ -8,7 +8,7 @@ uid: DIS_2.6
 
 ### IDE
 
-#### Table editor: ‘All Columns’ section now has a ‘Foreign Key’ column \[ID_16305\]
+#### Table editor: 'All Columns' section now has a 'Foreign Key' column \[ID_16305\]
 
 In the table editor, the *All Columns* section now has a *Foreign Key* column. In this column, you can select another table to which you want a particular table column to be linked.
 

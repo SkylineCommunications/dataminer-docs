@@ -51,7 +51,7 @@ At present, the following checks will be performed when you compare two protocol
 - Have parameter IDs been changed?
 - Have parameters been removed?
 
-#### Enhanced “Generate Write Parameters” window \[ID_19588\]
+#### Enhanced 'Generate Write Parameters' window \[ID_19588\]
 
 The *Generate Write Parameters* window, which allows you to automatically generate parameters of type "write" for existing parameters of type “read”, now has two additional columns:
 

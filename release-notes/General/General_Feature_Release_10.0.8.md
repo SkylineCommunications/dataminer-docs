@@ -147,7 +147,7 @@ On view cards, the list view now has two additional columns:
 
 - *Host ID*: The ID of the DMA hosting the element, service, SLA or redundancy group.
 
-#### SNMP Managers: New alarm storm prevention option “Group alarms with the same parameter name” \[ID_25717\]\[ID_25984\]
+#### SNMP Managers: New alarm storm prevention option 'Group alarms with the same parameter name' \[ID_25717\]\[ID_25984\]
 
 When you have enabled alarm storm prevention while configuring an SNMP manager, you can now choose to select the “Group alarms with the same parameter name” option.
 
@@ -155,7 +155,7 @@ If this option is selected, alarm storm prevention will happen based on the numb
 
 By default, this option is selected.
 
-#### Services app: New “Profiles” tab page \[ID_26111\]
+#### Services app: New 'Profiles' tab page \[ID_26111\]
 
 The Services app now has a new “Profiles” tab page, which will allow you to manage Service Profile Definitions and Service Profile Instances.
 
@@ -234,7 +234,7 @@ In the TicketingHelper class and TicketingGatewayHelper, the “AttachmentsHelpe
 > - All ticket attachments are synchronized throughout the DataMiner System. To include them in a backup, select the “All documents located on this DMA” backup option.
 > - The Documents API can also be used to manage ticket attachments. Instead of using the above-mentioned methods, you can also use AddDocumentMessage, DeleteDocumentMessage, GetBinaryFileMessage and GetDocumentMessage. If you do so, specify the directory as “TICKET_ATTACHMENTS\\{DataminerID}\_{TicketId}” and make sure the property ID of type DMAObjectRef contains the ticket ID.
 
-#### Run-time flag “NoCheckingSets” now allows the “After executing a SET command” option to be changed while a script is being run \[ID_25847\]
+#### Run-time flag 'NoCheckingSets' now allows the 'After executing a SET command' option to be changed while a script is being run \[ID_25847\]
 
 When you launch an Automation script, you can choose to select the “After executing a SET command” option. If you do so, every time the script performs a parameter or property update, it will wait for a return value indicating whether or not the update was successful.
 
@@ -407,7 +407,7 @@ A number of enhancements have been made to the messages that appear when managin
 
 Due to a number of enhancements, overall performance of Visio shapes linked to EPM objects has increased, especially when they are not linked to a view.
 
-#### Error message “Unknown destination DataMiner specified” replaced by “Unable to find hosting agent. The agent might still be starting up” \[ID_25976\]
+#### Error message 'Unknown destination DataMiner specified' replaced by 'Unable to find hosting agent. The agent might still be starting up' \[ID_25976\]
 
 Up to now, when the hosting agent of an element or service could not be found, an “Unknown destination DataMiner specified” error would be thrown. This error message has now been replaced by “Unable to find hosting agent. The agent might still be starting up”.
 
@@ -495,7 +495,7 @@ In the Properties window of a service or a view, you can check the name of the V
 
 When an element that generates a large amount of data was restarted, in some cases, it would be missing data when it started up again.
 
-#### Upgrade action “CassandraActiveAlarmsRootOnlyUpgrade” would incorrectly only be run once \[ID_25764\]
+#### Upgrade action 'CassandraActiveAlarmsRootOnlyUpgrade' would incorrectly only be run once \[ID_25764\]
 
 Up to now, when a DataMiner Agent with a Cassandra database was upgraded, the upgrade action “CassandraActiveAlarmsRootOnly” would incorrectly only be run once. Now, it will be rerun at every upgrade until no more errors are reported.
 
@@ -505,7 +505,7 @@ Also, an additional upgrade action will now be run at every upgrade. The “Cass
 
 When using a parameter chart, in some rare cases, that chart’s update interval would incorrectly be set to 0 seconds. As a result, it would be updated constantly. From now on, setting the update interval of a parameter chart to 0 seconds will no longer be possible.
 
-#### DataMiner Cube - Profiles app: Modification of profile instance field “applies to” would incorrectly be disregarded \[ID_25790\]
+#### DataMiner Cube - Profiles app: Modification of profile instance field 'applies to' would incorrectly be disregarded \[ID_25790\]
 
 When configuring a profile instance in the Profiles module, you can indicate to which profile definition the instance applies. In some cases, when you changed this field, the modification would be disregarded.
 
@@ -545,11 +545,11 @@ On systems running Indexing Engine, custom data paging cookies would no longer b
 
 While a SmartIPHeader UDP socket was receiving data from multiple clients, in some cases, the SLPort process could leak memory when another client was detected.
 
-#### Unnecessary “codedom” tag in SLNet.exe.config file \[ID_25868\]
+#### Unnecessary 'codedom' tag in SLNet.exe.config file \[ID_25868\]
 
 In some cases, the SLNet.exe.config file would contain an unnecessary “codedom” tag. On certain DataMiner Agents, this could lead to issues when generating functions.
 
-#### Disabling the “Enable DVE child creation” option in the “Advanced element settings” would prevent the creation of virtual functions \[ID_25869\]
+#### Disabling the 'Enable DVE child creation' option in the 'Advanced element settings' would prevent the creation of virtual functions \[ID_25869\]
 
 In some cases, disabling the Enable DVE child creation option in the Advanced element settings would incorrectly prevent the creation of virtual functions.
 
@@ -577,7 +577,7 @@ Up to now, when the \<BackupSettings> tag was missing from the MaintenanceSettin
 
 From now on, when the MaintenanceSettings.xml file does not contain a \<BackupSettings> tag, it will automatically be added and filled with the correct settings.
 
-#### DataMiner Cube: Element card of a Dynamic Virtual Element incorrectly had a “Notes” page \[ID_25910\]
+#### DataMiner Cube: Element card of a Dynamic Virtual Element incorrectly had a 'Notes' page \[ID_25910\]
 
 Up to now, when you opened the card of a Dynamic Virtual Element, it incorrectly had a Notes page. As DVE elements currently cannot have notes, this page has been removed.
 
@@ -601,7 +601,7 @@ In PDF reports generated based on dashboards from the new Dashboards app, the pa
 
 When you created an element or started trending a parameter and then, afterwards, migrated from MySQL to Cassandra, in some cases, the newly created trend data would not be migrated.
 
-#### Automation: Problem when calling FindElements with a “WarningOnly” element filter \[ID_25973\]
+#### Automation: Problem when calling FindElements with a 'WarningOnly' element filter \[ID_25973\]
 
 When the FindElements method was called with a “WarningOnly” element filter, in some cases, it would incorrectly return all elements.
 
@@ -609,7 +609,7 @@ When the FindElements method was called with a “WarningOnly” element filter,
 
 In some rare cases, an error could occur when multiple smart-serial elements using the same port restarted.
 
-#### DataMiner Cube - Visual Overview: Tree view with “SingleSelectionMode” option would incorrectly allow multiple values to be selected after a filter had been applied \[ID_25986\]
+#### DataMiner Cube - Visual Overview: Tree view with 'SingleSelectionMode' option would incorrectly allow multiple values to be selected after a filter had been applied \[ID_25986\]
 
 When, on a Visio page, you selected an item in a tree view to which you had added the “SingleSelectionMode” option, applied a filter and then selected another item, in some cases, the item you selected previously would incorrectly remain selected.
 

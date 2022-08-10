@@ -11,7 +11,7 @@ uid: General_Feature_Release_10.2.7
 
 ### DMS Protocols
 
-#### QActionTable class - FillArray and FillArrayNoDelete methods: Argument “row” renamed to “columns” \[ID_33034\]
+#### QActionTable class - FillArray and FillArrayNoDelete methods: Argument 'row' renamed to 'columns' \[ID_33034\]
 
 The *row* argument of the FillArray and FillArrayNoDelete methods in theQActionTable class has been renamed to *columns*.
 
@@ -49,11 +49,11 @@ For example, if protocolProcesses is set to 5 (i.e. the default value), and scri
 
 ### DMS Cube
 
-#### DataMiner Cube - Alarm Console: Users can now manually create incidents even when “Automatic incident tracking” is disabled in System Center \[ID_32990\] \[ID_33354\]
+#### DataMiner Cube - Alarm Console: Users can now manually create incidents even when 'Automatic incident tracking' is disabled in System Center \[ID_32990\] \[ID_33354\]
 
 From now on, users will be able to manually create incidents even when “Automatic incident tracking” is disabled in System Center.
 
-#### Alarm Console: Second-generation hyperlinks of type “openview”, “openservice”, “openelement” and “openparameter” now support “\[PROPERTY:\]” keywords \[ID_33166\]
+#### Alarm Console: Second-generation hyperlinks of type 'openview', 'openservice', 'openelement' and 'openparameter' now support '\[PROPERTY:\]' keywords \[ID_33166\]
 
 Up to now, it was only possible to use “\[PROPERTY:\]” keywords in second-generation hyperlinks of type “url”, “execute” and “script”. From now on, these keywords can also be used in second-generation hyperlinks of type “openview”, “openservice”, “openelement” and “openparameter”.
 
@@ -164,7 +164,7 @@ From now on, a shape that displays a page of the Visio drawing linked to a view,
 
 ### DMS Automation
 
-#### New subscript option “ExtendedErrorInfo” \[ID_33306\]
+#### New subscript option 'ExtendedErrorInfo' \[ID_33306\]
 
 The SubScriptOptions class now has an ExtendedErrorInfo property (default: false).
 
@@ -206,7 +206,7 @@ In the sidebar, next to the *All dashboards* and *Recent dashboards* icons, th
 
 The first icon will only be available when there are private dashboards, the second icon will only be available when the DataMiner Agent is connected to the cloud and there are shared dashboards.
 
-#### Ticketing app: Tickets can now be filtered on fields of type “drop-down list” \[ID_33370\]
+#### Ticketing app: Tickets can now be filtered on fields of type 'drop-down list' \[ID_33370\]
 
 In the Ticketing app, tickets can now also be filtered on fields of type “drop-down list”.
 
@@ -214,7 +214,7 @@ In the Ticketing app, tickets can now also be filtered on fields of type “drop
 
 When you hover over a data table component (e.g. a GQI table), a search box will now appear in the bottom-right corner. When you enter a search string, a case-insensitive client-side search will be performed.
 
-#### Web apps: Dashboards, app pages and app panels now all have a “Fit to view” setting \[ID_33401\]
+#### Web apps: Dashboards, app pages and app panels now all have a 'Fit to view' setting \[ID_33401\]
 
 In the Dashboards app and the Application Framework, dashboards, app pages and app panels now all have a “Fit to view” setting that, when enabled, will make sure the items in question are automatically adapted to fit the screen.
 
@@ -252,7 +252,7 @@ If you choose to copy the entire row or the entire table, the data will be copie
 
 ### DMS Service & Resource Management
 
-#### ReservationInstanceType and ServiceDefinitionType: New values “ResourceScheduling” and “ResourceOrchestration” \[ID_33390\]
+#### ReservationInstanceType and ServiceDefinitionType: New values 'ResourceScheduling' and 'ResourceOrchestration' \[ID_33390\]
 
 ReservationInstanceType and ServiceDefinitionType can now be set to the following additional values:
 
@@ -389,7 +389,7 @@ Because of a number of enhancements, overall performance of SLElement has improv
 
 When, in a QAction, protocol.FillArray or protocol.FillArrayNoDelete were called with List\<object\[\]\> as columns value, an exception would be thrown.
 
-#### DataMiner Cube - Logging: Entries in the “Communication” tab would not get cleaned up as long as System Center was kept open \[ID_33085\]
+#### DataMiner Cube - Logging: Entries in the 'Communication' tab would not get cleaned up as long as System Center was kept open \[ID_33085\]
 
 When, in *System Center*, you opened the *Logging* section, entries would be added in the *Communication* tab as long as *System Center* was kept open. The cleanup settings specified in *Settings \> Computer \> Advanced \> Communication* would incorrectly not be applied. On systems with a large amount of traffic, this could lead to memory problems.
 
@@ -468,7 +468,7 @@ When, in an Automation script, you had configured an action that uploads a repor
 
 When you moved the mouse pointer over a selection box that had the focus, in some cases, only part of the value would be selected.
 
-#### DataMiner Cube - Alarm Console: Incidents would incorrectly appear when enabling “Automatic incident tracking” in an Information tab \[ID_33382\]
+#### DataMiner Cube - Alarm Console: Incidents would incorrectly appear when enabling 'Automatic incident tracking' in an Information tab \[ID_33382\]
 
 When you enabled the *Automatic incident tracking* option in an Information tab, the incidents (i.e. alarm groups) would incorrectly appear in that tab.
 
