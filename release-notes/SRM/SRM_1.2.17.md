@@ -60,8 +60,8 @@ Several improvements have been implemented in the Booking Manager app.
 
 - On the *Dashboard* tab, the following changes have been implemented to improve performance:
 
-    - Subshapes have been removed from the service shapes.
-    - When the services are filtered by name, the services that are not displayed are collapsed instead of hidden (using the *Collapse* conditional shape manipulation action, available since DataMiner 10.1.8).
+  - Subshapes have been removed from the service shapes.
+  - When the services are filtered by name, the services that are not displayed are collapsed instead of hidden (using the *Collapse* conditional shape manipulation action, available since DataMiner 10.1.8).
 
 - Compatibility of the *Dashboard* tab with the Skyline Black theme has improved.
 
@@ -95,7 +95,9 @@ When a Booking Monitoring element was used to generate an alarm because a bookin
 
 #### Exception when applying service state to contributing booking \[ID_30726\]
 
-When a service state was applied to a contributing booking during orchestration, it could occur that an exception was thrown if the contributing function did not have a profile definition. <br>In the information events, the following information would be displayed:
+When a service state was applied to a contributing booking during orchestration, it could occur that an exception was thrown if the contributing function did not have a profile definition.
+
+In the information events, the following information would be displayed:
 
 ```txt
 Profile 00000000-0000-0000-0000-000000000000 doesn't exist.

@@ -164,7 +164,7 @@ When the *Manufacturer* and *Model* properties were updated, the folder path whe
 
 If the IDP Solution was used with DataMiner version 10.0.6, it could occur that QAction 308 of the *Skyline Infrastructure Discovery And Provisioning* protocol failed.
 
-#### “Take Backup” setting not taken into account when backup script was launched from Automa­tion app \[ID_26918\]
+#### “Take Backup” setting not taken into account when backup script was launched from Automation app \[ID_26918\]
 
 When the script that is used to take a backup of a device configuration was launched directly from the Automation app instead of via the IDP app, the workflow automation setting *Take Backup* was not taken into account, so that the backup was also taken when this setting was disabled.
 

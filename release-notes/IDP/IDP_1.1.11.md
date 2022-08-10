@@ -68,9 +68,9 @@ In addition, the *Managed Connections*table on the *General*data page of the *Da
 
 After the connectivity component of IDP has received a request, the following things can now happen next:
 
-- If all connections for the element are known, the DCF connections will be provisioned auto­matically and there will be no entries for the element in the *Connections* table.
+- If all connections for the element are known, the DCF connections will be provisioned automatically and there will be no entries for the element in the *Connections* table.
 - If not all connections are known in both directions, there will be some entries for the element in the *Connections*table and the unknown connections will be displayed in the *Unmanaged Connections* table, where they can be provisioned manually.
-- If no connections can be mapped to connections reported by other elements, all connec­tions for the element will still be listed in the *Connections* table.
+- If no connections can be mapped to connections reported by other elements, all connections for the element will still be listed in the *Connections* table.
 
 Finally, the Connectivity API has also been extended so that interface properties can be provided when a DCF connection is reported. The method *AddOrUpdateInterfaceProperties*can be used to provide DCF interface properties without specifying a connection.
 

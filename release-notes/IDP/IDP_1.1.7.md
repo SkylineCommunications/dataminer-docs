@@ -64,7 +64,7 @@ A new option, *Identify Unknown Devices*, is now available in the IDP app, via *
 
 #### IDP app: Inventory tab enhancements \[ID_25638\]
 
-In the *Inventory* tab of the IDP app, you can now delete an element from the *Discovered Ele­ments* table by selecting the element and clicking the *Delete* button above the table.
+In the *Inventory* tab of the IDP app, you can now delete an element from the *Discovered Elements* table by selecting the element and clicking the *Delete* button above the table.
 
 In addition, the filter options for the *Discovered Elements* table have been changed, so that it can now show either only managed elements or all elements.
 
@@ -72,7 +72,7 @@ Finally, the new *Identify Unknown Devices* option is now also available on this
 
 #### Discovery of SNMPv3 devices \[ID_25706\]
 
-Discovery of SNMPv3 devices is now supported. For this purpose, you can import discovery pro­files with SNMPv3 actions and credentials. You can do so by going to *Admin* > *Discovery* in the IDP app and clicking the upload icon.
+Discovery of SNMPv3 devices is now supported. For this purpose, you can import discovery profiles with SNMPv3 actions and credentials. You can do so by going to *Admin* > *Discovery* in the IDP app and clicking the upload icon.
 
 The uploaded file should be in JSON format and should use the following structure:
 
@@ -131,8 +131,8 @@ Finally, the following restrictions apply:
 - Up to DataMiner 9.6.11, only "HMAC-SHA" or "HMAC-MD5" are supported for authentication, and only "DES" and "AES128" are supported for encryption.
 - The following combinations of authentication and encryption algorithm are not supported:
 
-    - MD5/SHA-1 and AES192
-    - MD5/SHA-1/SHA-224 and AES256
+  - MD5/SHA-1 and AES192
+  - MD5/SHA-1/SHA-224 and AES256
 
 #### Configuration comparison \[ID_25773\]
 
@@ -144,10 +144,10 @@ To do so:
 2. Click *Search* in the pop-up window. The configuration files matching your search criteria will be displayed in the table below *Select configs*.
 3. Select the first configuration file to include in the comparison and click the *Left* button.
 4. Select the configuration file to compare it with and click the *Right* button.
-5. Click the *Compare* button. The configuration files will now be displayed side by side. The dif­ferences between the files will be highlighted.
+5. Click the *Compare* button. The configuration files will now be displayed side by side. The differences between the files will be highlighted.
 6. To close the side-by-side comparison, click the x in the top-right corner. To clear the selection of files to compare, click the *Clear* button.
 
-You can also quickly launch the configuration comparison from the *Summary* and *Backups* sub­tabs of the *Configuration* tab. To do so, select an entry in the table on these pages and click the *Compare* button above the table. The app will then display the *Compare* tab with the selected configuration as the configuration file selected on the left. You will then only need to select the configuration file to compare it with and start the comparison.
+You can also quickly launch the configuration comparison from the *Summary* and *Backups* subtabs of the *Configuration* tab. To do so, select an entry in the table on these pages and click the *Compare* button above the table. The app will then display the *Compare* tab with the selected configuration as the configuration file selected on the left. You will then only need to select the configuration file to compare it with and start the comparison.
 
 ## Changes
 
@@ -181,7 +181,7 @@ In some cases, it could occur that IP address ranges were not calculated correct
 
 #### Not possible to delete discovery profile \[ID_25706\]
 
-In some cases, it could occur that it was not possible to delete discovery profiles using the con­text menu of the *Discovery Profiles* table.
+In some cases, it could occur that it was not possible to delete discovery profiles using the context menu of the *Discovery Profiles* table.
 
 #### Element state configuration in CI type not applied \[ID_25757\]
 

@@ -111,7 +111,7 @@ In some cases, it could occur that the *DataMiner IDP Rack Layout Manager* eleme
 
 ## Changes in version 1.1.6 CU1
 
-### Enhancements
+### CU1 enhancements
 
 #### Skyline IDP Connectivity: Unicode support \[ID_25649\]
 

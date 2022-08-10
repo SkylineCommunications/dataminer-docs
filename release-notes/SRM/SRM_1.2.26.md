@@ -25,8 +25,8 @@ public void LinkElement(int dmaId, int elementId);
 
 - Parameters:
 
-    - dmaID: The ID of the DMA running the element.
-    - elementId: The ID of the element.
+  - dmaID: The ID of the DMA running the element.
+  - elementId: The ID of the element.
 
 ```csharp
 public void UnlinkElement();

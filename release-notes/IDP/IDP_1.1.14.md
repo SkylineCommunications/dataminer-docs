@@ -51,7 +51,7 @@ The following issues have been fixed in the IDP app:
 - On the *Overview* page and *Facilities* page, some trend graphs could not be displayed correctly.
 - On the *Inventory* > *Discovered* page, it was possible to provision an element with "Unknown" CI type.
 - On the *Connectivity* > *Discovery* page, it was possible to start a discovery when the table was empty or no row was selected.
-- On the *Connectivity* > *Managed* page and on the* Connectivity* > *Discovery* page, when the details were shown, you could not switch to other details by selecting another row.
+- On the *Connectivity* > *Managed* page and on the *Connectivity* > *Discovery* page, when the details were shown, you could not switch to other details by selecting another row.
 
 #### Bus address not updated during provisioning \[ID_29868\]
 
@@ -67,7 +67,7 @@ If you attempted to provision a discovered element on the *Inventory* > *Discove
 
 ## Addendum CU1
 
-### Fixes
+### CU1 fixes
 
 #### Problem when running IDP setup wizard \[ID_30223\]
 

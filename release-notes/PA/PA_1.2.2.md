@@ -44,7 +44,7 @@ If a token had been generated with an invalid token profile instance, it could o
 
 ## Addendum CU1
 
-### Fixes
+### CU1 fixes
 
 #### Skyline Queue Manager not compatible with DataMiner 10.1.7 \[ID_30206\]
 
@@ -52,7 +52,7 @@ A compatibility issue caused the Skyline Queue Manager connector to function inc
 
 ## Addendum CU2
 
-### Fixes
+### CU2 fixes
 
 #### LSO script not executed if multiple resources used same resource pool \[ID_30229\]
 

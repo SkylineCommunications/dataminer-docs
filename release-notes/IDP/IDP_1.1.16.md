@@ -30,12 +30,12 @@ On the *Admin* > *CI Types* tab of the IDP app, an *Activity Management* page ha
 
 In all other sections of the *Admin* > *CI Types* tab (except the *Overview* section), toggle buttons have also been added to allow you to enable or disable each activity:
 
--  In the *Discovery* section, these are available in the *Discovery* column.
--  In the *Provisioning* section, these are available in the *Create* column.
--  In the *Connectivity* section, these are available in the *Connectivity Discovery* column.
--  In the *Configuration Management* section, these are available in the *Backup *and* Configuration Update* columns.
--  In the *Software Management* section, these are available in the *Update *and* Compliance Check* columns.
--  In the *Facilities* section, these are available in the *Rack Assignment* column.
+- In the *Discovery* section, these are available in the *Discovery* column.
+- In the *Provisioning* section, these are available in the *Create* column.
+- In the *Connectivity* section, these are available in the *Connectivity Discovery* column.
+- In the *Configuration Management* section, these are available in the *Backup* and *Configuration Update* columns.
+- In the *Software Management* section, these are available in the *Update* and *Compliance Check* columns.
+- In the *Facilities* section, these are available in the *Rack Assignment* column.
 
 #### Processes \> Automation tab renamed to Processes \> Activities \[ID_30839\]
 

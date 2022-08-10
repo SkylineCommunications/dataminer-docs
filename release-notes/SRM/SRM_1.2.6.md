@@ -59,20 +59,20 @@ To support this, the following methods were added to the class *SrmResourceUsage
 
 - `public void SetProfileInstance(Guid *profileId*, int *interfaceId*);`
 
-    Sets the profile instance in the specified interface configuration.
+  Sets the profile instance in the specified interface configuration.
 
-    Parameters:
+  Parameters:
 
-    - *profileId*: ID of the profile instance.
-    - *interfaceId*: ID of the interface.
+  - *profileId*: ID of the profile instance.
+  - *interfaceId*: ID of the interface.
 
 - `public void SetProfileInstance(Guid *profileId*);`
 
-    Sets the profile instance in the node configuration.
+  Sets the profile instance in the node configuration.
 
-    Parameters:
+  Parameters:
 
-    - *profileId*: ID of the profile instance.
+  - *profileId*: ID of the profile instance.
 
 The *SRM_DataTransferRulesTemplate* script has been updated with an example of this.
 

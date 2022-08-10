@@ -11,7 +11,7 @@ uid: SRM_1.2.22
 
 #### Changing assigned profile instance of resource in booking \[ID_32095\]
 
-The *SRM_AssignProfileToResource *script now allows you to change the profile instance assigned to a resource in an existing booking.
+The *SRM_AssignProfileToResource* script now allows you to change the profile instance assigned to a resource in an existing booking.
 
 #### SRM_UnassignResourceFromBooking script added \[ID_32229\]
 

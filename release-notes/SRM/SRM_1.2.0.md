@@ -6,8 +6,6 @@ uid: SRM_1.2.0
 
 ## New features
 
-### Core functionality
-
 #### New action to set interrupted booking to "Confirmed" \[ID_24301\]
 
 A new action is now possible with the *SRM_ReservationActions* script, both in interactive and in silent mode, which can be used to set an interrupted booking to *Confirmed*. A booking can be in the *Interrupted* state when it does not start because of unexpected circumstances, for example because the system is down at the moment when the booking is supposed to start. The new action will update the interrupted booking so that the start date is set to a future date.
@@ -33,8 +31,8 @@ For this purpose, the service definition for contributing service must be define
 - The service definition must have the same input and output interfaces as the service definition of the parent service.
 - On each interface that is to be mapped to a parent service interface, the following properties must be configured.
 
-    - *ExposedInterfaceId*: Must be set to the ID of the interface in the parent service definition.
-    - *NoConnectivityCheck*: Must be set to true so that this interface is loaded.
+  - *ExposedInterfaceId*: Must be set to the ID of the interface in the parent service definition.
+  - *NoConnectivityCheck*: Must be set to true so that this interface is loaded.
 
 - The interfaces must be exposed and unconnected.
 

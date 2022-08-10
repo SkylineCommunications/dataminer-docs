@@ -6,8 +6,6 @@ uid: SRM_1.1.1
 
 ## New features
 
-### Core functionality
-
 #### Booking Wizard: Resources pre-filter now also filters profile instances [ID_24034]
 
 When a filter is selected in the Booking Wizard to only display available resources with a particular capability, this will now also affect the list of available profile instances for the target node and the corresponding interfaces. However, note that this is only the case if the filter capability parameter is present in the profile definition.
@@ -156,6 +154,7 @@ This issue has been resolved, and the following methods have also been added to 
 ```csharp
 public IEnumerable<SrmParameterConfiguration> GetInterfaceSrmParameters(SrmResourceConfigurationInfo resourceConfiguration, InterfaceProfileConfiguration interfaceProfileConfiguration);
 ```
+
 ```csharp
 public IEnumerable<SrmParameterConfiguration> GetInterfacesSrmParameters(SrmResourceConfigurationInfo resourceConfiguration, IEnumerable<InterfaceProfileConfiguration> interfacesProfileConfiguration);
 ```

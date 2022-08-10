@@ -15,6 +15,7 @@ When the initial configuration is applied to a resource, parameter values set on
 
 > [!NOTE]
 > This change in behavior may affect the way your current Profile Load scripts work. The following *ProfileParameterHelper* methods are affected:
+>
 > - *GetNodeSrmParametersConfiguration*, when *includeInterfaceParameters* is true
 > - *GetNodeProfileParameterEntries*, when *includeInterfaceParameters* is true
 > - *GetInterfacesSrmParameters*

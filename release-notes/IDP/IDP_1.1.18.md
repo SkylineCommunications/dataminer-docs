@@ -28,12 +28,12 @@ To configure this in the wizard to create or edit a CI Type, select the *Use Cre
 
 In Process Automation activities, the token can contain metadata that can replace these CI Type fields. For example, to enable the use of the credentials library for an SNMPv3 connection, you can specify this:
 
-- Metadata name: *IDP\_$.Provisioning.Configuration.Ports\[0\].<br>DMAElementSnmpV3PortInfo\[0\].UseCredentialsLibrary*
+- Metadata name: *IDP\_$.Provisioning.Configuration.Ports\[0\].DMAElementSnmpV3PortInfo\[0\].UseCredentialsLibrary*
 - Metadata value: "true"
 
 To then specify the credentials from the library that are to be used for that same connection, you can use this:
 
-- metadata name: *IDP\_$.Provisioning.Configuration.Ports\[0\].<br>DMAElementSnmpV3PortInfo\[0\].Credential*
+- metadata name: *IDP\_$.Provisioning.Configuration.Ports\[0\].DMAElementSnmpV3PortInfo\[0\].Credential*
 - metadata value: "f94c9750-61d5-4ab6-a74b-a624f4bf7ba4"
 
 #### Separate script to restore default and to update configuration \[ID_31809\]

@@ -71,7 +71,7 @@ A web service has been implemented for the Skyline Generic Provisioning driver. 
   - ViewIds: The IDs of the views that should be deleted, e.g. 12;23 (required).
   - ViewNames: The names of the views that should be deleted, e.g. View 1;View 2 (required).
 
-- **GetElement­Configuration**: Returns the configuration of the element.
+- **GetElementConfiguration**: Returns the configuration of the element.
 
   Parameters:
 
@@ -219,14 +219,14 @@ The script will take you through the following steps to configure the system:
 
 For the last step, two subscripts are used:
 
-- The subscript *IDP_SetupWizard_DashboardConfiguration* will link compatible IDP dash­boards to the DMA ID and element ID of the generated elements.
+- The subscript *IDP_SetupWizard_DashboardConfiguration* will link compatible IDP dashboards to the DMA ID and element ID of the generated elements.
 - The subscript *IDP_SetupWizard_ElementConfiguration* will apply pre-configured parameter settings to the generated elements.
 
 #### IDP Activity Scheduler \[ID_21184\]
 
 In the IDP Solution setup wizard, you can now select whether you wish to use the Activity Scheduler feature.
 
-If this feature is enabled, the *Admin* tab of the IDP app displays a ![](~/release-notes/images/IDP_Scheduler.png) icon in the top-right corner, which opens the Scheduler subtab. This tab displays a timeline with all scheduled activities and a *New...* button, which allows you to schedule a new discovery activity.
+If this feature is enabled, the *Admin* tab of the IDP app displays a ![Scheduler icon](~/release-notes/images/IDP_Scheduler.png) icon in the top-right corner, which opens the Scheduler subtab. This tab displays a timeline with all scheduled activities and a *New* button, which allows you to schedule a new discovery activity.
 
 The Activity Scheduler can also be enabled or disabled after the initial setup phase via the *Activity Scheduler* parameter on the *Settings* data display page of the *Skyline Infrastructure Discovery And Provisioning* element.
 
@@ -234,7 +234,7 @@ The Activity Scheduler can also be enabled or disabled after the initial setup p
 
 The IDP application can now use a preset, which determines which provisioning templates are used for particular IP ranges. A preset consists of a name, one or more IP ranges and one or more provisioning templates.
 
-In the IDP app, on the *Admin* > *Discovery* tab (available via the following icon: ![](~/release-notes/images/IDP_Discovery.png) ), the selected preset is displayed and a different preset can be selected.
+In the IDP app, on the *Admin* > *Discovery* tab (available via the following icon: ![Discovery icon](~/release-notes/images/IDP_Discovery.png) ), the selected preset is displayed and a different preset can be selected.
 
 On the *Discovered* tab of the IDP app, it is possible to start either a custom discovery or a discovery using the selected preset. Starting a custom discovery will launch the script *IDP_ManagePresets*, where you can create and edit presets and then run a discovery. Starting a discovery with a selected preset will launch the script *IDP_DiscoverByPreset*, which will run a discovery using the selected preset displayed on the *Admin* > *Discovery* tab. Note that this script does not necessarily need to be started in the app, but could also for example be run by a scheduled task.
 

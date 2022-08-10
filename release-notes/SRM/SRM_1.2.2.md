@@ -12,32 +12,32 @@ Some changes have been implemented to the life cycle behavior of contributing bo
 
 - When the main booking is confirmed:
 
-    - Locked contributing bookings that have not yet started will also be confirmed.
-    - Unlocked contributing bookings will remain unchanged.
+  - Locked contributing bookings that have not yet started will also be confirmed.
+  - Unlocked contributing bookings will remain unchanged.
 
 - When the main booking is set on hold:
 
-    - Locked contributing bookings that have not yet started will also be set on hold if no other bookings in confirmed, partial or quarantined state are using them.
-    - Unlocked contributing bookings will remain unchanged.
+  - Locked contributing bookings that have not yet started will also be set on hold if no other bookings in confirmed, partial or quarantined state are using them.
+  - Unlocked contributing bookings will remain unchanged.
 
 - When the main booking is canceled:
 
-    - Locked contributing bookings that have not yet started will also be canceled if no other bookings in confirmed, partial, on-hold or quarantined state are using them.
-    - Unlocked contributing bookings will remain unchanged.
+  - Locked contributing bookings that have not yet started will also be canceled if no other bookings in confirmed, partial, on-hold or quarantined state are using them.
+  - Unlocked contributing bookings will remain unchanged.
 
 - When the main booking is deleted:
 
-    - Locked contributing bookings will also be deleted if they are canceled and no other non-canceled bookings are still using them.
-    - Unlocked contributing bookings will remain unchanged.
+  - Locked contributing bookings will also be deleted if they are canceled and no other non-canceled bookings are still using them.
+  - Unlocked contributing bookings will remain unchanged.
 
 - When the main booking is finished:
 
-    - Locked contributing bookings will also be finished, but only if no other bookings in confirmed, partial, on-hold or quarantined state are using them.
-    - Unlocked contributing bookings will remain unchanged.
+  - Locked contributing bookings will also be finished, but only if no other bookings in confirmed, partial, on-hold or quarantined state are using them.
+  - Unlocked contributing bookings will remain unchanged.
 
 - When the main booking leaves quarantined state:
 
-    - Contributing bookings will also be removed from quarantine if possible, regardless of whether they are locked or unlocked.
+  - Contributing bookings will also be removed from quarantine if possible, regardless of whether they are locked or unlocked.
 
 - Confirming a contributing booking is implemented without restrictions, regardless of whether the contributing booking is locked or unlocked.
 
@@ -64,15 +64,15 @@ When the timing of the main booking is updated:
 
 - For locked contributing bookings, the timing is adjusted in such a way that the difference between the start time of the main booking and the start time of the contributing bookings and between the end time of the main bookings and the end time of the contributing bookings does not change. The following limitations apply in this case:
 
-    - If this is not possible because the start time of the contributing booking would have to be in the past, the initial time difference will not be kept the same.
-    - Contributing events that have already taken place will not be rescheduled.
-    - In case a contributing booking needs to be quarantined because of the timing update of the main booking, it will immediately be quarantined without asking the user for confirmation. However, a notification will be displayed.
-    - In case the contributing booking is used by multiple main bookings and there is a timing update causing the main booking that initially started last to now start first, the contributing booking will be updated so that the difference between the start time of the contributing booking and the start time of the initial first main booking is maintained for the current first main booking. Similarly, if there is a timing update causing the main booking that initially ended first to now end last, the contributing booking will be updated so that the difference between the end time of the contributing booking and the end time of the initial last main booking is maintained for the current last main booking.
+  - If this is not possible because the start time of the contributing booking would have to be in the past, the initial time difference will not be kept the same.
+  - Contributing events that have already taken place will not be rescheduled.
+  - In case a contributing booking needs to be quarantined because of the timing update of the main booking, it will immediately be quarantined without asking the user for confirmation. However, a notification will be displayed.
+  - In case the contributing booking is used by multiple main bookings and there is a timing update causing the main booking that initially started last to now start first, the contributing booking will be updated so that the difference between the start time of the contributing booking and the start time of the initial first main booking is maintained for the current first main booking. Similarly, if there is a timing update causing the main booking that initially ended first to now end last, the contributing booking will be updated so that the difference between the end time of the contributing booking and the end time of the initial last main booking is maintained for the current last main booking.
 
 - For unlocked contributing bookings, if the update will cause the contributing bookings to no longer overlap with the main booking, what happens depends on whether the main booking has already started:
 
-    - If the main booking has not started yet, the contributing booking will be removed from it, and the main booking will go into "partial" state.
-    - If the main booking has already started, the update will not be allowed.
+  - If the main booking has not started yet, the contributing booking will be removed from it, and the main booking will go into "partial" state.
+  - If the main booking has already started, the update will not be allowed.
 
 When the timing of the contributing booking is updated:
 
@@ -80,8 +80,8 @@ When the timing of the contributing booking is updated:
 
 - If it is an unlocked contributing booking, and the update will cause the contributing booking to no longer overlap with the main booking, what happens depends on whether the main booking has already started:
 
-    - If the main booking has not started yet, the contributing booking will be removed from it, and the main booking will go into "partial" state.
-    - If the main booking has already started, the update will not be allowed.
+  - If the main booking has not started yet, the contributing booking will be removed from it, and the main booking will go into "partial" state.
+  - If the main booking has already started, the update will not be allowed.
 
 #### Data transfer rules \[ID_25707\]
 

@@ -8,4 +8,3 @@ These release notes contain all new features, enhancements, and fixes for DataMi
 
 > [!TIP]
 > For more information on the different release tracks, see [DataMiner Main Release vs. Feature Release](https://community.dataminer.services/dataminer-main-release-vs-feature-release/).
-

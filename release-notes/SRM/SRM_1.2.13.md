@@ -11,7 +11,7 @@ uid: SRM_1.2.13
 The way contributing bookings are retrieved has been optimized. For this purpose, a new *IsContributing* flag is added to the resource usage to make it easier to identify contributing bookings. This may greatly improve performance, especially in systems with a large number of contributing bookings.
 
 > [!NOTE]
->  The *IsContributing* property with value *true* must be added to contributing nodes in service definitions.
+> The *IsContributing* property with value *true* must be added to contributing nodes in service definitions.
 
 > [!WARNING]
 > After you upgrade to this version of the SRM framework, you must run the script *SRM_MigrateIsContributing* to make sure that the bookings that are already in the system are supported.

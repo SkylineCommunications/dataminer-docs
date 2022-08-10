@@ -15,31 +15,28 @@ For this purpose, a new *DataMiner IDP Configuration* element has been added to 
 Two example Automation scripts have also been added:
 
 - The script *IDP_Example_Custom_ConfigurationBackup* is configured to perform a configuration backup of a Cisco Manager element and can be used as an example to create configuration backup scripts for other CI types.
-
 - The script *IDP_Example_Custom_ConfigurationDefault* is a generic script that can be used as an example to create scripts to load the default configuration for specific CI types.
 
 A number of changes have been implemented in the IDP app as part of the Configuration Management feature.
 
 - A new *Configuration* tab is available, with the subtabs *Summary* and *Backups*.
 
-    - The *Summary* tab provides an overview of the elements of which the CI type has Configuration Management enabled. When you select an element in the table, you can use the buttons above the table to create a configuration backup or to apply the default configuration to the element. To make sure the default configuration is not applied by accident, a confirmation box will be displayed when you try to do so. If you click the button *Show Backups*, all available configuration backups from the last 30 days for the selected element will be displayed in the *Backups* tab.
-    
-    - The *Backups* tab allows you to view a list of configuration backups, either based on a selection in the* Summary* tab as mentioned above, or based on specific search criteria. Clicking the *Search* icon will open a wizard where you can specify these search criteria. Searching is possible by CI type, by element name or by time range (UTC), or a combination of these.
+  - The *Summary* tab provides an overview of the elements of which the CI type has Configuration Management enabled. When you select an element in the table, you can use the buttons above the table to create a configuration backup or to apply the default configuration to the element. To make sure the default configuration is not applied by accident, a confirmation box will be displayed when you try to do so. If you click the button *Show Backups*, all available configuration backups from the last 30 days for the selected element will be displayed in the *Backups* tab.
+  - The *Backups* tab allows you to view a list of configuration backups, either based on a selection in the *Summary* tab as mentioned above, or based on specific search criteria. Clicking the *Search* icon will open a wizard where you can specify these search criteria. Searching is possible by CI type, by element name or by time range (UTC), or a combination of these.
 
 - Via *Workflows* > *Automation*, you can now enable or disable the Configuration Management features *Take Backup* and *Enable Restore* for each CI type.
 
 - Configuring the Configuration Management features for each CI type is possible via *Admin* > *CI Types* > *Configuration Management*. This page contains a table listing the CI types and their Configuration Management settings. Clicking the *Advanced* button in this table opens the CI type management wizard on the Configuration Management page. Note that if you open the wizard by going to *Admin* > *CI Types* > *Overview* and clicking the *Edit* button for the CI type, this page will also be included.
 
-- The *Admin* > *Configuration *tab now contains the following two pages with Configuration Management settings:
+- The *Admin* > *Configuration* tab now contains the following two pages with Configuration Management settings:
 
-    - *Network Share*: Allows you to modify the credentials and path for the configuration archive.
-
-    - *Purge Settings*: Allows you to configure the automatic cleanup of the configuration archive. You can set a limit on the total number of files, on the number of files per element and on how much space the files use on the disk. When one of these limits is enabled, it is checked whenever a file is added to the configuration archive. The oldest files are always removed first. The *Purge Settings* tab also displays the total number of files in the configuration archive, the number of elements in the configuration archive and the current disk space used. Alarm monitoring and trending can be enabled for these KPIs.
+  - *Network Share*: Allows you to modify the credentials and path for the configuration archive.
+  - *Purge Settings*: Allows you to configure the automatic cleanup of the configuration archive. You can set a limit on the total number of files, on the number of files per element and on how much space the files use on the disk. When one of these limits is enabled, it is checked whenever a file is added to the configuration archive. The oldest files are always removed first. The *Purge Settings* tab also displays the total number of files in the configuration archive, the number of elements in the configuration archive and the current disk space used. Alarm monitoring and trending can be enabled for these KPIs.
 
 - Via *Admin* > *Settings*, you can configure the folders that contain the default and backup Automation scripts for Configuration Management. By default, these are the following folders:
 
-    - Backup script folder: *DataMiner Solutions/IDP/CI Type Management/Configuration Management/Backup*
-    - Default script folder: *DataMiner Solutions/IDP/CI Type Management/Configuration Management/Default*
+  - Backup script folder: *DataMiner Solutions/IDP/CI Type Management/Configuration Management/Backup*
+  - Default script folder: *DataMiner Solutions/IDP/CI Type Management/Configuration Management/Default*
 
 #### Additional rack assignment possibilities in IDP app \[ID_24526\]
 
@@ -133,7 +130,7 @@ If IDP was installed on a DMA that did not yet contain any CI types, it could oc
 
 ## Changes in version 1.1.5 CU1
 
-### Fixes
+### CU1 fixes
 
 #### Devices discovered despite disabled CI types \[ID_24905\]
 

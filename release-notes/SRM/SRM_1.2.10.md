@@ -44,15 +44,15 @@ When multiple bookings use the same locked contributing booking, and the end tim
 
 - If there is no initial time difference between the end times of all involved bookings, extending one of the main bookings will extend the contributing booking correspondingly.
 
-    ![](~/release-notes/images/NoDelta.svg)
+    ![No delta](~/release-notes/images/NoDelta.svg)
 
 - If the initial time difference between the contributing and main bookings is the same for all main bookings, this time delta will be maintained when one of the main bookings is extended.
 
-    ![](~/release-notes/images/EqualDelta.svg)
+    ![Equal delta](~/release-notes/images/EqualDelta.svg)
 
 - If the initial time difference between the contributing and main bookings is different for each main booking, the smallest time difference will be maintained. This means that if the contributing booking for example ends 20 minutes after booking A but 10 minutes after booking B, and booking A is extended with 30 minutes, the contributing booking will be adjusted to end 10 minutes after booking A.
 
-    ![](~/release-notes/images/DifferentDelta.svg)
+    ![Different delta](~/release-notes/images/DifferentDelta.svg)
 
 #### Custom booking action buttons \[ID_28784\]
 

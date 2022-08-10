@@ -8,7 +8,7 @@ uid: IDP_1.1.17
 
 #### Reapplying/reassigning a CI Type now allows update of element properties \[ID_31128\]
 
-In the wizard to reapply or reassign a CI Type, a new *Properties* option is now available, so that you can now update the element properties with a reapply/reassign action. The *Show Details *button allows you to check the end result for each property.
+In the wizard to reapply or reassign a CI Type, a new *Properties* option is now available, so that you can now update the element properties with a reapply/reassign action. The *Show Details* button allows you to check the end result for each property.
 
 #### Discovered Connections table improvements \[ID_31597\]
 

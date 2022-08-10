@@ -26,10 +26,10 @@ A routing rule defines:
 - A list of "OutgoingInterfaceIds", which refer to local interface IDs
 - A list of conditions:
 
-    - An "IncomingGatewayKeyName" (optional in case of "Any" operation)
-    - A Value (optional in case of "Any" operation)
-    - An Operation: Only "Equal" and "Any" are currently supported. "Any" means that the gate­way key and value are ignored, and only the incoming interface ID is matched)
-    - A list of IDs of incoming interfaces. Alternatively, -1 can be specified to indicate all incoming interfaces.
+  - An "IncomingGatewayKeyName" (optional in case of "Any" operation)
+  - A Value (optional in case of "Any" operation)
+  - An Operation: Only "Equal" and "Any" are currently supported. "Any" means that the gate­way key and value are ignored, and only the incoming interface ID is matched)
+  - A list of IDs of incoming interfaces. Alternatively, -1 can be specified to indicate all incoming interfaces.
 
 Token objects will have the following additional fields to support this:
 

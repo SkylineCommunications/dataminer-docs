@@ -39,4 +39,4 @@ In some cases, the Skyline Generic Provisioning element could cause a run-time e
 
 #### IDP app: Unnecessary warning when navigating to Inventory \> Managed tab \[ID_22304\]
 
-When you navigated to the* Inventory* > *Managed* tab of the IDP app, it could occur that an unnecessary warning "Error while getting script 'NAME/N/A'" was displayed.
+When you navigated to the *Inventory* > *Managed* tab of the IDP app, it could occur that an unnecessary warning "Error while getting script 'NAME/N/A'" was displayed.

@@ -38,7 +38,7 @@ When generating the information templates, the PTP setup wizard configured the c
 
 ## Addendum CU1
 
-### Enhancements
+### CU1 enhancements
 
 #### Support added for Ross Iggy AES16.16 connector \[ID_30304\]
 
@@ -68,7 +68,7 @@ To improve support for long element names, several changes have been implemented
 - On the *Summary* tab of the PTP app, the size of several sections has been adjusted. For the element name in the *Grandmaster* section, two lines are now supported. If the name is still too big to be fully displayed, an ellipsis will be added.
 - On the *Nodes* tab of the PTP app, two lines are now supported for the element names in several places, and an ellipsis will be added in case a name is still too big to be fully displayed.
 
-### Fixes
+### CU1 fixes
 
 #### Problems when running setup wizard after installation \[ID_30489\]
 

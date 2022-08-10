@@ -37,12 +37,12 @@ Note that changing these parameters has no influence on silent booking procedure
 
 New methods have been added to the SLSRMLibrary to allow easy retrieval of service profile data.
 
-In the *ServiceProfileDefinitionCrudHelperComponent* class of the *Skyline.DataMiner.Library.<br>Solutions.SRM.Extensions.ServiceProfileDefinitionCrudHelperComponentExtensions* namespace, the following extension methods have been added:
+In the *ServiceProfileDefinitionCrudHelperComponent* class of the *Skyline.DataMiner.Library.Solutions.SRM.Extensions.ServiceProfileDefinitionCrudHelperComponentExtensions* namespace, the following extension methods have been added:
 
 - *GetServiceProfileDefinitionByName*: Retrieves the first service profile definition matching a specific name. If no match is found, an exception of type *ServiceProfileDefinitionNotFoundException* will be thrown.
 - *GetServiceProfileDefinitionByGuid*: Retrieves the first service profile definition matching a specific GUID. If no match is found, an exception of type *ServiceProfileDefinitionNotFoundException* will be thrown.
 
-In the *ServiceProfileInstanceCrudHelperComponent* class of the *Skyline.DataMiner.Library.<br>Solutions.SRM.Extensions.ServiceProfileInstanceCrudHelperComponentExtensions* namespace, the following extension methods have been added:
+In the *ServiceProfileInstanceCrudHelperComponent* class of the *Skyline.DataMiner.Library.Solutions.SRM.Extensions.ServiceProfileInstanceCrudHelperComponentExtensions* namespace, the following extension methods have been added:
 
 - *GetServiceProfileInstanceByName*: Retrieves the first service profile instance matching a specific name. If no match is found, an exception of type *ServiceProfileInstanceNotFoundException* will be thrown.
 - *GetServiceProfileInstanceByGuid*: Retrieves the first service profile instance matching a specific GUID. If no match is found, an exception of type *ServiceProfileInstanceNotFoundException* will be thrown.

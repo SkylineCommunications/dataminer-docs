@@ -54,7 +54,7 @@ ConfigurationBackup configuration = new ConfigurationBackup
 
 #### New Supported File Extensions table \[ID_27205\]
 
-It is now possible to configure which types of files can be visualized in the *Configuration* section of the IDP app. You can do so by adding the extensions in the *Supported File Extensions* table, which is available via *Admin* > *Configuration* > *Visualization*. By default, the table contains the XML and TXT extensions. If a file has an extension that is not listed in the table, the *Show content* action on the* Configuration* > *Backups* tab and the *Compare* action on the *Configuration* > *Compare* tab will result in an error.
+It is now possible to configure which types of files can be visualized in the *Configuration* section of the IDP app. You can do so by adding the extensions in the *Supported File Extensions* table, which is available via *Admin* > *Configuration* > *Visualization*. By default, the table contains the XML and TXT extensions. If a file has an extension that is not listed in the table, the *Show content* action on the *Configuration* > *Backups* tab and the *Compare* action on the *Configuration* > *Compare* tab will result in an error.
 
 #### Support for \[DNSName\] keyword in CI type \[ID_27416\]
 
@@ -155,7 +155,7 @@ Previously, when an element was created, it could occur that the *Model* and *Ma
 
 ## Addendum CU1
 
-### Fixes
+### CU1 fixes
 
 #### Not possible to launch CI Type Management script in DataMiner 9.6.0 \[ID_27732\]
 
@@ -167,13 +167,13 @@ When a managed element was deleted by a user, it could occur that it was not add
 
 ## Addendum CU2
 
-### Enhancements
+### CU2 enhancements
 
 #### Improvements related to provisioning of virtual protocol types \[ID_27719\]
 
 It is now possible to provision more than one device with a virtual protocol type using the same CI type. In addition, when a device is provisioned with a virtual protocol type, if an IP address is available, it is now shown in the *IP Address* column of the *Managed Elements* table.
 
-### Fixes
+### CU2 fixes
 
 #### Incorrect exception when provisioning with incomplete CI type \[ID_28397\]
 

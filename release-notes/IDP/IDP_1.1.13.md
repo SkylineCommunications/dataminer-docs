@@ -8,7 +8,7 @@ uid: IDP_1.1.13
 
 #### Process Automation: Take Configuration Backup activity \[ID_27919\]
 
-To allow users to take a configuration backup using Process Automation, IDP now supports the *SLC IDP Take Configuration* *Backup* activity. This activity requires a node profile definition specifying the backup type (*Running* or* Startup*) and an input interface specifying the elements for which a backup should be taken (possible values: Element ID, Element Name, Element Property, IP Address, IP Address List, IP Address Range, and View).
+To allow users to take a configuration backup using Process Automation, IDP now supports the *SLC IDP Take Configuration* *Backup* activity. This activity requires a node profile definition specifying the backup type (*Running* or *Startup*) and an input interface specifying the elements for which a backup should be taken (possible values: Element ID, Element Name, Element Property, IP Address, IP Address List, IP Address Range, and View).
 
 When the activity starts, it runs the "Take backup script" configured in the CI type for each element in the input interface. If the activity is successful, a success response with *SLC_TakeConfigurationBackup_Result* gateway key is sent with the value *Success*. If the activity fails, the same gateway key is sent with the value *Fail*.
 
@@ -182,7 +182,7 @@ An exception could be thrown when you tried to remove an element on the *Admin* 
 
 ## Addendum CU1
 
-### Changes
+### CU1 changes
 
 #### Last Provisioning Time column now displays local time \[ID_29686\]
 
@@ -192,7 +192,7 @@ To improve consistency, the *Last Provisioning Time* column in the *Discovered E
 
 The UI of the IDP app has been made more consistent with respect to the import of CI types and discovery profiles. In addition, when you import all CI types, you will now see similar feedback as when you import discovery profiles or a single CI type.
 
-### Fixes
+### CU1 fixes
 
 #### Selecting DMA for provisioning not possible for previously deleted element \[ID_29687\]
 

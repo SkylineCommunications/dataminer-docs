@@ -34,7 +34,7 @@ This is a breaking change. Existing deployments can be migrated to this version 
 1. Before you upgrade, in the existing PTP app:
 
     - On the *Admin* tab, run the *Role Assignment Wizard* and accept all existing role assignments.
-    - Go to the *DATA* > *Configuration* page (you may first need to select *Show card side panel *in the hamburger menu of the card), and copy the value of the parameter *ExternalRequests* to a separate file in order to retrieve it later.
+    - Go to the *DATA* > *Configuration* page (you may first need to select *Show card side panel* in the hamburger menu of the card), and copy the value of the parameter *ExternalRequests* to a separate file in order to retrieve it later.
     - On the *DATA* > *PTP Devices* page, export the *PTP Devices* table to a CSV file. Make sure columns are separated using commas (“,”), not semicolons (“;”).
 
 2. Delete the DataMiner PTP element.

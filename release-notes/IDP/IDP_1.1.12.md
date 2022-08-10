@@ -36,38 +36,38 @@ Other examples:
 
 - Providing a custom keyword (only “IPAddress” is currently supported):
 
-    - Metadata name: *IDP_IPAddress*
-    - Metadata value: “10.10.10.10”
+  - Metadata name: *IDP_IPAddress*
+  - Metadata value: “10.10.10.10”
 
 - Providing a keyword to override an integer:
 
-    - Metadata name: *IDP\_$.Provisioning.Configuration.TimeoutTime*
-    - Metadata value: “2500”
+  - Metadata name: *IDP\_$.Provisioning.Configuration.TimeoutTime*
+  - Metadata value: “2500”
 
 - Providing a keyword to override a string:
 
-    - Metadata name: *IDP\_$.Provisioning.Configuration.Description*
-    - Metadata value: "This is a test of keywords."
+  - Metadata name: *IDP\_$.Provisioning.Configuration.Description*
+  - Metadata value: "This is a test of keywords."
 
 - Providing a keyword to override the value of a property:
 
-    - Metadata name: *IDP\_$.Provisioning.Configuration.Properties\[?(@.Name == 'MyProperty2')\].Value*
-    - Metadata value: "MyNewPropertyValue"
+  - Metadata name: *IDP\_$.Provisioning.Configuration.Properties\[?(@.Name == 'MyProperty2')\].Value*
+  - Metadata value: "MyNewPropertyValue"
 
 - Providing a keyword to override the first item in a string array (not adding, only updating):
 
-    - Metadata name: *IDP\_$.Provisioning.ViewName\[0\]*
-    - Metadata value: "newViewName"
+  - Metadata name: *IDP\_$.Provisioning.ViewName\[0\]*
+  - Metadata value: "newViewName"
 
 - Providing a keyword to override a string array:
 
-    - Metadata name: *IDP\_$.Provisioning.ViewName*
-    - Metadata value: "\[\\"Test\\", \\"Test 123\\"\]"
+  - Metadata name: *IDP\_$.Provisioning.ViewName*
+  - Metadata value: "\[\\"Test\\", \\"Test 123\\"\]"
 
 - Providing a keyword to override the GetCommunity string of the first connection:
 
-    - Metadata name: *IDP\_$.Provisioning.Configuration.Ports\[0\].DMAElementSnmpPortInfo\[0\].GetCommunity*
-    - Metadata value: "customGetCommunity"
+  - Metadata name: *IDP\_$.Provisioning.Configuration.Ports\[0\].DMAElementSnmpPortInfo\[0\].GetCommunity*
+  - Metadata value: "customGetCommunity"
 
 #### Process Automation: Reapply CI Type activity \[ID_26950\]
 
@@ -123,35 +123,26 @@ The wizard consists of three steps:
 
 - In the first step, you need to specify:
 
-    - The process name.
-    - The activation window type: Single event or a permanent service.
-    - The activation window: The start time, as well as the stop time or duration in case of a single event.
+  - The process name.
+  - The activation window type: Single event or a permanent service.
+  - The activation window: The start time, as well as the stop time or duration in case of a single event.
 
 - In the second step, you need to specify if the process should be executed once or repeated, and you need to specify the activities in the process and their profile instances and resources:
 
-    - Select an existing process to schedule it again or create a custom process.
-    
-    - In the *Start* drop-down box, select whether the process should be executed once (“Instant”) or repeated at regular intervals (“Timer”). If you select *Timer*, you will need to specify a profile and interval for the timer. Note that this drop-down box is only available if a repeat gateway is available in the DMS. If no repeat gateway is available, the process will always be executed once.
-    
-    - If you are creating a custom process, click the *Add* *Activity button* to add an activity to the process. You can use the *Delete Activity* button to remove the last activity you have added.
-    
-    - For each activity you add, select which activity should be executed. The available choices depend on the preceding activity in the process.
-    
-    - For each activity, select a profile and resource if necessary.
-    
-    - When you have selected a profile for an activity, and there are no mandatory profile parameters without a value, a *Show Details* label is displayed next to the arrow button below the profile. Click the arrow button to view and change the profile parameter val­ues according to your preference. If there are mandatory profile parameters without a value, a *Show All* label is displayed instead, and you will need to make sure a value is assigned to these before you can continue to the next step of the wizard.
-    
-    - In the drop-down list with resources you can select for an activity, both pool resources and regular resources are displayed. Regular resources that belong to a pool resource are displayed beneath that pool resource. If there is one resource pool and all regular resources for the activity belong to it, the resource pool is automatically selected. If there are no resource pools, and only one regular resource, that resource is automatically selected.
+  - Select an existing process to schedule it again or create a custom process.
+  - In the *Start* drop-down box, select whether the process should be executed once (“Instant”) or repeated at regular intervals (“Timer”). If you select *Timer*, you will need to specify a profile and interval for the timer. Note that this drop-down box is only available if a repeat gateway is available in the DMS. If no repeat gateway is available, the process will always be executed once.
+  - If you are creating a custom process, click the *Add* *Activity button* to add an activity to the process. You can use the *Delete Activity* button to remove the last activity you have added.
+  - For each activity you add, select which activity should be executed. The available choices depend on the preceding activity in the process.
+  - For each activity, select a profile and resource if necessary.
+  - When you have selected a profile for an activity, and there are no mandatory profile parameters without a value, a *Show Details* label is displayed next to the arrow button below the profile. Click the arrow button to view and change the profile parameter values according to your preference. If there are mandatory profile parameters without a value, a *Show All* label is displayed instead, and you will need to make sure a value is assigned to these before you can continue to the next step of the wizard.
+  - In the drop-down list with resources you can select for an activity, both pool resources and regular resources are displayed. Regular resources that belong to a pool resource are displayed beneath that pool resource. If there is one resource pool and all regular resources for the activity belong to it, the resource pool is automatically selected. If there are no resource pools, and only one regular resource, that resource is automatically selected.
 
 - In the final step, you need to select the starting profile instance, as well as the token profile instance and resource:
 
-    - Select the profile instance that should be used for the first activity of the process. For example, if the first activity is a discovery activity, you must select the profile that will determine the scan range for this activity.
-    
-    - The token selection is displayed below the start profile selection. If there is one profile instance, that profile is automatically selected. If there are multiple profiles instances, the profile instance with the name *Token Default Instance* is automatically selected. Select­ing or customizing a token profile in this step allows you to fine-tune the way the token will be handled by Process Automation. You can for instance indicate the priority for the token and the duration it should be allowed to stay in the queue.
-
-    - If it is possible to select a profile instance and resource automatically, the token section is collapsed.
-
-    - When the necessary configuration is done, click *Create* to create the process. The scheduled process will be added to the timeline on the *Processes* > *Schedules* tab and executed at the specified time.
+  - Select the profile instance that should be used for the first activity of the process. For example, if the first activity is a discovery activity, you must select the profile that will determine the scan range for this activity.
+  - The token selection is displayed below the start profile selection. If there is one profile instance, that profile is automatically selected. If there are multiple profiles instances, the profile instance with the name *Token Default Instance* is automatically selected. Selecting or customizing a token profile in this step allows you to fine-tune the way the token will be handled by Process Automation. You can for instance indicate the priority for the token and the duration it should be allowed to stay in the queue.
+  - If it is possible to select a profile instance and resource automatically, the token section is collapsed.
+  - When the necessary configuration is done, click *Create* to create the process. The scheduled process will be added to the timeline on the *Processes* > *Schedules* tab and executed at the specified time.
 
 When you select a custom option in the wizard and you start from a blank profile instance, all options will be blank too. If you start from a previously configured state (profile, activity, etc.) and select a custom option, all previously configured options will remain, and it will be possible to then customize those options. Regardless of whether you are using an existing option or a custom option, the wizard will validate mandatory parameters. Using an existing option provides preconfigured values, while custom options require manual configuration.
 
@@ -212,20 +203,20 @@ The following things can be configured with this object:
 - Whether a step should be executed automatically or shown in the UI.
 - The IDP view configuration:
 
-    - Whether views should be moved under the top view.
-    - The top view name.
-    - The applications view name.
-    - The devices view name.
-    - The infrastructure view name.
+  - Whether views should be moved under the top view.
+  - The top view name.
+  - The applications view name.
+  - The devices view name.
+  - The infrastructure view name.
 
 - The username and/or password to be used.
 - Extra configuration options:
 
-    - Whether a configuration group should be expanded or collapsed in the *Extra Configuration* step.
-    - Whether the Activity Scheduler should be used.
-    - The Provisioning API binding address and binding address port.
-    - Whether HTTP or HTTPS need to be used for the Provisioning API, and in case the latter is used, the HTTPS certificate.
-    - The archive path and user for the Configuration Manager
+  - Whether a configuration group should be expanded or collapsed in the *Extra Configuration* step.
+  - Whether the Activity Scheduler should be used.
+  - The Provisioning API binding address and binding address port.
+  - Whether HTTP or HTTPS need to be used for the Provisioning API, and in case the latter is used, the HTTPS certificate.
+  - The archive path and user for the Configuration Manager
 
 If invalid or incompatible data are configured for a screen that is set to be executed without user interaction, the setup wizard will fail. If the wizard is run with user interaction and an error is detected in a configuration group of the *Extra Configuration* step, that group will automatically be expanded.
 
@@ -275,7 +266,7 @@ If the IDP app was used with DataMiner version 10.1.1 or higher, run-time errors
 
 IDP now supports the provisioning of elements that have a communication prefix in the IP address field, e.g. *wss://192.168.1.1*.
 
-### Fixes
+### CU1 fixes
 
 #### IDP setup wizard created Processes view even without Process Automation \[ID_29134\]
 

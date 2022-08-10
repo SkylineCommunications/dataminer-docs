@@ -102,7 +102,7 @@ To make it easier to import unlinked resources, when resources are exported, the
 The following other minor changes were also implemented:
 
 - Before an import is done, DataMiner will now check if the file path exists and the file is accessible.
-- The following characters are no longer supported in property, capability and capacity names:* . ! \`*
+- The following characters are no longer supported in property, capability and capacity names: . ! \`
 - Capacity values will now be validated to ensure that they are within the range defined for the profile parameter.
 
 #### Progress indicator when booking is confirmed/saved \[ID_28365\]

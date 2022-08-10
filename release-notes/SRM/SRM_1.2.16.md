@@ -50,7 +50,7 @@ The Skyline Bookings Monitoring connector no longer uses the *SLSRMLibrary.dll*.
 
 #### BookingManager.AddResource and BookingManager.TryAddResource improvements \[ID_30350\]
 
-The *BookingManager.AddResource *and *BookingManager.TryAddResource* methods have been improved as follows:
+The *BookingManager.AddResource* and *BookingManager.TryAddResource* methods have been improved as follows:
 
 - Created service definitions will no longer be templates.
 - Service definitions will no longer be edited.

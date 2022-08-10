@@ -50,9 +50,9 @@ The *Skyline Booking Monitoring* protocol, which allows additional monitoring of
 - *Bookings Monitoring Element*: The name of the element using the *Skyline Booking Monitoring* protocol.
 - *Bookings Monitoring Mode*: Can be set to the following modes:
 
-    - *None*: The monitoring element is not used.
-    - *Non-Nominal*: The monitoring element only features failed, quarantined and interrupted bookings.
-    - *Nominal*: The monitoring element features all bookings that have started.
+  - *None*: The monitoring element is not used.
+  - *Non-Nominal*: The monitoring element only features failed, quarantined and interrupted bookings.
+  - *Nominal*: The monitoring element features all bookings that have started.
 
 #### New network path configuration options \[ID_29963\]
 
@@ -194,13 +194,13 @@ To prevent this issue, the contributing protocol creation logic in the script *S
 
 ## Addendum CU1
 
-### Enhancements
+### CU1 enhancements
 
 #### Skyline Booking Monitoring updates now in the background \[ID_30171\]
 
 Updates for the *Skyline Booking Monitoring* connector are now sent in the background so that they do not affect other SRM operations.
 
-### Fixes
+### CU1 fixes
 
 #### Problem assigning resources when capability/capacity value is not supported \[ID_30143\]
 

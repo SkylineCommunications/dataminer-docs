@@ -28,10 +28,21 @@ The section *Admin* > *Configuration* > *Visualization* of the IDP app has been 
 
 Support has been added for the removal of DCF connections through IDP. Several methods have been added in *DataminerSolutions.dll* for this purpose, allowing the following kinds of behavior:
 
-- Removal of all DCF connections for a specific element. <br>This can be done by first creating a list of *DcfConnectionFilter* objects based on the DMA and element ID, and then calling the *RemoveAllDcfConnections* method from a *Connectivity* object using this list.
-- Removal of a specific connection. <br>This can be done by first creating a list of *DcfByConnectionIdFilter* objects based on the DMA ID, element ID, and connection ID, and then calling the *RemoveDcfConnectionsById* method from a *Connectivity* object using this list.
-- Removal of all connections of a specific interface. <br>This can be done by first creating a list of *DcfByInterfaceIdFilter* objects based on the DMA ID, element ID and interface ID. Optionally, the interface properties to be removed can also be provided. Then the *RemoveDcfConnectionsByInterface* method should be called from a *Connectivity* object using the list.
-- Removal of all interface properties of a specific interface. <br>This can be done by first creating a list of *DcfByInterfaceIdFilter* objects based on the DMA ID, element ID and interface ID, and then calling the *RemoveDcfInterfacePropertiesByInterfaceId* method from a *Connectivity* object using this list.
+- Removal of all DCF connections for a specific element.
+
+  This can be done by first creating a list of *DcfConnectionFilter* objects based on the DMA and element ID, and then calling the *RemoveAllDcfConnections* method from a *Connectivity* object using this list.
+
+- Removal of a specific connection.
+
+  This can be done by first creating a list of *DcfByConnectionIdFilter* objects based on the DMA ID, element ID, and connection ID, and then calling the *RemoveDcfConnectionsById* method from a *Connectivity* object using this list.
+
+- Removal of all connections of a specific interface.
+
+  This can be done by first creating a list of *DcfByInterfaceIdFilter* objects based on the DMA ID, element ID and interface ID. Optionally, the interface properties to be removed can also be provided. Then the *RemoveDcfConnectionsByInterface* method should be called from a *Connectivity* object using the list.
+
+- Removal of all interface properties of a specific interface.
+
+  This can be done by first creating a list of *DcfByInterfaceIdFilter* objects based on the DMA ID, element ID and interface ID, and then calling the *RemoveDcfInterfacePropertiesByInterfaceId* method from a *Connectivity* object using this list.
 
 #### New Provisioning Started status in Discovered Elements table \[ID_30499\]
 

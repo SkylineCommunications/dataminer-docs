@@ -6,8 +6,6 @@ uid: SRM_1.1.0
 
 ## New features
 
-### Core functionality
-
 #### New ConvertToContributing option in Contributing Config service definition property [ID_23538]
 
 In the *Contributing Config* property of a service definition, you can now add a *ConvertToContributing* option. If this option is specified and set to true, a checkbox is included in the Booking Wizard that can be selected to automatically convert the booking to a contributing booking.
@@ -34,7 +32,7 @@ The script requires the following input parameters:
 
 - *Input Data*: A JSON string, consisting of the *ForceUpdate* and *IsSilent* fields (both by default false).
 
-    For example: `{"ForceUpdate":"false", "IsSilent":"true"}` 
+    For example: `{"ForceUpdate":"false", "IsSilent":"true"}`
 
     *ForceUpdate* determines whether the script will force an update of resources even if this will cause one or more bookings to go into quarantine state. If the script is running in interactive mode and bookings need to be moved to quarantine, the user will be warned about this and will have the choice to execute the update or not.
 

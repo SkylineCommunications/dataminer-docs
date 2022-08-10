@@ -87,7 +87,7 @@ The IDP Setup wizard still attempted to set parameter 5023 of the Generic Rack L
 
 #### Elements removed from Connectivity tabs when CI Type was edited \[ID_32304\]
 
-When the activity *Connectivity Discovery* is enabled for an element, that element is displayed in the tabs *Connectivity* > *Managed* and* Connectivity* > *Discovered*. However, when the CI Type was edited, it could occur that elements were no longer displayed in these tabs. This could happen even if no changes were implemented to the CI Type and it was merely saved again.
+When the activity *Connectivity Discovery* is enabled for an element, that element is displayed in the tabs *Connectivity* > *Managed* and *Connectivity* > *Discovered*. However, when the CI Type was edited, it could occur that elements were no longer displayed in these tabs. This could happen even if no changes were implemented to the CI Type and it was merely saved again.
 
 #### Provisioning request failed if invalid DMA ID was configured in CI Type \[ID_32363\]
 
