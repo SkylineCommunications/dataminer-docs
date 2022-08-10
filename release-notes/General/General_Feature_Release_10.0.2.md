@@ -15,7 +15,7 @@ uid: General_Feature_Release_10.0.2
 
 On DataMiner Agents running Cassandra, it is possible to install a dedicated indexing database (e.g. Elasticsearch). If this so-called Indexing Engine is installed, new search features will now become available in the Alarm Console. Additional features are also being developed that will make use of the Indexing Engine in the future.
 
-##### **Indexing system requirements**
+##### Indexing system requirements
 
 DataMiner Indexing Engine can only be installed on DataMiner Agents with the following characteristics:
 
@@ -71,7 +71,7 @@ Please note the following regarding the indexing database:
 
 - Alarms in the indexing database are kept in two separate tables, one for active alarms and one for closed alarms.
 
-##### **DB.xml Indexing configuration**
+##### DB.xml Indexing configuration
 
 When the DataMiner Indexing Engine installation is complete, the *Db.xml* file will contain an additional \<DataBase> section with the connection information of the indexing database. The “search” attribute will be set to true.
 
@@ -87,7 +87,7 @@ When the DataMiner Indexing Engine installation is complete, the *Db.xml* file w
 > - Changes to the settings of an indexing database in DataMiner Cube will take effect immediately and do not require a DataMiner restart. A DataMiner restart is only required when a named database is deleted.
 > - When the Indexing Engine has been installed, the file *Indexing.xml* file is also added to the Skyline DataMiner folder, containing the configuration of the engine itself.
 
-##### **DBMaintenance.xml and DBMaintenanceDMS.xml Indexing configuration**
+##### DBMaintenance.xml and DBMaintenanceDMS.xml Indexing configuration
 
 In *DBMaintenance.xml* and *DBMaintenanceDMS.xml*, each \<TTL> tag can have an \<Indexing> subtag, allowing you to specify an override for the default TTL setting for a table that is part of the indexing database. It is possible to specify "infinite" as the indexing TTL, in which case these data will be kept indefinitely.
 
@@ -105,7 +105,7 @@ Once DataMiner Indexing has been installed, it is possible to change the backup 
 > - Only one Indexing data backup can be made per day.
 > - Deleting any files from the backup file location will cause a restore to fail.
 
-##### **Indexing features configuration in System Center**
+##### Indexing features configuration in System Center
 
 Once DataMiner Indexing Engine has been installed, the *Search & Indexing* section in System Center contains an additional *Enable indexing on alarms* option. This option must be enabled in order to use the new Alarm Console features mentioned below.
 
@@ -150,13 +150,13 @@ In the Users / Groups module, in the category *Modules* > *System configuration*
 
 - *Configure*: Determines whether the user can make any changes to the Indexing Engine configuration.
 
-##### **Indexing log information**
+##### Indexing log information
 
 Log information about the Indexing Engine can be found in a new “Search” log file in the *Logging* section of *System Center*.
 
 In addition, the system will continuously monitor the connection with the Indexing database. If for some reason a node of the Indexing database goes down, an alarm will be displayed in the Alarm Console.
 
-##### **GetIndexCountRequest method**
+##### GetIndexCountRequest method
 
 A new *GetIndexCountRequest* method has been added in DataMiner, which can be used to retrieve the number of documents in the indexing database.
 

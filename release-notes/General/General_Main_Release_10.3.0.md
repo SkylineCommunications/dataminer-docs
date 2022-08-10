@@ -884,17 +884,17 @@ When building a GQI query, you can now also use the script output of an interact
 
 When a Process Automation definition is added to the Service definition component, the added function shapes will now reflect the function type (UserTask, ScriptTask, ResourceTask, Gateway, NoneStartEvent, TimeStartEvent or EndEvent).
 
-#### DataMiner Application Framework \[ID_33002\] \[ID_33040\] \[ID_33208\]
+#### DataMiner Low-Code Apps \[ID_33002\] \[ID_33040\] \[ID_33208\]
 
 <!-- Main Release Version 10.3.0 - Feature Release Version 10.2.5
 RN 33208: Main Release Version 10.3.0 - Feature Release Version 10.2.6 -->
 
-The DataMiner Application Framework allows you to create custom low-code applications that interact with data from a DataMiner System or an external source.
+With the DataMiner Low-Code Apps (also known as the "Application Framework"), you can create custom low-code applications that interact with data from a DataMiner System or an external source.
 
 These applications can be created on the root web page of a DataMiner System and can be organized into sections. To place an application in one or more specific sections, open the App.info.json file in the correct application folder (C:\\Skyline DataMiner\\applications\\APP_ID) and add the section names to the Sections array.
 
 > [!NOTE]
-> As the “Low-code Apps” license is required to use the DataMiner Application Framework, you will not have access to the framework if you do not have this license.
+> The “Low-code Apps” license is required to use or access the DataMiner Low-Code Apps.
 
 ##### Pages and panels
 
@@ -913,15 +913,15 @@ In an application, you can configure actions that will be executed each time one
 
 At present, the following actions can be configured:
 
-| Action                   | Description                                                                                                                                            |
-|--------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Launch a script          | Launch an Automation script with a specific configuration and a specific number of inputs (which can be linked to feeds like e.g. the Query Row feed). |
-| Navigate to a URL        | Navigate to a specific URL (in a new tab).                                                                                                             |
-| Open a page              | Open a (hidden) page in the same application.                                                                                                          |
-| Open a panel             | Open a panel on the current page. Panels can appear on the left side of a page, on the right side of the page or as a popup.                       |
-| Close a panel            | Close a panel that was open on the current page.                                                                                                       |
-| Open an app              | Navigate to another application.                                                                                                                       |
-| Execute component action | Execute a component action. E.g. select an item in a table, create a new instance, etc.                                                            |
+| Action | Description |
+|--|--|
+| Launch a script | Launch an Automation script with a specific configuration and a specific number of inputs (which can be linked to feeds like e.g. the Query Row feed). |
+| Navigate to a URL | Navigate to a specific URL (in a new tab). |
+| Open a page | Open a (hidden) page in the same application. |
+| Open a panel | Open a panel on the current page. Panels can appear on the left side of a page, on the right side of the page or as a popup. |
+| Close a panel | Close a panel that was open on the current page. |
+| Open an app | Navigate to another application. |
+| Execute component action | Execute a component action. E.g. select an item in a table, create a new instance, etc. |
 
 By default, actions are executed asynchronously. However, it is also possible to configure chains of actions that should be executed synchronously, i.e. only when the preceding action was executed successfully.
 
@@ -929,7 +929,7 @@ Also, by combining different actions into one, you can create complex behavior. 
 
 ##### Versioning
 
-The DataMiner Application Framework includes a versioning system that allows different versions of the same application to exist simultaneously. These different versions can be accessed via the versions panel of the application, which also allows the versions to be edited.
+The DataMiner Low-Code Apps include a versioning system that allows different versions of the same application to exist simultaneously. These different versions can be accessed via the versions panel of the application, which also allows the versions to be edited.
 
 When you create a new application, a first draft version of that application is created. That version can then be published, i.e. made accessible to end users. Each time the published version of an application is edited, a new draft version will be created. Draft versions are meant to be used as prototypes for testing purposes.
 
@@ -937,12 +937,12 @@ Per application, there can be up to 15 versions: 14 draft versions and one publi
 
 ##### Security
 
-The application framework has two levels of security:
+The Low-Code Apps have two levels of security:
 
-- on DataMiner level, user permissions control access to the application framework in general, and
+- on DataMiner level, user permissions control access to the Low-Code Apps in general, and
 - on application level, user permissions control access to specific applications.
 
-Access to the application framework is controlled by the following user permissions that can be configured per user or user group:
+Access to the Low-Code Apps is controlled by the following user permissions that can be configured per user or user group:
 
 - View applications
 - Add new applications
@@ -951,7 +951,7 @@ Access to the application framework is controlled by the following user permissi
 - Publish applications
 
 > [!NOTE]
-> Users without “View applications” permission do not have access to the application framework. Even if they have been granted some of the other user permissions, they will not be able to perform any action whatsoever within the application framework.
+> Users without “View applications” permission do not have access to the Low-Code Apps. Even if they have been granted some of the other user permissions, they will not be able to perform any action whatsoever within the Low-Code Apps.
 
 Access to a specific application can be configured in the application itself. Per application, you can define a list of users with view and/or edit permission. By default, no restrictions will be applied, meaning that everyone will be allowed to view and edit the application.
 
@@ -973,7 +973,7 @@ When you hover over a data table component (e.g. a GQI table), a search box will
 
 <!-- Main Release Version 10.3.0 - Feature Release Version 10.2.7 -->
 
-In the Dashboards app and the Application Framework, dashboards, app pages and app panels now all have a “Fit to view” setting that, when enabled, will make sure the items in question are automatically adapted to fit the screen.
+In the Dashboards app and the Low-Code Apps, dashboards, app pages, and app panels now all have a “Fit to view” setting that, when enabled, will make sure the items in question are automatically adapted to fit the screen.
 
 #### Web apps - Data table component: Sorting, grouping and filtering options \[ID_33403\] \[ID_33433\] \[ID_33454\]
 
@@ -1022,11 +1022,11 @@ The Service Definition component now supports both types of process automation s
 - Skyline Process Automation
 - Custom Process Automation
 
-#### Dashboards app / Custom apps - Service Definition component: Text displayed on a particular node of a process automation service definition will now be the value of that node’s Label property \[ID_33754\]
+#### Dashboards app / Low-Code Apps - Service Definition component: Text displayed on process automation service definition node will now be the value of that node's Label property [ID_33754]
 
 <!-- Main Release Version 10.3.0 - Feature Release Version 10.2.9 -->
 
-Up to now, when a Service Definition component displayed a service definition of type “Skyline Process Automation” or “Custom Process Automation”, the name of the associated function definition would be displayed on the nodes. From now on, the text displayed on a particular node will be the value of that node’s Label property. Only when no Label property could be found will the name of the associated function definition be displayed instead.
+Up to now, when a Service Definition component displayed a service definition of type "Skyline Process Automation" or "Custom Process Automation", the name of the associated function definition would be displayed on the nodes. From now on, the text displayed on a particular node will be the value of that node's *Label* property. Only when no *Label* property could be found will the name of the associated function definition be displayed instead.
 
 #### DataMiner web apps updated to Angular 13 \[ID_33869\]
 
@@ -1535,7 +1535,7 @@ A number of enhancements have been made with regard to Automation scripts.
 - When a script is launched, from now on, only the parameters/dummies with missing values will be shown. Automatically filled in values will no longer be shown.
 - When script input is filled in with feed data, users will no longer be asked to change that input manually.
 - Script input (parameters/dummies) linked to a feed is now filled in at the moment a script action is triggered. Subsequent changes in the feed will have no effect.
-- In the DataMiner Application Framework, the option to mark specific script parameters and dummies as required has been removed.
+- In the DataMiner Low-Code Apps, the option to mark specific script parameters and dummies as required has been removed.
 - When, in the Dashboards app, users mark a script parameter as required, they no longer need to fill in a value.
 - From now on, a page load event will only trigger after the application page has been fully initialized. This will ensure that, when launching script actions with input linked to feeds, those feeds have been initialized.
 

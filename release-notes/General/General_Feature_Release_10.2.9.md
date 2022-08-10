@@ -15,9 +15,44 @@ uid: General_Feature_Release_10.2.9
 
 ## Highlights
 
+##### BREAKING CHANGE: Removing a Resource or ResourcePool object will now always require a valid ID [ID_33836]
+
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.9 -->
+
+Up to now, it was possible to delete Resource and ResourcePool objects in a filtered way by passing an "incomplete" object to the associated remove method of the ResourceManagerHelper. Moreover, passing an empty list or NULL would remove all resources on the system. This will no longer be possible.
+
+From now on, it will only be possible to remove Resource objects by ID or name (case sensitive) and ResourcePool objects by ID.
+
+When DataMiner detects a remove request that contains an object with an empty ID (and an empty name in case of a request to remove a Resource object, one of the following messages will be added to the *ResourceManager.txt* log file (type: info):
+
+- In case of a request to remove a Resource object:
+
+    ```txt
+    Detected a resource delete request that contained at least one object without an ID. Deleting resources with resource object filters is not supported anymore.
+    ```
+
+- In case of a request to remove a ResourcePool object:
+
+    ```txt
+    Detected a resource pool delete request that contained at least one object without an ID. Deleting resource pools with object filters is not supported anymore.
+    ```
+
+> [!NOTE]
+> From now on, the log entries added when creating or deleting resources or resource pools will no longer contain the IDs of all objects that were created or deleted. Instead, they will only contain the IDs of the first 10 objects that were created or deleted.
+
 ## Other new features
 
-### Core functionality
+#### Dashboards app / Low-Code Apps - Service Definition component: Text displayed on process automation service definition node will now be the value of that node's Label property [ID_33754]
+
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.9 -->
+
+Up to now, when a Service Definition component displayed a service definition of type "Skyline Process Automation" or "Custom Process Automation", the name of the associated function definition would be displayed on the nodes. From now on, the text displayed on a particular node will be the value of that node's *Label* property. Only when no *Label* property could be found will the name of the associated function definition be displayed instead.
+
+#### Web apps now also support parameter comments configured in Param.Message elements [ID_33784]
+
+<!-- Main Release Version 10.1.0 [CU18]/10.2.0 [CU6] - Feature Release Version 10.2.9 -->
+
+When configuring a parameter in a protocol, you can add a `<Message>` element containing a comment to be displayed in a confirmation box when users change that parameter on the user interface. Up to now, this `<Message>` element was only supported by DataMiner Cube. It is now also supported by web applications like Monitoring and Dashboards.
 
 #### SLPort: Order of parameters in an HTTP session request will be identical to that in the protocol [ID_33796]
 
@@ -31,38 +66,13 @@ In an HTTP session request, the order of the parameters will now always be ident
 
 When a version of a DVE protocol with function DVE protocols is deleted from the system while functions are active, from now on, the function DVE protocol versions associated with those active functions will also be removed from the system.
 
-### Security
+#### Dashboards app: Parameter tables can now expose index values & Edit panel now allows selecting a specific protocol version [ID_33841]
 
-#### Azure Active Directory: Secret expiry notices/errors [ID_33916]
+<!-- Main Release Version 10.2.0 [CU6] - Feature Release Version 10.2.9 -->
 
-<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.9 -->
+Up to now, a parameter table was only able to expose indices as part of a parameter value. From now on, a parameter table will also be able to expose indices as separate values.
 
-When Azure Active Directory is used as an identity provider, DataMiner Cube will now show
-
-- a notice when the secret will expire in less than a week, and
-- an error when the secret has expired.
-
-Also, more detailed entries will now be added to the logs when setup errors have been detected (missing permissions, missing configurations, expired secrets, etc.).
-
-> [!IMPORTANT]
-> Note that, for this enhancement to work, the following changes have to be made to the Azure configuration and the *DataMiner.xml* file.
->
-> 1. In Azure, add the API permission *Application.Read.All*.
-> 1. Copy the Azure app object ID (*Azure AD > App registrations > [your application] > Object ID*) and, in *DataMiner.xml*, add it to the *objectId* attribute of the *AzureAD* element.
-
-### DMS web apps
-
-#### Dashboards app / Custom apps - Service Definition component: Text displayed on a particular node of a process automation service definition will now be the value of that node's Label property [ID_33754]
-
-<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.9 -->
-
-Up to now, when a Service Definition component displayed a service definition of type "Skyline Process Automation" or "Custom Process Automation", the name of the associated function definition would be displayed on the nodes. From now on, the text displayed on a particular node will be the value of that node's *Label* property. Only when no *Label* property could be found will the name of the associated function definition be displayed instead.
-
-#### Web apps now also support parameter comments configured in Param.Message elements [ID_33784]
-
-<!-- Main Release Version 10.1.0 [CU18]/10.2.0 [CU6] - Feature Release Version 10.2.9 -->
-
-When configuring a parameter in a protocol, you can add a `<Message>` element containing a comment to be displayed in a confirmation box when users change that parameter on the user interface. Up to now, this `<Message>` element was only supported by DataMiner Cube. It is now also supported by web applications like Monitoring and Dashboards.
+Also, the edit panel will now allow users to select a specific protocol version.
 
 #### DataMiner web apps updated to Angular 13 [ID_33869]
 
@@ -89,6 +99,23 @@ The *Line & area chart* component is now able to visualize GQI query results as 
 > [!NOTE]
 > If you want the component to show a classic trend chart, make sure the query result is sorted by the X axis column.
 
+#### Azure Active Directory: Secret expiry notices/errors [ID_33916]
+
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.9 -->
+
+When Azure Active Directory is used as an identity provider, DataMiner Cube will now show:
+
+- a notice when the secret will expire in less than a week, and
+- an error when the secret has expired.
+
+Also, more detailed entries will now be added to the logs when setup errors have been detected (missing permissions, missing configurations, expired secrets, etc.).
+
+> [!IMPORTANT]
+> Note that, for this enhancement to work, the following changes have to be made to the Azure configuration and the *DataMiner.xml* file.
+>
+> 1. In Azure, add the API permission *Application.Read.All*.
+> 1. Copy the Azure app object ID (*Azure AD > App registrations > [your application] > Object ID*) and, in *DataMiner.xml*, add it to the *objectId* attribute of the *AzureAD* element.
+
 #### GQI: Table columns of type 'decimal' can now also be used when filtering or aggregating data [ID_33927]
 
 <!-- Main Release Version 10.2.0 [CU6] - Feature Release Version 10.2.9 -->
@@ -100,43 +127,6 @@ Table columns of type "decimal" can now also be used when filtering or aggregati
 <!-- Main Release Version 10.3.0 - Feature Release Version 10.2.9 -->
 
 Up to now, when all GQI data was requested, the page size would always be set to 50. From now on, the page size will be set to a number between 50 and 1000, based on the amount of columns that are retrieved (max. 3000 cells).
-
-#### Dashboards app: Parameter tables can now expose index values & Edit panel now allows selecting a specific protocol version [ID_33841]
-
-<!-- Main Release Version 10.2.0 [CU6] - Feature Release Version 10.2.9 -->
-
-Up to now, a parameter table was only able to expose indices as part of a parameter value. From now on, a parameter table will also be able to expose indices as separate values.
-
-Also, the edit panel will now allow users to select a specific protocol version.
-
-### DMS Service & Resource Management
-
-##### BREAKING CHANGE: Removing a Resource or ResourcePool object will now always require a valid ID [ID_33836]
-
-<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.9 -->
-
-Up to now, it was possible to delete Resource and ResourcePool objects in a filtered way by passing an "incomplete" object to the associated remove method of the ResourceManagerHelper. Moreover, passing an empty list or NULL would remove all resources on the system. This will no longer be possible.
-
-From now on, it will only be possible to remove Resource objects by ID or name (case sensitive) and ResourcePool objects by ID.
-
-When DataMiner detects a remove request that contains an object with an empty ID (and an empty name in case of a request to remove a Resource object, one of the following messages will be added to the *ResourceManager.txt* log file (type: info):
-
-- In case of a request to remove a Resource object:
-
-    ```txt
-    Detected a resource delete request that contained at least one object without an ID. Deleting resources with resource object filters is not supported anymore.
-    ```
-
-- In case of a request to remove a ResourcePool object:
-
-    ```txt
-    Detected a resource pool delete request that contained at least one object without an ID. Deleting resource pools with object filters is not supported anymore.
-    ```
-
-> [!NOTE]
-> From now on, the log entries added when creating or deleting resources or resource pools will no longer contain the IDs of all objects that were created or deleted. Instead, they will only contain the IDs of the first 10 objects that were created or deleted.
-
-### DMS tools
 
 ## Changes
 
