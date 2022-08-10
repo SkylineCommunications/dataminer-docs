@@ -12,6 +12,8 @@ The Admin app is intended for the management of your cloud-connected DataMiner S
 
 - [Giving users access to cloud features](xref:Giving_users_access_to_cloud_features)
 
+- [Granting admin consent for Teams actions](xref:Granting_admin_consent)
+
 - [Controlling remote access](xref:Controlling_remote_access)
 
 - [Controlling cloud feed data offloads](xref:Controlling_cloudfeed_data_offloads)
