@@ -7,7 +7,7 @@ uid: Embedding_an_alarm_timeline_component
 Using an alarm timeline component, you can visualize the alarm history of parameters as a dynamic timeline.
 
 > [!TIP]
-> For examples, see [Ziine](xref:ZiineDemoSystem) > *[Linking Shapes]* view > *[controls > TIMELINE1 and TL2]* pages.
+> For examples, see [Ziine](xref:ZiineDemoSystem) > *Visual Overview Design Examples* view > *[controls > TIMELINE1 and TL2]* pages.
 
 To configure a shape as an alarm timeline component:
 

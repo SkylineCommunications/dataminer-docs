@@ -13,6 +13,9 @@ As from DISv2.31, similar to DataMiner protocols, it is also possible to develop
     > [!NOTE]
     > If you want an external DLL file to be placed in a specific folder instead of C:\\DataMiner\\ProtocolScripts, then specify the full path to that folder in the *DataMiner DLL Path* property of that DLL file.
 
+> [!TIP]
+> For a video course on creating Visual Studio Automation script solutions, see [DataMiner Automation](https://community.dataminer.services/courses/dataminer-automation/) on DataMiner Dojo.
+
 ## Creating an Automation Script solution
 
 To create a new Automation script solution containing one dummy Automation script, do the following:

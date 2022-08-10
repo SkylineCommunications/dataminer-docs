@@ -9,7 +9,7 @@ Using a shape data field of type **Link**, you can link a shape to a webpage.
 When you link a shape to a webpage, that page will be opened each time a user clicks that shape.
 
 > [!TIP]
-> For an example, see [Ziine](xref:ZiineDemoSystem) > *[Linking Shapes]* view > *[linking > WEB]* page.
+> For an example, see [Ziine](xref:ZiineDemoSystem) > *Visual Overview Design Examples* view > *[linking > WEB]* page.
 
 ## Configuring the shape data field
 
@@ -112,7 +112,7 @@ http://localhost/foo/test.php?id=123&action=save#SL_ALLOW_POPUPS#
 | \<ElementIP> | Polling IP address of the element |
 | \<ElementName> | Name of the element |
 | \<DataMinerID> | DataMiner ID |
-| \<DMAIP> | The certificate address, hostname or IP address of the DataMiner Agent to which the user is connected. See [\<DMAIP>](xref:Placeholders_for_variables_in_shape_data_values#dmaip) |
+| \<DMAIP> | The certificate address, hostname or IP address of the DataMiner Agent to which the user is connected. See [\<DMAIP>](xref:Placeholders_for_variables_in_shape_data_values#dmaip). |
 | \<PageFilter> | Value of the drop-down filter box in the top-right corner of the Visio drawing. See [Specifying an EPM parameter that can be used to filter](xref:Specifying_an_EPM_parameter_that_can_be_used_to_filter). |
 
 > [!NOTE]
@@ -120,9 +120,9 @@ http://localhost/foo/test.php?id=123&action=save#SL_ALLOW_POPUPS#
 > - \<ElementID>, \<ElementIP> and \<ElementName> are only to be used if the shape is also linked to an element.
 > - From DataMiner version 9.0.5 onwards, these placeholders can also be used inside another placeholder in the URL, e.g. `#http://www.skyline.be?MyParam=[param:<elementname>,1]`
 
-## Configuring a link to a DataMiner element or view within a webpage embedded in Visual Overview
+## Configuring a link to a DataMiner object within a webpage embedded in Visual Overview
 
-From DataMiner 9.5.2 onwards, within a webpage displayed in Visual Overview via a shape data field of type **Link**, you can create a link that will allow the user to navigate to a particular DataMiner element or view.
+Within a webpage displayed in Visual Overview via a shape data field of type **Link**, you can create a link that will allow the user to navigate to a particular DataMiner element or view. From DataMiner 10.2.9/10.3.0 onwards, you can also create a link to an EPM object based on its system name and system type.
 
 To do so, use the following configuration in the webpage:
 
@@ -140,6 +140,20 @@ To do so, use the following configuration in the webpage:
   <a href='javascript:window.external.NavigateElementByName("My Element Name");'>
     My link description
   </a>
+  ```
+
+- For a link to an EPM object:
+
+  ```xml
+  <a href='javascript:window.external.NavigateCPEByName("[system type]", "[system name]");'>
+    My link description
+  </a>
+  ```
+
+  For example:
+
+  ```xml
+  <a href='javascript:window.external.NavigateCPEByName("Region","California");'>Open Region California</a>
   ```
 
 ## Examples

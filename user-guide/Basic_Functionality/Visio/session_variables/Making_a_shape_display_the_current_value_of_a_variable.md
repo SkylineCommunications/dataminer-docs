@@ -8,12 +8,13 @@ Using a shape data field of type **Variable**, you can make a shape display the 
 
 > [!TIP]
 > See also:
+>
 > - [Initializing a session variable](xref:Initializing_a_session_variable)
 > - [Turning a shape into a control to update a session variable](xref:Turning_a_shape_into_a_control_to_update_a_session_variable)
 > - [Adding options to a session variable control](xref:Adding_options_to_a_session_variable_control)
 
 > [!TIP]
-> For examples, see [Ziine](xref:ZiineDemoSystem) > *[Linking Shapes]* view > *[data > VARIABLE1 and VARIABLE2]* pages.
+> For examples, see [Ziine](xref:ZiineDemoSystem) > *Visual Overview Design Examples* view > *[data > VARIABLE1 and VARIABLE2]* pages.
 
 ## Configuring the shape data field
 

@@ -14,8 +14,9 @@ That page can be displayed:
 - in a tooltip.
 
 > [!NOTE]
+>
 > - You can only make a shape display pages other than the page actually containing the shape. This restriction is necessary to avoid loops of inline pages.
-> - For an example, see [Ziine](xref:ZiineDemoSystem) > *[Linking Shapes]* view > *[inline visio > BUTTONS]* page.
+> - For an example, see [Ziine](xref:ZiineDemoSystem) > *Visual Overview Design Examples* view > *[inline visio > BUTTONS]* page.
 
 ## Basic shape data field configuration
 
@@ -76,6 +77,7 @@ The session variable named *ClosingWindow_Result* can be set to "Continue", "Sto
 In the example above, it is set to "Continue". If *ClosingWindow_Result* is set to "Stop", a message box of type "Yes/No" will appear. If the user then clicks *Yes*, the window will be closed. Note that in the session variable named *ClosingWindow_Message*, you can specify a custom message to be displayed. If you specify such a message, then it will be shown in a message box of type "OK", regardless of the value of the *ClosingWindow_Result* variable. However, if *ClosingWindow_Result* is set to "Stop", this custom message will be displayed in the message box of type "Yes/No" mentioned above.
 
 > [!NOTE]
+>
 > - The **OnClosing** shape data field only works for windows. It does not work for message boxes or tooltips.
 > - The **OnClosing** and **OnClose** shape data fields do not influence each other. Both function independently from each other.
 > - If you want to combine **OnClosing** and **OnClose**, you can pass a session variable to the *OnClosing* script and make it return another session variable. That variable can then be passed to the *OnClose* script, which can optionally be made to return another session variable.
@@ -98,7 +100,7 @@ To do so:
   For both the width and the height of the window, specify either a fixed number of pixels or a placeholder referring to a property, a parameter or a session variable containing a number of pixels. See [Placeholders for variables in shape data values](xref:Placeholders_for_variables_in_shape_data_values).
 
 > [!TIP]
-> For an example, see [Ziine](xref:ZiineDemoSystem) > *[Linking Shapes]* view > *[inline visio > BUTTONS]* page.
+> For an example, see [Ziine](xref:ZiineDemoSystem) > *Visual Overview Design Examples* view > *[inline visio > BUTTONS]* page.
 
 ### Configuring a custom shortcut menu
 

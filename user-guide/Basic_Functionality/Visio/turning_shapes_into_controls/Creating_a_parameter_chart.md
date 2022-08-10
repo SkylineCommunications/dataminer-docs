@@ -13,7 +13,7 @@ With the **Parameters** shape data field, you specify which parameters should be
 > - This feature only works in DataMiner Cube.
 > - Up to DataMiner 8.5, the number of parameters that can be displayed in a Visio chart is limited to 10. From DataMiner 9.0.1/9.0.0 CU2 onwards, the maximum number of parameters has increased to 15.
 > - Alternatively, you can link a shape to a trend component instead. See [Linking a shape to a trend component](xref:Linking_a_shape_to_a_trend_component).
-> - For an example, see [Ziine](xref:ZiineDemoSystem) > *[Linking Shapes]* view > *[controls > PIE/BAR CHART]* page.
+> - For an example, see [Ziine](xref:ZiineDemoSystem) > *Visual Overview Design Examples* view > *[controls > PIE/BAR CHART]* page.
 
 ## Configuring the shape data fields
 

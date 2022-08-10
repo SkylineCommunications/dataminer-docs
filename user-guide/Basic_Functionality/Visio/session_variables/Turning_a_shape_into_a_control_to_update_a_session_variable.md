@@ -8,13 +8,14 @@ Using a shape data field of type **SetVar**, you can turn a shape or a page into
 
 > [!TIP]
 > See also:
+>
 > - [Adding options to a session variable control](xref:Adding_options_to_a_session_variable_control)
 > - [Initializing a session variable](xref:Initializing_a_session_variable)
 > - [Making a shape display the current value of a variable](xref:Making_a_shape_display_the_current_value_of_a_variable)
 > - [Embedding a router control component](xref:Embedding_a_router_control_component)
 
 > [!TIP]
-> For an example, see [Ziine](xref:ZiineDemoSystem) > *[Linking Shapes]* view > *[data > VARIABLE1]* page.
+> For an example, see [Ziine](xref:ZiineDemoSystem) > *Visual Overview Design Examples* view > *[data > VARIABLE1]* page.
 
 ## Configuring the shape data field
 

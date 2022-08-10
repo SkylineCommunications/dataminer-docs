@@ -7,7 +7,7 @@ uid: Making_a_shape_take_the_latch_color_of_the_item_it_is_linked_to
 A shape can be set to take the latch color of the view, element, service, redundancy group or parameter to which it is linked.
 
 > [!TIP]
-> For an example, see [Ziine](xref:ZiineDemoSystem) > *[Linking Shapes]* view > *[data > PROPERTIES]* page.
+> For an example, see [Ziine](xref:ZiineDemoSystem) > *Visual Overview Design Examples* view > *[data > PROPERTIES]* page.
 
 ## Configuring the shape data field
 
@@ -17,4 +17,4 @@ Add a shape data field of type **Latch** to the shape, and set its value to "TRU
 
 1. Right-click the shape.
 
-2. Click *Reset latch of view/element/parameter '\[Name\]'*.
+1. Click *Reset latch of view/element/parameter '\[Name\]'*.

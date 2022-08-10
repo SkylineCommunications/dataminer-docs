@@ -10,7 +10,7 @@ To apply conditional shape manipulation actions to any type of linked shape, or 
 >
 > - These kinds of conditional shape manipulation actions must be configured on shapes linked to an element, service or view. However, note that from DataMiner 10.0.13 onwards, the *Show*, *Hide*, *FlipX*, *FlipY* and *Enabled* actions are supported on shapes that are not linked to an element, service or view. The same goes for the *Collapse* action, available from DataMiner 10.1.8 onwards. For the *Enabled* action, the shape does have to be clickable.
 > - For more information on the more limited basic conditional shape manipulation actions, see [Basic conditional shape manipulation actions](xref:Basic_conditional_shape_manipulation_actions).
-> - For an example, see [Ziine](xref:ZiineDemoSystem) > *[Linking Shapes]* view > *[misc > MANIPULATION]* page.
+> - For an example, see [Ziine](xref:ZiineDemoSystem) > *Visual Overview Design Examples* view > *[misc > MANIPULATION]* page.
 
 ## Configuring the shape data fields
 
