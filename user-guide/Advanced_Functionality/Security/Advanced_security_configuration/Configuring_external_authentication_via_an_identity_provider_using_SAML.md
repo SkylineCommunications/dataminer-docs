@@ -50,7 +50,7 @@ Once this has been configured, if users try to log in to the DMA using external 
 
 ## Creating a DataMiner metadata file
 
-To create a DataMiner metadata file, proceed as follows:
+To create a DataMiner metadata file (also referred to as *Service Provider Metadata*), proceed as follows:
 
 1. Copy the following template into a new XML file named e.g. *spMetadata.xml*:
 
@@ -290,7 +290,7 @@ DataMiner supports Okta as identity provider as from version 10.1.11. Use Okta's
      > [!TIP]
      > It is recommended to use a PNG image with a transparent background and a landscape orientation.
 
-1. Configure the SAML settings:
+1. Configure the Okta SAML settings:
 
    - **Single sign on URL**: The location where the SAML assertion is sent with a POST operation.
 
@@ -308,9 +308,9 @@ DataMiner supports Okta as identity provider as from version 10.1.11. Use Okta's
        - ``https://dataminer.example.com/jobs/``
        - ``https://dataminer.example.com/ticketing/``
 
-   - **Audience URI**: The intended audience of the SAML assertion.
+   - **Audience URI (SP Entity ID)*: The intended audience of the SAML assertion.
 
-     In this box, enter ``https://dataminer.example.com/root/``.
+     In this box, enter ``https://dataminer.example.com/``.
 
    - **Name ID format**: The username format you are sending in the SAML Response.
 
@@ -319,6 +319,16 @@ DataMiner supports Okta as identity provider as from version 10.1.11. Use Okta's
    - **Application username**: The default value to use for the username with the application.
 
      Select "Email".
+     
+   - **Attribute Statements**: Add a new attribute statement with name *Email* (note this is case sensitive), format *Basic* and value *user.email*.
+
+1. Open the *Sign On* tab of your Okta application and scroll down to *SAML Signing Certificates*.
+
+1. In the *Actions* column of the *Active* certificate, click *View IdP metadata*.
+
+1. Save this Idp metadata XML-file to the DataMiner agent, e.g. *C:\Skyline DataMiner\okta-ip-metadata.xml*.
+
+1. Open the *DataMiner.xml* file and fill in the path to the IdP metadata file in the *ipMetadata* attribute of the *&lt;ExternalAuthentication&gt;* node.
 
 ## Error messages
 
