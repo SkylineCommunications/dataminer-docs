@@ -308,7 +308,7 @@ DataMiner supports Okta as identity provider as from version 10.1.11. Use Okta's
        - ``https://dataminer.example.com/jobs/``
        - ``https://dataminer.example.com/ticketing/``
 
-   - **Audience URI (SP Entity ID)*: The intended audience of the SAML assertion.
+   - **Audience URI (SP Entity ID)**: The intended audience of the SAML assertion.
 
      In this box, enter ``https://dataminer.example.com/``.
 
