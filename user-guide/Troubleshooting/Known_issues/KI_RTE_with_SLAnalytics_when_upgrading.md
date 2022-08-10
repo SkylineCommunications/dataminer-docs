@@ -16,6 +16,10 @@ The upgrade action "AnalyticsParameterInfoRecordAddChangeRate" is not triggered 
 
 Upgrade to DataMiner 10.2.8 CU2.
 
+## Workaround
+
+Open DevCenter and run the command `ALTER TABLE analytics_parameterinfo_v1 add cr int;`.  
+
 ## Issue description
 
 After upgrading to DataMiner 10.2.8 (CU1), the Alarm Console shows run-time errors related to the SLAnalytics process.
