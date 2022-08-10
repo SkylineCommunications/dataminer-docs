@@ -2428,10 +2428,10 @@
           topicUid: Accessing_the_Admin_app
         - name: Getting your organization verified
           topicUid: CloudConnectionVerification
-        - name: Granting admin consent
-          topicUid: Granting_admin_consent
         - name: Giving users access to cloud features
           topicUid: Giving_users_access_to_cloud_features
+        - name: Granting admin consent for Teams actions
+          topicUid: Granting_admin_consent
         - name: Controlling remote access
           topicUid: Controlling_remote_access
         - name: Controlling cloud feed data offloads
