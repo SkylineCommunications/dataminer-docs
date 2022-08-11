@@ -7537,3 +7537,13 @@ From now on, when you try to remove a query that is used as "start from" query, 
 
 ### CU7 enhancements
 
+#### Edge WebView2 now preferred when SAML authentication is used [ID_34162]
+
+<!-- Main Release Version 10.2.0 [CU7] - Feature Release Version 10.2.10 -->
+
+When SAML authentication is used, Cube will now try to use the Edge WebView2 browser engine instead of CefSharp. It will only fall back to using CefSharp if WebView2 is not available.
+
+This will prevent the following possible issues:
+
+- The CefSharp browser engine version used by Cube is not updated frequently and therefore not always trusted by certain SAML identity provider websites, such as Microsoft Azure. This can cause a lengthy authentication procedure, even if the browser cache is enabled.
+- The CefSharp browser engine needs to be downloaded from the DMA before a first authentication (on a new device). However, this is currently not supported for HTTPS-only setups.

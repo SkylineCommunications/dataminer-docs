@@ -27,6 +27,8 @@ uid: General_Feature_Release_10.2.10
 
 #### Edge WebView2 now preferred when SAML authentication is used [ID_34162]
 
+<!-- Main Release Version 10.2.0 [CU7] - Feature Release Version 10.2.10 -->
+
 When SAML authentication is used, Cube will now try to use the Edge WebView2 browser engine instead of CefSharp. It will only fall back to using CefSharp if WebView2 is not available.
 
 This will prevent the following possible issues:
