@@ -18,8 +18,7 @@ The following packages are available:
 - Skyline.DataMiner.Dev.Protocol
 - Skyline.DataMiner.Dev.Common
 
-There are also several dependency packages each containing a single assembly from the Skyline DataMiner/Files folder of the DataMiner.
-These are not intended to be installed individualy.
+There are also several dependency packages, each containing a single assembly from the "Skyline DataMiner/Files" folder of the DMA. These are not intended to be installed individually.
 
 - Skyline.DataMiner.Files.*
 
@@ -45,9 +44,11 @@ The "DataMiner Integration Studio" Visual Studio extension is required for devel
 See [Installing DataMiner Integration Studio](https://aka.dataminer.services/DisInstallation)
 
 > [!IMPORTANT]
-> DevPacks are suggested to be installed with PackageReferences. DIS was redesigned to work with PackageReferences and be future proof. 
-> Using packages.config you may see incorrect DLLImports (Protocols) or References (AutomationScripts) when asking DIS to compile the results.
-> For more information on how to migrate from packages.config to PackageReferences see: [docs.microsoft.com](https://docs.microsoft.com/en-us/nuget/consume-packages/migrate-packages-config-to-package-reference)  
+> DevPacks are suggested to be installed with PackageReferences. DIS was redesigned to work with PackageReferences and be future-proof. 
+>
+> Using packages.config, you may see incorrect DLLImports (protocols) or references (Automation scripts) when asking DIS to compile the results.
+> 
+> For more information on how to migrate from packages.config to PackageReferences, see [docs.microsoft.com](https://docs.microsoft.com/en-us/nuget/consume-packages/migrate-packages-config-to-package-reference).  
 
 ## Versioning
 
