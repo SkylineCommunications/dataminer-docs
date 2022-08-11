@@ -320,13 +320,13 @@ DataMiner supports Okta as identity provider as from version 10.1.11. Use Okta's
 
      Select "Email".
      
-   - **Attribute Statements**: Add a new attribute statement with name *Email* (note this is case sensitive), format *Basic* and value *user.email*.
+   - **Attribute Statements**: Add a new attribute statement with name *Email* (case-sensitive), format *Basic*, and value *user.email*.
 
 1. Open the *Sign On* tab of your Okta application and scroll down to *SAML Signing Certificates*.
 
 1. In the *Actions* column of the *Active* certificate, click *View IdP metadata*.
 
-1. Save this Idp metadata XML-file to the DataMiner agent, e.g. *C:\Skyline DataMiner\okta-ip-metadata.xml*.
+1. Save this IdP metadata XML file to the DataMiner Agent, e.g. `C:\Skyline DataMiner\okta-ip-metadata.xml`.
 
 1. Open the *DataMiner.xml* file and fill in the path to the IdP metadata file in the *ipMetadata* attribute of the *&lt;ExternalAuthentication&gt;* node.
 
