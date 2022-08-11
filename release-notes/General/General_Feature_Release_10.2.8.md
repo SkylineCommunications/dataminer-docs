@@ -503,3 +503,23 @@ In the following example, the second connection would incorrectly be ignored.
 
 > [!NOTE]
 > Specifying a type with \`\<Type>\` for one connection and specifying a type with e.g. \`\<Http>\` for another connection is not supported.
+
+## Addendum CU1
+
+### CU1 enhancements
+
+#### Size of the WebSocket messages sent from SLPort to SLProtocol will now be limited to 1024 packets [ID_34049]
+
+<!-- Main Release Version 10.1.0 [CU18]/10.2.0 [CU6] - Feature Release Version 10.2.8 [CU1] -->
+
+In order to prevent SLPort from running out of memory, from now on, the size of the WebSocket messages sent from SLPort to SLProtocol will be limited to 1024 packets.
+
+## Addendum CU2
+
+### CU2 Fixes
+
+#### SLAnalytics RTEs after upgrading DMS with Cassandra Cluster \[ID_34180]
+
+<!-- Main Release Version TBD - Feature Release Version 10.2.8 CU2 -->
+
+After a DMS with a Cassandra Cluster setup was upgraded to 10.2.8 (CU1), it could occur that the Alarm Console showed run-time errors related to the SLAnalytics process. This was caused by an upgrade action that was not triggered for such a setup.
