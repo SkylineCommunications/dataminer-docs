@@ -18,6 +18,11 @@ The following packages are available:
 - Skyline.DataMiner.Dev.Protocol
 - Skyline.DataMiner.Dev.Common
 
+There are also several dependency packages each containing a single assembly from the Skyline DataMiner/Files folder of the DataMiner.
+These are not intended to be installed individualy.
+
+- Skyline.DataMiner.Files.*
+
 ### About DataMiner
 
 DataMiner is a transformational platform that provides vendor-independent control and monitoring of devices and services. Out of the box and by design, it addresses key challenges such as security, complexity, multi-cloud, and much more. It has a pronounced open architecture and powerful capabilities enabling users to evolve easily and continuously.
@@ -40,18 +45,9 @@ The "DataMiner Integration Studio" Visual Studio extension is required for devel
 See [Installing DataMiner Integration Studio](https://aka.dataminer.services/DisInstallation)
 
 > [!IMPORTANT]
-> DevPacks can have unstable behavior when installed with PackageReferences because of an open bug for NuGet (https://github.com/NuGet/Home/issues/3830).
-> To avoid problems, you must make sure all your NuGets are installed using packages.config. You can verify this by searching your solution *.csproj files for PackageReference. If you find zero hits, the NuGets are installed correctly.
->
-> ![PackageReference search](https://docs.dataminer.services/develop/images/DevPack_PackageReferenceMistake.png)
->
-> If you do find hits, you will have to migrate the solution to packages.config:
->
-> 1. In the NuGet Package Manager, check which packages are currently installed, and note down the packages and their versions.
-> 1. Uninstall every NuGet.
-> 1. Go to Visual Studio Options > *NuGet Package Manager* > *General*, and make sure that *Default package management format* is set to *Packages.config*.
-> 1. Close Visual Studio.
-> 1. Open Visual Studio and install all NuGets again, as Packages.Config.
+> DevPacks are suggested to be installed with PackageReferences. DIS was redesigned to work with PackageReferences and be future proof. 
+> Using packages.config you may see incorrect DLLImports (Protocols) or References (AutomationScripts) when asking DIS to compile the results.
+> For more information on how to migrate from packages.config to PackageReferences see: [docs.microsoft.com](https://docs.microsoft.com/en-us/nuget/consume-packages/migrate-packages-config-to-package-reference)  
 
 ## Versioning
 
