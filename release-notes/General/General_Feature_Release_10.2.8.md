@@ -520,6 +520,6 @@ In order to prevent SLPort from running out of memory, from now on, the size of 
 
 #### SLAnalytics RTEs after upgrading DMS with Cassandra Cluster \[ID_34180]
 
-<!-- Main Release Version TBD - Feature Release Version 10.2.8 CU2 -->
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.8 CU2 -->
 
 After a DMS with a Cassandra Cluster setup was upgraded to 10.2.8 (CU1), it could occur that the Alarm Console showed run-time errors related to the SLAnalytics process. This was caused by an upgrade action that was not triggered for such a setup.
