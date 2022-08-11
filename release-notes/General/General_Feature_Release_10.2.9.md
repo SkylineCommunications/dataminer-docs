@@ -205,7 +205,7 @@ A number of enhancements have been made to the algorithm that is used to determi
 
 Up to now, parameter changes would always be pushed from SLProtocol to SLElement. From now, those changes will only be pushed from SLProtocol to SLElement when needed.
 
-#### GQI: Properties marked as "read only" will now also be available [ID_34052]
+#### GQI: Properties marked as 'read only' will now also be available [ID_34052]
 
 <!-- Main Release Version 10.2.0 [CU6] - Feature Release Version 10.2.9 -->
 
@@ -422,7 +422,7 @@ When, after receiving a message that it was not possible to save a job because o
 
 In some cases, it would no longer be possible to build a GQI query that filtered or aggregated data by custom properties.
 
-#### When a stopped element was deleted, its logger tables would incorrectly not be deleted if created with options="database" [ID_34067]
+#### Logger tables not deleted when stopped element was deleted [ID_34067]
 
 <!-- Main Release Version 10.1.0 [CU18]/10.2.0 [CU6] - Feature Release Version 10.2.9 -->
 

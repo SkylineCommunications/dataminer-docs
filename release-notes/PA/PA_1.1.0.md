@@ -6,7 +6,7 @@ uid: PA_1.1.0
 
 ## New features
 
-#### Support for "Preemptive" flag and token priority \[ID_27813\]
+#### Support for 'Preemptive' flag and token priority \[ID_27813\]
 
 The token object has been extended with a "Preemptive" flag, which is defined in the *PA_Preemptive* parameter. The *Skyline Queue Manager* driver has been adjusted to process tokens first based on this flag and then based on the token priority.
 

@@ -202,7 +202,7 @@ In Service & Resource Management environments, a service template used to genera
 
 As some element protocols have QActions that require a large amount of memory to execute, they can cause SLScripting to run out of memory when they run together with other elements. From now on, elements that require a large amount of memory can be run in their own SLProtocol and SLScripting instance.
 
-In DataMiner.xml, the \<ProcessOptions> element can now contain a \<SeparateProcesses> element listing all element protocols that have to be run in a separate SLProtocol and SLScripting instance. See the example below.
+In *DataMiner.xml*, the \<ProcessOptions> element can now contain a \<SeparateProcesses> element listing all element protocols that have to be run in a separate SLProtocol and SLScripting instance. See the example below.
 
 When a protocol is flagged to run in separate instances, every element using that protocol will be started in a new instance of SLProtocol and SLScripting. When the element is stopped, these instances are taken down again, and when the element restarts, new instances are created.
 
@@ -228,13 +228,13 @@ See also [Making all elements using a particular protocol.xml run in separate SL
 
 > [!NOTE]
 >
-> - It is recommended to stop the DataMiner Agent before changing its DataMiner.xml file. Besides, any changes made to the DataMiner.xml will only be applied when starting the DataMiner Agent.
+> - It is recommended to stop the DataMiner Agent before changing its *DataMiner.xml* file. Besides, any changes made to the *DataMiner.xml* will only be applied when starting the DataMiner Agent.
 > - Using the protocolProcesses option, you can specify how many SLProtocol processes will be launched to host the other elements in.
 > - Currently, a separate SLScripting process must be launched for every SLProtocol process. This means that when at least one protocol name is specified in the SeparateProcesses tag, the configured or default behavior of the scriptingProcesses attribute will be overridden to “protocol”. Note that when the scriptingProcesses attribute is set to “\[Service\]”, the following system notice will be generated:
 >
 >   *\[n\] separate protocols have been configured in the DataMiner.xml, while SLScripting is configured as service, which is not a compatible setup. To run the elements of these protocols in a separate SLProtocol and SLScripting instance, please unregister SLScripting and remove the scriptingProcesses=\\"\[Service\]\\" tag from DataMiner.xml.*
 >
-> - DataMiner.xml files are not synchronized among the different agents in a DataMiner System. If your DMS includes different agents, then you will need to edit the DataMiner.xml file on each of the agents.
+> - *DataMiner.xml* files are not synchronized among the different Agents in a DataMiner System. If your DMS includes different Agents, then you will need to edit the *DataMiner.xml* file on each of the Agents.
 
 #### SetAlarmStateMessage can no longer be used to change the alarm state of an incident \[ID_33273\]
 
@@ -333,10 +333,10 @@ When Azure Active Directory is used as an identity provider, DataMiner Cube will
 Also, more detailed entries will now be added to the logs when setup errors have been detected (missing permissions, missing configurations, expired secrets, etc.).
 
 > [!IMPORTANT]
-> Note that, for this enhancement to work, the following changes have to be made to the Azure configuration and the DataMiner.xml file.
+> Note that, for this enhancement to work, the following changes have to be made to the Azure configuration and the *DataMiner.xml* file.
 >
-> - In Azure, add the API permission Application.Read.All.
-> - Copy the Azure app object ID (Azure AD \> App registrations \> \[your application\] \> Object ID) and, in DataMiner.xml, add it to the objectId attribute of the AzureAD element.
+> - In Azure, add the API permission *Application.Read.All*.
+> - Copy the Azure app object ID (Azure AD \> App registrations \> \[your application\] \> Object ID) and, in *DataMiner.xml*, add it to the *objectId* attribute of the AzureAD element.
 
 ### DMS Protocols
 
@@ -442,7 +442,7 @@ See also [Running memory-intensive elements in separate SLProtocol and SLScripti
 
 ##### DataMiner.xml: scriptingProcesses option now accepts integer values
 
-From now on, in DataMiner.xml, you can set the scriptingProcesses option to an integer value, indicating the exact number of SLScripting processes that have to be launched. The SLProtocol processes will then be assigned one of the available SLScripting processes in a round-robin way.
+From now on, in *DataMiner.xml*, you can set the scriptingProcesses option to an integer value, indicating the exact number of SLScripting processes that have to be launched. The SLProtocol processes will then be assigned one of the available SLScripting processes in a round-robin way.
 
 For example, if protocolProcesses is set to 5 (i.e. the default value), and scriptingProcesses is set to 3, then...
 
@@ -469,7 +469,7 @@ When an Automation script is triggered by the scheduler, a correlation rule or a
 - “Correlation-rule \<name rule>”
 - “Redundancy”
 
-#### New subscript option “ExtendedErrorInfo” \[ID_33306\]
+#### New subscript option 'ExtendedErrorInfo' \[ID_33306\]
 
 <!-- Main Release Version 10.3.0 - Feature Release Version 10.2.7 -->
 
@@ -534,11 +534,11 @@ options.StartScript();
 
 ### DMS Maps
 
-*No DMS Maps release notes have been added to this release yet.*
+*No DMS Maps features have been added to this release yet.*
 
 ### DMS EPM
 
-*No DMS EPM release notes have been added to this release yet.*
+*No DMS EPM features have been added to this release yet.*
 
 ### DMS Web Services
 
@@ -559,7 +559,7 @@ Using the following methods, it will now be possible to manage service templates
 
 <!-- Main Release Version 10.3.0 - Feature Release Version 10.2.1 -->
 
-In the default job section, the *Name*, *Start Time* and *End Time* fields can now be set read-only.
+In the default job section, the *Name*, *Start Time*, and *End Time* fields can now be set read-only.
 
 #### Ticketing app: System name will now be checked for illegal characters \[ID_31496\]
 
@@ -569,7 +569,7 @@ From now on, the system name of a ticket will no longer be allowed to start with
 
 When the system name contains one of these illegal characters, an error message will appear.
 
-#### Jobs app: Fields will automatically be set to “not required” when hidden \[ID_31513\]
+#### Jobs app: Fields will automatically be set to 'not required' when hidden \[ID_31513\]
 
 <!-- Main Release Version 10.3.0 - Feature Release Version 10.2.1 -->
 
@@ -578,7 +578,7 @@ From now on, when you hide a job field, you will receive a message that it will 
 > [!NOTE]
 > When you unhide a hidden field, it will remain set to “not required”.
 
-#### Dashboards app - GQI: Element, service and view data sources now also return an “In timeout” column \[ID_31671\]
+#### Dashboards app - GQI: Element, service and view data sources now also return an 'In timeout' column \[ID_31671\]
 
 <!-- Main Release Version 10.3.0 - Feature Release Version 10.2.1 -->
 
@@ -618,7 +618,7 @@ RN 33795: Main Release Version 10.3.0 - Feature Release Version 10.2.8 -->
 
 It is now possible to configure the Generic Query Interface to retrieve external data, so that dashboard users can use a query data source based on data that is for example retrieved from a CSV file, a MySQL database, or an API endpoint. This is configured through a DataMiner Automation script that is compiled as a library. The GQI will make use of this library to load the external data.
 
-##### **Configuring an external data source in a query**
+##### Configuring an external data source in a query
 
 This is the most basic procedure to use an external data source in a query:
 
@@ -696,11 +696,11 @@ All methods discussed above are called at some point during the GQI life cycle, 
 
 The following flowchart illustrates the GQI life cycle when a query is created:
 
-![GQI life cycle when query is created](~/release-notes/images/GQI_-_Create_query.png)
+![GQI query creation life cycle](~/user-guide/images/GQICreateQuery.png)
 
 The following flowchart illustrates the GQI life cycle when a query is fetched:
 
-![GQI life cycle when query is fetched](~/release-notes/images/GQI_-_Fetch_query.png)
+![GQI query fetching life cycle](~/user-guide/images/GQIFetchQuery.png)
 
 ##### Objects
 
@@ -969,7 +969,7 @@ The token counters will be updated every 10 seconds.
 
 When you hover over a data table component (e.g. a GQI table), a search box will now appear in the bottom-right corner. When you enter a search string, a case-insensitive client-side search will be performed.
 
-#### Web apps: Dashboards, app pages and app panels now all have a “Fit to view” setting \[ID_33401\]
+#### Web apps: Dashboards, app pages and app panels now all have a 'Fit to view' setting \[ID_33401\]
 
 <!-- Main Release Version 10.3.0 - Feature Release Version 10.2.7 -->
 
@@ -1034,7 +1034,7 @@ Up to now, when a Service Definition component displayed a service definition of
 
 The DataMiner mobile apps that use Angular (e.g. low code apps, Dashboards, Monitoring, Ticketing, Jobs and Automation) now use Angular 13 instead of Angular 12.
 
-#### Dashboards app - GQI: “Line & area chart” component is now able to visualize GQI query results as a single line \[ID_33879\]
+#### Dashboards app - GQI: 'Line & area chart' component is now able to visualize GQI query results as a single line \[ID_33879\]
 
 <!-- Main Release Version 10.3.0 - Feature Release Version 10.2.9 -->
 
@@ -1080,7 +1080,7 @@ It is now possible to retrieve bookings in a paged way and sorted by one of the 
 > - v10.1.0 (CU0)
 > - v10.1.1 (CU0)
 
-#### ProfileInstances: New parameter property “InheritIsHidden” \[ID_32131\]
+#### ProfileInstances: New parameter property 'InheritIsHidden' \[ID_32131\]
 
 <!-- Main Release Version 10.3.0 - Feature Release Version 10.2.3 -->
 
@@ -1319,7 +1319,7 @@ Example:
 
 From now on, it is possible to only receive ResourceUsageEventMessages for a specific resource. Using ResourceUsageStatusEventExposers, you can now filter by ResourceId.
 
-#### ReservationInstanceType and ServiceDefinitionType: New values “ResourceScheduling” and “ResourceOrchestration” \[ID_33390\]
+#### ReservationInstanceType and ServiceDefinitionType: New values 'ResourceScheduling' and 'ResourceOrchestration' \[ID_33390\]
 
 <!-- Main Release Version 10.3.0 - Feature Release Version 10.2.7 -->
 
@@ -1355,7 +1355,7 @@ When DataMiner detects a remove request that contains an object with an empty ID
 
 ### DMS Mobile Gateway
 
-#### Additional logging after sending a “send SMS” request to an SMSEagle device \[ID_32785\] \[ID_32911\]
+#### Additional logging after sending a 'send SMS' request to an SMSEagle device \[ID_32785\] \[ID_32911\]
 
 <!-- Main Release Version 10.3.0 - Feature Release Version 10.2.5 -->
 
@@ -1624,7 +1624,7 @@ Also, the overall memory footprint of MySQL database simulations has been reduce
 > [!CAUTION]
 > This tool is provided “As Is” with no representation or warranty whatsoever. Skyline Communications will not provide any maintenance or support for this tool.
 
-#### Service & Resource Management: A booking will now be set to “interrupted” when whatever event related to that booking could not be executed \[ID_33576\]
+#### Service & Resource Management: A booking will now be set to 'interrupted' when whatever event related to that booking could not be executed \[ID_33576\]
 
 <!-- Main Release Version 10.3.0 - Feature Release Version 10.2.8 -->
 
@@ -1727,7 +1727,7 @@ When new items were added in one client, in some cases, those items would not im
 
 When migrating a database to a Cassandra cluster, in some cases, an error could be thrown when a NULL value was encountered in a logger table.
 
-#### Jobs app: No “loading” indication when job sections were being loaded \[ID_32616\]
+#### Jobs app: No 'loading' indication when job sections were being loaded \[ID_32616\]
 
 <!-- Main Release Version 10.3.0 - Feature Release Version 10.2.4 -->
 

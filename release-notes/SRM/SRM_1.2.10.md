@@ -100,7 +100,7 @@ When a contributing function resource is created, the capability and capacity pa
 
 When a booking is created based on a service definition containing a Dijkstra node, and an error prevents the contributing resource from being created properly, any objects created by the failed contributing booking script will now be removed.
 
-#### Custom events can no longer have "immediate" timing \[ID_28730\]
+#### Custom events can no longer have 'immediate' timing \[ID_28730\]
 
 To prevent issues, custom booking events must now always have at least 1 second of time difference to start/stop events.
 

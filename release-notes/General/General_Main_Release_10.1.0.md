@@ -8556,7 +8556,7 @@ In some cases, it could occur that the initial synchronization of services in a 
 2021/06/03 01:00:00.302|SLDMS.txt|SLDMS.exe 10.1.2118.668|13524|26072|CSystem::ResolveServicePaths|ERR|-1|Failed resolving hosting DMA info for 10.10.80.20 and service RT_ServiceCreationDelete_66_2021_06_03_00_58
 ```
 
-#### Dashboards app - GQI: “Start from” option would not be available when the Queries.json file was empty or missing \[ID_30157\]
+#### Dashboards app - GQI: 'Start from' option would not be available when the Queries.json file was empty or missing \[ID_30157\]
 
 When building a GQI query, in some cases, the “Start from” option would not be available when the *C:\\Skyline DataMiner\\Generic Interface\\Queries.json* file was empty or missing.
 
@@ -8576,7 +8576,7 @@ When an alarm template was refreshed in the SLElement process, e.g. because the 
 
 Previously, if a query in a dashboard used the data source "Get parameter table by ID", the table was identified by its display name. However, as this is not necessarily unique in a protocol, this could cause incorrect results. New queries will now us the table ID as the identifier, though they will display the name in the UI.
 
-#### Automation: CheckboxList and RadiobuttonList not decoding "\\" correctly \[ID_30605\]
+#### Automation: CheckboxList and RadiobuttonList not decoding backslash correctly \[ID_30605\]
 
 In an interactive Automation script, it could occur that the *CheckboxList* and *RadiobuttonList* components did not correctly decode a backslash ("\\") character.
 
@@ -8622,7 +8622,7 @@ Could not install the package because it requires DataMiner version {appInfo.Min
 
 If a Spectrum analyzer component in the Dashboards app was used to visualize a spectrum buffer, it could occur that the buffer trace was not displayed.
 
-#### CRC parameter with LengthType “fixed” and RawType “other”, “text” or ”numeric text” would incorrectly always be set to 0x20 or 0x30 \[ID_30730\]
+#### CRC parameter with LengthType 'fixed' and RawType 'other', 'text' or 'numeric text' would incorrectly always be set to 0x20 or 0x30 \[ID_30730\]
 
 When a CRC parameter with LengthType “fixed” and RawType “other”, “text” or “numeric text” was used in a command, it would incorrectly always be set to 0x20 characters for parameter of type “string” or 0x30 characters for parameters of type “double”.
 
@@ -8720,30 +8720,20 @@ Overall performance has increased when determining the virtual function impact o
 
 Also, a number of issues have been fixed with regard to displaying statuses of virtual function alarms, exporting alarms to DVE child elements, masking of external alarms and updating virtual function states when alarms are cleared.
 
-#### DataMiner Cube - Alarm Console: Availability of “Count alarms” button now depends on the alarm filter that was specified \[ID_30810\]
+#### DataMiner Cube - Alarm Console: Availability of 'Count alarms' button now depends on the alarm filter that was specified \[ID_30810\]
 
 When, in the Alarm Console, you add a new history or sliding window tab page, you can add a filter by clicking *Apply filter*. After configuring that filter, you can click *Count alarms* to see how many alarms will be retrieved when that filter is applied. However, up to now, when the filter contained one of the following items, it would not be possible to count the number of alarms that matched the filter:
 
 - ElementType
-
 - InterfaceImpact
-
 - ParameterDescription
-
 - Protocol
-
 - ServiceImpact
-
 - ViewID
-
 - ViewImpact
-
 - ViewName
-
 - VirtualFunctionID
-
 - VirtualFunctionImpact
-
 - VirtualFunctionName
 
 From now on, when the alarm filter contains one of the above-mentioned items, the *Count alarms* button will not be available.
@@ -8757,7 +8747,6 @@ All Automation scripts will now by default have a reference to the SLAnalyticsTy
 From now on, the DataMiner installer will by default only enable
 
 - ICMP (ping) and
-
 - HTTP ports 80 and 8004.
 
 > [!NOTE]
@@ -8785,7 +8774,7 @@ From now on, the FieldName of a TicketFieldDescriptor has to meet the following 
   - " (double quote)
   - ' (single quote)
 
-#### DataMiner Cube - System Center: Enhanced “Limited administrator” tooltip \[ID_31042\]
+#### DataMiner Cube - System Center: Enhanced 'Limited administrator' tooltip \[ID_31042\]
 
 When, in the *Users/Groups* section of *System Center*, you hover over the *Modules \> System configuration \> Security \> Specific \> Limited administrator* permission, a tooltip gives you more information about that permission. That tooltip now contains the following updated text:
 
@@ -8821,7 +8810,7 @@ When generating child shapes that represent alarms, up to now, those child shape
 
 From now on, generated child shapes that represent alarms will appear on a transparent background instead.
 
-#### Confusing “Already authenticated error” would be thrown when an error occurred during an authentication process \[ID_30827\]
+#### Confusing 'Already authenticated error' would be thrown when an error occurred during an authentication process \[ID_30827\]
 
 When an error occurred during an authentication process, in some cases, a confusing “Already authenticated” exception would be thrown instead of the actual error message. From now on, the actual error message will be thrown.
 
@@ -8841,7 +8830,7 @@ In some cases, a ParameterThread error could occur in SLElement.
 
 When, in an interactive Automation script, a file selector block was defined after another type of input block (e.g. a checkbox), in some cases, the input block value returned by the client would incorrectly be considered as an invalid file path selected in the file selector. As a result, an “Invalid Data” error would be thrown.
 
-#### DataMiner Cube - Alarm Console: Incorrect notices like “!! Unknown \<Type> R!AD for parameter xxx” \[ID_30884\]
+#### DataMiner Cube - Alarm Console: Incorrect notices like '!! Unknown \<Type> R!AD for parameter xxx' \[ID_30884\]
 
 In some rare cases, notices like “!! Unknown \<Type> RE!D for parameter 123” would incorrectly appear in the Alarm Console.
 
@@ -8928,7 +8917,7 @@ When you start an upgrade of an entire DataMiner System, from now on, all agents
 > [!NOTE]
 > This check is performed when you upload an upgrade package. When, in DataMiner Cube, you select *Upload only*, the uploaded upgrade package will be marked “Failed” when the requirements are not met.
 
-#### SLLogCollector: Option “Upload to Skyline” removed \[ID_31032\]
+#### SLLogCollector: Option 'Upload to Skyline' removed \[ID_31032\]
 
 Up to now, when an internet connection was available on the DMA, the SLLogCollector tool provided an option to upload the collected information to Skyline via email. This “Upload to Skyline” option has now been removed.
 
@@ -9076,7 +9065,7 @@ Up to now, when a smart-serial or smart-IP protocol received large data packets,
 
 When a scheduled task had been deleted from Windows scheduler but was still present on the DataMiner Agent, in some cases, an error could be thrown. From now on, when that type of error is thrown after a manually executed task was deleted, the task in question will be recreated.
 
-#### DataMiner Cube: View updates and element removals would incorrectly not trigger an update of the “Below this view” list in a view card \[ID_31141\]
+#### DataMiner Cube: View updates and element removals would incorrectly not trigger an update of the 'Below this view' list in a view card \[ID_31141\]
 
 In some cases, view updates and element removals would incorrectly not trigger an update of the “Below this view” list in a view card.
 
@@ -9096,22 +9085,19 @@ Due to a deserializing/serializing issue, in some cases, datetime values could b
 Up to now, in some cases, the following methods would return an empty array, even when a valid timespan had been specified.
 
 - GetInformationEvents
-
 - GetInformationEventsV2
-
 - GetInformationEventsSorted
-
 - GetInformationEventsSortedV2
 
 #### DataMiner Cube - Automation: DateTime control incorrectly updated with the DateTimeKind property \[ID_31190\]
 
 When, in an interactive Automation script, you had configured the DateTimeKind property of a DateTime control, in some cases, the control would incorrectly be updated with the DateTimeKind property instead of the actual datetime value.
 
-#### DataMiner Cube - Router Control: “park source” feature would incorrectly not work on matrices with IO table structures \[ID_31239\]
+#### DataMiner Cube - Router Control: 'park source' feature would incorrectly not work on matrices with IO table structures \[ID_31239\]
 
 Up to now, the “park source” feature would incorrectly not work on matrices with IO table structures.
 
-#### Memory leak in SLElement when stopping or deleting an element with a protocol of type “virtual” \[ID_31252\]
+#### Memory leak in SLElement when stopping or deleting an element with a protocol of type 'virtual' \[ID_31252\]
 
 In some cases, SLElement could leak memory when stopping or deleting elements with a protocol of type “virtual”.
 
@@ -9127,7 +9113,7 @@ In Visual Overview, in some cases, property values would not get updated correct
 
 When a Failover system was set up, in some cases, a full synchronization would incorrectly not be run.
 
-#### DataMiner Cube - Spectrum analysis: “Auto RBW Factor” and “Auto VBW Factor” values stored incorrectly in spectrum preset \[ID_31299\]
+#### DataMiner Cube - Spectrum analysis: 'Auto RBW Factor' and 'Auto VBW Factor' values stored incorrectly in spectrum preset \[ID_31299\]
 
 In some cases, the “Auto RBW Factor” and “Auto VBW Factor” values would be stored in spectrum presets in an incorrect way. This would then lead to an incorrect auto RBW/VBW calculation.
 
@@ -9135,7 +9121,7 @@ In some cases, the “Auto RBW Factor” and “Auto VBW Factor” values would 
 
 When using dynamic positioning in combination with dynamic zooming, shape grouping and table connections, in some cases, the connection lines could disappear at certain zoom levels.
 
-#### DataMiner Cube - Services app: Contents of “Configure groups” window would be arranged incorrectly \[ID_31344\]
+#### DataMiner Cube - Services app: Contents of 'Configure groups' window would be arranged incorrectly \[ID_31344\]
 
 When you right-clicked a Service Definition diagram and selected *Configure groups*, the contents of the *Configure groups* window would be arranged incorrectly. For example, the *Add group* button would be positioned at an incorrect location.
 
@@ -9271,11 +9257,11 @@ From now on, cell content will be parsed as follows:
 > [!NOTE]
 > When you import a CSV file via DataMiner Cube, DataMiner Cube will send the imported data to the DataMiner Agent without performing any kind of preprocessing.
 
-#### SLPort would leak a socket when executing an action of type “open” via a socket that had already been opened \[ID_31512\]
+#### SLPort would leak a socket when executing an action of type 'open' via a socket that had already been opened \[ID_31512\]
 
 When an action of type “open” was executed on a smart-serial interface via a socket that had already been opened, SLPort would leak a socket as well as a port in the ephemeral port range. This would eventually lead to a situation in which no more ports were available and no more sockets could be created. From now on, SLPort will close the socket when it receives an action of type “open” on a socket that is already open.
 
-#### Dashboards app - GQI: Problem when migrating “start from” queries \[ID_31544\]
+#### Dashboards app - GQI: Problem when migrating 'start from' queries \[ID_31544\]
 
 When you opened a query that was created using an older GQI version, and that query was configured to start from another query, in some cases, it would incorrectly be migrated to the current GQI version.
 
@@ -9309,7 +9295,7 @@ When, in a single process, multiple threads have a run-time error, those errors 
 
 When you changed the type of a custom section field that was being used a job filter, in some cases, that field would incorrectly still be used as a filter, even when it was not possible to use that type of field as a filter.
 
-#### DataMiner Cube - Settings: Changes made in “Alarm Console \> Card-specific” section would incorrectly not get applied \[ID_31566\]
+#### DataMiner Cube - Settings: Changes made in 'Alarm Console \> Card-specific' section would incorrectly not get applied \[ID_31566\]
 
 In the *Alarm Console \> Card-specific* section of the *Settings* app, you can configure which alarm tabs should be shown on element, service and view cards. Up to now, when you made changes to the settings on that page, those changes would incorrectly not get applied.
 
@@ -9363,7 +9349,7 @@ When an error of type “thread problem” occurs, the contents of the C:\\Skyli
 
 When, in the *Logging* section of *System Center*, you opened a log file, scrolled down beyond the first 50 KB of data, and then refreshed the file, the vertical scroll position would incorrectly not be restored.
 
-#### DataMiner Cube - Settings: Turning an alarm tab of type “sliding window” into a normal alarm tab would cause this change to be reverted as soon as another change was made to it \[ID_31664\]
+#### DataMiner Cube - Settings: Turning an alarm tab of type 'sliding window' into a normal alarm tab would cause this change to be reverted as soon as another change was made to it \[ID_31664\]
 
 When, in the group settings, you added an alarm tab of type “sliding window” and enforced it, as soon as a user had turned this tab into a normal alarm tab, the slightest change made to the tab afterwards would cause the tab to be changed back into a tab of type “sliding window”.
 
@@ -9371,7 +9357,7 @@ When, in the group settings, you added an alarm tab of type “sliding window”
 
 When an alarm tab was grouped by property, in some cases, DataMiner Cube could become unresponsive, especially on systems with high alarm traffic.
 
-#### DataMiner Cube - Scheduler: Creating a task could fail on client machines with culture set to “Finnish” \[ID_31712\]
+#### DataMiner Cube - Scheduler: Creating a task could fail on client machines with culture set to 'Finnish' \[ID_31712\]
 
 In DataMiner Cube, creating a task in the Scheduler app could fail when the culture of the client machine was set to “Finnish”.
 
@@ -9491,15 +9477,10 @@ Collectors of type “Exe” can be configured using the following XML elements 
 A number of minor enhancements have been made with regard to views and elements:
 
 - The *System Info* name (*System Center \> Agents*), which is used as root view name, can no longer be the name of an existing view.
-
 - Users will now receive a clearer error message when they try to create an element or a service with a name that starts or ends with a space.
-
 - When, in a view card, you right-click the header of the “Below this view” list, the context menu that appears is empty when the system has no properties defined. Now, when the context menu is empty, a message will be displayed, explaining users why it is empty.
-
 - Up to now, when multiple items were selected in the “Below this view” list of a view card, selecting one item would not clear the selection. From now on, it will do so.
-
 - When, in the “Below this view” list of a view card, you sort the list by alarm state, the list will be sorted by severity (default: descending).
-
 - When, in a view card, you right-click the header of the “Below this view” list, the overall responsiveness of the context menu has been enhanced.
 
 #### Chromium web browser control: Enhancements with regard to the translations of the find and zoom commands \[ID_31755\]
@@ -9512,11 +9493,11 @@ Due to a number of enhancements, overall performance has increased when editing 
 
 Also, up to now, when an element was edited, all tab characters (“\\t”) in field content would be replaced by spaces. From now on, tab characters will be left untouched.
 
-#### Unclear “version of the protocol is not correct” notice replaced by “DataMiner version is too low to use this protocol. Please check the protocol's Compliancies tag.” notice \[ID_31855\]
+#### Unclear 'version of the protocol is not correct' notice replaced by 'DataMiner version is too low to use this protocol. Please check the protocol's Compliancies tag.' notice \[ID_31855\]
 
 When a protocol had a minimum DataMiner version that was higher than the DataMiner version of the DMA, up to now, an unclear “version of the protocol is not correct” notice would appear in the Alarm Console and the log files. From now on, that unclear notice will be replaced by a clearer “DataMiner version is too low to use this protocol. Please check the protocol's Compliancies tag.” notice.
 
-#### SLLogCollector: Process list will now also include processes of which the name starts with “DataMiner” \[ID_31883\]
+#### SLLogCollector: Process list will now also include processes of which the name starts with 'DataMiner' \[ID_31883\]
 
 The SLLogCollector tool will now also list all processes of which the name starts with “DataMiner”. This will allow you to also take memory dumps of processes like “DataMiner CloudGateway”, “DataMiner CoreGateway”, “DataMiner FieldControl”, “DataMinerCube”, etc.
 
@@ -9604,7 +9585,7 @@ Also, SLElement could leak memory when services were configured with a delayed t
 
 In some cases, a deadlock in the SLDataGateway process could cause e.g. Correlation rule data to not get written to the database and remain in memory indefinitely.
 
-#### Problem with SLElement after restarting an element with a subscription that had a “resolve” or “filter” option configured \[ID_31741\]
+#### Problem with SLElement after restarting an element with a subscription that had a 'resolve' or 'filter' option configured \[ID_31741\]
 
 When there was an active element subscription with a “resolve=x” or “sort=x” filter option configured, in some cases, an error could occur in SLElement when processing table changes after an element restart.
 
@@ -9622,7 +9603,7 @@ When an update of an SLA setting (e.g. Base timestamp, Monitor span, Window size
 
 After a Failover switch or a restart of a Failover system, in some cases, redundancy groups containing DVE elements would incorrectly not get loaded.
 
-#### “Duplicate name detected” notice would incorrectly be generated when turning a service into an enhanced service or vice versa \[ID_31801\]
+#### 'Duplicate name detected' notice would incorrectly be generated when turning a service into an enhanced service or vice versa \[ID_31801\]
 
 When a service was turned into an enhanced service, or when an enhanced service was turned into a regular service, a “Duplicate name detected” notice would incorrectly be generated.
 
@@ -9631,13 +9612,9 @@ When a service was turned into an enhanced service, or when an enhanced service 
 In DataMiner Cube, a number of small fixes have been made:
 
 - In a tree control, the tab borders would not be visible in the Skyline Black theme.
-
 - Undocking the Alarm Console could affect the layout of the main Cube window.
-
 - When you pressed ENTER in an editable table cell, a trend graph would incorrectly open instead of the table cell editor.
-
 - When an element was restarted, in some cases, a table would incorrectly stay grayed out.
-
 - A parameter containing a disabled exception value would stay disabled after it had received a normal value.
 
 #### SLElement: Problem with invalid parameter IDs in the Generic DVE Linker Table \[ID_31805\]
@@ -9672,7 +9649,7 @@ When an enhanced service was tracking alarms, SLProtocol could leak memory when 
 
 Also, the same process could leak memory when a table parameter was cleaned up after an element restart.
 
-#### SLPhotoManager would incorrectly log “PrincipalServerDown” exceptions in SLErrors.txt when trying to retrieve pictures of local users \[ID_31865\]
+#### SLPhotoManager would incorrectly log 'PrincipalServerDown' exceptions in SLErrors.txt when trying to retrieve pictures of local users \[ID_31865\]
 
 Up to now, when SLPhotoManager was unable to retrieve pictures of local (i.e. non-LDAP) users, it would incorrectly log “PrincipalServerDown” exceptions in the SLErrors.txt log file. From now on, it will log those exceptions in the SLPhotoManager.txt log file when the debug level is set to 5.
 
@@ -9705,7 +9682,7 @@ Initializing the communication of port (x) failed. Please verify the connection 
 
 In some cases, a DCF signal path would not be visualized correctly on Visio pages with a grid layout.
 
-#### SLNet would thrown an “Arithmetic operation resulted in an overflow” exception when performance information was being calculated \[ID_31894\]
+#### SLNet would thrown an 'Arithmetic operation resulted in an overflow' exception when performance information was being calculated \[ID_31894\]
 
 In some cases, SLNet would thrown an “Arithmetic operation resulted in an overflow” exception when performance information was being calculated.
 
@@ -9737,11 +9714,11 @@ When DataMiner was started or when an element was started, in some cases, the fo
 Could not read element latch for DMAID/EID. 0x80131533
 ```
 
-#### Dashboards app: “Top X alarms” chart would incorrectly not include a graph in a PDF report \[ID_31949\]
+#### Dashboards app: 'Top X alarms' chart would incorrectly not include a graph in a PDF report \[ID_31949\]
 
 When a PDF report was generated of a dashboard containing a “top X alarms” chart based on alarm state duration, in some cases, that chart would incorrectly not include a graph when set to stacked mode.
 
-#### “Service Manager not licensed” error when synchronizing files on DataMiner Agents that do not have a Service Manager license \[ID_31958\]
+#### 'Service Manager not licensed' error when synchronizing files on DataMiner Agents that do not have a Service Manager license \[ID_31958\]
 
 In some cases, when a DataMiner Agent did not have a Service Manager license, a “Service Manager not licensed” error would be thrown when synchronizing files. From now on, when a DataMiner Agent does not have a Service Manager license, no attempt will be made to synchronize system function definitions when synchronizing files.
 
@@ -9757,7 +9734,7 @@ When a GetAnalogTrendDataMessage was used to retrieve more than 48 hours of tren
 
 When, in a visual overview that showed a table with trended columns, you opened a trend graph by clicking a trend icon, in some cases, the trend graph would incorrectly not be loaded and a “Trending is currently not enabled for this parameter” message would appear.
 
-#### Cassandra: Incorrect “null statement” messages would be added to SLDBConnection.txt \[ID_31979\]
+#### Cassandra: Incorrect 'null statement' messages would be added to SLDBConnection.txt \[ID_31979\]
 
 In some cases, the following message would repeatedly be added to the SLDBConnection.txt log file:
 
@@ -9785,7 +9762,7 @@ In DataMiner Cube, in some cases, it would no longer be possible to edit informa
 
 In some rare cases, alarms coming in while you were grouping or sorting the alarms on an alarm tab would incorrectly not appear on that alarm tab, especially on heavy-duty systems.
 
-#### Legacy Dashboards: Using “Add to dashboard” in Cube would no longer work when the DataMiner Agent was only accessible via HTTPS \[ID_32083\]
+#### Legacy Dashboards: Using 'Add to dashboard' in Cube would no longer work when the DataMiner Agent was only accessible via HTTPS \[ID_32083\]
 
 From DataMiner 9.0 onwards, it is possible to add items to a legacy dashboard directly from the Cube UI, for instance from the Surveyor or an element card.
 
@@ -9800,7 +9777,6 @@ To be able to check the prerequisites during a DataMiner upgrade, SLNet needs to
 Up to now, SLReset would incorrectly delete the following folders:
 
 - C:\\Skyline DataMiner\\Webpages\\root
-
 - C:\\Skyline DataMiner\\Webpages\\monitoring
 
 From now on, SLReset will no longer delete these folders.
@@ -9817,7 +9793,7 @@ In some cases, newly created elements would incorrectly be assigned an ID equal 
 
 A number of security enhancements have been made.
 
-#### SLElement: Enhanced performance when working with tables using the “naming” or “namingformat” option \[ID_30973\]
+#### SLElement: Enhanced performance when working with tables using the 'naming' or 'namingformat' option \[ID_30973\]
 
 Due to a number of enhancements, overall performance of SLElement has increased, especially when working with tables using the “naming” or “namingformat” option.
 
@@ -9905,7 +9881,7 @@ Now an EPM item can only be unmasked if all underlying items are unmasked. When 
 
 In some cases, an error could occur in the SLAnalytics process due to a stack overflow exception.
 
-#### DataMiner Cube - Alarm Console: “Audible alert” option was not saved correctly when an alarm tab was added to a workspace \[ID_32191\]
+#### DataMiner Cube - Alarm Console: 'Audible alert' option was not saved correctly when an alarm tab was added to a workspace \[ID_32191\]
 
 When you undocked an alarm tab in which the “audible alert” option was selected, and then saved the workspace, the “audible alert” option would not be saved correctly.
 
@@ -9921,7 +9897,7 @@ At startup, the SLLogCollector tool checks for issues by reading the SLWatchDog2
 
 When you created an “active alarms” tab for a certain object (element, service or view) by dropping that object onto the Alarm Console, and then made the tab show history alarms instead of active alarms, the automatically generated tab name was incorrectly set to “Alarms of the last 0 hours” instead of “\~Last hour (up till X)”.
 
-#### DataMiner Cube - Alarm Console: Not possible to change the “automatic incident tracking” option in an alarm tab that was enforced by group settings \[ID_32218\]
+#### DataMiner Cube - Alarm Console: Not possible to change the 'automatic incident tracking' option in an alarm tab that was enforced by group settings \[ID_32218\]
 
 In an alarm tab that was enforced by group settings, up to now, it would not be possible to change the “automatic incident tracking” option.
 
@@ -9984,7 +9960,7 @@ In some cases, automatic incident tracking would not start up when an alarm was 
 
 When alarms were generated while automatic incident tracking was starting up, in some cases, an alarm could internally be duplicated, leading to incorrect alarm groups (e.g. groups containing only a single alarm).
 
-#### DataMiner Cube - Alarm Console: Problem with “new alarms” counter when alarms were grouped by service \[ID_32427\]
+#### DataMiner Cube - Alarm Console: Problem with 'new alarms' counter when alarms were grouped by service \[ID_32427\]
 
 When, in an alarm tab in which the alarms were grouped by service, an alarm affecting at least two services was cleared, then the “new alarms” counter in the tab header would show an incorrect number of alarms.
 
@@ -10029,7 +10005,6 @@ Filtered subscriptions will now be processed similarly to non-filtered subscript
 When opening their user card, from now on, users will only be able to edit group membership if they have the following permissions:
 
 - Administrator permission, or
-
 - Limited administrator permission as well as “Edit all groups” or “Edit own groups” permission
 
 > [!NOTE]
@@ -10051,7 +10026,7 @@ When creating a correlation rule in the Correlation app, it is now possible to u
 
 Due to a number of enhancements, overall performance has increased when stopping SNMP elements.
 
-#### Dashboards app - Parameter feed: “Selected only” toggle button has been removed \[ID_32541\]
+#### Dashboards app - Parameter feed: 'Selected only' toggle button has been removed \[ID_32541\]
 
 Up to now, a parameter feed had a *Selected only* toggle button that allowed you to show or hide items that were not selected. Now, this toggle button has been removed.
 
@@ -10168,7 +10143,7 @@ When you assign a Visio drawing to a view or a service, you can specify a defaul
 
 Also, when the *How to show element card Data pages* setting was set to “Show in drop-down box”, initial page selection would no longer work.
 
-#### SLProtocol would leak memory when using a “change after response“ trigger \[ID_32572\]
+#### SLProtocol would leak memory when using a 'change after response' trigger \[ID_32572\]
 
 When using a “change after response” trigger, SLProtocol would leak memory on every incoming response. See the following example.
 
@@ -10199,7 +10174,7 @@ A number of miscellaneous, small fixes have been made.
 
 Up to now, when a payload with data before the header was received (e.g. aaaa\<header>payloadwithfixedlength), the data before the header would correctly be stripped off before forwarding the payload to the protocol, but the length check would incorrectly take that data into account.
 
-#### SLNetClientTest: Problems with “Agent Connections” window \[ID_32679\]
+#### SLNetClientTest: Problems with 'Agent Connections' window \[ID_32679\]
 
 When, in the SLNetClientTest tool, you opened the *Agent Connections* window (by selecting *Diagnostics \> Connections \> View DMA Connections*),
 
@@ -10243,7 +10218,7 @@ Up to now, when GetEligibleResources was called, the eligible resources would in
 
 Up to now, in some cases, the Cube UI could become unresponsive when you opened the Ticketing app.
 
-#### DataMiner Cube - Visual Overview: SET command linked to a shape would not be executed when the page was displayed in a VdxPage window of type “Popup” \[ID_32780\]
+#### DataMiner Cube - Visual Overview: SET command linked to a shape would not be executed when the page was displayed in a VdxPage window of type 'Popup' \[ID_32780\]
 
 When a page that was displayed in a VdxPage window of type “Popup” contained a shape linked to a SET command, clicking that shape would incorrectly not execute the SET command.
 
@@ -10296,7 +10271,6 @@ A number of security enhancements have been made.
 In the DataMiner Taskbar Utility, the following options have been removed:
 
 - Launching System Display by double-clicking while pressing the SHIFT key.
-
 - Opening the locally installed DataMiner Cube in Microsoft Internet Explorer by double-clicking.
 
 > [!NOTE]
@@ -10364,7 +10338,7 @@ In some cases, the display key cache of SLElement would not get properly cleaned
 
 When a Visio file of type VDX contained bitmap images, in some cases, those images would be missing when you opened a cached version of that file.
 
-#### SNMP polling: Group with multiple tables of which some had the “partialSNMP” option enabled would get re-polled indefinitely \[ID_33197\]
+#### SNMP polling: Group with multiple tables of which some had the 'partialSNMP' option enabled would get re-polled indefinitely \[ID_33197\]
 
 When a group that contained multiple tables of which some had the partialSNMP option enabled was polled, in some cases, that same group would incorrectly get re-polled indefinitely.
 
@@ -10398,7 +10372,7 @@ When a DataMiner Agent started up while another DataMiner Agent in the DMS was r
 
 ### CU16 enhancements
 
-#### QActionTable class - FillArray and FillArrayNoDelete methods: Argument “row” renamed to “columns” \[ID_33034\]
+#### QActionTable class - FillArray and FillArrayNoDelete methods: Argument 'row' renamed to 'columns' \[ID_33034\]
 
 The *row* argument of the FillArray and FillArrayNoDelete methods in theQActionTable class has been renamed to *columns*.
 
@@ -10410,7 +10384,7 @@ Because of a number of enhancements, overall performance of SLPort has increased
 
 From now on, the SetParameterIndexByKey and SetParametersIndexByKey methods can also be used to update a single cell.
 
-#### Ticketing app: Tickets can now be filtered on fields of type “drop-down list” \[ID_33370\]
+#### Ticketing app: Tickets can now be filtered on fields of type 'drop-down list' \[ID_33370\]
 
 In the Ticketing app, tickets can now also be filtered on fields of type “drop-down list”.
 
@@ -10427,9 +10401,7 @@ Because of a number of enhancements, overall performance has increased when usin
 SLLogCollector will now also collect the log files of the following cloud processes:
 
 - ArtifactDeployer
-
 - CloudFeed
-
 - Orchestrator
 
 #### SLElement: Enhanced performance when processing service and DCF information \[ID_33635\]
@@ -10442,7 +10414,7 @@ Because of a number of enhancements, overall performance of SLElement has improv
 
 When, in a QAction, protocol.FillArray or protocol.FillArrayNoDelete were called with List\<object\[\]\> as columns value, an exception would be thrown.
 
-#### DataMiner Cube - Logging: Entries in the “Communication” tab would not get cleaned up as long as System Center was kept open \[ID_33085\]
+#### DataMiner Cube - Logging: Entries in the 'Communication' tab would not get cleaned up as long as System Center was kept open \[ID_33085\]
 
 When, in *System Center*, you opened the *Logging* section, entries would be added in the *Communication* tab as long as *System Center* was kept open. The cleanup settings specified in *Settings \> Computer \> Advanced \> Communication* would incorrectly not be applied. On systems with a large amount of traffic, this could lead to memory problems.
 
@@ -10524,9 +10496,7 @@ When an existing FunctionResource object was updated, in some cases, the primary
 A number of alarm-related issues have been fixed:
 
 - When advanced naming was configured to create a display key that contained parameters from linked tables, in some cases, the service impact of the alarms would be incorrect.
-
 - When a new row was added to a table, in some cases, the conditional monitoring based on service impact alarming would be incorrect.
-
 - In some cases, alarms retrieved from the database would contain outdated fields in the alarm tree.
 
 #### Automation scripts: Problem with processor directives \[ID_33424\]
@@ -10534,9 +10504,7 @@ A number of alarm-related issues have been fixed:
 Up to now, the following preprocessor directives would incorrectly be inserted into the Automation script code, causing syntax errors to appear on the incorrect lines.
 
 - #define DBInfo
-
 - #define DCFv1
-
 - #define ALARM_SQUASHING
 
 #### Log entry containing an incorrect number of timers would be added to the element log file when an element was stopped \[ID_33438\]
@@ -10647,7 +10615,7 @@ In some cases, an error could occur in SLWatchdog when generating the database r
 
 When a cell in a table with “pollingrate” enabled had been updated, the first time the table was polled after the update, the former value of that cell would incorrectly be returned.
 
-#### Protocols: Additional connections with a “Type” defined would incorrectly be ignored \[ID_33941\]
+#### Protocols: Additional connections with a 'Type' defined would incorrectly be ignored \[ID_33941\]
 
 Additional connections that had a “\<Type>” defined would incorrectly no longer be taken into account.
 
@@ -10877,7 +10845,7 @@ When you created an alarm property with a name identical to an existing property
 
 In some rare cases, an error could occur in the SLSNMPManager process due to an SNMP Get or Set having been put on the queue while the element in question was being stopped.
 
-#### When a stopped element was deleted, its logger tables would incorrectly not be deleted if created with options="database" [ID_34067]
+#### Logger tables not deleted when stopped element was deleted [ID_34067]
 
 <!-- Main Release Version 10.1.0 [CU18]/10.2.0 [CU6] - Feature Release Version 10.2.9 -->
 

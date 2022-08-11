@@ -14,7 +14,7 @@ An overview of the deleted elements will be displayed in the *Deleted Elements* 
 
 You can delete individual rows in the table or clean up the entire table to permanently remove managed element records of deleted elements. There is also an option available that allows you to recreate an element that has been deleted. Once the element has been recreated, the entry representing the element will be removed from the *Deleted Elements* table. If recreating the element failed, the *Status* column of the table will indicate what went wrong.
 
-#### “Pending” tab renamed to “Unmanaged” \[ID_27164\]
+#### 'Pending' tab renamed to 'Unmanaged' \[ID_27164\]
 
 The *Pending* tab of the IDP app, which lists the elements that are not yet managed by IDP, has been renamed to *Unmanaged*.
 

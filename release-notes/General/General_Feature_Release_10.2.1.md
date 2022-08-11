@@ -191,7 +191,7 @@ Using the following methods, it will now be possible to manage service templates
 
 #### Jobs app: Name, Start Time and End Time fields in default job section can now be set read-only \[ID_31485\] \[ID_31506\]
 
-In the default job section, the *Name*, *Start Time* and *End Time* fields can now be set read-only.
+In the default job section, the *Name*, *Start Time*, and *End Time* fields can now be set read-only.
 
 #### Ticketing app: System name will now be checked for illegal characters \[ID_31496\]
 

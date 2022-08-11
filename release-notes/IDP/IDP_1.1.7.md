@@ -58,7 +58,7 @@ It is now possible to configure how rack slot positions are numbered, by using t
 
 The rack position can either be set to "bottom-up", in which case position 1 will be at the bottom of the rack, or to "top-down", in which case position 1 will be at the top of the rack.
 
-#### New “Identify Unknown Devices” option in IDP app \[ID_25593\]
+#### New 'Identify Unknown Devices' option in IDP app \[ID_25593\]
 
 A new option, *Identify Unknown Devices*, is now available in the IDP app, via *Admin* > *Discovery* > *Settings*. This option determines whether the app shows devices that have been discovered but for which no matching CI type is found.
 
@@ -171,7 +171,7 @@ When you create or edit a CI type, you can no longer use a base protocol (also k
 
 ### Fixes
 
-#### Element creation failed if multiple proposed element names for discovered elements were set to "N/A" \[ID_25596\]
+#### Element creation failed if multiple proposed element names for discovered elements were set to 'N/A' \[ID_25596\]
 
 If the *Discovered Elements* table contained multiple entries where the proposed element name was "N/A", it could occur that element creation failed.
 

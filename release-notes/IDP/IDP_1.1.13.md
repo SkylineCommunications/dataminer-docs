@@ -154,7 +154,7 @@ The wizard will now create and configure the necessary resources and profile def
 
 In the Process Automation wizard, mandatory fields will now be indicated more clearly.
 
-#### Unnecessary profile parameters removed from node profile definition for Delete Element activ­ity \[ID_29559\]
+#### Unnecessary profile parameters removed from node profile definition for Delete Element activity \[ID_29559\]
 
 The node profile definition for the Process Automation activity “SLC IDP Delete Element” no longer has the profile parameters *Element\_ Selection_Type* and *Element_Selection_Value*, as these are not required for this activity.
 
@@ -168,7 +168,7 @@ In some cases, it could occur that SLScripting handles kept increasing because t
 
 In some cases, when process profile instance was loaded, an exception could be thrown.
 
-#### Problem when running IDP setup wizard on system with existing IDP setup with Process Auto­mation \[ID_29447\]
+#### Problem when running IDP setup wizard on system with existing IDP setup with Process Automation \[ID_29447\]
 
 When the IDP setup wizard was run on a system that already contained IDP with Process Automation, an exception could be thrown by the *SRM_ServiceDefinitionImportExport* script.
 

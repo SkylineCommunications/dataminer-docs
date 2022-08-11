@@ -33,7 +33,7 @@ Additional validation has been added in the SRM Framework to avoid situations wh
 
 The default value of the Booking Manager parameter *Booking Logging Date Time Format* has been changed to “dd/MM/yyyy HH:mm:ss.ffff".
 
-#### Support for "Pre-Roll End" and "Post-Roll Start" as time reference in custom events \[ID_32460\]
+#### Support for 'Pre-Roll End' and 'Post-Roll Start' as time reference in custom events \[ID_32460\]
 
 It is now possible to add custom events using the time reference points "Pre-Roll End" and "Post-Roll Start".
 

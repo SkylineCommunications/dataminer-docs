@@ -96,7 +96,7 @@ Life cycle service orchestration (LSO) scripts will now receive an indication of
 
 The SRM Solution now uses *ProfileHelper* methods instead of the deprecated *ProfileManagerHelper* methods. In addition, extension methods for *ProfileDefinitionCrudHelper*, *ProfileInstanceCrudHelper* and *ProfileParameterCrudHelper* were added to the *Skyline.DataMiner.Library.Profile* namespace, to make sure the same extension methods as in the *ProfileManagerHelper* class are available.
 
-#### "SRMFunction\_" prefix no longer used \[ID_27152\]
+#### 'SRMFunction\_' prefix no longer used \[ID_27152\]
 
 From DataMiner 10.0.9 onwards, the prefix “SRMFunction\_” is no longer used for virtual functions. The standard SRM Solution has now been updated to also no longer use this prefix.
 
@@ -126,7 +126,7 @@ When an interactive script contained the possibility to select a date, a problem
 
 Previously, if the start or stop time of a booking was updated, the *SRM_ReservationAction* script still displayed the old start or stop time in its confirmation window.
 
-#### "Created by" and "Last modified by" columns in Bookings list mentioned Administrator instead of actual user \[ID_27246\]
+#### 'Created by' and 'Last modified by' columns in Bookings list mentioned Administrator instead of actual user \[ID_27246\]
 
 The *Created by* and *Last modified by* columns of the Bookings list always mentioned *Administrator* instead of the name of the user who actually created or edited the booking.
 

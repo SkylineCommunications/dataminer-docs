@@ -6,7 +6,7 @@ uid: IDP_1.1.19
 
 ## New features
 
-#### New “Include Managed” toggle button for discovered connections \[ID_32355\]
+#### New 'Include Managed' toggle button for discovered connections \[ID_32355\]
 
 When you view the details for a discovered element, via the *Show details* button on the *Connectivity* > *Discovered* tab, a new *Include Managed* toggle button is now available. This button determines whether discovered connections that are already provisioned by IDP are displayed or not. If the button is disabled, only unmanaged connections are displayed.
 

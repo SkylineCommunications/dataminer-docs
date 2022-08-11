@@ -10,7 +10,7 @@ uid: IDP_1.1.4
 
 In the IDP app, on the *Admin* > *CI Types* tab, you can now edit a selected CI type. In addition, a button is now available on this tab that can be used to create a new CI type.
 
-#### IDP app: New “Discovery Results to Show” option \[ID_23502\]
+#### IDP app: New 'Discovery Results to Show' option \[ID_23502\]
 
 A new option is available in the IDP app, which allows you to determine which discovery results are shown in the *Discovered Elements* table. With the *Discovery Results to Show* parameter, you can now either have all discoveries displayed, or only the latest discovery. You can find this option on the *Settings* data page of the app.
 

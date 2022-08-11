@@ -56,7 +56,7 @@ Performance of the *SRM_AddDcfInterfacesAsResources* script, which is used to ad
 
 Locked contributing bookings that are only used by a single main booking will now be scheduled to finish when that main booking is canceled. If they are used by multiple main bookings, the behavior remains the same as before.
 
-#### "Auto Select Resource" property now taken into account when booking is duplicated \[ID_32771\]
+#### 'Auto Select Resource' property now taken into account when booking is duplicated \[ID_32771\]
 
 Up to now, when no resource was selected for a booking, and this booking was duplicated using the Booking Wizard, a resource was automatically selected. This has now been changed to be in line with regular booking creation behavior. The property *Auto Select Resource* will determine whether a resource is automatically selected.
 

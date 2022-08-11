@@ -27,7 +27,7 @@ When a resource is assigned, the *Role* property of the *ServiceResourceUsageDef
 
 To make sure this property is set correctly for existing bookings, you can use the migration script *SRM_SRM_MigrateServiceResourceUsageDefinitionRole*, which is now available in the SRM framework.
 
-#### "Lite" contributing resources \[ID_31182\]
+#### 'Lite' contributing resources \[ID_31182\]
 
 To allow faster creation of contributing bookings, a new kind of "lite" contributing resources can now be used. These only include the essential aspects to get a contributing booking up and running as quickly as possible. When a main booking using a lite contributing resource starts, the corresponding contributing service will be available under the main booking service.
 

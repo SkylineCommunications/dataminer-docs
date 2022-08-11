@@ -16,7 +16,7 @@ In order to avoid potential quarantine conflicts, it will only be possible to fo
 
 Service definitions that are dynamically generated for contributing bookings (based on the Dijkstra algorithm) will now have a label assigned to each node. The label will be an incremental integer starting at 1. The last node will be indicated with "N", to allow easy mapping in Visio drawings. If the service definition contains only one node, the node label will be 1.
 
-#### New “Use Node Label As Element Alias” option \[ID_25236\]
+#### New 'Use Node Label As Element Alias' option \[ID_25236\]
 
 A new *Use Node Label As Element Alias* toggle button is now available in the Booking Manager, via *General* > *Booking Wizard Options*.
 

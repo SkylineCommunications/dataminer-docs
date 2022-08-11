@@ -54,7 +54,7 @@ A problem with the validation of the duration of a recurrence could cause issues
 Skyline.DataMiner.Library.Exceptions.InvalidBookingDataException: Duration needs to match the difference between EndDate and StartDate
 ```
 
-#### Incorrect error message in case "ResourceOutputInterfaces" or "ResourceInputInterfaces" were missing \[ID_33380\]
+#### Incorrect error message in case 'ResourceOutputInterfaces' or 'ResourceInputInterfaces' were missing \[ID_33380\]
 
 In case the profile parameters *ResourceOutputInterfaces* or *ResourceInputInterfaces* are missing, it is not possible to create a booking. Up to now, in that case the following incorrect error message was shown:
 

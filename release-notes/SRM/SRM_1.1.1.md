@@ -10,7 +10,7 @@ uid: SRM_1.1.1
 
 When a filter is selected in the Booking Wizard to only display available resources with a particular capability, this will now also affect the list of available profile instances for the target node and the corresponding interfaces. However, note that this is only the case if the filter capability parameter is present in the profile definition.
 
-#### "By Reference" checkbox removed for function with Path parameter [ID_24122]
+#### 'By Reference' checkbox removed for function with Path parameter [ID_24122]
 
 If a function contains at least one Path parameter, the By Reference functionality is not supported. As such, this option will no longer be available in the Booking Wizard in that case.
 
@@ -115,7 +115,7 @@ Performance has improved when contributing bookings are retrieved for a booking.
 
 The input data of the *SRM_AddDcfInterfacesAsResources* script have been extended to allow concurrency
 
-#### SRM_BookingActions script now throws exception if booking is set to “Failed” [ID_24366]
+#### SRM_BookingActions script now throws exception if booking is set to 'Failed' [ID_24366]
 
 The *SRM_BookingActions* script will now throw an exception when the booking it is modifying is set to "Failed", so that is easier for a parent booking to detect if a contributing booking failed.
 
@@ -133,7 +133,7 @@ If the Booking Wizard was configured to use a service definition with generic so
 
 When a booking left the quarantined state, it could occur that the time for the next quarantine was not updated immediately.
 
-#### "Copy to Service" not working if persistent service was enabled [ID_24146]
+#### 'Copy to Service' not working if persistent service was enabled [ID_24146]
 
 If *Persistent Service* was set to "Enabled" in the Booking Manager, it could occur that copying booking properties to a service did not work.
 

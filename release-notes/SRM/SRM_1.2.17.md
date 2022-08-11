@@ -19,7 +19,7 @@ In addition, alarms that are generated on the Bookings table of the Skyline Book
 - Service ID
 - Skyline Booking Manager Element ID
 
-#### New option to enable/disable “Configure Resources” by default \[ID_30529\]
+#### New option to enable/disable 'Configure Resources' by default \[ID_30529\]
 
 A new option, *Default Resource Configuration*, is now available on the *General* data page of the Booking Manager element. This option allows you to specify whether the *Configure Resources* option should be selected by default or not in the Booking Wizard. Note that this option, which determines whether a read-only booking is created or not, is only available if *Optional Resources Configuration* is enabled in the Booking Manager configuration.
 

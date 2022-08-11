@@ -6,7 +6,7 @@ uid: SRM_1.2.5
 
 ## New features
 
-#### Support for use of “pool resource” in bookings \[ID_26701\]
+#### Support for use of 'pool resource' in bookings \[ID_26701\]
 
 When creating a booking, you can now select a so-called pool resource instead of a specific resource. At the start time of the booking, this pool resource will be replaced by a specific resource.
 

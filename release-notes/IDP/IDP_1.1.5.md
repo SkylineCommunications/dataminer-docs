@@ -81,7 +81,7 @@ In case a discovery request is interrupted because the *DataMiner IDP Discovery*
 
 In addition, in such a case, the progress indicated under *Most Recent Discoveries* in the *Inventory* > *Discovered* tab will mention *Interrupted* for the requests that were in progress or were not yet started at the time of the discovery element restart, so that it is clear that a new discovery request is needed to get complete results.
 
-#### IDP app: "Create Elements" option renamed to "Automatically Create Elements After Discovery" \[ID_24728\]
+#### IDP app: 'Create Elements' option renamed to 'Automatically Create Elements After Discovery' \[ID_24728\]
 
 In the *Admin* > *Provisioning* tab of the IDP app, the option *Create Elements* has been renamed to *Automatically Create Elements After Discovery*.
 

@@ -6,7 +6,7 @@ uid: SRM_1.2.0
 
 ## New features
 
-#### New action to set interrupted booking to "Confirmed" \[ID_24301\]
+#### New action to set interrupted booking to 'Confirmed' \[ID_24301\]
 
 A new action is now possible with the *SRM_ReservationActions* script, both in interactive and in silent mode, which can be used to set an interrupted booking to *Confirmed*. A booking can be in the *Interrupted* state when it does not start because of unexpected circumstances, for example because the system is down at the moment when the booking is supposed to start. The new action will update the interrupted booking so that the start date is set to a future date.
 
@@ -86,7 +86,7 @@ In some cases, a null exception could be returned when the service definitions w
 
 When a contributing booking was created, it could occur that the corresponding contributing service was not included in the correct view.
 
-#### Silent booking creation not possible with node option "Hide" \[ID_24687\]
+#### Silent booking creation not possible with node option 'Hide' \[ID_24687\]
 
 If a service definition contained a node with the property *Options* set to *Hide*, it could occur that it was not possible to create a booking with this service definition in silent mode.
 

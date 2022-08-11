@@ -93,7 +93,7 @@ The default alarm and trend templates for the different elements used by DataMin
 
 In the IDP setup wizard, if an IDP user is assigned that has already been configured, the password fields will now be filled in automatically.
 
-#### Setup wizard: "localhost" now retained as binding address for provisioning \[ID_28393\]
+#### Setup wizard: 'localhost' now retained as binding address for provisioning \[ID_28393\]
 
 If localhost is configured as the binding address for provisioning during IDP setup, the setup wizard will no longer replace this with the hostname of the machine.
 

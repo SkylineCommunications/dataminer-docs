@@ -63,11 +63,11 @@ When the IDP Solution was installed for the first time on a clean system, it cou
 
 In the IDP setup wizard, it could occur that the displayed element names did not reflect the actual names of the IDP elements. Now the correct element names will be displayed.
 
-#### IDP setup wizard: “Parent Building View ID” and “Obsolete Device View ID” not set to correct view IDs \[ID_21620\]
+#### IDP setup wizard: 'Parent Building View ID' and 'Obsolete Device View ID' not set to correct view IDs \[ID_21620\]
 
 Previously, it could occur that the *Parent Building View ID* and *Obsolete Device View ID* parameters of the Rack Layout Manager element were not set to the correct view ID during the initial setup of the IDP Solution.
 
-#### Skyline Infrastructure Discovery and Provisioning: “Rack Usage per Location” dashboard not displayed correctly \[ID_21628\]
+#### Skyline Infrastructure Discovery and Provisioning: 'Rack Usage per Location' dashboard not displayed correctly \[ID_21628\]
 
 On the *Infrastructure* tab of the IDP app, up to now the *Rack Usage per Location* dashboard referred to a fixed element, so that it was not always displayed correctly. Now the setup wizard will make sure the dashboard is correctly linked to the current Rack Layout Manager element.
 
