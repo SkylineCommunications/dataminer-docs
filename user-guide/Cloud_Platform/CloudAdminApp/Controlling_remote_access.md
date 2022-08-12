@@ -8,7 +8,7 @@ When a DMS is cloud-connected, you can use the URL created for you during regist
 
 ## Finding the remote access URL
 
-After you have registered, you can find the URL on the dataminer.services home page. In the DataMiner Systems section, the URL is displayed right underneath the name of the connected DataMiner System. You can also directly navigate to the URL from this section.
+After you have registered, you can find the URL on the dataminer.services home page. In the DataMiner Systems section, the URL is displayed right underneath the name of the connected DataMiner System. You can also directly navigate to the URL from this section by using the *Home* button.
 
 ## Enabling or disabling remote access
 
