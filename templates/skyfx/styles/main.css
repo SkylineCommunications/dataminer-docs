@@ -320,6 +320,7 @@ pre {
 
 code {
   background: var(--color-background-subnav) !important;
+  color: var(--color-foreground) !important;
   border-radius: 2px;
 }
 
