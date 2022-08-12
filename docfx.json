@@ -23,8 +23,8 @@
           "user-guide/**/toc.yml",
           "develop/**.md",
           "develop/toc.yml",
-		  "develop/**/toc.yml",
-		  "develop/api/types/*.yml",
+		      "develop/**/toc.yml",
+		      "develop/api/types/*.yml",
           "toc.yml",
           "*.md"
         ]
@@ -37,8 +37,8 @@
           "dataminer-overview/images/**",
           "user-guide/images/**",
           "develop/images/**",
-		  "develop/schemadoc/Protocol/images/**",
-		  "develop/schemadoc/Automation/images/**"
+		      "develop/schemadoc/Protocol/images/**",
+		      "develop/schemadoc/Automation/images/**"
         ]
       }
     ],
@@ -47,16 +47,15 @@
     "globalMetadata": {
       "_appTitle": "DataMiner Docs",
       "_appFooter": "© Skyline Communications 2022",
-      "_enableSearch": true,
+      "_enableSearch": false,
       "_enableNewTab": true
     },
     "globalMetadataFiles": [],
     "fileMetadataFiles": [],
     "template": [
       "default",
-      "templates/slc_template"
+      "templates/skyfx"
     ],
-    "postProcessors": [ "ExtractSearchIndex" ],
     "markdownEngineName": "markdig",
     "noLangKeyword": false,
     "keepFileLink": false,

@@ -27,7 +27,7 @@ jobs:
           docfx metadata -f
       - name: build documentation
         run: |
-          docfx build -t default,templates/slc_template -f
+          docfx build -f
       - name: publish results
         uses: actions/upload-artifact@v2.2.4
         with:
