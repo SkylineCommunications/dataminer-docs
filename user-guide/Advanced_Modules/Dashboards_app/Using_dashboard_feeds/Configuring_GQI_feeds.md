@@ -47,7 +47,7 @@ This is the most basic procedure to use an external data source in a query:
 1. In the Automation app, add a script containing a new class that implements the *IGQIDatasource* interface (see [Interfaces](#interfaces-in-the-ad-hoc-data-script)).
 
    > [!NOTE]
-   > All object types needed to create an ad hoc datasource can be found within the *SLAnalyticsTypes.dll* which is located in *C:\Skyline DataMiner\Files*.
+   > All object types needed to create an ad hoc data source can be found within *SLAnalyticsTypes.dll*, which is located in the folder *C:\Skyline DataMiner\Files*.
 
 1. Above the class, add the *GQIMetaData* attribute in order to configure the name of the data source as displayed in the Dashboards app.
 
