@@ -8,6 +8,9 @@ It is possible to deploy an Automation script solution from a GitHub repository 
 
 To do so, you need to [create a DCP key](#creating-a-dcp-key), [add the key as a secret in the repository](#adding-the-key-as-a-secret-in-the-repository), and [add the Skyline DataMiner Deploy Action to a workflow](#adding-the-skyline-dataminer-deploy-action-to-a-workflow).
 
+> [!IMPORTANT]
+> Your DataMiner system has to be cloud-connected in order to use this feature.
+
 ## Creating a DCP key
 
 A DCP key is scoped to the specific DMS for which it was created and will allow for deployments to that DMS only.
@@ -16,7 +19,7 @@ For more information on how to create a DCP key, refer to [Managing DCP keys](xr
 
 ## Adding the key as a secret in the repository
 
-The key should be added as a secret in the repository, so that it is stored securely in GitHub and not stored in source control.
+The key(this can be the primary or secondary) should be added as a secret in the repository, so that it is stored securely in GitHub and not stored in source control.
 
 1. Copy the value from the DCP Admin app using the copy button next to the key.
 1. In your GitHub repository, go to *Settings*.

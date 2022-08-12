@@ -8,7 +8,7 @@ In the DCP Admin app, you can manage keys that can for example be used with the 
 
 To do so:
 
-1. In the Admin app, check whether the correct organization is mentioned in the header bar.
+1. In the [Admin](https://admin.dataminer.services/) app, check whether the correct organization is mentioned in the header bar.
 
 1. If a different organization should be selected, click the organization selector in the top-right corner and select the organization in the list.
 

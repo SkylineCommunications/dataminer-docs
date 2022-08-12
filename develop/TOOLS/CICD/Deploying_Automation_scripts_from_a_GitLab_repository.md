@@ -8,6 +8,9 @@ It is possible to deploy an Automation script solution from a GitLab repository 
 
 To do so, you need to [create a DCP key](#creating-a-dcp-key), [add the key as a masked variable in the repository](#adding-the-key-as-a-masked-variable-in-the-repository), and [add the Skyline DataMiner Deploy Action to a pipeline](#adding-the-skyline-dataminer-deploy-action-to-a-pipeline).
 
+> [!IMPORTANT]
+> Your DataMiner system has to be cloud-connected in order to use this feature.
+
 A working example for this can be found [here](https://gitlab.com/ziinecorp/paris-ip-flow-management).
 
 ## Creating a DCP key
@@ -18,7 +21,7 @@ For more information on how to create a DCP key, refer to [Managing DCP keys](xr
 
 ## Adding the key as a masked variable in the repository
 
-The key should be added as a masked variable in the repository so that it is stored securely in GitLab and not stored in source control. Making the variable masked will prevent the value to be logged accidentally in the pipeline logs.
+The key(this can be the primary or secondary) should be added as a masked variable in the repository so that it is stored securely in GitLab and not stored in source control. Making the variable masked will prevent the value to be logged accidentally in the pipeline logs.
 
 1. Copy the value from the DCP Admin app using the copy button next to the key.
 1. In your GitLab repository, go to *Settings* > *CI/CD*.
@@ -84,3 +87,7 @@ The key should be added as a masked variable in the repository so that it is sto
 
 > [!NOTE]
 > For more information about CI/CD pipelines, refer to the [GitLab Documentation](https://docs.gitlab.com/ee/ci/)
+
+> [!IMPORTANT]
+> There are some differences between GitLab and GitHub regarding the versioning of the deploy action. On GitLab this is without a 'v' in front of the version. See also the ZiineCorp example on GitLab.
+> Also on GitLab there is a script parameter *-basepath* that you don't have on GitHub.
