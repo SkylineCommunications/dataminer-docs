@@ -19,6 +19,7 @@
   --color-foreground-alert-caution: #470001;
   --color-background-alert-important: #efd9fd;
   --color-foreground-alert-important: #3b2e58;
+  --color-foreground-hyperlink-hover: #23527c;
 }
 
 body.dark-theme {
@@ -42,6 +43,7 @@ body.dark-theme {
   --color-foreground-alert-caution: #fde7e9;
   --color-background-alert-important: #362a50;
   --color-foreground-alert-important: #efd9fd;
+  --color-foreground-hyperlink-hover: #3781c1;
   }
 
 html,
@@ -134,6 +136,11 @@ h6 {
 article h1, article h2, article h3, article h4 {
   margin-top: 35px;
   margin-bottom: 15px;
+}
+
+button:hover, button:focus, a:hover, a:focus {
+  color: var(--color-foreground-hyperlink-hover);
+  text-decoration: underline;
 }
 
 .navbar-brand>img {
