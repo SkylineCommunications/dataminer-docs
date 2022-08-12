@@ -29,3 +29,6 @@ To do so:
    - To **revoke** a set of keys, click the "..." button to the right of the entry and select *Revoke*.
 
      When you revoke a set of keys, this will effectively delete the keys. To avoid unwanted deletion, you will need to confirm that you indeed want to revoke the keys by specifying their label.
+
+> [!TIP]
+> Regenerating primary or secondary keys can also be done from the side panel.
