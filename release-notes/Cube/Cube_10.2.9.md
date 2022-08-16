@@ -358,6 +358,12 @@ Something went wrong: Error downloading ClickOnce version: Error downloading man
 
 In System Center, when you clicked the *Leave cluster* button on the *Agents* page, this removed the DMA you were connected to from the cluster instead of the selected DMA.
 
+#### EPM: Incorrect alarm color shown for EPM shapes in Visual Overview [ID_34039]
+
+<!-- Main Release Version 10.1.0 [CU18]/10.2.0 [CU6] - Feature Release Version 10.2.9 -->
+
+Up to now, to resolve the monitoring state of EPM shapes displayed in Visual Overview, the source table of the EPM front end was used, which could cause an incorrect alarm color to be shown for such shapes. Now, the source table of the back end is used instead, as this is the table the monitoring is applied to.
+
 #### Navigation issue in visual overview with several tab pages and shapes linked to EPM object [ID_34122]
 
 <!-- Main Release Version 10.1.0 [CU18]/10.2.0 [CU6] - Feature Release Version 10.2.9 -->

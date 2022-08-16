@@ -10846,6 +10846,12 @@ In System Center, when you clicked the *Leave cluster* button on the *Agents* pa
 
 In some rare cases, an error could occur in the SLSNMPManager process due to an SNMP Get or Set having been put on the queue while the element in question was being stopped.
 
+#### EPM: Incorrect alarm color shown for EPM shapes in Visual Overview [ID_34039]
+
+<!-- Main Release Version 10.1.0 [CU18]/10.2.0 [CU6] - Feature Release Version 10.2.9 -->
+
+Up to now, to resolve the monitoring state of EPM shapes displayed in Visual Overview, the source table of the EPM front end was used, which could cause an incorrect alarm color to be shown for such shapes. Now, the source table of the back end is used instead, as this is the table the monitoring is applied to.
+
 #### Logger tables not deleted when stopped element was deleted [ID_34067]
 
 <!-- Main Release Version 10.1.0 [CU18]/10.2.0 [CU6] - Feature Release Version 10.2.9 -->
