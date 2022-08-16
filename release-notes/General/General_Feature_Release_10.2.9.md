@@ -448,6 +448,12 @@ When you tried to edit a published low-code app, in some cases, no new draft ver
 
 When using the Dashboards app or a low-code app in Mozilla Firefox, it would incorrectly not be possible to copy table data by means of a right-click menu command.
 
+#### GQI: Regex filter on empty cell not working correctly [ID_34088]
+
+<!-- Main Release Version 10.2.0 [CU6] - Feature Release Version 10.2.9 -->
+
+When a filter with a regular expression was applied to an empty cell of a GQI query, it could occur that this did not work correctly. This issue only occurred for custom columns of a DOM instance and for custom data sources.
+
 #### DataMiner upgrade: AnalyticsDropUnusedCassandraTables upgrade action would fail [ID_34091]
 
 <!-- Main Release Version 10.3.0 - Feature Release Version 10.2.9 -->

@@ -7556,6 +7556,12 @@ When a stopped element was deleted, logger tables associated with that element w
 
 When an existing scheduled task that was configured to be executed multiple times per day was edited, it could occur that the task was corrupted and could no longer be executed.
 
+#### GQI: Regex filter on empty cell not working correctly [ID_34088]
+
+<!-- Main Release Version 10.2.0 [CU6] - Feature Release Version 10.2.9 -->
+
+When a filter with a regular expression was applied to an empty cell of a GQI query, it could occur that this did not work correctly. This issue only occurred for custom columns of a DOM instance and for custom data sources.
+
 #### No alarms shown with alarm filter on property value filtering the alarms before they entered Cube [ID_34090]
 
 <!-- Main Release Version 10.1.0 [CU18]/10.2.0 [CU6] - Feature Release Version 10.2.9 -->
