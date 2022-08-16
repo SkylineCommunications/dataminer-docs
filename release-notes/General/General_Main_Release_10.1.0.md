@@ -10864,6 +10864,12 @@ Since DataMiner 10.1.8 (RN [30044](xref:General_Feature_Release_10.1.8#instancea
 
 When a stopped element was deleted, logger tables associated with that element would incorrectly not be deleted if created with `options="database"`.
 
+#### Scheduled task corrupted after it was edited [ID_34084]
+
+<!-- Main Release Version 10.1.0 [CU18]/10.2.0 [CU6] - Feature Release Version 10.2.9 -->
+
+When an existing scheduled task that was configured to be executed multiple times per day was edited, it could occur that the task was corrupted and could no longer be executed.
+
 #### Navigation issue in visual overview with several tab pages and shapes linked to EPM object [ID_34122]
 
 <!-- Main Release Version 10.1.0 [CU18]/10.2.0 [CU6] - Feature Release Version 10.2.9 -->
