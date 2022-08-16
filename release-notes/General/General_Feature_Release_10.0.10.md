@@ -318,8 +318,8 @@ App packages can now be uninstalled using the new AppPackageHelper method Uninst
 /// <param name="appId">The ID of the app to be uninstalled.</param>
 /// <param name="force">
 ///    If true:
-///    - The app will be forcefully uninstalled, even if the uninstall script         fails.
-///    - If the uninstall script exits with an exception or could not be run,         no exceptions will be thrown.
+///    - The app will be forcefully uninstalled, even if the uninstall script fails.
+///    - If the uninstall script exits with an exception or could not be run, no exceptions will be thrown.
 /// </param>
 /// <exception cref="AppUninstallationFailedException">
 ///    This exception will be thrown in the following cases:
@@ -614,7 +614,7 @@ A HistoryChange records contains the following fields:
 
 Using the HistoryHelper#Resources API you can read all the history objects for resources. See the following example:
 
-```txt
+```csharp
 ResourceID myResourceID = …
 var query =HistoryChangeExposers.SubjectID.Equal(someResourceID.ToFileFriendlyString()).OrderBy(HistoryChangeExposers.Time);
 ```

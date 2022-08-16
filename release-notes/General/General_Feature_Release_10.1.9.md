@@ -276,7 +276,6 @@ The following columns can be added using a column selector node:
 - User status
 - Virtual function impact
 - View impact
-
 - A column for every custom alarm property
 
 #### Dashboards app - State component: 'Show units' option \[ID_30322\]

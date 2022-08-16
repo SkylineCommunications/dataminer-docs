@@ -1066,14 +1066,14 @@ The following information will be added to the information events.
 
 - When a user changes the mode of a redundancy group, one of the following strings will now be added to the information event with parameter description “Edited”:
 
-    -*RDG By Administrator: Set Mode to Automatic switching*
-    -*RDG By Administrator: Set Mode to Manual switchback*
-    -*RDG By Administrator: Set Mode to Manual switching*
+  - *RDG By Administrator: Set Mode to Automatic switching*
+  - *RDG By Administrator: Set Mode to Manual switchback*
+  - *RDG By Administrator: Set Mode to Manual switching*
 
 - When a user sets an element to maintenance mode or takes an element out of maintenance mode, one of the following strings will now be added to the information event with parameter description “Edited”:
 
-    -*RDG By Administrator: Switch to maintenance mode on \<element>*
-    -*RDG By Administrator: Switch back from maintenance mode on element \<element>*
+  - *RDG By Administrator: Switch to maintenance mode on \<element>*
+  - *RDG By Administrator: Switch back from maintenance mode on element \<element>*
 
 - When a switch is performed, an additional information event with parameter description “Redundancy switch” will now be generated to indicate the cause of the switch. In case of a manual switch, the information event will mention the user and in case of an automatic switch, it will mention the trigger ID.
 
@@ -1271,7 +1271,14 @@ To configure DataMiner to automatically (a) create users authenticated by Azure 
    - Under *Reply URL*, specify the following URLs:
 
      ```txt
-     https://[your application name]/root/ https://[your application name]/ticketing https://[your application name]/jobs https://[your application name]/monitoring https://[your application name]/dashboard https://[your application name]/root https://[your application name]/login https://[your application name]
+     https://[your application name]/root/ 
+     https://[your application name]/ticketing 
+     https://[your application name]/jobs 
+     https://[your application name]/monitoring 
+     https://[your application name]/dashboard 
+     https://[your application name]/root 
+     https://[your application name]/login 
+     https://[your application name]
      ```
 
    - Set *Sign on URL* to `https://[your application name]`.
@@ -1288,7 +1295,7 @@ To configure DataMiner to automatically (a) create users authenticated by Azure 
    ```xml
    <DataMiner ...>
      ...
-     <ExternalAuthentication      type="SAML"      ipMetadata="[Path/URL of the identity provider’s metadata file]"      spMetadata="[Path/URL of the service provider’s metadata file]"      timeout="300">
+     <ExternalAuthentication type="SAML" ipMetadata="[Path/URL of the identity provider’s metadata file]" spMetadata="[Path/URL of the service provider’s metadata file]" timeout="300">
        <AutomaticUserCreation enabled="true">
          <EmailClaim>http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress</EmailClaim>
          <Givenname>http://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname</Givenname>
@@ -2188,7 +2195,7 @@ If you want to specify the page to be selected by default, add a suffix to the i
 
 #### New /Bootstrap command line argument for DataMiner Cube launcher \[ID_30573\]
 
-A new */Bootstrap* command line argument is now supported for the DataMiner Cube launcher. This argument combines the */Install* and */Silent* arguments (see <https://community.dataminer.services/documentation/cube-launcher-command-line-arguments/>), and also copies a number of files, such as *DataMinerCube.exe.config* en *CubeLauncherConfig.json*.
+A new */Bootstrap* command line argument is now supported for the DataMiner Cube launcher. This argument combines the */Install* and */Silent* arguments (see [Desktop application command-line arguments](xref:Desktop_app_command_line_arguments)), and also copies a number of files, such as *DataMinerCube.exe.config* en *CubeLauncherConfig.json*.
 
 #### Aggregation rule conditions can now be specified in the form of a regular expression \[ID_30640\]
 
@@ -3078,7 +3085,7 @@ A new setting is now available for dashboard folders: *Preserve feed selections*
 
 To access this setting, right-click the dashboard folder in the navigation pane and select *Edit*. This *Edit* option also allows you to rename the dashboard folder and replaces the previous *Rename* option in the right-click menu.
 
-#### Dashboards app - GQI: New “Update data” option \[ID_31445\] \[ID_31450\]
+#### Dashboards app - GQI: New 'Update data' option \[ID_31445\] \[ID_31450\]
 
 When configuring a GQI query, you can now enable the “Update data” option if you want the component to automatically refresh the data when changes to that data are detected.
 
@@ -3220,41 +3227,41 @@ For example:
 
 ```csharp
 UIBuilder uib = new UIBuilder();
-    uib.Title = "Treeview - Regular";
-    uib.RequireResponse = true;
-    uib.RowDefs = "*";
-    uib.ColumnDefs = "*";
-    UIBlockDefinition tree = new UIBlockDefinition();
-    tree.Type = UIBlockType.TreeView;
-    tree.Row = 0;
-    tree.Column = 0;
-    tree.DestVar = "treevar";
-    tree.TreeViewItems = new List<TreeViewItem>
-    {
-         new TreeViewItem("Slapp", "Slapp (Nexus)", false, new List<TreeViewItem>
+   uib.Title = "Treeview - Regular";
+   uib.RequireResponse = true;
+   uib.RowDefs = "*";
+   uib.ColumnDefs = "*";
+   UIBlockDefinition tree = new UIBlockDefinition();
+   tree.Type = UIBlockType.TreeView;
+   tree.Row = 0;
+   tree.Column = 0;
+   tree.DestVar = "treevar";
+   tree.TreeViewItems = new List<TreeViewItem>
+   {
+      new TreeViewItem("Slapp", "Slapp (Nexus)", false, new List<TreeViewItem>
+      {
+         new TreeViewItem("Nitro", "Nitro (Squad)", false, new List<TreeViewItem>
          {
-            new TreeViewItem("Nitro", "Nitro (Squad)", false, new List<TreeViewItem>
-            {
-                new TreeViewItem("Brian", "Brian (Member)", false) { CheckingBehavior = TreeViewItem.TreeViewItemCheckingBehavior.None },
-                new TreeViewItem("Gilles", "Gilles (Member)", true) { CheckingBehavior = TreeViewItem.TreeViewItemCheckingBehavior.None },
-                new TreeViewItem("KevinM", "KevinM  (Member)", true) { CheckingBehavior = TreeViewItem.TreeViewItemCheckingBehavior.None },
-                new TreeViewItem("KevinV", "KevinV  (Member)", false) { CheckingBehavior = TreeViewItem.TreeViewItemCheckingBehavior.None },
-                new TreeViewItem("Seba", "Seba  (Member)", false) { CheckingBehavior = TreeViewItem.TreeViewItemCheckingBehavior.None },
-                new TreeViewItem("Ward", "Ward  (Member)", true) { CheckingBehavior = TreeViewItem.TreeViewItemCheckingBehavior.None },
-            }) { CheckingBehavior = TreeViewItem.TreeViewItemCheckingBehavior.None },
-            new TreeViewItem("Nitro", "Nitro (Squad)", true, new List<TreeViewItem>
-            {
-                new TreeViewItem("Jordy", "Jordy (Member)") { CheckingBehavior = TreeViewItem.TreeViewItemCheckingBehavior.None },
-                new TreeViewItem("Jorge", "Jorge (Member)") { CheckingBehavior = TreeViewItem.TreeViewItemCheckingBehavior.None },
-                new TreeViewItem("Ronald", "Ronald (Member)") { CheckingBehavior = TreeViewItem.TreeViewItemCheckingBehavior.None },
-                new TreeViewItem("Victor", "Victor (Member)") { CheckingBehavior = TreeViewItem.TreeViewItemCheckingBehavior.None },
-                new TreeViewItem("Wim", "Wim (Member)") { CheckingBehavior = TreeViewItem.TreeViewItemCheckingBehavior.None },
-                new TreeViewItem("Quinten", "Quinten (Member)") { CheckingBehavior = TreeViewItem.TreeViewItemCheckingBehavior.None }
-            }) { CheckingBehavior = TreeViewItem.TreeViewItemCheckingBehavior.None }
-        }) { CheckingBehavior = TreeViewItem.TreeViewItemCheckingBehavior.None }
-    };
-    uib.AppendBlock(tree);
-    _treeResults = _engine.ShowUI(uib);
+            new TreeViewItem("Brian", "Brian (Member)", false) { CheckingBehavior = TreeViewItem.TreeViewItemCheckingBehavior.None },
+            new TreeViewItem("Gilles", "Gilles (Member)", true) { CheckingBehavior = TreeViewItem.TreeViewItemCheckingBehavior.None },
+            new TreeViewItem("KevinM", "KevinM  (Member)", true) { CheckingBehavior = TreeViewItem.TreeViewItemCheckingBehavior.None },
+            new TreeViewItem("KevinV", "KevinV  (Member)", false) { CheckingBehavior = TreeViewItem.TreeViewItemCheckingBehavior.None },
+            new TreeViewItem("Seba", "Seba  (Member)", false) { CheckingBehavior = TreeViewItem.TreeViewItemCheckingBehavior.None },
+            new TreeViewItem("Ward", "Ward  (Member)", true) { CheckingBehavior = TreeViewItem.TreeViewItemCheckingBehavior.None },
+         }) { CheckingBehavior = TreeViewItem.TreeViewItemCheckingBehavior.None },
+         new TreeViewItem("Nitro", "Nitro (Squad)", true, new List<TreeViewItem>
+         {
+            new TreeViewItem("Jordy", "Jordy (Member)") { CheckingBehavior = TreeViewItem.TreeViewItemCheckingBehavior.None },
+            new TreeViewItem("Jorge", "Jorge (Member)") { CheckingBehavior = TreeViewItem.TreeViewItemCheckingBehavior.None },
+            new TreeViewItem("Ronald", "Ronald (Member)") { CheckingBehavior = TreeViewItem.TreeViewItemCheckingBehavior.None },
+            new TreeViewItem("Victor", "Victor (Member)") { CheckingBehavior = TreeViewItem.TreeViewItemCheckingBehavior.None },
+            new TreeViewItem("Wim", "Wim (Member)") { CheckingBehavior = TreeViewItem.TreeViewItemCheckingBehavior.None },
+            new TreeViewItem("Quinten", "Quinten (Member)") { CheckingBehavior = TreeViewItem.TreeViewItemCheckingBehavior.None }
+         }) { CheckingBehavior = TreeViewItem.TreeViewItemCheckingBehavior.None }
+     }) { CheckingBehavior = TreeViewItem.TreeViewItemCheckingBehavior.None }
+   };
+   uib.AppendBlock(tree);
+   _treeResults = _engine.ShowUI(uib);
 ```
 
 Regardless of which type of behavior you choose, if one or more child items of a tree view item are selected, the checkbox of the tree view item will be colored.
@@ -4273,7 +4280,7 @@ Using special characters:
 
 From now on, the Standalone Elasticsearch Cluster Installer tool will no longer automatically configure TLS and security.
 
-For instructions on how to install this manually, see [Configuring TLS and security in Elasticsearch](https://community.dataminer.services/documentation/configuring-tls-and-security-in-elasticsearch/) on DataMiner Dojo.
+For instructions on how to install this manually, see [Securing the Elasticsearch database](xref:Security_Elasticsearch).
 
 #### Standalone Cassandra Backup Tool \[ID_29005\] \[ID_30234\]
 
@@ -4281,7 +4288,7 @@ The StandaloneCassandraBackup.exe tool can be used by an administrator to take a
 
 From DataMiner 10.1.8 onwards, this tool will be available on each DMA server in the folder *C:\\Skyline DataMiner\\Tools*. As it only affects Cassandra files, it can be used on any DataMiner system regardless of version.
 
-For more information on this tool, see [Standalone Cassandra Backup Tool](https://community.dataminer.services/documentation/standalone-cassandra-backup-tool/) on DataMiner Dojo.
+For more information on this tool, see [Standalone Cassandra Backup Tool](xref:Standalone_Cassandra_Backup_Tool).
 
 #### New tool to transform a DMS with separate databases into a DMS with a shared Cassandra/Elasticsearch cluster \[ID_31005\] \[ID_31280\] \[ID_31421\] \[ID_31423\] \[ID_31424\] \[ID_31505\] \[ID_31788\]
 
@@ -4678,7 +4685,7 @@ When unsupported characters are found in TicketFieldDescriptors at the start of 
 - an entry listing the invalid TicketFieldDescriptors will be added to the SLMigrationManager.txt log file, and
 - the migration will be aborted.
 
-See also: <https://community.dataminer.services/documentation/migration-of-ticketing-data-from-cassandra-to-elasticsearch-fails/>
+See also: [Migration of Ticketing data from Cassandra to Elasticsearch fails](xref:KI_Migration_of_Ticketing_data_from_Cassandra_to_Elasticsearch_fails)
 
 #### Web apps: Notification when reconnect happens in background \[ID_30628\]
 
@@ -7231,7 +7238,7 @@ This new BPA test checks if the minimum required version is installed for all Dx
 
 It is available from DataMiner 10.2.8 and 10.2.0 [CU6] onwards. You can run it in System Center (on the *Agents > BPA* tab), and it also runs automatically when you upgrade to 10.2.0 [CU6]/10.2.8 or higher.
 
-For more information, see [DataMiner Dojo](https://community.dataminer.services/documentation/verify-cloud-dxm-version/).
+For more information, see [Verify Cloud DxM Version](xref:BPA_Verify_Cloud_DxM_Version).
 
 #### Enhanced error handling in case QActions fail due to a problem with SLScripting [ID_34010]
 

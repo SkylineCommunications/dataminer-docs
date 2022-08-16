@@ -236,41 +236,41 @@ For example:
 
 ```csharp
 UIBuilder uib = new UIBuilder();
-    uib.Title = "Treeview - Regular";
-    uib.RequireResponse = true;
-    uib.RowDefs = "*";
-    uib.ColumnDefs = "*";
-    UIBlockDefinition tree = new UIBlockDefinition();
-    tree.Type = UIBlockType.TreeView;
-    tree.Row = 0;
-    tree.Column = 0;
-    tree.DestVar = "treevar";
-    tree.TreeViewItems = new List<TreeViewItem>
-    {
-         new TreeViewItem("Slapp", "Slapp (Nexus)", false, new List<TreeViewItem>
+   uib.Title = "Treeview - Regular";
+   uib.RequireResponse = true;
+   uib.RowDefs = "*";
+   uib.ColumnDefs = "*";
+   UIBlockDefinition tree = new UIBlockDefinition();
+   tree.Type = UIBlockType.TreeView;
+   tree.Row = 0;
+   tree.Column = 0;
+   tree.DestVar = "treevar";
+   tree.TreeViewItems = new List<TreeViewItem>
+   {
+      new TreeViewItem("Slapp", "Slapp (Nexus)", false, new List<TreeViewItem>
+      {
+         new TreeViewItem("Nitro", "Nitro (Squad)", false, new List<TreeViewItem>
          {
-            new TreeViewItem("Nitro", "Nitro (Squad)", false, new List<TreeViewItem>
-            {
-                new TreeViewItem("Brian", "Brian (Member)", false) { CheckingBehavior = TreeViewItem.TreeViewItemCheckingBehavior.None },
-                new TreeViewItem("Gilles", "Gilles (Member)", true) { CheckingBehavior = TreeViewItem.TreeViewItemCheckingBehavior.None },
-                new TreeViewItem("KevinM", "KevinM  (Member)", true) { CheckingBehavior = TreeViewItem.TreeViewItemCheckingBehavior.None },
-                new TreeViewItem("KevinV", "KevinV  (Member)", false) { CheckingBehavior = TreeViewItem.TreeViewItemCheckingBehavior.None },
-                new TreeViewItem("Seba", "Seba  (Member)", false) { CheckingBehavior = TreeViewItem.TreeViewItemCheckingBehavior.None },
-                new TreeViewItem("Ward", "Ward  (Member)", true) { CheckingBehavior = TreeViewItem.TreeViewItemCheckingBehavior.None },
-            }) { CheckingBehavior = TreeViewItem.TreeViewItemCheckingBehavior.None },
-            new TreeViewItem("Nitro", "Nitro (Squad)", true, new List<TreeViewItem>
-            {
-                new TreeViewItem("Jordy", "Jordy (Member)") { CheckingBehavior = TreeViewItem.TreeViewItemCheckingBehavior.None },
-                new TreeViewItem("Jorge", "Jorge (Member)") { CheckingBehavior = TreeViewItem.TreeViewItemCheckingBehavior.None },
-                new TreeViewItem("Ronald", "Ronald (Member)") { CheckingBehavior = TreeViewItem.TreeViewItemCheckingBehavior.None },
-                new TreeViewItem("Victor", "Victor (Member)") { CheckingBehavior = TreeViewItem.TreeViewItemCheckingBehavior.None },
-                new TreeViewItem("Wim", "Wim (Member)") { CheckingBehavior = TreeViewItem.TreeViewItemCheckingBehavior.None },
-                new TreeViewItem("Quinten", "Quinten (Member)") { CheckingBehavior = TreeViewItem.TreeViewItemCheckingBehavior.None }
-            }) { CheckingBehavior = TreeViewItem.TreeViewItemCheckingBehavior.None }
-        }) { CheckingBehavior = TreeViewItem.TreeViewItemCheckingBehavior.None }
-    };
-    uib.AppendBlock(tree);
-    _treeResults = _engine.ShowUI(uib);
+            new TreeViewItem("Brian", "Brian (Member)", false) { CheckingBehavior = TreeViewItem.TreeViewItemCheckingBehavior.None },
+            new TreeViewItem("Gilles", "Gilles (Member)", true) { CheckingBehavior = TreeViewItem.TreeViewItemCheckingBehavior.None },
+            new TreeViewItem("KevinM", "KevinM  (Member)", true) { CheckingBehavior = TreeViewItem.TreeViewItemCheckingBehavior.None },
+            new TreeViewItem("KevinV", "KevinV  (Member)", false) { CheckingBehavior = TreeViewItem.TreeViewItemCheckingBehavior.None },
+            new TreeViewItem("Seba", "Seba  (Member)", false) { CheckingBehavior = TreeViewItem.TreeViewItemCheckingBehavior.None },
+            new TreeViewItem("Ward", "Ward  (Member)", true) { CheckingBehavior = TreeViewItem.TreeViewItemCheckingBehavior.None },
+         }) { CheckingBehavior = TreeViewItem.TreeViewItemCheckingBehavior.None },
+         new TreeViewItem("Nitro", "Nitro (Squad)", true, new List<TreeViewItem>
+         {
+            new TreeViewItem("Jordy", "Jordy (Member)") { CheckingBehavior = TreeViewItem.TreeViewItemCheckingBehavior.None },
+            new TreeViewItem("Jorge", "Jorge (Member)") { CheckingBehavior = TreeViewItem.TreeViewItemCheckingBehavior.None },
+            new TreeViewItem("Ronald", "Ronald (Member)") { CheckingBehavior = TreeViewItem.TreeViewItemCheckingBehavior.None },
+            new TreeViewItem("Victor", "Victor (Member)") { CheckingBehavior = TreeViewItem.TreeViewItemCheckingBehavior.None },
+            new TreeViewItem("Wim", "Wim (Member)") { CheckingBehavior = TreeViewItem.TreeViewItemCheckingBehavior.None },
+            new TreeViewItem("Quinten", "Quinten (Member)") { CheckingBehavior = TreeViewItem.TreeViewItemCheckingBehavior.None }
+         }) { CheckingBehavior = TreeViewItem.TreeViewItemCheckingBehavior.None }
+     }) { CheckingBehavior = TreeViewItem.TreeViewItemCheckingBehavior.None }
+   };
+   uib.AppendBlock(tree);
+   _treeResults = _engine.ShowUI(uib);
 ```
 
 #### Interactive Automation scripts: Input components now have a 'WantsOnFocusLost' property & other input component enhancements \[ID_30638\]

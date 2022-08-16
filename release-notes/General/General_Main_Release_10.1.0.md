@@ -499,7 +499,7 @@ In both the Install.xml and Config.xml scripts, an entry point has to be defined
 
 - In the Install.xml script, define the following entry point:
 
-    ```txt
+    ```csharp
     public class Script
     {
         [AutomationEntryPoint(AutomationEntryPointType.Types.InstallAppPackage)]
@@ -514,7 +514,7 @@ In both the Install.xml and Config.xml scripts, an entry point has to be defined
 
 - In the Config.xml script, define the following entry point:
 
-    ```txt
+    ```csharp
     public class Script
     {
         [AutomationEntryPoint(AutomationEntryPointType.Types.ConfigureApp)]
@@ -621,7 +621,7 @@ LogHelper should always be created within a using statement. See the following e
 
 Automation script example:
 
-```txt
+```csharp
 using(var logHelper = LogHelper.Create(engine.GetUserConnection()))
 {
     // ...
@@ -630,7 +630,7 @@ using(var logHelper = LogHelper.Create(engine.GetUserConnection()))
 
 QAction example:
 
-```txt
+```csharp
 using(var logHelper = LogHelper.Create(protocol.GetUserConnection()))
 {
     // ...
@@ -814,7 +814,7 @@ The NotifyDataMiner function “NT_DELETE_FOLDER” is now able to bypass the Da
 
 Example:
 
-```txt
+```csharp
 string folderName = "Configurations";
 bool bRecycle = true;
 protocol.NotifyDataMiner(182 /*NT_DELETE_FOLDER*/, folderName, bRecycle);
@@ -857,19 +857,19 @@ See the following example:
 
 Per matrix, the layout can then be overridden using the NotifyDataMiner call NT_UPDATE_PORTS. See the examples below:
 
-```txt
+```csharp
 NotifyDataMiner(128 /* NT_UPDATE_PORTS */,"10;[ELEMENT_ID];[MATRIX_PARAM_ID];[DMA_ID]","InputLeftOutputTop");
 ```
 
-```txt
+```csharp
 NotifyDataMiner(128 /* NT_UPDATE_PORTS */,"10;[ELEMENT_ID];[MATRIX_PARAM_ID];[DMA_ID]","InputTopOutputLeft");
 ```
 
-```txt
+```csharp
 NotifyDataMiner(128 /* NT_UPDATE_PORTS */,"10;[ELEMENT_ID];[MATRIX_PARAM_ID];[DMA_ID]",MatrixLayoutOptions.INPUT_LEFT_OUTPUT_TOP);
 ```
 
-```txt
+```csharp
 NotifyDataMiner(128 /* NT_UPDATE_PORTS */,"10;[ELEMENT_ID];[MATRIX_PARAM_ID];[DMA_ID]",MatrixLayoutOptions.INPUT_TOP_OUTPUT_LEFT);
 ```
 
@@ -955,13 +955,13 @@ In a QAction, it is now possible to add a message body to raw HTTP requests sent
 
 Old syntax:
 
-```txt
+```csharp
 object[] httpRequestInfo = new object[3] { "http", new string[6] { sVerb, sURL, sUser, sPass, httpHeaders, "200" }, new string[1] { httpCommand } };
 ```
 
 New syntax:
 
-```txt
+```csharp
 object[] httpRequestInfo = new object[3] { "http", new string[6] { sVerb, sURL, sUser, sPass, httpHeaders, "200" }, new object[1] { new string[2] { httpCommand, dataToSend } } };
 ```
 
@@ -1782,7 +1782,7 @@ The first time you open the start window, a task named “Update DataMiner Cube�
 | /UpdateClients | Checks, for all the DataMiner Systems to which you have connected in the last 100 days, whether a new Cube version is available. If so, it will immediately be downloaded. |
 | /UpdateLauncher | Checks for a newer version of DataMiner Cube on <https://dataminer.services>. If a newer version is found, it will immediately be downloaded and installed. If no newer version can be found on <https://dataminer.services>, then the 10 DataMiner Systems to which you connected last will be checked for a new version. |
 
-| The scheduled task is checked each time you open the start window, and is removed when you uninstall DataMiner Cube. Periodic updates can be suspended by disabling the task in Windows Task Scheduler. |
+The scheduled task is checked each time you open the start window, and is removed when you uninstall DataMiner Cube. Periodic updates can be suspended by disabling the task in Windows Task Scheduler.
 
 #### SNMP Managers: Polling IP address can now be added as a custom trap binding \[ID_26339\]
 
@@ -2065,7 +2065,7 @@ All icon names are now in capital case.
 
 A new exposer will now allow filters to check whether a certain key exists in a dictionary.
 
-```txt
+```csharp
 // Filter to check if a key exists
 var keyFilter = AlarmEventMessageExposers.PropertiesDict.KeyExists("KeyName").Equal(true);
 // Filter to check if a key does not exist
@@ -2075,14 +2075,7 @@ var keyFilter = AlarmEventMessageExposers.PropertiesDict.KeyExists("KeyName").Eq
 In Alarm Console hyperlinks, these filters can be used in the FilterElement property. See the following example.
 
 ```xml
-<HyperLink id="1"
-           version="2"
-           name="Issue_ID blank"
-           type="script"
-           alarmColumn="true"
-           menu="root/JIRA"
-           combineParameters="true"
-           filterElement=             "(AlarmEventMessage.PropertiesDict.KeyExists:Issue_ID[Bool] == False) OR             (AlarmEventMessage.PropertiesDict.Issue_ID[String]=='')">
+<HyperLink id="1" version="2" name="Issue_ID blank" type="script" alarmColumn="true" menu="root/JIRA" combineParameters="true" filterElement= "(AlarmEventMessage.PropertiesDict.KeyExists:Issue_ID[Bool] == False) OR (AlarmEventMessage.PropertiesDict.Issue_ID[String]=='')">
   Script:dummy script||||Tooltips|NoConfirmation,CloseWhenFinished
 </HyperLink>
 ```
@@ -2226,7 +2219,7 @@ From now on, you can use the page-level shape data field OnClosing to configure 
 
 In a shape data field of type OnClosing, specify a script (example: Script:MyScript), and make sure the script contains an instruction like the following one:
 
-```txt
+```csharp
 engine.AddScriptOutput(UIVariables.VisualOverview.ClosingWindow_Result, ClosingMode.Continue.ToString());
 ```
 
@@ -3147,7 +3140,7 @@ Up to now, the following engine objects could be used to manipulate the script o
 
 - subScriptOptions.GetScriptResult()
 
-    Returns a copy of the script output of the current script and, if the InheritScriptOutput option is set to “true”, the child scripts. For more information, see below.
+    Returns a copy of the script output of the current script and, if the *InheritScriptOutput* option is set to “true”, the child scripts. For more information, see below.
 
 From now on, you can also use the following new engine objects:
 
@@ -3165,7 +3158,7 @@ From now on, you can also use the following new engine objects:
 
 - engine.GetScriptResult()
 
-    Returns a copy of the script output of the current script and, if the InheritScriptOutput option is set to “true”, the child scripts. For more information, see below.
+    Returns a copy of the script output of the current script and, if the *InheritScriptOutput* option is set to “true”, the child scripts. For more information, see below.
 
 - engine.GetScriptOutput(string key)
 
@@ -3174,11 +3167,11 @@ From now on, you can also use the following new engine objects:
 > [!NOTE]
 > When a subscript fails or throws an exception, its script output will still be filled in.
 
-Also, a new InheritScriptOutput script option will now allow you to control whether a parent script will inherit the script output of its subscripts. Default value: true
+Also, a new *InheritScriptOutput* script option will now allow you to control whether a parent script will inherit the script output of its subscripts. Default value: true
 
 Example:
 
-```txt
+```csharp
 var scriptOptions = engine.PrepareSubScript("MyScript");
 scriptOptions.InheritScriptOutput = true;
 scriptOptions.StartScript();
@@ -3189,7 +3182,6 @@ scriptOptions.StartScript();
 Two new SLProtocol methods now allow QActions to execute Automation scripts:
 
 - ExecuteScript(string scriptName)
-
 - ExecuteScript(ExecuteScriptMessage message)
 
 Also, the Engine object has a new UserCookie property.
@@ -3204,7 +3196,7 @@ If you execute a script using this method, it will be executed with all script e
 
 Example:
 
-```txt
+```csharp
 public static void Run(SLProtocol protocol)
 {
     protocol.ExecuteScript("MyScriptName");
@@ -3219,9 +3211,9 @@ The script will be executed by the user who is performing the QAction. It will r
 
 Using this method to execute an Automation script is particularly useful when the script in question needs a dummy or protocol information to run.
 
-Code Example:
+Example:
 
-```txt
+```csharp
 ExecuteScriptMessage esm = new ExecuteScriptMessage("RT_AUTOMATION_ExecuteAutomationByProtocol_AutomationScriptCode")
 {
     Options = new SA(new[]
@@ -3248,7 +3240,7 @@ When you execute an Automation script using the “DEFER:FALSE” option, be awa
 
 ##### New property on Engine object: UserCookie
 
-```txt
+```csharp
 string Engine.UserCookie;
 ```
 
@@ -3315,7 +3307,7 @@ In a C# block of an Automation script, you can now link ReservationInstances to 
 
 See the following example:
 
-```txt
+```csharp
 // Create a ReservationInstanceID object
 var reservationInstanceId = new ReservationInstanceID(reservationInstance.ID);
 // Create a TicketLink using the static 'Create' method
@@ -3326,7 +3318,7 @@ ticket.AddTicketLink("KeyForThisLink", ticketLink);
 
 Note that you can use lists of TicketLink objects to retrieve a filtered list of tickets. See the following example:
 
-```txt
+```csharp
 // TicketLink filters are lists of TicketLink objects
 var ticketLinkFilter = new[] {ticketLink};
 // Use a list of TicketList objects to retrieve tickets by means of the 'GetTickets' method
@@ -3422,15 +3414,15 @@ By default, the DLL file will be uploaded to the C:\\Skyline DataMiner\\scripts\
 
 App packages can now be uninstalled using the new AppPackageHelper method UninstallApp.
 
-```txt
+```csharp
 /// <summary>
 /// Uninstalls the app with ID <paramref name="appId"/>
 ///
 /// <param name="appId">The ID of the app to be uninstalled.</param>
 /// <param name="force">
 ///    If true:
-///    - The app will be forcefully uninstalled, even if the uninstall script         fails.
-///    - If the uninstall script exits with an exception or could not be run,         no exceptions will be thrown.
+///    - The app will be forcefully uninstalled, even if the uninstall script fails.
+///    - If the uninstall script exits with an exception or could not be run, no exceptions will be thrown.
 /// </param>
 /// <exception cref="AppUninstallationFailedException">
 ///    This exception will be thrown in the following cases:
@@ -3452,7 +3444,7 @@ Inside every app package, an uninstall script named *uninstall.xml* should be a
 
 An uninstall script has to be triggered using the UninstallApp entrypoint (see below for an example). As soon as the uninstall script has finished, the installation folder of the app in question will be removed on all agents in the DMS.
 
-```txt
+```csharp
 [AutomationEntryPoint(AutomationEntryPointType.Types.UninstallApp)]
 public void Uninstall(Engine engine, AppUninstallContext context)
 {
@@ -3517,7 +3509,7 @@ To retrieve the results:
 
 Example:
 
-```txt
+```csharp
 {
    UIBuilder uib = new UIBuilder();
    uib.Title = "Treeview - default";
@@ -3810,7 +3802,7 @@ When you interact with the Ticketing Manager in scripts, keep the following chan
 
 - A new *TicketingHelper* is available that should be used to read, create, update and delete tickets, ticket field resolvers and ticket history in scripts. The existing *TicketingGatewayHelper* remains backwards compatible, but should not be used for new implementations or to update existing code. Below you can find an example of how to use this helper:
 
-    ```txt
+    ```csharp
     public void Run(Engine engine)
     {
         // Create the helper
@@ -4348,7 +4340,7 @@ From now on, an OnStartActionsFailureEvent will be executed when the start actio
 
 If you want to use this event to trigger an Automation script, then make sure to add a custom entry point method to that script. See the example below.
 
-```txt
+```csharp
 [AutomationEntryPoint(AutomationEntryPointType.Types.OnSrmStartActionsFailure)]
 public void OnSrmStartActionsFailure(Engine engine, List<StartActionsFailureErrorData> errorData)
 {
@@ -4373,7 +4365,7 @@ A StartActionsFailureErrorData instance contains an *ErrorReason*, which explain
 
 The following example shows how to assign an Automation script to the OnStartActionsFailureEvent.
 
-```txt
+```csharp
 reservationInstance.OnStartActionsFailureEvent = new ReservationEvent("OnStartActionsFailureEvent", $"Script:StartActionsFailedScript");
 ```
 
@@ -4505,7 +4497,7 @@ A HistoryChange records contains the following fields:
 
 Using the HistoryHelper#Resources API you can read all the history objects for resources. See the following example:
 
-```txt
+```csharp
 ResourceID myResourceID = …
 var query =HistoryChangeExposers.SubjectID.Equal(someResourceID.ToFileFriendlyString()).OrderBy(HistoryChangeExposers.Time);
 ```
@@ -4633,7 +4625,7 @@ When a virtual function resource is bound to a physical device element, that bin
 
 The ResourceManagerHelper now contains a new method that allows you to simultaneously execute multiple eligible resource queries.
 
-```txt
+```csharp
 /// <summary>
 /// Returns the eligible resources for all given contexts. A result can be matched
 /// with its context by matching the <see cref="EligibleResourceResult.ForContextId"/>
@@ -5469,7 +5461,7 @@ In the DataMiner Maps application, KML layers will now always be placed below ot
 
 The Monitoring app and Dashboards app now support the use of embedded trend graphs in Visual Overview. By default the trend graphs will display the last 24 hours of trending. In a dashboard, the colors of the graph will depend on the theme settings of the dashboard.
 
-#### DataMiner Cube start window: Popup windows can be closed by pressing ESC & main window title changed to “DataMiner Cube” \[ID_27582\]
+#### DataMiner Cube start window: Popup windows can be closed by pressing ESC & main window title changed to 'DataMiner Cube' \[ID_27582\]
 
 In DataMiner Cube start window, popup windows can now be closed by pressing the ESC button.
 
@@ -7486,7 +7478,7 @@ The preprocessor directive “#define ALARM_SQUASHING” will now automatically 
 
 In QActions, all code related to alarm squashing should be enclosed as follows:
 
-```txt
+```csharp
 #if ALARM_SQUASHING
     // Code specific for alarm squashing (DataMiner 10.1.0 and later)
 #else
@@ -7510,7 +7502,7 @@ The preprocessor directive “#define ALARM_SQUASHING” will now automatically 
 
 In C# blocks, all code related to alarm squashing should be enclosed as follows:
 
-```txt
+```csharp
 #if ALARM_SQUASHING
     // Code specific for alarm squashing (DataMiner 10.1.0 and later)
 #else
@@ -7544,7 +7536,7 @@ When you take a backup of a DataMiner Agent, you can opt to also take a backup o
 
 From now on, even when a DataMiner backup includes an Elasticsearch backup, the latter will not be automatically restored when the DataMiner backup is restored. Restoring an Elasticsearch backup will now have to be done using the Standalone Elastic Backup tool.
 
-For more information on the Standalone Elastic Backup tool, see [Standalone Elastic Backup Tool](https://community.dataminer.services/documentation/standalone-elastic-backup-tool/) on DataMiner Dojo.
+For more information on the Standalone Elastic Backup tool, see [Standalone Elastic Backup Tool](xref:Standalone_Elastic_Backup_Tool).
 
 #### DataMiner Cube - Surveyor: Enhanced performance when loading services \[ID_29715\]
 
@@ -8707,7 +8699,7 @@ In an interactive Automation script that is used in Dashboards, you can now conf
 
 For example:
 
-```txt
+```csharp
 UIBlockDefinition uibDef = new UIBlockDefinition();
 uibDef.Type = UIBlockType.FileSelector;
 ...
@@ -8779,7 +8771,10 @@ From now on, the FieldName of a TicketFieldDescriptor has to meet the following 
 When, in the *Users/Groups* section of *System Center*, you hover over the *Modules \> System configuration \> Security \> Specific \> Limited administrator* permission, a tooltip gives you more information about that permission. That tooltip now contains the following updated text:
 
 ```txt
-* Read-only access on all groups * Read-only access to users in your groups * Create new DataMiner users * Editing your own user properties
+* Read-only access on all groups 
+* Read-only access to users in your groups 
+* Create new DataMiner users 
+* Editing your own user properties
 ```
 
 ### CU8 fixes
@@ -9635,7 +9630,7 @@ When SLAnalytics was stopped while it was writing to the database, in some rare 
 
 When the Ticket exposer was used with a filter like the one below, in some cases, incorrect results would be returned:
 
-```txt
+```csharp
 var query = TicketingExposers.Ticket.Contains(@"7999").ToQuery();
 ```
 
@@ -10595,7 +10590,7 @@ Up to now, serializing/deserializing would not work when creating a filter that 
 
 Example:
 
-```txt
+```csharp
 AlarmEventMessageExposers.PropertiesDict.DictStringField($"Booking Manager Element ID").Matches(".+")
 ```
 

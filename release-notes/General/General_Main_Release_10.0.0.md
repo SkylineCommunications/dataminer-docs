@@ -2879,8 +2879,8 @@ This method returns all masked object trees that match the specified filter. If 
 
 In the following example, a filter is passed to check whether the view with ID 2 is masked.
 
-```txt
-var managedFilter = new ManagedFilter<DMAObjectRefTree,IDMAObjectRef>                    (DMAObjectRefTreeExposers.Data,Comparer.Equals,new ViewID(2),null);
+```csharp
+var managedFilter = new ManagedFilter<DMAObjectRefTree,IDMAObjectRef> (DMAObjectRefTreeExposers.Data,Comparer.Equals,new ViewID(2),null);
 ```
 
 **GetMaskedDMAObjectRefTrees(managedFilter);**
@@ -9623,7 +9623,7 @@ When you take a backup of a DataMiner Agent, you can opt to also take a backup o
 
 From now on, even when a DataMiner backup includes an Elasticsearch backup, the latter will not be automatically restored when the DataMiner backup is restored. Restoring an Elasticsearch backup will now have to be done using the Standalone Elastic Backup tool.
 
-For more information on the Standalone Elastic Backup tool, see [Standalone Elastic Backup Tool](https://community.dataminer.services/documentation/standalone-elastic-backup-tool/) on DataMiner Dojo.
+For more information on the Standalone Elastic Backup tool, see [Standalone Elastic Backup Tool](xref:Standalone_Elastic_Backup_Tool).
 
 #### SLWatchdog: Notification enhancements \[ID_29697\]
 
@@ -10385,7 +10385,10 @@ A number of enhancements will now allow the SLDataGateway process to handle Cass
 When, in the *Users/Groups* section of *System Center*, you hover over the *Modules \> System configuration \> Security \> Specific \> Limited administrator* permission, a tooltip gives you more information about that permission. That tooltip now contains the following updated text:
 
 ```txt
-* Read-only access on all groups * Read-only access to users in your groups * Create new DataMiner users * Editing your own user properties
+* Read-only access on all groups 
+* Read-only access to users in your groups 
+* Create new DataMiner users 
+* Editing your own user properties
 ```
 
 ### CU19 fixes

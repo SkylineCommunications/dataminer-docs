@@ -37,7 +37,7 @@ This new BPA test checks if the minimum required version is installed for all Dx
 
 It is available from DataMiner 10.2.8 and 10.2.0 \[CU6\] onwards. You can run it in System Center (on the *Agents \> BPA* tab), and it also runs automatically when you upgrade to 10.2.0 \[CU6\]/10.2.8 or higher.
 
-For more information, see [DataMiner Dojo](https://community.dataminer.services/documentation/verify-cloud-dxm-version/).
+For more information, see [Verify Cloud DxM Version](xref:BPA_Verify_Cloud_DxM_Version).
 
 #### DataMiner upgrade: When VerifyClusterPorts prerequisite fails the user will now receive more information on why it failed \[ID_33979\]
 

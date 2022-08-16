@@ -21,17 +21,14 @@ The following information will be added to the information events.
 
 - When a user changes the mode of a redundancy group, one of the following strings will now be added to the information event with parameter description “Edited”:
 
--*RDG By Administrator: Set Mode to Automatic switching*
-
--*RDG By Administrator: Set Mode to Manual switchback*
-
--*RDG By Administrator: Set Mode to Manual switching*
+  - *RDG By Administrator: Set Mode to Automatic switching*
+  - *RDG By Administrator: Set Mode to Manual switchback*
+  - *RDG By Administrator: Set Mode to Manual switching*
 
 - When a user sets an element to maintenance mode or takes an element out of maintenance mode, one of the following strings will now be added to the information event with parameter description “Edited”:
 
--*RDG By Administrator: Switch to maintenance mode on \<element>*
-
--*RDG By Administrator: Switch back from maintenance mode on element \<element>*
+  - *RDG By Administrator: Switch to maintenance mode on \<element>*
+  - *RDG By Administrator: Switch back from maintenance mode on element \<element>*
 
 - When a switch is performed, an additional information event with parameter description “Redundancy switch” will now be generated to indicate the cause of the switch. In case of a manual switch, the information event will mention the user and in case of an automatic switch, it will mention the trigger ID.
 
@@ -125,7 +122,7 @@ To configure DataMiner to automatically (a) create users authenticated by Azure 
     ```xml
     <DataMiner ...>
       ...
-      <ExternalAuthentication      type="SAML"      ipMetadata="[Path/URL of the identity provider’s metadata file]"      spMetadata="[Path/URL of the service provider’s metadata file]"      timeout="300">
+     <ExternalAuthentication type="SAML" ipMetadata="[Path/URL of the identity provider’s metadata file]" spMetadata="[Path/URL of the service provider’s metadata file]" timeout="300">
         <AutomaticUserCreation enabled="true">
           <EmailClaim>http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress</EmailClaim>
           <Givenname>http://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname</Givenname>

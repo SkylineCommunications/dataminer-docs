@@ -171,14 +171,7 @@ var keyFilter = AlarmEventMessageExposers.PropertiesDict.KeyExists("KeyName").Eq
 In Alarm Console hyperlinks, these filters can be used in the FilterElement property. See the following example.
 
 ```xml
-<HyperLink id="1"
-           version="2"
-           name="Issue_ID blank"
-           type="script"
-           alarmColumn="true"
-           menu="root/JIRA"
-           combineParameters="true"
-           filterElement=             "(AlarmEventMessage.PropertiesDict.KeyExists:Issue_ID[Bool] == False) OR             (AlarmEventMessage.PropertiesDict.Issue_ID[String]=='')">
+<HyperLink id="1" version="2" name="Issue_ID blank" type="script" alarmColumn="true" menu="root/JIRA" combineParameters="true" filterElement= "(AlarmEventMessage.PropertiesDict.KeyExists:Issue_ID[Bool] == False) OR (AlarmEventMessage.PropertiesDict.Issue_ID[String]=='')">
   Script:dummy script||||Tooltips|NoConfirmation,CloseWhenFinished
 </HyperLink>
 ```
