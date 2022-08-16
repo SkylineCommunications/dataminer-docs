@@ -10846,6 +10846,12 @@ In some rare cases, an error could occur in the SLSNMPManager process due to an 
 
 When a stopped element was deleted, logger tables associated with that element would incorrectly not be deleted if created with `options="database"`.
 
+#### Navigation issue in visual overview with several tab pages and shapes linked to EPM object [ID_34122]
+
+<!-- Main Release Version 10.1.0 [CU18]/10.2.0 [CU6] - Feature Release Version 10.2.9 -->
+
+In a visual overview with several tab pages and shapes linked to an EPM object, if you clicked a shape that opened an EPM object, then clicked the Back button, and then clicked a shape to navigate to another tab page in the same visual overview, this did not work.
+
 #### 'Clear all' button not available for EPM topology chain [ID_34133]
 
 <!-- Main Release Version 10.1.0 [CU18]/10.2.0 [CU6] - Feature Release Version 10.2.9 -->

@@ -7,9 +7,6 @@ uid: General_Feature_Release_10.2.9
 > [!IMPORTANT]
 > We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
 
-> [!NOTE]
-> For known issues with this version, refer to [Known issues](xref:Known_issues).
-
 > [!TIP]
 > For release notes related to DataMiner Cube, see [DataMiner Cube 10.2.9](xref:Cube_Feature_Release_10.2.9).
 
@@ -90,9 +87,11 @@ The *Line & area chart* component is now able to visualize GQI query results as 
 
 1. In the component settings tab:
 
-    1. Select the query.
-    1. Select the X axis column.
-    1. Select the Y axis column.
+   1. Select the query.
+
+   1. Select the X axis column.
+
+   1. Select the Y axis column.
 
 1. In the component layout, adapt the style of the chart.
 
@@ -106,6 +105,7 @@ The *Line & area chart* component is now able to visualize GQI query results as 
 When Azure Active Directory is used as an identity provider, DataMiner Cube will now show:
 
 - a notice when the secret will expire in less than a week, and
+
 - an error when the secret has expired.
 
 Also, more detailed entries will now be added to the logs when setup errors have been detected (missing permissions, missing configurations, expired secrets, etc.).

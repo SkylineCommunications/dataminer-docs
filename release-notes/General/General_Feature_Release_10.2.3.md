@@ -220,21 +220,22 @@ To do so, add a shape data field of type TextStyle, and set its value to “Text
 
 ##### TextWrapping options
 
-| Option | Behavior |
-|--|--|
-| NoWrap | The text will not wrap onto a new line, unless one was explicitly configured with a line break. Text that exceeds the bounds of the shape width and/or height will not be shown. |
-| Wrap | The text will automatically be wrapped onto new lines when the width of the shape is exceeded. The text past the boundaries of the shape height will not be shown. |
-| WrapWithOverflow | The text will be shown as before. (default option) |
+- **NoWrap**: The text will not wrap onto a new line, unless one was explicitly configured with a line break. Text that exceeds the bounds of the shape width and/or height will not be shown.
+
+- **Wrap**: The text will automatically be wrapped onto new lines when the width of the shape is exceeded. The text past the boundaries of the shape height will not be shown.
+
+- **WrapWithOverflow**: The text will be shown as before (default option).
 
 ##### TextTrimming options
 
-| Option | Description |
-|--|--|
-| CharacterEllipsis | The text will be cut off a bit earlier than when TextTrimming is set to “None”, and “...” will be added to indicate that the text is longer than what fits in the shape. |
-| WordEllipsis | The text will be cut off at the nearest full word, and “...” will be added to indicate that the text is longer than what fits in the shape. |
-| None | The text will be cut off when necessary. (default option) |
+- **CharacterEllipsis**: The text will be cut off a bit earlier than when TextTrimming is set to “None”, and “...” will be added to indicate that the text is longer than what fits in the shape.
 
-Setting TextTrimming to either “CharacterEllipsis” or “WordEllipsis” will have no effect when TextWrapping is set to its default value (i.e. “WrapWithOverflow”).
+- **WordEllipsis**: The text will be cut off at the nearest full word, and “...” will be added to indicate that the text is longer than what fits in the shape.
+
+- **None**: The text will be cut off when necessary (default option).
+
+> [!NOTE]
+> Setting TextTrimming to either “CharacterEllipsis” or “WordEllipsis” will have no effect when TextWrapping is set to its default value (i.e. “WrapWithOverflow”).
 
 ### DMS Reports & Dashboards
 

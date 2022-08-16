@@ -7540,6 +7540,12 @@ In some cases, an exception could be thrown when removing a query that was used 
 
 From now on, when you try to remove a query that is used as "start from" query, a confirmation box will appear, asking you to confirm the removal of that query.
 
+#### Navigation issue in visual overview with several tab pages and shapes linked to EPM object [ID_34122]
+
+<!-- Main Release Version 10.1.0 [CU18]/10.2.0 [CU6] - Feature Release Version 10.2.9 -->
+
+In a visual overview with several tab pages and shapes linked to an EPM object, if you clicked a shape that opened an EPM object, then clicked the Back button, and then clicked a shape to navigate to another tab page in the same visual overview, this did not work.
+
 #### 'Clear all' button not available for EPM topology chain [ID_34133]
 
 <!-- Main Release Version 10.1.0 [CU18]/10.2.0 [CU6] - Feature Release Version 10.2.9 -->

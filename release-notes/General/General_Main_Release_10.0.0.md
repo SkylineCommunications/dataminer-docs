@@ -3170,21 +3170,19 @@ When you open the new *Services* tab, it lists all services in a dynamic, filte
 ##### Creating a new column configuration
 
 1. Right-click in the list header (or click the list’s hamburger menu), select *Save column configuration as...*, enter the name of the new configuration, and click *OK*.
+1. Right-click in the list header (or click the list’s hamburger menu), select *Load column configuration*, and select the configuration you created in step 1.
+1. Right-click in the list header, and do the following:
 
-2. Right-click in the list header (or click the list’s hamburger menu), select *Load column configuration*, and select the configuration you created in step 1.
+    - add or remove column,
 
-3. Right-click in the list header, and do the following:
-
-    - add or remove columns,
     - change the text alignment inside columns, and
+
     - rename columns.
 
     > [!NOTE]
-    > When you click *Add/remove column*, you can also select *More...*
-    >
-    > This will open a *Choose details* window that will allow you to show/hide columns, move columns up/down, etc. See below for more information.
+    > When you click *Add/remove column*, you can also select *More*.  This will open a *Choose details* window that will allow you to show/hide columns, move columns up/down, etc. See below for more information.
 
-4. Right-click in the list header (or click the list’s hamburger menu), select *Save current column configuration*.
+1. Right-click in the list header (or click the list’s hamburger menu), select *Save current column configuration*.
 
 ##### Configuring columns using the Choose details window
 
@@ -3195,8 +3193,11 @@ When you right-click the list header, and select *Add/remove column \> More*, th
 - Set the column type of a column (which, by default, is set to “Text”):
 
   - Set the column type of a column containing IDs to “Alarm icon” to display the IDs as alarm icons.
+
   - Set the column type of a column to “Custom icon” to have its contents replaced by icons.
+
   - Set the column type of a column to “Color” to have the cells in that column visualized as colored blocks.
+
   - Set the column type of a column to “Date” to have its contents displayed as date values.
 
 - In the *Filter by type* section, indicate which type of columns you want to choose from (services, properties and/or service profiles). It is also possible to add additional service profile columns.
@@ -3206,6 +3207,7 @@ When you right-click the list header, and select *Add/remove column \> More*, th
 In the *Apps* tab of the DataMiner Cube navigation pane, you can now find the following new applications:
 
 - Resources
+
 - Bookings
 
 > [!NOTE]
@@ -3232,6 +3234,7 @@ In profile parameters and resources, you can now define so-called capabilities. 
 - Every resource usage definition in a booking instance or service booking instance can now contain a list of resource capability usages, each containing
 
   - a link to the profile parameter that defines the capability, and
+
   - a required capability value (a single required discreet value or a single required value in the range)
 
 - When you schedule a booking, the ResourceCapabilityUsage data of the booking will be checked against the capabilities of the resource. If the resource does not have the requested capabilities, you will receive an error.
@@ -3239,6 +3242,7 @@ In profile parameters and resources, you can now define so-called capabilities. 
 - When a Resource has a ResourceCapability using a particular ProfileParameter, and that Resource is used in a scheduled ReservationInstance, from now on, it will not be allowed to delete the ProfileParameter in question. Updating a ProfileParameter of category “Capability” is always allowed, except:
 
   - deleting capabilities that are in use, and
+
   - deleting the capability category if it is being used by resources linked to scheduled bookings.
 
   The same rule applies to ProfileParameters of category “Capacity”. Updating such a parameter is always allowed, except:
@@ -3266,10 +3270,13 @@ The following changes have been implemented to profile parameters, profile insta
   - For a profile parameter of category “Capacity”, a unit should be defined. The profile parameter can have either a CapacityUsageParameterValue or a CapacityParameterValue value: the CapacityUsageParameterValue contains the required capacity for a booking, while the CapacityParameterValue contains the provided capacity of a resource. The default capacity value can be specified in the profile parameter itself.
 
 - A profile instance that contains a profile parameter of category “Capacity” can now also contain a default capacity value for that parameter.
+
 - A (function) resource now has a list of resource capacities, each referring to a profile parameter of category “Capacity”.
+
 - Every resource usage definition in a booking instance or service booking instance can now contain a list of resource capacity usages, each containing
 
   - a link to the profile parameter that defines the capacity, and
+
   - a required capacity value (a single required discreet value or a single required value in the range)
 
 - When you schedule a booking, the ResourceCapabilityUsage data of the booking will be checked against the capabilities of the resource. If the resource does not have the requested capabilities, you will receive an error.
@@ -3280,6 +3287,7 @@ The following changes have been implemented to profile parameters, profile insta
 - When a Resource has a ResourceCapability using a particular ProfileParameter, and that Resource is used in a scheduled ReservationInstance, from now on, it will not be allowed to delete the ProfileParameter in question. Updating a ProfileParameter of category “Capability” is always allowed, except:
 
   - deleting capabilities that are in use, and
+
   - deleting the capability category if it is being used by resources linked to scheduled bookings.
 
   The same rule applies to ProfileParameters of category “Capacity”. Updating such a parameter is always allowed, except:
@@ -7816,7 +7824,7 @@ When you downgraded a DataMiner Agent that came with the Cube launcher tool (i.e
 
 In some cases, if refreshing LDAP took a long time, it could occur that this blocked the SLDMS notification thread.
 
-#### “Authentication took too long” error added to SLNet logging when trying to log on to DataMiner using an incorrect user name and password \[ID_26586\]
+#### 'Authentication took too long' error added to SLNet logging when trying to log on to DataMiner using an incorrect user name and password \[ID_26586\]
 
 When you tried to log on to DataMiner using an incorrect user name or password, in some cases, an “Authentication took too long” error would be added to the SLNet logging after about 30 seconds.
 
@@ -7917,7 +7925,7 @@ In some cases, it would no longer be possible to click inside a scrollbar track 
 
 The SLHelper process keeps a set of actions in memory to be able to track what action should be taken when a Visio shape is clicked. In some cases, that set of actions would never get cleared and new actions would be added each time a Visio file was updated.
 
-#### DataMiner Cube: No context menu would appear when right-clicking a suggestion in the header search box after right-clicking the “Advanced search” button \[ID_27166\]
+#### DataMiner Cube: No context menu would appear when right-clicking a suggestion in the header search box after right-clicking the 'Advanced search' button \[ID_27166\]
 
 When, in the Cube header bar, you first right-clicked the *Advanced search for...* option at the bottom of the suggestions list, and then right-clicked any of the listed suggestions, no context menu would appear.
 
@@ -10031,7 +10039,7 @@ When the SLWatchdog process is started, it checks the VersionHistory.txt file to
 
 Up to now, when SLNet updated the DataMiner version in VersionHistory.txt while SLWatchdog was running, the latter would not be aware of that change until it was restarted. From now on, SLNet will notify SLWatchdog when it has updated VersionHistory.txt.
 
-#### DataMiner Cube: Links to deprecated DCP platform replaced by links to the new https://dataminer.services platform \[ID_30430\]
+#### DataMiner Cube: Links to deprecated DCP platform replaced by links to the new dataminer.services platform \[ID_30430\]
 
 Throughout the Cube UI, all links to the deprecated DataMiner Collaboration Platform have been replaced by links to the new <https://dataminer.services> platform.
 

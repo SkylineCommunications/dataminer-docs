@@ -7,9 +7,6 @@ uid: Cube_Main_Release_10.3.0
 > [!IMPORTANT]
 > We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
 
-> [!NOTE]
-> For known issues with this version, refer to [Known issues](xref:Known_issues).
-
 ## Highlights
 
 #### Trending: New'Custom' button allows you to specify a custom X-axis range \[ID_31705\]
@@ -34,21 +31,22 @@ To do so, add a shape data field of type TextStyle, and set its value to “Text
 
 ##### TextWrapping options
 
-| Option | Behavior |
-|--|--|
-| NoWrap | The text will not wrap onto a new line, unless one was explicitly configured with a line break. Text that exceeds the bounds of the shape width and/or height will not be shown. |
-| Wrap | The text will automatically be wrapped onto new lines when the width of the shape is exceeded. The text past the boundaries of the shape height will not be shown. |
-| WrapWithOverflow | The text will be shown as before. (default option) |
+- **NoWrap**: The text will not wrap onto a new line, unless one was explicitly configured with a line break. Text that exceeds the bounds of the shape width and/or height will not be shown.
+
+- **Wrap**: The text will automatically be wrapped onto new lines when the width of the shape is exceeded. The text past the boundaries of the shape height will not be shown.
+
+- **WrapWithOverflow**: The text will be shown as before (default option).
 
 ##### TextTrimming options
 
-| Option | Description |
-|--|--|
-| CharacterEllipsis | The text will be cut off a bit earlier than when TextTrimming is set to “None”, and “...” will be added to indicate that the text is longer than what fits in the shape. |
-| WordEllipsis | The text will be cut off at the nearest full word, and “...” will be added to indicate that the text is longer than what fits in the shape. |
-| None | The text will be cut off when necessary. (default option) |
+- **CharacterEllipsis**: The text will be cut off a bit earlier than when TextTrimming is set to “None”, and “...” will be added to indicate that the text is longer than what fits in the shape.
 
-Setting TextTrimming to either “CharacterEllipsis” or “WordEllipsis” will have no effect when TextWrapping is set to its default value (i.e. “WrapWithOverflow”).
+- **WordEllipsis**: The text will be cut off at the nearest full word, and “...” will be added to indicate that the text is longer than what fits in the shape.
+
+- **None**: The text will be cut off when necessary (default option).
+
+> [!NOTE]
+> Setting TextTrimming to either “CharacterEllipsis” or “WordEllipsis” will have no effect when TextWrapping is set to its default value (i.e. “WrapWithOverflow”).
 
 #### Visual Overview - Edit in Visio: New options 'Add theming' and 'Add pretty hover' \[ID_32660\]
 
@@ -74,7 +72,9 @@ When, in DataMiner Cube, you right-click a visual overview and select “Edit in
 When configuring a service definition, you now have to specify its type:
 
 - SRM (default type)
+
 - Skyline Process Automation
+
 - Custom Process Automation
 
 In Visual Overview, this type can be visualized by means of a \[ServiceDefinition:...\] placeholder. See the following example, in which xxx should be replaced by a service definition GUID.
@@ -94,9 +94,9 @@ You can now configure a shape to set a duration of type TimeSpan in a session va
 
 To do so, add the following shape data fields to the shape:
 
-- a shape data field of type SetVar, of which the value is set to the name of the session variable, and
+- a shape data field of type **SetVar**, of which the value is set to the name of the session variable, and
 
-- a shape data field of type SetVarOptions, of which the value is set to “Control=Duration”, followed by the necessary options. For a list of possible options, see below.
+- a shape data field of type **SetVarOptions**, of which the value is set to “Control=Duration”, followed by the necessary options. For a list of possible options, see below.
 
 | Shape data field | Value                                       |
 |------------------|---------------------------------------------|
@@ -146,6 +146,7 @@ When, in the Alarm Console, you enable the “Automatic incident tracking” opt
 - When you right-click an alarm that is not part of any alarm group, you will be able to click the “Add to incident” option. If you do so, a window will appear, asking you
 
   - to create a new incident (i.e. a new alarm group) and add the alarm to it, or
+
   - to add the alarm to an existing alarm group.
 
 - When you right-click an alarm that is already part of an alarm group, you will be able to click the “Remove from incident” option. If you do so, the alarm will be removed from the alarm group of which it was a part.
@@ -196,19 +197,31 @@ When you embed the Services module in Visio using the shape data field *Componen
 If you use the *interface=definitions* component option described above, you can now also combine a *Filter* shape data field with the *ServiceManager* component. This allows you to filter the service definitions in the list, in the same way as in a *ListView* component. The following properties are supported for the filter:
 
 - Name (String)
+
 - Description (String)
+
 - IsTemplate (Boolean)
+
 - ID (GUID)
+
 - CreatedBy (String)
+
 - CreatedAt (DateTime)
+
 - LastModifiedBy (String)
+
 - LastModified (DateTime)
+
 - NodeFunctionIDs (List\<Guid>)
+
 - Properties (IDictionary\<string, dynamic>)
+
 - ServiceDefinitionType (Int): This is an enum with the following possible values:
 
   - 0 = Default (representing the type "SRM" in Cube)
+
   - 1 = ProcessAutomation (representing the type "Skyline Process Automation" in Cube)
+
   - 2 = CustomProcessAutomation (representing the type "Custom Process Automation" in Cube)
 
 Examples:
@@ -230,6 +243,7 @@ Examples:
 The following options can now also be specified in the *ComponentOptions* shape data field for a *ServiceManager* component:
 
 - **HideAddButton=**: If this option is set to "true", no options to add a service definition will be displayed.
+
 - **HideDeleteButton=**: If this option is set to "true", no options to delete a service definition will be displayed.
 
 #### Desktop app - Start window: New 'HTTP or HTTPS' setting \[ID_33289\]
@@ -254,7 +268,9 @@ Example of how to add both a *Refresh* button and a *Sort* button:
 1. Create three shapes and group them:
 
    - the first shape will contain the table,
+
    - the second shape will contain the *Refresh* button, and
+
    - the third shape will contain the *Sort* button.
 
 1. Add the following shape data field to the shape that has to contain the table:
@@ -294,6 +310,7 @@ In the Alarm Console, it is now possible to edit incidents (i.e. alarm groups) u
 When you open the side panel and select an incident, a *Drag-and-drop editing* button will appear. Clicking that button will freeze both the side panel and the alarm tab and will allow you to
 
 - add alarms to the incident by dragging them from the Alarm Console onto the side panel, and
+
 - remove alarms from the incident by clicking the “X” next to the base alarm.
 
 When you are finished editing the incident, click *Apply* to apply your changes and unfreeze the side panel.
@@ -630,6 +647,7 @@ From now on, in the Alarm Console, you will be able to manually create incident 
 - When you right-click an alarm that is not part of any alarm group, you will be able to click the “Add to incident” option. If you do so, a window\* will appear, asking you
 
   - to create a new incident (i.e. a new alarm group) and add the alarm to it, or
+
   - to add the alarm to an existing alarm group.
 
 These manually created groups will always be visible in active alarm tabs, even when the “Automatic incident tracking” option is disabled.
@@ -666,8 +684,8 @@ If you right-click a manually created incident, you will also be able to select 
 From DataMiner 10.0.3 onwards, you can configure an alarm template so that alarms are generated instead of suggestion events when anomalies are detected for specific parameters. From now on, you can also enable this for flatline changes.
 
 1. Click the cogwheel button in the top-right corner of the alarm template editor.
-2. Select the option *Advanced configuration of anomaly detection*. Four extra columns will be displayed in the template editor.
-3. In the *Flatline monitor* column, click the toggle button to enable or disable alarms for flatline changes.
+1. Select the option *Advanced configuration of anomaly detection*. Four extra columns will be displayed in the template editor.
+1. In the *Flatline monitor* column, click the toggle button to enable or disable alarms for flatline changes.
 
 #### Alarm Console: Second-generation hyperlinks of type 'openview', 'openservice', 'openelement' and 'openparameter' now support '\[PROPERTY:\]' keywords \[ID_33166\]
 
@@ -693,6 +711,7 @@ For example, a hyperlink of type “openelement” could contain the following c
 In the Alarm Console, it is now possible to assign tickets to incidents (alarm groups).
 
 - To assign a ticket to an incident, right-click the incident (alarm group) and select *Ticket \> New*.
+
 - To view a ticket assigned to an incident, right-click the incident (alarm group), select *Ticket*, and then select the ticket you want to view.
 
 #### DataMiner Cube: Start window enhancements \[ID_33219\]
@@ -704,11 +723,13 @@ A number of enhancements have been made to the start window of the DataMiner Cub
 - Settings menu (cogwheel icon in bottom-right corner)
 
   - New *About* box with version information.
+
   - All menu items now have icons in front of them.
 
 - When you right-click an agent,
 
   - you can now click *Open in browser* to connect to that agent using a browser version of Cube, and
+
   - all context menu items now have icons in front of them.
 
 - When agents/clusters are arranged in named groups, the context menu of the DataMiner Cube system tray icon will now contain submenus per named group.
@@ -839,8 +860,8 @@ In the timeline, the context menu will no longer open automatically after select
 This change in behavior will now allow you to trigger a script by clicking an action button instead of selecting an option in the context menu of the timeline. In other words, you will now be able to proceed as follows:
 
 1. Select a resource band.
-2. Select a time range.
-3. Click an action button.
+1. Select a time range.
+1. Click an action button.
 
 The SelectedTimeRange variable will now be cleared when the time selection is cleared (i.e. when it is no longer visible/available). Up to now, this variable would only be cleared when the selection was changed.
 

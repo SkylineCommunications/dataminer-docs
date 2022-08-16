@@ -7,9 +7,6 @@ uid: General_Main_Release_10.3.0
 > [!IMPORTANT]
 > We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
 
-> [!NOTE]
-> For known issues with this version, refer to [Known issues](xref:Known_issues).
-
 > [!TIP]
 > For release notes related to DataMiner Cube, see [DataMiner Cube 10.3.0](xref:Cube_Main_Release_10.3.0).
 
@@ -257,6 +254,7 @@ Process:
 1. The domHelper.DomInstances.ExecuteAction() method replies immediately.
 
    - Its TraceData contains a DomActionInfo object in which type is set to DomActionInfo.Type.ScriptExecutionId.
+
    - The info object has an ExecutionId property that contains the execution ID of the script that was triggered by the DOM action.
 
 1. The client sends a ScriptControlMessage of type Launch using the script ID that was returned and will then receive ScriptProgressEventMessages.
@@ -372,6 +370,7 @@ See the following example:
 - Connection type: DirectConnection
 
   - No index defined: The data will be pushed via the direct connection and the ID will be assigned by the database. Updating the data will not be possible in this case.
+
   - Index defined: The data will be pushed via the direct connection and the ID will be assigned by the column template that is being sent via the direct connection by means of an “InitializeWriteAction”.
 
   > [!NOTE]
@@ -380,11 +379,13 @@ See the following example:
 - Connection type: SLProtocol
 
   - No index defined: Currently not supported.
+
   - Index defined: Default logger table configuration.
 
 - No connection type defined
 
   - No index defined: Fallback to connection type “DirectConnection” with no index defined.
+
   - Index defined: Fallback to connection type “SLProtocol” with index defined.
 
 #### NT_UPDATE_DESCRIPTION_XML (127) now supports overriding parameter units \[ID_32891\]
@@ -624,30 +625,30 @@ This is the most basic procedure to use an external data source in a query:
 
 1. In the Automation app, add a script containing a new class that implements the *IGQIDatasource* interface (see below for more detailed info).
 
-2. Above the class, add the *GQIMetaData* attribute in order to configure the name of the data source as displayed in the Dashboards app.
+1. Above the class, add the *GQIMetaData* attribute in order to configure the name of the data source as displayed in the Dashboards app.
 
-    For example (see [Example script](#example-script) for a full example):
+   For example (see [Example script](#example-script) for a full example):
 
-    ```csharp
-    using Skyline.DataMiner.Analytics.GenericInterface;
+   ```csharp
+   using Skyline.DataMiner.Analytics.GenericInterface;
 
-    [GQIMetaData(Name = "People")]
-    public class MyDataSource : IGQIDataSource
-    {
-    ...
-    }
-    ```
+   [GQIMetaData(Name = "People")]
+   public class MyDataSource : IGQIDataSource
+   {
+   ...
+   }
+   ```
 
-    > [!NOTE]
-    > This is the name that will be shown to the user when they select the data in the Dashboards app. If you do not configure this name, the name of the class is displayed instead, which may not be very user-friendly.
+   > [!NOTE]
+   > This is the name that will be shown to the user when they select the data in the Dashboards app. If you do not configure this name, the name of the class is displayed instead, which may not be very user-friendly.
 
-3. [Compile the script as a library](https://docs.dataminer.services/user-guide/Advanced_Modules/Automation/Using_CSharp/Compiling_a_CSharp_code_block_as_a_library.html#compiling-the-library). You can use the same name as defined in the *GQIMetaData* attribute, or a different name. If there are different data sources for which the same name is defined in the *GQIMetaData* attribute, the library name is appended to the metadata name.
+1. [Compile the script as a library](https://docs.dataminer.services/user-guide/Advanced_Modules/Automation/Using_CSharp/Compiling_a_CSharp_code_block_as_a_library.html#compiling-the-library). You can use the same name as defined in the *GQIMetaData* attribute, or a different name. If there are different data sources for which the same name is defined in the *GQIMetaData* attribute, the library name is appended to the metadata name.
 
-4. Validate and save the script. It is important that you do this *after* you have compiled the script as a library, as otherwise the compiler will detect errors.
+1. Validate and save the script. It is important that you do this *after* you have compiled the script as a library, as otherwise the compiler will detect errors.
 
-5. In the Dashboards app, configure a query and select the data source *Get ad hoc data*.
+1. In the Dashboards app, configure a query and select the data source *Get ad hoc data*.
 
-6. In the *Data source* drop-down box, select the name of your ad hoc data source.
+1. In the *Data source* drop-down box, select the name of your ad hoc data source.
 
 Depending on how the script is configured, there can be additional configuration possibilities. You can for instance use the *IGQIInputArguments* interface in the script to define that a specific argument is required, for instance to filter the displayed data. For more information, refer to the sections below.
 
@@ -1042,13 +1043,15 @@ The “Line & area chart” component is now able to visualize GQI query results
 
 1. Add GQI query data to the chart component.
 
-2. In the component settings tab:
+1. In the component settings tab:
 
-    - Select the query.
-    - Select the X axis column.
-    - Select the Y axis column.
+   - Select the query.
 
-3. In the component layout, adapt the style of the chart.
+   - Select the X axis column.
+
+   - Select the Y axis column.
+
+1. In the component layout, adapt the style of the chart.
 
 > [!NOTE]
 > If you want the component to show a classic trend chart, make sure the query result is sorted by the X axis column.
@@ -1641,8 +1644,8 @@ It is now possible to change the frequency of smart baseline calculations. On sy
 To change this setting, do the following:
 
 1. Open the SLNetClientTest tool.
-2. Go to *Advanced \> Options \> SLNet Options*.
-3. Select the *SmartBaselineThreadTime* option and change its value.
+1. Go to *Advanced \> Options \> SLNet Options*.
+1. Select the *SmartBaselineThreadTime* option and change its value.
 
 Minimum value: 1 minute - Default value: 5 minutes
 

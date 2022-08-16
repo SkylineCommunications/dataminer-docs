@@ -350,7 +350,7 @@ A number of enhancements have been made to the file locking mechanism in SLDMS.
 
 In some cases, when a new alarm or trend template was assigned to a DVE child element, properties on that element could be lost.
 
-#### DataMiner Cube - Protocols & Templates: Problem when trying to select another protocol version in the “List based on protocol version” box \[ID_24499\]
+#### DataMiner Cube - Protocols & Templates: Problem when trying to select another protocol version in the 'List based on protocol version' box \[ID_24499\]
 
 If an information template is based on an older protocol version that does not have the same parameters as the latest protocol version, a warning is displayed at the bottom of the information template. Above the warning, a drop-down list allows you to select a different protocol version to load those parameters instead.
 

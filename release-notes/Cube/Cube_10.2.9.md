@@ -7,9 +7,6 @@ uid: Cube_Feature_Release_10.2.9
 > [!IMPORTANT]
 > We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
 
-> [!NOTE]
-> For known issues with this version, refer to [Known issues](xref:Known_issues).
-
 ## Highlights
 
 #### Tab layout: Closing a card tab by clicking it with the middle mouse button [ID_33883]
@@ -354,3 +351,15 @@ When the Cube starter window software tried to download a DataMiner Cube for a D
 ```txt
 Something went wrong: Error downloading ClickOnce version: Error downloading manifest file from uri ...
 ```
+
+#### Navigation issue in visual overview with several tab pages and shapes linked to EPM object [ID_34122]
+
+<!-- Main Release Version 10.1.0 [CU18]/10.2.0 [CU6] - Feature Release Version 10.2.9 -->
+
+In a visual overview with several tab pages and shapes linked to an EPM object, if you clicked a shape that opened an EPM object, then clicked the Back button, and then clicked a shape to navigate to another tab page in the same visual overview, this did not work.
+
+#### 'Clear all' button not available for EPM topology chain [ID_34133]
+
+<!-- Main Release Version 10.1.0 [CU18]/10.2.0 [CU6] - Feature Release Version 10.2.9 -->
+
+When you make a selection in an EPM topology chain, a *Clear all* button becomes available, which allows you to clear the selection again. However, in some cases, this button disappeared again. This was specifically the case when you opened a card of a certain level in the chain, closed this card, and then opened another card from the chain, other than the previous card.
