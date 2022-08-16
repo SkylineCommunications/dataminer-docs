@@ -396,7 +396,7 @@ If a Cassandra node goes down or when a node is down when DataMiner starts up, a
 > [!NOTE]
 > If a database of type Cassandra cluster is used, the soft-launch feature NewAverageTrending is automatically enabled. For more information, see <https://community.dataminer.services/documentation/average-trending-calculation/>.
 
-#### Dynamic table filters: New component type “recursivefullfilter” \[ID_24672\] \[ID_24676\]
+#### Dynamic table filters: New component type 'recursivefullfilter' \[ID_24672\] \[ID_24676\]
 
 When configuring a dynamic table filter, you can now add a filter component of type “recursivefullfilter”.
 
@@ -788,7 +788,7 @@ From now on, when you install an Elasticsearch database, security will be disabl
 
 ### DMS Protocols
 
-#### Serial clients can now parse data past the trailer of a response of which the length is defined in a parameter of type “next param” \[ID_24442\]
+#### Serial clients can now parse data past the trailer of a response of which the length is defined in a parameter of type 'next param' \[ID_24442\]
 
 From now on, when serial clients receive a response with a variable length (specified in a parameter of type “next param”), they will be able to parse it correctly when the trailer is not at the very end, but only if the following conditions apply:
 
@@ -1618,11 +1618,11 @@ In second-generation alarm hyperlinks, you can now use the \[DISPLAYVALUE\] keyw
 
 Client machines running DataMiner Cube now require Microsoft .NET Framework 4.6.2.
 
-#### Profiles app: Support for capability parameters of type “text” \[ID_25345\]
+#### Profiles app: Support for capability parameters of type 'text' \[ID_25345\]
 
 The *Profiles* app now also allows you to create and edit profile parameters of category “Capability” and type “Text”.
 
-#### DataMiner Cube - Alarm templates: Conditional monitoring now support checking whether a parameter value is equal or not equal to “Not Initialized” \[ID_25352\]\[ID_25644\]
+#### DataMiner Cube - Alarm templates: Conditional monitoring now support checking whether a parameter value is equal or not equal to 'Not Initialized' \[ID_25352\]\[ID_25644\]
 
 In an alarm template, it is now possible to configure monitoring conditions that check whether a parameter value is equal or not equal to “Not Initialized”.
 
@@ -5089,7 +5089,7 @@ When you turned a shape into a text block control by adding a shape data item of
 
 A number of enhancements have been made to the alarm focus mechanism, especially with respect to the likelihood calculation of alarms associated with elements that were paused or stopped.
 
-#### SLDataMiner will no longer try to send status updates to the Mobile Gateway if the latter has its location set to “\<none>” \[ID_24972\]
+#### SLDataMiner will no longer try to send status updates to the Mobile Gateway if the latter has its location set to '\<none>' \[ID_24972\]
 
 When the Mobile Gateway location was set to “\<none>”, up to now, SLDataMiner would incorrectly try to send status updates to the Mobile Gateway’s non-existing IP address 0.0.0.0.
 
@@ -5832,7 +5832,7 @@ In some cases, an error could occur in SLAnalytics due to a threading issue.
 
 When, on a system with a MySQL database, a correlation alarm was based on a large number of alarms, in some cases, an exception could be thrown when retrieving those alarms.
 
-#### DataMiner Cube - Alarm Console: Severity duration of cleared alarms was not set to “N/A” \[ID_25370\]
+#### DataMiner Cube - Alarm Console: Severity duration of cleared alarms was not set to 'N/A' \[ID_25370\]
 
 When you added the *Severity Duration* column to the Alarm Console, up to now, the duration for a cleared alarm was incorrectly shown as the difference between the time of the alarm and the current time. From now on, the duration of a cleared alarm will always be shown as “N/A”.
 
@@ -6186,7 +6186,7 @@ The following issues have been resolved in the Jobs app:
 
 - When the pop-up window to edit a field was closed without saving the changes and then reopened, it still displayed the changes.
 
-#### Jobs app: No error message when deleting all templates in the Load from template window & job fields could incorrectly be marked both “Required” and “Read only” \[ID_26868\]
+#### Jobs app: No error message when deleting all templates in the Load from template window & job fields could incorrectly be marked both 'Required' and 'Read only' \[ID_26868\]
 
 When, in the *Load from template* window, you deleted all templates, up to now, no error message would be displayed, saying that there are no templates to be applied.
 
@@ -6370,7 +6370,7 @@ When you tried to assign a service profile instance to a profile instance with a
 
 In some cases, a line chart component would not draw the trend graph of a resource capacity.
 
-#### Service & Resource Management: Parameters of type double in generated SRM protocols will now have their lengthtype set to “next param” instead of 8. \[ID_27617\]
+#### Service & Resource Management: Parameters of type double in generated SRM protocols will now have their lengthtype set to 'next param' instead of 8. \[ID_27617\]
 
 Up to now, parameters of type double in generated SRM protocols would have their rawtype set to “numeric text” and their lengthtype set to 8. As a result, if a parameter of a generated SRM protocol contained a value of more than 8 characters, that value would incorrectly be replicated to 0.
 
@@ -7568,7 +7568,7 @@ In some cases, the NATS service would no longer start up after being reset when 
 
 When you exported average trend data to a CSV file, in some cases, extra data points would incorrectly be added to the exported trend data.
 
-#### Protocols: Problem with SLProtocol when the save attribute of a table parameter was incorrectly set to “true” \[ID_29214\]
+#### Protocols: Problem with SLProtocol when the save attribute of a table parameter was incorrectly set to 'true' \[ID_29214\]
 
 When, in a protocol.xml file, the save attribute of a table parameter was incorrectly set to “true”, in some rare cases, an error could occur in SLProtocol.
 
@@ -7820,7 +7820,7 @@ The following new BPA tests have been added to the default test set:
 
 ### CU4 fixes
 
-#### Service & Resource Management: Problem when trying to retrieve a resource with status “Maintenance” or “Unavailable” \[ID_29511\]
+#### Service & Resource Management: Problem when trying to retrieve a resource with status 'Maintenance' or 'Unavailable' \[ID_29511\]
 
 Due to a serialization issue involving the AvailableTo and AvailableFrom properties of the GetResourceMessage, in some cases, it would not be possible to retrieve a resource with status “Maintenance” or “Unavailable”.
 
@@ -7858,9 +7858,9 @@ When a view was enhanced with EPM data and had a Visio file assigned to it, in s
 
 When you pressed the Back button while logging on, in some cases, an error could occur in the logon screen, forcing you to restart Cube.
 
-#### Monitoring app: Service child popup pages without parent page could not be opened \[ID_29816\]
+#### Monitoring app: Service child pop-up pages without parent page could not be opened \[ID_29816\]
 
-When, for an element included in a service, only parameters from one of its popup pages were included and none of that popup page’s parent page, then that parent page would not be included in the service and there would be no way to access the popup page. From now on, in cases like this one, popup pages of service children will be added to the Monitoring app’s side panel after all other pages.
+When, for an element included in a service, only parameters from one of its pop-up pages were included and none of that pop-up page’s parent page, then that parent page would not be included in the service and there would be no way to access the pop-up page. From now on, in cases like this one, pop-up pages of service children will be added to the Monitoring app’s side panel after all other pages.
 
 #### Legacy Reporter app: Problem when trying to display a trend graph for a table column parameter \[ID_29818\]
 
@@ -8783,7 +8783,7 @@ When, in the *Users/Groups* section of *System Center*, you hover over the *Modu
 
 After restoring an Elasticsearch backup that was taken with the StandaloneElasticBackup tool, in some cases, it would no longer be possible to start Kibana when Elasticsearch had security enabled.
 
-#### Dashboards app - Node edge graphs: Parameter values in node tooltips would incorrectly show “not initialized” \[ID_30694\]
+#### Dashboards app - Node edge graphs: Parameter values in node tooltips would incorrectly show 'not initialized' \[ID_30694\]
 
 When you hovered over a node, parameter values shown in the node tooltip would incorrectly be set to “not initialized”.
 
@@ -10845,3 +10845,9 @@ In some rare cases, an error could occur in the SLSNMPManager process due to an 
 <!-- Main Release Version 10.1.0 [CU18]/10.2.0 [CU6] - Feature Release Version 10.2.9 -->
 
 When a stopped element was deleted, logger tables associated with that element would incorrectly not be deleted if created with `options="database"`.
+
+#### 'Clear all' button not available for EPM topology chain [ID_34133]
+
+<!-- Main Release Version 10.1.0 [CU18]/10.2.0 [CU6] - Feature Release Version 10.2.9 -->
+
+When you make a selection in an EPM topology chain, a *Clear all* button becomes available, which allows you to clear the selection again. However, in some cases, this button disappeared again. This was specifically the case when you opened a card of a certain level in the chain, closed this card, and then opened another card from the chain, other than the previous card.

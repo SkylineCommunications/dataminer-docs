@@ -523,7 +523,7 @@ Exception : (Code: 0x80131508) Skyline.DataMiner.Net.Exceptions.DataMinerExcepti
 
 The scenarios where these messages cannot be serialized will now be handled better, so that they can no longer cause errors. In addition, to make it easier to troubleshoot errors with protocol buffer serialization, a new *SLProtobufSerialization.txt* log file is now available.
 
-#### DataMiner Cube - Resources app: Not possible to link virtual function resources to elements of which the protocol version was set to “production” \[ID_30655\]
+#### DataMiner Cube - Resources app: Not possible to link virtual function resources to elements of which the protocol version was set to 'production' \[ID_30655\]
 
 In the Resources app, it is possible to create virtual function resources that are linked to compatible elements. Up to now, in some cases, it was not possible to link virtual function resources to elements of which the protocol version was set to “production”.
 

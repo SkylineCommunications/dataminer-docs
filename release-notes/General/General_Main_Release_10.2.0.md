@@ -2254,7 +2254,7 @@ When a resource is linked to an element shape, you can use the following placeho
 | \[Resource ID\] | The ID of the resource (GUID). |
 | \[Resource Name\] | The name of the resource. |
 
-#### Visual Overview: New \[ServiceDefinition:\] placeholder & new \[Reservation:\] placeholder property “ServiceDefinitionID” \[ID_30757\]
+#### Visual Overview: New \[ServiceDefinition:\] placeholder & new \[Reservation:\] placeholder property 'ServiceDefinitionID' \[ID_30757\]
 
 ##### New \[ServiceDefinition:\] placeholder
 
@@ -7539,6 +7539,12 @@ When a stopped element was deleted, logger tables associated with that element w
 In some cases, an exception could be thrown when removing a query that was used as "start from" query by another query.
 
 From now on, when you try to remove a query that is used as "start from" query, a confirmation box will appear, asking you to confirm the removal of that query.
+
+#### 'Clear all' button not available for EPM topology chain [ID_34133]
+
+<!-- Main Release Version 10.1.0 [CU18]/10.2.0 [CU6] - Feature Release Version 10.2.9 -->
+
+When you make a selection in an EPM topology chain, a *Clear all* button becomes available, which allows you to clear the selection again. However, in some cases, this button disappeared again. This was specifically the case when you opened a card of a certain level in the chain, closed this card, and then opened another card from the chain, other than the previous card.
 
 ## Addendum CU7
 

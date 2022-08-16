@@ -710,7 +710,7 @@ When adding or updating an element, it is now allowed to enter pipe characters (
 > - By default, DataMiner Cube will automatically replace tab characters by spaces.
 > - Tab characters in port settings could cause problems when exporting or importing to or from a CSV file.
 
-#### Mobile Gateway: Text messages can now contain special characters like “&” \[ID_26449\]
+#### Mobile Gateway: Text messages can now contain special characters like '&' \[ID_26449\]
 
 When DataMiner is configured to use an IP-based cell phone modem (e.g. SMSEagle), it communicates with the device via HTTP GET requests, passing values as ampersand-delimited parameters in the URL.
 
@@ -748,7 +748,7 @@ If you try to update or delete values of drop-down fields in sections that are b
 
 When updating system files during a DataMiner upgrade, the SLReplace process will now forcefully terminate any application that is using the files to be updated.
 
-#### DataMiner Cube - Failover: When you chose to disable the Failover configuration, it is now also possible to select “Cancel” \[ID_26509\]
+#### DataMiner Cube - Failover: When you chose to disable the Failover configuration, it is now also possible to select 'Cancel' \[ID_26509\]
 
 In the Failover configuration window, up to now, when you chose to disable the Failover configuration, you were only able to select *Yes* or *No*. From now on, it is also possible to select *Cancel*.
 

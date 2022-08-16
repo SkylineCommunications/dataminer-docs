@@ -546,7 +546,7 @@ When, in the Data tab, you add a filter node to a GQI query, a new option named 
 - When you enable this option, an empty table will be returned when the filter yields no rows.
 - When you disable this option, the entire table (i.e. all rows) will be returned when the filter yields no rows.
 
-#### Dashboards app - State component: Enhanced scrolling behavior when Layout flow is set to “Columns” \[ID_30765\]
+#### Dashboards app - State component: Enhanced scrolling behavior when Layout flow is set to 'Columns' \[ID_30765\]
 
 When the *Layout flow* setting of a State component is set to “Columns” and there is either a single group or no grouping at all, from now on, the states will always be displayed at full width.
 

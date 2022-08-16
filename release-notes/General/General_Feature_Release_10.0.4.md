@@ -229,7 +229,7 @@ From now on, the DataMiner installer will no longer install Web Services Enhance
 
 Up to now, all logging related to smart baselines was added to the *SLNet.txt* log file. From now on, this logging will be added to the *SLSmartBaselineManager.txt* file instead.
 
-#### Cassandra database: Cluster name in cassandra.yaml file now always set to “DMS” \[ID_24645\]
+#### Cassandra database: Cluster name in cassandra.yaml file now always set to 'DMS' \[ID_24645\]
 
 In a cassandra.yaml file, the Cassandra cluster name will no longer be configurable. It will now always be set to “DMS”.
 

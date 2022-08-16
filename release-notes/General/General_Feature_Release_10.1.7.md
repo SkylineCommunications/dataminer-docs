@@ -434,7 +434,7 @@ Due to a number of enhancements, overall performance has increased when updating
 
 ### Fixes
 
-#### Service & Resource Management: Problem when trying to retrieve a resource with status “Maintenance” or “Unavailable” \[ID_29511\]
+#### Service & Resource Management: Problem when trying to retrieve a resource with status 'Maintenance' or 'Unavailable' \[ID_29511\]
 
 Due to a serialization issue involving the AvailableTo and AvailableFrom properties of the GetResourceMessage, in some cases, it would not be possible to retrieve a resource with status “Maintenance” or “Unavailable”.
 

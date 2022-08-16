@@ -9489,7 +9489,7 @@ Up to now, in the Resources app, capacity parameter values would incorrectly be 
 
 When you exported average trend data to a CSV file, in some cases, extra data points would incorrectly be added to the exported trend data.
 
-#### Protocols: Problem with SLProtocol when the save attribute of a table parameter was incorrectly set to “true” \[ID_29214\]
+#### Protocols: Problem with SLProtocol when the save attribute of a table parameter was incorrectly set to 'true' \[ID_29214\]
 
 When, in a protocol.xml file, the save attribute of a table parameter was incorrectly set to “true”, in some rare cases, an error could occur in SLProtocol.
 
@@ -9719,9 +9719,9 @@ When a view was enhanced with EPM data and had a Visio file assigned to it, in s
 
 When you pressed the Back button while logging on, in some cases, an error could occur in the logon screen, forcing you to restart Cube.
 
-#### Monitoring app: Service child popup pages without parent page could not be opened \[ID_29816\]
+#### Monitoring app: Service child pop-up pages without parent page could not be opened \[ID_29816\]
 
-When, for an element included in a service, only parameters from one of its popup pages were included and none of that popup page’s parent page, then that parent page would not be included in the service and there would be no way to access the popup page. From now on, in cases like this one, popup pages of service children will be added to the Monitoring app’s side panel after all other pages.
+When, for an element included in a service, only parameters from one of its pop-up pages were included and none of that pop-up page’s parent page, then that parent page would not be included in the service and there would be no way to access the pop-up page. From now on, in cases like this one, pop-up pages of service children will be added to the Monitoring app’s side panel after all other pages.
 
 #### Legacy Reporter app: Problem when trying to display a trend graph for a table column parameter \[ID_29818\]
 
@@ -10739,7 +10739,7 @@ When, in the group settings, you added an alarm tab of type “sliding window”
 
 When an alarm tab was grouped by property, in some cases, DataMiner Cube could become unresponsive, especially on systems with high alarm traffic.
 
-#### DataMiner Cube - Scheduler: Creating a task could fail on client machines with culture set to “Finnish” \[ID_31712\]
+#### DataMiner Cube - Scheduler: Creating a task could fail on client machines with culture set to 'Finnish' \[ID_31712\]
 
 In DataMiner Cube, creating a task in the Scheduler app could fail when the culture of the client machine was set to “Finnish”.
 

@@ -912,7 +912,7 @@ From now on, the *About* window will show both the Cube client version and the l
 
 When, in the Cube launcher tool, you edited an agent entry, in some cases, the UI could get resized incorrectly when entering text in the *Arguments* text box.
 
-#### DataMiner Cube - Services app: Problem when trying to assign a service profile instance to a profile instance with a parameter of type “capability” \[ID_27580\]
+#### DataMiner Cube - Services app: Problem when trying to assign a service profile instance to a profile instance with a parameter of type 'capability' \[ID_27580\]
 
 When you tried to assign a service profile instance to a profile instance with a parameter of type “capability” (exclusively), in some cases, an exception could be thrown.
 

@@ -72,7 +72,7 @@ Also, apart from the *Left mouse button action on graph* and *Right mouse button
 | Hotkey for mouse button action on graph    | The key that, when pressed while clicking the left mouse button, will cause the “hotkey + left mouse button action” to be performed.       |
 | Hotkey + left mouse button action on graph | Action to be performed when you press the “hotkey for mouse button action” while clicking the left mouse button: Select, Zoom, Pan or None |
 
-#### DataMiner Cube - Alarm templates: Conditional monitoring now support checking whether a parameter value is equal or not equal to “Not Initialized” \[ID_25352\]\[ID_25644\]
+#### DataMiner Cube - Alarm templates: Conditional monitoring now support checking whether a parameter value is equal or not equal to 'Not Initialized' \[ID_25352\]\[ID_25644\]
 
 In an alarm template, it is now possible to configure monitoring conditions that check whether a parameter value is equal or not equal to “Not Initialized”.
 

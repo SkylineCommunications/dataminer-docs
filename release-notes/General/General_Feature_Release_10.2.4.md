@@ -938,7 +938,7 @@ Whenever a Cube session was closed or disconnected, SLNet would leak memory.
 
 A number of miscellaneous, small fixes have been made.
 
-#### Dashboards app - Parameter feed: Problem selecting the element again after clicking “Clear all” \[ID_32661\]
+#### Dashboards app - Parameter feed: Problem selecting the element again after clicking 'Clear all' \[ID_32661\]
 
 When, in a parameter feed with a single element, you clicked the *Clear all* option to unselect all selected parameter, in some cases, it would no longer be possible to select the element again.
 

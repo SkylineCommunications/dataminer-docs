@@ -515,7 +515,7 @@ When, in the group settings, you added an alarm tab of type “sliding window”
 
 When an alarm tab was grouped by property, in some cases, DataMiner Cube could become unresponsive, especially on systems with high alarm traffic.
 
-#### DataMiner Cube - Scheduler: Creating a task could fail on client machines with culture set to “Finnish” \[ID_31712\]
+#### DataMiner Cube - Scheduler: Creating a task could fail on client machines with culture set to 'Finnish' \[ID_31712\]
 
 In DataMiner Cube, creating a task in the Scheduler app could fail when the culture of the client machine was set to “Finnish”.
 
