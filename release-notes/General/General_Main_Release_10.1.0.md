@@ -10876,6 +10876,12 @@ When an existing scheduled task that was configured to be executed multiple time
 
 If an alarm filter that filtered on a property value was used to filter the alarms before they entered Cube, it could occur that no alarms were shown, even if there were alarms matching the filter.
 
+#### Visual Overview: Non-linked shape without LinkOptions shape data field not displayed [ID_34102]
+
+<!-- Main Release Version 10.1.0 [CU18]/10.2.0 [CU6] - Feature Release Version 10.2.9 -->
+
+If a shape was not linked to a DataMiner object and did not have a *LinkOptions* shape data field, it could occur that the shape was not displayed in Visual Overview.
+
 #### Navigation issue in visual overview with several tab pages and shapes linked to EPM object [ID_34122]
 
 <!-- Main Release Version 10.1.0 [CU18]/10.2.0 [CU6] - Feature Release Version 10.2.9 -->

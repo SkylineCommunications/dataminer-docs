@@ -7576,6 +7576,12 @@ From now on, when you try to remove a query that is used as "start from" query, 
 
 When a visual overview was embedded in a dashboard or low-code app, it could occur that it showed the error "Could not retrieve Visual Overview information." while fetching its initial data.
 
+#### Visual Overview: Non-linked shape without LinkOptions shape data field not displayed [ID_34102]
+
+<!-- Main Release Version 10.1.0 [CU18]/10.2.0 [CU6] - Feature Release Version 10.2.9 -->
+
+If a shape was not linked to a DataMiner object and did not have a *LinkOptions* shape data field, it could occur that the shape was not displayed in Visual Overview.
+
 #### GQI queries: Problem in web APIs when opening session for query with node requiring soft-launch feature [ID_34109]
 
 <!-- Main Release Version 10.2.0 [CU6] - Feature Release Version 10.2.9 -->
