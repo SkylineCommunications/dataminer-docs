@@ -335,6 +335,10 @@ code {
   color: var(--color-foreground);
 }
 
+.hljs-tag{
+  color: var(--color-foreground);
+}
+
 .expand-stub {
   top: 3px;
 }
