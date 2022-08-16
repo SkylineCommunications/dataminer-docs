@@ -7556,6 +7556,12 @@ When a stopped element was deleted, logger tables associated with that element w
 
 When an existing scheduled task that was configured to be executed multiple times per day was edited, it could occur that the task was corrupted and could no longer be executed.
 
+#### No alarms shown with alarm filter on property value filtering the alarms before they entered Cube [ID_34090]
+
+<!-- Main Release Version 10.1.0 [CU18]/10.2.0 [CU6] - Feature Release Version 10.2.9 -->
+
+If an alarm filter that filtered on a property value was used to filter the alarms before they entered Cube, it could occur that no alarms were shown, even if there were alarms matching the filter.
+
 #### GQI queries: Problem when removing a query used as 'start from' query [ID_34093]
 
 <!-- Main Release Version 10.2.0 [CU6] - Feature Release Version 10.2.9 -->

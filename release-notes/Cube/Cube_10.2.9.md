@@ -370,6 +370,12 @@ Up to now, to resolve the monitoring state of EPM shapes displayed in Visual Ove
 
 When an existing scheduled task that was configured to be executed multiple times per day was edited, it could occur that the task was corrupted and could no longer be executed.
 
+#### No alarms shown with alarm filter on property value filtering the alarms before they entered Cube [ID_34090]
+
+<!-- Main Release Version 10.1.0 [CU18]/10.2.0 [CU6] - Feature Release Version 10.2.9 -->
+
+If an alarm filter that filtered on a property value was used to filter the alarms before they entered Cube, it could occur that no alarms were shown, even if there were alarms matching the filter.
+
 #### Navigation issue in visual overview with several tab pages and shapes linked to EPM object [ID_34122]
 
 <!-- Main Release Version 10.1.0 [CU18]/10.2.0 [CU6] - Feature Release Version 10.2.9 -->
