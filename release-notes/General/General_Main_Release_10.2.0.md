@@ -7576,6 +7576,12 @@ In some cases, an exception could be thrown when removing a query that was used 
 
 From now on, when you try to remove a query that is used as "start from" query, a confirmation box will appear, asking you to confirm the removal of that query.
 
+#### DataMiner Cube: Spectrum recording icon not shown while recording [ID_34097]
+
+<!-- Main Release Version 10.2.0 [CU6] - Feature Release Version 10.2.9 -->
+
+When a spectrum recording is started, an icon should be shown to the right below the trace to indicate that a recording is being created. However, when the mouse pointer was moved outside the trace area, it could occur that this icon was no longer shown.
+
 #### Visual overview in dashboard or low-code app showed error while fetching its initial data [ID_34100]
 
 <!-- Main Release Version 10.2.0 [CU6] - Feature Release Version 10.2.9 -->

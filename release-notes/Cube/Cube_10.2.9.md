@@ -376,6 +376,12 @@ When an existing scheduled task that was configured to be executed multiple time
 
 If an alarm filter that filtered on a property value was used to filter the alarms before they entered Cube, it could occur that no alarms were shown, even if there were alarms matching the filter.
 
+#### Spectrum recording icon not shown while recording [ID_34097]
+
+<!-- Main Release Version 10.2.0 [CU6] - Feature Release Version 10.2.9 -->
+
+When a spectrum recording is started, an icon should be shown to the right below the trace to indicate that a recording is being created. However, when the mouse pointer was moved outside the trace area, it could occur that this icon was no longer shown.
+
 #### Visual Overview: Non-linked shape without LinkOptions shape data field not displayed [ID_34102]
 
 <!-- Main Release Version 10.1.0 [CU18]/10.2.0 [CU6] - Feature Release Version 10.2.9 -->
