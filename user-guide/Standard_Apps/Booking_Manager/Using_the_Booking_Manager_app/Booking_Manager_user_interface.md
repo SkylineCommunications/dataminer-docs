@@ -129,7 +129,7 @@ This tab provides an overview of all configuration parameters for the Booking Ma
 
     | Option               | Description                                                                                        |
     |------------------------|----------------------------------------------------------------------------------------------------|
-    | Booking logger element | The name of the element running the *Generic Bookings Log* protocol |
+    | Booking logging location | The path that indicates where the booking logs are going to be saved in. |
 
 - *Type of Booking* settings:
 
