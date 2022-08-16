@@ -4,7 +4,7 @@ uid: DOM_ModuleSections
 
 # ModuleSections
 
-A module section is a [SectionDefinition](xref:DOM_SectionDefinition) that all [DomDefinitions](xref:DomDefinition) must make a link to. This can for example be a `SectionDefinition` with a text field for the name of the [DomInstance](xref:DomInstance).
+A module section is a [SectionDefinition](xref:DOM_SectionDefinition) that all [DomDefinitions](xref:DomDefinition) must make a link to.
 
 You can add `SectionDefinitions` to be used as module sections by adding their ID to the `ModuleSections` list.
 

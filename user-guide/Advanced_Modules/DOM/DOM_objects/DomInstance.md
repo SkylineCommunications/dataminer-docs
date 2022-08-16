@@ -53,16 +53,6 @@ The errors below are related to the status system. For each error, the *DomInsta
 | DomInstanceContainsUnknownFieldsForCurrentStatus | There is at least one `FieldValue` defined on the `DomInstance` for which no link could be found in the associated `DomBehaviorDefinition` for the current status. *AssociatedFields* contains the `SectionDefinitionID` and `FieldDescriptorID` combos of the unknown fields. |
 | StatusChangeNotAllowedForNormalUpdate | The status of the `DomInstance` was changed during a normal update request. It can only be updated by using the specific transition request. |
 
-## Security
-
-Security checks are done on CRUD actions when permission flags are configured on the `DomManagerSecuritySettings` (in the [ModuleSettings](xref:DOM_ModuleSettings)).
-
-- To **read** a `DomInstance`, the user needs the permission flag defined by `DomManagerSecuritySettings.ViewPermission`.
-
-- To **create or update** a `DomInstance`, the user needs the permission flag defined by `DomManagerSecuritySettings.CreateAndUpdateDomInstancePermission`.
-
-- To **delete** a `DomInstance`, the user needs the permission flag defined by `DomManagerSecuritySettings.DeleteDomInstancePermission`.
-
 ## Notes
 
 - It is possible to let DataMiner trigger a script when doing CRUD actions on a `DomInstance`. For more information, see [ModuleSettings](xref:DOM_ModuleSettings) (ExecuteScriptOnDomInstanceActionSettings).

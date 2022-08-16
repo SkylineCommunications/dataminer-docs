@@ -81,24 +81,30 @@ There are also special types of `FieldDescriptors` that are purpose-made to stor
 >
 > These `FieldDescriptors` therefore also support a list of the type that was already supported before.
 >
-> Adding multiple values to a `DomInstance` or updating the `DomInstance` with multiple values can be done as follows:
+> Adding multiple values to a `DomInstance` or updating the `DomInstance` with multiple values can be done as follows.
 >
-> ```csharp
-> // Change the supported type of the fieldDescriptor to list
-> fieldDescriptor.FieldType = typeof(List<Guid>);
-> 
-> // Adding a fieldValue to the domInstance
-> var fieldValue = new FieldValue()
-> {
->     FieldDescriptorID = fieldDescriptor.Id,
->     Value = new ListValueWrapper<Guid>(new List<Guid> { Guid.NewGuid(), Guid.NewGuid() })
-> };
-> domInstance.Sections.First().AddOrReplaceFieldValue(fieldValue);
+> - FieldDescriptor type configuration:
 >
-> // Update the FielValue of the domInstance
-> var values = new List<Guid> { Guid.NewGuid(), Guid.NewGuid() };
-> domInstance.AddOrUpdateListFieldValue(sectionDefinition, fieldDescriptor, values);
-> ```
+>   ```csharp
+>   // Change the supported type of the fieldDescriptor to list
+>   fieldDescriptor.FieldType = typeof(List<Guid>);
+>   ```
+>
+>- Assigning a FieldValue with a list to a DomInstance:
+>
+>   ```csharp
+>   // Adding a fieldValue to the domInstance
+>   var fieldValue = new FieldValue()
+>   {
+>       FieldDescriptorID = fieldDescriptor.Id,
+>       Value = new ListValueWrapper<Guid>(new List<Guid> { Guid.NewGuid(), Guid.NewGuid() })
+>   };
+>   domInstance.Sections.First().AddOrReplaceFieldValue(fieldValue);
+>
+>   // Update the FielValue of the domInstance
+>   var values = new List<Guid> { Guid.NewGuid(), Guid.NewGuid() };
+>   domInstance.AddOrUpdateListFieldValue(sectionDefinition, fieldDescriptor, values);
+>   ```
 
 ## CustomSectionDefinition properties
 
@@ -145,14 +151,3 @@ When something goes wrong during the CRUD actions, the `TraceData` can contain o
 | SectionDefinitionInUseByDomInstances | The `SectionDefinition` could not be updated because it is being used by at least one `DomInstance`. Available properties: *SectionDefinition*, *OriginalSectionDefinition*, *DomInstanceIds*. |
 | SectionDefinitionInUseByDomDefinitions | The `SectionDefinition` could not be deleted because it is being used by at least one `DomDefinition`. Available properties: *SectionDefinition*, *DomDefinitionIds*. |
 | GenericEnumEntryInUseByDomInstances | The `GenericEnumEntry` could not be deleted or updated because it is being used by at least one `DomInstance`. Available properties: *GenericEnumEntry*, *DomInstanceIds*. |
-
-## Security
-
-Security checks are done on CRUD actions when permission flags are configured on the `DomManagerSecuritySettings` (in the [ModuleSettings](xref:DOM_ModuleSettings)):
-
-- To **read** a `SectionDefinition`, the user needs the permission flag defined by `DomManagerSecuritySettings.ViewPermission`.
-
-- To **created, update, or delete** a `SectionDefinition`, the user needs the permission flag defined by `DomManagerSecuritySettings.ConfigurePermission`.
-
-> [!NOTE]
-> When the ID of the `SectionDefinition` is in the `ModuleSections` list of the `ModuleSettings`, it can only be created, updated, or deleted by users who have the permission to alter module settings ("Module Settings Configuration" permission flag).

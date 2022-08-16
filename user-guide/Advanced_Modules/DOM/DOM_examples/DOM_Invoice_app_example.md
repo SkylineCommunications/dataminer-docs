@@ -375,8 +375,8 @@ Once the system is fully set up, you can filter on the data.
 ```csharp
 // Retrieve all invoices that have not been payed for more than 14 days
 var twoWeeksAgo = DateTime.Now.AddDays(-14);
-var dateFilter = DomInstanceExposers.FieldValues.DictDynamicListField(invoiceDateFieldDescriptorId.Id.ToString()).LessThanOrEqual(twoWeeksAgo);
-var statusFilter = DomInstanceExposers.FieldValues.DictDynamicListField(statusFieldDescriptorId.Id.ToString()).NotEqual(2);
+var dateFilter = DomInstanceExposers.FieldValues.DomInstanceField(invoiceDateFieldDescriptorId).LessThanOrEqual(twoWeeksAgo);
+var statusFilter = DomInstanceExposers.FieldValues.DomInstanceField(statusFieldDescriptorId).NotEqual(2);
 var fullFilter = dateFilter.AND(statusFilter);
 
 var unpaidInvoices = domHelper.DomInstances.Read(fullFilter);

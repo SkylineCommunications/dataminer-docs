@@ -4,7 +4,7 @@ uid: DOM_events
 
 # DOM events
 
-A DOM manager sends out various events when actions are done on the DOM objects. These can be create, read, update, or delete (CRUD) events or a status transition event.
+A DOM manager sends out various events when actions are done on the DOM objects. These can be create, update, or delete (CRUD) events or a status transition event.
 
 ## CRUD events
 
@@ -51,7 +51,7 @@ From DataMiner 10.2.5/10.3.0 onwards, in addition to the CRUD events, there is a
 
 This event contains a list of changes as well as the `ModuleId` of the `DomManager` that generated the transition. A change contains the following items:
 
-- `DomInstanceID`: The ID of the `DomInstance` of which the status changed.
+- `DomInstanceId`: The ID of the `DomInstance` of which the status changed.
 
 - `FromStatus`: The status of the `DomInstance` before the transition.
 

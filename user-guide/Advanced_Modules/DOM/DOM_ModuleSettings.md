@@ -23,7 +23,7 @@ helper.ModuleSettings.Create(settings);
 > When you update the module settings of a manager that is already running, this will only take effect when the manager is (re-)initialized. This happens when:
 >
 > - You send a `ManagerStoreReinitializeCustomManagerRequest` in a script. This will reinitialize the manager on all Agents in the cluster. If a manager is not present on one of the Agents, it will be ignored.
-> - DataMiner is restarted.
+> - DataMiner is restarted. If a DataMiner Agent is restarted, the manager running on that DMA is restarted using the new settings. You will therefore need to restart all DMAs that have a running instance of the manager.
 > - You send a *ManagerStoreReinitializeCustomManagerRequest* using the DOM page in the [SLNetClientTest tool](xref:SLNetClientTest_tool). To do so, first [connect to the DMA in the tool](xref:Connecting_to_a_DMA_with_the_SLNetClientTest_tool), and then go to *Advanced* > *Apps* > *DataMiner Object Model* and click the *Reinitialize* button.
 
 ## Errors
@@ -32,7 +32,7 @@ When something goes wrong while the `ModuleSettings` are saved, the `TraceData` 
 
 | Reason | Description |
 |--|--|
-| InvalidModuleId | The module ID does not meet the requirements. The error will contain the exact validation error. |
+| InvalidModuleId | The module ID does not meet the requirements. The *InvalidModuleId* property contains the module ID that is invalid. The *ModuleIdValidationResult* contains the exact reason why the ID was deemed invalid. |
 | InvalidPermissions | The user does not have permission to do this action. |
 
 ## Available settings
@@ -50,8 +50,6 @@ The current settings structure (with regards to `DomManager`) is as follows:
     - [FieldAliases](xref:DOM_FieldAliases) (List)
 
     - [ExecuteScriptOnDomInstanceActionSettings](xref:ExecuteScriptOnDomInstanceActionSettings)
-
-    - [DomManagerSecuritySettings](xref:DomManagerSecuritySettings)
 
     - [DomManagerInformationEventSettings](xref:DomManagerInformationEventSettings)
 

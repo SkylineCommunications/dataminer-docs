@@ -155,7 +155,7 @@ An `ActionDefinition` can only be executed when a pre-defined condition is met. 
 
 - **ValidForStatusTransitionCondition**
 
-  Defines a condition that is met when a `DomInstance` is valid for a given status transition. The required transition ID must be assigned to the *TransitionId* property. When this condition is not met, extra `TraceData` will be returned (via the *InnerTraceData* property of the `DomActionError`). This `TraceData` should contain an error of type `DomStatusTransitionError`. See the status system page For more information about this error type, see [Creating and transitioning DOM instances](xref:DOM_status_system#creating-and-transitioning-dom-instances).
+  Defines a condition that is met when a `DomInstance` is valid for a given status transition. The required transition ID must be assigned to the *TransitionId* property. When this condition is not met, extra `TraceData` will be returned (via the *InnerTraceData* property of the `DomActionError`). This `TraceData` should contain an error of type `DomStatusTransitionError`. For more information about this error type, see [Creating and transitioning DOM instances](xref:DOM_status_system#creating-and-transitioning-dom-instances).
 
   ```csharp
   var condition = new ValidForStatusTransitionCondition("first_to_second_transition");
@@ -188,4 +188,4 @@ The `DomButtonDefinitionLayout` class has the following properties:
 | Order | int | Can be used to manage the order in which multiple buttons should be displayed. |
 
 > [!NOTE]
-> The `IDomInstanceCondition` on the buttons explains which type of condition applies to the visibility. Each subtype has properties that contain extra information to determine whether the condition is met (see [Conditions](#conditions)) A UI that displays these buttons needs to resolve these locally.
+> The `IDomInstanceCondition` on the buttons explains which type of condition applies to the visibility. Each subtype has properties that contain extra information to determine whether the condition is met (see [Conditions](#conditions)). A UI that displays these buttons needs to resolve these locally.

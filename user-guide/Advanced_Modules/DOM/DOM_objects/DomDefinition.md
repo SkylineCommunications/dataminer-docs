@@ -50,10 +50,3 @@ When something goes wrong during the CRUD actions, the *TraceData* can contain o
 | SectionDefinitionLinkInUseByDomInstances | The `SectionDefinitionLink` cannot be deleted since this `DomDefinition` is in use by `DomInstances`. Set the *SectionDefinitionLink.IsSoftDeleted* boolean instead. The `DomDefinition` can be retrieved from the *DomDefinition* property. The IDs of the linked `DomInstances` can be retrieved from the *DomInstanceIds* property. The links that could not be deleted can be retrieved from the *SectionDefinitionLinks* property. |
 | DomDefinitionDoesNotContainRequiredModuleSectionDefinitions | The `DomDefinition` you want to create or update does not include all required section definition links for this module. The `DomDefinition` can be retrieved from the *DomDefinition* property. The missing `SectionDefinitionIDs` can be retrieved from the *SectionDefinitionIds* property. |
 
-## Security
-
-Security checks are done on CRUD actions when permission flags are configured on the `DomManagerSecuritySettings` (in the [ModuleSettings](xref:DOM_ModuleSettings)):
-
-- To **read** a `DomDefinition`, the user needs the permission flag defined by `DomManagerSecuritySettings.ViewPermission`.
-
-- To **create, update or delete** a `DomDefinition`, the user needs the permission flag defined by `DomManagerSecuritySettings.ConfigurePermission`.

@@ -2173,8 +2173,6 @@
               topicUID: DOM_FieldAliases
             - name: ExecuteScriptOnDomInstanceActionSettings
               topicUID: ExecuteScriptOnDomInstanceActionSettings
-            - name: DomManagerSecuritySettings
-              topicUID: DomManagerSecuritySettings
             - name: DomManagerInformationEventSettings
               topicUID: DomManagerInformationEventSettings
             - name: DomInstanceNameDefinition

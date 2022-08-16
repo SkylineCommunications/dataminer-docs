@@ -24,12 +24,3 @@ There are currently no specific requirements for CRUD actions on `DomTemplates`.
 
 There are currently no specific error data reasons for CRUD actions on `DomTemplates`.
 
-## Security
-
-Security checks are done on CRUD actions when permission flags are configured on the `DomManagerSecuritySettings` (in the [ModuleSettings](xref:DOM_ModuleSettings)):
-
-- To **read** a `DomTemplate`, the user needs the permission flag defined by `DomManagerSecuritySettings.ViewPermission`.
-
-- To **create or update** a `DomTemplate`, the user needs the permission flag defined by `DomManagerSecuritySettings.CreateAndUpdateDomInstancePermission`.
-
-- To **delete** a `DomTemplate`, the user needs the permission flag defined by `DomManagerSecuritySettings.DeleteDomInstancePermission`.

@@ -86,13 +86,3 @@ When something goes wrong during the CRUD actions, the `TraceData` can contain o
 | InvalidButtonDefinitionIds | There was at least one `IDomButtonDefinition` defined with an invalid ID (should only contain lowercase characters). *ButtonDefinitionIds* contains the ID(s) of the invalid definition(s). |
 | DuplicateButtonDefinitionIds | There are `IDomButtonDefinition` defined with duplicate IDs. *ButtonDefinitionIds* contains the ID(s) of the duplicate definition(s). |
 
-## Security
-
-Security checks are done on CRUD actions when permission flags are configured on the `DomManagerSecuritySettings` (in the [ModuleSettings](xref:DOM_ModuleSettings)):
-
-- To **read** a `DomBehaviorDefinition`, the user needs the permission flag defined by `DomManagerSecuritySettings.ViewPermission`.
-
-- To **create, update, or delete** a `DomBehaviorDefinition`, the user needs the permission flag defined by `DomManagerSecuritySettings.ConfigurePermission`.
-
-> [!NOTE]
-> To create, update, or delete the `ModuleDomBehaviorDefinition`, you need the [Module Settings](xref:DataMiner_user_permissions#modules--system-configuration--object-manager--module-settings) permission.

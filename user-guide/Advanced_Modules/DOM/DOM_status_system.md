@@ -124,6 +124,4 @@ When something goes wrong while transitioning, a *DomStatusTransitionError* will
 
 ## ModuleDomBehaviorDefinition and inheritance
 
-It is possible to mark a specific `DomBehaviorDefinition` as the main "Module" definition.
-
-This will force all other DOM behavior definitions to inherit from it, so that they all have the same status system. The inheriting definitions can only add extra `DomStatusSectionDefinitionLink` objects. For more information about inheritance, see [DomBehaviorDefinition](xref:DomBehaviorDefinition).
+It is possible to mark a specific `DomBehaviorDefinition` as the main "Module" definition. This will force all other DOM behavior definitions to inherit from it, so that they all have the same status system. The inheriting definitions can only add extra `DomStatusSectionDefinitionLink` objects. For more information about inheritance, see [DomBehaviorDefinition](xref:DomBehaviorDefinition).
