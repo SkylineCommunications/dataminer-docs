@@ -11,10 +11,11 @@ In a Class Library package, you can add extension methods, vendor-specific code 
 - When DIS detects that a QAction uses code from a loaded Class Library package, it will generate a separate QAction (with ID 63000) containing only the code necessary to be able to use the wanted functionally.
 - When DIS detects that code from a loaded Class Library package is used in EXE blocks of an Automation script, it will
 
-    - add a new EXE block to that script containing only the code necessary to be able to use the wanted functionally, and
-    - add references in the EXE blocks using that Class Library code to the newly added EXE block containing the Class Library code.
+  - add a new EXE block to that script containing only the code necessary to be able to use the wanted functionally, and
+  - add references in the EXE blocks using that Class Library code to the newly added EXE block containing the Class Library code.
 
 > [!NOTE]
+>
 > - Interfaces, base classes and their implementations will all be copied together into the generated QAction or Automation script.<br>If the generator detects that an interface is being used while the class that implements it is not, then the latter will be copied along into the generated code. Also, if a class is being used while the interface is not, then both will be copied into the generated code.
 > - The generated code will contain all fields and properties of classes, unless they are private, even when those fields and properties are not being used.
 
@@ -137,210 +138,210 @@ The following C#/.NET features are currently not supported:
 
 ### Released versions
 
-[DIS 2.18](https://community.dataminer.services/documentation/dis-v2-18-release-notes/)
+[DIS 2.18](xref:DIS_2.18)
 
 - 1.0.0.1
 
-    - RN 22296: SetParameterMessage messages will no longer generate information events
-    - RN 22297: GetAgents (IDms) would fail if the response contained a DataMiner Agent ID equal to 0
-    - RN 22299: Property type is now passed along when updating element properties
-    - RN 22301: ‘Name’ and ‘HostName’ properties added to IDma interface
-    - RN 22302: New classes to easily parse trap information
+  - RN 22296: SetParameterMessage messages will no longer generate information events
+  - RN 22297: GetAgents (IDms) would fail if the response contained a DataMiner Agent ID equal to 0
+  - RN 22299: Property type is now passed along when updating element properties
+  - RN 22301: ‘Name’ and ‘HostName’ properties added to IDma interface
+  - RN 22302: New classes to easily parse trap information
 
-[DIS 2.19](https://community.dataminer.services/documentation/dis-v2-19-release-notes/)
-
-- No changes to the Class Library base packages
-
-[DIS 2.20](https://community.dataminer.services/documentation/dis-v2-20-release-notes/)
+[DIS 2.19](xref:DIS_2.19)
 
 - No changes to the Class Library base packages
 
-[DIS 2.21](https://community.dataminer.services/documentation/dis-v2-21-release-notes/)
+[DIS 2.20](xref:DIS_2.20)
+
+- No changes to the Class Library base packages
+
+[DIS 2.21](xref:DIS_2.21)
 
 - 1.0.0.2
 
-    - RN 23075: New matrix classes added to facilitate matrix and router control implementations
+  - RN 23075: New matrix classes added to facilitate matrix and router control implementations
 
 - 1.1.0.1
 
-    - RN 23075: New matrix classes added to facilitate matrix and router control implementations
-    - RN 23298: New InterApp classes now provide a C# message/response architecture
+  - RN 23075: New matrix classes added to facilitate matrix and router control implementations
+  - RN 23298: New InterApp classes now provide a C# message/response architecture
 
-[DIS 2.22](https://community.dataminer.services/documentation/dis-v2-22-release-notes/)
+[DIS 2.22](xref:DIS_2.22)
 
 - No changes to the Class Library base packages
 
-[DIS 2.23](https://community.dataminer.services/documentation/dis-v2-23-release-notes/)
+[DIS 2.23](xref:DIS_2.23)
 
 - 1.0.0.3
 
-    - RN 22303: View name would be retrieved when it was already known
-    - RN 23514: Element properties will only be retrieved when needed
-    - RN 23515: Exception thrown after detecting an element with duplicate properties will now also contain the name of the ID of the element
+  - RN 22303: View name would be retrieved when it was already known
+  - RN 23514: Element properties will only be retrieved when needed
+  - RN 23515: Exception thrown after detecting an element with duplicate properties will now also contain the name of the ID of the element
 
 - 1.1.0.2
 
-    - RN 22303: View name would be retrieved when it was already known
-    - RN 23514: Element properties will only be retrieved when needed
-    - RN 23515: Exception thrown after detecting an element with duplicate properties will now also contain the name of the ID of the element
+  - RN 22303: View name would be retrieved when it was already known
+  - RN 23514: Element properties will only be retrieved when needed
+  - RN 23515: Exception thrown after detecting an element with duplicate properties will now also contain the name of the ID of the element
 
-[DIS 2.24](https://community.dataminer.services/documentation/dis-v2-24-release-notes/)
+[DIS 2.24](xref:DIS_2.24)
 
 - 1.0.1.1
 
-    - RN 24283: New Rates namespace
-    - RN 24290: element.IsStartupComplete method would throw an exception when executed on an element that had been stopped
-    - RN 24291: Problem when updating properties
-    - RN 24293: Problem when requesting an element with duplicate properties
-    - RN 24357: GetAlarmTemplates() and GetTrendTemplates() would not work when the protocol was a production protocol
+  - RN 24283: New Rates namespace
+  - RN 24290: element.IsStartupComplete method would throw an exception when executed on an element that had been stopped
+  - RN 24291: Problem when updating properties
+  - RN 24293: Problem when requesting an element with duplicate properties
+  - RN 24357: GetAlarmTemplates() and GetTrendTemplates() would not work when the protocol was a production protocol
 
 - 1.1.2.1
 
-    - RN 24066: DMS Monitors
-    - RN 24283: New Rates namespace
-    - RN 24290: element.IsStartupComplete method would throw an exception when executed on an element that had been stopped
-    - RN 24291: Problem when updating properties
-    - RN 24293: Problem when requesting an element with duplicate properties
-    - RN 24357: GetAlarmTemplates() and GetTrendTemplates() would not work when the protocol was a production protocol
-    - RN 24456: Table cell subscriptions will now be established using the primary key
+  - RN 24066: DMS Monitors
+  - RN 24283: New Rates namespace
+  - RN 24290: element.IsStartupComplete method would throw an exception when executed on an element that had been stopped
+  - RN 24291: Problem when updating properties
+  - RN 24293: Problem when requesting an element with duplicate properties
+  - RN 24357: GetAlarmTemplates() and GetTrendTemplates() would not work when the protocol was a production protocol
+  - RN 24456: Table cell subscriptions will now be established using the primary key
 
-[DIS 2.25](https://community.dataminer.services/documentation/dis-v2-25-release-notes/)
+[DIS 2.25](xref:DIS_2.25)
 
 - 1.0.1.2
 
-    - RN 24756: Problem recreating the monitor after an element restart
-    - RN 24934: Enhanced handling of errors occurring while parsing element information returned by a GetElements method
+  - RN 24756: Problem recreating the monitor after an element restart
+  - RN 24934: Enhanced handling of errors occurring while parsing element information returned by a GetElements method
 
 - 1.1.2.2
 
-    - RN 24756: Problem recreating the monitor after an element restart
-    - RN 24934: Enhanced handling of errors occurring while parsing element information returned by a GetElements method
+  - RN 24756: Problem recreating the monitor after an element restart
+  - RN 24934: Enhanced handling of errors occurring while parsing element information returned by a GetElements method
 
-[DIS 2.26](https://community.dataminer.services/documentation/dis-v2-26-release-notes/)
+[DIS 2.26](xref:DIS_2.26)
 
 - 1.0.1.3
 
-    - RN 25127: Matrix Helper: Serialized matrix status information
+  - RN 25127: Matrix Helper: Serialized matrix status information
 
 - 1.1.2.3
 
-    - RN 24951: Retrieving data from partial tables
-    - RN 25127: Matrix Helper: Serialized matrix status information
-    - RN 25442: Class Library - InterApp calls: Problem when checking the mapping dictionary
-    - RN 25585: Retrieving SNMP connection information & creating elements with SNMP connections
+  - RN 24951: Retrieving data from partial tables
+  - RN 25127: Matrix Helper: Serialized matrix status information
+  - RN 25442: Class Library - InterApp calls: Problem when checking the mapping dictionary
+  - RN 25585: Retrieving SNMP connection information & creating elements with SNMP connections
 
 - 1.2.0.1
 
-    - RN 24951: Retrieving data from partial tables
-    - RN 25127: Matrix Helper: Serialized matrix status information
-    - RN 25442: Class Library - InterApp calls: Problem when checking the mapping dictionary
-    - RN 25585: Retrieving SNMP connection information & creating elements with SNMP connections
-    - RN 25632: IEngine interface now supports the extension of the GetDms method
+  - RN 24951: Retrieving data from partial tables
+  - RN 25127: Matrix Helper: Serialized matrix status information
+  - RN 25442: Class Library - InterApp calls: Problem when checking the mapping dictionary
+  - RN 25585: Retrieving SNMP connection information & creating elements with SNMP connections
+  - RN 25632: IEngine interface now supports the extension of the GetDms method
 
-[DIS 2.27](https://community.dataminer.services/documentation/dis-v2-27-release-notes/)
+[DIS 2.27](xref:DIS_2.27)
 
 - 1.1.2.4
 
-    - RN 25933: Deserialization now supports classes located in both System.Core.dll and System.dll.
+  - RN 25933: Deserialization now supports classes located in both System.Core.dll and System.dll.
 
 - 1.2.0.2
 
-    - RN 25933: Deserialization now supports classes located in both System.Core.dll and System.dll.
+  - RN 25933: Deserialization now supports classes located in both System.Core.dll and System.dll.
 
-[DIS 2.28](https://community.dataminer.services/documentation/dis-v2-28-release-notes/)
+[DIS 2.28](xref:DIS_2.28)
 
 - 1.1.2.5
 
-    - RN 26422: DataMiner System interface would thrown an exception when parsing elements in a view
-    - RN 26423: Incorrectly formatted input string would cause the GetElement method to throw an exception
+  - RN 26422: DataMiner System interface would thrown an exception when parsing elements in a view
+  - RN 26423: Incorrectly formatted input string would cause the GetElement method to throw an exception
 
 - 1.2.0.3
 
-    - RN 26422: DataMiner System interface would thrown an exception when parsing elements in a view
-    - RN 26423: Incorrectly formatted input string would cause the GetElement method to throw an exception
+  - RN 26422: DataMiner System interface would thrown an exception when parsing elements in a view
+  - RN 26423: Incorrectly formatted input string would cause the GetElement method to throw an exception
 
-[DIS 2.29](https://community.dataminer.services/documentation/dis-v2-29-release-notes/)
+[DIS 2.29](xref:DIS_2.29)
 
 - No changes to the Class Library base packages
 
-[DIS 2.30](https://community.dataminer.services/documentation/dis-v2-30-release-notes/)
+[DIS 2.30](xref:DIS_2.30)
 
 - 1.1.2.7
 
-    - RN 27783: Name of an element with a RealConnection could no longer be updated
-    - RN 27784: A matrix output could not be disconnected when it was connected to the first input
+  - RN 27783: Name of an element with a RealConnection could no longer be updated
+  - RN 27784: A matrix output could not be disconnected when it was connected to the first input
 
 - 1.2.0.4
 
-    - RN 27783: Name of an element with a RealConnection could no longer be updated
-    - RN 27784: A matrix output could not be disconnected when it was connected to the first input
+  - RN 27783: Name of an element with a RealConnection could no longer be updated
+  - RN 27784: A matrix output could not be disconnected when it was connected to the first input
 
-[DIS 2.31](https://community.dataminer.services/documentation/dis-v2-31-release-notes/)
+[DIS 2.31](xref:DIS_2.31)
 
 - No changes to the Class Library base packages
 
-[DIS 2.32](https://community.dataminer.services/documentation/dis-v2-32-release-notes/)
+[DIS 2.32](xref:DIS_2.32)
 
 - 1.1.2.8
 
-    - RN 29070: IDms classes now support creating, updating and retrieving HTTP connections of elements
-    - RN 29071: In IDP environments, extension methods now allow you to retrieve CI Type information from connections
-    - RN 29072: IDms classes now support creating and deleting properties in a DataMiner System
-    - RN 29074: SLNet wrapper methods now allow you to safely communicate with the SLScheduler and SLSpectrum modules
+  - RN 29070: IDms classes now support creating, updating and retrieving HTTP connections of elements
+  - RN 29071: In IDP environments, extension methods now allow you to retrieve CI Type information from connections
+  - RN 29072: IDms classes now support creating and deleting properties in a DataMiner System
+  - RN 29074: SLNet wrapper methods now allow you to safely communicate with the SLScheduler and SLSpectrum modules
 
 - 1.2.0.5
 
-    - RN 29070: IDms classes now support creating, updating and retrieving HTTP connections of elements
-    - RN 29071: In IDP environments, extension methods now allow you to retrieve CI Type information from connections
-    - RN 29072: IDms classes now support creating and deleting properties in a DataMiner System
-    - RN 29074: SLNet wrapper methods now allow you to safely communicate with the SLScheduler and SLSpectrum modules
+  - RN 29070: IDms classes now support creating, updating and retrieving HTTP connections of elements
+  - RN 29071: In IDP environments, extension methods now allow you to retrieve CI Type information from connections
+  - RN 29072: IDms classes now support creating and deleting properties in a DataMiner System
+  - RN 29074: SLNet wrapper methods now allow you to safely communicate with the SLScheduler and SLSpectrum modules
 
-[DIS 2.33](https://community.dataminer.services/documentation/dis-v2-33-release-notes/)
+[DIS 2.33](xref:DIS_2.33)
 
 - 1.1.2.9
 
-    - RN 29440: IsSslTlsEnabled property of all ports of an element would incorrectly be reset to false when an element port had been updated
-    - RN 29442: IElementCollection now implements IEnumerable
-    - RN 29513: DmsService class can now be used to manage DataMiner services
-    - RN 29515: Monitors added to subscribe to service alarm level and service state
+  - RN 29440: IsSslTlsEnabled property of all ports of an element would incorrectly be reset to false when an element port had been updated
+  - RN 29442: IElementCollection now implements IEnumerable
+  - RN 29513: DmsService class can now be used to manage DataMiner services
+  - RN 29515: Monitors added to subscribe to service alarm level and service state
 
 - 1.1.2.10
 
-    - RN 29777: Additional check to prevent elements to restart after being updated
+  - RN 29777: Additional check to prevent elements to restart after being updated
 
 - 1.1.2.11
 
-    - RN 30053: RemotePort would throw “null reference” exceptions when trying to retrieve a replicated element
-    - RN 30055: Monitors that subscribe to a table can now execute code whenever data in that table is updated
-    - RN 30056: SLSpectrum wrappers were missing a GetMonitor call with the correct return format
+  - RN 30053: RemotePort would throw “null reference” exceptions when trying to retrieve a replicated element
+  - RN 30055: Monitors that subscribe to a table can now execute code whenever data in that table is updated
+  - RN 30056: SLSpectrum wrappers were missing a GetMonitor call with the correct return format
 
 - 1.2.0.6
 
-    - RN 29440: IsSslTlsEnabled property of all ports of an element would incorrectly be reset to false when an element port had been updated
-    - RN 29442: IElementCollection now implements IEnumerable
-    - RN 29513: DmsService class can now be used to manage DataMiner services
-    - RN 29515: Monitors added to subscribe to service alarm level and service state
+  - RN 29440: IsSslTlsEnabled property of all ports of an element would incorrectly be reset to false when an element port had been updated
+  - RN 29442: IElementCollection now implements IEnumerable
+  - RN 29513: DmsService class can now be used to manage DataMiner services
+  - RN 29515: Monitors added to subscribe to service alarm level and service state
 
 - 1.2.0.7
 
-    - RN 30053: RemotePort would throw “null reference” exceptions when trying to retrieve a replicated element
-    - RN 30055: Monitors that subscribe to a table can now execute code whenever data in that table is updated
-    - RN 30056: SLSpectrum wrappers were missing a GetMonitor call with the correct return format
+  - RN 30053: RemotePort would throw “null reference” exceptions when trying to retrieve a replicated element
+  - RN 30055: Monitors that subscribe to a table can now execute code whenever data in that table is updated
+  - RN 30056: SLSpectrum wrappers were missing a GetMonitor call with the correct return format
 
-[DIS 2.34](https://community.dataminer.services/documentation/dis-v2-34-release-notes/)
+[DIS 2.34](xref:DIS_2.34)
 
 - 1.1.2.12
 
-    - RN 30232: Extended authentication algorithm support
+  - RN 30232: Extended authentication algorithm support
 
 - 1.2.0.8
 
-    - RN 30232: Extended authentication algorithm support
+  - RN 30232: Extended authentication algorithm support
 
-[DIS 2.35](https://community.dataminer.services/documentation/dis-v2-35-release-notes/)
+[DIS 2.35](xref:DIS_2.35)
 
 - No changes to the Class Library base packages
 
-[DIS 2.36](https://community.dataminer.services/documentation/dis-v2-36-release-notes/)
+[DIS 2.36](xref:DIS_2.36)
 
 - No changes to the Class Library base packages

@@ -35,7 +35,7 @@ The procedure below details how you can implement a DataMiner upgrade in an exis
 1. Connect to the system using the designated VPN or host PC.
 1. Verify that there are no active problems in the DMS that can endanger the upgrade.
 1. Check the key DMS functionalities and verify that these will not be affected by the upgrade.
-1. Verify if there are any known issues in the version you intend to upgrade to. See [DataMiner Versions](https://community.dataminer.services/documentation/category/release-notes/dataminer-versions/).
+1. Verify if there are any known issues in the version you intend to upgrade to. See [DataMiner release notes](xref:DataMiner_General_RNs_index) and [Known issues](xref:Known_issues).
 1. Check if the minimum requirements are met for the upgrade, and if any additional software will need to be installed to meet these requirements (e.g. .NET Framework upgrade).
 1. Check if any hotfixes need to be installed after the upgrade.
 1. Determine how much time will be required for the upgrade and make sure this time slot is available on the proposed date of the upgrade.
