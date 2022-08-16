@@ -352,6 +352,12 @@ When the Cube starter window software tried to download a DataMiner Cube for a D
 Something went wrong: Error downloading ClickOnce version: Error downloading manifest file from uri ...
 ```
 
+#### Connected DMA removed from cluster instead of selected DMA in System Center [ID_34035]
+
+<!-- Main Release Version 10.1.0 [CU18]/10.2.0 [CU6] - Feature Release Version 10.2.9 -->
+
+In System Center, when you clicked the *Leave cluster* button on the *Agents* page, this removed the DMA you were connected to from the cluster instead of the selected DMA.
+
 #### Navigation issue in visual overview with several tab pages and shapes linked to EPM object [ID_34122]
 
 <!-- Main Release Version 10.1.0 [CU18]/10.2.0 [CU6] - Feature Release Version 10.2.9 -->
