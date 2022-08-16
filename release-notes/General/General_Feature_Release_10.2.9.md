@@ -455,3 +455,27 @@ During a DataMiner upgrade, in some cases, the *AnalyticsDropUnusedCassandraTabl
 In some cases, an exception could be thrown when removing a query that was used as "start from" query by another query.
 
 From now on, when you try to remove a query that is used as "start from" query, a confirmation box will appear, asking you to confirm the removal of that query.
+
+#### Visual overview in dashboard or low-code app showed error while fetching its initial data [ID_34100]
+
+<!-- Main Release Version 10.2.0 [CU6] - Feature Release Version 10.2.9 -->
+
+When a visual overview was embedded in a dashboard or low-code app, it could occur that it showed the error "Could not retrieve Visual Overview information." while fetching its initial data.
+
+#### GQI queries: Problem in web APIs when opening session for query with node requiring soft-launch feature [ID_34109]
+
+<!-- Main Release Version 10.2.0 [CU6] - Feature Release Version 10.2.9 -->
+
+In the Dashboards app or in a low-code app, when you tried to open a session for a GQI query containing a node that required a soft-launch feature, a problem could occur in the web APIs. Now an error will be shown in such a case instead.
+
+#### GQI queries: Component data not displayed correctly [ID_34118]
+
+<!-- Main Release Version 10.2.0 [CU6] - Feature Release Version 10.2.9 -->
+
+When a component in a dashboard or low-code app showed a GQI query, it could occur that queries and query keys were not in sync, and that data was still being fetched even though the component seemed to be fully loaded. This could for example cause connections to be missing in a node-edge graph.
+
+#### GQI queries: Unhandled exception kept other errors from being displayed [ID_34137]
+
+<!-- Main Release Version 10.2.0 [CU6] - Feature Release Version 10.2.9 -->
+
+In some cases, an unhandled exception in the GQI visualization could keep other errors from being displayed in the UI.
