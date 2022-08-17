@@ -213,6 +213,14 @@ On Failover systems, because of a number of enhancements, overall performance of
 
 The maximum value for the element setting "*The element goes into timeout state when it is not responding for (sec)*" has now been increased from 120 seconds to 24 hours (i.e. 86400 seconds).
 
+#### DataMiner Analytics: Improved handling of clearable alarms [ID_33910]
+
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.9 -->
+
+Up to now, DataMiner Analytics handled clearable alarms with severity "Normal" in the same way as cleared alarms. This meant that these were automatically removed from alarm groups (also known as incidents).
+
+From now on, clearable alarms will keep the alarm focus from the last alarm in the alarm tree that had a non-normal severity. They will also stay in the same alarm group they were in before their severity became "Normal".
+
 #### SLLogCollector: Enhanced processing of SLProtocol memory dumps [ID_33932]
 
 <!-- Main Release Version 10.0.0 [CU22]/10.1.0 [CU18]/10.2.0 [CU6] - Feature Release Version 10.2.9 -->
