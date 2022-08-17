@@ -12,6 +12,41 @@ uid: General_Feature_Release_10.2.9
 
 ## Highlights
 
+#### Direct view tables using columns from different protocols \[ID_33253\]
+
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.9 -->
+
+It is now possible to build a direct view table using multiple columns from multiple different protocols. This can be done using the new *CrossDriverOptions* element.
+
+For example:
+
+```xml
+<Protocol>
+...
+   <Params>
+   ...
+      <Parameter id="50000">
+       ...
+          <ArrayOptions index="0" options=";view=1;directView=105">
+          ...
+          </ArrayOptions>
+          <CrossDriverOptions>
+             <CrossDriverOption protocol="Protocol1" remoteTablePID="30000">
+                 <PIDTranslation local="50002" remote="30002"/>
+                 <PIDTranslation local="50004" remote="30005"/>
+             </CrossDriverOption>
+             <CrossDriverOption protocol="Protocol2" remoteTablePID="20000">
+                 <PIDTranslation local="50003" remote="20002"/>
+                 <PIDTranslation local="50005" remote="20003"/>
+              </CrossDriverOption>
+          </CrossDriverOptions>
+      </Parameter>
+      ...
+   </Params>
+   ...
+</Protocol>
+```
+
 ##### BREAKING CHANGE: Removing a Resource or ResourcePool object will now always require a valid ID [ID_33836]
 
 <!-- Main Release Version 10.3.0 - Feature Release Version 10.2.9 -->
