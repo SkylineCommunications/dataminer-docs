@@ -127,9 +127,9 @@ This tab provides an overview of all configuration parameters for the Booking Ma
 
 - *History and Logs* settings:
 
-    | Option               | Description                                                                                        |
-    |------------------------|----------------------------------------------------------------------------------------------------|
-    | Booking logging location | The path that indicates where the booking logs are going to be saved in. |
+    | Option                   | Description                                    |
+    |--------------------------|------------------------------------------------|
+    | Booking logging location | The path where the booking logs will be saved. |
 
 - *Type of Booking* settings:
 
