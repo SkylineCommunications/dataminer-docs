@@ -1687,6 +1687,12 @@ Minimum value: 1 minute - Default value: 5 minutes
 > [!WARNING]
 > Always be extremely careful when using this tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
 
+#### Dashboards app / Low-Code Apps: Support for feed categories in components [ID_33719]
+
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.9 -->
+
+Up to now, components could only produce one feed for each data type. Now support has been added for different categories within a data type, so that components will be able to produce several feeds for the same data type. This will for example make it possible for a component to produce a query row feed with the categories "timeline item" and "timeline band".
+
 #### QA Device Simulator: Enhanced performance \[ID_33761\]
 
 <!-- Main Release Version 10.3.0 - Feature Release Version 10.2.9 -->
