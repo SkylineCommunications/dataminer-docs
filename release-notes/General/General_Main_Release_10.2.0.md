@@ -7544,6 +7544,12 @@ In some cases, it would no longer be possible to build a GQI query that filtered
 
 Since DataMiner 10.1.8 (RN [30044](xref:General_Feature_Release_10.1.8#instancealarmlevel-would-not-fall-back-to-cellactualalarmlevel-when-there-was-bubble-up-information-but-no-instance-information-id_30044)), it could occur that the instance alarm level for a table row did not bubble up correctly, causing alarms for view tables to be displayed incorrectly (e.g. in an EPM environment). This could also occur for tables with an alarm where no saved data was present.
 
+#### Potential minor memory leak in SLProtocol if fixed parameter had length of zero [ID_34064]
+
+<!-- Main Release Version 10.1.0 [CU18]/10.2.0 [CU6] - Feature Release Version 10.2.9 -->
+
+If a fixed parameter had a length of zero, a minor memory leak could potentially occur in SLProtocol. Though it is unlikely that this could ever happen, as a fixed parameter usually contains data, this issue will now be prevented.
+
 #### Logger tables not deleted when stopped element was deleted [ID_34067]
 
 <!-- Main Release Version 10.1.0 [CU18]/10.2.0 [CU6] - Feature Release Version 10.2.9 -->

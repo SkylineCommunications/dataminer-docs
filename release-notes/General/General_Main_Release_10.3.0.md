@@ -1064,13 +1064,13 @@ The Service Definition component now supports both types of process automation s
 
 Up to now, when a Service Definition component displayed a service definition of type "Skyline Process Automation" or "Custom Process Automation", the name of the associated function definition would be displayed on the nodes. From now on, the text displayed on a particular node will be the value of that node's *Label* property. Only when no *Label* property could be found will the name of the associated function definition be displayed instead.
 
-#### DataMiner web apps updated to Angular 13 \[ID_33869\]
+#### DataMiner web apps updated to Angular 13 [ID_33869]
 
 <!-- Main Release Version 10.3.0 - Feature Release Version 10.2.9 -->
 
-The DataMiner mobile apps that use Angular (e.g. low code apps, Dashboards, Monitoring, Ticketing, Jobs and Automation) now use Angular 13 instead of Angular 12.
+The DataMiner mobile apps that use Angular (e.g. Low-Code Apps, Dashboards, Monitoring, Ticketing, Jobs, and Automation) now use Angular 13 instead of Angular 12.
 
-#### GQI: Improved performance when retrieving data \[ID_33873][ID_33890][ID_33935]
+#### GQI: Improved performance when retrieving data [ID_33873] [ID_33890] [ID_33935]
 
 <!-- Main Release Version 10.3.0 - Feature Release Version 10.2.9 -->
 

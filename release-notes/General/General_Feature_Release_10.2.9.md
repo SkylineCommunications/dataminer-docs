@@ -72,7 +72,7 @@ When DataMiner detects a remove request that contains an object with an empty ID
 > [!NOTE]
 > From now on, the log entries added when creating or deleting resources or resource pools will no longer contain the IDs of all objects that were created or deleted. Instead, they will only contain the IDs of the first 10 objects that were created or deleted.
 
-#### GQI: Improved performance when retrieving data \[ID_33873][ID_33890][ID_33935]
+#### GQI: Improved performance when retrieving data [ID_33873] [ID_33890] [ID_33935]
 
 <!-- Main Release Version 10.3.0 - Feature Release Version 10.2.9 -->
 
@@ -149,7 +149,7 @@ Also, the edit panel will now allow users to select a specific protocol version.
 
 <!-- Main Release Version 10.3.0 - Feature Release Version 10.2.9 -->
 
-The DataMiner mobile apps that use Angular (e.g. low code apps, Dashboards, Monitoring, Ticketing, Jobs and Automation) now use Angular 13 instead of Angular 12.
+The DataMiner mobile apps that use Angular (e.g. Low-Code apps, Dashboards, Monitoring, Ticketing, Jobs, and Automation) now use Angular 13 instead of Angular 12.
 
 #### Azure Active Directory: Secret expiry notices/errors [ID_33916]
 
@@ -213,7 +213,7 @@ Because of a number of enhancements, overall performance of the QA Device Simula
 
 On Failover systems, because of a number of enhancements, overall performance of SLNet has increased when communicating via NATS.
 
-#### Maximum for element timeout setting increased to 24 hours \[ID_33862][ID_33951]
+#### Maximum for element timeout setting increased to 24 hours [ID_33862] [ID_33951]
 
 <!-- Main Release Version 10.3.0 - Feature Release Version 10.2.9 -->
 
@@ -285,6 +285,13 @@ Because of a number of enhancements, overall performance has increased when retr
 When, in the Dashboards app, you switched to edit mode, all columns of all GQI queries on the dashboard in question would be retrieved. From now, only when you open a specific query on the dashboard you are editing will the columns of that specific query be retrieved.
 
 ### Fixes
+
+#### Web apps - Data table component: Filter specified in search box would incorrectly not be re-applied after a data refresh [ID_33385]
+
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.9 -->
+<!-- Not added to 10.3.0 -->
+
+When you hover over a data table component (e.g. a GQI table), a search box will appear in the bottom-right corner. In some cases, the filter specified in that search box would incorrectly not be re-applied after a data refresh.
 
 #### SLLogCollector would become unresponsive when the name of the process or the path where the files had to be stored contained spaces [ID_33493]
 
@@ -437,19 +444,6 @@ When a dashboard created in a DataMiner version prior to v10.2.9 had at least on
 
 When, on a system with an Elasticsearch database, an alarm was closed, that alarm would incorrectly not get moved from the dms-Activealarms index to the dms-alarms index when the associated element had been migrated from another DMS.
 
-#### DataMiner upgrade: Upgrade action 'DeletePreRN28047CustomDataTemplates' would fail when Elasticsearch required authentication [ID_34029]
-
-<!-- Main Release Version 10.2.0 [CU6] - Feature Release Version 10.2.9 -->
-
-During a DataMiner upgrade, the upgrade action *DeletePreRN28047CustomDataTemplates* would fail when Elasticsearch required authentication.
-
-#### Web apps - Data table component: Filter specified in search box would incorrectly not be re-applied after a data refresh [ID_33385]
-
-<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.9 -->
-<!-- Not added to 10.3.0 -->
-
-When you hover over a data table component (e.g. a GQI table), a search box will appear in the bottom-right corner. In some cases, the filter specified in that search box would incorrectly not be re-applied after a data refresh.
-
 #### An alarm property with a name identical to that of an element, service of view property would incorrectly get duplicated when the element with that alarm property was restarted [ID_34021]
 
 <!-- Main Release Version 10.1.0 [CU18]/10.2.0 [CU6] - Feature Release Version 10.2.9 -->
@@ -458,6 +452,12 @@ When you created an alarm property with a name identical to an existing property
 
 > [!NOTE]
 > When upgrading to v10.2.0 [CU6] or v10.2.9, an upgrade action will check the *PropertyConfiguration.xml* file for any issues with duplicate properties and correct them.
+
+#### DataMiner upgrade: Upgrade action 'DeletePreRN28047CustomDataTemplates' would fail when Elasticsearch required authentication [ID_34029]
+
+<!-- Main Release Version 10.2.0 [CU6] - Feature Release Version 10.2.9 -->
+
+During a DataMiner upgrade, the upgrade action *DeletePreRN28047CustomDataTemplates* would fail when Elasticsearch required authentication.
 
 #### Problem with SLSNMPManager when an SNMP Get or Set was put on the queue while the element in question was being stopped [ID_34038]
 
@@ -488,6 +488,12 @@ In some cases, it would no longer be possible to build a GQI query that filtered
 <!-- Main Release Version 10.1.0 [CU18]/10.2.0 [CU6] - Feature Release Version 10.2.9 -->
 
 Since DataMiner 10.1.8 (RN [30044](xref:General_Feature_Release_10.1.8#instancealarmlevel-would-not-fall-back-to-cellactualalarmlevel-when-there-was-bubble-up-information-but-no-instance-information-id_30044)), it could occur that the instance alarm level for a table row did not bubble up correctly, causing alarms for view tables to be displayed incorrectly (e.g. in an EPM environment). This could also occur for tables with an alarm where no saved data was present.
+
+#### Potential minor memory leak in SLProtocol if fixed parameter had length of zero [ID_34064]
+
+<!-- Main Release Version 10.1.0 [CU18]/10.2.0 [CU6] - Feature Release Version 10.2.9 -->
+
+If a fixed parameter had a length of zero, a minor memory leak could potentially occur in SLProtocol. Though it is unlikely that this could ever happen, as a fixed parameter usually contains data, this issue will now be prevented.
 
 #### Logger tables not deleted when stopped element was deleted [ID_34067]
 
