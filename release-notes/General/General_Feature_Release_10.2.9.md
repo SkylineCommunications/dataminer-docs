@@ -471,11 +471,11 @@ In some rare cases, an error could occur in the SLSNMPManager process due to an 
 
 When, in a GQI table, you collapsed a group that contained a selected row, it was no longer possible to select another row.
 
-#### Jobs app: Corrected start time would be saved incorrectly [ID_34043]
+#### Jobs app: Corrected start time saved incorrectly \[ID_34043]
 
-<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.9 -->
+<!-- Main Release Version 10.2.0 [CU7] - Feature Release Version 10.2.9 -->
 
-When, after receiving a message that it was not possible to save a job because of an invalid start time, you had corrected the start time and tried to save the job again, that start time would get saved incorrectly.
+When, after receiving a message that it was not possible to save a job because of an invalid start time, you corrected the start time and tried to save the job again, that start time would get saved incorrectly.
 
 #### GQI: Problem when filtering or aggregating data by custom properties [ID_34058]
 

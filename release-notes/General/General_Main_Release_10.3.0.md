@@ -1999,12 +1999,6 @@ When a name concatenation for a DomInstance had been defined in either the Modul
 
 When, on a system with an Elasticsearch database, an alarm was closed, that alarm would incorrectly not get moved from the dms-Activealarms index to the dms-alarms index when the associated element had been migrated from another DMS.
 
-#### Jobs app: Corrected start time would be saved incorrectly \[ID_34043]
-
-<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.9 -->
-
-When, after receiving a message that it was not possible to save a job because of an invalid start time, you had corrected the start time and tried to save the job again, that start time would get saved incorrectly.
-
 #### DataMiner upgrade: AnalyticsDropUnusedCassandraTables upgrade action would fail \[ID_34091]
 
 <!-- Main Release Version 10.3.0 - Feature Release Version 10.2.9 -->

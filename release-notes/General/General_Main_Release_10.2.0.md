@@ -7644,3 +7644,11 @@ This will prevent the following possible issues:
 
 - The CefSharp browser engine version used by Cube is not updated frequently and therefore not always trusted by certain SAML identity provider websites, such as Microsoft Azure. This can cause a lengthy authentication procedure, even if the browser cache is enabled.
 - The CefSharp browser engine needs to be downloaded from the DMA before a first authentication (on a new device). However, this is currently not supported for HTTPS-only setups.
+
+### CU7 fixes
+
+#### Jobs app: Corrected start time saved incorrectly \[ID_34043]
+
+<!-- Main Release Version 10.2.0 [CU7] - Feature Release Version 10.2.9 -->
+
+When, after receiving a message that it was not possible to save a job because of an invalid start time, you corrected the start time and tried to save the job again, that start time would get saved incorrectly.
