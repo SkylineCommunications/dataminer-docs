@@ -43,3 +43,5 @@ This section lists the available parameters for each topology level in the I-DOC
 - [Cable Modem](xref:I-DOCSIS_parameters_cable_modem)
 
 - [Thresholds](xref:I-DOCSIS_parameters_thresholds)
+
+- [Node Segment](xref:I-DOCSIS_parameters_node_segment)
