@@ -1721,6 +1721,12 @@ A number of enhancements have been made to the ResourceManagerHelper class.
 
 For example, from now on, an ArgumentNullException will be thrown when a NULL argument is provided. Also, when a collection with one or more NULL objects is provided, those objects will be ignored.
 
+#### GQI: Improved performance of column filter [ID_34014]
+
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.9 -->
+
+Instead of a client-side filter, a more efficient server-side filter is now used to filter columns of a table component showing GQI data in a dashboard or low-code app. This will greatly improve the filter performance. However, because this server-side filter does not support "OR" filters, it will no longer be possible to combine multiple conditions within the same filter.
+
 ### Fixes
 
 #### SLAnalytics: Problem with trend prediction \[ID_31352\]

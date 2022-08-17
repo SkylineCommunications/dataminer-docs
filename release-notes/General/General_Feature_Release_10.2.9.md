@@ -105,6 +105,12 @@ The *Line & area chart* component is now able to visualize GQI query results as 
 
 Table columns of type "decimal" can now also be used when filtering or aggregating data.
 
+#### GQI: Improved performance of column filter [ID_34014]
+
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.9 -->
+
+Instead of a client-side filter, a more efficient server-side filter is now used to filter columns of a table component showing GQI data in a dashboard or low-code app. This will greatly improve the filter performance. However, because this server-side filter does not support "OR" filters, it will no longer be possible to combine multiple conditions within the same filter.
+
 ## Other new features
 
 #### Dashboards app / Low-Code Apps - Service Definition component: Text displayed on process automation service definition node will now be the value of that node's Label property [ID_33754]
