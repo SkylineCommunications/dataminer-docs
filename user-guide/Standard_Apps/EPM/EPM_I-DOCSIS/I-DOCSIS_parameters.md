@@ -26,8 +26,8 @@ This section lists the available parameters for each topology level in the I-DOC
 
 - [Service Group (Fiber Node)](xref:I-DOCSIS_parameters_service_group_fiber_node)
 
-<!-- - [Node Segment](xref:I-DOCSIS_parameters_node_segment)
- -->
+- [Node Segment](xref:I-DOCSIS_parameters_node_segment)
+
 - [CM DS QAM CH](xref:I-DOCSIS_parameters_cm_ds_qam_ch)
 
 - [DS QAM CH](xref:I-DOCSIS_parameters_ds_qam_ch)
@@ -43,5 +43,3 @@ This section lists the available parameters for each topology level in the I-DOC
 - [Cable Modem](xref:I-DOCSIS_parameters_cable_modem)
 
 - [Thresholds](xref:I-DOCSIS_parameters_thresholds)
-
-- [Node Segment](xref:I-DOCSIS_parameters_node_segment)

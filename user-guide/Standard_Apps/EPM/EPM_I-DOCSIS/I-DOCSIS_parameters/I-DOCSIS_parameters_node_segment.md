@@ -4,9 +4,7 @@ uid: I-DOCSIS_parameters_node_segment
 
 # I-DOCSIS parameters – Node Segment
 
-These parameters are currently still under development.
-
-<!-- This page contains an overview of the Node Segment parameters available in the I-DOCSIS branch of the EPM Solution.
+This page contains an overview of the Node Segment parameters available in the I-DOCSIS branch of the EPM Solution from version 6.1.5 onwards.
 
 ## KPIs & KQIs
 
@@ -84,4 +82,4 @@ These parameters are currently still under development.
 
 - **DS Port**: Direct value. The DS port associated with the node segment.
 
-- **US Port**: Direct value. The US port associated with the node segment. -->
+- **US Port**: Direct value. The US port associated with the node segment.

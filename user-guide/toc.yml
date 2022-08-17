@@ -2174,8 +2174,8 @@
                   topicUid: I-DOCSIS_parameters_us_service_group
                 - name: Service Group (Fiber Node)
                   topicUid: I-DOCSIS_parameters_service_group_fiber_node
-#                - name: Node Segment
-#                  topicUid: I-DOCSIS_parameters_node_segment
+                - name: Node Segment
+                  topicUid: I-DOCSIS_parameters_node_segment
                 - name: CM DS QAM CH
                   topicUid: I-DOCSIS_parameters_cm_ds_qam_ch
                 - name: DS QAM CH
