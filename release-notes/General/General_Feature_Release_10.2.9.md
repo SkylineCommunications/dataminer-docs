@@ -47,7 +47,7 @@ For example:
 </Protocol>
 ```
 
-##### BREAKING CHANGE: Removing a Resource or ResourcePool object will now always require a valid ID [ID_33836]
+#### BREAKING CHANGE: Removing a Resource or ResourcePool object will now always require a valid ID [ID_33836]
 
 <!-- Main Release Version 10.3.0 - Feature Release Version 10.2.9 -->
 
@@ -71,6 +71,39 @@ When DataMiner detects a remove request that contains an object with an empty ID
 
 > [!NOTE]
 > From now on, the log entries added when creating or deleting resources or resource pools will no longer contain the IDs of all objects that were created or deleted. Instead, they will only contain the IDs of the first 10 objects that were created or deleted.
+
+#### GQI: Improved performance when retrieving data \[ID_33873][ID_33890][ID_33935]
+
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.9 -->
+
+Several improvements have been implemented to increase performance when GQI data is requested. At present, the most noticeable change this results in is an increase of the page size when all GQI data is requested. Up to now, when all GQI data was requested, the page size was always set to 50. From now on, the page size will be set to a number between 50 and 1000 based on the number of columns that are retrieved (max. 3000 cells).
+
+#### Dashboards app - GQI: Line & area chart component is now able to visualize GQI query results as a single line [ID_33879]
+
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.9 -->
+
+The *Line & area chart* component is now able to visualize GQI query results as a single line.
+
+1. Add GQI query data to the chart component.
+
+1. In the component settings tab:
+
+   1. Select the query.
+
+   1. Select the X axis column.
+
+   1. Select the Y axis column.
+
+1. In the component layout, adapt the style of the chart.
+
+> [!NOTE]
+> If you want the component to show a classic trend chart, make sure the query result is sorted by the X axis column.
+
+#### GQI: Table columns of type decimal can now also be used when filtering or aggregating data [ID_33927]
+
+<!-- Main Release Version 10.2.0 [CU6] - Feature Release Version 10.2.9 -->
+
+Table columns of type "decimal" can now also be used when filtering or aggregating data.
 
 ## Other new features
 
@@ -112,27 +145,6 @@ Also, the edit panel will now allow users to select a specific protocol version.
 
 The DataMiner mobile apps that use Angular (e.g. low code apps, Dashboards, Monitoring, Ticketing, Jobs and Automation) now use Angular 13 instead of Angular 12.
 
-#### Dashboards app - GQI: 'Line & area chart' component is now able to visualize GQI query results as a single line [ID_33879]
-
-<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.9 -->
-
-The *Line & area chart* component is now able to visualize GQI query results as a single line.
-
-1. Add GQI query data to the chart component.
-
-1. In the component settings tab:
-
-   1. Select the query.
-
-   1. Select the X axis column.
-
-   1. Select the Y axis column.
-
-1. In the component layout, adapt the style of the chart.
-
-> [!NOTE]
-> If you want the component to show a classic trend chart, make sure the query result is sorted by the X axis column.
-
 #### Azure Active Directory: Secret expiry notices/errors [ID_33916]
 
 <!-- Main Release Version 10.3.0 - Feature Release Version 10.2.9 -->
@@ -150,18 +162,6 @@ Also, more detailed entries will now be added to the logs when setup errors have
 >
 > 1. In Azure, add the API permission *Application.Read.All*.
 > 1. Copy the Azure app object ID (*Azure AD > App registrations > [your application] > Object ID*) and, in *DataMiner.xml*, add it to the *objectId* attribute of the *AzureAD* element.
-
-#### GQI: Table columns of type 'decimal' can now also be used when filtering or aggregating data [ID_33927]
-
-<!-- Main Release Version 10.2.0 [CU6] - Feature Release Version 10.2.9 -->
-
-Table columns of type "decimal" can now also be used when filtering or aggregating data.
-
-#### GQI: When all data is requested, the page size will now be calculated based on the amount of columns that are retrieved [ID_33935]
-
-<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.9 -->
-
-Up to now, when all GQI data was requested, the page size would always be set to 50. From now on, the page size will be set to a number between 50 and 1000, based on the amount of columns that are retrieved (max. 3000 cells).
 
 ## Changes
 

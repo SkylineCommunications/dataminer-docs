@@ -7212,7 +7212,7 @@ From now on, the time of history sets will always be converted to the local time
 
 When trend data is often getting close to the low or high value of a data range, this data range value will no longer be considered as a critical data boundary. This will reduce the number of false positive matches.
 
-#### GQI: Table columns of type 'decimal' can now also be used when filtering or aggregating data [ID_33927]
+#### GQI: Table columns of type decimal can now also be used when filtering or aggregating data [ID_33927]
 
 <!-- Main Release Version 10.2.0 [CU6] - Feature Release Version 10.2.9 -->
 

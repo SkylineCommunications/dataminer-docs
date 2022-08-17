@@ -1070,7 +1070,13 @@ Up to now, when a Service Definition component displayed a service definition of
 
 The DataMiner mobile apps that use Angular (e.g. low code apps, Dashboards, Monitoring, Ticketing, Jobs and Automation) now use Angular 13 instead of Angular 12.
 
-#### Dashboards app - GQI: 'Line & area chart' component is now able to visualize GQI query results as a single line \[ID_33879\]
+#### GQI: Improved performance when retrieving data \[ID_33873][ID_33890][ID_33935]
+
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.9 -->
+
+Several improvements have been implemented to increase performance when GQI data is requested. At present, the most noticeable change this results in is an increase of the page size when all GQI data is requested. Up to now, when all GQI data was requested, the page size was always set to 50. From now on, the page size will be set to a number between 50 and 1000 based on the number of columns that are retrieved (max. 3000 cells).
+
+#### Dashboards app - GQI: Line & area chart component is now able to visualize GQI query results as a single line \[ID_33879\]
 
 <!-- Main Release Version 10.3.0 - Feature Release Version 10.2.9 -->
 
@@ -1090,12 +1096,6 @@ The “Line & area chart” component is now able to visualize GQI query results
 
 > [!NOTE]
 > If you want the component to show a classic trend chart, make sure the query result is sorted by the X axis column.
-
-#### GQI: When all data is requested, the page size will now be calculated based on the amount of columns that are retrieved \[ID_33935\]
-
-<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.9 -->
-
-Up to now, when all GQI data was requested, the page size would always be set to 50. From now on, the page size will be set to a number between 50 and 1000, based on the amount of columns that are retrieved (max. 3000 cells).
 
 ### DMS Service & Resource Management
 
