@@ -1693,6 +1693,12 @@ Minimum value: 1 minute - Default value: 5 minutes
 
 Because of a number of enhancements, overall performance of the QA Device Simulator tool has improved.
 
+#### Maximum for element timeout setting increased to 24 hours \[ID_33862][ID_33951]
+
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.9 -->
+
+The maximum value for the element setting "*The element goes into timeout state when it is not responding for (sec)*" has now been increased from 120 seconds to 24 hours (i.e. 86400 seconds).
+
 #### Service & Resource Management: Enhancements made to ResourceManagerHelper [ID_33993]
 
 <!-- Main Release Version 10.3.0 - Feature Release Version 10.2.9 -->

@@ -12,7 +12,7 @@ uid: General_Feature_Release_10.2.9
 
 ## Highlights
 
-#### Direct view tables using columns from different protocols \[ID_33253\]
+#### Direct view tables using columns from different protocols [ID_33253]
 
 <!-- Main Release Version 10.3.0 - Feature Release Version 10.2.9 -->
 
@@ -200,6 +200,12 @@ Because of a number of enhancements, overall performance of the QA Device Simula
 <!-- Main Release Version 10.2.0 [CU6] - Feature Release Version 10.2.9 -->
 
 On Failover systems, because of a number of enhancements, overall performance of SLNet has increased when communicating via NATS.
+
+#### Maximum for element timeout setting increased to 24 hours \[ID_33862][ID_33951]
+
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.9 -->
+
+The maximum value for the element setting "*The element goes into timeout state when it is not responding for (sec)*" has now been increased from 120 seconds to 24 hours (i.e. 86400 seconds).
 
 #### SLLogCollector: Enhanced processing of SLProtocol memory dumps [ID_33932]
 
