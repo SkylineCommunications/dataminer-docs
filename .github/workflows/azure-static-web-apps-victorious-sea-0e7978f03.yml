@@ -22,6 +22,9 @@ jobs:
           choco install docfx -y
         env:
           CI: true
+      - name: build solutions
+        run: |
+          dotnet build --configuration Debug
       - name: build metadata
         run: |
           docfx metadata -f

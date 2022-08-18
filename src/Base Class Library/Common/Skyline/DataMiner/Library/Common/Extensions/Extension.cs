@@ -1,14 +1,13 @@
 ﻿namespace Skyline.DataMiner.Library.Common
 {
-    using Skyline.DataMiner.Net;
-
     using System;
+
+    using Skyline.DataMiner.Net;
 
     /// <summary>
     /// Defines extension methods on the IConnection class.
     /// </summary>
     ///
-    [Skyline.DataMiner.Library.Common.Attributes.DllImport("SLNetTypes.dll")]
     public static class ConnectionInterfaceExtensions
     {
         /// <summary>
@@ -24,7 +23,7 @@
                 throw new ArgumentNullException("connection");
             }
 
-            return new Dms(new ConnectionCommunication(connection));
+            return null;
         }
     }
 }
