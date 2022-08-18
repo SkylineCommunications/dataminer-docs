@@ -285,6 +285,12 @@ If you used the search box below a table displaying GQI data to filter this data
 - If 2000 additional records have been retrieved after you click "Load more", no more data will be retrieved until you click the button again.
 - If you scroll through the results, additional data will be fetched until there are enough rows to fill the next page.
 
+#### Improved SPI logging for Automation [ID_34025]
+
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.9 -->
+
+The log levels of some of the log lines related to SPIs in the *SLAutomation* log file have been changed, so that the log file does not get flooded with potentially irrelevant data. In addition, these log lines will now contain the SPI node ID and definition ID. The log line mentioning the SPI definition ID when this definition is created will no longer be added.
+
 #### Behavioral anomaly detection: Enhancements [ID_34045]
 
 <!-- Main Release Version 10.3.0 - Feature Release Version 10.2.9 -->
