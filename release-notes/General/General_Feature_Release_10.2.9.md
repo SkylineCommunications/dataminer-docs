@@ -253,6 +253,18 @@ For example, from now on, an ArgumentNullException will be thrown when a NULL ar
 
 When an error occurs in SLScripting, from now on, a new SLScripting instance will be started and all QActions will be reloaded.
 
+#### Dashboards / Low-Code Apps: Table filter improvements [ID_34022]
+
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.9 -->
+
+If you used the search box below a table displaying GQI data to filter this data, up to now, this could cause a serious load on the server in case a large number of rows had to be retrieved. To prevent this, the following conditions will now be applied to determine if more data should be retrieved:
+
+- If the table already has enough rows to fill the next page, no further data will be retrieved.
+- If the condition above is not met, at least 250 rows will retrieved initially.
+- If at least one record is found that matches the search filter, no more rows will be retrieved. You will then need to click a "Load more" button to retrieve more data.
+- If 2000 additional records have been retrieved after you click "Load more", no more data will be retrieved until you click the button again.
+- If you scroll through the results, additional data will be fetched until there are enough rows to fill the next page.
+
 #### Behavioral anomaly detection: Enhancements [ID_34045]
 
 <!-- Main Release Version 10.3.0 - Feature Release Version 10.2.9 -->
