@@ -47,31 +47,6 @@ For example:
 </Protocol>
 ```
 
-#### BREAKING CHANGE: Removing a Resource or ResourcePool object will now always require a valid ID [ID_33836]
-
-<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.9 -->
-
-Up to now, it was possible to delete Resource and ResourcePool objects in a filtered way by passing an "incomplete" object to the associated remove method of the ResourceManagerHelper. Moreover, passing an empty list or NULL would remove all resources on the system. This will no longer be possible.
-
-From now on, it will only be possible to remove Resource objects by ID or name (case sensitive) and ResourcePool objects by ID.
-
-When DataMiner detects a remove request that contains an object with an empty ID (and an empty name in case of a request to remove a Resource object, one of the following messages will be added to the *ResourceManager.txt* log file (type: info):
-
-- In case of a request to remove a Resource object:
-
-    ```txt
-    Detected a resource delete request that contained at least one object without an ID. Deleting resources with resource object filters is not supported anymore.
-    ```
-
-- In case of a request to remove a ResourcePool object:
-
-    ```txt
-    Detected a resource pool delete request that contained at least one object without an ID. Deleting resource pools with object filters is not supported anymore.
-    ```
-
-> [!NOTE]
-> From now on, the log entries added when creating or deleting resources or resource pools will no longer contain the IDs of all objects that were created or deleted. Instead, they will only contain the IDs of the first 10 objects that were created or deleted.
-
 #### GQI: Improved performance when retrieving data [ID_33873] [ID_33890] [ID_33935]
 
 <!-- Main Release Version 10.3.0 - Feature Release Version 10.2.9 -->
@@ -144,6 +119,31 @@ In an HTTP session request, the order of the parameters will now always be ident
 <!-- Main Release Version 10.1.0 [CU18]/10.2.0 [CU6] - Feature Release Version 10.2.9 -->
 
 When a version of a DVE protocol with function DVE protocols is deleted from the system while functions are active, from now on, the function DVE protocol versions associated with those active functions will also be removed from the system.
+
+#### BREAKING CHANGE: Removing a Resource or ResourcePool object will now always require a valid ID [ID_33836]
+
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.9 -->
+
+Up to now, it was possible to delete Resource and ResourcePool objects in a filtered way by passing an "incomplete" object to the associated remove method of the ResourceManagerHelper. Moreover, passing an empty list or NULL would remove all resources on the system. This will no longer be possible.
+
+From now on, it will only be possible to remove Resource objects by ID or name (case sensitive) and ResourcePool objects by ID.
+
+When DataMiner detects a remove request that contains an object with an empty ID (and an empty name in case of a request to remove a Resource object, one of the following messages will be added to the *ResourceManager.txt* log file (type: info):
+
+- In case of a request to remove a Resource object:
+
+    ```txt
+    Detected a resource delete request that contained at least one object without an ID. Deleting resources with resource object filters is not supported anymore.
+    ```
+
+- In case of a request to remove a ResourcePool object:
+
+    ```txt
+    Detected a resource pool delete request that contained at least one object without an ID. Deleting resource pools with object filters is not supported anymore.
+    ```
+
+> [!NOTE]
+> From now on, the log entries added when creating or deleting resources or resource pools will no longer contain the IDs of all objects that were created or deleted. Instead, they will only contain the IDs of the first 10 objects that were created or deleted.
 
 #### Dashboards app: Parameter tables can now expose index values & Edit panel now allows selecting a specific protocol version [ID_33841]
 

@@ -9,6 +9,12 @@ uid: Cube_Feature_Release_10.2.9
 
 ## Highlights
 
+#### Trending: Prediction type selection has now moved to the context menu [ID_33861]
+
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.9 -->
+
+In a trend graph, up to now, a drop-down list in the top-right corner allowed you to select one of the available trend prediction types or "Auto". This drop-down list has now been removed. Instead, you can now right-click the graph and select one of the available trend prediction types or "Auto" from the context menu.
+
 #### Tab layout: Closing a card tab by clicking it with the middle mouse button [ID_33883]
 
 <!-- Main Release Version 10.3.0 - Feature Release Version 10.2.9 -->
@@ -46,44 +52,6 @@ A new theme has been added to DataMiner Cube: "Light".
 
 Also, the Apps list now contains links to the Catalog, the Cloud Admin app and custom web apps.
 
-## Other new features
-
-#### Alarm Console - Incident tracking: Some types of alarms can now be manually added to incidents even when they do not contain any focus data [ID_33771] [ID_33803]
-
-<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.9 -->
-
-Up to now, alarms that did not contain any focus information were not allowed to be the base alarm of an incident. From now on, alarms that do not contain any focus data can be manually added to an incident, provided they are not one of the following types of alarms:
-
-- correlation alarms
-- clearable alarms
-- information events
-- suggestion events
-- other incidents
-
-#### Trending: Prediction type selection has now moved to the context menu [ID_33861]
-
-<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.9 -->
-
-In a trend graph, up to now, a drop-down list in the top-right corner allowed you to select one of the available trend prediction types or "Auto". This drop-down list has now been removed. Instead, you can now right-click the graph and select one of the available trend prediction types or "Auto" from the context menu.
-
-#### Browser callbacks can now open EPM objects via SystemName or SystemType [ID_33963]
-
-<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.9 -->
-
-When an embedded web page is displayed in Cube, it is possible to make a callback from the web page into Cube and, for example, open an element, service, view or CPE card.
-
-The existing JavaScript web browser callbacks for browser shapes in Visual Overview have now been extended to allow opening an EPM card in Cube via an object's SystemName or SystemType using the following method:
-
-```txt
-NavigateCPEByName(string systemType, string systemName);
-```
-
-Example in HTML:
-
-```html
-<a href='javascript:window.external.NavigateCPEByName("Region","California");'>Open Region California</a>
-```
-
 #### Visual Overview - Conditional shape manipulation: Using statistics in the condition when the shape is linked to an EPM object [ID_34026]
 
 <!-- Main Release Version 10.3.0 - Feature Release Version 10.2.9 -->
@@ -116,6 +84,38 @@ Supported operators:
 - \>=
 - \<
 - \<=
+
+## Other new features
+
+#### Alarm Console - Incident tracking: Some types of alarms can now be manually added to incidents even when they do not contain any focus data [ID_33771] [ID_33803]
+
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.9 -->
+
+Up to now, alarms that did not contain any focus information were not allowed to be the base alarm of an incident. From now on, alarms that do not contain any focus data can be manually added to an incident, provided they are not one of the following types of alarms:
+
+- correlation alarms
+- clearable alarms
+- information events
+- suggestion events
+- other incidents
+
+#### Browser callbacks can now open EPM objects via SystemName or SystemType [ID_33963]
+
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.9 -->
+
+When an embedded web page is displayed in Cube, it is possible to make a callback from the web page into Cube and, for example, open an element, service, view or CPE card.
+
+The existing JavaScript web browser callbacks for browser shapes in Visual Overview have now been extended to allow opening an EPM card in Cube via an object's SystemName or SystemType using the following method:
+
+```txt
+NavigateCPEByName(string systemType, string systemName);
+```
+
+Example in HTML:
+
+```html
+<a href='javascript:window.external.NavigateCPEByName("Region","California");'>Open Region California</a>
+```
 
 ## Changes
 
