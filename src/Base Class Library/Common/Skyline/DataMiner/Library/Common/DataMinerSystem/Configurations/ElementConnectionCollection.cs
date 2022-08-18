@@ -33,7 +33,7 @@
 		internal ElementConnectionCollection(ElementInfoEventMessage message)
 		{
 			int amountOfConnections = 1;
-			if (message !=null && message.ExtraPorts != null)
+			if (message != null && message.ExtraPorts != null)
 			{
 				amountOfConnections += message.ExtraPorts.Length;
 			}
@@ -212,15 +212,6 @@
 		/// </summary>
 		public void Clear()
 		{
-			foreach (IElementConnection connection in connections)
-			{
-				ConnectionSettings connectionSetting = connection as ConnectionSettings;
-
-				if(connectionSetting != null)
-				{
-					connectionSetting.ClearUpdates();
-				}
-			}
 		}
 
 		/// <summary>
@@ -230,16 +221,6 @@
 		public bool IsUpdateRequired()
 		{
 			bool isUpdate = false;
-			foreach (IElementConnection connection in connections)
-			{
-				ConnectionSettings connectionSetting = connection as ConnectionSettings;
-
-				if(connectionSetting != null)
-				{
-					isUpdate = connectionSetting.IsUpdated;
-					if (isUpdate) break;
-				}
-			}
 
 			return isUpdate;
 		}
@@ -249,18 +230,9 @@
 		/// </summary>
 		/// <param name="portInfos">List of <see cref="ElementPortInfo"/></param>
 		/// <param name="isCompatibilityIssueDetected"></param>
-		internal void UpdatePortInfo(ElementPortInfo[] portInfos,bool isCompatibilityIssueDetected)
+		internal void UpdatePortInfo(ElementPortInfo[] portInfos, bool isCompatibilityIssueDetected)
 		{
-			for (int i = 0; i < connections.Length; i++)
-			{
-				ConnectionSettings settings = connections[i] as ConnectionSettings;
 
-				if(settings != null)
-				{
-					ElementPortInfo info = portInfos[i];
-					settings.UpdateElementPortInfo(info, isCompatibilityIssueDetected);
-				}
-			}
 		}
 
 		/// <summary>
@@ -270,16 +242,6 @@
 		internal IEnumerable<ElementPortInfo> CreatePortInfo(bool isCompatibilityIssueDetected)
 		{
 			ElementPortInfo[] portInfoMessages = new ElementPortInfo[connections.Length];
-
-			for (int i = 0; i < connections.Length; i++)
-			{
-				ConnectionSettings connection = connections[i] as ConnectionSettings;
-
-				if(connection != null)
-				{
-					portInfoMessages[i] = connection.CreateElementPortInfo(i, isCompatibilityIssueDetected);
-				}
-			}
 
 			return portInfoMessages;
 		}

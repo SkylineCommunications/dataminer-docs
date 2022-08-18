@@ -1,6 +1,7 @@
-﻿using Skyline.DataMiner.Net.Exceptions;
-using System;
+﻿using System;
 using System.Collections.Generic;
+
+using Skyline.DataMiner.Net.Exceptions;
 
 namespace Skyline.DataMiner.Automation
 {
@@ -395,6 +396,9 @@ namespace Skyline.DataMiner.Automation
 		/// }
 		/// </code>
 		/// </example>
-		public string[] GetErrorMessages() { }
+		public string[] GetErrorMessages()
+		{
+			return null;
+		}
 	}
 }
