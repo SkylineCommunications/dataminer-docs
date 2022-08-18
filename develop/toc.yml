@@ -622,8 +622,10 @@
         topicUID: How_to_make_your_automation_scripts_debug_ready
   - name: Class Library
     items:
-    - name: Introduction
+    - name: Class Library Introduction
       topicUid:  ClassLibraryIntroduction
+    - name: Class Library Development
+      topicUid:  ClassLibraryDevelopment
     - name: Lazy loading
       topicUid:  ClassLibraryLazyLoading
     - name: Element creation
