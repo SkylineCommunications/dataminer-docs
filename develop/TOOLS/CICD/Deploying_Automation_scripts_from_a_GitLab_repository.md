@@ -9,7 +9,7 @@ It is possible to deploy an Automation script solution from a GitLab repository 
 To do so, you need to [create a DCP key](#creating-a-dcp-key), [add the key as a masked variable in the repository](#adding-the-key-as-a-masked-variable-in-the-repository), and [add the Skyline DataMiner Deploy Action to a pipeline](#adding-the-skyline-dataminer-deploy-action-to-a-pipeline).
 
 > [!IMPORTANT]
-> Your DataMiner system has to be cloud-connected in order to use this feature.
+> You will only be able to use this feature if your DataMiner System is connected to the cloud. See [Connecting your DataMiner System to the cloud](xref:Connecting_your_DataMiner_System_to_the_cloud).
 
 A working example for this can be found [here](https://gitlab.com/ziinecorp/paris-ip-flow-management).
 
@@ -21,9 +21,9 @@ For more information on how to create a DCP key, refer to [Managing DCP keys](xr
 
 ## Adding the key as a masked variable in the repository
 
-The key(this can be the primary or secondary) should be added as a masked variable in the repository so that it is stored securely in GitLab and not stored in source control. Making the variable masked will prevent the value to be logged accidentally in the pipeline logs.
+The (primary or secondary) key should be added as a masked variable in the repository so that it is stored securely in GitLab and not stored in source control. Making the variable masked will prevent the value from being logged accidentally in the pipeline logs.
 
-1. Copy the value from the DCP Admin app using the copy button next to the key.
+1. Copy the value from the DCP Admin app using the copy button next to the (primary or secondary) key.
 1. In your GitLab repository, go to *Settings* > *CI/CD*.
 1. Go to the section *Variables* and click on expand.
 1. Click on *Add variable*.
@@ -86,8 +86,6 @@ The key(this can be the primary or secondary) should be added as a masked variab
 1. Replace the `<version>` field with the latest version of the action. The latest version together with some additional information about the action can be found on the [GitHub Marketplace](https://github.com/marketplace/actions/skyline-dataminer-deploy-action)
 
 > [!NOTE]
-> For more information about CI/CD pipelines, refer to the [GitLab Documentation](https://docs.gitlab.com/ee/ci/)
-
-> [!IMPORTANT]
-> There are some differences between GitLab and GitHub regarding the versioning of the deploy action. On GitLab this is without a 'v' in front of the version. See also the ZiineCorp example on GitLab.
-> Also on GitLab there is a script parameter *-basepath* that you don't have on GitHub.
+>
+> - For more information about CI/CD pipelines, refer to the [GitLab Documentation](https://docs.gitlab.com/ee/ci/)
+> - Keep in mind that there are some differences between GitLab and GitHub. In GitLab there is no "v" in front of the version of the deploy action, and there is also a script parameter *-basepath* that is only used in GitLab but not in GitHub. See for example [Paris IP Flow Management](https://gitlab.com/ziinecorp/paris-ip-flow-management) on GitLab.
