@@ -1,11 +1,10 @@
 ﻿namespace Skyline.DataMiner.Library.Protocol.Subscription.Monitors
 {
+	using System;
+
 	using Skyline.DataMiner.Library.Common;
-	using Skyline.DataMiner.Library.Common.Selectors;
 	using Skyline.DataMiner.Library.Common.Subscription.Monitors;
 	using Skyline.DataMiner.Scripting;
-
-	using System;
 
 	/// <summary>
 	/// Defines extension methods on <see cref="IDmsElement"/> for monitoring.
@@ -39,12 +38,6 @@
 			{
 				throw new ArgumentNullException("onChange");
 			}
-
-			Element sourceElement = new Element(protocol.DataMinerID, protocol.ElementID);
-			Element selection = new Element(element.AgentId, element.Id);
-			ElementAlarmLevelMonitor monitor = new ElementAlarmLevelMonitor(element.Host.Dms.Communication, sourceElement, selection);
-
-			monitor.Start(onChange);
 		}
 
 		/// <summary>
@@ -74,11 +67,6 @@
 			{
 				throw new ArgumentNullException("onChange");
 			}
-
-			Element sourceElement = new Element(protocol.DataMinerID, protocol.ElementID);
-			Element selection = new Element(element.AgentId, element.Id);
-			ElementNameMonitor monitor = new ElementNameMonitor(element.Host.Dms.Communication, sourceElement, selection);
-			monitor.Start(onChange);
 		}
 
 		/// <summary>
@@ -108,11 +96,6 @@
 			{
 				throw new ArgumentNullException("onChange");
 			}
-
-			Element sourceElement = new Element(protocol.DataMinerID, protocol.ElementID);
-			Element selection = new Element(element.AgentId, element.Id);
-			ElementStateMonitor monitor = new ElementStateMonitor(element.Host.Dms.Communication, sourceElement, selection);
-			monitor.Start(onChange);
 		}
 
 		/// <summary>
@@ -136,11 +119,6 @@
 			{
 				throw new ArgumentNullException("protocol");
 			}
-
-			Element sourceElement = new Element(protocol.DataMinerID, protocol.ElementID);
-			Element selection = new Element(element.AgentId, element.Id);
-			ElementAlarmLevelMonitor monitor = new ElementAlarmLevelMonitor(element.Host.Dms.Communication, sourceElement, selection);
-			monitor.Stop(force);
 		}
 
 		/// <summary>
@@ -164,11 +142,6 @@
 			{
 				throw new ArgumentNullException("protocol");
 			}
-
-			Element sourceElement = new Element(protocol.DataMinerID, protocol.ElementID);
-			Element selection = new Element(element.AgentId, element.Id);
-			ElementNameMonitor monitor = new ElementNameMonitor(element.Host.Dms.Communication, sourceElement, selection);
-			monitor.Stop(force);
 		}
 
 		/// <summary>
@@ -192,11 +165,6 @@
 			{
 				throw new ArgumentNullException("protocol");
 			}
-
-			Element sourceElement = new Element(protocol.DataMinerID, protocol.ElementID);
-			Element selection = new Element(element.AgentId, element.Id);
-			ElementStateMonitor monitor = new ElementStateMonitor(element.Host.Dms.Communication, sourceElement, selection);
-			monitor.Stop(force);
 		}
 	}
 }
