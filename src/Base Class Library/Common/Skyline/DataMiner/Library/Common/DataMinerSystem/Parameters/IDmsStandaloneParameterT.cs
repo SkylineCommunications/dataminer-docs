@@ -1,4 +1,8 @@
-﻿namespace Skyline.DataMiner.Library.Common
+﻿using Skyline.DataMiner.Library.Common.Subscription.Waiters;
+
+using System;
+
+namespace Skyline.DataMiner.Library.Common
 {
 	/// <summary>
 	/// DataMiner standalone parameter interface for a parameter of a specific type.

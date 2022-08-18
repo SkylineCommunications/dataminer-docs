@@ -4,81 +4,8 @@
       "src": [
         {
           "files": [
-            "Interop.SLDms.dll"
-          ],
-		  "src": "./src/DataMiner/Interop.SLDms/bin/Debug"
-        },
-		{
-          "files": [
-            "ProtocolName.ProtocolVersion.QAction.Helper.dll"
-          ],
-		  "src": "./src/DataMiner/ProtocolName.ProtocolVersion.QAction.Helper/bin/Debug"
-        },
-		{
-          "files": [
-            "QActionHelperBaseClasses.dll"
-          ],
-		  "src": "./src/DataMiner/QActionHelperBaseClasses/bin/Debug"
-        },
-		{
-          "files": [
-            "Skyline.DataMiner.Storage.Types.dll"
-          ],
-		  "src": "./src/DataMiner/Skyline.DataMiner.Storage.Types/bin/Debug"
-        },
-		{
-          "files": [
-            "QActionHelperBaseClasses.dll"
-          ],
-		  "src": "./src/DataMiner/QActionHelperBaseClasses/bin/Debug"
-        },
-		{
-          "files": [
-            "SLLoggerUtil.dll"
-          ],
-		  "src": "./src/DataMiner/SLLoggerUtil/bin/Debug"
-        },
-		{
-          "files": [
-            "SLManagedAutomation.dll"
-          ],
-		  "src": "./src/DataMiner/SLManagedAutomation/bin/Debug"
-        },
-		{
-          "files": [
-            "SLManagedScripting.dll"
-          ],
-		  "src": "./src/DataMiner/SLManagedScripting/bin/Debug"
-        },
-		{
-          "files": [
-            "SLNetTypes.dll"
-          ],
-		  "src": "./src/DataMiner/SLNetTypes/bin/Debug"
-        },
-		{
-          "files": [
-            "SLSSH.dll"
-          ],
-		  "src": "./src/DataMiner/SLSSH/bin/Debug"
-        },
-		{
-          "files": [
-            "Skyline.DataMiner.Library.Common.dll"
-          ],
-		  "src": "./src/Base Class Library/Common/bin/Debug"
-        },
-		{
-          "files": [
-            "Skyline.DataMiner.Library.Automation.dll"
-          ],
-		  "src": "./src/Base Class Library/Automation/bin/Debug"
-        },
-		{
-          "files": [
-            "Skyline.DataMiner.Library.Protocol.dll"
-          ],
-		  "src": "./src/Base Class Library/Protocol/bin/Debug"
+            "src/**.csproj"
+          ]
         }
       ],
       "dest": "develop/api/types",

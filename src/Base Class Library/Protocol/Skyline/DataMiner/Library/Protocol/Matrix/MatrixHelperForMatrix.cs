@@ -2,11 +2,15 @@
 {
 	using System;
 
+	using Net.Messages;
+
 	using Skyline.DataMiner.Scripting;
 
 	/// <summary>
 	/// Represents a matrix UI control in a DataMiner protocol. To be used when the protocol only has a matrix measurement type parameter to represent the connections.
 	/// </summary>
+	[Skyline.DataMiner.Library.Common.Attributes.DllImport("SLManagedScripting.dll")]
+	[Skyline.DataMiner.Library.Common.Attributes.DllImport("SLNetTypes.dll")]
 	public class MatrixHelperForMatrix : MatrixHelper
 	{
 		/// <summary>
@@ -31,12 +35,11 @@
 		/// -or-
 		/// The specified <paramref name="matrixReadParameterId"/> does not have a corresponding matrix parameter of type write with the same name.
 		/// </exception>
-		public MatrixHelperForMatrix(SLProtocol protocol, int matrixConnectionsBufferParameterId, int matrixReadParameterId, int discreetInfoParameterId, int matrixSerializedParameterId)
-		//: base(
-		//protocol: protocol,
-		//maxInputCount: 0,
-		//maxOutputCount: 0,
-		//matrixHelperParameters: null)
+		public MatrixHelperForMatrix(SLProtocol protocol, int matrixConnectionsBufferParameterId, int matrixReadParameterId, int discreetInfoParameterId, int matrixSerializedParameterId) : base(
+			protocol: protocol,
+			maxInputCount: 0,
+			maxOutputCount: 0,
+			matrixHelperParameters: null)
 		{
 		}
 
@@ -59,12 +62,11 @@
 		/// -or-
 		/// The specified <paramref name="matrixReadParameterId"/> does not have a corresponding matrix parameter of type write with the same name.
 		/// </exception>
-		public MatrixHelperForMatrix(SLProtocol protocol, int matrixConnectionsBufferParameterId, int matrixReadParameterId, int discreetInfoParameterId)
-		//: base(
-		//protocol: protocol,
-		//maxInputCount: 0,
-		//maxOutputCount: 0,
-		//matrixHelperParameters: null)
+		public MatrixHelperForMatrix(SLProtocol protocol, int matrixConnectionsBufferParameterId, int matrixReadParameterId, int discreetInfoParameterId) : base(
+			protocol: protocol,
+			maxInputCount: 0,
+			maxOutputCount: 0,
+			matrixHelperParameters: null)
 		{
 		}
 
@@ -81,12 +83,11 @@
 		/// -or-
 		/// Invalid <paramref name="discreetInfoParameterId"/>.
 		/// </exception>
-		public MatrixHelperForMatrix(SLProtocol protocol, int discreetInfoParameterId)
-		//: base(
-		//protocol: protocol,
-		//maxInputCount: 0,
-		//maxOutputCount: 0,
-		//matrixHelperParameters: null)
+		public MatrixHelperForMatrix(SLProtocol protocol, int discreetInfoParameterId) : base(
+			protocol: protocol,
+			maxInputCount: 0,
+			maxOutputCount: 0,
+			matrixHelperParameters: null)
 		{
 		}
 	}

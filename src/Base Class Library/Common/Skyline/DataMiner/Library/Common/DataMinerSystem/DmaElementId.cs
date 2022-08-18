@@ -2,15 +2,16 @@
 {
     using System;
     using System.Globalization;
+	using Newtonsoft.Json;
+	using Skyline.DataMiner.Library.Common.Attributes;
 
-    using Newtonsoft.Json;
-
-    /// <summary>
-    /// Represents a system-wide element ID.
-    /// </summary>
-    /// <remarks>This is a combination of a DataMiner Agent ID (the ID of the Agent on which the element was created) and an element ID.</remarks>
-    [Serializable]
-    public struct DmsElementId : IEquatable<DmsElementId>, IComparable, IComparable<DmsElementId>
+	/// <summary>
+	/// Represents a system-wide element ID.
+	/// </summary>
+	/// <remarks>This is a combination of a DataMiner Agent ID (the ID of the Agent on which the element was created) and an element ID.</remarks>
+	[Serializable]
+	[DllImport("Newtonsoft.Json.dll")]
+	public struct DmsElementId : IEquatable<DmsElementId>, IComparable, IComparable<DmsElementId>
     {
         /// <summary>
         /// The DataMiner Agent ID.
@@ -21,68 +22,68 @@
         /// The element ID.
         /// </summary>
         private int elementId;
+		
+		/// <summary>
+		/// Initializes a new instance of the <see cref="DmsElementId"/> structure using the specified string.
+		/// </summary>
+		/// <param name="id">String representing the system-wide element ID.</param>
+		/// <remarks>The provided string must be formatted as follows: "DataMiner Agent ID/element ID (e.g. 400/201)".</remarks>
+		/// <exception cref="ArgumentNullException"><paramref name="id"/> is <see langword="null"/> .</exception>
+		/// <exception cref="ArgumentException"><paramref name="id"/> is the empty string ("") or white space.</exception>
+		/// <exception cref="ArgumentException">The ID does not match the mandatory format.</exception>
+		/// <exception cref="ArgumentException">The DataMiner Agent ID is not an integer.</exception>
+		/// <exception cref="ArgumentException">The element ID is not an integer.</exception>
+		/// <exception cref="ArgumentException">Invalid DataMiner Agent ID.</exception>
+		/// <exception cref="ArgumentException">Invalid element ID.</exception>
+		public DmsElementId(string id)
+		{
+			if (id == null)
+			{
+				throw new ArgumentNullException("id");
+			}
 
-        /// <summary>
-        /// Initializes a new instance of the <see cref="DmsElementId"/> structure using the specified string.
-        /// </summary>
-        /// <param name="id">String representing the system-wide element ID.</param>
-        /// <remarks>The provided string must be formatted as follows: "DataMiner Agent ID/element ID (e.g. 400/201)".</remarks>
-        /// <exception cref="ArgumentNullException"><paramref name="id"/> is <see langword="null"/> .</exception>
-        /// <exception cref="ArgumentException"><paramref name="id"/> is the empty string ("") or white space.</exception>
-        /// <exception cref="ArgumentException">The ID does not match the mandatory format.</exception>
-        /// <exception cref="ArgumentException">The DataMiner Agent ID is not an integer.</exception>
-        /// <exception cref="ArgumentException">The element ID is not an integer.</exception>
-        /// <exception cref="ArgumentException">Invalid DataMiner Agent ID.</exception>
-        /// <exception cref="ArgumentException">Invalid element ID.</exception>
-        public DmsElementId(string id)
-        {
-            if (id == null)
-            {
-                throw new ArgumentNullException("id");
-            }
+			if (String.IsNullOrWhiteSpace(id))
+			{
+				throw new ArgumentException("The provided ID must not be empty.", "id");
+			}
 
-            if (String.IsNullOrWhiteSpace(id))
-            {
-                throw new ArgumentException("The provided ID must not be empty.", "id");
-            }
+			string[] idParts = id.Split('/');
 
-            string[] idParts = id.Split('/');
+			if (idParts.Length != 2)
+			{
+				string message = String.Format(CultureInfo.InvariantCulture, "Invalid ID. Value: {0}. The string must be formatted as follows: \"agent ID/element ID\".", id);
 
-            if (idParts.Length != 2)
-            {
-                string message = String.Format(CultureInfo.InvariantCulture, "Invalid ID. Value: {0}. The string must be formatted as follows: \"agent ID/element ID\".", id);
+				throw new ArgumentException(message, "id");
+			}
 
-                throw new ArgumentException(message, "id");
-            }
+			if (!Int32.TryParse(idParts[0], NumberStyles.Integer, CultureInfo.InvariantCulture, out agentId))
+			{
+				string message = String.Format(CultureInfo.InvariantCulture, "Invalid DataMiner agent ID. \"{0}\" is not an integer value", id);
 
-            if (!Int32.TryParse(idParts[0], NumberStyles.Integer, CultureInfo.InvariantCulture, out agentId))
-            {
-                string message = String.Format(CultureInfo.InvariantCulture, "Invalid DataMiner agent ID. \"{0}\" is not an integer value", id);
+				throw new ArgumentException(message, "id");
+			}
 
-                throw new ArgumentException(message, "id");
-            }
+			if (!Int32.TryParse(idParts[1], NumberStyles.Integer, CultureInfo.InvariantCulture, out elementId))
+			{
+				string message = String.Format(CultureInfo.InvariantCulture, "Invalid Element ID. \"{0}\" is not an integer value", id);
 
-            if (!Int32.TryParse(idParts[1], NumberStyles.Integer, CultureInfo.InvariantCulture, out elementId))
-            {
-                string message = String.Format(CultureInfo.InvariantCulture, "Invalid Element ID. \"{0}\" is not an integer value", id);
+				throw new ArgumentException(message, "id");
+			}
 
-                throw new ArgumentException(message, "id");
-            }
+			if (!IsValidAgentId())
+			{
+				string message = String.Format(CultureInfo.InvariantCulture, "Invalid agent ID. Value: {0}.", agentId);
 
-            if (!IsValidAgentId())
-            {
-                string message = String.Format(CultureInfo.InvariantCulture, "Invalid agent ID. Value: {0}.", agentId);
+				throw new ArgumentException(message, "id");
+			}
 
-                throw new ArgumentException(message, "id");
-            }
+			if (!IsValidElementId())
+			{
+				string message = String.Format(CultureInfo.InvariantCulture, "Invalid element ID. Value: {0}.", elementId);
 
-            if (!IsValidElementId())
-            {
-                string message = String.Format(CultureInfo.InvariantCulture, "Invalid element ID. Value: {0}.", elementId);
-
-                throw new ArgumentException(message, "id");
-            }
-        }
+				throw new ArgumentException(message, "id");
+			}
+		}
 
         /// <summary>
         /// Initializes a new instance of the <see cref="DmsElementId" /> structure using the specified element ID and DataMiner Agent ID.
@@ -122,11 +123,11 @@
             {
                 return agentId;
             }
-            private set
-            {
-                // setter for serialization.
-                agentId = value;
-            }
+			private set
+			{
+				// setter for serialization.
+				agentId = value;
+			}
         }
 
         /// <summary>
@@ -137,19 +138,19 @@
             get
             {
                 return elementId;
-            }
-            private set
-            {
-                // setter for serialization.
-                elementId = value;
-            }
-        }
+			}
+			private set
+			{
+				// setter for serialization.
+				elementId = value;
+			}
+		}
 
-        /// <summary>
-        /// Gets the DataMiner Agent ID/element ID string representation.
-        /// </summary>
-        [JsonIgnore]
-        public string Value
+		/// <summary>
+		/// Gets the DataMiner Agent ID/element ID string representation.
+		/// </summary>
+		[JsonIgnore]
+		public string Value
         {
             get
             {
@@ -179,57 +180,57 @@
             return id1.Equals(id2);
         }
 
-        /// <summary>
-        /// Returns a value that indicates whether a specified <see cref="DmsElementId"/> value is less than another specified <see cref="DmsElementId"/> value.
-        /// </summary>
-        /// <param name="id1">The first value to compare.</param>
-        /// <param name="id2">The second value to compare.</param>
-        /// <returns><c>true</c> if <paramref name="id1"/> is less than <paramref name="id2"/>; otherwise, <c>false</c>.</returns>
-        public static bool operator <(DmsElementId id1, DmsElementId id2)
+		/// <summary>
+		/// Returns a value that indicates whether a specified <see cref="DmsElementId"/> value is less than another specified <see cref="DmsElementId"/> value.
+		/// </summary>
+		/// <param name="id1">The first value to compare.</param>
+		/// <param name="id2">The second value to compare.</param>
+		/// <returns><c>true</c> if <paramref name="id1"/> is less than <paramref name="id2"/>; otherwise, <c>false</c>.</returns>
+		public static bool operator <(DmsElementId id1, DmsElementId id2)
         {
             return (id1.agentId != id2.agentId) ? id1.agentId < id2.agentId : id1.elementId < id2.elementId;
         }
 
-        /// <summary>
-        /// Returns a value that indicates whether a specified <see cref="DmsElementId"/> value is less than or equal to another specified <see cref="DmsElementId"/> value.
-        /// </summary>
-        /// <param name="id1">The first value to compare.</param>
-        /// <param name="id2">The second value to compare.</param>
-        /// <returns><c>true</c> if <paramref name="id1"/> is less than or equal to <paramref name="id2"/>; otherwise, <c>false</c>.</returns>
-        public static bool operator <=(DmsElementId id1, DmsElementId id2)
+		/// <summary>
+		/// Returns a value that indicates whether a specified <see cref="DmsElementId"/> value is less than or equal to another specified <see cref="DmsElementId"/> value.
+		/// </summary>
+		/// <param name="id1">The first value to compare.</param>
+		/// <param name="id2">The second value to compare.</param>
+		/// <returns><c>true</c> if <paramref name="id1"/> is less than or equal to <paramref name="id2"/>; otherwise, <c>false</c>.</returns>
+		public static bool operator <=(DmsElementId id1, DmsElementId id2)
         {
             return (id1.agentId != id2.agentId) ? id1.agentId <= id2.agentId : id1.elementId <= id2.elementId;
         }
 
-        /// <summary>
-        /// Returns a value that indicates whether a specified <see cref="DmsElementId"/> value is greater than another specified <see cref="DmsElementId"/> value.
-        /// </summary>
-        /// <param name="id1">The first value to compare.</param>
-        /// <param name="id2">The second value to compare.</param>
-        /// <returns><c>true</c> if <paramref name="id1"/> is greater than <paramref name="id2"/>; otherwise, <c>false</c>.</returns>
-        public static bool operator >(DmsElementId id1, DmsElementId id2)
+		/// <summary>
+		/// Returns a value that indicates whether a specified <see cref="DmsElementId"/> value is greater than another specified <see cref="DmsElementId"/> value.
+		/// </summary>
+		/// <param name="id1">The first value to compare.</param>
+		/// <param name="id2">The second value to compare.</param>
+		/// <returns><c>true</c> if <paramref name="id1"/> is greater than <paramref name="id2"/>; otherwise, <c>false</c>.</returns>
+		public static bool operator >(DmsElementId id1, DmsElementId id2)
         {
             return (id1.agentId != id2.agentId) ? id1.agentId > id2.agentId : id1.elementId > id2.elementId;
         }
 
-        /// <summary>
-        /// Returns a value that indicates whether a specified <see cref="DmsElementId"/> value is greater than or equal to another specified <see cref="DmsElementId"/> value.
-        /// </summary>
-        /// <param name="id1">The first value to compare.</param>
-        /// <param name="id2">The second value to compare.</param>
-        /// <returns><c>true</c> if <paramref name="id1"/> is greater than or equal to <paramref name="id2"/>; otherwise, <c>false</c>.</returns>
-        public static bool operator >=(DmsElementId id1, DmsElementId id2)
+		/// <summary>
+		/// Returns a value that indicates whether a specified <see cref="DmsElementId"/> value is greater than or equal to another specified <see cref="DmsElementId"/> value.
+		/// </summary>
+		/// <param name="id1">The first value to compare.</param>
+		/// <param name="id2">The second value to compare.</param>
+		/// <returns><c>true</c> if <paramref name="id1"/> is greater than or equal to <paramref name="id2"/>; otherwise, <c>false</c>.</returns>
+		public static bool operator >=(DmsElementId id1, DmsElementId id2)
         {
             return (id1.agentId != id2.agentId) ? id1.agentId >= id2.agentId : id1.elementId >= id2.elementId;
         }
 
-        /// <summary>
-        /// Compares two specified <see cref="DmsElementId"/> instances and returns an integer that indicates their relative position in the sort order.
-        /// </summary>
-        /// <param name="id1">The first value to compare.</param>
-        /// <param name="id2">The second value to compare.</param>
-        /// <returns>A 32-bit signed integer that indicates the relationship between the two comparands.</returns>
-        public static int Compare(DmsElementId id1, DmsElementId id2)
+		/// <summary>
+		/// Compares two specified <see cref="DmsElementId"/> instances and returns an integer that indicates their relative position in the sort order.
+		/// </summary>
+		/// <param name="id1">The first value to compare.</param>
+		/// <param name="id2">The second value to compare.</param>
+		/// <returns>A 32-bit signed integer that indicates the relationship between the two comparands.</returns>
+		public static int Compare(DmsElementId id1, DmsElementId id2)
         {
             int result = id1.AgentId.CompareTo(id2.AgentId);
 
@@ -333,36 +334,36 @@
             return String.Format(CultureInfo.InvariantCulture, "agent ID: {0}, element ID: {1}", agentId, elementId);
         }
 
-        /// <summary>
-        /// Returns a value determining whether the agent ID is valid.
-        /// </summary>
-        /// <returns><c>true</c> if the agent ID is valid; otherwise, <c>false</c>.</returns>
-        private bool IsValidAgentId()
-        {
-            bool isValid = true;
+		/// <summary>
+		/// Returns a value determining whether the agent ID is valid.
+		/// </summary>
+		/// <returns><c>true</c> if the agent ID is valid; otherwise, <c>false</c>.</returns>
+		private bool IsValidAgentId()
+		{
+			bool isValid = true;
 
-            if ((elementId == -1 && agentId != -1) || agentId < -1)
-            {
-                isValid = false;
-            }
+			if ((elementId == -1 && agentId != -1) || agentId < -1)
+			{
+				isValid = false;
+			}
 
-            return isValid;
-        }
+			return isValid;
+		}
 
-        /// <summary>
-        /// Returns a value determining whether the element ID is valid.
-        /// </summary>
-        /// <returns><c>true</c> if the element ID is valid; otherwise, <c>false</c>.</returns>
-        private bool IsValidElementId()
-        {
-            bool isValid = true;
+		/// <summary>
+		/// Returns a value determining whether the element ID is valid.
+		/// </summary>
+		/// <returns><c>true</c> if the element ID is valid; otherwise, <c>false</c>.</returns>
+		private bool IsValidElementId()
+		{
+			bool isValid = true;
 
-            if ((agentId == -1 && elementId != -1) || elementId < -1)
-            {
-                isValid = false;
-            }
+			if ((agentId == -1 && elementId != -1) || elementId < -1)
+			{
+				isValid = false;
+			}
 
-            return isValid;
-        }
-    }
+			return isValid;
+		}
+	}
 }

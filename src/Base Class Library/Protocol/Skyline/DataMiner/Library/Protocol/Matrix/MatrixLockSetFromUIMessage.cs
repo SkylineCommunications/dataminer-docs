@@ -14,7 +14,7 @@
 		/// <value>Zero-based port number.</value>
 		public int Index
 		{
-			get { return 0; }
+			get { return 0};
 		}
 
 		/// <summary>
@@ -23,7 +23,7 @@
 		/// <value><see cref="MatrixIOType"/> that determines if it is an output or input port.</value>
 		public MatrixIOType Type
 		{
-			get { return default(MatrixIOType); }
+			get { return null; }
 		}
 
 		/// <summary>

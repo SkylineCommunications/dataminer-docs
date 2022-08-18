@@ -1,13 +1,15 @@
 ﻿namespace Skyline.DataMiner.Library.Protocol
 {
-	using System;
-
 	using Skyline.DataMiner.Library.Common;
 	using Skyline.DataMiner.Scripting;
+
+	using System;
 
 	/// <summary>
 	/// Defines extension methods on the SLProtocol interface.
 	/// </summary>
+	[Skyline.DataMiner.Library.Common.Attributes.DllImport("SLManagedScripting.dll")]
+	[Skyline.DataMiner.Library.Common.Attributes.DllImport("SLNetTypes.dll")]
 	public static class SlProtocolExtensions
 	{
 #pragma warning disable S1104 // Fields should not have public accessibility
@@ -17,7 +19,7 @@
 		/// Allows an override of the behavior of GetDms to return a Fake or Mock of <see cref="IDms"/>.
 		/// Important: When this is used, unit tests should never be run in parallel.
 		/// </summary>
-		public static Func<SLProtocol, IDms> OverrideGetDms = protocol => { return null; };
+		public static Func<SLProtocol, IDms> OverrideGetDms = protocol => { return new Dms(new Communication(protocol.SLNet)); };
 
 #pragma warning restore S2223 // Non-constant static fields should not be visible
 #pragma warning restore S1104 // Fields should not have public accessibility

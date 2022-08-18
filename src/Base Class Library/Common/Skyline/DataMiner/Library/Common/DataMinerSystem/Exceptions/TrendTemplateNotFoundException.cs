@@ -1,5 +1,6 @@
 ﻿namespace Skyline.DataMiner.Library.Common
 {
+    using Skyline.DataMiner.Library.Common.Attributes;
     using System;
     using System.Runtime.Serialization;
 
@@ -7,6 +8,7 @@
     /// The exception that is thrown when a requested trend template was not found.
     /// </summary>
     [Serializable]
+    [DllImport("System.Runtime.Serialization.dll")]
     public class TrendTemplateNotFoundException : TemplateNotFoundException
     {
         /// <summary>

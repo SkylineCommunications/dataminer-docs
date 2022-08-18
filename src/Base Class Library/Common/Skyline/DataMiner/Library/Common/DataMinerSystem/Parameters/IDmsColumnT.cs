@@ -1,5 +1,7 @@
 ﻿namespace Skyline.DataMiner.Library.Common
 {
+	using Skyline.DataMiner.Library.Common.Subscription.Waiters;
+
 	using System;
 
 	/// <summary>
