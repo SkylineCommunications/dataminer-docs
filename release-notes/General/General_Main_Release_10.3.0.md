@@ -2042,6 +2042,12 @@ When a name concatenation for a DomInstance had been defined in either the Modul
 
 When, on a system with an Elasticsearch database, an alarm was closed, that alarm would incorrectly not get moved from the dms-Activealarms index to the dms-alarms index when the associated element had been migrated from another DMS.
 
+#### DOM: FieldAlias properties not saved to database [ID_34054]
+
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.9 -->
+
+In some cases, it could occur that properties of a FieldAlias DOM object could not be saved to the database.
+
 #### DataMiner upgrade: AnalyticsDropUnusedCassandraTables upgrade action would fail \[ID_34091]
 
 <!-- Main Release Version 10.3.0 - Feature Release Version 10.2.9 -->

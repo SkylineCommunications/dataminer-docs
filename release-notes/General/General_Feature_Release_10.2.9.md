@@ -522,6 +522,12 @@ When, in a GQI table, you collapsed a group that contained a selected row, it wa
 
 When, after receiving a message that it was not possible to save a job because of an invalid start time, you corrected the start time and tried to save the job again, that start time would get saved incorrectly.
 
+#### DOM: FieldAlias properties not saved to database [ID_34054]
+
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.9 -->
+
+In some cases, it could occur that properties of a FieldAlias DOM object could not be saved to the database.
+
 #### GQI: Problem when filtering or aggregating data by custom properties [ID_34058]
 
 <!-- Main Release Version 10.2.0 [CU6] - Feature Release Version 10.2.9 -->
