@@ -1111,3 +1111,12 @@ When you open the *Resources* app, a warning will be shown in the footer when er
 <!-- Main Release Version 10.3.0 - Feature Release Version 10.2.9 -->
 
 When a session variable (e.g. YAxisResources) was updated in an embedded Resource Manager component, in some cases, that same session variable would also incorrectly be updated in the *Occupancy* tab of the Resources app.
+
+#### Problem with validation of properties and actions in service definitions [ID_34023]
+
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.9 -->
+
+When properties or actions of a service definition were configured, it could occur that validation did not happen correctly so that an incorrect configuration could be saved, resulting in exceptions in the server logging and problems in Cube.
+
+The validation will now ensure that no empty names or property names that are incompatible with Elasticsearch can be saved. If there is an error in a service definition, the *Modified* label will change color. Hovering the mouse pointer over the entry with the label will show the first error in the service definition.
+
