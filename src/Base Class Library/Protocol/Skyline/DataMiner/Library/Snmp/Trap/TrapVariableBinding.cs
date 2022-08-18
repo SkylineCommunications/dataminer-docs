@@ -13,13 +13,13 @@ namespace Skyline.DataMiner.Library.Protocol.Snmp.Trap
 		/// Gets the value of this variable binding.
 		/// </summary>
 		/// <value>The value of this variable binding.</value>
-		public string Value { get; }
+		public string Value { get { return value; } }
 
 		/// <summary>
 		/// Gets the OID of this trap variable binding.
 		/// </summary>
 		/// <value>The OID of this trap variable binding.</value>
-		public string Oid { get; }
+		public string Oid { get { return oid; } }
 
 		/// <summary>
 		/// Determines whether the specified object is equal to the current object.

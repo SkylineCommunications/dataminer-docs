@@ -3,6 +3,7 @@
 	using System;
 
 	using Skyline.DataMiner.Library.Common;
+	using Skyline.DataMiner.Library.Common.Selectors;
 	using Skyline.DataMiner.Library.Common.Subscription.Monitors;
 	using Skyline.DataMiner.Scripting;
 
@@ -50,6 +51,12 @@
 			{
 				throw new ArgumentNullException("onChange");
 			}
+
+			Element sourceElement = new Element(protocol.DataMinerID, protocol.ElementID);
+
+			Param selection = new Param(table.Element.AgentId, table.Element.Id, table.Id);
+			var monitor = new TableValueMonitor(table.Element.Host.Dms.Communication, sourceElement, selection);
+			monitor.Start(primaryKeyColumnIdx, onChange);
 		}
 
 		/// <summary>
@@ -68,6 +75,11 @@
 			{
 				throw new ArgumentNullException("protocol");
 			}
+
+			Element sourceElement = new Element(protocol.DataMinerID, protocol.ElementID);
+			Param selection = new Param(table.Element.AgentId, table.Element.Id, table.Id);
+			var monitor = new TableValueMonitor(table.Element.Host.Dms.Communication, sourceElement, selection);
+			monitor.Stop(force);
 		}
 	}
 }

@@ -1,6 +1,7 @@
 ﻿namespace Skyline.DataMiner.Library.Common
 {
 	using System;
+	using System.Linq;
 
 	using Skyline.DataMiner.Net.Messages;
 
@@ -35,13 +36,13 @@
 		{
 			if (tcpConfiguration == null) throw new ArgumentNullException("tcpConfiguration");
 
-			this.tcpConfiguration = tcpConfiguration;
-			this.busAddress = isByPassProxyEnabled ? BypassProxyValue : String.Empty;
+			this.tcpConfiguration     = tcpConfiguration;
+			this.busAddress           = isByPassProxyEnabled ? BypassProxyValue : String.Empty;
 			this.IsBypassProxyEnabled = isByPassProxyEnabled;
-			this.id = -1;
-			this.timeout = new TimeSpan(0, 0, 0, 0, 1500);
-			this.retries = 3;
-			this.elementTimeout = new TimeSpan(0, 0, 0, 30);
+			this.id                   = -1;
+			this.timeout              = new TimeSpan(0, 0, 0, 0, 1500);
+			this.retries              = 3;
+			this.elementTimeout       = new TimeSpan(0, 0, 0, 30);
 		}
 
 		/// <summary>
@@ -50,13 +51,13 @@
 		/// <param name="info">Instance of <see cref="ElementPortInfo"/> to parse the contents of.</param>
 		internal HttpConnection(ElementPortInfo info)
 		{
-			this.busAddress = info.BusAddress;
+			this.busAddress           = info.BusAddress;
 			this.isBypassProxyEnabled = info.ByPassProxy;
-			this.retries = info.Retries;
-			this.timeout = new TimeSpan(0, 0, 0, 0, info.TimeoutTime);
-			this.id = info.PortID;
-			this.elementTimeout = new TimeSpan(0, 0, 0, 0, info.ElementTimeoutTime);
-			//this.tcpConfiguration     = new Tcp(info);
+			this.retries              = info.Retries;
+			this.timeout              = new TimeSpan(0, 0, 0, 0, info.TimeoutTime);
+			this.id                   = info.PortID;
+			this.elementTimeout       = new TimeSpan(0, 0, 0, 0, info.ElementTimeoutTime);
+			this.tcpConfiguration     = new Tcp(info);
 		}
 
 		/// <summary>

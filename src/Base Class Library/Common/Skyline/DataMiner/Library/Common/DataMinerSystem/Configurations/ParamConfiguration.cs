@@ -1,7 +1,8 @@
 ﻿namespace Skyline.DataMiner.Library.Common
 {
 	using System;
-
+	using System.Collections.Generic;
+	using System.Linq;
 	using Net.Messages;
 
 	/// <summary>
@@ -15,9 +16,22 @@
 		/// <exception cref="ArgumentException">The value has an alias that already exists in the service configuration.</exception>
 		public string Alias
 		{
-			get; set;
-		}
+			get
+			{
+				return IncludedElement.Alias;
+			}
 
+			set
+			{
+				if (ParamsSettingsConfiguration.ContainsAlias(value))
+				{
+					throw new ArgumentException("The alias already exists in the service configuration.", "value");
+				}
+
+				IncludedElement.Alias = value;
+			}
+		}
+		
 		/// <summary>
 		/// Gets or sets the included capped alarm level of the element.
 		/// </summary>
@@ -33,7 +47,7 @@
 				IncludedElement.IncludedCapped = value.ToString();
 			}
 		}
-
+		
 		/// <summary>
 		/// Gets or sets the index of the element.
 		/// </summary>
@@ -93,6 +107,10 @@
 			}
 		}
 
+		/// <summary>
+		/// Gets or sets the paramsSettingsConfiguration class.
+		/// </summary>
+		internal ServiceParamsConfiguration ParamsSettingsConfiguration { get; set; }
 
 		/// <summary>
 		/// Gets or sets the ServiceInfoParams object of the included element.

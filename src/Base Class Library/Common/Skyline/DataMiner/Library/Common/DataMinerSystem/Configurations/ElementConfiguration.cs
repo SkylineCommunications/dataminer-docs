@@ -3,9 +3,7 @@
 	using System;
 	using System.Collections.Generic;
 	using System.ComponentModel;
-
 	using Skyline.DataMiner.Library.Common.Properties;
-
 	using Templates;
 
 	/// <summary>
@@ -178,7 +176,22 @@
 		/// <exception cref="ArgumentException">The value of a set operation is an alarm template that is not compatible with the protocol of the element.</exception>
 		public IDmsAlarmTemplate AlarmTemplate
 		{
-			get; set;
+			get
+			{
+				return alarmTemplate;
+			}
+
+			set
+			{
+				if (!InputValidator.IsCompatibleTemplate(value, this.Protocol))
+				{
+					throw new ArgumentException("The specified alarm template is not compatible with the protocol this element executes.", "value");
+				}
+				else
+				{
+					this.alarmTemplate = value;
+				}
+			}
 		}
 
 		/// <summary>
@@ -225,7 +238,15 @@
 		/// <remarks>Forbidden characters: '\', '/', ':', '*', '?', '"', '&lt;', '&gt;', '|', '°', ';'.</remarks>
 		public string Name
 		{
-			get; set;
+			get
+			{
+				return name;
+			}
+
+			set
+			{
+				name = InputValidator.ValidateName(value, "value");
+			}
 		}
 
 		/// <summary>
@@ -233,7 +254,12 @@
 		/// </summary>
 		public IPropertConfigurationCollection Properties
 		{
-			get;
+			get
+			{
+				LoadPropertyDefinitions();
+
+				return new PropertyConfigurationCollection(properties);
+			}
 		}
 
 		/// <summary>
@@ -277,7 +303,22 @@
 		/// <exception cref="ArgumentException">The value of a set operation is a trend template that is not compatible with the protocol of the element.</exception>
 		public IDmsTrendTemplate TrendTemplate
 		{
-			get; set;
+			get
+			{
+				return trendTemplate;
+			}
+
+			set
+			{
+				if (!InputValidator.IsCompatibleTemplate(value, this.Protocol))
+				{
+					throw new ArgumentException("The specified trend template is not compatible with the protocol this element executes.", "value");
+				}
+				else
+				{
+					trendTemplate = value;
+				}
+			}
 		}
 
 		/// <summary>

@@ -47,31 +47,6 @@ For example:
 </Protocol>
 ```
 
-#### BREAKING CHANGE: Removing a Resource or ResourcePool object will now always require a valid ID [ID_33836]
-
-<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.9 -->
-
-Up to now, it was possible to delete Resource and ResourcePool objects in a filtered way by passing an "incomplete" object to the associated remove method of the ResourceManagerHelper. Moreover, passing an empty list or NULL would remove all resources on the system. This will no longer be possible.
-
-From now on, it will only be possible to remove Resource objects by ID or name (case sensitive) and ResourcePool objects by ID.
-
-When DataMiner detects a remove request that contains an object with an empty ID (and an empty name in case of a request to remove a Resource object, one of the following messages will be added to the *ResourceManager.txt* log file (type: info):
-
-- In case of a request to remove a Resource object:
-
-    ```txt
-    Detected a resource delete request that contained at least one object without an ID. Deleting resources with resource object filters is not supported anymore.
-    ```
-
-- In case of a request to remove a ResourcePool object:
-
-    ```txt
-    Detected a resource pool delete request that contained at least one object without an ID. Deleting resource pools with object filters is not supported anymore.
-    ```
-
-> [!NOTE]
-> From now on, the log entries added when creating or deleting resources or resource pools will no longer contain the IDs of all objects that were created or deleted. Instead, they will only contain the IDs of the first 10 objects that were created or deleted.
-
 #### GQI: Improved performance when retrieving data [ID_33873] [ID_33890] [ID_33935]
 
 <!-- Main Release Version 10.3.0 - Feature Release Version 10.2.9 -->
@@ -111,6 +86,14 @@ Table columns of type "decimal" can now also be used when filtering or aggregati
 
 Instead of a client-side filter, a more efficient server-side filter is now used to filter columns of a table component showing GQI data in a dashboard or low-code app. This will greatly improve the filter performance. However, because this server-side filter does not support "OR" filters, it will no longer be possible to combine multiple conditions within the same filter.
 
+#### EPM: Relation contextuality taken into account for user selections [ID_34083]
+
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.9 -->
+
+When multiple selections are made in the EPM topology tree, the possible many-to-many relations between the fields are now taken into account to load further possible selections for other fields. Previously, only the last selected field was taken into account.
+
+For example, if a topology contains a CCAP Core field and a Node Leaf field lower in the topology, and a value is selected for both, previously only the Node Leaf selection was taken into account for the possible selections in the RPD field further down in the topology, whereas now the CCAP Core selection will also be taken into account if the RPD field is related to both fields.
+
 ## Other new features
 
 #### Dashboards app / Low-Code Apps - Service Definition component: Text displayed on process automation service definition node will now be the value of that node's Label property [ID_33754]
@@ -136,6 +119,31 @@ In an HTTP session request, the order of the parameters will now always be ident
 <!-- Main Release Version 10.1.0 [CU18]/10.2.0 [CU6] - Feature Release Version 10.2.9 -->
 
 When a version of a DVE protocol with function DVE protocols is deleted from the system while functions are active, from now on, the function DVE protocol versions associated with those active functions will also be removed from the system.
+
+#### BREAKING CHANGE: Removing a Resource or ResourcePool object will now always require a valid ID [ID_33836]
+
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.9 -->
+
+Up to now, it was possible to delete Resource and ResourcePool objects in a filtered way by passing an "incomplete" object to the associated remove method of the ResourceManagerHelper. Moreover, passing an empty list or NULL would remove all resources on the system. This will no longer be possible.
+
+From now on, it will only be possible to remove Resource objects by ID or name (case sensitive) and ResourcePool objects by ID.
+
+When DataMiner detects a remove request that contains an object with an empty ID (and an empty name in case of a request to remove a Resource object, one of the following messages will be added to the *ResourceManager.txt* log file (type: info):
+
+- In case of a request to remove a Resource object:
+
+    ```txt
+    Detected a resource delete request that contained at least one object without an ID. Deleting resources with resource object filters is not supported anymore.
+    ```
+
+- In case of a request to remove a ResourcePool object:
+
+    ```txt
+    Detected a resource pool delete request that contained at least one object without an ID. Deleting resource pools with object filters is not supported anymore.
+    ```
+
+> [!NOTE]
+> From now on, the log entries added when creating or deleting resources or resource pools will no longer contain the IDs of all objects that were created or deleted. Instead, they will only contain the IDs of the first 10 objects that were created or deleted.
 
 #### Dashboards app: Parameter tables can now expose index values & Edit panel now allows selecting a specific protocol version [ID_33841]
 
@@ -168,6 +176,18 @@ Also, more detailed entries will now be added to the logs when setup errors have
 >
 > 1. In Azure, add the API permission *Application.Read.All*.
 > 1. Copy the Azure app object ID (*Azure AD > App registrations > [your application] > Object ID*) and, in *DataMiner.xml*, add it to the *objectId* attribute of the *AzureAD* element.
+
+#### QActions are now IDisposable and the SLProtocol object remains available outside of the run scope [ID_33965]
+
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.9 -->
+
+The SLProtocol(Ext) object in QActions will now retain all of its data members outside of the run scope. This means that, while Notifies were already available out of scope earlier, members such as the QActionID will now also remain available when a QAction run ends. In addition, the SLNet connection can now be set up at any time.
+
+If the QAction class is not static and implements the IDisposable interface, the Dispose() function will be called when the QAction instance is released (i.e. when the element is stopped). The same goes for any other class the entrypoint may be in. This coincides with the IsActive property of the SLProtocol object being set to false, which prevents further function calls to the object from being executed.
+
+The Dispose is called by a separate thread than the one stopping the element. Its purpose is to release lingering resources and connections when the element is stopped.
+
+In addition, up to now only one instance was retained per QAction, so when entrypoints pointed to different classes, the instances were not kept. Now these separate instances will also be stored correctly.
 
 ## Changes
 
@@ -252,6 +272,31 @@ For example, from now on, an ArgumentNullException will be thrown when a NULL ar
 <!-- Main Release Version 10.1.0 [CU18]/10.2.0 [CU6] - Feature Release Version 10.2.9 -->
 
 When an error occurs in SLScripting, from now on, a new SLScripting instance will be started and all QActions will be reloaded.
+
+#### Dashboards / Low-Code Apps: Table filter improvements [ID_34022]
+
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.9 -->
+
+If you used the search box below a table displaying GQI data to filter this data, up to now, this could cause a serious load on the server in case a large number of rows had to be retrieved. To prevent this, the following conditions will now be applied to determine if more data should be retrieved:
+
+- If the table already has enough rows to fill the next page, no further data will be retrieved.
+- If the condition above is not met, at least 250 rows will retrieved initially.
+- If at least one record is found that matches the search filter, no more rows will be retrieved. You will then need to click a "Load more" button to retrieve more data.
+- If 2000 additional records have been retrieved after you click "Load more", no more data will be retrieved until you click the button again.
+- If you scroll through the results, additional data will be fetched until there are enough rows to fill the next page.
+
+#### Improved SPI logging for Automation [ID_34025]
+
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.9 -->
+
+The log levels of some of the log lines related to SPIs in the *SLAutomation* log file have been changed, so that the log file does not get flooded with potentially irrelevant data. In addition, these log lines will now contain the SPI node ID and definition ID. The log line mentioning the SPI definition ID when this definition is created will no longer be added.
+
+#### Dashboards app / Low-Code apps: No more statistics and suggestions for conditional coloring of Table and Node edge component [ID_34037]
+
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.9 -->
+<!-- Part of this RN is still in soft launch and consequently has not been documented yet -->
+
+To improve performance, in the *Layout* pane for a Table or Node edge component, no more statistics and suggestions will be shown for conditional coloring.
 
 #### Behavioral anomaly detection: Enhancements [ID_34045]
 
@@ -476,6 +521,12 @@ When, in a GQI table, you collapsed a group that contained a selected row, it wa
 <!-- Main Release Version 10.2.0 [CU7] - Feature Release Version 10.2.9 -->
 
 When, after receiving a message that it was not possible to save a job because of an invalid start time, you corrected the start time and tried to save the job again, that start time would get saved incorrectly.
+
+#### DOM: FieldAlias properties not saved to database [ID_34054]
+
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.9 -->
+
+In some cases, it could occur that properties of a FieldAlias DOM object could not be saved to the database.
 
 #### GQI: Problem when filtering or aggregating data by custom properties [ID_34058]
 

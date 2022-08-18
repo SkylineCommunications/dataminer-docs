@@ -1,13 +1,21 @@
 ﻿namespace Skyline.DataMiner.Library.Protocol.Matrix
 {
 	using System;
-
+	using System.Collections.Generic;
+	using System.Globalization;
+	using System.Linq;
+	using System.Text;
+	using Net.Messages;
+	using Newtonsoft.Json;
 	using Skyline.DataMiner.Scripting;
 
 	/// <summary>
 	/// Represents a matrix UI control in a DataMiner protocol.
 	/// Do not use this class directly. Instead, please use one of the inherited classes, depending on the type of available parameters in the protocol: <see cref="MatrixHelperForMatrix"/>, <see cref="MatrixHelperForTables"/>, or <see cref="MatrixHelperForMatrixAndTables"/>.
 	/// </summary>
+	[Skyline.DataMiner.Library.Common.Attributes.DllImport("Newtonsoft.Json.dll")]
+	[Skyline.DataMiner.Library.Common.Attributes.DllImport("SLManagedScripting.dll")]
+	[Skyline.DataMiner.Library.Common.Attributes.DllImport("SLNetTypes.dll")]
 	public class MatrixHelper
 	{
 		/// <summary>
@@ -17,8 +25,26 @@
 		/// <exception cref="ArgumentOutOfRangeException">The value of a set operation is not in the range [1, MaxInputs].</exception>
 		public int DisplayedInputs
 		{
-			get; set;
+			get
+			{
+				return displayedInputs;
+			}
 
+			set
+			{
+				if (value > 0 && value <= MaxInputs)
+				{
+					if (displayedInputs != value)
+					{
+						displayedInputs = value;
+						changeMatrixSize = true;
+					}
+				}
+				else
+				{
+					throw new ArgumentOutOfRangeException("The number of displayed inputs must be in the range [1, " + MaxInputs + "].");
+				}
+			}
 		}
 
 		/// <summary>
@@ -28,8 +54,26 @@
 		/// <exception cref="ArgumentOutOfRangeException">The value of a set operation is not in the range [1, MaxOutputs].</exception>
 		public int DisplayedOutputs
 		{
-			get; set;
+			get
+			{
+				return displayedOutputs;
+			}
 
+			set
+			{
+				if (value > 0 && value <= MaxOutputs)
+				{
+					if (displayedOutputs != value)
+					{
+						displayedOutputs = value;
+						changeMatrixSize = true;
+					}
+				}
+				else
+				{
+					throw new ArgumentOutOfRangeException("The number of displayed outputs must be in the range [1, " + MaxOutputs + "].");
+				}
+			}
 		}
 
 		/// <summary>
@@ -38,7 +82,7 @@
 		/// <value>The inputs of this matrix.</value>
 		public MatrixInputs Inputs
 		{
-			get;
+			get { return inputs; }
 		}
 
 		/// <summary>
@@ -83,7 +127,7 @@
 		/// <value>The outputs of this matrix.</value>
 		public MatrixOutputs Outputs
 		{
-			get;
+			get { return outputs; }
 		}
 
 		/// <summary>

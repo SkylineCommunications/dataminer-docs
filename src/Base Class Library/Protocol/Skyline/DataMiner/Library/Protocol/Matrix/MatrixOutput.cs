@@ -9,8 +9,6 @@
 	/// </summary>
 	public class MatrixOutput : MatrixPort
 	{
-		internal MatrixOutput() : base(0) { }
-
 		/// <summary>
 		/// Gets the zero-based indexes of the inputs that are connected with this matrix output.
 		/// </summary>

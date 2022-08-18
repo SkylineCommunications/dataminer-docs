@@ -31,7 +31,10 @@
 		/// <returns>An enumerator that can be used to iterate through the collection.</returns>
 		public IEnumerator<MatrixOutput> GetEnumerator()
 		{
-			return null;
+			for (int i = 0; i < portState.MaxOutputs; i++)
+			{
+				yield return this[i];
+			}
 		}
 
 		/// <summary>

@@ -9,14 +9,14 @@
 	/// </summary>
 	public class MatrixInputs : IEnumerable<MatrixInput>
 	{
-		//private readonly MatrixPortState portState;
+		private readonly MatrixPortState portState;
 		private readonly Dictionary<int, MatrixInput> ports;
 
-		//internal MatrixInputs(MatrixPortState portState)
-		//{
-		//	this.portState = portState;
-		//	ports = new Dictionary<int, MatrixInput>();
-		//}
+		internal MatrixInputs(MatrixPortState portState)
+		{
+			this.portState = portState;
+			ports = new Dictionary<int, MatrixInput>();
+		}
 
 		/// <summary>
 		/// Gets the specified input port.
@@ -30,8 +30,19 @@
 		{
 			get
 			{
+				if (index < 0 || index >= portState.MaxInputs)
+				{
+					throw new ArgumentOutOfRangeException("index", "The specified index must be in the range [0," + (portState.MaxInputs - 1) + "].");
+				}
 
-				return null;
+				MatrixInput port;
+				if (!ports.TryGetValue(index, out port))
+				{
+					port = new MatrixInput(portState, index);
+					ports[index] = port;
+				}
+
+				return port;
 			}
 		}
 
@@ -41,7 +52,10 @@
 		/// <returns>An enumerator that can be used to iterate through the collection.</returns>
 		public IEnumerator<MatrixInput> GetEnumerator()
 		{
-			return null;
+			for (int i = 0; i < portState.MaxInputs; i++)
+			{
+				yield return this[i];
+			}
 		}
 
 		/// <summary>
