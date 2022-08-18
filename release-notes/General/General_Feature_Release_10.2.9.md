@@ -169,6 +169,18 @@ Also, more detailed entries will now be added to the logs when setup errors have
 > 1. In Azure, add the API permission *Application.Read.All*.
 > 1. Copy the Azure app object ID (*Azure AD > App registrations > [your application] > Object ID*) and, in *DataMiner.xml*, add it to the *objectId* attribute of the *AzureAD* element.
 
+#### QActions are now IDisposable and the SLProtocol object remains available outside of the run scope [ID_33965]
+
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.9 -->
+
+The SLProtocol(Ext) object in QActions will now retain all of its data members outside of the run scope. This means that, while Notifies were already available out of scope earlier, members such as the QActionID will now also remain available when a QAction run ends. In addition, the SLNet connection can now be set up at any time.
+
+If the QAction class is not static and implements the IDisposable interface, the Dispose() function will be called when the QAction instance is released (i.e. when the element is stopped). The same goes for any other class the entrypoint may be in. This coincides with the IsActive property of the SLProtocol object being set to false, which prevents further function calls to the object from being executed.
+
+The Dispose is called by a separate thread than the one stopping the element. Its purpose is to release lingering resources and connections when the element is stopped.
+
+In addition, up to now only one instance was retained per QAction, so when entrypoints pointed to different classes, the instances were not kept. Now these separate instances will also be stored correctly.
+
 ## Changes
 
 ### Enhancements

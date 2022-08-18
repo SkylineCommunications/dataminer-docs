@@ -491,6 +491,18 @@ For example, if protocolProcesses is set to 5 (i.e. the default value), and scri
 > - Assigning more SLScripting processes than SLProtocol processes will simply give every SLProtocol its own instance without launching additional SLScripting processes.
 > - Up to now, the allowed values for scriptingProcesses were “\[service\]” and “protocol”. If scriptingProcesses is set to “protocol”, an SLScripting process is initialized for every SLProtocol process. This should not be confused with setting protocolProcesses to “protocol”. In that case, an SLProtocol process is launched for every protocol name.
 
+#### QActions are now IDisposable and the SLProtocol object remains available outside of the run scope [ID_33965]
+
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.9 -->
+
+The SLProtocol(Ext) object in QActions will now retain all of its data members outside of the run scope. This means that, while Notifies were already available out of scope earlier, members such as the QActionID will now also remain available when a QAction run ends. In addition, the SLNet connection can now be set up at any time.
+
+If the QAction class is not static and implements the IDisposable interface, the Dispose() function will be called when the QAction instance is released (i.e. when the element is stopped). The same goes for any other class the entrypoint may be in. This coincides with the IsActive property of the SLProtocol object being set to false, which prevents further function calls to the object from being executed.
+
+The Dispose is called by a separate thread than the one stopping the element. Its purpose is to release lingering resources and connections when the element is stopped.
+
+In addition, up to now only one instance was retained per QAction, so when entrypoints pointed to different classes, the instances were not kept. Now these separate instances will also be stored correctly.
+
 ### DMS Automation
 
 #### Engine object: TriggeredByName property added \[ID_33122\]
