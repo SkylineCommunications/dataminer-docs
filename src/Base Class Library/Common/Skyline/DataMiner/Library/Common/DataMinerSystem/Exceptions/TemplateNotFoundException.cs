@@ -1,5 +1,6 @@
 ﻿namespace Skyline.DataMiner.Library.Common
 {
+    using Skyline.DataMiner.Library.Common.Attributes;
     using System;
     using System.Globalization;
     using System.Runtime.Serialization;
@@ -8,8 +9,9 @@
     /// The exception that is thrown when a requested template was not found.
     /// </summary>
     [Serializable]
+    [DllImport("System.Runtime.Serialization.dll")]
     public class TemplateNotFoundException : DmsException
-    {
+	{
         /// <summary>
         /// Initializes a new instance of the <see cref="TemplateNotFoundException"/> class.
         /// </summary>

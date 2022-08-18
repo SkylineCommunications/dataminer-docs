@@ -1,10 +1,11 @@
 ﻿namespace Skyline.DataMiner.Library.Protocol.Subscription.Monitors
 {
-	using System;
-
 	using Skyline.DataMiner.Library.Common;
+	using Skyline.DataMiner.Library.Common.Selectors;
 	using Skyline.DataMiner.Library.Common.Subscription.Monitors;
 	using Skyline.DataMiner.Scripting;
+
+	using System;
 
 	/// <summary>
 	/// Defines extension methods on <see cref="IDmsStandaloneParameter"/> for monitoring.
@@ -39,6 +40,12 @@
 			{
 				throw new ArgumentNullException("onChange");
 			}
+
+			Element sourceElement = new Element(protocol.DataMinerID, protocol.ElementID);
+			Param selection = new Param(parameter.Element.AgentId, parameter.Element.Id, parameter.Id);
+			ParamAlarmLevelMonitor monitor = new ParamAlarmLevelMonitor(parameter.Element.Host.Dms.Communication, sourceElement, selection);
+
+			monitor.Start(onChange);
 		}
 
 #pragma warning disable S3242 // Method parameters should be declared with base types
@@ -71,6 +78,12 @@
 			{
 				throw new ArgumentNullException("onChange");
 			}
+
+			Element sourceElement = new Element(protocol.DataMinerID, protocol.ElementID);
+			Param selection = new Param(parameter.Element.AgentId, parameter.Element.Id, parameter.Id);
+
+			var monitor = new ParamValueMonitor<T>(parameter.Element.Host.Dms.Communication, sourceElement, selection);
+			monitor.Start(onChange);
 		}
 
 		/// <summary>
@@ -94,6 +107,11 @@
 			{
 				throw new ArgumentNullException("protocol");
 			}
+
+			Element sourceElement = new Element(protocol.DataMinerID, protocol.ElementID);
+			Param selection = new Param(parameter.Element.AgentId, parameter.Element.Id, parameter.Id);
+			ParamAlarmLevelMonitor monitor = new ParamAlarmLevelMonitor(parameter.Element.Host.Dms.Communication, sourceElement, selection);
+			monitor.Stop(force);
 		}
 
 		/// <summary>
@@ -117,6 +135,12 @@
 			{
 				throw new ArgumentNullException("protocol");
 			}
+
+			Element sourceElement = new Element(protocol.DataMinerID, protocol.ElementID);
+			Param selection = new Param(parameter.Element.AgentId, parameter.Element.Id, parameter.Id);
+
+			var monitor = new ParamValueMonitor(parameter.Element.Host.Dms.Communication, sourceElement, selection);
+			monitor.Stop(force);
 		}
 	}
 }

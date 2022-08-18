@@ -1,12 +1,14 @@
 ﻿namespace Skyline.DataMiner.Library.Protocol.Matrix
 {
 	using System;
-
+	using Net.Messages;
 	using Skyline.DataMiner.Scripting;
 
 	/// <summary>
 	/// Represents a matrix UI control in a DataMiner protocol. To be used when the protocol only has table measurement type parameters to represent the connections.
 	/// </summary>
+	[Skyline.DataMiner.Library.Common.Attributes.DllImport("SLManagedScripting.dll")]
+	[Skyline.DataMiner.Library.Common.Attributes.DllImport("SLNetTypes.dll")]
 	public class MatrixHelperForTables : MatrixHelper
 	{
 		/// <summary>
@@ -39,12 +41,11 @@
 		/// -or-
 		/// A valid <paramref name="maxInputCount"/> and <paramref name="maxOutputCount"/> need to be provided when there is no matrix parameter.
 		/// </exception>
-		public MatrixHelperForTables(SLProtocol protocol, int matrixConnectionsBufferParameterId, int inputsTableParameterId, int outputsTableParameterId, int maxInputCount, int maxOutputCount, int matrixSerializedParameterId)
-		//: base(
-		//protocol: protocol,
-		//maxInputCount: maxInputCount,
-		//maxOutputCount: maxOutputCount,
-		//matrixHelperParameters: null)
+		public MatrixHelperForTables(SLProtocol protocol, int matrixConnectionsBufferParameterId, int inputsTableParameterId, int outputsTableParameterId, int maxInputCount, int maxOutputCount, int matrixSerializedParameterId) : base(
+			protocol: protocol,
+			maxInputCount: maxInputCount,
+			maxOutputCount: maxOutputCount,
+			matrixHelperParameters: null)
 		{
 		}
 
@@ -75,12 +76,11 @@
 		/// -or-
 		/// A valid <paramref name="maxInputCount"/> and <paramref name="maxOutputCount"/> need to be provided when there is no matrix parameter.
 		/// </exception>
-		public MatrixHelperForTables(SLProtocol protocol, int matrixConnectionsBufferParameterId, int inputsTableParameterId, int outputsTableParameterId, int maxInputCount, int maxOutputCount)
-		//: base(
-		//protocol: protocol,
-		//maxInputCount: maxInputCount,
-		//maxOutputCount: maxOutputCount,
-		//matrixHelperParameters: null)
+		public MatrixHelperForTables(SLProtocol protocol, int matrixConnectionsBufferParameterId, int inputsTableParameterId, int outputsTableParameterId, int maxInputCount, int maxOutputCount) : base(
+			protocol: protocol,
+			maxInputCount: maxInputCount,
+			maxOutputCount: maxOutputCount,
+			matrixHelperParameters: null)
 		{
 		}
 
@@ -100,12 +100,11 @@
 		/// -or-
 		/// The parameter for serialized sets cannot be found. This needs to be a displayed write string parameter with the same parameter name as the parameter name referred to by the found outputsTableParameter appended with "SerializedSets".
 		/// </exception>
-		public MatrixHelperForTables(SLProtocol protocol, int maxInputCount, int maxOutputCount)
-		//: base(
-		//protocol: protocol,
-		//maxInputCount: maxInputCount,
-		//maxOutputCount: maxOutputCount,
-		//matrixHelperParameters: null)
+		public MatrixHelperForTables(SLProtocol protocol, int maxInputCount, int maxOutputCount) : base(
+			protocol: protocol,
+			maxInputCount: maxInputCount,
+			maxOutputCount: maxOutputCount,
+			matrixHelperParameters: null)
 		{
 		}
 	}

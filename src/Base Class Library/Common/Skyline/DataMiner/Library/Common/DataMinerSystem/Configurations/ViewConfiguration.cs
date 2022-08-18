@@ -8,9 +8,9 @@
 	/// Represents a view configuration.
 	/// </summary>
 	public class ViewConfiguration
-	{
-		private IDmsView parent;
-		private string name;
+    {
+        private IDmsView parent;
+        private string name;
 
 		/// <summary>
 		/// Initializes a new instance of the <see cref="ViewConfiguration"/> class.
@@ -24,10 +24,10 @@
 		/// <exception cref="ArgumentException"><paramref name="name"/> contains a forbidden character. Forbidden characters: '|'.</exception>
 		/// <exception cref="ArgumentException"><paramref name="name"/> contains more than one '%' character.</exception>
 		public ViewConfiguration(string name, IDmsView parent)
-		{
-			Name = name;
-			Parent = parent;
-		}
+        {
+            Name = name;
+            Parent = parent;
+        }
 
 		/// <summary>
 		/// Gets or sets the name.
@@ -38,31 +38,39 @@
 		/// <exception cref="ArgumentException">The value of a set operation contains a forbidden character. Forbidden characters: '|'.</exception>
 		/// <exception cref="ArgumentException">The value of a set operation contains more than one '%' character.</exception>
 		public string Name
-		{
-			get; set;
-		}
+        {
+            get
+            {
+                return name;
+            }
+
+            set
+            {
+                name = InputValidator.ValidateViewName(value, "value");
+			}
+        }
 
 		/// <summary>
 		/// Gets or sets the parent view.
 		/// </summary>
 		/// <exception cref="ArgumentNullException">The value of a set operation is <see langword="null"/>.</exception>
 		public IDmsView Parent
-		{
-			get
-			{
-				return parent;
-			}
+        {
+            get
+            {
+                return parent;
+            }
 
-			set
-			{
-				if (value == null)
-				{
-					throw new ArgumentNullException("value");
-				}
+            set
+            {
+                if (value == null)
+                {
+                    throw new ArgumentNullException("value");
+                }
 
-				parent = value;
-			}
-		}
+                parent = value;
+            }
+        }
 
 		/// <summary>
 		/// Returns a string that represents the current object.

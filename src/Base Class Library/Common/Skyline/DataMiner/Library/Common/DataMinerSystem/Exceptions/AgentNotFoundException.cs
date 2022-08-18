@@ -1,5 +1,6 @@
 ﻿namespace Skyline.DataMiner.Library.Common
 {
+    using Skyline.DataMiner.Library.Common.Attributes;
     using System;
     using System.Globalization;
     using System.Runtime.Serialization;
@@ -8,8 +9,9 @@
     /// The exception that is thrown when an action is performed on a DataMiner Agent that was not found.
     /// </summary>
     [Serializable]
+    [DllImport("System.Runtime.Serialization.dll")]
     public class AgentNotFoundException : DmsException
-    {
+	{
         /// <summary>
         /// Initializes a new instance of the <see cref="AgentNotFoundException"/> class.
         /// </summary>
@@ -45,15 +47,15 @@
         {
         }
 
-        /// <summary>
-        /// Initializes a new instance of the <see cref="AgentNotFoundException"/> class with serialized data.
-        /// </summary>
-        /// <param name="info">The serialization info.</param>
-        /// <param name="context">The streaming context.</param>
-        /// <exception cref="ArgumentNullException">The <paramref name="info"/> parameter is <see langword="null" />.</exception>
-        /// <exception cref="SerializationException">The class name is <see langword="null" /> or HResult is zero (0).</exception>
-        /// <remarks>This constructor is called during deserialization to reconstitute the exception object transmitted over a stream.</remarks>
-        protected AgentNotFoundException(SerializationInfo info, StreamingContext context)
+		/// <summary>
+		/// Initializes a new instance of the <see cref="AgentNotFoundException"/> class with serialized data.
+		/// </summary>
+		/// <param name="info">The serialization info.</param>
+		/// <param name="context">The streaming context.</param>
+		/// <exception cref="ArgumentNullException">The <paramref name="info"/> parameter is <see langword="null" />.</exception>
+		/// <exception cref="SerializationException">The class name is <see langword="null" /> or HResult is zero (0).</exception>
+		/// <remarks>This constructor is called during deserialization to reconstitute the exception object transmitted over a stream.</remarks>
+		protected AgentNotFoundException(SerializationInfo info, StreamingContext context)
             : base(info, context)
         {
         }

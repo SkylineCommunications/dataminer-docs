@@ -2,11 +2,15 @@
 {
 	using System;
 
+	using Net.Messages;
+
 	using Skyline.DataMiner.Scripting;
 
 	/// <summary>
 	/// Represents a matrix UI control in a DataMiner protocol. To be used when the protocol has matrix and table measurement type parameters to represent the connections.
 	/// </summary>
+	[Skyline.DataMiner.Library.Common.Attributes.DllImport("SLManagedScripting.dll")]
+	[Skyline.DataMiner.Library.Common.Attributes.DllImport("SLNetTypes.dll")]
 	public class MatrixHelperForMatrixAndTables : MatrixHelper
 	{
 		/// <summary>
@@ -43,12 +47,11 @@
 		/// -or-
 		/// The specified <paramref name="inputsTableParameterId"/> or <paramref name="outputsTableParameterId"/> is not valid.
 		/// </exception>
-		public MatrixHelperForMatrixAndTables(SLProtocol protocol, int matrixConnectionsBufferParameterId, int matrixReadParameterId, int discreetInfoParameterId, int inputsTableParameterId, int outputsTableParameterId, int matrixSerializedParameterId)
-		//: base(
-		////protocol: protocol,
-		//maxInputCount: 0,
-		//maxOutputCount: 0,
-		//matrixHelperParameters: null)
+		public MatrixHelperForMatrixAndTables(SLProtocol protocol, int matrixConnectionsBufferParameterId, int matrixReadParameterId, int discreetInfoParameterId, int inputsTableParameterId, int outputsTableParameterId, int matrixSerializedParameterId) : base(
+			protocol: protocol,
+			maxInputCount: 0,
+			maxOutputCount: 0,
+			matrixHelperParameters: null)
 		{
 		}
 
@@ -83,12 +86,11 @@
 		/// -or-
 		/// The specified <paramref name="inputsTableParameterId"/> or <paramref name="outputsTableParameterId"/> is not valid.
 		/// </exception>
-		public MatrixHelperForMatrixAndTables(SLProtocol protocol, int matrixConnectionsBufferParameterId, int matrixReadParameterId, int discreetInfoParameterId, int inputsTableParameterId, int outputsTableParameterId)
-		//: base(
-		//protocol: protocol,
-		//maxInputCount: 0,
-		//maxOutputCount: 0,
-		//matrixHelperParameters: null)
+		public MatrixHelperForMatrixAndTables(SLProtocol protocol, int matrixConnectionsBufferParameterId, int matrixReadParameterId, int discreetInfoParameterId, int inputsTableParameterId, int outputsTableParameterId) : base(
+			protocol: protocol,
+			maxInputCount: 0,
+			maxOutputCount: 0,
+			matrixHelperParameters: null)
 		{
 		}
 
@@ -105,12 +107,11 @@
 		/// -or-
 		/// The parameter for serialized sets cannot be found. This needs to be a displayed write string parameter with the same parameter name as the parameter name referred to by the found outputsTableParameter appended with "SerializedSets".
 		/// </exception>
-		public MatrixHelperForMatrixAndTables(SLProtocol protocol, int discreetInfoParameterId)
-		//: base(
-		//protocol: protocol,
-		//maxInputCount: 0,
-		//maxOutputCount: 0,
-		//matrixHelperParameters: null)
+		public MatrixHelperForMatrixAndTables(SLProtocol protocol, int discreetInfoParameterId) : base(
+			protocol: protocol,
+			maxInputCount: 0,
+			maxOutputCount: 0,
+			matrixHelperParameters: null)
 		{
 		}
 
@@ -121,7 +122,15 @@
 		/// <exception cref="ArgumentOutOfRangeException">Unknown <see cref="MatrixDisplayType"/> was provided.</exception>
 		public MatrixDisplayType DisplayType
 		{
-			get; set;
+			get
+			{
+				return GetDisplayType();
+			}
+
+			set
+			{
+				SetDisplayType(value);
+			}
 		}
 	}
 }

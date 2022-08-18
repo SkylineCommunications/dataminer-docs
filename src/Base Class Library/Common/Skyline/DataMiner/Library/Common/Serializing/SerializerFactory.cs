@@ -2,6 +2,7 @@
 {
 	using System;
 	using System.Collections.Generic;
+	using System.Linq;
 
 	/// <summary>
 	/// A factory that creates some specific serializers.
@@ -15,8 +16,10 @@
 		/// <returns>An instance of type ISerializer.</returns>
 		public static ISerializer CreateInterAppSerializer()
 		{
+			NoTagSerializing.SerializerBuilder builder = new NoTagSerializing.SerializerBuilder();
+			builder.WithSerializer(NoTagSerializing.XmlSerializerType.JsonNewtonSoft);
 
-			return null;
+			return builder.Build();
 		}
 
 		/// <summary>
@@ -26,7 +29,11 @@
 		/// <returns>An instance of type ISerializer.</returns>
 		public static ISerializer CreateInterAppSerializer(Type baseType)
 		{
-			return null;
+			NoTagSerializing.SerializerBuilder builder = new NoTagSerializing.SerializerBuilder();
+			builder.WithSerializer(NoTagSerializing.XmlSerializerType.JsonNewtonSoft);
+			builder.WithBaseType(baseType);
+
+			return builder.Build();
 		}
 
 		/// <summary>
@@ -37,7 +44,12 @@
 		/// <returns>An instance of type ISerializer.</returns>
 		public static ISerializer CreateInterAppSerializer(Type baseType, IEnumerable<Type> knownTypes)
 		{
-			return null;
+			NoTagSerializing.SerializerBuilder builder = new NoTagSerializing.SerializerBuilder();
+			builder.WithSerializer(NoTagSerializing.XmlSerializerType.JsonNewtonSoft);
+			builder.WithBaseType(baseType);
+			builder.WithPossibleTypes(knownTypes.ToArray());
+
+			return builder.Build();
 		}
 	}
 }

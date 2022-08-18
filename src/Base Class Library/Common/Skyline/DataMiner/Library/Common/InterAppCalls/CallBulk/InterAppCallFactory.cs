@@ -1,8 +1,8 @@
 ﻿namespace Skyline.DataMiner.Library.Common.InterAppCalls.CallBulk
 {
 	using System;
-
 	using Skyline.DataMiner.Library.Common;
+	using Skyline.DataMiner.Library.Common.InterAppCalls.CallSingle;
 	using Skyline.DataMiner.Library.Common.Serializing;
 	using Skyline.DataMiner.Net;
 
@@ -58,9 +58,9 @@
 		public static IInterAppCall CreateFromRemote(IConnection connection, int agentId, int elementId, int parameterId, ISerializer serializer = null)
 		{
 			IDms thisDms = connection.GetDms();
-			var element = thisDms.GetElement(new DmsElementId(agentId, elementId));
-			var parameter = element.GetStandaloneParameter<string>(parameterId);
-			var returnedResultRaw = parameter.GetValue();
+            var element = thisDms.GetElement(new DmsElementId(agentId, elementId));
+            var parameter = element.GetStandaloneParameter<string>(parameterId);
+            var returnedResultRaw = parameter.GetValue();
 
 			return CreateFromRaw(returnedResultRaw, serializer);
 		}
@@ -92,7 +92,7 @@
 		/// <returns>An inter-app call.</returns>
 		public static IInterAppCall CreateNew()
 		{
-			return null;
+			return new null;
 		}
 	}
 }

@@ -59,7 +59,7 @@
 		/// <returns>Array with the rates in units per second. Unit depends on provided arguments, e.g. when values are in octets and <paramref name="dataConversionType"/> is OctetsToBits, the returned rate is bps.</returns>
 		public static double[] CalculateRate(double delta, int minDelta, double[] previousRates, uint[] currentCounters, uint[] previousCounters, DataConversionType dataConversionType)
 		{
-			return null;
+			return CalculateRate<uint>(delta, minDelta, previousRates, currentCounters, previousCounters, dataConversionType);
 		}
 
 		/// <summary>
@@ -75,7 +75,7 @@
 		/// <returns>Array with the rates in units per second. Unit depends on provided arguments, e.g. when values are in octets and <paramref name="dataConversionType"/> is OctetsToBits, the returned rate is bps.</returns>
 		public static double[] CalculateRate(double delta, int minDelta, double[] previousRates, ulong[] currentCounters, ulong[] previousCounters, DataConversionType dataConversionType)
 		{
-			return null;
+			return CalculateRate<ulong>(delta, minDelta, previousRates, currentCounters, previousCounters, dataConversionType);
 		}
 
 		/// <summary>

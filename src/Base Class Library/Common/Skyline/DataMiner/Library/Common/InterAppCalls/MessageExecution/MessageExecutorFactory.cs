@@ -1,11 +1,13 @@
 ﻿namespace Skyline.DataMiner.Library.Common.InterAppCalls.MessageExecution
 {
+	using CallSingle;
+
+	using Skyline.DataMiner.Library.Common.Reflection;
+
 	using System;
 	using System.Collections.Generic;
 	using System.Linq;
 	using System.Reflection;
-
-	using CallSingle;
 
 	/// <summary>
 	/// A static factory for the creation of message executors.
@@ -21,7 +23,31 @@
 		/// <returns>The executor for this message.</returns>
 		public static IMessageExecutor CreateExecutor(Message message)
 		{
-			return null;
+			if (message == null)
+			{
+				throw new ArgumentNullException("message");
+			}
+
+			Type concreteType = message.GetType();
+
+			Type concreteExecutor = null;
+
+			// Find the Concrete executor for this.
+			foreach (var assembly in ReflectionHelper.GetLoadedAssemblies())
+			{
+				if (concreteExecutor != null) break;
+
+				concreteExecutor = FindTypeInAssembly(assembly, concreteType);
+			}
+
+			if (concreteExecutor != null)
+			{
+				return (IMessageExecutor)Activator.CreateInstance(concreteExecutor, message);
+			}
+			else
+			{
+				throw new AmbiguousMatchException("Unable to find executor for message with type:" + concreteType + ". Verify you have a class implementing :MessageExecutor<" + concreteType + ">.");
+			}
 		}
 
 		/// <summary>

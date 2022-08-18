@@ -1,10 +1,11 @@
 ﻿namespace Skyline.DataMiner.Library.Protocol.Subscription.Monitors
 {
-	using System;
-
 	using Skyline.DataMiner.Library.Common;
+	using Skyline.DataMiner.Library.Common.Selectors;
 	using Skyline.DataMiner.Library.Common.Subscription.Monitors;
 	using Skyline.DataMiner.Scripting;
+
+	using System;
 
 	/// <summary>
 	/// Defines extension methods on <see cref="IDms"/> for monitoring.
@@ -39,6 +40,11 @@
 			{
 				throw new ArgumentNullException("onChange");
 			}
+
+			Element sourceElement = new Element(protocol.DataMinerID, protocol.ElementID);
+			ElementAlarmLevelMonitor monitor = new ElementAlarmLevelMonitor(dms.Communication, sourceElement, new Element(-1, -1), "CLP_DmsEAlarms");
+
+			monitor.Start(onChange);
 		}
 
 		/// <summary>
@@ -68,6 +74,10 @@
 			{
 				throw new ArgumentNullException("onChange");
 			}
+
+			Element sourceElement = new Element(protocol.DataMinerID, protocol.ElementID);
+			ElementNameMonitor monitor = new ElementNameMonitor(dms.Communication, sourceElement, new Element(-1, -1), "CLP_DmsENames");
+			monitor.Start(onChange);
 		}
 
 		/// <summary>
@@ -97,6 +107,10 @@
 			{
 				throw new ArgumentNullException("onChange");
 			}
+
+			Element sourceElement = new Element(protocol.DataMinerID, protocol.ElementID);
+			ElementStateMonitor monitor = new ElementStateMonitor(dms.Communication, sourceElement, new Element(-1, -1), "CLP_DmsEStates");
+			monitor.Start(onChange);
 		}
 
 		/// <summary>
@@ -126,6 +140,10 @@
 			{
 				throw new ArgumentNullException("onChange");
 			}
+
+			Element sourceElement = new Element(protocol.DataMinerID, protocol.ElementID);
+			ServiceStateMonitor monitor = new ServiceStateMonitor(dms.Communication, sourceElement, new Service(-1, -1), "CLP_DmsSStates");
+			monitor.Start(onChange);
 		}
 
 		/// <summary>
@@ -149,6 +167,11 @@
 			{
 				throw new ArgumentNullException("protocol");
 			}
+
+			Element sourceElement = new Element(protocol.DataMinerID, protocol.ElementID);
+			Element selection = new Element(-1, -1);
+			ElementAlarmLevelMonitor monitor = new ElementAlarmLevelMonitor(dms.Communication, sourceElement, selection, "CLP_DmsEAlarms");
+			monitor.Stop(force);
 		}
 
 		/// <summary>
@@ -172,6 +195,11 @@
 			{
 				throw new ArgumentNullException("protocol");
 			}
+
+			Element sourceElement = new Element(protocol.DataMinerID, protocol.ElementID);
+			Element selection = new Element(-1, -1);
+			ElementNameMonitor monitor = new ElementNameMonitor(dms.Communication, sourceElement, selection, "CLP_DmsENames");
+			monitor.Stop(force);
 		}
 
 		/// <summary>
@@ -195,6 +223,11 @@
 			{
 				throw new ArgumentNullException("protocol");
 			}
+
+			Element sourceElement = new Element(protocol.DataMinerID, protocol.ElementID);
+			Element selection = new Element(-1, -1);
+			ElementStateMonitor monitor = new ElementStateMonitor(dms.Communication, sourceElement, selection, "CLP_DmsEStates");
+			monitor.Stop(force);
 		}
 
 		/// <summary>
@@ -218,6 +251,11 @@
 			{
 				throw new ArgumentNullException("protocol");
 			}
+
+			Element sourceElement = new Element(protocol.DataMinerID, protocol.ElementID);
+			Service selection = new Service(-1, -1);
+			ServiceStateMonitor monitor = new ServiceStateMonitor(dms.Communication, sourceElement, selection, "CLP_DmsSStates");
+			monitor.Stop(force);
 		}
 	}
 }

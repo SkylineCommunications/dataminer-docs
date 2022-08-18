@@ -1,6 +1,7 @@
 ﻿namespace Skyline.DataMiner.Library.Common
 {
 	using System;
+	using System.Linq;
 
 	using Skyline.DataMiner.Net.Messages;
 
@@ -17,11 +18,11 @@
 		public bool Equals(Udp other)
 		{
 			return this.isDedicated == other.isDedicated
-				   && this.isSslTlsEnabled == other.isSslTlsEnabled
-				   && this.localPort == other.localPort
-				   && this.networkInterfaceCard == other.networkInterfaceCard
-				   && string.Equals(this.remoteHost, other.remoteHost, StringComparison.InvariantCulture)
-				   && this.remotePort == other.remotePort;
+			       && this.isSslTlsEnabled == other.isSslTlsEnabled
+			       && this.localPort == other.localPort
+			       && this.networkInterfaceCard == other.networkInterfaceCard
+			       && string.Equals(this.remoteHost, other.remoteHost, StringComparison.InvariantCulture)
+			       && this.remotePort == other.remotePort;
 		}
 
 		/// <summary>Determines whether the specified object is equal to the current object.</summary>
@@ -71,11 +72,11 @@
 		/// <param name="remotePort">The port number of the remote host.</param>
 		public Udp(string remoteHost, int remotePort)
 		{
-			this.localPort = null;
-			this.remotePort = remotePort;
-			this.isSslTlsEnabled = false;
-			this.isDedicated = false;
-			this.remoteHost = remoteHost;
+			this.localPort            = null;
+			this.remotePort           = remotePort;
+			this.isSslTlsEnabled      = false;
+			this.isDedicated          = false;
+			this.remoteHost           = remoteHost;
 			this.networkInterfaceCard = 0;
 		}
 
@@ -92,10 +93,11 @@
 		/// <param name="info"></param>
 		internal Udp(ElementPortInfo info)
 		{
-			this.remoteHost = info.PollingIPAddress;
-			if (!info.PollingIPPort.Equals(String.Empty)) remotePort = Convert.ToInt32(info.PollingIPPort);
+			this.remoteHost      = info.PollingIPAddress;
+			if (!info.PollingIPPort.Equals(String.Empty)) remotePort = Convert.ToInt32(info.PollingIPPort); 
 			if (!info.LocalIPPort.Equals(String.Empty)) localPort = Convert.ToInt32(info.LocalIPPort);
 			this.isSslTlsEnabled = info.IsSslTlsEnabled;
+			this.isDedicated     = HelperClass.IsDedicatedConnection(info);
 
 			int networkInterfaceId = string.IsNullOrWhiteSpace(info.Number) ? 0 : Convert.ToInt32(info.Number);
 			this.networkInterfaceCard = networkInterfaceId;

@@ -1,8 +1,8 @@
 ﻿namespace Skyline.DataMiner.Library.Protocol.Subscription.Monitors
 {
 	using System;
-
 	using Skyline.DataMiner.Library.Common;
+	using Skyline.DataMiner.Library.Common.Selectors;
 	using Skyline.DataMiner.Library.Common.Subscription.Monitors;
 	using Skyline.DataMiner.Scripting;
 
@@ -40,8 +40,14 @@
 			{
 				throw new ArgumentNullException("onchange");
 			}
-		}
 
+			Element sourceElement = new Element(protocol.DataMinerID, protocol.ElementID);
+			Service selection = new Service(service.AgentId, service.Id);
+			ServiceAlarmLevelMonitor monitor = new ServiceAlarmLevelMonitor(service.Host.Dms.Communication, sourceElement, selection);
+
+			monitor.Start(onchange);
+		}
+		
 		/// <summary>
 		/// Starts monitoring state changes. Every change will perform the onChange action. Important: do not use SLProtocol in the provided action.
 		/// </summary>
@@ -71,6 +77,11 @@
 			{
 				throw new ArgumentNullException("onchange");
 			}
+
+			Element sourceElement = new Element(protocol.DataMinerID, protocol.ElementID);
+			Service selection = new Service(service.AgentId, service.Id);
+			ServiceStateMonitor monitor = new ServiceStateMonitor(service.Host.Dms.Communication, sourceElement, selection);
+			monitor.Start(onchange);
 		}
 
 		/// <summary>
@@ -95,8 +106,13 @@
 			{
 				throw new ArgumentNullException("protocol");
 			}
-		}
 
+			Element sourceElement = new Element(protocol.DataMinerID, protocol.ElementID);
+			Service selection = new Service(service.AgentId, service.Id);
+			ServiceAlarmLevelMonitor monitor = new ServiceAlarmLevelMonitor(service.Host.Dms.Communication, sourceElement, selection);
+			monitor.Stop(force);
+		}
+		
 		/// <summary>
 		/// Stops monitoring for service state changes.
 		/// </summary>
@@ -119,6 +135,11 @@
 			{
 				throw new ArgumentNullException("protocol");
 			}
+
+			Element sourceElement = new Element(protocol.DataMinerID, protocol.ElementID);
+			Service selection = new Service(service.AgentId, service.Id);
+			ServiceStateMonitor monitor = new ServiceStateMonitor(service.Host.Dms.Communication, sourceElement, selection);
+			monitor.Stop(force);
 		}
 	}
 }

@@ -1,11 +1,11 @@
 ﻿namespace Skyline.DataMiner.Library.Protocol.Subscription.Monitors
 {
-	using System;
-
 	using Skyline.DataMiner.Library.Common;
 	using Skyline.DataMiner.Library.Common.Selectors;
 	using Skyline.DataMiner.Library.Common.Subscription.Monitors;
 	using Skyline.DataMiner.Scripting;
+
+	using System;
 
 	/// <summary>
 	/// Defines extension methods on the <see cref="IDmsColumn"/> class for monitoring.
@@ -51,6 +51,10 @@
 			}
 
 			Element sourceElement = new Element(protocol.DataMinerID, protocol.ElementID);
+
+			Cell selection = new Cell(column.Table.Element.AgentId, column.Table.Element.Id, column.Table.Id, column.Id, primaryKey);
+			CellAlarmLevelMonitor monitor = new CellAlarmLevelMonitor(column.Table.Element.Host.Dms.Communication, sourceElement, selection);
+			monitor.Start(onChange);
 		}
 
 #pragma warning disable S3242 // Method parameters should be declared with base types
@@ -92,6 +96,12 @@
 			{
 				throw new ArgumentNullException("onChange");
 			}
+
+			Element sourceElement = new Element(protocol.DataMinerID, protocol.ElementID);
+
+			Cell selection = new Cell(column.Table.Element.AgentId, column.Table.Element.Id, column.Table.Id, column.Id, primaryKey);
+			var monitor = new CellValueMonitor<T>(column.Table.Element.Host.Dms.Communication, sourceElement, selection);
+			monitor.Start(onChange);
 		}
 
 		/// <summary>
@@ -114,7 +124,7 @@
 			{
 				throw new ArgumentNullException("column");
 			}
-
+			
 			if (protocol == null)
 			{
 				throw new ArgumentNullException("protocol");
@@ -124,6 +134,11 @@
 			{
 				throw new ArgumentNullException("primaryKey");
 			}
+
+			Element sourceElement = new Element(protocol.DataMinerID, protocol.ElementID);
+			Cell selection = new Cell(column.Table.Element.AgentId, column.Table.Element.Id, column.Table.Id, column.Id, primaryKey);
+			CellAlarmLevelMonitor monitor = new CellAlarmLevelMonitor(column.Table.Element.Host.Dms.Communication, sourceElement, selection);
+			monitor.Stop(force);
 		}
 
 		/// <summary>
@@ -143,6 +158,11 @@
 			{
 				throw new ArgumentNullException("protocol");
 			}
+
+			Element sourceElement = new Element(protocol.DataMinerID, protocol.ElementID);
+			Cell selection = new Cell(column.Table.Element.AgentId, column.Table.Element.Id, column.Table.Id, column.Id, primaryKey);
+			CellValueMonitor monitor = new CellValueMonitor(column.Table.Element.Host.Dms.Communication, sourceElement, selection);
+			monitor.Stop(force);
 		}
 
 	}

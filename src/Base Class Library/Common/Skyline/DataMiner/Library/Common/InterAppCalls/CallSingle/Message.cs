@@ -1,19 +1,24 @@
 ﻿namespace Skyline.DataMiner.Library.Common.InterAppCalls.CallSingle
 {
+	using Skyline.DataMiner.Library.Common;
+    using Skyline.DataMiner.Library.Common.Attributes;
+	using Skyline.DataMiner.Library.Common.InterAppCalls.Shared;
+	using Skyline.DataMiner.Library.Common.Serializing;
+	using Skyline.DataMiner.Library.Common.Subscription.Waiters.InterApp;
+	using Skyline.DataMiner.Net;
+
 	using System;
 	using System.Collections.Generic;
 	using System.Diagnostics;
+	using System.Globalization;
+	using System.Linq;
 	using System.Reflection;
 	using System.Runtime.Serialization;
-
-	using Skyline.DataMiner.Library.Common;
-	using Skyline.DataMiner.Library.Common.InterAppCalls.Shared;
-	using Skyline.DataMiner.Library.Common.Serializing;
-	using Skyline.DataMiner.Net;
 
 	/// <summary>
 	/// Represents a single command or response.
 	/// </summary>
+    [DllImport("System.Runtime.Serialization.dll")]
 	public class Message
 	{
 		private ISerializer internalSerializer;
@@ -173,6 +178,22 @@
 		/// <returns>The reply response to this command.</returns>
 		public Message Send(IConnection connection, int agentId, int elementId, int parameterId, TimeSpan timeout)
 		{
+			if (ReturnAddress != null)
+			{
+				Stopwatch sw = new Stopwatch();
+				sw.Start();
+				using (MessageWaiter waiter = new MessageWaiter(new ConnectionCommunication(connection), null, InternalSerializer, this))
+				{
+					System.Diagnostics.Debug.WriteLine("CLP - InterApp - Creation of MessageWait: " + sw.ElapsedMilliseconds + " ms");
+					sw.Restart();
+					Send(connection, agentId, elementId, parameterId);
+					System.Diagnostics.Debug.WriteLine("CLP - InterApp - Sent: " + DateTime.UtcNow.ToString("yyyy-MM-dd HH:mm:ss.fff", CultureInfo.InvariantCulture));
+					System.Diagnostics.Debug.WriteLine("CLP - InterApp - Sending of message: " + sw.ElapsedMilliseconds + " ms");
+					sw.Restart();
+					return waiter.WaitNext(timeout).First();
+				}
+			}
+
 			return null;
 		}
 
