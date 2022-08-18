@@ -22,6 +22,8 @@ jobs:
           choco install docfx -y
         env:
           CI: true
+      - name: Add msbuild to PATH
+        uses: microsoft/setup-msbuild@v1.1
       - name: Build DataMiner solution
         working-directory: src/DataMiner
         run: msbuild DataMiner.sln /p:Configuration=Debug
