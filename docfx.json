@@ -4,8 +4,9 @@
       "src": [
         {
           "files": [
-            "src/**.csproj"
-          ]
+            "*.dll"
+          ],
+		  "src": "./src/DataMiner/Interop.SLDms/bin/Debug"
         }
       ],
       "dest": "develop/api/types",
