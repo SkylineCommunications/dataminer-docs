@@ -27,6 +27,9 @@ jobs:
       - name: Build DataMiner solution
         working-directory: src/DataMiner
         run: msbuild DataMiner.sln /p:Configuration=Debug
+      - name: Build Base Class Library solution
+        working-directory: "src/Base Class Library"
+        run: msbuild "Code Library.sln" /p:Configuration=Debug
       - name: build metadata
         run: |
           docfx metadata -f
