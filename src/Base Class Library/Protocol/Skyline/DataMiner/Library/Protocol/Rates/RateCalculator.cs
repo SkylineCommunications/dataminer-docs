@@ -1,13 +1,12 @@
 ﻿namespace Skyline.DataMiner.Library.Protocol.Rates
 {
-	using Skyline.DataMiner.Scripting;
 	using System;
-	using System.Collections.Generic;
+
+	using Skyline.DataMiner.Scripting;
 
 	/// <summary>
 	/// This class is used to load the parameter values into objects or set the object results back to the parameters.
 	/// </summary>
-	[Skyline.DataMiner.Library.Common.Attributes.DllImport("SLManagedScripting.dll")]
 	public class RateCalculator
 	{
 		/// <summary>

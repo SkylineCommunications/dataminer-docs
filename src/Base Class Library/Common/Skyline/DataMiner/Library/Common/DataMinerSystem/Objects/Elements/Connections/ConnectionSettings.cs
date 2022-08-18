@@ -2,8 +2,6 @@
 {
 	using System.Collections.Generic;
 
-	using Skyline.DataMiner.Net.Messages;
-
 	/// <summary>
 	/// Base class for all connection related objects.
 	/// </summary>
@@ -93,7 +91,7 @@
 			/// <summary>
 			/// Bus address
 			/// </summary>
-			BusAddress=19,
+			BusAddress = 19,
 			/// <summary>
 			/// Is BypassProxy enabled.
 			/// </summary>
@@ -108,7 +106,7 @@
 		{
 			get
 			{
-				return changedPropertyList;
+				return null;
 			}
 		}
 	}
