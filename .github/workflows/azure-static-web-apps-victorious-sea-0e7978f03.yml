@@ -24,10 +24,10 @@ jobs:
           CI: true
       - name: Build DataMiner solution
         working-directory: src/DataMiner
-        run: "C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Msbuild\Current\Bin\msbuild.exe" DataMiner.sln /p:Configuration=Debug
+        run: "C:/Program Files/Microsoft Visual Studio/2022/Enterprise/Msbuild/Current/Bin/msbuild.exe" DataMiner.sln /p:Configuration=Debug
       - name: Build Base Class Library solution
         working-directory: "src/Base Class Library"
-        run: "C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Msbuild\Current\Bin\msbuild.exe" "Code Library.sln" /p:Configuration=Debug
+        run: "C:/Program Files/Microsoft Visual Studio/2022/Enterprise/Msbuild/Current/Bin/msbuild.exe" "Code Library.sln" /p:Configuration=Debug
       - name: build metadata
         run: |
           docfx metadata -f
