@@ -352,6 +352,14 @@ When the Cube starter window software tried to download a DataMiner Cube for a D
 Something went wrong: Error downloading ClickOnce version: Error downloading manifest file from uri ...
 ```
 
+#### Problem with validation of properties and actions in service definitions [ID_34023]
+
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.9 -->
+
+When properties or actions of a service definition were configured, it could occur that validation did not happen correctly so that an incorrect configuration could be saved, resulting in exceptions in the server logging and problems in Cube.
+
+The validation will now ensure that no empty names or property names that are incompatible with Elasticsearch can be saved. If there is an error in a service definition, the *Modified* label will change color. Hovering the mouse pointer over the entry with the label will show the first error in the service definition.
+
 #### Connected DMA removed from cluster instead of selected DMA in System Center [ID_34035]
 
 <!-- Main Release Version 10.1.0 [CU18]/10.2.0 [CU6] - Feature Release Version 10.2.9 -->

@@ -2029,6 +2029,14 @@ When a name concatenation for a DomInstance had been defined in either the Modul
 
 When, on a system with an Elasticsearch database, an alarm was closed, that alarm would incorrectly not get moved from the dms-Activealarms index to the dms-alarms index when the associated element had been migrated from another DMS.
 
+#### Problem with validation of properties and actions in service definitions [ID_34023]
+
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.9 -->
+
+When properties or actions of a service definition were configured, it could occur that validation did not happen correctly so that an incorrect configuration could be saved, resulting in exceptions in the server logging and problems in Cube.
+
+The validation will now ensure that no empty names or property names that are incompatible with Elasticsearch can be saved. If there is an error in a service definition, the *Modified* label will change color. Hovering the mouse pointer over the entry with the label will show the first error in the service definition.
+
 #### DataMiner upgrade: AnalyticsDropUnusedCassandraTables upgrade action would fail \[ID_34091]
 
 <!-- Main Release Version 10.3.0 - Feature Release Version 10.2.9 -->
