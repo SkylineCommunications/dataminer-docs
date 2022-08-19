@@ -33,6 +33,25 @@ This will prevent the following possible issues:
 - The CefSharp browser engine version used by Cube is not updated frequently and therefore not always trusted by certain SAML identity provider websites, such as Microsoft Azure. This can cause a lengthy authentication procedure, even if the browser cache is enabled.
 - The CefSharp browser engine needs to be downloaded from the DMA before a first authentication (on a new device). However, this is currently not supported for HTTPS-only setups.
 
+#### Dashboards app / Low-Code apps: Conditional coloring layout configuration now uses numeric filter instead of numeric slider [ID_34174]
+
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.10 -->
+<!-- Part of this RN is still in soft launch and consequently has not been documented yet -->
+
+In the conditional coloring layout setting for Table and Node edge components, the numeric slider control has been replaced with a numeric filter. This has the following advantages:
+
+- Full control over the boundaries. You can indicate whether the start and end should be in- or excluded.
+- Possibility to not have a start or end boundary.
+- More consistent with the free text filter.
+- Easier to define a precise filter.
+
+#### Dashboards app / Low-Code apps: Conditional coloring layout filter configuration now shows discrete column values [ID_34182]
+
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.10 -->
+<!-- Part of this RN is still in soft launch and consequently has not been documented yet -->
+
+In the conditional coloring layout setting for Table and Node edge components, discrete column values will now be displayed to make it easier to configure a filter.
+
 ### Fixes
 
 *No fixes have been added to this release yet.*
