@@ -7378,6 +7378,12 @@ When the element debug log level was equal to or higher than 1, an error could o
 
 When a Visual Overview component was loading, up to now, a large loading message was displayed on top of the component. From now on, when a Visual Overview component is loading, a loading bar will appear at the top of the component instead.
 
+#### Element card - REPORTS page: Masking and unmasking not shown correctly in the different graphs [ID_33832]
+
+<!-- Main Release Version 10.1.0 [CU18]/10.2.0 [CU6] - Feature Release Version 10.2.9 -->
+
+On the REPORTS page of an element card, masking and unmasking (i.e. state changes to "masked" and "unmasked") would not be shown correctly in the different graphs.
+
 #### Alarm Console would incorrectly keep loading while the tickets linked to the alarms were being loaded [ID_33847]
 
 <!-- Main Release Version 10.1.0 [CU18]/10.2.0 [CU6] - Feature Release Version 10.2.9 -->

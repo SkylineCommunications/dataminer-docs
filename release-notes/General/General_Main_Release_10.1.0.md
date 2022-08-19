@@ -10746,9 +10746,9 @@ SLProtocol would leak memory each time a parameter of a replicated element was u
 
 When the element debug log level was equal to or higher than 1, an error could occur in SLElement when resolving foreign keys took a long time.
 
-#### Element card - REPORTS page: Masking and unmasking would not be shown correctly in the different graphs [ID_33832]
+#### Element card - REPORTS page: Masking and unmasking not shown correctly in the different graphs [ID_33832]
 
-<!-- Main Release Version 10.1.0 [CU18] - Feature Release Version TBD -->
+<!-- Main Release Version 10.1.0 [CU18]/10.2.0 [CU6] - Feature Release Version 10.2.9 -->
 
 On the REPORTS page of an element card, masking and unmasking (i.e. state changes to "masked" and "unmasked") would not be shown correctly in the different graphs.
 
