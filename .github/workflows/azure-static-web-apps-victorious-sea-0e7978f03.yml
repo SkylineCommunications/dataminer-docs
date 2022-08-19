@@ -27,6 +27,14 @@ jobs:
       - name: Build DataMiner solution
         working-directory: src/DataMiner
         run: msbuild DataMiner.sln /p:Configuration=Debug
+      - name: Set up NuGet
+        uses: nuget/setup-nuget@v1
+      - name: NuGet restore
+        working-directory: "src/Base Class Library"
+        run: nuget restore "Code Library.sln"
+      - name: Build Base Class Library solution
+        working-directory: "src/Base Class Library"
+        run: msbuild "Code Library.sln" /t:Clean,Restore,Build /p:Configuration=Debug
       - name: build metadata
         run: |
           docfx metadata -f
