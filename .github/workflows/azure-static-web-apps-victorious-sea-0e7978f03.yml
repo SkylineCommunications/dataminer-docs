@@ -27,10 +27,11 @@ jobs:
       - name: Build DataMiner solution
         working-directory: src/DataMiner
         run: msbuild DataMiner.sln /p:Configuration=Debug
-      - name: NuGet restore
+      - name: Set up NuGet
         uses: nuget/setup-nuget@v1
+      - name: NuGet restore
         working-directory: "src/Base Class Library"
-        run: nuget restore MyProject.sln
+        run: nuget restore "Code Library.sln"
       - name: Build Base Class Library solution
         working-directory: "src/Base Class Library"
         run: msbuild "Code Library.sln" /t:Clean,Restore,Build /p:Configuration=Debug
