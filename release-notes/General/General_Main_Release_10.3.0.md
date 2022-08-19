@@ -1770,6 +1770,19 @@ The log levels of some of the log lines related to SPIs in the *SLAutomation* lo
 
 To improve performance, in the *Layout* pane for a Table or Node edge component, no more statistics and suggestions will be shown for conditional coloring.
 
+#### GQI: Initial support for nested tables [ID_34144]
+
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.9 -->
+
+Initial support has been added for GQI results with cells containing nested records. However, at present this is only used for the *Resources* data source, which still requires the *GenericInterface* [soft-launch option](xref:https://community.dataminer.services/documentation/soft-launch-options/).
+
+The following functionality is now available for nested tables:
+
+- Checking the number of records in nested tables. If a column with nested tables is retrieved, you cannot inspect the nested tables themselves yet, but a display value will show the number of records they contain.
+- Aggregation on a single nested table column. There is no support for grouping yet. The aggregated value of the nested cell will be shown in the parent record as an ordinary cell.
+- Filtering of nested tables.
+- Selecting columns from nested tables. These will be shown in the same list box as regular columns, but their name will be prefixed by the parent column name. For example, if the parent column is named "Capabilities" and the nested table column is named "Name", the column will be listed as "Capabilities.Name".
+
 ### Fixes
 
 #### SLAnalytics: Problem with trend prediction \[ID_31352\]
