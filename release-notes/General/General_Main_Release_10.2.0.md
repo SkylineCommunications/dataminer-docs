@@ -7659,3 +7659,9 @@ When, after receiving a message that it was not possible to save a job because o
 
 If a visual overview was viewed in the web apps (e.g. the Monitoring or Dashboards app), it could occur that trend graphs in that visual overview were not displayed.
 In addition, the coloring of the trend lines could be incorrect. Instead of the colors defined in the themes, the lines were shown in black.
+
+#### Visual Overview: SurveyorSearchText variable continued to show cleared search input [ID_34114]
+
+<!-- Main Release Version 10.2.0 [CU7] - Feature Release Version 10.2.9 -->
+
+When the text in the Cube advanced search box was selected with Ctrl+A and then deleted, it could occur that the advanced search input was not cleared correctly, so that it continued to be shown by the *SurveyorSearchText* variable in Visual Overview.
