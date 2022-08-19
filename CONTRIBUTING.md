@@ -550,11 +550,6 @@ When you have finished making a series of changes to documentation in Visual Stu
 
     1. Enter `clear` to clear the terminal.
     
-    1. Enter `docfx metadata -f` to extract the necessary metadata from the programming code. Based on the metadata, DocFX will automatically generate part of the documentation found in the [Developer documentation](xref:DevelopIndex) section.
-    
-        > [!NOTE]
-        > After you run the `docfx metadata -f` command, 5 warnings will appear in the terminal. These can be ignored. If you made a change to one or more files in the `src` folder, and more than 5 warnings appear in the terminal, check the warnings to see what went wrong and make the necessary corrections.
-     
     1. Enter `docfx build -f` to make a test build.
     
     1. Enter `docfx serve _site`.
