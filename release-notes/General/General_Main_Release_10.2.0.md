@@ -7630,6 +7630,12 @@ In a visual overview with several tab pages and shapes linked to an EPM object, 
 
 When you make a selection in an EPM topology chain, a *Clear all* button becomes available, which allows you to clear the selection again. However, in some cases, this button disappeared again. This was specifically the case when you opened a card of a certain level in the chain, closed this card, and then opened another card from the chain, other than the previous card.
 
+#### Problem in SLElement when updating table with parameters used in advanced naming [ID_34135]
+
+<!-- Main Release Version 10.1.0 [CU18]/10.2.0 [CU6] - Feature Release Version TBD -->
+
+When a table was updated that contained parameters used in advanced naming, a problem could occur in SLElement.
+
 #### GQI queries: Unhandled exception kept other errors from being displayed [ID_34137]
 
 <!-- Main Release Version 10.2.0 [CU6] - Feature Release Version 10.2.9 -->
