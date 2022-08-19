@@ -520,6 +520,12 @@ In order to prevent SLPort from running out of memory, from now on, the size of 
 
 #### SLAnalytics RTEs after upgrading DMS with Cassandra Cluster \[ID_34180]
 
-<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.8 CU2 -->
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.8 [CU2] -->
 
 After a DMS with a Cassandra Cluster setup was upgraded to 10.2.8 (CU1), it could occur that the Alarm Console showed run-time errors related to the SLAnalytics process. This was caused by an upgrade action that was not triggered for such a setup.
+
+#### Problem in SLElement when element was dynamically included in service multiple times with partially included parameter set [ID_34185]
+
+<!-- Main Release Version 10.1.0 [CU18]/10.2.0 [CU6] - Feature Release Version 10.2.8 [CU2] -->
+
+When an element was dynamically included in a service multiple times with a partially included parameter set, a problem could occur in SLElement while parsing the information received from SLDataMiner.

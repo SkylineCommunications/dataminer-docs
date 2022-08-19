@@ -7636,6 +7636,12 @@ When you make a selection in an EPM topology chain, a *Clear all* button becomes
 
 In some cases, an unhandled exception in the GQI visualization could keep other errors from being displayed in the UI.
 
+#### Problem in SLElement when element was dynamically included in service multiple times with partially included parameter set [ID_34185]
+
+<!-- Main Release Version 10.1.0 [CU18]/10.2.0 [CU6] - Feature Release Version 10.2.8 [CU2] -->
+
+When an element was dynamically included in a service multiple times with a partially included parameter set, a problem could occur in SLElement while parsing the information received from SLDataMiner.
+
 ## Addendum CU7
 
 ### CU7 enhancements
