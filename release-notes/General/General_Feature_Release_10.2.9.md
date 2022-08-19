@@ -329,6 +329,19 @@ Because of a number of enhancements, overall performance has increased when retr
 
 When, in the Dashboards app, you switched to edit mode, all columns of all GQI queries on the dashboard in question would be retrieved. From now, only when you open a specific query on the dashboard you are editing will the columns of that specific query be retrieved.
 
+#### GQI: Initial support for nested tables [ID_34144]
+
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.9 -->
+
+Initial support has been added for GQI results with cells containing nested records. However, at present this is only used for the *Resources* data source, which still requires the *GenericInterface* [soft-launch option](xref:https://community.dataminer.services/documentation/soft-launch-options/).
+
+The following functionality is now available for nested tables:
+
+- Checking the number of records in nested tables. If a column with nested tables is retrieved, you cannot inspect the nested tables themselves yet, but a display value will show the number of records they contain.
+- Aggregation on a single nested table column. There is no support for grouping yet. The aggregated value of the nested cell will be shown in the parent record as an ordinary cell.
+- Filtering of nested tables.
+- Selecting columns from nested tables. These will be shown in the same list box as regular columns, but their name will be prefixed by the parent column name. For example, if the parent column is named "Capabilities" and the nested table column is named "Name", the column will be listed as "Capabilities.Name".
+
 ### Fixes
 
 #### Web apps - Data table component: Filter specified in search box would incorrectly not be re-applied after a data refresh [ID_33385]
