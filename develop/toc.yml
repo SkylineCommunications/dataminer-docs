@@ -622,29 +622,29 @@
         topicUID: How_to_make_your_automation_scripts_debug_ready
   - name: Class Library
     items:
-    - name: Class Library Introduction
-      topicUid:  ClassLibraryIntroduction
-    - name: Class Library Development
-      topicUid:  ClassLibraryDevelopment
+    - name: Class library introduction
+      topicUid: ClassLibraryIntroduction
+    - name: Class library development
+      topicUid: ClassLibraryDevelopment
     - name: Lazy loading
-      topicUid:  ClassLibraryLazyLoading
+      topicUid: ClassLibraryLazyLoading
     - name: Element creation
       topicUid: ClassLibraryElementCreation
     - name: InterApp classes
-      topicUid:  ClassLibraryInterAppClasses
+      topicUid: ClassLibraryInterAppClasses
     - name: Monitors
-      topicUid:  ClassLibraryMonitors
+      topicUid: ClassLibraryMonitors
       items:
       - name: Requirements
-        topicUid:  ClassLibraryMonitorsRequirements
+        topicUid: ClassLibraryMonitorsRequirements
       - name: Getting started
-        topicUid:  ClassLibraryMonitorsGettingStarted
+        topicUid: ClassLibraryMonitorsGettingStarted
       - name: Cleanup rules
-        topicUid:  ClassLibraryMonitorsCleanupRules
+        topicUid: ClassLibraryMonitorsCleanupRules
       - name: Starting a started monitor
-        topicUid:  ClassLibraryMonitorsStartingAStartedMonitor
+        topicUid: ClassLibraryMonitorsStartingAStartedMonitor
       - name: Stopping a stopped monitor
-        topicUid:  ClassLibraryMonitorsStoppingAStoppedMonitor
+        topicUid: ClassLibraryMonitorsStoppingAStoppedMonitor
     - name: Examples
       topicUid:  ClassLibraryExamples
 - name: API documentation
