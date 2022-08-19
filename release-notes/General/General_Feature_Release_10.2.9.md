@@ -635,3 +635,11 @@ When a component in a dashboard or low-code app showed a GQI query, it could occ
 <!-- Main Release Version 10.2.0 [CU6] - Feature Release Version 10.2.9 -->
 
 In some cases, an unhandled exception in the GQI visualization could keep other errors from being displayed in the UI.
+
+#### SLScripting instances mismatched with SLProtocol instances [ID_34167]
+
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.9 -->
+
+When the *ProcessOptions* tag in *DataMiner.xml* was configured with the attribute *protocolProcesses* set to "protocol" and the attribute *scriptingProcesses* set to "protocol" or to a number larger than one, it could occur that elements ran their QActions in the wrong SLScripting instance, which could cause compilation or load balancing issues.
+
+This issue will now be prevented. In addition, the element's instance GUID will now be added to the element log file for easier investigations.

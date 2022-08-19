@@ -2086,6 +2086,14 @@ In some cases, it could occur that properties of a FieldAlias DOM object could n
 
 During a DataMiner upgrade, in some cases, the *AnalyticsDropUnusedCassandraTables* upgrade action would fail.
 
+#### SLScripting instances mismatched with SLProtocol instances [ID_34167]
+
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.9 -->
+
+When the *ProcessOptions* tag in *DataMiner.xml* was configured with the attribute *protocolProcesses* set to "protocol" and the attribute *scriptingProcesses* set to "protocol" or to a number larger than one, it could occur that elements ran their QActions in the wrong SLScripting instance, which could cause compilation or load balancing issues.
+
+This issue will now be prevented. In addition, the element's instance GUID will now be added to the element log file for easier investigations.
+
 #### SLAnalytics RTEs after upgrading DMS with Cassandra Cluster \[ID_34180]
 
 <!-- Main Release Version 10.3.0 - Feature Release Version 10.2.8 CU2 -->
