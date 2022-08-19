@@ -7636,6 +7636,12 @@ When you make a selection in an EPM topology chain, a *Clear all* button becomes
 
 In some cases, an unhandled exception in the GQI visualization could keep other errors from being displayed in the UI.
 
+#### DataMiner Cube: Workspace with EPM view card showed incorrect page when loaded [ID_34163]
+
+<!-- Main Release Version 10.1.0 [CU18]/10.2.0 [CU6] - Feature Release Version 10.2.9 -->
+
+When you loaded a workspace containing the card of a view linked to EPM, it could occur that the card did not show the page saved in the workspace but instead the default "Visual" page.
+
 #### Problem in SLElement when element was dynamically included in service multiple times with partially included parameter set [ID_34185]
 
 <!-- Main Release Version 10.1.0 [CU18]/10.2.0 [CU6] - Feature Release Version 10.2.8 [CU2] -->
