@@ -23,7 +23,6 @@
     <WarningLevel>4</WarningLevel>
     <Prefer32Bit>false</Prefer32Bit>
     <DocumentationFile>bin\Debug\Skyline.DataMiner.Library.Automation.xml</DocumentationFile>
-    <LangVersion>6</LangVersion>
     <CodeAnalysisRuleSet>..\CustomSonarLintRules\SonarLint-QuickActions-Active.ruleset</CodeAnalysisRuleSet>
     <PlatformTarget>x86</PlatformTarget>
   </PropertyGroup>
@@ -39,6 +38,9 @@
     <CodeAnalysisRuleSet>
     </CodeAnalysisRuleSet>
     <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup>
+   <LangVersion>6</LangVersion>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />

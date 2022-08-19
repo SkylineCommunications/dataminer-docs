@@ -23,8 +23,10 @@
     <WarningLevel>4</WarningLevel>
     <Prefer32Bit>false</Prefer32Bit>
     <DocumentationFile>bin\Debug\Skyline.DataMiner.Library.Protocol.xml</DocumentationFile>
-    <LangVersion>4</LangVersion>
     <CodeAnalysisRuleSet>..\CustomSonarLintRules\SonarLint-QuickActions-Active.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup>
+   <LangVersion>6</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
