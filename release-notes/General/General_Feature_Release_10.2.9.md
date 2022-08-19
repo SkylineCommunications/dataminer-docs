@@ -592,6 +592,13 @@ From now on, when you try to remove a query that is used as "start from" query, 
 
 When a visual overview was embedded in a dashboard or low-code app, it could occur that it showed the error "Could not retrieve Visual Overview information." while fetching its initial data.
 
+#### DataMiner web apps / Visual Overview: Trending not displayed or displayed with incorrect coloring [ID_34101]
+
+<!-- Main Release Version 10.2.0 [CU7] - Feature Release Version 10.2.9 -->
+
+If a visual overview was viewed in the web apps (e.g. the Monitoring or Dashboards app), it could occur that trend graphs in that visual overview were not displayed.
+In addition, the coloring of the trend lines could be incorrect. Instead of the colors defined in the themes, the lines were shown in black.
+
 #### GQI queries: Problem in web APIs when opening session for query with node requiring soft-launch feature [ID_34109]
 
 <!-- Main Release Version 10.2.0 [CU6] - Feature Release Version 10.2.9 -->

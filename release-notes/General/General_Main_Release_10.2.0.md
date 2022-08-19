@@ -7652,3 +7652,10 @@ This will prevent the following possible issues:
 <!-- Main Release Version 10.2.0 [CU7] - Feature Release Version 10.2.9 -->
 
 When, after receiving a message that it was not possible to save a job because of an invalid start time, you corrected the start time and tried to save the job again, that start time would get saved incorrectly.
+
+#### DataMiner web apps / Visual Overview: Trending not displayed or displayed with incorrect coloring [ID_34101]
+
+<!-- Main Release Version 10.2.0 [CU7] - Feature Release Version 10.2.9 -->
+
+If a visual overview was viewed in the web apps (e.g. the Monitoring or Dashboards app), it could occur that trend graphs in that visual overview were not displayed.
+In addition, the coloring of the trend lines could be incorrect. Instead of the colors defined in the themes, the lines were shown in black.
