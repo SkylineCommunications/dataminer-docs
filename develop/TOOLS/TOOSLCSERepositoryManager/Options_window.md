@@ -16,3 +16,7 @@ Via *Tools* > *Options*, you can access a window that provides the following op
 - *Sandbox Mode*: Toggles between sandbox and normal mode.
 
 - *DebugLog*: Link to the SLC SE Repository Manager log file.
+
+- *Override Clone Path*: This is applicable for remote offices which have a mirror location. It contains the path to the mirror server. When cloning a repository, the SLC SE Repo Manager will try to find the repository on this location first. If it doesn't exits, the SLC SE Repo Manager will fall back to the HQ. 
+  - For the US (available from the office or via VPN), specify **\\\SLA-REPOMIRROR\gerrit.skyline.be**
+  - For Singapore (available from the office), specify **\\\SG-SERVER1\gerrit.skyline.be**
