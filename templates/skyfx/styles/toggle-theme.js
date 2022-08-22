@@ -12,7 +12,10 @@ if (b) {
     }
   }
 
-  var isDarkTheme = !window.localStorage || !window.localStorage.getItem("theme") || window.localStorage && localStorage.getItem("theme") === "dark-theme";
+  var isDarkTheme = false;
+  if (window.localStorage && localStorage.getItem("theme") === "dark-theme"){
+    isDarkTheme = true;
+  }
 
   if(sw && sw_mobile){
     sw.checked = isDarkTheme;
