@@ -16,6 +16,9 @@ There are two main reasons to consider a Dashboard Gateway setup:
 
   Allowing multiple users to connect to the web applications increases the overall load on the DataMiner Agents. When a Dashboard Gateway is used, the direct load of the web applications and the HTTP requests shifts to a separate web server, leaving more resources available on the DataMiner Agents. Also, if more performance is needed, multiple Dashboard Gateway web servers can be used in combination with a load balancer.
 
+>[!IMPORTANT]
+>Always make sure your Dashboard Gateway's Web Application folders is in sync with the DataMiner server. So when you upgrade your DataMiner software, also make sure the necessary folders for the web-apps are up-to-date.
+
 ## Requirements
 
 - At least one web server (running Windows Server)
