@@ -18,6 +18,9 @@ Any monitor will be automatically stopped in the following cases:
 
 You can override the default cleanup behavior by adding a delay to the cleanup. This can be useful to avoid having to recreate monitors when an element is restarted or migrated.
 
+> [!IMPORTANT]
+> Cleanup configuration is mandatory for support of a DataMiner System with Failover setup. If the DMA with the element that creates the monitors remains running, but the DMA of the destination element goes into Failover, then you need to set up a cleanup delay, or else all subscriptions for that destination element will be removed.
+
 The cleanup is canceled when the source or destination element that triggered the cleanup is started again before the delay timer is done.
 
 > [!NOTE]

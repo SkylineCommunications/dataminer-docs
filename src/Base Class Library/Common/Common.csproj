@@ -23,7 +23,6 @@
     <WarningLevel>4</WarningLevel>
     <Prefer32Bit>false</Prefer32Bit>
     <DocumentationFile>bin\Debug\Skyline.DataMiner.Library.Common.xml</DocumentationFile>
-    <LangVersion>4</LangVersion>
     <CodeAnalysisRuleSet>..\CustomSonarLintRules\SonarLint-QuickActions-Active.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -39,32 +38,10 @@
     </CodeAnalysisRuleSet>
     <PlatformTarget>x86</PlatformTarget>
   </PropertyGroup>
+  <PropertyGroup>
+   <LangVersion>6</LangVersion>
+  </PropertyGroup>
   <ItemGroup>
-    <Reference Include="ICSharpCode.SharpZipLib, Version=0.86.0.518, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
-      <HintPath>..\packages\DataMinerDevPack.10.0.3-8964\lib\ICSharpCode.SharpZipLib.dll</HintPath>
-    </Reference>
-    <Reference Include="Interop.SLDms, Version=1.0.0.0, Culture=neutral, PublicKeyToken=9789b1eac4cb1b12, processorArchitecture=MSIL">
-      <HintPath>..\packages\DataMinerDevPack.10.0.3-8964\lib\Interop.SLDms.dll</HintPath>
-      <EmbedInteropTypes>True</EmbedInteropTypes>
-    </Reference>
-    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\DataMinerDevPack.10.0.3-8964\lib\Newtonsoft.Json.dll</HintPath>
-    </Reference>
-    <Reference Include="protobuf-net, Version=2.0.0.668, Culture=neutral, PublicKeyToken=257b51d87d2e4d67, processorArchitecture=MSIL">
-      <HintPath>..\packages\DataMinerDevPack.10.0.3-8964\lib\protobuf-net.dll</HintPath>
-    </Reference>
-    <Reference Include="QActionHelper, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\DataMinerDevPack.10.0.3-8964\lib\QActionHelper.dll</HintPath>
-    </Reference>
-    <Reference Include="QActionHelperBaseClasses, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
-      <HintPath>..\packages\DataMinerDevPack.10.0.3-8964\lib\QActionHelperBaseClasses.dll</HintPath>
-    </Reference>
-    <Reference Include="SLNetTypes, Version=1.0.0.0, Culture=neutral, PublicKeyToken=9789b1eac4cb1b12, processorArchitecture=MSIL">
-      <HintPath>..\packages\DataMinerDevPack.10.0.3-8964\lib\SLNetTypes.dll</HintPath>
-    </Reference>
-    <Reference Include="SLProtoBufLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=9789b1eac4cb1b12, processorArchitecture=MSIL">
-      <HintPath>..\packages\DataMinerDevPack.10.0.3-8964\lib\SLProtoBufLibrary.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Serialization" />
@@ -253,8 +230,14 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
-    <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json">
+      <Version>13.0.1</Version>
+    </PackageReference>
+    <PackageReference Include="Skyline.DataMiner.Dev.Common">
+      <Version>10.2.6.4</Version>
+    </PackageReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

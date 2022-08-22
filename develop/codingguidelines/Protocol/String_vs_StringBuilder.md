@@ -26,7 +26,7 @@ Consider using the StringBuilder class under the following conditions:
 
 - When the application is expected to make an unknown number of changes to a string at design time (e.g. when a loop is used to concatenate a random number of strings that contain user input).
 
--    hen the application is expected to make a significant number of changes to a string.
+- When the application is expected to make a significant number of changes to a string.
 
 Also note that string literals can be split in order to improve readability. The compiler will concatenate the parts into a single string, so there is no runtime performance cost.
 

@@ -127,9 +127,9 @@ This tab provides an overview of all configuration parameters for the Booking Ma
 
 - *History and Logs* settings:
 
-    | Option               | Description                                                                                        |
-    |------------------------|----------------------------------------------------------------------------------------------------|
-    | Booking logger element | The name of the element running the *Generic Bookings Log* protocol |
+    | Option                   | Description                                    |
+    |--------------------------|------------------------------------------------|
+    | Booking logging location | The path where the booking logs will be saved. |
 
 - *Type of Booking* settings:
 
