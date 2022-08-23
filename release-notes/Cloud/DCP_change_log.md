@@ -50,7 +50,7 @@ To create such a DMZ:
     {
       "DmzOptions": {
         "IsHttpsEnabled": <true/false>,
-        "Domain": <IIS >,
+        "Domain": <IIS>,
         "DataMinerAgentName":  <name of the dataminer agent the DMZ is connected to>
       }
     }
