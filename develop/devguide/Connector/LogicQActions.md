@@ -20,7 +20,7 @@ Let's have a look at a basic C# QAction that runs when a button (with parameter 
     using System;
     using Skyline.DataMiner.Scripting;
 
-    public class Qaction
+    public class QAction
     {
         public static void Run(SLProtocol protocol)
         {
