@@ -82,6 +82,9 @@ To create a DataMiner metadata file (also referred to as *Service Provider Metad
 > The ``WantAssertionsSigned`` flag is supported as from DataMiner version 10.2.1/10.2.0. If you are using an older version, then set this to false.
 > SAML responses without signatures can be freely edited to tamper with permissions on the application, leading to severe vulnerabilites. We **highly recommend** setting ``WantAssertionsSigned`` to *true* to mitigate this.
 
+> [!TIP]
+> The *spMetadata.xml* can be placed anywhere as long as the *spMetadata* attribute for the *ExternalAuthentication* tag in DataMiner.xml points to the correct file. However we do recommend placing it under Skyline DataMiner root folder besides the DataMiner.xml file.
+
 ## Identity providers
 
 DataMiner currently supports the following identity providers:
