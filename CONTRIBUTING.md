@@ -287,7 +287,7 @@ On every page of the documentation on docs.dataminer.services, an *Improve this 
 
 1. Make your changes using the web editor. To get a preview of the changes, go to the *Preview* tab.
 
-1. Once you have made your changes, scroll to the bottom of the page. Enter a title and description for your changes and click Propose changes. For example:
+1. Once you have made your changes, scroll to the bottom of the page. Enter a title and description for your changes and click *Propose changes*. For example:
 
    ![Proposing changes](~/images/Contrib_ProposeChanges.png)
 
@@ -445,6 +445,13 @@ When your changes are ready, you can create a pull request to submit them for re
    This will open another overview of the changes that will be included in the pull request.
 
 1. At the top, click *Create pull request*.
+
+   > [!NOTE]
+   > You can also create a draft pull request, for example if you still want to have someone else make changes before the pull request can be merged. In that case, click the triangle button next to *Create pull request* and select *Create draft pull request*.
+   >
+   > ![Create draft pull request](~/images/Contrib_draftPR.png)
+   >
+   > When the pull request is ready to be merged, you can click *Ready for review* on the pull request page to change it from a draft into a full pull request.
 
 1. Specify a title for the pull request, and optionally add a comment with more information about your changes.
 
