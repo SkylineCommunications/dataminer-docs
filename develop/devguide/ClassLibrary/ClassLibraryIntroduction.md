@@ -2,7 +2,7 @@
 uid: ClassLibraryIntroduction
 ---
 
-# Introduction
+# Class library introduction
 
 The Skyline.DataMiner.Library namespace defines types that can be used to implement DataMiner-related logic in protocols and Automation scripts. It provides types for interacting with a DataMiner Agent to e.g. create elements, update element settings, work with views, edit properties, parse traps, etc.
 
@@ -24,3 +24,6 @@ IDms dms = slProtocol.GetDms();
 The GetDms method (see SLProtocolExtensions.GetDms method ) is an extension method on the SLProtocol interface that returns an object that implements the IDms interface.
 
 Refer to [Examples](xref:ClassLibraryExamples) for some example use cases.
+
+> [!NOTE]
+> If you are a Skyline employee and you are interested in adding or changing the base class library, see [ClassLibraryDevelopment](xref:ClassLibraryDevelopment).
