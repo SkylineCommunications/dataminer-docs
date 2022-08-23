@@ -20,7 +20,7 @@ The SLC SE Repository Manager installer can be downloaded from [http://tools/Ins
 > [!NOTE]
 >
 > - The SLC SE Repository Manager requires the use of VPN.
-> - The SLC SE Repository Manager makes use of the SharpSvn library which has a dependency on the Microsoft Visual C++ 2010 x86 Redistributable. This can be downloaded from <https://www.microsoft.com/en-us/download/details.aspx?id=26999>.
+> - The SLC SE Repository Manager makes use of the SharpSvn library, which has a dependency on the Microsoft Visual C++ 2010 x86 Redistributable. This can be downloaded from <https://www.microsoft.com/en-us/download/details.aspx?id=26999>.
 > - At startup, the SLC SE Repository Manager verifies whether a new version of the tool is available and downloads the new version if this is the case.
 
 The main window of the SLC SE Repository Manager is shown below.
