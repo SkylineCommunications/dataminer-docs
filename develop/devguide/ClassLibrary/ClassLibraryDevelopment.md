@@ -34,7 +34,7 @@ These are the most important things to keep in mind:
 
 1. Select the master branch you want to start with (1.2.0.X or 1.1.2.X current).
 
-1. Make a new branch: gerrit/DCPxxxx_subject (or dev/DCPxxxx if you are not using gerrit).
+1. Make a new branch: gerrit/DCPxxxx_subject (or dev/DCPxxxx if you are not using Gerrit).
 
 1. In a text editor, change the Jenkins file from *jenkins.groovy* to *jenkinsNoIntegration.groovy*.
 
@@ -61,8 +61,10 @@ These are the most important things to keep in mind:
 
 1. When you are ready:
 
-    1. Do a Gerrit push for code review.
-    1. Assign the task to the Data Acquisition user, with the task status *Code Review* and with the *Tools* tag added.  (or just do a push, if not using gerrit)
+    1. Do a Gerrit push for code review, or just do a push in case you are not using Gerrit.
+
+    1. Assign the task to the Data Acquisition user, with the task status *Code Review* and with the *Tools* tag added.
+
     1. Send an email to [domain.create.data-acquisition@skyline.be](mailto:domain.create.data-acquisition@skyline.be) mentioning that you added something and in which branch this was done.
 
 > [!TIP]
