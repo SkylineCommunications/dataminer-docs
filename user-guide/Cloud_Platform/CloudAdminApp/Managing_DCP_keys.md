@@ -10,6 +10,9 @@ To do so:
 
 1. In the Admin app, check whether the correct organization is mentioned in the header bar.
 
+   > [!TIP]
+   > See also: [Accessing the Admin app](xref:Accessing_the_Admin_app)
+
 1. If a different organization should be selected, click the organization selector in the top-right corner and select the organization in the list.
 
    ![Organization selector](~/user-guide/images/CloudAdmin_Selector.png)
@@ -29,3 +32,6 @@ To do so:
    - To **revoke** a set of keys, click the "..." button to the right of the entry and select *Revoke*.
 
      When you revoke a set of keys, this will effectively delete the keys. To avoid unwanted deletion, you will need to confirm that you indeed want to revoke the keys by specifying their label.
+
+> [!TIP]
+> Regenerating primary or secondary keys can also be done from the side panel.
