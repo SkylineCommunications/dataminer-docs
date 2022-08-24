@@ -2331,6 +2331,8 @@
               topicUid: Admin_activities
             - name: Settings
               topicUid: Settings
+            - name : Implementing the Connectivity Discovery script
+              topicUID: ConnectivityDiscoveryScript
         - name: Reference
           topicUid: Reference1
           items:
