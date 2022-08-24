@@ -486,6 +486,13 @@ In *DataMiner.xml*, the `scriptingProcesses` option can be set to an integer val
 
 When a name concatenation for a DomInstance had been defined in either the ModuleSettings or the DomDefinition, in some cases, the FieldValues would not get concatenated correctly.
 
+#### DataMiner Analytics: 'Unknown alarm update relevance' errors in logging [ID_34016]
+
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.9 -->
+<!-- Not added to 10.3.0 -->
+
+In some cases, DataMiner Analytics could cause "Unknown alarm update relevance" errors to be added in the logging.
+
 #### Dashboards app: Dashboards with components containing a time-related setting would no longer load [ID_34017]
 
 <!-- Main Release Version 10.3.0 - Feature Release Version 10.2.9 -->
