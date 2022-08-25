@@ -77,3 +77,9 @@ Up to now, the files stored in the `C:\Skyline DataMiner\ResourceManager` folder
 <!-- Main Release Version 10.1.0 [CU19]/10.2.0 [CU7] - Feature Release Version 10.2.10 -->
 
 In some cases, SLNet could throw an OutOfMemoryException due to a memory leak.
+
+#### Scheduled alarm templates would incorrectly not be updated when the system time changed [ID_34154]
+
+<!-- Main Release Version 10.1.0 [CU19]/10.2.0 [CU7] - Feature Release Version 10.2.10 -->
+
+When the system time changed because of e.g. a clock resynchronization or a switch to or from daylight-saving time, up to now, the start time and end time of scheduled alarm templates would incorrectly not get updated.
