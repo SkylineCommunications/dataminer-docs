@@ -53,6 +53,12 @@ In addition, the coloring of the trend lines could be incorrect. Instead of the 
 
 When the text in the Cube advanced search box was selected with Ctrl+A and then deleted, it could occur that the advanced search input was not cleared correctly, so that it continued to be shown by the *SurveyorSearchText* variable in Visual Overview.
 
+#### SLNet could throw an OutOfMemoryException due to a memory leak [ID_34126]
+
+<!-- Main Release Version 10.1.0 [CU19]/10.2.0 [CU7] - Feature Release Version 10.2.10 -->
+
+In some cases, SLNet could throw an OutOfMemoryException due to a memory leak.
+
 #### Visual Overview: Connection highlight based on connection property not updated automatically [ID_34139]
 
 <!-- Main Release Version 10.1.0 [CU19]/10.2.0 [CU7] - Feature Release Version 10.2.9 -->

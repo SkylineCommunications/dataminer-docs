@@ -66,4 +66,8 @@ Warning: <function> is unable to parse compliance cache file entry at line <line
 
 ### Fixes
 
-*No fixes have been added to this release yet.*
+#### SLNet could throw an OutOfMemoryException due to a memory leak [ID_34126]
+
+<!-- Main Release Version 10.1.0 [CU19]/10.2.0 [CU7] - Feature Release Version 10.2.10 -->
+
+In some cases, SLNet could throw an OutOfMemoryException due to a memory leak.
