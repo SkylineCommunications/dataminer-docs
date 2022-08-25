@@ -2,7 +2,10 @@
 uid: General_Main_Release_10.2.0_CU7
 ---
 
-# General Main Release 10.2.0 CU7
+# General Main Release 10.2.0 CU7 – preview
+
+> [!IMPORTANT]
+> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
 
 ### Enhancements
 

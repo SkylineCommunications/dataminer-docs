@@ -67,9 +67,9 @@
           topicUid: General_Main_Release_10.2.0_CU4
         - name: General Main Release 10.2.0 CU5
           topicUid: General_Main_Release_10.2.0_CU5
-        - name: General Main Release 10.2.0 CU6
+        - name: General Main Release 10.2.0 CU6 - preview
           topicUid: General_Main_Release_10.2.0_CU6
-        - name: General Main Release 10.2.0 CU7
+        - name: General Main Release 10.2.0 CU7 - preview
           topicUid: General_Main_Release_10.2.0_CU7
     - name: v10.1
       items:
@@ -157,9 +157,9 @@
           topicUid: General_Main_Release_10.1.0_CU16
         - name: General Main Release 10.1.0 CU17
           topicUid: General_Main_Release_10.1.0_CU17
-        - name: General Main Release 10.1.0 CU18
-          topicUid: General_Main_Release_10.1.0_CU18
-        - name: General Main Release 10.1.0 CU19
+        - name: General Main Release 10.1.0 CU18 - preview
+          topicUid: General_Main_Release_10.1.0_CU18 
+        - name: General Main Release 10.1.0 CU19 - preview
           topicUid: General_Main_Release_10.1.0_CU19
     - name: v10.0
       items:
@@ -263,6 +263,8 @@
           topicUid: General_Main_Release_10.0.0_CU20
         - name: General Main Release 10.0.0 CU21
           topicUid: General_Main_Release_10.0.0_CU21
+        - name: General Main Release 10.0.0 CU22 - preview
+          topicUid: General_Main_Release_10.0.0_CU22
   - name: DataMiner Cube release notes
     topicUid: DataMiner_Cube_RNs_index
     items:
