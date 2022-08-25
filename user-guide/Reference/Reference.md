@@ -22,7 +22,7 @@ uid: Part7Reference
 
 - [Methods of Procedure](xref:mops)
 
-- [Glossary](xref:glossary)
+- [Glossary](xref:glossary_a_to_l)
 
 > [!NOTE]
 > For more information on Visio shape data fields, options, placeholders, and dynamic table filter syntax, see [Reference](xref:Reference).
