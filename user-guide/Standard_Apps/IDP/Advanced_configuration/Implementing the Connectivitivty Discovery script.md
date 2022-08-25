@@ -97,6 +97,6 @@ When a discovered connection is provisioned:
 - The DCF connection will be updated when a DCF connection already exists.
 
   - A new DCF interface property will created when a property with the provided name and type does not exist. The value will be set to the provided value.
-  - The value of an existing DCF interface property will be updated when a property with the provided name and type already  exists.
+  - The value of an existing DCF interface property will be updated when a property with the provided name and type already exists.
 
 DataMiner IDP will not remove any DCF connections or DCF interface properties.
