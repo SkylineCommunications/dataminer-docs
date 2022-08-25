@@ -36,7 +36,7 @@ A network protocol that allows the equipment to discover neighboring network equ
 
 - A unique way to identify equipment. The equipment will be given an identifier that no other equipment is using. We refer to this as the **Local Chassis ID**.
 - A unique way to identify interfaces on the equipment. This can be different from the typical interface ID. We refer to this as a **Local Port ID**.
-- The ability to see on which interfaces neighbors are detected. The neighbors are detected with their unique identifiers. From the perspective of local equipment, these are **Remote Chassis IDs**.
+- The ability to see on which interfaces neighbors are detected. The neighbors are detected with their unique identifiers. From the perspective of local equipment, these are **Remote Chassis IDs**. The local port IDs of the neighbor are perceived as the **Remote Port IDs**.
 
 If the equipment runs such a network protocol, the connector will have or will need to be extended with the information above. The custom script can then provide IDP with the following information regarding neighbors of the equipment:
 
@@ -47,6 +47,7 @@ If the equipment runs such a network protocol, the connector will have or will n
   - The DCF interface ID on which the neighbor is detected.
   - The local port ID on which the neighbor is connected.
   - The remote chassis ID of the neighbor.
+  - The remote port ID. This is the port ID that uniquely identifies the interface on the neighbor.
 
 Each neighborship becomes an **unresolved connection**.
 
@@ -83,7 +84,7 @@ When DCF connections are provisioned, IDP will also provision these DCF interfac
 Additionally, IDP automatically provisions the following DCF interface properties:
 
 - **DataMiner IDP Port ID** : The local port ID, as supplied by the script.
-- **DataMiner IDP Interface Type**: The type of the interface e.g. Internet. This also supplied by the script.
+- **DataMiner IDP Interface Type**: The type of the interface e.g. Ethernet. This also supplied by the script.
 
 ## Provisioning DCF connections
 
