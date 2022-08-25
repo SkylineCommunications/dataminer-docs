@@ -8,7 +8,7 @@ uid: General_Feature_Release_10.2.10
 > We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
 
 > [!TIP]
-> For release notes related to DataMiner Cube, see [DataMiner Cube 10.2.9](xref:Cube_Feature_Release_10.2.9).
+> For release notes related to DataMiner Cube, see [DataMiner Cube 10.2.10](xref:Cube_Feature_Release_10.2.10).
 
 ## Highlights
 
@@ -65,6 +65,12 @@ Warning: <function> is unable to parse compliance cache file entry at line <line
 ```
 
 ### Fixes
+
+#### Service & Resource Management: Files in C:\Skyline DataMiner\ResourceManager would not be locked properly when being read or updated during a midnight synchronization [ID_34104]
+
+<!-- Main Release Version 10.1.0 [CU19]/10.2.0 [CU7] - Feature Release Version 10.2.10 -->
+
+Up to now, the files stored in the `C:\Skyline DataMiner\ResourceManager` folder would not be locked properly when being read or updated during a midnight synchronization. File locking has now been improved.
 
 #### SLNet could throw an OutOfMemoryException due to a memory leak [ID_34126]
 
