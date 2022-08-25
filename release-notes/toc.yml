@@ -43,6 +43,8 @@
             topicUid: General_Main_Release_10.2.0_new_features_4
           - name: New features (part 5)
             topicUid: General_Main_Release_10.2.0_new_features_5
+          - name: New features (part 6)
+            topicUid: General_Main_Release_10.2.0_new_features_6
         - name: General Main Release 10.2.0 - Enhancements
           topicUid: General_Main_Release_10.2.0_enhancements
         - name: General Main Release 10.2.0 - Fixes

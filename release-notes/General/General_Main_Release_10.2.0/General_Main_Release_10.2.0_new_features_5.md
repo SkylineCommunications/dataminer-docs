@@ -18,798 +18,994 @@ uid: General_Main_Release_10.2.0_new_features_5
 >   - Download and install the URL rewrite module.
 >   - Go to <http://localhost/root> and verify whether the root page is shown.
 
-### DMS Service & Resource Management
+### DMS Reports & Dashboards
 
-#### ReservationInstances now have an 'AbsoluteQuarantinePriority' property \[ID_28080\]
+#### Dashboards app: New 'view parameters' representing aggregation rules \[ID_28955\]
 
-ReservationInstances now have an “AbsoluteQuarantinePriority” property.
+For the line chart, state, and ring visualizations, you can now use view parameters as a data source. These represent active aggregation rules on a specific view.
 
-Resources reserved by a ReservationInstance of which the AbsoluteQuarantinePriority property was set to true will force all resource usages of overlapping ReservationInstances into quarantine.
+To select this new data source, in the drop-down box for the “parameter” data source, select “View”. The different available view parameters, corresponding with the aggregation rules configured in your system, will then be displayed.
 
-The usages of a ReservationInstance with absolute quarantine priority do not need to reserve any capacities or capabilities.
+You can combine these view parameters with other types of parameters in the same component. However, you can only group them together with other parameters using the "Group by" option "All together". If you group by element, parameter or index, the view parameters will be placed in a separate group. For view parameters, the view name is displayed instead of an element name, and the aggregation rule name is displayed instead of a regular parameter name.
 
-In the example below, resources will be quarantined from 10h to 12h UTC tomorrow.
+#### Dashboards app - GQI: New 'DCF connections' data source \[ID_25827\] \[ID_26491\] \[ID_26744\] \[ID_29505\] \[ID_29703\]
 
-```csharp
-var tomorrow = DateTime.UtcNow.AddDays(1).Date;
-var timeRange = new TimeRangeUtc(tomorrow.AddHours(10), tomorrow.AddHours(12));
-var instance = new ReservationInstance(timeRange) {
-    HasAbsoluteQuarantinePriority = false,
-    Status = ReservationStatus.Confirmed
-};
-instance.ResourcesInReservationInstance.Add(new ResourceUsageDefinition(resourceToQuarantine.ID));
-```
-
-When a ReservationInstance is added with absolute quarantine priority, an error with reason “ReservationUpdateCausedReservationsToGoToQuarantine” will be returned if this causes any bookings to be quarantined. In that case, the update must be executed using the “forceQuarantine” flag.
+In the Generic Query Interface, a new “DCF connections” data source is now available. It will return all DCF connections in the DMS.
 
 > [!NOTE]
 >
-> - It is possible to add multiple overlapping bookings with AbsoluteQuarantinePriority. If they book the same resource and if results in an overbooking of the resource, one of the instances will be quarantined. If there is no overbooking of the resources between the two bookings with AbsoluteQuarantinePriorit, both bookings will be scheduled.
-> - When a booking with AbsoluteQuarantinePriority is removed, the other bookings using the resources will not automatically be taken out of quarantine.
-> - Resources that are in quarantine because they overlap with a booking that reserves them with AbsoluteQuarantinePriority will have a QuarantineTrigger with reason “AbsoluteQuarantinePriorityReservationInstance”.
+> - The “Is Internal” column indicates whether a connection has been marked internal (i.e. virtual) or external (i.e. physical).
+> - External connections are configured both on the source element and the destination element. Hence, each external connection will be listed twice.
+> - Connections of which both the source element and the destination element are stopped will not be listed.
+> - Connections of which only the destination element is stopped will be listed once.
 
-#### Calls requesting eligible resources will now also return information about the available capacity of the resources \[ID_28125\]
+#### Dashboards app: Alarm table component \[ID_27790\] \[ID_28012\] \[ID_28142\] \[ID_28519\] \[ID_28718\] \[ID_28887\] \[ID_29131\] \[ID_29456\]
 
-The EligibleResourceResult returned by the various GetEligibleResources calls will now contain information about the available capacity of the resources. The ResourceUsageDetails object now includes a CapacityUsageDetails list that contains the maximum available capacities for the requested time frame.
+A new alarm table component is now available in the Dashboards app. It can be used to display a list of active alarms, masked alarms, history alarms, alarms in a sliding window, or information events.
+
+Multiple component settings are available:
+
+- Selection of type of alarm list.
+- Filter configuration, including index filters using wildcards, and saved alarm filters.
+- Default sorting column, default sorting order and number of alarms to load.
+- Displayed columns and their order.
+- Grouping by a specific column.
+- “Expand on hover” layout option.
+
+You can also add different data filters to the component, such as element or view data filters, or parameter feed or time range feed filters. If a parameter index data filter is used, a setting allows you to determine whether the index should match the filter or contain the filter.
+
+#### Dashboards app: Trigger feed \[ID_28136\]
+
+You can now add a trigger feed to a dashboard. This is a feed that allows you to trigger other components either manually or automatically.
+
+Currently, the trigger feed can only be linked to components that can visualize a database query. In that case, when a trigger feed is triggered, the data displayed in the other component will be refreshed.
+
+##### Settings
+
+When, in the *Settings* tab, you enable the *Trigger timer* setting, a countdown bar will be displayed, and triggering will occur automatically when the counter reaches 0. The *Time* setting allows you to specify a counter interval (default: 60 seconds).
+
+##### Layout
+
+In the *Layout* tab, you find three additional sections:
+
+- In the *Trigger label* section, you can specify a label and select an icon that will both be displayed on the trigger button.
+
+- In the *Time label* section, select the *Show when the last trigger happened* option if you want the time of the last triggering displayed. When this option is selected, in the *Time description format* box, you can enter the message to be displayed. It can contain the following placeholders:
+
+    | Placeholder | Description                                                                                                       |
+    |---------------|-----------------------------------------------------------------------------------------------------------------|
+    | {duration}    | An estimated indication of the time past since the last triggering. Example: “2 minutes ago”.                   |
+    | {time}        | The exact textual representation of the time when the last triggering occurred. Example: “Nov 20, 2020, 12:33”. |
+
+- In the *Layout* section, you can specify how you want the trigger label and time label to be aligned: left, center or right.
+
+#### Dashboards app: Right-hand edit pane is now resizable \[ID_28137\]
+
+It is now possible to change the width of the right-hand edit pane.
+
+#### Dashboards app - Line chart component: New option to highlight parameters on graph and legend \[ID_28144\]
+
+When configuring a line chart component, in the *Styling and Information* section of the *Layout* tab, you can now find the *Highlight lines on hover* option. This option enables users to highlight lines on a trend graph.
+
+When you select the *Highlight lines on hover* option, which is cleared by default, you can also specify the thickness of the highlighted lines (default: 3 px).
+
+There are two ways to highlight a trend line:
+
+- Hovering over the trend graph.
+- Expanding the legend and hovering over a parameter name.
+
+#### Dashboards: Deleting components by pressing the DELETE key \[ID_28171\]
+
+In the Dashboards app, up to now, it was possible to delete components in edit mode by selecting them and clicking the *Delete* button at the top of the page. Now, instead of clicking the Delete button, it is also possible to press the DELETE key on your keyboard.
+
+> [!NOTE]
+> After selecting the component to be deleted, make sure the focus is on the dashboard before you press the DELETE key. If the focus in on e.g. the header bar or the subheader bar, pressing the DELETE key will not work.
+
+#### Dashboards app: Restricting access to dashboards \[ID_28345\]
+
+From now on, when you create or import a new dashboard, you will be able to restrict access to it by specifying one of the following security levels:
+
+| Security level | Description |
+|----------------|-------------|
+| Public         | Every user is allowed to view, edit and share the dashboard. |
+| Protected      | Every user is allowed to view the dashboard, but only the user who created it is allowed to edit or share it. |
+| Private        | Only the user who created the dashboard is allowed to view and edit it. Note: In the Automation app, it will not be possible to attach private dashboards to report emails. |
 
 > [!NOTE]
 >
-> - The available capacity does not take into account the requested capacity.
-> - The available capacity for capacities that were not requested in the GetEligible call, but which are present on the resource, will not be calculated, and will therefore not be present in the CapacityUsageDetails list.
+> - When users with edit permission are editing a dashboard, they will now be able to indicate which users are allowed to view and/or edit that dashboard.
+> - Users will not be able to rename or delete a dashboard folder when it contains dashboards they are not allowed to edit.
+> - By default, the built-in Administrator account is allowed to view and edit all dashboards.
+> - Existing dashboards created in earlier DataMiner versions will remain accessible to all.
 
-#### Triggering an Automation script to reconfigure running bookings after a ProfileInstance was changed \[ID_28186\]
+#### Dashboards app: Parameter table filters \[ID_28539\]
 
-It is now possible to have an Automation script triggered when a profile instance update affects running bookings. That script can then reconfigure the bookings.
+In line chart components, it is now possible to configure a parameter table filter that will allow you to filter out specific rows.
 
-##### Configuring the script
+Currently, two types of filters can be configured: VALUE and FULLFILTER. Built-in Intellisense will help you construct the filter.
 
-The script to reconfigure the bookings can be set on the ProfileManagerConfiguration. See the example below.
+Examples:
 
-```csharp
-var profileHelper = new ProfileHelper(engine.SendSLNetMessages);
-var config = profileHelper.Config.Get();
-config.UpdateBookingConfigByReferenceScript = "scriptname";
-profileHelper.Config.Set(config);
-```
-
-This configuration is automatically synchronized among the Agents in the DMS. Updating the configuration does not require a DMA restart to take effect.
-
-The script will be triggered using a new OnSrmBookingsUpdatedByReference entrypoint. See the example below.
-
-- ProfileInstanceId will contain the ID of the ProfileInstance that was updated.
-- reservationIds will contain the IDs of all running ReservationInstances that were reconfigured because of the update.
-
-  This list does not have to include the IDs of the ReservationInstances that, although they did not reference the ProfileInstance, had usages quarantined because the update caused an overbooking.
-
-```csharp
-public class Script
-{
-    [AutomationEntryPoint(AutomationEntryPointType.Types.OnSrmBookingsUpdatedByReference)]
-    public void RunEntryPoint(Engine engine, Guid profileInstanceId, List<Guid> reservationIds)
-    {
-    }
-}
-```
-
-##### New errors
-
-The UpdateAndApply call for a ProfileInstance can now return a number of additional errors.
-
-When calling UpdateAndApply without forcing quarantine (i.e. with forceQuarantine set to false):
-
-- If no instances need to be quarantined, the update will be applied and the following warning will be returned:
-
-  - A warning of type ProfileInstanceChangeCausedBookingReconfiguration, listing the running reservations that were reconfigured because of the update.
-
-- If instances need to be quarantined, the update will not proceed and the following errors will be returned:
-
-  - An error with reason ReservationsMustMovedToQuarantine, listing the reservations that need to be quarantined as well as the usages.
-  - An error with reason ReservationsMustBeReconfigured, listing the bookings that will be affected by the ProfileInstance update.
-
-When calling UpdateAndApply and forcing quarantine (i.e. with forceQuarantine set to true), the update will proceed and the following TraceData will be returned:
-
-- A warning of type ReservationInstancesMovedToQuarantine, listing the reservations and the usages that were quarantined.
-- A warning of type ProfileInstanceChangeCausedBookingReconfiguration, listing the reservations that were reconfigured because of the update.
-
-##### New RequiredProfileInstanceReconfiguration property
-
-A new RequiredProfileInstanceReconfiguration property has been added to the ServiceReservationInstance class. When a ProfileInstance has been updated, all ReservationInstances referencing this ProfileInstance in any of their usages will have this property set to true. This way, solutions can keep track of the bookings that have been reconfigured in case the custom script was interrupted.
-
-See the following example on how to filter on this property:
-
-```csharp
-var rmHelper = new ResourceManagerHelper();
-rmHelper.RequestResponseEvent += (sender, args) => args.responseMessage = engine.SendSLNetSingleResponseMessage(args.requestMessage);
-var filter = ServiceReservationInstanceExposers.RequiredProfileReconfiguration.Equal(true);
-var instancesThatRequiredReconfig = rmHelper.GetReservationInstances(filter);
-```
-
-##### Additional information
-
-- If triggering the configured script fails, a notice will be generated with the following text:
-
-  ```txt
-  Failed to run script to reconfigure bookings after updating ProfileInstance because an exception occurred. See SLProfileManager.txt logging for more details.
-  ```
-
-- When the UpdateBookingConfigByReferenceScript is not configured (i.e. when the setting is empty or null in the profile manager configuration):
-
-  - No attempt will be made to trigger a script.
-  - The RequiredProfileInstanceReconfiguration property will not be set to true on the instances.
-  - No additional error or warning will be returned in the calls.
-
-#### ResourceManagerHelper.SetReservationDefinitionsAndOverrides method has been rendered obsolete \[ID_28261\]
-
-The ResourceManagerHelper.SetReservationDefinitionsAndOverrides method has been rendered obsolete.
-
-#### ServiceNameInUse check when a ServiceReservationInstance is started \[ID_28327\]
-
-From now on, when a ServiceReservationInstance is started, a check will be performed to see whether a service with the same name is already active. If so, a StartActionsFailureErrorData object will be returned with error reason “ServiceNameInUse”, the error will be logged and the OnStartActionsFailureEvent will be triggered.
-
-The StartActionsFailureErrorData object will also contains the following:
-
-- ReservationInstanceId: The ID of the ServiceReservationInstance that could not be started.
-- ServiceId: The ID of the service that has the same name.
-
-#### DVE element will only be updated when certain properties of the FunctionResource are updated \[ID_28450\]
-
-Up to now, each time you updated a FunctionResource, the DVE element would also be updated. From now on, the DVE element will only be updated when one of the following properties of the FunctionResource is updated:
-
-- DmaID
-- ElementID
-- MainDVEDmaID
-- MainDVEElementID
-- FunctionName
-- FunctionGUID
-- PK
-- LinkerTableEntries
-
-#### MinReservationStart and MaxReservationCeiling checks have been removed \[ID_28575\]
-
-The MinimumReservationStart and MaximumReservationCeiling checks have been removed.
-
-This means that the start and stop times of ReservationInstances and ReservationDefinitions no longer need to be between the MinimumReservationStart and MaximumReservationCeiling.
-
-Also, the following ResourceManagerErrorData reasons have now all been marked as obsolete:
-
-- BulkAddingFirstOrLastToOLateOrTooEarly
-- EndsAfterMaximumReservationCeiling
-- StartsBeforeMinimumReservationStart
-- ReservationDefinitionMinimumReservationStart
-- ReservationDefinitionMaximumReservationCeiling
-
-#### ProfileDefinitions & ProfileInstances: Hiding parameters \[ID_28792\]
-
-A ParameterSettings property has been added to the ProfileDefinition and ProfileInstance classes. Currently, this property can be used to configure whether a parameter should be displayed or not by setting the IsHidden property (which, by default, is false).
-
-ProfileDefinition example:
-
-```csharp
-var profileDefinition = new ProfileDefinition()
-{
-    ID = Guid.NewGuid(),
-    Name = "ProfileDefinition name",
-    ParameterIDs = { profileParameter },
-    ParameterSettings = new Dictionary<Guid, ParameterSettings>()
-    {
-        {profileParameter, new ParameterSettings() { IsHidden = false }}
-    }
-};
-```
-
-ProfileInstance example:
-
-```csharp
-var profileInstance = new ProfileInstance
-{
-    ID = Guid.NewGuid(),
-    Name = $"ProfileInstance name",
-    AppliesToID = profileDefinitionId,
-    Values = new []
-    {
-        new ProfileParameterEntry
-        {
-            Parameter = new ProfileParameter()
-            {
-                ID = profileParameter
-            },
-            ParameterSettings = new ParameterSettings()
-            {
-                IsHidden = true
-            }
-        }
-    }
-};
-```
-
-#### ServiceDefinitions of type 'ProcessAutomation' \[ID_28799\]
-
-The ServiceDefinition object now has a ServiceDefinitionType property, which can be used to distinguish ProcessAutomation ServiceDefinitions from default ServiceDefinitions.
-
-The default value of ServiceDefinitionType is “Default”.
-
-Example:
-
-```csharp
-// Creating a ServiceDefinition with the "ProcessAutomation" type
-var serviceDefinition = new ServiceDefinition()
-{
-    Name = "some name",
-    ServiceDefinitionType = ServiceDefinitionType.ProcessAutomation,
-}
-// Filtering on "ServiceDefinitionType"
-var filter = ServiceDefinitionExposers.ServiceDefinitionType.Equal((int) ServiceDefinitionType.ProcessAutomation);
-serviceManagerHelper.GetServiceDefinitions(filter);
-```
-
-#### Option to remember which view a function DVE was in when it got deactivated \[ID_28884\]
-
-It is now possible for a function DVE that gets deactivated to remember the view it was in. That way, when it gets reactivated again afterwards, it can be placed in the same view as before.
-
-Since this feature will prevent views of inactive function DVEs from being removed from the *Views.xml* file, it can make the *Views.xml* file grow extensively. Therefore, it is disabled by default and has to be enabled manually in the *MaintenanceSettings.xml* file. See the example below.
-
-```xml
-<MaintenanceSettings>
-  <SLNet>
-    <KeepFunctionDveViewsOnDisable>true</KeepFunctionDveViewsOnDisable>
-  </SLNet>
-</MaintenanceSettings>
-```
+- value=PK == 1
+- value=DK==Izegem
+- value=518==5;value=522>=10
+- fullfilter=(value=PK ==1 or value=PK ==2)
+- fullfilter=((value=PK \> 36) and (value=518 in_range 1/5 )) or (VALUE=DK == Brus\*)
 
 > [!NOTE]
-> When a resource is removed, all associated entries will be removed from the *Views.xml* file.
+>
+> - Currently, only line chart components support the use of parameter table filters.
+> - Parameter table filters can only be configured when you have started the Dashboards app with the *showAdvancedSettings* URL parameter set to true.
+> - When you update a filter, you have to re-add it to the component.
 
-#### ServiceResourceUsageDefinition now has an IsContributing flag \[ID_28904\]
+#### Dashboards app - Table component: GQI query result can now be export to a CSV file \[ID_28637\]
 
-The ServiceResourceUsageDefinition object now has an IsContributing flag, which can be used to indicate that the resource is being used is a contributing resource.
+When a table component displays the result of a GQI query, it is now possible to export that result to a CSV file.
 
-Example:
+To do so, click the ellipsis icon in the upper-right corner and select *Export to CSV*.
 
-```csharp
-// Setting the flag
-var reservationInstance = new ServiceReservationInstance(new TimeRangeUtc(DateTime.UtcNow.AddHours(1), TimeSpan.FromHours(1)));
-reservationInstance.ResourcesInReservationInstance.Add(new ServiceResourceUsageDefinition(resource.ID)
-{
-    IsContributing = true
-});
-```
+By default, the CSV file will be named “Query XXX” (XXX being the name of the query). If necessary, the name of the query can be changed in the *Queries* section in the table component’s data panel.
 
-#### EligibleResourceContext can now contain a flag to indicate whether LinkerTableEntries should be filled in or not \[ID_28933\]
+The first line of the CSV file will contain the names of the columns. The subsequent lines will contain the data, each line being a row of the query result. This data will contain the display values, not the raw values. This means that parameter values will contain units and that discrete values will be replaced by their corresponding display value.
 
-When requesting EligibleResources, it is now possible for the EligibleResourceContext to indicate whether the LinkerTableEntries property of the Resources should be filled in or not.
+By default, all rows of the query result will be exported. If you want to export only a subset, first select the rows to be exported and then click *Export to CSV*.
 
-Example:
+If you only want to export specific columns, you can drag those columns from the data panel onto the component before you export the data.
 
-```csharp
-var context = new EligibleResourceContext()
-{
-    TimeRange = _reservationTimeRange,
-    RequiredCapacities = new List<MultiResourceCapacityUsage>()
-    {
-        new MultiResourceCapacityUsage(_capacityParameterId, 1),
-    },
-    FillLinkerTableEntries = true
-};
-resourceManagerHelper.GetEligibleResources(context);
-```
+#### Dashboards app - Line chart component: Trend graph will now display the actual name of a profile parameter \[ID_28657\]
 
-> [!NOTE]
-> As filling in the LinkerTableEntries can have a negative impact on the overall performance, the LinkerTableEntries flag will by default be set to false.
+When, in the Dashboards app, you add a profile parameter to a line chart component, from now on, the label of its trend line will now display the actual name of the profile parameter instead of the name of the underlying parameter that is associated with it.
 
-#### New option to retrieve ProfileInstance parameters from the cache \[ID_29160\]
+#### Dashboards app: State component now also supports protocol data and indices \[ID_28688\]
 
-When the GenerateRequiredCapas method is called on a ProfileInstance, the response will contain all parameters of that instance and its parents. If these parameters are not yet cached on the instances, they will automatically be retrieved from the server. However, in some cases, retrieving them from the server will not be necessary because the script or application in question already cached them.
+The state component now supports all possible data types, including protocol data and indices.
 
-From now on, the automatic server retrieval can be bypassed by
+Also, the Layout pane of this component has been enhanced.
 
-1. creating a retrieval method that tries to return the parameters that are already cached in the script or application before retrieving them from the server (see the example below), and
-1. passing that method to the GenerateRequiredCapas(Func\<ProfileParameterEntry, Parameter> parameterResolver) call.
+#### Dashboards app: New Views data source for generic query interface \[ID_28707\]\[ID_28877\]
 
-The following example shows a method that tries to return the parameters that are already cached in the script or application before retrieving them from the server. We first check whether a certain parameter can be found in the local “\_profileParameterCache”. If not, we then retrieve it using the built-in AutoSync collection by means of a get operation on Parameter property.
+The generic query interface now features a new *Views* data source, which can be used to retrieve all the views in the DataMiner System. For each view, the View ID and Name columns are retrieved by default. The following columns can also be retrieved by means of an additional column filter:
 
-```csharp
-private Parameter GetParameterForParameterEntry(ProfileParameterEntry entry)
-{
-    if (_profileParameterCache.TryGetValue(entry.ParameterID, out var parameter))
-    {
-        return parameter;
-    }
-    // Not found in cache, retrieve using internal AutoSync collection   (by just doing a get on Parameter)
-    parameter = entry.Parameter;
-    if (parameter == null)
-    {
-        throw new Exception($"Could not retrieve parameter with ID: {entry.ParameterID}");
-    }
-    // Add it to our cache
-    _profileParameterCache.Add(parameter.ID, parameter);
-    return parameter;
-}
-```
+- Parent view ID
+- Last modified
+- Last modified by
+- Enhanced element ID
+- Custom view property columns
 
-#### New log file: SLResourceManagerAutomation.txt \[ID_29233\]\[ID_29281\]
+#### Dashboards app: Service Definition components now accept services as data sources \[ID_28746\]
 
-The following actions will now be logged in the SLResourceManagerAutomation.txt file instead of the SLResourceManager.txt file:
+In the Dashboards app, service definition components now accept services as data sources.
 
-- Actions related to the registering and unregistering of ReservationInstances
-- Actions related to the starting of ReservationInstances
-- Actions related to the execution of ReservationInstance events
+When you drag a service onto a service definition component, by default, the component will display the service definition and the bookings of that service.
 
-All these log entries will have log level 5.
+If necessary, you can apply a filter by specifying a time range. If you do not specify a time range, the component will display the current booking.
 
 > [!NOTE]
-> In DataMiner Cube, you can access this new log file by going to *System Center \> Logging \> DataMiner \> Resource Manager Automation*.
+> From now on, it is no longer possible to filter a service definition component when its data source is either a booking or a service definition.
 
-#### New caching mechanism when retrieving ReservationInstances from Elasticsearch \[ID_29289\]
+#### Dashboards app - GQI: Using a feed as a column filter \[ID_28770\]
 
-A caching mechanism involving three separate caches will now be used when retrieving ReservationInstances from an Elasticsearch database, especially when the already saved ReservationInstances have to be checked, e.g. when saving a new ReservationInstance or when requesting the availability of resources in a certain time frame.
+When building a GQI query, it is now possible to use a feed as a column filter.
 
-##### Overview of the caches
+Instead of providing a fixed value to filter a specific column, you can now select the *From feed* option and configure a filter by specifying the following items:
 
-| Cache | Description |
+| Filter item | Description                                                                                                                |
+|-------------|----------------------------------------------------------------------------------------------------------------------------|
+| Feed        | The name of the feed that will provide the data. If only one feed is available, it will automatically be selected.         |
+| Type        | The type of data that needs to be selected. If the feed only provides one type of data, it will automatically be selected. |
+| Property    | The property by which the column will be filtered (depending on the type of data).                                         |
+
+Example: If the column in question has to be filtered using the element name found in the URL of the dashboard, then you can set *Feed* to “URL”, *Type* to “Elements” and *Property* to “Name”.
+
+#### Dashboards app - GQI: New 'View relations' data source \[ID_28797\]\[ID_28877\]
+
+In the Generic Query Interface, a new “View relations” data source is now available. It contains all DataMiner objects that are part of a view.
+
+Each row in this data source has the following columns:
+
+| Column   | Description                                                                 |
+|----------|-----------------------------------------------------------------------------|
+| View ID  | The ID of the view.                                                         |
+| Child ID | The ID of the DataMiner object in the view.                                 |
+| Depth    | The level of the DataMiner object in the view tree in relation to the root. |
+
+When you set the *Recursive* option to true, the table will not only contain all direct relationships (i.e. between a parent item and a child item), but also all indirect relationships (e.g. between a grandparent item and a grandchild item).
+
+#### Dashboards app: Existing GQI queries stored in Queries.json will now automatically be copied to the correct dashboard files during a DataMiner upgrade \[ID_28816\]
+
+As from DataMiner main release version 10.1.0 and feature release version 10.1.3, GQI queries are stored in the dashboards instead of a separate *Queries.json* file, located in the *C:\\Skyline DataMiner\\Generic Interface\\* folder.
+
+When you upgrade to DataMiner main release version 10.2.0 or feature release version 10.1.4, any existing GQI queries that are still stored in the Queries.json file will now automatically be copied to the correct dashboard files.
+
+#### Dashboards app - GQI: Records in views, services and elements data sources now contain metadata that will allow views, services and elements to act as feeds \[ID_28891\]\[ID_28940\]
+
+All records in the views, services and elements data sources will now contain metadata that will allow a view, a service or an element to act as a feed when a table row referring to that view, service or element is selected.
+
+#### Dashboards app - State, Gauge and Ring components: Enhancements \[ID_28984\]
+
+A number of enhancements have been made to the Gauge and Ring components:
+
+- As to the Ring component, labels are now displayed underneath the ring.
+
+- The Gauge and Ring components can now display the configured range (minimum and maximum value). Also, it is now possible to configure a custom range in each of those components.
+
+- The Gauge and Ring components are now more in line with the State component. When configuring these components, it is now possible to select one of three designs (small, large and autosize) and to specify the alignment (left, center and right).
+
+#### Dashboards app - GQI: Importing a query from another dashboard into the current dashboard \[ID_28907\]\[ID_29022\]
+
+It is now possible to import queries from another dashboard into the current dashboards.
+
+1. In the *Queries* section of the *Data* pane, click the *Import* button.
+
+2. In the *Import Query* window,
+
+    - select the dashboard containing the query,
+    - select the query,
+    - if necessary, change the name of the query, and
+    - click *Import*.
+
+> [!NOTE]
+> If you import a query that uses other queries, all those queries will be merged into one single query that will then be imported into the current dashboard.
+
+#### Dashboards app: Sharing dashboards with other users via the DataMiner Cloud \[ID_29047\] \[ID_31476\]
+
+It is now possible to share dashboards with other users via the DataMiner Cloud.
+
+##### Prerequisites
+
+- The DataMiner Cloud Pack must be installed on the DataMiner Agent.
+- The DataMiner Agent must be connected to the DataMiner Cloud.
+- To be able to share items, users must have the following permissions:
+
+  - Modules \> Reports & Dashboards \> Dashboards \> Edit
+  - General \> Live sharing \> Share
+  - General \> Live sharing \> Edit
+  - General \> Live sharing \> Unshare
+
+##### To share a dashboard
+
+1. In the Dashboards app, go to the list of dashboards on the left, and select the dashboard you want to share.
+
+1. Click the “...” button in the top-right corner of the dashboard, and select *Start sharing*.
+
+1. If it is the first time you are sharing the dashboard, you may be asked to confirm that you want to link your account to the cloud. Select *I want to link the above users* and click *Link accounts*.
+
+1. In the pop-up window, fill in the email address of the person you want to share the dashboard with.
+
+1. Optionally, in the *Message* field, add a message you want to send to the person you are sharing the dashboard with, in order to provide additional information.
+
+1. If you do not want the dashboard to remain permanently available, select the *Expires* option and specify the expiration date.
+
+1. Click *Share*. An email will be sent to the person you are sharing the dashboard with, to inform them that they now have access to the dashboard.
+
+> [!NOTE]
+>
+> - If access to a dashboard is limited to some users only, it will not be possible to share this dashboard.
+> - You can stop sharing a dashboard by clicking the “...” button again and selecting *Manage share*. This will open a pop-up box where you can delete the share or update the message.
+> - At present, sharing dashboards that use the following components is not supported: spectrum components, Maps, SRM components (service definition and resource usage line graph), queries using feeds and visualizations based on query feeds (e.g. node edge graph, table), trend components with subscription filters and pivot table components. If you attempt to share a dashboard with content that is not supported for sharing, a message will be displayed with more information.
+
+##### To access the Sharing module that lists the dashboards that others have shared with you
+
+1. Open an internet browser (other than Microsoft Internet Explorer), go to <https://dataminer.services/>, and sign in.
+
+1. On the landing page of the DataMiner Cloud Platform, click *Sharing*.
+
+   You will now see all data that others have shared with you.
+
+> [!NOTE]
+> When somebody has shared a dashboard with you, you will receive an email informing you of this. You can then click the link in the email to immediately access the dashboard, provided that you already have a DataMiner Cloud Platform account.
+
+##### Security layers
+
+- User authentication via Microsoft B2C login.
+
+- For every shared dashboard, a dedicated “Cloud-connected Agent” user (CCA user) is created on the DataMiner Agent. This user only has permission to view the data shown on the dashboard and nothing else.
+
+- The DataMiner Web Services API now has a Web Application Firewall. Each time a CCA user calls a particular web method, this firewall will check whether that CCA user is allowed to do so.
+
+- Detailed logging is stored in *C:\\Skyline DataMiner\\logging\\Web* and Dashboards Sharing SPI metrics are published.
+
+> [!NOTE]
+> In the list of users and groups in System Center, there is a separate section for cloud users and groups. These also have their own icon, so the distinction with regular users and groups is more clear.
+>
+> As cloud users and groups are entirely managed by DataMiner, they cannot be modified.
+
+#### Dashboards app - Service definition component: Node scaling \[ID_29142\]
+
+In the service definition component, nodes will now have a fixed initial size and ratio. When the service definition does not fit inside the component, vertical and/or horizontal panning will be enabled depending on the direction that is clipped. For example, when a service definition is very wide and its nodes are clipped on the right-hand side, horizontal panning will be possible, but vertical panning will not. Also, zooming in and out will fully scale the nodes so that every-thing keeps its aspect ratio.
+
+> [!NOTE]
+> The zoom controls in the bottom-right corner have been removed.
+
+#### Dashboards app - GQI: Linking a \[Get parameters for elements where\] 'Protocol' filter to a parameter feed \[ID_29335\]
+
+After selecting a \[Get parameters for elements where\] “Protocol” filter, you can now link this filter to a parameter feed.
+
+To do so, select the *Use feed* option, and select one of the available parameter feeds from the list. The parameters from that feed will then be added to the query.
+
+#### Dashboards app - GQI: Linking a filter to an index feed \[ID_29338\]
+
+After selecting a filter, you can now link this filter to an index feed.
+
+To do so, select the *Use feed* option, and select one of the available index feeds from the list.
+
+#### Dashboards app - GQI: Linking a \[Get parameter table by ID\] 'DataMiner ID' 'Element ID' filter to a parameter feed \[ID_29351\]
+
+After selecting a \[Get parameter table by ID\] “DataMiner ID” “Element ID” filter, you can now link this filter to a parameter feed.
+
+To do so, select the *Use feed* option, and select one of the available parameter feeds from the list. The first table parameter from that feed will then be added to the query.
+
+#### Dashboards app - GQI: Linking a \[Get elements/services/views/view relations\] \> \[Select\] filter to a parameter feed \[ID_29360\]
+
+After selecting a \[Get elements/services/views/view relations\] \> \[Select\] filter, you can now link this filter to a parameter feed.
+
+To do so, select the *Use feed* option, and select one of the available parameter feeds from the list. The parameters from that feed will then be added to the query.
+
+#### Dashboards app - GQI: Linking a time range filter to a time range feed \[ID_29367\]
+
+Whenever you have to specify a time range when building a query, you can now link this time range filter to a time range feed.
+
+To do so, select the *From feed* option, and select one of the available time range feeds from the list.
+
+#### Dashboards app - GQI: Query filters configured to filter using a regular expression will now combine multiple feed values using 'OR' operators \[ID_29396\]
+
+When a query filter using a feed is configured to filter using a regular expression, from now on, it will combine multiple feed values using “OR” operators.
+
+#### Dashboards app: Node edge graph component \[ID_29425\]
+
+The new node edge graph component allows you to visualize any type of objects (i.e. “nodes”) and the connections between them (i.e. “edges”). Moreover, by linking parameters and properties to those nodes and edges, you can turn a node edge graph into a full-fledged analytical tool that shows real-time alarm statuses and KPI data using dynamic coloring.
+
+The data necessary to create a node edge graph can to be provided by means of GQI queries. Node queries provide data that will be visualized as nodes (i.e. objects), whereas edge queries provide data that will be visualized as edges (i.e. connections between objects).
+
+For more detailed information, see [Node edge graph](xref:DashboardNodeEdgeGraph).
+
+#### Dashboards app - GQI: Regular expressions in column filters will now be converted to standard table filters \[ID_29458\]
+
+From now on, when regular expressions with the following structure are found in column filters, they will be converted to standard table filters.
+
+| Regular expressions with the following structure ... | will be converted to ...                                 |
+|------------------------------------------------------|----------------------------------------------------------|
+| ^(Value01\|Value02\|Value03)$                        | (XXX == Value01) OR (XXX == Value02) OR (XXX == Value03) |
+
+#### Dashboards app: Enhanced data source counters in edit panel \[ID_29495\]
+
+In the edit panel, up to now, the counter next to each data source would indicate the total number of draggable items in that data source that matched the applied filters. From now on, each data source counter will instead indicate the amount of items in the next level only.
+
+Imagine a DataMiner Agent with the following view tree:
+
+Root
+
+- child 1
+
+  - child 3
+  - child 4
+
+- child 2
+
+  - child 5
+
+From now on...
+
+- the counter of the views data source will show “(1)”, i.e. the root, and
+- the counter of the root view data source will show “(2)”, i.e. child view 1 and 2.
+
+> [!NOTE]
+> The counter of the parameters data source will show the total amount of parameters.
+
+#### Dashboards app - GQI: Aggregated and manipulated columns now have metadata \[ID_29494\] \[ID_29514\]
+
+Metadata will now be added to columns created by an aggregation or manipulation operation within the GQI environment. This metadata will provide information regarding the operation (aggregation or manipulation) and the columns involved.
+
+#### Dashboards app - Line chart component: New 'Fill graph' and 'Stack trend lines' options \[ID_29527\]
+
+When configuring a line chart component, you will now find two new options in the *Styling and Information* section of the *Layout* tab:
+
+- **Fill graph**: When you select this option, the space underneath the line will be filled with the line color.
+- **Stack trend lines**: When you select this option, all lines in a graph will be stacked on top of each other.
+
+  > [!NOTE]
+  > This option is not compatible with the *Show min/max shading*, *Show minimum*, and *Show maximum* options. When you select the *Stack trend lines* option, those options will be disabled and hidden.
+
+Also, the following chart components have been renamed:
+
+| Old name   | New name           |
+|------------|--------------------|
+| Bar chart  | Column & bar chart |
+| Line chart | Line & area chart  |
+| Pie        | Pie & donut chart  |
+
+#### Dashboards app - GQI: New filter node option 'Return no rows when feed is empty' \[ID_29557\]
+
+When, in the Data tab, you add a filter node to a GQI query, a new option named “Return no rows when feed is empty” will allow you to specify what should be returned when the filter yields no rows.
+
+- When you enable this option, an empty table will be returned when the filter yields no rows.
+- When you disable this option, the entire table (i.e. all rows) will be returned when the filter yields no rows.
+
+#### Dashboards app: State, Gauge and Ring components can now be used as feeds by other components \[ID_29570\] \[ID_29650\] \[ID_29657\] \[ID_29708\]
+
+The State, Gauge and Ring components can now be used as feeds by other components.
+
+In other words, components using a State, Gauge and Ring component as a feed will now be able to ingest data (element, redundancy group, service, view, protocol, index) selected in that State, Gauge or Ring component.
+
+> [!NOTE]
+>
+> - When a State, Gauge or Ring component is used as a feed, the data selected will be highlighted.
+> - A State component can even be used by other components as a GQI data feed.
+
+#### Dashboards app: New Progress bar component \[ID_29773\]
+
+A new *Progress bar* component is now available among the state components in the Dashboards app. It can be used to display the value of an analog parameter as a progress bar.
+
+In the *Layout* tab for this component you can select to hide or display various labels, such as the parameter name and value. You can also select whether the minimum and/or maximum value of the parameter should be displayed. Similar to other state components, you can also select a small or large design and, in case the component is used to display multiple parameters, you can select whether the parameters should be displayed in rows or columns.
+
+In the *Settings* tab, you can specify a custom minimum and/or maximum value.
+
+#### Dashboards app - GQI: Fetching query results page by page \[29801\] \[29858\] \[29898\]
+
+GQI query results can now be fetched page by page.
+
+Before executing a query, the system will send a GenIfOpenSessionRequest message to open a session. That request will return a session ID that then has to be passed along with a series of GenIfNextPageRequest messages to fetch the next pages. Finally, a GenIfCloseSessionRequest message will be sent to close the session.
+
+> [!NOTE]
+>
+> - A new session must be opened for each query that has to be executed.
+> - When a session is opened/used, a timestamp will be added/updated. This timestamp will be used to check whether a session has expired. Sessions can be kept alive by sending a GenIfSessionHeartbeatRequest message.
+
+##### Overview of the request messages
+
+- **GenIfOpenSessionRequest**: Opens a session.
+
+  Properties:
+
+  - Query
+  - QueryOptions
+
+- **GenIfNextPageRequest**: Fetches the next page.
+
+  Properties:
+
+  - SessionID (Guid)
+  - PageSize (int)
+
+- **GenIfCloseSessionRequest**: Closes a session.
+
+  Properties:
+
+  - SessionIDs: Guid\[\]
+
+- **GenIfSessionHeartbeatRequest**: Prevents a session from expiring.
+
+  Properties:
+
+  - SessionIDs: Guid\[\]
+
+- **GenIfGetOpenSessionsRequest**: Returns a response containing a list of all open sessions, together with the following properties:
+
+  - SessionID (Guid)
+  - CreationTime
+  - LastUpdated
+
+##### Variables
+
+| Variable                                                                               | Default value    |
+|----------------------------------------------------------------------------------------|------------------|
+| Maximum concurrent sessions                                                            | 500              |
+| Time before a session is expired (without receiving heartbeat/update for that session) | 5 minutes        |
+| Internal check cycle if a session is expired                                           | Every 30 seconds |
+| Minimum pageSize (rows)                                                                | 1                |
+| Maximum pageSize (rows)                                                                | 2000             |
+
+#### Dashboards app - GQI: Linking columns with values of type double or datetime to feeds in query filters \[ID_29902\]
+
+In GQI query filters, from now on, columns containing values of type datetime or double can be linked to feeds. This will allows you to e.g. filter a bookings list by linking the *End* column to a time range feed.
+
+#### Dashboards app: Table visualizations now allow columns to be reordered \[ID_30091\]
+
+In table visualizations, it is now possible to reorder columns.
+
+To move a table column to another location, click its header and drag it to its new location.
+
+#### Dashboards app: Column filter based on text in Node edge graph and Table component \[ID_30182\]
+
+When you configure a column filter for a Node edge graph or Table dashboard component in order to highlight specific columns depending on the displayed value, you can now filter on specific text. Previously, it was only possible to apply a column filter on a selected range. Now, you can instead select the column you want to use for highlighting, and then specify text to filter on in a text box. You can then choose whether a positive or negative filter should be used, and whether the value should equal the filter, contain the filter or match a regular expression.
+
+Multiple filters can be applied on the same value. In that case, the filters will be applied from the top of the list to the bottom. Positive filters will get priority over negative filters. You can also remove filters again by selecting No color.
+
+#### Dashboards app - GQI: New 'Get alarms' data source \[ID_30320\] \[ID_30420\]
+
+In the Generic Query Interface, a new “Get alarms” data source is now available. It will return all alarms in the DMS.
+
+The following columns will be returned by default:
+
+- Element name
+- Parameter description
+- Value
+- Time
+- Root time
+- Severity
+- Service impact
+- RCA level
+- Alarm type
+- Owner
+
+You can add the following columns using a column selector node:
+
+- Alarm description
+- Alarm ID
+- Category
+- Component info
+- Corrective action
+- Comments
+- Creation time
+- Element ID
+- Element type
+- Hosting agent ID
+- Interface impact
+- Key point
+- Offline impact
+- Parameter ID
+- Root creation time
+- Root alarm ID
+- Status
+- Source
+- Table index display key
+- Table index primary key
+- User status
+- Virtual function impact
+- View impact
+- A column for every custom alarm property
+
+#### Dashboards app - State component: 'Show units' option \[ID_30322\]
+
+In the *Settings* tab of a *State* component, it is now possible to select or clear the *Show units* option to show or hide the unit of the parameter.
+
+#### Dashboards app - State component: Enhanced scrolling behavior when Layout flow is set to 'Columns' \[ID_30765\]
+
+When the *Layout flow* setting of a State component is set to “Columns” and there is either a single group or no grouping at all, from now on, the states will always be displayed at full width.
+
+#### Dashboards app - Node edge graph component: New 'Bidirectional configuration' option \[ID_30910\]
+
+When configuring a node edge graph component, you can now use the *Bidirectional configuration* option to specify how you want multiple edges between two nodes to be mapped.
+
+#### Dashboards app - Node edge graph component: 'Filtering & highlighting' section \[ID_31065\]
+
+In the *Layout* pane of a node edge graph component, the *Column filters* section has been renamed to *Filtering & highlighting* and now contains the following options:
+
+| Option | Description |
 |--|--|
-| Hosted ReservationInstance cache | When the ResourceManager module starts, this cache loads the ReservationInstances that are hosted on the agent and schedules the start/stop actions and booking events for these ReservationInstances. Any new instances hosted on the agent that are added or updated while the ResourceManager module is running will also be added to this cache so they can be scheduled. On startup, only the instances starting before a certain point in the future are loaded (default: 1 day). At regular intervals, the database will be checked for instances further in the future. |
-| ID cache | When a specific ReservationInstance is requested by ID, the result is cached in this ID cache. When an internal request is made for a specific ID, the cached ReservationInstance will be returned. Used when adding or editing ReservationInstances and when executing start/stop actions and ReservationEvents. |
-| Time range cache | When ReservationInstances within a specific time range are requested, all instances in that time range will be cached in this cache. Used when new bookings are created or when eligible resources are requested. |
+| Conditional coloring | Previously named *Column filters*, this option allows you to specify color filters for specific columns, so that these can be used for highlighting in case analytical coloring is used. |
+| Highlight | When this option is enabled, the nodes that match the filter will be highlighted. Default: Enabled |
+| Opacity | When the *Highlight* option is enabled, this option will allow you to set the level of transparency of the nodes and edges that do not match the filter. Note: When you disable the *Highlight* option, the nodes that do not match the filter will no longer be displayed and the remaining nodes will be reorganized. |
+| Highlight/Show entire path | When this option is enabled, not only the nodes matching the filter will be highlighted, but also the entire tree structure of which they are a part (from root to leaves). |
 
 > [!NOTE]
-> GetReservationInstances calls from scripts or clients will go straight to the database. They will not use the caching mechanism.
+> The filtering options mentioned above require the *Query filter* component, which is currently still in [soft launch](https://community.dataminer.services/documentation/soft-launch-options/).
 
-##### Configuration of the caches
+#### Dashboards app: New 'Preserve feed selections' option for dashboard folders \[ID_31380\]
 
-The caches can be configured in the *C:\\Skyline DataMiner\\ResourceManager\\Config.xml* file. See the following example.
+A new setting is now available for dashboard folders: *Preserve feed selections*. When this option is selected, any feed selection you make in a dashboard in the folder is preserved when you navigate to another dashboard in the folder. Note that this only applies to the folder itself, not to any other folders it may contain.
 
-```xml
-<?xml version="1.0" encoding="utf-8"?>
-<ResourceManagerConfig>
-  <CacheConfiguration>
-    <IdCacheConfiguration>
-      <MaxObjectsInCache>100</MaxObjectsInCache>
-      <ObjectLifeSpan>P1DT12H</ObjectLifeSpan>
-    </IdCacheConfiguration>
-    <TimeRangeCacheConfiguration>
-      <MaxObjectsInCache>200</MaxObjectsInCache>
-      <TimeRangeLifeSpan>PT30M</TimeRangeLifeSpan>
-      <CleanupCheckInterval>PT5M</CleanupCheckInterval>
-    </TimeRangeCacheConfiguration>
-    <HostedReservationInstanceCacheConfiguration>
-      <InitialLoadDays>P10D</InitialLoadDays>
-      <CheckInterval>PT12H</CheckInterval>
-    </HostedReservationInstanceCacheConfiguration>
-  </CacheConfiguration>
-</ResourceManagerConfig>
+To access this setting, right-click the dashboard folder in the navigation pane and select *Edit*. This *Edit* option also allows you to rename the dashboard folder and replaces the previous *Rename* option in the right-click menu.
+
+#### Dashboards app - GQI: New 'Update data' option \[ID_31445\] \[ID_31450\]
+
+When configuring a GQI query, you can now enable the “Update data” option if you want the component to automatically refresh the data when changes to that data are detected.
+
+By default, the “Update data” option is disabled.
+
+> [!NOTE]
+> At present, this feature will only work for queries using a “Parameter table by ID” data source.
+
+#### Dashboards app: Share button will now be disabled when you make a dashboard private \[ID_31667\]
+
+As it is not possible to share private dashboards, the “Share” button will now be disabled when you make a dashboard private.
+
+#### Dashboards app: GQI engine will now check the GQI version of a query \[ID_31698\] \[ID_31703\]
+
+When you open a GQI query, the GQI engine will now check the GQI version of that query to determine whether it is capable of updating or running that query.
+
+#### Dashboards app - Line chart component: New 'Trend points' setting \[ID_31751\]
+
+When configuring a line chart component, you can now indicate how trend data points should be added to the graph by setting the *Trend points* option to one of the following values:
+
+- Average (changes only) (default value)
+- Average (fixed interval)
+- Real-time
+
+This setting will also be taken into account when you export a trend graph to a CSV file.
+
+#### Dashboards app: 'Start sharing' button replaced by 'Share' button \[ID_31822\]
+
+The “Start sharing” button has been replaced by a “Share” button. Clicking that button will open a popup that allows you
+
+- to create a cloud share, or
+- to copy the URL of the dashboard.
+
+When you choose to copy the URL of a dashboard, you can select the following options:
+
+- Select “Embed” to use a URL that will link to the dashboard in embedded mode (i.e. not showing headers and sidebars).
+- Select “Use uncompressed URL parameters” to use a URL in which the data in the search parameters is not compressed. This will allow you to see and, if necessary, modify the plain JSON object.
+
+#### Dashboards app: Passing JSON data in a dashboard URL \[ID_31833\] \[ID_31885\]
+
+There are now two ways of passing data in the URL of a dashboard:
+
+- As a dataset containing a number of items to be selected in all components (legacy method)
+- As a JSON object containing a number of items to be selected in specific components (new method)
+
+##### Dataset (legacy method)
+
+Up to now, data could be passed to a dashboard using the following syntax:
+
+```txt
+url?<datatype1>=<datakeys1>&<datatype2>=<datakeys2>&...
 ```
 
-Overview of the different settings:
+Using this method, the dataset, which consists of a list of datatype/datakey(s) expressions, will provide data that will be selected in all relevant components of the dashboard.
 
-| Cache | Setting | Description | Default value |
-|--|--|--|--|
-| IdCacheConfiguration | MaxObjectsInCache | The maximum amount of objects that will be kept in this cache. When this threshold is exceeded, the oldest objects will be removed. | 500 |
-|  | ObjectLifeSpan | The maximum period of time an entry will be kept in the cache. Each time the entry is hit, this timer is reset. This setting has to be formatted according to ISO 8601. | 10 minutes |
-| TimeRangeCacheConfiguration | MaxObjectsInCache | The maximum amount of objects that will be kept in this cache. When this threshold is exceeded, the oldest time ranges will be removed. | 3000 |
-|  | TimeRangeLifeSpan | The maximum period of time a time range will be kept in the cache. Each time a query hitting this time range is resolved, this timer is reset. This setting has to be formatted according to ISO 8601. | 10 minutes |
-|  | CleanupCheckInterval | The interval at which the time ranges to be removed are checked. This setting has to be formatted according to ISO 8601. | 1 minute |
-| HostedReservationInstanceCacheConfiguration | InitialLoadDays | The setting that controls how long into the future the ReservationInstances will be loaded at ResourceManager startup. This setting has to be formatted according to ISO 8601. | 1 day |
-|  | CheckInterval | The period of time after which the ResourceManager will load new bookings from the database. | 6 hours |
+##### JSON object (new method)
 
-> [!NOTE]
-> The ResourceManagerConfig.InitialLoadDays setting no longer has any use, as the ReservationInstances will now be loaded according to the settings in HostedReservationInstanceCacheConfiguration.
+Next to the legacy method, it is now also possible to pass data to a dashboard in a JSON object.
 
-##### ClientTest tool
-
-The SLNetClientTest tool now allows you to retrieve the IDs of the currently cached ReservationInstances. To do so, go to *Advanced \> Apps \> SRMSurveyor \> Inspect ReservationInstance Cache*.
-
-> [!WARNING]
-> Always be extremely careful when using this tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
-
-##### Logging
-
-If loglevel 6 is enabled, the caches will log any added, updated or removed items in the SLResourceManagerStorage.txt file.
-
-#### Enhanced performance by implementing ISerializable on the ReservationInstance class using protocol buffer serialization \[ID_29306\]
-
-Overall performance has increased by implementing ISerializable on the ReservationInstance class using protocol buffer serialization.
-
-> [!WARNING]
-> Breaking changes:
->
-> - The Children and Parent property of a ReservationInstance will no longer be serialized between client and server. When the ResourceManagerHelper is used, backwards compatibility is implemented. However, if you use the messages yourself and receive ResourceManagerEventMessages via subscriptions (which is NOT recommended), you will need to call the GetStitched method on the ReservationInstance class. Saving ReservationInstances with a parent or child instance using messages may also cause issues.
-> - When the SetReservationInstances method is called on the ResourceManagerHelper, a random ID will now be assigned before the instances are saved to the server. This could be an issue if scripts expect the ID to be empty and try to reuse the object.
-
-#### ResourceUsageDetails object now has a ConcurrencyLeft property \[ID_29592\]
-
-The ResourceUsageDetails object now has a ConcurrencyLeft property.
-
-When, in the ResourceManagerHelper class, you use the GetEligibleResources method, the returned ResourceUsageDetails object will now include a ConcurrencyLeft property, which will indicate the amount of concurrency left for the resource in question.
-
-When ResourceUsageDetails is equal to null, ConcurrencyLeft will be equal to 0.
-
-#### Binding a VirtualFunctionResource using the primary key \[ID_29648\]
-
-It is now also possible to bind a VirtualFunctionResource using the primary key of an EntryPointTable.
-
-> [!NOTE]
-> Binding two resources to the same row, one using the display key and one using the primary key, is not supported and will return a TargetAlreadyBound error.
-
-#### Export and importing ServiceProfileDefinitions and ServiceProfileInstances \[ID_29673\]
-
-Using the ProfileHelper, it is now possible to export and import ServiceProfileInstances and ServiceProfileDefinitions.
-
-##### Exporting ServiceProfileDefinitions and ServiceProfileInstances
-
-The ExportServiceProfiles method allows you to export ServiceProfileDefinitions and ServiceProfileInstances. See the following example.
-
-```csharp
-var profileHelper = new ProfileHelper(engine.SendSLNetMessages);
-var definitionsToExport = new List<Guid>(){ ... };
-var instancesToExport = new List<Guid>(){ ... };
-var exportResult = profileHelper.ImportExport.ExportServiceProfiles(definitionsToExport, instancesToExport);
+```txt
+url?data=<URL-encoded JSON object>
 ```
 
-As shown in the example above, two lists have to be provided:
+This JSON object has to have the following structure:
 
-- A list containing the IDs of the ServiceProfileDefinitions to be exported
-- A list containing the IDs of the ServiceProfileInstances to be exported
-
-Based on the information in those lists, the following data will be exported:
-
-- All existing ServiceProfileDefinitions of which the ID is found in the first list.
-- All existing ServiceProfileInstances of which the ID is found in the second list.
-- All ServiceProfileInstances that are linked to the ServiceProfileDefinitions found in the first list.
-
-> [!NOTE]
->
-> - IDs of non-existing objects will be ignored.
-> - If you only want to export the ServiceProfileInstances, you can leave the definitionsToExport list empty.
-
-The ExportServiceProfiles method returns a ServiceProfilesExportResult object that contains the following data:
-
-| Property                              | Type                             | Description                                                                  |
-|---------------------------------------|----------------------------------|------------------------------------------------------------------------------|
-| ZippedData                            | byte\[\]                         | A ZIP file containing all the exported data.                                 |
-| ExportedServiceProfileDefinitions | List\<ServiceProfilesObjectInfo> | All ServiceProfileDefinitions that were successfully exported (ID and name). |
-| ExportedServiceProfileInstances   | List\<ServiceProfilesObjectInfo> | All ServiceProfileInstances that were successfully exported (ID and name).   |
-
-> [!NOTE]
->
-> - When something goes wrong during an export operation, an unknown error will be added to the TraceData. which can be retrieved using profileHelper.ImportExport.GetTraceDataLastCall().
-> - To pinpoint any non-existing objects, you can compare the list of IDs you provided to the list of IDs that was returned.
-> - When two empty lists are passed to the export method, an ArgumentException will be thrown.
-
-##### Importing ServiceProfileDefinitions and ServiceProfileInstances
-
-The ImportServiceProfiles method allows you to import ServiceProfileDefinitions and ServiceProfileInstances. See the following example.
-
-```csharp
-var profileHelper = new ProfileHelper(engine.SendSLNetMessages);
-byte[] zippedData = ...;
-var importResult = profileHelper.ImportExport.ImportServiceProfiles(zippedData);
-```
-
-During an import operation, the objects are first unzipped from the byte array and then saved to the database after a number of compatibility checks.
-
-Checks performed before saving a ServiceProfileDefinition:
-
-- When a ServiceProfileDefinition already exists with the same name but a different ID, the ServiceProfileDefinition will not be imported and an error with reason ServiceProfileDefinitionNameInUse will be returned.
-- When not all ProfileParameters referenced in the NodeDefinitionConfiguration exist, the ServiceProfileDefinition will not be imported and an error with reason ServiceProfileDefinitionRefersToNonExistingParameters will be returned.
-
-Checks performed before saving a ServiceProfileInstance:
-
-- When a ServiceProfileInstance already exist with the same name but a different ID, the ServiceProfileInstance will not be imported and an error with reason ServiceProfileInstanceNameInUse will be returned.
-- When not all ParameterOverrides on the NodeInstanceConfigurations and InterfaceConfigurations refer to existing ProfileParameters, the ServiceProfileInstance will not be imported and an error with reason ServiceProfileInstanceRefersToNonExistingParameters will be returned.
-- When not all NodeInstanceConfigurations and InterfaceConfigurations refer to existing ProfileInstances, the ServiceProfileInstance will not be imported and an error with reason ServiceProfileInstanceRefersToNonExistingProfileInstances will be returned.
-
-The ImportServiceProfiles method returns a ServiceProfilesImportResult object that contains the following data:
-
-| Property                              | Type                             | Description                                                                  |
-|---------------------------------------|----------------------------------|------------------------------------------------------------------------------|
-| TraceData                             | TraceData                        | All errors that occurred when importing the objects.                         |
-| ImportedServiceProfileDefinitions | List\<ServiceProfilesObjectInfo> | All ServiceProfileDefinitions that were successfully imported (ID and name). |
-| ImportedServiceProfileInstances   | List\<ServiceProfilesObjectInfo> | All ServiceProfileInstances that were successfully imported (ID and name).   |
-
-> [!NOTE]
->
-> - The TraceData returned by profileHelper.ImportExport.GetTraceDataLastCall() will match the TraceData included in the ServiceProfilesImportResult object.
-> - If you want to know why an object was not imported, you can check the TraceData.
-> - When an empty byte array is passed to the import method, an ArgumentException will be thrown.
-
-##### ServiceProfilesImportError
-
-When an object cannot be saved to the database during an import operation, a ServiceProfilesImportError will be added to the TraceData. Below, you can find the list of all possible error reasons.
-
-| Error reason | Description |
-|--|--|
-| Unknown | An unknown error occurred. |
-| GeneralFailure | An unexpected exception occurred while importing. The zipped data that was provided is probably invalid.<br> - Exception: The full exception message. |
-| UnrecognizedType | The zip file contained an object with an unrecognized type.<br> - EntryName: The name of the unrecognized entry. |
-| ExtractingJsonFailed | Something went wrong when trying to extract the JSON data associated with an entry.<br> - Exception: The exception that occurred while extracting.<br> - ObjectType: The type of the entry for which the JSON data was extracted.<br> - ObjectId: The ID of the entry for which the JSON data was extracted. |
-| DeserializationFailed | Something went wrong when trying to deserialize the JSON data.<br> - Exception: The exception that occurred while deserializing.<br> - ObjectType: The type of the entry for which the JSON data was deserialized.<br> - ObjectId: The ID of the entry for which the JSON data was deserialized. |
-| ErrorOccuredSavingServiceProfileDefinition | An error occurred while saving the ServiceProfileDefinition.<br> - ServiceProfileDefinitionError: The error message.<br> - ObjectId: The ID of the ServiceProfileDefinition.<br> - ObjectName: The name of the ServiceProfileDefinition. |
-| ErrorOccuredSavingServiceProfileInstance | An error occurred while saving the ServiceProfileInstance.<br> - ServiceProfileInstanceError: The error message.<br> - ObjectId: The ID of the ServiceProfileInstance.<br> - ObjectName: The name of the ServiceProfileInstance. |
-| ServiceProfileDefinitionNameInUse | The name of a ServiceProfileDefinition that is being imported is being used by another ServiceProfileDefinition.<br> - ObjectId: The ID of the ServiceProfileDefinition that is being imported.<br> - ObjectName: The name of the ServiceProfileDefinition that is being imported.<br> - ConflictingId: The ID of the ServiceProfileDefinition that is using the same name.<br> - ConflictingName: The name that is being used. |
-| ServiceProfileDefinitionRefersToNonExistingParameters | The NodeDefinitionConfiguration of a NodeDefinition references parameters that do not exist in this system.<br> - ObjectId: The ID of the ServiceProfileDefinition that is being imported.<br> - ObjectName: The name of the ServiceProfileDefinition that is being imported.<br> - MissingIds: The IDs of the missing parameters. |
-| ServiceProfileInstanceNameInUse | The name of a ServiceProfileInstance that is being imported is being used by another ServiceProfileInstance.<br> - ObjectId: The ID of the ServiceProfileInstance that is being imported.<br> - ObjectName: The name of the ServiceProfileInstance that is being imported.<br> - ConflictingId: The ID of the ServiceProfileInstance that is using the same name.<br> - ConflictingName: The name that is being used. |
-| ServiceProfileInstanceRefersToNonExistingParameters | Either the NodeInstanceConfiguration or the InterfaceConfiguration contains parameter overrides that refer to parameters that do not exist in the system.<br> - ObjectId: The ID of the ServiceProfileInstance that is being imported.<br> - ObjectName: The name of the ServiceProfileInstance that is being imported.<br> - MissingIds: The IDs of the missing parameters. |
-| ServiceProfileInstanceRefersToNonExistingProfileInstances | Either the NodeInstanceConfiguration or the InterfaceConfiguration contains references to ProfileInstances that do not exist in this system.<br> - ObjectId: The ID of the ServiceProfileInstance that is being imported.<br> - ObjectName: The name of the ServiceProfileInstance that is being imported.<br> - MissingIds: The IDs of the missing ProfileInstances. |
-
-#### Generating contributing functions for service definitions that use mediated virtual functions on one of more nodes \[ID_29752\]
-
-It is now possible to generate contributing functions for service definitions that use a mediated virtual function on one or more nodes.
-
-> [!NOTE]
->
-> - For the replication to work, the profile parameter used to generate the parameter in the contributing protocol needs to contain a ProtocolParameterReference to the parameter in the protocol of the VirtualFunctionDefinition.
-> - If a service definition node has both the VirtualFunctionID property (to use a mediated virtual function) and the FunctionID property (to use a protocol function) filled in, the VirtualFunctionID will be used during generation.
-> - Only the profile definition of the VirtualFunctionDefinition’s VirtualNode will be taken into account when creating parameters.
-
-#### SRM events can now be forwarded as ProtoBuf events on the NATS bus \[ID_29821\]
-
-When an SRM object is created, updated or deleted, an event message is sent via the SLNet subscription system to notify everyone. The NATS forwarding logic also receives these event messages and will now publish a ProtoBuf event on the NATS bus each time it receives such a message.
-
-##### Proto files
-
-The ProtoBuf event messages are defined by ProtoBuf files, which can be obtained on request.
-
-The events themselves are defined in the API protos, which import shared messages from the main shared folder.
-
-##### Subscribing to the NATS event messages
-
-To subscribe to one of the event messages you will need to compile the required proto files. In general, you need to compile the API proto of the event and the complete shared folder. For example, when you want to subscribe to the ReservationInstanceEvent, you need to compile the *reservation_instance_api.proto* file and everything in the general shared folder.
-
-Alternatively, instead of compiling those files yourself, you can also add copies of those files to your project and include the Protobuf NuGet package. The package will then compile them for you.
-
-When you have the compiled .cs file, you can subscribe to the messages as shown in the following C# code example.
-
-```csharp
-private void Run(Engine engine)
+```json
 {
-    // Create the message broker
-    var broker = SLMessageBrokerFactorySingleton.Instance.Create();
-    // Subscribe to the ReservationInstanceEvent
-    var topic = "Skyline.DataMiner.Protobuf.Apps.Srm.ReservationInstance.Api.v1.ReservationInstanceEvent";
-    broker.Subscribe(topic).WithHandler(Handler);
-}
-private void Handler(object sender, HandlerEventArgs e)
-{
-    // Parse the message
-    var message = ReservationInstanceEvent.Parser.ParseFrom(e.Data);
-    // Do something with the event message...
+    "version": 1,
+    "feedAndSelect": <data>, (optional)
+    "feed": <data>, (optional)
+    "select": <data>, (optional)
+    "components": <component-data>
 }
 ```
 
-##### Errors
+- **\<data>** is a JSON object with a number of property keys (identical to the legacy datatypes) and property values (as an array of datakey strings). See the following example.
 
-When an SRM event is sent out, in some cases, it cannot be forwarded to NATS because of issues related to the SLMessageBroker. In that case, an error will be logged in the SLResourceManager.txt file, stating that an event could not be forwarded.
+    ```json
+    {
+        "parameters": ["1/2/3", "1/4/6"],
+        "elements": ["1/2", "1/8", "212/123"]
+        ...
+    }
+    ```
 
-Note that no retries will occur and that no messages will be queued.
+- **\<component-data>** is an array of objects that allow you to specify data to be passed to one particular component. See the following example:
 
-##### Supported events
+    ```json
+    {
+        cid: <component-id>,
+        select: <data>
+    }
+    ```
 
-- ResourceManagerEventMessage
+- When you provide data in the (optional) **feedAndSelect** item, that data will be interpreted as if it would be passed using the legacy method described above.
 
-    When a ResourceManagerEventMessage contains multiple types of objects, it will be split up into multiple proto events. When the ResourceManager sends out one ResourceManagerEvent containing e.g. 2 ReservationInstances and 3 Resources, the forwarder logic will publish one ReservationInstanceEvent (with the 2 objects) and one ResourceEvent (with the 3 objects).
+- When you provide data in the (optional) **feed** item, that data will only be used in the URL feed. It will not be used to select items in selection boxes on the dashboard.
 
-##### ReservationInstance object
+- When you provide data in the (optional) **select** item, that data will only be used to select items in selection boxes on the dashboard. It will not be used in the URL feed.
 
-| Event message name       | Proto file                         | NATS Topic                                                                          |
-|--------------------------|------------------------------------|-------------------------------------------------------------------------------------|
-| ReservationInstanceEvent | reservation_instance_api.proto | Skyline.DataMiner.Protobuf.Apps.Srm.ReservationInstance.Api.v1.ReservationInstanceEvent |
+- In the **components** item, you can provide data to be selected in specific components referred to by their ID.
 
-##### Resource object
+    > [!NOTE]
+    > When you are editing a dashboard, each component will show its ID in the bottom-right corner (e.g. “State 1”).
 
-| Event message name | Proto file             | NATS Topic                                                    |
-|--------------------|------------------------|---------------------------------------------------------------|
-| ResourceEvent      | resource_api.proto | Skyline.DataMiner.Protobuf.Apps.Srm.Resource.Api.v1.ResourceEvent |
+> [!NOTE]
+> When a dashboard updates its own URL, it will use the new format, but in a compressed way. In that compressed syntax, the query parameter “d” will be used instead of “data”.
 
-#### Profile manager errors with ErrorReason 'ReservationsMustBeReconfigured' now include a ReservationInstanceDetails list \[ID_29914\]
+### DMS Automation
 
-From now on, an error with ErrorReason “ReservationsMustBeReconfigured” will include a ReservationInstanceDetails list containing the ID, the name and the start time of every affected ReservationInstance.
+#### Interactive Automation scripts will now take into account timeouts set in the engine.Timeout property of the executed script \[ID_28405\]
 
-#### Returning all available capacities when requesting the eligible resources \[ID_29939\]
+From now on, interactive Automation scripts will also take into account any timeout set in the engine.Timeout property of the executed script.
 
-When you request the eligible resources, it is now possible to calculate all remaining capacities on the resources instead of only the requested ones.
+#### Interactive Automation scripts: Lazy loading of tree view items \[ID_28528\]\[ID_29295\]
 
-To enable this feature, set the CalculateAllCapacities flag of the EligibleResourceContext to true.
+It is now possible to configure that a tree view item in interactive Automation scripts will only be loaded when a user expands the item by clicking the arrow in front of it.
 
-Example:
+To activate this so-called lazy loading for a particular tree view item, set its SupportsLazy-Loading property to true. An arrow will appear in front of the tree view item (even if it does not have any child items).
+
+> [!NOTE]
+> You can use the GetExpanded method of the UIResults class to retrieve the keys of all expanded tree view items that have the SupportsLazyLoading property set to true.
+
+#### Interactive Automation scripts: Enhanced file selector \[ID_28628\]
+
+A number of enhancements have been made to the file selector used in interactive Automation scripts.
+
+#### Interactive Automation scripts: New 'TreeViewItemCheckingBehavior' property of TreeViewItem \[ID_29993\]\[ID_30603\]
+
+You can now configure what happens when you select a tree view item in an interactive Automation script, using the new *TreeViewItemCheckingBehavior* enum property of the *TreeViewItem* object.
+
+This property can have the following values:
+
+- *FullRecursion*: All child items will automatically be selected when this item is selected, and vice versa.
+
+- *None*: Only this item will be selected. The selection state of child items will not change. In addition, if all child items are selected, this tree view item will not be automatically selected.
+
+For example:
+
+```csharp
+UIBuilder uib = new UIBuilder();
+   uib.Title = "Treeview - Regular";
+   uib.RequireResponse = true;
+   uib.RowDefs = "*";
+   uib.ColumnDefs = "*";
+   UIBlockDefinition tree = new UIBlockDefinition();
+   tree.Type = UIBlockType.TreeView;
+   tree.Row = 0;
+   tree.Column = 0;
+   tree.DestVar = "treevar";
+   tree.TreeViewItems = new List<TreeViewItem>
+   {
+      new TreeViewItem("Slapp", "Slapp (Nexus)", false, new List<TreeViewItem>
+      {
+         new TreeViewItem("Nitro", "Nitro (Squad)", false, new List<TreeViewItem>
+         {
+            new TreeViewItem("Brian", "Brian (Member)", false) { CheckingBehavior = TreeViewItem.TreeViewItemCheckingBehavior.None },
+            new TreeViewItem("Gilles", "Gilles (Member)", true) { CheckingBehavior = TreeViewItem.TreeViewItemCheckingBehavior.None },
+            new TreeViewItem("KevinM", "KevinM  (Member)", true) { CheckingBehavior = TreeViewItem.TreeViewItemCheckingBehavior.None },
+            new TreeViewItem("KevinV", "KevinV  (Member)", false) { CheckingBehavior = TreeViewItem.TreeViewItemCheckingBehavior.None },
+            new TreeViewItem("Seba", "Seba  (Member)", false) { CheckingBehavior = TreeViewItem.TreeViewItemCheckingBehavior.None },
+            new TreeViewItem("Ward", "Ward  (Member)", true) { CheckingBehavior = TreeViewItem.TreeViewItemCheckingBehavior.None },
+         }) { CheckingBehavior = TreeViewItem.TreeViewItemCheckingBehavior.None },
+         new TreeViewItem("Nitro", "Nitro (Squad)", true, new List<TreeViewItem>
+         {
+            new TreeViewItem("Jordy", "Jordy (Member)") { CheckingBehavior = TreeViewItem.TreeViewItemCheckingBehavior.None },
+            new TreeViewItem("Jorge", "Jorge (Member)") { CheckingBehavior = TreeViewItem.TreeViewItemCheckingBehavior.None },
+            new TreeViewItem("Ronald", "Ronald (Member)") { CheckingBehavior = TreeViewItem.TreeViewItemCheckingBehavior.None },
+            new TreeViewItem("Victor", "Victor (Member)") { CheckingBehavior = TreeViewItem.TreeViewItemCheckingBehavior.None },
+            new TreeViewItem("Wim", "Wim (Member)") { CheckingBehavior = TreeViewItem.TreeViewItemCheckingBehavior.None },
+            new TreeViewItem("Quinten", "Quinten (Member)") { CheckingBehavior = TreeViewItem.TreeViewItemCheckingBehavior.None }
+         }) { CheckingBehavior = TreeViewItem.TreeViewItemCheckingBehavior.None }
+     }) { CheckingBehavior = TreeViewItem.TreeViewItemCheckingBehavior.None }
+   };
+   uib.AppendBlock(tree);
+   _treeResults = _engine.ShowUI(uib);
+```
+
+Regardless of which type of behavior you choose, if one or more child items of a tree view item are selected, the checkbox of the tree view item will be colored.
+
+#### ProcessAutomationHelper \[ID_30108\]
+
+A new ProcessAutomationHelper has been added to manipulate PaToken and PaProcess objects. See the following example.
 
 ```csharp
 public class Script
 {
     public void Run(Engine engine)
     {
-        // We assume there is a resource named 'resourceWithCapacityTwoCapacities'
-        var context = new EligibleResourceContext())
-        {
-            RequiredCapacities =
-            {
-                new MultiResourceCapacityUsage(firstCapacityId, 200.0m)
-            },
-            CalculateAllCapacities = true
-        };
-        var result = resourceManagerHelper.GetEligibleResources(context);
-        var usageDetails = result.UsageDetails.FirstOrDefault(d => d.ResourceId == resourceWithCapacityTwoCapacities.GUID);
-        var firstCapacityLeft = usageDetails.CapacityUsageDetails.FirstOrDefault(c => c.CapacityParameterId == firstCapacityId).CapacityLeft;
-        // Without the 'CalculateAllCapacities' flag this would not be in the result
-        var secondCapacityLeft = usageDetails.CapacityUsageDetails.FirstOrDefault(c => c.CapacityParameterId == secondCapacityId).CapacityLeft;
+        var paHelper = new ProcessAutomationHelper(engine.SendSLNetMessages);
+        var token = new PaToken() { Id = Guid.NewGuid() };
+        var createdToken = paHelper.PaTokens.Create(token);
+        var readToken = paHelper.PaTokens.Read(createdToken.ToFilter<PaToken>());
+        paHelper.PaTokens.Delete(createdToken);
+        var process = new PaProcess() { Id = "id" };
+        var createdProcess = paHelper.PaProcesses.Create(process);
+        var readProcess = paHelper.PaProcesses.Read(createdProcess.ToFilter<PaProcess>());
+        paHelper.PaProcesses.Delete(createdProcess);
     }
 }
 ```
 
-#### Availability checks for contributing resources \[ID_30017\] \[ID_30498\]
-
-From now on, the GetEligibleResources and AddOrUpdateReservationInstances calls will determine the availability of a contributing resource during a certain time range based on the following criteria:
-
-- If the contributing booking linked to the resource has Status set to “Canceled”, “Disconnected”, “Interrupted” or “Undefined”, then the resource will be considered unavailable.
-- If the contributing booking linked to the resource has Status set to a value other than “Canceled”, “Disconnected”, “Interrupted” or “Undefined”:
-
-  - If the contributing booking linked to the resource has LockLifeCycle set to “Locked”, then the contributing resource will be considered available if the time range of the contributing booking is entire inside the time range.
-  - If the contributing booking linked to the resource has LockLifeCycle set to “Locked” and the main booking has a start time in the past but an end time in the future, then the contributing resource will be considered available if the time range of the contributing booking only overlaps the future part of the time range of the main booking.
-  - If the contributing booking linked to the resource has LockLifeCycle set to “Unlocked”, then the contributing resource will be considered available if the timing of the contributing booking intersects with the passed time.
-  - If the contributing booking linked to the resource has LockLifeCycle set to “Undefined”, then the contributing resource will be considered not available.
-
-Based on those criteria, the GetEligibleResource call will not return any resources that are unavailable.
-
-Adding or updating bookings with resources that are unavailable based on the above-mentioned criteria will cause the complete resource usage to be quarantined. The QuarantineTrigger will have reason ContributingResourceNotAvailable.
-
-If the contributing booking has Status set to “Interrupted”, then the bookings using its linked contributing resources will also have their usages quarantined.
-
-#### More detailed parameter check error messages when generating protocols for virtual functions \[ID_30093\]
-
-When an error occurs during a parameter check while generating a protocol for a virtual function, the error message will now contain more detailed information.
-
-- When a parameter is not of category “Monitoring” or “Configuration”, a CrudFailedException containing a VirtualFunctionDefinitionError with reason InvalidProfileParameterCategory will be thrown.
-- When a parameter is of type “discrete” but has no discrete values assigned to it, a CrudFailedException containing a VirtualFunctionDefinitionError with reason InvalidProfileParameterDiscrete will be thrown.
-
-The VirtualFunctionDefinitionError will have the following properties filled in:
-
-- VirtualFunctionDefinitionID: The ID of the VirtualFunctionDefinition.
-- ParameterID: The ID of the parameter that cannot be resolved.
-
-#### Profile Manager: Enhanced performance when executing bulk create/update operations against an Elasticsearch database \[ID_30152\]
-
-Because of a number of enhancements to the AddOrUpdateBulk calls of the ProfilesHelper and ProfileManagerHelper, overall performance has increased when creating or updating ProfileParameters, ProfileInstances and ProfileDefinitions in bulk in an Elasticsearch database.
-
-#### Automation - Service & Resource Management: New ServiceResourceUsageDefinition.Role property \[ID_30214\]
-
-A *ServiceResourceUsageDefinition* object now has an extra *Role* property, with the following possible values: *Mapped* (default value), *Unmapped* and *Inheritance*. This property is intended to be used by the Booking Manager app, where it will determine whether a resource is mapped to a node of a service definition.
-
-#### ReservationInstance behavior enhancements \[ID_30295\]
-
-ReservationInstance behavior has been changed in the following ways:
-
-- ReservationInstances that have a start time before the time the ResourceManager was initialized will no longer automatically have their status set to “Interrupted”. Only instances that were unable to start because the ResourceManager was not yet initialized will have their status set to “Interrupted”.
-- All ReservationEvents that have not yet run will be scheduled if the ReservationInstance does not have its status set to “Interrupted”. In other words, all missed events will be run immediately when you add a ReservationInstance with a start time.
-
-#### ResourceManagerEventMessage will now be sent when a ReservationInstance property was updated \[ID_30352\] \[ID_30668\]
-
-From now on, a ResourceManagerEventMessage will be sent next to the existing ReservationInstanceChangePropertiesEventMessage when a ReservationInstance property was updated using either ResourceManagerHelper#UpdateProperties or ResourceManagerHelper#SafelyUpdateProperties.
-
-DataMiner Cube has been adapted accordingly.
-
-#### Automation - Service & Resource Management: Option to return time-dependent capabilities when requesting eligible resources \[ID_30576\]
-
-When the eligible resources for a booking are requested, it is now possible to calculate all booked time-dependent capabilities for the eligible resources. For this purpose, the *CalculateAllCapabilities* flag should be set to true on *EligibleResourceContext*. This feature is intended to be used in the DataMiner Booking Manager app.
-
-#### Profile Manager: Server-side user permissions \[ID_30748\]
-
-The public API of the Profile Manager now has the following server-side user permissions.
-
-| Operation                                                                                   | Required user permission                                                                     |
-|---------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------|
-| Read calls of ProfileParameters, MediationSnippets, ProfileDefinitions and ProfileInstances | ProfileManagerUI                                                                             |
-| Create and Update of ProfileParameters, MediationSnippets ProfileDefinitions                | ProfileManagerEditAll                                                                        |
-| Delete calls of ProfileParameters, MediationSnippets ProfileDefinitions                     | ProfileManagerDeleteAll                                                                      |
-| Create and Update of ProfileInstances                                                       | ProfileManagerEditInstances                                                                  |
-| Delete of ProfileInstances                                                                  | ProfileManagerDeleteInstances                                                                |
-| Read calls of ServiceProfileInstances and ServiceProfileDefinitions                         | ServiceProfileManagerUI                                                                      |
-| Create and Update ServiceProfileInstances                                                   | ServiceProfileManagerEditInstances                                                           |
-| Delete of ServiceProfileInstances                                                           | ServiceProfileManagerDeleteInstances                                                         |
-| Create and Update of ServiceProfileDefinitions                                              | ServiceProfileManagerEditDefinitions                                                         |
-| Delete of ServiceProfileDefinitions                                                         | ServiceProfileManagerDeleteDefinitions                                                       |
-| Mediation calls (MediateDeviceToProfile and MediateProfileToDevice)                         | ProfileManagerEditAll, AccessElement and DataDisplayAccess, as well as access to the element |
-| Getting the ProfileManagerConfiguration                                                     | ProfileManagerConfiguration                                                                  |
-| Setting the ProfileManagerConfiguration                                                     | ProfileManagerConfiguration                                                                  |
-| Exporting and importing ServiceProfiles                                                     | ServiceProfileManagerEditInstances and ServiceProfileManagerEditDefinitions                  |
-| Exporting and importing Parameters                                                          | ProfileManagerEditAll                                                                        |
-
-The following new permissions will automatically be assigned to existing user groups:
-
-| User permission...                     | will be assigned to...                                           |
-|----------------------------------------|------------------------------------------------------------------|
-| ProfileManagerDeleteAll                | groups with the ProfileManagerEditAll permission.                |
-| ProfileManagerDeleteInstances          | groups with the ProfileManagerEditInstances permission.          |
-| ServiceProfileManagerDeleteInstances   | groups with the ProfileManagerEditInstances permission.          |
-| ServiceProfileManagerDeleteDefinitions | groups with the ServiceProfileManagerEditDefinitions permission. |
-| ProfileManagerConfiguration            | groups with the ProfileManagerEditAll permission.                |
-
 > [!NOTE]
 >
-> - The AddOrUpdateBulk, RemoveBulk and Create, Read, Update and Delete calls on single objects in the ProfileHelper will throw CrudFailedExceptions if the ThrowExceptionsOnErrorData property is true on the CrudComponent. If not, the TraceData will contain a ManagerStoreError with reason NoPermission.
->
->   The AddOrUpdateBulk and RemoveBulk calls normally never throw exceptions regardless of the ThrowExceptionsOnErrorData property. However, NoPermission is an exception since this makes the entire call fail.
->
-> - The calls in the ProfileManagerHelper will always return TraceData (except for the CrudComponent properties on the helper).
-> - Import/export of ProfileParameters and mediation messages will throw a DataMinerException.
-> - Import/export of the ServiceProfiles will return TraceData. This helper does not have an option to throw exceptions on error data.
+> - Save operations will always be executed synchronously. In other words, the method will only return once the data has been written to the database.
+> - At present, bulk operations are not yet supported.
+> - Both PaProcess and PaToken now have a new LastModifiedAt property, filled in by SLNet. It will be used to compare cached versions with versions retrieved from the database.
 
-#### Resource Manager: Permission checks \[ID_30895\]
+#### Interactive Automation scripts: File selector allowing multiple selections + file selector enhancements \[ID_30196\]
 
-The following messages now have server-side permission checks:
+In an interactive Automation script that is used in the DataMiner web apps, you can now configure a file selector component that allows the user to upload multiple files. To do so, set the property *AllowMultipleFiles* to true.
 
-| Operation | Required flags | Helper calls |
-|--|--|--|
-| Read calls of Resources and ResourcePools | ResManResourceUI | GetResources<br> GetEligibleResources<br> GetResourceUsage<br> GetAvailableResources<br> GetResourcePools |
-| Adding Resources or ResourcePools | ResManResourceAdd | AddOrUpdateResources<br> AddOrUpdateResourcePools |
-| Updating the status of a Resource | ResManResourceEditStatus | AddOrUpdateResources |
-| Updating a Resource (unless only the status is updated) or updating a ResourcePool | ResManResourceEditOther | AddOrUpdateResources<br> AddOrUpdateResourcePools |
-| Removing a Resource or ResourcePool | ResManResourceDelete | RemoveResources<br> RemoveResourcePools |
-| Read calls of ReservationInstances and ReservationDefinitions | ResManReservationUITimeline | GetReservationInstances<br> GetReservationDefinitions |
-| Adding ReservationInstances or ReservationDefinitions | ResManReservationAdd | AddOrUpdateReservation<br>Instances<br> AddOrUpdateReservation<br>Definitions |
-| Editing ReservationInstances or ReservationDefinitions | ResManReservationEdit | AddOrUpdateReservation<br>Instances<br> AddOrUpdateReservation<br>Definitions<br> (Safely)UpdateReservation<br>InstanceProperties<br> (Safely)UpdateReservation<br>DefinitionProperties |
-| Removing ReservationInstances or ReservationDefinitions | ResManReservationDelete | RemoveReservationInstances<br> RemoveReservationDefinitions |
+For example:
 
-All operations will now return a ResourceManagerErrorData with reason NotAllowed if the user does not have the correct permissions.
-
-#### RemoveResources: New ignoreCanceledReservations flag \[ID_30936\]
-
-When resources are deleted by means of a RemoveResources call, it is now possible to indicate whether errors should be generated when a resource is being used in canceled reservations.
-
-If you set the ignoreCanceledReservations flag to true, no errors will be generated when deleting a resource that is being used in canceled reservations.
-
-```txt
-Resource[] RemoveResources(Resource[] resources, bool ignorePassedReservations, bool ignoreCanceledReservations)
+```csharp
+UIBlockDefinition uibDef = new UIBlockDefinition();
+uibDef.Type = UIBlockType.FileSelector;
+uibDef.DestVar = destvar;
+uibDef.InitialValue = initialValue;
+uibDef.Row = (int)row;
+uibDef.RowSpan = (int)rowSpan;
+uibDef.Column = (int)column;
+uibDef.ColumnSpan = (int)columnSpan;
+uibDef.HorizontalAlignment = GetHorizontalAlignment(horizontalAlignment);
+uibDef.VerticalAlignment = GetVerticalAlignment(verticalAlignment);
+uibDef.AllowMultipleFiles = true;
 ```
 
-### DMS Mobile Gateway
+With this configuration, users will be able to add files one by one, but they will not be able to add the same file twice. They will also be able to add a file by dragging it to the file selector.
 
-#### Getting and setting the value of a table column parameter \[ID_30399\]
+There have also been a number of enhancements to the file selector control in general, including improved layout and a more intuitive UI. These affect all the web apps, including the Dashboards app, the Jobs app, etc.
 
-It is now possible to get and set values of table column parameters using text messages.
+#### Interactive Automation scripts: Input components now have a 'WantsOnFocusLost' property & other input component enhancements \[ID_30638\]
 
-Syntax:
+In an interactive Automation script that is used in the DataMiner web apps, the following components now have a *WantsOnFocusLost* property. If you set this property to true, then an *OnChange* event will be triggered when the component loses focus.
 
-- GET:\<ElementName>:\<ParameterName>\|\<TableIndex>
-- SET:\<ElementName>:\<ParameterName>\|\<TableIndex>:\<Value>
+- Calendar
+- Checkbox
+- CheckboxList
+- Dropdown
+- Numeric
+- Passwordbox
+- RadioButtonList
+- Textbox
+- Time
 
-Examples:
+Other enhancements:
 
-- Use “GET:MyElement:MyParam\|10113” to get the value stored in row 10113 of parameter “MyParam” of element “MyElement”.
-- Use “SET:MyElement:MyParam\|10113:100” to set the value stored in row 10113 of parameter “MyParam” of element “MyElement” to 100.
+- A Dropdown component will now keep the focus after an option was selected. This will enable users to still browse through the options using the arrow keys even when the options popup window is closed.
+- In a Checkbox, a CheckboxList or a RadioButtonList component, users can now select or clear options using the spacebar.
+- In a CheckboxList or a RadioButtonList component, users can now go from one checkbox or radio button to another using the TAB keys.
 
-Using special characters:
+#### Automation scripts launched from web apps will now take into account the MaxFileSizeInBytes and AllowedFileNameExtensions properties of UIBlockDefinitions of type FileSelector \[ID_31212\]
 
-- If an argument contains a colon (“:”), a backslash character (“\\”) must be put in front of it. For example, the command “SET:MyElement:MyParam\|a\\:b:100” will set the value stored in row a:b to 100.
-- If the table index contains a pipe character (“\|”), a backslash character (“\\”) must be put in front of it. For example, the command “SET:MyElement:MyParam\|a\\:b\\\|c:100” will set the value stored in row a:b\|c to value 100.
+In Automation scripts launched from web apps, the MaxFileSizeInBytes and AllowedFileName-Extensions properties of UIBlockDefinitions of type FileSelector will now also be taken into account.
 
-> [!WARNING]
-> Breaking change: Due to the introduction of this new syntax, it is no longer possible to get and set single-value parameters of which the name contains pipe characters.
+An error will now be thrown when you try to add a file that is larger than the allowed file size or does not have an allowed file name extension. Also, the “Choose file” popup window will now only list files with an allowed extension and dragging an item other than a file or a folder onto the script’s drop zone will no longer be possible.
 
-### DMS tools
+### DMS Maps
 
-#### Standalone Elasticsearch Cluster Installer will no longer automatically configure TLS and security \[ID_29113\]
+#### Filtering on alarm severity: \<Checkbox> tags now have a 'checked' attribute \[ID_30429\]
 
-From now on, the Standalone Elasticsearch Cluster Installer tool will no longer automatically configure TLS and security.
+If you want a map to contain a filter box that allows users to filter map items based on their alarm severity level, then you add a \<FilterBox> tag that contains a checkbox for every alarm severity level. From now on, it is possible to indicate whether those checkboxes should be selected or cleared by default. To do so, add a “checked” attribute to each of the checkboxes, and set their value to either true or false.
 
-For instructions on how to install this manually, see [Securing the Elasticsearch database](xref:Security_Elasticsearch).
+See the following example:
 
-#### Standalone Cassandra Backup Tool \[ID_29005\] \[ID_30234\]
-
-The StandaloneCassandraBackup.exe tool can be used by an administrator to take a backup of a Cassandra database (either a single node or a cluster).
-
-From DataMiner 10.1.8 onwards, this tool will be available on each DMA server in the folder *C:\\Skyline DataMiner\\Tools*. As it only affects Cassandra files, it can be used on any DataMiner system regardless of version.
-
-For more information on this tool, see [Standalone Cassandra Backup Tool](xref:Standalone_Cassandra_Backup_Tool).
-
-#### New tool to transform a DMS with separate databases into a DMS with a shared Cassandra/Elasticsearch cluster \[ID_31005\] \[ID_31280\] \[ID_31421\] \[ID_31423\] \[ID_31424\] \[ID_31505\] \[ID_31788\]
-
-Using *SLCCMigrator.exe*, you can now transform a DataMiner System consisting of Agents with separate databases into a DataMiner System consisting of Agents that are all connected to a shared Cassandra/Elasticsearch cluster.
-
-For more information on this tool, see [Cassandra Cluster Migrator](https://community.dataminer.services/documentation/sql-to-cassandra-cluster-migrator/) on DataMiner Dojo.
-
-#### SLReset: Hostname can now be passed as an argument \[ID_32002\]
-
-When running SLReset.exe, which can be used to fully reset a DataMiner Agent to its state immediately after installation, it is now possible to pass the hostname in a -ho argument, especially when resetting a DataMiner Agent that only allows you to connect via HTTPS.
-
-```txt
-SLReset.exe -ho hostname
+```xml
+<MapConfig ...>
+  ...
+  <FilterBox visible="true">
+    <CheckBoxes>
+      <CheckBox alarmLevel="Normal" name="connected" checked="true" />
+      <CheckBox alarmLevel="Critical" name="not connected" checked="true" />
+      <CheckBox alarmLevel="Undefined" name="unknown" checked="false" />
+    </CheckBoxes>
+  </FilterBox>
+  ...
+</MapConfig>
 ```
+
+> [!NOTE]
+> If, for a particular checkbox, you do not specify a “checked” attribute, then the checkbox will be selected by default.
+
+### DMS Web Services
+
+#### BREAKING CHANGE: Web Services API v0 now disabled by default \[ID_29453\]
+
+The Web Services API v0 is now disabled by default. It is recommended to use the Web Services API v1 instead (SOAP or JSON).
+
+> [!NOTE]
+> If necessary, you can still enable the Web Services API v0 by adding the following key inside the \<appSettings> element of the *C:\\Skyline DataMiner\\Webpages\\API\\Web.config* file:
+>
+> *\<add key="enableLegacyV0Interface" value="true"/>*
+
+#### Web Services API v1: CreateElement and EditElement methods now allow to create and edit replicated elements \[ID_30339\]
+
+The CreateElement and EditElement methods now allow you to create and edit elements that replicate elements from a different DataMiner System.
+
+In the configuration section, you will find a ReplicationInfo subsection that allows you to specify the necessary settings.
+
+#### Web Services API v1: New methods to manage alarm templates \[ID_30383\] \[ID_31149\]
+
+The following new methods now allow you to create, update, delete and assign alarm templates:
+
+- CreateAlarmTemplate
+- UpdateAlarmTemplate
+- DeleteAlarmTemplate
+- AssignAlarmTemplate
+
+If no baseline configuration is provided in the request, the alarm information configured in the protocol for the chosen parameter will be passed along, and if no alarm information could be found, then a default baseline will be passed along instead.
+
+The “average type” property will always be set to “median”.
+
+### DMS web apps
+
+#### Throttling will now be enabled on all SLNet connections \[ID_28442\]
+
+All web applications\* will now connect to SLNet with the “AllowMessageThrottling” attribute.
+
+*\*Monitoring, new Dashboards, legacy Dashboards, Maps, Web Services APIs, etc.*
+
+#### HTML5 apps that require an Elasticsearch database will now redirect users to an error page when that database is unavailable \[ID_28767\]
+
+When you log on to an app that requires an Elasticsearch database, you will now be redirected to an error page when that database is unavailable.
+
+#### Ticketing app: Executing scripts when a ticket is created, updated or deleted \[ID_29191\]
+
+The TicketFieldResolver now includes a TicketFieldResolverSettings object, which can contain a ExecuteScriptOnTicketActionSettings object.
+
+In an ExecuteScriptOnTicketActionSettings object, you can specify the names of the scripts that should be executed each time a ticket is created, updated or deleted. See the following example.
+
+```csharp
+var settings = new TicketFieldResolverSettings()
+{
+    ScriptSettings = new ExecuteScriptOnTicketActionSettings()
+    {
+        OnCreate = onCreateScriptName,
+        OnDelete = onDeleteScriptName,
+        OnUpdate = onUpdateScriptName
+    }
+};
+var fieldResolver = new TicketFieldResolver(Guid.NewGuid())
+{
+    Settings = settings,
+    TicketStateFieldDescriptor = { IsRequired = false }
+};
+```
+
+The scripts must have an OnTicketCrud entry point defined. See the following example. This way, you can indicate the action, ticket and TicketFieldResolver for which the script was triggered.
+
+```csharp
+[AutomationEntryPoint(AutomationEntryPointType.Types.OnTicketCrud)]
+public void OnTicketCrud(Engine engine, TicketID ticketId, CrudType crudType)
+{
+    engine.GenerateInformation($"Script triggered for {crudType} action on Ticket with ID: {ticketId.TID}")
+}
+```
+
+#### Jobs app: Added text and number filters for fields \[ID_29221\]
+
+Users can now be allowed to filter on the following field types:
+
+- Text
+- Email
+- Url
+
+If you want to allow filtering on one of those fields, then select its *Allow filtering on this field* option.
+
+> [!NOTE]
+> Text-based filters will behave like case-sensitive “contains” filters.
+
+#### Jobs app: Enhanced time filter \[ID_29328\]
+
+In the Jobs app, the time filter in the sidebar has been improved. You can now indicate whether you want the list to show you the jobs that occurred, started or ended during a particular time frame.
+
+> [!NOTE]
+> This time filter will now be stored locally, in the web browser, per domain.
+
+#### Web apps will now display a warning when you do not use an HTTPS connection \[ID_29389\]
+
+From now on, when you access a web app (e.g. Monitoring, Dashboards, Jobs, Ticketing, etc.), a warning will be displayed when you do not use an HTTPS connection.
+
+#### Dashboards/Monitoring: EPM components now fully aligned \[ID_29770\]
+
+The EPM component of the Dashboards app and the Monitoring app are now fully aligned.
+
+Also, the EPM component of the Dashboards app now allows the use of quick chains.
+
+#### Visual Overview: Links starting with 'mailto:' now also work in web apps \[ID_30109\]
+
+When, in shape data, you specify links starting with “mailto:”, those links will now also work in web apps.
+
+#### Web app tooltips: Increased contrast to enhance readability \[ID_30283\]
+
+In all web apps, tooltip contrast has been increased to enhance readability.
+
+#### Web app tooltips: Cursor now changes from arrow to hand when hovering over a tooltip of an input component \[ID_30285\]
+
+From now on, when you hover the mouse pointer over a tooltip of an input component, the arrow will change into a hand.
+
+#### DataMiner landing page: Browser title changed to 'DataMiner' \[ID_31373\]
+
+The browser title of the DataMiner landing page (e.g. `https://<MyDMA>/root/`) has been changed from “DataMiner Services” to “DataMiner”.
+
+Also, the error message shown when you try to log in to a web application with a user account that has not been granted the “DataMiner Web Apps” user permission has now been changed to “You have no access to the DataMiner Web Apps”.
+
+#### BREAKING CHANGE: End of Internet Explorer support for DataMiner web apps \[ID_31675\]
+
+All DataMiner web apps have been upgraded to use Angular 12 instead of Angular 10, which means that the following DataMiner apps and functionality will no longer be available in Internet Explorer:
+
+- The DataMiner landing page
+- The Monitoring app
+- The Dashboards app
+- The Ticketing app
+- The Jobs app
+- The Monitoring app
+- The Application Framework module (currently still in soft launch)
+- Automation Script execution in embedded web browser (currently still in soft launch)
+
+> [!NOTE]
+> For now, we continue to support the use of DataMiner Cube in Internet Explorer, although it is highly recommended to use the DataMiner Cube desktop app instead. For more information, see DataMiner Dojo: <https://community.dataminer.services/documentation/internet-explorer-support/>
