@@ -2314,23 +2314,25 @@
               topicUid: DataMiner_IDP_components
             - name: Overview of the IDP app UI
               topicUid: Overview_of_the_IDP_app_UI
-        - name: Advanced configuration for Administrators
-          topicUid: Advanced_configuration_for_Administrators
+        - name: Advanced configuration
           items:
-            - name: CI Types
-              topicUid: CI_Types
-            - name: Discovery
-              topicUid: Discovery
-            - name: Provisioning
-              topicUid: Provisioning
-            - name: Configuration
-              topicUid: Configuration
-            - name: Facilities
-              topicUid: Facilities
-            - name: Activities
-              topicUid: Admin_activities
-            - name: Settings
-              topicUid: Settings
+            - name: Advanced configuration for Administrators
+              topicUid: Advanced_configuration_for_Administrators
+              items:
+                - name: CI Types
+                  topicUid: CI_Types
+                - name: Discovery
+                  topicUid: Discovery
+                - name: Provisioning
+                  topicUid: Provisioning
+                - name: Configuration
+                  topicUid: Configuration
+                - name: Facilities
+                  topicUid: Facilities
+                - name: Activities
+                  topicUid: Admin_activities
+                - name: Settings
+                  topicUid: Settings
             - name : Implementing the Connectivity Discovery script
               topicUID: ConnectivityDiscoveryScript
         - name: Reference
