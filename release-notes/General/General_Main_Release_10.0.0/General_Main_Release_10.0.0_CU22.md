@@ -114,6 +114,18 @@ Because of a number of enhancements, SLLogCollector is now better able to collec
 
 Up to now, parameter changes would always be pushed from SLProtocol to SLElement. From now, those changes will only be pushed from SLProtocol to SLElement when needed.
 
+#### Enhanced logging of issues occurring when parsing a compliance cache file entry [ID_34212]
+
+<!-- Main Release Version 10.0.0 [CU22]/10.1.0 [CU19]/10.2.0 [CU7] - Feature Release Version 10.2.10 -->
+
+When an issue occurred when parsing a compliance cache file entry, up to now, a log entry of type "error" would be added to the SLDataMiner.txt log file.
+
+From now on, when an issue occurs when parsing a compliance cache file entry, the following log entry of type "info" will be added to the SLDataMiner.txt log file instead:
+
+```txt
+Warning: <function> is unable to parse compliance cache file entry at line <line number>. <line content>
+```
+
 ### Fixes
 
 #### SLLogCollector could fail to take process dumps [ID_31213]

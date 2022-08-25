@@ -20,6 +20,18 @@ This will prevent the following possible issues:
 - The CefSharp browser engine version used by Cube is not updated frequently and therefore not always trusted by certain SAML identity provider websites, such as Microsoft Azure. This can cause a lengthy authentication procedure, even if the browser cache is enabled.
 - The CefSharp browser engine needs to be downloaded from the DMA before a first authentication (on a new device). However, this is currently not supported for HTTPS-only setups.
 
+#### Enhanced logging of issues occurring when parsing a compliance cache file entry [ID_34212]
+
+<!-- Main Release Version 10.0.0 [CU22]/10.1.0 [CU19]/10.2.0 [CU7] - Feature Release Version 10.2.10 -->
+
+When an issue occurred when parsing a compliance cache file entry, up to now, a log entry of type "error" would be added to the SLDataMiner.txt log file.
+
+From now on, when an issue occurs when parsing a compliance cache file entry, the following log entry of type "info" will be added to the SLDataMiner.txt log file instead:
+
+```txt
+Warning: <function> is unable to parse compliance cache file entry at line <line number>. <line content>
+```
+
 ### Fixes
 
 #### Jobs app: Corrected start time saved incorrectly \[ID_34043]
