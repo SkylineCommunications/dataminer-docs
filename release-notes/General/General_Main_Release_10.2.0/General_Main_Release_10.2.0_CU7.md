@@ -34,7 +34,7 @@ In addition, the coloring of the trend lines could be incorrect. Instead of the 
 
 #### Visual Overview: SurveyorSearchText variable continued to show cleared search input [ID_34114]
 
-<!-- Main Release Version 10.2.0 [CU7] - Feature Release Version 10.2.9 -->
+<!-- Main Release Version 10.1.0 [CU19]/10.2.0 [CU7] - Feature Release Version 10.2.9 -->
 
 When the text in the Cube advanced search box was selected with Ctrl+A and then deleted, it could occur that the advanced search input was not cleared correctly, so that it continued to be shown by the *SurveyorSearchText* variable in Visual Overview.
 
