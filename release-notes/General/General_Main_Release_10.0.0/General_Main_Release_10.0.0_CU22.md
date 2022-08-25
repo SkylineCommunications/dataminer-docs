@@ -2,7 +2,10 @@
 uid: General_Main_Release_10.0.0_CU22
 ---
 
-# General Main Release 10.0.0 CU22
+# General Main Release 10.0.0 CU22 - Preview
+
+> [!IMPORTANT]
+> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
 
 ### Enhancements
 

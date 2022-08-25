@@ -2,7 +2,7 @@
 uid: General_Main_Release_10.1.0_CU19
 ---
 
-# General Main Release 10.1.0 CU19 – preview
+# General Main Release 10.1.0 CU19 – Preview
 
 > [!IMPORTANT]
 > We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
