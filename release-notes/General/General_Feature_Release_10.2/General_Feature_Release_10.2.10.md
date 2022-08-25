@@ -2,7 +2,7 @@
 uid: General_Feature_Release_10.2.10
 ---
 
-# General Feature Release 10.2.10 – preview
+# General Feature Release 10.2.10 – Preview
 
 > [!IMPORTANT]
 > We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
@@ -51,6 +51,18 @@ In the conditional coloring layout setting for Table and Node edge components, t
 <!-- Part of this RN is still in soft launch and consequently has not been documented yet -->
 
 In the conditional coloring layout setting for Table and Node edge components, discrete column values will now be displayed to make it easier to configure a filter.
+
+#### Enhanced logging of issues occurring when parsing a compliance cache file entry [ID_34212]
+
+<!-- Main Release Version 10.0.0 [CU22]/10.1.0 [CU19]/10.2.0 [CU7] - Feature Release Version 10.2.10 -->
+
+When an issue occurred when parsing a compliance cache file entry, up to now, a log entry of type "error" would be added to the SLDataMiner.txt log file.
+
+From now on, when an issue occurs when parsing a compliance cache file entry, the following log entry of type "info" will be added to the SLDataMiner.txt log file instead:
+
+```txt
+Warning: <function> is unable to parse compliance cache file entry at line <line number>. <line content>
+```
 
 ### Fixes
 

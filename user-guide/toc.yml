@@ -2908,4 +2908,9 @@
         - name: DataMiner client applications
           topicUid: DataMiner_client_applications
     - name: Glossary
-      topicUid: glossary
+      topicUid: glossary_a_to_l
+      items:
+      - name: A to L
+        topicUid: glossary_a_to_l
+      - name: M to Z
+        topicUid: glossary_m_to_z
