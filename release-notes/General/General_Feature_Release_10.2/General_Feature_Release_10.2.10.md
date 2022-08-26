@@ -116,6 +116,14 @@ When, in the *Automation* app, you made an invalid change in a script, closed th
 
 When the system time changed because of e.g. a clock resynchronization or a switch to or from daylight-saving time, up to now, the start time and end time of scheduled alarm templates would incorrectly not get updated.
 
+#### GQI: 'Bookings' data source incorrectly contained two 'Last modified at' columns [ID_34170]
+
+<!-- Main Release Version 10.2.0 [CU7] - Feature Release Version 10.2.10 -->
+
+The GQI data source "Bookings" did not contain a *Last modified by* column and contained two different *Last modified at* columns (one with timestamps adjusted to the timezone and another with unadjusted timestamps). The *Last modified at* column containing unadjusted timestamps has now been replaced by a *Last modified by* column.
+
+Also, the *Created at* and *Last modified at* columns will no longer be selected by default.
+
 #### Web apps: App would incorrectly log in again after the user had logged out [ID_34227]
 
 <!-- Main Release Version 10.1.0 [CU19]/10.2.0 [CU7] - Feature Release Version 10.2.10 -->
