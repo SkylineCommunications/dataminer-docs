@@ -14,50 +14,12 @@ The backup configuration of the device is heavily dependent on the type of the d
 
 There are a number of ways the backup script can provide the configuration backup to DataMiner IDP.
 
-Summary :
-
 A [CI Type](xref:CI_Types1) can be configured with a script that will be used to take the configuration backup of the element of this CI Type. The script will be executed for a specific element and typically interact with it.
 
 > [!TIP]
 > An example script *IDP_Example_Custom_ConfigurationBackup* is available in the Automation module after IDP has been installed. You can duplicate this script to use it as a starting point.
 
 The Configuration Backup needs to call certain C# methods to inform IDP of the configuration backup.  
-  
-```csharp
-try
-{
-// This will load the automation script's parameter data.
-inputData = new BackupInputData(engine);
-
-// This method will communicate with the IDP solution, to provide the required feedback for the backup process.
-backupManager = new Backup(inputData);
-
-// When the backup process starts normally, this method should be called.
-backupManager.NotifyProcessStarted();
-
-// When the backup process starts normally, here comes the code to take and send backup to IDP.
-// 
-
-// On a normal execution, IDP should be notified of its success through this method.
-backupManager.NotifyProcessSuccess();
-        }
-catch (ScriptAbortException)
-{
-// For any exceptions, or other unexpected behavior, the IDP solution should be informed, if possible, of the failure.
-backupManager?.NotifyProcessFailure("Backup script was aborted.");
-throw;
-}
-catch (BackupFailedException ex)
-{
-backupManager?.NotifyProcessFailure($"Custom backup code failed with the following exception:{Environment.NewLine}{ex}");
-engine.ExitFail(ex.ToString());
-}
-catch (Exception ex)
-{
-backupManager?.NotifyProcessFailure($"The main script failed due to an exception:{Environment.NewLine}{ex}");
-engine.ExitFail(ex.ToString());
-}
-```
 
 ## Configuration types (running, startup, golden)
 
