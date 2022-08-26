@@ -123,6 +123,12 @@ The GQI data source "Bookings" did not contain a *Last modified by* column and c
 
 Also, the *Created at* and *Last modified at* columns will no longer be selected by default.
 
+#### Dashboards app: Problem when trying to access a shared dashboard created in a previous version [ID_34210]
+
+<!-- Main Release Version 10.2.0 [CU7] - Feature Release Version 10.2.10 -->
+
+When you tried to access a shared dashboard created in a previous version, the migration of the dashboard would get stuck because the Web API was unable to write the current Dashboards app version to the `C:\Skyline DataMiner\WebPages\dashboard\appversion.json` file.
+
 #### DataMiner Cube - Services app: No services would be loaded the first time you opened the Services app [ID_34211]
 
 <!-- Main Release Version 10.1.0 [CU19]/10.2.0 [CU7] - Feature Release Version 10.2.10 -->
