@@ -87,7 +87,7 @@ To configure actions:
 
 1. In the *Icon* box, select an icon for the action.
 
-1. In the *Action* box, select the action that should be executed. See [Configuring custom app events](xref:Configuring_custom_apps#configuring-custom-app-events).
+1. In the *Action* box, select the action that should be executed. See [Configuring low-code app events](xref:LowCodeApps_event_config).
 
 > [!NOTE]
 > You can also override the default action for a node or edge using the *Add override* option.
