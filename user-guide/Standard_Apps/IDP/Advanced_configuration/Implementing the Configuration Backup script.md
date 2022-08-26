@@ -127,7 +127,7 @@ backupManager.SendBackupContentWithChangeDetectionToIdp(fullContent,coreContent,
 backupManager.NotifyProcessSuccess();
 ```
 
-In both case, IDP will create a new file in the DataMiner Configuration Archive with the supplied value. The created files will have the TXT file extension.
+In both cases, IDP will create a new file in the DataMiner Configuration Archive with the supplied value. The created files will have the TXT file extension.
 
 ### Backup and change detection by exchanging file locations
 
@@ -140,7 +140,7 @@ inputData = new BackupInputData(engine);
 backupManager = new Backup(inputData);
 backupManager.NotifyProcessStarted();
 
-string pathfullPathFull = @"\\WINSERVER1\backup\fullConfig.txt";
+string pathfull = @"\\WINSERVER1\backup\fullConfig.txt";
 int version = 1;
 backupManager.SendBackupFilePathWithChangeDetectionToIdp(fullPath,version);
 
