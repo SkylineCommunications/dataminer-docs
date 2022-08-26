@@ -54,7 +54,7 @@ Warning: <function> is unable to parse compliance cache file entry at line <line
 
 ### Fixes
 
-#### Jobs app: Corrected start time saved incorrectly \[ID_34043]
+#### Jobs app: Corrected start time saved incorrectly [ID_34043]
 
 <!-- Main Release Version 10.2.0 [CU7] - Feature Release Version 10.2.9 -->
 
@@ -79,6 +79,12 @@ Up to now, the files stored in the `C:\Skyline DataMiner\ResourceManager` folder
 
 When the text in the Cube advanced search box was selected with Ctrl+A and then deleted, it could occur that the advanced search input was not cleared correctly, so that it continued to be shown by the *SurveyorSearchText* variable in Visual Overview.
 
+#### Web apps - DOM: Sections inheriting from a parent behavior definition would not be taken into account when displaying a form [ID_34125]
+
+<!-- Main Release Version 10.2.0 [CU7] - Feature Release Version 10.2.10 -->
+
+When, a DOM definition containing a behavior definition with inheritance enabled was used in a web app form, any sections inheriting from that parent behavior definition would not be taken into account when displaying that form.
+
 #### SLNet could throw an OutOfMemoryException due to a memory leak [ID_34126]
 
 <!-- Main Release Version 10.1.0 [CU19]/10.2.0 [CU7] - Feature Release Version 10.2.10 -->
@@ -90,6 +96,12 @@ In some cases, SLNet could throw an OutOfMemoryException due to a memory leak.
 <!-- Main Release Version 10.1.0 [CU19]/10.2.0 [CU7] - Feature Release Version 10.2.9 -->
 
 When a connection in Visual Overview was highlighted based on a connection property, and the connection property changed, it could occur that the highlight style was not automatically applied to the connection line, but only after the user triggered a redraw, for example by clicking the highlight.
+
+#### Automation: Invalid script changes would incorrectly be saved [ID_34150]
+
+<!-- Main Release Version 10.2.0 [CU7] - Feature Release Version 10.2.10 -->
+
+When, in the *Automation* app, you made an invalid change in a script, closed the app and clicked *Yes* to confirm the changes, up to now, the invalid changes you made would incorrectly be saved. If the invalid change was an invalid script name change, then the script would even be deleted. From now on, it will only be possible to save valid changes.
 
 #### DataMiner Cube - Alarm Console: Alarms would incorrectly be grouped when the 'Automatically group according to arrangement' was not selected [ID_34153]
 
