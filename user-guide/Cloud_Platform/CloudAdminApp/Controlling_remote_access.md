@@ -47,7 +47,7 @@ Users with a DataMiner Cloud Platform account (i.e. users who are registered on 
 >
 > ![Remote access URL in the Cloud Admin app](~/user-guide/images/CloudRemoteAccessUrl.png)
 >
-> See also: [Accessing the Monitoring app via the DataMiner Cloud Platform](Accessing_the_Monitoring_app#accessing-the-monitoring-app-via-the-dataminer-cloud-platform).
+> See also: [Accessing the Monitoring app via the DataMiner Cloud Platform](xref:Accessing_the_Monitoring_app#accessing-the-monitoring-app-via-the-dataminer-cloud-platform).
 
 ## Revoking access to cloud features
 
