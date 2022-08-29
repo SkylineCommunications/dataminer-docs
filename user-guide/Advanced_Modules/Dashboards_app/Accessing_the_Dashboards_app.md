@@ -1,24 +1,23 @@
 ---
-uid: Accessing_the_Ticketing_app
+uid: Accessing_the_Dashboards_app
 ---
 
-# Accessing the Ticketing app
+# Accessing the Dashboards app
 
-To access the Ticketing app:
+To access the Dashboards app, depending on your setup, go to one of the following addresses in a browser:
 
-- In DataMiner Cube, go to *Apps* > *Ticketing*, or
-
-- Go directly to the link `https://[MyDataMiner]/Ticketing` or `http://[MyDataMiner]/Ticketing`, depending on your setup.
+```txt
+http://[DMA]/dashboard
+https://[DMA]/dashboard
+```
 
 > [!NOTE]
->
-> - The standalone Ticketing app can be accessed using Google Chrome, Microsoft Edge, Mozilla Firefox or Safari.
-> - When you embed the Ticketing app in another page, e.g. in Visual Overview, from DataMiner 10.0.13 onwards, you can add *embed=true* to its URL in order to hide the sidebar and header bar of the app. You can also add a filter in the Ticketing URL to only show tickets affecting a specific element, service, view or redundancy groups. To do so, add a filter in the following format: *affecting=\[type\]/\[DataMiner ID\]/\[object ID\]*, where \[type\] can be *element*, *service*, *view* or *redundancy group*. For example: *affecting=element/299/31*
+> We recommend that you use Google Chrome to access the Dashboards app. Microsoft Edge, Mozilla Firefox, and Safari are also supported.
 
 > [!CAUTION]
 > If you use a DataMiner version prior to DataMiner 10.1.7, we strongly advise that you use HTTPS when you use DataMiner client applications over public internet. If you do not do so, all information – including logon credentials – is sent as plain, unencrypted text over the internet. From DataMiner 10.1.7 onwards, client-server communication is encrypted by default. See also: [Setting up HTTPS on a DMA](xref:Setting_up_HTTPS_on_a_DMA).
 
-## Accessing the Ticketing app via the DataMiner Cloud Platform
+## Accessing the Dashboards app via the DataMiner Cloud Platform
 
 If you have been granted [remote access](xref:Giving_users_access_to_cloud_features) to a cloud-connected DataMiner System as a guest, you can connect as follows:
 
@@ -31,4 +30,4 @@ If you have been granted [remote access](xref:Giving_users_access_to_cloud_featu
    > [!NOTE]
    > If your DataMiner account is linked to your DCP account, you will be logged in automatically with that linked DataMiner account.
 
-1. Click the *Ticketing* icon.
+1. Click the *Dashboards* icon.

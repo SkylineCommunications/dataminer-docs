@@ -43,4 +43,7 @@ If you have been granted [remote access](xref:Giving_users_access_to_cloud_featu
 
 1. Log on to the remote DataMiner System using your DataMiner login credentials.
 
-1. Click the Monitoring icon.
+   > [!NOTE]
+   > If your DataMiner account is linked to your DCP account, you will be logged in automatically with that linked DataMiner account.
+
+1. Click the *Monitoring* icon.
