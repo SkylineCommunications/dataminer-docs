@@ -427,6 +427,12 @@ On the REPORTS page of an element card, masking and unmasking (i.e. state change
 
 When a Process Automation definition was added to a *Service definition* component, the function nodes would not display the number of tokens currently in queue or in progress.
 
+#### Problem with SLAnalytics [ID_33850]
+
+<!-- Main Release Version 10.1.0 [CU19]/10.2.0 [CU7] - Feature Release Version 10.2.9 -->
+
+In some cases, a problem could occur with the SLAnalytics process, causing the process to restart. This happened when the alarm repository was retrieved while the connection was being dropped.
+
 #### Web apps: No group row would appear when you selected a single item in a list view [ID_33858]
 
 <!-- Main Release Version 10.3.0 - Feature Release Version 10.2.9 -->

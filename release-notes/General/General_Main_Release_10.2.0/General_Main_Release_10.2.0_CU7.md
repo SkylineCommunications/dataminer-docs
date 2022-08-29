@@ -54,6 +54,12 @@ Warning: <function> is unable to parse compliance cache file entry at line <line
 
 ### Fixes
 
+#### Problem with SLAnalytics [ID_33850]
+
+<!-- Main Release Version 10.1.0 [CU19]/10.2.0 [CU7] - Feature Release Version 10.2.9 -->
+
+In some cases, a problem could occur with the SLAnalytics process, causing the process to restart. This happened when the alarm repository was retrieved while the connection was being dropped.
+
 #### Jobs app: Corrected start time saved incorrectly [ID_34043]
 
 <!-- Main Release Version 10.2.0 [CU7] - Feature Release Version 10.2.9 -->
