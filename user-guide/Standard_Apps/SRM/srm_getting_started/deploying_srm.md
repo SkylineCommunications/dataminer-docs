@@ -4,10 +4,12 @@ uid: deploying_srm
 
 # Deploying the SRM framework
 
-1. Ensure that a DataMiner version is installed that is compatible with the SRM version you want to deploy. Contact Skyline Communications to check if any additional components need to be installed in your system.
+1. Ensure that a DataMiner version is installed that is compatible with the SRM version you want to deploy. Check the SRM release notes to see which minimum DataMiner version is required. Contact Skyline Communications to check if any additional components need to be installed in your system.
 
    > [!NOTE]
    > The SRM Framework requires an Elasticsearch database (see [DataMiner Indexing Engine](xref:DataMiner_Indexing_Engine)).
+
+1. Download the SRM package from [DataMiner Dojo](https://community.dataminer.services/downloads/).
 
 1. Double-click the SRM package, and install the package in the same manner as a DataMiner upgrade.
 

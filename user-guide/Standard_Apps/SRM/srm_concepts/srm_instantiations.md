@@ -38,7 +38,7 @@ A resource pool is a **container that groups several resources**. One resource c
 
 ## Profile instance
 
-A profile instance is**linked to a specific profile definition and has values assigned for each of the profile parameters listed in that profile definition**. Multiple profile instances can be created for the same profile definition, typically each with different values.
+A profile instance is **linked to a specific profile definition and has values assigned for each of the profile parameters listed in that profile definition**. Multiple profile instances can be created for the same profile definition, typically each with different values.
 
 As a profile definition is a group of configuration, monitoring, capability, and capacity parameters, a profile instance linked to that profile definition will filter out resources that do not provide the capacity and/or capability defined in the instance. This way, when a booking is created, DataMiner SRM can check whether resources are available not only according to the requested timing, but also according to the required capacities and capabilities.
 
@@ -86,7 +86,7 @@ A booking in the context of Resource Orchestration or Resource Scheduling is **s
 
 Contributing bookings are only used in the context of Service Orchestration.
 
-A contributing booking is a **booking that is converted into a virtual function resource** so that it can be used in another booking. The resource representing a contributing booking is only available for the duration of the main booking that contains it as a resource.
+A contributing booking is a **booking that is converted into a virtual function resource** so that it can be used in another booking. The resource representing a contributing booking is only available for the duration of the contributing booking itself.
 
 ## Virtual platform
 
