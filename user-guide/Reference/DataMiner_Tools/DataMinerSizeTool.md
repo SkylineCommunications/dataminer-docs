@@ -92,13 +92,13 @@ To run this tool, follow the procedure below. The letters in parentheses refer t
 
    - The path where the output file is stored (m) and a link to that file (n)
 
-![Correlation engine concept](~/user-guide/images/WhatsTheSize1.png)<br>
+![DataMiner Size tool: Initial window to start scanning](~/user-guide/images/WhatsTheSize1.png)<br>
 *DataMiner Size tool: Initial window to start scanning*
 
-![Correlation engine concept](~/user-guide/images/WhatsTheSize2.png)<br>
+![DataMiner Size tool: During the scan](~/user-guide/images/WhatsTheSize2.png)<br>
 *DataMiner Size tool: During the scan*
 
-![Correlation engine concept](~/user-guide/images/WhatsTheSize3.png)<br>
+![DataMiner Size Tool: After the scan](~/user-guide/images/WhatsTheSize3.png)<br>
 *DataMiner Size Tool: After the scan*
 
 ## Output file columns
