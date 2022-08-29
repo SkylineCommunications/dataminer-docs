@@ -88,6 +88,8 @@ To apply a **filter based on a specific column**:
 
    - For booleans, specify whether the value should be true or false.
 
+   - For discrete values, from DataMiner 10.2.10/10.3.0 onwards, select the relevant checkboxes.
+
    > [!NOTE]
    > Prior to DataMiner 10.2.9/10.3.0, it is possible to specify multiple conditions by clicking the + icon. As soon as one of the specified conditions applies, a value will be shown (i.e. conditions are combined using "OR"). DataMiner 10.2.9/10.3.0 switches to more efficient server-side filtering, which greatly improves the filter performance but does not allow multiple conditions in the same filter.
 
@@ -96,6 +98,6 @@ To apply a **filter based on a specific column**:
 > [!NOTE]
 > If you apply several column filters or apply both the general filter and one or more column filters, values will only be shown if they match all filters (i.e. filters are combined using "AND").
 
-To **sort the table**, you can click a column header. To apply additional sorting, press Ctrl while clicking one or more additional headers Alternatively, you can also select one of the available sorting options in the column header right-click menu.
+To **sort the table**, you can click a column header. To apply additional sorting, press Ctrl while clicking one or more additional headers. Alternatively, you can also select one of the available sorting options in the column header right-click menu.
 
 To **group by a specific table column**, right-click the column header and click *Group*. To stop grouping, right-click the header again and select *Stop grouping*.
