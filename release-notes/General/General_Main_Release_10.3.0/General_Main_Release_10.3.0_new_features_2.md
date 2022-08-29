@@ -520,6 +520,12 @@ The “Line & area chart” component is now able to visualize GQI query results
 > [!NOTE]
 > If you want the component to show a classic trend chart, make sure the query result is sorted by the X axis column.
 
+#### Dashboards / Low-Code Apps: Checkboxes to select discrete values in column filter Table component [ID_34234]
+
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.9 -->
+
+When you configure a column filter for a Table component in a dashboard or low-code app, you can now select checkboxes to filter on discrete values.
+
 ### DMS Service & Resource Management
 
 #### Retrieving bookings in a paged way and sorted by property \[ID_31982\]

@@ -16,7 +16,11 @@ uid: General_Feature_Release_10.2.10
 
 ## Other features
 
-*No new features have been added to this release yet*
+#### Dashboards / Low-Code Apps: Checkboxes to select discrete values in column filter Table component [ID_34234]
+
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.9 -->
+
+When you configure a column filter for a Table component in a dashboard or low-code app, you can now select checkboxes to filter on discrete values.
 
 ## Changes
 
