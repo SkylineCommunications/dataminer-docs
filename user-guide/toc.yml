@@ -2762,6 +2762,8 @@
               topicUid: Configuring_DMS_Alerter
         - name: DataMiner Comparison tool
           topicUID: DataMinerComparisonTool
+        - name: DataMiner Size tool
+          topicUID: DataMinerSizeTool
         - name: DataMiner Taskbar Utility
           topicUid: DataMiner_Taskbar_Utility
           items:
