@@ -12,7 +12,11 @@ uid: General_Feature_Release_10.2.10
 
 ## Highlights
 
-*No highlights have been selected for this release yet*
+#### Clearing an incident now clears any clearable base alarms it contains [ID_34112]
+
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.10 -->
+
+If an incident (also known as an alarm group) is cleared manually, any clearable base alarms of that incident will now also be cleared. This way, this behavior is consistent with the standard behavior for Correlation alarms.
 
 ## Other features
 

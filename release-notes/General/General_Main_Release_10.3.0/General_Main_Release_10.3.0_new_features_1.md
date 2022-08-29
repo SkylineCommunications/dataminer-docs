@@ -268,6 +268,12 @@ Process:
 
 When, during a DataMiner upgrade, the VerifyClusterPorts prerequisite fails, you will now receive more information on why it failed. For example, the DMS.xml file could contain faulty IP addresses or NATS may have silently failed.
 
+#### Clearing an incident now clears any clearable base alarms it contains [ID_34112]
+
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.10 -->
+
+If an incident (also known as an alarm group) is cleared manually, any clearable base alarms of that incident will now also be cleared. This way, this behavior is consistent with the standard behavior for Correlation alarms.
+
 ### DMS Security
 
 #### SLSSH: Enhanced HMAC, cypher and key exchange algorithm support \[ID_32664\] \[ID_32786\]
