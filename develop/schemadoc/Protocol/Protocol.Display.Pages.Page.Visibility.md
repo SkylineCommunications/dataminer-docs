@@ -12,7 +12,7 @@ Specifies the page visibility configuration.
 
 ## Attributes
 
-|Name|Type|Required|Description|
+|Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|Type&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|Required|Description|
 |--- |--- |--- |--- |
 |[default](xref:Protocol.Display.Pages.Page.Visibility-default)|[EnumTrueFalse](xref:Protocol-EnumTrueFalse)|Yes|Specifies the default visibility of the page.|
 |[overridePID](xref:Protocol.Display.Pages.Page.Visibility-overridePID)|unsignedInt|Yes|Specifies the ID of the parameter that is used to compare its value against the value specified in the "value" attribute.|

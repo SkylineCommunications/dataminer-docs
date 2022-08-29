@@ -16,13 +16,13 @@ Please note the following:
 
 - From DataMiner 10.2.0/10.1.11 onwards, **HLS** (HTTPS Live Streaming) is supported. See [Configuring a thumbnail for HTTP Live Streaming](#configuring-a-thumbnail-for-http-live-streaming).
 
-- To display video thumbnails with the **VLC** plugin in the DataMiner Cube browser app, make sure the 32-bit version of VLC is installed, not the 64-bit version, as the latter may not run correctly in Internet Explorer. If you are using the DataMiner Cube desktop app (version 10.0.0 or higher), use the 64-bit version of VLC instead.
+- To display video thumbnails with the **VLC** plugin in the DataMiner Cube browser app, make sure the 32-bit version of VLC is installed, not the 64-bit version, as the latter may not run correctly. If you are using the DataMiner Cube desktop app (version 10.0.0 or higher), use the 64-bit version of VLC instead.
 
 - From DataMiner 9.0 onwards, it is possible to display video feeds from **Selenio MCP1 and MCP3** platforms. However, the Selenio modules need to have at least firmware version 6.1.
 
 - In DataMiner versions up to 8.5.8, Adobe Flash is used to display video thumbnails. From DataMiner 9.0 onwards, HTML is used instead. Both **MJPEG** and **HTML5** video types are supported. The latter can be used for live video streaming. However, note that most browsers only support video streaming over TCP.
 
-- For an example, see [Ziine](xref:ZiineDemoSystem) > *[Linking Shapes]* view > *[linking > THUMBNAIL]* page.
+- For an example, see [Ziine](xref:ZiineDemoSystem) > *Visual Overview Design Examples* view > *[linking > THUMBNAIL]* page.
 
 > [!TIP]
 > See also: [Making a shape display an image](xref:Making_a_shape_display_an_image)
@@ -37,6 +37,7 @@ Add a shape data field of type **Link** to the shape, and configure one of the f
 ```
 
 > [!NOTE]
+>
 > - Adding "#" in front of the URL ensures that the video is displayed in an embedded browser. If you do not add this, the shape is rendered as it is drawn in Visio and clicking it opens your default browser and navigates to the link.
 > - If you play a video in a shape using VLC, by default the VLC toolbar is shown. To hide the toolbar, adding "toolbar=false" or "showtoolbar=false" to the value of the **Link** shape data. For example: `#http://<DMAIP>/VideoThumbnails/Video.htm?type=Generic VLC&source=http://<DMAIP>/myvideo.mpeg&showtoolbar=false`
 
@@ -137,10 +138,12 @@ To do so:
 
    > [!NOTE]
    > When this property is set to false (the default setting), the following validation is performed during HTTP parsing:
+   >
    > - In end-of-line code, only CRLF is allowed, not CR or LF alone.
    > - Headers names may not have spaces in them.
    > - If multiple status lines exist, all additional status lines are treated as malformed header name/value pairs.
    > - The status line must have a status description, in addition to a status code.
+   >
    > Regardless of whether the property is set to true or false, header names may not contain non-ASCII characters.
 
 > [!TIP]
@@ -157,6 +160,7 @@ To configure the thumbnail, add a shape data field of type **Link** to the shape
 ```
 
 > [!NOTE]
+>
 > - For more information on HLS, see <https://github.com/video-dev/hls.js/>
 > - All HLS resources must be delivered with CORS headers that permit GET requests. For more information, see <https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS>.
 > - If you access a video thumbnail player that is using HTTPS, the media must also be served over HTTPS.

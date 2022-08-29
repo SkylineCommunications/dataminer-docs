@@ -12,7 +12,7 @@ Represents a particular HTTP session.
 
 ## Attributes
 
-|Name|Type|Required|Description|
+|Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|Type|Required|Description|
 |--- |--- |--- |--- |
 |[id](xref:Protocol.HTTP.Session-id)|[TypeNonLeadingZeroUnsignedInt](xref:Protocol-TypeNonLeadingZeroUnsignedInt)|Yes|The unique session ID.|
 |[ignoreTimeout](xref:Protocol.HTTP.Session-ignoreTimeout)|[EnumTrueFalse](xref:Protocol-EnumTrueFalse)||If the HTTP connection should ignore timeout for this session, set this attribute to true.|

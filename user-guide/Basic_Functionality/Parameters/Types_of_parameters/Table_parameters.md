@@ -6,7 +6,7 @@ uid: Table_parameters
 
 Different types of table parameters exist in DataMiner Cube, detailed in the sections below. Regardless of the type of table parameter, the following applies:
 
-- In most tables, the leftmost column will show a **key icon** in the header. This indicates that this column contains the display key for each row, a unique identifier for the row. The display key is the human readable counterpart of the row’s primary key.
+- In most tables, the leftmost column will show a **key icon** in the header. This indicates that this column contains the display key for each row, a unique identifier for the row. The display key is the human-readable counterpart of the row’s primary key.
 
 - To the right of a table parameter, a bar with a \< icon is displayed. Click this bar to view a pane with details of the row selected in the table.
 
@@ -18,24 +18,24 @@ Different types of table parameters exist in DataMiner Cube, detailed in the sec
 
 - You can **export a table** by selecting the *Export table* option in the right-click menu. From DataMiner 10.1.5/10.2.0 onwards, a dialog box is then displayed that can have the following options, depending on the table configuration:
 
-    - *Export location*: The file path where the export should be placed.
+  - *Export location*: The file path where the export should be placed.
 
-    - *Export options*: For partial tables, this allows you to select whether only the current page should be exported, or all pages.
+  - *Export options*: For partial tables, this allows you to select whether only the current page should be exported, or all pages.
 
-    - *Include hidden columns*: Determines if hidden columns are included in the export.
+  - *Include hidden columns*: Determines if hidden columns are included in the export.
 
-    - *Include header names*: Determines if the names of the column headers are included in the export.
+  - *Include header names*: Determines if the names of the column headers are included in the export.
 
-    > [!NOTE]
-    > From DataMiner 10.2.0/10.2.1 onwards, if you apply a filter to a table before you export it, only the displayed rows will be included in the export.
+  > [!NOTE]
+  > From DataMiner 10.2.0/10.2.1 onwards, if you apply a filter to a table before you export it, only the displayed rows will be included in the export.
 
-### Text tables
+## Text tables
 
 A text table is a special type of read parameter that shows a data table in text format. It is also capable of displaying any block of text received from a device.
 
 Users can select the tab-delimited text, copy it to the Windows clipboard, and paste it in email messages, documents, spreadsheets, etc.
 
-### Dynamic tables
+## Dynamic tables
 
 A dynamic table is a special type of parameter that is used to visualize and manage large data tables (e.g. SNMP tables).
 
@@ -44,6 +44,6 @@ Every column in a dynamic table is a parameter in itself. Cells in a column can 
 > [!NOTE]
 > The size of icons used in dynamic tables can be adapted in the file *Icons.xml*, with a maximum height of 20 pixels.
 
-### Direct view tables
+## Direct view tables
 
-A direct view table is a special kind of table that is used to aggregate data from different source elements. More information about direct view tables is available in the [DataMiner Development Library](https://help.dataminer.services/development/).
+A direct view table is a special kind of table that is used to aggregate data from different source elements. More information about direct view tables, see [View tables](xref:AdvancedViewTables).

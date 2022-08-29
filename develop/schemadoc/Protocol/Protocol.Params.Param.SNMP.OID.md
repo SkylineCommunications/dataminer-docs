@@ -16,7 +16,7 @@ string
 
 ## Attributes
 
-|Name|Type|Required|Description|
+|Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|Type|Required|Description|
 |--- |--- |--- |--- |
 |[id](xref:Protocol.Params.Param.SNMP.OID-id)|[TypeParamId](xref:Protocol-TypeParamId)||Specifies the ID of the parameter holding the (partial) OID.|
 |[ipid](xref:Protocol.Params.Param.SNMP.OID-ipid)|[TypeParamId](xref:Protocol-TypeParamId)||Specifies the ID of the parameter holding the IP address that needs to be used to poll this SNMP parameter.|

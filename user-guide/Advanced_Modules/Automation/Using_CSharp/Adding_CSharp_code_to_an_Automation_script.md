@@ -52,9 +52,11 @@ To add C# code to a script:
 
      > [!NOTE]
      > The following DLLs are referenced by default:
+     >
      > - System.dll
      > - System.Core.dll (from DataMiner 9.5.13 onwards)
      > - System.Xml.dll (from DataMiner 9.5.13 onwards)
+     > - netstandard.dll (from DataMiner 10.1.11 onwards (RN 30755))
      > - SLManagedAutomation.dll
      > - SLNetTypes.dll
      > - Skyline.DataMiner.Storage.Types.dll

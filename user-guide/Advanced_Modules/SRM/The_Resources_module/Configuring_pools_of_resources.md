@@ -105,7 +105,7 @@ To add a resource to a pool using DataMiner 10.2.0/10.1.5 or higher:
 
 To add a resource to a pool prior to DataMiner 10.1.5:
 
-1. While the pool is selected, in the *resources* tab, click *Add* button.
+1. While the pool is selected, in the *resources* tab, click the *Add* button.
 
 1. In the dialog box, fill in the resource name.
 
@@ -129,7 +129,7 @@ To add a resource to a pool prior to DataMiner 10.1.5:
 1. If any resource property definitions have been defined, fill in the values required for the additional properties.
 
    > [!NOTE]
-   > If you select an existing resource in the *resourcers* tab, you can view information on its configuration if you expand the *Properties* section at the bottom of the tab. This includes a button that allows you to quickly navigate to the element linked to the resource. Buttons are also available that allow you to add, edit or delete properties of a resource.
+   > If you select an existing resource in the *resources* tab, you can view information on its configuration if you expand the *Properties* section at the bottom of the tab. This includes a button that allows you to quickly navigate to the element linked to the resource. Buttons are also available that allow you to add, edit or delete properties of a resource.
 
 1. Click *OK*.
 

@@ -8,4 +8,4 @@ uid: Trending1
 
 - Make sure no redundant trending can be set on parameters.
 
-- For parameters of type string, when trending is supported, the trend type should be set to "last". (cf. PROTOCOL.PARAMS.PARAM.DISPLAY.TRENDING.TYPE section in the DataMiner Protocol Development Guide.)
+- For parameters of type string, when trending is supported, the trend type should be set to "last" (see [PROTOCOL.PARAMS.PARAM.DISPLAY.TRENDING.TYPE](xref:Protocol.Params.Param.Display.Trending.Type)).

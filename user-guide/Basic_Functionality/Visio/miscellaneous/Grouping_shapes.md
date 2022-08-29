@@ -7,7 +7,7 @@ uid: Grouping_shapes
 If, in a Visio drawing, you have to link more than one shape to the same element, view or service, then first group those shapes, and then specify shape data of type **Element**, **View** or **Service** on group level. This will considerably enhance performance.
 
 > [!TIP]
-> For an example, see [Ziine](xref:ZiineDemoSystem) > *[Linking Shapes]* view.
+> For an example, see [Ziine](xref:ZiineDemoSystem) > *Visual Overview Design Examples* view.
 
 ## Example of grouping shapes
 
@@ -55,6 +55,7 @@ When there are multiple grouping levels, the element will be determined bottom-u
 
 > [!TIP]
 > See also:
+>
 > - [Linking a shape to a SET command](xref:Linking_a_shape_to_a_SET_command)
 > - [Linking a shape to an Automation script](xref:Linking_a_shape_to_an_Automation_script)
 

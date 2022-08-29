@@ -21,4 +21,4 @@ To the main shape, add the following shape data fields:
 To the subshape, add a shape data field of type **Parameter** set to "1\|TranslateY;RANGE"
 
 > [!TIP]
-> For an example, see [Ziine](xref:ZiineDemoSystem) > *[Linking Shapes]* view > *[controls > CUSTOM]* page.
+> For an example, see [Ziine](xref:ZiineDemoSystem) > *Visual Overview Design Examples* view > *[controls > CUSTOM]* page.

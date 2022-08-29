@@ -82,7 +82,7 @@ In addition to pages, panels can be configured in custom apps. These contain sec
 
 ## Configuring custom app events
 
-At present two types of events can be configured in the DataMiner Application Framework:
+At present two types of events can be configured in the DataMiner Low-Code Apps:
 
 - *On page load*: This event takes place when a page is loaded. (See [Configuring a page of a custom app](#configuring-a-page-of-a-custom-app).)
 - *On click*: This event takes place when a user clicks a button. (See [Configuring the header bar of a custom app page](#configuring-the-header-bar-of-a-custom-app-page).)

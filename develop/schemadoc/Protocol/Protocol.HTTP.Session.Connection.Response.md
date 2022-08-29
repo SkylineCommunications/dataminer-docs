@@ -18,7 +18,7 @@ Defines the response to the HTTP request you defined in ../Connection/Request.
 
 ## Children
 
-|Name|Occurrences|Description|
+|Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|Occurrences|Description|
 |--- |--- |--- |
 |***All***|||
 |&nbsp;&nbsp;[Headers](xref:Protocol.HTTP.Session.Connection.Response.Headers)|[0, 1]|Specifies the response headers of which you want to store the contents in a parameter.|

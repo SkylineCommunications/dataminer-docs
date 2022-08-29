@@ -15,12 +15,15 @@ Depending on the type of database, the procedure is slightly different.
    - MySQL Server
 
      > [!NOTE]
-     > - For DataMiner versions up to DataMiner 9.6.5, MySQL versions 4.1.1 to 5.7 are supported (using connector version 5.2.7). From DataMiner 9.6.5 onwards, versions up to 8.0 (8.0 not included) are supported (using connector version 6.9.12).
+     >
+     > - For DataMiner versions up to DataMiner 9.6.5, MySQL versions 4.1.1 to 5.7 are supported (using connector version 5.2.7). From DataMiner 9.6.5 onwards, versions up to 8.0 are supported (using connector version 6.9.12).
+     > - To use MySQL 8.0, an additional change is needed within the database. You need to set the *local_infile* variable to 1. In previous versions, this was not a default version, but this has changed. To do this in the database, you can use the command `SET GLOBAL local_infile=1;`.
      > - For MySQL, do not activate strict mode (STRICT_TRANS_TABLES) during installation. If you do so, the database offloads will fail.
 
    - MSSQL Server
 
      > [!NOTE]
+     >
      > - While setting up the installation of MSSQL Server, choose the authentication mode *Mixed Mode*.
      > - To run Microsoft SQL Server 2019, Windows Server 2016 or higher is required.
 
@@ -47,6 +50,7 @@ Depending on the type of database, the procedure is slightly different.
    - Oracle: use the Oracle Apex web interface to create a user and set up a workspace.
 
    > [!NOTE]
+   >
    > - The user accounts should at least be granted the following rights:
    >     - SELECT
    >     - INSERT
@@ -65,6 +69,7 @@ Depending on the type of database, the procedure is slightly different.
      1. From the *C:\\Skyline DataMiner\\Tools* directory, run the following script to create the tables: *CentralTabledef.txt*.
 
    > [!NOTE]
+   >
    > - Note that the script in *CentralTabledef.txt* will drop any tables in the selected database (causing these to be permanently deleted) and recreate the schema, so it must be used with caution.
    > - Alternatively, you can also use the program SLOffload.exe from the *C:\\Skyline DataMiner\\Tools* directory to do an offload to your new database. However, note that running this program involves a restart of the DMA.
 
@@ -146,7 +151,7 @@ The final step is the configuration of the DMS.
    > [!NOTE]
    > It is important that “Everyone” has read/write permissions. Otherwise, the DMA will not be able to store data in the CSV files.
 
-1. For DMAs using a DataMiner version prior to 9.0.0, if the offload database is an Oracle database, install the Oracle Data Access Component (ODAC). The Oracle Client must be at least version 12.
+1. For DMAs using a legacy DataMiner version prior to 9.0.0, if the offload database is an Oracle database, install the Oracle Data Access Component (ODAC). The Oracle Client must be at least version 12.
 
    Download: [http://www.oracle.com/tecbhnetwork/topics/dotnet/utilsoft-086879.html](http://www.oracle.com/technetwork/topics/dotnet/utilsoft-086879.html)
 
@@ -203,6 +208,7 @@ The final step is the configuration of the DMS.
    1. Optionally, if you have selected *Trend data*, specify further details for the offload. For more information, see [Configuring data offloads](xref:Configuring_data_offloads).
 
 > [!NOTE]
+>
 > - If an offload to the offload database fails, an alarm will be generated in DataMiner. As soon as offloading works again, the alarm is cleared.
 > - If the offload fails for a specific offload file, this file is moved to a failure folder and an error is logged.
 > - The offload database settings can also be found in the file *DB.xml*. For more information, see [DB.xml](xref:DB_xml#dbxml).

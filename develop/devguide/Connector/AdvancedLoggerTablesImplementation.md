@@ -172,6 +172,7 @@ To implement a logger table, perform the following steps:
       string datetime = DateTime.Now.ToString("G", CultureInfo.CreateSpecificCulture("fr-CA"));
       ```
 
+    - DateTime values should be inserted in UTC.
     - It is not strictly necessary to include a column in a logger table used for partitioning. However, it is strongly advised to do so, as otherwise the table will not automatically remove old data.
 
     - Partitioning in Cassandra is supported from DataMiner version 9.0.0 (RN12170) onwards. If ColumnDefinition is set to "DATETIME" and the Partition tag is set, Cassandra will use a TTL with the specified time. (See [Time to live](xref:AdvancedDataMinerDataPersistenceNoSqlCassandra#time-to-live).)
@@ -263,6 +264,7 @@ In order to make a protocol compatible with both RDBMS (SQL) and Cassandra, and 
 - If the rows in the logger table should only be added and never overwritten, use an auto-increment PK for the parameter table. If you do so, DataMiner does not need to scan the entire table first to check if a row already exists, which allows a higher insertion rate.
 - Do not choose the auto-increment PK in DataMiner as partition key. This would lead to a very high cardinality and would mean that you would have to know beforehand what this value is before being able to query the row.
 - AddRow calls are blocking calls, meaning there is no advantage to add rows multi-threaded. It will even have the downside that threads will start to block each other and new threads are created to try to compensate. Therefore, it is better to have one thread running that gets items to be added from a ConcurrentQueue.
+- DateTime values should be inserted in UTC.
 
 ## See also
 

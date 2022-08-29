@@ -26,6 +26,7 @@ Before you make changes to this file, always **stop DataMiner**. Restart DataMin
 The configuration data for the general or “local” database has to be specified in a *\<Database>* tag of which the *local* attribute is set to “true”.
 
 > [!NOTE]
+>
 > - The *type* attribute of the *\<Database>* tag indicates whether a MySQL, MS SQL or Cassandra (cluster) database is used. If no *type* attribute is specified, MySQL is used as type.
 > - If a separate Cassandra cluster (consisting of one or more nodes) is used for each DMA, the *type* attribute for the database is set to *Cassandra*. If an entire DMS uses the same Cassandra cluster, the *type* attribute for the database is set to *CassandraCluster*.
 > - If the *CassandraCluster* type is used, *DB.xml* is synced completely throughout the cluster. With other types, the general database settings are not synced.
@@ -33,6 +34,8 @@ The configuration data for the general or “local” database has to be specifi
 The following configuration is possible for the general database:
 
 - [Configuring the maintenance settings](#configuring-the-maintenance-settings)
+
+- [Keeping a database table from being checked during an upgrade](#keeping-a-database-table-from-being-checked-during-an-upgrade)
 
 - [Configuring how long parameter data are kept in the database for DMS Reporter](#configuring-how-long-parameter-data-are-kept-in-the-database-for-dms-reporter)
 
@@ -63,8 +66,37 @@ These attributes are **only used prior to DataMiner 9.5.5 (or 9.5.6 for an SQL d
 The limiting options can be set to “true” or “false”. If both options are set to “true”, the records will be deleted from the table either after a certain amount of time, or as soon as the table contains a specific number of records, whichever comes first.
 
 > [!NOTE]
-> - It is advisable to configure these settings through the Cube client interface, rather than directly in the .xml file. See [Configuring the database settings in Cube](xref:Configuring_the_database_settings_in_Cube).
+>
+> - We recommend configuring these settings through the Cube client interface rather than directly in the XML file. See [Configuring the database settings in Cube](xref:Configuring_the_database_settings_in_Cube).
 > - For a Cassandra (cluster) database, it is only possible to configure the limitByMonths attribute, not the limitByNumber attribute. Note also that this attribute works in a different way for Cassandra, compared to MySQL or MSSQL: if a record has been stored with a particular limitByMonths and MonthsToKeep setting, this setting permanently applies to that record in Cassandra.
+
+### Keeping a database table from being checked during an upgrade
+
+When you perform an upgrade of the DataMiner Agent software, by default, all database tables are automatically checked and if necessary optimized and/or repaired.
+
+To keep a particular database table from being checked, you can add a *\<SkipTableUpdate>* instruction to *DB.xml*.
+
+In the example below, two tables will be kept from being checked:
+
+```xml
+<DataBases>
+  <DataBase active="true" local="true" type="MySQL">
+    ...
+    <Maintenance monthsToKeep="12">
+      <SkipTableUpdates>
+        <SkipTableUpdate table="data_3012"/>
+        <SkipTableUpdate table="dataavg_3012"/>
+      </SkipTableUpdates>
+    </Maintenance>
+    ...
+  </DataBase>
+</DataBases>
+```
+
+> [!NOTE]
+> Instead of adding a *\<SkipTableUpdate>* instruction to the file *DB.xml*, you can also add a comment to a database table in order to keep that table from being checked during a DataMiner software upgrade. For example, to add a 'DataMiner Customized' comment to a MySQL table, run the following SQL command (in which you replace “xxx” by the actual table name): `ALTER TABLE xxx COMMENT = 'DataMiner Customized'`
+>
+> However, note that this causes that that entire table to be copied to a temporary table, which has a negative impact on query duration, so this is not recommended.
 
 ### Configuring how long parameter data are kept in the database for DMS Reporter
 
@@ -106,13 +138,34 @@ In the above example, the slowquery attribute is set to “5”, so all database
 
 In a Cassandra general database, the timetrace table among others contains “snapshots”, which are used to visualize historic alarm information in the DataMiner Cube history slider.
 
-- For more information on how to limit the amount of history slider data kept in this table, see [Configuring how long alarm history slider data are kept in Cassandra](xref:Configuring_how_long_alarm_history_slider_data_are_kept_in_Cassandra).
-
 - By default, timetrace snapshots are saved every 100 rows. To change this setting, set a different value in the *\<SnapshotInterval>* tag for the Cassandra database.
 
     > [!NOTE]
+    >
     > - In some cases, e.g. when DataMiner or Cassandra restarts, snapshots can be saved outside the default interval specified in the \<SnapshotInterval> setting.
     > - This can only be configured for a regular Cassandra database, not for a Cassandra cluster used by the entire DMS (type=CassandraCluster).
+
+- Prior to DataMiner 9.5.5, you can also configure how long alarm history slide data are kept using *DB.xml*: in the *HistorySlider.TimeToKeep* tag, specify a number of seconds between 0 and 2,147,483,647:
+
+  - If you specify 0, no history slider data will be saved.
+
+  - If you specify -1, history slider data will be saved for the period specified in the monthsToKeep attribute of the Maintenance tag. See [Configuring the maintenance settings](xref:DB_xml#configuring-the-maintenance-settings).
+
+  - If a period of longer than twenty years is specified, DataMiner will limit this to twenty years.
+
+  Example:
+
+  ```xml
+  <DataBase active="true" type="Cassandra" local="true">
+    ...
+    <HistorySlider>
+      <TimeToKeep>-1</TimeToKeep>
+    </HistorySlider>
+  </DataBase>
+  ```
+
+  > [!NOTE]
+  > From DataMiner 9.5.5 onwards, this should be configured in [DBMaintenanceDMS.xml](xref:DBMaintenance_xml_and_DBMaintenanceDMS_xml) instead. From DataMiner 9.6.0 \[CU1\]/9.6.6 onwards, it should be configured in System Center. for more information, see [Specifying TTL overrides](xref:Specifying_TTL_overrides).
 
 ### Skipping commit log writing of a Cassandra database
 
@@ -503,9 +556,9 @@ To configure this:
 
 ## Indexing database settings
 
-From DataMiner 9.6.4 onwards, DataMiner Indexing Engine can be installed on DMAs with a Cassandra database. In that case, an additional database will be added to *DB.xml*.
+From DataMiner 9.6.4 onwards, Elasticsearch can be installed on DMAs with a Cassandra database as an additional indexing database. In that case, an additional database will be added to *DB.xml*.
 
-The *\<Database>* tag for an indexing database has the following attributes:
+The *\<Database>* tag for an Elasticsearch database has the following attributes:
 
 - **active**: If set to true, the database is active.
 
@@ -514,21 +567,22 @@ The *\<Database>* tag for an indexing database has the following attributes:
 - **type**: Currently only “Elasticsearch” is supported.
 
 > [!NOTE]
+>
 > - There can only be one active indexing database on a DMA.
 > - From DataMiner 10.2.0/10.1.1 onwards, Elastic Amazon AWS can be used. In that case, the URL should be specified in the DBServer element. For example: *\<DBServer>mycompany-elastic.amazonaws.com\</DBServer>*.
 > - From DataMiner 10.2.0/10.1.3 onwards, a *DBConfiguration.xml* file can be configured, which overrides the settings in this section of *DB.xml*. See [Configuring multiple Elasticsearch clusters](xref:Configuring_multiple_Elasticsearch_clusters).
 
-### Defining a custom port for an Elasticsearch indexing database
+### Defining a custom port for an Elasticsearch database
 
-From DataMiner 10.0.7 onwards, you can define a custom port for an Elasticsearch Indexing database. By default, port 9200 is used.
+From DataMiner 10.0.7 onwards, you can define a custom port for an Elasticsearch database. By default, port 9200 is used.
 
 To define a different port:
 
 1. Stop the DMA.
 
-2. Open the file *DB.xml* (in the folder *C:\\Skyline DataMiner\\*).
+1. Open the file *DB.xml* (in the folder *C:\\Skyline DataMiner\\*).
 
-3. In the \<DBServer> element for the Indexing database, add a colon after the hostname or IP and specify the port.
+1. In the \<DBServer> element for the Indexing database, add a colon after the hostname or IP and specify the port.
 
     For example:
 
@@ -539,7 +593,7 @@ To define a different port:
     > [!NOTE]
     > The port specified in *DB.xml* must always be the same as the port defined in the Elasticsearch configuration. By default, this configuration is located in the folder *C:\\Program Files\\Elasticsearch\\config\\elasticsearch.yml*.
 
-4. Save the file and restart the DMA.
+1. Save the file and restart the DMA.
 
 ### Specifying a custom prefix for the Elasticsearch indexes
 
@@ -549,11 +603,11 @@ To do so:
 
 1. Stop the DMA.
 
-2. Open the file *DB.xml* (in the folder *C:\\Skyline DataMiner\\*).
+1. Open the file *DB.xml* (in the folder *C:\\Skyline DataMiner\\*).
 
-3. In the *DB* element for the indexing database, specify the custom prefix. Keep in mind that only regular alphanumeric characters are supported for the prefix, not symbols.
+1. In the *DB* element for the indexing database, specify the custom prefix. Keep in mind that only regular alphanumeric characters are supported for the prefix, not symbols.
 
-4. Save the file and restart the DMA.
+1. Save the file and restart the DMA.
 
 ### Specifying custom credentials for Elasticsearch
 
@@ -563,9 +617,9 @@ To do so:
 
 1. Stop the DMA.
 
-2. Open the file *DB.xml* (in the folder *C:\\Skyline DataMiner\\*).
+1. Open the file *DB.xml* (in the folder *C:\\Skyline DataMiner\\*).
 
-3. In the *UID* and *PWD* elements below the Elasticsearch *Database* tag, specify the username and password, respectively.
+1. In the *UID* and *PWD* elements below the Elasticsearch *Database* tag, specify the username and password, respectively.
 
     For example:
 
@@ -577,10 +631,10 @@ To do so:
     </DataBase>
     ```
 
-4. Save the file and restart the DMA.
+1. Save the file and restart the DMA.
 
 > [!NOTE]
-> For more information on how to configure TLS and security in Elasticsearch, see [Configuring TLS and security in Elasticsearch](https://community.dataminer.services/documentation/configuring-tls-and-security-in-elasticsearch/).
+> For more information on how to configure TLS and security in Elasticsearch, see [Securing the Elasticsearch database](xref:Security_Elasticsearch).
 
 ## CMDB settings
 
@@ -590,8 +644,7 @@ If you have a CMDB (Configuration Management Database) that you want to manage b
 > The *\<Database>* tag containing the configuration data for the CMDB must not have a *local* attribute. However, it must have a *name* attribute of which the value (i.e. the name of the database configuration) must be identical to the value specified in the *\<DatabaseConfig>* tag of the Inventory & Asset Management configuration file.
 
 > [!TIP]
-> See also:
-> [Configuring DMS Inventory and Asset Management](xref:Configuring_DMS_Inventory_and_Asset_Management)
+> See also: [Configuring DMS Inventory and Asset Management](xref:Configuring_DMS_Inventory_and_Asset_Management)
 
 Example 1:
 

@@ -7,6 +7,7 @@ uid: Creating_a_list_view
 To create a dynamic, filterable list view containing elements, services or bookings, from DataMiner 9.6.4 onwards, it is possible to configure a *ListView* component.
 
 > [!NOTE]
+>
 > - In DataMiner 9.6.4, this component can only be used in the visual overview of view cards. From DataMiner 9.6.5 onwards, element cards are also supported.
 > - This component functions in a similar way as the bookings list in the Bookings module and the services list in the Services module. For more information on how to use this component in DataMiner Cube, see [Bookings list](xref:The_Bookings_module#bookings-list).
 
@@ -30,16 +31,17 @@ To create a list view, add a shape on the Visio page with the following shape da
 
 - **Source**: The type of items to be shown in the list:
 
-   - *Elements*
-   - *Services*
-   - *Reservations* or *Bookings*
-   - *Resources* (supported from DataMiner 10.1.11/10.2.0 onwards)
+  - *Elements*
+  - *Services*
+  - *Reservations* or *Bookings*
+  - *Resources* (supported from DataMiner 10.1.11/10.2.0 onwards)
 
-  Note that viewing a list of elements will only be possible if you have the user permission *Elements* > *Access*. Viewing a list of bookings will only be possible if the DMS has the necessary licenses. From DataMiner 10.0.0 onwards, DataMiner Indexing is also required to view a list of bookings.
+  Note that viewing a list of elements will only be possible if you have the user permission *Elements* > *Access*. Viewing a list of bookings will only be possible if the DMS has the necessary licenses. From DataMiner 10.0.0 onwards, [Elasticsearch](xref:Elasticsearch_database) is also required to view a list of bookings.
 
 - **Filter**: See [List view filters](#list-view-filters).
 
 > [!NOTE]
+>
 > - If a *ListView* component with source *Reservations* or *Bookings* is used together with an embedded Resource Manager component, selecting an item in the list will select the corresponding block on the Resource Manager timeline and vice versa. See [Embedding a Resource Manager component](xref:Embedding_a_Resource_Manager_component).
 > - If colors are defined using the *Visual.Background* property of bookings, from DataMiner 9.6.13 onwards, these are displayed in the *Color* column of a *ListView* component showing bookings. In DataMiner 10.0.0/10.0.2, this property is renamed to *VisualBackground*. See [Customizing the color of booking blocks](xref:Embedding_a_Resource_Manager_component#customizing-the-color-of-booking-blocks).
 
@@ -88,6 +90,21 @@ ReservationInstance.Name[string] contains 'Enc'
 ReservationInstance.Status[Int32] == 3
 ```
 
+> [!NOTE]
+> The following values can be used for ReservationInstance.Status[Int32]:
+>
+> |Booking Status|Property value|
+> |--------------|--------------|
+> |Undefined     |0             |
+> |Pending       |1             |
+> |Confirmed     |2             |
+> |Ongoing       |3             |
+> |Ended         |4             |
+> |Disconnected  |5             |
+> |Interrupted   |6             |
+> |Cancelled     |7             |
+
+
 ```txt
 (ReservationInstance.End[DateTime] >01/22/2019 11:17:32)
 ```
@@ -105,6 +122,23 @@ To filter on a property with one or more spaces in the property name, use double
 ```txt
 ReservationInstance.Properties."Expected Service State"[String] contains 'STaRt'
 ```
+
+From DataMiner 10.2.7/10.3.0 onwards, you can filter on type. For example:
+
+```txt
+ReservationInstance.ReservationInstanceType[Int32] == 1
+```
+
+> [!NOTE]
+> The following values are supported for ReservationInstance.ReservationInstanceType[Int32]:
+>
+> | Booking type             | Property value |
+> |--------------------------|----------------|
+> | Default                  | 0              |
+> | ProcessAutomation        | 1              |
+> | CustomProcessAutomation  | 2              |
+> | ResourceScheduling       | 3              |
+> | ResourceOrchestration    | 4              |
 
 ### Source: Elements or Services
 

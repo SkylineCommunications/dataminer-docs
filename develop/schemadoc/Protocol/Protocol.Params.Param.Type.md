@@ -16,7 +16,7 @@ Specifies the parameter type.
 
 ## Attributes
 
-|Name|Type|Required|Description|
+|Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|Type|Required|Description|
 |--- |--- |--- |--- |
 |[alarmRegistration](xref:Protocol.Params.Param.Type-alarmRegistration)|string||Allows to trigger a QAction when specific parameters go into alarm.|
 |[distribution](xref:Protocol.Params.Param.Type-distribution)|string||Used in situations in which elements of a certain type are linked to each other as parent and child.|
@@ -67,9 +67,9 @@ A parameter of type DATAMINER INFO will contain the following data separated by 
 - Primary IP address
 - Secondary IP address
 
-Parameters of type ELEMENTID, ELEMENTNAME, ELEMENTDMAID and DATAMINER INFO are the first parameters that are loaded by a protocol. Although they hold information, they cannot, as such, be displayed on the DMS Element Display. Therefore, for these types of parameters, always set the Protocol.Params.Param.Display.RTDisplay tag to FALSE.
+Parameters of type ELEMENTID, ELEMENTNAME, ELEMENTDMAID and DATAMINER INFO are the first parameters that are loaded by a protocol. Although they hold information, they cannot, as such, be displayed in the user interface. Therefore, for these types of parameters, always set the Protocol.Params.Param.Display.RTDisplay tag to FALSE.
 
-If you do want to display the information in one of these parameters on the DMS Element Display, there is a workaround: create another parameter of type READ, and copy the value from its invisible parameter to this new parameter after protocol startup. You can then display the READ parameter on the DMS Element Display.
+If you do want to display the information in one of these parameters in the user interface, there is a workaround: create another parameter of type READ, and copy the value from its invisible parameter to this new parameter after protocol startup. You can then display the READ parameter in the user interface.
 
 ### discreet info
 

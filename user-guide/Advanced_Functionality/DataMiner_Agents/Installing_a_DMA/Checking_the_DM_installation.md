@@ -4,7 +4,7 @@ uid: Checking_the_DM_installation
 
 # Checking the DataMiner installation
 
-After installation, it is advisable to do the following checks in order to be sure that everything has been installed properly.
+After installation, we recommend that you do the following checks in order to be sure that everything has been installed properly.
 
 - Check the log in the *C:\ProgramData* folder. As this is a hidden folder, you may first need to enable the *Show hidden files, folders and drives* option in *Folder options*.
 
@@ -63,7 +63,7 @@ After installation, it is advisable to do the following checks in order to be su
      1. In *Actions*, click *Advanced Settings*.
      1. Check if *Enable 32-Bit Applications* is set to true.
 
-- Open Internet Explorer and go to <http://localhost/dataminercube/>.
+- Install DataMiner Cube and connect to the DMA. See [Installing the DataMiner Cube desktop application](xref:Installing_the_DataMiner_Cube_desktop_application).
 
 > [!NOTE]
-> Whenever you have installed or configured something new as a result of these checks, restart DataMiner and *SLNet.bat* as Administrator.
+> Whenever you have installed or configured something new as a result of these checks (with the exception of DataMiner Cube), restart DataMiner and *SLNet.bat* as Administrator.

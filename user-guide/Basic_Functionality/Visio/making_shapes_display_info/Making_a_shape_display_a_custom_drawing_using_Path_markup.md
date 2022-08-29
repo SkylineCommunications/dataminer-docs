@@ -13,8 +13,7 @@ data;Stroke;Fill;StrokeThickness;Tooltip;YAxisUp;bottomLeftX;bottomLeftY;topRigh
 ```
 
 > [!TIP]
-> For an example, see [Ziine](xref:ZiineDemoSystem) > *[Linking Shapes]* view > *[data > PATH]* page.
-
+> For an example, see [Ziine](xref:ZiineDemoSystem) > *Visual Overview Design Examples* view > *[data > PATH]* page.
 
 ## Syntax
 
@@ -122,5 +121,6 @@ To do so, add the following option to the shape:
 | Options          | EnableHorizontalZoom |
 
 > [!NOTE]
+>
 > - If labels are defined for the path shapes, these will update along with the zoom level.
 > - Zooming in on the Visual Overview page is still possible when the mouse pointer is not over the shape.

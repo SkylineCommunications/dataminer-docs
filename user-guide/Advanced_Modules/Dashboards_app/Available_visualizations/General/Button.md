@@ -5,13 +5,13 @@ uid: DashboardButton
 # Button
 
 > [!WARNING]
-> In the Dashboards app, this feature is currently still in preview. For more information, see [Soft-launch options](https://community.dataminer.services/documentation/soft-launch-options/). However, it is fully available in the [DataMiner Application Framework](xref:Application_framework).
+> In the Dashboards app, this feature is currently still in preview. For more information, see [Soft-launch options](https://community.dataminer.services/documentation/soft-launch-options/). However, it is fully available in the [DataMiner Low-Code Apps](xref:Application_framework).
 
-In the Dashboards app, this component is available in soft launch from DataMiner 10.0.3 onwards, if the soft-launch option *ReportsAndDashboardsButton* is enabled. In the DataMiner Application Framework, it is available by default.
+In the Dashboards app, this component is available in soft launch from DataMiner 10.0.3 onwards, if the soft-launch option *ReportsAndDashboardsButton* is enabled. In the DataMiner Low-Code Apps, it is available by default.
 
 To configure the component:
 
-## [In the DataMiner Application Framework](#tab/tabid-1)
+## [In the DataMiner Low-Code Apps](#tab/tabid-1)
 
 1. In the *Settings* tab, click the configuration icon next to *On click* and select the action(s) you want the button to execute. See [Configuring custom app events](xref:Configuring_custom_apps#configuring-custom-app-events).
 

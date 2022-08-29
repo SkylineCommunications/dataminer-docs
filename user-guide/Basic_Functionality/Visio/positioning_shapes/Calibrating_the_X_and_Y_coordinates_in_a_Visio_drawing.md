@@ -7,7 +7,7 @@ uid: Calibrating_the_X_and_Y_coordinates_in_a_Visio_drawing
 If, in a Visio drawing, you want to position shapes using X and Y coordinates, you have to calibrate the X and Y axis.
 
 > [!TIP]
-> For an example, see [Ziine](xref:ZiineDemoSystem) > *[Linking Shapes]* view > *[positioning > DYNAMIC]* page.
+> For an example, see [Ziine](xref:ZiineDemoSystem) > *Visual Overview Design Examples* view > *[positioning > DYNAMIC]* page.
 
 ## Calibrating the X and Y axis
 

@@ -27,6 +27,15 @@
           topicUid: Overview_Platform_Open_Platform
     - name: DataMiner Cloud Platform
       topicUid: Overview_DCP
+    - name: Agile partnership
+      topicUid: Overview_Agile_Partnership_intro
+      items:
+        - name: Delivering value
+          topicUid: Overview_Agile_Partnership_delivering_value
+        - name: Principles agile partnership
+          topicUid: Overview_Agile_Partnership_principles
+        - name: Agile scope-based deployment
+          topicUid: Overview_Agile_Partnership_scope_based_deployment
     - name: Training courses and certification
       topicUid: Overview_Training_intro
       items:
@@ -40,14 +49,21 @@
           topicUid: Overview_Training_videolibrary
         - name: Agile Awareness Training
           topicUid: Overview_Training_agile_aw
-    - name: Technical support and maintenance
-      topicUid: Overview_Support_intro
+    - name: Support Services
+      topicUid: Overview_Support_DMS_M_and_S
       items:
-        - name: Warranty
+        - name: Standard limited warranty
           topicUid: Overview_Support_warranty
-        - name: DMS Maintenance and Support
-          topicUid: Overview_Support_DMS_M_and_S
-        - name: Upgrade policy and timing
+        - name: Software updates and upgrades
           topicUid: Overview_Support_upgrade_policy
-        - name: Technical support escalations and SLAs
-          topicUid: Overview_Support_Escalations_SLAs
+        - name: Out-of-business-hours support
+          topicUid: Overview_Out_Of_Business_Hours_Support
+        - name: Support services agreement
+          topicUid: Support_services_agreement
+    - name: Compliance statements
+      topicUid: Overview_Compliance_Statements_intro
+      items:
+        - name: Requirements vs. goals and objectives
+          topicUid: Overview_Compliance_Statements_RvsG_O
+        - name: Tender compliancy (licenses / engineering days)
+          topicUid: Overview_Compliance_Statements_Tender_Compliancy

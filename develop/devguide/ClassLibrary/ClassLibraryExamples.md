@@ -12,7 +12,7 @@ The following example creates a new element and then waits until the element is 
 /// <summary>
 /// The QAction entry point.
 /// </summary>
-/// <param name="protocol">Link with SLProtocol process.</param>
+/// <param name="slProtocol">Link with SLProtocol process.</param>
 public static void Run(SLProtocol slProtocol)
 {
     try
@@ -59,16 +59,13 @@ private static IDmsElement GetElementAfterStartupComplete(SLProtocol protocol, I
 {
     if (timeout.TotalMinutes > 5)
     {
-        throw new ArgumentException("Timeout too big.", "timeout");
+        throw new ArgumentException("Timeout too big.", nameof(timeout));
     }
 
     if (interval.TotalMinutes > 1)
     {
-        throw new ArgumentException("Interval too big.", "timeout");
+        throw new ArgumentException("Interval too big.", nameof(interval));
     }
-
-    int timeoutMs = Convert.ToInt32(timeout.TotalMilliseconds);
-    int intervalMs = Convert.ToInt32(interval.TotalMilliseconds);
 
     IDmsElement element = null;
 
@@ -78,7 +75,7 @@ private static IDmsElement GetElementAfterStartupComplete(SLProtocol protocol, I
 
     bool elementIsKnownInSLNet = false;
 
-    while (!elementIsKnownInSLNet && sw.ElapsedMilliseconds <= timeoutMs)
+    while (!elementIsKnownInSLNet && sw.Elapsed <= timeout)
     {
         try
         {
@@ -87,19 +84,19 @@ private static IDmsElement GetElementAfterStartupComplete(SLProtocol protocol, I
         }
         catch (ElementNotFoundException)
         {
-            Thread.Sleep(intervalMs);
+            Thread.Sleep(interval);
         }
     }
 
     bool elementStartupComplete = false;
 
-    while (!elementStartupComplete && sw.ElapsedMilliseconds <= timeoutMs)
+    while (!elementStartupComplete && sw.Elapsed <= timeout)
     {
         elementStartupComplete = element.IsStartupComplete();
 
         if (!elementStartupComplete)
         {
-            Thread.Sleep(intervalMs);
+            Thread.Sleep(interval);
         }
     }
 

@@ -261,17 +261,9 @@ This is because the IIS_IUSRS group has not been granted "Local Activation" perm
 
 Normally, Windows Firewall is configured automatically when you install DataMiner. However, if you want to configure it manually, do the following:
 
-1. Go to *Start > Control Panel > Windows Firewall*.
+1. Go to *Start > Control Panel > System and Security > Windows Defender Firewall*.
 
-1. Click *Allow an app or feature through Windows Firewall*.
-
-1. Click the *Allow another app...* button.
-
-1. Next to *Path*, click the *Browse* button and browse to *C:\Program Files (x86)\Internet Explorer\ieexplore.exe*.
-
-1. Click *Add*.
-
-1. Go back to the *Windows Firewall* page of the control panel and click *Advanced Settings*.
+1. Click *Advanced Settings*.
 
 1. On the *Inbound Rules* tab page, the following ports will need to be added:
 

@@ -16,6 +16,9 @@ If you have the Owner or Admin role on DCP, you can enable or disable the remote
 
 1. In the Admin app, check whether the correct organization is mentioned in the header bar.
 
+   > [!TIP]
+   > See also: [Accessing the Admin app](xref:Accessing_the_Admin_app)
+
 1. If a different organization should be selected, click the organization selector in the top-right corner and select the organization in the list.
 
    ![Organization selector](~/user-guide/images/CloudAdmin_Selector.png)

@@ -12,7 +12,7 @@ Defines a complete command.
 
 ## Attributes
 
-|Name|Type|Required|Description|
+|Name|Type&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|Required|Description|
 |--- |--- |--- |--- |
 |[id](xref:Protocol.Commands.Command-id)|[TypeNonLeadingZeroUnsignedInt](xref:Protocol-TypeNonLeadingZeroUnsignedInt)|Yes|Specifies the command ID.|
 |[ascii](xref:Protocol.Commands.Command-ascii)|[TypeTrueOrSemicolonSeparatedNumbers](xref:Protocol-TypeTrueOrSemicolonSeparatedNumbers)||Allows to specify that parameters should be sent as ASCII even if the protocol is in Unicode.|

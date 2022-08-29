@@ -21,7 +21,7 @@ Defines a field to be included in this tab of the search chain.
 
 ## Attributes
 
-|Name|Type|Required|Description|
+|Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|Type&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|Required|Description|
 |--- |--- |--- |--- |
 |[columnPid](xref:Protocol.Chains.SearchChain.Tabs.Tab.Fields.Field-columnPid)|unsignedInt|Yes|Specifies the column parameter ID of a column of the table referred to by the tablePid attribute of the enclosing Tab, or a column of a table that is linked with this table.|
 |[name](xref:Protocol.Chains.SearchChain.Tabs.Tab.Fields.Field-name)|[TypeNonEmptyString](xref:Protocol-TypeNonEmptyString)|Yes|Specifies the name of the search field.|

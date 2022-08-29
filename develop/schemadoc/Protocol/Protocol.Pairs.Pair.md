@@ -12,7 +12,7 @@ Defines a pair consisting of a command and optionally a response.
 
 ## Attributes
 
-|Name|Type|Required|Description|
+|Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|Type|Required|Description|
 |--- |--- |--- |--- |
 |[id](xref:Protocol.Pairs.Pair-id)|[TypeNonLeadingZeroUnsignedInt](xref:Protocol-TypeNonLeadingZeroUnsignedInt)|Yes|Specifies the unique ID of the pair.|
 |[options](xref:Protocol.Pairs.Pair-options)|string||Specifies a number of options, separated by semicolons (”;”).|

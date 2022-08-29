@@ -102,15 +102,15 @@ In the *\<HyperLink>* tag, enter the following content, depending on the type of
 
 - **Type "openview"**: The view ID. Alternatively, you can use the \[VID\] placeholder to open the view of the selected alarm.
   
-  From DataMiner 9.6.3 onwards, you can also have the view opened on a particular page, using the same syntax as in a Cube URL (e.g. *\[VID\]::Aggregation*). See [Opening a card on a particular page](xref:Opening_DataMiner_Cube#opening-a-card-on-a-particular-page).
+  From DataMiner 9.6.3 onwards, you can also have the view opened on a particular page, using the same syntax as in a Cube URL (e.g. *\[VID\]::Aggregation*). See [Opening a card on a particular page](xref:Options_for_opening_DataMiner_Cube#opening-a-card-on-a-particular-page).
 
 - **Type "openservice"**: The service ID. Alternatively, you can use the \[SID\] placeholder to open the service of the selected alarm.
 
-  From DataMiner 9.6.3 onwards, you can also have the service opened on a particular page, using the same syntax as in a Cube URL (e.g. *\[SID\]:d:Australia Service*). See [Opening a card on a particular page](xref:Opening_DataMiner_Cube#opening-a-card-on-a-particular-page).
+  From DataMiner 9.6.3 onwards, you can also have the service opened on a particular page, using the same syntax as in a Cube URL (e.g. *\[SID\]:d:Australia Service*). See [Opening a card on a particular page](xref:Options_for_opening_DataMiner_Cube#opening-a-card-on-a-particular-page).
 
 - **Type "openelement"**: The element ID. Alternatively, you can use the \[EID\] placeholder to open the element of the selected alarm.
 
-  From DataMiner 9.6.3 onwards, you can also have the element opened on a particular page, using the same syntax as in a Cube URL (e.g. *\[EID\]:Data:Performance/Ping*). See [Opening a card on a particular page](xref:Opening_DataMiner_Cube#opening-a-card-on-a-particular-page).
+  From DataMiner 9.6.3 onwards, you can also have the element opened on a particular page, using the same syntax as in a Cube URL (e.g. *\[EID\]:Data:Performance/Ping*). See [Opening a card on a particular page](xref:Options_for_opening_DataMiner_Cube#opening-a-card-on-a-particular-page).
 
 - **Type "openparameter"**: The parameter ID. Alternatively, you can use the \[PID\] placeholder to open the parameter of the selected alarm.
 

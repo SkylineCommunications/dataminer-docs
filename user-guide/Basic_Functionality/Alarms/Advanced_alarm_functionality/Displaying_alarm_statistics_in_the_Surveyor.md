@@ -8,17 +8,8 @@ In the Surveyor, statistical alarm data can be displayed next to elements, servi
 
 The settings that control the data being displayed have to be configured in *MaintenanceSettings.xml* and are synchronized across all DMAs in the DMS.
 
-In this section:
-
-- [Configuration in MaintenanceSettings.xml](#configuration-in-maintenancesettingsxml)
-
-- [Example of a Surveyor configuration in MaintenanceSettings.xml](#example-of-a-surveyor-configuration-in-maintenancesettingsxml)
-
-- [View statistics in Visio drawings](#view-statistics-in-visio-drawings)
-
 > [!TIP]
-> See also:
-> <https://community.dataminer.services/video/surveyor-displaying-alarm-statistics/>
+> See also: [Surveyor – Displaying alarm statistics](https://community.dataminer.services/video/surveyor-displaying-alarm-statistics/) on DataMiner Dojo
 
 ## Configuration in MaintenanceSettings.xml
 
@@ -80,7 +71,7 @@ In this section:
 ```
 
 > [!TIP]
-> See also: [MaintenanceSettings.xml](xref:MaintenanceSettings_xml#maintenancesettingsxml)
+> See also: [MaintenanceSettings.xml](xref:MaintenanceSettings_xml)
 
 ## View statistics in Visio drawings
 

@@ -12,12 +12,11 @@ The following overview clearly shows how the DataMiner Agent software is a colle
 
 ### Overview of the DataMiner Agent processes
 
-![](~/user-guide/images/slprocess_overview.jpg)
-
-
+![DataMiner Agent process overview](~/user-guide/images/slprocess_overview.jpg)
 
 > [!TIP]
 > See also:
+>
 > - [Main DMA software components](#main-dma-software-components)
 > - [Auxiliary DMA software components](#auxiliary-dma-software-components)
 
@@ -40,7 +39,7 @@ The central process of a DataMiner Agent.
 
 ### SLDataGateway
 
-From DataMiner version 9.0 onwards, this process calculates the average trending information.
+This process calculates the average trending information.
 
 If a Cassandra database is installed, this process also handles the following:
 
@@ -63,8 +62,7 @@ Keeps track of parameter values that have to be shown to the user and creates al
 On compatible systems, SLElement is run as a 64-bit process. However, it can still be run as a 32-bit process if it is registered as such with a batch file from the Tools directory.
 
 > [!NOTE]
-> - This process is only aware of parameters that are being monitored and parameters that have to be displayed on the user interface.
-> - In DataMiner versions prior to 9.0, this process also calculates parameter trending values. From DataMiner version 9.0 onwards, this function is taken over by the SLDataGateway process.
+> This process is only aware of parameters that are being monitored and parameters that have to be displayed on the user interface.
 
 ### SLLog
 
@@ -75,8 +73,7 @@ Manages all interaction with the different log files found in the DataMiner Syst
 Controls all communication among DataMiner Agents, and between DataMiner Agents and their clients.
 
 > [!TIP]
-> See also:
-> [Configuring SLNet settings in MaintenanceSettings.xml](xref:Configuration_of_DataMiner_processes#configuring-slnet-settings-in-maintenancesettingsxml)
+> See also: [Configuring SLNet settings in MaintenanceSettings.xml](xref:Configuration_of_DataMiner_processes#configuring-slnet-settings-in-maintenancesettingsxml)
 
 > [!NOTE]
 > Data for trend data queries is cached in the SLNet process after it has been received from SLDataGateway and before it is processed further. In the SLNetClientTest tool, several options are available related to the trend cache. However, note that this is an advanced system administration tool that should be used with extreme care. See [Configuring trend caching](xref:SLNetClientTest_tool_advanced_procedures#configuring-trend-caching).
@@ -102,8 +99,7 @@ Executes the instructions specified in DataMiner protocols.
 Controls all communication from and to SNMP devices acting as SNMP agents.
 
 > [!TIP]
-> See also:
-> [Interaction between SNMP manager and SNMP agent](xref:Interaction_between_SNMP_manager_and_SNMP_agent)
+> See also: [Interaction between SNMP manager and SNMP agent](xref:Interaction_between_SNMP_manager_and_SNMP_agent)
 
 ### SLWatchdog
 
@@ -117,8 +113,9 @@ It also keeps track of a number of key performance indicators.
 
 > [!TIP]
 > See also:
+>
 > - [SLWatchdog](xref:Configuration_of_DataMiner_processes#slwatchdog)
-> - [MaintenanceSettings.xml](xref:MaintenanceSettings_xml#maintenancesettingsxml)
+> - [MaintenanceSettings.xml](xref:MaintenanceSettings_xml)
 
 ## Auxiliary DMA software components
 
@@ -128,9 +125,7 @@ For information on the main processes, see [Main DMA software components](#main-
 
 ### SLAnalytics
 
-This process is introduced in DataMiner 9.0, and only starts on a DMA that uses a Cassandra database.
-
-The process supports advanced artificial intelligence functions in DataMiner, such as trend forecasting, anomaly detection and alarm focus calculation.
+This process only starts on a DMA that uses a Cassandra database. It supports advanced artificial intelligence functions in DataMiner, such as trend forecasting, anomaly detection, and alarm focus calculation.
 
 > [!NOTE]
 > Prior to DataMiner 9.5.5, it is possible to configure when prediction models are backed up, in the file *SLAnalytics.config*. However, from DataMiner 9.5.5 onwards, prediction models are no longer backed up, but instead retrieved from a cache and re-computed in case they are not available in the cache. For more information, see [SLAnalytics.config](xref:SLAnalytics_config#slanalyticsconfig).
@@ -140,15 +135,15 @@ The process supports advanced artificial intelligence functions in DataMiner, su
 The DMS Reporter process.
 
 > [!TIP]
-> See also:
-> [DMS Reporter](xref:reporter#dms-reporter)
+> See also: [DMS Reporter](xref:reporter#dms-reporter)
 
 > [!NOTE]
-> - Timeline data that are received from SLDataGateway or directly from a MySQL database are cached in the SLASPConnection process. Some caching options can be configured in *MaintenanceSettings.xml*. See [MaintenanceSettings.xml](xref:MaintenanceSettings_xml#maintenancesettingsxml).
-> - You can also find more information and settings for timeline caching at <br>*http(s)://\[DmaIp\]/Reports/Tools.asp*:
->     - The page displays timeline cache statistics and list contents.
->     - The expiration time, grace time and maximum number of records can be set here, but only for the current session. These settings can be permanently changed in *MaintenanceSettings.xml*.
->     - Timeline caching and timeline cache verbose logging can be enabled and disabled on this page, or directly in *MaintenanceSettings.xml*.
+>
+> - Timeline data that are received from SLDataGateway or directly from a MySQL database are cached in the SLASPConnection process. Some caching options can be configured in *MaintenanceSettings.xml*. See [MaintenanceSettings.xml](xref:MaintenanceSettings_xml).
+> - You can also find more information and settings for timeline caching at *http(s)://\[DmaIp\]/Reports/Tools.asp*:
+>   - The page displays timeline cache statistics and list contents.
+>   - The expiration time, grace time and maximum number of records can be set here, but only for the current session. These settings can be permanently changed in *MaintenanceSettings.xml*.
+>   - Timeline caching and timeline cache verbose logging can be enabled and disabled on this page, or directly in *MaintenanceSettings.xml*.
 
 ### SLAutomation
 
@@ -158,16 +153,14 @@ The DMS Automation process.
 > C# code in Automation scripts is processed by SLAutomation, whereas C# code in protocol QActions is processed by SLScripting.
 
 > [!TIP]
-> See also:
-> [DMS Automation](xref:automation#dms-automation)
+> See also: [DMS Automation](xref:automation#dms-automation)
 
 ### SLBrain
 
 The DMS Correlation process.
 
 > [!TIP]
-> See also:
-> [DMS Correlation](xref:correlation#dms-correlation)
+> See also: [DMS Correlation](xref:correlation#dms-correlation)
 
 ### SLGSMGateway
 
@@ -176,8 +169,7 @@ The DMS Mobile Gateway process.
 Sends and receives SMS messages (i.e. text messages).
 
 > [!TIP]
-> See also:
-> [DMS Mobile Gateway](xref:MobileGateway#dms-mobile-gateway)
+> See also: [DMS Mobile Gateway](xref:MobileGateway#dms-mobile-gateway)
 
 ### SLHelper
 
@@ -211,8 +203,7 @@ Communicates with third-party applications acting as SNMP managers (e.g. HP Open
 Also sends all outgoing email notifications.
 
 > [!TIP]
-> See also:
-> [Interaction between SNMP manager and SNMP agent](xref:Interaction_between_SNMP_manager_and_SNMP_agent)
+> See also: [Interaction between SNMP manager and SNMP agent](xref:Interaction_between_SNMP_manager_and_SNMP_agent)
 
 ### SLSpectrum
 
@@ -221,8 +212,7 @@ The DMS Spectrum Analysis process.
 Also manages the time slots assigned to each of the clients that want to use a particular spectrum analyzer.
 
 > [!TIP]
-> See also:
-> [DMS Spectrum Analysis](xref:SpectrumAnalysis#dms-spectrum-analysis)
+> See also: [DMS Spectrum Analysis](xref:SpectrumAnalysis#dms-spectrum-analysis)
 
 ### SLTaskBarUtility
 

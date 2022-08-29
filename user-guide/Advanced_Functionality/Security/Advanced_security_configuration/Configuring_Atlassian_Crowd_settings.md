@@ -28,7 +28,7 @@ In the Atlassian Crowd server, make sure there is an application named “datami
 
 ## Authenticating DataMiner users against an Atlassian Crowd server
 
-From DataMiner 8.5.1 onwards, DataMiner users can be authenticated against an Atlassian Crowd server.
+DataMiner users can be authenticated against an Atlassian Crowd server.
 
 To configure this, open the *DataMiner.xml* file, add an *\<ExternalAuthentication>* tag as shown in the example below, and restart the DataMiner Agent. Users added to the Crowd server and imported into DataMiner should then be able to log on.
 
@@ -42,7 +42,7 @@ To configure this, open the *DataMiner.xml* file, add an *\<ExternalAuthenticati
 ```
 
 > [!NOTE]
-> From DataMiner 9.0.0 onwards, DataMiner Cube also supports domain-specific single sign-on (SSO) when using third-party authentication via an Atlassian Crowd server.
+> DataMiner Cube also supports domain-specific single sign-on (SSO) using third-party authentication via an Atlassian Crowd server.
 >
 > In case Crowd single sign-on is used, as soon as the DataMiner Agent receives the SSO configuration from the Crowd server it authenticates against, it will pass this configuration on to the DataMiner Cube client in the form of a cookie.
 

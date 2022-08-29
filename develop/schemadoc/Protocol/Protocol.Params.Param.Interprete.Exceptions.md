@@ -12,7 +12,7 @@ Contains Exception elements, each representing a different exceptional state.
 
 ## Children
 
-|Name|Occurrences|Description|
+|Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|Occurrences|Description|
 |--- |--- |--- |
 |&nbsp;&nbsp;[Exception](xref:Protocol.Params.Param.Interprete.Exceptions.Exception)|[0, *]|Defines an exception for an exception value you want to intercept of which the Interprete.Type is identical to that of the parameter in question.|
 

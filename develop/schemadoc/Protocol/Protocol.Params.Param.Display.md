@@ -12,7 +12,7 @@ Defines if and how a parameter will be displayed on the user interface.
 
 ## Children
 
-|Name|Occurrences|Description|
+|Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|Occurrences|Description|
 |--- |--- |--- |
 |***All***|||
 |&nbsp;&nbsp;[Decimals](xref:Protocol.Params.Param.Display.Decimals)|[0, 1]|Defines the number of decimals to be used to display the parameter value on the user inter­face.|

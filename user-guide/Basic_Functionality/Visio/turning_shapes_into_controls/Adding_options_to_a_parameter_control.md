@@ -9,7 +9,7 @@ If you used a shape data field of type **ParameterControl** to turn a shape into
 > [!TIP]
 >
 > - See also: [Turning a shape into a parameter control](xref:Turning_a_shape_into_a_parameter_control)
-> - For an example, see [Ziine](xref:ZiineDemoSystem) > *[Linking Shapes]* view > *[controls > PARAM]* page.
+> - For an example, see [Ziine](xref:ZiineDemoSystem) > *Visual Overview Design Examples* view > *[controls > PARAM]* page.
 
 ## Configuring the shape data field
 

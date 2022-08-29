@@ -34,7 +34,7 @@ To define a progress bar, set the Type of the Measurement tag to "progress" and 
 ![alt text](../../images/uiprogressbar.png "DataMiner Cube progress bar")
 
 > [!NOTE]
-> Only the Range tag in Display will create a functioning progress bar for both Cube and Element Display. The Range tag of Interprete will not work for Cube or Element Display and will cause the progress bar to default to 0-100 for Element Display (giving the impression that it works in Element Display and not in Cube).
+> Only the Range tag in Display will create a functioning progress bar for both DataMiner Cube and the deprecated Element Display application. The Range tag of Interprete will not work for Cube or Element Display and will cause the progress bar to default to 0-100 for Element Display (giving the impression that it works in Element Display and not in Cube).
 
 ## See also
 

@@ -17,7 +17,7 @@ Using a shape data field of type **Info**, you can make shapes display informati
   > See also: [Generating the connectivity chain for an SRM service instance](xref:Generating_the_connectivity_chain_for_an_SRM_service_instance)
 
 > [!TIP]
-> For an example, see [Ziine](xref:ZiineDemoSystem) > *[Linking Shapes]* view > *[data > PROPERTIES]* page.
+> For an example, see [Ziine](xref:ZiineDemoSystem) > *Visual Overview Design Examples* view > *[data > PROPERTIES]* page.
 
 ## Configuring the shape data field
 
@@ -135,6 +135,8 @@ Add a shape data field of type **Info** to the shape, and set its value to one o
     > - Using the "IN USE" placeholder may affect performance in case the system contains a large number of bookings.
 
 - **Bookings**: See [Linking a shape to a booking](xref:Linking_a_shape_to_a_booking).
+
+- **EPM objects**: See [Linking a shape to an EPM object](xref:Linking_a_shape_to_an_EPM_object).
 
 ## Placeholder for Info value in shape text
 

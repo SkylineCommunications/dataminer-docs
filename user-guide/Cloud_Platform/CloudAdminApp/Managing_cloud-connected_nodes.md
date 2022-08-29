@@ -14,6 +14,9 @@ To upgrade the DxMs used by the nodes in a cloud-connected DataMiner System:
 
 1. In the Admin app, check whether the correct organization is mentioned in the header bar.
 
+   > [!TIP]
+   > See also: [Accessing the Admin app](xref:Accessing_the_Admin_app)
+
 1. If a different organization should be selected, click the organization selector in the top-right corner and select the organization in the list.
 
    ![Organization selector](~/user-guide/images/CloudAdmin_Selector.png)
@@ -34,6 +37,9 @@ When a node in a DataMiner System is no longer used, you can remove it from the 
 To do so:
 
 1. In the Admin app, check whether the correct organization is mentioned in the header bar.
+
+   > [!TIP]
+   > See also: [Accessing the Admin app](xref:Accessing_the_Admin_app)
 
 1. If a different organization should be selected, click the organization selector in the top-right corner and select the organization in the list.
 

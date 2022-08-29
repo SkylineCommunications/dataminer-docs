@@ -51,13 +51,12 @@ To access the computer settings in DataMiner Cube:
 
 On this page, you can select settings related to the connection of your computer to DataMiner Cube. These settings are also available in the Cube logon window. See [Logging on to DataMiner Cube](xref:Logging_on_to_DataMiner_Cube).
 
-- **Automatic log-on with saved user name and password**: Select this setting to have DataMiner Cube remember your user name and password, so that you do not have to enter these except after an explicit logout.
+- **Automatic log-on with saved user name and password**: Select this setting to have DataMiner Cube remember your username and password, so that you do not have to enter these except after an explicit logout.
 
-- **Connection type**: Select a connection type in the drop-down list. By default, this is set to *Auto*. When you select other connection types, *Remoting* or *Web services*, more settings will appear that need to be specified (destination port, polling interval, etc.).
+- **Connection type**: Select a connection type in the drop-down list. By default, this is set to *Auto*. If you select *Remoting* instead, more settings will be displayed that need to be specified (destination port, polling interval, etc.).
 
   > [!NOTE]
-  > - Connecting via web services is not possible if WSE is not installed on the DMA.
-  > - As WSE is deprecated, the Web Services option is no longer available from DataMiner 10.0.0 \[CU6\]/10.0.11 onwards.
+  > Prior to DataMiner 10.0.0 \[CU6\]/10.0.11, you can also select the option *Web Services*. However, as WSE is deprecated, this option is no longer available in recent DataMiner versions. Connecting via web services is not possible if WSE is not installed on the DMA.
 
   > [!TIP]
   > See also: [Manual configuration of client communication settings](xref:DMA_configuration_related_to_client_applications#manual-configuration-of-client-communication-settings)

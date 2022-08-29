@@ -19,7 +19,7 @@ The numbers in the drawing refer to the phases described in the table below.
 
 ## The QAction debugging process
 
-| Phase | Description |
+| <div style="width:220px">Phase</div> | Description |
 |-------|-------------|
 | 1. Open the protocol XML file | You open the protocol XML file, which can be stored locally or on a DMA. |
 | 2. Edit the QAction | In the protocol XML file, you locate the QAction, and click the *Edit C#* button in front of the QAction tag.<br> Result: A temporary C# project will be created. |

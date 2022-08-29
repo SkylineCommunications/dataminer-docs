@@ -24,13 +24,15 @@ The following DLL files do not have to be specified in the dllImport attribute a
 
 - System.dll
 - System.Core.dll
+- System.Xml.dll (RN 19494)
+- nestandard.dll (from DataMiner 10.1.11 onwards (RN 30755))
 - SLManagedScripting.dll
 - SLNetTypes.dll
-- Interop.sldms.dll
+- Interop.SLDms.dll
 - [ProtocolName].[ProtocolVersion].QAction.Helper.dll
 - QActionHelperBaseClasses.dll
-- Skyline.DataMiner.Storage.Types.dll (since DataMiner 10.0.6 (RN 25036)).
-- SLLoggerUtil.dll (since DataMiner 10.0.10 (RN 26434)).
+- Skyline.DataMiner.Storage.Types.dll (from DataMiner 10.0.6 onwards (RN 25036))
+- SLLoggerUtil.dll (from DataMiner 10.0.10 onwards (RN 26434))
 
 > [!NOTE]
 >

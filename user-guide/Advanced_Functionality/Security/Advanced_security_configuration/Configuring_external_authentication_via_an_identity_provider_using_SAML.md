@@ -50,7 +50,7 @@ Once this has been configured, if users try to log in to the DMA using external 
 
 ## Creating a DataMiner metadata file
 
-To create a DataMiner metadata file, proceed as follows:
+To create a DataMiner metadata file (also referred to as *Service Provider Metadata*), proceed as follows:
 
 1. Copy the following template into a new XML file named e.g. *spMetadata.xml*:
 
@@ -80,6 +80,7 @@ To create a DataMiner metadata file, proceed as follows:
 
 > [!NOTE]
 > The ``WantAssertionsSigned`` flag is supported as from DataMiner version 10.2.1/10.2.0. If you are using an older version, then set this to false.
+> SAML responses without signatures can be freely edited to tamper with permissions on the application, leading to severe vulnerabilites. We **highly recommend** setting ``WantAssertionsSigned`` to *true* to mitigate this.
 
 ## Identity providers
 
@@ -142,7 +143,7 @@ Once you have established a trust relationship between DataMiner (i.e. the servi
 
 1. Gather the following information:
 
-   - **Client ID** and **Tenant ID**: These GUIDs identify the application (DataMiner) in the Azure AD platform, and identify the users & groups directory on the Azure portal, respectively. You can find these fields on the root page of the application: *Azure Active Directory > App registrations > [your application name]*.
+   - **Client ID**, **Object ID**, and **Tenant ID**: These GUIDs identify the application (DataMiner) in the Azure AD platform, and identify the users & groups directory on the Azure portal, respectively. You can find these fields on the root page of the application: *Azure Active Directory > App registrations > [your application name]*.
 
      Creating an Enterprise Application will also create an app registration with the same name, but you will not find it under *owned application*.
 
@@ -164,6 +165,7 @@ Once you have established a trust relationship between DataMiner (i.e. the servi
       ```xml
       <AzureAD
        tenantId="[GUID]"
+       objectId="[GUID]"
        clientId="[GUID]"
        clientSecret="[the DataMiner application secret value]"
        username="[username]"
@@ -179,15 +181,17 @@ Once you have established a trust relationship between DataMiner (i.e. the servi
 
    For delegated querying:
 
+   - Microsoft Graph \> Application.Read.All – Delegated – Read applications
    - Microsoft Graph \> GroupMember.Read.All – Delegated – Read groups memberships
    - Microsoft Graph \> User.Read – Delegated – Sign in and read user profile
    - Microsoft Graph \> User.Read.All – Delegated – Read all users’ full profiles
 
    For application querying (supported from DataMiner 10.1.11/10.2.0 onwards):
 
-   - Microsoft Graph \> GroupMember.Read.All – Application
-   - Microsoft Graph \> User.Read.All – Application
-   - Microsoft Graph \> User.Read – Delegated
+   - Microsoft Graph \> Application.Read.All – Application – Read applications
+   - Microsoft Graph \> GroupMember.Read.All – Application – Read groups memberships
+   - Microsoft Graph \> User.Read.All – Application - Read all users’ full profiles
+   - Microsoft Graph \> User.Read – Delegated – Sign in and read user profile
 
 1. Add the Azure AD users to DataMiner:
 
@@ -286,7 +290,7 @@ DataMiner supports Okta as identity provider as from version 10.1.11. Use Okta's
      > [!TIP]
      > It is recommended to use a PNG image with a transparent background and a landscape orientation.
 
-1. Configure the SAML settings:
+1. Configure the Okta SAML settings:
 
    - **Single sign on URL**: The location where the SAML assertion is sent with a POST operation.
 
@@ -304,9 +308,9 @@ DataMiner supports Okta as identity provider as from version 10.1.11. Use Okta's
        - ``https://dataminer.example.com/jobs/``
        - ``https://dataminer.example.com/ticketing/``
 
-   - **Audience URI**: The intended audience of the SAML assertion.
+   - **Audience URI (SP Entity ID)**: The intended audience of the SAML assertion.
 
-     In this box, enter ``https://dataminer.example.com/root/``.
+     In this box, enter ``https://dataminer.example.com/``.
 
    - **Name ID format**: The username format you are sending in the SAML Response.
 
@@ -315,6 +319,16 @@ DataMiner supports Okta as identity provider as from version 10.1.11. Use Okta's
    - **Application username**: The default value to use for the username with the application.
 
      Select "Email".
+     
+   - **Attribute Statements**: Add a new attribute statement with name *Email* (case-sensitive), format *Basic*, and value *user.email*.
+
+1. Open the *Sign On* tab of your Okta application and scroll down to *SAML Signing Certificates*.
+
+1. In the *Actions* column of the *Active* certificate, click *View IdP metadata*.
+
+1. Save this IdP metadata XML file to the DataMiner Agent, e.g. `C:\Skyline DataMiner\okta-ip-metadata.xml`.
+
+1. Open the *DataMiner.xml* file and fill in the path to the IdP metadata file in the *ipMetadata* attribute of the *&lt;ExternalAuthentication&gt;* node.
 
 ## Error messages
 

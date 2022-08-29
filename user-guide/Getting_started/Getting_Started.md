@@ -7,9 +7,9 @@ uid: Part1GettingStarted
 ### Get to know the basics
 
 - [Basic concepts](xref:BasicConcepts)
-- [DataMiner System layout](xref:GeneralLayout#dataminer-system-layout)
-- [Accessing DataMiner](xref:DataminerApplications#accessing-dataminer)
-- [The DataMiner user interface](xref:GettingStarted#the-dataminer-user-interface)
+- [DataMiner System layout](xref:GeneralLayout)
+- [Accessing DataMiner](xref:DataminerApplications)
+- [The DataMiner user interface](xref:GettingStarted)
 
 ### Discover DataMiner in detail
 
@@ -21,7 +21,7 @@ uid: Part1GettingStarted
 
 ### More on specific DataMiner modules and apps
 
-- [Advanced DataMiner modules](xref:Part4AdvancedModules#advanced-dataminer-modules)
+- [Advanced DataMiner modules](xref:Part4AdvancedModules)
 - [DataMiner Standard Apps](xref:Part5StandardApps)
 
 ### Are you a DataMiner Administrator?

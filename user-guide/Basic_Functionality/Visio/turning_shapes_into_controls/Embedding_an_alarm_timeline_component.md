@@ -7,7 +7,7 @@ uid: Embedding_an_alarm_timeline_component
 Using an alarm timeline component, you can visualize the alarm history of parameters as a dynamic timeline.
 
 > [!TIP]
-> For examples, see [Ziine](xref:ZiineDemoSystem) > *[Linking Shapes]* view > *[controls > TIMELINE1 and TL2]* pages.
+> For examples, see [Ziine](xref:ZiineDemoSystem) > *Visual Overview Design Examples* view > *[controls > TIMELINE1 and TL2]* pages.
 
 To configure a shape as an alarm timeline component:
 
@@ -104,6 +104,7 @@ To configure a shape as an alarm timeline component:
    - For a predefined alarm filter, simply specify the filter name. However, note that this is only supported for public alarm filters.
 
    > [!NOTE]
+   >
    > - Prior to DataMiner 9.6.0 \[CU21\]/10.0.0 \[CU9\]/10.1.1, only filters with properties are supported.
    > - You can define a custom name for the alarm tab page by adding "TabName=", followed by the custom name to the value of the **AlarmFilter** data field, separated from the actual alarm filter with a pipe character ("\|").
    > - In certain EPM environments, filters can be specified to the left of the timeline in Visual Overview. You can insert these filters in the alarm filter by using the following placeholders:
@@ -114,7 +115,7 @@ To configure a shape as an alarm timeline component:
    > [!TIP]
    > See also: [Making a shape filter Alarm Console tabs when clicked](xref:Making_a_shape_filter_Alarm_Console_tabs_when_clicked)
 
-1. Normally, as long as not all configured timelines have been received by the client, a "Loading" message will be displayed in Visual Overview. Optionally, you can disable this, by adding "EnableLoading=False" to the **Options** shape data field.
+1. Normally, as long as not all configured timelines have been received by the client, Visual Overview will indicate that content is still loading. Optionally, you can disable this, by adding "EnableLoading=False" to the **Options** shape data field.
 
    ```txt
    alarmtimelines|...|EnableLoading=False

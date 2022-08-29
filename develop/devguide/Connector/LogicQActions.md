@@ -20,7 +20,7 @@ Let's have a look at a basic C# QAction that runs when a button (with parameter 
     using System;
     using Skyline.DataMiner.Scripting;
 
-    public class Qaction
+    public class QAction
     {
         public static void Run(SLProtocol protocol)
         {
@@ -437,39 +437,42 @@ This option should only be used if really needed and care must be taken during i
 
 ## Starting an Automation script from a QAction
 
-To start an Automation script from a QAction, the SLNet message "ExecuteScriptMessage" can be used.
+To start an Automation script from a QAction, the SLNet message "ExecuteScriptMessage" can be used. You can send this message using the ExecuteScript method on SLProtocol. This is introduced in DataMiner 10.0.5 (RN 24475).
 
 ```csharp
-try
+public static void Run(SLProtocol protocol)
 {
-    string[] scriptOptions = { "OPTIONS:0", "CHECKSETS:TRUE", "EXTENDED_ERROR_INFO", "DEFER:TRUE" };
-    
-    ExecuteScriptMessage message = new ExecuteScriptMessage
+    try
     {
-        ScriptName = "Automation script",
-        Options = new SA(scriptOptions),
-        DataMinerID = -1,
-        HostingDataMinerID = -1
-    };
-    
-    var response = protocol.SLNet.SendSingleResponseMessage(message) as ExecuteScriptResponseMessage;
-    bool succeeded = response != null && !response.HadError;
-    
-    if (!succeeded)
-    {
-        // Script did not succeed.
+        string[] scriptOptions = { "OPTIONS:0", "CHECKSETS:TRUE", "EXTENDED_ERROR_INFO", "DEFER:TRUE" };
+        
+        ExecuteScriptMessage message = new ExecuteScriptMessage
+        {
+            ScriptName = "Automation script",
+            Options = new SA(scriptOptions),
+            DataMinerID = -1,
+            HostingDataMinerID = -1
+        };
+        
+        var response = protocol.ExecuteScript(message) as ExecuteScriptResponseMessage;
+        bool succeeded = response != null && !response.HadError;
+        
+        if (!succeeded)
+        {
+            // Script did not succeed.
+        }
     }
-}
-catch (Exception ex)
-{
-    protocol.Log("QA" + protocol.QActionID + "|" + protocol.GetTriggerParameter() + "|Run|Exception thrown:" + Environment.NewLine + ex, LogType.Error, LogLevel.NoLogging);
+    catch (Exception ex)
+    {
+        protocol.Log("QA" + protocol.QActionID + "|" + protocol.GetTriggerParameter() + "|Run|Exception thrown:" + Environment.NewLine + ex, LogType.Error, LogLevel.NoLogging);
+    }
 }
 ```
 
 For more information, refer to Skyline.DataMiner.Net.Messages.
 
 > [!NOTE]
-> To start an Automation script from a QAction, the use of the Interop.SLAutomation DLL is now deprecated. The StartScriptMessage should be used instead.
+> To start an Automation script from a QAction, the use of the Interop.SLAutomation DLL is now deprecated. The ExecuteScriptMessage should be used instead.
 
 ## Examples
 

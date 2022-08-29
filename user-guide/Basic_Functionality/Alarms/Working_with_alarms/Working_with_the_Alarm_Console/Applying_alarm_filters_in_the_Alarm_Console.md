@@ -20,7 +20,7 @@ This filter box can be used in different ways:
 
   - *Exclude \[highlighted text\] in filter*: This option can only be used on an item that is not yet in the filter, and adds a negative filter for this item. This is the equivalent to adding an exclamation mark in front of an item when you type text in the filter.
 
-  - *Search for \[selected text\] in new tab*: This option opens a new *Search alarms* tab in the Alarm Console, in which you can search through alarms using this filter. This option is only available on a DMA using at least DataMiner 10.0.0/10.0.2 with DataMiner Indexing.
+  - *Search for \[selected text\] in new tab*: This option opens a new *Search alarms* tab in the Alarm Console, in which you can search through alarms using this filter. This option is only available on a DMA using at least DataMiner 10.0.0/10.0.2 with [Elasticsearch](xref:Elasticsearch_database).
 
     > [!NOTE]
     > Prior to DataMiner 10.0.7, to have access to this feature, you need to have the *System configuration* > *Indexing Engine* > *UI available* user permission. This user permission is only displayed if *?EnableFeature=Indexing* is added to the Cube URL. From DataMiner 10.0.7 onwards, this user permission is no longer needed.
@@ -53,6 +53,7 @@ In the Alarm Console, you can add extra tab pages where you can specify a custom
 
 > [!TIP]
 > See also:
+>
 > - [Alarm Console – Advanced filtering](https://community.dataminer.services/video/alarm-console-advanced-filtering/) on DataMiner Dojo
 > - [Alarm Console – Alarm history](https://community.dataminer.services/video/alarm-console-alarm-history/) on DataMiner Dojo
 
@@ -78,6 +79,7 @@ To add such a filtered tab page:
 1. If you create a new filter, you will then need to specify it further, possibly using a wildcard expression or regular expressions.
 
    > [!NOTE]
+   >
    > - For more information on wildcards, see [Searching with wildcard characters](xref:Searching_in_DataMiner_Cube#searching-with-wildcard-characters).
    > - For more information on using regular expressions in filters, see [Alarm filters using regular expressions](#alarm-filters-using-regular-expressions).
    > - From DataMiner 9.0.5 onwards, it is possible to filter the Alarm Console based on a Visual Overview session variable. To do so, create a new filtered tab displaying current alarms, and create a filter using *Matches wildcard expression*, *Does not match wildcard expression*, *Matches regular expression*, or *Does not match regular expression*. In the second part of the filter, specify the variable, in the same way as in Visio, e.g. *\[var:LoadTime\]*. For more information, see [\[var:VariableName\]](xref:Placeholders_for_variables_in_shape_data_values#varvariablename).
@@ -90,6 +92,7 @@ To add such a filtered tab page:
 1. Optionally, click *Count alarms* to check how many alarms will be shown when the tab configuration is applied.
 
    > [!NOTE]
+   >
    > - If you chose to display history alarms, the *Count alarms* option will only work with certain filter combinations. If you configure a filter combination for which the option is not available, a notification message will appear.
    > - From DataMiner 9.6.0 \[CU25\], 10.0.0 \[CU19\], 10.1.0 \[CU8\] and 10.1.11 onwards, when you create a tab to display history alarms or alarms in a sliding window, for filters on element type, interface impact, parameter description, protocol, service impact, view ID/impact/name, or virtual function ID/impact/name, the *Count alarms* option is no longer available.
 
@@ -99,7 +102,7 @@ To add such a filtered tab page:
 
 ## Creating a search tab in the Alarm Console
 
-When you are connected to a DMA using at least DataMiner version 10.0.0/10.0.2 with DataMiner Indexing, the Alarm Console provides an additional option to create a dynamic search tab.
+When you are connected to a DMA using at least DataMiner version 10.0.0/10.0.2 with [Elasticsearch](xref:Elasticsearch_database), the Alarm Console provides an additional option to create a dynamic search tab.
 
 > [!NOTE]
 > Prior to DataMiner 10.0.7, to have access to this feature, you need to have the *System configuration* > *Indexing Engine* > *UI available* user permission. This user permission is only displayed if *?EnableFeature=Indexing* is added to the Cube URL. From DataMiner 10.0.7 onwards, this user permission is no longer needed.
@@ -168,7 +171,7 @@ To filter the alarm list to only show such unexpected alarms, click the followin
 
 Please note the following regarding the alarm focus feature:
 
-- This feature is only available if a Cassandra database is used. See [General database](xref:General_database).
+- This feature is only available if a Cassandra database is used. See [Cassandra database](xref:Cassandra_database).
 
 - The focus icon in the alarm bar is only displayed on tabs displaying active alarms.
 
@@ -195,6 +198,7 @@ To do so:
 1. Drag an element, protocol, parameter, etc. onto the Alarm Console. A new tab will automatically be created.
 
    > [!NOTE]
+   >
    > - With a redundancy group, this way of creating a filtered tab is not possible.
    > - To open a filtered tab for an element, service or view, you can also right-click the item in the Surveyor or on a card and select *Actions* > *Add tab to global Alarm Console*.
 
@@ -209,6 +213,7 @@ To do so:
 1. Click *Show alarms*.
 
 > [!NOTE]
+>
 > - Alarm filters based on views also include alarm events based on aggregation rules.
 > - If you want to open a filtered tab containing only alarms related to a particular DMA, this is possible from the *System Center* module. Go to the *Agents* page of System Center and select the DMA in question in the *manage* tab. Then click the *Show agent alarms* link at the top of the pane on the right. The filtered tab will then be opened in the Alarm Console. It will show all alarms on the DMA itself with severity Notice, Timeout or Error.
 
@@ -224,7 +229,7 @@ If you want to filter alarms using a regular expression:
 
 1. When creating a filter, select the *Matches Regular Expression* operator.
 
-2. Specify a regular expression.
+1. Specify a regular expression.
 
 ![Example of alarm filter with regular expression](~/user-guide/images/alarm_filter_regex_DM9.png)
 
@@ -239,6 +244,7 @@ For more information on how to construct regular expressions, here are a few int
 - [RegExLib.com Regular Expression Cheat Sheet](http://regexlib.com/CheatSheet.aspx)
 
 > [!NOTE]
+>
 > - DataMiner always wraps a regular expression in ^( and )$. This means that the expression must match the entire string.
 > - The checks are executed using the invariant culture and ignoring case.
 
@@ -326,7 +332,7 @@ When you create a filter in the Alarm Console, you can save it in order to use i
 1. To the right of *Saved filters*, click *\<Click to select>* and select the filter you want.
 
    > [!NOTE]
-   > - If you have selected a saved filter, but you do not have the user permission *Edit / delete protected filters*, an eye icon will be displayed next to the filter. Click this icon to view the contents of the filter.
+   > If you have selected a saved filter, but you do not have the user permission *Edit / delete protected filters*, an eye icon will be displayed next to the filter. Click this icon to view the contents of the filter.
 
 1. Proceed as in [Manually applying an alarm filter in an Alarm Console tab](#manually-applying-an-alarm-filter-in-an-alarm-console-tab).
 

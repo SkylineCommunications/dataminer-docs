@@ -9,10 +9,11 @@ Using **Parameters** and **ParametersOptions** shape data fields, you can make a
 With the **Parameters** shape data field, you specify which parameters should be included, and with the **ParametersOptions** shape data field, you determine how the information for these parameters is displayed.
 
 > [!NOTE]
+>
 > - This feature only works in DataMiner Cube.
 > - Up to DataMiner 8.5, the number of parameters that can be displayed in a Visio chart is limited to 10. From DataMiner 9.0.1/9.0.0 CU2 onwards, the maximum number of parameters has increased to 15.
 > - Alternatively, you can link a shape to a trend component instead. See [Linking a shape to a trend component](xref:Linking_a_shape_to_a_trend_component).
-> - For an example, see [Ziine](xref:ZiineDemoSystem) > *[Linking Shapes]* view > *[controls > PIE/BAR CHART]* page.
+> - For an example, see [Ziine](xref:ZiineDemoSystem) > *Visual Overview Design Examples* view > *[controls > PIE/BAR CHART]* page.
 
 ## Configuring the shape data fields
 
@@ -23,7 +24,9 @@ The chart can consist of one single shape or of several shapes that are grouped 
 
 To configure the shapes:
 
-1. If there is only one shape, add a shape data field of type **Parameters** to it.<br>If there are several shapes that are grouped, add a shape data field of type **Parameters** to the group.
+1. If there is only one shape, add a shape data field of type **Parameters** to it.
+
+   If there are several shapes that are grouped, add a shape data field of type **Parameters** to the group.
 
 1. Set the value of the **Parameters** shape data field to the parameters you wish to display, using the following syntax:
 
@@ -46,11 +49,14 @@ To configure the shapes:
    If you specify multiple parameter IDs, separate them by means of pipe characters ("\|").
 
    > [!NOTE]
+   >
    > - In the value of the shape data field, you can use placeholders to refer to e.g. session variables. For example: "219:341:114:\[Var:MyVariable\]\|219:341:114:\[Var:MyOtherVariable\]".
    > - From DataMiner 9.0.3 onwards, strings in table row value filters should be enclosed in single quotes to ensure correct parsing.
    > - From DataMiner 9.6.8 onwards, this syntax allows the use of element names, \[this element\] placeholders and keys containing forward slashes (e.g. dmaID/elementID).
 
-1. If there is only one shape, add a shape data field of type **ParametersOptions** to it.<br>If there are several shapes that are grouped, add a shape data field of type **ParametersOptions** to the group.
+1. If there is only one shape, add a shape data field of type **ParametersOptions** to it.
+
+   If there are several shapes that are grouped, add a shape data field of type **ParametersOptions** to the group.
 
 1. Set the value of this **ParametersOptions** shape data field to the chart type, and add any applicable options, separated from the chart type and from each other by pipe characters.
 
@@ -69,6 +75,7 @@ To configure the shapes:
    | LEGEND | The legend of the chart.  |
 
    > [!NOTE]
+   >
    > - The title in the title component will only be automatically displayed if the option "Title:\<your title>" is specified in the **ParametersOptions** shape data field of the group, and an asterisk has been added in the title shape. Alternatively, you can also manually specify the title within the title shape.
    > - If the parameter description is the same for all displayed parameters in the chart, the legend will not mention the duplicate parameter descriptions.
    > - From DataMiner 9.5.13 onwards, this shape data field supports dynamic placeholders like \[Param:...\], \[Var:...\].
@@ -193,7 +200,10 @@ Below, you can find the options that can be specified in the **ParametersOptions
   ```
 
   > [!CAUTION]
-  > Be careful when you use the "Month" option. We advise<br>- to set the TimeSpan1DayRecords interval in *MaintenanceSettings.xml* (which is not set by default). If this interval is not set, then the system will fall back to the TimeSpan1HourRecords interval. See [MaintenanceSettings.xml](xref:MaintenanceSettings_xml#maintenancesettingsxml).<br>- to not include multiple parameters of which the TimeSpan1DayRecords interval has not been set.
+  > Be careful when you use the "Month" option.
+  >
+  > - The TimeSpan1DayRecords interval should be set in *MaintenanceSettings.xml* (which is not set by default). If this interval is not set, then the system will fall back to the TimeSpan1HourRecords interval. See [MaintenanceSettings.xml](xref:MaintenanceSettings_xml).
+  > - Do not include multiple parameters of which the TimeSpan1DayRecords interval has not been set.
 
 - **ThemeForeground**:
 

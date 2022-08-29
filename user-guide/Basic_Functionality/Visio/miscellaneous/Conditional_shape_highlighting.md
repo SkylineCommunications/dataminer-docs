@@ -7,11 +7,12 @@ uid: Conditional_shape_highlighting
 Visio shapes linked to elements, services, redundancy groups or views can be highlighted based on whether or not a condition is true.
 
 > [!NOTE]
+>
 > - For more information on how to make a shape display the number of highlighted shapes, see [Making a shape display the number of highlighted shapes on a page](xref:Making_a_shape_display_the_number_of_highlighted_shapes_on_a_page).
 > - In order to trigger conditional highlighting based on parameters, alarms or properties that are not present on the element represented by the current shape, extended conditional shape manipulation can be used. See [Extended conditional shape manipulation actions](xref:Extended_conditional_shape_manipulation_actions).
 > - If multiple kinds of highlighting are used in one drawing, and only a single highlighting style is used, all highlight conditions must be true for an object to be highlighted.
 > - If multiple kinds of highlighting are used in one drawing, i.e. connectivity highlighting using the _HighlightTarget_ shape data combined with redundancy group highlighting and/or conditional shape highlighting, and a different highlighting style is used for each type, a shape will be highlighted as soon as one of the highlight conditions is true. See [Applying highlight styles depending on various conditions](xref:Options_for_highlighting_DCF_connections#applying-highlight-styles-depending-on-various-conditions).
-> - For an example, see [Ziine](xref:ZiineDemoSystem) > *[Linking Shapes]* view > *[dcf > HIGHLIGHT and MULTI]* pages.
+> - For an example, see [Ziine](xref:ZiineDemoSystem) > *Visual Overview Design Examples* view > *[dcf > HIGHLIGHT and MULTI]* pages.
 
 ## Configuration
 

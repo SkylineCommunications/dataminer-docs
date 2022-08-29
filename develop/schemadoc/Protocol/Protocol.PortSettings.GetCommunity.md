@@ -12,7 +12,7 @@ Specifies the GetCommunity string of an SNMP driver.
 
 ## Children
 
-|Name|Occurrences|Description|
+|Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|Occurrences|Description|
 |--- |--- |--- |
 |***All***|||
 |&nbsp;&nbsp;[DefaultValue](xref:Protocol.PortSettings.GetCommunity.DefaultValue)|[0, 1]|Specifies the default value of the GetCommunity string that will be used in the DataMiner user interface for SNMP protocols.|

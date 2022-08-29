@@ -6,6 +6,9 @@ uid: Unattended_DM_installation
 
 The unattended installation process can be used to install a standalone DMA, but also to install a cluster, set up Failover, or even add a DMA to an existing cluster.
 
+> [!NOTE]
+> The 10.2.0 installer currently does not support unattended installation of a cluster.
+
 To make sure the installation is executed correctly, a valid configuration file and license file must be included in the same folder as *Setup.exe*. See [Unattended installation configuration file](#unattended-installation-configuration-file).
 
 You can then start the unattended installation by running the following command:
@@ -17,7 +20,7 @@ You can then start the unattended installation by running the following command:
 Instead of *unattended*, you can also specify the option *u*, */u* or *-u*. All of these options have the same effect. During the installation, all the actions of the installer will be logged in the console.
 
 > [!NOTE]
-> If the DataMiner is installed on several servers, the installation must be started at the same time on each of the servers.
+> If DataMiner is installed on several servers, the installation must be started at the same time on each of the servers.
 
 Once the installation process has started, the installer will go through the following steps:
 
