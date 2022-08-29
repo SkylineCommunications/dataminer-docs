@@ -18,6 +18,27 @@ uid: General_Feature_Release_10.2.10
 
 If an incident (also known as an alarm group) is cleared manually, any clearable base alarms of that incident will now also be cleared. This way, this behavior is consistent with the standard behavior for Correlation alarms.
 
+#### Dashboards / Low-Code Apps: Parameter table component brought in line with Table component [ID_34132]
+
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.10 -->
+
+The *Parameter table* component of dashboards and low-code apps has now been adjusted to be more like that generic *Table* component. In addition to improving consistency between these components, this also makes the *Parameter table* component more user-friendly:
+
+- The horizontal scrollbar is now permanently displayed, while previously you had to scroll all the way to the bottom of the table to see it.
+- The table will load more easily, improving performance of the dashboard or app especially with large tables.
+
+Moreover, the additional features of the *Table* component will now also be available for the *Parameter table* component:
+
+- Grouping on one or multiple columns.
+- Sorting based on multiple columns.
+- Filtering on multiple columns via the column header context menu.
+- Filtering using the search box below the table.
+- Resizing columns.
+- Dragging and dropping columns to change the column order.
+
+> [!NOTE]
+> This change does not affect the *Parameter table* component as viewed on mobile devices.
+
 ## Other features
 
 #### Dashboards / Low-Code Apps: Checkboxes to select discrete values in column filter Table component [ID_34234]
