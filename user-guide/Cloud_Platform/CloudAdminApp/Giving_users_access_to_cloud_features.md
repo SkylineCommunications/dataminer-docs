@@ -4,7 +4,7 @@ uid: Giving_users_access_to_cloud_features
 
 # Controlling user access to cloud features
 
-If users have a DataMiner Cloud Platform account (i.e. users who are registered on <https://dataminer.services>), you can control whether they have access to cloud features. This includes remote access to a DataMiner System via web apps such as the DataMiner Monitoring app, the use of the [Teams bot](xref:DataMiner_Teams_bot), etc. For this purpose, you must add their DataMiner Cloud Platform account to your organization and to the DataMiner System.
+If users have a DataMiner Cloud Platform account (i.e. they are registered on <https://dataminer.services>), you can control whether they have access to cloud features. This includes remote access to a DataMiner System via web apps such as the DataMiner Monitoring app, the use of the [Teams bot](xref:DataMiner_Teams_bot), etc. For this purpose, you must add their DataMiner Cloud Platform account to your organization and to the DataMiner System.
 
 ## Giving a user access to cloud features
 
