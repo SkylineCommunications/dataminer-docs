@@ -4,7 +4,7 @@ uid: Managing_DCP_keys
 
 # Managing DCP keys
 
-In the DCP Admin app, you can manage keys that can for example be used with the [GitHub action to deploy Automation scripts](https://github.com/marketplace/actions/skyline-dataminer-deploy-action) to a cloud-connected DMS.
+In the DCP Admin app, you can manage keys that can for example be used with the [GitHub action to deploy Automation scripts](xref:Deploying_Automation_scripts_from_a_GitHub_repository) to a cloud-connected DMS.
 
 To do so:
 
