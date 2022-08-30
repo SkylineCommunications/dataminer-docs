@@ -1537,6 +1537,8 @@
     - name: Dashboards app
       topicUid: newR_D
       items:
+        - name: Accessing the Dashboards app
+          topicUid: Accessing_the_Dashboards_app
         - name: Overview of the Dashboards app UI
           topicUid: Overview_of_the_Dashboards_app_UI
         - name: Managing dashboard folders
@@ -1772,6 +1774,8 @@
       items:
         - name: About jobs
           topicUid: About_jobs
+        - name: Accessing the Jobs app
+          topicUID: Accessing_the_jobs_app
         - name: Overview of the Job Manager app UI
           topicUid: Overview_of_the_Job_Manager_app_UI
         - name: Configuring jobs in the Job Manager app
@@ -2478,6 +2482,8 @@
           topicUid: Accessing_the_Sharing_module
         - name: Managing your shares
           topicUid: Managing_your_shares
+    - name: Remote access
+      topicUID: Cloud_Remote_Access
     - name: DataMiner Community
       topicUid: Community
       items:
@@ -2511,10 +2517,10 @@
           topicUid: CloudConnectionVerification
         - name: Giving users access to cloud features
           topicUid: Giving_users_access_to_cloud_features
-        - name: Granting admin consent for Teams actions
-          topicUid: Granting_admin_consent
         - name: Controlling remote access
           topicUid: Controlling_remote_access
+        - name: Granting admin consent for Teams actions
+          topicUid: Granting_admin_consent
         - name: Controlling cloud feed data offloads
           topicUid: Controlling_cloudfeed_data_offloads
         - name: Managing the nodes of a cloud-connected DMS
