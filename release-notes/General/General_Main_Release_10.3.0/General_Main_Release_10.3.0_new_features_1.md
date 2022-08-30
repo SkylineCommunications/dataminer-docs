@@ -262,12 +262,6 @@ Process:
 > [!NOTE]
 > The connection used by the DomHelper sending the DOM action execution request should also be used to interact with the script.
 
-#### DataMiner upgrade: When VerifyClusterPorts prerequisite fails the user will now receive more information on why it failed \[ID_33979\]
-
-<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.8 [CU0] -->
-
-When, during a DataMiner upgrade, the VerifyClusterPorts prerequisite fails, you will now receive more information on why it failed. For example, the DMS.xml file could contain faulty IP addresses or NATS may have silently failed.
-
 #### Clearing an incident now clears any clearable base alarms it contains [ID_34112]
 
 <!-- Main Release Version 10.3.0 - Feature Release Version 10.2.10 -->

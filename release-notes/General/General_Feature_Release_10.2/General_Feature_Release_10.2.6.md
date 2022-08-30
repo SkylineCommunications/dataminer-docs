@@ -73,6 +73,12 @@ These log files are stored in C:\\Skyline DataMiner\\Logging\\SLMessageBroker an
 
 From now on, it will no longer be possible to change the alarm state of an incident by means of a SetAlarmStateMessage. If you attempt to do so, an exception will be thrown.
 
+#### DataMiner upgrade: When VerifyClusterPorts prerequisite fails the user will now receive more information on why it failed \[ID_33979\]
+
+<!-- MR 10.2.0 [CU6] - FR 10.2.8 [CU0] -->
+
+When, during a DataMiner upgrade, the VerifyClusterPorts prerequisite fails, you will now receive more information on why it failed. For example, the DMS.xml file could contain faulty IP addresses or NATS may have silently failed.
+
 ### DMS Security
 
 #### SAML authentication: Azure Active Directory B2C now also supported as identity provider \[ID_32714\]
