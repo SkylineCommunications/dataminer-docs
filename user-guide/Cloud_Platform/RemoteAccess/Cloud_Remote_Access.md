@@ -17,7 +17,7 @@ When a DMS is cloud-connected, you can use the remote access URL (e.g. ``https:/
 ![Remote access URL in the DCP Admin app](~/user-guide/images/CloudRemoteAccessUrl.png)
 
 > [!TIP]
-> The URL will always have the format `https://[dms_name]-[company_name].on.dataminer.services`.
+> The URL will most likely have the format `https://[dms_name]-[company_name].on.dataminer.services`, depending on what has been configured while going cloud-connected.
 
 ## Accessing a DMS remotely
 
