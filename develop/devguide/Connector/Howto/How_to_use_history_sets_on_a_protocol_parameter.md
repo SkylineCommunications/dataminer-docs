@@ -64,6 +64,9 @@ The following protocol methods can be used for this:
 - SetRow
 - NotifyDataMiner type 256 (set on remote element)
 
+> [!NOTE]
+> When the [DateTime.Kind](https://docs.microsoft.com/en-us/dotnet/api/system.datetime.kind?view=netframework-4.6.2) property of the timeInfo argument is Unspecified, the timestamp will be handled as local time.
+
 ## Dealing with timeouts
 
 It is tempting to use history sets to recover from a timeout. By requesting all parameters that have changed during the timeout and using a history set for them, it could be possible to restore the trend graph after a timeout.
