@@ -8,6 +8,7 @@ This section provides information on the following tools:
 
 - [DMS Alerter](xref:DMS_Alerter)
 - [DataMiner Comparison tool](xref:DataMinerComparisonTool)
+- [DataMiner Size tool](xref:DataMinerSizeTool)
 - [DataMiner Taskbar Utility](xref:DataMiner_Taskbar_Utility)
 - [Factory reset tool](xref:Factory_reset_tool)
 - [SLLogCollector](xref:SLLogCollector)

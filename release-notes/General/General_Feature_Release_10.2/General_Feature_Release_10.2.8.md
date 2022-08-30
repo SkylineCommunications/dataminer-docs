@@ -41,6 +41,8 @@ For more information, see [Verify Cloud DxM Version](xref:BPA_Verify_Cloud_DxM_V
 
 #### DataMiner upgrade: When VerifyClusterPorts prerequisite fails the user will now receive more information on why it failed \[ID_33979\]
 
+<!-- Main Release Version 10.2.0 [CU6] - Feature Release Version 10.2.8 [CU0] -->
+
 When, during a DataMiner upgrade, the VerifyClusterPorts prerequisite fails, you will now receive more information on why it failed. For example, the DMS.xml file could contain faulty IP addresses or NATS may have silently failed.
 
 ### DMS Cube

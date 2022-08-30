@@ -16,6 +16,9 @@ In this section:
 
 - [Deleting a functions file](#deleting-a-functions-file)
 
+> [!TIP]
+> See also: [Implementing virtual functions](xref:implementing_function_srm)
+
 ### About functions files
 
 Functions are defined in DataMiner by means of XML files linked to protocols. These files are located within the *Functions* subfolder of each relevant protocol folder in *C:\\Skyline DataMiner\\Protocols*.

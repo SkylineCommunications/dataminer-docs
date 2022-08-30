@@ -6,6 +6,12 @@ uid: DCP_change_log
 
 The DataMiner Cloud Platform gets updated continuously. This change log can help you trace when specific features and changes have become available.
 
+#### 18 August 2022 – New feature – Audit and license information added in DCP Admin app [ID_34216]
+
+In the DCP Admin app, the license expiration date for an organization is now displayed on that organization's *Overview* page.
+
+In addition, a new *Audit* page is available in the app, which contains auditing logs for sharing dashboards and DCP keys.
+
 #### 18 July 2022 – New feature – CloudFeed 1.0.6 / CloudGateway 2.7.0 / ArtifactDeployer 1.4.0 – Proxy support [ID_33955] [ID_33961] [ID_33972]
 
 Proxy support has been added for DataMiner CloudFeed, CloudGateway, and ArtifactDeployer. When you configure this, all outgoing traffic towards the public internet will pass through the proxy server.

@@ -8,6 +8,8 @@ From DataMiner 9.6.9 onwards, a Dashboards web app is available. This app allows
 
 In this section:
 
+- [Accessing the Dashboards app](xref:Accessing_the_Dashboards_app)
+
 - [Overview of the Dashboards app UI](xref:Overview_of_the_Dashboards_app_UI)
 
 - [Managing dashboard folders](xref:Managing_dashboard_folders)
