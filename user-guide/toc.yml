@@ -2461,6 +2461,8 @@
           topicUid: Accessing_the_Sharing_module
         - name: Managing your shares
           topicUid: Managing_your_shares
+    - name: Remote access
+      topicUID: Cloud_Remote_Access
     - name: DataMiner Community
       topicUid: Community
       items:

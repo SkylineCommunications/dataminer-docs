@@ -20,9 +20,9 @@ To access the Ticketing app:
 
 ## Accessing the Ticketing app via the DataMiner Cloud Platform
 
-If you have been granted [remote access](xref:Controlling_remote_access) to a cloud-connected DataMiner System as a guest, you can connect as follows:
+If you have been granted remote access to a cloud-connected DataMiner System, you can connect as follows:
 
-1. Go to the public URL of the remote DataMiner System.
+1. Go to the public URL of the remote DataMiner System. See [Remote access](xref:Cloud_Remote_Access).
 
 1. Log on to the DataMiner Cloud Platform. See [Logging on](xref:Logging_on_to_the_DataMiner_Cloud_Platform#logging-on).
 
