@@ -177,10 +177,12 @@ Once you have established a trust relationship between DataMiner (i.e. the servi
 
       > [!NOTE]
       > From DataMiner 10.1.11/10.2.0 onwards, DataMiner supports Azure AD application querying. If this is used instead of delegated querying, an authentication secret will suffice and no username and password will need to be specified here.
-      >
-      > After start-up from DataMiner, since clientSecret and password attributes are sensitive data, the necessary precautions are done to the *DataMiner.xml* file.
 
    1. Save the file and restart DataMiner.
+   
+> [!NOTE]
+> After start-up from DataMiner, since clientSecret and password attributes are sensitive data, the necessary precautions(encrypting and replacing the clientSecret and password with a GUID) are done to the *DataMiner.xml* file.
+   
 
 1. On the application (DataMiner) root page, click *API Permissions* in the pane on the left and make sure the necessary permissions are enabled:
 
