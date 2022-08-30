@@ -342,6 +342,12 @@ The following functionality is now available for nested tables:
 - Filtering of nested tables.
 - Selecting columns from nested tables. These will be shown in the same list box as regular columns, but their name will be prefixed by the parent column name. For example, if the parent column is named "Capabilities" and the nested table column is named "Name", the column will be listed as "Capabilities.Name".
 
+#### DataMiner upgrade: On two-node setups, the VerifyClusterPorts prerequisite will only check the ports of the NATS node that is being used by DataMiner [ID_34240]
+
+<!-- Main Release Version 10.2.0 [CU6] - Feature Release Version 10.2.9 [CU0] -->
+
+During an upgrade of a two-node setup (e.g. 2 single DMAs or one Failover pair), from now on, the *VerifyClusterPorts* prerequisite will only check the ports of the NATS node that is being used by DataMiner.
+
 ### Fixes
 
 #### Web apps - Data table component: Filter specified in search box would incorrectly not be re-applied after a data refresh [ID_33385]

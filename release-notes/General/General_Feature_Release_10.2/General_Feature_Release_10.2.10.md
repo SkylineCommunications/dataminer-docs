@@ -128,6 +128,16 @@ All files related to the obsolete *SNMP Simulation Generator* tool have been rem
 
 In the user settings (*user icon > Settings*), from now on, you will only be able to configure themes when you have permission to edit dashboards.s
 
+#### Low-code apps: Header bar enhancements [ID_34264]
+
+<!-- MR 10.2.0 [CU7] - FR 10.2.10 -->
+
+A number of small enhancements have been made to the header bar of low-code apps:
+
+- Button text now supports both upper case and lower case.
+
+- Buttons no longer have lines between them.
+
 ### Fixes
 
 #### Service & Resource Management: Files in C:\Skyline DataMiner\ResourceManager would not be locked properly when being read or updated during a midnight synchronization [ID_34104]
@@ -197,6 +207,12 @@ After a user had logged out of a web app, in some cases, that app would incorrec
 <!-- MR 10.1.0 [CU19]/10.2.0 [CU7] - FR 10.2.10 -->
 
 When, on one thread, a group other than a poll group was launched while, on another thread, a poll group with option "partialSNMP" was waiting for incoming SNMP data, in some cases, a run-time error could occur in SLProtocol.
+
+#### Low-code apps: Header bar font color would incorrectly not be aligned with the theme color of the app [ID_34267]
+
+<!-- MR 10.2.0 [CU7] - FR 10.2.10 -->
+
+In some cases, the header bar font color would incorrectly not be aligned with the theme color of the app.
 
 #### Dashboards app - Time range feed: Delete icons of custom quick pick buttons would incorrectly be displayed on top of the time range feed overlay [ID_34278]
 
