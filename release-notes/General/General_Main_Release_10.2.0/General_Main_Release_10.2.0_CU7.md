@@ -133,7 +133,7 @@ Also, the *Created at* and *Last modified at* columns will no longer be selected
 
 <!-- Main Release Version 10.2.0 [CU7] - Feature Release Version 10.2.10 -->
 
-When you tried to access a shared dashboard created in a previous version, the migration of the dashboard would get stuck because the Web API was unable to write the current Dashboards app version to the `C:\Skyline DataMiner\WebPages\dashboard\appversion.json` file.
+When you tried to access a shared dashboard created in a previous version, the migration of the dashboard could get stuck because the Web API was unable to write the current Dashboards app version to the `C:\Skyline DataMiner\WebPages\dashboard\appversion.json` file.
 
 #### DataMiner Cube - Services app: No services would be loaded the first time you opened the Services app [ID_34211]
 
