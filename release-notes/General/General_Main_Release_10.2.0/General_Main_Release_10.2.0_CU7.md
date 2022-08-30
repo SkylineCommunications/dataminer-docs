@@ -61,6 +61,12 @@ All files related to the obsolete *SNMP Simulation Generator* tool have been rem
 > [!NOTE]
 > When you run an upgrade package on a system that contains this obsolete tool, it will automatically be removed.
 
+#### Dashboards app: Configuring themes in user settings now requires dashboard edit permission [ID_34260]
+
+<!-- MR 10.2.0 [CU7] - FR 10.2.10 -->
+
+In the user settings (*user icon > Settings*), from now on, you will only be able to configure themes when you have permission to edit dashboards.
+
 ### Fixes
 
 #### Problem with SLAnalytics [ID_33850]
@@ -117,6 +123,12 @@ When editing a dashboard, you can go to *Settings > User access* and specify the
 <!-- MR 10.1.0 [CU19]/10.2.0 [CU7] - FR 10.2.9 -->
 
 When a connection in Visual Overview was highlighted based on a connection property, and the connection property changed, it could occur that the highlight style was not automatically applied to the connection line, but only after the user triggered a redraw, for example by clicking the highlight.
+
+#### Cassandra cluster: No trending information shown for parameters of which the value had not changed for 10 days or more [ID_34149]
+
+<!-- MR 10.2.0 [CU7] - FR 10.2.10 -->
+
+On a system with a Cassandra cluster, no trending information would be shown for parameters of which the value had not changed for 10 days or more.
 
 #### Automation: Invalid script changes would incorrectly be saved [ID_34150]
 

@@ -122,6 +122,12 @@ All files related to the obsolete *SNMP Simulation Generator* tool have been rem
 > [!NOTE]
 > When you run an upgrade package on a system that contains this obsolete tool, it will automatically be removed.
 
+#### Dashboards app: Configuring themes in user settings now requires dashboard edit permission [ID_34260]
+
+<!-- MR 10.2.0 [CU7] - FR 10.2.10 -->
+
+In the user settings (*user icon > Settings*), from now on, you will only be able to configure themes when you have permission to edit dashboards.s
+
 ### Fixes
 
 #### Service & Resource Management: Files in C:\Skyline DataMiner\ResourceManager would not be locked properly when being read or updated during a midnight synchronization [ID_34104]
@@ -147,6 +153,12 @@ In some cases, SLNet could throw an OutOfMemoryException due to a memory leak.
 <!-- MR 10.2.0 [CU7] - FR 10.2.10 -->
 
 When editing a dashboard, you can go to *Settings > User access* and specify the users and/or user groups that are allowed to view or edit the dashboard in question. When you did not have permission to change security settings, the users and user groups you entered would not be validated correctly.
+
+#### Cassandra cluster: No trending information shown for parameters of which the value had not changed for 10 days or more [ID_34149]
+
+<!-- MR 10.2.0 [CU7] - FR 10.2.10 -->
+
+On a system with a Cassandra cluster, no trending information would be shown for parameters of which the value had not changed for 10 days or more.
 
 #### Automation: Invalid script changes would incorrectly be saved [ID_34150]
 
