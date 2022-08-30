@@ -6,13 +6,13 @@ uid: LogicQActions
 
 ## Introduction
 
-Quick Actions (often referred to as "QActions") are used to implement more advanced functionality that cannot be implemented by other protocol constructs (e.g. parsing a JSON response received from the device, etc.).
+Quick Actions (often referred to as "QActions") are used to implement custom functionality that cannot be implemented by other protocol constructs (e.g. parsing a JSON response received from the device, etc.).
 
 In the past, QActions were written in C#, JScript or VBScript. However, recent protocols are written exclusively in C#, so this chapter only considers C# QActions.
 
-A QAction is executed by the SLScripting process (see <xref:InnerWorkingsSLScripting>).
+A QAction is executed by the SLScripting process (see <xref:InnerWorkingsSLScripting>) and is defined in a connector using the [QAction](xref:Protocol.QActions.QAction) tag.
 
-Let's have a look at a basic C# QAction that runs when a button (with parameter ID 100) is clicked and counts the number of times the button was clicked via a QAction.
+The following QAction runs when a button (with parameter ID 100) is clicked and counts the number of times a button was pressed:
 
 ```xml
 <QAction id="100" name="Count Executions" encoding="csharp" triggers="100">
@@ -35,9 +35,9 @@ Let's have a look at a basic C# QAction that runs when a button (with parameter 
 </QAction>
 ```
 
-Optionally, a descriptive name can be provided using the name attribute. This only serves to improve readability and has no influence on the functionality of the QAction.
+Optionally, a descriptive name can be provided using the [name](xref:Protocol.QActions.QAction-name) attribute. This only serves to improve readability and has no influence on the functionality of the QAction.
 
-The encoding attribute defines the language in which the QAction is written (this value is set to "csharp" for QActions written in C#).
+The [encoding](xref:Protocol.QActions.QAction-encoding) attribute defines the language in which the QAction is written (this value is set to "csharp" for QActions written in C#).
 
 The triggers attribute indicates the ID(s) of the parameter(s) that trigger the QAction. A QAction is executed on a change event of one of these parameters. (For more information about change events, see [Executing a QAction](xref:LogicQActions#executing-a-qaction).)
 
@@ -57,13 +57,14 @@ The Run method in the example above increments the execution count and writes th
 
 A C# QAction is compiled and loaded when it needs to run for the first time (unless the precompile option is used).
 
-By default, the result is a DLL with the following name: [protocolName].[protocolVersion].QAction.[QActionID].dll, e.g. "Newtec CD6000.1.0.0.1.QAction.1.dll".
-For more information on how a custom name can be used, see dllName=name.
+By default, the result is a DLL with the following name: `[protocolName].[protocolVersion].QAction.[QActionID].dll`, e.g. `Newtec CD6000.1.0.0.1.QAction.1.dll`.
+For more information on how a custom name can be used, see [dllName=name](xref:Protocol.Protocol.QActions.QAction-options#dllnamenamedll).
 
-The QAction DLLs are stored in the directory C:\Skyline DataMiner\ProtocolScripts.
+The QAction DLLs are stored in the directory `:\Skyline DataMiner\ProtocolScripts`.
 
 > [!NOTE]
 > From DataMiner 9.6.11 (RN 23095) onwards, DataMiner uses the .NET Compiler Platform (version 2.9) to compile QActions, allowing the use of C# syntax up to and including version 7.3.
+> DataMiner detects the most recent version of the .NET Framework that is installed and uses this version in the SLScripting process. The compiled QActions will then target this version of the .NET Framework.
 
 ### Preprocessor directives
 
@@ -187,6 +188,8 @@ For example, in the following QAction two parameters can trigger a QAction. Howe
 <QAction id="200" name="Subscriptions" encoding="csharp" triggers="200;201" entryPoint="Initialize;ProcessMessages" dllImport="[ProtocolName].[ProtocolVersion].QAction.0.dll">
 ```
 
+By default, the entry method is expected to be defined in the QAction class. However, it is possible to refer to a method of another class as an entry point method. Refer to [entryPoint](xref:Protocol.QActions.QAction-entryPoint) for more information.
+
 ## Executing a QAction
 
 A QAction is executed by a change event of a parameter referred to in the triggers attribute.
@@ -218,7 +221,6 @@ In the example above, the triggers attribute is set to the parameter ID of the w
 > - For SNMP tables, it is also possible to provide the ID of a table parameter. In this case, the QAction will trigger every time a row has been updated.
 
 In a QAction, the following methods are available to retrieve information about the row that triggered the execution of the QAction:
-
 
 |Method  |Description  |
 |---------|---------|
@@ -473,6 +475,16 @@ For more information, refer to Skyline.DataMiner.Net.Messages.
 
 > [!NOTE]
 > To start an Automation script from a QAction, the use of the Interop.SLAutomation DLL is now deprecated. The ExecuteScriptMessage should be used instead.
+
+## Implementing the IDisposable interface
+
+From DataMiner 10.2.9 onwards (RN 33965), DataMiner detects whether the IDisposable interface is implemented on-static QAction classes. DataMiner will then call the Dispose method when the QAction instance is released (i.e. when the element is stopped, removed or restarted).
+
+> [!NOTE]
+>
+> - The same goes for any other class the entrypoint may be in (see <xref:#multiple-entry-methods>).
+> - This coincides with the IsActive property of the SLProtocol object being set to false, which prevents further function calls to the object from being executed.
+> - The Dispose is called by a separate thread than the one stopping the element. Its purpose is to release lingering resources and connections when the element is stopped.
 
 ## Examples
 
