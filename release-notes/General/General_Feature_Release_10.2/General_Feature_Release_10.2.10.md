@@ -214,6 +214,12 @@ When, on one thread, a group other than a poll group was launched while, on anot
 
 In some cases, the header bar font color would incorrectly not be aligned with the theme color of the app.
 
+#### Web apps - Query builder: Hovering over an arrow to change the column order in the select node would select an incorrect arrow [ID_34268]
+
+<!-- MR 10.2.0 [CU7] - FR 10.2.10 -->
+
+In the select node of the query builder, you can change the column order by clicking up and down arrows. Up to now, when you hovered over one of those arrows, in some cases, the incorrect arrow would be selected.
+
 #### Dashboards app - Time range feed: Delete icons of custom quick pick buttons would incorrectly be displayed on top of the time range feed overlay [ID_34278]
 
 <!-- MR 10.1.0 [CU19]/10.2.0 [CU7] - FR 10.2.10 -->
