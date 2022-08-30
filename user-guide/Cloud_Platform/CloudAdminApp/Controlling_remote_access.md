@@ -22,4 +22,4 @@ If you have the Owner or Admin role on DCP, you can enable or disable the [remot
 1. Set the *Remote Access* setting to *On* or *Off*, depending on whether you want this to be enabled or not.
 
 > [!NOTE]
-> To be able to access a DMS remotely, users must be granted access to cloud features. See [Controlling user access to cloud features](xref:Giving_users_access_to_cloud_features). They also need to have the [General > DataMiner web apps](xref:DataMiner_user_permissions#general--dataminer-web-apps--dataminer-cube-mobile-access) user permission, as well as any other user permissions required to access specific apps.
+> Users will only be able to use the remote access feature if they have been given access to the DMS on DCP. See [Controlling user access to cloud features](xref:Giving_users_access_to_cloud_features). They also need to have the [General > DataMiner web apps](xref:DataMiner_user_permissions#general--dataminer-web-apps--dataminer-cube-mobile-access) user permission, as well as any other user permissions required to access specific apps.
