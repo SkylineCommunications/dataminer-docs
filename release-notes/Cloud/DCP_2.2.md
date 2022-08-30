@@ -34,7 +34,7 @@ Install the DataMiner Teams app from the official Microsoft Teams app Store. Dep
 
 Before DCP users can have access to a DataMiner System via the Teams Bot, their account must be added to the right organization and DMS via the Admin app.
 
-For more information, see [Controlling remote access](xref:Controlling_remote_access).
+For more information, see [Giving users access to cloud features](xref:Giving_users_access_to_cloud_features).
 
 #### Available options
 
