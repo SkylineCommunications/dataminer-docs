@@ -112,8 +112,8 @@ After a user had logged out of a web app, in some cases, that app would incorrec
 
 When, on one thread, a group other than a poll group was launched while, on another thread, a poll group with option "partialSNMP" was waiting for incoming SNMP data, in some cases, a run-time error could occur in SLProtocol.
 
-#### Dashboards app - Time range feed: Delete icons would incorrectly be displayed on the time range feed overlay [ID_34278]
+#### Dashboards app - Time range feed: Delete icons of custom quick pick buttons would incorrectly be displayed on top of the time range feed overlay [ID_34278]
 
 <!-- MR 10.1.0 [CU19]/10.2.0 [CU7] - FR 10.2.10 -->
 
-In some cases, delete icons would incorrectly be displayed on the time range feed overlay.
+In some cases, the delete icons of custom quick pick buttons would incorrectly be displayed on top of the time range feed overlay.
