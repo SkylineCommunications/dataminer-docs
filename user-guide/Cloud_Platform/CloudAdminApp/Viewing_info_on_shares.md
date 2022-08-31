@@ -22,3 +22,6 @@ To do so:
    This page lists all items that have been shared in the cloud from the selected DMS.
 
    Click an item in the list to view more detailed information, including when the share was created and how long it will remain available.
+
+> [!NOTE]
+> Audit information about shares is available on the *Organization* > *Audit* page.

@@ -201,6 +201,12 @@ Because of a number of enhancements, overall performance has increased when retr
 
 When, in the Dashboards app, you switched to edit mode, all columns of all GQI queries on the dashboard in question would be retrieved. From now, only when you open a specific query on the dashboard you are editing will the columns of that specific query be retrieved.
 
+#### DataMiner upgrade: On two-node setups, the VerifyClusterPorts prerequisite will only check the ports of the NATS node that is being used by DataMiner [ID_34240]
+
+<!-- Main Release Version 10.2.0 [CU6] - Feature Release Version 10.2.9 [CU0] -->
+
+During an upgrade of a two-node setup (e.g. 2 single DMAs or one Failover pair), from now on, the *VerifyClusterPorts* prerequisite will only check the ports of the NATS node that is being used by DataMiner.
+
 ### Fixes
 
 #### SLAnalytics - Pattern matching: No 'suggestion event' type alarm would be triggered in case of DVE elements [ID_32671]
@@ -568,3 +574,15 @@ When you loaded a workspace containing the card of a view linked to EPM, it coul
 <!-- Main Release Version 10.1.0 [CU18]/10.2.0 [CU6] - Feature Release Version 10.2.8 [CU2] -->
 
 When an element was dynamically included in a service multiple times with a partially included parameter set, a problem could occur in SLElement while parsing the information received from SLDataMiner.
+
+#### GQI: Requesting property values would incorrectly only return values cached on the local DataMiner Agent [ID_34253]
+
+<!-- Main Release Version 10.2.0 [CU6] - Feature Release Version 10.2.9 [CU0] -->
+
+When a GQI query requested property values by means of a GetPropertyValueMessage, some values could be missing as SLNet would only return values that were cached on the local DataMiner Agent. From now on, when a GQI query requests property values, the request will be sent to all running agents in the cluster.
+
+#### SPI framework: Run-time errors could occur in SLDataMiner when tracking user actions [ID_34259]
+
+<!-- Main Release Version 10.2.0 [CU6] - Feature Release Version 10.2.9 [CU0] -->
+
+Due to a problem with the SPI framework, in some cases, run-time errors could occur in SLDataMiner when tracking user actions.
