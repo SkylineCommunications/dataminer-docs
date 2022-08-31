@@ -23,6 +23,15 @@ string
 
 ## Remarks
 
+- Only a change of the parameter with the Sequence tag can trigger the Sequence. If the Sequence uses 'id' in its content, changing the content of the 'id' will not force the sequence to run on the next input of data if that data did not change.
+
+```xml
+<Param id="10">
+<Sequence noset="true">div:id:101</Sequence>
+</Param>
+```
+In the above example, if 101 changes but the content of id="10" keeps getting set with the same value, the new sequence will never trigger.
+
 - Only use a Sequence on communication parameters (i.e. parameters that are directly filled in by polling via SNMP, serial, etc.). Do not use it for custom/retrieved parameters (parameters filled in via a QAction.)
 - The Sequence should always be provided with the `noset="true"` attribute.
 - On write parameters, use the reverse math operation in the reverse order compared to the corresponding read parameter.
