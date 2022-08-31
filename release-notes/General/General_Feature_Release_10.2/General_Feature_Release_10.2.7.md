@@ -13,7 +13,7 @@ uid: General_Feature_Release_10.2.7
 
 #### QActionTable class - FillArray and FillArrayNoDelete methods: Argument 'row' renamed to 'columns' \[ID_33034\]
 
-The *row* argument of the FillArray and FillArrayNoDelete methods in theQActionTable class has been renamed to *columns*.
+The *row* argument of the FillArray and FillArrayNoDelete methods in theQActionTable class has been renamed to *columns*.
 
 #### Making all elements using a particular protocol.xml run in separate SLScripting and SLProtocol instances \[ID_33358\]
 
