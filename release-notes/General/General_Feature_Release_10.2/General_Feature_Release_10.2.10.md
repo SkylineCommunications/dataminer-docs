@@ -41,6 +41,26 @@ Moreover, the additional features of the *Table* component will now also be avai
 
 ## Other features
 
+#### GQI: columnInfo object of data source columns of type 'discrete' will now contain the possible values [ID_34179]
+
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.10 -->
+
+For each of the following GQI data source columns of type "discrete", the possible values will now be available in their columnInfo object:
+
+| Data source              | Columns |
+|--------------------------|---------|
+| AlarmAdapter             | Alarm severity<br>Alarm type<br>Alarm status<br>Alarm source<br>Alarm user status |
+| BookingAdapter           | Booking status |
+| ChangePointAdapter       | Change type<br>Alarm severity |
+| DCFInterfaceAdapter      | Interface type |
+| LiteElementInfoAdapter   | Element state |
+| TicketingAdapter         | All (custom) enum columns |
+| DOMInstanceAdapter       | State<br>All custom enum fields |
+| ParameterTableAdapter    | All parameters of type "discrete" |
+| PaProcessAdapter         | PaProcess state<br>PaProcess activity<br>PaProcess start event type |
+| PaTokenAdapter           | PaToken status<br>PaToken error state<br>PaToken sub process type<br>PaToken type |
+| PatternOccurrenceAdapter | Pattern type |
+
 #### Dashboards / Low-Code Apps: Checkboxes to select discrete values in column filter Table component [ID_34234]
 
 <!-- MR 10.3.0 - FR 10.2.9 -->
@@ -50,6 +70,15 @@ When you configure a column filter for a Table component in a dashboard or low-c
 ## Changes
 
 ### Enhancements
+
+#### External authentication using SAML: Extended logging [ID_33622]
+
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.10 -->
+
+When authenticating users using SAML, the following additional debug information will now be logged in the *SLSaml.txt* file:
+
+- Whether Just-In-Time provisioning (JIT) is enabled.
+- Which group claims are being used.
 
 #### DataMiner Taskbar Utility: Enhanced installation of app packages [ID_33969]
 
@@ -164,6 +193,14 @@ In some cases, SLNet could throw an OutOfMemoryException due to a memory leak.
 
 When editing a dashboard, you can go to *Settings > User access* and specify the users and/or user groups that are allowed to view or edit the dashboard in question. When you did not have permission to change security settings, the users and user groups you entered would not be validated correctly.
 
+#### Dashboards app / Low-code apps: Changes to the feed could incorrectly influence the time window of a state timeline component [ID_34148]
+
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.10 -->
+
+In some cases, changes to the feed linked to a state timeline component could reset the time window. From now on, linking a query filter to the timeline will no longer influence the time window. The filter will be applied and the current time window will be preserved.
+
+Also, because of a number of enhancements, overall performance has increased when linking a query filter to a state timeline component.
+
 #### Cassandra cluster: No trending information shown for parameters of which the value had not changed for 10 days or more [ID_34149]
 
 <!-- MR 10.2.0 [CU7] - FR 10.2.10 -->
@@ -189,6 +226,12 @@ When the system time changed because of e.g. a clock resynchronization or a swit
 The GQI data source "Bookings" did not contain a *Last modified by* column and contained two different *Last modified at* columns (one with timestamps adjusted to the timezone and another with unadjusted timestamps). The *Last modified at* column containing unadjusted timestamps has now been replaced by a *Last modified by* column.
 
 Also, the *Created at* and *Last modified at* columns will no longer be selected by default.
+
+#### Web apps: Long text strings without spaces displayed in read-only boxes were clipped instead of wrapped [ID_34193]
+
+<!-- MR 10.2.0 [CU7] - FR 10.2.10 -->
+
+In web apps (e.g. Jobs), long text strings without spaces displayed in read-only boxes would be clipped. From now on, those strings will be wrapped so that all text is visible.
 
 #### Dashboards app: Problem when trying to access a shared dashboard created in a previous version [ID_34210]
 

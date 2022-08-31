@@ -241,6 +241,15 @@ Minimum value: 1 minute - Default value: 5 minutes
 > [!WARNING]
 > Always be extremely careful when using this tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
 
+#### External authentication using SAML: Extended logging [ID_33622]
+
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.10 -->
+
+When authenticating users using SAML, the following additional debug information will now be logged in the *SLSaml.txt* file:
+
+- Whether Just-In-Time provisioning (JIT) is enabled.
+- Which group claims are being used.
+
 #### Dashboards app / Low-Code Apps: Support for feed categories in components [ID_33719]
 
 <!-- Main Release Version 10.3.0 - Feature Release Version 10.2.9 -->
@@ -621,6 +630,14 @@ In some cases, it could occur that properties of a FieldAlias DOM object could n
 <!-- Main Release Version 10.3.0 - Feature Release Version 10.2.9 -->
 
 During a DataMiner upgrade, in some cases, the *AnalyticsDropUnusedCassandraTables* upgrade action would fail.
+
+#### Dashboards app / Low-code apps: Changes to the feed could incorrectly influence the time window of a state timeline component [ID_34148]
+
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.10 -->
+
+In some cases, changes to the feed linked to a state timeline component could reset the time window. From now on, linking a query filter to the timeline will no longer influence the time window. The filter will be applied and the current time window will be preserved.
+
+Also, because of a number of enhancements, overall performance has increased when linking a query filter to a state timeline component.
 
 #### SLScripting instances mismatched with SLProtocol instances [ID_34167]
 
