@@ -52,6 +52,24 @@ From now on, when an issue occurs when parsing a compliance cache file entry, th
 Warning: <function> is unable to parse compliance cache file entry at line <line number>. <line content>
 ```
 
+#### DataMiner Cube - Resources app: Enhanced resource pool management [ID_34225]
+
+<!-- MR 10.2.0 [CU7] - FR 10.2.10 -->
+<!-- Fix with same ID -->
+
+A number of enhancements have been made with regard to managing resource pools.
+
+- Moving or copying a resource from one pool to another is only supported for existing, valid resources, and you need to have permission to edit resources to do this. It is also not possible to copy a resource to or from the "(uncategorized)" pool, as this pool is reserved for resources that are not in any other pool.
+
+- It is now also possible to remove a resource from a pool.
+
+    > [!NOTE]
+    >
+    > - Removing a resource from a pool does not delete the resource from the system. It only removes it from the selected pool. If the resource is not present in any other resource pool, it will be moved to the "(uncategorized)" pool.
+    > - You can only remove valid, unmodified existing resources that are not in the "(uncategorized)" pool. You also need permission to edit resources to be able to do this.
+
+- The *SelectedPool* session variable of the ReservationManager component will contain the GUIDs of all pools of the selected resource(s), separated by commas.
+
 #### DataMiner Upgrade: Obsolete 'SNMP Simulation Generator' files removed from upgrade packages [ID_34250]
 
 <!-- MR 10.1.0 [CU19]/10.2.0 [CU7] - FR 10.2.10 -->
@@ -166,6 +184,12 @@ The GQI data source "Bookings" did not contain a *Last modified by* column and c
 
 Also, the *Created at* and *Last modified at* columns will no longer be selected by default.
 
+#### DataMiner Cube - Profiles app: Data from a profile instance parameter entry could no longer be retrieved after updating the entry [ID_34192]
+
+<!-- MR 10.2.0 [CU7] - FR 10.2.10 -->
+
+When a parameter entry was updated in a profile instance, it would no longer be possible to retrieve the data from the updated entry. As a result, the UI was not able to reflect the changes made to the parameter entry in question.
+
 #### Dashboards app: Problem when trying to access a shared dashboard created in a previous version [ID_34210]
 
 <!-- MR 10.2.0 [CU7] - FR 10.2.10 -->
@@ -177,6 +201,13 @@ When you tried to access a shared dashboard created in a previous version, the m
 <!-- MR 10.1.0 [CU19]/10.2.0 [CU7] - FR 10.2.10 -->
 
 When you opened the *Services* app for the first time after opening DataMiner Cube, in some cases, no services would be loaded. The services would only be loaded when you closed the *Services* app and opened it again.
+
+#### DataMiner Cube - Resources app: Problem when updating a resource that was added to multiple pools [ID_34225]
+
+<!-- MR 10.2.0 [CU7] - FR 10.2.10 -->
+<!-- Enhancement with same ID -->
+
+Since DataMiner version 10.1.5/10.2.0, when you updated a resource that was added to multiple pools, after the update, it would incorrectly only be added anymore to the pool you had selected. It would no longer be added to the other pools.
 
 #### Web apps: App would incorrectly log in again after the user had logged out [ID_34227]
 
