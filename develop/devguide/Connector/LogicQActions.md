@@ -58,7 +58,7 @@ The Run method in the example above increments the execution count and writes th
 A C# QAction is compiled and loaded when it needs to run for the first time (unless the [precompile](xref:Protocol.QActions.QAction-options#precompile) option is used).
 
 By default, the result is a DLL with the following name: `[protocolName].[protocolVersion].QAction.[QActionID].dll`, e.g. `Newtec CD6000.1.0.0.1.QAction.1.dll`.
-For more information on how a custom name can be used, see [dllName=name](xref:Protocol.Protocol.QActions.QAction-options#dllnamename).
+For more information on how a custom name can be used, see [dllName=name.dll](xref:Protocol.QActions.QAction-options#dllnamenamedll).
 
 The QAction DLLs are stored in the directory `C:\Skyline DataMiner\ProtocolScripts`.
 
@@ -227,8 +227,8 @@ In a QAction, the following methods are available to retrieve information about 
 |---------|---------|
 |[RowIndex](xref:Skyline.DataMiner.Scripting.SLProtocol.RowIndex)     |Gets the 1-based row position of the row that triggered the execution of the QAction.         |
 |[RowKey](xref:Skyline.DataMiner.Scripting.SLProtocol.RowKey)     |Gets the primary key of the row that triggered the execution of the QAction.         |
-|[OldRow](Skyline.DataMiner.Scripting.SLProtocol.OldRow)     |Gets information about the previous cell values before the row was updated.         |
-|[NewRow](Skyline.DataMiner.Scripting.SLProtocol.NewRow)     |Gets information about the updated cells in a row.         |
+|[OldRow](xref:Skyline.DataMiner.Scripting.SLProtocol.OldRow)     |Gets information about the previous cell values before the row was updated.         |
+|[NewRow](xref:Skyline.DataMiner.Scripting.SLProtocol.NewRow)     |Gets information about the updated cells in a row.         |
 
 > [!NOTE]
 > For more information about how to implement SNMP tables, see [Retrieving tables](xref:ConnectionsSnmpRetrievingTables).
@@ -237,7 +237,7 @@ In a QAction, the following methods are available to retrieve information about 
 
 Often, a QAction needs to retrieve parameter values from the SLProtocol process. There are two different ways to retrieve parameter values in a Quick Action:
 
-- By including the parameter IDs in the [inputParameters](xref:Protocol.QActions.QAction-inputParam) attribute.
+- By including the parameter IDs in the [inputParameters](xref:Protocol.QActions.QAction-inputParameters) attribute.
 - By retrieving the values via an instance of the SLProtocol or SLProtocolExt interface (e.g. by using the GetParameter method).
 
 Which approach should be used to retrieve data from the SLProtocol process depends on the situation:
