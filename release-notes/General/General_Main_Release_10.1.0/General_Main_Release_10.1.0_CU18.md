@@ -6,10 +6,6 @@ uid: General_Main_Release_10.1.0_CU18
 
 ### Enhancements
 
-#### Security enhancements
-
-A number of security enhancements have been made.
-
 #### Serial connections: Hostname resolution enhancements [ID_33702]
 
 <!-- Main Release Version 10.1.0 [CU18]/10.2.0 [CU6] - Feature Release Version 10.2.9 -->
