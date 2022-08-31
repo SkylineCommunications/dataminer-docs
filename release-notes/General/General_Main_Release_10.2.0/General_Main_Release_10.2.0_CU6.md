@@ -580,3 +580,9 @@ When an element was dynamically included in a service multiple times with a part
 <!-- Main Release Version 10.2.0 [CU6] - Feature Release Version 10.2.9 [CU0] -->
 
 When a GQI query requested property values by means of a GetPropertyValueMessage, some values could be missing as SLNet would only return values that were cached on the local DataMiner Agent. From now on, when a GQI query requests property values, the request will be sent to all running agents in the cluster.
+
+#### SPI framework: Run-time errors could occur in SLDataMiner when tracking user actions [ID_34259]
+
+<!-- Main Release Version 10.2.0 [CU6] - Feature Release Version 10.2.9 [CU0] -->
+
+Due to a problem with the SPI framework, in some cases, run-time errors could occur in SLDataMiner when tracking user actions.
