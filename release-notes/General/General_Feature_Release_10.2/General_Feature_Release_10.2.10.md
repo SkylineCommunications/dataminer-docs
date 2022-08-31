@@ -41,6 +41,26 @@ Moreover, the additional features of the *Table* component will now also be avai
 
 ## Other features
 
+#### GQI: columnInfo object of data source columns of type 'discrete' will now contain the possible values [ID_34179]
+
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.10 -->
+
+For each of the following GQI data source columns of type "discrete", the possible values will now be available in their columnInfo object:
+
+| Data source              | Columns |
+|--------------------------|---------|
+| AlarmAdapter             | Alarm severity<br>Alarm type<br>Alarm status<br>Alarm source<br>Alarm user status |
+| BookingAdapter           | Booking status |
+| ChangePointAdapter       | Change type<br>Alarm severity |
+| DCFInterfaceAdapter      | Interface type |
+| LiteElementInfoAdapter   | Element state |
+| TicketingAdapter         | All (custom) enum columns |
+| DOMInstanceAdapter       | State<br>All custom enum fields |
+| ParameterTableAdapter    | All parameters of type "discrete" |
+| PaProcessAdapter         | PaProcess state<br>PaProcess activity<br>PaProcess start event type |
+| PaTokenAdapter           | PaToken status<br>PaToken error state<br>PaToken sub process type<br>PaToken type |
+| PatternOccurrenceAdapter | Pattern type |
+
 #### Dashboards / Low-Code Apps: Checkboxes to select discrete values in column filter Table component [ID_34234]
 
 <!-- MR 10.3.0 - FR 10.2.9 -->
