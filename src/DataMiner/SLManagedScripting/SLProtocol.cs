@@ -1,9 +1,10 @@
-﻿using Skyline.DataMiner.Net;
-using Skyline.DataMiner.Net.Messages;
-using Skyline.DataMiner.Net.Automation;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
+
+using Skyline.DataMiner.Net;
+using Skyline.DataMiner.Net.Automation;
+using Skyline.DataMiner.Net.Messages;
 
 namespace Skyline.DataMiner.Scripting
 {
@@ -47,6 +48,9 @@ namespace Skyline.DataMiner.Scripting
 		///			protocol.AddRow(tableId, new object[] { rowData, timeStamp});
 		///			</code>
 		///			</description>
+		///			</item>
+		///			<item>
+		///				<description>If the DateTime.Kind property of a timestamp is unspecified, the timestamp will be handled as local time.</description>
 		///			</item>
 		///		</list>
 		/// </remarks>
@@ -325,6 +329,9 @@ namespace Skyline.DataMiner.Scripting
 		///			<item>
 		///				<description>This call is to be used with columns of type "retrieved". In case other column types are present between the specified columns (e.g. columns of type "custom"), these other columns will be skipped.</description>
 		///			</item>
+		///			<item>
+		///				<description>If the DateTime.Kind property of <paramref name="timeInfo"/> is unspecified, the timestamp will be handled as local time.</description>
+		///			</item>
 		///		</list>
 		/// </remarks>
 		object FillArray(int tableID, List<object[]> rows, NotifyProtocol.SaveOption option, DateTime? timeInfo);
@@ -356,6 +363,9 @@ namespace Skyline.DataMiner.Scripting
 		///			<item>
 		///				<description>This call is to be used with columns of type "retrieved". In case other column types are present between the specified columns (e.g. columns of type "custom"), these other columns will be skipped.</description>
 		///			</item>
+		///			<item>
+		///				<description>If the DateTime.Kind property of <paramref name="timeInfo"/> is unspecified, the timestamp will be handled as local time.</description>
+		///			</item>
 		///		</list>
 		/// </remarks>
 		object FillArray(int tableID, List<object[]> columns, DateTime? timeInfo);
@@ -383,6 +393,9 @@ namespace Skyline.DataMiner.Scripting
 		///			</item>
 		///			<item>
 		///				<description>This call is to be used with columns of type "retrieved". In case other column types are present between the specified columns (e.g. columns of type "custom"), these other columns will be skipped.</description>
+		///			</item>
+		///			<item>
+		///				<description>If the DateTime.Kind property of <paramref name="timeInfo"/> is unspecified, the timestamp will be handled as local time.</description>
 		///			</item>
 		///		</list>
 		/// </remarks>
@@ -529,6 +542,9 @@ namespace Skyline.DataMiner.Scripting
 		///			<item>
 		///				<description>This call is to be used with columns of type "retrieved". In case other column types are present between the specified columns (e.g. columns of type "custom"), these other columns will be skipped.</description>
 		///			</item>
+		///			<item>
+		///				<description>If the DateTime.Kind property of <paramref name="timeInfo"/> is unspecified, the timestamp will be handled as local time.</description>
+		///			</item>
 		///		</list>
 		/// </remarks>
 		object FillArrayNoDelete(int tableID, List<object[]> columns, DateTime? timeInfo);
@@ -557,6 +573,9 @@ namespace Skyline.DataMiner.Scripting
 		///			<item>
 		///				<description>This call is to be used with columns of type "retrieved". In case other column types are present between the specified columns (e.g. columns of type "custom"), these other columns will be skipped.</description>
 		///			</item>
+		///			<item>
+		///				<description>If the DateTime.Kind property of <paramref name="timeInfo"/> is unspecified, the timestamp will be handled as local time.</description>
+		///			</item>
 		///		</list>
 		/// </remarks>
 		object FillArrayNoDelete(int tableID, object[] columns, DateTime? timeInfo);
@@ -581,6 +600,9 @@ namespace Skyline.DataMiner.Scripting
 		///			</item>
 		///			<item>
 		///				<description>In case the values array only contains one value, this value will be used for all specified primary keys.</description>
+		///			</item>
+		///			<item>
+		///				<description>If the DateTime.Kind property of <paramref name="timeInfo"/> is unspecified, the timestamp will be handled as local time.</description>
 		///			</item>
 		///		</list>
 		/// </remarks>
@@ -702,6 +724,9 @@ namespace Skyline.DataMiner.Scripting
 		///			<item>
 		///				<description>The method SetParameter(int parameterID, object value, DateTime timestamp) acts a wrapper method for a NotifyProtocol type 256 <see href="xref:NT_SET_PARAMETER_WITH_HISTORY">NT_SET_PARAMETER_WITH_HISTORY</see> call.</description>
 		///			</item>
+		///			<item>
+		///				<description>If the DateTime.Kind property of <paramref name="timeInfo"/> is unspecified, the timestamp will be handled as local time.</description>
+		///			</item>
 		///		</list>
 		///	</remarks>
 		///	<example>
@@ -765,6 +790,9 @@ namespace Skyline.DataMiner.Scripting
 		///		<list type = "bullet" >
 		///			<item>
 		///				<description>Feature introduced in DataMiner version 8.0.3.</description>
+		///			</item>
+		///			<item>
+		///				<description>If the DateTime.Kind property of an entry in <paramref name="timeInfos"/> is unspecified, the timestamp entry will be handled as local time.</description>
 		///			</item>
 		///		</list>
 		///	</remarks>
@@ -1331,6 +1359,9 @@ namespace Skyline.DataMiner.Scripting
 		///			<item>
 		///				<description>This method acts as a wrapper for a NotifyProtocol type 121 call ("NT_PUT_PARAMETER_INDEX"). See [NT_PUT_PARAMETER_INDEX (121)](xref:NT_PUT_PARAMETER_INDEX).</description>
 		///			</item>
+		///			<item>
+		///				<description>If the DateTime.Kind property of <paramref name="timeInfo"/> is unspecified, the timestamp will be handled as local time.</description>
+		///			</item>
 		///		</list>
 		///	</remarks>
 		///	<example>
@@ -1392,6 +1423,9 @@ namespace Skyline.DataMiner.Scripting
 		///			</item>
 		///			<item>
 		///				<description>Feature introduced in DataMiner version 8.0.3.</description>
+		///			</item>
+		///			<item>
+		///				<description>If the DateTime.Kind property of an entry of <paramref name="timeInfos"/> is unspecified, the timestamp of that entry will be handled as local time.</description>
 		///			</item>
 		///		</list>
 		///	</remarks>
@@ -1509,6 +1543,9 @@ namespace Skyline.DataMiner.Scripting
 		///			<item>
 		///				<description>This method acts as a wrapper for a NotifyProtocol type 121 call ("NT_PUT_PARAMETER_INDEX"). See [NT_PUT_PARAMETER_INDEX (121)](xref:NT_PUT_PARAMETER_INDEX).</description>
 		///			</item>
+		///			<item>
+		///				<description>If the DateTime.Kind property of <paramref name="timeInfo"/> is unspecified, the timestamp will be handled as local time.</description>
+		///			</item>
 		///		</list>
 		///	</remarks>
 		///	<example>
@@ -1567,6 +1604,9 @@ namespace Skyline.DataMiner.Scripting
 		///			</item>
 		///			<item>
 		///				<description>This method acts as a wrapper for a NotifyProtocol type 121 <see href="xref:NT_PUT_PARAMETER_INDEX">NT_PUT_PARAMETER_INDEX</see> call.</description>
+		///			</item>
+		///			<item>
+		///				<description>If the DateTime.Kind property of an entry in <paramref name="timeInfos"/> is unspecified, the timestamp of that entry will be handled as local time.</description>
 		///			</item>
 		///		</list>
 		///	</remarks>
@@ -1673,6 +1713,9 @@ namespace Skyline.DataMiner.Scripting
 		///			<item>
 		///				<description>A null reference as cell value will preserve the value of the cell.</description>
 		///			</item>
+		///			<item>
+		///				<description>If the DateTime.Kind property of <paramref name="timeInfo"/> is unspecified, the timestamp will be handled as local time.</description>
+		///			</item>
 		///		</list>
 		///	</remarks>
 		object SetRow(int iPID, int iRow, object row, ValueType timeInfo, [MarshalAs(UnmanagedType.U1)] bool bOverrideBehaviour);
@@ -1698,6 +1741,9 @@ namespace Skyline.DataMiner.Scripting
 		///			</item>
 		///			<item>
 		///				<description>A null reference as cell value will preserve the value of the cell.</description>
+		///			</item>
+		///			<item>
+		///				<description>If the DateTime.Kind property of <paramref name="timeInfo"/> is unspecified, the timestamp will be handled as local time.</description>
 		///			</item>
 		///		</list>
 		///	</remarks>
@@ -1777,6 +1823,9 @@ namespace Skyline.DataMiner.Scripting
 		///			<item>
 		///				<description>A null reference as cell value will preserve the value of the cell.</description>
 		///			</item>
+		///			<item>
+		///				<description>If the DateTime.Kind property of <paramref name="timeInfo"/> is unspecified, the timestamp will be handled as local time.</description>
+		///			</item>
 		///		</list>
 		///	</remarks>
 		object SetRow(int iPID, string key, object row, ValueType timeInfo, [MarshalAs(UnmanagedType.U1)] bool bOverrideBehaviour);
@@ -1802,6 +1851,9 @@ namespace Skyline.DataMiner.Scripting
 		///			</item>
 		///			<item>
 		///				<description>A null reference as cell value will preserve the value of the cell.</description>
+		///			</item>
+		///			<item>
+		///				<description>If the DateTime.Kind property of <paramref name="timeInfo"/> is unspecified, the timestamp will be handled as local time.</description>
 		///			</item>
 		///		</list>
 		///	</remarks>
