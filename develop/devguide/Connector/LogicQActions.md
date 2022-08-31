@@ -480,11 +480,11 @@ For more information, refer to Skyline.DataMiner.Net.Messages.
 
 ## Implementing the IDisposable interface
 
-From DataMiner 10.2.9 onwards (RN 33965), DataMiner detects whether the [IDisposable](https://docs.microsoft.com/en-us/dotnet/api/system.idisposable) interface is implemented on-static QAction classes. DataMiner will then call the Dispose method when the QAction instance is released (i.e. when the element is stopped, removed or restarted).
+From DataMiner 10.2.9 onwards (RN 33965), DataMiner detects whether the [IDisposable](https://docs.microsoft.com/en-us/dotnet/api/system.idisposable) interface is implemented on static QAction classes. DataMiner will then call the Dispose method when the QAction instance is released (i.e. when the element is stopped, removed or restarted).
 
 > [!NOTE]
 >
-> - The also applies to any other class the entrypoint may be in (see <xref:LogicQActions#multiple-entry-methods>).
+> - This also applies to any other class the entrypoint may be in (see [Multiple entry methods](xref:LogicQActions#multiple-entry-methods)).
 > - This coincides with the IsActive property of the SLProtocol interface being set to false, which prevents further function calls to the object from being executed.
 > - The Dispose method is called by a separate thread than the one stopping the element. Its purpose is to release lingering resources and connections when the element is stopped.
 
