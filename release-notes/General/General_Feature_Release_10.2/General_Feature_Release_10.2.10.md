@@ -51,6 +51,15 @@ When you configure a column filter for a Table component in a dashboard or low-c
 
 ### Enhancements
 
+#### External authentication using SAML: Extended logging [ID_33622]
+
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.10 -->
+
+When authenticating users using SAML, the following additional debug information will now be logged in the *SLSaml.txt* file:
+
+- Whether Just-In-Time provisioning (JIT) is enabled.
+- Which group claims are being used.
+
 #### DataMiner Taskbar Utility: Enhanced installation of app packages [ID_33969]
 
 <!-- MR 10.1.0 [CU19]/10.2.0 [CU7] - FR 10.2.10 -->
@@ -163,6 +172,14 @@ In some cases, SLNet could throw an OutOfMemoryException due to a memory leak.
 <!-- MR 10.2.0 [CU7] - FR 10.2.10 -->
 
 When editing a dashboard, you can go to *Settings > User access* and specify the users and/or user groups that are allowed to view or edit the dashboard in question. When you did not have permission to change security settings, the users and user groups you entered would not be validated correctly.
+
+#### Dashboards app / Low-code apps: Changes to the feed could incorrectly influence the time window of a state timeline component [ID_34148]
+
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.10 -->
+
+In some cases, changes to the feed linked to a state timeline component could reset the time window. From now on, linking a query filter to the timeline will no longer influence the time window. The filter will be applied and the current time window will be preserved.
+
+Also, because of a number of enhancements, overall performance has increased when linking a query filter to a state timeline component.
 
 #### Cassandra cluster: No trending information shown for parameters of which the value had not changed for 10 days or more [ID_34149]
 
