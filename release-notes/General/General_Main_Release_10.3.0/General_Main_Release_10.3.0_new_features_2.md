@@ -573,6 +573,12 @@ Using an EPM feed, it is now possible to link *System Name* and *System Type* to
 
 When you configure a column filter for a Table component in a dashboard or low-code app, you can now select checkboxes to filter on discrete values.
 
+#### GQI: Using GQI query columns to filter a 'State' component [ID_34235]
+
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.10 -->
+
+It is now possible to use GQI query columns to filter a *State* component.
+
 ### DMS Service & Resource Management
 
 #### Retrieving bookings in a paged way and sorted by property \[ID_31982\]

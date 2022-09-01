@@ -73,6 +73,12 @@ Using an EPM feed, it is now possible to link *System Name* and *System Type* to
 
 When you configure a column filter for a Table component in a dashboard or low-code app, you can now select checkboxes to filter on discrete values.
 
+#### GQI: Using GQI query columns to filter a 'State' component [ID_34235]
+
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.10 -->
+
+It is now possible to use GQI query columns to filter a *State* component.
+
 ## Changes
 
 ### Enhancements
@@ -268,6 +274,13 @@ Up to now, in low-code apps, feeds would incorrectly not keep the selected value
 <!-- MR 10.1.0 [CU19]/10.2.0 [CU7] - FR 10.2.10 -->
 
 When, on one thread, a group other than a poll group was launched while, on another thread, a poll group with option "partialSNMP" was waiting for incoming SNMP data, in some cases, a run-time error could occur in SLProtocol.
+
+#### Dashboards app / Low-code apps: GQI table error not cleared between sessions [ID_34243]
+
+<!-- MR 10.3.0 - FR 10.2.10 -->
+<!-- Not added to 10.3.0 -->
+
+When a new GQI session was started, in some rare cases, an error that occurred in the previous session would incorrectly be displayed.
 
 #### Low-code apps: Header bar font color would incorrectly not be aligned with the theme color of the app [ID_34267]
 
