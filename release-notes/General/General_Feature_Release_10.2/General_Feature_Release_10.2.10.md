@@ -124,6 +124,12 @@ In the conditional coloring layout setting for Table and Node edge components, t
 
 In the conditional coloring layout setting for Table and Node edge components, discrete column values will now be displayed to make it easier to configure a filter.
 
+#### DataMiner upgrade: AnalyticsDropUnusedCassandraTables upgrade action will explicitly be triggered [ID_34197]
+
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.10 -->
+
+In DataMiner versions from 10.2.8 onwards, during a DataMiner upgrade, the *AnalyticsDropUnusedCassandraTables* upgrade action would fail, unless the [workaround for this issue](xref:KI_RTE_with_SLAnalytics_when_upgrading) had been implemented. During the upgrade to the next DataMiner version, this upgrade action will explicitly be triggered to make sure all unused Cassandra tables get removed.
+
 #### Cassandra: Alarms indicating that the cluster is down will no longer be repeated as long as the status of the cluster remains the same [ID_34209]
 
 <!-- MR 10.1.0 [CU19]/10.2.0 [CU7] - FR 10.2.10 -->
@@ -164,7 +170,6 @@ In the user settings (*user icon > Settings*), from now on, you will only be abl
 A number of small enhancements have been made to the header bar of low-code apps:
 
 - Button text now supports both upper case and lower case.
-
 - Buttons no longer have lines between them.
 
 ### Fixes

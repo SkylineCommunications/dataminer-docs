@@ -34,6 +34,12 @@ This will prevent the following possible issues:
 - The CefSharp browser engine version used by Cube is not updated frequently and therefore not always trusted by certain SAML identity provider websites, such as Microsoft Azure. This can cause a lengthy authentication procedure, even if the browser cache is enabled.
 - The CefSharp browser engine needs to be downloaded from the DMA before a first authentication (on a new device). However, this is currently not supported for HTTPS-only setups.
 
+#### DataMiner Cube: Enhanced editing of profile parameters [ID_34189]
+
+<!-- MR 10.2.0 [CU7] - FR 10.2.10 -->
+
+A number of enhancements have been made to the profile parameter edit boxes, especially with regard to the validation of discrete values.
+
 #### Cassandra: Alarms indicating that the cluster is down will no longer be repeated as long as the status of the cluster remains the same [ID_34209]
 
 <!-- MR 10.1.0 [CU19]/10.2.0 [CU7] - FR 10.2.10 -->
@@ -92,7 +98,6 @@ In the user settings (*user icon > Settings*), from now on, you will only be abl
 A number of small enhancements have been made to the header bar of low-code apps:
 
 - Button text now supports both upper case and lower case.
-
 - Buttons no longer have lines between them.
 
 ### Fixes

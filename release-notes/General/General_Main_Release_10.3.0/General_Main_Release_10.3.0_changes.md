@@ -625,7 +625,7 @@ When, on a system with an Elasticsearch database, an alarm was closed, that alar
 
 In some cases, it could occur that properties of a FieldAlias DOM object could not be saved to the database.
 
-#### DataMiner upgrade: AnalyticsDropUnusedCassandraTables upgrade action would fail \[ID_34091]
+#### DataMiner upgrade: AnalyticsDropUnusedCassandraTables upgrade action would fail [ID_34091]
 
 <!-- Main Release Version 10.3.0 - Feature Release Version 10.2.9 -->
 

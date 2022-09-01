@@ -19,6 +19,12 @@ uid: Cube_Feature_Release_10.2.10
 
 ### Enhancements
 
+#### DataMiner Cube: Enhanced editing of profile parameters [ID_34189]
+
+<!-- MR 10.2.0 [CU7] - FR 10.2.10 -->
+
+A number of enhancements have been made to the profile parameter edit boxes, especially with regard to the validation of discrete values.
+
 #### DataMiner Cube - Resources app: Enhanced resource pool management [ID_34225]
 
 <!-- MR 10.2.0 [CU7] - FR 10.2.10 -->
