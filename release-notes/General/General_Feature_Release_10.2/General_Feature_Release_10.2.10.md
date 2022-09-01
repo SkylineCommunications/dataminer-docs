@@ -192,11 +192,11 @@ A number of small enhancements have been made to the header bar of low-code apps
 
 Up to now, the files stored in the `C:\Skyline DataMiner\ResourceManager` folder would not be locked properly when being read or updated during a midnight synchronization. File locking has now been improved.
 
-#### Web apps - DOM: Sections inheriting from a parent behavior definition would not be taken into account when displaying a form [ID_34125]
+#### Web apps - DOM: Sections inherited from a base behavior definition would not be shown [ID_34125]
 
 <!-- MR 10.2.0 [CU7] - FR 10.2.10 -->
 
-When, a DOM definition containing a behavior definition with inheritance enabled was used in a web app form, any sections inheriting from that parent behavior definition would not be taken into account when displaying that form.
+When a DOM definition using an extended behavior definition was assigned to a form component, any sections inherited from the base behavior definition would not be shown.
 
 #### SLNet could throw an OutOfMemoryException due to a memory leak [ID_34126]
 

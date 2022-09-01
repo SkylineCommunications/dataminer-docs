@@ -133,11 +133,11 @@ Up to now, the files stored in the `C:\Skyline DataMiner\ResourceManager` folder
 
 When the text in the Cube advanced search box was selected with Ctrl+A and then deleted, it could occur that the advanced search input was not cleared correctly, so that it continued to be shown by the *SurveyorSearchText* variable in Visual Overview.
 
-#### Web apps - DOM: Sections inheriting from a parent behavior definition would not be taken into account when displaying a form [ID_34125]
+#### Web apps - DOM: Sections inherited from a base behavior definition would not be shown [ID_34125]
 
 <!-- MR 10.2.0 [CU7] - FR 10.2.10 -->
 
-When, a DOM definition containing a behavior definition with inheritance enabled was used in a web app form, any sections inheriting from that parent behavior definition would not be taken into account when displaying that form.
+When a DOM definition using an extended behavior definition was assigned to a form component, any sections inherited from the base behavior definition would not be shown.
 
 #### SLNet could throw an OutOfMemoryException due to a memory leak [ID_34126]
 
