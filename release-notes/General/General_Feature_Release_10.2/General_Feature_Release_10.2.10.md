@@ -61,6 +61,12 @@ For each of the following GQI data source columns of type "discrete", the possib
 | PaTokenAdapter           | PaToken status<br>PaToken error state<br>PaToken sub process type<br>PaToken type |
 | PatternOccurrenceAdapter | Pattern type |
 
+#### GQI - EPM feed: Linking 'System Name' and 'System Type' to the query [ID_34222]
+
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.10 -->
+
+Using an EPM feed, it is now possible to link *System Name* and *System Type* to the GQI query you are building.
+
 #### Dashboards / Low-Code Apps: Checkboxes to select discrete values in column filter Table component [ID_34234]
 
 <!-- MR 10.3.0 - FR 10.2.9 -->
@@ -249,6 +255,13 @@ When you tried to access a shared dashboard created in a previous version, the m
 <!-- MR 10.1.0 [CU19]/10.2.0 [CU7] - FR 10.2.10 -->
 
 After a user had logged out of a web app, in some cases, that app would incorrectly continue to send out network requests and try to automatically log itself in again.
+
+#### Low-code apps: Feed selection lost when navigating between pages [ID_34231]
+
+<!-- MR 10.3.0 - FR 10.2.10 -->
+<!-- Not added to 10.3.0 -->
+
+Up to now, in low-code apps, feeds would incorrectly not keep the selected values when the page or panel was closed and subsequently reopened. From now on, feeds that - when used in the Dashboards app - allow you to set default values via the URL, will - when used in low-code apps - keep the selected values when the page or panel was closed and subsequently reopened.
 
 #### Run-time error in SLProtocol when a group was launched while a poll group with option 'PartialSNMP' was waiting for incoming SNMP data [ID_34233]
 

@@ -561,6 +561,12 @@ For each of the following GQI data source columns of type "discrete", the possib
 | PaTokenAdapter           | PaToken status<br>PaToken error state<br>PaToken sub process type<br>PaToken type |
 | PatternOccurrenceAdapter | Pattern type |
 
+#### GQI - EPM feed: Linking 'System Name' and 'System Type' to the query [ID_34222]
+
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.10 -->
+
+Using an EPM feed, it is now possible to link *System Name* and *System Type* to the GQI query you are building.
+
 #### Dashboards / Low-Code Apps: Checkboxes to select discrete values in column filter Table component [ID_34234]
 
 <!-- Main Release Version 10.3.0 - Feature Release Version 10.2.9 -->
