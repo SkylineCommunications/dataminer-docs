@@ -500,7 +500,7 @@ Up to now, when configuring a parameter shape, it was possible to enable to use 
 > [!NOTE]
 > The DynamicUnits=true/false option can now be used to override the value of the DynamicUnits soft-launch option. For example, if the DynamicUnits soft-launch option is set to true, you can configure a parameter shape to not use dynamic units by adding "DynamicUnits=False" to its Options data field.
 >
-> For more information on soft-launch options, see <https://community.dataminer.services/documentation/soft-launch-options/>.
+> For more information on soft-launch options, see [Soft-launch options](xref:SoftLaunchOptions).
 
 #### Data Display: Support for launching EPM objects by clicking buttons in Data Display table cells \[ID_32368\] \[ID_33295\] \[ID_33857\]
 

@@ -7,7 +7,7 @@ uid: Sharing_a_dashboard
 ## Sharing a dashboard using the Live Sharing Service
 
 > [!NOTE]
-> This feature is only available if the DMA is connected to the cloud. See [Connecting your DataMiner System to the cloud](xref:Connecting_your_DataMiner_System_to_the_cloud). Prior to DataMiner 10.1.12, this feature is only available in [soft launch](https://community.dataminer.services/documentation/soft-launch-options/).
+> This feature is only available if the DMA is connected to the cloud. See [Connecting your DataMiner System to the cloud](xref:Connecting_your_DataMiner_System_to_the_cloud). Prior to DataMiner 10.1.12, this feature is only available in [soft launch](xref:SoftLaunchOptions).
 
 1. In the list of dashboards on the left, select the dashboard you want to share.
 
@@ -64,7 +64,7 @@ To do so:
 
 ## Sharing a dashboard as a PDF report via email
 
-This feature is currently still in preview. To use it, the soft-launch option *ReportsAndDashboardsExport* must be activated. For more information, refer to [Soft-launch options](https://community.dataminer.services/documentation/soft-launch-options/) on DataMiner Dojo.
+This feature is currently still in preview. To use it, the soft-launch option *ReportsAndDashboardsExport* must be activated. For more information, refer to [Soft-launch options](xref:SoftLaunchOptions).
 
 > [!NOTE]
 > Sharing a dashboard as a PDF report is possible from the Automation, Correlation and Scheduler modules even if the *ReportsAndDashboardsExport* soft-launch option is not activated. For more information, see [Generating a report based on a dashboard](xref:Generating_a_report_based_on_a_dashboard)
