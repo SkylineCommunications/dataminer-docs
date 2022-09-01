@@ -5,7 +5,7 @@ uid: DashboardNodeEdgeGraph
 # Node edge graph
 
 > [!WARNING]
-> This feature is in preview until DataMiner 10.1.5. If you use the preview version of the feature, its functionality may be different from what is described below. For more information, see [Soft-launch options](https://community.dataminer.services/documentation/soft-launch-options/).
+> This feature is in preview until DataMiner 10.1.5. If you use the preview version of the feature, its functionality may be different from what is described below. For more information, see [Soft-launch options](xref:SoftLaunchOptions).
 
 Available from DataMiner 10.2.0/10.1.5 onwards. Prior to this, the component is available in soft launch from DataMiner 10.0.4 onwards, if the soft-launch option *ReportsAndDashboardsPTP* is enabled.
 
@@ -106,7 +106,7 @@ You can fine-tune the layout of the component with the following settings in the
 
   - You can remove a column filter again by selecting *No color* instead of a specific color.
 
-- *Filters & Highlighting*: Available from DataMiner 10.1.11/10.2.0 onwards. Allows you to configure a number of filtering and highlighting options. However, note that the filtering options require the *Query filter* component, which is currently still in [soft launch](https://community.dataminer.services/documentation/soft-launch-options/).
+- *Filters & Highlighting*: Available from DataMiner 10.1.11/10.2.0 onwards. Allows you to configure a number of filtering and highlighting options. However, note that the filtering options require the *Query filter* component, which is currently still in [soft launch](xref:SoftLaunchOptions).
 
   - *Conditional coloring*: (Replaces the *Column filters* option from prior to 10.1.11.) This option allows you to specify color filters for specific columns, so that these can be used for highlighting in case analytical coloring is used. Users can switch to this coloring mode via the tooltip of a node or edge. To configure a color filter:
 

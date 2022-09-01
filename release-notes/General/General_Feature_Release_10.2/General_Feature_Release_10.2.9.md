@@ -333,7 +333,7 @@ When, in the Dashboards app, you switched to edit mode, all columns of all GQI q
 
 <!-- Main Release Version 10.3.0 - Feature Release Version 10.2.9 -->
 
-Initial support has been added for GQI results with cells containing nested records. However, at present this is only used for the *Resources* data source, which still requires the *GenericInterface* [soft-launch option](https://community.dataminer.services/documentation/soft-launch-options/).
+Initial support has been added for GQI results with cells containing nested records. However, at present this is only used for the *Resources* data source, which still requires the *GenericInterface* [soft-launch option](xref:SoftLaunchOptions).
 
 The following functionality is now available for nested tables:
 
