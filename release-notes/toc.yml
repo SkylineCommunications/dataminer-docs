@@ -6,6 +6,7 @@
     - name: v10.3
       items:
       - name: General Main Release 10.3.0 - Preview
+        topicUid: General_Main_Release_10.3.0
         items:
         - name: General Main Release 10.3.0 - New features
           items:

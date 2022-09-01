@@ -246,7 +246,7 @@ Also, the *Created at* and *Last modified at* columns will no longer be selected
 
 #### Web apps: Long text strings without spaces displayed in read-only boxes were clipped instead of wrapped [ID_34193]
 
-<!-- MR 10.2.0 [CU7] - FR 10.2.10 -->
+<!-- MR 10.1.0 [CU19]/10.2.0 [CU7] - FR 10.2.10 -->
 
 In web apps (e.g. Jobs), long text strings without spaces displayed in read-only boxes would be clipped. From now on, those strings will be wrapped so that all text is visible.
 
