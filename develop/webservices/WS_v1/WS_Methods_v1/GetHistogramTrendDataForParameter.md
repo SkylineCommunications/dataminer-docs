@@ -16,7 +16,7 @@ Use this method to retrieve a snapshot of trend data for a specified parameter.
 | parameterID | Integer | The parameter ID. |
 | tableIndex | String | The (optional) table index |
 | trendingSpanType | String | The trending span type: *LastHour*, *LastDay*, *LastWeek*, *LastMonth*, *LastYear*. |
-| intervalAmount | Integer | The number of intervals used in the histogram. |
+| intervalAmount | Integer | The number of intervals used in the histogram. (Obsolete - No longer supported)|
 | asPercentage | Boolean | Indicates whether the histogram should use percentages (= true) or absolute frequencies (= false). |
 
 ## Output
