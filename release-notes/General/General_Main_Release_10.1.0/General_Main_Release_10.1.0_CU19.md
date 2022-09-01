@@ -117,3 +117,9 @@ When, on one thread, a group other than a poll group was launched while, on anot
 <!-- MR 10.1.0 [CU19]/10.2.0 [CU7] - FR 10.2.10 -->
 
 In some cases, the delete icons of custom quick pick buttons would incorrectly be displayed on top of the time range feed overlay.
+
+#### Problem with SLElement when multiple foreign keys were being resolved [ID_34294]
+
+<!-- MR 10.1.0 [CU19]/10.2.0 [CU7] - FR 10.2.10 -->
+
+In some rare cases, an error could occur in SLElement when multiple foreign keys were being resolved.

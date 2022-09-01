@@ -244,3 +244,15 @@ In the select node of the query builder, you can change the column order by clic
 <!-- MR 10.1.0 [CU19]/10.2.0 [CU7] - FR 10.2.10 -->
 
 In some cases, the delete icons of custom quick pick buttons would incorrectly be displayed on top of the time range feed overlay.
+
+#### Web apps - EPM feed: Overlay would unexpectedly close when the mouse pointer moved away from the EPM view after selecting a chain [ID_34282]
+
+<!-- MR 10.2.0 [CU7] - FR 10.2.10 -->
+
+When you had selected a chain at the bottom of the EPM feed, in some cases, the overlay would unexpectedly close when the mouse pointer moved away from the EPM view.
+
+#### Problem with SLElement when multiple foreign keys were being resolved [ID_34294]
+
+<!-- MR 10.1.0 [CU19]/10.2.0 [CU7] - FR 10.2.10 -->
+
+In some rare cases, an error could occur in SLElement when multiple foreign keys were being resolved.
