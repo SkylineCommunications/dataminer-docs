@@ -4,7 +4,7 @@ uid: Granting_admin_consent
 
 # Granting admin consent for Teams actions
 
-When the Microsoft Teams Chat Integration functionality is used, users require admin consent for certain actions, e.g. to create teams or channels, or to add members to a team.
+When the Microsoft Teams Chat Integration functionality is used, admin consent is required for certain actions, e.g. to create teams or channels, or to add members to a team.
 
 After you have granted this consent, you will need to configure the Microsoft tenant for your cloud-connected organization.
 
