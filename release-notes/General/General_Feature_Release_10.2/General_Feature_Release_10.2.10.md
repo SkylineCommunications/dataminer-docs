@@ -311,3 +311,10 @@ When you had selected a chain at the bottom of the EPM feed, in some cases, the 
 <!-- MR 10.1.0 [CU19]/10.2.0 [CU7] - FR 10.2.10 -->
 
 In some rare cases, an error could occur in SLElement when multiple foreign keys were being resolved.
+
+#### Low-code apps: Panels could flicker while being loaded [ID_34301]
+
+<!-- MR 10.3.0 - FR 10.2.10 -->
+<!-- Not added to 10.3.0 -->
+
+In some cases, panels could flicker while being loaded.
