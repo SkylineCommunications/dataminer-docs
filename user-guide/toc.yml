@@ -2128,15 +2128,31 @@
     - name: DataMiner Low-Code Apps
       topicUID: Application_framework
       items:
-        - name: Accessing custom applications
+        - name: Accessing the Low-Code Apps module
           topicUid: Accessing_custom_apps
-        - name: Creating custom applications
+        - name: Creating low-code applications
           topicUid: Creating_custom_apps
-        - name: Editing a custom application
+        - name: Editing a low-code application
           topicUid: Editing_custom_apps
-        - name: Configuring custom applications
-          topicUid: Configuring_custom_apps
-        - name: Deleting a custom application
+        - name: Configuring low-code applications
+          items:
+            - name: Customizing the icon and color of an app
+              topicUid: LowCodeApps_Custom_Icon
+            - name: Configuring a page of a low-code app
+              topicUid: LowCodeApps_page_config
+            - name: Configuring a panel of a low-code app
+              topicUid: LowCodeApps_panel_config
+            - name: Configuring the header bar of a low-code app page
+              topicUid: LowCodeApps_header_config
+            - name: Configuring low-code app events
+              topicUid: LowCodeApps_event_config
+            - name: Configuring security for a low-code app
+              topicUid: LowCodeApps_security_config
+            - name: Retrieving an earlier version of a low-code app
+              topicUid: LowCodeApps_earlier_version
+            - name: 
+              topicUid: LowCodeApps_organizing_landing_page
+        - name: Deleting a low-code application
           topicUid: Deleting_custom_apps
     - name: DataMiner Object Models (DOM)
       topicUID: DOM

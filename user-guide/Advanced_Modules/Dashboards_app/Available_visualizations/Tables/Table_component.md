@@ -49,7 +49,7 @@ To configure actions:
 
 1. In the *Icon* box, select an icon for the action.
 
-1. In the *Action* box, select the action that should be executed. You can for instance use this to add an update action to the table, or to allow users to select an item or clear their selection. See [Configuring custom app events](xref:Configuring_custom_apps#configuring-custom-app-events).
+1. In the *Action* box, select the action that should be executed. You can for instance use this to add an update action to the table, or to allow users to select an item or clear their selection. See [Configuring low-code app events](xref:LowCodeApps_event_config).
 
 ## Exporting the table
 
