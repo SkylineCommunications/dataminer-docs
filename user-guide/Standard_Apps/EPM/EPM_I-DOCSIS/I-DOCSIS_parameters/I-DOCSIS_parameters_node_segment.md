@@ -76,6 +76,20 @@ These parameters are currently still under development.
 
 - **Percentage CM Group Delay or Reflection OOS**: Calculated. The percentage of cable modems associated with the given service group that are affected by NMTER being out of spec (OOS).
 
+- **US Port Name**: Parent US Port name of Node Segment.
+ 
+- **Reflection Distance**: Average reflection distance for all associated CMs.
+
+- **Average Latency**: The average latency for all CMs associated with the given level.
+
+- **Average jitter**: The average jitter for all CMs associated with the given level.
+
+- **Average Packet** Loss Rate: The average packet loss rate for all CMs associated with the given level.
+
+- **US Utilization**: The percentage US utilization of the channels associated with the port.
+
+- **DS Utilization**: The percentage DS utilization of the channels associated with the port.
+
 ## System parameters
 
 - **Name \[IDX]**: Direct value. The display name of the node segment.
