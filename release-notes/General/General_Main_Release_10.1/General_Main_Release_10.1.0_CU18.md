@@ -4,6 +4,9 @@ uid: General_Main_Release_10.1.0_CU18
 
 # General Main Release 10.1.0 CU18
 
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
+
 ### Enhancements
 
 #### Serial connections: Hostname resolution enhancements [ID_33702]

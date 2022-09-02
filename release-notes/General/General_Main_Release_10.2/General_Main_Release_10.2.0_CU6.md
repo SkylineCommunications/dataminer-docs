@@ -2,10 +2,10 @@
 uid: General_Main_Release_10.2.0_CU6
 ---
 
-# General Main Release 10.2.0 CU6 – Preview
+# General Main Release 10.2.0 CU6
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 ### Enhancements
 
