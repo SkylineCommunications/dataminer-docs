@@ -6,7 +6,7 @@ uid: Breaking_changes
 
 The following breaking changes have been introduced in recent DataMiner releases, or are planned for upcoming releases.
 
-| RN ID | Release version(s) | Description |
+| Release note ID | Release version(s) | Description |
 |--|--|--|
 | [25216](xref:General_Feature_Release_10.0.5#dashboards-app-cpe-feed-component-now-uses-element-data-feed-id_25216) | DataMiner 10.1.0/10.0.5 | Dashboards: CPE component now has to be configured with a feed instead of through the component settings. |
 | [26006](xref:General_Feature_Release_10.0.9#web-services-api-v1---new-and-updated-methods-to-manage-job-data-id_26006) | DataMiner 10.1.0/10.0.9 | Web Services API v1: Job management methods have been modified. |
@@ -25,6 +25,6 @@ The following breaking changes have been introduced in recent DataMiner releases
 
 The following breaking changes were introduced to features that were still in soft launch at the time:
 
-| RN ID | Release version(s) | Description |
+| Release note ID | Release version(s) | Description |
 |--|--|--|
 | 26152 | 10.1.0/10.0.9 | Dashboards: Generic Query Interface queries can no longer contain a ColumnInfo object. Instead these now contain the name of the column. |
