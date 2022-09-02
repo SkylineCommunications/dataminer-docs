@@ -85,6 +85,18 @@ It is now possible to use GQI query columns to filter a *State* component.
 
 Query columns of type "string" can now be filtered using *Equals* and *NotEquals*.
 
+#### Dashboards app / Low-code apps: 'Return no rows when feed is empty' option replaced by a triple-state option [ID_34280]
+
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.10 -->
+
+Up to now, when configuring the filter of a GQI data feed, you could enable the *Return no rows when feed is empty* option to indicate that, when the feed was empty, you wanted an empty table to be returned instead of the entire table.
+
+Now, this option has been replaced by a triple-state option. You can now indicate that, when the feed is empty, you want
+
+- to have an empty table returned,
+- to have the entire table returned, or
+- to have the table filtered on empty values.
+
 ## Changes
 
 ### Enhancements
@@ -210,6 +222,12 @@ A number of small enhancements have been made to the header bar of low-code apps
 <!-- MR 10.1.0 [CU19]/10.2.0 [CU7] - FR 10.2.10 -->
 
 Because of a number of enhancements, overall performance has increased when starting up elements on systems using a MySQL or Microsoft SQL Server database, especially elements containing large amounts of data.
+
+#### GQI table column names will no longer include table names [ID_34302]
+
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.10 -->
+
+When a GQI table column inherits its name from a parameter of which the name includes the table name (between brackets), that table name will now be trimmed from the column name.
 
 ### Fixes
 
@@ -339,6 +357,13 @@ In the generic filter component, in some cases, column filters would be incorrec
 
 In some cases, the delete icons of custom quick pick buttons would incorrectly be displayed on top of the time range feed overlay.
 
+#### Low-code apps: Selector feeds would incorrectly not be displayed in the edit sidebar [ID_34281]
+
+<!-- MR 10.3.0 - FR 10.2.10 -->
+<!-- Not added to 10.3.0 -->
+
+In some cases, the selector feeds would incorrectly not be displayed in the edit sidebar under the *Feeds* data source section.
+
 #### Web apps - EPM feed: Overlay would unexpectedly close when the mouse pointer moved away from the EPM view after selecting a chain [ID_34282]
 
 <!-- MR 10.2.0 [CU7] - FR 10.2.10 -->
@@ -350,6 +375,13 @@ When you had selected a chain at the bottom of the EPM feed, in some cases, the 
 <!-- MR 10.1.0 [CU19]/10.2.0 [CU7] - FR 10.2.10 -->
 
 In some rare cases, an error could occur in SLElement when multiple foreign keys were being resolved.
+
+#### Low-code apps: Problem when using the "query rows" data source [ID_34298]
+
+<!-- MR 10.3.0 - FR 10.2.10 -->
+<!-- Not added to 10.3.0 -->
+
+In some cases, an exception could be thrown when using the "query rows" data source.
 
 #### Low-code apps: Panels could flicker while being loaded [ID_34301]
 

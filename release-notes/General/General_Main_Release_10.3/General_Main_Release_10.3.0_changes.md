@@ -356,6 +356,12 @@ From now on, the factory reset tool *SLReset.exe* will no longer remove the foll
 - the *VersionHistory.txt* file
 - the HTTPS configuration stored in the *MaintenanceSettings.xml* file.
 
+#### GQI table column names will no longer include table names [ID_34302]
+
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.10 -->
+
+When a GQI table column inherits its name from a parameter of which the name includes the table name (between brackets), that table name will now be trimmed from the column name.
+
 ### Fixes
 
 #### SLAnalytics: Problem with trend prediction \[ID_31352\]

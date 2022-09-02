@@ -585,6 +585,18 @@ It is now possible to use GQI query columns to filter a *State* component.
 
 Query columns of type "string" can now be filtered using *Equals* and *NotEquals*.
 
+#### Dashboards app / Low-code apps: 'Return no rows when feed is empty' option replaced by a triple-state option [ID_34280]
+
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.10 -->
+
+Up to now, when configuring the filter of a GQI data feed, you could enable the *Return no rows when feed is empty* option to indicate that, when the feed was empty, you wanted an empty table to be returned instead of the entire table.
+
+Now, this option has been replaced by a triple-state option. You can now indicate that, when the feed is empty, you want
+
+- to have an empty table returned,
+- to have the entire table returned, or
+- to have the table filtered on empty values.
+
 ### DMS Service & Resource Management
 
 #### Retrieving bookings in a paged way and sorted by property \[ID_31982\]
