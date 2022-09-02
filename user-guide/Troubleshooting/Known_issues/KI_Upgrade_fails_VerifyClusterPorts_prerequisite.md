@@ -18,7 +18,7 @@ Install DataMiner 10.2.0 CU6 or 10.2.9.
 
 ## Workaround
 
-Temporarily disable the prerequisite check. See [Upgrade BPA test](xref:Upgrading_a_DataMiner_Agent#upgrade-bpa-test).
+Restart the NATS and NAS services.
 
 ## Issue description
 
