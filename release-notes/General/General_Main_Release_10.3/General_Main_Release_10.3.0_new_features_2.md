@@ -579,6 +579,12 @@ When you configure a column filter for a Table component in a dashboard or low-c
 
 It is now possible to use GQI query columns to filter a *State* component.
 
+#### GQI: Query columns of type 'string' can now be filtered using 'Equals' and 'NotEquals' [ID_34246]
+
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.10 -->
+
+Query columns of type "string" can now be filtered using *Equals* and *NotEquals*.
+
 ### DMS Service & Resource Management
 
 #### Retrieving bookings in a paged way and sorted by property \[ID_31982\]

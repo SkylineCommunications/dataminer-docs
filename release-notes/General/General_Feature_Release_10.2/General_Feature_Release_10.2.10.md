@@ -79,6 +79,12 @@ When you configure a column filter for a Table component in a dashboard or low-c
 
 It is now possible to use GQI query columns to filter a *State* component.
 
+#### GQI: Query columns of type 'string' can now be filtered using 'Equals' and 'NotEquals' [ID_34246]
+
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.10 -->
+
+Query columns of type "string" can now be filtered using *Equals* and *NotEquals*.
+
 ## Changes
 
 ### Enhancements
@@ -135,6 +141,15 @@ In the conditional coloring layout setting for Table and Node edge components, t
 <!-- Part of this RN is still in soft launch and consequently has not been documented yet -->
 
 In the conditional coloring layout setting for Table and Node edge components, discrete column values will now be displayed to make it easier to configure a filter.
+
+#### SLReset will no longer remove VersionHistory.txt and the HTTPS configuration [ID_34194]
+
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.10 -->
+
+From now on, the factory reset tool *SLReset.exe* will no longer remove the following items:
+
+- the *VersionHistory.txt* file
+- the HTTPS configuration stored in the *MaintenanceSettings.xml* file.
 
 #### DataMiner upgrade: AnalyticsDropUnusedCassandraTables upgrade action will explicitly be triggered [ID_34197]
 
@@ -311,6 +326,12 @@ In some cases, the header bar font color would incorrectly not be aligned with t
 <!-- MR 10.2.0 [CU7] - FR 10.2.10 -->
 
 In the select node of the query builder, you can change the column order by clicking up and down arrows. Up to now, when you hovered over one of those arrows, in some cases, the incorrect arrow would be selected.
+
+#### Dashboards app / Low-code apps: Column filters in generic filter component incorrectly marked as incapable [ID_34273]
+
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.10 -->
+
+In the generic filter component, in some cases, column filters would be incorrectly marked as incapable when the filter assistance option was enabled.
 
 #### Dashboards app - Time range feed: Delete icons of custom quick pick buttons would incorrectly be displayed on top of the time range feed overlay [ID_34278]
 

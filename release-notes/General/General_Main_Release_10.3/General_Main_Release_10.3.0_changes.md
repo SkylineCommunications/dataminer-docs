@@ -347,6 +347,15 @@ In the conditional coloring layout setting for Table and Node edge components, t
 
 In the conditional coloring layout setting for Table and Node edge components, discrete column values will now be displayed to make it easier to configure a filter.
 
+#### SLReset will no longer remove VersionHistory.txt and the HTTPS configuration [ID_34194]
+
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.10 -->
+
+From now on, the factory reset tool *SLReset.exe* will no longer remove the following items:
+
+- the *VersionHistory.txt* file
+- the HTTPS configuration stored in the *MaintenanceSettings.xml* file.
+
 ### Fixes
 
 #### SLAnalytics: Problem with trend prediction \[ID_31352\]
@@ -652,3 +661,9 @@ This issue will now be prevented. In addition, the element's instance GUID will 
 <!-- Main Release Version 10.3.0 - Feature Release Version 10.2.8 CU2 -->
 
 After a DMS with a Cassandra Cluster setup was upgraded to 10.2.8 (CU1), it could occur that the Alarm Console showed run-time errors related to the SLAnalytics process. This was caused by an upgrade action that was not triggered for such a setup.
+
+#### Dashboards app / Low-code apps: Column filters in generic filter component incorrectly marked as incapable [ID_34273]
+
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.10 -->
+
+In the generic filter component, in some cases, column filters would be incorrectly marked as incapable when the filter assistance option was enabled.
