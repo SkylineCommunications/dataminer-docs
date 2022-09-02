@@ -24,6 +24,10 @@ This page contains an overview of the DS Port parameters available in the I-DOCS
 
   Calculated by aggregating the number of CMs according to the DOCSIS version as reported by the CM MIBs (OID: 1.3.6.1.2.1.10.127.1.1.5).
 
+- **Number other CM**: Calculated. The number of CMs served by the DS port for the other DOCSIS version.
+
+  Calculated by adding the number of CM with different DOCSIS version of 2.0, 3.0, 3.1 DOCSIS.
+
 - **Number CM Ping Status OK**: Calculated. The number of CMs associated with the DS port that are reporting the ping status "OK".
 
   Calculated by aggregating the number of CMs with ping status "OK".
