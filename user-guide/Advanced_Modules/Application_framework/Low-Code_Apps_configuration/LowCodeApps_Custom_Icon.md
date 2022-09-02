@@ -4,7 +4,7 @@ uid: LowCodeApps_Custom_Icon
 
 # Customizing the icon and color of an app
 
-To customize the color and icon for a custom low-code app, select the icon in the top-left corner.
+To customize the color and icon for a low-code app, select the icon in the top-left corner.
 
 You can then:
 
