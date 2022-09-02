@@ -22,6 +22,19 @@ uid: Cube_Feature_Release_10.2.10
 
 ### Enhancements
 
+#### Trending - Behavioral anomaly detection: No more intermediate change point update events of type 'flatline' [ID_33957]
+
+<!-- MR 10.3.0 - FR 10.2.10 -->
+<!-- Not added to 10.3.0 -->
+
+Up to now, when a trend behaved as a flatline for a long time, a change point update event would be generated every 15 minutes. From now on, in case of a flatline trend, only two change point events will be generated: one at the start of the flatline and another at the end of the flatline.
+
+#### Trending: Enhanced performance when requesting real-time trend data [ID_34171]
+
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.10 -->
+
+On systems that store real-time trend data for more than a week, from now on, DataMiner Cube will no longer request all available real-time trend data at once. Instead, it will request data for the past week and only request more data when needed.
+
 #### DataMiner Cube: Enhanced editing of profile parameters [ID_34189]
 
 <!-- MR 10.2.0 [CU7] - FR 10.2.10 -->

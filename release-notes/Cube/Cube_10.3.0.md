@@ -1027,8 +1027,13 @@ A number of enhancements have been made to the DataMiner Cube start window:
 - When the start window application is downloaded from a DataMiner Agent, the cluster is automatically configured. Up to now, if it was possible to reach the agent via HTTPS within 2 seconds, the cluster was configured as "HTTPS only". However, in some cases, 2 seconds was too short, resulting in HTTPS agents being configured as "HTTP or HTTPS". From now on, the start window application will wait up to 5 seconds.
 
 - When you add a new cluster, it will now always be added to the group containing the currently selected cluster.
-
 - The maximum size of the daily log file has been increased from 1 MB to 100 MB.
+
+#### Trending: Enhanced performance when requesting real-time trend data [ID_34171]
+
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.10 -->
+
+On systems that store real-time trend data for more than a week, from now on, DataMiner Cube will no longer request all available real-time trend data at once. Instead, it will request data for the past week and only request more data when needed.
 
 ### Fixes
 
