@@ -82,6 +82,25 @@ A number of enhancements have been made with regard to managing resource pools.
 
 Because of a number of enhancements, overall performance of SLProtocol has increased when reading element data.
 
+#### Automation: Extra information will now be added to the SLAutomation log file [ID_34248]
+
+<!-- MR 10.2.0 [CU7] - FR 10.2.10 -->
+
+The following information will now also be added to the SLAutomation log file:
+
+- When a script started.
+- When a script stopped and how long it took to execute it.
+
+Examples:
+
+```txt
+2022/08/26 08:57:45.413|SLAutomation.exe 10.2.2234.873|23088|48272|CAutomation::Execute|INF|0|[FirstName LastName] Started executing script: 'testscript' (ID: 1)
+```
+
+```txt
+2022/08/26 08:58:59.694|SLAutomation.exe 10.2.2234.873|23088|48272|CAutomation::Execute|INF|0|[FirstName LastName] Finished executing script: 'testscript' (ID: 1). Execution took 01m 14.280s.
+```
+
 #### DataMiner Upgrade: Obsolete 'SNMP Simulation Generator' files removed from upgrade packages [ID_34250]
 
 <!-- MR 10.1.0 [CU19]/10.2.0 [CU7] - FR 10.2.10 -->
@@ -249,6 +268,12 @@ After a user had logged out of a web app, in some cases, that app would incorrec
 <!-- MR 10.1.0 [CU19]/10.2.0 [CU7] - FR 10.2.10 -->
 
 When, on one thread, a group other than a poll group was launched while, on another thread, a poll group with option "partialSNMP" was waiting for incoming SNMP data, in some cases, a run-time error could occur in SLProtocol.
+
+#### Problem with SLProtocol when performing a 'replace data' action [ID_34255]
+
+<!-- Main Release Version 10.0.0 [CU22]/10.1.0 [CU19]/10.2.0 [CU7] - Feature Release Version 10.2.10 -->
+
+In some cases, an error could occur in SLProtocol when performing a 'replace data' action that had to replace multiple bytes.
 
 #### Low-code apps: Header bar font color would incorrectly not be aligned with the theme color of the app [ID_34267]
 

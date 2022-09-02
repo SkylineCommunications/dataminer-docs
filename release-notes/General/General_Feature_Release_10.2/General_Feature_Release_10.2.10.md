@@ -193,6 +193,25 @@ Warning: <function> is unable to parse compliance cache file entry at line <line
 
 Because of a number of enhancements, overall performance of SLProtocol has increased when reading element data.
 
+#### Automation: Extra information will now be added to the SLAutomation log file [ID_34248]
+
+<!-- MR 10.2.0 [CU7] - FR 10.2.10 -->
+
+The following information will now also be added to the SLAutomation log file:
+
+- When a script started.
+- When a script stopped and how long it took to execute it.
+
+Examples:
+
+```txt
+2022/08/26 08:57:45.413|SLAutomation.exe 10.2.2234.873|23088|48272|CAutomation::Execute|INF|0|[FirstName LastName] Started executing script: 'testscript' (ID: 1)
+```
+
+```txt
+2022/08/26 08:58:59.694|SLAutomation.exe 10.2.2234.873|23088|48272|CAutomation::Execute|INF|0|[FirstName LastName] Finished executing script: 'testscript' (ID: 1). Execution took 01m 14.280s.
+```
+
 #### DataMiner Upgrade: Obsolete 'SNMP Simulation Generator' files removed from upgrade packages [ID_34250]
 
 <!-- MR 10.1.0 [CU19]/10.2.0 [CU7] - FR 10.2.10 -->
@@ -228,6 +247,13 @@ Because of a number of enhancements, overall performance has increased when star
 <!-- Main Release Version 10.3.0 - Feature Release Version 10.2.10 -->
 
 When a GQI table column inherits its name from a parameter of which the name includes the table name (between brackets), that table name will now be trimmed from the column name.
+
+#### Low-code apps: 'fetch data' action is now available in all visualizations that can use query data [ID_34308]
+
+<!-- MR 10.3.0 - FR 10.2.10 -->
+<!-- Not added to 10.3.0 -->
+
+The *fetch data* action is now available in all visualizations that can use query data.
 
 ### Fixes
 
@@ -333,6 +359,12 @@ When, on one thread, a group other than a poll group was launched while, on anot
 
 When a new GQI session was started, in some rare cases, an error that occurred in the previous session would incorrectly be displayed.
 
+#### Problem with SLProtocol when performing a 'replace data' action [ID_34255]
+
+<!-- Main Release Version 10.0.0 [CU22]/10.1.0 [CU19]/10.2.0 [CU7] - Feature Release Version 10.2.10 -->
+
+In some cases, an error could occur in SLProtocol when performing a 'replace data' action that had to replace multiple bytes.
+
 #### Low-code apps: Header bar font color would incorrectly not be aligned with the theme color of the app [ID_34267]
 
 <!-- MR 10.2.0 [CU7] - FR 10.2.10 -->
@@ -395,3 +427,9 @@ In some cases, panels could flicker while being loaded.
 <!-- MR 10.2.0 [CU7] - FR 10.2.10 -->
 
 While query pages were being retrieved via GQI, each time a new page was loaded, the loader bar at the top of a table component would incorrectly be refreshing.
+
+#### Dashboards app / Low-code apps: Query column filters would not be applied correctly to table components [ID_34305]
+
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.10 -->
+
+when a dashboard, a low-code app page or low-code app panel was initialized, in some cases, query column filters would not be applied correctly to table components on that dashboard, page or panel.

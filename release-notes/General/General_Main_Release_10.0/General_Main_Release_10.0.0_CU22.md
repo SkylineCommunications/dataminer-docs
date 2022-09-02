@@ -419,3 +419,9 @@ In the following example, the second connection would incorrectly be ignored.
 <!-- Main Release Version 10.0.0 [CU22]/10.1.0 [CU18]/10.2.0 [CU6] - Feature Release Version 10.2.9 -->
 
 In some rare cases, an error could occur in the SLSNMPManager process due to an SNMP Get or Set having been put on the queue while the element in question was being stopped.
+
+#### Problem with SLProtocol when performing a 'replace data' action [ID_34255]
+
+<!-- Main Release Version 10.0.0 [CU22]/10.1.0 [CU19]/10.2.0 [CU7] - Feature Release Version 10.2.10 -->
+
+In some cases, an error could occur in SLProtocol when performing a 'replace data' action that had to replace multiple bytes.

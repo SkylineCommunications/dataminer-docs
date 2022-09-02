@@ -673,3 +673,9 @@ After a DMS with a Cassandra Cluster setup was upgraded to 10.2.8 (CU1), it coul
 <!-- Main Release Version 10.3.0 - Feature Release Version 10.2.10 -->
 
 In the generic filter component, in some cases, column filters would be incorrectly marked as incapable when the filter assistance option was enabled.
+
+#### Dashboards app / Low-code apps: Query column filters would not be applied correctly to table components [ID_34305]
+
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.10 -->
+
+when a dashboard, a low-code app page or low-code app panel was initialized, in some cases, query column filters would not be applied correctly to table components on that dashboard, page or panel.
