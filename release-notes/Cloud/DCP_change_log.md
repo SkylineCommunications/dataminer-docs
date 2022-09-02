@@ -6,6 +6,12 @@ uid: DCP_change_log
 
 The DataMiner Cloud Platform gets updated continuously. This change log can help you trace when specific features and changes have become available.
 
+#### 1 September 2022 – New feature – CloudGateway 2.9.4 – Connection tester tool [ID_34293]
+
+The Cloud Gateway now comes with a new connection tester tool, *ConnectionTester.exe*. This tool can be used to validate the network setup and check if all features are available. It checks whether the network complies with the requirements for the cloud platform.
+
+You can find the new tool in the folder `Program files\Skyline Communications\Dataminer CloudGateway\` on each cloud-connected DMA. Simply double-click the executable to run the test, and a console window will show the results.
+
 #### 18 August 2022 – New feature – Audit and license information added in DCP Admin app [ID_34216]
 
 In the DCP Admin app, the license expiration date for an organization is now displayed on that organization's *Overview* page.
