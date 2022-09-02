@@ -55,8 +55,6 @@ int result = (int) protocol.NotifyDataMiner(149, ids, rowData);
   protocol.NotifyProtocol(149 /* NT_ADD_ROW */, tableId, new object[] { rowData, timeStamp });
   ```
 
-  If the DateTime.Kind property of the timestamp is unspecified, the timestamp will be handled as local time.
-
 ## See also
 
 - [AddRow(Int32, Object[])](xref:Skyline.DataMiner.Scripting.SLProtocol.AddRow(System.Int32,System.Object[]))

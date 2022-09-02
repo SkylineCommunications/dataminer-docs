@@ -72,8 +72,6 @@ protocol.NotifyProtocol(193/*NT_FILL_ARRAY*/ , tableID, tableContent);
   object result = protocol.NotifyProtocol(193/*NT_FILL_ARRAY*/ , tableID, tableContent);
   ```
 
-- If the DateTime.Kind property of the timestamp is unspecified, the timestamp will be handled as local time.
-
 ## See also
 
 - FillArray

@@ -33,10 +33,6 @@ protocol.NotifyDataMiner(256/*NT_SET_PARAMETER_WITH_HISTORY*/ , ids, valueDetail
 
 - Does not return an object.
 
-## Remarks
-
-- If the DateTime.Kind property of the timestamp is unspecified, the timestamp will be handled as local time.
-
 ## See also
 
 - SLProtocol.SetParameter method

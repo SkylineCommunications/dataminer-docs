@@ -114,8 +114,6 @@ protocol.NotifyProtocol(220 /*NT_FILL_ARRAY_WITH_COLUMN*/, columnInfo, values);
   protocol.NotifyProtocol(220 /*NT_FILL_ARRAY_WITH_COLUMN*/, columnInfo, values);
   ```
 
-- If the DateTime.Kind property of the timestamp is unspecified, the timestamp will be handled as local time.
-
 ## See also
 
 - FillArrayWithColumn

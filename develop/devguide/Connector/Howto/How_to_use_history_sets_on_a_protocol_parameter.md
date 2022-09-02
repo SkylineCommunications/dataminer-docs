@@ -54,9 +54,6 @@ A history set can only be done via a QAction. This is similar to performing any 
 
 Refer to [history sets](xref:MonitoringTrending#history-sets) for an overview of the methods that can be used to perform a history set.
 
-> [!NOTE]
-> When the [DateTime.Kind](https://docs.microsoft.com/en-us/dotnet/api/system.datetime.kind?view=netframework-4.6.2) property of the timeInfo argument is Unspecified, the timestamp will be handled as local time.
-
 ## Dealing with timeouts
 
 It is tempting to use history sets to recover from a timeout. By requesting all parameters that have changed during the timeout and using a history set for them, it could be possible to restore the trend graph after a timeout.
