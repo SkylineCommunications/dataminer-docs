@@ -41,6 +41,12 @@ From now on, when an issue occurs when parsing a compliance cache file entry, th
 Warning: <function> is unable to parse compliance cache file entry at line <line number>. <line content>
 ```
 
+#### SLProtocol: Enhanced performance when reading element data [ID_34241]
+
+<!-- MR 10.1.0 [CU19]/10.2.0 [CU7] - FR 10.2.10 -->
+
+Because of a number of enhancements, overall performance of SLProtocol has increased when reading element data.
+
 #### DataMiner Upgrade: Obsolete 'SNMP Simulation Generator' files removed from upgrade packages [ID_34250]
 
 <!-- MR 10.1.0 [CU19]/10.2.0 [CU7] - FR 10.2.10 -->
@@ -49,6 +55,12 @@ All files related to the obsolete *SNMP Simulation Generator* tool have been rem
 
 > [!NOTE]
 > When you run an upgrade package on a system that contains this obsolete tool, it will automatically be removed.
+
+#### Enhanced performance when starting up elements on systems using a MySQL or Microsoft SQL Server database [ID_34265]
+
+<!-- MR 10.1.0 [CU19]/10.2.0 [CU7] - FR 10.2.10 -->
+
+Because of a number of enhancements, overall performance has increased when starting up elements on systems using a MySQL or Microsoft SQL Server database, especially elements containing large amounts of data.
 
 ### Fixes
 
@@ -99,6 +111,12 @@ When the system time changed because of e.g. a clock resynchronization or a swit
 <!-- MR 10.1.0 [CU19]/10.2.0 [CU7] - FR 10.2.10 -->
 
 In web apps (e.g. Jobs), long text strings without spaces displayed in read-only boxes would be clipped. From now on, those strings will be wrapped so that all text is visible.
+
+#### Failover: Certain correlation rules would no longer work after a Failover switch [ID_34204]
+
+<!-- MR 10.1.0 [CU19]/10.2.0 [CU7] - FR 10.2.10 -->
+
+After a Failover switch, in some cases, certain correlation rules would no longer work.
 
 #### DataMiner Cube - Services app: No services would be loaded the first time you opened the Services app [ID_34211]
 

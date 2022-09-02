@@ -76,6 +76,12 @@ A number of enhancements have been made with regard to managing resource pools.
 
 - The *SelectedPool* session variable of the ReservationManager component will contain the GUIDs of all pools of the selected resource(s), separated by commas.
 
+#### SLProtocol: Enhanced performance when reading element data [ID_34241]
+
+<!-- MR 10.1.0 [CU19]/10.2.0 [CU7] - FR 10.2.10 -->
+
+Because of a number of enhancements, overall performance of SLProtocol has increased when reading element data.
+
 #### DataMiner Upgrade: Obsolete 'SNMP Simulation Generator' files removed from upgrade packages [ID_34250]
 
 <!-- MR 10.1.0 [CU19]/10.2.0 [CU7] - FR 10.2.10 -->
@@ -99,6 +105,12 @@ A number of small enhancements have been made to the header bar of low-code apps
 
 - Button text now supports both upper case and lower case.
 - Buttons no longer have lines between them.
+
+#### Enhanced performance when starting up elements on systems using a MySQL or Microsoft SQL Server database [ID_34265]
+
+<!-- MR 10.1.0 [CU19]/10.2.0 [CU7] - FR 10.2.10 -->
+
+Because of a number of enhancements, overall performance has increased when starting up elements on systems using a MySQL or Microsoft SQL Server database, especially elements containing large amounts of data.
 
 ### Fixes
 
@@ -201,6 +213,12 @@ When a parameter entry was updated in a profile instance, it would no longer be 
 
 In web apps (e.g. Jobs), long text strings without spaces displayed in read-only boxes would be clipped. From now on, those strings will be wrapped so that all text is visible.
 
+#### Failover: Certain correlation rules would no longer work after a Failover switch [ID_34204]
+
+<!-- MR 10.1.0 [CU19]/10.2.0 [CU7] - FR 10.2.10 -->
+
+After a Failover switch, in some cases, certain correlation rules would no longer work.
+
 #### Dashboards app: Problem when trying to access a shared dashboard created in a previous version [ID_34210]
 
 <!-- MR 10.2.0 [CU7] - FR 10.2.10 -->
@@ -261,3 +279,9 @@ When you had selected a chain at the bottom of the EPM feed, in some cases, the 
 <!-- MR 10.1.0 [CU19]/10.2.0 [CU7] - FR 10.2.10 -->
 
 In some rare cases, an error could occur in SLElement when multiple foreign keys were being resolved.
+
+#### Web apps: Loader bar of table component would incorrectly be refreshing each time a new page was loaded [ID_34303]
+
+<!-- MR 10.2.0 [CU7] - FR 10.2.10 -->
+
+While query pages were being retrieved via GQI, each time a new page was loaded, the loader bar at the top of a table component would incorrectly be refreshing.
