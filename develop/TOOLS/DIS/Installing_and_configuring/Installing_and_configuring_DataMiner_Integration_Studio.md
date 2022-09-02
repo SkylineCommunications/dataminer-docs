@@ -20,7 +20,7 @@ To install DataMiner Integration Studio, you have to install the *DataMinerInteg
 1. Click *Install*.
 1. When the installation is complete, click *Close*.
 1. Start Microsoft Visual Studio. If it was running during the installation of the *DataMinerIntegrationStudio.vsix* file, restart it.
-1. Sign in with your dataminer.services account.
+1. In the DIS menu, go to Settings > Account, and sign in with your dataminer.services account.
 1. When you open a tool window, the following message will appear:
 
     ```txt
