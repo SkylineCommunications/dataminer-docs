@@ -4,7 +4,7 @@ uid: Protocol.Params.Param.CrossDriverOptions
 
 # CrossDriverOptions element
 
-Allows building a direct view table using multiple columns from multiple different protocols.
+Allows the creation of a direct view table using multiple columns from multiple different protocols.
 
 ## Parent
 
