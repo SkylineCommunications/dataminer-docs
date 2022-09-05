@@ -36,4 +36,7 @@ The following placeholders can be used:
 - [id:Parameter ID]: Includes the value of the specified parameter (e.g. `WebInterface#http://[id:ParameterID]`).
 
 > [!NOTE]
+> The parameter referenced in a placeholder must be of Interprete Type string and have RTDisplay set to true.
+
+> [!NOTE]
 > The identifiers used for separators and web interfaces should not match the name of an existing page in the protocol. In case it does, it will not be considered a separator or web interface link.
