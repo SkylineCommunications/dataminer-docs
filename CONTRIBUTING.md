@@ -287,7 +287,7 @@ On every page of the documentation on docs.dataminer.services, an *Improve this 
 
 1. Make your changes using the web editor. To get a preview of the changes, go to the *Preview* tab.
 
-1. Once you have made your changes, scroll to the bottom of the page. Enter a title and description for your changes and click Propose changes. For example:
+1. Once you have made your changes, scroll to the bottom of the page. Enter a title and description for your changes and click *Propose changes*. For example:
 
    ![Proposing changes](~/images/Contrib_ProposeChanges.png)
 
@@ -446,6 +446,13 @@ When your changes are ready, you can create a pull request to submit them for re
 
 1. At the top, click *Create pull request*.
 
+   > [!NOTE]
+   > You can also create a draft pull request, for example if you still want to have someone else make changes before the pull request can be merged. In that case, click the triangle button next to *Create pull request* and select *Create draft pull request*.
+   >
+   > ![Create draft pull request](~/images/Contrib_draftPR.png)
+   >
+   > When the pull request is ready to be merged, you can click *Ready for review* on the pull request page to change it from a draft into a full pull request.
+
 1. Specify a title for the pull request, and optionally add a comment with more information about your changes.
 
    > [!NOTE]
@@ -550,11 +557,6 @@ When you have finished making a series of changes to documentation in Visual Stu
 
     1. Enter `clear` to clear the terminal.
     
-    1. Enter `docfx metadata -f` to extract the necessary metadata from the programming code. Based on the metadata, DocFX will automatically generate part of the documentation found in the [Developer documentation](xref:DevelopIndex) section.
-    
-        > [!NOTE]
-        > After you run the `docfx metadata -f` command, 5 warnings will appear in the terminal. These can be ignored. If you made a change to one or more files in the `src` folder, and more than 5 warnings appear in the terminal, check the warnings to see what went wrong and make the necessary corrections.
-     
     1. Enter `docfx build -f` to make a test build.
     
     1. Enter `docfx serve _site`.

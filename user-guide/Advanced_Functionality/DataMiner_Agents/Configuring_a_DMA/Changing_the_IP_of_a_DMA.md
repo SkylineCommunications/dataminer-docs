@@ -119,7 +119,7 @@ For a Failover DMA within a cluster that does not use the Cassandra cluster feat
 
 1. Locate the old IP address in this file, replace it with the newly configured one wherever necessary, and save the file.
 
-1. If the DMAs hosts a Cassandra database, do the following on both DMAs:
+1. If the DMAs host a Cassandra database, do the following **on both DMAs**:
 
    1. Open the cassandra.yaml file (typically located in the folder *C:\\Program Files\\Cassandra\\conf\\*).
 
@@ -127,7 +127,10 @@ For a Failover DMA within a cluster that does not use the Cassandra cluster feat
 
    1. Restart the cassandra service.
 
-1. If the DMAs hosts an Elasticsearch database, do the following on both DMAs:
+   > [!NOTE]
+   > If the IP of both DMAs in the Failover pair is changed, replace both IP addresses in both cassandra.yaml files.
+
+1. If the DMAs hosts an Elasticsearch database, do the following **on both DMAs**:
 
    1. Open the elasticsearch.yml file (typically located in the folder *C:\\Program Files\\Elasticsearch\\config\\*).
 

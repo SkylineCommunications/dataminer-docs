@@ -14,6 +14,8 @@ uid: Part7Reference
 
 - [Support services agreement](xref:Support_services_agreement)
 
+- [Soft-launch options](xref:SoftLaunchOptions)
+
 - [Custom branding](xref:Custom_branding)
 
 - [DataMiner metrics](xref:dataminer_metrics)
@@ -22,7 +24,7 @@ uid: Part7Reference
 
 - [Methods of Procedure](xref:mops)
 
-- [Glossary](xref:glossary)
+- [Glossary](xref:glossary_a_to_l)
 
 > [!NOTE]
 > For more information on Visio shape data fields, options, placeholders, and dynamic table filter syntax, see [Reference](xref:Reference).

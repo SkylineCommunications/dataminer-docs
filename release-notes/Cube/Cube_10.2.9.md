@@ -2,12 +2,21 @@
 uid: Cube_Feature_Release_10.2.9
 ---
 
-# DataMiner Cube Feature Release 10.2.9 – preview
+# DataMiner Cube Feature Release 10.2.9 – Preview
 
 > [!IMPORTANT]
 > We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
 
+> [!TIP]
+> For release notes for this release that are not related to DataMiner Cube, see [General Feature Release 10.2.9](xref:General_Feature_Release_10.2.9).
+
 ## Highlights
+
+#### Trending: Prediction type selection has now moved to the context menu [ID_33861]
+
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.9 -->
+
+In a trend graph, up to now, a drop-down list in the top-right corner allowed you to select one of the available trend prediction types or "Auto". This drop-down list has now been removed. Instead, you can now right-click the graph and select one of the available trend prediction types or "Auto" from the context menu.
 
 #### Tab layout: Closing a card tab by clicking it with the middle mouse button [ID_33883]
 
@@ -46,44 +55,6 @@ A new theme has been added to DataMiner Cube: "Light".
 
 Also, the Apps list now contains links to the Catalog, the Cloud Admin app and custom web apps.
 
-## Other new features
-
-#### Alarm Console - Incident tracking: Some types of alarms can now be manually added to incidents even when they do not contain any focus data [ID_33771] [ID_33803]
-
-<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.9 -->
-
-Up to now, alarms that did not contain any focus information were not allowed to be the base alarm of an incident. From now on, alarms that do not contain any focus data can be manually added to an incident, provided they are not one of the following types of alarms:
-
-- correlation alarms
-- clearable alarms
-- information events
-- suggestion events
-- other incidents
-
-#### Trending: Prediction type selection has now moved to the context menu [ID_33861]
-
-<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.9 -->
-
-In a trend graph, up to now, a drop-down list in the top-right corner allowed you to select one of the available trend prediction types or "Auto". This drop-down list has now been removed. Instead, you can now right-click the graph and select one of the available trend prediction types or "Auto" from the context menu.
-
-#### Browser callbacks can now open EPM objects via SystemName or SystemType [ID_33963]
-
-<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.9 -->
-
-When an embedded web page is displayed in Cube, it is possible to make a callback from the web page into Cube and, for example, open an element, service, view or CPE card.
-
-The existing JavaScript web browser callbacks for browser shapes in Visual Overview have now been extended to allow opening an EPM card in Cube via an object's SystemName or SystemType using the following method:
-
-```txt
-NavigateCPEByName(string systemType, string systemName);
-```
-
-Example in HTML:
-
-```html
-<a href='javascript:window.external.NavigateCPEByName("Region","California");'>Open Region California</a>
-```
-
 #### Visual Overview - Conditional shape manipulation: Using statistics in the condition when the shape is linked to an EPM object [ID_34026]
 
 <!-- Main Release Version 10.3.0 - Feature Release Version 10.2.9 -->
@@ -116,6 +87,38 @@ Supported operators:
 - \>=
 - \<
 - \<=
+
+## Other new features
+
+#### Alarm Console - Incident tracking: Some types of alarms can now be manually added to incidents even when they do not contain any focus data [ID_33771] [ID_33803]
+
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.9 -->
+
+Up to now, alarms that did not contain any focus information were not allowed to be the base alarm of an incident. From now on, alarms that do not contain any focus data can be manually added to an incident, provided they are not one of the following types of alarms:
+
+- correlation alarms
+- clearable alarms
+- information events
+- suggestion events
+- other incidents
+
+#### Browser callbacks can now open EPM objects via SystemName or SystemType [ID_33963]
+
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.9 -->
+
+When an embedded web page is displayed in Cube, it is possible to make a callback from the web page into Cube and, for example, open an element, service, view or CPE card.
+
+The existing JavaScript web browser callbacks for browser shapes in Visual Overview have now been extended to allow opening an EPM card in Cube via an object's SystemName or SystemType using the following method:
+
+```txt
+NavigateCPEByName(string systemType, string systemName);
+```
+
+Example in HTML:
+
+```html
+<a href='javascript:window.external.NavigateCPEByName("Region","California");'>Open Region California</a>
+```
 
 ## Changes
 
@@ -352,6 +355,14 @@ When the Cube starter window software tried to download a DataMiner Cube for a D
 Something went wrong: Error downloading ClickOnce version: Error downloading manifest file from uri ...
 ```
 
+#### Problem with validation of properties and actions in service definitions [ID_34023]
+
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.9 -->
+
+When properties or actions of a service definition were configured, it could occur that validation did not happen correctly so that an incorrect configuration could be saved, resulting in exceptions in the server logging and problems in Cube.
+
+The validation will now ensure that no empty names or property names that are incompatible with Elasticsearch can be saved. If there is an error in a service definition, the *Modified* label will change color. Hovering the mouse pointer over the entry with the label will show the first error in the service definition.
+
 #### Connected DMA removed from cluster instead of selected DMA in System Center [ID_34035]
 
 <!-- Main Release Version 10.1.0 [CU18]/10.2.0 [CU6] - Feature Release Version 10.2.9 -->
@@ -388,6 +399,12 @@ When a spectrum recording is started, an icon should be shown to the right below
 
 If a shape was not linked to a DataMiner object and did not have a *LinkOptions* shape data field, it could occur that the shape was not displayed in Visual Overview.
 
+#### Visual Overview: SurveyorSearchText variable continued to show cleared search input [ID_34114]
+
+<!-- Main Release Version 10.1.0 [CU19]/10.2.0 [CU7] - Feature Release Version 10.2.9 -->
+
+When the text in the Cube advanced search box was selected with Ctrl+A and then deleted, it could occur that the advanced search input was not cleared correctly, so that it continued to be shown by the *SurveyorSearchText* variable in Visual Overview.
+
 #### Navigation issue in visual overview with several tab pages and shapes linked to EPM object [ID_34122]
 
 <!-- Main Release Version 10.1.0 [CU18]/10.2.0 [CU6] - Feature Release Version 10.2.9 -->
@@ -399,3 +416,15 @@ In a visual overview with several tab pages and shapes linked to an EPM object, 
 <!-- Main Release Version 10.1.0 [CU18]/10.2.0 [CU6] - Feature Release Version 10.2.9 -->
 
 When you make a selection in an EPM topology chain, a *Clear all* button becomes available, which allows you to clear the selection again. However, in some cases, this button disappeared again. This was specifically the case when you opened a card of a certain level in the chain, closed this card, and then opened another card from the chain, other than the previous card.
+
+#### Visual Overview: Connection highlight based on connection property not updated automatically [ID_34139]
+
+<!-- Main Release Version 10.1.0 [CU19]/10.2.0 [CU7] - Feature Release Version 10.2.9 -->
+
+When a connection in Visual Overview was highlighted based on a connection property, and the connection property changed, it could occur that the highlight style was not automatically applied to the connection line, but only after the user triggered a redraw, for example by clicking the highlight.
+
+#### Workspace with EPM view card showed incorrect page when loaded [ID_34163]
+
+<!-- Main Release Version 10.1.0 [CU18]/10.2.0 [CU6] - Feature Release Version 10.2.9 -->
+
+When you loaded a workspace containing the card of a view linked to EPM, it could occur that the card did not show the page saved in the workspace but instead the default "Visual" page.

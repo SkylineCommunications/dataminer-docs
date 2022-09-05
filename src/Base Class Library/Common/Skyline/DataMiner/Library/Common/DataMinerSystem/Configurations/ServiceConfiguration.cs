@@ -4,19 +4,14 @@
 	using System.Collections.Generic;
 	using System.ComponentModel;
 	using System.Linq;
+
 	using Skyline.DataMiner.Library.Common.Properties;
-	using Templates;
 
 	/// <summary>
 	/// Represents a service configuration.
 	/// </summary>
 	public class ServiceConfiguration
 	{
-		/// <summary>
-		/// The parameter settings.
-		/// </summary>
-		private readonly ServiceParamsConfiguration parameterSettings;
-
 		/// <summary>
 		/// The advanced configuration options.
 		/// </summary>
@@ -78,7 +73,6 @@
 
 			Name = serviceName;
 			this.dms = dms;
-			this.parameterSettings = new ServiceParamsConfiguration();
 		}
 
 		/// <summary>
@@ -125,15 +119,7 @@
 		/// <remarks>Forbidden characters: '\', '/', ':', '*', '?', '"', '&lt;', '&gt;', '|', '°', ';'.</remarks>
 		public string Name
 		{
-			get
-			{
-				return name;
-			}
-
-			set
-			{
-				name = InputValidator.ValidateName(value, "value");
-			}
+			get; set;
 		}
 
 		/// <summary>
@@ -141,12 +127,7 @@
 		/// </summary>
 		public IPropertConfigurationCollection Properties
 		{
-			get
-			{
-				LoadPropertyDefinitions();
-
-				return new PropertyConfigurationCollection(properties);
-			}
+			get;
 		}
 
 		/// <summary>
@@ -165,10 +146,7 @@
 		/// </summary>
 		public ParamConfiguration[] IncludedElements
 		{
-			get
-			{
-				return parameterSettings.GetIncludedElements();
-			}
+			get;
 		}
 
 		/// <summary>
@@ -188,7 +166,6 @@
 		/// <param name="serviceId">The DataMiner/Service ID of the service you want to include in the service.</param>
 		public void AddService(DmsServiceId serviceId)
 		{
-			this.parameterSettings.AddService(serviceId);
 		}
 
 		/// <summary>
@@ -198,7 +175,6 @@
 		/// <param name="parameters">The parameters that need to be included into the service.</param>
 		public void AddElement(DmsElementId elementId, List<ElementParamFilterConfiguration> parameters)
 		{
-			this.parameterSettings.AddElement(elementId, parameters);
 		}
 
 		/// <summary>
@@ -232,30 +208,7 @@
 
 		internal Net.Messages.AddServiceMessage GetServiceInfoMessage(int dmaId)
 		{
-			var serviceInfo = new Net.Messages.ServiceInfoEventMessage
-			{
-				DataMinerID = dmaId,
-				ID = -1,
-				Name = name,
-				Description = description,
-				Properties = GetPropertyInfos(),
-				IgnoreTimeouts = advancedConfiguration.IgnoreTimeouts,
-				ServiceElementProtocolName = advancedConfiguration.Protocol == null ? null : advancedConfiguration.Protocol.Name,
-				ServiceElementProtocolVersion = advancedConfiguration.Protocol == null ? null : advancedConfiguration.Protocol.Version,
-				ServiceElementAlarmTemplate = advancedConfiguration.AlarmTemplate == null ? null : advancedConfiguration.AlarmTemplate.Name,
-				ServiceElementTrendTemplate = advancedConfiguration.TrendTemplate == null ? null : advancedConfiguration.TrendTemplate.Name,
-				ServiceParams = parameterSettings.GetServiceInfoParams(),
-				Type = Net.Messages.ServiceType.Service
-			};
-
-			Net.Messages.AddServiceMessage message = new Net.Messages.AddServiceMessage
-			{
-				ViewIDs = GetViewIds(),
-				DataMinerID = dmaId,
-				Service = serviceInfo
-			};
-
-			return message;
+			return null;
 		}
 
 		private int[] GetViewIds()

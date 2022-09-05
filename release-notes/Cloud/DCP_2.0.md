@@ -15,7 +15,7 @@ To install the DataMiner Cloud Pack and connect your DMS to the cloud:
 1. Verify that the following requirements are met:
 
     - All DataMiner Agents in the DataMiner System are running DataMiner version 10.1.1 or higher.
-    - Prior to DataMiner 10.1.9: The CloudConnectedAgents soft-launch option is enabled on all DMAs in the cluster. For more information, see [Soft-launch options](https://community.dataminer.services/documentation/soft-launch-options/).
+    - Prior to DataMiner 10.1.9: The CloudConnectedAgents soft-launch option is enabled on all DMAs in the cluster. For more information, see [Soft-launch options](xref:SoftLaunchOptions).
     - Each DMA that will be connected to the cloud can reach the following endpoints:
 
         - `https://*.dataminer.services/`

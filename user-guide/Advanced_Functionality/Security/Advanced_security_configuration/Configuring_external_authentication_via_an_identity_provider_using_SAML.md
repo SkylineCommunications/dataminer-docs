@@ -70,6 +70,9 @@ To create a DataMiner metadata file (also referred to as *Service Provider Metad
    </md:EntityDescriptor>
    ```
 
+   > [!NOTE]
+   > You can place the *spMetadata.xml* anywhere, as long as the *spMetadata* attribute for the *ExternalAuthentication* tag in *DataMiner.xml* points to the correct file. However, we recommend placing it in the `C:\Skyline DataMiner` folder.
+
 1. Replace \[ENTITYID\] with the unique service provider ID that is assigned to DataMiner when you register it with the identity provider.
 
    The way you can find this ID will depend on the identity provider you are using. See [Identity providers](#identity-providers).
@@ -80,7 +83,7 @@ To create a DataMiner metadata file (also referred to as *Service Provider Metad
 
 > [!NOTE]
 > The ``WantAssertionsSigned`` flag is supported as from DataMiner version 10.2.1/10.2.0. If you are using an older version, then set this to false.
-> SAML responses without signatures can be freely edited to tamper with permissions on the application, leading to severe vulnerabilites. We **highly recommend** setting ``WantAssertionsSigned`` to *true* to mitigate this.
+> SAML responses without signatures can be freely edited to tamper with permissions on the application, leading to severe vulnerabilities. We **highly recommend** setting ``WantAssertionsSigned`` to *true* to mitigate this.
 
 ## Identity providers
 
@@ -176,6 +179,9 @@ Once you have established a trust relationship between DataMiner (i.e. the servi
       > From DataMiner 10.1.11/10.2.0 onwards, DataMiner supports Azure AD application querying. If this is used instead of delegated querying, an authentication secret will suffice and no username and password will need to be specified here.
 
    1. Save the file and restart DataMiner.
+
+   > [!NOTE]
+   > As the client secret and password are sensitive data, after DataMiner has been restarted, this information is encrypted and replaced with a GUID in the *clientSecret* and *password* attributes of the *DataMiner.xml* file.
 
 1. On the application (DataMiner) root page, click *API Permissions* in the pane on the left and make sure the necessary permissions are enabled:
 

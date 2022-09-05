@@ -1537,6 +1537,8 @@
     - name: Dashboards app
       topicUid: newR_D
       items:
+        - name: Accessing the Dashboards app
+          topicUid: Accessing_the_Dashboards_app
         - name: Overview of the Dashboards app UI
           topicUid: Overview_of_the_Dashboards_app_UI
         - name: Managing dashboard folders
@@ -1772,6 +1774,8 @@
       items:
         - name: About jobs
           topicUid: About_jobs
+        - name: Accessing the Jobs app
+          topicUID: Accessing_the_jobs_app
         - name: Overview of the Job Manager app UI
           topicUid: Overview_of_the_Job_Manager_app_UI
         - name: Configuring jobs in the Job Manager app
@@ -2124,17 +2128,89 @@
     - name: DataMiner Low-Code Apps
       topicUID: Application_framework
       items:
-        - name: Accessing custom applications
+        - name: Accessing the Low-Code Apps module
           topicUid: Accessing_custom_apps
-        - name: Creating custom applications
+        - name: Creating low-code applications
           topicUid: Creating_custom_apps
-        - name: Editing a custom application
+        - name: Editing a low-code application
           topicUid: Editing_custom_apps
-        - name: Configuring custom applications
-          topicUid: Configuring_custom_apps
-        - name: Deleting a custom application
+        - name: Configuring low-code applications
+          items:
+            - name: Customizing the icon and color of an app
+              topicUid: LowCodeApps_Custom_Icon
+            - name: Configuring a page of a low-code app
+              topicUid: LowCodeApps_page_config
+            - name: Configuring a panel of a low-code app
+              topicUid: LowCodeApps_panel_config
+            - name: Configuring the header bar of a low-code app page
+              topicUid: LowCodeApps_header_config
+            - name: Configuring low-code app events
+              topicUid: LowCodeApps_event_config
+            - name: Configuring security for a low-code app
+              topicUid: LowCodeApps_security_config
+            - name: Retrieving an earlier version of a low-code app
+              topicUid: LowCodeApps_earlier_version
+            - name: 
+              topicUid: LowCodeApps_organizing_landing_page
+        - name: Deleting a low-code application
           topicUid: Deleting_custom_apps
-- name: DataMiner Standard Apps & Solutions
+    - name: DataMiner Object Models (DOM)
+      topicUID: DOM
+      items:
+        - name: DOM objects
+          topicUid: DOM_objects
+          items:
+            - name: SectionDefinition object
+              topicUID: DOM_SectionDefinition
+            - name: DomDefinition object
+              topicUID: DomDefinition
+            - name: DomInstance object
+              topicUID: DomInstance
+            - name: DomTemplate object
+              topicUID: DomTemplate
+            - name: DomBehaviorDefinition object
+              topicUID: DomBehaviorDefinition
+        - name: DOM managers
+          topicUid: DOM_managers
+        - name: DomHelper class
+          topicUid: DomHelper_class
+        - name: DOM events
+          topicUID: DOM_events
+        - name: DOM history
+          topicUID: DOM_history
+        - name: DOM status system
+          topicUID: DOM_status_system
+        - name: DOM actions
+          topicUID: DOM_actions
+        - name: DOM module settings
+          topicUid: DOM_ModuleSettings
+          items:
+            - name: Module ID
+              topicUID: DOM_ModuleId
+            - name: ModuleSections
+              topicUID: DOM_ModuleSections
+            - name: FieldAliases
+              topicUID: DOM_FieldAliases
+            - name: ExecuteScriptOnDomInstanceActionSettings
+              topicUID: ExecuteScriptOnDomInstanceActionSettings
+            - name: DomManagerInformationEventSettings
+              topicUID: DomManagerInformationEventSettings
+            - name: DomInstanceNameDefinition
+              topicUID: DomInstanceNameDefinition
+            - name: ModuleBehaviorDefinition
+              topicUID: DOM_ModuleBehaviorDefinition
+            - name: TtlSettings
+              topicUID: DOM_TtlSettings
+        - name: DOM data storage
+          topicUid: DOM_data_storage
+        - name: DOM examples
+          topicUID: DOM_Invoice_app_example
+          items:
+            - name: Invoice app example
+              topicUID: DOM_Invoice_app_example
+            - name: Status system example
+              topicUID: DOM_status_system_example
+- name: DataMiner Standard Apps, Frameworks & Solutions
   topicUid: Part5StandardApps
   items:
     - name: DataMiner EPM Solution
@@ -2258,23 +2334,27 @@
               topicUid: DataMiner_IDP_components
             - name: Overview of the IDP app UI
               topicUid: Overview_of_the_IDP_app_UI
-        - name: Advanced configuration for Administrators
-          topicUid: Advanced_configuration_for_Administrators
+        - name: Advanced configuration
           items:
-            - name: CI Types
-              topicUid: CI_Types
-            - name: Discovery
-              topicUid: Discovery
-            - name: Provisioning
-              topicUid: Provisioning
-            - name: Configuration
-              topicUid: Configuration
-            - name: Facilities
-              topicUid: Facilities
-            - name: Activities
-              topicUid: Admin_activities
-            - name: Settings
-              topicUid: Settings
+            - name: Advanced configuration for Administrators
+              topicUid: Advanced_configuration_for_Administrators
+              items:
+                - name: CI Types
+                  topicUid: CI_Types
+                - name: Discovery
+                  topicUid: Discovery
+                - name: Provisioning
+                  topicUid: Provisioning
+                - name: Configuration
+                  topicUid: Configuration
+                - name: Facilities
+                  topicUid: Facilities
+                - name: Activities
+                  topicUid: Admin_activities
+                - name: Settings
+                  topicUid: Settings
+            - name : Implementing the Connectivity Discovery script
+              topicUID: ConnectivityDiscoveryScript
         - name: Reference
           topicUid: Reference1
           items:
@@ -2296,35 +2376,56 @@
               topicUid: Types_of_PTP_devices
             - name: Overview of the DataMiner PTP app UI
               topicUid: Overview_of_the_DataMiner_PTP_app_UI
-    - name: Booking Manager app
-      topicUid: SolSRM
+    - name: Service & Resource Management Framework
+      topicUid: srm_index
       items:
-        - name: Quick Start Guide
-          topicUid: Quick_Start_Guide
-          items:
-            - name: SRM Framework installation
-              topicUid: SRM_Framework_installation
-            - name: SRM system setup
-              topicUid: SRM_system_setup
-        - name: Using the Booking Manager app
-          topicUid: Using_the_Booking_Manager_app
-          items:
-            - name: Booking Manager user interface
-              topicUid: Booking_Manager_user_interface
-        - name: Interacting with the Booking Manager app using custom Automation scripts
-          topicUid: Interacting_with_the_Booking_Manager_app_using_custom_Automation_scripts
-          items:
-            - name: Script types
-              topicUid: Script_types
-            - name: Silent actions
-              topicUid: Silent_actions
-            - name: Frequently asked questions related to bookings and scripting
-              topicUid: Frequently_asked_questions_related_to_bookings_and_scripting
-        - name: Reference
-          topicUid: Reference2
-          items:
-            - name: SRM properties for use with the Booking Manager app
-              topicUid: Reference2
+      - name: SRM use cases
+        topicUid: srm_use_cases
+        items:
+        - name: Resource Automation
+          topicUid: srm_resource_automation
+        - name: Resource Scheduling
+          topicUid: srm_resource_scheduling
+        - name: Resource Orchestration
+          topicUid: srm_resource_orchestration
+        - name: Service Orchestration
+          topicUid: srm_service_orchestration
+      - name: SRM framework concepts
+        topicUid: srm_concepts
+        items:
+        - name: SRM definitions
+          topicUid: srm_definitions
+        - name: SRM instantiations
+          topicUid: srm_instantiations
+        - name: SRM scripting
+          topicUid: srm_scripting
+      - name: Getting started with SRM
+        topicUid: srm_getting_started
+        items:
+        - name: Deploying the SRM framework
+          topicUid: deploying_srm
+        - name: Provisioning the data acquisition and control plane
+          topicUid: provisioning_srm
+        - name: Implementing virtual functions
+          topicUid: implementing_function_srm
+        - name: Provisioning virtual function resources
+          topicUid: provisioning_VFRs
+        - name: Additional configuration for Service Orchestration
+          topicUid: config_service_orchestration
+      - name: Booking Manager app
+        topicUid: SolSRM
+        items:
+          - name: Booking Manager user interface
+            topicUid: Booking_Manager_user_interface
+          - name: Interacting with the Booking Manager app using custom Automation scripts
+            topicUid: Interacting_with_the_Booking_Manager_app_using_custom_Automation_scripts
+            items:
+              - name: Silent actions
+                topicUid: Silent_actions
+              - name: Frequently asked questions related to bookings and scripting
+                topicUid: Frequently_asked_questions_related_to_bookings_and_scripting
+          - name: SRM properties for use with the Booking Manager app
+            topicUid: SRM_properties_Booking_Manager
 - name: DataMiner Cloud Platform
   topicUid: Part51CloudPlatform
   items:
@@ -2397,6 +2498,8 @@
           topicUid: Accessing_the_Sharing_module
         - name: Managing your shares
           topicUid: Managing_your_shares
+    - name: Remote access
+      topicUID: Cloud_Remote_Access
     - name: DataMiner Community
       topicUid: Community
       items:
@@ -2430,10 +2533,10 @@
           topicUid: CloudConnectionVerification
         - name: Giving users access to cloud features
           topicUid: Giving_users_access_to_cloud_features
-        - name: Granting admin consent for Teams actions
-          topicUid: Granting_admin_consent
         - name: Controlling remote access
           topicUid: Controlling_remote_access
+        - name: Granting admin consent for Teams actions
+          topicUid: Granting_admin_consent
         - name: Controlling cloud feed data offloads
           topicUid: Controlling_cloudfeed_data_offloads
         - name: Managing the nodes of a cloud-connected DMS
@@ -2593,6 +2696,10 @@
     - name: Known issues
       topicUID: Known_issues
       items:
+        - name: Upgrade fails because of VerifyClusterPort.dll prerequisite
+          topicUID: KI_Upgrade_fails_VerifyClusterPorts_prerequisite
+        - name: SLAnalytics RTEs after upgrading DMS with Cassandra Cluster
+          topicUID: KI_RTE_with_SLAnalytics_when_upgrading
         - name: Cassandra nodes not configured if current DMA IP is assigned as virtual IP
           topicUID: KI_Cassandra_nodes_not_configured_if_current_DMA_IP_is_assigned_as_virtual_IP
         - name: DataMiner Cube freeze on startup
@@ -2619,8 +2726,6 @@
           topicUID: KI_Unavailable_system_database_after_DataMiner_server_reboot
         - name: Upgrade error - api-ms-win-crt-stdio-l1-1-0.dll is missing
           topicUID: KI_Upgrade_error_api-ms-win-crt-stdio-l1-1-0_dll_is_missing
-        - name: SLAnalytics RTEs after upgrading DMS with Cassandra Cluster
-          topicUID: KI_RTE_with_SLAnalytics_when_upgrading
     - name: Customer DataMiner Reporting (CDMR)
       topicUID: CDMR
 - name: Reference
@@ -2702,6 +2807,8 @@
               topicUid: Configuring_DMS_Alerter
         - name: DataMiner Comparison tool
           topicUID: DataMinerComparisonTool
+        - name: DataMiner Size tool
+          topicUID: DataMinerSizeTool
         - name: DataMiner Taskbar Utility
           topicUid: DataMiner_Taskbar_Utility
           items:
@@ -2783,6 +2890,8 @@
           topicUid: Online_demo_license_for_DMA_to_be_installed_by_user
         - name: Offline demo license for DMA to be installed by user
           topicUid: Offline_demo_license_for_DMA_to_be_installed_by_user
+    - name: Soft-launch options
+      topicUID: SoftLaunchOptions
     - name: Custom branding
       topicUID: Custom_branding
     - name: DataMiner metrics
@@ -2846,4 +2955,9 @@
         - name: DataMiner client applications
           topicUid: DataMiner_client_applications
     - name: Glossary
-      topicUid: glossary
+      topicUid: glossary_a_to_l
+      items:
+      - name: A to L
+        topicUid: glossary_a_to_l
+      - name: M to Z
+        topicUid: glossary_m_to_z

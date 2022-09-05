@@ -4,7 +4,10 @@ uid: Concepts1
 
 # Concepts
 
-The following concepts are of importance for the Service & Resource Management (SRM) framework:
+> [!NOTE]
+> The concepts explained in this section are the main concepts used within the core SRM functionality. If you intend to work with the SRM framework, which builds on the core DataMiner SRM functionality to provide a versatile toolset to manage services and resources, see [SRM framework concepts](xref:srm_concepts).
+
+To understand the core DataMiner SRM functionality, the following concepts are important:
 
 - **Resource**: A resource is any thing that can be used and planned. Resources can have a limited “concurrency”, determining how many bookings are possible for the resource at the same time, and a limited capacity. They can also be collected in so-called **resource pools**.
 
