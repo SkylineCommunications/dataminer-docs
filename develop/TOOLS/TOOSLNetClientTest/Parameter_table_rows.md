@@ -10,7 +10,7 @@ Two consecutive pop-up windows will be displayed, where you need to provide the 
 
 Every row is formatted as follows: *element ID/table ID/number of rows*.
 
-![](~/develop/images/ParameterTableRows.png)
-<br>Figure 109: SLNetClientTest Parameter Table Rows window
+![](~/develop/images/ParameterTableRows.png)<br>
+*SLNetClientTest Parameter Table Rows window*
 
 To inspect the number of rows a table holds in the SLElement process, select *Diagnostics* > *DMA* > *Parameter Table Rows(SLElement)…*

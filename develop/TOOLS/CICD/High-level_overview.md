@@ -8,8 +8,8 @@ In this section, you can find a high-level overview of protocol development prio
 
 Consider for example the development of a protocol. Previously, System Developers put new versions of a protocol on <https://svn.skyline.be>, where the protocol was an XML file.
 
-![](~/develop/images/ProtocolOnSVN.jpg)
-<br>Figure 1: Previous workflow: Protocol published on SVN by developer
+![](~/develop/images/ProtocolOnSVN.jpg)<br>
+*Previous workflow: Protocol published on SVN by developer*
 
 With the introduction of the CI/CD pipeline, Visual Studio solutions are now used instead of XML files (see e.g. [Protocols as a Visual Studio solution](xref:Protocols_as_a_Visual_Studio_solution)).
 
@@ -19,5 +19,5 @@ These Git repositories are hosted by [Gerrit Code Review](https://www.gerritcode
 
 System Developers therefore no longer put new versions of protocols, Automation scripts, etc. on SVN. Instead, a new version is created by creating a tag in the Git repository. The CI/CD pipeline then automatically publishes the new version on SVN.
 
-![](~/develop/images/GerritCodeReview.jpg)
-<br>Figure 2: New workflow: Protocol published on Git by developer and on SVN by CI/CD pipeline
+![](~/develop/images/GerritCodeReview.jpg)<br>
+*New workflow: Protocol published on Git by developer and on SVN by CI/CD pipeline*

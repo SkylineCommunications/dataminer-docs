@@ -4,8 +4,8 @@ uid: Options_window
 
 # Options window
 
-![](~/develop/images/SLCSERepoManager_Options.png)
-<br>Figure 103: SLC SE Repository Manager: Options window
+![](~/develop/images/SLCSERepoManager_Options.png)<br>
+*SLC SE Repository Manager: Options window*
 
 Via *Tools* > *Options*, you can access a window that provides the following options:
 

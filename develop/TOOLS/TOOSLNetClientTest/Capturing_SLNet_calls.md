@@ -10,15 +10,15 @@ To do so:
 
 1. In the Follow menu, click *Follow...*.
 
-    - This will open the "Who to follow?" window.
+   - This will open the "Who to follow?" window.
 
-2. Depending on what you want to capture, select one of the following items in the *Hook Into Active Session* drop-down list:
+1. Depending on what you want to capture, select one of the following items in the *Hook Into Active Session* drop-down list:
 
-    - For DataMiner Cube, select *Cube*.
+   - For DataMiner Cube, select *Cube*.
 
-    - For QActions, select *SLManagedScripting*.
+   - For QActions, select *SLManagedScripting*.
 
-    - For Automation scripts, select *SLManagedAutomation*.
+   - For Automation scripts, select *SLManagedAutomation*.
 
-![](~/develop/images/SLNetClientTest_WhoToFollow.png)
-<br>Figure 112: “Who to follow?” window
+![](~/develop/images/SLNetClientTest_WhoToFollow.png)<br>
+*“Who to follow?” window*
