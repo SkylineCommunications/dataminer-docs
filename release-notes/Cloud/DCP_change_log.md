@@ -6,6 +6,10 @@ uid: DCP_change_log
 
 The DataMiner Cloud Platform gets updated continuously. This change log can help you trace when specific features and changes have become available.
 
+#### 1 September 2022 – Enhancement – Filter functionality for Audit log in DCP Admin app [ID_34322]
+
+The Audit log in the DCP Admin app now allows filtering on operation type, subject type, DataMiner System name, and time span. In addition, the loading of records has been optimized.
+
 #### 1 September 2022 – New feature – CloudGateway 2.9.4 – Connection tester tool [ID_34293]
 
 The Cloud Gateway now comes with a new connection tester tool, *ConnectionTester.exe*. This tool can be used to validate the network setup and check if all features are available. It checks whether the network complies with the requirements for the cloud platform.
