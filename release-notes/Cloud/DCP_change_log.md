@@ -10,7 +10,7 @@ The DataMiner Cloud Platform gets updated continuously. This change log can help
 
 The Cloud Gateway now comes with a new connection tester tool, *ConnectionTester.exe*. This tool can be used to validate the network setup and check if all features are available. It checks whether the network complies with the requirements for the cloud platform.
 
-You can find the new tool in the folder `Program files\Skyline Communications\Dataminer CloudGateway\` on each cloud-connected DMA. Simply double-click the executable to run the test, and a console window will show the results.
+You can find the new tool in the folder `Program files\Skyline Communications\Dataminer CloudGateway\` on a DMA that has the Cloud Gateway installed. Simply double-click the executable to run the test, and a console window will show the results.
 
 #### 18 August 2022 – New feature – Audit and license information added in DCP Admin app [ID_34216]
 
