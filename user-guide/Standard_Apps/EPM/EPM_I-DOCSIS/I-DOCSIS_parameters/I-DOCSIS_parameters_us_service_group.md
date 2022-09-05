@@ -34,6 +34,8 @@ This page contains an overview of the US Service Group parameters available in t
 
 - **Number CM DOCSIS 3.0**
 
+- **Number CM DOCSIS other**
+
 - **Number CM DOCSIS 3.1**
 
 - **Number CM Ping OK**
