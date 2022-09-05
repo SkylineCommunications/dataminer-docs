@@ -38,6 +38,7 @@ Defines a parameter.
 |&nbsp;&nbsp;[Alarm](xref:Protocol.Params.Param.Alarm)|[0, 1]|Specifies the default parameter alarming configuration.|
 |&nbsp;&nbsp;[ArrayOptions](xref:Protocol.Params.Param.ArrayOptions)|[0, 1]|Defines all table columns.|
 |&nbsp;&nbsp;[CRC](xref:Protocol.Params.Param.CRC)|[0, 1]|If /Protocol/Params/Param/Type is set to “CRC”, then this CRC element allows you to define the CRC used in the communication with the device.|
+|&nbsp;&nbsp;[CrossDriverOptions](xref:Protocol.Params.Param.CrossDriverOptions)|[0, 1]|Allows building a direct view table using multiple columns from multiple different protocols.|
 |&nbsp;&nbsp;[Dashboard](xref:Protocol.Params.Param.Dashboard)|[0, 1]|Specifies the configuration for use in dashboards.|
 |&nbsp;&nbsp;[Database](xref:Protocol.Params.Param.Database)|[0, 1]|Specifies database-related configuration options.|
 |&nbsp;&nbsp;[Dependencies](xref:Protocol.Params.Param.Dependencies)|[0, 1]|Allows you to link one or more parameters.|
