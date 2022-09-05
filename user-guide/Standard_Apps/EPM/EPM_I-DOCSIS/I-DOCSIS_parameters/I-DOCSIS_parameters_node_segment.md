@@ -76,9 +76,9 @@ These parameters are currently still under development.
 
 - **Percentage CM Group Delay or Reflection OOS**: Calculated. The percentage of cable modems associated with the given service group that are affected by NMTER being out of spec (OOS).
 
-- **US Port Name**: Parent US Port name of Node Segment.
+- **US Port Name**: The name of the parent US port of the node segment.
  
-- **Reflection Distance**: Average reflection distance for all associated CMs.
+- **Reflection Distance**: The average reflection distance for all associated CMs.
 
 - **Average Latency**: The average latency for all CMs associated with the given level.
 

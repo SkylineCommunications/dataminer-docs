@@ -24,9 +24,9 @@ This page contains an overview of the US Port parameters available in the I-DOCS
 
   Calculated by aggregating the number of CMs according to the DOCSIS version as reported by the CM MIBs (OID: 1.3.6.1.2.1.10.127.1.1.5).
 
-- **Number other CM**: Calculated. The number of CMs served by the DS port for the other DOCSIS version.
+- **Number other CM**: Calculated. The number of CMs served by the US port for other DOCSIS versions.
 
-  Calculated by adding the number of CM with different DOCSIS version of 2.0, 3.0, 3.1 DOCSIS.
+  Calculated by adding up the number of CMs with a DOCSIS version other than 2.0, 3.0, or 3.1.
 
 - **Number CM Ping OK**: Calculated. The number of CMs associated with the US port that are reporting the ping status "OK".
 
