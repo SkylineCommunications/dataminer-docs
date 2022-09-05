@@ -65,7 +65,7 @@ When you generate a report with this component, you can then:
 - For selected KPIs, determine whether to show the average, minimum, maximum or real-time value.
 
 > [!NOTE]
-> If the report is generated as Excel/CSV, at most 1 million total table rows of a partial table can be displayed. If the report is generated as HTML/MHT, only the first page of a partial table will be displayed, using the page size configured in the protocol.
+> If the report is generated as Excel/CSV, at most 1 million total table rows of a [partial table](xref:Table_parameters#partial-tables) can be displayed. If the report is generated as HTML/MHT, only the first page of a partial table will be displayed, using the page size configured in the protocol.
 
 ## DMS Status
 
