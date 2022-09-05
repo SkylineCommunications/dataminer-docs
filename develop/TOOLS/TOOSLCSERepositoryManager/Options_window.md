@@ -21,4 +21,4 @@ Via *Tools* > *Options*, you can access a window that provides the following op
 
   - For the US (available from the office or via VPN), specify **\\\SLA-REPOMIRROR\gerrit.skyline.be**
   - For Singapore (available from the office), specify **\\\SG-SERVER1\gerrit.skyline.be**
-  - For Portugal (available from the office or via FortiNet VPN), specify **\\\SLCSEREPOMAN\gerrit.skyline.be**
+  - For Portugal (available from the Lisbon office or via FortiNet VPN), specify **\\\SLCSEREPOMAN\gerrit.skyline.be**
