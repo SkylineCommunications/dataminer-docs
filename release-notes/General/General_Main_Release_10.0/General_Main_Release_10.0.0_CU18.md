@@ -4,6 +4,12 @@ uid: General_Main_Release_10.0.0_CU18
 
 # General Main Release 10.0.0 CU18
 
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
+
+> [!TIP]
+> For information on how to upgrade DataMiner, see [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent).
+
 ### Enhancements
 
 #### Improved performance when including/excluding elements in services based on alarm or element alarm state \[ID_30303\]

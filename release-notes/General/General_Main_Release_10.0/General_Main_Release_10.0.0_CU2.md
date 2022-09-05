@@ -4,6 +4,12 @@ uid: General_Main_Release_10.0.0_CU2
 
 # General Main Release 10.0.0 CU2
 
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
+
+> [!TIP]
+> For information on how to upgrade DataMiner, see [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent).
+
 ### Enhancements
 
 #### Cassandra database: Cluster name in cassandra.yaml file now always set to 'DMS' \[ID_24645\]

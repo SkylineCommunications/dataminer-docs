@@ -4,6 +4,12 @@ uid: General_Main_Release_10.0.0_CU6
 
 # General Main Release 10.0.0 CU6
 
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
+
+> [!TIP]
+> For information on how to upgrade DataMiner, see [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent).
+
 ### Enhancements
 
 #### Data forwarded using an AlarmSocket or a PollSocket will now be encoded using UTF-8 \[ID_27059\]

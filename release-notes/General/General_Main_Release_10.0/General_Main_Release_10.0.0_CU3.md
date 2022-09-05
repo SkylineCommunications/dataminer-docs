@@ -4,6 +4,12 @@ uid: General_Main_Release_10.0.0_CU3
 
 # General Main Release 10.0.0 CU3
 
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
+
+> [!TIP]
+> For information on how to upgrade DataMiner, see [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent).
+
 ### Enhancements
 
 #### BPA test framework update \[ID_25840\]\[ID_25891\]

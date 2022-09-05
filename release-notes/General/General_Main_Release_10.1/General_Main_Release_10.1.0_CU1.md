@@ -4,6 +4,12 @@ uid: General_Main_Release_10.1.0_CU1
 
 # General Main Release 10.1.0 CU1
 
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
+
+> [!TIP]
+> For information on how to upgrade DataMiner, see [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent).
+
 ### Enhancements
 
 #### Dashboards app - GQI: Column selection enhancements \[ID_28202\]

@@ -4,6 +4,12 @@ uid: General_Main_Release_10.2.0_CU3
 
 # General Main Release 10.2.0 CU3
 
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
+
+> [!TIP]
+> For information on how to upgrade DataMiner, see [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent).
+
 ### Enhancements
 
 #### DataMiner Cube - Resources app: Function instance name can now be updated \[ID_32811\]

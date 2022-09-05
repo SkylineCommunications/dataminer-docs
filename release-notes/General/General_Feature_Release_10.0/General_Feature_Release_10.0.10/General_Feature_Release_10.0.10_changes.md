@@ -2,12 +2,13 @@
 uid: General_Feature_Release_10.0.10_changes
 ---
 
-# General Feature Release 10.0.10
+# General Feature Release 10.0.10 – Changes
 
 > [!NOTE]
 > For known issues with this version, refer to [Known issues](xref:Known_issues).
 
-## Changes
+> [!TIP]
+> For information on how to upgrade DataMiner, see [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent).
 
 ### Enhancements
 

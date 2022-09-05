@@ -4,6 +4,12 @@ uid: General_Main_Release_10.0.0_CU5
 
 # General Main Release 10.0.0 CU5
 
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
+
+> [!TIP]
+> For information on how to upgrade DataMiner, see [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent).
+
 ### Enhancements
 
 #### DataMiner Installer will now automatically select a checkbox to create an additional DataMiner user when not being executed by a user with administrative privileges \[ID_25414\]

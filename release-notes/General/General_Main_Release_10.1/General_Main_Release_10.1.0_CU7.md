@@ -4,6 +4,12 @@ uid: General_Main_Release_10.1.0_CU7
 
 # General Main Release 10.1.0 CU7
 
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
+
+> [!TIP]
+> For information on how to upgrade DataMiner, see [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent).
+
 ### Enhancements
 
 #### Security enhancements \[ID_30124\] \[ID_30479\] \[ID_30570\] \[ID_30581\] \[ID_30597\] \[ID_30600\] \[ID_30604\] \[ID_30786\]

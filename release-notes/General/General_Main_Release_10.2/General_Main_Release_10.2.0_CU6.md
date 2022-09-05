@@ -7,6 +7,9 @@ uid: General_Main_Release_10.2.0_CU6
 > [!NOTE]
 > For known issues with this version, refer to [Known issues](xref:Known_issues).
 
+> [!TIP]
+> For information on how to upgrade DataMiner, see [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent).
+
 ### Enhancements
 
 #### SAML authentication: Azure Active Directory B2C now also supported as identity provider ID_32714]
