@@ -52,7 +52,7 @@ Because of this, it is important to sort the incoming data, so that the history 
 
 A history set can only be done via a QAction. This is similar to performing any other set on a parameter, with the addition of the date and time (DateTime format).
 
-Refer to [history sets](xref:MonitoringTrending#history-sets) for an overview of the methods that can be used to perform a history set.
+Refer to [History sets](xref:MonitoringTrending#history-sets) for an overview of the methods that can be used to perform a history set.
 
 ## Dealing with timeouts
 
