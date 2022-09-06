@@ -14,7 +14,7 @@ In some specific cases, wildcards in the parameter OIDs in a protocol cause poll
 
 ## Fix
 
-Downgrade to 10.2.8 or 10.2.0 CU5.
+Downgrade to 10.2.8 or 10.2.0 CU5 and wait for the patch, which will be available as soon as possible.
 
 ## Issue description
 
