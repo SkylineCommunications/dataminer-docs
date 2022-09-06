@@ -7,6 +7,9 @@ uid: General_Feature_Release_10.2.6
 > [!NOTE]
 > For known issues with this version, refer to [Known issues](xref:Known_issues).
 
+> [!TIP]
+> For information on how to upgrade DataMiner, see [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent).
+
 ## New features
 
 ### DMS core functionality
@@ -72,6 +75,12 @@ These log files are stored in C:\\Skyline DataMiner\\Logging\\SLMessageBroker an
 #### SetAlarmStateMessage can no longer be used to change the alarm state of an incident \[ID_33273\]
 
 From now on, it will no longer be possible to change the alarm state of an incident by means of a SetAlarmStateMessage. If you attempt to do so, an exception will be thrown.
+
+#### DataMiner upgrade: When VerifyClusterPorts prerequisite fails the user will now receive more information on why it failed \[ID_33979\]
+
+<!-- MR 10.2.0 [CU6] - FR 10.2.8 [CU0] -->
+
+When, during a DataMiner upgrade, the VerifyClusterPorts prerequisite fails, you will now receive more information on why it failed. For example, the DMS.xml file could contain faulty IP addresses or NATS may have silently failed.
 
 ### DMS Security
 

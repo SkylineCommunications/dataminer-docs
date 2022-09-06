@@ -2,11 +2,11 @@
 uid: Giving_users_access_to_cloud_features
 ---
 
-# Giving users access to cloud features
+# Controlling user access to cloud features
 
-Before users can have access to a DataMiner System via the various cloud features (e.g. remote access, Teams bot, etc.), you must add their DataMiner Cloud Platform account to your organization and to the DataMiner System.
+If users have a DataMiner Cloud Platform account (i.e. they are registered on <https://dataminer.services>), you can control whether they have access to cloud features. This includes remote access to a DataMiner System via web apps such as the DataMiner Monitoring app, the use of the [Teams bot](xref:DataMiner_Teams_bot), etc. For this purpose, you must add their DataMiner Cloud Platform account to your organization and to the DataMiner System.
 
-To do so:
+## Giving a user access to cloud features
 
 1. As the owner or administrator of your organization, open the Admin app.
 
@@ -18,9 +18,7 @@ To do so:
    > [!TIP]
    > See also: [Accessing the Admin app](xref:Accessing_the_Admin_app)
 
-1. If a different organization should be selected, click the organization selector in the top-right corner and select the organization in the list.
-
-   ![Organization selector](~/user-guide/images/CloudAdmin_Selector.png)
+1. If a different organization should be selected, click the organization selector ![Organization selector](~/user-guide/images/Cloud_Admin_Selector_icon.png) in the top-right corner and select the organization in the list.
 
 1. In the sidebar on the left, navigate to *Organization* > *Users*.
 
@@ -35,3 +33,20 @@ To do so:
 1. At the top of the page, click *Add user*.
 
 1. Specify the email address that is used for the user on the DataMiner Cloud Platform, and click *Add*.
+
+> [!NOTE]
+> If users need to have remote access to the DataMiner System via web apps, make sure remote access is enabled. See [Controlling remote access with the Admin app](xref:Controlling_remote_access).
+
+## Revoking access to cloud features
+
+1. As the owner or administrator of your organization, open the Admin app.
+
+1. In the Admin app, check whether the correct organization is mentioned in the header bar.
+
+1. If a different organization should be selected, click the organization selector ![Organization selector](~/user-guide/images/Cloud_Admin_Selector_icon.png) in the top-right corner and select the organization in the list.
+
+1. In the sidebar on the left, navigate to *Organization* > *Users*.
+
+1. In the list of users, on the right, click the user icon with an x in the lower right corner to revoke access for a specific user.
+
+1. Click *Remove* to confirm that the user should be removed from the organization in the cloud, so that they will no longer have access to the DMS.

@@ -27,6 +27,8 @@ The backup DMA must be a newly installed DataMiner Agent.
 
   For more information on how to change the DataMiner ID, see [Changing the DataMiner ID of a DMA](xref:Changing_the_DMA_ID).
 
+- The version of the DataMiner software on the backup DMA must be exactly the same as on the primary DMA.
+
 - The backup DMA may not be a member of a DMS cluster.
 
 > [!NOTE]

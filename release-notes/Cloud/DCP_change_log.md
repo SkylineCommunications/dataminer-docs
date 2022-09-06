@@ -6,6 +6,22 @@ uid: DCP_change_log
 
 The DataMiner Cloud Platform gets updated continuously. This change log can help you trace when specific features and changes have become available.
 
+#### 1 September 2022 – Enhancement – Filter functionality for Audit log in DCP Admin app [ID_34322]
+
+The Audit log in the DCP Admin app now allows filtering on operation type, subject type, DataMiner System name, and time span. In addition, the loading of records has been optimized.
+
+#### 1 September 2022 – New feature – CloudGateway 2.9.4 – Connection tester tool [ID_34293]
+
+The Cloud Gateway now comes with a new connection tester tool, *ConnectionTester.exe*. This tool can be used to validate the network setup and check if all features are available. It checks whether the network complies with the requirements for the cloud platform.
+
+You can find the new tool in the folder `Program files\Skyline Communications\Dataminer CloudGateway\` on a DMA that has the Cloud Gateway installed. Simply double-click the executable to run the test, and a console window will show the results.
+
+#### 18 August 2022 – New feature – Audit and license information added in DCP Admin app [ID_34216]
+
+In the DCP Admin app, the license expiration date for an organization is now displayed on that organization's *Overview* page.
+
+In addition, a new *Audit* page is available in the app, which contains auditing logs for sharing dashboards and DCP keys.
+
 #### 18 July 2022 – New feature – CloudFeed 1.0.6 / CloudGateway 2.7.0 / ArtifactDeployer 1.4.0 – Proxy support [ID_33955] [ID_33961] [ID_33972]
 
 Proxy support has been added for DataMiner CloudFeed, CloudGateway, and ArtifactDeployer. When you configure this, all outgoing traffic towards the public internet will pass through the proxy server.

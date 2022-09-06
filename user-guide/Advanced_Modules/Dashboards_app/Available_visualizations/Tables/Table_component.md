@@ -31,7 +31,7 @@ In the *Layout* tab for this component, the *Column filters* option is available
 
 - You can remove a column filter again by selecting *No color* instead of a specific color.
 
-You can **resize the columns** of the table by dragging the column edges. Clicking on a column header will sort the table by that column. To toggle between ascending and descending order, click the column header again. To sort by multiple columns, keep the Ctrl key pressed while clicking the column headers. The first column will then be used for the initial sorting, the next one to sort equal values of the first column, and so on. From DataMiner 10.2.0/10.1.8 onwards, you can also change the order of the columns by dragging the column headers to a different position.
+You can **resize the columns** of the table by dragging the column edges. From DataMiner 10.2.0/10.1.8 onwards, you can also change the order of the columns by dragging the column headers to a different position.
 
 ## Adding actions to a table
 
@@ -49,7 +49,7 @@ To configure actions:
 
 1. In the *Icon* box, select an icon for the action.
 
-1. In the *Action* box, select the action that should be executed. You can for instance use this to add an update action to the table, or to allow users to select an item or clear their selection. See [Configuring custom app events](xref:Configuring_custom_apps#configuring-custom-app-events).
+1. In the *Action* box, select the action that should be executed. You can for instance use this to add an update action to the table, or to allow users to select an item or clear their selection. See [Configuring low-code app events](xref:LowCodeApps_event_config).
 
 ## Exporting the table
 
@@ -88,6 +88,8 @@ To apply a **filter based on a specific column**:
 
    - For booleans, specify whether the value should be true or false.
 
+   - For discrete values, from DataMiner 10.2.10/10.3.0 onwards, select the relevant checkboxes.
+
    > [!NOTE]
    > Prior to DataMiner 10.2.9/10.3.0, it is possible to specify multiple conditions by clicking the + icon. As soon as one of the specified conditions applies, a value will be shown (i.e. conditions are combined using "OR"). DataMiner 10.2.9/10.3.0 switches to more efficient server-side filtering, which greatly improves the filter performance but does not allow multiple conditions in the same filter.
 
@@ -96,6 +98,10 @@ To apply a **filter based on a specific column**:
 > [!NOTE]
 > If you apply several column filters or apply both the general filter and one or more column filters, values will only be shown if they match all filters (i.e. filters are combined using "AND").
 
-To **sort the table**, you can click a column header. To apply additional sorting, press Ctrl while clicking one or more additional headers Alternatively, you can also select one of the available sorting options in the column header right-click menu.
+To **sort the table**, you can click a column header.
+
+- To toggle between ascending and descending order, click the column header again.
+- To apply additional sorting, press Ctrl while clicking one or more additional headers. The first column will then be used for the initial sorting, the next one to sort equal values of the first column, and so on.
+- Alternatively, you can also select one of the available sorting options in the column header right-click menu.
 
 To **group by a specific table column**, right-click the column header and click *Group*. To stop grouping, right-click the header again and select *Stop grouping*.

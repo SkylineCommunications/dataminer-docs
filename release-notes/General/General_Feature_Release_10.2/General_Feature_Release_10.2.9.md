@@ -2,13 +2,15 @@
 uid: General_Feature_Release_10.2.9
 ---
 
-# General Feature Release 10.2.9 – Preview
+# General Feature Release 10.2.9
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
-> For release notes related to DataMiner Cube, see [DataMiner Cube 10.2.9](xref:Cube_Feature_Release_10.2.9).
+>
+> - For release notes related to DataMiner Cube, see [DataMiner Cube 10.2.9](xref:Cube_Feature_Release_10.2.9).
+> - For information on how to upgrade DataMiner, see [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent).
 
 ## Highlights
 
@@ -333,7 +335,7 @@ When, in the Dashboards app, you switched to edit mode, all columns of all GQI q
 
 <!-- Main Release Version 10.3.0 - Feature Release Version 10.2.9 -->
 
-Initial support has been added for GQI results with cells containing nested records. However, at present this is only used for the *Resources* data source, which still requires the *GenericInterface* [soft-launch option](https://community.dataminer.services/documentation/soft-launch-options/).
+Initial support has been added for GQI results with cells containing nested records. However, at present this is only used for the *Resources* data source, which still requires the *GenericInterface* [soft-launch option](xref:SoftLaunchOptions).
 
 The following functionality is now available for nested tables:
 
@@ -341,6 +343,12 @@ The following functionality is now available for nested tables:
 - Aggregation on a single nested table column. There is no support for grouping yet. The aggregated value of the nested cell will be shown in the parent record as an ordinary cell.
 - Filtering of nested tables.
 - Selecting columns from nested tables. These will be shown in the same list box as regular columns, but their name will be prefixed by the parent column name. For example, if the parent column is named "Capabilities" and the nested table column is named "Name", the column will be listed as "Capabilities.Name".
+
+#### DataMiner upgrade: On two-node setups, the VerifyClusterPorts prerequisite will only check the ports of the NATS node that is being used by DataMiner [ID_34240]
+
+<!-- Main Release Version 10.2.0 [CU6] - Feature Release Version 10.2.9 [CU0] -->
+
+During an upgrade of a two-node setup (e.g. 2 single DMAs or one Failover pair), from now on, the *VerifyClusterPorts* prerequisite will only check the ports of the NATS node that is being used by DataMiner.
 
 ### Fixes
 
@@ -426,6 +434,12 @@ On the REPORTS page of an element card, masking and unmasking (i.e. state change
 <!-- Main Release Version 10.2.0 [CU6] - Feature Release Version 10.2.9 -->
 
 When a Process Automation definition was added to a *Service definition* component, the function nodes would not display the number of tokens currently in queue or in progress.
+
+#### Problem with SLAnalytics [ID_33850]
+
+<!-- Main Release Version 10.1.0 [CU19]/10.2.0 [CU7] - Feature Release Version 10.2.9 -->
+
+In some cases, a problem could occur with the SLAnalytics process, causing the process to restart. This happened when the alarm repository was retrieved while the connection was being dropped.
 
 #### Web apps: No group row would appear when you selected a single item in a list view [ID_33858]
 
@@ -650,3 +664,22 @@ In some cases, an unhandled exception in the GQI visualization could keep other 
 When the *ProcessOptions* tag in *DataMiner.xml* was configured with the attribute *protocolProcesses* set to "protocol" and the attribute *scriptingProcesses* set to "protocol" or to a number larger than one, it could occur that elements ran their QActions in the wrong SLScripting instance, which could cause compilation or load balancing issues.
 
 This issue will now be prevented. In addition, the element's instance GUID will now be added to the element log file for easier investigations.
+
+#### Parameter changes would not get passed from SLElement to SLNet [ID_34247]
+
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.9 [CU0] -->
+<!-- Not added to 10.3.0 -->
+
+On systems with multiple network cards, in some cases, parameter changes would not get passed from SLElement to SLNet.
+
+#### GQI: Requesting property values would incorrectly only return values cached on the local DataMiner Agent [ID_34253]
+
+<!-- Main Release Version 10.2.0 [CU6] - Feature Release Version 10.2.9 [CU0] -->
+
+When a GQI query requested property values by means of a GetPropertyValueMessage, some values could be missing as SLNet would only return values that were cached on the local DataMiner Agent. From now on, when a GQI query requests property values, the request will be sent to all running agents in the cluster.
+
+#### SPI framework: Run-time errors could occur in SLDataMiner when tracking user actions [ID_34259]
+
+<!-- Main Release Version 10.2.0 [CU6] - Feature Release Version 10.2.9 [CU0] -->
+
+Due to a problem with the SPI framework, in some cases, run-time errors could occur in SLDataMiner when tracking user actions.

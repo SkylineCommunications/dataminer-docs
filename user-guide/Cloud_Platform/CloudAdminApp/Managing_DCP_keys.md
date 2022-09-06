@@ -4,7 +4,7 @@ uid: Managing_DCP_keys
 
 # Managing DCP keys
 
-In the DCP Admin app, you can manage keys that can for example be used with the [GitHub action to deploy Automation scripts](https://github.com/marketplace/actions/skyline-dataminer-deploy-action) to a cloud-connected DMS.
+In the DCP Admin app, you can manage keys that can for example be used with the [GitHub action to deploy Automation scripts](xref:Deploying_Automation_scripts_from_a_GitHub_repository) to a cloud-connected DMS.
 
 To do so:
 
@@ -13,9 +13,7 @@ To do so:
    > [!TIP]
    > See also: [Accessing the Admin app](xref:Accessing_the_Admin_app)
 
-1. If a different organization should be selected, click the organization selector in the top-right corner and select the organization in the list.
-
-   ![Organization selector](~/user-guide/images/CloudAdmin_Selector.png)
+1. If a different organization should be selected, click the organization selector ![Organization selector](~/user-guide/images/Cloud_Admin_Selector_icon.png) in the top-right corner and select the organization in the list.
 
 1. In the pane on the left, under *DataMiner Systems*, select your DataMiner System and select the *Keys* page.
 
@@ -35,3 +33,6 @@ To do so:
 
 > [!TIP]
 > Regenerating primary or secondary keys can also be done from the side panel.
+
+> [!NOTE]
+> Audit information about DCP keys is available on the *Organization* > *Audit* page.

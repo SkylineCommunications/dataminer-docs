@@ -13,7 +13,7 @@ To connect your DMS to the cloud:
 
    - All DataMiner Agents in the DataMiner System are running DataMiner version 10.1.1 or higher.
 
-   - The *CloudConnectedAgents* soft-launch option is enabled on all DMAs in the cluster. For more information, see [soft-launch option](https://community.dataminer.services/documentation/soft-launch-options/).
+   - The *CloudConnectedAgents* soft-launch option is enabled on all DMAs in the cluster. For more information, see [Soft-launch options](xref:SoftLaunchOptions).
 
    - Each DMA that will be connected to the cloud can reach the following endpoints:
 

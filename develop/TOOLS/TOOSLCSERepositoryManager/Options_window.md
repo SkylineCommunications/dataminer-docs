@@ -4,8 +4,8 @@ uid: Options_window
 
 # Options window
 
-![](~/develop/images/SLCSERepoManager_Options.png)
-<br>Figure 103: SLC SE Repository Manager: Options window
+![](~/develop/images/SLCSERepoManager_Options.png)<br>
+*SLC SE Repository Manager: Options window*
 
 Via *Tools* > *Options*, you can access a window that provides the following options:
 
@@ -21,3 +21,4 @@ Via *Tools* > *Options*, you can access a window that provides the following op
 
   - For the US (available from the office or via VPN), specify **\\\SLA-REPOMIRROR\gerrit.skyline.be**
   - For Singapore (available from the office), specify **\\\SG-SERVER1\gerrit.skyline.be**
+  - For Portugal (available from the Lisbon office or via FortiNet VPN), specify **\\\SLCSEREPOMAN\gerrit.skyline.be**

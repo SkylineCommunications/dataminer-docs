@@ -295,6 +295,10 @@ The "Skyline.DataMiner." prefix for Class Library exceeded to 260-character path
 > [!WARNING]
 > For code using NuGets, this is a breaking change.
 
+### 1.1.4.2
+
+*Internal release*
+
 ### 1.1.4.3
 
 #### InterAppCalls deserialize fails with KnownTypes having multiple Collections \[ID_33720\]

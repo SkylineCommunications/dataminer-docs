@@ -52,17 +52,7 @@ Because of this, it is important to sort the incoming data, so that the history 
 
 A history set can only be done via a QAction. This is similar to performing any other set on a parameter, with the addition of the date and time (DateTime format).
 
-The following protocol methods can be used for this:
-
-- SetParameter
-- SetParameterIndex
-- SetParameterIndexByKey
-- SetParameters
-- SetParametersIndex
-- SetParametersIndexByKey
-- AddRow
-- SetRow
-- NotifyDataMiner type 256 (set on remote element)
+Refer to [History sets](xref:MonitoringTrending#history-sets) for an overview of the methods that can be used to perform a history set.
 
 ## Dealing with timeouts
 

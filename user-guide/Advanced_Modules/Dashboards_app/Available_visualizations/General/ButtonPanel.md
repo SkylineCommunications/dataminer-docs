@@ -5,7 +5,7 @@ uid: DashboardButtonPanel
 # Button panel
 
 > [!WARNING]
-> This feature is currently still in preview. For more information, see [Soft-launch options](https://community.dataminer.services/documentation/soft-launch-options/).
+> This feature is currently still in preview. For more information, see [Soft-launch options](xref:SoftLaunchOptions).
 
 This dashboard component is available in soft launch from DataMiner 10.0.3 onwards, if the soft-launch option *ReportsAndDashboardsButtonPanel* is enabled.
 

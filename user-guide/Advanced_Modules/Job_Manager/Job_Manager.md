@@ -20,6 +20,8 @@ In this section:
 
 - [About jobs](xref:About_jobs)
 
+- [Accessing the Jobs app](xref:Accessing_the_jobs_app)
+
 - [Overview of the Job Manager app UI](xref:Overview_of_the_Job_Manager_app_UI)
 
 - [Configuring jobs in the Job Manager app](xref:Configuring_jobs_in_the_Job_Manager_app)

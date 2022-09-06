@@ -57,4 +57,4 @@ int result = (int) protocol.NotifyDataMiner(149, ids, rowData);
 
 ## See also
 
-- AddRow
+- [AddRow(Int32, Object[])](xref:Skyline.DataMiner.Scripting.SLProtocol.AddRow(System.Int32,System.Object[]))

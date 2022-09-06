@@ -57,6 +57,7 @@ protocol.NotifyProtocol(194 /*NT_FILL_ARRAY_NO_DELETE*/ , tableID, tableContent)
 
   protocol.NotifyProtocol(194, tableInfo, tableData);
   ```
+
 - From DataMiner 9.6.13 onwards (RN 23815), a timestamp can be provided per cell to perform a history set on cell level. This is done by providing an object array containing the value and timestamp.
 
   Note that not all cells require a timestamp. If no timestamp is specified, DateTime.Now will be used.
@@ -68,7 +69,7 @@ protocol.NotifyProtocol(194 /*NT_FILL_ARRAY_NO_DELETE*/ , tableID, tableContent)
   object[] tableContent = new object[] { column1, column2 };
 
   object result = protocol.NotifyProtocol(194/*NT_FILL_ARRAY_NO_DELETE*/ , tableID, tableContent);
-```
+  ```
 
 ## See also
 

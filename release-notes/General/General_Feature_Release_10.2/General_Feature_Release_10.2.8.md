@@ -7,6 +7,9 @@ uid: General_Feature_Release_10.2.8
 > [!NOTE]
 > For known issues with this version, refer to [Known issues](xref:Known_issues).
 
+> [!TIP]
+> For information on how to upgrade DataMiner, see [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent).
+
 ## New features
 
 ### DMS core functionality
@@ -40,6 +43,8 @@ It is available from DataMiner 10.2.8 and 10.2.0 \[CU6\] onwards. You can run it
 For more information, see [Verify Cloud DxM Version](xref:BPA_Verify_Cloud_DxM_Version).
 
 #### DataMiner upgrade: When VerifyClusterPorts prerequisite fails the user will now receive more information on why it failed \[ID_33979\]
+
+<!-- Main Release Version 10.2.0 [CU6] - Feature Release Version 10.2.8 [CU0] -->
 
 When, during a DataMiner upgrade, the VerifyClusterPorts prerequisite fails, you will now receive more information on why it failed. For example, the DMS.xml file could contain faulty IP addresses or NATS may have silently failed.
 

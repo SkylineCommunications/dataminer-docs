@@ -12,5 +12,5 @@ This will open a new window where the IDs of the DataMiner Agent, element and pa
 
 - Click *Export* to export (selected columns of) the table.
 
-![](~/develop/images/QueryTable.png)
-<br>Figure 108: SLNetClientTest QueryTable window
+![](~/develop/images/QueryTable.png)<br>
+*SLNetClientTest QueryTable window*
