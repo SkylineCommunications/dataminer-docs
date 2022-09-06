@@ -135,3 +135,7 @@ In the following example, parameters 201 and 301 each contain a list of remote e
 <ColumnOption idx="3" pid="2004" type="retrieved" options=";view=:201:1000:3"/>
 <ColumnOption idx="4" pid="2005" type="retrieved" options=";view=:301:1000:4"/>
 ```
+
+## Creating a direct view table with table columns of different protocols
+
+From DataMiner 10.2.9 onwards (RN 33253), it is possible to a create a direct view table with table columns of different protocols. For more information, refer to [CrossDriverOptions](xref:Protocol.Params.Param.CrossDriverOptions).
