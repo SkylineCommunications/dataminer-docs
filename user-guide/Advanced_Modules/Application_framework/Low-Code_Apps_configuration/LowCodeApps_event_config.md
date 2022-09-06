@@ -72,7 +72,7 @@ To configure an event so execute a component action:
 
 1. Select *Execute component action* and specify which action should be executed.
 
-   For example, if you configure this action for a [Table](xref:DashboardTable) component, you can select the options *Clear selection*, *Fetch the data*, or *Select an item*.
+   For example, if you configure this action for a [Table](xref:DashboardTable) component, you can select the options *Clear selection*, *Fetch the data*, or *Select an item*. Or from DataMiner 10.2.10/10.3.0 onwards, you can select *Fetch the data* for any component that uses query data as input, so that users can manually refresh the displayed data.
 
 ## Configuring another action for the same event
 
