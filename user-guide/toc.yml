@@ -2696,6 +2696,8 @@
     - name: Known issues
       topicUID: Known_issues
       items:
+        - name: SNMP polling issues in case protocol contains wildcards in parameter OIDs
+          topicUID: KI_SNMP_polling_issues_with_wildcards_in_param_OIDs
         - name: Upgrade fails because of VerifyClusterPort.dll prerequisite
           topicUID: KI_Upgrade_fails_VerifyClusterPorts_prerequisite
         - name: SLAnalytics RTEs after upgrading DMS with Cassandra Cluster
