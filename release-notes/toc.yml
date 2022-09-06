@@ -519,6 +519,8 @@
         topicUid: PTP_1.1.0
     - name: SRM release notes
       items:
+      - name: SRM 1.2.27
+        topicUid: SRM_1.2.27
       - name: SRM 1.2.26
         topicUid: SRM_1.2.26
       - name: SRM 1.2.25
