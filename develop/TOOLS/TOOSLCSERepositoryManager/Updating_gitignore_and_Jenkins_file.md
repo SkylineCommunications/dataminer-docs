@@ -14,10 +14,10 @@ The upgrade currently performs the following actions:
 
 - Adding a new *DefaultTemplates* folder, where you can add exported alarm templates, trend templates and information templates that could be used as a default with this driver.
 
-    > [!NOTE]
-    > Make sure to check the included readme file as it provides some information about naming conventions that are used.
+  > [!NOTE]
+  > Make sure to check the included readme file as it provides some information about naming conventions that are used.
 
 - Adding a versioning TXT file, so the repo manager knows if the current config files of your active branch and repo are up to date.
 
-![](~/develop/images/SLC_SE_Repo_Manager_updating.png)
-<br>Figure 105: SLC SE Repository Manager updating .gitignore and Jenkins file
+![](~/develop/images/SLC_SE_Repo_Manager_updating.png)<br>
+*SLC SE Repository Manager updating .gitignore and Jenkins file*

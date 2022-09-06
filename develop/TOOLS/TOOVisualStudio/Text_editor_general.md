@@ -6,9 +6,9 @@ uid: Text_editor_general
 
 1. Go to *Tools* > *Options*.
 
-2. In the list on the left, go to *Text Editor* > *All Languages* > *Tabs*.
+1. In the list on the left, go to *Text Editor* > *All Languages* > *Tabs*.
 
-    The following settings should be applied:
+   The following settings should be applied:
 
-	![](~/develop/images/text_editor_general.png)
-	<br>Figure 145: Text Editor Tabs Option window
+   ![](~/develop/images/text_editor_general.png)<br>
+   *Text Editor Tabs Option window*

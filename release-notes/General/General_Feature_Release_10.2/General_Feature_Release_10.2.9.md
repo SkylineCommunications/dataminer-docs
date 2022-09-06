@@ -2,13 +2,15 @@
 uid: General_Feature_Release_10.2.9
 ---
 
-# General Feature Release 10.2.9 – Preview
+# General Feature Release 10.2.9
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
-> For release notes related to DataMiner Cube, see [DataMiner Cube 10.2.9](xref:Cube_Feature_Release_10.2.9).
+>
+> - For release notes related to DataMiner Cube, see [DataMiner Cube 10.2.9](xref:Cube_Feature_Release_10.2.9).
+> - For information on how to upgrade DataMiner, see [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent).
 
 ## Highlights
 
@@ -333,7 +335,7 @@ When, in the Dashboards app, you switched to edit mode, all columns of all GQI q
 
 <!-- Main Release Version 10.3.0 - Feature Release Version 10.2.9 -->
 
-Initial support has been added for GQI results with cells containing nested records. However, at present this is only used for the *Resources* data source, which still requires the *GenericInterface* [soft-launch option](https://community.dataminer.services/documentation/soft-launch-options/).
+Initial support has been added for GQI results with cells containing nested records. However, at present this is only used for the *Resources* data source, which still requires the *GenericInterface* [soft-launch option](xref:SoftLaunchOptions).
 
 The following functionality is now available for nested tables:
 

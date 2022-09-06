@@ -6,8 +6,8 @@ uid: Locking_failed_while_acquiring_a_lock
 
 In case a file is not up to date with changes from others, you will receive a "Locking Failed" error message when trying to acquire a lock.
 
-![](~/develop/images/SVN_locking_failed.png)
-<br>Figure 142: TortoiseSVN locking error message
+![](~/develop/images/SVN_locking_failed.png)<br>
+*TortoiseSVN locking error message*
 
 This basically means that your local file is not up to date with the version found on the repository. To solve this, you can either press the *Update* button in the error message or perform an SVN update via the right-click menu, which will sync the files again.
 

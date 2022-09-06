@@ -7,6 +7,9 @@ uid: Cube_Feature_Release_10.2.10
 > [!IMPORTANT]
 > We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
 
+> [!TIP]
+> For release notes for this release that are not related to DataMiner Cube, see [General Feature Release 10.2.10](xref:General_Feature_Release_10.2.10).
+
 ## Highlights
 
 *No highlights have been selected for this release yet*
@@ -18,6 +21,25 @@ uid: Cube_Feature_Release_10.2.10
 ## Changes
 
 ### Enhancements
+
+#### Trending - Behavioral anomaly detection: No more intermediate change point update events of type 'flatline' [ID_33957]
+
+<!-- MR 10.3.0 - FR 10.2.10 -->
+<!-- Not added to 10.3.0 -->
+
+Up to now, when a trend behaved as a flatline for a long time, a change point update event would be generated every 15 minutes. From now on, in case of a flatline trend, only two change point events will be generated: one at the start of the flatline and another at the end of the flatline.
+
+#### Trending: Enhanced performance when requesting real-time trend data [ID_34171]
+
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.10 -->
+
+On systems that store real-time trend data for more than a week, from now on, DataMiner Cube will no longer request all available real-time trend data at once. Instead, it will request data for the past week and only request more data when needed.
+
+#### DataMiner Cube: Enhanced editing of profile parameters [ID_34189]
+
+<!-- MR 10.2.0 [CU7] - FR 10.2.10 -->
+
+A number of enhancements have been made to the profile parameter edit boxes, especially with regard to the validation of discrete values.
 
 #### DataMiner Cube - Resources app: Enhanced resource pool management [ID_34225]
 
@@ -44,6 +66,14 @@ A number of enhancements have been made with regard to managing resource pools.
 <!-- Main Release Version 10.1.0 [CU19]/10.2.0 [CU7] - Feature Release Version 10.2.10 -->
 
 When, in the hamburger button in the top-left corner of the Alarm Console, the *Automatically group according to arrangement* setting was not selected, upon reconnecting DataMiner Cube, the alarms would incorrectly be grouped anyway.
+
+#### Resources app: Incorrectly no longer possible to delete a function resource that was used by a past booking [ID_34159]
+
+<!-- MR 10.3.0 - FR 10.2.10 -->
+
+Since DataMiner feature release 10.2.7, it was incorrectly no longer possible to delete a function resource that was used by a past booking. From now on, it will again be possible to delete a function resource that was used by a past booking.
+
+It will now also be possible to delete a function resource that was used by a canceled booking.
 
 #### DataMiner Cube - Profiles app: Data from a profile instance parameter entry could no longer be retrieved after updating the entry [ID_34192]
 

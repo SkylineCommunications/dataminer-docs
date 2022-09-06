@@ -337,7 +337,7 @@ Permission to delete workspaces.
 ### General \> Annotations
 
 > [!NOTE]
-> From DataMiner 10.1.12 onwards, annotations are no longer available by default in new DataMiner installations. To enable them, set the soft-launch option *LegacyAnnotations* to true. See [soft-launch options](https://community.dataminer.services/documentation/soft-launch-options/).
+> From DataMiner 10.1.12 onwards, annotations are no longer available by default in new DataMiner installations. To enable them, set the soft-launch option *LegacyAnnotations* to true. See [Soft-launch options](xref:SoftLaunchOptions).
 
 #### General \> Annotations \> View
 
@@ -411,7 +411,7 @@ Available from DataMiner 10.2.0/10.1.10 onwards. Permission to send emails via t
 
 ### Modules \> API
 
-These user permissions are used for the API deployment feature, which is currently still in [soft launch](https://community.dataminer.services/documentation/soft-launch-options/).
+These user permissions are used for the API deployment feature, which is currently still in [soft launch](xref:SoftLaunchOptions).
 
 #### Modules \> API \> Deploy script API
 
@@ -527,7 +527,8 @@ Permission to use view and configure element connections.
 ### Modules \> Functions
 
 > [!NOTE]
-> - At present, these permissions are used for the uploading and deleting of functions in the Protocols & Templates app, and for the use of the Functions app. However, the latter is currently still in soft launch. For more information, see [Soft-launch options](https://community.dataminer.services/documentation/soft-launch-options/).
+>
+> - At present, these permissions are used for the uploading and deleting of functions in the Protocols & Templates app, and for the use of the Functions app. However, the latter is currently still in soft launch. For more information, see [Soft-launch options](xref:SoftLaunchOptions).
 > - When you upgrade to DataMiner version 10.1.7, these six permissions are automatically granted to all user groups that have been granted the *Modules* > *Resources* > *Configure functions* permission.
 > - These user permissions are only displayed if the DMA uses an Elasticsearch database.
 
@@ -1474,7 +1475,7 @@ Permission to access the DataMiner web apps. Obsolete from DataMiner 10.1.0/10.1
 
 ### Modules \> System configuration \> Object Manager \> Module Settings
 
-Available from DataMiner 10.1.5 onwards. Permission to change settings of the DataMiner Object Manager. Requires the DOMManager [soft-launch option](https://community.dataminer.services/documentation/soft-launch-options/).
+Available from DataMiner 10.1.5 onwards. Permission to change settings of the DataMiner Object Manager. Requires the DOMManager [soft-launch option](xref:SoftLaunchOptions).
 
 ### Modules \> System configuration \> Security
 

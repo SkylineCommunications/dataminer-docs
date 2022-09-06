@@ -25,6 +25,7 @@ If [remote access is enabled](xref:Controlling_remote_access) for a DMS, and you
 
 - [Accessing the Monitoring app via the DataMiner Cloud Platform](xref:Accessing_the_Monitoring_app#accessing-the-monitoring-app-via-the-dataminer-cloud-platform)
 - [Accessing the Dashboards app via the DataMiner Cloud Platform](xref:Accessing_the_Dashboards_app#accessing-the-dashboards-app-via-the-dataminer-cloud-platform)
+- [Accessing the Low-Code Apps via the DataMiner Cloud Platform](xref:Accessing_custom_apps#accessing-the-low-code-apps-via-the-dataminer-cloud-platform)
 - [Accessing the Jobs app via the DataMiner Cloud Platform](xref:Accessing_the_jobs_app#accessing-the-jobs-app-via-the-dataminer-cloud-platform)
 - [Accessing the Ticketing app via the DataMiner Cloud Platform](xref:Accessing_the_Ticketing_app#accessing-the-ticketing-app-via-the-dataminer-cloud-platform)
 

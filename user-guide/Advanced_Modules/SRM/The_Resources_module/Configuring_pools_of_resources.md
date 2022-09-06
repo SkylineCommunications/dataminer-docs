@@ -87,7 +87,7 @@ In order to define properties for all resources in a pool, and optionally limit 
    > - We highly recommend that updating the name of a function instance is done via the resource. Strictly speaking, this is also possible via the DVE parent, but if you change the name there, the resource will not be updated.
 
    > [!WARNING]
-   > Virtual functions with generated protocol are currently still in soft launch, with the *Function* soft-launch option. For more information, see [Soft-launch options](https://community.dataminer.services/documentation/soft-launch-options/).
+   > Virtual functions with generated protocol are currently still in soft launch, with the *Function* soft-launch option. For more information, see [Soft-launch options](xref:SoftLaunchOptions).
 
 1. In the *properties* subtab, configure any properties if necessary. With the buttons in the lower right corner, you can add, edit and delete resource properties.
 

@@ -1741,6 +1741,23 @@
                 topicUid: Protocol.Params.Param.CRC.Type-options
               - name: '@totaloffset'
                 topicUid: Protocol.Params.Param.CRC.Type-totaloffset
+          - name: CrossDriverOptions
+            topicUid: Protocol.Params.Param.CrossDriverOptions 
+            items:
+            - name: CrossDriverOption
+              topicUid: Protocol.Params.Param.CrossDriverOptions.CrossDriverOption
+              items: 
+              - name: '@protocol'
+                topicUid: Protocol.Params.Param.CrossDriverOptions.CrossDriverOption-protocol
+              - name: '@remoteTablePID'
+                topicUid: Protocol.Params.Param.CrossDriverOptions.CrossDriverOption-remoteTablePID
+              - name: PIDTranslation
+                topicUid: Protocol.Params.Param.CrossDriverOptions.CrossDriverOption.PIDTranslation
+                items: 
+                - name: '@local'
+                  topicUid: Protocol.Params.Param.CrossDriverOptions.CrossDriverOption.PIDTranslation-local
+                - name: '@remote'
+                  topicUid: Protocol.Params.Param.CrossDriverOptions.CrossDriverOption.PIDTranslation-remote
           - name: Dashboard
             topicUid: Protocol.Params.Param.Dashboard
             items: 

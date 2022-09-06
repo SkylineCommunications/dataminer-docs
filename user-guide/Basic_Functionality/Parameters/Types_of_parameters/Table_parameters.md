@@ -39,10 +39,17 @@ Users can select the tab-delimited text, copy it to the Windows clipboard, and p
 
 A dynamic table is a special type of parameter that is used to visualize and manage large data tables (e.g. SNMP tables).
 
-Every column in a dynamic table is a parameter in itself. Cells in a column can be reference by index.
+Every column in a dynamic table is a parameter in itself. Cells in a column can be referenced by index.
 
 > [!NOTE]
 > The size of icons used in dynamic tables can be adapted in the file *Icons.xml*, with a maximum height of 20 pixels.
+
+## Partial tables
+
+A partial table is a large table that is split up into different pages, usually with 1000 rows per page (though different configurations are possible). Only one page is shown at a time, and you can navigate between the pages.
+
+> [!NOTE]
+> In a protocol, a partial table is configured with the [partial attribute](xref:Protocol.Params.Param.ArrayOptions-partial) of the Params.Param.ArrayOptions element.
 
 ## Direct view tables
 
