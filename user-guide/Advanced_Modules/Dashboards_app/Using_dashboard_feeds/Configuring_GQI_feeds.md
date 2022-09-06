@@ -385,7 +385,7 @@ From DataMiner 10.2.0/10.1.3 onwards, instead of specifying an exact filter valu
 
   If *Type* is set to *Query rows*, instead of a property, you can select the columns from the table containing the query rows. However, note that you will only be able to select columns that are compatible with the type of column you are filtering.
 
-From DataMiner 10.1.11 onwards, an additional option, *Return no rows when feed is empty*, is available. When you select this option, in case the feed is empty, an empty table will be returned instead of the entire table.
+From DataMiner 10.2.10/10.3.0 onwards, an additional option, *When feed is empty, show* is available, which allows you to select what should be shown in case the field is empty: nothing, an empty table ("*empty values*"), or the full table ("*everything*"). Prior to this, from DataMiner 10.1.11 onwards, instead the option *Return no rows when feed is empty* is available. When you select this option, in case the feed is empty, an empty table will be returned instead of the entire table.
 
 > [!NOTE]
 >
