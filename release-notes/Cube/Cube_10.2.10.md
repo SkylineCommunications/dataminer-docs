@@ -75,6 +75,12 @@ Since DataMiner feature release 10.2.7, it was incorrectly no longer possible to
 
 It will now also be possible to delete a function resource that was used by a canceled booking.
 
+#### Clicking the 'Close' button of one of multiple open error message boxes would incorrectly always close the last box that had been opened [ID_34173]
+
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.10 -->
+
+When multiple error messages boxes were being displayed, clicking the *Close* button on any of those boxes would incorrectly always close the last box that had been opened. All other boxes would stay open and could only be closed by clicking the X in the top-right corner.
+
 #### DataMiner Cube - Profiles app: Data from a profile instance parameter entry could no longer be retrieved after updating the entry [ID_34192]
 
 <!-- MR 10.2.0 [CU7] - FR 10.2.10 -->
