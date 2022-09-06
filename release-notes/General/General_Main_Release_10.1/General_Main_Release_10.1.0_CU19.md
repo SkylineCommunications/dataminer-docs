@@ -67,6 +67,14 @@ Because of a number of enhancements, overall performance has increased when star
 
 ### Fixes
 
+#### DataMiner Cube - Alarm Console: Problem when clearing alarm groups [ID_33550]
+
+<!-- MR 10.1.0 [CU19]/10.2.0 [CU7] - FR TBD -->
+
+When you cleared an alarm group, in some cases, it would not get cleared correctly. Instead, a clearable version of that alarm group would incorrectly remain visible in the Alarm Console.
+
+Also, in some cases, alarm groups would not get cleared automatically when the *AutoClear* option was set to true.
+
 #### Problem with SLAnalytics [ID_33850]
 
 <!-- MR 10.1.0 [CU19]/10.2.0 [CU7] - FR 10.2.9 -->
