@@ -1029,6 +1029,12 @@ A number of enhancements have been made to the DataMiner Cube start window:
 - When you add a new cluster, it will now always be added to the group containing the currently selected cluster.
 - The maximum size of the daily log file has been increased from 1 MB to 100 MB.
 
+#### Resources app: Deleting a function resource that was used by a canceled booking [ID_34159]
+
+<!-- MR 10.3.0 - FR 10.2.10 -->
+
+From now on, it will be possible to delete a function resource that was used by a canceled booking.
+
 #### Trending: Enhanced performance when requesting real-time trend data [ID_34171]
 
 <!-- Main Release Version 10.3.0 - Feature Release Version 10.2.10 -->

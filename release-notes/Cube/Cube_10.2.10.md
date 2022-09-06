@@ -67,6 +67,14 @@ A number of enhancements have been made with regard to managing resource pools.
 
 When, in the hamburger button in the top-left corner of the Alarm Console, the *Automatically group according to arrangement* setting was not selected, upon reconnecting DataMiner Cube, the alarms would incorrectly be grouped anyway.
 
+#### Resources app: Incorrectly no longer possible to delete a function resource that was used by a past booking [ID_34159]
+
+<!-- MR 10.3.0 - FR 10.2.10 -->
+
+Since DataMiner feature release 10.2.7, it was incorrectly no longer possible to delete a function resource that was used by a past booking. From now on, it will again be possible to delete a function resource that was used by a past booking.
+
+It will now also be possible to delete a function resource that was used by a canceled booking.
+
 #### DataMiner Cube - Profiles app: Data from a profile instance parameter entry could no longer be retrieved after updating the entry [ID_34192]
 
 <!-- MR 10.2.0 [CU7] - FR 10.2.10 -->
