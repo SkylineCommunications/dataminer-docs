@@ -14,6 +14,9 @@ When nodes are down for longer periods of time or when there has been a network 
 
 For large-scale clusters, this might be very difficult to manage as you need to avoid that repairs are running on multiple nodes at the same time for specific data. To deal with this, we recommend that you install [Cassandra Reaper](http://cassandra-reaper.io/) in sidecar mode (i.e. install the software on every node).
 
+>[!IMPORTANT]
+> Performing repairs on your Cassandra nodes is a strict requirement. Not repairing your tables might have severe consequences as detailed in [Cassandra docs - Repair](https://cassandra.apache.org/doc/4.0/cassandra/operating/repair.html). In every case we recommend automating your repairs with Cassandra Reaper as outlined above.
+
 ## Keeping the software up to date
 
 We recommend that you update your Cassandra sofware regularly.
