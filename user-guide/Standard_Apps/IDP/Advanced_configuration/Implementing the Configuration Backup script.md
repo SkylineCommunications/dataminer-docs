@@ -6,28 +6,51 @@ uid: ConfigurationBackupScript
 
 ## Setting up the DataMiner Configuration Archive
 
-DataMiner IDP can be used to create configuration backups from [elements](xref:About_elements) in the managed inventory. However, before backups can be taken the DataMiner Configuration Archive needs to be setup.
+DataMiner IDP can be used to create configuration backups from [elements](xref:About_elements) in the managed inventory. However, before backups can be taken, the DataMiner Configuration Archive needs to be setup.
 
 ## About Configuration Backup scripts
 
 The backup configuration of the device is heavily dependent on the type of the device: some devices have a single file (e.g. a startup-configuration), others require a set of files (typically archived). Others don't have the notion of a configuration file and the backup could be an collection of the relevant parameter sets so the element can be reconfigured easily any time.
-
-There are a number of ways the backup script can provide the configuration backup to DataMiner IDP.
 
 A [CI Type](xref:CI_Types1) can be configured with a script that will be used to take the configuration backup of the element of this CI Type. The script will be executed for a specific element and typically interact with it.
 
 > [!TIP]
 > An example script *IDP_Example_Custom_ConfigurationBackup* is available in the Automation module after IDP has been installed. You can duplicate this script to use it as a starting point.
 
-The Configuration Backup needs to call certain C# methods to inform IDP of the configuration backup.  
-
 ## Configuration types (running, startup, golden)
 
 when creating a configuration backup, the following configuration type can be supplied
 
-- startup
-- running
-- golden
+- ***startup** : this is the configuration used during system startup (or reboot) to configure the devices.
+- **running** : The running configuration is the current configuration the device runs on.  When configuration changes are done, this typically changes the running configuration, but not the startup configuration. If the running configuration is not saved to the startup configuration, the device will load the startup configuration at startup and the unsaved configuration changes will be lost.
+- **golden** : this configuration type is typically not found on the device itself. It's used to identify the current configuration of device to be a valid configuration.
+
+> [!NOTE]
+> Not all devices use the terminology startup configuration and running configuration. Some devices also don't use the concept.
+
+The code examples in *Backup with change detection* and *Backup without change detection* don't consider the configuration type. However,the device will likely require different commands to retrieve different configuration types. If multiple configuration types need to be supported, the custom script will need to have different code paths for the configuration type.
+
+The class *BackupInputData* contains the configuration type and it can be used by the custom script as in the example below.
+
+```csharp
+// This will load the automation script's parameter data.
+inputData = new BackupInputData(engine);
+// This method will communicate with the IDP solution, to provide the required feedback for the backup process.
+backupManager = new Backup(inputData);
+switch (backupManager.InputData.ConfigurationType)
+{
+  case ConfigurationType.StartUp:
+  // do something
+  break;
+  case ConfigurationType.Running:
+  // do something
+  break;
+  case ConfigurationType.Golden:
+  // do something
+  break;
+    default: throw new ArgumentException("Type not implemented");
+}
+```
 
 ## Full vs Core Configuration
 
@@ -35,6 +58,8 @@ when creating a configuration backup, the following configuration type can be su
 - The **Core Configuration** is only relevant when change detection needs to be done based on other information then the Full Configuration. It's typically used to exclude sections of the Full Configuration that do not contain important information for change detection.
 
 ## Backup without change detection
+
+There are a number of ways the backup script can provide the configuration backup to DataMiner IDP. This is done by calling certain C# methods.
 
 ### Backup by exchanging file contents
 
