@@ -102,6 +102,13 @@ If you want to use a Cassandra cluster as the general database for your DMS, you
 
      - **endpoint_snitch**: Set this to *GossipingPropertyFileSnitch*
 
+     - **tombstone_warn_threshold**: Set to 1000000. Cassandra warns in the Debug.log whenever there are more tombstones than this threshold. This provides a good indication of when the *tombstone_failure_threshold* might be exceeded.
+
+     - **tombstone_failure_threshold**: Set to 2000000. Queries will fail if a record has more tombstones than the value set here. Increases of this value will slow down your reads but might be manageable depending on the use case.
+
+       > [!NOTE]
+       > Tombstones are generated for each delete in the Cassandra database. The value of the *tombstone_failure_threshold* setting could influence data saved in an element. If an element has many updates on the same parameter in a short time span, this value might be exceeded, and saved data might not get displayed on the element card.
+
    - Make the following adjustments in the *cassandra-rackdc.properties* file based on your setup:
 
      - **dc**: The name of the data center where this node is located.
@@ -128,5 +135,5 @@ If you want to use a Cassandra cluster as the general database for your DMS, you
 
 1. Configure the Cassandra cluster database in System Center. See [Configuring the database settings in Cube](xref:Configuring_the_database_settings_in_Cube).
 
-> [!NOTE]
-> In this setup, the Cassandra database is not managed by DataMiner, so it is important that you manage it yourself (see [Maintaining a Cassandra cluster](xref:Maintain_Cassandra_Cluster)).
+> [!IMPORTANT]
+> In this setup, the Cassandra database is not managed by DataMiner, so it is essential that you manage it yourself (see [Maintaining a Cassandra cluster](xref:Maintain_Cassandra_Cluster)).
