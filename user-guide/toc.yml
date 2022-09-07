@@ -2412,6 +2412,12 @@
           topicUid: provisioning_VFRs
         - name: Additional configuration for Service Orchestration
           topicUid: config_service_orchestration
+        - name: Additional configuration for Resource Automation
+          topicUid: config_resource_automation
+        - name: Additional configuration for Resource Scheduling
+          topicUID: config_resource_scheduling
+        - name: Additional configuration for Resource Orchestration
+          topicUID: config_resource_orchestration
       - name: Booking Manager app
         topicUid: SolSRM
         items:
