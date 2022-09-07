@@ -588,3 +588,9 @@ When a GQI query requested property values by means of a GetPropertyValueMessage
 <!-- Main Release Version 10.2.0 [CU6] - Feature Release Version 10.2.9 [CU0] -->
 
 Due to a problem with the SPI framework, in some cases, run-time errors could occur in SLDataMiner when tracking user actions.
+
+#### SNMP polling issues in case protocol contained wildcards in parameter OIDs [ID_34343]
+
+<!-- Main Release Version 10.1.0 [CU22]/10.1.0 [CU19]/10.2.0 [CU6] - Feature Release Version 10.2.9 -->
+
+In some specific cases, wildcards in the parameter OIDs in a protocol caused polling to return no data. This only occurred with wildcards that were not at the end of the OID.
