@@ -2128,15 +2128,31 @@
     - name: DataMiner Low-Code Apps
       topicUID: Application_framework
       items:
-        - name: Accessing custom applications
+        - name: Accessing the Low-Code Apps module
           topicUid: Accessing_custom_apps
-        - name: Creating custom applications
+        - name: Creating low-code applications
           topicUid: Creating_custom_apps
-        - name: Editing a custom application
+        - name: Editing a low-code application
           topicUid: Editing_custom_apps
-        - name: Configuring custom applications
-          topicUid: Configuring_custom_apps
-        - name: Deleting a custom application
+        - name: Configuring low-code applications
+          items:
+            - name: Customizing the icon and color of an app
+              topicUid: LowCodeApps_Custom_Icon
+            - name: Configuring a page of a low-code app
+              topicUid: LowCodeApps_page_config
+            - name: Configuring a panel of a low-code app
+              topicUid: LowCodeApps_panel_config
+            - name: Configuring the header bar of a low-code app page
+              topicUid: LowCodeApps_header_config
+            - name: Configuring low-code app events
+              topicUid: LowCodeApps_event_config
+            - name: Configuring security for a low-code app
+              topicUid: LowCodeApps_security_config
+            - name: Retrieving an earlier version of a low-code app
+              topicUid: LowCodeApps_earlier_version
+            - name: 
+              topicUid: LowCodeApps_organizing_landing_page
+        - name: Deleting a low-code application
           topicUid: Deleting_custom_apps
     - name: DataMiner Object Models (DOM)
       topicUID: DOM
@@ -2680,6 +2696,10 @@
     - name: Known issues
       topicUID: Known_issues
       items:
+        - name: Upgrade fails because of VerifyClusterPort.dll prerequisite
+          topicUID: KI_Upgrade_fails_VerifyClusterPorts_prerequisite
+        - name: SLAnalytics RTEs after upgrading DMS with Cassandra Cluster
+          topicUID: KI_RTE_with_SLAnalytics_when_upgrading
         - name: Cassandra nodes not configured if current DMA IP is assigned as virtual IP
           topicUID: KI_Cassandra_nodes_not_configured_if_current_DMA_IP_is_assigned_as_virtual_IP
         - name: DataMiner Cube freeze on startup
@@ -2706,8 +2726,6 @@
           topicUID: KI_Unavailable_system_database_after_DataMiner_server_reboot
         - name: Upgrade error - api-ms-win-crt-stdio-l1-1-0.dll is missing
           topicUID: KI_Upgrade_error_api-ms-win-crt-stdio-l1-1-0_dll_is_missing
-        - name: SLAnalytics RTEs after upgrading DMS with Cassandra Cluster
-          topicUID: KI_RTE_with_SLAnalytics_when_upgrading
     - name: Customer DataMiner Reporting (CDMR)
       topicUID: CDMR
 - name: Reference
@@ -2872,6 +2890,8 @@
           topicUid: Online_demo_license_for_DMA_to_be_installed_by_user
         - name: Offline demo license for DMA to be installed by user
           topicUid: Offline_demo_license_for_DMA_to_be_installed_by_user
+    - name: Soft-launch options
+      topicUID: SoftLaunchOptions
     - name: Custom branding
       topicUID: Custom_branding
     - name: DataMiner metrics

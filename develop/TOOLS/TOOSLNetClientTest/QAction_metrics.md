@@ -23,8 +23,8 @@ By default, the QAction metrics are disabled. To enable monitoring, you have to 
 
 - QACTIONMETRICS_ELEMENT\_\[dmaID\]:\[elementID\]: Enables monitoring of all QActions of the specified element.
 
-![](~/develop/images/SLNet_Options_Window.png)
-<br>Figure 113: SLNet Options window
+![](~/develop/images/SLNet_Options_Window.png)<br>
+*SLNet Options window*
 
 To request the metrics, select *Diagnostics* > *DMA*, and then select *QAction Metrics (QAction)*, *QAction Metrics (Element)* or *QAction Metrics (Protocol)* from the menu.
 

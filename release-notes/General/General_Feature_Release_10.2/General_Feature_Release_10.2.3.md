@@ -7,6 +7,9 @@ uid: General_Feature_Release_10.2.3
 > [!NOTE]
 > For known issues with this version, refer to [Known issues](xref:Known_issues).
 
+> [!TIP]
+> For information on how to upgrade DataMiner, see [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent).
+
 ## New features
 
 ### DMS core functionality
@@ -156,7 +159,7 @@ Up to now, when configuring a parameter shape, it was possible to enable to use 
 > [!NOTE]
 > The DynamicUnits=true/false option can now be used to override the value of the DynamicUnits soft-launch option. For example, if the DynamicUnits soft-launch option is set to true, you can configure a parameter shape to not use dynamic units by adding "DynamicUnits=False" to its Options data field.
 >
-> For more information on soft-launch options, see <https://community.dataminer.services/documentation/soft-launch-options/>.
+> For more information on soft-launch options, see [Soft-launch options](xref:SoftLaunchOptions).
 
 #### Data Display: Support for launching EPM objects by clicking buttons in Data Display table cells \[ID_32368\]
 

@@ -7,6 +7,9 @@ uid: Cube_Main_Release_10.3.0
 > [!IMPORTANT]
 > We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
 
+> [!TIP]
+> For release notes for this release that are not related to DataMiner Cube, see [General Main Release 10.3.0](xref:General_Main_Release_10.3.0).
+
 ## Highlights
 
 #### Trending: New'Custom' button allows you to specify a custom X-axis range \[ID_31705\]
@@ -500,7 +503,7 @@ Up to now, when configuring a parameter shape, it was possible to enable to use 
 > [!NOTE]
 > The DynamicUnits=true/false option can now be used to override the value of the DynamicUnits soft-launch option. For example, if the DynamicUnits soft-launch option is set to true, you can configure a parameter shape to not use dynamic units by adding "DynamicUnits=False" to its Options data field.
 >
-> For more information on soft-launch options, see <https://community.dataminer.services/documentation/soft-launch-options/>.
+> For more information on soft-launch options, see [Soft-launch options](xref:SoftLaunchOptions).
 
 #### Data Display: Support for launching EPM objects by clicking buttons in Data Display table cells \[ID_32368\] \[ID_33295\] \[ID_33857\]
 
@@ -1024,8 +1027,19 @@ A number of enhancements have been made to the DataMiner Cube start window:
 - When the start window application is downloaded from a DataMiner Agent, the cluster is automatically configured. Up to now, if it was possible to reach the agent via HTTPS within 2 seconds, the cluster was configured as "HTTPS only". However, in some cases, 2 seconds was too short, resulting in HTTPS agents being configured as "HTTP or HTTPS". From now on, the start window application will wait up to 5 seconds.
 
 - When you add a new cluster, it will now always be added to the group containing the currently selected cluster.
-
 - The maximum size of the daily log file has been increased from 1 MB to 100 MB.
+
+#### Resources app: Deleting a function resource that was used by a canceled booking [ID_34159]
+
+<!-- MR 10.3.0 - FR 10.2.10 -->
+
+From now on, it will be possible to delete a function resource that was used by a canceled booking.
+
+#### Trending: Enhanced performance when requesting real-time trend data [ID_34171]
+
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.10 -->
+
+On systems that store real-time trend data for more than a week, from now on, DataMiner Cube will no longer request all available real-time trend data at once. Instead, it will request data for the past week and only request more data when needed.
 
 ### Fixes
 

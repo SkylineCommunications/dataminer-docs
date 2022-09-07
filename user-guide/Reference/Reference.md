@@ -14,6 +14,8 @@ uid: Part7Reference
 
 - [Support services agreement](xref:Support_services_agreement)
 
+- [Soft-launch options](xref:SoftLaunchOptions)
+
 - [Custom branding](xref:Custom_branding)
 
 - [DataMiner metrics](xref:dataminer_metrics)

@@ -7,13 +7,16 @@ uid: General_Feature_Release_10.2.7
 > [!NOTE]
 > For known issues with this version, refer to [Known issues](xref:Known_issues).
 
+> [!TIP]
+> For information on how to upgrade DataMiner, see [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent).
+
 ## New features
 
 ### DMS Protocols
 
 #### QActionTable class - FillArray and FillArrayNoDelete methods: Argument 'row' renamed to 'columns' \[ID_33034\]
 
-The *row* argument of the FillArray and FillArrayNoDelete methods in theQActionTable class has been renamed to *columns*.
+The *row* argument of the FillArray and FillArrayNoDelete methods in theQActionTable class has been renamed to *columns*.
 
 #### Making all elements using a particular protocol.xml run in separate SLScripting and SLProtocol instances \[ID_33358\]
 

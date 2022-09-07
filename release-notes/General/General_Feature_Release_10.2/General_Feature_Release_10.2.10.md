@@ -8,7 +8,9 @@ uid: General_Feature_Release_10.2.10
 > We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
 
 > [!TIP]
-> For release notes related to DataMiner Cube, see [DataMiner Cube 10.2.10](xref:Cube_Feature_Release_10.2.10).
+>
+> - For release notes related to DataMiner Cube, see [DataMiner Cube 10.2.10](xref:Cube_Feature_Release_10.2.10).
+> - For information on how to upgrade DataMiner, see [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent).
 
 ## Highlights
 
@@ -41,15 +43,74 @@ Moreover, the additional features of the *Table* component will now also be avai
 
 ## Other features
 
+#### GQI: columnInfo object of data source columns of type 'discrete' will now contain the possible values [ID_34179]
+
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.10 -->
+
+For each of the following GQI data source columns of type "discrete", the possible values will now be available in their columnInfo object:
+
+| Data source              | Columns |
+|--------------------------|---------|
+| AlarmAdapter             | Alarm severity<br>Alarm type<br>Alarm status<br>Alarm source<br>Alarm user status |
+| BookingAdapter           | Booking status |
+| ChangePointAdapter       | Change type<br>Alarm severity |
+| DCFInterfaceAdapter      | Interface type |
+| LiteElementInfoAdapter   | Element state |
+| TicketingAdapter         | All (custom) enum columns |
+| DOMInstanceAdapter       | State<br>All custom enum fields |
+| ParameterTableAdapter    | All parameters of type "discrete" |
+| PaProcessAdapter         | PaProcess state<br>PaProcess activity<br>PaProcess start event type |
+| PaTokenAdapter           | PaToken status<br>PaToken error state<br>PaToken sub process type<br>PaToken type |
+| PatternOccurrenceAdapter | Pattern type |
+
+#### GQI - EPM feed: Linking 'System Name' and 'System Type' to the query [ID_34222]
+
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.10 -->
+
+Using an EPM feed, it is now possible to link *System Name* and *System Type* to the GQI query you are building.
+
 #### Dashboards / Low-Code Apps: Checkboxes to select discrete values in column filter Table component [ID_34234]
 
 <!-- MR 10.3.0 - FR 10.2.9 -->
 
 When you configure a column filter for a Table component in a dashboard or low-code app, you can now select checkboxes to filter on discrete values.
 
+#### GQI: Using GQI query columns to filter a 'State' component [ID_34235]
+
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.10 -->
+
+It is now possible to use GQI query columns to filter a *State* component.
+
+#### GQI: Query columns of type 'string' can now be filtered using 'Equals' and 'NotEquals' [ID_34246]
+
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.10 -->
+
+Query columns of type "string" can now be filtered using *Equals* and *NotEquals*.
+
+#### Dashboards app / Low-code apps: 'Return no rows when feed is empty' option replaced by a triple-state option [ID_34280]
+
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.10 -->
+
+Up to now, when configuring the filter of a GQI data feed, you could enable the *Return no rows when feed is empty* option to indicate that, when the feed was empty, you wanted an empty table to be returned instead of the entire table.
+
+Now, this option has been replaced by a triple-state option. You can now indicate that, when the feed is empty, you want
+
+- to have an empty table returned,
+- to have the entire table returned, or
+- to have the table filtered on empty values.
+
 ## Changes
 
 ### Enhancements
+
+#### External authentication using SAML: Extended logging [ID_33622]
+
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.10 -->
+
+When authenticating users using SAML, the following additional debug information will now be logged in the *SLSaml.txt* file:
+
+- Whether Just-In-Time provisioning (JIT) is enabled.
+- Which group claims are being used.
 
 #### DataMiner Taskbar Utility: Enhanced installation of app packages [ID_33969]
 
@@ -95,6 +156,21 @@ In the conditional coloring layout setting for Table and Node edge components, t
 
 In the conditional coloring layout setting for Table and Node edge components, discrete column values will now be displayed to make it easier to configure a filter.
 
+#### SLReset will no longer remove VersionHistory.txt and the HTTPS configuration [ID_34194]
+
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.10 -->
+
+From now on, the factory reset tool *SLReset.exe* will no longer remove the following items:
+
+- the *VersionHistory.txt* file
+- the HTTPS configuration stored in the *MaintenanceSettings.xml* file.
+
+#### DataMiner upgrade: AnalyticsDropUnusedCassandraTables upgrade action will explicitly be triggered [ID_34197]
+
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.10 -->
+
+In DataMiner versions from 10.2.8 onwards, during a DataMiner upgrade, the *AnalyticsDropUnusedCassandraTables* upgrade action would fail, unless the [workaround for this issue](xref:KI_RTE_with_SLAnalytics_when_upgrading) had been implemented. During the upgrade to the next DataMiner version, this upgrade action will explicitly be triggered to make sure all unused Cassandra tables get removed.
+
 #### Cassandra: Alarms indicating that the cluster is down will no longer be repeated as long as the status of the cluster remains the same [ID_34209]
 
 <!-- MR 10.1.0 [CU19]/10.2.0 [CU7] - FR 10.2.10 -->
@@ -111,6 +187,31 @@ From now on, when an issue occurs when parsing a compliance cache file entry, th
 
 ```txt
 Warning: <function> is unable to parse compliance cache file entry at line <line number>. <line content>
+```
+
+#### SLProtocol: Enhanced performance when reading element data [ID_34241]
+
+<!-- MR 10.1.0 [CU19]/10.2.0 [CU7] - FR 10.2.10 -->
+
+Because of a number of enhancements, overall performance of SLProtocol has increased when reading element data.
+
+#### Automation: Extra information will now be added to the SLAutomation log file [ID_34248]
+
+<!-- MR 10.2.0 [CU7] - FR 10.2.10 -->
+
+The following information will now also be added to the SLAutomation log file:
+
+- When a script started.
+- When a script stopped and how long it took to execute it.
+
+Examples:
+
+```txt
+2022/08/26 08:57:45.413|SLAutomation.exe 10.2.2234.873|23088|48272|CAutomation::Execute|INF|0|[FirstName LastName] Started executing script: 'testscript' (ID: 1)
+```
+
+```txt
+2022/08/26 08:58:59.694|SLAutomation.exe 10.2.2234.873|23088|48272|CAutomation::Execute|INF|0|[FirstName LastName] Finished executing script: 'testscript' (ID: 1). Execution took 01m 14.280s.
 ```
 
 #### DataMiner Upgrade: Obsolete 'SNMP Simulation Generator' files removed from upgrade packages [ID_34250]
@@ -135,8 +236,26 @@ In the user settings (*user icon > Settings*), from now on, you will only be abl
 A number of small enhancements have been made to the header bar of low-code apps:
 
 - Button text now supports both upper case and lower case.
-
 - Buttons no longer have lines between them.
+
+#### Enhanced performance when starting up elements on systems using a MySQL or Microsoft SQL Server database [ID_34265]
+
+<!-- MR 10.1.0 [CU19]/10.2.0 [CU7] - FR 10.2.10 -->
+
+Because of a number of enhancements, overall performance has increased when starting up elements on systems using a MySQL or Microsoft SQL Server database, especially elements containing large amounts of data.
+
+#### GQI table column names will no longer include table names [ID_34302]
+
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.10 -->
+
+When a GQI table column inherits its name from a parameter of which the name includes the table name (between brackets), that table name will now be trimmed from the column name.
+
+#### Low-code apps: 'fetch data' action is now available in all visualizations that can use query data [ID_34308]
+
+<!-- MR 10.3.0 - FR 10.2.10 -->
+<!-- Not added to 10.3.0 -->
+
+The *fetch data* action is now available in all visualizations that can use query data.
 
 ### Fixes
 
@@ -146,11 +265,11 @@ A number of small enhancements have been made to the header bar of low-code apps
 
 Up to now, the files stored in the `C:\Skyline DataMiner\ResourceManager` folder would not be locked properly when being read or updated during a midnight synchronization. File locking has now been improved.
 
-#### Web apps - DOM: Sections inheriting from a parent behavior definition would not be taken into account when displaying a form [ID_34125]
+#### Web apps - DOM: Sections inherited from a base behavior definition would not be shown [ID_34125]
 
 <!-- MR 10.2.0 [CU7] - FR 10.2.10 -->
 
-When, a DOM definition containing a behavior definition with inheritance enabled was used in a web app form, any sections inheriting from that parent behavior definition would not be taken into account when displaying that form.
+When a DOM definition using an extended behavior definition was assigned to a form component, any sections inherited from the base behavior definition would not be shown.
 
 #### SLNet could throw an OutOfMemoryException due to a memory leak [ID_34126]
 
@@ -163,6 +282,14 @@ In some cases, SLNet could throw an OutOfMemoryException due to a memory leak.
 <!-- MR 10.2.0 [CU7] - FR 10.2.10 -->
 
 When editing a dashboard, you can go to *Settings > User access* and specify the users and/or user groups that are allowed to view or edit the dashboard in question. When you did not have permission to change security settings, the users and user groups you entered would not be validated correctly.
+
+#### Dashboards app / Low-code apps: Changes to the feed could incorrectly influence the time window of a state timeline component [ID_34148]
+
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.10 -->
+
+In some cases, changes to the feed linked to a state timeline component could reset the time window. From now on, linking a query filter to the timeline will no longer influence the time window. The filter will be applied and the current time window will be preserved.
+
+Also, because of a number of enhancements, overall performance has increased when linking a query filter to a state timeline component.
 
 #### Cassandra cluster: No trending information shown for parameters of which the value had not changed for 10 days or more [ID_34149]
 
@@ -190,6 +317,18 @@ The GQI data source "Bookings" did not contain a *Last modified by* column and c
 
 Also, the *Created at* and *Last modified at* columns will no longer be selected by default.
 
+#### Web apps: Long text strings without spaces displayed in read-only boxes were clipped instead of wrapped [ID_34193]
+
+<!-- MR 10.1.0 [CU19]/10.2.0 [CU7] - FR 10.2.10 -->
+
+In web apps (e.g. Jobs), long text strings without spaces displayed in read-only boxes would be clipped. From now on, those strings will be wrapped so that all text is visible.
+
+#### Failover: Certain correlation rules would no longer work after a Failover switch [ID_34204]
+
+<!-- MR 10.1.0 [CU19]/10.2.0 [CU7] - FR 10.2.10 -->
+
+After a Failover switch, in some cases, certain correlation rules would no longer work.
+
 #### Dashboards app: Problem when trying to access a shared dashboard created in a previous version [ID_34210]
 
 <!-- MR 10.2.0 [CU7] - FR 10.2.10 -->
@@ -202,11 +341,31 @@ When you tried to access a shared dashboard created in a previous version, the m
 
 After a user had logged out of a web app, in some cases, that app would incorrectly continue to send out network requests and try to automatically log itself in again.
 
+#### Low-code apps: Feed selection lost when navigating between pages [ID_34231]
+
+<!-- MR 10.3.0 - FR 10.2.10 -->
+<!-- Not added to 10.3.0 -->
+
+Up to now, in low-code apps, feeds would incorrectly not keep the selected values when the page or panel was closed and subsequently reopened. From now on, feeds that - when used in the Dashboards app - allow you to set default values via the URL, will - when used in low-code apps - keep the selected values when the page or panel was closed and subsequently reopened.
+
 #### Run-time error in SLProtocol when a group was launched while a poll group with option 'PartialSNMP' was waiting for incoming SNMP data [ID_34233]
 
 <!-- MR 10.1.0 [CU19]/10.2.0 [CU7] - FR 10.2.10 -->
 
 When, on one thread, a group other than a poll group was launched while, on another thread, a poll group with option "partialSNMP" was waiting for incoming SNMP data, in some cases, a run-time error could occur in SLProtocol.
+
+#### Dashboards app / Low-code apps: GQI table error not cleared between sessions [ID_34243]
+
+<!-- MR 10.3.0 - FR 10.2.10 -->
+<!-- Not added to 10.3.0 -->
+
+When a new GQI session was started, in some rare cases, an error that occurred in the previous session would incorrectly be displayed.
+
+#### Problem with SLProtocol when performing a 'replace data' action [ID_34255]
+
+<!-- Main Release Version 10.0.0 [CU22]/10.1.0 [CU19]/10.2.0 [CU7] - Feature Release Version 10.2.10 -->
+
+In some cases, an error could occur in SLProtocol when performing a 'replace data' action that had to replace multiple bytes.
 
 #### Low-code apps: Header bar font color would incorrectly not be aligned with the theme color of the app [ID_34267]
 
@@ -220,8 +379,59 @@ In some cases, the header bar font color would incorrectly not be aligned with t
 
 In the select node of the query builder, you can change the column order by clicking up and down arrows. Up to now, when you hovered over one of those arrows, in some cases, the incorrect arrow would be selected.
 
+#### Dashboards app / Low-code apps: Column filters in generic filter component incorrectly marked as incapable [ID_34273]
+
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.10 -->
+
+In the generic filter component, in some cases, column filters would be incorrectly marked as incapable when the filter assistance option was enabled.
+
 #### Dashboards app - Time range feed: Delete icons of custom quick pick buttons would incorrectly be displayed on top of the time range feed overlay [ID_34278]
 
 <!-- MR 10.1.0 [CU19]/10.2.0 [CU7] - FR 10.2.10 -->
 
 In some cases, the delete icons of custom quick pick buttons would incorrectly be displayed on top of the time range feed overlay.
+
+#### Low-code apps: Selector feeds would incorrectly not be displayed in the edit sidebar [ID_34281]
+
+<!-- MR 10.3.0 - FR 10.2.10 -->
+<!-- Not added to 10.3.0 -->
+
+In some cases, the selector feeds would incorrectly not be displayed in the edit sidebar under the *Feeds* data source section.
+
+#### Web apps - EPM feed: Overlay would unexpectedly close when the mouse pointer moved away from the EPM view after selecting a chain [ID_34282]
+
+<!-- MR 10.2.0 [CU7] - FR 10.2.10 -->
+
+When you had selected a chain at the bottom of the EPM feed, in some cases, the overlay would unexpectedly close when the mouse pointer moved away from the EPM view.
+
+#### Problem with SLElement when multiple foreign keys were being resolved [ID_34294]
+
+<!-- MR 10.1.0 [CU19]/10.2.0 [CU7] - FR 10.2.10 -->
+
+In some rare cases, an error could occur in SLElement when multiple foreign keys were being resolved.
+
+#### Low-code apps: Problem when using the "query rows" data source [ID_34298]
+
+<!-- MR 10.3.0 - FR 10.2.10 -->
+<!-- Not added to 10.3.0 -->
+
+In some cases, an exception could be thrown when using the "query rows" data source.
+
+#### Low-code apps: Panels could flicker while being loaded [ID_34301]
+
+<!-- MR 10.3.0 - FR 10.2.10 -->
+<!-- Not added to 10.3.0 -->
+
+In some cases, panels could flicker while being loaded.
+
+#### Web apps: Loader bar of table component would incorrectly be refreshing each time a new page was loaded [ID_34303]
+
+<!-- MR 10.2.0 [CU7] - FR 10.2.10 -->
+
+While query pages were being retrieved via GQI, each time a new page was loaded, the loader bar at the top of a table component would incorrectly be refreshing.
+
+#### Dashboards app / Low-code apps: Query column filters would not be applied correctly to table components [ID_34305]
+
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.10 -->
+
+when a dashboard, a low-code app page or low-code app panel was initialized, in some cases, query column filters would not be applied correctly to table components on that dashboard, page or panel.

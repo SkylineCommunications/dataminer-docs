@@ -6,5 +6,5 @@ uid: SLNet_event_subscriptions
 
 To get an overview of the SLNet event subscriptions, go to *Diagnostics* > *Connection Details* > *SLManagedScripting*.
 
-![](~/develop/images/SLNetClientTest_SLNetEvents.png)
-<br>Figure 111: SLNet event subscriptions overview
+![](~/develop/images/SLNetClientTest_SLNetEvents.png)<br>
+*SLNet event subscriptions overview*

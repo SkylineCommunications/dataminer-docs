@@ -5,8 +5,9 @@ uid: Working_with_behavioral_anomaly_detection
 # Working with behavioral anomaly detection
 
 > [!NOTE]
+>
 > - This feature requires a general database of type "Cassandra".
-> - Anomaly detection is only available for numeric parameters that are not part of partial tables. It is also limited to at most 100,000 parameters per DMA.
+> - Anomaly detection is only available for numeric parameters that are not part of [partial tables](xref:Table_parameters#partial-tables). It is also limited to at most 100,000 parameters per DMA.
 > - You can enable or disable this feature via *System Center* > *System settings* > *analytics config*.
 
 > [!TIP]
