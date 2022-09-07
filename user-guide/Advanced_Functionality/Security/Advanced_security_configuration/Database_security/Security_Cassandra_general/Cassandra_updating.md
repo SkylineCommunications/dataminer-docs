@@ -12,7 +12,7 @@ To check the Cassandra version, go to *C:\Program Files\Cassandra\bin* and execu
 
    `.\nodetool version`
 
-With recent DataMiner versions, **Cassandra 3.11** is installed by default. This is also the minimum supported version. Cassandra 4.0 is also supported.
+With recent DataMiner versions, in case a Cassandra database per Agent is used, **Cassandra 3.11** is installed by default, but Cassandra 4.0 is also supported (and even recommended in case the database consists of multiple nodes). If a Cassandra database per cluster is used, Cassandra 3.11 remains supported for existing installations, but 4.0 is highly recommended and is the minimum supported version for new installations.
 
 > [!NOTE]
 > Cassandra 4.0 **no longer supports Windows**. This means that extra Linux servers will be required to host the Cassandra database.

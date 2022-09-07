@@ -2,7 +2,10 @@
 uid: General_Main_Release_10.2.0_CU6
 ---
 
-# General Main Release 10.2.0 CU6
+# General Main Release 10.2.0 CU6 – Preview
+
+> [!IMPORTANT]
+> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
 
 > [!NOTE]
 > For known issues with this version, refer to [Known issues](xref:Known_issues).
@@ -585,3 +588,9 @@ When a GQI query requested property values by means of a GetPropertyValueMessage
 <!-- Main Release Version 10.2.0 [CU6] - Feature Release Version 10.2.9 [CU0] -->
 
 Due to a problem with the SPI framework, in some cases, run-time errors could occur in SLDataMiner when tracking user actions.
+
+#### SNMP polling issues in case protocol contained wildcards in parameter OIDs [ID_34343]
+
+<!-- Main Release Version 10.1.0 [CU22]/10.1.0 [CU19]/10.2.0 [CU6] - Feature Release Version 10.2.9 -->
+
+In some specific cases, wildcards in the parameter OIDs in a protocol caused polling to return no data. This only occurred with wildcards that were not at the end of the OID.

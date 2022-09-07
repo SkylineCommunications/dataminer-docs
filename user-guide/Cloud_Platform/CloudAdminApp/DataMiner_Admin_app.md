@@ -10,7 +10,7 @@ The Admin app is intended for the management of your cloud-connected DataMiner S
 
 - [Getting your organization verified](xref:CloudConnectionVerification)
 
-- [Giving users access to cloud features](xref:Giving_users_access_to_cloud_features)
+- [Managing DCP users](xref:Managing_DCP_users)
 
 - [Controlling remote access](xref:Controlling_remote_access)
 

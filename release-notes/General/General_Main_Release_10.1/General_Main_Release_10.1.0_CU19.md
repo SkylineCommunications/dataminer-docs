@@ -67,6 +67,14 @@ Because of a number of enhancements, overall performance has increased when star
 
 ### Fixes
 
+#### DataMiner Cube - Alarm Console: Problem when clearing alarm groups [ID_33550]
+
+<!-- MR 10.1.0 [CU19]/10.2.0 [CU7] - FR TBD -->
+
+When you cleared an alarm group, in some cases, it would not get cleared correctly. Instead, a clearable version of that alarm group would incorrectly remain visible in the Alarm Console.
+
+Also, in some cases, alarm groups would not get cleared automatically when the *AutoClear* option was set to true.
+
 #### Problem with SLAnalytics [ID_33850]
 
 <!-- MR 10.1.0 [CU19]/10.2.0 [CU7] - FR 10.2.9 -->
@@ -156,3 +164,9 @@ In some cases, the delete icons of custom quick pick buttons would incorrectly b
 <!-- MR 10.1.0 [CU19]/10.2.0 [CU7] - FR 10.2.10 -->
 
 In some rare cases, an error could occur in SLElement when multiple foreign keys were being resolved.
+
+#### SNMP polling issues in case protocol contained wildcards in parameter OIDs [ID_34343]
+
+<!-- Main Release Version 10.1.0 [CU22]/10.1.0 [CU19]/10.2.0 [CU6] - Feature Release Version 10.2.9 -->
+
+In some specific cases, wildcards in the parameter OIDs in a protocol caused polling to return no data. This only occurred with wildcards that were not at the end of the OID.

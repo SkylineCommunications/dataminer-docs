@@ -428,3 +428,9 @@ In some rare cases, an error could occur in the SLSNMPManager process due to an 
 <!-- Main Release Version 10.0.0 [CU22]/10.1.0 [CU19]/10.2.0 [CU7] - Feature Release Version 10.2.10 -->
 
 In some cases, an error could occur in SLProtocol when performing a 'replace data' action that had to replace multiple bytes.
+
+#### SNMP polling issues in case protocol contained wildcards in parameter OIDs [ID_34343]
+
+<!-- Main Release Version 10.1.0 [CU22]/10.1.0 [CU19]/10.2.0 [CU6] - Feature Release Version 10.2.9 -->
+
+In some specific cases, wildcards in the parameter OIDs in a protocol caused polling to return no data. This only occurred with wildcards that were not at the end of the OID.

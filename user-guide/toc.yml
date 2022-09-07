@@ -2533,8 +2533,13 @@
           topicUid: Accessing_the_Admin_app
         - name: Getting your organization verified
           topicUid: CloudConnectionVerification
-        - name: Giving users access to cloud features
-          topicUid: Giving_users_access_to_cloud_features
+        - name: Managing DCP users
+          topicUID: Managing_DCP_users
+          items:
+          - name: Giving users access to cloud features
+            topicUid: Giving_users_access_to_cloud_features
+          - name: Changing the role of a DCP user
+            topicUID: Changing_the_role_of_a_DCP_user
         - name: Controlling remote access
           topicUid: Controlling_remote_access
         - name: Granting admin consent for Teams actions
@@ -2698,6 +2703,8 @@
     - name: Known issues
       topicUID: Known_issues
       items:
+        - name: SNMP polling issues in case protocol contains wildcards in parameter OIDs
+          topicUID: KI_SNMP_polling_issues_with_wildcards_in_param_OIDs
         - name: Upgrade fails because of VerifyClusterPort.dll prerequisite
           topicUID: KI_Upgrade_fails_VerifyClusterPorts_prerequisite
         - name: SLAnalytics RTEs after upgrading DMS with Cassandra Cluster
