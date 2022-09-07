@@ -513,7 +513,7 @@ To be able to make a local test build, you need to have DocFX installed. DocFX i
 
 To install DocFX on a Microsoft Windows machine:
 
-1. Go to <https://github.com/dotnet/docfx/releases>, and download the latest version of the `docfx.zip` package (e.g. version 2.59.2).
+1. Go to <https://github.com/dotnet/docfx/releases>, and download the latest version of the `docfx.zip` package (e.g. version 2.59.4).
  
     > [!CAUTION]
     > We recommend that you do not use any of the beta versions.
