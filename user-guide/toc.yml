@@ -2531,8 +2531,13 @@
           topicUid: Accessing_the_Admin_app
         - name: Getting your organization verified
           topicUid: CloudConnectionVerification
-        - name: Giving users access to cloud features
-          topicUid: Giving_users_access_to_cloud_features
+        - name: Managing DCP users
+          topicUID: Managing_DCP_users
+          items:
+          - name: Giving users access to cloud features
+            topicUid: Giving_users_access_to_cloud_features
+          - name: Changing the role of a DCP user
+            topicUID: Changing_the_role_of_a_DCP_user
         - name: Controlling remote access
           topicUid: Controlling_remote_access
         - name: Granting admin consent for Teams actions
