@@ -21,7 +21,7 @@ A [CI Type](xref:CI_Types1) can be configured with a script that will be used to
 
 when creating a configuration backup, the following configuration type can be supplied
 
-- ***startup** : this is the configuration used during system startup (or reboot) to configure the devices.
+- **startup** : this is the configuration used during system startup (or reboot) to configure the devices.
 - **running** : The running configuration is the current configuration the device runs on.  When configuration changes are done, this typically changes the running configuration, but not the startup configuration. If the running configuration is not saved to the startup configuration, the device will load the startup configuration at startup and the unsaved configuration changes will be lost.
 - **golden** : this configuration type is typically not found on the device itself. It's used to identify the current configuration of device to be a valid configuration.
 
