@@ -31,8 +31,6 @@ If you have the *Owner* or *Admin* role, you can change the role of a user as fo
 
 1. Change the role on DMS level if necessary:
 
-   1. In the sidebar on the left, under *DataMiner Systems*, select the DataMiner System you want to add the user to.
-
    1. Select the *Users* page for the DataMiner System.
 
    1. In the *Role* column, select the role you want the user to have.
