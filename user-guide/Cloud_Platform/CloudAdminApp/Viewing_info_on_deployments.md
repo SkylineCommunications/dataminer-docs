@@ -24,4 +24,4 @@ To do so:
    Click an item in the list to view more detailed information, including version information and event information that can be used for debugging.
 
 > [!TIP]
-> You can also find log files regarding deployments that have been done to a DMS in the *C:\ProgramData\Skyline Communications\DataMiner ArtifactDeployer* folder on each DMA. Together with the information in the DCP Admin app, this can help you solve any problems with deployments.
+> You can also find log files regarding deployments in the folder *C:\ProgramData\Skyline Communications\DataMiner ArtifactDeployer* on the server where the Artifact Deployer is installed. Together with the information in the DCP Admin app, this can help you solve any problems with deployments.
