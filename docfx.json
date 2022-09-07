@@ -130,6 +130,7 @@
     "fileMetadataFiles": [],
     "template": [
       "default",
+	  "plugins/memberpage.2.59.4/content",
       "templates/skyfx"
     ],
     "markdownEngineName": "markdig",
