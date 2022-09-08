@@ -695,7 +695,7 @@ Due to a problem with the SPI framework, in some cases, run-time errors could oc
 
 <!-- Main Release Version 10.0.0 [CU22]/10.1.0 [CU18]/10.2.0 [CU6] - Feature Release Version 10.2.9 [CU1] -->
 
-In some specific cases, wildcards in the parameter OIDs in a protocol caused polling to return no data. This only occurred with wildcards that were not at the end of the OID.
+In some specific cases, wildcards in the parameter OIDs in a protocol caused polling to return no data. This only occurred when a parameter with a wildcard OID referred to another parameter that was not displayed.
 
 #### ElementStateEventMessage would incorrectly be sent every time a command timed out on an element that was already in a timeout state [ID_34345]
 
