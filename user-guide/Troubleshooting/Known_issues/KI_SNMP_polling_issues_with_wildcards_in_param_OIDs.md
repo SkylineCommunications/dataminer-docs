@@ -10,11 +10,13 @@ uid: KI_SNMP_polling_issues_with_wildcards_in_param_OIDs
 
 ## Cause
 
-In some specific cases, wildcards in the parameter OIDs in a protocol cause polling to return no data. This only occurs with wildcards that are not at the end of the OID.
+In some specific cases, wildcards in the parameter OIDs in a protocol cause polling to return no data. This only occurs in case the wildcards refer to a parameter that is not displayed.
 
 ## Fix
 
-Downgrade to 10.2.8 or 10.2.0 CU5 and wait for the patch, which will be available as soon as possible.
+- For 10.2.9: Downgrade to 10.2.8 and wait for the patch, which will be available as soon as possible.
+
+- For 10.2.0.0 - 12153 CU6: install 10.2.0.0 - 12184 CU6.
 
 ## Issue description
 
