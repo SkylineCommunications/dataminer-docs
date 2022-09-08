@@ -1139,3 +1139,11 @@ The validation will now ensure that no empty names or property names that are in
 <!-- MR 10.3.0 - FR 10.2.10 -->
 
 When multiple error messages boxes were being displayed, clicking the *Close* button on any of those boxes would incorrectly always close the last box that had been opened. All other boxes would stay open and could only be closed by clicking the X in the top-right corner.
+
+#### Alarm Console: Problem when clearing alarm groups [ID_34196]
+
+<!-- MR 10.3.0 - FR 10.2.10 -->
+
+Alarm groups would not get cleared automatically when the *AutoClear* option was set to false.
+
+Also, in some cases, after clearing an alarm group, a clearable version of that alarm group would incorrectly remain visible in the Alarm Console, even when the *AutoClear* option was set to true.

@@ -547,6 +547,12 @@ When a component in a dashboard or low-code app showed a GQI query, it could occ
 
 In a visual overview with several tab pages and shapes linked to an EPM object, if you clicked a shape that opened an EPM object, then clicked the Back button, and then clicked a shape to navigate to another tab page in the same visual overview, this did not work.
 
+#### Dashboards app - GQI: Query columns would incorrectly not get highlighted when clicking the filter icon [ID_34127]
+
+<!-- Main Release Version 10.2.0 [CU6] - Feature Release Version TBD -->
+
+When you clicked the filter icon of a table component, the query filter's column data would incorrectly not get highlighted in the *Feeds* data set.
+
 #### 'Clear all' button not available for EPM topology chain [ID_34133]
 
 <!-- Main Release Version 10.1.0 [CU18]/10.2.0 [CU6] - Feature Release Version 10.2.9 -->

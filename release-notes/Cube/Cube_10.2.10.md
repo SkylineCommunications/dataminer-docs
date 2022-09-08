@@ -87,6 +87,14 @@ When multiple error messages boxes were being displayed, clicking the *Close* bu
 
 When a parameter entry was updated in a profile instance, it would no longer be possible to retrieve the data from the updated entry. As a result, the UI was not able to reflect the changes made to the parameter entry in question.
 
+#### Alarm Console: Problem when clearing alarm groups [ID_34196]
+
+<!-- MR 10.3.0 - FR 10.2.10 -->
+
+Alarm groups would not get cleared automatically when the *AutoClear* option was set to false.
+
+Also, in some cases, after clearing an alarm group, a clearable version of that alarm group would incorrectly remain visible in the Alarm Console, even when the *AutoClear* option was set to true.
+
 #### DataMiner Cube - Services app: No services would be loaded the first time you opened the Services app [ID_34211]
 
 <!-- Main Release Version 10.1.0 [CU19]/10.2.0 [CU7] - Feature Release Version 10.2.10 -->

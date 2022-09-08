@@ -140,9 +140,9 @@ Because of a number of enhancements, overall performance has increased when star
 
 <!-- MR 10.1.0 [CU19]/10.2.0 [CU7] - FR TBD -->
 
-When you cleared an alarm group, in some cases, it would not get cleared correctly. Instead, a clearable version of that alarm group would incorrectly remain visible in the Alarm Console.
+Alarm groups would not get cleared automatically when the *AutoClear* option was set to false.
 
-Also, in some cases, alarm groups would not get cleared automatically when the *AutoClear* option was set to true.
+Also, in some cases, after clearing an alarm group, a clearable version of that alarm group would incorrectly remain visible in the Alarm Console, even when the *AutoClear* option was set to true.
 
 #### Problem with SLAnalytics [ID_33850]
 
