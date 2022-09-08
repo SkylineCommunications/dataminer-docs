@@ -703,3 +703,12 @@ In some specific cases, wildcards in the parameter OIDs in a protocol caused pol
 <!-- Not added to 10.3.0 -->
 
 In some cases, it could occur that an ElementStateEventMessage was sent every time a command timed out on an element that was already in a timeout state, while this message should only be sent once when the element is put in a timeout state.
+
+#### Smart-serial connection would no longer send commands [ID_34355]
+
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.9 [CU1] -->
+<!-- Not added to 10.3.0 -->
+
+In some cases, a smart-serial connection would no longer send any commands because it incorrectly considered the *ConnectTimeoutTime* setting to be equal to zero.
+
+Moreover, when an element was edited, the *ConnectTimeoutTime* setting would incorrectly be set to zero in the *Element.xml* file.
