@@ -431,6 +431,6 @@ In some cases, an error could occur in SLProtocol when performing a 'replace dat
 
 #### SNMP polling issues in case protocol contained wildcards in parameter OIDs [ID_34343]
 
-<!-- Main Release Version 10.1.0 [CU22]/10.1.0 [CU19]/10.2.0 [CU6] - Feature Release Version 10.2.9 -->
+<!-- Main Release Version 10.0.0 [CU22]/10.1.0 [CU18]/10.2.0 [CU6] - Feature Release Version 10.2.9 [CU1] -->
 
 In some specific cases, wildcards in the parameter OIDs in a protocol caused polling to return no data. This only occurred with wildcards that were not at the end of the OID.

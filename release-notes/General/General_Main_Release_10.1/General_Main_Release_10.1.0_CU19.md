@@ -164,9 +164,3 @@ In some cases, the delete icons of custom quick pick buttons would incorrectly b
 <!-- MR 10.1.0 [CU19]/10.2.0 [CU7] - FR 10.2.10 -->
 
 In some rare cases, an error could occur in SLElement when multiple foreign keys were being resolved.
-
-#### SNMP polling issues in case protocol contained wildcards in parameter OIDs [ID_34343]
-
-<!-- Main Release Version 10.1.0 [CU22]/10.1.0 [CU19]/10.2.0 [CU6] - Feature Release Version 10.2.9 -->
-
-In some specific cases, wildcards in the parameter OIDs in a protocol caused polling to return no data. This only occurred with wildcards that were not at the end of the OID.

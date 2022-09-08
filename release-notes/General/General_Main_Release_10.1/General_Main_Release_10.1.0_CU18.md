@@ -291,3 +291,9 @@ When you loaded a workspace containing the card of a view linked to EPM, it coul
 <!-- Main Release Version 10.1.0 [CU18]/10.2.0 [CU6] - Feature Release Version 10.2.8 [CU2] -->
 
 When an element was dynamically included in a service multiple times with a partially included parameter set, a problem could occur in SLElement while parsing the information received from SLDataMiner.
+
+#### SNMP polling issues in case protocol contained wildcards in parameter OIDs [ID_34343]
+
+<!-- Main Release Version 10.0.0 [CU22]/10.1.0 [CU18]/10.2.0 [CU6] - Feature Release Version 10.2.9 [CU1] -->
+
+In some specific cases, wildcards in the parameter OIDs in a protocol caused polling to return no data. This only occurred with wildcards that were not at the end of the OID.
