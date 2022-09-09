@@ -19,13 +19,13 @@ A [CI Type](xref:CI_Types1) can be configured with a script that will be used to
 
 ## Configuration types (running, startup, golden)
 
-when a configuration backup is created, one of the following configuration types can be supplied:
+When a configuration backup is created, one of the following configuration types can be supplied:
 
-- **startup** : The configuration used during system startup (or reboot) to configure the devices.
+- **Startup**: The configuration used during system startup (or reboot) to configure the device.
 
-- **running** : The current configuration the device runs on.
+- **Running**: The current configuration the device runs on.
 
-- **golden** : This configuration type is typically not found on the device itself. It is used to identify the current configuration of the device as a valid configuration.
+- **Golden**: This configuration type is typically not found on the device itself. It is used to identify the current configuration of the device as a valid configuration.
 
 > [!NOTE]
 >
@@ -58,7 +58,7 @@ switch (backupManager.InputData.ConfigurationType)
 
 ## Full vs. core configuration
 
-- A **full configuration** backup should contain the required configuration so the device can be restored. When a *configuration update* operation is performed, the selected full configuration will be taken from the DataMiner Configuration Archive and will be pushed to the device.
+- A **full configuration** backup should contain the required configuration so the device can be restored. When a configuration update operation is performed, the selected full configuration will be taken from the DataMiner Configuration Archive and pushed to the device.
 - The **core configuration** is only relevant when change detection needs to happen based on other information than the full configuration. It is typically used to exclude sections of the full configuration that do not contain important information for change detection.
 
 ## Backup without change detection
@@ -87,7 +87,7 @@ In this case, IDP will create a new file with the supplied value in the DataMine
 
 ### Backup by exchanging file locations
 
-Instead of supplying the contents of a backup file to IDP, the script can supply a path to a file location. In this case, IDP  will copy the file from that location to the archive. This location can be on a DMA in the cluster or on a separate server, as long as it can be accessed with the credentials configured in **File Transfer Credentials** on the *Admin > Network Shares* tab of the IDP app.
+Instead of supplying the contents of a backup file to IDP, the script can supply a path to a file location. In this case, IDP  will copy the file from that location to the archive. This location can be on a DMA in the cluster or on a separate server, as long as it can be accessed with the credentials configured in **File Transfer Credentials** on the *Admin* > *Configuration* > *Network Shares* page of the IDP app.
 
 This setup can be used when the device can be triggered to copy its configuration to a server itself (e.g. using a copy command) and then expose the server location in a way that DataMiner IDP can access it.
 
@@ -107,14 +107,14 @@ backupManager.NotifyProcessSuccess();
 Next, DataMiner IDP will connect to the path and transfer the file to the DataMiner Configuration Archive. The file extension will be kept in the DataMiner Configuration Archive.
 
 > [!NOTE]
-> XML and TXT extensions are visualized by default. This can be changed on the [Configuration > Backup page](xref:Configuration#backup).
+> XML and TXT extensions are visualized by default. This can be changed on the [Admin > Configuration > Backup page](xref:Configuration#backup).
 
 ## Backup with change detection
 
 DataMiner IDP can detect changes between consecutive backups. This can be done between either
 
 - consecutive full configuration backups or
-- consecutive core configuration backups
+- consecutive core configuration backups.
 
 When the script supplies the backup to IDP, it needs to supply a **version** number for change detection. The version makes it possible to control different structures of configurations that may arise when different data needs to be compared.
 
@@ -194,4 +194,4 @@ backupManager.NotifyProcessSuccess();
 Next, DataMiner IDP will connect to the path and transfer the files to the DataMiner Configuration Archive. The file extension will be kept in the DataMiner Configuration Archive.
 
 > [!NOTE]
-> XML and TXT extensions are visualized by default. You can change this on the [Configuration > Backup page](xref:Configuration#backup).
+> XML and TXT extensions are visualized by default. You can change this on the [Admin > Configuration > Backup page](xref:Configuration#backup).
