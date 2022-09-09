@@ -16,6 +16,9 @@ The *CI Types* subtab of the *Admin* tab consists of several pages with overview
 
 - **Export all**: Only available on the *Overview* page. Allows you to export the configuration of all CI Types.
 
+> [!NOTE]
+> By default CI Types are exported to C:\Skyline DataMiner\Documents\Skyline IDP CMDB\CI Types. This can be changed on the General page of hidden element DataMiner IDP CI Types.
+
 - **Generate**: Only available on the *Overview* page. Starts a wizard that allows you to generate CI Types for the production protocols in the system. You can select to generate CI Types for all protocols, for all protocols that do not have a CI Type yet, or for a custom selection of protocols.
 
   > [!NOTE]
