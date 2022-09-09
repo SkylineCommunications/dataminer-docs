@@ -57,3 +57,6 @@ A typical use case is to make use of the Resource Manager component in Visual Ov
    - When a user selects a time range on the timeline, the *SelectedtimeRange* variable will be populated with that time range.
 
 1. Add a shape to the Visio drawing that executes the *SRM_BookResourcesQuickly* script, using the *SelectedResource* and *SelectedTimeRange* variables in the input data.
+
+   > [!NOTE]
+   > A custom conversion script is needed to make sure the format of *SelectedTimeRange* matches what the wizard expects.
