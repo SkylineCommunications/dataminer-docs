@@ -626,6 +626,8 @@
       topicUid: ClassLibraryIntroduction
     - name: Class library development
       topicUid: ClassLibraryDevelopment
+    - name: Class library versioning
+      topicUid: ClassLibraryVersioning
     - name: Lazy loading
       topicUid: ClassLibraryLazyLoading
     - name: Element creation
