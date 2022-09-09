@@ -6,7 +6,7 @@ uid: ClassLibraryVersioning
 
 ## Versioning scheme
 
-A class library version consists of four components, where each component is a number and is separated by a dot ('.'), e.g. 1.2.0.1.
+A class library version consists of four components. Each component is a number, separated from the other components by a period ("."), e.g. 1.2.0.1.
 
 The different components of a version A.B.C.D represent the following:
 
