@@ -6,7 +6,7 @@ uid: ConfigurationBackupScript
 
 ## Setting up the DataMiner Configuration Archive
 
-DataMiner IDP can be used to create configuration backups from [elements](xref:About_elements) in the managed inventory. However, before backups can be taken, the DataMiner Configuration Archive needs to be set up.
+DataMiner IDP can be used to create configuration backups from [elements](xref:About_elements) in the managed inventory. However, before backups can be taken, the DataMiner Configuration Archive needs to be set up. You can do so on the [Admin > Configuration > Network Shares](xref:Configuration#network-shares) page of the IDP app.
 
 ## About Configuration Backup scripts
 
@@ -87,7 +87,7 @@ In this case, IDP will create a new file with the supplied value in the DataMine
 
 ### Backup by exchanging file locations
 
-Instead of supplying the contents of a backup file to IDP, the script can supply a path to a file location. In this case, IDP  will copy the file from that location to the archive. This location can be on a DMA in the cluster or on a separate server, as long as it can be accessed with the credentials configured in **File Transfer Credentials** on the *Admin* > *Configuration* > *Network Shares* page of the IDP app.
+Instead of supplying the contents of a backup file to IDP, the script can supply a path to a file location. In this case, IDP  will copy the file from that location to the archive. This location can be on a DMA in the cluster or on a separate server, as long as it can be accessed with the credentials configured in **File Transfer Credentials** on the [Admin > Configuration > Network Shares](xref:Configuration#network-shares) page of the IDP app.
 
 This setup can be used when the device can be triggered to copy its configuration to a server itself (e.g. using a copy command) and then expose the server location in a way that DataMiner IDP can access it.
 
