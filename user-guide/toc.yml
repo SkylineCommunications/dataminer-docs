@@ -2355,6 +2355,8 @@
                   topicUid: Settings
             - name : Implementing the Connectivity Discovery script
               topicUID: ConnectivityDiscoveryScript
+            - name : Implementing the Configuration Backup script
+              topicUID: ConfigurationBackupScript
         - name: Reference
           topicUid: Reference1
           items:
