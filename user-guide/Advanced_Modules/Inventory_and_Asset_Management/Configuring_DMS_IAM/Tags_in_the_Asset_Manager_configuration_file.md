@@ -49,6 +49,7 @@ For an example, refer to the *\<Security>* section in the example (see [Example 
 > [!NOTE]
 > - It is also possible to configure security for the columns in each table with a \<Security> tag within the \<Table> tag.
 > - Security is configured per group, not per user.
+> - When adding security groups of the domain, the desired format is the Down-Level Logon Name. So for example: NetBIOSDomainName\UserName. Local DataMiner groups can be referenced by their group name.
 > - If you grant Write access to a specific table, then users will be able to add and delete rows in that table (using dedicated buttons) and edit data in existing rows (by clicking inside cells).
 > - If you specify multiple table names within an Allow or a Deny tag, separate them by commas.
 > - Multiple Allow tags or multiple Deny tags are not allowed within the same Read or Write tag.
