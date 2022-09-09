@@ -8,9 +8,49 @@ The *Configuration* subtab of the *Admin* tab consists of the pages detailed bel
 
 ## Network Shares
 
-On this page, you can modify the credentials and path for the configuration archive, the credentials for file transfers, and the working directories list. Note that prior to IDP 1.1.20, the file transfer credentials are mentioned under *Working Directories*.
+### DataMiner Configuration Archive
+
+The DataMiner Configuration Archive is a network share which is used by IDP to store the configuration backups. The below settings need to be configured: 
+
+- **Domain** holds the domain of the account 
+- **Username** holds the name of the account 
+- **Password** holds the password of the account 
+- **Path** is the network path to the configuration archive
+
+The **Connection Status** can be either *Connected* or *Disconnected*. It will be *Connected* if the configured credentials can be used to connect to the network path.
+
+
+### File Transfer Credentials
+
+These are the credentials IDP will be use to transfer files between IDP and other servers in the network. This includes working directories. 
+
+The credentials are required 
+
+- when configuration backups are performed by exchanging a file location. In that case the credentials need to have full control over the file location.   These are required when configurati configuration backups are 
+- or when configuration updates are performed. In that case, the credentials need to have full control over the shared locations of the working directories.
+
+The below settings need to be configured:
+
+- **Domain** holds the domain of the account 
+- **Username** holds the name of the account 
+- **Password** holds the password of the account 
+
+
+Note that prior to IDP 1.1.20, the file transfer credentials are mentioned under *Working Directories*.
+
+### Working Directories
 
 In the working directories list, you can specify a working directory on the network shares for each hosting DMA. Working directories temporarily contain files during a configuration update. A working directory must be available for each DMA in the DMS.
+
+For each working directory in the DMS, the be
+
+- **Agent Name** contains the name of the hosting DMA e.g. *ZIINE-H66-G02*
+- **Share Location** needs to be configured and is the network path and identifies how other servers can access the working directory *\\\ZIINE-H66-G02\\workingDir*
+- **Local Directory** needs to be configured and is the path on the hosting DMA of the working directory e.g. *C:\\data\\working_directory*
+- **Directory Status** can be either *Available* or *Not Available*. It will be *Available* when the working directory is accessible via the Share Location and if the File Transfer Credentials are valid.
+
+
+
 
 ## Purge Settings
 
