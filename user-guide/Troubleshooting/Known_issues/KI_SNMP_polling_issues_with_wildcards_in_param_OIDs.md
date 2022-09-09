@@ -14,7 +14,7 @@ In some specific cases, wildcards in the parameter OIDs in a protocol cause poll
 
 ## Fix
 
-- For 10.2.9: Downgrade to 10.2.8 and wait for the patch, which will be available as soon as possible.
+- For 10.2.9: install 10.2.9 CU1.
 
 - For 10.2.0.0 - 12153 CU6: install 10.2.0.0 - 12184 CU6.
 
