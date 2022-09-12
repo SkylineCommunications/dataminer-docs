@@ -167,9 +167,23 @@ From now on, the factory reset tool *SLReset.exe* will no longer remove the foll
 
 #### DataMiner upgrade: AnalyticsDropUnusedCassandraTables upgrade action will explicitly be triggered [ID_34197]
 
-<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.10 -->
+<!-- Main Release Version 10.3.0 (not added) - Feature Release Version 10.2.10 -->
 
 In DataMiner versions from 10.2.8 onwards, during a DataMiner upgrade, the *AnalyticsDropUnusedCassandraTables* upgrade action would fail, unless the [workaround for this issue](xref:KI_RTE_with_SLAnalytics_when_upgrading) had been implemented. During the upgrade to the next DataMiner version, this upgrade action will explicitly be triggered to make sure all unused Cassandra tables get removed.
+
+#### Improved performance of Resources module [ID_34205]
+
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.10 -->
+
+Because of enhancements to the way resources are processed and stored, the Resources module will now initialize more quickly.
+
+In addition, performance has improved when a resource or resource pool is added or updated.
+
+#### Improved performance of SLDataGateway process [ID_34206]
+
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.10 -->
+
+Because of improved internal logic, the performance of the SLDataGateway process has improved.
 
 #### Cassandra: Alarms indicating that the cluster is down will no longer be repeated as long as the status of the cluster remains the same [ID_34209]
 
