@@ -279,6 +279,12 @@ The *fetch data* action is now available in all visualizations that can use quer
 
 ### Fixes
 
+#### Error during Analytics upgrade action [ID_34082]
+
+<!-- MR 10.3.0 - FR 10.2.10 -->
+
+In some rare cases, an error could occur during the Analytics upgrade action when upgrading a DataMiner System with a Cassandra database per cluster.
+
 #### Service & Resource Management: Files in C:\Skyline DataMiner\ResourceManager would not be locked properly when being read or updated during a midnight synchronization [ID_34104]
 
 <!-- MR 10.1.0 [CU19]/10.2.0 [CU7] - FR 10.2.10 -->

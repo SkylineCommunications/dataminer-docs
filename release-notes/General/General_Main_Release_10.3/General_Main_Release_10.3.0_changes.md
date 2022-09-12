@@ -14,11 +14,11 @@ uid: General_Main_Release_10.3.0_changes
 
 ### Enhancements
 
-#### Security enhancements \[ID_31045\] \[ID_31054\] \[ID_31761\] \[ID_32055\] \[ID_32566\] \[ID_33069\] \[ID_33078\] \[ID_33218\] \[ID_33365\] \[ID_33583\]
+#### Security enhancements [ID_31045] [ID_31054] [ID_31761] [ID_32055] [ID_32566] [ID_33069] [ID_33078] [ID_33218] [ID_33365] [ID_33583]
 
 A number of security enhancements have been made.
 
-#### Function.xml files can now contain functions without entry points and maxInstance set to 1 \[ID_31480\]
+#### Function.xml files can now contain functions without entry points and maxInstance set to 1 [ID_31480]
 
 <!-- MR 10.3.0 - FR 10.2.1 -->
 
@@ -27,25 +27,25 @@ In a functions.xml file, it is now possible to define functions without entry po
 > [!NOTE]
 > When you defined a function without entry points and maxInstance set to 1, \[Generic Linker Table\] entries will not be taken into account. This function will still affect all table and column parameters defined for it.
 
-#### Filtering alarms on alarm focus: Enhanced performance \[ID_31484\]
+#### Filtering alarms on alarm focus: Enhanced performance [ID_31484]
 
 <!-- MR 10.3.0 - FR 10.2.2 -->
 
 Due to a number of enhancements, especially with regard to caching, overall performance has increased when filtering alarms on alarm focus.
 
-#### Enhanced performance when reading data from a MySQL or SQLServer database \[ID_31532\]
+#### Enhanced performance when reading data from a MySQL or SQLServer database [ID_31532]
 
 <!-- MR 10.3.0 - FR 10.2.1 -->
 
 Due to a number of enhancements, on systems with a MySQL or SQLServer database, overall performance has increased when reading data from the database, especially when reading trend data during the migration to another type of database.
 
-#### Enhanced performance when reading trend data from a MySQL or SQLServer database page by page \[ID_31535\]
+#### Enhanced performance when reading trend data from a MySQL or SQLServer database page by page [ID_31535]
 
 <!-- MR 10.3.0 - FR 10.2.1 -->
 
 Due to a number of enhancements, on systems with a MySQL or SQLServer database, overall performance has increased when reading trend data from the database page by page.
 
-#### Trending: Pattern matching enhancements \[ID_31668\]
+#### Trending: Pattern matching enhancements [ID_31668]
 
 <!-- MR 10.3.0 - FR 10.2.2 -->
 
@@ -53,13 +53,13 @@ From DataMiner 10.0.7 onwards, on systems using a Cassandra and an Elasticsearch
 
 A number of enhancements have now been made to this pattern matching mechanism. Also, from now on, all occurrences of recognized trend data patterns will be stored in the Elasticsearch database.
 
-#### Alarm templates: Enhanced performance when adding alarm templates with smart baselines \[ID_31670\]
+#### Alarm templates: Enhanced performance when adding alarm templates with smart baselines [ID_31670]
 
 <!-- MR 10.3.0 - FR (REVERTED) 10.2.3 [CU0] -->
 
 Due to a number of enhancements, overall performance has increased when adding alarm templates with smart baselines.
 
-#### Cassandra will no longer store ArrowWindowRecords and PatternMatchOccurrenceRecords \[ID_31944\]
+#### Cassandra will no longer store ArrowWindowRecords and PatternMatchOccurrenceRecords [ID_31944]
 
 <!-- MR 10.3.0 - FR 10.2.4 -->
 
@@ -70,7 +70,7 @@ Cassandra databases will no longer store the following data:
 
 The latter will now be stored in Elasticsearch instead.
 
-#### Behavioral anomaly detection: Change point flood notice will now be cleared sooner \[ID_32013\]
+#### Behavioral anomaly detection: Change point flood notice will now be cleared sooner [ID_32013]
 
 <!-- MR 10.3.0 - FR 10.2.3 -->
 
@@ -82,20 +82,20 @@ The notice will contain the following message:
 Detection of behavioral anomalies temporarily disabled on DMA ...: maximum allowed rate of behavioral change points reached.
 ```
 
-#### SLAnalytics - Alarm focus: Enhanced performance \[ID_32270\]
+#### SLAnalytics - Alarm focus: Enhanced performance [ID_32270]
 
 <!-- MR 10.3.0 - FR 10.2.3 -->
 
 From DataMiner 10.0.0/10.0.2 onwards, the DataMiner Analytics software assigns an estimated likelihood or “alarm focus score” to each alarm, after analyzing the short-term history and current behavior of incoming alarms in real time. Due to a number of enhancements, overall performance of this alarm focus feature has increased.
 
-#### Analytics: Prefetching mechanism for trend icons \[ID_32300\]
+#### Analytics: Prefetching mechanism for trend icons [ID_32300]
 
 <!-- MR 10.3.0 - FR 10.2.4
 Reverted in 10.2.4 -->
 
 During the first few minutes that DataMiner Analytics is running, it is still calculating which trend icons should be displayed. Previously, during this initial period, the trend icons to be displayed were retrieved from the Cassandra database. However, because of changes to the database, this is no longer possible. For this reason, a prefetching mechanism has now been implemented, so that when a trend icon is requested, it is calculated based on prefetched trend data. As there are safeguards in place to ensure that not too many database requests are done at the same time, this does mean that not all trend icons may be displayed immediately.
 
-#### SLAnalytics: A notice event will no longer be generated when entering change point flood mode \[ID_32402\]
+#### SLAnalytics: A notice event will no longer be generated when entering change point flood mode [ID_32402]
 
 <!-- MR 10.3.0 - FR 10.2.3 -->
 
@@ -104,13 +104,13 @@ Up to now, a notice event would be generated whenever SLAnalytics had entered ch
 > [!NOTE]
 > As before, an entry will be added to the SLAnalytics log whenever behavioral anomaly detection has temporarily been disabled because change point flood mode was activated.
 
-#### SLAnalytics: Enhanced accuracy of proactive cap detection \[ID_32591\]
+#### SLAnalytics: Enhanced accuracy of proactive cap detection [ID_32591]
 
 <!-- MR 10.3.0 - FR 10.2.8 -->
 
 Because of a number of enhancements, proactive cap detection accuracy has been increased.
 
-#### SLMessageBroker: Default connection timeout is now 10 minutes \[ID_32884\]
+#### SLMessageBroker: Default connection timeout is now 10 minutes [ID_32884]
 
 <!-- MR 10.3.0 - FR 10.2.5 -->
 
@@ -118,7 +118,7 @@ The Connect() and Publish() methods of SLMessageBroker now have a default connec
 
 Also, the interval at which another reconnect is attempted has been increased from 1 second to 10 seconds.
 
-#### Enhancements with regard to Automation scripts \[ID_33129\] \[ID_33226\]
+#### Enhancements with regard to Automation scripts [ID_33129] [ID_33226]
 
 <!-- MR 10.3.0 - FR 10.2.6 -->
 
@@ -131,26 +131,26 @@ A number of enhancements have been made with regard to Automation scripts.
 - When, in the Dashboards app, users mark a script parameter as required, they no longer need to fill in a value.
 - From now on, a page load event will only trigger after the application page has been fully initialized. This will ensure that, when launching script actions with input linked to feeds, those feeds have been initialized.
 
-#### Service & Resource Management: Enhanced logging \[ID_33183\]
+#### Service & Resource Management: Enhanced logging [ID_33183]
 
 <!-- MR 10.3.0 - FR 10.2.6 -->
 
 Up to now, when the SRM log files were set to “No logging”, no information would be logged if e.g. a Reservation event had failed. All ResourceManager, ResourceManagerAutomation and FunctionManager logging has now been re-evaluated, and the log settings have been optimized. All critical issues occurring in those modules will now be logged.
 
-#### Profile instance list for PA service definition node now also contains child instances \[ID_33187\]
+#### Profile instance list for PA service definition node now also contains child instances [ID_33187]
 
 <!-- MR 10.3.0 - FR 10.2.6
 See also: DMS Cube - Fix was moved to 10.2.0 CU3 by RN 33188 -->
 
 When you configure a service definition node in the Services app, a list of profile instances is shown for the selected profile definition. For service definitions of type "Skyline Process Automation" and "Custom Process Automation", this list will now also contain instances for child definitions of the configured profile definition.
 
-#### Anomaly detection: Enhanced performance when generating suggestion events and alarms \[ID_33283\]
+#### Anomaly detection: Enhanced performance when generating suggestion events and alarms [ID_33283]
 
 <!-- MR 10.3.0 - FR 10.2.6 -->
 
 Because of a number of enhancements, overall performance has increased when generating anomaly detection suggestion events and alarms.
 
-#### DataMiner upgrade will not be performed if NATS is not installed and running \[ID_33304\]
+#### DataMiner upgrade will not be performed if NATS is not installed and running [ID_33304]
 
 <!-- MR 10.3.0 - FR 10.2.7 -->
 
@@ -159,13 +159,13 @@ When you launch a DataMiner upgrade, from now on, the upgrade process will not b
 > [!NOTE]
 > This check will be skipped if the current DataMiner version is older than version 10.1.0.
 
-#### SLDMS will now use less memory when storing service information \[ID_33318\]
+#### SLDMS will now use less memory when storing service information [ID_33318]
 
 <!-- MR 10.3.0 - FR 10.2.7 -->
 
 Because of a number of enhancements, the SLDMS process will now use less memory when storing service information.
 
-#### QADeviceSimulator: Enhanced CPU usage when running SNMPv3 simulations \[ID_33376\]
+#### QADeviceSimulator: Enhanced CPU usage when running SNMPv3 simulations [ID_33376]
 
 <!-- MR 10.3.0 - FR 10.2.7 -->
 
@@ -174,7 +174,7 @@ Because of a number of enhancements, overall CPU usage of the QADeviceSimulator 
 > [!CAUTION]
 > This tool is provided “As Is” with no representation or warranty whatsoever. Skyline Communications will not provide any maintenance or support for this tool.
 
-#### Service & Resource Management: Function resources will no longer be deleted when their parent DVE element cannot be reached \[ID_33415\] \[ID_33668\]
+#### Service & Resource Management: Function resources will no longer be deleted when their parent DVE element cannot be reached [ID_33415] [ID_33668]
 
 <!-- MR 10.3.0 - FR 10.2.7 -->
 
@@ -187,25 +187,25 @@ The ResourceManagerHelper now contains a new method to delete resources:
 > [!NOTE]
 > Contributing resources can be deleted even when no parent element can be found. The parent element of a contributing resource is an enhanced service element. When the contributing booking is no longer running, the enhanced service element will no longer exist.
 
-#### SLAnalytics: Enhanced performance when retrieving parameter information \[ID_33458\]
+#### SLAnalytics: Enhanced performance when retrieving parameter information [ID_33458]
 
 <!-- MR 10.3.0 - FR 10.2.7 -->
 
 Because of a number of enhancements, overall performance has increased when retrieving parameter information.
 
-#### Web apps: Enhancements with regard to the rendering of GQI tables \[ID_33463\]
+#### Web apps: Enhancements with regard to the rendering of GQI tables [ID_33463]
 
 <!-- MR 10.3.0 - FR 10.2.7 -->
 
 A number of enhancements have been made with regard to the rendering of GQI tables.
 
-#### Alarm templates: All behavioral change points will now be considered anomalous \[ID_33476\]
+#### Alarm templates: All behavioral change points will now be considered anomalous [ID_33476]
 
 <!-- MR 10.3.0 - FR 10.2.7 -->
 
 From DataMiner 10.0.3 onwards, you can enable alarm monitoring on specific types of anomalies for parameters in an alarm template. Up to now, when you enabled this, an alarm was generated whenever the SLAnalytics engine considered a behavioral change point anomalous. From now on, all behavior change points will be considered anomalous and will hence trigger an alarm.
 
-#### QADeviceSimulator: Enhanced performance when loading a MySQL database at the start of a MySQL database simulation \[ID_33555\]
+#### QADeviceSimulator: Enhanced performance when loading a MySQL database at the start of a MySQL database simulation [ID_33555]
 
 <!-- MR 10.3.0 - FR 10.2.7 -->
 
@@ -216,7 +216,7 @@ Also, the overall memory footprint of MySQL database simulations has been reduce
 > [!CAUTION]
 > This tool is provided “As Is” with no representation or warranty whatsoever. Skyline Communications will not provide any maintenance or support for this tool.
 
-#### Service & Resource Management: A booking will now be set to 'interrupted' when whatever event related to that booking could not be executed \[ID_33576\]
+#### Service & Resource Management: A booking will now be set to 'interrupted' when whatever event related to that booking could not be executed [ID_33576]
 
 <!-- MR 10.3.0 - FR 10.2.8 -->
 
@@ -224,7 +224,7 @@ Up to now, when DataMiner was unavailable when a booking was supposed to start o
 
 This functionality has now been extended. A booking will now also be set to “interrupted” when whatever event related to that booking could not be executed.
 
-#### Frequency of smart baseline calculations is now configurable \[ID_33584\]
+#### Frequency of smart baseline calculations is now configurable [ID_33584]
 
 <!-- MR 10.3.0 - FR 10.2.7 -->
 
@@ -256,13 +256,13 @@ When authenticating users using SAML, the following additional debug information
 
 Up to now, components could only produce one feed for each data type. Now support has been added for different categories within a data type, so that components will be able to produce several feeds for the same data type. This will for example make it possible for a component to produce a query row feed with the categories "timeline item" and "timeline band".
 
-#### QA Device Simulator: Enhanced performance \[ID_33761\]
+#### QA Device Simulator: Enhanced performance [ID_33761]
 
 <!-- MR 10.3.0 - FR 10.2.9 -->
 
 Because of a number of enhancements, overall performance of the QA Device Simulator tool has improved.
 
-#### Maximum for element timeout setting increased to 24 hours \[ID_33862][ID_33951]
+#### Maximum for element timeout setting increased to 24 hours [ID_33862] [ID_33951]
 
 <!-- MR 10.3.0 - FR 10.2.9 -->
 
@@ -384,13 +384,13 @@ Because of improved internal logic, the performance of the SLDataGateway process
 
 ### Fixes
 
-#### SLAnalytics: Problem with trend prediction \[ID_31352\]
+#### SLAnalytics: Problem with trend prediction [ID_31352]
 
 <!-- MR 10.3.0 - FR 10.2.1 -->
 
 In some rare cases, an error could occur in SLAnalytics when calculating trend predictions.
 
-#### Proactive cap detection: Problem with frequency of trend prediction calculations \[ID_31447\]
+#### Proactive cap detection: Problem with frequency of trend prediction calculations [ID_31447]
 
 <!-- MR 10.3.0 - FR 10.2.2 -->
 
@@ -398,17 +398,17 @@ The “proactive cap detection” feature predicts future issues based on trend 
 
 Up to now, in some cases, the frequency with which trend predictions were calculated would either be too low or too high.
 
-#### Alarm templates: Incorrect calculation of smart baselines \[ID_31601\]
+#### Alarm templates: Incorrect calculation of smart baselines [ID_31601]
 
 <!-- MR 10.3.0 - FR 10.2.6 -->
 
 In some cases, smart baselines would be calculated incorrectly, especially when the “Skip the last X hours in the configured trend window” and “Handle weekend days separately” options were enabled.
 
-#### Factory reset tool SLReset.exe did not remove a number of .lic files \[ID_31722\]
+#### Factory reset tool SLReset.exe did not remove a number of .lic files [ID_31722]
 
 <!-- MR 10.3.0 - FR 10.2.1 -->
 
-The factory reset tool C:\\Skyline DataMiner\\Files\\SLReset.exe can be used to fully reset a DataMiner Agent to its state immediately after installation.
+The factory reset tool `C:\Skyline DataMiner\Files\SLReset.exe` can be used to fully reset a DataMiner Agent to its state immediately after installation.
 
 When run, it will now also remove the following files:
 
@@ -416,43 +416,43 @@ When run, it will now also remove the following files:
 - request.lic (will be recreated after a DataMiner restart)
 - chartDir.lic
 
-#### Dashboards app: Dashboard names would incorrectly be allowed to contain backslash characters \[ID_31735\]
+#### Dashboards app: Dashboard names would incorrectly be allowed to contain backslash characters [ID_31735]
 
 <!-- MR 10.3.0 - FR 10.2.1 -->
 
 Up to now, it would incorrectly be allowed to enter a name containing backslash characters when creating or renaming a dashboard. From now on, this will no longer be allowed.
 
-#### Elasticsearch: NewPagingSearchRequest was incorrectly not able to query an alias grouping two logger tables \[ID_31767\]
+#### Elasticsearch: NewPagingSearchRequest was incorrectly not able to query an alias grouping two logger tables [ID_31767]
 
 <!-- MR 10.3.0 - FR 10.2.2 -->
 
 Up to now, a NewPagingSearchRequest was incorrectly not able to retrieve data from an alias that grouped two logger tables.
 
-#### Service & Resource Management: Retrieving ReservationInstances sorted by a property of type string would return an incorrectly sorted result set \[ID_32003\]
+#### Service & Resource Management: Retrieving ReservationInstances sorted by a property of type string would return an incorrectly sorted result set [ID_32003]
 
 <!-- MR 10.3.0 - FR 10.2.3 -->
 
 When a list of ReservationInstances were retrieved sorted by a property of type string, that list would be returned in an incorrect sort order.
 
-#### Mobile apps: Clients would not immediately receive updates when items were added \[ID_32042\]
+#### Mobile apps: Clients would not immediately receive updates when items were added [ID_32042]
 
 <!-- MR 10.3.0 - FR 10.2.2 -->
 
 When new items were added in one client, in some cases, those items would not immediately appear in other clients. For example, when a user created a ticket for a particular domain, other users viewing the list of tickets for that same domain would not immediately have their ticket list updated.
 
-#### Cassandra: Problem when a NULL value was encountered in a logger table during a database migration \[ID_32358\]
+#### Cassandra: Problem when a NULL value was encountered in a logger table during a database migration [ID_32358]
 
 <!-- MR 10.3.0 - FR 10.2.3 -->
 
 When migrating a database to a Cassandra cluster, in some cases, an error could be thrown when a NULL value was encountered in a logger table.
 
-#### Jobs app: No 'loading' indication when job sections were being loaded \[ID_32616\]
+#### Jobs app: No 'loading' indication when job sections were being loaded [ID_32616]
 
 <!-- MR 10.3.0 - FR 10.2.4 -->
 
 When configuring jobs, no “loading” indication would appear when job sections were being loaded.
 
-#### Web services API: Problem with GetServiceTemplate \[ID_32625\]
+#### Web services API: Problem with GetServiceTemplate [ID_32625]
 
 <!-- MR 10.3.0 - FR 10.2.4 -->
 
@@ -461,19 +461,19 @@ The GetServiceTemplate method would throw an exception when requesting a service
 - Require a valid element name
 - Allow 'N/A' to indicate empty value
 
-#### SLAnalytics: Inaccurate short-term trend predictions \[ID_32731\]
+#### SLAnalytics: Inaccurate short-term trend predictions [ID_32731]
 
 <!-- MR 10.3.0 - FR 10.2.5 -->
 
 If the DataMiner Agent uses a Cassandra database, trend graphs can show how the value of a parameter in the graph is most likely to evolve in the future. Up to now, in some cases, short-term trend predictions could be inaccurate due to a longer seasonality being detected on a higher level.
 
-#### Alarms and information events not migrated during migration to Cassandra Cluster \[ID_32755\]
+#### Alarms and information events not migrated during migration to Cassandra Cluster [ID_32755]
 
 <!-- MR 10.3.0 - FR 10.2.4 -->
 
 When a DataMiner cluster with multiple DMAs was migrated to a Cassandra Cluster database, it could occur that the migration of alarms and information events failed because the DMAs tried to truncate the same table at the same time. Truncation will now take place in the initialization phase to prevent this problem, and if it fails, this will be logged but will not stop the migration. This will also prevent a rare problem where data could be missing after DMAs were migrated one by one.
 
-#### SLAnalytics: Unneeded error was thrown when an upgrade action tried to remove the pattern match occurrences table from a non-existing Elasticsearch database \[ID_32772\]
+#### SLAnalytics: Unneeded error was thrown when an upgrade action tried to remove the pattern match occurrences table from a non-existing Elasticsearch database [ID_32772]
 
 <!-- MR 10.3.0 - FR 10.2.4 -->
 
@@ -486,37 +486,37 @@ On systems without an Elasticsearch database, the following messages were thrown
 
 From now on, when no Elasticsearch database can be found, only the above-mentioned information event will be thrown.
 
-#### Elasticsearch: TTL settings would not be applied correctly \[ID_32913\]
+#### Elasticsearch: TTL settings would not be applied correctly [ID_32913]
 
 <!-- MR 10.3.0 - FR 10.2.6 -->
 
 In some cases, TTL settings defined in an Elasticsearch database would not be applied correctly. As a result, certain data (e.g. profile instance data) would not get properly cleaned up.
 
-#### Web Services API: Problem when opening the soap.asmx page \[ID_32939\]
+#### Web Services API: Problem when opening the soap.asmx page [ID_32939]
 
 <!-- MR 10.3.0 - FR 10.2.5 -->
 
 In some cases, an exception could be thrown when you tried to open the following page: `http://DmaNameOrIpAddress/API/v1/soap.asmx`
 
-#### Dashboards app: Selection in parameter feed would incorrectly be cleared whenever the linked EPM feed was updated \[ID_33153\]
+#### Dashboards app: Selection in parameter feed would incorrectly be cleared whenever the linked EPM feed was updated [ID_33153]
 
 <!-- MR 10.3.0 - FR 10.2.6 -->
 
 When an EPM feed was linked to a parameter feed, in some cases, the current selection in the parameter feed would incorrectly be cleared whenever the EPM feed was updated.
 
-#### SLPort would incorrectly split WebSocket messages larger than 65kB \[ID_33182\]
+#### SLPort would incorrectly split WebSocket messages larger than 65kB [ID_33182]
 
 <!-- MR 10.3.0 - FR 10.2.6 -->
 
 Up to now, when SLPort received a WebSocket message larger than the WebSocket buffer (i.e. 65 kB), it would incorrectly split that message in multiple chunks before passing it to the protocol.
 
-#### Alarm templates: Problem with anomaly detection alarms \[ID_33216\]
+#### Alarm templates: Problem with anomaly detection alarms [ID_33216]
 
 <!-- MR 10.3.0 - FR 10.2.6 -->
 
 When you created an element with an alarm template in which anomaly detection alarms were configured for table parameters, in some cases, none of the enabled types of change points would trigger an alarm.
 
-#### CSLCloudBridge library would incorrectly not take into account the connection timeout specified in SLCloud.xml \[ID_33322\]
+#### CSLCloudBridge library would incorrectly not take into account the connection timeout specified in SLCloud.xml [ID_33322]
 
 <!-- MR 10.3.0 - FR 10.2.6 [CU0]  -->
 
@@ -532,55 +532,55 @@ The connection timeout specified in SLCloud.xml is the maximum time it can take 
 </SLCloud>
 ```
 
-#### ResourceManager module would fail to initialize on systems with a MySQL database \[ID_33327\]
+#### ResourceManager module would fail to initialize on systems with a MySQL database [ID_33327]
 
 <!-- MR 10.3.0 - FR 10.2.6 -->
 
 On systems with a MySQL database, the ResourceManager module would fail to initialize.
 
-#### SLCloud.xml files would incorrectly refer to the local agent using the IP address instead of the hostname when the agents were configured to use HTTPS \[ID_33342\]
+#### SLCloud.xml files would incorrectly refer to the local agent using the IP address instead of the hostname when the agents were configured to use HTTPS [ID_33342]
 
 <!-- MR 10.3.0 - FR 10.2.7 -->
 
 When, in a DataMiner System, agents were configured to use HTTPS, the SLCloud.xml files of each of those agent would incorrectly refer to the local agent using the IP address instead of the hostname.
 
-#### Web apps: Only part of the value would be selected when moving the mouse pointer over a selection box that had the focus \[ID_33379\]
+#### Web apps: Only part of the value would be selected when moving the mouse pointer over a selection box that had the focus [ID_33379]
 
 <!-- MR 10.3.0 - FR 10.2.7 -->
 
 When you moved the mouse pointer over a selection box that had the focus, in some cases, only part of the value would be selected.
 
-#### SLAnalytics: Problem when predicting the trend of a history set parameter \[ID_33389\]
+#### SLAnalytics: Problem when predicting the trend of a history set parameter [ID_33389]
 
 <!-- MR 10.3.0 - FR 10.2.7 -->
 
 Up to now, negative status values in the trend data due to element restarts could cause the trend prediction engine to incorrectly interpret the trend data of a history set parameter.
 
-#### Dashboards app - GQI: Values of profile parameters without decimals defined would incorrectly be replaced by the maximum integer value \[ID_33418\]
+#### Dashboards app - GQI: Values of profile parameters without decimals defined would incorrectly be replaced by the maximum integer value [ID_33418]
 
 <!-- MR 10.3.0 - FR 10.2.7 -->
 
 When a profile parameter of type “number” had no decimals defined, its value would incorrectly be displayed as the maximum value that can be assigned to a parameter of type integer. From now on, when a profile parameter has no decimals defined, its value will be displayed as is, without decimals.
 
-#### Ticketing app: Problem with ticket domains incorrectly marked as masked \[ID_33449\]
+#### Ticketing app: Problem with ticket domains incorrectly marked as masked [ID_33449]
 
 <!-- MR 10.3.0 - FR 10.2.7 -->
 
 If, in the Ticketing app, you tried to edit a ticket of a domain linked to an element, in some cases, that domain would incorrectly be marked as “masked”.
 
-#### Issues with NATS request/response actions \[ID_33487\]
+#### Issues with NATS request/response actions [ID_33487]
 
 <!-- MR 10.3.0 - FR 10.2.7 -->
 
 A number of issues with NATS request/response actions have been solved.
 
-#### Problem with SLDataGateway when updating parameters \[ID_33535\]
+#### Problem with SLDataGateway when updating parameters [ID_33535]
 
 <!-- MR 10.3.0 - FR 10.2.7 -->
 
 In some cases, an error could occur in SLDataGateway when updating parameters.
 
-#### Ticketing app: Problem when trying to add a value to the State field of a ticket domain \[ID_33537\]
+#### Ticketing app: Problem when trying to add a value to the State field of a ticket domain [ID_33537]
 
 <!-- MR 10.3.0 - FR 10.2.7 -->
 
@@ -590,31 +590,31 @@ When you tried to add a new value to the State field of a ticket domain, the fol
 Error trapped: Unable to cast object of type 'Skyline.DataMiner.Web.Common.v1.DMATicketFieldPossibleValue' to type 'Skyline.DataMiner.Web.Common.v1.DMATicketStateFieldPossibleState'.
 ```
 
-#### Dashboards app: Dashboard would incorrectly scroll up when you selected a field in an EPM feed \[ID_33650\]
+#### Dashboards app: Dashboard would incorrectly scroll up when you selected a field in an EPM feed [ID_33650]
 
 <!-- MR 10.3.0 - FR 10.2.8 -->
 
 When, on a dashboard, an EPM feed was surrounded by other components, in some cases, the dashboard would incorrectly scroll up when you selected a field in the EPM feed.
 
-#### Run-time errors due to MessageBrokerReconnectThread problems in SLCloudBridge \[ID_33716\]
+#### Run-time errors due to MessageBrokerReconnectThread problems in SLCloudBridge [ID_33716]
 
 <!-- MR 10.3.0 - FR 10.2.8 [CU0] -->
 
 In some cases, run-time errors could occur due to MessageBrokerReconnectThread problems in the SLCloudBridge process.
 
-#### SLDataGateway: Communication via NATS could get stopped when a large number of parameter changes were being processed \[ID_33731\]
+#### SLDataGateway: Communication via NATS could get stopped when a large number of parameter changes were being processed [ID_33731]
 
 <!-- MR 10.3.0 - FR 10.2.7 [CU0] -->
 
 When a large number of parameter changes were being processed, up to now, communication entering or leaving SLDataGateway via NATS could get stopped.
 
-#### Problem with SLAnalytics when an element or a parameter was deleted \[ID_33788\]
+#### Problem with SLAnalytics when an element or a parameter was deleted [ID_33788]
 
 <!-- MR 10.3.0 - FR 10.2.9 -->
 
 When an element or a parameter was deleted, in some rare cases, an error could occur in the SLAnalytics process.
 
-#### SLAnalytics: Error messages could get added to the log file due to a problem with the automatic incident tracking algorithm \[ID_33820\]
+#### SLAnalytics: Error messages could get added to the log file due to a problem with the automatic incident tracking algorithm [ID_33820]
 
 <!-- MR 10.3.0 - FR 10.2.9 -->
 
@@ -636,19 +636,19 @@ When a DataMiner Agent was being shut down, in some cases, an error could occur 
 
 During a DataMiner upgrade, the VerifyNatsRunning prerequisite could fail due to the SLCloudBridge.dll file having been renamed to SLMessageBroker.dll in DataMiner versions 10.2.0/10.1.5.
 
-#### Azure Active Directory: Domain users who were only a member of a domain group could be deleted during an LDAP synchronization \[ID_33916\]
+#### Azure Active Directory: Domain users who were only a member of a domain group could be deleted during an LDAP synchronization [ID_33916]
 
 <!-- MR 10.3.0 - FR 10.2.9 -->
 
 When using Azure Active Directory as an identity provider, up to now, during an LDAP synchronization, all domain users who were only a member of a domain group would incorrectly be deleted when the Azure AD client secret had expired.
 
-#### DataMiner Object Model: FieldValues would not get concatenated correctly \[ID_33989\]
+#### DataMiner Object Model: FieldValues would not get concatenated correctly [ID_33989]
 
 <!-- MR 10.3.0 - FR 10.2.9 -->
 
 When a name concatenation for a DomInstance had been defined in either the ModuleSettings or the DomDefinition, in some cases, the FieldValues would not get concatenated correctly.
 
-#### Elasticsearch: Closed alarms were incorrectly not migrated to the dms-alarms index when the associated element had been migrated from another DMS \[ID_34020\]
+#### Elasticsearch: Closed alarms were incorrectly not migrated to the dms-alarms index when the associated element had been migrated from another DMS [ID_34020]
 
 <!-- MR 10.3.0 - FR 10.2.9 -->
 
@@ -659,6 +659,12 @@ When, on a system with an Elasticsearch database, an alarm was closed, that alar
 <!-- MR 10.3.0 - FR 10.2.9 -->
 
 In some cases, it could occur that properties of a FieldAlias DOM object could not be saved to the database.
+
+#### Error during Analytics upgrade action [ID_34082]
+
+<!-- MR 10.3.0 - FR 10.2.10 -->
+
+In some rare cases, an error could occur during the Analytics upgrade action when upgrading a DataMiner System with a Cassandra database per cluster.
 
 #### DataMiner upgrade: AnalyticsDropUnusedCassandraTables upgrade action would fail [ID_34091]
 
@@ -682,7 +688,7 @@ When the *ProcessOptions* tag in *DataMiner.xml* was configured with the attribu
 
 This issue will now be prevented. In addition, the element's instance GUID will now be added to the element log file for easier investigations.
 
-#### SLAnalytics RTEs after upgrading DMS with Cassandra Cluster \[ID_34180]
+#### SLAnalytics RTEs after upgrading DMS with Cassandra Cluster [ID_34180]
 
 <!-- MR 10.3.0 - FR 10.2.8 CU2 -->
 
