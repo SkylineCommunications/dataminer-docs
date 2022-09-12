@@ -8,8 +8,8 @@ The DataMiner Cube client is available in the following languages:
 
 - English (default)
 - German
-- French
 - Spanish
+- French
 - Dutch
 - Portuguese (Portugal)
 - Russian
@@ -17,4 +17,4 @@ The DataMiner Cube client is available in the following languages:
 Other languages can be implemented at a cost.
 
 > [!NOTE]
-> The above-mentioned languages are applicable to the Cube core client only, not to specific apps such as Dashboards, Jobs, etc.
+> The above-mentioned languages are applicable for the Cube core client only, not for specific apps such as Dashboards, Jobs, etc.

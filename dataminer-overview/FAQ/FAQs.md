@@ -6,7 +6,7 @@ uid: FAQs
 
 - [What is Skyline's mission and vision?](xref:FAQ_MissionVision)
 - [Does DataMiner process personal data in a GDPR-compliant manner?](xref:FAQ_GDPR)
-- [Does Skyline offer an Escrow Service?](xref:FAQ_Escrow)
+- [Does Skyline offer an escrow service?](xref:FAQ_Escrow)
 - [Does Skyline offer serial and GPIO converters?](xref:FAQ_Serial_GPIO_converters)
 - [What are the principal advantages of DataMiner?](xref:FAQ_Principal_advantages)
 - [What do you mean with multi-vendor technology?](xref:FAQ_Multi-vendor_technology)
@@ -18,5 +18,5 @@ uid: FAQs
 - [What is the DataMiner roadmap?](xref:FAQ_DataMiner_roadmap)
 - [How does Skyline define the DMA element capacity?](xref:FAQ_DMA_element_capacity)
 - [How much bandwidth must be provided for data acquisition on data sources?](xref:FAQ_Bandwidth_data_acquisition)
-- [What are the limitations when using Generic SNMP connector as opposed to a dedicated connector?](xref:FAQ_Limitations_generic_SNMP_connector)
+- [What are the limitations when using the Generic SNMP connector as opposed to a dedicated connector?](xref:FAQ_Limitations_generic_SNMP_connector)
 - [Which languages are available in the DataMiner Cube client?](xref:FAQ_DataMiner_Cube_languages)

@@ -4,7 +4,7 @@ uid: FAQ_Clustered_DMAs
 
 # What are the benefits of using clustered DataMiner Agents as opposed to separate ones?
 
-Non-clustered systems are like having one system, or two or more separate systems. When you cluster several DataMiner Agents into one DataMiner System, there are several benefits.
+When you have a non-clustered system, that means you have one or more separate DataMiner Agents. If you instead cluster several DataMiner Agents together into one DataMiner System, this brings multiple benefits.
 
 - Every piece of functionality can be visualized as one. One system can, for example, present you with a dashboard that combines data collected from multiple DataMiner Agents.
 

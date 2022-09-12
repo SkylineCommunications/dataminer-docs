@@ -4,7 +4,7 @@ uid: FAQ_GDPR
 
 # Does DataMiner process personal data in a GDPR-compliant manner?
 
-With regard to the General Data Protection Regulation (GDPR), DataMiner provides a full range of possibilities to ensure all personal data is processed in a GDPR-compliant manner.
+With regard to the General Data Protection Regulation (GDPR), DataMiner provides a full range of possibilities to ensure that all personal data is processed in a GDPR-compliant manner.
 
 It is important to understand that DataMiner is a generic data collection platform. The user has full control over it, including which data is collected and how it is processed. Therefore, it is up to the user to decide whether to process technical data only or to also include personal data. Users can do so in their capacity of controller or processor, and based on a specified predefined legal basis.
 
@@ -18,6 +18,6 @@ Typical examples include the following:
 
 - **Performance Graph**: The user can enable or disable performance tracking on metrics, including metrics that hold personal data. Similar to the alarm messages, the user can define how long the system will retain that personal data. Moreover, DataMiner provides multiple privacy settings that users can apply within their organization. These settings consist of generic options that can be leveraged to flag, contain or fence off specific data. This includes access controls, visibility controls, custom properties on elements, etc.
 
-From a security point of view, DataMiner has the capability to use industry-standard encryption. However, the methods used by DataMiner to extract data (which can include personal data as outlined above) from the third-party systems that are subject to being managed by DataMiner is defined by those third-party systems. If such a third-party system does not support encryption, and personal data is extracted from it using DataMiner, then that data will be exchanged in a clear format that can be read from the wire.
+From a security point of view, DataMiner has the capability to use industry-standard encryption. However, the methods used by DataMiner to extract data (which can include personal data as outlined above) from the third-party systems that are managed by DataMiner are defined by those third-party systems. If such a third-party system does not support encryption, and personal data is extracted from it using DataMiner, then that data will be exchanged in a clear format that can be read from the wire.
 
-All of these tools and configuration possibilities should allow each user to put in place the necessary GDPR controls when DataMiner is being used to process personal data. That being said, each user will still have to fulfill their proper obligations towards the data subject(s) in question (e.g. permissions, etc.).
+All of these tools and configuration possibilities should allow each user to put in place the necessary GDPR controls when DataMiner is being used to process personal data. Nevertheless, each user will still have to fulfill their proper obligations towards the data subject(s) in question (e.g. permissions, etc.).

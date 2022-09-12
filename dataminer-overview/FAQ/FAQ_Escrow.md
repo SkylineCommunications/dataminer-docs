@@ -2,14 +2,14 @@
 uid: FAQ_Escrow
 ---
 
-# Does Skyline offer an Escrow service?
+# Does Skyline offer an escrow service?
 
-Yes, Skyline can offer an Escrow service at an annual charge, using the Skyline-appointed escrow agent Merak.
+Yes, Skyline can offer an escrow service at an annual charge, using the Skyline-appointed escrow agent Merak.
 
 The following services are included in Skyline Communications' Escrow service (DMS-ESC):
 
 - Executed by the reputable independent Belgian escrow provider [Merak NV Belgium](https://www.merak.eu/en).
-- Setup of a three-party agreement between Skyline, Merak and the Customer.
+- Setup of a three-party agreement between Skyline, Merak, and the customer.
 - Permanent professional storage of the source code in a modern, highly secured vault.
 - Quarterly source code deposits.
 - Each code deposit consists of the entire Skyline source code base for all its DataMiner software products and modules, for the then most recently released versions.
@@ -22,8 +22,8 @@ A standard verification consists of the following services executed by Merak and
 - Visual inspection of the device containing the source code.
 - Verification of the readability of the device:
 
-    - Scanning on the existence of viruses.
-    - Restoring of the contents of the device to a hard disk.
+  - Scanning on the existence of viruses.
+  - Restoring of the contents of the device to a hard disk.
 
 - Check on the existence of source code files by means of a test at random.
 - Check on the existence of a user manual.
