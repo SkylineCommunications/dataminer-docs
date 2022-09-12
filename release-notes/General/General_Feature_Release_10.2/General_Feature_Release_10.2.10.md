@@ -45,7 +45,7 @@ Moreover, the additional features of the *Table* component will now also be avai
 
 #### GQI: columnInfo object of data source columns of type 'discrete' will now contain the possible values [ID_34179]
 
-<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.10 -->
+<!-- MR 10.3.0 - FR 10.2.10 -->
 
 For each of the following GQI data source columns of type "discrete", the possible values will now be available in their columnInfo object:
 
@@ -65,7 +65,7 @@ For each of the following GQI data source columns of type "discrete", the possib
 
 #### GQI - EPM feed: Linking 'System Name' and 'System Type' to the query [ID_34222]
 
-<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.10 -->
+<!-- MR 10.3.0 - FR 10.2.10 -->
 
 Using an EPM feed, it is now possible to link *System Name* and *System Type* to the GQI query you are building.
 
@@ -77,19 +77,19 @@ When you configure a column filter for a Table component in a dashboard or low-c
 
 #### GQI: Using GQI query columns to filter a 'State' component [ID_34235]
 
-<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.10 -->
+<!-- MR 10.3.0 - FR 10.2.10 -->
 
 It is now possible to use GQI query columns to filter a *State* component.
 
 #### GQI: Query columns of type 'string' can now be filtered using 'Equals' and 'NotEquals' [ID_34246]
 
-<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.10 -->
+<!-- MR 10.3.0 - FR 10.2.10 -->
 
 Query columns of type "string" can now be filtered using *Equals* and *NotEquals*.
 
 #### Dashboards app / Low-code apps: 'Return no rows when feed is empty' option replaced by a triple-state option [ID_34280]
 
-<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.10 -->
+<!-- MR 10.3.0 - FR 10.2.10 -->
 
 Up to now, when configuring the filter of a GQI data feed, you could enable the *Return no rows when feed is empty* option to indicate that, when the feed was empty, you wanted an empty table to be returned instead of the entire table.
 
@@ -105,7 +105,7 @@ Now, this option has been replaced by a triple-state option. You can now indicat
 
 #### External authentication using SAML: Extended logging [ID_33622]
 
-<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.10 -->
+<!-- MR 10.3.0 - FR 10.2.10 -->
 
 When authenticating users using SAML, the following additional debug information will now be logged in the *SLSaml.txt* file:
 
@@ -119,6 +119,12 @@ When authenticating users using SAML, the following additional debug information
 Using the DataMiner Taskbar Utility, it is now possible to install all possible types of app packages. To install an app, you can either double-click the .dmapp file or right-click the Taskbar Utility icon, click *Update* and select the app from the list.
 
 Also, the *SLAppPackageInstaller.txt* log file will now keep track of all actions performed and issues encountered during the installation of an app.
+
+#### SLLogCollector now also collects SLAnalytics configuration files [ID_34106]
+
+<!-- MR 10.3.0 - FR 10.2.10 -->
+
+Several SLAnalytics configuration files will now also be collected by the SLLogCollector tool. These will be placed in the *Logs/Skyline DataMiner/Analytics* and *Logs/Skyline DataMiner/Configuration* folders of the archive created by SLLogCollector.
 
 #### Enhanced performance when an SNMP element using multi-threaded timers is polling multiple sources simultaneously [ID_34143]
 
@@ -158,7 +164,7 @@ In the conditional coloring layout setting for Table and Node edge components, d
 
 #### SLReset will no longer remove VersionHistory.txt and the HTTPS configuration [ID_34194]
 
-<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.10 -->
+<!-- MR 10.3.0 - FR 10.2.10 -->
 
 From now on, the factory reset tool *SLReset.exe* will no longer remove the following items:
 
@@ -167,13 +173,13 @@ From now on, the factory reset tool *SLReset.exe* will no longer remove the foll
 
 #### DataMiner upgrade: AnalyticsDropUnusedCassandraTables upgrade action will explicitly be triggered [ID_34197]
 
-<!-- Main Release Version 10.3.0 (not added) - Feature Release Version 10.2.10 -->
+<!-- MR 10.3.0 (not added) - FR 10.2.10 -->
 
 In DataMiner versions from 10.2.8 onwards, during a DataMiner upgrade, the *AnalyticsDropUnusedCassandraTables* upgrade action would fail, unless the [workaround for this issue](xref:KI_RTE_with_SLAnalytics_when_upgrading) had been implemented. During the upgrade to the next DataMiner version, this upgrade action will explicitly be triggered to make sure all unused Cassandra tables get removed.
 
 #### Improved performance of Resources module [ID_34205]
 
-<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.10 -->
+<!-- MR 10.3.0 - FR 10.2.10 -->
 
 Because of enhancements to the way resources are processed and stored, the Resources module will now initialize more quickly.
 
@@ -181,7 +187,7 @@ In addition, performance has improved when a resource or resource pool is added 
 
 #### Improved performance of SLDataGateway process [ID_34206]
 
-<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.10 -->
+<!-- MR 10.3.0 - FR 10.2.10 -->
 
 Because of improved internal logic, the performance of the SLDataGateway process has improved.
 
@@ -260,7 +266,7 @@ Because of a number of enhancements, overall performance has increased when star
 
 #### GQI table column names will no longer include table names [ID_34302]
 
-<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.10 -->
+<!-- MR 10.3.0 - FR 10.2.10 -->
 
 When a GQI table column inherits its name from a parameter of which the name includes the table name (between brackets), that table name will now be trimmed from the column name.
 
@@ -299,7 +305,7 @@ When editing a dashboard, you can go to *Settings > User access* and specify the
 
 #### Dashboards app / Low-code apps: Changes to the feed could incorrectly influence the time window of a state timeline component [ID_34148]
 
-<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.10 -->
+<!-- MR 10.3.0 - FR 10.2.10 -->
 
 In some cases, changes to the feed linked to a state timeline component could reset the time window. From now on, linking a query filter to the timeline will no longer influence the time window. The filter will be applied and the current time window will be preserved.
 
@@ -377,7 +383,7 @@ When a new GQI session was started, in some rare cases, an error that occurred i
 
 #### Problem with SLProtocol when performing a 'replace data' action [ID_34255]
 
-<!-- Main Release Version 10.0.0 [CU22]/10.1.0 [CU19]/10.2.0 [CU7] - Feature Release Version 10.2.10 -->
+<!-- Main Release Version 10.0.0 [CU22]/10.1.0 [CU19]/10.2.0 [CU7] - FR 10.2.10 -->
 
 In some cases, an error could occur in SLProtocol when performing a 'replace data' action that had to replace multiple bytes.
 
@@ -395,7 +401,7 @@ In the select node of the query builder, you can change the column order by clic
 
 #### Dashboards app / Low-code apps: Column filters in generic filter component incorrectly marked as incapable [ID_34273]
 
-<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.10 -->
+<!-- MR 10.3.0 - FR 10.2.10 -->
 
 In the generic filter component, in some cases, column filters would be incorrectly marked as incapable when the filter assistance option was enabled.
 
@@ -446,6 +452,6 @@ While query pages were being retrieved via GQI, each time a new page was loaded,
 
 #### Dashboards app / Low-code apps: Query column filters would not be applied correctly to table components [ID_34305]
 
-<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.10 -->
+<!-- MR 10.3.0 - FR 10.2.10 -->
 
 when a dashboard, a low-code app page or low-code app panel was initialized, in some cases, query column filters would not be applied correctly to table components on that dashboard, page or panel.
