@@ -279,6 +279,12 @@ The *fetch data* action is now available in all visualizations that can use quer
 
 ### Fixes
 
+#### Service & Resource Management: New IgnoreCanceledReservations and IgnorePastReservation properties not linked to existing corresponding properties [ID_34080]
+
+<!-- MR 10.3.0 (not added) - FR 10.2.10 -->
+
+In DataMiner 10.2.7, the *IgnoreCanceledReservations* and *IgnorePastReservation* properties were introduced in the *ResourceDeleteOptions* of the ResourceManagerHelper. However, these were not yet linked to the existing *IgnoreCanceledReservations* and *IgnorePastReservations* properties in the *SetResourceMessage*, which could potentially cause issues in case the old properties were set to true and the new ones remained set to false. These properties will now be synced so that they always have the same value.
+
 #### Error during Analytics upgrade action [ID_34082]
 
 <!-- MR 10.3.0 - FR 10.2.10 -->
