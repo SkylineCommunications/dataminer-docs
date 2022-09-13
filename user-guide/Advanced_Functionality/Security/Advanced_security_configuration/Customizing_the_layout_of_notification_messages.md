@@ -28,19 +28,22 @@ When defining notification message templates in the *NotifyTemplates.xml* file, 
 
 - **\[Format\]-correlation-infoheader**
 
-  Template of the base Alarm section’s header in the notification message sent as a result of some triggered Correlation rule.
+  Template of the base Alarm section’s header in the notification message sent as a result of a triggered Correlation rule.
 
 - **\[Format\]-correlation-infoitem**
 
-  Template of a base Alarm item in the base Alarm section of the notification message sent as a result of some triggered Correlation rule.
+  Template of a base Alarm item in the base Alarm section of the notification message sent as a result of a triggered Correlation rule.
 
 - **\[Format\]-correlation-infofooter**
 
-  Template of the base Alarm section’s footer in the notification message sent as a result of some triggered Correlation rule.
+  Template of the base Alarm section’s footer in the notification message sent as a result of a triggered Correlation rule.
 
 - **\[Format\]-notifications**
 
-  The notification message sent independently (not as a result of some triggered orrelation rule).
+  The notification message sent independently (not as a result of a Correlation rule).
+
+> [!TIP]
+> For more information on how to configure a Correlation rule to send a notification message, see [Sending an email](xref:Sending_an_email)
 
 ### Template name prefixes indicating the message format
 
@@ -153,13 +156,7 @@ The following example shows a *NotifyTemplates.xml* file in which two templates 
 ```
 
 > [!NOTE]
-> In the example above, a number of placeholders are enclosed in square brackets. For more information, see [Notification template placeholders](#notification-template-placeholders)*.*
-
-## Defining the use of notification message templates in Correlation rules
-
-When defining a Correlation rule, you can also define the notification message to be sent when that Correlation rule is triggered.
-
-If you want the notification message to be formatted according to the *correlation-infoheader*, *correlation-infoitem* and *correlation-infofooter* templates you specified in the file *NotifyTemplates.xml*, just insert an *\[info\]* placeholder in the message body (or click *Insert Placeholder* on the right of the text box, and select *More info (base alarms)*).
+> In the example above, a number of placeholders are enclosed in square brackets. For more information, see [Notification template placeholders](#notification-template-placeholders).
 
 ## Notification template placeholders
 

@@ -1113,6 +1113,8 @@
                   topicUid: Configuring_notifications_directly_from_the_Alarm_Console_or_Surveyor
                 - name: Configuring alarm storm prevention for notifications
                   topicUid: Configuring_alarm_storm_prevention_for_notifications
+                - name: Customizing the layout of notification messages
+                  topicUid: Customizing_the_layout_of_notification_messages
             - name: Managing user groups
               topicUid: Managing_user_groups
               items:
@@ -1164,8 +1166,6 @@
                   topicUid: HTTP_Headers
                 - name: Disabling legacy protocols
                   topicUid: Disabling_legacy_protocols 
-            - name: Customizing the layout of notification messages
-              topicUid: Customizing_the_layout_of_notification_messages
             - name: Configuring LDAP settings
               topicUid: Configuring_LDAP_settings
             - name: Configuring Atlassian Crowd settings
