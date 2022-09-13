@@ -2334,6 +2334,19 @@
               topicUid: DataMiner_IDP_components
             - name: Overview of the IDP app UI
               topicUid: Overview_of_the_IDP_app_UI
+              items:
+                - name: Inventory
+                  topicUID: IDP_Inventory_tab
+                - name: Connectivity
+                  topicUID: IDP_Connectivity_tab
+                - name: Configuration
+                  topicUID: IDP_Configuration_tab
+                - name: Software
+                  topicUID: IDP_Software_tab
+                - name: Facilities
+                  topicUID: IDP_Facilities_tab
+                - name: Processes
+                  topicUID: IDP_Processes_tab
         - name: Advanced configuration
           items:
             - name: Advanced configuration for Administrators
