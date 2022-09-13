@@ -14,11 +14,13 @@ uid: General_Feature_Release_10.2.10
 
 ## Highlights
 
-#### Clearing an incident now clears any clearable base alarms it contains [ID_34112]
+#### DataMiner Taskbar Utility: Enhanced installation of app packages [ID_33969]
 
-<!-- MR 10.3.0 - FR 10.2.10 -->
+<!-- MR 10.1.0 [CU19]/10.2.0 [CU7] - FR 10.2.10 -->
 
-If an incident (also known as an alarm group) is cleared manually, any clearable base alarms of that incident will now also be cleared. This way, this behavior is consistent with the standard behavior for Correlation alarms.
+Using the DataMiner Taskbar Utility, it is now possible to install all possible types of app packages. To install an app, you can either double-click the .dmapp file or right-click the Taskbar Utility icon, click *Upgrade* and select the app from the list.
+
+Also, the *SLAppPackageInstaller.txt* log file will now keep track of all actions performed and issues encountered during the installation of an app.
 
 #### Dashboards / Low-Code Apps: Parameter table component brought in line with Table component [ID_34132]
 
@@ -41,11 +43,41 @@ Moreover, the additional features of the *Table* component will now also be avai
 > [!NOTE]
 > This change does not affect the *Parameter table* component as viewed on mobile devices.
 
+#### Dashboards app / Low-Code Apps: Conditional coloring layout configuration now uses numeric filter instead of numeric slider [ID_34174]
+
+<!-- MR 10.3.0 - FR 10.2.10 -->
+<!-- Part of this RN is still in soft launch and consequently has not been documented yet -->
+
+In the conditional coloring layout setting for Table and Node edge components, the numeric slider control has been replaced with a numeric filter. This has the following advantages:
+
+- Full control over the boundaries. You can indicate whether the start and end should be in- or excluded.
+- Possibility to not have a start or end boundary.
+- More consistent with the free text filter.
+- Easier to define a precise filter.
+
+#### Dashboards app / Low-code apps: 'Return no rows when feed is empty' option replaced by a triple-state option [ID_34280]
+
+<!-- MR 10.3.0 - FR 10.2.10 -->
+
+Up to now, when configuring the filter of a GQI data feed, you could enable the *Return no rows when feed is empty* option to indicate that, when the feed was empty, you wanted an empty table to be returned instead of the entire table.
+
+Now, this option has been replaced by a triple-state option. You can now indicate that, when the feed is empty, you want
+
+- to have an empty table returned,
+- to have the entire table returned, or
+- to have the table filtered on empty values.
+
 ## Other features
+
+#### Clearing an incident now clears any clearable base alarms it contains [ID_34112]
+
+<!-- MR 10.3.0 - FR 10.2.10 -->
+
+If an incident (also known as an alarm group) is cleared manually, any clearable base alarms of that incident will now also be cleared. This way, this behavior is consistent with the standard behavior for Correlation alarms.
 
 #### GQI: columnInfo object of data source columns of type 'discrete' will now contain the possible values [ID_34179]
 
-<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.10 -->
+<!-- MR 10.3.0 - FR 10.2.10 -->
 
 For each of the following GQI data source columns of type "discrete", the possible values will now be available in their columnInfo object:
 
@@ -65,7 +97,7 @@ For each of the following GQI data source columns of type "discrete", the possib
 
 #### GQI - EPM feed: Linking 'System Name' and 'System Type' to the query [ID_34222]
 
-<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.10 -->
+<!-- MR 10.3.0 - FR 10.2.10 -->
 
 Using an EPM feed, it is now possible to link *System Name* and *System Type* to the GQI query you are building.
 
@@ -77,27 +109,15 @@ When you configure a column filter for a Table component in a dashboard or low-c
 
 #### GQI: Using GQI query columns to filter a 'State' component [ID_34235]
 
-<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.10 -->
+<!-- MR 10.3.0 - FR 10.2.10 -->
 
 It is now possible to use GQI query columns to filter a *State* component.
 
 #### GQI: Query columns of type 'string' can now be filtered using 'Equals' and 'NotEquals' [ID_34246]
 
-<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.10 -->
+<!-- MR 10.3.0 - FR 10.2.10 -->
 
 Query columns of type "string" can now be filtered using *Equals* and *NotEquals*.
-
-#### Dashboards app / Low-code apps: 'Return no rows when feed is empty' option replaced by a triple-state option [ID_34280]
-
-<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.10 -->
-
-Up to now, when configuring the filter of a GQI data feed, you could enable the *Return no rows when feed is empty* option to indicate that, when the feed was empty, you wanted an empty table to be returned instead of the entire table.
-
-Now, this option has been replaced by a triple-state option. You can now indicate that, when the feed is empty, you want
-
-- to have an empty table returned,
-- to have the entire table returned, or
-- to have the table filtered on empty values.
 
 ## Changes
 
@@ -105,20 +125,18 @@ Now, this option has been replaced by a triple-state option. You can now indicat
 
 #### External authentication using SAML: Extended logging [ID_33622]
 
-<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.10 -->
+<!-- MR 10.3.0 - FR 10.2.10 -->
 
 When authenticating users using SAML, the following additional debug information will now be logged in the *SLSaml.txt* file:
 
 - Whether Just-In-Time provisioning (JIT) is enabled.
 - Which group claims are being used.
 
-#### DataMiner Taskbar Utility: Enhanced installation of app packages [ID_33969]
+#### SLLogCollector now also collects SLAnalytics configuration files [ID_34106]
 
-<!-- MR 10.1.0 [CU19]/10.2.0 [CU7] - FR 10.2.10 -->
+<!-- MR 10.3.0 - FR 10.2.10 -->
 
-Using the DataMiner Taskbar Utility, it is now possible to install all possible types of app packages. To install an app, you can either double-click the .dmapp file or right-click the Taskbar Utility icon, click *Update* and select the app from the list.
-
-Also, the *SLAppPackageInstaller.txt* log file will now keep track of all actions performed and issues encountered during the installation of an app.
+Several SLAnalytics configuration files will now also be collected by the SLLogCollector tool. These will be placed in the *Logs/Skyline DataMiner/Analytics* and *Logs/Skyline DataMiner/Configuration* folders of the archive created by SLLogCollector.
 
 #### Enhanced performance when an SNMP element using multi-threaded timers is polling multiple sources simultaneously [ID_34143]
 
@@ -137,19 +155,7 @@ This will prevent the following possible issues:
 - The CefSharp browser engine version used by Cube is not updated frequently and therefore not always trusted by certain SAML identity provider websites, such as Microsoft Azure. This can cause a lengthy authentication procedure, even if the browser cache is enabled.
 - The CefSharp browser engine needs to be downloaded from the DMA before a first authentication (on a new device). However, this is currently not supported for HTTPS-only setups.
 
-#### Dashboards app / Low-Code apps: Conditional coloring layout configuration now uses numeric filter instead of numeric slider [ID_34174]
-
-<!-- MR 10.3.0 - FR 10.2.10 -->
-<!-- Part of this RN is still in soft launch and consequently has not been documented yet -->
-
-In the conditional coloring layout setting for Table and Node edge components, the numeric slider control has been replaced with a numeric filter. This has the following advantages:
-
-- Full control over the boundaries. You can indicate whether the start and end should be in- or excluded.
-- Possibility to not have a start or end boundary.
-- More consistent with the free text filter.
-- Easier to define a precise filter.
-
-#### Dashboards app / Low-Code apps: Conditional coloring layout filter configuration now shows discrete column values [ID_34182]
+#### Dashboards app / Low-Code Apps: Conditional coloring layout filter configuration now shows discrete column values [ID_34182]
 
 <!-- MR 10.3.0 - FR 10.2.10 -->
 <!-- Part of this RN is still in soft launch and consequently has not been documented yet -->
@@ -158,7 +164,7 @@ In the conditional coloring layout setting for Table and Node edge components, d
 
 #### SLReset will no longer remove VersionHistory.txt and the HTTPS configuration [ID_34194]
 
-<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.10 -->
+<!-- MR 10.3.0 - FR 10.2.10 -->
 
 From now on, the factory reset tool *SLReset.exe* will no longer remove the following items:
 
@@ -167,9 +173,23 @@ From now on, the factory reset tool *SLReset.exe* will no longer remove the foll
 
 #### DataMiner upgrade: AnalyticsDropUnusedCassandraTables upgrade action will explicitly be triggered [ID_34197]
 
-<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.10 -->
+<!-- MR 10.3.0 (not added) - FR 10.2.10 -->
 
 In DataMiner versions from 10.2.8 onwards, during a DataMiner upgrade, the *AnalyticsDropUnusedCassandraTables* upgrade action would fail, unless the [workaround for this issue](xref:KI_RTE_with_SLAnalytics_when_upgrading) had been implemented. During the upgrade to the next DataMiner version, this upgrade action will explicitly be triggered to make sure all unused Cassandra tables get removed.
+
+#### Improved performance of Resources module [ID_34205]
+
+<!-- MR 10.3.0 - FR 10.2.10 -->
+
+Because of enhancements to the way resources are processed and stored, the Resources module will now initialize more quickly.
+
+In addition, performance has improved when a resource or resource pool is added or updated.
+
+#### Improved performance of SLDataGateway process [ID_34206]
+
+<!-- MR 10.3.0 - FR 10.2.10 -->
+
+Because of improved internal logic, the performance of the SLDataGateway process has improved.
 
 #### Cassandra: Alarms indicating that the cluster is down will no longer be repeated as long as the status of the cluster remains the same [ID_34209]
 
@@ -246,7 +266,7 @@ Because of a number of enhancements, overall performance has increased when star
 
 #### GQI table column names will no longer include table names [ID_34302]
 
-<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.10 -->
+<!-- MR 10.3.0 - FR 10.2.10 -->
 
 When a GQI table column inherits its name from a parameter of which the name includes the table name (between brackets), that table name will now be trimmed from the column name.
 
@@ -258,6 +278,18 @@ When a GQI table column inherits its name from a parameter of which the name inc
 The *fetch data* action is now available in all visualizations that can use query data.
 
 ### Fixes
+
+#### Service & Resource Management: New IgnoreCanceledReservations and IgnorePastReservation properties not linked to existing corresponding properties [ID_34080]
+
+<!-- MR 10.3.0 (not added) - FR 10.2.10 -->
+
+In DataMiner 10.2.7, the *IgnoreCanceledReservations* and *IgnorePastReservation* properties were introduced in the *ResourceDeleteOptions* of the ResourceManagerHelper. However, these were not yet linked to the existing *IgnoreCanceledReservations* and *IgnorePastReservations* properties in the *SetResourceMessage*, which could potentially cause issues in case the old properties were set to true and the new ones remained set to false. These properties will now be synced so that they always have the same value.
+
+#### Error during Analytics upgrade action [ID_34082]
+
+<!-- MR 10.3.0 - FR 10.2.10 -->
+
+In some rare cases, an error could occur during the Analytics upgrade action when upgrading a DataMiner System with a Cassandra database per cluster.
 
 #### Service & Resource Management: Files in C:\Skyline DataMiner\ResourceManager would not be locked properly when being read or updated during a midnight synchronization [ID_34104]
 
@@ -285,7 +317,7 @@ When editing a dashboard, you can go to *Settings > User access* and specify the
 
 #### Dashboards app / Low-code apps: Changes to the feed could incorrectly influence the time window of a state timeline component [ID_34148]
 
-<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.10 -->
+<!-- MR 10.3.0 - FR 10.2.10 -->
 
 In some cases, changes to the feed linked to a state timeline component could reset the time window. From now on, linking a query filter to the timeline will no longer influence the time window. The filter will be applied and the current time window will be preserved.
 
@@ -363,7 +395,7 @@ When a new GQI session was started, in some rare cases, an error that occurred i
 
 #### Problem with SLProtocol when performing a 'replace data' action [ID_34255]
 
-<!-- Main Release Version 10.0.0 [CU22]/10.1.0 [CU19]/10.2.0 [CU7] - Feature Release Version 10.2.10 -->
+<!-- Main Release Version 10.0.0 [CU22]/10.1.0 [CU19]/10.2.0 [CU7] - FR 10.2.10 -->
 
 In some cases, an error could occur in SLProtocol when performing a 'replace data' action that had to replace multiple bytes.
 
@@ -381,7 +413,7 @@ In the select node of the query builder, you can change the column order by clic
 
 #### Dashboards app / Low-code apps: Column filters in generic filter component incorrectly marked as incapable [ID_34273]
 
-<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.10 -->
+<!-- MR 10.3.0 - FR 10.2.10 -->
 
 In the generic filter component, in some cases, column filters would be incorrectly marked as incapable when the filter assistance option was enabled.
 
@@ -432,6 +464,6 @@ While query pages were being retrieved via GQI, each time a new page was loaded,
 
 #### Dashboards app / Low-code apps: Query column filters would not be applied correctly to table components [ID_34305]
 
-<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.10 -->
+<!-- MR 10.3.0 - FR 10.2.10 -->
 
 when a dashboard, a low-code app page or low-code app panel was initialized, in some cases, query column filters would not be applied correctly to table components on that dashboard, page or panel.
