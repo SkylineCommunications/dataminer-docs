@@ -20,6 +20,16 @@ This page contains an overview of the Service Group (Fiber Node) parameters avai
 
 - **Number CM DOCSIS 3.1**
 
+- **Number CM DOCSIS Other**
+
+- **Percentage DS Utilization**
+
+- **Percentage US Utilization**
+
+- **Number QAM US Channels**
+
+- **Number QAM DS Channels**
+
 - **Number CM Ping Unreachable**
 
 - **Percentage CM Ping Unreachable**
@@ -28,9 +38,9 @@ This page contains an overview of the Service Group (Fiber Node) parameters avai
 
 - **Name**
 
-- **MAC Domain**
+- **System Name**
 
-- **Cable Interface**
+- **CCAP Core Name**
 
 - **DS SG Name**
 
