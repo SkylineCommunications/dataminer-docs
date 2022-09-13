@@ -159,7 +159,7 @@ Also, the edit panel will now allow users to select a specific protocol version.
 
 <!-- Main Release Version 10.3.0 - Feature Release Version 10.2.9 -->
 
-The DataMiner mobile apps that use Angular (e.g. Low-Code apps, Dashboards, Monitoring, Ticketing, Jobs, and Automation) now use Angular 13 instead of Angular 12.
+The DataMiner mobile apps that use Angular (e.g. Low-Code Apps, Dashboards, Monitoring, Ticketing, Jobs, and Automation) now use Angular 13 instead of Angular 12.
 
 #### Azure Active Directory: Secret expiry notices/errors [ID_33916]
 
@@ -293,7 +293,7 @@ If you used the search box below a table displaying GQI data to filter this data
 
 The log levels of some of the log lines related to SPIs in the *SLAutomation* log file have been changed, so that the log file does not get flooded with potentially irrelevant data. In addition, these log lines will now contain the SPI node ID and definition ID. The log line mentioning the SPI definition ID when this definition is created will no longer be added.
 
-#### Dashboards app / Low-Code apps: No more statistics and suggestions for conditional coloring of Table and Node edge component [ID_34037]
+#### Dashboards app / Low-Code Apps: No more statistics and suggestions for conditional coloring of Table and Node edge component [ID_34037]
 
 <!-- Main Release Version 10.3.0 - Feature Release Version 10.2.9 -->
 <!-- Part of this RN is still in soft launch and consequently has not been documented yet -->

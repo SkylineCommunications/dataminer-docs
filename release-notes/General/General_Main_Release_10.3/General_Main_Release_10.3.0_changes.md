@@ -308,7 +308,7 @@ If you used the search box below a table displaying GQI data to filter this data
 
 The log levels of some of the log lines related to SPIs in the *SLAutomation* log file have been changed, so that the log file does not get flooded with potentially irrelevant data. In addition, these log lines will now contain the SPI node ID and definition ID. The log line mentioning the SPI definition ID when this definition is created will no longer be added.
 
-#### Dashboards app / Low-Code apps: No more statistics and suggestions for conditional coloring of Table and Node edge component [ID_34037]
+#### Dashboards app / Low-Code Apps: No more statistics and suggestions for conditional coloring of Table and Node edge component [ID_34037]
 
 <!-- MR 10.3.0 - FR 10.2.9 -->
 <!-- Part of this RN is still in soft launch and consequently has not been documented yet -->
@@ -334,7 +334,7 @@ The following functionality is now available for nested tables:
 - Filtering of nested tables.
 - Selecting columns from nested tables. These will be shown in the same list box as regular columns, but their name will be prefixed by the parent column name. For example, if the parent column is named "Capabilities" and the nested table column is named "Name", the column will be listed as "Capabilities.Name".
 
-#### Dashboards app / Low-Code apps: Conditional coloring layout configuration now uses numeric filter instead of numeric slider [ID_34174]
+#### Dashboards app / Low-Code Apps: Conditional coloring layout configuration now uses numeric filter instead of numeric slider [ID_34174]
 
 <!-- MR 10.3.0 - FR 10.2.10 -->
 <!-- Part of this RN is still in soft launch and consequently has not been documented yet -->
@@ -346,7 +346,7 @@ In the conditional coloring layout setting for Table and Node edge components, t
 - More consistent with the free text filter.
 - Easier to define a precise filter.
 
-#### Dashboards app / Low-Code apps: Conditional coloring layout filter configuration now shows discrete column values [ID_34182]
+#### Dashboards app / Low-Code Apps: Conditional coloring layout filter configuration now shows discrete column values [ID_34182]
 
 <!-- MR 10.3.0 - FR 10.2.10 -->
 <!-- Part of this RN is still in soft launch and consequently has not been documented yet -->

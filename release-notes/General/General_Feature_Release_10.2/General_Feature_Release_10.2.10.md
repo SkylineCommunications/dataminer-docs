@@ -14,11 +14,13 @@ uid: General_Feature_Release_10.2.10
 
 ## Highlights
 
-#### Clearing an incident now clears any clearable base alarms it contains [ID_34112]
+#### DataMiner Taskbar Utility: Enhanced installation of app packages [ID_33969]
 
-<!-- MR 10.3.0 - FR 10.2.10 -->
+<!-- MR 10.1.0 [CU19]/10.2.0 [CU7] - FR 10.2.10 -->
 
-If an incident (also known as an alarm group) is cleared manually, any clearable base alarms of that incident will now also be cleared. This way, this behavior is consistent with the standard behavior for Correlation alarms.
+Using the DataMiner Taskbar Utility, it is now possible to install all possible types of app packages. To install an app, you can either double-click the .dmapp file or right-click the Taskbar Utility icon, click *Update* and select the app from the list.
+
+Also, the *SLAppPackageInstaller.txt* log file will now keep track of all actions performed and issues encountered during the installation of an app.
 
 #### Dashboards / Low-Code Apps: Parameter table component brought in line with Table component [ID_34132]
 
@@ -41,7 +43,37 @@ Moreover, the additional features of the *Table* component will now also be avai
 > [!NOTE]
 > This change does not affect the *Parameter table* component as viewed on mobile devices.
 
+#### Dashboards app / Low-Code Apps: Conditional coloring layout configuration now uses numeric filter instead of numeric slider [ID_34174]
+
+<!-- MR 10.3.0 - FR 10.2.10 -->
+<!-- Part of this RN is still in soft launch and consequently has not been documented yet -->
+
+In the conditional coloring layout setting for Table and Node edge components, the numeric slider control has been replaced with a numeric filter. This has the following advantages:
+
+- Full control over the boundaries. You can indicate whether the start and end should be in- or excluded.
+- Possibility to not have a start or end boundary.
+- More consistent with the free text filter.
+- Easier to define a precise filter.
+
+#### Dashboards app / Low-code apps: 'Return no rows when feed is empty' option replaced by a triple-state option [ID_34280]
+
+<!-- MR 10.3.0 - FR 10.2.10 -->
+
+Up to now, when configuring the filter of a GQI data feed, you could enable the *Return no rows when feed is empty* option to indicate that, when the feed was empty, you wanted an empty table to be returned instead of the entire table.
+
+Now, this option has been replaced by a triple-state option. You can now indicate that, when the feed is empty, you want
+
+- to have an empty table returned,
+- to have the entire table returned, or
+- to have the table filtered on empty values.
+
 ## Other features
+
+#### Clearing an incident now clears any clearable base alarms it contains [ID_34112]
+
+<!-- MR 10.3.0 - FR 10.2.10 -->
+
+If an incident (also known as an alarm group) is cleared manually, any clearable base alarms of that incident will now also be cleared. This way, this behavior is consistent with the standard behavior for Correlation alarms.
 
 #### GQI: columnInfo object of data source columns of type 'discrete' will now contain the possible values [ID_34179]
 
@@ -87,18 +119,6 @@ It is now possible to use GQI query columns to filter a *State* component.
 
 Query columns of type "string" can now be filtered using *Equals* and *NotEquals*.
 
-#### Dashboards app / Low-code apps: 'Return no rows when feed is empty' option replaced by a triple-state option [ID_34280]
-
-<!-- MR 10.3.0 - FR 10.2.10 -->
-
-Up to now, when configuring the filter of a GQI data feed, you could enable the *Return no rows when feed is empty* option to indicate that, when the feed was empty, you wanted an empty table to be returned instead of the entire table.
-
-Now, this option has been replaced by a triple-state option. You can now indicate that, when the feed is empty, you want
-
-- to have an empty table returned,
-- to have the entire table returned, or
-- to have the table filtered on empty values.
-
 ## Changes
 
 ### Enhancements
@@ -111,14 +131,6 @@ When authenticating users using SAML, the following additional debug information
 
 - Whether Just-In-Time provisioning (JIT) is enabled.
 - Which group claims are being used.
-
-#### DataMiner Taskbar Utility: Enhanced installation of app packages [ID_33969]
-
-<!-- MR 10.1.0 [CU19]/10.2.0 [CU7] - FR 10.2.10 -->
-
-Using the DataMiner Taskbar Utility, it is now possible to install all possible types of app packages. To install an app, you can either double-click the .dmapp file or right-click the Taskbar Utility icon, click *Update* and select the app from the list.
-
-Also, the *SLAppPackageInstaller.txt* log file will now keep track of all actions performed and issues encountered during the installation of an app.
 
 #### SLLogCollector now also collects SLAnalytics configuration files [ID_34106]
 
@@ -143,19 +155,7 @@ This will prevent the following possible issues:
 - The CefSharp browser engine version used by Cube is not updated frequently and therefore not always trusted by certain SAML identity provider websites, such as Microsoft Azure. This can cause a lengthy authentication procedure, even if the browser cache is enabled.
 - The CefSharp browser engine needs to be downloaded from the DMA before a first authentication (on a new device). However, this is currently not supported for HTTPS-only setups.
 
-#### Dashboards app / Low-Code apps: Conditional coloring layout configuration now uses numeric filter instead of numeric slider [ID_34174]
-
-<!-- MR 10.3.0 - FR 10.2.10 -->
-<!-- Part of this RN is still in soft launch and consequently has not been documented yet -->
-
-In the conditional coloring layout setting for Table and Node edge components, the numeric slider control has been replaced with a numeric filter. This has the following advantages:
-
-- Full control over the boundaries. You can indicate whether the start and end should be in- or excluded.
-- Possibility to not have a start or end boundary.
-- More consistent with the free text filter.
-- Easier to define a precise filter.
-
-#### Dashboards app / Low-Code apps: Conditional coloring layout filter configuration now shows discrete column values [ID_34182]
+#### Dashboards app / Low-Code Apps: Conditional coloring layout filter configuration now shows discrete column values [ID_34182]
 
 <!-- MR 10.3.0 - FR 10.2.10 -->
 <!-- Part of this RN is still in soft launch and consequently has not been documented yet -->
