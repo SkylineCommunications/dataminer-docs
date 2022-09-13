@@ -40,7 +40,7 @@ To do so:
 | -stop | Stop the local DataMiner Agent. |
 | -start | Start the local DataMiner Agent. |
 | -restart | Restart the local DataMiner Agent. |
-| -upgrade | Upgrade the DataMiner Agent(s).<br> Arguments:<br> -  File path to an *dmupgrade* file (mandatory)<br> -  File path to an *UpgradeInfo.xml* file (optional).<br> If you do not specify an *UpgradeInfo.xml* file, only the local DataMiner Agent will be upgraded, with the default upgrade options.<br> For more information about *UpgradeInfo.xml* files, see [UpgradeInfo.xml](#upgradeinfoxml). |
+| -upgrade | Upgrade the DataMiner Agent(s).<br> Arguments:<br> -  File path to an *.dmupgrade* file or (from DataMiner 10.2.10/10.3.0 onwards) a *.dmapp* file. This argument is mandatory.<br> -  File path to an *UpgradeInfo.xml* file. This argument is optional and only used for .dmupgrade files. If you do not specify an *UpgradeInfo.xml* file, the .dmupgrade will only be installed on the local DataMiner Agent, with the default upgrade options.<br> For more information about *UpgradeInfo.xml* files, see [UpgradeInfo.xml](#upgradeinfoxml). |
 | -help | List information about the above-mentioned commands.<br> -  If you want information about all commands, pass the *-help* command without any argument.<br> -  If you want information about one specific command, pass the *-help* command followed by that specific command (e.g. *-help -help*). |
 
 ## UpgradeInfo.xml
