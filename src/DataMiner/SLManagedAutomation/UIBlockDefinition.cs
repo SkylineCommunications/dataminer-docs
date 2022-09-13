@@ -697,7 +697,7 @@ namespace Skyline.DataMiner.Automation
 		/// Gets or sets the title.
 		/// </summary>
 		/// <value>The title.</value>
-		/// <remarks><para>This property has been obsoleted. Use the <see cref="UIBuilder.Title"/> property instead.</para></remarks>
+		/// <remarks><para>This property is obsolete. Use the <see cref="UIBuilder.Title"/> property instead.</para></remarks>
 		[Obsolete("Use UIBuilder.Title instead.")]
 		public string Title { get; set; }
 
