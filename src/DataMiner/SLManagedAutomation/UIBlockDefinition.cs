@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+
 using Skyline.DataMiner.Net.AutomationUI.Objects;
 
 namespace Skyline.DataMiner.Automation
@@ -695,6 +697,8 @@ namespace Skyline.DataMiner.Automation
 		/// Gets or sets the title.
 		/// </summary>
 		/// <value>The title.</value>
+		/// <remarks><para>This property is obsolete. Use the <see cref="UIBuilder.Title"/> property instead.</para></remarks>
+		[Obsolete("Use UIBuilder.Title instead.")]
 		public string Title { get; set; }
 
 		/// <summary>

@@ -26,6 +26,9 @@ The *CI Types* subtab of the *Admin* tab consists of several pages with overview
   > - The wizard also allows you to select "None", so that you can easily clear the selection of all listed protocols in order to make a custom selection afterwards.
   > - By default, CI Types generated based on a protocol with an SNMPv3 connection have SNMPv2 port settings configured on that connection, as there is no way to automatically find out the security levels, algorithms and passwords.
 
+  > [!TIP]
+  > You can for instance use the *Generate* option to have existing DataMiner elements managed by IDP. You will then need to [correctly configure the CI Type](xref:CI_Types#using-the-ci-type-management-wizard), [enable the necessary activities](xref:Admin_activities) for the CI Type, and [add the element to the managed elements](xref:IDP_Inventory_tab#unmanaged).
+
 On each of the pages, different settings are available. These are explained in the sections below.
 
 ## Overview page

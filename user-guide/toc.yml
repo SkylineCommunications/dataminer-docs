@@ -1113,6 +1113,8 @@
                   topicUid: Configuring_notifications_directly_from_the_Alarm_Console_or_Surveyor
                 - name: Configuring alarm storm prevention for notifications
                   topicUid: Configuring_alarm_storm_prevention_for_notifications
+                - name: Customizing the layout of notification messages
+                  topicUid: Customizing_the_layout_of_notification_messages
             - name: Managing user groups
               topicUid: Managing_user_groups
               items:
@@ -1164,8 +1166,6 @@
                   topicUid: HTTP_Headers
                 - name: Disabling legacy protocols
                   topicUid: Disabling_legacy_protocols 
-            - name: Customizing the layout of notification messages
-              topicUid: Customizing_the_layout_of_notification_messages
             - name: Configuring LDAP settings
               topicUid: Configuring_LDAP_settings
             - name: Configuring Atlassian Crowd settings
@@ -2250,8 +2250,8 @@
                   topicUid: I-DOCSIS_parameters_us_service_group
                 - name: Service Group (Fiber Node)
                   topicUid: I-DOCSIS_parameters_service_group_fiber_node
-#                - name: Node Segment
-#                  topicUid: I-DOCSIS_parameters_node_segment
+                - name: Node Segment
+                  topicUid: I-DOCSIS_parameters_node_segment
                 - name: CM DS QAM CH
                   topicUid: I-DOCSIS_parameters_cm_ds_qam_ch
                 - name: DS QAM CH
@@ -2334,6 +2334,19 @@
               topicUid: DataMiner_IDP_components
             - name: Overview of the IDP app UI
               topicUid: Overview_of_the_IDP_app_UI
+              items:
+                - name: Inventory
+                  topicUID: IDP_Inventory_tab
+                - name: Connectivity
+                  topicUID: IDP_Connectivity_tab
+                - name: Configuration
+                  topicUID: IDP_Configuration_tab
+                - name: Software
+                  topicUID: IDP_Software_tab
+                - name: Facilities
+                  topicUID: IDP_Facilities_tab
+                - name: Processes
+                  topicUID: IDP_Processes_tab
         - name: Advanced configuration
           items:
             - name: Advanced configuration for Administrators

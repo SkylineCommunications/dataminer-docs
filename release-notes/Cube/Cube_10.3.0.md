@@ -12,7 +12,7 @@ uid: Cube_Main_Release_10.3.0
 
 ## Highlights
 
-#### Trending: New'Custom' button allows you to specify a custom X-axis range \[ID_31705\]
+#### Trending: New'Custom' button allows you to specify a custom X-axis range [ID_31705]
 
 <!-- MR 10.3.0 - FR 10.2.1 -->
 
@@ -20,7 +20,7 @@ At the top of a trend graph, a new “Custom” button has been added next to th
 
 When you click this new button, you will be able to specify a custom X-axis range.
 
-#### Visual Overview: Text wrapping and trimming \[ID_32440\]
+#### Visual Overview: Text wrapping and trimming [ID_32440]
 
 <!-- MR 10.3.0 - FR 10.2.3 -->
 
@@ -28,9 +28,9 @@ In shapes linked to an object, it is now possible to change the text wrapping an
 
 To do so, add a shape data field of type TextStyle, and set its value to “TextWrapping=...” and/or “TextTrimming=...” (separated by a pipe character).
 
-| Shape data field | Value                                                                                       |
-|------------------|---------------------------------------------------------------------------------------------|
-| TextStyle        | TextWrapping=NoWrap/Wrap/WrapWithOverflow\|TextTrimming=CharacterEllipsis/WordEllipsis/None |
+| Shape data field | Value |
+|--|--|
+| TextStyle | TextWrapping=NoWrap/Wrap/WrapWithOverflow\|TextTrimming=CharacterEllipsis/WordEllipsis/None |
 
 ##### TextWrapping options
 
@@ -51,7 +51,7 @@ To do so, add a shape data field of type TextStyle, and set its value to “Text
 > [!NOTE]
 > Setting TextTrimming to either “CharacterEllipsis” or “WordEllipsis” will have no effect when TextWrapping is set to its default value (i.e. “WrapWithOverflow”).
 
-#### Visual Overview - Edit in Visio: New options 'Add theming' and 'Add pretty hover' \[ID_32660\]
+#### Visual Overview - Edit in Visio: New options 'Add theming' and 'Add pretty hover' [ID_32660]
 
 <!-- MR 10.3.0 - FR 10.2.5 -->
 
@@ -68,7 +68,7 @@ When, in DataMiner Cube, you right-click a visual overview and select “Edit in
 > [!NOTE]
 > If no page-level “Options” data field exists, one will be created.
 
-#### Services app: Service definition type \[ID_32667\]
+#### Services app: Service definition type [ID_32667]
 
 <!-- MR 10.3.0 - FR 10.2.4 -->
 
@@ -101,10 +101,10 @@ To do so, add the following shape data fields to the shape:
 
 - a shape data field of type **SetVarOptions**, of which the value is set to “Control=Duration”, followed by the necessary options. For a list of possible options, see below.
 
-| Shape data field | Value                                       |
-|------------------|---------------------------------------------|
-| SetVar           | \<name of session variable>                 |
-| SetVarOptions    | Control=Duration\|\<option>\|\<option>\|... |
+| Shape data field | Value |
+|--|--|
+| SetVar | \<name of session variable> |
+| SetVarOptions | Control=Duration\|\<option>\|\<option>\|... |
 
 ##### Options
 
@@ -129,15 +129,15 @@ If you set the initial value to “Infinity”, the value in the session variabl
 
 When specifying the minimum duration, the maximum duration and the InitVar value, you can use the following units:
 
-| Unit    | Description                                                                               | Example |
-|---------|-------------------------------------------------------------------------------------------|---------|
-| No unit | If no unit is specified, then the number in question will be considered a number of days. | 1       |
-| s       | seconds                                                                                   | 1s      |
-| m       | minutes                                                                                   | 1m      |
-| h       | hours                                                                                     | 1h      |
-| d       | days                                                                                      | 1d      |
-| mo      | months (1 month = 30 days)                                                                | 1mo     |
-| y       | years (1 year = 365 days)                                                                 | 1y      |
+| Unit | Description | Example |
+|--|--|--|
+| No unit | If no unit is specified, then the number in question will be considered a number of days. | 1 |
+| s | seconds | 1s |
+| m | minutes | 1m |
+| h | hours | 1h |
+| d | days | 1d |
+| mo | months (1 month = 30 days) | 1mo |
+| y | years (1 year = 365 days) | 1y |
 
 #### Alarm Console - Automatic incident tracking: Manually add/remove alarms to/from alarm groups, move alarms from one alarm group to another, and rename alarm groups \[ID_32729\] \[ID_32819\] \[ID_32875\] \[ID_32914\] \[ID_32940\] \[ID_32957\] \[ID_33027\] \[ID_33036\] \[ID_33130\] \[ID_33212\]
 
@@ -231,15 +231,15 @@ Examples:
 
 - This filter will only show service definitions of type "Skyline Process Automation" or "Custom Process Automation":
 
-    | Shape data field | Value                                                                                                            |
-    |--------------------|------------------------------------------------------------------------------------------------------------------|
-    | Filter             | ServiceDefinition.ServiceDefinitionType\[Int32\] == 1 \|\| ServiceDefinition.ServiceDefinitionType\[Int32\] == 2 |
+  | Shape data field | Value |
+  |--|--|
+  | Filter | ServiceDefinition.ServiceDefinitionType\[Int32\] == 1 \|\| ServiceDefinition.ServiceDefinitionType\[Int32\] == 2 |
 
 - This filter will only show service definitions with the property *Virtual Platform* set to VPA:
 
-    | Shape data field | Value                                                    |
-    |--------------------|----------------------------------------------------------|
-    | Filter             | ServiceDefinition.Properties."Virtual Platform" == "VPA" |
+  | Shape data field | Value |
+  |--|--|
+  | Filter | ServiceDefinition.Properties."Virtual Platform" == "VPA" |
 
 ##### New HideAddButton and HideDeleteButton component options
 
@@ -249,7 +249,7 @@ The following options can now also be specified in the *ComponentOptions* shape 
 
 - **HideDeleteButton=**: If this option is set to "true", no options to delete a service definition will be displayed.
 
-#### Desktop app - Start window: New 'HTTP or HTTPS' setting \[ID_33289\]
+#### Desktop app - Start window: New 'HTTP or HTTPS' setting [ID_33289]
 
 <!-- MR 10.3.0 - FR 10.2.6 -->
 
@@ -260,7 +260,7 @@ When you add a DataMiner Agent to the start window, in the Advanced settings, yo
 > [!NOTE]
 > If a DataMiner Agent is configured to use only HTTPS, Cube will not fall back to HTTP, even when you have chosen the “HTTP or HTTPS” option.
 
-#### Visual Overview: Adding a 'Refresh' and/or a 'Sort' button to a table control \[ID_33346\]
+#### Visual Overview: Adding a 'Refresh' and/or a 'Sort' button to a table control [ID_33346]
 
 <!-- MR 10.3.0 - FR 10.2.6 -->
 
@@ -278,28 +278,28 @@ Example of how to add both a *Refresh* button and a *Sort* button:
 
 1. Add the following shape data field to the shape that has to contain the table:
 
-   | Shape data field      | Value |
-   |-------------------------|-------|
+   | Shape data field | Value |
+   |--|--|
    | ParameterControlOptions | Table |
 
 1. Add the following shape data field to the shape that has to contain the Refresh button:
 
-   | Shape data field      | Value   |
-   |-------------------------|---------|
+   | Shape data field | Value |
+   |--|--|
    | ParameterControlOptions | Refresh |
 
 1. Add the following shape data field to the shape that has to contain the Sort button:
 
-   | Shape data field      | Value |
-   |-------------------------|-------|
+   | Shape data field | Value |
+   |--|--|
    | ParameterControlOptions | Sort  |
 
 1. Add the following shape data fields to the group:
 
-   | Shape data field | Value                      |
-   |--------------------|----------------------------|
-   | Element            | Element ID or element name |
-   | ParameterControl   | ID of the table parameter  |
+   | Shape data field | Value |
+   |--|--|
+   | Element | Element ID or element name |
+   | ParameterControl | ID of the table parameter  |
 
 > [!NOTE]
 > The *Refresh* button and the *Sort* button will only be displayed when necessary.
@@ -437,7 +437,7 @@ When you select a booking, the following variables are filled in:
 
 However, up to now, when the current booking selection was cleared, those variables would incorrectly not get cleared.
 
-#### Visual Overview: Specifying a remote debugging port for Chromium and Edge browser engines \[ID_31792\]
+#### Visual Overview: Specifying a remote debugging port for Chromium and Edge browser engines [ID_31792]
 
 <!-- MR 10.3.0 - FR 10.2.4 -->
 
@@ -450,7 +450,7 @@ When starting DataMiner Cube, from now on, you can pass a remote debugging port 
 
 Note that the port number must be between 1024 and 65535.
 
-#### Alarm templates - Information events: Support for wildcard values \[ID_31872\] \[ID_32106\]
+#### Alarm templates - Information events: Support for wildcard values [ID_31872] [ID_32106]
 
 <!-- MR 10.3.0 - FR 10.2.2 -->
 
@@ -458,7 +458,7 @@ In the alarm template editor, you can indicate that an information event should 
 
 From now on, for parameters of type string or double, it is also possible to enter values that contain a wildcard (\* or ?).
 
-#### Visual Overview: Resource placeholder can now be used to check whether a resource is in use \[ID_32203\]
+#### Visual Overview: Resource placeholder can now be used to check whether a resource is in use [ID_32203]
 
 <!-- MR 10.3.0 - FR 10.2.3 -->
 
@@ -473,7 +473,7 @@ The \[Resource:...\] placeholder can be used to retrieve a property of a resourc
 
 See also: [New 'IN USE' info tag to be used in element shapes linked to resources \[ID_32393\]](#new-in-use-info-tag-to-be-used-in-element-shapes-linked-to-resources-id_32393)
 
-#### Visual Overview: Linking a shape to an alarm filter with a System Name or System Type filter context \[ID_32252\] \[ID_32548\]
+#### Visual Overview: Linking a shape to an alarm filter with a System Name or System Type filter context [ID_32252] [ID_32548]
 
 <!-- RN 32252: MR 10.3.0 - FR 10.2.3
 RN 32548: MR 10.3.0 - FR 10.2.4 -->
@@ -494,7 +494,7 @@ If you specify a filter context like the one above, the shape will be linked to 
 >
 > If you specify a filter context like the one above, the shape will be linked to the alarms of which the “System Name” is set to “X” and “System Type” is set to “Y”.
 
-#### Visual Overview: Use of dynamic units now depends on value of DynamicUnits soft-launch option \[ID_32256\]
+#### Visual Overview: Use of dynamic units now depends on value of DynamicUnits soft-launch option [ID_32256]
 
 <!-- MR 10.3.0 - FR 10.2.3 -->
 
@@ -505,7 +505,7 @@ Up to now, when configuring a parameter shape, it was possible to enable to use 
 >
 > For more information on soft-launch options, see [Soft-launch options](xref:SoftLaunchOptions).
 
-#### Data Display: Support for launching EPM objects by clicking buttons in Data Display table cells \[ID_32368\] \[ID_33295\] \[ID_33857\]
+#### Data Display: Support for launching EPM objects by clicking buttons in Data Display table cells [ID_32368] [ID_33295] [ID_33857]
 
 <!-- RN 32368: MR 10.3.0 - FR 10.2.3
 RN 33295: MR 10.3.0 - FR 10.2.6
@@ -570,7 +570,7 @@ If you want to replace the separator inside the name, you must specify both the 
 >   - “BelowThisView:Elements” or “btv:Elements” will open the view card page named “Elements”.
 > - When the card layout is set to “Tab layout”, it is now possible to save EPM cards in workspaces.
 
-#### New 'IN USE' info tag to be used in element shapes linked to resources \[ID_32393\]
+#### New 'IN USE' info tag to be used in element shapes linked to resources [ID_32393]
 
 <!-- MR 10.3.0 - FR 10.2.3 -->
 
@@ -582,13 +582,13 @@ Alternatively, you can also use “\[In use\]” in any dynamic part specified i
 
 See also: [Visual Overview: Resource placeholder can now be used to check whether a resource is in use \[ID_32203\]](#visual-overview-resource-placeholder-can-now-be-used-to-check-whether-a-resource-is-in-use-id_32203)
 
-#### Visual Overview: Shapes that cannot be clicked and had their text trimmed will show a tooltip with the full shape text \[ID_32463\]
+#### Visual Overview: Shapes that cannot be clicked and had their text trimmed will show a tooltip with the full shape text [ID_32463]
 
 <!-- MR 10.3.0 - FR 10.2.4 -->
 
 Shapes that cannot be clicked and had their text trimmed by means of a “TextTrimming” option in a shape data field of type TextStyle will now automatically show a tooltip with the full, untrimmed shape text.
 
-#### New setting to enable the cache of the Chromium browser engine \[ID_32534\]
+#### New setting to enable the cache of the Chromium browser engine [ID_32534]
 
 <!-- MR 10.3.0 - FR 10.2.4 -->
 
@@ -602,7 +602,7 @@ Enabling this cache has the following advantages:
 > [!CAUTION]
 > This feature involves a potential security risk. If multiple DataMiner users share the same Windows account on a particular computer, they will also share the same browser cache and, as a consequence, the same authentication on third-party websites.
 
-#### Trending: Refresh rate of trend graphs can now be configured \[ID_32715\]
+#### Trending: Refresh rate of trend graphs can now be configured [ID_32715]
 
 <!-- MR 10.3.0 - FR 10.2.4 -->
 
@@ -615,7 +615,7 @@ Default: 2 minutes
 > - Changing this refresh rate can have a minor effect on overall performance, especially when opening trend graphs with more than 10 parameters.
 > - If you change the *Update interval* setting, then open trend graphs need to be closed and re-opened if you want them to use the new interval.
 
-#### Visual Overview: Passing Interactive Automation script output to session variables \[ID_32874\]
+#### Visual Overview: Passing Interactive Automation script output to session variables [ID_32874]
 
 <!-- MR 10.3.0 - FR 10.2.6 -->
 
@@ -624,7 +624,7 @@ Similar to regular Automation scripts, interactive Automation scripts are now al
 > [!NOTE]
 > When configuring the Execute shape, it is recommended to specify both the NoConfirmation option and the CloseWhenFinished option in the value of the Execute data field.
 
-#### Visual Overview - Resource Manager component: Enhancements with regard to selecting bookings in the timeline \[ID_32938\]
+#### Visual Overview - Resource Manager component: Enhancements with regard to selecting bookings in the timeline [ID_32938]
 
 <!-- MR 10.3.0 - FR 10.2.6 -->
 
@@ -635,13 +635,13 @@ A number of enhancements have been made with regard to selecting bookings in the
 - The reservation variable and the resource variable will always contain the booking and the resource selected in the timeline.
 - When you remove a resource band, the corresponding resource variable will be cleared.
 
-#### DataMiner Cube - Alarm Console: Users can now manually create incidents even when 'Automatic incident tracking' is disabled in System Center \[ID_32990\] \[ID_33354\]
+#### DataMiner Cube - Alarm Console: Users can now manually create incidents even when 'Automatic incident tracking' is disabled in System Center [ID_32990] [ID_33354]
 
 <!-- MR 10.3.0 - FR 10.2.7 -->
 
 From now on, users will be able to manually create incidents even when “Automatic incident tracking” is disabled in System Center.
 
-#### Alarm Console: Manually creating incident alarms even when 'Automatic incident tracking' is disabled \[ID_33000\]
+#### Alarm Console: Manually creating incident alarms even when 'Automatic incident tracking' is disabled [ID_33000]
 
 <!-- MR 10.3.0 - FR 10.2.6 -->
 
@@ -659,7 +659,7 @@ These manually created groups will always be visible in active alarm tabs, even 
 
 See also [Alarm Console - Automatic incident tracking: Manually add/remove alarms to/from alarm groups, move alarms from one alarm group to another, and rename alarm groups \[ID_32729\] \[ID_32819\] \[ID_32875\] \[ID_32914\] \[ID_32940\] \[ID_32957\] \[ID_33027\] \[ID_33036\] \[ID_33130\] \[ID_33212\]](#alarm-console---automatic-incident-tracking-manually-addremove-alarms-tofrom-alarm-groups-move-alarms-from-one-alarm-group-to-another-and-rename-alarm-groups-id_32729-id_32819-id_32875-id_32914-id_32940-id_32957-id_33027-id_33036-id_33130-id_33212)
 
-#### Visual Overview: Resource usage now updated in real time \[ID_33001\] \[ID_33156\] \[ID_33497\]
+#### Visual Overview: Resource usage now updated in real time [ID_33001] [ID_33156] [ID_33497]
 
 <!-- MR 10.3.0 - FR 10.2.6 -->
 
@@ -667,7 +667,7 @@ From now on, resource usage will be updated in real time. This means that “\[R
 
 Also, from now on, “\[Resource:\<GUID>,InUse\]” placeholders and Info data fields of type “IN USE” can be used in any element shape, provided it has “UseResource=True” in a shape data field of type Options.
 
-#### Alarm Console: Additional actions to be performed on incidents \[ID_33056\]
+#### Alarm Console: Additional actions to be performed on incidents [ID_33056]
 
 <!-- MR 10.3.0 - FR 10.2.6 -->
 
@@ -680,7 +680,7 @@ From now on, when you right-click an incident (alarm group), you will be able to
 
 If you right-click a manually created incident, you will also be able to select *Clear alarm*. When you clear a manually created incident, the alarm group will be cleared and all the base alarms will again be added to the Alarm Console.
 
-#### Alarm templates - Anomaly detection: Configuring alarms for flatline changes \[ID_33123\] \[ID_33139\] \[ID_33171\]
+#### Alarm templates - Anomaly detection: Configuring alarms for flatline changes [ID_33123] [ID_33139] [ID_33171]
 
 <!-- MR 10.3.0 - FR 10.2.6 -->
 
@@ -690,7 +690,7 @@ From DataMiner 10.0.3 onwards, you can configure an alarm template so that alarm
 1. Select the option *Advanced configuration of anomaly detection*. Four extra columns will be displayed in the template editor.
 1. In the *Flatline monitor* column, click the toggle button to enable or disable alarms for flatline changes.
 
-#### Alarm Console: Second-generation hyperlinks of type 'openview', 'openservice', 'openelement' and 'openparameter' now support '\[PROPERTY:\]' keywords \[ID_33166\]
+#### Alarm Console: Second-generation hyperlinks of type 'openview', 'openservice', 'openelement' and 'openparameter' now support '\[PROPERTY:\]' keywords [ID_33166]
 
 <!-- MR 10.3.0 - FR 10.2.7 -->
 
@@ -707,7 +707,7 @@ For example, a hyperlink of type “openelement” could contain the following c
 > - If you want to use a view property, a service property or an element property in a hyperlink, then you must enable its “Make this property available for alarm filtering” setting in DataMiner Cube.
 > - If you want to use a view property on an alarm of an element that has been added to multiple views, the property that will be used in the hyperlink will be the property of the view with the lowest ID that contains the element.
 
-#### Alarm Console: Assigning a ticket to an incident (alarm group) \[ID_33199\]
+#### Alarm Console: Assigning a ticket to an incident (alarm group) [ID_33199]
 
 <!-- MR 10.3.0 - FR 10.2.6 -->
 
@@ -717,7 +717,7 @@ In the Alarm Console, it is now possible to assign tickets to incidents (alarm g
 
 - To view a ticket assigned to an incident, right-click the incident (alarm group), select *Ticket*, and then select the ticket you want to view.
 
-#### DataMiner Cube: Start window enhancements \[ID_33219\]
+#### DataMiner Cube: Start window enhancements [ID_33219]
 
 <!-- MR 10.3.0 - FR 10.2.6 -->
 
@@ -739,13 +739,13 @@ A number of enhancements have been made to the start window of the DataMiner Cub
 
 - The message that is displayed after a start window update will no longer show any technical information.
 
-#### Anomaly alarms will now be triggered for all behavioral changes of monitored anomaly type \[ID_33281\]
+#### Anomaly alarms will now be triggered for all behavioral changes of monitored anomaly type [ID_33281]
 
 <!-- MR 10.3.0 - FR 10.2.6 -->
 
 When you enable alarm monitoring for a specific type of anomaly in an alarm template, it is now assumed that you wish to be alerted to all behavioral changes of that type. Previously, an alarm was only triggered in case the behavioral change was sufficiently significant with respect to other behavioral changes in the recent history of the parameter. Now behavioral changes of a specific type on a trended parameter will always be considered to be behavioral anomalies if anomaly monitoring is enabled on this type and parameter, even if the behavioral change point is not significantly different from other behavioral changes in the recent history of the trended parameter.
 
-#### Data Display: Context menu of URL parameters now contains copy commands \[ID_33321\]
+#### Data Display: Context menu of URL parameters now contains copy commands [ID_33321]
 
 <!-- MR 10.3.0 - FR 10.2.6 -->
 
@@ -758,13 +758,13 @@ In Data Display, the context menu of a URL parameter will now contain the follow
   > [!NOTE]
   > This command will only be available when there is a write parameter.
 
-#### Alarm Console: A comment will now be added to an manually created incident when created or updated \[ID_33387\]
+#### Alarm Console: A comment will now be added to an manually created incident when created or updated [ID_33387]
 
 <!-- MR 10.3.0 - FR 10.2.7 -->
 
 When users manually create an incident, change the display value of a manually created incident or add or remove base alarms to or from a manually created incident, from now on, a comment will be added to the incident (Created, Base alarm added, Base alarm removed, Value changed by \<user name> @ \<time>).
 
-#### Visual Overview - Resource Manager component: Passing elements, services or views using the YAxisResources variable \[ID_33402\]
+#### Visual Overview - Resource Manager component: Passing elements, services or views using the YAxisResources variable [ID_33402]
 
 <!-- MR 10.3.0 - FR 10.2.8 -->
 
@@ -816,13 +816,13 @@ To also show resources for elements in child views, in the ComponentOptions shap
 
 The corresponding resource bands are not updated automatically in case there is a change to the configuration of the elements.
 
-#### Failover: Current Failover DMA status will now automatically be refreshed every minute \[ID_33426\]
+#### Failover: Current Failover DMA status will now automatically be refreshed every minute [ID_33426]
 
 <!-- MR 10.3.0 - FR 10.2.8 -->
 
 In the *Failover Config* window as well as the *Status* dialog box, the current Failover DMA status will now automatically be refreshed every minute.
 
-#### Visual Overview - Service Manager component: Filtering on FunctionDefinitionType \[ID_33466\]
+#### Visual Overview - Service Manager component: Filtering on FunctionDefinitionType [ID_33466]
 
 <!-- MR 10.3.0 - FR 10.2.7 -->
 
@@ -844,7 +844,7 @@ To do so, add a FunctionTypes option to the ComponentOptions shape data field.
 > - The filter will be cleared when no FunctionTypes option is specified or when the FunctionTypes option is set to an empty list of values.
 > - Parent functions that do not match the filter but have child functions that match the filter will be displayed in the function tree to allow you to navigate to one of the child functions.
 
-#### Visual Overview - Resource Manager component: Selecting multiple resource bands in the timeline \[ID_33536\]
+#### Visual Overview - Resource Manager component: Selecting multiple resource bands in the timeline [ID_33536]
 
 <!-- MR 10.3.0 - FR 10.2.8 -->
 
@@ -854,7 +854,7 @@ To select more than one resource band, click one, and then click another while h
 
 When you select more than one resource band, the SelectedResource session variable will contain the GUIDs of all selected resources, separated by commas.
 
-#### Visual Overview - Resource Manager component: Enhanced way of selecting a time range \[ID_33580\]
+#### Visual Overview - Resource Manager component: Enhanced way of selecting a time range [ID_33580]
 
 <!-- MR 10.3.0 - FR 10.2.8 -->
 
@@ -868,7 +868,7 @@ This change in behavior will now allow you to trigger a script by clicking an ac
 
 The SelectedTimeRange variable will now be cleared when the time selection is cleared (i.e. when it is no longer visible/available). Up to now, this variable would only be cleared when the selection was changed.
 
-#### System Center - Agents: BPA Details window now has a Copy button that copies the list of errors to the Windows clipboard \[ID_33638\]
+#### System Center - Agents: BPA Details window now has a Copy button that copies the list of errors to the Windows clipboard [ID_33638]
 
 <!-- MR 10.3.0 - FR 10.2.8 -->
 
@@ -876,7 +876,7 @@ When, in the *BPA* tab of the *Agents* section, you see a BPA test that returned
 
 At the bottom of this *Details* window, you can now find a *Copy* button that allows you to copy the list of errors to the Windows clipboard.
 
-#### Visual Overview: \[this reservationID\] placeholder \[ID_33669\]
+#### Visual Overview: \[this reservationID\] placeholder [ID_33669]
 
 <!-- MR 10.3.0 - FR 10.2.8 -->
 
@@ -888,7 +888,7 @@ See the following examples:
 
 `[reservation:[this reservationID],Property=Monitoring]`
 
-#### Alarm Console - Incident tracking: Some types of alarms can now be manually added to incidents even when they do not contain any focus data \[ID_33771\] \[ID_33803\]
+#### Alarm Console - Incident tracking: Some types of alarms can now be manually added to incidents even when they do not contain any focus data [ID_33771] [ID_33803]
 
 <!-- MR 10.3.0 - FR 10.2.9 -->
 
@@ -900,13 +900,13 @@ Up to now, alarms that did not contain any focus information were not allowed to
 - suggestion events
 - other incidents
 
-#### Trending: Prediction type selection has now moved to the context menu \[ID_33861\]
+#### Trending: Prediction type selection has now moved to the context menu [ID_33861]
 
 <!-- MR 10.3.0 - FR 10.2.9 -->
 
 In a trend graph, up to now, a drop-down list in the top-right corner allowed you to select one of the available trend prediction types or “Auto”. This drop-down list has now been removed. Instead, you can now right-click the graph and select one of the available trend prediction types or “Auto” from the context menu.
 
-#### Browser callbacks can now open EPM objects via SystemName or SystemType \[ID_33963\]
+#### Browser callbacks can now open EPM objects via SystemName or SystemType [ID_33963]
 
 <!-- MR 10.3.0 - FR 10.2.9 -->
 
@@ -969,31 +969,31 @@ Supported operators:
 
 ### Enhancements
 
-#### Desktop app: Enhanced host detection \[ID_31829\]
+#### Desktop app: Enhanced host detection [ID_31829]
 
 <!-- MR 10.3.0 - FR 10.2.2 -->
 
 In the DataMiner Cube desktop app, a number of enhancements have been made with regard to host detection.
 
-#### Desktop app start window now has a look and feel that is identical to that of the other Cube apps \[ID_32161\]
+#### Desktop app start window now has a look and feel that is identical to that of the other Cube apps [ID_32161]
 
 <!-- MR 10.3.0 - FR 10.2.3 -->
 
 The start window of the DataMiner Cube desktop app has now been adapted so that its overall look and feel is identical to that of the other Cube apps.
 
-#### Desktop app - Start window: Performance enhancements \[ID_33384\]
+#### Desktop app - Start window: Performance enhancements [ID_33384]
 
 <!-- MR 10.3.0 - FR 10.2.7 -->
 
 Because of a number of enhancements, overall performance has increased when opening the start window of the DataMiner Cube desktop app from the system tray icon.
 
-#### Alarm Console: Pencil icon now identical to that used in Data Display tables \[ID_33442\]
+#### Alarm Console: Pencil icon now identical to that used in Data Display tables [ID_33442]
 
 <!-- MR 10.3.0 - FR 10.2.7 -->
 
 The pencil icon used in the Alarm Console is now identical to that used in Data Display tables.
 
-#### Alarm Console: 'Add to incident' menu option no longer available when right-clicking alarms that cannot be added to an incident \[ID_33591\]
+#### Alarm Console: 'Add to incident' menu option no longer available when right-clicking alarms that cannot be added to an incident [ID_33591]
 
 <!-- MR 10.3.0 - FR 10.2.8 -->
 
@@ -1043,19 +1043,19 @@ On systems that store real-time trend data for more than a week, from now on, Da
 
 ### Fixes
 
-#### Visual Overview: Problem when navigating inside EPM cards \[ID_32288\]
+#### Visual Overview: Problem when navigating inside EPM cards [ID_32288]
 
 <!-- MR 10.3.0 - FR 10.2.3 -->
 
 When working inside an EPM card, in some cases, it would no longer be possible to navigate to a data page or a subpage.
 
-#### Visual Overview: Card buttons in an EPM card would no longer work when the Topology sidebar was selected \[ID_32372\]
+#### Visual Overview: Card buttons in an EPM card would no longer work when the Topology sidebar was selected [ID_32372]
 
 <!-- MR 10.3.0 - FR 10.2.3 -->
 
 When an EPM card was opened from a visual overview, and the Topology tab was selected in the sidebar, a number of buttons inside that EPM card would no longer work.
 
-#### Properties not shown in the Surveyor \[ID_32429\]
+#### Properties not shown in the Surveyor [ID_32429]
 
 <!-- MR 10.3.0 - FR 10.2.3 -->
 
@@ -1065,7 +1065,7 @@ From now on, when you create a new property and enable its “Display this prope
 
 When users enable the option for an existing property, a tooltip will now inform them that the value will only appear after logging off and logging in again.
 
-#### Alarm templates: Anomaly detection alarms would incorrectly disappear after a DataMiner restart \[ID_33278\]
+#### Alarm templates: Anomaly detection alarms would incorrectly disappear after a DataMiner restart [ID_33278]
 
 <!-- MR 10.3.0 - FR 10.2.6 -->
 
@@ -1073,7 +1073,7 @@ From DataMiner 10.0.3 onwards, you can configure an alarm template so that alarm
 
 Up to now, these anomaly detection alarms would incorrectly disappear from the Alarm Console after a DataMiner restart.
 
-#### Desktop app: Problem when creating a new group in the start window \[ID_33300\]
+#### Desktop app: Problem when creating a new group in the start window [ID_33300]
 
 <!-- MR 10.3.0 - FR 10.2.6 -->
 
@@ -1081,7 +1081,7 @@ In some rare cases, an error could occur when you created a new group in the sta
 
 Also, the name of a group could get lost when you deleted the first agent/cluster in that group.
 
-#### Visual Overview: Session variables of Resource Manager component would incorrectly be set to NULL when cleared \[ID_33527\]
+#### Visual Overview: Session variables of Resource Manager component would incorrectly be set to NULL when cleared [ID_33527]
 
 <!-- MR 10.3.0 - FR 10.2.7 -->
 
@@ -1096,31 +1096,31 @@ When the following session variables of an embedded Resource Manager component w
 - SelectedSession
 - TimerangeOfSelectedReservation
 
-#### Resources app: Empty Occupancy tab \[ID_33540\]
+#### Resources app: Empty Occupancy tab [ID_33540]
 
 <!-- MR 10.3.0 - FR 10.2.8 -->
 
 The first time you clicked the *Occupancy* tab after opening the *Resources* app, in some rare cases, that tab would incorrectly be empty.
 
-#### Profiles app: Selected list items not visible on the UI would incorrectly not be validated after being edited \[ID_33753\]
+#### Profiles app: Selected list items not visible on the UI would incorrectly not be validated after being edited [ID_33753]
 
 <!-- MR 10.3.0 - FR 10.2.9 -->
 
 When, in the Profiles app, you edited a profile definition, a profile instance, a profile parameter or a service definition, the change would incorrectly not be validated if the item in question was not visible in the list.
 
-#### Profiles app: No validation errors were displayed when no discrete values had been added yet for a profile parameter of type discrete \[ID_33756\]
+#### Profiles app: No validation errors were displayed when no discrete values had been added yet for a profile parameter of type discrete [ID_33756]
 
 <!-- MR 10.3.0 - FR 10.2.9 -->
 
 When an error occurred while configuring a profile parameter of type “discrete”, up to now, that error would not be displayed on the UI when no discrete values had been added yet.
 
-#### Resources app: Warning messages were incorrectly shown in the footer when resource manager configuration requests returned error trace data \[ID_33780\]
+#### Resources app: Warning messages were incorrectly shown in the footer when resource manager configuration requests returned error trace data [ID_33780]
 
 <!-- MR 10.3.0 - FR 10.2.9 -->
 
 When you open the *Resources* app, a warning will be shown in the footer when error trace data was found when fetching resource manager data from the server. Up to now, such a warning would incorrectly also be shown when resource manager configuration requests returned error trace data.
 
-#### Resources app: Updating a session variable in a Resource Manager component would incorrectly cause that same session variable to be updated in the Occupancy tab of the Resources app \[ID_33800\]
+#### Resources app: Updating a session variable in a Resource Manager component would incorrectly cause that same session variable to be updated in the Occupancy tab of the Resources app [ID_33800]
 
 <!-- MR 10.3.0 - FR 10.2.9 -->
 

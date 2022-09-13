@@ -14,7 +14,9 @@ uid: General_Feature_Release_10.2.11
 
 ### Enhancements
 
-*No enhancements have been added to this release yet*
+#### Performance improvement to update service state more quickly [ID_34165]
+
+Because of a performance improvement, the calculated service alarm state will now be updated more quickly in the client.
 
 ### Fixes
 

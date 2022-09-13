@@ -13,3 +13,5 @@ In this section:
 - [Configuring notifications directly from the Alarm Console or Surveyor](xref:Configuring_notifications_directly_from_the_Alarm_Console_or_Surveyor)
 
 - [Configuring alarm storm prevention for notifications](xref:Configuring_alarm_storm_prevention_for_notifications)
+
+- [Customizing the layout of notification messages](xref:Customizing_the_layout_of_notification_messages)
