@@ -15,7 +15,7 @@ To set up your own HTTPS web server, you must first install an SSL/TLS certifica
 1. In the *Connections* pane on the left, right-click the website, and select *Edit Bindings*.
 1. In the *Add Site Binding* window, add an HTTPS binding with the selected certificate.
 1. Allow *inbound* TCP port **443** through the Windows Firewall.
-1. Optionally (though **recommended**), enable *HTTP String Transport Security* (*HSTS*) in IIS to prevent SSL stripping attacks:
+1. Optionally (though **recommended**), enable *HTTP Strict Transport Security* (*HSTS*) in IIS to prevent SSL stripping attacks:
 
    1. In IIS manager, click *Sites* in the *Connections* pane on the left.
    1. Open *Default Web Site* and click *HSTS* in the *Actions* pane.
@@ -160,3 +160,17 @@ To do so:
 - **Cannot reach this page**
 
    Make sure the DNS server has a *DNS record* for the hostname of the URL. For example, *dataminer.skyline.be* will need to resolve to a reachable IP address.
+   
+- **My browser shows this error 'ERR_HTTP2_INADEQUATE_TRANSPORT_SECURITY'**
+  
+   This can have several reason, most commonly is the use of weak, outdated, TLS cipher suites. This can be fixed by disabling the weak cipher suites using a tool like [IISCrypto](https://www.nartac.com/Products/IISCrypto). 
+   
+   To disable the weak cipher suites:
+   
+   1. Download [IISCrypto](https://www.nartac.com/Products/IISCrypto)
+   1. Execute it on the DataMiner server
+   1. Navigate to the *Cipher Suites* tab
+   1. Click *Best Practices*
+   1. Now click *Apply*
+   1. Reboot the server
+ 
