@@ -18,6 +18,10 @@ uid: General_Main_Release_10.1.0_CU20
 
 Because of a number of enhancements, overall performance of the SLSNMPManager process has improved.
 
+#### Performance improvement to update service state more quickly [ID_34165]
+
+Because of a performance improvement, the calculated service alarm state will now be updated more quickly in the client.
+
 ### Fixes
 
 *No fixes have been added to this release yet*
