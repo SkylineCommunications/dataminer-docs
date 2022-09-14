@@ -19,4 +19,4 @@ The following table provides an overview of the possible column option types:
 |[viewTableKey](xref:Protocol.Params.Param.ArrayOptions.ColumnOption-type#viewtablekey)|Used for direct view columns containing primary keys, so that a prefix is added to them, referring to the source element that supplied the data. See viewTableKey.|
 
 > [!NOTE]
-> The usage of retrieved is preferred over custom, since this allows, among other things, to set a column at once. For more information, see <xref:Protocol.Params.Param.ArrayOptions.ColumnOptions.ColumnOption>.
+> The usage of retrieved is preferred over custom. For more information, see <xref:Protocol.Params.Param.ArrayOptions.ColumnOption-type>.
