@@ -22,4 +22,8 @@ Because of a performance improvement, the calculated service alarm state will no
 
 ### Fixes
 
-*No fixes have been added to this release yet*
+#### Problem with SLProtocol when reading incorrectly configured port settings [ID_34379]
+
+<!-- Main Release Version 10.1.0 [CU20]/10.2.0 [CU8] - Feature Release Version 10.2.11 -->
+
+In some cases, an error could occur in SLProtocol when reading incorrectly configured port settings.

@@ -26,4 +26,14 @@ When a shape was linked to an element that was not part of a service, up to now,
 
 ### Fixes
 
-*No fixes have been added to this release yet*
+#### Problem when processing a history set with a timestamp referring to a moment far in the past [ID_34378]
+
+<!-- Main Release Version 10.2.0 [CU8] - Feature Release Version TBD -->
+
+When SLElement was processing a history set, an error could occur when the timestamp of that history set referred to a moment far in the past.
+
+#### Problem with SLProtocol when reading incorrectly configured port settings [ID_34379]
+
+<!-- Main Release Version 10.1.0 [CU20]/10.2.0 [CU8] - Feature Release Version 10.2.11 -->
+
+In some cases, an error could occur in SLProtocol when reading incorrectly configured port settings.
