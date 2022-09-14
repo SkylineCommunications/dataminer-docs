@@ -6,7 +6,7 @@ uid: Known_issues
 | Issue | DataMiner version | Date added |
 |--|--|--|
 | [SNMP polling issues in case protocol contains wildcards in parameter OIDs](xref:KI_SNMP_polling_issues_with_wildcards_in_param_OIDs) |10.2.0 CU6<br>10.2.9 | September 6, 2022 |
-| [Upgrade fails because of VerifyClusterPort.dll prerequisite](xref:KI_Upgrade_fails_VerifyClusterPorts_prerequisite) | 10.2.0 CU1 up to CU5<br>10.2.4 up to 10.2.8 | September 2, 2022 |
+| [Upgrade fails because of VerifyClusterPort.dll prerequisite](xref:KI_Upgrade_fails_VerifyClusterPorts_prerequisite) | From 10.2.0 CU1 and 10.2.4 onwards | September 2, 2022 |
 | [SLAnalytics RTEs after upgrading DMS with Cassandra Cluster](xref:KI_RTE_with_SLAnalytics_when_upgrading) | 10.2.8 CU1 | August 8, 2022 |
 | [Cassandra nodes not configured if current DMA IP is assigned as virtual IP](xref:KI_Cassandra_nodes_not_configured_if_current_DMA_IP_is_assigned_as_virtual_IP) | 10.1.x | - |
 | [Migration of Ticketing data from Cassandra to Elasticsearch fails](xref:KI_Migration_of_Ticketing_data_from_Cassandra_to_Elasticsearch_fails) | 10.1.x<br>10.0.x | - |
