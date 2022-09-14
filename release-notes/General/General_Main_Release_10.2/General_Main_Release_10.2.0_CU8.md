@@ -18,6 +18,18 @@ uid: General_Main_Release_10.2.0_CU8
 
 Because of a performance improvement, the calculated service alarm state will now be updated more quickly in the client.
 
+#### DataMiner Cube - Service & Resource Management: Function resource icons are now centered in service definition diagrams [ID_34249]
+
+<!-- Main Release Version 10.2.0 [CU8] - Feature Release Version 10.2.11 -->
+
+In service definition diagrams, function resource icons are now centered.
+
+#### DataMiner Cube - Resources app: Removing resources from all pools [ID_34311]
+
+<!-- Main Release Version 10.2.0 [CU8] - Feature Release Version 10.2.11 -->
+
+When you move one or more resources from a pool to the *(uncategorized)* pool, a confirmation box will now appear to warn you that, if you click *Yes*, the resources in question will be removed from all pools.
+
 #### DataMiner Cube - Visual Overview: Service context of a linked shape will only be determined when the service context has been specified [ID_34340]
 
 <!-- Main Release Version 10.1.0 [CU20]/10.2.0 [CU8] - Feature Release Version 10.2.11 -->
@@ -37,6 +49,12 @@ Because of a number of enhancements to the buffering mechanism, overall performa
 Because of a number of enhancements, overall error handling has improved.
 
 ### Fixes
+
+#### DataMiner Cube - Alarm Console: Negative counters in the footer bar [ID_34318]
+
+<!-- Main Release Version 10.2.0 [CU8] - Feature Release Version 10.2.11 -->
+
+On systems with active correlation rules, in some rare cases, the counters in the footer bar of the Alarm Console could show negative numbers.
 
 #### Dashboards app: Email reports would incorrectly not include CSV files when the 'Include CSV' option had been selected [ID_34370]
 
@@ -67,3 +85,9 @@ In some cases, an error could occur in SLProtocol when reading incorrectly confi
 <!-- Main Release Version 10.2.0 [CU8] - Feature Release Version 10.2.11 -->
 
 In some cases, parameter data in a dashboard URL would incorrectly only get parsed when followed by a forward slash ("/").
+
+#### DataMiner Cube - Visual Overview: Fix multiple script executions on page shape data change [ID_34412]
+
+<!-- Main Release Version 10.2.0 [CU8] - Feature Release Version 10.2.11 -->
+
+When, on page level, you had configured a data field of type *Execute* containing multiple *Set* actions with placeholders as well as a *Script* action, the script would incorrectly get executed multiple times when the page was opened.
