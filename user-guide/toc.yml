@@ -162,6 +162,15 @@
               topicUid: Clearing_alarms
             - name: Advanced analytics features in the Alarm Console
               topicUid: Advanced_analytics_features_in_the_Alarm_Console
+              items:
+                - name: Behavioral anomaly detection
+                  topicUID: Behavioral_anomaly_detection
+                - name: Proactive cap detection
+                  topicUID: Proactive_cap_detection
+                - name: Automatic incident tracking
+                  topicUID: Automatic_incident_tracking
+                - name: Monitoring of trend patterns
+                  topicUID: Monitoring_of_trend_patterns
         - name: Advanced alarm functionality
           topicUid: Advanced_alarm_functionality
           items:

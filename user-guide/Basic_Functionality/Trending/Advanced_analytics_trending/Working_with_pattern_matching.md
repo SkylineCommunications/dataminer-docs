@@ -9,6 +9,7 @@ From DataMiner 10.0.7 onwards, on systems using a Cassandra and Elasticsearch da
 If you are viewing a trend graph for a single parameter, and it contains patterns matching existing tags, these will be highlighted in orange when you hover the mouse pointer over the button representing a tag, or if the option *Expand tags* is selected in the right-click menu. Matches found for the same element/parameter as the one for which a tag was defined will be shown in bright orange, while matches associated with tags created for another element/parameter will be shown in lighter orange.
 
 > [!NOTE]
+>
 > - If a protocol is deleted, all patterns defined for parameters of that protocol will also be deleted the first time the SLAnalytics service restarts.
 > - Patterns must have a size between 8 and 50,000 data points and should not have more than 5 percent missing values.
 > - Pattern matching can only be performed on trended parameters containing numeric values.
@@ -16,7 +17,7 @@ If you are viewing a trend graph for a single parameter, and it contains pattern
 > - You can enable or disable this feature via *System Center* > *System settings* > *analytics config.*
 
 > [!TIP]
-> See also: [Monitoring of trend patterns](xref:Advanced_analytics_features_in_the_Alarm_Console#monitoring-of-trend-patterns)
+> See also: [Monitoring of trend patterns](xref:Monitoring_of_trend_patterns)
 
 ## Defining a tag
 
@@ -33,7 +34,7 @@ To define a tag for pattern matching:
    > [!NOTE]
    > Prior to DataMiner 10.0.13, patterns can only be detected in the trending for a specific parameter ID, without taking any possible table index into account. Clearing the *\[Display key instance\] only* checkbox therefore results in the behavior of DataMiner versions prior to 10.0.13.
 
-1. From DataMiner 10.0.13 onwards, optionally select *Generate an alarm when detected* to have DataMiner generate a “suggestion event” type of alarm whenever the pattern is detected. DataMiner will then also monitor the affected parameters in real time and save every pattern occurrence in the Elasticsearch database. For more information, see [Monitoring of trend patterns](xref:Advanced_analytics_features_in_the_Alarm_Console#monitoring-of-trend-patterns).
+1. From DataMiner 10.0.13 onwards, optionally select *Generate an alarm when detected* to have DataMiner generate a “suggestion event” type of alarm whenever the pattern is detected. DataMiner will then also monitor the affected parameters in real time and save every pattern occurrence in the Elasticsearch database. For more information, see [Monitoring of trend patterns](xref:Monitoring_of_trend_patterns).
 
 1. Click the check mark to save the tag.
 
@@ -45,7 +46,7 @@ To edit an existing tag for pattern matching:
 
 1. To edit the tag name, click the pencil icon and change the name.
 
-1. To activate or deactivate alarm monitoring on the pattern, toggle the option *Generate an alarm when detected*. For more information, see [Monitoring of trend patterns](xref:Advanced_analytics_features_in_the_Alarm_Console#monitoring-of-trend-patterns).
+1. To activate or deactivate alarm monitoring on the pattern, toggle the option *Generate an alarm when detected*. For more information, see [Monitoring of trend patterns](xref:Monitoring_of_trend_patterns).
 
 1. To redefine the pattern, adjust its boundaries.
 
@@ -63,4 +64,3 @@ To delete a tag for pattern matching:
 
 > [!NOTE]
 > If you delete a tag, all pattern matches associated with that tag will also be removed.
->
