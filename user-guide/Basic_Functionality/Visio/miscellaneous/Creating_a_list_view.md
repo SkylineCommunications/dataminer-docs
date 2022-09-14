@@ -275,6 +275,20 @@ Resource.PropertiesDict.Location[string] == '3'
 Resource.Name[string] notContains 'RS' AND Resource.Name[string] notContains 'RT' AND Resource.Name[string] notContains 'ExposeFlow'
 ```
 
+```txt
+Resource.Mode[Int32] == 2
+```
+
+> [!NOTE]
+> The following values can be used for Resource.Mode[Int32]:
+>
+> |Resource Mode |Property value|
+> |--------------|--------------|
+> |Undefined     |0             |
+> |Available     |1             |
+> |Maintenance   |2             |
+> |Unavailable   |3             |
+
 ## Session variables
 
 The following session variables can be used in conjunction with the *ListView* component:
