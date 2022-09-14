@@ -22,7 +22,11 @@ uid: Cube_Feature_Release_10.2.11
 
 ### Enhancements
 
-*No enhancements have been added to this release yet*
+#### DataMiner Cube - Visual Overview: Service context of a linked shape will only be determined when the service context has been specified [ID_34340]
+
+<!-- Main Release Version 10.1.0 [CU20]/10.2.0 [CU8] - Feature Release Version 10.2.11 -->
+
+When a shape was linked to an element that was not part of a service, up to now, an attempt would be made to determine the service context even when no service context had been specified. From now on, the service context will only be determined when the service context has been specified in the shape.
 
 ### Fixes
 

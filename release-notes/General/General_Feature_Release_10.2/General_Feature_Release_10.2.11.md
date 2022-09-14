@@ -16,6 +16,8 @@ uid: General_Feature_Release_10.2.11
 
 #### Performance improvement to update service state more quickly [ID_34165]
 
+<!-- Main Release Version 10.1.0 [CU20]/10.2.0 [CU8] - Feature Release Version 10.2.11 -->
+
 Because of a performance improvement, the calculated service alarm state will now be updated more quickly in the client.
 
 ### Fixes
