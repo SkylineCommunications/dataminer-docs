@@ -11,7 +11,7 @@ uid: Working_with_behavioral_anomaly_detection
 > - You can enable or disable this feature via *System Center* > *System settings* > *analytics config*.
 
 > [!TIP]
-> See also: [Behavioral anomaly detection](xref:Advanced_analytics_features_in_the_Alarm_Console#behavioral-anomaly-detection)
+> See also: [Behavioral anomaly detection](xref:Behavioral_anomaly_detection)
 
 From DataMiner 10.0.0/10.0.2 onwards, the DataMiner Analytics software can detect the changes in the behavior of a trend, also known as "change points". The following kinds of change points can be detected:
 

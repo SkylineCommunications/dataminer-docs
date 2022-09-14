@@ -19,4 +19,6 @@ If a toggle button is set to *Manual*, users will need to manually enable automa
 With the buttons at the bottom of the page, you can set all activities to *Automatic* or *Manual* in one go.
 
 > [!NOTE]
-> From IDP 1.2.0 onwards, these toggle buttons are by default set to *Automatic* in a new IDP installation. Upgrading to IDP 1.2.0 will also set the toggle buttons to *Automatic*.
+>
+> - From IDP 1.2.0 onwards, these toggle buttons are by default set to *Automatic* in a new IDP installation. Upgrading to IDP 1.2.0 will also set the toggle buttons to *Automatic*.
+> - Prior to DataMiner 1.1.20, the default behavior is configured on the *Admin* > *CI Types* > *Activity Management* page.

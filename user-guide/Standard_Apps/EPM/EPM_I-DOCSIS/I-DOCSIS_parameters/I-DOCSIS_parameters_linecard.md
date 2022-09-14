@@ -14,21 +14,13 @@ This page contains an overview of the Linecard parameters available in the I-DOC
 
 - **Percentage CM Offline**
 
-- **Number CM Online**
-
-- **Percentage CM Online**
-
 - **Number CM DOCSIS 2.0**
 
 - **Number CM DOCSIS 3.0**
 
 - **Number CM DOCSIS 3.1**
 
-- **Number CM DOCSIS other**
-
-- **Number CM Ping OK**
-
-- **Percentage CM Ping OK**
+- **Number CM DOCSIS Other**
 
 - **Number CM Ping Unreachable**
 

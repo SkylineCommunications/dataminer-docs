@@ -22,7 +22,7 @@ This page contains an overview of the CCAP Core parameters available in the I-DO
 
 - **Number CM DOCSIS 3.1**
 
-- **Number CM DOCSIS other**
+- **Number CM DOCSIS Other**
 
 - **Number CM Ping OK**
 
@@ -37,8 +37,6 @@ This page contains an overview of the CCAP Core parameters available in the I-DO
 - **Average Jitter**: Calculated. The average jitter for all CMs associated with the given level. Only CMs that present valid values count towards this KPI.
 
 - **Average Packet Loss Rate**: Calculated. The average packet loss rate for all CMs associated with the given level. Only CMs that present valid values count towards this KPI.
-
-- **CMTS State**: Direct value. Possible values: *OK* if the CMTS is reachable, and *Timeout* if the CMTS is not reachable.
 
 ## System parameters
 

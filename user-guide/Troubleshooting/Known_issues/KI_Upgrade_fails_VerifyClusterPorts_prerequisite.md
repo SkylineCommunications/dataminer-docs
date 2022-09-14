@@ -6,7 +6,7 @@ uid: KI_Upgrade_fails_VerifyClusterPorts_prerequisite
 
 ## Affected versions
 
-10.2.0 CU1 up to 10.2.0 CU5 and 10.2.4 up to 10.2.8
+From 10.2.0 CU1 and 10.2.4 onwards.
 
 ## Cause
 
@@ -14,7 +14,7 @@ In two-node DataMiner System setups, for example with two single DMAs or with on
 
 ## Fix
 
-Install DataMiner 10.2.0 CU6 or 10.2.9.
+No fix is available yet.
 
 ## Workaround
 

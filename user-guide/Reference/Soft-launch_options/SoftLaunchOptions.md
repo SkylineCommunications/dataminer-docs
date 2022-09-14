@@ -56,14 +56,14 @@ See [Filtering alarms on alarm focus](xref:ApplyingAlarmFiltersInTheAlarmConsole
 
 ### AlarmForecasting
 
-Enables proactive cap detection. See [Advanced analytics features in the Alarm Console](xref:Advanced_analytics_features_in_the_Alarm_Console).
+Enables proactive cap detection. See [Proactive cap detection](xref:Proactive_cap_detection).
 
 - **Minimum version**: 9.5.12
 - **Release version**: 10.0.11
 
 ### AlarmGrouping
 
-Enables automatic incident tracking. See [Advanced analytics features in the Alarm Console](xref:Advanced_analytics_features_in_the_Alarm_Console).
+Enables automatic incident tracking. See [Automatic incident tracking](xref:Automatic_incident_tracking).
 
 - **Minimum version**: 10.0.3
 - **Release version**: 10.0.11
@@ -77,7 +77,7 @@ Enables alarm tree optimization.
 
 ### AnomalyDetection
 
-Enables behavioral anomaly detection and suggestion events. See [Advanced analytics features in the Alarm Console](xref:Advanced_analytics_features_in_the_Alarm_Console).
+Enables behavioral anomaly detection and suggestion events. See [Behavioral anomaly detection](xref:Behavioral_anomaly_detection).
 
 - **Minimum version**: 9.5.12
 - **Release version**: 10.0.2

@@ -44,6 +44,12 @@ This page contains an overview of the US QAM CH parameters available in the I-DO
 
   - OID D2.0: 1.3.6.1.2.1.10.127.1.3.3.1.6
 
+- **US QAM Ch Tx Power**: Direct value. The average value of the US QAM Ch Tx power related to the cable modems served by the given channel.
+
+  - OID D3.0: 1.3.6.1.2.1.10.127.1.2.2.1.3.2.
+
+  - OID D2.0: 1.3.6.1.4.1.4491.2.1.20.1.2.1.1.
+
 - **US QAM Ch Power Fluctuation**: Calculated. Only available for DOCSIS 3.x. Average value of the US QAM Ch Power Fluctuation related to the cable modems served by the given channel.
 
   The power fluctuation is the difference between expected Rx power (OID: 1.3.6.1.4.1.4491.2.1.20.1.25.1.2) and the Rx power (OID: 1.3.6.1.4.1.4491.2.1.20.1.4.1.3).
@@ -106,13 +112,8 @@ This page contains an overview of the US QAM CH parameters available in the I-DO
 
   - Nº octets received: OID 1.3.6.1.2.1.2.2.1.10
   - Interface's current bandwidth: OID 1.3.6.1.2.1.2.2.1.5
-
-- **US QAM Ch Utilization**: Calculated. Average value of the US QAM Ch Utilization as it relates to the CMs served by the given channel.
-
-  Calculated as follows: US QAM Ch Utilization = (Current Nº octets received- Nº octets received previously) * 8 * 100 / (Delta * Interface's current bandwidth)
-
-  - Nº octets transmitted: OID 1.3.6.1.2.1.2.2.1.10
-  - Interface's current bandwidth: OID 1.3.6.1.2.1.2.2.1.5
+ 
+- **Reflected Power Ratio**: Direct value. The average value of the Reflected Power Ratio related to the cable modems served by the given channel.
 
 - **US QAM Ch NMTER**: Calculated. Only available for DOCSIS 3.x. Average value of the US QAM Ch NMTER as it relates to the CMs served by the given channel.
 

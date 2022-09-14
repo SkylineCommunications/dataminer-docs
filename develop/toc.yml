@@ -322,6 +322,8 @@
           topicUid: ConnectionsSerialSslTls
         - name: Socket buffer
           topicUid: ConnectionsSerialSocketBuffer
+        - name: Hostname resolution
+          topicUid: ConnectionsSerialHostnameResolution
         - name: Exercise
           topicUid: ConnectionsSerialExercise
       - name: Smart serial

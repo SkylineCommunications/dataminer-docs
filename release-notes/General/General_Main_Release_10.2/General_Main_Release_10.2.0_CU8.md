@@ -14,8 +14,26 @@ uid: General_Main_Release_10.2.0_CU8
 
 #### Performance improvement to update service state more quickly [ID_34165]
 
+<!-- Main Release Version 10.1.0 [CU20]/10.2.0 [CU8] - Feature Release Version 10.2.11 -->
+
 Because of a performance improvement, the calculated service alarm state will now be updated more quickly in the client.
+
+#### DataMiner Cube - Visual Overview: Service context of a linked shape will only be determined when the service context has been specified [ID_34340]
+
+<!-- Main Release Version 10.1.0 [CU20]/10.2.0 [CU8] - Feature Release Version 10.2.11 -->
+
+When a shape was linked to an element that was not part of a service, up to now, an attempt would be made to determine the service context even when no service context had been specified. From now on, the service context will only be determined when the service context has been specified in the shape.
 
 ### Fixes
 
-*No fixes have been added to this release yet*
+#### Problem when processing a history set with a timestamp referring to a moment far in the past [ID_34378]
+
+<!-- Main Release Version 10.2.0 [CU8] - Feature Release Version TBD -->
+
+When SLElement was processing a history set, an error could occur when the timestamp of that history set referred to a moment far in the past.
+
+#### Problem with SLProtocol when reading incorrectly configured port settings [ID_34379]
+
+<!-- Main Release Version 10.1.0 [CU20]/10.2.0 [CU8] - Feature Release Version 10.2.11 -->
+
+In some cases, an error could occur in SLProtocol when reading incorrectly configured port settings.

@@ -20,8 +20,20 @@ Because of a number of enhancements, overall performance of the SLSNMPManager pr
 
 #### Performance improvement to update service state more quickly [ID_34165]
 
+<!-- Main Release Version 10.1.0 [CU20]/10.2.0 [CU8] - Feature Release Version 10.2.11 -->
+
 Because of a performance improvement, the calculated service alarm state will now be updated more quickly in the client.
+
+#### DataMiner Cube - Visual Overview: Service context of a linked shape will only be determined when the service context has been specified [ID_34340]
+
+<!-- Main Release Version 10.1.0 [CU20]/10.2.0 [CU8] - Feature Release Version 10.2.11 -->
+
+When a shape was linked to an element that was not part of a service, up to now, an attempt would be made to determine the service context even when no service context had been specified. From now on, the service context will only be determined when the service context has been specified in the shape.
 
 ### Fixes
 
-*No fixes have been added to this release yet*
+#### Problem with SLProtocol when reading incorrectly configured port settings [ID_34379]
+
+<!-- Main Release Version 10.1.0 [CU20]/10.2.0 [CU8] - Feature Release Version 10.2.11 -->
+
+In some cases, an error could occur in SLProtocol when reading incorrectly configured port settings.

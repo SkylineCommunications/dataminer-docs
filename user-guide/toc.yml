@@ -162,6 +162,15 @@
               topicUid: Clearing_alarms
             - name: Advanced analytics features in the Alarm Console
               topicUid: Advanced_analytics_features_in_the_Alarm_Console
+              items:
+                - name: Behavioral anomaly detection
+                  topicUID: Behavioral_anomaly_detection
+                - name: Proactive cap detection
+                  topicUID: Proactive_cap_detection
+                - name: Automatic incident tracking
+                  topicUID: Automatic_incident_tracking
+                - name: Monitoring of trend patterns
+                  topicUID: Monitoring_of_trend_patterns
         - name: Advanced alarm functionality
           topicUid: Advanced_alarm_functionality
           items:
@@ -2334,6 +2343,19 @@
               topicUid: DataMiner_IDP_components
             - name: Overview of the IDP app UI
               topicUid: Overview_of_the_IDP_app_UI
+              items:
+                - name: Inventory
+                  topicUID: IDP_Inventory_tab
+                - name: Connectivity
+                  topicUID: IDP_Connectivity_tab
+                - name: Configuration
+                  topicUID: IDP_Configuration_tab
+                - name: Software
+                  topicUID: IDP_Software_tab
+                - name: Facilities
+                  topicUID: IDP_Facilities_tab
+                - name: Processes
+                  topicUID: IDP_Processes_tab
         - name: Advanced configuration
           items:
             - name: Advanced configuration for Administrators
