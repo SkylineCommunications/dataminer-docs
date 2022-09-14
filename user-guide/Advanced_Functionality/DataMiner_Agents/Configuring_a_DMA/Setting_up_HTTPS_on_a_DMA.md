@@ -160,17 +160,16 @@ To do so:
 - **Cannot reach this page**
 
    Make sure the DNS server has a *DNS record* for the hostname of the URL. For example, *dataminer.skyline.be* will need to resolve to a reachable IP address.
-   
-- **My browser shows this error 'ERR_HTTP2_INADEQUATE_TRANSPORT_SECURITY'**
-  
-   This can have several reason, most commonly is the use of weak, outdated, TLS cipher suites. This can be fixed by disabling the weak cipher suites using a tool like [IISCrypto](https://www.nartac.com/Products/IISCrypto). 
-   
+
+- **My browser shows the error "ERR_HTTP2_INADEQUATE_TRANSPORT_SECURITY"**
+
+   This can have several reasons. Most commonly it is caused by the use of weak, outdated TLS cipher suites. You can fix this by disabling the weak cipher suites using a tool like [IISCrypto](https://www.nartac.com/Products/IISCrypto).
+
    To disable the weak cipher suites:
-   
-   1. Download [IISCrypto](https://www.nartac.com/Products/IISCrypto)
-   1. Execute it on the DataMiner server
-   1. Navigate to the *Cipher Suites* tab
-   1. Click *Best Practices*
-   1. Now click *Apply*
+
+   1. Download [IISCrypto](https://www.nartac.com/Products/IISCrypto).
+   1. Execute it on the DataMiner server.
+   1. Navigate to the *Cipher Suites* tab.
+   1. Click *Best Practices*.
+   1. Click *Apply*.
    1. Reboot the server
- 
