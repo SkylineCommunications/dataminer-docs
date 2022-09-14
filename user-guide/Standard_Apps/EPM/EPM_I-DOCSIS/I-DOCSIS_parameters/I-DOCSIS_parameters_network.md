@@ -28,7 +28,7 @@ This page contains an overview of the Network parameters available in the I-DOCS
 
 - **Number CM DOCSIS 3.1**
 
-- **Number CM DOCSIS other**
+- **Number CM DOCSIS Other**
 
 - **Number CM Ping OK**
 
