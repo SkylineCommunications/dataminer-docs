@@ -2731,6 +2731,8 @@
     - name: Known issues
       topicUID: Known_issues
       items:
+        - name: Closed alarms migrated too slowly from dms-activealarms index in Elasticsearch database
+          topicUID: KI_Closed_alarms_migrated_too_slowly
         - name: SNMP polling issues in case protocol contains wildcards in parameter OIDs
           topicUID: KI_SNMP_polling_issues_with_wildcards_in_param_OIDs
         - name: Upgrade fails because of VerifyClusterPort.dll prerequisite
