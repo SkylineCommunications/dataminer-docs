@@ -16,11 +16,21 @@ uid: Cube_Feature_Release_10.2.11
 
 ## Other features
 
-*No new features have been added to this release yet*
+#### DataMiner Cube - Resources app: Removing resources from all pools [ID_34311]
+
+<!-- Main Release Version 10.2.0 [CU8] - Feature Release Version 10.2.11 -->
+
+When you move one or more resources from a pool to the *(uncategorized)* pool, a confirmation box will now appear to warn you that, if you click *Yes*, the resources in question will be removed from all pools.
 
 ## Changes
 
 ### Enhancements
+
+#### DataMiner Cube - Service & Resource Management: Function resource icons are now centered in service definition diagrams [ID_34249]
+
+<!-- Main Release Version 10.2.0 [CU8] - Feature Release Version 10.2.11 -->
+
+In service definition diagrams, function resource icons are now centered.
 
 #### DataMiner Cube - Visual Overview: Service context of a linked shape will only be determined when the service context has been specified [ID_34340]
 
@@ -30,4 +40,14 @@ When a shape was linked to an element that was not part of a service, up to now,
 
 ### Fixes
 
-*No fixes have been added to this release yet*
+#### DataMiner Cube - Alarm Console: Negative counters in the footer bar [ID_34318]
+
+<!-- Main Release Version 10.2.0 [CU8] - Feature Release Version 10.2.11 -->
+
+On systems with active correlation rules, in some rare cases, the counters in the footer bar of the Alarm Console could show negative numbers.
+
+#### DataMiner Cube - Visual Overview: Fix multiple script executions on page shape data change [ID_34412]
+
+<!-- Main Release Version 10.2.0 [CU8] - Feature Release Version 10.2.11 -->
+
+When, on page level, you had configured a data field of type *Execute* containing multiple *Set* actions with placeholders as well as a *Script* action, the script would incorrectly get executed multiple times when the page was opened.
