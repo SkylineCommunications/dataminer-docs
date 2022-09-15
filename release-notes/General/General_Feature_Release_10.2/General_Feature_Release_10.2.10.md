@@ -187,7 +187,7 @@ In addition, performance has improved when a resource or resource pool is added 
 
 #### Improved performance of SLDataGateway process [ID_34206]
 
-<!-- MR 10.3.0 - FR 10.2.10 -->
+<!-- MR 10.2.0 [CU8] - FR 10.2.10 -->
 
 Because of improved internal logic, the performance of the SLDataGateway process has improved.
 
