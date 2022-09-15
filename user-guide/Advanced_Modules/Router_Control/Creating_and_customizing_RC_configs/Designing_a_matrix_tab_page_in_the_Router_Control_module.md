@@ -38,7 +38,7 @@ This section consists of the following topics:
 
     2. Next to *Select matrix*, select the matrix parameter.
 
-        Alternatively, you can enter a custom matrix in the *Custom matrix* box. This is a matrix represented by 2 table parameters, instead of a matrix type parameter. See [Adding a matrix represented by two table parameters](#adding-a-matrix-represented-by-two-table-parameters).
+        Alternatively, you can enter a custom matrix in the *Custom matrix* box after clicking on *Advanced Configuration*. The custom matrix is represented by 2 table parameters, instead of a matrix type parameter. See [Adding a matrix represented by two table parameters](#adding-a-matrix-represented-by-two-table-parameters).
 
     3. Next to *Layout*, specify whether you want to start with a pre-built default configuration (*General Default*) or an empty canvas (*Empty*).
 
@@ -72,7 +72,7 @@ In order to add such a matrix, do the following:
 
 1. Add a matrix like in the procedure above, until you get to the *Add Matrix* dialog box.
 
-2. In the *Add Matrix* dialog box, enter the following syntax in the *Custom matrix* box:
+2. In the *Add Matrix* dialog box, when *Advanced Configuration* was clicked, enter the following syntax in the *Custom matrix* box:
 
     ```txt
     dmaid/elementid;inputs=tablepid,indexpid,labelpid,enabledpid,lockedpid,notespid;outputs=tablepid,indexpid,labelpid,enabledpid,lockedpid,notespid,connectedinputpid
@@ -113,7 +113,7 @@ To do so:
 
 1. Select a tab control on the matrix tab page
 
-    Make sure you have selected the complete tab control, and not one of the tab pages (if any). the easiest way to do this is by selecting the appropriate *TabControl* in the tree view on the right.     Below the tree view panel, the option *Link to pages* will be displayed.
+    Make sure you have selected the complete tab control, and not one of the tab pages (if any). The easiest way to do this is by selecting the appropriate *TabControl* in the tree view on the right. Below the tree view panel, below *Grid Position*, the option *Link to pages* will be displayed.
 
 2. Select *Link to pages*, and select whether the tab control should link to *Input pages* or *Output pages*.
 
