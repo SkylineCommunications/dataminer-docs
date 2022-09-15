@@ -161,7 +161,7 @@ For example, to create a hyperlink that is only available on alarms that have a 
 <HyperLink id="20" version="2" name="RootTime_v2" type="url" menu="/root" filterElement="(AlarmEventMessage.PropertiesDict.PropName[String] =='PropValue')"> [DMAID]</HyperLink>
 ```
 
-To test a filter that you want to specify for a conditional hyperlink, you can use the SLNetClientTest tool. See [Checking a hyperlink filter](xref:SLNetClientTest_tool_diagnostic_procedures#checking-a-hyperlink-filter).
+To test a filter that you want to specify for a conditional hyperlink, you can use the SLNetClientTest tool. See [Checking a hyperlink filter](xref:SLNetClientTest_checking_hyperlink_filter).
 
 From DataMiner 9.6.9 onwards, this attribute supports alarm properties containing a space. These need to be contained in double quotes (or *"* in XML), for example:
 

@@ -23,7 +23,7 @@ Keep the following restrictions in mind for the backup path:
   1. Open the Windows task scheduler and execute the task. The SYSTEM user will now have access to the UNC path.
 
   > [!NOTE]
-  > From DataMiner 10.2.0/10.1.8 onwards, it is possible to instead configure specific credentials for the network location via SLNetClientTest tool. See [Specifying credentials for a shared backup path for Elasticsearch](xref:SLNetClientTest_tool_advanced_procedures#specifying-credentials-for-a-shared-backup-path-for-elasticsearch).
+  > From DataMiner 10.2.0/10.1.8 onwards, it is possible to instead configure specific credentials for the network location via SLNetClientTest tool. See [Specifying credentials for a shared backup path for Elasticsearch](xref:SLNetClientTest_credentials_shared_backup_Elasticsearch).
 
 - At most one backup per day can be taken.
 

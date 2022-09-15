@@ -33,7 +33,7 @@ In this section:
 > See also:
 >
 > - [Specifying TTL overrides](xref:Specifying_TTL_overrides)
-> - [Setting the TTL for database records](xref:SLNetClientTest_tool_advanced_procedures#setting-the-ttl-for-database-records)
+> - [Setting the TTL for database records](xref:SLNetClientTest_setting_TTL_database)
 
 ## Basic syntax of the TTL settings
 

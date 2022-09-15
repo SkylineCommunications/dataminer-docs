@@ -8,6 +8,7 @@ A DMS can be configured to send out email notifications and reports via an SMTP 
 
 > [!NOTE]
 > For this feature, this product includes software developed by the OpenSSL Project for use in the OpenSSL Toolkit (<http://www.openssl.org/>).
+>
 > - From DataMiner 8.5.5 up to DataMiner 9.5.12, OpenSSL library version v1.0.2a is used.
 > - From DataMiner 9.5.13 onwards, OpenSSL library version v1.0.2m is used.
 > - From DataMiner 9.6.1 onwards, OpenSSL library version v1.1.0h is used.
@@ -41,15 +42,15 @@ If a DataMiner Agent has to be able to send out email messages, then the *DataMi
 
 1. Log on to the DataMiner Agent, either locally or through a remote desktop session.
 
-2. Stop the DataMiner software.
+1. Stop the DataMiner software.
 
-3. Open the file *C:\\Skyline DataMiner\\DataMiner.xml*.
+1. Open the file *C:\\Skyline DataMiner\\DataMiner.xml*.
 
-4. Go to the *\<SMTP>* section. If this section does not yet exist, add it.
+1. Go to the *\<SMTP>* section. If this section does not yet exist, add it.
 
-5. In this section, enter the correct SMTP server settings. See below for more information.
+1. In this section, enter the correct SMTP server settings. See below for more information.
 
-6. Restart the DataMiner Agent in order to apply the new settings.
+1. Restart the DataMiner Agent in order to apply the new settings.
 
 > [!NOTE]
 > If there are several DataMiner Agents in your DataMiner System, execute the above-mentioned procedure on every DataMiner Agent that has to be able to send email messages.

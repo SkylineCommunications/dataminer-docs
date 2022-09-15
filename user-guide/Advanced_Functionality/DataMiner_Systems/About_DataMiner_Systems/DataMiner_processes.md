@@ -76,7 +76,7 @@ Controls all communication among DataMiner Agents, and between DataMiner Agents 
 > See also: [Configuring SLNet settings in MaintenanceSettings.xml](xref:Configuration_of_DataMiner_processes#configuring-slnet-settings-in-maintenancesettingsxml)
 
 > [!NOTE]
-> Data for trend data queries is cached in the SLNet process after it has been received from SLDataGateway and before it is processed further. In the SLNetClientTest tool, several options are available related to the trend cache. However, note that this is an advanced system administration tool that should be used with extreme care. See [Configuring trend caching](xref:SLNetClientTest_tool_advanced_procedures#configuring-trend-caching).
+> Data for trend data queries is cached in the SLNet process after it has been received from SLDataGateway and before it is processed further. In the SLNetClientTest tool, several options are available related to the trend cache. However, note that this is an advanced system administration tool that should be used with extreme care. See [Configuring trend caching](xref:SLNetClientTest_configuring_trend_caching).
 
 ### SLPort
 
