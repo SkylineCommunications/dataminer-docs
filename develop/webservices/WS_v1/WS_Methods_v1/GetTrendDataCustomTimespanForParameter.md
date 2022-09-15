@@ -24,4 +24,4 @@ Use this method to retrieve the trend data for a particular parameter within a c
 
 | Item | Format | Description |
 |--|--|--|
-| GetTrendDataCustom­TimespanForParameter­Result | [DMATrendData](xref:DMATrendData) | The trend data of the specified parameter. |
+| GetTrendDataCustomTimespanForParameterResult | [DMATrendData](xref:DMATrendData) | The trend data of the specified parameter. |

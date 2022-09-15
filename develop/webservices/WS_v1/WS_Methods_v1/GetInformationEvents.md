@@ -18,4 +18,4 @@ Use this method to retrieve the information events for a specified timespan.
 
 | Item | Format | Description |
 |--|--|--|
-| GetInformationEvents­Result | Array of [DMAAlarm](xref:DMAAlarm) | The information events for the indicated period. |
+| GetInformationEventsResult | Array of [DMAAlarm](xref:DMAAlarm) | The information events for the indicated period. |

@@ -23,4 +23,4 @@ Use this method to retrieve a specific number of subviews from a particular view
 
 | Item | Format | Description |
 |--|--|--|
-| GetViewsForParent­SortedResult | Array of [DMAView](xref:DMAView) | The requested number of subviews, sorted as specified. |
+| GetViewsForParentSortedResult | Array of [DMAView](xref:DMAView) | The requested number of subviews, sorted as specified. |

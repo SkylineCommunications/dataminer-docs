@@ -20,4 +20,4 @@ Use this method to retrieve a specific parameter for a service.
 
 | Item | Format | Description |
 |--|--|--|
-| GetParameterForSer­viceResult | [DMAParameter](xref:DMAParameter) | The data of the specified parameters of the specified service. |
+| GetParameterForServiceResult | [DMAParameter](xref:DMAParameter) | The data of the specified parameters of the specified service. |

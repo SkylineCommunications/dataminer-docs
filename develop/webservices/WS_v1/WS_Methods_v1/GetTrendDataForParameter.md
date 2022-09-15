@@ -24,4 +24,4 @@ Use this method to retrieve the trend data of a particular parameter.
 
 | Item | Format | Description |
 |--|--|--|
-| GetTrendDataFor­ParameterResult | [AnalogTrendDataResponseMessage](xref:AnalogTrendDataResponseMessage) | The trend data of the specified parameter. |
+| GetTrendDataForParameterResult | [AnalogTrendDataResponseMessage](xref:AnalogTrendDataResponseMessage) | The trend data of the specified parameter. |

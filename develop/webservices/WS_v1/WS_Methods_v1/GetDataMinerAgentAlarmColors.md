@@ -16,4 +16,4 @@ Use this method to retrieve the RGB values of the alarm colors that are being us
 
 | Item | Format | Description |
 |--|--|--|
-| GetDataMinerAgent­AlarmColorsResult | [DMAAlarmColors](xref:DMAAlarmColors) | The RGB values of the alarm colors that are being used. |
+| GetDataMinerAgentAlarmColorsResult | [DMAAlarmColors](xref:DMAAlarmColors) | The RGB values of the alarm colors that are being used. |

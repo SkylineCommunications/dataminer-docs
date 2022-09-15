@@ -14,4 +14,4 @@ None.
 
 | Item                          | Format | Description                                    |
 |-------------------------------|--------|------------------------------------------------|
-| GetDataMinerAPI­VersionResult | String | The version of the DataMiner Web Service APIs. |
+| GetDataMinerAPIVersionResult | String | The version of the DataMiner Web Service APIs. |

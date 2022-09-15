@@ -26,7 +26,7 @@ Use this method to retrieve the data of the parameters on a particular Data Disp
 
 | Item | Format | Description |
 |--|--|--|
-| GetParametersByPage­ForElementCachedResult | [DMACache](xref:DMACache) | The parameters on the specified Data Display page added or changed since the specified point in time. |
+| GetParametersByPageForElementCachedResult | [DMACache](xref:DMACache) | The parameters on the specified Data Display page added or changed since the specified point in time. |
 
 > [!NOTE]
 > In this case, the [DMACache](xref:DMACache) object will contain an array of [DMAParameter](xref:DMAParameter) objects.

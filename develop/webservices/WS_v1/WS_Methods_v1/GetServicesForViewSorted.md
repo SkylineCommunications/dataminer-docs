@@ -26,4 +26,4 @@ Use this method to retrieve the data of a number of services in a particular vie
 
 | Item | Format | Description |
 |--|--|--|
-| GetServicesForView­SortedResult | Array of [DMAElement](xref:DMAElement) | The services from the specified view, sorted as requested. |
+| GetServicesForViewSortedResult | Array of [DMAElement](xref:DMAElement) | The services from the specified view, sorted as requested. |

@@ -19,4 +19,4 @@ Use this method to retrieve the spectrum buffers for a particular spectrum monit
 
 | Item | Format | Description |
 |--|--|--|
-| GetSpectrumBuffers­ByMonitorIdResult | Array of [DMASpectrumBuffer](xref:DMASpectrumBuffer) | The spectrum buffer information. |
+| GetSpectrumBuffersByMonitorIdResult | Array of [DMASpectrumBuffer](xref:DMASpectrumBuffer) | The spectrum buffer information. |

@@ -19,4 +19,4 @@ Use this method to delete a job section definition field.
 
 | Item | Format | Description |
 |--|--|--|
-| DeleteJobsSection­DefinitionFieldResult | Boolean | Returns “true” if the job section definition field has been fully deleted, or “false” if the job section definition field has been hidden instead, because it has already been used previously. |
+| DeleteJobsSectionDefinitionFieldResult | Boolean | Returns “true” if the job section definition field has been fully deleted, or “false” if the job section definition field has been hidden instead, because it has already been used previously. |

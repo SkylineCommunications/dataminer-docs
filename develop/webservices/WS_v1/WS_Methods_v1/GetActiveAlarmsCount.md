@@ -16,4 +16,4 @@ Use this method to count the number of active alarms.
 
 | Item                        | Format  | Description                        |
 |-----------------------------|---------|------------------------------------|
-| GetActiveAlarms­CountResult | Integer | The total number of active alarms. |
+| GetActiveAlarmsCountResult | Integer | The total number of active alarms. |

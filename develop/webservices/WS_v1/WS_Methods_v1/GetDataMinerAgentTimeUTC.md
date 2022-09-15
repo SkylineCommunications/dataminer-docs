@@ -16,4 +16,4 @@ Use this method to retrieve the current time of the DataMiner Agent in UTC forma
 
 | Item | Format | Description |
 |--|--|--|
-| GetDataMinerAgent­TimeUTCResult | Long integer | The current time of the DMA in UTC format (milliseconds since midnight January 1, 1970 GMT). |
+| GetDataMinerAgentTimeUTCResult | Long integer | The current time of the DMA in UTC format (milliseconds since midnight January 1, 1970 GMT). |

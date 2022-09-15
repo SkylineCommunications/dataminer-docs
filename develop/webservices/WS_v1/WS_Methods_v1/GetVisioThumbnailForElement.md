@@ -25,4 +25,4 @@ All images are in PNG format, and are base64 encoded.
 
 | Item | Format | Description |
 |--|--|--|
-| GetVisioThumbnailFor­ElementResult | [DMAVisio](xref:DMAVisio) | The Visio file linked to the specified element, returned as a static image. |
+| GetVisioThumbnailForElementResult | [DMAVisio](xref:DMAVisio) | The Visio file linked to the specified element, returned as a static image. |

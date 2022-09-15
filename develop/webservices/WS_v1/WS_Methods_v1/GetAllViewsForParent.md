@@ -17,4 +17,4 @@ Use this method to retrieve all views for the specified parent view, including s
 
 | Item                        | Format                                                  | Description                                         |
 |-----------------------------|---------------------------------------------------------|-----------------------------------------------------|
-| GetAllViewsForParent­Result | Array of [DMAView](xref:DMAView) | The data of the views in the specified parent view. |
+| GetAllViewsForParentResult | Array of [DMAView](xref:DMAView) | The data of the views in the specified parent view. |

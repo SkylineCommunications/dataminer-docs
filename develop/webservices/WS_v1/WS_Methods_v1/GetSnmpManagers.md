@@ -16,4 +16,4 @@ Use this method to retrieve information on the SNMP Managers in the DMS.
 
 | Item | Format | Description |
 |--|--|--|
-| GetSnmpManagers­Result | Array of [DMASnmpManager](xref:DMASnmpManager) | A list of the SNMP Managers in the DMS, with additional information such as their IP address and community string. |
+| GetSnmpManagersResult | Array of [DMASnmpManager](xref:DMASnmpManager) | A list of the SNMP Managers in the DMS, with additional information such as their IP address and community string. |

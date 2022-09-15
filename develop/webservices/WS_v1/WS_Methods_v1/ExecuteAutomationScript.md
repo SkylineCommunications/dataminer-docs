@@ -14,8 +14,8 @@ Use this method to execute an interactive Automation script.
 | script.Name | String | The name of the Automation script. |
 | script.Folder | String | The folder containing the Automation script. |
 | script.Description | String | The description of the Automation script. |
-| script.Settings.Require­Interactive | Boolean | Determines whether the script will require interaction from the user. |
-| script.Settings.HasFind­InteractiveClient | Boolean | Determines if a pop-up window will be displayed asking clients to attach to the script. |
+| script.Settings.RequireInteractive | Boolean | Determines whether the script will require interaction from the user. |
+| script.Settings.HasFindInteractiveClient | Boolean | Determines if a pop-up window will be displayed asking clients to attach to the script. |
 | script.Parameters | Array of [DMAAutomationScriptParameter](xref:DMAAutomationScriptParameter) | The parameters used in the script. |
 | script.Dummies | Array of [DMAAutomationScriptDummy](xref:DMAAutomationScriptDummy) | The dummies used in the script. |
 | script.MemoryFiles | Array of [DMAAutomationScriptMemoryFile](xref:DMAAutomationScriptMemoryFile) | The memory files used in the script. |
@@ -31,4 +31,4 @@ Use this method to execute an interactive Automation script.
 
 | Item | Format | Description |
 |--|--|--|
-| ExecuteAutomation­ScriptResult | Integer | The ID of the instance of the running script. This ID will be used to go to the next step in case it is an interactive script. |
+| ExecuteAutomationScriptResult | Integer | The ID of the instance of the running script. This ID will be used to go to the next step in case it is an interactive script. |

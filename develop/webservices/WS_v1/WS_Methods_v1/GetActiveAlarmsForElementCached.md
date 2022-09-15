@@ -25,7 +25,7 @@ Use this method to retrieve only active element alarms added or changed since a 
 
 | Item | Format | Description |
 |--|--|--|
-| GetActiveAlarmsFor­ElementCachedResult | [DMACache](xref:DMACache) | The active element alarms added or changed since the specified point in time. |
+| GetActiveAlarmsForElementCachedResult | [DMACache](xref:DMACache) | The active element alarms added or changed since the specified point in time. |
 
 > [!NOTE]
 > In this case, the [DMACache](xref:DMACache) object will contain an array of [DMAAlarm](xref:DMAAlarm) objects.

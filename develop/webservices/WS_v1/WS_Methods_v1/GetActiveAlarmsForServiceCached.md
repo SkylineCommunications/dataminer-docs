@@ -25,4 +25,4 @@ Use this method to retrieve only active service alarms added or changed since a 
 
 | Item | Format | Description |
 |--|--|--|
-| GetActiveAlarmsFor­ServiceCachedResult | [DMACache](xref:DMACache) | The active service alarms added or changed since the specified point in time. |
+| GetActiveAlarmsForServiceCachedResult | [DMACache](xref:DMACache) | The active service alarms added or changed since the specified point in time. |

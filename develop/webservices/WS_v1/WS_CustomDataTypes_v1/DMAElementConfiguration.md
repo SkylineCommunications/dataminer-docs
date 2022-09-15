@@ -27,9 +27,9 @@ uid: DMAElementConfiguration
 | SnmpWriteCommunityString | String | The community string used to set values on the device. |
 | ReplicationInfo.Domain | String | The domain from where the element is replicated. Available from DataMiner 10.1.9 onwards. |
 | ReplicationInfo.Host | String | The host from where the element is replicated. Available from DataMiner 10.1.9 onwards. |
-| ReplicationInfo.Pass­word | String | The password used to connect to the DMA from which the element is replicated. Available from DataMiner 10.1.9 onwards. |
-| ReplicationInfo.Data­MinerID | Integer | The DataMiner ID of the element that is replicated. Available from DataMiner 10.1.9 onwards. |
-| ReplicationInfo.Elemen­tID | Integer | The element ID of the element that is replicated. Available from DataMiner 10.1.9 onwards. |
+| ReplicationInfo.Password | String | The password used to connect to the DMA from which the element is replicated. Available from DataMiner 10.1.9 onwards. |
+| ReplicationInfo.DataMinerID | Integer | The DataMiner ID of the element that is replicated. Available from DataMiner 10.1.9 onwards. |
+| ReplicationInfo.ElementID | Integer | The element ID of the element that is replicated. Available from DataMiner 10.1.9 onwards. |
 | ReplicationInfo.User | String | The username used to connect to the DMA from which the element is replicated. Available from DataMiner 10.1.9 onwards. |
 | TimeoutTime | Integer | The time after which an element goes into timeout (between 0 and 120,000 ms). |
 | SlowPoll | Array | Array consisting of:<br> -  Base (string): “*TIME*”, “*NUMBER*” or “*NO*”<br> -  Value (integer): Depending on the Base configuration, this is a time value (between 1000 and 300,000 ms), the number of timeouts (between 1 and 500), or empty, respectively.<br> -  PingInterval (integer): Between 1000 and 300,000 ms. |

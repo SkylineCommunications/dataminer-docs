@@ -18,4 +18,4 @@ Use this method to retrieve all the properties for a particular element.
 
 | Item | Format | Description |
 |--|--|--|
-| GetPropertiesFor­ElementResult | Array of [DMAProperty](xref:DMAProperty) | All the properties for the specified element. |
+| GetPropertiesForElementResult | Array of [DMAProperty](xref:DMAProperty) | All the properties for the specified element. |

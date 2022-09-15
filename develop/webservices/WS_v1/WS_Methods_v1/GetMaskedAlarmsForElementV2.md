@@ -20,4 +20,4 @@ Available from DataMiner 10.0.7 onwards.
 
 | Item | Format | Description |
 |--|--|--|
-| GetMaskedAlarms­ForElementV2Result | Array of [DMAAlarm](xref:DMAAlarm) | The list of all the masked alarms of the specified element, as well as the alarm cache status. |
+| GetMaskedAlarmsForElementV2Result | Array of [DMAAlarm](xref:DMAAlarm) | The list of all the masked alarms of the specified element, as well as the alarm cache status. |
