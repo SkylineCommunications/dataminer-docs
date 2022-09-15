@@ -188,9 +188,9 @@ To configure a custom user account:
 
 1. Open the SLNetClient test tool. See [Opening the SLNetClientTest tool](xref:Opening_the_SLNetClientTest_tool).
 
-2. Connect to the DMA. See [Connecting to a DMA with the SLNetClientTest tool](xref:Connecting_to_a_DMA_with_the_SLNetClientTest_tool).
+1. Connect to the DMA. See [Connecting to a DMA with the SLNetClientTest tool](xref:Connecting_to_a_DMA_with_the_SLNetClientTest_tool).
 
-3. Edit the connection strings between the DMAs. See [Editing the connection string between two DataMiner Agents](xref:SLNetClientTest_tool_advanced_procedures#editing-the-connection-string-between-two-dataminer-agents).
+1. Edit the connection strings between the DMAs. See [Editing the connection string between two DataMiner Agents](xref:SLNetClientTest_editing_connection_string).
 
 ### What do I do if there is an SLNet process disappearance?
 

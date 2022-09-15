@@ -8,31 +8,32 @@ The file *SNMP Managers.xml* is used for the configuration of remote SNMP Manage
 
 - This file is located in the following folder:
 
-    *C:\\Skyline DataMiner\\*
+  *C:\\Skyline DataMiner\\*
 
 - For each DataMiner Agent in the DMS, the *\<Configuration>* section of this file contains an *\<Agent>* tag with the following subtags:
 
-    - *\<AuthoritativeEngineID>*: The engine ID used by the DMA for northbound SNMP traffic.
+  - *\<AuthoritativeEngineID>*: The engine ID used by the DMA for northbound SNMP traffic.
 
-    - *\<EngineBoots>*: The number of engine restarts of the DMA.
+  - *\<EngineBoots>*: The number of engine restarts of the DMA.
 
 > [!NOTE]
+>
 > - The *\<Configuration>* section of this file is not synced in the cluster. Each DMA only reads the entry in this section that matches its DataMiner ID.
-> - It is possible to change the engine ID using the SLNetClientTest tool. However, note that this is an advanced system administration tool that should be used with extreme care. See [Modifying the engine ID of a DMA](xref:SLNetClientTest_tool_advanced_procedures#modifying-the-engine-id-of-a-dma).
+> - It is possible to change the engine ID using the SLNetClientTest tool. However, note that this is an advanced system administration tool that should be used with extreme care. See [Modifying the engine ID of a DMA](xref:SLNetClientTest_modifying_engine_id).
 
-- From DataMiner 9.5.9 onwards, each *\<SnmpManager>* tag can have a codepage attribute, which makes it possible to select a code page. Its value is an integer. For example:
+- From DataMiner 9.5.9 onwards, each *\<SnmpManager>* tag can have a *codepage* attribute, which makes it possible to select a code page. Its value is an integer. For example:
 
-    | Attribute configuration | Description            |
-    |---------------------------|------------------------|
-    | codepage="65001"          | Equals unicode=”true”  |
-    | codepage="0"              | Equals unicode=”false” |
+  | Attribute configuration | Description            |
+  |---------------------------|------------------------|
+  | codepage="65001"          | Equals unicode=”true”  |
+  | codepage="0"              | Equals unicode=”false” |
 
     For a list of all possible code pages, see <https://msdn.microsoft.com/en-us/library/windows/desktop/dd317756(v=vs.85).aspx>.
 
 > [!NOTE]
 > To implement any manual changes to *SNMP Managers.xml*, first stop the DMA and then restart it after your changes have been saved.
 
-### Example of the \<Configuration> section in the SNMP Managers.xml file
+## Example of the \<Configuration> section in the SNMP Managers.xml file
 
 ```xml
 <SNMP xmlns="http://www.skyline.be/config/snmpmanagers">

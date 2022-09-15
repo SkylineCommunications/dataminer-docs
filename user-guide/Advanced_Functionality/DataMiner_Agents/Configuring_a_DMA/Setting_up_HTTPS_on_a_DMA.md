@@ -60,6 +60,7 @@ To set up your own HTTPS web server, you must first install an SSL/TLS certifica
    1. Under *Redirect URL*, fill in the full HTTPS URL for your web server.
 
       > [!NOTE]
+      >
       > - The redirection URL should contain a placeholder {R:1} to make the redirection work properly, e.g. `https://www.myhost.com/{R:1}`.
       > - The HTTPS URL must match the one defined in the SSL certificate. Otherwise, users will receive warnings about an invalid certificate. TLS/SSL certificates are issued either for a specific hostname (e.g. www.skyline.be) or for all subdomains of a certain domain (e.g. \*.skyline.be).
       > - The redirect rule should skip the redirect on `localhost`.
@@ -67,6 +68,7 @@ To set up your own HTTPS web server, you must first install an SSL/TLS certifica
    1. Set *Redirect type* to "Found (302)".
 
 > [!NOTE]
+>
 > - When Failover is active and HTTPS traffic is required, the virtual IP (or the shared hostname) must be added in the *Subject Alternative Name* field of the TLS/SSL certificate on both DataMiner Agents.
 > - To connect to your DMA **using the IP address**, make sure the *Subject Alternative Name* field of the TLS/SSL certificate contains the IP address.
 
@@ -74,7 +76,7 @@ To set up your own HTTPS web server, you must first install an SSL/TLS certifica
 
 If the default web server on the server has been modified to only allow HTTPS traffic, there could be problems with the auto-detection of connection settings.
 
-To avoid this, it is possible to specify alternative auto-detection information via the *Edit Connection Uris* functionality in the SLNetClientTest tool. However, note that this is an advanced system administration tool that should be used with extreme care. See [Editing the connection string between two DataMiner Agents](xref:SLNetClientTest_tool_advanced_procedures#editing-the-connection-string-between-two-dataminer-agents).
+To avoid this, it is possible to specify alternative auto-detection information via the *Edit Connection Uris* functionality in the SLNetClientTest tool. However, note that this is an advanced system administration tool that should be used with extreme care. See [Editing the connection string between two DataMiner Agents](xref:SLNetClientTest_editing_connection_string).
 
 The following auto-detect methods can be specified:
 
@@ -138,7 +140,7 @@ To do so:
 - **My browser displays a "This site is not secure" warning when I connect to my DataMiner System**
 
     Most likely, the URL does not match the *Common Name (CN)* or *Subject Alternative Name (SAN)* field of the TLS certificate. For example, `https://localhost` or `https://10.10.10.10` does not match *dataminer.skyline.be*. To fix this, update the certificate so the *Subject Alternative Name (SAN)* matches the URL, or use a URL that matches the *Common Name (CN)* or *Subject Alternative Name (SAN)* field.
-    
+
     If the URL matches the certificate, your machine likely does not trust the certificate or the certificate is self-signed. Ensure the certificate is added to the *Trusted Root Certification Authorities* of your certificate store. For more information, see [trusting a certificate in Windows](https://techcommunity.microsoft.com/t5/windows-server-essentials-and/installing-a-self-signed-certificate-as-a-trusted-root-ca-in/ba-p/396105).
 
 - **I cannot log in to the DataMiner Web Applications (e.g. Monitoring, Dashboards, Ticketing, etc.)**
