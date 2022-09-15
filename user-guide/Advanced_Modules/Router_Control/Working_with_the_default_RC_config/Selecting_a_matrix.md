@@ -14,4 +14,6 @@ At the top of the *Router Control* module, underneath the gray header area, you 
 
     - two information panels (the left one showing information about the selected input, and the right one showing information about the selected output), and
 
-    - three buttons (Connect, Disconnect, and N/A). The "Lock" keyword replaces "N/A" when an input and output is clicked upon in the *Router Control* UI. The "Unlock" option appears when input and output were previously locked.
+    - three buttons (Connect, Disconnect, and N/A(shown when first opening the matrix in the Router Control app)). 
+
+ > [!NOTE] The "Lock" keyword replaces "N/A" when an input and output is selected in the *Router Control* UI. The "Unlock" option appears when input and output were previously locked.
