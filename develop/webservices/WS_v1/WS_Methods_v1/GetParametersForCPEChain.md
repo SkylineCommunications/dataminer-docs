@@ -20,11 +20,12 @@ Use this method to retrieve the parameters for a specified chain of a CPE elemen
 
 | Item                            | Format                   | Description                            |
 |---------------------------------|--------------------------|----------------------------------------|
-| GetParametersForCPE­ChainResult | Array of DMAParameterCPE | The parameters of the specified chain. |
+| GetParametersForCPEChainResult | Array of DMAParameterCPE | The parameters of the specified chain. |
 
 > [!NOTE]
 > The DMAParameterCPE array that is returned by this method has the same properties as the DMAParameterTableRow array, with some additional filter information:
-> -  NoSelectionFilter indicates whether a selection filter is applied to the table.
-> -  FixedFilter indicates whether a fixed filter is used to retrieve the data.
+>
+> - NoSelectionFilter indicates whether a selection filter is applied to the table.
+> - FixedFilter indicates whether a fixed filter is used to retrieve the data.
 >
 > See [DMAParameterTableRow](xref:DMAParameterTableRow).

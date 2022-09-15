@@ -18,4 +18,4 @@ Use this method to retrieve the notes for a particular service.
 
 | Item | Format | Description |
 |--|--|--|
-| GetNotesForService­Result | Array of [DMANote](xref:DMANote) | The notes for the specified service. |
+| GetNotesForServiceResult | Array of [DMANote](xref:DMANote) | The notes for the specified service. |

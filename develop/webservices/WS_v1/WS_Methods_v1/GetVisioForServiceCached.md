@@ -26,4 +26,4 @@ All images are in PNG format, and are base64 encoded.
 
 | Item | Format | Description |
 |--|--|--|
-| GetVisioForService­CachedResult | [DMACache](xref:DMACache) | The Visio file linked to the specified service, returned as an image. |
+| GetVisioForServiceCachedResult | [DMACache](xref:DMACache) | The Visio file linked to the specified service, returned as an image. |

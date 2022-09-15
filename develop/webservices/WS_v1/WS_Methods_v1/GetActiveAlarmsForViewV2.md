@@ -19,4 +19,4 @@ Available from DataMiner 10.0.7 onwards.
 
 | Item | Format | Description |
 |--|--|--|
-| GetActiveAlarmsFor­ViewV2Result | Array of [DMAAlarm](xref:DMAAlarm) | The active alarms of the specified view, as well as the alarm cache status. |
+| GetActiveAlarmsForViewV2Result | Array of [DMAAlarm](xref:DMAAlarm) | The active alarms of the specified view, as well as the alarm cache status. |

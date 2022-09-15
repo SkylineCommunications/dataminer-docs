@@ -17,6 +17,6 @@ Use this method to retrieve the data of a particular parameter by name.
 
 ## Output
 
-| Item                      | Format                                                   | Description                          |
-|---------------------------|----------------------------------------------------------|--------------------------------------|
-| GetParameterByName­Result | [DMAParameter](xref:DMAParameter) | The data of the specified parameter. |
+| Item | Format | Description |
+|--|--|--|
+| GetParameterByNameResult | [DMAParameter](xref:DMAParameter) | The data of the specified parameter. |

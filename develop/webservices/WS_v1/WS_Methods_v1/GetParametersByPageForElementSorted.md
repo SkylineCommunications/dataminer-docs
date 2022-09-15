@@ -25,4 +25,4 @@ Use this method to retrieve a specific number of parameters on a particular Data
 
 | Item | Format | Description |
 |--|--|--|
-| GetParametersByPage­ForElementSortedResult | Array of [DMAParameter](xref:DMAParameter) | The requested number of parameters, sorted as specified. |
+| GetParametersByPageForElementSortedResult | Array of [DMAParameter](xref:DMAParameter) | The requested number of parameters, sorted as specified. |

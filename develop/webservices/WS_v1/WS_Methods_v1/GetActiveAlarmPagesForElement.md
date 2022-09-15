@@ -17,6 +17,6 @@ Use this method to retrieve the number of active alarms of an element, grouped e
 
 ## Output
 
-| Item                                 | Format                     | Description                                                                                                                                                                                                                                                                                             |
-|--------------------------------------|----------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| GetActiveAlarmPages­ForElementResult | Array of (Array of String) | The number of active alarms of the specified element, grouped by time span or severity. For every time span, the method returns an array containing the time span or the severity, the number of alarms in that time span or with that severity, and the highest severity found among those alarms. |
+| Item | Format | Description |
+|--|--|--|
+| GetActiveAlarmPagesForElementResult | Array of (Array of String) | The number of active alarms of the specified element, grouped by time span or severity. For every time span, the method returns an array containing the time span or the severity, the number of alarms in that time span or with that severity, and the highest severity found among those alarms. |

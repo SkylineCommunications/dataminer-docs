@@ -17,4 +17,4 @@ Use this method to create a job template.
 
 | Item                     | Format | Description                         |
 |--------------------------|--------|-------------------------------------|
-| CreateJobTemplate­Result | String | The ID of the created job template. |
+| CreateJobTemplateResult | String | The ID of the created job template. |

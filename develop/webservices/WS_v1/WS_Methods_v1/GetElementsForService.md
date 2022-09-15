@@ -19,4 +19,4 @@ Use this method to retrieve the list of all child items (elements and/or service
 
 | Item | Format | Description |
 |--|--|--|
-| GetElementsForService­Result | Array of [DMAElement](xref:DMAElement) | The list of all the child items of the specified service. |
+| GetElementsForServiceResult | Array of [DMAElement](xref:DMAElement) | The list of all the child items of the specified service. |

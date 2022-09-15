@@ -17,4 +17,4 @@ Use this method to retrieve all changes that were made to a job, with the most r
 
 | Item                  | Format                        | Description                                                  |
 |-----------------------|-------------------------------|--------------------------------------------------------------|
-| GetJobsHistoryResult  | Array of DMAJobHistory­Change  | The changes that were made to the specified job in the past. |
+| GetJobsHistoryResult  | Array of DMAJobHistoryChange  | The changes that were made to the specified job in the past. |

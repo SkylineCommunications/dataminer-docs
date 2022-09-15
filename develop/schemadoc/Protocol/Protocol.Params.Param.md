@@ -24,7 +24,7 @@ Defines a parameter.
 |[pollingInterval](xref:Protocol.Params.Param-pollingInterval)|unsignedInt||Specifies the polling interval (ms) as a hint for the real-time trend graph.|
 |[save](xref:Protocol.Params.Param-save)|[EnumTrueFalse](xref:Protocol-EnumTrueFalse)||Specifies whether the parameter has to be saved each time its value changes.|
 |[saveInterval](xref:Protocol.Params.Param-saveInterval)|duration||Specifies that only one save operation must be executed per interval.|
-|[setter](xref:Protocol.Params.Param-setter)|[EnumTrueFalse](xref:Protocol-EnumTrueFalse)||Specifies whether the value of the write parameter will be copied to the corresponding read parameter (with­out the need to add a trigger or an action).|
+|[setter](xref:Protocol.Params.Param-setter)|[EnumTrueFalse](xref:Protocol-EnumTrueFalse)||Specifies whether the value of the write parameter will be copied to the corresponding read parameter (without the need to add a trigger or an action).|
 |[snapshot](xref:Protocol.Params.Param-snapshot)|[EnumTrueFalse](xref:Protocol-EnumTrueFalse)||Specifies the offload of snapshots of a parameter to the central database.|
 |[snmpSetAndGet](xref:Protocol.Params.Param-snmpSetAndGet)|string||Performs a set and get on a "write" parameter.|
 |[trending](xref:Protocol.Params.Param-trending)|[EnumTrueFalse](xref:Protocol-EnumTrueFalse)||Specifies whether the parameter supports trending.|

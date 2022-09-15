@@ -19,4 +19,4 @@ Available from DataMiner 10.0.7 onwards.
 
 | Item | Format | Description |
 |--|--|--|
-| GetAlarmPageWith­AlarmsV2Result | Array of [DMAAlarm](xref:DMAAlarm) | The alarms matching the filter on the page, as well as the alarm cache status. |
+| GetAlarmPageWithAlarmsV2Result | Array of [DMAAlarm](xref:DMAAlarm) | The alarms matching the filter on the page, as well as the alarm cache status. |

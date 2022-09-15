@@ -18,4 +18,4 @@ Use this method to retrieve the data of all the parameters of a particular servi
 
 | Item | Format | Description |
 |--|--|--|
-| GetParametersForSer­viceResult | Array of [DMAParameter](xref:DMAParameter) | The data of all the parameters of the specified service. |
+| GetParametersForServiceResult | Array of [DMAParameter](xref:DMAParameter) | The data of all the parameters of the specified service. |

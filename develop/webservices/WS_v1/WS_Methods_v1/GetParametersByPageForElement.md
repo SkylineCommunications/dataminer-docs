@@ -19,4 +19,4 @@ Use this method to retrieve the data of all the parameters on a particular Data 
 
 | Item | Format | Description |
 |--|--|--|
-| GetParametersByPage­ForElementResult | Array of [DMAParameter](xref:DMAParameter) | The data of all the parameters on the specified element page. |
+| GetParametersByPageForElementResult | Array of [DMAParameter](xref:DMAParameter) | The data of all the parameters on the specified element page. |

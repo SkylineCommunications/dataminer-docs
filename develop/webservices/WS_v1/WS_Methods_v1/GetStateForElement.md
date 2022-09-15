@@ -18,4 +18,4 @@ Use this method to retrieve the current state of a particular element.
 
 | Item                      | Format | Description                                 |
 |---------------------------|--------|---------------------------------------------|
-| GetStateForElement­Result | String | The current state of the specified element. |
+| GetStateForElementResult | String | The current state of the specified element. |

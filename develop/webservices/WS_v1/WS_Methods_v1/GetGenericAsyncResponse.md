@@ -19,4 +19,4 @@ Use this method to retrieve the result of a task that was sent to the server usi
 
 | Item | Format | Description |
 |--|--|--|
-| GetGenericAsync­ResponseResult | Depending on the task | The result of the task that was sent to the server using the [ExecuteGenericAsyncRequest](xref:ExecuteGenericAsyncRequest) method. |
+| GetGenericAsyncResponseResult | Depending on the task | The result of the task that was sent to the server using the [ExecuteGenericAsyncRequest](xref:ExecuteGenericAsyncRequest) method. |

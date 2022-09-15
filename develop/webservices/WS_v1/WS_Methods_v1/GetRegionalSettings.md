@@ -16,4 +16,4 @@ Use this method to retrieve the regional settings.
 
 | Item | Format | Description |
 |--|--|--|
-| GetRegionalSettings­Result | [DMARegionalSettings](xref:DMARegionalSettings) | The regional settings. |
+| GetRegionalSettingsResult | [DMARegionalSettings](xref:DMARegionalSettings) | The regional settings. |

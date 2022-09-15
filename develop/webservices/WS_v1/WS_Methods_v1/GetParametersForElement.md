@@ -16,6 +16,6 @@ Use this method to retrieve the data of all the parameters of a particular eleme
 
 ## Output
 
-| Item                           | Format                                                                               | Description                                              |
-|--------------------------------|--------------------------------------------------------------------------------------|----------------------------------------------------------|
-| GetParametersFor­ElementResult | Array of [DMAParameter](xref:DMAParameter) | The data of all the parameters of the specified element. |
+| Item | Format | Description |
+|--|--|--|
+| GetParametersForElementResult | Array of [DMAParameter](xref:DMAParameter) | The data of all the parameters of the specified element. |

@@ -15,7 +15,7 @@ Defines if and how a parameter will be displayed on the user interface.
 |Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|Occurrences|Description|
 |--- |--- |--- |
 |***All***|||
-|&nbsp;&nbsp;[Decimals](xref:Protocol.Params.Param.Display.Decimals)|[0, 1]|Defines the number of decimals to be used to display the parameter value on the user inter­face.|
+|&nbsp;&nbsp;[Decimals](xref:Protocol.Params.Param.Display.Decimals)|[0, 1]|Defines the number of decimals to be used to display the parameter value on the user interface.|
 |&nbsp;&nbsp;[DynamicUnits](xref:Protocol.Params.Param.Display.DynamicUnits)|[0, 1]|Specifies the dynamic units that can be used.|
 |&nbsp;&nbsp;[ParametersView](xref:Protocol.Params.Param.Display.ParametersView)|[0, 1]|Allows displaying a parameter as a chart.|
 |&nbsp;&nbsp;[Positions](xref:Protocol.Params.Param.Display.Positions)|[0, 1]|Defines the position of the parameter on the user interface.|

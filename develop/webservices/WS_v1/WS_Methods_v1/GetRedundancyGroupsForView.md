@@ -18,4 +18,4 @@ Use this method to retrieve all the redundancy groups for a particular view.
 
 | Item | Format | Description |
 |--|--|--|
-| GetRedundancyGroups­ForViewResult | Array of [DMARedundancyGroup](xref:DMARedundancyGroup) | The redundancy groups of the specified view. |
+| GetRedundancyGroupsForViewResult | Array of [DMARedundancyGroup](xref:DMARedundancyGroup) | The redundancy groups of the specified view. |

@@ -18,4 +18,4 @@ Use this method to retrieve the list of all the masked alarms of a particular el
 
 | Item | Format | Description |
 |--|--|--|
-| GetMaskedAlarms­ForElementResult | Array of [DMAAlarm](xref:DMAAlarm) | The list of all the masked alarms of the specified element. |
+| GetMaskedAlarmsForElementResult | Array of [DMAAlarm](xref:DMAAlarm) | The list of all the masked alarms of the specified element. |

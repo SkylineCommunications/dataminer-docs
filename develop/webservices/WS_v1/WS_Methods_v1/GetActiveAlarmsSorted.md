@@ -23,4 +23,4 @@ Use this method to retrieve a specific number of active alarms with a particular
 
 | Item | Format | Description |
 |--|--|--|
-| GetActiveAlarms­SortedResult | Array of [DMAAlarm](xref:DMAAlarm) | The requested number of active alarms, sorted as specified. |
+| GetActiveAlarmsSortedResult | Array of [DMAAlarm](xref:DMAAlarm) | The requested number of active alarms, sorted as specified. |

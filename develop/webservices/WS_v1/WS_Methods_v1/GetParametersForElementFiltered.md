@@ -24,4 +24,4 @@ Use this method to retrieve the parameters of a particular element that match a 
 
 | Item | Format | Description |
 |--|--|--|
-| GetParametersFor­ElementFilteredResult | Array of [DMAParameter](xref:DMAParameter) | The parameters of the specified element that match the specified filter. |
+| GetParametersForElementFilteredResult | Array of [DMAParameter](xref:DMAParameter) | The parameters of the specified element that match the specified filter. |
