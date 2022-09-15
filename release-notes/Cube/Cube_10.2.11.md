@@ -38,13 +38,31 @@ In service definition diagrams, function resource icons are now centered.
 
 When a shape was linked to an element that was not part of a service, up to now, an attempt would be made to determine the service context even when no service context had been specified. From now on, the service context will only be determined when the service context has been specified in the shape.
 
+#### DataMiner Cube - Visual Overview: Enhanced performance when sorting dynamically positioned shapes [ID_34351]
+
+<!-- Main Release Version 10.1.0 [CU20]/10.2.0 [CU8] - Feature Release Version 10.2.11 -->
+
+Because of a number of enhancements, overall performance has increased when sorting dynamically positioned shapes.
+
 ### Fixes
+
+#### DataMiner Cube - Trending: Y-axis values did not take into account the number of decimals configured in the protocol.xml file [ID_34269]
+
+<!-- Main Release Version 10.1.0 [CU20]/10.2.0 [CU8] - Feature Release Version 10.2.11 -->
+
+When you opened a trend graph, the Y-axis values would incorrectly not take into account the number of decimals configured in the *protocol.xml* file for the parameters in question.
 
 #### DataMiner Cube - Alarm Console: Negative counters in the footer bar [ID_34318]
 
 <!-- Main Release Version 10.2.0 [CU8] - Feature Release Version 10.2.11 -->
 
 On systems with active correlation rules, in some rare cases, the counters in the footer bar of the Alarm Console could show negative numbers.
+
+#### DataMiner Cube - EPM: Not possible to add a second parameter to a trend graph of an EPM object [ID_34323]
+
+<!-- Main Release Version 10.1.0 [CU20]/10.2.0 [CU8] - Feature Release Version 10.2.11 -->
+
+When you opened a trend graph of an EPM object, it would not be possible to add a second parameter. After you had added a new parameter, the drop-down box would incorrectly only contain the current parameter.
 
 #### DataMiner Cube - Visual Overview: Fix multiple script executions on page shape data change [ID_34412]
 
