@@ -16,6 +16,12 @@ uid: General_Main_Release_10.2.0_CU8
 
 A number of security enhancements have been made.
 
+#### Ticketing app: Enhanced error handling [ID_33414]
+
+<!-- Main Release Version 10.2.0 [CU8] - Feature Release Version 10.2.11 -->
+
+Because of a number of enhancements, overall error handling has improved.
+
 #### Performance improvement to update service state more quickly [ID_34165]
 
 <!-- Main Release Version 10.1.0 [CU20]/10.2.0 [CU8] - Feature Release Version 10.2.11 -->
@@ -58,11 +64,11 @@ When a shape was linked to an element that was not part of a service, up to now,
 
 Because of a number of enhancements to the buffering mechanism, overall performance has improved when executing interactive Automation scripts in web apps.
 
-#### Ticketing app: Enhanced error handling [ID_33414]
+#### SLLogCollector will now also collect the prerequisite output files and all upgrade logs [ID_34352]
 
 <!-- Main Release Version 10.2.0 [CU8] - Feature Release Version 10.2.11 -->
 
-Because of a number of enhancements, overall error handling has improved.
+The SLLogCollector tool will also collect all prerequisite output files as well as all upgrade logs.
 
 ### Fixes
 
