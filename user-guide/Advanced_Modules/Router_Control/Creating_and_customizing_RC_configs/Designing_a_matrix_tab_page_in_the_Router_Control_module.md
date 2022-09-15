@@ -38,7 +38,7 @@ This section consists of the following topics:
 
     2. Next to *Select matrix*, select the matrix parameter.
 
-        Alternatively, you can enter a custom matrix in the *Custom matrix* box after clicking on *Advanced Configuration*. The custom matrix is represented by 2 table parameters, instead of a matrix type parameter. See [Adding a matrix represented by two table parameters](#adding-a-matrix-represented-by-two-table-parameters).
+        Alternatively, you can configure a custom matrix in the *Advanced Configuration* section. The custom matrix is represented by 2 table parameters, instead of a matrix type parameter. See [Adding a matrix represented by two table parameters](#adding-a-matrix-represented-by-two-table-parameters).
 
     3. Next to *Layout*, specify whether you want to start with a pre-built default configuration (*General Default*) or an empty canvas (*Empty*).
 
@@ -70,9 +70,11 @@ The Router Control module also supports matrices that are represented by two tab
 
 In order to add such a matrix, do the following:
 
-1. Add a matrix like in the procedure above, until you get to the *Add Matrix* dialog box.
+1. Add a matrix like in the procedure above, until you get to the *Advanced Configuration* section.
 
-2. In the *Add Matrix* dialog box, when *Advanced Configuration* was clicked, enter the following syntax in the *Custom matrix* box:
+2. Open the *Advanced Configuration* section.
+
+3. Enter the following syntax in the *Custom matrix* box:
 
     ```txt
     dmaid/elementid;inputs=tablepid,indexpid,labelpid,enabledpid,lockedpid,notespid;outputs=tablepid,indexpid,labelpid,enabledpid,lockedpid,notespid,connectedinputpid
@@ -84,7 +86,7 @@ In order to add such a matrix, do the following:
     34/505527;inputs=1000,1001,1002,1003,1004,1005;outputs=2000,2001,2002, 2003,2004,2005,2006
     ```
 
-3. Optionally (from DataMiner 9.6.4 onwards), in the *Input filter* and *Output filter* boxes, specify a subscription filter as follows:
+4. Optionally (from DataMiner 9.6.4 onwards), in the *Input filter* and *Output filter* boxes, specify a subscription filter as follows:
 
     - All column parameters except the table index column must be part of the relevant subscription filter. Column parameters from the input table must be part of the input filter, column parameters from the output table must be part of the output filter.
 
@@ -92,7 +94,7 @@ In order to add such a matrix, do the following:
 
     - The subscription filter syntax must be used as detailed in [Dynamic table filter syntax](xref:Dynamic_table_filter_syntax).
 
-4. Continue in the same manner as when adding a regular matrix. See [Adding a matrix to a configuration tab page](#adding-a-matrix-to-a-configuration-tab-page).
+5. Continue in the same manner as when adding a regular matrix. See [Adding a matrix to a configuration tab page](#adding-a-matrix-to-a-configuration-tab-page).
 
 Note that the input and output tables must have at least the following read and write columns:
 
