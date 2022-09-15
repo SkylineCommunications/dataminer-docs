@@ -17,4 +17,4 @@ Use this method to retrieve alarm page information for a custom selection of ala
 
 | Item | Format | Description |
 |--|--|--|
-| GetAlarmPageUpdates­Result | Array of [DMAAlarmPageUpdate](xref:DMAAlarmPageUpdate) | The alarm page information for the alarms matching the specified filters. |
+| GetAlarmPageUpdatesResult | Array of [DMAAlarmPageUpdate](xref:DMAAlarmPageUpdate) | The alarm page information for the alarms matching the specified filters. |

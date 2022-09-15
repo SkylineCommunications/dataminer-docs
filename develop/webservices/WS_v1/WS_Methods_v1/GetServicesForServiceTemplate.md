@@ -18,4 +18,4 @@ Use this method to retrieve all the services attached to a specified service tem
 
 | Item | Format | Description |
 |--|--|--|
-| GetServicesForService­TemplateResult | Array of [DMAElement](xref:DMAElement) | The services attached to the specified service template. |
+| GetServicesForServiceTemplateResult | Array of [DMAElement](xref:DMAElement) | The services attached to the specified service template. |

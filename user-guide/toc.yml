@@ -2731,6 +2731,8 @@
     - name: Known issues
       topicUID: Known_issues
       items:
+        - name: SLDMS Hosting Agent cache issue
+          topicUID: KI_SLDMS_hosting_agent_cache_issue
         - name: Closed alarms migrated too slowly from dms-activealarms index in Elasticsearch database
           topicUID: KI_Closed_alarms_migrated_too_slowly
         - name: SNMP polling issues in case protocol contains wildcards in parameter OIDs

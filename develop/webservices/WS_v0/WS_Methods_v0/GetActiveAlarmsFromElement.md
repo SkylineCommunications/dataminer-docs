@@ -17,4 +17,4 @@ Use this method to request a list of all the alarms of a specific element (refer
 
 | Item | Format | Description |
 |--|--|--|
-| GetActiveAlarmsFrom­ElementResult | Array of [AlarmEventMessage](xref:AlarmEventMessage) | All the alarms of the specified element. |
+| GetActiveAlarmsFromElementResult | Array of [AlarmEventMessage](xref:AlarmEventMessage) | All the alarms of the specified element. |

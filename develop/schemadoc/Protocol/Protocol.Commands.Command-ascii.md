@@ -16,7 +16,7 @@ Allows to specify that parameters should be sent as ASCII even if the protocol i
 
 ## Remarks
 
-This attribute allows you to specify that parameters should be sent as ASCII even if the protocol is in Uni­code.
+This attribute allows you to specify that parameters should be sent as ASCII even if the protocol is in Unicode.
 
 In the ascii attribute, you can specify that you want all parameters in the command to be sent as ASCII (e.g. ascii=”true”) or just some of the parameters, delimited with a semicolon (e.g. ascii=”18;40”).
 

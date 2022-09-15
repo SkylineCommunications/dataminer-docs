@@ -177,7 +177,7 @@ Configure the shape data as follows:
    | TimeStamp | The date and time for which the parameter value should be displayed. You can use a placeholder to change this value dynamically. |
    | NoDataValue= | This option allows you to specify the text that should be displayed in case no trending is available. If this option is not specified, the default value “N/A” is displayed. |
    | TrendDataType | This option allows you to determine which kind of trend data should be used, if available: *Realtime* (default), *Average* or *RealtimeAndAverage*. |
-   | AverageTrendData­Indication | This option allows you to specify a prefix to the parameter value in case it represents an average value. By default, no prefix is shown. |
+   | AverageTrendDataIndication | This option allows you to specify a prefix to the parameter value in case it represents an average value. By default, no prefix is shown. |
 
    For example:
 

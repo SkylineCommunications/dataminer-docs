@@ -21,4 +21,4 @@ Use this method to retrieve the names of all files attached to a specific ticket
 
 | Item                            | Format          | Description                                           |
 |---------------------------------|-----------------|-------------------------------------------------------|
-| GetTicketAttachment­NamesResult | Array of string | The names of the attachments of the specified ticket. |
+| GetTicketAttachmentNamesResult | Array of string | The names of the attachments of the specified ticket. |

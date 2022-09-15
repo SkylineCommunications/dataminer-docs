@@ -376,12 +376,6 @@ Because of enhancements to the way resources are processed and stored, the Resou
 
 In addition, performance has improved when a resource or resource pool is added or updated.
 
-#### Improved performance of SLDataGateway process [ID_34206]
-
-<!-- MR 10.3.0 - FR 10.2.10 -->
-
-Because of improved internal logic, the performance of the SLDataGateway process has improved.
-
 ### Fixes
 
 #### SLAnalytics: Problem with trend prediction [ID_31352]

@@ -21,4 +21,4 @@ Use this method to request the current state and current value(s) of specific pa
 
 | Item | Format | Description |
 |--|--|--|
-| GetParameterValueBy­ElementNameResult | Array of [ParamValue](xref:ParamValue) | The properties of the requested parameters. |
+| GetParameterValueByElementNameResult | Array of [ParamValue](xref:ParamValue) | The properties of the requested parameters. |

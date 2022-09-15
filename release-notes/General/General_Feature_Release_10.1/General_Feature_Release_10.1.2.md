@@ -388,7 +388,7 @@ In the SLNetClientTest program, it is now possible to view and delete trend data
 
 ### Enhancements
 
-#### DataMiner Cube - Alarm templates: Hysteresis values can now be lower than the polling inter­val \[ID_28207\]
+#### DataMiner Cube - Alarm templates: Hysteresis values can now be lower than the polling interval \[ID_28207\]
 
 In the Alarm template editor, it is possible to configure hysteresis values for a monitored parameter. From now on, you will be able to enter hysteresis values that are lower than the polling interval of the parameter or the protocol. This will allow hysteresis to also work correctly for protocols in which SNMP traps are defined.
 
@@ -411,7 +411,7 @@ From now on, if this attribute is not specified, it will by default be set to �
 
 In the Protocol & Templates app, it is now also possible to have signed enhanced service protocols.
 
-#### DataMiner Cube - Services app & Visual Overview: Enhanced performance when refreshing ser­vice definition diagrams \[ID_28340\]
+#### DataMiner Cube - Services app & Visual Overview: Enhanced performance when refreshing service definition diagrams \[ID_28340\]
 
 Due to a number of enhancements, overall performance has increased when refreshing service definition diagrams, both in the Services app and in Service Manager components embedded in visual overviews.
 
@@ -649,6 +649,6 @@ When, in the *Database* section of *System Center*, you opted to offload databas
 
 When you wanted to share a dashboard using the Live Sharing Service, in some cases, a parsing error could occur when that dashboard was located in a dashboard folder.
 
-#### DataMiner Cube - Profiles app: Production versions not listed in protocol list when adding a pro­file parameter \[ID_28687\]
+#### DataMiner Cube - Profiles app: Production versions not listed in protocol list when adding a profile parameter \[ID_28687\]
 
 When, in the Profiles app, you added a profile parameter, in some cases, the list of available protocols would incorrectly not list production versions.

@@ -187,7 +187,7 @@ In addition, performance has improved when a resource or resource pool is added 
 
 #### Improved performance of SLDataGateway process [ID_34206]
 
-<!-- MR 10.3.0 - FR 10.2.10 -->
+<!-- MR 10.2.0 [CU8] - FR 10.2.10 -->
 
 Because of improved internal logic, the performance of the SLDataGateway process has improved.
 
@@ -467,3 +467,9 @@ While query pages were being retrieved via GQI, each time a new page was loaded,
 <!-- MR 10.3.0 - FR 10.2.10 -->
 
 when a dashboard, a low-code app page or low-code app panel was initialized, in some cases, query column filters would not be applied correctly to table components on that dashboard, page or panel.
+
+#### SLDMS could incorrectly forget in-memory element information [ID_34363]
+
+<!-- MR 10.2.0 [CU7] - FR 10.2.10 [CU0] -->
+
+In some cases, SLDMS could incorrectly forget in-memory element information, causing certain element actions to fail.

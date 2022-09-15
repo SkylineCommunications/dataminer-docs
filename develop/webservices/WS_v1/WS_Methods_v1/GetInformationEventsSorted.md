@@ -21,4 +21,4 @@ Use this method to retrieve the information events for a specified timespan, sor
 
 | Item | Format | Description |
 |--|--|--|
-| GetInformationEvents­SortedResult | Array of [DMAAlarm](xref:DMAAlarm) | The information events for the indicated period, sorted as required. |
+| GetInformationEventsSortedResult | Array of [DMAAlarm](xref:DMAAlarm) | The information events for the indicated period, sorted as required. |

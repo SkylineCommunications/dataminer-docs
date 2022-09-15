@@ -321,3 +321,9 @@ In some rare cases, an error could occur in SLElement when multiple foreign keys
 <!-- MR 10.2.0 [CU7] - FR 10.2.10 -->
 
 While query pages were being retrieved via GQI, each time a new page was loaded, the loader bar at the top of a table component would incorrectly be refreshing.
+
+#### SLDMS could incorrectly forget in-memory element information [ID_34363]
+
+<!-- MR 10.2.0 [CU7] - FR 10.2.10 [CU0] -->
+
+In some cases, SLDMS could incorrectly forget in-memory element information, causing certain element actions to fail.

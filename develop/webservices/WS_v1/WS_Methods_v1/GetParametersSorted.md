@@ -25,4 +25,4 @@ Use this method to retrieve a specific number of element parameters by ID and na
 
 | Item | Format | Description |
 |--|--|--|
-| GetParametersSorted­Result | Array of [DMAParameter](xref:DMAParameter) | The parameters for the specified element, sorted as requested. |
+| GetParametersSortedResult | Array of [DMAParameter](xref:DMAParameter) | The parameters for the specified element, sorted as requested. |

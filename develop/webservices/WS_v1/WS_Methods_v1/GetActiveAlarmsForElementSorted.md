@@ -28,4 +28,4 @@ Use this method to retrieve a specific number of active element alarms.
 
 | Item | Format | Description |
 |--|--|--|
-| GetActiveAlarmsFor­ElementSortedResult | Array of [DMAAlarm](xref:DMAAlarm) | The requested number of active element alarms, sorted as specified. |
+| GetActiveAlarmsForElementSortedResult | Array of [DMAAlarm](xref:DMAAlarm) | The requested number of active element alarms, sorted as specified. |

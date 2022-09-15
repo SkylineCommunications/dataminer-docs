@@ -632,7 +632,7 @@ In the *ProcessMonitor.Crashdumps* subtag, you can customize how long crashdump 
 | TempFolders                   | maxDaysToKeep | Maximum number of days a temporary folder (incomplete dump) will be kept. | 7       |
 |                               | minToKeep     | Minimum number of temporary folders (incomplete dumps) kept.              | 0       |
 |                               | maxToKeep     | Maximum number of temporary folders (incomplete dumps) kept.              | 5       |
-| MaxTotalCrashDump­FolderSizeGb | N/A           | Maximum size of the Logging/CrashDump folder.                             | 5       |
+| MaxTotalCrashDumpFolderSizeGb | N/A           | Maximum size of the Logging/CrashDump folder.                             | 5       |
 
 > [!NOTE]
 >

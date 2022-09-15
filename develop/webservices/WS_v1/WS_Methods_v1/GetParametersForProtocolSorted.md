@@ -25,4 +25,4 @@ Use this method to retrieve specific number of parameters for a specified protoc
 
 | Item | Format | Description |
 |--|--|--|
-| GetParametersFor­ProtocolSortedResult | Array of [DMAParameter](xref:DMAParameter) | The parameters for the specified protocol, sorted as requested. |
+| GetParametersForProtocolSortedResult | Array of [DMAParameter](xref:DMAParameter) | The parameters for the specified protocol, sorted as requested. |
