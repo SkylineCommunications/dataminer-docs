@@ -23,6 +23,7 @@ The following sections provide more information on working with DataMiner protoc
 - [Advanced protocol functionality](xref:Advanced_protocol_functionality)
 
 > [!NOTE]
+>
 > - Protocols and protocol versions that have been signed by Skyline are marked with the DataMiner icon in the Protocol & Templates app. Protocols and protocol versions signed by third parties are marked with a blue icon.
 > - If a protocol or protocol version has not been signed by Skyline and is used by one or more elements, a warning icon will be displayed, as unvalidated protocols can potentially cause issues.
->
+> - If you have created a protocol yourself and want to register it for approval by Skyline, contact your Skyline Technical Account Manager.
