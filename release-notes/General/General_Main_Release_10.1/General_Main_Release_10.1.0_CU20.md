@@ -46,6 +46,21 @@ When a shape was linked to an element that was not part of a service, up to now,
 
 Because of a number of enhancements, overall performance has increased when sorting dynamically positioned shapes.
 
+#### DataMiner Cube - Visual Overview: Caching of user settings in order to enhanced performance [ID_34383]
+
+<!-- Main Release Version 10.1.0 [CU20]/10.2.0 [CU8] - Feature Release Version 10.2.11 -->
+
+In Visual Overview, the current value of the following user settings will now be cached in order to enhance performance:
+
+- *Open element cards undocked* (*Settings* window)
+- *AlarmSettings.Blinking* (*MaintenanceSettings.xml* file)
+
+#### DataMiner Cube - Visual Overview: Enhanced performance when determining whether a shape is clickable [ID_34386]
+
+<!-- Main Release Version 10.1.0 [CU20]/10.2.0 [CU8] - Feature Release Version 10.2.11 -->
+
+A number of enhancements have been made to the procedure called to determine whether a shape is clickable. When you hover over a clickable shape, the shape will be highlighted and the mouse pointer will change into a hand cursor.
+
 ### Fixes
 
 #### Dashboard Gateway (legacy): Dashboards would fail to show the Maps component when the DMA had HTTPS configured [ID_33777]
@@ -53,6 +68,12 @@ Because of a number of enhancements, overall performance has increased when sort
 <!-- Main Release Version 10.1.0 [CU20]/10.2.0 [CU8] - Feature Release Version 10.2.11 -->
 
 When a legacy Dashboard Gateway was connected to a DataMiner Agent with HTTPS configured and port 80 blocked, dashboards would fail to show the Maps component.
+
+#### DataMiner Cube - Trending: Y axis would incorrectly show other values when the trend graph showed a constant exception value [ID_34242]
+
+<!-- Main Release Version 10.1.0 [CU20]/10.2.0 [CU8] - Feature Release Version 10.2.11 -->
+
+When you opened a trend graph that only showed a constant exception value, the Y axis would incorrectly not only show the exception value but also a number of other values. In cases like this, from now on, the Y axis will only show the exception value.
 
 #### Problem when deserializing an overridden parameter description [ID_34266]
 
