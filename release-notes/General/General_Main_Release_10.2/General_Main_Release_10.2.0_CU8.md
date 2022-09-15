@@ -64,6 +64,12 @@ When a shape was linked to an element that was not part of a service, up to now,
 
 Because of a number of enhancements to the buffering mechanism, overall performance has improved when executing interactive Automation scripts in web apps.
 
+#### DataMiner Cube - Visual Overview: Enhanced performance when sorting dynamically positioned shapes [ID_34351]
+
+<!-- Main Release Version 10.1.0 [CU20]/10.2.0 [CU8] - Feature Release Version 10.2.11 -->
+
+Because of a number of enhancements, overall performance has increased when sorting dynamically positioned shapes.
+
 #### SLLogCollector will now also collect the prerequisite output files and all upgrade logs [ID_34352]
 
 <!-- Main Release Version 10.2.0 [CU8] - Feature Release Version 10.2.11 -->
@@ -84,6 +90,12 @@ When a legacy Dashboard Gateway was connected to a DataMiner Agent with HTTPS co
 
 When a JSON string containing an overridden parameter description was deserialized to an ElementInfo message, in some cases, an exception would be thrown.
 
+#### DataMiner Cube - Trending: Y-axis values did not take into account the number of decimals configured in the protocol.xml file [ID_34269]
+
+<!-- Main Release Version 10.1.0 [CU20]/10.2.0 [CU8] - Feature Release Version 10.2.11 -->
+
+When you opened a trend graph, the Y-axis values would incorrectly not take into account the number of decimals configured in the *protocol.xml* file for the parameters in question.
+
 #### Interactive Automation scripts: Problem when entering an invalid value in a numeric component [ID_34310]
 
 <!-- Main Release Version 10.1.0 [CU20]/10.2.0 [CU8] - Feature Release Version 10.2.11 -->
@@ -95,6 +107,12 @@ When you entered an invalid value in a numeric component, the *UIResults.GetStri
 <!-- Main Release Version 10.2.0 [CU8] - Feature Release Version 10.2.11 -->
 
 On systems with active correlation rules, in some rare cases, the counters in the footer bar of the Alarm Console could show negative numbers.
+
+#### DataMiner Cube - EPM: Not possible to add a second parameter to a trend graph of an EPM object [ID_34323]
+
+<!-- Main Release Version 10.1.0 [CU20]/10.2.0 [CU8] - Feature Release Version 10.2.11 -->
+
+When you opened a trend graph of an EPM object, it would not be possible to add a second parameter. After you had added a new parameter, the drop-down box would incorrectly only contain the current parameter.
 
 #### Dashboards app / Low-code apps: Creating a custom theme with a custom color palette would incorrectly cause the color palette of all built-in themes to be updated [ID_34368]
 
