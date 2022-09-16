@@ -46,6 +46,20 @@ When a shape was linked to an element that was not part of a service, up to now,
 
 Because of a number of enhancements, overall performance has increased when sorting dynamically positioned shapes.
 
+#### Lingering connections towards a DataMiner Agent will now be forcefully killed [ID_34367]
+
+<!-- Main Release Version 10.1.0 [CU20]/10.2.0 [CU8] - Feature Release Version 10.2.11 -->
+
+In some cases, connections between DMAs can leak TCP connections, causing new connections towards port 8004 to fail due to port exhaustion.
+
+Up to now, when a new connection towards port 8004 failed, the following entry was logged in the SLNet log file:
+
+``` txt
+Connection to {0} via external process succeeds while same connection via SLNet process fails since {1} ({2} times) => possible lingering TCP connections issue
+```
+
+From now on, the connection in question will also be forcefully killed.
+
 #### DataMiner Cube - Visual Overview: Caching of user settings in order to enhanced performance [ID_34383]
 
 <!-- Main Release Version 10.1.0 [CU20]/10.2.0 [CU8] - Feature Release Version 10.2.11 -->
@@ -110,3 +124,15 @@ Creating a custom theme with a custom color palette would incorrectly cause the 
 <!-- Main Release Version 10.1.0 [CU20]/10.2.0 [CU8] - Feature Release Version 10.2.11 -->
 
 In some cases, an error could occur in SLProtocol when reading incorrectly configured port settings.
+
+#### Problem with SLLog when closing a log file [ID_34385]
+
+<!-- Main Release Version 10.1.0 [CU20]/10.2.0 [CU8] - Feature Release Version 10.2.11 -->
+
+In some cases, an error could occur in SLLog when closing a log file.
+
+#### Dashboards app: Side panel context menu and selected dashboard would overlap each other [ID_34411]
+
+<!-- Main Release Version 10.1.0 [CU20]/10.2.0 [CU8] - Feature Release Version 10.2.11 -->
+
+When you opened the context menu of the side panel, in some cases, the context menu and the dashboard selected in the list would overlap each other.

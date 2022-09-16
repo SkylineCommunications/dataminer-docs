@@ -48,6 +48,20 @@ Because of a number of enhancements to the buffering mechanism, overall performa
 
 The SLLogCollector tool will also collect all prerequisite output files as well as all upgrade logs.
 
+#### Lingering connections towards a DataMiner Agent will now be forcefully killed [ID_34367]
+
+<!-- Main Release Version 10.1.0 [CU20]/10.2.0 [CU8] - Feature Release Version 10.2.11 -->
+
+In some cases, connections between DMAs can leak TCP connections, causing new connections towards port 8004 to fail due to port exhaustion.
+
+Up to now, when a new connection towards port 8004 failed, the following entry was logged in the SLNet log file:
+
+``` txt
+Connection to {0} via external process succeeds while same connection via SLNet process fails since {1} ({2} times) => possible lingering TCP connections issue
+```
+
+From now on, the connection in question will also be forcefully killed.
+
 ### Fixes
 
 #### Dashboard Gateway (legacy): Dashboards would fail to show the Maps component when the DMA had HTTPS configured [ID_33777]
@@ -97,3 +111,15 @@ In some cases, an error could occur in SLProtocol when reading incorrectly confi
 <!-- Main Release Version 10.2.0 [CU8] - Feature Release Version 10.2.11 -->
 
 In some cases, parameter data in a dashboard URL would incorrectly only get parsed when followed by a forward slash ("/").
+
+#### Problem with SLLog when closing a log file [ID_34385]
+
+<!-- Main Release Version 10.1.0 [CU20]/10.2.0 [CU8] - Feature Release Version 10.2.11 -->
+
+In some cases, an error could occur in SLLog when closing a log file.
+
+#### Dashboards app: Side panel context menu and selected dashboard would overlap each other [ID_34411]
+
+<!-- Main Release Version 10.1.0 [CU20]/10.2.0 [CU8] - Feature Release Version 10.2.11 -->
+
+When you opened the context menu of the side panel, in some cases, the context menu and the dashboard selected in the list would overlap each other.
