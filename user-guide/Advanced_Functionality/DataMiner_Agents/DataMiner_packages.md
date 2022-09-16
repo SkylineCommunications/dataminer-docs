@@ -31,7 +31,7 @@ Package containing all files necessary to upgrade a DataMiner Agent to a newer v
 - File extension: *.dmupgrade*
 
 > [!NOTE]
-> The maximum upload size of upgrade packages is limited depending on the DataMiner version, but it is possible to increase this limit. See [Increasing the maximum upload size for upgrade packages in a DMS](xref:SLNetClientTest_tool_advanced_procedures#increasing-the-maximum-upload-size-for-upgrade-packages-in-a-dms).
+> The maximum upload size of upgrade packages is limited depending on the DataMiner version, but it is possible to increase this limit. See [Increasing the maximum upload size for upgrade packages in a DMS](xref:SLNetClientTest_increasing_max_upload).
 
 > [!TIP]
 > See also: [Upgrade packages](xref:TOOUpgradePackageContent)

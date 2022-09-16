@@ -59,7 +59,7 @@ In Visual Overview, the current value of the following user settings will now be
 
 <!-- Main Release Version 10.1.0 [CU20]/10.2.0 [CU8] - Feature Release Version 10.2.11 -->
 
-A number of enhancements have been made to the procedure called to determine whether a shape is clickable. When you hover over a clickable shape, the shape will be highlighted and the mouse pointer will change into a hand cursor.
+A number of enhancements have been made to the procedure called to determine whether a shape is clickable.
 
 ### Fixes
 

@@ -2870,8 +2870,102 @@
               topicUid: Connecting_to_a_DMA_with_the_SLNetClientTest_tool
             - name: SLNetClientTest tool diagnostic procedures
               topicUid: SLNetClientTest_tool_diagnostic_procedures
+              items:
+                - name: Consulting license information for a DMA
+                  topicUid: SLNetClientTest_consulting_license_info
+                - name: Verifying sync rules
+                  topicUid: SLNetClientTest_verifying_sync_rules
+                - name: Debugging callback timeout errors
+                  topicUid: SLNetClientTest_debugging_callback_timeout_errors
+                - name: Consulting replication information for other DMAs in a DMS
+                  topicUid: SLNetClientTest_consulting_replication_info
+                - name: Inspecting the active replication buffers
+                  topicUid: SLNetClientTest_inspecting_active_replication_buffers
+                - name: Consulting Correlation information
+                  topicUid: SLNetClientTest_consulting_correlation_info
+                - name: Activating verbose Correlation logging
+                  topicUid: SLNetClientTest_activating_verbose_correlation_logging
+                - name: Tracking DMA communication
+                  topicUid: SLNetClientTest_tracking_dma_communication
+                - name: Consulting connection details
+                  topicUid: SLNetClientTest_consulting_connection_details
+                - name: Creating a dump file for a particular process
+                  topicUid: SLNetClientTest_creating_dump_for_process
+                - name: Requesting information about pending incoming events
+                  topicUid: SLNetClientTest_info_pending_incoming_events
+                - name: Exporting data to a CSV file
+                  topicUid: SLNetClientTest_exporting_data_to_csv
+                - name: Retrieving DCF debug information
+                  topicUid: SLNetClientTest_retrieving_dcf_debug_info
+                - name: Checking a hyperlink filter
+                  topicUid: SLNetClientTest_checking_hyperlink_filter
+                - name: Requesting an estimate of the number of rows for a storage type in the database
+                  topicUid: SLNetClientTest_estimate_number_rows_for_storage_type
+                - name: Requesting a list of active merge actions for a protocol
+                  topicUid: SLNetClientTest_active_merge_actions_protocols
+                - name: Retrieving connection info for a particular element
+                  topicUid: SLNetClientTest_retrieving_connection_info
+                - name: Retrieving information on open GQI sessions
+                  topicUid: SLNetClientTest_info_on_open_gqi_sessions
             - name: SLNetClientTest tool advanced procedures
               topicUid: SLNetClientTest_tool_advanced_procedures
+              items:
+                - name: Editing the connection string between two DataMiner Agents
+                  topicUid: SLNetClientTest_editing_connection_string
+                - name: Disabling replication buffering
+                  topicUid: SLNetClientTest_disabling_replication_buffering
+                - name: Making DataMiner Cube ignore view updates
+                  topicUid: SLNetClientTest_making_Cube_ignore_view_updates
+                - name: Configuring how long alarm statistics are kept in memory
+                  topicUid: SLNetClientTest_configuring_how_long_alarm_statistics
+                - name: Aborting a running Automation script
+                  topicUid: SLNetClientTest_aborting_running_script
+                - name: Removing references to items that no longer exist
+                  topicUid: SLNetClientTest_removing_references
+                - name: Comparing the views on two Agents in a DMS
+                  topicUid: SLNetClientTest_comparing_views_on_two_dmas
+                - name: Having RCA chains updated by the DCF engine
+                  topicUid: SLNetClientTest_having_rca_chains_updated
+                - name: Increasing the maximum upload size for upgrade packages in a DMS
+                  topicUid: SLNetClientTest_increasing_max_upload
+                - name: Managing base subscriptions
+                  topicUid: SLNetClientTest_managing_base_subscriptions
+                - name: Configuring trend caching
+                  topicUid: SLNetClientTest_configuring_trend_caching
+                - name: Modifying the engine ID of a DMA
+                  topicUid: SLNetClientTest_modifying_engine_id
+                - name: Changing the service template child element and child service limitations
+                  topicUid: SLNetClientTest_changing_service_template_child_limitations
+                - name: Forcing file synchronization between DMAs
+                  topicUid: SLNetClientTest_forcing_file_sync
+                - name: Setting the TTL for database records
+                  topicUid: SLNetClientTest_setting_TTL_database
+                - name: Enabling or disabling protocol buffer serialization
+                  topicUid: SLNetClientTest_protocol_buffer_serialization
+                - name: Managing scheduled tasks for maintenance of a Cassandra database
+                  topicUid: SLNetClientTest_managing_scheduled_tasks_maintenance_Cassandra
+                - name: Creating an enhanced view
+                  topicUid: SLNetClientTest_creating_enhanced_view
+                - name: Generating SMIv2 MIB files
+                  topicUid: SLNetClientTest_generating_mib_files
+                - name: Fine-tuning the CPECollectorHelper API timeout
+                  topicUid: SLNetClientTest_finetuning_CPECollectorHelper
+                - name: Changing the number of records in the protocol cache
+                  topicUid: SLNetClientTest_changing_number_records_protocol_cache
+                - name: Checking or modifying the settings related to a Refused DMA state
+                  topicUid: SLNetClientTest_refused_dma_state
+                - name: Managing trend patterns
+                  topicUid: SLNetClientTest_managing_trend_patterns
+                - name: Fine-tuning NATS settings
+                  topicUid: SLNetClientTest_finetuning_nats_settings
+                - name: Changing the grace period for the SLNetCom Notification thread
+                  topicUid: SLNetClientTest_grace_period_SLNetCom_notification
+                - name: Specifying credentials for a shared backup path for Elasticsearch
+                  topicUid: SLNetClientTest_credentials_shared_backup_Elasticsearch
+                - name: Configuring the frequency of smart baseline calculations
+                  topicUid: SLNetClientTest_configuring_frequency_smart_baseline
+                - name: Disabling automatic NATS configuration
+                  topicUid: SLNetClientTest_disabling_automatic_nats_config
         - name: SLOffload tool
           topicUid: SLOffload_tool
         - name: SLSkipAsSourceTool

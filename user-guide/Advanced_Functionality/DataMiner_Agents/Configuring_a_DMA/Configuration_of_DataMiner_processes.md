@@ -496,7 +496,7 @@ Example:
 Default: FALSE
 
 > [!NOTE]
-> This setting can also be configured with the SLNetClientTest tool. However, note that this is an advanced administration tool that should be used with extreme care. See [Making DataMiner Cube ignore view updates](xref:SLNetClientTest_tool_advanced_procedures#making-dataminer-cube-ignore-view-updates).
+> This setting can also be configured with the SLNetClientTest tool. However, note that this is an advanced administration tool that should be used with extreme care. See [Making DataMiner Cube ignore view updates](xref:SLNetClientTest_making_Cube_ignore_view_updates).
 
 ### Specifying DCF settings
 
@@ -643,7 +643,7 @@ Example:
 ```
 
 > [!NOTE]
-> From DataMiner 10.1.0/10.1.3 onwards, you can instead configure this using the SLNetClientTest tool. See [Fine-tuning NATS settings](xref:SLNetClientTest_tool_advanced_procedures#fine-tuning-nats-settings).
+> From DataMiner 10.1.0/10.1.3 onwards, you can instead configure this using the SLNetClientTest tool. See [Fine-tuning NATS settings](xref:SLNetClientTest_finetuning_nats_settings).
 
 > [!TIP]
 > See also: [Increasing the timeout for the NATS connection](xref:SLCloud_xml#increasing-the-timeout-for-the-nats-connection)

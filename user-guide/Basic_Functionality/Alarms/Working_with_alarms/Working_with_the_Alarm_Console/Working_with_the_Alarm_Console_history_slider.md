@@ -21,7 +21,7 @@ There are two ways to move the slider to a specific time in the past on the time
 
 ## Advanced timeline settings
 
-- With the SLNetClientTest tool, you can configure some advanced settings for the timeline configuration. See [Configuring how long alarm statistics are kept in memory](xref:SLNetClientTest_tool_advanced_procedures#configuring-how-long-alarm-statistics-are-kept-in-memory).
+- With the SLNetClientTest tool, you can configure some advanced settings for the timeline configuration. See [Configuring how long alarm statistics are kept in memory](xref:SLNetClientTest_configuring_how_long_alarm_statistics).
 
   > [!WARNING]
   > The DataMiner SLNetClientTest program is an advanced system administration tool that should be used with extreme care (C:\\Skyline DataMiner\\Files\\SLNetClientTest.exe).

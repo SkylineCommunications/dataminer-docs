@@ -40,6 +40,12 @@ Because of improved internal logic, the performance of the SLDataGateway process
 
 In service definition diagrams, function resource icons are now centered.
 
+#### DataMiner Cube - Automation: Changes made to a script by other users will immediately be shown when selecting that script [ID_34277]
+
+<!-- Main Release Version 10.2.0 [CU8] - Feature Release Version 10.2.11 -->
+
+When you select an Automation script in the Automation app, from now on, changes made to that script by other users (e.g. in another Cube session or in DataMiner Integration Studio) will immediately be shown.
+
 #### Enhanced performance when querying large XML files [ID_34299]
 
 <!-- Main Release Version 10.1.0 [CU20]/10.2.0 [CU8] - Feature Release Version 10.2.11 -->
@@ -89,7 +95,7 @@ In Visual Overview, the current value of the following user settings will now be
 
 <!-- Main Release Version 10.1.0 [CU20]/10.2.0 [CU8] - Feature Release Version 10.2.11 -->
 
-A number of enhancements have been made to the procedure called to determine whether a shape is clickable. When you hover over a clickable shape, the shape will be highlighted and the mouse pointer will change into a hand cursor.
+A number of enhancements have been made to the procedure called to determine whether a shape is clickable.
 
 ### Fixes
 
