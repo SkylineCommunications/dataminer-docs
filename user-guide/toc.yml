@@ -2912,6 +2912,8 @@
               items:
                 - name: Editing the connection string between two DataMiner Agents
                   topicUid: SLNetClientTest_editing_connection_string
+                - name: Configuring SMTP
+                  topicUID: SLNetClientTest_configuring_SMTP
                 - name: Disabling replication buffering
                   topicUid: SLNetClientTest_disabling_replication_buffering
                 - name: Making DataMiner Cube ignore view updates
