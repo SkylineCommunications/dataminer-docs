@@ -44,7 +44,7 @@ You can either configure this directly in *DataMiner.xml* or use the SLNetClient
 
 - For information on how to configure this using the **SLNetClientTest tool**, see [Configuring SMTP](xref:SLNetClientTest_configuring_SMTP).
 
-- To configure this directly in *DataMiner.xml* instead:
+- To configure this **directly in *DataMiner.xml*** instead:
 
   1. Log on to the DataMiner Agent, either locally or through a remote desktop session.
 
@@ -56,7 +56,7 @@ You can either configure this directly in *DataMiner.xml* or use the SLNetClient
 
   1. In this section, enter the correct SMTP server settings. See [SMTP server settings](#smtp-server-settings).
 
-  1. Restart the DataMiner Agent in order to apply the new settings.
+  1. **Restart** the DataMiner Agent in order to apply the new settings.
 
   > [!NOTE]
   > If there are several DataMiner Agents in your DataMiner System, execute the above-mentioned procedure on every DataMiner Agent that has to be able to send email messages.
