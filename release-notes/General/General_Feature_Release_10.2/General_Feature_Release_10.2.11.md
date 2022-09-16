@@ -182,6 +182,12 @@ In HTTP setups, up to now, the dashboard sharing menu would incorrectly contain 
 
 From now on, in HTTP setups, the dashboard sharing menu will no longer contain this command.
 
+#### Dashboards app: Problem with invalid URL parameters [ID_34405]
+
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.11 -->
+
+In some cases, an error could occur when invalid parameters were passed to a dashboard in the URL (e.g. invalid time spans).
+
 #### Dashboards app: Not possible to access the query column selection box of a newly created query [ID_34410]
 
 <!-- Main Release Version 10.2.0 [CU8] - Feature Release Version 10.2.11 -->

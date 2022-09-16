@@ -38,6 +38,13 @@ In service definition diagrams, function resource icons are now centered.
 
 When you select an unmodified Automation script in the Automation app, from now on, changes made to that script by other users (e.g. in another Cube session or in DataMiner Integration Studio) will immediately be shown.
 
+#### Trending - Behavioral anomaly detection: Enhanced flatline detection [ID_34319]
+
+<!-- MR 10.3.0 - FR 10.2.11 -->
+<!-- Not added to 10.3.0 -->
+
+A number of enhancements have been made with regard to the detection of change points of type "flatline".
+
 #### DataMiner Cube - Visual Overview: Service context of a linked shape will only be determined when the service context has been specified [ID_34340]
 
 <!-- Main Release Version 10.1.0 [CU20]/10.2.0 [CU8] - Feature Release Version 10.2.11 -->
