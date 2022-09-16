@@ -7,6 +7,7 @@ uid: SLNetClientTest_tool_advanced_procedures
 The procedures below can be applied to troubleshoot issues. However, be very careful when you apply them as they can strongly influence the functionality of your DataMiner System.
 
 - [Editing the connection string between two DataMiner Agents](xref:SLNetClientTest_editing_connection_string)
+- [Configuring SMTP](xref:SLNetClientTest_configuring_SMTP)
 - [Disabling replication buffering](xref:SLNetClientTest_disabling_replication_buffering)
 - [Making DataMiner Cube ignore view updates](xref:SLNetClientTest_making_Cube_ignore_view_updates)
 - [Configuring how long alarm statistics are kept in memory](xref:SLNetClientTest_configuring_how_long_alarm_statistics)
