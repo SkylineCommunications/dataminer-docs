@@ -585,6 +585,42 @@ It is now possible to use GQI query columns to filter a *State* component.
 
 Query columns of type "string" can now be filtered using *Equals* and *NotEquals*.
 
+#### Low-code apps: Data input via URL [ID_34261]
+
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.11 -->
+
+Low-code apps can now be provided with data (e.g. element data, parameter data, view data, etc.) via URL query parameters.
+
+To do so, add a URL query parameter with key *data*. The value should be a URL-encoded JSON object with the following structure:
+
+- *v*: version number (currently always 1)
+- *components*: an array of component input objects
+
+```json
+{
+   v: <version-number>;
+   components: <component-data>;
+}
+```
+
+The component input objects (component-data) have the following structure:
+
+```json
+{
+   cid: <component-id>,
+   select: <data>
+}
+```
+
+In the following example, the URL selects one default element on the initial page:
+
+- component ID = 1
+- element ID = 1/6
+
+```txt
+https://<dma>/<app-id>?data=%7B%22v%22:1,%22components%22:%5B%7B%22cid%22:1,%22select%22:%7B%22elements%22:%5B%221%2F6%22%5D%7D%5D%7D%7D
+```
+
 #### Dashboards app / Low-code apps: 'Return no rows when feed is empty' option replaced by a triple-state option [ID_34280]
 
 <!-- Main Release Version 10.3.0 - Feature Release Version 10.2.10 -->

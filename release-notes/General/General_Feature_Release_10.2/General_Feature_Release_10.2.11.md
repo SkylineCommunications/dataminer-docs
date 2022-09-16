@@ -30,6 +30,42 @@ Because of a number of enhancements, overall error handling has improved.
 
 Because of a performance improvement, the calculated service alarm state will now be updated more quickly in the client.
 
+#### Low-code apps: Data input via URL [ID_34261]
+
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.11 -->
+
+Low-code apps can now be provided with data (e.g. element data, parameter data, view data, etc.) via URL query parameters.
+
+To do so, add a URL query parameter with key *data*. The value should be a URL-encoded JSON object with the following structure:
+
+- *v*: version number (currently always 1)
+- *components*: an array of component input objects
+
+```json
+{
+   v: <version-number>;
+   components: <component-data>;
+}
+```
+
+The component input objects (component-data) have the following structure:
+
+```json
+{
+   cid: <component-id>,
+   select: <data>
+}
+```
+
+In the following example, the URL selects one default element on the initial page:
+
+- component ID = 1
+- element ID = 1/6
+
+```txt
+https://<dma>/<app-id>?data=%7B%22v%22:1,%22components%22:%5B%7B%22cid%22:1,%22select%22:%7B%22elements%22:%5B%221%2F6%22%5D%7D%5D%7D%7D
+```
+
 #### Enhanced performance when querying large XML files [ID_34299]
 
 <!-- Main Release Version 10.1.0 [CU20]/10.2.0 [CU8] - Feature Release Version 10.2.11 -->
@@ -63,6 +99,12 @@ Connection to {0} via external process succeeds while same connection via SLNet 
 From now on, the connection in question will also be forcefully killed.
 
 ### Fixes
+
+#### GQI - Elasticsearch: Aggregated data did not have the number of decimals specified in the parameter info [ID_33712]
+
+<!-- MR 10.3.0 - FR 10.2.11 -->
+
+Aggregated data retrieved from an Elasticsearch database did not have the number of decimals specified in the parameter info.
 
 #### Dashboard Gateway (legacy): Dashboards would fail to show the Maps component when the DMA had HTTPS configured [ID_33777]
 

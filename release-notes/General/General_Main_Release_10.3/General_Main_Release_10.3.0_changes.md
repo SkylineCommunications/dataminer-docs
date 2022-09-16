@@ -590,6 +590,12 @@ Error trapped: Unable to cast object of type 'Skyline.DataMiner.Web.Common.v1.DM
 
 When, on a dashboard, an EPM feed was surrounded by other components, in some cases, the dashboard would incorrectly scroll up when you selected a field in the EPM feed.
 
+#### GQI - Elasticsearch: Aggregated data did not have the number of decimals specified in the parameter info [ID_33712]
+
+<!-- MR 10.3.0 - FR 10.2.11 -->
+
+Aggregated data retrieved from an Elasticsearch database did not have the number of decimals specified in the parameter info.
+
 #### Run-time errors due to MessageBrokerReconnectThread problems in SLCloudBridge [ID_33716]
 
 <!-- MR 10.3.0 - FR 10.2.8 [CU0] -->
