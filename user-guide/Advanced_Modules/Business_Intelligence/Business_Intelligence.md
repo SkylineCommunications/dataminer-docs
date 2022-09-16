@@ -9,8 +9,7 @@ With DataMiner Business Intelligence, you can manage services from a value-added
 SLA elements are created with SLA definitions in XML format. They can be trended and monitored like other DataMiner elements. In the DMS Reports module, specific types of reports are available for them.
 
 > [!NOTE]
-> The most commonly used SLA protocol is *Skyline SLA Definition Basic*. Note that versions of this protocol prior to 2.0.0.16 are no longer supported.
-> The *Skyline SLA Definition Basic* protocol is available on the [DataMiner Catalog](xref:About_the_Catalog_module)
+> The most commonly used SLA protocol is *Skyline SLA Definition Basic*, which is available in the [DataMiner Catalog](xref:About_the_Catalog_module). Note that versions of this protocol prior to 2.0.0.16 are no longer supported.
 
 The following topics provide more information on DMS Business Intelligence:
 
