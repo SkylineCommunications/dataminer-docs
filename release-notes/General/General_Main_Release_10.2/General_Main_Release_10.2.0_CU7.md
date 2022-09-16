@@ -2,10 +2,10 @@
 uid: General_Main_Release_10.2.0_CU7
 ---
 
-# General Main Release 10.2.0 CU7 – Preview
+# General Main Release 10.2.0 CU7
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 > For information on how to upgrade DataMiner, see [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent).
@@ -327,3 +327,15 @@ While query pages were being retrieved via GQI, each time a new page was loaded,
 <!-- MR 10.2.0 [CU7] - FR 10.2.10 [CU0] -->
 
 In some cases, SLDMS could incorrectly forget in-memory element information, causing certain element actions to fail.
+
+#### Microsoft SQL Server: Query with offset, limit and where clause would return an incorrect result set [ID_34413]
+
+<!-- MR 10.1.0 [CU19]/10.2.0 [CU7] - FR 10.2.10 [CU0] -->
+
+When, on a system with a Microsoft SQL Server database, a query with an offset, a limit and a where clause was executed, the where clause would incorrectly be dropped. As a result, an incorrect result set would be returned.
+
+Example of a query with an offset, a limit and a where clause:
+
+``` SQL
+select * from elementdata_162 where ieid = 5 limit 10,10
+```

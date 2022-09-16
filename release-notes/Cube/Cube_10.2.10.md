@@ -2,21 +2,33 @@
 uid: Cube_Feature_Release_10.2.10
 ---
 
-# DataMiner Cube Feature Release 10.2.10 – Preview
+# DataMiner Cube Feature Release 10.2.10
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 > For release notes for this release that are not related to DataMiner Cube, see [General Feature Release 10.2.10](xref:General_Feature_Release_10.2.10).
 
 ## Highlights
 
-*No highlights have been selected for this release yet*
+#### DataMiner Cube - Resources app: Enhanced resource pool management [ID_34225]
 
-## Other features
+<!-- MR 10.2.0 [CU7] - FR 10.2.10 -->
+<!-- Fix with same ID -->
 
-*No new features have been added to this release yet*
+A number of enhancements have been made with regard to managing resource pools.
+
+- Moving or copying a resource from one pool to another is only supported for existing, valid resources, and you need to have permission to edit resources to do this. It is also not possible to copy a resource to or from the "(uncategorized)" pool, as this pool is reserved for resources that are not in any other pool.
+
+- It is now also possible to remove a resource from a pool.
+
+    > [!NOTE]
+    >
+    > - Removing a resource from a pool does not delete the resource from the system. It only removes it from the selected pool. If the resource is not present in any other resource pool, it will be moved to the "(uncategorized)" pool.
+    > - You can only remove valid, unmodified existing resources that are not in the "(uncategorized)" pool. You also need permission to edit resources to be able to do this.
+
+- The *SelectedPool* session variable of the ReservationManager component will contain the GUIDs of all pools of the selected resource(s), separated by commas.
 
 ## Changes
 
@@ -40,24 +52,6 @@ On systems that store real-time trend data for more than a week, from now on, Da
 <!-- MR 10.2.0 [CU7] - FR 10.2.10 -->
 
 A number of enhancements have been made to the profile parameter edit boxes, especially with regard to the validation of discrete values.
-
-#### DataMiner Cube - Resources app: Enhanced resource pool management [ID_34225]
-
-<!-- MR 10.2.0 [CU7] - FR 10.2.10 -->
-<!-- Fix with same ID -->
-
-A number of enhancements have been made with regard to managing resource pools.
-
-- Moving or copying a resource from one pool to another is only supported for existing, valid resources, and you need to have permission to edit resources to do this. It is also not possible to copy a resource to or from the "(uncategorized)" pool, as this pool is reserved for resources that are not in any other pool.
-
-- It is now also possible to remove a resource from a pool.
-
-    > [!NOTE]
-    >
-    > - Removing a resource from a pool does not delete the resource from the system. It only removes it from the selected pool. If the resource is not present in any other resource pool, it will be moved to the "(uncategorized)" pool.
-    > - You can only remove valid, unmodified existing resources that are not in the "(uncategorized)" pool. You also need permission to edit resources to be able to do this.
-
-- The *SelectedPool* session variable of the ReservationManager component will contain the GUIDs of all pools of the selected resource(s), separated by commas.
 
 ### Fixes
 

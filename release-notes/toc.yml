@@ -55,7 +55,7 @@
           topicUid: General_Main_Release_10.2.0_CU5
         - name: General Main Release 10.2.0 CU6
           topicUid: General_Main_Release_10.2.0_CU6
-        - name: General Main Release 10.2.0 CU7 - Preview
+        - name: General Main Release 10.2.0 CU7
           topicUid: General_Main_Release_10.2.0_CU7
         - name: General Main Release 10.2.0 CU8 - Preview
           topicUid: General_Main_Release_10.2.0_CU8
@@ -63,7 +63,7 @@
         items:
         - name: General Feature Release 10.2.11 - Preview
           topicUid: General_Feature_Release_10.2.11
-        - name: General Feature Release 10.2.10 - Preview
+        - name: General Feature Release 10.2.10
           topicUid: General_Feature_Release_10.2.10
         - name: General Feature Release 10.2.9
           items:
@@ -154,7 +154,7 @@
           topicUid: General_Main_Release_10.1.0_CU17
         - name: General Main Release 10.1.0 CU18
           topicUid: General_Main_Release_10.1.0_CU18 
-        - name: General Main Release 10.1.0 CU19 - Preview
+        - name: General Main Release 10.1.0 CU19
           topicUid: General_Main_Release_10.1.0_CU19
         - name: General Main Release 10.1.0 CU20 - Preview
           topicUid: General_Main_Release_10.1.0_CU20
