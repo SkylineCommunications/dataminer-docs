@@ -124,6 +124,7 @@ $(function () {
     var query;
     var relHref = $("meta[property='docfx\\:rel']").attr("content");
     if (typeof relHref === 'undefined') {
+      highlightKeywords();
       return;
     }
     try {
