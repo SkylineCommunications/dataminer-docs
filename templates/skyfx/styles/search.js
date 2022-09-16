@@ -133,7 +133,7 @@ $(function () {
           // results with toc.html files (table of contents) + without title are skipped
           const title = getTitle(result.metadata_title);
           const url = getUrl(result.storage_path);
-          const htmlString = `<div class="result"><a href="${url}?q=${searchTerm}"><div class="url">${url}</div><div class="title">${title}</div></a></div>`;
+          const htmlString = `<div class="result"><a href="${url}?q=${encodeURIComponent(searchTerm)}"><div class="url">${url}</div><div class="title">${title}</div></a></div>`;
           html.push(htmlString)
         }
 
