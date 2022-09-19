@@ -6,12 +6,19 @@ uid: Installing_DM_using_the_DM_installer
 
 ## Prerequisites
 
-Before you run the installer, install the latest .NET Framework version.
+Before you run the installer:
 
-- For more information on recommended versions, see [DataMiner Compute Requirements](https://community.dataminer.services/dataminer-compute-requirements/).
-- For installation information, see <https://docs.microsoft.com/en-us/dotnet/framework/install/>
+1. Check if the latest .NET Framework is installed. See <https://learn.microsoft.com/en-us/dotnet/framework/migration-guide/how-to-determine-which-versions-are-installed>.
 
-In addition, make sure the Windows setting "fast startup" is not activated.
+1. If it is not installed, install the latest .NET Framework version.
+
+   - For more information on recommended versions, see [DataMiner Compute Requirements](https://community.dataminer.services/dataminer-compute-requirements/).
+
+   - For installation information, see <https://docs.microsoft.com/en-us/dotnet/framework/install/>
+
+1. Make sure the Windows setting "fast startup" is not activated.
+
+1. Download DataMiner Installer from [DataMiner Dojo](https://community.dataminer.services/download/dataminer-installer-v10-2).
 
 ## Running the installer
 
@@ -29,6 +36,9 @@ The DataMiner installer allows you to run a default DataMiner installation, whic
 1. Click *Install*.
 
 1. Enter the DataMiner ID.
+
+> [!NOTE]
+> To obtain such an ID, contact dataminer.licensing@skyline.be.
 
    > [!IMPORTANT]
    > To get this DataMiner ID, you must contact Skyline. The DataMiner ID will uniquely identify the DataMiner Agent you are installing.
