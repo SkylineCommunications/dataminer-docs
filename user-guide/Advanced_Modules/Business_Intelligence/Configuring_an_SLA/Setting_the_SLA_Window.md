@@ -13,7 +13,7 @@ To set the SLA window, do the following:
     1. Click the toggle button in the *Type* area to switch from sliding to fixed window or vice versa.
 
         > [!NOTE]
-        > If set to fixed window, the window starts at a fixed point in time, for instance at midnight every day. If set to sliding window, the window moves along with the current time. That means that the end time for a sliding window is always now.
+        > If set to fixed window, the window starts at a fixed point in time, for instance at midnight every day. If a fixed window has passed, it will start monitoring your fixed window all over again. If set to sliding window, the window moves along with the current time. That means that the end time for a sliding window is always now.
 
     2. Select a unit of measurement in the *Unit* area, e.g. Minutes.
 
