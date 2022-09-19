@@ -4,7 +4,7 @@ uid: Turning_SLA_tracking_on_and_off
 
 # Turning SLA tracking on and off
 
-It is possible either to turn SLA tracking of completely, or to disable outages, so that outages are no longer registered but you can still see the current active service alarms.
+It is possible either to turn SLA tracking of completely, or to disable outages, so that outages are no longer registered but you can still see the current active service alarms. A possible reason to turn SLA tracking off is when you do some maintenance on the DataMiner system and you don't want any generated alarms to be taken into account for your SLA. After maintenance was done, you can then enable the SLA tracking again.
 
 To activate or deactivate tracking of the SLA completely:
 
