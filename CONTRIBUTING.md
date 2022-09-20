@@ -346,9 +346,14 @@ Until a pull request is merged, everyone can review it and add comments of their
 For larger contributions, e.g. to add several new pages, we recommend that you install the following (free) software:
 
 - [GitHub Desktop](https://desktop.github.com/)
+
 - [Visual Studio Code](https://code.visualstudio.com/) (with the [Docs Authoring Pack](https://marketplace.visualstudio.com/items?itemName=docsmsft.docs-authoring-pack) extension)
 
-1. Install GitHub Desktop and log in with your GitHub account. Select *Create a New Repository on your hard drive*.
+When you install GitHub Desktop, you will also need to add the correct repository:
+
+1. Install GitHub Desktop and log in with your GitHub account.
+
+1. Select *Create a New Repository on your hard drive*.
 
    ![Install GitHub 1](~/images/InstallGithub1.png)
 
@@ -356,22 +361,27 @@ For larger contributions, e.g. to add several new pages, we recommend that you i
 
    ![Install GitHub 2](~/images/InstallGithub2.png)
 
-   Cloning the repository will allow you to make changes that you can then add to a pull request. Once you have your clone of the repository, if Visual Studio Code has been installed, you can then click *Open in Visual Studio Code* to start working.
-
-   ![GitHub Desktop](~/images/Contrib_GitHubDesktop.png)
-
-1. If you do not have access to the dataminer-docs, you will find an alert in the lower left corner.
+1. If you do not have write access to the repository, you will find an alert in the lower left corner.
 
    ![Install GitHub3](~/images/InstallGitHub3.png)
 
    If this is the case:
 
-   1. Select *Create a fork*.  
+   1. Select *Create a fork*.
+
    1. Click *Fork this repository*.
-   
+
       ![Install GitHub 4](~/images/InstallGitHub4.png)
 
    1. When you are asked how you are planning to use this fork, select *To contribute to the parent project*.
+
+> [!NOTE]
+> If you have already made a fork of the repository in the past, you can also immediately add this fork as the URL when you clone the repository (e.g. `https://github.com/MyGitHubName/dataminer-docs`).
+
+> [!TIP]
+> Creating a fork will allow you to make changes that you can then add to a pull request. If Visual Studio Code has been installed, you can click *Open in Visual Studio Code* to immediately start working on the fork.
+>
+> ![GitHub Desktop](~/images/Contrib_GitHubDesktop.png)
 
 For more information on how to work with Visual Studio Code, refer to the [Visual Studio Code documentation](https://code.visualstudio.com/docs). As our documentation is written in Markdown, aside from the general functionality of the application, the [Markdown](https://code.visualstudio.com/docs/languages/markdown) section is of specific interest there.
 
