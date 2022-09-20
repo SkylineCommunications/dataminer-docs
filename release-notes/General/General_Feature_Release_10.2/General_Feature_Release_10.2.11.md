@@ -100,6 +100,12 @@ From now on, the connection in question will also be forcefully killed.
 
 ### Fixes
 
+#### Failover: Offline agent would fail to come online when the NATS cluster was down during a Failover switch [ID_33681]
+
+<!-- MR 10.3.0 - FR 10.2.11 -->
+
+When, during a Failover switch, the NATS cluster was down, the offline agent would fail to come online.
+
 #### GQI - Elasticsearch: Aggregated data did not have the number of decimals specified in the parameter info [ID_33712]
 
 <!-- MR 10.3.0 - FR 10.2.11 -->
@@ -131,6 +137,13 @@ When a JSON string containing an overridden parameter description was deserializ
 <!-- MR 10.1.0 [CU20]/10.2.0 [CU8] - FR 10.2.11 -->
 
 When you entered an invalid value in a numeric component, the *UIResults.GetString()* method would incorrectly not return that invalid value. Instead, it returned the last valid value that had been entered.
+
+#### Dashboards app - Service definition component: Function type 'TimeStartEvent' would not be visualized correctly [34316]
+
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.11 -->
+<!-- Not added to 10.3.0 -->
+
+When a Process Automation definition is added to the Service definition component, the added function shapes will reflect the function type (UserTask, ScriptTask, ResourceTask, Gateway, NoneStartEvent, TimeStartEvent or EndEvent). However, in some cases, the function type *TimeStartEvent* would not be visualized correctly.
 
 #### Dashboards app / Low-code apps: Creating a custom theme with a custom color palette would incorrectly cause the color palette of all built-in themes to be updated [ID_34368]
 

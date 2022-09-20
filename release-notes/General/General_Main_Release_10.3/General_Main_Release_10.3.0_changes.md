@@ -590,6 +590,12 @@ Error trapped: Unable to cast object of type 'Skyline.DataMiner.Web.Common.v1.DM
 
 When, on a dashboard, an EPM feed was surrounded by other components, in some cases, the dashboard would incorrectly scroll up when you selected a field in the EPM feed.
 
+#### Failover: Offline agent would fail to come online when the NATS cluster was down during a Failover switch [ID_33681]
+
+<!-- MR 10.3.0 - FR 10.2.11 -->
+
+When, during a Failover switch, the NATS cluster was down, the offline agent would fail to come online.
+
 #### GQI - Elasticsearch: Aggregated data did not have the number of decimals specified in the parameter info [ID_33712]
 
 <!-- MR 10.3.0 - FR 10.2.11 -->
