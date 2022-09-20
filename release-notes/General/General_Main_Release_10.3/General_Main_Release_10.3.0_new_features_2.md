@@ -633,6 +633,18 @@ Now, this option has been replaced by a triple-state option. You can now indicat
 - to have the entire table returned, or
 - to have the table filtered on empty values.
 
+#### Dashboards app / Low-code apps: GQI queries now support sort operators [ID_34414]
+
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.11 -->
+
+In dashboards and low-code apps, you can now add sort operators to GQI queries.
+
+After selecting a data source, do the following:
+
+1. Select a *Sort* operator.
+1. Select the column to sort on.
+1. Select *Ascending* if you want to sort in ascending order instead of descending order.
+
 ### DMS Service & Resource Management
 
 #### Retrieving bookings in a paged way and sorted by property \[ID_31982\]

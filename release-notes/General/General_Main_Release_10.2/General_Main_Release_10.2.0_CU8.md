@@ -12,9 +12,9 @@ uid: General_Main_Release_10.2.0_CU8
 
 ### Enhancements
 
-#### Security enhancements [ID_34251]
+#### Security enhancements [ID_33945] [ID_34251]
 
-A number of security enhancements have been made.
+A number of security enhancements have been made relating, amongst others, to external authentication via RADIUS.
 
 #### Ticketing app: Enhanced error handling [ID_33414]
 
@@ -198,6 +198,12 @@ In some cases, an error could occur in SLProtocol when reading incorrectly confi
 <!-- MR 10.2.0 [CU8] - FR 10.2.11 -->
 
 In some cases, parameter data in a dashboard URL would incorrectly only get parsed when followed by a forward slash ("/").
+
+#### Dashboards app: Renaming, duplicating or importing a dashboard would break the feeds inside the queries used in that dashboard [ID_34382]
+
+<!-- MR 10.2.0 [CU8] - FR 10.2.11 -->
+
+When you renamed, duplicated or imported a dashboard, in some cases, the feeds inside the queries used in that dashboard would get broken.
 
 #### Problem with SLLog when closing a log file [ID_34385]
 

@@ -14,9 +14,9 @@ uid: General_Feature_Release_10.2.11
 
 ### Enhancements
 
-#### Security enhancements [ID_34251]
+#### Security enhancements [ID_33945] [ID_34251]
 
-A number of security enhancements have been made.
+A number of security enhancements have been made relating, amongst others, to external authentication via RADIUS.
 
 #### Ticketing app: Enhanced error handling [ID_33414]
 
@@ -98,6 +98,18 @@ Connection to {0} via external process succeeds while same connection via SLNet 
 
 From now on, the connection in question will also be forcefully killed.
 
+#### Dashboards app / Low-code apps: GQI queries now support sort operators [ID_34414]
+
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.11 -->
+
+In dashboards and low-code apps, you can now add sort operators to GQI queries.
+
+After selecting a data source, do the following:
+
+1. Select a *Sort* operator.
+1. Select the column to sort on.
+1. Select *Ascending* if you want to sort in ascending order instead of descending order.
+
 ### Fixes
 
 #### Failover: Offline agent would fail to come online when the NATS cluster was down during a Failover switch [ID_33681]
@@ -177,7 +189,7 @@ In some cases, parameter data in a dashboard URL would incorrectly only get pars
 
 #### Dashboards app: Renaming, duplicating or importing a dashboard would break the feeds inside the queries used in that dashboard [ID_34382]
 
-<!-- MR 10.3.0 - FR 10.2.11 -->
+<!-- MR 10.2.0 [CU8] - FR 10.2.11 -->
 
 When you renamed, duplicated or imported a dashboard, in some cases, the feeds inside the queries used in that dashboard would get broken.
 
