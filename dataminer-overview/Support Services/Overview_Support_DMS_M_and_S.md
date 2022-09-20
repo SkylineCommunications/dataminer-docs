@@ -15,4 +15,6 @@ In addition to the default [Standard Limited Warranty](xref:Overview_Support_war
 
 DataMiner Support Services are supplied at **no charge commencing the date of delivery and continuing for a period of 6 months**.
 
-After this initial period, Support Services **can be purchased on an annual basis**. Optionally, they can be extended with [out-of-business-hours support](xref:Overview_Out_Of_Business_Hours_Support) for priority level 1 issues.
+After this initial period, Support Services **can be purchased on an annual basis**. 
+
+Optionally, Support Services can be extended with [out-of-business-hours support](xref:Overview_Out_Of_Business_Hours_Support) for priority level 1 issues. This extension is chargeable from day 1, i.e. the initial period of 6 months at no charge is not applicable here.  
