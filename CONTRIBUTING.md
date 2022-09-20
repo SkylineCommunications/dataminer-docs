@@ -225,6 +225,9 @@ For example:
 ![Awards](~/dataminer-overview/images/awards.png)
 ```
 
+> [!NOTE]
+> To upload images, use GitHub Desktop. See [Making a larger contribution](#making-a-larger-contribution).
+
 ### Alerts
 
 It is possible to display special "alert" blocks that focus the reader's attention on something important. The following types of alerts are supported:
@@ -345,11 +348,30 @@ For larger contributions, e.g. to add several new pages, we recommend that you i
 - [GitHub Desktop](https://desktop.github.com/)
 - [Visual Studio Code](https://code.visualstudio.com/) (with the [Docs Authoring Pack](https://marketplace.visualstudio.com/items?itemName=docsmsft.docs-authoring-pack) extension)
 
-After you have installed GitHub Desktop and logged in with your GitHub account, you will be asked which repository you want to use. Clone the *SkylineCommunications/dataminer-docs* repository to your local machine. The easiest way to do so is by specifying the URL `https://github.com/SkylineCommunications/dataminer-docs` in the URL tab. When you are asked how you are planning to use this fork, select *To contribute to the parent project*.
+1. Install GitHub Desktop and log in with your GitHub account. Select *Create a New Repository on your hard drive*.
 
-Cloning the repository will allow you to make changes that you can then add to a pull request. Once you have your clone of the repository, if Visual Studio Code has been installed, you can then click *Open in Visual Studio Code* to start working.
+   ![Install GitHub 1](~/images/InstallGithub1.png)
 
-![GitHub Desktop](~/images/Contrib_GitHubDesktop.png)
+1. Next, you will be asked which repository you want to use. Clone the *SkylineCommunications/dataminer-docs* repository to your local machine. The easiest way to do so is by specifying the URL `https://github.com/SkylineCommunications/dataminer-docs` in the URL tab.
+
+   ![Install GitHub 2](~/images/InstallGithub2.png)
+
+   Cloning the repository will allow you to make changes that you can then add to a pull request. Once you have your clone of the repository, if Visual Studio Code has been installed, you can then click *Open in Visual Studio Code* to start working.
+
+   ![GitHub Desktop](~/images/Contrib_GitHubDesktop.png)
+
+1. If you do not have access to the dataminer-docs, you will find an alert in the lower left corner.
+
+   ![Install GitHub3](~/images/InstallGitHub3.png)
+
+   If this is the case:
+
+   1. Select *Create a fork*.  
+   1. Click *Fork this repository*.
+   
+      ![Install GitHub 4](~/images/InstallGitHub4.png)
+
+   1. When you are asked how you are planning to use this fork, select *To contribute to the parent project*.
 
 For more information on how to work with Visual Studio Code, refer to the [Visual Studio Code documentation](https://code.visualstudio.com/docs). As our documentation is written in Markdown, aside from the general functionality of the application, the [Markdown](https://code.visualstudio.com/docs/languages/markdown) section is of specific interest there.
 
