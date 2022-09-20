@@ -143,7 +143,7 @@ When you entered an invalid value in a numeric component, the *UIResults.GetStri
 <!-- Main Release Version 10.3.0 - Feature Release Version 10.2.11 -->
 <!-- Not added to 10.3.0 -->
 
-When a Process Automation definition is added to the Service definition component, the added function shapes will reflect the function type (UserTask, ScriptTask, ResourceTask, Gateway, NoneStartEvent, TimeStartEvent or EndEvent). However, in some cases, the function type *TimeStartEvent* would not be visualized correctly.
+When a Process Automation definition is added to the Service definition component, the added function shapes will reflect the function type (UserTask, ScriptTask, ResourceTask, Gateway, NoneStartEvent, TimeStartEvent or EndEvent). However, in some cases, the function type *TimeStartEvent* would not be visualized correctly. From now on, these will be assigned a BPMN reference time icon.
 
 #### Dashboards app / Low-code apps: Creating a custom theme with a custom color palette would incorrectly cause the color palette of all built-in themes to be updated [ID_34368]
 
@@ -174,6 +174,12 @@ In some cases, an error could occur in SLProtocol when reading incorrectly confi
 <!-- MR 10.2.0 [CU8] - FR 10.2.11 -->
 
 In some cases, parameter data in a dashboard URL would incorrectly only get parsed when followed by a forward slash ("/").
+
+#### Dashboards app: Renaming, duplicating or importing a dashboard would break the feeds inside the queries used in that dashboard [ID_34382]
+
+<!-- MR 10.3.0 - FR 10.2.11 -->
+
+When you renamed, duplicated or imported a dashboard, in some cases, the feeds inside the queries used in that dashboard would get broken.
 
 #### Problem with SLLog when closing a log file [ID_34385]
 

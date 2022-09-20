@@ -711,3 +711,9 @@ In the generic filter component, in some cases, column filters would be incorrec
 <!-- MR 10.3.0 - FR 10.2.10 -->
 
 when a dashboard, a low-code app page or low-code app panel was initialized, in some cases, query column filters would not be applied correctly to table components on that dashboard, page or panel.
+
+#### Dashboards app: Renaming, duplicating or importing a dashboard would break the feeds inside the queries used in that dashboard [ID_34382]
+
+<!-- MR 10.3.0 - FR 10.2.11 -->
+
+When you renamed, duplicated or imported a dashboard, in some cases, the feeds inside the queries used in that dashboard would get broken.
