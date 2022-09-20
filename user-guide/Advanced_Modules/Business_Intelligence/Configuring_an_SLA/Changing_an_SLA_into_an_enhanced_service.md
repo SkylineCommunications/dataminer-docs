@@ -10,6 +10,9 @@ It is possible to make a modification to the SLA protocol, in order to make the 
 > - This configuration option has a serious impact on the functionality of the SLA, and should therefore be applied with extreme care.
 > - **Do not enable or disable this option during runtime.**
 
+> [!NOTE]
+> If you are using a version of the Skyline SLA Definition Basic protocol prior to version 3.0.0.3, then this parameter has to be copied over. Versions later than 3.0.0.3 include this parameter.
+
 ## Configuring the option
 
 1. Add the parameter 2060 to the “SLA Basic Definition” protocol by copying the following code into the *Protocol.xml* file.
