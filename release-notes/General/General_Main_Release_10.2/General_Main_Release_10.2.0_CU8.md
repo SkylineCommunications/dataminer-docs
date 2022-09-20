@@ -181,6 +181,12 @@ In some cases, email reports would incorrectly not include CSV files when the *I
 
 When you created a new component theme while a built-in dashboard theme was active, in some cases, a Web Services API error could occur.
 
+#### DataMiner Cube - Visual Overview: Problem when receiving a DCF connection line update [ID_34375]
+
+<!-- Main Release Version 10.1.0 [CU20]/10.2.0 [CU8] - Feature Release Version 10.2.11 -->
+
+An error could occur when the client received a DCF connection line update.
+
 #### Problem when processing a history set with a timestamp referring to a moment far in the past [ID_34378]
 
 <!-- MR 10.2.0 [CU8] - FR TBD -->

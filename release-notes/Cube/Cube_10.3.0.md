@@ -965,6 +965,12 @@ Supported operators:
 - \<
 - \<=
 
+#### Visual Overview: Shape data items of type 'NavigatePage' can now have values that include dynamic placeholders [ID_34442]
+
+<!-- MR 10.3.0 - FR 10.2.11 -->
+
+Shape data items of type *NavigatePage* can now have values that include dynamic placeholders referring to session variables, parameters, etc.
+
 ## Changes
 
 ### Enhancements

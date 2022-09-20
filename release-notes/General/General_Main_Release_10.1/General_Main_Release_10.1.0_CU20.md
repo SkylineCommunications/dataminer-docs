@@ -127,6 +127,12 @@ When you opened a trend graph of an EPM object, it would not be possible to add 
 
 Creating a custom theme with a custom color palette would incorrectly cause the color palette of all built-in themes to be updated.
 
+#### DataMiner Cube - Visual Overview: Problem when receiving a DCF connection line update [ID_34375]
+
+<!-- Main Release Version 10.1.0 [CU20]/10.2.0 [CU8] - Feature Release Version 10.2.11 -->
+
+An error could occur when the client received a DCF connection line update.
+
 #### Problem with SLProtocol when reading incorrectly configured port settings [ID_34379]
 
 <!-- Main Release Version 10.1.0 [CU20]/10.2.0 [CU8] - Feature Release Version 10.2.11 -->

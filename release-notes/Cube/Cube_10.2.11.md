@@ -22,6 +22,12 @@ uid: Cube_Feature_Release_10.2.11
 
 When you move one or more resources from a pool to the *(uncategorized)* pool, a confirmation box will now appear to warn you that, if you click *Yes*, the resources in question will be removed from all pools.
 
+#### Visual Overview: Shape data items of type 'NavigatePage' can now have values that include dynamic placeholders [ID_34442]
+
+<!-- MR 10.3.0 - FR 10.2.11 -->
+
+Shape data items of type *NavigatePage* can now have values that include dynamic placeholders referring to session variables, parameters, etc.
+
 ## Changes
 
 ### Enhancements
@@ -97,6 +103,12 @@ On systems with active correlation rules, in some rare cases, the counters in th
 <!-- Main Release Version 10.1.0 [CU20]/10.2.0 [CU8] - Feature Release Version 10.2.11 -->
 
 When you opened a trend graph of an EPM object, it would not be possible to add a second parameter. After you had added a new parameter, the drop-down box would incorrectly only contain the current parameter.
+
+#### DataMiner Cube - Visual Overview: Problem when receiving a DCF connection line update [ID_34375]
+
+<!-- Main Release Version 10.1.0 [CU20]/10.2.0 [CU8] - Feature Release Version 10.2.11 -->
+
+An error could occur when the client received a DCF connection line update.
 
 #### DataMiner Cube - Visual Overview: Fix multiple script executions on page shape data change [ID_34412]
 
