@@ -111,6 +111,12 @@ In Visual Overview, the current value of the following user settings will now be
 
 A number of enhancements have been made to the procedure called to determine whether a shape is clickable.
 
+#### DataMiner Cube - System Center: New DataMiner log file 'SLRADIUS.txt' [ID_34396]
+
+<!-- MR 10.2.0 [CU8] - FR 10.2.11 -->
+
+In the *Logging* section of *System Center*, you can now also consult the *SLRADIUS.txt* log file.
+
 ### Fixes
 
 #### Dashboard Gateway (legacy): Dashboards would fail to show the Maps component when the DMA had HTTPS configured [ID_33777]

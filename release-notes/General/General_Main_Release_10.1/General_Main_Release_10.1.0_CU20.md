@@ -150,3 +150,9 @@ In some cases, an error could occur in SLLog when closing a log file.
 <!-- Main Release Version 10.1.0 [CU20]/10.2.0 [CU8] - Feature Release Version 10.2.11 -->
 
 When you opened the context menu of the side panel, in some cases, the context menu and the dashboard selected in the list would overlap each other.
+
+#### Web Services API: Problem when calling the GetBooking or GetBookings method via SOAP [ID_34466]
+
+<!-- Main Release Version 10.1.0 [CU20] - Feature Release Version 10.2.11 -->
+
+When the GetBooking or GetBookings method was called via SOAP, in some cases, a serialization exception could be thrown when the booking (in case of GetBooking) or one of the bookings (in case of GetBookings) had a property that contained a TimeSpan object.

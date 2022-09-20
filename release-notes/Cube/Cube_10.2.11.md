@@ -22,6 +22,12 @@ uid: Cube_Feature_Release_10.2.11
 
 When you move one or more resources from a pool to the *(uncategorized)* pool, a confirmation box will now appear to warn you that, if you click *Yes*, the resources in question will be removed from all pools.
 
+#### DataMiner Cube - System Center: New DataMiner log file 'SLRADIUS.txt' [ID_34396]
+
+<!-- MR 10.2.0 [CU8] - FR 10.2.11 -->
+
+In the *Logging* section of *System Center*, you can now also consult the *SLRADIUS.txt* log file.
+
 #### Visual Overview: Shape data items of type 'NavigatePage' can now have values that include dynamic placeholders [ID_34442]
 
 <!-- MR 10.3.0 - FR 10.2.11 -->
