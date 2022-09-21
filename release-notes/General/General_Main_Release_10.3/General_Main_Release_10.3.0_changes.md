@@ -376,6 +376,12 @@ Because of enhancements to the way resources are processed and stored, the Resou
 
 In addition, performance has improved when a resource or resource pool is added or updated.
 
+#### Elasticsearch: Enhanced migration of alarm trees from the active-alarms index to an index containing closed alarms [ID_34444]
+
+<!-- MR 10.3.0 - FR 10.2.11 -->
+
+Because of a number of enhancements, overall performance has increased when migrating large alarm trees from the *active-alarms* index to an index containing closed alarms.
+
 ### Fixes
 
 #### SLAnalytics: Problem with trend prediction [ID_31352]
@@ -725,9 +731,3 @@ When a CSV file exported via a dashboard component or attached to an email repor
 When a required software license cannot be found, a `One or more of the following modules are not licensed: ...` message will appear.
 
 In some cases, instead of listing the unlicensed modules, this message would incorrectly only mention "None".
-
-#### Problem during midnight synchronization would cause '200+ clients connected to this agent' errors to appear [ID_34450]
-
-<!-- MR 10.3.0 - FR 10.2.11 -->
-
-During a midnight synchronization, in some cases, ResourceManager subscriptions could incorrectly get duplicated, causing `200+ clients connected to this agent` errors to appear in the Alarm Console.

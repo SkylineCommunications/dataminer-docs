@@ -273,6 +273,18 @@ When you opened the context menu of the side panel, in some cases, the context m
 
 When, on page level, you had configured a data field of type *Execute* containing multiple *Set* actions with placeholders as well as a *Script* action, the script would incorrectly get executed multiple times when the page was opened.
 
+#### DataMiner Cube - Alarm Console: Problem when loading an alarm tab with hyperlink columns [ID_34420]
+
+<!-- Main Release Version 10.1.0 [CU20]/10.2.0 [CU8] - Feature Release Version 10.2.11 -->
+
+In some cases, DataMiner Cube could become unresponsive when loading an alarm tab with hyperlink columns, especially when that alarm tab contained a large number of alarms.
+
+#### Problem during midnight synchronization would cause '200+ clients connected to this agent' errors to appear [ID_34450]
+
+<!-- MR 10.2.0 [CU8] - FR 10.2.11 -->
+
+During a midnight synchronization, in some cases, ResourceManager subscriptions could incorrectly get duplicated, causing `200+ clients connected to this agent` errors to appear in the Alarm Console.
+
 #### Web Services API: Problem when calling the GetBooking or GetBookings method via SOAP [ID_34466]
 
 <!-- Main Release Version 10.1.0 [CU20]/10.2.0 [CU8] - Feature Release Version 10.2.11 -->

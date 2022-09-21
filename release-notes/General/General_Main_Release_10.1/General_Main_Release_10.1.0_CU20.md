@@ -163,6 +163,12 @@ In some cases, an error could occur in SLLog when closing a log file.
 
 When you opened the context menu of the side panel, in some cases, the context menu and the dashboard selected in the list would overlap each other.
 
+#### DataMiner Cube - Alarm Console: Problem when loading an alarm tab with hyperlink columns [ID_34420]
+
+<!-- Main Release Version 10.1.0 [CU20]/10.2.0 [CU8] - Feature Release Version 10.2.11 -->
+
+In some cases, DataMiner Cube could become unresponsive when loading an alarm tab with hyperlink columns, especially when that alarm tab contained a large number of alarms.
+
 #### Web Services API: Problem when calling the GetBooking or GetBookings method via SOAP [ID_34466]
 
 <!-- Main Release Version 10.1.0 [CU20]/10.2.0 [CU8] - Feature Release Version 10.2.11 -->

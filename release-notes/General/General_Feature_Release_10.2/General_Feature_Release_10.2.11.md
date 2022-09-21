@@ -116,6 +116,12 @@ After selecting a data source, do the following:
 
 The `Repair DB.bat` script, located in the `C:\Skyline DataMiner\Tools` folder, now also supports MySQL Server 5.5.
 
+#### Elasticsearch: Enhanced migration of alarm trees from the active-alarms index to an index containing closed alarms [ID_34444]
+
+<!-- MR 10.3.0 - FR 10.2.11 -->
+
+Because of a number of enhancements, overall performance has increased when migrating large alarm trees from the *active-alarms* index to an index containing closed alarms.
+
 ### Fixes
 
 #### Failover: Offline agent would fail to come online when the NATS cluster was down during a Failover switch [ID_33681]
@@ -259,6 +265,6 @@ When the GetBooking or GetBookings method was called via SOAP, in some cases, a 
 
 #### Problem during midnight synchronization would cause '200+ clients connected to this agent' errors to appear [ID_34450]
 
-<!-- MR 10.3.0 - FR 10.2.11 -->
+<!-- MR 10.2.0 [CU8] - FR 10.2.11 -->
 
 During a midnight synchronization, in some cases, ResourceManager subscriptions could incorrectly get duplicated, causing `200+ clients connected to this agent` errors to appear in the Alarm Console.
