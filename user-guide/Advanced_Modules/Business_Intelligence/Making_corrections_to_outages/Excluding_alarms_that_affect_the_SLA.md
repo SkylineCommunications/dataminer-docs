@@ -6,13 +6,15 @@ uid: Excluding_alarms_that_affect_the_SLA
 
 It is also possible to keep a currently active alarm from being included in the SLA calculation. This can be done as follows:
 
-[Skyline SLA Definition Basic protocol prior to 2.0.0.15](#tab/tabid-1)
+## [Skyline SLA Definition Basic protocol prior to 2.0.0.15](#tab/tabid-1)
 
 The page is named *Affecting Alarms*.
 
-[Skyline SLA Definition Basic protocols in the 2.0.0.x range and later](#tab/tabid-2)
+## [Skyline SLA Definition Basic protocols in the 2.0.0.x range and later](#tab/tabid-2)
 
 The page is named *Active Service Alarms*, with different column headers.
+
+***
 
 1. Go to the above mentioned page of the SLA element(depending on the version of your protocol).
 
