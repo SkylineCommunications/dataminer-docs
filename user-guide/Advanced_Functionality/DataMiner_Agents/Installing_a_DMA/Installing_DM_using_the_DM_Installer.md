@@ -4,21 +4,24 @@ uid: Installing_DM_using_the_DM_installer
 
 # Installing DataMiner using the DataMiner Installer
 
-## Prerequisites
-
-Before you run the installer, install the latest .NET Framework version.
-
-- For more information on recommended versions, see [DataMiner Compute Requirements](https://community.dataminer.services/dataminer-compute-requirements/).
-- For installation information, see <https://docs.microsoft.com/en-us/dotnet/framework/install/>
-
-In addition, make sure the Windows setting "fast startup" is not activated.
-
-## Running the installer
-
 The DataMiner installer allows you to run a default DataMiner installation, which includes a Cassandra database on the C drive, or to run a custom installation. A custom installation can for instance be used to install a MySQL database instead of a Cassandra database.
 
+## Before you run the installer
+
+1. Check if the latest .NET Framework is installed. See <https://learn.microsoft.com/en-us/dotnet/framework/migration-guide/how-to-determine-which-versions-are-installed>.
+
+   For more information on recommended versions, see [DataMiner Compute Requirements](https://community.dataminer.services/dataminer-compute-requirements/).
+
+1. If it is not installed, install the latest .NET Framework version.
+
+   For installation information, see <https://docs.microsoft.com/en-us/dotnet/framework/install/>
+
+1. Make sure the Windows setting "fast startup" is not activated.
+
+1. Download the DataMiner Installer from [DataMiner Dojo](https://community.dataminer.services/download/dataminer-installer-v10-2).
+
 > [!NOTE]
-> The default installation requires that WinPcap is installed for systems intended for DataMiner Failover.
+> The default installation requires that WinPcap is installed for systems intended for DataMiner Failover. In a custom DataMiner installation, WinPcap can be included in the DataMiner installation.
 
 ### Default DataMiner installation
 
@@ -31,7 +34,7 @@ The DataMiner installer allows you to run a default DataMiner installation, whic
 1. Enter the DataMiner ID.
 
    > [!IMPORTANT]
-   > To get this DataMiner ID, you must contact Skyline. The DataMiner ID will uniquely identify the DataMiner Agent you are installing.
+   > To get this DataMiner ID, contact <dataminer.licensing@skyline.be>. The DataMiner ID will uniquely identify the DataMiner Agent you are installing.
 
 1. Click next.
 
