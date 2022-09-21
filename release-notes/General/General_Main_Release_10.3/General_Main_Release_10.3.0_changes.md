@@ -717,3 +717,17 @@ when a dashboard, a low-code app page or low-code app panel was initialized, in 
 <!-- MR 10.3.0 - FR 10.2.11 -->
 
 When a CSV file exported via a dashboard component or attached to an email report was opened in e.g. Microsoft Excel, any special characters in that CSV file would be displayed incorrectly.
+
+#### 'One or more of the following modules are not licensed' error would incorrectly not list the unlicensed modules [ID_34407]
+
+<!-- MR 10.3.0 - FR 10.2.11 -->
+
+When a required software license cannot be found, a `One or more of the following modules are not licensed: ...` message will appear.
+
+In some cases, instead of listing the unlicensed modules, this message would incorrectly only mention "None".
+
+#### Problem during midnight synchronization would cause '200+ clients connected to this agent' errors to appear [ID_34450]
+
+<!-- MR 10.3.0 - FR 10.2.11 -->
+
+During a midnight synchronization, in some cases, ResourceManager subscriptions could incorrectly get duplicated, causing `200+ clients connected to this agent` errors to appear in the Alarm Console.

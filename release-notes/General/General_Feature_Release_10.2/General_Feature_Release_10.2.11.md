@@ -231,6 +231,14 @@ When a CSV file exported via a dashboard component or attached to an email repor
 
 In some cases, an error could occur when invalid parameters were passed to a dashboard in the URL (e.g. invalid time spans).
 
+#### 'One or more of the following modules are not licensed' error would incorrectly not list the unlicensed modules [ID_34407]
+
+<!-- MR 10.3.0 - FR 10.2.11 -->
+
+When a required software license cannot be found, a `One or more of the following modules are not licensed: ...` message will appear.
+
+In some cases, instead of listing the unlicensed modules, this message would incorrectly only mention "None".
+
 #### Dashboards app: Not possible to access the query column selection box of a newly created query [ID_34410]
 
 <!-- MR 10.2.0 [CU8] - FR 10.2.11 -->
@@ -248,3 +256,9 @@ When you opened the context menu of the side panel, in some cases, the context m
 <!-- Main Release Version 10.1.0 [CU20]/10.2.0 [CU8] - Feature Release Version 10.2.11 -->
 
 When the GetBooking or GetBookings method was called via SOAP, in some cases, a serialization exception could be thrown when the booking (in case of GetBooking) or one of the bookings (in case of GetBookings) had a property that contained a TimeSpan object.
+
+#### Problem during midnight synchronization would cause '200+ clients connected to this agent' errors to appear [ID_34450]
+
+<!-- MR 10.3.0 - FR 10.2.11 -->
+
+During a midnight synchronization, in some cases, ResourceManager subscriptions could incorrectly get duplicated, causing `200+ clients connected to this agent` errors to appear in the Alarm Console.
