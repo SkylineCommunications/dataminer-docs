@@ -57,7 +57,9 @@ Updates for Software connectors provided by Skyline are limited to changes relat
 
 Upgrades shall be released in Skyline's discretion and based on the technology innovations that take into account the general interest of all Users and the overall roadmap of the Software and Skyline's business.
 
-Installation of Updates and Upgrades on the User's system by Skyline is not included in the Support Services.
+Installation of Updates and Upgrades on the User's system by Skyline is not included in the Support Services. 
+
+Installation and configuration of hardware and databases (Cassandra, Elasticsearch, etc.) in the User's system by Skyline is not included in the Support Services.
 
 ## Support for software issues
 
