@@ -6,10 +6,19 @@ uid: Excluding_alarms_that_affect_the_SLA
 
 It is also possible to keep a currently active alarm from being included in the SLA calculation. This can be done as follows:
 
-1. Go to the *Current Service Alarms* page of the SLA element.
+[Skyline SLA Definition Basic protocol prior to 2.0.0.15](#tab/tabid-1)
+
+The page is named *Affecting Alarms*.
+
+[Skyline SLA Definition Basic protocols in the 2.0.0.x range and later](#tab/tabid-2)
+
+The page is named *Active Service Alarms*, with different column headers.
+
+1. Go to the above mentioned page of the SLA element(depending on the version of your protocol).
 
     > [!NOTE]
-    > - If you are using a version of the *Skyline SLA Definition Basic* protocol prior to 2.0.0.15, this page is named the *Affecting Alarms* page instead. The naming of the column headers is also different, mentioning “Affecting Alarm” instead of “Current Active Service Alarm”.
+    >
+    > - Depending on the version of the protocol, the column headers will be named differently.
     > - The active alarms will only be displayed on this page if *Active Alarms* is set to *Show* on the *Advanced Configuration* page of the SLA. Note that you need at least security level 3 to change this setting.
 
 2. In the list of alarms, in the column *Current Active Service Alarm Overruled Inclusion State*, select *Not included*.
