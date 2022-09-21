@@ -82,6 +82,12 @@ Because of a number of enhancements, overall performance has increased when sort
 
 The SLLogCollector tool will also collect all prerequisite output files as well as all upgrade logs.
 
+#### DataMiner Cube - Visual Overview: Enhanced shape positioning [ID_34356]
+
+<!-- Main Release Version 10.1.0 [CU20]/10.2.0 [CU8] - Feature Release Version 10.2.11 -->
+
+Because of a number of enhancements, overall performance has increased when setting the X and Y position of a shape.
+
 #### Lingering connections towards a DataMiner Agent will now be forcefully killed [ID_34367]
 
 <!-- MR 10.1.0 [CU20]/10.2.0 [CU8] - FR 10.2.11 -->
@@ -116,6 +122,12 @@ A number of enhancements have been made to the procedure called to determine whe
 <!-- MR 10.2.0 [CU8] - FR 10.2.11 -->
 
 In the *Logging* section of *System Center*, you can now also consult the *SLRADIUS.txt* log file.
+
+#### 'Repair DB.bat' script now also supports MySQL Server 5.5 [ID_34429]
+
+<!-- Main Release Version 10.1.0 [CU20]/10.2.0 [CU8] - Feature Release Version 10.2.11 -->
+
+The `Repair DB.bat` script, located in the `C:\Skyline DataMiner\Tools` folder, now also supports MySQL Server 5.5.
 
 ### Fixes
 
@@ -260,3 +272,9 @@ When you opened the context menu of the side panel, in some cases, the context m
 <!-- MR 10.2.0 [CU8] - FR 10.2.11 -->
 
 When, on page level, you had configured a data field of type *Execute* containing multiple *Set* actions with placeholders as well as a *Script* action, the script would incorrectly get executed multiple times when the page was opened.
+
+#### Web Services API: Problem when calling the GetBooking or GetBookings method via SOAP [ID_34466]
+
+<!-- Main Release Version 10.1.0 [CU20]/10.2.0 [CU8] - Feature Release Version 10.2.11 -->
+
+When the GetBooking or GetBookings method was called via SOAP, in some cases, a serialization exception could be thrown when the booking (in case of GetBooking) or one of the bookings (in case of GetBookings) had a property that contained a TimeSpan object.

@@ -711,3 +711,9 @@ In the generic filter component, in some cases, column filters would be incorrec
 <!-- MR 10.3.0 - FR 10.2.10 -->
 
 when a dashboard, a low-code app page or low-code app panel was initialized, in some cases, query column filters would not be applied correctly to table components on that dashboard, page or panel.
+
+#### Dashboards app: Special characters in exported CSV files would be displayed incorrectly [ID_34400]
+
+<!-- MR 10.3.0 - FR 10.2.11 -->
+
+When a CSV file exported via a dashboard component or attached to an email report was opened in e.g. Microsoft Excel, any special characters in that CSV file would be displayed incorrectly.

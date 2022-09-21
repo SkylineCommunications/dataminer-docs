@@ -110,6 +110,12 @@ After selecting a data source, do the following:
 1. Select the column to sort on.
 1. Select *Ascending* if you want to sort in ascending order instead of descending order.
 
+#### 'Repair DB.bat' script now also supports MySQL Server 5.5 [ID_34429]
+
+<!-- Main Release Version 10.1.0 [CU20]/10.2.0 [CU8] - Feature Release Version 10.2.11 -->
+
+The `Repair DB.bat` script, located in the `C:\Skyline DataMiner\Tools` folder, now also supports MySQL Server 5.5.
+
 ### Fixes
 
 #### Failover: Offline agent would fail to come online when the NATS cluster was down during a Failover switch [ID_33681]
@@ -213,6 +219,12 @@ In HTTP setups, up to now, the dashboard sharing menu would incorrectly contain 
 
 From now on, in HTTP setups, the dashboard sharing menu will no longer contain this command.
 
+#### Dashboards app: Special characters in exported CSV files would be displayed incorrectly [ID_34400]
+
+<!-- MR 10.3.0 - FR 10.2.11 -->
+
+When a CSV file exported via a dashboard component or attached to an email report was opened in e.g. Microsoft Excel, any special characters in that CSV file would be displayed incorrectly.
+
 #### Dashboards app: Problem with invalid URL parameters [ID_34405]
 
 <!-- MR 10.2.0 [CU8] - FR 10.2.11 -->
@@ -233,6 +245,6 @@ When you opened the context menu of the side panel, in some cases, the context m
 
 #### Web Services API: Problem when calling the GetBooking or GetBookings method via SOAP [ID_34466]
 
-<!-- Main Release Version 10.1.0 [CU20] - Feature Release Version 10.2.11 -->
+<!-- Main Release Version 10.1.0 [CU20]/10.2.0 [CU8] - Feature Release Version 10.2.11 -->
 
 When the GetBooking or GetBookings method was called via SOAP, in some cases, a serialization exception could be thrown when the booking (in case of GetBooking) or one of the bookings (in case of GetBookings) had a property that contained a TimeSpan object.

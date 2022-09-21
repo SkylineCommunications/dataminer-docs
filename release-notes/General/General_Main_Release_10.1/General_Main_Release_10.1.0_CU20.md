@@ -46,6 +46,12 @@ When a shape was linked to an element that was not part of a service, up to now,
 
 Because of a number of enhancements, overall performance has increased when sorting dynamically positioned shapes.
 
+#### DataMiner Cube - Visual Overview: Enhanced shape positioning [ID_34356]
+
+<!-- Main Release Version 10.1.0 [CU20]/10.2.0 [CU8] - Feature Release Version 10.2.11 -->
+
+Because of a number of enhancements, overall performance has increased when setting the X and Y position of a shape.
+
 #### Lingering connections towards a DataMiner Agent will now be forcefully killed [ID_34367]
 
 <!-- Main Release Version 10.1.0 [CU20]/10.2.0 [CU8] - Feature Release Version 10.2.11 -->
@@ -74,6 +80,12 @@ In Visual Overview, the current value of the following user settings will now be
 <!-- Main Release Version 10.1.0 [CU20]/10.2.0 [CU8] - Feature Release Version 10.2.11 -->
 
 A number of enhancements have been made to the procedure called to determine whether a shape is clickable.
+
+#### 'Repair DB.bat' script now also supports MySQL Server 5.5 [ID_34429]
+
+<!-- Main Release Version 10.1.0 [CU20]/10.2.0 [CU8] - Feature Release Version 10.2.11 -->
+
+The `Repair DB.bat` script, located in the `C:\Skyline DataMiner\Tools` folder, now also supports MySQL Server 5.5.
 
 ### Fixes
 
@@ -153,6 +165,6 @@ When you opened the context menu of the side panel, in some cases, the context m
 
 #### Web Services API: Problem when calling the GetBooking or GetBookings method via SOAP [ID_34466]
 
-<!-- Main Release Version 10.1.0 [CU20] - Feature Release Version 10.2.11 -->
+<!-- Main Release Version 10.1.0 [CU20]/10.2.0 [CU8] - Feature Release Version 10.2.11 -->
 
 When the GetBooking or GetBookings method was called via SOAP, in some cases, a serialization exception could be thrown when the booking (in case of GetBooking) or one of the bookings (in case of GetBookings) had a property that contained a TimeSpan object.

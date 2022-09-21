@@ -22,6 +22,12 @@ uid: Cube_Feature_Release_10.2.11
 
 When you move one or more resources from a pool to the *(uncategorized)* pool, a confirmation box will now appear to warn you that, if you click *Yes*, the resources in question will be removed from all pools.
 
+#### DataMiner Cube - Visual Overview: Enhanced shape positioning [ID_34356]
+
+<!-- Main Release Version 10.1.0 [CU20]/10.2.0 [CU8] - Feature Release Version 10.2.11 -->
+
+Because of a number of enhancements, overall performance has increased when setting the X and Y position of a shape.
+
 #### DataMiner Cube - System Center: New DataMiner log file 'SLRADIUS.txt' [ID_34396]
 
 <!-- MR 10.2.0 [CU8] - FR 10.2.11 -->
