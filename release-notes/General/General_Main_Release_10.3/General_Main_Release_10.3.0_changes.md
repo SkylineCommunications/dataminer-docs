@@ -376,6 +376,12 @@ Because of enhancements to the way resources are processed and stored, the Resou
 
 In addition, performance has improved when a resource or resource pool is added or updated.
 
+#### GQI: Enhanced performance of the ProfileInstance data source [ID_34320]
+
+<!-- MR 10.3.0 - FR 10.2.11 -->
+
+Because of a number of enhancements, overall performance has increased when running a GQI query using the ProfileInstance data source.
+
 #### Elasticsearch: Enhanced migration of alarm trees from the active-alarms index to an index containing closed alarms [ID_34444]
 
 <!-- MR 10.3.0 - FR 10.2.11 -->
@@ -717,12 +723,6 @@ In the generic filter component, in some cases, column filters would be incorrec
 <!-- MR 10.3.0 - FR 10.2.10 -->
 
 when a dashboard, a low-code app page or low-code app panel was initialized, in some cases, query column filters would not be applied correctly to table components on that dashboard, page or panel.
-
-#### Dashboards app: Special characters in exported CSV files would be displayed incorrectly [ID_34400]
-
-<!-- MR 10.3.0 - FR 10.2.11 -->
-
-When a CSV file exported via a dashboard component or attached to an email report was opened in e.g. Microsoft Excel, any special characters in that CSV file would be displayed incorrectly.
 
 #### 'One or more of the following modules are not licensed' error would incorrectly not list the unlicensed modules [ID_34407]
 

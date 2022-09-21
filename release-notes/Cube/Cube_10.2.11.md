@@ -16,6 +16,15 @@ uid: Cube_Feature_Release_10.2.11
 
 ## Other features
 
+#### Visual Overview: Retrieving the contributing booking ID of a resource using a placeholder or a shape data field of type 'Info' [ID_34306]
+
+<!-- MR 10.3.0 - FR 10.2.11 -->
+
+In Visual Overview, it is now possible to retrieve the contributing booking ID of a resource
+
+- by means of a [ContributingBooking] placeholder, or
+- by means of a shape data field of type *Info* set to "CONTRIBUTING BOOKING"
+
 #### DataMiner Cube - Resources app: Removing resources from all pools [ID_34311]
 
 <!-- Main Release Version 10.2.0 [CU8] - Feature Release Version 10.2.11 -->
@@ -74,6 +83,14 @@ When a shape was linked to an element that was not part of a service, up to now,
 <!-- Main Release Version 10.1.0 [CU20]/10.2.0 [CU8] - Feature Release Version 10.2.11 -->
 
 Because of a number of enhancements, overall performance has increased when sorting dynamically positioned shapes.
+
+#### Trending - Behavioral anomaly detection: Enhanced analysis of anomalous change points [ID_34376]
+
+<!-- MR 10.3.0 - FR 10.2.11 -->
+
+When you enabled alarm monitoring for a specific type of anomaly in an alarm template, since DataMiner feature version 10.2.6, it was assumed that you wished to be alerted to all behavioral changes of that type.
+
+From now on, an automatic anomaly significance check will be performed. Per trended parameter, this check will filter out behavioral changes that cannot be considered anomalous with respect to the history of behavioral changes of the parameter in question. Behavioral changes similar to changes that have occurred regularly or frequently in the historical behavior of a parameter will not be labelled anomalous and will therefore not cause an alarm to be generated when anomaly monitoring is enabled for the parameter and anomaly type in question.
 
 #### DataMiner Cube - Visual Overview: Caching of user settings in order to enhanced performance [ID_34383]
 

@@ -739,11 +739,19 @@ A number of enhancements have been made to the start window of the DataMiner Cub
 
 - The message that is displayed after a start window update will no longer show any technical information.
 
-#### Anomaly alarms will now be triggered for all behavioral changes of monitored anomaly type [ID_33281]
+<!-- #### Anomaly alarms will now be triggered for all behavioral changes of monitored anomaly type [ID_33281] -->
 
 <!-- MR 10.3.0 - FR 10.2.6 -->
 
-When you enable alarm monitoring for a specific type of anomaly in an alarm template, it is now assumed that you wish to be alerted to all behavioral changes of that type. Previously, an alarm was only triggered in case the behavioral change was sufficiently significant with respect to other behavioral changes in the recent history of the parameter. Now behavioral changes of a specific type on a trended parameter will always be considered to be behavioral anomalies if anomaly monitoring is enabled on this type and parameter, even if the behavioral change point is not significantly different from other behavioral changes in the recent history of the trended parameter.
+<!-- When you enable alarm monitoring for a specific type of anomaly in an alarm template, it is now assumed that you wish to be alerted to all behavioral changes of that type. Previously, an alarm was only triggered in case the behavioral change was sufficiently significant with respect to other behavioral changes in the recent history of the parameter. Now behavioral changes of a specific type on a trended parameter will always be considered to be behavioral anomalies if anomaly monitoring is enabled on this type and parameter, even if the behavioral change point is not significantly different from other behavioral changes in the recent history of the trended parameter. -->
+
+#### Trending - Behavioral anomaly detection: Enhanced analysis of anomalous change points [ID_33281] [ID_34376]
+
+<!-- MR 10.3.0 - FR 10.2.11 -->
+
+When you enable alarm monitoring for a specific type of anomaly in an alarm template, an automatic anomaly significance check is performed. This check has now been enhanced.
+
+Per trended parameter, the anomaly significance check will filter out behavioral changes that cannot be considered anomalous with respect to the history of behavioral changes of the parameter in question. Behavioral changes similar to changes that have occurred regularly or frequently in the historical behavior of a parameter will not be labelled anomalous and will therefore not cause an alarm to be generated when anomaly monitoring is enabled for the parameter and anomaly type in question.
 
 #### Data Display: Context menu of URL parameters now contains copy commands [ID_33321]
 
@@ -964,6 +972,15 @@ Supported operators:
 - \>=
 - \<
 - \<=
+
+#### Visual Overview: Retrieving the contributing booking ID of a resource using a placeholder or a shape data field of type 'Info' [ID_34306]
+
+<!-- MR 10.3.0 - FR 10.2.11 -->
+
+In Visual Overview, it is now possible to retrieve the contributing booking ID of a resource
+
+- by means of a [ContributingBooking] placeholder, or
+- by means of a shape data field of type *Info* set to "CONTRIBUTING BOOKING"
 
 #### Visual Overview: Shape data items of type 'NavigatePage' can now have values that include dynamic placeholders [ID_34442]
 

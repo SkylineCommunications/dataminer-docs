@@ -72,6 +72,12 @@ https://<dma>/<app-id>?data=%7B%22v%22:1,%22components%22:%5B%7B%22cid%22:1,%22s
 
 Because of a number of enhancements made to SLXML, overall performance has increased when querying large XML files.
 
+#### GQI: Enhanced performance of the ProfileInstance data source [ID_34320]
+
+<!-- MR 10.3.0 - FR 10.2.11 -->
+
+Because of a number of enhancements, overall performance has increased when running a GQI query using the ProfileInstance data source.
+
 #### Web apps - Interactive Automation scripts: Enhanced performance [ID_34348]
 
 <!-- MR 10.2.0 [CU8] - FR 10.2.11 -->
@@ -227,7 +233,7 @@ From now on, in HTTP setups, the dashboard sharing menu will no longer contain t
 
 #### Dashboards app: Special characters in exported CSV files would be displayed incorrectly [ID_34400]
 
-<!-- MR 10.3.0 - FR 10.2.11 -->
+<!-- MR 10.2.0 [CU8] - FR 10.2.11 -->
 
 When a CSV file exported via a dashboard component or attached to an email report was opened in e.g. Microsoft Excel, any special characters in that CSV file would be displayed incorrectly.
 

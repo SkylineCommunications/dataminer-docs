@@ -249,6 +249,12 @@ In HTTP setups, up to now, the dashboard sharing menu would incorrectly contain 
 
 From now on, in HTTP setups, the dashboard sharing menu will no longer contain this command.
 
+#### Dashboards app: Special characters in exported CSV files would be displayed incorrectly [ID_34400]
+
+<!-- MR 10.2.0 [CU8] - FR 10.2.11 -->
+
+When a CSV file exported via a dashboard component or attached to an email report was opened in e.g. Microsoft Excel, any special characters in that CSV file would be displayed incorrectly.
+
 #### Dashboards app: Problem with invalid URL parameters [ID_34405]
 
 <!-- MR 10.2.0 [CU8] - FR 10.2.11 -->
