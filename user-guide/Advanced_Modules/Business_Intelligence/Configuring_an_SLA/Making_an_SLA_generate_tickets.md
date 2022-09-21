@@ -34,3 +34,7 @@ To automatically generate tickets, this parameter must be used in conjunction wi
 > See also:
 > - [DMS Automation](xref:automation#dms-automation)
 > - [DMS Correlation](xref:correlation#dms-correlation)
+>
+> You can also create a ticket using the *Create Ticket* action, this requires the soft-launch *CorrelationTicketAction* set to true.
+
+
