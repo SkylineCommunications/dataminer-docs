@@ -46,3 +46,6 @@ To create such a DMZ:
 1. On a DataMiner node, copy `C:\Skyline DataMiner\SLCloud.xml` and `C:\Skyline DataMiner\NATS\nsc\.nkeys\creds\DataMinerOperator\DataMinerAccount\DataMinerUser.creds`, and paste these in the `C:\Skyline DataMiner\` folder of the DMZ. Make sure that the credentials entry in *SLCloud.xml* points to the credentials file you copied over.
 
 1. Restart all DxMs in the DMZ so that they use the new settings.
+
+> [!WARNING]
+> Ensure the *NAS* &amp; *NATS* firewall (on the DataMiner Agents) rules apply on to the '*Public*' profile, older DataMiner versions incorrectly applied these firewall rules on the '*Domain*' profile.
