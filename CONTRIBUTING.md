@@ -566,7 +566,7 @@ To install DocFX on a Microsoft Windows machine:
 
     1. Open a command prompt.
     1. Enter `docfx help`.
-    
+
     If information similar to the following text is returned, DocFX was installed correctly:
 
     ```txt
@@ -579,7 +579,7 @@ To install DocFX on a Microsoft Windows machine:
 > [!TIP]
 > Alternative ways to install DocFX can be found on the [DocFX website](https://dotnet.github.io/docfx/tutorial/docfx_getting_started.html#2-use-docfx-as-a-command-line-tool).
 
-#### Making a test build	
+#### Making a test build
 
 When you have finished making a series of changes to documentation in Visual Studio Code, do the following to make a test build on your local machine.
 
@@ -587,18 +587,21 @@ When you have finished making a series of changes to documentation in Visual Stu
 
 1. In the Terminal pane, do the following:
 
-    1. Enter `clear` to clear the terminal.
-    
-    1. Enter `docfx build -f` to make a test build.
-    
-    1. Enter `docfx serve _site`.
-    
-    1. In a browser, go to <http://localhost:8080/> to preview the website.
-    
-        When you have finished previewing the website, in the Terminal pane, press ENTER to exit the preview mode.
+   1. Enter `clear` to clear the terminal.
 
-        > [!NOTE]
-        > Using the search box when viewing the test website on <http://localhost:8080/> will not return any pages from the test website. The search engine only indexes the published content on <https://docs.dataminer.services/> and will, as such, only return pages from that website. 
+   1. Enter `docfx build -f` to make a test build.
+
+      > [!NOTE]
+      > If you get a lot of warning when you try to create a test build, it could be that you still need to install the .NET framework SDK Developer Pack. To do so, go to <https://dotnet.microsoft.com/en-us/download/visual-studio-sdks> and choose the .NET Framework 4.8 Developer Pack.
+
+   1. Enter `docfx serve _site`.
+
+   1. In a browser, go to <http://localhost:8080/> to preview the website.
+
+      When you have finished previewing the website, in the Terminal pane, press ENTER to exit the preview mode.
+
+      > [!NOTE]
+      > Using the search box when viewing the test website on <http://localhost:8080/> will not return any pages from the test website. The search engine only indexes the published content on <https://docs.dataminer.services/> and will, as such, only return pages from that website.
 
 ## References
 
