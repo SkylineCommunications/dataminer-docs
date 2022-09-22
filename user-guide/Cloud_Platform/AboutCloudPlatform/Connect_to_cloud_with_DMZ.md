@@ -48,4 +48,4 @@ To create such a DMZ:
 1. Restart all DxMs in the DMZ so that they use the new settings.
 
 > [!CAUTION]
-> Make sure the *NAS* &amp; *NATS* firewall rules (on the DataMiner Agents) apply to the *Public* profile. Older DataMiner versions incorrectly applied these firewall rules to the *Domain* profile.
+> Make sure the *NAS* &amp; *NATS* firewall rules (on the DataMiner Agents) apply to the *Public* profile. DataMiner versions prior to 10.2.0 and 10.2.3 incorrectly applied these firewall rules to the *Domain* profile, and this is not automatically adjusted during updates.
