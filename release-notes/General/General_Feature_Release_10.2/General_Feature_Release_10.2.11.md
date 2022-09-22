@@ -128,6 +128,12 @@ The `Repair DB.bat` script, located in the `C:\Skyline DataMiner\Tools` folder, 
 
 Because of a number of enhancements, overall performance has increased when migrating large alarm trees from the *active-alarms* index to an index containing closed alarms.
 
+#### Dashboards app / Low-code apps: Enhanced filtering by protocol [ID_34453]
+
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.11 -->
+
+From now on, when you add a protocol filter to a component without specifying any particular version(s), that filter will return all data related to that protocol irrespective of protocol version. If you want the data in the component to be filtered by a specific version of the protocol in question, you can select that version from the protocol filter box.
+
 ### Fixes
 
 #### Failover: Offline agent would fail to come online when the NATS cluster was down during a Failover switch [ID_33681]
@@ -274,3 +280,15 @@ When the GetBooking or GetBookings method was called via SOAP, in some cases, a 
 <!-- MR 10.2.0 [CU8] - FR 10.2.11 -->
 
 During a midnight synchronization, in some cases, ResourceManager subscriptions could incorrectly get duplicated, causing `200+ clients connected to this agent` errors to appear in the Alarm Console.
+
+#### Web apps: URL option 'subheader=' would no longer work [ID_34456]
+
+<!-- MR 10.3.0 - FR 10.2.11 -->
+
+When, in the URL of a web app (e.g. Dashboards, Ticketing, etc.), you had specified `subheader=true` or `subheader=false` in combination with `embed=true`, that `subheader=` option would no longer work.
+
+Example of a dashboard URL containing a `subheader=true` option:
+
+```txt
+https://[DMA IP]/dashboard/#/MyDashboards/dashboard.dmadb?embed=true&subheader=true
+```

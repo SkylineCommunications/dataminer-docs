@@ -645,6 +645,12 @@ After selecting a data source, do the following:
 1. Select the column to sort on.
 1. Select *Ascending* if you want to sort in ascending order instead of descending order.
 
+#### Dashboards app / Low-code apps: Enhanced filtering by protocol [ID_34453]
+
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.11 -->
+
+From now on, when you add a protocol filter to a component without specifying any particular version(s), that filter will return all data related to that protocol irrespective of protocol version. If you want the data in the component to be filtered by a specific version of the protocol in question, you can select that version from the protocol filter box.
+
 ### DMS Service & Resource Management
 
 #### Retrieving bookings in a paged way and sorted by property \[ID_31982\]
