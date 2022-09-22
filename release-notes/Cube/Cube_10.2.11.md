@@ -16,14 +16,42 @@ uid: Cube_Feature_Release_10.2.11
 
 ## Other features
 
-#### Visual Overview: Retrieving the contributing booking ID of a resource using a placeholder or a shape data field of type 'Info' [ID_34306]
+#### Visual Overview: Retrieving the contributing booking ID of a resource [ID_34306]
 
 <!-- MR 10.3.0 - FR 10.2.11 -->
 
-In Visual Overview, it is now possible to retrieve the contributing booking ID of a resource
+In Visual Overview, it is now possible to retrieve the contributing booking ID of a resource.
 
-- by means of a [ContributingBooking] placeholder, or
-- by means of a shape data field of type *Info* set to "CONTRIBUTING BOOKING"
+- By specifying the *ContributingBooking* property in the `[Resource:]` placeholder.
+
+    Example: `[Resource:[pagevar:IDOfSelection], ContributingBooking]`
+
+- By specifying the following in a shape that is linked to an element and that has "UseResource=true" set in its *Options* shape data field.
+
+    - A shape data field of type *Info* set to "Contributing Booking" and an asterisk character ("*") in the shape text:
+
+        Example:
+        
+        | Shape data field | Value |
+        |------------------|-------|
+        | Element | [pagevar:idofselection] |
+        | Options | UseResource=truee |
+        | Info | Contributing Booking |
+
+        Shape text: `Contributing booking: *`
+
+        ***OR***
+
+    - A `[Contributing Booking]` placeholder in the shape text:
+
+        Example:
+        
+        | Shape data field | Value |
+        |------------------|-------|
+        | Element | [pagevar:idofselection] |
+        | Options | UseResource=truee |
+
+        Shape text: `Contributing booking: [Contributing Booking]`
 
 #### DataMiner Cube - Resources app: Removing resources from all pools [ID_34311]
 
@@ -132,6 +160,12 @@ On systems with active correlation rules, in some rare cases, the counters in th
 <!-- Main Release Version 10.1.0 [CU20]/10.2.0 [CU8] - Feature Release Version 10.2.11 -->
 
 When you opened a trend graph of an EPM object, it would not be possible to add a second parameter. After you had added a new parameter, the drop-down box would incorrectly only contain the current parameter.
+
+#### DataMiner Cube - Spectrum analysis: An incorrect preset would be loaded when clicking 'View buffer' [ID_34357]
+
+<!-- Main Release Version 10.1.0 [CU20]/10.2.0 [CU8] - Feature Release Version 10.2.11 -->
+
+When, in a Spectrum card, you clicked *View buffer*, the incorrect preset would be loaded. As a result, incorrect threshold values would be displayed.
 
 #### DataMiner Cube - Visual Overview: Problem when receiving a DCF connection line update [ID_34375]
 

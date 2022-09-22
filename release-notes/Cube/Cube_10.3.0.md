@@ -973,14 +973,42 @@ Supported operators:
 - \<
 - \<=
 
-#### Visual Overview: Retrieving the contributing booking ID of a resource using a placeholder or a shape data field of type 'Info' [ID_34306]
+#### Visual Overview: Retrieving the contributing booking ID of a resource [ID_34306]
 
 <!-- MR 10.3.0 - FR 10.2.11 -->
 
-In Visual Overview, it is now possible to retrieve the contributing booking ID of a resource
+In Visual Overview, it is now possible to retrieve the contributing booking ID of a resource.
 
-- by means of a [ContributingBooking] placeholder, or
-- by means of a shape data field of type *Info* set to "CONTRIBUTING BOOKING"
+- By specifying the *ContributingBooking* property in the `[Resource:]` placeholder.
+
+    Example: `[Resource:[pagevar:IDOfSelection], ContributingBooking]`
+
+- By specifying the following in a shape that is linked to an element and that has "UseResource=true" set in its *Options* shape data field.
+
+    - A shape data field of type *Info* set to "Contributing Booking" and an asterisk character ("*") in the shape text:
+
+        Example:
+        
+        | Shape data field | Value |
+        |------------------|-------|
+        | Element | [pagevar:idofselection] |
+        | Options | UseResource=truee |
+        | Info | Contributing Booking |
+
+        and the shape text set to `Contributing booking: *`
+
+        ***OR***
+
+    - A `[Contributing Booking]` placeholder in the shape text:
+
+        Example:
+        
+        | Shape data field | Value |
+        |------------------|-------|
+        | Element | [pagevar:idofselection] |
+        | Options | UseResource=truee |
+
+        and the shape text set to `Contributing booking: [Contributing Booking]`
 
 #### Visual Overview: Shape data items of type 'NavigatePage' can now have values that include dynamic placeholders [ID_34442]
 
