@@ -309,6 +309,6 @@ https://[DMA IP]/dashboard/#/MyDashboards/dashboard.dmadb?embed=true&subheader=t
 
 #### Dashboards app: List of available dashboards would not be displayed when using a Dashboard Gateway server [ID_34468]
 
-<!-- MR 10.3.0 - FR 10.2.11 -->
+<!-- MR 10.2.0 [CU8] - FR 10.2.11 -->
 
 When you opened the Dashboards app via a Dashboard Gateway server, in some cases, the list of available dashboards would incorrectly not be displayed in the sidebar.

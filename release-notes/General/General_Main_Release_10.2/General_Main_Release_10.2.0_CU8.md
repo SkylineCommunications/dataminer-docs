@@ -314,3 +314,9 @@ During a midnight synchronization, in some cases, ResourceManager subscriptions 
 <!-- Main Release Version 10.1.0 [CU20]/10.2.0 [CU8] - Feature Release Version 10.2.11 -->
 
 When the GetBooking or GetBookings method was called via SOAP, in some cases, a serialization exception could be thrown when the booking (in case of GetBooking) or one of the bookings (in case of GetBookings) had a property that contained a TimeSpan object.
+
+#### Dashboards app: List of available dashboards would not be displayed when using a Dashboard Gateway server [ID_34468]
+
+<!-- MR 10.2.0 [CU8] - FR 10.2.11 -->
+
+When you opened the Dashboards app via a Dashboard Gateway server, in some cases, the list of available dashboards would incorrectly not be displayed in the sidebar.
