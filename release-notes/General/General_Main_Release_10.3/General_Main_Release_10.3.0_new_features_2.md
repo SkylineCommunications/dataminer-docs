@@ -645,6 +645,20 @@ After selecting a data source, do the following:
 1. Select the column to sort on.
 1. Select *Ascending* if you want to sort in ascending order instead of descending order.
 
+#### Dashboards app / Low-code apps: An eye icon will now appear when you make a modification to a GQI table [ID_34445]
+
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.11 -->
+
+When you make one of the following modifications to a GQI table, an eye icon will now appear in the header of the table component.
+
+- Change the sorting
+- Apply a grouping
+- Change the order of the columns
+- Change the width of the columns
+- Apply a column filter (using the context menu that appears when right-clicking a column header)
+
+This eye icon will make you aware that the table is no longer identical to the one that was loaded originally. Clicking it will reset all modifications.
+
 #### Dashboards app / Low-code apps: Enhanced filtering by protocol [ID_34453]
 
 <!-- Main Release Version 10.3.0 - Feature Release Version 10.2.11 -->

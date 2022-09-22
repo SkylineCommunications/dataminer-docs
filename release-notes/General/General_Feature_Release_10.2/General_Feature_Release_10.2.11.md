@@ -128,6 +128,20 @@ The `Repair DB.bat` script, located in the `C:\Skyline DataMiner\Tools` folder, 
 
 Because of a number of enhancements, overall performance has increased when migrating large alarm trees from the *active-alarms* index to an index containing closed alarms.
 
+#### Dashboards app / Low-code apps: An eye icon will now appear when you make a modification to a GQI table [ID_34445]
+
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.11 -->
+
+When you make one of the following modifications to a GQI table, an eye icon will now appear in the header of the table component.
+
+- Change the sorting
+- Apply a grouping
+- Change the order of the columns
+- Change the width of the columns
+- Apply a column filter (using the context menu that appears when right-clicking a column header)
+
+This eye icon will make you aware that the table is no longer identical to the one that was loaded originally. Clicking it will reset all modifications.
+
 #### Dashboards app / Low-code apps: Enhanced filtering by protocol [ID_34453]
 
 <!-- Main Release Version 10.3.0 - Feature Release Version 10.2.11 -->
@@ -292,3 +306,9 @@ Example of a dashboard URL containing a `subheader=true` option:
 ```txt
 https://[DMA IP]/dashboard/#/MyDashboards/dashboard.dmadb?embed=true&subheader=true
 ```
+
+#### Dashboards app: List of available dashboards would not be displayed when using a Dashboard Gateway server [ID_34468]
+
+<!-- MR 10.3.0 - FR 10.2.11 -->
+
+When you opened the Dashboards app via a Dashboard Gateway server, in some cases, the list of available dashboards would incorrectly not be displayed in the sidebar.
