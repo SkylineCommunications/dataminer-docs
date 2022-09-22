@@ -133,11 +133,11 @@ When you entered an invalid value in a numeric component, the *UIResults.GetStri
 
 When you opened a trend graph of an EPM object, it would not be possible to add a second parameter. After you had added a new parameter, the drop-down box would incorrectly only contain the current parameter.
 
-#### DataMiner Cube - Spectrum analysis: An incorrect preset would be loaded when clicking 'View buffer' [ID_34357]
+#### DataMiner Cube - Spectrum analysis: Preset would not be loaded when clicking 'View buffer' [ID_34357]
 
 <!-- Main Release Version 10.1.0 [CU20]/10.2.0 [CU8] - Feature Release Version 10.2.11 -->
 
-When, in a Spectrum card, you clicked *View buffer*, the incorrect preset would be loaded. As a result, incorrect threshold values would be displayed.
+When, in a Spectrum card, you clicked *View buffer*, the preset contained inside the buffer would incorrectly not be loaded. As a result, incorrect threshold values would be displayed.
 
 #### Dashboards app / Low-code apps: Creating a custom theme with a custom color palette would incorrectly cause the color palette of all built-in themes to be updated [ID_34368]
 

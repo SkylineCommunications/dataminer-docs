@@ -260,3 +260,21 @@ The folder structure of the Class Library has been updated. "DataMiner\\Library"
 #### DllImport statement added to RateHelper class \[ID_33878\]
 
 The RateHelper class lacked a DllImport statement. This has now been added.
+
+### 1.2.2.5
+
+#### 'LogType does not exist in current context' error [ID_34469]
+
+In some cases, the following error would be thrown:
+
+```txt
+The name 'LogType' does not exist in the current context
+```
+
+In order to prevent this error, from now on, *QActionHelperBaseClasses* will always be loaded together with *SLManagedScripting*.
+
+#### Rate classes now include device reboot detection to avoid invalid rate calculations [ID_34470]
+
+The Rate classes now include device reboot detection to avoid invalid rate calculations.
+
+The example protocol *SLC SDF Rates - SNMP* has also been adapted accordingly.

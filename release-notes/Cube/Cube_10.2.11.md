@@ -161,11 +161,11 @@ On systems with active correlation rules, in some rare cases, the counters in th
 
 When you opened a trend graph of an EPM object, it would not be possible to add a second parameter. After you had added a new parameter, the drop-down box would incorrectly only contain the current parameter.
 
-#### DataMiner Cube - Spectrum analysis: An incorrect preset would be loaded when clicking 'View buffer' [ID_34357]
+#### DataMiner Cube - Spectrum analysis: Preset would not be loaded when clicking 'View buffer' [ID_34357]
 
 <!-- Main Release Version 10.1.0 [CU20]/10.2.0 [CU8] - Feature Release Version 10.2.11 -->
 
-When, in a Spectrum card, you clicked *View buffer*, the incorrect preset would be loaded. As a result, incorrect threshold values would be displayed.
+When, in a Spectrum card, you clicked *View buffer*, the preset contained inside the buffer would incorrectly not be loaded. As a result, incorrect threshold values would be displayed.
 
 #### DataMiner Cube - Visual Overview: Problem when receiving a DCF connection line update [ID_34375]
 

@@ -739,12 +739,6 @@ A number of enhancements have been made to the start window of the DataMiner Cub
 
 - The message that is displayed after a start window update will no longer show any technical information.
 
-<!-- #### Anomaly alarms will now be triggered for all behavioral changes of monitored anomaly type [ID_33281] -->
-
-<!-- MR 10.3.0 - FR 10.2.6 -->
-
-<!-- When you enable alarm monitoring for a specific type of anomaly in an alarm template, it is now assumed that you wish to be alerted to all behavioral changes of that type. Previously, an alarm was only triggered in case the behavioral change was sufficiently significant with respect to other behavioral changes in the recent history of the parameter. Now behavioral changes of a specific type on a trended parameter will always be considered to be behavioral anomalies if anomaly monitoring is enabled on this type and parameter, even if the behavioral change point is not significantly different from other behavioral changes in the recent history of the trended parameter. -->
-
 #### Trending - Behavioral anomaly detection: Enhanced analysis of anomalous change points [ID_33281] [ID_34376]
 
 <!-- MR 10.3.0 - FR 10.2.11 -->
