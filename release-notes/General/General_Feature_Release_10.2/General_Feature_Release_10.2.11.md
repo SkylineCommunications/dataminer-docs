@@ -142,6 +142,12 @@ When you make one of the following modifications to a GQI table, an eye icon wil
 
 This eye icon will make you aware that the table is no longer identical to the one that was loaded originally. Clicking it will reset all modifications.
 
+#### DataMiner web apps updated to Angular 14 [ID_34447]
+
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.11 -->
+
+The DataMiner mobile apps that use Angular (e.g. Low-Code Apps, Dashboards, Monitoring, Ticketing, Jobs, and Automation) now use Angular 14 instead of Angular 13.
+
 #### Dashboards app / Low-code apps: Enhanced filtering by protocol [ID_34453]
 
 <!-- Main Release Version 10.3.0 - Feature Release Version 10.2.11 -->
