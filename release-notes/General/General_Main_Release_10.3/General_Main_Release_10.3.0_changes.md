@@ -382,12 +382,6 @@ In addition, performance has improved when a resource or resource pool is added 
 
 Because of a number of enhancements, overall performance has increased when running a GQI query using the ProfileInstance data source.
 
-#### Elasticsearch: Enhanced migration of alarm trees from the active-alarms index to an index containing closed alarms [ID_34444]
-
-<!-- MR 10.3.0 - FR 10.2.11 -->
-
-Because of a number of enhancements, overall performance has increased when migrating large alarm trees from the *active-alarms* index to an index containing closed alarms.
-
 ### Fixes
 
 #### SLAnalytics: Problem with trend prediction [ID_31352]
@@ -731,6 +725,12 @@ when a dashboard, a low-code app page or low-code app panel was initialized, in 
 When a required software license cannot be found, a `One or more of the following modules are not licensed: ...` message will appear.
 
 In some cases, instead of listing the unlicensed modules, this message would incorrectly only mention "None".
+
+#### Elasticsearch: Problem when migrating large alarm trees from the active-alarms index to an index containing closed alarms [ID_34444]
+
+<!-- MR 10.3.0 - FR 10.2.11 -->
+
+When an alarm tree with more than 1,000 alarms was migrated from the *active-alarms* index to an index containing closed alarms, in some cases, alarms could get lost.
 
 #### Web apps: URL option 'subheader=' would no longer work [ID_34456]
 

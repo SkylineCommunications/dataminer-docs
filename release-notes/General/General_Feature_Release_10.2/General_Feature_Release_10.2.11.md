@@ -128,12 +128,6 @@ After selecting a data source, do the following:
 
 The `Repair DB.bat` script, located in the `C:\Skyline DataMiner\Tools` folder, now also supports MySQL Server 5.5.
 
-#### Elasticsearch: Enhanced migration of alarm trees from the active-alarms index to an index containing closed alarms [ID_34444]
-
-<!-- MR 10.3.0 - FR 10.2.11 -->
-
-Because of a number of enhancements, overall performance has increased when migrating large alarm trees from the *active-alarms* index to an index containing closed alarms.
-
 #### Dashboards app / Low-code apps: An eye icon will now appear when you make a modification to a GQI table [ID_34445]
 
 <!-- Main Release Version 10.3.0 - Feature Release Version 10.2.11 -->
@@ -306,6 +300,12 @@ In some cases, it would not be possible to access the query column selection box
 <!-- MR 10.1.0 [CU20]/10.2.0 [CU8] - FR 10.2.11 -->
 
 When you opened the context menu of the side panel, in some cases, the context menu and the dashboard selected in the list would overlap each other.
+
+#### Elasticsearch: Problem when migrating large alarm trees from the active-alarms index to an index containing closed alarms [ID_34444]
+
+<!-- MR 10.3.0 - FR 10.2.11 -->
+
+When an alarm tree with more than 1,000 alarms was migrated from the *active-alarms* index to an index containing closed alarms, in some cases, alarms could get lost.
 
 #### Web Services API: Problem when calling the GetBooking or GetBookings method via SOAP [ID_34466]
 
