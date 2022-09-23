@@ -1,5 +1,5 @@
 ---
-uid: Debugging_connectors_RTE_caused_by_nonpoll_group_in_timer
+uid: Debugging_connectors_RTE_caused_by_non-poll_group_in_timer
 ---
 
 # Debugging connectors: RTE caused by non-poll group in timer

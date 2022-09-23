@@ -571,7 +571,7 @@
         - name: Debugging connectors - element connections
           topicUID: Debugging_connectors_Element_connections
         - name: Debugging connectors - RTE caused by non-poll group in timer
-          topicUID: Debugging_connectors_RTE_caused_by_nonpoll_group_in_timer
+          topicUID: Debugging_connectors_RTE_caused_by_non-poll_group_in_timer
   - name: Automation scripts
     topicUid: AutomationDevGuideIndex
     items:
