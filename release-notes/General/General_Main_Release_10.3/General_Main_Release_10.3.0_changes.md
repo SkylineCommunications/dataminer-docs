@@ -654,12 +654,6 @@ When using Azure Active Directory as an identity provider, up to now, during an 
 
 When a name concatenation for a DomInstance had been defined in either the ModuleSettings or the DomDefinition, in some cases, the FieldValues would not get concatenated correctly.
 
-#### Elasticsearch: Closed alarms were incorrectly not migrated to the dms-alarms index when the associated element had been migrated from another DMS [ID_34020]
-
-<!-- MR 10.3.0 - FR 10.2.9 -->
-
-When, on a system with an Elasticsearch database, an alarm was closed, that alarm would incorrectly not get moved from the dms-Activealarms index to the dms-alarms index when the associated element had been migrated from another DMS.
-
 #### DOM: FieldAlias properties not saved to database [ID_34054]
 
 <!-- MR 10.3.0 - FR 10.2.9 -->

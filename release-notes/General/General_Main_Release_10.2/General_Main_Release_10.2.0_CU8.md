@@ -151,6 +151,12 @@ When multi-threaded timers were used in an SNMP protocol, the timer would incorr
 
 From now on, an empty group will no longer cause SLProtocol to send an empty SNMP request to SLSNMPManager.
 
+#### Elasticsearch: Closed alarms were incorrectly not migrated to the dms-alarms index when the associated element had been migrated from another DMS [ID_34020]
+
+<!-- MR 10.2.0 [CU8] - FR 10.2.9 -->
+
+When, on a system with an Elasticsearch database, an alarm was closed, that alarm would incorrectly not get moved from the dms-Activealarms index to the dms-alarms index when the associated element had been migrated from another DMS.
+
 #### Problem with SLProtocol when testing protocol connections [ID_34036]
 
 <!-- Main Release Version 10.1.0 [CU20]/10.2.0 [CU8] - Feature Release Version 10.2.11 -->
