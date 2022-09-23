@@ -199,6 +199,12 @@ When, in a Spectrum card, you clicked *View buffer*, the preset contained inside
 
 Creating a custom theme with a custom color palette would incorrectly cause the color palette of all built-in themes to be updated.
 
+#### Legacy Reporter: Custom files attached to a PDF report in plain text format would not be sent along [ID_34369]
+
+<!-- MR 10.2.0 [CU8] - FR 10.2.11 -->
+
+When, using the legacy Reporter app, you sent a PDF report in "plain text" format, any custom files attached to the report would incorrectly not be sent along.
+
 #### Dashboards app: Email reports would incorrectly not include CSV files when the 'Include CSV' option had been selected [ID_34370]
 
 <!-- MR 10.2.0 [CU8] - FR 10.2.11 -->

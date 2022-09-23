@@ -66,6 +66,12 @@ In the following example, the URL selects one default element on the initial pag
 https://<dma>/<app-id>?data=%7B%22v%22:1,%22components%22:%5B%7B%22cid%22:1,%22select%22:%7B%22elements%22:%5B%221%2F6%22%5D%7D%5D%7D%7D
 ```
 
+#### Dashboards app: Filtering a parameter feed that lists EPM parameters [ID_34287]
+
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.11 -->
+
+When an EPM identifier from an EPM feed is fed to a parameter feed, it will now be possible to drag multiple parameters onto the parameter feed in order to use them as filters.
+
 #### Enhanced performance when querying large XML files [ID_34299]
 
 <!-- MR 10.1.0 [CU20]/10.2.0 [CU8] - FR 10.2.11 -->
@@ -154,6 +160,12 @@ The DataMiner mobile apps that use Angular (e.g. Low-Code Apps, Dashboards, Moni
 
 From now on, when you add a protocol filter to a component without specifying any particular version(s), that filter will return all data related to that protocol irrespective of protocol version. If you want the data in the component to be filtered by a specific version of the protocol in question, you can select that version from the protocol filter box.
 
+#### GQI: New 'IsActive' column added to 'Get alarms' data source [ID_34455]
+
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.11 -->
+
+A new *IsActive* column has been added to *Get alarms* data source. This column will be set to true when the alarm is an active alarm.
+
 ### Fixes
 
 #### Failover: Offline agent would fail to come online when the NATS cluster was down during a Failover switch [ID_33681]
@@ -206,6 +218,12 @@ When a Process Automation definition is added to the Service definition componen
 <!-- MR 10.1.0 [CU20]/10.2.0 [CU8] - FR 10.2.11 -->
 
 Creating a custom theme with a custom color palette would incorrectly cause the color palette of all built-in themes to be updated.
+
+#### Legacy Reporter: Custom files attached to a PDF report in plain text format would not be sent along [ID_34369]
+
+<!-- MR 10.2.0 [CU8] - FR 10.2.11 -->
+
+When, using the legacy Reporter app, you sent a PDF report in "plain text" format, any custom files attached to the report would incorrectly not be sent along.
 
 #### Dashboards app: Email reports would incorrectly not include CSV files when the 'Include CSV' option had been selected [ID_34370]
 
