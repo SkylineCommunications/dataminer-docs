@@ -187,7 +187,7 @@ An error could occur when the client received a DCF connection line update.
 
 #### DataMiner Cube - Visual Overview: Problem when the Parameter shape data field of a range slider control contained a dynamic placeholder referring to a session variable [ID_34389]
 
-<!-- MR 10.2.0 [CU8] - FR 10.2.11 -->
+<!-- MR 10.1.0 [CU20]/10.2.0 [CU8] - FR 10.2.11 -->
 
 When the shape data field *Parameter* of a range slider control contained a dynamic placeholder referring to a session variable, it would no longer be possible to move the slider when the value of the session variable changed from valid to invalid or vice versa.
 

@@ -169,6 +169,12 @@ In some cases, an error could occur in SLProtocol when reading incorrectly confi
 
 In some cases, an error could occur in SLLog when closing a log file.
 
+#### DataMiner Cube - Visual Overview: Problem when the Parameter shape data field of a range slider control contained a dynamic placeholder referring to a session variable [ID_34389]
+
+<!-- Main Release Version 10.1.0 [CU20]/10.2.0 [CU8] - Feature Release Version 10.2.11 -->
+
+When the shape data field *Parameter* of a range slider control contained a dynamic placeholder referring to a session variable, it would no longer be possible to move the slider when the value of the session variable changed from valid to invalid or vice versa.
+
 #### Dashboards app: Side panel context menu and selected dashboard would overlap each other [ID_34411]
 
 <!-- Main Release Version 10.1.0 [CU20]/10.2.0 [CU8] - Feature Release Version 10.2.11 -->
