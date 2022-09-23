@@ -9,6 +9,7 @@ Using the new *Dashboards* app (from DataMiner 9.6.11 onwards):
 1. Select a dashboard and click the *Start editing* button in the header bar.
 
     > [!TIP]
+    > The dashboard app can be accessed via: http(s)://[DMA]/dashboard
     > See also:
     > [Dashboards app](xref:newR_D#dashboards-app)
 
@@ -30,7 +31,8 @@ Using the legacy Reports & Dashboards module (prior to DataMiner 9.6.11):
 
     > [!TIP]
     > See also:
-    > [DMS Dashboards](xref:dashboards)
+    > The legacy Reports & Dashboards module can be accessed via: http(s)://[DMA]/dashboards
+    > See also: [DMS Dashboards](xref:dashboards)
 
 2. In the *Add/Remove Components* pane, click *Other*.
 
