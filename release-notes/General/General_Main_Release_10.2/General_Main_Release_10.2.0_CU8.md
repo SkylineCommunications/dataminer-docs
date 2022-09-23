@@ -131,6 +131,12 @@ The `Repair DB.bat` script, located in the `C:\Skyline DataMiner\Tools` folder, 
 
 ### Fixes
 
+#### Elasticsearch: NewPagingSearchRequest was incorrectly not able to query an alias grouping two logger tables [ID_31767]
+
+<!-- MR 10.2.0 [CU8] - FR 10.2.2 -->
+
+Up to now, a NewPagingSearchRequest was incorrectly not able to retrieve data from an alias that grouped two logger tables.
+
 #### Dashboard Gateway (legacy): Dashboards would fail to show the Maps component when the DMA had HTTPS configured [ID_33777]
 
 <!-- MR 10.1.0 [CU20]/10.2.0 [CU8] - FR 10.2.11 -->
@@ -144,6 +150,12 @@ When a legacy Dashboard Gateway was connected to a DataMiner Agent with HTTPS co
 When multi-threaded timers were used in an SNMP protocol, the timer would incorrectly always execute the poll group, even if it did not specify any OIDs to be polled.
 
 From now on, an empty group will no longer cause SLProtocol to send an empty SNMP request to SLSNMPManager.
+
+#### Problem with SLProtocol when testing protocol connections [ID_34036]
+
+<!-- Main Release Version 10.1.0 [CU20]/10.2.0 [CU8] - Feature Release Version 10.2.11 -->
+
+When a protocol connection was tested, the CProtocol object created in SLProtocol for that test would neither get cleared nor deleted when the connection test had finished. In other words, the element would not get unloaded. This would cause SLProtocol to leak each time a protocol connection was tested.
 
 #### DataMiner Cube - Visual Overview: Problem with conditional shape manipulation actions 'Show' and 'Hide' [ID_34108]
 
@@ -278,6 +290,14 @@ From now on, in HTTP setups, the dashboard sharing menu will no longer contain t
 <!-- MR 10.2.0 [CU8] - FR 10.2.11 -->
 
 When a CSV file exported via a dashboard component or attached to an email report was opened in e.g. Microsoft Excel, any special characters in that CSV file would be displayed incorrectly.
+
+#### Legacy Reporter app: Users without 'Modules > Documents > UI available' permission would incorrectly be able to view documents [ID_34402]
+
+<!-- Main Release Version 10.1.0 [CU20]/10.2.0 [CU8] - Feature Release Version 10.2.11 -->
+
+Users who had not been granted the *Modules > Documents > UI available* permission would incorrectly be able to view documents in the legacy Reporter app.
+
+From now on, an error message will be displayed when users without the above-mentioned permission try to view a document in the legacy Reporter app.
 
 #### Dashboards app: Problem with invalid URL parameters [ID_34405]
 

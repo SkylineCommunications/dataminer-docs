@@ -188,6 +188,12 @@ When multi-threaded timers were used in an SNMP protocol, the timer would incorr
 
 From now on, an empty group will no longer cause SLProtocol to send an empty SNMP request to SLSNMPManager.
 
+#### Problem with SLProtocol when testing protocol connections [ID_34036]
+
+<!-- Main Release Version 10.1.0 [CU20]/10.2.0 [CU8] - Feature Release Version 10.2.11 -->
+
+When a protocol connection was tested, the CProtocol object created in SLProtocol for that test would neither get cleared nor deleted when the connection test had finished. In other words, the element would not get unloaded. This would cause SLProtocol to leak each time a protocol connection was tested.
+
 #### Problem when deserializing an overridden parameter description [ID_34266]
 
 <!-- MR 10.1.0 [CU20]/10.2.0 [CU8] - FR 10.2.11 -->
@@ -274,6 +280,14 @@ From now on, in HTTP setups, the dashboard sharing menu will no longer contain t
 <!-- MR 10.2.0 [CU8] - FR 10.2.11 -->
 
 When a CSV file exported via a dashboard component or attached to an email report was opened in e.g. Microsoft Excel, any special characters in that CSV file would be displayed incorrectly.
+
+#### Legacy Reporter app: Users without 'Modules > Documents > UI available' permission would incorrectly be able to view documents [ID_34402]
+
+<!-- Main Release Version 10.1.0 [CU20]/10.2.0 [CU8] - Feature Release Version 10.2.11 -->
+
+Users who had not been granted the *Modules > Documents > UI available* permission would incorrectly be able to view documents in the legacy Reporter app.
+
+From now on, an error message will be displayed when users without the above-mentioned permission try to view a document in the legacy Reporter app.
 
 #### Dashboards app: Problem with invalid URL parameters [ID_34405]
 

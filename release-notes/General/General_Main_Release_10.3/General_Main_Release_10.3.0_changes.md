@@ -422,12 +422,6 @@ When run, it will now also remove the following files:
 
 Up to now, it would incorrectly be allowed to enter a name containing backslash characters when creating or renaming a dashboard. From now on, this will no longer be allowed.
 
-#### Elasticsearch: NewPagingSearchRequest was incorrectly not able to query an alias grouping two logger tables [ID_31767]
-
-<!-- MR 10.3.0 - FR 10.2.2 -->
-
-Up to now, a NewPagingSearchRequest was incorrectly not able to retrieve data from an alias that grouped two logger tables.
-
 #### Service & Resource Management: Retrieving ReservationInstances sorted by a property of type string would return an incorrectly sorted result set [ID_32003]
 
 <!-- MR 10.3.0 - FR 10.2.3 -->
