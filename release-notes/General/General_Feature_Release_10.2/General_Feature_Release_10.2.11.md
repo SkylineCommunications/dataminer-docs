@@ -66,6 +66,12 @@ In the following example, the URL selects one default element on the initial pag
 https://<dma>/<app-id>?data=%7B%22v%22:1,%22components%22:%5B%7B%22cid%22:1,%22select%22:%7B%22elements%22:%5B%221%2F6%22%5D%7D%5D%7D%7D
 ```
 
+#### Dashboards app: Filtering a parameter feed that lists EPM parameters [ID_34287]
+
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.11 -->
+
+When an EPM identifier from an EPM feed is fed to a parameter feed, it will now be possible to drag multiple parameters onto the parameter feed in order to use them as filters.
+
 #### Enhanced performance when querying large XML files [ID_34299]
 
 <!-- MR 10.1.0 [CU20]/10.2.0 [CU8] - FR 10.2.11 -->
@@ -122,11 +128,37 @@ After selecting a data source, do the following:
 
 The `Repair DB.bat` script, located in the `C:\Skyline DataMiner\Tools` folder, now also supports MySQL Server 5.5.
 
-#### Elasticsearch: Enhanced migration of alarm trees from the active-alarms index to an index containing closed alarms [ID_34444]
+#### Dashboards app / Low-code apps: An eye icon will now appear when you make a modification to a GQI table [ID_34445]
 
-<!-- MR 10.3.0 - FR 10.2.11 -->
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.11 -->
 
-Because of a number of enhancements, overall performance has increased when migrating large alarm trees from the *active-alarms* index to an index containing closed alarms.
+When you make one of the following modifications to a GQI table, an eye icon will now appear in the header of the table component.
+
+- Change the sorting
+- Apply a grouping
+- Change the order of the columns
+- Change the width of the columns
+- Apply a column filter (using the context menu that appears when right-clicking a column header)
+
+This eye icon will make you aware that the table is no longer identical to the one that was loaded originally. Clicking it will reset all modifications.
+
+#### DataMiner web apps updated to Angular 14 [ID_34447]
+
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.11 -->
+
+The DataMiner mobile apps that use Angular (e.g. Low-Code Apps, Dashboards, Monitoring, Ticketing, Jobs, and Automation) now use Angular 14 instead of Angular 13.
+
+#### Dashboards app / Low-code apps: Enhanced filtering by protocol [ID_34453]
+
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.11 -->
+
+From now on, when you add a protocol filter to a component without specifying any particular version(s), that filter will return all data related to that protocol irrespective of protocol version. If you want the data in the component to be filtered by a specific version of the protocol in question, you can select that version from the protocol filter box.
+
+#### GQI: New 'IsActive' column added to 'Get alarms' data source [ID_34455]
+
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.11 -->
+
+A new *IsActive* column has been added to *Get alarms* data source. This column will be set to true when the alarm is an active alarm.
 
 ### Fixes
 
@@ -156,6 +188,12 @@ When multi-threaded timers were used in an SNMP protocol, the timer would incorr
 
 From now on, an empty group will no longer cause SLProtocol to send an empty SNMP request to SLSNMPManager.
 
+#### Problem with SLProtocol when testing protocol connections [ID_34036]
+
+<!-- Main Release Version 10.1.0 [CU20]/10.2.0 [CU8] - Feature Release Version 10.2.11 -->
+
+When a protocol connection was tested, the CProtocol object created in SLProtocol for that test would neither get cleared nor deleted when the connection test had finished. In other words, the element would not get unloaded. This would cause SLProtocol to leak each time a protocol connection was tested.
+
 #### Problem when deserializing an overridden parameter description [ID_34266]
 
 <!-- MR 10.1.0 [CU20]/10.2.0 [CU8] - FR 10.2.11 -->
@@ -180,6 +218,12 @@ When a Process Automation definition is added to the Service definition componen
 <!-- MR 10.1.0 [CU20]/10.2.0 [CU8] - FR 10.2.11 -->
 
 Creating a custom theme with a custom color palette would incorrectly cause the color palette of all built-in themes to be updated.
+
+#### Legacy Reporter: Custom files attached to a PDF report in plain text format would not be sent along [ID_34369]
+
+<!-- MR 10.2.0 [CU8] - FR 10.2.11 -->
+
+When, using the legacy Reporter app, you sent a PDF report in "plain text" format, any custom files attached to the report would incorrectly not be sent along.
 
 #### Dashboards app: Email reports would incorrectly not include CSV files when the 'Include CSV' option had been selected [ID_34370]
 
@@ -237,6 +281,14 @@ From now on, in HTTP setups, the dashboard sharing menu will no longer contain t
 
 When a CSV file exported via a dashboard component or attached to an email report was opened in e.g. Microsoft Excel, any special characters in that CSV file would be displayed incorrectly.
 
+#### Legacy Reporter app: Users without 'Modules > Documents > UI available' permission would incorrectly be able to view documents [ID_34402]
+
+<!-- Main Release Version 10.1.0 [CU20]/10.2.0 [CU8] - Feature Release Version 10.2.11 -->
+
+Users who had not been granted the *Modules > Documents > UI available* permission would incorrectly be able to view documents in the legacy Reporter app.
+
+From now on, an error message will be displayed when users without the above-mentioned permission try to view a document in the legacy Reporter app.
+
 #### Dashboards app: Problem with invalid URL parameters [ID_34405]
 
 <!-- MR 10.2.0 [CU8] - FR 10.2.11 -->
@@ -263,6 +315,12 @@ In some cases, it would not be possible to access the query column selection box
 
 When you opened the context menu of the side panel, in some cases, the context menu and the dashboard selected in the list would overlap each other.
 
+#### Elasticsearch: Problem when migrating large alarm trees from the active-alarms index to an index containing closed alarms [ID_34444]
+
+<!-- MR 10.3.0 - FR 10.2.11 -->
+
+When an alarm tree with more than 1,000 alarms was migrated from the *active-alarms* index to an index containing closed alarms, in some cases, alarms could get lost.
+
 #### Web Services API: Problem when calling the GetBooking or GetBookings method via SOAP [ID_34466]
 
 <!-- Main Release Version 10.1.0 [CU20]/10.2.0 [CU8] - Feature Release Version 10.2.11 -->
@@ -274,3 +332,21 @@ When the GetBooking or GetBookings method was called via SOAP, in some cases, a 
 <!-- MR 10.2.0 [CU8] - FR 10.2.11 -->
 
 During a midnight synchronization, in some cases, ResourceManager subscriptions could incorrectly get duplicated, causing `200+ clients connected to this agent` errors to appear in the Alarm Console.
+
+#### Web apps: URL option 'subheader=' would no longer work [ID_34456]
+
+<!-- MR 10.3.0 - FR 10.2.11 -->
+
+When, in the URL of a web app (e.g. Dashboards, Ticketing, etc.), you had specified `subheader=true` or `subheader=false` in combination with `embed=true`, that `subheader=` option would no longer work.
+
+Example of a dashboard URL containing a `subheader=true` option:
+
+```txt
+https://[DMA IP]/dashboard/#/MyDashboards/dashboard.dmadb?embed=true&subheader=true
+```
+
+#### Dashboards app: List of available dashboards would not be displayed when using a Dashboard Gateway server [ID_34468]
+
+<!-- MR 10.2.0 [CU8] - FR 10.2.11 -->
+
+When you opened the Dashboards app via a Dashboard Gateway server, in some cases, the list of available dashboards would incorrectly not be displayed in the sidebar.

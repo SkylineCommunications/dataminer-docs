@@ -382,12 +382,6 @@ In addition, performance has improved when a resource or resource pool is added 
 
 Because of a number of enhancements, overall performance has increased when running a GQI query using the ProfileInstance data source.
 
-#### Elasticsearch: Enhanced migration of alarm trees from the active-alarms index to an index containing closed alarms [ID_34444]
-
-<!-- MR 10.3.0 - FR 10.2.11 -->
-
-Because of a number of enhancements, overall performance has increased when migrating large alarm trees from the *active-alarms* index to an index containing closed alarms.
-
 ### Fixes
 
 #### SLAnalytics: Problem with trend prediction [ID_31352]
@@ -427,12 +421,6 @@ When run, it will now also remove the following files:
 <!-- MR 10.3.0 - FR 10.2.1 -->
 
 Up to now, it would incorrectly be allowed to enter a name containing backslash characters when creating or renaming a dashboard. From now on, this will no longer be allowed.
-
-#### Elasticsearch: NewPagingSearchRequest was incorrectly not able to query an alias grouping two logger tables [ID_31767]
-
-<!-- MR 10.3.0 - FR 10.2.2 -->
-
-Up to now, a NewPagingSearchRequest was incorrectly not able to retrieve data from an alias that grouped two logger tables.
 
 #### Service & Resource Management: Retrieving ReservationInstances sorted by a property of type string would return an incorrectly sorted result set [ID_32003]
 
@@ -666,12 +654,6 @@ When using Azure Active Directory as an identity provider, up to now, during an 
 
 When a name concatenation for a DomInstance had been defined in either the ModuleSettings or the DomDefinition, in some cases, the FieldValues would not get concatenated correctly.
 
-#### Elasticsearch: Closed alarms were incorrectly not migrated to the dms-alarms index when the associated element had been migrated from another DMS [ID_34020]
-
-<!-- MR 10.3.0 - FR 10.2.9 -->
-
-When, on a system with an Elasticsearch database, an alarm was closed, that alarm would incorrectly not get moved from the dms-Activealarms index to the dms-alarms index when the associated element had been migrated from another DMS.
-
 #### DOM: FieldAlias properties not saved to database [ID_34054]
 
 <!-- MR 10.3.0 - FR 10.2.9 -->
@@ -731,3 +713,21 @@ when a dashboard, a low-code app page or low-code app panel was initialized, in 
 When a required software license cannot be found, a `One or more of the following modules are not licensed: ...` message will appear.
 
 In some cases, instead of listing the unlicensed modules, this message would incorrectly only mention "None".
+
+#### Elasticsearch: Problem when migrating large alarm trees from the active-alarms index to an index containing closed alarms [ID_34444]
+
+<!-- MR 10.3.0 - FR 10.2.11 -->
+
+When an alarm tree with more than 1,000 alarms was migrated from the *active-alarms* index to an index containing closed alarms, in some cases, alarms could get lost.
+
+#### Web apps: URL option 'subheader=' would no longer work [ID_34456]
+
+<!-- MR 10.3.0 - FR 10.2.11 -->
+
+When, in the URL of a web app (e.g. Dashboards, Ticketing, etc.), you had specified `subheader=true` or `subheader=false` in combination with `embed=true`, that `subheader=` option would no longer work.
+
+Example of a dashboard URL containing a `subheader=true` option:
+
+```txt
+https://[DMA IP]/dashboard/#/MyDashboards/dashboard.dmadb?embed=true&subheader=true
+```

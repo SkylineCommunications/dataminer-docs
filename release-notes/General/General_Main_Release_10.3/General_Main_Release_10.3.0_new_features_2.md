@@ -633,6 +633,12 @@ Now, this option has been replaced by a triple-state option. You can now indicat
 - to have the entire table returned, or
 - to have the table filtered on empty values.
 
+#### Dashboards app: Filtering a parameter feed that lists EPM parameters [ID_34287]
+
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.11 -->
+
+When an EPM identifier from an EPM feed is fed to a parameter feed, it will now be possible to drag multiple parameters onto the parameter feed in order to use them as filters.
+
 #### Dashboards app / Low-code apps: GQI queries now support sort operators [ID_34414]
 
 <!-- Main Release Version 10.3.0 - Feature Release Version 10.2.11 -->
@@ -644,6 +650,38 @@ After selecting a data source, do the following:
 1. Select a *Sort* operator.
 1. Select the column to sort on.
 1. Select *Ascending* if you want to sort in ascending order instead of descending order.
+
+#### Dashboards app / Low-code apps: An eye icon will now appear when you make a modification to a GQI table [ID_34445]
+
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.11 -->
+
+When you make one of the following modifications to a GQI table, an eye icon will now appear in the header of the table component.
+
+- Change the sorting
+- Apply a grouping
+- Change the order of the columns
+- Change the width of the columns
+- Apply a column filter (using the context menu that appears when right-clicking a column header)
+
+This eye icon will make you aware that the table is no longer identical to the one that was loaded originally. Clicking it will reset all modifications.
+
+#### DataMiner web apps updated to Angular 14 [ID_34447]
+
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.11 -->
+
+The DataMiner mobile apps that use Angular (e.g. Low-Code Apps, Dashboards, Monitoring, Ticketing, Jobs, and Automation) now use Angular 14 instead of Angular 13.
+
+#### Dashboards app / Low-code apps: Enhanced filtering by protocol [ID_34453]
+
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.11 -->
+
+From now on, when you add a protocol filter to a component without specifying any particular version(s), that filter will return all data related to that protocol irrespective of protocol version. If you want the data in the component to be filtered by a specific version of the protocol in question, you can select that version from the protocol filter box.
+
+#### GQI: New 'IsActive' column added to 'Get alarms' data source [ID_34455]
+
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.11 -->
+
+A new *IsActive* column has been added to *Get alarms* data source. This column will be set to true when the alarm is an active alarm.
 
 ### DMS Service & Resource Management
 

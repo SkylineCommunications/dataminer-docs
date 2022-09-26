@@ -2731,6 +2731,8 @@
     - name: Known issues
       topicUID: Known_issues
       items:
+        - name: Taskbar Utility performance issue while agents are being upgraded
+          topicUID: KI_Taskbar_Utility_performance_issue_while_agents_are_being_upgraded
         - name: SLDMS Hosting Agent cache issue
           topicUID: KI_SLDMS_hosting_agent_cache_issue
         - name: Closed alarms migrated too slowly from dms-activealarms index in Elasticsearch database

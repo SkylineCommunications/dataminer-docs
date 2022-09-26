@@ -131,6 +131,12 @@ The `Repair DB.bat` script, located in the `C:\Skyline DataMiner\Tools` folder, 
 
 ### Fixes
 
+#### Elasticsearch: NewPagingSearchRequest was incorrectly not able to query an alias grouping two logger tables [ID_31767]
+
+<!-- MR 10.2.0 [CU8] - FR 10.2.2 -->
+
+Up to now, a NewPagingSearchRequest was incorrectly not able to retrieve data from an alias that grouped two logger tables.
+
 #### Dashboard Gateway (legacy): Dashboards would fail to show the Maps component when the DMA had HTTPS configured [ID_33777]
 
 <!-- MR 10.1.0 [CU20]/10.2.0 [CU8] - FR 10.2.11 -->
@@ -144,6 +150,24 @@ When a legacy Dashboard Gateway was connected to a DataMiner Agent with HTTPS co
 When multi-threaded timers were used in an SNMP protocol, the timer would incorrectly always execute the poll group, even if it did not specify any OIDs to be polled.
 
 From now on, an empty group will no longer cause SLProtocol to send an empty SNMP request to SLSNMPManager.
+
+#### Elasticsearch: Closed alarms were incorrectly not migrated to the dms-alarms index when the associated element had been migrated from another DMS [ID_34020]
+
+<!-- MR 10.2.0 [CU8] - FR 10.2.9 -->
+
+When, on a system with an Elasticsearch database, an alarm was closed, that alarm would incorrectly not get moved from the dms-Activealarms index to the dms-alarms index when the associated element had been migrated from another DMS.
+
+#### Problem with SLProtocol when testing protocol connections [ID_34036]
+
+<!-- Main Release Version 10.1.0 [CU20]/10.2.0 [CU8] - Feature Release Version 10.2.11 -->
+
+When a protocol connection was tested, the CProtocol object created in SLProtocol for that test would neither get cleared nor deleted when the connection test had finished. In other words, the element would not get unloaded. This would cause SLProtocol to leak each time a protocol connection was tested.
+
+#### DataMiner Cube - Visual Overview: Problem with conditional shape manipulation actions 'Show' and 'Hide' [ID_34108]
+
+<!-- Main Release Version 10.1.0 [CU20]/10.2.0 [CU8] - Feature Release Version 10.2.11 -->
+
+When, in a particular shape, you had specified a *Show* or *Hide* action with a condition, the shape would incorrectly always be visible, whether the condition was true or false.
 
 #### DataMiner Cube - Trending: Y axis would incorrectly show other values when the trend graph showed a constant exception value [ID_34242]
 
@@ -193,6 +217,12 @@ When, in a Spectrum card, you clicked *View buffer*, the preset contained inside
 
 Creating a custom theme with a custom color palette would incorrectly cause the color palette of all built-in themes to be updated.
 
+#### Legacy Reporter: Custom files attached to a PDF report in plain text format would not be sent along [ID_34369]
+
+<!-- MR 10.2.0 [CU8] - FR 10.2.11 -->
+
+When, using the legacy Reporter app, you sent a PDF report in "plain text" format, any custom files attached to the report would incorrectly not be sent along.
+
 #### Dashboards app: Email reports would incorrectly not include CSV files when the 'Include CSV' option had been selected [ID_34370]
 
 <!-- MR 10.2.0 [CU8] - FR 10.2.11 -->
@@ -241,6 +271,12 @@ When you renamed, duplicated or imported a dashboard, in some cases, the feeds i
 
 In some cases, an error could occur in SLLog when closing a log file.
 
+#### DataMiner Cube - Visual Overview: Problem when the Parameter shape data field of a range slider control contained a dynamic placeholder referring to a session variable [ID_34389]
+
+<!-- MR 10.1.0 [CU20]/10.2.0 [CU8] - FR 10.2.11 -->
+
+When the shape data field *Parameter* of a range slider control contained a dynamic placeholder referring to a session variable, it would no longer be possible to move the slider when the value of the session variable changed from valid to invalid or vice versa.
+
 #### Failover: Incorrect 'Cluster name of agents doesn't match' error when main agent was unable to make contact with the offline agent [ID_34393]
 
 <!-- MR 10.2.0 [CU8] - FR 10.2.11 -->
@@ -260,6 +296,14 @@ From now on, in HTTP setups, the dashboard sharing menu will no longer contain t
 <!-- MR 10.2.0 [CU8] - FR 10.2.11 -->
 
 When a CSV file exported via a dashboard component or attached to an email report was opened in e.g. Microsoft Excel, any special characters in that CSV file would be displayed incorrectly.
+
+#### Legacy Reporter app: Users without 'Modules > Documents > UI available' permission would incorrectly be able to view documents [ID_34402]
+
+<!-- Main Release Version 10.1.0 [CU20]/10.2.0 [CU8] - Feature Release Version 10.2.11 -->
+
+Users who had not been granted the *Modules > Documents > UI available* permission would incorrectly be able to view documents in the legacy Reporter app.
+
+From now on, an error message will be displayed when users without the above-mentioned permission try to view a document in the legacy Reporter app.
 
 #### Dashboards app: Problem with invalid URL parameters [ID_34405]
 
@@ -302,3 +346,9 @@ During a midnight synchronization, in some cases, ResourceManager subscriptions 
 <!-- Main Release Version 10.1.0 [CU20]/10.2.0 [CU8] - Feature Release Version 10.2.11 -->
 
 When the GetBooking or GetBookings method was called via SOAP, in some cases, a serialization exception could be thrown when the booking (in case of GetBooking) or one of the bookings (in case of GetBookings) had a property that contained a TimeSpan object.
+
+#### Dashboards app: List of available dashboards would not be displayed when using a Dashboard Gateway server [ID_34468]
+
+<!-- MR 10.2.0 [CU8] - FR 10.2.11 -->
+
+When you opened the Dashboards app via a Dashboard Gateway server, in some cases, the list of available dashboards would incorrectly not be displayed in the sidebar.

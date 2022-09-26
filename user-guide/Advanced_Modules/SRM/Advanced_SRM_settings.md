@@ -22,3 +22,23 @@ For example:
   <FunctionHysteresis>PT0S</FunctionHysteresis>
 </ProtocolFunctionManagerConfigInfo>
 ```
+
+To update this file without the need to restart DataMiner, use the protocolFunctionHelper as illustrated in the code snippet below. The configuration change will then be automatically synced in the cluster.
+
+```csharp
+using Skyline.DataMiner.Automation;
+using Skyline.DataMiner.Net.Messages;
+namespace Script
+{
+    public class Script
+    {
+        public void Run(Engine engine)
+        {
+            var protocolFunctionHelper = new ProtocolFunctionHelper(engine.SendSLNetMessages);
+            var currentConfig = protocolFunctionHelper.GetProtocolFunctionConfig();
+            currentConfig.ActiveFunctionResourcesThreshold = 123; // Change to desired value
+            protocolFunctionHelper.SetProtocolFunctionConfig(currentConfig);
+        }
+    }
+}
+```

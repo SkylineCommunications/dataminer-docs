@@ -135,7 +135,19 @@ In Visual Overview, the current value of the following user settings will now be
 
 A number of enhancements have been made to the procedure called to determine whether a shape is clickable.
 
+#### Visual Overview: Enhanced performance when drawing connection lines [ID_34409]
+
+<!-- MR 10.3.0 - FR 10.2.11 -->
+
+Because of a number of enhancements, overall performance has increased when drawing connection lines on a visual overview.
+
 ### Fixes
+
+#### DataMiner Cube - Visual Overview: Problem with conditional shape manipulation actions 'Show' and 'Hide' [ID_34108]
+
+<!-- Main Release Version 10.1.0 [CU20]/10.2.0 [CU8] - Feature Release Version 10.2.11 -->
+
+When, in a particular shape, you had specified a *Show* or *Hide* action with a condition, the shape would incorrectly always be visible, whether the condition was true or false.
 
 #### DataMiner Cube - Trending: Y axis would incorrectly show other values when the trend graph showed a constant exception value [ID_34242]
 
@@ -172,6 +184,12 @@ When, in a Spectrum card, you clicked *View buffer*, the preset contained inside
 <!-- Main Release Version 10.1.0 [CU20]/10.2.0 [CU8] - Feature Release Version 10.2.11 -->
 
 An error could occur when the client received a DCF connection line update.
+
+#### DataMiner Cube - Visual Overview: Problem when the Parameter shape data field of a range slider control contained a dynamic placeholder referring to a session variable [ID_34389]
+
+<!-- MR 10.1.0 [CU20]/10.2.0 [CU8] - FR 10.2.11 -->
+
+When the shape data field *Parameter* of a range slider control contained a dynamic placeholder referring to a session variable, it would no longer be possible to move the slider when the value of the session variable changed from valid to invalid or vice versa.
 
 #### DataMiner Cube - Visual Overview: Fix multiple script executions on page shape data change [ID_34412]
 

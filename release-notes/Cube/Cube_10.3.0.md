@@ -1086,6 +1086,12 @@ From now on, it will be possible to delete a function resource that was used by 
 
 On systems that store real-time trend data for more than a week, from now on, DataMiner Cube will no longer request all available real-time trend data at once. Instead, it will request data for the past week and only request more data when needed.
 
+#### Visual Overview: Enhanced performance when drawing connection lines [ID_34409]
+
+<!-- MR 10.3.0 - FR 10.2.11 -->
+
+Because of a number of enhancements, overall performance has increased when drawing connection lines on a visual overview.
+
 ### Fixes
 
 #### Visual Overview: Problem when navigating inside EPM cards [ID_32288]
