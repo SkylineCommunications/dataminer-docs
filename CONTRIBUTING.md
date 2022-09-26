@@ -592,7 +592,7 @@ When you have finished making a series of changes to documentation in Visual Stu
    1. Enter `docfx build -f` to make a test build.
 
       > [!NOTE]
-      > If you get a lot of warning when you try to create a test build, it could be that you still need to install the .NET framework SDK Developer Pack. To do so, go to <https://dotnet.microsoft.com/en-us/download/visual-studio-sdks> and choose the .NET Framework 4.8 Developer Pack.
+      > If you get a lot of warnings when you try to create a test build, it could be that you still need to install the .NET framework SDK Developer Pack. To do so, go to <https://dotnet.microsoft.com/en-us/download/visual-studio-sdks> and choose the .NET Framework 4.8 Developer Pack.
 
    1. Enter `docfx serve _site`.
 
