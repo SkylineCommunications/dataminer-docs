@@ -12,7 +12,8 @@ We noticed the following behavior when the elements using this connector were ac
 
 In most of the log files (*SLWatchdog2.txt, SLErrorsInProtocol.txt, SLDataMiner.txt*, etc.) no relevant information could be found. The only notice of the problem seemed to be logged in the *SLSNMPAgent.txt* log file. When the protocol log file level was increased to “Developer”, we could see the following lines:
 
-`2022/01/25 10:59:33.338|SLProtocol - 23220 - Cp6k|2176|CTimer::TimerThreadFunc|DBG|6|Resetting last group
+```txt
+2022/01/25 10:59:33.338|SLProtocol - 23220 - Cp6k|2176|CTimer::TimerThreadFunc|DBG|6|Resetting last group
 2022/01/25 10:59:33.338|SLProtocol - 23220 - Cp6k|2176|CTimer::Execute|DBG|6|16 groups to execute
 2022/01/25 10:59:33.339|SLProtocol - 23220 - Cp6k|2176|CTimer::Execute|DBG|6|Last group is not a poll group.
 2022/01/25 10:59:33.339|SLProtocol - 23220 - Cp6k|2176|CGroup::Execute|DBG|6|Start executing group 54003 (interval = -1) (depth=7)
@@ -22,7 +23,8 @@ In most of the log files (*SLWatchdog2.txt, SLErrorsInProtocol.txt, SLDataMiner.
 2022/01/25 10:59:33.340|SLProtocol - 23220 - Cp6k|2176|CParameter::RunQActions|DBG|5|QAction 54003 finished
 2022/01/25 10:59:33.340|SLProtocol - 23220 - Cp6k|2176|CGroup::Execute|DBG|6|Finished executing group 54003
 2022/01/25 10:59:33.340|SLProtocol - 23220 - Cp6k|2176|CTimer::TimerThreadFunc|DBG|6|Waiting for last group to be finished.
-2022/01/25 10:59:33.340|SLProtocol - 23220 - Cp6k|2176|CTimer::TimerThreadFunc|DBG|6|Last group finished.`
+2022/01/25 10:59:33.340|SLProtocol - 23220 - Cp6k|2176|CTimer::TimerThreadFunc|DBG|6|Last group finished.
+```
 
 It seems that there are 16 groups in this timer, of which one triggers a QAction (54003). All these actions seem to be completed within 2 milliseconds, which looks suspicious. Notice how the third line states “Last group is not a poll group”. Let’s look at this specific timer.
 
