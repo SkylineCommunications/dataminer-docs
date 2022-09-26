@@ -2,7 +2,7 @@
 uid: KI_Taskbar_Utility_performance_issue_while_agents_are_being_upgraded
 ---
 
-# Taskbar Utility performance issue while agents are being upgraded
+# Taskbar Utility performance issue while Agents are being upgraded
 
 ## Affected versions
 
@@ -11,15 +11,15 @@ uid: KI_Taskbar_Utility_performance_issue_while_agents_are_being_upgraded
 
 ## Cause
 
-The DataMiner Taskbar Utility was using too much memory when agents were being upgraded.
+The DataMiner Taskbar Utility was using too much memory when Agents were being upgraded.
 
 ## Fix
 
-Stay on the upgrade summary tab until the upgrade has finished. Then, close DataMiner Taskbar Utility to have the memory cleared.
+Stay on the upgrade summary tab until the upgrade has finished. Then close DataMiner Taskbar Utility to have the memory cleared.
 
 ## Issue description
 
-After you have launched an upgrade, the upgrade process displayed in DataMiner Taskbar Utility seems to lag behind. Also, DataMiner Taskbar Utility seems to be using a considerable amount of memory.
+After you have launched an upgrade, the upgrade process shown in DataMiner Taskbar Utility seems to lag behind. Also, DataMiner Taskbar Utility is using a considerable amount of memory.
 
 > [!IMPORTANT]
 > The upgrade process itself is not affected.
