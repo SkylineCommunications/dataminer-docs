@@ -28,11 +28,44 @@ In most of the log files (*SLWatchdog2.txt, SLErrorsInProtocol.txt, SLDataMiner.
 
 It seems that there are 16 groups in this timer, of which one triggers a QAction (54003). All these actions seem to be completed within 2 milliseconds, which looks suspicious. Notice how the third line states “Last group is not a poll group”. Let’s look at this specific timer.
 
-![Debugging connectors RTE1](~/develop/images/Debugging_connectors_RTE1.png)
+```xml
+<Timer id="4">
+    <Name>FastPollTables</Name>
+    <Time initial="true">5000</Time>
+    <Interval>75</Interval>
+    <Content>
+        <Group>13000</Group>
+        <Group>11000</Group>
+        <Group>22000</Group>
+        <Group>55000</Group>
+        <Group>61000</Group>
+        <Group>62000</Group>
+        <Group>63000</Group>
+        <Group>49000</Group>
+        <Group>57000</Group>
+        <Group>50000</Group>
+        <Group>51000</Group>
+        <Group>58000</Group>
+        <Group>60000</Group>
+        <Group>53000</Group>
+        <Group>60100</Group>
+        <Group>54003</Group>
+    </Content>
+</Timer>
+```
 
 In this timer, all groups are poll groups, except for the last one, which is of type action:
 
-![Debugging connectors RTE2](~/develop/images/Debugging_connectors_RTE2.png)
+```xml
+<Group id="54003">
+    <Name>UpdateForeignKeys</Name>
+    <Description>Update all foreign keys</Description>
+    <Type>action</Type>
+    <Content>
+        <Action>48</Action>
+    </Content>
+</Group>
+```
 
 When we changed this group to type *poll action*, the issue was solved. But why? To clarify this, we need to delve a little deeper into the inner workings of DataMiner.
 
