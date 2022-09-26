@@ -714,12 +714,6 @@ When a required software license cannot be found, a `One or more of the followin
 
 In some cases, instead of listing the unlicensed modules, this message would incorrectly only mention "None".
 
-#### Elasticsearch: Problem when migrating large alarm trees from the active-alarms index to an index containing closed alarms [ID_34444]
-
-<!-- MR 10.3.0 - FR 10.2.11 -->
-
-When an alarm tree with more than 1,000 alarms was migrated from the *active-alarms* index to an index containing closed alarms, in some cases, alarms could get lost.
-
 #### Web apps: URL option 'subheader=' would no longer work [ID_34456]
 
 <!-- MR 10.3.0 - FR 10.2.11 -->

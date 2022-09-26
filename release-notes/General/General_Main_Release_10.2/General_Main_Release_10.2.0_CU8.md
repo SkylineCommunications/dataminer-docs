@@ -331,9 +331,15 @@ When, on page level, you had configured a data field of type *Execute* containin
 
 #### DataMiner Cube - Alarm Console: Problem when loading an alarm tab with hyperlink columns [ID_34420]
 
-<!-- Main Release Version 10.1.0 [CU20]/10.2.0 [CU8] - Feature Release Version 10.2.11 -->
+<!-- MR 10.1.0 [CU20]/10.2.0 [CU8] - FR 10.2.11 -->
 
 In some cases, DataMiner Cube could become unresponsive when loading an alarm tab with hyperlink columns, especially when that alarm tab contained a large number of alarms.
+
+#### Elasticsearch: Problem when migrating large alarm trees from the active-alarms index to an index containing closed alarms [ID_34444]
+
+<!-- 10.2.0 [CU8] - FR 10.2.11 -->
+
+When an alarm tree with more than 1,000 alarms was migrated from the *active-alarms* index to an index containing closed alarms, in some cases, alarms could get lost.
 
 #### Problem during midnight synchronization would cause '200+ clients connected to this agent' errors to appear [ID_34450]
 

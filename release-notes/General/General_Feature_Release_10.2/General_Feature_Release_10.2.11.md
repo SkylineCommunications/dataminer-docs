@@ -317,7 +317,7 @@ When you opened the context menu of the side panel, in some cases, the context m
 
 #### Elasticsearch: Problem when migrating large alarm trees from the active-alarms index to an index containing closed alarms [ID_34444]
 
-<!-- MR 10.3.0 - FR 10.2.11 -->
+<!-- MR 10.2.0 [CU8] - FR 10.2.11 -->
 
 When an alarm tree with more than 1,000 alarms was migrated from the *active-alarms* index to an index containing closed alarms, in some cases, alarms could get lost.
 
