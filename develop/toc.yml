@@ -572,6 +572,14 @@
           topicUID: Debugging_connectors_Element_connections
         - name: Debugging connectors - RTE caused by non-poll group in timer
           topicUID: Debugging_connectors_RTE_caused_by_non-poll_group_in_timer
+        - name: Debugging connectors - seeing through the smoke
+          topicUID: Debugging_connectors_seeing_through_the_smoke
+        - name: Debugging connectors - serial communication returning command echoes
+          topicUID: Debugging_connectors_serial_communication_returning_command_echoes
+        - name: Debugging connectors - tracing the stack
+          topicUID: Debugging_connectors_tracing_the_stack
+        - name: Protocol thread run-time errors - use cases
+          topicUID: Protocol_thread_run_tim_errors_use_cases
   - name: Automation scripts
     topicUid: AutomationDevGuideIndex
     items:
