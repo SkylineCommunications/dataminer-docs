@@ -603,6 +603,9 @@ When you have finished making a series of changes to documentation in Visual Stu
       > [!NOTE]
       > Using the search box when viewing the test website on <http://localhost:8080/> will not return any pages from the test website. The search engine only indexes the published content on <https://docs.dataminer.services/> and will, as such, only return pages from that website.
 
+> [!IMPORTANT]
+> If you make test builds often, you may need to occasionally clear the files in the `\dataminer-docs\obj\.cache\build\` folder of your local version of the documentation. In the long run, these can pile up and take up a large amount of memory.
+
 ## References
 
 As our way of working is very similar to the approach used for Microsoft Docs, it can be useful to take a look at the [Microsoft Docs contributor guide](https://docs.microsoft.com/en-us/contribute/) for additional information and guidelines.
