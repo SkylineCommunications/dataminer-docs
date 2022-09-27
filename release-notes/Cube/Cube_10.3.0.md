@@ -1010,6 +1010,12 @@ In Visual Overview, it is now possible to retrieve the contributing booking ID o
 
 Shape data items of type *NavigatePage* can now have values that include dynamic placeholders referring to session variables, parameters, etc.
 
+#### Visual Overview: Shape data items of type 'ParametersSummary' can now have values that include dynamic placeholders referring to session variables [ID_34483]
+
+<!-- MR 10.3.0 - FR 10.2.11 -->
+
+Shape data items of type *ParametersSummary* can now have values that include dynamic placeholders referring to session variables.
+
 ## Changes
 
 ### Enhancements
