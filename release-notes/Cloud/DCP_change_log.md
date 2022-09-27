@@ -6,6 +6,16 @@ uid: DCP_change_log
 
 The DataMiner Cloud Platform gets updated continuously. This change log can help you trace when specific features and changes have become available.
 
+#### 19 September 2022 – Enhancement – Improvements on Audit page in DCP Admin app [ID_34457]
+
+A number of improvements have been implemented on the *Audit* page in the DCP Admin app:
+
+- You can now filter on subject name and initiator.
+- A search box is now available for each filter so you can quickly search for a specific item to filter on.
+- Some filters allow you to manually specify custom values. For example, for the *Initiator* filter, which is automatically populated with the organization users, you can manually specify a user that has been deleted.
+- The column order has been adjusted.
+- Automatic loading of audit records has been improved to prevent possible issues with different screen sizes.
+
 #### 1 September 2022 – Enhancement – Filter functionality for Audit log in DCP Admin app [ID_34322]
 
 The Audit log in the DCP Admin app now allows filtering on operation type, subject type, DataMiner System name, and time span. In addition, the loading of records has been optimized.
