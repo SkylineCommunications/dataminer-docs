@@ -706,6 +706,12 @@ In the generic filter component, in some cases, column filters would be incorrec
 
 when a dashboard, a low-code app page or low-code app panel was initialized, in some cases, query column filters would not be applied correctly to table components on that dashboard, page or panel.
 
+#### Web apps - Interactive Automation scripts: Not possible to clear a selection box by selecting an empty option [ID_34315]
+
+<!-- MR 10.3.0 - FR 10.2.11 -->
+
+When an interactive Automation script was executed in a web app, it would incorrectly not be possible to clear a selection box by selecting an empty option.
+
 #### 'One or more of the following modules are not licensed' error would incorrectly not list the unlicensed modules [ID_34407]
 
 <!-- MR 10.3.0 - FR 10.2.11 -->
@@ -713,6 +719,12 @@ when a dashboard, a low-code app page or low-code app panel was initialized, in 
 When a required software license cannot be found, a `One or more of the following modules are not licensed: ...` message will appear.
 
 In some cases, instead of listing the unlicensed modules, this message would incorrectly only mention "None".
+
+#### Web Services API - CreateServiceTemplate: DataMinerID and ElementID incorrectly set to 0 instead of -1 [ID_34440]
+
+<!-- MR 10.3.0 - FR 10.2.11 -->
+
+When a service template was created using the *CreateServiceTemplate* method, the DataMinerID and ElementID of the newly created service template would incorrectly be set to 0 instead of -1.
 
 #### Web apps: URL option 'subheader=' would no longer work [ID_34456]
 

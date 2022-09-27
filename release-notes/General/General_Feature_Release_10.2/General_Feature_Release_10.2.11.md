@@ -206,12 +206,25 @@ When a JSON string containing an overridden parameter description was deserializ
 
 When you entered an invalid value in a numeric component, the *UIResults.GetString()* method would incorrectly not return that invalid value. Instead, it returned the last valid value that had been entered.
 
+#### Web apps - Interactive Automation scripts: Not possible to clear a selection box by selecting an empty option [ID_34315]
+
+<!-- MR 10.3.0 - FR 10.2.11 -->
+
+When an interactive Automation script was executed in a web app, it would incorrectly not be possible to clear a selection box by selecting an empty option.
+
 #### Dashboards app - Service definition component: Function type 'TimeStartEvent' would not be visualized correctly [34316]
 
 <!-- Main Release Version 10.3.0 - Feature Release Version 10.2.11 -->
 <!-- Not added to 10.3.0 -->
 
 When a Process Automation definition is added to the Service definition component, the added function shapes will reflect the function type (UserTask, ScriptTask, ResourceTask, Gateway, NoneStartEvent, TimeStartEvent or EndEvent). However, in some cases, the function type *TimeStartEvent* would not be visualized correctly. From now on, these will be assigned a BPMN reference time icon.
+
+#### Service & Resource Management: Resource property definition names would contain illegal characters after SRM data had been migrated to Elasticsearch [ID_34361]
+
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.11 -->
+<!-- Not added to 10.3.0 -->
+
+After SRM data had been migrated to Elasticsearch, in some cases, resource property definition names would contain characters that Elasticsearch considers illegal.
 
 #### Dashboards app / Low-code apps: Creating a custom theme with a custom color palette would incorrectly cause the color palette of all built-in themes to be updated [ID_34368]
 
@@ -314,6 +327,12 @@ In some cases, it would not be possible to access the query column selection box
 <!-- MR 10.1.0 [CU20]/10.2.0 [CU8] - FR 10.2.11 -->
 
 When you opened the context menu of the side panel, in some cases, the context menu and the dashboard selected in the list would overlap each other.
+
+#### Web Services API - CreateServiceTemplate: DataMinerID and ElementID incorrectly set to 0 instead of -1 [ID_34440]
+
+<!-- MR 10.3.0 - FR 10.2.11 -->
+
+When a service template was created using the *CreateServiceTemplate* method, the DataMinerID and ElementID of the newly created service template would incorrectly be set to 0 instead of -1.
 
 #### Elasticsearch: Problem when migrating large alarm trees from the active-alarms index to an index containing closed alarms [ID_34444]
 
