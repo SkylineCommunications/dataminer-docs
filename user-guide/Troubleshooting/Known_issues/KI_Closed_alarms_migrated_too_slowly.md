@@ -14,7 +14,7 @@ When alarms are closed, they need to be migrated from the *dms-activealarms* ind
 
 ## Fix
 
-To be determined.
+Upgrade to DataMiner 10.2.0 CU8 or 10.2.11.
 
 ## Issue description
 
