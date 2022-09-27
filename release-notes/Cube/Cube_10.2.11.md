@@ -141,6 +141,14 @@ A number of enhancements have been made to the procedure called to determine whe
 
 Because of a number of enhancements, overall performance has increased when drawing connection lines on a visual overview.
 
+#### Alarm Console: Enhanced clearing of behavioral anomaly alarms [ID_34427]
+
+<!-- MR 10.3.0 - FR 10.2.11 -->
+
+Suggestion events and alarm events will now automatically be cleared sooner than 2 hours after their creation or last update when a new behavioral change is detected that ends the previous anomalous behavioral change.
+
+For example, when an alarm was created for an anomalous level increase at 1 PM, and a behavioral change point is detected at 2 PM when the level drops again, then the alarm created at 1 PM will be closed at 2 PM.
+
 ### Fixes
 
 #### DataMiner Cube - Visual Overview: Problem with conditional shape manipulation actions 'Show' and 'Hide' [ID_34108]
@@ -173,6 +181,12 @@ On systems with active correlation rules, in some rare cases, the counters in th
 
 When you opened a trend graph of an EPM object, it would not be possible to add a second parameter. After you had added a new parameter, the drop-down box would incorrectly only contain the current parameter.
 
+#### DataMiner Cube - Booking app: Booking updates would cause the UI to flicker [ID_34349]
+
+<!-- MR 10.2.0 [CU8] - FR 10.2.11 -->
+
+When one of the listed bookings was updated, all bookings would incorrectly be re-rendered, causing the UI to flicker.
+
 #### DataMiner Cube - Spectrum analysis: Preset would not be loaded when clicking 'View buffer' [ID_34357]
 
 <!-- Main Release Version 10.1.0 [CU20]/10.2.0 [CU8] - Feature Release Version 10.2.11 -->
@@ -202,3 +216,9 @@ When, on page level, you had configured a data field of type *Execute* containin
 <!-- Main Release Version 10.1.0 [CU20]/10.2.0 [CU8] - Feature Release Version 10.2.11 -->
 
 In some cases, DataMiner Cube could become unresponsive when loading an alarm tab with hyperlink columns, especially when that alarm tab contained a large number of alarms.
+
+#### DataMiner Cube: EPM diagrams would incorrectly get mixed up when selecting a formerly selected field in an EPM filter box [ID_34431]
+
+<!-- Main Release Version 10.1.0 [CU20]/10.2.0 [CU8] - Feature Release Version 10.2.11 -->
+
+When, in an EPM filter box, you selected a field, selected another field, and then selected the first field again, in some cases, the diagrams linked to those two fields would incorrectly get mixed up.

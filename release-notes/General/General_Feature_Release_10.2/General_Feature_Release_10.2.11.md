@@ -350,3 +350,9 @@ https://[DMA IP]/dashboard/#/MyDashboards/dashboard.dmadb?embed=true&subheader=t
 <!-- MR 10.2.0 [CU8] - FR 10.2.11 -->
 
 When you opened the Dashboards app via a Dashboard Gateway server, in some cases, the list of available dashboards would incorrectly not be displayed in the sidebar.
+
+#### SLSNMPManager: Trap binding of type 'IP Address' would incorrectly be parsed as an empty string [ID_34481]
+
+<!-- Main Release Version 10.0.0 [CU22]/10.1.0 [CU20]/10.2.0 [CU8] - Feature Release Version 10.2.11 -->
+
+When a trap binding of type "IP Address" came in while the SLSNMPManager SNMPv3 process was processing traps on the default port 162, that binding would be incorrectly parsed as an empty string.

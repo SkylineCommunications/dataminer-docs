@@ -205,6 +205,12 @@ On systems with active correlation rules, in some rare cases, the counters in th
 
 When you opened a trend graph of an EPM object, it would not be possible to add a second parameter. After you had added a new parameter, the drop-down box would incorrectly only contain the current parameter.
 
+#### DataMiner Cube - Booking app: Booking updates would cause the UI to flicker [ID_34349]
+
+<!-- MR 10.2.0 [CU8] - FR 10.2.11 -->
+
+When one of the listed bookings was updated, all bookings would incorrectly be re-rendered, causing the UI to flicker.
+
 #### DataMiner Cube - Spectrum analysis: Preset would not be loaded when clicking 'View buffer' [ID_34357]
 
 <!-- Main Release Version 10.1.0 [CU20]/10.2.0 [CU8] - Feature Release Version 10.2.11 -->
@@ -335,6 +341,12 @@ When, on page level, you had configured a data field of type *Execute* containin
 
 In some cases, DataMiner Cube could become unresponsive when loading an alarm tab with hyperlink columns, especially when that alarm tab contained a large number of alarms.
 
+#### DataMiner Cube: EPM diagrams would incorrectly get mixed up when selecting a formerly selected field in an EPM filter box [ID_34431]
+
+<!-- Main Release Version 10.1.0 [CU20]/10.2.0 [CU8] - Feature Release Version 10.2.11 -->
+
+When, in an EPM filter box, you selected a field, selected another field, and then selected the first field again, in some cases, the diagrams linked to those two fields would incorrectly get mixed up.
+
 #### Elasticsearch: Problem when migrating large alarm trees from the active-alarms index to an index containing closed alarms [ID_34444]
 
 <!-- 10.2.0 [CU8] - FR 10.2.11 -->
@@ -358,3 +370,9 @@ When the GetBooking or GetBookings method was called via SOAP, in some cases, a 
 <!-- MR 10.2.0 [CU8] - FR 10.2.11 -->
 
 When you opened the Dashboards app via a Dashboard Gateway server, in some cases, the list of available dashboards would incorrectly not be displayed in the sidebar.
+
+#### SLSNMPManager: Trap binding of type 'IP Address' would incorrectly be parsed as an empty string [ID_34481]
+
+<!-- Main Release Version 10.0.0 [CU22]/10.1.0 [CU20]/10.2.0 [CU8] - Feature Release Version 10.2.11 -->
+
+When a trap binding of type "IP Address" came in while the SLSNMPManager SNMPv3 process was processing traps on the default port 162, that binding would be incorrectly parsed as an empty string.
