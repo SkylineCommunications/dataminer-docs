@@ -6,8 +6,8 @@ uid: Known_issues
 | Issue | DataMiner version | Date added |
 |--|--|--|
 | [Taskbar Utility performance issue while agents are being upgraded](xref:KI_Taskbar_Utility_performance_issue_while_agents_are_being_upgraded) | 10.1.0 [CU19] and 10.2.0 [CU7]<br>10.2.10 | September 23, 2022 |
-| [SLDMS Hosting Agent cache issue](xref:KI_SLDMS_hosting_agent_cache_issue) | 10.2 Main & Feature Release | September 15, 2022 |
-| [Closed alarms migrated too slowly from dms-activealarms index in Elasticsearch database](xref:KI_Closed_alarms_migrated_too_slowly) | Any version using Elasticsearch<br>for alarm indexing | September 14, 2022 |
+| [SLDMS Hosting Agent cache issue](xref:KI_SLDMS_hosting_agent_cache_issue) | 10.2 Main & Feature Release<br>prior to 10.2.0 CU7 and 10.2.10 | September 15, 2022 |
+| [Closed alarms migrated too slowly from dms-activealarms index in Elasticsearch database](xref:KI_Closed_alarms_migrated_too_slowly) | Versions using Elasticsearch<br>for alarm indexing prior to<br>10.2.0 CU8 and 10.2.11 | September 14, 2022 |
 | [SNMP polling issues in case protocol contains wildcards in parameter OIDs](xref:KI_SNMP_polling_issues_with_wildcards_in_param_OIDs) |10.2.0 CU6<br>10.2.9 | September 6, 2022 |
 | [Upgrade fails because of VerifyClusterPort.dll prerequisite](xref:KI_Upgrade_fails_VerifyClusterPorts_prerequisite) | From 10.2.0 CU1 and 10.2.4 onwards | September 2, 2022 |
 | [SLAnalytics RTEs after upgrading DMS with Cassandra Cluster](xref:KI_RTE_with_SLAnalytics_when_upgrading) | 10.2.8 CU1 | August 8, 2022 |
