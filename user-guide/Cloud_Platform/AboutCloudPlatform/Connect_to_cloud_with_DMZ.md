@@ -16,16 +16,17 @@ To create such a DMZ:
 
    - Make sure the DMZ can communicate through NATS though port 4222.
 
-1. Install all DxMs that need internet access in the DMZ. At present, these are *CloudGateway*, *CloudFeed*, and *ArtifactDeployer*.
+1. Install the 4 DxMs that need to be on the DMZ. At present, these are *CloudGateway*, *CloudFeed*, *ArtifactDeployer* and *Orchestrator*.
 
-1. Add the *Orchestrator* to the DMZ, so that you can upgrade it later through the cloud.
+   > [!NOTE]
+   > Currently it is not yet possible to download each DxM individually. As a workaround, you can install the  complete Cloud Pack on the DMZ. But then you need to uninstall the unrelevant DxMs. For the DMZ these are *CoreGateway* and *FieldControl*. You can uninstall these using the windows program menus.
 
-1. On the DataMiner nodes, install the DxMs that need to connect with the DMA or do not require internet access. At present, these are *CoreGateway* and *FieldControl*.
+1. On the DataMiner nodes, install the DxMs that need to connect with the DMA or do not require internet access. At present, these are *CoreGateway*, *FieldControl* and *Orchestrator*. You should install these DxMs on both agents in a failover pair.
 
    > [!NOTE]
    > For all DxMs, it is advised to have multiple instances running at the same time. This will create redundancy in case something goes wrong and allows for upgrades without any downtime.
 
-1. In the folder `C:\Program Files\Skyline Communications\DataMiner CloudGateway`, create an override *appsettings.custom.json* with the following contents:
+1. On the DMZ server, in the folder `C:\Program Files\Skyline Communications\DataMiner CloudGateway`, create an override *appsettings.custom.json* with the following contents:
 
    ```json
    {
