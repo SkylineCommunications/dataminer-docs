@@ -207,11 +207,31 @@ In some cases, DataMiner Cube could become unresponsive when loading an alarm ta
 
 When, in an EPM filter box, you selected a field, selected another field, and then selected the first field again, in some cases, the diagrams linked to those two fields would incorrectly get mixed up.
 
+#### Web apps: URL option 'subheader=' would no longer work [ID_34456]
+
+<!-- Main Release Version 10.1.0 [CU20]/10.2.0 [CU8] - Feature Release Version 10.2.11 -->
+
+When, in the URL of a web app (e.g. Dashboards, Ticketing, etc.), you had specified `subheader=true` or `subheader=false` in combination with `embed=true`, that `subheader=` option would no longer work.
+
+Example of a dashboard URL containing a `subheader=true` option:
+
+```txt
+https://[DMA IP]/dashboard/#/MyDashboards/dashboard.dmadb?embed=true&subheader=true
+```
+
 #### Web Services API: Problem when calling the GetBooking or GetBookings method via SOAP [ID_34466]
 
 <!-- Main Release Version 10.1.0 [CU20]/10.2.0 [CU8] - Feature Release Version 10.2.11 -->
 
 When the GetBooking or GetBookings method was called via SOAP, in some cases, a serialization exception could be thrown when the booking (in case of GetBooking) or one of the bookings (in case of GetBookings) had a property that contained a TimeSpan object.
+
+#### Dashboards app / Low-code apps: Problem with slider ranges [ID_34477]
+
+<!-- Main Release Version 10.1.0 [CU20]/10.2.0 [CU8] - Feature Release Version 10.2.11 -->
+
+When the range of a slider control did not have a span (i.e. when start was equal to end), both the start value and the end value of the range would incorrectly be NaN values.  
+
+Also, when the range of a slider control had values outside of the minimum/maximum range, the start and end values would both be set to Infinity. From now on, the minimum and maximum values will be adapted to the actual start and end values.
 
 #### SLSNMPManager: Trap binding of type 'IP Address' would incorrectly be parsed as an empty string [ID_34481]
 

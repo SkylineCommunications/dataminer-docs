@@ -725,15 +725,3 @@ In some cases, instead of listing the unlicensed modules, this message would inc
 <!-- MR 10.3.0 - FR 10.2.11 -->
 
 When a service template was created using the *CreateServiceTemplate* method, the DataMinerID and ElementID of the newly created service template would incorrectly be set to 0 instead of -1.
-
-#### Web apps: URL option 'subheader=' would no longer work [ID_34456]
-
-<!-- MR 10.3.0 - FR 10.2.11 -->
-
-When, in the URL of a web app (e.g. Dashboards, Ticketing, etc.), you had specified `subheader=true` or `subheader=false` in combination with `embed=true`, that `subheader=` option would no longer work.
-
-Example of a dashboard URL containing a `subheader=true` option:
-
-```txt
-https://[DMA IP]/dashboard/#/MyDashboards/dashboard.dmadb?embed=true&subheader=true
-```

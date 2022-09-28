@@ -359,6 +359,18 @@ When an alarm tree with more than 1,000 alarms was migrated from the *active-ala
 
 During a midnight synchronization, in some cases, ResourceManager subscriptions could incorrectly get duplicated, causing `200+ clients connected to this agent` errors to appear in the Alarm Console.
 
+#### Web apps: URL option 'subheader=' would no longer work [ID_34456]
+
+<!-- Main Release Version 10.1.0 [CU20]/10.2.0 [CU8] - Feature Release Version 10.2.11 -->
+
+When, in the URL of a web app (e.g. Dashboards, Ticketing, etc.), you had specified `subheader=true` or `subheader=false` in combination with `embed=true`, that `subheader=` option would no longer work.
+
+Example of a dashboard URL containing a `subheader=true` option:
+
+```txt
+https://[DMA IP]/dashboard/#/MyDashboards/dashboard.dmadb?embed=true&subheader=true
+```
+
 #### Web Services API: Problem when calling the GetBooking or GetBookings method via SOAP [ID_34466]
 
 <!-- Main Release Version 10.1.0 [CU20]/10.2.0 [CU8] - Feature Release Version 10.2.11 -->
@@ -370,6 +382,14 @@ When the GetBooking or GetBookings method was called via SOAP, in some cases, a 
 <!-- MR 10.2.0 [CU8] - FR 10.2.11 -->
 
 When you opened the Dashboards app via a Dashboard Gateway server, in some cases, the list of available dashboards would incorrectly not be displayed in the sidebar.
+
+#### Dashboards app / Low-code apps: Problem with slider ranges [ID_34477]
+
+<!-- MR 10.1.0 [CU20]/10.2.0 [CU8] - FR 10.2.11 -->
+
+When the range of a slider control did not have a span (i.e. when start was equal to end), both the start value and the end value of the range would incorrectly be NaN values.  
+
+Also, when the range of a slider control had values outside of the minimum/maximum range, the start and end values would both be set to Infinity. From now on, the minimum and maximum values will be adapted to the actual start and end values.
 
 #### SLSNMPManager: Trap binding of type 'IP Address' would incorrectly be parsed as an empty string [ID_34481]
 
