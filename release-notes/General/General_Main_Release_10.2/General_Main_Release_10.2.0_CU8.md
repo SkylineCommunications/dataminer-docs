@@ -277,6 +277,21 @@ When you renamed, duplicated or imported a dashboard, in some cases, the feeds i
 
 In some cases, an error could occur in SLLog when closing a log file.
 
+#### Automation: Retrieving active alarms with the 'WithActiveAlarmsOnly()' option would not work without filtering by element [ID_34388]
+
+<!-- MR 10.2.0 [CU8] - FR 10.2.11 -->
+
+When active alarms were retrieved via an Automation script, an incorrect result set could get returned when no element filter had been applied.
+
+Example of C# code that would return an incorrect result set:
+
+```csharp
+var query = new TRUEFilterElement<Alarm>().OrderBy(AlarmExposers.TimeOfArrival)
+    .WithExecutionOptions(options => options.WithTargetHop(QueryTargetHopOptions.All)
+    .WithSpecificQueryExecutionOptions(AlarmQueryOptions.Default.WithAlarmsPostProcessed().WithActiveAlarmsOnly()));
+var alarms = alarmRepository.CreateReadQuery(query).Execute().ToList();
+```
+
 #### DataMiner Cube - Visual Overview: Problem when the Parameter shape data field of a range slider control contained a dynamic placeholder referring to a session variable [ID_34389]
 
 <!-- MR 10.1.0 [CU20]/10.2.0 [CU8] - FR 10.2.11 -->
