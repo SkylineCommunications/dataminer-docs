@@ -30,6 +30,9 @@ To install the DataMiner Teams bot:
    You can also immediately add the Teams bot to a specific team, chat, or meeting. To do so, click the triangle button next to *Add* and select the relevant option.
 
    ![DataMiner app in Teams apps store](~/user-guide/images/DataMinerTeamsAppAddTo.png)
+   
+> [!TIP]
+> An alternative way to download the DataMiner Teams bot: [click here](https://teams.microsoft.com/l/app/9a09d087-5d07-4481-b34f-cd053eab7925).
 
 ## Starting a conversation with the Teams bot
 
@@ -72,7 +75,9 @@ You can use the following options to interact with the DataMiner Teams bot:
 
 - **show alarms**: Shows the 10 most recent active alarms.
 
-- **show shares**: Shows the dashboards that have been shared with you.
+- **show shares**: Shows the dashboards that have been shared with you across the entire Cloud.
+
+- **show outgoing shares**: Shows the dashboards created by anyone in your active DataMiner System.
 
 - **show view ‘*view name*’**: Shows the visual overview of the specified view
 
