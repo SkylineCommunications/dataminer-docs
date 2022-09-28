@@ -382,6 +382,12 @@ In addition, performance has improved when a resource or resource pool is added 
 
 Because of a number of enhancements, overall performance has increased when running a GQI query using the ProfileInstance data source.
 
+#### SLNet / SLDataGateway: Enhanced algorithm to find the first valid physical address of the DataMiner Agent [ID_34360]
+
+<!-- MR 10.3.0 - FR 10.2.11 -->
+
+A number of enhancements have been made to the algorithm used by SLNet and SLDataGateway to find the first valid physical address of the DataMiner Agent.
+
 ### Fixes
 
 #### SLAnalytics: Problem with trend prediction [ID_31352]

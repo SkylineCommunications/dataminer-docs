@@ -503,6 +503,21 @@ The Dispose is called by a separate thread than the one stopping the element. It
 
 In addition, up to now only one instance was retained per QAction, so when entrypoints pointed to different classes, the instances were not kept. Now these separate instances will also be stored correctly.
 
+#### Timers: Specifying a delay between two consecutive ping packets [ID_34463]
+
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.11 -->
+
+When you configure a timer to automatically send ping requests to a device, you can now use either the `delay` option or the `delayPid` option to specify the delay in ms between two consecutive ping packets.
+
+- `delay`: With this option, you can specify a fixed delay in ms between two consecutive ping packets. This should be used when the device does not respond to all ping requests when they are sent without any delay.
+
+- `delayPID`: Instead of specifying a fixed delay value ("delay=x"), it is also possible to specify a dynamic value stored in a parameter. Note that if you specify both a fixed and a dynamic value, the latter will take precedence.
+
+    The value in the referred parameters must not be 0 or uninitialized. Otherwise, 0, the hard-coded value on the timer, or the last valid value will be used by default. The referred parameters must be of numeric type.
+
+> [!NOTE]
+> These options are only relevant when *amountPackets* or *amountPacketsPID* is used. These are currently only supported in conjunction with the *threadPool* option. When *threadPool* is not used, only one ping request will be sent.
+
 ### DMS Automation
 
 #### Engine object: TriggeredByName property added \[ID_33122\]

@@ -96,6 +96,12 @@ Because of a number of enhancements to the buffering mechanism, overall performa
 
 The SLLogCollector tool will also collect all prerequisite output files as well as all upgrade logs.
 
+#### SLNet / SLDataGateway: Enhanced algorithm to find the first valid physical address of the DataMiner Agent [ID_34360]
+
+<!-- MR 10.3.0 - FR 10.2.11 -->
+
+A number of enhancements have been made to the algorithm used by SLNet and SLDataGateway to find the first valid physical address of the DataMiner Agent.
+
 #### Lingering connections towards a DataMiner Agent will now be forcefully killed [ID_34367]
 
 <!-- MR 10.1.0 [CU20]/10.2.0 [CU8] - FR 10.2.11 -->
@@ -159,6 +165,21 @@ From now on, when you add a protocol filter to a component without specifying an
 <!-- Main Release Version 10.3.0 - Feature Release Version 10.2.11 -->
 
 A new *IsActive* column has been added to *Get alarms* data source. This column will be set to true when the alarm is an active alarm.
+
+#### Protocols - Timers: Specifying a delay between two consecutive ping packets [ID_34463]
+
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.11 -->
+
+When you configure a timer to automatically send ping requests to a device, you can now use either the `delay` option or the `delayPid` option to specify the delay in ms between two consecutive ping packets.
+
+- `delay`: With this option, you can specify a fixed delay in ms between two consecutive ping packets. This should be used when the device does not respond to all ping requests when they are sent without any delay.
+
+- `delayPID`: Instead of specifying a fixed delay value ("delay=x"), it is also possible to specify a dynamic value stored in a parameter. Note that if you specify both a fixed and a dynamic value, the latter will take precedence.
+
+    The value in the referred parameters must not be 0 or uninitialized. Otherwise, 0, the hard-coded value on the timer, or the last valid value will be used by default. The referred parameters must be of numeric type.
+
+> [!NOTE]
+> These options are only relevant when *amountPackets* or *amountPacketsPID* is used. These are currently only supported in conjunction with the *threadPool* option. When *threadPool* is not used, only one ping request will be sent.
 
 ### Fixes
 
