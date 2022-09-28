@@ -39,7 +39,7 @@
                 topicUID: Managing_the_start_window
               - name: Opening the browser application
                 topicUID: Opening_the_browser_app
-              - name: Options for opening DataMiner Cube
+              - name: Arguments for DataMiner Cube
                 topicUID: Options_for_opening_DataMiner_Cube
               - name: Desktop application command-line arguments
                 topicUID: Desktop_app_command_line_arguments
