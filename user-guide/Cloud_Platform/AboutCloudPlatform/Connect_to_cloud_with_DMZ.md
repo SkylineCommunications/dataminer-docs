@@ -28,6 +28,9 @@ To create such a DMZ:
 
 1. On the DMZ server, in the folder `C:\Program Files\Skyline Communications\DataMiner CloudGateway`, create an override *appsettings.custom.json* with the following contents:
 
+   > [!NOTE]
+   > If you want to point the DMZ to a failover pair, you will need to setup two DMZ servers. Both pointing to one of the two agents in the pair.
+
    ```json
    {
      "DmzOptions": {
