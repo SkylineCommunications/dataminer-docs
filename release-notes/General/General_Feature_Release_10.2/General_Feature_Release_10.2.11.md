@@ -406,11 +406,17 @@ https://[DMA IP]/dashboard/#/MyDashboards/dashboard.dmadb?embed=true&subheader=t
 
 When you opened the Dashboards app via a Dashboard Gateway server, in some cases, the list of available dashboards would incorrectly not be displayed in the sidebar.
 
+#### Web apps: List box items would not be displayed correctly in embedded visual overviews [ID_34474]
+
+<!-- MR 10.3.0 - FR 10.2.11 -->
+
+In an embedded visual overview, in some cases, list box items would not be displayed correctly.
+
 #### Dashboards app / Low-code apps: Problem with slider ranges [ID_34477]
 
 <!-- Main Release Version 10.1.0 [CU20]/10.2.0 [CU8] - Feature Release Version 10.2.11 -->
 
-When the range of a slider control did not have a span (i.e. when start was equal to end), both the start value and the end value of the range would incorrectly be NaN values.  
+When the range of a slider control did not have a span (i.e. when start was equal to end), both the start value and the end value of the range would incorrectly be NaN values.
 
 Also, when the range of a slider control had values outside of the minimum/maximum range, the start and end values would both be set to Infinity. From now on, the minimum and maximum values will be adapted to the actual start and end values.
 
@@ -419,3 +425,9 @@ Also, when the range of a slider control had values outside of the minimum/maxim
 <!-- Main Release Version 10.0.0 [CU22]/10.1.0 [CU20]/10.2.0 [CU8] - Feature Release Version 10.2.11 -->
 
 When a trap binding of type "IP Address" came in while the SLSNMPManager SNMPv3 process was processing traps on the default port 162, that binding would be incorrectly parsed as an empty string.
+
+#### Dashboards / Low-code apps: Changing a GQI query would not cause a table to get updated when column filters were applied [ID_34520]
+
+<!-- MR 10.3.0 - FR 10.2.11 -->
+
+When the GQI query linked to a table component was changed, the table would incorrectly not get updated when column filters were applied. The table would only get updated when you changed the column filters.

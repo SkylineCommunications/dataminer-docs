@@ -731,3 +731,15 @@ In some cases, instead of listing the unlicensed modules, this message would inc
 <!-- MR 10.3.0 - FR 10.2.11 -->
 
 When a service template was created using the *CreateServiceTemplate* method, the DataMinerID and ElementID of the newly created service template would incorrectly be set to 0 instead of -1.
+
+#### Web apps: List box items would not be displayed correctly in embedded visual overviews [ID_34474]
+
+<!-- MR 10.3.0 - FR 10.2.11 -->
+
+In an embedded visual overview, in some cases, list box items would not be displayed correctly.
+
+#### Dashboards / Low-code apps: Changing a GQI query would not cause a table to get updated when column filters were applied [ID_34520]
+
+<!-- MR 10.3.0 - FR 10.2.11 -->
+
+When the GQI query linked to a table component was changed, the table would incorrectly not get updated when column filters were applied. The table would only get updated when you changed the column filters.
