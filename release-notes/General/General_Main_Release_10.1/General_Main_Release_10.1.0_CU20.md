@@ -95,6 +95,12 @@ The `Repair DB.bat` script, located in the `C:\Skyline DataMiner\Tools` folder, 
 
 When a legacy Dashboard Gateway was connected to a DataMiner Agent with HTTPS configured and port 80 blocked, dashboards would fail to show the Maps component.
 
+#### Dashboards app / Low-code apps: Tooltips of certain visualizations would not be aligned correctly [ID_33844]
+
+<!-- Main Release Version 10.1.0 [CU20]/10.2.0 [CU8] - Feature Release Version TBD -->
+
+In some cases, tooltips of certain visualizations would not be aligned correctly.
+
 #### Protocols - Multi-threaded timers: Empty poll groups would cause SLProtocol to send empty SNMP requests to SLSNMPManager [ID_33900]
 
 <!-- Main Release Version 10.1.0 [CU20]/10.2.0 [CU8] - Feature Release Version 10.2.11 -->
@@ -224,6 +230,12 @@ https://[DMA IP]/dashboard/#/MyDashboards/dashboard.dmadb?embed=true&subheader=t
 <!-- Main Release Version 10.1.0 [CU20]/10.2.0 [CU8] - Feature Release Version 10.2.11 -->
 
 When the GetBooking or GetBookings method was called via SOAP, in some cases, a serialization exception could be thrown when the booking (in case of GetBooking) or one of the bookings (in case of GetBookings) had a property that contained a TimeSpan object.
+
+#### Alerter would leak memory when configured to play a sound when alarms matched a certain filter [ID_34473]
+
+<!-- Main Release Version 10.1.0 [CU20]/10.2.0 [CU8] - Feature Release Version 10.2.11 -->
+
+When Alerter had been configured to play a sound when alarms matched a certain filter, it could leak memory.
 
 #### Dashboards app / Low-code apps: Problem with slider ranges [ID_34477]
 

@@ -388,6 +388,12 @@ Because of a number of enhancements, overall performance has increased when runn
 
 A number of enhancements have been made to the algorithm used by SLNet and SLDataGateway to find the first valid physical address of the DataMiner Agent.
 
+#### Dashboards app - Parameter feed: 'Auto-select all' setting no longer available when using an EPM identifier feed as source [ID_34501]
+
+<!-- MR 10.3.0 - FR 10.2.11 -->
+
+When a parameter feed has an EPM identifier feed as source, from now on, the *Auto-select all* setting will no longer be available.
+
 ### Fixes
 
 #### SLAnalytics: Problem with trend prediction [ID_31352]

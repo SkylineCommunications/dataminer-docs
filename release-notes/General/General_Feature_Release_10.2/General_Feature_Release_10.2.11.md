@@ -181,6 +181,12 @@ When you configure a timer to automatically send ping requests to a device, you 
 > [!NOTE]
 > These options are only relevant when *amountPackets* or *amountPacketsPID* is used. These are currently only supported in conjunction with the *threadPool* option. When *threadPool* is not used, only one ping request will be sent.
 
+#### Dashboards app - Parameter feed: 'Auto-select all' setting no longer available when using an EPM identifier feed as source [ID_34501]
+
+<!-- MR 10.3.0 - FR 10.2.11 -->
+
+When a parameter feed has an EPM identifier feed as source, from now on, the *Auto-select all* setting will no longer be available.
+
 ### Fixes
 
 #### Failover: Offline agent would fail to come online when the NATS cluster was down during a Failover switch [ID_33681]
@@ -405,6 +411,12 @@ https://[DMA IP]/dashboard/#/MyDashboards/dashboard.dmadb?embed=true&subheader=t
 <!-- MR 10.2.0 [CU8] - FR 10.2.11 -->
 
 When you opened the Dashboards app via a Dashboard Gateway server, in some cases, the list of available dashboards would incorrectly not be displayed in the sidebar.
+
+#### Alerter would leak memory when configured to play a sound when alarms matched a certain filter [ID_34473]
+
+<!-- Main Release Version 10.1.0 [CU20]/10.2.0 [CU8] - Feature Release Version 10.2.11 -->
+
+When Alerter had been configured to play a sound when alarms matched a certain filter, it could leak memory.
 
 #### Web apps: List box items would not be displayed correctly in embedded visual overviews [ID_34474]
 
