@@ -116,6 +116,130 @@ Examples:
 </Title>
 ```
 
+```xml
+<!-- INDIVIDUAL ELEMENT MARKERS LAYER -->
+<Layers>
+<Layer name="Individual Element Markers" sourceType="objects" refresh="10000" visible="false" allowToggle="true" autoFit="false" limitToBounds="false">
+<ObjectsSourceInfo>
+<!--  CITY 1: New York  -->
+<Element id="City 1">
+<Latitude>40.712776</Latitude>
+<Longitude>-74.005974</Longitude>
+</Element>
+<!--  CITY 1: Paris  -->
+<Element id="City 2">
+<Title>
+<Parameter>
+<ID>1</ID>
+</Parameter>
+</Title>
+<Latitude>
+<Property>Latitude</Property>
+</Latitude>
+<Longitude>
+<Property>Longitude</Property>
+</Longitude>
+</Element>
+<!--  CITY 1: Buenos Aires  -->
+<Element id="City 3">
+<Title>
+<Property>Title</Property>
+</Title>
+<Latitude>
+<Parameter>
+<ID>2</ID>
+</Parameter>
+</Latitude>
+<Longitude>
+<Parameter>
+<ID>3</ID>
+</Parameter>
+</Longitude>
+</Element>
+<!--  CITY 1: Sydney  -->
+<Element id="271/51461">
+<Title>***Sydney***</Title>
+<Latitude>
+<Property>Latitude</Property>
+</Latitude>
+<Longitude>
+<Property>Longitude</Property>
+</Longitude>
+</Element>
+</ObjectsSourceInfo>
+<MarkerImages>
+<MarkerImage id="cluster" url="images/icons/stars.png" width="20" height="20" anchor="10,10" single="false" shape="0,0,20,20" shapeType="rect"/>
+</MarkerImages>
+<PopupSkeleton>
+<![CDATA[ <h2>[title]</h2> <h4>Location: [city] ([latitude], [longitude])</h4> ]]>
+</PopupSkeleton>
+<PopupDetails>
+<Detail name="city" type="parameter" pid="1"/>
+</PopupDetails>
+</Layer>
+</Layers>
+```
+
+```xml
+<!-- RECURSIVE SERVICE ELEMENTS LAYER -->
+<Layers>
+<Layer name="Recursive Service Elements" sourceType="objects" refresh="10000" visible="false" allowToggle="true" autoFit="false" limitToBounds="false">
+<ObjectsSourceInfo>
+<!--  SERVICE: Earth  -->
+<ServiceChildren id="Earth" recursive="true" idVar="Continent">
+<Latitude>
+<Property>Latitude</Property>
+</Latitude>
+<Longitude>
+<Property>Longitude</Property>
+</Longitude>
+</ServiceChildren>
+</ObjectsSourceInfo>
+<MarkerImages>
+<MarkerImage id="cluster" url="images/icons/cluster-52px.png" width="52" height="52" anchor="26,26" single="false" shape="0,0,52,52" shapeType="rect"/>
+</MarkerImages>
+<PopupSkeleton>
+<![CDATA[ <h2>[city]</h2> <h4>Coordinates: ([latitude], [longitude])</h4> <h4>Element ID: [dmaid]/[eid]</h4> <img src="[image]" width="300"/> ]]>
+</PopupSkeleton>
+<PopupDetails>
+<Detail name="city" type="parameter" pid="1"/>
+<Detail name="image" type="property" property="Image"/>
+</PopupDetails>
+</Layer>
+</Layers>
+```
+
+```xml
+<!--  SRM EXPOSE FLOW SETUP  -->
+<Layers>
+<Layer name="SRM Expose Flow" sourceType="objects" refresh="10000" visible="false" allowToggle="true" autoFit="false" limitToBounds="false">
+<ObjectsSourceInfo>
+<ServiceChildren id="SRM - Expose Flow Service" recursive="true">
+<Title>
+<Property>Title</Property>
+</Title>
+<Latitude>
+<Property>Latitude</Property>
+</Latitude>
+<Longitude>
+<Property>Longitude</Property>
+</Longitude>
+</ServiceChildren>
+</ObjectsSourceInfo>
+<MarkerImages>
+<MarkerImage id="cluster" url="images/icons/cluster-52px.png" width="52" height="52" anchor="26,26" single="false" shape="0,0,52,52" shapeType="rect"/>
+</MarkerImages>
+<PopupSkeleton>
+<![CDATA[ <h1>[title]: [location]</h1> <img src="images/srm-expose-flow/[image].jpg" width="300"/> ]]>
+</PopupSkeleton>
+<PopupDetails>
+<Detail name="location" type="property" property="Location"/>
+<Detail name="image" type="property" property="Image"/>
+</PopupDetails>
+</Layer>
+</Layers>
+```
+
 ## Layers of sourceType “overlay”
 
 Set the *sourceType* attribute of a layer to “overlay” if you want that layer to display a static image or if you want to create a GeoJSON layer. The image can be either a common JPG, PNG or GIF image (stored either locally on a DMA or somewhere on the internet), or a special KML image (stored either locally on a DMA, or on a publicly accessible web server).
