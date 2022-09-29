@@ -62,46 +62,46 @@ Examples:
 
 ```xml
 <Layers>
-<!--  SOURCE OBJECTS LAYER -->
-<Layer name="DataMiner Objects" sourceType="objects" refresh="10000" visible="true" allowToggle="true" autoFit="false" limitToBounds="false">
-<ObjectsSourceInfo>
-<!--  SERVICE: Earth  -->
-<!--  Contains child services for each continent  -->
-<!--  Each continent service contains elements representing cities  -->
-<ServiceChildren id="Earth" recursive="true" idVar="Continent">
-<Latitude>
-<Property>Latitude</Property>
-</Latitude>
-<Longitude>
-<Property>Longitude</Property>
-</Longitude>
-</ServiceChildren>
-</ObjectsSourceInfo>
-<MarkerImages>
-<MarkerImage id="cluster" url="images/icons/cluster-52px.png" width="52" height="52" anchor="26,26" single="false" shape="0,0,52,52" shapeType="rect"/>
-</MarkerImages>
-<PopupSkeleton>
-<![CDATA[ <h2>[city]</h2> <h4>Coordinates: ([latitude], [longitude])</h4> <h4>Element ID: [dmaid]/[eid]</h4> <img src="[image]" width="300"/> ]]>
-</PopupSkeleton>
-<PopupDetails>
-<Detail name="city" type="parameter" pid="1"/>
-<Detail name="image" type="property" property="Image"/>
-</PopupDetails>
-</Layer>
-<!--  DCF CONNECTIONS LAYER  -->
-<Layer name="DCF Connections" sourceType="connectivity" visible="true" allowToggle="true">
-<!--  Reference to the layer with source objects  -->
-<LayerSourceInfo>DataMiner Objects</LayerSourceInfo>
-<LineOptions weight="10" color="white" opacity="1"/>
-<PopupSkeleton>
-<![CDATA[ <h2>Connection: [title]</h2> <h4>Description: [description]</h4> <h4>Bandwidth: [bandwidth]</h4> ]]>
-</PopupSkeleton>
-<PopupDetails>
-<!--  Using properties defined on the DCF connections  -->
-<Detail name="description" type="property" property="Description"/>
-<Detail name="bandwidth" type="property" property="Bandwidth"/>
-</PopupDetails>
-</Layer>
+    <!--  SOURCE OBJECTS LAYER -->
+    <Layer name="DataMiner Objects" sourceType="objects" refresh="10000" visible="true" allowToggle="true" autoFit="false" limitToBounds="false">
+        <ObjectsSourceInfo>
+            <!--  SERVICE: Earth  -->
+            <!--  Contains child services for each continent  -->
+            <!--  Each continent service contains elements representing cities  -->
+            <ServiceChildren id="Earth" recursive="true" idVar="Continent">
+                <Latitude>
+                    <Property>Latitude</Property>
+                </Latitude>
+                <Longitude>
+                    <Property>Longitude</Property>
+                </Longitude>
+            </ServiceChildren>
+        </ObjectsSourceInfo>
+        <MarkerImages>
+            <MarkerImage id="cluster" url="images/icons/cluster-52px.png" width="52" height="52" anchor="26,26" single="false" shape="0,0,52,52" shapeType="rect"/>
+        </MarkerImages>
+        <PopupSkeleton>
+            <![CDATA[ <h2>[city]</h2> <h4>Coordinates: ([latitude], [longitude])</h4> <h4>Element ID: [dmaid]/[eid]</h4> <img src="[image]" width="300"/> ]]>
+        </PopupSkeleton>
+        <PopupDetails>
+            <Detail name="city" type="parameter" pid="1"/>
+            <Detail name="image" type="property" property="Image"/>
+        </PopupDetails>
+    </Layer>
+    <!--  DCF CONNECTIONS LAYER  -->
+    <Layer name="DCF Connections" sourceType="connectivity" visible="true" allowToggle="true">
+        <!--  Reference to the layer with source objects  -->
+        <LayerSourceInfo>DataMiner Objects</LayerSourceInfo>
+        <LineOptions weight="10" color="white" opacity="1"/>
+        <PopupSkeleton>
+            <![CDATA[ <h2>Connection: [title]</h2> <h4>Description: [description]</h4> <h4>Bandwidth: [bandwidth]</h4> ]]>
+        </PopupSkeleton>
+        <PopupDetails>
+            <!--  Using properties defined on the DCF connections  -->
+            <Detail name="description" type="property" property="Description"/>
+            <Detail name="bandwidth" type="property" property="Bandwidth"/>
+        </PopupDetails>
+    </Layer>
 </Layers>
 ```
 
