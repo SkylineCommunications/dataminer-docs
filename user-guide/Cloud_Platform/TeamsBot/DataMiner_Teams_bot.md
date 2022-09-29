@@ -72,7 +72,7 @@ You can use the following options to interact with the DataMiner Teams bot:
 
 - **show elements**: Shows the first 10 elements from your active DataMiner System.
 
-- **show element ‘*element name*’**: Shows information about the specified element.
+- **show element *element name***: Shows information about the specified element.
 
 - **show alarms**: Shows the 10 most recent active alarms.
 
@@ -80,7 +80,13 @@ You can use the following options to interact with the DataMiner Teams bot:
 
 - **show outgoing shares**: Shows the dashboards shared by anyone in your active DataMiner System.
 
-- **show view ‘*view name*’**: Shows the visual overview of the specified view
+- **show view *view name***: Shows the visual overview of the specified view
+
+- **show command *command name***: Displays the matching command with its description and a button to run the command.
+
+- **show command**: Displays the first 10 commands found in the active DataMiner System with their description and buttons to run each command.
+
+- **run command *command name***: Runs the matching command on the active DataMiner System. When necessary, the user will be asked for input and/or confirmation.
 
 - **help**: Shows more detailed help information, if available.
 
