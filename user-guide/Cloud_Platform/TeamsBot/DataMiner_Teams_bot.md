@@ -35,7 +35,7 @@ To install the DataMiner Teams bot:
 
 When you start a conversation with the Teams bot, you will first need to log in:
 
-1. Enter the *login* command or any other command.
+1. Enter any command. This can be the *login* command, but any other command will have the same result if you are not logged in yet.
 
    The Teams bot will display a *Log in* button in its reply.
 
@@ -84,7 +84,7 @@ You can use the following options to interact with the DataMiner Teams bot:
 
 - **cancel**: Cancels the current action.
 
-- **login**: Logs into the DataMiner Cloud Platform.
+- **login**: Logs into the DataMiner Cloud Platform. Note that any other command used while not logged in will have the same result as this command.
 
 - **logout**: Logs out of the DataMiner Cloud Platform.
 
