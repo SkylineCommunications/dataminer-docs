@@ -379,7 +379,8 @@ The bottom half of the *Files* tab contains three sections:
 
 > [!NOTE]
 > - The location of the MIB store and other MIB browser settings can be specified in the *MIB* tab of the *DIS Settings* window. See: [MIB](xref:DIS_settings#mib)
-> - The MIB browser allows you to import files with the following extensions: <br>*mib*, *smi*, and *txt*.
+> - The MIB browser allows you to import files with the following extensions: *mib*, *smi*, and *txt*.
+> - DIS by default contains most common IANA and IETF MIB files. These MIB files contain common definitions that are often used in MIB files supplied by equipment vendor.
 
 ### Compare
 

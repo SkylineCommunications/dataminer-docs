@@ -8,7 +8,9 @@ uid: DIS_2.39
 
 ### IDE
 
+#### DIS now by default contains most common IANA and IETF MIB files [ID_34304]
 
+DIS now by default contains most common IANA and IETF MIB files. These MIB files contain common definitions that are often used in MIB files supplied by equipment vendor.
 
 ### Validator
 
