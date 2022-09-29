@@ -606,9 +606,44 @@ When you have finished making a series of changes to documentation in Visual Stu
 > [!IMPORTANT]
 > If you make test builds often, you may need to occasionally clear the files in the `\dataminer-docs\obj\.cache\build\` folder of your local version of the documentation. In the long run, these can pile up and take up a large amount of memory.
 
+## Tips for writing documentation
+
+To allow easier editing and ensure consistency with the rest of the documentation, keep the following things in mind when you write a new section in the documentation.
+
+### Unnumbered lists vs. numbered lists
+
+- When you add a procedure that consists of several steps, use a **numbered list**. This will make sure the user has a clear overview of the different steps.
+
+    > [!TIP]
+    > For your list, just use the prefix "1." for each item. The list will automatically be updated to the correct numbering when the documentation is generated. Creating lists this way allows you to add items in the list without having to manually alter the numbering for every item that follows them. See also the [Microsoft Docs Contributor Guide](https://learn.microsoft.com/en-us/contribute/markdown-reference#numbered-list).
+
+- Only use numbered lists if the order of each list item is important. If you for instance just want to enumerate several things, but their order does not matter, use an **unnumbered list** (using the prefix "-" for each item).
+
+### Contractions
+
+Avoid contractions (e.g. you're, they're, it's). In formal documentation, these are not usually used.
+
+### UI text displayed in italic type
+
+Exact references to text in the UI are usually displayed in italic type. This can help to avoid confusion, as otherwise it may not always be clear which part of the text is a UI reference.
+
+Example: Below *Exclusions*, click *Add exclusion* and select either *Protocol* or the name of the app.
+
+### Quotation marks
+
+In accordance with the [Microsoft style guide](https://docs.microsoft.com/en-us/style-guide/punctuation/quotation-marks), double quotation marks are used in our documentation instead of single quotation marks.
+
+There is one exception to this, however: because DocFX cannot handle double quotation marks in titles, we try to avoid quotation marks in them as much as possible or use single quotation marks if we cannot get around them.
+
+### Screenshots
+
+Be careful when you use screenshots of the DataMiner Cube UI, as these can get outdated quickly. For this reason, do not use screenshots if this has no added value.
+
+If you do add a screenshot, ideally there should be some indication of the version of the software displayed in the screenshot, so it is clear if the screenshot is outdated.
+
 ## References
 
-As our way of working is very similar to the approach used for Microsoft Docs, it can be useful to take a look at the [Microsoft Docs contributor guide](https://docs.microsoft.com/en-us/contribute/) for additional information and guidelines.
+As our way of working is very similar to the approach used for Microsoft Docs, it can be useful to take a look at the [Microsoft Docs Contributor Guide](https://docs.microsoft.com/en-us/contribute/) for additional information and guidelines.
 
 For more information about DocFX, you can also refer to [Getting Started with DocFX](https://dotnet.github.io/docfx/tutorial/docfx_getting_started.html).
 
