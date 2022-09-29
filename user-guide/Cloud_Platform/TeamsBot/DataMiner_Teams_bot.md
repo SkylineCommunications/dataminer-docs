@@ -58,7 +58,9 @@ When you start a conversation with the Teams bot, you will first need to log in:
    1. Click *Link accounts*.
 
 > [!NOTE]
-> The DataMiner Teams bot can also be used in group chats and channel conversations.
+>
+> - The DataMiner Teams bot can also be used in group chats and channel conversations.
+> - To be able to use the Teams bot, you need to be a member of a cloud-connected DMS. See [Giving a user access to cloud features](xref:Giving_users_access_to_cloud_features).
 
 ## Available options
 
