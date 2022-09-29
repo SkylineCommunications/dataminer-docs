@@ -324,7 +324,7 @@ Example:
     <GroundOverlay type="image" src="images/test/mechelen-overlay.JPG">
         <TopLeft latitude="51.030748" longitude="4.494814" />
         <BottomRight latitude="51.032873" longitude="4.500221" />
-    </ GroundOverlay>
+    </GroundOverlay>
 </Layer>
 ```
 
