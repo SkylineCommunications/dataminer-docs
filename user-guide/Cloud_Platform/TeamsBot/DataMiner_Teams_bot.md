@@ -37,7 +37,11 @@ Alternatively, you can also download the bot as follows:
 
 When you start a conversation with the Teams bot, you will first need to log in:
 
-1. Click the *Log in* button. This is displayed in Teams as soon as you enter a command for the Teams bot while you are not logged in yet.
+1. Enter any command. This can be the *login* command, but any other command will have the same result if you are not logged in yet.
+
+   The Teams bot will display a *Log in* button in its reply.
+
+1. Click the *Log in* button.
 
 1. Select a login method. Preferably, this should be the same login method as you usually use to connect to dataminer.services.
 
@@ -85,6 +89,8 @@ You can use the following options to interact with the DataMiner Teams bot:
 - **help**: Shows more detailed help information, if available.
 
 - **cancel**: Cancels the current action.
+
+- **login**: Logs into the DataMiner Cloud Platform. Note that any other command used while not logged in will have the same result as this command.
 
 - **logout**: Logs out of the DataMiner Cloud Platform.
 
