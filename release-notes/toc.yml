@@ -338,6 +338,8 @@
         topicUid: ClassLibrary_Range_1.0
     - name: DIS release notes
       items:
+      - name: DIS 2.39
+        topicUid: DIS_2.39
       - name: DIS 2.38
         topicUid: DIS_2.38
       - name: DIS 2.37
