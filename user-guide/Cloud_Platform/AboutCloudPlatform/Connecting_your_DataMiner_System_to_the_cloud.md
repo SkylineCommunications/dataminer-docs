@@ -47,6 +47,9 @@ To connect your DMS to the cloud:
 
    - *Organization*: Specify your organization, either by selecting it in the drop-down box if it already exists in the system or by clicking *Create new* and specifying your name and DNS.
 
+     > [!NOTE]
+     > To be able to select an existing organization, you must be a [member of that organization on DCP](xref:Giving_users_access_to_cloud_features).
+
    - *DMS name*: Specify the name you want to use for your DMS.
 
    - *DMS URL*: Specify a URL-friendly version of the DMS name.
