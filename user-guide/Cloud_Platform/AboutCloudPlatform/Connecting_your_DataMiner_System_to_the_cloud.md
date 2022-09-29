@@ -61,4 +61,6 @@ To connect your DMS to the cloud:
 1. To ensure that you can make optimal use of your cloud connection, get your cloud connection verified. See [Getting your organization verified](xref:CloudConnectionVerification).
 
 > [!NOTE]
-> Make sure that all users that should be able to share data with the cloud have the necessary user permissions under [Modules > System configuration > Cloud sharing/gateway](xref:DataMiner_user_permissions#modules--system-configuration--cloud-sharinggateway).
+>
+> - Make sure that all users that should be able to share data with the cloud have the necessary user permissions under [Modules > System configuration > Cloud sharing/gateway](xref:DataMiner_user_permissions#modules--system-configuration--cloud-sharinggateway).
+> - To make sure users can make use of cloud features, you will need to manually add them to your organization and DMS in the DCP Admin app. See [Controlling user access to cloud features](xref:Giving_users_access_to_cloud_features).
