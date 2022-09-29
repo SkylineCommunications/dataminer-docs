@@ -223,7 +223,10 @@ The following types of alarm events will not be combined in a consolidated alarm
 - Flipped
 
 > [!TIP]
-> See also: [Alarm linking](xref:Alarm_linking) and [Declutter your alarm tree](https://community.dataminer.services/declutter-your-alarm-tree/ "Alarm Squashing")
+> See also:
+>
+> - [Alarm linking](xref:Alarm_linking)
+> - [Declutter your alarm tree](https://community.dataminer.services/declutter-your-alarm-tree/ "Alarm squashing")
 
 ### AlarmSettings.UseCreationTimeAsMainTime
 
