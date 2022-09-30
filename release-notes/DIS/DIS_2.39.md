@@ -12,7 +12,7 @@ uid: DIS_2.39
 
 Up to now, in QAction and EXE projects, DIS would add references to the DataMiner DLL files of the locally installed DataMiner Agent or, if no DataMiner Agent was installed on the local machine, to copies of those files shipped with the DIS installation package. Instead, DIS will now add a reference to a DataMiner DevPack, i.e. a NuGet package that contains the core DataMiner DLL files of a specific DataMiner version. As a separate DataMiner DevPack is available for every released DataMiner version, adapting a solution to a specific DataMiner version is now merely a question of making sure the solution links to the DevPack of that version.
 
-The DataMiner DevPacks can be found on the [official NuGet store](https://www.nuget.org/).
+The DataMiner DevPacks can be found on the [official NuGet store](https://www.nuget.org/packages?q=skylinecommunications).
 
 When you open a protocol solution or an Automation script solution in which the QAction and EXE projects still contain references to separate DLL files instead of a DataMiner DevPack, a banner will appear, giving you the opportunity to replace those references by references to the required DevPacks.
 
@@ -30,40 +30,21 @@ If any of your existing solutions are using NuGet packages the old way (i.e. usi
 1. Repeat for every project in the current solution.
 
 > [!NOTE]
-> The DataMiner DevPacks can also be used in solutions other than protocols and Automation script solutions, for example in custom solutions such as the Class Library Community Packages, which are meant to be used as an API within protocol or Automation script solutions. If you have any custom solutions
+> The DataMiner DevPacks can also be used in solutions other than protocol and Automation script solutions, for example in custom solutions such as the Class Library Community Packages, which are meant to be used as an API within protocol or Automation script solutions. If you have any custom solutions, make sure to the projects in those solutions also use the new DataMiner DevPacks.
 
-All those should now be updated to also make use of the new DataMiner DevPacks rather than referencing DataMiner DLLs added to the solution.
- 
+##### Enhanced publishing of protocols and Automation scripts
 
- 
-**NuGet Support - Improved Publishing**
+Up to now, when you clicked the *Publish* button to publish a protocol or an Automation script on a DataMiner Agent, only the protocol or Automation script XML file would get published on that DataMiner Agent.
 
-Up to now, when pressing the publish button in DIS, it would take the protocol/Automation script XML and publish this on the DataMiner Agent.
- 
-As a protocol/Automation script could make use of custom DLLs (e.g. through NuGet packages that are being used), the publishing has now been updated so that in the background a .dmprotocol package (for protocols) or .dmapp package (for Automation scripts) is created. This package is then installed on the agent automatically during publishing, alleviating the need to manually put the required DLLs on the Agent. The .dmapp also gets removed again automatically.
+From now on, when you publish a protocol or an Automation script, DIS will create either a *.dmprotocol* package (in case of a protocol) or a *.dmapp* package (in case of an Automation script) in the background, install that package on the DataMiner Agent, and then automatically remove it again. This way, it will no longer be needed to manually copy all required DLL files on the DataMiner Agent in question.
 
-34113 > publish
+##### Enhanced saving of protocols and Automation scripts
 
-Up to now, when pressing the publish button in DIS, it would take the protocol/Automation script XML and publish this on the DataMiner Agent.
+Up to now, it was only possible to save a protocol or an Automation script as an XML file.
 
-As a protocol/Automation script could make use of custom DLLs (e.g. through NuGet packages that are being used), the publishing has now been updated so that in the background a .dmprotocol package (for protocols) or .dmapp package (for Automation scripts) is created. This package is then installed on the agent automatically during publishing, alleviating the need to manually put the required DLLs on the Agent. The .dmapp also gets removed again automatically.
+From now on, a protocol can be saved either as an XML file or as a *.dmprotocol* package and an Automation script can be saved either as an XML file or a .dmapp package.
 
-**NuGet Support - Improved Saving**
-
-Up to now, it was only possible to save a protocol/Automation script as an XML file. Now for protocols, you can choose to either save it as an XML or as a .dmprotocol package.
-For an Automation script, you can choose to save it as XML or a .dmapp package.
- 
-The .dmprotocol/.dmapp package contains the protocol/Automation script together with the required DLLs (e.g. DLLs of NuGet packages that are used in the protocol/Automation script.)
-
-34115 > save
-
-Up to now, it was only possible to save a protocol/Automation script as an XML file. Now for protocols, you can choose to either save it as an XML or as a .dmprotocol package.
-
-For an Automation script, you can choose to save it as XML or a .dmapp package.
-
-The .dmprotocol/.dmapp package contains the protocol/Automation script together with the required DLLs (e.g. DLLs of NuGet packages that are used in the protocol/Automation script.)
-
-
+If you choose to save a protocol or an Automation script as a package, the package will contain the protocol or Automation script as well as all required DLL files (e.g. DLL files of NuGet packages that are used in the protocol or Automation script).
 
 #### Display editor: Enhanced DVE support [ID_33545]
 
@@ -152,10 +133,11 @@ The following element has been added to the protocol schema:
 
 ## Changes
 
-### Enhancements
-
-
-
-
 ### Fixes
+
+#### MIB browser would incorrectly not show any discreet values [185915]
+
+For one MIB file (attached) where the OID has discreet values, the DIS MIB Browser displays the Syntax as Integer only and doesn't show the mapping of the discreet values. Using another MIB Browser, the mapping can be seen clearly.
+
+
 
