@@ -10,7 +10,14 @@ uid: DIS_2.39
 
 #### [ID_33544] [ID_34113] [ID_34115] [ID_34117]
 
-Up to now, in QActions and EXE blocks, DIS would add references to DataMiner DLL files stored on the local DataMiner Agent or to copies of those files shipped with the DIS installation package. Instead, DIS will now add a reference to the DataMinerDevPack NuGet package, which contains all core DataMiner DLL files.
+Up to now, in QAction and EXE projects, DIS would add references to DataMiner DLL files stored on the local DataMiner Agent or to copies of those files shipped with the DIS installation package. Instead, DIS will now add a reference to the DataMinerDevPack NuGet package, which contains all core DataMiner DLL files.
+
+
+
+When you open a protocol solution or an Automation script solution in which the QAction and EXE projects still contain references to separate DLL files instead of the DataMinerDevPack NuGet package, 
+
+, DIS will from now on verify whether the dev pack nugets are used (these are NuGet packages that contain core DataMiner DLLs typicallly used for develop protocols, Automation scripts, etc.). If it detects that projects of the solulion not using the Dev packs but do use such core DLLs, a banner will be shown informing the user about this. The user is then able to click the Fix link which will replace the references with a reference to the required Dev pack NuGet packages.
+
 
 34113
 
@@ -26,9 +33,7 @@ For an Automation script, you can choose to save it as XML or a .dmapp package.
 
 The .dmprotocol/..dmapp package contains the protocol/Automation script together with the required DLLs (e.g. DLLs of NuGet packages that are used in the protocol/Automation script.)
 
-34117
 
-When opening a protocol or Automation script solution, DIS will from now on verify whether the dev pack nugets are used (these are NuGet packages that contain core DataMiner DLLs typicallly used for develop protocols, Automation scripts, etc.). If it detects that projects of the solulion not using the Dev packs but do use such core DLLs, a banner will be shown informing the user about this. The user is then able to click the Fix link which will replace the references with a reference to the required Dev pack NuGet packages.
 
 
 
