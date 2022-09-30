@@ -135,9 +135,6 @@ The following element has been added to the protocol schema:
 
 ### Fixes
 
-#### MIB browser would incorrectly not show any discreet values [185915]
+#### MIB Browser would incorrectly display "Integer" when selecting an OID containing discreet values [185915]
 
-For one MIB file (attached) where the OID has discreet values, the DIS MIB Browser displays the Syntax as Integer only and doesn't show the mapping of the discreet values. Using another MIB Browser, the mapping can be seen clearly.
-
-
-
+When you selected an OID that contained a series of discreet values, in the *Syntax* box, the *MIB Browser* would incorrectly display "Integer" instead of the actual values.
