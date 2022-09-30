@@ -16,20 +16,17 @@ To create such a DMZ:
 
    - Make sure the DMZ can communicate through NATS though port 4222.
 
-1. Install the 4 DxMs that need to be on the DMZ. At present, these are *CloudGateway*, *CloudFeed*, *ArtifactDeployer* and *Orchestrator*.
+1. Install the DxMs that need to be in the DMZ. At present, these are *CloudGateway*, *CloudFeed*, *ArtifactDeployer*, and *Orchestrator*.
 
    > [!NOTE]
-   > Currently it is not yet possible to download each DxM individually. As a workaround, you can install the  complete Cloud Pack on the DMZ. But then you need to uninstall the unrelevant DxMs. For the DMZ these are *CoreGateway* and *FieldControl*. You can uninstall these using the windows program menus.
+   > Currently it is not yet possible to download each DxM individually. As a workaround, you can install the complete Cloud Pack in the DMZ and then uninstall the irrelevant DxMs. For the DMZ, these are *CoreGateway* and *FieldControl*. You can uninstall these using the Windows program menus.
 
-1. On the DataMiner nodes, install the DxMs that need to connect with the DMA or do not require internet access. At present, these are *CoreGateway*, *FieldControl* and *Orchestrator*. You should install these DxMs on both agents in a failover pair.
+1. On the DataMiner nodes, install the DxMs that need to connect with the DMA or do not require internet access. At present, these are *CoreGateway*, *FieldControl*, and *Orchestrator*. In case of a Failover setup, you should install these DxMs on both Agents in the Failover pair.
 
    > [!NOTE]
    > For all DxMs, it is advised to have multiple instances running at the same time. This will create redundancy in case something goes wrong and allows for upgrades without any downtime.
 
 1. On the DMZ server, in the folder `C:\Program Files\Skyline Communications\DataMiner CloudGateway`, create an override *appsettings.custom.json* with the following contents:
-
-   > [!NOTE]
-   > If you want to point the DMZ to a failover pair, you will need to setup two DMZ servers. Both pointing to one of the two agents in the pair.
 
    ```json
    {
@@ -46,6 +43,9 @@ To create such a DMZ:
    - **Domain**: The domain name of your DataMiner System, configured through the IIS settings.
 
    - **DataMinerAgentName**: The name of the DataMiner Agent you are connecting to. This should be the same DMA as the one used for the domain setting.
+
+   > [!NOTE]
+   > If you want to point the DMZ to a Failover pair, you will need to set up two DMZ servers, each pointing to one of the two Agents in the pair.
 
 1. On a DataMiner node, copy `C:\Skyline DataMiner\SLCloud.xml` and `C:\Skyline DataMiner\NATS\nsc\.nkeys\creds\DataMinerOperator\DataMinerAccount\DataMinerUser.creds`, and paste these in the `C:\Skyline DataMiner\` folder of the DMZ. Make sure that the credentials entry in *SLCloud.xml* points to the credentials file you copied over.
 
