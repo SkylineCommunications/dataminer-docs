@@ -579,7 +579,7 @@
         - name: Debugging connectors - tracing the stack
           topicUID: Debugging_connectors_tracing_the_stack
         - name: Protocol thread run-time errors - use cases
-          topicUID: Protocol_thread_run_tim_errors_use_cases
+          topicUID: Protocol_thread_run_time_errors_use_cases
   - name: Automation scripts
     topicUid: AutomationDevGuideIndex
     items:

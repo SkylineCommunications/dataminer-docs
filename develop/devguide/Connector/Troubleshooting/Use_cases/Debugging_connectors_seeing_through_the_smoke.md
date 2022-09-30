@@ -70,7 +70,7 @@ The logical next step is to take a look at QAction 3279. However, it turns out t
 
 > *“Data! Data! Data! I can’t make bricks without clay.” – Sherlock Holmes*
 
-The big question of course is where to find more data sources. For this, we need to keep in mind that **when full RTEs don’t clear up**, there are usually **two ways** something can be stuck:
+The big question of course is where to find more data sources. For this, we need to keep in mind that **when full RTEs do not clear up**, there are usually **two ways** something can be stuck:
 
 - A **deadlock**, which means something is just waiting for something else indefinitely and not doing anything else.
 
@@ -192,4 +192,4 @@ This case turned out to be two issues disguised as one.
 
 - Only when no other options are available, presume likely scenarios and use trial and error to find out which scenario applies.
 
-- For more use cases related to run-time errors, see [Protocol thread run-time errors: use cases](xref:Protocol_thread_run_tim_errors_use_cases).
+- For more use cases related to run-time errors, see [Protocol thread run-time errors: use cases](xref:Protocol_thread_run_time_errors_use_cases).

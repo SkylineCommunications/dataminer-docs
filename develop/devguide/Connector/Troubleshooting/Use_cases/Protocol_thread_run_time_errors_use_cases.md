@@ -1,5 +1,5 @@
 ---
-uid: Protocol_thread_run_tim_errors_use_cases
+uid: Protocol_thread_run_time_errors_use_cases
 ---
 
 # Protocol thread run-time errors: use cases
@@ -42,7 +42,9 @@ An RTE can have three states: half-open, open and cleared.
 
 By default, when a group takes longer than 7 minutes and 30 seconds and less than 15 minutes to finish, it is considered to be in a half-open state. When this happens, a message is sent to the Watchdog logging specifying the thread that is affected and the element causing the issue. For example:
 
-`<Timestamp> 	21488|HALFOPEN RTE: - (1769) Not signaled 1 (since <Last Timestamp>): SLProtocol.exe - [RTE Example/1.0.0.1] RTE Example - ProtocolThread [pid 22844 - thread 29876] [element 710/74] in Process: SLProtocol.exe for Thread: [RTE Example/1.0.0.1] RTE Example - ProtocolThread notificationID created: 6481`
+```txt
+<Timestamp>   21488|HALFOPEN RTE: - (1769) Not signaled 1 (since <Last Timestamp>): SLProtocol.exe - [RTE Example/1.0.0.1] RTE Example - ProtocolThread [pid 22844 - thread 29876] [element 710/74] in Process: SLProtocol.exe for Thread: [RTE Example/1.0.0.1] RTE Example - ProtocolThread notificationID created: 6481
+```
 
 #### Open
 
@@ -52,9 +54,11 @@ When the group takes longer than 15 minutes to finish, it enters an open RTE sta
 
 For this example, this is what the RTE looks like in the SLWatchdog2 log file:
 
-`<TimeStamp> 	21488|>>>>>>> (1769) THREAD PROBLEM : SLProtocol.exe - [RTE Example/1.0.0.1] RTE Example - ProtocolThread [pid 22844 - thread 29876] [element 710/74] 
-<TimeStamp>	21488|Send alarm for process SLProtocol.exe (bSignaled = FALSE, bStopped = FALSE) for iCookie = 1769 (RTE Count = 2)
-<TimeStamp>	21488|OPEN RTE: Runtime error count 2 in process SLProtocol.exe on agent MIGUELGA in Process: SLProtocol.exe for Thread: [RTE Example/1.0.0.1] RTE Example - ProtocolThread with notificationID: 6481`
+```txt
+<TimeStamp>   21488|>>>>>>> (1769) THREAD PROBLEM : SLProtocol.exe - [RTE Example/1.0.0.1] RTE Example - ProtocolThread [pid 22844 - thread 29876] [element 710/74] 
+<TimeStamp>   21488|Send alarm for process SLProtocol.exe (bSignaled = FALSE, bStopped = FALSE) for iCookie = 1769 (RTE Count = 2)
+<TimeStamp>   21488|OPEN RTE: Runtime error count 2 in process SLProtocol.exe on agent MIGUELGA in Process: SLProtocol.exe for Thread: [RTE Example/1.0.0.1] RTE Example - ProtocolThread with notificationID: 6481
+```
 
 #### Cleared
 
@@ -62,12 +66,16 @@ If a group finishes its work while it was in the half-open or open RTE state, it
 
 For example, the following message indicates a half-open RTE becoming cleared:
 
-`<TimeStamp>	10896|CLEARED RTE: HALFOPEN Runtime error cleared in SLElement.exe - Database thread [pid 14524 - thread 20316] on agent MIGUELGA in Process: SLElement.exe for Thread: Database thread with NotificationID: 5013`
+```txt
+<TimeStamp>   10896|CLEARED RTE: HALFOPEN Runtime error cleared in SLElement.exe - Database thread [pid 14524 - thread 20316] on agent MIGUELGA in Process: SLElement.exe for Thread: Database thread with NotificationID: 5013
+```
 
 The following message indicates an open RTE becoming cleared:
 
-`<TimeStamp>	21488|Send alarm for process SLProtocol.exe (bSignaled = TRUE, bStopped = FALSE) for iCookie = 1769 (RTE Count = 0)
-<TimeStamp>	21488|CLEARED RTE: Runtime error cleared in process SLProtocol.exe on agent MIGUELGA in Process: SLProtocol.exe for Thread: [RTE Example/1.0.0.1] RTE Example - ProtocolThread with NotificationID: 6481`
+```txt
+<TimeStamp>   21488|Send alarm for process SLProtocol.exe (bSignaled = TRUE, bStopped = FALSE) for iCookie = 1769 (RTE Count = 0)
+<TimeStamp>   21488|CLEARED RTE: Runtime error cleared in process SLProtocol.exe on agent MIGUELGA in Process: SLProtocol.exe for Thread: [RTE Example/1.0.0.1] RTE Example - ProtocolThread with NotificationID: 6481
+```
 
 ## Use cases
 
@@ -147,13 +155,13 @@ The examples above can originate from multiple cases:
 
 - SNMP single request:
 
-    - The time it takes to poll a single request for a large table, together with the 3 minutes of processing in the QAction, can cause the false positive RTE.
+  - The time it takes to poll a single request for a large table, together with the 3 minutes of processing in the QAction, can cause the false positive RTE.
 
-    - Slow internet can cause a long wait for the data even for a small table, depending on the connection.
+  - Slow internet can cause a long wait for the data even for a small table, depending on the connection.
 
 - SNMP multiple requests:
 
-    - If there are multiple requests where a single group requests multiple data, the accumulated time of the requests can cause the false positive RTE. This case can be influenced by all the cases mentioned for a single request.
+  - If there are multiple requests where a single group requests multiple data, the accumulated time of the requests can cause the false positive RTE. This case can be influenced by all the cases mentioned for a single request.
 
 #### Lesson
 
