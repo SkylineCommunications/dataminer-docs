@@ -13,27 +13,26 @@ uid: DIS_2.39
 Up to now, in QAction and EXE projects, DIS would add references to the DataMiner DLL files of the locally installed DataMiner Agent or, if no DataMiner Agent was installed on the local machine, to copies of those files shipped with the DIS installation package. Instead, DIS will now add a reference to a DataMiner DevPack, i.e. a NuGet package that contains the core DataMiner DLL files of a specific DataMiner version. As a separate DataMiner DevPack is available for every released DataMiner version, adapting a solution to a specific DataMiner version is now merely a question of making sure the solution links to the DevPack of that version.
 
 The DataMiner DevPacks can be found on the [official NuGet store](https://www.nuget.org/).
- 
-When opening a pre-existing Protocol or Automation Script solution that was not yet making use of DevPacks, a banner will be shown at the top that will allow us to update the projects to use the new way.
-It will remove the references to the local DLLs and add the necessary DataMiner DevPack NuGet packages.
- 
 
+When you open a protocol solution or an Automation script solution in which the QAction and EXE projects still contain references to separate DLL files instead of a DataMiner DevPack, a banner will appear, giving you the opportunity to replace those references by references to the required DevPacks.
 
----------------
+##### Changing the default package management format
 
-When you open a protocol solution or an Automation script solution in which the QAction and EXE projects still contain references to separate DLL files instead of the DataMinerDevPack NuGet package, 
+To be able to work with the new DataMiner DevPacks, you will have to change the default package management format in Microsoft Visual Studio.
 
-, DIS will from now on verify whether the dev pack nugets are used (these are NuGet packages that contain core DataMiner DLLs typically used for develop protocols, Automation scripts, etc.). If it detects that projects of the solution not using the Dev packs but do use such core DLLs, a banner will be shown informing the user about this. The user is then able to click the Fix link which will replace the references with a reference to the required Dev pack NuGet packages.
+1. Go to *Tools > Options -> NuGet Package Manager > General*.
+1. Set *Default package management format* to "PackageReference".
 
--------------------
+If any of your existing solutions are using NuGet packages the old way (i.e. using the package management format "packages.config"), you will have to make every project in those solutions use the package management format "PackageReference".
 
-To be able to work with the DevPacks, a setting will need to be updated in Visual Studio manually. Under 'Tools > Options -> NuGet Package Manager > General', you'll find the 'Default package management format'. This needs to be set to PackageReference.
- 
-For solutions that were already making use of NuGet packages but using the old way (packages.config), we'll need to migrate each project to the new way (PackageReference).
-This can be done by going to the Soluction Explorer pane of Visual Studio, navigate to a project, right-clicking on the References and selecting "Migrate packages.config to PackageReference...".
-This needs to be repeated for all projects within a given solution.
- 
-!!! Note that those DataMiner DevPacks are not only usable on protocols and Automation scripts solutions. They can also be used on custom solution meant to be used as API within protocols or Automation scripts solutions. The most common examples of this are the Class Library Community Packages. All those should now be updated to also make use of the new DataMiner DevPacks rather than referencing DataMiner DLLs added to the solution.
+1. In Microsoft Visual Studio, open a solution and go to the Solution Explorer.
+1. Navigate to a project, right-click *References*, and select *Migrate packages.config to PackageReference...*.
+1. Repeat for every project in the current solution.
+
+> [!NOTE]
+> The DataMiner DevPacks can also be used in solutions other than protocols and Automation script solutions, for example in custom solutions such as the Class Library Community Packages, which are meant to be used as an API within protocol or Automation script solutions. If you have any custom solutions
+
+All those should now be updated to also make use of the new DataMiner DevPacks rather than referencing DataMiner DLLs added to the solution.
  
 
  
