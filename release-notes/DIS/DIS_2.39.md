@@ -8,33 +8,61 @@ uid: DIS_2.39
 
 ### IDE
 
-#### [ID_33544] [ID_34113] [ID_34115] [ID_34117]
+#### Enhanced NuGet support [ID_33544] [ID_34113] [ID_34115] [ID_34117]
 
-Up to now, in QAction and EXE projects, DIS would add references to DataMiner DLL files stored on the local DataMiner Agent or to copies of those files shipped with the DIS installation package. Instead, DIS will now add a reference to the DataMinerDevPack NuGet package, which contains all core DataMiner DLL files.
+Up to now, in QAction and EXE projects, DIS would add references to the DataMiner DLL files of the locally installed DataMiner Agent or, if no DataMiner Agent was installed on the local machine, to copies of those files shipped with the DIS installation package. Instead, DIS will now add a reference to a DataMiner DevPack, i.e. a NuGet package that contains the core DataMiner DLL files of a specific DataMiner version. As a separate DataMiner DevPack is available for every released DataMiner version, adapting a solution to a specific DataMiner version is now merely a question of making sure the solution links to the DevPack of that version.
+
+The DataMiner DevPacks can be found on the [official NuGet store](https://www.nuget.org/).
+ 
+When opening a pre-existing Protocol or Automation Script solution that was not yet making use of DevPacks, a banner will be shown at the top that will allow us to update the projects to use the new way.
+It will remove the references to the local DLLs and add the necessary DataMiner DevPack NuGet packages.
+ 
 
 
+---------------
 
 When you open a protocol solution or an Automation script solution in which the QAction and EXE projects still contain references to separate DLL files instead of the DataMinerDevPack NuGet package, 
 
-, DIS will from now on verify whether the dev pack nugets are used (these are NuGet packages that contain core DataMiner DLLs typicallly used for develop protocols, Automation scripts, etc.). If it detects that projects of the solulion not using the Dev packs but do use such core DLLs, a banner will be shown informing the user about this. The user is then able to click the Fix link which will replace the references with a reference to the required Dev pack NuGet packages.
+, DIS will from now on verify whether the dev pack nugets are used (these are NuGet packages that contain core DataMiner DLLs typically used for develop protocols, Automation scripts, etc.). If it detects that projects of the solution not using the Dev packs but do use such core DLLs, a banner will be shown informing the user about this. The user is then able to click the Fix link which will replace the references with a reference to the required Dev pack NuGet packages.
 
+-------------------
 
-34113
+To be able to work with the DevPacks, a setting will need to be updated in Visual Studio manually. Under 'Tools > Options -> NuGet Package Manager > General', you'll find the 'Default package management format'. This needs to be set to PackageReference.
+ 
+For solutions that were already making use of NuGet packages but using the old way (packages.config), we'll need to migrate each project to the new way (PackageReference).
+This can be done by going to the Soluction Explorer pane of Visual Studio, navigate to a project, right-clicking on the References and selecting "Migrate packages.config to PackageReference...".
+This needs to be repeated for all projects within a given solution.
+ 
+!!! Note that those DataMiner DevPacks are not only usable on protocols and Automation scripts solutions. They can also be used on custom solution meant to be used as API within protocols or Automation scripts solutions. The most common examples of this are the Class Library Community Packages. All those should now be updated to also make use of the new DataMiner DevPacks rather than referencing DataMiner DLLs added to the solution.
+ 
+
+ 
+**NuGet Support - Improved Publishing**
+
+Up to now, when pressing the publish button in DIS, it would take the protocol/Automation script XML and publish this on the DataMiner Agent.
+ 
+As a protocol/Automation script could make use of custom DLLs (e.g. through NuGet packages that are being used), the publishing has now been updated so that in the background a .dmprotocol package (for protocols) or .dmapp package (for Automation scripts) is created. This package is then installed on the agent automatically during publishing, alleviating the need to manually put the required DLLs on the Agent. The .dmapp also gets removed again automatically.
+
+34113 > publish
 
 Up to now, when pressing the publish button in DIS, it would take the protocol/Automation script XML and publish this on the DataMiner Agent.
 
 As a protocol/Automation script could make use of custom DLLs (e.g. through NuGet packages that are being used), the publishing has now been updated so that in the background a .dmprotocol package (for protocols) or .dmapp package (for Automation scripts) is created. This package is then installed on the agent automatically during publishing, alleviating the need to manually put the required DLLs on the Agent. The .dmapp also gets removed again automatically.
 
-34115
+**NuGet Support - Improved Saving**
+
+Up to now, it was only possible to save a protocol/Automation script as an XML file. Now for protocols, you can choose to either save it as an XML or as a .dmprotocol package.
+For an Automation script, you can choose to save it as XML or a .dmapp package.
+ 
+The .dmprotocol/.dmapp package contains the protocol/Automation script together with the required DLLs (e.g. DLLs of NuGet packages that are used in the protocol/Automation script.)
+
+34115 > save
 
 Up to now, it was only possible to save a protocol/Automation script as an XML file. Now for protocols, you can choose to either save it as an XML or as a .dmprotocol package.
 
 For an Automation script, you can choose to save it as XML or a .dmapp package.
 
-The .dmprotocol/..dmapp package contains the protocol/Automation script together with the required DLLs (e.g. DLLs of NuGet packages that are used in the protocol/Automation script.)
-
-
-
+The .dmprotocol/.dmapp package contains the protocol/Automation script together with the required DLLs (e.g. DLLs of NuGet packages that are used in the protocol/Automation script.)
 
 
 
