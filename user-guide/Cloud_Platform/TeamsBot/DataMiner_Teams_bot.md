@@ -99,14 +99,14 @@ You can use the following options to interact with the DataMiner Teams bot:
 
 ## Adding commands for the Teams bot to a DMS
 
-To add a command for the Teams bot to your DMS, create an Automation script in the folder "bot" in the DMS.
+To add a command for the Teams bot to your DMS, create an [Automation script](xref:automation) in the folder "bot" in the DMS.
 
 > [!TIP]
 > For examples of command scripts, refer to [Custom Command Examples](https://github.com/SkylineCommunications/ChatOps-Extensions/tree/main/CustomCommandExamples) on GitHub.
 
 ### Input and output of the commands
 
-The commands allow dynamic input, such as dummies, parameters, parameters with value files, and memory files.
+The commands allow dynamic input, such as [dummies](xref:Script_variables#creating-a-dummy), [parameters](xref:Script_variables#creating-a-parameter), [parameters with value files](xref:Script_variables#creating-a-parameter), and [memory files](xref:Script_variables#creating-a-memory-file).
 
 They support the following output:
 
