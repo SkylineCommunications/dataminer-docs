@@ -102,7 +102,7 @@ You can use the following options to interact with the DataMiner Teams bot:
 To add a command for the Teams bot to your DMS, create an Automation script in the folder "bot" in the DMS.
 
 > [!TIP]
-> For examples of command scripts, refer to [ChatOps Extensions](https://github.com/SkylineCommunications/ChatOps-Extensions) on GitHub.
+> For examples of command scripts, refer to [Custom Command Examples](https://github.com/SkylineCommunications/ChatOps-Extensions/tree/main/CustomCommandExamples) on GitHub.
 
 ### Input and output of the commands
 
@@ -112,54 +112,11 @@ They support the following output:
 
 - Key values
 
-  For example:
-
-  ```csharp
-  engine.AddScriptOutput("Pizza", "Hawaï");
-  engine.AddScriptOutput("Pizza 2", "BBQ");
-  ```
-
 - Adaptive card body elements
-
-  You can add one key value pair with:
-
-  - *Key*: "AdaptiveCard"
-
-  - *Value*: A List of adaptive elements parsed as JSON. These are card elements that can exist in the body of an adaptive card. See [Schema Explorer – AdaptiveCard](https://adaptivecards.io/explorer/AdaptiveCard.html). These can be created by means of Nuget packages (e.g. [NuGet Gallery – AdaptiveCards](https://www.nuget.org/packages/AdaptiveCards/), [NuGetGallery – Newtonsoft.Json](https://www.nuget.org/packages/Newtonsoft.Json/). An adaptive element can be many things, and the list can even consist of a mix of different adaptive elements (e.g. TextBlock, Image, FactSet, etc.).
-
-  For example:
-
-  ```csharp
-  var adaptiveCardBody = new List<AdaptiveElement>();
-
-  var serviceInfoFacts = new List<AdaptiveFact>();
-  serviceInfoFacts.Add(new AdaptiveFact("Name:", "Uplink"));
-  serviceInfoFacts.Add(new AdaptiveFact("Bitrate:", "3 mb/s"));
-  adaptiveCardBody.Add(new AdaptiveFactSet(){
-     Facts = serviceInfoFacts
-  });
-
-  var serviceInfoFacts2 = new List<AdaptiveFact>();
-  serviceInfoFacts2.Add(new AdaptiveFact("Name:", "Downlink"));
-  serviceInfoFacts2.Add(new AdaptiveFact("Bitrate:", "19 mb/s"));
-  adaptiveCardBody.Add(new AdaptiveFactSet(){
-     Facts = serviceInfoFacts2
-  });
-
-  engine.AddScriptOutput("AdaptiveCard", JsonConvert.SerializeObject(adaptiveCardBody));
-  ```
 
 - JSON, which is displayed as plain text by the bot.
 
-  For example:
-
-  ```csharp
-  engine.AddScriptOutput("JsonOutput", "{\"jsonKey\": \"jsonValue\"}");
-  ```
-
-  ```csharp
-  engine.AddSingularJsonOutput("{\"jsonKey\": \"jsonValue\"}");
-  ```
+For examples, see [Custom Command Examples](https://github.com/SkylineCommunications/ChatOps-Extensions/tree/main/CustomCommandExamples) on GitHub.
 
 ### Limitations
 
