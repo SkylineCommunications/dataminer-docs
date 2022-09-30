@@ -116,7 +116,7 @@ Connection to {0} via external process succeeds while same connection via SLNet 
 
 From now on, the connection in question will also be forcefully killed.
 
-#### Dashboards app / Low-code apps: GQI queries now support sort operators [ID_34414]
+#### Dashboards app / Low-code apps: GQI queries now support sort operators [ID_34414] [ID_34528]
 
 <!-- Main Release Version 10.3.0 - Feature Release Version 10.2.11 -->
 
