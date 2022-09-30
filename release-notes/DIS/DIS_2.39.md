@@ -8,6 +8,49 @@ uid: DIS_2.39
 
 ### IDE
 
+#### [ID_33544] [ID_34113] [ID_34115] [ID_34117]
+
+Up to now, in QActions and EXE blocks, DIS would add references to DataMiner DLL files stored on the local DataMiner Agent or to copies of those files shipped with the DIS installation package. Instead, DIS will now add a reference to the DataMinerDevPack NuGet package, which contains all core DataMiner DLL files.
+
+34113
+
+Up to now, when pressing the publish button in DIS, it would take the protocol/Automation script XML and publish this on the DataMiner Agent.
+
+As a protocol/Automation script could make use of custom DLLs (e.g. through NuGet packages that are being used), the publishing has now been updated so that in the background a .dmprotocol package (for protocols) or .dmapp package (for Automation scripts) is created. This package is then installed on the agent automatically during publishing, alleviating the need to manually put the required DLLs on the Agent. The .dmapp also gets removed again automatically.
+
+34115
+
+Up to now, it was only possible to save a protocol/Automation script as an XML file. Now for protocols, you can choose to either save it as an XML or as a .dmprotocol package.
+
+For an Automation script, you can choose to save it as XML or a .dmapp package.
+
+The .dmprotocol/..dmapp package contains the protocol/Automation script together with the required DLLs (e.g. DLLs of NuGet packages that are used in the protocol/Automation script.)
+
+34117
+
+When opening a protocol or Automation script solution, DIS will from now on verify whether the dev pack nugets are used (these are NuGet packages that contain core DataMiner DLLs typicallly used for develop protocols, Automation scripts, etc.). If it detects that projects of the solulion not using the Dev packs but do use such core DLLs, a banner will be shown informing the user about this. The user is then able to click the Fix link which will replace the references with a reference to the required Dev pack NuGet packages.
+
+
+
+
+#### Display editor: Enhanced DVE support [ID_33545]
+
+Up to now, when you opened a protocol in which DVE elements were defined and clicked *Display Editor* in the file tab header, the pages of the main protocol and the pages of the DVE protocols would be displayed in the same list.
+
+From now on, when DVE elements are defined in the protocol, a drop-down box in the top-left corner of the display editor will allow you to select either the main protocol or one of the DVE elements. The editor will then only display the pages and parameters of the item you selected.
+
+Also, export rules will now be created automatically.
+
+#### DIS menu: Additional checks when importing protocols and Automation scripts [ID_33902]
+
+When you try to import a protocol or an Automation script, additional checks will now be performed.
+
+- When, in the DIS menu, you select *DMA > Import Protocol* while an Automation script solution is open, a pop-up window will now appear, saying that it is impossible to import a protocol while an Automation script solution is open.
+
+- When, in the DIS menu, you select *DMA > Import Automation Script* while a protocol solution is open, a pop-up window will now appear, saying that it is impossible to import an Automation script while a protocol solution is open.
+
+- When, in the DIS menu, you select *DMA > Import Automation Script* while an Automation script solution is open, a pop-up window will now appear, asking you whether you want the script to be imported into the open Automation script solution.
+
 #### DIS now by default contains most common IANA and IETF MIB files [ID_34304]
 
 DIS now by default contains most common IANA and IETF MIB files. These MIB files contain common definitions that are often used in MIB files supplied by equipment vendor.
