@@ -12,11 +12,13 @@ If CoreGateway version 2.11.0 or higher and FieldControl version 2.8.1 or higher
 
 You can do so using the Teams bot commands *show command \<command name\>*, *show command*, and *run command \<command name\>*.
 
-To add a command to your DMS, create an Automation script in the folder "bot" in the DMS. For examples of commands, refer to [ChatOps Extensions](https://github.com/SkylineCommunications/ChatOps-Extensions) on GitHub.
+To add a command to your DMS, create an Automation script in the folder "bot" in the DMS. For examples of such scripts, refer to [ChatOps Extensions](https://github.com/SkylineCommunications/ChatOps-Extensions) on GitHub.
 
 #### Input and output of the commands
 
-The commands allow dynamic input, such as dummies, parameters, parameters with value files, and memory files. They support the following output:
+The commands allow dynamic input, such as dummies, parameters, parameters with value files, and memory files.
+
+They support the following output:
 
 - Key values
 
@@ -70,8 +72,6 @@ The commands allow dynamic input, such as dummies, parameters, parameters with v
   ```
 
 ##### Limitations
-
-The following limitations currently apply:
 
 - Interactive Automation scripts are not supported.
 - Commands that run longer than 30 seconds are currently not supported. When a command takes too long, the bot will show that the request has been aborted. However, note that the command will keep running in the DMS once it has been initiated, but if it eventually completes, the bot will not display any feedback or output. This means that strictly speaking this feature could be used to trigger long-running commands, but in that case the commands should ideally be triggered asynchronously from within a command's Automation script. You could for instance add a trigger command and a check output command to check if the action is done.

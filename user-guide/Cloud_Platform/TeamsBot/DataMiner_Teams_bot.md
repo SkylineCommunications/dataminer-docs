@@ -82,11 +82,11 @@ You can use the following options to interact with the DataMiner Teams bot:
 
 - **show view *view name***: Shows the visual overview of the specified view
 
-- **show command *command name***: Displays the matching command with its description and a button to run the command.
+- **show command *command name***: Displays the matching command with its description and a button to run the command. See [Adding commands for the Teams bot to a DMS](#adding-commands-for-the-teams-bot-to-a-dms).
 
-- **show command**: Displays the first 10 commands found in the active DataMiner System with their description and buttons to run each command.
+- **show command**: Displays the first 10 commands found in the active DataMiner System with their description and buttons to run each command. See [Adding commands for the Teams bot to a DMS](#adding-commands-for-the-teams-bot-to-a-dms).
 
-- **run command *command name***: Runs the matching command on the active DataMiner System. When necessary, the user will be asked for input and/or confirmation.
+- **run command *command name***: Runs the matching command on the active DataMiner System. When necessary, the user will be asked for input and/or confirmation. See [Adding commands for the Teams bot to a DMS](#adding-commands-for-the-teams-bot-to-a-dms).
 
 - **help**: Shows more detailed help information, if available.
 
@@ -96,3 +96,79 @@ You can use the following options to interact with the DataMiner Teams bot:
 
 > [!NOTE]
 > If the latest version of the DataMiner Cloud Pack is not yet installed in your DMS, some of these options may not be available yet.
+
+## Adding commands for the Teams bot to a DMS
+
+To add a command for the Teams bot to your DMS, create an Automation script in the folder "bot" in the DMS.
+
+> [!TIP]
+> For examples of command scripts, refer to [ChatOps Extensions](https://github.com/SkylineCommunications/ChatOps-Extensions) on GitHub.
+
+### Input and output of the commands
+
+The commands allow dynamic input, such as dummies, parameters, parameters with value files, and memory files.
+
+They support the following output:
+
+- Key values
+
+  For example:
+
+  ```csharp
+  engine.AddScriptOutput("Pizza", "Hawaï");
+  engine.AddScriptOutput("Pizza 2", "BBQ");
+  ```
+
+- Adaptive card body elements
+
+  You can add one key value pair with:
+
+  - *Key*: "AdaptiveCard"
+
+  - *Value*: A List of adaptive elements parsed as JSON. These are card elements that can exist in the body of an adaptive card. See [Schema Explorer – AdaptiveCard](https://adaptivecards.io/explorer/AdaptiveCard.html). These can be created by means of Nuget packages (e.g. [NuGet Gallery – AdaptiveCards](https://www.nuget.org/packages/AdaptiveCards/), [NuGetGallery – Newtonsoft.Json](https://www.nuget.org/packages/Newtonsoft.Json/). An adaptive element can be many things, and the list can even consist of a mix of different adaptive elements (e.g. TextBlock, Image, FactSet, etc.).
+
+  For example:
+
+  ```csharp
+  var adaptiveCardBody = new List<AdaptiveElement>();
+
+  var serviceInfoFacts = new List<AdaptiveFact>();
+  serviceInfoFacts.Add(new AdaptiveFact("Name:", "Uplink"));
+  serviceInfoFacts.Add(new AdaptiveFact("Bitrate:", "3 mb/s"));
+  adaptiveCardBody.Add(new AdaptiveFactSet(){
+     Facts = serviceInfoFacts
+  });
+
+  var serviceInfoFacts2 = new List<AdaptiveFact>();
+  serviceInfoFacts2.Add(new AdaptiveFact("Name:", "Downlink"));
+  serviceInfoFacts2.Add(new AdaptiveFact("Bitrate:", "19 mb/s"));
+  adaptiveCardBody.Add(new AdaptiveFactSet(){
+     Facts = serviceInfoFacts2
+  });
+
+  engine.AddScriptOutput("AdaptiveCard", JsonConvert.SerializeObject(adaptiveCardBody));
+  ```
+
+- JSON, which is displayed as plain text by the bot.
+
+  For example:
+
+  ```csharp
+  engine.AddScriptOutput("JsonOutput", "{\"jsonKey\": \"jsonValue\"}");
+  ```
+
+  ```csharp
+  engine.AddSingularJsonOutput("{\"jsonKey\": \"jsonValue\"}");
+  ```
+
+### Limitations
+
+- Interactive Automation scripts are not supported.
+- Commands that run longer than 30 seconds are currently not supported. When a command takes too long, the bot will show that the request has been aborted. However, note that the command will keep running in the DMS once it has been initiated, but if it eventually completes, the bot will not display any feedback or output. This means that strictly speaking this feature could be used to trigger long-running commands, but in that case the commands should ideally be triggered asynchronously from within a command's Automation script. You could for instance add a trigger command and a check output command to check if the action is done.
+- Issues with the adaptive card output will not result in proper error feedback. You need to make sure the provided JSON is valid code and that it has valid content for Teams (i.e. an array of body elements). You can validate your JSON output using the [designer](https://adaptivecards.io/designer/) by adding it in the body array of an adaptive card.
+
+### Security
+
+- A command is only visible for users of the bot if they have the appropriate rights in DataMiner Cube.
+- If users have the necessary rights to view a command, but they do not have the rights needed for certain input for the command (e.g. a dummy input in case the user has no rights for any elements in the DMS), the bot will inform them that the command cannot be executed.
+- In case a command cannot be executed because the relevant elements or protocols are missing in the DMS, the bot will inform users that they have no access or that the command's input is malformed in such a way that it can never be executed. In that case, the CoreGateway DxM will log which input is involved.
