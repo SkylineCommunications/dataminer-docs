@@ -24,11 +24,11 @@ Both RS-422 and RS-485 have multi-drop capability, but **RS-485** allows up to *
 | DMS-IOGW-5000    | Advantech | ADAM-5000 | ADAM-5000/TCP-BE |
 | DMS-IOGW-5013    | Advantech | ADAM-5000 | ADAM-5013-A1E    |
 | DMS-IOGW-5017    | Advantech | ADAM-5000 | ADAM-5017-A1E    |
-| DMS-IOGW-5050-A  | Advantech | ADAM-5000 | ADAM-5050-AE     |
-| DMS-IOGW-5051-D  | Advantech | ADAM-5001 | ADAM-5051-AE     |
+| DMS-IOGW-5050    | Advantech | ADAM-5000 | ADAM-5050-AE     |
+| DMS-IOGW-5051-S  | Advantech | ADAM-5001 | ADAM-5051-AE     |
 | DMS-IOGW-5052    | Advantech | ADAM-5000 | ADAM-5052-AE     |
 | DMS-IOGW-5060    | Advantech | ADAM-5000 | ADAM-5060-AE     |
-| DMS-IOGW-5069    | Advantech | ADAM-5000 | ADAM-5069-AE     |
+| DMS-IOGW-5068    | Advantech | ADAM-5000 | ADAM-5069-AE     |
 | DMS-IOGW-6015    | Advantech | ADAM-6000 | ADAM-6015-BE     |
 | DMS-IOGW-6017    | Advantech | ADAM-6000 | ADAM-6017-BE     |
 | DMS-IOGW-6050    | Advantech | ADAM-6000 | ADAM-6050-BE     |
@@ -39,8 +39,6 @@ Both RS-422 and RS-485 have multi-drop capability, but **RS-485** allows up to *
 | DMS-SGW-232-2    | Moxa      |           | NP-5210          |
 | DMS-SGW-232-4    | Moxa      |           | NP-5410          |
 | DMS-SGW-232-8    | Moxa      |           | NP-5610-8        |
-| DMS-SGW-232-16   | Moxa      |           | NP-5610-16       |
 | DMS-SGW-485-4    | Moxa      |           | NP-5430          |
 | DMS-SGW-485-8    | Moxa      |           | NP-5630-8        |
-| DMS-SGW-485-16   | Moxa      |           | NP-5630-16       |
 | DMS-SGW-UNI-1    | Moxa      |           | NP-DE-311        |

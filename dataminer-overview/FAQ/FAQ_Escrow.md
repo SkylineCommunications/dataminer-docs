@@ -6,7 +6,7 @@ uid: FAQ_Escrow
 
 Yes, Skyline can offer an escrow service at an annual charge, using the Skyline-appointed escrow agent Merak.
 
-The following services are included in Skyline Communications' Escrow service (DMS-ESC):
+The following services are included in Skyline Communications' Escrow service (SLC-DMS-ESC):
 
 - Executed by the reputable independent Belgian escrow provider [Merak NV Belgium](https://www.merak.eu/en).
 - Setup of a three-party agreement between Skyline, Merak, and the customer.
