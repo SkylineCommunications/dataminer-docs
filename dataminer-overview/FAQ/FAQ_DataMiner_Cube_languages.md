@@ -12,7 +12,7 @@ The DataMiner Cube client is available in the following languages:
 - French
 - Dutch
 - Portuguese (Portugal)
-- Russian
+- Russian (up to DataMiner 10.2.6)
 
 Other languages can be implemented at a cost.
 
