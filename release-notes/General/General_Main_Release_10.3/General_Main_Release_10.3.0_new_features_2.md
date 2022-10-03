@@ -16,13 +16,13 @@ uid: General_Main_Release_10.3.0_new_features_2
 
 #### Jobs app: Name, Start Time and End Time fields in default job section can now be set read-only \[ID_31485\] \[ID_31506\]
 
-<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.1 -->
+<!-- MR 10.3.0 - FR 10.2.1 -->
 
 In the default job section, the *Name*, *Start Time*, and *End Time* fields can now be set read-only.
 
 #### Ticketing app: System name will now be checked for illegal characters \[ID_31496\]
 
-<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.1 -->
+<!-- MR 10.3.0 - FR 10.2.1 -->
 
 From now on, the system name of a ticket will no longer be allowed to start with an underscore character or contain one of the following characters: . # \* , " '
 
@@ -30,7 +30,7 @@ When the system name contains one of these illegal characters, an error message 
 
 #### Jobs app: Fields will automatically be set to 'not required' when hidden \[ID_31513\]
 
-<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.1 -->
+<!-- MR 10.3.0 - FR 10.2.1 -->
 
 From now on, when you hide a job field, you will receive a message that it will automatically be set to “not required”.
 
@@ -39,7 +39,7 @@ From now on, when you hide a job field, you will receive a message that it will 
 
 #### Dashboards app - GQI: Element, service and view data sources now also return an 'In timeout' column \[ID_31671\]
 
-<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.1 -->
+<!-- MR 10.3.0 - FR 10.2.1 -->
 
 The element, service and view data sources now return an additional “In timeout” column.
 
@@ -51,7 +51,7 @@ The element, service and view data sources now return an additional “In timeou
 
 #### Dashboards app - Node edge graph: Option to visualize the direction of the edges \[ID_32519\]
 
-<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.4 -->
+<!-- MR 10.3.0 - FR 10.2.4 -->
 
 When configuring a node edge graph, it is now possible to have the graph visualize the direction of the edges.
 
@@ -64,7 +64,7 @@ To do so, enable the *Visualize directions* setting and select one of the follow
 
 #### Dashboards app: Default index filter for parameter feed component \[ID_32595\]
 
-<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.4 -->
+<!-- MR 10.3.0 - FR 10.2.4 -->
 
 It is now possible to add a default index filter to a parameter feed component. This way, it's not necessary to apply your filter to the component again whenever the dashboard is refreshed.
 
@@ -72,8 +72,8 @@ This new option is available as an advanced setting that is not displayed by def
 
 #### Dashboards app: GQI now supports external data \[ID_32656\] \[ID_32659\] \[ID_32930\] \[ID_33795\]
 
-<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.4
-RN 33795: Main Release Version 10.3.0 - Feature Release Version 10.2.8 -->
+<!-- MR 10.3.0 - FR 10.2.4
+RN 33795: MR 10.3.0 - FR 10.2.8 -->
 
 It is now possible to configure the Generic Query Interface to retrieve external data, so that dashboard users can use a query data source based on data that is for example retrieved from a CSV file, a MySQL database, or an API endpoint. This is configured through a DataMiner Automation script that is compiled as a library. The GQI will make use of this library to load the external data.
 
@@ -289,19 +289,19 @@ public class MyDataSource : IGQIDataSource, IGQIInputArguments
 
 #### Dashboards app - GQI: Linking feeds to arguments of external data sources \[ID_32658\]
 
-<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.5 -->
+<!-- MR 10.3.0 - FR 10.2.5 -->
 
 When you build a GQI query that uses an external data source, it is now possible to link feeds to arguments of that external source.
 
 #### Dashboards app: User groups can now be selected in dashboard security \[ID_32681\]
 
-<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.4 -->
+<!-- MR 10.3.0 - FR 10.2.4 -->
 
 When you configure who can view or edit a specific dashboard, it is now possible to select entire user groups instead of only individual users. Groups are indicated with a different icon to make the difference clear. In the selection box, they are listed together with individual users. Natural sorting is applied, with individual users being sorted by full name and groups being sorted by group name.
 
 #### Dashboards - Data panel: Enhanced element selection \[ID_32769\]
 
-<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.5 -->
+<!-- MR 10.3.0 - FR 10.2.5 -->
 
 A number of enhancements have been made to the *Elements* section of the Data panel.
 
@@ -316,7 +316,7 @@ Also, there is now an element search box as well as a number of element filter o
 
 #### Dashboards app: New sidebar icons to list private and shared dashboards \[ID_32854\]
 
-<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.7 -->
+<!-- MR 10.3.0 - FR 10.2.7 -->
 
 In the sidebar, next to the *All dashboards* and *Recent dashboards* icons, there are now two new icons:
 
@@ -327,26 +327,26 @@ The first icon will only be available when there are private dashboards, the sec
 
 #### Dashboards app - Service definition component: Arrows will now automatically be drawn when a Process Automation definition was added \[ID_32960\]
 
-<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.5 -->
+<!-- MR 10.3.0 - FR 10.2.5 -->
 
 When a Process Automation definition is added to the Service definition component, the component will now automatically draw the necessary arrows to indicate the connections between the different blocks/nodes in the diagram.
 
 #### Dashboards app: Using the script output of an interactive Automation script as a feed \[ID_32977\]
 
-<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.5 -->
+<!-- MR 10.3.0 - FR 10.2.5 -->
 
 When building a GQI query, you can now also use the script output of an interactive Automation script as a feed.
 
 #### Dashboards app - Service definition component: Function shapes will now reflect the function type \[ID_32995\]
 
-<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.5 -->
+<!-- MR 10.3.0 - FR 10.2.5 -->
 
 When a Process Automation definition is added to the Service definition component, the added function shapes will now reflect the function type (UserTask, ScriptTask, ResourceTask, Gateway, NoneStartEvent, TimeStartEvent or EndEvent).
 
 #### DataMiner Low-Code Apps \[ID_33002\] \[ID_33040\] \[ID_33208\]
 
-<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.5
-RN 33208: Main Release Version 10.3.0 - Feature Release Version 10.2.6 -->
+<!-- MR 10.3.0 - FR 10.2.5
+RN 33208: MR 10.3.0 - FR 10.2.6 -->
 
 With the DataMiner Low-Code Apps (also known as the "Application Framework"), you can create custom low-code applications that interact with data from a DataMiner System or an external source.
 
@@ -416,7 +416,7 @@ Access to a specific application can be configured in the application itself. Pe
 
 #### Dashboards app - Service definition component: Function nodes will now display the number of Process Automation tokens in queue or in progress \[ID_33025\]
 
-<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.5 -->
+<!-- MR 10.3.0 - FR 10.2.5 -->
 
 When a Process Automation definition is added to the Service definition component, all function nodes will now display the number of tokens currently in queue or in progress.
 
@@ -424,19 +424,19 @@ The token counters will be updated every 10 seconds.
 
 #### Web apps - Data table component: Search box \[ID_33385\]
 
-<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.7 -->
+<!-- MR 10.3.0 - FR 10.2.7 -->
 
 When you hover over a data table component (e.g. a GQI table), a search box will now appear in the bottom-right corner. When you enter a search string, a case-insensitive client-side search will be performed.
 
 #### Web apps: Dashboards, app pages and app panels now all have a 'Fit to view' setting \[ID_33401\]
 
-<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.7 -->
+<!-- MR 10.3.0 - FR 10.2.7 -->
 
 In the Dashboards app and the Low-Code Apps, dashboards, app pages, and app panels now all have a “Fit to view” setting that, when enabled, will make sure the items in question are automatically adapted to fit the screen.
 
 #### Web apps - Data table component: Sorting, grouping and filtering options \[ID_33403\] \[ID_33433\] \[ID_33454\]
 
-<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.7 -->
+<!-- MR 10.3.0 - FR 10.2.7 -->
 
 When you right-click a column header of a data table component (e.g. a GQI table), you will now be presented with a number of sorting, grouping and filtering options.
 
@@ -460,7 +460,7 @@ When you right-click a column header of a data table component (e.g. a GQI table
 
 #### Web apps - Data table component: Copy cell/row/column/table \[ID_33440\]
 
-<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.7 -->
+<!-- MR 10.3.0 - FR 10.2.7 -->
 
 When you right-click a non-empty cell in a data table component (e.g. a GQI table), you can now choose to copy the cell value, the entire row, the entire column or the entire table.
 
@@ -474,7 +474,7 @@ If you choose to copy the entire row or the entire table, the data will be copie
 
 #### Dashboards app: Service Definition component now supports both types of process automation service definitions \[ID_33615\]
 
-<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.8 -->
+<!-- MR 10.3.0 - FR 10.2.8 -->
 
 The Service Definition component now supports both types of process automation service definitions:
 
@@ -483,25 +483,25 @@ The Service Definition component now supports both types of process automation s
 
 #### Dashboards app / Low-Code Apps - Service Definition component: Text displayed on process automation service definition node will now be the value of that node's Label property [ID_33754]
 
-<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.9 -->
+<!-- MR 10.3.0 - FR 10.2.9 -->
 
 Up to now, when a Service Definition component displayed a service definition of type "Skyline Process Automation" or "Custom Process Automation", the name of the associated function definition would be displayed on the nodes. From now on, the text displayed on a particular node will be the value of that node's *Label* property. Only when no *Label* property could be found will the name of the associated function definition be displayed instead.
 
 #### DataMiner web apps updated to Angular 13 [ID_33869]
 
-<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.9 -->
+<!-- MR 10.3.0 - FR 10.2.9 -->
 
 The DataMiner mobile apps that use Angular (e.g. Low-Code Apps, Dashboards, Monitoring, Ticketing, Jobs, and Automation) now use Angular 13 instead of Angular 12.
 
 #### GQI: Improved performance when retrieving data [ID_33873] [ID_33890] [ID_33935]
 
-<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.9 -->
+<!-- MR 10.3.0 - FR 10.2.9 -->
 
 Several improvements have been implemented to increase performance when GQI data is requested. At present, the most noticeable change this results in is an increase of the page size when all GQI data is requested. Up to now, when all GQI data was requested, the page size was always set to 50. From now on, the page size will be set to a number between 50 and 1000 based on the number of columns that are retrieved (max. 3000 cells).
 
 #### Dashboards app - GQI: Line & area chart component is now able to visualize GQI query results as a single line \[ID_33879\]
 
-<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.9 -->
+<!-- MR 10.3.0 - FR 10.2.9 -->
 
 The “Line & area chart” component is now able to visualize GQI query results as a single line.
 
@@ -522,7 +522,7 @@ The “Line & area chart” component is now able to visualize GQI query results
 
 #### Dashboards / Low-Code Apps: Parameter table component brought in line with Table component [ID_34132]
 
-<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.10 -->
+<!-- MR 10.3.0 - FR 10.2.10 -->
 
 The *Parameter table* component of dashboards and low-code apps has now been adjusted to be more like that generic *Table* component. In addition to improving consistency between these components, this also makes the *Parameter table* component more user-friendly:
 
@@ -543,7 +543,7 @@ Moreover, the additional features of the *Table* component will now also be avai
 
 #### GQI: columnInfo object of data source columns of type 'discrete' will now contain the possible values [ID_34179]
 
-<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.10 -->
+<!-- MR 10.3.0 - FR 10.2.10 -->
 
 For each of the following GQI data source columns of type "discrete", the possible values will now be available in their columnInfo object:
 
@@ -563,31 +563,31 @@ For each of the following GQI data source columns of type "discrete", the possib
 
 #### GQI - EPM feed: Linking 'System Name' and 'System Type' to the query [ID_34222]
 
-<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.10 -->
+<!-- MR 10.3.0 - FR 10.2.10 -->
 
 Using an EPM feed, it is now possible to link *System Name* and *System Type* to the GQI query you are building.
 
 #### Dashboards / Low-Code Apps: Checkboxes to select discrete values in column filter Table component [ID_34234]
 
-<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.9 -->
+<!-- MR 10.3.0 - FR 10.2.9 -->
 
 When you configure a column filter for a Table component in a dashboard or low-code app, you can now select checkboxes to filter on discrete values.
 
 #### GQI: Using GQI query columns to filter a 'State' component [ID_34235]
 
-<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.10 -->
+<!-- MR 10.3.0 - FR 10.2.10 -->
 
 It is now possible to use GQI query columns to filter a *State* component.
 
 #### GQI: Query columns of type 'string' can now be filtered using 'Equals' and 'NotEquals' [ID_34246]
 
-<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.10 -->
+<!-- MR 10.3.0 - FR 10.2.10 -->
 
 Query columns of type "string" can now be filtered using *Equals* and *NotEquals*.
 
 #### Low-code apps: Data input via URL [ID_34261]
 
-<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.11 -->
+<!-- MR 10.3.0 - FR 10.2.11 -->
 
 Low-code apps can now be provided with data (e.g. element data, parameter data, view data, etc.) via URL query parameters.
 
@@ -623,7 +623,7 @@ https://<dma>/<app-id>?data=%7B%22v%22:1,%22components%22:%5B%7B%22cid%22:1,%22s
 
 #### Dashboards app / Low-code apps: 'Return no rows when feed is empty' option replaced by a triple-state option [ID_34280]
 
-<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.10 -->
+<!-- MR 10.3.0 - FR 10.2.10 -->
 
 Up to now, when configuring the filter of a GQI data feed, you could enable the *Return no rows when feed is empty* option to indicate that, when the feed was empty, you wanted an empty table to be returned instead of the entire table.
 
@@ -635,13 +635,13 @@ Now, this option has been replaced by a triple-state option. You can now indicat
 
 #### Dashboards app: Filtering a parameter feed that lists EPM parameters [ID_34287]
 
-<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.11 -->
+<!-- MR 10.3.0 - FR 10.2.11 -->
 
 When an EPM identifier from an EPM feed is fed to a parameter feed, it will now be possible to drag multiple parameters onto the parameter feed in order to use them as filters.
 
 #### Dashboards app / Low-code apps: GQI queries now support sort operators [ID_34414] [ID_34528]
 
-<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.11 -->
+<!-- MR 10.3.0 - FR 10.2.11 -->
 
 In dashboards and low-code apps, you can now add sort operators to GQI queries.
 
@@ -653,7 +653,7 @@ After selecting a data source, do the following:
 
 #### Dashboards app / Low-code apps: An eye icon will now appear when you make a modification to a GQI table [ID_34445]
 
-<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.11 -->
+<!-- MR 10.3.0 - FR 10.2.11 -->
 
 When you make one of the following modifications to a GQI table, an eye icon will now appear in the header of the table component.
 
@@ -667,19 +667,19 @@ This eye icon will make you aware that the table is no longer identical to the o
 
 #### DataMiner web apps updated to Angular 14 [ID_34447]
 
-<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.11 -->
+<!-- MR 10.3.0 - FR 10.2.11 -->
 
 The DataMiner mobile apps that use Angular (e.g. Low-Code Apps, Dashboards, Monitoring, Ticketing, Jobs, and Automation) now use Angular 14 instead of Angular 13.
 
 #### Dashboards app / Low-code apps: Enhanced filtering by protocol [ID_34453]
 
-<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.11 -->
+<!-- MR 10.3.0 - FR 10.2.11 -->
 
 From now on, when you add a protocol filter to a component without specifying any particular version(s), that filter will return all data related to that protocol irrespective of protocol version. If you want the data in the component to be filtered by a specific version of the protocol in question, you can select that version from the protocol filter box.
 
 #### GQI: New 'IsActive' column added to 'Get alarms' data source [ID_34455]
 
-<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.11 -->
+<!-- MR 10.3.0 - FR 10.2.11 -->
 
 A new *IsActive* column has been added to *Get alarms* data source. This column will be set to true when the alarm is an active alarm.
 
@@ -687,7 +687,7 @@ A new *IsActive* column has been added to *Get alarms* data source. This column 
 
 #### Retrieving bookings in a paged way and sorted by property \[ID_31982\]
 
-<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.5 -->
+<!-- MR 10.3.0 - FR 10.2.5 -->
 
 It is now possible to retrieve bookings in a paged way and sorted by one of the following properties:
 
@@ -706,7 +706,7 @@ It is now possible to retrieve bookings in a paged way and sorted by one of the 
 
 #### ProfileInstances: New parameter property 'InheritIsHidden' \[ID_32131\]
 
-<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.3 -->
+<!-- MR 10.3.0 - FR 10.2.3 -->
 
 In the ParameterSettings property of a profile instance, you can now use the “InheritIsHidden” property to indicate whether a profile instance should inherit the “IsHidden” property of a profile parameter. This property is false by default.
 
@@ -717,7 +717,7 @@ A few examples:
 
 #### Replacing system functions by uploading an XML file \[ID_32264\]
 
-<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.3 -->
+<!-- MR 10.3.0 - FR 10.2.3 -->
 
 It is now possible to replace the system protocol functions by uploading an XML file using the ProtocolFunctionHelper. See the following example.
 
@@ -734,7 +734,7 @@ pfHelper.ReplaceActiveSystemFunctionDefinitions(xmlcontent);
 
 #### ResourceUsageInfoManager \[ID_32512\]
 
-<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.5 -->
+<!-- MR 10.3.0 - FR 10.2.5 -->
 
 SLNet now includes a ResourceUsageInfoManager, which will keep track of the Resources being used by ReservationInstances. Each time a change is detected as to Resource usage, this manager will send out a ResourceUsageStatusEventMessage containing the DMA ID and a list of UpdatedResourceUsageStatuses.
 
@@ -746,7 +746,7 @@ ResourceUsageStatus objects can be retrieved by means of a GetResourceUsageStatu
 
 #### ReservationInstances now have a ReservationInstanceType \[ID_32624\]
 
-<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.4 -->
+<!-- MR 10.3.0 - FR 10.2.4 -->
 
 When configuring a ReservationInstance, you now have to specify a ReservationInstanceType:
 
@@ -761,7 +761,7 @@ When configuring a ReservationInstance, you now have to specify a ReservationIns
 
 #### Modified AbsoluteQuarantinePriority behavior and several new SRM features \[ID_32654\]
 
-<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.4 -->
+<!-- MR 10.3.0 - FR 10.2.4 -->
 
 Several changes to the SRM framework have been introduced:
 
@@ -896,7 +896,7 @@ var bookings = rmHelper.GetReservationInstances(filter);
 
 #### ResourceManagerEventMessage: New LostInterestReservationInstances property \[ID_32801\]
 
-<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.5 -->
+<!-- MR 10.3.0 - FR 10.2.5 -->
 
 When, for example, a table is populated with ReservationInstances using ResourceManagerEventMessages with a SubscriptionFilter, you can now use the LostInterestReservationInstances property to retrieve the IDs of the ReservationInstances that no longer match the current filter after an update.
 
@@ -906,7 +906,7 @@ When, for example, a table is populated with ReservationInstances using Resource
 
 #### Functions.xml file: Assigning a function type to a function \[ID_32851\]
 
-<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.5 -->
+<!-- MR 10.3.0 - FR 10.2.5 -->
 
 It is now possible to assign a function type to each function defined in a functions.xml file.
 
@@ -939,13 +939,13 @@ Example:
 
 #### Subscribing to ResourceUsageStatusEvents for specific resources \[ID_32979\]
 
-<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.6 -->
+<!-- MR 10.3.0 - FR 10.2.6 -->
 
 From now on, it is possible to only receive ResourceUsageEventMessages for a specific resource. Using ResourceUsageStatusEventExposers, you can now filter by ResourceId.
 
 #### ReservationInstanceType and ServiceDefinitionType: New values 'ResourceScheduling' and 'ResourceOrchestration' \[ID_33390\]
 
-<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.7 -->
+<!-- MR 10.3.0 - FR 10.2.7 -->
 
 ReservationInstanceType and ServiceDefinitionType can now be set to the following additional values:
 
@@ -954,7 +954,7 @@ ReservationInstanceType and ServiceDefinitionType can now be set to the followin
 
 #### BREAKING CHANGE: Removing a Resource or ResourcePool object will now always require a valid ID \[ID_33836\]
 
-<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.9 -->
+<!-- MR 10.3.0 - FR 10.2.9 -->
 
 Up to now, it was possible to delete Resource and ResourcePool objects in a filtered way by passing an “incomplete” object to the associated remove method of the ResourceManagerHelper. Moreover, passing an empty list or NULL would remove all resources on the system. This will no longer be possible.
 
@@ -981,7 +981,7 @@ When DataMiner detects a remove request that contains an object with an empty ID
 
 #### Additional logging after sending a 'send SMS' request to an SMSEagle device \[ID_32785\] \[ID_32911\]
 
-<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.5 -->
+<!-- MR 10.3.0 - FR 10.2.5 -->
 
 When an HTTP request of type “send SMS” is sent to an SMSEagle device, the following information will now be logged in the SLGSMGateway log file:
 
@@ -1005,7 +1005,7 @@ When an HTTP request of type “send SMS” is sent to an SMSEagle device, the f
 
 #### Standalone Elasticsearch Cluster Installer: New RepoPath setting \[ID_33055\]
 
-<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.6 -->
+<!-- MR 10.3.0 - FR 10.2.6 -->
 
 The optional RepoPath configuration setting (which corresponds with the Path.Repo Elasticsearch setting) allows you to define a snapshot path. For a cluster, this should be a shared file location. If this setting is not filled in, it will be commented out in the Elasticsearch configuration.
 
@@ -1035,7 +1035,7 @@ When you run the installer with the “generate” option (run-stand-alone -g), 
 
 #### QA Device Simulator: Help link now directs users to the QA Device Simulator help pages on <https://docs.dataminer.services/> [ID_33680]
 
-<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.7 -->
+<!-- MR 10.3.0 - FR 10.2.7 -->
 
 In the UI of the QA Device Simulator, the help link now directs users to the QA Device Simulator help pages on <https://docs.dataminer.services/>.
 
