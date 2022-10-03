@@ -190,7 +190,7 @@ Provides access to additional data sources and operators for GQI in the Dashboar
 > Some features that originally required this option are fully available in recent DataMiner versions:
 >
 > - The DCF connections GQI data source (available from DataMiner 10.1.6 onwards).
-> - The "Sort" operator (available from DataMiner 10.2.11/10.3.0).
+> - The "Sort" operator (available from DataMiner 10.2.11/10.3.0 onwards).
 
 - **Minimum version**: 10.0.13
 
