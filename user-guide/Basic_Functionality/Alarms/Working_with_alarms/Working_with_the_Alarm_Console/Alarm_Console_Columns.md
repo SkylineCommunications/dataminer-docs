@@ -15,7 +15,7 @@ For more information on changing the column layout, see [Changing the column lay
 
   - For new alarms, the icon is a single vertical line.
 
-  - For correlated alarms, it is a vertical, dashed line.
+  - For correlated alarms, it is a vertical dashed line.
 
   - For updated alarm records, a second, thinner vertical line is added next to the first.
 
