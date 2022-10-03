@@ -592,6 +592,8 @@ This syntax consists of the following components:
     > - Prior to DataMiner 10.2.6/10.3.0, the *InUse* check is only performed when the visual overview is opened or when the resource itself is changed.
     > - Using the *InUse* placeholder may affect performance in case the system contains a large number of bookings.
 
+  - **ContributingBooking**: From DataMiner 10.3.0/10.2.11 onwards, you can specify *ContributingBooking* to retrieve the contributing booking ID of a resource.
+
 ### \[ServiceDefinition:\]
 
 Full syntax: *\[ServiceDefinition:*\<ServiceDefinitionID>*,*\<Property>*\]*
