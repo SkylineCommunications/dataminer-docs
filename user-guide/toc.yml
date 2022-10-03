@@ -2163,6 +2163,8 @@
               topicUid: LowCodeApps_organizing_landing_page
         - name: Deleting a low-code application
           topicUid: Deleting_custom_apps
+        - name: Specifying data input in an app URL
+          topicUID: Specifying_data_input_in_URL
     - name: DataMiner Object Models (DOM)
       topicUID: DOM
       items:
