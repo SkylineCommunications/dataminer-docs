@@ -14,7 +14,7 @@
           topicUid: Overview_Standardized_Foundation
         - name: References and use cases
           topicUid: Overview_References_and_use_cases
-    - name: DataMiner platform – Empowering your digital transformation
+    - name: DataMiner platform - Empowering your digital transformation
       topicUid: Overview_Platform_intro
       items:
         - name: Agility - the cornerstone of any successful data-driven media operation
@@ -67,3 +67,38 @@
           topicUid: Overview_Compliance_Statements_RvsG_O
         - name: Tender compliancy (licenses / engineering days)
           topicUid: Overview_Compliance_Statements_Tender_Compliancy
+    - name: Frequently asked questions
+      topicUid: FAQs
+      items:
+        - name: What is Skyline's mission and vision
+          topicUid: FAQ_MissionVision
+        - name: Does DataMiner process personal data in a GDPR-compliant manner
+          topicUid: FAQ_GDPR
+        - name: Does Skyline offer an escrow service
+          topicUid: FAQ_Escrow
+        - name: Does Skyline offer serial and GPIO converters
+          topicUid: FAQ_Serial_GPIO_converters
+        - name: What are the principal advantages of DataMiner
+          topicUid: FAQ_Principal_advantages
+        - name: What do you mean with multi-vendor technology
+          topicUid: FAQ_Multi-vendor_technology
+        - name: What are the benefits of using clustered DataMiner Agents instead of separate ones
+          topicUid: FAQ_Clustered_DMAs
+        - name: How many users can log in to a DataMiner System
+          topicUid: FAQ_Concurrent_users
+        - name: What is the recommended method for southbound integration of an EMS/NMS
+          topicUid: FAQ_Southbound_integration_EMS_NMS
+        - name: What is the standard lead time for new connectors
+          topicUid: FAQ_Standard_lead_time_new_connectors
+        - name: What are the DataMiner system requirements
+          topicUid: FAQ_DataMiner_system_requirements
+        - name: What is the DataMiner roadmap
+          topicUid: FAQ_DataMiner_roadmap
+        - name: How does Skyline define the DMA element capacity
+          topicUid: FAQ_DMA_element_capacity
+        - name: How much bandwidth must be provided for data acquisition on data sources
+          topicUid: FAQ_Bandwidth_data_acquisition
+        - name: What are the limitations when using the Generic SNMP connector as opposed to a dedicated connector
+          topicUid: FAQ_Limitations_generic_SNMP_connector
+        - name: Which languages are available in the DataMiner Cube client
+          topicUid: FAQ_DataMiner_Cube_languages
