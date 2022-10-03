@@ -60,7 +60,7 @@ In the conditional coloring layout setting for Table and Node edge components, t
 - More consistent with the free text filter.
 - Easier to define a precise filter.
 
-#### Dashboards app / Low-code apps: 'Return no rows when feed is empty' option replaced by a triple-state option [ID_34280]
+#### Dashboards app / Low-Code Apps: 'Return no rows when feed is empty' option replaced by a triple-state option [ID_34280]
 
 <!-- MR 10.3.0 - FR 10.2.10 -->
 
@@ -254,7 +254,7 @@ All files related to the obsolete *SNMP Simulation Generator* tool have been rem
 
 In the user settings (*user icon > Settings*), from now on, you will only be able to configure themes when you have permission to edit dashboards.s
 
-#### Low-code apps: Header bar enhancements [ID_34264]
+#### Low-Code Apps: Header bar enhancements [ID_34264]
 
 <!-- MR 10.2.0 [CU7] - FR 10.2.10 -->
 
@@ -275,7 +275,7 @@ Because of a number of enhancements, overall performance has increased when star
 
 When a GQI table column inherits its name from a parameter of which the name includes the table name (between brackets), that table name will now be trimmed from the column name.
 
-#### Low-code apps: 'fetch data' action is now available in all visualizations that can use query data [ID_34308]
+#### Low-Code Apps: 'fetch data' action is now available in all visualizations that can use query data [ID_34308]
 
 <!-- MR 10.3.0 - FR 10.2.10 -->
 <!-- Not added to 10.3.0 -->
@@ -320,7 +320,7 @@ In some cases, SLNet could throw an OutOfMemoryException due to a memory leak.
 
 When editing a dashboard, you can go to *Settings > User access* and specify the users and/or user groups that are allowed to view or edit the dashboard in question. When you did not have permission to change security settings, the users and user groups you entered would not be validated correctly.
 
-#### Dashboards app / Low-code apps: Changes to the feed could incorrectly influence the time window of a state timeline component [ID_34148]
+#### Dashboards app / Low-Code Apps: Changes to the feed could incorrectly influence the time window of a state timeline component [ID_34148]
 
 <!-- MR 10.3.0 - FR 10.2.10 -->
 
@@ -378,7 +378,7 @@ When you tried to access a shared dashboard created in a previous version, the m
 
 After a user had logged out of a web app, in some cases, that app would incorrectly continue to send out network requests and try to automatically log itself in again.
 
-#### Low-code apps: Feed selection lost when navigating between pages [ID_34231]
+#### Low-Code Apps: Feed selection lost when navigating between pages [ID_34231]
 
 <!-- MR 10.3.0 - FR 10.2.10 -->
 <!-- Not added to 10.3.0 -->
@@ -391,7 +391,7 @@ Up to now, in low-code apps, feeds would incorrectly not keep the selected value
 
 When, on one thread, a group other than a poll group was launched while, on another thread, a poll group with option "partialSNMP" was waiting for incoming SNMP data, in some cases, a run-time error could occur in SLProtocol.
 
-#### Dashboards app / Low-code apps: GQI table error not cleared between sessions [ID_34243]
+#### Dashboards app Low-Code Apps: GQI table error not cleared between sessions [ID_34243]
 
 <!-- MR 10.3.0 - FR 10.2.10 -->
 <!-- Not added to 10.3.0 -->
@@ -404,7 +404,7 @@ When a new GQI session was started, in some rare cases, an error that occurred i
 
 In some cases, an error could occur in SLProtocol when performing a 'replace data' action that had to replace multiple bytes.
 
-#### Low-code apps: Header bar font color would incorrectly not be aligned with the theme color of the app [ID_34267]
+#### Low-Code Apps: Header bar font color would incorrectly not be aligned with the theme color of the app [ID_34267]
 
 <!-- MR 10.2.0 [CU7] - FR 10.2.10 -->
 
@@ -416,7 +416,7 @@ In some cases, the header bar font color would incorrectly not be aligned with t
 
 In the select node of the query builder, you can change the column order by clicking up and down arrows. Up to now, when you hovered over one of those arrows, in some cases, the incorrect arrow would be selected.
 
-#### Dashboards app / Low-code apps: Column filters in generic filter component incorrectly marked as incapable [ID_34273]
+#### Dashboards app / Low-Code Apps: Column filters in generic filter component incorrectly marked as incapable [ID_34273]
 
 <!-- MR 10.3.0 - FR 10.2.10 -->
 
@@ -428,7 +428,7 @@ In the generic filter component, in some cases, column filters would be incorrec
 
 In some cases, the delete icons of custom quick pick buttons would incorrectly be displayed on top of the time range feed overlay.
 
-#### Low-code apps: Selector feeds would incorrectly not be displayed in the edit sidebar [ID_34281]
+#### Low-Code Apps: Selector feeds would incorrectly not be displayed in the edit sidebar [ID_34281]
 
 <!-- MR 10.3.0 - FR 10.2.10 -->
 <!-- Not added to 10.3.0 -->
@@ -447,14 +447,14 @@ When you had selected a chain at the bottom of the EPM feed, in some cases, the 
 
 In some rare cases, an error could occur in SLElement when multiple foreign keys were being resolved.
 
-#### Low-code apps: Problem when using the "query rows" data source [ID_34298]
+#### Low-Code Apps: Problem when using the "query rows" data source [ID_34298]
 
 <!-- MR 10.3.0 - FR 10.2.10 -->
 <!-- Not added to 10.3.0 -->
 
 In some cases, an exception could be thrown when using the "query rows" data source.
 
-#### Low-code apps: Panels could flicker while being loaded [ID_34301]
+#### Low-Code Apps: Panels could flicker while being loaded [ID_34301]
 
 <!-- MR 10.3.0 - FR 10.2.10 -->
 <!-- Not added to 10.3.0 -->
@@ -467,7 +467,7 @@ In some cases, panels could flicker while being loaded.
 
 While query pages were being retrieved via GQI, each time a new page was loaded, the loader bar at the top of a table component would incorrectly be refreshing.
 
-#### Dashboards app / Low-code apps: Query column filters would not be applied correctly to table components [ID_34305]
+#### Dashboards app / Low-Code Apps: Query column filters would not be applied correctly to table components [ID_34305]
 
 <!-- MR 10.3.0 - FR 10.2.10 -->
 

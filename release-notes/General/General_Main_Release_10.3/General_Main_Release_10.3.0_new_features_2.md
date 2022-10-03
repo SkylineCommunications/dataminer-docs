@@ -621,7 +621,7 @@ In the following example, the URL selects one default element on the initial pag
 https://<dma>/<app-id>?data=%7B%22v%22:1,%22components%22:%5B%7B%22cid%22:1,%22select%22:%7B%22elements%22:%5B%221%2F6%22%5D%7D%5D%7D%7D
 ```
 
-#### Dashboards app / Low-code apps: 'Return no rows when feed is empty' option replaced by a triple-state option [ID_34280]
+#### Dashboards app / Low-Code Apps: 'Return no rows when feed is empty' option replaced by a triple-state option [ID_34280]
 
 <!-- MR 10.3.0 - FR 10.2.10 -->
 
@@ -639,7 +639,7 @@ Now, this option has been replaced by a triple-state option. You can now indicat
 
 When an EPM identifier from an EPM feed is fed to a parameter feed, it will now be possible to drag multiple parameters onto the parameter feed in order to use them as filters.
 
-#### Dashboards app / Low-code apps: GQI queries now support sort operators [ID_34414] [ID_34528]
+#### Dashboards app / Low-Code Apps: GQI queries now support sort operators [ID_34414] [ID_34528]
 
 <!-- MR 10.3.0 - FR 10.2.11 -->
 
@@ -651,7 +651,7 @@ After selecting a data source, do the following:
 1. Select the column to sort on.
 1. Select *Ascending* if you want to sort in ascending order instead of descending order.
 
-#### Dashboards app / Low-code apps: An eye icon will now appear when you make a modification to a GQI table [ID_34445]
+#### Dashboards app / Low-Code Apps: An eye icon will now appear when you make a modification to a GQI table [ID_34445]
 
 <!-- MR 10.3.0 - FR 10.2.11 -->
 
@@ -671,7 +671,7 @@ This eye icon will make you aware that the table is no longer identical to the o
 
 The DataMiner mobile apps that use Angular (e.g. Low-Code Apps, Dashboards, Monitoring, Ticketing, Jobs, and Automation) now use Angular 14 instead of Angular 13.
 
-#### Dashboards app / Low-code apps: Enhanced filtering by protocol [ID_34453]
+#### Dashboards app / Low-Code Apps: Enhanced filtering by protocol [ID_34453]
 
 <!-- MR 10.3.0 - FR 10.2.11 -->
 
