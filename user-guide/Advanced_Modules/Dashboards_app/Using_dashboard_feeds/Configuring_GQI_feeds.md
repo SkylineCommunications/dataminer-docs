@@ -408,7 +408,7 @@ From DataMiner 10.2.0/10.1.5 onwards, a *Use feed* checkbox is available that al
 
 ### Sort
 
-Available from dataMiner 10.2.11/10.3.0 onwards. Sorts the data based on a specific column. When you select this operator, you will also need to select the column to sort by and indicate whether sorting should happen in ascending order. By default, sorting happens in descending order.
+Available from dataMiner 10.2.11/10.3.0 onwards. Sorts the data based on a specific column. When you select this operator, you will need to select the column to sort by. By default, sorting happens in descending order. To sort in ascending order instead, select the *Ascending* checkbox.
 
 ### Top X
 
