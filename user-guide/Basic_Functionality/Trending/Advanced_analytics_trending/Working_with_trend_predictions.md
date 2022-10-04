@@ -57,7 +57,7 @@ To select which trend prediction type is used, from DataMiner 10.2.9/10.3.0 onwa
 
 From DataMiner 10.2.9/10.3.0 onwards, if one or more of the trend prediction types are not available, they will no longer appear in the right-click menu. In earlier DataMiner versions, a warning icon is displayed. If you hover over that icon, a tooltip will show which type or types cannot be displayed. If none of the trend prediction types are available, the tooltip will explain why.
 
-You can either select one of the available trend prediction types, or select "Auto". Auto mode will automatically switch between the different trend prediction types as you zoom in and out on the graph. Whenever this automatic switch occurs, the selector in the top-right corner will blink.
+You can either select one of the available trend prediction types, or select "Auto". Auto mode will automatically switch between the different trend prediction types as you zoom in and out on the graph.
 
 > [!NOTE]
 >
