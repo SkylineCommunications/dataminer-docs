@@ -95,7 +95,7 @@ The `Repair DB.bat` script, located in the `C:\Skyline DataMiner\Tools` folder, 
 
 When a legacy Dashboard Gateway was connected to a DataMiner Agent with HTTPS configured and port 80 blocked, dashboards would fail to show the Maps component.
 
-#### Dashboards app / Low-code apps: Tooltips of certain visualizations would not be aligned correctly [ID_33844]
+#### Dashboards app / Low-Code Apps: Tooltips of certain visualizations would not be aligned correctly [ID_33844]
 
 <!-- Main Release Version 10.1.0 [CU20]/10.2.0 [CU8] - Feature Release Version TBD -->
 
@@ -157,7 +157,7 @@ When you opened a trend graph of an EPM object, it would not be possible to add 
 
 When, in a Spectrum card, you clicked *View buffer*, the preset contained inside the buffer would incorrectly not be loaded. As a result, incorrect threshold values would be displayed.
 
-#### Dashboards app / Low-code apps: Creating a custom theme with a custom color palette would incorrectly cause the color palette of all built-in themes to be updated [ID_34368]
+#### Dashboards app / Low-Code Apps: Creating a custom theme with a custom color palette would incorrectly cause the color palette of all built-in themes to be updated [ID_34368]
 
 <!-- Main Release Version 10.1.0 [CU20]/10.2.0 [CU8] - Feature Release Version 10.2.11 -->
 
@@ -237,7 +237,7 @@ When the GetBooking or GetBookings method was called via SOAP, in some cases, a 
 
 When Alerter had been configured to play a sound when alarms matched a certain filter, it could leak memory.
 
-#### Dashboards app / Low-code apps: Problem with slider ranges [ID_34477]
+#### Dashboards app / Low-Code Apps: Problem with slider ranges [ID_34477]
 
 <!-- Main Release Version 10.1.0 [CU20]/10.2.0 [CU8] - Feature Release Version 10.2.11 -->
 

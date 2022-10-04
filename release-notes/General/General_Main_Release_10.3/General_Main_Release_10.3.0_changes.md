@@ -684,7 +684,7 @@ In some rare cases, an error could occur during the Analytics upgrade action whe
 
 During a DataMiner upgrade, in some cases, the *AnalyticsDropUnusedCassandraTables* upgrade action would fail.
 
-#### Dashboards app / Low-code apps: Changes to the feed could incorrectly influence the time window of a state timeline component [ID_34148]
+#### Dashboards app / Low-Code Apps: Changes to the feed could incorrectly influence the time window of a state timeline component [ID_34148]
 
 <!-- MR 10.3.0 - FR 10.2.10 -->
 
@@ -706,13 +706,13 @@ This issue will now be prevented. In addition, the element's instance GUID will 
 
 After a DMS with a Cassandra Cluster setup was upgraded to 10.2.8 (CU1), it could occur that the Alarm Console showed run-time errors related to the SLAnalytics process. This was caused by an upgrade action that was not triggered for such a setup.
 
-#### Dashboards app / Low-code apps: Column filters in generic filter component incorrectly marked as incapable [ID_34273]
+#### Dashboards app / Low-Code Apps: Column filters in generic filter component incorrectly marked as incapable [ID_34273]
 
 <!-- MR 10.3.0 - FR 10.2.10 -->
 
 In the generic filter component, in some cases, column filters would be incorrectly marked as incapable when the filter assistance option was enabled.
 
-#### Dashboards app / Low-code apps: Query column filters would not be applied correctly to table components [ID_34305]
+#### Dashboards app / Low-Code Apps: Query column filters would not be applied correctly to table components [ID_34305]
 
 <!-- MR 10.3.0 - FR 10.2.10 -->
 
@@ -738,13 +738,7 @@ In some cases, instead of listing the unlicensed modules, this message would inc
 
 When a service template was created using the *CreateServiceTemplate* method, the DataMinerID and ElementID of the newly created service template would incorrectly be set to 0 instead of -1.
 
-#### Web apps: List box items would not be displayed correctly in embedded visual overviews [ID_34474]
-
-<!-- MR 10.3.0 - FR 10.2.11 -->
-
-In an embedded visual overview, in some cases, list box items would not be displayed correctly.
-
-#### Dashboards / Low-code apps: Changing a GQI query would not cause a table to get updated when column filters were applied [ID_34520]
+#### Dashboards / Low-Code Apps: Changing a GQI query would not cause a table to get updated when column filters were applied [ID_34520]
 
 <!-- MR 10.3.0 - FR 10.2.11 -->
 

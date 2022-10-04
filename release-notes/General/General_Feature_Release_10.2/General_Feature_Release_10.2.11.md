@@ -30,7 +30,7 @@ Because of a number of enhancements, overall error handling has improved.
 
 Because of a performance improvement, the calculated service alarm state will now be updated more quickly in the client.
 
-#### Low-code apps: Data input via URL [ID_34261]
+#### Low-Code Apps: Data input via URL [ID_34261]
 
 <!-- MR 10.3.0 - FR 10.2.11 -->
 
@@ -116,7 +116,7 @@ Connection to {0} via external process succeeds while same connection via SLNet 
 
 From now on, the connection in question will also be forcefully killed.
 
-#### Dashboards app / Low-code apps: GQI queries now support sort operators [ID_34414]
+#### Dashboards app / Low-Code Apps: GQI queries now support sort operators [ID_34414] [ID_34528]
 
 <!-- Main Release Version 10.3.0 - Feature Release Version 10.2.11 -->
 
@@ -134,7 +134,7 @@ After selecting a data source, do the following:
 
 The `Repair DB.bat` script, located in the `C:\Skyline DataMiner\Tools` folder, now also supports MySQL Server 5.5.
 
-#### Dashboards app / Low-code apps: An eye icon will now appear when you make a modification to a GQI table [ID_34445]
+#### Dashboards app / Low-Code Apps: An eye icon will now appear when you make a modification to a GQI table [ID_34445]
 
 <!-- Main Release Version 10.3.0 - Feature Release Version 10.2.11 -->
 
@@ -154,7 +154,7 @@ This eye icon will make you aware that the table is no longer identical to the o
 
 The DataMiner mobile apps that use Angular (e.g. Low-Code Apps, Dashboards, Monitoring, Ticketing, Jobs, and Automation) now use Angular 14 instead of Angular 13.
 
-#### Dashboards app / Low-code apps: Enhanced filtering by protocol [ID_34453]
+#### Dashboards app / Low-Code Apps: Enhanced filtering by protocol [ID_34453]
 
 <!-- Main Release Version 10.3.0 - Feature Release Version 10.2.11 -->
 
@@ -253,7 +253,7 @@ When a Process Automation definition is added to the Service definition componen
 
 After SRM data had been migrated to Elasticsearch, in some cases, resource property definition names would contain characters that Elasticsearch considers illegal.
 
-#### Dashboards app / Low-code apps: Creating a custom theme with a custom color palette would incorrectly cause the color palette of all built-in themes to be updated [ID_34368]
+#### Dashboards app / Low-Code Apps: Creating a custom theme with a custom color palette would incorrectly cause the color palette of all built-in themes to be updated [ID_34368]
 
 <!-- MR 10.1.0 [CU20]/10.2.0 [CU8] - FR 10.2.11 -->
 
@@ -271,7 +271,7 @@ When, using the legacy Reporter app, you sent a PDF report in "plain text" forma
 
 In some cases, email reports would incorrectly not include CSV files when the *Include CSV* option had been selected.
 
-#### Low-code apps: Problem when creating a new component theme [ID_34372]
+#### Low-Code Apps: Problem when creating a new component theme [ID_34372]
 
 <!-- MR 10.2.0 [CU8] - FR 10.2.11 -->
 
@@ -338,7 +338,7 @@ When a CSV file exported via a dashboard component or attached to an email repor
 
 #### Legacy Reporter app: Users without 'Modules > Documents > UI available' permission would incorrectly be able to view documents [ID_34402]
 
-<!-- Main Release Version 10.1.0 [CU20]/10.2.0 [CU8] - Feature Release Version 10.2.11 -->
+<!-- MR 10.1.0 [CU20]/10.2.0 [CU8] - FR 10.2.11 -->
 
 Users who had not been granted the *Modules > Documents > UI available* permission would incorrectly be able to view documents in the legacy Reporter app.
 
@@ -414,19 +414,19 @@ When you opened the Dashboards app via a Dashboard Gateway server, in some cases
 
 #### Alerter would leak memory when configured to play a sound when alarms matched a certain filter [ID_34473]
 
-<!-- Main Release Version 10.1.0 [CU20]/10.2.0 [CU8] - Feature Release Version 10.2.11 -->
+<!-- MR 10.1.0 [CU20]/10.2.0 [CU8] - FR 10.2.11 -->
 
 When Alerter had been configured to play a sound when alarms matched a certain filter, it could leak memory.
 
-#### Web apps: List box items would not be displayed correctly in embedded visual overviews [ID_34474]
+#### Web apps: List box items not displayed correctly in embedded visual overviews [ID_34474]
 
-<!-- MR 10.3.0 - FR 10.2.11 -->
+<!-- MR 10.2.0 [CU9] - FR 10.2.11 -->
 
 In an embedded visual overview, in some cases, list box items would not be displayed correctly.
 
-#### Dashboards app / Low-code apps: Problem with slider ranges [ID_34477]
+#### Dashboards app / Low-Code Apps: Problem with slider ranges [ID_34477]
 
-<!-- Main Release Version 10.1.0 [CU20]/10.2.0 [CU8] - Feature Release Version 10.2.11 -->
+<!-- MR 10.1.0 [CU20]/10.2.0 [CU8] - FR 10.2.11 -->
 
 When the range of a slider control did not have a span (i.e. when start was equal to end), both the start value and the end value of the range would incorrectly be NaN values.
 
@@ -434,11 +434,11 @@ Also, when the range of a slider control had values outside of the minimum/maxim
 
 #### SLSNMPManager: Trap binding of type 'IP Address' would incorrectly be parsed as an empty string [ID_34481]
 
-<!-- Main Release Version 10.0.0 [CU22]/10.1.0 [CU20]/10.2.0 [CU8] - Feature Release Version 10.2.11 -->
+<!-- MR 10.0.0 [CU22]/10.1.0 [CU20]/10.2.0 [CU8] - FR 10.2.11 -->
 
 When a trap binding of type "IP Address" came in while the SLSNMPManager SNMPv3 process was processing traps on the default port 162, that binding would be incorrectly parsed as an empty string.
 
-#### Dashboards / Low-code apps: Changing a GQI query would not cause a table to get updated when column filters were applied [ID_34520]
+#### Dashboards / Low-Code Apps: Changing a GQI query would not cause a table to get updated when column filters were applied [ID_34520]
 
 <!-- MR 10.3.0 - FR 10.2.11 -->
 

@@ -143,7 +143,7 @@ Up to now, a NewPagingSearchRequest was incorrectly not able to retrieve data fr
 
 When a legacy Dashboard Gateway was connected to a DataMiner Agent with HTTPS configured and port 80 blocked, dashboards would fail to show the Maps component.
 
-#### Dashboards app / Low-code apps: Tooltips of certain visualizations would not be aligned correctly [ID_33844]
+#### Dashboards app / Low-Code Apps: Tooltips of certain visualizations would not be aligned correctly [ID_33844]
 
 <!-- Main Release Version 10.1.0 [CU20]/10.2.0 [CU8] - Feature Release Version TBD -->
 
@@ -223,7 +223,7 @@ When one of the listed bookings was updated, all bookings would incorrectly be r
 
 When, in a Spectrum card, you clicked *View buffer*, the preset contained inside the buffer would incorrectly not be loaded. As a result, incorrect threshold values would be displayed.
 
-#### Dashboards app / Low-code apps: Creating a custom theme with a custom color palette would incorrectly cause the color palette of all built-in themes to be updated [ID_34368]
+#### Dashboards app / Low-Code Apps: Creating a custom theme with a custom color palette would incorrectly cause the color palette of all built-in themes to be updated [ID_34368]
 
 <!-- MR 10.1.0 [CU20]/10.2.0 [CU8] - FR 10.2.11 -->
 
@@ -241,7 +241,7 @@ When, using the legacy Reporter app, you sent a PDF report in "plain text" forma
 
 In some cases, email reports would incorrectly not include CSV files when the *Include CSV* option had been selected.
 
-#### Low-code apps: Problem when creating a new component theme [ID_34372]
+#### Low-Code Apps: Problem when creating a new component theme [ID_34372]
 
 <!-- MR 10.2.0 [CU8] - FR 10.2.11 -->
 
@@ -410,7 +410,7 @@ When you opened the Dashboards app via a Dashboard Gateway server, in some cases
 
 When Alerter had been configured to play a sound when alarms matched a certain filter, it could leak memory.
 
-#### Dashboards app / Low-code apps: Problem with slider ranges [ID_34477]
+#### Dashboards app / Low-Code Apps: Problem with slider ranges [ID_34477]
 
 <!-- MR 10.1.0 [CU20]/10.2.0 [CU8] - FR 10.2.11 -->
 

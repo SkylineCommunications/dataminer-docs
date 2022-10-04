@@ -6,6 +6,26 @@ uid: DCP_change_log
 
 The DataMiner Cloud Platform gets updated continuously. This change log can help you trace when specific features and changes have become available.
 
+#### 27 September 2022 – New feature – DataMiner Teams bot support for custom commands [ID_34518]
+
+If CoreGateway version 2.11.0 or higher and FieldControl version 2.8.1 or higher are installed (included in Cloud Pack version 2.8.0), the DataMiner Teams bot now allows you to display and run custom commands with dynamic user input configured in your cloud-connected DataMiner System.
+
+You can do so using the Teams bot commands *show command \<command name\>*, *show command*, and *run command \<command name\>*.
+
+To add a command to your DMS, create an Automation script in the folder "bot" in the DMS. For examples of such scripts, refer to [Custom Command Examples](https://github.com/SkylineCommunications/ChatOps-Extensions/tree/main/CustomCommandExamples) on GitHub.
+
+The commands allow dynamic input, such as dummies, parameters, parameters with value files, and memory files. They support the following output: key values, adaptive card body elements, and JSON.
+
+A command will only be visible for users of the bot if they have the appropriate rights in DataMiner Cube. If users have the necessary rights to view a command, but they do not have the rights needed for certain input for the command, the bot will inform them that the command cannot be executed.
+
+The following limitations also apply:
+
+- Interactive Automation scripts are not supported.
+- Commands that run longer than 30 seconds are currently not supported.
+- Issues with the adaptive card output will not result in proper error feedback.
+
+For more detailed information, refer to [Adding commands for the Teams bot to a DMS](xref:DataMiner_Teams_bot#adding-commands-for-the-teams-bot-to-a-dms)
+
 #### 19 September 2022 – Enhancement – Improvements on Audit page in DCP Admin app [ID_34457]
 
 A number of improvements have been implemented on the *Audit* page in the DCP Admin app:

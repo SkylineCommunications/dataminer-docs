@@ -35,7 +35,7 @@ In Visual Overview, it is now possible to retrieve the contributing booking ID o
         | Shape data field | Value |
         |------------------|-------|
         | Element | [pagevar:idofselection] |
-        | Options | UseResource=truee |
+        | Options | UseResource=true |
         | Info | Contributing Booking |
 
         Shape text: `Contributing booking: *`
@@ -49,7 +49,7 @@ In Visual Overview, it is now possible to retrieve the contributing booking ID o
         | Shape data field | Value |
         |------------------|-------|
         | Element | [pagevar:idofselection] |
-        | Options | UseResource=truee |
+        | Options | UseResource=true |
 
         Shape text: `Contributing booking: [Contributing Booking]`
 
