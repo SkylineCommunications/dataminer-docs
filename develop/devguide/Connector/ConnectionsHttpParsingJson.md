@@ -21,4 +21,4 @@ The version of the included DLL is updated whenever necessary to prevent known s
 | 10.0.2 | 9.5.9 |
 
 > [!NOTE]
-> When developing a connector, it is advised to reference the Newtonsoft.Json NuGet package instead of referencing the DLL from the ProtocolScripts folder. This requires the connector to be written as a (solution)[xref:Developing_DataMiner_protocols_as_Visual_Studio_solutions].
+> When developing a connector, it is advised to reference the Newtonsoft.Json NuGet package instead of referencing the DLL from the ProtocolScripts folder. This requires the connector to be written as a [solution](xref:Developing_DataMiner_protocols_as_Visual_Studio_solutions).
