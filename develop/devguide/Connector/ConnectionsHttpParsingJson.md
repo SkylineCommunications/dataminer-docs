@@ -8,5 +8,11 @@ In order to process JSON-formatted data, the Json.NET framework can be used. Thi
 
 For extensive documentation and examples illustrating how to use this framework, refer to https://www.newtonsoft.com/json/help/html/Introduction.htm
 
-> [!NOTE]
-> Since DataMiner 9.5.9, version 10.0.2 of the Newtonsoft.Json DLL is included in the ProtocolScripts folder. DataMiner versions prior to 9.5.9 will use the Newtonsoft.Json DLL from the files folder instead. Therefore, when developing for a version prior to DataMiner 9.5.9, ensure that the used functionality from this DLL is included in all versions that need to be supported.
+## Included Newtonsoft.Json versions
+Since 9.5.9, DataMiner has included Newtonsoft.Json DLL in the ProtocolScripts folder. DataMiner versions prior to 9.5.9 will use the Newtonsoft.Json DLL from the files folder instead. The included DLL has been updated when there are known security risks. Therefore, the available functionality might change and connectors should indicate a minimum required version if necessary, and may also require an update when the provided version changes.
+
+| NewtonSoft.Json version | Minimum DataMiner version |
+| -- | -- |
+| 13.0.1 | 10.2.10<br>10.2.0 (CU6)<br>10.1.0 (CU18) |
+| 12.0.2 | 9.6.9<br>9.6.0 (CU3) |
+| 10.0.2 | 9.5.9 |
