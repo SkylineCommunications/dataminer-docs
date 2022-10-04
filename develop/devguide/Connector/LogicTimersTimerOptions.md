@@ -120,14 +120,14 @@ If you only specify "amountPacketsMeasurements=x" and leave out "amountPackets=x
 
   *Feature introduced in DataMiner 9.5.1 (RN 14522).*
 
-- **delay**: With this option, you can specify the delay in ms between two consecutive ping packets. This should be used when the device does not respond to all ping requests when they are sent without any delay.
+- **interval**: With this option, you can specify the interval in ms between two consecutive ping packets. This should be used when the device does not respond to all ping requests when they are sent without any intermediate delay.
 
   *Feature introduced in DataMiner 10.2.11 (RN 34463).*
 
   > [!NOTE]
   > This option is only relevant when *amountPackets* or *amountPacketsPID* is used. These are currently only supported in conjunction with the *threadPool* option. When *threadPool* is not used, only one ping request will be sent.
 
-- **delayPID**: Instead of specifying a fixed delay value ("delay=x"), it is also possible to specify a dynamic value stored in a parameter. Note that if you specify both a fixed and a dynamic value, the latter will take precedence.
+- **intervalPID**: Instead of specifying a fixed interval value ("interval=x"), it is also possible to specify a dynamic value stored in a standalone parameter. Note that if you specify both a fixed and a dynamic value, the latter will take precedence.
 
   The value in the referred parameters must not be 0 or uninitialized. Otherwise, 0, the hard-coded value on the timer, or the last valid value will be used by default. The referred parameters must be of numeric type.
 
