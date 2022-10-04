@@ -438,6 +438,14 @@ Also, when the range of a slider control had values outside of the minimum/maxim
 
 When a trap binding of type "IP Address" came in while the SLSNMPManager SNMPv3 process was processing traps on the default port 162, that binding would be incorrectly parsed as an empty string.
 
+#### DataMiner Taskbar Utility: Upgrade process displayed in Taskbar Utility would lag behind [ID_34488]
+
+<!-- MR 10.1.0 [CU20]/10.2.0 [CU8] - FR 10.2.11 -->
+
+After you had launched an upgrade, in some cases, the upgrade process displayed in DataMiner Taskbar Utility would lag behind and DataMiner Taskbar Utility would use a considerable amount of memory.
+
+This fixes a [known issue](xref:KI_Taskbar_Utility_performance_issue_while_agents_are_being_upgraded).
+
 #### Dashboards / Low-Code Apps: Changing a GQI query would not cause a table to get updated when column filters were applied [ID_34520]
 
 <!-- MR 10.3.0 - FR 10.2.11 -->
