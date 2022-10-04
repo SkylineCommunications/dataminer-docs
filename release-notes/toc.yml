@@ -440,7 +440,7 @@
           topicUid: EPM_5.0.0_D-DOCSIS
       - name: I-DOCSIS
         items:
-        - name: EPM 6.1.6 I-DOCSIS
+        - name: EPM 6.1.6 I-DOCSIS - Preview
           topicUid: EPM_6.1.6_I-DOCSIS
         - name: EPM 6.1.5 I-DOCSIS
           topicUid: EPM_6.1.5_I-DOCSIS
