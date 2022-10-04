@@ -129,6 +129,12 @@ In the *Logging* section of *System Center*, you can now also consult the *SLRAD
 
 The `Repair DB.bat` script, located in the `C:\Skyline DataMiner\Tools` folder, now also supports MySQL Server 5.5.
 
+#### Dashboards app / Low-code apps: Enhanced performance of node-edge components [ID_34517]
+
+<!-- MR 10.2.0 [CU8] - FR 10.2.11 -->
+
+Because of a number of enhancements, overall performance of node-edge components has improved, especially on large systems.
+
 ### Fixes
 
 #### Elasticsearch: NewPagingSearchRequest was incorrectly not able to query an alias grouping two logger tables [ID_31767]
