@@ -24,12 +24,15 @@ jobs:
           CI: true
       - name: Add msbuild to PATH
         uses: microsoft/setup-msbuild@v1.1
-      - name: Build DataMiner solution
-        working-directory: src/DataMiner
-        run: msbuild DataMiner.sln /p:Configuration=Debug
       - name: Set up NuGet
         uses: nuget/setup-nuget@v1
-      - name: NuGet restore
+      - name: NuGet restore DM solution
+        working-directory: "src/DataMiner"
+        run: nuget restore "DataMiner.sln"
+      - name: Build DataMiner solution
+        working-directory: src/DataMiner
+        run: msbuild DataMiner.sln /t:Clean,Restore,Build /p:Configuration=Debug
+      - name: NuGet restore BCL
         working-directory: "src/Base Class Library"
         run: nuget restore "Code Library.sln"
       - name: Build Base Class Library solution
