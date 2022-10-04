@@ -14,7 +14,7 @@ Up to now, in QAction and EXE projects, DIS would add references to the DataMine
 
 The DataMiner DevPacks can be found on the [official NuGet store](https://www.nuget.org/packages?q=skylinecommunications).
 
-When you open a protocol solution or an Automation script solution in which the QAction and EXE projects still contain references to separate DLL files instead of a DataMiner DevPack, a banner will appear, giving you the opportunity to replace those references by references to the required DevPacks.
+When you open a protocol solution or an Automation script solution in which the QAction and EXE projects still contain references to separate DataMiner DLL files instead of a DataMiner DevPack, a banner will appear, giving you the opportunity to replace those references by references to the required DevPacks.
 
 ##### Changing the default package management format
 
