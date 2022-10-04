@@ -394,6 +394,12 @@ When the GetBooking or GetBookings method was called via SOAP, in some cases, a 
 
 During a midnight synchronization, in some cases, ResourceManager subscriptions could incorrectly get duplicated, causing `200+ clients connected to this agent` errors to appear in the Alarm Console.
 
+#### Problem with SLDMS while a connection with another agent was being established or cleaned up [ID_34452]
+
+<!-- Main Release Version 10.1.0 [CU20]/10.2.0 [CU8] - Feature Release Version 10.2.11 -->
+
+In some rare cases, an error could occur in SLDMS while a connection with another agent was being established or cleaned up.
+
 #### Web apps: URL option 'subheader=' would no longer work [ID_34456]
 
 <!-- MR 10.1.0 [CU20]/10.2.0 [CU8] - FR 10.2.11 -->
@@ -424,6 +430,16 @@ When Alerter had been configured to play a sound when alarms matched a certain f
 
 In an embedded visual overview, in some cases, list box items would not be displayed correctly.
 
+#### Service impact of an alarm could be incorrect [ID_34475]
+
+<!-- Main Release Version 10.1.0 [CU20]/10.2.0 [CU8] - Feature Release Version 10.2.11 -->
+
+In some cases, the service impact of an alarm would be incorrect
+
+- when the column parameter was partially included with a primary key filter without a wildcard and any other filter (primary filter with a wildcard, display key filter with or without a wildcard), or
+
+- when the row included in the service via a filter is updated via an NT_SET_ROW call that triggers both a new alarm and a display key change.
+
 #### Dashboards app / Low-Code Apps: Problem with slider ranges [ID_34477]
 
 <!-- MR 10.1.0 [CU20]/10.2.0 [CU8] - FR 10.2.11 -->
@@ -445,6 +461,12 @@ When a trap binding of type "IP Address" came in while the SLSNMPManager SNMPv3 
 After you had launched an upgrade, in some cases, the upgrade process displayed in DataMiner Taskbar Utility would lag behind and DataMiner Taskbar Utility would use a considerable amount of memory.
 
 This fixes a [known issue](xref:KI_Taskbar_Utility_performance_issue_while_agents_are_being_upgraded).
+
+#### Cassandra cluster: Memory leak when real-time trend data was requested via a paged database request [ID_34514]
+
+<!-- MR 10.2.0 [CU8] - FR 10.2.11 [CU0] -->
+
+When, on a Cassandra cluster, real-time trend data was requested via a paged database request, in some cases, the cookie would incorrectly not cleaned, leading to increased memory consumption.
 
 #### Dashboards / Low-Code Apps: Changing a GQI query would not cause a table to get updated when column filters were applied [ID_34520]
 
