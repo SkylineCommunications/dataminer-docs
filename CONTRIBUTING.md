@@ -450,11 +450,11 @@ When you are working on your own fork, make sure you regularly **check in GitHub
 
 1. Check the top of your fork page. If it says the branch is a number of commits behind SkylineCommunications:main, your fork is no longer up to date. If there is no such indication, there is no need to continue with this procedure.
 
-   ![Indication of outdated fork](~/images/Contrib_OutdatedFork.png)
+   ![Indication of outdated fork](~/user-guide/images/Contributing_Sync_Fork.png)
 
-1. To update your fork, click the triangle button next to *Fetch upstream* and select *Fetch and merge*.
+1. To update your fork, click the triangle button next to *Sync fork* and select *Update branch*.
 
-   ![Link to forks](~/images/Contrib_FetchUpstream.png)
+   ![Link to forks](~/user-guide/images/Contributing_Update_Branch.png)
 
 #### Adding a new page
 
@@ -470,7 +470,7 @@ When you add a page to the documentation:
 
   > [!NOTE]
   > Do not use spaces in a UID.
- 
+
 - Add the new page to the relevant *toc.yml* file so that it is included in the table of contents. To do so, specify the name and UID as follows:
 
   ```yml
@@ -582,18 +582,18 @@ The Skyline documentation team will then need to merge your pull request, so tha
 
 When all the necessary changes have been made and the draft branch is ready for publication, create a pull request as detailed above, but select the main branch instead of the draft branch as the base.
 
-### Making a local test build before pushing changes	
+### Making a local test build before pushing changes
 
 Before you push your changes to the repository, it is often a good idea to make a test build on your local machine. This is especially the case if your changes involve adding or removing files, adding cross-references, changing headers, and/or updating a toc.yml file.
 
 To be able to make a local test build, you need to have DocFX installed. DocFX is the static website generator that is used under the hood to create the <https://docs.dataminer.services/> website.
 
-#### Installing and configuring DocFX	
+#### Installing and configuring DocFX
 
 To install DocFX on a Microsoft Windows machine:
 
 1. Go to <https://github.com/dotnet/docfx/releases>, and download the latest version of the `docfx.zip` package (e.g. version 2.59.4).
- 
+
     > [!CAUTION]
     > We recommend that you do not use any of the beta versions.
 
@@ -601,7 +601,7 @@ To install DocFX on a Microsoft Windows machine:
 
 1. Add the folder (e.g. `C:\DocFX`) to the environment variable **Path** (user variable or system variable).
 
-    On Windows 10 systems, do the following: 
+    On Windows 10 systems, do the following:
 
     1. In your Windows search box, enter "path".
     1. Click *Edit the system environment variables*.
@@ -628,6 +628,36 @@ To install DocFX on a Microsoft Windows machine:
 
 #### Making a test build
 
+If you have added files, cross-references, images, and so on, it can be useful to make a local test build to check if you made any mistakes. If everything is OK, you will get no warnings. Otherwise, you can check the warnings to find out where your mistakes are.
+
+##### First time setup
+
+The first time you run a test build, the following setup is needed:
+
+1. First, check if you are working on a recent version of the dataminer-docs repository [(See: Make sure your fork is up to date)](#make-sure-your-fork-is-up-to-date).
+
+1. Make sure you have Visual Studio (2017 or later) installed.
+
+1. Download and install [Build Tools](https://aka.ms/vs/17/release/vs_BuildTools.exe).
+
+1. Go to your file explorer and open the following path: *C:\Users\...\Documents\GitHub\dataminer-docs\src\DataMiner\Dataminer.sln*.
+
+   1. Open the SLN file with Visual Studio.
+
+   1. Go to the solution explorer in the top right corner and select the solution node. Now right-click and "Restore NuGet Packages".
+
+      ![Restore Nuget Packages](~/user-guide/images/Contributing_Solution_Node.png)
+
+   1. Build by holding CTR+SHIFT+b.
+
+   Now repeat these steps for *Code Library.sln*, found here: *C:\Users\...\Documents\GitHub\dataminer-docs\src\Base Class Library\Code Library.sln*.
+
+1. Open Visual Studio Code and go to *Terminal > New Terminal*.
+
+    Enter `docfx metadata -f`. If everything is OK, you will get no warnings.
+
+##### Generating a test build in Visual Studio Code
+
 When you have finished making a series of changes to documentation in Visual Studio Code, do the following to make a test build on your local machine.
 
 1. If no Terminal pane is open in Visual Studio Code, go to *Terminal > New Terminal*.
@@ -644,6 +674,9 @@ When you have finished making a series of changes to documentation in Visual Stu
    1. Enter `docfx serve _site`.
 
    1. In a browser, go to <http://localhost:8080/> to preview the website.
+
+      > [!NOTE]
+      > If you are not able to access localhost:8080, you can specify a different port by entering e.g. `docfx serve _site -p 8090`.
 
       When you have finished previewing the website, in the Terminal pane, press ENTER to exit the preview mode.
 

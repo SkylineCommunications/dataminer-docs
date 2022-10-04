@@ -9,7 +9,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Automation</RootNamespace>
     <AssemblyName>Skyline.DataMiner.Library.Automation</AssemblyName>
-    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
   </PropertyGroup>
@@ -40,7 +40,7 @@
     <PlatformTarget>x86</PlatformTarget>
   </PropertyGroup>
   <PropertyGroup>
-   <LangVersion>6</LangVersion>
+    <LangVersion>6</LangVersion>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -55,12 +55,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Skyline\DataMiner\Library\Automation\Extensions\ConnectionExtension.cs" />
     <Compile Include="Skyline\DataMiner\Library\Automation\Extensions\IEngineExtensions.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Common\Common.csproj">
-      <Project>{89c74926-47d8-4f38-b33d-7a9ca8cb92cd}</Project>
-      <Name>Common</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json">
