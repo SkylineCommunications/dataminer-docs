@@ -51,6 +51,10 @@ The following arguments should be used regardless of the specified action:
 - `-- pw`: The password that has to be used to connect to Elasticsearch.
 
   Only use this argument when credentials are required.
+  
+- `--key` or `-k`: The path to the file containing the encrypted elastic key.
+
+  Only use this argument when credentials are required. Use separate PasswordEncryptionTool to generate the elastic key from plain text password.
 
 ### Arguments when initializing the repository
 
