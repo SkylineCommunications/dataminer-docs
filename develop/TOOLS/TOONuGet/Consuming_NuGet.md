@@ -17,7 +17,7 @@ When DIS compiles the Automation script or protocol, it will extract the require
 > Also note that only from DataMiner 10.0.10 onwards, subfolder paths for assemblies in a .dmprotocol package will be preserved during installation. This means that prior to DataMiner 10.0.10, you have to put the DLLs in the correct subfolder manually if a subfolder structure should be used.
 
 > [!NOTE]
-> DIS and CI/CD requires the PackageReference package management format to be used. The packages.config packages management format is not supported.
+> For DIS and CI/CD, the PackageReference package management format must be used. The packages.config packages management format is not supported.
 
 Within Skyline, we have an internal NuGet store (<https://devcore3/nuget>) where Skyline employees can produce and consume private libraries. You will need to [add this store in Visual Studio](https://learn.microsoft.com/en-us/nuget/consume-packages/install-use-packages-visual-studio#package-sources) to use it.
 
