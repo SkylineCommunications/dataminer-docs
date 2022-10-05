@@ -659,6 +659,18 @@ In Visual Overview, it is now possible to retrieve the contributing booking ID o
 
 Shape data items of type *NavigatePage* can now have values that include dynamic placeholders referring to session variables, parameters, etc.
 
+#### Visual Overview: New OverridePageName option [ID_34476]
+
+<!-- MR 10.3.0 - FR 10.2.11 -->
+
+From now on, you can override a Visio page name by specifying an "OverridePageName=*NewPageName*" option in a page-level shape data field of type *Options*. When you do so, the page in question will be handled as if its name were *NewPageName*.
+
+> [!NOTE]
+>
+> - Always use the actual page name when referring to a particular page in options like e.g. *VdxPage*, *NavigatePage*, *InlineVdx*, etc. Using a page override when referring to a page will not work.
+> - This feature allows you to define duplicate page names. When you do so, take into account that components that display Visio page names may then also display those duplicate page names.
+> - Visio files used in web apps do not support the OverridePageName option.
+
 #### Visual Overview: Shape data items of type 'ParametersSummary' can now have values that include dynamic placeholders referring to session variables [ID_34483]
 
 <!-- MR 10.3.0 - FR 10.2.11 -->
