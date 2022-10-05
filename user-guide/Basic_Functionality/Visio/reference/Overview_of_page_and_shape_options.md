@@ -754,7 +754,7 @@ Page-level option.
 
 Available from DataMiner 10.2.11/10.3.0 onwards. Allows you to override the name of a Visio page.
 
-You can for example use this to have multiple pages with the same name in DataMiner, as Microsoft Visio itself does not allow the creation of multiple pages with the same name. However, if you do so, keep in mind that components that display Visio page names may then also display these duplicate page names.
+You can for example use this to have multiple pages with the same name in DataMiner, as Microsoft Visio itself does not allow the creation of multiple pages with the same name. However, note that components that display Visio page names may then also display these duplicate page names.
 
 > [!NOTE]
 >
