@@ -4,7 +4,7 @@ uid: Setting_up_HTTPS_on_a_DMA
 
 # Setting up HTTPS on a DMA
 
-To securely host your DataMiner, it is recommended to require HTTPS connections. To do so, you must first install an SSL/TLS certificate and set up an HTTPS binding. Optionally, specify the auto-detection settings for DataMiner to avoid connection issues when traffic between the DataMiner nodes is filtered (e.g. by a firewall).
+To securely host your DataMiner Agent, we recommended that you make sure HTTPS connections are required. To do so, you first have to install an SSL/TLS certificate and set up an HTTPS binding. Optionally, specify the auto-detection settings for DataMiner to avoid connection issues when traffic between the DataMiner nodes is filtered (e.g. by a firewall).
 
 ## Configuring the HTTPS binding in IIS
 
@@ -28,7 +28,7 @@ To securely host your DataMiner, it is recommended to require HTTPS connections.
 
 ## Configuring HTTPS in DataMiner
 
-To configure a server to use HTTPS, a line needs to be added to the *MaintenanceSettings.xml* file.
+To configure a server to use HTTPS, you need to add a line to the *MaintenanceSettings.xml* file.
 
 To do so:
 
@@ -63,7 +63,9 @@ To do so:
 > - [TLS encryption in Cassandra](xref:Security_Cassandra_TLS)
 > - [Securing the Elasticsearch database](xref:Security_Elasticsearch)
 
-## Optionally, configure HTTP to HTTPS redirection
+## Configuring HTTP to HTTPS redirection
+
+This is **optional**.
 
 Redirecting HTTP traffic to HTTPS is recommended when external systems (or clients) are still connecting to DataMiner over HTTP and cannot be updated easily. A redirect enables a smooth transition to HTTPS without breaking external systems or compromising on security.
 
@@ -111,9 +113,11 @@ Redirecting HTTP traffic to HTTPS is recommended when external systems (or clien
 > - When Failover is active and HTTPS traffic is required, the virtual IP (or the shared hostname) must be added in the *Subject Alternative Name* field of the TLS/SSL certificate on both DataMiner Agents.
 > - To connect to your DMA **using the IP address**, make sure the *Subject Alternative Name* field of the TLS/SSL certificate contains the IP address.
 
-## Optionally, specify auto-detection information for an inter-DMA HTTPS connection
+## Specifying auto-detection information for an inter-DMA HTTPS connection
 
-**Optionally**, if the default web server on the server has been modified to **only allow HTTPS traffic**, there could be problems with the auto-detection of connection settings.
+This is **optional**.
+
+If the default web server on the server has been modified to **only allow HTTPS traffic**, there could be problems with the auto-detection of connection settings.
 
 To avoid this, it is possible to specify alternative auto-detection information via the *Edit Connection Uris* functionality in the SLNetClientTest tool. However, note that this is an advanced system administration tool that should be used with extreme care. See [Editing the connection string between two DataMiner Agents](xref:SLNetClientTest_editing_connection_string).
 
