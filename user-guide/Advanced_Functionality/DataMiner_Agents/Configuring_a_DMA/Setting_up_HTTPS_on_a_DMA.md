@@ -28,7 +28,7 @@ To securely host your DataMiner Agent, we recommended that you make sure HTTPS c
 
 ## Configuring HTTPS in DataMiner
 
-To configure a server to use HTTPS, you need to add a line to the *MaintenanceSettings.xml* file.
+To configure a DataMiner Agent to use HTTPS, you need to add a line to the *MaintenanceSettings.xml* file (on every DataMiner Agent in the DMS).
 
 To do so:
 
