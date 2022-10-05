@@ -26,4 +26,8 @@ uid: Cube_Feature_Release_10.2.12
 
 ### Fixes
 
-*No fixes have been added to this version yet.*
+#### DataMiner Cube - Spectrum Analysis: Problem with measurement point option 'Invert spectrum' [ID_34552]
+
+<!-- MR 10.1.0 [CU21] / 10.2.0 [CU9] - FR 10.2.12 -->
+
+When you had selected the *Invert spectrum* option while configuring a measurement point, in some cases, that option would incorrectly not be applied.
