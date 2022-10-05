@@ -4,24 +4,22 @@ uid: Consuming_NuGet
 
 # Consuming NuGet packages
 
-You can consume NuGet packages in your Visual Studio protocol or Automation script solution by going to the NuGet Manager, searching for existing NuGets and installing them.
+You can consume [NuGet packages](https://learn.microsoft.com/en-us/nuget/what-is-nuget) in your Visual Studio protocol or Automation script solution by going to the [NuGet Package Manager](https://learn.microsoft.com/en-us/nuget/quickstart/install-and-use-a-package-in-visual-studio), searching for existing NuGets and installing them.
 
-When DIS compiles the Automation script or protocol, it will extract the required DLLs from the NuGets and save them alongside the protocol.xml/script.xml. To make sure elements using such a protocol can work correctly, those folders with DLLs need to be placed in the *Skyline DataMiner/ProtocolScripts/DllImport* folder.
+When DIS compiles the Automation script or protocol, it will extract the required DLLs from the NuGet packages and save them alongside the protocol.xml/script.xml. To make sure elements using such a protocol can work correctly, those folders with DLLs need to be placed in the *Skyline DataMiner/ProtocolScripts/DllImport* folder.
 
 > [!NOTE]
 > Support for subfolders in the ProtocolScripts folder is introduced in DataMiner 9.6.12 (RN 23565). However, the DllImport subfolder of the ProtocolScripts folder is  only introduced in DataMiner 10.0.10 (RN 26605).
-> 
-> This means that prior to DataMiner 10.0.10, only the Files and ProtocolScripts folder are used as hint paths. For example, when you have the QAction@dllImport value `slc.lib.common\1.1.4.2\lib\net462\SLC.Lib.Common.dll`, DataMiner will try to find the assembly in the location `C:\Skyline DataMiner\ProtocolScripts\slc.lib.common\1.1.4.2\lib\net462\SLC.Lib.Common.dll`. 
+>
+> This means that prior to DataMiner 10.0.10, only the Files and ProtocolScripts folder are used as hint paths. For example, when you have the QAction@dllImport value `slc.lib.common\1.1.4.2\lib\net462\SLC.Lib.Common.dll`, DataMiner will try to find the assembly in the location `C:\Skyline DataMiner\ProtocolScripts\slc.lib.common\1.1.4.2\lib\net462\SLC.Lib.Common.dll`.
 > Starting from DataMiner 10.0.10, the ProtocolScripts\\DllImport folder is added as an additional hint path (which is probed before the Files and ProtocolScripts folders). For the previous example, this means the following path will be tried first:  `C:\Skyline DataMiner\ProtocolScripts\DllImport\slc.lib.common\1.1.4.2\lib\net462\SLC.Lib.Common.dll`.
 >
 > Also note that only from DataMiner 10.0.10 onwards, subfolder paths for assemblies in a .dmprotocol package will be preserved during installation. This means that prior to DataMiner 10.0.10, you have to put the DLLs in the correct subfolder manually if a subfolder structure should be used.
 
-DIS and CI/CD support NuGets of the following types:
+> [!NOTE]
+> DIS and CI/CD requires the PackageReference package management format to be used. The packages.config packages management format is not supported.
 
-- PackageReference
-- Packages.config
-
-Within Skyline, we have an internal NuGet store (<http://devcore3:81/nuget>) where Skyline employees can produce and consume private libraries. You will need to add this store in the Visual Studio options to use it.
+Within Skyline, we have an internal NuGet store (<https://devcore3/nuget>) where Skyline employees can produce and consume private libraries. You will need to [add this store in Visual Studio](https://learn.microsoft.com/en-us/nuget/consume-packages/install-use-packages-visual-studio#package-sources) to use it.
 
 ## Using the Class Library as a NuGet
 
@@ -42,7 +40,7 @@ If you are unsure as to the identification of the license, please contact the OS
 
 ## Avoid NuGets with direct external communication
 
-Try to avoid using NuGets that perform direct external communication (unless using them will drastically improve development times).
+Try to avoid using NuGet packages that perform direct external communication (unless using them will drastically reduce development time).
 
 A NuGet with direct communication will circumvent the use of DataMiner processes. This will cause the following issues:
 
