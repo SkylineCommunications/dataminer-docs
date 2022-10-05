@@ -193,6 +193,27 @@ When you configure a timer to automatically send ping requests to a device, you 
 
 When a parameter feed has an EPM identifier feed as source, from now on, the *Auto-select all* setting will no longer be available.
 
+#### GQI: Ticketing data source now supports server-side filtering [ID_34509]
+
+<!-- MR 10.3.0 - FR 10.2.11 -->
+
+The ticketing data source now supports server-side filtering. This will significantly enhance overall performance when querying tickets via GQI.
+
+Default fields:
+
+- TicketID (int)
+- DataMinerID (int)
+- FullID (string)
+- CreationData (DateTime)
+
+Supported custom field types and filter types:
+
+|Field types | Filter types |
+|------------|--------------|
+| string | contains, not contains, equal, not equal |
+| DateTime, int, long, double | greater than (GT), greater than or equal (GTE), less than (LT), less than or equal (LTE), equal, not equal |
+| GenericEnumEntry<int>, GenericEnumEntry<double> | equal, not equal |
+
 #### Dashboards app / Low-code apps: Enhanced performance of node-edge components [ID_34517]
 
 <!-- MR 10.2.0 [CU8] - FR 10.2.11 -->
