@@ -116,6 +116,12 @@ Connection to {0} via external process succeeds while same connection via SLNet 
 
 From now on, the connection in question will also be forcefully killed.
 
+#### Web apps - Interactive Automation script components: Minor enhancements [ID_34373]
+
+<!-- MR 10.3.0 - FR 10.2.11 -->
+
+A number of minor enhancements have been made to the interactive Automation script components with regard to font styles, button styles, text alignment and button and checkbox height.
+
 #### Dashboards app / Low-Code Apps: GQI queries now support sort operators [ID_34414] [ID_34528] [ID_34479]
 
 <!-- Main Release Version 10.3.0 - Feature Release Version 10.2.11 -->

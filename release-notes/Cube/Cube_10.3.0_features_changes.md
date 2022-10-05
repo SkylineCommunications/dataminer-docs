@@ -755,6 +755,12 @@ Suggestion events and alarm events will now automatically be cleared sooner than
 
 For example, when an alarm was created for an anomalous level increase at 1 PM, and a behavioral change point is detected at 2 PM when the level drops again, then the alarm created at 1 PM will be closed at 2 PM.
 
+#### Trending - Behavioral anomaly detection: Suggestion events will only be created for the most significant changes [ID_34513]
+
+<!-- MR 10.3.0 - FR 10.2.11 -->
+
+Prior to DataMiner 10.2.11/10.3.0, suggestion events are created for all anomalous behavioral changes that do not have alarm monitoring enabled. From DataMiner 10.2.11/10.3.0 onwards, they are only created for the most significant changes. There is also a maximum of 500 suggestion events related to behavioral anomaly detection at the same time.
+
 ### Fixes
 
 #### Visual Overview: Problem when navigating inside EPM cards [ID_32288]
