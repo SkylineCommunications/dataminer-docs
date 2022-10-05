@@ -14,7 +14,13 @@ uid: General_Feature_Release_10.2.12
 
 ### Enhancements
 
-*No enhancements have been added to this version yet.*
+#### Failover: SLDataMiner will no longer be able to reclaim the virtual IP address when the agent goes offline [ID_34458]
+
+<!-- MR 10.2.0 [CU9] - FR 10.2.12 -->
+
+When, in the *DMS.xml* file, the *bruteForceToOffline* option is specified in the `<Failover>` element, SLDataMiner will not be notified when the agent's state goes from online to offline. Up to now, this could lead to SLDataMiner reclaiming the virtual IP address as it was not aware of any state change. Both agents would then incorrectly have the same virtual IP address.
+
+From now on, when the *bruteForceToOffline* option is specified in the *DMS.xml* file, SLDataMiner will be asked to set the agent's state to offline and to not reclaim the virtual IP address before it has been released.
 
 ### Fixes
 
@@ -34,4 +40,4 @@ When a parameter of a DVE element exported as a standalone parameter was partial
 
 <!-- MR 10.2.0 [CU9] - FR 10.2.12 -->
 
-In Visio pages displayed in web apps, in some cases, new values would incorrectly be added to listboxes each time those listboxes got updated.
+In Visio pages displayed in web apps, new values would incorrectly be added to listboxes each time those listboxes got updated.
