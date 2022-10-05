@@ -116,7 +116,13 @@ Connection to {0} via external process succeeds while same connection via SLNet 
 
 From now on, the connection in question will also be forcefully killed.
 
-#### Dashboards app / Low-Code Apps: GQI queries now support sort operators [ID_34414] [ID_34528]
+#### Web apps - Interactive Automation script components: Minor enhancements [ID_34373]
+
+<!-- MR 10.3.0 - FR 10.2.11 -->
+
+A number of minor enhancements have been made to the interactive Automation script components with regard to font styles, button styles, text alignment and button and checkbox height.
+
+#### Dashboards app / Low-Code Apps: GQI queries now support sort operators [ID_34414] [ID_34528] [ID_34479]
 
 <!-- Main Release Version 10.3.0 - Feature Release Version 10.2.11 -->
 
@@ -166,15 +172,15 @@ From now on, when you add a protocol filter to a component without specifying an
 
 A new *IsActive* column has been added to *Get alarms* data source. This column will be set to true when the alarm is an active alarm.
 
-#### Protocols - Timers: Specifying a delay between two consecutive ping packets [ID_34463]
+#### Timers: Specifying an interval between two consecutive ping packets [ID_34463] [ID_34549]
 
 <!-- Main Release Version 10.3.0 - Feature Release Version 10.2.11 -->
 
-When you configure a timer to automatically send ping requests to a device, you can now use either the `delay` option or the `delayPid` option to specify the delay in ms between two consecutive ping packets.
+When you configure a timer to automatically send ping requests to a device, you can now use either the `interval` option or the `intervalPid` option to specify the interval in ms between two consecutive ping packets.
 
-- `delay`: With this option, you can specify a fixed delay in ms between two consecutive ping packets. This should be used when the device does not respond to all ping requests when they are sent without any delay.
+- `interval`: With this option, you can specify a fixed interval in ms between two consecutive ping packets. This should be used when the device does not respond to all ping requests when they are sent without any interval.
 
-- `delayPID`: Instead of specifying a fixed delay value ("delay=x"), it is also possible to specify a dynamic value stored in a parameter. Note that if you specify both a fixed and a dynamic value, the latter will take precedence.
+- `intervalPID`: Instead of specifying a fixed interval value ("interval=x"), it is also possible to specify a dynamic value stored in a parameter. Note that if you specify both a fixed and a dynamic value, the latter will take precedence.
 
     The value in the referred parameters must not be 0 or uninitialized. Otherwise, 0, the hard-coded value on the timer, or the last valid value will be used by default. The referred parameters must be of numeric type.
 
@@ -186,6 +192,12 @@ When you configure a timer to automatically send ping requests to a device, you 
 <!-- MR 10.3.0 - FR 10.2.11 -->
 
 When a parameter feed has an EPM identifier feed as source, from now on, the *Auto-select all* setting will no longer be available.
+
+#### Dashboards app / Low-code apps: Enhanced performance of node-edge components [ID_34517]
+
+<!-- MR 10.2.0 [CU8] - FR 10.2.11 -->
+
+Because of a number of enhancements, overall performance of node-edge components has improved, especially on large systems.
 
 ### Fixes
 
@@ -394,6 +406,12 @@ When the GetBooking or GetBookings method was called via SOAP, in some cases, a 
 
 During a midnight synchronization, in some cases, ResourceManager subscriptions could incorrectly get duplicated, causing `200+ clients connected to this agent` errors to appear in the Alarm Console.
 
+#### Problem with SLDMS while a connection with another agent was being established or cleaned up [ID_34452]
+
+<!-- Main Release Version 10.1.0 [CU20]/10.2.0 [CU8] - Feature Release Version 10.2.11 -->
+
+In some rare cases, an error could occur in SLDMS while a connection with another agent was being established or cleaned up.
+
 #### Web apps: URL option 'subheader=' would no longer work [ID_34456]
 
 <!-- MR 10.1.0 [CU20]/10.2.0 [CU8] - FR 10.2.11 -->
@@ -424,6 +442,16 @@ When Alerter had been configured to play a sound when alarms matched a certain f
 
 In an embedded visual overview, in some cases, list box items would not be displayed correctly.
 
+#### Service impact of an alarm could be incorrect [ID_34475]
+
+<!-- Main Release Version 10.1.0 [CU20]/10.2.0 [CU8] - Feature Release Version 10.2.11 -->
+
+In some cases, the service impact of an alarm would be incorrect
+
+- when the column parameter was partially included with a primary key filter without a wildcard and any other filter (primary filter with a wildcard, display key filter with or without a wildcard), or
+
+- when the row included in the service via a filter is updated via an NT_SET_ROW call that triggers both a new alarm and a display key change.
+
 #### Dashboards app / Low-Code Apps: Problem with slider ranges [ID_34477]
 
 <!-- MR 10.1.0 [CU20]/10.2.0 [CU8] - FR 10.2.11 -->
@@ -445,6 +473,12 @@ When a trap binding of type "IP Address" came in while the SLSNMPManager SNMPv3 
 After you had launched an upgrade, in some cases, the upgrade process displayed in DataMiner Taskbar Utility would lag behind and DataMiner Taskbar Utility would use a considerable amount of memory.
 
 This fixes a [known issue](xref:KI_Taskbar_Utility_performance_issue_while_agents_are_being_upgraded).
+
+#### Cassandra cluster: Memory leak when real-time trend data was requested via a paged database request [ID_34514]
+
+<!-- MR 10.2.0 [CU8] - FR 10.2.11 [CU0] -->
+
+When, on a Cassandra cluster, real-time trend data was requested via a paged database request, in some cases, the cookie would incorrectly not cleaned, leading to increased memory consumption.
 
 #### Dashboards / Low-Code Apps: Changing a GQI query would not cause a table to get updated when column filters were applied [ID_34520]
 

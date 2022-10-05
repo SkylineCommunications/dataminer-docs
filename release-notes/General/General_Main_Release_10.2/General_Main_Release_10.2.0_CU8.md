@@ -119,7 +119,7 @@ A number of enhancements have been made to the procedure called to determine whe
 
 #### DataMiner Cube - System Center: New DataMiner log file 'SLRADIUS.txt' [ID_34396]
 
-<!-- MR 10.2.0 [CU8] - FR 10.2.11 -->
+<!-- MR 10.2.0 [CU8] - FR 10.2.11 [CU0] -->
 
 In the *Logging* section of *System Center*, you can now also consult the *SLRADIUS.txt* log file.
 
@@ -128,6 +128,12 @@ In the *Logging* section of *System Center*, you can now also consult the *SLRAD
 <!-- Main Release Version 10.1.0 [CU20]/10.2.0 [CU8] - Feature Release Version 10.2.11 -->
 
 The `Repair DB.bat` script, located in the `C:\Skyline DataMiner\Tools` folder, now also supports MySQL Server 5.5.
+
+#### Dashboards app / Low-code apps: Enhanced performance of node-edge components [ID_34517]
+
+<!-- MR 10.2.0 [CU8] - FR 10.2.11 -->
+
+Because of a number of enhancements, overall performance of node-edge components has improved, especially on large systems.
 
 ### Fixes
 
@@ -380,6 +386,12 @@ When an alarm tree with more than 1,000 alarms was migrated from the *active-ala
 
 During a midnight synchronization, in some cases, ResourceManager subscriptions could incorrectly get duplicated, causing `200+ clients connected to this agent` errors to appear in the Alarm Console.
 
+#### Problem with SLDMS while a connection with another agent was being established or cleaned up [ID_34452]
+
+<!-- Main Release Version 10.1.0 [CU20]/10.2.0 [CU8] - Feature Release Version 10.2.11 -->
+
+In some rare cases, an error could occur in SLDMS while a connection with another agent was being established or cleaned up.
+
 #### Web apps: URL option 'subheader=' would no longer work [ID_34456]
 
 <!-- Main Release Version 10.1.0 [CU20]/10.2.0 [CU8] - Feature Release Version 10.2.11 -->
@@ -410,6 +422,16 @@ When you opened the Dashboards app via a Dashboard Gateway server, in some cases
 
 When Alerter had been configured to play a sound when alarms matched a certain filter, it could leak memory.
 
+#### Service impact of an alarm could be incorrect [ID_34475]
+
+<!-- Main Release Version 10.1.0 [CU20]/10.2.0 [CU8] - Feature Release Version 10.2.11 -->
+
+In some cases, the service impact of an alarm would be incorrect
+
+- when the column parameter was partially included with a primary key filter without a wildcard and any other filter (primary filter with a wildcard, display key filter with or without a wildcard), or
+
+- when the row included in the service via a filter is updated via an NT_SET_ROW call that triggers both a new alarm and a display key change.
+
 #### Dashboards app / Low-Code Apps: Problem with slider ranges [ID_34477]
 
 <!-- MR 10.1.0 [CU20]/10.2.0 [CU8] - FR 10.2.11 -->
@@ -431,3 +453,15 @@ When a trap binding of type "IP Address" came in while the SLSNMPManager SNMPv3 
 After you had launched an upgrade, in some cases, the upgrade process displayed in DataMiner Taskbar Utility would lag behind and DataMiner Taskbar Utility would use a considerable amount of memory.
 
 This fixes a [known issue](xref:KI_Taskbar_Utility_performance_issue_while_agents_are_being_upgraded).
+
+#### Cassandra cluster: Memory leak when real-time trend data was requested via a paged database request [ID_34514]
+
+<!-- MR 10.2.0 [CU8] - FR 10.2.11 [CU0] -->
+
+When, on a Cassandra cluster, real-time trend data was requested via a paged database request, in some cases, the cookie would incorrectly not cleaned, leading to increased memory consumption.
+
+#### DataMiner Cube - Alarm Console : Problem when loading an alarm tab [ID_34539]
+
+<!-- MR 10.2.0 [CU8] - FR 10.2.11 -->
+
+When a new alarm tab with a large number of correlated alarms was being loaded, in some cases, an exception could be thrown and the alarm tab would keep on loading.

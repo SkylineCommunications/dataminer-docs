@@ -213,6 +213,12 @@ In some cases, DataMiner Cube could become unresponsive when loading an alarm ta
 
 When, in an EPM filter box, you selected a field, selected another field, and then selected the first field again, in some cases, the diagrams linked to those two fields would incorrectly get mixed up.
 
+#### Problem with SLDMS while a connection with another agent was being established or cleaned up [ID_34452]
+
+<!-- Main Release Version 10.1.0 [CU20]/10.2.0 [CU8] - Feature Release Version 10.2.11 -->
+
+In some rare cases, an error could occur in SLDMS while a connection with another agent was being established or cleaned up.
+
 #### Web apps: URL option 'subheader=' would no longer work [ID_34456]
 
 <!-- Main Release Version 10.1.0 [CU20]/10.2.0 [CU8] - Feature Release Version 10.2.11 -->
@@ -236,6 +242,16 @@ When the GetBooking or GetBookings method was called via SOAP, in some cases, a 
 <!-- Main Release Version 10.1.0 [CU20]/10.2.0 [CU8] - Feature Release Version 10.2.11 -->
 
 When Alerter had been configured to play a sound when alarms matched a certain filter, it could leak memory.
+
+#### Service impact of an alarm could be incorrect [ID_34475]
+
+<!-- Main Release Version 10.1.0 [CU20]/10.2.0 [CU8] - Feature Release Version 10.2.11 -->
+
+In some cases, the service impact of an alarm would be incorrect
+
+- when the column parameter was partially included with a primary key filter without a wildcard and any other filter (primary filter with a wildcard, display key filter with or without a wildcard), or
+
+- when the row included in the service via a filter is updated via an NT_SET_ROW call that triggers both a new alarm and a display key change.
 
 #### Dashboards app / Low-Code Apps: Problem with slider ranges [ID_34477]
 

@@ -659,6 +659,18 @@ In Visual Overview, it is now possible to retrieve the contributing booking ID o
 
 Shape data items of type *NavigatePage* can now have values that include dynamic placeholders referring to session variables, parameters, etc.
 
+#### Visual Overview: New OverridePageName option [ID_34476]
+
+<!-- MR 10.3.0 - FR 10.2.11 -->
+
+From now on, you can override a Visio page name by specifying an "OverridePageName=*NewPageName*" option in a page-level shape data field of type *Options*. When you do so, the page in question will be handled as if its name were *NewPageName*.
+
+> [!NOTE]
+>
+> - Always use the actual page name when referring to a particular page in options like e.g. *VdxPage*, *NavigatePage*, *InlineVdx*, etc. Using a page override when referring to a page will not work.
+> - This feature allows you to define duplicate page names. When you do so, take into account that components that display Visio page names may then also display those duplicate page names.
+> - Visio files used in web apps do not support the OverridePageName option.
+
 #### Visual Overview: Shape data items of type 'ParametersSummary' can now have values that include dynamic placeholders referring to session variables [ID_34483]
 
 <!-- MR 10.3.0 - FR 10.2.11 -->
@@ -754,6 +766,12 @@ Because of a number of enhancements, overall performance has increased when draw
 Suggestion events and alarm events will now automatically be cleared sooner than 2 hours after their creation or last update when a new behavioral change is detected that ends the previous anomalous behavioral change.
 
 For example, when an alarm was created for an anomalous level increase at 1 PM, and a behavioral change point is detected at 2 PM when the level drops again, then the alarm created at 1 PM will be closed at 2 PM.
+
+#### Trending - Behavioral anomaly detection: Suggestion events will only be created for the most significant changes [ID_34513]
+
+<!-- MR 10.3.0 - FR 10.2.11 -->
+
+Prior to DataMiner 10.2.11/10.3.0, suggestion events are created for all anomalous behavioral changes that do not have alarm monitoring enabled. From DataMiner 10.2.11/10.3.0 onwards, they are only created for the most significant changes. There is also a maximum of 500 suggestion events related to behavioral anomaly detection at the same time.
 
 ### Fixes
 

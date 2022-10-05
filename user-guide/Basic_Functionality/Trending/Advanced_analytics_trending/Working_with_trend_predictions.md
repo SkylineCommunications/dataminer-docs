@@ -53,11 +53,11 @@ Prior to DataMiner 10.0.12:
 
 - Full-term prediction, which is based on either daily data points or a server-side aggregated set of one-hour data points, is also displayed with long dashes. (Available from DataMiner 10.0.11 onwards.)
 
-If one or more of the trend prediction types are not available, a warning icon is displayed. If you hover over that icon, a tooltip will show which type or types cannot be displayed. If none of the trend prediction types are available, the tooltip will explain why.
+To select which trend prediction type is used, from DataMiner 10.2.9/10.3.0 onwards, right-click the trend graph, select *Trend prediction* in the right-click menu, and then select the desired prediction type. In earlier DataMiner versions, use the drop-down list in the top-right corner.
 
-To select which trend prediction type is used, from DataMiner 10.2.9/10.3.0 onwards, right-click the trend graph, select *Trend prediction* in the context menu, and then select the desired prediction type. In earlier DataMiner versions, use the drop-down list in the top-right corner.
+From DataMiner 10.2.9/10.3.0 onwards, if one or more of the trend prediction types are not available, they will no longer appear in the right-click menu. In earlier DataMiner versions, a warning icon is displayed. If you hover over that icon, a tooltip will show which type or types cannot be displayed. If none of the trend prediction types are available, the tooltip will explain why.
 
-You can either select one of the available trend prediction types, or select "Auto". Auto mode will automatically switch between the different trend prediction types as you zoom in and out on the graph. Whenever this automatic switch occurs, the selector in the top-right corner will blink.
+You can either select one of the available trend prediction types, or select "Auto". Auto mode will automatically switch between the different trend prediction types as you zoom in and out on the graph.
 
 > [!NOTE]
 >
