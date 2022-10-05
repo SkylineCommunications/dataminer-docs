@@ -4,9 +4,9 @@ uid: Setting_up_HTTPS_on_a_DMA
 
 # Setting up HTTPS on a DMA
 
-To set up your own HTTPS web server, you must first install an SSL/TLS certificate and set up an HTTPS binding. In addition, the auto-detection settings for DataMiner must be correctly configured to avoid connection issues.
+To securely host your DataMiner Agent, we recommended that you make sure HTTPS connections are required. To do so, you first have to install an SSL/TLS certificate and set up an HTTPS binding. Optionally, specify the auto-detection settings for DataMiner to avoid connection issues when traffic between the DataMiner nodes is filtered (e.g. by a firewall).
 
-## Installing the HTTPS binding in IIS
+## Configuring the HTTPS binding in IIS
 
 1. Open IIS manager. It can be found under *Administrative Tools* in the *Control Panel* of your computer.
 1. In the *Connections* pane on the left, select the computer name, and double-click *Server Certificates* in the pane on the right.
@@ -26,7 +26,48 @@ To set up your own HTTPS web server, you must first install an SSL/TLS certifica
 > [!TIP]
 > It is good practice to completely disable **HTTP** by removing the HTTP binding, meaning that only HTTPS traffic will be accepted. Once the binding is removed, you can close port 80 in the Windows Firewall.
 
-## Setting up redirection of all HTTP traffic to HTTPS
+## Configuring HTTPS in DataMiner
+
+To configure a server to use HTTPS, you need to add a line to the *MaintenanceSettings.xml* file.
+
+To do so:
+
+1. Stop the DataMiner software.
+
+1. On a DataMiner Agent, open *C:\\Skyline DataMiner\\MaintenanceSettings.xml*.
+
+1. Add an HTTPS tag with the necessary attributes. For example:
+
+    ```xml
+    <MaintenanceSettings>
+      ...
+      <HTTPS enabled="true" name="foo.skyline.local"/>
+      ...
+    </MaintenanceSettings>
+    ```
+
+    The HTTPS tag has to contain the following attributes:
+
+    - **enabled**: Enables HTTPS when set to "true".
+    - **name**: Must be set to the name matching the *Common Name* (CN) or one of the *Subject Alternative Names* (SAN) of the certificate. If it is a wildcard certificate, the name must match the mask defined in the certificate (e.g. "\*.skyline.local"). For example, "dma01.skyline.be" matches the wildcard certificate for "*.skyline.be".
+
+      This name **should also be configured in the DNS server** pointing to the IP address of the DMA, so that the DMA can be reached using the configured name.
+
+1. Save the file and restart the DMA.
+
+> [!TIP]
+> See also:
+>
+> - [Securing the DataMiner web server](xref:Webserver_security)
+> - [Disabling legacy SSL/TLS protocols](xref:Disabling_legacy_protocols)
+> - [TLS encryption in Cassandra](xref:Security_Cassandra_TLS)
+> - [Securing the Elasticsearch database](xref:Security_Elasticsearch)
+
+## Configuring HTTP to HTTPS redirection
+
+This is **optional**.
+
+Redirecting HTTP traffic to HTTPS is recommended when external systems (or clients) are still connecting to DataMiner over HTTP and cannot be updated easily. A redirect enables a smooth transition to HTTPS without breaking external systems or compromising on security.
 
 1. Install URL Rewrite 2.0 from the following website: <http://www.iis.net/downloads/microsoft/url-rewrite>
 
@@ -74,7 +115,9 @@ To set up your own HTTPS web server, you must first install an SSL/TLS certifica
 
 ## Specifying auto-detection information for an inter-DMA HTTPS connection
 
-If the default web server on the server has been modified to only allow HTTPS traffic, there could be problems with the auto-detection of connection settings.
+This is **optional**.
+
+If the default web server on the server has been modified to **only allow HTTPS traffic**, there could be problems with the auto-detection of connection settings.
 
 To avoid this, it is possible to specify alternative auto-detection information via the *Edit Connection Uris* functionality in the SLNetClientTest tool. However, note that this is an advanced system administration tool that should be used with extreme care. See [Editing the connection string between two DataMiner Agents](xref:SLNetClientTest_editing_connection_string).
 
@@ -91,43 +134,6 @@ The following auto-detect methods can be specified:
 
 > [!NOTE]
 > It depends on the HTTP/HTTPS configuration in IIS whether the above configuration is required. For a server accepting both HTTP and HTTPS, it is normally not necessary.
-
-## Configuring HTTPS settings in MaintenanceSettings.xml
-
-To configure a server to use HTTPS, a line needs to be added to the *MaintenanceSettings.xml* file.
-
-To do so:
-
-1. Stop the DataMiner software.
-
-1. On a DataMiner Agent, open *C:\\Skyline DataMiner\\MaintenanceSettings.xml*.
-
-1. Add an HTTPS tag with the necessary attributes. For example:
-
-    ```xml
-    <MaintenanceSettings>
-      ...
-      <HTTPS enabled="true" name="foo.skyline.local"/>
-      ...
-    </MaintenanceSettings>
-    ```
-
-    The HTTPS tag has to contain the following attributes:
-
-    - **enabled**: Enables HTTPS when set to "true".
-    - **name**: Must be set to the name matching the *Common Name* (CN) or one of the *Subject Alternative Names* (SAN) of the certificate. If it is a wildcard certificate, the name must match the mask defined in the certificate (e.g. "\*.skyline.local"). For example, "dma01.skyline.be" matches the wildcard certificate for "*.skyline.be".
-
-      This name **should also be configured in the DNS server** pointing to the IP address of the DMA, so that the DMA can be reached using the configured name.
-
-1. Save the file and restart the DMA.
-
-> [!TIP]
-> See also:
->
-> - [Securing the DataMiner web server](xref:Webserver_security)
-> - [Disabling legacy SSL/TLS protocols](xref:Disabling_legacy_protocols)
-> - [TLS encryption in Cassandra](xref:Security_Cassandra_TLS)
-> - [Securing the Elasticsearch database](xref:Security_Elasticsearch)
 
 ## Common issues after configuring HTTPS
 
