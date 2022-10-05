@@ -364,7 +364,7 @@ However, in case you encounter issues with such filters because of this new filt
 
 ### HTTPS
 
-See [Configuring HTTPS settings in MaintenanceSettings.xml](xref:Setting_up_HTTPS_on_a_DMA#configuring-https-settings-in-maintenancesettingsxml).
+See [Configuring HTTPS settings in DataMiner](xref:Setting_up_HTTPS_on_a_DMA#configuring-https-in-dataminer).
 
 ### Logging.MaxSize
 
