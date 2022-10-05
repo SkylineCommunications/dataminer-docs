@@ -639,7 +639,7 @@ Now, this option has been replaced by a triple-state option. You can now indicat
 
 When an EPM identifier from an EPM feed is fed to a parameter feed, it will now be possible to drag multiple parameters onto the parameter feed in order to use them as filters.
 
-#### Dashboards app / Low-Code Apps: GQI queries now support sort operators [ID_34414] [ID_34528]
+#### Dashboards app / Low-Code Apps: GQI queries now support sort operators [ID_34414] [ID_34528] [ID_34479]
 
 <!-- MR 10.3.0 - FR 10.2.11 -->
 

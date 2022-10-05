@@ -116,7 +116,7 @@ Connection to {0} via external process succeeds while same connection via SLNet 
 
 From now on, the connection in question will also be forcefully killed.
 
-#### Dashboards app / Low-Code Apps: GQI queries now support sort operators [ID_34414] [ID_34528]
+#### Dashboards app / Low-Code Apps: GQI queries now support sort operators [ID_34414] [ID_34528] [ID_34479]
 
 <!-- Main Release Version 10.3.0 - Feature Release Version 10.2.11 -->
 
@@ -166,15 +166,15 @@ From now on, when you add a protocol filter to a component without specifying an
 
 A new *IsActive* column has been added to *Get alarms* data source. This column will be set to true when the alarm is an active alarm.
 
-#### Protocols - Timers: Specifying a delay between two consecutive ping packets [ID_34463]
+#### Timers: Specifying an interval between two consecutive ping packets [ID_34463] [ID_34549]
 
 <!-- Main Release Version 10.3.0 - Feature Release Version 10.2.11 -->
 
-When you configure a timer to automatically send ping requests to a device, you can now use either the `delay` option or the `delayPid` option to specify the delay in ms between two consecutive ping packets.
+When you configure a timer to automatically send ping requests to a device, you can now use either the `interval` option or the `intervalPid` option to specify the interval in ms between two consecutive ping packets.
 
-- `delay`: With this option, you can specify a fixed delay in ms between two consecutive ping packets. This should be used when the device does not respond to all ping requests when they are sent without any delay.
+- `interval`: With this option, you can specify a fixed interval in ms between two consecutive ping packets. This should be used when the device does not respond to all ping requests when they are sent without any interval.
 
-- `delayPID`: Instead of specifying a fixed delay value ("delay=x"), it is also possible to specify a dynamic value stored in a parameter. Note that if you specify both a fixed and a dynamic value, the latter will take precedence.
+- `intervalPID`: Instead of specifying a fixed interval value ("interval=x"), it is also possible to specify a dynamic value stored in a parameter. Note that if you specify both a fixed and a dynamic value, the latter will take precedence.
 
     The value in the referred parameters must not be 0 or uninitialized. Otherwise, 0, the hard-coded value on the timer, or the last valid value will be used by default. The referred parameters must be of numeric type.
 

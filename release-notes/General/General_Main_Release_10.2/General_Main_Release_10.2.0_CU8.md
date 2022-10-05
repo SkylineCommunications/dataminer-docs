@@ -459,3 +459,9 @@ This fixes a [known issue](xref:KI_Taskbar_Utility_performance_issue_while_agent
 <!-- MR 10.2.0 [CU8] - FR 10.2.11 [CU0] -->
 
 When, on a Cassandra cluster, real-time trend data was requested via a paged database request, in some cases, the cookie would incorrectly not cleaned, leading to increased memory consumption.
+
+#### DataMiner Cube - Alarm Console : Problem when loading an alarm tab [ID_34539]
+
+<!-- MR 10.2.0 [CU8] - FR 10.2.11 -->
+
+When a new alarm tab with a large number of correlated alarms was being loaded, in some cases, an exception could be thrown and the alarm tab would keep on loading.

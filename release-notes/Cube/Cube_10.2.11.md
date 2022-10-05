@@ -228,3 +228,9 @@ In some cases, DataMiner Cube could become unresponsive when loading an alarm ta
 <!-- Main Release Version 10.1.0 [CU20]/10.2.0 [CU8] - Feature Release Version 10.2.11 -->
 
 When, in an EPM filter box, you selected a field, selected another field, and then selected the first field again, in some cases, the diagrams linked to those two fields would incorrectly get mixed up.
+
+#### DataMiner Cube - Alarm Console : Problem when loading an alarm tab [ID_34539]
+
+<!-- MR 10.2.0 [CU8] - FR 10.2.11 -->
+
+When a new alarm tab with a large number of correlated alarms was being loaded, in some cases, an exception could be thrown and the alarm tab would keep on loading.
