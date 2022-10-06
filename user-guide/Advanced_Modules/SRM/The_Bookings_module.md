@@ -24,7 +24,7 @@ The list can be customized as follows:
 
 - To apply a custom column configuration, see [Creating a new column configuration](#creating-a-new-column-configuration) and [Loading the default column configuration](#loading-the-default-column-configuration).
 
-- From DataMiner 9.6.13 onwards, the color displayed in the *Color* column of the list can be customized using the *Visual.Background* property of bookings. In DataMiner 10.0.0/10.0.2, this property is renamed to *VisualBackground*. See [Customizing the color of booking blocks](xref:Embedding_a_Resource_Manager_component#customizing-the-color-of-booking-blocks).
+- From DataMiner 9.6.13 onwards, the color displayed in the *Visual.Background* property column of the list using column type *Color* can be customized using the *Visual.Background* property of bookings. In DataMiner 10.0.0/10.0.2, this property is renamed to *VisualBackground*. See [Customizing the color of booking blocks](xref:Embedding_a_Resource_Manager_component#customizing-the-color-of-booking-blocks).
 
 > [!NOTE]
 > When an item is selected in the list, a session variable is populated with the booking ID, which can be of use for Visio drawings.
