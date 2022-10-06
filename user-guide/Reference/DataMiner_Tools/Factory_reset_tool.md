@@ -11,6 +11,9 @@ From DataMiner 10.0.12 onwards, this tool is available on each DMA server in the
 > [!CAUTION]
 > There is no automatic backup of the DMA before the factory reset is performed. Make sure you have taken any backups you need before you run this tool.
 
+> [!NOTE]
+> The factory reset will also remove all known users of the DataMiner System, so you will only be able to log in with the built-in Administrator account afterwards.
+
 Optionally, you can run the tool with the `–y` input argument in order to skip prompts that ask you for permission to run specific actions.
 
 From DataMiner 10.2.0/10.2.2 onwards, you can also run it with the `-ho [hostname]` argument to specify the hostname. This is especially useful when resetting a DataMiner Agent that only allows you to connect via HTTPS.
