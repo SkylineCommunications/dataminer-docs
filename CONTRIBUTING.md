@@ -590,8 +590,6 @@ To be able to make a local test build, you need to have DocFX installed. DocFX i
 
 #### Installing and configuring DocFX
 
-To install DocFX on a Microsoft Windows machine:
-
 1. Go to <https://github.com/dotnet/docfx/releases>, and download the latest version of the `docfx.zip` package (e.g. version 2.59.4).
 
     > [!CAUTION]
@@ -626,39 +624,40 @@ To install DocFX on a Microsoft Windows machine:
 > [!TIP]
 > Alternative ways to install DocFX can be found on the [DocFX website](https://dotnet.github.io/docfx/tutorial/docfx_getting_started.html#2-use-docfx-as-a-command-line-tool).
 
-#### Making a test build
+#### First-time setup
 
-If you have added files, cross-references, images, and so on, it can be useful to make a local test build to check if you made any mistakes. If everything is OK, you will get no warnings. Otherwise, you can check the warnings to find out where your mistakes are.
+Before you make your first test build, we recommend the first-time setup detailed below. If you do not do this, you will still be able to make a test build, but there may be many warnings in the terminal, and some pages may not be included in the build.
 
-##### First time setup
+You only need to do this setup once.
 
-The first time you run a test build, the following setup is needed:
+1. Check if your fork is up to date with the latest changes from the main dataminer-docs repository (See [Make sure your fork is up to date](#make-sure-your-fork-is-up-to-date).
 
-1. First, check if you are working on a recent version of the dataminer-docs repository [(See: Make sure your fork is up to date)](#make-sure-your-fork-is-up-to-date).
-
-1. Make sure you have Visual Studio (2017 or later) installed.
+1. Make sure you have Visual Studio 2017 or higher installed.
 
 1. Download and install [Build Tools](https://aka.ms/vs/17/release/vs_BuildTools.exe).
 
-1. Go to your file explorer and open the following path: *C:\Users\...\Documents\GitHub\dataminer-docs\src\DataMiner\Dataminer.sln*.
+1. Go to the folder containing your dataminer-docs repository.
 
-   1. Open the SLN file with Visual Studio.
+   > [!TIP]
+   > To quickly find this folder from Visual Studio Code, right-click a folder from the repository in the Explorer tab and select *Reveal in File Explorer*.
 
-   1. Go to the solution explorer in the top right corner and select the solution node. Now right-click and "Restore NuGet Packages".
+   1. In the `\dataminer-docs\src\DataMiner\` subfolder open the folder *Dataminer.sln* with Visual Studio.
+
+   1. Go to the solution explorer in the top-right corner, right-click the solution node and select *Restore NuGet Packages*.
 
       ![Restore Nuget Packages](~/user-guide/images/Contributing_Solution_Node.png)
 
-   1. Build by holding CTR+SHIFT+b.
+   1. Start a build by pressing CTR+SHIFT+b.
 
-   Now repeat these steps for *Code Library.sln*, found here: *C:\Users\...\Documents\GitHub\dataminer-docs\src\Base Class Library\Code Library.sln*.
+   1. Repeat the steps above for the file *Code Library.sln* in the `dataminer-docs\src\Base Class Library\` subfolder of the repository.
 
-1. Open Visual Studio Code and go to *Terminal > New Terminal*.
+1. Open Visual Studio Code and go to *Terminal* > *New Terminal*.
 
-    Enter `docfx metadata -f`. If everything is OK, you will get no warnings.
+1. In the terminal, enter `docfx metadata -f`.
 
-##### Generating a test build in Visual Studio Code
+   If everything is OK, you will get no warnings.
 
-When you have finished making a series of changes to documentation in Visual Studio Code, do the following to make a test build on your local machine.
+#### Making a test build
 
 1. If no Terminal pane is open in Visual Studio Code, go to *Terminal > New Terminal*.
 
