@@ -47,3 +47,7 @@ If the Generic DOCSIS CM Collector connector could not find the Passive Relation
 #### Parameters based on system description not filled in in CCAP table [ID_34556]
 
 In the CCAP table, it could occur that parameters based on the system description were not filled in.
+
+#### QAM DS Channel: Missing decimals in MER and packet ratio columns [ID_34560]
+
+Up to now, the MER and packet ratio columns for the QAM DS Channel did not show any decimals even when decimals were available for a particular KPI.
