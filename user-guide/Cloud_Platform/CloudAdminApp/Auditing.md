@@ -1,8 +1,8 @@
 ---
-uid: Auditing
+uid: DCP_Auditing
 ---
 
-# Auditing
+# DCP Audit logs
 
 >[!NOTE]
 > The *Audit* page is only visible for users with the `Owner` or `Admin` role on the Organization.
