@@ -55,13 +55,12 @@ The list can be customized as follows:
 
         - In the *Filter by type* section, indicate which type of columns you want to choose from: *Bookings* (or *Reservations* in earlier DataMiner versions) or *Properties*.
 
-2. Right-click in the list header (or click the list’s hamburger menu) and select *Save current column configuration*.
-
+2. Right-click in the list header and select *Save current column configuration*.
     When the module is opened again, this column configuration will be displayed. If you do not apply this last step, the column configuration will be reset when the module is closed.
 
 #### Loading the default column configuration
 
-- Right-click in the list header (or click the list’s hamburger menu), select *Load default column configuration*, and select the configuration you want to load.
+- Right-click in the list header, select *Load default column configuration*, and select the configuration you want to load.
 
 ### Bookings timeline
 
