@@ -2,11 +2,10 @@
 uid: DCP_Auditing
 ---
 
-# DCP Audit logs
+# Consulting DCP audit logs
 
->[!NOTE]
-> The *Audit* page is only visible for users with the `Owner` or `Admin` role on the Organization.
+If you have the Owner or Admin role for an organization on DCP, you can consult DCP audit logs on the *Organization* > *Audit* page in the DCP app.
 
-In the Admin app you can find the *Audit* page for your organization. Here you will see an overview of all the security related events on DCP that have happened on all Cloud Connected systems within your Organization.
+This page shows an overview of all the security-related events on DCP that have happened for all cloud-connected systems within your organization.
 
-To make sure that you can quickly find your way around in the vast amount of logs, you have some filters available at the top.
+To quickly find something in the potentially vast number of logs, use the filters at the top of the page.

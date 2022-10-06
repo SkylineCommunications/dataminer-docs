@@ -35,4 +35,4 @@ To do so:
 > Regenerating primary or secondary keys can also be done from the side panel.
 
 > [!NOTE]
-> Audit information about DCP keys is available on the *Organization* > *Audit* page (see [DCP Audit Logs](xref:DCP_Auditing)).
+> Audit information about DCP keys is available on the *Organization* > *Audit* page (see [Consulting DCP audit logs](xref:DCP_Auditing)).
