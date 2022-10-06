@@ -24,13 +24,9 @@ To enable authentication in Elasticsearch 6.8.X:
 
 1. Execute the **elasticsearch-setup-passwords.bat** script (as superuser) with the *interactive* argument.
 
-### [Windows Server](#tab/setup-passwords-1)
+   - On a **Windows** server, this is located in `C:\Program Files\Elasticsearch\bin\elasticsearch-setup-passwords.bat interactive`
 
-Located in `C:\Program Files\Elasticsearch\bin\elasticsearch-setup-passwords.bat interactive`
-
-### [Linux](#tab/setup-passwords-2)
-
-Located in `/usr/share/elasticsearch/bin/elasticsearch-setup-passwords interactive`
+   - On a **Linux** server, this is located in `/usr/share/elasticsearch/bin/elasticsearch-setup-passwords interactive`
 
 1. When the script prompts you to do so, enter the new credentials for several users. Ideally these are random-generated, strong passwords.
 
