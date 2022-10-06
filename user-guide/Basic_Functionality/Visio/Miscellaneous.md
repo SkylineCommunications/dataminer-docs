@@ -55,3 +55,5 @@ DataMiner Visual Overview supports a host of different features, and there are m
 - [Setting the background color of a static shape](xref:Setting_the_background_color_of_a_static_shape)
 
 - [Configuring a shape's text wrapping and trimming](xref:Configuring_text_wrapping_and_trimming)
+
+- [Configuring a page to execute a script automatically](xref:Configuring_a_page_to_execute_a_script_automatically)
