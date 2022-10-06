@@ -18,7 +18,7 @@ The Admin app is intended for the management of your cloud-connected DataMiner S
 
 - [Controlling cloud feed data offloads](xref:Controlling_cloudfeed_data_offloads)
 
-- [Auditing](xref:Auditing)
+- [DCP Audit Logs](xref:DCP_Auditing)
 
 - [Managing the nodes of a cloud-connected DMS](xref:Managing_cloud-connected_nodes)
 

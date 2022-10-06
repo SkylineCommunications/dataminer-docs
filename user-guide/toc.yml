@@ -2572,8 +2572,8 @@
             topicUID: Changing_the_role_of_a_DCP_user
         - name: Controlling remote access
           topicUid: Controlling_remote_access
-        - name: Auditing
-          topicUid: Auditing
+        - name: DCP Audit Logs
+          topicUid: DCP_Auditing
         - name: Granting admin consent for Teams actions
           topicUid: Granting_admin_consent
         - name: Controlling cloud feed data offloads
