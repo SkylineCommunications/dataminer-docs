@@ -7,8 +7,7 @@ uid: Configuring_a_page_to_update_a_session_variable_when_another_session_variab
 From DataMiner 9.5.2 onwards, it is possible to have an open Visual Overview page update a session variable when another session variable changes.
 
 > [!TIP]
-> See also:
-> [Linking a shape to a SET command](xref:Linking_a_shape_to_a_SET_command)
+> See also: [Linking a shape to a SET command](xref:Linking_a_shape_to_a_SET_command)
 
 ## Configuring the shape data field
 
@@ -20,13 +19,13 @@ SET|X|Y|Z|SetTrigger=ValueChanged
 
 - X: The scope of the session variable that should be updated:
 
-    - *Variable* = Global variable
+  - *Variable* = Global variable
 
-    - *CardVariable* = Card variable
+  - *CardVariable* = Card variable
 
-    - *PageVariable* = Page variable
+  - *PageVariable* = Page variable
 
-    - *WorkspaceVariable* = Workspace variable
+  - *WorkspaceVariable* = Workspace variable
 
 - Y: The name of the session variable that should be updated.
 
@@ -45,8 +44,7 @@ If you wish to use a different separator than a dash, add the \[sep:XY\] option 
 ```
 
 > [!TIP]
-> See also:
-> [About using separator characters](xref:Linking_a_shape_to_a_SET_command#about-using-separator-characters)
+> See also: [About using separator characters](xref:Linking_a_shape_to_a_SET_command#about-using-separator-characters)
 
 ## Option
 
