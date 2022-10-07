@@ -12,7 +12,16 @@ uid: General_Main_Release_10.1.0_CU21
 
 ### Enhancements
 
-*No enhancements have been added to this version yet.*
+#### SLLogCollector now also collects network information [ID_34582]
+
+<!-- MR 10.1.0 [CU21] / 10.2.0 [CU9] - FR 10.2.12 -->
+
+SLLogCollector packages will now also include the following additional files containing network information:
+
+| File | Contents |
+|------|----------|
+| Logs\Network Information\ipconfig.exe _all.txt | The output of an `ipconfig /all` command. |
+| Logs\Network Information\route.exe print.txt   | The output of a `route print` command.    |
 
 ### Fixes
 
