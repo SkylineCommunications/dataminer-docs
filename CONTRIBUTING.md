@@ -599,7 +599,7 @@ To be able to make a local test build, you need to have DocFX installed. DocFX i
 
 1. Add the folder (e.g. `C:\DocFX`) to the environment variable **Path** (user variable or system variable).
 
-    On Windows 10 systems, do the following:
+    On Windows 10 or 11 systems, do the following:
 
     1. In your Windows search box, enter "path".
     1. Click *Edit the system environment variables*.
@@ -628,11 +628,11 @@ To be able to make a local test build, you need to have DocFX installed. DocFX i
 
 Before you make your first test build, we recommend the first-time setup detailed below. If you do not do this, you will still be able to make a test build, but there may be many warnings in the terminal, and some pages may not be included in the build.
 
-You only need to do this setup once.
-
 1. Check if your fork is up to date with the latest changes from the main dataminer-docs repository (See [Make sure your fork is up to date](#make-sure-your-fork-is-up-to-date).
 
 1. Make sure you have Visual Studio 2017 or higher installed.
+
+1. Install the .NET framework SDK Developer Pack. To do so, go to <https://dotnet.microsoft.com/en-us/download/visual-studio-sdks> and choose the .NET Framework 4.8 Developer Pack.
 
 1. Download and install [Build Tools](https://aka.ms/vs/17/release/vs_BuildTools.exe).
 
@@ -657,6 +657,9 @@ You only need to do this setup once.
 
    If everything is OK, you will get no warnings.
 
+> [!NOTE]
+> It is not necessary to do this for every test build. However, when there have been significant changes to the source code, you will need to do this procedure again starting from step 5.
+
 #### Making a test build
 
 1. If no Terminal pane is open in Visual Studio Code, go to *Terminal > New Terminal*.
@@ -668,13 +671,13 @@ You only need to do this setup once.
    1. Enter `docfx build -f` to make a test build.
 
       > [!NOTE]
-      > If you get a lot of warnings when you try to create a test build, it could be that you still need to install the .NET framework SDK Developer Pack. To do so, go to <https://dotnet.microsoft.com/en-us/download/visual-studio-sdks> and choose the .NET Framework 4.8 Developer Pack.
+      > If you get a lot of warnings when you try to create a test build, it could be that you need to do part of the [first-time setup](#first-time-setup) again to make sure the metadata are up to date.
 
    1. Enter `docfx serve _site`.
 
    1. In a browser, go to <http://localhost:8080/> to preview the website.
 
-      > [!NOTE]
+      > [!TIP]
       > If you are not able to access localhost:8080, you can specify a different port by entering e.g. `docfx serve _site -p 8090`.
 
       When you have finished previewing the website, in the Terminal pane, press ENTER to exit the preview mode.
