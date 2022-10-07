@@ -2,7 +2,7 @@
 uid: General_Main_Release_10.3.0_new_features_1
 ---
 
-# General Main Release 10.3.0 – New features (part 1) - Preview
+# General Main Release 10.3.0 – Other new features (part 1) - Preview
 
 > [!IMPORTANT]
 > We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
@@ -10,7 +10,7 @@ uid: General_Main_Release_10.3.0_new_features_1
 > [!TIP]
 > For release notes related to DataMiner Cube, see [DataMiner Cube 10.3.0](xref:Cube_Main_Release_10.3.0).
 
-## New features
+## Other new features
 
 ### DMS core functionality
 
@@ -32,12 +32,6 @@ When a service is created or updated, the following read-only properties will no
 > - When you upgrade to DataMiner version 10.3.0, a check will be performed to make sure your system includes an up-to-date SRM solution. If the installed SRM solution is not up to date, you will be asked to update it before you continue with the DataMiner upgrade.
 > - These properties will only be added to existing services the first time those services are updated.
 > - These properties will not be available in alarms that are included in a service.
-
-#### BREAKING CHANGE: GetSpectrumTrendTraceDataMessage will now always require a time range \[ID_31402\] \[ID_32016\]
-
-<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.2 -->
-
-When a GetSpectrumTrendTraceDataMessage was used to retrieve spectrum data, up to now, it was possible to pass an optional time range (i.e. RangeStart and RangeEnd) next to an ID (i.e. RecordID). From now on, passing a time range next to an ID will be mandatory.
 
 #### DataMiner Object Model: FieldDescriptors can now be configured to allow multiple values \[ID_31905\] \[ID_32904\]
 
@@ -87,38 +81,6 @@ This field descriptor can be used to define a field that will contain the ID of 
 
 The configuration of this new descriptor is identical to that of the DomInstanceFieldDescriptor, apart from a FieldDescriptorId property, which references a specific FieldValue.
 
-#### New messages that support uploading larger files \[ID_32398\]
-
-<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.4 -->
-
-The SLNet process can now use the following new messages to upload files to the DataMiner System.
-
-##### StartUploadMessage
-
-This message initiates an upload and returns a *StartUploadResponse* message containing an upload cookie of type int.
-
-| Argument     | Type     | Description                                                                                                                     |
-|--------------|----------|---------------------------------------------------------------------------------------------------------------------------------|
-| DataChunk    | byte\[\] | The initial chunk of data to be uploaded.                                                                                       |
-| ReservedSize | long     | The total size (in bytes) that should be reserved for the full dataset.                                                         |
-| Name         | string   | Optional name of the upload. Naming an upload allows you to retrieve its upload status by means of a FindUploadSlotMessage. |
-
-##### ContinueUploadMessage
-
-This message continues an already initiated upload and returns an empty *ContinueUploadResponse* message.
-
-| Argument | Type | Description |
-|--|--|--|
-| Cookie | int | The cookie returned by the StartUploadMessage. |
-| DataChunk | byte\[\] | The next chunk of data to be uploaded. |
-| CurrentPosition | long | Optional index location that specifies where the next chunk of data should be appended. Allows you to perform a basic data integrity check. When this location does not match the actual server-side location, the upload will fail. |
-
-> [!NOTE]
->
-> - The above-mentioned messages will be used when uploading a large data stream by means of the SendLargeStream method in the SLNetTypes FileUploader helper class.
-> - The existing SendFile method will use SendLargeStream in the background when it detects a file larger than 2 GB. The default chunk size is 100 KB. When sending large files, it is recommended to slightly increase this default chunk size to prevent a large number of small messages.
-> - As the AppPackageHelper uses the FileUploader helper class to upload DataMiner packages, it will now also support uploading larger packages.
-
 #### DataMiner Object Model: New event message for DomInstance status transitions \[ID_32418\]
 
 <!-- Main Release Version 10.3.0 - Feature Release Version 10.2.5 -->
@@ -153,85 +115,11 @@ A new Process Automation object class has been created (which inherits the regul
 
 This new object has a property that will be used to store the queue element associated with a resource pool: *public ElementId QueueElement*
 
-#### DataMiner Object Model: Defining a TLL for DomTemplates, DomInstances and DomInstance history \[ID_32662\]
-
-<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.6 -->
-
-It is now possible to define a "time to live" property for the following types of DomManager objects:
-
-| Object type                        | Property              |
-|------------------------------------|-----------------------|
-| DomInstance                        | DomInstanceTtl        |
-| DomTemplate                        | DomTemplateTtl        |
-| HistoryChange (DomInstanceHistory) | DomInstanceHistoryTtl |
-
-Times are defined as TimeSpan objects. By default, these will be set to TimeSpan.Zero, i.e. no TTL. When, for a particular type of object, the TTL is set to e.g. 1 year, those objects will be automatically removed when they were last modified more than a year ago.
-
-Example:
-
-```csharp
-var moduleSettings = new ModuleSettings("example")
-{
-    DomManagerSettings = new DomManagerSettings()
-    {
-        TtlSettings = new TtlSettings()
-        {
-            DomTemplateTtl = TimeSpan.Zero,                 // No TTL
-            DomInstanceHistoryTtl = TimeSpan.FromDays(365), // 1 Year
-            DomInstanceTtl = TimeSpan.FromDays(730)         // 2 Years
-        }
-    }
-};
-```
-
-> [!NOTE]
-> TTL settings are checked every 30 minutes. When you configure a very short TTL (e.g. 15 minutes), keep in mind that the objects in question will only be removed during the next cleanup cycle.
-
 #### Service & Resource Management: Service templates now also accept ServiceID and ReservationID as input data \[ID_32668\]
 
 <!-- Main Release Version 10.3.0 - Feature Release Version 10.2.4 -->
 
 In Service & Resource Management environments, a service template used to generate a service associated with a booking will now also accept a ServiceID and a ReservationID as input data.
-
-#### Running memory-intensive elements in separate SLProtocol and SLScripting instances \[ID_32742\] \[ID_32917\]
-
-<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.5 -->
-
-As some element protocols have QActions that require a large amount of memory to execute, they can cause SLScripting to run out of memory when they run together with other elements. From now on, elements that require a large amount of memory can be run in their own SLProtocol and SLScripting instance.
-
-In *DataMiner.xml*, the \<ProcessOptions> element can now contain a \<SeparateProcesses> element listing all element protocols that have to be run in a separate SLProtocol and SLScripting instance. See the example below.
-
-When a protocol is flagged to run in separate instances, every element using that protocol will be started in a new instance of SLProtocol and SLScripting. When the element is stopped, these instances are taken down again, and when the element restarts, new instances are created.
-
-Example:
-
-```xml
-<DataMiner>
-  ...
-  <ProcessOptions protocolProcesses="3" scriptingProcesses="protocol">
-    <SeparateProcesses>
-      <Protocols>
-        <Protocol>
-          <Name>MyElementProtocol</Name>
-        </Protocol>
-      </Protocols>
-    </SeparateProcesses>
-  </ProcessOptions>
-  ...
-</DataMiner>
-```
-
-See also [Making all elements using a particular protocol.xml run in separate SLScripting and SLProtocol instances \[ID_33358\]](#making-all-elements-using-a-particular-protocolxml-run-in-separate-slscripting-and-slprotocol-instances-id_33358).
-
-> [!NOTE]
->
-> - It is recommended to stop the DataMiner Agent before changing its *DataMiner.xml* file. Besides, any changes made to the *DataMiner.xml* will only be applied when starting the DataMiner Agent.
-> - Using the protocolProcesses option, you can specify how many SLProtocol processes will be launched to host the other elements in.
-> - Currently, a separate SLScripting process must be launched for every SLProtocol process. This means that when at least one protocol name is specified in the SeparateProcesses tag, the configured or default behavior of the scriptingProcesses attribute will be overridden to “protocol”. Note that when the scriptingProcesses attribute is set to “\[Service\]”, the following system notice will be generated:
->
->   *\[n\] separate protocols have been configured in the DataMiner.xml, while SLScripting is configured as service, which is not a compatible setup. To run the elements of these protocols in a separate SLProtocol and SLScripting instance, please unregister SLScripting and remove the scriptingProcesses=\\"\[Service\]\\" tag from DataMiner.xml.*
->
-> - *DataMiner.xml* files are not synchronized among the different Agents in a DataMiner System. If your DMS includes different Agents, then you will need to edit the *DataMiner.xml* file on each of the Agents.
 
 #### SetAlarmStateMessage can no longer be used to change the alarm state of an incident \[ID_33273\]
 
@@ -269,55 +157,6 @@ Process:
 If an incident (also known as an alarm group) is cleared manually, any clearable base alarms of that incident will now also be cleared. This way, this behavior is consistent with the standard behavior for Correlation alarms.
 
 ### DMS Security
-
-#### SLSSH: Enhanced HMAC, cypher and key exchange algorithm support \[ID_32664\] \[ID_32786\]
-
-<!-- RN 32664: Main Release Version 10.3.0 - Feature Release Version 10.2.4
-RN 32786: Main Release Version 10.3.0 - Feature Release Version 10.2.5 -->
-
-SLSSH now supports the following additional HMAC, cyphers and key exchange algorithms:
-
-- HMAC-SHA2-512
-- AES256CRT
-- ECDHSHA2NISTP384
-- ECDHSHA2NISTP521
-
-DataMiner now supports the encryption methods detailed below (in order of preference).
-
-##### HMACs
-
-- HMAC-SHA2-512
-- HMAC-SHA2-256
-- HMAC-SHA1
-- HMAC-MD5
-
-##### Key exchange algorithms
-
-- ecdh-sha2-nistp521
-- ecdh-sha2-nistp384
-- ecdh-sha2-nistp256
-- diffie-hellman-group14-sha1
-- diffie-hellman-group1-sha1
-- diffie-hellman-group-exchange-sha1
-
-##### Ciphers
-
-- Aes-256-CTR
-- Aes-128-CTR
-- Aes-128-CBC
-- 3des-CBC
-
-#### SLSSH: Enhanced host key verification algorithm support \[ID_33132\]
-
-<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.6 -->
-
-When acting as an SSH client, DataMiner now supports the following host key verification algorithms (in order of preference):
-
-- ecdsa-sha2-nistp521 (new)
-- ecdsa-sha2-nistp384 (new)
-- ecdsa-sha2-nistp256 (new)
-- ssh-rsa
-- ssh-dss
 
 #### Azure Active Directory: Secret expiry notices/errors \[ID_33916\]
 
@@ -455,27 +294,6 @@ For example:
 </Protocol>
 ```
 
-#### Making all elements using a particular protocol.xml run in separate SLScripting and SLProtocol instances \[ID_33358\]
-
-<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.7 -->
-
-In a protocol.xml file, you can now define that all elements using that protocol.xml file should run in a separate SLScripting and SLProtocol instance.
-
-To do so, use the following syntax:
-
-```xml
-<Protocol>
-  <SystemOptions>
-    <RunInSeparateInstance>true</RunInSeparateInstance>
-  </SystemOptions>
-</Protocol>
-```
-
-> [!NOTE]
-> If SLScripting is registered as a service, this functionality is not available. Elements running a protocol.xml file in which RunInSeparateInstance is set to true will then create a notification alarm to indicate a potential memory problem.
-
-See also [Running memory-intensive elements in separate SLProtocol and SLScripting instances \[ID_32742\] \[ID_32917\]](#running-memory-intensive-elements-in-separate-slprotocol-and-slscripting-instances-id_32742-id_32917).
-
 ##### DataMiner.xml: scriptingProcesses option now accepts integer values
 
 From now on, in *DataMiner.xml*, you can set the scriptingProcesses option to an integer value, indicating the exact number of SLScripting processes that have to be launched. The SLProtocol processes will then be assigned one of the available SLScripting processes in a round-robin way.
@@ -502,21 +320,6 @@ If the QAction class is not static and implements the IDisposable interface, the
 The Dispose is called by a separate thread than the one stopping the element. Its purpose is to release lingering resources and connections when the element is stopped.
 
 In addition, up to now only one instance was retained per QAction, so when entrypoints pointed to different classes, the instances were not kept. Now these separate instances will also be stored correctly.
-
-#### Timers: Specifying an interval between two consecutive ping packets [ID_34463] [ID_34549]
-
-<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.11 -->
-
-When you configure a timer to automatically send ping requests to a device, you can now use either the `interval` option or the `intervalPid` option to specify the interval in ms between two consecutive ping packets.
-
-- `interval`: With this option, you can specify a fixed interval in ms between two consecutive ping packets. This should be used when the device does not respond to all ping requests when they are sent without any interval.
-
-- `intervalPID`: Instead of specifying a fixed interval value ("interval=x"), it is also possible to specify a dynamic value stored in a parameter. Note that if you specify both a fixed and a dynamic value, the latter will take precedence.
-
-    The value in the referred parameters must not be 0 or uninitialized. Otherwise, 0, the hard-coded value on the timer, or the last valid value will be used by default. The referred parameters must be of numeric type.
-
-> [!NOTE]
-> These options are only relevant when *amountPackets* or *amountPacketsPID* is used. These are currently only supported in conjunction with the *threadPool* option. When *threadPool* is not used, only one ping request will be sent.
 
 ### DMS Automation
 
@@ -611,13 +414,4 @@ For example, if a topology contains a CCAP Core field and a Node Leaf field lowe
 
 ### DMS Web Services
 
-#### Web Services API v1: New methods to manage service templates \[ID_31612\]
-
-<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.1 -->
-
-Using the following methods, it will now be possible to manage service templates via the web services API:
-
-- CreateServiceTemplate
-- DeleteServiceTemplate
-- GetServiceTemplate
-- UpdateServiceTemplate
+See [General Main Release 10.3.0 – Highlights](xref:General_Main_Release_10.3.0_highlights#dms-web-services)

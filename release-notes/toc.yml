@@ -12,9 +12,11 @@
           items:
           - name: General Main Release 10.3.0 - New features
             items:
-            - name: New features (part 1)
+            - name: Highlights
+              topicUid: General_Main_Release_10.3.0_highlights
+            - name: Other new features (part 1)
               topicUid: General_Main_Release_10.3.0_new_features_1
-            - name: New features (part 2)
+            - name: Other new features (part 2)
               topicUid: General_Main_Release_10.3.0_new_features_2
           - name: General Main Release 10.3.0 - Changes
             topicUid: General_Main_Release_10.3.0_changes
