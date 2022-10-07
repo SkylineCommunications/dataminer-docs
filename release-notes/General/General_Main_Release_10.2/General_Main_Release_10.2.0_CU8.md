@@ -454,6 +454,14 @@ After you had launched an upgrade, in some cases, the upgrade process displayed 
 
 This fixes a [known issue](xref:KI_Taskbar_Utility_performance_issue_while_agents_are_being_upgraded).
 
+#### GQI - Aggregation GroupBy changes cellValue type [ID_34490]
+
+<!-- MR 10.2.0 [CU8] - FR TBD -->
+
+When, in a GQI query, you applied a "Group By" operator that grouped by a column, the values of that column would incorrectly be changed to type `string`.
+
+For example, when you grouped by a column containing boolean values, those values would all be displayed as true. Also, when you applied other operators to that same column that contained boolean values, those other operators would work incorrectly because, although the column type would be `boolean`, the cell values would incorrectly be strings.
+
 #### Cassandra cluster: Memory leak when real-time trend data was requested via a paged database request [ID_34514]
 
 <!-- MR 10.2.0 [CU8] - FR 10.2.11 [CU0] -->

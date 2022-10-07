@@ -20,6 +20,12 @@ When, in the *DMS.xml* file, the *bruteForceToOffline* option is specified in th
 
 From now on, when the *bruteForceToOffline* option is specified in the *DMS.xml* file, SLDataMiner will be asked to set the agent's state to offline and to not reclaim the virtual IP address before it has been released.
 
+#### Enhanced performance of the DataMiner startup routine [ID_34545]
+
+<!-- MR 10.1.0 [CU21] / 10.2.0 [CU9] - FR TBD -->
+
+Because of a number of enhancements, overall performance of the DataMiner startup routine has increased.
+
 #### SLLogCollector now also collects network information [ID_34582]
 
 <!-- MR 10.1.0 [CU21] / 10.2.0 [CU9] - FR 10.2.12 -->

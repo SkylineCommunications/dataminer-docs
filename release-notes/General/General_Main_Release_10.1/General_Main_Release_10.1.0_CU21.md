@@ -12,6 +12,12 @@ uid: General_Main_Release_10.1.0_CU21
 
 ### Enhancements
 
+#### Enhanced performance of the DataMiner startup routine [ID_34545]
+
+<!-- MR 10.1.0 [CU21] / 10.2.0 [CU9] - FR TBD -->
+
+Because of a number of enhancements, overall performance of the DataMiner startup routine has increased.
+
 #### SLLogCollector now also collects network information [ID_34582]
 
 <!-- MR 10.1.0 [CU21] / 10.2.0 [CU9] - FR 10.2.12 -->
