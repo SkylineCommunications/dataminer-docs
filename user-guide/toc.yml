@@ -648,6 +648,8 @@
               topicUid: Setting_the_background_color_of_a_static_shape
             - name: Configuring a shape's text wrapping and trimming
               topicUid: Configuring_text_wrapping_and_trimming
+            - name: Configuring a page to execute a script automatically
+              topicUID: Configuring_a_page_to_execute_a_script_automatically
         - name: Reference
           topicUid: Reference
           items:
