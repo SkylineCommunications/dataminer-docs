@@ -394,6 +394,12 @@ A number of enhancements have been made to the algorithm used by SLNet and SLDat
 
 When a parameter feed has an EPM identifier feed as source, from now on, the *Auto-select all* setting will no longer be available.
 
+#### SLElement: Enhanced alarm locking [ID_34561]
+
+<!-- MR 10.3.0 - FR 10.2.12 -->
+
+Alarm locking in the SLElement process has been enhanced.
+
 ### Fixes
 
 #### SLAnalytics: Problem with trend prediction [ID_31352]

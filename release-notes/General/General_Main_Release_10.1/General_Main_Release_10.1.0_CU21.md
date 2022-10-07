@@ -70,3 +70,9 @@ However, up to now, the file cache offload limit (default: 10 GB) would incorrec
     </FileCache>
 </DataBase>
 ```
+
+#### DataMiner Maps: Loading screen would incorrectly stay visible after the map had been loaded [ID_34587]
+
+<!-- MR 10.1.0 [CU21] / 10.2.0 [CU9] - FR 10.2.12 -->
+
+When DataMiner Maps v1 was used with Google Maps as provider, in some cases, the *Loading Google Maps...* screen would incorrectly stay visible after the map had been loaded.
