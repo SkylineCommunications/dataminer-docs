@@ -5,6 +5,7 @@ uid: Known_issues
 
 | Issue | DataMiner version | Date added |
 |--|--|--|
+| [SLDataGateway memory leak](xref:KI_SLDataGateway_memory_leak) | Cassandra Cluster setups<br>prior to 10.2.0 [CU8]/10.2.11 | October 10, 2022 |
 | [Taskbar Utility performance issue while agents are being upgraded](xref:KI_Taskbar_Utility_performance_issue_while_agents_are_being_upgraded) | 10.1.0 [CU19] and 10.2.0 [CU7]<br>10.2.10 | September 23, 2022 |
 | [SLDMS Hosting Agent cache issue](xref:KI_SLDMS_hosting_agent_cache_issue) | 10.2 Main & Feature Release<br>prior to 10.2.0 CU7 and 10.2.10 | September 15, 2022 |
 | [Closed alarms migrated too slowly from dms-activealarms index in Elasticsearch database](xref:KI_Closed_alarms_migrated_too_slowly) | Versions using Elasticsearch<br>for alarm indexing prior to<br>10.2.0 CU8 and 10.2.11 | September 14, 2022 |
