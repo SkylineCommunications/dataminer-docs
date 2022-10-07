@@ -24,6 +24,19 @@ uid: Cube_Feature_Release_10.2.12
 
 *No enhancements have been added to this version yet.*
 
+#### Trending - Behavioral anomaly detection: Enhanced detection of flatline changes [ID_34487]
+
+<!-- MR 10.3.0 - FR 10.2.12 -->
+<!-- Not added to 10.3.0 -->
+
+Because of a number of enhancements, overall accuracy when detecting flatline changes has increased, especially in the following cases:
+
+- When an element becomes inactive or is paused.
+- When an element is deleted.
+- When a table parameter is no longer active.
+
+Any alarm or suggestion events created for flatline changes will now close sooner when one of the above-mentioned situations occurs.
+
 ### Fixes
 
 #### DataMiner Cube - Spectrum Analysis: Problem with measurement point option 'Invert spectrum' [ID_34552]

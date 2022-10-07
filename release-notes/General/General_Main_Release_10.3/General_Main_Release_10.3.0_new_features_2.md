@@ -497,6 +497,3 @@ When you run the installer with the “generate” option (run-stand-alone -g), 
 <!-- MR 10.3.0 - FR 10.2.7 -->
 
 In the UI of the QA Device Simulator, the help link now directs users to the QA Device Simulator help pages on <https://docs.dataminer.services/>.
-
-> [!CAUTION]
-> This tool is provided “As Is” with no representation or warranty whatsoever. Skyline Communications will not provide any maintenance or support for this tool.

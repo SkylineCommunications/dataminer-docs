@@ -171,9 +171,6 @@ Because of a number of enhancements, the SLDMS process will now use less memory 
 
 Because of a number of enhancements, overall CPU usage of the QADeviceSimulator has improved when running SNMPv3 simulations.
 
-> [!CAUTION]
-> This tool is provided “As Is” with no representation or warranty whatsoever. Skyline Communications will not provide any maintenance or support for this tool.
-
 #### Service & Resource Management: Function resources will no longer be deleted when their parent DVE element cannot be reached [ID_33415] [ID_33668]
 
 <!-- MR 10.3.0 - FR 10.2.7 -->
@@ -212,9 +209,6 @@ From DataMiner 10.0.3 onwards, you can enable alarm monitoring on specific types
 Because of a number of enhancements, overall performance of the QADeviceSimulator has improved when loading a MySQL database at the start of a MySQL database simulation.
 
 Also, the overall memory footprint of MySQL database simulations has been reduced.
-
-> [!CAUTION]
-> This tool is provided “As Is” with no representation or warranty whatsoever. Skyline Communications will not provide any maintenance or support for this tool.
 
 #### Service & Resource Management: A booking will now be set to 'interrupted' when whatever event related to that booking could not be executed [ID_33576]
 
