@@ -630,11 +630,9 @@ Before you make your first test build, we recommend the first-time setup detaile
 
 1. Check if your fork is up to date with the latest changes from the main dataminer-docs repository (See [Make sure your fork is up to date](#make-sure-your-fork-is-up-to-date).
 
-1. Make sure you have Visual Studio 2017 or higher installed.
+1. Make sure you have Visual Studio 2019 or higher installed.
 
 1. Install the .NET framework SDK Developer Pack. To do so, go to <https://dotnet.microsoft.com/en-us/download/visual-studio-sdks> and choose the .NET Framework 4.8 Developer Pack.
-
-1. Download and install [Build Tools](https://aka.ms/vs/17/release/vs_BuildTools.exe).
 
 1. Go to the folder containing your dataminer-docs repository.
 
@@ -658,7 +656,7 @@ Before you make your first test build, we recommend the first-time setup detaile
    If everything is OK, you will get no warnings.
 
 > [!NOTE]
-> It is not necessary to do this for every test build. However, when there have been significant changes to the source code, you will need to do this procedure again starting from step 5.
+> It is not necessary to do this for every test build. However, when there have been significant changes to the source code, you will need to do this procedure again starting from step 4.
 
 #### Making a test build
 
