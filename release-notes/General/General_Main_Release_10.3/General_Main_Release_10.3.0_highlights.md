@@ -14,47 +14,15 @@ uid: General_Main_Release_10.3.0_highlights
 
 ### DMS core functionality
 
-#### BREAKING CHANGE: GetSpectrumTrendTraceDataMessage will now always require a time range \[ID_31402\] \[ID_32016\]
+#### BREAKING CHANGE: GetSpectrumTrendTraceDataMessage will now always require a time range [ID_31402] [ID_32016]
 
-<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.2 -->
+<!-- MR 10.3.0 - FR 10.2.2 -->
 
 When a GetSpectrumTrendTraceDataMessage was used to retrieve spectrum data, up to now, it was possible to pass an optional time range (i.e. RangeStart and RangeEnd) next to an ID (i.e. RecordID). From now on, passing a time range next to an ID will be mandatory.
 
-#### New messages that support uploading larger files \[ID_32398\]
+#### DataMiner Object Models: Defining a TLL for DomTemplates, DomInstances and DomInstance history [ID_32662]
 
-<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.4 -->
-
-The SLNet process can now use the following new messages to upload files to the DataMiner System.
-
-##### StartUploadMessage
-
-This message initiates an upload and returns a *StartUploadResponse* message containing an upload cookie of type int.
-
-| Argument     | Type     | Description                                                                                                                     |
-|--------------|----------|---------------------------------------------------------------------------------------------------------------------------------|
-| DataChunk    | byte\[\] | The initial chunk of data to be uploaded.                                                                                       |
-| ReservedSize | long     | The total size (in bytes) that should be reserved for the full dataset.                                                         |
-| Name         | string   | Optional name of the upload. Naming an upload allows you to retrieve its upload status by means of a FindUploadSlotMessage. |
-
-##### ContinueUploadMessage
-
-This message continues an already initiated upload and returns an empty *ContinueUploadResponse* message.
-
-| Argument | Type | Description |
-|--|--|--|
-| Cookie | int | The cookie returned by the StartUploadMessage. |
-| DataChunk | byte\[\] | The next chunk of data to be uploaded. |
-| CurrentPosition | long | Optional index location that specifies where the next chunk of data should be appended. Allows you to perform a basic data integrity check. When this location does not match the actual server-side location, the upload will fail. |
-
-> [!NOTE]
->
-> - The above-mentioned messages will be used when uploading a large data stream by means of the SendLargeStream method in the SLNetTypes FileUploader helper class.
-> - The existing SendFile method will use SendLargeStream in the background when it detects a file larger than 2 GB. The default chunk size is 100 KB. When sending large files, it is recommended to slightly increase this default chunk size to prevent a large number of small messages.
-> - As the AppPackageHelper uses the FileUploader helper class to upload DataMiner packages, it will now also support uploading larger packages.
-
-#### DataMiner Object Model: Defining a TLL for DomTemplates, DomInstances and DomInstance history \[ID_32662\]
-
-<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.6 -->
+<!-- MR 10.3.0 - FR 10.2.6 -->
 
 It is now possible to define a "time to live" property for the following types of DomManager objects:
 
@@ -86,52 +54,12 @@ var moduleSettings = new ModuleSettings("example")
 > [!NOTE]
 > TTL settings are checked every 30 minutes. When you configure a very short TTL (e.g. 15 minutes), keep in mind that the objects in question will only be removed during the next cleanup cycle.
 
-#### Running memory-intensive elements in separate SLProtocol and SLScripting instances \[ID_32742\] \[ID_32917\]
-
-<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.5 -->
-
-As some element protocols have QActions that require a large amount of memory to execute, they can cause SLScripting to run out of memory when they run together with other elements. From now on, elements that require a large amount of memory can be run in their own SLProtocol and SLScripting instance.
-
-In *DataMiner.xml*, the \<ProcessOptions> element can now contain a \<SeparateProcesses> element listing all element protocols that have to be run in a separate SLProtocol and SLScripting instance. See the example below.
-
-When a protocol is flagged to run in separate instances, every element using that protocol will be started in a new instance of SLProtocol and SLScripting. When the element is stopped, these instances are taken down again, and when the element restarts, new instances are created.
-
-Example:
-
-```xml
-<DataMiner>
-  ...
-  <ProcessOptions protocolProcesses="3" scriptingProcesses="protocol">
-    <SeparateProcesses>
-      <Protocols>
-        <Protocol>
-          <Name>MyElementProtocol</Name>
-        </Protocol>
-      </Protocols>
-    </SeparateProcesses>
-  </ProcessOptions>
-  ...
-</DataMiner>
-```
-
-See also [Making all elements using a particular protocol.xml run in separate SLScripting and SLProtocol instances \[ID_33358\]](#making-all-elements-using-a-particular-protocolxml-run-in-separate-slscripting-and-slprotocol-instances-id_33358).
-
-> [!NOTE]
->
-> - It is recommended to stop the DataMiner Agent before changing its *DataMiner.xml* file. Besides, any changes made to the *DataMiner.xml* will only be applied when starting the DataMiner Agent.
-> - Using the protocolProcesses option, you can specify how many SLProtocol processes will be launched to host the other elements in.
-> - Currently, a separate SLScripting process must be launched for every SLProtocol process. This means that when at least one protocol name is specified in the SeparateProcesses tag, the configured or default behavior of the scriptingProcesses attribute will be overridden to “protocol”. Note that when the scriptingProcesses attribute is set to “\[Service\]”, the following system notice will be generated:
->
->   *\[n\] separate protocols have been configured in the DataMiner.xml, while SLScripting is configured as service, which is not a compatible setup. To run the elements of these protocols in a separate SLProtocol and SLScripting instance, please unregister SLScripting and remove the scriptingProcesses=\\"\[Service\]\\" tag from DataMiner.xml.*
->
-> - *DataMiner.xml* files are not synchronized among the different Agents in a DataMiner System. If your DMS includes different Agents, then you will need to edit the *DataMiner.xml* file on each of the Agents.
-
 ### DMS Security
 
-#### SLSSH: Enhanced HMAC, cypher and key exchange algorithm support \[ID_32664\] \[ID_32786\]
+#### SLSSH: Enhanced HMAC, cypher and key exchange algorithm support [ID_32664] [ID_32786]
 
-<!-- RN 32664: Main Release Version 10.3.0 - Feature Release Version 10.2.4
-RN 32786: Main Release Version 10.3.0 - Feature Release Version 10.2.5 -->
+<!-- RN 32664: MR 10.3.0 - FR 10.2.4
+RN 32786: MR 10.3.0 - FR 10.2.5 -->
 
 SLSSH now supports the following additional HMAC, cyphers and key exchange algorithms:
 
@@ -165,9 +93,9 @@ DataMiner now supports the encryption methods detailed below (in order of prefer
 - Aes-128-CBC
 - 3des-CBC
 
-#### SLSSH: Enhanced host key verification algorithm support \[ID_33132\]
+#### SLSSH: Enhanced host key verification algorithm support [ID_33132]
 
-<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.6 -->
+<!-- MR 10.3.0 - FR 10.2.6 -->
 
 When acting as an SSH client, DataMiner now supports the following host key verification algorithms (in order of preference):
 
@@ -179,30 +107,9 @@ When acting as an SSH client, DataMiner now supports the following host key veri
 
 ### DMS Protocols
 
-#### Making all elements using a particular protocol.xml run in separate SLScripting and SLProtocol instances \[ID_33358\]
-
-<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.7 -->
-
-In a protocol.xml file, you can now define that all elements using that protocol.xml file should run in a separate SLScripting and SLProtocol instance.
-
-To do so, use the following syntax:
-
-```xml
-<Protocol>
-  <SystemOptions>
-    <RunInSeparateInstance>true</RunInSeparateInstance>
-  </SystemOptions>
-</Protocol>
-```
-
-> [!NOTE]
-> If SLScripting is registered as a service, this functionality is not available. Elements running a protocol.xml file in which RunInSeparateInstance is set to true will then create a notification alarm to indicate a potential memory problem.
-
-See also [Running memory-intensive elements in separate SLProtocol and SLScripting instances \[ID_32742\] \[ID_32917\]](#running-memory-intensive-elements-in-separate-slprotocol-and-slscripting-instances-id_32742-id_32917).
-
 #### Timers: Specifying an interval between two consecutive ping packets [ID_34463] [ID_34549]
 
-<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.11 -->
+<!-- MR 10.3.0 - FR 10.2.11 -->
 
 When you configure a timer to automatically send ping requests to a device, you can now use either the `interval` option or the `intervalPid` option to specify the interval in ms between two consecutive ping packets.
 
@@ -217,9 +124,9 @@ When you configure a timer to automatically send ping requests to a device, you 
 
 ### DMS Web Services
 
-#### Web Services API v1: New methods to manage service templates \[ID_31612\]
+#### Web Services API v1: New methods to manage service templates [ID_31612]
 
-<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.1 -->
+<!-- MR 10.3.0 - FR 10.2.1 -->
 
 Using the following methods, it will now be possible to manage service templates via the web services API:
 
@@ -230,7 +137,7 @@ Using the following methods, it will now be possible to manage service templates
 
 ### DMS web apps
 
-#### Dashboards app - Node edge graph: Option to visualize the direction of the edges \[ID_32519\]
+#### Dashboards app - Node edge graph: Option to visualize the direction of the edges [ID_32519]
 
 <!-- MR 10.3.0 - FR 10.2.4 -->
 
@@ -243,7 +150,7 @@ To do so, enable the *Visualize directions* setting and select one of the follow
 | Flow (default) | The direction is visualized by means of animated edges. |
 | Arrows         | The direction is visualized by means of arrows drawn on the edges. If you select this option, you can also specify the exact position of the arrows on the edges. |
 
-#### Dashboards app: GQI now supports external data \[ID_32656\] \[ID_32659\] \[ID_32930\] \[ID_33795\]
+#### Dashboards app: GQI now supports external data [ID_32656] [ID_32659] [ID_32930] [ID_33795]
 
 <!-- MR 10.3.0 - FR 10.2.4
 RN 33795: MR 10.3.0 - FR 10.2.8 -->
@@ -289,38 +196,38 @@ An ad hoc data source is represented as a class that implements predefined inter
 
 - **IGQIDataSource**: This is the only **required** interface. It must be implemented for the class to be detected by GQI as a data source. This interface has the following methods:
 
-    | Method    | Input arguments       | Output arguments | Description                       |
-    |-------------|-----------------------|------------------|-----------------------------------|
-    | GetColumns  |                       | GQIColumn\[\]    | The GQI will request the columns. |
-    | GetNextPage | GetNextPageInputArgs | GQIPage          | The GQI will request data.        |
+  | Method | Input arguments | Output arguments | Description |
+  |--|--|--|--|
+  | GetColumns  |  | GQIColumn\[\] | The GQI will request the columns. |
+  | GetNextPage | GetNextPageInputArgs | GQIPage | The GQI will request data. |
 
 - **IGQIInputArguments**: This interface can be used to have the user specify an argument, for example the CSV file from which data should be parsed, or a filter that should be applied. This interface has the following methods:
 
-    | Method              | Input arguments                | Output arguments                | Description                                                                       |
-    |-----------------------|--------------------------------|---------------------------------|-----------------------------------------------------------------------------------|
-    | GetInputArguments    | \-                             | GQIArgument\[\]                 | Asks for additional information from the user when the data source is configured. |
-    | OnArgumentsProcessed | OnArgumentsProcessedInputArgs | OnArgumentsProcessedOutputArgs | Event to indicate that the arguments have been processed.                         |
+  | Method | Input arguments | Output arguments | Description |
+  |--|--|--|--|
+  | GetInputArguments    | \- | GQIArgument\[\] | Asks for additional information from the user when the data source is configured. |
+  | OnArgumentsProcessed | OnArgumentsProcessedInputArgs | OnArgumentsProcessedOutputArgs | Event to indicate that the arguments have been processed. |
 
-    > [!NOTE]
-    > The GQI does not validate the input arguments specified by the user. For example, a user can input an SQL query as a string input argument, and the content of the string argument will be forwarded to the ad hoc data source implementation without validation.
+  > [!NOTE]
+  > The GQI does not validate the input arguments specified by the user. For example, a user can input an SQL query as a string input argument, and the content of the string argument will be forwarded to the ad hoc data source implementation without validation.
 
 - **IGQIOnInit**: This interface is called when the data source is initialized, for example when the data source is selected in the query builder or when a dashboard using a query with ad hoc data is opened. It can for instance be used to connect to a database. This interface has one method:
 
-    | Method | Input arguments | Output arguments | Description                                               |
-    |----------|-----------------|------------------|-----------------------------------------------------------|
-    | OnInit   | OnInitInputArgs | OnInitOutputArgs | Indicates that an instance of the class has been created. |
+  | Method | Input arguments | Output arguments | Description |
+  |--|--|--|--|
+  | OnInit | OnInitInputArgs | OnInitOutputArgs | Indicates that an instance of the class has been created. |
 
 - **IGQIOnPrepareFetch**: This interface is used to implement optimizations when data is retrieved. This can for instance be used to limit the retrieved data. This interface has one method:
 
-    | Method       | Input arguments          | Output arguments          | Description                                     |
-    |----------------|--------------------------|---------------------------|-------------------------------------------------|
-    | OnPrepareFetch | OnPrepareFetchInputArgs | OnPrepareFetchOutputArgs | Indicated that the GQI has processed the query. |
+  | Method | Input arguments | Output arguments | Description |
+  |--|--|--|--|
+  | OnPrepareFetch | OnPrepareFetchInputArgs | OnPrepareFetchOutputArgs | Indicated that the GQI has processed the query. |
 
 - **IGQIOnDestroy**: This interface is called when the instance object is destroyed, which happens when the session is closed, e.g. in case of inactivity or when all the necessary data has been retrieved. It can for instance be used to end the connection with a database. This interface has one method:
 
-    | Method  | Input arguments     | Output arguments     | Description                                    |
-    |-----------|---------------------|----------------------|------------------------------------------------|
-    | OnDestroy | OnDestroyInputArgs | OnDestroyOutputArgs | Indicates that the GQI will close the session. |
+  | Method | Input arguments | Output arguments | Description |
+  |--|--|--|--|
+  | OnDestroy | OnDestroyInputArgs | OnDestroyOutputArgs | Indicates that the GQI will close the session. |
 
 ##### Life cycle
 
@@ -340,40 +247,40 @@ To build the ad hoc data source, you can use the objects detailed below.
 
 - **GQIColumn**: This is an abstract class with the derived types *GQIStringColumn*, *GQIBooleanColumn*, *GQIIntColumn*, *GQIDateTimeColumn* and *GQIDoubleColumn* and with the following properties::
 
-    | Property | Type           | Required | Description                                                                                                                                                                                                                                                                                                                                  |
-    |------------|----------------|----------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-    | Name       | String         | Yes      | The column name.                                                                                                                                                                                                                                                                                                                             |
-    | Type       | GQIColumnType | Yes      | The type of data in the column. *GQIColumnType* is an enum that contains the following values: *String*, *Int*, *DateTime*, *Boolean* or *Double*. |
+  | Property | Type | Required | Description |
+  |--|--|--|--|
+  | Name | String | Yes | The column name. |
+  | Type | GQIColumnType | Yes | The type of data in the column. *GQIColumnType* is an enum that contains the following values: *String*, *Int*, *DateTime*, *Boolean* or *Double*. |
 
 - **GQIPage**, with the following properties:
 
-    | Property  | Type       | Required | Description                                                                                                                                              |
-    |-------------|------------|----------|----------------------------------------------------------------------------------------------------------------------------------------------------------|
-    | Rows        | GQIRow\[\] | Yes      | The rows of the page.                                                                                                                                    |
-    | HasNextPage | Boolean    | No       | *True* if additional pages can be retrieved, *False* if the current page is the last page. |
+  | Property | Type | Required | Description |
+  |--|--|--|--|
+  | Rows | GQIRow\[\] | Yes | The rows of the page. |
+  | HasNextPage | Boolean | No | *True* if additional pages can be retrieved, *False* if the current page is the last page. |
 
 - **GQIRow**, with the following properties:
 
-    | Property | Type        | Required | Description           |
-    |------------|-------------|----------|-----------------------|
-    | Cells      | GQICell\[\] | Yes      | The cells of the row. |
+  | Property | Type | Required | Description |
+  |--|--|--|--|
+  | Cells | GQICell\[\] | Yes | The cells of the row. |
 
 - **GQICell**, with the following properties:
 
-    | Property   | Type   | Required | Description                    |
-    |--------------|--------|----------|--------------------------------|
-    | Value        | Object | No       | The value of the cell.         |
-    | DisplayValue | String | No       | The display value of the cell. |
+  | Property | Type | Required | Description |
+  |--|--|--|--|
+  | Value | Object | No | The value of the cell. |
+  | DisplayValue | String | No | The display value of the cell. |
 
-    > [!NOTE]
-    > The type of value of a cell must match the type of the corresponding column.
+  > [!NOTE]
+  > The type of value of a cell must match the type of the corresponding column.
 
 - **GQIArgument**: This is an abstract class, with the derived types *GQIStringArgument* and *GQIDoubleArgument*, and with the following properties:
 
-    | Property | Type    | Required | Description                                 |
-    |------------|---------|----------|---------------------------------------------|
-    | Name       | String  | Yes      | The name of the input argument.             |
-    | IsRequired | Boolean | No       | Indicates whether the argument is required. |
+  | Property | Type | Required | Description |
+  |--|--|--|--|
+  | Name | String | Yes | The name of the input argument. |
+  | IsRequired | Boolean | No | Indicates whether the argument is required. |
 
 ##### Example script
 
@@ -460,7 +367,7 @@ public class MyDataSource : IGQIDataSource, IGQIInputArguments
 }
 ```
 
-#### DataMiner Low-Code Apps \[ID_33002\] \[ID_33040\] \[ID_33208\]
+#### DataMiner Low-Code Apps [ID_33002] [ID_33040] [ID_33208]
 
 <!-- MR 10.3.0 - FR 10.2.5
 RN 33208: MR 10.3.0 - FR 10.2.6 -->
@@ -569,7 +476,7 @@ https://<dma>/<app-id>?data=%7B%22v%22:1,%22components%22:%5B%7B%22cid%22:1,%22s
 
 ### DMS Service & Resource Management
 
-#### Replacing system functions by uploading an XML file \[ID_32264\]
+#### Replacing system functions by uploading an XML file [ID_32264]
 
 <!-- MR 10.3.0 - FR 10.2.3 -->
 
@@ -586,7 +493,7 @@ pfHelper.ReplaceActiveSystemFunctionDefinitions(xmlcontent);
 > - If the uploaded file is not a valid XML file, a DataMinerException will be thrown and the system functions will not be replaced.
 > - Each function in the XML file must have a valid ID. Functions without a valid ID will be ignored.
 
-#### Modified AbsoluteQuarantinePriority behavior and several new SRM features \[ID_32654\]
+#### Modified AbsoluteQuarantinePriority behavior and several new SRM features [ID_32654]
 
 <!-- MR 10.3.0 - FR 10.2.4 -->
 
@@ -721,7 +628,7 @@ var filter = ReservationInstanceExposers.ElementUsages.Contains(elementToSearchF
 var bookings = rmHelper.GetReservationInstances(filter);
 ```
 
-#### Functions.xml file: Assigning a function type to a function \[ID_32851\]
+#### Functions.xml file: Assigning a function type to a function [ID_32851]
 
 <!-- MR 10.3.0 - FR 10.2.5 -->
 
@@ -754,7 +661,7 @@ Example:
 > [!NOTE]
 > If you add a \<FunctionType> element inside a \<Function> element, it must be the last child element inside the \<Function> element.
 
-#### BREAKING CHANGE: Removing a Resource or ResourcePool object will now always require a valid ID \[ID_33836\]
+#### BREAKING CHANGE: Removing a Resource or ResourcePool object will now always require a valid ID [ID_33836]
 
 <!-- MR 10.3.0 - FR 10.2.9 -->
 

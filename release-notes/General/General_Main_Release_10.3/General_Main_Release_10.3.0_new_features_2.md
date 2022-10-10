@@ -14,13 +14,13 @@ uid: General_Main_Release_10.3.0_new_features_2
 
 ### DMS web apps
 
-#### Jobs app: Name, Start Time and End Time fields in default job section can now be set read-only \[ID_31485\] \[ID_31506\]
+#### Jobs app: Name, Start Time and End Time fields in default job section can now be set read-only [ID_31485] [ID_31506]
 
 <!-- MR 10.3.0 - FR 10.2.1 -->
 
 In the default job section, the *Name*, *Start Time*, and *End Time* fields can now be set read-only.
 
-#### Ticketing app: System name will now be checked for illegal characters \[ID_31496\]
+#### Ticketing app: System name will now be checked for illegal characters [ID_31496]
 
 <!-- MR 10.3.0 - FR 10.2.1 -->
 
@@ -28,7 +28,7 @@ From now on, the system name of a ticket will no longer be allowed to start with
 
 When the system name contains one of these illegal characters, an error message will appear.
 
-#### Jobs app: Fields will automatically be set to 'not required' when hidden \[ID_31513\]
+#### Jobs app: Fields will automatically be set to 'not required' when hidden [ID_31513]
 
 <!-- MR 10.3.0 - FR 10.2.1 -->
 
@@ -37,19 +37,19 @@ From now on, when you hide a job field, you will receive a message that it will 
 > [!NOTE]
 > When you unhide a hidden field, it will remain set to “not required”.
 
-#### Dashboards app - GQI: Element, service and view data sources now also return an 'In timeout' column \[ID_31671\]
+#### Dashboards app - GQI: Element, service and view data sources now also return an 'In timeout' column [ID_31671]
 
 <!-- MR 10.3.0 - FR 10.2.1 -->
 
 The element, service and view data sources now return an additional “In timeout” column.
 
-| Data source | Meaning of “True” in “In timeout” column                                                                        |
-|-------------|-----------------------------------------------------------------------------------------------------------------|
-| Element     | The (replication) element is in timeout.                                                                        |
-| Service     | One of the elements in the service is in timeout.                                                               |
-| View        | The enhancing element, one of the first-level child elements or one of the recursive child views is in timeout. |
+| Data source | Meaning of “True” in “In timeout” column |
+|--|--|
+| Element | The (replication) element is in timeout. |
+| Service | One of the elements in the service is in timeout. |
+| View | The enhancing element, one of the first-level child elements or one of the recursive child views is in timeout. |
 
-#### Dashboards app: Default index filter for parameter feed component \[ID_32595\]
+#### Dashboards app: Default index filter for parameter feed component [ID_32595]
 
 <!-- MR 10.3.0 - FR 10.2.4 -->
 
@@ -57,19 +57,19 @@ It is now possible to add a default index filter to a parameter feed component. 
 
 This new option is available as an advanced setting that is not displayed by default. To be able to configure it, you therefore first need to add the *showAdvancedSettings=true* option to the dashboard URL. In the *Data* pane of the dashboard edit mode, a new *Parameter table filters* section will then become available. You can configure the default filter in this section and then drag it to a component to apply it.
 
-#### Dashboards app - GQI: Linking feeds to arguments of external data sources \[ID_32658\]
+#### Dashboards app - GQI: Linking feeds to arguments of external data sources [ID_32658]
 
 <!-- MR 10.3.0 - FR 10.2.5 -->
 
 When you build a GQI query that uses an external data source, it is now possible to link feeds to arguments of that external source.
 
-#### Dashboards app: User groups can now be selected in dashboard security \[ID_32681\]
+#### Dashboards app: User groups can now be selected in dashboard security [ID_32681]
 
 <!-- MR 10.3.0 - FR 10.2.4 -->
 
 When you configure who can view or edit a specific dashboard, it is now possible to select entire user groups instead of only individual users. Groups are indicated with a different icon to make the difference clear. In the selection box, they are listed together with individual users. Natural sorting is applied, with individual users being sorted by full name and groups being sorted by group name.
 
-#### Dashboards - Data panel: Enhanced element selection \[ID_32769\]
+#### Dashboards - Data panel: Enhanced element selection [ID_32769]
 
 <!-- MR 10.3.0 - FR 10.2.5 -->
 
@@ -84,7 +84,7 @@ Also, there is now an element search box as well as a number of element filter o
 - an *EPM managers* checkbox to only show EPM Manager elements, and
 - a *Spectrum analyzers* checkbox to only show Spectrum elements.
 
-#### Dashboards app: New sidebar icons to list private and shared dashboards \[ID_32854\]
+#### Dashboards app: New sidebar icons to list private and shared dashboards [ID_32854]
 
 <!-- MR 10.3.0 - FR 10.2.7 -->
 
@@ -95,25 +95,25 @@ In the sidebar, next to the *All dashboards* and *Recent dashboards* icons, ther
 
 The first icon will only be available when there are private dashboards, the second icon will only be available when the DataMiner Agent is connected to the cloud and there are shared dashboards.
 
-#### Dashboards app - Service definition component: Arrows will now automatically be drawn when a Process Automation definition was added \[ID_32960\]
+#### Dashboards app - Service definition component: Arrows will now automatically be drawn when a Process Automation definition was added [ID_32960]
 
 <!-- MR 10.3.0 - FR 10.2.5 -->
 
 When a Process Automation definition is added to the Service definition component, the component will now automatically draw the necessary arrows to indicate the connections between the different blocks/nodes in the diagram.
 
-#### Dashboards app: Using the script output of an interactive Automation script as a feed \[ID_32977\]
+#### Dashboards app: Using the script output of an interactive Automation script as a feed [ID_32977]
 
 <!-- MR 10.3.0 - FR 10.2.5 -->
 
 When building a GQI query, you can now also use the script output of an interactive Automation script as a feed.
 
-#### Dashboards app - Service definition component: Function shapes will now reflect the function type \[ID_32995\]
+#### Dashboards app - Service definition component: Function shapes will now reflect the function type [ID_32995]
 
 <!-- MR 10.3.0 - FR 10.2.5 -->
 
 When a Process Automation definition is added to the Service definition component, the added function shapes will now reflect the function type (UserTask, ScriptTask, ResourceTask, Gateway, NoneStartEvent, TimeStartEvent or EndEvent).
 
-#### Dashboards app - Service definition component: Function nodes will now display the number of Process Automation tokens in queue or in progress \[ID_33025\]
+#### Dashboards app - Service definition component: Function nodes will now display the number of Process Automation tokens in queue or in progress [ID_33025]
 
 <!-- MR 10.3.0 - FR 10.2.5 -->
 
@@ -121,19 +121,19 @@ When a Process Automation definition is added to the Service definition componen
 
 The token counters will be updated every 10 seconds.
 
-#### Web apps - Data table component: Search box \[ID_33385\]
+#### Web apps - Data table component: Search box [ID_33385]
 
 <!-- MR 10.3.0 - FR 10.2.7 -->
 
 When you hover over a data table component (e.g. a GQI table), a search box will now appear in the bottom-right corner. When you enter a search string, a case-insensitive client-side search will be performed.
 
-#### Web apps: Dashboards, app pages and app panels now all have a 'Fit to view' setting \[ID_33401\]
+#### Web apps: Dashboards, app pages and app panels now all have a 'Fit to view' setting [ID_33401]
 
 <!-- MR 10.3.0 - FR 10.2.7 -->
 
 In the Dashboards app and the Low-Code Apps, dashboards, app pages, and app panels now all have a “Fit to view” setting that, when enabled, will make sure the items in question are automatically adapted to fit the screen.
 
-#### Web apps - Data table component: Sorting, grouping and filtering options \[ID_33403\] \[ID_33433\] \[ID_33454\]
+#### Web apps - Data table component: Sorting, grouping and filtering options [ID_33403] [ID_33433] [ID_33454]
 
 <!-- MR 10.3.0 - FR 10.2.7 -->
 
@@ -157,7 +157,7 @@ When you right-click a column header of a data table component (e.g. a GQI table
     > - Column filters can be used in combination with the component’s search box.
     > - Grouping and column filters are not persistent. When you leave the page, all grouping and filtering will be cleared.
 
-#### Web apps - Data table component: Copy cell/row/column/table \[ID_33440\]
+#### Web apps - Data table component: Copy cell/row/column/table [ID_33440]
 
 <!-- MR 10.3.0 - FR 10.2.7 -->
 
@@ -171,16 +171,16 @@ If you choose to copy the entire row or the entire table, the data will be copie
 > - If you copy an entire row or an entire table, the values will be enclosed in double quotes.
 > - If a value contains double quotes, they will be escaped upon copying.
 
-#### Dashboards app: Service Definition component now supports both types of process automation service definitions \[ID_33615\]
+#### Dashboards app: Service Definition component now supports both types of Process Automation service definitions [ID_33615]
 
 <!-- MR 10.3.0 - FR 10.2.8 -->
 
-The Service Definition component now supports both types of process automation service definitions:
+The Service Definition component now supports both types of Process Automation service definitions:
 
 - Skyline Process Automation
 - Custom Process Automation
 
-#### Dashboards app / Low-Code Apps - Service Definition component: Text displayed on process automation service definition node will now be the value of that node's Label property [ID_33754]
+#### Dashboards app / Low-Code Apps - Service Definition component: Text displayed on Process Automation service definition node will now be the value of that node's Label property [ID_33754]
 
 <!-- MR 10.3.0 - FR 10.2.9 -->
 
@@ -198,11 +198,11 @@ The DataMiner mobile apps that use Angular (e.g. Low-Code Apps, Dashboards, Moni
 
 Several improvements have been implemented to increase performance when GQI data is requested. At present, the most noticeable change this results in is an increase of the page size when all GQI data is requested. Up to now, when all GQI data was requested, the page size was always set to 50. From now on, the page size will be set to a number between 50 and 1000 based on the number of columns that are retrieved (max. 3000 cells).
 
-#### Dashboards app - GQI: Line & area chart component is now able to visualize GQI query results as a single line \[ID_33879\]
+#### Dashboards app - GQI: Line & area chart component is now able to visualize GQI query results as a single line [ID_33879]
 
 <!-- MR 10.3.0 - FR 10.2.9 -->
 
-The “Line & area chart” component is now able to visualize GQI query results as a single line.
+The Line & area chart component is now able to visualize GQI query results as a single line.
 
 1. Add GQI query data to the chart component.
 
@@ -354,7 +354,7 @@ A new *IsActive* column has been added to *Get alarms* data source. This column 
 
 ### DMS Service & Resource Management
 
-#### Retrieving bookings in a paged way and sorted by property \[ID_31982\]
+#### Retrieving bookings in a paged way and sorted by property [ID_31982]
 
 <!-- MR 10.3.0 - FR 10.2.5 -->
 
@@ -373,7 +373,7 @@ It is now possible to retrieve bookings in a paged way and sorted by one of the 
 > - v10.1.0 (CU0)
 > - v10.1.1 (CU0)
 
-#### ProfileInstances: New parameter property 'InheritIsHidden' \[ID_32131\]
+#### ProfileInstances: New parameter property 'InheritIsHidden' [ID_32131]
 
 <!-- MR 10.3.0 - FR 10.2.3 -->
 
@@ -384,7 +384,7 @@ A few examples:
 - If a parameter of profile definition A is hidden, and you want profile instance A to inherit the “IsHidden” setting of that parameter, then set “InheritIsHidden” to true.
 - If a parameter of profile definition A is hidden, and you want profile instance B to not inherit the “IsHidden” setting of that parameter, then set “InheritIsHidden” to false and “IsHidden” to true.
 
-#### ResourceUsageInfoManager \[ID_32512\]
+#### ResourceUsageInfoManager [ID_32512]
 
 <!-- MR 10.3.0 - FR 10.2.5 -->
 
@@ -396,7 +396,7 @@ Normally, a ResourceUsageStatusEventMessage will be sent out the moment a Resour
 
 ResourceUsageStatus objects can be retrieved by means of a GetResourceUsageStatusList (FilterElement\<Resource> filter) call on the ResourceManagerHelper. This call will return all status objects for the resources that match the filter and that are currently being used by ongoing reservations.
 
-#### ReservationInstances now have a ReservationInstanceType \[ID_32624\]
+#### ReservationInstances now have a ReservationInstanceType [ID_32624]
 
 <!-- MR 10.3.0 - FR 10.2.4 -->
 
@@ -411,7 +411,7 @@ When configuring a ReservationInstance, you now have to specify a ReservationIns
 > - In case of a ServiceReservationInstance, the type of the instance must be identical to the type of the ServiceDefinition. Otherwise, the ResourceManager will throw a “ServiceDefinitionTypeDoesNotMatch” error.
 > - A new exposer has been added to allow filter ReservationInstanceType.
 
-#### ResourceManagerEventMessage: New LostInterestReservationInstances property \[ID_32801\]
+#### ResourceManagerEventMessage: New LostInterestReservationInstances property [ID_32801]
 
 <!-- MR 10.3.0 - FR 10.2.5 -->
 
@@ -421,13 +421,13 @@ When, for example, a table is populated with ReservationInstances using Resource
 > This list will only contain ReservationInstances to which the user has access.
 > To retrieve the IDs of the ReservationInstances to which the user no longer has access, you can call the GetHiddenReservationInstances method.
 
-#### Subscribing to ResourceUsageStatusEvents for specific resources \[ID_32979\]
+#### Subscribing to ResourceUsageStatusEvents for specific resources [ID_32979]
 
 <!-- MR 10.3.0 - FR 10.2.6 -->
 
 From now on, it is possible to only receive ResourceUsageEventMessages for a specific resource. Using ResourceUsageStatusEventExposers, you can now filter by ResourceId.
 
-#### ReservationInstanceType and ServiceDefinitionType: New values 'ResourceScheduling' and 'ResourceOrchestration' \[ID_33390\]
+#### ReservationInstanceType and ServiceDefinitionType: New values 'ResourceScheduling' and 'ResourceOrchestration' [ID_33390]
 
 <!-- MR 10.3.0 - FR 10.2.7 -->
 
@@ -438,7 +438,7 @@ ReservationInstanceType and ServiceDefinitionType can now be set to the followin
 
 ### DMS Mobile Gateway
 
-#### Additional logging after sending a 'send SMS' request to an SMSEagle device \[ID_32785\] \[ID_32911\]
+#### Additional logging after sending a 'send SMS' request to an SMSEagle device [ID_32785] [ID_32911]
 
 <!-- MR 10.3.0 - FR 10.2.5 -->
 
@@ -462,7 +462,7 @@ When an HTTP request of type “send SMS” is sent to an SMSEagle device, the f
 
 ### DMS tools
 
-#### Standalone Elasticsearch Cluster Installer: New RepoPath setting \[ID_33055\]
+#### Standalone Elasticsearch Cluster Installer: New RepoPath setting [ID_33055]
 
 <!-- MR 10.3.0 - FR 10.2.6 -->
 
