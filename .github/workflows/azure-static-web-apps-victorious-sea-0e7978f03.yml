@@ -43,7 +43,7 @@ jobs:
           docfx metadata -f
       - name: build documentation
         run: |
-          docfx build -f
+          docfx build -f --warningsAsErrors
       - name: publish results
         uses: actions/upload-artifact@v2.2.4
         with:
