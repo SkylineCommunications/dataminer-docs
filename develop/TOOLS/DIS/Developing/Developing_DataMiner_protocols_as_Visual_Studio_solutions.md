@@ -54,4 +54,11 @@ A protocol will automatically be compiled when you click the *Publish* button at
 
 ## Saving a compiled protocol to a file
 
-To save a compiled protocol to a file, select *File \> Save Compiled Protocol As...*
+A compiled protocol can be saved either as an XML file or as a *.dmprotocol* package.
+
+To save a compiled protocol
+
+1. Select *File \> Save Compiled Protocol As...*
+1. In the *Save As* window, select a folder, enter a file name, set *Save as type* to either "Protocol package (\*.dmprotocol)" or "Protocol file (\*.xml)", and click *Save*.
+
+If you choose to save a protocol as a package, the package will contain the protocol as well as all required DLL files (e.g. DLL files of NuGet packages that are used in the protocol).
