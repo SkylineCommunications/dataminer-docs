@@ -4,9 +4,9 @@ uid: Cloud_connectivity_and_security
 
 # Cloud connectivity and security
 
-From version 10.2.0 onwards, DataMiner comes bundled with a number of cloud features. Because the cloud means connecting your system to the dangers of the internet, we built security into the core design of our Cloud Connectivity framework.
+From version 10.2.0 onwards, DataMiner comes bundled with a number of cloud features. Because the cloud means connecting your system to the dangers of the internet, we have built security into the core design of our Cloud Connectivity framework.
 
-In highly secured environments, it is not always possible to set up a direct internet connection. For those scenarios, we intend to add support for hosting a dedicated Cloud Gateway node in a DMZ, acting as a tunnel to the DataMiner Cloud Platform.
+In highly secured environments, it is not always possible to set up a direct internet connection. For those scenarios, it is possible to [connect to the cloud using a DMZ](xref:Connect_to_cloud_with_DMZ).
 
 In any case, connecting your DataMiner System to our Cloud Platform is opt-in, meaning DataMiner will not transfer anything to the cloud without an Administrator explicitly enabling this on the DataMiner System.
 
@@ -33,13 +33,13 @@ The DataMiner Cloud Platform sends emails from the following domain:
 
 When you connect your DataMiner System to the DataMiner Cloud Platform, a secure connect flow needs to be completed. The administrator needs to authenticate on the DataMiner System and then needs to authenticate towards the DataMiner Cloud Platform.
 
-At the end of this flow, a secure JSON Web Token is delivered directly from the DataMiner Cloud Platform to the DataMiner System, which is used by the DataMiner System to authenticate towards the DataMiner Cloud Platform.
+At the end of this flow, a **secure JSON Web Token** is delivered directly from the DataMiner Cloud Platform to the DataMiner System, which is used by the DataMiner System to authenticate towards the DataMiner Cloud Platform.
 
 - The signature of these JSON Web Tokens is created using the HMAC SHA256 algorithm. The secret is kept in a Key Vault, which is only accessed using Managed Identities.
 
 - Every JSON web token is only valid for 1 week, after which it is automatically renewed using a single-use refresh key.
 
-All communication between the DataMiner System and the DataMiner Cloud Platform happens using HTTPS and WSS protocols, both using encrypted TLS connections. Currently, only TLS 1.2 is supported.
+All communication between the DataMiner System and the DataMiner Cloud Platform happens using HTTPS and WSS protocols, both using encrypted TLS connections. Currently, **only TLS 1.2 is supported**.
 
 Only outgoing traffic needs to be allowed through for the domain *.dataminer.services.
 
@@ -60,11 +60,11 @@ Behind the scenes, DataMiner relies on several defense mechanisms to prevent una
 
 ### Cloud users
 
-When a dashboard is shared, DataMiner will generate a special cloud user (see [Types of users](xref:Types_of_users)), which is used to view the shared dashboards. These cloud users have randomly generated passwords (17 characters) and can only be used through the DataMiner Cloud Gateway. The passwords for these users are encrypted using the Blowfish algorithm (308-bit key, ECB mode) before being stored. These users are only granted permissions on the items in the shared dashboard. For example, if your dashboard contains 2 elements, the resulting cloud user for that shared dashboard will only have read access to those 2 elements. Even if the user sharing the dashboard has access to all elements in the system.
+When a dashboard is shared, DataMiner will generate a **special cloud user** (see [Types of users](xref:Types_of_users)), which is used to view the shared dashboards. These cloud users have randomly generated passwords (17 characters) and can only be used through the DataMiner Cloud Gateway. The passwords for these users are encrypted using the Blowfish algorithm (308-bit key, ECB mode) before being stored. These users are **only granted permissions on the items in the shared dashboard**. For example, if your dashboard contains 2 elements, the resulting cloud user for that shared dashboard will only have read access to those 2 elements. Even if the user sharing the dashboard has access to all elements in the system.
 
 ### Web Application Firewall (WAF)
 
-When a dashboard is shared, DataMiner will build a whitelist based on the API calls (and their parameters) of the dashboard. For example, consider your dashboard is displaying all active alarms for element 'SOC' with Element ID 100 and DataMiner ID 2000. When the dashboard is shared, DataMiner will infer it calls the GetActiveAlarmsForElement API with parameters Element ID 100 and DataMiner ID 200. If that shared dashboard connection were to suddenly request the active alarms for a different element, or even a different API call, DataMiner will block the request.
+When a dashboard is shared, DataMiner will build a **whitelist based on the API calls** (and their parameters) of the dashboard. For example, consider your dashboard is displaying all active alarms for element "SOC" with Element ID 100 and DataMiner ID 2000. When the dashboard is shared, DataMiner will infer it calls the *GetActiveAlarmsForElement* method with element ID 100 and DataMiner ID 200. If that shared dashboard connection were to suddenly request the active alarms for a different element, or even a different API call, DataMiner would block the request.
 
 ## Encryption
 
