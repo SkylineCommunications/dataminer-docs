@@ -51,3 +51,7 @@ In the CCAP table, it could occur that parameters based on the system descriptio
 #### QAM DS Channel: Missing decimals in MER and packet ratio columns [ID_34560]
 
 Up to now, the MER and packet ratio columns for the QAM DS Channel did not show any decimals even when decimals were available for a particular KPI.
+
+#### Incorrect DS/US Channel Utilization in Node Segment overview [ID_34623]
+
+In the Node Segment overview, it could occur that the DS Channel Utilization showed the value for the US Channel Utilization and vice versa.
