@@ -22,7 +22,19 @@ uid: Cube_Feature_Release_10.2.12
 
 ### Enhancements
 
-*No enhancements have been added to this version yet.*
+#### Visual Overview: New toggle buttons added to Buttons stencil [ID_34426]
+
+<!-- MR 10.2.0 [CU9] - FR 10.2.12 [CU0] -->
+
+The Buttons stencil now contains the following additional buttons:
+
+- *tb-var-l* (button on left side, text on right side, logic based on session variable, configurable session variable scope)
+- *tb-var-r* (button on right side, text on left side, logic based on session variable, configurable session variable scope)
+
+Other changes made to the Buttons stencil:
+
+- Buttons *abtn-automation* and *lbtn-automation* have been combined into one button *btn-automation*.
+- Button *btn-popup* now has configurable window settings.
 
 #### Trending - Behavioral anomaly detection: Enhanced detection of flatline changes [ID_34487]
 

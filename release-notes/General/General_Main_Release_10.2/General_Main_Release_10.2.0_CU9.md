@@ -12,6 +12,20 @@ uid: General_Main_Release_10.2.0_CU9
 
 ### Enhancements
 
+#### Visual Overview: New toggle buttons added to Buttons stencil [ID_34426]
+
+<!-- MR 10.2.0 [CU9] - FR 10.2.12 [CU0] -->
+
+The Buttons stencil now contains the following additional buttons:
+
+- *tb-var-l* (button on left side, text on right side, logic based on session variable, configurable session variable scope)
+- *tb-var-r* (button on right side, text on left side, logic based on session variable, configurable session variable scope)
+
+Other changes made to the Buttons stencil:
+
+- Buttons *abtn-automation* and *lbtn-automation* have been combined into one button *btn-automation*.
+- Button *btn-popup* now has configurable window settings.
+
 #### Failover: SLDataMiner will no longer be able to reclaim the virtual IP address when the agent goes offline [ID_34458]
 
 <!-- MR 10.2.0 [CU9] - FR 10.2.12 -->
@@ -69,6 +83,12 @@ In Visio pages displayed in web apps, new values would incorrectly be added to l
 
 When, in an alarm template, you enabled conditional monitoring for a parameter, the iStatus -17 data points would incorrectly also be offloaded to the offload database when, in the trend template linked to that parameter, its trend data had been excluded from offloads.
 
+#### Not all data would be cleaned up after deleting elements in bulk on systems with a MySQL or Microsoft SQL Server database [ID_34542]
+
+<!-- Main Release Version 10.0.0 [CU22]/10.1.0 [CU21]/10.2.0 [CU9] - Feature Release Version 10.2.12 -->
+
+When, on systems with a MySQL or Microsoft SQL Server database, elements had been deleted in bulk (e.g. via an Automation script), in some cases, real-time trending, average trending, alarms, information events and certain reporter caching tables would incorrectly not be cleaned up.
+
 #### DataMiner Cube - Spectrum Analysis: Problem with measurement point option 'Invert spectrum' [ID_34552]
 
 <!-- MR 10.1.0 [CU21] / 10.2.0 [CU9] - FR 10.2.12 -->
@@ -90,6 +110,12 @@ However, up to now, the file cache offload limit (default: 10 GB) would incorrec
     </FileCache>
 </DataBase>
 ```
+
+#### Problem with SLElement when rows were deleted from a table with an open subscription [ID_34578]
+
+<!-- MR 10.1.0 [CU21] / 10.2.0 [CU9] - FR 10.2.12 -->
+
+In some rare cases, an error could occur in SLElement when rows were deleted from a table with an open subscription.
 
 #### DataMiner Maps: Loading screen would incorrectly stay visible after the map had been loaded [ID_34587]
 
