@@ -20,7 +20,7 @@ In this step, the repository is scanned for the presence of a Visual Studio solu
 
 ## Verify tag
 
-This stage verifies that a tag matches the following regular expression `^\d+\.\d+\.\d+-CU\d+$`, e.g. `1.0.1-CU0`.
+This stage verifies that a tag matches the regular expression `^\d+\.\d+\.\d+-CU\d+$`, e.g. `1.0.1-CU0`.
 
 ## Sync DataMiner feature release DLLs
 

@@ -14,8 +14,6 @@ Currently, the pipeline consists of the following steps:
 
 - [Validate solution](#validate-solution)
 
-- [Validate tag](#validate-tag)
-
 - [Prepare solution](#prepare-solution)
 
 - [Sync DataMiner feature release DLLs](#sync-dataminer-feature-release-dlls)
