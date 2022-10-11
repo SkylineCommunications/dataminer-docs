@@ -14,8 +14,6 @@ Currently, the pipeline consists of the following steps:
 
 - [Validate solution](#validate-solution)
 
-- [Validate tag](#validate-tag)
-
 - [Prepare solution](#prepare-solution)
 
 - [Sync DataMiner feature release DLLs](#sync-dataminer-feature-release-dlls)
@@ -46,6 +44,8 @@ Currently, the pipeline consists of the following steps:
 
 - [(Release) Push to SVN](#release-push-to-svn)
 
+- [(Release) Push to Azure](#release-push-to-azure)
+
 - [Declarative post actions](#declarative-post-actions)
 
 ## Loading Jenkinsfile
@@ -65,15 +65,6 @@ The pipeline will only continue if exactly one solution file has been detected i
 ## Validate solution
 
 This step verifies whether there are C# code blocks in the Automation script(s). If not, the SonarQube stage will be skipped.
-
-## Validate tag
-
-This step is only executed for pipeline runs for a tag. It will verify whether the specified tag meets the following conditions:
-
-- The tag has the correct format.
-- The tag is in the expected branch. For example, a tag "1.0.0.1" provided on a commit that is part of the "1.0.0.x" branch will succeed, while a tag "1.0.0.1" provided on a commit belonging to branch 1.0.1.x will fail.
-- All expected previous minor versions of the tag are present. For example, if a commit has been tagged with "1.0.0.4", the tags "1.0.0.1", "1.0.0.2" and "1.0.0.3" are expected to be present already.
-- The tag is an annotated tag and not a lightweight tag.
 
 ## Prepare solution
 
@@ -162,6 +153,10 @@ This step performs the actual push to SVN. Once this step is executed, you shoul
 
 > [!NOTE]
 > Whereas old Automation scripts were stored on SVN under the following folder <https://svn.skyline.be/!/#SystemEngineering/view/head/Automation%20Scripts>, the CI/CD pipeline pushes Automation scripts to the following folder <https://svn.skyline.be/!/#SystemEngineering/view/head/Automation>.
+
+## (Release) Push to Azure
+
+This stage pushes the created package to Azure Blob Storage.
 
 ## Declarative post actions
 
