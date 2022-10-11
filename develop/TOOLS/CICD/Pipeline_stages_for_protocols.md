@@ -58,6 +58,8 @@ Currently, the pipeline for protocol development consists of the following steps
 
 - [(Release) Push to SVN](#release-push-to-svn)
 
+- [(Release) Push to Azure](#release-push-to-azure)
+
 - [Declarative post actions](#declarative-post-actions)
 
 ## Loading Jenkinsfile
@@ -372,6 +374,10 @@ In case a tag was detected, and the version should therefore be pushed to SVN, s
 ## (Release) Push to SVN
 
 This step performs the actual push to SVN. Once this step is executed, you should find a new version of the protocol on SVN in the corresponding folder, together with the required DLLs, which were originally provided in the DLLs folder in the Visual Studio project.
+
+## (Release) Push to Azure
+
+This stage pushes the created package to Azure Blob Storage.
 
 ## Declarative post actions
 
