@@ -25,3 +25,17 @@ To connect to the Ziine Demo System:
 
    > [!NOTE]
    > The Ziine hostname is `https://ziine.skyline.be/`.
+
+## Having problems connecting?
+
+1. Check the connection settings and make sure *Connection Type* is set to *Auto*. See [Overriding the default connection type](xref:Logging_on_to_DataMiner_Cube#overriding-the-default-connection-type).
+
+   *Connection Type* must be set to *Auto* because all public Agents at Skyline have a unique port for their .Net remoting connection instead of the default port *8004*.
+
+1. Make sure the authentication pop-up window is triggered. If it is not shown automatically as soon as you try to connect, you can trigger it manually from the login screen:
+
+   1. Fill in your username, but **do not fill in a password**.
+
+   1. Click the blue arrow icon to log on.
+
+      ![Logging on to Ziine](~/user-guide/images/ziine_login.png)
