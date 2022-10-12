@@ -22,6 +22,20 @@ When, in the *DMS.xml* file, the *bruteForceToOffline* option is specified in th
 
 From now on, when the *bruteForceToOffline* option is specified in the *DMS.xml* file, SLDataMiner will be asked to set the agent's state to offline and to not reclaim the virtual IP address before it has been released.
 
+#### QA Device Simulator renamed to Skyline Device Simulator [ID_34530]
+
+<!-- MR 10.3.0 - FR 10.2.12 -->
+
+The *QA Device Simulator* tool has been renamed to *Skyline Device Simulator* and now targets Microsoft .NET Framework 4.8.
+
+Also, the following new command-line parameters allow you to specify packet loss and packet delay parameters on startup.
+
+```txt
+/packetloss <packet loss %>
+/delayms <delay ms>
+/delaypct <delay % of packets>
+```
+
 #### Preventing multiple SLScripting processes from simultaneously compiling the same DLL [ID_34532]
 
 <!-- MR 10.1.0 [CU21] / 10.2.0 [CU9] - FR 10.2.12 -->
