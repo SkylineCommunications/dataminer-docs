@@ -56,3 +56,9 @@ Any alarm or suggestion events created for flatline changes will now close soone
 <!-- MR 10.1.0 [CU21] / 10.2.0 [CU9] - FR 10.2.12 -->
 
 When you had selected the *Invert spectrum* option while configuring a measurement point, in some cases, that option would incorrectly not be applied.
+
+#### DataMiner Cube - Data Display: Parameter controls displaying a write parameter of type DateTime would incorrectly not take into account the format of the current culture as defined in the regional settings of DataMiner Cube [ID_34575]
+
+<!-- MR 10.1.0 [CU21] / 10.2.0 [CU9] - FR 10.2.12 -->
+
+A parameter control displaying a write parameter of type DateTime would incorrectly not take into account the format of the current culture as defined in the regional settings of DataMiner Cube. As a result, the read and write parameters would be formatted differently.
