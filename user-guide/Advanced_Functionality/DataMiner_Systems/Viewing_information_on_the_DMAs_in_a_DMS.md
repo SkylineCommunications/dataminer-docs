@@ -42,5 +42,7 @@ This page contains several tabs with information and settings:
 
 - To view contacts responsible for the system, for instance in case you encounter an issue and want to contact an administrator, go to the *system* tab.
 
+- The *bpa* tab is used to run BPA tests. See [Running BPA tests](xref:Running_BPA_tests)
+
 > [!NOTE]
 > To view this page, you need the permission *Modules* > *System configuration* > *Agents* > *UI available*.
