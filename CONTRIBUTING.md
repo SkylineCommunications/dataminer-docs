@@ -555,18 +555,16 @@ You can do so as follows:
 
 1. Open the branch in Visual Studio Code. You can do so by clicking the *Open in Visual Studio Code* button in GitHub Desktop.
 
-1. Make your changes in Visual Studio Code and make sure they are saved. Keep the items listed under [Things to watch out](#things-to-watch-out-for) for in mind.
+1. Make your changes in Visual Studio Code and make sure they are saved. Keep the items listed under [Things to watch out for](#things-to-watch-out-for) in mind.
 
 1. In GitHub Desktop, add a short summary of your changes in the box in the lower right corner. Optionally, you can also add a description. Then click the *Commit* button.
 
    ![Commit to the draft branch](~/images/Contrib_CommitToDraftBranch.png)
 
-1. Click *Push origin* to push the changes to the remote.
-
-   ![Push the commit to the remote](~/images/Contrib_PushDraft.png)
+1. Click *Push upstream* to push the changes to the remote.
 
    > [!NOTE]
-   > If you see *Push upstream* instead of *Push origin*, you are attempting to work directly on the repository instead of on a fork, which means you will get an error when you click this button as you do not have the rights to push directly to the repository. Make sure you are using a fork as detailed in [Cloning and forking repositories from GitHub Desktop](https://docs.github.com/en/desktop/contributing-and-collaborating-using-github-desktop/adding-and-cloning-repositories/cloning-and-forking-repositories-from-github-desktop).
+   > If you get an error when you click this button, this usually means you are trying to push the changes directly to the main repository instead of to your fork. In GitHub Desktop, go to *Repository* > *Repository settings*, and make sure the specified *Primary remote repository* is your fork. To find the URL of your fork, go to <https://github.com/SkylineCommunications/dataminer-docs/network/members>, search for your GitHub username, and click the *dataminer-docs* link next to it.
 
 1. Click the *Create Pull Request* button. This will open GitHub in a browser.
 
