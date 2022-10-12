@@ -250,11 +250,11 @@ When authenticating users using SAML, the following additional debug information
 
 Up to now, components could only produce one feed for each data type. Now support has been added for different categories within a data type, so that components will be able to produce several feeds for the same data type. This will for example make it possible for a component to produce a query row feed with the categories "timeline item" and "timeline band".
 
-#### QA Device Simulator: Enhanced performance [ID_33761]
+#### Skyline Device Simulator: Enhanced performance [ID_33761]
 
 <!-- MR 10.3.0 - FR 10.2.9 -->
 
-Because of a number of enhancements, overall performance of the QA Device Simulator tool has improved.
+Because of a number of enhancements, overall performance of the Skyline Device Simulator tool has improved.
 
 #### Maximum for element timeout setting increased to 24 hours [ID_33862] [ID_33951]
 

@@ -492,8 +492,20 @@ When you run the installer with the “generate” option (run-stand-alone -g), 
 </ElasticConfiguration>
 ```
 
-#### QA Device Simulator: Help link now directs users to the QA Device Simulator help pages on <https://docs.dataminer.services/> [ID_33680]
+#### QA Device Simulator renamed to Skyline Device Simulator [ID_33680] [ID_34530]
 
-<!-- MR 10.3.0 - FR 10.2.7 -->
+<!-- RN 33680: MR 10.3.0 - FR 10.2.7 -->
+<!-- RN 34530: MR 10.3.0 - FR 10.2.12 -->
 
-In the UI of the QA Device Simulator, the help link now directs users to the QA Device Simulator help pages on <https://docs.dataminer.services/>.
+The *QA Device Simulator* tool has been renamed to *Skyline Device Simulator* and now targets Microsoft .NET Framework 4.8.
+
+Also, the following new command-line parameters allow you to specify packet loss and packet delay parameters on startup.
+
+```txt
+/packetloss <packet loss %>
+/delayms <delay ms>
+/delaypct <delay % of packets>
+```
+
+> [!NOTE]
+> In the UI of the *Skyline Device Simulator*, the help link now directs you to the *Skyline Device Simulator* help pages on <https://docs.dataminer.services/>.
