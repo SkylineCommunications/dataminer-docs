@@ -130,3 +130,24 @@ From DataMiner 9.6.13 onwards, it is possible to export the trend data to CSV. T
 
 > [!NOTE]
 > The separator used in CSV exports is based on the *CSV separator* setting in Cube. If this setting cannot be retrieved, the local browser settings are used instead.
+
+## Examples
+
+### Trend graph showing DMA KPIs
+
+To make component that shows a basic trend graph with several DMA KPIs:
+
+1. In edit mode, drag the *Line & area chart* visualization to the dashboard.
+
+1. Click the ![Data feed icon](~/user-guide/images/dashboards_data.png) icon to filter the available data in the data pane.
+
+1. Expand the *Parameters* section in the data pane and specify the element representing the DMA in the *Element* box.
+
+1. Select a parameter you want to display in the graph and drag it to the graph. Repeat this for each parameter that should be displayed in the graph.
+
+   > [!TIP]
+   > Select the *Trended* checkbox at the top of the *Parameters* section to only view parameters for which trending is enabled.
+
+1. In the Settings tab, in the *Group by* box, select *Element*. This way all KPIs will be shown in the same graph.
+
+![Example of a trend graph shown with a Line & area chart component](~/user-guide/images/dashboard_example_linechart1.png)
