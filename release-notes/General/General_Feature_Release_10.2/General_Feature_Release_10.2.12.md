@@ -22,6 +22,16 @@ When, in the *DMS.xml* file, the *bruteForceToOffline* option is specified in th
 
 From now on, when the *bruteForceToOffline* option is specified in the *DMS.xml* file, SLDataMiner will be asked to set the agent's state to offline and to not reclaim the virtual IP address before it has been released.
 
+#### Preventing multiple SLScripting processes from simultaneously compiling the same DLL [ID_34532]
+
+<!-- MR 10.1.0 [CU21] / 10.2.0 [CU9] - FR 10.2.12 -->
+
+On systems with multiple SLScripting processes, in some cases, these processes could incorrectly compile the same DLL at the same time. As a result, elements would then throw `Compilation failed` errors and would not execute their QActions.
+
+Now, an inter-process lock has been added to make sure only one thread and process can build a given DLL.
+
+Moreover, when a QAction is being compiled, other elements will wait for 5 minutes. They will then throw an exception and an element restart will be required. This timeout will make sure that, if something unexpectedly would go wrong, there is still a chance to recover from the situation without having to restart DataMiner.
+
 #### SLElement: Enhanced alarm locking [ID_34561]
 
 <!-- MR 10.3.0 - FR 10.2.12 -->
@@ -67,6 +77,12 @@ In some rare cases, an error could occur in SLDataMiner when you edited an eleme
 
 When a parameter of a DVE element exported as a standalone parameter was partially included in a service, in some cases, the service state could be incorrect.
 
+#### Web apps - Visual Overview: Not possible to execute parameter set actions [ID_34496]
+
+<!-- MR 10.2.0 [CU9] - FR 10.2.12 -->
+
+In Visio pages displayed in web apps, it would not be possible to execute parameter set actions.
+
 #### Monitoring app: Problem when trying to open the web UI of a device [ID_34503]
 
 <!-- MR 10.2.0 [CU9] - FR 10.2.12 -->
@@ -90,6 +106,14 @@ When, in an alarm template, you enabled conditional monitoring for a parameter, 
 <!-- Main Release Version 10.0.0 [CU22]/10.1.0 [CU21]/10.2.0 [CU9] - Feature Release Version 10.2.12 -->
 
 When, on systems with a MySQL or Microsoft SQL Server database, elements had been deleted in bulk (e.g. via an Automation script), in some cases, real-time trending, average trending, alarms, information events and certain reporter caching tables would incorrectly not be cleaned up.
+
+#### Dashboards app: Parameter order in state components would change randomly and trend graphs would be displayed in an incorrect color [ID_34548]
+
+<!-- MR 10.2.0 [CU9] - FR 10.2.12 -->
+
+In some cases, the order of the parameters in a state component would change randomly.
+
+Also, trend graphs would occasionally be displayed in an incorrect color.
 
 #### Offload limit would not be taken into account when offloading files to a file cache [ID_34564]
 

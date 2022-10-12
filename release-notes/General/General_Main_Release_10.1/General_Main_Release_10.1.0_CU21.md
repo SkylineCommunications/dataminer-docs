@@ -12,6 +12,16 @@ uid: General_Main_Release_10.1.0_CU21
 
 ### Enhancements
 
+#### Preventing multiple SLScripting processes from simultaneously compiling the same DLL [ID_34532]
+
+<!-- MR 10.1.0 [CU21] / 10.2.0 [CU9] - FR 10.2.12 -->
+
+On systems with multiple SLScripting processes, in some cases, these processes could incorrectly compile the same DLL at the same time. As a result, elements would then throw `Compilation failed` errors and would not execute their QActions.
+
+Now, an inter-process lock has been added to make sure only one thread and process can build a given DLL.
+
+Moreover, when a QAction is being compiled, other elements will wait for 5 minutes. They will then throw an exception and an element restart will be required. This timeout will make sure that, if something unexpectedly would go wrong, there is still a chance to recover from the situation without having to restart DataMiner.
+
 #### Enhanced performance of the DataMiner startup routine [ID_34545]
 
 <!-- MR 10.1.0 [CU21] / 10.2.0 [CU9] - FR TBD -->
