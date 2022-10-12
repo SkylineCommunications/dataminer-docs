@@ -14,6 +14,15 @@ uid: General_Feature_Release_10.2.12
 
 ### Enhancements
 
+#### Dashboards app / Low-code apps - Service definition component: Enhancements made with regard to function nodes displaying the number of Process Automation tokens in queue or in progress [ID_33888]
+
+<!-- MR 10.3.0 - FR 10.2.12 -->
+<!-- Not added to MR 10.3.0 -->
+
+When a Process Automation definition is added to the Service definition component, all function nodes will display the number of tokens currently in queue or in progress. The algorithm behind this feature has now been enhanced.
+
+Also, due to a filter issue, in some cases, nodes could display an incorrect number of tokens.
+
 #### Failover: SLDataMiner will no longer be able to reclaim the virtual IP address when the agent goes offline [ID_34458]
 
 <!-- MR 10.2.0 [CU9] - FR 10.2.12 -->
@@ -21,6 +30,12 @@ uid: General_Feature_Release_10.2.12
 When, in the *DMS.xml* file, the *bruteForceToOffline* option is specified in the `<Failover>` element, SLDataMiner will not be notified when the agent's state goes from online to offline. Up to now, this could lead to SLDataMiner reclaiming the virtual IP address as it was not aware of any state change. Both agents would then incorrectly have the same virtual IP address.
 
 From now on, when the *bruteForceToOffline* option is specified in the *DMS.xml* file, SLDataMiner will be asked to set the agent's state to offline and to not reclaim the virtual IP address before it has been released.
+
+#### Dashboards app - Line & area chart: Non-trended parameters will now automatically be removed when the component is linked to a parameter feed [ID_34499]
+
+<!-- MR 10.3.0 - FR 10.2.12 -->
+
+When a parameter feed is linked to a *Line & area chart" component, from now on, non-trended parameters will now automatically be removed from the chart.
 
 #### QA Device Simulator renamed to Skyline Device Simulator [ID_34530]
 
@@ -84,6 +99,12 @@ SLLogCollector packages will now also include the following additional files con
 <!-- MR 10.1.0 [CU21] / 10.2.0 [CU9] - FR 10.2.12 -->
 
 In some rare cases, an error could occur in SLDataMiner when you edited an element.
+
+#### Dashboards app: 'Line & area chart' component would display capacity usage incorrectly when bookings overlapped [ID_34465]
+
+<!-- MR 10.3.0 - FR 10.2.12 -->
+
+When, in the Dashboards app, resource capacity was displayed using a *Line & area chart* component, in some cases, capacity usage would incorrectly be doubled when bookings overlapped.
 
 #### Standalone DVE parameter partially included in an service would incorrectly not affect service state severity [ID_34493]
 

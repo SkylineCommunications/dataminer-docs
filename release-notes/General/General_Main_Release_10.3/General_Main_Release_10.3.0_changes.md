@@ -382,6 +382,12 @@ Because of a number of enhancements, overall performance has increased when runn
 
 A number of enhancements have been made to the algorithm used by SLNet and SLDataGateway to find the first valid physical address of the DataMiner Agent.
 
+#### Dashboards app - Line & area chart: Non-trended parameters will now automatically be removed when the component is linked to a parameter feed [ID_34499]
+
+<!-- MR 10.3.0 - FR 10.2.12 -->
+
+When a parameter feed is linked to a *Line & area chart" component, from now on, non-trended parameters will now automatically be removed from the chart.
+
 #### Dashboards app - Parameter feed: 'Auto-select all' setting no longer available when using an EPM identifier feed as source [ID_34501]
 
 <!-- MR 10.3.0 - FR 10.2.11 -->
@@ -737,6 +743,12 @@ In some cases, instead of listing the unlicensed modules, this message would inc
 <!-- MR 10.3.0 - FR 10.2.11 -->
 
 When a service template was created using the *CreateServiceTemplate* method, the DataMinerID and ElementID of the newly created service template would incorrectly be set to 0 instead of -1.
+
+#### Dashboards app: 'Line & area chart' component would display capacity usage incorrectly when bookings overlapped [ID_34465]
+
+<!-- MR 10.3.0 - FR 10.2.12 -->
+
+When, in the Dashboards app, resource capacity was displayed using a *Line & area chart* component, in some cases, capacity usage would incorrectly be doubled when bookings overlapped.
 
 #### Dashboards / Low-Code Apps: Changing a GQI query would not cause a table to get updated when column filters were applied [ID_34520]
 
