@@ -28,6 +28,20 @@ From now on, when the *bruteForceToOffline* option is specified in the *DMS.xml*
 
 Alarm locking in the SLElement process has been enhanced.
 
+#### Web Services API: Enhanced methods [ID_34557]
+
+<!-- MR 10.2.0 [CU9] - FR 10.2.12 -->
+
+The following methods used to add attachments to bookings, jobs and tickets have now been replaced by newer, more secure methods:
+
+| Old method           | New method             |
+|----------------------|------------------------|
+| AddBookingAttachment | AddBookingAttachmentV2 |
+| AddJobAttachment     | AddJobAttachmentV2     |
+| AddTicketAttachment  | addTicketAttachmentV2  |
+
+Also, the *ContinueAutomationScript* method now has an additional `info` parameter that can be used to provide more information about the variables passed in the `values` parameter (e.g. information to help resolve the file paths).
+
 #### SLLogCollector now also collects network information [ID_34582]
 
 <!-- MR 10.1.0 [CU21] / 10.2.0 [CU9] - FR 10.2.12 -->
@@ -52,6 +66,12 @@ In some rare cases, an error could occur in SLDataMiner when you edited an eleme
 <!-- MR 10.1.0 [CU21] / 10.2.0 [CU9] - FR 10.2.12 -->
 
 When a parameter of a DVE element exported as a standalone parameter was partially included in a service, in some cases, the service state could be incorrect.
+
+#### Monitoring app: Problem when trying to open the web UI of a device [ID_34503]
+
+<!-- MR 10.2.0 [CU9] - FR 10.2.12 -->
+
+When, in the Monitoring app, you tried to open the web UI of a device, a `No parameters available` error would appear.
 
 #### Web apps - Visual Overview: New values would incorrectly be added to listboxes each time those listboxes got updated [ID_34515]
 
