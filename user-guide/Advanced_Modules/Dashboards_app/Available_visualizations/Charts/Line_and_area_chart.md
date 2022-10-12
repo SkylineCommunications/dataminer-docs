@@ -148,6 +148,6 @@ To make component that shows a basic trend graph with several DMA KPIs:
    > [!TIP]
    > Select the *Trended* checkbox at the top of the *Parameters* section to only view parameters for which trending is enabled.
 
-1. In the Settings tab, in the *Group by* box, select *Element*. This way all KPIs will be shown in the same graph.
+1. In the *Settings* tab, in the *Group by* box, select *Element*. This way all KPIs will be shown in the same graph.
 
 ![Example of a trend graph shown with a Line & area chart component](~/user-guide/images/dashboard_example_linechart1.png)
