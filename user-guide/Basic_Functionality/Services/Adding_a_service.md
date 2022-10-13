@@ -78,8 +78,8 @@ uid: Adding_a_service
 
         4. Optionally, enter an alias for the selected item.
         
-        > [!NOTE]
-        > It is possible to add multiple instances of the same element in a service. Specifying an alias is mandatory for all duplicate instances, and it is the alias of the service elements that will be displayed in the Surveyor.
+           > [!NOTE]
+           > It is possible to add multiple instances of the same element in a service. Specifying an alias is mandatory for all duplicate instances, and it is the alias of the service elements that will be displayed in the Surveyor.
 
         5. If an element or enhanced service is selected, to include only some parameters, clear the checkbox *All parameters for this element*, and select the parameters in question.
 
