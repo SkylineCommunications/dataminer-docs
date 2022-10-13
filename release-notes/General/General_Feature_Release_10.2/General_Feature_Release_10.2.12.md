@@ -120,7 +120,7 @@ In some rare cases, an error could occur in SLDataMiner when you edited an eleme
 
 #### Dashboards app: 'Line & area chart' component would display capacity usage incorrectly when bookings overlapped [ID_34465]
 
-<!-- MR 10.3.0 - FR 10.2.12 -->
+<!-- MR 10.1.0 [CU21] / 10.2.0 [CU9] - FR 10.2.12 -->
 
 When, in the Dashboards app, resource capacity was displayed using a *Line & area chart* component, in some cases, capacity usage would incorrectly be doubled when bookings overlapped.
 
@@ -184,6 +184,12 @@ However, up to now, the file cache offload limit (default: 10 GB) would incorrec
 </DataBase>
 ```
 
+#### Errors would be thrown when SNMP elements were created in bulk [ID_34573]
+
+<!-- MR 10.1.0 [CU21] / 10.2.0 [CU9] - FR 10.2.12 -->
+
+When a series of SNMP elements was being created in quick succession, in some cases, SLSNMPManager would incorrectly send an NT_GET_PROTOCOL_INTERFACE request before an element had fully been registered in SLDataMiner. This then resulted in an error message thrown by SLDMS, SLDataMiner and SLSNMPManager, which the latter would log as `GetProtocolInterface failed for ...`.
+
 #### Problem with SLElement when rows were deleted from a table with an open subscription [ID_34578]
 
 <!-- MR 10.1.0 [CU21] / 10.2.0 [CU9] - FR 10.2.12 -->
@@ -203,6 +209,12 @@ When DataMiner Maps v1 was used with Google Maps as provider, in some cases, the
 GQI recording is a debugging feature that allows you to save GQI communication and replay it in a lab environment.
 
 When you had enabled this feature, in some rare cases, an error could occur when a GQI query was stored in memory while being executed.
+
+#### Dashboards app: Problem when creating a PDF preview of a dashboard containing an empty GQI table [ID_34635]
+
+<!-- MR 10.2.0 [CU9] - FR 10.2.12 -->
+
+When a PDF preview was made from a dashboard containing an empty GQI table (e.g. after selecting *Configure* in an email action of an Automation script), in the preview, that table would incorrectly not be empty. Instead, it would contain random cell values.
 
 #### Web apps: Read-only text in input boxes would incorrectly not be displayed in bold type when using Mozilla Firefox [ID_34641]
 

@@ -756,12 +756,6 @@ In some cases, instead of listing the unlicensed modules, this message would inc
 
 When a service template was created using the *CreateServiceTemplate* method, the DataMinerID and ElementID of the newly created service template would incorrectly be set to 0 instead of -1.
 
-#### Dashboards app: 'Line & area chart' component would display capacity usage incorrectly when bookings overlapped [ID_34465]
-
-<!-- MR 10.3.0 - FR 10.2.12 -->
-
-When, in the Dashboards app, resource capacity was displayed using a *Line & area chart* component, in some cases, capacity usage would incorrectly be doubled when bookings overlapped.
-
 #### Dashboards / Low-Code Apps: Changing a GQI query would not cause a table to get updated when column filters were applied [ID_34520]
 
 <!-- MR 10.3.0 - FR 10.2.11 -->
