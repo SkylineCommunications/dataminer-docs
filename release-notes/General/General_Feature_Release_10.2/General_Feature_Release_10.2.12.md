@@ -23,6 +23,12 @@ When a Process Automation definition is added to the Service definition componen
 
 Also, due to a filter issue, in some cases, nodes could display an incorrect number of tokens.
 
+#### GQI: Enhanced performance when retrieving table data [ID_34441]
+
+<!-- MR 10.3.0 - FR 10.2.12 -->
+
+Because of a number of enhancements, overall performance has increased when retrieving table data by means of a GQI query.
+
 #### Failover: SLDataMiner will no longer be able to reclaim the virtual IP address when the agent goes offline [ID_34458]
 
 <!-- MR 10.2.0 [CU9] - FR 10.2.12 -->
@@ -36,6 +42,12 @@ From now on, when the *bruteForceToOffline* option is specified in the *DMS.xml*
 <!-- MR 10.3.0 - FR 10.2.12 -->
 
 When a parameter feed is linked to a *Line & area chart" component, from now on, non-trended parameters will now automatically be removed from the chart.
+
+#### GQI now supports multiple sort in the Table component [ID_34526]
+
+<!-- MR 10.3.0 - FR 10.2.12 -->
+
+When, in the Dashboards app or a web app, you apply multiple sort orders in a *Table* component, multiple sort operators will now be appended to the GQI query that is feeding data to the component.
 
 #### QA Device Simulator renamed to Skyline Device Simulator [ID_34530]
 
@@ -60,6 +72,12 @@ On systems with multiple SLScripting processes, in some cases, these processes c
 Now, an inter-process lock has been added to make sure only one thread and process can build a given DLL.
 
 Moreover, when a QAction is being compiled, other elements will wait for 5 minutes. They will then throw an exception and an element restart will be required. This timeout will make sure that, if something unexpectedly would go wrong, there is still a chance to recover from the situation without having to restart DataMiner.
+
+#### Dashboards app / Low-code apps - Line & area chart: Group label will no longer be displayed when grouping is set to 'All together' [ID_34544]
+
+<!-- MR 10.3.0 - FR 10.2.12 -->
+
+In case a *Line & area chart* component displays trending for multiple parameters, the *Group by* setting allows you to specify how the graphs should be grouped. From now on, group titles will no longer be displayed when you set *Group by* to "All together".
 
 #### SLElement: Enhanced alarm locking [ID_34561]
 
