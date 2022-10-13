@@ -185,3 +185,9 @@ When DataMiner Maps v1 was used with Google Maps as provider, in some cases, the
 GQI recording is a debugging feature that allows you to save GQI communication and replay it in a lab environment.
 
 When you had enabled this feature, in some rare cases, an error could occur when a GQI query was stored in memory while being executed.
+
+#### Web apps: Read-only text in input boxes would incorrectly not be displayed in bold type when using Mozilla Firefox [ID_34641]
+
+<!-- MR 10.1.0 [CU21] / 10.2.0 [CU9] - FR 10.2.12 -->
+
+When you had opened a DataMiner web app in Mozilla Firefox, read-only text in input boxes would incorrectly not be displayed in bold type.
