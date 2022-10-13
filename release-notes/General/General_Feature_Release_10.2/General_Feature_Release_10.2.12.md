@@ -118,6 +118,12 @@ SLLogCollector packages will now also include the following additional files con
 
 In some rare cases, an error could occur in SLDataMiner when you edited an element.
 
+#### Web apps: Problem with email address boxes [ID_34421]
+
+<!-- MR 10.3.0 - FR 10.2.12 -->
+
+When you entered an address in an email address box and then selected something else on the page without pressing *ENTER* or *TAB*, the email address box would incorrectly expand and show a list of suggestions.
+
 #### Dashboards app: 'Line & area chart' component would display capacity usage incorrectly when bookings overlapped [ID_34465]
 
 <!-- MR 10.1.0 [CU21] / 10.2.0 [CU9] - FR 10.2.12 -->
@@ -221,3 +227,9 @@ When a PDF preview was made from a dashboard containing an empty GQI table (e.g.
 <!-- MR 10.1.0 [CU21] / 10.2.0 [CU9] - FR 10.2.12 -->
 
 When you had opened a DataMiner web app in Mozilla Firefox, read-only text in input boxes would incorrectly not be displayed in bold type.
+
+#### Web apps: Problem when creating large PDF files [ID_34663]
+
+<!-- MR 10.2.0 [CU9] - FR 10.2.12 -->
+
+When a large PDF file (e.g. a PDF report) was created in a web app, in some cases, an error could occur.

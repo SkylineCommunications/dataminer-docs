@@ -879,9 +879,3 @@ When multiple error messages boxes were being displayed, clicking the *Close* bu
 Alarm groups would not get cleared automatically when the *AutoClear* option was set to false.
 
 Also, in some cases, after clearing an alarm group, a clearable version of that alarm group would incorrectly remain visible in the Alarm Console, even when the *AutoClear* option was set to true.
-
-#### Visual Overview: Dynamically generated shapes sorted by custom property value would not be displayed in the correct order [ID_34617]
-
-<!-- MR 10.3.0 - FR 10.2.12 -->
-
-When a large number of shapes generated based on child items in a view were sorted by a custom property value, in some rare cases, those shapes would not be displayed in the correct order.

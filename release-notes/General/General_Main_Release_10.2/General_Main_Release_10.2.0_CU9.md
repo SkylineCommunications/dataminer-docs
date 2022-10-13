@@ -193,6 +193,12 @@ GQI recording is a debugging feature that allows you to save GQI communication a
 
 When you had enabled this feature, in some rare cases, an error could occur when a GQI query was stored in memory while being executed.
 
+#### Visual Overview: Dynamically generated shapes sorted by custom property value would not be displayed in the correct order [ID_34617]
+
+<!-- MR 10.2.0 [CU9] - FR 10.2.12 -->
+
+When a large number of shapes generated based on child items in a view were sorted by a custom property value, in some rare cases, those shapes would not be displayed in the correct order.
+
 #### Dashboards app: Problem when creating a PDF preview of a dashboard containing an empty GQI table [ID_34635]
 
 <!-- MR 10.2.0 [CU9] - FR 10.2.12 -->
@@ -204,3 +210,9 @@ When a PDF preview was made from a dashboard containing an empty GQI table (e.g.
 <!-- MR 10.1.0 [CU21] / 10.2.0 [CU9] - FR 10.2.12 -->
 
 When you had opened a DataMiner web app in Mozilla Firefox, read-only text in input boxes would incorrectly not be displayed in bold type.
+
+#### Web apps: Problem when creating large PDF files [ID_34663]
+
+<!-- MR 10.2.0 [CU9] - FR 10.2.12 -->
+
+When a large PDF file (e.g. a PDF report) was created in a web app, in some cases, an error could occur.
