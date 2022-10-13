@@ -77,6 +77,9 @@ uid: Adding_a_service
         3. Select a service child item to configure it further.
 
         4. Optionally, enter an alias for the selected item.
+        
+        > [!NOTE]
+        > It is possible to add multiple instances of the same element in a service. Specifying an alias is mandatory for all duplicate instances, and it is the alias of the service elements that will be displayed in the Surveyor.
 
         5. If an element or enhanced service is selected, to include only some parameters, clear the checkbox *All parameters for this element*, and select the parameters in question.
 
@@ -94,9 +97,6 @@ uid: Adding_a_service
         8. In the *ADVANCED* section, set a maximum severity for the service item if it has the status “included” or “not used”. For more information on the possible statuses, see [DATA](xref:Service_card_pages#data).
 
         9. Repeat from step c for each additional item that needs to be configured.
-
-        > [!NOTE]
-        > It is possible to add multiple instances of the same element in a service. Specifying an alias is mandatory for all duplicate instances, and it is the alias of the service elements that will be displayed in the Surveyor.
 
     - To add a group:
 
