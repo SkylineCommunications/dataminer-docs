@@ -18,7 +18,7 @@ To enable authentication in Elasticsearch 6.8.X:
 
     `xpack.security.enabled: true`
 
-    `discovery.type: single-node`
+    `discovery.type: single-node` (if you are running single node cluster, incase of multi-node cluster 'discovery.type' is not required)
 
 1. Start the *elasticsearch-service-x64* service.
 
@@ -77,6 +77,17 @@ To configure TLS encryption for client-server communication:
    xpack.security.http.ssl.keystore.path: path/to/your/certificate
    xpack.security.http.ssl.truststore.path: path/to/your/certificate
    ```
+   Add the following lines to *elasticsearch.yml* file, if you are using `.PEM` certificate generated using `penssl utility` .
+   
+   ```
+    xpack.security.http.ssl.enabled: true
+    xpack.security.http.ssl.verification_mode: full
+    xpack.security.http.ssl.key: path/to/your/PrivateKey/used/to/generatet/the/certificate
+    xpack.security.http.ssl.certificate: path/to/your/certificate
+    xpack.security.http.ssl.certificate_authorities: path/to/certificate/authority (if you are using self-signed
+    certificates then add path to certificates of all nodes in cluster)
+    ```
+   
 
 1. Optionally, **for password-protected certificates**, execute the following commands **as Administrator** and enter the password when prompted:
 
@@ -91,6 +102,8 @@ To configure TLS encryption for client-server communication:
 
 1. Add the full *https://* URL (including the port) in the \<DBServer> element in the *DB.xml* file. For example:
    `<DBServer>https://elastic.dataminer:9200</DBServer>`
+
+1. Add the certificates on each Dataminer agent under `Trusted root certification authorities`.
 
 1. Save the changes and start the DataMiner Agent.
 
@@ -113,6 +126,16 @@ To configure TLS encryption for inter-node communication:
    xpack.security.transport.ssl.keystore.path: elastic-certificates.p12 
    xpack.security.transport.ssl.truststore.path: elastic-certificates.p12
    ```
+    Add the following lines to *elasticsearch.yml* file, if you are using `.PEM` certificate generated using `penssl utility` .
+   
+   ```
+    xpack.security.transport.ssl.enabled: true
+    xpack.security.transport.ssl.verification_mode: full 
+    xpack.security.transport.ssl.key: path/to/your/PrivateKey/used/to/generatet/the/certificate
+    xpack.security.transport.ssl.certificate: path/to/your/certificate
+    xpack.security.transport.ssl.certificate_authorities: path/to/certificate/authority (if you are using self-signed
+    certificates then path to certificates of all nodes in cluster)
+    ```
 
 1. If you secured the node's certificate with a password, add the password to your Elasticsearch keystore by executing the following commands:
 
