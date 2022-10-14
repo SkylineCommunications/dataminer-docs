@@ -10,8 +10,6 @@ uid: General_Main_Release_10.3.0_new_features_2
 > [!TIP]
 > For release notes related to DataMiner Cube, see [DataMiner Cube 10.3.0](xref:Cube_Main_Release_10.3.0).
 
-## Other new features
-
 ### DMS web apps
 
 #### Jobs app: Name, Start Time and End Time fields in default job section can now be set read-only [ID_31485] [ID_31506]

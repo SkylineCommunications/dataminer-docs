@@ -12,6 +12,16 @@ uid: General_Feature_Release_10.2.12
 > - For release notes related to DataMiner Cube, see [DataMiner Cube 10.2.12](xref:Cube_Feature_Release_10.2.12).
 > - For information on how to upgrade DataMiner, see [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent).
 
+## Highlights
+
+*No highlights have been selected for this release yet*
+
+## Other features
+
+*No other features have been added to this version yet.*
+
+## Changes
+
 ### Enhancements
 
 #### Dashboards app / Low-code apps - Service definition component: Enhancements made with regard to function nodes displaying the number of Process Automation tokens in queue or in progress [ID_33888]
