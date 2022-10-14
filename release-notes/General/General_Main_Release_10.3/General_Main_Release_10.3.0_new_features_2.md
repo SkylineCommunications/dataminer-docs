@@ -442,6 +442,14 @@ ReservationInstanceType and ServiceDefinitionType can now be set to the followin
 - ResourceScheduling
 - ResourceOrchestration
 
+#### Dashboards app - PDF - Adding validation for upload size [ID_34620]
+
+<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.12 -->
+
+*This change applies to the new Dashboards application.*
+
+When uploading files through the webAPI (e.g. when generating a report of a dashboard) that exceed the maximum batch size of 10 MiB or a total file size of 1 GiB, an alert will now be generated to indicate that the total batch size has been exceeded. In adding upload size validation, users can continue to upload individual batches while being bound by a size limit.
+
 ### DMS Mobile Gateway
 
 #### Additional logging after sending a 'send SMS' request to an SMSEagle device [ID_32785] [ID_32911]
