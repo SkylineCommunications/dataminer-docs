@@ -22,7 +22,7 @@ uid: General_Feature_Release_10.2.12
 
 <!-- MR 10.2.0 [CU9] - FR 10.2.12 -->
 
-In a Failover setup, a reverse proxy will now be hosted in IIS in order to re-route HTTP traffic from the offline agent to the online agent. After a switch has occurs, the proxy will be disabled in the online agent and enabled on the offline agent.
+In a Failover setup, a reverse proxy will now be hosted in IIS in order to re-route HTTP traffic from the offline agent to the online agent. After a switch has occurred, the proxy will be disabled in the online agent and enabled on the offline agent.
 
 This feature requires the Application Request Routing (ARR) module to be installed on IIS. When you upgrade to version 10.2.12 / 10.2.0 [CU9], it will automatically be installed if it has not yet been installed earlier.
 
