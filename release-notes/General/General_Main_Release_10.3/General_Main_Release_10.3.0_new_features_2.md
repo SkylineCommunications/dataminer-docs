@@ -362,7 +362,7 @@ When, in the Dashboards app or a web app, you apply multiple sort orders in a *T
 
 <!-- MR 10.3.0 - FR 10.2.12 -->
 
-When PDF files are uploaded via the Dashboards app (e.g. when a PDF report is generated), an error will now be thrown when the batch size exceeds 10 MiB or the total file size exceeds 1 GiB.
+When PDF files are uploaded via the WebAPI (e.g. when a PDF report is generated), an error will now be thrown when the batch size exceeds 10 MiB or the total file size exceeds 1 GiB.
 
 ### DMS Service & Resource Management
 
