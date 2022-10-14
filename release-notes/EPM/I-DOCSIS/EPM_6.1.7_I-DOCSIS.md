@@ -33,6 +33,6 @@ In some cases, logging for the EPM front-end element could contain exceptions li
 
 To prevent this, the Skyline EPM Platform connector will now retry three times to edit a CSV file, with a 1-second delay.
 
-#### Arris E6000 CCAP Platform: US QAM Ch Utilization displayed as N/A [ID_34660]
+#### Arris E6000 CCAP Platform: Incorrect US QAM Ch Utilization values [ID_34660]
 
-In the US QAM Channel table for the Arris E6000 CCAP Platform, it could occur that the US QAM Ch Utilization was displayed as "N/A".
+In the US QAM Channel table for the Arris E6000 CCAP Platform, it could occur that the US QAM Ch Utilization showed incorrect values.
