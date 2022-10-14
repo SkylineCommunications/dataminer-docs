@@ -25,7 +25,7 @@ jobs:
       - name: Add msbuild to PATH
         uses: microsoft/setup-msbuild@v1.1
       - name: Set up NuGet
-        uses: nuget/setup-nuget@v1
+        uses: nuget/setup-nuget@v1.1.1
       - name: NuGet restore DM solution
         working-directory: "src/DataMiner"
         run: nuget restore "DataMiner.sln"
