@@ -110,6 +110,12 @@ SLLogCollector packages will now also include the following additional files con
 | Logs\Network Information\ipconfig.exe _all.txt | The output of an `ipconfig /all` command. |
 | Logs\Network Information\route.exe print.txt   | The output of a `route print` command.    |
 
+#### Dashboards app: Upload size of PDF files will now be validated [ID_34620]
+
+<!-- MR 10.3.0 - FR 10.2.12 -->
+
+When PDF files are uploaded via the Dashboards app (e.g. when a PDF report is generated), an error will now be thrown when the batch size exceeds 10 MiB or the total file size exceeds 1 GiB.
+
 ### Fixes
 
 #### Problem with SLDataMiner when editing an element [ID_34329]

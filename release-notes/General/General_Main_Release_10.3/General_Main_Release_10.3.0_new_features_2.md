@@ -358,6 +358,12 @@ A new *IsActive* column has been added to *Get alarms* data source. This column 
 
 When, in the Dashboards app or a web app, you apply multiple sort orders in a *Table* component, multiple sort operators will now be appended to the GQI query that is feeding data to the component.
 
+#### Dashboards app: Upload size of PDF files will now be validated [ID_34620]
+
+<!-- MR 10.3.0 - FR 10.2.12 -->
+
+When PDF files are uploaded via the Dashboards app (e.g. when a PDF report is generated), an error will now be thrown when the batch size exceeds 10 MiB or the total file size exceeds 1 GiB.
+
 ### DMS Service & Resource Management
 
 #### Retrieving bookings in a paged way and sorted by property [ID_31982]
@@ -441,14 +447,6 @@ ReservationInstanceType and ServiceDefinitionType can now be set to the followin
 
 - ResourceScheduling
 - ResourceOrchestration
-
-#### Dashboards app - PDF - Adding validation for upload size [ID_34620]
-
-<!-- Main Release Version 10.3.0 - Feature Release Version 10.2.12 -->
-
-*This change applies to the new Dashboards application.*
-
-When uploading files through the webAPI (e.g. when generating a report of a dashboard) that exceed the maximum batch size of 10 MiB or a total file size of 1 GiB, an alert will now be generated to indicate that the total batch size has been exceeded. In adding upload size validation, users can continue to upload individual batches while being bound by a size limit.
 
 ### DMS Mobile Gateway
 
