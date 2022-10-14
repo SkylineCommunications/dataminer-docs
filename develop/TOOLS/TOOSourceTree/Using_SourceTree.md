@@ -24,11 +24,4 @@ Windows has a default maximum limit of 260 characters for any path. Sourcetree c
 
 The best way to handle these is to clone your repository directly under a folder on the C: drive to reduce any additional nesting on your local computer.
 
-Members of Skyline Communications who use the SLC SE RepoManager can go find the repository on gerrit, copy the clone link, and clone it anywhere on their local machine. SLC RepoManager will not work with that clone but at that point you won't need it.
-
-Alternatively you can try to partially allow long path support for both the windows OS and the git tool used by sourcetree. Do note that this is not recommended and also by default disabled because it does not fix every tool and command.
-
-<https://github.com/msysgit/msysgit/wiki/Git-cannot-create-a-file-or-directory-with-a-long-path>
-
-- For the OS: <https://www.thewindowsclub.com/how-to-enable-or-disable-win32-long-paths-in-windows-11-10>
-- For SourceTree: SourceTree does not have a setting for long paths in the tool itself. In the *.gitconfig* file, set `core.longpaths` to true and then configure SourceTree to use the system Git instead of the built in one (under *Tools > Options > Git*, click the *System* button under *Git version*).
+Members of Skyline Communications who use the SLC SE RepoManager can go find the repository on gerrit, copy the clone link, and clone it anywhere on their local machine. SLC RepoManager will not work with that clone but at that point you will not need it.
