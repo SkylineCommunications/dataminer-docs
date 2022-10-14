@@ -135,6 +135,14 @@ The `Repair DB.bat` script, located in the `C:\Skyline DataMiner\Tools` folder, 
 
 Because of a number of enhancements, overall performance of node-edge components has improved, especially on large systems.
 
+#### DataMiner Cube - Automation: Automation scripts will be refreshed more granularly after being updated [ID_34553]
+
+<!-- MR 10.2.0 [CU8] - FR 10.2.11 [CU0] -->
+
+Up to now, when a change was made to an Automation script (either in the current or in another Cube session), the entire script would be removed and re-added. When this happened at a moment when the script in question was open in the editor, it was unselected and would, in some cases, not be automatically selected again.
+
+From now on, an updated Automation script will be refreshed more granularly. Only the part that was changed (e.g. a C# action) will be refreshed. The script will no longer be unselected.
+
 ### Fixes
 
 #### Elasticsearch: NewPagingSearchRequest was incorrectly not able to query an alias grouping two logger tables [ID_31767]

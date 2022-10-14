@@ -169,6 +169,14 @@ For example, when an alarm was created for an anomalous level increase at 1 PM, 
 
 Prior to DataMiner 10.2.11/10.3.0, suggestion events are created for all anomalous behavioral changes that do not have alarm monitoring enabled. From DataMiner 10.2.11/10.3.0 onwards, they are only created for the most significant changes. There is also a maximum of 500 suggestion events related to behavioral anomaly detection at the same time.
 
+#### Automation: Automation scripts will be refreshed more granularly after being updated [ID_34553]
+
+<!-- MR 10.2.0 [CU8] - FR 10.2.11 [CU0] -->
+
+Up to now, when a change was made to an Automation script (either in the current or in another Cube session), the entire script would be removed and re-added. When this happened at a moment when the script in question was open in the editor, it was unselected and would, in some cases, not be automatically selected again.
+
+From now on, an updated Automation script will be refreshed more granularly. Only the part that was changed (e.g. a C# action) will be refreshed. The script will no longer be unselected.
+
 ### Fixes
 
 #### DataMiner Cube - Visual Overview: Problem with conditional shape manipulation actions 'Show' and 'Hide' [ID_34108]
