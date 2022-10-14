@@ -195,7 +195,7 @@ When you had enabled this feature, in some rare cases, an error could occur when
 
 #### Visual Overview: Dynamically generated shapes sorted by custom property value would not be displayed in the correct order [ID_34617]
 
-<!-- MR 10.2.0 [CU9] - FR 10.2.12 -->
+<!-- MR 10.1.0 [CU21] / 10.2.0 [CU9] - FR 10.2.12 -->
 
 When a large number of shapes generated based on child items in a view were sorted by a custom property value, in some rare cases, those shapes would not be displayed in the correct order.
 
