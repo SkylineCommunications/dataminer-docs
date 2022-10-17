@@ -2988,6 +2988,10 @@
           topicUID: Standalone_Cassandra_Backup_Tool
         - name: Standalone Elastic Backup tool
           topicUID: Standalone_Elastic_Backup_Tool
+        - name: Verify Cluster Events Tool
+          topicUID: Verify_Cluster_Events_Tool
+        - name: VerifyClusterPorts.dmpupgrade
+          topicUID: VerifyClusterPortsdmpupgrade
     - name: Methods of Procedure
       topicUID: mops
       items:
