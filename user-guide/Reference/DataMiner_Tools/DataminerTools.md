@@ -18,6 +18,7 @@ This section provides information on the following tools:
 - [Standalone BPA Executor](xref:Standalone_BPA_Executor)
 - [Standalone Cassandra Backup tool](xref:Standalone_Cassandra_Backup_Tool)
 - [Standalone Elastic Backup tool](xref:Standalone_Elastic_Backup_Tool)
+- [Sync Check](xref:Sync_Check)
 - [Verify Cluster Events Tool](xref:Verify_Cluster_Events_Tool)
 - [VerifyClusterPorts.dmpupgrade](xref:VerifyClusterPortsdmpupgrade)
 
