@@ -171,7 +171,7 @@ If table cells contain a lot of text, it can be next to impossible to keep every
 
 ### Code blocks
 
-To display code examples in separate code blocks, place three backquotes ("`") above and below those blocks. In addition, next to the three backquotes above the blocks, specify the type of code, e.g. *csharp*, *md*, *xml*, etc.
+To display code examples in separate code blocks, place three backquotes (```) above and below those blocks. In addition, next to the three backquotes above the blocks, specify the type of code, e.g. *csharp*, *md*, *xml*, etc.
 
 To display inline code within a paragraph, add a backquote before and after the code.
 
