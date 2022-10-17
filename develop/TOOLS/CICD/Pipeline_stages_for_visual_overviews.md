@@ -4,7 +4,7 @@ uid: Pipeline_stages_for_visual_overviews
 
 # Pipeline stages for visual overviews
 
-Currently, the pipeline consists of the following steps:
+Currently, the pipeline consists of the following stages:
 
 - [Loading Jenkinsfile](#loading-jenkinsfile)
 
@@ -30,15 +30,15 @@ Currently, the pipeline consists of the following steps:
 
 ## Loading Jenkinsfile
 
-When a new Git repository is created using the SLC SE Repository Manager tool, the repository initially contains a .gitignore file and a Jenkinsfile. This Jenkinsfile in turn refers to another "master" Jenkins file. In this step, the Jenkinsfile gets loaded.
+When a new Git repository is created using the SLC SE Repository Manager tool, the repository initially contains a .gitignore file and a Jenkinsfile. This Jenkinsfile in turn refers to another "master" Jenkins file. During this stage, the Jenkinsfile gets loaded.
 
 ## Declarative checkout from SCM
 
-In this step, Jenkins loads the current repository from Git.
+During this stage, Jenkins loads the current repository from Git.
 
 ## Validate tag
 
-This step is only executed for pipeline runs for a tag. It will verify whether the specified tag meets the following conditions:
+This stage is only executed for pipeline runs for a tag. It will verify whether the specified tag meets the following conditions:
 
 - The tag has the correct format.
 - The tag is in the expected branch. For example, a tag "1.0.0.1" provided on a commit that is part of the "1.0.0.x" branch will succeed, while a tag "1.0.0.1" provided on a commit belonging to branch 1.0.1.x will fail.
@@ -47,7 +47,7 @@ This step is only executed for pipeline runs for a tag. It will verify whether t
 
 ## Check Visio file size
 
-In this step, Jenkins verifies the file size of the Visio file in the repository:
+During this stage, Jenkins verifies the file size of the Visio file in the repository:
 
 - If the file size is over 20 MB, the pipeline will be marked as error.
 
@@ -56,11 +56,12 @@ In this step, Jenkins verifies the file size of the Visio file in the repository
 ## Check Visio
 
 This stage performs validation on the content of the Visio file. It verifies whether the different pages in the Visio have a width of 300 mm and a height of 180 mm.
-If a page is detected with a different dimension, the stage will be marked unstable.
+
+If a page is detected with different dimensions, the stage will be marked unstable.
 
 ## Build .dmapp package
 
-This step creates a .dmapp package containing the Visio file.
+This stage creates a .dmapp package containing the Visio file.
 
 ## (Development) Catalog registration
 
@@ -76,4 +77,4 @@ This stage will perform registration in the catalog.
 
 ## (Release) Push to SVN
 
-This step performs the actual push to SVN. Once this step is executed, you should find a new version of the visual overview on SVN in the corresponding folder (<https://svn.skyline.be/!/#SystemEngineering/view/head/Visios>).
+This stage performs the actual push to SVN. Once this stage is executed, you should find a new version of the visual overview on SVN in the corresponding folder (<https://svn.skyline.be/!/#SystemEngineering/view/head/Visios>).
