@@ -4,7 +4,7 @@ uid: Pipeline_stages_for_protocols
 
 # Pipeline stages for protocols
 
-Currently, the pipeline for protocol development consists of the following steps:
+Currently, the pipeline for protocol development consists of the following stages:
 
 - [Loading Jenkinsfile](#loading-jenkinsfile)
 
@@ -64,28 +64,28 @@ Currently, the pipeline for protocol development consists of the following steps
 
 ## Loading Jenkinsfile
 
-When a new Git repository is created using the SLC SE Repository Manager tool, the repository initially contains a .gitignore file and a Jenkinsfile. This Jenkinsfile in turn refers to another "master" Jenkins file. In this step, the Jenkinsfile gets loaded.
+When a new Git repository is created using the SLC SE Repository Manager tool, the repository initially contains a .gitignore file and a Jenkinsfile. This Jenkinsfile in turn refers to another "master" Jenkins file. During this stage, the Jenkinsfile gets loaded.
 
 ## Declarative checkout from SCM
 
-In this step, Jenkins loads the current repository from Git.
+During this stage, Jenkins loads the current repository from Git.
 
 ## Detect solution
 
-In this step, the repository is scanned for the presence of a Visual Studio solution (.sln) file.
+During this stage, the repository is scanned for the presence of a Visual Studio solution (.sln) file.
 
 The pipeline will only continue if exactly one solution file has been detected in the repository.
 
 ## Validate solution
 
-This step verifies whether the [protocol metadata](xref:Metadata) corresponds with what is registered on DCP:
+This stage verifies whether the [protocol metadata](xref:Metadata) corresponds with what is registered on DCP:
 
 - The [vendor](xref:Protocol.Vendor) mentioned in the protocol must correspond with the vendor registered in the DCP driver record.
 - The [vendor OID](xref:Protocol.VendorOID) mentioned in the protocol must correspond with the vendor OID registered in the DCP driver record.
 - The [device OID](xref:Protocol.DeviceOID) mentioned in the protocol must correspond with the device OID registered in the DCP driver record.
 - The [integration ID](xref:Protocol.IntegrationID) mentioned in the protocol must correspond with the integration OID registered in the DCP driver record.
 
-This step also retrieves information from the protocol such as the integration ID, developer initials, DCP task ID, etc.
+This stage also retrieves information from the protocol such as the integration ID, developer initials, DCP task ID, etc.
 
 Based on the DCP task ID that is provided in the protocol, the pipeline will:
 
@@ -127,7 +127,7 @@ Please note the following
 
 ## Validate tag
 
-This step is only executed for pipeline runs for a tag. It will verify whether the specified tag meets the following conditions:
+This stage is only executed for pipeline runs for a tag. It will verify whether the specified tag meets the following conditions:
 
 - The tag matches the version that is mentioned in the protocol XML file.
 - The tag has the correct format.
@@ -137,50 +137,50 @@ This step is only executed for pipeline runs for a tag. It will verify whether t
 
 ## Prepare solution
 
-In this step, the solution is configured to build against a recent version of the .NET Framework. This is to allow compiling against the latest feature release of DataMiner, which could require a new .NET Framework version compared to the one specified in the protocol solution. Note that this is just a local change, it does not change anything to the solution in the Git repository hosted by Gerrit.
+During this stage, the solution is configured to build against a recent version of the .NET Framework. This is to allow compiling against the latest feature release of DataMiner, which could require a new .NET Framework version compared to the one specified in the protocol solution. Note that this is just a local change, it does not change anything to the solution in the Git repository hosted by Gerrit.
 
 ## Sync DataMiner feature release DLLs
 
-This step ensures that the next build step will build against the latest feature release of DataMiner. It will verify on DCP whether a new feature release has been released and, if so, Jenkins will make sure to use that feature release to build against from that point onwards.
+This stage ensures that the next build stage will build against the latest feature release of DataMiner. It will verify on DCP whether a new feature release has been released and, if so, Jenkins will make sure to use that feature release to build against from that point onwards.
 
 ## Sync DIS version
 
-This step ensures that the pipeline uses the latest version of DIS. It verifies whether a new version has been released, and if that is the case, the new version is obtained.
+This stage ensures that the pipeline uses the latest version of DIS. It verifies whether a new version has been released, and if that is the case, the new version is obtained.
 
 ## Build QuickActions on latest feature release
 
-During this step, the solution is built against the latest DataMiner feature release.
+During this stage, the solution is built against the latest DataMiner feature release.
 
 ## Convert solution to XML
 
-This step converts the protocol Visual Studio solution back to a protocol XML file.
+This stage converts the protocol Visual Studio solution back to a protocol XML file.
 
 ## Create protocol package
 
-This step creates a .dmprotocol package including the protocol XML, assemblies, Visio and Help files.
+This stage creates a .dmprotocol package including the protocol XML, assemblies, Visio and Help files.
 
 ## Scan test projects
 
-This step scans the solution for the presence of any test projects. Projects with a name that end with "Integration Tests" or "IntegrationTests" (case insensitive) will be considered integration test projects. All other projects that end with "Tests" will be considered unit test projects.
+This stage scans the solution for the presence of any test projects. Projects with a name that end with "Integration Tests" or "IntegrationTests" (case insensitive) will be considered integration test projects. All other projects that end with "Tests" will be considered unit test projects.
 
 ## Run unit tests
 
-This step executes the unit test projects. If no unit test projects were detected, this step is skipped.
+This stage executes the unit test projects. If no unit test projects were detected, this stage is skipped.
 
 > [!NOTE]
 > In case the tests fail, the unit tests will be executed against DataMiner 10.0.3 CU1 (if the protocol supports this version). The purpose of this is to support unit tests that were created using the SLProtocol API up to version 10.0.3 CU1. RN 27995 introduced changes to the API that could make a unit test fail if it depends on the prior implementation of the API. If unit tests using the DataMiner DLLs of 10.0.3 CU1 are re-executed, tests that are failing because of the changed API will succeed in the second execution.
 
 ## Run integration tests
 
-This step executes the integration test projects. If no integration test projects were detected, this step is skipped.
+This stage executes the integration test projects. If no integration test projects were detected, this stage is skipped.
 
 ## SonarQube analysis
 
-This step performs SonarQube C# code analysis on the QAction code.
+This stage performs SonarQube C# code analysis on the QAction code.
 
 ## Initialize validator
 
-This step initializes the validator settings by obtaining the previous version from SVN and running the validator on the previous version.
+This stage initializes the validator settings by obtaining the previous version from SVN and running the validator on the previous version.
 
 To indicate on which version a protocol is based, the *basedOn* attribute can be used. In case you create a new minor version, e.g. A.B.C.D where D \> 1, and you do not specify the previous version explicitly, the previous version will be assumed to be the previous minor version: A.B.C.D-1.
 
@@ -190,7 +190,7 @@ In case you create a new branch version, e.g. 2.0.0.1, and you do not specify a 
 
 ## Run validator
 
-This step runs the validator on the protocol XML file that was generated in the previous step.
+This stage runs the validator on the protocol XML file that was generated in the previous stage.
 
 ## Run major change checker
 
@@ -281,7 +281,7 @@ For **HTTP simulations**, the following file should be provided:
 
 ## Quality gate
 
-This step verifies the results of different previous pipeline steps and checks whether the results are according to some preconfigured quality level.
+This stage verifies the results of different previous pipeline stages and checks whether the results are according to some preconfigured quality level.
 
 ### Unit/integration tests
 
@@ -311,6 +311,7 @@ For non-initial versions, the validator quality gate settings will be configured
 
 > [!NOTE]
 > The following error codes are currently ignored:
+>
 > - 1401: "x% of monitored parameters do not have default alarm values set”
 
 ### SonarQube
@@ -344,7 +345,7 @@ For more information about the Driver Passport Platform, see [Skyline Driver Pas
 
 ## (Development) DCP registration
 
-This step takes care of the automatic registration on DCP in case the protocol is still in development.
+This stage takes care of the automatic registration on DCP in case the protocol is still in development.
 
 It first verifies whether the protocol has an integration ID specified. If this is not the case, the pipeline will fail.
 
@@ -363,7 +364,7 @@ The driver version state of the DCP driver version record will be set to “Deve
 
 ## (Release) DCP registration
 
-This step takes care of the automatic registration on DCP in case the protocol is released.
+This stage takes care of the automatic registration on DCP in case the protocol is released.
 
 It performs the same actions as the development registration except that the driver version state of the DCP driver version record will be set to “Released”, and the *LiveUpdate* flag will be set.
 
@@ -373,7 +374,7 @@ In case a tag was detected, and the version should therefore be pushed to SVN, s
 
 ## (Release) Push to SVN
 
-This step performs the actual push to SVN. Once this step is executed, you should find a new version of the protocol on SVN in the corresponding folder, together with the required DLLs, which were originally provided in the DLLs folder in the Visual Studio project.
+This stage performs the actual push to SVN. Once this stage is executed, you should find a new version of the protocol on SVN in the corresponding folder, together with the required DLLs, which were originally provided in the DLLs folder in the Visual Studio project.
 
 ## (Release) Push to Azure
 
@@ -381,7 +382,7 @@ This stage pushes the created package to Azure Blob Storage.
 
 ## Declarative post actions
 
-This step performs a cleanup of the workspace and sends an email containing a report with an overview of the number of issues detected in DIS and SonarQube.
+This stage performs a cleanup of the workspace and sends an email containing a report with an overview of the number of issues detected in DIS and SonarQube.
 
 The report also contains an overall quality score, which is calculated using the following metrics:
 
