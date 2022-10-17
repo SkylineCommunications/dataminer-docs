@@ -14,6 +14,8 @@ Currently, the pipeline consists of the following steps:
 
 - [Check Visio file size](#check-visio-file-size)
 
+- [Check Visio](#check-visio)
+
 - [Build .dmapp package](#build-dmapp-package)
 
 - [(Development) Catalog registration](#development-catalog-registration)
@@ -50,6 +52,11 @@ In this step, Jenkins verifies the file size of the Visio file in the repository
 - If the file size is over 20 MB, the pipeline will be marked as error.
 
 - If the file size is over 10 MB, the pipeline will be marked as unstable.
+
+## Check Visio
+
+This stage performs validation on the content of the Visio file. It verifies whether the different pages in the Visio have a width of 300 mm and a height of 180 mm.
+If a page is detected with a different dimension, the stage will be marked unstable.
 
 ## Build .dmapp package
 
