@@ -773,9 +773,9 @@ From DataMiner 9.6.11 onwards, the DataMiner web apps format time values based o
 
 When a user connected to a Service & Resource Management environment, DataMiner Cube would throw an exception when that user did not have permission to view service definitions.
 
-#### Problem when opening DMS Alerter \[ID_32312\]
+#### Problem when opening Alerter \[ID_32312\]
 
-In some cases, an error could occur when you opened DMS Alerter.
+In some cases, an error could occur when you opened Alerter.
 
 #### Dashboards app: Parameter feeds would incorrectly not load all parameter indices \[ID_32329\]
 

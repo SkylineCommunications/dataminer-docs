@@ -529,9 +529,9 @@ In some cases, SRM operations like creating or updating bookings and creating or
 
 When a user connected to a Service & Resource Management environment, DataMiner Cube would throw an exception when that user did not have permission to view service definitions.
 
-#### Problem when opening DMS Alerter \[ID_32312\]
+#### Problem when opening Alerter \[ID_32312\]
 
-In some cases, an error could occur when you opened DMS Alerter.
+In some cases, an error could occur when you opened Alerter.
 
 #### Dashboards app: Shared dashboards could lose their web socket connection \[ID_32321\]
 

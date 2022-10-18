@@ -84,7 +84,7 @@ The following default BPA tests were updated:
 
 ### Fixes
 
-#### DMS Alerter: Problem when closing Alerter while balloons are popping up \[ID_29725\]
+#### Alerter: Problem when closing Alerter while balloons are popping up \[ID_29725\]
 
 In some cases, an exception could be thrown when you closed Alerter while balloons were popping up.
 

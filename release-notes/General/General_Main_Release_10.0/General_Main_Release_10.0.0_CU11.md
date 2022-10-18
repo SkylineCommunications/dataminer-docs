@@ -87,9 +87,9 @@ When, in the Dashboards app, you moved a dashboard to the currently active folde
 
 Also, when you manually entered the location to which a dashboard had to be moved, in some cases, that location would incorrectly not be saved when you pressed the ENTER key once. Only when you pressed the ENTER key a second time would the location be saved.
 
-#### DMS Alerter: Settings window too small to fit all settings \[ID_28550\]
+#### Alerter: Settings window too small to fit all settings \[ID_28550\]
 
-When, in DMS Alerter, you opened the settings window, in some cases, the window could be too small to fit all settings.
+When, in Alerter, you opened the settings window, in some cases, the window could be too small to fit all settings.
 
 #### DataMiner Cube: Problem when opening the Protocols & Templates app \[ID_28551\]
 

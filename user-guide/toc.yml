@@ -49,8 +49,8 @@
           topicUid: Accessing_the_Monitoring_app
         - name: Accessing the legacy Monitoring & Control app
           topicUid: Accessing_the_legacy_Monitoring_Control_app
-        - name: Accessing DMS Alerter
-          topicUid: Accessing_DMS_Alerter
+        - name: Accessing Alerter
+          topicUid: Accessing_Alerter
         - name: Accessing the DataMiner Taskbar Utility
           topicUid: Accessing_the_DataMiner_Taskbar_Utility
     - name: The DataMiner user interface
@@ -2845,8 +2845,8 @@
     - name: Tools
       topicUid: DataminerTools
       items:
-        - name: DMS Alerter
-          topicUid: DMS_Alerter
+        - name: Alerter
+          topicUid: Alerter
           items:
             - name: Working with the Alerter alarm list
               topicUid: Working_with_the_Alerter_alarm_list
@@ -2854,8 +2854,8 @@
               topicUid: Communicating_with_other_DataMiner_users_via_Alerter
             - name: Working with Alerter pop-up balloons
               topicUid: Working_with_Alerter_pop-up_balloons
-            - name: Configuring DMS Alerter
-              topicUid: Configuring_DMS_Alerter
+            - name: Configuring Alerter
+              topicUid: Configuring_Alerter
         - name: DataMiner Comparison tool
           topicUID: DataMinerComparisonTool
         - name: DataMiner Size tool

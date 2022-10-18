@@ -655,13 +655,13 @@ To support adding attachments to booking instances (i.e. ReservationInstance obj
 
 The StandAloneBpaExecutor tool, which can be used to execute BPA (Best Practice Analysis) tests, is now by default included in the folder C:\\Skyline DataMiner\\Tools of a DMA.
 
-#### DMS Alerter: New 'Set the alarm as read in Cube after the alarm has been acknowledged' setting \[ID_26579\]
+#### Alerter: New 'Set the alarm as read in Cube after the alarm has been acknowledged' setting \[ID_26579\]
 
-When, in DMS Alerter, the new *Set the alarm as read in Cube after the alarm has been acknowledged* setting is enabled, each time you acknowledge an alarm in DMS Alerter, that same alarm will automatically be marked as “read” in DataMiner Cube.
+When, in Alerter, the new *Set the alarm as read in Cube after the alarm has been acknowledged* setting is enabled, each time you acknowledge an alarm in Alerter, that same alarm will automatically be marked as “read” in DataMiner Cube.
 
 > [!NOTE]
-> This feature will only work if one and the same user is running both DMS Alerter and DataMiner Cube on the same client machine.
+> This feature will only work if one and the same user is running both Alerter and DataMiner Cube on the same client machine.
 
-#### DMS Alerter: New 'Hide the comment window when acknowledging an alarm' setting \[ID_26621\]
+#### Alerter: New 'Hide the comment window when acknowledging an alarm' setting \[ID_26621\]
 
 A new setting, *Hide the comment window when acknowledging an alarm*, is available in the Alerter app. If this setting is enabled, you can take ownership of an alarm in an Alerter pop-up balloon without having to add a comment.

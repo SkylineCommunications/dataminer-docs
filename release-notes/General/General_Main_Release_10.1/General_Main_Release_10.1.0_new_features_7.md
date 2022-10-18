@@ -174,14 +174,14 @@ To do so, go to *Advanced \> Tests \> Generate MIB for SNMP Manager*, select an
 > [!WARNING]
 > The DataMiner SLNetClientTest program is an advanced system administration tool that should be used with extreme care (C:\\Skyline DataMiner\\Files\\SLNetClientTest.exe).
 
-#### DMS Alerter: New 'Set the alarm as read in Cube after the alarm has been acknowledged' setting \[ID_26579\]
+#### Alerter: New 'Set the alarm as read in Cube after the alarm has been acknowledged' setting \[ID_26579\]
 
-When, in DMS Alerter, the new *Set the alarm as read in Cube after the alarm has been acknowledged* setting is enabled, each time you acknowledge an alarm in DMS Alerter, that same alarm will automatically be marked as “read” in DataMiner Cube.
+When, in Alerter, the new *Set the alarm as read in Cube after the alarm has been acknowledged* setting is enabled, each time you acknowledge an alarm in Alerter, that same alarm will automatically be marked as “read” in DataMiner Cube.
 
 > [!NOTE]
-> This feature will only work if one and the same user is running both DMS Alerter and DataMiner Cube on the same client machine.
+> This feature will only work if one and the same user is running both Alerter and DataMiner Cube on the same client machine.
 
-#### DMS Alerter: New 'Hide the comment window when acknowledging an alarm' setting \[ID_26621\]
+#### Alerter: New 'Hide the comment window when acknowledging an alarm' setting \[ID_26621\]
 
 A new setting, *Hide the comment window when acknowledging an alarm*, is available in the Alerter app. If this setting is enabled, you can take ownership of an alarm in an Alerter pop-up balloon without having to add a comment.
 
