@@ -138,10 +138,11 @@ The following auto-detect methods can be specified:
 ## Common issues after configuring HTTPS
 
 - **ERR_CERT_COMMON_NAME_INVALID error is shown**
-   Most likely, your URL does not match the *Subject Alternative Names (SAN)* field of your certificate. Most browsers will reject certificates when the URL matches the *Common Name (CN)*, but not the *Subject Alternative Names (SAN)*. The *Common Name (CN)* field of an x.509 certificate is considered deprecated since RFC 2818 because it is ambiguous and untyped.
-   
-   To fix this, either create a new certificate which inclues your URL in the *Subject Alternative Names (SAN)* field, or change your URL to match the *Subject Alternative Names (SAN)* field of the certificate.
-   
+
+   Most likely, your URL does not match the *Subject Alternative Names (SAN)* field of your certificate. Most browsers will reject certificates when the URL matches the *Common Name (CN)* but not the *Subject Alternative Names (SAN)*. The *Common Name (CN)* field of an x.509 certificate is considered deprecated since RFC 2818 because it is ambiguous and untyped.
+
+   To fix this, either create a new certificate that includes your URL in the *Subject Alternative Names (SAN)* field, or change your URL to match the *Subject Alternative Names (SAN)* field of the certificate.
+
    For example, the certificate for dataminer.skyline.local has 
 
 - **My connection times out or the site cannot be reached**
