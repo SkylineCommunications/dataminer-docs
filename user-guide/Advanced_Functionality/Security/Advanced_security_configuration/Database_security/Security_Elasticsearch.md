@@ -77,7 +77,7 @@ To configure TLS encryption for client-server communication:
    xpack.security.http.ssl.keystore.path: path/to/your/certificate
    xpack.security.http.ssl.truststore.path: path/to/your/certificate
    ```
-   Add the following lines to *elasticsearch.yml* file, if you are using `.PEM` certificate generated using `penssl` utility.
+   Add the following lines to *elasticsearch.yml* file, if you are using `.PEM` certificate generated using `openssl` utility.
    
    ```
     xpack.security.http.ssl.enabled: true
@@ -127,7 +127,7 @@ To configure TLS encryption for inter-node communication:
    xpack.security.transport.ssl.keystore.path: elastic-certificates.p12 
    xpack.security.transport.ssl.truststore.path: elastic-certificates.p12
    ```
-    Add the following lines to *elasticsearch.yml* file, if you are using `.PEM` certificate generated using `penssl` utility.
+    Add the following lines to *elasticsearch.yml* file, if you are using `.PEM` certificate generated using `openssl` utility.
    
    ```
     xpack.security.transport.ssl.enabled: true
