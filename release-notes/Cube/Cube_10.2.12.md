@@ -16,7 +16,11 @@ uid: Cube_Feature_Release_10.2.12
 
 ## Other features
 
-*No other features have been added to this version yet.*
+#### Trending: When trending a parameter, related parameters can now be added through light bulb icon [ID_34432]
+
+<!-- MR 10.3.0 - FR 10.2.12 -->
+
+When trending a parameter, you can now add related parameters by clicking the light bulb icon in the top-right corner of the trend. In doing so, you will get an overview of suggested parameters that are related to the currently displayed parameter trend.
 
 ## Changes
 
@@ -62,6 +66,18 @@ When you had selected the *Invert spectrum* option while configuring a measureme
 <!-- MR 10.1.0 [CU21] / 10.2.0 [CU9] - FR 10.2.12 -->
 
 A parameter control displaying a write parameter of type DateTime would incorrectly not take into account the format of the current culture as defined in the regional settings of DataMiner Cube. As a result, the read and write parameters would be formatted differently.
+
+#### Trending: Problem when duplicating table parameters with different values [ID_34591]
+
+<!-- MR 10.1.0 [CU21] / 10.2.0 [CU9] - FR 10.2.12 -->
+
+When duplicating a table parameter in the legend of a trend graph, the graph would not be displayed if the duplicate parameter did not have the same index value as the original parameter.
+
+#### Trending: Table would be cleared of all data after refreshing [ID_34592]
+
+<!-- MR 10.1.0 [CU21] / 10.2.0 [CU9] - FR 10.2.12 -->
+
+When triggering a refresh of a trend chart, the data and axes on the line chart would disappear for a short period of time without first verifying whether there was any new incoming data. If the incoming data equals null, the graph should not be redrawn and should remain visible.
 
 #### Visual Overview: Dynamically generated shapes sorted by custom property value would not be displayed in the correct order [ID_34617]
 
