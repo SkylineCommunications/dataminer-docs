@@ -75,6 +75,17 @@ SLLogCollector packages will now also include the following additional files con
 | Logs\Network Information\ipconfig.exe _all.txt | The output of an `ipconfig /all` command. |
 | Logs\Network Information\route.exe print.txt   | The output of a `route print` command.    |
 
+#### Failover: A reverse proxy will now be used to re-route HTTP traffic from the offline agent to the online agent [ID_34606]
+
+<!-- MR 10.2.0 [CU9] - FR 10.2.12 -->
+
+In a Failover setup, a reverse proxy will now be hosted in IIS in order to re-route HTTP traffic from the offline agent to the online agent. After a switch has occurred, the proxy will be disabled in the online agent and enabled on the offline agent.
+
+This feature requires the Application Request Routing (ARR) module to be installed on IIS. When you upgrade to version 10.2.12 / 10.2.0 [CU9], it will automatically be installed if it has not yet been installed earlier.
+
+> [!NOTE]
+> If you manually uninstall ARR, it will not be reinstalled automatically during the next upgrade. In order to force the upgrade process to reinstall it, remove the ARR entry from the `C:\Skyline DataMiner\Upgrades\UpgradeActions\ExecutableEvents.xml` file.
+
 ### Fixes
 
 #### Problem with SLDataMiner when editing an element [ID_34329]
