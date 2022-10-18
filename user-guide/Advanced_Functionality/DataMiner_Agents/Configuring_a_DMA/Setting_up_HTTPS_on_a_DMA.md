@@ -143,8 +143,6 @@ The following auto-detect methods can be specified:
 
    To fix this, either create a new certificate that includes your URL in the *Subject Alternative Names (SAN)* field, or change your URL to match the *Subject Alternative Names (SAN)* field of the certificate.
 
-   For example, the certificate for dataminer.skyline.local has 
-
 - **My connection times out or the site cannot be reached**
 
     Most likely, the **inbound** TCP port for HTTPS connections (default 443) is not allowed through the Windows firewall.
