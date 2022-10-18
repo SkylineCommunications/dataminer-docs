@@ -8,6 +8,8 @@ The Verify Cluster Events tool is a debugging tool that can be used to verify th
 
 The tool can be of use in cases where, when you connect to a specific DMA using Cube, different alarms and/or elements are displayed than when you connect to a different DMA in the cluster.
 
+You can download the tool from [DataMiner Dojo](https://community.dataminer.services/download/verifyclusterevents-1-0-0-9/).
+
 Its usage has the following limitations:
 
 - It is **not** intended for investigating synchronization issues between DMAs (e.g. files, configuration, etc.).
@@ -19,27 +21,25 @@ Its usage has the following limitations:
 > [!NOTE]
 > The tool uses snapshots of the cache and inter-Agent subscriptions. Since snapshots are not taken simultaneously, there might be differences because of in-transit events. The tool can also only accurately report missing events or events that are stuck when there is a full inter-Agent subscription on a type.
 
-You can download the tool [here](https://community.dataminer.services/download/verifyclusterevents-1-0-0-9/?hilite=verifyclusterevents).
-
 ## Usage
 
 ### Retrieving information with this tool
 
-1. Download the zip file using the button above this section.
+1. Download the tool from [DataMiner Dojo](https://community.dataminer.services/download/verifyclusterevents-1-0-0-9/).
 
 1. Extract the file and double-click *VerifyClusterEvents.exe*.
 
-1. In the "Host" box, specify the name or IP of the DMA you want to connect to.
+1. In the *Host* box, specify the name or IP of the DMA you want to connect to.
 
-1. In the "User" and "Password" boxes, specify the credentials to connect to the DMA.
+1. In the *User* and *Password* boxes, specify the credentials to connect to the DMA.
 
-1. If you only want to retrieve alarm events, select the "Alarm Events Only" checkbox. This will allow faster data retrieval.
+1. If you only want to retrieve alarm events, select the *Alarm Events Only* checkbox. This will allow faster data retrieval.
 
-1. Click Fetch.
+1. Click *Fetch*.
 
-1. Select the type of information you want to check in the "Type" drop-down box.
+1. Select the type of information you want to check in the *Type* drop-down box.
 
-The retrieved information will then be displayed in the tabs below the settings.
+   The retrieved information will then be displayed in the tabs below the settings.
 
 ### Working with the Agent Grid tab
 
@@ -49,19 +49,19 @@ The number in each table cell indicates the number of events in the cache for th
 
 “[no subs]” indicates that the client DMA does not subscribe to this type of event (the tool only checks for full subscription).
 
-Double-clicking a cell opens a window with detailed information about missing events or events that are stuck for a combination of two Agents. The Pending Count at the top indicates how much this Agent is behind. If the number is high, cache differences between the Agents might be normal and are a consequence of load. The right-click menu in this window provides access to options and fixes. On the "Actions" page, you can find tools to fix issues (e.g. dropping connections between DMAs to recreate these, or clearing or re-forwarding events).
+Double-clicking a cell opens a window with detailed information about missing events or events that are stuck for a combination of two Agents. The Pending Count at the top indicates how much this Agent is behind. If the number is high, cache differences between the Agents might be normal and are a consequence of load. The right-click menu in this window provides access to options and fixes. On the *Actions* page, you can find tools to fix issues (e.g. dropping connections between DMAs to recreate these, or clearing or re-forwarding events).
 
 ### Working with the Tools tab
 
 In the Tools tab, two buttons are available:
 
-- "Clear all excess": Clears all events that are stuck.
+- *Clear all excess*: Clears all events that are stuck.
 
-- "Redistribute All Missing": Forwards missing events again. This option requires at least DataMiner 9.5.0 CU3 or 9.5.6.
+- *Redistribute All Missing*: Forwards missing events again. This option requires at least DataMiner 9.5.0 CU3 or 9.5.6.
 
 ### Importing/exporting results
 
-It is possible to export the information you’ve retrieved into a .bin file. To do so, go to the "File" menu at the top of the window and select "Export". Such a file can then imported into the tool at a different time for evaluation, via *File > Import*.
+It is possible to export the information you have retrieved into a .bin file. To do so, go to the *File* menu at the top of the window and select *Export*. Such a file can then imported into the tool at a different time for evaluation, via *File* > *Import*.
 
 If you are using this tool to report an issue, always include an export file.
 
@@ -72,32 +72,40 @@ The tool can be used from command line as well. This can for example be used fro
 Options:
 
 - `-ui`
+
   Show the user interface (default when no host to connect to or no types to verify/fix).
 
 - `-h host`
+
   Specifies a hostname/IP address to connect to.
 
 - `-u username`
+
   Specifies a username.
 
 - `-p password`
+
   Specifies a password.
 
 - `-o outfile`
+
   Specifies a file where logging/output will be written.
 
 - `-verify TypeName`
+
   Verifies for the given type. Multiple types can be specified through multiple -verify arguments. For example: -verify AlarmEventMessage
 
   Only applies when -ui is not present.
 
 - `-fix TypeName`
+
   Automatically fixes the cache contents for the given type. Multiple types can be specified through multiple -fix arguments. Automatically adds -verify for these types. For example: -fix AlarmEventMessage
 
   Only applies when -ui is not present.
 
 - `-help`
-  Shows this help.
+
+  Shows the different options.
 
 When executed without UI, the tool returns error code `4402` when it has detected inconsistencies, and `0` otherwise.
 
@@ -130,8 +138,7 @@ VerifyClusterEvents.exe -h xxxxxxx -u xxxxxx -p xxxxxxx -fix AlarmEventMessage -
 [1] [2018-04-09 14:11:19] Inconsistencies were detected (see above)
 ```
 
-### Screenshot
+### Example screenshot
 
-![Screenshot Verify Cluster Events Tool](~/user-guide/images/Verify_Cluster_Events_Tool.jpg)
-
-Example of the Verify Cluster Events tool
+![Screenshot Verify Cluster Events Tool](~/user-guide/images/Verify_Cluster_Events_Tool.jpg)<br>
+*Example of the Verify Cluster Events tool*

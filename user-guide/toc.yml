@@ -2994,8 +2994,8 @@
           topicUID: Sync_Check
         - name: Verify Cluster Events Tool
           topicUID: Verify_Cluster_Events_Tool
-        - name: VerifyClusterPorts.dmpupgrade
-          topicUID: VerifyClusterPortsdmpupgrade
+        - name: VerifyClusterPorts.dmupgrade
+          topicUID: VerifyClusterPortsdmupgrade
     - name: Methods of Procedure
       topicUID: mops
       items:
