@@ -953,8 +953,16 @@
               topicUID: BPA_Cassandra_DB_Size
             - name: Check Antivirus DLLs
               topicUID: BPA_Check_Antivirus_DLLs
+            - name: Database Security
+              topicUID: BPA_Database_Security
+            - name: Firewall Configuration
+              topicUID: BPA_Firewall_Configuration
+            - name: HTTPS Configuration
+              topicUID: BPA_Https_Configuration
             - name: Minimum Requirements Check
               topicUID: BPA_Minimum_Requirements_Check
+            - name: Password Strength
+              topicUID: BPA_Password_Strength
             - name: Report Active RTE
               topicUID: BPA_Report_Active_RTE
             - name: Verify Cloud DxM Version
