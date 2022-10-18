@@ -129,6 +129,30 @@ SLLogCollector packages will now also include the following additional files con
 | Logs\Network Information\ipconfig.exe _all.txt | The output of an `ipconfig /all` command. |
 | Logs\Network Information\route.exe print.txt   | The output of a `route print` command.    |
 
+#### Dashboards app: Upload size of PDF files will now be validated [ID_34620]
+
+<!-- MR 10.3.0 - FR 10.2.12 -->
+
+When PDF files are uploaded via the WebAPI (e.g. when a PDF report is generated), an error will now be thrown when the batch size exceeds 10 MB or the total file size exceeds 1 GB.
+
+#### Dashboards app: Reports will no longer contain visual replacements [ID_34632]
+
+<!-- MR 10.3.0 - FR 10.2.12 -->
+
+Missing information in dashboards is no longer indicated by means of a visual replacement. In PDF reports they are now replaced by a short message.
+
+#### Dashboards app: Jobs and Dashboards app now support PDF module [ID_34634]
+
+<!-- MR 10.3.0 - FR 10.2.12 -->
+
+The PDF module is now available in the Jobs and Dashboards app. From now on, you can e.g. export dashboards to PDF.
+
+#### Dashboards app: PDF and share button will now be hidden in edit mode [ID_34653]
+
+<!-- MR 10.3.0 - FR 10.2.12 -->
+
+The *PDF* and *Share* option in the Dashboards app are now no longer visible in edit mode. Additionally, you can now pin the *Share dashboards* action in the settings menu of the Dashboards app.
+
 ### Fixes
 
 #### Problem with SLDataMiner when editing an element [ID_34329]

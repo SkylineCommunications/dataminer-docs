@@ -196,6 +196,18 @@ In some rare cases, an error could occur in SLElement when rows were deleted fro
 
 When DataMiner Maps v1 was used with Google Maps as provider, in some cases, the *Loading Google Maps...* screen would incorrectly stay visible after the map had been loaded.
 
+#### Trending: Problem when duplicating table parameters with different values [ID_34591]
+
+<!-- MR 10.1.0 [CU21] / 10.2.0 [CU9] - FR 10.2.12 -->
+
+When duplicating a table parameter in the legend of a trend graph, the graph would not be displayed if the duplicate parameter did not have the same index value as the original parameter.
+
+#### Trending: Table would be cleared of all data after refreshing [ID_34592]
+
+<!-- MR 10.1.0 [CU21] / 10.2.0 [CU9] - FR 10.2.12 -->
+
+When triggering a refresh of a trend chart, the data and axes on the line chart would disappear for a short period of time without first verifying whether there was any new incoming data. If the incoming data equals null, the graph should not be redrawn and should remain visible.
+
 #### Problem when recording a GQI query [ID_34608]
 
 <!-- MR 10.2.0 [CU9] - FR 10.2.12 -->
