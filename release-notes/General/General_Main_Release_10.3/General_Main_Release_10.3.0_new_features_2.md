@@ -380,7 +380,7 @@ The PDF module is now available in the jobs and Dashboards app. From now on, you
 
 <!-- MR 10.3.0 - FR 10.2.12 -->
 
-The PDF and share option in the Dashboards app are now no longer visible in edit mode. Additionally, you can now pin the share action in the settings menu of the Dashboards app.
+The PDF and share option in the Dashboards app are now no longer visible in edit mode. Additionally, you can now pin the "Share dashboards" action in the settings menu of the Dashboards app.
 
 ### DMS Service & Resource Management
 

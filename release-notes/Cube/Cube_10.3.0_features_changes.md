@@ -653,6 +653,12 @@ In Visual Overview, it is now possible to retrieve the contributing booking ID o
 
         and the shape text set to `Contributing booking: [Contributing Booking]`
 
+#### Trending: When trending a parameter, related parameters can now be added through light bulb icon [ID_34432]
+
+<!-- MR 10.3.0 - FR 10.2.12 -->
+
+When trending a parameter, you can now add related parameters by clicking the light bulb icon in the top-right corner of the trend. In doing so, you will get an overview of suggested parameters that are related to the currently displayed parameter trend.
+
 #### Visual Overview: Shape data items of type 'NavigatePage' can now have values that include dynamic placeholders [ID_34442]
 
 <!-- MR 10.3.0 - FR 10.2.11 -->
