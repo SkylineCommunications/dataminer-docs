@@ -42,6 +42,12 @@ When a Process Automation definition is added to the Service definition componen
 
 Also, due to a filter issue, in some cases, nodes could display an incorrect number of tokens.
 
+#### SLLogCollector now also retrieves information from Elasticsearch [ID_34213]
+
+<!-- MR 10.2.0 [CU9] - FR 10.2.12 -->
+
+On systems with an Elasticsearch database, SLLogCollector will now also retrieve information that can help debug issues from that database.
+
 #### GQI: Enhanced performance when retrieving table data [ID_34441]
 
 <!-- MR 10.3.0 - FR 10.2.12 -->
@@ -118,7 +124,7 @@ The following methods used to add attachments to bookings, jobs and tickets have
 
 Also, the *ContinueAutomationScript* method now has an additional `info` parameter that can be used to provide more information about the variables passed in the `values` parameter (e.g. information to help resolve the file paths).
 
-#### SLLogCollector now also collects network information [ID_34582]
+#### SLLogCollector now also collects network information [ID_34582] [ID_34675]
 
 <!-- MR 10.1.0 [CU21] / 10.2.0 [CU9] - FR 10.2.12 -->
 
@@ -126,8 +132,15 @@ SLLogCollector packages will now also include the following additional files con
 
 | File | Contents |
 |------|----------|
-| Logs\Network Information\ipconfig.exe _all.txt | The output of an `ipconfig /all` command. |
-| Logs\Network Information\route.exe print.txt   | The output of a `route print` command.    |
+| Logs\Network Information\ipconfig.exe _all.txt            | The output of an `ipconfig /all` command.           |
+| Logs\Network Information\route.exe print.txt              | The output of a `route print` command.              |
+| Logs\Network Information\netsh.exe winhttp show proxy.txt | The output of a `netsh winhttp show proxy` command. |
+
+#### Problem when sending an NT_SNMP_GET request containing ':tablev2' and an instance [ID_34604]
+
+<!-- MR 10.1.0 [CU21] / 10.2.0 [CU9] - FR 10.2.12 -->
+
+When an *NT_SNMP_GET* request contained a MultipleGetBulk (`:tablev2`) and an instance, the instance would incorrectly be ignored.
 
 #### Dashboards app: Upload size of PDF files will now be validated [ID_34620]
 
@@ -270,6 +283,12 @@ When a PDF preview was made from a dashboard containing an empty GQI table (e.g.
 <!-- MR 10.1.0 [CU21] / 10.2.0 [CU9] - FR 10.2.12 -->
 
 When you had opened a DataMiner web app in Mozilla Firefox, read-only text in input boxes would incorrectly not be displayed in bold type.
+
+#### Dashboards app - Line & area chart: No date information would be displayed when hovering over a trend graph while the legend was disabled [ID_34655]
+
+<!-- MR 10.2.0 [CU9] - FR 10.2.12 -->
+
+When you hovered over a trend graph while the legend was disabled, the trend value tooltips would incorrectly not show any date information.
 
 #### Web apps: Problem when creating large PDF files [ID_34663]
 

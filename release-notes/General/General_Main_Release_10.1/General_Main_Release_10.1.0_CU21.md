@@ -28,7 +28,7 @@ Moreover, when a QAction is being compiled, other elements will wait for 5 minut
 
 Because of a number of enhancements, overall performance of the DataMiner startup routine has increased.
 
-#### SLLogCollector now also collects network information [ID_34582]
+#### SLLogCollector now also collects network information [ID_34582] [ID_34675]
 
 <!-- MR 10.1.0 [CU21] / 10.2.0 [CU9] - FR 10.2.12 -->
 
@@ -36,8 +36,9 @@ SLLogCollector packages will now also include the following additional files con
 
 | File | Contents |
 |------|----------|
-| Logs\Network Information\ipconfig.exe _all.txt | The output of an `ipconfig /all` command. |
-| Logs\Network Information\route.exe print.txt   | The output of a `route print` command.    |
+| Logs\Network Information\ipconfig.exe _all.txt            | The output of an `ipconfig /all` command.           |
+| Logs\Network Information\route.exe print.txt              | The output of a `route print` command.              |
+| Logs\Network Information\netsh.exe winhttp show proxy.txt | The output of a `netsh winhttp show proxy` command. |
 
 ### Fixes
 
@@ -128,6 +129,12 @@ When duplicating a table parameter in the legend of a trend graph, the graph wou
 <!-- MR 10.1.0 [CU21] / 10.2.0 [CU9] - FR 10.2.12 -->
 
 When triggering a refresh of a trend chart, the data and axes on the line chart would disappear for a short period of time without first verifying whether there was any new incoming data. If the incoming data equals null, the graph should not be redrawn and should remain visible.
+
+#### Problem when sending an NT_SNMP_GET request containing ':tablev2' and an instance [ID_34604]
+
+<!-- MR 10.1.0 [CU21] / 10.2.0 [CU9] - FR 10.2.12 -->
+
+When an *NT_SNMP_GET* request contained a MultipleGetBulk (`:tablev2`) and an instance, the instance would incorrectly be ignored.
 
 #### Visual Overview: Dynamically generated shapes sorted by custom property value would not be displayed in the correct order [ID_34617]
 
