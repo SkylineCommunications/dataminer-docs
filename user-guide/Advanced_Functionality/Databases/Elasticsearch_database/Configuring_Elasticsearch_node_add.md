@@ -29,7 +29,7 @@ uid: Configuring_Elasticsearch_node_add
 1. Start the node to have it added to the cluster.
 
 > [!TIP]
-> See also: [Standalone Elasticsearch Cluster Installer](https://community.dataminer.services/documentation/standalone-elasticsearch-cluster-installer/)
+> See also: [Standalone Elasticsearch Cluster Installer](xref:Standalone_Elasticsearch_Cluster_Installer)
 
 ## Confirming that the node has been added
 
