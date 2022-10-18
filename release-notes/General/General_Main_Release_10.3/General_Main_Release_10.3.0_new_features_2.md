@@ -364,6 +364,24 @@ When, in the Dashboards app or a web app, you apply multiple sort orders in a *T
 
 When PDF files are uploaded via the WebAPI (e.g. when a PDF report is generated), an error will now be thrown when the batch size exceeds 10 MiB or the total file size exceeds 1 GiB.
 
+#### Dashboards app: Reports will no longer contain visual replacements [ID_34632]
+
+<!-- MR 10.3.0 - FR 10.2.12 -->
+
+Missing information in dashboards is no longer indicated by means of a "visual replacement". In PDF reports they are now replaced by a short message.
+
+#### Dashboards app: Jobs and Dashboards app now support PDF module [ID_34634]
+
+<!-- MR 10.3.0 - FR 10.2.12 -->
+
+The PDF module is now available in the jobs and Dashboards app. From now on, you can e.g. export Dashboards to PDF.
+
+#### Dashboards app: PDF and share button will now be hidden in edit mode [ID_34653]
+
+<!-- MR 10.3.0 - FR 10.2.12 -->
+
+The PDF and share option in the Dashboards app are now no longer visible in edit mode. Additionally, you can now pin the share action in the settings menu of the Dashboards app.
+
 ### DMS Service & Resource Management
 
 #### Retrieving bookings in a paged way and sorted by property [ID_31982]
