@@ -16,12 +16,13 @@ Process automation supports the following types of activities:
 
 - [**User tasks**](xref:Creating_Activities#user-tasks): A user task is an activity that will wait for a user action before going to the next activity. Typically, a User Task app will be made available so that end user can access these User tasks and complete them.
 
+  > [!NOTE]
+  > Both script and resource tasks need to be designed in such a way that their execution does not exceed the default Automation script timeout time of 15 minutes.
+
 - [**Resource tasks**](xref:Creating_Activities#resource-tasks): a resource task is a combination of a C# Automation script and a function resource. It includes resource management, which ensures that the same resource will not be used by different processes at the same time.
 
   > [!NOTE]
   > In case resource management is not required, we strongly recommend that you use script tasks instead of resource tasks, as the overhead to create resource tasks is high.
-
-Both script and resource tasks need to be designed in such a way that their execution does not exceed the default Automation script timeout time of 15 minutes.
 
 An activity, after performing a task, can only generate one single task (token) for the next activity.
 
@@ -38,4 +39,3 @@ An activity, after performing a task, can only generate one single task (token) 
 - Ping IP
 
 - Scan IP Range
-

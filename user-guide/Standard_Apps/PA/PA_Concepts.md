@@ -8,8 +8,6 @@ PA introduces components and concepts into DataMiner that are used to model, imp
 
 - [Activities](xref:PA_Activities)
 - [Process Definition](xref:Process_Definition)
-- [Start Event](xref:Start_Event)
-- [End Event](xref:End_Event)
 - [Activation Window](xref:Activation_Window)
 - [Gateway](xref:PA_Gateway)
 - [Process DOM instance](xref:Process_DOM_Instance)

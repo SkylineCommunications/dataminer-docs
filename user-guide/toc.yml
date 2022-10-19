@@ -2402,10 +2402,6 @@
               topicUid: PA_Activities
             - name: Process Definition
               topicUid: Process_Definition
-            - name: Start Event
-              topicUid: Start_Event
-            - name: End Event
-              topicUid: End_Event
             - name: Activation Window
               topicUid: Activation_Window
             - name: Gateway
