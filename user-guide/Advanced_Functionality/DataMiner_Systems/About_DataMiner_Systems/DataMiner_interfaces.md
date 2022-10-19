@@ -28,7 +28,7 @@ Every DataMiner System ships with a number of private interfaces to connect to t
 
 ### Standard DataMiner tools (connecting via .NET Remoting or XML Web Services)
 
-- DMS Alerter
+- Alerter
 
 ### HTML-based reporting tools (connecting via HTML)
 
