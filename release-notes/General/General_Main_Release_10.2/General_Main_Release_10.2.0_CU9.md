@@ -95,6 +95,12 @@ This feature requires the Application Request Routing (ARR) module to be install
 
 ### Fixes
 
+#### Ticketing app: Problem with ticket domains incorrectly marked as masked [ID_33449]
+
+<!-- MR 10.2.0 [CU9] - FR 10.2.7 -->
+
+If, in the Ticketing app, you tried to edit a ticket of a domain linked to an element, in some cases, that domain would incorrectly be marked as "masked".
+
 #### Problem with SLDataMiner when editing an element [ID_34329]
 
 <!-- MR 10.1.0 [CU21] / 10.2.0 [CU9] - FR 10.2.12 -->

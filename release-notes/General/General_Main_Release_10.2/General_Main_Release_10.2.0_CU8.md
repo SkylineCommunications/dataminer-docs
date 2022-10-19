@@ -40,12 +40,6 @@ Because of improved internal logic, the performance of the SLDataGateway process
 
 In service definition diagrams, function resource icons are now centered.
 
-#### DataMiner Cube - Automation: Changes made to a script by other users will immediately be shown when selecting that script [ID_34277]
-
-<!-- MR 10.2.0 [CU8] - FR 10.2.11 -->
-
-When you select an unmodified Automation script in the Automation app, from now on, changes made to that script by other users (e.g. in another Cube session or in DataMiner Integration Studio) will immediately be shown.
-
 #### Enhanced performance when querying large XML files [ID_34299]
 
 <!-- MR 10.1.0 [CU20]/10.2.0 [CU8] - FR 10.2.11 -->
@@ -134,14 +128,6 @@ The `Repair DB.bat` script, located in the `C:\Skyline DataMiner\Tools` folder, 
 <!-- MR 10.2.0 [CU8] - FR 10.2.11 -->
 
 Because of a number of enhancements, overall performance of node-edge components has improved, especially on large systems.
-
-#### DataMiner Cube - Automation: Automation scripts will be refreshed more granularly after being updated [ID_34553]
-
-<!-- MR 10.2.0 [CU8] - FR 10.2.11 [CU0] -->
-
-Up to now, when a change was made to an Automation script (either in the current or in another Cube session), the entire script would be removed and re-added. When this happened at a moment when the script in question was open in the editor, it was unselected and would, in some cases, not be automatically selected again.
-
-From now on, an updated Automation script will be refreshed more granularly. Only the part that was changed (e.g. a C# action) will be refreshed. The script will no longer be unselected.
 
 ### Fixes
 

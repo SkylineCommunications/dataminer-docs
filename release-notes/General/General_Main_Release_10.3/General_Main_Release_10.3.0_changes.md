@@ -592,12 +592,6 @@ Up to now, negative status values in the trend data due to element restarts coul
 
 When a profile parameter of type “number” had no decimals defined, its value would incorrectly be displayed as the maximum value that can be assigned to a parameter of type integer. From now on, when a profile parameter has no decimals defined, its value will be displayed as is, without decimals.
 
-#### Ticketing app: Problem with ticket domains incorrectly marked as masked [ID_33449]
-
-<!-- MR 10.3.0 - FR 10.2.7 -->
-
-If, in the Ticketing app, you tried to edit a ticket of a domain linked to an element, in some cases, that domain would incorrectly be marked as “masked”.
-
 #### Issues with NATS request/response actions [ID_33487]
 
 <!-- MR 10.3.0 - FR 10.2.7 -->
