@@ -58,7 +58,7 @@ In those cases, you may want to consider using a loop and performing only a few 
 > [!NOTE]
 > In this case, you should always add a comment in your QAction code that explains why you are using a non-standard way of handling table data.
 
-For example:
+### Example
 
 ```txt
 System Information
@@ -95,6 +95,8 @@ Metrics for a table with 5 columns (average results from looping 100 times with 
 | 10 000         | 25 000 ms      | 3000 ms    | 40 500 ms                                  |
 
 As you can see, it might be a lot more efficient in a table with a lot of data to first do a GetColumn of one or two columns and then perform several GetRows in a loop.
+
+### Guidelines
 
 Based on experience, we recommend that you follow these basic guidelines:
 
