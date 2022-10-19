@@ -664,4 +664,4 @@ When, in DMS Alerter, the new *Set the alarm as read in Cube after the alarm has
 
 #### DMS Alerter: New 'Hide the comment window when acknowledging an alarm' setting \[ID_26621\]
 
-A new setting, *Hide the comment window when acknowledging an alarm*, is available in the DMS Alerter app. If this setting is enabled, you can take ownership of an alarm in an DMS Alerter pop-up balloon without having to add a comment.
+A new setting, *Hide the comment window when acknowledging an alarm*, is available in the Alerter app. If this setting is enabled, you can take ownership of an alarm in an Alerter pop-up balloon without having to add a comment.
