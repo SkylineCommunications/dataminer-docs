@@ -176,7 +176,7 @@ To do so, go to *Advanced \> Tests \> Generate MIB for SNMP Manager*, select an
 
 #### DMS Alerter: New 'Set the alarm as read in Cube after the alarm has been acknowledged' setting \[ID_26579\]
 
-When, in DMS Alerter, the new *Set the alarm as read in Cube after the alarm has been acknowledged* setting is enabled, each time you acknowledge an alarm in Alerter, that same alarm will automatically be marked as “read” in DataMiner Cube.
+When, in DMS Alerter, the new *Set the alarm as read in Cube after the alarm has been acknowledged* setting is enabled, each time you acknowledge an alarm in DMS Alerter, that same alarm will automatically be marked as “read” in DataMiner Cube.
 
 > [!NOTE]
 > This feature will only work if one and the same user is running both DMS Alerter and DataMiner Cube on the same client machine.
