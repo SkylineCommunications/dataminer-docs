@@ -371,6 +371,6 @@ When you opened DataMiner Cube and clicked Start on the message box saying that 
 
 When you restarted a DataMiner Agent without stopping SLNet, in some rare cases, an exception could be thrown.
 
-#### Alerter would start to consume an excessive amount a memory when configured to play a sound when the alarm in the pop-up matched a filter \[ID_29672\]
+#### DMS Alerter would start to consume an excessive amount a memory when configured to play a sound when the alarm in the pop-up matched a filter \[ID_29672\]
 
 When you had configured Alerter to play a sound when the alarm displayed in the pop-up balloon matched a filter, in some cases, Alerter would start to consume an excessive amount a memory.
