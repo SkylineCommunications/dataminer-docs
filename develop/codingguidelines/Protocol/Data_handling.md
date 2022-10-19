@@ -101,13 +101,10 @@ Based on experience, we recommend that you follow these basic guidelines:
 - Performing a GetColumns:
 
   - Try to stay below 120 000 cells in 1 get, except if the content of a cell is a 20 MB string or something equally large, in which case you should split up more.
-  - Usually starts breaking down if you go above 100 000 rows (considering an average of 7 columns).
-  - Split it up or filter only necessary data if you need more.
-  - If you have 100 columns and >rows, you should split these up into 2 GetColumns 1-49 and 50-100, for example. Always retrieve the Key column for every call so you can complete your table in memory in a stable way.
+  - If you go above 100 000 rows (considering an average of 7 columns), issues will likely start to occur. Split up the data over several calls or filter only necessary data if you need more.
+  - If you have 100 columns and a large number of rows, you should split these up into several GetColumns calls (e.g. one for rows 1-49 and one for 50-100). Always retrieve the Key column for every call so you can complete your table in memory in a stable way.
 
-- Performing Sets (FillArray):
+- Performing sets (FillArray):
 
   - Try to stay below 20 000 cells in 1 set, except if the content of a cell is a 20 MB string or something equally large, in which case you should split up more.
-  - Avoid setting more than 1000 rows at a time.
-
-If your table is larger, use multiple sets per 1000 to improve performance.
+  - Avoid setting more than 1000 rows at a time. If your table is larger than 1000 rows, use multiple sets per 1000 to improve performance.
