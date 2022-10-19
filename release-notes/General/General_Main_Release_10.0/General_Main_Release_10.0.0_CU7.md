@@ -176,9 +176,9 @@ When the ShapeGrouping feature was used, in some cases, grouped shapes were high
 
 In some cases, it would no longer be possible to filter on ticket fields of type GenericEnumEntry.
 
-#### Alerter: Settings window too small to fit all settings \[ID_27017\]
+#### DMS Alerter: Settings window too small to fit all settings \[ID_27017\]
 
-When, in Alerter, you opened the settings window, in some cases, the window could be too small to fit all settings.
+When, in DMS Alerter, you opened the settings window, in some cases, the window could be too small to fit all settings.
 
 #### Problem with the precision of decimal values \[ID_27136\]
 
