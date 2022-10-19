@@ -6,6 +6,20 @@ uid: DCP_change_log
 
 The DataMiner Cloud Platform gets updated continuously. This change log can help you trace when specific features and changes have become available.
 
+#### 18 October 2022 – Enhancement – Notification in case deployment fails because account is not linked [ID_34699]
+
+When a deployment fails because the user does not have a linked account, they will now get a notification that will allow them to correct the situation and retry.
+
+#### 18 October 2022 – Enhancement – DCP Admin app supports additional audit events [ID_34697]
+
+The DCP Admin app now also includes the following audit events on the *Audit* page:
+
+- A user created a dashboard share.
+- A user performed an updated to an existing share.
+- A user deleted an existing share.
+
+Up to now, only accessing a share was logged in the audit events.
+
 #### 27 September 2022 – New feature – DataMiner Teams bot support for custom commands [ID_34518]
 
 If CoreGateway version 2.11.0 or higher and FieldControl version 2.8.1 or higher are installed (included in Cloud Pack version 2.8.0), the DataMiner Teams bot now allows you to display and run custom commands with dynamic user input configured in your cloud-connected DataMiner System.
