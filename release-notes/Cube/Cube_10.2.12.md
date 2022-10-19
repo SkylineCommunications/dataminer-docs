@@ -53,6 +53,12 @@ Because of a number of enhancements, overall accuracy when detecting flatline ch
 
 Any alarm or suggestion events created for flatline changes will now close sooner when one of the above-mentioned situations occurs.
 
+#### System Center: Link to online help now points to 'Connecting your DataMiner System to the cloud' on <https://docs.dataminer.services/> [ID_34683]
+
+<!-- MR 10.3.0 - FR 10.2.12 -->
+
+On the *Cloud* page of *System Center*, the *online help* hyperlink now points to the [Connecting your DataMiner System to the cloud](xref:Connecting_your_DataMiner_System_to_the_cloud) page on <https://docs.dataminer.services/>.
+
 ### Fixes
 
 #### DataMiner Cube - Spectrum Analysis: Problem with measurement point option 'Invert spectrum' [ID_34552]
