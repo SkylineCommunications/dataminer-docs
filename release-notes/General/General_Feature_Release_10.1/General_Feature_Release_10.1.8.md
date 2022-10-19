@@ -500,7 +500,7 @@ When the “Use quick picks” option was selected, a time range feed would pass
 
 Also, custom quick picks would disappear when reloading the dashboard, and when the “Allow refresh” option was selected, the feed would not correctly update the linked trend graph when the refresh counter was reset.
 
-#### DMS Alerter: Problem when closing DMS Alerter while balloons are popping up \[ID_29725\]
+#### DMS Alerter: Problem when closing Alerter while balloons are popping up \[ID_29725\]
 
 In some cases, an exception could be thrown when you closed Alerter while balloons were popping up.
 
