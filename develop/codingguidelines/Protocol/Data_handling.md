@@ -6,12 +6,12 @@ uid: Data_handling
 
 - Depending on the type of data a table will hold, different scenarios are possible as to what should be done with the table data when the table is updated.
 
-    In many cases, a table should only hold the entries that are currently available. If so, old rows that are no longer present will be removed. For example, SNMP and WMI tables will by default only need to display the entries that currently exist, and old rows will be removed.
+  In many cases, a table should only hold the entries that are currently available. If so, old rows that are no longer present will be removed. For example, SNMP and WMI tables will by default only need to display the entries that currently exist, and old rows will be removed.
 
-    > [!NOTE]
-    > For tables filled in by a QAction, code is necessary to remove the old data, e.g. via FillArray, RemoveRow.
+  > [!NOTE]
+  > For tables filled in by a QAction, code is necessary to remove the old data, e.g. via FillArray, RemoveRow.
 
-### Previous data comparison
+## Previous data comparison
 
 Sometimes users need to know about items that are no longer present compared to a previous polling of the table data (e.g. missing transport streams, services, processes, DVEs, etc.). In this case, the items that are no longer present must not be automatically removed. The table should indicate which entries are no longer available.
 
@@ -19,15 +19,15 @@ This should be implemented as follows:
 
 - Add a PageButton "\[Table Name\] Config…" above the table that contains:
 
-    - A toggle button "\[Table Name\] Auto Clear" (On/Off, default value Off). When the table is updated, check this status and remove the row(s) if needed.
+  - A toggle button "\[Table Name\] Auto Clear" (On/Off, default value Off). When the table is updated, check this status and remove the row(s) if needed.
 
-    - A button "Remove All \[Content Type\]" to remove all missing or old entries.
+  - A button "Remove All \[Content Type\]" to remove all missing or old entries.
 
-    - Table:
+  - Table:
 
-        - A column containing buttons to remove a missing entry.
+    - A column containing buttons to remove a missing entry.
 
-### Infinitely growing amount of data
+## Infinitely growing amount of data
 
 Another possible scenario is that entries keep being added to a table (e.g. data pushed from an external third-party component to DataMiner, such as SNMP traps). In this case, the protocol must provide a means to automatically limit the size of the table. However, care must be taken to not remove entries that are still valid and of interest to the user (e.g. only remove cleared traps, old information events, etc.).
 
@@ -35,30 +35,32 @@ Implementation based on maximum number of rows and/or maximum time to keep:
 
 - Add a PageButton "\[Table Name\] Config…" above the table that contains:
 
-    - A toggle button "Max Table Size" (On/Off, default: On)
+  - A toggle button "Max Table Size" (On/Off, default: On)
 
-    - A parameter to define the maximum allowed number of rows. (Provide a well-chosen default value).
+  - A parameter to define the maximum allowed number of rows. (Provide a well-chosen default value).
 
-    - A parameter to define the maximum time to keep. (Provide a well-chosen default value.)
+  - A parameter to define the maximum time to keep. (Provide a well-chosen default value.)
 
-        > [!NOTE]
-        > In this case, the table must contain a column that holds the time (in descending sort order).
-        
-        
-### Dealing with very large tables
+    > [!NOTE]
+    > In this case, the table must contain a column that holds the time (in descending sort order).
 
-The default strategy is to always avoid too many calls to SLProtocol as possible from within a QAction. This usually means performing a single GetColumns to retrieve the whole table and using FillArray or SetColumns.
+## Dealing with very large tables
 
-There are however some cases where you may want to reconsider this:
+Your default strategy should always be to avoid too many calls to SLProtocol from within a QAction as much as possible. This usually means performing a single GetColumns to retrieve the whole table and using FillArray or SetColumns.
 
-    - When dealing with too much data to hold in memory it can become more important to look at memory usage instead of CPU cycles.
-    - When dealing with too much data to retrieve in a single call
+However, there are some cases where you may want a different approach:
 
-In those cases you may want to consider using a loop and performing only a few GetRow calls instead of a single GetColumns call to retrieve the whole table.
-        > [!NOTE]
-        > In this case, you should always add a comment in your QAction code that explains why you're using a non-standard way of handeling table data.
+- When dealing with too much data to hold in memory, it can become more important to look at memory usage instead of CPU cycles.
+- When dealing with too much data to retrieve in a single call.
 
+In those cases, you may want to consider using a loop and performing only a few GetRow calls instead of a single GetColumns call to retrieve the whole table.
 
+> [!NOTE]
+> In this case, you should always add a comment in your QAction code that explains why you are using a non-standard way of handling table data.
+
+For example:
+
+```txt
 System Information
 ------------------
       Time of this report: 11/14/2019, 12:29:49
@@ -82,31 +84,30 @@ System Information
                  Miracast: Available, with HDCP
 Microsoft Graphics Hybrid: Not Supported
            DxDiag Version: 10.00.17763.0001 64bit Unicode
- 
- 
- 
-Metrics, table with 5 columns: 
-(average results out of looping 100 times)
+```
 
-Number of Rows	GetRow in loop 	GetColumns 	NT_Notify (external get table in one call)
-10	                30 ms	        10 ms	    60 ms
-20	                44 ms	        16 ms	    100 ms
-100	                260 ms	        40 ms	    390 ms
-10 000	            25 000 ms	    3000 ms	    40 500 ms
+Metrics for a table with 5 columns (average results from looping 100 times with the setup displayed above):
 
+| Number of Rows | GetRow in loop | GetColumns | NT_Notify (external get table in one call) |
+|----------------|----------------|------------|--------------------------------------------|
+| 20             | 44 ms          | 16 ms      | 100 ms                                     |
+| 100            | 260 ms         | 40 ms      | 390 ms                                     |
+| 10 000         | 25 000 ms      | 3000 ms    | 40 500 ms                                  |
 
-As you can see. You might be a lot more efficient in a table with a lot of data to first do a GetColumn of one or two columns and then perform several GetRows in a loop.
+As you can see, it might be a lot more efficient in a table with a lot of data to first do a GetColumn of one or two columns and then perform several GetRows in a loop.
 
-There are some basic guidelines to follow, these are based on experience:
+Based on experience, we recommend that you follow these basic guidelines:
 
-Performing a GetColumns:
-Try to stay below 120 000 cells in 1 get (except if the content of a cell is a 20mb string or something equally large, then split you'll want to split up more)
+- Performing a GetColumns:
 
-	• Usually starts breaking down if you go above 100 000 rows (Concidering an average of 7 columns)
-	• Split it up or filter only necessary data if you need more.
-	• If you've got 100 columns and >rows. Then it's better to split up and 2 getcolumns 1-49 and 50-100 for example. (Always retrieve the Key column for every call so you can complete your table in memory in a stable way)
+  - Try to stay below 120 000 cells in 1 get, except if the content of a cell is a 20 MB string or something equally large, in which case you should split up more.
+  - Usually starts breaking down if you go above 100 000 rows (considering an average of 7 columns).
+  - Split it up or filter only necessary data if you need more.
+  - If you have 100 columns and >rows, you should split these up into 2 GetColumns 1-49 and 50-100, for example. Always retrieve the Key column for every call so you can complete your table in memory in a stable way.
 
-Performing Sets (Fillarray):
-Try to stay below 20 000 cells in 1 set. (same exception as above)
-	• In general: avoid setting more than 1000 rows at a time.
-If your table is larger then split up into multiple sets per 1000 as it will be more performant!
+- Performing Sets (FillArray):
+
+  - Try to stay below 20 000 cells in 1 set, except if the content of a cell is a 20 MB string or something equally large, in which case you should split up more.
+  - Avoid setting more than 1000 rows at a time.
+
+If your table is larger, use multiple sets per 1000 to improve performance.
