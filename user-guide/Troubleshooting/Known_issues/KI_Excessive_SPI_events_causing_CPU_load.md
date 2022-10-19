@@ -18,4 +18,8 @@ Install DataMiner 10.2.0 [CU6] or 10.2.9.
 
 ## Issue description
 
-Increased CPU load and performance degradation.
+Increased CPU load and performance degradation. The following symptoms have for instance been noticed, though it should be noted that if you see such a symptom, this does not necessarily mean that this issue is the cause:
+
+- Increased CPU usage by SLNet.
+- Spikes in CPU usage by SLNet.
+- Slower system performance because of server resource shortages, e.g. slower booking creation.
