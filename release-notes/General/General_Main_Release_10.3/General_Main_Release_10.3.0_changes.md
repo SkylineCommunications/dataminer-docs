@@ -412,6 +412,12 @@ In case a *Line & area chart* component displays trending for multiple parameter
 
 Alarm locking in the SLElement process has been enhanced.
 
+#### Dashboards app / Low-code apps: Enhanced performance of selection boxes [ID_34577]
+
+<!-- MR 10.3.0 - FR 10.2.12 -->
+
+Because of a number of enhancements, overall performance has increased when opening selection boxes, especially when they contain a large number of items.
+
 ### Fixes
 
 #### SLAnalytics: Problem with trend prediction [ID_31352]

@@ -124,6 +124,12 @@ The following methods used to add attachments to bookings, jobs and tickets have
 
 Also, the *ContinueAutomationScript* method now has an additional `info` parameter that can be used to provide more information about the variables passed in the `values` parameter (e.g. information to help resolve the file paths).
 
+#### Dashboards app / Low-code apps: Enhanced performance of selection boxes [ID_34577]
+
+<!-- MR 10.3.0 - FR 10.2.12 -->
+
+Because of a number of enhancements, overall performance has increased when opening selection boxes, especially when they contain a large number of items.
+
 #### SLLogCollector now also collects network information [ID_34582] [ID_34675]
 
 <!-- MR 10.1.0 [CU21] / 10.2.0 [CU9] - FR 10.2.12 -->
