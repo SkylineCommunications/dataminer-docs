@@ -2392,6 +2392,61 @@
               topicUid: CI_Types1
             - name: Using your IS-04 registry to provision DataMiner with IDP
               topicUID: Using_your_IS04_registry_to_provision_DataMiner_with_IDP
+    - name: Process Automation
+      topicUid: PA_index
+      items:
+        - name: Process Automation Concepts
+          topicUid: PA_Concepts
+          items:
+            - name: Activities
+              topicUid: PA_Activities
+            - name: Process Definition
+              topicUid: Process_Definition
+            - name: Start Event
+              topicUid: Start_Event
+            - name: End Event
+              topicUid: End_Event
+            - name: Activation Window
+              topicUid: Activation_Window
+            - name: Gateway
+              topicUid: PA_Gateway
+            - name: Process DOM instance
+              topicUid: Process_DOM_Instance
+            - name: User DOM instance
+              topicUid: User_DOM_Instance
+            - name: Queue Element
+              topicUid: Queue_Element
+            - name: Token
+              topicUid: PA_Token
+            - name: Process Automation app
+              topicUid: Process_Automation_App
+        - name: Getting Started with PA
+          topicUid: Getting_Started_With_PA
+          items:
+            - name: Deploying and Configuring the PA Framework
+              topicUid: Deploying_and_Configuring_the_PA_Framework
+            - name: Creating Activities
+              topicUid: Creating_Activities
+            - name: Creating and Configuring a Process Definition
+              topicUid: Creating_and_Configuring_a_Process_Definition
+            - name: Creating Activation Window
+              topicUid: Creating_Activation_Window
+        - name: Process Automation app
+          topicUid: Process_Automation_App_Two
+        - name: Advanced Configuration
+          items:
+            - name: Logging
+              topicUid: PA_Logging
+            - name: Exchanging Process Data with External Applications
+              topicUid: Exchanging_Process_Data_With_External_Applications
+            - name: DOM Instances Cleanup
+              topicUid: DOM_Instances_Cleanup
+            - name: Pushing Tokens into a Process
+              topicUid: Pushing_Tokens_Into_A_Process
+            - name: Integrating Gateways
+              topicUid: Integrating_Gateways
+            - name: Creating Resource Tasks
+              topicUid: Creating_Resource_Tasks
     - name: DataMiner PTP app
       topicUid: SolPTP
       items:
