@@ -12,7 +12,7 @@ To configure a header bar:
 
 1. Click the "+" icon on the left or right side of the page header bar, depending on where you want to add a button to the header bar.
 
-1. Enter a name for the button in the page configuration pane. Or you can do so directly by clicking on the button in the header bar.
+1. Enter a name for the button in the page configuration pane or directly on the button in the header bar.
 
 1. In the page configuration pane, expand the *Icon* section to select an icon for the button.
 
