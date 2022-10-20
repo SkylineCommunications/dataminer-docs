@@ -74,19 +74,18 @@ When a parameter feed is linked to a *Line & area chart" component, from now on,
 
 When, in the Dashboards app or a web app, you apply multiple sort orders in a *Table* component, multiple sort operators will now be appended to the GQI query that is feeding data to the component.
 
-#### QA Device Simulator renamed to Skyline Device Simulator [ID_34530]
+#### QA Device Simulator renamed to Skyline Device Simulator [ID_34530] [ID_34555]
 
 <!-- MR 10.3.0 - FR 10.2.12 -->
 
 The *QA Device Simulator* tool has been renamed to *Skyline Device Simulator* and now targets Microsoft .NET Framework 4.8.
 
-Also, the following new command-line parameters allow you to specify packet loss and packet delay parameters on startup.
+Also, the following command-line parameters have been added:
 
-```txt
-/packetloss <packet loss %>
-/delayms <delay ms>
-/delaypct <delay % of packets>
-```
+| Parameters | Function |
+|------------|----------|
+| `/packetloss <packet loss %>`<br>`/delayms <delay ms>`<br>`/delaypct <delay % of packets>` | Specifying packet loss and packet delay parameters on startup. |
+| `/dbmaxvaloid <max nbr of entries per OID>` | Configuring the number of entries loaded in memory per OID when working with database simulations. |
 
 #### Preventing multiple SLScripting processes from simultaneously compiling the same DLL [ID_34532]
 
