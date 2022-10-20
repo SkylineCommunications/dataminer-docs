@@ -400,9 +400,9 @@ When you install GitHub Desktop, you will also need to add the correct repositor
 
 1. Install GitHub Desktop and log in with your GitHub account.
 
-1. Select *Create a New Repository on your hard drive*.
+1. Select *Clone a repository from the Internet*.
 
-   ![Install GitHub 1](~/images/InstallGithub1.png)
+   ![Install GitHub 1](~/images/Installing_Github_Desktop.png)
 
 1. Next, you will be asked which repository you want to use. Clone the *SkylineCommunications/dataminer-docs* repository to your local machine. The easiest way to do so is by specifying the URL `https://github.com/SkylineCommunications/dataminer-docs` in the URL tab.
 
