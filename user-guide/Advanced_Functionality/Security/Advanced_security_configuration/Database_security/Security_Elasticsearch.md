@@ -16,9 +16,12 @@ To enable authentication in Elasticsearch 6.8.X:
 
 1. Add the following lines to the *elasticsearch.yml* file (typically located in *C:\Program Files\Elasticsearch\config*):
 
-    `xpack.security.enabled: true`
+   `xpack.security.enabled: true`
 
-    `discovery.type: single-node` (In case of a multi-node cluster 'discovery.type' is not required)
+   `discovery.type: single-node`
+
+   > [!NOTE]
+   > For a multi-node cluster, "discovery.type" is not required.
 
 1. Start the *elasticsearch-service-x64* service.
 
@@ -77,8 +80,9 @@ To configure TLS encryption for client-server communication:
    xpack.security.http.ssl.keystore.path: path/to/your/certificate
    xpack.security.http.ssl.truststore.path: path/to/your/certificate
    ```
-   Add the following lines to *elasticsearch.yml* file, if you are using `.PEM` certificate generated using `openssl` utility.
-   
+
+   If you are using a `.PEM` certificate generated using `openssl` utility, add the following lines to the *elasticsearch.yml* file instead:
+
    ```
     xpack.security.http.ssl.enabled: true
     xpack.security.http.ssl.verification_mode: full
@@ -88,7 +92,6 @@ To configure TLS encryption for client-server communication:
     #In case of a self-signed certificates replace `path/to/certificate/authority` with path to certificate
     of each node in cluster.
     ```
-   
 
 1. Optionally, **for password-protected certificates**, execute the following commands **as Administrator** and enter the password when prompted:
 
@@ -104,7 +107,7 @@ To configure TLS encryption for client-server communication:
 1. Add the full *https://* URL (including the port) in the \<DBServer> element in the *DB.xml* file. For example:
    `<DBServer>https://elastic.dataminer:9200</DBServer>`
 
-1. Import the certificate in the 'Trusted Root Certification Authorities' store of the Windows Certificate store.
+1. Import the certificate in the *Trusted Root Certification Authorities* store of the Windows Certificate Store.
 
 1. Save the changes and start the DataMiner Agent.
 
@@ -119,7 +122,7 @@ To configure TLS encryption for inter-node communication:
 
 1. Request or generate a TLS certificate (the certificates should be in the PKCS#12 format). Make sure the IP address of the node is included in the *Subject Alternative Names* of the certificate.
 
-1. Add the following to the *elasticsearch.yml* on each node:
+1. Add the following to the *elasticsearch.yml* file on each node:
 
    ```
    xpack.security.transport.ssl.enabled: true
@@ -127,8 +130,9 @@ To configure TLS encryption for inter-node communication:
    xpack.security.transport.ssl.keystore.path: elastic-certificates.p12 
    xpack.security.transport.ssl.truststore.path: elastic-certificates.p12
    ```
-    Add the following lines to *elasticsearch.yml* file, if you are using `.PEM` certificate generated using `openssl` utility.
-   
+
+   If you are using a `.PEM` certificate generated using `openssl` utility, add the following lines to *elasticsearch.yml* file instead.
+
    ```
     xpack.security.transport.ssl.enabled: true
     xpack.security.transport.ssl.verification_mode: full 
