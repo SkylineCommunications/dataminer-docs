@@ -2392,8 +2392,6 @@
               topicUid: CI_Types1
             - name: Using your IS-04 registry to provision DataMiner with IDP
               topicUID: Using_your_IS04_registry_to_provision_DataMiner_with_IDP
-<<<<<<< Updated upstream
-=======
     - name: Process Automation Framework
       topicUid: PA_index
       items:
@@ -2441,7 +2439,6 @@
               topicUid: Integrating_Gateways
             - name: Creating Resource Tasks
               topicUid: Creating_Resource_Tasks
->>>>>>> Stashed changes
     - name: DataMiner PTP app
       topicUid: SolPTP
       items:
