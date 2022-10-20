@@ -27,4 +27,4 @@ To configure a header bar:
 1. Add and configure additional buttons if needed.
 
 > [!NOTE]
-> To delete a button, click the garbage can icon next to that button in the page configuration pane, and then click the confirmation checkmark icon.
+> To delete a button, click the garbage can icon next to that button in the page configuration pane, and then click the check mark icon to confirm.
