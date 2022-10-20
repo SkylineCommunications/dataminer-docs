@@ -70,6 +70,14 @@ All files related to the obsolete *SNMP Simulation Generator* tool have been rem
 
 Because of a number of enhancements, overall performance has increased when starting up elements on systems using a MySQL or Microsoft SQL Server database, especially elements containing large amounts of data.
 
+#### Newtonsoft.Json DLL updated to version 13.0.1 [ID_34558]
+
+<!-- MR 10.1.0 [CU19]/10.2.0 [CU7] - FR 10.2.10 -->
+
+Due to a high-severity vulnerability, the Newtonsoft.Json DLL file located in the `C:\Skyline DataMiner\ProtocolScripts` folder has been updated to version 13.0.1.
+
+For more information on the vulnerability, see [Improper Handling of Exceptional Conditions in Newtonsoft.Json](https://github.com/advisories/GHSA-5crp-9r3c-p9vr).
+
 ### Fixes
 
 #### DataMiner Cube - Alarm Console: Problem when clearing alarm groups [ID_33550]

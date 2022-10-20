@@ -223,7 +223,10 @@ The following types of alarm events will not be combined in a consolidated alarm
 - Flipped
 
 > [!TIP]
-> See also: [Alarm linking](xref:Alarm_linking)
+> See also:
+>
+> - [Alarm linking](xref:Alarm_linking)
+> - [Declutter your alarm tree](https://community.dataminer.services/declutter-your-alarm-tree/ "Alarm squashing")
 
 ### AlarmSettings.UseCreationTimeAsMainTime
 
@@ -361,7 +364,7 @@ However, in case you encounter issues with such filters because of this new filt
 
 ### HTTPS
 
-See [Configuring HTTPS settings in MaintenanceSettings.xml](xref:Setting_up_HTTPS_on_a_DMA#configuring-https-settings-in-maintenancesettingsxml).
+See [Configuring HTTPS settings in DataMiner](xref:Setting_up_HTTPS_on_a_DMA#configuring-https-in-dataminer).
 
 ### Logging.MaxSize
 

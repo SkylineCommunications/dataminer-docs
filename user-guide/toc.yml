@@ -39,7 +39,7 @@
                 topicUID: Managing_the_start_window
               - name: Opening the browser application
                 topicUID: Opening_the_browser_app
-              - name: Options for opening DataMiner Cube
+              - name: Arguments for DataMiner Cube
                 topicUID: Options_for_opening_DataMiner_Cube
               - name: Desktop application command-line arguments
                 topicUID: Desktop_app_command_line_arguments
@@ -49,8 +49,8 @@
           topicUid: Accessing_the_Monitoring_app
         - name: Accessing the legacy Monitoring & Control app
           topicUid: Accessing_the_legacy_Monitoring_Control_app
-        - name: Accessing DMS Alerter
-          topicUid: Accessing_DMS_Alerter
+        - name: Accessing Alerter
+          topicUid: Accessing_Alerter
         - name: Accessing the DataMiner Taskbar Utility
           topicUid: Accessing_the_DataMiner_Taskbar_Utility
     - name: The DataMiner user interface
@@ -648,6 +648,8 @@
               topicUid: Setting_the_background_color_of_a_static_shape
             - name: Configuring a shape's text wrapping and trimming
               topicUid: Configuring_text_wrapping_and_trimming
+            - name: Configuring a page to execute a script automatically
+              topicUID: Configuring_a_page_to_execute_a_script_automatically
         - name: Reference
           topicUid: Reference
           items:
@@ -951,8 +953,16 @@
               topicUID: BPA_Cassandra_DB_Size
             - name: Check Antivirus DLLs
               topicUID: BPA_Check_Antivirus_DLLs
+            - name: Database Security
+              topicUID: BPA_Database_Security
+            - name: Firewall Configuration
+              topicUID: BPA_Firewall_Configuration
+            - name: HTTPS Configuration
+              topicUID: BPA_Https_Configuration
             - name: Minimum Requirements Check
               topicUID: BPA_Minimum_Requirements_Check
+            - name: Password Strength
+              topicUID: BPA_Password_Strength
             - name: Report Active RTE
               topicUID: BPA_Report_Active_RTE
             - name: Verify Cloud DxM Version
@@ -2163,6 +2173,8 @@
               topicUid: LowCodeApps_organizing_landing_page
         - name: Deleting a low-code application
           topicUid: Deleting_custom_apps
+        - name: Specifying data input in an app URL
+          topicUID: Specifying_data_input_in_URL
     - name: DataMiner Object Models (DOM)
       topicUID: DOM
       items:
@@ -2570,6 +2582,8 @@
             topicUID: Changing_the_role_of_a_DCP_user
         - name: Controlling remote access
           topicUid: Controlling_remote_access
+        - name: Consulting DCP audit logs
+          topicUid: DCP_Auditing
         - name: Granting admin consent for Teams actions
           topicUid: Granting_admin_consent
         - name: Controlling cloud feed data offloads
@@ -2731,6 +2745,10 @@
     - name: Known issues
       topicUID: Known_issues
       items:
+        - name: Increased CPU load and degraded performance because of excessive number of SPI events
+          topicUID: Excessive_SPI_events_causing_CPU_load
+        - name: SLDataGateway memory leak
+          topicUID: KI_SLDataGateway_memory_leak
         - name: Taskbar Utility performance issue while agents are being upgraded
           topicUID: KI_Taskbar_Utility_performance_issue_while_agents_are_being_upgraded
         - name: SLDMS Hosting Agent cache issue
@@ -2837,8 +2855,8 @@
     - name: Tools
       topicUid: DataminerTools
       items:
-        - name: DMS Alerter
-          topicUid: DMS_Alerter
+        - name: Alerter
+          topicUid: Alerter
           items:
             - name: Working with the Alerter alarm list
               topicUid: Working_with_the_Alerter_alarm_list
@@ -2846,8 +2864,8 @@
               topicUid: Communicating_with_other_DataMiner_users_via_Alerter
             - name: Working with Alerter pop-up balloons
               topicUid: Working_with_Alerter_pop-up_balloons
-            - name: Configuring DMS Alerter
-              topicUid: Configuring_DMS_Alerter
+            - name: Configuring Alerter
+              topicUid: Configuring_Alerter
         - name: DataMiner Comparison tool
           topicUID: DataMinerComparisonTool
         - name: DataMiner Size tool
@@ -2980,6 +2998,14 @@
           topicUID: Standalone_Cassandra_Backup_Tool
         - name: Standalone Elastic Backup tool
           topicUID: Standalone_Elastic_Backup_Tool
+        - name: Standalone Elasticsearch Cluster Installer
+          topicUID: Standalone_Elasticsearch_Cluster_Installer
+        - name: Sync Check
+          topicUID: Sync_Check
+        - name: Verify Cluster Events Tool
+          topicUID: Verify_Cluster_Events_Tool
+        - name: VerifyClusterPorts.dmupgrade
+          topicUID: VerifyClusterPortsdmupgrade
     - name: Methods of Procedure
       topicUID: mops
       items:

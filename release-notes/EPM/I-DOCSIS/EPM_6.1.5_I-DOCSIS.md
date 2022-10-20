@@ -8,7 +8,7 @@ uid: EPM_6.1.5_I-DOCSIS
 
 #### Node Segment level [ID_34202]
 
-A Node Segment level has been implemented in the EPM topology. This will serve as the bridge between the Cable Modem and the US and DS Port levels. It contains all the necessary KPIs to aggregate the US and DS Port KPIs
+A Node Segment level has been implemented in the EPM topology. This will serve as the bridge between the Cable Modem and the US and DS Port levels. It contains all the necessary KPIs to aggregate the US and DS Port KPIs.
 
 ## Changes
 

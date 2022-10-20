@@ -2,19 +2,15 @@
 uid: Cube_Feature_Release_10.2.11
 ---
 
-# DataMiner Cube Feature Release 10.2.11 – Preview
+# DataMiner Cube Feature Release 10.2.11
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 > For release notes for this release that are not related to DataMiner Cube, see [General Feature Release 10.2.11](xref:General_Feature_Release_10.2.11).
 
-## Highlights
-
-*No highlights have been selected for this release yet*
-
-## Other features
+## New features
 
 #### Visual Overview: Retrieving the contributing booking ID of a resource [ID_34306]
 
@@ -35,7 +31,7 @@ In Visual Overview, it is now possible to retrieve the contributing booking ID o
         | Shape data field | Value |
         |------------------|-------|
         | Element | [pagevar:idofselection] |
-        | Options | UseResource=truee |
+        | Options | UseResource=true |
         | Info | Contributing Booking |
 
         Shape text: `Contributing booking: *`
@@ -49,7 +45,7 @@ In Visual Overview, it is now possible to retrieve the contributing booking ID o
         | Shape data field | Value |
         |------------------|-------|
         | Element | [pagevar:idofselection] |
-        | Options | UseResource=truee |
+        | Options | UseResource=true |
 
         Shape text: `Contributing booking: [Contributing Booking]`
 
@@ -67,7 +63,7 @@ Because of a number of enhancements, overall performance has increased when sett
 
 #### DataMiner Cube - System Center: New DataMiner log file 'SLRADIUS.txt' [ID_34396]
 
-<!-- MR 10.2.0 [CU8] - FR 10.2.11 -->
+<!-- MR 10.2.0 [CU8] - FR 10.2.11 [CU0] -->
 
 In the *Logging* section of *System Center*, you can now also consult the *SLRADIUS.txt* log file.
 
@@ -76,6 +72,24 @@ In the *Logging* section of *System Center*, you can now also consult the *SLRAD
 <!-- MR 10.3.0 - FR 10.2.11 -->
 
 Shape data items of type *NavigatePage* can now have values that include dynamic placeholders referring to session variables, parameters, etc.
+
+#### Visual Overview: New OverridePageName option [ID_34476]
+
+<!-- MR 10.3.0 - FR 10.2.11 -->
+
+From now on, you can override a Visio page name by specifying an "OverridePageName=*NewPageName*" option in a page-level shape data field of type *Options*. When you do so, the page in question will be handled as if its name were *NewPageName*.
+
+> [!NOTE]
+>
+> - Always use the actual page name when referring to a particular page in options like e.g. *VdxPage*, *NavigatePage*, *InlineVdx*, etc. Using a page override when referring to a page will not work.
+> - This feature allows you to define duplicate page names. When you do so, take into account that components that display Visio page names may then also display those duplicate page names.
+> - Visio files used in web apps do not support the OverridePageName option.
+
+#### Visual Overview: Shape data items of type 'ParametersSummary' can now have values that include dynamic placeholders referring to session variables [ID_34483]
+
+<!-- MR 10.3.0 - FR 10.2.11 -->
+
+Shape data items of type *ParametersSummary* can now have values that include dynamic placeholders referring to session variables.
 
 ## Changes
 
@@ -86,12 +100,6 @@ Shape data items of type *NavigatePage* can now have values that include dynamic
 <!-- Main Release Version 10.2.0 [CU8] - Feature Release Version 10.2.11 -->
 
 In service definition diagrams, function resource icons are now centered.
-
-#### DataMiner Cube - Automation: Changes made to a script by other users will immediately be shown when selecting that script [ID_34277]
-
-<!-- Main Release Version 10.2.0 [CU8] - Feature Release Version 10.2.11 -->
-
-When you select an unmodified Automation script in the Automation app, from now on, changes made to that script by other users (e.g. in another Cube session or in DataMiner Integration Studio) will immediately be shown.
 
 #### Trending - Behavioral anomaly detection: Enhanced flatline detection [ID_34319]
 
@@ -141,6 +149,20 @@ A number of enhancements have been made to the procedure called to determine whe
 
 Because of a number of enhancements, overall performance has increased when drawing connection lines on a visual overview.
 
+#### Alarm Console: Enhanced clearing of behavioral anomaly alarms [ID_34427]
+
+<!-- MR 10.3.0 - FR 10.2.11 -->
+
+Suggestion events and alarm events will now automatically be cleared sooner than 2 hours after their creation or last update when a new behavioral change is detected that ends the previous anomalous behavioral change.
+
+For example, when an alarm was created for an anomalous level increase at 1 PM, and a behavioral change point is detected at 2 PM when the level drops again, then the alarm created at 1 PM will be closed at 2 PM.
+
+#### Trending - Behavioral anomaly detection: Suggestion events will only be created for the most significant changes [ID_34513]
+
+<!-- MR 10.3.0 - FR 10.2.11 -->
+
+Prior to DataMiner 10.2.11/10.3.0, suggestion events are created for all anomalous behavioral changes that do not have alarm monitoring enabled. From DataMiner 10.2.11/10.3.0 onwards, they are only created for the most significant changes. There is also a maximum of 500 suggestion events related to behavioral anomaly detection at the same time.
+
 ### Fixes
 
 #### DataMiner Cube - Visual Overview: Problem with conditional shape manipulation actions 'Show' and 'Hide' [ID_34108]
@@ -173,6 +195,12 @@ On systems with active correlation rules, in some rare cases, the counters in th
 
 When you opened a trend graph of an EPM object, it would not be possible to add a second parameter. After you had added a new parameter, the drop-down box would incorrectly only contain the current parameter.
 
+#### DataMiner Cube - Booking app: Booking updates would cause the UI to flicker [ID_34349]
+
+<!-- MR 10.2.0 [CU8] - FR 10.2.11 -->
+
+When one of the listed bookings was updated, all bookings would incorrectly be re-rendered, causing the UI to flicker.
+
 #### DataMiner Cube - Spectrum analysis: Preset would not be loaded when clicking 'View buffer' [ID_34357]
 
 <!-- Main Release Version 10.1.0 [CU20]/10.2.0 [CU8] - Feature Release Version 10.2.11 -->
@@ -202,3 +230,15 @@ When, on page level, you had configured a data field of type *Execute* containin
 <!-- Main Release Version 10.1.0 [CU20]/10.2.0 [CU8] - Feature Release Version 10.2.11 -->
 
 In some cases, DataMiner Cube could become unresponsive when loading an alarm tab with hyperlink columns, especially when that alarm tab contained a large number of alarms.
+
+#### DataMiner Cube: EPM diagrams would incorrectly get mixed up when selecting a formerly selected field in an EPM filter box [ID_34431]
+
+<!-- Main Release Version 10.1.0 [CU20]/10.2.0 [CU8] - Feature Release Version 10.2.11 -->
+
+When, in an EPM filter box, you selected a field, selected another field, and then selected the first field again, in some cases, the diagrams linked to those two fields would incorrectly get mixed up.
+
+#### DataMiner Cube - Alarm Console : Problem when loading an alarm tab [ID_34539]
+
+<!-- MR 10.2.0 [CU8] - FR 10.2.11 -->
+
+When a new alarm tab with a large number of correlated alarms was being loaded, in some cases, an exception could be thrown and the alarm tab would keep on loading.

@@ -15,3 +15,4 @@ We are working on adding more information to this section soon, so check back fo
 - [Training courses and certification](xref:Overview_Training_intro)
 - [Support Services](xref:Overview_Support_DMS_M_and_S)
 - [Compliance statements](xref:Overview_Compliance_Statements_intro)
+- [Frequently asked questions](xref:FAQs)

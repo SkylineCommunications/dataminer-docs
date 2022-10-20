@@ -30,6 +30,9 @@ To configure this component:
 
    - *Auto-select all*: Available from DataMiner 10.0.13 onwards. Replaced the previous auto-select options. When this option is selected, all items will be selected according to the “Select all behavior” settings below.
 
+     > [!NOTE]
+     > From DataMiner 10.2.11/10.3.0 onwards, this option is not available if the component uses EPM identifiers as its data source. These are System Type and Name data provided by an EPM feed (indicated as *EPM identifiers* in the data pane).
+
    - *Select all behavior* > *Select all items*: Available from 10.0.13 onwards. If this option is selected, "Select all" will select all items. For a [partial table](xref:Table_parameters#partial-tables), only the items from the first page will be selected.
 
    - *Select all behavior* > *Select specific number of items*: Available from 10.0.13 onwards. If you select this option, a box is displayed below it. In this box, you should specify how many items “Select all” should select. For a [partial table](xref:Table_parameters#partial-tables), these items will be selected across different pages.

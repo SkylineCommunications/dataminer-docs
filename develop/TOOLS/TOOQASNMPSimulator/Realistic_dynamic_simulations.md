@@ -21,7 +21,7 @@ To configure this, you will need to create a simulation file that looks similar 
 </Simulation>
 ```
 
-The difference with a regular simulation file is that there are a *ProxyAgents* tag and *ProxyAgent* tags instead of an *Agents* tag and *Agent* tags. This indicates to the simulator that this is a proxy simulation. The *ProxyAgent* tag has the same attributes as the *Agent* tag, except for an additional *deviceIP* attribute. This is mandatory and indicates for which device the simulator acts as a proxy. There are also three additional optional attributes for the *ProxyAgent* tag:
+The difference with a regular simulation file is that there are a *ProxyAgents* tag and *ProxyAgent* tags instead of an *Agents* tag and *Agent* tags. This indicates to the simulator that this is a proxy simulation. The *ProxyAgent* tag has the same attributes as the *Agent* tag, except for an additional *deviceIP* attribute. This *deviceIP* is mandatory and indicates for which device the simulator acts as a proxy. There are also three additional optional attributes for the *ProxyAgent* tag:
 
 - *maxFileSize*: This specifies the maximum size of the file (in MB) that the variable bindings are written to. By default, this is 1024 MB. In case the file becomes too big, a new file will be created.
 
@@ -31,10 +31,10 @@ The difference with a regular simulation file is that there are a *ProxyAgents*�
 
 When this simulation containing the *ProxyAgent* is running, the tool will automatically create the folder *C:\\QASNMPSimulations\\ProxySimulations*, together with a file that has the same name as the simulation file, but with the extension .txt. In case the file becomes too big, it will be renamed; the first file ends with \_1.txt, the second file with \_2.txt, etc.
 
-These files will contain all variable bindings coming from the device that the proxy captures. Each line contains a timestamp, OID, binding type and value. All are separated by #@#
+These files will contain all variable bindings coming from the device that the proxy captures. Each line contains a timestamp, OID, binding type, and value. All are separated by #@#. Below is an example of such a proxy simulation file:
 
-![](~/develop/images/QADS_ProxySimulationFile.png)
-<br>Proxy simulation file
+![Proxy simulation file example](~/develop/images/QADS_ProxySimulationFile.png)
+<br>
 
 ## Putting real device data in the database
 

@@ -6,6 +6,9 @@ uid: Display_editor
 
 If you click *Display Editor* in the file tab header when editing a protocol XML file, the XML editor you are working in will be turned into a graphical interface editor. This editor allows you to design the Data Display pages of the protocol using simple drag-and-drop operations.
 
+> [!NOTE]
+> When DVE elements are defined in the protocol, the drop-down box in the top-left corner allows you to select either the main protocol or one of the DVE elements. The editor will then only display the pages and parameters of the item you selected.
+
 ## Pages
 
 On the left, you can find the list of existing pages.
@@ -93,5 +96,6 @@ Errors that cause this *Warning* box to appear include:
 - ...
 
 > [!NOTE]
+>
 > - Parameters of which the RTDisplay attribute is set to False will be ignored. This way, we avoid problems with “disappearing parameters” in protocols in which multiple parameters have been assigned identical names.
 > - When you place two parameters at the same location, a red box will be drawn around those parameters, and a warning icon will appear next to the page. You can then drag one of the parameters to another location to resolve the problem.

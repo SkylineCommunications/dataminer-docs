@@ -25,11 +25,11 @@ From DataMiner 10.1.0/10.1.2 onwards, you can use a single Cassandra cluster as 
 
 ## Installation and configuration
 
-Regardless of whether your DataMiner System currently uses **SQL databases or Cassandra databases per DMA**, from DataMiner 10.2.0/10.2.2 onwards, you can use the **Cassandra Cluster Migrator** to switch to a Cassandra cluster setup. In earlier DataMiner versions, a Cassandra to Cassandra Cluster Migrator tool was available; however, we highly recommend that you upgrade to DataMiner 10.2.0 or 10.2.2 (or higher) and use the Cassandra Cluster Migrator instead.
+Regardless of whether your DataMiner System currently uses **SQL databases or Cassandra databases per DMA**, you can use the **Cassandra Cluster Migrator** to switch to a Cassandra cluster setup. In DataMiner versions prior to 10.2.0/10.2.2, a Cassandra to Cassandra Cluster Migrator tool was available; however, we highly recommend that you upgrade to DataMiner 10.2.0 CU8 or 10.2.11 (or higher) and use the Cassandra Cluster Migrator instead.
 
 The migration can be done while the DMAs are active; however, a **DataMiner restart** will be required after all data has been migrated.
 
-The Cassandra Cluster Migrator tool (called *SLCCMigrator.exe*) is available on every DMA running DataMiner version 10.2.0/10.2.2 or higher. You can find it in the folder `C:\Skyline DataMiner\Tools\`.
+The Cassandra Cluster Migrator tool (called *SLCCMigrator.exe*) is available on every DMA running DataMiner version 10.2.0/10.2.2 or higher. You can find it in the folder `C:\Skyline DataMiner\Tools\`. However, we highly recommend that you upgrade to DataMiner 10.2.0 CU8 or 10.2.11 (or higher) to use the tool, as this version includes an improved version of the tool that will prevent possible issues.
 
 ### Prerequisites
 

@@ -22,4 +22,4 @@ To do so:
    Click an item in the list to view more detailed information, including when the share was created and how long it will remain available.
 
 > [!NOTE]
-> Audit information about shares is available on the *Organization* > *Audit* page.
+> Audit information about shares is available on the *Organization* > *Audit* page (see [Consulting DCP audit logs](xref:DCP_Auditing)).

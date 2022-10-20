@@ -171,9 +171,6 @@ Because of a number of enhancements, the SLDMS process will now use less memory 
 
 Because of a number of enhancements, overall CPU usage of the QADeviceSimulator has improved when running SNMPv3 simulations.
 
-> [!CAUTION]
-> This tool is provided “As Is” with no representation or warranty whatsoever. Skyline Communications will not provide any maintenance or support for this tool.
-
 #### Service & Resource Management: Function resources will no longer be deleted when their parent DVE element cannot be reached [ID_33415] [ID_33668]
 
 <!-- MR 10.3.0 - FR 10.2.7 -->
@@ -212,9 +209,6 @@ From DataMiner 10.0.3 onwards, you can enable alarm monitoring on specific types
 Because of a number of enhancements, overall performance of the QADeviceSimulator has improved when loading a MySQL database at the start of a MySQL database simulation.
 
 Also, the overall memory footprint of MySQL database simulations has been reduced.
-
-> [!CAUTION]
-> This tool is provided “As Is” with no representation or warranty whatsoever. Skyline Communications will not provide any maintenance or support for this tool.
 
 #### Service & Resource Management: A booking will now be set to 'interrupted' when whatever event related to that booking could not be executed [ID_33576]
 
@@ -256,11 +250,11 @@ When authenticating users using SAML, the following additional debug information
 
 Up to now, components could only produce one feed for each data type. Now support has been added for different categories within a data type, so that components will be able to produce several feeds for the same data type. This will for example make it possible for a component to produce a query row feed with the categories "timeline item" and "timeline band".
 
-#### QA Device Simulator: Enhanced performance [ID_33761]
+#### Skyline Device Simulator: Enhanced performance [ID_33761]
 
 <!-- MR 10.3.0 - FR 10.2.9 -->
 
-Because of a number of enhancements, overall performance of the QA Device Simulator tool has improved.
+Because of a number of enhancements, overall performance of the Skyline Device Simulator tool has improved.
 
 #### Maximum for element timeout setting increased to 24 hours [ID_33862] [ID_33951]
 
@@ -381,6 +375,48 @@ In addition, performance has improved when a resource or resource pool is added 
 <!-- MR 10.3.0 - FR 10.2.11 -->
 
 Because of a number of enhancements, overall performance has increased when running a GQI query using the ProfileInstance data source.
+
+#### SLNet / SLDataGateway: Enhanced algorithm to find the first valid physical address of the DataMiner Agent [ID_34360]
+
+<!-- MR 10.3.0 - FR 10.2.11 -->
+
+A number of enhancements have been made to the algorithm used by SLNet and SLDataGateway to find the first valid physical address of the DataMiner Agent.
+
+#### GQI: Enhanced performance when retrieving table data [ID_34441]
+
+<!-- MR 10.3.0 - FR 10.2.12 -->
+
+Because of a number of enhancements, overall performance has increased when retrieving table data by means of a GQI query.
+
+#### Dashboards app - Line & area chart: Non-trended parameters will now automatically be removed when the component is linked to a parameter feed [ID_34499]
+
+<!-- MR 10.3.0 - FR 10.2.12 -->
+
+When a parameter feed is linked to a *Line & area chart" component, from now on, non-trended parameters will now automatically be removed from the chart.
+
+#### Dashboards app - Parameter feed: 'Auto-select all' setting no longer available when using an EPM identifier feed as source [ID_34501]
+
+<!-- MR 10.3.0 - FR 10.2.11 -->
+
+When a parameter feed has an EPM identifier feed as source, from now on, the *Auto-select all* setting will no longer be available.
+
+#### Dashboards app / Low-code apps - Line & area chart: Group label will no longer be displayed when grouping is set to 'All together' [ID_34544]
+
+<!-- MR 10.3.0 - FR 10.2.12 -->
+
+In case a *Line & area chart* component displays trending for multiple parameters, the *Group by* setting allows you to specify how the graphs should be grouped. From now on, group titles will no longer be displayed when you set *Group by* to "All together".
+
+#### SLElement: Enhanced alarm locking [ID_34561]
+
+<!-- MR 10.3.0 - FR 10.2.12 -->
+
+Alarm locking in the SLElement process has been enhanced.
+
+#### Dashboards app / Low-code apps: Enhanced performance of selection boxes [ID_34577]
+
+<!-- MR 10.3.0 - FR 10.2.12 -->
+
+Because of a number of enhancements, overall performance has increased when opening selection boxes, especially when they contain a large number of items.
 
 ### Fixes
 
@@ -556,12 +592,6 @@ Up to now, negative status values in the trend data due to element restarts coul
 
 When a profile parameter of type “number” had no decimals defined, its value would incorrectly be displayed as the maximum value that can be assigned to a parameter of type integer. From now on, when a profile parameter has no decimals defined, its value will be displayed as is, without decimals.
 
-#### Ticketing app: Problem with ticket domains incorrectly marked as masked [ID_33449]
-
-<!-- MR 10.3.0 - FR 10.2.7 -->
-
-If, in the Ticketing app, you tried to edit a ticket of a domain linked to an element, in some cases, that domain would incorrectly be marked as “masked”.
-
 #### Issues with NATS request/response actions [ID_33487]
 
 <!-- MR 10.3.0 - FR 10.2.7 -->
@@ -672,7 +702,7 @@ In some rare cases, an error could occur during the Analytics upgrade action whe
 
 During a DataMiner upgrade, in some cases, the *AnalyticsDropUnusedCassandraTables* upgrade action would fail.
 
-#### Dashboards app / Low-code apps: Changes to the feed could incorrectly influence the time window of a state timeline component [ID_34148]
+#### Dashboards app / Low-Code Apps: Changes to the feed could incorrectly influence the time window of a state timeline component [ID_34148]
 
 <!-- MR 10.3.0 - FR 10.2.10 -->
 
@@ -694,17 +724,23 @@ This issue will now be prevented. In addition, the element's instance GUID will 
 
 After a DMS with a Cassandra Cluster setup was upgraded to 10.2.8 (CU1), it could occur that the Alarm Console showed run-time errors related to the SLAnalytics process. This was caused by an upgrade action that was not triggered for such a setup.
 
-#### Dashboards app / Low-code apps: Column filters in generic filter component incorrectly marked as incapable [ID_34273]
+#### Dashboards app / Low-Code Apps: Column filters in generic filter component incorrectly marked as incapable [ID_34273]
 
 <!-- MR 10.3.0 - FR 10.2.10 -->
 
 In the generic filter component, in some cases, column filters would be incorrectly marked as incapable when the filter assistance option was enabled.
 
-#### Dashboards app / Low-code apps: Query column filters would not be applied correctly to table components [ID_34305]
+#### Dashboards app / Low-Code Apps: Query column filters would not be applied correctly to table components [ID_34305]
 
 <!-- MR 10.3.0 - FR 10.2.10 -->
 
 when a dashboard, a low-code app page or low-code app panel was initialized, in some cases, query column filters would not be applied correctly to table components on that dashboard, page or panel.
+
+#### Web apps - Interactive Automation scripts: Not possible to clear a selection box by selecting an empty option [ID_34315]
+
+<!-- MR 10.3.0 - FR 10.2.11 -->
+
+When an interactive Automation script was executed in a web app, it would incorrectly not be possible to clear a selection box by selecting an empty option.
 
 #### 'One or more of the following modules are not licensed' error would incorrectly not list the unlicensed modules [ID_34407]
 
@@ -714,20 +750,20 @@ When a required software license cannot be found, a `One or more of the followin
 
 In some cases, instead of listing the unlicensed modules, this message would incorrectly only mention "None".
 
-#### Elasticsearch: Problem when migrating large alarm trees from the active-alarms index to an index containing closed alarms [ID_34444]
+#### Web apps: Problem with email address boxes [ID_34421]
+
+<!-- MR 10.3.0 - FR 10.2.12 -->
+
+When you entered an address in an email address box and then selected something else on the page without pressing *ENTER* or *TAB*, the email address box would incorrectly expand and show a list of suggestions.
+
+#### Web Services API - CreateServiceTemplate: DataMinerID and ElementID incorrectly set to 0 instead of -1 [ID_34440]
 
 <!-- MR 10.3.0 - FR 10.2.11 -->
 
-When an alarm tree with more than 1,000 alarms was migrated from the *active-alarms* index to an index containing closed alarms, in some cases, alarms could get lost.
+When a service template was created using the *CreateServiceTemplate* method, the DataMinerID and ElementID of the newly created service template would incorrectly be set to 0 instead of -1.
 
-#### Web apps: URL option 'subheader=' would no longer work [ID_34456]
+#### Dashboards / Low-Code Apps: Changing a GQI query would not cause a table to get updated when column filters were applied [ID_34520]
 
 <!-- MR 10.3.0 - FR 10.2.11 -->
 
-When, in the URL of a web app (e.g. Dashboards, Ticketing, etc.), you had specified `subheader=true` or `subheader=false` in combination with `embed=true`, that `subheader=` option would no longer work.
-
-Example of a dashboard URL containing a `subheader=true` option:
-
-```txt
-https://[DMA IP]/dashboard/#/MyDashboards/dashboard.dmadb?embed=true&subheader=true
-```
+When the GQI query linked to a table component was changed, the table would incorrectly not get updated when column filters were applied. The table would only get updated when you changed the column filters.

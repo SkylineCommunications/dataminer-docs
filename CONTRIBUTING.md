@@ -171,7 +171,7 @@ If table cells contain a lot of text, it can be next to impossible to keep every
 
 ### Code blocks
 
-To display code examples in separate code blocks, place three backquotes ("`") above and below those blocks. In addition, next to the three backquotes above the blocks, specify the type of code, e.g. *csharp*, *md*, *xml*, etc.
+To display code examples in separate code blocks, place three backquotes (```) above and below those blocks. In addition, next to the three backquotes above the blocks, specify the type of code, e.g. *csharp*, *md*, *xml*, etc.
 
 To display inline code within a paragraph, add a backquote before and after the code.
 
@@ -274,6 +274,53 @@ For example, to make sure `<script name>` is displayed correctly, specify `\<scr
 
 This is not necessary in text that is formatted as inline code or as a code block (using backquotes).
 
+## Tips for writing documentation
+
+To allow easier editing and ensure consistency with the rest of the documentation, keep the following things in mind when you write a new section in the documentation.
+
+### Use numbered lists for procedures
+
+When you add a procedure that consists of several steps, use a **numbered list**, and make sure each list item corresponds with one step in the procedure. This way the user will have a clear overview of the different steps.
+
+If you want to add information related to a step that is not actually something the user needs to do (e.g. the result of a step), add this as an indented paragraph in the list.
+
+For example:
+
+1. Click *Add*.
+
+   A pop-up window will open.
+
+1. Fill in the boxes in the pop-up window.
+
+> [!TIP]
+> In your list, just use the prefix "1." for each item. The list will automatically be updated to the correct numbering when the documentation is generated. Creating lists this way allows you to add items in the list without having to manually alter the numbering for every item that follows them. See also the [Microsoft Docs Contributor Guide](https://learn.microsoft.com/en-us/contribute/markdown-reference#numbered-list).
+
+### Only use numbered lists when needed
+
+Only use numbered lists if the order of each list item is important. If you for instance want to enumerate several things, but their order does not matter, use a **bulleted list** (using the prefix "-" for each item).
+
+### Avoid contractions
+
+Avoid contractions (e.g. you're, they're, it's). In formal documentation, these are not usually used.
+
+### Use italic type for UI text
+
+Exact references to text in the UI are usually displayed in italic type. This can help to avoid confusion, as otherwise it may not always be clear which part of the text is a UI reference.
+
+For example: "Below *Exclusions*, click *Add exclusion* and select either *Protocol* or the name of the app."
+
+### Use double quotation marks except in titles
+
+In accordance with the [Microsoft style guide](https://docs.microsoft.com/en-us/style-guide/punctuation/quotation-marks), double quotation marks are used in our documentation instead of single quotation marks.
+
+However, there is one exception to this. Because DocFX cannot handle double quotation marks in titles, try to avoid quotation marks in them as much as possible or use single quotation marks if you cannot do without.
+
+### Think twice about screenshots
+
+Be careful when you use screenshots of the DataMiner Cube UI, as these can get outdated quickly. For this reason, do not use screenshots if this has no added value.
+
+If you do add a screenshot, ideally there should be some indication of the version of the software displayed in the screenshot, so it is clear if the screenshot is outdated.
+
 ## Doing a quick edit to a page
 
 On every page of the documentation on docs.dataminer.services, an *Improve this doc* link is available in the top-right corner. Clicking this link will open the source of the documentation on GitHub. You can then make changes as follows:
@@ -347,7 +394,7 @@ For larger contributions, e.g. to add several new pages, we recommend that you i
 
 - [GitHub Desktop](https://desktop.github.com/)
 
-- [Visual Studio Code](https://code.visualstudio.com/) (with the [Docs Authoring Pack](https://marketplace.visualstudio.com/items?itemName=docsmsft.docs-authoring-pack) extension)
+- [Visual Studio Code](https://code.visualstudio.com/) (with the [Learn Authoring Pack](https://marketplace.visualstudio.com/items?itemName=docsmsft.docs-authoring-pack) extension)
 
 When you install GitHub Desktop, you will also need to add the correct repository:
 
@@ -361,7 +408,10 @@ When you install GitHub Desktop, you will also need to add the correct repositor
 
    ![Install GitHub 2](~/images/InstallGithub2.png)
 
-1. If you do not have write access to the repository, you will find an alert in the lower left corner.
+   > [!IMPORTANT]
+   > Make sure the local path you clone the repository to is relatively short. Using a long file path will lead to errors, as Windows will be unable to create certain files in the repository.
+
+1. If you do not have write access to the repository, you will find an alert in the lower left corner of the GitHub Desktop UI.
 
    ![Install GitHub3](~/images/InstallGitHub3.png)
 
@@ -385,7 +435,7 @@ When you install GitHub Desktop, you will also need to add the correct repositor
 
 For more information on how to work with Visual Studio Code, refer to the [Visual Studio Code documentation](https://code.visualstudio.com/docs). As our documentation is written in Markdown, aside from the general functionality of the application, the [Markdown](https://code.visualstudio.com/docs/languages/markdown) section is of specific interest there.
 
-Also keep in mind that we are using **DocFX Flavored Markdown**. Refer to the [Markdown syntax](#markdown-syntax) section above for more information about this. Make sure the Docs Authoring Pack extension is installed in Visual Studio Code to make it easier to work with this Markdown flavor.
+Also keep in mind that we are using **DocFX Flavored Markdown**. Refer to the [Markdown syntax](#markdown-syntax) section above for more information about this. Make sure the Learn Authoring Pack extension is installed in Visual Studio Code to make it easier to work with this Markdown flavor.
 
 ### Things to watch out for
 
@@ -403,11 +453,11 @@ When you are working on your own fork, make sure you regularly **check in GitHub
 
 1. Check the top of your fork page. If it says the branch is a number of commits behind SkylineCommunications:main, your fork is no longer up to date. If there is no such indication, there is no need to continue with this procedure.
 
-   ![Indication of outdated fork](~/images/Contrib_OutdatedFork.png)
+   ![Indication of outdated fork](~/user-guide/images/Contributing_Sync_Fork.png)
 
-1. To update your fork, click the triangle button next to *Fetch upstream* and select *Fetch and merge*.
+1. To update your fork, click the triangle button next to *Sync fork* and select *Update branch*.
 
-   ![Link to forks](~/images/Contrib_FetchUpstream.png)
+   ![Link to forks](~/user-guide/images/Contributing_Update_Branch.png)
 
 #### Adding a new page
 
@@ -423,7 +473,7 @@ When you add a page to the documentation:
 
   > [!NOTE]
   > Do not use spaces in a UID.
- 
+
 - Add the new page to the relevant *toc.yml* file so that it is included in the table of contents. To do so, specify the name and UID as follows:
 
   ```yml
@@ -508,18 +558,16 @@ You can do so as follows:
 
 1. Open the branch in Visual Studio Code. You can do so by clicking the *Open in Visual Studio Code* button in GitHub Desktop.
 
-1. Make your changes in Visual Studio Code and make sure they are saved. Keep the items listed under [Things to watch out](#things-to-watch-out-for) for in mind.
+1. Make your changes in Visual Studio Code and make sure they are saved. Keep the items listed under [Things to watch out for](#things-to-watch-out-for) in mind.
 
 1. In GitHub Desktop, add a short summary of your changes in the box in the lower right corner. Optionally, you can also add a description. Then click the *Commit* button.
 
    ![Commit to the draft branch](~/images/Contrib_CommitToDraftBranch.png)
 
-1. Click *Push origin* to push the changes to the remote.
-
-   ![Push the commit to the remote](~/images/Contrib_PushDraft.png)
+1. Click *Push upstream* to push the changes to the remote.
 
    > [!NOTE]
-   > If you see *Push upstream* instead of *Push origin*, you are attempting to work directly on the repository instead of on a fork, which means you will get an error when you click this button as you do not have the rights to push directly to the repository. Make sure you are using a fork as detailed in [Cloning and forking repositories from GitHub Desktop](https://docs.github.com/en/desktop/contributing-and-collaborating-using-github-desktop/adding-and-cloning-repositories/cloning-and-forking-repositories-from-github-desktop).
+   > If you get an error when you click this button, this usually means you are trying to push the changes directly to the main repository instead of to your fork. In GitHub Desktop, go to *Repository* > *Repository settings*, and make sure the specified *Primary remote repository* is your fork. To find the URL of your fork, go to <https://github.com/SkylineCommunications/dataminer-docs/network/members>, search for your GitHub username, and click the *dataminer-docs* link next to it.
 
 1. Click the *Create Pull Request* button. This will open GitHub in a browser.
 
@@ -535,18 +583,16 @@ The Skyline documentation team will then need to merge your pull request, so tha
 
 When all the necessary changes have been made and the draft branch is ready for publication, create a pull request as detailed above, but select the main branch instead of the draft branch as the base.
 
-### Making a local test build before pushing changes	
+### Making a local test build before pushing changes
 
 Before you push your changes to the repository, it is often a good idea to make a test build on your local machine. This is especially the case if your changes involve adding or removing files, adding cross-references, changing headers, and/or updating a toc.yml file.
 
 To be able to make a local test build, you need to have DocFX installed. DocFX is the static website generator that is used under the hood to create the <https://docs.dataminer.services/> website.
 
-#### Installing and configuring DocFX	
-
-To install DocFX on a Microsoft Windows machine:
+#### Installing and configuring DocFX
 
 1. Go to <https://github.com/dotnet/docfx/releases>, and download the latest version of the `docfx.zip` package (e.g. version 2.59.4).
- 
+
     > [!CAUTION]
     > We recommend that you do not use any of the beta versions.
 
@@ -554,7 +600,7 @@ To install DocFX on a Microsoft Windows machine:
 
 1. Add the folder (e.g. `C:\DocFX`) to the environment variable **Path** (user variable or system variable).
 
-    On Windows 10 systems, do the following: 
+    On Windows 10 or 11 systems, do the following:
 
     1. In your Windows search box, enter "path".
     1. Click *Edit the system environment variables*.
@@ -579,9 +625,41 @@ To install DocFX on a Microsoft Windows machine:
 > [!TIP]
 > Alternative ways to install DocFX can be found on the [DocFX website](https://dotnet.github.io/docfx/tutorial/docfx_getting_started.html#2-use-docfx-as-a-command-line-tool).
 
-#### Making a test build
+#### First-time setup
 
-When you have finished making a series of changes to documentation in Visual Studio Code, do the following to make a test build on your local machine.
+Before you make your first test build, we recommend the first-time setup detailed below. If you do not do this, you will still be able to make a test build, but there may be many warnings in the terminal, and some pages may not be included in the build.
+
+1. Check if your fork is up to date with the latest changes from the main dataminer-docs repository (See [Make sure your fork is up to date](#make-sure-your-fork-is-up-to-date).
+
+1. Make sure you have Visual Studio 2019 or higher installed.
+
+1. Install the .NET framework SDK Developer Pack. To do so, go to <https://dotnet.microsoft.com/en-us/download/visual-studio-sdks> and choose the .NET Framework 4.8 Developer Pack.
+
+1. Go to the folder containing your dataminer-docs repository.
+
+   > [!TIP]
+   > To quickly find this folder from Visual Studio Code, right-click a folder from the repository in the Explorer tab and select *Reveal in File Explorer*.
+
+   1. In the `\dataminer-docs\src\DataMiner\` subfolder open the folder *Dataminer.sln* with Visual Studio.
+
+   1. Go to the solution explorer in the top-right corner, right-click the solution node and select *Restore NuGet Packages*.
+
+      ![Restore Nuget Packages](~/user-guide/images/Contributing_Solution_Node.png)
+
+   1. Start a build by pressing CTR+SHIFT+b.
+
+   1. Repeat the steps above for the file *Code Library.sln* in the `dataminer-docs\src\Base Class Library\` subfolder of the repository.
+
+1. Open Visual Studio Code and go to *Terminal* > *New Terminal*.
+
+1. In the terminal, enter `docfx metadata -f`.
+
+   If everything is OK, you will get no warnings.
+
+> [!NOTE]
+> It is not necessary to do this for every test build. However, when there have been significant changes to the source code, you will need to do this procedure again starting from step 4.
+
+#### Making a test build
 
 1. If no Terminal pane is open in Visual Studio Code, go to *Terminal > New Terminal*.
 
@@ -592,20 +670,26 @@ When you have finished making a series of changes to documentation in Visual Stu
    1. Enter `docfx build -f` to make a test build.
 
       > [!NOTE]
-      > If you get a lot of warning when you try to create a test build, it could be that you still need to install the .NET framework SDK Developer Pack. To do so, go to <https://dotnet.microsoft.com/en-us/download/visual-studio-sdks> and choose the .NET Framework 4.8 Developer Pack.
+      > If you get a lot of warnings when you try to create a test build, it could be that you need to do part of the [first-time setup](#first-time-setup) again to make sure the metadata are up to date.
 
    1. Enter `docfx serve _site`.
 
    1. In a browser, go to <http://localhost:8080/> to preview the website.
+
+      > [!TIP]
+      > If you are not able to access localhost:8080, you can specify a different port by entering e.g. `docfx serve _site -p 8090`.
 
       When you have finished previewing the website, in the Terminal pane, press ENTER to exit the preview mode.
 
       > [!NOTE]
       > Using the search box when viewing the test website on <http://localhost:8080/> will not return any pages from the test website. The search engine only indexes the published content on <https://docs.dataminer.services/> and will, as such, only return pages from that website.
 
+> [!IMPORTANT]
+> If you make test builds often, you may need to occasionally clear the files in the `\dataminer-docs\obj\.cache\build\` folder of your local version of the documentation. In the long run, these can pile up and take up a large amount of memory.
+
 ## References
 
-As our way of working is very similar to the approach used for Microsoft Docs, it can be useful to take a look at the [Microsoft Docs contributor guide](https://docs.microsoft.com/en-us/contribute/) for additional information and guidelines.
+As our way of working is very similar to the approach used for Microsoft Docs, it can be useful to take a look at the [Microsoft Docs Contributor Guide](https://docs.microsoft.com/en-us/contribute/) for additional information and guidelines.
 
 For more information about DocFX, you can also refer to [Getting Started with DocFX](https://dotnet.github.io/docfx/tutorial/docfx_getting_started.html).
 

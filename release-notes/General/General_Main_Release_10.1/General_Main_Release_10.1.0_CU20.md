@@ -2,10 +2,10 @@
 uid: General_Main_Release_10.1.0_CU20
 ---
 
-# General Main Release 10.1.0 CU20 – Preview
+# General Main Release 10.1.0 CU20
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 > For information on how to upgrade DataMiner, see [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent).
@@ -95,6 +95,12 @@ The `Repair DB.bat` script, located in the `C:\Skyline DataMiner\Tools` folder, 
 
 When a legacy Dashboard Gateway was connected to a DataMiner Agent with HTTPS configured and port 80 blocked, dashboards would fail to show the Maps component.
 
+#### Dashboards app / Low-Code Apps: Tooltips of certain visualizations would not be aligned correctly [ID_33844]
+
+<!-- Main Release Version 10.1.0 [CU20]/10.2.0 [CU8] - Feature Release Version TBD -->
+
+In some cases, tooltips of certain visualizations would not be aligned correctly.
+
 #### Protocols - Multi-threaded timers: Empty poll groups would cause SLProtocol to send empty SNMP requests to SLSNMPManager [ID_33900]
 
 <!-- Main Release Version 10.1.0 [CU20]/10.2.0 [CU8] - Feature Release Version 10.2.11 -->
@@ -151,7 +157,7 @@ When you opened a trend graph of an EPM object, it would not be possible to add 
 
 When, in a Spectrum card, you clicked *View buffer*, the preset contained inside the buffer would incorrectly not be loaded. As a result, incorrect threshold values would be displayed.
 
-#### Dashboards app / Low-code apps: Creating a custom theme with a custom color palette would incorrectly cause the color palette of all built-in themes to be updated [ID_34368]
+#### Dashboards app / Low-Code Apps: Creating a custom theme with a custom color palette would incorrectly cause the color palette of all built-in themes to be updated [ID_34368]
 
 <!-- Main Release Version 10.1.0 [CU20]/10.2.0 [CU8] - Feature Release Version 10.2.11 -->
 
@@ -201,8 +207,70 @@ When you opened the context menu of the side panel, in some cases, the context m
 
 In some cases, DataMiner Cube could become unresponsive when loading an alarm tab with hyperlink columns, especially when that alarm tab contained a large number of alarms.
 
+#### DataMiner Cube: EPM diagrams would incorrectly get mixed up when selecting a formerly selected field in an EPM filter box [ID_34431]
+
+<!-- Main Release Version 10.1.0 [CU20]/10.2.0 [CU8] - Feature Release Version 10.2.11 -->
+
+When, in an EPM filter box, you selected a field, selected another field, and then selected the first field again, in some cases, the diagrams linked to those two fields would incorrectly get mixed up.
+
+#### Problem with SLDMS while a connection with another agent was being established or cleaned up [ID_34452]
+
+<!-- Main Release Version 10.1.0 [CU20]/10.2.0 [CU8] - Feature Release Version 10.2.11 -->
+
+In some rare cases, an error could occur in SLDMS while a connection with another agent was being established or cleaned up.
+
+#### Web apps: URL option 'subheader=' would no longer work [ID_34456]
+
+<!-- Main Release Version 10.1.0 [CU20]/10.2.0 [CU8] - Feature Release Version 10.2.11 -->
+
+When, in the URL of a web app (e.g. Dashboards, Ticketing, etc.), you had specified `subheader=true` or `subheader=false` in combination with `embed=true`, that `subheader=` option would no longer work.
+
+Example of a dashboard URL containing a `subheader=true` option:
+
+```txt
+https://[DMA IP]/dashboard/#/MyDashboards/dashboard.dmadb?embed=true&subheader=true
+```
+
 #### Web Services API: Problem when calling the GetBooking or GetBookings method via SOAP [ID_34466]
 
 <!-- Main Release Version 10.1.0 [CU20]/10.2.0 [CU8] - Feature Release Version 10.2.11 -->
 
 When the GetBooking or GetBookings method was called via SOAP, in some cases, a serialization exception could be thrown when the booking (in case of GetBooking) or one of the bookings (in case of GetBookings) had a property that contained a TimeSpan object.
+
+#### Alerter would leak memory when configured to play a sound when alarms matched a certain filter [ID_34473]
+
+<!-- Main Release Version 10.1.0 [CU20]/10.2.0 [CU8] - Feature Release Version 10.2.11 -->
+
+When Alerter had been configured to play a sound when alarms matched a certain filter, it could leak memory.
+
+#### Service impact of an alarm could be incorrect [ID_34475]
+
+<!-- Main Release Version 10.1.0 [CU20]/10.2.0 [CU8] - Feature Release Version 10.2.11 -->
+
+In some cases, the service impact of an alarm would be incorrect
+
+- when the column parameter was partially included with a primary key filter without a wildcard and any other filter (primary filter with a wildcard, display key filter with or without a wildcard), or
+
+- when the row included in the service via a filter is updated via an NT_SET_ROW call that triggers both a new alarm and a display key change.
+
+#### Dashboards app / Low-Code Apps: Problem with slider ranges [ID_34477]
+
+<!-- Main Release Version 10.1.0 [CU20]/10.2.0 [CU8] - Feature Release Version 10.2.11 -->
+
+When the range of a slider control did not have a span (i.e. when start was equal to end), both the start value and the end value of the range would incorrectly be NaN values.  
+
+Also, when the range of a slider control had values outside of the minimum/maximum range, the start and end values would both be set to Infinity. From now on, the minimum and maximum values will be adapted to the actual start and end values.
+
+#### SLSNMPManager: Trap binding of type 'IP Address' would incorrectly be parsed as an empty string [ID_34481]
+
+<!-- Main Release Version 10.0.0 [CU22]/10.1.0 [CU20]/10.2.0 [CU8] - Feature Release Version 10.2.11 -->
+
+When a trap binding of type "IP Address" came in while the SLSNMPManager SNMPv3 process was processing traps on the default port 162, that binding would be incorrectly parsed as an empty string.
+
+#### DataMiner Taskbar Utility: Upgrade process displayed in Taskbar Utility would lag behind [ID_34488]
+
+<!-- MR 10.1.0 [CU20]/10.2.0 [CU8] - FR 10.2.11 -->
+
+After you had launched an upgrade, in some cases, the upgrade process displayed in DataMiner Taskbar Utility would lag behind and DataMiner Taskbar Utility would use a considerable amount of memory.
+
+This fixes a [known issue](xref:KI_Taskbar_Utility_performance_issue_while_agents_are_being_upgraded).

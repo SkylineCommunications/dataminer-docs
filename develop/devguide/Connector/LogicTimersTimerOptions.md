@@ -102,6 +102,7 @@ If you only specify "amountPacketsMeasurements=x" and leave out "amountPackets=x
   *Feature introduced in DataMiner 9.5.1 (RN 14522).*
 
   > [!NOTE]
+  > - This, and the amountPacketsPID option, are only supported in conjunction with the threadPool option. When no threadPool is used, only one ping request will be sent.
   > - If the number specified for amountPacketsMeasurements is larger than for amountPackets, amountPacketsMeasurements will be adjusted to the same number as amountPackets.
   > - Note that the amountPacketsMeasurements option in itself is already available in DataMiner 9.0.0 CU6 and 9.0.4. (See also RN 13278 and RN 13278.)
 
@@ -119,6 +120,27 @@ If you only specify "amountPacketsMeasurements=x" and leave out "amountPackets=x
 
   *Feature introduced in DataMiner 9.5.1 (RN 14522).*
 
+- **interval**: With this option, you can specify the interval in ms between two consecutive ping packets. This should be used when the device does not respond to all ping requests when they are sent without any intermediate delay.
+
+  *Feature introduced in DataMiner 10.2.11 (RN 34463).*
+
+  > [!NOTE]
+  > This option is only relevant when *amountPackets* or *amountPacketsPID* is used. These are currently only supported in conjunction with the *threadPool* option. When *threadPool* is not used, only one ping request will be sent.
+
+- **intervalPID**: Instead of specifying a fixed interval value ("interval=x"), it is also possible to specify a dynamic value stored in a standalone parameter. Note that if you specify both a fixed and a dynamic value, the latter will take precedence.
+
+  The value in the referred parameters must not be 0 or uninitialized. Otherwise, 0, the hard-coded value on the timer, or the last valid value will be used by default. The referred parameters must be of numeric type.
+
+  ```xml
+  <Interprete>
+      <RawType>numeric text</RawType>
+      <LengthType>next param</LengthType>
+      <Type>double</Type>
+  </Interprete>
+  ```
+
+  *Feature introduced in DataMiner 10.2.11 (RN 34463).*
+  
 - **excludeWorstResults**: With this option, you can filter out the worst results of the different ping packets to calculate the KPIs. The specified value is a percentage, and the number of packets that will be filtered out is an integer number that is rounded down, with a minimum of 1.
 
   *Feature introduced in DataMiner 9.5.1 (RN 14522).*

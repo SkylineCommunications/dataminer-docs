@@ -136,7 +136,7 @@ In the above example, the slowquery attribute is set to “5”, so all database
 
 ### Configuring how alarm history slider data are kept in a Cassandra database
 
-In a Cassandra general database, the timetrace table among others contains “snapshots”, which are used to visualize historic alarm information in the DataMiner Cube history slider.
+In a Cassandra general database, the timetrace table among others contains “snapshots”, which are used to visualize history alarm information in the DataMiner Cube history slider.
 
 - By default, timetrace snapshots are saved every 100 rows. To change this setting, set a different value in the *\<SnapshotInterval>* tag for the Cassandra database.
 

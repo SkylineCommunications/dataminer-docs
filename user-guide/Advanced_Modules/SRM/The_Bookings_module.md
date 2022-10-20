@@ -24,7 +24,7 @@ The list can be customized as follows:
 
 - To apply a custom column configuration, see [Creating a new column configuration](#creating-a-new-column-configuration) and [Loading the default column configuration](#loading-the-default-column-configuration).
 
-- From DataMiner 9.6.13 onwards, the color displayed in the *Color* column of the list can be customized using the *Visual.Background* property of bookings. In DataMiner 10.0.0/10.0.2, this property is renamed to *VisualBackground*. See [Customizing the color of booking blocks](xref:Embedding_a_Resource_Manager_component#customizing-the-color-of-booking-blocks).
+- From DataMiner 9.6.13 onwards, it is possible to have a column display the color configured in the *Visual.Background* property of bookings. For this purpose, add the *Visual.Background* property column and set it to the column type *Color*. In DataMiner 10.0.0/10.0.2, this property is renamed to *VisualBackground*. See [Customizing the color of booking blocks](xref:Embedding_a_Resource_Manager_component#customizing-the-color-of-booking-blocks).
 
 > [!NOTE]
 > When an item is selected in the list, a session variable is populated with the booking ID, which can be of use for Visio drawings.
@@ -55,13 +55,12 @@ The list can be customized as follows:
 
         - In the *Filter by type* section, indicate which type of columns you want to choose from: *Bookings* (or *Reservations* in earlier DataMiner versions) or *Properties*.
 
-2. Right-click in the list header (or click the list’s hamburger menu) and select *Save current column configuration*.
-
+2. Right-click in the list header and select *Save current column configuration*.
     When the module is opened again, this column configuration will be displayed. If you do not apply this last step, the column configuration will be reset when the module is closed.
 
 #### Loading the default column configuration
 
-- Right-click in the list header (or click the list’s hamburger menu), select *Load default column configuration*, and select the configuration you want to load.
+- Right-click in the list header, select *Load default column configuration*, and select the configuration you want to load.
 
 ### Bookings timeline
 

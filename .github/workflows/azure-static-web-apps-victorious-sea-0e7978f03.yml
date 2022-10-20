@@ -14,7 +14,7 @@ jobs:
     runs-on: windows-latest
     name: Build Job
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
         with:
           submodules: true
       - name: choco install docfx
@@ -24,12 +24,15 @@ jobs:
           CI: true
       - name: Add msbuild to PATH
         uses: microsoft/setup-msbuild@v1.1
+      - name: Set up NuGet
+        uses: nuget/setup-nuget@v1.1.1
+      - name: NuGet restore DM solution
+        working-directory: "src/DataMiner"
+        run: nuget restore "DataMiner.sln"
       - name: Build DataMiner solution
         working-directory: src/DataMiner
-        run: msbuild DataMiner.sln /p:Configuration=Debug
-      - name: Set up NuGet
-        uses: nuget/setup-nuget@v1
-      - name: NuGet restore
+        run: msbuild DataMiner.sln /t:Clean,Restore,Build /p:Configuration=Debug
+      - name: NuGet restore BCL
         working-directory: "src/Base Class Library"
         run: nuget restore "Code Library.sln"
       - name: Build Base Class Library solution
@@ -40,9 +43,9 @@ jobs:
           docfx metadata -f
       - name: build documentation
         run: |
-          docfx build -f
+          docfx build -f --warningsAsErrors
       - name: publish results
-        uses: actions/upload-artifact@v2.2.4
+        uses: actions/upload-artifact@v3
         with:
           name: _site
           path: _site/
@@ -53,7 +56,7 @@ jobs:
     needs: build_job
     name: Deploy Job
     steps:
-      - uses: actions/download-artifact@v2
+      - uses: actions/download-artifact@v3
         with:
           name: _site
           path: _site 
@@ -78,7 +81,7 @@ jobs:
     needs: build_job
     name: Deploy Job to Storage account
     steps:
-      - uses: actions/download-artifact@v2
+      - uses: actions/download-artifact@v3
         with:
           name: _site
           path: _site
@@ -100,7 +103,7 @@ jobs:
     - name: Azure Cognitive Search Reindex
       # You may pin to the exact commit or the version.
       # uses: andrewconnell/azure-search-index@ac64a40924771a415e01d52db4c1d557ecd3a99f
-      uses: andrewconnell/azure-search-index@1.0.1
+      uses: andrewconnell/azure-search-index@2.0.3
       with:
         # Name of the Azure Cognitive Search resource.
         azure-search-instance: docs-srch
@@ -108,15 +111,3 @@ jobs:
         azure-search-indexer: azureblob-indexer
         # Admin key used to connect to Azure Cognitive Search instance
         azure-search-admin-key: ${{ secrets.AZURE_SEARCH_KEY }}
-
-  close_pull_request_job:
-    if: github.event_name == 'pull_request' && github.event.action == 'closed'
-    runs-on: ubuntu-latest
-    name: Close Pull Request Job
-    steps:
-      - name: Close Pull Request
-        id: closepullrequest
-        uses: Azure/static-web-apps-deploy@v1
-        with:
-          azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_VICTORIOUS_SEA_0E7978F03 }}
-          action: "close"

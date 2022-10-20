@@ -1426,6 +1426,15 @@ namespace Skyline.DataMiner.Automation
 		/// engine.ShowProgress(progress);
 		/// </code>
 		/// </example>
+		/// <remarks>
+                /// ShowProgress displays a message in a dialog with the name of the script as title. If you want the dialog to have a custom title you can use the UIBuilder:
+		/// <code> UIBuilder uibDialogBox = new UIBuilder();
+                /// uibDialogBox.Title = "My custom title";
+                /// uibDialogBox.Append("Session is successfully booked.");
+                /// engine.ShowUI(uibDialogBox);
+		/// </code>
+		/// <seealso cref="ShowUI"/>
+                ///</remarks>
 		public void ShowProgress(string uiData) { }
 
 		/// <summary>

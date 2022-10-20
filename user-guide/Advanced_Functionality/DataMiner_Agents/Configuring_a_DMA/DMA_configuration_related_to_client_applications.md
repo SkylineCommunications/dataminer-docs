@@ -88,6 +88,9 @@ From DataMiner 10.2.0 \[CU3]/10.2.6 onwards, Cube can automatically update to a 
 
    - **Force a specific version**: This will force users to always use a particular Cube version. When you select this option, a dialog will be displayed where you will need to select a *Cube.zip* and *versions.txt* file. You can obtain these files from the folder `/Webpages/DataMinerCubeStandAlone/` in an upgrade package or on another DataMiner Agent (e.g. a staging platform).
 
+     > [!TIP]
+     > Use this option if you are using a hotfix package with a Cube fix. Otherwise, users connecting to the DMA may use a more recent Cube version, obtained through the cloud, that does not yet contain the fix.
+
 > [!NOTE]
 >
 > - To access this configuration, you need the user permissions [Modules > Documents > Add](xref:DataMiner_user_permissions#modules--documents--add), [Modules > System settings > System settings available](xref:DataMiner_user_permissions#modules--system-configuration--system-settings--system-settings-available), and [Modules > System settings > Manage client versions](xref:DataMiner_user_permissions#modules--system-configuration--system-settings--manage-client-versions).

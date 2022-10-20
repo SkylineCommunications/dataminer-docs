@@ -6,6 +6,50 @@ uid: DCP_change_log
 
 The DataMiner Cloud Platform gets updated continuously. This change log can help you trace when specific features and changes have become available.
 
+#### 18 October 2022 – Enhancement – Notification in case deployment fails because account is not linked [ID_34699]
+
+When a deployment fails because the user does not have a linked account, they will now get a notification that will allow them to correct the situation and retry.
+
+#### 18 October 2022 – Enhancement – DCP Admin app supports additional audit events [ID_34697]
+
+The DCP Admin app now also includes the following audit events on the *Audit* page:
+
+- A user created a dashboard share.
+- A user performed an updated to an existing share.
+- A user deleted an existing share.
+
+Up to now, only accessing a share was logged in the audit events.
+
+#### 27 September 2022 – New feature – DataMiner Teams bot support for custom commands [ID_34518]
+
+If CoreGateway version 2.11.0 or higher and FieldControl version 2.8.1 or higher are installed (included in Cloud Pack version 2.8.0), the DataMiner Teams bot now allows you to display and run custom commands with dynamic user input configured in your cloud-connected DataMiner System.
+
+You can do so using the Teams bot commands *show command \<command name\>*, *show command*, and *run command \<command name\>*.
+
+To add a command to your DMS, create an Automation script in the folder "bot" in the DMS. For examples of such scripts, refer to [Custom Command Examples](https://github.com/SkylineCommunications/ChatOps-Extensions/tree/main/CustomCommandExamples) on GitHub.
+
+The commands allow dynamic input, such as dummies, parameters, parameters with value files, and memory files. They support the following output: key values, adaptive card body elements, and JSON.
+
+A command will only be visible for users of the bot if they have the appropriate rights in DataMiner Cube. If users have the necessary rights to view a command, but they do not have the rights needed for certain input for the command, the bot will inform them that the command cannot be executed.
+
+The following limitations also apply:
+
+- Interactive Automation scripts are not supported.
+- Commands that run longer than 30 seconds are currently not supported.
+- Issues with the adaptive card output will not result in proper error feedback.
+
+For more detailed information, refer to [Adding commands for the Teams bot to a DMS](xref:DataMiner_Teams_bot#adding-commands-for-the-teams-bot-to-a-dms)
+
+#### 19 September 2022 – Enhancement – Improvements on Audit page in DCP Admin app [ID_34457]
+
+A number of improvements have been implemented on the *Audit* page in the DCP Admin app:
+
+- You can now filter on subject name and initiator.
+- A search box is now available for each filter so you can quickly search for a specific item to filter on.
+- Some filters allow you to manually specify custom values. For example, for the *Initiator* filter, which is automatically populated with the organization users, you can manually specify a user that has been deleted.
+- The column order has been adjusted.
+- Automatic loading of audit records has been improved to prevent possible issues with different screen sizes.
+
 #### 1 September 2022 – Enhancement – Filter functionality for Audit log in DCP Admin app [ID_34322]
 
 The Audit log in the DCP Admin app now allows filtering on operation type, subject type, DataMiner System name, and time span. In addition, the loading of records has been optimized.

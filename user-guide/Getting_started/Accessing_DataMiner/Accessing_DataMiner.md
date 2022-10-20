@@ -14,6 +14,6 @@ Several applications are available to access DataMiner: in addition to the main 
 | Reports & Dashboards | Legacy module that allows you to consult reports and/or dashboards within DataMiner Cube and in a separate application. See [DMS Reporter](xref:reporter) and [DMS Dashboards](xref:dashboards). |
 | Jobs | Web application that allows the creation of management of jobs, available from DataMiner 9.6.4 onwards. See [DMS Job Manager](xref:jobs). |
 | Ticketing | Web application that allows easy creation and management of tickets in DataMiner. Also available embedded within DataMiner Cube. See [DMS Ticketing](xref:ticketing) |
-| DMS Alerter | System tray application that notifies the user of alarms in the DataMiner system. See [Accessing DMS Alerter](xref:Accessing_DMS_Alerter) |
+| Alerter | System tray application that notifies the user of alarms in the DataMiner system. See [Accessing Alerter](xref:Accessing_Alerter) |
 | DataMiner Taskbar Utility | System tray application on a DataMiner Agent that allows some basic functionalities like starting, stopping and upgrading the DMA. See [Accessing the DataMiner Taskbar Utility](xref:Accessing_the_DataMiner_Taskbar_Utility) |
 | Web APIs | Any third-party application can retrieve real-time DataMiner data via XML-RPC, SOAP or JSON. For more information, see [Web Services](xref:WS_v1). |

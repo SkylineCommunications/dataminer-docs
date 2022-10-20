@@ -7,7 +7,7 @@ uid: deploying_srm
 1. Ensure that a DataMiner version is installed that is compatible with the SRM version you want to deploy. Check the SRM release notes to see which minimum DataMiner version is required. Contact Skyline Communications to check if any additional components need to be installed in your system.
 
    > [!NOTE]
-   > The SRM Framework requires an [Elasticsearch database](xref:Elasticsearch_database)).
+   > The SRM Framework requires an [Elasticsearch database](xref:Elasticsearch_database).
 
 1. Download the SRM package from [DataMiner Dojo](https://community.dataminer.services/downloads/).
 
@@ -52,4 +52,4 @@ uid: deploying_srm
 
    - Set *Services* > *App. Services View* to the name of the view you created to contain services (e.g. "3 - Services").
 
-   - Set *History and Logs* > *Booking Logging Location* to a shared folder accessible from both the client machine and the DataMiner servers, so that users will be able to view the log files.
+   - Set *History and Logs* > *Booking Logging Location* to a shared folder accessible from both the client machine and the DataMiner servers, so that users will be able to view the log files. To do so, click *Settings* and enter the path in the *Booking Logging location* box.

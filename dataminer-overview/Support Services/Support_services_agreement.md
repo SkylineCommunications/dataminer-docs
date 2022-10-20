@@ -69,7 +69,7 @@ User shall ensure that it has an industry-standard and uninterrupted remote acce
 
 ## Ticket generation
 
-When User encounters an Issue with the Software, or wishes to receive Support for another reason, User can at their choice open a ticket for Support or call Skyline's Support helpdesk.
+When User encounters an Issue with the Software, or wishes to receive Support for another reason, User can at their choice [open a ticket for Support or call Skyline's Support helpdesk](https://skyline.be/contact/tech-support).
 
 Tickets for Support can be generated through Skyline's DataMiner Cloud Platform.
 

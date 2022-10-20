@@ -106,6 +106,9 @@ The DataMiner installer allows you to run a default DataMiner installation, whic
 
 1. In the *License* tab of the DataMiner Installer, click *browse and upload*, and navigate to the license files.
 
+   > [!NOTE]
+   > If you closed the DataMiner installer before uploading the license files, copy the license files to the *C:\Skyline DataMiner* folder and restart DataMiner.
+
 1. Once all files have been uploaded successfully, click *restart DataMiner*.
 
 1. When DataMiner has successfully restarted, click *Close*.
@@ -113,5 +116,4 @@ The DataMiner installer allows you to run a default DataMiner installation, whic
 > [!NOTE]
 >
 > - To view detailed log information on the installation process, in the last step of the installer, click the *open log files* button.
-> - If you closed the DataMiner installer before uploading the license files, copy the license files to the *C:\Skyline DataMiner* folder and restart DataMiner.
 > - To be able to make full use of all available DataMiner features, you should also [install Elasticsearch](xref:Installing_Elasticsearch_via_DataMiner) and [connect your DataMiner System to the cloud](xref:Connecting_your_DataMiner_System_to_the_cloud).

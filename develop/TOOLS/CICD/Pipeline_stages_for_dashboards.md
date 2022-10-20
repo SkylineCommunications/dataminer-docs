@@ -4,7 +4,7 @@ uid: Pipeline_stages_for_dashboards
 
 # Pipeline stages for dashboards
 
-Currently, the pipeline consists of the following steps:
+Currently, the pipeline consists of the following stages:
 
 - [Loading Jenkinsfile](#loading-jenkinsfile)
 
@@ -22,15 +22,15 @@ Currently, the pipeline consists of the following steps:
 
 ## Loading Jenkinsfile
 
-When a new Git repository is created using the SLC SE Repository Manager tool, the repository initially contains a .gitignore file and a Jenkinsfile. This Jenkinsfile in turn refers to another "master" Jenkins file. In this step, the Jenkinsfile gets loaded.
+When a new Git repository is created using the SLC SE Repository Manager tool, the repository initially contains a .gitignore file and a Jenkinsfile. This Jenkinsfile in turn refers to another "master" Jenkins file. During this stage, the Jenkinsfile gets loaded.
 
 ## Declarative checkout from SCM
 
-In this step, Jenkins loads the current repository from Git.
+During this stage, Jenkins loads the current repository from Git.
 
 ## Validate tag
 
-This step is only executed for pipeline runs for a tag. It will verify whether the specified tag meets the following conditions:
+This stage is only executed for pipeline runs for a tag. It will verify whether the specified tag meets the following conditions:
 
 - The tag has the correct format.
 - The tag is in the expected branch. For example, a tag "1.0.0.1" provided on a commit that is part of the "1.0.0.x" branch will succeed, while a tag "1.0.0.1" provided on a commit belonging to branch 1.0.1.x will fail.
@@ -39,7 +39,7 @@ This step is only executed for pipeline runs for a tag. It will verify whether t
 
 ## Build .dmapp package
 
-This step creates a .dmapp package containing the dashboard.
+This stage creates a .dmapp package containing the dashboard.
 
 ## (Release) Prepare for SVN
 
@@ -47,4 +47,4 @@ In case a tag was detected, and the version should therefore be pushed to SVN, s
 
 ## (Release) Push to SVN
 
-This step performs the actual push to SVN. Once this step is executed, you should find a new version of the dashboard on SVN in the corresponding folder (<https://svn.skyline.be/!/#SystemEngineering/view/head/Dashboards>).
+This stage performs the actual push to SVN. Once this stage is executed, you should find a new version of the dashboard on SVN in the corresponding folder (<https://svn.skyline.be/!/#SystemEngineering/view/head/Dashboards>).

@@ -25,7 +25,7 @@ To connect your DMS to the cloud:
    > [!TIP]
    >
    > - If Cloud Gateway version v2.9.4 or higher is installed, you can check whether your network complies with the requirements for the cloud platform using the *ConnectionTester.exe* tool from the folder `Program files\Skyline Communications\Dataminer CloudGateway\`.
-   > - For more information about cloud connectivity and security, see [Connecting to the DataMiner cloud Platform](xref:Cloud_connectivity_and_security#connecting-to-the-dataminer-cloud-platform).
+   > - For more information about cloud connectivity and security, see [Connecting to the DataMiner Cloud Platform](xref:Cloud_connectivity_and_security#connecting-to-the-dataminer-cloud-platform).
 
 1. Download the latest DataMiner **Cloud Pack installer** from [DataMiner Dojo](https://community.dataminer.services/downloads/) and install it on one or more DMAs in the cluster. If you are on the Feature Release track, .NET 5 is already included in DataMiner from version 10.1.12 onwards, so select the package without .NET 5. If you are on the Main Release track, .NET 5 is only included from version 10.2.0 \[CU4] onwards, so for earlier 10.2.0 versions, you will need to select the package with .NET 5.
 
@@ -47,6 +47,9 @@ To connect your DMS to the cloud:
 
    - *Organization*: Specify your organization, either by selecting it in the drop-down box if it already exists in the system or by clicking *Create new* and specifying your name and DNS.
 
+     > [!NOTE]
+     > To be able to select an existing organization, you must be a [member of that organization on DCP](xref:Giving_users_access_to_cloud_features).
+
    - *DMS name*: Specify the name you want to use for your DMS.
 
    - *DMS URL*: Specify a URL-friendly version of the DMS name.
@@ -58,4 +61,6 @@ To connect your DMS to the cloud:
 1. To ensure that you can make optimal use of your cloud connection, get your cloud connection verified. See [Getting your organization verified](xref:CloudConnectionVerification).
 
 > [!NOTE]
-> Make sure that all users that should be able to share data with the cloud have the necessary user permissions under [Modules > System configuration > Cloud sharing/gateway](xref:DataMiner_user_permissions#modules--system-configuration--cloud-sharinggateway).
+>
+> - Make sure that all users that should be able to share data with the cloud have the necessary user permissions under [Modules > System configuration > Cloud sharing/gateway](xref:DataMiner_user_permissions#modules--system-configuration--cloud-sharinggateway).
+> - To make sure users can make use of cloud features, you will need to manually add them to your organization and DMS in the DCP Admin app. See [Controlling user access to cloud features](xref:Giving_users_access_to_cloud_features).

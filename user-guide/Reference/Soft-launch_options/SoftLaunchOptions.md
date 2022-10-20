@@ -35,7 +35,7 @@ For example, this *SoftLaunchOptions.xml* configuration activates the "AlarmSqua
 
 After you have modified this configuration file, you must **restart your DataMiner Agent** to activate the changes. If you have a cluster of DataMiner Agents, every DataMiner Agent in the cluster will need to be restarted. Many of the soft-launch options also require an **IIS restart** when they are activated.
 
-For some **Cube-only** features, it is not necessary to configure a tag in SoftLaunchOptions.xml. For these features, it is sufficient to access DataMiner Cube using a specific **argument**. In the Cube desktop app, you can specify this argument in the start window by clicking the “…” button in the tile representing the DMS you want to connect to, and then specifying the argument in the *Advanced* section. For more information, see [Options for opening DataMiner Cube](xref:Options_for_opening_DataMiner_Cube).
+For some **Cube-only** features, it is not necessary to configure a tag in SoftLaunchOptions.xml. For these features, it is sufficient to access DataMiner Cube using a specific **argument**. In the Cube desktop app, you can specify this argument in the start window by clicking the “…” button in the tile representing the DMS you want to connect to, and then specifying the argument in the *Advanced* section. For more information, see [Arguments for DataMiner Cube](xref:Options_for_opening_DataMiner_Cube).
 
 For some features, a different configuration may be required. You can find more information about this below.
 
@@ -187,7 +187,10 @@ Enables the Virtual Functions module in Cube. This is a Cube-only feature that c
 Provides access to additional data sources and operators for GQI in the Dashboards app and Low-Code Apps.
 
 > [!NOTE]
-> From DataMiner 10.1.6 onwards, this option is no longer needed for the DCF connections GQI data source.
+> Some features that originally required this option are fully available in recent DataMiner versions:
+>
+> - The DCF connections GQI data source (available from DataMiner 10.1.6 onwards).
+> - The "Sort" operator (available from DataMiner 10.2.11/10.3.0 onwards).
 
 - **Minimum version**: 10.0.13
 

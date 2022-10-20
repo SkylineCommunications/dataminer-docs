@@ -267,7 +267,7 @@ See [Glossary (A to L)](xref:glossary_a_to_l).
 | Ticket domain | Definition of the layout of a collection of tickets, which allows the tickets of a third-party system to sync with DataMiner tickets. Also known as a “ticket field resolver”.<br>See [DMS Ticketing](xref:ticketing#dms-ticketing). |
 | Ticketing | Application used to create and/or manage tickets in DataMiner.<br>See [DMS Ticketing](xref:ticketing#dms-ticketing). |
 | Timer base | General parameter of an element that can be used to adjust the polling speed of the element.<br>See [Changing the polling speed of an element](xref:Changing_the_polling_speed_of_an_element). |
-| Timetrace data | Historic alarm data that is used to list history alarms in alarm tabs and to graphically visualize historic alarm information in the Alarm Console history slider. |
+| Timetrace data | History alarm data used to list history alarms in alarm tabs and to graphically visualize history alarm information in the Alarm Console history slider. |
 | TLS | Transport Layer Security. Cryptographic protocol designed to provide communication security over a network. |
 | Tooltip | Small pop-up window describing an object that is being pointed to, such as a button. |
 | Transparent clock | Device in a PTP environment that passes the time it retrieves from a boundary clock or grandmaster clock on to endpoint devices.<br>See [DataMiner PTP app](xref:SolPTP#dataminer-ptp-app) |

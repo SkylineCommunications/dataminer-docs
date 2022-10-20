@@ -13,9 +13,13 @@ uid: KI_Taskbar_Utility_performance_issue_while_agents_are_being_upgraded
 
 The DataMiner Taskbar Utility was using too much memory when Agents were being upgraded.
 
-## Fix
+## Workaround
 
 Stay on the upgrade summary tab until the upgrade has finished. Then close DataMiner Taskbar Utility to have the memory cleared.
+
+## Fix
+
+Upgrade to version 10.1.0 [CU20], 10.2.0 [CU8] or 10.2.11 in order to get the updated version of the DataMiner Taskbar Utility.
 
 ## Issue description
 
