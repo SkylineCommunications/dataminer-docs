@@ -55,3 +55,7 @@ Up to now, the MER and packet ratio columns for the QAM DS Channel did not show 
 #### Incorrect DS/US Channel Utilization in Node Segment overview [ID_34623]
 
 In the Node Segment overview, it could occur that the DS Channel Utilization showed the value for the US Channel Utilization and vice versa.
+
+#### Percentage Ping OK value above 100% [ID_34726]
+
+When the Number Ping OK parameter had a value larger than the number of CMs, the Percentage Ping OK parameter indicated a value above 100%. The percentage calculation has now been adjusted to prevent this. Exceptional cases like this will now be returned as -1 (N/A). Exception values were added to both the Percentage Ping OK and Percentage Ping Unreachable parameters in the amplifier and node overview tables.
