@@ -4,7 +4,7 @@ uid: Process_Definition
 
 # Process definition
 
-All [activities](xref:PA_Activities) that a process comprises of are defined in a process definition. The process definition also indicates how they are connected with each other.
+All [activities](xref:PA_Activities) in a process are defined in a process definition. The process definition also indicates how they are connected with each other.
 
 Example: `PA Start Event -> Watch Folder -> Move File -> Read File -> Extract Materials -> … -> PA End Event`
 

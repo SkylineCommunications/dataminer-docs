@@ -8,9 +8,7 @@ uid: PA_index
 
 This section is intended to become your one source for all information related to setting up and working with Process Automation (PA). This includes information on the product, architecture, development, and deployment.
 
-All information applies to PA version 2. Features that are part of PA version 1 are omitted. A process that was running with the initial version of Process Automation is still supposed to run with PA version 2. However, it is using an architecture which is no longer promoted and will not allow to use the latest PA features. All features not described in the documentation on Process Automation are supposed to be obsolete.
-
-We are currently still working on centralizing all Process Automation information here, so check back for updates frequently.
+All information applies to PA version 2. Features that are part of PA version 1 are omitted. A process that was running with the initial version of Process Automation is still supposed to run with PA version 2. However, it is using an architecture which is no longer promoted and will not allow to use the latest PA features.
 
 ## Topics
 
