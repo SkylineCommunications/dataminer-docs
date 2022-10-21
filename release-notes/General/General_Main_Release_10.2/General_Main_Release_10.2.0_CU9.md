@@ -122,6 +122,14 @@ When an HTTP element received an ERROR_WINHTTP_SECURE_FAILURE after sending an H
 
 From now on, when an HTTP element receives an ERROR_WINHTTP_SECURE_FAILURE after sending an HTTP request, it will resend the request for a number of times, taking into account the number of retries specified in the element's port settings.
 
+#### SLMessageBroker log file entries will now mention the NATS server to which the NATS client is connected [ID_34719]
+
+<!-- MR 10.2.0 [CU9] - FR 10.2.12 -->
+
+When a NATS client had reconnected when DataMiner was running, up to now, the log files would not specify the NATS server that client had reconnected to. From now on, SLMessageBroker log file entries will contain the *connectedUrl* and state information.
+
+Also, extended logging will now be available when an asynchronous request times out.
+
 ### Fixes
 
 #### Ticketing app: Problem with ticket domains incorrectly marked as masked [ID_33449]
@@ -275,6 +283,12 @@ When you had enabled this feature, in some rare cases, an error could occur when
 <!-- MR 10.1.0 [CU21] / 10.2.0 [CU9] - FR 10.2.12 -->
 
 When a large number of shapes generated based on child items in a view were sorted by a custom property value, in some rare cases, those shapes would not be displayed in the correct order.
+
+#### Low-code apps: 'Read mode' setting of a form would incorrectly not be available when the form only contained DOM instance data [ID_34627]
+
+<!-- MR 10.2.0 [CU9] - FR 10.2.12 -->
+
+When a form only contained DOM instance data, the *Read mode* setting of the form would incorrect not be available.
 
 #### Dashboards app: Problem when creating a PDF preview of a dashboard containing an empty GQI table [ID_34635]
 

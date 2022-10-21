@@ -200,6 +200,14 @@ From now on, when an HTTP element receives an ERROR_WINHTTP_SECURE_FAILURE after
 
 The *PDF* and *Share* option in the Dashboards app are now no longer visible in edit mode. Additionally, you can now pin the *Share dashboards* action in the settings menu of the Dashboards app.
 
+#### SLMessageBroker log file entries will now mention the NATS server to which the NATS client is connected [ID_34719]
+
+<!-- MR 10.2.0 [CU9] - FR 10.2.12 -->
+
+When a NATS client had reconnected when DataMiner was running, up to now, the log files would not specify the NATS server that client had reconnected to. From now on, SLMessageBroker log file entries will contain the *connectedUrl* and state information.
+
+Also, extended logging will now be available when an asynchronous request times out.
+
 ### Fixes
 
 #### Problem with SLDataMiner when editing an element [ID_34329]
@@ -305,6 +313,12 @@ When DataMiner Maps v1 was used with Google Maps as provider, in some cases, the
 GQI recording is a debugging feature that allows you to save GQI communication and replay it in a lab environment.
 
 When you had enabled this feature, in some rare cases, an error could occur when a GQI query was stored in memory while being executed.
+
+#### Low-code apps: 'Read mode' setting of a form would incorrectly not be available when the form only contained DOM instance data [ID_34627]
+
+<!-- MR 10.2.0 [CU9] - FR 10.2.12 -->
+
+When a form only contained DOM instance data, the *Read mode* setting of the form would incorrect not be available.
 
 #### Dashboards app: Problem when creating a PDF preview of a dashboard containing an empty GQI table [ID_34635]
 
