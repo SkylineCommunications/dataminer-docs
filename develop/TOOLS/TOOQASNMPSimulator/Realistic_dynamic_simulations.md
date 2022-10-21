@@ -21,7 +21,7 @@ To configure this, you will need to create a simulation file that looks similar 
 </Simulation>
 ```
 
-The difference with a regular simulation file is that there are a *ProxyAgents* tag and *ProxyAgent* tags instead of an *Agents* tag and *Agent* tags. This indicates to the simulator that this is a proxy simulation. The *ProxyAgent* tag has the same attributes as the *Agent* tag, except for an additional *deviceIP* attribute. This *deviceIP* is mandatory and indicates for which device the simulator acts as a proxy. There are also three additional optional attributes for the *ProxyAgent* tag:
+The difference with a regular simulation file is that there is a *ProxyAgents* tag and *ProxyAgent* tags instead of an *Agents* tag and *Agent* tags. This indicates to the simulator that this is a proxy simulation. The *ProxyAgent* tag has the same attributes as the *Agent* tag, except for an additional *deviceIP* attribute. This *deviceIP* is mandatory and indicates for which device the simulator acts as a proxy. There are also three additional optional attributes for the *ProxyAgent* tag:
 
 - *maxFileSize*: This specifies the maximum size of the file (in MB) that the variable bindings are written to. By default, this is 1024 MB. In case the file becomes too big, a new file will be created.
 
@@ -98,7 +98,7 @@ CREATE TABLE <keyspace>.<tablename> (
 
 - \<keyspace> is the keyspace where the table is created.
 
-- \<tablename> is name of the table that will be created.
+- \<tablename> is the name of the table that will be created.
 
 Example:
 

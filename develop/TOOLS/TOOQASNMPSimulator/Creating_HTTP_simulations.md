@@ -22,7 +22,7 @@ Creating an HTTP simulation requires a bit more work.
 
       - *devicePort*: The port of the HTTP device.
 
-      - *simulationIP*
+      - *simulationIP*: The IP address the simulation will listen on.
 
       - *simulationPorts*: Either specify a range using a hyphen (“-”), e.g. "50000-50005", or a port number.
 
