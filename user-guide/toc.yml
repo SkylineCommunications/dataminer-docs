@@ -2745,6 +2745,8 @@
     - name: Known issues
       topicUID: Known_issues
       items:
+        - name: Data from Elasticsearch cluster with IPv6 addresses offloaded to files
+          topicUID: KI_Elasticsearch_IPv6
         - name: Increased CPU load and degraded performance because of excessive number of SPI events
           topicUID: Excessive_SPI_events_causing_CPU_load
         - name: SLDataGateway memory leak
