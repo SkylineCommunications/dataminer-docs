@@ -3,3 +3,94 @@ uid: Deploying_and_Configuring_the_PA_Framework
 ---
 
 # Deploying and Configuring the PA Framework
+
+## Checking and installing the prerequisites
+
+Before you start to work on the PA development and deployment, make sure your DataMiner platform has the necessary resources and specifications for a smooth execution of SRM workflows, as SRM is an essential prerequisite for the PA Framework. You can find the expected requirements on the [DataMiner Compute Requirements page](https://community.dataminer.services/dataminer-compute-requirements/).
+
+Your DataMiner System will also need to use an [Elasticsearch database](xref:Elasticsearch_database).
+
+For more information on how to install Elasticsearch on your DMA, click [here](xref:Installing_Elasticsearch_via_DataMiner).
+
+## Enabling DOM
+
+To make sure DOM data are available in dashboards and applications, make sure the [DOMManager soft-launch option](xref:SoftLaunchOptions#DOMManager) is enabled.
+
+## Installing the SRM Framework
+
+Process Automation requires the creation of a [booking manager element](xref:SolSRM) named *Process Automation instances*, configured with the *Process Automation virtual platform*. To allow us to create this element, we first need to install the SRM framework on the DataMiner System.
+
+<!-- Comment: More info on how to make this booking manager element and configure it? -->
+
+> [!NOTE]
+> In case SRM is already installed on your system, the procedure below is not required to proceed.
+
+To install the SRM Framework:
+
+1. Ensure that a DataMiner version is installed that is compatible with the SRM Framework, and the platform meets the hardware requirements.
+
+   - Make sure the DataMiner System uses an Elasticsearch database.
+
+   - Check the SRM release notes to see which minimum DataMiner version is required.
+
+   - Contact Skyline Communications to check if any additional components need to be installed in your system.
+
+1. Download the SRM package from [DataMiner Dojo](https://community.dataminer.services/downloads/).
+
+1. Double-click the SRM package, and install the package in the same manner as a DataMiner upgrade.
+
+   > [!NOTE]
+   > DataMiner will restart during the installation of the package.
+
+   > [!TIP]
+   > See also: [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent)
+
+## Installing the Process Automation Framework
+
+To install the PA Framework:
+
+1. Ensure that a DataMiner version is installed that is compatible with the PA Framework, and the platform meets the hardware requirements.
+
+   - Make sure the DataMiner System uses an Elasticsearch database.
+
+   - Check the Process Automation release notes to see which minimum DataMiner version is required.
+
+   - Contact Skyline Communications to check if any additional components need to be installed in your system.
+
+1. Download the PA package from [DataMiner Dojo](https://community.dataminer.services/downloads/).
+
+1. Double-click the PA package, and install the package in the same manner as a DataMiner upgrade.
+
+   > [!NOTE]
+   > DataMiner will restart during the installation of the package.
+
+   > [!TIP]
+   > See also: [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent)
+
+## Configuring the PA Framework
+
+To set up the initial configuration of the PA Framework, run the *SRM_Setup* Automation script. This script requires one input argument, Booking Manager Element Info. For this input argument, specify the value "{}".
+
+<!-- Comment: More info on how to run this Automation Script! -->
+
+![SRM Setup](~/user-guide/images/SRM_setup.png)
+
+The script will configure the framework and create all relevant components to get started with the development of a process.
+
+## Upgrading the PA Framework
+
+If you already have an existing version of the PA Framework installed, update it to the latest version available on DataMiner Dojo.
+
+1. Check the Process Automation release notes to see which minimum DataMiner version is required.
+
+1. Download the PA package from [DataMiner Dojo](https://community.dataminer.services/downloads/).
+
+1. Double-click the PA package, and install the package in the same manner as a DataMiner upgrade.
+
+   > [!NOTE]
+   > DataMiner will restart during the installation of the package.
+
+1. If you upgraded from a PA Framework version older than 1.3.0 (the current officially supported minimum version) to version 1.3.0 or later, run the *PA_MigratePoolsAndQueues* script.
+
+   > [!TIP]
+   > See also: [Running Automation scripts](xref:Running_Automation_scripts)
