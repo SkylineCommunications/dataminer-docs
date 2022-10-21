@@ -12,6 +12,10 @@ uid: General_Main_Release_10.2.0_CU9
 
 ### Enhancements
 
+#### Security enhancements [ID_33520]
+
+A number of security enhancements have been made.
+
 #### SLLogCollector now also retrieves information from Elasticsearch [ID_34213]
 
 <!-- MR 10.2.0 [CU9] - FR 10.2.12 -->
@@ -93,6 +97,14 @@ This feature requires the Application Request Routing (ARR) module to be install
 > [!NOTE]
 > If you manually uninstall ARR, it will not be reinstalled automatically during the next upgrade. In order to force the upgrade process to reinstall it, remove the ARR entry from the `C:\Skyline DataMiner\Upgrades\UpgradeActions\ExecutableEvents.xml` file.
 
+#### HTTP elements will now resend a request after receiving ERROR_WINHTTP_SECURE_FAILURE [ID_34644]
+
+<!-- Main Release Version 10.0.0 [CU22]/10.1.0 [CU21]/10.2.0 [CU9] - Feature Release Version 10.2.12 -->
+
+When an HTTP element received an ERROR_WINHTTP_SECURE_FAILURE after sending an HTTP request, up to now, it would go into timeout.
+
+From now on, when an HTTP element receives an ERROR_WINHTTP_SECURE_FAILURE after sending an HTTP request, it will resend the request for a number of times, taking into account the number of retries specified in the element's port settings.
+
 ### Fixes
 
 #### Ticketing app: Problem with ticket domains incorrectly marked as masked [ID_33449]
@@ -118,6 +130,12 @@ When, in the Dashboards app, resource capacity was displayed using a *Line & are
 <!-- MR 10.2.0 [CU9] - FR 10.2.11 -->
 
 In an embedded visual overview, in some cases, list box items would not be displayed correctly.
+
+#### DataMiner Cube - Trending: Y axis of trend graph would incorrectly show duplicate values [ID_34492]
+
+<!-- MR 10.1.0 [CU21] / 10.2.0 [CU9] - FR 10.2.12 -->
+
+When a trend graph showed a constant value, due to a rounding issue, the Y axis would incorrectly show duplicate values.
 
 #### Standalone DVE parameter partially included in an service would incorrectly not affect service state severity [ID_34493]
 

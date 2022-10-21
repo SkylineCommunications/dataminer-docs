@@ -61,6 +61,12 @@ On the *Cloud* page of *System Center*, the *online help* hyperlink now points t
 
 ### Fixes
 
+#### DataMiner Cube - Trending: Y axis of trend graph would incorrectly show duplicate values [ID_34492]
+
+<!-- MR 10.1.0 [CU21] / 10.2.0 [CU9] - FR 10.2.12 -->
+
+When a trend graph showed a constant value, due to a rounding issue, the Y axis would incorrectly show duplicate values.
+
 #### DataMiner Cube - Spectrum Analysis: Problem with measurement point option 'Invert spectrum' [ID_34552]
 
 <!-- MR 10.1.0 [CU21] / 10.2.0 [CU9] - FR 10.2.12 -->

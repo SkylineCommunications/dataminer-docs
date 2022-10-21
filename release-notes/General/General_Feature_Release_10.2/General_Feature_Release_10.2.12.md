@@ -33,6 +33,10 @@ This feature requires the Application Request Routing (ARR) module to be install
 
 ### Enhancements
 
+#### Security enhancements [ID_33520]
+
+A number of security enhancements have been made.
+
 #### Dashboards app / Low-code apps - Service definition component: Enhancements made with regard to function nodes displaying the number of Process Automation tokens in queue or in progress [ID_33888]
 
 <!-- MR 10.3.0 - FR 10.2.12 -->
@@ -164,6 +168,14 @@ Missing information in dashboards is no longer indicated by means of a visual re
 <!-- MR 10.3.0 - FR 10.2.12 -->
 
 The PDF module is now available in the Jobs and Dashboards app. From now on, you can e.g. export dashboards to PDF.
+
+#### HTTP elements will now resend a request after receiving ERROR_WINHTTP_SECURE_FAILURE [ID_34644]
+
+<!-- Main Release Version 10.0.0 [CU22]/10.1.0 [CU21]/10.2.0 [CU9] - Feature Release Version 10.2.12 -->
+
+When an HTTP element received an ERROR_WINHTTP_SECURE_FAILURE after sending an HTTP request, up to now, it would go into timeout.
+
+From now on, when an HTTP element receives an ERROR_WINHTTP_SECURE_FAILURE after sending an HTTP request, it will resend the request for a number of times, taking into account the number of retries specified in the element's port settings.
 
 #### Dashboards app: PDF and share button will now be hidden in edit mode [ID_34653]
 

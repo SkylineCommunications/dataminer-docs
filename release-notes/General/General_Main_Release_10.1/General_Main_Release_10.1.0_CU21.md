@@ -12,6 +12,10 @@ uid: General_Main_Release_10.1.0_CU21
 
 ### Enhancements
 
+#### Security enhancements [ID_33520]
+
+A number of security enhancements have been made.
+
 #### Preventing multiple SLScripting processes from simultaneously compiling the same DLL [ID_34532]
 
 <!-- MR 10.1.0 [CU21] / 10.2.0 [CU9] - FR 10.2.12 -->
@@ -40,6 +44,14 @@ SLLogCollector packages will now also include the following additional files con
 | Logs\Network Information\route.exe print.txt              | The output of a `route print` command.              |
 | Logs\Network Information\netsh.exe winhttp show proxy.txt | The output of a `netsh winhttp show proxy` command. |
 
+#### HTTP elements will now resend a request after receiving ERROR_WINHTTP_SECURE_FAILURE [ID_34644]
+
+<!-- Main Release Version 10.0.0 [CU22]/10.1.0 [CU21]/10.2.0 [CU9] - Feature Release Version 10.2.12 -->
+
+When an HTTP element received an ERROR_WINHTTP_SECURE_FAILURE after sending an HTTP request, up to now, it would go into timeout.
+
+From now on, when an HTTP element receives an ERROR_WINHTTP_SECURE_FAILURE after sending an HTTP request, it will resend the request for a number of times, taking into account the number of retries specified in the element's port settings.
+
 ### Fixes
 
 #### Problem with SLDataMiner when editing an element [ID_34329]
@@ -53,6 +65,12 @@ In some rare cases, an error could occur in SLDataMiner when you edited an eleme
 <!-- MR 10.1.0 [CU21] / 10.2.0 [CU9] - FR 10.2.12 -->
 
 When, in the Dashboards app, resource capacity was displayed using a *Line & area chart* component, in some cases, capacity usage would incorrectly be doubled when bookings overlapped.
+
+#### DataMiner Cube - Trending: Y axis of trend graph would incorrectly show duplicate values [ID_34492]
+
+<!-- MR 10.1.0 [CU21] / 10.2.0 [CU9] - FR 10.2.12 -->
+
+When a trend graph showed a constant value, due to a rounding issue, the Y axis would incorrectly show duplicate values.
 
 #### Standalone DVE parameter partially included in an service would incorrectly not affect service state severity [ID_34493]
 

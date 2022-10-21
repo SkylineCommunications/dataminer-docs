@@ -129,6 +129,14 @@ From now on, when an issue occurs when parsing a compliance cache file entry, th
 Warning: <function> is unable to parse compliance cache file entry at line <line number>. <line content>
 ```
 
+#### HTTP elements will now resend a request after receiving ERROR_WINHTTP_SECURE_FAILURE [ID_34644]
+
+<!-- Main Release Version 10.0.0 [CU22]/10.1.0 [CU21]/10.2.0 [CU9] - Feature Release Version 10.2.12 -->
+
+When an HTTP element received an ERROR_WINHTTP_SECURE_FAILURE after sending an HTTP request, up to now, it would go into timeout.
+
+From now on, when an HTTP element receives an ERROR_WINHTTP_SECURE_FAILURE after sending an HTTP request, it will resend the request for a number of times, taking into account the number of retries specified in the element's port settings.
+
 ### Fixes
 
 #### SLLogCollector could fail to take process dumps [ID_31213]
