@@ -162,11 +162,12 @@ When, in the Alarm Console, you enable the “Automatic incident tracking” opt
 > - When Cube is connected to a DataMiner Agent that does not yet support manually creating, updating and renaming incidents (alarm groups), the menu commands to manipulate alarm groups will not be available.
 > - See also [Alarm Console: Manually creating incident alarms even when “Automatic incident tracking” is disabled \[ID_33000\]](xref:Cube_Main_Release_10.3.0_other_features_changes#alarm-console-manually-creating-incident-alarms-even-when-automatic-incident-tracking-is-disabled-id_33000)
 
-#### Trending - Behavioral anomaly detection: New type of change point 'flatline' \[ID_32839\] \[ID_32856\] \[ID_32950\] \[ID_32993\] \[ID_33559\]
+#### Trending - Behavioral anomaly detection: New type of change point 'flatline' [ID_32839] [ID_32856] [ID_32950] [ID_32993] [ID_33559] [ID_33957]
 
 <!-- MR 10.3.0 - FR 10.2.5
 RN 32993: MR 10.3.0 - FR 10.2.6
-RN 33559: MR 10.3.0 - FR 10.2.8 -->
+RN 33559: MR 10.3.0 - FR 10.2.8
+RN 33957: MR 10.3.0 - FR 10.2.10 -->
 
 The DataMiner Analytics software can detect a number of changes in the behavior of a trend, also known as “change points”. From now on, it will also be able to detect change points of type “flatline”. A flatline is detected when a fluctuating value suddenly remains constant.
 
@@ -180,6 +181,7 @@ A new flatline trend icon will be used to indicate when a parameter has flatline
 
 > [!NOTE]
 > Flatline change points can also be detected for history set parameters that are set nearly in real time, i.e. parameters of which the incoming changes never have a delay larger than 10 minutes.
+> Flatline events will be cleared as soon as the flatline ends.
 
 #### Visual Overview: ServiceManager component functionality expanded to support Process Automation UI \[ID_33187\]
 

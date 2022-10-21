@@ -18,6 +18,15 @@ uid: General_Feature_Release_10.2.12
 
 ## Other features
 
+#### Failover: Decommissioning a Failover setup while the server hosting the offline agent is unavailable [ID_33827]
+
+<!-- MR 10.2.0 [CU9] - FR 10.2.12 -->
+
+It is now possible to decommission a Failover setup while the server hosting the offline agent is unavailable.
+
+> [!NOTE]
+> When you try to decommission a Failover setup while the offline agent is missing, in Cube's *Failover Config* window, a warning will be displayed.
+
 #### Failover: A reverse proxy will now be used to re-route HTTP traffic from the offline agent to the online agent [ID_34606]
 
 <!-- MR 10.2.0 [CU9] - FR 10.2.12 -->
@@ -51,6 +60,14 @@ Also, due to a filter issue, in some cases, nodes could display an incorrect num
 <!-- MR 10.2.0 [CU9] - FR 10.2.12 -->
 
 On systems with an Elasticsearch database, SLLogCollector will now also retrieve information that can help debug issues from that database.
+
+#### Cassandra Cluster: Default replication strategy when migrating to Cassandra Cluster has been changed to 'NetworkTopologyStrategy' [ID_34417]
+
+<!-- MR 10.2.0 [CU9] - FR 10.2.12 -->
+
+When migrating to Cassandra Cluster or when setting up a Cassandra Cluster configuration from scratch, the default replication strategy will now be *NetworkTopologyStrategy*.
+
+The replication strategy *SimpleStrategy* will be used when installing a new DataMiner Agent with a single Cassandra node.
 
 #### GQI: Enhanced performance when retrieving table data [ID_34441]
 
