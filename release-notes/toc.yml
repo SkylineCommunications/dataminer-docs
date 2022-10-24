@@ -544,6 +544,8 @@
         topicUid: MbgNMS_1.0.1
     - name: PA release notes
       items:
+      - name: PA 1.3.0
+        topicUid: PA_1.3.0
       - name: PA 1.2.2
         topicUid: PA_1.2.2
       - name: PA 1.2.1
