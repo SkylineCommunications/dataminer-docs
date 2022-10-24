@@ -101,7 +101,9 @@ You can use the following options to interact with the DataMiner Teams bot:
 - **logout**: Logs out of the DataMiner Cloud Platform.
 
 > [!NOTE]
-> If the latest version of the DataMiner Cloud Pack is not yet installed in your DMS, some of these options may not be available yet.
+>
+> - If the latest version of the DataMiner Cloud Pack is not yet installed in your DMS, some of these options may not be available yet.
+> - For many of these commands, the bot will also understand variations. For example, instead of "run command *command name*", you can simply specify "run *command name*" to get the same result.
 
 ## Adding commands for the Teams bot to a DMS
 

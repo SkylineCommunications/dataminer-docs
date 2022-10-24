@@ -268,7 +268,7 @@ For **SNMP simulations**, two files should be provided:
 
   - How to create the file the SNMP simulation file (.xml): [Configuring the simulation file to poll the database](xref:Realistic_dynamic_simulations#configuring-the-simulation-file-to-poll-the-database)
 
-The Driver Passport Platform will use these files to automatically start a QA Device Simulator instance and ingest the dynamic data into the database.
+The Driver Passport Platform will use these files to automatically start a Skyline Device Simulator instance and ingest the dynamic data into the database.
 
 > [!NOTE]
 > A simulation must also be provided for an SNMP connection that only processes traps. You can use the empty simulation file available in *S:\\Public\\Simulations\\DummySnmpSimulation_ForNonPollingConnections.zip* as the simulation file for such a connection.
