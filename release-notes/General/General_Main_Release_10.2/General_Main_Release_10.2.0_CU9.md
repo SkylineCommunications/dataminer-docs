@@ -25,6 +25,15 @@ It is now possible to decommission a Failover setup while the server hosting the
 > [!NOTE]
 > When you try to decommission a Failover setup while the offline agent is missing, in Cube's *Failover Config* window, a warning will be displayed.
 
+#### SLReset will no longer remove VersionHistory.txt and the HTTPS configuration [ID_34194]
+
+<!-- MR 10.2.0 [CU9] - FR 10.2.10 -->
+
+From now on, the factory reset tool *SLReset.exe* will no longer remove the following items:
+
+- the *VersionHistory.txt* file
+- the HTTPS configuration stored in the *MaintenanceSettings.xml* file.
+
 #### SLLogCollector now also retrieves information from Elasticsearch [ID_34213]
 
 <!-- MR 10.2.0 [CU9] - FR 10.2.12 -->

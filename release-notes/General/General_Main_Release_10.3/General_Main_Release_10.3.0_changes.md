@@ -347,15 +347,6 @@ In the conditional coloring layout setting for Table and Node edge components, t
 
 In the conditional coloring layout setting for Table and Node edge components, discrete column values will now be displayed to make it easier to configure a filter.
 
-#### SLReset will no longer remove VersionHistory.txt and the HTTPS configuration [ID_34194]
-
-<!-- MR 10.3.0 - FR 10.2.10 -->
-
-From now on, the factory reset tool *SLReset.exe* will no longer remove the following items:
-
-- the *VersionHistory.txt* file
-- the HTTPS configuration stored in the *MaintenanceSettings.xml* file.
-
 #### GQI table column names will no longer include table names [ID_34302]
 
 <!-- MR 10.3.0 - FR 10.2.10 -->
