@@ -18,7 +18,7 @@ In this section, you can find information on the following useful tools for syst
 
 - [Nuget packages](xref:TOONuGet)
 
-- [QA Device Simulator](xref:TOOQASNMPSimulator)
+- [Skyline Device Simulator](xref:TOOQASNMPSimulator)
 
 - [SLC SE Repository Manager](xref:TOOSLCSERepositoryManager)
 

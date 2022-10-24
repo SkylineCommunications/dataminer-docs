@@ -21,7 +21,7 @@ To configure this, you will need to create a simulation file that looks similar 
 </Simulation>
 ```
 
-The difference with a regular simulation file is that there is a *ProxyAgents* tag and *ProxyAgent* tags instead of an *Agents* tag and *Agent* tags. This indicates to the simulator that this is a proxy simulation. The *ProxyAgent* tag has the same attributes as the *Agent* tag, except for an additional *deviceIP* attribute. This *deviceIP* is mandatory and indicates for which device the simulator acts as a proxy. There are also three additional optional attributes for the *ProxyAgent* tag:
+The difference with a regular simulation file is that there is a *ProxyAgents* tag with *ProxyAgent* tags instead of an *Agents* tag with *Agent* tags. This indicates to the simulator that this is a proxy simulation. The *ProxyAgent* tag has the same attributes as the *Agent* tag, except for an additional *deviceIP* attribute. This *deviceIP* is mandatory and indicates for which device the simulator acts as a proxy. There are also three additional optional attributes for the *ProxyAgent* tag:
 
 - *maxFileSize*: This specifies the maximum size of the file (in MB) that the variable bindings are written to. By default, this is 1024 MB. In case the file becomes too big, a new file will be created.
 
@@ -40,7 +40,7 @@ These files will contain all variable bindings coming from the device that the p
 
 Once all the necessary data has been collected, it needs to be imported in the database. To do so:
 
-1. In the menu bar of the QA Device Simulator tool, select *Advanced* > *Import proxysimulation to DB*.
+1. In the menu bar of the Skyline Device Simulator tool, select *Advanced* > *Import proxysimulation to DB*.
 
    A pop-up window will open where you need to configure the necessary fields:
 

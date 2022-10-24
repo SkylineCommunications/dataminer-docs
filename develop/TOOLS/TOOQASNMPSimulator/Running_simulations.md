@@ -13,15 +13,17 @@ Select one or more simulation files and start the simulation(s) by clicking the 
 A number of options are available to tweak the behavior of the running simulations:
 
 - *Bad Network Simulation*: Enabling this option allows you to simulate less than ideal network conditions. Available options are:
-    - Packet Loss: The percentage of packets that should be dropped.
-    - Delay: The delay in ms that should be applied to responses on requests and the percentage of packets where the delay should be applied to.
+
+  - *Packet Loss*: The percentage of packets that should be dropped.
+
+  - *Delay*: The delay in ms that should be applied to responses to requests and the percentage of packets that the delay should be applied to.
 
 - *DB max values per OID*: This option lets you configure the maximum number of OIDs that should be kept in memory when running realistic dynamic (database) simulations.
 
 > [!NOTE]
-> - The *DB max values per OID* option is applied when starting a simulation. Changing this option will not have any effect on already running simulations.
 >
-> - The *DB max values per OID* option is available as of version 2.0.0.0 of the device simulator, which is available from DataMiner 10.2.12 onwards.
+> - The *DB max values per OID* option is applied when a simulation is started. Changing this option will not have any effect on already running simulations.
+> - The *DB max values per OID* option is available as of version 2.0.0.0 of the device simulator, which is available from DataMiner 10.2.12/10.3.0 onwards.
 
 ## Running via the command line
 
@@ -42,10 +44,10 @@ where
         /s            Sort OIDs on load.
         /forcerepair  Force a repair of the simulation file(s).
         /packetloss   The percentage of packets that should be dropped.
-        /delayms      The delay that should be applied to responses on requests.
-        /delaypct     The percentage of packets where the delay specified in delayms should be applied to.
+        /delayms      The delay that should be applied to responses to requests.
+        /delaypct     The percentage of packets that the delay specified in delayms should be applied to.
         /dbmaxvaloid  The maximum number of OIDs that should be kept in memory when running realistic dynamic (database) simulations.
 ```
 
 > [!NOTE]
-> The *packetloss*, *delayms*, *delaypct* and *dbmaxvaloid* options are available as of version 2.0.0.0 of the device simulator which is available from DataMiner 10.2.12 onwards.
+> The *packetloss*, *delayms*, *delaypct*, and *dbmaxvaloid* options are available as of version 2.0.0.0 of the device simulator, which is available from DataMiner 10.2.12/10.3.0 onwards.
