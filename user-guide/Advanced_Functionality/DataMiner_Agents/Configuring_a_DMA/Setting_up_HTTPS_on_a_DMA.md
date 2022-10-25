@@ -53,6 +53,10 @@ To do so:
 
       This name **should also be configured in the DNS server** pointing to the IP address of the DMA, so that the DMA can be reached using the configured name.
 
+> [!WARNING]
+> Wildcard configurations are not supported if you want to use your DataMiner Agent to connect your system to the DataMiner Cloud Platform.
+> Please use the FQDN (eg "dma01.skyline.be") instead.
+
 1. Save the file and restart the DMA.
 
 > [!TIP]
