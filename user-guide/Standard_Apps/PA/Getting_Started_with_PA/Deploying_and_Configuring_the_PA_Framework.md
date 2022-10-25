@@ -14,7 +14,7 @@ For more information on how to install Elasticsearch on your DMA, click [here](x
 
 ## Enabling DOM
 
-To make sure DOM data are available in dashboards and applications, make sure the [DOMManager soft-launch option](xref:SoftLaunchOptions#DOMManager) is enabled.
+To make sure DOM data are available in dashboards and applications, make sure the [DOMManager soft-launch option](xref:SoftLaunchOptions#dommanager) is enabled.
 
 ## Installing the SRM Framework
 
@@ -77,16 +77,28 @@ To do so, double-click *SRM_Setup* and then select *Execute*.
 
 This script requires one input argument, *Booking Manager Element Info*. For this input argument, specify the value "{}". Click *Execute now*.
 
+![SRM Setup](~/user-guide/images/SRM_setup.png)
+
 > [!NOTE]
 > If the script execution fails, wait a few minutes and try again. If the problem persists, contact Skyline Communications.
-
-![SRM Setup](~/user-guide/images/SRM_setup.png)
 
 The script will configure the framework and create all relevant components to get started with the development of a process.
 
 ## Upgrading the PA Framework
 
 If you already have an existing version of the PA Framework installed, update it to the latest version available on DataMiner Dojo.
+
+1. If you upgraded from a PA Framework version older than 1.3.0 (the current officially supported minimum version) to version 1.3.0 or later, run the *PA_MigratePoolsAndQueues* script.
+
+   > [!TIP]
+   > See also: [Running Automation scripts](xref:Running_Automation_scripts)
+
+   > [!WARNING]
+   > It is essential you run this script first before moving on to the next steps.
+
+   Also make sure that the files *ProcessAutomation.dll* and *SLSRMLibrary.dll* cannot be found in the following location of the Skyline DataMiner folder: `c:\Skyline DataMiner\Files\DLLImport\` and `c:\Skyline DataMiner\ProtocolScripts\DLLImport\`.
+
+    If these files *are* present, delete them and restart the DMAs involved.
 
 1. Check the Process Automation release notes to see which minimum DataMiner version is required.
 
@@ -97,7 +109,4 @@ If you already have an existing version of the PA Framework installed, update it
    > [!NOTE]
    > DataMiner will restart during the installation of the package.
 
-1. If you upgraded from a PA Framework version older than 1.3.0 (the current officially supported minimum version) to version 1.3.0 or later, run the *PA_MigratePoolsAndQueues* script.
 
-   > [!TIP]
-   > See also: [Running Automation scripts](xref:Running_Automation_scripts)

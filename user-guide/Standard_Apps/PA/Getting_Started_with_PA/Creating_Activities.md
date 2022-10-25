@@ -7,7 +7,7 @@ uid: Creating_Activities
 You can create different types of activities, depending on your final objective. Not all possible activities are always described. The steps required to develop each activity are detailed below.
 
 > [!NOTE]
-> In case resource management is not required, you should use script tasks instead of resource tasks if at all possible, as this will decrease implementation and configuration efforts.
+> In case resource management is not required, use script tasks instead of resource tasks if at all possible, as this will decrease implementation and configuration efforts.
 
 ## Script Tasks
 
@@ -25,7 +25,7 @@ You can create different types of activities, depending on your final objective.
 
    1. Save all changes.
 
-   ![Script Task 1](~/images/Script_Task_1.png)
+   ![Script Task 1](~/user-guide/images/Script_Task_1.png)
 
 1. In the *Profiles* module, define the **output parameters** that a script task can potentially generate.
 
@@ -51,13 +51,13 @@ You can create different types of activities, depending on your final objective.
 
              - Display value: Succeed
 
-           ![Script Task 2](~/images/Script_Task_2.png)
+           ![Script Task 2](~/user-guide/images/Script_Task_2.png)
 
         1. Set to *Number*.
 
            - **Units**: ms
 
-           ![Script Task 3](~/images/Script_Task_3.png)
+           ![Script Task 3](~/user-guide/images/Script_Task_3.png)
 
    1. Save all changes.
 
@@ -75,15 +75,15 @@ You can create different types of activities, depending on your final objective.
 
    1. Specify the following information:
 
-      - Name: The name of the profile definition, e.g. "PING IP"
+      - **Name**: The name of the profile definition, e.g. "PING IP"
 
-      - Parameters: Add your previously created input and output parameters.
+      - **Parameters**: Add your previously created input and output parameters.
 
-      - Based on: Choose *PA Script Task* in the drop-down menu.
+      - **Based on**: Choose *PA Script Task* in the drop-down menu.
 
    1. Save all changes.
 
-      ![PING IP](~/images/PING_IP.png)
+      ![PING IP](~/user-guide/images/PING_IP.png)
 
 1. Create an Automation script based on the *PA_ProfileLoadDomTemplate* script available in the PA Framework:
 
@@ -134,7 +134,7 @@ You can create different types of activities, depending on your final objective.
 
    1. Add a “FunctionDve” script dummy and configure it with following protocol: “Skyline Process Automation.PA Script Task”, version *Production*.
 
-      ![PA_PING_IP](~/images/Automation_Script.png)
+      ![PA_PING_IP](~/user-guide/images/Automation_Script.png)
 
       > [!NOTE]
       > In the C# block, never try to directly retrieve data from the DOM instance, as this can have unexpected results.
@@ -147,7 +147,7 @@ You can create different types of activities, depending on your final objective.
 
    1. Save all changes.
 
-      ![Profile Definition](~/images/Profile_Definition.png)
+      ![Profile Definition](~/user-guide/images/Profile_Definition.png)
 
 ## User tasks
 
@@ -193,9 +193,9 @@ To create resource tasks:
 
    1. Specify the following information:
 
-      - Name: The name of the profile definition, e.g. "PING IP"
+      - **Name**: The name of the profile definition, e.g. "PING IP"
 
-      - Parameters: Add your previously created input and output parameters.
+      - **Parameters**: Add your previously created input and output parameters.
 
    1. Save all changes.
 
@@ -327,7 +327,7 @@ To create resource tasks:
 
    1. Save all changes.
 
-      ![Profile Definition](~/images/Profile_Definition.png)
+      ![Profile Definition](~/user-guide/images/Profile_Definition.png)
 
 1. Create a resource pool.
 
@@ -339,11 +339,11 @@ To create resource tasks:
 
    1. Click your newly created resource pool in the overview on the left, and go to the *Properties* tab. Next add the following pool property:
 
-      Name: Process Automation
+      **Name**: Process Automation
 
-      Value: True
+      **Value**: True
 
-      ![PING IP Resources](~/images/PING_IP_Resources.png)
+      ![PING IP Resources](~/user-guide/images/PING_IP_Resources.png)
 
 1. Generate a resource from the element created earlier, using the previously defined function. 
 
@@ -351,15 +351,15 @@ To create resource tasks:
 
    1. In the *Device* tab, specify the following information:
 
-      - Function: Choose your previously defined function, e.g. PING IP.
+      - **Function**: Choose your previously defined function, e.g. PING IP.
 
-      - Link element: Specify the element you created earlier, e.g. PING 01
+      - **Link element**: Specify the element you created earlier, e.g. PING 01
 
-      - Instance: <Element>
+      - **Instance**: <Element>
 
    1. Click the *Save* button in the bottom right corner.
 
-   ![Add resource](~/images/Resources.png)
+   ![Add resource](~/user-guide/images/Resources.png)
 
 1. Return to *Automation* and launch the *SRM_Setup* script that can be found in the *PA* folder in the *automation scripts* tab. To do so, double-click *SRM_Setup* and then select *Execute*. This script requires one input argument, *Booking Manager Element Info*. For this input argument, specify the value "{}". Click *Execute now*.
 <!-- Comment: Verify whether this is correct. -->

@@ -6,7 +6,7 @@ uid: Process_DOM_Instance
 
 A process DataMiner Object Model (DOM) instance can be used as a container of data available during the execution of a process. Each activity can grab data from the process DOM instance and update fields in this container. This results in an easy way to exchange data between activities.
 
-Fields from the process DOM instance can also be used as decision criteria for the [gateways](xref:Process_Definition#Gateway).
+Fields from the process DOM instance can also be used as decision criteria for the [gateways](xref:Process_Definition#gateway).
 
 > [!NOTE]
 > Updating lists is not supported.
