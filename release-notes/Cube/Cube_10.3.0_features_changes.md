@@ -816,7 +816,7 @@ Changes that might result in anomaly alarms of a certain type being cleared:
 - Changing the template filter so that it is no longer applicable to the parameter in question.
 
 > [!NOTE]
-> When an alarm template is changed in such a way that monitoring of a certain type of anomaly is started, then every open suggestion event for that type of anomaly will be promoted to an alarm event.
+> When an alarm template that had already been assigned to an element earlier is changed in such a way that monitoring of a certain type of anomaly is started, or when it is replaced by another alarm template that causes the monitoring of a certain type of anomaly to start, then every open suggestion event for that type of anomaly associated with the element in question will be promoted to an alarm event.
 
 #### System Center: Link to online help now points to 'Connecting your DataMiner System to the cloud' on <https://docs.dataminer.services/> [ID_34683]
 
