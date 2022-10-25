@@ -27,6 +27,12 @@ It is now possible to decommission a Failover setup while the server hosting the
 > [!NOTE]
 > When you try to decommission a Failover setup while the offline agent is missing, in Cube's *Failover Config* window, a warning will be displayed.
 
+#### Dashboards app: Parameter feeds that list EPM parameters now allow items to be preselected [ID_34554] [ID_34588]
+
+<!-- MR 10.3.0 - FR 10.2.12 -->
+
+When an EPM feed is used to feed EPM identifiers to a parameter feed, it is now possible to configure filters that will preselect certain items in the parameter feed.
+
 #### Failover: A reverse proxy will now be used to re-route HTTP traffic from the offline agent to the online agent [ID_34606]
 
 <!-- MR 10.2.0 [CU9] - FR 10.2.12 -->
@@ -346,3 +352,12 @@ When you hovered over a trend graph while the legend was disabled, the trend val
 <!-- MR 10.2.0 [CU9] - FR 10.2.12 -->
 
 When a large PDF file (e.g. a PDF report) was created in a web app, in some cases, an error could occur.
+
+#### Skyline Device Simulator: 'no such object' would incorrectly be returned when requesting data from a simulation [ID_34746]
+
+<!-- MR 10.3.0 - FR 10.2.12 -->
+
+When you tried to request data from a simulation that was built with AutoBuildVersion 1.3, in some cases, "no such object" would incorrectly be returned.
+
+> [!CAUTION]
+> This tool is provided "As Is" with no representation or warranty whatsoever. Skyline Communications will not provide any maintenance or support for this tool.

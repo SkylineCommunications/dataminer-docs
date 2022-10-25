@@ -758,3 +758,12 @@ When a service template was created using the *CreateServiceTemplate* method, th
 <!-- MR 10.3.0 - FR 10.2.11 -->
 
 When the GQI query linked to a table component was changed, the table would incorrectly not get updated when column filters were applied. The table would only get updated when you changed the column filters.
+
+#### Skyline Device Simulator: 'no such object' would incorrectly be returned when requesting data from a simulation [ID_34746]
+
+<!-- MR 10.3.0 - FR 10.2.12 -->
+
+When you tried to request data from a simulation that was built with AutoBuildVersion 1.3, in some cases, "no such object" would incorrectly be returned.
+
+> [!CAUTION]
+> This tool is provided "As Is" with no representation or warranty whatsoever. Skyline Communications will not provide any maintenance or support for this tool.

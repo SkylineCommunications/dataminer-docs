@@ -356,6 +356,12 @@ A new *IsActive* column has been added to *Get alarms* data source. This column 
 
 When, in the Dashboards app or a web app, you apply multiple sort orders in a *Table* component, multiple sort operators will now be appended to the GQI query that is feeding data to the component.
 
+#### Dashboards app: Parameter feeds that list EPM parameters now allow items to be preselected [ID_34554] [ID_34588]
+
+<!-- MR 10.3.0 - FR 10.2.12 -->
+
+When an EPM feed is used to feed EPM identifiers to a parameter feed, it is now possible to configure filters that will preselect certain items in the parameter feed.
+
 #### Dashboards app: Upload size of PDF files will now be validated [ID_34620]
 
 <!-- MR 10.3.0 - FR 10.2.12 -->
