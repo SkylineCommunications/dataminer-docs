@@ -22,6 +22,24 @@ uid: Cube_Feature_Release_10.2.12
 
 When trending a parameter, you can now add related parameters by clicking the light bulb icon in the top-right corner of the trend. In doing so, you will get an overview of suggested parameters that are related to the currently displayed parameter trend.
 
+#### Visual Overview - ListView component : 'Reservation.Start' and 'Reservation.End' columns can now be configured to convert date/time values to the current time zone [ID_34512]
+
+<!-- MR 10.3.0 - FR 10.2.12 -->
+
+Up to now, when you added the columns *Reservation.Start* and *Reservation.End* to a ListView component configured to list bookings, the date/time values in those columns would always be interpreted as UTC values. From now on, if you set the type of those columns to "Date InvariantCulture", the date/time values in those columns will be converted to the time zone specified in the Cube settings.
+
+#### Server-side search: New option 'includeAllCustomProperties' [ID_34541]
+
+<!-- MR 10.3.0 - FR 10.2.12 -->
+
+In the *MaintenanceSettings.xml* file, you can configure the DataMiner Cube server-side search engine by specifying one or more search options in the *SLNet.SearchOptions* element.
+
+If you specify the new *includeAllCustomProperties* option, the server-side search engine will now search the values of all custom properties. Up to now, the search engine would by default only search the values of the custom properties that were displayed in the Surveyor.
+
+For more information on the available search options, see [Setting the indexing options for the server-side search](xref:Setting_the_indexing_options_for_the_server-side_search).
+
+Also, from now on, DataMiner Cube will call the server-side search engine when you enter a numeric search string like "1234". Up to now, when you entered a numeric search string, DataMiner Cube would perform a client-side search that would only return views of which the ID matched the search string.
+
 ## Changes
 
 ### Enhancements
