@@ -44,6 +44,20 @@ This feature requires the Application Request Routing (ARR) module to be install
 > [!NOTE]
 > If you manually uninstall ARR, it will not be reinstalled automatically during the next upgrade. In order to force the upgrade process to reinstall it, remove the ARR entry from the `C:\Skyline DataMiner\Upgrades\UpgradeActions\ExecutableEvents.xml` file.
 
+#### Dashboards app: Items selected in a parameter feed listing EPM parameters will now be saved in the URL of the dashboard [ID_34622]
+
+<!-- MR 10.3.0 - FR 10.2.12 -->
+
+The parameters and indices selected in a parameter feed listing EPM parameters will now be saved in the URL of the dashboard.
+
+As a result, the same items will automatically be selected again after you refresh the page.
+
+#### Dashboards app: Parameter indices selected in a parameter feed listing EPM parameters can now be fed to other components [ID_34629]
+
+<!-- MR 10.3.0 - FR 10.2.12 -->
+
+After selecting column parameter indices in a parameter feed listing EPM parameters, you can now feed those selected indices to other components.
+
 ## Changes
 
 ### Enhancements
