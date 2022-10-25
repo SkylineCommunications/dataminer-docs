@@ -71,6 +71,27 @@ Because of a number of enhancements, overall accuracy when detecting flatline ch
 
 Any alarm or suggestion events created for flatline changes will now close sooner when one of the above-mentioned situations occurs.
 
+#### Trending - Behavioral anomaly detection: Enhanced updating of anomaly alarms after alarm template changes [ID_34543]
+
+<!-- MR 10.3.0 - FR 10.2.12 -->
+
+Because of a number of enhancements, anomaly alarms will now be updated even more quickly after an alarm template change.
+
+For example, if the monitoring of a certain type of anomaly (flatline, level shift, variance, trend) stops because of an alarm template change, every open alarm for that type of anomaly will now be cleared.
+
+Changes that might result in anomaly alarms of a certain type being cleared:
+
+- Assigning a new alarm template that does not monitor this type of anomaly.
+
+- Removing an alarm template, causing this type of anomaly to no longer be monitored.
+
+- Editing an alarm template in such a way that this type of anomaly is no longer monitored.
+
+- Changing the template filter so that it is no longer applicable to the parameter in question.
+
+> [!NOTE]
+> When an alarm template is changed in such a way that monitoring of a certain type of anomaly is started, then every open suggestion event for that type of anomaly will be promoted to an alarm event.
+
 #### System Center: Link to online help now points to 'Connecting your DataMiner System to the cloud' on <https://docs.dataminer.services/> [ID_34683]
 
 <!-- MR 10.3.0 - FR 10.2.12 -->
