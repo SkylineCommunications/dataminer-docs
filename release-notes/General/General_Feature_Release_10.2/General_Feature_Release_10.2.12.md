@@ -315,6 +315,12 @@ In some rare cases, an error could occur in SLElement when rows were deleted fro
 
 When DataMiner Maps v1 was used with Google Maps as provider, in some cases, the *Loading Google Maps...* screen would incorrectly stay visible after the map had been loaded.
 
+#### DataMiner upgrade: 'File already exists' exception could be thrown when multiple actions took a backup of the same file [ID_34601]
+
+<!-- MR 10.3.0 - FR 10.2.12 -->
+
+When, during a DataMiner upgrade, multiple upgrade actions took a backup of the same file within the same second, in some cases, a `file already exists` exception could be thrown.
+
 #### Problem when recording a GQI query [ID_34608]
 
 <!-- MR 10.2.0 [CU9] - FR 10.2.12 -->

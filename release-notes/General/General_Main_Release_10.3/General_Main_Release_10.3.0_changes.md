@@ -759,6 +759,12 @@ When a service template was created using the *CreateServiceTemplate* method, th
 
 When the GQI query linked to a table component was changed, the table would incorrectly not get updated when column filters were applied. The table would only get updated when you changed the column filters.
 
+#### DataMiner upgrade: 'File already exists' exception could be thrown when multiple actions took a backup of the same file [ID_34601]
+
+<!-- MR 10.3.0 - FR 10.2.12 -->
+
+When, during a DataMiner upgrade, multiple upgrade actions took a backup of the same file within the same second, in some cases, a `file already exists` exception could be thrown.
+
 #### Skyline Device Simulator: 'no such object' would incorrectly be returned when requesting data from a simulation [ID_34746]
 
 <!-- MR 10.3.0 - FR 10.2.12 -->
