@@ -2,4 +2,4 @@
 uid: Creating_Activation_Window
 ---
 
-# Creating Activation Window
+# Creating activation window

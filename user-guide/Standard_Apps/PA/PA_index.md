@@ -2,7 +2,7 @@
 uid: PA_index
 ---
 
-# Process Automation Framework
+# Process Automation framework
 
 ## Objective
 

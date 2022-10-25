@@ -2,7 +2,7 @@
 uid: Queue_Element
 ---
 
-# Queue Element
+# Queue element
 
 The execution of activities is managed by queue elements.
 

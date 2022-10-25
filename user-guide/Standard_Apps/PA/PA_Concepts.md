@@ -2,7 +2,7 @@
 uid: PA_Concepts
 ---
 
-# Process Automation Concepts
+# Process Automation concepts
 
 PA introduces components and concepts into DataMiner that are used to model, implement, execute, and monitor different types of processes.
 

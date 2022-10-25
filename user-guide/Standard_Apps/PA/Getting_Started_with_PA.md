@@ -2,7 +2,7 @@
 uid: Getting_Started_With_PA
 ---
 
-# Getting Started with PA
+# Getting started with PA
 
 The following sections provide a step-by-step description of how to deploy the PA framework, develop a process and its associated activities, and create an activation window.
 

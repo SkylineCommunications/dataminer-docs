@@ -2,14 +2,14 @@
 uid: Creating_Activities
 ---
 
-# Creating Activities
+# Creating activities
 
 You can create different types of activities, depending on your final objective. Not all possible activities are always described. The steps required to develop each activity are detailed below.
 
 > [!NOTE]
 > In case resource management is not required, use script tasks instead of resource tasks if at all possible, as this will decrease implementation and configuration efforts.
 
-## Script Tasks
+## Script tasks
 
 1. In the *Profiles* module, define the **input parameters** required for the script task to execute.
 

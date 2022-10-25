@@ -2,4 +2,4 @@
 uid: DOM_Instances_Cleanup
 ---
 
-# DOM Instances Cleanup
+# DOM instances cleanup

@@ -16,7 +16,7 @@ For more information on how to install Elasticsearch on your DMA, click [here](x
 
 To make sure DOM data are available in dashboards and applications, make sure the [DOMManager soft-launch option](xref:SoftLaunchOptions#dommanager) is enabled.
 
-## Installing the SRM Framework
+## Installing the SRM framework
 
 Process Automation requires the creation of a [booking manager element](xref:SolSRM) named *Process Automation instances*, configured with the *Process Automation virtual platform*. To allow us to create this element, we first need to install the SRM framework on the DataMiner System.
 
@@ -45,7 +45,7 @@ To install the SRM Framework:
    > [!TIP]
    > See also: [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent)
 
-## Installing the Process Automation Framework
+## Installing the process automation framework
 
 To install the PA Framework:
 
@@ -69,7 +69,7 @@ To install the PA Framework:
    > [!TIP]
    > See also: [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent)
 
-## Configuring the PA Framework
+## Configuring the PA framework
 
 To set up the initial configuration of the PA Framework go to *Automation* and run the *SRM_Setup* Automation script that can be found in the *PA* subfolder in the *automation scripts* tab and eponymous folder.
 
@@ -84,7 +84,7 @@ This script requires one input argument, *Booking Manager Element Info*. For thi
 
 The script will configure the framework and create all relevant components to get started with the development of a process.
 
-## Upgrading the PA Framework
+## Upgrading the PA framework
 
 If you already have an existing version of the PA Framework installed, update it to the latest version available on DataMiner Dojo.
 
@@ -108,5 +108,3 @@ If you already have an existing version of the PA Framework installed, update it
 
    > [!NOTE]
    > DataMiner will restart during the installation of the package.
-
-

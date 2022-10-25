@@ -8,7 +8,7 @@ A process is a collection of granular activities interconnected with each other 
 
 A DataMiner Object Model (DOM) instance named “process DOM instance”, however, will be used as a container of data, which the various activities within a process can retrieve or update. This way, the different activities *can* exchange data.
 
-## Supported Activities
+## Supported activities
 
 Process Automation supports the following types of activities:
 

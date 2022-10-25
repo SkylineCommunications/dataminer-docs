@@ -22,7 +22,7 @@ Each process definition needs to start with one of the following events:
 
 Each process definition needs to have one or more end events to indicate the end point(s) of the process.
 
-## Activation Window
+## Activation window
 
 For process definition to be usable, it must be instantiated, which means that an activation window must be created, defining when the process can be used.
 
