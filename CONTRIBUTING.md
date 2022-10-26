@@ -197,7 +197,7 @@ uid: contributing
 ---
 ```
 
-To add a cross-reference to a header on the same page as the cross-reference itself, do not specify "xref:", but instead add a hash followed by the header text, without special characters and with hyphens instead of spaces. For example:
+To add a cross-reference to a header on the same page as the cross-reference itself, do not specify "xref:", but instead add a hash followed by the header text, lowercase without special characters and with hyphens instead of spaces. For example:
 
 ```md
 If you are unfamiliar with this syntax, refer to [Markdown syntax](#markdown-syntax).
