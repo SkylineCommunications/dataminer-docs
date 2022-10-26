@@ -930,3 +930,9 @@ When multiple error messages boxes were being displayed, clicking the *Close* bu
 Alarm groups would not get cleared automatically when the *AutoClear* option was set to false.
 
 Also, in some cases, after clearing an alarm group, a clearable version of that alarm group would incorrectly remain visible in the Alarm Console, even when the *AutoClear* option was set to true.
+
+#### Trending - Pattern matching: Not all detected pattern occurrences would be indicated when you opened a trend graph [ID_34671]
+
+<!-- MR 10.3.0 - FR 10.2.12 -->
+
+When you opened a trend graph that contained patterns matching existing tags, in some cases, not all detected occurrences of those patterns would initially be indicated. Only after zooming out would all detected patterns be properly indicated.

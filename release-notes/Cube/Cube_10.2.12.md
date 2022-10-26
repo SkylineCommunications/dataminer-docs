@@ -135,3 +135,9 @@ When triggering a refresh of a trend chart, the data and axes on the line chart 
 <!-- MR 10.1.0 [CU21] / 10.2.0 [CU9] - FR 10.2.12 -->
 
 When a large number of shapes generated based on child items in a view were sorted by a custom property value, in some rare cases, those shapes would not be displayed in the correct order.
+
+#### Trending - Pattern matching: Not all detected pattern occurrences would be indicated when you opened a trend graph [ID_34671]
+
+<!-- MR 10.3.0 - FR 10.2.12 -->
+
+When you opened a trend graph that contained patterns matching existing tags, in some cases, not all detected occurrences of those patterns would initially be indicated. Only after zooming out would all detected patterns be properly indicated.
