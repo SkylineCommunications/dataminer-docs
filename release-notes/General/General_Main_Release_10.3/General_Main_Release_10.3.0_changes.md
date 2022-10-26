@@ -409,6 +409,12 @@ Alarm locking in the SLElement process has been enhanced.
 
 Because of a number of enhancements, overall performance has increased when opening selection boxes, especially when they contain a large number of items.
 
+#### Dashboards app / Low-code apps - Visual Overview component: Enhancements with regard to WebSocket/polling settings and user access to visual overviews [ID_34624]
+
+<!-- MR 10.3.0 - FR 10.2.12 -->
+
+A number of enhancements have been made to the visual overview component, especially with regard to the WebSocket/polling settings and the algorithm that checks whether users have access to the visual overviews retrieved by the component.
+
 ### Fixes
 
 #### SLAnalytics: Problem with trend prediction [ID_31352]

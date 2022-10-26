@@ -197,6 +197,12 @@ When an *NT_SNMP_GET* request contained a MultipleGetBulk (`:tablev2`) and an in
 
 When PDF files are uploaded via the WebAPI (e.g. when a PDF report is generated), an error will now be thrown when the batch size exceeds 10 MB or the total file size exceeds 1 GB.
 
+#### Dashboards app / Low-code apps - Visual Overview component: Enhancements with regard to WebSocket/polling settings and user access to visual overviews [ID_34624]
+
+<!-- MR 10.3.0 - FR 10.2.12 -->
+
+A number of enhancements have been made to the visual overview component, especially with regard to the WebSocket/polling settings and the algorithm that checks whether users have access to the visual overviews retrieved by the component.
+
 #### Dashboards app: Reports will no longer contain visual replacements [ID_34632]
 
 <!-- MR 10.3.0 - FR 10.2.12 -->
