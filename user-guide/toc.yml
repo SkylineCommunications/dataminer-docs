@@ -2435,8 +2435,6 @@
               topicUid: Pushing_Tokens_Into_A_Process
             - name: Integrating Gateways
               topicUid: Integrating_Gateways
-            - name: Creating Resource Tasks
-              topicUid: Creating_Resource_Tasks
     - name: DataMiner PTP app
       topicUid: SolPTP
       items:
