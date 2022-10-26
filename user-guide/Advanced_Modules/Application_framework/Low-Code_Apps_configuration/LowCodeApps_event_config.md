@@ -60,7 +60,7 @@ To configure an event to close a panel of the app:
 
 1. Select *Close a panel* and select the panel.
 
-1. In the *Where* box, select where the panel should be closed: in a pop-up window, on the left, or on the right.
+1. In the *Where* box, select where the panel that should be closed is located: in a pop-up window, on the left, or on the right. This is necessary in case the same panel is opened multiple times in different places.
 
 ## Opening an app
 
