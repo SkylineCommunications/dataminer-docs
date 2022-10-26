@@ -6,7 +6,8 @@ This is where you'll find all essential information on how to use DataMiner and 
 
 Can't find what you need here? Go to our [DataMiner Community website](https://community.dataminer.services/) for questions, use cases, additional resources, etc.
 
-Want to contribute? Go to [Contributing to the DataMiner docs](xref:contributing) for more info.
+> [!TIP]
+> Want to contribute? Go to [Contributing to the DataMiner docs](xref:contributing) for more info.
 
 ## Contents
 
