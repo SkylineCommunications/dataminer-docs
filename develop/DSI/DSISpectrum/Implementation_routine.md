@@ -8,7 +8,7 @@ Certain routines must be followed in a spectrum analyzer driver.
 
 - When parameter 64118 has value 1 (settings done), you need to execute the commands that configure new settings on the spectrum analyzer.
 
-- When parameter 64416 has value 1 (applied settings), you need to execute the command that retrieves the trace.
+- When parameter 64116 has value 1 (applied settings), you need to execute the command that retrieves the trace.
 
 - By default, we use 401 as the number of points in the trace. You may need to configure the spectrum analyzer (send command) to use 401 points. Parameter 64001 contains the trace data, so there too you need to specify the number of points in the range tag (0 to 401). This parameter is of type string because the trace data (points) are passed by means of a comma-separated string. Note that this parameter expects values in dBm.
 
