@@ -4,7 +4,7 @@ uid: Creating_and_Configuring_a_Process_Definition
 
 # Creating and configuring a process definition
 
-## Create process DOM definition
+## Creating a process DOM definition
 
 Create a process DOM definition, adding all parameters that are relevant for the process.
 
@@ -18,7 +18,7 @@ The Process DOM definition needs to be used with the “process_automation” mo
 > [!NOTE]
 > By default, TTL on the “process_automation” module ID is set to 30 days. This means that the process DOM instances will stay in the database for 30 days after the last update action.
 
-## Create process definition
+## Creating a process definition
 
 1. In DataMiner Cube, open the *Process Automation* app.
 
@@ -45,7 +45,7 @@ The Process DOM definition needs to be used with the “process_automation” mo
    > [!NOTE]
    > Labels must be unique across the entire process definition.
 
-## Create and assign profile instances
+## Creating and assigning profile instances
 
 1. Make sure there is a profile instance for the PA None Start Event. If this profile instance does not exist yet, create one in the [*Profiles* module](xref:The_Profiles_module) that applies to the PA None Start Event and with the following values :
 
@@ -61,7 +61,7 @@ The Process DOM definition needs to be used with the “process_automation” mo
 
 1. In the *Process Automation* app, select the newly created process definition.
 
-1. Click the *Configure* button to open the process definition configuration wizard.
+1. Click the *Configure* button to open the *process definition configuration* wizard.
 
 1. On the first page of the wizard, select the process DOM definition and click *Next*.
 
@@ -96,3 +96,21 @@ The Process DOM definition needs to be used with the “process_automation” mo
            For output parameters, it only makes sense to link them to the field descriptor of the Process DOM Instance.
 
 1. Click the *Confirm* button.
+
+## Creating an activation window
+
+1. In the *Process Automation* app, select the newly created process definition.
+
+1. Click the *Activate* button.
+
+1. On the first page of the *create activation window* wizard specify the following information:
+
+   - **Process name**: Specify a name for the activation window
+
+   - **Service info**: Identify the process and enable to push tokens into the process from custom code.
+
+     - Select *Create New* to create a *Service info* with the same name as the activation window.
+
+     - Select an existing *Service info* from the drop-down list in case it is required to create multiple activation windows and always link them to the same process identifier.
+
+     ![Activation Window](~/user-guide/images/Activation_Window.png)

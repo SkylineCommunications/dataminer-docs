@@ -2421,8 +2421,6 @@
               topicUid: Creating_Activities
             - name: Creating and Configuring a Process Definition
               topicUid: Creating_and_Configuring_a_Process_Definition
-            - name: Creating Activation Window
-              topicUid: Creating_Activation_Window
         - name: Process Automation app
           topicUid: Process_Automation_App_Two
         - name: Advanced Configuration
