@@ -824,6 +824,16 @@ Changes that might result in anomaly alarms of a certain type being cleared:
 
 On the *Cloud* page of *System Center*, the *online help* hyperlink now points to the [Connecting your DataMiner System to the cloud](xref:Connecting_your_DataMiner_System_to_the_cloud) page on <https://docs.dataminer.services/>.
 
+#### Alarm Console: When grouped, incident alarms will now appear in the group of the highest severity found among the base alarms [ID_34754]
+
+<!-- MR 10.3.0 - FR 10.2.12 -->
+
+When you opened an alarm tab that contained incident alarms, up to now, the icon in front of those incident alarms would show the highest severity found among the base alarms but the severity column would show "suggestion" and, when you grouped/sorted the alarms in the alarm tab by severity, the incident alarms would all appear in the "suggestion" group.
+
+From now on, both the icon and the severity column of incident alarms will show the highest severity found among the base alarms and, when you group/sort the alarms in the alarm tab by severity, the incident alarms will appear in the group of the aforementioned severity.
+
+Also, in case of incident alarms, the alarm duration indicator will now show the highest severity found among the base alarms.
+
 ### Fixes
 
 #### Visual Overview: Problem when navigating inside EPM cards [ID_32288]
@@ -930,6 +940,14 @@ When multiple error messages boxes were being displayed, clicking the *Close* bu
 Alarm groups would not get cleared automatically when the *AutoClear* option was set to false.
 
 Also, in some cases, after clearing an alarm group, a clearable version of that alarm group would incorrectly remain visible in the Alarm Console, even when the *AutoClear* option was set to true.
+
+#### Visual Overview: Problem when loading a DCF signal path [ID_34630]
+
+<!-- MR 10.3.0 - FR 10.2.12 -->
+
+When a visual overview was configured to display a DCF signal path, in some cases, that signal path would not load.
+
+Also, in some cases, elements with an index in a service would incorrectly not show connection lines.
 
 #### Trending - Pattern matching: Not all detected pattern occurrences would be indicated when you opened a trend graph [ID_34671]
 
