@@ -2412,6 +2412,8 @@
               topicUid: PA_Token
             - name: Process Automation app
               topicUid: Process_Automation_App
+        - name: Process Automation app
+          topicUid: Process_Automation_App_Two
         - name: Getting Started with PA
           topicUid: Getting_Started_With_PA
           items:
@@ -2421,8 +2423,6 @@
               topicUid: Creating_Activities
             - name: Creating and Configuring a Process Definition
               topicUid: Creating_and_Configuring_a_Process_Definition
-        - name: Process Automation app
-          topicUid: Process_Automation_App_Two
         - name: Advanced Configuration
           items:
             - name: Logging
