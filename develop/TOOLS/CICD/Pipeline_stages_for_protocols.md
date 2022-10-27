@@ -38,7 +38,9 @@ Currently, the pipeline for protocol development consists of the following stage
 
 - [Initialize validator](#initialize-validator)
 
-- [Run validator](#run-validator)
+- [Run validator XML](#run-validator-xml)
+
+- [Run validator solution](#run-validator-solution)
 
 - [Run major change checker](#run-major-change-checker)
 
@@ -188,9 +190,28 @@ In case you create a new major or system range (i.e. D equals 1, and B or C do n
 
 In case you create a new branch version, e.g. 2.0.0.1, and you do not specify a based on version, then this will be assumed to be a brand-new development. The Validator quality gate settings for an initial version will therefore be applied.
 
-## Run validator
+## Run validator XML
 
-This stage runs the validator on the protocol XML file that was generated in the previous stage.
+This stage runs the validator on the protocol XML file that was generated in the convert solution to XML stage.
+For executing checks related to the C# code of the QActions, a solution is created in the background from the XML file.
+
+The results of the validation in this stage are available as the following artifacts:
+
+- ValidatorResults.xml
+- ValidatorSuppressedResults.xml
+
+In case the number of detected issues by the validator is below 200, the results also get published on Jenkins.
+These are available under the classic view of Jenkins under the DIS Validator Warnings section.
+
+## Run validator solution
+
+This stage runs the validator on the solution as present in the repository.
+This stage can perform additional checks related to the solution itself which cannot be performed by the previous stage.
+
+The results of the validation in this stage are available as the following artifacts:
+
+- ValidatorResultsSolution.xml
+- ValidatorSuppressedResultsSolution.xml
 
 ## Run major change checker
 
@@ -198,7 +219,13 @@ For every new minor version, the pipeline will execute the DIS Major Change Chec
 
 If it does, the major change checker stage will be marked as unstable
 
-The results of the major change checker are also archived as artifacts.
+The results of the major change checker are also archived as the following artifacts:
+
+- MajorChangeCheckerResults.xml
+- MajorChangeCheckerSuppressedResults.xml
+
+In case the number of detected issues by the major change checker is below 50, the results also get published on Jenkins.
+These are available under the classic view of Jenkins under the DIS Major Change Checker Warnings section.
 
 ## Verify developer checklist
 
