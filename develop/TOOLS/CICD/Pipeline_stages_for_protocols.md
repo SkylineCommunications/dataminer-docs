@@ -192,21 +192,18 @@ In case you create a new branch version, e.g. 2.0.0.1, and you do not specify a 
 
 ## Run validator XML
 
-This stage runs the validator on the protocol XML file that was generated in the convert solution to XML stage.
-For executing checks related to the C# code of the QActions, a solution is created in the background from the XML file.
+This stage runs the validator on the protocol XML file that was generated in the "Convert solution to XML" stage. To execute checks related to the C# code of the QActions, a solution is created in the background.
 
 The results of the validation in this stage are available as the following artifacts:
 
 - ValidatorResults.xml
 - ValidatorSuppressedResults.xml
 
-In case the number of detected issues by the validator is below 200, the results also get published on Jenkins.
-These are available under the classic view of Jenkins under the DIS Validator Warnings section.
+In case the number of issues detected by the validator is below 200, the results also get published on Jenkins. They are available under the classic view of Jenkins in the DIS Validator Warnings section.
 
 ## Run validator solution
 
-This stage runs the validator on the solution as present in the repository.
-This stage can perform additional checks related to the solution itself which cannot be performed by the previous stage.
+This stage runs the validator on the solution as present in the repository. This stage can perform additional checks related to the solution itself that cannot be performed by the previous stage.
 
 The results of the validation in this stage are available as the following artifacts:
 
@@ -224,8 +221,7 @@ The results of the major change checker are also archived as the following artif
 - MajorChangeCheckerResults.xml
 - MajorChangeCheckerSuppressedResults.xml
 
-In case the number of detected issues by the major change checker is below 50, the results also get published on Jenkins.
-These are available under the classic view of Jenkins under the DIS Major Change Checker Warnings section.
+In case the number of issues detected by the major change checker is below 50, the results also get published on Jenkins. They are available under the classic view of Jenkins in the DIS Major Change Checker Warnings section.
 
 ## Verify developer checklist
 
