@@ -477,6 +477,12 @@ value=1005 == alpha;value=1005 == beta;value=1005 == gamma; value=1005 == delta;
 > [!NOTE]
 > \[RegexReplace:x,y,z\] placeholders can be nested.
 
+> [!NOTE]
+> If any of the three inputs contains a comma, the separator needs to be replaced:
+> ```txt
+> \[RegexReplace:\[Sep:,#\]regex#value#replace-value\]
+> ```
+
 ### \[Reservation:...\]
 
 From DataMiner 9.6.7 onwards, this placeholder can be used to retrieve a property of a booking, which can be a profile instance GUID, a resource GUID or a custom property.
