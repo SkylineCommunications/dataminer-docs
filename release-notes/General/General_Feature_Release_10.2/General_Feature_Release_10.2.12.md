@@ -243,6 +243,33 @@ When a NATS client had reconnected when DataMiner was running, up to now, the lo
 
 Also, extended logging will now be available when an asynchronous request times out.
 
+#### Service & Resource Management: GetResources methods not using filter elements have now been marked as obsolete [ID_34720]
+
+<!-- MR 10.3.0 - FR 10.2.12 -->
+
+In *ResourceManagerHelper* and *IResourceManagerHelper*, the following methods not using filter elements have now been marked as obsolete:
+
+```csharp
+IEnumerable<Resource> 
+GetResources(IEnumerable<Resource> filters);
+
+Resource[] 
+GetResources(params Resource[] filters);
+```
+
+The following method should now be used instead:
+
+```csharp
+Resource[] 
+GetResources(FilterElement<Resource> filter);
+```
+
+For example, you can now use the following call to retrieve all resources:
+
+```csharp
+var allResources = resourceManagerHelper.GetResources(new TRUEFilterElement<Resource>());
+```
+
 ### Fixes
 
 #### Problem with SLDataMiner when editing an element [ID_34329]
@@ -354,6 +381,12 @@ When, during a DataMiner upgrade, multiple upgrade actions took a backup of the 
 GQI recording is a debugging feature that allows you to save GQI communication and replay it in a lab environment.
 
 When you had enabled this feature, in some rare cases, an error could occur when a GQI query was stored in memory while being executed.
+
+#### Problem with SLDataGateway when importing a DELT element with a large number of Elasticsearch logger table entries [ID_34626]
+
+<!-- MR 10.2.0 [CU9] - FR 10.2.12 -->
+
+When a DELT element with more than 1,000 Elasticsearch logger table entries was being imported, in some cases, SLDataGateway would end up in an endless loop and start using a large amount of virtual memory.
 
 #### Low-code apps: 'Read mode' setting of a form would incorrectly not be available when the form only contained DOM instance data [ID_34627]
 

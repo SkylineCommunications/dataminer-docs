@@ -293,6 +293,12 @@ When you had enabled this feature, in some rare cases, an error could occur when
 
 When a large number of shapes generated based on child items in a view were sorted by a custom property value, in some rare cases, those shapes would not be displayed in the correct order.
 
+#### Problem with SLDataGateway when importing a DELT element with a large number of Elasticsearch logger table entries [ID_34626]
+
+<!-- MR 10.2.0 [CU9] - FR 10.2.12 -->
+
+When a DELT element with more than 1,000 Elasticsearch logger table entries was being imported, in some cases, SLDataGateway would end up in an endless loop and start using a large amount of virtual memory.
+
 #### Low-code apps: 'Read mode' setting of a form would incorrectly not be available when the form only contained DOM instance data [ID_34627]
 
 <!-- MR 10.2.0 [CU9] - FR 10.2.12 -->

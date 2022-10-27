@@ -415,6 +415,33 @@ Because of a number of enhancements, overall performance has increased when open
 
 A number of enhancements have been made to the visual overview component, especially with regard to the WebSocket/polling settings and the algorithm that checks whether users have access to the visual overviews retrieved by the component.
 
+#### Service & Resource Management: GetResources methods not using filter elements have now been marked as obsolete [ID_34720]
+
+<!-- MR 10.3.0 - FR 10.2.12 -->
+
+In *ResourceManagerHelper* and *IResourceManagerHelper*, the following methods not using filter elements have now been marked as obsolete:
+
+```csharp
+IEnumerable<Resource> 
+GetResources(IEnumerable<Resource> filters);
+
+Resource[] 
+GetResources(params Resource[] filters);
+```
+
+The following method should now be used instead:
+
+```csharp
+Resource[] 
+GetResources(FilterElement<Resource> filter);
+```
+
+For example, you can now use the following call to retrieve all resources:
+
+```csharp
+var allResources = resourceManagerHelper.GetResources(new TRUEFilterElement<Resource>());
+```
+
 ### Fixes
 
 #### SLAnalytics: Problem with trend prediction [ID_31352]
