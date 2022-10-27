@@ -131,6 +131,12 @@ When an HTTP element received an ERROR_WINHTTP_SECURE_FAILURE after sending an H
 
 From now on, when an HTTP element receives an ERROR_WINHTTP_SECURE_FAILURE after sending an HTTP request, it will resend the request for a number of times, taking into account the number of retries specified in the element's port settings.
 
+#### Cassandra: Enhanced querying of trend data [ID_34659]
+
+<!-- Main Release Version 10.1.0 [CU21]/10.2.0 [CU9] - Feature Release Version TBD -->
+
+A number of enhancements have been made with regard to querying trend data against a Cassandra database.
+
 #### SLMessageBroker log file entries will now mention the NATS server to which the NATS client is connected [ID_34719]
 
 <!-- MR 10.2.0 [CU9] - FR 10.2.12 -->
@@ -355,6 +361,18 @@ SLWatchDog will now periodically check the log file and, if it finds the above-m
 - the *nats-account-server.exe* process will be restarted.
 
 Also, SLNet will now by default limit the number of NAS log files in the same way as it limits the NATS log files: check the files every 15 minutes and keep the 10 most recent files.
+
+#### Mediation protocols: 'Recursion detected in the mediation links tree' error [ID_34736]
+
+<!-- Main Release Version 10.0.0 [CU22]/10.1.0 [CU21]/10.2.0 [CU9] - Feature Release Version 10.2.12 -->
+
+When a mediation protocol contained a *Params.Param.Mediation.LinkTo* element that pointed to a protocol that had the same *ElementType* value as the one specified in the *baseFor* attribute of its *Protocol* element, then the following error would be logged in the *SLDataMiner.txt* log file:
+
+```txt
+Recursion detected in the mediation links tree
+```
+
+As this error was caused by an internal lookup issue that had no effect whatsoever with regard to mediation layer functionality, from now on, it will no longer be logged.
 
 #### DataMiner Cube - Trending: Double-clicking a suggestion or alarm event created by SLAnalytics would open a trend graph showing "no data" [ID_34751]
 

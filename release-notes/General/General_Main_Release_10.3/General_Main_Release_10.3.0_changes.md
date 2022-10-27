@@ -422,18 +422,14 @@ A number of enhancements have been made to the visual overview component, especi
 In *ResourceManagerHelper* and *IResourceManagerHelper*, the following methods not using filter elements have now been marked as obsolete:
 
 ```csharp
-IEnumerable<Resource> 
-GetResources(IEnumerable<Resource> filters);
-
-Resource[] 
-GetResources(params Resource[] filters);
+IEnumerable<Resource> GetResources(IEnumerable<Resource> filters);
+Resource[] GetResources(params Resource[] filters);
 ```
 
 The following method should now be used instead:
 
 ```csharp
-Resource[] 
-GetResources(FilterElement<Resource> filter);
+Resource[] GetResources(FilterElement<Resource> filter);
 ```
 
 For example, you can now use the following call to retrieve all resources:

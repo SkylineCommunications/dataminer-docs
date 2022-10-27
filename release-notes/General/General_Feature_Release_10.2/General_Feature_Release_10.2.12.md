@@ -250,18 +250,14 @@ Also, extended logging will now be available when an asynchronous request times 
 In *ResourceManagerHelper* and *IResourceManagerHelper*, the following methods not using filter elements have now been marked as obsolete:
 
 ```csharp
-IEnumerable<Resource> 
-GetResources(IEnumerable<Resource> filters);
-
-Resource[] 
-GetResources(params Resource[] filters);
+IEnumerable<Resource> GetResources(IEnumerable<Resource> filters);
+Resource[] GetResources(params Resource[] filters);
 ```
 
 The following method should now be used instead:
 
 ```csharp
-Resource[] 
-GetResources(FilterElement<Resource> filter);
+Resource[] GetResources(FilterElement<Resource> filter);
 ```
 
 For example, you can now use the following call to retrieve all resources:
@@ -452,6 +448,18 @@ SLWatchDog will now periodically check the log file and, if it finds the above-m
 - the *nats-account-server.exe* process will be restarted.
 
 Also, SLNet will now by default limit the number of NAS log files in the same way as it limits the NATS log files: check the files every 15 minutes and keep the 10 most recent files.
+
+#### Mediation protocols: 'Recursion detected in the mediation links tree' error [ID_34736]
+
+<!-- Main Release Version 10.0.0 [CU22]/10.1.0 [CU21]/10.2.0 [CU9] - Feature Release Version 10.2.12 -->
+
+When a mediation protocol contained a *Params.Param.Mediation.LinkTo* element that pointed to a protocol that had the same *ElementType* value as the one specified in the *baseFor* attribute of its *Protocol* element, then the following error would be logged in the *SLDataMiner.txt* log file:
+
+```txt
+Recursion detected in the mediation links tree
+```
+
+As this error was caused by an internal lookup issue that had no effect whatsoever with regard to mediation layer functionality, from now on, it will no longer be logged.
 
 #### Skyline Device Simulator: 'no such object' would incorrectly be returned when requesting data from a simulation [ID_34746]
 

@@ -683,11 +683,11 @@ From now on, you can override a Visio page name by specifying an "OverridePageNa
 
 Shape data items of type *ParametersSummary* can now have values that include dynamic placeholders referring to session variables.
 
-#### Visual Overview - ListView component : 'Reservation.Start' and 'Reservation.End' columns can now be configured to convert date/time values to the current time zone [ID_34512]
+#### Visual Overview - ListView component : Custom property columns 'Reservation.Start' and 'Reservation.End' can now be configured to convert date/time values to the time zone specified in the navigation panel of the bookings timeline [ID_34512]
 
 <!-- MR 10.3.0 - FR 10.2.12 -->
 
-Up to now, when you added the columns *Reservation.Start* and *Reservation.End* to a ListView component configured to list bookings, the date/time values in those columns would always be interpreted as UTC values. From now on, if you set the type of those columns to "Date InvariantCulture", the date/time values in those columns will be converted to the time zone specified in the Cube settings.
+Up to now, when you added the custom property columns *Reservation.Start* and *Reservation.End* to a ListView component configured to list bookings, the UTC date/time values in those columns would always be converted to the time zone of the DataMiner Agent. From now on, if you set the type of those columns to "Date InvariantCulture", the date/time values in those columns will be converted to the time zone specified in the navigation panel of the bookings timeline.
 
 #### Server-side search: New option 'includeAllCustomProperties' [ID_34541]
 
