@@ -2747,6 +2747,8 @@
     - name: Known issues
       topicUID: Known_issues
       items:
+        - name: SLProtocol memory leak when HTTP connectors are used
+          topicUID: KI_SLProtocol_memory_leak_HTTP
         - name: Data from Elasticsearch cluster with IPv6 addresses offloaded to files
           topicUID: KI_Elasticsearch_IPv6
         - name: Increased CPU load and degraded performance because of excessive number of SPI events
