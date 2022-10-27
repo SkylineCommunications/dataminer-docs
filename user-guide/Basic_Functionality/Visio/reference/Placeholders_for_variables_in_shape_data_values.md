@@ -475,13 +475,13 @@ value=1005 == alpha;value=1005 == beta;value=1005 == gamma; value=1005 == delta;
 ```
 
 > [!NOTE]
-> \[RegexReplace:x,y,z\] placeholders can be nested.
-
-> [!NOTE]
-> If any of the three inputs contains a comma, the separator needs to be replaced:
-> ```txt
-> \[RegexReplace:\[Sep:,#\]regex#value#replace-value\]
-> ```
+>
+> - \[RegexReplace:x,y,z\] placeholders can be nested.
+> - If any of the three input items contains a comma, the separator needs to be replaced (see [About using separator characters](xref:Linking_a_shape_to_a_SET_command#about-using-separator-characters)):
+>
+>   ```txt
+>   [RegexReplace:[Sep:,#]x#y#z]
+>   ```
 
 ### \[Reservation:...\]
 
