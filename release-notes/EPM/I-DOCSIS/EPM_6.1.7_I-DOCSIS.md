@@ -36,3 +36,13 @@ To prevent this, the Skyline EPM Platform connector will now retry three times t
 #### Arris E6000 CCAP Platform: Incorrect US QAM Ch Utilization values [ID_34660]
 
 In the US QAM Channel table for the Arris E6000 CCAP Platform, it could occur that the US QAM Ch Utilization showed incorrect values.
+
+#### Arris E6000 CCAP platform: Exception because file is being used by another process [ID_34780]
+
+After an Arris E6000 CCAP platform element started up, it could occur that an exception similar to the following was thrown:
+
+```txt
+2022/09/19 05:28:24.499|SLManagedScripting.exe|ManagedInterop|ERR|0|211|QA213|DecompressTopicFile|Not able to perform decompression on file. Error: System.IO.IOException: The process cannot access the file 'C:\Skyline DataMiner\Documents\DOCSIS\ActiveQAMChannels\114404_10_DSQAM_CH.gz' because it is being used by another process.
+```
+
+Retry logic has now been added to prevent this issue.
