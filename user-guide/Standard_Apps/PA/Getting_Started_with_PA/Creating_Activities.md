@@ -132,7 +132,7 @@ You can create different types of activities, depending on your final objective.
 
         `helper.Log("The DOM value was updated", PaLogLevel.Information)`;
 
-   1. Add a “FunctionDve” script dummy and configure it with following protocol: “Skyline Process Automation.PA Script Task”, version *Production*.
+   1. Add a *FunctionDve* script dummy and configure it with following protocol: *Skyline Process Automation.PA Script Task*, version *Production*.
 
       ![PA_PING_IP](~/user-guide/images/Automation_Script.png)
 
@@ -153,7 +153,7 @@ You can create different types of activities, depending on your final objective.
 
 A user task is an activity that will wait for a user action so that the token attached to that task can first be completed and the next token can then be generated. Typically, a User Task app will be made available so that the end user can access these User tasks and complete them.
 
-Create a user [DOM definition](xref:DomDefinition) with the “pa_user_task” ModuleID and using the “PA User Task" behavior definition.
+Create a user [DOM definition](xref:DomDefinition) with the *pa_user_task* ModuleID and using the *PA User Task* behavior definition.
 
 > [!NOTE]
 > Process Automation gets delivered with a default user DOM definition.
@@ -168,13 +168,51 @@ Create a user [DOM definition](xref:DomDefinition) with the “pa_user_task” M
 
 To create resource tasks:
 
-1. Define the input parameters required for the script task to execute.
+1. In the *Profiles* module, define the **input parameters** required for the resource task to execute.
 
-   Example: for a “Ping IP” activity, input parameters could be: IP Address
+   For example, for a “Ping IP” activity, an input parameter could be “IP Address”.
 
-1. Define the output parameters (result) that a script task can potentially generate.
+   1. In the *Parameters* tab, create an input parameter by selecting *Add parameter* in the bottom left.
 
-   Example: for a “Ping IP” activity, output parameters could be: Ping Result, RTT
+   1. Specify the following information:
+
+      - **Name**: The name of the parameter, e.g. "Ping - IP Address".
+
+      - **Type**: Set to *Text*.
+
+   1. Save all changes.
+
+1. In the *Profiles* module, define the **output parameters** that a resource task can potentially generate.
+
+   For example, for a “Ping IP” activity, possible output parameters could be “Ping Result” and “RTT”.
+
+   1. In the *Parameters* tab, create an output parameter by selecting *Add parameter* in the bottom left.
+
+   1. Specify the following information:
+
+      - **Name**: The name of the parameter, e.g. "Ping - Result".
+
+      - **Type**:
+
+        1. Set to *Discrete*.
+
+           - **Value**: Click *Add discrete value*.
+
+             - Value: 0.000000
+
+             - Display value: Failed  
+
+             - Value: 1.000000
+
+             - Display value: Succeed
+
+        1. Save all changes.
+
+        1. Set to *Number*.
+
+           - **Units**: ms
+
+        1. Save all changes.
 
 1. In the *Profiles* module, group your input and output parameters into a **profile definition**.
 
@@ -186,9 +224,6 @@ To create resource tasks:
 
    - Ping – RTT
 
-     > [!NOTE]
-     > A reference is dynamically generated: bd625869-cb7a-472c-b834-bd4cba993705 (not visible in the UI)
-
    1. In the *Definitions* tab, select *Add definition*
 
    1. Specify the following information:
@@ -199,17 +234,20 @@ To create resource tasks:
 
    1. Save all changes.
 
+      > [!NOTE]
+      > A reference is dynamically generated: bd625869-cb7a-472c-b834-bd4cba993705 (not visible in the UI)
+
 1. Implement a protocol containing all the logic for the resource task, and create an element based on that protocol.
 
    Example: The “Generic Ping” protocol, with the following parameters:
 
-   - IP Address (RW): Indicates the target IP.
+   - **IP Address (RW)**: Indicates the target IP.
 
-   - ‘Ping’ button: Button to trigger a QAction to ping the IP.
+   - **‘Ping’ button**: Button to trigger a QAction to ping the IP.
 
-   - Ping Result (R): Indicates success or failure of the ping request.
+   - **Ping Result (R)**: Indicates success or failure of the ping request.
 
-   - Ping RTT (R): Indicates the Round Trip Time of the ping query.
+   - **Ping RTT (R)**: Indicates the Round Trip Time of the ping query.
 
 1. [Implement an SRM function](xref:implementing_function_srm) on top of the protocol, using DIS:
 
@@ -234,7 +272,7 @@ To create resource tasks:
       <Function id=".." name="Ping IP" maxInstances="..." profile="bd625869-cb7a-472c-b834-bd4cba993705"> 
       ```
 
-   1. Set the function type to ‘ResourceTask’
+   1. Set the function type to "ResourceTask"
 
       ```xml
       <Function id=".." name="..." maxInstances="..." profile="..."> 
@@ -268,13 +306,13 @@ To create resource tasks:
       </Functions>
       ```
 
-1. In the Protocols & Templates module, import the function into your DataMiner System and activate it.
+1. In the *Protocols & Templates module*, import the function into your DataMiner System and activate it.
 
-   <!-- Comment: Insert new screenshot here -->
+   ![Functions_File](~/user-guide/images/Functions_File.png)
 
 1. Create an Automation script based on the *PA_ProfileLoadDomTemplate* script, which is added to the DataMiner System when Process Automation is deployed. In the script:
 
-   1. Instantiate the PaProfileLoadDomHelper.
+   1. Instantiate the *PaProfileLoadDomHelper*.
 
    1. Use the helper to retrieve the input arguments, based on profile parameter names created earlier.
 
@@ -282,7 +320,7 @@ To create resource tasks:
 
    1. Use the helper to output relevant results, based on profile parameter names created earlier.
 
-   1. Add a ‘FunctionDve’ script dummy, and configure it with the function protocol. The name of the function protocol is composed of the name of the base protocol implementing the logic and the name of the function ( <base Protocol name>.<Function name> ).
+   1. Add a *FunctionDve* script dummy, and configure it with the function protocol. The name of the function protocol is composed of the name of the base protocol implementing the logic and the name of the function ( `<base Protocol name>.<Function name>` ).
 
       <!-- Comment: Insert new screenshot here -->
 
@@ -321,7 +359,7 @@ To create resource tasks:
 
 1. Link the script with the profile definition you created earlier, using the *Script* section of the Profile Definition
 
-   1. Go to *Profiles* and select your previously created profile definition in the *Definitions* tab.
+   1. In the *Profiles* module, select your previously created profile definition in the *Definitions* tab.
 
    1. In the *Scripts* section, click *Add*. Next to *Script*, select the script from the drop-down list and click *OK*.
 

@@ -55,9 +55,7 @@ The Process DOM definition needs to be used with the “process_automation” mo
 
      ![Profile_Instance](~/user-guide/images/Profile_Instance.png)
 
-   Alternatively, start the process with a *PA Timer Start Event* that can be used to generate new tokens periodically (see Generate Tokens Periodically).
-
-<!-- Comment: Add xref once 'Generate Tokens Periodically' has been added. -->
+   Alternatively, start the process with a *PA Timer Start Event* that can be used to generate new tokens periodically (see [Generate Tokens Periodically](xref:Pushing_Tokens_Into_A_Process#periodically)).
 
 1. In the *Process Automation* app, select the newly created process definition.
 

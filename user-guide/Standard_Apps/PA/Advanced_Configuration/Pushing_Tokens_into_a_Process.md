@@ -36,11 +36,11 @@ When an activation window starts, it is possible to immediately push a token int
 
    1. Configure the following parameters:
 
-     - **PA Business Key**: The business key that was previously defined.
+      - **PA Business Key**: The business key that was previously defined.
 
-     - **PA DOM Reference**: The process DOM instance that was previously defined.
+      - **PA DOM Reference**: The process DOM instance that was previously defined.
 
-     - **PA Initial Process Instantiation**: Set to *Enabled*.
+      - **PA Initial Process Instantiation**: Set to *Enabled*.
 
 1. Next, when configuring the process, select the newly created profile instance for the PA None Start Event node.
 
@@ -84,5 +84,5 @@ During an activation window, it is possible to push new tokens into a process on
 
       To generate two tokens with a 1 minute interval between them: `{"FrequencyInterval":0,"Occurrences":2,"SubdayInterval":1,"SubdayType":"Minutes"}`
 
-   > [!NOTE]
-   > The PaTimerStartEventRecurringPattern class will support extra timing use cases in the future. However, for now, it is only possible to generate a limited or unlimited number of tokens on a regular basis.
+      > [!NOTE]
+      > The PaTimerStartEventRecurringPattern class will support extra timing use cases in the future. However, for now, it is only possible to generate a limited or unlimited number of tokens on a regular basis.

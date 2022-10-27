@@ -22,7 +22,7 @@ Each process definition needs to have one or more end events to indicate the end
 
 ## Activation window
 
-For process definition to be usable, it must be instantiated, which means that an activation window must be created, defining when the process can be used.
+For process definition to be usable, it must be instantiated, which means that an [activation window](xref:Creating_and_Configuring_a_Process_Definition#creating-an-activation-window) must be created, defining when the process can be used.
 
 The activation window defines the start and stop time of the period in which the process can be used. It also allows you to define a process name, which can be used by external triggers for the execution of a process.
 
