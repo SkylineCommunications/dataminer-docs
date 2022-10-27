@@ -102,9 +102,9 @@ On the *Cloud* page of *System Center*, the *online help* hyperlink now points t
 
 <!-- MR 10.3.0 - FR 10.2.12 -->
 
-When you opened an alarm tab that contained incident alarms, up to now, the icon in front of those incident alarms would show the highest severity found among the base alarms but the severity column would show "suggestion" and, when you grouped/sorted the alarms in the alarm tab by severity, the incident alarms would all appear in the "suggestion" group.
+When you open an alarm tab that contains incident alarms, the icons in front of those incident alarms show the highest severity found among the base alarms and the severity column shows "suggestion".
 
-From now on, both the icon and the severity column of incident alarms will show the highest severity found among the base alarms and, when you group/sort the alarms in the alarm tab by severity, the incident alarms will appear in the group of the aforementioned severity.
+Up to now, when you grouped/sorted the alarms in the alarm tab by severity, the incident alarms would all appear in the "suggestion" group. From now on, they will instead appear in the group of the highest severity found among the base alarms.
 
 Also, in case of incident alarms, the alarm duration indicator will now show the highest severity found among the base alarms.
 
