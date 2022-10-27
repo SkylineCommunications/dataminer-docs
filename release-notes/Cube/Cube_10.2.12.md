@@ -166,3 +166,9 @@ When you opened a trend graph that contained patterns matching existing tags, in
 <!-- Not added to 10.3.0 -->
 
 Alarms without focus data would incorrectly not be disposed of when their parent group was cleared.
+
+#### DataMiner Cube - Trending: Double-clicking a suggestion or alarm event created by SLAnalytics would open a trend graph showing "no data" [ID_34751]
+
+<!-- MR 10.2.0 [CU9] - FR 10.2.12 -->
+
+When, in the Alarm Console, you double-clicked a suggestion or alarm event created by SLAnalytics for a table parameter with advanced naming, in some cases, the trend graph would incorrectly show "no data".

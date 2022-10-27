@@ -400,6 +400,12 @@ The PDF module is now available in the Jobs and Dashboards app. From now on, you
 
 The *PDF* and *Share* option in the Dashboards app are now no longer visible in edit mode. Additionally, you can now pin the *Share dashboards* action in the settings menu of the Dashboards app.
 
+#### Dashboards app: Parameter feeds listing EPM parameters now allow parameter grouping [ID_34705]
+
+<!-- MR 10.3.0 - FR 10.2.12 -->
+
+It is now possible to group parameters in a parameter feed that lists EPM parameters.
+
 ### DMS Service & Resource Management
 
 #### Retrieving bookings in a paged way and sorted by property [ID_31982]

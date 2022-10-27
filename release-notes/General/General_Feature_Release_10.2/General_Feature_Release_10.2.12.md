@@ -58,6 +58,12 @@ As a result, the same items will automatically be selected again after you refre
 
 After selecting column parameter indices in a parameter feed listing EPM parameters, you can now feed those selected indices to other components.
 
+#### Dashboards app: Parameter feeds listing EPM parameters now allow parameter grouping [ID_34705]
+
+<!-- MR 10.3.0 - FR 10.2.12 -->
+
+It is now possible to group parameters in a parameter feed that lists EPM parameters.
+
 ## Changes
 
 ### Enhancements
@@ -389,7 +395,7 @@ Also, if the *JAVA_HOME* environment variable is not defined, it will be set to 
 
 #### nats-account-server service could silently fail [ID_34698]
 
-<!-- MR 10.3.0 - FR 10.2.12 -->
+<!-- MR 10.2.0 [CU9] - FR 10.2.12 -->
 
 In some cases, the *nats-account-server* service could silently fail. All functionality would stop although the process would keep running.
 
