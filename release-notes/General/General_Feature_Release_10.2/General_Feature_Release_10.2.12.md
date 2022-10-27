@@ -379,6 +379,41 @@ When you hovered over a trend graph while the legend was disabled, the trend val
 
 When a large PDF file (e.g. a PDF report) was created in a web app, in some cases, an error could occur.
 
+#### DataMiner installer: Cassandra DevCenter would no longer be extracted [ID_34674]
+
+<!-- MR 10.3.0 - FR 10.2.12 -->
+
+Since Cassandra 3.7 was replaced by Cassandra 3.11 in DataMiner Installer 10.2, DevCenter would incorrectly no longer be extracted. From now on, it will again be extracted and a shortcut to the tool will be automatically created.
+
+Also, if the *JAVA_HOME* environment variable is not defined, it will be set to the Java version that comes with Cassandra.
+
+#### nats-account-server service could silently fail [ID_34698]
+
+<!-- MR 10.3.0 - FR 10.2.12 -->
+
+In some cases, the *nats-account-server* service could silently fail. All functionality would stop although the process would keep running.
+
+When that happened, the log file would report the following:
+
+```txt
+The NSC store encountered an error, shutting down ...
+stopping account server
+disconnected from NATS
+stopping http server
+http server stopped
+error closing listener: close tcp [::]:9090: use of closed network connection
+http stopped
+closed JWT store
+```
+
+SLWatchDog will now periodically check the log file and, if it finds the above-mentioned entries:
+
+- the *nats-account-server.exe* process will be terminated,
+- the *nssm.exe* service wrapper will log this event in the *Windows Event Viewer*, and
+- the *nats-account-server.exe* process will be restarted.
+
+Also, SLNet will now by default limit the number of NAS log files in the same way as it limits the NATS log files: check the files every 15 minutes and keep the 10 most recent files.
+
 #### Skyline Device Simulator: 'no such object' would incorrectly be returned when requesting data from a simulation [ID_34746]
 
 <!-- MR 10.3.0 - FR 10.2.12 -->
