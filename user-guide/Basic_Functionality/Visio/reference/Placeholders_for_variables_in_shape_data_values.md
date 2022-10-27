@@ -685,7 +685,7 @@ Use this placeholder in a shape data item of type **Tooltip** or in shape text. 
 
 Available from DataMiner 9.5.3 onwards.
 
-Use this placeholder in a shape data item of type **Tooltip** or in shape text. The tooltip or shape text will then display one particular service definition property, in the format “\<Property name>: \<Property value>”.
+Use this placeholder in a shape data item of type **Tooltip** or in shape text. The tooltip or shape text will then display one particular service definition property, in the format “<Property value>”.
 
 - For a top-level element shape (i.e. not an interface shape), the property has to be one of the properties of the node specified in the service definition.
 
