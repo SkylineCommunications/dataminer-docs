@@ -90,7 +90,7 @@ If you want to use a Cassandra cluster as the general database for your DMS, you
 
      - **data_files_directories**: The location(s) where you want to store the data.
 
-     - **seeds**: The IP address(es) of all the seeds in your Cassandra cluster. 3 seed nodes are recommended for every data center, preferably in different racks. If this node is being added to an existing cluster, ensure that the other nodes are available and reachable (default port is 7000).
+     - **seeds**: The IP address(es) of all the seeds in your Cassandra cluster. 3 seed nodes are recommended for every data center, preferably in different racks. If this node is being added to an existing cluster, ensure that only existing nodes are configured as seed and that the other nodes are available and reachable (default port is 7000).
 
      - **listen_address**: The IP address of the node.
 

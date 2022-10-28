@@ -12,6 +12,10 @@ uid: General_Main_Release_10.1.0_CU21
 
 ### Enhancements
 
+#### Security enhancements [ID_33520]
+
+A number of security enhancements have been made.
+
 #### Preventing multiple SLScripting processes from simultaneously compiling the same DLL [ID_34532]
 
 <!-- MR 10.1.0 [CU21] / 10.2.0 [CU9] - FR 10.2.12 -->
@@ -40,6 +44,20 @@ SLLogCollector packages will now also include the following additional files con
 | Logs\Network Information\route.exe print.txt              | The output of a `route print` command.              |
 | Logs\Network Information\netsh.exe winhttp show proxy.txt | The output of a `netsh winhttp show proxy` command. |
 
+#### HTTP elements will now resend a request after receiving ERROR_WINHTTP_SECURE_FAILURE [ID_34644]
+
+<!-- Main Release Version 10.0.0 [CU22]/10.1.0 [CU21]/10.2.0 [CU9] - Feature Release Version 10.2.12 -->
+
+When an HTTP element received an ERROR_WINHTTP_SECURE_FAILURE after sending an HTTP request, up to now, it would go into timeout.
+
+From now on, when an HTTP element receives an ERROR_WINHTTP_SECURE_FAILURE after sending an HTTP request, it will resend the request for a number of times, taking into account the number of retries specified in the element's port settings.
+
+#### Cassandra: Enhanced querying of trend data [ID_34659]
+
+<!-- Main Release Version 10.1.0 [CU21]/10.2.0 [CU9] - Feature Release Version TBD -->
+
+A number of enhancements have been made with regard to querying trend data against a Cassandra database.
+
 ### Fixes
 
 #### Problem with SLDataMiner when editing an element [ID_34329]
@@ -54,11 +72,23 @@ In some rare cases, an error could occur in SLDataMiner when you edited an eleme
 
 When, in the Dashboards app, resource capacity was displayed using a *Line & area chart* component, in some cases, capacity usage would incorrectly be doubled when bookings overlapped.
 
+#### DataMiner Cube - Trending: Y axis of trend graph would incorrectly show duplicate values [ID_34492]
+
+<!-- MR 10.1.0 [CU21] / 10.2.0 [CU9] - FR 10.2.12 -->
+
+When a trend graph showed a constant value, due to a rounding issue, the Y axis would incorrectly show duplicate values.
+
 #### Standalone DVE parameter partially included in an service would incorrectly not affect service state severity [ID_34493]
 
 <!-- MR 10.1.0 [CU21] / 10.2.0 [CU9] - FR 10.2.12 -->
 
 When a parameter of a DVE element exported as a standalone parameter was partially included in a service, in some cases, the service state could be incorrect.
+
+#### Monitoring app: Problem when trying to open the web UI of a device [ID_34504]
+
+<!-- MR 10.1.0 [CU21] - FR TBD -->
+
+When, in the Monitoring app, you tried to open the web UI of a device, a `No parameters available` error would appear.
 
 #### Enabling conditional monitoring for a parameter would incorrectly cause iStatus -17 data points to be offloaded even when the trend data of that parameter had been excluded from offloads [ID_34540]
 
@@ -147,3 +177,15 @@ When a large number of shapes generated based on child items in a view were sort
 <!-- MR 10.1.0 [CU21] / 10.2.0 [CU9] - FR 10.2.12 -->
 
 When you had opened a DataMiner web app in Mozilla Firefox, read-only text in input boxes would incorrectly not be displayed in bold type.
+
+#### Mediation protocols: 'Recursion detected in the mediation links tree' error [ID_34736]
+
+<!-- Main Release Version 10.0.0 [CU22]/10.1.0 [CU21]/10.2.0 [CU9] - Feature Release Version 10.2.12 -->
+
+When a mediation protocol contained a *Params.Param.Mediation.LinkTo* element that pointed to a protocol that had the same *ElementType* value as the one specified in the *baseFor* attribute of its *Protocol* element, then the following error would be logged in the *SLDataMiner.txt* log file:
+
+```txt
+Recursion detected in the mediation links tree
+```
+
+As this error was caused by an internal lookup issue that had no effect whatsoever with regard to mediation layer functionality, from now on, it will no longer be logged.

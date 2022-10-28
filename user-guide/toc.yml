@@ -2753,9 +2753,15 @@
           topicUID: Keeping_a_DMA_from_running_out_of_disk_space
         - name: Sharing dashboard window does not disappear
           topicUID: Sharing_dashboard_window_does_not_disappear
+        - name: Manually removing old alarms from an Elasticsearch cluster
+          topicUID: Manually_removing_old_alarms_from_ES
     - name: Known issues
       topicUID: Known_issues
       items:
+        - name: SLProtocol memory leak when HTTP connectors are used
+          topicUID: KI_SLProtocol_memory_leak_HTTP
+        - name: Data from Elasticsearch cluster with IPv6 addresses offloaded to files
+          topicUID: KI_Elasticsearch_IPv6
         - name: Increased CPU load and degraded performance because of excessive number of SPI events
           topicUID: Excessive_SPI_events_causing_CPU_load
         - name: SLDataGateway memory leak

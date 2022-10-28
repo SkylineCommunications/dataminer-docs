@@ -38,7 +38,9 @@ Currently, the pipeline for protocol development consists of the following stage
 
 - [Initialize validator](#initialize-validator)
 
-- [Run validator](#run-validator)
+- [Run validator XML](#run-validator-xml)
+
+- [Run validator solution](#run-validator-solution)
 
 - [Run major change checker](#run-major-change-checker)
 
@@ -188,9 +190,25 @@ In case you create a new major or system range (i.e. D equals 1, and B or C do n
 
 In case you create a new branch version, e.g. 2.0.0.1, and you do not specify a based on version, then this will be assumed to be a brand-new development. The Validator quality gate settings for an initial version will therefore be applied.
 
-## Run validator
+## Run validator XML
 
-This stage runs the validator on the protocol XML file that was generated in the previous stage.
+This stage runs the validator on the protocol XML file that was generated in the "Convert solution to XML" stage. To execute checks related to the C# code of the QActions, a solution is created in the background.
+
+The results of the validation in this stage are available as the following artifacts:
+
+- ValidatorResults.xml
+- ValidatorSuppressedResults.xml
+
+In case the number of issues detected by the validator is below 200, the results also get published on Jenkins. They are available under the classic view of Jenkins in the DIS Validator Warnings section.
+
+## Run validator solution
+
+This stage runs the validator on the solution as present in the repository. This stage can perform additional checks related to the solution itself that cannot be performed by the previous stage.
+
+The results of the validation in this stage are available as the following artifacts:
+
+- ValidatorResultsSolution.xml
+- ValidatorSuppressedResultsSolution.xml
 
 ## Run major change checker
 
@@ -198,7 +216,12 @@ For every new minor version, the pipeline will execute the DIS Major Change Chec
 
 If it does, the major change checker stage will be marked as unstable
 
-The results of the major change checker are also archived as artifacts.
+The results of the major change checker are also archived as the following artifacts:
+
+- MajorChangeCheckerResults.xml
+- MajorChangeCheckerSuppressedResults.xml
+
+In case the number of issues detected by the major change checker is below 50, the results also get published on Jenkins. They are available under the classic view of Jenkins in the DIS Major Change Checker Warnings section.
 
 ## Verify developer checklist
 
@@ -268,7 +291,7 @@ For **SNMP simulations**, two files should be provided:
 
   - How to create the file the SNMP simulation file (.xml): [Configuring the simulation file to poll the database](xref:Realistic_dynamic_simulations#configuring-the-simulation-file-to-poll-the-database)
 
-The Driver Passport Platform will use these files to automatically start a QA Device Simulator instance and ingest the dynamic data into the database.
+The Driver Passport Platform will use these files to automatically start a Skyline Device Simulator instance and ingest the dynamic data into the database.
 
 > [!NOTE]
 > A simulation must also be provided for an SNMP connection that only processes traps. You can use the empty simulation file available in *S:\\Public\\Simulations\\DummySnmpSimulation_ForNonPollingConnections.zip* as the simulation file for such a connection.

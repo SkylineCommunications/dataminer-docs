@@ -15,4 +15,7 @@ To delete an existing low-code application:
 
 1. Click the garbage can icon next to the user icon.
 
-1. In the pop-up window, select whether you want to delete the current version of the app or the entire app, and click *Delete*.
+1. In the pop-up window, select to delete the entire application, and click *Delete*.
+
+   > [!NOTE]
+   > You can also select to delete the current draft version of the app instead. This draft version gets created as soon as you click *Edit*, so selecting this option will never remove a previously saved version.
