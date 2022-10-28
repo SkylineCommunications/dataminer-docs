@@ -2986,6 +2986,8 @@
           topicUID: Standalone_BPA_Executor
         - name: Standalone Cassandra Backup tool
           topicUID: Standalone_Cassandra_Backup_Tool
+        - name: Standalone Cassandra Cluster Installer
+          topicUID: Standalone_Cassandra_Cluster_Installer
         - name: Standalone Elastic Backup tool
           topicUID: Standalone_Elastic_Backup_Tool
         - name: Standalone Elasticsearch Cluster Installer
