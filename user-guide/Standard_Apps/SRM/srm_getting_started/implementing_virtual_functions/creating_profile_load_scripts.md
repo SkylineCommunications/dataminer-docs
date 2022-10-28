@@ -10,7 +10,7 @@ You will need to make sure a Profile-Load Script is available for each virtual f
 
 ## Creating a Profile-Load Script
 
-Below you can fin the basic steps to create a Profile-Load Scripts. For more detailed information on [script input arguments](#input-arguments-of-a-profile-load-script) and [content](#content-of-a-profile-load-script), as well as on [how to test the script](#testing-profile-load-scripts), refer to the sections below this.
+Below you can fin the basic steps to create a Profile-Load Scripts. For more detailed information on [script input arguments](#input-arguments-of-a-profile-load-script) and [content](#content-of-a-profile-load-script), as well as on [how to test a PLS](#testing-profile-load-scripts), refer to the sections below this.
 
 1. Start from the example script *SRM_ProfileLoadScriptTemplate*, which is included in the SRM framework.
 
@@ -125,7 +125,7 @@ If a Profile-Load Script fails to configure the function DVE, an exception must 
 
 ## Testing Profile-Load Scripts
 
-To validate Profile-Load Scripts individually without the need to create a booking, you can create a PLS Tester element, which can be used manually, semi-manually, or automatically.
+To validate Profile-Load Scripts individually without the need to create a booking, you can create a PLS Tester element, which can be used manually, semi-manually, or automatically. This tool is included in the SRM package since version 1.2.21.
 
 ![PLS Tester](~/user-guide/images/PLS_Tester.png)
 
@@ -133,14 +133,111 @@ To validate Profile-Load Scripts individually without the need to create a booki
 
 1. Make sure a Booking Manager app has been created in the DMS.
 
-1. Create an element using the [Skyline Profile Load Script Tester](https://catalog.dataminer.services/result/driver/7537) protocol.
+1. Create an element using the *Skyline Profile Load Script Tester* protocol.
 
-1. On the *General* page of the new element, in the *Booking Application* box, select the Booking Manager app you want to use for the testing.
+1. In the top-right corner of the visual overview of the element, select the Booking Manager app you want to use for the testing.
+
+   ![PLS Tester Booking Manager selection](~/user-guide/images/PLS_Tester_Booking_Manager_Selection.png)
+
+   > [!NOTE]
+   > If the Booking Manager app you want to use is not available for selection in the dropdown box, click the *Refresh* button to update the available selection options.
 
 ### Manual usage of the PLS Tester
 
+After initial configuration, the PLS Tester can immediately be used to manually validate a Profile-Load Script.
 
+1. At the top of the PLS Tester visual overview, in the *Function* box, select the virtual function for which you want to run a test.
+
+   ![PLS Tester function selection](~/user-guide/images/PLS_Tester_Function_Selection.png)
+
+1. In the *Resource* box, select a specific virtual function resource.
+
+   ![PLS Tester resource selection](~/user-guide/images/PLS_Tester_Resource_Selection.png)
+
+   > [!NOTE]
+   > If you cannot select the virtual function or resource you want, click the *Refresh* button to update the available selection options.
+
+1. Click the *Apply* button.
+
+   This will open a pop-up window.
+
+   ![PLS Tester pop-up window](~/user-guide/images/PLS_Tester_Apply.png)
+
+1. Configure the necessary settings in the pop-up window:
+
+   - In the *Profiles* box, Select the profile instance you want to apply.
+
+   - Optionally, enable the selection of profile instances for the interfaces and select the instances.
+
+   - Optionally, in the *State* box, select a target service state.
+
+     > [!NOTE]
+     >
+     > - If no target service state is selected, the selected profile instance(s) will be applied.
+     > - If a target service state is selected, the associated state profile instance will be applied.
+     > - If a target service state is selected, you can also select *Full Config* to apply a combination of the selected profile instance(s) and the state profile instance(s).
+
+1. Click *Apply*.
 
 ### Semi-manual usage of the PLS Tester
 
+The PLS Tester also allows you to define test cases with a preselected resource. When such a test case is executed, only the necessary profile instances need to be selected.
+
+1. In the PLS Tester visual overview, right-click the *Test Cases* table and select *Add Semi-Manual* in the context menu.
+
+1. Specify a name for the test case, select a virtual function, and click *OK*.
+
+   The test case will now be displayed in the table.
+
+1. In the *Resource Name* column of the table, select a resource to finalize the configuration of the test.
+
+1. To execute the test case, click the *Execute* button in the *Test Case* table.
+
+   This will open a pop-up window where you can select profile instances, similar to the [manual mode](#manual-usage-of-the-pls-tester).
+
+Each time a test case is executed, a record is generated in the *Test Cases Results* table. A trend graph is also available that shows the evolution of the execution duration over time.
+
+When you select a test case result, you can click the *View Log* button to access a log file with more details on the execution of the PLS.
+
 ### Automatic usage of the PLS Tester
+
+PLS can be used in an automated way with a script that fully defines the test sequence.
+
+The test sequence can be as simple as applying a profile instance to a single resource, but as it is based on a custom script, it can also support advanced test cases involving many resources and profile instances.
+
+1. Create a custom script defining the test sequence, based on the example script *SRM_ProfileLoadScriptTesterScriptExample* provided with the SRM Framework.
+
+   For example:
+
+   ```csharp
+   {
+      protected override void ExecuteTestCase(Engine engine)
+      {
+         // Apply profile instances to the resource
+         this.SelectResource("MyResource")
+             .SetProfileInstance("HD Decoding")
+             .SetProfileInstance("ASI Profile", InterfaceType.In, "ASI")
+             .ApplyProfile(string.Empty);
+         
+         // Apply the full 'START' state profile instance to the resource
+         // With profile action 'START'
+         this.SelectResource("MyResource")
+             .SetProfileInstance("07A - A03 - NS3")
+             .ApplyCombinedProfile("START", "START");
+      }
+   }
+   ```
+
+1. Right-click the *Test Cases* table and select *Add Script* in the context menu.
+
+1. Specify a name for the test case, select the custom script defining the test sequence, and click *OK*.
+
+   The test case will now be displayed in the table
+
+   > [!NOTE]
+   > In case the script is not displayed, click the *Refresh* button to the left of the *Test Cases* table.
+
+1. To execute the test case, click the *Execute* button in the *Test Case* table.
+
+> [!TIP]
+> To trigger the execution of test cases at specific times, use the [Scheduler module](xref:Manually_adding_a_scheduled_task).
