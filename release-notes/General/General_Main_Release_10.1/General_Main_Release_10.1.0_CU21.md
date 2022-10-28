@@ -189,3 +189,9 @@ Recursion detected in the mediation links tree
 ```
 
 As this error was caused by an internal lookup issue that had no effect whatsoever with regard to mediation layer functionality, from now on, it will no longer be logged.
+
+#### An error could occur in the hosting process when a connection had been closed [ID_34786]
+
+<!-- MR 10.1.0 [CU21] / 10.2.0 [CU9] - FR 10.2.12 -->
+
+When a connection had been closed, in some cases, an error could occur in the hosting process.

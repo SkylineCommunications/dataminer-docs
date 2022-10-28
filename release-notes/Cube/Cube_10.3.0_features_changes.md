@@ -818,6 +818,19 @@ Changes that might result in anomaly alarms of a certain type being cleared:
 > [!NOTE]
 > When an alarm template that had already been assigned to an element earlier is changed in such a way that monitoring of a certain type of anomaly is started, or when it is replaced by another alarm template that causes the monitoring of a certain type of anomaly to start, then every open suggestion event for that type of anomaly associated with the element in question will be promoted to an alarm event.
 
+#### Automation: No more 'Abort' buttons in dialog boxes of interactive Automation scripts [ID_34559]
+
+<!-- MR 10.3.0 - FR 10.2.12 -->
+
+In dialog boxes of an interactive Automation script, up to now, you were able to abort the script by clicking the *Abort* button. From now on, this button will no longer be available. Instead, you can now do the following to abort a script when a dialog box has the focus:
+
+- close the dialog box by clicking the *X* in the top-right corner, or
+
+- press ALT+F4.
+
+> [!IMPORTANT]
+> When an interactive Automation script was launched from a web app, then you will have to press ESC instead of ALT+F4 to close a dialog box and abort the script. Pressing ALT+F4 would close the browser, not just the dialog box.
+
 #### System Center: Link to online help now points to 'Connecting your DataMiner System to the cloud' on <https://docs.dataminer.services/> [ID_34683]
 
 <!-- MR 10.3.0 - FR 10.2.12 -->

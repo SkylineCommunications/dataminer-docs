@@ -475,3 +475,9 @@ When you tried to request data from a simulation that was built with AutoBuildVe
 
 > [!CAUTION]
 > This tool is provided "As Is" with no representation or warranty whatsoever. Skyline Communications will not provide any maintenance or support for this tool.
+
+#### An error could occur in the hosting process when a connection had been closed [ID_34786]
+
+<!-- MR 10.1.0 [CU21] / 10.2.0 [CU9] - FR 10.2.12 -->
+
+When a connection had been closed, in some cases, an error could occur in the hosting process.

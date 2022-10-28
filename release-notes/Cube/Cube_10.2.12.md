@@ -40,6 +40,19 @@ For more information on the available search options, see [Setting the indexing 
 
 Also, from now on, DataMiner Cube will call the server-side search engine when you enter a numeric search string like "1234". Up to now, when you entered a numeric search string, DataMiner Cube would perform a client-side search that would only return views of which the ID matched the search string.
 
+#### Automation: No more 'Abort' buttons in dialog boxes of interactive Automation scripts [ID_34559]
+
+<!-- MR 10.3.0 - FR 10.2.12 -->
+
+In dialog boxes of an interactive Automation script, up to now, you were able to abort the script by clicking the *Abort* button. From now on, this button will no longer be available. Instead, you can now do the following to abort a script when a dialog box has the focus:
+
+- close the dialog box by clicking the *X* in the top-right corner, or
+
+- press ALT+F4.
+
+> [!IMPORTANT]
+> When an interactive Automation script was launched from a web app, then you will have to press ESC instead of ALT+F4 to close a dialog box and abort the script. Pressing ALT+F4 would close the browser, not just the dialog box.
+
 ## Changes
 
 ### Enhancements
@@ -166,6 +179,14 @@ When you opened a trend graph that contained patterns matching existing tags, in
 <!-- Not added to 10.3.0 -->
 
 Alarms without focus data would incorrectly not be disposed of when their parent group was cleared.
+
+#### DataMiner Cube - Alarm Console: Problem with visibility of correlation alarms in filtered alarm tabs [ID_34728]
+
+<!-- MR 10.2.0 [CU9] - FR 10.2.12 -->
+
+When a filtered alarm tab contained a correlation alarm, in some cases, this correlation alarm would incorrectly not disappear when it did no longer match the filter, especially when that filter was configured to hide alarms of type "Comment added", "Acknowledged" or "Released".
+
+Also, when a correlation alarm did not match the filter, only the base alarms would be shown, but when the type of one of those base alarms changed to "Comment added", "Acknowledged" or "Released", the correlation alarm would incorrectly be visible.
 
 #### DataMiner Cube - Trending: Double-clicking a suggestion or alarm event created by SLAnalytics would open a trend graph showing "no data" [ID_34751]
 

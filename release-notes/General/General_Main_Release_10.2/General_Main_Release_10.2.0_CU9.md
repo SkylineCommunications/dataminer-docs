@@ -368,6 +368,14 @@ SLWatchDog will now periodically check the log file and, if it finds the above-m
 
 Also, SLNet will now by default limit the number of NAS log files in the same way as it limits the NATS log files: check the files every 15 minutes and keep the 10 most recent files.
 
+#### DataMiner Cube - Alarm Console: Problem with visibility of correlation alarms in filtered alarm tabs [ID_34728]
+
+<!-- MR 10.2.0 [CU9] - FR 10.2.12 -->
+
+When a filtered alarm tab contained a correlation alarm, in some cases, this correlation alarm would incorrectly not disappear when it did no longer match the filter, especially when that filter was configured to hide alarms of type "Comment added", "Acknowledged" or "Released".
+
+Also, when a correlation alarm did not match the filter, only the base alarms would be shown, but when the type of one of those base alarms changed to "Comment added", "Acknowledged" or "Released", the correlation alarm would incorrectly be visible.
+
 #### Mediation protocols: 'Recursion detected in the mediation links tree' error [ID_34736]
 
 <!-- Main Release Version 10.0.0 [CU22]/10.1.0 [CU21]/10.2.0 [CU9] - Feature Release Version 10.2.12 -->
@@ -385,3 +393,9 @@ As this error was caused by an internal lookup issue that had no effect whatsoev
 <!-- MR 10.2.0 [CU9] - FR 10.2.12 -->
 
 When, in the Alarm Console, you double-clicked a suggestion or alarm event created by SLAnalytics for a table parameter with advanced naming, in some cases, the trend graph would incorrectly show "no data".
+
+#### An error could occur in the hosting process when a connection had been closed [ID_34786]
+
+<!-- MR 10.1.0 [CU21] / 10.2.0 [CU9] - FR 10.2.12 -->
+
+When a connection had been closed, in some cases, an error could occur in the hosting process.
