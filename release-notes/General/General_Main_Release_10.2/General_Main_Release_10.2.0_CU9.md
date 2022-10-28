@@ -382,7 +382,7 @@ Also, SLNet will now by default limit the number of NAS log files in the same wa
 
 When a filtered alarm tab contained a correlation alarm, in some cases, this correlation alarm would incorrectly not disappear when it did no longer match the filter, especially when that filter was configured to hide alarms of type "Comment added", "Acknowledged" or "Released".
 
-Also, when a correlation alarm did not match the filter, only the base alarms would be shown, but when the type of one of those base alarms changed to "Comment added", "Acknowledged" or "Released", the correlation alarm would incorrectly be visible.
+Also, when a correlation alarm did not match the filter, only the base alarms would be shown, but when the type of one of those base alarms changed to "Comment added", "Acknowledged" or "Released", that base alarm would incorrectly not disappear.
 
 #### Mediation protocols: 'Recursion detected in the mediation links tree' error [ID_34736]
 
