@@ -181,6 +181,36 @@ By default, the regional date/time format will be used. To use a different forma
 [DataMinerTime:Format=HH:mm:ss]
 ```
 
+```txt
+[DataMinerTime:Format=f]
+```
+
+Uses full date short time format
+
+```txt
+[DataMinerTime:Format=g]
+```
+
+Uses general date short time format
+
+```txt
+[DataMinerTime:Format=F]
+```
+
+Uses full date long time format
+
+```txt
+[DataMinerTime:Format=G]
+```
+
+Uses general date long time format
+
+```txt
+[DataMinerTime:Format=HH:mm:ss]
+```
+
+Uses custom date time format
+
 The time in the placeholder is refreshed every second.
 
 ### \[DestinationInterfaceElementID\]
