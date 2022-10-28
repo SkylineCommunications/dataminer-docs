@@ -137,6 +137,12 @@ From now on, when an HTTP element receives an ERROR_WINHTTP_SECURE_FAILURE after
 
 A number of enhancements have been made with regard to querying trend data against a Cassandra database.
 
+#### Factory reset tool: '-cleanclustereddatabase' option will now only remove the tables, keyspaces and indices defined in db.xml from the existing databases [ID_34672]
+
+<!-- MR 10.2.0 [CU9] - FR 10.2.12 -->
+
+Up to now, the *SLReset.exe* option *-cleanclustereddatabase* would remove all keyspaces and indices from the CassandraCluster and ElasticSearch databases. From now on, this option will only remove the tables, keyspaces and indices defined in the *db.xml* file from the databases (clusters as well as single-node Cassandra databases on remote machines).
+
 #### SLMessageBroker log file entries will now mention the NATS server to which the NATS client is connected [ID_34719]
 
 <!-- MR 10.2.0 [CU9] - FR 10.2.12 -->
