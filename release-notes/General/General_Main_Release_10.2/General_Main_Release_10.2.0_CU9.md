@@ -131,6 +131,14 @@ When an HTTP element received an ERROR_WINHTTP_SECURE_FAILURE after sending an H
 
 From now on, when an HTTP element receives an ERROR_WINHTTP_SECURE_FAILURE after sending an HTTP request, it will resend the request for a number of times, taking into account the number of retries specified in the element's port settings.
 
+#### Service & Resource Management: Check for duplicate function names when creating/editing resources [ID_34648]
+
+<!-- MR 10.2.0 [CU9] - FR 10.2.12 -->
+
+When you create or edit a resource, from now on, a check will be performed to determine whether the function instance name is already being used for another resource within the same main element. If the function instance name already exists, you will not be able to save the resource and a *DuplicateFunctionName* error will be added to the *SLFunctionManager.txt* log file. In that error, you will find the ID and the name of the existing resource with that same function instance name.
+
+An *InitializeFunctionResourceFailed* error will also be added to the *SLResourceManager.txt* log file.
+
 #### Cassandra: Enhanced querying of trend data [ID_34659]
 
 <!-- Main Release Version 10.1.0 [CU21]/10.2.0 [CU9] - Feature Release Version TBD -->
