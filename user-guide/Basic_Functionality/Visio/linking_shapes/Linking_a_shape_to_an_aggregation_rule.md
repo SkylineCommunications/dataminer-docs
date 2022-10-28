@@ -12,7 +12,7 @@ To do so:
 
 2. Configure the value of the shape data field in one of the following ways:
 
-    - Without using a placeholder: Set the value to the DMA ID/element ID of the hidden *Skyline Generic Aggregator* element, followed by a colon and the relevant aggregation index. You can find the relevant DMA ID/element ID by looking in the *Element.xml* file for this hidden element in the *Elements* folder on the DMA. You can find the index by going to the aggregation page of a view, selecting the aggregation rule, going to the *table* tab, right-clicking a column-header and in the right-click context-menu selecting *Columns* and enabling the *Index* column.
+    - Without using a placeholder: Set the value to the DMA ID/element ID of the hidden *Skyline Generic Aggregator* element, followed by a colon, the fixed parameter-id(4005) from the aggregator element, a colon followed by the relevant aggregation index. You can find the relevant DMA ID/element ID by looking in the *Element.xml* file for this hidden element in the *Elements* folder on the DMA. You can find the index by going to the aggregation page of a view, selecting the aggregation rule, going to the *table* tab, right-clicking a column-header and in the right-click context-menu selecting *Columns* and enabling the *Index* column.
 
     - Using a placeholder: Set the value to *\[AggregationRule: folder/rule, viewID, protocol, element property, view property, remote primary key\]*.
 
