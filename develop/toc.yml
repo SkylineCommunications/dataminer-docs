@@ -5215,7 +5215,7 @@
             topicUid: Compilation_Time_Assembly_Binding
           - name: Run-time assembly binding
             topicUid: Run_Time_Assembly_Binding
-    - name: QA Device Simulator
+    - name: Skyline Device Simulator
       topicUid: TOOQASNMPSimulator
       items:
         - name: Simulations

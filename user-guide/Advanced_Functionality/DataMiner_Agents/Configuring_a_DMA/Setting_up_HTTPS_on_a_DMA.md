@@ -53,6 +53,9 @@ To do so:
 
       This name **should also be configured in the DNS server** pointing to the IP address of the DMA, so that the DMA can be reached using the configured name.
 
+      > [!WARNING]
+      > Do not use wildcard configurations if you want to use your DataMiner Agent to connect your system to the DataMiner Cloud Platform, as this is not supported. In that case, use the FQDN (e.g. "dma01.skyline.be") instead.
+
 1. Save the file and restart the DMA.
 
 > [!TIP]
@@ -136,6 +139,12 @@ The following auto-detect methods can be specified:
 > It depends on the HTTP/HTTPS configuration in IIS whether the above configuration is required. For a server accepting both HTTP and HTTPS, it is normally not necessary.
 
 ## Common issues after configuring HTTPS
+
+- **ERR_CERT_COMMON_NAME_INVALID error is shown**
+
+   Most likely, your URL does not match the *Subject Alternative Names (SAN)* field of your certificate. Most browsers will reject certificates when the URL matches the *Common Name (CN)* but not the *Subject Alternative Names (SAN)*. The *Common Name (CN)* field of an x.509 certificate is considered deprecated since RFC 2818 because it is ambiguous and untyped.
+
+   To fix this, either create a new certificate that includes your URL in the *Subject Alternative Names (SAN)* field, or change your URL to match the *Subject Alternative Names (SAN)* field of the certificate.
 
 - **My connection times out or the site cannot be reached**
 

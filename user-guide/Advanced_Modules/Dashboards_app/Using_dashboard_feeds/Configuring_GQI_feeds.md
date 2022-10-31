@@ -406,6 +406,10 @@ From DataMiner 10.1.0\[CU1\]/10.1.3 onwards, up and down arrow buttons in the li
 
 From DataMiner 10.2.0/10.1.5 onwards, a *Use feed* checkbox is available that allows you to add parameters from an existing feed in the dashboard to the selectable items.
 
+### Sort
+
+Available from dataMiner 10.2.11/10.3.0 onwards. Sorts the data based on a specific column. When you select this operator, you will need to select the column to sort by. By default, sorting happens in descending order. To sort in ascending order instead, select the *Ascending* checkbox.
+
 ### Top X
 
 Displays the top or bottom items of a specific column, with X being the number of items to display. When you select this option, you will need to specify the column from which items should be displayed and the number of items that should be displayed. By default, the top items are displayed. To display the bottom items instead, select the *Ascending* checkbox.

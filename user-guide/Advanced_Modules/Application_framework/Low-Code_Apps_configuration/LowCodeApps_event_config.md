@@ -30,19 +30,21 @@ To configure an event to launch a script:
 
 To configure an event to navigate to a URL:
 
-- Select *Navigate to a URL* and specify the URL.
+1. Select *Navigate to a URL* and specify the URL.
+
+1. Optionally, to open the webpage in a new tab, enable the option *Open in new tab*.
 
 ## Opening a page of the app
 
 To configure an event to open another page of the app:
 
-- Select *Open a page* and specify the page.
+- Select *Open a page* and select the page.
 
 ## Opening a panel of the app
 
 To configure an event to open a panel of the app:
 
-1. select *Open a panel* and specify the panel.
+1. select *Open a panel* and select the panel.
 
 1. In the *Where* box, select where the panel should be opened: in a pop-up window, on the left, or on the right.
 
@@ -56,13 +58,18 @@ To configure an event to open a panel of the app:
 
 To configure an event to close a panel of the app:
 
-- Select *Close a panel* and specify the panel.
+1. Select *Close a panel* and select the panel.
+
+1. In the *Where* box, select where the panel that should be closed is located: in a pop-up window, on the left, or on the right. This is necessary in case the same panel is opened multiple times in different places.
 
 ## Opening an app
 
 To configure an event to open another low-code app that has been published in your DMS:
 
 - Select *Open an app* and select the app.
+
+  > [!NOTE]
+  > *Drafts* apps are included in the list of apps you can select.
 
 ## Executing a component action
 

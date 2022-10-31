@@ -6,7 +6,7 @@ uid: Creating_SNMP_simulations
 
 To create an SNMP simulation file:
 
-1. In the menu bar of the QA Device Simulator tool, select *Tools* > *Create SNMP Simulation file*.
+1. In the menu bar of the Skyline Device Simulator tool, select *Tools* > *Create SNMP Simulation file*.
 
    The following window will then open:
 

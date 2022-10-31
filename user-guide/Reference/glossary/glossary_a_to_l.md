@@ -30,7 +30,7 @@ uid: glossary_a_to_l
 | Alarm template group | Combination of different alarm templates into one grouped template.<br>See [Alarm template groups](xref:Alarm_template_groups). |
 | Alarm threshold | Definition of the value a particular parameter must have to trigger an alarm of a particular level.<br>See [Alarm templates](xref:Alarm_templates). |
 | Alarm tree | Series of linked alarm records, reflecting the life cycle of an alarm.<br>See [Alarm linking](xref:Alarm_linking). |
-| Alerter | System tray application that notifies the user of alarms in the DataMiner System.<br>See [DMS Alerter](xref:DMS_Alerter). |
+| Alerter | System tray application that notifies the user of alarms in the DataMiner System.<br>See [Alerter](xref:Alerter). |
 | Analog parameter | Parameter with a value within a predefined range delimited by a minimum and a maximum.<br>See [Discrete, analog and hybrid parameters](xref:Discrete_analog_and_hybrid_parameters). |
 | API | Application Programming Interface. Software interface that allows two applications to communicate with each other. |
 | Application package | Package containing all files necessary to install a particular DataMiner app on an existing DataMiner System. |

@@ -4,7 +4,7 @@ uid: Pipeline_stages_for_Automation_scripts
 
 # Pipeline stages for Automation scripts
 
-Currently, the pipeline consists of the following steps:
+Currently, the pipeline consists of the following stages:
 
 - [Loading Jenkinsfile](#loading-jenkinsfile)
 
@@ -50,65 +50,65 @@ Currently, the pipeline consists of the following steps:
 
 ## Loading Jenkinsfile
 
-When a new Git repository is created using the SLC SE Repository Manager tool, the repository initially contains a .gitignore file and a Jenkinsfile. This Jenkinsfile in turn refers to another "master" Jenkins file. In this step, the Jenkinsfile gets loaded.
+When a new Git repository is created using the SLC SE Repository Manager tool, the repository initially contains a .gitignore file and a Jenkinsfile. This Jenkinsfile in turn refers to another "master" Jenkins file. During this stage, the Jenkinsfile gets loaded.
 
 ## Declarative checkout from SCM
 
-In this step, Jenkins loads the current repository from Git.
+During this stage, Jenkins loads the current repository from Git.
 
 ## Detect solution
 
-In this step, the repository is scanned for the presence of a Visual Studio solution (.sln) file.
+During this stage, the repository is scanned for the presence of a Visual Studio solution (.sln) file.
 
 The pipeline will only continue if exactly one solution file has been detected in the repository.
 
 ## Validate solution
 
-This step verifies whether there are C# code blocks in the Automation script(s). If not, the SonarQube stage will be skipped.
+This stage verifies whether there are C# code blocks in the Automation script(s). If not, the SonarQube stage will be skipped.
 
 ## Prepare solution
 
-In this step, the solution is configured to build against a recent version of the .NET Framework. The purpose of this is to allow compiling against the latest feature release of DataMiner, which could require a new .NET Framework version compared to the one specified in the protocol solution. Note that this is just a local change; it does not change anything to the solution in the Git repository hosted by Gerrit.
+During this stage, the solution is configured to build against a recent version of the .NET Framework. The purpose of this is to allow compiling against the latest feature release of DataMiner, which could require a new .NET Framework version compared to the one specified in the protocol solution. Note that this is just a local change; it does not change anything to the solution in the Git repository hosted by Gerrit.
 
 ## Sync DataMiner feature release DLLs
 
-This step ensures that the next build step will build against the latest feature release of DataMiner. It will verify on DCP whether a new feature release has been released and, if it has, Jenkins will make sure to use that feature release to build against from that point onwards.
+This stage ensures that the next build stage will build against the latest feature release of DataMiner. It will verify on DCP whether a new feature release has been released and, if it has, Jenkins will make sure to use that feature release to build against from that point onwards.
 
 ## Sync DIS version
 
-This step ensures that the pipeline uses the latest version of DIS. It verifies whether a new version has been released, and if that is the case, the new version is obtained.
+This stage ensures that the pipeline uses the latest version of DIS. It verifies whether a new version has been released, and if that is the case, the new version is obtained.
 
 ## Build on latest feature release
 
-During this step, the solution is built against the latest DataMiner feature release.
+During this stage, the solution is built against the latest DataMiner feature release.
 
 ## Convert solution to XML
 
-This step converts the protocol Visual Studio solution back to a protocol XML file.
+This stage converts the protocol Visual Studio solution back to a protocol XML file.
 
 ## Build .dmapp package
 
-This step creates a .dmapp package containing the Automation scripts.
+This stage creates a .dmapp package containing the Automation scripts.
 
 ## Scan test projects
 
-This step scans the solution for the presence of any test projects. Projects with a name that end with "Integration Tests" or "IntegrationTests" (case insensitive) will be considered integration test projects. All other projects that end with "Tests" will be considered unit test projects.
+This stage scans the solution for the presence of any test projects. Projects with a name that end with "Integration Tests" or "IntegrationTests" (case insensitive) will be considered integration test projects. All other projects that end with "Tests" will be considered unit test projects.
 
 ## Run unit tests
 
-This step executes the unit test projects. If no unit test projects were detected, this step is skipped.
+This stage executes the unit test projects. If no unit test projects were detected, this stage is skipped.
 
 ## Run integration tests
 
-This step executes the integration test projects. If no integration test projects were detected, this step is skipped.
+This stage executes the integration test projects. If no integration test projects were detected, this stage is skipped.
 
 ## SonarQube analysis
 
-This step performs SonarQube C# code analysis on the code provided in the Exe blocks.
+This stage performs SonarQube C# code analysis on the code provided in the Exe blocks.
 
 ## Quality gate
 
-This step verifies the results of different previous pipeline steps and checks whether the results are according to some preconfigured quality level.
+This stage verifies the results of different previous pipeline stages and checks whether the results are according to some preconfigured quality level.
 
 ### Unit/integration tests
 
@@ -149,7 +149,7 @@ This stage will perform registration in the catalog.
 
 ## (Release) Push to SVN
 
-This step performs the actual push to SVN. Once this step is executed, you should find a new version of the Automation script(s) on SVN in the corresponding folder, together with the required DLLs, which were originally provided in the DLLs folder in the Visual Studio project.
+This stage performs the actual push to SVN. Once this stage is executed, you should find a new version of the Automation script(s) on SVN in the corresponding folder, together with the required DLLs, which were originally provided in the DLLs folder in the Visual Studio project.
 
 > [!NOTE]
 > Whereas old Automation scripts were stored on SVN under the following folder <https://svn.skyline.be/!/#SystemEngineering/view/head/Automation%20Scripts>, the CI/CD pipeline pushes Automation scripts to the following folder <https://svn.skyline.be/!/#SystemEngineering/view/head/Automation>.
@@ -160,7 +160,7 @@ This stage pushes the created package to Azure Blob Storage.
 
 ## Declarative post actions
 
-This step performs cleanup of the workspace and sends an email containing a report giving an overview of the number of issues detected in SonarQube.
+This stage performs cleanup of the workspace and sends an email containing a report giving an overview of the number of issues detected in SonarQube.
 
 The report also contains an overall quality score, which is calculated using the following metrics:
 

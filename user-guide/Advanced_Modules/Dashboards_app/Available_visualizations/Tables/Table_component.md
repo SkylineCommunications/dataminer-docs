@@ -64,6 +64,9 @@ The export file will be named “Query XXX” (XXX being the name of the query, 
 
 From DataMiner 10.2.7/10.3.0 onwards, users can filter and sort the contents of a table component in a dashboard.
 
+> [!TIP]
+> If you have made changes to the way a table is displayed, and you want to quickly reset your changes and return to the initial table view, click the eye icon in the top-right corner of the component (available from DataMiner 10.2.11/10.3.0 onwards).
+
 To apply a **general filter** across the table, a search box is available:
 
 1. Hover over the table component and click the search icon in the lower right corner.

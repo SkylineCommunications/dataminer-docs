@@ -63,7 +63,7 @@ Each TTL tag has the following attributes:
 
   > [!NOTE]
   >
-  > - From DataMiner 9.5.5 onwards, you can use a TTL tag with the attribute *type="TimeTrace"* to configure how long “snapshots” in the timetrace table are kept, which are used to visualize historic alarm information in the DataMiner Cube history slider.
+  > - From DataMiner 9.5.5 onwards, you can use a TTL tag with the attribute *type="TimeTrace"* to configure how long “snapshots” in the timetrace table are kept, which are used to visualize history alarm information in the DataMiner Cube history slider.
   > - From DataMiner 9.5.8 onwards, the TTL for spectrum records is also configured in these files, using a TTL tag with the attribute *type="SpectrumTrace"*.
 
 - **default**: The default TLL period that will be used for all databases that do not have a specific override.
@@ -167,7 +167,7 @@ It is possible to revert to the earlier behavior by adding the following tag in 
 However, note that this can cause a significant increase in disk space usage, especially in systems with many services and service properties.
 
 > [!NOTE]
-> Activating this option does not rewrite historic data. New rows will again contain the properties, but old rows will not be updated.
+> Activating this option does not rewrite history data. New rows will again contain the properties, but old rows will not be updated.
 
 ## Upgrading to a DataMiner version with DBMaintenance.xml and DBMaintenanceDMS.xml files
 

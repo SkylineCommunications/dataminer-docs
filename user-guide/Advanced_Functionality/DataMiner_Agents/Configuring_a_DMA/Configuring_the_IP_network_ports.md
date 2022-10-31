@@ -14,8 +14,8 @@ A DataMiner System makes extensive use of TCP/IP communication. Below, you find 
 | Protocol | Ports used | Application      |
 |----------|------------|------------------|
 | SNMP     | 161/udp<br> 162/udp | SNMP    |
-| .Net Remoting  | Configurable port<br> Default port: 8004/tcp | Inter-DMA communication<br> DataMiner Cube<br> DMS Alerter |
-| HTTP(S) | 80/tcp<br> 443/tcp | DataMiner Cube<br> DMS Alerter<br> Web apps (e.g. Monitoring, Jobs)<br> Dashboards, Reporter |
+| .Net Remoting  | Configurable port<br> Default port: 8004/tcp | Inter-DMA communication<br> DataMiner Cube<br> Alerter |
+| HTTP(S) | 80/tcp<br> 443/tcp | DataMiner Cube<br> Alerter<br> Web apps (e.g. Monitoring, Jobs)<br> Dashboards, Reporter |
 | HTTP(S) | 9200/tcp | Indexing Engine (server listening for client requests) |
 | N/A     | 7000/tcp | Cassandra: non-TLS setup (inter-node communication in Failover setups) |
 | N/A     | 7001/tcp | Cassandra: TLS setup (available from DataMiner 10.1.3 onwards) |

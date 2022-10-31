@@ -10,8 +10,6 @@ uid: General_Main_Release_10.3.0_new_features_2
 > [!TIP]
 > For release notes related to DataMiner Cube, see [DataMiner Cube 10.3.0](xref:Cube_Main_Release_10.3.0).
 
-## Other new features
-
 ### DMS web apps
 
 #### Jobs app: Name, Start Time and End Time fields in default job section can now be set read-only [ID_31485] [ID_31506]
@@ -358,6 +356,56 @@ A new *IsActive* column has been added to *Get alarms* data source. This column 
 
 When, in the Dashboards app or a web app, you apply multiple sort orders in a *Table* component, multiple sort operators will now be appended to the GQI query that is feeding data to the component.
 
+#### Dashboards app: Parameter feeds that list EPM parameters now allow items to be preselected [ID_34554] [ID_34588]
+
+<!-- MR 10.3.0 - FR 10.2.12 -->
+
+When an EPM feed is used to feed EPM identifiers to a parameter feed, it is now possible to configure filters that will preselect certain items in the parameter feed.
+
+#### Dashboards app: Upload size of PDF files will now be validated [ID_34620]
+
+<!-- MR 10.3.0 - FR 10.2.12 -->
+
+When PDF files are uploaded via the WebAPI (e.g. when a PDF report is generated), an error will now be thrown when the batch size exceeds 10 MB or the total file size exceeds 1 GB.
+
+#### Dashboards app: Items selected in a parameter feed listing EPM parameters will now be saved in the URL of the dashboard [ID_34622]
+
+<!-- MR 10.3.0 - FR 10.2.12 -->
+
+The parameters and indices selected in a parameter feed listing EPM parameters will now be saved in the URL of the dashboard.
+
+As a result, the same items will automatically be selected again after you refresh the page.
+
+#### Dashboards app: Parameter indices selected in a parameter feed listing EPM parameters can now be fed to other components [ID_34629]
+
+<!-- MR 10.3.0 - FR 10.2.12 -->
+
+After selecting column parameter indices in a parameter feed listing EPM parameters, you can now feed those selected indices to other components.
+
+#### Dashboards app: Reports will no longer contain visual replacements [ID_34632]
+
+<!-- MR 10.3.0 - FR 10.2.12 -->
+
+Missing information in dashboards is no longer indicated by means of a visual replacement. In PDF reports they are now replaced by a short message.
+
+#### Dashboards app: Jobs and Dashboards app now support PDF module [ID_34634]
+
+<!-- MR 10.3.0 - FR 10.2.12 -->
+
+The PDF module is now available in the Jobs and Dashboards app. From now on, you can e.g. export dashboards to PDF.
+
+#### Dashboards app: PDF and share button will now be hidden in edit mode [ID_34653]
+
+<!-- MR 10.3.0 - FR 10.2.12 -->
+
+The *PDF* and *Share* option in the Dashboards app are now no longer visible in edit mode. Additionally, you can now pin the *Share dashboards* action in the settings menu of the Dashboards app.
+
+#### Dashboards app: Parameter feeds listing EPM parameters now allow parameter grouping [ID_34705]
+
+<!-- MR 10.3.0 - FR 10.2.12 -->
+
+It is now possible to group parameters in a parameter feed that lists EPM parameters.
+
 ### DMS Service & Resource Management
 
 #### Retrieving bookings in a paged way and sorted by property [ID_31982]
@@ -498,20 +546,22 @@ When you run the installer with the “generate” option (run-stand-alone -g), 
 </ElasticConfiguration>
 ```
 
-#### QA Device Simulator renamed to Skyline Device Simulator [ID_33680] [ID_34530]
+#### QA Device Simulator renamed to Skyline Device Simulator [ID_33680] [ID_34530] [ID_34555]
 
 <!-- RN 33680: MR 10.3.0 - FR 10.2.7 -->
-<!-- RN 34530: MR 10.3.0 - FR 10.2.12 -->
+<!-- RN 34530/34555: MR 10.3.0 - FR 10.2.12 -->
 
 The *QA Device Simulator* tool has been renamed to *Skyline Device Simulator* and now targets Microsoft .NET Framework 4.8.
 
-Also, the following new command-line parameters allow you to specify packet loss and packet delay parameters on startup.
+Also, the following command-line parameters have been added:
 
-```txt
-/packetloss <packet loss %>
-/delayms <delay ms>
-/delaypct <delay % of packets>
-```
+| Parameters | Function |
+|------------|----------|
+| `/packetloss <packet loss %>`<br>`/delayms <delay ms>`<br>`/delaypct <delay % of packets>` | Specifying packet loss and packet delay parameters on startup. |
+| `/dbmaxvaloid <max nbr of entries per OID>` | Configuring the number of entries loaded in memory per OID when working with database simulations. |
 
 > [!NOTE]
 > In the UI of the *Skyline Device Simulator*, the help link now directs you to the *Skyline Device Simulator* help pages on <https://docs.dataminer.services/>.
+
+> [!CAUTION]
+> This tool is provided "As Is" with no representation or warranty whatsoever. Skyline Communications will not provide any maintenance or support for this tool.
