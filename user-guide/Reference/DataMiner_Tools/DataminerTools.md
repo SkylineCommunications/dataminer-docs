@@ -11,6 +11,7 @@ This section provides information on the following tools:
 - [DataMiner Size tool](xref:DataMinerSizeTool)
 - [DataMiner Taskbar Utility](xref:DataMiner_Taskbar_Utility)
 - [Factory reset tool](xref:Factory_reset_tool)
+- [Multi-threaded timer polling rate calculator](xref:Multi_Threaded_Timer_Polling_Rate_Calculator)
 - [Protocol Debug tools](xref:Protocol_Debug_Tools)
 - [SLLogCollector](xref:SLLogCollector)
 - [SLNetClientTest tool](xref:SLNetClientTest_tool)
