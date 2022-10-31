@@ -2982,6 +2982,8 @@
           topicUid: SLOffload_tool
         - name: SLSkipAsSourceTool
           topicUID: SLSkipAsSourceTool
+        - name: Spectrum simulation protocol
+          topicUID: Spectrum_Simulation_protocol
         - name: Standalone BPA Executor
           topicUID: Standalone_BPA_Executor
         - name: Standalone Cassandra Backup tool
