@@ -20,6 +20,20 @@ To do so:
 |------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Aggregation      | *dmaID*/*elementID*:4005:*aggregationIndex*<br> or<br> \[AggregationRule: *folder/rule, viewID, protocol, element property, view property, remote primary key*\] |
 
+## Examples
+
+Aggregation shape data field without placeholder:
+
+```txt
+345/1088:4005:c720c5d8387c41988c327bf26de8d5ef.337.-1
+```
+
+Aggregation shape data field with placeholder:
+
+```txt
+[AggregationRule:Ziine/VisioPlaceHolderSample,337]
+```
+
 > [!NOTE]
 > The above-mentioned *AggregationRule* placeholder can also be used in a trend component, a pie chart, a bar chart, a column chart, a stacked area chart and a parameter summary.
 >
