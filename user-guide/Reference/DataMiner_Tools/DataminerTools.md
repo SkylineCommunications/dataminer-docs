@@ -15,6 +15,7 @@ This section provides information on the following tools:
 - [SLNetClientTest tool](xref:SLNetClientTest_tool)
 - [SLOffload tool](xref:SLOffload_tool)
 - [SLSkipAsSourceTool](xref:SLSkipAsSourceTool)
+- [SNMP bandwidth estimation tool](xref:SNMP_Bandwidth_Estimation_Tool)
 - [Spectrum simulation protocol](xref:Spectrum_Simulation_protocol)
 - [Standalone BPA Executor](xref:Standalone_BPA_Executor)
 - [Standalone Cassandra Backup tool](xref:Standalone_Cassandra_Backup_Tool)

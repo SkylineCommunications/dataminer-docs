@@ -3002,6 +3002,8 @@
           topicUid: SLOffload_tool
         - name: SLSkipAsSourceTool
           topicUID: SLSkipAsSourceTool
+        - name: SNMP bandwidth estimation tool
+          topicUID: SNMP_Bandwidth_Estimation_Tool
         - name: Spectrum simulation protocol
           topicUID: Spectrum_Simulation_protocol
         - name: Standalone BPA Executor
