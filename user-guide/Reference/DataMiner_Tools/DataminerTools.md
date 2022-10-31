@@ -11,6 +11,7 @@ This section provides information on the following tools:
 - [DataMiner Size tool](xref:DataMinerSizeTool)
 - [DataMiner Taskbar Utility](xref:DataMiner_Taskbar_Utility)
 - [Factory reset tool](xref:Factory_reset_tool)
+- [Protocol Debug tools](xref:Protocol_Debug_Tools)
 - [SLLogCollector](xref:SLLogCollector)
 - [SLNetClientTest tool](xref:SLNetClientTest_tool)
 - [SLOffload tool](xref:SLOffload_tool)
@@ -23,7 +24,7 @@ This section provides information on the following tools:
 - [Standalone Elastic Backup tool](xref:Standalone_Elastic_Backup_Tool)
 - [Standalone Elasticsearch Cluster Installer](xref:Standalone_Elasticsearch_Cluster_Installer)
 - [Sync Check](xref:Sync_Check)
-- [Verify Cluster Events Tool](xref:Verify_Cluster_Events_Tool)
+- [Verify Cluster Events tool](xref:Verify_Cluster_Events_Tool)
 - [VerifyClusterPorts.dmupgrade](xref:VerifyClusterPortsdmupgrade)
 
 > [!NOTE]

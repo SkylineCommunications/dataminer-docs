@@ -2889,6 +2889,8 @@
               topicUid: Taskbar_Utility_command_line_options
         - name: Factory reset tool
           topicUID: Factory_reset_tool
+        - name: Protocol Debug tools
+          topicUID: Protocol_Debug_Tools
         - name: SLLogCollector
           topicUid: SLLogCollector
         - name: SLNetClientTest tool
