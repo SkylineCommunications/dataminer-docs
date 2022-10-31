@@ -37,9 +37,11 @@ A number of enhancements have been made with regard to managing resource pools.
 #### Trending - Behavioral anomaly detection: No more intermediate change point update events of type 'flatline' [ID_33957]
 
 <!-- MR 10.3.0 - FR 10.2.10 -->
-<!-- Not added to 10.3.0 -->
 
 Up to now, when a trend behaved as a flatline for a long time, a change point update event would be generated every 15 minutes. From now on, in case of a flatline trend, only two change point events will be generated: one at the start of the flatline and another at the end of the flatline.
+
+> [!NOTE]
+> Flatline events will be cleared as soon as the flatline ends.
 
 #### Trending: Enhanced performance when requesting real-time trend data [ID_34171]
 

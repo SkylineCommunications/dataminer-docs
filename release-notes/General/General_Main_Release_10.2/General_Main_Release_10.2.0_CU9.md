@@ -12,6 +12,42 @@ uid: General_Main_Release_10.2.0_CU9
 
 ### Enhancements
 
+#### Security enhancements [ID_33520]
+
+A number of security enhancements have been made.
+
+#### Failover: Decommissioning a Failover setup while the server hosting the offline agent is unavailable [ID_33827]
+
+<!-- MR 10.2.0 [CU9] - FR 10.2.12 -->
+
+It is now possible to decommission a Failover setup while the server hosting the offline agent is unavailable.
+
+> [!NOTE]
+> When you try to decommission a Failover setup while the offline agent is missing, in Cube's *Failover Config* window, a warning will be displayed.
+
+#### SLReset will no longer remove VersionHistory.txt and the HTTPS configuration [ID_34194]
+
+<!-- MR 10.2.0 [CU9] - FR 10.2.10 -->
+
+From now on, the factory reset tool *SLReset.exe* will no longer remove the following items:
+
+- the *VersionHistory.txt* file
+- the HTTPS configuration stored in the *MaintenanceSettings.xml* file.
+
+#### SLLogCollector now also retrieves information from Elasticsearch [ID_34213]
+
+<!-- MR 10.2.0 [CU9] - FR 10.2.12 -->
+
+On systems with an Elasticsearch database, SLLogCollector will now also retrieve information that can help debug issues from that database.
+
+#### Cassandra Cluster: Default replication strategy when migrating to Cassandra Cluster has been changed to 'NetworkTopologyStrategy' [ID_34417]
+
+<!-- MR 10.2.0 [CU9] - FR 10.2.12 -->
+
+When migrating to Cassandra Cluster or when setting up a Cassandra Cluster configuration from scratch, the default replication strategy will now be *NetworkTopologyStrategy*.
+
+The replication strategy *SimpleStrategy* will be used when installing a new DataMiner Agent with a single Cassandra node.
+
 #### Visual Overview: New toggle buttons added to Buttons stencil [ID_34426]
 
 <!-- MR 10.2.0 [CU9] - FR 10.2.12 [CU0] -->
@@ -64,7 +100,7 @@ The following methods used to add attachments to bookings, jobs and tickets have
 
 Also, the *ContinueAutomationScript* method now has an additional `info` parameter that can be used to provide more information about the variables passed in the `values` parameter (e.g. information to help resolve the file paths).
 
-#### SLLogCollector now also collects network information [ID_34582]
+#### SLLogCollector now also collects network information [ID_34582] [ID_34675]
 
 <!-- MR 10.1.0 [CU21] / 10.2.0 [CU9] - FR 10.2.12 -->
 
@@ -72,10 +108,64 @@ SLLogCollector packages will now also include the following additional files con
 
 | File | Contents |
 |------|----------|
-| Logs\Network Information\ipconfig.exe _all.txt | The output of an `ipconfig /all` command. |
-| Logs\Network Information\route.exe print.txt   | The output of a `route print` command.    |
+| Logs\Network Information\ipconfig.exe _all.txt            | The output of an `ipconfig /all` command.           |
+| Logs\Network Information\route.exe print.txt              | The output of a `route print` command.              |
+| Logs\Network Information\netsh.exe winhttp show proxy.txt | The output of a `netsh winhttp show proxy` command. |
+
+#### Failover: A reverse proxy will now be used to re-route HTTP traffic from the offline agent to the online agent [ID_34606]
+
+<!-- MR 10.2.0 [CU9] - FR 10.2.12 -->
+
+In a Failover setup, a reverse proxy will now be hosted in IIS in order to re-route HTTP traffic from the offline agent to the online agent. After a switch has occurred, the proxy will be disabled in the online agent and enabled on the offline agent.
+
+This feature requires the Application Request Routing (ARR) module to be installed on IIS. When you upgrade to version 10.2.12 / 10.2.0 [CU9], it will automatically be installed if it has not yet been installed earlier.
+
+> [!NOTE]
+> If you manually uninstall ARR, it will not be reinstalled automatically during the next upgrade. In order to force the upgrade process to reinstall it, remove the ARR entry from the `C:\Skyline DataMiner\Upgrades\UpgradeActions\ExecutableEvents.xml` file.
+
+#### HTTP elements will now resend a request after receiving ERROR_WINHTTP_SECURE_FAILURE [ID_34644]
+
+<!-- Main Release Version 10.0.0 [CU22]/10.1.0 [CU21]/10.2.0 [CU9] - Feature Release Version 10.2.12 -->
+
+When an HTTP element received an ERROR_WINHTTP_SECURE_FAILURE after sending an HTTP request, up to now, it would go into timeout.
+
+From now on, when an HTTP element receives an ERROR_WINHTTP_SECURE_FAILURE after sending an HTTP request, it will resend the request for a number of times, taking into account the number of retries specified in the element's port settings.
+
+#### Service & Resource Management: Check for duplicate function names when creating/editing resources [ID_34648]
+
+<!-- MR 10.2.0 [CU9] - FR 10.2.12 -->
+
+When you create or edit a resource, from now on, a check will be performed to determine whether the function instance name is already being used for another resource within the same main element. If the function instance name already exists, you will not be able to save the resource and a *DuplicateFunctionName* error will be added to the *SLFunctionManager.txt* log file. In that error, you will find the ID and the name of the existing resource with that same function instance name.
+
+An *InitializeFunctionResourceFailed* error will also be added to the *SLResourceManager.txt* log file.
+
+#### Cassandra: Enhanced querying of trend data [ID_34659]
+
+<!-- Main Release Version 10.1.0 [CU21]/10.2.0 [CU9] - Feature Release Version TBD -->
+
+A number of enhancements have been made with regard to querying trend data against a Cassandra database.
+
+#### Factory reset tool: '-cleanclustereddatabase' option will now only remove the tables, keyspaces and indices defined in db.xml from the existing databases [ID_34672]
+
+<!-- MR 10.2.0 [CU9] - FR 10.2.12 -->
+
+Up to now, the *SLReset.exe* option *-cleanclustereddatabase* would remove all keyspaces and indices from the CassandraCluster and ElasticSearch databases. From now on, this option will only remove the tables, keyspaces and indices defined in the *db.xml* file from the databases (clusters as well as single-node Cassandra databases on remote machines).
+
+#### SLMessageBroker log file entries will now mention the NATS server to which the NATS client is connected [ID_34719]
+
+<!-- MR 10.2.0 [CU9] - FR 10.2.12 -->
+
+When a NATS client had reconnected when DataMiner was running, up to now, the log files would not specify the NATS server that client had reconnected to. From now on, SLMessageBroker log file entries will contain the *connectedUrl* and state information.
+
+Also, extended logging will now be available when an asynchronous request times out.
 
 ### Fixes
+
+#### Ticketing app: Problem with ticket domains incorrectly marked as masked [ID_33449]
+
+<!-- MR 10.2.0 [CU9] - FR 10.2.7 -->
+
+If, in the Ticketing app, you tried to edit a ticket of a domain linked to an element, in some cases, that domain would incorrectly be marked as "masked".
 
 #### Problem with SLDataMiner when editing an element [ID_34329]
 
@@ -94,6 +184,12 @@ When, in the Dashboards app, resource capacity was displayed using a *Line & are
 <!-- MR 10.2.0 [CU9] - FR 10.2.11 -->
 
 In an embedded visual overview, in some cases, list box items would not be displayed correctly.
+
+#### DataMiner Cube - Trending: Y axis of trend graph would incorrectly show duplicate values [ID_34492]
+
+<!-- MR 10.1.0 [CU21] / 10.2.0 [CU9] - FR 10.2.12 -->
+
+When a trend graph showed a constant value, due to a rounding issue, the Y axis would incorrectly show duplicate values.
 
 #### Standalone DVE parameter partially included in an service would incorrectly not affect service state severity [ID_34493]
 
@@ -185,6 +281,24 @@ In some rare cases, an error could occur in SLElement when rows were deleted fro
 
 When DataMiner Maps v1 was used with Google Maps as provider, in some cases, the *Loading Google Maps...* screen would incorrectly stay visible after the map had been loaded.
 
+#### Trending: Problem when duplicating table parameters with different values [ID_34591]
+
+<!-- MR 10.1.0 [CU21] / 10.2.0 [CU9] - FR 10.2.12 -->
+
+When duplicating a table parameter in the legend of a trend graph, the graph would not be displayed if the duplicate parameter did not have the same index value as the original parameter.
+
+#### Trending: Table would be cleared of all data after refreshing [ID_34592]
+
+<!-- MR 10.1.0 [CU21] / 10.2.0 [CU9] - FR 10.2.12 -->
+
+When triggering a refresh of a trend chart, the data and axes on the line chart would disappear for a short period of time without first verifying whether there was any new incoming data. If the incoming data equals null, the graph should not be redrawn and should remain visible.
+
+#### Problem when sending an NT_SNMP_GET request containing ':tablev2' and an instance [ID_34604]
+
+<!-- MR 10.1.0 [CU21] / 10.2.0 [CU9] - FR 10.2.12 -->
+
+When an *NT_SNMP_GET* request contained a MultipleGetBulk (`:tablev2`) and an instance, the instance would incorrectly be ignored.
+
 #### Problem when recording a GQI query [ID_34608]
 
 <!-- MR 10.2.0 [CU9] - FR 10.2.12 -->
@@ -199,6 +313,18 @@ When you had enabled this feature, in some rare cases, an error could occur when
 
 When a large number of shapes generated based on child items in a view were sorted by a custom property value, in some rare cases, those shapes would not be displayed in the correct order.
 
+#### Problem with SLDataGateway when importing a DELT element with a large number of Elasticsearch logger table entries [ID_34626]
+
+<!-- MR 10.2.0 [CU9] - FR 10.2.12 -->
+
+When a DELT element with more than 1,000 Elasticsearch logger table entries was being imported, in some cases, SLDataGateway would end up in an endless loop and start using a large amount of virtual memory.
+
+#### Low-code apps: 'Read mode' setting of a form would incorrectly not be available when the form only contained DOM instance data [ID_34627]
+
+<!-- MR 10.2.0 [CU9] - FR 10.2.12 -->
+
+When a form only contained DOM instance data, the *Read mode* setting of the form would incorrect not be available.
+
 #### Dashboards app: Problem when creating a PDF preview of a dashboard containing an empty GQI table [ID_34635]
 
 <!-- MR 10.2.0 [CU9] - FR 10.2.12 -->
@@ -211,8 +337,73 @@ When a PDF preview was made from a dashboard containing an empty GQI table (e.g.
 
 When you had opened a DataMiner web app in Mozilla Firefox, read-only text in input boxes would incorrectly not be displayed in bold type.
 
+#### Dashboards app - Line & area chart: No date information would be displayed when hovering over a trend graph while the legend was disabled [ID_34655]
+
+<!-- MR 10.2.0 [CU9] - FR 10.2.12 -->
+
+When you hovered over a trend graph while the legend was disabled, the trend value tooltips would incorrectly not show any date information.
+
 #### Web apps: Problem when creating large PDF files [ID_34663]
 
 <!-- MR 10.2.0 [CU9] - FR 10.2.12 -->
 
 When a large PDF file (e.g. a PDF report) was created in a web app, in some cases, an error could occur.
+
+#### nats-account-server service could silently fail [ID_34698]
+
+<!-- MR 10.2.0 [CU9] - FR 10.2.12 -->
+
+In some cases, the *nats-account-server* service could silently fail. All functionality would stop although the process would keep running.
+
+When that happened, the log file would report the following:
+
+```txt
+The NSC store encountered an error, shutting down ...
+stopping account server
+disconnected from NATS
+stopping http server
+http server stopped
+error closing listener: close tcp [::]:9090: use of closed network connection
+http stopped
+closed JWT store
+```
+
+SLWatchDog will now periodically check the log file and, if it finds the above-mentioned entries:
+
+- the *nats-account-server.exe* process will be terminated,
+- the *nssm.exe* service wrapper will log this event in the *Windows Event Viewer*, and
+- the *nats-account-server.exe* process will be restarted.
+
+Also, SLNet will now by default limit the number of NAS log files in the same way as it limits the NATS log files: check the files every 15 minutes and keep the 10 most recent files.
+
+#### DataMiner Cube - Alarm Console: Problem with visibility of correlation alarms in filtered alarm tabs [ID_34728]
+
+<!-- MR 10.2.0 [CU9] - FR 10.2.12 -->
+
+When a filtered alarm tab contained a correlation alarm, in some cases, this correlation alarm would incorrectly not disappear when it did no longer match the filter, especially when that filter was configured to hide alarms of type "Comment added", "Acknowledged" or "Released".
+
+Also, when a correlation alarm did not match the filter, only the base alarms would be shown, but when the type of one of those base alarms changed to "Comment added", "Acknowledged" or "Released", that base alarm would incorrectly not disappear.
+
+#### Mediation protocols: 'Recursion detected in the mediation links tree' error [ID_34736]
+
+<!-- Main Release Version 10.0.0 [CU22]/10.1.0 [CU21]/10.2.0 [CU9] - Feature Release Version 10.2.12 -->
+
+When a mediation protocol contained a *Params.Param.Mediation.LinkTo* element that pointed to a protocol that had the same *ElementType* value as the one specified in the *baseFor* attribute of its *Protocol* element, then the following error would be logged in the *SLDataMiner.txt* log file:
+
+```txt
+Recursion detected in the mediation links tree
+```
+
+As this error was caused by an internal lookup issue that had no effect whatsoever with regard to mediation layer functionality, from now on, it will no longer be logged.
+
+#### DataMiner Cube - Trending: Double-clicking a suggestion or alarm event created by SLAnalytics would open a trend graph showing "no data" [ID_34751]
+
+<!-- MR 10.2.0 [CU9] - FR 10.2.12 -->
+
+When, in the Alarm Console, you double-clicked a suggestion or alarm event created by SLAnalytics for a table parameter with advanced naming, in some cases, the trend graph would incorrectly show "no data".
+
+#### An error could occur in the hosting process when a connection had been closed [ID_34786]
+
+<!-- MR 10.1.0 [CU21] / 10.2.0 [CU9] - FR 10.2.12 -->
+
+When a connection had been closed, in some cases, an error could occur in the hosting process.

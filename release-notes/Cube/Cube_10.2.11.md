@@ -101,12 +101,6 @@ Shape data items of type *ParametersSummary* can now have values that include dy
 
 In service definition diagrams, function resource icons are now centered.
 
-#### DataMiner Cube - Automation: Changes made to a script by other users will immediately be shown when selecting that script [ID_34277]
-
-<!-- Main Release Version 10.2.0 [CU8] - Feature Release Version 10.2.11 -->
-
-When you select an unmodified Automation script in the Automation app, from now on, changes made to that script by other users (e.g. in another Cube session or in DataMiner Integration Studio) will immediately be shown.
-
 #### Trending - Behavioral anomaly detection: Enhanced flatline detection [ID_34319]
 
 <!-- MR 10.3.0 - FR 10.2.11 -->

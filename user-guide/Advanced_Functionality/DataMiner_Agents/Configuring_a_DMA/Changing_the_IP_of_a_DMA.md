@@ -44,11 +44,17 @@ For a standalone DMA, i.e. a DMA that is not combined with other DMAs in a clust
 
       1. Go to *C:\\Skyline DataMiner\\Files* and double-click *SLEndpointTool_Console.exe*.
 
-      1. Press U to confirm that you want to un install NAS and NATS.
+      1. Press U to confirm that you want to uninstall NAS and NATS.
 
       1. Press Enter twice, enter NAS, and press Y.
 
-      1. Repeat the above procedure for NATS.
+   1. Install NAS and NATS again:
+
+      1. Go to *C:\\Skyline DataMiner\\Files* and double-click *SLEndpointTool_Console.exe*.
+
+      1. Press I to confirm that you want to install NAS and NATS
+
+      1. Press Enter twice, enter NATS, and press Y.
 
 1. If your DataMiner Agent is connected to the cloud, restart the following services:
 
@@ -108,11 +114,19 @@ For a single DMA within a cluster that does not use the Cassandra cluster featur
 
       1. Go to *C:\\Skyline DataMiner\\Files* and double-click *SLEndpointTool_Console.exe*.
 
-      1. Press U to confirm that you want to un install NAS and NATS.
+      1. Press U to confirm that you want to uninstall NAS and NATS.
 
-      1. Press Enter twice, enter NAS, and press Y.
+      1. Press Enter twice, enter NAS, and press Y. (This will uninstall both NATS and NAS)
 
-      1. Repeat the above procedure for NATS.
+   1. Install NAS and NATS again:
+
+      1. Go to *C:\\Skyline DataMiner\\Files* and double-click *SLEndpointTool_Console.exe*.
+
+      1. Press I to confirm that you want to install NAS and NATS.
+
+      1. Press Enter twice, enter NATS, and press Y.
+
+         This will install both NAS and NATS.
 
 1. If your DataMiner Agent is connected to the cloud, restart the following services:
 

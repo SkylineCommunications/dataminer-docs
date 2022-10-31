@@ -171,7 +171,7 @@ If table cells contain a lot of text, it can be next to impossible to keep every
 
 ### Code blocks
 
-To display code examples in separate code blocks, place three backquotes ("`") above and below those blocks. In addition, next to the three backquotes above the blocks, specify the type of code, e.g. *csharp*, *md*, *xml*, etc.
+To display code examples in separate code blocks, place three backquotes (```) above and below those blocks. In addition, next to the three backquotes above the blocks, specify the type of code, e.g. *csharp*, *md*, *xml*, etc.
 
 To display inline code within a paragraph, add a backquote before and after the code.
 
@@ -197,7 +197,7 @@ uid: contributing
 ---
 ```
 
-To add a cross-reference to a header on the same page as the cross-reference itself, do not specify "xref:", but instead add a hash followed by the header text, without special characters and with hyphens instead of spaces. For example:
+To add a cross-reference to a header on the same page as the cross-reference itself, do not specify "xref:", but instead add a hash followed by the header text, lowercase without special characters and with hyphens instead of spaces. For example:
 
 ```md
 If you are unfamiliar with this syntax, refer to [Markdown syntax](#markdown-syntax).
@@ -323,9 +323,12 @@ If you do add a screenshot, ideally there should be some indication of the versi
 
 ## Doing a quick edit to a page
 
-On every page of the documentation on docs.dataminer.services, an *Improve this doc* link is available in the top-right corner. Clicking this link will open the source of the documentation on GitHub. You can then make changes as follows:
+> [!TIP]
+> See also: [Making a small contribution to DataMiner Docs](https://community.dataminer.services/video/making-a-small-contribution-to-dataminer-docs/) on DataMiner Dojo
 
-![Improve this doc link](~/images/Contrib_ImproveThisDoc.png)
+On every page of the documentation on docs.dataminer.services, a *Propose changes* link is available in the top-right corner. Clicking this link will open the source of the documentation on GitHub. You can then make changes as follows:
+
+![Propose changes link](~/images/Propose_Changes.png)
 
 1. Make sure you are logged in to GitHub.
 
@@ -394,21 +397,24 @@ For larger contributions, e.g. to add several new pages, we recommend that you i
 
 - [GitHub Desktop](https://desktop.github.com/)
 
-- [Visual Studio Code](https://code.visualstudio.com/) (with the [Docs Authoring Pack](https://marketplace.visualstudio.com/items?itemName=docsmsft.docs-authoring-pack) extension)
+- [Visual Studio Code](https://code.visualstudio.com/) (with the [Learn Authoring Pack](https://marketplace.visualstudio.com/items?itemName=docsmsft.docs-authoring-pack) extension)
 
 When you install GitHub Desktop, you will also need to add the correct repository:
 
 1. Install GitHub Desktop and log in with your GitHub account.
 
-1. Select *Create a New Repository on your hard drive*.
+1. Select *Clone a repository from the Internet*.
 
-   ![Install GitHub 1](~/images/InstallGithub1.png)
+   ![Install GitHub 1](~/images/Installing_Github_Desktop.png)
 
 1. Next, you will be asked which repository you want to use. Clone the *SkylineCommunications/dataminer-docs* repository to your local machine. The easiest way to do so is by specifying the URL `https://github.com/SkylineCommunications/dataminer-docs` in the URL tab.
 
    ![Install GitHub 2](~/images/InstallGithub2.png)
 
-1. If you do not have write access to the repository, you will find an alert in the lower left corner.
+   > [!IMPORTANT]
+   > Make sure the local path you clone the repository to is relatively short. Using a long file path will lead to errors, as Windows will be unable to create certain files in the repository.
+
+1. If you do not have write access to the repository, you will find an alert in the lower left corner of the GitHub Desktop UI.
 
    ![Install GitHub3](~/images/InstallGitHub3.png)
 
@@ -432,7 +438,7 @@ When you install GitHub Desktop, you will also need to add the correct repositor
 
 For more information on how to work with Visual Studio Code, refer to the [Visual Studio Code documentation](https://code.visualstudio.com/docs). As our documentation is written in Markdown, aside from the general functionality of the application, the [Markdown](https://code.visualstudio.com/docs/languages/markdown) section is of specific interest there.
 
-Also keep in mind that we are using **DocFX Flavored Markdown**. Refer to the [Markdown syntax](#markdown-syntax) section above for more information about this. Make sure the Docs Authoring Pack extension is installed in Visual Studio Code to make it easier to work with this Markdown flavor.
+Also keep in mind that we are using **DocFX Flavored Markdown**. Refer to the [Markdown syntax](#markdown-syntax) section above for more information about this. Make sure the Learn Authoring Pack extension is installed in Visual Studio Code to make it easier to work with this Markdown flavor.
 
 ### Things to watch out for
 

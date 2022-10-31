@@ -10,8 +10,6 @@ uid: General_Main_Release_10.3.0_new_features_1
 > [!TIP]
 > For release notes related to DataMiner Cube, see [DataMiner Cube 10.3.0](xref:Cube_Main_Release_10.3.0).
 
-## Other new features
-
 ### DMS core functionality
 
 #### New read-only service properties [ID_29978] [ID_33196] [ID_33363]

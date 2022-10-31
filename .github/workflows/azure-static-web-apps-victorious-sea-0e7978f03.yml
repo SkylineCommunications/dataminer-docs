@@ -103,7 +103,7 @@ jobs:
     - name: Azure Cognitive Search Reindex
       # You may pin to the exact commit or the version.
       # uses: andrewconnell/azure-search-index@ac64a40924771a415e01d52db4c1d557ecd3a99f
-      uses: andrewconnell/azure-search-index@1.0.1
+      uses: andrewconnell/azure-search-index@2.0.3
       with:
         # Name of the Azure Cognitive Search resource.
         azure-search-instance: docs-srch

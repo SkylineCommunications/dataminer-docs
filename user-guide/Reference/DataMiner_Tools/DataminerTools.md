@@ -6,7 +6,7 @@ uid: DataminerTools
 
 This section provides information on the following tools:
 
-- [DMS Alerter](xref:DMS_Alerter)
+- [Alerter](xref:Alerter)
 - [DataMiner Comparison tool](xref:DataMinerComparisonTool)
 - [DataMiner Size tool](xref:DataMinerSizeTool)
 - [DataMiner Taskbar Utility](xref:DataMiner_Taskbar_Utility)
