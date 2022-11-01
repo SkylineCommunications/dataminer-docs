@@ -30,7 +30,7 @@ You can create a query as follows:
 When you create a query, you can use one or more of the data sources detailed below.
 
 > [!NOTE]
-> Custom properties that are marked as read-only, e.g. the *System Name* and *System Type* alarm properties, can be retrieved with a GQI query from DataMinder 10.2.0 \[CU6]/10.2.9 onwards. In addition, from DataMiner 10.2.10/10.3.0 onwards, the *System Name* and *System Type* data are available as a feed with the *Use feed* option (depending on the data source, as mentioned below).
+> Custom properties that are marked as read-only, e.g. the *System Name* and *System Type* alarm properties, can be retrieved with a GQI query from DataMiner 10.2.0 \[CU6]/10.2.9 onwards. In addition, from DataMiner 10.2.10/10.3.0 onwards, the *System Name* and *System Type* data are available as a feed with the *Use feed* option (depending on the data source, as mentioned below).
 
 ### Get alarms
 
