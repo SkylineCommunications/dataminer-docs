@@ -8,7 +8,7 @@ For each process run, a new process DOM instance needs to be generated. This DOM
 
 The responsibility of the PA framework stops at the update of the DOM instance. It is up to the team implementing the process to code custom logic to access and process relevant data from the process DOM instance .
 
-## Example
+### Example
 
 For a process where a *Scan IP Range* activity is present, it might be interesting to access the list of IPs that have been detected and show it on a custom front end.
 

@@ -2,11 +2,11 @@
 uid: Deploying_and_Configuring_the_PA_Framework
 ---
 
-# Deploying and Configuring the PA Framework
+# Deploying and configuring the PA framework
 
 ## Checking and installing the prerequisites
 
-Before you start to work on the PA development and deployment, make sure your DataMiner platform has the necessary resources and specifications for a smooth execution of SRM workflows, as SRM is an essential prerequisite for the PA Framework. You can find the expected requirements on the [DataMiner Compute Requirements page](https://community.dataminer.services/dataminer-compute-requirements/).
+Before you move on to the PA development and deployment, make sure your DataMiner platform has the necessary resources and specifications for a smooth execution of SRM workflows, as SRM is an essential prerequisite for the PA framework. You can find the expected requirements on the [DataMiner Compute Requirements page](https://community.dataminer.services/dataminer-compute-requirements/).
 
 Your DataMiner System will also need to use an [Elasticsearch database](xref:Elasticsearch_database).
 
@@ -37,17 +37,17 @@ To install the SRM Framework:
 
 1. Double-click the SRM package, and install the package in the same manner as a DataMiner upgrade.
 
-   > [!NOTE]
-   > DataMiner will restart during the installation of the package.
-
    > [!TIP]
    > See also: [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent)
 
-## Installing the process automation framework
+   > [!NOTE]
+   > DataMiner will restart during the installation of the package.
 
-To install the PA Framework:
+## Installing the Process Automation framework
 
-1. Ensure that a DataMiner version is installed that is compatible with the PA Framework, and the platform meets the hardware requirements.
+To install the PA framework:
+
+1. Ensure that a DataMiner version is installed that is compatible with the PA framework, and the platform meets the hardware requirements.
 
    - Make sure the DataMiner System uses an Elasticsearch database.
 
@@ -67,11 +67,11 @@ To install the PA Framework:
 
 ## Configuring the PA framework
 
-To set up the initial configuration of the PA Framework go to *Automation* and run the *SRM_Setup* Automation script.
+To set up the initial configuration of the PA framework go to *Automation* and run the *SRM_Setup* Automation script.
 
 To do so, double-click *SRM_Setup* and then select *Execute*.
 
-This script requires one input argument, *Booking Manager Element Info*. For this input argument, specify the value "{}". Click *Execute now*.
+This script requires one input argument: *Booking Manager Element Info*. For this input argument, specify the value "{}". Click *Execute now*.
 
 ![SRM Setup](~/user-guide/images/SRM_setup.png)
 
@@ -82,17 +82,17 @@ The script will configure the framework and create all relevant components to ge
 
 ## Upgrading the PA framework
 
-If you already have an existing version of the PA Framework installed, update it to the latest version available on DataMiner Dojo.
+If you already have an existing version of the PA framework installed, update it to the latest version available on DataMiner Dojo.
 
 1. If you upgraded from a PA Framework version older than 1.3.0 (the current officially supported minimum version) to version 1.3.0 or later, run the *PA_MigratePoolsAndQueues* script.
-
-   > [!TIP]
-   > See also: [Running Automation scripts](xref:Running_Automation_scripts)
 
    > [!WARNING]
    > It is essential you run this script first before moving on to the next steps.
 
-   Also make sure that the files *ProcessAutomation.dll* and *SLSRMLibrary.dll* cannot be found in the following location of the Skyline DataMiner folder: `c:\Skyline DataMiner\Files\DLLImport\` and `c:\Skyline DataMiner\ProtocolScripts\DLLImport\`.
+   > [!TIP]
+   > See also: [Running Automation scripts](xref:Running_Automation_scripts)
+
+   Also make sure that the files *ProcessAutomation.dll* and *SLSRMLibrary.dll* cannot be found in the following sections of the Skyline DataMiner folder: `c:\Skyline DataMiner\Files\DLLImport\` and `c:\Skyline DataMiner\ProtocolScripts\DLLImport\`.
 
     If these files *are* present, delete them and restart the DMAs involved.
 

@@ -20,7 +20,7 @@ To integrate a gateway in a process:
 
 1. Build a JSON string representing the routing rules. See [routing rules](#routing-rules).
 
-1. In the *Profiles* module, create a profile instance that applies the *PA GW* profile definition and store the serialized Routing Rules in the *PA GW RoutingRules* parameter.
+1. In the [*Profiles* module](xref:The_Profiles_module), create a profile instance that applies the *PA GW* profile definition and store the serialized Routing Rules in the *PA GW RoutingRules* parameter.
 
 1. In the *Process Automation* app, launch the *process definition configuration* wizard and select the previously created profile instance when you configure the Gateway node.
 
@@ -32,7 +32,7 @@ A rule contains one or multiple conditions comparing the field value of the proc
 
 Below you can find examples of the possible routing rules.
 
-### Parallel-Split
+### Parallel Split
 
 ```json
 {

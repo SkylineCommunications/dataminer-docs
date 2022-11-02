@@ -8,15 +8,15 @@ uid: Creating_and_Configuring_a_Process_Definition
 
 Create a process DOM definition, adding all parameters that are relevant for the process.
 
-The process DOM instance will be the only way to exchange data between activities. Therefore, make sure it contains all relevant field descriptors.
-
-The Process DOM definition needs to be used with the “process_automation” module ID.
-
 > [!NOTE]
 > At present, there is no user interface or dedicated development environment available to create DOM definitions. Contact Skyline Communications if you want more information on how to create DOM definitions.
 
+The process DOM instance will be the only way to exchange data between activities. Therefore, make sure it contains all relevant field descriptors.
+
+The Process DOM definition needs to be used with the *process_automation* module ID.
+
 > [!NOTE]
-> By default, TTL on the “process_automation” module ID is set to 30 days. This means that the process DOM instances will stay in the database for 30 days after the last update action.
+> By default, TTL on the *process_automation* module ID is set to 30 days. This means that process DOM instances will stay in the database for 30 days after the last update action.
 
 ## Creating a process definition
 
@@ -55,15 +55,13 @@ The Process DOM definition needs to be used with the “process_automation” mo
 
      ![Profile_Instance](~/user-guide/images/Profile_Instance.png)
 
-   Alternatively, start the process with a *PA Timer Start Event* that can be used to generate new tokens periodically (see [Generate Tokens Periodically](xref:Pushing_Tokens_Into_A_Process#periodically)).
+   Alternatively, start the process with a *PA Timer Start Event* that can be used to generate new tokens periodically (see [Generate Tokens Periodically](xref:Pushing_Tokens_Into_A_Process#pushing-tokens-periodically)).
 
 1. In the *Process Automation* app, select the newly created process definition.
 
 1. Click the *Configure* button to open the *process definition configuration* wizard.
 
-1. On the first page of the wizard, select the process DOM definition and click *Next*.
-
-   A page will be shown where all nodes in the process definition are listed.
+1. On the first page of the wizard, select the process DOM definition and click *Next*. A page will be shown where all nodes in the process definition are listed.
 
 1. For each node in the process definition:
 
@@ -91,7 +89,7 @@ The Process DOM definition needs to be used with the “process_automation” mo
 
            ![Dynamic Value](~/user-guide/images/Dynamic_Value.png)
 
-           For output parameters, it only makes sense to link them to the field descriptor of the Process DOM Instance.
+        For output parameters, it only makes sense to link them to the field descriptor of the Process DOM Instance.
 
 1. Click the *Confirm* button.
 

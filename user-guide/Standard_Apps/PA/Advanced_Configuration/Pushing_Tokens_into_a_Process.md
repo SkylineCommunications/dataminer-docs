@@ -22,11 +22,11 @@ When a process has at least one defined activation window (past, present, or fut
 > [!NOTE]
 > For each token pushed into a process, a new process DOM instance must be generated.
 
-## At the start of an activation window
+### Pushing tokens at the start of an activation window
 
 When an activation window starts, it is possible to immediately push a token into the process. This can be achieved by going through the following procedure:
 
-1. In the *Profiles* module, verify that the process definition contains a *PA None Start Event* node.
+1. In the [*Profiles* module](xref:The_Profiles_module), verify that the process definition contains a *PA None Start Event* node.
 
 1. In the *Instances* tab, create a new process DOM instance.
 
@@ -58,7 +58,7 @@ When an activation window starts, it is possible to immediately push a token int
 
    1. Click *OK* and *Confirm* to save all changes and exit the configuration wizard.
 
-## Periodically
+### Pushing tokens periodically
 
 During an activation window, it is possible to push new tokens into a process on a regular basis. This can be achieved with the following procedure:
 
@@ -66,7 +66,7 @@ During an activation window, it is possible to push new tokens into a process on
 
 1. In the *Instances* tab, create a new Process DOM Instance.
 
-   1. Define a business key (human readable identifier of the token).
+   1. Define a business key (human-readable identifier of the token).
 
    1. Make sure the instance is set to apply to the *PA Timer Start Event* profile definition.
 
@@ -78,7 +78,7 @@ During an activation window, it is possible to push new tokens into a process on
 
       - **PA Initial Process Instantiation**: Set to *Enabled*.
 
-      - **PA Timer Start Recurring Pattern**: A serialized JSON code defining the recurring pattern over which tokens are generated. It is based on the PaTimerStartEventRecurringPattern class.
+      - **PA Timer Start Recurring Pattern**: A serialized JSON code defining the recurring pattern over which tokens are generated. It is based on the *PaTimerStartEventRecurringPattern* class.
 
       Example:
 

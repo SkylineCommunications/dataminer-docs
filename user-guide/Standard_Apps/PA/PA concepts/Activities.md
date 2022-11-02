@@ -14,7 +14,7 @@ Process Automation supports the following types of activities:
 
 - [**Script tasks**](xref:Creating_Activities#script-tasks): A script task is an Automation script with a specific signature. It can be used to perform any custom action. The custom logic is fully part of the script and can of course interface with any DataMiner feature/object.
 
-- [**User tasks**](xref:Creating_Activities#user-tasks): A user task is an activity that will wait for a user action before completing the task so that the token attached to that task can be completed and the next token can be generated. Typically, a user task app will be made available in the *Low Code App* module so that the end user can access these user tasks and complete them.
+- [**User tasks**](xref:Creating_Activities#user-tasks): A user task is an activity that will wait for a user action before completing the task. This way, the token attached to that task can be completed and the next token can be generated. Typically, a user task app will be made available in the *Low Code App* module so that the end user can access these user tasks and complete them.
 
   > [!NOTE]
   > Both script and resource tasks need to be designed in such a way that their execution does not exceed the default Automation script timeout time of 15 minutes.
@@ -26,7 +26,7 @@ Process Automation supports the following types of activities:
 
 An activity, after performing a task, can only generate one single task (token) for the next activity.
 
-## Examples
+**Examples**:
 
 - Send Email
 

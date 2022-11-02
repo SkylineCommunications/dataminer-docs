@@ -11,7 +11,7 @@ You can create different types of activities, depending on your final objective.
 
 ## Script tasks
 
-1. In the *Profiles* module, define the **input parameters** required for the script task to execute.
+1. In the [*Profiles* module](xref:The_Profiles_module), define the **input parameters** required for the script task to execute.
 
    For example, for a “Ping IP” activity, an input parameter could be “IP Address”.
 
@@ -39,7 +39,7 @@ You can create different types of activities, depending on your final objective.
 
       - **Type**:
 
-        1. Set to *Discrete*.
+        - Set to *Discrete*.
 
            - **Value**: Click *Add discrete value*.
 
@@ -53,7 +53,7 @@ You can create different types of activities, depending on your final objective.
 
            ![Script Task 2](~/user-guide/images/Script_Task_2.png)
 
-        1. Set to *Number*.
+        - Set to *Number*.
 
            - **Units**: ms
 
@@ -85,7 +85,7 @@ You can create different types of activities, depending on your final objective.
 
       ![PING IP](~/user-guide/images/PING_IP.png)
 
-1. Create an Automation script based on the *PA_ProfileLoadDomTemplate* script available in the PA Framework:
+1. Create an Automation script based on the *PA_ProfileLoadDomTemplate* script available in the PA framework:
 
    1. Add a C# block in the script and configure it as follows:
 
@@ -151,7 +151,7 @@ You can create different types of activities, depending on your final objective.
 
 ## User tasks
 
-A user task is an activity that will wait for a user action so that the token attached to that task can first be completed and the next token can then be generated. Typically, a User Task app will be made available so that the end user can access these User tasks and complete them.
+A user task is an activity that will wait for a user action so that the token attached to that task can first be completed and the next token can then be generated. Typically, a User Task app will be made available so that the end user can access these user tasks and complete them.
 
 Create a user [DOM definition](xref:DomDefinition) with the *pa_user_task* ModuleID and using the *PA User Task* behavior definition.
 
@@ -194,7 +194,7 @@ To create resource tasks:
 
       - **Type**:
 
-        1. Set to *Discrete*.
+        - Set to *Discrete*.
 
            - **Value**: Click *Add discrete value*.
 
@@ -206,13 +206,13 @@ To create resource tasks:
 
              - Display value: Succeed
 
-        1. Save all changes.
+          Save all changes.
 
-        1. Set to *Number*.
+        - Set to *Number*.
 
            - **Units**: ms
 
-        1. Save all changes.
+          Save all changes.
 
 1. In the *Profiles* module, group your input and output parameters into a **profile definition**.
 
@@ -306,7 +306,7 @@ To create resource tasks:
       </Functions>
       ```
 
-1. In the *Protocols & Templates module*, import the function into your DataMiner System and activate it.
+1. In the *Protocols & Templates* module, import the function into your DataMiner System and activate it.
 
    ![Functions_File](~/user-guide/images/Functions_File.png)
 
@@ -357,7 +357,7 @@ To create resource tasks:
       }
       ```
 
-1. Link the script with the profile definition you created earlier, using the *Script* section of the Profile Definition
+1. Link the script with the profile definition you created earlier, using the *Scripts* section of the profile definition
 
    1. In the *Profiles* module, select your previously created profile definition in the *Definitions* tab.
 

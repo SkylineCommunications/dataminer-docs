@@ -23,7 +23,7 @@ The *Process Automation* app (or PA app) is available in the *Applications* sect
 
 ### Process definitions
 
-This is the first tab you see when you open the PA app. It displays an overview of all process definitions and allows you to select existing process definitions to show the workspace on the right.
+This is the first tab you see when opening the PA app. It displays an overview of all process definitions and allows you to select existing process definitions to expand the workspace on the right.
 
 On the top of the page the following buttons are displayed:
 
@@ -37,7 +37,7 @@ On the top of the page the following buttons are displayed:
 
 In the bottom right corner the following buttons are displayed:
 
-- **Edit label**: Only available when selecting an activity. Click this button to edit the label displayed beneath the activity.
+- **Edit label**: Only available when selecting an activity. Click this button to edit the label displayed underneath the activity.
 
 - **Save all**: Only available after making changes in your workspace. Click to save all changes.
 
@@ -65,4 +65,4 @@ This tab provides an overview of all processes and the following related informa
 
 ### Active tokens
 
-This tab provides an overview of all main tokens pushed into the various processes and the following related information: display keys [IDX], names, statuses, error states, arrival times, processing start times, processing end times, business keys, and business Ids.
+This tab provides an overview of all main tokens pushed into the various processes and the following related information: display keys [IDX], names, statuses, error states, arrival times, processing start times, processing end times, business keys, and business IDs.

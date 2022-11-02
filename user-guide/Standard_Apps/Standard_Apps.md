@@ -8,7 +8,7 @@ uid: Part5StandardApps
 
 - [DataMiner IDP app](xref:SolIDP)
 
-- [Process Automation Framework](xref:PA_index)
+- [Process Automation framework](xref:PA_index)
 
 - [DataMiner PTP app](xref:SolPTP)
 
