@@ -14,8 +14,6 @@ The SLNetClientTest tool is an advanced system administrator tool.
 
 The SLNetClientTest tool can be opened as follows:
 
-- From the Version Switcher Utility, by clicking the *Toolbox* button.
-
 - From the DataMiner Taskbar Utility, by selecting *Launch* > *Tools* > *Client Test*.
 
 - Directly from the server: *C:\\Skyline DataMiner\\Files\\SLNetClientTest.exe*.
