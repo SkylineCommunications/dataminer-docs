@@ -3,6 +3,21 @@
   - name: General DataMiner release notes
     topicUid: DataMiner_General_RNs_index
     items:
+    - name: v10.4
+      items:
+      - name: Main Release
+        items:
+        - name: General Main Release 10.4.0 - Preview
+          topicUid: General_Main_Release_10.4.0
+          items:
+          - name: General Main Release 10.4.0 - New features
+            items:
+            - name: Highlights
+              topicUid: General_Main_Release_10.4.0_highlights
+            - name: Other new features
+              topicUid: General_Main_Release_10.4.0_new_features
+          - name: General Main Release 10.4.0 - Changes
+            topicUid: General_Main_Release_10.4.0_changes
     - name: v10.3
       items:
       - name: Main Release
