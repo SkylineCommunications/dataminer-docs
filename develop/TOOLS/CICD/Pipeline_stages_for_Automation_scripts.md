@@ -107,7 +107,7 @@ This stage executes the integration test projects. If no integration test projec
 This stage performs SonarQube C# code analysis on the code provided in the Exe blocks.
 
 > [!TIP]
-> It's possible to exclude some items from analysis (e.g. auto-generated code). For more information on how to exclude items from analysis, refer to <xref:SonarQube>.
+> It is possible to exclude some items from analysis (e.g. auto-generated code). For more information on how to exclude items from analysis, refer to <xref:SonarQube>.
 
 ## Quality gate
 
