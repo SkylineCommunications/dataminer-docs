@@ -601,6 +601,9 @@ To be able to make a local test build, you need to have DocFX installed. DocFX i
 
 1. Extract `docfx.zip` to a folder of your choice (e.g. `C:\DocFX`).
 
+    > [!NOTE]
+    > Make sure the folder name and path contain no spaces, as this may cause issues. For example, instead of `C:\My docs`, use `C:\My-docs` or some other alternative without a space.
+
 1. Add the folder (e.g. `C:\DocFX`) to the environment variable **Path** (user variable or system variable).
 
     On Windows 10 or 11 systems, do the following:
