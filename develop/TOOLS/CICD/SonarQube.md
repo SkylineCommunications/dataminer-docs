@@ -43,3 +43,24 @@ In the image above, you will also notice red vertical bars next to the code. The
 > 1. The file contains one of the following attributes: "DebuggerNonUserCode", "DebuggerNonUserCodeAttribute", "GeneratedCode", "GeneratedCodeAttribute", "CompilerGenerated", "CompilerGeneratedAttribute".
 >
 > It is also possible to use a region containing "generated" (case insensitive) to indicate that a region of code should be considered auto-generated.
+>
+> To exclude a complete project from analysis, add the following to the .xxproj file.
+>
+>```xml
+> <!-- in .csproj -->
+> <PropertyGroup>
+>   <!-- Exclude the project from analysis -->
+>  <SonarQubeExclude>true</SonarQubeExclude>
+> </PropertyGroup>
+>```
+>
+> To exclude files/folders from analysis, you can include the following. In this example, all the files of the Xml and Example folder are excluded from analysis.
+>
+>```xml
+> <!-- in .csproj -->
+><ItemGroup>
+>  <SonarQubeSetting Include="sonar.exclusions">
+>    <Value>Xml/**,Example/**</Value>
+>  </SonarQubeSetting>
+></ItemGroup>
+>```
