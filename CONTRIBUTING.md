@@ -634,40 +634,6 @@ To be able to make a local test build, you need to have DocFX installed. DocFX i
 > [!TIP]
 > Alternative ways to install DocFX can be found on the [DocFX website](https://dotnet.github.io/docfx/tutorial/docfx_getting_started.html#2-use-docfx-as-a-command-line-tool).
 
-#### First-time setup
-
-Before you make your first test build, we recommend the first-time setup detailed below. If you do not do this, you will still be able to make a test build, but there may be many warnings in the terminal, and some pages may not be included in the build.
-
-1. Check if your fork is up to date with the latest changes from the main dataminer-docs repository (See [Make sure your fork is up to date](#make-sure-your-fork-is-up-to-date).
-
-1. Make sure you have Visual Studio 2019 or higher installed.
-
-1. Install the .NET framework SDK Developer Pack. To do so, go to <https://dotnet.microsoft.com/en-us/download/visual-studio-sdks> and choose the .NET Framework 4.8 Developer Pack.
-
-1. Go to the folder containing your dataminer-docs repository.
-
-   > [!TIP]
-   > To quickly find this folder from Visual Studio Code, right-click a folder from the repository in the Explorer tab and select *Reveal in File Explorer*.
-
-   1. In the `\dataminer-docs\src\DataMiner\` subfolder open the folder *Dataminer.sln* with Visual Studio.
-
-   1. Go to the solution explorer in the top-right corner, right-click the solution node and select *Restore NuGet Packages*.
-
-      ![Restore Nuget Packages](~/user-guide/images/Contributing_Solution_Node.png)
-
-   1. Start a build by pressing CTR+SHIFT+b.
-
-   1. Repeat the steps above for the file *Code Library.sln* in the `dataminer-docs\src\Base Class Library\` subfolder of the repository.
-
-1. Open Visual Studio Code and go to *Terminal* > *New Terminal*.
-
-1. In the terminal, enter `docfx metadata -f`.
-
-   If everything is OK, you will get no warnings.
-
-> [!NOTE]
-> It is not necessary to do this for every test build. However, when there have been significant changes to the source code, you will need to do this procedure again starting from step 4.
-
 #### Making a test build
 
 1. If no Terminal pane is open in Visual Studio Code, go to *Terminal > New Terminal*.
@@ -676,10 +642,12 @@ Before you make your first test build, we recommend the first-time setup detaile
 
    1. Enter `clear` to clear the terminal.
 
-   1. Enter `docfx build -f` to make a test build.
+   1. Enter `docfx metadata -f` to generate the metadata.
 
       > [!NOTE]
-      > If you get a lot of warnings when you try to create a test build, it could be that you need to do part of the [first-time setup](#first-time-setup) again to make sure the metadata are up to date.
+      > At this point, you may get 5 warnings mentioning "Found project reference without a matching metadata reference". These can be ignored.
+
+   1. Enter `docfx build -f` to make a test build.
 
    1. Enter `docfx serve _site`.
 
