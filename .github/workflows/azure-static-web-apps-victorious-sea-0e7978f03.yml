@@ -35,7 +35,7 @@ jobs:
           path: _site/
           
   deploy_job:
-    if: github.event_name == 'push'
+    if: (github.event_name == 'push' && github.repository == 'SkylineCommunications/dataminer-docs')
     runs-on: ubuntu-latest
     needs: build_job
     name: Deploy Job
@@ -60,7 +60,7 @@ jobs:
   
   
   deploy_job_Storage_Account:
-    if: github.event_name == 'push'
+    if: (github.event_name == 'push' && github.repository == 'SkylineCommunications/dataminer-docs')
     runs-on: ubuntu-latest
     needs: build_job
     name: Deploy Job to Storage account
