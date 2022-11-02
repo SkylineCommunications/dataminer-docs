@@ -322,7 +322,7 @@ To create resource tasks:
 
    1. Add a *FunctionDve* script dummy, and configure it with the function protocol. The name of the function protocol is composed of the name of the base protocol implementing the logic and the name of the function ( `<base Protocol name>.<Function name>` ).
 
-      <!-- Comment: Insert new screenshot here -->
+      ![Automation Scripts](~/user-guide/images/Automation_Scripts.png)
 
       Example: for the “Ping IP” task, the script could look like this:
 
@@ -399,5 +399,4 @@ To create resource tasks:
 
    ![Add resource](~/user-guide/images/Resources.png)
 
-1. Return to *Automation* and launch the *SRM_Setup* script that can be found in the *PA* folder in the *automation scripts* tab. To do so, double-click *SRM_Setup* and then select *Execute*. This script requires one input argument, *Booking Manager Element Info*. For this input argument, specify the value "{}". Click *Execute now*.
-<!-- Comment: Verify whether this is correct. -->
+1. Return to *Automation* and launch the *SRM_Setup* script. To do so, double-click *SRM_Setup* and then select *Execute*. This script requires one input argument, *Booking Manager Element Info*. For this input argument, specify the value "{}". Click *Execute now*.

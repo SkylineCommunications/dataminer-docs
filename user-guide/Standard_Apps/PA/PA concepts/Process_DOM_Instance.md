@@ -10,5 +10,3 @@ Fields from the process DOM instance can also be used as decision criteria for t
 
 > [!NOTE]
 > Updating lists is not supported.
-
-<!-- Comment: Which lists? -->

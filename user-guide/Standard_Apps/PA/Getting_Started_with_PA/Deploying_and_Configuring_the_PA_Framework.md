@@ -20,8 +20,6 @@ To make sure DOM data are available in dashboards and applications, make sure th
 
 Process Automation requires the creation of a [booking manager element](xref:SolSRM) named *Process Automation instances*, configured with the *Process Automation virtual platform*. To allow us to create this element, we first need to install the SRM framework on the DataMiner System.
 
-<!-- Comment: More info on how to make this booking manager element and configure it? -->
-
 > [!NOTE]
 > In case SRM is already installed on your system, the procedure below is not required to proceed.
 
@@ -59,8 +57,6 @@ To install the PA Framework:
 
 1. Download the latest PA package from [DataMiner Dojo](https://community.dataminer.services/downloads/).
 
-<!-- Comment: If ZIP, mention in help that you need to unzip first before installing. -->
-
 1. Double-click the PA package, and install the package in the same manner as a DataMiner upgrade.
 
    > [!NOTE]
@@ -71,7 +67,7 @@ To install the PA Framework:
 
 ## Configuring the PA framework
 
-To set up the initial configuration of the PA Framework go to *Automation* and run the *SRM_Setup* Automation script that can be found in the *PA* subfolder in the *automation scripts* tab and eponymous folder.
+To set up the initial configuration of the PA Framework go to *Automation* and run the *SRM_Setup* Automation script.
 
 To do so, double-click *SRM_Setup* and then select *Execute*.
 
