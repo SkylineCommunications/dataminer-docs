@@ -14,6 +14,10 @@ This section consists of the following topics:
 
 - [Elasticsearch database](xref:Elasticsearch_database)
 
+- [OpenSearch database](xref:OpenSearch_database)
+
+- [Amazon OpenSearch Service](xref:Amazon_OpenSearch_Service)
+
 - [MySQL database](xref:MySQL_database)
 
 - [Offload database](xref:Offload_database)
