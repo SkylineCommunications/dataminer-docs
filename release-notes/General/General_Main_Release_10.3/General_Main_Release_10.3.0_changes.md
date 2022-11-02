@@ -347,15 +347,6 @@ In the conditional coloring layout setting for Table and Node edge components, t
 
 In the conditional coloring layout setting for Table and Node edge components, discrete column values will now be displayed to make it easier to configure a filter.
 
-#### SLReset will no longer remove VersionHistory.txt and the HTTPS configuration [ID_34194]
-
-<!-- MR 10.3.0 - FR 10.2.10 -->
-
-From now on, the factory reset tool *SLReset.exe* will no longer remove the following items:
-
-- the *VersionHistory.txt* file
-- the HTTPS configuration stored in the *MaintenanceSettings.xml* file.
-
 #### GQI table column names will no longer include table names [ID_34302]
 
 <!-- MR 10.3.0 - FR 10.2.10 -->
@@ -411,6 +402,41 @@ In case a *Line & area chart* component displays trending for multiple parameter
 <!-- MR 10.3.0 - FR 10.2.12 -->
 
 Alarm locking in the SLElement process has been enhanced.
+
+#### Dashboards app / Low-code apps: Enhanced performance of selection boxes [ID_34577]
+
+<!-- MR 10.3.0 - FR 10.2.12 -->
+
+Because of a number of enhancements, overall performance has increased when opening selection boxes, especially when they contain a large number of items.
+
+#### Dashboards app / Low-code apps - Visual Overview component: Enhancements with regard to WebSocket/polling settings and user access to visual overviews [ID_34624]
+
+<!-- MR 10.3.0 - FR 10.2.12 -->
+
+A number of enhancements have been made to the visual overview component, especially with regard to the WebSocket/polling settings and the algorithm that checks whether users have access to the visual overviews retrieved by the component.
+
+#### Service & Resource Management: GetResources methods not using filter elements have now been marked as obsolete [ID_34720]
+
+<!-- MR 10.3.0 - FR 10.2.12 -->
+
+In *ResourceManagerHelper* and *IResourceManagerHelper*, the following methods not using filter elements have now been marked as obsolete:
+
+```csharp
+IEnumerable<Resource> GetResources(IEnumerable<Resource> filters);
+Resource[] GetResources(params Resource[] filters);
+```
+
+The following method should now be used instead:
+
+```csharp
+Resource[] GetResources(FilterElement<Resource> filter);
+```
+
+For example, you can now use the following call to retrieve all resources:
+
+```csharp
+var allResources = resourceManagerHelper.GetResources(new TRUEFilterElement<Resource>());
+```
 
 ### Fixes
 
@@ -585,12 +611,6 @@ Up to now, negative status values in the trend data due to element restarts coul
 <!-- MR 10.3.0 - FR 10.2.7 -->
 
 When a profile parameter of type “number” had no decimals defined, its value would incorrectly be displayed as the maximum value that can be assigned to a parameter of type integer. From now on, when a profile parameter has no decimals defined, its value will be displayed as is, without decimals.
-
-#### Ticketing app: Problem with ticket domains incorrectly marked as masked [ID_33449]
-
-<!-- MR 10.3.0 - FR 10.2.7 -->
-
-If, in the Ticketing app, you tried to edit a ticket of a domain linked to an element, in some cases, that domain would incorrectly be marked as “masked”.
 
 #### Issues with NATS request/response actions [ID_33487]
 
@@ -767,3 +787,26 @@ When a service template was created using the *CreateServiceTemplate* method, th
 <!-- MR 10.3.0 - FR 10.2.11 -->
 
 When the GQI query linked to a table component was changed, the table would incorrectly not get updated when column filters were applied. The table would only get updated when you changed the column filters.
+
+#### DataMiner upgrade: 'File already exists' exception could be thrown when multiple actions took a backup of the same file [ID_34601]
+
+<!-- MR 10.3.0 - FR 10.2.12 -->
+
+When, during a DataMiner upgrade, multiple upgrade actions took a backup of the same file within the same second, in some cases, a `file already exists` exception could be thrown.
+
+#### DataMiner installer: Cassandra DevCenter would no longer be extracted [ID_34674]
+
+<!-- MR 10.3.0 - FR 10.2.12 -->
+
+Since Cassandra 3.7 was replaced by Cassandra 3.11 in DataMiner Installer 10.2, DevCenter would incorrectly no longer be extracted. From now on, it will again be extracted and a shortcut to the tool will be automatically created.
+
+Also, if the *JAVA_HOME* environment variable is not defined, it will be set to the Java version that comes with Cassandra.
+
+#### Skyline Device Simulator: 'no such object' would incorrectly be returned when requesting data from a simulation [ID_34746]
+
+<!-- MR 10.3.0 - FR 10.2.12 -->
+
+When you tried to request data from a simulation that was built with AutoBuildVersion 1.3, in some cases, "no such object" would incorrectly be returned.
+
+> [!CAUTION]
+> This tool is provided "As Is" with no representation or warranty whatsoever. Skyline Communications will not provide any maintenance or support for this tool.

@@ -57,9 +57,10 @@ namespace Skyline.DataMiner.Automation
 		public virtual string ElementName { get; }
 
 		/// <summary>
-		/// Gets the ID of the element that is linked to the dummy.
+		/// Gets the ID of the underlying dummy that is linked to the element. 
+		/// This is not the ID of the element itself. To retrieve that one, use the <see cref="Element.ElementId"/> property.
 		/// </summary>
-		/// <value>The ID of the element that is linked to the dummy.</value>
+		/// <value>The ID of the underlying dummy that is linked to the element.</value>
 		/// <example>
 		/// <code>
 		/// Element element = engine.FindElement(400, 2000);
@@ -87,9 +88,10 @@ namespace Skyline.DataMiner.Automation
 		public virtual bool IsActive { get; }
 
 		/// <summary>
-		/// Gets the name of the element.
+		/// Gets the name of the underlying dummy that is linked to the element.
+		/// This is not the name of the element itself. To retrieve that one, use the <see cref="Element.ElementName"/> property.
 		/// </summary>
-		/// <value>The name of the element.</value>
+		/// <value>The name of the underlying dummy that is linked to the element.</value>
 		/// <remarks>
 		/// <note type="note">
 		/// <para>This property returns the following string: "_&lt;agentID&gt;_&lt;elementID&gt; (e.g. "_100_5612"). To retrieve the element name, use the <see cref="Element.ElementName"/> property.</para>

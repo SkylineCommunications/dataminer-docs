@@ -46,6 +46,14 @@ A number of improvements have been implemented to the Skyline CCAP Platform EPM 
 
 As the commands of the Standalone Elastic Backup tool could expose the password, the tool has been modified to use an encrypted password instead of plain text. A separate tool, *PasswordEncryptionTool.exe*, has also been created to encrypt a plain text password.
 
+#### Exposed tables removed [ID_34693]
+
+To improve performance and stability, several exposed tables that were linked to the CCAP and RPD EPM objects have been removed.
+
+#### ID logic for cable modems separated from other entities [ID_34694]
+
+To improve stability, when processing the full system because of a change to the devices' connectivity structure, EPM will now process the cable modems separately. For this purpose, the ID file that is used for this has been split up into multiple files: one with the unique IDs for all entities except the cable modems, and individual files for the cable modem IDs in accordance with the number of CCAPs in the system.
+
 ### Fixes
 
 #### Cox CBR-8 Platform D-DOCSIS: Kafka ingestion and EPM file creation taking too long [ID_34002]

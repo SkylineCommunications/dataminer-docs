@@ -101,12 +101,6 @@ Shape data items of type *ParametersSummary* can now have values that include dy
 
 In service definition diagrams, function resource icons are now centered.
 
-#### DataMiner Cube - Automation: Changes made to a script by other users will immediately be shown when selecting that script [ID_34277]
-
-<!-- Main Release Version 10.2.0 [CU8] - Feature Release Version 10.2.11 -->
-
-When you select an unmodified Automation script in the Automation app, from now on, changes made to that script by other users (e.g. in another Cube session or in DataMiner Integration Studio) will immediately be shown.
-
 #### Trending - Behavioral anomaly detection: Enhanced flatline detection [ID_34319]
 
 <!-- MR 10.3.0 - FR 10.2.11 -->
@@ -168,14 +162,6 @@ For example, when an alarm was created for an anomalous level increase at 1 PM, 
 <!-- MR 10.3.0 - FR 10.2.11 -->
 
 Prior to DataMiner 10.2.11/10.3.0, suggestion events are created for all anomalous behavioral changes that do not have alarm monitoring enabled. From DataMiner 10.2.11/10.3.0 onwards, they are only created for the most significant changes. There is also a maximum of 500 suggestion events related to behavioral anomaly detection at the same time.
-
-#### Automation: Automation scripts will be refreshed more granularly after being updated [ID_34553]
-
-<!-- MR 10.2.0 [CU8] - FR 10.2.11 [CU0] -->
-
-Up to now, when a change was made to an Automation script (either in the current or in another Cube session), the entire script would be removed and re-added. When this happened at a moment when the script in question was open in the editor, it was unselected and would, in some cases, not be automatically selected again.
-
-From now on, an updated Automation script will be refreshed more granularly. Only the part that was changed (e.g. a C# action) will be refreshed. The script will no longer be unselected.
 
 ### Fixes
 

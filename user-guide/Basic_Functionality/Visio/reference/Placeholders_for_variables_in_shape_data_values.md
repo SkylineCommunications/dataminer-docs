@@ -475,7 +475,13 @@ value=1005 == alpha;value=1005 == beta;value=1005 == gamma; value=1005 == delta;
 ```
 
 > [!NOTE]
-> \[RegexReplace:x,y,z\] placeholders can be nested.
+>
+> - \[RegexReplace:x,y,z\] placeholders can be nested.
+> - If any of the three input items contains a comma, the separator needs to be replaced (see [About using separator characters](xref:Linking_a_shape_to_a_SET_command#about-using-separator-characters)):
+>
+>   ```txt
+>   [RegexReplace:[Sep:,#]x#y#z]
+>   ```
 
 ### \[Reservation:...\]
 
@@ -685,7 +691,7 @@ Use this placeholder in a shape data item of type **Tooltip** or in shape text. 
 
 Available from DataMiner 9.5.3 onwards.
 
-Use this placeholder in a shape data item of type **Tooltip** or in shape text. The tooltip or shape text will then display one particular service definition property, in the format “\<Property name>: \<Property value>”.
+Use this placeholder in a shape data item of type **Tooltip** or in shape text. The tooltip or shape text will then display the property value of the specified service definition property.
 
 - For a top-level element shape (i.e. not an interface shape), the property has to be one of the properties of the node specified in the service definition.
 

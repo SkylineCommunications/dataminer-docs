@@ -15,7 +15,7 @@ The table below lists the properties of the `DomDefinition` object. It also indi
 | ID | DomDefinitionId | Yes | The ID of the `DomDefinition`. |
 | Name | string | Yes | The name of the `DomDefinition`. |
 | SectionDefinitionLinks | List\<[SectionDefinitionLink](#sectiondefinitionlink)> | Yes | Contains the required/allowed `SectionDefinitions`. |
-| VisualStructure | DomDefinitionVisualStructure | No | Used by the client UI to store info about how things should be visualized. |
+| VisualStructure | DomDefinitionVisualStructure | No | Contains settings related to the client UI. Most of these do not apply for DOM. This property should be ignored since it will be removed in the near future. |
 | ModuleSettingsOverrides | [ModuleSettingsOverrides](#modulesettingsoverrides) | No | Used to override some `ModuleSettings`. See [DomInstanceNameDefinition](xref:DomInstanceNameDefinition). |
 
 ### SectionDefinitionLink

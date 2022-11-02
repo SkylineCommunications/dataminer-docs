@@ -101,3 +101,11 @@ In the visual overview of an RPA element, it could occur that the RPA interfaces
 <!-- For enhancement part of RN, see enhancements -->
 
 Up to now, it could occur that the *OFDM Status* was not correct, as the logic did not properly use the *CM Impaired Channels* table to find out if an impaired channel was an OFDM or QAM channel. The logic has been adjusted. As part of this, the "Active" OFDM status no longer exists, and the "OK" and "Partial" status have been introduced to identify CMs without any impaired OFDM channels and CMs with at least one impaired OFDM channel, respectively.
+
+#### Incorrect US ATDMA info in RPD details [ID_34714]
+
+Up to now, the US ATDMA section (previously known as the US QAM section) included calculations of OFDMA upstream channels in the impaired channels table, leading to incorrect counts and percentages. The logic has now been adjusted to only include ATDMA channels, and the information templates have also been updated to reflect this change.
+
+#### Problem with table-cell navigation in Relation Name column [ID_34715]
+
+In the Interfaces tables for all devices, table-cell navigation in the Relation Name column did not work as desired. Now the System Type and System Name are properly separated in the Visual Overview configuration, so that navigation is possible to all EPM levels.
