@@ -2947,6 +2947,8 @@
                   topicUID: Inspecting_the_parameter_notification_queue
                 - name: Inspecting the SLNet event subscriptions
                   topicUID: Inspecting_the_SLNet_event_subscriptions
+                - name: Viewing SLNet calls being sent
+                  topicUID: Viewing_SLNet_calls_being_sent
             - name: SLNetClientTest tool advanced procedures
               topicUid: SLNetClientTest_tool_advanced_procedures
               items:

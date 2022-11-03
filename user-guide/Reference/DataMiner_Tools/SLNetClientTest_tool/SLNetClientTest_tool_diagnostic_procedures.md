@@ -29,3 +29,4 @@ The procedures below can be used to retrieve data from a DataMiner System. Howev
 - [Inspecting the stack sizes in SLNet](xref:Inspecting_the_stack_sizes_in_SLNet)
 - [Inspecting the parameter notification queue](xref:Inspecting_the_parameter_notification_queue)
 - [Inspecting the SLNet event subscriptions](xref:Inspecting_the_SLNet_event_subscriptions)
+- [Viewing SLNet calls being sent](xref:Viewing_SLNet_calls_being_sent)
