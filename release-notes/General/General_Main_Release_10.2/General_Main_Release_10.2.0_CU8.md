@@ -470,6 +470,6 @@ When a new alarm tab with a large number of correlated alarms was being loaded, 
 
 #### SLProtocol could leak memory when a protocol with HTTP connections sent an HTTP request with a header [ID_34775]
 
-<!-- MR 10.1.0 [CU20] / 10.2.0 [CU8] - FR 10.2.12 [CU0] -->
+<!-- MR 10.1.0 [CU20] / 10.2.0 [CU8] - FR 10.2.11 [CU1] -->
 
 When a protocol with HTTP connections sent an HTTP request with a header, SLProtocol could leak memory.

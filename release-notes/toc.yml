@@ -89,7 +89,11 @@
         - name: General Feature Release 10.2.12 - Preview
           topicUid: General_Feature_Release_10.2.12
         - name: General Feature Release 10.2.11
-          topicUid: General_Feature_Release_10.2.11
+          items:
+          - name: New features and changes
+            topicUid: General_Feature_Release_10.2.11
+          - name: General Feature Release 10.2.11 CU1
+            topicUid: General_Feature_Release_10.2.11_CU1
         - name: General Feature Release 10.2.10
           topicUid: General_Feature_Release_10.2.10
         - name: General Feature Release 10.2.9

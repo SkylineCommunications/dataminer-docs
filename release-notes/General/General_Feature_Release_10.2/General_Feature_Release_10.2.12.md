@@ -490,12 +490,6 @@ When you tried to request data from a simulation that was built with AutoBuildVe
 > [!CAUTION]
 > This tool is provided "As Is" with no representation or warranty whatsoever. Skyline Communications will not provide any maintenance or support for this tool.
 
-#### SLProtocol could leak memory when a protocol with HTTP connections sent an HTTP request with a header [ID_34775]
-
-<!-- MR 10.1.0 [CU20] / 10.2.0 [CU8] - FR 10.2.12 [CU0] -->
-
-When a protocol with HTTP connections sent an HTTP request with a header, SLProtocol could leak memory.
-
 #### An error could occur in the hosting process when a connection had been closed [ID_34786]
 
 <!-- MR 10.1.0 [CU21] / 10.2.0 [CU9] - FR 10.2.12 -->
