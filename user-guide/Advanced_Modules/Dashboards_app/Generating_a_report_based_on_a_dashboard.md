@@ -2,7 +2,7 @@
 uid: Generating_a_report_based_on_a_dashboard
 ---
 
-# Generating a report based on a dashboard] 
+# Generating a report based on a dashboard]
 
 ## [Sharing a dashboard as PDF report in DataMiner Cube](#tab/tabid-1)
 

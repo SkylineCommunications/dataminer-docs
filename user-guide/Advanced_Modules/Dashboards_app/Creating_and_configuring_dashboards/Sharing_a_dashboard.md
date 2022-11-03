@@ -66,4 +66,4 @@ To do so:
 
 From DataMiner 10.3.0 onwards, you can share a dashboard as a PDF report via email.
 
-See [Generating a report based on a dashboard](Generating_a_report_based_on_a_dashboard).
+See [Generating a report based on a dashboard](xref:Generating_a_report_based_on_a_dashboard).
