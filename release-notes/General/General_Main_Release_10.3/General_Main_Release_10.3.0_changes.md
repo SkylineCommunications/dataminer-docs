@@ -415,6 +415,12 @@ Because of a number of enhancements, overall performance has increased when open
 
 A number of enhancements have been made to the visual overview component, especially with regard to the WebSocket/polling settings and the algorithm that checks whether users have access to the visual overviews retrieved by the component.
 
+#### Enhanced parameter locking in SLElement [ID_34688]
+
+<!-- MR 10.3.0 - FR 10.3.1 [CU0] -->
+
+In SLElement, a number of enhancements have been made with regard to parameter locking.
+
 #### Service & Resource Management: GetResources methods not using filter elements have now been marked as obsolete [ID_34720]
 
 <!-- MR 10.3.0 - FR 10.2.12 -->
