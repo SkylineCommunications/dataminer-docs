@@ -190,12 +190,6 @@ Recursion detected in the mediation links tree
 
 As this error was caused by an internal lookup issue that had no effect whatsoever with regard to mediation layer functionality, from now on, it will no longer be logged.
 
-#### SLProtocol could leak memory when a protocol with HTTP connections sent an HTTP request with a header [ID_34775]
-
-<!-- MR 10.1.0 [CU21] / 10.2.0 [CU9] - FR 10.2.12 [CU0] -->
-
-When a protocol with HTTP connections sent an HTTP request with a header, SLProtocol could leak memory.
-
 #### An error could occur in the hosting process when a connection had been closed [ID_34786]
 
 <!-- MR 10.1.0 [CU21] / 10.2.0 [CU9] - FR 10.2.12 -->

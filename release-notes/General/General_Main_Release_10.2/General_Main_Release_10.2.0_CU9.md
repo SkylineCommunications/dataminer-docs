@@ -404,7 +404,7 @@ When, in the Alarm Console, you double-clicked a suggestion or alarm event creat
 
 #### SLProtocol could leak memory when a protocol with HTTP connections sent an HTTP request with a header [ID_34775]
 
-<!-- MR 10.1.0 [CU21] / 10.2.0 [CU9] - FR 10.2.12 [CU0] -->
+<!-- MR 10.1.0 [CU20] / 10.2.0 [CU9] - FR 10.2.12 [CU0] -->
 
 When a protocol with HTTP connections sent an HTTP request with a header, SLProtocol could leak memory.
 
