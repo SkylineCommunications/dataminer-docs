@@ -173,7 +173,7 @@ End point of the connection that was clicked.
 
 Available from DataMiner 9.6.7 onwards.
 
-The current DataMiner time.
+The current DataMiner time, refreshed every second.
 
 By default, the regional date/time format will be used. To use a different format, specify the format in the placeholder. For example:
 
@@ -184,8 +184,6 @@ By default, the regional date/time format will be used. To use a different forma
 | `[DataMinerTime:Format=g]` | General date/time pattern (short time). |
 | `[DataMinerTime:Format=F]` | Full date/time pattern (long time). |
 | `[DataMinerTime:Format=G]` | General date/time pattern (long time). |
-
-The time in the placeholder is refreshed every second.
 
 > [!NOTE]
 > For more information on possible formats, refer to <https://learn.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings>.
