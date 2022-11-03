@@ -30,3 +30,5 @@ The procedures below can be used to retrieve data from a DataMiner System. Howev
 - [Inspecting the parameter notification queue](xref:Inspecting_the_parameter_notification_queue)
 - [Inspecting the SLNet event subscriptions](xref:Inspecting_the_SLNet_event_subscriptions)
 - [Viewing SLNet calls being sent](xref:Viewing_SLNet_calls_being_sent)
+- [Checking whether protocol buffer serialization is enabled](xref:Checking_whether_protocol_buffer_serialization_is_enabled)
+- [Viewing the connection timeout states of an element](Viewing_the_connection_timeout_states_of_an_element)
