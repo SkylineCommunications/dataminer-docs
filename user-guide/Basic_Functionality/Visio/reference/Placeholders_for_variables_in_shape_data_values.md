@@ -177,41 +177,18 @@ The current DataMiner time.
 
 By default, the regional date/time format will be used. To use a different format, specify the format in the placeholder. For example:
 
-```txt
-[DataMinerTime:Format=HH:mm:ss]
-```
-
-```txt
-[DataMinerTime:Format=f]
-```
-
-Uses full date short time format
-
-```txt
-[DataMinerTime:Format=g]
-```
-
-Uses general date short time format
-
-```txt
-[DataMinerTime:Format=F]
-```
-
-Uses full date long time format
-
-```txt
-[DataMinerTime:Format=G]
-```
-
-Uses general date long time format
-
-```txt
-[DataMinerTime:Format=HH:mm:ss]
-```
-
-Uses custom date time format
+| Format | Description |
+|--|--|
+| `[DataMinerTime:Format=HH:mm:ss]` | Custom format. |
+| `[DataMinerTime:Format=f]` | Full date/time pattern (short time). |
+| `[DataMinerTime:Format=g]` | General date/time pattern (short time). |
+| `[DataMinerTime:Format=F]` | Full date/time pattern (long time). |
+| `[DataMinerTime:Format=G]` | General date/time pattern (long time). |
 
 The time in the placeholder is refreshed every second.
+
+> [!NOTE]
+> For more information on possible formats, refer to <https://learn.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings>.
 
 ### \[DestinationInterfaceElementID\]
 
