@@ -8,7 +8,9 @@ From DataMiner 10.3(CU0) and 10.3.1 onwards, it is possible to Amazon OpenSearch
 
 ## Compatibility
 
-Supported versions: OpenSearch version 1.3.
+Supported versions: 
+
+- OpenSearch version 1.3.
 
 > [!NOTE]
 > No Elasticsearch setups on Amazon OpenSearch Service are currently supported.
@@ -65,3 +67,6 @@ If you navigate to Management -> Dev Tools in the hamburger menu, you can execut
 ![Create Domain](~/user-guide/images/Amazon_OpenSearch_DevTools.png)
 
 ![Create Domain](~/user-guide/images/Amazon_OpenSearch_CatIndices.png)
+
+> [!NOTE]
+> In the example screenshots, the cluster health is yellow because only 1 node is used and 1 node clusters are always yellow.

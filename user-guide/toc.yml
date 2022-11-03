@@ -1064,6 +1064,9 @@
               topicUid: Configuring_multiple_Elasticsearch_clusters
         - name: OpenSearch database
           topicUID: OpenSearch_database
+          items:
+            - name: Configuring multiple OpenSearch clusters
+              topicUid: Configuring_multiple_OpenSearch_clusters
         - name: Amazon_OpenSearch_Service
           topicUID: Amazon_OpenSearch_Service
         - name: MySQL database
