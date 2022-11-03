@@ -24,3 +24,6 @@ The procedures below can be used to retrieve data from a DataMiner System. Howev
 - [Requesting a list of active merge actions for a protocol](xref:SLNetClientTest_active_merge_actions_protocols)
 - [Retrieving connection info for a particular element](xref:SLNetClientTest_retrieving_connection_info)
 - [Retrieving information on open GQI sessions](xref:SLNetClientTest_info_on_open_gqi_sessions)
+- [Inspecting the contents of a table parameter](xref:Inspecting_the_contents_of_a_table_parameter)
+- [Inspecting parameter table rows in SLProtocol and SLElement](xref:Inspecting_parameter_table_rows)
+- [Inspecting the stack sizes in SLNet](xref:Inspecting_the_stack_sizes_in_SLNet)

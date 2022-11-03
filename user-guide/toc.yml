@@ -2937,6 +2937,12 @@
                   topicUid: SLNetClientTest_retrieving_connection_info
                 - name: Retrieving information on open GQI sessions
                   topicUid: SLNetClientTest_info_on_open_gqi_sessions
+                - name: Inspecting the contents of a table parameter
+                  topicUID: Inspecting_the_contents_of_a_table_parameter
+                - name: Inspecting parameter table rows in SLProtocol and SLElement
+                  topicUID: Inspecting_parameter_table_rows
+                - name: Inspecting the stack sizes in SLNet
+                  topicUID: Inspecting_the_stack_sizes_in_SLNet
             - name: SLNetClientTest tool advanced procedures
               topicUid: SLNetClientTest_tool_advanced_procedures
               items:
