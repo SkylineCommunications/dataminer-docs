@@ -2943,6 +2943,10 @@
                   topicUID: Inspecting_parameter_table_rows
                 - name: Inspecting the stack sizes in SLNet
                   topicUID: Inspecting_the_stack_sizes_in_SLNet
+                - name: Inspecting the parameter notification queue
+                  topicUID: Inspecting_the_parameter_notification_queue
+                - name: Inspecting the SLNet event subscriptions
+                  topicUID: Inspecting_the_SLNet_event_subscriptions
             - name: SLNetClientTest tool advanced procedures
               topicUid: SLNetClientTest_tool_advanced_procedures
               items:

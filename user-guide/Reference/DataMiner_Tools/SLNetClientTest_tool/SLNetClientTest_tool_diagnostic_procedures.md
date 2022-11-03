@@ -27,3 +27,5 @@ The procedures below can be used to retrieve data from a DataMiner System. Howev
 - [Inspecting the contents of a table parameter](xref:Inspecting_the_contents_of_a_table_parameter)
 - [Inspecting parameter table rows in SLProtocol and SLElement](xref:Inspecting_parameter_table_rows)
 - [Inspecting the stack sizes in SLNet](xref:Inspecting_the_stack_sizes_in_SLNet)
+- [Inspecting the parameter notification queue](xref:Inspecting_the_parameter_notification_queue)
+- [Inspecting the SLNet event subscriptions](xref:Inspecting_the_SLNet_event_subscriptions)
