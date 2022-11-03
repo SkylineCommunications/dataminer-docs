@@ -402,12 +402,6 @@ As this error was caused by an internal lookup issue that had no effect whatsoev
 
 When, in the Alarm Console, you double-clicked a suggestion or alarm event created by SLAnalytics for a table parameter with advanced naming, in some cases, the trend graph would incorrectly show "no data".
 
-#### SLProtocol could leak memory when a protocol with HTTP connections sent an HTTP request with a header [ID_34775]
-
-<!-- MR 10.1.0 [CU20] / 10.2.0 [CU9] - FR 10.2.12 [CU0] -->
-
-When a protocol with HTTP connections sent an HTTP request with a header, SLProtocol could leak memory.
-
 #### An error could occur in the hosting process when a connection had been closed [ID_34786]
 
 <!-- MR 10.1.0 [CU21] / 10.2.0 [CU9] - FR 10.2.12 -->

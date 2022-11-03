@@ -467,3 +467,9 @@ When, on a Cassandra cluster, real-time trend data was requested via a paged dat
 <!-- MR 10.2.0 [CU8] - FR 10.2.11 -->
 
 When a new alarm tab with a large number of correlated alarms was being loaded, in some cases, an exception could be thrown and the alarm tab would keep on loading.
+
+#### SLProtocol could leak memory when a protocol with HTTP connections sent an HTTP request with a header [ID_34775]
+
+<!-- MR 10.1.0 [CU20] / 10.2.0 [CU8] - FR 10.2.12 [CU0] -->
+
+When a protocol with HTTP connections sent an HTTP request with a header, SLProtocol could leak memory.
