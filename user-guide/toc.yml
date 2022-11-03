@@ -2747,6 +2747,8 @@
     - name: Known issues
       topicUID: Known_issues
       items:
+        - name: SLDataGateway memory leak during Cassandra Cluster migration
+          topicUID: KI_SLDataGateway_leak_during_CC_migration
         - name: Excessive SLElement CPU usage during Cassandra Cluster migration
           topicUID: KI_SLElement_CPU_high_during_CC_migration
         - name: SLElement memory leak during Cassandra Cluster migration

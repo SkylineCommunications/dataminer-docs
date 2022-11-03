@@ -5,6 +5,7 @@ uid: Known_issues
 
 | Issue | DataMiner version | Date added |
 |--|--|--|
+| [SLDataGateway memory leak during Cassandra Cluster migration](xref:KI_SLDataGateway_leak_during_CC_migration) | From DataMiner 10.1.0/10.1.2 <br>onwards. | November 3, 2022 |
 | [Excessive SLElement CPU usage during Cassandra Cluster migration](xref:KI_SLElement_CPU_high_during_CC_migration) | From DataMiner 10.1.0/10.1.2 <br>onwards. | October 28, 2022 |
 | [SLElement memory leak during Cassandra Cluster migration](xref:KI_SLElement_CPU_memory_leak_during_CC_migration) | From DataMiner 10.1.0/10.1.2 <br>onwards. | October 28, 2022 |
 | [SLProtocol memory leak when HTTP connectors are used](xref:KI_SLProtocol_memory_leak_HTTP) | From DataMiner 10.1.0 [CU19]/<br>10.2.0 [CU7]/10.2.8 onwards | October 26, 2022 |
