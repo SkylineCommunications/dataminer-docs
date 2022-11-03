@@ -20,7 +20,7 @@ The main page of the app consists of a header bar, a sidebar, and a details pane
 
   - User button: A button with the initials or an image of the current user is displayed in the top-right corner. Click this button to open a menu that provides access to the following options:
 
-    - *Settings*: Allows you to manage any available dashboard themes and configure whether specific actions are pinned to the dashboard header bar.
+    - *Settings*: Allows you to manage any available [dashboard themes](xref:Configuring_the_dashboard_layout) and configure whether specific actions are pinned to the dashboard header bar.
 
     - *About*: Displays information about the app.
 
@@ -93,7 +93,7 @@ The main page of the app consists of a header bar, a navigation pane, and a deta
     | ![Apps button](~/user-guide/images/NewRD_apps.png) | Apps button, for quick access to other DataMiner web apps. |
     | Dashboards | Click this button to return to the main page of the app at any time. |
     | New dashboard | Only displayed if a folder or dashboard is selected. |
-    | ![Settings button](~/user-guide/images/NewRD_Settings.png) | Click this button to open a window where you can manage any available dashboard themes. |
+    | ![Settings button](~/user-guide/images/NewRD_Settings.png) | Click this button to open a window where you can manage any available [dashboard themes](xref:Configuring_the_dashboard_layout). |
     | ![Info button](~/user-guide/images/NewRD_About.png) | Displays information about the app. |
     | \[Username\] | Click the username and select *Log out* to log out of the app. |
 
