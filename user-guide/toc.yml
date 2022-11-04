@@ -2953,6 +2953,8 @@
                   topicUID: Checking_whether_protocol_buffer_serialization_is_enabled
                 - name: Viewing the connection timeout states of an element
                   topicUID: Viewing_the_connection_timeout_states_of_an_element
+                - name: Requesting QAction metrics
+                  topicUID: Requesting_QAction_metrics
             - name: SLNetClientTest tool advanced procedures
               topicUid: SLNetClientTest_tool_advanced_procedures
               items:

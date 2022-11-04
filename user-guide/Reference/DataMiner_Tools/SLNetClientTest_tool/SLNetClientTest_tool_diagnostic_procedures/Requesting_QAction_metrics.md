@@ -1,30 +1,30 @@
 ---
-uid: QAction_metrics
+uid: Requesting_QAction_metrics
 ---
 
-# QAction metrics
+# Requesting QAction metrics
 
-From DataMiner 7.5.3 (RN 4998) onwards, it is possible to get an overview, either at the end of a QAction or on demand, of the following metrics:
+From DataMiner 7.5.3 onwards, you can request the following QAction metrics, either at the end of a QAction or on demand:
 
 - CPU usage
-
 - Number of SLProtocol iterations
-
 - Number of Get/Set parameters/rows
-
 - Elapsed time
 
-By default, the QAction metrics are disabled. To enable monitoring, you have to enable the feature. To do so, in the ClientTestTool, select *Advanced* > *Options* > *SLNet Options*. You can then add features using a comma-separated list in 'ExtraSupportedFeatureKeys':
+## Enabling QAction metrics monitoring
 
-- QACTIONMETRICS_ALL: Enables monitoring on all QActions of all elements of the DMA.
+By default, QAction metrics monitoring is disabled. To enable QAction metrics monitoring, do the following:
 
-    > [!CAUTION]
-    > It is not advised to use this option on a production DMA.
+1. In the SLNetClientTest tool, select *Advanced* > *Options* > *SLNet Options*.
 
-- QACTIONMETRICS_ELEMENT\_\[dmaID\]:\[elementID\]: Enables monitoring of all QActions of the specified element.
+1. In `ExtraSupportedFeatureKeys`, add values like the following one for every element of which you want to monitor the QActions, separated by commas:
 
-![](~/develop/images/SLNet_Options_Window.png)<br>
-*SLNet Options window*
+    `QACTIONMETRICS_ELEMENT_[DataMinerID]:[ElementID]`
+
+> [!CAUTION]
+> Alternatively, you can also add `QACTIONMETRICS_ALL` to `ExtraSupportedFeatureKeys` to monitor all QActions of all elements on the DataMiner Agent in question. However, it is not advised to do so on production systems.
+
+## Requesting QAction metrics
 
 To request the metrics, select *Diagnostics* > *DMA*, and then select *QAction Metrics (QAction)*, *QAction Metrics (Element)* or *QAction Metrics (Protocol)* from the menu.
 
