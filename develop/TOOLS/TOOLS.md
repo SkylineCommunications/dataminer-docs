@@ -22,8 +22,6 @@ In this section, you can find information on the following useful tools for syst
 
 - [SLC SE Repository Manager](xref:TOOSLCSERepositoryManager)
 
-- [SLNetClientTest](xref:TOOSLNetClientTest)
-
 - [SourceTree](xref:TOOSourceTree)
 
 - [TortoiseSVN](xref:TOOTortoiseSVN)

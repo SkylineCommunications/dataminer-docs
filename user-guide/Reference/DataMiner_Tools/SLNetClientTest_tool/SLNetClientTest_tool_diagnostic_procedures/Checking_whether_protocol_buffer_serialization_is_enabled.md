@@ -10,6 +10,6 @@ From DataMiner 9.6.4 (RN 20495) onwards, the SLNetClientTest tool allows you to 
 
 2. Using the filter box at the bottom of the window, check whether the text contains the following string:
 
-  `ProtoBuf: disabled/enabled (version)`
+    `ProtoBuf: disabled/enabled (version)`
 
-  Example: `ProtoBuf: Enabled (version: 9.6.1846.504)`
+    Example: `ProtoBuf: Enabled (version: 9.6.1846.504)`

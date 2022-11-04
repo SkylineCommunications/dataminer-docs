@@ -2955,6 +2955,10 @@
                   topicUID: Viewing_the_connection_timeout_states_of_an_element
                 - name: Requesting QAction metrics
                   topicUID: Requesting_QAction_metrics
+                - name: Sync status
+                  topicUID: Sync_status
+                - name: Trend data
+                  topicUID: Trend_data
             - name: SLNetClientTest tool advanced procedures
               topicUid: SLNetClientTest_tool_advanced_procedures
               items:
