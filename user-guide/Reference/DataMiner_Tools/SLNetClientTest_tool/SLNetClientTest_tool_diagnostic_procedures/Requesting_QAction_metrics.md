@@ -4,7 +4,7 @@ uid: Requesting_QAction_metrics
 
 # Requesting QAction metrics
 
-From DataMiner 7.5.3 onwards, you can request the following QAction metrics, either at the end of a QAction or on demand:
+You can request the following QAction metrics, either at the end of a QAction or on demand:
 
 - CPU usage
 - Number of SLProtocol iterations
@@ -26,9 +26,13 @@ By default, QAction metrics monitoring is disabled. To enable QAction metrics mo
 
 ## Requesting QAction metrics
 
-To request the metrics, select *Diagnostics* > *DMA*, and then select *QAction Metrics (QAction)*, *QAction Metrics (Element)* or *QAction Metrics (Protocol)* from the menu.
+To request the QAction metrics, go to *Diagnostics* > *DMA*, and then select one of the following commands:
 
-For example, requesting the QAction metrics for a specific elements returns the following result:
+- *QAction Metrics (QAction)*
+- *QAction Metrics (Element)*
+- *QAction Metrics (Protocol)*
+
+For example, when you request the QAction metrics for a specific element, the following information will be returned:
 
 ```txt
 QActionMetricsType: Element; Num Of Metrics: 5
@@ -109,11 +113,18 @@ ExecutionTime Avg: 5,0046ms; Min: 5,0046ms; Max: 5,0046ms
 CPUUsage Avg: 0 of SLScripting: (0); Min: 0 of SLScripting: (0); Max: 0 of SLScripting: (0)
 ```
 
-The line "*CPUUsage Avg: X of SLScripting: (Y);*" means that on average, the QAction thread took X% of the SLScripting process (while it was running), and during that period the SLScripting process was using Y% of the CPU.
+In the example above, the line `CPUUsage Avg: X of SLScripting: (Y);` means that, on average, the QAction thread took X percent of the SLScripting process (while it was running) and, during that period, the SLScripting process was using Y percent of the CPU.
 
-Remember that the CPU usage being high could mean that a QAction executed so fast that it never had thread changes. This does not necessarily mean that it used too much CPU; it could also mean that it was the only QAction running on the DMA at that moment and so it took 100% of SLScripting.
+Remember that high CPU usage could mean that a QAction was executed so fast that it never had thread changes. This does not necessarily mean that it used too much CPU. It could also mean that it was the only QAction running on the DataMiner Agent at that moment and that it took 100 percent of SLScripting.
 
-To reset the metrics, select *Diagnostics* > *DMA*, and then select *Reset QAction Metrics (QAction)*, *Reset QAction Metrics (Element)* or *Reset QAction Metrics (Protocol)* from the menu. *Feature introduced in DataMiner 8.5.1 (RN 8345)*.
+## Resetting QAction metrics
 
-> [!NOTE]
-> It is also possible to request or reset the QAction metrics using a Notify type 226 (NT_DIAG) call. See [NT_DIAG (226)](xref:NT_DIAG).
+To reset the QAction metrics, go to *Diagnostics* > *DMA*, and then select one of the following commands:
+
+- *Reset QAction Metrics (QAction)*
+- *Reset QAction Metrics (Element)*
+- *Reset QAction Metrics (Protocol)*
+
+## Requesting or resetting QAction metrics by means of an NT_DIAG call
+
+It is also possible to request or reset QAction metrics by means of a Notify type 226 (NT_DIAG) call. For more information, see [NT_DIAG (226)](xref:NT_DIAG).
