@@ -16,8 +16,8 @@ This JSON object has to have the following structure:
 
 ```json
 {
-   v: <version-number>;
-   components: <component-data>;
+   "version": <version-number>,
+   "components": <component-data>
 }
 ```
 
@@ -27,8 +27,8 @@ This JSON object has to have the following structure:
 
   ```json
   {
-   cid: <component-id>,
-   select: <data>
+   "cid": <component-id>,
+   "select": <data>
   }
   ```
 

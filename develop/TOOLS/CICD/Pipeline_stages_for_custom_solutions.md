@@ -94,6 +94,9 @@ This stage executes the integration test projects. If no integration test projec
 
 This stage performs SonarQube C# code analysis on the code of the solution.
 
+> [!TIP]
+> It is possible to exclude some items from analysis (e.g. auto-generated code). For more information on how to exclude items from analysis, refer to <xref:SonarQube>.
+
 ## Quality gate
 
 This stage verifies the results of different previous pipeline stages and checks whether the results are according to some preconfigured quality level.
