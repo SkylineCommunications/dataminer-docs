@@ -15,7 +15,7 @@ There are **two options**: you can create a so-called **self-signed certificate*
 ## Generating the certificates
 
 > [!TIP]
-> To easily generate certificates on Linux machines, you can use our [generate TLS certificates](https://github.com/SkylineCommunications/generate-tls-certificates) script on our GitHub.
+> To easily generate certificates on Linux machines, you can use our [generate TLS certificates script](https://github.com/SkylineCommunications/generate-tls-certificates), which is available on GitHub.
 
 To generate the certificates, you will need two tools: *openssl* and the *Java keytool*. Both of these can run on Linux and Windows.
 
