@@ -102,3 +102,5 @@
           topicUid: FAQ_Limitations_generic_SNMP_connector
         - name: Which languages are available in the DataMiner Cube client
           topicUid: FAQ_DataMiner_Cube_languages
+        - name: What are the standard operating procedures for connector deployment?
+          topicUID: FAQ_SOP_connectors
