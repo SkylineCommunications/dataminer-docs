@@ -6,7 +6,13 @@ uid: EPM_6.1.7_I-DOCSIS
 
 ## New features
 
-\-
+#### CCAP connector configuration and threshold settings available in visual overview [ID_34805]
+
+For each CCAP connector, a *Configuration* and *Threshold Settings* page is now available in Visual Overview with the settings of the connector.
+
+#### Collector configuration and threshold settings available in visual overview [ID_34805]
+
+For the *Generic DOCSIS CM Collector* connector, a *Configuration* and *Threshold Settings* page is now available in Visual Overview with the settings of the connector.
 
 ## Changes
 
