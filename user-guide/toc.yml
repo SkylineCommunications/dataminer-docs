@@ -1057,7 +1057,7 @@
           items:
             - name: Configuring multiple OpenSearch clusters
               topicUid: Configuring_multiple_OpenSearch_clusters
-        - name: Amazon_OpenSearch_Service
+        - name: Amazon OpenSearch Service
           topicUID: Amazon_OpenSearch_Service
         - name: MySQL database
           topicUID: MySQL_database
