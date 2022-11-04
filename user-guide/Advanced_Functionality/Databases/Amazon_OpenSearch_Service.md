@@ -4,11 +4,11 @@ uid: Amazon_OpenSearch_Service
 
 # Amazon OpenSearch Service
 
-From DataMiner 10.3(CU0) and 10.3.1 onwards, it is possible to Amazon OpenSearch Service on AWS as an alternative to a on-prem hosted Elasticsearch/OpenSearch cluster.
+From DataMiner 10.3.0 onwards, it is possible to Amazon OpenSearch Service on AWS as an alternative to a on-prem hosted Elasticsearch/OpenSearch cluster.
 
 ## Compatibility
 
-Supported versions: 
+Supported versions:
 
 - OpenSearch version 1.3.
 
@@ -36,7 +36,7 @@ Provide a user name and password. Make sure to store this information somewhere 
 
 New domains typically take 15–30 minutes to initialize, but can take longer depending on the configuration. After your domain initializes, select it to open its configuration pane.
 
-1. Note the domain endpoint under General information.
+Note the domain endpoint under General information.
 
 ![Create Domain](~/user-guide/images/Amazon_OpenSearch_DomainEndpoint.png)
 
@@ -50,15 +50,15 @@ Configure your OpenSearch cluster together with your Cassandra Cluster as a `Dat
 > [!IMPORTANT]
 > Ensure your server version is compatible for OpenSearch. Cube will display `Elasticsearch/OpenSearch` instead of `Elasticsearch` if your server is compatible.
 >
-> Since TLS will be enabled, the `DB Server` must be the full url, starting with https and ending with the port. For Amazon OpenSearch Service this means port 443, for example: `https://search-mydomain-123456798.eu-north-1.es.amazonaws.com:443/`
+> Since TLS will be enabled on AWS, the `DB Server` must be the full url, starting with https and ending with the port. For Amazon OpenSearch Service this means port 443, for example: `https://search-mydomain-123456798.eu-north-1.es.amazonaws.com:443/`
 
 ![Create Domain](~/user-guide/images/Amazon_OpenSearch_CubeConfig.png)
 
 ## Restart the entire DMS
 
-Restart the entire DMS for the configuration can take place.
+Restart the entire DMS so the configuration can take place.
 
-## Verify that the DMS is using the database
+## (Optional) Verify that the DMS is using the database
 
 Open the `OpenSearch Dashboards URL` which will redirect you to your dashboard (equivalent of Kibana for Elasticsearch).
 
