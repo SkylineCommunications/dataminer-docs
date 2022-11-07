@@ -30,4 +30,4 @@ To do so:
 > In case a regular Cassandra general database is used, the Cassandra database is always reverted to a single node, regardless of whether you select to disable or delete the Failover setup. If the Cassandra cluster feature is used, the node on the backup DMA will be retained. However, the DB.xml file of the backup Agent will be adapted to no longer refer to the database.
 
 > [!CAUTION]
-> While it is possible from DataMiner 10.2.0 \[CU9\]/10.2.12 onwards to decommission a Failover setup while the server hosting the offline Agent is unavailable, do not further bring up that offline Agent to avoid double polling.
+> While it is possible from DataMiner 10.2.0 \[CU9\]/10.2.12 onwards to decommission a Failover setup while the server hosting the offline Agent is unavailable, this will not reset the offline Agent to a clean installation. As such, you will need to make sure the offline Agent is not brought online again in the network as this would cause double polling. In addition, there could be minor data loss and inconsistencies on the database level as the database node cannot be cleanly decommissioned.
