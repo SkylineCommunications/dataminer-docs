@@ -14,18 +14,16 @@ uid: General_Feature_Release_10.2.12
 
 ## Highlights
 
-*No highlights have been selected for this release yet*
-
-## Other features
-
-#### Failover: Decommissioning a Failover setup while the server hosting the offline agent is unavailable [ID_33827]
+#### Failover: Decommissioning a Failover setup while the server hosting the offline Agent is unavailable [ID_33827]
 
 <!-- MR 10.2.0 [CU9] - FR 10.2.12 -->
 
-It is now possible to decommission a Failover setup while the server hosting the offline agent is unavailable.
+It is now possible to decommission a Failover setup while the server hosting the offline Agent is unavailable.
 
 > [!NOTE]
 > When you try to decommission a Failover setup while the offline agent is missing, in Cube's *Failover Config* window, a warning will be displayed.
+
+## Other features
 
 #### Dashboards app: Parameter feeds that list EPM parameters now allow items to be preselected [ID_34554] [ID_34588]
 
@@ -33,11 +31,11 @@ It is now possible to decommission a Failover setup while the server hosting the
 
 When an EPM feed is used to feed EPM identifiers to a parameter feed, it is now possible to configure filters that will preselect certain items in the parameter feed.
 
-#### Failover: A reverse proxy will now be used to re-route HTTP traffic from the offline agent to the online agent [ID_34606]
+#### Failover: A reverse proxy will now be used to re-route HTTP traffic from the offline Agent to the online Agent [ID_34606]
 
 <!-- MR 10.2.0 [CU9] - FR 10.2.12 -->
 
-In a Failover setup, a reverse proxy will now be hosted in IIS in order to re-route HTTP traffic from the offline agent to the online agent. After a switch has occurred, the proxy will be disabled in the online agent and enabled on the offline agent.
+In a Failover setup, a reverse proxy will now be hosted in IIS in order to re-route HTTP traffic from the offline Agent to the online Agent. After a switch has occurred, the proxy will be disabled in the online Agent and enabled on the offline Agent.
 
 This feature requires the Application Request Routing (ARR) module to be installed on IIS. When you upgrade to version 10.2.12 / 10.2.0 [CU9], it will automatically be installed if it has not yet been installed earlier.
 
