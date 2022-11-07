@@ -4,7 +4,7 @@ uid: PA_Token
 
 # Token
 
-Tokens are mainly used to exchange standard data between [queue elements](xref:Queue_Element).
+Tokens are mainly used to exchange standard data between [queue elements](xref:PA_Queue_Element).
 
 When an activity is completed, it generates one single new token and sends it to the next queue element.
 

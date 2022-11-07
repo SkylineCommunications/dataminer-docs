@@ -1,5 +1,5 @@
 ---
-uid: Process_Automation_App_Two
+uid: Process_Automation_App
 ---
 
 # Process Automation app

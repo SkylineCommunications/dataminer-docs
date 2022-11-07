@@ -4,11 +4,12 @@ uid: PA_index
 
 # Process Automation framework
 
-This is your one source for all information related to setting up and working with Process Automation (PA). This includes information on the product, architecture, development, and deployment.
+This section contains information related to setting up and working with Process Automation (PA). This includes information on the product, architecture, development, and deployment.
 
-All information applies to PA version 2. Features that are part of PA version 1 are omitted. A process that was running with the initial version of Process Automation is still supposed to run with PA version 2. However, it is using an architecture which is no longer promoted and will not allow to use the latest PA features.
+> [!NOTE]
+> All information in this section applies to PA version 2. Obsolete features from PA version 1 are not included. While processes that were running with the initial PA version should still run with version 2, they use an architecture that is no longer promoted, and they will not allow the use of the latest PA features.
 
 - [PA concepts](xref:PA_Concepts)
 - [Getting started with PA](xref:Getting_Started_With_PA)
-- [Process Automation app](xref:Process_Automation_App_Two)
+- [Process Automation app](xref:Process_Automation_App)
 - [Advanced configuration](xref:PA_Logging)

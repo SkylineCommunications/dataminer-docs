@@ -1,5 +1,5 @@
 ---
-uid: Queue_Element
+uid: PA_Queue_Element
 ---
 
 # Queue element

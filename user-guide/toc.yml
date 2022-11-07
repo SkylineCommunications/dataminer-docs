@@ -2409,28 +2409,35 @@
             - name: Activities
               topicUid: PA_Activities
             - name: Process definition
-              topicUid: Process_Definition
+              topicUid: PA_Process_Definition
             - name: Process DOM instance
-              topicUid: Process_DOM_Instance
+              topicUid: PA_Process_DOM_Instance
             - name: User DOM instance
-              topicUid: User_DOM_Instance
+              topicUid: PA_User_DOM_Instance
             - name: Queue element
-              topicUid: Queue_Element
+              topicUid: PA_Queue_Element
             - name: Token
               topicUid: PA_Token
             - name: Process Automation app
-              topicUid: Process_Automation_App
+              topicUid: Process_Automation_App_Concept
         - name: Process Automation app
-          topicUid: Process_Automation_App_Two
+          topicUid: Process_Automation_App
         - name: Getting started with PA
           topicUid: Getting_Started_With_PA
           items:
             - name: Deploying and configuring the PA framework
               topicUid: Deploying_and_Configuring_the_PA_Framework
             - name: Creating activities
-              topicUid: Creating_Activities
+              topicUid: PA_Creating_Activities
+              items:
+                - name: Creating script tasks
+                - topicUid: PA_Creating_script_tasks
+                - name: Creating user tasks
+                  topicUid: PA_Creating_user_tasks
+                - name: Creating resource tasks
+                  topicUid: PA_Creating_resource_tasks
             - name: Creating and configuring a process definition
-              topicUid: Creating_and_Configuring_a_Process_Definition
+              topicUid: PA_Creating_and_Configuring_a_Process_Definition
         - name: Advanced configuration
           items:
             - name: Logging

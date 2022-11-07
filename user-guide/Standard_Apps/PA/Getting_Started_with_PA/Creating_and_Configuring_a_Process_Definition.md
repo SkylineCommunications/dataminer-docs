@@ -1,5 +1,5 @@
 ---
-uid: Creating_and_Configuring_a_Process_Definition
+uid: PA_Creating_and_Configuring_a_Process_Definition
 ---
 
 # Creating and configuring a process definition
