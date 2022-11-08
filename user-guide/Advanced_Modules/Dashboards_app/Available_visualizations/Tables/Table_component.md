@@ -107,7 +107,7 @@ To **sort the table**, you can click a column header.
 
 - To toggle between ascending and descending order, click the column header again.
 
-- To apply additional sorting, press Ctrl while clicking one or more additional headers. The first column will then be used for the initial sorting, the next one to sort equal values of the first column, and so on. Note that this is only fully supported from DataMiner 10.2.12/10.3.0 onwards.
+- To apply additional sorting, press Ctrl while clicking one or more additional headers. The first column will then be used for the initial sorting, the next one to sort equal values of the first column, and so on.
 
 - Alternatively, you can also select one of the available sorting options in the column header right-click menu.
 
