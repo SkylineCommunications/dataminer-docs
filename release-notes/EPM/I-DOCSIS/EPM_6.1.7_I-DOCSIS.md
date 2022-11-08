@@ -18,7 +18,22 @@ For the *Generic DOCSIS CM Collector* connector, a *Configuration* and *Threshol
 
 ### Enhancements
 
-\-
+#### Use of NuGet packages and SKIP_INITIAL_INFO_EVENT option [ID_34835]
+
+The EPM connectors have been updated to use the *lib.common* and *lib.protocol* NuGet packages instead of the class library and QAction 63000.
+
+In addition, the *SKIP_INITIAL_INFO_EVENT* option can now be used when a script is executed, so that no "Script started" information event is generated. To use this option, add "SKIP_STARTED_INFO_EVENT:TRUE" to the *scriptOptions* when sending a *ExecuteScriptMessage*.
+
+For example:
+
+```csharp
+string[] scriptOptions = { "OPTIONS:0", "CHECKSETS:TRUE", "EXTENDED_ERROR_INFO", "DEFER:TRUE", "SKIP_STARTED_INFO_EVENT:TRUE", String.Format("PARAMETER:2:{0}", pairList) };
+            var message = new SLNetMessages.ExecuteScriptMessage
+            {
+               ScriptName = "EpmBeToCcapPair",
+               Options = new SLNetMessages.SA(scriptOptions),
+            };
+```
 
 ### Fixes
 
