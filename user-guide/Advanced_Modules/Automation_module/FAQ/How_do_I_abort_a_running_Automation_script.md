@@ -9,10 +9,10 @@ uid: How_do_I_abort_a_running_Automation_script
 To abort a running Automation script, close the dialog by clicking the *X* in the top-right corner.
 
 > [!NOTE]
-> You can also use the following keyboard shortcuts:
+> You can also abort the script by using the following keyboard shortcuts:
 >
-> - In a web app, press ESC to close the dialog and abort the script.
-> - In DataMiner Cube, press ALT+F4 to close the dialog.
+> - In a web app, press ESC.
+> - In DataMiner Cube, press ALT+F4.
 
 ## [Prior to DataMiner 10.2.12/10.3.0](#tab/tabid-2)
 
