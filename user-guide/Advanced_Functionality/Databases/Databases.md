@@ -16,6 +16,8 @@ This section consists of the following topics:
 
 - [MySQL database](xref:MySQL_database)
 
+- [Amazon keyspaces database](xref:Amazon_Keyspaces_Service)
+
 - [Offload database](xref:Offload_database)
 
 - [Database queries](xref:Database_queries)

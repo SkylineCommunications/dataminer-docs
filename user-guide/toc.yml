@@ -1061,6 +1061,8 @@
             topicUid: Deleting_element_data_from_a_MySQL_database
           - name: Moving MySQL data to another location
             topicUid: Moving_MySQL_data_to_another_location
+        - name: Amazon Keyspaces database
+          topicUid: Amazon_Keyspaces_Service
         - name: Offload database
           topicUid: Offload_database
           items:
