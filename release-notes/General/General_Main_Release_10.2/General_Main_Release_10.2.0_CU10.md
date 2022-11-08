@@ -27,6 +27,15 @@ ChildrenSort="Property|Start,asc"
 ChildrenSort="Property|End,desc"
 ```
 
+#### SLLogCollector now also collects DxM version info and APIGateway app settings [ID_34701]
+
+<!-- MR 10.2.0 [CU10] - FR 10.3.1 -->
+
+SLLogCollector packages will now also include:
+
+- Version information of all DataMiner Extension Modules (DxM).
+- The appsettings.json file of the APIGateway service.
+
 #### DataMiner upgrade: Enhanced method to delete locked files [ID_34779]
 
 <!-- MR 10.1.0 [CU22] / 10.2.0 [CU10] - FR 10.3.1 -->

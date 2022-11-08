@@ -407,3 +407,9 @@ When, in the Alarm Console, you double-clicked a suggestion or alarm event creat
 <!-- MR 10.1.0 [CU21] / 10.2.0 [CU9] - FR 10.2.12 -->
 
 When a connection had been closed, in some cases, an error could occur in the hosting process.
+
+#### Memory leak in SLDataGateway during a Cassandra Cluster migration [ID_34829]
+
+<!-- MR 10.1.0 [CU21] / 10.2.0 [CU9] - FR 10.3.1 -->
+
+During a Cassandra Cluster migration, SLDataGateway would leak memory due to paging handlers not being cleaned up correctly.
