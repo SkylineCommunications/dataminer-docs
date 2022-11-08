@@ -1573,8 +1573,6 @@
               topicUid: Duplicating_a_dashboard
             - name: Deleting a dashboard
               topicUid: Deleting_a_dashboard
-            - name: Sharing a dashboard
-              topicUid: Sharing_a_dashboard
             - name: Editing a dashboard
               topicUid: Editing_a_dashboard
             - name: Changing dashboard settings
@@ -1689,8 +1687,14 @@
               topicUid: Specifying_data_input_in_a_dashboard_URL
             - name: Configuring a dashboard to use a URL feed without a feed component
               topicUid: Configuring_a_dashboard_to_use_a_URL_feed_without_a_feed_component
+        - name: Sharing a dashboard
+          topicUid: Sharing_a_dashboard
         - name: Generating a report based on a dashboard
-          topicUid: Generating_a_report_based_on_a_dashboard
+          items:
+            - name: From DataMiner Cube
+              topicUID: Generating_a_report_based_on_a_dashboard_Cube
+            - name: From the Dashboards app
+              topicUID: Sharing_PDF_report_from_Dashboards_app
         - name: Customizing the Dashboards app
           topicUid: Customizing_the_Dashboards_app
         - name: Dashboard Gateway installation

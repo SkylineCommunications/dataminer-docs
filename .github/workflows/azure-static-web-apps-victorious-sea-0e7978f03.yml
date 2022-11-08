@@ -22,22 +22,6 @@ jobs:
           choco install docfx -y
         env:
           CI: true
-      - name: Add msbuild to PATH
-        uses: microsoft/setup-msbuild@v1.1
-      - name: Set up NuGet
-        uses: nuget/setup-nuget@v1.1.1
-      - name: NuGet restore DM solution
-        working-directory: "src/DataMiner"
-        run: nuget restore "DataMiner.sln"
-      - name: Build DataMiner solution
-        working-directory: src/DataMiner
-        run: msbuild DataMiner.sln /t:Clean,Restore,Build /p:Configuration=Debug
-      - name: NuGet restore BCL
-        working-directory: "src/Base Class Library"
-        run: nuget restore "Code Library.sln"
-      - name: Build Base Class Library solution
-        working-directory: "src/Base Class Library"
-        run: msbuild "Code Library.sln" /t:Clean,Restore,Build /p:Configuration=Debug
       - name: build metadata
         run: |
           docfx metadata -f
@@ -51,7 +35,7 @@ jobs:
           path: _site/
           
   deploy_job:
-    if: github.event_name == 'push'
+    if: (github.event_name == 'push' && github.repository == 'SkylineCommunications/dataminer-docs')
     runs-on: ubuntu-latest
     needs: build_job
     name: Deploy Job
@@ -76,7 +60,7 @@ jobs:
   
   
   deploy_job_Storage_Account:
-    if: github.event_name == 'push'
+    if: (github.event_name == 'push' && github.repository == 'SkylineCommunications/dataminer-docs')
     runs-on: ubuntu-latest
     needs: build_job
     name: Deploy Job to Storage account
