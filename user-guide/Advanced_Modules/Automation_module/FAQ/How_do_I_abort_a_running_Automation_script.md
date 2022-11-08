@@ -4,10 +4,25 @@ uid: How_do_I_abort_a_running_Automation_script
 
 # How do I abort a running Automation script?
 
+## [Prior to DataMiner 10.2.12/10.3.0](#tab/tabid-1)
+
 If the script is an interactive Automation script, and you are the user currently interacting with the script, you can abort the script by clicking the *Abort* button in the dialog box, or by simply closing the dialog box.
 
 > [!NOTE]
 > If a user aborts an interactive script, this will generate the exception "InteractiveUserDetachedException", which can optionally be handled in the code of the script. If it is not handled in the script, by default the script will shut down. Otherwise, the further implementation of the code in the script will determine what happens with the script execution.
+
+## [From DataMiner 10.2.12/10.3.0 onwards](#tab/tabid-2)
+
+When a dialog box has the focus, you can abort a running Automation script by doing the following:
+
+- close the dialog box by clicking the *X* in the top-right corner, or
+
+- press ALT+F4.
+
+> [!IMPORTANT]
+> When an interactive Automation script was launched from a web app, then you will have to press ESC instead of ALT+F4 to close a dialog box and abort the script. Pressing ALT+F4 would close the browser, not just the dialog box.
+
+***
 
 Otherwise, you can abort a running Automation script by means of the DataMiner SLNetClientTest tool. See [Aborting a running Automation script](xref:SLNetClientTest_aborting_running_script).
 
