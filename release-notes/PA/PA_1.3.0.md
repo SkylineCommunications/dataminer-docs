@@ -26,9 +26,9 @@ The setup script will now also create a *Generic Gateway* element using the *Sky
 > [!IMPORTANT]
 > When you update an existing installation with a new package, run the *SRM_Setup* script to make sure you are using the most recent version of the function packages.
 
-#### Integration of Skyline Process Automation Overview functions [ID_30496] [ID_30764]
+#### Integration of Skyline Process Automation and associated functions [ID_30496] [ID_30764]
 
-The Process Automation Framework has been adjusted to support the following *Skyline Process Automation Overview* functions:
+The Process Automation Framework has been adjusted to support the following functions:
 
 - PA None Start Event
 - PA Timer Start Event
@@ -43,18 +43,18 @@ The necessary LSO script adjustments have been implemented to search for these f
 
 For the *PA Timer Start Event* function, the following parameters have been added:
 
-- *PA Timer Start Event Active End Date*: The date when the execution of an event can stop, in the format dd/mm/yyyy.
-- *PA Timer Start Event Active End Time*: The time on any day between *PA Timer Start Event Active Start Date* and *PA Timer Start Event Active End Date* when the event stops executing, in the format HH:MM.
-- *PA Timer Start Event Active Start Date*: The date when the execution of an event can begin, in the format dd/mm/yyyy.
-- *PA Timer Start Event Active Start Time*: The time on any day between *PA Timer Start Event Active Start Date* and *PA Timer Start Event Active End Date* when the event begins executing, in the format HH:MM.
-- *PA Timer Start Event Frequency Interval*: The days when the event is executed. This depends on the value of *PA Timer Start Event Frequency Type*.
-- *PA Timer Start Event Frequency Type*: The frequency at which an event is executed.
-- *PA Timer Start Event Occurrences*: The number of times an event should occur.
-- *PA Timer Start Event Recurrence factor*: The number of weeks or months between the scheduled executions of an event. This is only used if *PA Timer Start Event Frequency Type* is weekly, monthly, monthly relative or yearly. If the value is 0, *PA Timer Start Event Recurrence factor* is not used.
-- *PA Timer Start Event Relative Interval*: The interval in case *PA Timer Start Event Frequency Interval* is monthly relative or yearly.
-- *PA Timer Start Event Subday Interval*: The number of *PA Timer Start Event Subday Type* periods to occur between each execution of an event.
-- *PA Timer Start Event Subday Type*: The units for the *PA Timer Start Event Subday Interval*.
-- *PA Timer Start Event Subyear Interval*: The interval in case *PA Timer Start Event Frequency Type* is set to "Yearly".
+- *PA Timer Start Recurring Pattern*: The pattern that determines when an event is repeated. This is a JSON string of class *PaTimerStartEventRecurringPattern*. For example, to start an event once every 5 days:
+
+  ```json
+  {
+  "ActiveStartDate":"01/10/2021 10:00",
+  "ActiveEndDate":"01/10/2022 00:00",
+  "FrequencyInterval":5,
+  "FrequencyType":"Daily",
+  "SubdayType":"AtTheSpecifiedTime"
+  }
+  ```
+
 - *PA Initial Process Instantiation*: Can be set to "Enabled" or "Disabled". Indicates if a token should be pushed into the process at the beginning of the activation window.
 - *PA Business Key*: Should be set to a domain-specific identifier of a process instance.
 
@@ -265,9 +265,9 @@ The LSO script that runs when the activation window starts has also been extende
 
 It is now possible to configure user tasks in the process definition configuration UI of the Process Automation Framework. To do so, click the *Configure* button next to a user task activity in the process definition configuration script. You will then be able to configure the user task based on existing profile instances or create new profile instances based on the existing user task DOM definition.
 
-#### Wizard to configure a process [ID_33174]
+#### Process configuration using the Process Automation app [ID_33174]
 
-A wizard is now available that allows you to configure a process. It allows you to create, configure, and activate a process definition, and it provides an overview of the active and future processes with their activation windows, as well as an overview of all active tokens.
+You can now configure a process using the Process Automation app. You can create, configure, and activate a process definition, and an overview is available of the active and future processes with their activation windows, as well as an overview of all active tokens.
 
 #### Support for user DOM instance fields [ID_33614]
 
