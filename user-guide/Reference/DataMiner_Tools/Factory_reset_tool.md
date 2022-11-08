@@ -57,6 +57,9 @@ It will always perform the following actions, regardless of whether the DMA is r
 - IISConfig
 - StartSLTaskbarUtility
 - StartDataMiner
+- Cleanclustereddatabase
+
+  Available from DataMiner 10.1.0 \[CU6\]/10.1.9 onwards. Prior to DataMiner 10.2.0 \[CU9\]/10.2.12, this action will remove all keyspaces and indices from the CassandraCluster and ElasticSearch databases. Fom DataMiner 10.2.0 \[CU9\]/10.2.12 onwards, this action will remove the tables, keyspaces, and indices defined in the *db.xml* file from the databases (clusters as well as single-node Cassandra databases on remote machines).
 
 ## SLDataGateway.Tools.Database.exe
 
