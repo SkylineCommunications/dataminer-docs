@@ -20,10 +20,6 @@ To configure this component:
 
    From DataMiner 10.2.12/10.3.0 onwards, parameter feeds that list EPM parameters allow the configuration of filters that will preselect certain items in the parameter feed.
 
-   After selecting column parameter indices in a parameter feed listing EPM parameters, you can now feed those selected indices to other components
-
-   It is now possible to group parameters in a parameter feed that lists EPM parameters.
-
 1. Optionally, customize the following component options in the *Component* > *Settings* tab:
 
    - *WebSocket settings*: Allows you to customize the polling interval for this component. To do so, clear the checkbox in this section and specify the custom polling interval.
@@ -49,7 +45,13 @@ To configure this component:
 
    - If a filtered list of indices is retrieved, you can specify the separator to use for this. For this you must make sure advanced dashboard settings are displayed. To do so, add the parameter *showAdvancedSettings=true* to the URL. You can then specify the separator in the *Index filter separator* box (available from DataMiner 10.0.9 onwards). For example, if only the indices with a primary key equal to "X" have to be retrieved, and you set the index filter separator to “Y”, the indices will be retrieved using the filter PK == X OR PK == \*YXY\*.
 
+   - After selecting column parameter indices in a parameter feed listing EPM parameters, you can feed those selected indices to other components (available from DataMiner 10.2.12/10.3.0 onwards).
+
    - To group parameters in the selector, under *Parameter groups*, click *Add parameter* group. Then specify a group name and select the parameters that should be in the group. Repeat this for every parameter group you want to configure.
+
+   - From DataMiner 10.2.12/10.3.0 onwards, it is possible to group parameters in a parameter feed that lists EPM parameters. Change the *grouping setting* so that it contains all the parameters in the filter of the component.
+
+<!-- Settings parameter feed are not shown in Dashboards app so this information is not reliable until verified. -->
 
 1. Optionally, fine-tune the component layout. In the *Component* > *Layout* tab, the following options are available:
 
