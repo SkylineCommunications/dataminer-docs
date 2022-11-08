@@ -121,11 +121,11 @@ From now on, when the *bruteForceToOffline* option is specified in the *DMS.xml*
 
 When a parameter feed is linked to a *Line & area chart" component, from now on, non-trended parameters will now automatically be removed from the chart.
 
-#### GQI now supports multiple sort in the Table component [ID_34526]
+#### Dashboards app / Low-Code Apps: Improved multiple sort in the Table component [ID_34526]
 
 <!-- MR 10.3.0 - FR 10.2.12 -->
 
-When, in the Dashboards app or a web app, you apply multiple sort orders in a *Table* component, multiple sort operators will now be appended to the GQI query that is feeding data to the component.
+When, in the Dashboards app or a low-code app, you apply multiple sort orders in a *Table* component, multiple sort operators will now be appended to the GQI query that feeds data to the component. This way sorting is done server-side, which will improve performance.
 
 #### QA Device Simulator renamed to Skyline Device Simulator [ID_34530] [ID_34555]
 
