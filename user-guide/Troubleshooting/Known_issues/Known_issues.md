@@ -5,10 +5,10 @@ uid: Known_issues
 
 | Issue | DataMiner version | Date added |
 |--|--|--|
-| [NATS not starting if DMS name contains special characters](xref:KI_NATS_not_starting_special_chars) | From DataMiner 10.1.0/10.1.2 <br>onwards. | November 8, 2022 |
-| [SLDataGateway memory leak during Cassandra Cluster migration](xref:KI_SLDataGateway_leak_during_CC_migration) | From DataMiner 10.1.0/10.1.2 <br>onwards. | November 3, 2022 |
-| [Excessive SLElement CPU usage during Cassandra Cluster migration](xref:KI_SLElement_CPU_high_during_CC_migration) | From DataMiner 10.1.0/10.1.2 <br>onwards. | October 28, 2022 |
-| [SLElement memory leak during Cassandra Cluster migration](xref:KI_SLElement_CPU_memory_leak_during_CC_migration) | From DataMiner 10.1.0/10.1.2 <br>onwards. | October 28, 2022 |
+| [NATS not starting if DMS name contains special characters](xref:KI_NATS_not_starting_special_chars) | From DataMiner 10.1.0/10.1.2 <br>onwards | November 8, 2022 |
+| [SLDataGateway memory leak during Cassandra Cluster migration](xref:KI_SLDataGateway_leak_during_CC_migration) | DataMiner 10.1.0 prior to CU21<br>DataMiner 10.2.0 prior to CU9<br>DataMiner 10.1.2 to 10.2.12 | November 3, 2022 |
+| [Excessive SLElement CPU usage during Cassandra Cluster migration](xref:KI_SLElement_CPU_high_during_CC_migration) | From DataMiner 10.1.0/10.1.2 <br>onwards | October 28, 2022 |
+| [SLElement memory leak during Cassandra Cluster migration](xref:KI_SLElement_CPU_memory_leak_during_CC_migration) | From DataMiner 10.1.0/10.1.2 <br>onwards | October 28, 2022 |
 | [SLProtocol memory leak when HTTP connectors are used](xref:KI_SLProtocol_memory_leak_HTTP) | From DataMiner 10.1.0 [CU19]/<br>10.2.0 [CU7]/10.2.8 onwards | October 26, 2022 |
 | [Data from Elasticsearch cluster with IPv6 addresses offloaded to files](xref:KI_Elasticsearch_IPv6) | Any version with Elasticsearch <br>cluster using IPv6 addresses | October 21, 2022 |
 | [Increased CPU load and degraded performance because of excessive number of SPI events](xref:Excessive_SPI_events_causing_CPU_load) | 10.2 Main and Feature Release <br>versions prior to 10.2.0 [CU6]<br> and 10.2.9. | October 19, 2022 |

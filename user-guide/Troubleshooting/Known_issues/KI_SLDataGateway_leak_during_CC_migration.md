@@ -6,7 +6,9 @@ uid: KI_SLDataGateway_leak_during_CC_migration
 
 ## Affected versions
 
-From DataMiner 10.1.0/10.1.2 onwards.
+- DataMiner 10.1.0 prior to CU21.
+- DataMiner 10.2.0 prior to CU9.
+- DataMiner 10.1.2 to 10.2.12.
 
 ## Cause
 
@@ -14,7 +16,7 @@ During the migration to a Cassandra Cluster setup, paging handler objects in SLD
 
 ## Fix
 
-No fix is available yet.
+Install DataMiner 10.1.0 [CU21], 10.2.0 [CU9], or 10.3.1
 
 ## Issue description
 
