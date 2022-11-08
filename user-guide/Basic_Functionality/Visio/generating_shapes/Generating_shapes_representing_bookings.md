@@ -59,7 +59,15 @@ The following shape data fields can be added to the group containing the booking
 
   - **Center**: If you want the generated shapes to be centered, then add a shape data field of type **ChildrenOptions** to the container shape, and set its value to "Center".
 
-- **ChildrenSort**: In this optional shape data field, you can specify how the different child item shapes should be sorted. To sort the bookings, add a **ChildrenSort** shape data field to the shape group and set its value to “Name” (i.e. the default setting), “Property\|Start time” or “Property\|End time”, optionally followed by “,asc” (i.e. the default order) or “,desc”.
+- **ChildrenSort**: In this optional shape data field, you can specify how the different child item shapes should be sorted. The following values are supported in this shape data field:
+
+  - `Name`: Sorts by name. This is the default setting.
+  - `Property|Start`: Sorts on the booking start time + the pre-roll time (based on the *Start* custom property of the *ReservationInstance* object).
+  - `Property|Start time`: Sorts on booking start time (based on the *Start* field of the *ReservationInstance* object).
+  - `Property|End time`: Sorts on booking end time (based on the *End* field of the *ReservationInstance* object).
+  - `Property|End`: 
+
+  Optionally, you can also add `,asc` (i.e. the default order) or `,desc` to specify the sort order.
 
 - **ChildrenFilter**: To filter the bookings, add a **ChildrenFilter** shape data field to the shape group and set its value to a booking filter, using the same filter format as is used when specifying a *ListView* filter. See [List view filters](xref:Creating_a_list_view#list-view-filters).
 
