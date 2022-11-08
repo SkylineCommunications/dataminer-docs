@@ -1,8 +1,8 @@
 ---
-uid: AddTicketAttachment
+uid: AddTicketAttachmentV2
 ---
 
-# AddTicketAttachment
+# AddTicketAttachmentV2
 
 Use this method to add an attachment file to a ticket.
 
@@ -14,9 +14,10 @@ Use this method to add an attachment file to a ticket.
 | Item       | Format | Description                                          |
 |------------|--------|------------------------------------------------------|
 | connection | String | The connection ID. See [ConnectApp](xref:ConnectApp). |
-| ticketID   | String | The ID of the ticket.                                |
+| dmaID      | Integer | The DataMiner Agent ID.                             |
+| ticketID   | Integer | The ID of the ticket.                                |
 | fileName   | String | The name of the attachment file.                     |
-| path       | String | The file path of the attachment file.                |
+| ID         | String | The ID retrieved through an UploadFile call          |
 
 ## Output
 

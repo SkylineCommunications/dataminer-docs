@@ -175,7 +175,7 @@ The following methods used to add attachments to bookings, jobs and tickets have
 |----------------------|------------------------|
 | AddBookingAttachment | AddBookingAttachmentV2 |
 | AddJobAttachment     | AddJobAttachmentV2     |
-| AddTicketAttachment  | addTicketAttachmentV2  |
+| AddTicketAttachment  | AddTicketAttachmentV2  |
 
 Also, the *ContinueAutomationScript* method now has an additional `info` parameter that can be used to provide more information about the variables passed in the `values` parameter (e.g. information to help resolve the file paths).
 
