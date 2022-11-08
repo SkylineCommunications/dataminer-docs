@@ -47,10 +47,10 @@ To generate the certificates, you will need two tools: *openssl* and the *Java k
    > [!NOTE]
    > The **OU** is only validated when **internode encryption** is turned on in the *server_encryption_options*. Make sure it matches the *cluster_name* **exactly** or Cassandra will fail to start. You can find the *cluster_name* in the *cassandra.yaml* config file.
    >
-   >We also recommend not to use non-*ASCII* characters and to avoid special characters in your cluster name. The Cassandra documentation is lacking on this front but we noticed Cassandra failing to start when the *cluster_name* contained certain special/non-*ASCII* characters.
+   > We also recommend to only use ASCII characters in your Cassandra cluster name. The Cassandra documentation is lacking on this front but we noticed Cassandra failing to start when the *cluster_name* contained certain special/non-*ASCII* characters.
 
 
-2. Generate the root CA certificate by executing the following command:
+1. Generate the root CA certificate by executing the following command:
 
    ```txt
    openssl req -config path/to/rootCa_cert.conf -new -x509 -nodes -keyout rootCa.key -out rootCa.crt -days 365
@@ -58,7 +58,7 @@ To generate the certificates, you will need two tools: *openssl* and the *Java k
 
    The private key will now be saved to a new file named *rootCa.key*. The public certificate (including its public key) will be saved to *rootCa.crt*. In the example above, the certificate will be valid for **365 days** because this is configured with the *-days* parameter.
 
-3. Generate certificates for the individual Cassandra nodes using the keytool command:
+1. Generate certificates for the individual Cassandra nodes using the keytool command:
 
    ```txt
    keytool -genkeypair -keyalg RSA -alias <NODE IP ADDRESS> -keystore <NODE IP>.jks -storepass <STRONG PASSWORD> -keypass <STRONG PASSWORD> -validity 365 -keysize 4096 -dname "CN=<NODE IP>, OU=<CLUSTER NAME>, O=<ORGANIZATION>, C=<COUNTRY CODE>" -ext "san=ip:<NODE IP>"
@@ -67,15 +67,15 @@ To generate the certificates, you will need two tools: *openssl* and the *Java k
    > [!NOTE]
    > It is important to also set the OU to the name of your Cassandra cluster. Also, make sure that the values for `-storepass` and `-keypass` are equal. This is a known limitation in Cassandra. The certificate above will be valid for 365 days, based on the configuration of the `-validity` parameter.
 
-4. Repeat the previous step for **every node** in the Cassandra cluster.
+1. Repeat the previous step for **every node** in the Cassandra cluster.
 
-5. Now that you have certificates for every node, digitally sign them with the private key of the root CA certificate. To do so, first create a certificate signing request (CSR).
+1. Now that you have certificates for every node, digitally sign them with the private key of the root CA certificate. To do so, first create a certificate signing request (CSR).
 
    ```txt
    keytool -certreq -keystore <NODE IP>.jks -alias <NODE IP> -file <NODE IP>.csr -keypass <STRONG PASSWORD> -storepass <STRONG PASSWORD>
    ```
 
-6. Digitally sign the node certificates with the root certificate authority.
+1. Digitally sign the node certificates with the root certificate authority.
 
    ```txt
    openssl x509 -req -CA path/to/rootCa.crt -CAkey path/to/rootCa.key -in <NODE IP>.csr -out <NODE IP>.crt_signed -days 365 -CAcreateserial -passin pass:<ROOT CA PASSWORD>
@@ -83,13 +83,13 @@ To generate the certificates, you will need two tools: *openssl* and the *Java k
 
    Make sure *&lt;ROOT CA PASSWORD&gt;* matches the password used to create the root CA certificate.
 
-7. For every node, import the root certificate into the Java KeyStore (JKS) for that node.
+1. For every node, import the root certificate into the Java KeyStore (JKS) for that node.
 
    ```txt
    keytool -keystore <NODE IP>.jks -alias rootca_name -importcert -file path/to/rootCa.crt -keypass <STRONG PASSWORD> -storepass <STRONG PASSWORD> -noprompt
    ```
 
-8. Also import the signed certificate.
+1. Also import the signed certificate.
 
    ```txt
    keytool -keystore <NODE IP>.jks -alias rootca_name -importcert -file <NODE IP ADDRESS>.crt_signed -keypass <STRONG PASSWORD> -storepass <STRONG PASSWORD> -noprompt
