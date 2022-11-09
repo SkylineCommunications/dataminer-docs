@@ -245,7 +245,7 @@ The *PDF* and *Share* option in the Dashboards app are now no longer visible in 
 
 <!-- MR 10.2.0 [CU9] - FR 10.2.12 -->
 
-Up to now, the *SLReset.exe* option *-cleanclustereddatabase* would remove all keyspaces and indices from the CassandraCluster and ElasticSearch databases. From now on, this option will only remove the tables, keyspaces and indices defined in the *db.xml* file from the databases (clusters as well as single-node Cassandra databases on remote machines).
+Up to now, the *SLReset.exe* option *-cleanclustereddatabases* would remove all keyspaces and indices from the Cassandra cluster and Elasticsearch databases. From now on, this option will only remove the tables, keyspaces and indices defined in the *DB.xml* file from the databases (clusters as well as single-node Cassandra databases on remote machines).
 
 #### SLMessageBroker log file entries will now mention the NATS server to which the NATS client is connected [ID_34719]
 
