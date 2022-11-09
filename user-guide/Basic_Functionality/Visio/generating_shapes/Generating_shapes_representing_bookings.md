@@ -63,11 +63,11 @@ The following shape data fields can be added to the group containing the booking
 
   - `Name`: Sorts by name. This is the default setting.
   - `Property|Start`: Sorts on the booking start time + the pre-roll time (based on the *Start* custom property of the *ReservationInstance* object).
-  - `Property|Start time`: Sorts on booking start time (based on the *Start* field of the *ReservationInstance* object).
-  - `Property|End time`: Sorts on booking end time (based on the *End* field of the *ReservationInstance* object).
-  - `Property|End`: 
+  - `Property|Start time`: Sorts on the booking start time (based on the *Start* field of the *ReservationInstance* object).
+  - `Property|End time`: Sorts on the booking end time (based on the *End* field of the *ReservationInstance* object).
+  - `Property|End`: Sorts on the booking end time minus the post-roll time (based on the *End* custom property of the *ReservationInstance* object).
 
-  Optionally, you can also add `,asc` (i.e. the default order) or `,desc` to specify the sort order.
+  Optionally, you can also add `,asc` (i.e. the default order) or `,desc` to specify the sort order, e.g. `Property|Start time,asc`.
 
 - **ChildrenFilter**: To filter the bookings, add a **ChildrenFilter** shape data field to the shape group and set its value to a booking filter, using the same filter format as is used when specifying a *ListView* filter. See [List view filters](xref:Creating_a_list_view#list-view-filters).
 
