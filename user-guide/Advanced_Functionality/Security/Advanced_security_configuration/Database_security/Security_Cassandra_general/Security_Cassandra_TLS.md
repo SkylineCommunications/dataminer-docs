@@ -47,7 +47,7 @@ To generate the certificates, you will need two tools: *openssl* and the *Java k
    > [!NOTE]
    > The **OU** is only validated when **internode encryption** is turned on in the *server_encryption_options*. Make sure it matches the *cluster_name* **exactly** or Cassandra will fail to start. You can find the *cluster_name* in the *cassandra.yaml* config file.
    >
-   > We also recommend to only use ASCII characters in your Cassandra cluster name. The Cassandra documentation is lacking on this front but we noticed Cassandra failing to start when the *cluster_name* contained certain special/non-*ASCII* characters.
+   > We also recommend using only ASCII characters in your Cassandra cluster name. The Cassandra documentation is lacking on this front, but we noticed Cassandra failing to start when the *cluster_name* contained certain special/non-ASCII characters.
 
 
 1. Generate the root CA certificate by executing the following command:
