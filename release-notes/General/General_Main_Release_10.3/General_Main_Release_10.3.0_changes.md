@@ -816,3 +816,9 @@ When you tried to request data from a simulation that was built with AutoBuildVe
 
 > [!CAUTION]
 > This tool is provided "As Is" with no representation or warranty whatsoever. Skyline Communications will not provide any maintenance or support for this tool.
+
+#### Dashboards app - Time range feed: Quick pick buttons would not be displayed in the correct order [ID_34759]
+
+<!-- MR 10.3.0 - FR 10.3.1 -->
+
+When a time range feed was configured to show quick pick buttons, those buttons would not be displayed in the correct order. From now on, quick pick buttons will be displayed in chronological order.
