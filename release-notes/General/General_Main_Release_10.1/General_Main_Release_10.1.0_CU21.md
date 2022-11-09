@@ -190,6 +190,12 @@ Recursion detected in the mediation links tree
 
 As this error was caused by an internal lookup issue that had no effect whatsoever with regard to mediation layer functionality, from now on, it will no longer be logged.
 
+#### Dashboards app - Time range feed: Quick pick buttons would not be displayed in the correct order [ID_34759]
+
+<!-- MR 10.1.0 [CU21] - FR 10.3.1 -->
+
+When a time range feed was configured to show quick pick buttons, those buttons would not be displayed in the correct order. From now on, quick pick buttons will be displayed in chronological order.
+
 #### An error could occur in the hosting process when a connection had been closed [ID_34786]
 
 <!-- MR 10.1.0 [CU21] / 10.2.0 [CU9] - FR 10.2.12 -->

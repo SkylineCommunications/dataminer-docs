@@ -7,6 +7,14 @@ uid: General_Main_Release_10.4.0_new_features
 > [!IMPORTANT]
 > We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
 
+### DMS web apps
+
+#### Dashboards app & low-code apps: Icon component [ID_34867]
+
+<!-- MR 10.4.0 - FR 10.3.1 -->
+
+The new icon component allows you to display an icon on a dashboard or a low-code app.
+
 ### DMS Tools
 
 #### SLNetClientTest tool - 'Connect' window: Enhanced 'Connection Type' and 'Authentication' sections [ID_34712]
@@ -27,7 +35,12 @@ In the *Connection Type* section, you now have to indicate how the connection ha
 In the *Authentication* section (formerly known as *User Info* section), you now have the following authentication options:
 
 - Single sign-on
+
+    > [!NOTE]
+    > External authentication not yet supported.
+
 - Explicit credentials (with *Force Authenticate Local User* option)
+
 - Ticket
 
 > [!WARNING]
