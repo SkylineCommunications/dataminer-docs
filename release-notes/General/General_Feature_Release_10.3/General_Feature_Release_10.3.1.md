@@ -137,6 +137,6 @@ During a Cassandra Cluster migration, SLDataGateway would leak memory due to pag
 
 #### Dashboards app & low-code apps: Contents of colored table cells would incorrectly not be visible when conditional coloring was applied and actions had been configured [ID_34842]
 
-<!-- MR 10.3.0 - FR 10.3.1 -->
+<!-- MR 10.2.0 [CU9] - FR 10.3.1 -->
 
 When conditional coloring was applied on the first column of a table in which actions had been configured, in some cases, the contents of the colored cells would incorrectly not be visible.

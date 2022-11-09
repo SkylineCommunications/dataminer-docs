@@ -349,6 +349,12 @@ When you hovered over a trend graph while the legend was disabled, the trend val
 
 When a large PDF file (e.g. a PDF report) was created in a web app, in some cases, an error could occur.
 
+#### DataMiner Cube - Visual Overview: Tooltip of an element in a service chain would incorrectly not show values of node properties [ID_34664]
+
+<!-- MR 10.2.0 [CU9] - FR 10.3.1 -->
+
+When, in a service chain within a service context, an element shape was linked to a node property via a shape data field of type *Tooltip*, then the tooltip of that shape would incorrectly not show the value of that node property when using either a `[Service definition properties]` or a `[Service definition property:<property name>]` placeholder.
+
 #### nats-account-server service could silently fail [ID_34698]
 
 <!-- MR 10.2.0 [CU9] - FR 10.2.12 -->
@@ -425,3 +431,9 @@ When multiple data sources were joined, in some cases, filter operations would n
 <!-- MR 10.1.0 [CU21] / 10.2.0 [CU9] - FR 10.3.1 -->
 
 During a Cassandra Cluster migration, SLDataGateway would leak memory due to paging handlers not being cleaned up correctly.
+
+#### Dashboards app & low-code apps: Contents of colored table cells would incorrectly not be visible when conditional coloring was applied and actions had been configured [ID_34842]
+
+<!-- MR 10.2.0 [CU9] - FR 10.3.1 -->
+
+When conditional coloring was applied on the first column of a table in which actions had been configured, in some cases, the contents of the colored cells would incorrectly not be visible.
