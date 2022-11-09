@@ -62,10 +62,10 @@ The following shape data fields can be added to the group containing the booking
 - **ChildrenSort**: In this optional shape data field, you can specify how the different child item shapes should be sorted. The following values are supported in this shape data field:
 
   - `Name`: Sorts by name. This is the default setting.
-  - `Property|Start`: Sorts on the booking start time + the pre-roll time (based on the *Start* custom property of the *ReservationInstance* object).
+  - `Property|Start`: Sorts on the booking start time + the pre-roll time (based on the *Start* custom property of the *ReservationInstance* object). Supported from DataMiner 10.2.0 [CU10]/10.3.1 onwards.
   - `Property|Start time`: Sorts on the booking start time (based on the *Start* field of the *ReservationInstance* object).
   - `Property|End time`: Sorts on the booking end time (based on the *End* field of the *ReservationInstance* object).
-  - `Property|End`: Sorts on the booking end time minus the post-roll time (based on the *End* custom property of the *ReservationInstance* object).
+  - `Property|End`: Sorts on the booking end time minus the post-roll time (based on the *End* custom property of the *ReservationInstance* object). Supported from DataMiner 10.2.0 [CU10]/10.3.1 onwards.
 
   Optionally, you can also add `,asc` (i.e. the default order) or `,desc` to specify the sort order, e.g. `Property|Start time,asc`.
 
