@@ -66,6 +66,16 @@ When a *GetInfoMessage* of type "IndexingConfiguration" was sent containing an i
 
 From now on, when the DataMiner ID in a *GetInfoMessage* request of type "IndexingConfiguration" is invalid, only the Elasticsearch configuration of the local DMA will be returned instead.
 
+#### DataMiner Cube: Stream Viewer enhancements [ID_34837] [ID_34838]
+
+<!-- MR 10.1.0 [CU21] / 10.2.0 [CU9] - FR 10.3.1 -->
+
+The Stream Viewer tree view now supports more levels. This will allow you to display more detailed information.
+
+For example, in case of HTTP communication, there will now be extra levels for IP addresses, groups, sessions, connections, requests/responses, parameters*, and even status codes and error codes.
+
+**only in case of a response*
+
 ### Fixes
 
 #### Problem with SLDataMiner when editing an element [ID_34329]
