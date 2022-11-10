@@ -1,5 +1,5 @@
 ---
-uid: Integrating_Gateways
+uid: PA_Integrating_Gateways
 ---
 
 # Integrating gateways
@@ -16,13 +16,18 @@ Function inputs are numbered from 1 to 5 and function outputs from 11 to 15. Tho
 
 To integrate a gateway in a process:
 
-1. In the *Process Automation* app, extend the process definition with a *Generic Gateway* function. Drag the *Generic Gateway* activity from the functions sidebar to the workplace and connect it to the relevant tasks/functions. Make sure the entry point of your process is still a start event and the end point is an end event.
+1. In the *Process Automation* app, extend the process definition with a *Generic Gateway* function.
+
+1. Drag the *Generic Gateway* function from the functions sidebar to the workspace and connect it to the relevant tasks/functions.
+
+   > [!NOTE]
+   > Make sure the entry point of your process is still a start event and the end point is an end event.
 
 1. Build a JSON string representing the routing rules. See [routing rules](#routing-rules).
 
-1. In the [*Profiles* module](xref:The_Profiles_module), create a profile instance that applies the *PA GW* profile definition and store the serialized Routing Rules in the *PA GW RoutingRules* parameter.
+1. In the [*Profiles* module](xref:The_Profiles_module), create a profile instance that applies the *PA GW* profile definition and store the serialized routing rules in the *PA GW RoutingRules* parameter.
 
-1. In the *Process Automation* app, launch the *process definition configuration* wizard and select the previously created profile instance when you configure the Gateway node.
+1. In the *Process Automation* app, launch the *process definition configuration* wizard and select the previously created profile instance when you configure the gateway node.
 
 ## Routing rules
 
@@ -32,7 +37,7 @@ A rule contains one or multiple conditions comparing the field value of the proc
 
 Below you can find examples of the possible routing rules.
 
-### Parallel Split
+### Parallel split
 
 ```json
 {
@@ -54,7 +59,7 @@ Below you can find examples of the possible routing rules.
 }
 ```
 
-### Exclusive Split
+### Exclusive split
 
 ```json
 {
@@ -92,7 +97,7 @@ Below you can find examples of the possible routing rules.
 }
 ```
 
-### Inclusive Split
+### Inclusive split
 
 ```json
 {
@@ -134,7 +139,7 @@ Below you can find examples of the possible routing rules.
 }
 ```
 
-### Parallel Merge
+### Parallel merge
 
 #### Example 1
 

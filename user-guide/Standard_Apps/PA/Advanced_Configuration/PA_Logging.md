@@ -8,4 +8,5 @@ When the Booking Manager is configured to store log files in a shared folder, Pr
 
 For more information on the Booking Manager, see [Booking Manager user interface](xref:Booking_Manager_user_interface).
 
-Note that the default name of the Booking Manager element used by Process Automation is "Process Automation Instances".
+> [!NOTE]
+> The default name of the Booking Manager element used by Process Automation is "Process Automation Instances".

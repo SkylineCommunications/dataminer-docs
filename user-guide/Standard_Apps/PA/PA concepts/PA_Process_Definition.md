@@ -43,4 +43,4 @@ The behavior of a gateway is defined by so-called routing rules.
 A gateway is a function with 5 inputs and 5 outputs. Routing rules indicate the condition to generate one or multiple tokens at one or several outputs of the gateway.
 
 > [!TIP]
-> See also: [Integrating gateways](xref:Integrating_Gateways)
+> See also: [Integrating gateways](xref:PA_Integrating_Gateways)

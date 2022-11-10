@@ -2449,7 +2449,7 @@
             - name: Pushing tokens into a process
               topicUid: Pushing_Tokens_Into_A_Process
             - name: Integrating gateways
-              topicUid: Integrating_Gateways
+              topicUid: PA_Integrating_Gateways
     - name: DataMiner PTP app
       topicUid: SolPTP
       items:
