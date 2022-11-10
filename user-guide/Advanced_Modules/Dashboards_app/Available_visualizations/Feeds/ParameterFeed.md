@@ -17,22 +17,17 @@ To configure this component:
    - From DataMiner 10.0.0/10.0.2 onwards, multiple view filters can be applied to a parameter feed. Parameters in those views will then be included as soon as they are included in one of the view filters.
 
    - From DataMiner 10.2.3/10.3.0 onwards, a default index filter can be applied. To do so, first add the `showAdvancedSettings=true` option to the dashboard URL. In the *Data* pane, a *Parameter table filters* section will then become available where you can configure the filter.
+  
+   - After selecting column parameter indices in a parameter feed, you can feed those selected indices to other components that support the same data.
 
-   - From DataMiner 10.2.12/10.3.0 onwards, after selecting column parameter indices in a parameter feed listing EPM parameters, you can feed those selected indices to other components. To do this, do the following:
-
-     1. In the *Data* pane, select *Feeds* under *All available data*. Expand *Parameter feed* and feed *Indices* to a chosen component.
-
-     1. Click *Stop editing* in the top right corner.
-
-     1. In the *EPM Feed* window, expand *DAA Overview* by clicking the downwards arrow, click *Search all* in the *CCAP Core* section to expand the drop-down list, and select a CCAP Core.
+     > [!NOTE]
+     > From DataMiner 10.2.12/10.3.0 onwards, this feature is also available for parameter feeds listing EPM parameters. In the *Data* pane, select *Feeds* under *All available data*. Expand *Parameter feed* and feed *Indices* to a chosen component.
 
      1. In the *Parameter Feed* window, select the checkboxes in front of the parameters you wish to include.
 
-        Example: Temperature Overview > Temperature (Temperature Overview)
-
      1. Available indices will appear under *Indices*. Select the checkboxes in front of the indices you wish to include.
 
-        These indices will now also be fed to your previously selected component.
+        These indices can now also be fed to any component that supports the same type of data.
 
         Example:
 
@@ -45,7 +40,7 @@ To configure this component:
    - *Feed defaults*: Allows you to specify a default value. This is the value that will be applied in the feed when the dashboard is opened, unless a custom URL is used specifying a different value.
 
      > [!NOTE]
-     > From DataMiner 10.2.12/10.3.0 onwards, parameter feeds that list EPM parameters also allow the configuration of default filters that will preselect certain items in the parameter feed. To do so, select the parameter feed and go to the *Component* > *Settings* tab, expand *Feed defaults*, and select parameters in the drop-down list.
+     > From DataMiner 10.2.12/10.3.0 onwards, parameter feeds that list EPM parameters also allow the configuration of default filters that will preselect certain parameters in the parameter feed.
 
    - *Auto-select number of indices*: Available up to DataMiner 10.0.12. To automatically include a specific number of indices when at least one element and one parameter have been selected in the component, specify the number in this box. If the number of indices specified is greater than the number of indices that are being displayed, the indices that are not shown will be selected in memory.
 
