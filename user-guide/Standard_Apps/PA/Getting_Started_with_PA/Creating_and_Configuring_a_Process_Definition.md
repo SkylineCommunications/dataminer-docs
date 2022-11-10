@@ -13,7 +13,7 @@ Create a process DOM definition, adding all parameters that are relevant for the
 
 The process DOM instance will be the only way to exchange data between activities. Therefore, make sure it contains all relevant field descriptors.
 
-The Process DOM definition needs to be used with the *process_automation* module ID.
+The process DOM definition needs to be used with the *process_automation* module ID.
 
 > [!NOTE]
 > By default, TTL on the *process_automation* module ID is set to 30 days. This means that process DOM instances will stay in the database for 30 days after the last update action.
@@ -24,9 +24,13 @@ The Process DOM definition needs to be used with the *process_automation* module
 
 1. In the *process definitions* tab, click *New* to start creating a new process definition.
 
-1. Specify a name for the process definition, select a Booking Application, and click *Create*. A new process definition will be created and automatically selected.
+1. Specify a name for the process definition, select a Booking Manager element, and click *Create*.
 
-1. Drag activities from the *Functions* sidebar to the workspace on the right. To connect the activities, drag your mouse from one blue dot on the side of an activity icon to another. To remove connections, right-click the line created between activities and select *Delete*.
+   A new process definition will be created and automatically selected.
+
+1. Drag activities from the *Functions* sidebar to the workspace on the right.
+
+1. Connect the activities by dragging from one blue dot on the edge of an activity icon to another. To remove connections, right-click the line created between activities and select *Delete*.
 
    Keep this in mind:
 
@@ -47,15 +51,15 @@ The Process DOM definition needs to be used with the *process_automation* module
 
 ## Creating and assigning profile instances
 
-1. Make sure there is a profile instance for the PA None Start Event. If this profile instance does not exist yet, create one in the [*Profiles* module](xref:The_Profiles_module) that applies to the PA None Start Event and with the following values :
+1. Make sure there is a profile instance for the PA None Start Event. If this profile instance does not exist yet, create one in the [*Profiles* module](xref:The_Profiles_module) that applies to the PA None Start Event, with the following values:
 
    - *PA Initial Process Instantiation*: Set this to *Disabled*.
-   - *PA Business Key*: Leave this as *Not configured*.
-   - *PA DOM Reference*: Leave this as *Not configured*.
+   - *PA Business Key*: Leave this set to *Not configured*.
+   - *PA DOM Reference*: Leave this set to *Not configured*.
 
      ![Profile_Instance](~/user-guide/images/Profile_Instance.png)
 
-   Alternatively, start the process with a *PA Timer Start Event* that can be used to generate new tokens periodically (see [Generate Tokens Periodically](xref:Pushing_Tokens_Into_A_Process#pushing-tokens-periodically)).
+   Alternatively, start the process with a *PA Timer Start Event* that can be used to generate new tokens periodically (see [Pushing tokens periodically](xref:Pushing_Tokens_Into_A_Process#pushing-tokens-periodically)).
 
 1. In the *Process Automation* app, select the newly created process definition.
 
@@ -71,25 +75,25 @@ The Process DOM definition needs to be used with the *process_automation* module
 
       ![Process_Definition_Configuration](~/user-guide/images/Process_Definition_Configuration.png)
 
-      For example, for a ‘Ping IP’ script task, the following input would be needed in the wizard:
+      For example, for a "Ping IP" script task, the following input would be needed in the wizard:
 
-      - **Profile Definition**: The profile definition set up during the creation of the “Ping IP” script task
+      - **Profile Definition**: The profile definition set up during the creation of the "Ping IP" script task.
 
-      - **Profile Instance**: An existing profile instance or the creation of a new instance
+      - **Profile Instance**: An existing or new profile instance.
 
-      - **Profile Parameters**: A list of profile parameters that are part of the profile definition
+      - **Profile Parameters**: A list of profile parameters that are part of the profile definition.
 
-        Parameters are used to define the input and output of the activity. Input parameters can contain hard-coded values. In that case, the same value will always be used. Alternatively, they can refer to a field descriptor from the Process DOM instances. In that case, different values need to be used for each process run.
+        Parameters are used to define the input and output of the activity. Input parameters can contain hard-coded values. In that case, the same value will always be used. Alternatively, they can refer to a field descriptor from the process DOM instances. In that case, different values need to be used for each process run.
 
-        1. Hard Coded value:
+        - Hard-coded value:
 
-           ![Hard Coded Value](~/user-guide/images/Hard_Coded_Value.png)
+          ![Hard-coded Value](~/user-guide/images/Hard_Coded_Value.png)
 
-        1. Dynamic value:
+        - Dynamic value:
 
-           ![Dynamic Value](~/user-guide/images/Dynamic_Value.png)
+          ![Dynamic Value](~/user-guide/images/Dynamic_Value.png)
 
-        For output parameters, it only makes sense to link them to the field descriptor of the Process DOM Instance.
+        Output parameters should be linked to the field descriptor of the process DOM instance.
 
 1. Click the *Confirm* button.
 
@@ -103,10 +107,10 @@ The Process DOM definition needs to be used with the *process_automation* module
 
    - **Process name**: Specify a name for the activation window.
 
-   - **Service info**: Identify the process and enable to push tokens into the process from custom code.
+   - **Service info**: This identifies the process and makes it possible to push tokens into the process from custom code. To configure this, there are two options:
 
-     - Select *Create New* to create a *Service info* with the same name as the activation window.
+     - Select *Create New* to create *Service info* with the same name as the activation window.
 
-     - Select an existing *Service info* in case it is required to create multiple activation windows and always link them to the same process identifier.
+     - Select an existing *Service info* item in case multiple activation windows need to be created that should always be linked to the same process identifier.
 
      ![Activation Window](~/user-guide/images/Activation_Window.png)
