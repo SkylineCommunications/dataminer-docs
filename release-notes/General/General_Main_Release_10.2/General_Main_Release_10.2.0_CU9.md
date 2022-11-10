@@ -159,6 +159,14 @@ When a NATS client had reconnected when DataMiner was running, up to now, the lo
 
 Also, extended logging will now be available when an asynchronous request times out.
 
+#### Elasticsearch: Sending a GetInfoMessage of type 'IndexingConfiguration' with an invalid DataMiner ID will now only return the Elasticsearch configuration of the local DMA [ID_34774]
+
+<!-- MR 10.1.0 [CU21]/10.2.0 [CU9] - FR 10.3.1 -->
+
+When a *GetInfoMessage* of type "IndexingConfiguration" was sent containing an invalid DataMiner ID, up to now, the Elasticsearch configuration of all DMAs would be returned.
+
+From now on, when the DataMiner ID in a *GetInfoMessage* request of type "IndexingConfiguration" is invalid, only the Elasticsearch configuration of the local DMA will be returned instead.
+
 ### Fixes
 
 #### Ticketing app: Problem with ticket domains incorrectly marked as masked [ID_33449]
