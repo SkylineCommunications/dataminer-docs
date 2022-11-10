@@ -148,3 +148,9 @@ During a Cassandra Cluster migration, SLDataGateway would leak memory due to pag
 <!-- MR 10.2.0 [CU9] - FR 10.3.1 -->
 
 When conditional coloring was applied on the first column of a table in which actions had been configured, in some cases, the contents of the colored cells would incorrectly not be visible.
+
+#### DataMiner upgrade: 'Webpages\\App' and 'Webpages\\Automation' folders would incorrectly not be cleaned up [ID_34844]
+
+<!-- MR 10.2.0 [CU9] - FR 10.3.1 -->
+
+After a DataMiner upgrade, files belonging to previous app versions would incorrectly not be removed from the `C:\Skyline DataMiner\Webpages\App` and `C:\Skyline DataMiner\Webpages\Automation` folders. From now on, those folders will be deleted before new versions of those apps are installed.
