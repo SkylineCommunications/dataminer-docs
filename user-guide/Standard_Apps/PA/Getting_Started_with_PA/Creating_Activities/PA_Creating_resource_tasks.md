@@ -247,7 +247,7 @@ uid: PA_Creating_resource_tasks
 
 1. Return to the *Automation* module and launch the *SRM_Setup* script:
 
-   1. Select the *SRM_Setup* script in the PA folder.
+   1. Select the *SRM_Setup* script.
 
    1. In the lower right corner, click *Execute*.
 

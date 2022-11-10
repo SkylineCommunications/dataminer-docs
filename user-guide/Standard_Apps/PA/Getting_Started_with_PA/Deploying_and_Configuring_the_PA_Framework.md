@@ -70,7 +70,7 @@ To install the PA framework:
 
 To set up the initial configuration of the PA framework:
 
-1. Go to *Automation* module in DataMiner Cube and select the *SRM_Setup* Automation script (located in the *PA* subfolder).
+1. Go to *Automation* module in DataMiner Cube and select the *SRM_Setup* Automation script.
 
 1. In the lower right corner, select *Execute*.
 
