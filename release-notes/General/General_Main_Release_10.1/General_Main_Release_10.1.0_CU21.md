@@ -72,7 +72,7 @@ From now on, when the DataMiner ID in a *GetInfoMessage* request of type "Indexi
 
 The Stream Viewer tree view now supports more levels. This will allow you to display more detailed information.
 
-For example, in case of HTTP communication, there will now be extra levels for IP addresses, groups, sessions, connections, requests/responses, parameters*, and even status codes and error codes.
+For example, in case of HTTP communication, there will now be extra levels for sessions, connections, requests/responses, parameters*, and even status codes and error codes.
 
 **only in case of a response*
 
