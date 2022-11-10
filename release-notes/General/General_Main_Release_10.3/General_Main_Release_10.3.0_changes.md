@@ -768,14 +768,6 @@ when a dashboard, a low-code app page or low-code app panel was initialized, in 
 
 When an interactive Automation script was executed in a web app, it would incorrectly not be possible to clear a selection box by selecting an empty option.
 
-#### 'One or more of the following modules are not licensed' error would incorrectly not list the unlicensed modules [ID_34407]
-
-<!-- MR 10.3.0 - FR 10.2.11 -->
-
-When a required software license cannot be found, a `One or more of the following modules are not licensed: ...` message will appear.
-
-In some cases, instead of listing the unlicensed modules, this message would incorrectly only mention "None".
-
 #### Web apps: Problem with email address boxes [ID_34421]
 
 <!-- MR 10.3.0 - FR 10.2.12 -->

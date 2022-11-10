@@ -191,6 +191,14 @@ If, in the Ticketing app, you tried to edit a ticket of a domain linked to an el
 
 In some rare cases, an error could occur in SLDataMiner when you edited an element.
 
+#### 'One or more of the following modules are not licensed' error would incorrectly not list the unlicensed modules [ID_34407]
+
+<!-- MR 10.1.0 [CU21] / 10.2.0 [CU9] - FR 10.2.11 -->
+
+When a required software license cannot be found, a `One or more of the following modules are not licensed: ...` message will appear.
+
+In some cases, instead of listing the unlicensed modules, this message would incorrectly only mention "None".
+
 #### Dashboards app: 'Line & area chart' component would display capacity usage incorrectly when bookings overlapped [ID_34465]
 
 <!-- MR 10.1.0 [CU21] / 10.2.0 [CU9] - FR 10.2.12 -->

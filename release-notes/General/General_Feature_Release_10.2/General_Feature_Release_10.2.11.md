@@ -364,7 +364,7 @@ In some cases, an error could occur when invalid parameters were passed to a das
 
 #### 'One or more of the following modules are not licensed' error would incorrectly not list the unlicensed modules [ID_34407]
 
-<!-- MR 10.3.0 - FR 10.2.11 -->
+<!-- MR 10.1.0 [CU21] / 10.2.0 [CU9] - FR 10.2.11 -->
 
 When a required software license cannot be found, a `One or more of the following modules are not licensed: ...` message will appear.
 
