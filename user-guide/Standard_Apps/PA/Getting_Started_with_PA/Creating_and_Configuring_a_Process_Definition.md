@@ -40,7 +40,7 @@ The Process DOM definition needs to be used with the *process_automation* module
 
 1. Save the service definition with the *Save All* button.
 
-1. Select each activity individually and give it a meaningful label using the *Edit Label* button in the bottom right corner.
+1. Select each activity individually and give it a meaningful label using the *Edit Label* button in the lower right corner.
 
    > [!NOTE]
    > Labels must be unique across the entire process definition.
@@ -99,14 +99,14 @@ The Process DOM definition needs to be used with the *process_automation* module
 
 1. Click the *Activate* button.
 
-1. On the first page of the *create activation window* wizard specify the following information:
+1. On the first page of the *create activation window* wizard, specify the following information:
 
-   - **Process name**: Specify a name for the activation window
+   - **Process name**: Specify a name for the activation window.
 
    - **Service info**: Identify the process and enable to push tokens into the process from custom code.
 
      - Select *Create New* to create a *Service info* with the same name as the activation window.
 
-     - Select an existing *Service info* from the drop-down list in case it is required to create multiple activation windows and always link them to the same process identifier.
+     - Select an existing *Service info* in case it is required to create multiple activation windows and always link them to the same process identifier.
 
      ![Activation Window](~/user-guide/images/Activation_Window.png)

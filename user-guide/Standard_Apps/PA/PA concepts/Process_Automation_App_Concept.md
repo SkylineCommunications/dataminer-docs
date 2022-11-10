@@ -6,7 +6,7 @@ uid: Process_Automation_App_Concept
 
 The [Process Automation app](xref:Process_Automation_App) is an application providing a high-level overview of all running and future processes and associated activation windows.
 
-It also provides an overview of all main tokens in the following state:
+It also provides an overview of all main tokens in the following states:
 
 - Currently being processed
 

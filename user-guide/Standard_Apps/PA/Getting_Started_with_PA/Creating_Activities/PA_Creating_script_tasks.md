@@ -11,7 +11,7 @@ uid: PA_Creating_script_tasks
 
    For example, for a “Ping IP” activity, an input parameter could be “IP Address”.
 
-   1. In the *Parameters* tab, create an input parameter by selecting *Add parameter* in the bottom left.
+   1. In the *Parameters* tab, create an input parameter by selecting *Add parameter* in the lower left corner.
 
    1. Specify the following information:
 
@@ -27,13 +27,13 @@ uid: PA_Creating_script_tasks
 
    For example, for a “Ping IP” activity, possible output parameters could be “Ping Result” and “RTT”.
 
-   1. In the *Parameters* tab, create an output parameter by selecting *Add parameter* in the bottom left.
+   1. In the *Parameters* tab, create an output parameter by selecting *Add parameter* in the lower left corner.
 
    1. Specify the following information:
 
       - **Name**: The name of the parameter, e.g. "Ping - Result".
 
-      - **Type**:
+      - **Type**: Depends on the parameter. For example:
 
         - Set to *Discrete*.
 
@@ -75,7 +75,7 @@ uid: PA_Creating_script_tasks
 
       - **Parameters**: Add your previously created input and output parameters.
 
-      - **Based on**: Choose *PA Script Task* in the drop-down menu.
+      - **Based on**: Select *PA Script Task*.
 
    1. Save all changes.
 
@@ -93,7 +93,7 @@ uid: PA_Creating_script_tasks
 
         *Examples*:
 
-        ```txt
+        ```csharp
         var totalPrice = helper.GetParameterValue<double>("PA BillingSystem Invoice Total Price");
 
         var name = helper.GetParameterValue<string>("PA BillingSystem Customer Name");
@@ -109,24 +109,30 @@ uid: PA_Creating_script_tasks
 
         *Examples*:
 
-        ```txt
+        ```csharp
         helper.UpdateField("PA BillingSystem Invoice Creation Date", DateTime.Now);
         helper.UpdateField("PA BillingSystem Invoice Status", 1);
         ```
 
       - Optionally transition the [DOM instance](xref:DomInstance) to a specific state:
 
-        `helper.TransitionState(transitionId)`;
+        ```csharp
+        helper.TransitionState(transitionId);
+        ```
 
-        In the example above, transitionId is a string representing the state transition defined in the [DOMBehaviorDefinition](xref:DomBehaviorDefinition).
+        In the example above, *transitionId* is a string representing the state transition defined in the [DOMBehaviorDefinition](xref:DomBehaviorDefinition).
 
       - Trigger the update of the DOM instance:
 
-        `helper.ReturnSuccess()`;
+        ```csharp
+        `helper.ReturnSuccess();
+        ```
 
       - Generate relevant log records to facilitate debugging:
 
-        `helper.Log("The DOM value was updated", PaLogLevel.Information)`;
+        ```csharp
+        helper.Log("The DOM value was updated", PaLogLevel.Information);
+        ```
 
    1. Add a *FunctionDve* script dummy and configure it with following protocol: *Skyline Process Automation.PA Script Task*, version *Production*.
 
@@ -137,9 +143,11 @@ uid: PA_Creating_script_tasks
 
 1. Link the script with the profile definition you created earlier.
 
-   1. Go to *Profiles* and select your previously created profile definition in the *Definitions* tab.
+   1. Go to the *Profiles* module and select your previously created profile definition in the *Definitions* tab.
 
-   1. In the *Scripts* section, click *Add*. Next to *Script*, select the script from the drop-down list and click *OK*.
+   1. In the *Scripts* section, click *Add*.
+
+   1. Next to *Script*, select the script and click *OK*.
 
    1. Save all changes.
 

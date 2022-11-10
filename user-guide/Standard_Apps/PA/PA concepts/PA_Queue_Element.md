@@ -10,9 +10,9 @@ The execution of activities is managed by queue elements.
 
 - **Script tasks** and **user tasks**: One single queue element can be used to support all script and user tasks.
 
-Goals of queue elements are:
+Queue elements are used for the following purposes:
 
-- Preventing a profuse amount of activities from running at the same time.
+- Preventing too many activities running at the same time.
 
 - Making sure that a resource is not concurrently used by multiple process instances associated with the same activation window.
 

@@ -10,6 +10,6 @@ When an activity is completed, it generates one single new token and sends it to
 
 There are two types of tokens:
 
-- **Main token**: A token pushed into a process
+- **Main token**: A token pushed into a process.
 
-- **Child token**: A token generated within a process when an activity completes and the queue responsible for the next activity needs to be notified
+- **Child token**: A token generated within a process when an activity is completed and the queue responsible for the next activity needs to be notified.

@@ -14,7 +14,7 @@ uid: PA_Creating_resource_tasks
 
    For example, for a “Ping IP” activity, an input parameter could be “IP Address”.
 
-   1. In the *Parameters* tab, create an input parameter by selecting *Add parameter* in the bottom left.
+   1. In the *Parameters* tab, create an input parameter by selecting *Add parameter* in the lower left corner.
 
    1. Specify the following information:
 
@@ -28,13 +28,13 @@ uid: PA_Creating_resource_tasks
 
    For example, for a “Ping IP” activity, possible output parameters could be “Ping Result” and “RTT”.
 
-   1. In the *Parameters* tab, create an output parameter by selecting *Add parameter* in the bottom left.
+   1. In the *Parameters* tab, create an output parameter by selecting *Add parameter* in the lower left corner.
 
    1. Specify the following information:
 
       - **Name**: The name of the parameter, e.g. "Ping - Result".
 
-      - **Type**:
+      - **Type**: Depends on the parameter. For example:
 
         - Set to *Discrete*.
 
@@ -42,7 +42,7 @@ uid: PA_Creating_resource_tasks
 
              - Value: 0.000000
 
-             - Display value: Failed  
+             - Display value: Failed
 
              - Value: 1.000000
 
@@ -101,8 +101,8 @@ uid: PA_Creating_resource_tasks
 
       ```xml
       <Interfaces> 
-      <Interface id="1" name="IN” type="in”/ >
-      <Interface id="2" name="OUT” type="out"/ >
+         <Interface id="1" name="IN" type="in"/ >
+         <Interface id="2" name="OUT" type="out"/ >
       </Interfaces>
       ```
 
@@ -114,18 +114,19 @@ uid: PA_Creating_resource_tasks
       <Function id=".." name="Ping IP" maxInstances="..." profile="bd625869-cb7a-472c-b834-bd4cba993705"> 
       ```
 
-   1. Set the function type to "ResourceTask"
+   1. Set the function type to `ResourceTask`.
 
       ```xml
       <Function id=".." name="..." maxInstances="..." profile="..."> 
-      <FunctionType>ResourceTask</FunctionType>
+         <FunctionType>ResourceTask</FunctionType>
+         ...
       </Function>
       ```
 
       This could e.g. result in the following *function.xml* getting generated for the “Ping IP” resource task:
 
       ```xml
-      <Functions xmlns=http://www.skyline.be/config/functions">
+      <Functions xmlns="http://www.skyline.be/config/functions">
         <Version>1.0.0.1</Version>
         <Protocol>
           <Name>Generic Ping</Name>
@@ -150,6 +151,9 @@ uid: PA_Creating_resource_tasks
 
 1. In the *Protocols & Templates* module, import the function into your DataMiner System and activate it.
 
+   > [!TIP]
+   > See also: [Uploading a functions XML file in DataMiner Cube](xref:Functions_XML_files#uploading-a-functions-xml-file-in-dataminer-cube)
+
    ![Functions_File](~/user-guide/images/Functions_File.png)
 
 1. Create an Automation script based on the *PA_ProfileLoadDomTemplate* script, which is added to the DataMiner System when Process Automation is deployed. In the script:
@@ -158,7 +162,7 @@ uid: PA_Creating_resource_tasks
 
    1. Use the helper to retrieve the input arguments, based on profile parameter names created earlier.
 
-   1. Implement the resource task logic. This is the code that will trigger some action in the underlying element/function.
+   1. Implement the resource task logic. This is the code that will trigger an action in the underlying element/function.
 
    1. Use the helper to output relevant results, based on profile parameter names created earlier.
 
@@ -199,11 +203,11 @@ uid: PA_Creating_resource_tasks
       }
       ```
 
-1. Link the script with the profile definition you created earlier, using the *Scripts* section of the profile definition
+1. Link the script with the profile definition you created earlier, using the *Scripts* section of the profile definition:
 
    1. In the *Profiles* module, select your previously created profile definition in the *Definitions* tab.
 
-   1. In the *Scripts* section, click *Add*. Next to *Script*, select the script from the drop-down list and click *OK*.
+   1. In the *Scripts* section, click *Add*. Next to *Script*, select the script and click *OK*.
 
    1. Save all changes.
 
@@ -213,11 +217,11 @@ uid: PA_Creating_resource_tasks
 
    1. Go to *Resources*.
 
-   1. Click *global* in the overview on the left and select *Add*.
+   1. Select *global* in the overview on the left and select *Add*.
 
-   1. Give your pool a name, e.g. PING IP.
+   1. Give your pool a name, e.g. "PING IP".
 
-   1. Click your newly created resource pool in the overview on the left, and go to the *Properties* tab. Next add the following pool property:
+   1. Select your newly created resource pool in the overview on the left, go to the *Properties* tab, and add the following pool property:
 
       **Name**: Process Automation
 
@@ -225,20 +229,28 @@ uid: PA_Creating_resource_tasks
 
       ![PING IP Resources](~/user-guide/images/PING_IP_Resources.png)
 
-1. Generate a resource from the element created earlier, using the previously defined function. 
+1. Generate a resource from the element created earlier, using the previously defined function.
 
    1. Go to the *Resources* tab and click *Add resource*.
 
    1. In the *Device* tab, specify the following information:
 
-      - **Function**: Choose your previously defined function, e.g. PING IP.
+      - **Function**: Choose your previously defined function, e.g. "PING IP".
 
-      - **Link element**: Specify the element you created earlier, e.g. PING 01
+      - **Link element**: Specify the element you created earlier, e.g. "PING 01".
 
       - **Instance**: <Element>
 
-   1. Click the *Save* button in the bottom right corner.
+   1. Click the *Save* button in the lower right corner.
 
    ![Add resource](~/user-guide/images/Resources.png)
 
-1. Return to *Automation* and launch the *SRM_Setup* script. To do so, double-click *SRM_Setup* and then select *Execute*. This script requires one input argument, *Booking Manager Element Info*. For this input argument, specify the value "{}". Click *Execute now*.
+1. Return to the *Automation* module and launch the *SRM_Setup* script:
+
+   1. Select the *SRM_Setup* script in the PA folder.
+
+   1. In the lower right corner, click *Execute*.
+
+   1. In the *Booking Manager Element Info* box, specify the value `{}`.
+
+   1. Click *Execute now*.

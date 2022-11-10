@@ -27,7 +27,7 @@ Each process definition needs to contain one or more end events to indicate the 
 
 ### Activation window
 
-For a process definition to be usable, it must be instantiated, which means that an activation window must be created, defining when the process can be used.
+For a process definition to be usable, it must be instantiated. This means that an activation window must be created, defining when the process can be used.
 
 The activation window defines the start and stop time of the time period in which the process can be used. It also allows you to define a process name, which can be used by external triggers for the execution of a process.
 
@@ -36,7 +36,7 @@ The activation window defines the start and stop time of the time period in whic
 
 ### Gateway
 
-For more complex processes, such as non-linear processes, gateways can be used. These allow you to create multiple branches or paths in a process, and to decide which path(s) to take based on the result of previous activities.
+For more complex processes, such as non-linear processes, gateways can be used. These allow you to create multiple branches or paths in a process and to decide which path(s) to take based on the result of previous activities.
 
 The behavior of a gateway is defined by so-called routing rules.
 

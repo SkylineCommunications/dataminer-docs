@@ -10,7 +10,8 @@ Before you move on to the PA development and deployment, make sure your DataMine
 
 Your DataMiner System will also need to use an [Elasticsearch database](xref:Elasticsearch_database).
 
-For more information on how to install Elasticsearch on your DMA, click [here](xref:Installing_Elasticsearch_via_DataMiner).
+> [!TIP]
+> For more information on how to install Elasticsearch on your DMA, click [here](xref:Installing_Elasticsearch_via_DataMiner).
 
 ## Enabling DOM
 
@@ -18,14 +19,14 @@ To make sure DOM data are available in dashboards and applications, make sure th
 
 ## Installing the SRM framework
 
-Process Automation requires the creation of a [booking manager element](xref:SolSRM) named *Process Automation instances*, configured with the *Process Automation virtual platform*. To allow us to create this element, we first need to install the SRM framework on the DataMiner System.
+Process Automation requires the creation of a [Booking Manager element](xref:SolSRM) named *Process Automation instances*, configured with the *Process Automation* virtual platform. To allow us to create this element, we first need to install the SRM framework on the DataMiner System.
 
 > [!NOTE]
 > In case SRM is already installed on your system, the procedure below is not required to proceed.
 
-To install the SRM Framework:
+To install the SRM framework:
 
-1. Ensure that a DataMiner version is installed that is compatible with the SRM Framework, and the platform meets the hardware requirements.
+1. Ensure that a DataMiner version is installed that is compatible with the SRM framework, and the platform meets the hardware requirements.
 
    - Make sure the DataMiner System uses an Elasticsearch database.
 
@@ -67,11 +68,15 @@ To install the PA framework:
 
 ## Configuring the PA framework
 
-To set up the initial configuration of the PA framework go to *Automation* and run the *SRM_Setup* Automation script.
+To set up the initial configuration of the PA framework:
 
-To do so, double-click *SRM_Setup* and then select *Execute*.
+1. Go to *Automation* module in DataMiner Cube and select the *SRM_Setup* Automation script (located in the *PA* subfolder).
 
-This script requires one input argument: *Booking Manager Element Info*. For this input argument, specify the value "{}". Click *Execute now*.
+1. In the lower right corner, select *Execute*.
+
+1. In the *Booking Manager Element Info* box, specify the value `{}`.
+
+1. Click *Execute now*.
 
 ![SRM Setup](~/user-guide/images/SRM_setup.png)
 
@@ -84,19 +89,22 @@ The script will configure the framework and create all relevant components to ge
 
 If you already have an existing version of the PA framework installed, update it to the latest version available on DataMiner Dojo.
 
-1. If you upgraded from a PA Framework version older than 1.3.0 (the current officially supported minimum version) to version 1.3.0 or later, run the *PA_MigratePoolsAndQueues* script.
+1. If you upgraded from a PA framework version older than 1.3.0 (the current officially supported minimum version) to version 1.3.0 or later, run the *PA_MigratePoolsAndQueues* script.
 
    > [!WARNING]
-   > It is essential you run this script first before moving on to the next steps.
+   > It is essential that you run this script first before moving on to the next steps.
 
    > [!TIP]
    > See also: [Running Automation scripts](xref:Running_Automation_scripts)
 
-   Also make sure that the files *ProcessAutomation.dll* and *SLSRMLibrary.dll* cannot be found in the following sections of the Skyline DataMiner folder: `c:\Skyline DataMiner\Files\DLLImport\` and `c:\Skyline DataMiner\ProtocolScripts\DLLImport\`.
+   Also make sure that the files *ProcessAutomation.dll* and *SLSRMLibrary.dll* are not present in the following subfolders of the Skyline DataMiner folder: `C:\Skyline DataMiner\Files\DLLImport\` and `C:\Skyline DataMiner\ProtocolScripts\DLLImport\`.
 
-    If these files *are* present, delete them and restart the DMAs involved.
+   If these files *are* present, delete them, and restart the DMAs involved.
 
-1. Check the Process Automation release notes to see which minimum DataMiner version is required.
+1. Check the Process Automation release notes to see which minimum DataMiner version is required and make sure this version is installed.
+
+   > [!TIP]
+   > See also: [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent)
 
 1. Download the latest PA package from [DataMiner Dojo](https://community.dataminer.services/downloads/).
 

@@ -23,25 +23,25 @@ The *Process Automation* app (or PA app) is available in the *Applications* sect
 
 ### Process definitions
 
-This is the first tab you see when opening the PA app. It displays an overview of all process definitions and allows you to select existing process definitions to expand the workspace on the right.
+This is the first tab you see when opening the PA app. It displays an overview of all process definitions. When you select a process definition in the list, detailed information is shown in the workspace on the right.
 
-On the top of the page the following buttons are displayed:
+At the top of the page, the following buttons are displayed:
 
 - **New**: Allows you to create a new process definition.
 
-- **Configure**: Allows you to open the *process definition configuration* wizard. Here you can configure each node in the process definition and provide information on the profile instance selection, profile instance creating, and the link with DOM field descriptors.
+- **Configure**: Opens the *process definition configuration* wizard. Here you can configure each node in the process definition and provide information on the profile instance selection, profile instance creation, and the link with DOM field descriptors.
 
-- **Activate**: Allows you to open the *create activation window* wizard. Here you can provide all required information to create an activation window.
+- **Activate**: Opens the *create activation window* wizard. Here you can provide all required information to create an activation window.
 
 - **Delete**: Allows you to delete the selected process definition.
 
-In the bottom right corner the following buttons are displayed:
+In the lower right corner, the following buttons are displayed:
 
-- **Edit label**: Only available when selecting an activity. Click this button to edit the label displayed underneath the activity.
+- **Edit Label**: Only available when selecting an activity. Click this button to edit the label displayed underneath the activity.
 
-- **Save all**: Only available after making changes in your workspace. Click to save all changes.
+- **Save All**: Only available after making changes in your workspace. Click to save all changes.
 
-- **Discard all**: Only available after making changes in your workspace. Click to reject all changes.
+- **Discard All**: Only available after making changes in your workspace. Click to reject all changes.
 
 ### Processes
 
@@ -59,7 +59,7 @@ This tab provides an overview of all processes and the following related informa
 
 - **Status (Active/Not Active)**: Indicates when there is an active activation window.
 
-- **Start Event Type**: Indicates whether there is a *None Event* or *Timer Start Event*.
+- **Start Event Type**: Indicates whether the start event is a *None Event* or *Timer Start Event*.
 
 - **Process Activity**: Set to *Idle* or *Busy*. Indicates whether a process is busy processing tokens.
 
