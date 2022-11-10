@@ -350,11 +350,11 @@ From now on, when you add a protocol filter to a component without specifying an
 
 A new *IsActive* column has been added to *Get alarms* data source. This column will be set to true when the alarm is an active alarm.
 
-#### GQI now supports multiple sort in the Table component [ID_34526]
+#### Dashboards app / Low-Code Apps: Improved multiple sort in the Table component [ID_34526]
 
 <!-- MR 10.3.0 - FR 10.2.12 -->
 
-When, in the Dashboards app or a web app, you apply multiple sort orders in a *Table* component, multiple sort operators will now be appended to the GQI query that is feeding data to the component.
+When, in the Dashboards app or a low-code app, you apply multiple sort orders in a *Table* component, multiple sort operators will now be appended to the GQI query that feeds data to the component. This way sorting is done server-side, which will improve performance.
 
 #### Dashboards app: Parameter feeds that list EPM parameters now allow items to be preselected [ID_34554] [ID_34588]
 

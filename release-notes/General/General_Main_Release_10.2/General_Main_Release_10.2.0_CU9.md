@@ -16,14 +16,14 @@ uid: General_Main_Release_10.2.0_CU9
 
 A number of security enhancements have been made.
 
-#### Failover: Decommissioning a Failover setup while the server hosting the offline agent is unavailable [ID_33827]
+#### Failover: Decommissioning a Failover setup while the server hosting the offline Agent is unavailable [ID_33827]
 
 <!-- MR 10.2.0 [CU9] - FR 10.2.12 -->
 
-It is now possible to decommission a Failover setup while the server hosting the offline agent is unavailable.
+It is now possible to decommission a Failover setup while the server hosting the offline Agent is unavailable.
 
 > [!NOTE]
-> When you try to decommission a Failover setup while the offline agent is missing, in Cube's *Failover Config* window, a warning will be displayed.
+> When you try to decommission a Failover setup while the offline Agent is missing, in Cube's *Failover Config* window, a warning will be displayed.
 
 #### SLReset will no longer remove VersionHistory.txt and the HTTPS configuration [ID_34194]
 
@@ -112,11 +112,11 @@ SLLogCollector packages will now also include the following additional files con
 | Logs\Network Information\route.exe print.txt              | The output of a `route print` command.              |
 | Logs\Network Information\netsh.exe winhttp show proxy.txt | The output of a `netsh winhttp show proxy` command. |
 
-#### Failover: A reverse proxy will now be used to re-route HTTP traffic from the offline agent to the online agent [ID_34606]
+#### Failover: A reverse proxy will now be used to re-route HTTP traffic from the offline Agent to the online Agent [ID_34606]
 
 <!-- MR 10.2.0 [CU9] - FR 10.2.12 -->
 
-In a Failover setup, a reverse proxy will now be hosted in IIS in order to re-route HTTP traffic from the offline agent to the online agent. After a switch has occurred, the proxy will be disabled in the online agent and enabled on the offline agent.
+In a Failover setup, a reverse proxy will now be hosted in IIS in order to re-route HTTP traffic from the offline Agent to the online Agent. After a switch has occurred, the proxy will be disabled in the online Agent and enabled on the offline Agent.
 
 This feature requires the Application Request Routing (ARR) module to be installed on IIS. When you upgrade to version 10.2.12 / 10.2.0 [CU9], it will automatically be installed if it has not yet been installed earlier.
 
@@ -149,7 +149,7 @@ A number of enhancements have been made with regard to querying trend data again
 
 <!-- MR 10.2.0 [CU9] - FR 10.2.12 -->
 
-Up to now, the *SLReset.exe* option *-cleanclustereddatabase* would remove all keyspaces and indices from the CassandraCluster and ElasticSearch databases. From now on, this option will only remove the tables, keyspaces and indices defined in the *db.xml* file from the databases (clusters as well as single-node Cassandra databases on remote machines).
+Up to now, the *SLReset.exe* option *-cleanclustereddatabases* would remove all keyspaces and indices from the Cassandra cluster and Elasticsearch databases. From now on, this option will only remove the tables, keyspaces and indices defined in the *DB.xml* file from the databases (clusters as well as single-node Cassandra databases on remote machines).
 
 #### SLMessageBroker log file entries will now mention the NATS server to which the NATS client is connected [ID_34719]
 
@@ -158,6 +158,14 @@ Up to now, the *SLReset.exe* option *-cleanclustereddatabase* would remove all k
 When a NATS client had reconnected when DataMiner was running, up to now, the log files would not specify the NATS server that client had reconnected to. From now on, SLMessageBroker log file entries will contain the *connectedUrl* and state information.
 
 Also, extended logging will now be available when an asynchronous request times out.
+
+#### Elasticsearch: Sending a GetInfoMessage of type 'IndexingConfiguration' with an invalid DataMiner ID will now only return the Elasticsearch configuration of the local DMA [ID_34774]
+
+<!-- MR 10.1.0 [CU21]/10.2.0 [CU9] - FR 10.3.1 -->
+
+When a *GetInfoMessage* of type "IndexingConfiguration" was sent containing an invalid DataMiner ID, up to now, the Elasticsearch configuration of all DMAs would be returned.
+
+From now on, when the DataMiner ID in a *GetInfoMessage* request of type "IndexingConfiguration" is invalid, only the Elasticsearch configuration of the local DMA will be returned instead.
 
 ### Fixes
 
@@ -349,6 +357,12 @@ When you hovered over a trend graph while the legend was disabled, the trend val
 
 When a large PDF file (e.g. a PDF report) was created in a web app, in some cases, an error could occur.
 
+#### DataMiner Cube - Visual Overview: Tooltip of an element in a service chain would incorrectly not show values of node properties [ID_34664]
+
+<!-- MR 10.2.0 [CU9] - FR 10.3.1 -->
+
+When, in a service chain within a service context, an element shape was linked to a node property via a shape data field of type *Tooltip*, then the tooltip of that shape would incorrectly not show the value of that node property when using either a `[Service definition properties]` or a `[Service definition property:<property name>]` placeholder.
+
 #### nats-account-server service could silently fail [ID_34698]
 
 <!-- MR 10.2.0 [CU9] - FR 10.2.12 -->
@@ -402,14 +416,32 @@ As this error was caused by an internal lookup issue that had no effect whatsoev
 
 When, in the Alarm Console, you double-clicked a suggestion or alarm event created by SLAnalytics for a table parameter with advanced naming, in some cases, the trend graph would incorrectly show "no data".
 
-#### SLProtocol could leak memory when a protocol with HTTP connections sent an HTTP request with a header [ID_34775]
+#### Dashboards app - Time range feed: Quick pick buttons would not be displayed in the correct order [ID_34759]
 
-<!-- MR 10.1.0 [CU21] / 10.2.0 [CU9] - FR 10.2.12 [CU0] -->
+<!-- MR 10.1.0 [CU21] / 10.2.0 [CU9] - FR 10.3.1 -->
 
-When a protocol with HTTP connections sent an HTTP request with a header, SLProtocol could leak memory.
+When a time range feed was configured to show quick pick buttons, those buttons would not be displayed in the correct order. From now on, quick pick buttons will be displayed in chronological order.
 
 #### An error could occur in the hosting process when a connection had been closed [ID_34786]
 
 <!-- MR 10.1.0 [CU21] / 10.2.0 [CU9] - FR 10.2.12 -->
 
 When a connection had been closed, in some cases, an error could occur in the hosting process.
+
+#### GQI: Filter operations would not be forwarded to the correct query when multiple data sources were joined [ID_34819]
+
+<!-- MR 10.2.0 [CU9] - FR 10.3.1 -->
+
+When multiple data sources were joined, in some cases, filter operations would not be forwarded to the correct query.
+
+#### Memory leak in SLDataGateway during a Cassandra Cluster migration [ID_34829]
+
+<!-- MR 10.1.0 [CU21] / 10.2.0 [CU9] - FR 10.3.1 -->
+
+During a Cassandra Cluster migration, SLDataGateway would leak memory due to paging handlers not being cleaned up correctly.
+
+#### Dashboards app & low-code apps: Contents of colored table cells would incorrectly not be visible when conditional coloring was applied and actions had been configured [ID_34842]
+
+<!-- MR 10.2.0 [CU9] - FR 10.3.1 -->
+
+When conditional coloring was applied on the first column of a table in which actions had been configured, in some cases, the contents of the colored cells would incorrectly not be visible.

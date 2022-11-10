@@ -12,15 +12,26 @@ uid: Cube_Feature_Release_10.2.12
 
 ## Highlights
 
-*No highlights have been selected for this release yet*
-
-## Other features
-
 #### Trending: When trending a parameter, related parameters can now be added through light bulb icon [ID_34432]
 
 <!-- MR 10.3.0 - FR 10.2.12 -->
 
 When trending a parameter, you can now add related parameters by clicking the light bulb icon in the top-right corner of the trend. In doing so, you will get an overview of suggested parameters that are related to the currently displayed parameter trend.
+
+#### Automation: No more 'Abort' buttons in dialog boxes of interactive Automation scripts [ID_34559]
+
+<!-- MR 10.3.0 - FR 10.2.12 -->
+
+In dialog boxes of an interactive Automation script, up to now, you were able to abort the script by clicking the *Abort* button. From now on, this button will no longer be available. Instead, you can now do the following to abort a script when a dialog box has the focus:
+
+- close the dialog box by clicking the *X* in the top-right corner, or
+
+- press ALT+F4.
+
+> [!IMPORTANT]
+> When an interactive Automation script was launched from a web app, then you will have to press ESC instead of ALT+F4 to close a dialog box and abort the script. Pressing ALT+F4 would close the browser, not just the dialog box.
+
+## Other features
 
 #### Visual Overview - ListView component : Custom property columns 'Reservation.Start' and 'Reservation.End' can now be configured to convert date/time values to the time zone specified in the navigation panel of the bookings timeline [ID_34512]
 
@@ -39,19 +50,6 @@ If you specify the new *includeAllCustomProperties* option, the server-side sear
 For more information on the available search options, see [Setting the indexing options for the server-side search](xref:Setting_the_indexing_options_for_the_server-side_search).
 
 Also, from now on, DataMiner Cube will call the server-side search engine when you enter a numeric search string like "1234". Up to now, when you entered a numeric search string, DataMiner Cube would perform a client-side search that would only return views of which the ID matched the search string.
-
-#### Automation: No more 'Abort' buttons in dialog boxes of interactive Automation scripts [ID_34559]
-
-<!-- MR 10.3.0 - FR 10.2.12 -->
-
-In dialog boxes of an interactive Automation script, up to now, you were able to abort the script by clicking the *Abort* button. From now on, this button will no longer be available. Instead, you can now do the following to abort a script when a dialog box has the focus:
-
-- close the dialog box by clicking the *X* in the top-right corner, or
-
-- press ALT+F4.
-
-> [!IMPORTANT]
-> When an interactive Automation script was launched from a web app, then you will have to press ESC instead of ALT+F4 to close a dialog box and abort the script. Pressing ALT+F4 would close the browser, not just the dialog box.
 
 ## Changes
 

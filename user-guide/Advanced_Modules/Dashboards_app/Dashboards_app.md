@@ -20,7 +20,9 @@ In this section:
 
 - [Using dashboard feeds](xref:Using_dashboard_feeds)
 
-- [Generating a report based on a dashboard](xref:Generating_a_report_based_on_a_dashboard)
+- [Sharing a dashboard](xref:Sharing_a_dashboard)
+
+- [Generating a report based on a dashboard](xref:Generating_a_report_based_on_a_dashboard_Cube)
 
 - [Customizing the Dashboards app](xref:Customizing_the_Dashboards_app)
 
@@ -28,4 +30,3 @@ In this section:
 
 > [!NOTE]
 > A legacy DMS Dashboards module also exists. For more information, see [DMS Dashboards](xref:dashboards).
->

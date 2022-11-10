@@ -14,18 +14,16 @@ uid: General_Feature_Release_10.2.12
 
 ## Highlights
 
-*No highlights have been selected for this release yet*
-
-## Other features
-
-#### Failover: Decommissioning a Failover setup while the server hosting the offline agent is unavailable [ID_33827]
+#### Failover: Decommissioning a Failover setup while the server hosting the offline Agent is unavailable [ID_33827]
 
 <!-- MR 10.2.0 [CU9] - FR 10.2.12 -->
 
-It is now possible to decommission a Failover setup while the server hosting the offline agent is unavailable.
+It is now possible to decommission a Failover setup while the server hosting the offline Agent is unavailable.
 
 > [!NOTE]
 > When you try to decommission a Failover setup while the offline agent is missing, in Cube's *Failover Config* window, a warning will be displayed.
+
+## Other features
 
 #### Dashboards app: Parameter feeds that list EPM parameters now allow items to be preselected [ID_34554] [ID_34588]
 
@@ -33,11 +31,11 @@ It is now possible to decommission a Failover setup while the server hosting the
 
 When an EPM feed is used to feed EPM identifiers to a parameter feed, it is now possible to configure filters that will preselect certain items in the parameter feed.
 
-#### Failover: A reverse proxy will now be used to re-route HTTP traffic from the offline agent to the online agent [ID_34606]
+#### Failover: A reverse proxy will now be used to re-route HTTP traffic from the offline Agent to the online Agent [ID_34606]
 
 <!-- MR 10.2.0 [CU9] - FR 10.2.12 -->
 
-In a Failover setup, a reverse proxy will now be hosted in IIS in order to re-route HTTP traffic from the offline agent to the online agent. After a switch has occurred, the proxy will be disabled in the online agent and enabled on the offline agent.
+In a Failover setup, a reverse proxy will now be hosted in IIS in order to re-route HTTP traffic from the offline Agent to the online Agent. After a switch has occurred, the proxy will be disabled in the online Agent and enabled on the offline Agent.
 
 This feature requires the Application Request Routing (ARR) module to be installed on IIS. When you upgrade to version 10.2.12 / 10.2.0 [CU9], it will automatically be installed if it has not yet been installed earlier.
 
@@ -123,11 +121,11 @@ From now on, when the *bruteForceToOffline* option is specified in the *DMS.xml*
 
 When a parameter feed is linked to a *Line & area chart" component, from now on, non-trended parameters will now automatically be removed from the chart.
 
-#### GQI now supports multiple sort in the Table component [ID_34526]
+#### Dashboards app / Low-Code Apps: Improved multiple sort in the Table component [ID_34526]
 
 <!-- MR 10.3.0 - FR 10.2.12 -->
 
-When, in the Dashboards app or a web app, you apply multiple sort orders in a *Table* component, multiple sort operators will now be appended to the GQI query that is feeding data to the component.
+When, in the Dashboards app or a low-code app, you apply multiple sort orders in a *Table* component, multiple sort operators will now be appended to the GQI query that feeds data to the component. This way sorting is done server-side, which will improve performance.
 
 #### QA Device Simulator renamed to Skyline Device Simulator [ID_34530] [ID_34555]
 
@@ -247,7 +245,7 @@ The *PDF* and *Share* option in the Dashboards app are now no longer visible in 
 
 <!-- MR 10.2.0 [CU9] - FR 10.2.12 -->
 
-Up to now, the *SLReset.exe* option *-cleanclustereddatabase* would remove all keyspaces and indices from the CassandraCluster and ElasticSearch databases. From now on, this option will only remove the tables, keyspaces and indices defined in the *db.xml* file from the databases (clusters as well as single-node Cassandra databases on remote machines).
+Up to now, the *SLReset.exe* option *-cleanclustereddatabases* would remove all keyspaces and indices from the Cassandra cluster and Elasticsearch databases. From now on, this option will only remove the tables, keyspaces and indices defined in the *DB.xml* file from the databases (clusters as well as single-node Cassandra databases on remote machines).
 
 #### SLMessageBroker log file entries will now mention the NATS server to which the NATS client is connected [ID_34719]
 
@@ -489,12 +487,6 @@ When you tried to request data from a simulation that was built with AutoBuildVe
 
 > [!CAUTION]
 > This tool is provided "As Is" with no representation or warranty whatsoever. Skyline Communications will not provide any maintenance or support for this tool.
-
-#### SLProtocol could leak memory when a protocol with HTTP connections sent an HTTP request with a header [ID_34775]
-
-<!-- MR 10.1.0 [CU21] / 10.2.0 [CU9] - FR 10.2.12 [CU0] -->
-
-When a protocol with HTTP connections sent an HTTP request with a header, SLProtocol could leak memory.
 
 #### An error could occur in the hosting process when a connection had been closed [ID_34786]
 

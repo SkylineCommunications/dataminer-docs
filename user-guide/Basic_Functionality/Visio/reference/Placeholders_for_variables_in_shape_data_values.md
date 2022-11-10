@@ -4,6 +4,9 @@ uid: Placeholders_for_variables_in_shape_data_values
 
 # Placeholders for variables in shape data values
 
+> [!TIP]
+> For examples, see [Ziine](xref:ZiineDemoSystem) > *Visual Overview Design Examples* view > *Placeholders* page.
+
 ## Info keywords
 
 A number of keywords can be used in **Info** shape data fields to display information about a shape. These keywords, wrapped in square brackets, can also be used as placeholders in the value of shape data fields. For example:
