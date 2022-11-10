@@ -13,7 +13,7 @@ This installer can be used to install Cassandra 3.11.8 on Windows. This version 
 
 The installer includes AdoptOpenJDK 8 as well as DevCenter. It sets up a Cassandra service and creates a firewall rule named CassandraCluster to allow TCP traffic on ports 7000 and 9042.
 
-You can download this tool from [DataMiner Dojo](https://community.dataminer.services/download/standalone-cassandra-cluster-installer/).
+> You can download this tool from [DataMiner Dojo](https://community.dataminer.services/download/standalone-cassandra-cluster-installer/).
 
 ## Requirements
 

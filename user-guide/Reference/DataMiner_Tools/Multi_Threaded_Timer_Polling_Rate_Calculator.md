@@ -8,7 +8,7 @@ uid: Multi_Threaded_Timer_Polling_Rate_Calculator
 
 When a multi-threaded timer is configured in a protocol, sometimes the *pollingrate* attribute is needed. Calculating the correct values for this attribute can be a bit cumbersome, as many different settings need to be taken into consideration. The PollingRate Calculator tool will make this job easier.
 
-This tool is available as a spreadsheet document, which you can download from [DataMiner Dojo](https://community.dataminer.services/download/pollingrate-calculator/).
+> This tool is available as a spreadsheet document, which you can download from [DataMiner Dojo](https://community.dataminer.services/download/pollingrate-calculator/).
 
 ## Usage
 
