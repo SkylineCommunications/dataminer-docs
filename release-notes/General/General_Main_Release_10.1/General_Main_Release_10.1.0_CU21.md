@@ -2,10 +2,10 @@
 uid: General_Main_Release_10.1.0_CU21
 ---
 
-# General Main Release 10.1.0 CU21 – Preview
+# General Main Release 10.1.0 CU21
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 > For information on how to upgrade DataMiner, see [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent).
@@ -57,6 +57,24 @@ From now on, when an HTTP element receives an ERROR_WINHTTP_SECURE_FAILURE after
 <!-- Main Release Version 10.1.0 [CU21]/10.2.0 [CU9] - Feature Release Version TBD -->
 
 A number of enhancements have been made with regard to querying trend data against a Cassandra database.
+
+#### Elasticsearch: Sending a GetInfoMessage of type 'IndexingConfiguration' with an invalid DataMiner ID will now only return the Elasticsearch configuration of the local DMA [ID_34774]
+
+<!-- MR 10.1.0 [CU21]/10.2.0 [CU9] - FR 10.3.1 -->
+
+When a *GetInfoMessage* of type "IndexingConfiguration" was sent containing an invalid DataMiner ID, up to now, the Elasticsearch configuration of all DMAs would be returned.
+
+From now on, when the DataMiner ID in a *GetInfoMessage* request of type "IndexingConfiguration" is invalid, only the Elasticsearch configuration of the local DMA will be returned instead.
+
+#### DataMiner Cube: Stream Viewer enhancements [ID_34837] [ID_34838]
+
+<!-- MR 10.1.0 [CU21] / 10.2.0 [CU9] - FR 10.3.1 -->
+
+The Stream Viewer tree view now supports more levels. This will allow you to display more detailed information.
+
+For example, in case of HTTP communication, there will now be extra levels for sessions, connections, requests/responses, parameters*, and even status codes and error codes.
+
+**only in case of a response*
 
 ### Fixes
 
@@ -190,8 +208,20 @@ Recursion detected in the mediation links tree
 
 As this error was caused by an internal lookup issue that had no effect whatsoever with regard to mediation layer functionality, from now on, it will no longer be logged.
 
+#### Dashboards app - Time range feed: Quick pick buttons would not be displayed in the correct order [ID_34759]
+
+<!-- MR 10.1.0 [CU21] / 10.2.0 [CU9] - FR 10.3.1 -->
+
+When a time range feed was configured to show quick pick buttons, those buttons would not be displayed in the correct order. From now on, quick pick buttons will be displayed in chronological order.
+
 #### An error could occur in the hosting process when a connection had been closed [ID_34786]
 
 <!-- MR 10.1.0 [CU21] / 10.2.0 [CU9] - FR 10.2.12 -->
 
 When a connection had been closed, in some cases, an error could occur in the hosting process.
+
+#### Memory leak in SLDataGateway during a Cassandra Cluster migration [ID_34829]
+
+<!-- MR 10.1.0 [CU21] / 10.2.0 [CU9] - FR 10.3.1 -->
+
+During a Cassandra Cluster migration, SLDataGateway would leak memory due to paging handlers not being cleaned up correctly.

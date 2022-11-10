@@ -42,7 +42,7 @@ To add a new scheduled task without a Scheduler template:
     > [!NOTE]
     > 
     > - To attach a report to an email message as a separate PDF, select both *Plain text* and *Include report or dashboard*.
-    > - For the *Email* or *Upload report* actions, from DataMiner 9.6.13 onwards, you can select a dashboard from the Dashboards app instead of a legacy report. The dashboards are listed in the drop-down list along with the reports. The icon in front of each item in the list shows whether the item is a dashboard or a report. From DataMiner 10.0.13 onwards, a *Configure* button is available that allows you to further configure a report based on a dashboard. See [Generating a report based on a dashboard](xref:Generating_a_report_based_on_a_dashboard).
+    > - For the *Email* or *Upload report* actions, from DataMiner 9.6.13 onwards, you can select a dashboard from the Dashboards app instead of a legacy report. The dashboards are listed in the drop-down list along with the reports. The icon in front of each item in the list shows whether the item is a dashboard or a report. From DataMiner 10.0.13 onwards, a *Configure* button is available that allows you to further configure a report based on a dashboard. See [Generating a PDF report based on a dashboard using DataMiner Cube](xref:Generating_a_report_based_on_a_dashboard_Cube).
 
 10. To add more actions, repeat the previous step until all actions have been added.
 
@@ -53,6 +53,6 @@ To add a new scheduled task without a Scheduler template:
     The task will now be displayed in the task list.
 
     > [!NOTE]
+    >
     > - To see tasks that have already been executed, select the *Show finished tasks* option in the lower left corner.
     > - To quickly find a particular task in the list, use the filter box in the top-right corner.
-    >

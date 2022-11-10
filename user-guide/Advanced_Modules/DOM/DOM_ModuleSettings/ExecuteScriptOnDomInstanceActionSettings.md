@@ -12,6 +12,6 @@ The scripts used must have a `OnDomInstanceCrud` entry point defined. This makes
 [AutomationEntryPoint(AutomationEntryPointType.Types.OnDomInstanceCrud)]
 public void OnDomInstanceCrud(Engine engine, Guid id, CrudType crudType)
 {
-  engine.GenerateInformation($"Script triggered for {crudType} action on DomInstance with ID: {id}")
+  engine.GenerateInformation($"Script triggered for {crudType} action on DomInstance with ID: {id}");
 }
 ```

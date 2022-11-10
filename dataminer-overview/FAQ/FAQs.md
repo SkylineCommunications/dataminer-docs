@@ -20,3 +20,4 @@ uid: FAQs
 - [How much bandwidth must be provided for data acquisition on data sources?](xref:FAQ_Bandwidth_data_acquisition)
 - [What are the limitations when using the Generic SNMP connector as opposed to a dedicated connector?](xref:FAQ_Limitations_generic_SNMP_connector)
 - [Which languages are available in the DataMiner Cube client?](xref:FAQ_DataMiner_Cube_languages)
+- [What are the standard operating procedures for connector deployment?](xref:FAQ_SOP_connectors)
