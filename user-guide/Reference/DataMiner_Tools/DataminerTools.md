@@ -13,7 +13,7 @@ This section provides information on the following tools:
 - [Factory reset tool](xref:Factory_reset_tool)
 - [Legacy trend data exporter](xref:Legacy_Trend_Data_Exporter)
 - [Multi-threaded timer polling rate calculator](xref:Multi_Threaded_Timer_Polling_Rate_Calculator)
-- [Protocol Debug tools](xref:Protocol_Debug_Tools)
+- [Protocol debug tools](xref:Protocol_Debug_Tools)
 - [SLLogCollector](xref:SLLogCollector)
 - [SLNetClientTest tool](xref:SLNetClientTest_tool)
 - [SLOffload tool](xref:SLOffload_tool)

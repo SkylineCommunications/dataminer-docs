@@ -20,9 +20,7 @@ To use this tool:
 
    - The input file path.
 
-For example:
-
-`TrendDataLegacyExporter.exe 5 data.csv`
+For example: `TrendDataLegacyExporter.exe 5 data.csv`
 
 The resulting file will have the same name, with “.new” added before the file extension. For the example above, for instance, the output filename will be “data.new.csv”.
 

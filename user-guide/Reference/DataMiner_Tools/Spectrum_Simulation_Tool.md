@@ -10,7 +10,7 @@ You can download this protocol on [DataMiner Dojo](https://community.dataminer.s
 
 To use this protocol:
 
-1. Upload the protocol in the Protocols & Templates app in DataMiner Cube.
+1. Upload the protocol in the *Protocols & Templates* app in DataMiner Cube.
 
 1. Create an element that uses this protocol.
 

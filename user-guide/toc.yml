@@ -2893,7 +2893,7 @@
           topicUID: Legacy_Trend_Data_Exporter
         - name: Multi-threaded timer polling rate calculator
           topicUID: Multi_Threaded_Timer_Polling_Rate_Calculator
-        - name: Protocol Debug tools
+        - name: Protocol debug tools
           topicUID: Protocol_Debug_Tools
         - name: SLLogCollector
           topicUid: SLLogCollector

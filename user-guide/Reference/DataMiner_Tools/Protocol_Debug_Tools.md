@@ -6,7 +6,7 @@ uid: Protocol_Debug_Tools
 
 This tool can be helpful to debug issues in specific protocols. It can visualize foreign key and view table relations. You can also use it to build a modified version of a protocol where all data is editable, so that you do not need an actual device to debug issues.
 
-You can download this tool from [DataMiner Dojo](https://community.dataminer.services/download/protocol-debug-tools/?hilite=protocol+debug+tools#).
+You can download this tool from [DataMiner Dojo](https://community.dataminer.services/download/protocol-debug-tools/).
 
 ## Usage
 
