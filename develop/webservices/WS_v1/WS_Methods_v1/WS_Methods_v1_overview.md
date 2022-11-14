@@ -9,21 +9,21 @@ uid: WS_Methods_v1_overview
 | Method | Description |
 |--|--|
 | [ActivateElement](xref:ActivateElementv1) | Activates an element. |
-| [AddBookingAttachment](xref:AddBookingAttachment) | Adds an attachment file to a booking. Available from DataMiner 10.0.10 onwards. |
-| [AddBookingAttachmentV2](xref:AddBookingAttachmentV2) | Adds an attachment file to a booking. Available from DataMiner 10.2.0 \[CU9\]/10.2.12 onwards. |
+| [AddBookingAttachment](xref:AddBookingAttachment) | Adds an attachment file to a booking. Available from DataMiner 10.0.10 onwards. Internal use only.|
+| [AddBookingAttachmentV2](xref:AddBookingAttachmentV2) | Adds an attachment file to a booking. Available from DataMiner 10.2.0 [CU9]/10.2.12 onwards. Internal use only. |
 | [AddCommentToAlarm](xref:AddCommentToAlarm) | Adds a comment to an alarm. |
 | [AddElementToPinned](xref:AddElementToPinned) | Pins an element in the Recent list. |
 | [AddElementToRecent](xref:AddElementToRecent) | Adds an element to the Recent list. |
 | [AddElementToView](xref:AddElementToView) | Adds an element to a specified view. |
 | [AddElementsToRecent](xref:AddElementsToRecent) | Adds a number of elements to the Recent list. |
-| [AddJobAttachment](xref:AddJobAttachment) | Adds an attachment to a job. Available from DataMiner 10.0.5 onwards. |
-| [AddJobAttachmentV2](xref:AddJobAttachmentV2) | Adds an attachment to a job. Available from DataMiner 10.2.0 \[CU9\]/10.2.12 onwards. |
+| [AddJobAttachment](xref:AddJobAttachment) | Adds an attachment to a job. Available from DataMiner 10.0.5 onwards. Internal use only.|
+| [AddJobAttachmentV2](xref:AddJobAttachmentV2) | Adds an attachment to a job. Available from DataMiner 10.2.0 [CU9]/10.2.12 onwards. Internal use only. |
 | [AddOrUpdateJobsSectionDefinitionField](xref:AddOrUpdateJobsSectionDefinitionField) | Adds or updates a job section definition field. Available from DataMiner 9.6.4 onwards. |
 | [AddServiceToPinned](xref:AddServiceToPinned) | Pins a service in the Recent list. |
 | [AddServiceToRecent](xref:AddServiceToRecent) | Adds a service to the Recent list. |
 | [AddServicesToRecent](xref:AddServicesToRecent) | Adds a number of services to the Recent list. |
-| [AddTicketAttachment](xref:AddTicketAttachment) | Adds an attachment file to a ticket. Available from DataMiner 10.0.10 onwards. |
-| [AddTicketAttachmentV2](xref:AddTicketAttachmentV2) | Adds an attachment file to a ticket. Available from DataMiner 10.2.0 \[CU9\]/10.2.12 onwards. |
+| [AddTicketAttachment](xref:AddTicketAttachment) | Adds an attachment file to a ticket. Available from DataMiner 10.0.10 onwards. Internal use only.|
+| [AddTicketAttachmentV2](xref:AddTicketAttachmentV2) | Adds an attachment file to a ticket. Available from DataMiner 10.2.0 [CU9]/10.2.12 onwards. Internal use only.|
 | [AddTicketField](xref:AddTicketField) | Adds a new field to the specified ticket type. |
 | [AddTicketType](xref:AddTicketType) | Adds a new ticket type. |
 | [AddViewToPinned](xref:AddViewToPinned) | Pins a view in the Recent list. |
