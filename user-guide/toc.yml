@@ -2738,6 +2738,8 @@
       items:
         - name: Finding a root cause
           topicUID: Finding_a_Root_Cause
+        - name: Troubleshooting Alarm Console
+          topicUID: Troubleshooting_Alarm_Console
     - name: Troubleshooting procedures
       topicUid: Troubleshooting_procedures
       items:
