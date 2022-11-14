@@ -2,10 +2,10 @@
 uid: General_Main_Release_10.2.0_CU9
 ---
 
-# General Main Release 10.2.0 CU9 – Preview
+# General Main Release 10.2.0 CU9
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 > For information on how to upgrade DataMiner, see [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent).
@@ -149,7 +149,7 @@ A number of enhancements have been made with regard to querying trend data again
 
 <!-- MR 10.2.0 [CU9] - FR 10.2.12 -->
 
-Up to now, the *SLReset.exe* option *-cleanclustereddatabase* would remove all keyspaces and indices from the CassandraCluster and ElasticSearch databases. From now on, this option will only remove the tables, keyspaces and indices defined in the *db.xml* file from the databases (clusters as well as single-node Cassandra databases on remote machines).
+Up to now, the *SLReset.exe* option *-cleanclustereddatabases* would remove all keyspaces and indices from the Cassandra cluster and Elasticsearch databases. From now on, this option will only remove the tables, keyspaces and indices defined in the *DB.xml* file from the databases (clusters as well as single-node Cassandra databases on remote machines).
 
 #### SLMessageBroker log file entries will now mention the NATS server to which the NATS client is connected [ID_34719]
 
@@ -407,15 +407,3 @@ When, in the Alarm Console, you double-clicked a suggestion or alarm event creat
 <!-- MR 10.1.0 [CU21] / 10.2.0 [CU9] - FR 10.2.12 -->
 
 When a connection had been closed, in some cases, an error could occur in the hosting process.
-
-#### GQI: Filter operations would not be forwarded to the correct query when multiple data sources were joined [ID_34819]
-
-<!-- MR 10.2.0 [CU9] - FR 10.3.1 -->
-
-When multiple data sources were joined, in some cases, filter operations would not be forwarded to the correct query.
-
-#### Memory leak in SLDataGateway during a Cassandra Cluster migration [ID_34829]
-
-<!-- MR 10.1.0 [CU21] / 10.2.0 [CU9] - FR 10.3.1 -->
-
-During a Cassandra Cluster migration, SLDataGateway would leak memory due to paging handlers not being cleaned up correctly.

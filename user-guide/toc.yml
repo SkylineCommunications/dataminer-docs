@@ -2751,6 +2751,10 @@
     - name: Known issues
       topicUID: Known_issues
       items:
+        - name: NATS not starting if DMS name contains special characters
+          topicUID: KI_NATS_not_starting_special_chars
+        - name: SLDataGateway memory leak during Cassandra Cluster migration
+          topicUID: KI_SLDataGateway_leak_during_CC_migration
         - name: Excessive SLElement CPU usage during Cassandra Cluster migration
           topicUID: KI_SLElement_CPU_high_during_CC_migration
         - name: SLElement memory leak during Cassandra Cluster migration
@@ -2893,6 +2897,12 @@
               topicUid: Taskbar_Utility_command_line_options
         - name: Factory reset tool
           topicUID: Factory_reset_tool
+        - name: Legacy trend data exporter
+          topicUID: Legacy_Trend_Data_Exporter
+        - name: Multi-threaded timer polling rate calculator
+          topicUID: Multi_Threaded_Timer_Polling_Rate_Calculator
+        - name: Protocol debug tools
+          topicUID: Protocol_Debug_Tools
         - name: SLLogCollector
           topicUid: SLLogCollector
         - name: SLNetClientTest tool
@@ -3008,10 +3018,16 @@
           topicUid: SLOffload_tool
         - name: SLSkipAsSourceTool
           topicUID: SLSkipAsSourceTool
+        - name: SNMP bandwidth estimation tool
+          topicUID: SNMP_Bandwidth_Estimation_Tool
+        - name: Spectrum simulation protocol
+          topicUID: Spectrum_Simulation_protocol
         - name: Standalone BPA Executor
           topicUID: Standalone_BPA_Executor
         - name: Standalone Cassandra Backup tool
           topicUID: Standalone_Cassandra_Backup_Tool
+        - name: Standalone Cassandra Cluster Installer
+          topicUID: Standalone_Cassandra_Cluster_Installer
         - name: Standalone Elastic Backup tool
           topicUID: Standalone_Elastic_Backup_Tool
         - name: Standalone Elasticsearch Cluster Installer
