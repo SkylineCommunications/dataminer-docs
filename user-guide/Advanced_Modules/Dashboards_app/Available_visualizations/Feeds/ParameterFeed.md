@@ -17,21 +17,6 @@ To configure this component:
    - From DataMiner 10.0.0/10.0.2 onwards, multiple view filters can be applied to a parameter feed. Parameters in those views will then be included as soon as they are included in one of the view filters.
 
    - From DataMiner 10.2.3/10.3.0 onwards, a default index filter can be applied. To do so, first add the `showAdvancedSettings=true` option to the dashboard URL. In the *Data* pane, a *Parameter table filters* section will then become available where you can configure the filter.
-  
-   - After selecting column parameter indices in a parameter feed, you can feed those selected indices to other components that support the same data.
-
-     > [!NOTE]
-     > From DataMiner 10.2.12/10.3.0 onwards, this feature is also available for parameter feeds listing EPM parameters. In the *Data* pane, select *Feeds* under *All available data*. Expand *Parameter feed* and feed *Indices* to a chosen component.
-
-     1. In the *Parameter Feed* window, select the checkboxes in front of the parameters you wish to include.
-
-     1. Available indices will appear under *Indices*. Select the checkboxes in front of the indices you wish to include.
-
-        These indices can now also be fed to any component that supports the same type of data.
-
-        Example:
-
-        ![EPM Feed Indices](~/user-guide/images/EPM_Feed_Indices.png)
 
 1. Optionally, customize the following component options in the *Component* > *Settings* tab:
 
@@ -71,3 +56,14 @@ To configure this component:
    - The default options available for all components. See [Customizing the component layout](xref:Configuring_dashboard_components#customizing-the-component-layout).
 
    - *Column order*: Click the up or down arrow next to a column name to change the order in which the columns of the component are displayed. Available from DataMiner 9.6.13 onwards.
+
+> [!NOTE]
+> After selecting column parameter indices in a parameter feed, you can feed those selected indices to other components that support the same data. From DataMiner 10.2.12/10.3.0 onwards, this feature is also available for parameter feeds listing EPM parameters.
+>
+> 1. In the *Parameter Feed* window, select the checkboxes in front of the parameters you wish to include.
+>
+> 1. Available indices will appear under *Indices*. Select the checkboxes in front of the indices you wish to include. For example:
+>
+>    ![EPM Feed Indices](~/user-guide/images/EPM_Feed_Indices.png)
+>
+> 1. In the *Data* pane, select *Feeds* under *All available data*. Expand *Parameter feed* and drag *Indices* to the component of your choice.
