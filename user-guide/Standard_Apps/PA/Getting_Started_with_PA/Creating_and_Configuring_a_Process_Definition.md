@@ -107,10 +107,18 @@ The process DOM definition needs to be used with the *process_automation* module
 
    - **Process name**: Specify a name for the activation window.
 
+   - **Service group**: This information will already be filled in and can be left as is.
+
    - **Service info**: This identifies the process and makes it possible to push tokens into the process from custom code. To configure this, there are two options:
 
      - Select *Create New* to create *Service info* with the same name as the activation window.
 
      - Select an existing *Service info* item in case multiple activation windows need to be created that should always be linked to the same process identifier.
+
+     - **Process definition**: This information will already be filled in and can be left as is.
+
+     - **Process type**: This information will already be filled in and can be left as is.
+
+   - **Time specifications**: Edit according to your own preferences.
 
      ![Activation Window](~/user-guide/images/Activation_Window.png)
