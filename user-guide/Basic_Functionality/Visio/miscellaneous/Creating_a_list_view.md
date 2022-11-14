@@ -7,9 +7,7 @@ uid: Creating_a_list_view
 To create a dynamic, filterable list view containing elements, services or bookings, from DataMiner 9.6.4 onwards, it is possible to configure a *ListView* component.
 
 > [!NOTE]
->
-> - In DataMiner 9.6.4, this component can only be used in the visual overview of view cards. From DataMiner 9.6.5 onwards, element cards are also supported.
-> - This component functions in a similar way as the bookings list in the Bookings module and the services list in the Services module. For more information on how to use this component in DataMiner Cube, see [Bookings list](xref:The_Bookings_module#bookings-list).
+> In DataMiner 9.6.4, this component can only be used in the visual overview of view cards. From DataMiner 9.6.5 onwards, element cards are also supported.
 
 ## Configuring the shape data field
 
@@ -103,7 +101,6 @@ ReservationInstance.Status[Int32] == 3
 > |Disconnected  |5             |
 > |Interrupted   |6             |
 > |Cancelled     |7             |
-
 
 ```txt
 (ReservationInstance.End[DateTime] >01/22/2019 11:17:32)
@@ -320,8 +317,57 @@ The following session variables can be used in conjunction with the *ListView* c
 
 - **ViewPort**: This session variable has to contain the time range that will be used when populating a dynamic list with bookings. Example: *5248460498427387904;5248491602427387904*.
 
-- **YAxisResources**: When the list is configured to show bookings, you can use this session variable to apply a filter. Example: 
+- **YAxisResources**: When the list is configured to show bookings, you can use this session variable to apply a filter. Example:
 
   ```json
   [{"Type":"custom","Background":"#FFFFFF","ItemHeight":64,"Filter":"(ReservationInstance.Name[String] notContains 'SRMExposeFlow')"}]
   ```
+
+## Customizing a list view in DataMiner Cube
+
+List view components can be found both in Visual Overview and in the DataMiner Bookings and Services apps. Regardless of this context, they can be configured in the same way.
+
+- To sort the items in the list by a particular column, click the header of that column. Click the header again to reverse the sort order.
+
+- To filter which items are displayed in the list, click the filter icon for the column you want to apply a filter to and enter a filter in the box below the column header.
+
+- To apply a custom column configuration, see [Creating a new column configuration](#creating-a-new-column-configuration) and [Loading the default column configuration](#loading-the-default-column-configuration).
+
+- From DataMiner 9.6.13 onwards, it is possible to have a column display the color configured in the *Visual.Background* property of bookings. For this purpose, add the *Visual.Background* property column and set it to the column type *Color*. In DataMiner 10.0.0/10.0.2, this property is renamed to *VisualBackground*. See [Customizing the color of booking blocks](xref:Embedding_a_Resource_Manager_component#customizing-the-color-of-booking-blocks).
+
+> [!NOTE]
+> When an item is selected in the list, a session variable is populated with the booking ID, which can be of use for Visio drawings.
+
+### Creating a new column configuration
+
+1. Right-click in the list header, and apply the following configuration as you see fit:
+
+   - Select *Add/Remove column* and indicate which columns should be added or removed.
+
+   - Select *Alignment* and then choose a different text alignment for the columns.
+
+   - Select *Change column name* and specify a new column name.
+
+   - Select *Manage column configuration* (from DataMiner 10.0.4 onwards) or *Add/Remove column* \> *More* (up to DataMiner 10.0.3) to open a window where you can do the following:
+
+     - Show or hide a column by selecting or clearing its checkbox, or by selecting it and clicking *Show* or *Hide*.
+
+     - Move a column up or down by selecting it and clicking *Move up* or *Move down*.
+
+     - Up to DataMiner 9.6.13, a number of additional checkboxes are available for each possible column:
+
+       - Select the *Icon* checkbox of a particular column to have its contents replaced by icons. From DataMiner 9.6.12 onwards, this option is supported for ID columns.
+
+       - Select the *Color* checkbox of a particular column to visualize the cells in that column as colored blocks.
+
+     - From DataMiner 10.0.0/10.0.2 onwards, for columns based on custom properties, you can instead select a different type (e.g. *Custom icon*, *Color*) in the *Column type* drop-down lists. For the default columns, the column type cannot be changed.
+
+     - In the *Filter by type* section, indicate which type of columns you want to choose from: *Bookings* (or *Reservations* in earlier DataMiner versions) or *Properties*.
+
+1. Right-click in the list header and select *Save current column configuration*
+
+   When the module is opened again, this column configuration will be displayed. If you do not apply this last step, the column configuration will be reset when the module is closed.
+
+### Loading the default column configuration
+
+- Right-click in the list header, select *Load default column configuration*, and select the configuration you want to load.
