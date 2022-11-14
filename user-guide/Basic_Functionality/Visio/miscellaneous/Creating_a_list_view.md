@@ -360,7 +360,7 @@ List view components can be found both in Visual Overview and in the DataMiner B
 
        - Select the *Color* checkbox of a particular column to visualize the cells in that column as colored blocks.
 
-     - From DataMiner 10.0.0/10.0.2 onwards, for columns based on custom properties, you can instead select a different type (e.g. *Custom icon*, *Color*) in the *Column type* drop-down lists. For the default columns, the column type cannot be changed.
+     - From DataMiner 10.0.0/10.0.2 onwards, for columns based on custom properties, you can instead select a different [column type](#available-column-types). For the default columns, the column type cannot be changed.
 
      - In the *Filter by type* section, indicate which type of columns you want to choose from: *Bookings* (or *Reservations* in earlier DataMiner versions) or *Properties*.
 
@@ -371,3 +371,21 @@ List view components can be found both in Visual Overview and in the DataMiner B
 ### Loading the default column configuration
 
 - Right-click in the list header, select *Load default column configuration*, and select the configuration you want to load.
+
+### Available column types
+
+From DataMiner 10.0.0/10.0.2 onwards, when you manage the column configuration, you can select different column types. The following types are available:
+
+**Text**: Shows the value as text.
+
+**Alarm icon**: Use this type for a column indicating an ID of a service, element, or view. It will show the alarm icon for the relevant service, element, or view.
+
+**Custom icon**: Displays a custom icon. This relies on Automation scripts providing an icon library.
+
+**Color**: Shows the color defined in the cell value.
+
+**Date**: Expects a Date object, or a string representing a date in UTC time, in the culture of the client.
+
+**Date (invariant)**: Available from DataMiner 10.2.12/10.3.0 onwards. Expects a Date object, or a string representing a date in UTC time, in [invariant culture](https://learn.microsoft.com/en-us/dotnet/api/system.globalization.cultureinfo.invariantculture).
+
+**Colored text**: This type is specifically intended for the *AlarmLevel* column for services. It visualizes the alarm level by means of text preceded by a circle showing the alarm level color.
