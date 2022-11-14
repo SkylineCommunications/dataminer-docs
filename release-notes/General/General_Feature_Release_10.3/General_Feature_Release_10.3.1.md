@@ -68,7 +68,7 @@ SLLogCollector packages will now also include:
 
 #### Elasticsearch: Sending a GetInfoMessage of type 'IndexingConfiguration' with an invalid DataMiner ID will now only return the Elasticsearch configuration of the local DMA [ID_34774]
 
-<!-- MR 10.1.0 [CU21]/10.2.0 [CU9] - FR 10.3.1 -->
+<!-- MR 10.1.0 [CU22]/10.2.0 [CU10] - FR 10.3.1 -->
 
 When a *GetInfoMessage* of type "IndexingConfiguration" was sent containing an invalid DataMiner ID, up to now, the Elasticsearch configuration of all DMAs would be returned.
 
@@ -105,7 +105,7 @@ The new icon component allows you to display an icon on a dashboard or a low-cod
 
 #### Dashboards app - Time range feed: Quick pick buttons would not be displayed in the correct order [ID_34759]
 
-<!-- MR 10.1.0 [CU21] / 10.2.0 [CU9] - FR 10.3.1 -->
+<!-- MR 10.1.0 [CU22] / 10.2.0 [CU10] - FR 10.3.1 -->
 
 When a time range feed was configured to show quick pick buttons, those buttons would not be displayed in the correct order. From now on, quick pick buttons will be displayed in chronological order.
 
@@ -117,7 +117,7 @@ When a row linked to a DVE child element was deleted, in some cases, standalone 
 
 #### GQI: Filter operations would not be forwarded to the correct query when multiple data sources were joined [ID_34819]
 
-<!-- MR 10.2.0 [CU9] - FR 10.3.1 -->
+<!-- MR 10.2.0 [CU10] - FR 10.3.1 -->
 
 When multiple data sources were joined, in some cases, filter operations would not be forwarded to the correct query.
 
@@ -139,18 +139,18 @@ From now on, only unknown Elasticsearch errors will be logged in the *SLSearch.t
 
 #### Memory leak in SLDataGateway during a Cassandra Cluster migration [ID_34829]
 
-<!-- MR 10.1.0 [CU21] / 10.2.0 [CU9] - FR 10.3.1 -->
+<!-- MR 10.1.0 [CU22] / 10.2.0 [CU10] - FR 10.3.1 -->
 
 During a Cassandra Cluster migration, SLDataGateway would leak memory due to paging handlers not being cleaned up correctly.
 
 #### Dashboards app & low-code apps: Contents of colored table cells would incorrectly not be visible when conditional coloring was applied and actions had been configured [ID_34842]
 
-<!-- MR 10.2.0 [CU9] - FR 10.3.1 -->
+<!-- MR 10.2.0 [CU10] - FR 10.3.1 -->
 
 When conditional coloring was applied on the first column of a table in which actions had been configured, in some cases, the contents of the colored cells would incorrectly not be visible.
 
 #### DataMiner upgrade: 'Webpages\\App' and 'Webpages\\Automation' folders would incorrectly not be cleaned up [ID_34844]
 
-<!-- MR 10.2.0 [CU9] - FR 10.3.1 -->
+<!-- MR 10.2.0 [CU10] - FR 10.3.1 -->
 
 After a DataMiner upgrade, files belonging to previous app versions would incorrectly not be removed from the `C:\Skyline DataMiner\Webpages\App` and `C:\Skyline DataMiner\Webpages\Automation` folders. From now on, those folders will be deleted before new versions of those apps are installed.

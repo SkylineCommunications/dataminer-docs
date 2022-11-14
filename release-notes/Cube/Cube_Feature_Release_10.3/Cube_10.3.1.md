@@ -37,7 +37,7 @@ ChildrenSort="Property|End,desc"
 
 #### DataMiner Cube: Stream Viewer enhancements [ID_34837] [ID_34838]
 
-<!-- MR 10.1.0 [CU21] / 10.2.0 [CU9] - FR 10.3.1 -->
+<!-- MR 10.1.0 [CU22] / 10.2.0 [CU10] - FR 10.3.1 -->
 
 The Stream Viewer tree view now supports more levels. This will allow you to display more detailed information.
 
@@ -49,6 +49,6 @@ For example, in case of HTTP communication, there will now be extra levels for s
 
 #### DataMiner Cube - Visual Overview: Tooltip of an element in a service chain would incorrectly not show values of node properties [ID_34664]
 
-<!-- MR 10.2.0 [CU9] - FR 10.3.1 -->
+<!-- MR 10.2.0 [CU10] - FR 10.3.1 -->
 
 When, in a service chain within a service context, an element shape was linked to a node property via a shape data field of type *Tooltip*, then the tooltip of that shape would incorrectly not show the value of that node property when using either a `[Service definition properties]` or a `[Service definition property:<property name>]` placeholder.
