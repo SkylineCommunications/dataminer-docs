@@ -4,9 +4,9 @@ uid: Legacy_Trend_Data_Exporter
 
 # Legacy trend data exporter
 
-From DataMiner 10.1.4 onwards, if the NewAverageTrending [soft-launch option](xref:SoftLaunchOptions) is activated, average trending is calculated in a different way that allows better performance. However, with this change, in some specific cases, intervals between two average trend points are no longer guaranteed to be constant. In cases where trend exports are generated and a fixed interval is expected, e.g. when exporting the 5-minute average trending points, this could be an issue.
+From DataMiner 10.1.4 onwards, if the NewAverageTrending [soft-launch option](xref:SoftLaunchOptions) is activated, average trending is calculated in a different way that allows better performance. However, with this change, in some specific cases, intervals between two average trend points are no longer guaranteed to be constant. In cases where trend exports are generated and a fixed interval is expected, e.g. when exporting the 5-minute average trending points, this could be an issue. For this purpose, you can use the legacy trend data exporter tool.
 
-> For this purpose, you can use this [legacy trend data exporter tool](https://community.dataminer.services/download/legacy-trend-data-exporter/).
+> You can download this tool from [DataMiner Dojo](https://community.dataminer.services/download/legacy-trend-data-exporter/).
 
 This standalone tool will realign the average trend points in a given .csv file to ensure fixed intervals (see example below).
 
