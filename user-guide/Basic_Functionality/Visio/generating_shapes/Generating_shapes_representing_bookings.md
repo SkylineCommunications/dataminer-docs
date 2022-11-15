@@ -12,7 +12,7 @@ To do so:
 
 1. Put the shape into a group, and add the necessary group-level shape data fields to the group. See [Group-level shape data](#group-level-shape-data).
 
-   By default, all bookings in the Cube cache will be shown. If that cache does not contain any bookings, then a default set of bookings will be retrieved (i.e. from 1 day in the past to 2 days in the future).
+   By default, from DataMiner 10.2.0 [CU10]/10.3.1 onwards, all bookings from one day in the past up to one day in the future are shown. Prior to DataMiner 10.2.0 [CU10]/10.3.1, all bookings in the Cube cache are shown. If that cache does not contain any bookings, then a default set of bookings is retrieved (i.e. from 1 day in the past up to 1 day in the future).
 
 > [!NOTE]
 > Dynamically generated booking shapes are functionally identical to shapes linked to bookings using a *Reservation* data field. For example, they support the same placeholders. See [Linking a shape to a booking](xref:Linking_a_shape_to_a_booking).
@@ -71,6 +71,9 @@ The following shape data fields can be added to the group containing the booking
 
 - **ChildrenFilter**: To filter the bookings, add a **ChildrenFilter** shape data field to the shape group and set its value to a booking filter, using the same filter format as is used when specifying a *ListView* filter. See [List view filters](xref:Creating_a_list_view#list-view-filters).
 
+  > [!NOTE]
+  > This shape data field is no longer mandatory from DataMiner 10.2.0 [CU10]/10.3.1 onwards if the *ChildrenSource* shape data field is used (see below).
+
 - **ChildrenPanel**: In this optional shape data field, you can specify how the child items have to be organized within the container shape.
 
   Possible values:
@@ -87,4 +90,6 @@ The following shape data fields can be added to the group containing the booking
 - **ChildrenSource**: To add bookings from a specific time range, add a **ChildrenSource** shape data field to the shape group and set its value to that time range (e.g. “StartTime=\<dateTime>; EndTime=\<dateTime>”).
 
   > [!NOTE]
-  > Using a *ChildrenSource* shape data field set to a specific time range will add the bookings in this time range to the ones that are already in the cache. This means that if there were other bookings in the cache already, shapes will be generated for those as well. If you want to filter the bookings to only show shapes in a specific time range, use a *ChildrenFilter* shape data field instead.
+  >
+  > - If no *ChildrenSource* shape data field is added, by default the start time is yesterday (now - 1 day) and the end time is tomorrow (now + 1 day).
+  > - Prior to DataMiner 10.2.0 [CU10]/10.3.1, using a *ChildrenSource* shape data field set to a specific time range will add the bookings in this time range to the ones that are already in the cache. This means that if there were other bookings in the cache already, shapes will be generated for those as well. If you want to filter the bookings to only show shapes in a specific time range, use a *ChildrenFilter* shape data field instead.
