@@ -62,9 +62,9 @@ To turn any computer using Windows Server 2008 R2, Windows 7 or later into a tim
 
 1. Log on locally to the machine that will act as time server, or establish a remote desktop session with it.
 
-1. Stop the "Windows Time" service via Start \> Control Panel \> System and Security \> Administrative Tools \> Services.
+1. Stop the Windows Time service via *Start \> Control Panel \> System and Security \> Administrative Tools \> Services*.
 
-1. Open the registry editor via Start \> Run... \> regedit.
+1. Open the registry editor via *Start \> Run... \> regedit*.
 
 1. Search for the *HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\W32Time\TimeProviders\NtpServer*.
 
@@ -89,7 +89,7 @@ To turn a DMA into a time client, do the following.
 
 1. Log on locally to the DMA, or establish a remote desktop session with it.
 
-1. Open the *Services* dialog box Start \> Settings \> Control Panel \> Administrative Tools \> Services, and select the *Windows Time* service.
+1. Open the *Services* dialog box via *Start \> Settings \> Control Panel \> Administrative Tools \> Services*, and select the *Windows Time* service.
 
 1. Right-click the service, and select *Properties*.
 
@@ -101,7 +101,7 @@ To turn a DMA into a time client, do the following.
 
 1. Check whether the service is actually running, and then close the *Properties* dialog box.
 
-1. Open a command prompt window Start \> Run... \> cmd.
+1. Open a command prompt window via *Start \> Run... \> cmd*.
 
 1. Enter *net time /set*, followed by the IP address of the time server, and press *Enter*.
 
