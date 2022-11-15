@@ -49,6 +49,17 @@
           topicUid: Overview_Training_videolibrary
         - name: Agile Awareness Training
           topicUid: Overview_Training_agile_aw
+    - name: Pricing
+      topicUID: Pricing
+      items:
+      - name: Introduction
+        topicUID: Pricing_Introduction
+      - name: Usage-based service
+        topicUID: Pricing_Usage_based_service
+      - name: DataMiner Perpetual Use Licenses vs Usage-based services
+        topicUID: Pricing_PerpetualUseLicenses_vs_UsageBasedServices
+      - name: Frequently asked questions
+        topicUID: Pricing_FAQ
     - name: Support Services
       topicUid: Overview_Support_DMS_M_and_S
       items:
