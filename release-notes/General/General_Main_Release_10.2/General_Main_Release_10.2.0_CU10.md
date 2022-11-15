@@ -85,6 +85,12 @@ When a required software license cannot be found, a `One or more of the followin
 
 In some cases, instead of listing the unlicensed modules, this message would incorrectly only mention "None".
 
+#### Web apps: Problem with email address boxes [ID_34421]
+
+<!-- MR 10.2.0 [CU10] - FR 10.2.12 -->
+
+When you entered an address in an email address box and then selected something else on the page without pressing *ENTER* or *TAB*, the email address box would incorrectly expand and show a list of suggestions.
+
 #### DataMiner Cube - Visual Overview: Tooltip of an element in a service chain would incorrectly not show values of node properties [ID_34664]
 
 <!-- MR 10.2.0 [CU10] - FR 10.3.1 -->

@@ -288,7 +288,7 @@ In some rare cases, an error could occur in SLDataMiner when you edited an eleme
 
 #### Web apps: Problem with email address boxes [ID_34421]
 
-<!-- MR 10.3.0 - FR 10.2.12 -->
+<!-- MR 10.2.0 [CU10] - FR 10.2.12 -->
 
 When you entered an address in an email address box and then selected something else on the page without pressing *ENTER* or *TAB*, the email address box would incorrectly expand and show a list of suggestions.
 

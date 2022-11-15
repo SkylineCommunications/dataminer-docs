@@ -768,12 +768,6 @@ when a dashboard, a low-code app page or low-code app panel was initialized, in 
 
 When an interactive Automation script was executed in a web app, it would incorrectly not be possible to clear a selection box by selecting an empty option.
 
-#### Web apps: Problem with email address boxes [ID_34421]
-
-<!-- MR 10.3.0 - FR 10.2.12 -->
-
-When you entered an address in an email address box and then selected something else on the page without pressing *ENTER* or *TAB*, the email address box would incorrectly expand and show a list of suggestions.
-
 #### Web Services API - CreateServiceTemplate: DataMinerID and ElementID incorrectly set to 0 instead of -1 [ID_34440]
 
 <!-- MR 10.3.0 - FR 10.2.11 -->
