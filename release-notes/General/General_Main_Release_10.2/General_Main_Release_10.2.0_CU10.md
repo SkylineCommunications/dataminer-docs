@@ -27,6 +27,12 @@ ChildrenSort="Property|Start,asc"
 ChildrenSort="Property|End,desc"
 ```
 
+#### DataMiner Cube - Visual Overview: Enhanced performance when updating automatically generated shapes that represent bookings [ID_34695]
+
+<!-- MR 10.2.0 [CU10] - FR 10.3.1 -->
+
+Because of a number of enhancements, overall performance has increased when updating automatically generated shapes that represent bookings.
+
 #### SLLogCollector now also collects DxM version info and APIGateway app settings [ID_34701]
 
 <!-- MR 10.2.0 [CU10] - FR 10.3.1 -->

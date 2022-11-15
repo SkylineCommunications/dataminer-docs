@@ -35,6 +35,12 @@ ChildrenSort="Property|End,desc"
 
 ### Enhancements
 
+#### DataMiner Cube - Visual Overview: Enhanced performance when updating automatically generated shapes that represent bookings [ID_34695]
+
+<!-- MR 10.2.0 [CU10] - FR 10.3.1 -->
+
+Because of a number of enhancements, overall performance has increased when updating automatically generated shapes that represent bookings.
+
 #### DataMiner Cube: Stream Viewer enhancements [ID_34837] [ID_34838]
 
 <!-- MR 10.1.0 [CU22] / 10.2.0 [CU10] - FR 10.3.1 -->
