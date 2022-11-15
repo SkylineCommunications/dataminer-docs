@@ -12,11 +12,18 @@ uid: Cube_Feature_Release_10.2.12
 
 ## Highlights
 
-#### Trending: When trending a parameter, related parameters can now be added through light bulb icon [ID_34432]
+#### Trending: Light bulb icon now indicates that related parameters have been found [ID_34432]
 
 <!-- MR 10.3.0 - FR 10.2.12 -->
 
-When trending a parameter, you can now add related parameters by clicking the light bulb icon in the top-right corner of the trend. In doing so, you will get an overview of suggested parameters that are related to the currently displayed parameter trend.
+In the top-right corner of a trend graph, next to the full-screen button, a light bulb icon will now appear when DataMiner finds parameters that are related to the parameters shown in the trend graph. Clicking this light bulb icon will allow you to add one or more of those related parameters to the trend graph you are viewing.
+
+Relationships between parameters are found by adding changes in the behavior of a trend (also known as change points) to a model that is managed by a DataMiner Extension Module named *ModelHost*. When you open a trend graph, DataMiner Cube will check the parameter relationship model, retrieve from it all parameters related to those shown in the trend graph, and list the ten most important ones when you click the light bulb icon.
+
+> [!NOTE]
+>
+> - This light bulb feature will only work on cloud-connected DataMiner Agents that have the *ModelHost* DxM installed and that have been configured to [offload alarm and change point events to the cloud](xref:Controlling_cloudfeed_data_offloads).
+> - Relationship models are calculated once per week. When this feature is activated, it can take up to a week before the first results are visible.
 
 #### Automation: No more 'Abort' buttons in dialog boxes of interactive Automation scripts [ID_34559]
 
