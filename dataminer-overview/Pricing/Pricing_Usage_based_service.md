@@ -66,20 +66,20 @@ In case of a Pay-per-Use plan, user pay for what they use, giving ultimate flexi
 
 - *Billing*:
 
-    12-month subscriptions:  
+  - 12-month subscriptions:  
 
-        - Start date: 100% 
+    - Start date: 100%
 
-    24-month subscriptions:
+  - 24-month subscriptions:
 
-        - Start date: 60%
-        - Start date + 12 months: 40%
+    - Start date: 60%
+    - Start date + 12 months: 40%
 
-    36-months subscriptions:
+  - 36-months subscriptions:
   
-        - Start date: 60%
-        - Start date + 12 months: 20%
-        - Start date + 24 months: 20% 
+    - Start date: 60%
+    - Start date + 12 months: 20%
+    - Start date + 24 months: 20%
 
     After the anniversary date, the subscription will be invoiced yearly, unless replaced by a new contract.  
 
@@ -91,10 +91,10 @@ In case of a Pay-per-Use plan, user pay for what they use, giving ultimate flexi
 
 - *Metering*: Metering works in monthly cycles, starting on the first day of each month. MUA is pro-rated for the first and last months. For example:
   
-    MUA: 200 credits
-    Start date: October 20, 2022
-    Anniversary date: October 19, 2023
-    MUA available from October 20, 2022 to October 31, 2022 = 200 credits x 12 days / 31 days = 77.4 credits
-    MUA available from October 1, 2023 to October 19, 2023 = 200 credits x 19 days / 31 days = 122.6 credits
+  - MUA: 200 credits
+  - Start date: October 20, 2022
+  - Anniversary date: October 19, 2023
+  - MUA available from October 20, 2022 to October 31, 2022 = 200 credits x 12 days / 31 days = 77.4 credits
+  - MUA available from October 1, 2023 to October 19, 2023 = 200 credits x 19 days / 31 days = 122.6 credits
 
 - *Over-utilization*: Consumption above the contracted Monthly Utilization Allowance (MUA) is possible, with the additional consumed credits being invoiced monthly, at the then current Pay-per-Use credit rate.
