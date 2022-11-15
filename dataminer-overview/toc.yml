@@ -52,14 +52,10 @@
     - name: Pricing
       topicUID: Pricing
       items:
-      - name: Introduction
-        topicUID: Pricing_Introduction
-      - name: Usage-based service
+      - name: Usage-based services
         topicUID: Pricing_Usage_based_service
-      - name: DataMiner Perpetual Use Licenses vs Usage-based services
+      - name: DataMiner Perpetual-Use Licenses vs usage-based services
         topicUID: Pricing_PerpetualUseLicenses_vs_UsageBasedServices
-      - name: Frequently asked questions
-        topicUID: Pricing_FAQ
     - name: Support Services
       topicUid: Overview_Support_DMS_M_and_S
       items:
@@ -115,3 +111,5 @@
           topicUid: FAQ_DataMiner_Cube_languages
         - name: What are the standard operating procedures for connector deployment?
           topicUID: FAQ_SOP_connectors
+        - name: Questions related to pricing of usage-based services
+          topicUID: Pricing_FAQ

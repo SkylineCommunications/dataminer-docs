@@ -2,9 +2,9 @@
 uid: Pricing_PerpetualUseLicenses_vs_UsageBasedServices
 ---
 
-# DataMiner Perpetual Use Licenses vs Usage-based services
+# DataMiner Perpetual-Use Licenses vs Usage-based services
 
-The Perpetual Use model offers perpetual ownership over a named license through a one-time purchase with an optional recurrent cost for support services.
+The Perpetual-Use model offers perpetual ownership over a named license through a one-time purchase with an optional recurrent cost for support services.
 
 Usage-based services are charged based on the actual monthly usage of services, where an **Utilization Allowance** can be used freely in any combination of services which can change monthly.
 
@@ -17,4 +17,4 @@ Usage-based services are charged based on the actual monthly usage of services, 
 | Connectors | Connector license per different interfaced product | Per connector per month |
 | Sample applications | Included | Included |
 | Cloud services | Tier-based | Usage-based |
-| Support services | Optional annual recurring fee, relative to the value of the deployed Perpetual Use Licenses. | Included (see [DataMiner Support Plans](https://community.dataminer.services/support-services/) on DataMiner Dojo) |
+| Support services | Optional annual recurring fee, relative to the value of the deployed Perpetual-Use Licenses. | Included (see [DataMiner Support Plans](https://community.dataminer.services/support-services/) on DataMiner Dojo) |
