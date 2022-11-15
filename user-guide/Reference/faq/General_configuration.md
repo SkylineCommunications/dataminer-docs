@@ -20,7 +20,7 @@ uid: General_configuration
 
 ## Which limitations should I keep in mind for the specifications of a DMA?
 
-You can find these on the [DataMiner Metrics](https://community.dataminer.services/dataminer-metrics/) ​page on DataMiner Dojo.
+You can find these on the [DataMiner Metrics](xref:dataminer_metrics) page.
 
 ## When must a DataMiner Agent be restarted?
 
@@ -60,17 +60,29 @@ The time server will provide the correct time settings for all DMAs.
 
 To turn any computer into a time server, whether it serves as a DMA or not, do the following.
 
+> [!IMPORTANT]
+> Below information applies to Windows Server 2008 R2, Windows 7 and later.
+
 1. Log on locally to the machine that will act as time server, or establish a remote desktop session with it.
 
-1. Open Registry Editor (*Start \> Run... \> regedit*).
+1. Stop the "Windows Time" service via (*Start \> Control Panel \> System and Security \> Administrative Tools \> Services*).
 
-1. Go to the following key:
+1. Open the registry editor via (*Start \> Run... \> regedit*).
 
-   - HKEY_LOCAL_MACHINE/SYSTEM/CurrentControlSet/Services/W32Time/Parameters
+1. Search for the "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\W32Time\TimeProviders\NtpServer".
 
-1. Change the value of LocalNTP from “0” to “1”
+1. Set the *Enabled* value to 1.
 
-   (0 = No time server except when a domain controller, 1 = Always a time server).
+1. Search for "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\W32Time\Config".
+
+1. Set the *AnnounceFlags* value to 5.
+
+1. Start the "Windows Time" service again and set the start type to *Automatic*.
+
+> [!NOTE]
+>
+> - When using the Windows server 2012 R2 (64-bit), after Step 7 you have to set the start type to "Automatic (Delayed Start)" for the service to start automatically.
+> - If, when using Windows 7 or the Windows Server 2008 R2, the "Windows Time" service always stops, follow these instructions: [https://support.microsoft.com/en-us/help/2385818](https://support.microsoft.com/en-us/help/2385818).
 
 ### Time client
 
@@ -143,7 +155,7 @@ All history alarms will be deleted indiscriminately, and the Alarm Console, repo
 
 1. Stop the DataMiner software. See [Starting or stopping DataMiner Agents in your DataMiner System](xref:Starting_or_stopping_DataMiner_Agents_in_your_DataMiner_System).
 
-1. Open MySQL Query Browser. On the logon window, click *OK* to connect to the database using the default settings.
+1. Open MySQL Workbench. On the logon window, click *OK* to connect to the database using the default settings.
 
 1. Open the SLDMADB tree.
 
@@ -169,7 +181,7 @@ All history alarms will be deleted indiscriminately, and the Alarm Console, repo
 
    - Info
 
-1. Close MySQL Query Browser.
+1. Close MySQL Workbench.
 
 1. Restart the DataMiner. See [Starting or stopping DataMiner Agents in your DataMiner System](xref:Starting_or_stopping_DataMiner_Agents_in_your_DataMiner_System).
 
