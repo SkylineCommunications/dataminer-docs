@@ -58,31 +58,28 @@ More information about SNTP can be found in RFC 4330:
 
 The time server will provide the correct time settings for all DMAs.
 
-To turn any computer into a time server, whether it serves as a DMA or not, do the following.
-
-> [!IMPORTANT]
-> Below information applies to Windows Server 2008 R2, Windows 7 and later.
+To turn any computer using Windows Server 2008 R2, Windows 7 or later into a time server, whether it serves as a DMA or not, do the following:
 
 1. Log on locally to the machine that will act as time server, or establish a remote desktop session with it.
 
-1. Stop the "Windows Time" service via (*Start \> Control Panel \> System and Security \> Administrative Tools \> Services*).
+1. Stop the "Windows Time" service via Start \> Control Panel \> System and Security \> Administrative Tools \> Services.
 
-1. Open the registry editor via (*Start \> Run... \> regedit*).
+1. Open the registry editor via Start \> Run... \> regedit.
 
-1. Search for the "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\W32Time\TimeProviders\NtpServer".
+1. Search for the *HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\W32Time\TimeProviders\NtpServer*.
 
 1. Set the *Enabled* value to 1.
 
-1. Search for "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\W32Time\Config".
+1. Search for *HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\W32Time\Config*.
 
 1. Set the *AnnounceFlags* value to 5.
 
-1. Start the "Windows Time" service again and set the start type to *Automatic*.
+1. Start the Windows Time service again and set the start type to *Automatic*.
 
 > [!NOTE]
 >
-> - When using the Windows server 2012 R2 (64-bit), after Step 7 you have to set the start type to "Automatic (Delayed Start)" for the service to start automatically.
-> - If, when using Windows 7 or the Windows Server 2008 R2, the "Windows Time" service always stops, follow these instructions: [https://support.microsoft.com/en-us/help/2385818](https://support.microsoft.com/en-us/help/2385818).
+> - If you are using Windows Server 2012 R2 (64-bit), set the start type to "Automatic (Delayed Start)" for the service to start automatically.
+> - If you are using Windows 7 or Windows Server 2008 R2, and the Windows Time service always stops, follow the instructions from this [Microsoft support page](https://support.microsoft.com/en-us/help/2385818).
 
 ### Time client
 
@@ -92,7 +89,7 @@ To turn a DMA into a time client, do the following.
 
 1. Log on locally to the DMA, or establish a remote desktop session with it.
 
-1. Open the *Services* dialog box (*Start \> Settings \> Control Panel \> Administrative Tools \> Services*), and select the *Windows Time* service.
+1. Open the *Services* dialog box Start \> Settings \> Control Panel \> Administrative Tools \> Services, and select the *Windows Time* service.
 
 1. Right-click the service, and select *Properties*.
 
@@ -104,7 +101,7 @@ To turn a DMA into a time client, do the following.
 
 1. Check whether the service is actually running, and then close the *Properties* dialog box.
 
-1. Open a command prompt window (*Start \> Run... \> cmd*).
+1. Open a command prompt window Start \> Run... \> cmd.
 
 1. Enter *net time /set*, followed by the IP address of the time server, and press *Enter*.
 
