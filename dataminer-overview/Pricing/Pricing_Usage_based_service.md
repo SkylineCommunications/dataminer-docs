@@ -48,7 +48,7 @@ In case of a Pay-per-Use plan, user pay for what they use, giving ultimate flexi
 | Minimum contract duration | 12 months | - |
 | Automatic renewal | X | - |
 | Annual subscription fee | X | - |
-| Over utilization | Charged at a premium fee | - |
+| Over-utilization | Charged at a premium fee | - |
 | Support services | X (Support tier depends on the MUA level) | community |
 
 > [!IMPORTANT]
@@ -56,32 +56,45 @@ In case of a Pay-per-Use plan, user pay for what they use, giving ultimate flexi
 
 ### Subscription Terms & Conditions
 
-Start Date 	Date the system becomes online 
-Duration 	12-months, 24-months, or 36 months 
-Anniversary Date 	Subscription Date + Duration 
-Renewal 	Following the Anniversary Date, subscriptions renew automatically for 12-months, at the then current credit rates. 
-Billing 	12-months subscriptions:  
-•	Start Date: 100% 
-24-months subscription 
-•	Start Date: 60%  
-•	Start Date + 12 months: 40% 
-36-months subscription:  
-•	Start Date: 60%  
-•	Start Date + 12 months: 20%  
-•	Start Date + 24 months: 20% 
- 
-After the Anniversary Date it’s invoiced yearly, unless replaced by a new contract.  
-Credit rate 	The price of a credit is protected for the contract duration, i.e. 24- or 36-months subscriptions avoid the potential yearly price adjustments 
- 
-Cancellation 	Subscriptions can be cancelled up-to 30-days before the Anniversary Date. The subscription will remain active until the Anniversary Date. The amount paid is not refundable. 
- 
-Changes to the subscribed MUA Level 	MUA can be increased at any time, at the then current credit rate, without changing the Anniversary Date. Lowering MUA is only possible at the Anniversary Date. 
- 
-Metering 	Metering works in monthly cycles, starting at the first of each month. MUA is pro-rated for the first and last months. E.g.  
-MUA – 200 credits 
-Start Date – October 20, 2022 
-Anniversary Date – October 19, 2023 
-MUA available for the period October 20, 2022 to October 31, 2022 = 200 credits x  12 days / 31 days = 77.4 credits 
-MUA available for the period October 1, 2023 to October 19, 2023 =  200 credits x 19 days / 31 days = 122.6 credits 
- 
-Over utilization 	Consumption above the contracted Monthly Utilization Allowance (MUA) is possible, with the additional consumed credits being invoiced monthly, at the then current Pay-per-Use credit rate.
+- *Start date*: The date on which the system comes online.
+
+- *Duration*: 12 months, 24 months or 36 months.
+
+- *Anniversary date*: Subscription date + duration.
+
+- *Renewal*: Following the anniversary date, subscriptions renew automatically for 12 months at the then current credit rates.
+
+- *Billing*:
+
+    12-month subscriptions:  
+
+        - Start date: 100% 
+
+    24-month subscriptions:
+
+        - Start date: 60%
+        - Start date + 12 months: 40%
+
+    36-months subscriptions:
+  
+        - Start date: 60%
+        - Start date + 12 months: 20%
+        - Start date + 24 months: 20% 
+
+    After the anniversary date, the subscription will be invoiced yearly, unless replaced by a new contract.  
+
+- *Credit rate*: The price of a credit is protected for the duration of the contract, i.e. 24-month or 36-month subscriptions protect against potential yearly price adjustments.
+
+- *Cancellation*: Subscriptions can be cancelled up to 30 days before the anniversary date. The subscription will remain active until the anniversary date. The amount paid is not refundable.
+
+- *Changes to the subscribed MUA level*: MUA can be increased at any time, at the then current credit rate, without changing the anniversary date. Lowering MUA is only possible at the anniversary date.
+
+- *Metering*: Metering works in monthly cycles, starting on the first day of each month. MUA is pro-rated for the first and last months. For example:
+  
+    MUA: 200 credits
+    Start date: October 20, 2022
+    Anniversary date: October 19, 2023
+    MUA available from October 20, 2022 to October 31, 2022 = 200 credits x 12 days / 31 days = 77.4 credits
+    MUA available from October 1, 2023 to October 19, 2023 = 200 credits x 19 days / 31 days = 122.6 credits
+
+- *Over-utilization*: Consumption above the contracted Monthly Utilization Allowance (MUA) is possible, with the additional consumed credits being invoiced monthly, at the then current Pay-per-Use credit rate.
