@@ -71,9 +71,6 @@ The following shape data fields can be added to the group containing the booking
 
 - **ChildrenFilter**: To filter the bookings, add a **ChildrenFilter** shape data field to the shape group and set its value to a booking filter, using the same filter format as is used when specifying a *ListView* filter. See [List view filters](xref:Creating_a_list_view#list-view-filters).
 
-  > [!NOTE]
-  > This shape data field is no longer mandatory from DataMiner 10.2.0 [CU10]/10.3.1 onwards if the *ChildrenSource* shape data field is used (see below).
-
 - **ChildrenPanel**: In this optional shape data field, you can specify how the child items have to be organized within the container shape.
 
   Possible values:
@@ -91,5 +88,5 @@ The following shape data fields can be added to the group containing the booking
 
   > [!NOTE]
   >
-  > - If no *ChildrenSource* shape data field is added, by default the start time is yesterday (now - 1 day) and the end time is tomorrow (now + 1 day).
+  > - If no *ChildrenSource* shape data field is configured, by default the start time is yesterday (now - 1 day) and the end time is tomorrow (now + 1 day).
   > - Prior to DataMiner 10.2.0 [CU10]/10.3.1, using a *ChildrenSource* shape data field set to a specific time range will add the bookings in this time range to the ones that are already in the cache. This means that if there were other bookings in the cache already, shapes will be generated for those as well. If you want to filter the bookings to only show shapes in a specific time range, use a *ChildrenFilter* shape data field instead.
