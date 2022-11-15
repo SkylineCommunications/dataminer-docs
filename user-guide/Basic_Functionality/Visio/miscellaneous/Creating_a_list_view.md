@@ -15,7 +15,7 @@ To create a list view, add a shape on the Visio page with the following shape da
 
 - **Component**: *ListView*  
 
-- **ComponentOptions**: List of options, separated by pipe characters. For an overview of all possible component options, see [Component options](#component-options)
+- **ComponentOptions**: List of options, separated by pipe characters. For an overview of all possible component options, see [Component options](#component-options).
 
 - **Columns**: The list of columns that have to be displayed. Preferably, this should be configured by specifying the name of a saved column configuration, e.g. *MyColumnconfig*. If you do not specify this shape data field or leave it empty, all columns will be displayed.
   
@@ -376,16 +376,16 @@ List view components can be found both in Visual Overview and in the DataMiner B
 
 From DataMiner 10.0.0/10.0.2 onwards, when you manage the column configuration, you can select different column types. The following types are available:
 
-**Text**: Shows the value as text.
+- **Text**: Shows the value as text.
 
-**Alarm icon**: Use this type for a column indicating an ID of a service, element, or view. It will show the alarm icon for the relevant service, element, or view.
+- **Alarm icon**: Use this type for a column indicating an ID of a service, element, or view. It will show the alarm icon for the relevant service, element, or view.
 
-**Custom icon**: Displays a custom icon. This relies on Automation scripts providing an icon library.
+- **Custom icon**: Displays a custom icon. This relies on Automation scripts providing an icon library: a script that maps the custom icons, and a script that maps the column values to specific icon names.
 
-**Color**: Shows the color defined in the cell value.
+- **Color**: Shows the color defined in the cell value.
 
-**Date**: Expects a Date object, or a string representing a date in UTC time, in the culture of the client.
+- **Date**: Expects a Date object, or a string representing a date in UTC time, in the culture of the client.
 
-**Date (invariant)**: Available from DataMiner 10.2.12/10.3.0 onwards. Expects a Date object, or a string representing a date in UTC time, in [invariant culture](https://learn.microsoft.com/en-us/dotnet/api/system.globalization.cultureinfo.invariantculture).
+- **Date (invariant)**: Available from DataMiner 10.2.12/10.3.0 onwards. Expects a Date object, or a string representing a date in UTC time, in [invariant culture](https://learn.microsoft.com/en-us/dotnet/api/system.globalization.cultureinfo.invariantculture).
 
-**Colored text**: This type is specifically intended for the *AlarmLevel* column for services. It visualizes the alarm level by means of text preceded by a circle showing the alarm level color.
+- **Colored text**: This type is specifically intended for the *AlarmLevel* column for services. It visualizes the alarm level by means of text preceded by a circle showing the alarm level color.
