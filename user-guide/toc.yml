@@ -2751,6 +2751,8 @@
     - name: Known issues
       topicUID: Known_issues
       items:
+        - name: Element data lost after migrating elements in Cassandra Cluster setup
+          topicUID: KI_element_data_loss_after_migration_in_CC_setup
         - name: Multiple issues when Failover based on hostnames is used
           topicUID: KI_Failover_with_hostnames
         - name: NATS not starting if DMS name contains special characters

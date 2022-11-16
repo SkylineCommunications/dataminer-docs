@@ -5,6 +5,7 @@ uid: Known_issues
 
 | Issue | DataMiner version | Date added |
 |--|--|--|
+| [Element data lost after migrating elements in Cassandra Cluster setup](xref:KI_element_data_loss_after_migration_in_CC_setup) | From DataMiner 10.1.0/10.0.11 <br>onwards | November 15, 2022 |
 | [Multiple issues when Failover based on hostnames is used](xref:KI_Failover_with_hostnames) | From DataMiner 10.2.0/10.1.8 <br>onwards | November 15, 2022 |
 | [NATS not starting if DMS name contains special characters](xref:KI_NATS_not_starting_special_chars) | From DataMiner 10.1.0/10.1.2 <br>onwards | November 8, 2022 |
 | [SLDataGateway memory leak during Cassandra Cluster migration](xref:KI_SLDataGateway_leak_during_CC_migration) | DataMiner 10.1.0 prior to CU22<br>DataMiner 10.2.0 prior to CU10<br>DataMiner 10.1.2 to 10.2.12 | November 3, 2022 |
