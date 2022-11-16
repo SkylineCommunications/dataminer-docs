@@ -22,7 +22,7 @@ Use this method to add an attachment file to a ticket.
 | dmaID      | Integer | The DataMiner Agent ID.                             |
 | ticketID   | Integer | The ID of the ticket.                                |
 | fileName   | String | The name of the attachment file.                     |
-| ID         | String | The ID retrieved through an UploadFile call (internal use only). |
+| ID         | String | The ID retrieved through an UploadFile call (only available for Skyline employees). |
 
 ## Output
 

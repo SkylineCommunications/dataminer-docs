@@ -19,7 +19,7 @@ Use this method to add an attachment to a job. Available from DataMiner 10.2.0 [
 | connection | String | The connection ID. See [ConnectApp](xref:ConnectApp). |
 | jobID      | String | The ID of the job.                                   |
 | fileName   | String | The name of the attachment file.                     |
-| ID         | String | The ID retrieved through an UploadFile call (internal use only). |
+| ID         | String | The ID retrieved through an UploadFile call (only available for Skyline employees). |
 
 ## Output
 
