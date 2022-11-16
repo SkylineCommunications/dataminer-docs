@@ -25,20 +25,18 @@ To find this ID in DataMiner Cube:
 
 1. Open the view containing the element, service or redundancy group.
 
-1. Under BELOW THIS VIEW there is a page for each type of item that can be contained within the view. Using the ALL page will display all items within the view.
+1. In the navigation panel on the left, go to *BELOW THIS VIEW > ALL*.
 
-    Next to the item name, a number is displayed that indicates how many of these items are in the view. Click a page in the tree view to display a list of the items in question.
-
-    The IDs of all items in the view can be found in the *ID* column.
+1. Check the *ID* column to find the ID of the element, service, or redundancy group.
 
 > [!NOTE]
 > Alternatively, for an element or service, you can also right-click the item in the Surveyor and select *Properties*. The ID is displayed in the *general* tab, to the right of the name of the view.
 
 ## How do I find the ID of a parameter?
 
-On the element card containing the parameter, double-click the parameter, or right-click the parameter and select *Open*.
-
-The parameter ID is displayed below the parameter, next to the ID label.
+1. Open the element card containing the parameter.
+1. Double-click the parameter, or right-click the parameter and select *Open*.
+1. On the *Details* tab, look for the ID displayed below the parameter name.
 
 > [!NOTE]
 > For more information on how to generate a list of all parameters for a particular element, see [Generating a list of all parameters in a protocol version](xref:Advanced_protocol_functionality#generating-a-list-of-all-parameters-in-a-protocol-version).
