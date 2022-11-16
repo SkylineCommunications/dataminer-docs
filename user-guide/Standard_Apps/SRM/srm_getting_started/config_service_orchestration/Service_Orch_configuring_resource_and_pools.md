@@ -29,7 +29,7 @@ For every resource that needs to be used with Service Orchestration, the necessa
    > [!TIP]
    > See also:
    >
-   > - [Creating profile parameters](xref:implementing_function_srm#creating-profile-parameters)
+   > - [Creating profile parameters](xref:creating_profile_parameters)
    > - [Configuring profile parameters](xref:Configuring_profile_parameters)
 
 1. In the Resources module, make sure these capabilities are added to each of the resources:
