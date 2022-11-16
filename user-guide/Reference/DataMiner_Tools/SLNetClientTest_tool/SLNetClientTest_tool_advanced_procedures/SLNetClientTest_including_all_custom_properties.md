@@ -15,7 +15,7 @@ From DataMiner 10.2.12/10.3.0 onwards, an option is available through which you 
    > [!NOTE]
    >
    > - This option is saved into the file *MaintenanceSettings.xml* under the *SLNet* tag. It is not synchronized across Agents in the DMS.
-   > - DataMiner Cube will call the server-side search engine when you enter a numeric search string like "1234".
+   > - Multiple SearchOptions are separated by a `;`.
 
 1. In addition, in the *Diagnostics* menu, select *SLNet > Search Index Info*.
 
