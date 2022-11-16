@@ -18,7 +18,7 @@ uid: Cube_Feature_Release_10.2.12
 
 In the top-right corner of a trend graph, next to the full-screen button, a light bulb icon will now appear when DataMiner finds parameters that are related to the parameters shown in the trend graph. Clicking this light bulb icon will allow you to add one or more of those related parameters to the trend graph you are viewing.
 
-Relationships between parameters are found by studying the changes in the behavior of a trend (also known as change points). These relationships are then stored in a model managed by a DataMiner Extension Module named *ModelHost*. When you open a trend graph, DataMiner Cube will check the parameter relationship model, retrieve from it all parameters related to those shown in the trend graph, and list the ten most important ones when you click the light bulb icon.
+Relationships between parameters are found by studying the changes in the behavior of a trend (also known as change points). These relationships are then stored in a model managed by a DataMiner Extension Module named *ModelHost*. When you open a trend graph, DataMiner Cube will consult the ModelHost Extension Module to retrieve from it all parameters related to those shown in the trend graph, and list the ten most important ones when you click the light bulb icon.
 
 > [!NOTE]
 >
