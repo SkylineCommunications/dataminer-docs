@@ -380,7 +380,7 @@ From DataMiner 10.0.0/10.0.2 onwards, when you manage the column configuration, 
 
 - **Alarm icon**: Use this type for a column indicating an ID of a service, element, or view. It will show the alarm icon for the relevant service, element, or view.
 
-- **Custom icon**: Displays a custom icon. This relies on Automation scripts providing an icon library: a script that maps the custom icons, and a script that maps the column values to specific icon names.
+- **Custom icon**: Displays a custom icon. This relies on Automation scripts providing an icon library: a script that maps the custom icons, and a script that maps the column values to specific icon names. This column type can currently not be used.
 
 - **Color**: Shows the color defined in the cell value.
 
