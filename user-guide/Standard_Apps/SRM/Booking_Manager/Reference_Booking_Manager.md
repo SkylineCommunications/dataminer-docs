@@ -485,10 +485,13 @@ For example, if you set this property to *Satellites*, and the virtual platform 
 
 This property is used to sort resources for a specific node in the Booking Wizard based on available capacity.
 
-To configure this, on the *General* data page of the Booking Manager, set the *Resources Order Rule* parameter to *Capacity*. Then set the *Resource Sorting Capacity* property to the name of the capacity that should be used for sorting, e.g. *Bandwidth*.
+To configure this, on the *Config* > *Wizard* tab of the Booking Manager, set *Resources Ordering Rule* to *Capacity*. Then set the *Resource Sorting Capacity* property to the name of the capacity that should be used for sorting, e.g. *Bandwidth*.
 
 > [!NOTE]
-> If *Resources Order Rule* is set to *Capacity* but this property is not defined, the first available capacity will be used for sorting.
+> If *Resources Ordering Rule* is set to *Capacity* but this property is not defined, the first available capacity will be used for sorting.
+
+> [!TIP]
+> See also: [Resource sorting configuration](xref:Service_Orch_configuring_resource_and_pools#resource-sorting-configuration).
 
 ### Reuse Contributing Resource
 
