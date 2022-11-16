@@ -2751,6 +2751,8 @@
     - name: Known issues
       topicUID: Known_issues
       items:
+        - name: SLLog issue when large alarm tree is closed
+          topicUID: KI_SLLog_issue_when_large_alarm_tree_is_closed
         - name: Element data lost after migrating elements in Cassandra Cluster setup
           topicUID: KI_element_data_loss_after_migration_in_CC_setup
         - name: Multiple issues when Failover based on hostnames is used
