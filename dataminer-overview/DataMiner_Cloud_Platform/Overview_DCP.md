@@ -4,16 +4,16 @@ uid: Overview_DCP
 
 # DataMiner Cloud Platform
 
-The DataMiner Cloud Platform Services represent a genuine paradigm shift, offering innovative and game-changing solutions, which support the transition into the emerging ICT media and broadband landscape and empower digital transformation programs.
+The DataMiner Cloud Services represent a genuine paradigm shift, offering innovative and game-changing solutions, which support the transition into the emerging ICT media and broadband landscape and empower digital transformation programs.
 
-The name **DataMiner Cloud Platform Services** refers to the combined overall cloud ecosystem, which consists of different components:
+The name **DataMiner Cloud Services** refers to the combined overall cloud ecosystem, which consists of different components:
 
 - [Cloud-connected DataMiner Systems](#cloud-connected-dataminer-systems)
 - [DataMiner Dojo (a.k.a. Community)](#dataminer-dojo-community)
 - [DataMiner Project Collaboration](#dataminer-project-collaboration)
 - [DataMiner Cloud Services](#dataminer-cloud-services)
 
-The services are bundled into different tiers to which users can subscribe. Each tier contains a set of functionalities and capacities from the different services. For more information, see [DataMiner Cloud Platform Services](https://community.dataminer.services/dataminer-cloud-platform-services/).
+The services are bundled into different tiers to which users can subscribe. Each tier contains a set of functionalities and capacities from the different services. For more information, see [DataMiner Cloud Services](https://community.dataminer.services/dataminer-cloud-platform-services/).
 
 > [!TIP]
 > For more information on how to access the DataMiner Cloud Platform, see [DataMiner Cloud Services](https://skyline.be/dataminer/cloud-services).
