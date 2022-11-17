@@ -9,9 +9,4 @@ Can't find what you need here? Go to our [DataMiner Community website](https://c
 > [!TIP]
 > Want to contribute? Go to [Contributing to the DataMiner docs](xref:contributing) for more info.
 
-## Contents
-
-- [DataMiner Overview](xref:OverviewIndex)
-- [User Guide](xref:Part1GettingStarted)
-- [Developer Documentation](xref:DevelopIndex)
-- [DataMiner Release Notes](xref:DataMiner_General_RNs_index)
+[<img src="images/DataminerOverview.svg" alt="DataMiner Overview" width="300px">](xref:OverviewIndex) [<img src="images/UserGuide.svg" alt="User Guide" width="300px">](xref:Part1GettingStarted) [<img src="images/DeveloperDocumentation.svg" alt="Developer Documentation" width="300px">](xref:DevelopIndex) [<img src="images/DataminerReleaseNotes.svg" alt="DataMiner Release Notes" width="300px">](xref:DataMiner_General_RNs_index)
