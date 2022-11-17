@@ -107,9 +107,9 @@ In the Booking Wizard, the candidate resources for a node in the service definit
 
 - **Capacity of type number**: The resource is associated with a specific quantity, indicated by a number. Each booking will consume a part of that quantity defined in the selected profile instance (e.g. bit rate). The resource will be a valid candidate resource if there is enough capacity left for the entire booking duration when all other overlapping bookings making use of the resource are taken into account.
 
-### Setting up additional pre-filtering <!-- RN 24172 -->
+### Setting up additional pre-filtering
 
-To further limit the list of candidate resources, you can configure extra pre-filtering rules. This will generate an extra page in the Booking Wizard with controls that can be used to apply the extra filtering.
+To further limit the list of candidate resources, you can configure extra pre-filtering rules. This will generate an extra page in the Booking Wizard with controls that can be used to apply the extra filtering. <!-- RN 24172 -->
 
 To configure a pre-filtering rule:
 
@@ -147,15 +147,21 @@ To configure a pre-filtering rule:
 > - Multiple conditions, separated by an "AND" operator, are supported. For example: `"Condition": "<A> AND <B>"`. Each condition must be of type "Operation", and each operation must be an equal comparison between a capability on a resource and a variable representing a field that will be presented to the user.
 > - In case the capability is also present on the profile instance, the list of profile instances will be filtered as well. <!-- RN 24034 -->
 
+> [!TIP]
+> See also: [Resource Assignment](xref:SRM_properties_Booking_Manager#resource-assignment)
+
 ## Resource sorting configuration
 
 When candidate resources are presented in the Booking Wizard, these can be sorted in different ways.
 
 - **Based on priority**: To have them sorted based on priority, in the Resources module, add a *Priority* property to each resource in a pool. The lower the value you specify for this property, the higher in the sort order it will be displayed.
 
+  > [!TIP]
+  > See also: [Priority](xref:SRM_properties_Booking_Manager#priority)
+
 - **Alphabetically**: If priority is not specified, resources can be sorted alphabetically, if the *Alphabetically* option is selected for the *Resources Ordering Rule* setting on the *Config* > *Wizard* tab of the Booking Manager. <!-- RN 29107 -->
 
-- **Capacity**: If priority is not specified, resources can be sorted based on capacity, if the [Resource Sorting Capacity](xref:SRM_properties_Booking_Manager:resource-sorting-capacity) property is configured in the service definition and the *Capacity* option is selected for the *Resources Ordering Rule* setting on the *Config* > *Wizard* tab of the Booking Manager.
+- **Capacity**: If priority is not specified, resources can be sorted based on capacity, if the [Resource Sorting Capacity](xref:SRM_properties_Booking_Manager#resource-sorting-capacity) property is configured in the service definition and the *Capacity* option is selected for the *Resources Ordering Rule* setting on the *Config* > *Wizard* tab of the Booking Manager.
 
 - **Randomly**: If priority is not specified, resources can be sorted randomly, if the *Randomly* option is selected for the *Resources Ordering Rule* setting on the *Config* > *Wizard* tab of the Booking Manager.
 
@@ -184,9 +190,47 @@ When a booking is **edited** using the Booking Wizard, by default no resource wi
 > [!TIP]
 > See also: [Auto Select Resource](xref:SRM_properties_Booking_Manager#auto-select-resource)
 
-### Hiding node selection if a resource is available
+### Hiding resource selection if a resource is available
 
+It is possible to automatically hide the resource selection for a specific node in the Booking Wizard if a resource is available for it. To do so:
 
+1. In the Services module, go to the *definitions* tab.
 
-### Hiding node selection for a specific node
+1. Select the service definition and the node.
 
+1. In the *properties* pane below the diagram pane, add the property *HideIfResourceAvailable*, and set its value to *Yes*.
+
+> [!TIP]
+> See also: [HideIfResourceAvailable](xref:SRM_properties_Booking_Manager#hideifresourceavailable)
+
+### Hiding resource selection for a specific node
+
+It is possible to hide a specific node in the Booking Wizard regardless of whether a resource is available for it. To do so:
+
+1. In the Services module, go to the *definitions* tab.
+
+1. Select the service definition and the node.
+
+1. In the *properties* pane below the diagram pane, add the property *Options*, and set its value to *Hide*.
+
+   > [!NOTE]
+   > To combine multiple options in the *Options* property, use a pipe character ("|") as separator.
+
+> [!TIP]
+> See also: [Options](xref:SRM_properties_Booking_Manager#options)
+
+### Making resource selection optional for a node
+
+By default, a booking can only be confirmed when all mandatory resources and profiles have been selected. If you want resource selection to be optional for a specific node, you can configure this as follows:
+
+1. In the Services module, go to the *definitions* tab.
+
+1. Select the service definition and the node.
+
+1. In the *properties* pane below the diagram pane, add the property *Options*, and set its value to *Optional*.
+
+   > [!NOTE]
+   > To combine multiple options in the *Options* property, use a pipe character ("|") as separator.
+
+> [!TIP]
+> See also: [Options](xref:SRM_properties_Booking_Manager#options)
