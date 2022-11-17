@@ -20,7 +20,7 @@ In case of problems, Skyline Technical Support may ask you to provide version in
 
 ### Sending debug information to Technical Support
 
-1. In DataMiner Cube, go to *Apps* > *About*(in the *General* section).
+1. In DataMiner Cube, go to *Apps* > *About* (in the *General* section).
 
 1. At the bottom of the *About* box, click *Email Debug Information*.
 
@@ -59,7 +59,7 @@ To reinstall the browser app, you need to clean the XBAP cache:
 ## What should I do if I cannot connect to a DMA using the DataMiner Cube browser app?
 
 > [!NOTE]
-> DataMiner Cube can either be used as a desktop application (recommended) or as a browser application in Internet Explorer or Edge. See [Installing the DataMiner Cube desktop application](xref:Installing_the_DataMiner_Cube_desktop_application)
+> While using the DataMiner Cube browser application is still supported, we highly recommend using the desktop application instead. See [Installing the DataMiner Cube desktop application](xref:Installing_the_DataMiner_Cube_desktop_application)
 
 1. Check if Microsoft Edge has been correctly configured to run Cube for this DMA.
 
