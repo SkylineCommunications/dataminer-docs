@@ -14,7 +14,7 @@ uid: General_Main_Release_10.3.0_changes
 
 ### Enhancements
 
-#### Security enhancements [ID_31045] [ID_31054] [ID_31761] [ID_32055] [ID_32566] [ID_33069] [ID_33078] [ID_33218] [ID_33365] [ID_33583]
+#### Security enhancements [ID_31045] [ID_31054] [ID_31761] [ID_32055] [ID_32566] [ID_33069] [ID_33078] [ID_33218] [ID_33365] [ID_33583] [ID_34723]
 
 A number of security enhancements have been made.
 

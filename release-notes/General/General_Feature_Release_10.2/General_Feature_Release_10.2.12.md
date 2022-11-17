@@ -74,7 +74,7 @@ It is now possible to group parameters in a parameter feed that lists EPM parame
 
 ### Enhancements
 
-#### Security enhancements [ID_33520]
+#### Security enhancements [ID_33520] [ID_34723]
 
 A number of security enhancements have been made.
 
