@@ -77,6 +77,9 @@
     - name: Frequently asked questions
       topicUid: FAQs
       items:
+      - name: General questions
+        topicUID: FAQs_General
+        items:
         - name: What is Skyline's mission and vision
           topicUid: FAQ_MissionVision
         - name: Does DataMiner process personal data in a GDPR-compliant manner
@@ -95,8 +98,6 @@
           topicUid: FAQ_Concurrent_users
         - name: What is the recommended method for southbound integration of an EMS/NMS
           topicUid: FAQ_Southbound_integration_EMS_NMS
-        - name: What is the standard lead time for new connectors
-          topicUid: FAQ_Standard_lead_time_new_connectors
         - name: What are the DataMiner system requirements
           topicUid: FAQ_DataMiner_system_requirements
         - name: What is the DataMiner roadmap
@@ -105,11 +106,17 @@
           topicUid: FAQ_DMA_element_capacity
         - name: How much bandwidth must be provided for data acquisition on data sources
           topicUid: FAQ_Bandwidth_data_acquisition
-        - name: What are the limitations when using the Generic SNMP connector as opposed to a dedicated connector
-          topicUid: FAQ_Limitations_generic_SNMP_connector
         - name: Which languages are available in the DataMiner Cube client
           topicUid: FAQ_DataMiner_Cube_languages
+        - name: Questions related to pricing of usage-based services
+      - name: Questions related to connectors
+        topicUID: FAQs_Connectors
+        items:
+        - name: What is the standard lead time for new connectors
+          topicUid: FAQ_Standard_lead_time_new_connectors
+        - name: What are the limitations when using the Generic SNMP connector as opposed to a dedicated connector
+          topicUid: FAQ_Limitations_generic_SNMP_connector
         - name: What are the standard operating procedures for connector deployment?
           topicUID: FAQ_SOP_connectors
-        - name: Questions related to pricing of usage-based services
-          topicUID: Pricing_FAQ
+      - name: Questions related to pricing of usage-based services
+        topicUID: FAQs_Pricing

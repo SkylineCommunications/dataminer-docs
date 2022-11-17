@@ -11,7 +11,7 @@ DataMiner can be used with **Perpetual-Use Licenses** or with two flavors of usa
 For the usage-based models, pricing is available for both self-hosted (on-premises or in a private cloud) and Skyline-hosted (referred to as *DataMiner as a Service*) systems.
 
 > [!TIP]
-> See also: [Questions related to pricing of usage-based services](xref:Pricing_FAQ)
+> See also: [Questions related to pricing of usage-based services](xref:FAQs_Pricing)
 
 ## Perpetual-Use Licenses
 

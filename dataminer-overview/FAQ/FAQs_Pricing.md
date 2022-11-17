@@ -1,5 +1,5 @@
 ---
-uid: Pricing_FAQ
+uid: FAQs_Pricing
 ---
 
 # Questions related to pricing of usage-based services
