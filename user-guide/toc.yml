@@ -3016,6 +3016,8 @@
                   topicUid: SLNetClientTest_configuring_frequency_smart_baseline
                 - name: Disabling automatic NATS configuration
                   topicUid: SLNetClientTest_disabling_automatic_nats_config
+                - name: Configuring server-side search to include all custom properties
+                  topicUID: SLNetClientTest_including_all_custom_properties
         - name: SLOffload tool
           topicUid: SLOffload_tool
         - name: SLSkipAsSourceTool

@@ -34,6 +34,8 @@ Please note the following
 
 - If the text you enter in the box consists of less than three characters, an advanced search will only return exact matches.
 
+- Starting from DataMiner 10.2.12/10.3.0, you can search for a number (e.g "12345") in strings. In previous versions, if you search for a number only, this is always interpreted as a view ID, so that only the view with matching ID is returned.
+
 - In an advanced search, you can use specific keywords to only search for certain DataMiner items. See [Special search options](#special-search-options).
 
     > [!NOTE]
