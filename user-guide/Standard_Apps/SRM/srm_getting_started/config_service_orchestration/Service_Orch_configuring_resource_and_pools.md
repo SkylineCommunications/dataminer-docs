@@ -205,7 +205,7 @@ It is possible to automatically hide the resource selection for a specific node 
 
 ### Hiding resource selection for a specific node
 
-It is possible to hide a specific node in the Booking Wizard regardless of whether a resource is available for it. To do so:
+It is possible to hide a specific node in the Booking Wizard regardless of whether a resource is available for it. To do so: <!-- RN 19619 -->
 
 1. In the Services module, go to the *definitions* tab.
 
@@ -221,7 +221,7 @@ It is possible to hide a specific node in the Booking Wizard regardless of wheth
 
 ### Making resource selection optional for a node
 
-By default, a booking can only be confirmed when all mandatory resources and profiles have been selected. If you want resource selection to be optional for a specific node, you can configure this as follows:
+By default, a booking can only be confirmed when all mandatory resources and profiles have been selected. If you want resource selection to be optional for a specific node, you can configure this as follows: <!-- RN 20818 -->
 
 1. In the Services module, go to the *definitions* tab.
 
