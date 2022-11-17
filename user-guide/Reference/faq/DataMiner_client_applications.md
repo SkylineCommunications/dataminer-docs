@@ -59,7 +59,7 @@ To reinstall the browser app, you need to clean the XBAP cache:
 ## What should I do if I cannot connect to a DMA using the DataMiner Cube browser app?
 
 > [!NOTE]
-> While using the DataMiner Cube browser application is still supported, we highly recommend using the desktop application instead. See [Installing the DataMiner Cube desktop application](xref:Installing_the_DataMiner_Cube_desktop_application)
+> While using the DataMiner Cube browser application is still supported, we highly recommend using the desktop application instead. See [Installing the DataMiner Cube desktop application](xref:Installing_the_DataMiner_Cube_desktop_application).
 
 1. Check if Microsoft Edge has been correctly configured to run Cube for this DMA.
 
