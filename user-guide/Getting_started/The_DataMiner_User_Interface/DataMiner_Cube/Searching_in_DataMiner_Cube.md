@@ -28,13 +28,13 @@ Click a suggestion to immediately open the corresponding card, or click *Advance
 
 From DataMiner 10.1.11/10.2.0 onwards, you can also search directly in the advanced search pane using the search box at the top. If the pane is pinned to the sidebar, it is always displayed, even if you have not done a search using the search box in the header bar. (see [Sidebar](xref:DataMiner_Cube_sidebar)).
 
-Starting from DataMiner 10.2.12/10.3.0, you can search for a number (e.g "12345") in strings. In previous versions, if you search for a number only, this is always interpreted as a view ID, so that only the view with matching ID is returned.
-
 Please note the following
 
 - For a quick search, only the following objects can be displayed in the results: elements, services, service children with alias, redundancy groups, SLAs, views and apps, as well as objects of which the ID matches the search string. Hidden elements are not included.
 
 - If the text you enter in the box consists of less than three characters, an advanced search will only return exact matches.
+
+- Starting from DataMiner 10.2.12/10.3.0, you can search for a number (e.g "12345") in strings. In previous versions, if you search for a number only, this is always interpreted as a view ID, so that only the view with matching ID is returned.
 
 - In an advanced search, you can use specific keywords to only search for certain DataMiner items. See [Special search options](#special-search-options).
 
