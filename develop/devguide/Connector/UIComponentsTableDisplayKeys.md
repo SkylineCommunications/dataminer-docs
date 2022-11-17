@@ -20,7 +20,7 @@ Please keep the following guidelines in mind for display keys:
 
 More information on how a display key can be defined can be found in the following subsections:
 
-- [Naming](xref:UIComponentsTableDisplayKeys)
+- [Naming](xref:UIComponentsTableDisplayKeys#naming)
 - [NamingFormat](xref:UIComponentsTableDisplayKeys#namingformat)
 - [displayColumn attribute](xref:UIComponentsTableDisplayKeys#displaycolumn-attribute)
 
