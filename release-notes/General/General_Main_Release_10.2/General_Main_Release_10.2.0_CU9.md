@@ -209,7 +209,7 @@ In Visio pages displayed in web apps, it would not be possible to execute parame
 
 When an alarm is cleared, in Elasticsearch, its entire alarm tree is moved from the active alarm index to a closed alarm index.
 
-In some cases, when an alarm had different alarm trees (i.e. trees sharing the same root alarm ID but each with a different DataMiner ID), all those alarm trees would incorrectly be moved as one single tree.
+In some cases, when an alarm had different alarm trees on different agents (i.e. trees sharing the same root alarm ID but each with a different DataMiner ID), all those alarms would incorrectly be moved to one single tree.
 
 #### Monitoring app: Problem when trying to open the web UI of a device [ID_34503]
 
