@@ -28,7 +28,7 @@ Click a suggestion to immediately open the corresponding card, or click *Advance
 
 From DataMiner 10.1.11/10.2.0 onwards, you can also search directly in the advanced search pane using the search box at the top. If the pane is pinned to the sidebar, it is always displayed, even if you have not done a search using the search box in the header bar. (see [Sidebar](xref:DataMiner_Cube_sidebar)).
 
-Starting from DataMiner 10.2.12 / 10.3.0, it is possible to perform a numeric search (e.g "12345") in strings. In previous versions, this would only match on a view with this ID.
+Starting from DataMiner 10.2.12/10.3.0, you can search for a number (e.g "12345") in strings. In previous versions, if you search for a number only, this is always interpreted as a view ID, so that only the view with matching ID is returned.
 
 Please note the following
 
