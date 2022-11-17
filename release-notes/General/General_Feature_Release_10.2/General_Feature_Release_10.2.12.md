@@ -318,6 +318,14 @@ When a parameter of a DVE element exported as a standalone parameter was partial
 
 In Visio pages displayed in web apps, it would not be possible to execute parameter set actions.
 
+#### Elasticsearch: Alarm trees of a cleared alarm could incorrectly be moved to a closed alarm index as one single tree [ID_34502]
+
+<!-- MR 10.2.0 [CU9] - FR 10.2.12 -->
+
+When an alarm is cleared, in Elasticsearch, its entire alarm tree is moved from the active alarm index to a closed alarm index.
+
+In some cases, when an alarm had different alarm trees (i.e. trees sharing the same root alarm ID but each with a different DataMiner ID), all those alarm trees would incorrectly be moved as one single tree.
+
 #### Monitoring app: Problem when trying to open the web UI of a device [ID_34503]
 
 <!-- MR 10.2.0 [CU9] - FR 10.2.12 -->
