@@ -109,7 +109,10 @@ Either just use the script name as the property value, or specify the script in 
 
 This property allows you to indicate whether a resource should be assigned to a node automatically or not.
 
-Set this property to *TRUE* or *FALSE*.
+Set this property to *True*, *False*, or *Always*.
+
+> [!TIP]
+> See also: [Customizing automatic resource selection](xref:Service_Orch_configuring_resource_and_pools#customizing-automatic-resource-selection)
 
 ### BlockInfo
 
