@@ -16,19 +16,19 @@ uid: Cube_Feature_Release_10.3.1
 
 ## Other features
 
-#### Visual Overview: Automatically generated shapes representing bookings can now be sorted by custom property [ID_34572]
+#### DataMiner Cube - Visual Overview: Automatically generated shapes representing bookings can now be sorted by custom property [ID_34572] [ID_34864]
 
 <!-- MR 10.2.0 [CU10] - FR 10.3.1 -->
 
 When specifying that a shape should be created automatically for each booking in a particular set of bookings, it is now possible to have the automatically generated shapes sorted by a custom booking property.
 
-For example, in an SRM environment, you can have a booking time range that includes pre-roll and post-roll, and timings that contain the custom properties *Start* and *End*. From now on, it is possible to have the automatically generated shapes sorted by one of those custom properties. To do so, you can specify a shape data field of type *ChildrenSort* to the group-level shape and set its value to `Property|<CustomProperty>,<asc/desc>`.
+For example, in an SRM environment, you can have a booking time range that includes pre-roll and post-roll, and timings that contain the custom properties *Start* and *End*. From now on, it is possible to have the automatically generated shapes sorted by one of those custom properties. To do so, you can specify a shape data field of type *ChildrenSort* to the group-level shape and set its value to `Property|property=<CustomProperty>,<asc/desc>`.
 
 Examples:
 
 ```txt
-ChildrenSort="Property|Start,asc"
-ChildrenSort="Property|End,desc"
+ChildrenSort="Property|property=Start,asc"
+ChildrenSort="Property|property=End,desc"
 ```
 
 ## Changes
@@ -58,3 +58,9 @@ For example, in case of HTTP communication, there will now be extra levels for s
 <!-- MR 10.2.0 [CU10] - FR 10.3.1 -->
 
 When, in a service chain within a service context, an element shape was linked to a node property via a shape data field of type *Tooltip*, then the tooltip of that shape would incorrectly not show the value of that node property when using either a `[Service definition properties]` or a `[Service definition property:<property name>]` placeholder.
+
+#### DataMiner Cube - Visual Overview: Preset specified in a Spectrum Analysis component would incorrectly not be loaded [ID_34833]
+
+<!-- Main Release Version 10.1.0 [CU22]/10.2.0 [CU10] - Feature Release Version 10.3.1 -->
+
+When you had specified a preset in a shape that contained a Spectrum Analysis component, the preset would incorrectly not be loaded when you opened the visual overview in Cube.
