@@ -816,3 +816,9 @@ When you tried to request data from a simulation that was built with AutoBuildVe
 
 > [!CAUTION]
 > This tool is provided "As Is" with no representation or warranty whatsoever. Skyline Communications will not provide any maintenance or support for this tool.
+
+#### Low-code apps: Problem with 'Close a panel' action [ID_34892]
+
+<!-- MR 10.3.0 - FR 10.3.1 -->
+
+When a *Close a panel* action was configured as a post action on a button component, in some cases, it would incorrectly not cause the panel to close.

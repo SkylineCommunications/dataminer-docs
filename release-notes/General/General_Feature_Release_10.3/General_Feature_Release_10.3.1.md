@@ -175,6 +175,12 @@ When an HTTP request is sent, in some cases, WinHTTP can incorrectly throw a `SE
 
 From now on, when this error is thrown, DataMiner will retry the HTTP request the number of times specified for the HTTP connection in question.
 
+#### Low-code apps: Problem with 'Close a panel' action [ID_34892]
+
+<!-- MR 10.3.0 - FR 10.3.1 -->
+
+When a *Close a panel* action was configured as a post action on a button component, in some cases, it would incorrectly not cause the panel to close.
+
 #### Dashboards app & low-code apps - GQI: Certain cell values in a GQI query result would incorrect include the object type [ID_34895]
 
 <!-- MR 10.2.0 [CU10] - FR 10.3.1 -->
