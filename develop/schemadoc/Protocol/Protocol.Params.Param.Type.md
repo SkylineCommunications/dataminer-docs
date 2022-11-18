@@ -175,6 +175,7 @@ Read parameters retrieve information from the element. They allow you to display
 ### read bit
 
 Read bit parameters retrieve data from the group.
+The [NbrOfBits](xref:Protocol.Params.Param.Interprete.NbrOfBits) should be a multiple of 8, otherwise, wrong values could be read from the group.
 
 ### response
 
