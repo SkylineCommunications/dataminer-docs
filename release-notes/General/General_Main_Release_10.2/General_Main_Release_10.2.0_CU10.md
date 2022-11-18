@@ -146,3 +146,11 @@ When conditional coloring was applied on the first column of a table in which ac
 <!-- MR 10.2.0 [CU10] - FR 10.3.1 -->
 
 After a DataMiner upgrade, files belonging to previous app versions would incorrectly not be removed from the `C:\Skyline DataMiner\Webpages\App` and `C:\Skyline DataMiner\Webpages\Automation` folders. From now on, those folders will be deleted before new versions of those apps are installed.
+
+#### HTTP requests would incorrectly not be retried when WinHTTP threw a SEC_E_BUFFER_TOO_SMALL error [ID_34888]
+
+<!-- Main Release Version 10.0.0 [CU22]/10.1.0 [CU22]/10.2.0 [CU10] - Feature Release Version 10.3.1 -->
+
+When an HTTP request is sent, in some cases, WinHTTP can incorrectly throw a `SEC_E_BUFFER_TOO_SMALL` error when the server is using TLS 1.2.
+
+From now on, when this error is thrown, DataMiner will retry the HTTP request the number of times specified for the HTTP connection in question.
