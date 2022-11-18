@@ -197,8 +197,10 @@ When the JAVA_HOME variable was not set, SLLogCollector would become unresponsiv
 
 From now on, when SLLogCollector times out after executing a nodetool command, it will log a timeout message in its log file and proceed.
 
-#### Dashboards app & low-code apps - Table component: Problem when linked to multiple feed components [ID_34915]
+#### Dashboards app & low-code apps - Table component: Data of different types displayed in the same row would not get fed correctly to linked feed components [ID_34915]
 
 <!-- MR 10.2.0 [CU10] - FR 10.3.1 -->
 
-In some cases, when a table component was linked to multiple feed components, the data would not get fed to the table correctly.
+When a row in a table component contained data of different types, that data would not get fed correctly to linked feed components.
+
+Moreover, in some cases, the table would even not be able to feed the data in its rows.

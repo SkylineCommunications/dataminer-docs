@@ -961,3 +961,11 @@ Also, in some cases, elements with an index in a service would incorrectly not s
 <!-- MR 10.3.0 - FR 10.2.12 -->
 
 When you opened a trend graph that contained patterns matching existing tags, in some cases, not all detected occurrences of those patterns would initially be indicated. Only after zooming out would all detected patterns be properly indicated.
+
+#### Bookings app: Columns of type 'Date' would not get updated when you changed the time zone [ID_34840]
+
+<!-- MR 10.3.0 - FR 10.3.1 -->
+
+When, in the *Navigation* panel of the *Bookings* app, you selected another time zone, columns of type `Date` would incorrectly not get updated.
+
+Also, the *Navigation* panel has been improved and renamed to *Settings* panel.
