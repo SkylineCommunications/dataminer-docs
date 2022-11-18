@@ -12,6 +12,12 @@ uid: General_Main_Release_10.2.0_CU10
 
 ### Enhancements
 
+#### Cassandra cluster migration: Enhanced performance of SLElement when migrating alarms [ID_34668]
+
+<!-- MR 10.2.0 [CU10] - FR 10.3.1 -->
+
+Because of a number of enhancements, overall performance of SLElement has increased when migrating alarms during a Cassandra cluster migration.
+
 #### DataMiner Cube - Visual Overview: Automatically generated shapes representing bookings can now be sorted by custom property [ID_34572] [ID_34864]
 
 <!-- MR 10.2.0 [CU10] - FR 10.3.1 -->
@@ -174,3 +180,23 @@ From now on, when this error is thrown, DataMiner will retry the HTTP request th
 In some cases, cell values in a GQI query result would incorrect include the object type. This was the case for DOM instance IDs, DOM definition IDs, profile instance IDs and profile definition IDs.
 
 For example, a cell value would incorrectly be set to "DomDefinitionId[00000000-0000-0000-0000-000000000000]" while the display value was actually "00000000-0000-0000-0000-000000000000".
+
+#### Low-code apps: 'Fetch the data' action of a table component would resolve too soon [ID_34902]
+
+<!-- MR 10.2.0 [CU10] - FR 10.3.1 -->
+
+In some cases, a *Fetch the data* action of a table component would resolve too soon. This would cause post actions to be executed while the data was still being retrieved. From now on, the *Fetch the data* action will resolve when all data is retrieved.
+
+#### SLLogCollector would become unresponsive after executing a nodetool command [ID_34909]
+
+<!-- Main Release Version 10.1.0 [CU22]/10.2.0 [CU10] - Feature Release Version 10.3.1 -->
+
+When the JAVA_HOME variable was not set, SLLogCollector would become unresponsive after executing a nodetool command.
+
+From now on, when SLLogCollector times out after executing a nodetool command, it will log a timeout message in its log file and proceed.
+
+#### DataMiner Cube - EPM: Problem with topology filter [ID_34931]
+
+<!-- Main Release Version 10.1.0 [CU22]/10.2.0 [CU10] - Feature Release Version 10.3.1 -->
+
+When you opened a topology chain and selected a field in the topology filter, in some cases, the fields above the one you selected would incorrectly not get selected automatically.

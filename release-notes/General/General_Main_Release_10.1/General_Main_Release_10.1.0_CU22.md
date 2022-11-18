@@ -79,3 +79,17 @@ When you had specified a preset in a shape that contained a Spectrum Analysis co
 When an HTTP request is sent, in some cases, WinHTTP can incorrectly throw a `SEC_E_BUFFER_TOO_SMALL` error when the server is using TLS 1.2.
 
 From now on, when this error is thrown, DataMiner will retry the HTTP request the number of times specified for the HTTP connection in question.
+
+#### SLLogCollector would become unresponsive after executing a nodetool command [ID_34909]
+
+<!-- Main Release Version 10.1.0 [CU22]/10.2.0 [CU10] - Feature Release Version 10.3.1 -->
+
+When the JAVA_HOME variable was not set, SLLogCollector would become unresponsive after executing a nodetool command.
+
+From now on, when SLLogCollector times out after executing a nodetool command, it will log a timeout message in its log file and proceed.
+
+#### DataMiner Cube - EPM: Problem with topology filter [ID_34931]
+
+<!-- Main Release Version 10.1.0 [CU22]/10.2.0 [CU10] - Feature Release Version 10.3.1 -->
+
+When you opened a topology chain and selected a field in the topology filter, in some cases, the fields above the one you selected would incorrectly not get selected automatically.
