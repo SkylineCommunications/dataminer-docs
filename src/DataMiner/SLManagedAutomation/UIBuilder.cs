@@ -280,6 +280,31 @@ namespace Skyline.DataMiner.Automation
 		/// </example>
 		public UIBuilder AppendButton(string destVar, string displayText) { return null; }
 
+
+		/// <summary>
+		/// Adds a button to this dialog box with the specified destination variable name, button text and style.
+		/// The supported button styles can be accessed through const strings on the Style.Button class.
+		/// </summary>
+		/// <param name="destVar">The name of the destination variable.</param>
+		/// <param name="displayText">The button text.</param>
+		/// <param name="style">The button style (see Style.Button for supported styled).</param>
+		/// <returns>This <see cref="UIBuilder"/> instance.</returns>
+		/// <remarks>
+		/// <para>When the button is pressed, the destination variable is filled with its own name.</para>
+		/// <para>This is a convenience method that will create a new instance of <see cref="UIBlockDefinition"/> of type Button and sets <see cref="RequireResponse"/> to <c>true</c>.</para>
+		/// </remarks>
+		/// <example>
+		/// <code>
+		/// UIBuilder uibDialogBox1 = new UIBuilder();
+		/// // ...
+		/// uiBuilder.AppendButton("applyButtonDestVar", "Apply", Style.Button.CallToAction);
+		/// // ...
+		/// var uir = engine.ShowUI(uiBuilder);
+		/// string value = uir.GetString("applyButtonDestVar"); // If the button was pressed, the value will be "applyButtonDestVar"; otherwise, null.
+		/// </code>
+		/// </example>
+		public UIBuilder AppendButton(string destVar, string displayText, string style) { return null; }
+
 		/// <summary>
 		/// Adds a drop-down box to this dialog box.
 		/// </summary>
