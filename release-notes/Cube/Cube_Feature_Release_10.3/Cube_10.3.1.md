@@ -65,6 +65,14 @@ When, in a service chain within a service context, an element shape was linked t
 
 When you had specified a preset in a shape that contained a Spectrum Analysis component, the preset would incorrectly not be loaded when you opened the visual overview in Cube.
 
+#### Bookings app: Columns of type 'Date' would not get updated when you changed the time zone [ID_34840]
+
+<!-- MR 10.3.0 - FR 10.3.1 -->
+
+When, in the *Navigation* panel of the *Bookings* app, you selected another time zone, columns of type `Date` would incorrectly not get updated.
+
+Also, the *Navigation* panel has been improved and renamed to *Settings* panel.
+
 #### DataMiner Cube - EPM: Problem with topology filter [ID_34931]
 
 <!-- Main Release Version 10.1.0 [CU22]/10.2.0 [CU10] - Feature Release Version 10.3.1 -->
