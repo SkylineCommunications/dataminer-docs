@@ -195,6 +195,12 @@ When the JAVA_HOME variable was not set, SLLogCollector would become unresponsiv
 
 From now on, when SLLogCollector times out after executing a nodetool command, it will log a timeout message in its log file and proceed.
 
+#### Dashboards app & low-code apps - Table component: Problem when linked to multiple feed components [ID_34915]
+
+<!-- MR 10.2.0 [CU10] - FR 10.3.1 -->
+
+In some cases, when a table component was linked to multiple feed components, the data would not get fed to the table correctly.
+
 #### DataMiner Cube - EPM: Problem with topology filter [ID_34931]
 
 <!-- Main Release Version 10.1.0 [CU22]/10.2.0 [CU10] - Feature Release Version 10.3.1 -->
