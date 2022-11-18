@@ -27,6 +27,12 @@ ChildrenSort="Property|Start,asc"
 ChildrenSort="Property|End,desc"
 ```
 
+#### DataMiner Cube - Visual Overview: Enhanced performance when updating automatically generated shapes that represent bookings [ID_34695]
+
+<!-- MR 10.2.0 [CU10] - FR 10.3.1 -->
+
+Because of a number of enhancements, overall performance has increased when updating automatically generated shapes that represent bookings.
+
 #### SLLogCollector now also collects DxM version info and APIGateway app settings [ID_34701]
 
 <!-- MR 10.2.0 [CU10] - FR 10.3.1 -->
@@ -84,6 +90,12 @@ For example, in case of HTTP communication, there will now be extra levels for s
 When a required software license cannot be found, a `One or more of the following modules are not licensed: ...` message will appear.
 
 In some cases, instead of listing the unlicensed modules, this message would incorrectly only mention "None".
+
+#### Web apps: Problem with email address boxes [ID_34421]
+
+<!-- MR 10.2.0 [CU10] - FR 10.2.12 -->
+
+When you entered an address in an email address box and then selected something else on the page without pressing *ENTER* or *TAB*, the email address box would incorrectly expand and show a list of suggestions.
 
 #### DataMiner Cube - Visual Overview: Tooltip of an element in a service chain would incorrectly not show values of node properties [ID_34664]
 

@@ -2751,6 +2751,12 @@
     - name: Known issues
       topicUID: Known_issues
       items:
+        - name: SLLog issue when large alarm tree is closed
+          topicUID: KI_SLLog_issue_when_large_alarm_tree_is_closed
+        - name: Element data lost after migrating elements in Cassandra Cluster setup
+          topicUID: KI_element_data_loss_after_migration_in_CC_setup
+        - name: Multiple issues when Failover based on hostnames is used
+          topicUID: KI_Failover_with_hostnames
         - name: NATS not starting if DMS name contains special characters
           topicUID: KI_NATS_not_starting_special_chars
         - name: SLDataGateway memory leak during Cassandra Cluster migration
@@ -3012,6 +3018,8 @@
                   topicUid: SLNetClientTest_configuring_frequency_smart_baseline
                 - name: Disabling automatic NATS configuration
                   topicUid: SLNetClientTest_disabling_automatic_nats_config
+                - name: Configuring server-side search to include all custom properties
+                  topicUID: SLNetClientTest_including_all_custom_properties
         - name: SLOffload tool
           topicUid: SLOffload_tool
         - name: SLSkipAsSourceTool
