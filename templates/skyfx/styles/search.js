@@ -83,7 +83,7 @@ $(function () {
     const apikey = '5630827C003AFD513AA4D8D21A0A79B7';
     const encodedQueryString = encodeURIComponent(searchTerm);
     const limit = 200;
-    return `https://docs-srch.search.windows.net/indexes/docs-blob-index/docs?api-version=2021-04-30-Preview&$top=${limit}&search=${encodedQueryString}&api-key=${apikey}`;
+    return `https://docs-srch.search.windows.net/indexes/docs-blob-index2/docs?api-version=2021-04-30-Preview&$top=${limit}&search=${encodedQueryString}&api-key=${apikey}`;
   }
 
   function search(searchTerm) {
