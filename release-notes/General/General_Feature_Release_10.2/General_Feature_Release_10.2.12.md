@@ -509,3 +509,9 @@ When you tried to request data from a simulation that was built with AutoBuildVe
 <!-- MR 10.1.0 [CU21] / 10.2.0 [CU9] - FR 10.2.12 -->
 
 When a connection had been closed, in some cases, an error could occur in the hosting process.
+
+#### Certain antivirus software products could incorrectly flag SLSpiHost.exe as malicious [ID_34942]
+
+<!-- MR 10.2.0 [CU9] - FR 10.2.12 [CU0] -->
+
+In some cases, certain antivirus software products could incorrectly flag SLSpiHost.exe as malicious.
