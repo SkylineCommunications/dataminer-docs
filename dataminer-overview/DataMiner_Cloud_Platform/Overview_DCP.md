@@ -13,7 +13,7 @@ The name **DataMiner Cloud Services** refers to the combined overall cloud ecosy
 - [DataMiner Project Collaboration](#dataminer-project-collaboration)
 - [DataMiner Cloud Services](#dataminer-cloud-services)
 
-The services are bundled into different tiers to which users can subscribe. Each tier contains a set of functionalities and capacities from the different services. For more information, see [DataMiner Cloud Services](https://community.dataminer.services/dataminer-cloud-platform-services/).
+The services are bundled into different tiers to which users can subscribe. Each tier contains a set of functionalities and capacities. For more information, see [DataMiner Cloud Services](https://community.dataminer.services/dataminer-cloud-platform-services/).
 
 > [!TIP]
 > For more information on how to access the DataMiner Cloud Platform, see [DataMiner Cloud Services](https://skyline.be/dataminer/cloud-services).
