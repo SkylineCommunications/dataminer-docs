@@ -67,7 +67,10 @@ In the Booking Wizard, the candidate resources for a node in the service definit
 
 1. In the Profiles module, make sure the necessary capability and capacity parameters are defined and added to the profile definition you want to use for a specific node. See [The Profiles module](xref:The_Profiles_module).
 
-<!-- TBD: May need more details - to be added in profile instances section later? -->
+<!-- TBD: May need more details - to be added later when the profile instances information is added -->
+
+   > [!NOTE]
+   > If capabilities or capacities are defined on an interface profile definition, having the same capability or capacity parameters on multiple interfaces of the same function is not supported.
 
 1. In the Services module, assign the profile definition to the node:
 
@@ -93,13 +96,11 @@ In the Booking Wizard, the candidate resources for a node in the service definit
 
 ### Supported capabilities and capacities for filtering
 
-- **Capability of type string**: Supported from SRM 1.2.2 onwards. In this case, the resource is associated with a fixed string. A resource will be considered a valid candidate resource for a booking if the capability defined in the profile instance has the same value as defined on the resource. <!-- RN 25446 -->
+- **Capability of type text**: Supported from SRM 1.2.2 onwards. In this case, the resource is associated with a fixed string. A resource will be considered a valid candidate resource for a booking if the capability defined in the profile instance has the same value as defined on the resource. <!-- RN 25446 -->
 
-  Capabilities of type string with **time dependency** are also supported. In this case, the resource is dynamically associated with a fixed string determined by the booking making use of it. When you configure the resource in the Resources module, instead of specifying a capability value, select *Use time-dependent*. It will then only be possible to use the resource in multiple overlapping booking if they share the same purpose.
+  Capabilities of type text with **time dependency** are also supported. In this case, the resource is dynamically associated with a fixed string determined by the booking making use of it. When you configure the resource in the Resources module, instead of specifying a capability value, select *Use time-dependent*. It will then only be possible to use the resource in multiple overlapping booking if they share the same purpose.
 
   For example, a steerable antenna can have a "Satellite" time-dependent capability indicating the satellite it is receiving. When an antenna is provisioned with this time-dependent capability, and it is booked in the future to receive a specific satellite, it will only be possible to book that same antenna for an overlapping booking when that overlapping booking uses it to receive the same satellite.
-
-<!-- TBD: It is not possible to select "String" as a type when configuring the details of a profile parameter. Is this configured elsewhere? Or does this correspond with the type "Text"? -->
 
 - **Capability of type discrete**: The resource is associated with a list of items, i.e. the discrete values of the capability. A resource is considered a valid candidate resource when the capability value defined in the profile instance is one of the selected values of this capability for this resource.
 

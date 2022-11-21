@@ -31,7 +31,7 @@ Below you can fin the basic steps to create a Profile-Load Scripts. For more det
 
 ## Input arguments of a Profile-Load Script
 
-A PLS can take the following input arguments:
+A PLS takes the following input arguments:
 
 - Script dummy: *FunctionDve*, based on the virtual function definition.
 
@@ -84,7 +84,7 @@ foreach (var config in parametersConfiguration)
 ```
 
 > [!NOTE]
-> in case a mediation snippet is defined on profile parameter level, the mediated value will be returned. <!-- RN 32713 -->
+> In case a mediation snippet is defined on profile parameter level, the mediated value will be returned. <!-- RN 32713 -->
 
 ### Function DVE configuration
 
@@ -125,7 +125,7 @@ If a Profile-Load Script fails to configure the function DVE, an exception must 
 
 ## Testing Profile-Load Scripts
 
-To validate Profile-Load Scripts individually without the need to create a booking, you can create a PLS Tester element, which can be used manually, semi-manually, or automatically. This tool is included in the SRM package since version 1.2.21.
+To validate Profile-Load Scripts individually without the need to create a booking, you can create a PLS Tester element, which can be used manually, semi-manually, or automatically. This tool is included in the SRM package since version 1.2.21. <!-- RN 31950 -->
 
 ![PLS Tester](~/user-guide/images/PLS_Tester.png)
 
@@ -232,7 +232,7 @@ The test sequence can be as simple as applying a profile instance to a single re
 
 1. Specify a name for the test case, select the custom script defining the test sequence, and click *OK*.
 
-   The test case will now be displayed in the table
+   The test case will now be displayed in the table.
 
    > [!NOTE]
    > In case the script is not displayed, click the *Refresh* button to the left of the *Test Cases* table.
