@@ -287,7 +287,7 @@ namespace Skyline.DataMiner.Automation
 		/// </summary>
 		/// <param name="destVar">The name of the destination variable.</param>
 		/// <param name="displayText">The button text.</param>
-		/// <param name="style">The button style (see Style.Button for supported styled).</param>
+		/// <param name="style">The button style (see Style.Button for supported styles).</param>
 		/// <returns>This <see cref="UIBuilder"/> instance.</returns>
 		/// <remarks>
 		/// <para>When the button is pressed, the destination variable is filled with its own name.</para>
