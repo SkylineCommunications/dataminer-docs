@@ -599,7 +599,8 @@ namespace Skyline.DataMiner.Automation
 		/// <value>The style of the dialog box item.</value>
 		/// <remarks>
 		/// <para>It is possible to set a style on some dialog box items.</para>
-		/// <para>The supported styles can be accessed through const strings on the Style class, subdivided per control type (Button, Text, ...).</para>
+		/// <para>The supported styles can be accessed through const strings on the Style class, subdivided per control type (Button, Text, ...).<br/>
+		/// The Style class is available from DataMiner 10.3.1 onwards. On older DataMiner versions you can use the StaticText styles 'Title1', 'Title2' and 'Title3'.</para>
 		/// </remarks>
 		/// <example>
 		/// <code>

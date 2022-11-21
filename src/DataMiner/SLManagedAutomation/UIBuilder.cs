@@ -249,11 +249,11 @@ namespace Skyline.DataMiner.Automation
 		/// <returns>This <see cref="UIBuilder"/> instance.</returns>
 		/// <example>
 		/// <code>
-		/// UIBuilder uibDialogBox1 = new UIBuilder();
+		/// UIBuilder uiBuilder = new UIBuilder();
 		/// // ...
 		/// UIBlockDefinition blockTextBox = new UIBlockDefinition();
 		/// // ...
-		/// uibDialogBox1.AppendBlock(blockTextBox);
+		/// uiBuilder.AppendBlock(blockTextBox);
 		/// </code>
 		/// </example>
 		public UIBuilder AppendBlock(UIBlockDefinition block) { return null; }
@@ -270,7 +270,7 @@ namespace Skyline.DataMiner.Automation
 		/// </remarks>
 		/// <example>
 		/// <code>
-		/// UIBuilder uibDialogBox1 = new UIBuilder();
+		/// UIBuilder uiBuilder = new UIBuilder();
 		/// // ...
 		/// uiBuilder.AppendButton("applyButtonDestVar", "Apply");
 		/// // ...
@@ -282,8 +282,9 @@ namespace Skyline.DataMiner.Automation
 
 
 		/// <summary>
-		/// Adds a button to this dialog box with the specified destination variable name, button text and style.
-		/// The supported button styles can be accessed through const strings on the Style.Button class.
+		/// <para>Adds a button to this dialog box with the specified destination variable name, button text and style.<br/>
+		/// The supported button styles can be accessed through const strings on the Style.Button class.</para>
+		/// <para>This is supported from DataMiner 10.3.1 onwards.</para>
 		/// </summary>
 		/// <param name="destVar">The name of the destination variable.</param>
 		/// <param name="displayText">The button text.</param>
@@ -295,7 +296,7 @@ namespace Skyline.DataMiner.Automation
 		/// </remarks>
 		/// <example>
 		/// <code>
-		/// UIBuilder uibDialogBox1 = new UIBuilder();
+		/// UIBuilder uiBuilder = new UIBuilder();
 		/// // ...
 		/// uiBuilder.AppendButton("applyButtonDestVar", "Apply", Style.Button.CallToAction);
 		/// // ...
@@ -316,7 +317,7 @@ namespace Skyline.DataMiner.Automation
 		/// </remarks>
 		/// <example>
 		/// <code>
-		/// UIBuilder uibDialogBox1 = new UIBuilder();
+		/// UIBuilder uiBuilder = new UIBuilder();
 		/// 
 		/// uiBuilder.AppendDropDown("selectionVar", "1|Automatic", "2|Semi-automatic", "3|Manual");
 		/// 
