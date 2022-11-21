@@ -4,7 +4,7 @@ uid: Amazon_Keyspaces_Service
 
 # Amazon Keyspaces Service
 
-From DataMiner 10.3.0 onwards, it is possible to use the Amazon Keyspaces Service on AWS.
+From DataMiner 10.3(CU0)/10.3.1 onwards, it is possible to use the Amazon Keyspaces Service on AWS.
 
 ## Configuring TLS
 
