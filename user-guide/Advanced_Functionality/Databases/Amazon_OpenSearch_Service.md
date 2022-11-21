@@ -4,7 +4,7 @@ uid: Amazon_OpenSearch_Service
 
 # Amazon OpenSearch Service
 
-From DataMiner 10.3.0 onwards, it is possible to Amazon OpenSearch Service on AWS as an alternative to a on-prem hosted Elasticsearch/OpenSearch cluster.
+From DataMiner 10.3(CU0)/10.3.1 onwards, it is possible to Amazon OpenSearch Service on AWS as an alternative to a on-prem hosted Elasticsearch/OpenSearch cluster.
 
 ## Compatibility
 
