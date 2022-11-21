@@ -278,3 +278,9 @@ In order to prevent this error, from now on, *QActionHelperBaseClasses* will alw
 The Rate classes now include device reboot detection to avoid invalid rate calculations.
 
 The example protocol *SLC SDF Rates - SNMP* has also been adapted accordingly.
+
+### 1.2.2.6
+
+Methods for Rate calculations based on DateTime now require UTC DateTime values.
+
+The example protocol *SLC SDF Rates - Custom* has also been adapted accordingly.

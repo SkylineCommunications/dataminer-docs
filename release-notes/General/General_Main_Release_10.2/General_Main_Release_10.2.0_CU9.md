@@ -2,10 +2,10 @@
 uid: General_Main_Release_10.2.0_CU9
 ---
 
-# General Main Release 10.2.0 CU9 – Preview
+# General Main Release 10.2.0 CU9
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 > For information on how to upgrade DataMiner, see [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent).
@@ -16,14 +16,14 @@ uid: General_Main_Release_10.2.0_CU9
 
 A number of security enhancements have been made.
 
-#### Failover: Decommissioning a Failover setup while the server hosting the offline agent is unavailable [ID_33827]
+#### Failover: Decommissioning a Failover setup while the server hosting the offline Agent is unavailable [ID_33827]
 
 <!-- MR 10.2.0 [CU9] - FR 10.2.12 -->
 
-It is now possible to decommission a Failover setup while the server hosting the offline agent is unavailable.
+It is now possible to decommission a Failover setup while the server hosting the offline Agent is unavailable.
 
 > [!NOTE]
-> When you try to decommission a Failover setup while the offline agent is missing, in Cube's *Failover Config* window, a warning will be displayed.
+> When you try to decommission a Failover setup while the offline Agent is missing, in Cube's *Failover Config* window, a warning will be displayed.
 
 #### SLReset will no longer remove VersionHistory.txt and the HTTPS configuration [ID_34194]
 
@@ -112,11 +112,11 @@ SLLogCollector packages will now also include the following additional files con
 | Logs\Network Information\route.exe print.txt              | The output of a `route print` command.              |
 | Logs\Network Information\netsh.exe winhttp show proxy.txt | The output of a `netsh winhttp show proxy` command. |
 
-#### Failover: A reverse proxy will now be used to re-route HTTP traffic from the offline agent to the online agent [ID_34606]
+#### Failover: A reverse proxy will now be used to re-route HTTP traffic from the offline Agent to the online Agent [ID_34606]
 
 <!-- MR 10.2.0 [CU9] - FR 10.2.12 -->
 
-In a Failover setup, a reverse proxy will now be hosted in IIS in order to re-route HTTP traffic from the offline agent to the online agent. After a switch has occurred, the proxy will be disabled in the online agent and enabled on the offline agent.
+In a Failover setup, a reverse proxy will now be hosted in IIS in order to re-route HTTP traffic from the offline Agent to the online Agent. After a switch has occurred, the proxy will be disabled in the online Agent and enabled on the offline Agent.
 
 This feature requires the Application Request Routing (ARR) module to be installed on IIS. When you upgrade to version 10.2.12 / 10.2.0 [CU9], it will automatically be installed if it has not yet been installed earlier.
 
@@ -131,6 +131,14 @@ When an HTTP element received an ERROR_WINHTTP_SECURE_FAILURE after sending an H
 
 From now on, when an HTTP element receives an ERROR_WINHTTP_SECURE_FAILURE after sending an HTTP request, it will resend the request for a number of times, taking into account the number of retries specified in the element's port settings.
 
+#### Service & Resource Management: Check for duplicate function names when creating/editing resources [ID_34648]
+
+<!-- MR 10.2.0 [CU9] - FR 10.2.12 -->
+
+When you create or edit a resource, from now on, a check will be performed to determine whether the function instance name is already being used for another resource within the same main element. If the function instance name already exists, you will not be able to save the resource and a *DuplicateFunctionName* error will be added to the *SLFunctionManager.txt* log file. In that error, you will find the ID and the name of the existing resource with that same function instance name.
+
+An *InitializeFunctionResourceFailed* error will also be added to the *SLResourceManager.txt* log file.
+
 #### Cassandra: Enhanced querying of trend data [ID_34659]
 
 <!-- Main Release Version 10.1.0 [CU21]/10.2.0 [CU9] - Feature Release Version TBD -->
@@ -141,7 +149,7 @@ A number of enhancements have been made with regard to querying trend data again
 
 <!-- MR 10.2.0 [CU9] - FR 10.2.12 -->
 
-Up to now, the *SLReset.exe* option *-cleanclustereddatabase* would remove all keyspaces and indices from the CassandraCluster and ElasticSearch databases. From now on, this option will only remove the tables, keyspaces and indices defined in the *db.xml* file from the databases (clusters as well as single-node Cassandra databases on remote machines).
+Up to now, the *SLReset.exe* option *-cleanclustereddatabases* would remove all keyspaces and indices from the Cassandra cluster and Elasticsearch databases. From now on, this option will only remove the tables, keyspaces and indices defined in the *DB.xml* file from the databases (clusters as well as single-node Cassandra databases on remote machines).
 
 #### SLMessageBroker log file entries will now mention the NATS server to which the NATS client is connected [ID_34719]
 
@@ -194,6 +202,14 @@ When a parameter of a DVE element exported as a standalone parameter was partial
 <!-- MR 10.2.0 [CU9] - FR 10.2.12 -->
 
 In Visio pages displayed in web apps, it would not be possible to execute parameter set actions.
+
+#### Elasticsearch: Alarm trees of a cleared alarm could incorrectly be moved to a closed alarm index as one single tree [ID_34502]
+
+<!-- MR 10.2.0 [CU9] - FR 10.2.12 -->
+
+When an alarm is cleared, in Elasticsearch, its entire alarm tree is moved from the active alarm index to a closed alarm index.
+
+In some cases, when there were different alarm trees on different agents (trees sharing the same root alarm ID but each with a different DataMiner ID), all those alarms would incorrectly be moved to one single tree.
 
 #### Monitoring app: Problem when trying to open the web UI of a device [ID_34503]
 
@@ -368,6 +384,14 @@ SLWatchDog will now periodically check the log file and, if it finds the above-m
 
 Also, SLNet will now by default limit the number of NAS log files in the same way as it limits the NATS log files: check the files every 15 minutes and keep the 10 most recent files.
 
+#### DataMiner Cube - Alarm Console: Problem with visibility of correlation alarms in filtered alarm tabs [ID_34728]
+
+<!-- MR 10.2.0 [CU9] - FR 10.2.12 -->
+
+When a filtered alarm tab contained a correlation alarm, in some cases, this correlation alarm would incorrectly not disappear when it did no longer match the filter, especially when that filter was configured to hide alarms of type "Comment added", "Acknowledged" or "Released".
+
+Also, when a correlation alarm did not match the filter, only the base alarms would be shown, but when the type of one of those base alarms changed to "Comment added", "Acknowledged" or "Released", that base alarm would incorrectly not disappear.
+
 #### Mediation protocols: 'Recursion detected in the mediation links tree' error [ID_34736]
 
 <!-- Main Release Version 10.0.0 [CU22]/10.1.0 [CU21]/10.2.0 [CU9] - Feature Release Version 10.2.12 -->
@@ -385,3 +409,15 @@ As this error was caused by an internal lookup issue that had no effect whatsoev
 <!-- MR 10.2.0 [CU9] - FR 10.2.12 -->
 
 When, in the Alarm Console, you double-clicked a suggestion or alarm event created by SLAnalytics for a table parameter with advanced naming, in some cases, the trend graph would incorrectly show "no data".
+
+#### An error could occur in the hosting process when a connection had been closed [ID_34786]
+
+<!-- MR 10.1.0 [CU21] / 10.2.0 [CU9] - FR 10.2.12 -->
+
+When a connection had been closed, in some cases, an error could occur in the hosting process.
+
+#### Certain antivirus software products could incorrectly flag SLSpiHost.exe as malicious [ID_34942]
+
+<!-- MR 10.2.0 [CU9] - FR 10.2.12 [CU0] -->
+
+In some cases, certain antivirus software products could incorrectly flag SLSpiHost.exe as malicious.

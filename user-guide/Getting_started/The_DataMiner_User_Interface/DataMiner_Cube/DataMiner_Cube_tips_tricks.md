@@ -65,7 +65,7 @@ This section lists tips and tricks on how to use DataMiner Cube, including the t
 
 - Would you like to have certain elements, views, services or apps easily available? Pin them in the recent activity list (also available in the Monitoring app). [Recent items](xref:Main_Cube_UI_components_prior_to_DataMiner_10#recent-items).
 
-- Do you want to move several elements from one view to another? Select them on the source view card and drag them to the target view in the Surveyor in drag-and-drop editing mode.
+- Do you want to copy several elements from one view to another? Select them on the source view card and drag them to the target view in the Surveyor in drag-and-drop editing mode.
 
 ## About trending
 

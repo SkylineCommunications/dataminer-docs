@@ -2,25 +2,43 @@
 uid: Cube_Feature_Release_10.2.12
 ---
 
-# DataMiner Cube Feature Release 10.2.12 – Preview
+# DataMiner Cube Feature Release 10.2.12
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 > For release notes for this release that are not related to DataMiner Cube, see [General Feature Release 10.2.12](xref:General_Feature_Release_10.2.12).
 
 ## Highlights
 
-*No highlights have been selected for this release yet*
-
-## Other features
-
-#### Trending: When trending a parameter, related parameters can now be added through light bulb icon [ID_34432]
+#### Trending: Light bulb icon now indicates that related parameters have been found [ID_34432]
 
 <!-- MR 10.3.0 - FR 10.2.12 -->
 
-When trending a parameter, you can now add related parameters by clicking the light bulb icon in the top-right corner of the trend. In doing so, you will get an overview of suggested parameters that are related to the currently displayed parameter trend.
+In the top-right corner of a trend graph, next to the full-screen button, a light bulb icon will now appear when DataMiner finds parameters that are related to the parameters shown in the trend graph. Clicking this light bulb icon will allow you to add one or more of those related parameters to the trend graph you are viewing.
+
+Relationships between parameters are found by studying the changes in the behavior of a trend (also known as change points). These relationships are then stored in a model managed by a DataMiner Extension Module named *ModelHost*. When you open a trend graph, DataMiner Cube will consult the ModelHost Extension Module to retrieve from it all parameters related to those shown in the trend graph, and list the ten most important ones when you click the light bulb icon.
+
+> [!NOTE]
+>
+> - This light bulb feature will only work on cloud-connected DataMiner Agents that have the *ModelHost* DxM installed and that have been configured to [offload alarm and change point events to the cloud](xref:Controlling_cloudfeed_data_offloads).
+> - Relationship models are calculated once per week. When this feature is activated, it can take up to a week before the first results are visible.
+
+#### Automation: No more 'Abort' buttons in dialog boxes of interactive Automation scripts [ID_34559]
+
+<!-- MR 10.3.0 - FR 10.2.12 -->
+
+In dialog boxes of an interactive Automation script, up to now, you were able to abort the script by clicking the *Abort* button. From now on, this button will no longer be available. Instead, you can now do the following to abort a script when a dialog box has the focus:
+
+- close the dialog box by clicking the *X* in the top-right corner, or
+
+- press ALT+F4.
+
+> [!IMPORTANT]
+> When an interactive Automation script was launched from a web app, then you will have to press ESC instead of ALT+F4 to close a dialog box and abort the script. Pressing ALT+F4 would close the browser, not just the dialog box.
+
+## Other features
 
 #### Visual Overview - ListView component : Custom property columns 'Reservation.Start' and 'Reservation.End' can now be configured to convert date/time values to the time zone specified in the navigation panel of the bookings timeline [ID_34512]
 
@@ -166,6 +184,14 @@ When you opened a trend graph that contained patterns matching existing tags, in
 <!-- Not added to 10.3.0 -->
 
 Alarms without focus data would incorrectly not be disposed of when their parent group was cleared.
+
+#### DataMiner Cube - Alarm Console: Problem with visibility of correlation alarms in filtered alarm tabs [ID_34728]
+
+<!-- MR 10.2.0 [CU9] - FR 10.2.12 -->
+
+When a filtered alarm tab contained a correlation alarm, in some cases, this correlation alarm would incorrectly not disappear when it did no longer match the filter, especially when that filter was configured to hide alarms of type "Comment added", "Acknowledged" or "Released".
+
+Also, when a correlation alarm did not match the filter, only the base alarms would be shown, but when the type of one of those base alarms changed to "Comment added", "Acknowledged" or "Released", that base alarm would incorrectly not disappear.
 
 #### DataMiner Cube - Trending: Double-clicking a suggestion or alarm event created by SLAnalytics would open a trend graph showing "no data" [ID_34751]
 

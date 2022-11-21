@@ -35,3 +35,4 @@ The procedures below can be applied to troubleshoot issues. However, be very car
 - [Specifying credentials for a shared backup path for Elasticsearch](xref:SLNetClientTest_credentials_shared_backup_Elasticsearch)
 - [Configuring the frequency of smart baseline calculations](xref:SLNetClientTest_configuring_frequency_smart_baseline)
 - [Disabling automatic NATS configuration](xref:SLNetClientTest_disabling_automatic_nats_config)
+- [Configuring server-side search to include all custom properties](xref:SLNetClientTest_including_all_custom_properties)

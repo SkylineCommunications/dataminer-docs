@@ -1573,8 +1573,6 @@
               topicUid: Duplicating_a_dashboard
             - name: Deleting a dashboard
               topicUid: Deleting_a_dashboard
-            - name: Sharing a dashboard
-              topicUid: Sharing_a_dashboard
             - name: Editing a dashboard
               topicUid: Editing_a_dashboard
             - name: Changing dashboard settings
@@ -1689,8 +1687,14 @@
               topicUid: Specifying_data_input_in_a_dashboard_URL
             - name: Configuring a dashboard to use a URL feed without a feed component
               topicUid: Configuring_a_dashboard_to_use_a_URL_feed_without_a_feed_component
+        - name: Sharing a dashboard
+          topicUid: Sharing_a_dashboard
         - name: Generating a report based on a dashboard
-          topicUid: Generating_a_report_based_on_a_dashboard
+          items:
+            - name: From DataMiner Cube
+              topicUID: Generating_a_report_based_on_a_dashboard_Cube
+            - name: From the Dashboards app
+              topicUID: Sharing_PDF_report_from_Dashboards_app
         - name: Customizing the Dashboards app
           topicUid: Customizing_the_Dashboards_app
         - name: Dashboard Gateway installation
@@ -2767,6 +2771,20 @@
     - name: Known issues
       topicUID: Known_issues
       items:
+        - name: SLLog issue when large alarm tree is closed
+          topicUID: KI_SLLog_issue_when_large_alarm_tree_is_closed
+        - name: Element data lost after migrating elements in Cassandra Cluster setup
+          topicUID: KI_element_data_loss_after_migration_in_CC_setup
+        - name: Multiple issues when Failover based on hostnames is used
+          topicUID: KI_Failover_with_hostnames
+        - name: NATS not starting if DMS name contains special characters
+          topicUID: KI_NATS_not_starting_special_chars
+        - name: SLDataGateway memory leak during Cassandra Cluster migration
+          topicUID: KI_SLDataGateway_leak_during_CC_migration
+        - name: Excessive SLElement CPU usage during Cassandra Cluster migration
+          topicUID: KI_SLElement_CPU_high_during_CC_migration
+        - name: SLElement memory leak during Cassandra Cluster migration
+          topicUID: KI_SLElement_CPU_memory_leak_during_CC_migration
         - name: SLProtocol memory leak when HTTP connectors are used
           topicUID: KI_SLProtocol_memory_leak_HTTP
         - name: Data from Elasticsearch cluster with IPv6 addresses offloaded to files
@@ -2905,6 +2923,12 @@
               topicUid: Taskbar_Utility_command_line_options
         - name: Factory reset tool
           topicUID: Factory_reset_tool
+        - name: Legacy trend data exporter
+          topicUID: Legacy_Trend_Data_Exporter
+        - name: Multi-threaded timer polling rate calculator
+          topicUID: Multi_Threaded_Timer_Polling_Rate_Calculator
+        - name: Protocol debug tools
+          topicUID: Protocol_Debug_Tools
         - name: SLLogCollector
           topicUid: SLLogCollector
         - name: SLNetClientTest tool
@@ -3014,14 +3038,22 @@
                   topicUid: SLNetClientTest_configuring_frequency_smart_baseline
                 - name: Disabling automatic NATS configuration
                   topicUid: SLNetClientTest_disabling_automatic_nats_config
+                - name: Configuring server-side search to include all custom properties
+                  topicUID: SLNetClientTest_including_all_custom_properties
         - name: SLOffload tool
           topicUid: SLOffload_tool
         - name: SLSkipAsSourceTool
           topicUID: SLSkipAsSourceTool
+        - name: SNMP bandwidth estimation tool
+          topicUID: SNMP_Bandwidth_Estimation_Tool
+        - name: Spectrum simulation protocol
+          topicUID: Spectrum_Simulation_protocol
         - name: Standalone BPA Executor
           topicUID: Standalone_BPA_Executor
         - name: Standalone Cassandra Backup tool
           topicUID: Standalone_Cassandra_Backup_Tool
+        - name: Standalone Cassandra Cluster Installer
+          topicUID: Standalone_Cassandra_Cluster_Installer
         - name: Standalone Elastic Backup tool
           topicUID: Standalone_Elastic_Backup_Tool
         - name: Standalone Elasticsearch Cluster Installer
