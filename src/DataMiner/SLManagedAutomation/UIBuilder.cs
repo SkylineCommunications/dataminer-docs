@@ -284,7 +284,7 @@ namespace Skyline.DataMiner.Automation
 		/// <summary>
 		/// <para>Adds a button to this dialog box with the specified destination variable name, button text and style.<br/>
 		/// The supported button styles can be accessed through const strings on the Style.Button class.</para>
-		/// <para>This is supported from DataMiner 10.3.1 onwards.</para>
+		/// <para>This is supported from DataMiner 10.3.1 (feature release) and 10.4.0 (main release) onwards.</para>
 		/// </summary>
 		/// <param name="destVar">The name of the destination variable.</param>
 		/// <param name="displayText">The button text.</param>
