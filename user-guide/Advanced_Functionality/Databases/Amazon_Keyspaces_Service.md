@@ -33,15 +33,14 @@ To install the certificate:
 >
 > Information on how to configure a search database, such as ElasticSearch, can be found [here](xref:Elasticsearch_database).
 
-1. Shut down the entire DMS.
-1. Make sure the Starfield certificate is installed (see Configuring TLS).
-1. Edit the db.xml file located in the Skyline Dataminer root folder.
-    - The active local database (active="true" local="true") should be of type="AwsKeyspaces"
-    - The *DBServer* tag should contain the url of the [global endpoint](https://docs.aws.amazon.com/keyspaces/latest/devguide/programmatic.endpoints.html) of the region your amazon keyspaces cluster is in. (e.g. 'cassandra.eu-north-1.amazonaws.com')
-    - The *UID* tag contains the username of your AWS user account.
-    - The *PWD* tag contains the password of your AWS user account.
-    - The *DB* tag contains the name all amazon keyspaces will be prefixed with. This should be identical for all agents in the same cluster.
-1. Start the DMS. This can take multiple minutes the first time since the keyspaces and tables will be created. Relevant logging in case of any trouble can be found in the *sldbconnection.txt* file.
+1. You can configure the connection to your Amazon keyspaces cluster via DataMiner Cube. Head to System Center, Database and select `Database per cluster`.
+    - The database should be of type 'Amazon Keyspaces'.
+    - The *Keyspace prefix* field contains the name all amazon keyspaces will be prefixed with. This should be identical for all agents in the same cluster.
+    - The *DB Server* field should contain the url of the [global endpoint](https://docs.aws.amazon.com/keyspaces/latest/devguide/programmatic.endpoints.html) of the region your amazon keyspaces cluster is in. (e.g. 'cassandra.eu-north-1.amazonaws.com')
+    - The *User* field contains the username of your AWS user account.
+    - The *Password* field contains the password of your AWS user account.
+    
+1. Restart the DMS. This can take multiple minutes the first time since the keyspaces and tables will be created. Relevant logging in case of any trouble can be found in the *sldbconnection.txt* file.
 
-![Db.xml Configuration](~/user-guide/images/aks_db_xml.png)
+![Cube Database Configuration](~/user-guide/images/aks_cube_config.png)
 
