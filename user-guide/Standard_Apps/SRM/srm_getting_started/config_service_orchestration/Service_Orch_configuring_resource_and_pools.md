@@ -72,18 +72,6 @@ In the Booking Wizard, the candidate resources for a node in the service definit
    > [!NOTE]
    > If capabilities or capacities are defined on an interface profile definition, having the same capability or capacity parameters on multiple interfaces of the same function is not supported.
 
-1. In the Services module, assign the profile definition to the node:
-
-   1. Go to the *definitions* tab of the module.
-
-   1. Select the service definition in the list on the left.
-
-   1. Select the node in the diagram pane.
-
-   1. Below the diagram pane, in the *parameters* tab, select the profile definition in the *Profile* box.
-
-   1. Click *Save all changes*.
-
 1. In the Resources module, add the necessary capacities and capabilities to your resources:
 
    1. Select a resource pool and then select a resource in the pool.
@@ -162,7 +150,7 @@ When candidate resources are presented in the Booking Wizard, these can be sorte
 
 - **Alphabetically**: If priority is not specified, resources can be sorted alphabetically, if the *Alphabetically* option is selected for the *Resources Ordering Rule* setting on the *Config* > *Wizard* tab of the Booking Manager. <!-- RN 29107 -->
 
-- **Capacity**: If priority is not specified, resources can be sorted based on capacity, if the [Resource Sorting Capacity](xref:SRM_properties_Booking_Manager#resource-sorting-capacity) property is configured in the service definition and the *Capacity* option is selected for the *Resources Ordering Rule* setting on the *Config* > *Wizard* tab of the Booking Manager.
+- **Capacity**: If priority is not specified, resources can be sorted based on the available capacity (considering all other overlapping bookings making use of those same resources), if the [Resource Sorting Capacity](xref:SRM_properties_Booking_Manager#resource-sorting-capacity) property is configured in the service definition and the *Capacity* option is selected for the *Resources Ordering Rule* setting on the *Config* > *Wizard* tab of the Booking Manager.
 
 - **Randomly**: If priority is not specified, resources can be sorted randomly, if the *Randomly* option is selected for the *Resources Ordering Rule* setting on the *Config* > *Wizard* tab of the Booking Manager.
 
