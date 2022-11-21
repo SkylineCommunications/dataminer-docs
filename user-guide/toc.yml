@@ -2448,10 +2448,30 @@
           topicUid: provisioning_srm
         - name: Implementing virtual functions
           topicUid: implementing_function_srm
+          items:
+          - name: Creating profile parameters
+            topicUid: creating_profile_parameters
+          - name: Creating profile definitions
+            topicUid: creating_profile_definitions
+          - name: Creating profile instances
+            topicUid: creating_profile_instances
+          - name: Creating virtual functions
+            topicUid: creating_virtual_functions
+          - name: Creating Profile-Load Scripts
+            topicUid: creating_profile_load_scripts
         - name: Provisioning virtual function resources
           topicUid: provisioning_VFRs
         - name: Additional configuration for Service Orchestration
           topicUid: config_service_orchestration
+          items:
+          - name: Creating service definitions
+            topicUid: Service_Orch_creating_service_definitions
+          - name: Configuring resources and resource pools
+            topicUid: Service_Orch_configuring_resource_and_pools
+          - name: Creating LSO scripts
+            topicUid: Service_Orch_creating_LSO_scripts
+          - name: Adding DTR
+            topicUid: Service_Orch_adding_DTR
         - name: Additional configuration for Resource Automation
           topicUid: config_resource_automation
         - name: Additional configuration for Resource Scheduling
