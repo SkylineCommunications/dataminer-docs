@@ -10,4 +10,4 @@ A DataMiner Extension Module is a service that can be installed, upgraded and un
 
 ## Packs
 
-For ease of installation DataMiner Extension Modules might be packaged together in a Pack. An example of such a pack is the [Cloud Pack](xref:CloudPack). These Packs will bundle different DxMs together and allow our users to install them all at once.
+For ease of installation DataMiner Extension Modules might be packaged together in a Pack. An example of such a pack is the [Cloud Pack](xref:CloudPackages). These Packs will bundle different DxMs together and allow our users to install them all at once.
