@@ -213,9 +213,9 @@ namespace Skyline.DataMiner.Automation
 		/// <returns>This <see cref="UIBuilder"/> instance.</returns>
 		/// <example>
 		/// <code>
-		/// UIBuilder uiBuilder = new UIBuilder();
+		/// UIBuilder uibDialogBox = new UIBuilder();
 		/// // ...
-		/// uiBuilder.Append("Select a ticket:");
+		/// uibDialogBox.Append("Select a ticket:");
 		/// </code>
 		/// </example>
 		public UIBuilder Append(string text) { return null; }
@@ -235,9 +235,9 @@ namespace Skyline.DataMiner.Automation
 		/// <example>
 		/// <code>
 		/// int selectedTicketId = 1;
-		/// UIBuilder uiBuilder = new UIBuilder();
+		/// UIBuilder uibDialogBox = new UIBuilder();
 		/// // ...
-		/// uiBuilder.Append("The ID of the selected ticket is {0}", selectedTicketId);
+		/// uibDialogBox.Append("The ID of the selected ticket is {0}", selectedTicketId);
 		/// </code>
 		/// </example>
 		public UIBuilder Append(string text, params object[] args) { return null; }
@@ -249,11 +249,11 @@ namespace Skyline.DataMiner.Automation
 		/// <returns>This <see cref="UIBuilder"/> instance.</returns>
 		/// <example>
 		/// <code>
-		/// UIBuilder uiBuilder = new UIBuilder();
+		/// UIBuilder uibDialogBox = new UIBuilder();
 		/// // ...
 		/// UIBlockDefinition blockTextBox = new UIBlockDefinition();
 		/// // ...
-		/// uiBuilder.AppendBlock(blockTextBox);
+		/// uibDialogBox.AppendBlock(blockTextBox);
 		/// </code>
 		/// </example>
 		public UIBuilder AppendBlock(UIBlockDefinition block) { return null; }
@@ -270,11 +270,11 @@ namespace Skyline.DataMiner.Automation
 		/// </remarks>
 		/// <example>
 		/// <code>
-		/// UIBuilder uiBuilder = new UIBuilder();
+		/// UIBuilder uibDialogBox = new UIBuilder();
 		/// // ...
-		/// uiBuilder.AppendButton("applyButtonDestVar", "Apply");
+		/// uibDialogBox.AppendButton("applyButtonDestVar", "Apply");
 		/// // ...
-		/// var uir = engine.ShowUI(uiBuilder);
+		/// var uir = engine.ShowUI(uibDialogBox);
 		/// string value = uir.GetString("applyButtonDestVar"); // If the button was pressed, the value will be "applyButtonDestVar"; otherwise, null.
 		/// </code>
 		/// </example>
@@ -296,11 +296,11 @@ namespace Skyline.DataMiner.Automation
 		/// </remarks>
 		/// <example>
 		/// <code>
-		/// UIBuilder uiBuilder = new UIBuilder();
+		/// UIBuilder uibDialogBox = new UIBuilder();
 		/// // ...
-		/// uiBuilder.AppendButton("applyButtonDestVar", "Apply", Style.Button.CallToAction);
+		/// uibDialogBox.AppendButton("applyButtonDestVar", "Apply", Style.Button.CallToAction);
 		/// // ...
-		/// var uir = engine.ShowUI(uiBuilder);
+		/// var uir = engine.ShowUI(uibDialogBox);
 		/// string value = uir.GetString("applyButtonDestVar"); // If the button was pressed, the value will be "applyButtonDestVar"; otherwise, null.
 		/// </code>
 		/// </example>
@@ -317,11 +317,11 @@ namespace Skyline.DataMiner.Automation
 		/// </remarks>
 		/// <example>
 		/// <code>
-		/// UIBuilder uiBuilder = new UIBuilder();
+		/// UIBuilder uibDialogBox = new UIBuilder();
 		/// 
-		/// uiBuilder.AppendDropDown("selectionVar", "1|Automatic", "2|Semi-automatic", "3|Manual");
+		/// uibDialogBox.AppendDropDown("selectionVar", "1|Automatic", "2|Semi-automatic", "3|Manual");
 		/// 
-		/// var uir = engine.ShowUI(uiBuilder);
+		/// var uir = engine.ShowUI(uibDialogBox);
 		/// string result = uir.GetString("selectionVar");
 		/// engine.GenerateInformation("selectionVar: " + result);	// In case "Semi-automatic" was selected, selectionVar will contain "2".
 		/// </code>
@@ -334,9 +334,9 @@ namespace Skyline.DataMiner.Automation
 		/// <returns>This <see cref="UIBuilder"/> instance.</returns>
 		/// <example>
 		/// <code>
-		/// UIBuilder uiBuilder = new UIBuilder();
+		/// UIBuilder uibDialogBox = new UIBuilder();
 		/// // ...
-		/// uiBuilder.AppendLine();
+		/// uibDialogBox.AppendLine();
 		/// // ...
 		/// </code>
 		/// </example>
@@ -349,9 +349,9 @@ namespace Skyline.DataMiner.Automation
 		/// <returns>This <see cref="UIBuilder"/> instance.</returns>
 		/// <example>
 		/// <code>
-		/// UIBuilder uiBuilder = new UIBuilder();
+		/// UIBuilder uibDialogBox = new UIBuilder();
 		/// // ...
-		/// uiBuilder.AppendLine("Select a ticket:");
+		/// uibDialogBox.AppendLine("Select a ticket:");
 		/// </code>
 		/// </example>
 		public UIBuilder AppendLine(string text) { return null; }
@@ -371,9 +371,9 @@ namespace Skyline.DataMiner.Automation
 		/// <example>
 		/// <code>
 		/// int selectedTicketId = 1;
-		/// UIBuilder uiBuilder = new UIBuilder();
+		/// UIBuilder uibDialogBox = new UIBuilder();
 		/// // ...
-		/// uiBuilder.AppendLine("The ID of the selected ticket is {0}", selectedTicketId);
+		/// uibDialogBox.AppendLine("The ID of the selected ticket is {0}", selectedTicketId);
 		/// </code>
 		/// </example>
 		public UIBuilder AppendLine(string text, params object[] args) { return null; }
@@ -388,9 +388,9 @@ namespace Skyline.DataMiner.Automation
 		/// <code>
 		/// Element element = engine.FindElement(200, 4000);
 		/// 
-		/// UIBuilder uiBuilder = new UIBuilder();
+		/// UIBuilder uibDialogBox = new UIBuilder();
 		/// // ...
-		/// uiBuilder.AppendParameter(element, 1000);
+		/// uibDialogBox.AppendParameter(element, 1000);
 		/// </code>
 		/// </example>
 		public UIBuilder AppendParameter(IActionableElement element, int pid) { return null; }
@@ -404,9 +404,9 @@ namespace Skyline.DataMiner.Automation
 		/// <returns>This <see cref="UIBuilder"/> instance.</returns>
 		/// <example>
 		/// <code>
-		/// UIBuilder uiBuilder = new UIBuilder();
+		/// UIBuilder uibDialogBox = new UIBuilder();
 		/// // ...
-		/// uiBuilder.AppendParameter(200, 4000, 1000);
+		/// uibDialogBox.AppendParameter(200, 4000, 1000);
 		/// </code>
 		/// </example>
 		public UIBuilder AppendParameter(int dma, int eid, int pid) { return null; }
@@ -422,9 +422,9 @@ namespace Skyline.DataMiner.Automation
 		/// <code>
 		/// Element element = engine.FindElement(200, 4000);
 		/// 
-		/// UIBuilder uiBuilder = new UIBuilder();
+		/// UIBuilder uibDialogBox = new UIBuilder();
 		/// // ...
-		/// uiBuilder.AppendParameter(element, 1002, "Row 1");
+		/// uibDialogBox.AppendParameter(element, 1002, "Row 1");
 		/// </code>
 		/// </example>
 		public UIBuilder AppendParameter(IActionableElement element, int pid, string idx) { return null; }
@@ -439,9 +439,9 @@ namespace Skyline.DataMiner.Automation
 		/// <returns>This <see cref="UIBuilder"/> instance.</returns>
 		/// <example>
 		/// <code>
-		/// UIBuilder uiBuilder = new UIBuilder();
+		/// UIBuilder uibDialogBox = new UIBuilder();
 		/// // ...
-		/// uiBuilder.AppendParameter(200, 4000, 1002, "Row 1");
+		/// uibDialogBox.AppendParameter(200, 4000, 1002, "Row 1");
 		/// </code>
 		/// </example>
 		public UIBuilder AppendParameter(int dma, int eid, int pid, string idx) { return null; }
@@ -453,9 +453,9 @@ namespace Skyline.DataMiner.Automation
 		/// <returns>This <see cref="UIBuilder"/> instance.</returns>
 		/// <example>
 		/// <code>
-		/// UIBuilder uiBuilder = new UIBuilder();
+		/// UIBuilder uibDialogBox = new UIBuilder();
 		/// // ...
-		/// uiBuilder.AppendTextBox("input");
+		/// uibDialogBox.AppendTextBox("input");
 		/// </code>
 		/// </example>
 		public UIBuilder AppendTextBox(string destVar) { return null; }
@@ -466,16 +466,16 @@ namespace Skyline.DataMiner.Automation
 		/// <returns>A string representation of this dialog box.</returns>
 		/// <example>
 		/// <code>
-		/// UIBuilder uiBuilder = new UIBuilder();
-		/// uiBuilder.MinHeight = 450;
-		/// uiBuilder.MinWidth = 400;
-		/// uiBuilder.RequireResponse = true;
-		/// uiBuilder.ColumnDefs = "a;";
+		/// UIBuilder uibDialogBox = new UIBuilder();
+		/// uibDialogBox.MinHeight = 450;
+		/// uibDialogBox.MinWidth = 400;
+		/// uibDialogBox.RequireResponse = true;
+		/// uibDialogBox.ColumnDefs = "a;";
 		/// 
-		/// uiBuilder.Append("Input: ");
-		/// uiBuilder.AppendTextBox("input");
+		/// uibDialogBox.Append("Input: ");
+		/// uibDialogBox.AppendTextBox("input");
 		/// 
-		/// string result = uiBuilder.ToString();
+		/// string result = uibDialogBox.ToString();
 		/// // result:
 		/// // [UI]
 		/// // type=global
