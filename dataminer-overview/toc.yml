@@ -74,6 +74,27 @@
           topicUid: Overview_Compliance_Statements_RvsG_O
         - name: Tender compliancy (licenses / engineering days)
           topicUid: Overview_Compliance_Statements_Tender_Compliancy
+    - name: Partner Program
+      topicUID: Partner_Program
+      items:
+        - name: Background to the Partner Program
+          topicUID: Background_Partner_Program
+          items:
+            - name: The role of DataMiner
+              topicUID: The_Role_of_DataMiner
+            - name: Your role
+              topicUID: Your_Role
+        - name: Becoming a DataMiner Partner
+          topicUID: Becoming_a_DataMiner_Partner
+        - name: Getting started with the Partner Program
+          topicUID: Getting_Started_with_the_Partner_Program
+          items:
+            - name: Sales and Marketing
+              topicUID: Sales_and_Marketing
+            - name: Service delivery
+              topicUID: Service_Delivery
+            - name: Partnership governance
+              topicUID: Partnership_Governance
     - name: Frequently asked questions
       topicUid: FAQs
       items:
