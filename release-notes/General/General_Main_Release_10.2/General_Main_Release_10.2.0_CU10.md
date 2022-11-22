@@ -232,3 +232,9 @@ When you opened a topology chain and selected a field in the topology filter, in
 <!-- Main Release Version 10.1.0 [CU22]/10.2.0 [CU10] - Feature Release Version 10.3.1 -->
 
 In some cases, an error could occur in SLProtocol when trying to update a parameter of type `read bit`.
+
+#### Web apps - Line chart component: Chart would incorrectly display non-existing data when the time window included a period in the future [ID_34959]
+
+<!-- Main Release Version 10.1.0 [CU22]/10.2.0 [CU10] - Feature Release Version 10.3.1 -->
+
+When the time window of a line chart component showing trend data included a period in the future, the chart would incorrectly display non-existing data for that period in the future. From now on, the chart will stop at the current time.

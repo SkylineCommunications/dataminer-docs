@@ -29,8 +29,20 @@ When a GQI query returned all DCF interfaces from all agents in the DataMiner Sy
 
 From now on, when a GQI query has to retrieve DCF interfaces, it will do so by querying one agent at a time.
 
+#### Problem with SLElement when a trend template was being assigned [ID_34824]
+
+<!-- MR 10.4.0 - FR 10.3.1 -->
+
+In some cases, an error could occur in SLElement when a trend template was being assigned.
+
 #### Problem with SLElement when a description.xml file was updated while an alarm was being unmasked [ID_34860]
 
 <!-- MR 10.4.0 - FR 10.3.1 -->
 
 In some cases, an error could occur in SLElement when a *description.xml* file was updated while an alarm was being unmasked.
+
+#### Problem with SLElement when a parameter update was being processed while an element was starting up [ID_34899]
+
+<!-- MR 10.4.0 - FR 10.3.1 -->
+
+In some cases, an error could occur in SLElement when a parameter update was being processed while an element was starting up.

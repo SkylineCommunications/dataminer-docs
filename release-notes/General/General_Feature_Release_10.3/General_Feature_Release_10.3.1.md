@@ -159,6 +159,12 @@ When a GQI query returned all DCF interfaces from all agents in the DataMiner Sy
 
 From now on, when a GQI query has to retrieve DCF interfaces, it will do so by querying one agent at a time.
 
+#### Problem with SLElement when a trend template was being assigned [ID_34824]
+
+<!-- MR 10.4.0 - FR 10.3.1 -->
+
+In some cases, an error could occur in SLElement when a trend template was being assigned.
+
 #### Known Elasticsearch errors would incorrectly get logged in the SLSearch.txt log file [ID_34827]
 
 <!-- MR 10.2.0 [CU10] - FR 10.3.1 -->
@@ -234,6 +240,12 @@ In some cases, a range filter in a query filter or a table column filter would i
 > [!NOTE]
 > When using a query filter with filter assistance enabled, the statistics will determine the number of decimals that can be used.
 
+#### Problem with SLElement when a parameter update was being processed while an element was starting up [ID_34899]
+
+<!-- MR 10.4.0 - FR 10.3.1 -->
+
+In some cases, an error could occur in SLElement when a parameter update was being processed while an element was starting up.
+
 #### Low-code apps: 'Fetch the data' action of a table component would resolve too soon [ID_34902]
 
 <!-- MR 10.2.0 [CU10] - FR 10.3.1 -->
@@ -279,3 +291,9 @@ When a timeline was populated using a query with a query filter, it would incorr
 <!-- Main Release Version 10.1.0 [CU22]/10.2.0 [CU10] - Feature Release Version 10.3.1 -->
 
 In some cases, an error could occur in SLProtocol when trying to update a parameter of type `read bit`.
+
+#### Web apps - Line chart component: Chart would incorrectly display non-existing data when the time window included a period in the future [ID_34959]
+
+<!-- Main Release Version 10.1.0 [CU22]/10.2.0 [CU10] - Feature Release Version 10.3.1 -->
+
+When the time window of a line chart component showing trend data included a period in the future, the chart would incorrectly display non-existing data for that period in the future. From now on, the chart will stop at the current time.
