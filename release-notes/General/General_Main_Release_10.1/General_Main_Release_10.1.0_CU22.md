@@ -88,6 +88,12 @@ When the JAVA_HOME variable was not set, SLLogCollector would become unresponsiv
 
 From now on, when SLLogCollector times out after executing a nodetool command, it will log a timeout message in its log file and proceed.
 
+#### SLDataGateway was not always able to parse the result of a 'nodetool status' command [ID_34929]
+
+<!-- Main Release Version 10.1.0 [CU22]/10.2.0 [CU10] - Feature Release Version 10.3.1 -->
+
+The SLDataGateway process periodically checks the status of the local Cassandra node by executing a `nodetool status` command and parsing the result. When Cassandra was still starting up, some values in the output could not always be parsed, leading to SLDataGateway incorrectly marking the database as unavailable.
+
 #### DataMiner Cube - EPM: Problem with topology filter [ID_34931]
 
 <!-- Main Release Version 10.1.0 [CU22]/10.2.0 [CU10] - Feature Release Version 10.3.1 -->
