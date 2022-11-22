@@ -185,11 +185,23 @@ When conditional coloring was applied on the first column of a table in which ac
 
 After a DataMiner upgrade, files belonging to previous app versions would incorrectly not be removed from the `C:\Skyline DataMiner\Webpages\App` and `C:\Skyline DataMiner\Webpages\Automation` folders. From now on, those folders will be deleted before new versions of those apps are installed.
 
+#### Problem with SLElement when a description.xml file was updated while an alarm was being unmasked [ID_34860]
+
+<!-- MR 10.4.0 - FR 10.3.1 -->
+
+In some cases, an error could occur in SLElement when a *description.xml* file was updated while an alarm was being unmasked.
+
 #### Problem with SLElement [ID_34861]
 
 <!-- MR 10.3.0 - FR 10.3.1 -->
 
 In some cases, an error could occur in SLElement when a DVE child or a virtual function was started, and when a parameter description was changed.
+
+#### Dashboards app: Empty groups would incorrectly not be removed from parameter feeds listing EPM parameters [ID_34884]
+
+<!-- MR 10.3.0 - FR 10.3.1 -->
+
+When, in a parameter feed listing EPM parameters, the parameters were grouped, empty groups would incorrectly not be removed after switching to another EPM object.
 
 #### HTTP requests would incorrectly not be retried when WinHTTP threw a SEC_E_BUFFER_TOO_SMALL error [ID_34888]
 
@@ -213,11 +225,26 @@ In some cases, cell values in a GQI query result would incorrect include the obj
 
 For example, a cell value would incorrectly be set to "DomDefinitionId[00000000-0000-0000-0000-000000000000]" while the display value was actually "00000000-0000-0000-0000-000000000000".
 
+#### Dashboards & low-code apps: Decimal values would incorrectly not be allowed in range filters [ID_34897]
+
+<!-- MR 10.3.0 - FR 10.3.1 -->
+
+In some cases, a range filter in a query filter or a table column filter would incorrectly not allow decimal values.
+
+> [!NOTE]
+> When using a query filter with filter assistance enabled, the statistics will determine the number of decimals that can be used.
+
 #### Low-code apps: 'Fetch the data' action of a table component would resolve too soon [ID_34902]
 
 <!-- MR 10.2.0 [CU10] - FR 10.3.1 -->
 
 In some cases, a *Fetch the data* action of a table component would resolve too soon. This would cause post actions to be executed while the data was still being retrieved. From now on, the *Fetch the data* action will resolve when all data is retrieved.
+
+#### Dashboards & low-code apps: Feed component selections would incorrectly be lost after applying a built-in theme [ID_34908]
+
+<!-- MR 10.3.0 - FR 10.3.1 -->
+
+When you applied a built-in theme, feed component selections would incorrectly be lost after refetching the data.
 
 #### SLLogCollector would become unresponsive after executing a nodetool command [ID_34909]
 
@@ -240,3 +267,15 @@ Moreover, in some cases, the table would even not be able to feed the data in it
 <!-- Main Release Version 10.1.0 [CU22]/10.2.0 [CU10] - Feature Release Version 10.3.1 -->
 
 The SLDataGateway process periodically checks the status of the local Cassandra node by executing a `nodetool status` command and parsing the result. When Cassandra was still starting up, some values in the output could not always be parsed, leading to SLDataGateway incorrectly marking the database as unavailable.
+
+#### Dashboards & low-code apps: Not possible to group the data in a timeline populated using a query with a query filter [ID_34932]
+
+<!-- MR 10.3.0 - FR 10.3.1 -->
+
+When a timeline was populated using a query with a query filter, it would incorrectly not be possible to group the data.
+
+#### Problem with SLProtocol when trying to update a parameter of type 'read bit' [ID_34935]
+
+<!-- Main Release Version 10.1.0 [CU22]/10.2.0 [CU10] - Feature Release Version 10.3.1 -->
+
+In some cases, an error could occur in SLProtocol when trying to update a parameter of type `read bit`.

@@ -28,3 +28,9 @@ In some cases, it would incorrectly not be possible to select an item in a drop-
 When a GQI query returned all DCF interfaces from all agents in the DataMiner System, the NATS message broker would throw a *MaxPayloadException* when *MaxPayload* exceeded the value configured in `C:\Skyline DataMiner\NATS\nats-streaming-server\nats-server.config`.
 
 From now on, when a GQI query has to retrieve DCF interfaces, it will do so by querying one agent at a time.
+
+#### Problem with SLElement when a description.xml file was updated while an alarm was being unmasked [ID_34860]
+
+<!-- MR 10.4.0 - FR 10.3.1 -->
+
+In some cases, an error could occur in SLElement when a *description.xml* file was updated while an alarm was being unmasked.
