@@ -4,6 +4,9 @@ uid: PA_Creating_and_Configuring_a_Process_Definition
 
 # Creating and configuring a process definition
 
+> [!NOTE]
+> When creating and cofiguring a process definition, it is important to follow each step listed below in the specific order they occur on this page.
+
 ## Creating a process DOM definition
 
 Create a process DOM definition, adding all parameters that are relevant for the process.
