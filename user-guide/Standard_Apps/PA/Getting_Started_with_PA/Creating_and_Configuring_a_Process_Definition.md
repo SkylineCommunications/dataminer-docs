@@ -123,5 +123,10 @@ The process DOM definition needs to be used with the *process_automation* module
      - **Process type**: This information will already be filled in and can be left as is.
 
    - **Time specifications**: Edit according to your own preferences.
-
+   
+   > [!NOTE]
+   > Make sure all fields are populated.
+   
      ![Activation Window](~/user-guide/images/Activation_Window.png)
+     
+1. Click the *Confirm* button.
