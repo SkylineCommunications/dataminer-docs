@@ -13,7 +13,9 @@ In older DataMiner systems, this database was also known as the "local database"
 > - Settings related to the Elasticsearch database are configured separately. See [Elasticsearch database](xref:Elasticsearch_database).
 > - If you want to have an external program do queries on a DataMiner database, you will need to use an offload database for this. For information on offload database settings, see [Offload database](xref:Offload_database).
 
-## [Cassandra cluster database](#tab/tabid-1)
+## Cassandra database
+
+### [Cassandra cluster database](#tab/tabid-1)
 
 For a Cassandra cluster database (i.e. one Cassandra cluster that is used as the general database for the entire DMS, rather than one Cassandra cluster per DMA), configure the settings as follows:
 
@@ -35,7 +37,7 @@ For a Cassandra cluster database (i.e. one Cassandra cluster that is used as the
 
 1. Click *Save*.
 
-## [Cassandra database per DMA](#tab/tabid-2)
+### [Cassandra database per DMA](#tab/tabid-2)
 
 In case a separate Cassandra cluster is used per DMA, configure the settings as follows:
 
@@ -81,7 +83,41 @@ In case a separate Cassandra cluster is used per DMA, configure the settings as 
 
 1. Click *Save*.
 
-## [Legacy MySQL or SQL database](#tab/tabid-3)
+***
+
+## Amazon Keyspaces database
+
+> [!IMPORTANT]
+> An Amazon Keyspaces database requires a separate indexing database.
+>
+> For information on how to configure an indexing database, see [ElasticSearch database](xref:Elasticsearch_database).
+
+To configure the connection to an [Amazon Keyspaces database](xref:Amazon_Keyspaces_Service), configure the settings as follows:
+
+1. In DataMiner Cube, go to *System Center* > *Database*.
+
+1. Specify the following database settings:
+
+   - **Type**: *Database per cluster*.
+
+   - **Database**: The type of database, i.e. *Amazon Keyspaces*.
+
+   - **Keyspace prefix**: The name all Amazon Keyspaces will be prefixed with. This should be identical for all DMAs in the same cluster.
+
+   - **DB Server**: The url of the [global endpoint](https://docs.aws.amazon.com/keyspaces/latest/devguide/programmatic.endpoints.html) of the region your Amazon Keyspaces cluster is in. (e.g. `cassandra.eu-north-1.amazonaws.com`).
+
+   - **User**: The username of your AWS user account.
+
+   - **Password**: The password of your AWS user account.
+
+1. Restart the DMS.
+
+   This can take multiple minutes the first time, as the keyspaces and tables will be created. In case of trouble, you can find the relevant logging in the *sldbconnection.txt* file.
+
+![Cube Database Configuration](~/user-guide/images/aks_cube_config.png)<br>
+*DataMiner 10.3.1 example configuration*
+
+## Legacy MySQL or SQL database
 
 For a legacy MySQL or SQL database, configure the settings as follows:
 
@@ -147,5 +183,3 @@ For a legacy MySQL or SQL database, configure the settings as follows:
 >
 > - If you use a MSSQL database, a Microsoft SQL Server Enterprise Edition license is required if partitioned data tables are used. Otherwise, the Express edition is sufficient. To run Microsoft SQL Server 2019, Windows Server 2016 or higher is required.
 > - If you use an MSSQL database, prior to DataMiner v8.5.8, only user accounts of type NT AUTHORITY\\SYSTEM are supported. In more recent DataMiner versions, you can use other domain accounts, either by using a connection string containing “*Integrated Security=true;user id:Domain\\User Name;Password:PWD*”, or by setting the tag *\<IntegratedSecurity>* to true in *DB.xml*.
-
-***
