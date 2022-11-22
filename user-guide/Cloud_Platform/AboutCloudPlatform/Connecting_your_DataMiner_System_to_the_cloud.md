@@ -32,6 +32,9 @@ To connect your DMS to the cloud:
    > [!NOTE]
    > If your DataMiner System contains a Failover pair, and one of the Agents in the Failover pair is responsible for hosting the connection towards the DataMiner Cloud Platform, install the DataMiner Cloud Pack on both Agents in the Failover pair.
 
+   > [!TIP]
+   > For more information on the Cloud Pack contents, see [DataMiner Cloud Packs](xref:CloudPackages).
+
 1. In DataMiner Cube, go to System Center \> *Users / Groups* and make sure you have the following **user permissions**. If you need to make changes to the user permissions, reconnect to Cube afterwards to make sure your changes are applied in the UI.
 
    - [System configuration > Cloud gateway > Connect to DCP](xref:DataMiner_user_permissions#modules--system-configuration--cloud-sharinggateway--connect-to-clouddcp)
