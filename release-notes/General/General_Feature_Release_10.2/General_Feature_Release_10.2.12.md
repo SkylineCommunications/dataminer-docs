@@ -2,10 +2,10 @@
 uid: General_Feature_Release_10.2.12
 ---
 
-# General Feature Release 10.2.12 – Preview
+# General Feature Release 10.2.12
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 >
@@ -14,18 +14,16 @@ uid: General_Feature_Release_10.2.12
 
 ## Highlights
 
-*No highlights have been selected for this release yet*
-
-## Other features
-
-#### Failover: Decommissioning a Failover setup while the server hosting the offline agent is unavailable [ID_33827]
+#### Failover: Decommissioning a Failover setup while the server hosting the offline Agent is unavailable [ID_33827]
 
 <!-- MR 10.2.0 [CU9] - FR 10.2.12 -->
 
-It is now possible to decommission a Failover setup while the server hosting the offline agent is unavailable.
+It is now possible to decommission a Failover setup while the server hosting the offline Agent is unavailable.
 
 > [!NOTE]
 > When you try to decommission a Failover setup while the offline agent is missing, in Cube's *Failover Config* window, a warning will be displayed.
+
+## Other features
 
 #### Dashboards app: Parameter feeds that list EPM parameters now allow items to be preselected [ID_34554] [ID_34588]
 
@@ -33,11 +31,11 @@ It is now possible to decommission a Failover setup while the server hosting the
 
 When an EPM feed is used to feed EPM identifiers to a parameter feed, it is now possible to configure filters that will preselect certain items in the parameter feed.
 
-#### Failover: A reverse proxy will now be used to re-route HTTP traffic from the offline agent to the online agent [ID_34606]
+#### Failover: A reverse proxy will now be used to re-route HTTP traffic from the offline Agent to the online Agent [ID_34606]
 
 <!-- MR 10.2.0 [CU9] - FR 10.2.12 -->
 
-In a Failover setup, a reverse proxy will now be hosted in IIS in order to re-route HTTP traffic from the offline agent to the online agent. After a switch has occurred, the proxy will be disabled in the online agent and enabled on the offline agent.
+In a Failover setup, a reverse proxy will now be hosted in IIS in order to re-route HTTP traffic from the offline Agent to the online Agent. After a switch has occurred, the proxy will be disabled in the online Agent and enabled on the offline Agent.
 
 This feature requires the Application Request Routing (ARR) module to be installed on IIS. When you upgrade to version 10.2.12 / 10.2.0 [CU9], it will automatically be installed if it has not yet been installed earlier.
 
@@ -76,7 +74,7 @@ It is now possible to group parameters in a parameter feed that lists EPM parame
 
 ### Enhancements
 
-#### Security enhancements [ID_33520]
+#### Security enhancements [ID_33520] [ID_34723]
 
 A number of security enhancements have been made.
 
@@ -123,11 +121,11 @@ From now on, when the *bruteForceToOffline* option is specified in the *DMS.xml*
 
 When a parameter feed is linked to a *Line & area chart" component, from now on, non-trended parameters will now automatically be removed from the chart.
 
-#### GQI now supports multiple sort in the Table component [ID_34526]
+#### Dashboards app / Low-Code Apps: Improved multiple sort in the Table component [ID_34526]
 
 <!-- MR 10.3.0 - FR 10.2.12 -->
 
-When, in the Dashboards app or a web app, you apply multiple sort orders in a *Table* component, multiple sort operators will now be appended to the GQI query that is feeding data to the component.
+When, in the Dashboards app or a low-code app, you apply multiple sort orders in a *Table* component, multiple sort operators will now be appended to the GQI query that feeds data to the component. This way sorting is done server-side, which will improve performance.
 
 #### QA Device Simulator renamed to Skyline Device Simulator [ID_34530] [ID_34555]
 
@@ -177,7 +175,7 @@ The following methods used to add attachments to bookings, jobs and tickets have
 |----------------------|------------------------|
 | AddBookingAttachment | AddBookingAttachmentV2 |
 | AddJobAttachment     | AddJobAttachmentV2     |
-| AddTicketAttachment  | addTicketAttachmentV2  |
+| AddTicketAttachment  | AddTicketAttachmentV2  |
 
 Also, the *ContinueAutomationScript* method now has an additional `info` parameter that can be used to provide more information about the variables passed in the `values` parameter (e.g. information to help resolve the file paths).
 
@@ -210,6 +208,14 @@ When an *NT_SNMP_GET* request contained a MultipleGetBulk (`:tablev2`) and an in
 <!-- MR 10.3.0 - FR 10.2.12 -->
 
 When PDF files are uploaded via the WebAPI (e.g. when a PDF report is generated), an error will now be thrown when the batch size exceeds 10 MB or the total file size exceeds 1 GB.
+
+#### Behavioral change points stored in both Cassandra and Elasticsearch [ID_34621]
+
+<!-- MR 10.3.0 - FR 10.2.12 -->
+
+If an Elasticsearch database is available, the behavioral change points detected in trend data by the Behavioral Anomaly Detection feature will now be stored both in the Cassandra database and the Elasticsearch database. Otherwise, they will be stored in Cassandra only like before.
+
+This will support faster and more flexible change point querying via GQI in future releases.
 
 #### Dashboards app / Low-code apps - Visual Overview component: Enhancements with regard to WebSocket/polling settings and user access to visual overviews [ID_34624]
 
@@ -247,7 +253,7 @@ The *PDF* and *Share* option in the Dashboards app are now no longer visible in 
 
 <!-- MR 10.2.0 [CU9] - FR 10.2.12 -->
 
-Up to now, the *SLReset.exe* option *-cleanclustereddatabase* would remove all keyspaces and indices from the CassandraCluster and ElasticSearch databases. From now on, this option will only remove the tables, keyspaces and indices defined in the *db.xml* file from the databases (clusters as well as single-node Cassandra databases on remote machines).
+Up to now, the *SLReset.exe* option *-cleanclustereddatabases* would remove all keyspaces and indices from the Cassandra cluster and Elasticsearch databases. From now on, this option will only remove the tables, keyspaces and indices defined in the *DB.xml* file from the databases (clusters as well as single-node Cassandra databases on remote machines).
 
 #### SLMessageBroker log file entries will now mention the NATS server to which the NATS client is connected [ID_34719]
 
@@ -290,7 +296,7 @@ In some rare cases, an error could occur in SLDataMiner when you edited an eleme
 
 #### Web apps: Problem with email address boxes [ID_34421]
 
-<!-- MR 10.3.0 - FR 10.2.12 -->
+<!-- MR 10.2.0 [CU10] - FR 10.2.12 -->
 
 When you entered an address in an email address box and then selected something else on the page without pressing *ENTER* or *TAB*, the email address box would incorrectly expand and show a list of suggestions.
 
@@ -311,6 +317,14 @@ When a parameter of a DVE element exported as a standalone parameter was partial
 <!-- MR 10.2.0 [CU9] - FR 10.2.12 -->
 
 In Visio pages displayed in web apps, it would not be possible to execute parameter set actions.
+
+#### Elasticsearch: Alarm trees of a cleared alarm could incorrectly be moved to a closed alarm index as one single tree [ID_34502]
+
+<!-- MR 10.2.0 [CU9] - FR 10.2.12 -->
+
+When an alarm is cleared, in Elasticsearch, its entire alarm tree is moved from the active alarm index to a closed alarm index.
+
+In some cases, when there were different alarm trees on different agents (trees sharing the same root alarm ID but each with a different DataMiner ID), all those alarms would incorrectly be moved to one single tree.
 
 #### Monitoring app: Problem when trying to open the web UI of a device [ID_34503]
 
@@ -475,6 +489,12 @@ Recursion detected in the mediation links tree
 
 As this error was caused by an internal lookup issue that had no effect whatsoever with regard to mediation layer functionality, from now on, it will no longer be logged.
 
+#### Mobile apps: Problem when trying to select an item in a drop-down box [ID_34742]
+
+<!-- MR 10.4.0 - FR 10.2.12 [CU0] -->
+
+In some cases, it would incorrectly not be possible to select an item in a drop-down box when the items were grouped or when their actual value was not identical to the value that was displayed.
+
 #### Skyline Device Simulator: 'no such object' would incorrectly be returned when requesting data from a simulation [ID_34746]
 
 <!-- MR 10.3.0 - FR 10.2.12 -->
@@ -489,3 +509,9 @@ When you tried to request data from a simulation that was built with AutoBuildVe
 <!-- MR 10.1.0 [CU21] / 10.2.0 [CU9] - FR 10.2.12 -->
 
 When a connection had been closed, in some cases, an error could occur in the hosting process.
+
+#### Certain antivirus software products could incorrectly flag SLSpiHost.exe as malicious [ID_34942]
+
+<!-- MR 10.2.0 [CU9] - FR 10.2.12 [CU0] -->
+
+In some cases, certain antivirus software products could incorrectly flag SLSpiHost.exe as malicious.

@@ -14,7 +14,7 @@ uid: General_Main_Release_10.3.0_changes
 
 ### Enhancements
 
-#### Security enhancements [ID_31045] [ID_31054] [ID_31761] [ID_32055] [ID_32566] [ID_33069] [ID_33078] [ID_33218] [ID_33365] [ID_33583]
+#### Security enhancements [ID_31045] [ID_31054] [ID_31761] [ID_32055] [ID_32566] [ID_33069] [ID_33078] [ID_33218] [ID_33365] [ID_33583] [ID_34723]
 
 A number of security enhancements have been made.
 
@@ -409,11 +409,31 @@ Alarm locking in the SLElement process has been enhanced.
 
 Because of a number of enhancements, overall performance has increased when opening selection boxes, especially when they contain a large number of items.
 
+#### Dashboards app: Upload size of PDF files will now be validated [ID_34620]
+
+<!-- MR 10.3.0 - FR 10.2.12 -->
+
+When PDF files are uploaded via the WebAPI (e.g. when a PDF report is generated), an error will now be thrown when the batch size exceeds 10 MB or the total file size exceeds 1 GB.
+
+#### Behavioral change points stored in both Cassandra and Elasticsearch [ID_34621]
+
+<!-- MR 10.3.0 - FR 10.2.12 -->
+
+If an Elasticsearch database is available, the behavioral change points detected in trend data by the Behavioral Anomaly Detection feature will now be stored both in the Cassandra database and the Elasticsearch database. Otherwise, they will be stored in Cassandra only like before.
+
+This will support faster and more flexible change point querying via GQI in future releases.
+
 #### Dashboards app / Low-code apps - Visual Overview component: Enhancements with regard to WebSocket/polling settings and user access to visual overviews [ID_34624]
 
 <!-- MR 10.3.0 - FR 10.2.12 -->
 
 A number of enhancements have been made to the visual overview component, especially with regard to the WebSocket/polling settings and the algorithm that checks whether users have access to the visual overviews retrieved by the component.
+
+#### Enhanced parameter locking in SLElement [ID_34688]
+
+<!-- MR 10.3.0 - FR 10.3.1 [CU0] -->
+
+In SLElement, a number of enhancements have been made with regard to parameter locking.
 
 #### Service & Resource Management: GetResources methods not using filter elements have now been marked as obsolete [ID_34720]
 
@@ -437,6 +457,12 @@ For example, you can now use the following call to retrieve all resources:
 ```csharp
 var allResources = resourceManagerHelper.GetResources(new TRUEFilterElement<Resource>());
 ```
+
+#### GQI: Enhanced performance when retrieving DomInstances that have a DomBehaviorDefinition [ID_34853]
+
+<!-- MR 10.3.0 - FR 10.3.1 -->
+
+Because of a number of enhancements, overall performance has increased when retrieving DomInstances that have a DomBehaviorDefinition.
 
 ### Fixes
 
@@ -762,20 +788,6 @@ when a dashboard, a low-code app page or low-code app panel was initialized, in 
 
 When an interactive Automation script was executed in a web app, it would incorrectly not be possible to clear a selection box by selecting an empty option.
 
-#### 'One or more of the following modules are not licensed' error would incorrectly not list the unlicensed modules [ID_34407]
-
-<!-- MR 10.3.0 - FR 10.2.11 -->
-
-When a required software license cannot be found, a `One or more of the following modules are not licensed: ...` message will appear.
-
-In some cases, instead of listing the unlicensed modules, this message would incorrectly only mention "None".
-
-#### Web apps: Problem with email address boxes [ID_34421]
-
-<!-- MR 10.3.0 - FR 10.2.12 -->
-
-When you entered an address in an email address box and then selected something else on the page without pressing *ENTER* or *TAB*, the email address box would incorrectly expand and show a list of suggestions.
-
 #### Web Services API - CreateServiceTemplate: DataMinerID and ElementID incorrectly set to 0 instead of -1 [ID_34440]
 
 <!-- MR 10.3.0 - FR 10.2.11 -->
@@ -810,3 +822,15 @@ When you tried to request data from a simulation that was built with AutoBuildVe
 
 > [!CAUTION]
 > This tool is provided "As Is" with no representation or warranty whatsoever. Skyline Communications will not provide any maintenance or support for this tool.
+
+#### Problem with SLElement [ID_34861]
+
+<!-- MR 10.3.0 - FR 10.3.1 -->
+
+In some cases, an error could occur in SLElement when a DVE child or a virtual function was started, and when a parameter description was changed.
+
+#### Low-code apps: Problem with 'Close a panel' action [ID_34892]
+
+<!-- MR 10.3.0 - FR 10.3.1 -->
+
+When a *Close a panel* action was configured as a post action on a button component, in some cases, it would incorrectly not cause the panel to close.

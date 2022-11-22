@@ -51,7 +51,7 @@ There are two main reasons to consider a Dashboard Gateway setup:
 
 ## Dashboard Gateway configuration
 
-1. On the Dashboard Gateway web server(s), install IIS and the URL Rewrite module.
+1. On the Dashboard Gateway web server(s), install IIS and the [URL Rewrite](https://www.iis.net/downloads/microsoft/url-rewrite) module.
 
    For IIS, make sure to install Classic ASP, ASP.NET 4.6+, and the WebSocket protocol.
 

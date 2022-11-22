@@ -180,6 +180,9 @@ This stage executes the integration test projects. If no integration test projec
 
 This stage performs SonarQube C# code analysis on the QAction code.
 
+> [!TIP]
+> It is possible to exclude some items from analysis (e.g. auto-generated code). For more information on how to exclude items from analysis, refer to <xref:SonarQube>.
+
 ## Initialize validator
 
 This stage initializes the validator settings by obtaining the previous version from SVN and running the validator on the previous version.

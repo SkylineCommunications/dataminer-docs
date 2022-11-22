@@ -206,17 +206,18 @@ This tab provides an overview of all configuration parameters for the Booking Ma
 
 - *Lifecycle colors* settings:
 
-  | Option       | Description                                                                       |
+  | Option         | Description                                                                       |
   |----------------|-----------------------------------------------------------------------------------|
   | Partial        | The color used in the Booking Manager for bookings in the “Partial” state.        |
   | Confirmed      | The color used in the Booking Manager for bookings in the “Confirmed” state.      |
-  | On-hold        | The color used in the Booking Manager for bookings in the “On hold” state.        |
+  | On-Hold        | The color used in the Booking Manager for bookings in the “On hold” state.        |
   | Pre-roll       | The color used in the Booking Manager for bookings in the “Pre-roll” state.       |
-  | Service active | The color used in the Booking Manager for bookings in the “Service active” state. |
+  | Service Active | The color used in the Booking Manager for bookings in the “Service active” state. |
   | Post-roll      | The color used in the Booking Manager for bookings in the “Post-roll” state.      |
   | Completed      | The color used in the Booking Manager for bookings in the “Completed” state.      |
   | Canceled       | The color used in the Booking Manager for bookings in the “Canceled” state.       |
   | Quarantined    | The color used in the Booking Manager for bookings in the “Quarantined” state.    |
+  | Failed         | The color used in the Booking Manager for bookings in the “Failed” state.         |
 
 ### Services and SLA subtab
 

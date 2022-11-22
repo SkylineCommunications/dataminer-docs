@@ -84,7 +84,9 @@ To apply a **filter based on a specific column**:
    - For string values or GUIDs:
 
      - To switch between a positive or negative filter, click *does* or *does not*.
+
      - To switch to a different type of filter, click the second filter field. This will toggle between *contain*, *equal*, and *match regex*.
+
      - In the third field of the filter, specify a filter value.
 
    - For numeric or datetime values, specify the range that a value should be in.
@@ -104,7 +106,9 @@ To apply a **filter based on a specific column**:
 To **sort the table**, you can click a column header.
 
 - To toggle between ascending and descending order, click the column header again.
+
 - To apply additional sorting, press Ctrl while clicking one or more additional headers. The first column will then be used for the initial sorting, the next one to sort equal values of the first column, and so on.
+
 - Alternatively, you can also select one of the available sorting options in the column header right-click menu.
 
 To **group by a specific table column**, right-click the column header and click *Group*. To stop grouping, right-click the header again and select *Stop grouping*.

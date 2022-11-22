@@ -4,6 +4,9 @@ uid: Placeholders_for_variables_in_shape_data_values
 
 # Placeholders for variables in shape data values
 
+> [!TIP]
+> For examples, see [Ziine](xref:ZiineDemoSystem) > *Visual Overview Design Examples* view > *Placeholders* page.
+
 ## Info keywords
 
 A number of keywords can be used in **Info** shape data fields to display information about a shape. These keywords, wrapped in square brackets, can also be used as placeholders in the value of shape data fields. For example:
@@ -173,15 +176,20 @@ End point of the connection that was clicked.
 
 Available from DataMiner 9.6.7 onwards.
 
-The current DataMiner time.
+The current DataMiner time, refreshed every second.
 
 By default, the regional date/time format will be used. To use a different format, specify the format in the placeholder. For example:
 
-```txt
-[DataMinerTime:Format=HH:mm:ss]
-```
+| Format | Description |
+|--|--|
+| `[DataMinerTime:Format=HH:mm:ss]` | Custom format. |
+| `[DataMinerTime:Format=f]` | Full date/time pattern (short time). |
+| `[DataMinerTime:Format=g]` | General date/time pattern (short time). |
+| `[DataMinerTime:Format=F]` | Full date/time pattern (long time). |
+| `[DataMinerTime:Format=G]` | General date/time pattern (long time). |
 
-The time in the placeholder is refreshed every second.
+> [!NOTE]
+> For more information on possible formats, refer to <https://learn.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings>.
 
 ### \[DestinationInterfaceElementID\]
 
