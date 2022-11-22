@@ -67,8 +67,8 @@
 		/// The primary keys of the rows that have the specified value for the specified column.
 		/// </returns>
 		/// <remarks>
-		/// Important: the column used for lookup needs to have the attribute indexColumn defined in the table ArrayOptions.
-		/// Consider using the IDmsTable.QueryData as it may provide a more stable and efficient performance.
+		/// Important: The column used for lookup needs to have the attribute indexColumn defined in the table ArrayOptions.
+		/// Consider using IDmsTable.QueryData as it may provide more stable and efficient performance.
 		/// </remarks>
 		string[] Lookup(IEnumerable<string> values);
 
