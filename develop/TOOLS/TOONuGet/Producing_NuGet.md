@@ -10,7 +10,7 @@ On the [custom solutions tab](xref:Repository_types#custom-solutions) of the SLC
 
 > [!IMPORTANT]
 >
-> - The NuGet name must always begin with `Skyline.DataMiner.`.
+> - The NuGet name must always begin with `SLC.CLib.`.
 > - The NuGet Name must be unique and limited to 50 characters.
 
 To configure the name and version of your NuGet packages, all standard options are available. The easiest way to do this is to go to the project settings and adjust the assembly info.
