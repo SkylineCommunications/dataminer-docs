@@ -282,17 +282,17 @@ namespace Skyline.DataMiner.Automation
 
 
 		/// <summary>
-		/// <para>Adds a button to this dialog box with the specified destination variable name, button text and style.<br/>
+		/// <para>Adds a button to this dialog box with the specified destination variable name, button text, and style.<br/>
 		/// The supported button styles can be accessed through const strings on the Style.Button class.</para>
-		/// <para>This is supported from DataMiner 10.3.1 (feature release) and 10.4.0 (main release) onwards.</para>
+		/// <para>This is supported from DataMiner 10.3.1/10.4.0 onwards.</para>
 		/// </summary>
 		/// <param name="destVar">The name of the destination variable.</param>
 		/// <param name="displayText">The button text.</param>
 		/// <param name="style">The button style (see Style.Button for supported styles).</param>
 		/// <returns>This <see cref="UIBuilder"/> instance.</returns>
 		/// <remarks>
-		/// <para>When the button is pressed, the destination variable is filled with its own name.</para>
-		/// <para>This is a convenience method that will create a new instance of <see cref="UIBlockDefinition"/> of type Button and sets <see cref="RequireResponse"/> to <c>true</c>.</para>
+		/// <para>When the button is pressed, the destination variable is filled in with its own name.</para>
+		/// <para>This is a convenience method that will create a new instance of <see cref="UIBlockDefinition"/> of type Button and set <see cref="RequireResponse"/> to <c>true</c>.</para>
 		/// </remarks>
 		/// <example>
 		/// <code>
