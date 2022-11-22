@@ -109,6 +109,12 @@ In some cases, instead of listing the unlicensed modules, this message would inc
 
 When you entered an address in an email address box and then selected something else on the page without pressing *ENTER* or *TAB*, the email address box would incorrectly expand and show a list of suggestions.
 
+#### SLDMS would leak memory when processing a large number of distribution traps [ID_34525]
+
+<!-- MR 10.2.0 [CU10] - FR 10.3.1 -->
+
+Up to now, SLDMS could leak memory when it had to process a large number of distribution traps. From now on, the number of distribution traps that can be processed by SLDMS will be limited to 250,000. When SLDMS notices that the queue of distribution traps has reached 250,000, it will reject new traps until the number of traps in the queue has dropped to 100,000.
+
 #### DataMiner Cube - Visual Overview: Tooltip of an element in a service chain would incorrectly not show values of node properties [ID_34664]
 
 <!-- MR 10.2.0 [CU10] - FR 10.3.1 -->

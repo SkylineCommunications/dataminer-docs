@@ -109,6 +109,12 @@ The new icon component allows you to display an icon on a dashboard or a low-cod
 
 ### Fixes
 
+#### SLDMS would leak memory when processing a large number of distribution traps [ID_34525]
+
+<!-- MR 10.2.0 [CU10] - FR 10.3.1 -->
+
+Up to now, SLDMS could leak memory when it had to process a large number of distribution traps. From now on, the number of distribution traps that can be processed by SLDMS will be limited to 250,000. When SLDMS notices that the queue of distribution traps has reached 250,000, it will reject new traps until the number of traps in the queue has dropped to 100,000.
+
 #### Cassandra cluster migration: Enhanced performance of SLElement when migrating alarms [ID_34668]
 
 <!-- MR 10.2.0 [CU10] - FR 10.3.1 -->
