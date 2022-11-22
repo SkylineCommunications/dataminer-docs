@@ -458,6 +458,12 @@ For example, you can now use the following call to retrieve all resources:
 var allResources = resourceManagerHelper.GetResources(new TRUEFilterElement<Resource>());
 ```
 
+#### GQI: Enhanced performance when retrieving DomInstances that have a DomBehaviorDefinition [ID_34853]
+
+<!-- MR 10.3.0 - FR 10.3.1 -->
+
+Because of a number of enhancements, overall performance has increased when retrieving DomInstances that have a DomBehaviorDefinition.
+
 ### Fixes
 
 #### SLAnalytics: Problem with trend prediction [ID_31352]
