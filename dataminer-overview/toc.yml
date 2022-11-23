@@ -77,13 +77,6 @@
     - name: Partner Program
       topicUID: Partner_Program
       items:
-        - name: Background to the Partner Program
-          topicUID: Background_Partner_Program
-          items:
-            - name: The role of DataMiner
-              topicUID: The_Role_of_DataMiner
-            - name: Your role
-              topicUID: Your_Role
         - name: Becoming a DataMiner Partner
           topicUID: Becoming_a_DataMiner_Partner
         - name: Getting started with the Partner Program
