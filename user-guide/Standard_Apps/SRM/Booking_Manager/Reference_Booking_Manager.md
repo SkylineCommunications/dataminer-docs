@@ -112,7 +112,7 @@ This property allows you to indicate whether a resource should be assigned to a 
 Set this property to *True*, *False*, or *Always*.
 
 > [!TIP]
-> See also: [Customizing automatic resource selection](xref:Service_Orch_configuring_resource_and_pools#customizing-automatic-resource-selection)
+> See also: [Customizing automatic resource selection](xref:Service_Orchestration_resources_advanced#customizing-automatic-resource-selection)
 
 ### BlockInfo
 
@@ -356,7 +356,7 @@ This property allows you to hide a service definition node in the Booking Wizard
 Set this property to *Yes* to hide the node if a resource is available.
 
 > [!TIP]
-> See also: [Hiding resource selection if a resource is available](xref:Service_Orch_configuring_resource_and_pools#hiding-resource-selection-if-a-resource-is-available).
+> See also: [Hiding resource selection if a resource is available](xref:Service_Orchestration_resources_advanced#hiding-resource-selection-if-a-resource-is-available).
 
 ### IsContributing
 
@@ -411,8 +411,8 @@ This property can be set to a list of several options, separated by pipe (â€œ\|â
 > [!TIP]
 > See also:
 >
-> - [Hiding resource selection for a specific node](xref:Service_Orch_configuring_resource_and_pools#hiding-resource-selection-for-a-specific-node)
-> - [Making resource selection optional for a node](xref:Service_Orch_configuring_resource_and_pools#making-resource-selection-optional-for-a-node)
+> - [Hiding resource selection for a specific node](xref:Service_Orchestration_resources_advanced#hiding-resource-selection-for-a-specific-node)
+> - [Making resource selection optional for a node](xref:Service_Orchestration_resources_advanced#making-resource-selection-optional-for-a-node)
 
 ### Priority
 
@@ -427,7 +427,7 @@ This property allows you to define a priority for the resource, which is used to
 Set this property to an integer representing the priority of the resource, e.g. 5.
 
 > [!TIP]
-> See also: [Resource sorting configuration](xref:Service_Orch_configuring_resource_and_pools#resource-sorting-configuration)
+> See also: [Resource sorting configuration](xref:Service_Orchestration_resources_advanced#resource-sorting-configuration)
 
 ### ReadOnlyResourceSelectionControl
 
@@ -479,7 +479,7 @@ Specify the conditions in JSON format as illustrated below. Only "AND" combinati
 ```
 
 > [!TIP]
-> See also: [Setting up additional pre-filtering](xref:Service_Orch_configuring_resource_and_pools#setting-up-additional-pre-filtering).
+> See also: [Setting up additional pre-filtering](xref:Service_Orchestration_resources_advanced#setting-up-additional-pre-filtering).
 
 ### Resource Pool
 
@@ -509,7 +509,7 @@ To configure this, on the *Config* > *Wizard* tab of the Booking Manager, set *R
 > If *Resources Ordering Rule* is set to *Capacity* but this property is not defined, the first available capacity will be used for sorting.
 
 > [!TIP]
-> See also: [Resource sorting configuration](xref:Service_Orch_configuring_resource_and_pools#resource-sorting-configuration).
+> See also: [Resource sorting configuration](xref:Service_Orchestration_resources_advanced#resource-sorting-configuration).
 
 ### Reuse Contributing Resource
 

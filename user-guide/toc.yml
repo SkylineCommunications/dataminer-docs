@@ -2483,6 +2483,13 @@
         items:
           - name: Booking Manager user interface
             topicUid: Booking_Manager_user_interface
+            items:
+              - name: Bookings tab
+                topicUid: Booking_Manager_Bookings_tab
+              - name: Config tab
+                topicUid: Booking_Manager_Config_tab
+              - name: Admin tab
+                topicUid: Booking_Manager_Admin_tab
           - name: Interacting with the Booking Manager app using custom Automation scripts
             topicUid: Interacting_with_the_Booking_Manager_app_using_custom_Automation_scripts
             items:
@@ -2492,6 +2499,19 @@
                 topicUid: Frequently_asked_questions_related_to_bookings_and_scripting
           - name: SRM properties for use with the Booking Manager app
             topicUid: SRM_properties_Booking_Manager
+      - name: Advanced configuration
+        items:
+          - name: User interface customization
+            topicUID: SRM_user_interface_customization
+            items:
+              - name: Creating a custom front end for the Booking Manager
+                topicUID: SRM_custom_front_end
+              - name: Using custom scripts instead of the default SRM wizards
+                topicUID: SRM_custom_scripts
+          - name: Advanced configuration for Service Orchestration
+            items:
+              - name: Resources configuration
+                topicUID: Service_Orchestration_resources_advanced
 - name: DataMiner Cloud Platform
   topicUid: Part51CloudPlatform
   items:
