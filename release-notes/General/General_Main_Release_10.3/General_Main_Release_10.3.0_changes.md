@@ -823,11 +823,11 @@ When you tried to request data from a simulation that was built with AutoBuildVe
 > [!CAUTION]
 > This tool is provided "As Is" with no representation or warranty whatsoever. Skyline Communications will not provide any maintenance or support for this tool.
 
-#### Problem with SLElement [ID_34861]
+#### Problem with SLElement when a trend template was being assigned [ID_34824]
 
 <!-- MR 10.3.0 - FR 10.3.1 -->
 
-In some cases, an error could occur in SLElement when a DVE child or a virtual function was started, and when a parameter description was changed.
+In some cases, an error could occur in SLElement when a trend template was being assigned.
 
 #### Dashboards app: Empty groups would incorrectly not be removed from parameter feeds listing EPM parameters [ID_34884]
 

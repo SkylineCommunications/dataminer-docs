@@ -177,6 +177,18 @@ When conditional coloring was applied on the first column of a table in which ac
 
 After a DataMiner upgrade, files belonging to previous app versions would incorrectly not be removed from the `C:\Skyline DataMiner\Webpages\App` and `C:\Skyline DataMiner\Webpages\Automation` folders. From now on, those folders will be deleted before new versions of those apps are installed.
 
+#### Problem with SLElement when a description.xml file was updated while an alarm was being unmasked [ID_34860]
+
+<!-- Main Release Version 10.1.0 [CU22]/10.2.0 [CU10] - Feature Release Version 10.3.1 -->
+
+In some cases, an error could occur in SLElement when a *description.xml* file was updated while an alarm was being unmasked.
+
+#### Problem with SLElement [ID_34861]
+
+<!-- MR 10.2.0 [CU10] - FR 10.3.1 -->
+
+In some cases, an error could occur in SLElement when a DVE child or a virtual function was started, and when a parameter description was changed.
+
 #### HTTP requests would incorrectly not be retried when WinHTTP threw a SEC_E_BUFFER_TOO_SMALL error [ID_34888]
 
 <!-- Main Release Version 10.0.0 [CU22]/10.1.0 [CU22]/10.2.0 [CU10] - Feature Release Version 10.3.1 -->
@@ -192,6 +204,12 @@ From now on, when this error is thrown, DataMiner will retry the HTTP request th
 In some cases, cell values in a GQI query result would incorrect include the object type. This was the case for DOM instance IDs, DOM definition IDs, profile instance IDs and profile definition IDs.
 
 For example, a cell value would incorrectly be set to "DomDefinitionId[00000000-0000-0000-0000-000000000000]" while the display value was actually "00000000-0000-0000-0000-000000000000".
+
+#### Problem with SLElement when a parameter update was being processed while an element was starting up [ID_34899]
+
+<!-- MR 10.2.0 [CU10] - FR 10.3.1 -->
+
+In some cases, an error could occur in SLElement when a parameter update was being processed while an element was starting up.
 
 #### Low-code apps: 'Fetch the data' action of a table component would resolve too soon [ID_34902]
 

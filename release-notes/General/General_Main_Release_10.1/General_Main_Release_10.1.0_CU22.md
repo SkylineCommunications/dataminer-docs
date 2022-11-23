@@ -72,6 +72,12 @@ During a Cassandra Cluster migration, SLDataGateway would leak memory due to pag
 
 When you had specified a preset in a shape that contained a Spectrum Analysis component, the preset would incorrectly not be loaded when you opened the visual overview in Cube.
 
+#### Problem with SLElement when a description.xml file was updated while an alarm was being unmasked [ID_34860]
+
+<!-- Main Release Version 10.1.0 [CU22]/10.2.0 [CU10] - Feature Release Version 10.3.1 -->
+
+In some cases, an error could occur in SLElement when a *description.xml* file was updated while an alarm was being unmasked.
+
 #### HTTP requests would incorrectly not be retried when WinHTTP threw a SEC_E_BUFFER_TOO_SMALL error [ID_34888]
 
 <!-- Main Release Version 10.0.0 [CU22]/10.1.0 [CU22]/10.2.0 [CU10] - Feature Release Version 10.3.1 -->

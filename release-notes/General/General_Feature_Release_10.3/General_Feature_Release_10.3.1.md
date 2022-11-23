@@ -161,7 +161,7 @@ From now on, when a GQI query has to retrieve DCF interfaces, it will do so by q
 
 #### Problem with SLElement when a trend template was being assigned [ID_34824]
 
-<!-- MR 10.4.0 - FR 10.3.1 -->
+<!-- MR 10.3.0 - FR 10.3.1 -->
 
 In some cases, an error could occur in SLElement when a trend template was being assigned.
 
@@ -193,13 +193,13 @@ After a DataMiner upgrade, files belonging to previous app versions would incorr
 
 #### Problem with SLElement when a description.xml file was updated while an alarm was being unmasked [ID_34860]
 
-<!-- MR 10.4.0 - FR 10.3.1 -->
+<!-- Main Release Version 10.1.0 [CU22]/10.2.0 [CU10] - Feature Release Version 10.3.1 -->
 
 In some cases, an error could occur in SLElement when a *description.xml* file was updated while an alarm was being unmasked.
 
 #### Problem with SLElement [ID_34861]
 
-<!-- MR 10.3.0 - FR 10.3.1 -->
+<!-- MR 10.2.0 [CU10] - FR 10.3.1 -->
 
 In some cases, an error could occur in SLElement when a DVE child or a virtual function was started, and when a parameter description was changed.
 
@@ -242,7 +242,7 @@ In some cases, a range filter in a query filter or a table column filter would i
 
 #### Problem with SLElement when a parameter update was being processed while an element was starting up [ID_34899]
 
-<!-- MR 10.4.0 - FR 10.3.1 -->
+<!-- MR 10.2.0 [CU10] - FR 10.3.1 -->
 
 In some cases, an error could occur in SLElement when a parameter update was being processed while an element was starting up.
 
