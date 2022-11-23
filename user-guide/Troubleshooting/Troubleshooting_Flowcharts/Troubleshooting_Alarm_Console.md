@@ -69,7 +69,7 @@ graph TD
 
 | **Issue** | **Plan of attack** |
 |--|--|
-| Alarm history exceeded 100 alarms. It is advised to revise your alarm threshold definitions. | 1. Preferably: stop toggling of alarm per parameter. <br> 2. If not possible, change [AlarmsPerParameter in Help](MaintenanceSettings_xml). |
+| Alarm history exceeded 100 alarms. It is advised to revise your alarm threshold definitions. | 1. Preferably: stop toggling of alarm per parameter. <br> 2. If not possible, change [AlarmsPerParameter in Help](xref:MaintenanceSettings_xml). |
 
 ## Information Event
 
