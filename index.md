@@ -9,4 +9,4 @@ Can't find what you need here? Go to our [DataMiner Community website](https://c
 > [!TIP]
 > Want to contribute? Go to [Contributing to the DataMiner docs](xref:contributing) for more info.
 
-[<img src="images/DataminerOverview.svg" alt="DataMiner Overview" width="24%">](xref:OverviewIndex) [<img src="images/UserGuide.svg" alt="User Guide" width="24%">](xref:Part1GettingStarted) [<img src="images/DeveloperDocumentation.svg" alt="Developer Documentation" width="24%">](xref:DevelopIndex) [<img src="images/DataminerReleaseNotes.svg" alt="DataMiner Release Notes" width="24%">](xref:DataMiner_General_RNs_index)
+[<img src="images/Docs_DataminerOverview.svg" alt="DataMiner Overview" width="24%">](xref:OverviewIndex) [<img src="images/Docs_UserGuide.svg" alt="User Guide" width="24%">](xref:Part1GettingStarted) [<img src="images/Docs_DeveloperDocumentation.svg" alt="Developer Documentation" width="24%">](xref:DevelopIndex) [<img src="images/Docs_DataminerReleaseNotes.svg" alt="DataMiner Release Notes" width="24%">](xref:DataMiner_General_RNs_index)

@@ -13,3 +13,5 @@ uid: Part6Troubleshooting
 - [Known issues](xref:Known_issues)
 
 - [Customer DataMiner Reporting (CDMR)](xref:CDMR)
+
+- [Remote Log Collection](xref:RemoteLogCollection)

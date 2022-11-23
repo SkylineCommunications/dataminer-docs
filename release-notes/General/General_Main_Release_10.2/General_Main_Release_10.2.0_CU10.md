@@ -109,6 +109,12 @@ In some cases, instead of listing the unlicensed modules, this message would inc
 
 When you entered an address in an email address box and then selected something else on the page without pressing *ENTER* or *TAB*, the email address box would incorrectly expand and show a list of suggestions.
 
+#### SLDMS would leak memory when processing a large number of distribution traps [ID_34525]
+
+<!-- MR 10.2.0 [CU10] - FR 10.3.1 -->
+
+Up to now, SLDMS could leak memory when it had to process a large number of distribution traps. From now on, the number of distribution traps that can be processed by SLDMS will be limited to 250,000. When SLDMS notices that the queue of distribution traps has reached 250,000, it will reject new traps until the number of traps in the queue has dropped to 100,000.
+
 #### DataMiner Cube - Visual Overview: Tooltip of an element in a service chain would incorrectly not show values of node properties [ID_34664]
 
 <!-- MR 10.2.0 [CU10] - FR 10.3.1 -->
@@ -120,6 +126,12 @@ When, in a service chain within a service context, an element shape was linked t
 <!-- MR 10.1.0 [CU22] / 10.2.0 [CU10] - FR 10.3.1 -->
 
 When a time range feed was configured to show quick pick buttons, those buttons would not be displayed in the correct order. From now on, quick pick buttons will be displayed in chronological order.
+
+#### Web apps - Interactive Automation scripts: All other tree view components in a dialog box would incorrectly collapse when you selected an item in a tree view component [ID_34773]
+
+<!-- MR 10.2.0 [CU10] - FR 10.3.1 -->
+
+When, in a dialog box of an interactive Automation script, you selected an item in a tree view component, other tree view components on that dialog box would incorrectly collapse.
 
 #### Standalone parameters belonging to another child of the same DVE parent element could be set to 'Not Initialized' when a row linked to a DVE child element was deleted [ID_34785]
 
@@ -165,6 +177,18 @@ When conditional coloring was applied on the first column of a table in which ac
 
 After a DataMiner upgrade, files belonging to previous app versions would incorrectly not be removed from the `C:\Skyline DataMiner\Webpages\App` and `C:\Skyline DataMiner\Webpages\Automation` folders. From now on, those folders will be deleted before new versions of those apps are installed.
 
+#### Problem with SLElement when a description.xml file was updated while an alarm was being unmasked [ID_34860]
+
+<!-- Main Release Version 10.1.0 [CU22]/10.2.0 [CU10] - Feature Release Version 10.3.1 -->
+
+In some cases, an error could occur in SLElement when a *description.xml* file was updated while an alarm was being unmasked.
+
+#### Problem with SLElement [ID_34861]
+
+<!-- MR 10.2.0 [CU10] - FR 10.3.1 -->
+
+In some cases, an error could occur in SLElement when a DVE child or a virtual function was started, and when a parameter description was changed.
+
 #### HTTP requests would incorrectly not be retried when WinHTTP threw a SEC_E_BUFFER_TOO_SMALL error [ID_34888]
 
 <!-- Main Release Version 10.0.0 [CU22]/10.1.0 [CU22]/10.2.0 [CU10] - Feature Release Version 10.3.1 -->
@@ -180,6 +204,12 @@ From now on, when this error is thrown, DataMiner will retry the HTTP request th
 In some cases, cell values in a GQI query result would incorrect include the object type. This was the case for DOM instance IDs, DOM definition IDs, profile instance IDs and profile definition IDs.
 
 For example, a cell value would incorrectly be set to "DomDefinitionId[00000000-0000-0000-0000-000000000000]" while the display value was actually "00000000-0000-0000-0000-000000000000".
+
+#### Problem with SLElement when a parameter update was being processed while an element was starting up [ID_34899]
+
+<!-- MR 10.2.0 [CU10] - FR 10.3.1 -->
+
+In some cases, an error could occur in SLElement when a parameter update was being processed while an element was starting up.
 
 #### Low-code apps: 'Fetch the data' action of a table component would resolve too soon [ID_34902]
 
@@ -203,8 +233,26 @@ When a row in a table component contained data of different types, that data wou
 
 Moreover, in some cases, the table would even not be able to feed the data in its rows.
 
+#### SLDataGateway was not always able to parse the result of a 'nodetool status' command [ID_34929]
+
+<!-- Main Release Version 10.1.0 [CU22]/10.2.0 [CU10] - Feature Release Version 10.3.1 -->
+
+The SLDataGateway process periodically checks the status of the local Cassandra node by executing a `nodetool status` command and parsing the result. When Cassandra was still starting up, some values in the output could not always be parsed, leading to SLDataGateway incorrectly marking the database as unavailable.
+
 #### DataMiner Cube - EPM: Problem with topology filter [ID_34931]
 
 <!-- Main Release Version 10.1.0 [CU22]/10.2.0 [CU10] - Feature Release Version 10.3.1 -->
 
 When you opened a topology chain and selected a field in the topology filter, in some cases, the fields above the one you selected would incorrectly not get selected automatically.
+
+#### Problem with SLProtocol when trying to update a parameter of type 'read bit' [ID_34935]
+
+<!-- Main Release Version 10.1.0 [CU22]/10.2.0 [CU10] - Feature Release Version 10.3.1 -->
+
+In some cases, an error could occur in SLProtocol when trying to update a parameter of type `read bit`.
+
+#### Web apps - Line chart component: Chart would incorrectly display non-existing data when the time window included a period in the future [ID_34959]
+
+<!-- Main Release Version 10.1.0 [CU22]/10.2.0 [CU10] - Feature Release Version 10.3.1 -->
+
+When the time window of a line chart component showing trend data included a period in the future, the chart would incorrectly display non-existing data for that period in the future. From now on, the chart will stop at the current time.

@@ -51,6 +51,17 @@ For example, in case of HTTP communication, there will now be extra levels for s
 
 **only in case of a response*
 
+#### Alarm Console: A notice will now appear when resources are being migrated from XML to Elasticsearch [ID_34845]
+
+<!-- MR 10.3.0 - FR 10.3.1 -->
+
+When resources are being migrated from XML to Elasticsearch, a `Busy migrating resources to the Elasticsearch database.` notice will now be displayed in the Alarm console. Also, information events will be generated when a migration was started, was canceled or finished. In the latter case, the information event will indicate whether the migration finished with or without errors.
+
+When you start a resource migration in the *SLNetClientTest* tool (by selecting *Advanced > Migration > Resources XML to Elastic > Start Migration*), all ongoing bookings and bookings that are scheduled to start or stop in the next hour will be listed in a table (which can be sorted by clicking the table headers). As the Resource Manager is stopped while a migration is in progress, it is possible that bookings will not be started or stopped during a migration.
+
+> [!CAUTION]
+> Always be extremely careful when using the *SLNetClientTest* tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
+
 ### Fixes
 
 #### DataMiner Cube - Visual Overview: Tooltip of an element in a service chain would incorrectly not show values of node properties [ID_34664]

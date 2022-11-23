@@ -458,6 +458,12 @@ For example, you can now use the following call to retrieve all resources:
 var allResources = resourceManagerHelper.GetResources(new TRUEFilterElement<Resource>());
 ```
 
+#### GQI: Enhanced performance when retrieving DomInstances that have a DomBehaviorDefinition [ID_34853]
+
+<!-- MR 10.3.0 - FR 10.3.1 -->
+
+Because of a number of enhancements, overall performance has increased when retrieving DomInstances that have a DomBehaviorDefinition.
+
 ### Fixes
 
 #### SLAnalytics: Problem with trend prediction [ID_31352]
@@ -817,8 +823,47 @@ When you tried to request data from a simulation that was built with AutoBuildVe
 > [!CAUTION]
 > This tool is provided "As Is" with no representation or warranty whatsoever. Skyline Communications will not provide any maintenance or support for this tool.
 
+#### Problem with SLElement when a trend template was being assigned [ID_34824]
+
+<!-- MR 10.3.0 - FR 10.3.1 -->
+
+In some cases, an error could occur in SLElement when a trend template was being assigned.
+
+#### Dashboards app: Empty groups would incorrectly not be removed from parameter feeds listing EPM parameters [ID_34884]
+
+<!-- MR 10.3.0 - FR 10.3.1 -->
+
+When, in a parameter feed listing EPM parameters, the parameters were grouped, empty groups would incorrectly not be removed after switching to another EPM object.
+
 #### Low-code apps: Problem with 'Close a panel' action [ID_34892]
 
 <!-- MR 10.3.0 - FR 10.3.1 -->
 
 When a *Close a panel* action was configured as a post action on a button component, in some cases, it would incorrectly not cause the panel to close.
+
+#### Dashboards & low-code apps: Decimal values would incorrectly not be allowed in range filters [ID_34897]
+
+<!-- MR 10.3.0 - FR 10.3.1 -->
+
+In some cases, a range filter in a query filter or a table column filter would incorrectly not allow decimal values.
+
+> [!NOTE]
+> When using a query filter with filter assistance enabled, the statistics will determine the number of decimals that can be used.
+
+#### Dashboards & low-code apps: Feed component selections would incorrectly be lost after applying a built-in theme [ID_34908]
+
+<!-- MR 10.3.0 - FR 10.3.1 -->
+
+When you applied a built-in theme, feed component selections would incorrectly be lost after refetching the data.
+
+#### Dashboards & low-code apps: Not possible to group the data in a timeline populated using a query with a query filter [ID_34932]
+
+<!-- MR 10.3.0 - FR 10.3.1 -->
+
+When a timeline was populated using a query with a query filter, it would incorrectly not be possible to group the data.
+
+#### Low-code apps: Drop-down box containing an 'execute component' action would incorrectly be empty [ID_34953]
+
+<!-- MR 10.3.0 - FR 10.2.12 [CU1] -->
+
+When an *execute component* action had been configured, in some cases, when you tried to update that action, the drop-down box containing the action would incorrectly be empty.
