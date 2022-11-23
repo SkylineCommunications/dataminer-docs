@@ -297,3 +297,9 @@ In some cases, an error could occur in SLProtocol when trying to update a parame
 <!-- Main Release Version 10.1.0 [CU22]/10.2.0 [CU10] - Feature Release Version 10.3.1 -->
 
 When the time window of a line chart component showing trend data included a period in the future, the chart would incorrectly display non-existing data for that period in the future. From now on, the chart will stop at the current time.
+
+#### Problem with Resource Manager when ResourceStorageType was not specified in Resource Manager settings [ID_34981]
+
+<!-- MR 10.4.0 - FR 10.3.1 -->
+
+In some cases, Resource Manager could throw a NullReferenceException when *ResourceStorageType* was not specified in the `C:\Skyline DataMiner\ResourceManager\Config.xml` file.

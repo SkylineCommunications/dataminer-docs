@@ -338,6 +338,17 @@
   - name: DataMiner Cube release notes
     topicUid: DataMiner_Cube_RNs_index
     items:
+    - name: v10.4
+      items:
+      - name: Main Release
+        items:
+        - name: DataMiner Cube Main Release 10.4.0 - Preview
+          topicUid: Cube_Main_Release_10.4.0
+          items:
+          - name: Highlights - Preview
+            topicUid: Cube_Main_Release_10.4.0_highlights
+          - name: Other new features & changes - Preview
+            topicUid: Cube_Main_Release_10.4.0_other_features_changes
     - name: v10.3
       items:
       - name: Main Release

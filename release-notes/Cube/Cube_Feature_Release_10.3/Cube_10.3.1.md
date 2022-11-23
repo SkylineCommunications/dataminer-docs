@@ -35,6 +35,12 @@ ChildrenSort="Property|property=End,desc"
 
 ### Enhancements
 
+#### Alarm Console: Automatic incident tracking will now make use of the parameter relationship data that is stored in a model managed by the ModelHost DxM [ID_34684]
+
+<!-- MR 10.4.0 - FR 10.3.1 -->
+
+The *automatic incident tracking* feature groups active alarms that are related to the same incident, so that the Alarm Console provides a better overview of the current issues in the system. From now on, on cloud-connected DataMiner Agents that have the DataMiner Extension Module *ModelHost* installed and that have been configured to [offload alarm and change point events to the cloud](xref:Controlling_cloudfeed_data_offloads), this feature will also make use of the parameter relationship data that is stored in a model managed by the *ModelHost* DxM.
+
 #### DataMiner Cube - Visual Overview: Enhanced performance when updating automatically generated shapes that represent bookings [ID_34695]
 
 <!-- MR 10.2.0 [CU10] - FR 10.3.1 -->
