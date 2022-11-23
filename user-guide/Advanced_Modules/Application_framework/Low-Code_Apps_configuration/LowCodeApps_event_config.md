@@ -75,7 +75,7 @@ To configure an event to open another low-code app that has been published in yo
 
 This option is only displayed if there is a component action that can be executed.
 
-To configure an event so execute a component action:
+To configure an event to execute a component action:
 
 1. Select *Execute component action* and specify which action should be executed.
 

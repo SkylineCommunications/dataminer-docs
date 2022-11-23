@@ -861,3 +861,9 @@ When you applied a built-in theme, feed component selections would incorrectly b
 <!-- MR 10.3.0 - FR 10.3.1 -->
 
 When a timeline was populated using a query with a query filter, it would incorrectly not be possible to group the data.
+
+#### Low-code apps: Drop-down box containing an 'execute component' action would incorrectly be empty [ID_34953]
+
+<!-- MR 10.3.0 - FR 10.2.12 [CU1] -->
+
+When an *execute component* action had been configured, in some cases, when you tried to update that action, the drop-down box containing the action would incorrectly be empty.
