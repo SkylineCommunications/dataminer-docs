@@ -74,6 +74,13 @@
           topicUid: Overview_Compliance_Statements_RvsG_O
         - name: Tender compliancy (licenses / engineering days)
           topicUid: Overview_Compliance_Statements_Tender_Compliancy
+    - name: DataMiner Devops Professionals
+      topicUID: DataMiner_Devops_Professionals
+      items:
+        - name: What is the DataMiner DevOps Professionals program?
+          topicUID: What_is_the_DevOps_Professionals_Program
+        - name: Benefits attached to the DataMiner DevOps Professionals program
+          topicUID: Benefits_DevOps_Professionals_Program
     - name: Frequently asked questions
       topicUid: FAQs
       items:
