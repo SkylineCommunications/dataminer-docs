@@ -62,6 +62,12 @@ When you start a resource migration in the *SLNetClientTest* tool (by selecting 
 > [!CAUTION]
 > Always be extremely careful when using the *SLNetClientTest* tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
 
+#### DataMiner Cube - Settings: 'Show the DataMiner TV section' setting has been removed [ID_34877]
+
+<!-- MR 10.1.0 [CU22] / 10.2.0 [CU10] - FR 10.3.1 -->
+
+The *Show the DataMiner TV section* setting has been removed from the *User > Cube* section of the *Settings* window.
+
 ### Fixes
 
 #### DataMiner Cube - Visual Overview: Tooltip of an element in a service chain would incorrectly not show values of node properties [ID_34664]
@@ -89,3 +95,9 @@ Also, the *Navigation* panel has been improved and renamed to *Settings* panel.
 <!-- Main Release Version 10.1.0 [CU22]/10.2.0 [CU10] - Feature Release Version 10.3.1 -->
 
 When you opened a topology chain and selected a field in the topology filter, in some cases, the fields above the one you selected would incorrectly not get selected automatically.
+
+#### DataMiner Cube - Visual Overview: Trend graph would incorrectly show 'No data' [ID_34955]
+
+<!-- Main Release Version 10.1.0 [CU22]/10.2.0 [CU10] - Feature Release Version 10.3.1 -->
+
+When a visual overview on an EPM card contained a trend graph, in some cases, that graph would incorrectly show *No data* while its legend would show the correct data.

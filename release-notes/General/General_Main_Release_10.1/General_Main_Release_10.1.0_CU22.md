@@ -38,6 +38,12 @@ For example, in case of HTTP communication, there will now be extra levels for s
 
 **only in case of a response*
 
+#### DataMiner Cube - Settings: 'Show the DataMiner TV section' setting has been removed [ID_34877]
+
+<!-- MR 10.1.0 [CU22] / 10.2.0 [CU10] - FR 10.3.1 -->
+
+The *Show the DataMiner TV section* setting has been removed from the *User > Cube* section of the *Settings* window.
+
 ### Fixes
 
 #### 'One or more of the following modules are not licensed' error would incorrectly not list the unlicensed modules [ID_34407]
@@ -111,6 +117,12 @@ When you opened a topology chain and selected a field in the topology filter, in
 <!-- Main Release Version 10.1.0 [CU22]/10.2.0 [CU10] - Feature Release Version 10.3.1 -->
 
 In some cases, an error could occur in SLProtocol when trying to update a parameter of type `read bit`.
+
+#### DataMiner Cube - Visual Overview: Trend graph would incorrectly show 'No data' [ID_34955]
+
+<!-- Main Release Version 10.1.0 [CU22]/10.2.0 [CU10] - Feature Release Version 10.3.1 -->
+
+When a visual overview on an EPM card contained a trend graph, in some cases, that graph would incorrectly show *No data* while its legend would show the correct data.
 
 #### Web apps - Line chart component: Chart would incorrectly display non-existing data when the time window included a period in the future [ID_34959]
 
