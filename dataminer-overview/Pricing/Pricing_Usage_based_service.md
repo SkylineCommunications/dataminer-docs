@@ -27,11 +27,16 @@ This includes:
 
 ## Free DataMiner System
 
-Every company can get started with one free standalone DataMiner System, a functionally full-featured DataMiner platform, only limited by the credit allowance per service.
+Every Organization can get started with one free standalone DataMiner System, a functionally full-featured DataMiner platform, only limited by the credit allowance per service.
 
 This is the perfect way to get started, allowing anyone to use the platform and build up knowledge on the many possibilities it has to offer, within this free allowance.
 
 When ready to scale up, the user can set up a yearly subscription or start with a number of credits in the Pay-per-Use model.
+
+> [!NOTE]
+>Self-hosted/onprem Free DataMiner Systems are not time-limited, an organization can use the system as long as it remains reachable i.e. DataMiner Cloud-Services are enabled.
+>
+>Skyline-hosted Free DataMiner Systems (DataMiner as a Service) are only available for a predetermined trial period. Contact your Account Manager for details.
 
 ## Commercial models
 
@@ -49,46 +54,65 @@ In case of a Pay-per-Use plan, user pay for what they use, giving ultimate flexi
 | Automatic renewal | X | - |
 | Annual subscription fee | X | - |
 | Over-utilization | Charged at a premium fee | - |
-| Support services | X (Support tier depends on the MUA level) | Community |
+| Support services | Support tier depends on the MUA level | Community |
 
 > [!IMPORTANT]
 > The system must have DataMiner Cloud Services enabled in order to enable metering for systems that are hosted by the user (on-premises or private cloud). The system will stop working if disconnected for longer than 24 hours.
 
-### Subscription terms
+### Managing Subscriptions
 
-- *Start date*: The date when the system comes online.
+#### Subscription Terms
 
-- *Duration*: 12 months, 24 months, or 36 months.
+| Term      | Definition |
+|-----------|------------|
+| *Start Date* | The date when the system comes online. |
+| *Duration* | An Organization can select between 12-months, 24-months, or 36-months subscription duration |
+| *Renewal Date* | Subscription date + duration. <br> At Renewal Date subscriptions renew automatically for 12 months at the then current credit rates, unless agreed otherwise. | 
+| *MUA* | Monthly Utilization Allowance. <br> A fixed number of credits available per month under the subscription |
+| *Credit Rate* | The credit rate depends on: 1) whether on a subscription plan or pay-per-use, 2) region, and 3) hosting, if subscribing to the service as a Skyline-hosted (referred to as DataMiner as a Service) solution or self-hosted infrastructure (on-prem or private cloud). <br> The price of a credit is protected for the duration of the contract, i.e. 24-month or 36-month subscriptions protect against potential yearly price adjustments.|
 
-- *Anniversary date*: Subscription date + duration.
+#### Metering
 
-- *Renewal*: Following the anniversary date, subscriptions renew automatically for 12 months at the then current credit rates.
+Metering works in monthly cycles, starting on the first day of each month. MUA is pro-rated for the first and last months. 
 
-- *Billing*:
+>[!Important]
+>Example of pro-rated calculation <br>
+>MUA: 200 credits <br>
+>Start Date: October 20, 2022<br>
+>Renewal Date: October 19, 2023
+>  - MUA available for the period October 20, 2022 to October 31, 2022 = 200 credits x  12 days / 31 days = 77.4 credits
+>  - MUA available for the period October 1, 2023 to October 19, 2023 =  200 credits x 19 days / 31 days = 122.6 credits
 
-    | Duration  | Billing |
-    |-----------|---------|
-    | 12 months | Start date: 100% |
-    | 24 months | Start date: 60%<br>Start date + 12 months: 40% |
-    | 36 months | Start date: 60%<br>Start date + 12 months: 20%<br>Start date + 24 months: 20% |
+Metering for *Data Collection and control plane service* is calculated as the sum of the maximum number of active Managed Objects (for Managed Objects with 100+ metrics) and Metrics (Managed Objects under 100 metrics) at any given time. For this service metering follows the 95% percentile i.e. is calculated as the maximum usage after skipping the peak 5% usage, in practice allowinng some room (36h per month) for tests or burst of usage.
 
-    After the anniversary date, the subscription will be invoiced yearly, unless replaced by a new contract.  
 
-- *Credit rate*: The price of a credit is protected for the duration of the contract, i.e. 24-month or 36-month subscriptions protect against potential yearly price adjustments.
+#### Billing and Invoicing
 
-- *Cancellation*: Subscriptions can be canceled up to 30 days before the anniversary date. The subscription will remain active until the anniversary date. The amount paid is not refundable.
+   | Duration  | Invoicing |
+   |-----------|------------|
+   | 12 months | Start date: 100% |
+   | 24 months | Start date: 60%<br>Start date + 12 months: 40% |
+   | 36 months | Start date: 60%<br>Start date + 12 months: 20% <br> Start date + 24 months: 20% |
 
-- *Changes to the subscribed MUA level*: MUA can be increased at any time, at the then current credit rate, without changing the anniversary date. Lowering MUA is only possible at the anniversary date.
+At Renewal Date, the subscription will be invoiced yearly, unless replaced by a new contract.
 
-- *Metering*: Metering works in monthly cycles, starting on the first day of each month. MUA is pro-rated for the first and last months. For example:
+Consumption above the contracted Monthly Utilization Allowance (MUA) is possible, with the additional consumed credits being invoiced monthly, at the then current Pay-per-Use Credit Rate.
 
-  - Initial MUA: 200 credits
-  - Start date: November 1, 2022
-  - Anniversary date: November 1, 2023
-  - Increase to a MUA of 250 credits on August 1, 2023
-  - Billing on August 1, 2023: 50 credits x current credit rate x 12 months (i.e. paid until August 1, 2024)
-  - Billing on November 1, 2023 (i.e. Anniversary date):
-    - 200 credits x current credit rate x 12 months
-    - +50 credits x current credit rate x 4 months
 
-- *Over-utilization*: Consumption above the contracted Monthly Utilization Allowance (MUA) is possible, with the additional consumed credits being invoiced monthly, at the then current Pay-per-Use credit rate.
+#### Cancellation 
+Subscriptions can be canceled up to 30 days before the anniversary date. The subscription will remain active until the anniversary date. The amount paid is not refundable.
+
+#### Changing Subscription
+The subscribed MUA level can be changed at any time without altering the Renewal Date.
+- Increasing MUA level: The additional credits are charged at the then current Credit Rate for a minimum 12-month Duration. The new MUA is immediately available to use.
+- Lowering MUA level: The original MUA will be in effect until the Renewal Date. At Renewal Date the subscription will be renewed with the new MUA.
+
+>[!Important]
+>Example Billing schedule when increasing the subscribed MUA level.<br>
+>Initial MUA: 200 credits <br>
+>Start Date: November 1, 2022 <br>
+>Renewal Date: November 1, 2023
+>
+>Increase to a MUA of 250 credits on August 1, 2023
+> - Billing on August 1, 2023: 50 credits x current credit rate x 12 months (i.e. paid until August 1, 2024)
+> - Billing on November 1, 2023 (i.e. Renewal Date): 200 credits x current credit rate x 12 months  +  50 credits x current credit rate x 4 months
