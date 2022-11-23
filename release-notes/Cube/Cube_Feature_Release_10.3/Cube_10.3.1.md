@@ -106,6 +106,12 @@ When, in the *Navigation* panel of the *Bookings* app, you selected another time
 
 Also, the *Navigation* panel has been improved and renamed to *Settings* panel.
 
+#### Trending - Pattern matching: Trend graph would no longer show the matches for the displayed parameter after editing a tag [ID_34870]
+
+<!-- MR 10.4.0 - FR 10.3.1 -->
+
+When you edited the properties of a tag (e.g. name, description, etc.), the trend graph would no longer show the pattern matches for the parameter that is currently displayed in the graph. Instead, it would incorrectly show the pattern matches for the parameter for which the tag was defined.
+
 #### DataMiner Cube - EPM: Problem with topology filter [ID_34931]
 
 <!-- Main Release Version 10.1.0 [CU22]/10.2.0 [CU10] - Feature Release Version 10.3.1 -->
