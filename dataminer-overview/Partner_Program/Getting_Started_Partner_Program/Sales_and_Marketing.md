@@ -10,9 +10,9 @@ The following tools and means are available for you to support your sales and ma
 
 For starters, it is important to properly inform and train all your customer-facing staff (e.g. sales, pre-sales, marketing, product marketing, etc.).
 
-Typically, this is achieved with a tailored program of online sessions, adjusted to the partnership type and aligned with your specific strategy and goals. Typical sessions are based on presentations, demos, and Q&A moments, and include:
+Typically, this is achieved with a tailored program of online sessions, adjusted to the partnership type and aligned with your specific strategy and goals. Typical sessions are based on presentations, demos, and Q&A moments. They include:
 
-- **Partnership positioning**: A joint presentation with Q&A, aimed at the involved staff and leaders, on the nature, goals, and objectives of the partnership. This to ensure full alignment and to provide practical information such as points of contact.
+- **Partnership positioning**: A joint presentation with Q&A, aimed at the involved staff and leaders, on the nature, goals, and objectives of the partnership. This is intended to ensure full alignment and to provide practical information such as points of contact.
 
 - **General introduction of DataMiner**: Comprehensive outline of the overall vision of DataMiner, platform architecture, logical architecture, platform functions, features and capabilities, etc.
 
@@ -26,15 +26,15 @@ Typically, this is achieved with a tailored program of online sessions, adjusted
 
 DataMiner is one of the biggest brands in the industry and has a powerful presence in thousands of leading organizations, across more than 110 countries around the world.
 
-These are all organizations that crave added-value DataMiner services and solution offerings. As a partner, you can capitalize on that. It’s a quick way to jumpstart your business.
+These are all organizations that crave added-value DataMiner services and solution offerings. As a partner, you can capitalize on that. It is a quick way to jumpstart your business.
 
-Making yourself and your offering stand out is the foundation for your success. Here’s some pointers on maximizing your visibility.
+Making yourself and your offering stand out is the foundation for your success. Here are some pointers to maximize your visibility.
 
 - **Press releases & other content**: Ensure that you have a steady stream of press releases, news items, blog posts, and updates going your contacts’ way.
 
   These could revolve around the signing of a partner agreement, successful certification of your staff, new projects that you have secured, highlighting an innovative use case/workflow that you have implemented, your attendance to industry events, opinion pieces showing your leadership and guiding people in the new world paradigms, etc.
 
-   Note that you have the option to apply for a joint press release with Skyline at all times, which will further boost your reach.
+  Note that you have the option to apply for a joint press release with Skyline at all times, which will further boost your reach.
 
 - **Dojo Partner Profile**: The [DataMiner Dojo Community](https://community.dataminer.services/) is the largest open online community of its kind and offers you tremendous opportunity and visibility thanks to the thousands of people involved with DataMiner across thousands of organizations.
 
@@ -58,19 +58,19 @@ Making yourself and your offering stand out is the foundation for your success. 
 
   - referring to the DataMiner expertise and brand in your job title(s) and on LinkedIn profiles
 
-  - sharing DataMiner Devops Professional badges or [DataMiner Certification badges](xref:Overview_Training_certification) on social media
+  - sharing DataMiner DevOps Professional badges or [DataMiner Certification badges](xref:Overview_Training_certification) on social media
 
   - ...
 
-- **Events**: Exhibitions, conferences, and private events are all still very effective at informing, educating and empowering people.
+- **Events**: Exhibitions, conferences, and private events are all still very effective at informing, educating, and empowering people.
 
   Make sure that you contribute to events Skyline is attending. Your involvement can include the promotion of these events and Skyline’s attendance, but these events can also create the opportunity to schedule joint meetings with your customers and prospects to educate them on the latest and greatest DataMiner has to offer.
 
-  However, as a partner, there is also an expectation that you participate in events and that your DataMiner related offering takes a prominent position in those. You can contact Skyline for extra support with these events.
+  However, as a partner, there is also an expectation that you participate in events and that your DataMiner-related offering takes a prominent position in those. You can contact Skyline for extra support with these events.
 
-  This support can range from joint announcements, to support through DataMiner demo systems and setups, all the way to support staffing if needed (e.g. technical staff to support your demos and meetings, speakers, etc.). Note that private events these days are also instrumental to engage and empower a user community and that Skyline is available to support those.
+  This support can range from joint announcements to support through DataMiner demo systems and setups, all the way to support staffing if needed (e.g. technical staff to support your demos and meetings, speakers, etc.). Note that private events these days are also instrumental to engage and empower a user community and that Skyline is available to support those.
 
-- **Show leadership**: Showing leadership and expertise and delivering added value beyond regular product or service marketing are table stakes these days.
+- **Show leadership**: Showing leadership and expertise and delivering added value beyond regular product or service marketing is table stakes these days.
 
   As a DataMiner Partner, you invest in this, and Skyline will support you. This could include, for example, online webinars or LinkedIn Live sessions on a variety of topics, ranging from general topics to specific use cases, product or solution updates.
 
@@ -90,7 +90,7 @@ Therefore, partners are highly encouraged to align with this collaborative minds
 
 - **Use case specific presentations and demonstrations**: Once a prospect is narrowed in on a specific use case, you can rely on the unique expertise within the Skyline team across different market verticals to explain and demonstrate to the prospect how DataMiner can deliver a solution for their specific needs.
 
-  This then typically forms the basis for first opportunities, and to start the scoping of a solution for the prospect.
+  This then typically forms the basis for first opportunities and to start the scoping of a solution for the prospect.
 
 - **Scoping & quoting**: Skyline can support your sales teams with both the scoping and quoting of specific solutions for specific opportunities.
 
@@ -114,10 +114,10 @@ Therefore, partners are highly encouraged to align with this collaborative minds
 
   - **Use case library**: The [use case library](https://community.dataminer.services/use-cases/) provides bite-sized inspiration on what can be done with the transformational power of DataMiner, for a variety of different market verticals and applications.
 
-- **Ziine DataMiner demo platform**: Everyone with a DataMiner Cloud Platform account (which is available to everyone, free of charge) cannot only access the full content available on the DataMiner Dojo Community, but can also access the [Ziine DataMiner demo platform](xref:ZiineDemoSystem), where you can find an assortment of demos that can be leveraged to learn more about DataMiner or to provide demos to third parties.
+- **Ziine DataMiner demo platform**: Everyone with a DataMiner Cloud Platform account (which is available to everyone, free of charge) can not only access the full content available on the DataMiner Dojo Community but can also access the [Ziine DataMiner demo platform](xref:ZiineDemoSystem), where you can find an assortment of demos that can be leveraged to learn more about DataMiner or to provide demos to third parties.
 
 - **Deal registration**: Under specific terms and conditions, Skyline also provides the option to register deals, which then provides partners with protection for opportunities that they have developed and that they are working on.
 
-  We recommended you become familiar with the process of register deals and to use them to secure a return on your business development efforts.
+  We recommend that you become familiar with the process of register deals and use them to secure a return on your business development efforts.
 
 - **Professional services referrals**: Subject to specific terms and conditions related to technical qualifications and certification, Partners can be eligible to get referrals from Skyline to specific DataMiner projects or accounts where professional services are required for the design, development, and deployment of solutions based on DataMiner.
