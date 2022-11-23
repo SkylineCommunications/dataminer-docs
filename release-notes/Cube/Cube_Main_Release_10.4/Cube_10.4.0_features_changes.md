@@ -9,7 +9,15 @@ uid: Cube_Main_Release_10.4.0_other_features_changes
 
 ## Other new features
 
-*No other features have been added yet.*
+#### System Center - Analytics config: New Pattern Matching setting 'Maximum memory usage' [ID_34803]
+
+<!-- MR 10.4.0 - FR 10.3.1 -->
+
+In the *System settings > Analytics config* section of *System Center*, you can now find a new setting under *Pattern Matching*: *Maximum memory usage*.
+
+This setting allows you to specify the maximum amount of memory that SLAnalytics will use to cache recurring patterns in trend data (in GB).
+
+Default value: 2.00 GB
 
 ## Changes
 

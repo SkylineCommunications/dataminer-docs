@@ -867,3 +867,9 @@ When a timeline was populated using a query with a query filter, it would incorr
 <!-- MR 10.3.0 - FR 10.2.12 [CU1] -->
 
 When an *execute component* action had been configured, in some cases, when you tried to update that action, the drop-down box containing the action would incorrectly be empty.
+
+#### Dashboards app & low-code apps: Manually sorted GQI table would no longer feed row values [ID_34969]
+
+<!-- MR 10.3.0 - FR 10.3.1 -->
+
+When you had manually changed the sorting order of a GQI table by clicking a column header, in some cases, the table would no longer feed the selected row values.
