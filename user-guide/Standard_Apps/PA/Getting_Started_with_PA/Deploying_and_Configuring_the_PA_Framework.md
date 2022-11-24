@@ -15,7 +15,7 @@ Your DataMiner System will also need to use an [Elasticsearch database](xref:Ela
 
 ## Making DOM data available
 
-To make sure DOM data are available in dashboards and applications, make sure the [DOMManager soft-launch option](xref:SoftLaunchOptions#dommanager) is enabled.
+To make sure DOM data are available, make sure the [DOMManager soft-launch option](xref:SoftLaunchOptions#dommanager) is enabled.
 
 ## Installing the SRM framework
 
