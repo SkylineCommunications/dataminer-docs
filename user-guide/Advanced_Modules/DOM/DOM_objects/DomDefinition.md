@@ -8,7 +8,7 @@ The `DomDefinition` object groups `DomInstance` objects together (as each instan
 
 ## Properties
 
-The table below lists the properties of the `DomDefinition` object. It also indicates whether a property can be used for filtering using the `DomDefinitionExposers`.
+The table below lists the properties of the `DomDefinition` object. It also indicates whether a property can be used for filtering using the `DomDefinitionExposers`.  Note that [the ITrackBase properties](xref:DOM_objects#itrackbase-properties) are also available on this type.
 
 | Property | Type | Filterable | Description |
 |--|--|--|--|

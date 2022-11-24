@@ -108,7 +108,7 @@ There are also special types of `FieldDescriptors` that are purpose-made to stor
 
 ## CustomSectionDefinition properties
 
-The table below lists the properties of the `CustomSectionDefinition` object. (The base `SectionDefinition` object only exposes its ID.) The table also indicates whether a property can be used for filtering using the `SectionDefinitionExposers`.
+The table below lists the properties of the `CustomSectionDefinition` object. (The base `SectionDefinition` object only exposes its ID.) The table also indicates whether a property can be used for filtering using the `SectionDefinitionExposers`. Note that [the ITrackBase properties](xref:DOM_objects#itrackbase-properties) are also available on this type.
 
 | Property | Type | Filterable | Description |
 |--|--|--|--|

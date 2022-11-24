@@ -70,3 +70,5 @@ The current settings structure (with regards to `DomManager`) is as follows:
 - To include the module settings in a [custom backup](xref:Backing_up_a_DataMiner_Agent_in_DataMiner_Cube#configuring-the-dataminer-backups) in Cube, select *Create a backup of the database* > *Include module specific configuration data*.
 
 - There are no license checks when module settings are added.
+
+ - [The ITrackBase properties](xref:DOM_objects#itrackbase-properties) are also available on this type.

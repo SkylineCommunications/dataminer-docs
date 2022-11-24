@@ -35,3 +35,31 @@ For example, to create a system that stores time spent working on specific tasks
 - Field descriptor 4: *Name* = "Stop time" and *Type* = "DateTime"
 
 A DOM definition will then need to be created that contains a link to this section definition, so that employees can then register time by creating a new DOM instance linked to that DOM definition. The DOM instance will have a section linked to the section definition that contains a field value for each of the field descriptors.
+
+## ITrackBase Properties
+
+All DOM objects (including the `ModuleSettings`) contain four properties that reflect who has created/updated the object and when that happened.
+
+- **LastModified** : UTC DateTime of when the object has last been modified.
+- **LastModifiedBy** : The full username (string) of the user who last modified the object.
+- **CreatedAt** : UTC DateTime of when the object has been created.
+- **CreatedBy** : The full username (string) of the user who has created the object.
+
+Since these are seen as metadata, they are not immediately accessible on the objects, but require a cast.
+
+```csharp
+DateTime lastModified = ((ITrackBase) domInstance).LastModified;
+string lastModifiedBy = ((ITrackBase) domTemplate).LastModifiedBy;
+DateTime createdAt = ((ITrackBase) moduleSettings).CreatedAt;
+string createdBy = ((ITrackBase) sectionDefinition).CreatedBy;
+```
+
+It is also possible to build filters with these fields when reading objects.
+
+```csharp
+var filter = DomInstanceExposers.CreatedBy.Equal("John Doe");
+```
+
+> [!NOTE]
+>
+> The DOM objects created prior to DataMiner version 10.3.2 will not have a value for these fields. However, the `LastModified` and `LastModifiedBy` fields on an existing object will be filled in from the moment that specific object has been updated once since the upgrade.

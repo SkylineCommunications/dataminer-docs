@@ -10,13 +10,13 @@ A `DomInstance` object contains the `Sections` linked to the `SectionDefinitions
 
 ## Properties
 
-The table below lists the properties of the `DomInstance` object. It also indicates whether a property can be used for filtering using the `DomInstanceExposers`.
+The table below lists the properties of the `DomInstance` object. It also indicates whether a property can be used for filtering using the `DomInstanceExposers`. Note that [the ITrackBase properties](xref:DOM_objects#itrackbase-properties) are also available on this type.
 
 | Property | Type | Filterable | Description |
 |--|--|--|--|
 | ID | DomInstanceId | Yes | The ID of the `DomInstance`. |
 | DomDefinitionId | DomDefinitionId | Yes | The ID of the `DomDefinition` that this instance is linked to. |
-| Sections | List\<Section> | SectionIDs, SectionDefinitionIDs and FieldValues | Contains the required or allowed `SectionDefinitions`. |
+| Sections | List\<Section> | Yes | The `Sections` that contain the actual values for the `FieldDescriptors` wrapped in `FieldValues` |
 | Name | string | Yes | The name of the `DomInstance`, which is updated by the `DomManager` on every create or update action using the `DomInstanceNameDefinition` in the `ModuleSettings`. |
 | StatusId | string | Yes | The ID of the current status of this `DomInstance` (if statuses are used). |
 

@@ -8,7 +8,7 @@ A `DomTemplate` object stores a `DomInstance` with some pre-defined data, so tha
 
 ## Properties
 
-The table below lists the properties of the `DomTemplate` object. It also indicates whether a property can be used for filtering using the `DomTemplateExposers`.
+The table below lists the properties of the `DomTemplate` object. It also indicates whether a property can be used for filtering using the `DomTemplateExposers`. Note that [the ITrackBase properties](../DOM_objects.md#itrackbase-properties) are also available on this type.
 
 | Property | Type | Filterable | Description |
 |--|--|--|--|

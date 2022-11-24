@@ -361,7 +361,7 @@ domInstance.Sections.Add(secondProductSection);
 domInstance = domHelper.DomInstances.Create(domInstance);
 ```
 
-There is also an easier way to add `FieldValues` to a `DomInstance`, but this requires that the full `SectionDefinition` and `FieldDescriptor` objects are present.
+There is also an easier way to add `FieldValues` to a `DomInstance`, but this requires that the full `SectionDefinition` and `FieldDescriptor` objects are present. See ['Altering values of a DomInstance'](DOM_Altering_values_of_a_DomInstance.md#simple-extension-methods) for more info.
 
 ```csharp
 domInstance.AddOrUpdateFieldValue(generalSectionDefinition, customerFieldDescriptor, "John Doe");
@@ -388,3 +388,6 @@ You can also just retrieve all the invoices. Below, a filter is used on the `Dom
 var filter = DomInstanceExposers.DomDefinitionId.Equal(domDefinitionId.Id);
 var allInvoices = domHelper.DomInstances.Read(filter);
 ```
+
+> [!NOTE]
+> Be sure to also checkout the ['Altering values of a DomInstance'](DOM_Altering_values_of_a_DomInstance.md) page for more info on how you can add, update and get values of a `DomInstance`.
