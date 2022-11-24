@@ -10,9 +10,9 @@ This tab of the Booking Manager app provides an overview of all configuration pa
 
 ### Application Setup settings
 
-- **Default Virtual Platform**: The default Virtual Platform of the Booking Manager. This is used among others to filter service definitions and resources. In the Booking Wizard, service definitions will only be shown if their *Virtual Platform* property is set to the identifier specified in this setting. For resources, the name of a resource pool that should be used with this Virtual Platform should start with the specified identifier followed by a period. For example, if *Default Virtual Platform* is set to *VPA*, a valid name for a resource pool would be *VPA.Decoder*.
+- **Default Virtual Platform**: The virtual platform of the Booking Manager. This is used among others to filter service definitions and resources. In the Booking Wizard, service definitions will only be shown if their *Virtual Platform* property is set to the identifier specified in this setting. For resources, the name of a resource pool that should be used with this virtual platform should start with the specified identifier followed by a period. For example, if *Default Virtual Platform* is set to *VPA*, a valid name for a resource pool would be *VPA.Decoder*.
 
-- **Resource Pool**: Defines the Source Resource Pool name, so that Source resources can be identified and displayed on the first page of the Booking Wizard.
+- **Resource Pool**: Deprecated. Defines the Source Resource Pool name, so that Source resources can be identified and displayed on the first page of the Booking Wizard. This setting is no longer available from SRM 1.2.12 onwards. <!-- RN 29276 -->
 
 - **Custom Events**: Determines whether event customization is enabled, which allows the user to add extra events to a booking.
 
@@ -36,7 +36,7 @@ This tab of the Booking Manager app provides an overview of all configuration pa
 
 ### History and Logs settings
 
-- **Booking logging location**: The path that indicates where the booking logs will be saved. Click *Settings* to open a window where you can customize this path and configure the logging date/time format, maximum file size, and minimum logging level.
+- **Booking logging location**: The path that indicates where the booking logs will be saved. Click *Settings* to open a window where you can customize this path and configure the logging date/time format, maximum file size, minimum logging level, and logging cleanup.
 
 ### Type of Booking settings
 

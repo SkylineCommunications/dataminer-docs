@@ -34,19 +34,34 @@ This tab of the Booking Manager app displays information about current, past and
 
   - **New (Service Profile)**: Allows you to create a new booking using a service profile. Doing so will require less input during booking creation, as part of the configuration will be determined by the service profile.
 
+    > [!NOTE]
+    > The *New (Service Profile)* button is only available if the Service Profile feature is enabled (via [Config > Wizard > Service Profile](xref:Booking_Manager_Config_tab#type-of-wizard-settings)).
+
   The following buttons are displayed if any booking is selected:
 
   - **Duplicate**: Allows you to create a new booking based on the selected booking.
 
   - **Force Take Ownership**: Only displayed in case another user has ownership of the selected booking. Click this button to take ownership of the booking.
 
+    > [!NOTE]
+    > The *Force Take Ownership* button is only available if the Booking Locking feature is enabled (via [Config > General > Booking Locking](xref:Booking_Manager_Config_tab#application-setup-settings)).
+
   - **Take Ownership**: Only displayed in case the currently selected booking has no owner. Click this button to take ownership of the booking.
+
+    > [!NOTE]
+    > The *Take Ownership* button is only available if the Booking Locking feature is enabled (via [Config > General > Booking Locking](xref:Booking_Manager_Config_tab#application-setup-settings)).
 
   - **Release Ownership**. Only displayed in case you are the current owner of the booking. Click this button to release ownership of the booking.
 
+    > [!NOTE]
+    > The *Release Ownership* button is only available if the Booking Locking feature is enabled (via [Config > General > Booking Locking](xref:Booking_Manager_Config_tab#application-setup-settings)).
+
   - **Resources** / **Bookings**: This button is displayed in the bottom-left corner of the tab, and allows you to switch between the bookings and resources timeline.
 
-  - **Leave Interrupted**: Displayed at the bottom of the tab. This button can be used in case a booking was interrupted for some reason, e.g. because DataMiner became unavailable. It takes the booking out of the interrupted state so that it can start like a normal booking. For this purpose, the start date is adjusted when necessary.
+  - **Rescue**: Displayed at the bottom of the tab. This button can be used in case a booking was interrupted for some reason, e.g. because DataMiner became unavailable. It takes the booking out of the interrupted state so that it can start like a normal booking. For this purpose, the start date is adjusted when necessary.
+
+    > [!NOTE]
+    > Prior to SRM 1.2.23, instead of a *Rescue* button, a *Leave Interrupted* button is available, which has the same functionality. <!-- RN 28472 -->
 
   - **Debug Log**: Displayed at the bottom of the tab. Allows you to open the debug log file.
 
