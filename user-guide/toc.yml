@@ -2773,6 +2773,8 @@
     - name: Known issues
       topicUID: Known_issues
       items:
+        - name: Various SLElement issues
+          topicUID: KI_SLElement_various_issues
         - name: SLLog issue when large alarm tree is closed
           topicUID: KI_SLLog_issue_when_large_alarm_tree_is_closed
         - name: Element data lost after migrating elements in Cassandra Cluster setup
