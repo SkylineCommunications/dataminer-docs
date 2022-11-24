@@ -2,10 +2,10 @@
 uid: General_Main_Release_10.1.0_CU21
 ---
 
-# General Main Release 10.1.0 CU21 – Preview
+# General Main Release 10.1.0 CU21
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 > For information on how to upgrade DataMiner, see [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent).
@@ -195,9 +195,3 @@ As this error was caused by an internal lookup issue that had no effect whatsoev
 <!-- MR 10.1.0 [CU21] / 10.2.0 [CU9] - FR 10.2.12 -->
 
 When a connection had been closed, in some cases, an error could occur in the hosting process.
-
-#### Memory leak in SLDataGateway during a Cassandra Cluster migration [ID_34829]
-
-<!-- MR 10.1.0 [CU21] / 10.2.0 [CU9] - FR 10.3.1 -->
-
-During a Cassandra Cluster migration, SLDataGateway would leak memory due to paging handlers not being cleaned up correctly.
