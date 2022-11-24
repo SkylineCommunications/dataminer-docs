@@ -5,7 +5,7 @@ uid: PA_1.3.0
 # PA 1.3.0
 
 > [!NOTE]
-> This version requires that **SRM 1.2.28** is installed.
+> This version requires that **SRM 1.2.28 [CU1]** is installed.
 
 ## New features
 
