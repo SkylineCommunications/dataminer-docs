@@ -38,6 +38,12 @@ For example, in case of HTTP communication, there will now be extra levels for s
 
 **only in case of a response*
 
+#### DataMiner Cube - Settings: 'Show the DataMiner TV section' setting has been removed [ID_34877]
+
+<!-- MR 10.1.0 [CU22] / 10.2.0 [CU10] - FR 10.3.1 -->
+
+The *Show the DataMiner TV section* setting has been removed from the *User > Cube* section of the *Settings* window.
+
 ### Fixes
 
 #### 'One or more of the following modules are not licensed' error would incorrectly not list the unlicensed modules [ID_34407]
@@ -72,6 +78,12 @@ During a Cassandra Cluster migration, SLDataGateway would leak memory due to pag
 
 When you had specified a preset in a shape that contained a Spectrum Analysis component, the preset would incorrectly not be loaded when you opened the visual overview in Cube.
 
+#### Problem with SLElement when a description.xml file was updated while an alarm was being unmasked [ID_34860]
+
+<!-- Main Release Version 10.1.0 [CU22]/10.2.0 [CU10] - Feature Release Version 10.3.1 -->
+
+In some cases, an error could occur in SLElement when a *description.xml* file was updated while an alarm was being unmasked.
+
 #### HTTP requests would incorrectly not be retried when WinHTTP threw a SEC_E_BUFFER_TOO_SMALL error [ID_34888]
 
 <!-- Main Release Version 10.0.0 [CU22]/10.1.0 [CU22]/10.2.0 [CU10] - Feature Release Version 10.3.1 -->
@@ -99,3 +111,21 @@ The SLDataGateway process periodically checks the status of the local Cassandra 
 <!-- Main Release Version 10.1.0 [CU22]/10.2.0 [CU10] - Feature Release Version 10.3.1 -->
 
 When you opened a topology chain and selected a field in the topology filter, in some cases, the fields above the one you selected would incorrectly not get selected automatically.
+
+#### Problem with SLProtocol when trying to update a parameter of type 'read bit' [ID_34935]
+
+<!-- Main Release Version 10.1.0 [CU22]/10.2.0 [CU10] - Feature Release Version 10.3.1 -->
+
+In some cases, an error could occur in SLProtocol when trying to update a parameter of type `read bit`.
+
+#### DataMiner Cube - Visual Overview: Trend graph would incorrectly show 'No data' [ID_34955]
+
+<!-- Main Release Version 10.1.0 [CU22]/10.2.0 [CU10] - Feature Release Version 10.3.1 -->
+
+When a visual overview on an EPM card contained a trend graph, in some cases, that graph would incorrectly show *No data* while its legend would show the correct data.
+
+#### Web apps - Line chart component: Chart would incorrectly display non-existing data when the time window included a period in the future [ID_34959]
+
+<!-- Main Release Version 10.1.0 [CU22]/10.2.0 [CU10] - Feature Release Version 10.3.1 -->
+
+When the time window of a line chart component showing trend data included a period in the future, the chart would incorrectly display non-existing data for that period in the future. From now on, the chart will stop at the current time.

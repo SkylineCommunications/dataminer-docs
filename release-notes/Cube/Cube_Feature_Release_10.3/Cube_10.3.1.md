@@ -16,6 +16,16 @@ uid: Cube_Feature_Release_10.3.1
 
 ## Other features
 
+#### System Center - Analytics config: New Pattern Matching setting 'Maximum memory usage' [ID_34803]
+
+<!-- MR 10.4.0 - FR 10.3.1 -->
+
+In the *System settings > Analytics config* section of *System Center*, you can now find a new setting under *Pattern Matching*: *Maximum memory usage*.
+
+This setting allows you to specify the maximum amount of memory that SLAnalytics will use to cache recurring patterns in trend data (in GB).
+
+Default value: 2.00 GB
+
 #### DataMiner Cube - Visual Overview: Automatically generated shapes representing bookings can now be sorted by custom property [ID_34572] [ID_34864]
 
 <!-- MR 10.2.0 [CU10] - FR 10.3.1 -->
@@ -34,6 +44,12 @@ ChildrenSort="Property|property=End,desc"
 ## Changes
 
 ### Enhancements
+
+#### Alarm Console: Automatic incident tracking will now make use of the parameter relationship data that is stored in a model managed by the ModelHost DxM [ID_34684]
+
+<!-- MR 10.4.0 - FR 10.3.1 -->
+
+The *automatic incident tracking* feature groups active alarms that are related to the same incident, so that the Alarm Console provides a better overview of the current issues in the system. From now on, on cloud-connected DataMiner Agents that have the DataMiner Extension Module *ModelHost* installed and that have been configured to [offload alarm and change point events to the cloud](xref:Controlling_cloudfeed_data_offloads), this feature will also make use of the parameter relationship data that is stored in a model managed by the *ModelHost* DxM.
 
 #### DataMiner Cube - Visual Overview: Enhanced performance when updating automatically generated shapes that represent bookings [ID_34695]
 
@@ -62,6 +78,12 @@ When you start a resource migration in the *SLNetClientTest* tool (by selecting 
 > [!CAUTION]
 > Always be extremely careful when using the *SLNetClientTest* tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
 
+#### DataMiner Cube - Settings: 'Show the DataMiner TV section' setting has been removed [ID_34877]
+
+<!-- MR 10.1.0 [CU22] / 10.2.0 [CU10] - FR 10.3.1 -->
+
+The *Show the DataMiner TV section* setting has been removed from the *User > Cube* section of the *Settings* window.
+
 ### Fixes
 
 #### DataMiner Cube - Visual Overview: Tooltip of an element in a service chain would incorrectly not show values of node properties [ID_34664]
@@ -84,8 +106,20 @@ When, in the *Navigation* panel of the *Bookings* app, you selected another time
 
 Also, the *Navigation* panel has been improved and renamed to *Settings* panel.
 
+#### Trending - Pattern matching: Trend graph would no longer show the matches for the displayed parameter after editing a tag [ID_34870]
+
+<!-- MR 10.4.0 - FR 10.3.1 -->
+
+When you edited the properties of a tag (e.g. name, description, etc.), the trend graph would no longer show the pattern matches for the parameter that is currently displayed in the graph. Instead, it would incorrectly show the pattern matches for the parameter for which the tag was defined.
+
 #### DataMiner Cube - EPM: Problem with topology filter [ID_34931]
 
 <!-- Main Release Version 10.1.0 [CU22]/10.2.0 [CU10] - Feature Release Version 10.3.1 -->
 
 When you opened a topology chain and selected a field in the topology filter, in some cases, the fields above the one you selected would incorrectly not get selected automatically.
+
+#### DataMiner Cube - Visual Overview: Trend graph would incorrectly show 'No data' [ID_34955]
+
+<!-- Main Release Version 10.1.0 [CU22]/10.2.0 [CU10] - Feature Release Version 10.3.1 -->
+
+When a visual overview on an EPM card contained a trend graph, in some cases, that graph would incorrectly show *No data* while its legend would show the correct data.
