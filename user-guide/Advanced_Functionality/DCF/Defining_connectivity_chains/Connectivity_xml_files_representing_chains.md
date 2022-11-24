@@ -69,6 +69,19 @@ The following example illustrates a *Connectivity.xml* file where hops are confi
 </DCF>
 ```
 
+Example when itemA and itemB are equal, you need to define an itemRelation:
+
+```xml
+<Link itemA="ALCALTEL" itemb="ALCALTEL" itemRelation="internalMatching">
+
+<Link itemA="ALCALTEL" itemb="ALCALTEL" itemRelation="externalMatching">
+
+<Link itemA="ALCALTEL" itemb="ALCALTEL" itemRelation="physicalMatching">
+
+<Link itemA="ALCALTEL" itemb="DCM" itemRelation="externalMatching">
+
+```
+
 ## Overview of tags and attributes of Connectivity.xml files representing chains
 
 The section below lists the tags and attributes that can be used within a *Connectivity.xml* file:
