@@ -873,3 +873,9 @@ When an *execute component* action had been configured, in some cases, when you 
 <!-- MR 10.3.0 - FR 10.2.12 [CU1] -->
 
 When you had manually changed the sorting order of a GQI table by clicking a column header, in some cases, the table would no longer feed the selected row values.
+
+#### Dashboards app: Tables would lose their conditional coloring after being sorted or filtered [ID_34979]
+
+<!-- MR 10.3.0 - FR 10.3.1 -->
+
+When you sorted or filtered a table fed by e.g. a query filter, the table would incorrectly lose its conditional coloring.

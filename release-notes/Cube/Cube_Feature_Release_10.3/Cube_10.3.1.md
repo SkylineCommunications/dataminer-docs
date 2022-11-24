@@ -78,6 +78,12 @@ When you start a resource migration in the *SLNetClientTest* tool (by selecting 
 > [!CAUTION]
 > Always be extremely careful when using the *SLNetClientTest* tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
 
+#### DataMiner Cube - Visual Overview: Enhanced performance when loading a visual overview that contains a large number of shapes linked to EPM objects [ID_34874]
+
+<!-- MR 10.1.0 [CU22] / 10.2.0 [CU10] - FR 10.3.1 -->
+
+Because of a number of enhancements, overall performance has increased when loading a visual overview that contains a large number of shapes linked to EPM objects.
+
 #### DataMiner Cube - Settings: 'Show the DataMiner TV section' setting has been removed [ID_34877]
 
 <!-- MR 10.1.0 [CU22] / 10.2.0 [CU10] - FR 10.3.1 -->

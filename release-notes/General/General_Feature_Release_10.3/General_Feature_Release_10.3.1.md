@@ -113,6 +113,12 @@ Because of a number of enhancements, overall performance has increased when retr
 
 The new icon component allows you to display an icon on a dashboard or a low-code app.
 
+#### Dashboards app & low-code apps: A table row with a column containing a parameter table index is now capable of feeding a linked parameter [ID_34957]
+
+<!-- Main Release Version 10.2.0 [CU10] - Feature Release Version 10.3.1 -->
+
+From now on, a table row with a column containing a parameter table index will now also be capable of feeding a linked parameter when all necessary data is available. As a result, one data input will now suffice to visualize table row data in a line chart.
+
 ### Fixes
 
 #### SLDMS would leak memory when processing a large number of distribution traps [ID_34525]
@@ -311,6 +317,12 @@ When the time window of a line chart component showing trend data included a per
 When you were editing a dashboard or a low-code app, and the edit side panel was very narrow, in some cases, the *Number of columns* input box on the *Settings* tab could not be used as it would only be partly visible.
 
 Also, in some cases, the value in the *Number of columns* input box could incorrectly not be reset to the factory default.
+
+#### Dashboards app: Tables would lose their conditional coloring after being sorted or filtered [ID_34979]
+
+<!-- MR 10.3.0 - FR 10.3.1 -->
+
+When you sorted or filtered a table fed by e.g. a query filter, the table would incorrectly lose its conditional coloring.
 
 #### Problem with Resource Manager when ResourceStorageType was not specified in Resource Manager settings [ID_34981]
 

@@ -38,6 +38,12 @@ For example, in case of HTTP communication, there will now be extra levels for s
 
 **only in case of a response*
 
+#### DataMiner Cube - Visual Overview: Enhanced performance when loading a visual overview that contains a large number of shapes linked to EPM objects [ID_34874]
+
+<!-- MR 10.1.0 [CU22] / 10.2.0 [CU10] - FR 10.3.1 -->
+
+Because of a number of enhancements, overall performance has increased when loading a visual overview that contains a large number of shapes linked to EPM objects.
+
 #### DataMiner Cube - Settings: 'Show the DataMiner TV section' setting has been removed [ID_34877]
 
 <!-- MR 10.1.0 [CU22] / 10.2.0 [CU10] - FR 10.3.1 -->

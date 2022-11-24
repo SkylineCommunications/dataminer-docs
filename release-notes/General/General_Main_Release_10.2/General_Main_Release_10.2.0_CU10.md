@@ -93,11 +93,23 @@ For example, in case of HTTP communication, there will now be extra levels for s
 
 **only in case of a response*
 
+#### DataMiner Cube - Visual Overview: Enhanced performance when loading a visual overview that contains a large number of shapes linked to EPM objects [ID_34874]
+
+<!-- MR 10.1.0 [CU22] / 10.2.0 [CU10] - FR 10.3.1 -->
+
+Because of a number of enhancements, overall performance has increased when loading a visual overview that contains a large number of shapes linked to EPM objects.
+
 #### DataMiner Cube - Settings: 'Show the DataMiner TV section' setting has been removed [ID_34877]
 
 <!-- MR 10.1.0 [CU22] / 10.2.0 [CU10] - FR 10.3.1 -->
 
 The *Show the DataMiner TV section* setting has been removed from the *User > Cube* section of the *Settings* window.
+
+#### Dashboards app & low-code apps: A table row with a column containing a parameter table index is now capable of feeding a linked parameter [ID_34957]
+
+<!-- Main Release Version 10.2.0 [CU10] - Feature Release Version 10.3.1 -->
+
+From now on, a table row with a column containing a parameter table index will now also be capable of feeding a linked parameter when all necessary data is available. As a result, one data input will now suffice to visualize table row data in a line chart.
 
 ### Fixes
 
