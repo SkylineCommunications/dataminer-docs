@@ -2435,7 +2435,7 @@
               topicUid: PA_Creating_Activities
               items:
                 - name: Creating script tasks
-                - topicUid: PA_Creating_script_tasks
+                  topicUid: PA_Creating_script_tasks
                 - name: Creating user tasks
                   topicUid: PA_Creating_user_tasks
                 - name: Creating resource tasks
