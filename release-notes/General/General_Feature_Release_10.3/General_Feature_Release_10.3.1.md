@@ -292,11 +292,25 @@ When a timeline was populated using a query with a query filter, it would incorr
 
 In some cases, an error could occur in SLProtocol when trying to update a parameter of type `read bit`.
 
+#### Elements would not show up in client applications due to an incorrect credential library GUID stored in their Element.xml file [ID_34956]
+
+<!-- Main Release Version 10.0.0 [CU22]/10.1.0 [CU22]/10.2.0 [CU10] - Feature Release Version 10.3.1 -->
+
+In some cases, an incorrect credential library GUID could get stored in the *Element.xml* file of certain elements. As a result, although they were active and working as expected, those elements would not get loaded into SLNet and would not show up in client applications such as DataMiner Cube.
+
 #### Web apps - Line chart component: Chart would incorrectly display non-existing data when the time window included a period in the future [ID_34959]
 
 <!-- Main Release Version 10.1.0 [CU22]/10.2.0 [CU10] - Feature Release Version 10.3.1 -->
 
 When the time window of a line chart component showing trend data included a period in the future, the chart would incorrectly display non-existing data for that period in the future. From now on, the chart will stop at the current time.
+
+#### Dashboards app & low-code apps: Problem with 'Number of columns' input box [ID_34966]
+
+<!-- Main Release Version 10.1.0 [CU22]/10.2.0 [CU10] - Feature Release Version 10.3.1 -->
+
+When you were editing a dashboard or a low-code app, and the edit side panel was very narrow, in some cases, the *Number of columns* input box on the *Settings* tab could not be used as it would only be partly visible.
+
+Also, in some cases, the value in the *Number of columns* input box could incorrectly not be reset to the factory default.
 
 #### Problem with Resource Manager when ResourceStorageType was not specified in Resource Manager settings [ID_34981]
 

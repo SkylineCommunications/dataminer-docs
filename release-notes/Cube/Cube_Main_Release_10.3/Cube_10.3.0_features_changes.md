@@ -980,3 +980,9 @@ When you opened a trend graph that contained patterns matching existing tags, in
 When, in the *Navigation* panel of the *Bookings* app, you selected another time zone, columns of type `Date` would incorrectly not get updated.
 
 Also, the *Navigation* panel has been improved and renamed to *Settings* panel.
+
+#### Trending - Pattern matching: Trend graph would no longer show the matches for the displayed parameter after editing a tag [ID_34870]
+
+<!-- MR 10.3.0 - FR 10.3.1 -->
+
+When you edited the properties of a tag (e.g. name, description, etc.), the trend graph would no longer show the pattern matches for the parameter that is currently displayed in the graph. Instead, it would incorrectly show the pattern matches for the parameter for which the tag was defined.
