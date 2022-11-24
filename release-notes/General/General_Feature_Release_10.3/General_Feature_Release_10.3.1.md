@@ -298,12 +298,6 @@ In some cases, an error could occur in SLProtocol when trying to update a parame
 
 When the time window of a line chart component showing trend data included a period in the future, the chart would incorrectly display non-existing data for that period in the future. From now on, the chart will stop at the current time.
 
-#### Dashboards app & low-code apps: Manually sorted GQI table would no longer feed row values [ID_34969]
-
-<!-- MR 10.3.0 - FR 10.3.1 -->
-
-When you had manually changed the sorting order of a GQI table by clicking a column header, in some cases, the table would no longer feed the selected row values.
-
 #### Problem with Resource Manager when ResourceStorageType was not specified in Resource Manager settings [ID_34981]
 
 <!-- MR 10.4.0 - FR 10.3.1 -->
