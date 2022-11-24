@@ -10,7 +10,7 @@ The program focuses on ensuring that they can achieve the highest possible effic
 
 By entering the DataMiner DevOps Professionals program as an organization or as an individual, and by qualifying for formal accreditation as a DataMiner DevOps Professional, you can unlock a **broad range of perks and invaluable [benefits](xref:Benefits_DevOps_Professionals_Program)**, all aimed at boosting your personal value and accelerating your business in the new world.
 
-**Applying is free, and can be done online at any given time.**
+**Applying is free and can be done online at any given time.**
 
 Upon registration, you will be part of the DataMiner DevOps Professionals program and from then onwards, you simply have to align with the program’s expectations to grow or maintain your status and to become eligible for the benefits offered by the program.
 
@@ -18,16 +18,12 @@ As a DataMiner DevOps Professional, you are expected to align with important key
 
 Your level of compliance and alignment with those expectations is measured in [Dojo Reputation Points](xref:Benefits_DevOps_Professionals_Program#accumulating-dojo-reputation-points), which you can accumulate continuously and almost effortlessly by merely working and learning as a DataMiner DevOps Professional on a day-to-day basis.
 
-Hence, your accreditation really does not require any substantial program-specific efforts or time investment.
-
-After all, we want you to be focused as much as possible on what we deem the heart of being a DataMiner DevOps Professional.
-
-As we all are individuals, everybody can achieve accreditation by following their own path.  
+Hence, your accreditation really does not require any substantial program-specific efforts or time investment. After all, we want you to be focused as much as possible on what we deem the heart of being a DataMiner DevOps Professional. As we all are individuals, everybody can achieve accreditation by following their own path.
 
 In short:
 
-1. Everything related to the program goes straight to the heart of what is essential to run a successful operation and business in the new world emerging around you.
+- Everything related to the program goes straight to the heart of what is essential to run a successful operation and business in the new world emerging around you.
 
-1. Entering the program is easy and requires no excessive efforts, as qualification comes naturally as candidates focus on growing their skill sets, mindset, and culture.
+- Entering the program is easy and requires no excessive efforts, as qualification comes naturally as candidates focus on growing their skill sets, mindset, and culture.
 
-1. Getting accredited as a DataMiner DevOps Professional immediately results in unlocking an arsenal of [perks and benefits](xref:Benefits_DevOps_Professionals_Program) that, in turn, further accelerate you in becoming one of the most sought-after keys to success in the new world.
+- Getting accredited as a DataMiner DevOps Professional immediately results in unlocking an arsenal of [perks and benefits](xref:Benefits_DevOps_Professionals_Program) that, in turn, further accelerate you in becoming one of the most sought-after keys to success in the new world.
