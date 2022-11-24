@@ -33,7 +33,7 @@ To integrate a gateway in a process:
 
 The *PA GW RoutingRules* parameter of a profile instance can contain a set of ordered rules, with the option to skip the remaining rules as soon as a rule matches.
 
-A rule contains one or multiple conditions comparing the field value of the process DOM instance to fixed values.
+A rule contains one or multiple conditions comparing the field value of the process DOM instance or user DOM instance to fixed values.
 
 Below you can find examples of the possible routing rules.
 
@@ -61,6 +61,8 @@ Below you can find examples of the possible routing rules.
 
 ### Exclusive split
 
+#### Example 1: Process DOM instance
+
 ```json
 {
    "Evaluation": "First Matching",
@@ -69,6 +71,45 @@ Below you can find examples of the possible routing rules.
                "Description": "Generate a token on first output (ID11) in case the Field Value in the Process DOM Instance is equal to OK",
                "Conditions": [{
                        "DomField": {
+                                   "FieldDescriptorId": "9a15783b-ccc0-4d8f-9574-0870c55f4a73",
+                                   "SectionDefinitionId": "5d6c39ed-f616-4ad2-b311-28e39d52505a"
+                       },
+                         "IncomingGatewayKeyName": null,
+                         "Value": "OK",
+                         "Operation": "equal",
+                         "IncomingInterfaceId": 1
+               }
+           ],
+               "OutgoingInterfaceIds": [11],
+               "DoTagTokens": false
+           }, {
+               "SequenceId": 2,
+               "Description": "Generate a token on second output(ID 12) in case the Field Value in the Process DOM Instance is equal to NOK ",
+               "Conditions": [{
+                   "IncomingGatewayKeyName": null,
+                   "Value": "NOK",
+                   "Operation": "equal",
+                   "IncomingInterfaceId": 1
+               }
+           ],
+               "OutgoingInterfaceIds": [12],
+               "DoTagTokens": false
+       }
+   ]
+}
+```
+
+#### Example 2: User DOM instance
+
+```json
+{
+   "Evaluation": "First Matching",
+   "Rules": [{
+               "SequenceId": 1,
+               "Description": "Generate a token on first output (ID11) in case the Field Value in the Process DOM Instance is equal to OK",
+               "Conditions": [{
+                       "DomField": {
+                                   "UserDomInstance": "Main"
                                    "FieldDescriptorId": "9a15783b-ccc0-4d8f-9574-0870c55f4a73",
                                    "SectionDefinitionId": "5d6c39ed-f616-4ad2-b311-28e39d52505a"
                        },

@@ -25,13 +25,15 @@ When a process has at least one defined activation window (past, present, or fut
 
 When an activation window starts, it is possible to immediately push a token into the process. You can achieve this as follows:
 
-1. In the [*Profiles* module](xref:The_Profiles_module), verify that the process definition contains a *PA None Start Event* node.
+1. In the *Process Automation* app, verify that the process definition contains a *PA None Start Event* node.
 
-1. In the *Instances* tab, create a new process DOM instance:
-
-   1. Define a business key (human-readable identifier of the token).
+1. In the [*Profiles* module](xref:The_Profiles_module), go to the *Instances* tab, and create a new profile instance:
 
    1. Make sure it is set to apply to the *PA None Start Event* profile definition.
+
+   1. Create a [Process DOM instance](xref:DomInstance).
+
+   1. Define a business key (human-readable identifier of the token).
 
    1. Configure the following parameters:
 
@@ -63,13 +65,15 @@ When an activation window starts, it is possible to immediately push a token int
 
 During an activation window, it is possible to push new tokens into a process on a regular basis. You can achieve this as follows:
 
-1. In the *Profiles* module, verify that the process definition contains a *PA Timer Start Event* node.
+1. In the *Process Automation* app, verify that the process definition contains a *PA Timer Start Event* node.
 
-1. In the *Instances* tab, create a new process DOM instance.
-
-   1. Define a business key (human-readable identifier of the token).
+1. In the *Profiles* module, go to the *Instances* tab, and create a new profile instance.
 
    1. Make sure the instance is set to apply to the *PA Timer Start Event* profile definition.
+
+   1. Create a [Process DOM instance](xref:DomInstance).
+
+   1. Define a business key (human-readable identifier of the token).
 
    1. Configure the following parameters:
 

@@ -5,7 +5,7 @@ uid: PA_Creating_and_Configuring_a_Process_Definition
 # Creating and configuring a process definition
 
 > [!NOTE]
-> When creating and cofiguring a process definition, it is important to follow each step listed below in the specific order they occur on this page.
+> When creating and configuring a process definition, it is important to follow each step listed below in the specific order they occur on this page.
 
 ## Creating a process DOM definition
 
@@ -16,7 +16,7 @@ Create a process DOM definition, adding all parameters that are relevant for the
 
 The process DOM instance will be the only way to exchange data between activities. Therefore, make sure it contains all relevant field descriptors.
 
-The process DOM definition needs to be used with the *process_automation* module ID.
+The process DOM definition needs to be part of the *process_automation* module ID. The Process DOM definition is defined in the *process_automation* module.
 
 > [!NOTE]
 > By default, TTL on the *process_automation* module ID is set to 30 days. This means that process DOM instances will stay in the database for 30 days after the last update action.
@@ -86,7 +86,7 @@ The process DOM definition needs to be used with the *process_automation* module
 
       - **Profile Parameters**: A list of profile parameters that are part of the profile definition.
 
-        Parameters are used to define the input and output of the activity. Input parameters can contain hard-coded values. In that case, the same value will always be used. Alternatively, they can refer to a field descriptor from the process DOM instances. In that case, different values need to be used for each process run.
+        Parameters are used to define the input and output of the activity. Input parameters can contain hard-coded values. In that case, the same value will always be used. Alternatively, they can refer to a field descriptor from the process DOM instances. In that case, different values can be used for each process run.
 
         - Hard-coded value:
 

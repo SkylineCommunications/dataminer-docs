@@ -77,7 +77,7 @@ uid: PA_Creating_resource_tasks
    1. Save all changes.
 
       > [!NOTE]
-      > A reference is dynamically generated: bd625869-cb7a-472c-b834-bd4cba993705 (not visible in the UI)
+      > A reference is dynamically generated: e.g. bd625869-cb7a-472c-b834-bd4cba993705 (not visible in the UI)
 
 1. Implement a protocol containing all the logic for the resource task, and create an element based on that protocol.
 

@@ -52,11 +52,11 @@ To install the PA framework:
 
    - Make sure the DataMiner System uses an Elasticsearch database.
 
-   - Check the Process Automation release notes to see which minimum DataMiner version is required.
+   - Check the Process Automation release notes to see which minimum DataMiner version is required and make sure this version is installed.
 
    - Contact Skyline Communications to check if any additional components need to be installed in your system.
 
-1. Download the latest PA package from [DataMiner Dojo](https://community.dataminer.services/downloads/).
+1. Contact Skyline Communications to receive the latest PA package.
 
 1. Double-click the PA package, and install the package in the same manner as a DataMiner upgrade.
 
@@ -66,9 +66,26 @@ To install the PA framework:
    > [!TIP]
    > See also: [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent)
 
+## Upgrading the PA framework
+
+1. If you upgraded from a PA framework version older than 1.3.0 (the current officially supported minimum version) to version 1.3.0 or later, run the *PA_MigratePoolsAndQueues* script.
+
+   > [!WARNING]
+   > It is essential that you run this script first before moving on to the next steps.
+
+   > [!TIP]
+   > See also: [Running Automation scripts](xref:Running_Automation_scripts)
+
+   Also make sure that the files *ProcessAutomation.dll* and *SLSRMLibrary.dll* are not present in the following subfolders of the Skyline DataMiner folder: `C:\Skyline DataMiner\Files\DLLImport\` and `C:\Skyline DataMiner\ProtocolScripts\DLLImport\`.
+
+   If these files *are* present, delete them, and restart the DMAs involved.
+
+   > [!NOTE]
+   > DataMiner will restart during the installation of the package.
+
 ## Configuring the PA framework
 
-To set up the initial configuration of the PA framework:
+To set up the initial configuration of the PA framework or to upgrade to a more recent version of the PA framework:
 
 1. Go to *Automation* module in DataMiner Cube and select the *SRM_Setup* Automation script.
 
@@ -84,31 +101,3 @@ To set up the initial configuration of the PA framework:
 > If the script execution fails, wait a few minutes and try again. If the problem persists, contact Skyline Communications.
 
 The script will configure the framework and create all relevant components to get started with the development of a process.
-
-## Upgrading the PA framework
-
-If you already have an existing version of the PA framework installed, update it to the latest version available on DataMiner Dojo.
-
-1. If you upgraded from a PA framework version older than 1.3.0 (the current officially supported minimum version) to version 1.3.0 or later, run the *PA_MigratePoolsAndQueues* script.
-
-   > [!WARNING]
-   > It is essential that you run this script first before moving on to the next steps.
-
-   > [!TIP]
-   > See also: [Running Automation scripts](xref:Running_Automation_scripts)
-
-   Also make sure that the files *ProcessAutomation.dll* and *SLSRMLibrary.dll* are not present in the following subfolders of the Skyline DataMiner folder: `C:\Skyline DataMiner\Files\DLLImport\` and `C:\Skyline DataMiner\ProtocolScripts\DLLImport\`.
-
-   If these files *are* present, delete them, and restart the DMAs involved.
-
-1. Check the Process Automation release notes to see which minimum DataMiner version is required and make sure this version is installed.
-
-   > [!TIP]
-   > See also: [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent)
-
-1. Download the latest PA package from [DataMiner Dojo](https://community.dataminer.services/downloads/).
-
-1. Double-click the PA package, and install the package in the same manner as a DataMiner upgrade.
-
-   > [!NOTE]
-   > DataMiner will restart during the installation of the package.
