@@ -11,3 +11,7 @@ uid: Troubleshooting_Flowcharts
 - [Troubleshooting - apps](xref:Troubleshooting_Apps)
 
 - [Troubleshooting - Cassandra](xref:Troubleshooting_Cassandra)
+
+- [Troubleshooting - Cassandra: nodetool status check](xref:Troubleshooting_Cassandra_Nodetool_Status_Check)
+
+- [Troubleshooting - Cassandra: nodetool check](xref:Troubleshooting_Cassandra_Nodetool_Checks)
