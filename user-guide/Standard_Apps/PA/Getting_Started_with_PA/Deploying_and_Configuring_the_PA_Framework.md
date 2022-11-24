@@ -13,7 +13,7 @@ Your DataMiner System will also need to use an [Elasticsearch database](xref:Ela
 > [!TIP]
 > For more information on how to install Elasticsearch on your DMA, click [here](xref:Installing_Elasticsearch_via_DataMiner).
 
-## Enabling DOM
+## Making DOM data available
 
 To make sure DOM data are available in dashboards and applications, make sure the [DOMManager soft-launch option](xref:SoftLaunchOptions#dommanager) is enabled.
 
