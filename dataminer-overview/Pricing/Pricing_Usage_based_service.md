@@ -25,43 +25,7 @@ This includes:
 - Continuously benefitting from all DataMiner evolutions available, with regard to the DataMiner functions as well as with regard to the connectors to interface with third-party products.
 - Accessing our professional technical support services to support the operation.
 
-## Free DataMiner System
-
-Every organization can get started with one free standalone DataMiner System, a functionally full-featured DataMiner platform, only limited by the credit allowance per service.
-
-This is the perfect way to get started, allowing anyone to use the platform and build up knowledge on the many possibilities it has to offer, within this free allowance.
-
-When ready to scale up, the user can set up a yearly subscription or start with a number of credits in the Pay-per-Use model.
-
-> [!NOTE]
->
-> - Self-hosted/on-premises free DataMiner Systems are not time-limited. An organization can use the system as long as it remains reachable (with DataMiner Cloud Services enabled).
-> - Skyline-hosted free DataMiner Systems (DataMiner as a Service) are only available for a predetermined trial period. Contact your Account Manager for details.
-
-## Commercial models
-
-The two commercial models for DataMiner usage-based services, **Pay-per-Use Plan** and **Subscription Plan**, provide the exact same service with different service rates and are contracted differently.
-
-A Subscription Plan presents a more predictable budget. It is more suitable for steady usage and rewards users with a more favorable credit rate for the longer-term commitment. With a Subscription Plan, users subscribe to a Monthly Utilization Allowance (MUA) that stipulates the maximum number of credits that can be used in a month.
-
-In case of a Pay-per-Use plan, user pay for what they use, giving ultimate flexibility and allowing for varying usage patterns (e.g. ad-hoc usage spikes during special events).
-
-|           | Subscription Plan   | Pay-per-Use   |
-|-----------|:-------------------:|:-------------:|
-| Monthly utilization and metering | The user subscribes to a **fixed number of credits** per month (Monthly Utilization Allowance - MUA) that can be used towards any combination of services throughout the month within the contracted MUA. | The user sets an allowance that can be freely used in any combination of services. Usage is metered on a monthly basis and deducted from the allowance, allowing for **variable usage** patterns. |
-| Roll-over credits | Unused credits do not roll to the next month. | Unused credits expire 12 months from the start date. |
-| Minimum contract duration | 12 months | - |
-| Automatic renewal | X | - |
-| Annual subscription fee | X | - |
-| Over-utilization | Charged at a premium fee | - |
-| Support services | Support tier depends on the MUA level | Community |
-
-> [!IMPORTANT]
-> The system must have DataMiner Cloud Services enabled in order to enable metering for systems that are hosted by the user (on-premises or private cloud). The system will stop working if disconnected for longer than 24 hours.
-
-### Managing subscriptions
-
-#### Subscription terms
+## Subscription terms
 
 | Term      | Definition |
 |-----------|------------|
@@ -71,7 +35,7 @@ In case of a Pay-per-Use plan, user pay for what they use, giving ultimate flexi
 | *MUA* | Monthly Utilization Allowance.<br>A fixed number of credits available per month under the subscription. |
 | *Credit Rate* | The credit rate depends on (1) the type of plan (subscription plan or pay-per-use plan), (2) the region and (3) the hosting. As to the latter, it depends whether you opt for a Skyline-hosted solution (i.e. DataMiner as a Service) or a self-hosted infrastructure (on-premises or private Cloud).<br>The price of a credit is protected for the duration of the contract, i.e. 24-month or 36-month subscriptions protect against potential yearly price adjustments. |
 
-#### Metering
+### Metering
 
 Metering works in monthly cycles, starting on the first day of each month. MUA is pro-rated for the first and last months.
 
@@ -84,7 +48,7 @@ MUA: 200 credits<br>Start Date: October 20, 2022<br>Renewal Date: October 19, 20
 
 Metering for *Data collection and control plane service* is calculated as the sum of the maximum number of active Managed Objects (for Managed Objects with 100+ metrics) and Metrics (Managed Objects under 100 metrics) at any given time. For this service metering follows the 95% percentile, i.e. it is calculated as the maximum usage after skipping the peak 5% usage, in practice allowing some room (36h per month) for tests or burst of usage.
 
-#### Billing and invoicing
+### Billing and invoicing
 
 | Duration  | Invoicing |
 |-----------|------------|
@@ -96,11 +60,11 @@ At Renewal Date, the subscription will be invoiced yearly, unless replaced by a 
 
 Consumption above the contracted Monthly Utilization Allowance (MUA) is possible, with the additional consumed credits being invoiced monthly, at the then current Pay-per-Use Credit Rate.
 
-#### Cancellation
+### Cancellation
 
 Subscriptions can be canceled up to 30 days before the anniversary date. The subscription will remain active until the anniversary date. The amount paid is not refundable.
 
-#### Changing subscription
+### Changing subscription
 
 The subscribed MUA level can be changed at any time without altering the Renewal Date.
 

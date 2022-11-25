@@ -52,10 +52,10 @@
     - name: Pricing
       topicUID: Pricing
       items:
+      - name: Commercial models
+        topicUID: Pricing_Commercial_Models
       - name: Usage-based services
         topicUID: Pricing_Usage_based_service
-      - name: DataMiner Perpetual-Use Licenses vs usage-based services
-        topicUID: Pricing_PerpetualUseLicenses_vs_UsageBasedServices
     - name: Support Services
       topicUid: Overview_Support_DMS_M_and_S
       items:
