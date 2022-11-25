@@ -42,9 +42,9 @@ Open Windows Task Manager, go to the ***Performance tab***, and check if ***CPU*
 
 Check if the following processes are running:
 
-- **SLDataMiner.exe and SLNet.exe**: These are the **essential processes** for DataMiner. If one of these is not running, the DMA is considered to also not be running. The steps below may help you identify the problem more accurately. You can also find more details on startup issues in the DataMiner Startup Issues flowchart.
+- **SLDataMiner.exe and SLNet.exe**: These are the **essential processes** for DataMiner. If one of these is not running, the DMA is considered to also not be running. The steps below may help you identify the problem more accurately. You can also find more details on startup issues in the [DataMiner Startup Issues flowchart](xref:Troubleshooting_Startup_Issues).
 
-- **SLLog.exe and SLWatchDog.exe**: These processes are necessary for DataMiner **self-monitoring and troubleshooting**. If one of these is not running, information necessary for further investigation won’t be available. Follow the DataMiner Startup Issues flowchart, and make sure these processes are running correctly before you investigate any further.
+- **SLLog.exe and SLWatchDog.exe**: These processes are necessary for DataMiner **self-monitoring and troubleshooting**. If one of these is not running, information necessary for further investigation won’t be available. Follow the [DataMiner Startup Issues flowchart](xref:Troubleshooting_Startup_Issues), and make sure these processes are running correctly before you investigate any further.
 
 ### Check if there is enough disk space
 
@@ -52,7 +52,7 @@ If there is insufficient disk space on the system drive (i.e. C:) or on the driv
 
 For normal operation, **at least 15 GB of free space is required on the system and the database drive.**
 
-If there is insufficient disk space, free up disk space, reboot the server, and check if the issue is still present before investigating further. For more information, see Keeping a DMA from running out of disk space.
+If there is insufficient disk space, free up disk space, reboot the server, and check if the issue is still present before investigating further. For more information, see [Keeping a DMA from running out of disk space](xref:Keeping_a_DMA_from_running_out_of_disk_space).
 
 ### Check DataMiner CrashDump and MiniDump folders
 
@@ -148,8 +148,6 @@ With the steps above you can identify:
 
 - Which DataMiner process is having a problem.
 
-If you’ve found server-side issues, proceed to Troubleshooting – Critical Issues or Troubleshooting – Process Identification.
+If you’ve found server-side issues, proceed to [Troubleshooting – Critical Issues](xref:Troubleshooting_Critical_Issues_Overview) or [Troubleshooting – Process Identification](xref:Troubleshooting_Process_Identification).
 
-<!-- Comment: add xref once pages have been added to docs -->
-
-If you can’t find any issues with the steps above, proceed to Troubleshooting – Identify Per Module.
+If you can’t find any issues with the steps above, proceed to [Troubleshooting – Identify Per Module](xref:Troubleshooting_Identify_Per_Module).
