@@ -2808,18 +2808,96 @@
     - name: Troubleshooting flowcharts
       topicUid: Troubleshooting_Flowcharts
       items:
+        - name: Troubleshooting - Where to start?
+          topicUID: Troubleshooting_Where_To_Start
         - name: Finding a root cause
           topicUID: Finding_a_Root_Cause
-        - name: Troubleshooting - Alarm Console
-          topicUID: Troubleshooting_Alarm_Console
-        - name: Troubleshooting - apps
-          topicUID: Troubleshooting_Apps
-        - name: Troubleshooting - Cassandra
-          topicUID: Troubleshooting_Cassandra
-        - name: Troubleshooting - Cassandra nodetool status check
-          topicUID: Troubleshooting_Cassandra_Nodetool_Status_Check
-        - name: Troubleshooting Cassandra nodetool checks
-          topicUID: Troubleshooting_Cassandra_Nodetool_Checks
+          items:
+            - name: Troubleshooting - startup issues
+              topicUID: Troubleshooting_Startup_Issues
+            - name: Troubleshooting - critical issues
+              topicUID: Troubleshooting_Critical_Issues_Overview
+              items:
+                - name: Troubleshooting - critical issues - Alarm Console
+                  topicUID: Troubleshooting_Critical_Issues_Alarm_Console
+                - name: Troubleshooting - critical issues - data not updated
+                  topicUID: Troubleshooting_Critical_Issues_Data_Not_Updated
+                - name: Troubleshooting - critical issues - automatic restart
+                  topicUID: Troubleshooting_Critical_Issues_Atomatic_Restart
+                - name: Troubleshooting - critical issues - resources
+                  topicUID: Troubleshooting_Critical_Issues_Resources
+            - name: Troubleshooting - Cassandra
+              topicUID: Troubleshooting_Cassandra
+              items:
+                - name: Troubleshooting - Cassandra - Best practice analyzer
+                  topicUID: Troubleshooting_Cassandra_Best_Practice_Analyzer
+                - name: Troubleshooting - Cassandra - nodetool status check
+                  topicUID: Troubleshooting_Cassandra_Nodetool_Status_Check
+                - name: Troubleshooting - Cassandra - nodetool checks
+                  topicUID: Troubleshooting_Cassandra_Nodetool_Checks
+            - name: Troubleshooting - process identification
+              topicUID: Troubleshooting_Process_Identification
+              items:
+                - name: Troubleshooting - Main processes
+                  topicUID: Troubleshooting_Main_Processes
+                  items:
+                    - name: Troubleshooting - SLElement.exe
+                      topicUID: Troubleshooting_SLElement_exe
+                    - name: Troubleshooting - SLDataMiner.exe
+                      topicUID: Troubleshooting_SLDataMiner_exe
+                    - name: Troubleshooting - SLProtocol.exe
+                      topicUID: Troubleshooting_SLProtocol_exe
+                - name: Troubleshooting - Communication processes
+                  topicUID: Troubleshooting_Communication_Processes
+                  items:
+                    - name: Troubleshooting - SLNet.exe 
+                      topicUID: Troubleshooting_SLNet_exe
+                    - name: Troubleshooting - SLNetComService.exe
+                      topicUID: Troubleshooting_SLNetComService_exe
+                    - name: Troubleshooting - SLDMS.exe
+                      topicUID: Troubleshooting_SLDMS_exe
+                - name: Troubleshooting - Polling processes
+                  topicUID: Troubleshooting_Polling_Processes
+                  items:
+                    - name: Troubleshooting - SLPort.exe
+                      topicUID: Troubleshooting_SLPort_exe
+                    - name: Troubleshooting - SLSNMPManager.exe
+                      topicUID: Troubleshooting_SLSNMPManager_ex
+                - name: Troubleshooting - Logging processes
+                  topicUid: Troubleshooting_Logging_Processes
+                  items:
+                    - name: Troubleshooting - SLWatchdog.exe
+                      topicUID: Troubleshooting_SLWatchdog_exe
+                    - name: Troubleshooting - SLLog.exe
+                      topicUID: Troubleshooting_SLLog_exe
+                - name: Troubleshooting - Database processes
+                  items:
+                    - name: Troubleshooting - SLDataGateway.exe
+                      topicUID: Troubleshooting_SLDataGateway_exe
+                - name: Troubleshooting - Other processes
+                  topicUID: Troubleshooting_Other_Processes
+                  items:
+                    - name: Troubleshooting - SLXML.exe
+                      topicUID: Troubleshooting_SLXML_exe
+                    - name: Troubleshooting - SLASPConnection.exe
+                      topicUID: Troubleshooting_SLASPConnection_exe
+                    - name: Troubleshooting - SLAnalytics.exe
+                      topicUID: Troubleshooting_SLAnalytics_exe
+                    - name: Troubleshooting - SLHelper.exe
+                      topicUID: Troubleshooting_SLHelper_exe
+                    - name: Troubleshooting - SLBrain.exe
+                      topicUID: Troubleshooting_SLBrain_exe
+                    - name: Troubleshooting - SLScheduler.exe
+                      topicUID: Troubleshooting_SLScheduler_exe
+            - name: Troubleshooting - identify per module
+              topicUID: Troubleshooting_Identify_per_Module
+              items:
+                - name: Troubleshooting - Surveyor
+                  topicUID: Troubleshooting_Surveyor
+                - name: Troubleshooting - Alarm Console
+                  topicUID: Troubleshooting_Alarm_Console
+                - name: Troubleshooting - apps
+                  topicUID: Troubleshooting_Apps
     - name: Troubleshooting procedures
       topicUid: Troubleshooting_procedures
       items:
