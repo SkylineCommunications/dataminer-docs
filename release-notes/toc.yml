@@ -623,7 +623,11 @@
     - name: SRM release notes
       items:
       - name: SRM 1.2.28
-        topicUid: SRM_1.2.28
+        items:
+        - name: New features and changes
+          topicUid: SRM_1.2.28
+        - name: Addendum CU1
+          topicUid: SRM_1.2.28_CU1
       - name: SRM 1.2.27
         topicUid: SRM_1.2.27
       - name: SRM 1.2.26
