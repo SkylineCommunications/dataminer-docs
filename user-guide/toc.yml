@@ -2809,7 +2809,7 @@
       topicUid: Troubleshooting_Flowcharts
       items:
         - name: Troubleshooting - Where to start?
-          topicUID: Troubleshooting_Where_To_Start
+          topicUID: Troubleshooting_Where_to_Start
         - name: Finding a root cause
           topicUID: Finding_a_Root_Cause
           items:

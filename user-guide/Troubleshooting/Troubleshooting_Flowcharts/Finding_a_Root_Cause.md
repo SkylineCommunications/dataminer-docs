@@ -36,20 +36,20 @@ graph TD
     identify --> ProcessFlowcharts
     WhichDb --> Cassandra
     %% Define hyperlinks %%
-    click CHECK1 "https://community.dataminer.services/troubleshooting-finding-a-root-cause/#critexamples" "examples of critical issues"
-    click critical "/troubleshooting-critical-issues-overview/" "To critical issues flowchart"
-    click DMAStartupIssues "/troubleshooting-dataminer-start-up-issues/" "DMA Startup Issues"
-    click ProcessFlowcharts "/troubleshooting-process-identification/" "Process identification"
-    click WhichDb "https://community.dataminer.services/troubleshooting-finding-a-root-cause/#whichdb" "Identify the Database"
-    click Cassandra "https://community.dataminer.services/troubleshooting-cassandra/" "Troubleshooting Cassandra"
-    click Investigate "/documentation/troubleshooting-where-to-start/" "Where to start investigating?"
+    click CHECK1 "#examples-of-critical-issues" "examples of critical issues"
+    click critical "https://docs.dataminer.services/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Critical_Issues/Troubleshooting_Critical_Issues_Overview.html" "To critical issues flowchart"
+    click DMAStartupIssues "https://docs.dataminer.services/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Startup_Issues.html" "DMA Startup Issues"
+    click ProcessFlowcharts "https://docs.dataminer.services/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Process_Identification/Troubleshooting_Process_Identification.html" "Process identification"
+    click WhichDb "https://docs.dataminer.services/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Finding_a_Root_Cause.html#identifying-the-general-database" "Identify the Database"
+    click Cassandra "https://docs.dataminer.services/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Cassandra/Troubleshooting_Cassandra.html" "Troubleshooting Cassandra"
+    click Investigate "https://docs.dataminer.services/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Where_to_Start.html"
     %% Apply styles to blocks %%
     class START classTerminal;
     class WhichDb,DatabaseFlowcharts,CheckStartup,CHECK1,identify classDecision;
     class Investigate,Cassandra,DMAStartupIssues,critical,ProcessFlowcharts classExternalRef;
 </div>
 
-## Examples of critical issues 
+## Examples of critical issues
 
 | **Critical issues** | **Why are these critical?** |
 |--|--|
