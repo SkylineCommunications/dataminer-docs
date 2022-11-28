@@ -299,6 +299,7 @@ Enables the button panel component in the Dashboards app.
 Enables the export to PDF button within the Dashboards app itself. Creating PDFs of dashboards is possible outside the app (e.g. via DataMiner Scheduler) without this soft-launch option.
 
 - **Minimum version**: 9.6.4
+- **Release version**: 10.2.12/10.3.0
 
 ### ReportsAndDashboardsGuides
 

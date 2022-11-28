@@ -6,6 +6,8 @@
 
 	using Skyline.DataMiner.Net.Scheduling;
 
+	using SLDataGateway.API.Types.Tasks;
+
 	/// <summary>
 	/// Represents the DataMiner Scheduler component.
 	/// </summary>
@@ -190,6 +192,27 @@
 		/// Retrieves the Scheduler status.
 		/// Replaces: slScheduler.GetInfo(userCookie, TSI_STATUS (13), out response);
 		/// </summary>
+		/// <example>
+		/// <code>
+		/// IDms myDms = protocol.GetDms();
+		/// IDma myDma = myDms.GetAgent(protocol.DataMinerID);
+		/// IDmsScheduler scheduler = myDma.Scheduler;
+		///
+		/// var tasksStatus = scheduler.GetStatus() as Object[];
+		///
+		/// foreach (var taskStatus in tasksStatus)
+		///	{
+		///		var taskStatusInfo = (string[])taskStatus;
+		///
+		///		string name = taskStatusInfo[0];
+		///		string status = taskStatusInfo[1]; // Running/Pending/Finished
+		///		string lastResult = taskStatusInfo[2];
+		///		string nextRunTime = taskStatusInfo[3]; // "YYYY-MM-DD HH:MM:SS"
+		///		string lastRunTime = taskStatusInfo[4]; // "YYYY-MM-DD HH:MM:SS"
+		///		string lastRunTimeCode = taskStatusInfo[5]; // "0" - undefined, "1" - OK, "2" - Warning, "3" - Failed string
+		/// }
+		/// </code>
+		/// </example>
 		object GetStatus();
 	}
 }

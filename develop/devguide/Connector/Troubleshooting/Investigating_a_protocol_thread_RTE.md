@@ -32,7 +32,7 @@ The protocol thread is used by the element in the error and has an impact on the
 
     - If this is the case, it means an operation is taking longer than 15 minutes (or 7.5 min for a half-open RTE).
 
-1. Request the pending calls for this element via the SLNetClientTest tool (see [How to retrieve protocol pending calls](https://community.dataminer.services/documentation/how-to-retrieve-protocol-pending-calls/)).
+1. Request the pending calls for this element via the SLNetClientTest tool (see [How to retrieve protocol pending calls](xref:How_to_retrieve_protocol_pending_calls)).
 
     - This is only useful if the error is still active.
     - This will indicate the amount of time a specific component in the driver is busy.
@@ -60,5 +60,5 @@ While investigating the issue should only take about 15 minutes, the time to res
 ## Useful links
 
 - For more information about protocol threads and SLProtocol processes, see [SLProtocol](xref:InnerWorkingsSLProtocol).
-- For more information on how to request the pending calls via the SLNetClientTest tool, see [How to retrieve protocol pending calls](https://community.dataminer.services/documentation/how-to-retrieve-protocol-pending-calls/).
+- For more information on how to request the pending calls via the SLNetClientTest tool, see [How to retrieve protocol pending calls](xref:How_to_retrieve_protocol_pending_calls).
 - For more information about DataMiner Integration Studio, see [DataMiner Integration Studio](xref:DIS).

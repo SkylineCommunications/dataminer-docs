@@ -3472,7 +3472,9 @@
           - name: ActivateElement
             topicUid: ActivateElementv1
           - name: AddBookingAttachment
-            topicUid: AddBookingAttachment
+            topicUID: AddBookingAttachment
+          - name: AddBookingAttachmentV2
+            topicUid: AddBookingAttachmentV2
           - name: AddCommentToAlarm
             topicUid: AddCommentToAlarm
           - name: AddElementToPinned
@@ -3484,7 +3486,9 @@
           - name: AddElementsToRecent
             topicUid: AddElementsToRecent
           - name: AddJobAttachment
-            topicUid: AddJobAttachment
+            topicUID: AddJobAttachment
+          - name: AddJobAttachmentV2
+            topicUid: AddJobAttachmentV2
           - name: AddOrUpdateJobsSectionDefinitionField
             topicUid: AddOrUpdateJobsSectionDefinitionField
           - name: AddServiceToPinned
@@ -3494,7 +3498,9 @@
           - name: AddServicesToRecent
             topicUid: AddServicesToRecent
           - name: AddTicketAttachment
-            topicUid: AddTicketAttachment
+            topicUID: AddTicketAttachment
+          - name: AddTicketAttachmentV2
+            topicUid: AddTicketAttachmentV2
           - name: AddTicketField
             topicUid: AddTicketField
           - name: AddTicketType
