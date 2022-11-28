@@ -3204,30 +3204,6 @@
                     topicUid: Manifest.Content.Dashboards.Dashboard.Version.Selection.Range-triggerPackagePipelineOnChange 
                 - name: Specific
                   topicUid: Manifest.Content.Dashboards.Dashboard.Version.Selection.Specific
-        - name: Files
-          topicUid: Manifest.Content.Files
-          items: 
-          - name: File
-            topicUid: Manifest.Content.Files.File
-            items: 
-            - name: DestinationPath
-              topicUid: Manifest.Content.Files.File.DestinationPath
-            - name: Source
-              topicUid: Manifest.Content.Files.File.Source
-            - name: SourcePath
-              topicUid: Manifest.Content.Files.File.SourcePath
-        - name: Folders
-          topicUid: Manifest.Content.Folders
-          items: 
-          - name: Folder
-            topicUid: Manifest.Content.Folders.Folder
-            items: 
-            - name: DestinationPath
-              topicUid: Manifest.Content.Folders.Folder.DestinationPath
-            - name: Source
-              topicUid: Manifest.Content.Folders.Folder.Source
-            - name: SourcePath
-              topicUid: Manifest.Content.Folders.Folder.SourcePath
         - name: Functions
           topicUid: Manifest.Content.Functions
           items: 
