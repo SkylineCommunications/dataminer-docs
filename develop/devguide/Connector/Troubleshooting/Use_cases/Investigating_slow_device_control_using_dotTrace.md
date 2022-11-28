@@ -4,7 +4,7 @@ uid: Investigating_slow_device_control_using_dotTrace
 
 # Investigating slow device control using dotTrace
 
-This use case focuses on an matrix connector that performed too slowly, and this in a live environment that brought very strict limitations to the investigation.
+This use case focuses on a matrix connector that performed too slowly, and this in a live environment that brought very strict limitations to the investigation.
 
 When the matrix connector was tested in the production environment, it took approximately 2 seconds on average for a crosspoint to be set. This was much slower than anticipated, so we went looking for the root cause behind this.
 
