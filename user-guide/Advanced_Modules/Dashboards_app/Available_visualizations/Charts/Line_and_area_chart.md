@@ -17,8 +17,8 @@ To configure the component:
 
    > [!NOTE]
    >
-   > If a query is used as the data feed, additional configuration is required. See [Configuration with query data feed](#configuration-with-query-data-feed).
-   > Up to DataMiner 10.2.0 [CU10]/10.3.1, a table component could feed a line chart by linking the *Parameters* feed and the *Indices* feed. From DataMiner 10.2.0 [CU10]/10.3.1 onwards, the user only has to link the *Parameters* feed of the table to the line chart in order to see the data, matching a [parameter feed component](xref:DashboardParameterFeed) feeding.
+   > - If a query is used as the data feed, additional configuration is required. See [Configuration with query data feed](#configuration-with-query-data-feed).
+   > - From DataMiner 10.2.0 [CU10]/10.3.1 onwards, you can use a table component to feed a line chart by linking the *Parameters* feed and the *Indices* feed. From DataMiner 10.2.0 [CU10]/10.3.1 onwards, you only need to link the *Parameters* feed of the table to the line chart in order to see the data, similar to when you use a [parameter feed component](xref:DashboardParameterFeed).
 
 1. Optionally, apply a filter feed:
 
