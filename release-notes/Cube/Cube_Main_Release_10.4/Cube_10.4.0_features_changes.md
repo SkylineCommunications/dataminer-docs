@@ -19,6 +19,16 @@ This setting allows you to specify the maximum amount of memory that SLAnalytics
 
 Default value: 2.00 GB
 
+#### Visio - "[GroupValue]" and "[Count]" can now be used as placeholders to adjust the value inside of dynamically grouped shapes [ID_34974]
+
+<!-- MR 10.4.0 - FR 10.3.1 -->
+
+In Visio, users can now enter the placeholder "[GroupValue]" in the *ShapeGrouping* shape to display the parameter value of the shape data *GroupBy* of the first child of the group. If the *GroupBy* value has multiple column parameters or properties, the group names will be separated by a comma.
+
+Users can also use the placeholder "[Count]" from now onwards, to display the number of children in a group of dynamically positioned shapes.
+
+Up to now, the only available placeholder that could be added in the *ShapeGrouping* shape was an asterisk ("\*").
+
 ## Changes
 
 ### Enhancements
