@@ -124,10 +124,10 @@ A *\<Link>* tag can have the following attributes:
   - “*externalMatching*”: Link between two internal connections of different elements.
 
   - “*physicalMatching*”: Physical link between two internal connections of the same element.
-  
-Example:
 
-```xml
+  Example:
+
+  ```xml
   <Links>
   <Link itemA="ALCALTEL" itemb="ALCALTEL" itemRelation="internalMatching">
   ...
@@ -142,10 +142,10 @@ Example:
   ...
   </Link>
   <Links>
-```
+  ```
 
-> [!NOTE]
-> When itemA and itemB are equal, you need to define an itemRelation.
+  > [!NOTE]
+  > When itemA and itemB are equal, you need to define an itemRelation.
 
 - **type**
 
