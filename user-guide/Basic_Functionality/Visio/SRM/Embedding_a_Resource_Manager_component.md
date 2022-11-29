@@ -340,6 +340,15 @@ To also show resources for elements in child views, in the **ComponentOptions** 
 > [!NOTE]
 > The corresponding resource bands are not updated automatically in case there is a change to the configuration of the elements.
 
+#### Passing exposers
+
+From DataMiner 10.3.1/10.4.0 onwards, you can pass exposers by object ID.
+
+This enables a new filter option that can be used to show the corresponding resource bands on the timeline.
+
+> [!NOTE]
+> The number of resources shown on a timeline is limited to 100 resources to avoid delay while loading the bands.
+
 #### Specifying custom bands on the timeline
 
 To specify custom bands on the timeline, from DataMiner 9.5.3 onwards, you can use the following configuration for the *YaxisResources* session variable:
