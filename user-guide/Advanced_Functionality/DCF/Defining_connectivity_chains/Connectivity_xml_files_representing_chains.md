@@ -128,20 +128,20 @@ A *\<Link>* tag can have the following attributes:
 Example:
 
 ```xml
-<Links>
-<Link itemA="ALCALTEL" itemb="ALCALTEL" itemRelation="internalMatching">
-...
-</Link>
-<Link itemA="ALCALTEL" itemb="ALCALTEL" itemRelation="externalMatching">
-...
-</Link>
-<Link itemA="ALCALTEL" itemb="ALCALTEL" itemRelation="physicalMatching">
-...
-</Link>
-<Link itemA="ALCALTEL" itemb="DCM" itemRelation="externalMatching">
-...
-</Link>
-<Links>
+  <Links>
+  <Link itemA="ALCALTEL" itemb="ALCALTEL" itemRelation="internalMatching">
+  ...
+  </Link>
+  <Link itemA="ALCALTEL" itemb="ALCALTEL" itemRelation="externalMatching">
+  ...
+  </Link>
+  <Link itemA="ALCALTEL" itemb="ALCALTEL" itemRelation="physicalMatching">
+  ...
+  </Link>
+  <Link itemA="ALCALTEL" itemb="DCM" itemRelation="externalMatching">
+  ...
+  </Link>
+  <Links>
 ```
 
 > [!NOTE]
