@@ -120,3 +120,5 @@
           topicUID: FAQ_SOP_connectors
       - name: Questions related to pricing of usage-based services
         topicUID: FAQs_Pricing
+      - name: Questions related to the DataMiner cloud Platform
+        topicUID: FAQ_DCP
