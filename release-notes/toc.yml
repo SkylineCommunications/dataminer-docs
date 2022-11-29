@@ -84,6 +84,8 @@
           topicUid: General_Main_Release_10.2.0_CU9
         - name: General Main Release 10.2.0 CU10 - Preview
           topicUid: General_Main_Release_10.2.0_CU10
+        - name: General Main Release 10.2.0 CU11 - Preview
+          topicUid: General_Main_Release_10.2.0_CU11
       - name: Feature Release
         items:
         - name: General Feature Release 10.2.12
