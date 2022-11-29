@@ -21,7 +21,7 @@ Default value: 2.00 GB
 
 #### DataMiner Cube - Visual Overview: Session variable YAxisResources now supports filters [ID_34857]
 
-<!-- MR 10.4.0 - FR 10.3.0 -->
+<!-- MR 10.4.0 - FR 10.3.1 -->
 
 From now on, you can pass filters to the YAxisResources session variable in order to show the corresponding resource bands.
 
