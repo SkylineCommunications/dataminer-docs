@@ -342,7 +342,7 @@ To also show resources for elements in child views, in the **ComponentOptions** 
 
 #### Passing exposers
 
-From DataMiner 10.3.1/10.4.0 onwards, you can pass exposers by object ID.
+From DataMiner 10.3.0/10.4.0 onwards, you can pass exposers by object ID.
 
 This enables a new filter option that can be used to show the corresponding resource bands on the timeline.
 
