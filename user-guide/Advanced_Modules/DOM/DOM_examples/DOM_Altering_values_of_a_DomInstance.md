@@ -42,7 +42,7 @@ These two methods have a variant for a single value and a list value.
 There are also two versions available, one where you can pass the full `SectionDefinition` and `FieldDescriptor` objects, and one where you only need to pass the IDs of these objects. The latter has the advantage that you do not need to retrieve these full objects from server, which could improve your script's performance. Do note, however, that the former will automatically [stitch](xref:DomHelper_class#stitching) these full objects into the DomInstance automatically. (Not really necessary in most cases)
 
 > [!NOTE]
-> The version of these extension methods that accept the IDs are available since DataMiner version 10.3.2.
+> The version of these extension methods that accept the IDs are available since DataMiner feature release version 10.3.2 and main release version 10.4.0.
 
 There is currently no extension method to remove ``FieldValues`` or ``Sections`` from a ``DomInstance``. See the [manual](#manual-altering-sections-and-fieldvalues) chapter on how to do this manually.
 
