@@ -2,7 +2,7 @@
 uid: FAQ_DCP
 ---
 
-# Questions related to the DataMiner cloud Platform
+# Questions related to DataMiner Cloud Services
 
 ### How is security handled by the Cloud Platform Services?
 
