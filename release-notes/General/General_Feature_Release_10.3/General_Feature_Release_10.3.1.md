@@ -365,3 +365,9 @@ When you sorted or filtered a table fed by e.g. a query filter, the table would 
 <!-- MR 10.4.0 - FR 10.3.1 -->
 
 In some cases, Resource Manager could throw a NullReferenceException when *ResourceStorageType* was not specified in the `C:\Skyline DataMiner\ResourceManager\Config.xml` file.
+
+#### Web apps: Problem when a trend graph displaying multiple parameters showed data that was partly in the future [ID_34982]
+
+<!-- MR 10.3.0 - FR 10.3.1 -->
+
+When a trend graph displaying multiple parameters showed data that was partly in the future, in some cases, an error could occur.
