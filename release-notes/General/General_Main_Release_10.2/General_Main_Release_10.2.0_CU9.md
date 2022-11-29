@@ -203,6 +203,14 @@ When a parameter of a DVE element exported as a standalone parameter was partial
 
 In Visio pages displayed in web apps, it would not be possible to execute parameter set actions.
 
+#### Elasticsearch: Alarm trees of a cleared alarm could incorrectly be moved to a closed alarm index as one single tree [ID_34502]
+
+<!-- MR 10.2.0 [CU9] - FR 10.2.12 -->
+
+When an alarm is cleared, in Elasticsearch, its entire alarm tree is moved from the active alarm index to a closed alarm index.
+
+In some cases, when there were different alarm trees on different agents (trees sharing the same root alarm ID but each with a different DataMiner ID), all those alarms would incorrectly be moved to one single tree.
+
 #### Monitoring app: Problem when trying to open the web UI of a device [ID_34503]
 
 <!-- MR 10.2.0 [CU9] - FR 10.2.12 -->
@@ -407,3 +415,9 @@ When, in the Alarm Console, you double-clicked a suggestion or alarm event creat
 <!-- MR 10.1.0 [CU21] / 10.2.0 [CU9] - FR 10.2.12 -->
 
 When a connection had been closed, in some cases, an error could occur in the hosting process.
+
+#### Certain antivirus software products could incorrectly flag SLSpiHost.exe as malicious [ID_34942]
+
+<!-- MR 10.2.0 [CU9] - FR 10.2.12 [CU0] -->
+
+In some cases, certain antivirus software products could incorrectly flag SLSpiHost.exe as malicious.

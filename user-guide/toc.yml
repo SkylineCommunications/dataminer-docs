@@ -2404,6 +2404,56 @@
               topicUid: CI_Types1
             - name: Using your IS-04 registry to provision DataMiner with IDP
               topicUID: Using_your_IS04_registry_to_provision_DataMiner_with_IDP
+    - name: Process Automation framework
+      topicUid: PA_index
+      items:
+        - name: Process Automation concepts
+          topicUid: PA_Concepts
+          items:
+            - name: Activities
+              topicUid: PA_Activities
+            - name: Process definition
+              topicUid: PA_Process_Definition
+            - name: Process DOM instance
+              topicUid: PA_Process_DOM_Instance
+            - name: User DOM instance
+              topicUid: PA_User_DOM_Instance
+            - name: Queue element
+              topicUid: PA_Queue_Element
+            - name: Token
+              topicUid: PA_Token
+            - name: Process Automation app
+              topicUid: Process_Automation_App_Concept
+        - name: Process Automation app
+          topicUid: Process_Automation_App
+        - name: Getting started with PA
+          topicUid: Getting_Started_With_PA
+          items:
+            - name: Deploying and configuring the PA framework
+              topicUid: Deploying_and_Configuring_the_PA_Framework
+            - name: Creating activities
+              topicUid: PA_Creating_Activities
+              items:
+                - name: Creating script tasks
+                  topicUid: PA_Creating_script_tasks
+                - name: Creating user tasks
+                  topicUid: PA_Creating_user_tasks
+                - name: Creating resource tasks
+                  topicUid: PA_Creating_resource_tasks
+            - name: Creating and configuring a process definition
+              topicUid: PA_Creating_and_Configuring_a_Process_Definition
+        - name: Advanced configuration
+          items:
+            - name: Logging
+              topicUid: PA_Logging
+            - name: Exchanging process data with external applications
+              topicUid: Exchanging_Process_Data_With_External_Applications
+            - name: DOM instances cleanup
+              topicUid: DOM_Instances_Cleanup
+            - name: Pushing tokens into a process
+              topicUid: Pushing_Tokens_Into_A_Process
+            - name: Integrating gateways
+              topicUid: PA_Integrating_Gateways
     - name: DataMiner PTP app
       topicUid: SolPTP
       items:
@@ -2448,10 +2498,30 @@
           topicUid: provisioning_srm
         - name: Implementing virtual functions
           topicUid: implementing_function_srm
+          items:
+          - name: Creating profile parameters
+            topicUid: creating_profile_parameters
+          - name: Creating profile definitions
+            topicUid: creating_profile_definitions
+          - name: Creating profile instances
+            topicUid: creating_profile_instances
+          - name: Creating virtual functions
+            topicUid: creating_virtual_functions
+          - name: Creating Profile-Load Scripts
+            topicUid: creating_profile_load_scripts
         - name: Provisioning virtual function resources
           topicUid: provisioning_VFRs
         - name: Additional configuration for Service Orchestration
           topicUid: config_service_orchestration
+          items:
+          - name: Creating service definitions
+            topicUid: Service_Orch_creating_service_definitions
+          - name: Configuring resources and resource pools
+            topicUid: Service_Orch_configuring_resource_and_pools
+          - name: Creating LSO scripts
+            topicUid: Service_Orch_creating_LSO_scripts
+          - name: Adding DTR
+            topicUid: Service_Orch_adding_DTR
         - name: Additional configuration for Resource Automation
           topicUid: config_resource_automation
         - name: Additional configuration for Resource Scheduling
@@ -2489,6 +2559,8 @@
               topicUID: Connect_to_cloud_with_DMZ
             - name: Connecting with older DataMiner versions
               topicUid: Connecting_with_older_DataMiner_versions
+            - name: DataMiner Cloud Packs
+              topicUid: CloudPackages
         - name: Linking your DataMiner account to your DCP account
           topicUid: Linking_your_DataMiner_and_DCP_account
         - name: Cloud data storage policies
@@ -2751,6 +2823,10 @@
     - name: Known issues
       topicUID: Known_issues
       items:
+        - name: Various SLElement issues
+          topicUID: KI_SLElement_various_issues
+        - name: SLLog issue when large alarm tree is closed
+          topicUID: KI_SLLog_issue_when_large_alarm_tree_is_closed
         - name: Element data lost after migrating elements in Cassandra Cluster setup
           topicUID: KI_element_data_loss_after_migration_in_CC_setup
         - name: Multiple issues when Failover based on hostnames is used
@@ -2811,6 +2887,8 @@
           topicUID: KI_Upgrade_error_api-ms-win-crt-stdio-l1-1-0_dll_is_missing
     - name: Customer DataMiner Reporting (CDMR)
       topicUID: CDMR
+    - name: Remote Log Connection
+      topicUID: RemoteLogCollection
 - name: Reference
   topicUid: Part7Reference
   items:
@@ -3016,6 +3094,8 @@
                   topicUid: SLNetClientTest_configuring_frequency_smart_baseline
                 - name: Disabling automatic NATS configuration
                   topicUid: SLNetClientTest_disabling_automatic_nats_config
+                - name: Configuring server-side search to include all custom properties
+                  topicUID: SLNetClientTest_including_all_custom_properties
         - name: SLOffload tool
           topicUid: SLOffload_tool
         - name: SLSkipAsSourceTool
@@ -3098,6 +3178,8 @@
           topicUID: Overview_of_Soft_Launch_Options
         - name: Activating SLProtocol as a 64-bit process
           topicUID: Activating_SLProtocol_as_a_64_Bit_Process
+    - name: DataMiner Extension Modules
+      topicUID: DataMinerExtensionModules
     - name: Custom branding
       topicUID: Custom_branding
     - name: DataMiner metrics
