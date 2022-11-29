@@ -10,7 +10,7 @@ For the usage-based models, pricing is available for both self-hosted (on-premis
 
 ## Perpetual-Use Licenses
 
-Perpetual-Use Licensing is based on the proven and flexible DataMiner Licensing Scheme, which has been available for several years. Licenses are available for **DataMiner nodes** (which are available in different capacity tiers to manage a set number of Managed Objects), for **optional features**, and for **connectors** that interface DataMiner with different third-party products (the latter irrespective of the total number of elements managed with the connector, and with a fixed price regardless of whether the connector exists or still needs to be developed).
+Perpetual-Use Licensing is based on the proven and flexible DataMiner Licensing Scheme, which has been available for several years. Licenses are available for **DataMiner nodes** (which are available in different capacity tiers to manage a set number of Managed Objects), for **optional modules**, and for **connectors** that interface DataMiner with different third-party products (the latter irrespective of the total number of elements managed with the connector, and with a fixed price regardless of whether the connector exists or still needs to be developed).
 
 Perpetual-Use Licenses are a one-off expenditure.
 
@@ -55,8 +55,8 @@ Usage-based services are charged based on the actual monthly usage of services, 
 |---------|----------------------------|----------------------|
 | System capacity | Server-based licenses, each with fixed capacity tiers of managed objects: 5, 10, 25, 50, 100, 250, 500 (for approved applications), 1000. | Volume-based, per managed object or monitored metric per month. Independent from the number of nodes deployed. |
 | Failover | Server-based license | Included (the user can deploy additional nodes for Failover without paying additional fees since billing is based on the active number of managed objects or monitored metrics in a month) |
-| Optional features | Licensed per node: Automation, Correlation, Dashboards app, Infrastructure Discovery & Provisioning, Spectrum Analysis | Not applicable. All optional features are included. |
-| Automation & orchestration | Based on volume of script runs. | Based on volume of script runs. |
+| Optional modules | Licensed per node: Correlation and Automation Engines, Dashboards app, Infrastructure Discovery & Provisioning, Spectrum Analysis, and DataMiner Object Models | Not applicable. All optional modules are included. |
+| Automation & orchestration | Based on the volume of concurrent services running (i.e. concurrent bookings). | Based on the volume of script runs. |
 | Connectors | Connector license per different interfaced product | Per connector per month |
 | Sample applications | Included | Included |
 | Cloud services | Tier-based | Usage-based |
