@@ -8,11 +8,7 @@ uid: FAQ_DCP
 
 See [Cloud connectivity and security](xref:Cloud_connectivity_and_security).
 
-### What are the prerequisites to connect a DMS to the cloud?
-
-These prerequisites are listed in the [first step of the procedure to connect a DMS to the cloud](xref:Connecting_your_DataMiner_System_to_the_cloud).
-
-### How do I connect a DMS to the cloud?
+### How do I connect a DMS to the cloud? What are the prerequisites?
 
 See [Connecting your DataMiner System to the cloud](xref:Connecting_your_DataMiner_System_to_the_cloud).
 
