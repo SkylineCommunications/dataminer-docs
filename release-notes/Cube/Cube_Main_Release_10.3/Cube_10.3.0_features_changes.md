@@ -841,6 +841,12 @@ Up to now, when you grouped/sorted the alarms in the alarm tab by severity, the 
 
 Also, in case of incident alarms, the alarm duration indicator will now show the highest severity found among the base alarms.
 
+#### Bookings module: Navigation panel has been improved and renamed to 'settings' panel [ID_34840]
+
+<!-- MR 10.3.0 - FR 10.3.1 Also see Fixes for bug fix section-->
+
+The *Navigation* panel has been improved and renamed to *Settings* panel.
+
 #### Alarm Console: A notice will now appear when resources are being migrated from XML to Elasticsearch [ID_34845]
 
 <!-- MR 10.3.0 - FR 10.3.1 -->
@@ -973,13 +979,11 @@ Also, in some cases, elements with an index in a service would incorrectly not s
 
 When you opened a trend graph that contained patterns matching existing tags, in some cases, not all detected occurrences of those patterns would initially be indicated. Only after zooming out would all detected patterns be properly indicated.
 
-#### Bookings app: Columns of type 'Date' would not get updated when you changed the time zone [ID_34840]
+#### Bookings module: Columns of type 'Date' would not get updated when you changed the time zone [ID_34840]
 
-<!-- MR 10.3.0 - FR 10.3.1 -->
+<!-- MR 10.3.0 - FR 10.3.1 Also see Enhancements-->
 
 When, in the *Navigation* panel of the *Bookings* app, you selected another time zone, columns of type `Date` would incorrectly not get updated.
-
-Also, the *Navigation* panel has been improved and renamed to *Settings* panel.
 
 #### Trending - Pattern matching: Trend graph would no longer show the matches for the displayed parameter after editing a tag [ID_34870]
 

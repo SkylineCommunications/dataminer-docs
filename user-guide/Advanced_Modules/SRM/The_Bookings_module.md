@@ -20,6 +20,8 @@ The list is similar to a list view component in Visual Overview. For more inform
 
 ## Bookings timeline
 
+### Preview and main pane
+
 The timeline area of the *Bookings* module can be used as follows:
 
 - The timeline has a preview pane at the bottom. The main timeline is an enlargement of the white section of the preview pane.
@@ -29,6 +31,8 @@ The timeline area of the *Bookings* module can be used as follows:
 - To pan the displayed timeline, drag the white area in the preview pane to the left or right.
 
 - To zoom to a particular time, e.g. the next hour, or the past month, right-click the timeline, and select *Zoom to \[time\]*.
+
+### [Navigation pane - Prior to DataMiner 10.3.0/10.3.1](#tab/tabid-1)
 
 - For more navigation options:
 
@@ -41,6 +45,22 @@ The timeline area of the *Bookings* module can be used as follows:
      - To make the timeline move along with the current time, in the lower left corner, select *Follow mode*. This option is also available via the timeline context menu.
 
      - To change the time zone for the timeline, in the lower right corner, select a different *Time zone*.
+
+### [Settings pane - From DataMiner 10.3.0/10.3.1 onwards](#tab/tabid-2)
+
+- For more navigation options:
+
+  1. Right-click the timeline, and select *Show settings panel*.
+
+  1. Expand the *Settings* section below the panel.
+
+     This panel allows the following actions:
+
+     - To make the timeline move along with the current time, in the lower left corner, select *Follow mode*. This option is also available via the timeline context menu.
+
+     - To change the time zone for the timeline, in the lower right corner, select a different *Time zone*.
+
+***
 
 > [!NOTE]
 >
