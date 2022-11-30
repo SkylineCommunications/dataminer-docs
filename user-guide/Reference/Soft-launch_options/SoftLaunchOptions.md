@@ -4,7 +4,7 @@ uid: SoftLaunchOptions
 
 # Soft-launch options
 
-Soft-launch features are DataMiner features that have not yet been made available to the general public, but by activating specific options you can access them already. However, before you do so, read the disclaimer below:
+Soft-launch features are DataMiner features that have not yet been made available to the general public, but by [activating specific options](xref:Activating_Soft_Launch_Options) you can access them already. However, before you do so, read the disclaimer below:
 
 - Make sure you validate soft-launch features on your **staging platform**, and do not activate them on your production system unless you have synced with Skyline to make an assessment on the risk.
 
@@ -14,10 +14,4 @@ Soft-launch features are DataMiner features that have not yet been made availabl
 
 - **Hotfixes will not be provided** for soft-launch features. The only way to get a fix for them is by installing the latest feature release.
 
-If you accept these limitations, feel tree to activate the soft-launch options of your choice. And obviously, your feedback on these preview features will be much appreciated.
-
-This section on soft-launch options consists of the following topics:
-
-- [Activating soft-launch options](xref:Activating_Soft_Launch_Options)
-- [Overview of soft-launch options](xref:Overview_of_Soft_Launch_Options)
-- [Activating SLProtocol as a 64-bit process](xref:Activating_SLProtocol_as_a_64_Bit_Process)
+If you accept these limitations, feel tree to activate the [soft-launch options of your choice](xref:Overview_of_Soft_Launch_Options). And obviously, your feedback on these preview features will be much appreciated.
