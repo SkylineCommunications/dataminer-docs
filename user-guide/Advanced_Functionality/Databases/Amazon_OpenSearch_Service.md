@@ -11,6 +11,7 @@ From DataMiner 10.3(CU0)/10.3.1 onwards, it is possible to Amazon OpenSearch Ser
 Supported versions:
 
 - OpenSearch version 1.3.
+- OpenSearch version 2.3.
 
 > [!NOTE]
 > No Elasticsearch setups on Amazon OpenSearch Service are currently supported.
