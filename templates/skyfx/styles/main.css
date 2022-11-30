@@ -864,13 +864,17 @@ input:checked + .slider:before {
 .column {
   flex: 25%;
   max-width: 25%;
-  padding: 0 4px;
+  padding: 0 11px;
 }
 
 .column img {
   margin-top: 8px;
   vertical-align: middle;
   width: 100%;
+}
+
+.column img:hover{
+  background-color: #fbfbfb;
 }
 
 /* Responsive layout - makes a two column-layout instead of four columns */
