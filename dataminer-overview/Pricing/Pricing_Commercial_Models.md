@@ -2,7 +2,7 @@
 uid: Pricing_Commercial_Models
 ---
 
-# Commercial models Summary
+# Commercial models summary
 
 DataMiner can be used with **Perpetual-Use Licenses** or with two flavors of usage-based service models, namely the **Subscription Plan** and the **Pay-per-Use Plan**.
 
@@ -49,7 +49,7 @@ When ready to scale up, the user can set up a yearly subscription or start with 
 
 The Perpetual-Use model offers perpetual ownership over a named license through a one-time purchase with an optional recurrent cost for support services and software updates and upgrades.
 
-Usage-based services are charged based on the actual monthly usage of services, where an **Utilization Allowance** can be used freely in any combination of services which can change anytime.
+Usage-based services are charged based on the actual monthly usage of services, where an **Utilization Allowance** can be used freely in any combination of services that can change anytime.
 
 |         | Perpetual licensing scheme | Usage-based services |
 |---------|----------------------------|----------------------|
