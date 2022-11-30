@@ -24,7 +24,7 @@ Make sure that the configured ports also are open on the internal network, so ot
   {
     "CloudEndpointOptions": {
       "Enabled": <true/false>, 
-      "Port": <integer>,
+      "Port": <integer>
     }
   }
   ```
