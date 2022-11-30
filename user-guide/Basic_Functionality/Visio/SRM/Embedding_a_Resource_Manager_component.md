@@ -293,7 +293,7 @@ Example values for the **SetVar** shape data field:
 
   Creates a band for each resource in the system. This is not recommended when there are many resources. If only *YaxisResources* is specified without any additional configuration, this will have the same effect.
 
-#### Passing elements, services, or views to the YAxisResources session variable
+#### Passing elements, services, views, or exposers to the YAxisResources session variable
 
 From DataMiner 10.2.8/10.3.0 onwards, you can pass elements, services, or views to the YAxisResources session variable in order to show the corresponding resource bands.
 
@@ -340,14 +340,22 @@ To also show resources for elements in child views, in the **ComponentOptions** 
 > [!NOTE]
 > The corresponding resource bands are not updated automatically in case there is a change to the configuration of the elements.
 
-#### Passing exposers
+##### Passing exposers
 
-From DataMiner 10.3.1/10.4.0 onwards, you can pass exposers by object ID.
+From DataMiner 10.3.1/10.4.0 onwards, you can pass resource exposers as a filter by object ID.
 
-This enables a new filter option that can be used to show the corresponding resource bands on the timeline.
+This enables a new filter option that can be used to show the corresponding resource bands on the timeline. Using a filter which results in less than 100 resources is recommended to avoid delay while loading the bands.
+
+> [!TIP]
+> See also: [Filter feature examples](xref:YAxisResource_Shape_Data_Examples#examples-filter-feature)
+
+A converter has been created in the client which will convert a profile parameter name to the ID of the found object. For this, the format [ProfileParameter:xxx,ID] should be used, replacing 'xxx' with the name of the capacity/capability profile parameter.
 
 > [!NOTE]
-> The number of resources shown on a timeline is limited to 100 resources to avoid delay while loading the bands.
+> The server side filter is case sensitive with regard to profile parameter keys.
+
+> [!TIP]
+> See also: [Client converter examples](xref:YAxisResource_Shape_Data_Examples#examples-filter-feature)
 
 #### Specifying custom bands on the timeline
 

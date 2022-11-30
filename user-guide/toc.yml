@@ -587,6 +587,9 @@
           items:
             - name: Embedding a Resource Manager component
               topicUid: Embedding_a_Resource_Manager_component
+              items:
+                - name: YAxisResource shape data examples
+                  topicUID: YAxisResource_Shape_Data_Examples
             - name: Embedding a Service Manager component
               topicUid: Embedding_a_Service_Manager_component
             - name: Embedding a Profile Manager component
