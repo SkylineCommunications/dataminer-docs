@@ -4,7 +4,7 @@ uid: Configuring_multiple_OpenSearch_clusters
 
 # Configuring multiple OpenSearch clusters
 
-From DataMiner 10.3.0 onwards, you can have data offloaded to multiple OpenSearch clusters, i.e. one main cluster and several replicated clusters. Data is always read from the main cluster, but data updates are sent to all clusters.
+From DataMiner 10.3(CU0)/10.3.1 onwards, you can have data offloaded to multiple OpenSearch clusters, i.e. one main cluster and several replicated clusters. Data is always read from the main cluster, but data updates are sent to all clusters.
 
 To configure this setup:
 
