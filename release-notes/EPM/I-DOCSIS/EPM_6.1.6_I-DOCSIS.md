@@ -26,6 +26,10 @@ The maps implementation with PNM layer has been moved from the Service Group lay
 
 When the back end was restarted, up to now, provisioning was disabled by default. Now it will be enabled by default. The Provisioning parameter is now also available on the Configuration page in Visual Overview.
 
+#### Support for maps on passive levels [ID_35022]
+
+Maps are now supported on the node segment, node, amplifier, and tap levels of the EPM topology.
+
 ### Fixes
 
 #### Issues related to alarm in EPM Platform visual overview [ID_34449]
