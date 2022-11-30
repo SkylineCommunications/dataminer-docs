@@ -6,6 +6,10 @@ uid: DCP_change_log
 
 The DataMiner Cloud Platform gets updated continuously. This change log can help you trace when specific features and changes have become available.
 
+#### 28 November 2022 - Fix - Proxy issue in DataMiner ArtifactDeployer 1.4.0 [ID 35013]
+
+A proxy issue in DataMiner ArtifactDeployer 1.4.0 has been resolved in DataMiner ArtifactDeployer 1.4.1 where some request where not actually proxied causing issues over various features like updating DxMs from the Admin app or deploying packages from the Catalog.
+
 #### 18 October 2022 – Enhancement – Notification in case deployment fails because account is not linked [ID_34699]
 
 When a deployment fails because the user does not have a linked account, they will now get a notification that will allow them to correct the situation and retry.
