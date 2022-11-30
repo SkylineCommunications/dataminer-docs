@@ -874,7 +874,7 @@ input:checked + .slider:before {
 }
 
 .column img:hover{
-  background-color: #fbfbfb;
+  background-color: #e7e7e7;
 }
 
 /* Responsive layout - makes a two column-layout instead of four columns */
