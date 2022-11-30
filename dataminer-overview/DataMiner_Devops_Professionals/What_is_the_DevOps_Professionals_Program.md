@@ -2,7 +2,7 @@
 uid: What_is_the_DevOps_Professionals_Program
 ---
 
-# What is the DataMiner DevOps Professionals Program?
+# What is the DataMiner DevOps Professionals program?
 
 The DataMiner DevOps Professionals program is catered towards **individuals**, **organizations**, **solution providers**, **technology vendors**, and **co-branding partners**. It is aimed at empowering the community of DataMiner enthusiasts and DevOps experts across different types of organizations and industry verticals.
 

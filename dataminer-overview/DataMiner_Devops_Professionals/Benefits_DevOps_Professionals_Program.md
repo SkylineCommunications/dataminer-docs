@@ -2,7 +2,7 @@
 uid: Benefits_DevOps_Professionals_Program
 ---
 
-# Benefits attached to the DataMiner DevOps Professionals Program
+# Benefits attached to the DataMiner DevOps Professionals program
 
 > [!NOTE]
 > We are continuously working on further evolving this key program, so new benefits or ways of collecting Dojo Reputation Points can be expected.
