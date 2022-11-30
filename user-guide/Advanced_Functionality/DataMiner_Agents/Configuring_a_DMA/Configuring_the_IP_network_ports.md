@@ -25,7 +25,7 @@ A DataMiner System makes extensive use of TCP/IP communication. Below, you find 
 | N/A     | 9300/tcp | Elasticsearch (inter-node communication) |
 | Multiple protocols | 4222/tcp<br> 6222/tcp | NATS (required from DataMiner 10.1.1 onwards) |
 | NAS    | 9090/tcp  | NATS Account Server (required from DataMiner 10.1.1 onwards) |
-| HTTP(S) | 5100/tcp (internal) | Tunneling proxy towards the cloud hosted in [DataMiner CloudGateway](xref:DataMiner_Extension_Modules#cloudgateway) (by default enabled from DataMiner CloudGateway V2.9.6 onwards) |
+| HTTP(S) | 5100/tcp (internal) | Tunneling proxy towards the cloud hosted in [DataMiner CloudGateway](xref:DataMinerExtensionModules#cloudgateway) (by default enabled from DataMiner CloudGateway V2.9.6 onwards) |
 | Telnet | 23/tcp   | Stream (by default disabled from DataMiner 9.6.5 onwards) |
 
 > [!NOTE]
