@@ -1,0 +1,26 @@
+---
+uid: Custom_cloud_endpoint_configuration
+---
+
+# Customizing the cloud endpoint configuration
+
+From [DataMiner CloudGateway](xref:DataMinerExtensionModules#cloudgateway) 2.9.6 onwards, an HTTP(S) endpoint will be hosted in this module. 
+This allows other [DataMiner Extension Modules](xref:DataMinerExtensionModules#dataminer-extension-modules-dxms) to communicate with the cloud via the [DataMiner CloudGateway](xref:DataMinerExtensionModules#cloudgateway) in an efficient and secure way without the other DxMs needing direct internet access. Note this endpoint only allows traffic to the _*.dataminer.services_, which also is present in the default configuration.
+This endpoint is required for some features like for example [Remote Support](link here pls), so that log files request from the cloud also can be uploaded towards the cloud. 
+
+By the default configuration port tcp/5100 will be used as mentioned in [Overview of IP ports used in a DMS](xref:Configuring_the_IP_network_ports#overview-of-ip-ports-used-in-a-dms).
+This endpoint can be adjusted or disabled for each [DataMiner CloudGateway](xref:DataMinerExtensionModules#cloudgateway) by overriding the configuration file as shown below.
+
+Note that the configured port must be available on the hosting server so the module is able to start.
+Make sure that the configured ports also are open on the internal network, so other DxMs can access these endpoints hosted in the CloudGateways. 
+
+1. On each server with [DataMiner CloudGateway](xref:DataMinerExtensionModules#cloudgateway) installed, in the folder `C:\Program Files\Skyline Communications\DataMiner CloudGateway`, create or adjust the override *appsettings.custom.json* with the following contents:
+
+  ```json
+  {
+    "InternetTunnelProxyOptions": {
+      "Enabled": <true/false>, 
+      "Port": <integer>,
+    }
+  }
+   ```
