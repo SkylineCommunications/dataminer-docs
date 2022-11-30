@@ -351,8 +351,21 @@ This enables a new filter option that can be used to show the corresponding reso
 
 A converter has been created in the client which will convert a profile parameter name to the ID of the found object. For this, the format [ProfileParameter:xxx,ID] should be used, replacing 'xxx' with the name of the capacity/capability profile parameter.
 
+The profile parameter keys should be represented with the number format. For example:
+
+- Default: d248b04f-2253-41c6-a92a-e12768fe2b20
+- Number: d248b04f225341c6a92ae12768fe2b20
+
+Do not use braces or parentheses. For example:
+
+- {d248b04f-2253-41c6-a92a-e12768fe2b20}
+- (d248b04f-2253-41c6-a92a-e12768fe2b20)
+
+> [!TIP]
+> For more information, see [Microsoft's Guid.ToString Method](https://learn.microsoft.com/en-us/dotnet/api/system.guid.tostring?view=netframework-4.8).
+
 > [!NOTE]
-> The server side filter is case sensitive with regard to profile parameter keys.
+> The server-side filter is case sensitive with regard to profile parameter keys.
 
 > [!TIP]
 > See also: [Client converter examples](xref:YAxisResource_Shape_Data_Examples#examples-filter-feature)
