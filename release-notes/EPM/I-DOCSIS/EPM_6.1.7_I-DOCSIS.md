@@ -35,14 +35,6 @@ string[] scriptOptions = { "OPTIONS:0", "CHECKSETS:TRUE", "EXTENDED_ERROR_INFO",
             };
 ```
 
-#### Multi-threaded timer removed [ID_35034]
-
-The CCAP Platform connectors will no longer use a multi-threaded timer to poll the DOCSIS version of each cable modem.
-
-Because of this, the DOCSIS version column has been removed from the Cable Modems table, and aggregating actions based on this column have been moved to the Generic CM Collector connector.
-
-In addition, the Threadpool page has been removed along with all its parameters, as these were associated with the multi-threaded timer.
-
 ### Fixes
 
 #### EPM front-end element threw 'process cannot access the file because it is being used by another process' exceptions [ID_34658]
