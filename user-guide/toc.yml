@@ -3171,6 +3171,13 @@
           topicUid: Offline_demo_license_for_DMA_to_be_installed_by_user
     - name: Soft-launch options
       topicUID: SoftLaunchOptions
+      items: 
+        - name: Activating soft-launch options
+          topicUID: Activating_Soft_Launch_Options
+        - name: Overview of soft-launch options
+          topicUID: Overview_of_Soft_Launch_Options
+        - name: Activating SLProtocol as a 64-bit process
+          topicUID: Activating_SLProtocol_as_a_64_Bit_Process
     - name: DataMiner Extension Modules
       topicUID: DataMinerExtensionModules
     - name: Custom branding
