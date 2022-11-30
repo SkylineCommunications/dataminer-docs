@@ -25,7 +25,7 @@ Supported versions:
 ![Create Domain](~/user-guide/images/Amazon_OpenSearch_CreateDomain.png)
 
 Configure your domain with the appropriate settings.
-Make sure to select `Production` for `Deployment type`, OpenSearch version 1.3 and at least 3 nodes.
+Make sure to select `Production` for `Deployment type`, a supported OpenSearch version and at least 3 nodes.
 
 Also keep `compatibility mode` disabled.
 
