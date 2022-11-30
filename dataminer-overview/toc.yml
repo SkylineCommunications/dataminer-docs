@@ -56,6 +56,8 @@
         topicUID: Pricing_Commercial_Models
       - name: Usage-based services
         topicUID: Pricing_Usage_based_service
+      - name: Perpetual-Use Licensing
+        topicUID: Pricing_Perpetual_Use_Licensing
     - name: Support Services
       topicUid: Overview_Support_DMS_M_and_S
       items:
