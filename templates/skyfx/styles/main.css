@@ -877,6 +877,10 @@ input:checked + .slider:before {
   background-color: #e7e7e7;
 }
 
+.column img:active{
+  background-color: #d1d1d1;
+}
+
 /* Responsive layout - makes a two column-layout instead of four columns */
 @media screen and (max-width: 800px) {
   .column {
