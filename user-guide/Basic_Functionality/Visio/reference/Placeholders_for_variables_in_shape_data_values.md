@@ -143,6 +143,17 @@ Reference to a session variable (scope: current DataMiner Cube card).
 
 As parameters of which the value is an empty string are considered initialized, you can use a \[var:...\] placeholders to refer to a parameter containing an empty string.
 
+### [color:severity=...]
+
+Available from DataMiner 10.1.11/10.2.0 onwards.
+
+The alarm color for a specific severity level.
+
+For example: `[color:severity=minor]`
+
+> [!TIP]
+> See also: [Setting the background color of a static shape](xref:Setting_the_background_color_of_a_static_shape)
+
 ### \[ConnectionLineDisplayIdx\]
 
 Display key of the connection that was clicked.
