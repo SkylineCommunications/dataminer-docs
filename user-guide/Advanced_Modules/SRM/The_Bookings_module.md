@@ -32,13 +32,15 @@ The timeline area of the *Bookings* module can be used as follows:
 
 - To zoom to a particular time, e.g. the next hour, or the past month, right-click the timeline, and select *Zoom to \[time\]*.
 
-### [Navigation pane - Prior to DataMiner 10.3.0/10.3.1](#tab/tabid-1)
+### Settings/Navigation pane
+
+#### [From DataMiner 10.3.0/10.3.1 onwards](#tab/tabid-1)
 
 - For more navigation options:
 
-  1. Right-click the timeline, and select *Show navigation panel*.
+  1. Right-click the timeline, and select *Show settings panel*.
 
-  1. Expand the *Navigation* section below the panel.
+  1. Expand the *Settings* section below the panel.
 
      This panel allows the following actions:
 
@@ -46,13 +48,13 @@ The timeline area of the *Bookings* module can be used as follows:
 
      - To change the time zone for the timeline, in the lower right corner, select a different *Time zone*.
 
-### [Settings pane - From DataMiner 10.3.0/10.3.1 onwards](#tab/tabid-2)
+#### [Prior to DataMiner 10.3.0/10.3.1](#tab/tabid-2)
 
 - For more navigation options:
 
-  1. Right-click the timeline, and select *Show settings panel*.
+  1. Right-click the timeline, and select *Show navigation panel*.
 
-  1. Expand the *Settings* section below the panel.
+  1. Expand the *Navigation* section below the panel.
 
      This panel allows the following actions:
 
