@@ -2887,7 +2887,7 @@
           topicUID: KI_Upgrade_error_api-ms-win-crt-stdio-l1-1-0_dll_is_missing
     - name: Customer DataMiner Reporting (CDMR)
       topicUID: CDMR
-    - name: Remote Log Connection
+    - name: Remote Log Collection
       topicUID: RemoteLogCollection
 - name: Reference
   topicUid: Part7Reference
