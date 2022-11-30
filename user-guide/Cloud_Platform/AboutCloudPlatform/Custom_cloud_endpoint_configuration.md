@@ -18,7 +18,7 @@ Make sure that the configured ports also are open on the internal network, so ot
 
   ```json
   {
-    "InternetTunnelProxyOptions": {
+    "CloudEndpointOptions": {
       "Enabled": <true/false>, 
       "Port": <integer>,
     }
