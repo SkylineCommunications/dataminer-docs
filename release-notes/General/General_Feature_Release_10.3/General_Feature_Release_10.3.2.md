@@ -28,4 +28,14 @@ uid: General_Feature_Release_10.3.2
 
 ### Fixes
 
-*No fixes have been added yet.*
+#### Problem with Elasticsearch health monitoring [ID_34744]
+
+<!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
+
+When an Elasticsearch cluster used by DataMiner was hosted on servers that host IPv6 addresses, the Elasticsearch health monitoring in DataMiner would fail to assess the Elasticsearch cluster state and conclude that the indexing database was unavailable.
+
+#### Web apps - Visual Overview: Certain actions would no longer work [ID_35012]
+
+<!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
+
+In some cases, *Card*, *Script*, *Link* and *Popup* actions would no longer work in visual overviews opened in web apps.

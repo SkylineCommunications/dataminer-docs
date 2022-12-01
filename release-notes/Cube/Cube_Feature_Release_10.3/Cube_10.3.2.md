@@ -26,4 +26,8 @@ uid: Cube_Feature_Release_10.3.2
 
 ### Fixes
 
-*No fixes have been added yet.*
+#### DataMiner Cube: Renaming your local DataMiner user would incorrectly cause that user to disappear [ID_34918]
+
+<!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
+
+When you renamed your local DataMiner user with administrative access while being logged in as that user, the user would incorrectly get (partially) removed.

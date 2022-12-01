@@ -16,11 +16,29 @@ uid: General_Main_Release_10.2.0_CU11
 
 ### Fixes
 
+#### Problem with Elasticsearch health monitoring [ID_34744]
+
+<!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
+
+When an Elasticsearch cluster used by DataMiner was hosted on servers that host IPv6 addresses, the Elasticsearch health monitoring in DataMiner would fail to assess the Elasticsearch cluster state and conclude that the indexing database was unavailable.
+
+#### DataMiner Cube: Renaming your local DataMiner user would incorrectly cause that user to disappear [ID_34918]
+
+<!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
+
+When you renamed your local DataMiner user with administrative access while being logged in as that user, the user would incorrectly get (partially) removed.
+
 #### Alarm state changes could be generated at an incorrect time in the trend graph of a monitored parameter that needed to be compared to a relative baseline value [ID_34952]
 
-<!-- Main Release Version 10.2.0 [CU11] - Feature Release Version 10.3.1 -->
+<!-- MR 10.2.0 [CU11] - FR 10.3.1 -->
 
 In the trend graph of a monitored parameter that needed to be compared to a relative baseline value, in some cases, alarm state changes could be generated at an incorrect time.
 
 > [!NOTE]
 > When both the baseline and the factor are stored in parameters, then the baseline parameter, the factor parameter and the monitored parameter must all have the history set option enabled. Also, all history sets should be executed chronologically.
+
+#### Web apps - Visual Overview: Certain actions would no longer work [ID_35012]
+
+<!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
+
+In some cases, *Card*, *Script*, *Link* and *Popup* actions would no longer work in visual overviews opened in web apps.
