@@ -8,7 +8,7 @@ The DataMiner Cloud Platform gets updated continuously. This change log can help
 
 #### 28 November 2022 - Fix - Proxy issue in DataMiner ArtifactDeployer 1.4.0 [ID_35013]
 
-Due to an issue in the proxy configuration of DataMiner ArtifactDeployer 1.4.0 the deployment of artifacts was not working. This has been resolved in DataMiner ArtifactDeployer 1.4.1.
+Because of an issue in the proxy configuration of DataMiner ArtifactDeployer 1.4.0, artifacts could not be deployed. This has been resolved in DataMiner ArtifactDeployer 1.4.1.
 
 #### 18 October 2022 – Enhancement – Notification in case deployment fails because account is not linked [ID_34699]
 
