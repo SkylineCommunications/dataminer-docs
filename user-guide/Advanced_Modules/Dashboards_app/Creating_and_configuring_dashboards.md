@@ -14,8 +14,6 @@ In this section:
 
 - [Deleting a dashboard](xref:Deleting_a_dashboard)
 
-- [Sharing a dashboard](xref:Sharing_a_dashboard)
-
 - [Editing a dashboard](xref:Editing_a_dashboard)
 
 - [Changing dashboard settings](xref:Changing_dashboard_settings)

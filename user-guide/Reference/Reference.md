@@ -16,6 +16,8 @@ uid: Part7Reference
 
 - [Soft-launch options](xref:SoftLaunchOptions)
 
+- [DataMiner Extension Modules](xref:DataMinerExtensionModules)
+
 - [Custom branding](xref:Custom_branding)
 
 - [DataMiner metrics](xref:dataminer_metrics)
