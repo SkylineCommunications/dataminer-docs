@@ -8,7 +8,7 @@ The procedures below can be used to retrieve data from a DataMiner System. Howev
 
 - [Activating verbose Correlation logging](xref:SLNetClientTest_activating_verbose_correlation_logging)
 - [Checking a hyperlink filter](xref:SLNetClientTest_checking_hyperlink_filter)
-- [Checking whether protocol buffer serialization is enabled](xref:Checking_whether_protocol_buffer_serialization_is_enabled)
+- [Checking whether protocol buffer serialization is enabled](xref:SLNetClientTest_Checking_whether_protocol_buffer_serialization_is_enabled)
 - [Consulting connection details](xref:SLNetClientTest_consulting_connection_details)
 - [Consulting Correlation information](xref:SLNetClientTest_consulting_correlation_info)
 - [Consulting license information for a DMA](xref:SLNetClientTest_consulting_license_info)

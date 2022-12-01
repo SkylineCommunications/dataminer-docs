@@ -2906,7 +2906,7 @@
               - name: Checking a hyperlink filter
                 topicUID: SLNetClientTest_checking_hyperlink_filter
               - name: Checking whether protocol buffer serialization is enabled
-                topicUID: Checking_whether_protocol_buffer_serialization_is_enabled
+                topicUID: SLNetClientTest_Checking_whether_protocol_buffer_serialization_is_enabled
               - name: Consulting connection details
                 topicUID: SLNetClientTest_consulting_connection_details
               - name: Consulting Correlation information
