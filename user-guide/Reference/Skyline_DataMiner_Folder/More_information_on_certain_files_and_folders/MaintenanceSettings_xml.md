@@ -501,24 +501,21 @@ In the *TimeSpan1DayRecords* tag, you can customize the interval of the 1-day "a
 Not active by default.
 
 > [!NOTE]
->
-> - If you are looking to configure how long these records need to be stored, see [DBMaintenance.xml and DBMaintenanceDMS.xml](xref:DBMaintenance_xml_and_DBMaintenanceDMS_xml#dbmaintenancexml-and-dbmaintenancedmsxml).
+> If you are looking to configure how long these records need to be stored, see [DBMaintenance.xml and DBMaintenanceDMS.xml](xref:DBMaintenance_xml_and_DBMaintenanceDMS_xml#dbmaintenancexml-and-dbmaintenancedmsxml).
 
 ### Trending.TimeSpan1HourRecords
 
-In the *TimeSpan1HourRecords* tag, you can customize the interval of the 1-hour "average trending" records to be something else besides the default 1 hour. To do so, specify a *window* attribute value in minutes.
+In the *TimeSpan1HourRecords* tag, you can customize the interval of the 1-hour "average trending" records to be something other than the default 1 hour. To do so, specify a *window* attribute value in minutes.
 
 > [!NOTE]
->
-> - If you are looking to configure how long these records need to be stored, see [DBMaintenance.xml and DBMaintenanceDMS.xml](xref:DBMaintenance_xml_and_DBMaintenanceDMS_xml#dbmaintenancexml-and-dbmaintenancedmsxml).
+> If you are looking to configure how long these records need to be stored, see [DBMaintenance.xml and DBMaintenanceDMS.xml](xref:DBMaintenance_xml_and_DBMaintenanceDMS_xml#dbmaintenancexml-and-dbmaintenancedmsxml).
 
 ### Trending.TimeSpan5MinRecords
 
-In the *TimeSpan5MinRecords* tag, you can customize the interval of the 5-minute "average trending" records to be something else besides the default 5 minutes. To do so, specify a *window* attribute value in minutes.
+In the *TimeSpan5MinRecords* tag, you can customize the interval of the 5-minute "average trending" records to be something other than the default 5 minutes. To do so, specify a *window* attribute value in minutes.
 
 > [!NOTE]
->
-> - If you are looking to configure how long these records need to be stored, see [DBMaintenance.xml and DBMaintenanceDMS.xml](xref:DBMaintenance_xml_and_DBMaintenanceDMS_xml#dbmaintenancexml-and-dbmaintenancedmsxml).
+> If you are looking to configure how long these records need to be stored, see [DBMaintenance.xml and DBMaintenanceDMS.xml](xref:DBMaintenance_xml_and_DBMaintenanceDMS_xml#dbmaintenancexml-and-dbmaintenancedmsxml).
 
 ### Trending.WarningLevel
 
