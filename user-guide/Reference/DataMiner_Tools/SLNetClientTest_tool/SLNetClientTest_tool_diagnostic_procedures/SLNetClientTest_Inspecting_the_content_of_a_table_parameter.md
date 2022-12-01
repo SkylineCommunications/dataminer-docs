@@ -1,5 +1,5 @@
 ---
-uid: Inspecting_the_contents_of_a_table_parameter
+uid: SLNetClientTest_Inspecting_the_contents_of_a_table_parameter
 ---
 
 # Inspecting the contents of a table parameter

@@ -1,5 +1,5 @@
 ---
-uid: Inspecting_the_stack_sizes_in_SLNet
+uid: SLNetClientTest_Inspecting_the_stack_sizes_in_SLNet
 ---
 
 # Inspecting the stack sizes in SLNet

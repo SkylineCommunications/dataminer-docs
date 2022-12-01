@@ -1,5 +1,5 @@
 ---
-uid: Viewing_SLNet_calls_being_sent
+uid: SLNetClientTest_Viewing_SLNet_calls_being_sent
 ---
 
 # Viewing SLNet calls being sent

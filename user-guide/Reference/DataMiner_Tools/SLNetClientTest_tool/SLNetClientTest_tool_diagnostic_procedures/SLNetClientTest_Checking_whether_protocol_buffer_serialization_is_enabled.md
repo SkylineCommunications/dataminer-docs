@@ -1,5 +1,5 @@
 ---
-uid: Checking_whether_protocol_buffer_serialization_is_enabled
+uid: SLNetClientTest_Checking_whether_protocol_buffer_serialization_is_enabled
 ---
 
 # Checking whether protocol buffer serialization is enabled

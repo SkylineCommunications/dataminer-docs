@@ -1,5 +1,5 @@
 ---
-uid: Inspecting_parameter_table_rows
+uid: SLNetClientTest_Inspecting_parameter_table_rows
 ---
 
 # Inspecting parameter table rows in SLProtocol and SLElement

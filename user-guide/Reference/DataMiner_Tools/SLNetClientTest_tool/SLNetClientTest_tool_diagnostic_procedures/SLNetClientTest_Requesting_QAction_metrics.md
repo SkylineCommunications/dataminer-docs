@@ -1,5 +1,5 @@
 ---
-uid: Requesting_QAction_metrics
+uid: SLNetClientTest_Requesting_QAction_metrics
 ---
 
 # Requesting QAction metrics
