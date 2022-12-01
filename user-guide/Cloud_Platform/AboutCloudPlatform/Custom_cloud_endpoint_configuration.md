@@ -4,7 +4,7 @@ uid: Custom_cloud_endpoint_configuration
 
 # Customizing the cloud endpoint configuration
 
-From [DataMiner CloudGateway](xref:DataMinerExtensionModules#cloudgateway) 2.9.6 onwards, an HTTP(S) endpoint will be hosted in this module. 
+From [DataMiner CloudGateway](xref:DataMinerExtensionModules#cloudgateway) 2.10.0 onwards, an HTTP(S) endpoint will be hosted in this module. 
 This allows other [DataMiner Extension Modules](xref:DataMinerExtensionModules#dataminer-extension-modules-dxms) to communicate with the cloud via the [DataMiner CloudGateway](xref:DataMinerExtensionModules#cloudgateway) in an efficient and secure way without needing direct internet access. 
 
 This endpoint is required for some features like for example [Remote Log Collection](xref:RemoteLogCollection#RemoteLogCollection), so that log files can be uploaded towards the cloud. 
