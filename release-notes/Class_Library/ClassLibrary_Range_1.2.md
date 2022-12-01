@@ -284,3 +284,17 @@ The example protocol *SLC SDF Rates - SNMP* has also been adapted accordingly.
 Methods for Rate calculations based on DateTime now require UTC DateTime values.
 
 The example protocol *SLC SDF Rates - Custom* has also been adapted accordingly.
+
+### 1.2.2.7
+
+#### Add support for Services in IDmsView [ID_34999]
+
+IDmsView has now an extra property 'Services' which will contain the services under that specific view. These are filtered out from the 'Elements' property.
+
+When looping over the 'Elements' and requesting the protocol name, it will not throw an exception anymore as it just contains the elements and not the services as well anymore.
+
+#### Overloads have been added for specifying primary/display key [ID_35048]
+
+Update to several methods on IDmsColumn. It refers to 'key' instead of 'primaryKey'. By default the software will check by Display Key and if not found, then by Primary Key.
+
+An overload method for SetValue has been added to IDmsColumn to specify which KeyType is being used.

@@ -374,3 +374,17 @@ In order to prevent this error, from now on, *QActionHelperBaseClasses* will alw
 The Rate classes now include device reboot detection to avoid invalid rate calculations.
 
 The example protocol *SLC SDF Rates - SNMP* has also been adapted accordingly.
+
+### 1.1.4.6
+
+Methods for Rate calculations based on DateTime now require UTC DateTime values.
+
+The example protocol *SLC SDF Rates - Custom* has also been adapted accordingly.
+
+### 1.1.4.7
+
+#### Add support for Services in IDmsView [ID_34999]
+
+IDmsView has now an extra property 'Services' which will contain the services under that specific view. These are filtered out from the 'Elements' property.
+
+When looping over the 'Elements' and requesting the protocol name, it will not throw an exception anymore as it just contains the elements and not the services as well anymore.
