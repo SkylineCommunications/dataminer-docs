@@ -385,6 +385,6 @@ The example protocol *SLC SDF Rates - Custom* has also been adapted accordingly.
 
 #### Add support for Services in IDmsView [ID_34999]
 
-IDmsView has now an extra property 'Services' which will contain the services under that specific view. These are filtered out from the 'Elements' property.
+IDmsView now has an extra property *Services*, which will contain the services under that specific view. These are filtered out from the *Elements*'* property.
 
-When looping over the 'Elements' and requesting the protocol name, it will not throw an exception anymore as it just contains the elements and not the services as well anymore.
+When looping over the *Elements* and requesting the protocol name, it will no longer throw an exception as it will now only contain the elements instead of the elements and the services.

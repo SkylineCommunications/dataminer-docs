@@ -11,9 +11,6 @@ uid: ClassLibrary_Range_1.3
 
 #### Overloads have been added for specifying primary/display key [ID_35048]
 
-Update to several methods on IDmsColumn. It refers to 'key' instead of 'primaryKey'. By default the software will check by Display Key and if not found, then by Primary Key.
-These methods have also been marked obsolete.
+A number of IDmsColumn methods have been marked obsolete. They have now been replaced by new methods in which a KeyType will indicate whether a Primary Key or a Display Key is being used.
 
-New methods exist that accepts a KeyType to specify if you are using Primary Key or Display Key.
-
-An overload method for SetValue has been added to IDmsColumn to specify which KeyType is being used.
+Also, an overload method for SetValue has been added to IDmsColumn to specify which KeyType is being used.
