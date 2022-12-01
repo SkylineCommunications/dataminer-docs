@@ -113,6 +113,22 @@ Because of a number of enhancements, overall performance has increased when retr
 
 The new icon component allows you to display an icon on a dashboard or a low-code app.
 
+#### SLAnalytics: Enhanced automatic evaluation of trend predictions [ID_34901]
+
+<!-- MR 10.3.0 - FR 10.3.1 -->
+
+Because of a number of enhancements, the automatic evaluation of trend predictions has improved.
+
+#### Port initialization error messages have been improved [ID_34920]
+
+<!-- MR 10.2.0 [CU10] - FR 10.3.1 [CU0] -->
+
+The following port initialization error messages have been improved:
+
+- The log message `InitializePort <n> for Element <x> failed with <y>.` has been replaced by `InitializePort(<n>) for Element <x> failed with <y>.`
+
+- The alarm message `Initializing the communication <n> for <x> failed.` has been replaced by `Initializing the communication of port <n> for <x> failed.`
+
 #### Element errors and notices will now be closed as soon as the element in question is stopped [ID_34927]
 
 <!-- MR 10.1.0 [CU22] / 10.2.0 [CU10] - FR 10.3.1 -->

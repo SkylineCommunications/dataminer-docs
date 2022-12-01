@@ -464,6 +464,12 @@ var allResources = resourceManagerHelper.GetResources(new TRUEFilterElement<Reso
 
 Because of a number of enhancements, overall performance has increased when retrieving DomInstances that have a DomBehaviorDefinition.
 
+#### SLAnalytics: Enhanced automatic evaluation of trend predictions [ID_34901]
+
+<!-- MR 10.3.0 - FR 10.3.1 -->
+
+Because of a number of enhancements, the automatic evaluation of trend predictions has improved.
+
 ### Fixes
 
 #### SLAnalytics: Problem with trend prediction [ID_31352]
