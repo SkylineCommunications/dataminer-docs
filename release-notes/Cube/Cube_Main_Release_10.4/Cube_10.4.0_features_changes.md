@@ -19,6 +19,20 @@ This setting allows you to specify the maximum amount of memory that SLAnalytics
 
 Default value: 2.00 GB
 
+#### Visual Overview: New placeholders can now be added to a 'ShapeGrouping' shape [ID_34974]
+
+<!-- MR 10.4.0 - FR 10.3.1 -->
+
+Up to now, when you enabled grouping of dynamically positioned shapes, you were able to display the number of shapes that were grouped into a single group shape by adding an asterisk ("\*") in the *ShapeGrouping* shape.
+
+From now on, you can also add the following placeholders in the *ShapeGrouping* shape:
+
+- Add `[GroupValue]` to make the shape display the value that is specified in the *GroupBy* shape data field of the first child shape in the group.
+
+  If this *GroupBy* value contains multiple column parameters and/or properties, they will be separated by commas.
+
+- Add `[Count]` to make the shape display the number of child shapes in the group (similar to adding an asterisk).
+
 ## Changes
 
 ### Enhancements
@@ -30,3 +44,5 @@ Default value: 2.00 GB
 The *automatic incident tracking* feature groups active alarms that are related to the same incident, so that the Alarm Console provides a better overview of the current issues in the system. From now on, on cloud-connected DataMiner Agents that have the DataMiner Extension Module *ModelHost* installed and that have been configured to [offload alarm and change point events to the cloud](xref:Controlling_cloudfeed_data_offloads), this feature will also make use of the parameter relationship data that is stored in a model managed by the *ModelHost* DxM.
 
 ### Fixes
+
+*No fixes have been added yet.*
