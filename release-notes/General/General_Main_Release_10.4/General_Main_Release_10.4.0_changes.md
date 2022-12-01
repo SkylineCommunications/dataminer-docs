@@ -11,7 +11,11 @@ uid: General_Main_Release_10.4.0_changes
 
 ### Enhancements
 
-*No enhancements have been added yet.*
+#### SLAnalytics: Number of 'GetParameterMessages' requests has been optimized [ID_34936]
+
+<!-- MR 10.4.0 - FR 10.3.1 -->
+
+The number of *GetParameterMessages* sent by SLAnalytics in order to check whether a trended table parameter is still active has been optimized.
 
 ### Fixes
 
@@ -34,3 +38,9 @@ From now on, when a GQI query has to retrieve DCF interfaces, it will do so by q
 <!-- MR 10.4.0 - FR 10.3.1 -->
 
 In some cases, Resource Manager could throw a NullReferenceException when *ResourceStorageType* was not specified in the `C:\Skyline DataMiner\ResourceManager\Config.xml` file.
+
+#### GQI: Problem when a column select or a column manipulation operator was applied before an aggregation operator [ID_35009]
+
+<!-- MR 10.4.0 - FR 10.3.1 [CU0] -->
+
+When a column select or a column manipulation operator was applied before an aggregation operator, the column select or column manipulation operator would incorrectly be ignored. As a result, all columns would be visible in the *group by node* or columns created by the column manipulation would not be added to the options of the *group by node*.

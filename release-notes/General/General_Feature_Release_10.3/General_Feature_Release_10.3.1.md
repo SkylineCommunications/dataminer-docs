@@ -47,6 +47,27 @@ In the *Authentication* section (formerly known as *User Info* section), you now
 > [!WARNING]
 > Always be extremely careful when using this tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
 
+#### Interactive Automation scripts: New button style 'CallToAction' [ID_34904]
+
+<!-- MR 10.4.0 - FR 10.3.1 -->
+
+In an interactive Automation script launched from a dashboard or a low-code app, you can now apply the *CallToAction* style to a button.
+
+When you apply this style to a button
+
+- the background color of the button will be the color of the app,
+- the color of the text on the button will be white, and
+- the button will have a shadow.
+
+To set the style of a button in an interactive Automation script, set the *Style* property of the button's *UIBlockDefinition* to the name of the style. All supported styles are available via `Style.Button`.
+
+Alternatively, you can also pass a button style directly to the `AppendButton` method on an `UIBuilder` object.
+
+> [!NOTE]
+>
+> - Up to now, `StaticText` blocks already supported a number of styles. Those styles are now also available via `Style.Text`: *Title1*, *Title2* and *Title3*.
+> - The *CallToAction* style will only be applied in interactive Automation scripts launched from a web app. It will not be applied in interactive Automation scripts launched from Cube.
+
 ## Changes
 
 ### Enhancements
@@ -155,6 +176,12 @@ Starting the derived element for <x> failed.
 Starting the element <x> failed. No element object.
 Creating element-object for <x> failed with <y>.
 ```
+
+#### SLAnalytics: Number of 'GetParameterMessages' requests has been optimized [ID_34936]
+
+<!-- MR 10.4.0 - FR 10.3.1 -->
+
+The number of *GetParameterMessages* sent by SLAnalytics in order to check whether a trended table parameter is still active has been optimized.
 
 #### Dashboards app & low-code apps: A table row with a column containing a parameter table index is now capable of feeding a linked parameter [ID_34957]
 
@@ -387,3 +414,9 @@ In some cases, Resource Manager could throw a NullReferenceException when *Resou
 <!-- MR 10.3.0 - FR 10.3.1 -->
 
 When a trend graph displaying multiple parameters showed data that was partly in the future, in some cases, an error could occur.
+
+#### GQI: Problem when a column select or a column manipulation operator was applied before an aggregation operator [ID_35009]
+
+<!-- MR 10.4.0 - FR 10.3.1 [CU0] -->
+
+When a column select or a column manipulation operator was applied before an aggregation operator, the column select or column manipulation operator would incorrectly be ignored. As a result, all columns would be visible in the *group by node* or columns created by the column manipulation would not be added to the options of the *group by node*.
