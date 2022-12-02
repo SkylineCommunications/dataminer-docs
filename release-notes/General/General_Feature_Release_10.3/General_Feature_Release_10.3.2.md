@@ -18,13 +18,29 @@ uid: General_Feature_Release_10.3.2
 
 ## Other features
 
-*No other features have been added yet.*
+#### Dashboards app - GQI: New 'Get trend data patterns' data source [ID_35024]
+
+<!-- MR 10.3.0 - FR 10.3.2 -->
+
+In the Generic Query Interface, a new *Get trend data patterns* data source is now available. It will return all trend data patterns in the DMS.
 
 ## Changes
 
 ### Enhancements
 
-*No enhancements have been added yet.*
+#### NAS service will now have a quoted image path [ID_34989]
+
+<!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
+
+Up to now, the NAS service had an unquoted image path. From now on, it will instead be installed with a quoted path.
+
+When you want the NAS service on existing setups to have a quoted path, do the following:
+
+1. Execute the following command:
+
+   `sc config NAS binPath="\"C:\Skyline DataMiner\NATS\nats-account-server\nssm.exe\""`
+
+1. Restart NAS and NATS.
 
 ### Fixes
 
@@ -33,6 +49,12 @@ uid: General_Feature_Release_10.3.2
 <!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
 
 When an Elasticsearch cluster used by DataMiner was hosted on servers that host IPv6 addresses, the Elasticsearch health monitoring in DataMiner would fail to assess the Elasticsearch cluster state and conclude that the indexing database was unavailable.
+
+#### Dashboards app: Button to restore the initial view would incorrectly appear on all tables after sorting or filtering a table [ID_35003]
+
+<!-- MR 10.3.0 - FR 10.3.2 -->
+
+When, on a dashboard, you sorted or filtered a table, a button to restore the initial view would incorrectly appear on all tables on that dashboard. Also, when you clicked one of those buttons, they would all disappear. From now on, when you sort or filter a table on a dashboard, a button to restore the initial view will only appear on that particular table.
 
 #### Web apps - Visual Overview: Certain actions would no longer work [ID_35012]
 

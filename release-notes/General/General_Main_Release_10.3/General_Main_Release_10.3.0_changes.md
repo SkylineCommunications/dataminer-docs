@@ -891,3 +891,9 @@ When you sorted or filtered a table fed by e.g. a query filter, the table would 
 <!-- MR 10.3.0 - FR 10.3.1 -->
 
 When a trend graph displaying multiple parameters showed data that was partly in the future, in some cases, an error could occur.
+
+#### Dashboards app: Button to restore the initial view would incorrectly appear on all tables after sorting or filtering a table [ID_35003]
+
+<!-- MR 10.3.0 - FR 10.3.2 -->
+
+When, on a dashboard, you sorted or filtered a table, a button to restore the initial view would incorrectly appear on all tables on that dashboard. Also, when you clicked one of those buttons, they would all disappear. From now on, when you sort or filter a table on a dashboard, a button to restore the initial view will only appear on that particular table.

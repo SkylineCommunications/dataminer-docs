@@ -12,7 +12,19 @@ uid: General_Main_Release_10.2.0_CU11
 
 ### Enhancements
 
-*No enhancements have been added yet.*
+#### NAS service will now have a quoted image path [ID_34989]
+
+<!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
+
+Up to now, the NAS service had an unquoted image path. From now on, it will instead be installed with a quoted path.
+
+When you want the NAS service on existing setups to have a quoted path, do the following:
+
+1. Execute the following command:
+
+   `sc config NAS binPath="\"C:\Skyline DataMiner\NATS\nats-account-server\nssm.exe\""`
+
+1. Restart NAS and NATS.
 
 ### Fixes
 
