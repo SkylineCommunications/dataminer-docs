@@ -28,6 +28,18 @@ In the Generic Query Interface, a new *Get trend data patterns* data source is n
 
 ### Enhancements
 
+#### Web apps - Interactive Automation scrips: Fields containing invalid values will now be indicated more clearly [ID_34962]
+
+<!-- MR 10.4.0 - FR 10.3.2 -->
+
+When, in an Automation script launched from a web app, an input field contains an invalid value, the border of that field will turn red. This red border will now be wider in order to be more visible.
+
+#### GQI: Enhanced performance of GQI queries [ID_34977]
+
+<!-- MR 10.4.0 - FR 10.3.2 -->
+
+Because of a number of enhancements, overall performance of GQI queries has increased, especially when those queries contain join operations.
+
 #### NAS service will now have a quoted image path [ID_34989]
 
 <!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
@@ -41,6 +53,12 @@ When you want the NAS service on existing setups to have a quoted path, do the f
    `sc config NAS binPath="\"C:\Skyline DataMiner\NATS\nats-account-server\nssm.exe\""`
 
 1. Restart NAS and NATS.
+
+#### GQI: Enhanced performance of GQI queries using the 'Get parameters for elements where' data source [ID_35005]
+
+<!-- MR 10.4.0 - FR 10.3.2 -->
+
+Because of a number of enhancements, overall performance of GQI queries using the *Get parameters for elements where* data source has increased.
 
 ### Fixes
 

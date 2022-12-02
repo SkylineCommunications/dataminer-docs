@@ -17,6 +17,24 @@ uid: General_Main_Release_10.4.0_changes
 
 The number of *GetParameterMessages* sent by SLAnalytics in order to check whether a trended table parameter is still active has been optimized.
 
+#### Web apps - Interactive Automation scrips: Fields containing invalid values will now be indicated more clearly [ID_34962]
+
+<!-- MR 10.4.0 - FR 10.3.2 -->
+
+When, in an Automation script launched from a web app, an input field contains an invalid value, the border of that field will turn red. This red border will now be wider in order to be more visible.
+
+#### GQI: Enhanced performance of GQI queries [ID_34977]
+
+<!-- MR 10.4.0 - FR 10.3.2 -->
+
+Because of a number of enhancements, overall performance of GQI queries has increased, especially when those queries contain join operations.
+
+#### GQI: Enhanced performance of GQI queries using the 'Get parameters for elements where' data source [ID_35005]
+
+<!-- MR 10.4.0 - FR 10.3.2 -->
+
+Because of a number of enhancements, overall performance of GQI queries using the *Get parameters for elements where* data source has increased.
+
 ### Fixes
 
 #### Mobile apps: Problem when trying to select an item in a drop-down box [ID_34742]
