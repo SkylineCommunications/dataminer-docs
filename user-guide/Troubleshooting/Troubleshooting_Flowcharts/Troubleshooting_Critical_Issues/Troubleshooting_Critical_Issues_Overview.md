@@ -16,10 +16,10 @@ classDef LightGray fill:#DDDDDD,stroke:#000070,stroke-width:0px, color:#1E5179;
 %% Define blocks %%
 Start[Critical issue suspected]
 Home([Start page])
-SLLogCollector([Log collector usage guide])
+SLLogCollector([Log collector <br> usage guide])
 Investigation([How to investigate])
 DataNotUpdated([Data not updated])
-ErrorAlarmConsole([Errors in Alarm Console])
+ErrorAlarmConsole([Errors in <br> Alarm Console])
 Automaticrestart([Automatic restart])
 MachineoutofResources([Insufficient resources])
 %% Connect blocks %%

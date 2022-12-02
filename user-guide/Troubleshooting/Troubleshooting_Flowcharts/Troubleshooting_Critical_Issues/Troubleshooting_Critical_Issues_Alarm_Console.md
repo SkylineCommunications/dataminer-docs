@@ -8,6 +8,7 @@ uid: Troubleshooting_Critical_Issues_Alarm_Console
 > This page is currently still being developed. The content is not yet optimized and may be incomplete.
 
 ## Errors in Alarm Console troubleshooting flowchart
+
 <div class="mermaid">
 graph TD
 %% Define styles %%
@@ -20,49 +21,71 @@ classDef LightGray fill:#DDDDDD,stroke:#000070,stroke-width:0px, color:#1E5179;
 %% Define blocks %%
 Start[Critical issue suspected]
 Home([Start page])
-SLLogCollector([Log collector usage guide])
+SLLogCollector([Log collector <br> usage guide])
 Investigation([How to investigate])
 DataNotUpdated([Data not updated])
 Automaticrestart([Automatic restart])
 ErrorAlarmConsole([Errors in Alarm Console])
 MachineoutofResources([Insufficient resources])
+%% Connect blocks %%
+Start ---> ErrorAlarmConsole
+Start --> Automaticrestart
+Start --> DataNotUpdated
+Start --> MachineoutofResources
+%% Define hyperlinks %%
+click Home "https://docs.dataminer.services/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Finding_a_Root_Cause.html"
+click SLLogCollector "https://docs.dataminer.services/user-guide/Reference/DataMiner_Tools/SLLogCollector.html"
+click Investigation "https://docs.dataminer.services/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Where_to_Start.html"
+click DataNotUpdated "https://docs.dataminer.services/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Critical_Issues/Troubleshooting_Critical_Issues_Data_Not_Updated.html" "Data Not Updated"
+click Automaticrestart "https://docs.dataminer.services/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Critical_Issues/Troubleshooting_Critical_Issues_Atomatic_Restart.html" "Automatic Restart"
+click Start "https://docs.dataminer.services/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Critical_Issues/Troubleshooting_Critical_Issues_Overview.html" "Critical issue suspected"
+click MachineoutofResources "https://docs.dataminer.services/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Critical_Issues/Troubleshooting_Critical_Issues_Resources.html" "Machine Out Of Resources"
+click ErrorAlarmConsole "https://docs.dataminer.services/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Critical_Issues/Troubleshooting_Critical_Issues_Alarm_Console.html#errors-in-alarm-console" "Errors in Alarm Console"
+%% Apply styles to blocks %%
+class Start DarkBlue;
+class Automaticrestart,DataNotUpdated,MachineoutofResources,ErrorAlarmConsole,RTE LightBlue;
+class StickyYes,TogglingYes LightGray;
+class Sticky,Toggling Blue;
+class Home,SLLogCollector,Investigation LightBlue;
+</div>
+
+### Errors in Alarm Console
+
+<div class="mermaid">
+graph TD
+%% Define styles %%
+classDef LightBlue fill:#9DDAF5,stroke:#000070,stroke-width:0px, color:#1E5179;
+classDef Blue fill:#4BAEEA,stroke:#000070,stroke-width:0px, color:#FFFFFF;
+classDef DarkBlue fill:#1E5179,stroke:#000070,stroke-width:0px, color:#FFFFFF;
+classDef DarkGray fill:#58595B,stroke:#000070,stroke-width:0px, color:#FFFFFF;
+classDef Gray fill:#999999,stroke:#000070,stroke-width:0px, color:#FFFFFF;
+classDef LightGray fill:#DDDDDD,stroke:#000070,stroke-width:0px, color:#1E5179;
+%% Define blocks %%
+ErrorAlarmConsole([Errors in Alarm Console])
 RTE([How to check for RTE])
 Sticky{{"Is it a sticky alarm? <br/> "}}
 Toggling{{"Are there toggling alarms? <br/> "}}
 StickyYes["1. Check the element for the existence of the alarm.<br/> 2. Check the database for the alarm trigger and <br/>cleared alarm entries.<br/> "]
 TogglingYes["1. Monitor Stream Viewer for a <br/>group or QAction that is stuck.<br/> 2. Check the protocol for any exceptions <br/>or errors when in debug mode.<br/> "]
 %% Connect blocks %%
-Start ---> ErrorAlarmConsole
-Start --> Automaticrestart
-Start --> DataNotUpdated
-Start --> MachineoutofResources
 ErrorAlarmConsole --> Sticky
 ErrorAlarmConsole --> RTE
 Sticky --> |YES| StickyYes
 Sticky --> |NO| Toggling
 Toggling --> |YES| TogglingYes
 %% Define hyperlinks %%
-click Home "https://community.dataminer.services/troubleshooting-finding-a-root-cause/"
-click SLLogCollector "https://docs.dataminer.services/user-guide/Reference/DataMiner_Tools/SLLogCollector.html"
-click Investigation "https://community.dataminer.services/documentation/troubleshooting-where-to-start/"
-click DataNotUpdated "https://community.dataminer.services/troubleshooting-critical-issues-data-not-updated/" "Data Not Updated"
-click Automaticrestart "https://community.dataminer.services/troubleshooting-critical-issues-automatic-restart/" "Automatic Restart"
-click ErrorAlarmConsole "https://community.dataminer.services/troubleshooting-critical-issues-alarm-console/" "Errors In Alarm Console"
-click Start "https://community.dataminer.services/troubleshooting-critical-issues-overview/" "Critical issue suspected"
-click MachineoutofResources "https://community.dataminer.services/troubleshooting-critical-issues-resources/" "Machine Out Of Resources"
-click RTE "https://community.dataminer.services/troubleshooting-run-time-errors-rtes/" "How to check for RTE"
-%% Apply styles to blocks %% 
-class Start DarkBlue; 
-class Automaticrestart,DataNotUpdated,MachineoutofResources,ErrorAlarmConsole,RTE LightBlue; 
+click RTE "https://docs.dataminer.services/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Identify_Per_Module/Alarm_Console/Troubleshooting_Run_Time_Errors.html" "How to check for RTE"
+%% Apply styles to blocks %%
+class Start DarkBlue;
+class Automaticrestart,DataNotUpdated,MachineoutofResources,ErrorAlarmConsole,RTE LightBlue;
 class StickyYes,TogglingYes LightGray;
 class Sticky,Toggling Blue;
 class Home,SLLogCollector,Investigation LightBlue;
 </div>
 
-<!-- Comment: add link to troubleshooting critical issues overview + critical issues data not updated + automatic restart + resources + once added to docs -->
 ## Typical errors
 
-### Severity: RTE
+### Severity: [RTE](xref:Protocol_thread_run_time_errors_use_cases)
 
 - Alarm: Thread problem in *SLProtocol.exe*
 
@@ -70,7 +93,7 @@ class Home,SLLogCollector,Investigation LightBlue;
 
   1. Check Stream Viewer for groups that are stuck.
 
-  1. Check for protocol pending calls.
+  1. Check for [protocol pending calls](xref:How_to_retrieve_protocol_pending_calls).
 
 - Alarm: Thread problem in *SLElement.exe*
 

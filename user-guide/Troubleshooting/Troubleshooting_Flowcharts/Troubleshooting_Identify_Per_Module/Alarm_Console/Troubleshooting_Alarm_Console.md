@@ -42,6 +42,8 @@ graph TD
     class Error classActionClickable;
 </div>
 
+<!-- Comment: add link to RTEs -->
+
 | **Flow item** | **Meaning** |
 |--|--|
 | Error | Referenced by white cross in red circle. <br> Signifies a significant problem. |

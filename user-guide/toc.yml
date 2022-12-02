@@ -2896,6 +2896,9 @@
                   topicUID: Troubleshooting_Surveyor
                 - name: Troubleshooting - Alarm Console
                   topicUID: Troubleshooting_Alarm_Console
+                  items:
+                    - name: Troubleshooting - run-time errors (RTEs)
+                      topicUID: Troubleshooting_Run_Time_Errors
                 - name: Troubleshooting - apps
                   topicUID: Troubleshooting_Apps
     - name: Troubleshooting procedures
