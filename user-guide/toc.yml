@@ -2823,7 +2823,7 @@
                 - name: Troubleshooting - critical issues - data not updated
                   topicUID: Troubleshooting_Critical_Issues_Data_Not_Updated
                 - name: Troubleshooting - critical issues - automatic restart
-                  topicUID: Troubleshooting_Critical_Issues_Atomatic_Restart
+                  topicUID: Troubleshooting_Critical_Issues_Automatic_Restart
                 - name: Troubleshooting - critical issues - resources
                   topicUID: Troubleshooting_Critical_Issues_Resources
             - name: Troubleshooting - Cassandra
