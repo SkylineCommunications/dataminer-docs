@@ -20,7 +20,7 @@ If you encounter an issue related to Cassandra, we recommend that you perform th
 
 - Make a copy of the Cassandra logs folder *C:\Program Files\Cassandra\logs*. Check the Cassandra system and debug logs.
 
-- In a command window or PowerShell window, execute "[nodetool status](https://community.dataminer.services/troubleshooting-cassandra-nodetool-status/)" (from the directory *C:\Program Files\Cassandra\bin*). In a Failover setup, execute this command on both Cassandra nodes of the Failover pair.
+- In a command window or PowerShell window, execute "[*nodetool status*](https://community.dataminer.services/troubleshooting-cassandra-nodetool-status/)" (from the directory *C:\Program Files\Cassandra\bin*). In a Failover setup, execute this command on both Cassandra nodes of the Failover pair.
 
   <!-- Comment :Add xref when nodetool status flowchart has been added -->
 
@@ -31,15 +31,15 @@ Check connectivity to Cassandra using DevCenter. On the DMA, go to `C:\Program F
 <div class="mermaid">
 graph TD
     bpa[Best Practice Analyser Cassandra]:::LightGray-->|From DataMiner<br> 9.6.0.0 CU23 onwards|B( Run the Cassandra BPA test in <br>System Center on the Agents BPA tab.<br>It is available by default from DataMiner<br>10.1.4 onwards, or else on demand.):::Gray
-    click B "https://community.dataminer.services/best-practice-analyser-cassandra/" "Best Practice Analyser Cassandra"
+    click B "https://docs.dataminer.services/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Cassandra/Troubleshooting_Cassandra_Best_Practice_Analyzer.html" "Best Practice Analyser Cassandra"
     box1-->bpa
     box1[Check for any issues<br>observed in your system:]:::DarkBlue-->box2{{Are there Cassandra health<br>alarms in Cube?}}:::Blue
     box2-->|Yes|2[Check Cassandra health<br>from DataMiner Cube.]:::LightGray-->3
     3{{Go to Alarm Console or Failover Status.}}:::Blue
     box2-->|No|DiskCheck[Check on which drive database data is stored.<br> DRIVE:\ProgramData\Cassandra\SLDMADB <br>Check the drive size trend graph.]:::LightGray-->Disk
     Disk{{Is available space on the drive decreasing?}}:::Blue
-    click Disk "#option-2-is-available-space-on-the-drive-decreasing" "drive decreasing"
-    click 3 "#option-1-go-to-alarm-console-or-failover-status" "alarm console or failover status"
+    click Disk "https://docs.dataminer.services/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Cassandra/Troubleshooting_Cassandra.html#option-2-is-available-space-on-the-drive-decreasing" "drive decreasing"
+    click 3 "https://docs.dataminer.services/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Cassandra/Troubleshooting_Cassandra.html#option-1-go-to-alarm-console-or-failover-status" "alarm console or failover status"
     classDef info fill:#11628F,stroke:#000070,stroke-width:0px, color:#FFF;
     classDef clickable fill:#ABDCFF,stroke:#00517E,stroke-width:0.25px, color:#00406D;
     classDef start fill:#FFE333,stroke:#00517E,stroke-width:0.25px, color:#000;
@@ -51,8 +51,6 @@ graph TD
     classDef Gray fill:#999999,stroke:#000070,stroke-width:0px, color:#FFFFFF;
     classDef LightGray fill:#DDDDDD,stroke:#000070,stroke-width:0px, color:#1E5179;
 </div>
-
-<!-- Comment: edit link to best practice analyzer cassandra flowchart once added to docs -->
 
 ### Option 1: Go to Alarm Console or Failover Status
 
@@ -68,8 +66,8 @@ graph TD
     12-->|No, there are issues.|12n{{Is the SLDataGateway process leaking?<br>Check trending in Microsoft Platform element.}}:::Blue
     12n-->|Yes|13[To SLDataGateway flowchart]:::Gray
     12n-->|No|13z([Problem solved]):::DarkBlue
-    click 13 "https://community.dataminer.services/troubleshooting-sldatagateway/" "SLDataGateway Flowchart"
-    click 7 "https://community.dataminer.services/troubleshooting-cassandra-nodetool-checks/" "nodetool"
+    click 13 "https://docs.dataminer.services/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Process_Identification/Database%20processes/Troubleshooting_SLDataGateway_exe.html" "SLDataGateway Flowchart"
+    click 7 "https://docs.dataminer.services/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Cassandra/Troubleshooting_Cassandra_Nodetool_Checks.html" "nodetool"
     classDef info fill:#11628F,stroke:#000070,stroke-width:0px, color:#FFF;
     classDef clickable fill:#ABDCFF,stroke:#00517E,stroke-width:0.25px, color:#00406D;
     classDef start fill:#FFE333,stroke:#00517E,stroke-width:0.25px, color:#000;
@@ -82,7 +80,6 @@ graph TD
     classDef LightGray fill:#DDDDDD,stroke:#000070,stroke-width:0px, color:#1E5179;
 </div>
 
-<!-- Comment: Replace links to sldatagateway and troubleshooting-cassandra-nodetool-checks flowcharts once added to docs -->
 ### Option 2: Is available space on the drive decreasing?
 
 <div class="mermaid">
@@ -99,9 +96,9 @@ graph TD
     Disk-->|No|cassRest{{Is Cassandra service restarting or stopped?}}:::Blue
     cassRest-->a2[Connection to Cassandra errors]:::LightGray-->a3
     a3[Check the Cassandra.yaml file.<br>Click this box for more details.]:::Gray
-    click a3 "#cassandrayaml-file" "Cassandra.yaml details"
-    click nodeT "https://community.dataminer.services/troubleshooting-cassandra-nodetool-checks/" "nodetool"
-    click clean2 "https://community.dataminer.services/troubleshooting-cassandra-nodetool-checks/" "nodetool"
+    click a3 "https://docs.dataminer.services/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Cassandra.html#cassandrayaml-file" "Cassandra.yaml details"
+    click nodeT "https://docs.dataminer.services/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Cassandra/Troubleshooting_Cassandra_Nodetool_Checks.html" "nodetool"
+    click clean2 "https://docs.dataminer.services/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Cassandra/Troubleshooting_Cassandra_Nodetool_Checks.html" "nodetool"
     a3 -->  a8
     a8{{Are .yaml file parameters OK?}}:::Blue
     a8 --> |Yes|a101
@@ -121,7 +118,6 @@ graph TD
     classDef LightGray fill:#DDDDDD,stroke:#000070,stroke-width:0px, color:#1E5179;
 </div>
 
-<!-- Comment: Replace links to troubleshooting-cassandra-nodetool-checks once flowchart added to docs -->
 ## Cassandra.yaml file
 
 The *Cassandra.yaml* file is the main configuration file for the Cassandra database. It can be found in the folder *C:\Program Files\Cassandra\Conf*.
