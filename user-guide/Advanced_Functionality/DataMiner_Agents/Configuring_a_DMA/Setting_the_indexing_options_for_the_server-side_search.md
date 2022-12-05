@@ -25,6 +25,7 @@ To do so:
     | excludeServiceTemplates  | Search will not return any service templates. |
     | excludeRedundancy  | Search will not return any redundancy groups. |
     | excludeDocuments | Search will not return any documents. |
+    | includeAllCustomProperties | Search will return the values of all custom properties. |
     | redirectTo:*\[DMA ID\]* | Indexing will be disabled on the local DMA, and all search requests will be redirected to the DMA with the specified ID. For example, to redirect to the DMA with ID 123, specify *redirectTo:123*. This option allows you to reduce load on your DMAs by redirecting all search requests to one dedicated “search-handling DMA”. |
     | trendedParamsOnly  | Search will only return trended parameters. |
 
@@ -39,5 +40,6 @@ To do so:
 1. Save the file and restart DataMiner.
 
 > [!NOTE]
+>
 > - If the *\<SearchOptions>* tag is empty, then there will be no indexing restrictions. In other words, all items will be indexed.
 > - If no *\<SearchOptions>* tag can be found in *MaintenanceSettings.xml*, indexing will be restricted to “trendedParamsOnly” by default.

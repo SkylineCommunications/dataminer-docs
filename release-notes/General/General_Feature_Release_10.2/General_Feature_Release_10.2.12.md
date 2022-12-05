@@ -74,7 +74,7 @@ It is now possible to group parameters in a parameter feed that lists EPM parame
 
 ### Enhancements
 
-#### Security enhancements [ID_33520]
+#### Security enhancements [ID_33520] [ID_34723]
 
 A number of security enhancements have been made.
 
@@ -175,7 +175,7 @@ The following methods used to add attachments to bookings, jobs and tickets have
 |----------------------|------------------------|
 | AddBookingAttachment | AddBookingAttachmentV2 |
 | AddJobAttachment     | AddJobAttachmentV2     |
-| AddTicketAttachment  | addTicketAttachmentV2  |
+| AddTicketAttachment  | AddTicketAttachmentV2  |
 
 Also, the *ContinueAutomationScript* method now has an additional `info` parameter that can be used to provide more information about the variables passed in the `values` parameter (e.g. information to help resolve the file paths).
 
@@ -208,6 +208,14 @@ When an *NT_SNMP_GET* request contained a MultipleGetBulk (`:tablev2`) and an in
 <!-- MR 10.3.0 - FR 10.2.12 -->
 
 When PDF files are uploaded via the WebAPI (e.g. when a PDF report is generated), an error will now be thrown when the batch size exceeds 10 MB or the total file size exceeds 1 GB.
+
+#### Behavioral change points stored in both Cassandra and Elasticsearch [ID_34621]
+
+<!-- MR 10.3.0 - FR 10.2.12 -->
+
+If an Elasticsearch database is available, the behavioral change points detected in trend data by the Behavioral Anomaly Detection feature will now be stored both in the Cassandra database and the Elasticsearch database. Otherwise, they will be stored in Cassandra only like before.
+
+This will support faster and more flexible change point querying via GQI in future releases.
 
 #### Dashboards app / Low-code apps - Visual Overview component: Enhancements with regard to WebSocket/polling settings and user access to visual overviews [ID_34624]
 
@@ -288,7 +296,7 @@ In some rare cases, an error could occur in SLDataMiner when you edited an eleme
 
 #### Web apps: Problem with email address boxes [ID_34421]
 
-<!-- MR 10.3.0 - FR 10.2.12 -->
+<!-- MR 10.2.0 [CU10] - FR 10.2.12 -->
 
 When you entered an address in an email address box and then selected something else on the page without pressing *ENTER* or *TAB*, the email address box would incorrectly expand and show a list of suggestions.
 
@@ -309,6 +317,14 @@ When a parameter of a DVE element exported as a standalone parameter was partial
 <!-- MR 10.2.0 [CU9] - FR 10.2.12 -->
 
 In Visio pages displayed in web apps, it would not be possible to execute parameter set actions.
+
+#### Elasticsearch: Alarm trees of a cleared alarm could incorrectly be moved to a closed alarm index as one single tree [ID_34502]
+
+<!-- MR 10.2.0 [CU9] - FR 10.2.12 -->
+
+When an alarm is cleared, in Elasticsearch, its entire alarm tree is moved from the active alarm index to a closed alarm index.
+
+In some cases, when there were different alarm trees on different agents (trees sharing the same root alarm ID but each with a different DataMiner ID), all those alarms would incorrectly be moved to one single tree.
 
 #### Monitoring app: Problem when trying to open the web UI of a device [ID_34503]
 
@@ -493,3 +509,9 @@ When you tried to request data from a simulation that was built with AutoBuildVe
 <!-- MR 10.1.0 [CU21] / 10.2.0 [CU9] - FR 10.2.12 -->
 
 When a connection had been closed, in some cases, an error could occur in the hosting process.
+
+#### Certain antivirus software products could incorrectly flag SLSpiHost.exe as malicious [ID_34942]
+
+<!-- MR 10.2.0 [CU9] - FR 10.2.12 [CU0] -->
+
+In some cases, certain antivirus software products could incorrectly flag SLSpiHost.exe as malicious.

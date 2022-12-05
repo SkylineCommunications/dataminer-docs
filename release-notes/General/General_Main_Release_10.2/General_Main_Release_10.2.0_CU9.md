@@ -159,24 +159,6 @@ When a NATS client had reconnected when DataMiner was running, up to now, the lo
 
 Also, extended logging will now be available when an asynchronous request times out.
 
-#### Elasticsearch: Sending a GetInfoMessage of type 'IndexingConfiguration' with an invalid DataMiner ID will now only return the Elasticsearch configuration of the local DMA [ID_34774]
-
-<!-- MR 10.1.0 [CU21]/10.2.0 [CU9] - FR 10.3.1 -->
-
-When a *GetInfoMessage* of type "IndexingConfiguration" was sent containing an invalid DataMiner ID, up to now, the Elasticsearch configuration of all DMAs would be returned.
-
-From now on, when the DataMiner ID in a *GetInfoMessage* request of type "IndexingConfiguration" is invalid, only the Elasticsearch configuration of the local DMA will be returned instead.
-
-#### DataMiner Cube: Stream Viewer enhancements [ID_34837] [ID_34838]
-
-<!-- MR 10.1.0 [CU21] / 10.2.0 [CU9] - FR 10.3.1 -->
-
-The Stream Viewer tree view now supports more levels. This will allow you to display more detailed information.
-
-For example, in case of HTTP communication, there will now be extra levels for sessions, connections, requests/responses, parameters*, and even status codes and error codes.
-
-**only in case of a response*
-
 ### Fixes
 
 #### Ticketing app: Problem with ticket domains incorrectly marked as masked [ID_33449]
@@ -220,6 +202,14 @@ When a parameter of a DVE element exported as a standalone parameter was partial
 <!-- MR 10.2.0 [CU9] - FR 10.2.12 -->
 
 In Visio pages displayed in web apps, it would not be possible to execute parameter set actions.
+
+#### Elasticsearch: Alarm trees of a cleared alarm could incorrectly be moved to a closed alarm index as one single tree [ID_34502]
+
+<!-- MR 10.2.0 [CU9] - FR 10.2.12 -->
+
+When an alarm is cleared, in Elasticsearch, its entire alarm tree is moved from the active alarm index to a closed alarm index.
+
+In some cases, when there were different alarm trees on different agents (trees sharing the same root alarm ID but each with a different DataMiner ID), all those alarms would incorrectly be moved to one single tree.
 
 #### Monitoring app: Problem when trying to open the web UI of a device [ID_34503]
 
@@ -367,12 +357,6 @@ When you hovered over a trend graph while the legend was disabled, the trend val
 
 When a large PDF file (e.g. a PDF report) was created in a web app, in some cases, an error could occur.
 
-#### DataMiner Cube - Visual Overview: Tooltip of an element in a service chain would incorrectly not show values of node properties [ID_34664]
-
-<!-- MR 10.2.0 [CU9] - FR 10.3.1 -->
-
-When, in a service chain within a service context, an element shape was linked to a node property via a shape data field of type *Tooltip*, then the tooltip of that shape would incorrectly not show the value of that node property when using either a `[Service definition properties]` or a `[Service definition property:<property name>]` placeholder.
-
 #### nats-account-server service could silently fail [ID_34698]
 
 <!-- MR 10.2.0 [CU9] - FR 10.2.12 -->
@@ -426,32 +410,14 @@ As this error was caused by an internal lookup issue that had no effect whatsoev
 
 When, in the Alarm Console, you double-clicked a suggestion or alarm event created by SLAnalytics for a table parameter with advanced naming, in some cases, the trend graph would incorrectly show "no data".
 
-#### Dashboards app - Time range feed: Quick pick buttons would not be displayed in the correct order [ID_34759]
-
-<!-- MR 10.1.0 [CU21] / 10.2.0 [CU9] - FR 10.3.1 -->
-
-When a time range feed was configured to show quick pick buttons, those buttons would not be displayed in the correct order. From now on, quick pick buttons will be displayed in chronological order.
-
 #### An error could occur in the hosting process when a connection had been closed [ID_34786]
 
 <!-- MR 10.1.0 [CU21] / 10.2.0 [CU9] - FR 10.2.12 -->
 
 When a connection had been closed, in some cases, an error could occur in the hosting process.
 
-#### GQI: Filter operations would not be forwarded to the correct query when multiple data sources were joined [ID_34819]
+#### Certain antivirus software products could incorrectly flag SLSpiHost.exe as malicious [ID_34942]
 
-<!-- MR 10.2.0 [CU9] - FR 10.3.1 -->
+<!-- MR 10.2.0 [CU9] - FR 10.2.12 [CU0] -->
 
-When multiple data sources were joined, in some cases, filter operations would not be forwarded to the correct query.
-
-#### Memory leak in SLDataGateway during a Cassandra Cluster migration [ID_34829]
-
-<!-- MR 10.1.0 [CU21] / 10.2.0 [CU9] - FR 10.3.1 -->
-
-During a Cassandra Cluster migration, SLDataGateway would leak memory due to paging handlers not being cleaned up correctly.
-
-#### Dashboards app & low-code apps: Contents of colored table cells would incorrectly not be visible when conditional coloring was applied and actions had been configured [ID_34842]
-
-<!-- MR 10.2.0 [CU9] - FR 10.3.1 -->
-
-When conditional coloring was applied on the first column of a table in which actions had been configured, in some cases, the contents of the colored cells would incorrectly not be visible.
+In some cases, certain antivirus software products could incorrectly flag SLSpiHost.exe as malicious.

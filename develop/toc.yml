@@ -578,6 +578,8 @@
           topicUID: Debugging_connectors_serial_communication_returning_command_echoes
         - name: Debugging connectors - tracing the stack
           topicUID: Debugging_connectors_tracing_the_stack
+        - name: Investigating slow device control using dotTrace
+          topicUID: Investigating_slow_device_control_using_dotTrace
         - name: Protocol thread run-time errors - use cases
           topicUID: Protocol_thread_run_time_errors_use_cases
   - name: Automation scripts
@@ -3204,30 +3206,6 @@
                     topicUid: Manifest.Content.Dashboards.Dashboard.Version.Selection.Range-triggerPackagePipelineOnChange 
                 - name: Specific
                   topicUid: Manifest.Content.Dashboards.Dashboard.Version.Selection.Specific
-        - name: Files
-          topicUid: Manifest.Content.Files
-          items: 
-          - name: File
-            topicUid: Manifest.Content.Files.File
-            items: 
-            - name: DestinationPath
-              topicUid: Manifest.Content.Files.File.DestinationPath
-            - name: Source
-              topicUid: Manifest.Content.Files.File.Source
-            - name: SourcePath
-              topicUid: Manifest.Content.Files.File.SourcePath
-        - name: Folders
-          topicUid: Manifest.Content.Folders
-          items: 
-          - name: Folder
-            topicUid: Manifest.Content.Folders.Folder
-            items: 
-            - name: DestinationPath
-              topicUid: Manifest.Content.Folders.Folder.DestinationPath
-            - name: Source
-              topicUid: Manifest.Content.Folders.Folder.Source
-            - name: SourcePath
-              topicUid: Manifest.Content.Folders.Folder.SourcePath
         - name: Functions
           topicUid: Manifest.Content.Functions
           items: 
@@ -3470,7 +3448,9 @@
           - name: ActivateElement
             topicUid: ActivateElementv1
           - name: AddBookingAttachment
-            topicUid: AddBookingAttachment
+            topicUID: AddBookingAttachment
+          - name: AddBookingAttachmentV2
+            topicUid: AddBookingAttachmentV2
           - name: AddCommentToAlarm
             topicUid: AddCommentToAlarm
           - name: AddElementToPinned
@@ -3482,7 +3462,9 @@
           - name: AddElementsToRecent
             topicUid: AddElementsToRecent
           - name: AddJobAttachment
-            topicUid: AddJobAttachment
+            topicUID: AddJobAttachment
+          - name: AddJobAttachmentV2
+            topicUid: AddJobAttachmentV2
           - name: AddOrUpdateJobsSectionDefinitionField
             topicUid: AddOrUpdateJobsSectionDefinitionField
           - name: AddServiceToPinned
@@ -3492,7 +3474,9 @@
           - name: AddServicesToRecent
             topicUid: AddServicesToRecent
           - name: AddTicketAttachment
-            topicUid: AddTicketAttachment
+            topicUID: AddTicketAttachment
+          - name: AddTicketAttachmentV2
+            topicUid: AddTicketAttachmentV2
           - name: AddTicketField
             topicUid: AddTicketField
           - name: AddTicketType
@@ -5271,37 +5255,6 @@
           topicUid: Updating_gitignore_and_Jenkins_file
         - name: Repository types
           topicUid: Repository_types
-    - name: SLNetClientTest
-      topicUid: TOOSLNetClientTest
-      items:
-        - name: Connection
-          topicUid: Connection
-        - name: Protocol pending calls
-          topicUid: Protocol_pending_calls
-        - name: Inspect table content
-          topicUid: Inspect_table_content
-        - name: Parameter table rows
-          topicUid: Parameter_table_rows
-        - name: Stack sizes
-          topicUid: Stack_sizes
-        - name: Parameter notification queue
-          topicUid: Parameter_notification_queue
-        - name: Sync status
-          topicUid: Sync_status
-        - name: Trend data
-          topicUid: Trend_data
-        - name: Request dump
-          topicUid: Request_dump
-        - name: SLNet event subscriptions
-          topicUid: SLNet_event_subscriptions
-        - name: Capturing SLNet calls
-          topicUid: Capturing_SLNet_calls
-        - name: QAction metrics
-          topicUid: QAction_metrics
-        - name: Checking whether protocol buffer serialization is enabled
-          topicUid: Checking_whether_protocol_buffer_serialization_is_enabled
-        - name: Viewing the connection timeout states of an element
-          topicUid: Viewing_the_connection_timeout_states_of_an_element
     - name: SourceTree
       topicUid: TOOSourceTree
       items:
