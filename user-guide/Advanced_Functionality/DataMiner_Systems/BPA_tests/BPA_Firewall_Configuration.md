@@ -11,7 +11,7 @@ A firewall policy that is too lax may allow adversaries to attack internal servi
 This BPA test verifies that no excessive ports are open in the Windows firewall.
 
 > [!NOTE]
-> This BPA is available from DataMiner version 10.2.12.0 and 10.3.0.0 onwards.
+> This BPA is available from DataMiner version 10.2.12 and 10.3.0 onwards.
 
 ## Metadata
 
