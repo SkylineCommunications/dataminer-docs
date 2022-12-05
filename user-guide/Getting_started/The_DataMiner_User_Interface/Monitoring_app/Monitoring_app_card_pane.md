@@ -93,6 +93,9 @@ The following pages are available:
 
     - ![](~/user-guide/images/MonitoringX_histogram2.png) : Displays a histogram for a trended table parameter.
 
+      > [!NOTE]
+      > From DataMiner 10.2.0 [CU10]/10.3.1 onwards, the Monitoring app also supports the trending of string parameters.
+
 - *Alarms*: Displays the active alarms for the element.
 
 - *Reports*: Displays a page where you can view several different reports related to the element.
