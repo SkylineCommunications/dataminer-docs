@@ -82,7 +82,7 @@ To add a violation filter, follow the procedure below:
 
 #### Example 1
 
-With the configuration below, masked alarms will not affect the SLA:
+With the configuration below, masked alarms will not affect the SLA.
 
 | Type                    | Property name | Value       | Impact | Exclusive | Sequence | State   |
 |-------------------------|---------------|-------------|--------|-----------|----------|---------|
