@@ -4,9 +4,9 @@ uid: Custom_cloud_endpoint_configuration
 
 # Customizing the cloud endpoint configuration
 
-From version 2.10.0 of the [DataMiner CloudGateway](xref:DataMinerExtensionModules#cloudgateway) DataMiner Extension Module (DxM) onwards, this DxM hosts an HTTP(S) endpoint that allows other [DxMs](xref:DataMinerExtensionModules) to communicate with the cloud via DataMiner CloudGateway in an efficient and secure way without the need for direct internet access.
+From version 2.10.0 of the [DataMiner CloudGateway](xref:DataMinerExtensionModules#cloudgateway) DataMiner Extension Module (DxM) onwards, this DxM hosts an HTTP(S) endpoint that allows other [DxMs](xref:DataMinerExtensionModules) to communicate with the DataMiner Cloud Platform via DataMiner CloudGateway in an efficient and secure way without the need for direct internet access.
 
-This endpoint is required for some features, such as [Remote Log Collection](xref:RemoteLogCollection). It only allows traffic to *\*.dataminer.services*, which you can see in the default *CloudEndpointOptions* configuration under *FirewallRules*.
+This endpoint is required for some features, such as [Remote Log Collection](xref:RemoteLogCollection). It only allows traffic to *\*.dataminer.services*.
 
 By default, the *CloudEndpointOptions* are configured to use port tcp/5100 as mentioned in [Overview of IP ports used in a DMS](xref:Configuring_the_IP_network_ports#overview-of-ip-ports-used-in-a-dms).
 
