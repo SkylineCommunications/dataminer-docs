@@ -95,8 +95,8 @@ It is also possible to reconnect the WebSocket connection.
 
 ## Dynamic IP
 
-- <xref:ConnectionsWebSocketsDynamicIp>
-- <xref:ConnectionsSerialDynamicPolling>
+- See [dynamically changing the IP address and port number](xref:ConnectionsWebSocketsDynamicIp)
+- See [dynamic polling](xref:ConnectionsSerialDynamicPolling)
 
 On every change of the parameter, the previous connection will be gracefully closed and the new one will be set up. This can be done with a button to re-establish the connection.
 
