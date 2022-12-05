@@ -2884,6 +2884,8 @@
               topicUid: Working_with_Alerter_pop-up_balloons
             - name: Configuring Alerter
               topicUid: Configuring_Alerter
+        - name: Cassandra Cleaner
+          topicUID: Cassandra_Cleaner
         - name: DataMiner Comparison tool
           topicUID: DataMinerComparisonTool
         - name: DataMiner Size tool
