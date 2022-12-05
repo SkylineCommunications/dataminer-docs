@@ -362,12 +362,6 @@ When, in the Dashboards app or a low-code app, you apply multiple sort orders in
 
 When an EPM feed is used to feed EPM identifiers to a parameter feed, it is now possible to configure filters that will preselect certain items in the parameter feed.
 
-#### Dashboards app: Upload size of PDF files will now be validated [ID_34620]
-
-<!-- MR 10.3.0 - FR 10.2.12 -->
-
-When PDF files are uploaded via the WebAPI (e.g. when a PDF report is generated), an error will now be thrown when the batch size exceeds 10 MB or the total file size exceeds 1 GB.
-
 #### Dashboards app: Items selected in a parameter feed listing EPM parameters will now be saved in the URL of the dashboard [ID_34622]
 
 <!-- MR 10.3.0 - FR 10.2.12 -->
@@ -405,6 +399,12 @@ The *PDF* and *Share* option in the Dashboards app are now no longer visible in 
 <!-- MR 10.3.0 - FR 10.2.12 -->
 
 It is now possible to group parameters in a parameter feed that lists EPM parameters.
+
+#### Dashboards app - GQI: New 'Get trend data patterns' data source [ID_35024]
+
+<!-- MR 10.3.0 - FR 10.3.2 -->
+
+In the Generic Query Interface, a new *Get trend data patterns* data source is now available. It will return all trend data patterns in the DMS.
 
 ### DMS Service & Resource Management
 

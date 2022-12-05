@@ -54,7 +54,7 @@
 		string GetDisplayValue(string primaryKey);
 
 		/// <summary>
-		/// Gets the primary keys of the rows that have one of the specified values for the specified column.
+		/// Gets the primary keys of the rows that have one of the specified values for the specified indexed column.
 		/// </summary>
 		/// <param name="values">The values to find.</param>
 		/// <exception cref="ArgumentNullException"><paramref name="values"/> is <see langword="null"/>.</exception>
@@ -66,6 +66,10 @@
 		/// <returns>
 		/// The primary keys of the rows that have the specified value for the specified column.
 		/// </returns>
+		/// <remarks>
+		/// Important: The column used for lookup needs to have the attribute indexColumn defined in the table ArrayOptions.
+		/// Consider using IDmsTable.QueryData as it may provide more stable and efficient performance.
+		/// </remarks>
 		string[] Lookup(IEnumerable<string> values);
 
 		/// <summary>
@@ -80,6 +84,10 @@
 		/// <returns>
 		/// The primary keys of the rows that have the specified value for the specified column.
 		/// </returns>
+		/// <remarks>
+		/// Important: the column used for lookup needs to have the attribute indexColumn defined in the table ArrayOptions.
+		/// Consider using the IDmsTable.QueryData as it may provide a more stable and efficient performance.
+		/// </remarks>
 		string[] Lookup(string value);
 	}
 }
