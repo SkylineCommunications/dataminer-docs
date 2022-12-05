@@ -293,6 +293,9 @@ If you open Stream Viewer for the example element, you will see a window like il
 
 The image above shows an example of a Stream Viewer capture for Group 1. On the left-hand side, all connections and groups are identified. This provides confirmation that a group was executed. In this case, since our group contains an HTTP session, it confirms that the HTTP request was sent. On the right-hand side, you can see the HTTP response with the status code and content. You can see that we've received an HTTP/1.1 200 OK with a reply bearing JSON content.
 
+> [!NOTE]
+> From DataMiner 10.1.0 [CU22]/10.2.0 [CU10]/10.3.1 onwards, the Stream Viewer tree view supports more levels. This allows for more detailed information. E.g. in case of HTTP communication, there will be extra levels for sessions, connections, requests/responses, parameters, and even status codes and error codes.
+
 ### Step 8 – Processing the Response
 
 When a group is executed, data is automatically set in the response status code parameter and the response content parameter defined in the `Protocol.HTTP.Session.Connection.Response` tag.
