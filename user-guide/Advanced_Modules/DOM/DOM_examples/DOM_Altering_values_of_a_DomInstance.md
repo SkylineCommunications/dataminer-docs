@@ -9,6 +9,7 @@ These code examples below assume that they are wrapped in an Automation script t
 
 ```csharp
 using System;
+using System.Linq;
 using System.Collections.Generic;
 using Skyline.DataMiner.Automation;
 using Skyline.DataMiner.Net.Apps.DataMinerObjectModel;
