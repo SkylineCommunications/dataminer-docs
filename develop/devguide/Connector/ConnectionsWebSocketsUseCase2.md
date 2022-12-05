@@ -8,8 +8,8 @@ The WebSocket connection with dynamic IP is used when the connection url/ip addr
 
 ## Dynamic IP
 
-- <xref:ConnectionsWebSocketsDynamicIp>
-- <xref:ConnectionsSerialDynamicPolling>
+- See [Dynamically changing the IP address and port number](xref:ConnectionsWebSocketsDynamicIp)
+- See [Dynamic polling](xref:ConnectionsSerialDynamicPolling)
 
 On every change of the parameter, the previous connection will be gracefully closed and the new one will be set up. This can be done with a button to re-establish the connection.
 
