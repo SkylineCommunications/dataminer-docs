@@ -8,9 +8,9 @@ Before you can use any of the SLNetClientTest tool functions, you must first con
 
 1. In the *Connection* menu, click *Connect*.
 
-2. In the *Connect* window, select the host DMA.
+1. In the *Connect* window, select the host DMA.
 
-3. Specify any of the following options if necessary, and then click *Connect*:
+1. Specify any of the following options if necessary, and then click *Connect*:
 
     - To use a different logon, select *Disable Windows Logon* and enter your credentials.
 

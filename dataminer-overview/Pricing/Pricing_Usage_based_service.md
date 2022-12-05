@@ -62,7 +62,7 @@ Consumption above the contracted Monthly Utilization Allowance (MUA) is possible
 
 ### Cancellation
 
-Subscriptions can be canceled up to 30 days before the anniversary date. The subscription will remain active until the anniversary date. The amount paid is not refundable.
+Subscriptions can be canceled up to 30 days before the Renewal Date. The subscription will remain active until the Renewal Date. The amount paid is not refundable.
 
 ### Changing subscription
 

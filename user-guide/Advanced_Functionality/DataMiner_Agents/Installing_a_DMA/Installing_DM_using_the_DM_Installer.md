@@ -54,11 +54,12 @@ The DataMiner installer allows you to run a default DataMiner installation, whic
 
 1. When DataMiner has successfully restarted, click *Close*.
 
+1. To be able to make full use of all available DataMiner features, [install Elasticsearch](xref:Installing_Elasticsearch_via_DataMiner) and [connect your DataMiner System to the cloud](xref:Connecting_your_DataMiner_System_to_the_cloud). While this is not mandatory, we highly recommend it.
+
 > [!NOTE]
 >
 > - To view detailed log information on the installation process, in the last step of the installer, click the *open log files* button.
 > - If you closed the DataMiner installer before uploading the license files, copy the license files to the *C:\Skyline DataMiner* folder and restart DataMiner.
-> - To be able to make full use of all available DataMiner features, you should also [install Elasticsearch](xref:Installing_Elasticsearch_via_DataMiner) and [connect your DataMiner System to the cloud](xref:Connecting_your_DataMiner_System_to_the_cloud).
 
 ### Custom DataMiner installation
 
@@ -73,18 +74,18 @@ The DataMiner installer allows you to run a default DataMiner installation, whic
    > [!IMPORTANT]
    > To get this DataMiner ID, you must contact Skyline. The DataMiner ID will uniquely identify the DataMiner Agent you are installing.
 
-1. Optionally, customize the database installation:
+1. Customize the installation to match the setup you want:
+
+   - Ideally Cassandra should be installed on a different drive than the C drive. To specify the drive, click *select data drive*, select the drive, and click *OK*.
+
+     > [!NOTE]
+     > By default, a DataMiner Agent uses a single Cassandra node that is hosted on the same physical or virtual server. However, different architectures are also possible. For more information, see [Supported system data storage architectures](xref:Supported_system_data_storage_architectures), or check with your Technical Account Manager.
 
    - To install a MySQL database instead of a Cassandra database, select *MySQL Server*, and optionally *MySQL Workbench*.
 
      > [!NOTE]
      > As MySQL support will go **End of Life** as of DataMiner version 10.3.X (Q4 2022), we recommend the **Cassandra database** for all new installations. MySQL is no longer included in the 10.2.0 DataMiner installer.
      > If a MySQL database is used, certain DataMiner features (e.g. trend predictions, ticketing, jobs, service & resource manager) will **not be available**.
-
-   - If you wish to install Cassandra but use a different drive than the default C drive, keep Cassandra selected and click *select data drive*. Then select the drive and click *OK*.
-
-     > [!NOTE]
-     > By default, a DataMiner Agent uses a single Cassandra node that is hosted on the same physical or virtual server. However, different architectures are also possible. For more information, see [DataMiner Compute Requirements](https://community.dataminer.services/dataminer-compute-requirements/), or check with your Technical Account Manager.
 
    - On systems intended for DataMiner Failover, install WinPcap by clicking *Install WinPcap*. The Setup Wizard of WinPcap is launched. Follow the wizard, select *Automatically start the WinPcap driver at boot time*, and click *Next* when necessary.
 
@@ -113,7 +114,7 @@ The DataMiner installer allows you to run a default DataMiner installation, whic
 
 1. When DataMiner has successfully restarted, click *Close*.
 
+1. To be able to make full use of all available DataMiner features, [install Elasticsearch](xref:Installing_Elasticsearch_via_DataMiner) and [connect your DataMiner System to the cloud](xref:Connecting_your_DataMiner_System_to_the_cloud). While this is not mandatory, we highly recommend it.
+
 > [!NOTE]
->
-> - To view detailed log information on the installation process, in the last step of the installer, click the *open log files* button.
-> - To be able to make full use of all available DataMiner features, you should also [install Elasticsearch](xref:Installing_Elasticsearch_via_DataMiner) and [connect your DataMiner System to the cloud](xref:Connecting_your_DataMiner_System_to_the_cloud).
+> To view detailed log information on the installation process, in the last step of the installer, click the *open log files* button.

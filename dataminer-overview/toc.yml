@@ -52,10 +52,12 @@
     - name: Pricing
       topicUID: Pricing
       items:
-      - name: Commercial models
+      - name: Commercial models summary
         topicUID: Pricing_Commercial_Models
       - name: Usage-based services
         topicUID: Pricing_Usage_based_service
+      - name: Perpetual-Use Licensing
+        topicUID: Pricing_Perpetual_Use_Licensing
     - name: Support Services
       topicUid: Overview_Support_DMS_M_and_S
       items:
@@ -108,8 +110,7 @@
           topicUid: FAQ_Bandwidth_data_acquisition
         - name: Which languages are available in the DataMiner Cube client
           topicUid: FAQ_DataMiner_Cube_languages
-        - name: Questions related to pricing of usage-based services
-      - name: Questions related to connectors
+      - name: Connectors
         topicUID: FAQs_Connectors
         items:
         - name: What is the standard lead time for new connectors
@@ -118,5 +119,7 @@
           topicUid: FAQ_Limitations_generic_SNMP_connector
         - name: What are the standard operating procedures for connector deployment?
           topicUID: FAQ_SOP_connectors
-      - name: Questions related to pricing of usage-based services
+      - name: Commercial models
         topicUID: FAQs_Pricing
+      - name: Cloud services
+        topicUID: FAQ_DCP
