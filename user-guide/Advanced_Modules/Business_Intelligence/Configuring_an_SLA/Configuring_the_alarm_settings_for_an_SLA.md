@@ -78,13 +78,19 @@ To add a violation filter, follow the procedure below:
    > [!NOTE]
    > The table is interpreted by DataMiner from top to bottom. It is sorted first on *Violation filter state* and then on ascending *Violation filter sequence*.
 
-### Violation filter example
+### Violation filter examples
 
-Consider the following example:
+#### Example 1
 
-For your SLA, you want Warnings to count for only 10%, and Minor alarms for 30%. Also, if an element is in maintenance, you want the alarms not to count at all. Any other alarms should count for the full 100%.
+With the configuration below, masked alarms will not affect the SLA:
 
-To get this result, set the following filters:
+| Type                    | Property name | Value       | Impact | Exclusive | Sequence | State   |
+|-------------------------|---------------|-------------|--------|-----------|----------|---------|
+| Alarm state             | ...           | Masked      | 0%     | Continue  | 100      | Enabled |
+
+#### Example 2
+
+With the configuration below, warnings count for only 10 %, and minor alarms for 30 %. If an element is in maintenance, alarms will not count at all. Any other alarms will count for the full 100 %.
 
 | Type                    | Property name | Value       | Impact | Exclusive | Sequence | State   |
 |-------------------------|---------------|-------------|--------|-----------|----------|---------|
