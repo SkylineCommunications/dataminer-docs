@@ -109,7 +109,10 @@ Either just use the script name as the property value, or specify the script in 
 
 This property allows you to indicate whether a resource should be assigned to a node automatically or not.
 
-Set this property to *TRUE* or *FALSE*.
+Set this property to *True*, *False*, or *Always*.
+
+> [!TIP]
+> See also: [Customizing automatic resource selection](xref:Service_Orch_configuring_resource_and_pools#customizing-automatic-resource-selection)
 
 ### BlockInfo
 
@@ -177,11 +180,11 @@ The JSON value of this property should contain the following fields:
 
 - *ReservationType*: The type of booking, i.e.:
 
-    - *Standalone*
+  - *Standalone*
 
-    - *Permanent*: The contributing booking remains permanently available.
+  - *Permanent*: The contributing booking remains permanently available.
 
-    - *FollowMain*: The contributing booking follows the main booking.
+  - *FollowMain*: The contributing booking follows the main booking.
 
 - *ResourcePool*: The name of the resource pool in which the contributing resource should be included.
 
@@ -352,6 +355,9 @@ This property allows you to hide a service definition node in the Booking Wizard
 
 Set this property to *Yes* to hide the node if a resource is available.
 
+> [!TIP]
+> See also: [Hiding resource selection if a resource is available](xref:Service_Orch_configuring_resource_and_pools#hiding-resource-selection-if-a-resource-is-available).
+
 ### IsContributing
 
 **Scope**: Service definition node
@@ -402,6 +408,12 @@ This property can be set to a list of several options, separated by pipe (â€œ\|â
 
 - *Hide*: Hides the node from the Booking Wizard.
 
+> [!TIP]
+> See also:
+>
+> - [Hiding resource selection for a specific node](xref:Service_Orch_configuring_resource_and_pools#hiding-resource-selection-for-a-specific-node)
+> - [Making resource selection optional for a node](xref:Service_Orch_configuring_resource_and_pools#making-resource-selection-optional-for-a-node)
+
 ### Priority
 
 **Scope**: Resource
@@ -413,6 +425,9 @@ This property can be set to a list of several options, separated by pipe (â€œ\|â
 This property allows you to define a priority for the resource, which is used to sort resources that are displayed for resource selection in the Booking Wizard.
 
 Set this property to an integer representing the priority of the resource, e.g. 5.
+
+> [!TIP]
+> See also: [Resource sorting configuration](xref:Service_Orch_configuring_resource_and_pools#resource-sorting-configuration)
 
 ### ReadOnlyResourceSelectionControl
 
@@ -463,6 +478,9 @@ Specify the conditions in JSON format as illustrated below. Only "AND" combinati
 }
 ```
 
+> [!TIP]
+> See also: [Setting up additional pre-filtering](xref:Service_Orch_configuring_resource_and_pools#setting-up-additional-pre-filtering).
+
 ### Resource Pool
 
 **Scope**: Service definition node
@@ -485,10 +503,13 @@ For example, if you set this property to *Satellites*, and the virtual platform 
 
 This property is used to sort resources for a specific node in the Booking Wizard based on available capacity.
 
-To configure this, on the *General* data page of the Booking Manager, set the *Resources Order Rule* parameter to *Capacity*. Then set the *Resource Sorting Capacity* property to the name of the capacity that should be used for sorting, e.g. *Bandwidth*.
+To configure this, on the *Config* > *Wizard* tab of the Booking Manager, set *Resources Ordering Rule* to *Capacity*. Then set the *Resource Sorting Capacity* property to the name of the capacity that should be used for sorting, e.g. *Bandwidth*.
 
 > [!NOTE]
-> If *Resources Order Rule* is set to *Capacity* but this property is not defined, the first available capacity will be used for sorting.
+> If *Resources Ordering Rule* is set to *Capacity* but this property is not defined, the first available capacity will be used for sorting.
+
+> [!TIP]
+> See also: [Resource sorting configuration](xref:Service_Orch_configuring_resource_and_pools#resource-sorting-configuration).
 
 ### Reuse Contributing Resource
 

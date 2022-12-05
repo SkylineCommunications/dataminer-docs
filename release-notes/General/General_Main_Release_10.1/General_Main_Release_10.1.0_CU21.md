@@ -58,14 +58,6 @@ From now on, when an HTTP element receives an ERROR_WINHTTP_SECURE_FAILURE after
 
 A number of enhancements have been made with regard to querying trend data against a Cassandra database.
 
-#### Elasticsearch: Sending a GetInfoMessage of type 'IndexingConfiguration' with an invalid DataMiner ID will now only return the Elasticsearch configuration of the local DMA [ID_34774]
-
-<!-- MR 10.1.0 [CU21]/10.2.0 [CU9] - FR 10.3.1 -->
-
-When a *GetInfoMessage* of type "IndexingConfiguration" was sent containing an invalid DataMiner ID, up to now, the Elasticsearch configuration of all DMAs would be returned.
-
-From now on, when the DataMiner ID in a *GetInfoMessage* request of type "IndexingConfiguration" is invalid, only the Elasticsearch configuration of the local DMA will be returned instead.
-
 ### Fixes
 
 #### Problem with SLDataMiner when editing an element [ID_34329]
@@ -198,20 +190,8 @@ Recursion detected in the mediation links tree
 
 As this error was caused by an internal lookup issue that had no effect whatsoever with regard to mediation layer functionality, from now on, it will no longer be logged.
 
-#### Dashboards app - Time range feed: Quick pick buttons would not be displayed in the correct order [ID_34759]
-
-<!-- MR 10.1.0 [CU21] / 10.2.0 [CU9] - FR 10.3.1 -->
-
-When a time range feed was configured to show quick pick buttons, those buttons would not be displayed in the correct order. From now on, quick pick buttons will be displayed in chronological order.
-
 #### An error could occur in the hosting process when a connection had been closed [ID_34786]
 
 <!-- MR 10.1.0 [CU21] / 10.2.0 [CU9] - FR 10.2.12 -->
 
 When a connection had been closed, in some cases, an error could occur in the hosting process.
-
-#### Memory leak in SLDataGateway during a Cassandra Cluster migration [ID_34829]
-
-<!-- MR 10.1.0 [CU21] / 10.2.0 [CU9] - FR 10.3.1 -->
-
-During a Cassandra Cluster migration, SLDataGateway would leak memory due to paging handlers not being cleaned up correctly.

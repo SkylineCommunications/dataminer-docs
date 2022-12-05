@@ -16,11 +16,17 @@ A DataMiner Agent (DMA) is a physical or virtual compute instance running the Da
 
 The DataMiner Agent software is essentially a collection of services of which most names start with “SL” (e.g. SLNet, SLProtocol, SLLog, etc.).
 
+> [!TIP]
+> See also: [Installing a DataMiner Agent](xref:Installing_a_DataMiner_Agent)
+
 ## DataMiner clients
 
 DataMiner client applications only need to connect to one DMA in the DMS, and this can be any of the DMAs. All DMAs in the DMS have an equivalent status. Through this "single point of contact", users have access to all information in the entire DMS. The only constraints a user can potentially experience in terms of accessing certain information are defined by the DataMiner security configuration.
 
 In other words, a DataMiner client can access the DataMiner System by connecting to any DMA, and it will get a consolidated view of the entire managed operation and all its managed objects across all DMAs in the DMS.
+
+> [!TIP]
+> See also: [Accessing DataMiner](xref:DataminerApplications)
 
 ## DataMiner database
 
