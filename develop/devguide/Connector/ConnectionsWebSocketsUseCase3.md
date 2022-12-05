@@ -37,9 +37,9 @@ The WebSocket connection with Custom Handshake is used when some headers need to
 ```xml
 <Session id="25" name="WebSocket Handshake">
     <Connection id="1">
-        <Request verb="GET" url="50">
+        <Request verb="GET" url="8">
             <Headers>
-                <Header key="Sec-WebSocket-Extensions" pid="15"></Header>
+                <Header key="Sec-WebSocket-Extensions" pid="9"></Header>
             </Headers>
         </Request>
         <Response statusCode="220">
@@ -49,10 +49,10 @@ The WebSocket connection with Custom Handshake is used when some headers need to
 </Session>
 ```
 
-- Parameter 50 contains the default value **x-nmos/events/ws**. It is possible to make a write parameter on this value and save parameter 50. After a restart it will use the saved value to connect to the WebSocket Connection.
+- Parameter 8 contains the default value **x-nmos/events/ws**. It is possible to make a write parameter on this value and save parameter 8. After a restart it will use the saved value to connect to the WebSocket Connection.
 
     ```xml
-    <Param id="50" trending="false" save="true">
+    <Param id="8" trending="false" save="true">
         <Name>WebsocketUrl</Name>
         <Description>Websocket URL</Description>
         <Type>read</Type>
@@ -74,10 +74,10 @@ The WebSocket connection with Custom Handshake is used when some headers need to
     </Param>
     ```
 
-- For this handshake, we need an extra header, add the correct header key and place its value in an parameter. Parameter 15 is used for the header. It has a default value.
+- For this handshake, we need an extra header, add the correct header key and place its value in an parameter. Parameter 9 is used for the header. It has a default value.
 
     ```xml
-    <Param id="15" trending="false">
+    <Param id="9" trending="false">
         <Name>Header</Name>
         <Description>Header</Description>
         <Type>read</Type>

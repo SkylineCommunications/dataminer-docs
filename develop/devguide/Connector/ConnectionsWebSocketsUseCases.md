@@ -103,12 +103,12 @@ For each trigger you will need an action.
         <Description>Websocket Heartbeat</Description>
         <WebSocketMessageType>text</WebSocketMessageType>
         <Content>
-            <Param>83</Param>
+            <Param>10</Param>
         </Content>
     </Command>
     ```
 
-- This command uses the command data from paramater 10. In this example, we have a heartbeat.
+- This command uses the command data from parameter 10. In this example, we have a heartbeat.
 
     ```xml
     <Param id="10" trending="false">
@@ -152,7 +152,7 @@ For each trigger you will need an action.
     </Param>
     ```
 
-- It is necessary to clear the response after processing the data. You can do this with "**protocol.CheckTrigger(32);**" in the QAction. Add a trigger wich will execute an action.
+- It is necessary to clear the response after processing the data. You can do this with "**protocol.CheckTrigger(32);**" in the QAction. Add a trigger which will execute an action.
 
     ```xml
     <Trigger id="32">
