@@ -26,11 +26,13 @@ If these files are not present, generate them by running the executable with the
 
 The most important settings are the `delete.start.time` and `delete.end.time` fields.
 
-**WARNING**: All timetrace data between the `delete.start.time` and `delete.end.time` timestamps will be deleted, so be careful.
+> [!CAUTION]
+> All timetrace data between the `delete.start.time` and `delete.end.time` timestamps will be deleted, so be careful.
 
 Log levels for both file and console output can be configured with the `logging.level.file` and `logging.level.console` fields. The possible log levels are TRACE, DEBUG, INFO, WARN, ERROR and FATAL.
 
-**NOTE**: Enabling TRACE logging will log all executed queries and may affect performance.
+> [!NOTE]
+> Enabling TRACE logging will log all executed queries and may affect performance.
 
 It is advised to throttle the number of concurrent deletes if the system is already under heavy load. Throttling can be achieved by reducing the `queue.max.concurrent.queries` setting. This setting should typically be kept between 10 and 100.
 
@@ -44,7 +46,8 @@ For example, if you want to keep the last 3 months of data, with a default TTL o
 
 The format of all timestamps is `dd/MM/yyyy hh:mm:ss`.
 
-**NOTE**: Do not leave the `delete.start.time` field set to 01/01/0001 00:00:00 or any other very old timestamp, as this will cause the program to needlessly scan for data that does not exist.
+> [!NOTE]
+> Do not leave the `delete.start.time` field set to 01/01/0001 00:00:00 or any other very old timestamp, as this will cause the program to needlessly scan for data that does not exist.
 
 ## Running the tool
 
