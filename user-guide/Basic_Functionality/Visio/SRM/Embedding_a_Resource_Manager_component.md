@@ -342,7 +342,7 @@ To also show resources for elements in child views, in the **ComponentOptions** 
 
 ##### Passing exposers
 
-From DataMiner 10.3.1/10.4.0 onwards, you can pass resource exposers as a filter by object ID, by using the "filter" option. you can use this to show the corresponding resource bands on the timeline.
+From DataMiner 10.3.1/10.4.0 onwards, you can pass resource exposers as a filter by object ID, by using the "filter" option. You can use this to show the corresponding resource bands on the timeline.
 
 > [!TIP]
 > See also: [YAxisResource session variable examples](xref:YAxisResource_Shape_Data_Examples#passing-exposers-with-a-filter)
