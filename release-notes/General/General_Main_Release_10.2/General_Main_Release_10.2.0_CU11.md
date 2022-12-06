@@ -61,8 +61,20 @@ In the trend graph of a monitored parameter that needed to be compared to a rela
 > [!NOTE]
 > When both the baseline and the factor are stored in parameters, then the baseline parameter, the factor parameter and the monitored parameter must all have the history set option enabled. Also, all history sets should be executed chronologically.
 
+#### Problem with SLDataMiner when loading an alarm template schedule failed [ID_34988]
+
+<!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
+
+In some cases, an error could occur in SLDataMiner when loading an alarm template schedule failed.
+
 #### Web apps - Visual Overview: Certain actions would no longer work [ID_35012]
 
 <!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
 
 In some cases, *Card*, *Script*, *Link* and *Popup* actions would no longer work in visual overviews opened in web apps.
+
+#### SLLogCollector would only take a dump of the first process when multiple processes were specified in the -d command-line option [ID_35074]
+
+<!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
+
+When you ran SLLogCollector via the command line and specified multiple processes for which dumps had to be taken (e.g. `SL_LogCollector.exe -c -d=46436,61652`), it would incorrectly only take a dump of the first process.

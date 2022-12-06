@@ -68,6 +68,12 @@ Because of a number of enhancements, overall performance of GQI queries using th
 
 When an Elasticsearch cluster used by DataMiner was hosted on servers that host IPv6 addresses, the Elasticsearch health monitoring in DataMiner would fail to assess the Elasticsearch cluster state and conclude that the indexing database was unavailable.
 
+#### Problem with SLDataMiner when loading an alarm template schedule failed [ID_34988]
+
+<!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
+
+In some cases, an error could occur in SLDataMiner when loading an alarm template schedule failed.
+
 #### Dashboards app: Button to restore the initial view would incorrectly appear on all tables after sorting or filtering a table [ID_35003]
 
 <!-- MR 10.3.0 - FR 10.3.2 -->
@@ -79,3 +85,9 @@ When, on a dashboard, you sorted or filtered a table, a button to restore the in
 <!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
 
 In some cases, *Card*, *Script*, *Link* and *Popup* actions would no longer work in visual overviews opened in web apps.
+
+#### SLLogCollector would only take a dump of the first process when multiple processes were specified in the -d command-line option [ID_35074]
+
+<!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
+
+When you ran SLLogCollector via the command line and specified multiple processes for which dumps had to be taken (e.g. `SL_LogCollector.exe -c -d=46436,61652`), it would incorrectly only take a dump of the first process.
