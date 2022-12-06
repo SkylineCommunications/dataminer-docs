@@ -83,6 +83,21 @@ When you want the NAS service on existing setups to have a quoted path, do the f
 
 Because of a number of enhancements, overall performance of GQI queries using the *Get parameters for elements where* data source has increased.
 
+#### Dashboards app - Line & area chart: Multiple timespans will now be converted to one single time range [ID_35008]
+
+<!-- MR 10.4.0 - FR 10.3.2 -->
+
+When a line & area chart component is fed a collection of timespans, it will now convert those timespans to one single time range.
+
+For example, when a line & area chart component is fed the following timespans...
+
+- *01/01/2022 9:00:00 > 01/01/2022 10:00:00*
+- *01/01/2022 9:30:00 > 01/01/2022 10:30:00*
+
+... it will convert those timespans into the following time range:
+
+- *01/01/2022 9:00:00 > 01/01/2022 10:30:00*
+
 ### Fixes
 
 #### Problem with Elasticsearch health monitoring [ID_34744]
