@@ -60,6 +60,12 @@ From now on, you can also add the following placeholders in the *ShapeGrouping* 
 
 The *automatic incident tracking* feature groups active alarms that are related to the same incident, so that the Alarm Console provides a better overview of the current issues in the system. From now on, on cloud-connected DataMiner Agents that have the DataMiner Extension Module *ModelHost* installed and that have been configured to [offload alarm and change point events to the cloud](xref:Controlling_cloudfeed_data_offloads), this feature will also make use of the parameter relationship data that is stored in a model managed by the *ModelHost* DxM.
 
+#### Trending - Parameter relationships: Enhancements [ID_34832] [ID_34846] [ID_34863] [ID_34938]
+
+<!-- MR 10.4.0 - FR 10.3.1 -->
+
+A number of enhancements have been made to the parameter relationship feature. When you hover over a light bulb icon in the top-right corner of a trend graph, a tooltip will now appear. This tooltip will suggest you add a number of related parameters and will indicate that the parameter relationship feature is still in preview. Also, when you open a histogram, no light bulb icon will be displayed anymore as parameter relationships are not really relevant when viewing histograms.
+
 #### Trending - pattern matching: Enhanced feedback when creating a trend pattern tag failed [ID_34963]
 
 <!-- MR 10.4.0 - FR 10.3.2 -->
