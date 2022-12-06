@@ -1603,6 +1603,8 @@
                 topicUid: DashboardGenericMap
               - name: Group
                 topicUid: DashboardGroup
+              - name: Icon
+                topicUID: DashboardIcon
               - name: Image
                 topicUid: DashboardImage
               - name: Text
