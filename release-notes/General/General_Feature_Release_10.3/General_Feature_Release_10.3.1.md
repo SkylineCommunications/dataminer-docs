@@ -14,7 +14,32 @@ uid: General_Feature_Release_10.3.1
 
 ## Highlights
 
-*No highlights have been selected for this release yet*
+#### Dashboards app & low-code apps: Icon component [ID_34867]
+
+<!-- MR 10.4.0 - FR 10.3.1 -->
+
+The new icon component allows you to display an icon on a dashboard or a low-code app.
+
+#### Interactive Automation scripts: New button style 'CallToAction' [ID_34904]
+
+<!-- MR 10.4.0 - FR 10.3.1 -->
+
+In an interactive Automation script launched from a dashboard or a low-code app, you can now apply the *CallToAction* style to a button.
+
+When you apply this style to a button
+
+- the background color of the button will be the color of the app,
+- the color of the text on the button will be white, and
+- the button will have a shadow.
+
+To set the style of a button in an interactive Automation script, set the *Style* property of the button's *UIBlockDefinition* to the name of the style. All supported styles are available via `Style.Button`.
+
+Alternatively, you can also pass a button style directly to the `AppendButton` method on an `UIBuilder` object.
+
+> [!NOTE]
+>
+> - Up to now, `StaticText` blocks already supported a number of styles. Those styles are now also available via `Style.Text`: *Title1*, *Title2* and *Title3*.
+> - The *CallToAction* style will only be applied in interactive Automation scripts launched from a web app. It will not be applied in interactive Automation scripts launched from Cube.
 
 ## Other features
 
@@ -102,27 +127,6 @@ Please note the following:
 > [!TIP]
 > See also: [Visual Overview: Session variable YAxisResources now supports filters to pass exposers](xref:Cube_Feature_Release_10.3.1#visual-overview-session-variable-yaxisresources-now-supports-filters-to-pass-exposers-id_34857)
 
-#### Interactive Automation scripts: New button style 'CallToAction' [ID_34904]
-
-<!-- MR 10.4.0 - FR 10.3.1 -->
-
-In an interactive Automation script launched from a dashboard or a low-code app, you can now apply the *CallToAction* style to a button.
-
-When you apply this style to a button
-
-- the background color of the button will be the color of the app,
-- the color of the text on the button will be white, and
-- the button will have a shadow.
-
-To set the style of a button in an interactive Automation script, set the *Style* property of the button's *UIBlockDefinition* to the name of the style. All supported styles are available via `Style.Button`.
-
-Alternatively, you can also pass a button style directly to the `AppendButton` method on an `UIBuilder` object.
-
-> [!NOTE]
->
-> - Up to now, `StaticText` blocks already supported a number of styles. Those styles are now also available via `Style.Text`: *Title1*, *Title2* and *Title3*.
-> - The *CallToAction* style will only be applied in interactive Automation scripts launched from a web app. It will not be applied in interactive Automation scripts launched from Cube.
-
 ## Changes
 
 ### Enhancements
@@ -182,12 +186,6 @@ Web apps now support trending of string parameters and exceptions.
 <!-- MR 10.3.0 - FR 10.3.1 -->
 
 Because of a number of enhancements, overall performance has increased when retrieving DomInstances that have a DomBehaviorDefinition.
-
-#### Dashboards app & low-code apps: Icon component [ID_34867]
-
-<!-- MR 10.4.0 - FR 10.3.1 -->
-
-The new icon component allows you to display an icon on a dashboard or a low-code app.
 
 #### SLAnalytics: Enhanced automatic evaluation of trend predictions [ID_34901]
 
