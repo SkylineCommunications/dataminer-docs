@@ -9,7 +9,7 @@ This component can be used to display a trend graph.
 > [!NOTE]
 >
 > - From DataMiner 10.0.11 onwards, if this type of component is added, the time span displayed by the component is available as a feed in the data pane, so that this can be applied to other components.
-> - From DataMiner 10.2.0 [CU10]/10.3.1 onwards, the Dashboards app also supports the trending of string parameters.
+> - From DataMiner 10.2.0 [CU10]/10.3.1 onwards, this component also supports line graphs for string parameters.
 
 ## Configuration
 
