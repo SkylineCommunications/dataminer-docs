@@ -15,7 +15,7 @@ If you are viewing a trend graph for a single parameter, and it contains pattern
 > - Pattern matching can only be performed on trended parameters containing numeric values.
 > - If pattern matching is performed on a trend graph showing more than 100,000 data points, an aggregated level of detail will be used to improve performance at the cost of accuracy. If, at the most aggregated level, the number of data points exceeds 100,000 data points, no pattern matching will be performed.
 > - You can enable or disable this feature via *System Center* > *System settings* > *analytics config.*
-> - From DataMiner 10.3.1/10.4.0 onwards, a new setting is available via *System Center* > *System settings* > *analytics config.* > *Maximum memory usage* that allows you to specify the maximum amount of memory that SLAnalytics will use to cache recurring patterns in trend data (in GB). By default, this is set to 2.00 GB.
+> - From DataMiner 10.3.1/10.4.0 onwards, you can also specify the maximum amount of memory that SLAnalytics will use to cache recurring patterns in trend data (in GB). This setting is available via *System Center* > *System settings* > *analytics config.* > *Maximum memory usage*. By default, this is set to 2 GB.
 
 > [!TIP]
 > See also: [Monitoring of trend patterns](xref:Monitoring_of_trend_patterns)
