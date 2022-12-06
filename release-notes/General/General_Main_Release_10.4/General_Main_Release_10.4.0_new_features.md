@@ -7,6 +7,31 @@ uid: General_Main_Release_10.4.0_new_features
 > [!IMPORTANT]
 > We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
 
+### DMS core functionality
+
+#### All DOM objects now have 'LastModified', 'LastModifiedBy', 'CreatedAt' and 'CreatedBy' properties [ID_34980]
+
+<!-- MR 10.4.0 - FR 10.3.2 -->
+
+All DOM objects (DomInstance, DomTemplate, DomDefinition, DomBehaviorDefinition, SectionDefinition and ModuleSettings) will now contain the following additional properties:
+
+- *LastModified*: Date/time (UTC) at which the object was last modified.
+- *LastModifiedBy*: Full username of the user who last modified the object.
+- *CreatedAt*: Date/time (UTC) at which the object was created.
+- *CreatedBy*: Full username of the user who created the object.
+
+> [!NOTE]
+>
+> - *CreatedAt* and *CreatedBy* are automatically populated when the object is created. Any value assigned to these two fields by a user will always be discarded.
+> - *LastModified* and *LastModifiedBy* are automatically updated when the object is updated on the server. Any value assigned to these two fields by a user will always be discarded. When an object is created, these fields will contain the same values as *CreatedAt* and *CreatedBy*.
+> - These four fields are not directly accessible on the object. You first need to cast them to either *ITrackBase* or their individual interfaces (*ITrackLastModified*, *ITrackLastModifiedBy*, *ITrackCreatedAt* and *ITrackCreatedBy*).
+>
+>   `string createdBy = ((ITrackBase) domInstance).CreatedBy;`
+>
+> - These four fields can all be used in a filter.
+> - In the Elasticsearch database, existing data will not contain values for these new fields (except the *LastModified* field for all but *ModuleSettings*).
+> - All four fields are also available in the GQI data source *Object Manager Instances*. The *Last Modified* and *Created At* columns should show the time in the time zone of the browser.
+
 ### DMS web apps
 
 #### Dashboards app & low-code apps: Icon component [ID_34867]
