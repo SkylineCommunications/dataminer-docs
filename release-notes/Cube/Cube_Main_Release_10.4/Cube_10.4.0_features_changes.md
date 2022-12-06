@@ -19,7 +19,7 @@ This setting allows you to specify the maximum amount of memory that SLAnalytics
 
 Default value: 2.00 GB
 
-#### Visual Overview: Session variable YAxisResources now supports filters [ID_34841] [ID_34857]
+#### Visual Overview: Session variable YAxisResources now supports filters [ID_34857]
 
 <!-- MR 10.4.0 - FR 10.3.1 -->
 
@@ -31,6 +31,9 @@ A converter has also been created in the client that will convert a profile para
 
 > [!NOTE]
 > For examples, refer to [YAxisResource session variable examples](xref:YAxisResource_Shape_Data_Examples) in the user guide.
+
+> [!TIP]
+> See also: [Service & Resource Management: Exposers for resource capacities and capabilities](xref:General_Main_Release_10.4.0_new_features#service--resource-management-exposers-for-resource-capacities-and-capabilities-id_34841)
 
 #### Trending - Pattern matching: Colors will now be used to differentiate how matches were detected [ID_34898] [ID_34947]
 

@@ -47,6 +47,61 @@ In the *Authentication* section (formerly known as *User Info* section), you now
 > [!WARNING]
 > Always be extremely careful when using this tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
 
+#### Service & Resource Management: Exposers for resource capacities and capabilities [ID_34841]
+
+<!-- MR 10.4.0 - FR 10.3.1 -->
+
+Exposers have been added for resource capacities and capabilities. These can for example be used as follows:
+
+```csharp
+var helper = new ResourceManagerHelper(engine.SendSLNetSingleResponseMessage);
+
+// Get all resources with a certain discrete option
+var encodingQualityParameterId = Guid.Parse("..."); // GUID of the profile parameter
+FilterElement<Resource> filter = ResourceExposers.Capabilities.DiscreteCapability(encodingQualityParameterId).Contains("UHD");
+var resources = helper.GetResources(filter);
+
+// Get all resources with a certain rangepoint capability
+var frequencyParameterId = Guid.Parse("...");
+filter = ResourceExposers.Capabilities.HasRangePoint(frequencyParameterId, 50);
+resources = helper.GetResources(filter);
+
+// Get all resources with a certain string capability (case-insensitive)
+var locationParameterId = Guid.Parse("...");
+filter = ResourceExposers.Capabilities.StringCapability(locationParameterId).Equal("Berlin");
+filter = ResourceExposers.Capabilities.StringCapability(locationParameterId).Contains("New");
+resources = helper.GetResources(filter);
+
+// Get all resources with a bitrate capacity, with a max value of 100.1 or more
+var bitrateParameterId = Guid.Parse("...");
+filter = ResourceExposers.Capacities.MaxCapacityValue(bitrateParameterId).GreaterThanOrEqual(100.1);
+resources = helper.GetResources(filter);
+```
+
+These are the string representations of the examples above:
+
+| Filter in code | String representation |
+|--|--|
+| `ResourceExposers.Capabilities.DiscreteCapability(encodingQualityParameterId).Contains("UHD");` | `Resource.Capabilities.e551766950f9442da1232d2e0e0f5872[List<String>] contains UHD` |
+| `ResourceExposers.Capabilities.HasRangePoint(frequencyParameterId, 50);` | `(Resource.Capabilities.f0c94ee8ab2444d1866fa2ce5b7a3290_Min[Double] <=50) AND (Resource.Capabilities.f0c94ee8ab2444d1866fa2ce5b7a3290_Max[Double] >=50)` |
+| `ResourceExposers.Capabilities.StringCapability(locationParameterId).Equal("Berlin");` | `Resource.Capabilities.be64ec9a33e843e0a06111690cff0140[String] =='Berlin'` |
+| `ResourceExposers.Capacities.MaxCapacityValue(bitRateParameterId).GreaterThanOrEqual(100.10);` | `Resource.Capacities.8ce08caa5c1f45f4a2f6566cca7754b0[Double] >=100.1` |
+
+Please note the following:
+
+- The capacities and capabilities are exposed as dictionaries, where the key is the ID of the profile parameter (without dashes).
+- A range capability exposes two values: the minimum and maximum of the range. These are exposed as two keys in the dictionary: "[id]_Min" and "[id]_Max".
+- Building the filter in code and calling the *ToString()* method on the *FilterElement* should return a usable string representation of the filter.
+- When you filter on discrete values, use the discrete value itself instead of the display value, as the latter is not stored in the resource.
+- The filter is case sensitive with regard to profile parameter keys.
+- The exposers will filter based on the total capacity configured on the resources. The available capacity at a specific point in time will not be taken into account. The same applies for time-dependent capabilities: the current time-dependent value is not resolved, and the resources will be treated as not having an empty string value for the capability.
+- The exposers will not work reliably if you have the same capacity or capability multiple times on the same resource.
+- The capacity value is exposed as a double (though it is stored as a decimal on the resource), for compatibility with the ElasticSearch database.
+- The following extension methods have been added to easily compose the filters: *HasRangePoint*, *DiscreteCapability*, *StringCapability* and *MaxCapacityValue*.
+
+> [!TIP]
+> See also: [Visual Overview: Session variable YAxisResources now supports filters to pass exposers](xref:Cube_Feature_Release_10.3.1#visual-overview-session-variable-yaxisresources-now-supports-filters-to-pass-exposers-id_34857)
+
 #### Interactive Automation scripts: New button style 'CallToAction' [ID_34904]
 
 <!-- MR 10.4.0 - FR 10.3.1 -->
