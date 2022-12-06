@@ -641,9 +641,19 @@
     - name: PA release notes
       items:
       - name: PA 1.3.0
-        topicUid: PA_1.3.0
+        items:
+        - name: New features and changes
+          topicUid: PA_1.3.0
+        - name: Addendum CU1
+          topicUid: PA_1.3.0_CU1
       - name: PA 1.2.2
-        topicUid: PA_1.2.2
+        items:
+        - name: New features and changes
+          topicUid: PA_1.2.2
+        - name: Addendum CU1
+          topicUid: PA_1.2.2_CU1
+        - name: Addendum CU2
+          topicUid: PA_1.2.2_CU2
       - name: PA 1.2.1
         topicUid: PA_1.2.1
       - name: PA 1.1.2
@@ -655,9 +665,17 @@
     - name: PTP release notes
       items:
       - name: PTP 1.1.3
-        topicUid: PTP_1.1.3
+        items:
+        - name: New features and changes
+          topicUid: PTP_1.1.3
+        - name: Addendum CU1
+          topicUid: PTP_1.1.3_CU1
       - name: PTP 1.1.2
-        topicUid: PTP_1.1.2
+        items:
+        - name: New features and changes
+          topicUid: PTP_1.1.2
+        - name: Addendum CU1
+          topicUid: PTP_1.1.2_CU1
       - name: PTP 1.1.1
         topicUid: PTP_1.1.1
       - name: PTP 1.1.0
