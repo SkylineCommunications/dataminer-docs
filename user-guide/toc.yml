@@ -1032,6 +1032,8 @@
             topicUid: Moving_the_Cassandra_database_to_a_different_disk_drive
           - name: Making Cassandra nodetool accessible remotely
             topicUID: Making_Cassandra_nodetool_accessible_remotely
+          - name: Data replication and consistency configuration
+            topicUid: replication_and_consistency_configuration
         - name: Elasticsearch database
           topicUid: Elasticsearch_database
           items:

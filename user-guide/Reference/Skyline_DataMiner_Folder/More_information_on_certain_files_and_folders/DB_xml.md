@@ -49,6 +49,8 @@ The following configuration is possible for the general database:
 
 - [Enabling TLS on the Cassandra database connection](#enabling-tls-on-the-cassandra-database-connection)
 
+- [Configuring the consistency level of Cassandra in a CassandraCluster database](#configuring-the-consistency-level-of-cassandra-in-a-cassandracluster-database)
+
 - [Example of a general database configuration](#example-of-a-general-database-configuration)
 
 ### Configuring the maintenance settings
@@ -231,6 +233,24 @@ To do so
 > - From DataMiner 10.1.3 onwards TLS 1.0 is supported. From DataMiner 10.2.4/10.2.0-CU1 onwards, TLS 1.0, 1.1 and 1.2 are supported.
 > - When Cassandra is hosted on the local DataMiner server, and DataMiner Failover is active, Cassandra will use TCP port 7001 for TLS encrypted inter-node communication (instead of port 7000). Make sure this port is allowed through the firewall of both Failover agents.
 
+### Configuring the consistency level of Cassandra in a CassandraCluster database
+
+It is possible to configure the **consistency level** of the Cassandra database when using the CassandraCluster database type.
+This is done by stopping the DataMiner agent and setting the attribute **consistencyLevel** to one of the following values:
+
+- One
+- Two
+- Three
+- Quorum
+- All
+- LocalQuorum
+- EachQuorum
+- Serial
+- LocalSerial
+
+The default setting is "Quorum".
+For more information, please see [consistency level](xref:replication_and_consistency_configuration).
+
 ### Example of a general database configuration
 
 The following example illustrates the configuration of a MySQL general database (prior to DataMiner 9.5.6).
@@ -295,7 +315,7 @@ The following example illustrates the configuration of a general database of typ
 
 ```xml
 <DataBases xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.skyline.be/config/db">
- <DataBase active="true" local="true" type="CassandraCluster">
+ <DataBase active="true" local="true" type="CassandraCluster" consistencyLevel="Quorum">
  <DBServer>localhost,10.3.1.100</DBServer>
  <DB>sldmadb</DB>
  <UID>root</UID>
