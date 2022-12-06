@@ -14,14 +14,14 @@ Before you can use any of the SLNetClientTest tool functions, you must first con
 
 1. Indicate how the connection has to be established, in the *Connection Type* section:
 
-   | Select...              | in order to... |
+   | Option                 | Description    |
    |------------------------|----------------|
-   | Autodetect             | connect to the local machine or a remote machine using the method that will be detected automatically. |
-   | gRPC                   | connect to the local machine or a remote machine via the APIGateway service using the GRPCWeb protocol.<br>When you choose this option, you can specify a custom port (default: `443`) and a custom endpoint (default: `/APIGateway`). |
-   | .NET Remoting (legacy) | connect to the local machine or a remote machine using .NET Remoting.<br> When you choose this option, you can specify a custom port (default: `8004`) |
-   | IPC (only local)       | connect to the local machine using IPC. |
+   | Autodetect             | Connects to the local machine or a remote machine using a method that will be detected automatically. |
+   | gRPC                   | Connects to the local machine or a remote machine via the APIGateway service using the GRPCWeb protocol. When you choose this option, you can specify a custom port (default: `443`) and a custom endpoint (default: `/APIGateway`). |
+   | .NET Remoting (legacy) | Connects to the local machine or a remote machine using .NET Remoting. When you choose this option, you can specify a custom port (default: `8004`). |
+   | IPC (only local)       | Connects to the local machine using IPC. |
 
-1. In the *Authentication* section, specify any of the following options if necessary, and then click *Connect*:
+1. In the *Authentication* section, specify one of the following options if necessary, and then click *Connect*:
 
    - Single sign-on
 
