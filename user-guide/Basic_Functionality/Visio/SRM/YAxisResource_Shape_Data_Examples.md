@@ -2,13 +2,16 @@
 uid: YAxisResource_Shape_Data_Examples
 ---
 
-# YAxisResource shape data examples
+# YAxisResource session variable examples
 
-### Examples: filter feature
+> [!TIP]
+> See also: [Passing elements, services, views, or exposers to the YAxisResources session variable](xref:Embedding_a_Resource_Manager_component#passing-elements-services-views-or-exposers-to-the-yaxisresources-session-variable)
 
-In the following examples, a resource exposer is passed, making use of the filter feature:
+### Passing exposers with a filter
 
-- Get all resources from resource 'pool 1' (ID = 709d587d-80a3-456c-ac8d-3d862abee131):
+In the following examples, a resource exposer is passed by means of a filter:
+
+- Get all resources from resource "pool 1" (ID = 709d587d-80a3-456c-ac8d-3d862abee131):
 
   `Filter=(Resource.PoolGUIDs[List<Guid>]  contains 709d587d-80a3-456c-ac8d-3d862abee131)`
 
@@ -32,13 +35,13 @@ In the following examples, a resource exposer is passed, making use of the filte
 
   Exposer code: `ResourceExposers.Description.Contains("my description of my").OR(FunctionResourceExposers.FunctionName.Equal("My Resource Function"))`
 
-- Get all function resources of certain DVE Main element (parent) which are not younger than a day:
+- Get all function resources of certain DVE parent element that are not younger than a day:
 
   `Filter=((Resource.MainDVEDmaID[Int32] == 730) AND (Resource.MainDVEElementID[Int32] ==42) AND (Resource.CreatedAt[DateTime] <11/26/2022 10:50:00))`
 
   `FunctionResourceExposers.MainDVEDmaID.Equal(1).AND(FunctionResourceExposers.MainDVEElementID.Equal(1)).AND(ResourceExposers.CreatedAt.GreaterThanOrEqual(now.Subtract(TimeSpan.FromDays(1))).NOT())`
 
-- Get all resources that have a specific capacity, which is less than 500.000:
+- Get all resources that have a specific capacity, which is less than 500,000:
 
   `Filter=(Resource.Capacities.f8aee157376b48789a71cb4c6b500d39[Double] <500000)`
 
@@ -62,18 +65,18 @@ In the following examples, a resource exposer is passed, making use of the filte
 
   Exposer code: `ResourceExposers.Capabilities.StringCapability(capabilityTextParam.ID).Contains("CAPAB")`
 
-### Examples: filter feature and client converter
+### Passing exposers with a filter and converter
 
-In the following examples, a resource exposer is passed, making use of the filter feature and the client converter:
+In the following examples, a resource exposer is passed by means of a filter and profile parameter conversion:
 
-- Get all resources that have capability "myCapabilityNumberDiscreteParam" which has discrete raw value "1":
+- Get all resources that have capability "myCapabilityNumberDiscreteParam", which has discrete raw value "1":
 
   `Filter=(Resource.Capabilities.[ProfileParameter:myCapabilityNumberDiscreteParam,ID][List<string>] contains '1')`
 
-- Get all resources that have capability "myCapabilityNumberDiscreteParam" which has discrete raw value "1" AND have capability "myCapabilityTextDiscreteParam" which has discrete raw value  "A 1":
+- Get all resources that have capability "myCapabilityNumberDiscreteParam", which has discrete raw value "1", AND have capability "myCapabilityTextDiscreteParam", which has discrete raw value "A 1":
 
   `Filter=(Resource.Capabilities.[ProfileParameter:myCapabilityNumberDiscreteParam,ID][List<string>] contains '1' AND Resource.Capabilities.[ProfileParameter:myCapabilityTextDiscreteParam,ID][List<string>] contains 'A 1')`
 
-- Get all resources that have capability "myCapabilityNumberParam" which has range option 25 AND have capability "MyCapabilityTextParam" which is text value 'CAPA':
+- Get all resources that have capability "myCapabilityNumberParam", which has range option 25, AND have capability "MyCapabilityTextParam", which has the text value "CAPA":
 
   `Filter=((Resource.Capabilities.[ProfileParameter:myCapabilityNumberParam,ID]_Min[Double] <= 25) AND (Resource.Capabilities.[ProfileParameter:myCapabilityNumberParam,ID]_Max[Double] >= 25) AND (Resource.Capabilities.[ProfileParameter:MyCapabilityTextParam,ID][string] == 'CAPA'))`

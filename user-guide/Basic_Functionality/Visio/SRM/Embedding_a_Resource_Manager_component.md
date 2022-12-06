@@ -342,33 +342,34 @@ To also show resources for elements in child views, in the **ComponentOptions** 
 
 ##### Passing exposers
 
-From DataMiner 10.3.1/10.4.0 onwards, you can pass resource exposers as a filter by object ID.
-
-This enables a new filter option that can be used to show the corresponding resource bands on the timeline. Using a filter which results in less than 100 resources is recommended to avoid delay while loading the bands.
+From DataMiner 10.3.1/10.4.0 onwards, you can pass resource exposers as a filter by object ID, by using the "filter" option. you can use this to show the corresponding resource bands on the timeline.
 
 > [!TIP]
-> See also: [Filter feature examples](xref:YAxisResource_Shape_Data_Examples#examples-filter-feature)
+> See also: [YAxisResource session variable examples](xref:YAxisResource_Shape_Data_Examples#passing-exposers-with-a-filter)
 
-A converter has been created in the client which will convert a profile parameter name to the ID of the found object. For this, the format [ProfileParameter:xxx,ID] should be used, replacing 'xxx' with the name of the capacity/capability profile parameter.
+> [!NOTE]
+> We recommend using a filter that results in less than 100 resources to avoid a possible delay while loading the bands.
 
-The profile parameter keys should be represented with the number format. For example:
+You can also have a profile parameter name converted to the ID of the found object, using the format [ProfileParameter:xxx,ID], where "xxx" is replaced with the name of the capacity/capability profile parameter.
+
+The profile parameter keys should be represented with the **number format**. For example:
 
 - Default: d248b04f-2253-41c6-a92a-e12768fe2b20
 - Number: d248b04f225341c6a92ae12768fe2b20
 
-Do not use braces or parentheses. For example:
+Do **not** use braces or parentheses. For example:
 
 - {d248b04f-2253-41c6-a92a-e12768fe2b20}
 - (d248b04f-2253-41c6-a92a-e12768fe2b20)
-
-> [!TIP]
-> For more information, see [Microsoft's Guid.ToString Method](https://learn.microsoft.com/en-us/dotnet/api/system.guid.tostring?view=netframework-4.8).
 
 > [!NOTE]
 > The server-side filter is case sensitive with regard to profile parameter keys.
 
 > [!TIP]
-> See also: [Client converter examples](xref:YAxisResource_Shape_Data_Examples#examples-filter-feature)
+> See also:
+>
+> - [YAxisResource session variable examples](xref:YAxisResource_Shape_Data_Examples#passing-exposers-with-a-filter-and-converter)
+> - [Microsoft's Guid.ToString Method](https://learn.microsoft.com/en-us/dotnet/api/system.guid.tostring?view=netframework-4.8)
 
 #### Specifying custom bands on the timeline
 
