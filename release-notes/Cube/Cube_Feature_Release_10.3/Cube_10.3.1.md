@@ -97,6 +97,12 @@ For example, in case of HTTP communication, there will now be extra levels for s
 
 **only in case of a response*
 
+#### Bookings module: Navigation panel has been improved and renamed to 'settings' panel [ID_34840]
+
+<!-- MR 10.3.0 - FR 10.3.1 Also see Fixes for bug fix section-->
+
+The *Navigation* panel has been improved and renamed to *Settings* panel.
+
 #### Alarm Console: A notice will now appear when resources are being migrated from XML to Elasticsearch [ID_34845]
 
 <!-- MR 10.3.0 - FR 10.3.1 -->
@@ -140,13 +146,11 @@ A number of enhancements have been made to the parameter relationship feature. W
 
 When you had specified a preset in a shape that contained a Spectrum Analysis component, the preset would incorrectly not be loaded when you opened the visual overview in Cube.
 
-#### Bookings app: Columns of type 'Date' would not get updated when you changed the time zone [ID_34840]
+#### Bookings module: Columns of type 'Date' would not get updated when you changed the time zone [ID_34840]
 
-<!-- MR 10.3.0 - FR 10.3.1 -->
+<!-- MR 10.3.0 - FR 10.3.1 Also see enhancements-->
 
 When, in the *Navigation* panel of the *Bookings* app, you selected another time zone, columns of type `Date` would incorrectly not get updated.
-
-Also, the *Navigation* panel has been improved and renamed to *Settings* panel.
 
 #### Trending - Pattern matching: Trend graph would no longer show the matches for the displayed parameter after editing a tag [ID_34870]
 
