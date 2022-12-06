@@ -4,7 +4,7 @@ uid: Amazon_Keyspaces_Service
 
 # Amazon Keyspaces Service
 
-From DataMiner 10.3.0 [CU0]/10.3.1 onwards, it is possible to use the Amazon Keyspaces Service on AWS.
+From DataMiner 10.3.0 [CU0]/10.3.1 onwards, it is possible to use the Amazon Keyspaces Service on AWS. You can use this as an alternative for a Cassandra Cluster setup (see [Supported system data storage architectures](xref:Supported_system_data_storage_architectures).
 
 ## Configuring TLS
 
