@@ -26,7 +26,9 @@ Before you can use any of the SLNetClientTest tool functions, you must first con
    - Single sign-on
 
      > [!NOTE]
-     > External authentication not yet supported.
+     >
+     > - You will be logged on with your current Windows user account.
+     > - External authentication not yet supported.
 
    - Explicit credentials (with *Force Authenticate Local User* option)
 
