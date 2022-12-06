@@ -19,6 +19,19 @@ This setting allows you to specify the maximum amount of memory that SLAnalytics
 
 Default value: 2.00 GB
 
+#### Visual Overview: Session variable YAxisResources now supports filters [ID_34841] [ID_34857]
+
+<!-- MR 10.4.0 - FR 10.3.1 -->
+
+From now on, you can pass resource exposers as a filter to the *YAxisResources* session variable in order to show the corresponding resource bands.
+
+Using a filter that results in less than 100 resources is recommended to avoid delay while loading the bands.
+
+A converter has also been created in the client that will convert a profile parameter name to the ID of the found object. For this, the format [ProfileParameter:xxx,ID] should be used, replacing "xxx" with the name of the capacity/capability profile parameter.
+
+> [!NOTE]
+> For examples, refer to [YAxisResource session variable examples](xref:YAxisResource_Shape_Data_Examples) in the user guide.
+
 #### Trending - Pattern matching: Colors will now be used to differentiate how matches were detected [ID_34898] [ID_34947]
 
 <!-- MR 10.4.0 - FR 10.3.2 -->
