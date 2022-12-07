@@ -14,3 +14,7 @@ uid: ClassLibrary_Range_1.3
 A number of IDmsColumn methods have been marked obsolete. They have now been replaced by new methods in which a KeyType will indicate whether a Primary Key or a Display Key is being used.
 
 Also, an overload method for SetValue has been added to IDmsColumn to specify which KeyType is being used.
+
+### 1.3.0.2
+
+An Interface containing logic with regard to 'interface utilization calculations' and 'interface counters discontinuity' has been added.
