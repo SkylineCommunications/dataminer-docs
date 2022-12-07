@@ -18,12 +18,14 @@ DMAs can be distributed across the operational environment to increase the overa
 
 Depending on the application, licensing is available as **server-based licenses**, i.e.one license per DMA in the DataMiner System, and system-wide **volume-based licenses**, irrespective of the number of DMAs need.
 
+
 | Application | License | Available capacity tiers |
 |--|--|--|
-| Management of system **core processing** infrastructure.<br>From a handful to several thousands of objects. | Standard DataMiner Agent, Server-based | 5, 10, 25, 50, 100, 250, 500, 1000 Managed Objects |
+| Management of system **core processing** infrastructure.<br>From a handful to several thousands of objects. | Standard DataMiner Agent, Server-based | 5, 10, 25, 50, 100, 250 and, for approved applications, 500, 1000 Managed Objects |
 | Management of high-volume **distribution infrastructure** objects.<br>From 1,000 up to several 100s of thousands of objects. | System Volume Equipment (SVE), Volume-based | Starting from a volume of 1000 Managed Objects, and then onwards in multiples of 5,000 up to 50,000 Managed Objects capacity licenses. |
 | Management of high-volume **service-delivery endpoints**.<br>From 25,000 up to several millions of endpoints. | Experience and Performance Management, Volume-based | 25K, 50K, 100K, 250K, 500K, 1000K service-delivery endpoints. |
 | Local Management of **remote assets**.<br>From 5 to 50 objects per remote location. | DataMiner Probe, Server-based | 5, 10, 25, 50 Managed Objects |
+
 
 > [!IMPORTANT]
 > All volume-based licenses are cumulative undividable capacity packages. For example, to manage 17,000 objects you can either buy one 20K capacity license or one 15K and two 1K capacity licenses.
