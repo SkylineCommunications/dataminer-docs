@@ -11,3 +11,4 @@ In this section:
 - <xref:ConnectionsWebSocketsConnectionStatus>
 - <xref:ConnectionsWebSocketsCommunication>
 - <xref:ConnectionsWebSocketsDynamicIp>
+- <xref:ConnectionsWebSocketsUseCases>

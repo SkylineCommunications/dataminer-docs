@@ -373,6 +373,17 @@
           topicUid: ConnectionsWebSocketsCommunication
         - name: Dynamically changing the WebSocket IP and port
           topicUid: ConnectionsWebSocketsDynamicIp
+        - name: WebSocket use cases
+          topicUid: ConnectionsWebSocketsUseCases
+          items:
+          - name: Normal WebSocket connection
+            topicUID: ConnectionsWebSocketsUseCase1
+          - name: WebSocket connection with dynamic IP
+            topicUID: ConnectionsWebSocketsUseCase2
+          - name: WebSocket connection with custom handshake
+            topicUID: ConnectionsWebSocketsUseCase3
+          - name: WebSocket connection with custom handshake and dynamic IP
+            topicUID: ConnectionsWebSocketsUseCase4
       - name: Ping group
         topicUid: ConnectionsPingGroup
       - name: Service
