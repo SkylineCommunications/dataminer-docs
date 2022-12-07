@@ -66,7 +66,7 @@ graph TD
     12-->|No, there are issues.|12n{{Is the SLDataGateway process leaking?<br>Check trending in Microsoft Platform element.}}:::Blue
     12n-->|Yes|13[To SLDataGateway flowchart]:::Gray
     12n-->|No|13z([Problem solved]):::DarkBlue
-    click 13 "https://docs.dataminer.services/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Process_Identification/Database%20processes/Troubleshooting_SLDataGateway_exe.html" "SLDataGateway Flowchart"
+    click 13 "https://docs.dataminer.services/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Process_Identification/Database_processes/Troubleshooting_SLDataGateway_exe.html" "SLDataGateway Flowchart"
     click 7 "https://docs.dataminer.services/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Cassandra/Troubleshooting_Cassandra_Nodetool_Checks.html" "nodetool"
     classDef info fill:#11628F,stroke:#000070,stroke-width:0px, color:#FFF;
     classDef clickable fill:#ABDCFF,stroke:#00517E,stroke-width:0.25px, color:#00406D;

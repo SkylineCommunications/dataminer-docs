@@ -2852,8 +2852,6 @@
                   items:
                     - name: Troubleshooting - SLNet.exe 
                       topicUID: Troubleshooting_SLNet_exe
-                    - name: Troubleshooting - SLNetComService.exe
-                      topicUID: Troubleshooting_SLNetComService_exe
                     - name: Troubleshooting - SLDMS.exe
                       topicUID: Troubleshooting_SLDMS_exe
                 - name: Troubleshooting - Polling processes
@@ -2862,7 +2860,7 @@
                     - name: Troubleshooting - SLPort.exe
                       topicUID: Troubleshooting_SLPort_exe
                     - name: Troubleshooting - SLSNMPManager.exe
-                      topicUID: Troubleshooting_SLSNMPManager_ex
+                      topicUID: Troubleshooting_SLSNMPManager_exe
                 - name: Troubleshooting - Logging processes
                   topicUid: Troubleshooting_Logging_Processes
                   items:
@@ -2885,8 +2883,6 @@
                       topicUID: Troubleshooting_SLAnalytics_exe
                     - name: Troubleshooting - SLHelper.exe
                       topicUID: Troubleshooting_SLHelper_exe
-                    - name: Troubleshooting - SLBrain.exe
-                      topicUID: Troubleshooting_SLBrain_exe
                     - name: Troubleshooting - SLScheduler.exe
                       topicUID: Troubleshooting_SLScheduler_exe
             - name: Troubleshooting - identify per module
