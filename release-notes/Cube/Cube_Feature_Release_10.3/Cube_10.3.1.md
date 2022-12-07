@@ -12,10 +12,6 @@ uid: Cube_Feature_Release_10.3.1
 
 ## Highlights
 
-*No highlights have been selected for this release yet*
-
-## Other features
-
 #### System Center - Analytics config: New Pattern Matching setting 'Maximum memory usage' [ID_34803]
 
 <!-- MR 10.4.0 - FR 10.3.1 -->
@@ -25,6 +21,22 @@ In the *System settings > Analytics config* section of *System Center*, you can 
 This setting allows you to specify the maximum amount of memory that SLAnalytics will use to cache recurring patterns in trend data (in GB).
 
 Default value: 2.00 GB
+
+#### Visual Overview: New placeholders can now be added to a 'ShapeGrouping' shape [ID_34974]
+
+<!-- MR 10.4.0 - FR 10.3.1 -->
+
+Up to now, when you enabled grouping of dynamically positioned shapes, you were able to display the number of shapes that were grouped into a single group shape by adding an asterisk ("\*") in the *ShapeGrouping* shape.
+
+From now on, you can also add the following placeholders in the *ShapeGrouping* shape:
+
+- Add `[GroupValue]` to make the shape display the value that is specified in the *GroupBy* shape data field of the first child shape in the group.
+
+  If this *GroupBy* value contains multiple column parameters and/or properties, they will be separated by commas.
+
+- Add `[Count]` to make the shape display the number of child shapes in the group (similar to adding an asterisk).
+
+## Other features
 
 #### Visual Overview: Session variable YAxisResources now supports filters to pass exposers [ID_34857]
 
@@ -56,20 +68,6 @@ Examples:
 ChildrenSort="Property|property=Start,asc"
 ChildrenSort="Property|property=End,desc"
 ```
-
-#### Visual Overview: New placeholders can now be added to a 'ShapeGrouping' shape [ID_34974]
-
-<!-- MR 10.4.0 - FR 10.3.1 -->
-
-Up to now, when you enabled grouping of dynamically positioned shapes, you were able to display the number of shapes that were grouped into a single group shape by adding an asterisk ("\*") in the *ShapeGrouping* shape.
-
-From now on, you can also add the following placeholders in the *ShapeGrouping* shape:
-
-- Add `[GroupValue]` to make the shape display the value that is specified in the *GroupBy* shape data field of the first child shape in the group.
-
-  If this *GroupBy* value contains multiple column parameters and/or properties, they will be separated by commas.
-
-- Add `[Count]` to make the shape display the number of child shapes in the group (similar to adding an asterisk).
 
 ## Changes
 
