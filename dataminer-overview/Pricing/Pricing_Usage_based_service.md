@@ -78,5 +78,5 @@ Initial MUA: 200 credits<br>Start Date: November 1, 2022<br>Renewal Date: Novemb
 
 MUA increased to 250 credits on August 1, 2023
 
-- Billing on August 1, 2023: 50 credits x current credit rate x 12 months (i.e. paid until August 1, 2024)
+- Billing on August 1, 2023: 50 credits x original credit rate x 12 months (i.e. paid until August 1, 2024)
 - Billing on November 1, 2023 (i.e. Renewal Date): 200 credits x current credit rate x 12 months  +  50 credits x current credit rate x 4 months
