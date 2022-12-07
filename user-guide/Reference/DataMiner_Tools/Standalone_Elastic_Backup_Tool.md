@@ -90,3 +90,4 @@ To restore a backup/snapshot, use the following arguments:
 > - We recommend that you disable security when restoring a backup with security enabled. To do so, comment the security setting in the *.yaml* file.
 > - It is only possible to restore indices that do not exist yet. Therefore, in most cases, you will have to delete all data from all nodes before restoring a backup.
 > - Do not restore a backup while DataMiner is online.
+> - You can list the existing snapshots to get the snapshot name to restore by running a query on Kibana DevTools such as 'GET /snapshot/my_repository'. For more information, see [Get a list of available snapshots](https://www.elastic.co/guide/en/elasticsearch/reference/current/snapshots-restore-snapshot.html#get-snapshot-list)
