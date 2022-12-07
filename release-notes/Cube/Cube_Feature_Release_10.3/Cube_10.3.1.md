@@ -45,7 +45,7 @@ ChildrenSort="Property|property=End,desc"
 
 <!-- MR 10.4.0 - FR 10.3.1 -->
 
-When configuring a Visio drawing, users can now enter the placeholder "[GroupValue]" in the *ShapeGrouping* shape to display the parameter value of the shape data *GroupBy* of the first child of the group. If the *GroupBy* value has multiple column parameters or properties, these will be separated by commas.
+When configuring a Visio drawing, users can now enter the placeholder "[GroupValue]" in the *ShapeGrouping* shape data to display the parameter value of the shape data *GroupBy* of the first child of the group. If the *GroupBy* value has multiple column parameters or properties, these will be separated by commas.
 
 Users can also use the placeholder "[Count]" from now onwards, to display the number of children in a group of dynamically positioned shapes.
 
