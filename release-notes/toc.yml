@@ -632,6 +632,8 @@
         topicUid: IDP_1.0.0
     - name: MbgNMS release notes
       items:
+      - name: MbgNMS 1.2.0
+        topicUID: MbgNMS_1.2.0
       - name: MbgNMS 1.1.1
         topicUid: MbgNMS_1.1.1
       - name: MbgNMS 1.1.0
