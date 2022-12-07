@@ -13,7 +13,7 @@ uid: Troubleshooting_Process_Identification
 |--|--|
 | [SLElement.exe](xref:Troubleshooting_SLElement_exe) | Displays parameters and alarms. |
 | [SLDataMiner.exe](xref:Troubleshooting_SLDataMiner_exe) | General DataMiner functionality, e.g. start/stopping elements, checking licenses, etc. |
-| [SLProtocol.exe](xref:Troubleshooting_SLProtocol_exe) | Interprets protocols (i.e. drivers/connectors). |
+| SLProtocol.exe | Interprets protocols (i.e. drivers/connectors). |
 
 ## Communication processes
 

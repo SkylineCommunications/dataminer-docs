@@ -2844,8 +2844,6 @@
                       topicUID: Troubleshooting_SLElement_exe
                     - name: Troubleshooting - SLDataMiner.exe
                       topicUID: Troubleshooting_SLDataMiner_exe
-                    - name: Troubleshooting - SLProtocol.exe
-                      topicUID: Troubleshooting_SLProtocol_exe
                 - name: Troubleshooting - Communication processes
                   items:
                     - name: Troubleshooting - SLNet.exe 
