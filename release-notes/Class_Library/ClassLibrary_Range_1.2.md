@@ -298,3 +298,7 @@ When looping over the *Elements* and requesting the protocol name, it will no lo
 Several IDmsColumn methods have been updated. By default, the software will check by Display Key. If no such key is found, it will then check by Primary Key.
 
 An overload method for SetValue has been added to IDmsColumn to specify which KeyType is being used.
+
+### 1.2.2.8
+
+Added an Interface containing logic regarding 'interface utilization calculations' and 'interface counters discontinuity'.
