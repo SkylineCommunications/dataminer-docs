@@ -2,11 +2,14 @@
 uid: ConnectionsWebSocketsUseCase1
 ---
 
-# Normal WebSocket Connection
+# Normal WebSocket connection
 
-The normal WebSocket connection is used when the connection url/ip address is filled in at the creation of the element. No configuration is needed in the element after startup. It is not possible with this use case to reconnect the connection after a disconnect.
+A normal WebSocket connection is used when the connection URL/IP address is filled in during element creation. No configuration is needed in the element after startup.
 
-> [!NOTE]
-> This use case should not be used!!
->
-> After a disconnection of the WebSocket, the element needs a restart.
+If this WebSocket connection is used, it is not possible to reconnect after a disconnect.
+
+> [!IMPORTANT]
+> Avoid this use case. After a disconnection of the WebSocket, an element restart will be needed to be able to reconnect.
+
+> [!TIP]
+> See also: [WebSocket use cases](xref:ConnectionsWebSocketsUseCases)
