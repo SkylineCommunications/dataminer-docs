@@ -20,7 +20,7 @@ Depending on the application, licensing is available as **server-based licenses*
 
 | Application | License | Available capacity tiers |
 |--|--|--|
-| Management of system **core processing** infrastructure.<br>From a handful to several thousands of objects. | Standard DataMiner Agent, Server-based | 5, 10, 25, 50, 100, 250, 500, 1000 Managed Objects (500 & 1000 only for selected approved applications, ie. management of low-end complexity devices) | 
+| Management of system **core processing** infrastructure.<br>From a handful to several thousands of objects. | Standard DataMiner Agent, Server-based | 5, 10, 25, 50, 100, 250, 500, 1000 Managed Objects (500 & 1000 only for selected approved applications, i.e. management of low-end complexity devices) | 
 | Management of high-volume **distribution infrastructure** objects.<br>From 1,000 up to several 100s of thousands of objects. | System Volume Equipment (SVE), Volume-based | Starting from a volume of 1000 Managed Objects, and then onwards in multiples of 5,000 up to 50,000 Managed Objects capacity licenses. |
 | Management of high-volume **service-delivery endpoints**.<br>From 25,000 up to several millions of endpoints. | Experience and Performance Management, Volume-based | 25K, 50K, 100K, 250K, 500K, 1000K service-delivery endpoints. |
 | Local Management of **remote assets**.<br>From 5 to 50 objects per remote location. | DataMiner Probe, Server-based | 5, 10, 25, 50 Managed Objects |
