@@ -17,4 +17,4 @@ Also, an overload method for SetValue has been added to IDmsColumn to specify wh
 
 ### 1.3.0.2
 
-Added an Interface containing logic regarding 'interface utilization calculations' and 'interface counters discontinuity'.
+An Interface containing logic with regard to 'interface utilization calculations' and 'interface counters discontinuity' has been added.
