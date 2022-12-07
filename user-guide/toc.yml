@@ -2848,6 +2848,15 @@
                   items:
                     - name: Troubleshooting - SLNet.exe 
                       topicUID: Troubleshooting_SLNet_exe
+                      items:
+                        - name: Troubleshooting - SLNet - startup issues
+                          topicUID: Troubleshooting_SLNet_Startup
+                        - name: Troubleshooting - SLNet - correlation engine
+                          topicUID: Troubleshooting_SLNet_Correlation_Engine
+                        - name: Troubleshooting - SLNet - disconnects
+                          topicUID: Troubleshooting_SLNet_Disconnects
+                        - name: Troubleshooting - SLNet - RTEs
+                          topicUID: Troubleshooting_SLNet_RTEs
                     - name: Troubleshooting - SLDMS.exe
                       topicUID: Troubleshooting_SLDMS_exe
                 - name: Troubleshooting - Polling processes
