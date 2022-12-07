@@ -1,5 +1,5 @@
 ---
-uid: Troubleshooting_Identify_Per_Module
+uid: Troubleshooting_Identify_per_Module
 ---
 
 # Troubleshooting - identify per module

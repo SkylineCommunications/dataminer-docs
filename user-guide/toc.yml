@@ -2839,7 +2839,6 @@
               topicUID: Troubleshooting_Process_Identification
               items:
                 - name: Troubleshooting - Main processes
-                  topicUID: Troubleshooting_Main_Processes
                   items:
                     - name: Troubleshooting - SLElement.exe
                       topicUID: Troubleshooting_SLElement_exe
@@ -2848,21 +2847,18 @@
                     - name: Troubleshooting - SLProtocol.exe
                       topicUID: Troubleshooting_SLProtocol_exe
                 - name: Troubleshooting - Communication processes
-                  topicUID: Troubleshooting_Communication_Processes
                   items:
                     - name: Troubleshooting - SLNet.exe 
                       topicUID: Troubleshooting_SLNet_exe
                     - name: Troubleshooting - SLDMS.exe
                       topicUID: Troubleshooting_SLDMS_exe
                 - name: Troubleshooting - Polling processes
-                  topicUID: Troubleshooting_Polling_Processes
                   items:
                     - name: Troubleshooting - SLPort.exe
                       topicUID: Troubleshooting_SLPort_exe
                     - name: Troubleshooting - SLSNMPManager.exe
                       topicUID: Troubleshooting_SLSNMPManager_exe
                 - name: Troubleshooting - Logging processes
-                  topicUid: Troubleshooting_Logging_Processes
                   items:
                     - name: Troubleshooting - SLWatchdog.exe
                       topicUID: Troubleshooting_SLWatchdog_exe
@@ -2873,7 +2869,6 @@
                     - name: Troubleshooting - SLDataGateway.exe
                       topicUID: Troubleshooting_SLDataGateway_exe
                 - name: Troubleshooting - Other processes
-                  topicUID: Troubleshooting_Other_Processes
                   items:
                     - name: Troubleshooting - SLXML.exe
                       topicUID: Troubleshooting_SLXML_exe
