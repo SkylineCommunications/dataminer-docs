@@ -25,7 +25,24 @@ This includes:
 - Continuously benefitting from all DataMiner evolutions available, with regard to the DataMiner functions as well as with regard to the connectors to interface with third-party products.
 - Accessing our professional technical support services to support the operation.
 
-## Subscription terms
+
+## Billing & Metering
+
+### Organization
+
+An Organization is the billing entity and the highest level in the hierarchy in [dataminer.services](https://admin.dataminer.services/), among other things, it's where a company manages  its settings, subscription, and billing preferences. 
+- Multiple DataMiner Systems (DMS) can exist in the same organization, but a DMS can only be associated with one organization.
+- DataMiner Systems in separate organizations are isolated from each other 
+- Metering is done on the organization level and is the sum of the usage across all its DMS.
+- Each organization can have only one active subscription to the usage-based services.
+
+>[!Note]
+>Although it's recommended to have one organization per Company, there is no limit to the number of organizations that can be created under the same Company. This might be useful in these scenarios: test or development accounts, managing multiple concurrent subscriptions, and for large Companies with an Enterprise Agreement with multiple billing entities. 
+
+![Business_Organization2 (1)](https://user-images.githubusercontent.com/60446667/206559645-0c7be84d-7bea-4101-ab6b-30a726b764b9.png)
+
+
+### Usage Terms
 
 | Term      | Definition |
 |-----------|------------|
@@ -35,20 +52,8 @@ This includes:
 | *MUA* | Monthly Utilization Allowance.<br>A fixed number of credits available per month under the subscription. |
 | *Credit Rate* | The credit rate depends on (1) the type of plan (subscription plan or pay-per-use plan), (2) the region and (3) the hosting. As to the latter, it depends whether you opt for a Skyline-hosted solution (i.e. DataMiner as a Service) or a self-hosted infrastructure (on-premises or private Cloud).<br>The price of a credit is protected for the duration of the contract, i.e. 24-month or 36-month subscriptions protect against potential yearly price adjustments. |
 
-### Metering
 
-Metering works in monthly cycles, starting on the first day of each month. MUA is pro-rated for the first and last months.
-
-**Example of a pro-rated calculation:**
-
-MUA: 200 credits<br>Start Date: October 20, 2022<br>Renewal Date: October 19, 2023
-
-- MUA available for the period October 20, 2022 to October 31, 2022 = 200 credits x  12 days / 31 days = 77.4 credits
-- MUA available for the period October 1, 2023 to October 19, 2023 =  200 credits x 19 days / 31 days = 122.6 credits
-
-Metering for *Data collection and control plane service* is calculated as the sum of the maximum number of active Managed Objects (for Managed Objects with 100+ metrics) and Metrics (Managed Objects under 100 metrics) at any given time. For this service metering follows the 95% percentile, i.e. it is calculated as the maximum usage after skipping the peak 5% usage, in practice allowing some room (36h per month) for tests or burst of usage.
-
-### Billing and invoicing
+### Invoicing
 
 | Duration  | Invoicing |
 |-----------|------------|
@@ -59,6 +64,33 @@ Metering for *Data collection and control plane service* is calculated as the su
 At Renewal Date, the subscription will be invoiced yearly, unless replaced by a new contract.
 
 Consumption above the contracted Monthly Utilization Allowance (MUA) is possible, with the additional consumed credits being invoiced monthly, at the then current Pay-per-Use Credit Rate.
+
+
+### Metering Units
+
+| Unit      | Definition | Monthly Metering |
+|-----------|------------|------------------|
+| *Managed Object* | End-points directly or indirectly interfaced by DataMiner. Directly interfaced end-points include data sources, devices and platforms, exposing an interface that allows to interact directly with those end-points. Indirect interfaced end-points include the ones reported through a mediating data source, example of those include Message brokers (like Apache kafka or RabbitMQ), databases or Element and Network Management Systems | maximum number of active or paused managed objects with 100+ metrics | 
+| *Metric* | Each data source exposes a set of metrics per managed object, these are the managed objects' read/read-write parameters, available for either monitoring only or monitoring and control. | sum of all metrics from all managed objects with less than 100 metrics |
+| *Cloud Data Consumption* | Traffic consumed as part of [cloud services](https://docs.dataminer.services/dataminer-overview/DataMiner_Cloud_Platform/Overview_DCP.html#dataminer-cloud-services) | sum of total GB of traffic |
+| *Connector Services* | Use of Skyline developed connectors (also known as DataMiner protocols or interface drivers) made available through the [catalog](https://catalog.dataminer.services/). <br>Connectors developed by the user or other third-party are not counted | sum of used connectors delivered by Skyline |
+| *Script Runs* | every time automation scripts are [triggered](https://docs.dataminer.services/user-guide/Advanced_Modules/Automation_module/Running_Automation_scripts.html). Includes scripts of type: Lifecycle Service Orchestration (LSO), Profile Load Script (PLS), Activities in Process Automation, DOM Instances' state transitions, and User-defined API calls.  | sum of script runs |
+
+
+> [!NOTE] 
+> Metering for *Data collection and control plane service* is calculated as the sum of the maximum number of active Managed Objects (for Managed Objects with 100+ metrics) and Metrics (Managed Objects under 100 metrics) at any given time. For this service metering follows the 95% percentile, i.e. it is calculated as the maximum usage after skipping the peak 5% usage, in practice allowing some room (36h per month) for tests or burst of usage.
+
+### Metering Period
+
+Metering works in monthly cycles, starting on the first day of each month. MUA is pro-rated for the first and last months.
+
+**Example of a pro-rated calculation:**
+
+MUA: 200 credits<br>Start Date: October 20, 2022<br>Renewal Date: October 19, 2023
+
+- MUA available for the period October 20, 2022 to October 31, 2022 = 200 credits x  12 days / 31 days = 77.4 credits
+- MUA available for the period October 1, 2023 to October 19, 2023 =  200 credits x 19 days / 31 days = 122.6 credits
+
 
 ### Cancellation
 
