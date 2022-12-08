@@ -49,7 +49,7 @@ The following configuration is possible for the general database:
 
 - [Enabling TLS on the Cassandra database connection](#enabling-tls-on-the-cassandra-database-connection)
 
-- [Configuring the consistency level of Cassandra in a CassandraCluster database](#configuring-the-consistency-level-of-cassandra-in-a-cassandracluster-database)
+- [Configuring the consistency level of Cassandra in a Cassandra cluster database](#configuring-the-consistency-level-of-cassandra-in-a-cassandra-cluster-database)
 
 - [Example of a general database configuration](#example-of-a-general-database-configuration)
 
@@ -233,23 +233,12 @@ To do so
 > - From DataMiner 10.1.3 onwards TLS 1.0 is supported. From DataMiner 10.2.4/10.2.0-CU1 onwards, TLS 1.0, 1.1 and 1.2 are supported.
 > - When Cassandra is hosted on the local DataMiner server, and DataMiner Failover is active, Cassandra will use TCP port 7001 for TLS encrypted inter-node communication (instead of port 7000). Make sure this port is allowed through the firewall of both Failover agents.
 
-### Configuring the consistency level of Cassandra in a CassandraCluster database
+### Configuring the consistency level of Cassandra in a Cassandra Cluster database
 
-It is possible to configure the **consistency level** of the Cassandra database when using the CassandraCluster database type.
-This is done by stopping the DataMiner agent and setting the attribute **consistencyLevel** to one of the following values:
+If your DMS uses the Cassandra Cluster database type (i.e. one Cassandra cluster for the entire DMS) , you can configure the **consistency level** of the Cassandra database. This is done by means of the **consistencyLevel** attribute. For detailed information, see [Customizing the consistency level of the Cassandra cluster](xref:Migrating_the_general_database_to_a_DMS_Cassandra_cluster#customizing-the-consistency-level-of-the-cassandra-cluster).
 
-- One
-- Two
-- Three
-- Quorum
-- All
-- LocalQuorum
-- EachQuorum
-- Serial
-- LocalSerial
-
-The default setting is "Quorum".
-For more information, please see [consistency level](xref:replication_and_consistency_configuration).
+> [!TIP]
+> See also: [Data replication and consistency configuration](xref:replication_and_consistency_configuration).
 
 ### Example of a general database configuration
 
