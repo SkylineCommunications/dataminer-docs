@@ -2,7 +2,7 @@
 uid: Overview_DCP
 ---
 
-# DataMiner Cloud Platform
+# DataMiner Cloud Services
 
 The DataMiner Cloud Services represent a genuine paradigm shift, offering innovative and game-changing solutions, which support the transition into the emerging ICT media and broadband landscape and empower digital transformation programs.
 
