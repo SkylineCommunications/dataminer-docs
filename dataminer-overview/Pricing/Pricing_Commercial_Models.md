@@ -53,14 +53,14 @@ Usage-based services are charged based on the actual monthly usage of services, 
 
 |         | Perpetual licensing scheme | Usage-based services |
 |---------|----------------------------|----------------------|
-| System capacity | Server-based licenses, each with fixed capacity tiers of managed objects: 5, 10, 25, 50, 100, 250, 500 (for approved applications), 1000. | Volume-based, per managed object or monitored metric per month. Independent from the number of nodes deployed. |
-| Failover | Server-based license | Included (the user can deploy additional nodes for Failover without paying additional fees since billing is based on the active number of managed objects or monitored metrics in a month) |
-| Optional modules | Licensed per node: Correlation and Automation Engines, Dashboards app, Infrastructure Discovery & Provisioning, Spectrum Analysis, and DataMiner Object Models | Not applicable. All optional modules are included. |
-| Automation & orchestration | Based on the volume of concurrent services running (i.e. concurrent bookings). | Based on the volume of script runs. |
-| Connectors | Connector license per different interfaced product | Per connector per month |
+| System capacity | Server-based licenses, each with fixed capacity tiers of managed objects: 5, 10, 25, 50, 100, 250, 500 , 1000. | Volume-based, per managed object or monitored metric per month. Independent from the number of nodes deployed. |
+| Failover | Server-based license | Included. Users can deploy additional nodes for Failover without paying additional fees since billing is based on the active number of managed objects or monitored metrics in a month. |
+| Optional functions | Licensed per node: Correlation and Automation engines, Dashboards app, Low-code Apps, Process Automation, DataMiner Object Models (DOM), Spectrum Analysis, and Infrastructure Discovery & Provisioning | Not applicable. All optional modules are included. |
+| Automation & orchestration | Based on the volume of concurrent services running. | Based on the volume of script runs. |
+| Connectors | Connector license per different, interfaced product | Per connector per month |
 | Sample applications | Included | Included |
-| Cloud services | Tier-based | Usage-based |
-| Support services | Optional annual recurring fee, relative to the value of the deployed Perpetual-Use Licenses. | Included (see [DataMiner Support Plans](https://community.dataminer.services/support-services/) on DataMiner Dojo) |
+| Cloud services | [Tier-based](https://community.dataminer.services/dataminer-cloud-platform-services/) | Usage-based |
+| Support services | Optional annual recurring fee, relative to the value of the deployed Perpetual-Use Licenses. | Included (see [DataMiner Support Plans](https://community.dataminer.services/support-services/)) |
 
 ## Subscription Plan vs Pay-per-Use Plan
 
