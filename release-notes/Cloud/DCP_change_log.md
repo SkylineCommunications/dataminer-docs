@@ -6,7 +6,7 @@ uid: DCP_change_log
 
 The DataMiner Cloud Platform gets updated continuously. This change log can help you trace when specific features and changes have become available.
 
-#### 5 December 2022 - New feature - Remote Log Collection [ID_34875]
+#### 8 December 2022 - New feature - Remote Log Collection [ID_34875]
 
 A new DataMiner Cloud Pack 2.8.2 has been released, which enables the [Remote Log Collection](xref:RemoteLogCollection) feature. The DataMiner Cloud Pack can be found on [DataMiner Dojo](https://community.dataminer.services/downloads/).
 
