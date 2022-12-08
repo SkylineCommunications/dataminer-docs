@@ -474,6 +474,12 @@ When a trend graph displaying multiple parameters showed data that was partly in
 
 When a column select or a column manipulation operator was applied before an aggregation operator, the column select or column manipulation operator would incorrectly be ignored. As a result, all columns would be visible in the *group by node* or columns created by the column manipulation would not be added to the options of the *group by node*.
 
+#### Skyline Device Simulator: Problem when running a proxy simulation [ID_35059]
+
+<!-- MR 10.3.0 [CU0]/10.2.0 [CU10] - FR 10.3.1 -->
+
+In some cases, an error could occur in the Skyline Device Simulator when a proxy simulation was being run.
+
 #### Service & Resource Management: Problem when migrating resources containing properties with keys or values set to null [ID_35067]
 
 <!-- MR 10.3.0 - FR 10.3.1 [CU0] -->

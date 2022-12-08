@@ -898,6 +898,12 @@ When a trend graph displaying multiple parameters showed data that was partly in
 
 When, on a dashboard, you sorted or filtered a table, a button to restore the initial view would incorrectly appear on all tables on that dashboard. Also, when you clicked one of those buttons, they would all disappear. From now on, when you sort or filter a table on a dashboard, a button to restore the initial view will only appear on that particular table.
 
+#### Skyline Device Simulator: Problem when running a proxy simulation [ID_35059]
+
+<!-- MR 10.3.0 [CU0]/10.2.0 [CU10] - FR 10.3.1 -->
+
+In some cases, an error could occur in the Skyline Device Simulator when a proxy simulation was being run.
+
 #### Service & Resource Management: Problem when migrating resources containing properties with keys or values set to null [ID_35067]
 
 <!-- MR 10.3.0 - FR 10.3.1 [CU0] -->
