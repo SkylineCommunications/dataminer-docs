@@ -105,6 +105,16 @@ Because of a number of enhancements, overall performance has increased when load
 
 The *Show the DataMiner TV section* setting has been removed from the *User > Cube* section of the *Settings* window.
 
+#### Port initialization error messages have been improved [ID_34920]
+
+<!-- MR 10.2.0 [CU10] - FR 10.3.1 [CU0] -->
+
+The following port initialization error messages have been improved:
+
+- The log message `InitializePort <n> for Element <x> failed with <y>.` has been replaced by `InitializePort(<n>) for Element <x> failed with <y>.`
+
+- The alarm message `Initializing the communication <n> for <x> failed.` has been replaced by `Initializing the communication of port <n> for <x> failed.`
+
 #### Element errors and notices will now be closed as soon as the element in question is stopped [ID_34927]
 
 <!-- MR 10.1.0 [CU22] / 10.2.0 [CU10] - FR 10.3.1 -->

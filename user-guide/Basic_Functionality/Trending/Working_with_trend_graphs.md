@@ -14,7 +14,7 @@ Whether you access a trend graph from a card or do so from the *Trending* module
 
 - A trend groups pane on the left-hand side (see [Working with trend groups](xref:Working_with_trend_groups)).
 
-- A light bulb icon in the top-right corner when DataMiner finds parameters that are related to the parameters shown in the trend graph (from DataMiner 10.2.12/10.3.0 onwards). Clicking this light bulb icon will allow you to add one or more of those related parameters to the trend graph you are viewing. When you open a trend graph, DataMiner Cube will consult the ModelHost Extension Module to retrieve all parameters related to those shown in the trend graph. When you click the light bulb icon, you will get a list of the ten most important parameters.
+- A light bulb icon in the top-right corner when DataMiner finds parameters that are related to the parameters shown in the trend graph (from DataMiner 10.2.12/10.3.0 onwards). Clicking this light bulb icon will allow you to add one or more of those related parameters to the trend graph you are viewing. When you open a trend graph, DataMiner Cube will consult the *ModelHost* Extension Module to retrieve all parameters related to those shown in the trend graph. When you click the light bulb icon, you will get a list of the ten most important parameters.
 
   > [!NOTE]
   >

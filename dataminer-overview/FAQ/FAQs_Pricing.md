@@ -2,7 +2,7 @@
 uid: FAQs_Pricing
 ---
 
-# Questions related to pricing of usage-based services
+# Questions related to commercial models
 
 - **Can different commercial models exist in the same organization?**
 

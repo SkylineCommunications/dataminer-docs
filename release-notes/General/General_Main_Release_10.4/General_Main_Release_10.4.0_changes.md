@@ -11,7 +11,44 @@ uid: General_Main_Release_10.4.0_changes
 
 ### Enhancements
 
-*No enhancements have been added yet.*
+#### SLAnalytics: Number of 'GetParameterMessages' requests has been optimized [ID_34936]
+
+<!-- MR 10.4.0 - FR 10.3.1 -->
+
+The number of *GetParameterMessages* sent by SLAnalytics in order to check whether a trended table parameter is still active has been optimized.
+
+#### Web apps - Interactive Automation scrips: Fields containing invalid values will now be indicated more clearly [ID_34962]
+
+<!-- MR 10.4.0 - FR 10.3.2 -->
+
+When, in an Automation script launched from a web app, an input field contains an invalid value, the border of that field will turn red. This red border will now be wider in order to be more visible.
+
+#### GQI: Enhanced performance of GQI queries [ID_34977]
+
+<!-- MR 10.4.0 - FR 10.3.2 -->
+
+Because of a number of enhancements, overall performance of GQI queries has increased, especially when those queries contain join operations.
+
+#### GQI: Enhanced performance of GQI queries using the 'Get parameters for elements where' data source [ID_35005]
+
+<!-- MR 10.4.0 - FR 10.3.2 -->
+
+Because of a number of enhancements, overall performance of GQI queries using the *Get parameters for elements where* data source has increased.
+
+#### Dashboards app - Line & area chart: Multiple timespans will now be converted to one single time range [ID_35008]
+
+<!-- MR 10.4.0 - FR 10.3.2 -->
+
+When a line & area chart component is fed a collection of timespans, it will now convert those timespans to one single time range.
+
+For example, when a line & area chart component is fed the following timespans...
+
+- *01/01/2022 9:00:00 > 01/01/2022 10:00:00*
+- *01/01/2022 9:30:00 > 01/01/2022 10:30:00*
+
+... it will convert those timespans into the following time range:
+
+- *01/01/2022 9:00:00 > 01/01/2022 10:30:00*
 
 ### Fixes
 
@@ -34,3 +71,9 @@ From now on, when a GQI query has to retrieve DCF interfaces, it will do so by q
 <!-- MR 10.4.0 - FR 10.3.1 -->
 
 In some cases, Resource Manager could throw a NullReferenceException when *ResourceStorageType* was not specified in the `C:\Skyline DataMiner\ResourceManager\Config.xml` file.
+
+#### GQI: Problem when a column select or a column manipulation operator was applied before an aggregation operator [ID_35009]
+
+<!-- MR 10.4.0 - FR 10.3.1 [CU0] -->
+
+When a column select or a column manipulation operator was applied before an aggregation operator, the column select or column manipulation operator would incorrectly be ignored. As a result, all columns would be visible in the *group by node* or columns created by the column manipulation would not be added to the options of the *group by node*.

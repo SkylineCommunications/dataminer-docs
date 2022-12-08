@@ -6,6 +6,18 @@ uid: DCP_change_log
 
 The DataMiner Cloud Platform gets updated continuously. This change log can help you trace when specific features and changes have become available.
 
+#### 6 December 2022 - Enhancement - Improved audit events for dashboard shares [ID_35087]
+
+When shares are created, accessed, updated, or deleted, the audit events on the Audit page of the DCP Admin app will now include the name of the shared dashboard and a link to the dashboard. To navigate to the dashboard, users will need to have access to the dashboard.
+
+#### 6 December 2022 - Enhancement - Audit events for DMS and organization user CUD actions [ID_35086]
+
+When DMS or organization users are created, updated, or deleted, audit events will now be added on the Audit page of the DCP Admin app.
+
+#### 28 November 2022 - Fix - Proxy issue in DataMiner ArtifactDeployer 1.4.0 [ID_35013]
+
+Because of an issue in the proxy configuration of DataMiner ArtifactDeployer 1.4.0, artifacts could not be deployed. This has been resolved in DataMiner ArtifactDeployer 1.4.1.
+
 #### 18 October 2022 – Enhancement – Notification in case deployment fails because account is not linked [ID_34699]
 
 When a deployment fails because the user does not have a linked account, they will now get a notification that will allow them to correct the situation and retry.
