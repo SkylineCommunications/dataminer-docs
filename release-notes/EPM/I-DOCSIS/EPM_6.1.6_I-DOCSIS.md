@@ -26,6 +26,24 @@ The maps implementation with PNM layer has been moved from the Service Group lay
 
 When the back end was restarted, up to now, provisioning was disabled by default. Now it will be enabled by default. The Provisioning parameter is now also available on the Configuration page in Visual Overview.
 
+#### Support for maps on passive levels [ID_35022]
+
+Maps are now supported on the node segment, node, amplifier, and tap levels of the EPM topology.
+
+#### Multi-threaded timer removed [ID_35034]
+
+The CCAP Platform connectors will no longer use a multi-threaded timer to poll the DOCSIS version of each cable modem.
+
+Because of this, a number of other changes have been implemented:
+
+- The DOCSIS version column has been removed from the Cable Modems table, and aggregating actions based on this column have been moved to the Generic CM Collector connector. The column is now also no longer exported to the cable modem EC file.
+
+- Alarm monitoring is now disabled on all columns of the CM QAM DS Channels table, CM QAM US Channels table, and Cable Modem table.
+
+- QAction 7600, associated with the polling of the DOCSIS version of each cable modem available in the system, has been removed.
+
+- The Threadpool page has been removed along with all its parameters, as these were associated with the multi-threaded timer.
+
 ### Fixes
 
 #### Issues related to alarm in EPM Platform visual overview [ID_34449]

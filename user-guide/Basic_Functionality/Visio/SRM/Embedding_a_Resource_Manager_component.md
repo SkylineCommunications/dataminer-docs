@@ -293,7 +293,7 @@ Example values for the **SetVar** shape data field:
 
   Creates a band for each resource in the system. This is not recommended when there are many resources. If only *YaxisResources* is specified without any additional configuration, this will have the same effect.
 
-#### Passing elements, services, or views to the YAxisResources session variable
+#### Passing elements, services, views, or exposers to the YAxisResources session variable
 
 From DataMiner 10.2.8/10.3.0 onwards, you can pass elements, services, or views to the YAxisResources session variable in order to show the corresponding resource bands.
 
@@ -339,6 +339,37 @@ To also show resources for elements in child views, in the **ComponentOptions** 
 
 > [!NOTE]
 > The corresponding resource bands are not updated automatically in case there is a change to the configuration of the elements.
+
+##### Passing exposers
+
+From DataMiner 10.3.1/10.4.0 onwards, you can pass resource exposers as a filter by object ID, by using the "filter" option. You can use this to show the corresponding resource bands on the timeline.
+
+> [!TIP]
+> See also: [YAxisResource session variable examples](xref:YAxisResource_Shape_Data_Examples#passing-exposers-with-a-filter)
+
+> [!NOTE]
+> We recommend using a filter that results in less than 100 resources to avoid a possible delay while loading the bands.
+
+You can also have a profile parameter name converted to the ID of the found object, using the format [ProfileParameter:xxx,ID], where "xxx" is replaced with the name of the capacity/capability profile parameter.
+
+The profile parameter keys should be represented with the **number format**. For example:
+
+- Default: d248b04f-2253-41c6-a92a-e12768fe2b20
+- Number: d248b04f225341c6a92ae12768fe2b20
+
+Do **not** use braces or parentheses. For example:
+
+- {d248b04f-2253-41c6-a92a-e12768fe2b20}
+- (d248b04f-2253-41c6-a92a-e12768fe2b20)
+
+> [!NOTE]
+> The server-side filter is case sensitive with regard to profile parameter keys.
+
+> [!TIP]
+> See also:
+>
+> - [YAxisResource session variable examples](xref:YAxisResource_Shape_Data_Examples#passing-exposers-with-a-filter-and-converter)
+> - [Microsoft's Guid.ToString Method](https://learn.microsoft.com/en-us/dotnet/api/system.guid.tostring?view=netframework-4.8)
 
 #### Specifying custom bands on the timeline
 

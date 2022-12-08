@@ -587,6 +587,9 @@
           items:
             - name: Embedding a Resource Manager component
               topicUid: Embedding_a_Resource_Manager_component
+              items:
+                - name: YAxisResource session variable examples
+                  topicUID: YAxisResource_Shape_Data_Examples
             - name: Embedding a Service Manager component
               topicUid: Embedding_a_Service_Manager_component
             - name: Embedding a Profile Manager component
@@ -1603,6 +1606,8 @@
                 topicUid: DashboardGenericMap
               - name: Group
                 topicUid: DashboardGroup
+              - name: Icon
+                topicUID: DashboardIcon
               - name: Image
                 topicUid: DashboardImage
               - name: Text
@@ -2533,6 +2538,13 @@
         items:
           - name: Booking Manager user interface
             topicUid: Booking_Manager_user_interface
+            items:
+              - name: Bookings tab
+                topicUid: Booking_Manager_Bookings_tab
+              - name: Config tab
+                topicUid: Booking_Manager_Config_tab
+              - name: Admin tab
+                topicUid: Booking_Manager_Admin_tab
           - name: Interacting with the Booking Manager app using custom Automation scripts
             topicUid: Interacting_with_the_Booking_Manager_app_using_custom_Automation_scripts
             items:
@@ -2542,6 +2554,19 @@
                 topicUid: Frequently_asked_questions_related_to_bookings_and_scripting
           - name: SRM properties for use with the Booking Manager app
             topicUid: SRM_properties_Booking_Manager
+      - name: Advanced configuration
+        items:
+          - name: User interface customization
+            topicUID: SRM_user_interface_customization
+            items:
+              - name: Creating a custom front end for the Booking Manager
+                topicUID: SRM_custom_front_end
+              - name: Using custom scripts instead of the default SRM wizards
+                topicUID: SRM_custom_scripts
+          - name: Advanced configuration for Service Orchestration
+            items:
+              - name: Resources configuration
+                topicUID: Service_Orchestration_resources_advanced
 - name: DataMiner Cloud Platform
   topicUid: Part51CloudPlatform
   items:
@@ -2674,6 +2699,10 @@
           topicUid: Viewing_info_on_shares
     - name: DataMiner Teams bot
       topicUid: DataMiner_Teams_bot
+    - name: Advanced configuration
+      items:
+        - name: Customizing the cloud endpoint configuration
+          topicUID: Custom_cloud_endpoint_configuration
 - name: DataMiner Professional Services
   topicUid: Part52ProfessionalServices
   items:
@@ -2823,6 +2852,8 @@
     - name: Known issues
       topicUID: Known_issues
       items:
+        - name: SLNet issues due to SPI obfuscation
+          topicUID: KI_SLNet_issue_SPI_obfuscation
         - name: Various SLElement issues
           topicUID: KI_SLElement_various_issues
         - name: SLLog issue when large alarm tree is closed
@@ -2887,7 +2918,7 @@
           topicUID: KI_Upgrade_error_api-ms-win-crt-stdio-l1-1-0_dll_is_missing
     - name: Customer DataMiner Reporting (CDMR)
       topicUID: CDMR
-    - name: Remote Log Connection
+    - name: Remote Log Collection
       topicUID: RemoteLogCollection
 - name: Reference
   topicUid: Part7Reference
@@ -2966,6 +2997,8 @@
               topicUid: Working_with_Alerter_pop-up_balloons
             - name: Configuring Alerter
               topicUid: Configuring_Alerter
+        - name: Cassandra Cleaner
+          topicUID: Cassandra_Cleaner
         - name: DataMiner Comparison tool
           topicUID: DataMinerComparisonTool
         - name: DataMiner Size tool
@@ -2997,105 +3030,123 @@
             - name: SLNetClientTest tool diagnostic procedures
               topicUid: SLNetClientTest_tool_diagnostic_procedures
               items:
-                - name: Consulting license information for a DMA
-                  topicUid: SLNetClientTest_consulting_license_info
-                - name: Verifying sync rules
-                  topicUid: SLNetClientTest_verifying_sync_rules
-                - name: Debugging callback timeout errors
-                  topicUid: SLNetClientTest_debugging_callback_timeout_errors
-                - name: Consulting replication information for other DMAs in a DMS
-                  topicUid: SLNetClientTest_consulting_replication_info
-                - name: Inspecting the active replication buffers
-                  topicUid: SLNetClientTest_inspecting_active_replication_buffers
-                - name: Consulting Correlation information
-                  topicUid: SLNetClientTest_consulting_correlation_info
-                - name: Activating verbose Correlation logging
-                  topicUid: SLNetClientTest_activating_verbose_correlation_logging
-                - name: Tracking DMA communication
-                  topicUid: SLNetClientTest_tracking_dma_communication
-                - name: Consulting connection details
-                  topicUid: SLNetClientTest_consulting_connection_details
-                - name: Creating a dump file for a particular process
-                  topicUid: SLNetClientTest_creating_dump_for_process
-                - name: Requesting information about pending incoming events
-                  topicUid: SLNetClientTest_info_pending_incoming_events
-                - name: Exporting data to a CSV file
-                  topicUid: SLNetClientTest_exporting_data_to_csv
-                - name: Retrieving DCF debug information
-                  topicUid: SLNetClientTest_retrieving_dcf_debug_info
-                - name: Checking a hyperlink filter
-                  topicUid: SLNetClientTest_checking_hyperlink_filter
-                - name: Requesting an estimate of the number of rows for a storage type in the database
-                  topicUid: SLNetClientTest_estimate_number_rows_for_storage_type
-                - name: Requesting a list of active merge actions for a protocol
-                  topicUid: SLNetClientTest_active_merge_actions_protocols
-                - name: Retrieving connection info for a particular element
-                  topicUid: SLNetClientTest_retrieving_connection_info
-                - name: Retrieving information on open GQI sessions
-                  topicUid: SLNetClientTest_info_on_open_gqi_sessions
+              - name: Activating verbose Correlation logging
+                topicUID: SLNetClientTest_activating_verbose_correlation_logging
+              - name: Checking a hyperlink filter
+                topicUID: SLNetClientTest_checking_hyperlink_filter
+              - name: Checking whether protocol buffer serialization is enabled
+                topicUID: SLNetClientTest_Checking_whether_protocol_buffer_serialization_is_enabled
+              - name: Consulting connection details
+                topicUID: SLNetClientTest_consulting_connection_details
+              - name: Consulting Correlation information
+                topicUID: SLNetClientTest_consulting_correlation_info
+              - name: Consulting license information for a DMA
+                topicUID: SLNetClientTest_consulting_license_info
+              - name: Consulting replication information for other DMAs in a DMS
+                topicUID: SLNetClientTest_consulting_replication_info
+              - name: Consulting the trend data inspector
+                topicUID: SLNetClientTest_trend_data_inspector
+              - name: Creating a dump file for a particular process
+                topicUID: SLNetClientTest_creating_dump_for_process
+              - name: Debugging callback timeout errors
+                topicUID: SLNetClientTest_debugging_callback_timeout_errors
+              - name: Exporting data to a CSV file
+                topicUID: SLNetClientTest_exporting_data_to_csv
+              - name: Inspecting parameter table rows in SLProtocol and SLElement
+                topicUID: SLNetClientTest_Inspecting_parameter_table_rows
+              - name: Inspecting the active replication buffers
+                topicUID: SLNetClientTest_inspecting_active_replication_buffers
+              - name: Inspecting the contents of a table parameter
+                topicUID: SLNetClientTest_Inspecting_the_contents_of_a_table_parameter
+              - name: Inspecting the parameter notification queue
+                topicUID: SLNetClientTest_Inspecting_the_parameter_notification_queue
+              - name: Inspecting the SLNet event subscriptions
+                topicUID: SLNetClientTest_viewing_connection_details
+              - name: Inspecting the stack sizes in SLNet
+                topicUID: SLNetClientTest_Inspecting_the_stack_sizes_in_SLNet
+              - name: Requesting a list of active merge actions for a protocol
+                topicUID: SLNetClientTest_active_merge_actions_protocols
+              - name: Requesting an estimate of the number of rows for a storage type in the database
+                topicUID: SLNetClientTest_estimate_number_rows_for_storage_type
+              - name: Requesting information about pending incoming events
+                topicUID: SLNetClientTest_info_pending_incoming_events
+              - name: Requesting QAction metrics
+                topicUID: SLNetClientTest_Requesting_QAction_metrics
+              - name: Retrieving connection info for a particular element
+                topicUID: SLNetClientTest_retrieving_connection_info
+              - name: Retrieving DCF debug information
+                topicUID: SLNetClientTest_retrieving_dcf_debug_info
+              - name: Retrieving information on open GQI sessions
+                topicUID: SLNetClientTest_info_on_open_gqi_sessions
+              - name: Tracking DMA communication
+                topicUID: SLNetClientTest_tracking_dma_communication
+              - name: Verifying sync rules
+                topicUID: SLNetClientTest_verifying_sync_rules
+              - name: Viewing SLNet calls being sent
+                topicUID: SLNetClientTest_Viewing_SLNet_calls_being_sent
+              - name: Viewing the connection timeout states of an element
+                topicUID: SLNetClientTest_Viewing_the_connection_timeout_states_of_an_element
             - name: SLNetClientTest tool advanced procedures
               topicUid: SLNetClientTest_tool_advanced_procedures
               items:
-                - name: Editing the connection string between two DataMiner Agents
-                  topicUid: SLNetClientTest_editing_connection_string
-                - name: Configuring SMTP
-                  topicUID: SLNetClientTest_configuring_SMTP
-                - name: Disabling replication buffering
-                  topicUid: SLNetClientTest_disabling_replication_buffering
-                - name: Making DataMiner Cube ignore view updates
-                  topicUid: SLNetClientTest_making_Cube_ignore_view_updates
-                - name: Configuring how long alarm statistics are kept in memory
-                  topicUid: SLNetClientTest_configuring_how_long_alarm_statistics
-                - name: Aborting a running Automation script
-                  topicUid: SLNetClientTest_aborting_running_script
-                - name: Removing references to items that no longer exist
-                  topicUid: SLNetClientTest_removing_references
-                - name: Comparing the views on two Agents in a DMS
-                  topicUid: SLNetClientTest_comparing_views_on_two_dmas
-                - name: Having RCA chains updated by the DCF engine
-                  topicUid: SLNetClientTest_having_rca_chains_updated
-                - name: Increasing the maximum upload size for upgrade packages in a DMS
-                  topicUid: SLNetClientTest_increasing_max_upload
-                - name: Managing base subscriptions
-                  topicUid: SLNetClientTest_managing_base_subscriptions
-                - name: Configuring trend caching
-                  topicUid: SLNetClientTest_configuring_trend_caching
-                - name: Modifying the engine ID of a DMA
-                  topicUid: SLNetClientTest_modifying_engine_id
-                - name: Changing the service template child element and child service limitations
-                  topicUid: SLNetClientTest_changing_service_template_child_limitations
-                - name: Forcing file synchronization between DMAs
-                  topicUid: SLNetClientTest_forcing_file_sync
-                - name: Setting the TTL for database records
-                  topicUid: SLNetClientTest_setting_TTL_database
-                - name: Enabling or disabling protocol buffer serialization
-                  topicUid: SLNetClientTest_protocol_buffer_serialization
-                - name: Managing scheduled tasks for maintenance of a Cassandra database
-                  topicUid: SLNetClientTest_managing_scheduled_tasks_maintenance_Cassandra
-                - name: Creating an enhanced view
-                  topicUid: SLNetClientTest_creating_enhanced_view
-                - name: Generating SMIv2 MIB files
-                  topicUid: SLNetClientTest_generating_mib_files
-                - name: Fine-tuning the CPECollectorHelper API timeout
-                  topicUid: SLNetClientTest_finetuning_CPECollectorHelper
-                - name: Changing the number of records in the protocol cache
-                  topicUid: SLNetClientTest_changing_number_records_protocol_cache
-                - name: Checking or modifying the settings related to a Refused DMA state
-                  topicUid: SLNetClientTest_refused_dma_state
-                - name: Managing trend patterns
-                  topicUid: SLNetClientTest_managing_trend_patterns
-                - name: Fine-tuning NATS settings
-                  topicUid: SLNetClientTest_finetuning_nats_settings
-                - name: Changing the grace period for the SLNetCom Notification thread
-                  topicUid: SLNetClientTest_grace_period_SLNetCom_notification
-                - name: Specifying credentials for a shared backup path for Elasticsearch
-                  topicUid: SLNetClientTest_credentials_shared_backup_Elasticsearch
-                - name: Configuring the frequency of smart baseline calculations
-                  topicUid: SLNetClientTest_configuring_frequency_smart_baseline
-                - name: Disabling automatic NATS configuration
-                  topicUid: SLNetClientTest_disabling_automatic_nats_config
-                - name: Configuring server-side search to include all custom properties
-                  topicUID: SLNetClientTest_including_all_custom_properties
+              - name: Aborting a running Automation script
+                topicUID: SLNetClientTest_aborting_running_script
+              - name: Changing the grace period for the SLNetCom Notification thread
+                topicUID: SLNetClientTest_grace_period_SLNetCom_notification
+              - name: Changing the number of records in the protocol cache
+                topicUID: SLNetClientTest_changing_number_records_protocol_cache
+              - name: Changing the service template child element and child service limitations
+                topicUID: SLNetClientTest_changing_service_template_child_limitations
+              - name: Checking or modifying the settings related to a Refused DMA state
+                topicUID: SLNetClientTest_refused_dma_state
+              - name: Comparing the views on two Agents in a DMS
+                topicUID: SLNetClientTest_comparing_views_on_two_dmas
+              - name: Configuring how long alarm statistics are kept in memory
+                topicUID: SLNetClientTest_configuring_how_long_alarm_statistics
+              - name: Configuring SMTP
+                topicUID: SLNetClientTest_configuring_SMTP
+              - name: Configuring the frequency of smart baseline calculations
+                topicUID: SLNetClientTest_configuring_frequency_smart_baseline
+              - name: Configuring trend caching
+                topicUID: SLNetClientTest_configuring_trend_caching
+              - name: Creating an enhanced view
+                topicUID: SLNetClientTest_creating_enhanced_view
+              - name: Disabling automatic NATS configuration
+                topicUID: SLNetClientTest_disabling_automatic_nats_config
+              - name: Disabling replication buffering
+                topicUID: SLNetClientTest_disabling_replication_buffering
+              - name: Editing the connection string between two DataMiner Agents
+                topicUID: SLNetClientTest_editing_connection_string
+              - name: Enabling or disabling protocol buffer serialization
+                topicUID: SLNetClientTest_protocol_buffer_serialization
+              - name: Fine-tuning NATS settings
+                topicUID: SLNetClientTest_finetuning_nats_settings
+              - name: Fine-tuning the CPECollectorHelper API timeout
+                topicUID: SLNetClientTest_finetuning_CPECollectorHelper
+              - name: Forcing file synchronization between DMAs
+                topicUID: SLNetClientTest_forcing_file_sync
+              - name: Generating SMIv2 MIB files
+                topicUID: SLNetClientTest_generating_mib_files
+              - name: Having RCA chains updated by the DCF engine
+                topicUID: SLNetClientTest_having_rca_chains_updated
+              - name: Increasing the maximum upload size for upgrade packages in a DMS
+                topicUID: SLNetClientTest_increasing_max_upload
+              - name: Making DataMiner Cube ignore view updates
+                topicUID: SLNetClientTest_making_Cube_ignore_view_updates
+              - name: Managing base subscriptions
+                topicUID: SLNetClientTest_managing_base_subscriptions
+              - name: Managing scheduled tasks for maintenance of a Cassandra database
+                topicUID: SLNetClientTest_managing_scheduled_tasks_maintenance_Cassandra
+              - name: Managing trend patterns
+                topicUID: SLNetClientTest_managing_trend_patterns
+              - name: Modifying the engine ID of a DMA
+                topicUID: SLNetClientTest_modifying_engine_id
+              - name: Removing references to items that no longer exist
+                topicUID: SLNetClientTest_removing_references
+              - name: Setting the TTL for database records
+                topicUID: SLNetClientTest_setting_TTL_database
+              - name: Specifying credentials for a shared backup path for Elasticsearch
+                topicUID: SLNetClientTest_credentials_shared_backup_Elasticsearch
         - name: SLOffload tool
           topicUid: SLOffload_tool
         - name: SLSkipAsSourceTool
@@ -3171,6 +3222,13 @@
           topicUid: Offline_demo_license_for_DMA_to_be_installed_by_user
     - name: Soft-launch options
       topicUID: SoftLaunchOptions
+      items: 
+        - name: Activating soft-launch options
+          topicUID: Activating_Soft_Launch_Options
+        - name: Overview of soft-launch options
+          topicUID: Overview_of_Soft_Launch_Options
+        - name: Activating SLProtocol as a 64-bit process
+          topicUID: Activating_SLProtocol_as_a_64_Bit_Process
     - name: DataMiner Extension Modules
       topicUID: DataMinerExtensionModules
     - name: Custom branding
