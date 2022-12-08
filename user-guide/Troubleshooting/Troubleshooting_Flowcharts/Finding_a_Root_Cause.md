@@ -4,8 +4,8 @@ uid: Finding_a_Root_Cause
 
 # Finding a root cause
 
-<div class="mermaid">
-graph TD
+```mermaid
+flowchart TD
     %% Define styles %%
     classDef classTerminal fill:#1e5179,stroke:#1e5179,color:#ffffff,stroke-width:0px;
     classDef classDecision fill:#4baeea,stroke:#4baeea,color:#ffffff,stroke-width:0px;
@@ -21,8 +21,8 @@ graph TD
     identify{{Identify issue per... }}
     DatabaseFlowcharts{{Is it a database problem?}}
     WhichDb{{Which database?}}
-    DMAStartupIssues([To DMA Startup <br>Issues flowchart])
-    critical([To Critical Issues <br>flowchart])
+    DMAStartupIssues([To DMA Startup Issues<br>flowchart])
+    critical([To Critical Issues<br>flowchart])
     ProcessFlowcharts([Process])
     Cassandra([Cassandra])
     %% Connect blocks %%
@@ -47,11 +47,11 @@ graph TD
     class START classTerminal;
     class WhichDb,DatabaseFlowcharts,CheckStartup,CHECK1,identify classDecision;
     class Investigate,Cassandra,DMAStartupIssues,critical,ProcessFlowcharts classExternalRef;
-</div>
+```
 
 ## Examples of critical issues
 
-| **Critical issues** | **Why are these critical?** |
+| Critical issues | Why are these critical? |
 |--|--|
 | RTEs/Runtime Errors | RTEs may inhibit the flow of information in your DMS. |
 | Process crashes | Process crashes may cause interaction of DataMiner internal processes to fail and cause a DataMiner restart. |
@@ -59,7 +59,7 @@ graph TD
 
 ## Identifying the general database
 
-| **DMA state** | **How to identify the database** |
+| DMA state | How to identify the database |
 |--|--|
 | DMA stopped/offline or stuck | **Method A**: Check *C:\Skyline DataMiner\DB.xml*. Check the contents of the "type" tag. If it is empty or if the tag does not exist, it is a MySQL database. <br> **Method B**: Check the name of the database process on the database server or DataMiner server: <br> - prunsrv = Cassandra <br> - ElasticSearch = Elasticsearch <br> - MySQL = MySQL |
 | DMA online | Go to *System Center > Database > General*.|
