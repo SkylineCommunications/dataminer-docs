@@ -43,7 +43,7 @@ Up to now, only accessing a share was logged in the audit events.
 
 #### 27 September 2022 – New feature – DataMiner Teams bot support for custom commands [ID_34518]
 
-If CoreGateway version 2.11.0 or higher and FieldControl version 2.8.1 or higher are installed (included in Cloud Pack version 2.8.0), the DataMiner Teams bot now allows you to display and run custom commands with dynamic user input configured in your cloud-connected DataMiner System.
+If CoreGateway version 2.11.0 or higher and FieldControl version 2.8.1 or higher are installed (included in Cloud Pack version 2.8.2), the DataMiner Teams bot now allows you to display and run custom commands with dynamic user input configured in your cloud-connected DataMiner System.
 
 You can do so using the Teams bot commands *show command \<command name\>*, *show command*, and *run command \<command name\>*.
 
