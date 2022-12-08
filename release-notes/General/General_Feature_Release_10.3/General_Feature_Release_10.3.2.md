@@ -51,6 +51,14 @@ In the Generic Query Interface, a new *Get trend data patterns* data source is n
 
 ### Enhancements
 
+#### SLLogCollector will now first check for default.xml files in the LogConfig folder in the same location as SL_LogCollector.exe [ID_34739]
+
+<!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
+
+Up to now, SLLogCollector expected custom collector configuration files named `default.xml` to always be placed in the `C:\Skyline DataMiner\Tools\SLLogCollector\LogConfigs` folder.
+
+From now on, it will first check the `LogConfig` folder in the same location as `SL_LogCollector.exe`. If that `LogConfig` folder does not exist, if the folder is empty or if the `default.xml` file in that folder cannot be deserialized, it will fall back on the `default.xml` file in the `C:\Skyline DataMiner\Tools\SLLogCollector\LogConfigs` folder.
+
 #### Web apps - Interactive Automation scrips: Fields containing invalid values will now be indicated more clearly [ID_34962]
 
 <!-- MR 10.4.0 - FR 10.3.2 -->
@@ -129,3 +137,9 @@ In some cases, *Card*, *Script*, *Link* and *Popup* actions would no longer work
 <!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
 
 When you ran SLLogCollector via the command line and specified multiple processes for which dumps had to be taken (e.g. `SL_LogCollector.exe -c -d=46436,61652`), it would incorrectly only take a dump of the first process.
+
+#### Automation: Memory leak when using the engine.AddScriptOutput method to pass script output of type string [ID_35119]
+
+<!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
+
+When an engine.AddScriptOutput method was used to pass output data of type string from a script to the application that executed it or from a subscript to the script that executed that subscript, that output data of type string would incorrectly not get cleared from memory.
