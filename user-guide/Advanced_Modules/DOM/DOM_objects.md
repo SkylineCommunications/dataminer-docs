@@ -40,13 +40,13 @@ A DOM definition will then need to be created that contains a link to this secti
 
 From DataMiner 10.3.2/10.4.0 onwards, all DOM objects (including the `ModuleSettings`) contain four properties that reflect who has created/updated the object, and at what time.
 
-- **LastModified** : The moment when the object was last modified, in UTC DateTime format.
+- **LastModified**: The moment when the object was last modified, in UTC DateTime format.
 
-- **LastModifiedBy** : The full username (string) of the user who last modified the object.
+- **LastModifiedBy**: The full username (string) of the user who last modified the object.
 
-- **CreatedAt** : The moment when the object was created, in UTC DateTime format.
+- **CreatedAt**: The moment when the object was created, in UTC DateTime format.
 
-- **CreatedBy** : The full username (string) of the user who created the object.
+- **CreatedBy**: The full username (string) of the user who created the object.
 
 Since these are seen as metadata, they are not immediately accessible on the objects, but require a cast.
 
@@ -64,4 +64,4 @@ var filter = DomInstanceExposers.CreatedBy.Equal("John Doe");
 ```
 
 > [!NOTE]
-> The DOM objects created prior to DataMiner 10.3.2/10.4.0 will not have a value for these fields. However, after upgrading and updating an existing object once, the `LastModified` and `LastModifiedBy` fields will be filled in.
+> The DOM objects created prior to DataMiner 10.3.2/10.4.0 will not have a value for these fields. However, after an existing object is upgraded and updated once, the `LastModified` and `LastModifiedBy` fields will be filled in.
