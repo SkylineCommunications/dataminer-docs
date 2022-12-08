@@ -132,9 +132,3 @@ When an optimized silent booking was created that requested a capacity of zero, 
 #### Fast transport booking not created when edge node had to be auto-selected \[ID_31807\]
 
 When at least one of the edge nodes had to be selected automatically, it could occur that fast transport bookings could not be created.
-
-## Addendum CU1
-
-#### Incorrect contributing booking selected when creating booking based on service profile \[ID_31799\]
-
-When a booking was created based on a service profile and reuse of contributing bookings was enabled, it could occur that an incorrect contributing booking was selected, ignoring the capability set in the profile instance.

@@ -464,6 +464,12 @@ var allResources = resourceManagerHelper.GetResources(new TRUEFilterElement<Reso
 
 Because of a number of enhancements, overall performance has increased when retrieving DomInstances that have a DomBehaviorDefinition.
 
+#### SLAnalytics: Enhanced automatic evaluation of trend predictions [ID_34901]
+
+<!-- MR 10.3.0 - FR 10.3.1 -->
+
+Because of a number of enhancements, the automatic evaluation of trend predictions has improved.
+
 ### Fixes
 
 #### SLAnalytics: Problem with trend prediction [ID_31352]
@@ -885,3 +891,19 @@ When you sorted or filtered a table fed by e.g. a query filter, the table would 
 <!-- MR 10.3.0 - FR 10.3.1 -->
 
 When a trend graph displaying multiple parameters showed data that was partly in the future, in some cases, an error could occur.
+
+#### Dashboards app: Button to restore the initial view would incorrectly appear on all tables after sorting or filtering a table [ID_35003]
+
+<!-- MR 10.3.0 - FR 10.3.2 -->
+
+When, on a dashboard, you sorted or filtered a table, a button to restore the initial view would incorrectly appear on all tables on that dashboard. Also, when you clicked one of those buttons, they would all disappear. From now on, when you sort or filter a table on a dashboard, a button to restore the initial view will only appear on that particular table.
+
+#### Service & Resource Management: Problem when migrating resources containing properties with keys or values set to null [ID_35067]
+
+<!-- MR 10.3.0 - FR 10.3.1 [CU0] -->
+
+When resource data was being migrated to Elasticsearch, the following exception could be thrown when a resource or a resource pool contained properties with keys or values that were set to null.
+
+```txt
+2022/12/01 08:53:59.582|SLNet.exe|ResourceManager|ERR|0|6|System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.ArgumentException: value is not serializable to json
+```

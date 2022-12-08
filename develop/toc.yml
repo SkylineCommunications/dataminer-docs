@@ -373,6 +373,17 @@
           topicUid: ConnectionsWebSocketsCommunication
         - name: Dynamically changing the WebSocket IP and port
           topicUid: ConnectionsWebSocketsDynamicIp
+        - name: WebSocket use cases
+          topicUid: ConnectionsWebSocketsUseCases
+          items:
+          - name: Normal WebSocket connection
+            topicUID: ConnectionsWebSocketsUseCase1
+          - name: WebSocket connection with dynamic IP
+            topicUID: ConnectionsWebSocketsUseCase2
+          - name: WebSocket connection with custom handshake
+            topicUID: ConnectionsWebSocketsUseCase3
+          - name: WebSocket connection with custom handshake and dynamic IP
+            topicUID: ConnectionsWebSocketsUseCase4
       - name: Ping group
         topicUid: ConnectionsPingGroup
       - name: Service
@@ -5255,37 +5266,6 @@
           topicUid: Updating_gitignore_and_Jenkins_file
         - name: Repository types
           topicUid: Repository_types
-    - name: SLNetClientTest
-      topicUid: TOOSLNetClientTest
-      items:
-        - name: Connection
-          topicUid: Connection
-        - name: Protocol pending calls
-          topicUid: Protocol_pending_calls
-        - name: Inspect table content
-          topicUid: Inspect_table_content
-        - name: Parameter table rows
-          topicUid: Parameter_table_rows
-        - name: Stack sizes
-          topicUid: Stack_sizes
-        - name: Parameter notification queue
-          topicUid: Parameter_notification_queue
-        - name: Sync status
-          topicUid: Sync_status
-        - name: Trend data
-          topicUid: Trend_data
-        - name: Request dump
-          topicUid: Request_dump
-        - name: SLNet event subscriptions
-          topicUid: SLNet_event_subscriptions
-        - name: Capturing SLNet calls
-          topicUid: Capturing_SLNet_calls
-        - name: QAction metrics
-          topicUid: QAction_metrics
-        - name: Checking whether protocol buffer serialization is enabled
-          topicUid: Checking_whether_protocol_buffer_serialization_is_enabled
-        - name: Viewing the connection timeout states of an element
-          topicUid: Viewing_the_connection_timeout_states_of_an_element
     - name: SourceTree
       topicUid: TOOSourceTree
       items:

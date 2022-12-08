@@ -236,7 +236,7 @@ To send an HTTP request, you can either execute the session via a timer or via a
     </HTTP>
     ```
 
-Notice the extra header added to the `Headers` element. A header is typically a key/value combination, so in this case we aim add a header to our HTTP request that has as key "X-CMC_PRO_API_KEY" and as value the content of the parameter with ID 3. The purpose of this parameter with ID 3 is to hold the CoinMarketCap API access key value. You need to make sure the CoinMarketCap API access key is properly set in this parameter before sending the request, otherwise you will not authenticate successfully.
+Notice the extra header added to the `Headers` element. A header is typically a key/value combination, so in this case we aim to add a header to our HTTP request that has as key "X-CMC_PRO_API_KEY" and as value the content of the parameter with ID 3. The purpose of this parameter with ID 3 is to hold the CoinMarketCap API access key value. You need to make sure the CoinMarketCap API access key is properly set in this parameter before sending the request; otherwise you will not authenticate successfully.
 
 ### Step 5 – Setting default port settings (optional)
 
@@ -291,7 +291,10 @@ If you open Stream Viewer for the example element, you will see a window like il
 
 ![Stream Viewer example](~/develop/images/StreamViewer_Example.png)
 
-The image above shows an example of a Stream Viewer capture for Group 1. On the left-hand side, all connections and groups are identified. This provides confirmation that a group was executed. In this case, since our group contains an HTTP session, it confirms that the HTTP request was sent. On the right-hand side, you can see the HTTP response with the status code and content. You can see that we've received an HTTP/1.1 200 OK with a reply bearing JSON content.
+The image above shows an example of a Stream Viewer capture for Group 1. On the left-hand side, all connections and groups are identified. This provides confirmation that a group was executed. In this case, since our group contains an HTTP session, it confirms that the HTTP request was sent. On the right-hand side, you can see the HTTP response with the status code and content. You can see that we have received an HTTP/1.1 200 OK with a reply bearing JSON content.
+
+> [!NOTE]
+> From DataMiner 10.1.0 [CU22]/10.2.0 [CU10]/10.3.1 onwards, the Stream Viewer tree view supports more levels. This allows for more detailed information. E.g. in case of HTTP communication, there will be extra levels for sessions, connections, requests/responses, parameters, status codes, and error codes.
 
 ### Step 8 – Processing the Response
 
