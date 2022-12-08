@@ -71,4 +71,4 @@ The current settings structure (with regards to `DomManager`) is as follows:
 
 - There are no license checks when module settings are added.
 
- - [The ITrackBase properties](xref:DOM_objects#itrackbase-properties) are also available on this type.
+- From DataMiner 10.3.2/10.4.0 onwards, the `ModuleSettings` object also has [the *ITrackBase* properties](xref:DOM_objects#itrackbase-properties).

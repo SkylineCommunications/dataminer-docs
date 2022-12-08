@@ -1,70 +1,95 @@
 ---
 uid: DOM_Altering_values_of_a_DomInstance
 ---
-# Altering values of a DomInstance
+# Altering values of a DomInstance - examples
 
-This document contains simple examples of how you can add or update values of a `DomInstance ` linked to `SectionDefinitions` and their `FieldDescriptors`. There are two main ways to alter values. You can either use the extension methods or manually create your own `Sections` and `FieldValues`.
+This page contains simple examples of how you can add or update values of a `DomInstance` linked to `SectionDefinitions` and their `FieldDescriptors`.
 
-These code examples below assume that they are wrapped in an Automation script that has the required using statements and a `DomHelper`. It looks like this:
+There are two main ways to alter values:
 
-```csharp
-using System;
-using System.Linq;
-using System.Collections.Generic;
-using Skyline.DataMiner.Automation;
-using Skyline.DataMiner.Net.Apps.DataMinerObjectModel;
-using Skyline.DataMiner.Net.Apps.Sections.Sections;
-using Skyline.DataMiner.Net.Sections;
+- Use the [extension methods](xref:DOM_Altering_values_of_a_DomInstance#simple-extension-methods).
 
-namespace DOM_Example
-{
-    public class Script
-    {
-        public void Run(Engine engine)
-        {
-            // Create the DomHelper
-            var domHelper = new DomHelper(engine.SendSLNetMessages, "my_module");
+- Manually create your own `Sections` and `FieldValues`.
 
-            // Code examples here
-        }
-    }
-}
-```
+  ```csharp
+  using System;
+  using System.Linq;
+  using System.Collections.Generic;
+  using Skyline.DataMiner.Automation;
+  using Skyline.DataMiner.Net.Apps.DataMinerObjectModel;
+  using Skyline.DataMiner.Net.Apps.Sections.Sections;
+  using Skyline.DataMiner.Net.Sections;
+
+  namespace DOM_Example
+  {
+      public class Script
+      {
+          public void Run(Engine engine)
+          {
+              // Create the DomHelper
+              var domHelper = new DomHelper(engine.SendSLNetMessages, "my_module");
+
+              // Code examples here
+          }
+      }
+  }
+  ```
+
+> [!NOTE]
+> This code example behaves as if wrapped in an Automation script that contains the required using statements and a `DomHelper`.
 
 ## Simple extension methods
 
-The simplest method of altering values of a DomInstance is by using the extension methods provided by the 'SectionUtils' and 'SectionListUtils' classes. There is a method to:
+The simplest method to alter values of a `DomInstance` is by using the extension methods provided by the `SectionUtils` and `SectionListUtils` classes. There is a method to:
 
-- Add/update a value to/of a DomInstance.
-- Get a value from a DomInstance.
+- [Add or update a value](#add-or-update-a-dominstance-value) to/of a `DomInstance`.
 
-These two methods have a variant for a single value and a list value.
-
-There are also two versions available, one where you can pass the full `SectionDefinition` and `FieldDescriptor` objects, and one where you only need to pass the IDs of these objects. The latter has the advantage that you do not need to retrieve these full objects from server, which could improve your script's performance. Do note, however, that the former will automatically [stitch](xref:DomHelper_class#stitching) these full objects into the DomInstance automatically. (Not really necessary in most cases)
+- [Get a value](#get-a-value-from-a-dominstance) from a `DomInstance`.
 
 > [!NOTE]
-> The version of these extension methods that accept the IDs are available since DataMiner feature release version 10.3.2 and main release version 10.4.0.
+> These two methods both have a variant for a single value and a list value.
 
-There is currently no extension method to remove ``FieldValues`` or ``Sections`` from a ``DomInstance``. See the [manual](#manual-altering-sections-and-fieldvalues) chapter on how to do this manually.
+There are two versions available:
 
-**Full list of extension methods:**
+- A version where you can pass the full `SectionDefinition` and `FieldDescriptor` objects (available from DataMiner 10.3.2/10.4.0 onwards).
 
-Add or update:
+  > [!NOTE]
+  > This will automatically [stitch](xref:DomHelper_class#stitching) these full objects into the `DomInstance`. This might not always be necessary.
+
+- A version where you only need to pass the object IDs.
+
+  This has the advantage that you do not need to retrieve the full objects from the server, which could improve your script's performance.
+
+There is currently no extension method to remove `FieldValues` or `Sections` from a `DomInstance`. For more information on how to do this manually, see [Manually altering 'Sections' and 'FieldValues'](#manually-altering-sections-and-fieldvalues).
+
+#### List of extension methods
+
+##### Add or update a 'DomInstance' value
+
 - *void* **AddOrUpdateFieldValue&lt;T&gt;** (SectionDefinition, FieldDescriptor, T)
+
 - *void* **AddOrUpdateFieldValue&lt;T&gt;** (SectionDefinitionID, FieldDescriptorID, T)
+
 - *void* **AddOrUpdateListFieldValue&lt;T&gt;** (SectionDefinition, FieldDescriptor, T)
+
 - *void* **AddOrUpdateListFieldValue&lt;T&gt;** (SectionDefinitionID, FieldDescriptorID, T)
 
-Get:
+##### Get a value from a 'DomInstance'
+
 - *ValueWrapper&lt;T&gt;* **GetFieldValue&lt;T&gt;** (SectionDefinition, FieldDescriptor)
+
 - *ValueWrapper&lt;T&gt;* **GetFieldValue&lt;T&gt;** (SectionDefinitionID, FieldDescriptorID)
+
 - *ListValueWrapper&lt;T&gt;* **GetListFieldValue&lt;T&gt;** (SectionDefinition, FieldDescriptor)
+
 - *ListValueWrapper&lt;T&gt;* **GetListFieldValue&lt;T&gt;** (SectionDefinitionID, FieldDescriptorID)
 
+#### Examples
 
-### Examples
+##### Examples: Add or update a 'DomInstance' value
 
-#### Add & Update
+**Single value variant**:
+
 ```csharp
 // Define the ID of the DomDefinition, the SectionDefinition and the ID for one of its FieldDescriptors.
 var domDefinitionId = new DomDefinitionId(Guid.Parse("f724ff26-877e-4511-80c1-b97d17d80f79"));
@@ -85,7 +110,7 @@ createdDomInstance.AddOrUpdateFieldValue<string>(sectionDefinitionId, fieldDescr
 var updatedDomInstance = domHelper.DomInstances.Update(createdDomInstance);
 ```
 
-We can also add or update list values.
+**List value variant**:
 
 ```csharp
 // Define the ID of a FieldDescriptor that accepts list values.
@@ -98,7 +123,7 @@ updatedDomInstance.AddOrUpdateListFieldValue<double>(sectionDefinitionId, listFi
 domHelper.DomInstances.Update(updatedDomInstance);
 ```
 
-#### Get
+##### Example: Get a value from a 'DomInstance'
 
 ```csharp
 // Retrieve the value from the DomInstance.
@@ -110,12 +135,13 @@ var listValue = domInstance.GetListFieldValue<double>(sectionDefinitionId, listF
 List<double> actualList = listValue.Values;
 ```
 
-
-## Manual altering Sections and FieldValues
+## Manually altering 'Sections' and 'FieldValues'
 
 It is also possible to manually add `Sections` and `FieldValues` to the `DomInstance`. This could be required when you, for example, want to add multiple `Sections` for the same `SectionDefinition`.
 
-### Adding a new Section & FieldValue
+#### Examples
+
+##### Example: adding a new 'Section' and 'FieldValue'
 
 ```csharp
 // Define the ID of the DomDefinition, the SectionDefinition and the ID for one of its FieldDescriptors.
@@ -145,7 +171,7 @@ domInstance.Sections.Add(section);
 var createdDomInstance = domHelper.DomInstances.Create(domInstance);
 ```
 
-### Adding or updating a FieldValue on an existing section
+##### Example: adding or updating a 'FieldValue' on an existing section
 
 ```csharp
 // Find the Section on the DomInstance.
@@ -171,7 +197,7 @@ existingSection.AddOrReplaceFieldValue(newFieldValue);
 domHelper.DomInstances.Update(createdDomInstance);
 ```
 
-### Removing a FieldValue
+##### Example: removing a 'FieldValue'
 
 ```csharp
 // Find the Section on the DomInstance.
@@ -191,7 +217,7 @@ existingSection.RemoveFieldValueById(fieldDescriptorId);
 domHelper.DomInstances.Update(createdDomInstance);
 ```
 
-### Removing a Section
+##### Example: removing a 'Section'
 
 ```csharp
 // Find the Section on the DomInstance.
@@ -209,7 +235,7 @@ createdDomInstance.Sections.Remove(existingSection);
 var updatedInstance = domHelper.DomInstances.Update(createdDomInstance);
 ```
 
-### Retrieving a value
+##### Example: retrieving a single value
 
 ```csharp
 // Find the Section on the DomInstance.
@@ -226,9 +252,9 @@ var valueWrapper = existingFieldValue.Value as ValueWrapper<string>; // Cast to 
 string actualValue = valueWrapper.Value;
 ```
 
-### List values
+##### Example: retrieving a list value
 
-You can also add, update and get list values just like the normal values. Just keep in mind that the 'ValueWrapper' should be replaced with 'ListValueWrapper'.
+Just like normal single values, you can add, update, and get list values. Just keep in mind that the `ValueWrapper` should be replaced with `ListValueWrapper`.
 
 ```csharp
 // Creating a FieldValue with a list.
@@ -245,6 +271,6 @@ List<string> actualValue = valueWrapper.Values;
 
 ## Notes
 
-- Make sure that the value is of the same type as was defined on the associated `FieldDescriptor`. It is recommended to use an IDE where you can easily see the actual type by hovering over it. There could be deceiving situations where an 'int' is assigned but the `FieldDescriptor` expects type 'long'. (Use '236L' instead of '236' in this case)
+- Make sure that the value is of the same type as was defined in the associated `FieldDescriptor`. We recommend that you use an IDE that allows you to easily see the type by hovering over it. Deceiving situations might occur, e.g. an 'int' is assigned but the `FieldDescriptor` expects type 'long' (Use '236L' instead of '236' in this case).
 
-- You can alter the ``DomInstance`` object as much as required. Only when passing the `DomInstance` to the 'Create' or 'Update' method of the helper, will a call be done to the server and will the object be created or updated in the DB.
+- You can alter the `DomInstance` object as much as required. Only when passing the `DomInstance` to the 'Create' or 'Update' method of the helper, will a call be made to the server and will the object be created or updated in the DB.

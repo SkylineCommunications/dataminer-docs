@@ -38,12 +38,15 @@ A DOM definition will then need to be created that contains a link to this secti
 
 ## ITrackBase Properties
 
-All DOM objects (including the `ModuleSettings`) contain four properties that reflect who has created/updated the object and when that happened.
+From DataMiner 10.3.2/10.4.0 onwards, all DOM objects (including the `ModuleSettings`) contain four properties that reflect who has created/updated the object, and at what time.
 
-- **LastModified** : UTC DateTime of when the object has last been modified.
+- **LastModified** : The moment when the object was last modified, in UTC DateTime format.
+
 - **LastModifiedBy** : The full username (string) of the user who last modified the object.
-- **CreatedAt** : UTC DateTime of when the object has been created.
-- **CreatedBy** : The full username (string) of the user who has created the object.
+
+- **CreatedAt** : The moment when the object was created, in UTC DateTime format.
+
+- **CreatedBy** : The full username (string) of the user who created the object.
 
 Since these are seen as metadata, they are not immediately accessible on the objects, but require a cast.
 
@@ -54,12 +57,11 @@ DateTime createdAt = ((ITrackBase) moduleSettings).CreatedAt;
 string createdBy = ((ITrackBase) sectionDefinition).CreatedBy;
 ```
 
-It is also possible to build filters with these fields when reading objects.
+It is also possible to use these fields to build filters when reading objects.
 
 ```csharp
 var filter = DomInstanceExposers.CreatedBy.Equal("John Doe");
 ```
 
 > [!NOTE]
->
-> The DOM objects created prior to DataMiner version 10.3.2 will not have a value for these fields. However, the `LastModified` and `LastModifiedBy` fields on an existing object will be filled in from the moment that specific object has been updated once since the upgrade.
+> The DOM objects created prior to DataMiner 10.3.2/10.4.0 will not have a value for these fields. However, after upgrading and updating an existing object once, the `LastModified` and `LastModifiedBy` fields will be filled in.
