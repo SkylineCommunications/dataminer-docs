@@ -8,7 +8,7 @@ From version 2.10.0 of the [DataMiner CloudGateway](xref:DataMinerExtensionModul
 
 This endpoint is required for some features, such as [Remote Log Collection](xref:RemoteLogCollection). It only allows traffic to *\*.dataminer.services*.
 
-By default, the *CloudEndpointOptions* are configured to use port tcp/5100 as mentioned in [Overview of IP ports used in a DMS](xref:Configuring_the_IP_network_ports#overview-of-ip-ports-used-in-a-dms).
+By default, the *CloudEndpointOptions* are configured to use port TCP 5100 as mentioned in [Overview of IP ports used in a DMS](xref:Configuring_the_IP_network_ports#overview-of-ip-ports-used-in-a-dms).
 
 You can **adjust or completely disable** this endpoint for each DataMiner CloudGateway by overriding the configuration:
 

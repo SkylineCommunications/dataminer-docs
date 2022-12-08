@@ -2674,6 +2674,10 @@
           topicUid: Viewing_info_on_shares
     - name: DataMiner Teams bot
       topicUid: DataMiner_Teams_bot
+    - name: Advanced configuration
+      items:
+        - name: Customizing the cloud endpoint configuration
+          topicUID: Custom_cloud_endpoint_configuration
 - name: DataMiner Professional Services
   topicUid: Part52ProfessionalServices
   items:
