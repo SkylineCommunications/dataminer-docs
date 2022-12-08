@@ -2852,6 +2852,8 @@
     - name: Known issues
       topicUID: Known_issues
       items:
+        - name: SLAutomation memory leak when Engine.AddScriptOutput is used
+          topicUID: KI_SLAutomation_memory_leak_AddScriptOutput
         - name: SLNet issues due to SPI obfuscation
           topicUID: KI_SLNet_issue_SPI_obfuscation
         - name: Various SLElement issues

@@ -5,6 +5,7 @@ uid: Known_issues
 
 | Issue | DataMiner version | Date added |
 |--|--|--|
+| [SLAutomation memory leak when Engine.AddScriptOutput is used](xref:KI_SLAutomation_memory_leak_AddScriptOutput) | DataMiner 10.1.0 and 10.2.0<br>From DataMiner 10.0.2 up to 10.3.1 | December 8, 2022 |
 | [SLNet issues due to SPI obfuscation](xref:KI_SLNet_issue_SPI_obfuscation) | DataMiner 10.2.0 [CU3] up to 10.2.0 [CU5]<br>DataMiner 10.2.6 up to 10.2.8 | December 7, 2022 |
 | [Various SLElement issues](xref:KI_SLElement_various_issues) | See [detailed page](xref:KI_SLElement_various_issues). | November 25, 2022 |
 | [SLLog issue when large alarm tree is closed](xref:KI_SLLog_issue_when_large_alarm_tree_is_closed) | DataMiner 10.2.0 [CU8] and [CU9]<br>DataMiner 10.2.11 and 10.2.12 | November 16, 2022 |
