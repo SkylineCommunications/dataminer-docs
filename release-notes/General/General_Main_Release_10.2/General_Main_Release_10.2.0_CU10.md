@@ -331,3 +331,9 @@ When the time window of a line chart component showing trend data included a per
 When you were editing a dashboard or a low-code app, and the edit side panel was very narrow, in some cases, the *Number of columns* input box on the *Settings* tab could not be used as it would only be partly visible.
 
 Also, in some cases, the value in the *Number of columns* input box could incorrectly not be reset to the factory default.
+
+#### Skyline Device Simulator: Problem when running a proxy simulation [ID_35059]
+
+<!-- MR 10.3.0 [CU0]/10.2.0 [CU10] - FR 10.3.1 -->
+
+In some cases, an error could occur in the Skyline Device Simulator when a proxy simulation was being run.
