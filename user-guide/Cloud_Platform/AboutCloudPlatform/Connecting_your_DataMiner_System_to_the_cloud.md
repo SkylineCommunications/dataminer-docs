@@ -21,7 +21,7 @@ To connect your DMS to the cloud:
 
      - ``wss://tunnel.dataminer.services/``
 
-   - From [DataMiner CloudGateway](xref:DataMinerExtensionModules#cloudgateway) version 2.10.0 onwards, the internal network must allow [HTTP(S) traffic via port tcp/5100](xref:Configuring_the_IP_network_ports#overview-of-ip-ports-used-in-a-dms). For more information about configuring this endpoint, see [Custom cloud endpoint configuration](xref:Custom_cloud_endpoint_configuration).
+   - From [DataMiner CloudGateway](xref:DataMinerExtensionModules#cloudgateway) version 2.10.0 onwards, the internal network must allow [HTTP(S) traffic via port TCP 5100](xref:Configuring_the_IP_network_ports#overview-of-ip-ports-used-in-a-dms). For more information about configuring this endpoint, see [Custom cloud endpoint configuration](xref:Custom_cloud_endpoint_configuration).
 
    > [!NOTE]
    >
