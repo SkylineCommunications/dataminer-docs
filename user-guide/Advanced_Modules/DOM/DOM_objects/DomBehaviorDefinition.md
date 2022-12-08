@@ -13,6 +13,9 @@ A `DomBehaviorDefinition` object is a standalone object that extends a normal DO
 
 The table below lists the properties of the `DomBehaviorDefinition` object. It also indicates whether a property can be used for filtering using the `DomBehaviorDefinitionExposers`.
 
+> [!NOTE]
+> From DataMiner 10.3.2/10.4.0 onwards, the `DomBehaviorDefinition` object also has [the *ITrackBase* properties](xref:DOM_objects#itrackbase-properties).
+
 | Property | Type | Filterable | Description |
 |--|--|--|--|
 | ID | DomBehaviorDefinitionId | Yes | The unique ID of the object. |

@@ -2240,6 +2240,8 @@
               topicUID: DOM_Invoice_app_example
             - name: Status system example
               topicUID: DOM_status_system_example
+            - name: Altering values of a DomInstance - examples
+              topicUID: DOM_Altering_values_of_a_DomInstance
 - name: DataMiner Standard Apps, Frameworks & Solutions
   topicUid: Part5StandardApps
   items:
