@@ -138,7 +138,7 @@ When you install GitHub Desktop, you will also need to add the correct repositor
 
 For more information on how to work with Visual Studio Code, refer to the [Visual Studio Code documentation](https://code.visualstudio.com/docs). As our documentation is written in Markdown, aside from the general functionality of the application, the [Markdown](https://code.visualstudio.com/docs/languages/markdown) section is of specific interest there.
 
-Also keep in mind that we are using **DocFX Flavored Markdown**. Refer to the [Markdown syntax](#markdown-syntax) section above for more information about this. Make sure the Learn Authoring Pack extension is installed in Visual Studio Code to make it easier to work with this Markdown flavor.
+Also keep in mind that we are using **DocFX Flavored Markdown**. Refer to the [Markdown syntax](#markdown-syntax) section below for more information about this. Make sure the Learn Authoring Pack extension is installed in Visual Studio Code to make it easier to work with this Markdown flavor.
 
 ### Things to watch out for
 
