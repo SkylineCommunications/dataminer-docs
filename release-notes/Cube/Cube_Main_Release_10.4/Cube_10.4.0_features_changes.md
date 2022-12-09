@@ -100,4 +100,8 @@ Failed to save your tag. The defined patterns cannot be linked into the multivar
 
 ### Fixes
 
-*No fixes have been added yet.*
+#### Profiles app: A profile instance would incorrectly list parameters that had been removed from the profile definition [ID_34679] [ID_34771]
+
+<!-- MR 10.4.0 - FR 10.3.2 -->
+
+When a parameter had been removed from a profile definition, in the *Profiles* app, the profile instances referring to the profile definition in question would incorrectly still list the parameter that had been removed.

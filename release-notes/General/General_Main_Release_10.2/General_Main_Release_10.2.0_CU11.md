@@ -75,6 +75,12 @@ In the trend graph of a monitored parameter that needed to be compared to a rela
 
 In some cases, an error could occur in SLDataMiner when loading an alarm template schedule failed.
 
+#### DataMiner Cube - Spectrum Analysis: Selected measurement point no longer selected after playing a spectrum recording [ID_35001]
+
+<!-- Main Release Version 10.1.0 [CU22]/10.2.0 [CU11] - Feature Release Version 10.3.2 -->
+
+When you selected a measurement point of a spectrum trace, and then played a spectrum recording in which other measurement points were used, the measurement point you selected would incorrectly no longer be selected when the spectrum recording stopped playing.
+
 #### Web apps - Visual Overview: Certain actions would no longer work [ID_35012]
 
 <!-- MR 10.2.0 [CU11] - FR 10.3.2 -->

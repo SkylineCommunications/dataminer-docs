@@ -55,6 +55,12 @@ Failed to save your tag. The defined patterns cannot be linked into the multivar
 
 ### Fixes
 
+#### Profiles app: A profile instance would incorrectly list parameters that had been removed from the profile definition [ID_34679] [ID_34771]
+
+<!-- MR 10.4.0 - FR 10.3.2 -->
+
+When a parameter had been removed from a profile definition, in the *Profiles* app, the profile instances referring to the profile definition in question would incorrectly still list the parameter that had been removed.
+
 #### DataMiner Cube: Latest script updates would not be shown when opening a script in the Automation app [ID_34738]
 
 <!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
@@ -72,3 +78,9 @@ When you opened the *Protocol & Templates* module, in some rare cases, function 
 <!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
 
 When you renamed your local DataMiner user with administrative access while being logged in as that user, the user would incorrectly get (partially) removed.
+
+#### DataMiner Cube - Spectrum Analysis: Selected measurement point no longer selected after playing a spectrum recording [ID_35001]
+
+<!-- Main Release Version 10.1.0 [CU22]/10.2.0 [CU11] - Feature Release Version 10.3.2 -->
+
+When you selected a measurement point of a spectrum trace, and then played a spectrum recording in which other measurement points were used, the measurement point you selected would incorrectly no longer be selected when the spectrum recording stopped playing.
