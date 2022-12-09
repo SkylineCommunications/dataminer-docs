@@ -6,7 +6,7 @@ uid: KI_SLAutomation_memory_leak_AddScriptOutput
 
 ## Affected versions
 
-- DataMiner 10.1.0 and 10.2.0
+- DataMiner 10.1.0 and 10.2.0 (up to [CU10])
 - From DataMiner 10.0.2 up to 10.3.1
 
 ## Cause
@@ -15,7 +15,7 @@ When the script output feature is used in an Automation script or subscript, the
 
 ## Fix
 
-Install DataMiner 10.3.0 or 10.3.2.
+Install DataMiner 10.2.0 [CU11], 10.3.0, or 10.3.2.
 
 ## Issue description
 
