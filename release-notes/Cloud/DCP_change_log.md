@@ -23,6 +23,12 @@ When shares are created, accessed, updated, or deleted, the audit events on the 
 
 When DMS or organization users are created, updated, or deleted, audit events will now be added on the Audit page of the DCP Admin app.
 
+#### 16 November 2022 – Enhancement – Orchestrator 1.2.6 – DMA name and ID synced to DCP [ID_34670]
+
+From now on, the DataMiner Orchestrator will sync the DMA name and ID to DCP. This is for example used on the *Nodes* page of the Admin app so users can easily identify a DMA to update its DxMs.
+
+This enhancement is included in Cloud Pack version 2.8.2).
+
 #### 28 November 2022 - Fix - Proxy issue in DataMiner ArtifactDeployer 1.4.0 [ID_35013]
 
 Because of an issue in the proxy configuration of DataMiner ArtifactDeployer 1.4.0, artifacts could not be deployed. This has been resolved in DataMiner ArtifactDeployer 1.4.1.
@@ -71,6 +77,12 @@ A number of improvements have been implemented on the *Audit* page in the DCP Ad
 - The column order has been adjusted.
 - Automatic loading of audit records has been improved to prevent possible issues with different screen sizes.
 
+#### 15 September 2022 – Fix – CoreGateway 2.11.5 – Incorrect information event when connector was deployed [ID_34325]
+
+When a connector was deployed, the corresponding information event incorrectly mentioned that this was done with the SLNetClientTest tool.
+
+With CoreGateway 2.11.5 (included in Cloud Pack version 2.8.2), the information event will have the correct format `New Client Registered - <UserName> @ <ComputerName> with DataMiner Cloud Platform`.
+
 #### 1 September 2022 – Enhancement – Filter functionality for Audit log in DCP Admin app [ID_34322]
 
 The Audit log in the DCP Admin app now allows filtering on operation type, subject type, DataMiner System name, and time span. In addition, the loading of records has been optimized.
@@ -80,6 +92,20 @@ The Audit log in the DCP Admin app now allows filtering on operation type, subje
 The Cloud Gateway now comes with a new connection tester tool, *ConnectionTester.exe*. This tool can be used to validate the network setup and check if all features are available. It checks whether the network complies with the requirements for the cloud platform.
 
 You can find the new tool in the folder `Program files\Skyline Communications\Dataminer CloudGateway\` on a DMA that has the Cloud Gateway installed. Simply double-click the executable to run the test, and a console window will show the results.
+
+#### 1 September 2022 – Fix – CoreGateway 2.11.4 / CloudGateway 2.9.4 – Login screen shown when not necessary while viewing share or using remote access [ID_34275]
+
+When the DataMiner Cloud Pack was installed in a cluster with two or more DMAs, it could occur that users trying to view a shared dashboard or remotely access a DMS could be shown the login screen when this was not supposed to happen.
+
+With CoreGateway 2.11.4 and CloudGateway 2.9.4 (included in Cloud Pack version 2.8.2), this issue is resolved.
+
+The CoreGateway DxM must now be installed on the same DMA as CloudGateway to ensure that sharing and remote access will work correctly. For DMZ setups, the DMA that the cloud gateway points to will need to have the CoreGateway DxM installed.
+
+#### 1 September 2022 – Fix – CoreGateway 2.11.4 – CoreGateway of offline DMA tried to respond to requests from DCP [ID_33973]
+
+When a DMA was offline (e.g. stopped, upgrading, restarting, or offline in a Failover pair), it could occur that the DataMiner CoreGateway tried to respond to requests from DCP, while this should not happen.
+
+With CoreGateway 2.11.4 (included in Cloud Pack version 2.8.2), this will no longer occur.
 
 #### 18 August 2022 – New feature – Audit and license information added in DCP Admin app [ID_34216]
 
