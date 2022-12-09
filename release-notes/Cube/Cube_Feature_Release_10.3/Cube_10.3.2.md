@@ -33,6 +33,17 @@ Up to now, matches found for the same element/parameter as the one for which a t
 > [!NOTE]
 > Only matches detected by means of the so-called *streaming method* will be stored in the database.
 
+#### Resources app: 'Resources' tab and 'Occupancy' tab can now be filtered [ID_34973]
+
+<!-- MR 10.3.0 - FR 10.3.2 -->
+
+In the *Resources* app, resource pools will now have a filter box that allow you to filter both the *Resources* tab and the *Occupancy* tab on resource name.
+
+- When you enter text in the filter box, a list with suggestions will appear.
+- When you select another resource pool while text is present in the filter box, the *Resources* tab and the *Occupancy* tab of that newly selected resource pool will automatically be filtered.
+- When an item in either the *Resources* tab or the *Occupancy* tab gets updated while a filter is applied, that item will only be shown if it matches the filter after the update.
+- To clear the filter box, you can either delete the text in the filter box or click the *Clear* button.
+
 ## Changes
 
 ### Enhancements

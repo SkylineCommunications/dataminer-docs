@@ -106,6 +106,12 @@ For example, when a line & area chart component is fed the following timespans..
 
 - *01/01/2022 9:00:00 > 01/01/2022 10:30:00*
 
+#### Service & Resource Management: Enhanced performance when adding and updating bookings [ID_35016]
+
+<!-- MR 10.3.0 - FR 10.3.2 -->
+
+Because of a number of enhancements, overall performance has increased when creating and updating bookings.
+
 ### Fixes
 
 #### Problem with Elasticsearch health monitoring [ID_34744]
@@ -137,6 +143,12 @@ In some cases, *Card*, *Script*, *Link* and *Popup* actions would no longer work
 <!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
 
 When you ran SLLogCollector via the command line and specified multiple processes for which dumps had to be taken (e.g. `SL_LogCollector.exe -c -d=46436,61652`), it would incorrectly only take a dump of the first process.
+
+#### Monitoring app: Problem when opening the histogram page of a view [ID_35081]
+
+<!-- MR 10.3.0 - FR 10.3.2 -->
+
+When, in the *Monitoring* app, you selected a view and opened the histogram page, in some cases, a `Maximum call stack size exceeded` error would appear.
 
 #### Automation: Memory leak when using the engine.AddScriptOutput method to pass script output of type string [ID_35119]
 

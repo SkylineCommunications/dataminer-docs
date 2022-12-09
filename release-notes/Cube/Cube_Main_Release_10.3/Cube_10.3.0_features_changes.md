@@ -695,6 +695,17 @@ For more information on the available search options, see [Setting the indexing 
 
 Also, from now on, DataMiner Cube will call the server-side search engine when you enter a numeric search string like "1234". Up to now, when you entered a numeric search string, DataMiner Cube would perform a client-side search that would only return views of which the ID matched the search string.
 
+#### Resources app: 'Resources' tab and 'Occupancy' tab can now be filtered [ID_34973]
+
+<!-- MR 10.3.0 - FR 10.3.2 -->
+
+In the *Resources* app, resource pools will now have a filter box that allow you to filter both the *Resources* tab and the *Occupancy* tab on resource name.
+
+- When you enter text in the filter box, a list with suggestions will appear.
+- When you select another resource pool while text is present in the filter box, the *Resources* tab and the *Occupancy* tab of that newly selected resource pool will automatically be filtered.
+- When an item in either the *Resources* tab or the *Occupancy* tab gets updated while a filter is applied, that item will only be shown if it matches the filter after the update.
+- To clear the filter box, you can either delete the text in the filter box or click the *Clear* button.
+
 ## Changes
 
 ### Enhancements

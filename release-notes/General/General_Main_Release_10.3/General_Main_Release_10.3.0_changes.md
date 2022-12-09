@@ -470,6 +470,12 @@ Because of a number of enhancements, overall performance has increased when retr
 
 Because of a number of enhancements, the automatic evaluation of trend predictions has improved.
 
+#### Service & Resource Management: Enhanced performance when adding and updating bookings [ID_35016]
+
+<!-- MR 10.3.0 - FR 10.3.2 -->
+
+Because of a number of enhancements, overall performance has increased when creating and updating bookings.
+
 ### Fixes
 
 #### SLAnalytics: Problem with trend prediction [ID_31352]
@@ -913,3 +919,9 @@ When resource data was being migrated to Elasticsearch, the following exception 
 ```txt
 2022/12/01 08:53:59.582|SLNet.exe|ResourceManager|ERR|0|6|System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.ArgumentException: value is not serializable to json
 ```
+
+#### Monitoring app: Problem when opening the histogram page of a view [ID_35081]
+
+<!-- MR 10.3.0 - FR 10.3.2 -->
+
+When, in the *Monitoring* app, you selected a view and opened the histogram page, in some cases, a `Maximum call stack size exceeded` error would appear.
