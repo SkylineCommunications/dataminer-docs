@@ -337,3 +337,13 @@ Also, in some cases, the value in the *Number of columns* input box could incorr
 <!-- MR 10.3.0 [CU0]/10.2.0 [CU10] - FR 10.3.1 -->
 
 In some cases, an error could occur in the Skyline Device Simulator when a proxy simulation was being run.
+
+#### Protocols: Problem when working with large timer values and Timerbase [ID_35097]
+
+<!-- MR 10.2.0 [CU10] - FR 10.3.1 [CU0] -->
+
+When working with large timer values and *Timerbase*, in some cases, an integer overflow could occur.
+
+- In x86 versions of SLProtocol, this would result in a default time of 5 minutes for run-time error detection, while waiting a pseudo-random time to continue polling (around 10 days). The run-time error would get reset about every 10 days.
+
+- In x64 versions of SLProtocol, this would cause the timer to become inaccurate. No run-time errors would occur.

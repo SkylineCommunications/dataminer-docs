@@ -489,3 +489,13 @@ When resource data was being migrated to Elasticsearch, the following exception 
 ```txt
 2022/12/01 08:53:59.582|SLNet.exe|ResourceManager|ERR|0|6|System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.ArgumentException: value is not serializable to json
 ```
+
+#### Protocols: Problem when working with large timer values and Timerbase [ID_35097]
+
+<!-- MR 10.2.0 [CU10] - FR 10.3.1 [CU0] -->
+
+When working with large timer values and *Timerbase*, in some cases, an integer overflow could occur.
+
+- In x86 versions of SLProtocol, this would result in a default time of 5 minutes for run-time error detection, while waiting a pseudo-random time to continue polling (around 10 days). The run-time error would get reset about every 10 days.
+
+- In x64 versions of SLProtocol, this would cause the timer to become inaccurate. No run-time errors would occur.
