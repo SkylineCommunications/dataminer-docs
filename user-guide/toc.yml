@@ -2856,6 +2856,10 @@
     - name: Known issues
       topicUID: Known_issues
       items:
+        - name: Stable trend points not kept alive
+          topicUID: KI_stable_trend_points_not_kept_alive
+        - name: Missing 1-day average trending records
+          topicUID: KI_missing_avg_trending
         - name: Memory leak in SLNet threads
           topicUID: KI_SLNet_thread_leak
         - name: SLAutomation memory leak when Engine.AddScriptOutput is used
