@@ -16,6 +16,8 @@ uid: Cassandra_database
 
 - [Making Cassandra nodetool accessible remotely](xref:Making_Cassandra_nodetool_accessible_remotely)
 
+- [Data replication and consistency configuration](xref:replication_and_consistency_configuration)
+
 > [!NOTE]
 > - For more information on the possible architecture of your DataMiner infrastructure, see [Supported data storage architectures](xref:Supported_system_data_storage_architectures).
 > - For information on the system requirements for Cassandra, refer to [DataMiner Compute Requirements](https://community.dataminer.services/dataminer-compute-requirements/).
