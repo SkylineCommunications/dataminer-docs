@@ -110,6 +110,9 @@ There are also special types of `FieldDescriptors` that are purpose-made to stor
 
 The table below lists the properties of the `CustomSectionDefinition` object. (The base `SectionDefinition` object only exposes its ID.) The table also indicates whether a property can be used for filtering using the `SectionDefinitionExposers`.
 
+> [!NOTE]
+> From DataMiner 10.3.2/10.4.0 onwards, the `CustomSectionDefinition` object also has [the *ITrackBase* properties](xref:DOM_objects#itrackbase-properties).
+
 | Property | Type | Filterable | Description |
 |--|--|--|--|
 | ID | SectionDefinitionID | Yes | The ID of the `SectionDefinition`. |

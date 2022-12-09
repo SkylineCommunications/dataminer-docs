@@ -2,10 +2,10 @@
 uid: General_Feature_Release_10.3.1
 ---
 
-# General Feature Release 10.3.1 – Preview
+# General Feature Release 10.3.1
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 >
@@ -14,7 +14,32 @@ uid: General_Feature_Release_10.3.1
 
 ## Highlights
 
-*No highlights have been selected for this release yet*
+#### Dashboards app & low-code apps: Icon component [ID_34867]
+
+<!-- MR 10.4.0 - FR 10.3.1 -->
+
+The new icon component allows you to display an icon on a dashboard or a low-code app.
+
+#### Interactive Automation scripts: New button style 'CallToAction' [ID_34904]
+
+<!-- MR 10.4.0 - FR 10.3.1 -->
+
+In an interactive Automation script launched from a dashboard or a low-code app, you can now apply the *CallToAction* style to a button.
+
+When you apply this style to a button
+
+- the background color of the button will be the color of the app,
+- the color of the text on the button will be white, and
+- the button will have a shadow.
+
+To set the style of a button in an interactive Automation script, set the *Style* property of the button's *UIBlockDefinition* to the name of the style. All supported styles are available via `Style.Button`.
+
+Alternatively, you can also pass a button style directly to the `AppendButton` method on an `UIBuilder` object.
+
+> [!NOTE]
+>
+> - Up to now, `StaticText` blocks already supported a number of styles. Those styles are now also available via `Style.Text`: *Title1*, *Title2* and *Title3*.
+> - The *CallToAction* style will only be applied in interactive Automation scripts launched from a web app. It will not be applied in interactive Automation scripts launched from Cube.
 
 ## Other features
 
@@ -46,6 +71,61 @@ In the *Authentication* section (formerly known as *User Info* section), you now
 
 > [!WARNING]
 > Always be extremely careful when using this tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
+
+#### Service & Resource Management: Exposers for resource capacities and capabilities [ID_34841]
+
+<!-- MR 10.4.0 - FR 10.3.1 -->
+
+Exposers have been added for resource capacities and capabilities. These can for example be used as follows:
+
+```csharp
+var helper = new ResourceManagerHelper(engine.SendSLNetSingleResponseMessage);
+
+// Get all resources with a certain discrete option
+var encodingQualityParameterId = Guid.Parse("..."); // GUID of the profile parameter
+FilterElement<Resource> filter = ResourceExposers.Capabilities.DiscreteCapability(encodingQualityParameterId).Contains("UHD");
+var resources = helper.GetResources(filter);
+
+// Get all resources with a certain rangepoint capability
+var frequencyParameterId = Guid.Parse("...");
+filter = ResourceExposers.Capabilities.HasRangePoint(frequencyParameterId, 50);
+resources = helper.GetResources(filter);
+
+// Get all resources with a certain string capability (case-insensitive)
+var locationParameterId = Guid.Parse("...");
+filter = ResourceExposers.Capabilities.StringCapability(locationParameterId).Equal("Berlin");
+filter = ResourceExposers.Capabilities.StringCapability(locationParameterId).Contains("New");
+resources = helper.GetResources(filter);
+
+// Get all resources with a bitrate capacity, with a max value of 100.1 or more
+var bitrateParameterId = Guid.Parse("...");
+filter = ResourceExposers.Capacities.MaxCapacityValue(bitrateParameterId).GreaterThanOrEqual(100.1);
+resources = helper.GetResources(filter);
+```
+
+These are the string representations of the examples above:
+
+| Filter in code | String representation |
+|--|--|
+| `ResourceExposers.Capabilities.DiscreteCapability(encodingQualityParameterId).Contains("UHD");` | `Resource.Capabilities.e551766950f9442da1232d2e0e0f5872[List<String>] contains UHD` |
+| `ResourceExposers.Capabilities.HasRangePoint(frequencyParameterId, 50);` | `(Resource.Capabilities.f0c94ee8ab2444d1866fa2ce5b7a3290_Min[Double] <=50) AND (Resource.Capabilities.f0c94ee8ab2444d1866fa2ce5b7a3290_Max[Double] >=50)` |
+| `ResourceExposers.Capabilities.StringCapability(locationParameterId).Equal("Berlin");` | `Resource.Capabilities.be64ec9a33e843e0a06111690cff0140[String] =='Berlin'` |
+| `ResourceExposers.Capacities.MaxCapacityValue(bitRateParameterId).GreaterThanOrEqual(100.10);` | `Resource.Capacities.8ce08caa5c1f45f4a2f6566cca7754b0[Double] >=100.1` |
+
+Please note the following:
+
+- The capacities and capabilities are exposed as dictionaries, where the key is the ID of the profile parameter (without dashes).
+- A range capability exposes two values: the minimum and maximum of the range. These are exposed as two keys in the dictionary: "[id]_Min" and "[id]_Max".
+- Building the filter in code and calling the *ToString()* method on the *FilterElement* should return a usable string representation of the filter.
+- When you filter on discrete values, use the discrete value itself instead of the display value, as the latter is not stored in the resource.
+- The filter is case sensitive with regard to profile parameter keys.
+- The exposers will filter based on the total capacity configured on the resources. The available capacity at a specific point in time will not be taken into account. The same applies for time-dependent capabilities: the current time-dependent value is not resolved, and the resources will be treated as not having an empty string value for the capability.
+- The exposers will not work reliably if you have the same capacity or capability multiple times on the same resource.
+- The capacity value is exposed as a double (though it is stored as a decimal on the resource), for compatibility with the ElasticSearch database.
+- The following extension methods have been added to easily compose the filters: *HasRangePoint*, *DiscreteCapability*, *StringCapability* and *MaxCapacityValue*.
+
+> [!TIP]
+> See also: [Visual Overview: Session variable YAxisResources now supports filters to pass exposers](xref:Cube_Feature_Release_10.3.1#visual-overview-session-variable-yaxisresources-now-supports-filters-to-pass-exposers-id_34857)
 
 ## Changes
 
@@ -107,11 +187,54 @@ Web apps now support trending of string parameters and exceptions.
 
 Because of a number of enhancements, overall performance has increased when retrieving DomInstances that have a DomBehaviorDefinition.
 
-#### Dashboards app & low-code apps: Icon component [ID_34867]
+#### SLAnalytics: Enhanced automatic evaluation of trend predictions [ID_34901]
+
+<!-- MR 10.3.0 - FR 10.3.1 -->
+
+Because of a number of enhancements, the automatic evaluation of trend predictions has improved.
+
+#### Port initialization error messages have been improved [ID_34920]
+
+<!-- MR 10.2.0 [CU10] - FR 10.3.1 [CU0] -->
+
+The following port initialization error messages have been improved:
+
+- The log message `InitializePort <n> for Element <x> failed with <y>.` has been replaced by `InitializePort(<n>) for Element <x> failed with <y>.`
+
+- The alarm message `Initializing the communication <n> for <x> failed.` has been replaced by `Initializing the communication of port <n> for <x> failed.`
+
+#### Element errors and notices will now be closed as soon as the element in question is stopped [ID_34927]
+
+<!-- MR 10.1.0 [CU22] / 10.2.0 [CU10] - FR 10.3.1 -->
+
+The following element errors/notices generated by SLDataMiner will now automatically be closed when the elements in question are stopped.
+
+``` txt
+Creating log-factory for <x> failed.
+Creating the log-file for <x> failed.
+Initialize xml for <x> failed.
+Parsing the settings for <x> failed.
+Creating element-object for <x> failed with <y>.
+Initializing the element <x> failed.
+Starting the element <x> failed.
+Starting the element <x> failed. No element object.
+Creating Database tables for <x> failed.
+Creating element-objects for <x> failed.
+Initializing the communication <p> for <x> port failed. / Initializing the communication of port <p> for <x> failed.
+Initializing the protocol for <x> failed.
+Initializing the element for <x> failed.
+Starting the protocol for <x> failed.
+Starting the protocol for <x> failed. No Protocol object.
+Starting the derived element for <x> failed.
+Starting the element <x> failed. No element object.
+Creating element-object for <x> failed with <y>.
+```
+
+#### SLAnalytics: Number of 'GetParameterMessages' requests has been optimized [ID_34936]
 
 <!-- MR 10.4.0 - FR 10.3.1 -->
 
-The new icon component allows you to display an icon on a dashboard or a low-code app.
+The number of *GetParameterMessages* sent by SLAnalytics in order to check whether a trended table parameter is still active has been optimized.
 
 #### Dashboards app & low-code apps: A table row with a column containing a parameter table index is now capable of feeding a linked parameter [ID_34957]
 
@@ -298,6 +421,15 @@ When a timeline was populated using a query with a query filter, it would incorr
 
 In some cases, an error could occur in SLProtocol when trying to update a parameter of type `read bit`.
 
+#### Alarm state changes could be generated at an incorrect time in the trend graph of a monitored parameter that needed to be compared to a relative baseline value [ID_34952]
+
+<!-- Main Release Version 10.2.0 [CU11] - Feature Release Version 10.3.1 -->
+
+In the trend graph of a monitored parameter that needed to be compared to a relative baseline value, in some cases, alarm state changes could be generated at an incorrect time.
+
+> [!NOTE]
+> When both the baseline and the factor are stored in parameters, then the baseline parameter, the factor parameter and the monitored parameter must all have the history set option enabled. Also, all history sets should be executed chronologically.
+
 #### Elements would not show up in client applications due to an incorrect credential library GUID stored in their Element.xml file [ID_34956]
 
 <!-- Main Release Version 10.0.0 [CU22]/10.1.0 [CU22]/10.2.0 [CU10] - Feature Release Version 10.3.1 -->
@@ -329,3 +461,31 @@ When you sorted or filtered a table fed by e.g. a query filter, the table would 
 <!-- MR 10.4.0 - FR 10.3.1 -->
 
 In some cases, Resource Manager could throw a NullReferenceException when *ResourceStorageType* was not specified in the `C:\Skyline DataMiner\ResourceManager\Config.xml` file.
+
+#### Web apps: Problem when a trend graph displaying multiple parameters showed data that was partly in the future [ID_34982]
+
+<!-- MR 10.3.0 - FR 10.3.1 -->
+
+When a trend graph displaying multiple parameters showed data that was partly in the future, in some cases, an error could occur.
+
+#### GQI: Problem when a column select or a column manipulation operator was applied before an aggregation operator [ID_35009]
+
+<!-- MR 10.4.0 - FR 10.3.1 [CU0] -->
+
+When a column select or a column manipulation operator was applied before an aggregation operator, the column select or column manipulation operator would incorrectly be ignored. As a result, all columns would be visible in the *group by node* or columns created by the column manipulation would not be added to the options of the *group by node*.
+
+#### Skyline Device Simulator: Problem when running a proxy simulation [ID_35059]
+
+<!-- MR 10.3.0 [CU0]/10.2.0 [CU10] - FR 10.3.1 -->
+
+In some cases, an error could occur in the Skyline Device Simulator when a proxy simulation was being run.
+
+#### Service & Resource Management: Problem when migrating resources containing properties with keys or values set to null [ID_35067]
+
+<!-- MR 10.3.0 - FR 10.3.1 [CU0] -->
+
+When resource data was being migrated to Elasticsearch, the following exception could be thrown when a resource or a resource pool contained properties with keys or values that were set to null.
+
+```txt
+2022/12/01 08:53:59.582|SLNet.exe|ResourceManager|ERR|0|6|System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.ArgumentException: value is not serializable to json
+```

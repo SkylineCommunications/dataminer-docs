@@ -2,7 +2,7 @@
 uid: Pricing_Commercial_Models
 ---
 
-# Commercial models
+# Commercial models summary
 
 DataMiner can be used with **Perpetual-Use Licenses** or with two flavors of usage-based service models, namely the **Subscription Plan** and the **Pay-per-Use Plan**.
 
@@ -10,7 +10,7 @@ For the usage-based models, pricing is available for both self-hosted (on-premis
 
 ## Perpetual-Use Licenses
 
-Perpetual-Use Licensing is based on the proven and flexible DataMiner Licensing Scheme, which has been available for several years. Licenses are available for **DataMiner nodes** (which are available in different capacity tiers to manage a set number of Managed Objects), for **optional features**, and for **connectors** that interface DataMiner with different third-party products (the latter irrespective of the total number of elements managed with the connector, and with a fixed price regardless of whether the connector exists or still needs to be developed).
+Perpetual-Use Licensing is based on the proven and flexible DataMiner Licensing Scheme, which has been available for several years. Licenses are available for **DataMiner nodes** (which are available in different capacity tiers to manage a set number of Managed Objects), for **optional modules**, and for **connectors** that interface DataMiner with different third-party products (the latter irrespective of the total number of elements managed with the connector, and with a fixed price regardless of whether the connector exists or still needs to be developed).
 
 Perpetual-Use Licenses are a one-off expenditure.
 
@@ -30,7 +30,7 @@ The Subscription Plan offering results in a well-defined and controlled expendit
 
 ### Pay-per-Use
 
-DataMiner Pay-per-Use is the most flexible model, very similar to the Subscription Service, but with no fixed Monthly Utilization Allowance nor annual contract or commitments. DataMiner usage is simply metered on a monthly basis and deducted from the defined allowance.
+DataMiner Pay-per-Use is the most flexible model, very similar to the Subscription Service, but with no fixed Monthly Utilization Allowance nor annual contract or commitments. DataMiner usage is simply metered on a monthly basis and deducted from the prepaid credit allowance.
 
 ## Free DataMiner System
 
@@ -47,20 +47,20 @@ When ready to scale up, the user can set up a yearly subscription or start with 
 
 ## DataMiner Perpetual-Use Licenses vs Usage-based services
 
-The Perpetual-Use model offers perpetual ownership over a named license through a one-time purchase with an optional recurrent cost for support services.
+The Perpetual-Use model offers perpetual ownership over a named license through a one-time purchase with an optional recurrent cost for support services and software updates and upgrades.
 
-Usage-based services are charged based on the actual monthly usage of services, where an **Utilization Allowance** can be used freely in any combination of services which can change monthly.
+Usage-based services are charged based on the actual monthly usage of services, where an **Utilization Allowance** can be used freely in any combination of services that can change anytime.
 
 |         | Perpetual licensing scheme | Usage-based services |
 |---------|----------------------------|----------------------|
-| System capacity | Server-based licenses, each with fixed capacity tiers of managed objects: 5, 10, 25, 50, 100, 250, 500 (for approved applications), 1000. | Volume-based, per managed object or monitored metric per month. Independent from the number of nodes deployed. |
-| Failover | Server-based license | Included (the user can deploy additional nodes for Failover without paying additional fees since billing is based on the active number of managed objects or monitored metrics in a month) |
-| Optional features | Licensed per node: Automation, Correlation, Dashboards app, Infrastructure Discovery & Provisioning, Spectrum Analysis | Not applicable. All optional features are included. |
-| Automation & orchestration | Based on volume of script runs. | Based on volume of script runs. |
-| Connectors | Connector license per different interfaced product | Per connector per month |
+| System capacity | Server-based licenses, each with fixed capacity tiers of managed objects: 5, 10, 25, 50, 100, 250, 500 , 1000. | Volume-based, per managed object or monitored metric per month. Independent from the number of nodes deployed. |
+| Failover | Server-based license | Included. Users can deploy additional nodes for Failover without paying additional fees since billing is based on the active number of managed objects or monitored metrics in a month. |
+| Optional functions | Licensed per node: Correlation and Automation engines, Dashboards app, Low-code Apps, Process Automation, DataMiner Object Models (DOM), Spectrum Analysis, and Infrastructure Discovery & Provisioning | Not applicable. All optional modules are included. |
+| Automation & orchestration | Based on the volume of concurrent services running. | Based on the volume of script runs. |
+| Connectors | Connector license per different, interfaced product | Per connector per month |
 | Sample applications | Included | Included |
-| Cloud services | Tier-based | Usage-based |
-| Support services | Optional annual recurring fee, relative to the value of the deployed Perpetual-Use Licenses. | Included (see [DataMiner Support Plans](https://community.dataminer.services/support-services/) on DataMiner Dojo) |
+| Cloud services | [Tier-based](https://community.dataminer.services/dataminer-cloud-platform-services/) | Usage-based |
+| Support services | Optional annual recurring fee, relative to the value of the deployed Perpetual-Use Licenses. | Included (see [DataMiner Support Plans](https://community.dataminer.services/support-services/)) |
 
 ## Subscription Plan vs Pay-per-Use Plan
 

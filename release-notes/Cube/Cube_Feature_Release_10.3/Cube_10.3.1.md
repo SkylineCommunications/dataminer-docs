@@ -2,19 +2,15 @@
 uid: Cube_Feature_Release_10.3.1
 ---
 
-# DataMiner Cube Feature Release 10.3.1 – Preview
+# DataMiner Cube Feature Release 10.3.1
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 > For release notes for this release that are not related to DataMiner Cube, see [General Feature Release 10.3.1](xref:General_Feature_Release_10.3.1).
 
 ## Highlights
-
-*No highlights have been selected for this release yet*
-
-## Other features
 
 #### System Center - Analytics config: New Pattern Matching setting 'Maximum memory usage' [ID_34803]
 
@@ -26,7 +22,39 @@ This setting allows you to specify the maximum amount of memory that SLAnalytics
 
 Default value: 2.00 GB
 
-#### DataMiner Cube - Visual Overview: Automatically generated shapes representing bookings can now be sorted by custom property [ID_34572] [ID_34864]
+#### Visual Overview: New placeholders can now be added to a 'ShapeGrouping' shape [ID_34974]
+
+<!-- MR 10.4.0 - FR 10.3.1 -->
+
+Up to now, when you enabled grouping of dynamically positioned shapes, you were able to display the number of shapes that were grouped into a single group shape by adding an asterisk ("\*") in the *ShapeGrouping* shape.
+
+From now on, you can also add the following placeholders in the *ShapeGrouping* shape:
+
+- Add `[GroupValue]` to make the shape display the value that is specified in the *GroupBy* shape data field of the first child shape in the group.
+
+  If this *GroupBy* value contains multiple column parameters and/or properties, they will be separated by commas.
+
+- Add `[Count]` to make the shape display the number of child shapes in the group (similar to adding an asterisk).
+
+## Other features
+
+#### Visual Overview: Session variable YAxisResources now supports filters to pass exposers [ID_34857]
+
+<!-- MR 10.4.0 - FR 10.3.1 -->
+
+From now on, you can pass resource exposers as a filter to the *YAxisResources* session variable in order to show the corresponding resource bands.
+
+Using a filter that results in less than 100 resources is recommended to avoid delay while loading the bands.
+
+A converter has also been created in the client that will convert a profile parameter name to the ID of the found object. For this, the format [ProfileParameter:xxx,ID] should be used, replacing "xxx" with the name of the capacity/capability profile parameter.
+
+> [!NOTE]
+> For examples, refer to [YAxisResource session variable examples](xref:YAxisResource_Shape_Data_Examples) in the user guide.
+
+> [!TIP]
+> See also: [Service & Resource Management: Exposers for resource capacities and capabilities](xref:General_Feature_Release_10.3.1#service--resource-management-exposers-for-resource-capacities-and-capabilities-id_34841)
+
+#### Visual Overview: Automatically generated shapes representing bookings can now be sorted by custom property [ID_34572] [ID_34864]
 
 <!-- MR 10.2.0 [CU10] - FR 10.3.1 -->
 
@@ -77,6 +105,12 @@ For example, in case of HTTP communication, there will now be extra levels for s
 
 **only in case of a response*
 
+#### Bookings module: Navigation panel has been improved and renamed to 'settings' panel [ID_34840]
+
+<!-- MR 10.3.0 - FR 10.3.1 Also see Fixes for bug fix section-->
+
+The *Navigation* panel has been improved and renamed to *Settings* panel.
+
 #### Alarm Console: A notice will now appear when resources are being migrated from XML to Elasticsearch [ID_34845]
 
 <!-- MR 10.3.0 - FR 10.3.1 -->
@@ -108,19 +142,23 @@ The *Show the DataMiner TV section* setting has been removed from the *User > Cu
 
 When, in a service chain within a service context, an element shape was linked to a node property via a shape data field of type *Tooltip*, then the tooltip of that shape would incorrectly not show the value of that node property when using either a `[Service definition properties]` or a `[Service definition property:<property name>]` placeholder.
 
+#### Trending - Parameter relationships: Enhancements [ID_34832] [ID_34846] [ID_34863] [ID_34938]
+
+<!-- MR 10.4.0 - FR 10.3.1 -->
+
+A number of enhancements have been made to the parameter relationship feature. When you hover over a light bulb icon in the top-right corner of a trend graph, a tooltip will now appear. This tooltip will suggest you add a number of related parameters and will indicate that the parameter relationship feature is still in preview. Also, when you open a histogram, no light bulb icon will be displayed anymore as parameter relationships are not really relevant when viewing histograms.
+
 #### DataMiner Cube - Visual Overview: Preset specified in a Spectrum Analysis component would incorrectly not be loaded [ID_34833]
 
 <!-- Main Release Version 10.1.0 [CU22]/10.2.0 [CU10] - Feature Release Version 10.3.1 -->
 
 When you had specified a preset in a shape that contained a Spectrum Analysis component, the preset would incorrectly not be loaded when you opened the visual overview in Cube.
 
-#### Bookings app: Columns of type 'Date' would not get updated when you changed the time zone [ID_34840]
+#### Bookings module: Columns of type 'Date' would not get updated when you changed the time zone [ID_34840]
 
-<!-- MR 10.3.0 - FR 10.3.1 -->
+<!-- MR 10.3.0 - FR 10.3.1 Also see enhancements-->
 
 When, in the *Navigation* panel of the *Bookings* app, you selected another time zone, columns of type `Date` would incorrectly not get updated.
-
-Also, the *Navigation* panel has been improved and renamed to *Settings* panel.
 
 #### Trending - Pattern matching: Trend graph would no longer show the matches for the displayed parameter after editing a tag [ID_34870]
 

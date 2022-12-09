@@ -41,19 +41,3 @@ If one of the checks fails, the booking will go into the failed state.
 #### Problem when processing token with invalid token profile instance \[ID_29900\]
 
 If a token had been generated with an invalid token profile instance, it could occur that the *Skyline Queue Manager* connector could not process the token, which caused the Queue element to be unable to process other incoming tokens.
-
-## Addendum CU1
-
-### CU1 fixes
-
-#### Skyline Queue Manager not compatible with DataMiner 10.1.7 \[ID_30206\]
-
-A compatibility issue caused the Skyline Queue Manager connector to function incorrectly if DataMiner 10.1.7 was installed.
-
-## Addendum CU2
-
-### CU2 fixes
-
-#### LSO script not executed if multiple resources used same resource pool \[ID_30229\]
-
-If multiple resources used the same resource pool, it could occur that the LSO script could not be executed. This problem has been resolved. In addition, the message that is displayed when the property "ProcessAutomation" with value "True" does not exist in the resource pool has been adjusted to provide more information.

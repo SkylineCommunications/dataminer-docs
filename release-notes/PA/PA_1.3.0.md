@@ -476,11 +476,3 @@ In case an optional field value was not added to a DOM instance section, it coul
 #### Tokens pushed in failed activation window [ID_33889]
 
 In some cases, it could occur that tokens were pushed into the process while the activation window was not fully operational.
-
-## Addendum CU1
-
-### Fixes
-
-#### SRM_Setup script created queue element while one existed already [ID_34777]
-
-When the *SRM_Setup* script was executed in order to configure Process Automation, it could occur that a new queue element was created for a resource pool while there already was a queue element for that resource pool.

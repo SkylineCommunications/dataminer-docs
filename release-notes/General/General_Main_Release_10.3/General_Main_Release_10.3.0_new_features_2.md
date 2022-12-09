@@ -400,6 +400,12 @@ The *PDF* and *Share* option in the Dashboards app are now no longer visible in 
 
 It is now possible to group parameters in a parameter feed that lists EPM parameters.
 
+#### Dashboards app - GQI: New 'Get trend data patterns' data source [ID_35024]
+
+<!-- MR 10.3.0 - FR 10.3.2 -->
+
+In the Generic Query Interface, a new *Get trend data patterns* data source is now available. It will return all trend data patterns in the DMS.
+
 ### DMS Service & Resource Management
 
 #### Retrieving bookings in a paged way and sorted by property [ID_31982]
