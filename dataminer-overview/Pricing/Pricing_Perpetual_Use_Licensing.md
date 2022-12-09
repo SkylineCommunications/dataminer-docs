@@ -31,11 +31,11 @@ Depending on the application, licensing is available as **server-based licenses*
 > [!NOTE]
 > The license restriction on the number of Managed Objects applies to active and paused element objects (not stopped elements), including both regular element objects and virtual element objects (a.k.a. DVEs), and objects representing applications and data aggregators. It does not apply to service objects, enhanced service objects, element objects derived from redundancy groups, and SLA objects.
 
-### Optional modules
+### Optional functions
 
-In addition to the [standard modules](https://community.dataminer.services/core-features/) included in a DataMiner System, depending on the type of application and/or functional requirements, some advanced functional modules may be required. These modules are licensed together with the corresponding server-based licenses (i.e. per DMA) and volume-based licenses above.
+In addition to the [standard functions](https://community.dataminer.services/core-features/) included in a DataMiner System, depending on the type of application and/or functional requirements, some advanced functional modules may be required. These functions are licensed together with the corresponding server-based licenses (i.e. per DMA) and volume-based licenses above.
 
-| Module | Standard <br>DataMiner <br>Agents | System <br>Volume <br>Equipment <br>Licenses | Experience & <br>Performance <br>Management <br>Licenses | DataMiner <br>Probes |
+| Function | Standard <br>DataMiner <br>Agents | System <br>Volume <br>Equipment <br>Licenses | Experience & <br>Performance <br>Management <br>Licenses | DataMiner <br>Probes |
 |--|--|--|--|--|
 | Correlation | o | x | x | o |
 | Automation | o | x | x | o |
