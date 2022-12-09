@@ -19,7 +19,7 @@ This setting allows you to specify the maximum amount of memory that SLAnalytics
 
 Default value: 2.00 GB
 
-#### Visual Overview - '[GroupValue]' and '[Count]' can now be used as placeholders to adjust the value inside of dynamically grouped shapes [ID_34974]
+#### Visual Overview - '[GroupValue]' and '[Count]' can now be used as placeholders to adjust the shape text inside of dynamically grouped shapes [ID_34974]
 
 <!-- MR 10.4.0 - FR 10.3.1 -->
 
