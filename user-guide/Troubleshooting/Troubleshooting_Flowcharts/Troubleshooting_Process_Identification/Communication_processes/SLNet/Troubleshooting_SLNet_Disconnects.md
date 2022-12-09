@@ -27,65 +27,65 @@ classDef classAction fill:#dddddd,stroke:#dddddd,color:#1E5179,stroke-width:1px;
   Home([Start page])
   Start([DMA seems disconnected])
   Back([Back to SLNet <br/>troubleshooting])
-  Start --> WhatSymtoms
+  Start --- WhatSymtoms
   WhatSymtoms{{What is the symptom?}}
-  WhatSymtoms --> |Agent is disconnected or<br>connection is lost| IsAgentRunning
-  WhatSymtoms --> |Callback timeouts| VerifyCallback
-  WhatSymtoms --> |Cannot set up <br>new connections|NoMoreConnections
-  WhatSymtoms --> |Refused state message| RefusedState
+  WhatSymtoms --- |Agent is disconnected or<br>connection is lost| IsAgentRunning
+  WhatSymtoms --- |Callback timeouts| VerifyCallback
+  WhatSymtoms --- |Cannot set up <br>new connections|NoMoreConnections
+  WhatSymtoms --- |Refused state message| RefusedState
   %% -----------------------------------------------------------------------
   %% branch: Agent disconnected or lost
   %% -----------------------------------------------------------------------
   IsAgentRunning{{Is the disconnected<br/> DMA running?}}
-  IsAgentRunning --> |No| StartAgent
-  IsAgentRunning --> |Yes| CheckCPUAndMem
+  IsAgentRunning --- |No| StartAgent
+  IsAgentRunning --- |Yes| CheckCPUAndMem
   StartAgent[[Start the DMA.]]
-  StartAgent --> Ending_3
+  StartAgent --- Ending_3
   CheckCPUAndMem[[Check the CPU and<br/>memory resources.]]
-  CheckCPUAndMem --> AreResourcesOk
+  CheckCPUAndMem --- AreResourcesOk
   AreResourcesOk{{Does the disconnected <br/>DMA lack resources?}}
-  AreResourcesOk --> |No| HasMobileGateway
-  AreResourcesOk --> |Yes| LackResources
+  AreResourcesOk --- |No| HasMobileGateway
+  AreResourcesOk --- |Yes| LackResources
   LackResources[[Investigate and fix<br/>the cause for the<br/>lack of resources.]]
-  LackResources --> IsIssueFixed_3
+  LackResources --- IsIssueFixed_3
   IsIssueFixed_3{{Issue<br/>fixed?}}
-  IsIssueFixed_3 --> |No| ContactTechsupport_3
-  IsIssueFixed_3 --> |Yes| Ending_2
+  IsIssueFixed_3 --- |No| ContactTechsupport_3
+  IsIssueFixed_3 --- |Yes| Ending_2
   HasMobileGateway{{Is Mobile Gateway <br/>activated on the DMA?}}
-  HasMobileGateway --> |Yes| MoblieGatewayActivated
-  HasMobileGateway --> |No| NotInSameDomain
+  HasMobileGateway --- |Yes| MoblieGatewayActivated
+  HasMobileGateway --- |No| NotInSameDomain
   MoblieGatewayActivated{{Is it configured<br/>correctly?}}
-  MoblieGatewayActivated --> |No| FixMobileGatewaySettings
-  MoblieGatewayActivated --> |Yes| NotInSameDomain
+  MoblieGatewayActivated --- |No| FixMobileGatewaySettings
+  MoblieGatewayActivated --- |Yes| NotInSameDomain
   FixMobileGatewaySettings[[Fix the Mobile <br/>Gateway settings.]]
-  FixMobileGatewaySettings --> IsIssueFixed_1
+  FixMobileGatewaySettings --- IsIssueFixed_1
   IsIssueFixed_1{{Issue<br/>fixed?}}
-  IsIssueFixed_1 --> |Yes| Ending_1
-  IsIssueFixed_1 --> |No| NotInSameDomain
+  IsIssueFixed_1 --- |Yes| Ending_1
+  IsIssueFixed_1 --- |No| NotInSameDomain
   NotInSameDomain{{Are the DMAs not in the<br/>same domain or is the <br/>Administrator password<br/>not the same 	accross<br/>the cluster?}}
-  NotInSameDomain --> |Yes| CheckSLDMS
-  NotInSameDomain --> |No| ContactTechsupport
+  NotInSameDomain --- |Yes| CheckSLDMS
+  NotInSameDomain --- |No| ContactTechsupport
   CheckSLDMS{{Does SLDMS.txt contain<br/>'Authentication failed' messages?}}
-  CheckSLDMS --> |Yes| ConfigureConnectionStrings
-  CheckSLDMS --> |No| ContactTechsupport
+  CheckSLDMS --- |Yes| ConfigureConnectionStrings
+  CheckSLDMS --- |No| ContactTechsupport
   ConfigureConnectionStrings[[Configure the<br/>connection strings.]]
-  ConfigureConnectionStrings --> IsIssueFixed_2
+  ConfigureConnectionStrings --- IsIssueFixed_2
   IsIssueFixed_2{{Issue<br/>fixed?}}
-  IsIssueFixed_2 --> |Yes| Ending_1
-  IsIssueFixed_2 --> |No| ContactTechsupport
+  IsIssueFixed_2 --- |Yes| Ending_1
+  IsIssueFixed_2 --- |No| ContactTechsupport
   %% -----------------------------------------------------------------------
   %% branch: Callback timeouts
   %% -----------------------------------------------------------------------
   VerifyCallback[Verify the callback <br/>timeout.]
-  VerifyCallback-->CallbackVerified
+  VerifyCallback---CallbackVerified
   CallbackVerified{{Are there callback errors<br/>in the information events?}}
-  CallbackVerified-->|No|ContactTechsupport_2
-  CallbackVerified-->|Yes|ResourcesCheck
+  CallbackVerified---|No|ContactTechsupport_2
+  CallbackVerified---|Yes|ResourcesCheck
   ResourcesCheck{{Is the memory or CPU usage high <br/>when the callback timeouts occur?}}
-  ResourcesCheck-->|Yes|LackResources
-  ResourcesCheck-->|No|DebugCallback
+  ResourcesCheck---|Yes|LackResources
+  ResourcesCheck---|No|DebugCallback
   DebugCallback[Investigate and fix<br/>the cause of<br/>the timeouts.]
-  DebugCallback --> IsIssueFixed_3
+  DebugCallback --- IsIssueFixed_3
   %% -----------------------------------------------------------------------
   %% branch: Cannot setup new connections
   %% -----------------------------------------------------------------------

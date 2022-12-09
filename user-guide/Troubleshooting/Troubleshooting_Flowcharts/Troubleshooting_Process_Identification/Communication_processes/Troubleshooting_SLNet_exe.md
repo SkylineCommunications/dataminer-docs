@@ -49,24 +49,24 @@ classDef classAction fill:#dddddd,stroke:#dddddd,color:#1E5179,stroke-width:1px;
 %% FAILOVER[[Failover<br/>issues]]
     THREAD[[Thread<br/>issues]]
     OTHER[[Follow generic<br/>investigation path]]
-     START --> MODULES
-	 MODULES --> |Startup| STARTUP
-	 MODULES --> |Correlation| CORR
+     START --- MODULES
+	 MODULES --- |Startup| STARTUP
+	 MODULES --- |Correlation| CORR
 %% FAILOVER case to be defined later (uncomment next line):
-%% MODULES --> |Failover|FAILOVER
-   MODULES --> |Disconnects| DISC
-	 MODULES --> |RTEs| THREAD
-   MODULES --> |Other| OTHER
+%% MODULES --- |Failover|FAILOVER
+   MODULES --- |Disconnects| DISC
+	 MODULES --- |RTEs| THREAD
+   MODULES --- |Other| OTHER
 %% -------------------------------------------------------------------------	
 %% all blocks terminating at a common End?
 %% -------------------------------------------------------------------------
 %%    ENDING([End])
-%%	  OTHER --> ENDING
-%%    STARTUP --> ENDING
-%%    DISC --> ENDING
-%%    FAILOVER --> ENDING
-%%    CORR --> ENDING
-%% 	  THREAD --> ENDING
+%%	  OTHER --- ENDING
+%%    STARTUP --- ENDING
+%%    DISC --- ENDING
+%%    FAILOVER --- ENDING
+%%    CORR --- ENDING
+%% 	  THREAD --- ENDING
 %% -------------------------------------------------------------------------
 %% Define hyperlinks %%
 %% -------------------------------------------------------------------------

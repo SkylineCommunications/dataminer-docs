@@ -34,15 +34,15 @@ F([Is the result 'Could not find <br>the KeySpaceName keyspace'?]):::Blue
 D([Is a large table identified?]):::Blue
 B([Are duplicate tables identified?]):::Blue
 %% Connect blocks %%
-A ----> |The BPA can only check local database installations.<br> It is not available yet for remote Cassandra servers.|C
-C -----> |Duplicate table or folder check|B
-C -----> | SStable size check: size largest <br> SSTable smaller than 1/3 <br> of the total installed RAM. |D
-C ------> |Compaction disk space check|E
-C ---------> |Keyspace existence check|F
-B --> |Yes|X
-D --> |Yes|V
-E --> |No|O
-F --> |Yes|G
+A ----- |The BPA can only check local database installations.<br> It is not available yet for remote Cassandra servers.|C
+C ------ |Duplicate table or folder check|B
+C ------ | SStable size check: size largest <br> SSTable smaller than 1/3 <br> of the total installed RAM. |D
+C ------- |Compaction disk space check|E
+C ---------- |Keyspace existence check|F
+B --- |Yes|X
+D --- |Yes|V
+E --- |No|O
+F --- |Yes|G
 %% Define hyperlinks %%
 click A "https://docs.dataminer.services/user-guide/Advanced_Functionality/DataMiner_Systems/BPA_tests/BPA_Cassandra_DB_Size.html"
 click C "https://docs.dataminer.services/user-guide/Advanced_Functionality/DataMiner_Systems/Running_BPA_tests.html"

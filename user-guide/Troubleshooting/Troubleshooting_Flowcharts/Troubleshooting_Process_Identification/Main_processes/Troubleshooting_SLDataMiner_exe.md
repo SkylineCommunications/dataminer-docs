@@ -41,16 +41,16 @@ LogCollector2[Run SLLogCollector and select <br>SLDataMiner memory to be 
 StopElement[Stop the element and check<br/> if the issue is on the device.]
 InfoEventsAlternative[Check information events <br> on the DMA to see <br> what else it could be.]
 %% Connect blocks %%
-Start ---> RTE
-RTE -->|RTE|Watchdog
-Watchdog ----> Threads ---> ThreadsDB ---> Offload ---> CassandraTb
-Threads ---> ThreadsSecondary ---> CheckLogs
-Watchdog ---> InfoEvents
-InfoEvents --->|YES|Revert
-InfoEvents --->|NO|LogCollector1
-RTE -->|Memory leak|MemoryLeak ---> LinkLeak ---->|YES|ElementActive --->|YES|StopElement
-LinkLeak --->|NO|LogCollector2
-ElementActive --->|NO|InfoEventsAlternative
+Start ---- RTE
+RTE ---|RTE|Watchdog
+Watchdog ----- Threads ---- ThreadsDB ---- Offload ---- CassandraTb
+Threads ---- ThreadsSecondary ---- CheckLogs
+Watchdog ---- InfoEvents
+InfoEvents ----|YES|Revert
+InfoEvents ----|NO|LogCollector1
+RTE ---|Memory leak|MemoryLeak ---- LinkLeak -----|YES|ElementActive ----|YES|StopElement
+LinkLeak ----|NO|LogCollector2
+ElementActive ----|NO|InfoEventsAlternative
 %% Define hyperlinks %%
 click StartPage "https://docs.dataminer.services/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Finding_a_Root_Cause.html"
 click CassandraTb "https://docs.dataminer.services/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Cassandra/Troubleshooting_Cassandra.html"

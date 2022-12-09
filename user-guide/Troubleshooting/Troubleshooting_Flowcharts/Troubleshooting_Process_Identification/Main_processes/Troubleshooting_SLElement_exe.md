@@ -43,21 +43,21 @@ MemoryLeak[Check the trending on the <br>Microsoft element when <br>the memory l
 LeakStart{{Can you link an event/action on <br>the DMA to when the leak started?}}
 ElementActive{{Was an element activated?}}
 %% Connect blocks %%
-Start ----> RTE
-RTE --> |RTE|Watchdog
-Watchdog ----> Threads
-Threads ---->|DB|ThreadsDB
-Threads -->|Alarm|ThreadsAlarm ----> DumpAlarm ----> Delt
-ThreadsDB ----> Offload ---> IssuesAfterCheck ---->|YES|CassandraTb
-IssuesAfterCheck--->|NO|DumpDb ----> Delt
-Delt ----> SendSw
-PendingCalls ---> RunPending
-RTE -->|Memory leak|MemoryLeak
-MemoryLeak ----> LeakStart
-LeakStart ----> |YES|ElementActive
-ElementActive -----> |YES|PendingCalls
-LeakStart ----> |NO|LogCollectorSw
-ElementActive ----> |NO|LogCollectorSw
+Start ----- RTE
+RTE --- |RTE|Watchdog
+Watchdog ----- Threads
+Threads -----|DB|ThreadsDB
+Threads ---|Alarm|ThreadsAlarm ----- DumpAlarm ----- Delt
+ThreadsDB ----- Offload ---- IssuesAfterCheck -----|YES|CassandraTb
+IssuesAfterCheck----|NO|DumpDb ----- Delt
+Delt ----- SendSw
+PendingCalls ---- RunPending
+RTE ---|Memory leak|MemoryLeak
+MemoryLeak ----- LeakStart
+LeakStart ----- |YES|ElementActive
+ElementActive ------ |YES|PendingCalls
+LeakStart ----- |NO|LogCollectorSw
+ElementActive ----- |NO|LogCollectorSw
 %% Define hyperlinks %%
 click StartPage "https://docs.dataminer.services/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Finding_a_Root_Cause.html"
 click RunPending "https://docs.dataminer.services/develop/devguide/Connector/Howto/How_to_retrieve_protocol_pending_calls.html"

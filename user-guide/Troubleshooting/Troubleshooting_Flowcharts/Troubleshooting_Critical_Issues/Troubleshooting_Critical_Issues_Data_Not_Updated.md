@@ -28,13 +28,13 @@ Surveyor[Surveyor]
 AlarmConsole[Alarm Console]
 Element[Element]
 %% Connect blocks %%
-Start --> Automaticrestart
-Start --> MachineoutofResources
-Start --> DataNotUpdated
-Start --> ErrorAlarmConsole
-DataNotUpdated --> Surveyor
-DataNotUpdated --> AlarmConsole
-DataNotUpdated --> Element
+Start --- Automaticrestart
+Start --- MachineoutofResources
+Start --- DataNotUpdated
+Start --- ErrorAlarmConsole
+DataNotUpdated --- Surveyor
+DataNotUpdated --- AlarmConsole
+DataNotUpdated --- Element
 %% Define hyperlinks %%
 click Home "https://docs.dataminer.services/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Finding_a_Root_Cause.html"
 click SLLogCollector "https://docs.dataminer.services/user-guide/Reference/DataMiner_Tools/SLLogCollector.html"

@@ -42,13 +42,13 @@ ActionClick_NodetoolInfo[nodetool info]
 ActionClick_NodetoolClearSnapshot[nodetool clearsnapshot]
 ActionClick_NodetoolCompactionStats[nodetool compactionstats]
 ActionClick_DatastaxReference[Click here for Cassandra's <br> official documentation on <br> nodetool commands]
-START --> ActionClick_DatastaxReference
-ActionClick_DatastaxReference --> Action_NodetoolStatus --> ActionClick_NodetoolStatus
-ActionClick_DatastaxReference --> Action_NodetoolHelp --> ActionClick_NodetoolHelp
-ActionClick_DatastaxReference --> Action_NodetoolCompactionStats --> ActionClick_NodetoolCompactionStats
-ActionClick_DatastaxReference --> Action_NodetoolGCStats --> ActionClick_NodetoolGCStats
-ActionClick_DatastaxReference --> Action_NodetoolInfo --> ActionClick_NodetoolInfo
-ActionClick_DatastaxReference --> Action_NodetoolClearSnapshot --> ActionClick_NodetoolClearSnapshot
+START --- ActionClick_DatastaxReference
+ActionClick_DatastaxReference --- Action_NodetoolStatus --- ActionClick_NodetoolStatus
+ActionClick_DatastaxReference --- Action_NodetoolHelp --- ActionClick_NodetoolHelp
+ActionClick_DatastaxReference --- Action_NodetoolCompactionStats --- ActionClick_NodetoolCompactionStats
+ActionClick_DatastaxReference --- Action_NodetoolGCStats --- ActionClick_NodetoolGCStats
+ActionClick_DatastaxReference --- Action_NodetoolInfo --- ActionClick_NodetoolInfo
+ActionClick_DatastaxReference --- Action_NodetoolClearSnapshot --- ActionClick_NodetoolClearSnapshot
 HOME([Start page <br/> Troubleshooting - Cassandra])
 %% -------------------------------------------------------------------------
 %% Define hyperlinks %%

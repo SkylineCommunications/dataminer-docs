@@ -7,6 +7,7 @@ uid: Finding_a_Root_Cause
 <div class="mermaid">
 flowchart TD
     %% Define styles %%
+    linkStyle default stroke:#cccccc
     classDef classTerminal fill:#1e5179,stroke:#1e5179,color:#ffffff,stroke-width:0px;
     classDef classDecision fill:#4baeea,stroke:#4baeea,color:#ffffff,stroke-width:0px;
     classDef classExternalRef fill:#9ddaf5,stroke:#9ddaf5,color:#1E5179,stroke-width:0px;
@@ -26,15 +27,15 @@ flowchart TD
     ProcessFlowcharts([Process])
     Cassandra([Cassandra])
     %% Connect blocks %%
-    START --> CheckStartup
-    CheckStartup -->|Yes| CHECK1
-    CheckStartup --> |No| DMAStartupIssues
-    CHECK1 --> |Yes| critical
-    CHECK1 ---> |No| DatabaseFlowcharts
-    DatabaseFlowcharts -->|Yes|WhichDb
-    DatabaseFlowcharts --->|No|identify
-    identify --> ProcessFlowcharts
-    WhichDb --> Cassandra
+    START --- CheckStartup
+    CheckStartup ---|Yes| CHECK1
+    CheckStartup --- |No| DMAStartupIssues
+    CHECK1 --- |Yes| critical
+    CHECK1 ---- |No| DatabaseFlowcharts
+    DatabaseFlowcharts ---|Yes|WhichDb
+    DatabaseFlowcharts ----|No|identify
+    identify --- ProcessFlowcharts
+    WhichDb --- Cassandra
     %% Define hyperlinks %%
     click CHECK1 "#examples-of-critical-issues" "examples of critical issues"
     click critical "https://docs.dataminer.services/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Critical_Issues/Troubleshooting_Critical_Issues_Overview.html" "To critical issues flowchart"

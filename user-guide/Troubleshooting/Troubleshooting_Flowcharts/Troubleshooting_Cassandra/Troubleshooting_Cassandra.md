@@ -32,11 +32,11 @@ Check connectivity to Cassandra using DevCenter. On the DMA, go to `C:\Program F
 graph TD
     bpa[Best Practice Analyser Cassandra]:::LightGray-->|From DataMiner<br> 9.6.0.0 CU23 onwards|B( Run the Cassandra BPA test in <br>System Center on the Agents BPA tab.<br>It is available by default from DataMiner<br>10.1.4 onwards, or else on demand.):::Gray
     click B "https://docs.dataminer.services/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Cassandra/Troubleshooting_Cassandra_Best_Practice_Analyzer.html" "Best Practice Analyser Cassandra"
-    box1-->bpa
-    box1[Check for any issues<br>observed in your system:]:::DarkBlue-->box2{{Are there Cassandra health<br>alarms in Cube?}}:::Blue
-    box2-->|Yes|2[Check Cassandra health<br>from DataMiner Cube.]:::LightGray-->3
+    box1---bpa
+    box1[Check for any issues<br>observed in your system:]:::DarkBlue---box2{{Are there Cassandra health<br>alarms in Cube?}}:::Blue
+    box2---|Yes|2[Check Cassandra health<br>from DataMiner Cube.]:::LightGray---3
     3{{Go to Alarm Console or Failover Status.}}:::Blue
-    box2-->|No|DiskCheck[Check on which drive database data is stored.<br> DRIVE:\ProgramData\Cassandra\SLDMADB <br>Check the drive size trend graph.]:::LightGray-->Disk
+    box2---|No|DiskCheck[Check on which drive database data is stored.<br> DRIVE:\ProgramData\Cassandra\SLDMADB <br>Check the drive size trend graph.]:::LightGray---Disk
     Disk{{Is available space on the drive decreasing?}}:::Blue
     click Disk "https://docs.dataminer.services/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Cassandra/Troubleshooting_Cassandra.html#option-2-is-available-space-on-the-drive-decreasing" "drive decreasing"
     click 3 "https://docs.dataminer.services/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Cassandra/Troubleshooting_Cassandra.html#option-1-go-to-alarm-console-or-failover-status" "alarm console or failover status"
@@ -57,15 +57,15 @@ graph TD
 <div class="mermaid">
 graph TD
     box1[Go to Alarm Console or Failover Status.]:::Blue
-    box1-->|Go to System Center > Agents > Failover > Status|5
-    box1-->|Open Alarm Console | 4_1_a1[Cassandra yellow or red <br>health alarm is present.]:::LightGray-->7
-    5[Cassandra health status <br>is yellow or red.]:::LightGray-->7
+    box1---|Go to System Center > Agents > Failover > Status|5
+    box1---|Open Alarm Console | 4_1_a1[Cassandra yellow or red <br>health alarm is present.]:::LightGray---7
+    5[Cassandra health status <br>is yellow or red.]:::LightGray---7
     7[- Run nodetool status on the DMAs. <br>- Try to get connected to Cassandra nodes with DevCenter. <br>- Confirm which Cassandra node is unavailable. <Br>- Restart Cassandra service on unresponsive Cassandra nodes.<br>If Cassandra service cannot be stopped, end<br> prunsrv.exe - under Details - and restart Cassandra service.]:::Gray
-    7-->12{{Check if Cassandra health is green and <br>no Cassandra issues remain.}}:::Blue
-    12-->|Yes, issue is solved.|12y([Problem solved]):::DarkBlue
-    12-->|No, there are issues.|12n{{Is the SLDataGateway process leaking?<br>Check trending in Microsoft Platform element.}}:::Blue
-    12n-->|Yes|13[To SLDataGateway flowchart]:::Gray
-    12n-->|No|13z([Problem solved]):::DarkBlue
+    7---12{{Check if Cassandra health is green and <br>no Cassandra issues remain.}}:::Blue
+    12---|Yes, issue is solved.|12y([Problem solved]):::DarkBlue
+    12---|No, there are issues.|12n{{Is the SLDataGateway process leaking?<br>Check trending in Microsoft Platform element.}}:::Blue
+    12n---|Yes|13[To SLDataGateway flowchart]:::Gray
+    12n---|No|13z([Problem solved]):::DarkBlue
     click 13 "https://docs.dataminer.services/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Process_Identification/Database_processes/Troubleshooting_SLDataGateway_exe.html" "SLDataGateway Flowchart"
     click 7 "https://docs.dataminer.services/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Cassandra/Troubleshooting_Cassandra_Nodetool_Checks.html" "nodetool"
     classDef info fill:#11628F,stroke:#000070,stroke-width:0px, color:#FFF;
@@ -85,27 +85,27 @@ graph TD
 <div class="mermaid">
 graph TD
     Disk{{Is available space on the drive decreasing?}}:::Blue
-    Disk-->|Yes|SchedT[Check Scheduled Tasks for <br>the status of repair and compaction tasks.]:::LightGray-->nodeT[Run nodetool compactstats and <br> check if there are any pending tasks.]:::Gray-->cassL[Check Cassandra debug.log <br> for Not Enough Disk compaction errors.]:::LightGray -->compErr{{Is compaction failing?}}:::Blue
-    compErr-->|No|endC([Check other possible <br> reasons of disk usage increase, <br> e.g. run WinDirStat tool.]):::DarkBlue
-    compErr-->|Yes|clean1[If there is not enough <br> space on the Cassandra  <br> drive, run cleanup.]:::LightGray-->clean2[If there are Cassandra <br>  snapshots, run  <br> nodetool clearsnapshot.]:::Gray-->clean3[Look for old logs, files  <br> or installers that can <br>  be deleted.]:::LightGray-->clean4[Increase <br> Cassandra drive.]:::LightGray
-    clean4-->compDec{{Does repair/compaction <br> finish and is available space <br> being recovered?}}:::Blue
-    compDec-->|Yes|compPy([Problem solved]):::DarkBlue
-    compDec-->|No|compPn[Let repair/compaction run several times.]:::LightGray-->compDec2{{After several repairs/compactions, <br> does drive space start to be recovered?}}:::Blue
-    compDec2-->|Yes|compP2y([Let scheduled maintenance task <br> run until DB size is back to normal.]):::DarkBlue
-    compDec2-->|No|compP2n[If compaction was failing<br>  for a long time, <br> there could be <br> too many undeletable <br> tombstones.]:::LightGray-->compP3n([Truncate the affected tables.]):::DarkBlue
-    Disk-->|No|cassRest{{Is Cassandra service restarting or stopped?}}:::Blue
-    cassRest-->a2[Connection to Cassandra errors]:::LightGray-->a3
+    Disk---|Yes|SchedT[Check Scheduled Tasks for <br>the status of repair and compaction tasks.]:::LightGray---nodeT[Run nodetool compactstats and <br> check if there are any pending tasks.]:::Gray---cassL[Check Cassandra debug.log <br> for Not Enough Disk compaction errors.]:::LightGray ---compErr{{Is compaction failing?}}:::Blue
+    compErr---|No|endC([Check other possible <br> reasons of disk usage increase, <br> e.g. run WinDirStat tool.]):::DarkBlue
+    compErr---|Yes|clean1[If there is not enough <br> space on the Cassandra  <br> drive, run cleanup.]:::LightGray---clean2[If there are Cassandra <br>  snapshots, run  <br> nodetool clearsnapshot.]:::Gray---clean3[Look for old logs, files  <br> or installers that can <br>  be deleted.]:::LightGray---clean4[Increase <br> Cassandra drive.]:::LightGray
+    clean4---compDec{{Does repair/compaction <br> finish and is available space <br> being recovered?}}:::Blue
+    compDec---|Yes|compPy([Problem solved]):::DarkBlue
+    compDec---|No|compPn[Let repair/compaction run several times.]:::LightGray---compDec2{{After several repairs/compactions, <br> does drive space start to be recovered?}}:::Blue
+    compDec2---|Yes|compP2y([Let scheduled maintenance task <br> run until DB size is back to normal.]):::DarkBlue
+    compDec2---|No|compP2n[If compaction was failing<br>  for a long time, <br> there could be <br> too many undeletable <br> tombstones.]:::LightGray---compP3n([Truncate the affected tables.]):::DarkBlue
+    Disk---|No|cassRest{{Is Cassandra service restarting or stopped?}}:::Blue
+    cassRest---a2[Connection to Cassandra errors]:::LightGray---a3
     a3[Check the Cassandra.yaml file.<br>Click this box for more details.]:::Gray
     click a3 "https://docs.dataminer.services/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Cassandra.html#cassandrayaml-file" "Cassandra.yaml details"
     click nodeT "https://docs.dataminer.services/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Cassandra/Troubleshooting_Cassandra_Nodetool_Checks.html" "nodetool"
     click clean2 "https://docs.dataminer.services/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Cassandra/Troubleshooting_Cassandra_Nodetool_Checks.html" "nodetool"
-    a3 -->  a8
+    a3 ---  a8
     a8{{Are .yaml file parameters OK?}}:::Blue
-    a8 --> |Yes|a101
-    a8 --> |No|a10[Correct the wrong values.<br>Restart Cassandra service and<br>DataMiner.]:::LightGray
-    a10 -->a101{{Did DataMiner start correctly?}}:::Blue
-    a101 --> |Yes|a11([Problem solved]):::DarkBlue
-    a101 ---> |No|a12([Look for more evidence <br>in collected logs.]):::DarkBlue
+    a8 --- |Yes|a101
+    a8 --- |No|a10[Correct the wrong values.<br>Restart Cassandra service and<br>DataMiner.]:::LightGray
+    a10 ---a101{{Did DataMiner start correctly?}}:::Blue
+    a101 --- |Yes|a11([Problem solved]):::DarkBlue
+    a101 ---- |No|a12([Look for more evidence <br>in collected logs.]):::DarkBlue
     classDef info fill:#11628F,stroke:#000070,stroke-width:0px, color:#FFF;
     classDef clickable fill:#ABDCFF,stroke:#00517E,stroke-width:0.25px, color:#00406D;
     classDef start fill:#FFE333,stroke:#00517E,stroke-width:0.25px, color:#000;

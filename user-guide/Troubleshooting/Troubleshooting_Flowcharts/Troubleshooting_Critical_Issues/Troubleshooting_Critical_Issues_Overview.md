@@ -23,10 +23,10 @@ ErrorAlarmConsole([Errors in <br> Alarm Console])
 Automaticrestart([Automatic restart])
 MachineoutofResources([Insufficient resources])
 %% Connect blocks %%
-Start ---> MachineoutofResources
-Start --> Automaticrestart
-Start --> DataNotUpdated
-Start --> ErrorAlarmConsole
+Start ---- MachineoutofResources
+Start --- Automaticrestart
+Start --- DataNotUpdated
+Start --- ErrorAlarmConsole
 %% Define hyperlinks %%
 click Home "https://docs.dataminer.services/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Finding_a_Root_Cause.html"
 click SLLogCollector "https://docs.dataminer.services/user-guide/Reference/DataMiner_Tools/SLLogCollector.html"

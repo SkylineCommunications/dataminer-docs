@@ -31,14 +31,14 @@ PRESENTYES[[Check SLNetClientTest tool<br/>Diagnostics > SLNet > Stacksizes <br/
 PRESENTNO{{Investigate gathered data: <br/>Found anything?}}
 FOUNDYES[[Refactor the relevant<br/>Correlation rules and/or<br/>Automation scripts.]]
 GATHER[[Gather a LogCollector package.<br/>Include memory dumps for<br/>SLNet and SLCorrelation.]]
-START -->  GATHER
-GATHER --> PRESENT
-PRESENT --> |Yes| PRESENTYES
-PRESENT --> |No| PRESENTNO
-PRESENTYES --> PRESENTNO
-PRESENTNO --> |Yes|FOUNDYES
-PRESENTNO --> |No|CONTACT
-FOUNDYES --> ENDING
+START ---  GATHER
+GATHER --- PRESENT
+PRESENT --- |Yes| PRESENTYES
+PRESENT --- |No| PRESENTNO
+PRESENTYES --- PRESENTNO
+PRESENTNO --- |Yes|FOUNDYES
+PRESENTNO --- |No|CONTACT
+FOUNDYES --- ENDING
 %% what to check?
 %% - information events many rules triggered?
 %% - SLCorrelation/SLNet logging many rules triggered?

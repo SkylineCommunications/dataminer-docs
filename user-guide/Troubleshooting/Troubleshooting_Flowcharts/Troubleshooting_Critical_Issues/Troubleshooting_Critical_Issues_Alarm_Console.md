@@ -28,10 +28,10 @@ Automaticrestart([Automatic restart])
 ErrorAlarmConsole([Errors in Alarm Console])
 MachineoutofResources([Insufficient resources])
 %% Connect blocks %%
-Start ---> ErrorAlarmConsole
-Start --> Automaticrestart
-Start --> DataNotUpdated
-Start --> MachineoutofResources
+Start ---- ErrorAlarmConsole
+Start --- Automaticrestart
+Start --- DataNotUpdated
+Start --- MachineoutofResources
 %% Define hyperlinks %%
 click Home "https://docs.dataminer.services/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Finding_a_Root_Cause.html"
 click SLLogCollector "https://docs.dataminer.services/user-guide/Reference/DataMiner_Tools/SLLogCollector.html"
@@ -68,11 +68,11 @@ Toggling{{"Are there toggling alarms? <br/> "}}
 StickyYes["1. Check the element for the existence of the alarm.<br/> 2. Check the database for the alarm trigger and <br/>cleared alarm entries.<br/> "]
 TogglingYes["1. Monitor Stream Viewer for a <br/>group or QAction that is stuck.<br/> 2. Check the protocol for any exceptions <br/>or errors when in debug mode.<br/> "]
 %% Connect blocks %%
-ErrorAlarmConsole --> Sticky
-ErrorAlarmConsole --> RTE
-Sticky --> |YES| StickyYes
-Sticky --> |NO| Toggling
-Toggling --> |YES| TogglingYes
+ErrorAlarmConsole --- Sticky
+ErrorAlarmConsole --- RTE
+Sticky --- |YES| StickyYes
+Sticky --- |NO| Toggling
+Toggling --- |YES| TogglingYes
 %% Define hyperlinks %%
 click RTE "https://docs.dataminer.services/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Identify_Per_Module/Alarm_Console/Troubleshooting_Run_Time_Errors.html" "How to check for RTE"
 %% Apply styles to blocks %%

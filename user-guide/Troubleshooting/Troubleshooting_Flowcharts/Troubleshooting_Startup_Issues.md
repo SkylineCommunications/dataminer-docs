@@ -26,12 +26,12 @@ classDef classSolution fill:#58595b,stroke:#58595b,color:#ffffff,stroke-width:0p
    failingHeartbeats([Failing heartbeats])
    others([Other issues...])
 %% Connect blocks %%
-   START --> CHECK1
-   CHECK1 --> licensing
-   CHECK1 --> nicpriority
-   CHECK1 --> dbOffloading
-   CHECK1 --> failingHeartbeats
-   CHECK1 --> others
+   START --- CHECK1
+   CHECK1 --- licensing
+   CHECK1 --- nicpriority
+   CHECK1 --- dbOffloading
+   CHECK1 --- failingHeartbeats
+   CHECK1 --- others
 %% Define hyperlinks %%
    click HOME "https://docs.dataminer.services/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Finding_a_Root_Cause.html"
 %% Apply styles to blocks %%

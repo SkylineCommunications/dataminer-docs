@@ -9,7 +9,6 @@ uid: Troubleshooting_Critical_Issues_Automatic_Restart
 <div class="mermaid">
 graph TD
 %% Define styles %%
-%% Define styles %%
 classDef LightBlue fill:#9DDAF5,stroke:#000070,stroke-width:0px, color:#1E5179;
 classDef Blue fill:#4BAEEA,stroke:#000070,stroke-width:0px, color:#FFFFFF;
 classDef DarkBlue fill:#1E5179,stroke:#000070,stroke-width:0px, color:#FFFFFF;
@@ -26,10 +25,10 @@ ErrorAlarmConsole([Errors in Alarm Console])
 Automaticrestart([Automatic restart])
 MachineoutofResources([Insufficient resources])
 %% Connect blocks %%
-Start --> Automaticrestart
-Start --> MachineoutofResources
-Start --> DataNotUpdated
-Start --> ErrorAlarmConsole
+Start --- Automaticrestart
+Start --- MachineoutofResources
+Start --- DataNotUpdated
+Start --- ErrorAlarmConsole
 %% Define hyperlinks %%
 click Home "https://docs.dataminer.services/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Finding_a_Root_Cause.html"
 click SLLogCollector "https://docs.dataminer.services/user-guide/Reference/DataMiner_Tools/SLLogCollector.html"
@@ -69,13 +68,13 @@ OSissues["Unexpected OS shutdown/problems, <br/> e.g. power outage, etc."]
 ProcessCrash["1. Save .high Crashdump <br> + note timestamp. <br/>2. Collect minidump/<br>Log Collector logging. <br/>3. Investigate using the <br> Generic Investigation Flow. <br/>4. Send crashdump + logging <br> + conclusions to Create squads. "]
 ProcessDisappearance["1. Identify process that <br> disappeared + timestamp.<br/> 2. Collect minidump. <br/> 3. Set up process dump <br> in Log Collector. <br/> 4.Identify DataMiner actions <br> during disappearance, <br/>using the Generic <br> Investigation Flow."]
 %% Connect blocks %%
-Automaticrestart --> CrashdumpDetected
-CrashdumpDetected --> |Yes| ProcessCrash
-CrashdumpDetected --> |No| MinidumpDetected
-MinidumpDetected --> |Yes| CheckWatchdog
-MinidumpDetected --> |No| OSissues
-CheckWatchdog -->|Yes| ProcessDisappearance
-CheckWatchdog -->|No| UserActions
+Automaticrestart --- CrashdumpDetected
+CrashdumpDetected --- |Yes| ProcessCrash
+CrashdumpDetected --- |No| MinidumpDetected
+MinidumpDetected --- |Yes| CheckWatchdog
+MinidumpDetected --- |No| OSissues
+CheckWatchdog ---|Yes| ProcessDisappearance
+CheckWatchdog ---|No| UserActions
 %% Define hyperlinks %%
 %% Apply styles to blocks %%
 class Start DarkBlue;

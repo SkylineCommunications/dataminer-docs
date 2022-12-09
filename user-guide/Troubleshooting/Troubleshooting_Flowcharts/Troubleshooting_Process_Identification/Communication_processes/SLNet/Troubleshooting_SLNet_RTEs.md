@@ -36,17 +36,17 @@ classDef classActionNonClickable fill:#dddddd,stroke:#dddddd,color:#1E5179,strok
     HighStack[[Plot the stack size every 5 minutes:<br/> Diagnostics>SLNet>StackSizes<br/>Export]]
     SearchLine[[Turn auto-refresh on and<br/> search for the 'slnetcom' string]]
     LogSize[[Increase SLNet log size<br/> C:\Skyline DataMiner\Files\SLNet.exe.config]]
-  START --> MODULES
-    MODULES --> |Abnormal DMA startup| StartupGuide
-    StartupGuide --> END
-    MODULES --> |RTEs| CheckAlarmsAndLogs
-    CheckAlarmsAndLogs --> IssueFound
-    IssueFound --> |No| CheckJobSize
-    IssueFound --> |Yes| END
-    CheckJobSize --> IsStackIssue
-    IsStackIssue --> |High and stagnating<br/> or high and growing| HighStack
-    HighStack --> SearchLine
-    IsStackIssue --> |Normal| LogSize
+  START --- MODULES
+    MODULES --- |Abnormal DMA startup| StartupGuide
+    StartupGuide --- END
+    MODULES --- |RTEs| CheckAlarmsAndLogs
+    CheckAlarmsAndLogs --- IssueFound
+    IssueFound --- |No| CheckJobSize
+    IssueFound --- |Yes| END
+    CheckJobSize --- IsStackIssue
+    IsStackIssue --- |High and stagnating<br/> or high and growing| HighStack
+    HighStack --- SearchLine
+    IsStackIssue --- |Normal| LogSize
 %% -------------------------------------------------------------------------
 %% all blocks terminating at a common End?
 %% -------------------------------------------------------------------------

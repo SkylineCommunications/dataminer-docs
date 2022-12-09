@@ -12,7 +12,6 @@ uid: Troubleshooting_Critical_Issues_Resources
 <div class="mermaid">
 graph TD
 %% Define styles %%
-%% Define styles %%
 classDef LightBlue fill:#9DDAF5,stroke:#000070,stroke-width:0px, color:#1E5179;
 classDef Blue fill:#4BAEEA,stroke:#000070,stroke-width:0px, color:#FFFFFF;
 classDef DarkBlue fill:#1E5179,stroke:#000070,stroke-width:0px, color:#FFFFFF;
@@ -29,10 +28,10 @@ ErrorAlarmConsole([Errors in Alarm Console])
 Automaticrestart([Automatic restart])
 MachineoutofResources([Insufficient resources])
 %% Connect blocks %%
-Start --> Automaticrestart
-Start --> MachineoutofResources
-Start --> DataNotUpdated
-Start --> ErrorAlarmConsole
+Start --- Automaticrestart
+Start --- MachineoutofResources
+Start --- DataNotUpdated
+Start --- ErrorAlarmConsole
 %% Define hyperlinks %%
 click Home "https://docs.dataminer.services/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Finding_a_Root_Cause.html"
 click SLLogCollector "https://docs.dataminer.services/user-guide/Reference/DataMiner_Tools/SLLogCollector.html"
@@ -73,16 +72,16 @@ Prunsrv["1. Check compaction status.<br/> 2. Check backup schedule.<br/> 3. Chec
 Proc["1. Check for RTEs.<br/> 2. Check for stuck threads/errors in <br/>respective SL process logging.<br/> 3. Collect memory dump. <br/> "]
 RAMup["Increase the RAM resources on the server."]
 %% Connect blocks %%
-MachineoutofResources --> HDSpace
-HDSpace --> |YES| FreeSpace
-HDSpace --> |NO| RAM
-RAM --> |YES| Process
-Process --> |YES| DMProc
-Process --> |NO| RAMup
-DMProc --> |YES| Proc
-DMProc --> |NO| Cassandra
-Cassandra --> |YES| Prunsrv
-Cassandra --> |NO| RAMup
+MachineoutofResources --- HDSpace
+HDSpace --- |YES| FreeSpace
+HDSpace --- |NO| RAM
+RAM --- |YES| Process
+Process --- |YES| DMProc
+Process --- |NO| RAMup
+DMProc --- |YES| Proc
+DMProc --- |NO| Cassandra
+Cassandra --- |YES| Prunsrv
+Cassandra --- |NO| RAMup
 %% Define hyperlinks %%
 click FreeSpace "https://docs.dataminer.services/user-guide/Troubleshooting/Procedures/Keeping_a_DMA_from_running_out_of_disk_space.html"
 %% Apply styles to blocks %%

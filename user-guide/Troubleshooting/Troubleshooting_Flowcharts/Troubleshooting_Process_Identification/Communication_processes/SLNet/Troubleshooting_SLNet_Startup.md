@@ -24,7 +24,7 @@ classDef classActionNonClickable fill:#dddddd,stroke:#dddddd,color:#1E5179,strok
 %% -------------------------------------------------------------------------
 %% flowchart structure
 %% -------------------------------------------------------------------------
-  HOME([Start page])   
+  HOME([Start page])
   START([DMA has trouble <br>starting up correctly<br/>])
   BACK([Back to SLNet <br>troubleshooting])
   MODULES{{Which issue <br> is affecting<br/> the DMA ?}}
@@ -45,33 +45,33 @@ classDef classActionNonClickable fill:#dddddd,stroke:#dddddd,color:#1E5179,strok
     RestartMachine[[Restart <br>the machine.]]
     ManualStart[[Start the <br>DMA manually.]]
     SysAdmin[[Ask admin to <br>exclude DataMiner <br>files and services <br>from the antivirus <br>watchlist.]]
-    IsRunning --> |Yes| OpenCube
-    OpenCube --> IsConnected
-    IsConnected --> |Yes, started correctly| END
-    IsConnected --> |Yes, not started correctly| IsRTEorCrash
-    IsConnected --> |No| GenericCases
-    GenericCases --> IsGenericIssueFound
-    IsGenericIssueFound --> |Yes, identified, fixed, <br>and started correctly| END
-    IsGenericIssueFound --> |No| IsRTEorCrash
-    IsRTEorCrash --> |RTE| RTEChart
-    IsRTEorCrash --> |Crash| CrashChart
-    RTEChart --> END
-    CrashChart --> END
-    IsRunning --> |No| IsSLNetPresent
-    IsSLNetPresent --> |Yes| IsProcessSuspended
-    IsProcessSuspended --> |No| ManualStart
-    IsProcessSuspended --> |Yes| RestartMachine
-    RestartMachine --> IsRunning
-    ManualStart --> IsAv
-    SysAdmin --> IsRunning
-    IsAv --> |No| EventsAndLogs
-    IsAv --> |Yes| SysAdmin
-    EventsAndLogs --> IsRTEorCrash
-    IsSLNetPresent --> |No| RegisterDlls
-    RegisterDlls --> RestartAgent
-    RestartAgent --> IsRunning
-  START --> MODULES
-  MODULES --> |Abnormal DMA startup| IsRunning
+    IsRunning --- |Yes| OpenCube
+    OpenCube --- IsConnected
+    IsConnected --- |Yes, started correctly| END
+    IsConnected --- |Yes, not started correctly| IsRTEorCrash
+    IsConnected --- |No| GenericCases
+    GenericCases --- IsGenericIssueFound
+    IsGenericIssueFound --- |Yes, identified, fixed, <br>and started correctly| END
+    IsGenericIssueFound --- |No| IsRTEorCrash
+    IsRTEorCrash --- |RTE| RTEChart
+    IsRTEorCrash --- |Crash| CrashChart
+    RTEChart --- END
+    CrashChart --- END
+    IsRunning --- |No| IsSLNetPresent
+    IsSLNetPresent --- |Yes| IsProcessSuspended
+    IsProcessSuspended --- |No| ManualStart
+    IsProcessSuspended --- |Yes| RestartMachine
+    RestartMachine --- IsRunning
+    ManualStart --- IsAv
+    SysAdmin --- IsRunning
+    IsAv --- |No| EventsAndLogs
+    IsAv --- |Yes| SysAdmin
+    EventsAndLogs --- IsRTEorCrash
+    IsSLNetPresent --- |No| RegisterDlls
+    RegisterDlls --- RestartAgent
+    RestartAgent --- IsRunning
+  START --- MODULES
+  MODULES --- |Abnormal DMA startup| IsRunning
 %% -------------------------------------------------------------------------
 %% all blocks terminating at a common End?
 %% -------------------------------------------------------------------------

@@ -38,19 +38,19 @@ Decision_YamlWellConvigured{{Is the Cassandra.yaml file well configured?}}
 Decision_ProblemsPersist{{Do problems persist?}}
 Solution_CheckNetworkIssues[Check network issues.]
 Solution_RestartCassandra[Restart Cassandra.]
-    START --> Action_NodetoolStatus --> Decision_NodesUN
-    Decision_NodesUN --> |YES| Decision_LoadValues
-    Decision_NodesUN --> |NO| Decision_ReachEachOther
-    Decision_LoadValues --> |YES| Action_CassandraLogsExceptions --> ActionClick_GarbageCollection
-    Decision_LoadValues --> |NO| ActionClick_RunRepair --> ActionClick_GarbageCollection
-    ActionClick_GarbageCollection --> Solution_RestartCassandra
-    Decision_ReachEachOther --> |YES| Decision_YamlWellConvigured
-    Decision_ReachEachOther --> |NO| Solution_CheckNetworkIssues --> Solution_RestartCassandra
-    Decision_YamlWellConvigured --> |YES| ActionClick_GarbageCollection
-    Decision_YamlWellConvigured --> |NO| ActionClick_CheckYamlConfig --> Solution_RestartCassandra
-    Solution_RestartCassandra --> Decision_ProblemsPersist
-    Decision_ProblemsPersist --> |YES| HOME
-    Decision_ProblemsPersist --> |NO| END
+    START --- Action_NodetoolStatus --- Decision_NodesUN
+    Decision_NodesUN --- |YES| Decision_LoadValues
+    Decision_NodesUN --- |NO| Decision_ReachEachOther
+    Decision_LoadValues --- |YES| Action_CassandraLogsExceptions --- ActionClick_GarbageCollection
+    Decision_LoadValues --- |NO| ActionClick_RunRepair --- ActionClick_GarbageCollection
+    ActionClick_GarbageCollection --- Solution_RestartCassandra
+    Decision_ReachEachOther --- |YES| Decision_YamlWellConvigured
+    Decision_ReachEachOther --- |NO| Solution_CheckNetworkIssues --- Solution_RestartCassandra
+    Decision_YamlWellConvigured --- |YES| ActionClick_GarbageCollection
+    Decision_YamlWellConvigured --- |NO| ActionClick_CheckYamlConfig --- Solution_RestartCassandra
+    Solution_RestartCassandra --- Decision_ProblemsPersist
+    Decision_ProblemsPersist --- |YES| HOME
+    Decision_ProblemsPersist --- |NO| END
 %% -------------------------------------------------------------------------
 %% all blocks terminating at a common End?
 %% -------------------------------------------------------------------------
