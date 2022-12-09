@@ -23,11 +23,17 @@ When shares are created, accessed, updated, or deleted, the audit events on the 
 
 When DMS or organization users are created, updated, or deleted, audit events will now be added on the Audit page of the DCP Admin app.
 
+#### 16 November 2022 – Enhancement – CloudGateway 2.9.6 – Proxy support for WebSocket connection testing [ID_34569]
+
+The connection tester now supports testing WebSocket connections through the configured proxy.
+
+This enhancement is included in Cloud Pack version 2.8.2.
+
 #### 16 November 2022 – Enhancement – Orchestrator 1.2.6 – DMA name and ID synced to DCP [ID_34670]
 
 From now on, the DataMiner Orchestrator will sync the DMA name and ID to DCP. This is for example used on the *Nodes* page of the Admin app so users can easily identify a DMA to update its DxMs.
 
-This enhancement is included in Cloud Pack version 2.8.2).
+This enhancement is included in Cloud Pack version 2.8.2.
 
 #### 28 November 2022 - Fix - Proxy issue in DataMiner ArtifactDeployer 1.4.0 [ID_35013]
 
@@ -77,11 +83,23 @@ A number of improvements have been implemented on the *Audit* page in the DCP Ad
 - The column order has been adjusted.
 - Automatic loading of audit records has been improved to prevent possible issues with different screen sizes.
 
+#### 15 September 2022 – Fix – CloudGateway 2.9.5 – Problem in CloudGateway process if MaintenanceSettings.xml contained invalid URLs [ID_34341]
+
+If URLs in the file *MaintenanceSettings.xml* were not configured correctly, a problem could occur in the CloudGateway process.
+
+With CloudGateway 2.9.5 (included in Cloud Pack version 2.8.2), URLs in *MaintenanceSettings.xml* will be trimmed and parsed to URIs to prevent this, so that CloudGateway will no longer get this problem at runtime. However, note that CloudGateway may still fail to start up if a URL in *MaintenanceSettings.xml* is invalid.
+
 #### 15 September 2022 – Fix – CoreGateway 2.11.5 – Incorrect information event when connector was deployed [ID_34325]
 
 When a connector was deployed, the corresponding information event incorrectly mentioned that this was done with the SLNetClientTest tool.
 
 With CoreGateway 2.11.5 (included in Cloud Pack version 2.8.2), the information event will have the correct format `New Client Registered - <UserName> @ <ComputerName> with DataMiner Cloud Platform`.
+
+#### 9 September 2022 – Fix – FieldControl 2.8.1 – Teams bot not working [ID_34374]
+
+In some cases, it could occur that the DataMiner Teams bot stopped working correctly and responded to commands with an error message.
+
+With FieldControl 2.8.1 (included in Cloud Pack version 2.8.2), this issue will no longer occur.
 
 #### 1 September 2022 – Enhancement – Filter functionality for Audit log in DCP Admin app [ID_34322]
 
