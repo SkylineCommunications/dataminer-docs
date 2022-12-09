@@ -36,6 +36,8 @@ From now on, you can also add the following placeholders in the *ShapeGrouping* 
 
 - Add `[Count]` to make the shape display the number of child shapes in the group (similar to adding an asterisk).
 
+The placeholders `[GroupValue]` and `[Count]` can be added simultaneously as well.
+
 ## Other features
 
 #### Visual Overview: Session variable YAxisResources now supports filters to pass exposers [ID_34857]
@@ -68,16 +70,6 @@ Examples:
 ChildrenSort="Property|property=Start,asc"
 ChildrenSort="Property|property=End,desc"
 ```
-
-#### Visual Overview - '[GroupValue]' and '[Count]' can now be used as placeholders to adjust the shape text inside of dynamically grouped shapes [ID_34974]
-
-<!-- MR 10.4.0 - FR 10.3.1 -->
-
-When configuring a Visio drawing, users can now enter the placeholder "[GroupValue]" in the *ShapeGrouping* shape data to display the parameter value of the shape data *GroupBy* of the first child of the group. If the *GroupBy* value has multiple column parameters or properties, these will be separated by commas.
-
-Users can also use the placeholder "[Count]" from now onwards, to display the number of children in a group of dynamically positioned shapes.
-
-Up to now, the only placeholder supported in the *ShapeGrouping* shape was an asterisk ("\*").
 
 ## Changes
 

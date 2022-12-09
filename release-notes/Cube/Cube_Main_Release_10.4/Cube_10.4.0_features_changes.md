@@ -66,7 +66,7 @@ From now on, you can also add the following placeholders in the *ShapeGrouping* 
 
 - Add `[Count]` to make the shape display the number of child shapes in the group (similar to adding an asterisk).
 
-The laceholders `[GroupValue]` and `[Count]` can be added simultaneously as well.
+The placeholders `[GroupValue]` and `[Count]` can be added simultaneously as well.
 
 ## Changes
 
