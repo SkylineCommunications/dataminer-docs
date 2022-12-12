@@ -64,4 +64,4 @@ var filter = DomInstanceExposers.CreatedBy.Equal("John Doe");
 ```
 
 > [!NOTE]
-> The DOM objects created prior to DataMiner 10.3.2/10.4.0 will not have a value for these fields. However, after an existing object is upgraded and updated once, the `LastModified` and `LastModifiedBy` fields will be filled in.
+> The DOM objects created prior to DataMiner 10.3.2/10.4.0 will not have a value for these fields. However, after an existing object is updated once, the `LastModified` and `LastModifiedBy` fields will be filled in.
