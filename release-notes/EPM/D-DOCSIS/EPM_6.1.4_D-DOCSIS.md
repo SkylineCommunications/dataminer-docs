@@ -78,6 +78,10 @@ These changes include:
 - More efficient buffer cleanup logic.
 - Removal of the *Counters History* column in the *CmUpstream* table of the Cox CBR-8 Platform D-DOCSIS connector.
 
+#### MLD status alarm monitoring removed from Core Leaf [ID_35132]
+
+MLD status alarm monitoring is now disabled on Core Leaf level.
+
 ### Fixes
 
 #### Ceeview link on RPD Topology page not working [ID_33612]
