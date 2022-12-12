@@ -79,7 +79,7 @@ In case of a Pay-per-Use plan, user pay for what they use, giving ultimate flexi
 | Annual subscription fee | X | - |
 | Over-utilization | Charged at a premium fee | - |
 | Support services | MUA < 200: Community Plan <br> MUA >= 200: Continuity/Evolve | Community Plan|
-| Professional Services Credits included |  100 < MUA < 200: 100 <br> 200 < MUA < 400: 200 <br> MUA >= 400: 600 | 50 for every 1000 pay-per-use credits |
+| Professional Services credits included |  100 < MUA < 200: 100 <br> 200 < MUA < 400: 200 <br> MUA >= 400: 600 | 50 for every 1000 pay-per-use credits |
 
 > [!IMPORTANT]
 > The system must have DataMiner Cloud Services enabled in order to enable metering for systems that are hosted by the user (on-premises or private cloud). The system will stop working if disconnected for longer than 24 hours.
