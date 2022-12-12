@@ -6,9 +6,9 @@ uid: DCP_change_log
 
 The DataMiner Cloud Platform gets updated continuously. This change log can help you trace when specific features and changes have become available.
 
-#### 9 December 2022 - Enhancement - FieldControl 2.8.2 - Newtonsoft dependencies updated to 13.0.2 [ID_35140]
+#### 9 December 2022 - Enhancement - FieldControl 2.8.2 - Dependencies updated [ID_35140]
 
-All NuGet packages that included Newtonsoft.json version 12 have been updated to version 13.0.2.
+Several dependencies were updated. This includes security-related improvements.
 
 #### 8 December 2022 - New feature - CloudGateway 2.10.0 / SupportAssistant 1.1.0 - Remote Log Collection [ID_34681] [ID_34875] [ID_34928] [ID_34934] [ID_34954] [ID_34992]
 
@@ -104,13 +104,13 @@ A number of improvements have been implemented on the *Audit* page in the DCP Ad
 
 #### 15 September 2022 – Fix – CloudGateway 2.9.5 – Problem in CloudGateway process if MaintenanceSettings.xml contained invalid URLs [ID_34341]
 
-If URLs in the file *MaintenanceSettings.xml* were not configured correctly, a problem could occur in the CloudGateway process.
+If URLs in the file *MaintenanceSettings.xml* were not configured correctly, a problem could occur in the CloudGateway process. This happened specifically when DataMiner upgrades caused the HTTP URL to end with a new line.
 
-With CloudGateway 2.9.5 (included in Cloud Pack version 2.8.2), URLs in *MaintenanceSettings.xml* will be trimmed and parsed to URIs to prevent this, so that CloudGateway will no longer get this problem at runtime. However, note that CloudGateway may still fail to start up if a URL in *MaintenanceSettings.xml* is invalid.
+With CloudGateway 2.9.5 (included in Cloud Pack version 2.8.2), all URLs from configuration files will be trimmed to prevent this, so that CloudGateway will no longer get this problem at runtime. However, note that CloudGateway may still fail to start up if a URL in a configuration file is invalid.
 
 #### 15 September 2022 – Fix – CoreGateway 2.11.5 – Incorrect information event when connector was deployed [ID_34325]
 
-When a connector was deployed, the corresponding information event incorrectly mentioned that this was done with the SLNetClientTest tool.
+When a connector was deployed via DCP, the corresponding information event incorrectly mentioned that this was done with the SLNetClientTest tool.
 
 With CoreGateway 2.11.5 (included in Cloud Pack version 2.8.2), the information event will have the correct format `New Client Registered - <UserName> @ <ComputerName> with DataMiner Cloud Platform`.
 
@@ -138,7 +138,7 @@ When the DataMiner Cloud Pack was installed in a cluster with two or more DMAs, 
 
 With CoreGateway 2.11.4 and CloudGateway 2.9.4 (included in Cloud Pack version 2.8.2), this issue is resolved.
 
-The CoreGateway DxM must now be installed on the same DMA as CloudGateway to ensure that sharing and remote access will work correctly. For DMZ setups, the DMA that the cloud gateway points to will need to have the CoreGateway DxM installed.
+The CoreGateway DxM must now be installed on the same DMA as CloudGateway to ensure that sharing and remote access will work correctly. For DMZ setups, the DMA that CloudGateway points to will need to have the CoreGateway DxM installed.
 
 #### 1 September 2022 – Fix – CoreGateway 2.11.4 – CoreGateway of offline DMA tried to respond to requests from DCP [ID_33973]
 
