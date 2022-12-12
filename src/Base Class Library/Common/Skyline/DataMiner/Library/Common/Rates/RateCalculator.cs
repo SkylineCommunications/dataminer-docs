@@ -3,6 +3,8 @@
 	using System;
 	using System.Collections.Generic;
 
+	using Skyline.DataMiner.Library.Common.Interfaces;
+
 	/// <summary>
 	/// Generic class that gathers the basic methods to calculate rates and utilization.
 	/// </summary>
@@ -59,7 +61,7 @@
 		/// <returns>Array with the rates in units per second. Unit depends on provided arguments, e.g. when values are in octets and <paramref name="dataConversionType"/> is OctetsToBits, the returned rate is bps.</returns>
 		public static double[] CalculateRate(double delta, int minDelta, double[] previousRates, uint[] currentCounters, uint[] previousCounters, DataConversionType dataConversionType)
 		{
-			return null;
+			return CalculateRate<uint>(delta, minDelta, previousRates, currentCounters, previousCounters, dataConversionType);
 		}
 
 		/// <summary>
@@ -75,7 +77,7 @@
 		/// <returns>Array with the rates in units per second. Unit depends on provided arguments, e.g. when values are in octets and <paramref name="dataConversionType"/> is OctetsToBits, the returned rate is bps.</returns>
 		public static double[] CalculateRate(double delta, int minDelta, double[] previousRates, ulong[] currentCounters, ulong[] previousCounters, DataConversionType dataConversionType)
 		{
-			return null;
+			return CalculateRate<ulong>(delta, minDelta, previousRates, currentCounters, previousCounters, dataConversionType);
 		}
 
 		/// <summary>
@@ -321,6 +323,35 @@
 			{
 				CalculateUtilization(interfaceTable.InterfaceRows);
 			}
+		}
+
+		private static double[] CalculateRate<T>(double delta, int minDelta, double[] previousRates, T[] currentCounters, T[] previousCounters, DataConversionType dataConversionType) where T : IConvertible
+		{
+			if (previousRates == null || currentCounters == null || previousCounters == null)
+			{
+				throw new ArgumentException("The passed rate arrays cannot be null.");
+			}
+
+			if (previousRates.Length != currentCounters.Length || previousRates.Length != previousCounters.Length)
+			{
+				throw new ArgumentException("The size of all rate arrays needs to be the same.");
+			}
+
+			double[] result = new double[previousRates.Length];
+			for (int i = 0; i < result.Length; i++)
+			{
+
+				if (typeof(T) == typeof(uint))
+				{
+					result[i] = CalculateRate(delta, minDelta, previousRates[i], Convert.ToUInt32(currentCounters[i]), Convert.ToUInt32(previousCounters[i]), dataConversionType);
+				}
+				else
+				{
+					result[i] = CalculateRate(delta, minDelta, previousRates[i], Convert.ToUInt64(currentCounters[i]), Convert.ToUInt64(previousCounters[i]), dataConversionType);
+				}
+			}
+
+			return result;
 		}
 	}
 }
