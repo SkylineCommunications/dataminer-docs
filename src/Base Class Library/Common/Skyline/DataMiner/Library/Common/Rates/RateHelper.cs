@@ -35,7 +35,7 @@
 		}
 
 		/// <summary>
-		/// Determines whether the rate should be calculated per second, minute, hour or day.
+		/// Determines whether the rate should be calculated per second, minute, hour, or day.
 		/// </summary>
 		[JsonProperty]
 		public RateBase RateBase { get; set; }
@@ -99,12 +99,12 @@
 		{
 			unchecked
 			{
-				// Note that the use of var without casting here only works cause currently, generic type U can only be uint or ulong and :
-				// - subtracting 2 uint implicitly returns a uint and handles wrap around nicely.
-				// - subtracting 2 ulong implicitly returns a ulong and handles wrap around nicely.
+				// Note that the use of "var" without casting only works here because generic type U can currently only be uint or ulong and:
+				// - subtracting 2 uint implicitly returns a uint and handles wraparound nicely.
+				// - subtracting 2 ulong implicitly returns a ulong and handles wraparound nicely.
 				// If generic type U could be of other types, then an explicit casting could be required. Example:
-				// - subtracting 2 ushort implicitly first converts both values to int, subtract them and returns an int and won't handle wrap around properly.
-				//    In such case, an explicit cast to ushort would be required for the wrap around to be properly handled.
+				// - subtracting 2 ushort implicitly first converts both values to int, subtracts them and returns an int, and does not handle wraparound properly.
+				//   In such a case, an explicit cast to ushort would be required for the wraparound to be properly handled.
 
 				var counterIncrease = newCounter - oldCounter;
 
@@ -126,7 +126,7 @@
 	}
 
 	/// <summary>
-	/// <para>Class <see cref="RateOnDateTime{T, U}"/> helps calculating rates of all sorts (bit rates, counter rates, etc) based on counters and DateTimes.</para>
+	/// <para>Class <see cref="RateOnDateTime{T, U}"/> helps calculate rates of all sorts (bit rates, counter rates, etc) based on counters and DateTimes.</para>
 	/// This class is meant to be used as base class for more specific RateHelpers depending on the range of counters (<see cref="System.UInt32"/>, <see cref="System.UInt64"/>, etc).
 	/// </summary>
 	[Serializable]
@@ -161,7 +161,7 @@
 	}
 
 	/// <summary>
-	/// <para>Class <see cref="RateOnTimeSpan{T, U}"/> helps calculating rates of all sorts (bit rates, counter rates, etc) based on counters and TimeSpans.</para>
+	/// <para>Class <see cref="RateOnTimeSpan{T, U}"/> helps calculate rates of all sorts (bit rates, counter rates, etc) based on counters and TimeSpans.</para>
 	/// This class is meant to be used as base class for more specific RateHelpers depending on the range of counters (<see cref="System.UInt32"/>, <see cref="System.UInt64"/>, etc).
 	/// </summary>
 	[Serializable]
@@ -216,7 +216,7 @@
 		/// <param name="minDelta">Minimum <see cref="System.TimeSpan"/> necessary between 2 counters when calculating a rate.<br/>
 		/// Counters will be buffered until this minimum delta is met.</param>
 		/// <param name="maxDelta">Maximum <see cref="System.TimeSpan"/> allowed between 2 counters when calculating a rate.</param>
-		/// <param name="rateBase">Choose whether the rate should be calculated per second, minute, hour or day.</param>
+		/// <param name="rateBase">Choose whether the rate should be calculated per second, minute, hour, or day.</param>
 		/// <exception cref="JsonReaderException"><paramref name="rateHelperSerialized"/> is an invalid string representation of a <see cref="Rate32OnDateTime"/> instance.</exception>
 		/// <returns>If the <paramref name="rateHelperSerialized"/> is valid, a new instance of the <see cref="Rate32OnDateTime"/> class with all data found in <paramref name="rateHelperSerialized"/>.<br/>
 		/// Otherwise, throws a <see cref="JsonReaderException"/>.</returns>
@@ -236,7 +236,7 @@
 		/// <param name="utcDateTime">The <see cref="System.DateTime"/> at which <paramref name="newCounter"/> value was taken.</param>
 		/// <param name="faultyReturn">The value to be returned in case a correct rate could not be calculated.</param>
 		/// <exception cref="ArgumentException"><paramref name="utcDateTime"/> is not of kind <see cref="DateTimeKind.Utc"/></exception>
-		/// <returns>The calculated rate or the value specified in <paramref name="faultyReturn"/> in case the rate can not be calculated.</returns>
+		/// <returns>The calculated rate or the value specified in <paramref name="faultyReturn"/> in case the rate cannot be calculated.</returns>
 		public double Calculate(uint newCounter, DateTime utcDateTime, double faultyReturn = -1)
 		{
 			var rateCounter = new Counter32WithDateTime(newCounter, utcDateTime);
@@ -260,7 +260,7 @@
 		/// <param name="minDelta">Minimum <see cref="System.TimeSpan"/> necessary between 2 counters when calculating a rate.<br/>
 		/// Counters will be buffered until this minimum delta is met.</param>
 		/// <param name="maxDelta">Maximum <see cref="System.TimeSpan"/> allowed between 2 counters when calculating a rate.</param>
-		/// <param name="rateBase">Choose whether the rate should be calculated per second, minute, hour or day.</param>
+		/// <param name="rateBase">Choose whether the rate should be calculated per second, minute, hour, or day.</param>
 		/// <exception cref="JsonReaderException"><paramref name="rateHelperSerialized"/> is an invalid string representation of a <see cref="Rate32OnTimeSpan"/> instance.</exception>
 		/// <returns>If the <paramref name="rateHelperSerialized"/> is valid, a new instance of the <see cref="Rate32OnTimeSpan"/> class with all data found in <paramref name="rateHelperSerialized"/>.<br/>
 		/// Otherwise, throws a <see cref="JsonReaderException"/>.</returns>
@@ -279,7 +279,7 @@
 		/// <param name="newCounter">The latest known counter value.</param>
 		/// <param name="delta">The elapse <see cref="System.TimeSpan"/> between this new counter and previous one.</param>
 		/// <param name="faultyReturn">The value to be returned in case a correct rate could not be calculated.</param>
-		/// <returns>The calculated rate or the value specified in <paramref name="faultyReturn"/> in case the rate can not be calculated.</returns>
+		/// <returns>The calculated rate or the value specified in <paramref name="faultyReturn"/> in case the rate cannot be calculated.</returns>
 		public double Calculate(uint newCounter, TimeSpan delta, double faultyReturn = -1)
 		{
 			var rateCounter = new Counter32WithTimeSpan(newCounter, delta);
@@ -303,7 +303,7 @@
 		/// <param name="minDelta">Minimum <see cref="System.TimeSpan"/> necessary between 2 counters when calculating a rate.<br/>
 		/// Counters will be buffered until this minimum delta is met.</param>
 		/// <param name="maxDelta">Maximum <see cref="System.TimeSpan"/> allowed between 2 counters when calculating a rate.</param>
-		/// <param name="rateBase">Choose whether the rate should be calculated per second, minute, hour or day.</param>
+		/// <param name="rateBase">Choose whether the rate should be calculated per second, minute, hour, or day.</param>
 		/// <exception cref="JsonReaderException"><paramref name="rateHelperSerialized"/> is an invalid string representation of a <see cref="Rate64OnDateTime"/> instance.</exception>
 		/// <returns>If the <paramref name="rateHelperSerialized"/> is valid, a new instance of the <see cref="Rate64OnDateTime"/> class with all data found in <paramref name="rateHelperSerialized"/>.<br/>
 		/// Otherwise, throws a <see cref="JsonReaderException"/>.</returns>
@@ -324,7 +324,7 @@
 		/// Note that the use of UTC Time is required.</param>
 		/// <param name="faultyReturn">The value to be returned in case a correct rate could not be calculated.</param>
 		/// <exception cref="ArgumentException"><paramref name="utcDateTime"/> is not of kind <see cref="DateTimeKind.Utc"/></exception>
-		/// <returns>The calculated rate or the value specified in <paramref name="faultyReturn"/> in case the rate can not be calculated.</returns>
+		/// <returns>The calculated rate or the value specified in <paramref name="faultyReturn"/> in case the rate cannot be calculated.</returns>
 		public double Calculate(ulong newCounter, DateTime utcDateTime, double faultyReturn = -1)
 		{
 			var rateCounter = new Counter64WithDateTime(newCounter, utcDateTime);
@@ -348,7 +348,7 @@
 		/// <param name="minDelta">Minimum <see cref="System.TimeSpan"/> necessary between 2 counters when calculating a rate.<br/>
 		/// Counters will be buffered until this minimum delta is met.</param>
 		/// <param name="maxDelta">Maximum <see cref="System.TimeSpan"/> allowed between 2 counters when calculating a rate.</param>
-		/// <param name="rateBase">Choose whether the rate should be calculated per second, minute, hour or day.</param>
+		/// <param name="rateBase">Choose whether the rate should be calculated per second, minute, hour, or day.</param>
 		/// <exception cref="JsonReaderException"><paramref name="rateHelperSerialized"/> is an invalid string representation of a <see cref="Rate64OnTimeSpan"/> instance.</exception>
 		/// <returns>If the <paramref name="rateHelperSerialized"/> is valid, a new instance of the <see cref="Rate64OnTimeSpan"/> class with all data found in <paramref name="rateHelperSerialized"/>.<br/>
 		/// Otherwise, throws a <see cref="JsonReaderException"/>.</returns>
@@ -367,7 +367,7 @@
 		/// <param name="newCounter">The latest known counter value.</param>
 		/// <param name="delta">The elapse <see cref="System.TimeSpan"/> between this new counter and previous one.</param>
 		/// <param name="faultyReturn">The value to be returned in case a correct rate could not be calculated.</param>
-		/// <returns>The calculated rate or the value specified in <paramref name="faultyReturn"/> in case the rate can not be calculated.</returns>
+		/// <returns>The calculated rate or the value specified in <paramref name="faultyReturn"/> in case the rate cannot be calculated.</returns>
 		public double Calculate(ulong newCounter, TimeSpan delta, double faultyReturn = -1)
 		{
 			var rateCounter = new Counter64WithTimeSpan(newCounter, delta);
