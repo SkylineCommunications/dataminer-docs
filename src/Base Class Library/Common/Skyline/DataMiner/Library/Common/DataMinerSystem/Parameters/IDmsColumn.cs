@@ -32,7 +32,7 @@
 		/// <exception cref="ParameterNotFoundException">The parameter was not found.</exception>
 		/// <returns>The alarm level.</returns>
 		/// <remarks>
-		/// <para>The key is assumed to be the display key. If no display key was found with the specified value, but a row exists with a primary key with the specified value, then the value of that row will be returned (only the case if the naming option or NamingFormat is in the protocol XML is used, not for the deprecated displayColumn attribute).</para>
+		/// <para>The key is assumed to be the display key. If no display key was found with the specified value, but a row exists with a primary key with the specified value, then the value of that row will be returned. This is only the case when the naming option or NamingFormat in the protocol XML is used, not for the deprecated displayColumn attribute.</para>
 		/// <para>Do not use this call with primary keys in case the primary key value is also used as display key of another row.</para>
 		/// <para>This overload is deprecated. Use the overload with the additional KeyType argument instead.</para>
 		/// </remarks>
@@ -145,7 +145,7 @@
 		/// The primary keys of the rows that have the specified value for the specified column.
 		/// </returns>
 		/// <remarks>
-		/// Important: the column used for lookup needs to have the attribute indexColumn defined in the table ArrayOptions.
+		/// Important: The column used for lookup needs to have the attribute indexColumn defined in the table ArrayOptions.
 		/// Consider using the IDmsTable.QueryData as it may provide a more stable and efficient performance.
 		/// </remarks>
 		string[] Lookup(IEnumerable<string> values);

@@ -24,7 +24,7 @@
 		/// <exception cref="ElementNotFoundException">The element was not found in the DataMiner System.</exception>
 		/// <returns>The cell value.</returns>
 		/// <remarks>
-		/// <para>The key is assumed to be the display key. If no display key was found with the specified value, but a row exists with a primary key with the specified value, then the value of that row will be returned (only the case when the naming option or NamingFormat is in the protocol XML is used, not for the deprecated displayColumn attribute).</para>
+		/// <para>The key is assumed to be the display key. If no display key was found with the specified value, but a row exists with a primary key with the specified value, then the value of that row will be returned. This is only the case when the naming option or NamingFormat in the protocol XML is used, not for the deprecated displayColumn attribute.</para>
 		/// <para>Do not use this call with primary keys in case the primary key value is also used as display key of another row.</para>
 		/// <para>This overload is deprecated. Use the overload with the additional KeyType argument instead.</para>
 		/// </remarks>
@@ -114,7 +114,7 @@
 		/// <param name="keyType">The key type.</param>
 		/// <param name="value">The value to set.</param>
 		/// <param name="timeout">The maximum time to wait on the expected change.</param>
-		/// <param name="expectedChanges">One or more expected changes. Can be <see cref="CellValue"/> or <see cref="ParamValue"/></param>
+		/// <param name="expectedChanges">One or more expected changes. Can be <see cref="CellValue"/> or <see cref="ParamValue"/>.</param>
 		/// <exception cref="ArgumentNullException"><paramref name="key"/>, <paramref name="expectedChanges"/> is <see langword="null"/>.</exception>
 		/// <exception cref="ElementNotFoundException">The element was not found in the DataMiner System.</exception>
 		/// <exception cref="ElementStoppedException">The element is stopped.</exception>

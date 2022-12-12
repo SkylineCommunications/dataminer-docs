@@ -21,7 +21,7 @@
 		/// <exception cref="ParameterNotFoundException">The parameter was not found.</exception>
 		/// <returns>The parameter value.</returns>
 		/// <remarks>
-		/// <para>The key is assumed to be the display key. If no display key was found with the specified value, but a row exists with a primary key with the specified value, then the value of that row will be returned (only the case when the naming option or NamingFormat is in the protocol XML is used, not for the deprecated displayColumn attribute).</para>
+		/// <para>The key is assumed to be the display key. If no display key was found with the specified value, but a row exists with a primary key with the specified value, then the value of that row will be returned. This is only the case when the naming option or NamingFormat in the protocol XML is used, not for the deprecated displayColumn attribute.</para>
 		/// <para>Do not use this call with primary keys in case the primary key value is also used as display key of another row.</para>
 		/// <para>This overload is deprecated. Use the overload with the additional KeyType argument instead.</para>
 		/// </remarks>
@@ -52,7 +52,7 @@
 		/// <exception cref="ParameterNotFoundException">The parameter was not found.</exception>
 		/// <returns>The parameter value.</returns>
 		/// <remarks>
-		/// <para>The key is assumed to be the display key. If no display key was found with the specified value, but a row exists with a primary key with the specified value, then the value of that row will be returned (only the case when the naming option or NamingFormat is in the protocol XML is used, not for the deprecated displayColumn attribute).</para>
+		/// <para>The key is assumed to be the display key. If no display key was found with the specified value, but a row exists with a primary key with the specified value, then the value of that row will be returned. This is only the case when the naming option or NamingFormat in the protocol XML is used, not for the deprecated displayColumn attribute.</para>
 		/// <para>Do not use this call with primary keys in case the primary key value is also used as display key of another row.</para>
 		/// <para>This overload is deprecated. Use the overload with the additional KeyType argument instead.</para>
 		/// </remarks>

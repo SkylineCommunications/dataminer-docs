@@ -1,7 +1,7 @@
 ﻿namespace Skyline.DataMiner.Library.Common.Rates
 {
 	/// <summary>
-	/// Determines whether the rate should be calculated per second, minute, hour or day.
+	/// Determines whether the rate should be calculated per second, minute, hour, or day.
 	/// </summary>
 	public enum RateBase
 	{
