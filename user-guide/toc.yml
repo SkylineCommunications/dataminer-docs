@@ -2859,6 +2859,9 @@
                           topicUID: Troubleshooting_SLNet_RTEs
                     - name: Troubleshooting - SLDMS.exe
                       topicUID: Troubleshooting_SLDMS_exe
+                      items:
+                        - name: Troubleshooting - SLDMS - frequent issues
+                          topicUID: Troubleshooting_SLDMS_Frequent_Issues
                 - name: Troubleshooting - Polling processes
                   items:
                     - name: Troubleshooting - SLPort.exe
