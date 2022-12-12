@@ -49,7 +49,7 @@ If you want to use a Cassandra cluster as the general database for your DMS, you
 
        `$ sudo ufw allow from [IP node 2] to [IP node 3] proto tcp port 7000,7001,9042`
 
-   - Allow for all DMAs in the DMS to connect to port 9042:
+   - Make sure all DMAs in the DMS can connect to port 9042:
 
      - Commands DMA 1:
 
@@ -76,11 +76,11 @@ If you want to use a Cassandra cluster as the general database for your DMS, you
    > - The folder where the Cassandra data is stored is configured in *cassandra.yaml*, in the property *data_file_directories*.
    > - To verify on which disk the data is mounted, execute the "df" command.
 
-1. Configure the user rights for the Cassandra user/group in the aforementioned data folder.  
+1. Configure the user rights for the Cassandra user/group in the data folder.
 
-   You can do this with the following command:  
-  
-   `$ chown -R cassandra:cassandra /directoryname_from_data_file_directories`  
+   You can do this with the following command:
+
+   `$ chown -R cassandra:cassandra /directoryname_from_data_file_directories`
 
 1. If Cassandra is running, stop the service and clean up any files that were already created.
 
@@ -133,7 +133,7 @@ If you want to use a Cassandra cluster as the general database for your DMS, you
        > - We recommend 3 seed nodes for every data center, preferably in different racks.
        > - If the node is being added to an existing cluster, ensure that only existing nodes are configured as seed and that the other nodes are available and reachable (default port is 7000).
        >
-       >   e.g. In a cluster with IPs 10.11.1.72, 10.11.2.72, 10.11.3.72, 10.11.4.72, 10.11.5.72, 10.11.6.72, 10.11.7.72 and one data center, you might have the following configuration:
+       >   For example, in a cluster with IPs 10.11.1.72, 10.11.2.72, 10.11.3.72, 10.11.4.72, 10.11.5.72, 10.11.6.72, and 10.11.7.72 and one data center, you might have the following configuration:
        >
        >   \- seeds: "10.11.1.72, 10.11.3.72, 10.11.6.72:7000"
 
