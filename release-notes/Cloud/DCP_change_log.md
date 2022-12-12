@@ -102,13 +102,13 @@ A number of improvements have been implemented on the *Audit* page in the DCP Ad
 - The column order has been adjusted.
 - Automatic loading of audit records has been improved to prevent possible issues with different screen sizes.
 
-#### 15 September 2022 – Fix – CloudGateway 2.9.5 – Problem in CloudGateway process if MaintenanceSettings.xml contained invalid URLs [ID_34341]
+#### 15 September 2022 – Fix – CloudGateway 2.9.5 – Problem in CloudGateway process if MaintenanceSettings.xml contained an invalid HTTPS endpoint [ID_34341]
 
-If URLs in the file *MaintenanceSettings.xml* were not configured correctly, a problem could occur in the CloudGateway process. This happened specifically when DataMiner upgrades caused the HTTP URL to end with a new line.
+If the HTTPS endpoint in the file *MaintenanceSettings.xml* was not configured correctly, a problem could occur in the CloudGateway process. This happened specifically when DataMiner upgrades caused the HTTPS URL to end with an encoded new line.
 
-With CloudGateway 2.9.5 (included in Cloud Pack version 2.8.2), all URLs from configuration files will be trimmed to prevent this, so that CloudGateway will no longer get this problem at runtime. However, note that CloudGateway may still fail to start up if a URL in a configuration file is invalid.
+With CloudGateway 2.9.5 (included in Cloud Pack version 2.8.2), all endpoints from configuration files will be trimmed to prevent this, so that CloudGateway will no longer get this problem at runtime. However, note that CloudGateway may still fail to start up if an endpoint in a configuration file is invalid.
 
-#### 15 September 2022 – Fix – CoreGateway 2.11.5 – Incorrect information event when connector was deployed [ID_34325]
+#### 15 September 2022 – Fix – CoreGateway 2.11.5 – Incorrect information event when connector was deployed via DCP [ID_34325]
 
 When a connector was deployed via DCP, the corresponding information event incorrectly mentioned that this was done with the SLNetClientTest tool.
 
