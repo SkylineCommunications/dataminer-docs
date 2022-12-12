@@ -100,7 +100,7 @@ For larger contributions, e.g. to add several new pages, we recommend that you i
 - [Visual Studio Code](https://code.visualstudio.com/) (with the [Learn Authoring Pack](https://marketplace.visualstudio.com/items?itemName=docsmsft.docs-authoring-pack) extension)
 
 > [!NOTE]
-> Microsoft also provides a zero-install Visual Studio Code for the web that can be accessed via GitHub by clicking the "." button on your keyboard. This version offers a complete overview of the repository as in the downloadable version of Visual Studio Code, but does not offer any extensions, e.g. a spell check.
+> Microsoft also provides a zero-install Visual Studio Code for the web. When you are working in GitHub online, you can access this by pressing the "." button on your keyboard. This version offers a complete overview of the repository like in the downloadable version of Visual Studio Code, but it does not offer any extensions, e.g. a spell check.
 
 When you install GitHub Desktop, you will also need to add the correct repository:
 
