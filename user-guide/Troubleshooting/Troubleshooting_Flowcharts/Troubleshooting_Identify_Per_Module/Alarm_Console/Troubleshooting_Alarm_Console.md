@@ -10,8 +10,9 @@ uid: Troubleshooting_Alarm_Console
 ## Overview
 
 <div class="mermaid">
-graph TD
+flowchart TD
     %% Define styles %%
+    linkStyle default stroke:#cccccc
     classDef classTerminal fill:#1e5179,stroke:#1e5179,color:#ffffff,stroke-width:0px;
     classDef classDecision fill:#4baeea,stroke:#4baeea,color:#ffffff,stroke-width:0px;
     classDef classExternalRef fill:#9ddaf5,stroke:#9ddaf5,color:#1E5179,stroke-width:0px;

@@ -11,13 +11,14 @@ The nodetool utility is a command line interface for managing a cluster of Cassa
 ## Nodetool flowchart
 
 <div class="mermaid">
-graph LR
+flowchart LR
 %% -------------------------------------------------------------------------
 %% Cassandra flowchart - Nodetool Checks
 %% -------------------------------------------------------------------------
 %% -------------------------------------------------------------------------
 %% Define styles
 %% -------------------------------------------------------------------------
+linkStyle default stroke:#cccccc
 classDef classAction fill:#dddddd,stroke:#dddddd,color:#1E5179,stroke-width:1px;
 classDef classActionClickable fill:#999999,stroke:#999999,color:#ffffff,stroke-width:1px;
 classDef classDecision fill:#4baeea,stroke:#4baeea,color:#ffffff,stroke-width:1px;

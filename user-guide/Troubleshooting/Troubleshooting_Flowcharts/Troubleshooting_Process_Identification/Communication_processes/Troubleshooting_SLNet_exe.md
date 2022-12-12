@@ -23,13 +23,14 @@ SLNet controls all communication among DataMiner Agents, and between DataMiner A
 ## SLNet troubleshooting flowchart
 
 <div class="mermaid">
-graph TD
+flowchart TD
 %% -------------------------------------------------------------------------
 %% SLNet flowchart - main page
 %% -------------------------------------------------------------------------
 %% -------------------------------------------------------------------------
 %% Define styles
 %% -------------------------------------------------------------------------
+linkStyle default stroke:#cccccc
 classDef classTerminal fill:#1e5179,stroke:#1e5179,color:#ffffff,stroke-width:1px;
 classDef classDecision fill:#4baeea,stroke:#4baeea,color:#ffffff,stroke-width:1px;
 classDef classExternalRef fill:#9ddaf5,stroke:#9ddaf5,color:#1E5179,stroke-width:1px;

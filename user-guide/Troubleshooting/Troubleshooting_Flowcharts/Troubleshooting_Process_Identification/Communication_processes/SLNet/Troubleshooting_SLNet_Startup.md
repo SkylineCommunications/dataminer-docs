@@ -8,13 +8,14 @@ uid: Troubleshooting_SLNet_Startup
 > This page is currently still being developed. The content is not yet optimized and may not yet be fully accurate.
 
 <div class="mermaid">
-graph TD
+flowchart TD
 %% -------------------------------------------------------------------------
 %% SLNet flowchart - startup issue branch
 %% -------------------------------------------------------------------------
 %% -------------------------------------------------------------------------
 %% Define styles
 %% -------------------------------------------------------------------------
+linkStyle default stroke:#cccccc
 classDef classTerminal fill:#1e5179,stroke:#1e5179,color:#ffffff,stroke-width:1px;
 classDef classDecision fill:#4baeea,stroke:#4baeea,color:#ffffff,stroke-width:1px;
 classDef classExternalRef fill:#9ddaf5,stroke:#9ddaf5,color:#1E5179,stroke-width:1px;

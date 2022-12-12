@@ -10,8 +10,9 @@ uid: Troubleshooting_Critical_Issues_Alarm_Console
 ## Errors in Alarm Console troubleshooting flowchart
 
 <div class="mermaid">
-graph TD
+flowchart TD
 %% Define styles %%
+linkStyle default stroke:#cccccc
 classDef LightBlue fill:#9DDAF5,stroke:#000070,stroke-width:0px, color:#1E5179;
 classDef Blue fill:#4BAEEA,stroke:#000070,stroke-width:0px, color:#FFFFFF;
 classDef DarkBlue fill:#1E5179,stroke:#000070,stroke-width:0px, color:#FFFFFF;
@@ -52,8 +53,9 @@ class Home,SLLogCollector,Investigation LightBlue;
 ### Errors in Alarm Console
 
 <div class="mermaid">
-graph TD
+flowchart TD
 %% Define styles %%
+linkStyle default stroke:#cccccc
 classDef LightBlue fill:#9DDAF5,stroke:#000070,stroke-width:0px, color:#1E5179;
 classDef Blue fill:#4BAEEA,stroke:#000070,stroke-width:0px, color:#FFFFFF;
 classDef DarkBlue fill:#1E5179,stroke:#000070,stroke-width:0px, color:#FFFFFF;

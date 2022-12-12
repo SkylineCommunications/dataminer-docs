@@ -29,7 +29,7 @@ Check connectivity to Cassandra using DevCenter. On the DMA, go to `C:\Program F
 ## Cassandra troubleshooting flowchart
 
 <div class="mermaid">
-graph TD
+flowchart TD
     bpa[Best Practice Analyser Cassandra]:::LightGray-->|From DataMiner<br> 9.6.0.0 CU23 onwards|B( Run the Cassandra BPA test in <br>System Center on the Agents BPA tab.<br>It is available by default from DataMiner<br>10.1.4 onwards, or else on demand.):::Gray
     click B "https://docs.dataminer.services/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Cassandra/Troubleshooting_Cassandra_Best_Practice_Analyzer.html" "Best Practice Analyser Cassandra"
     box1---bpa
@@ -40,6 +40,7 @@ graph TD
     Disk{{Is available space on the drive decreasing?}}:::Blue
     click Disk "https://docs.dataminer.services/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Cassandra/Troubleshooting_Cassandra.html#option-2-is-available-space-on-the-drive-decreasing" "drive decreasing"
     click 3 "https://docs.dataminer.services/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Cassandra/Troubleshooting_Cassandra.html#option-1-go-to-alarm-console-or-failover-status" "alarm console or failover status"
+    linkStyle default stroke:#cccccc
     classDef info fill:#11628F,stroke:#000070,stroke-width:0px, color:#FFF;
     classDef clickable fill:#ABDCFF,stroke:#00517E,stroke-width:0.25px, color:#00406D;
     classDef start fill:#FFE333,stroke:#00517E,stroke-width:0.25px, color:#000;
@@ -55,7 +56,7 @@ graph TD
 ### Option 1: Go to Alarm Console or Failover Status
 
 <div class="mermaid">
-graph TD
+flowchart TD
     box1[Go to Alarm Console or Failover Status.]:::Blue
     box1---|Go to System Center > Agents > Failover > Status|5
     box1---|Open Alarm Console | 4_1_a1[Cassandra yellow or red <br>health alarm is present.]:::LightGray---7
@@ -68,6 +69,7 @@ graph TD
     12n---|No|13z([Problem solved]):::DarkBlue
     click 13 "https://docs.dataminer.services/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Process_Identification/Database_processes/Troubleshooting_SLDataGateway_exe.html" "SLDataGateway Flowchart"
     click 7 "https://docs.dataminer.services/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Cassandra/Troubleshooting_Cassandra_Nodetool_Checks.html" "nodetool"
+    linkStyle default stroke:#cccccc
     classDef info fill:#11628F,stroke:#000070,stroke-width:0px, color:#FFF;
     classDef clickable fill:#ABDCFF,stroke:#00517E,stroke-width:0.25px, color:#00406D;
     classDef start fill:#FFE333,stroke:#00517E,stroke-width:0.25px, color:#000;
@@ -83,7 +85,7 @@ graph TD
 ### Option 2: Is available space on the drive decreasing?
 
 <div class="mermaid">
-graph TD
+flowchart TD
     Disk{{Is available space on the drive decreasing?}}:::Blue
     Disk---|Yes|SchedT[Check Scheduled Tasks for <br>the status of repair and compaction tasks.]:::LightGray---nodeT[Run nodetool compactstats and <br> check if there are any pending tasks.]:::Gray---cassL[Check Cassandra debug.log <br> for Not Enough Disk compaction errors.]:::LightGray ---compErr{{Is compaction failing?}}:::Blue
     compErr---|No|endC([Check other possible <br> reasons of disk usage increase, <br> e.g. run WinDirStat tool.]):::DarkBlue
@@ -116,6 +118,7 @@ graph TD
     classDef DarkGray fill:#58595B,stroke:#000070,stroke-width:0px, color:#FFFFFF;
     classDef Gray fill:#999999,stroke:#000070,stroke-width:0px, color:#FFFFFF;
     classDef LightGray fill:#DDDDDD,stroke:#000070,stroke-width:0px, color:#1E5179;
+    linkStyle default stroke:#cccccc
 </div>
 
 ## Cassandra.yaml file

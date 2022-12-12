@@ -5,13 +5,14 @@ uid: Troubleshooting_SLNet_Correlation_Engine
 # Troubleshooting - SLNet - correlation engine
 
 <div class="mermaid">
-graph TD
+flowchart TD
 %% -------------------------------------------------------------------------
 %% SLNet flowchart - sub page on Correlation Engine issues
 %% -------------------------------------------------------------------------
 %% -------------------------------------------------------------------------
 %% Define styles
 %% -------------------------------------------------------------------------
+linkStyle default stroke:#cccccc
 classDef classTerminal fill:#1e5179,stroke:#1e5179,color:#ffffff,stroke-width:1px;
 classDef classDecision fill:#4baeea,stroke:#4baeea,color:#ffffff,stroke-width:1px;
 classDef classExternalRef fill:#9ddaf5,stroke:#9ddaf5,color:#1E5179,stroke-width:1px;

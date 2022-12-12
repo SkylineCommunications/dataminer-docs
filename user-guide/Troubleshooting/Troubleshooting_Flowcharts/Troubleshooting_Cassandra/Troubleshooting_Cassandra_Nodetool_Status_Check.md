@@ -7,13 +7,14 @@ uid: Troubleshooting_Cassandra_Nodetool_Status_Check
 ## Nodetool status flowchart
 
 <div class="mermaid">
-graph TD
+flowchart TD
 %% -------------------------------------------------------------------------
 %% Cassandra flowchart - Nodetool Status
 %% -------------------------------------------------------------------------
 %% -------------------------------------------------------------------------
 %% Define styles
 %% -------------------------------------------------------------------------
+linkStyle default stroke:#cccccc
 classDef classAction fill:#dddddd,stroke:#dddddd,color:#1E5179,stroke-width:1px;
 classDef classActionClickable fill:#999999,stroke:#999999,color:#ffffff,stroke-width:1px;
 classDef classDecision fill:#4baeea,stroke:#4baeea,color:#ffffff,stroke-width:1px;
