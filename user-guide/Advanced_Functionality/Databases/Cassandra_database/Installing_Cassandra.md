@@ -11,16 +11,26 @@ If you want to use a Cassandra cluster as the general database for your DMS, you
 
 1. Install the Apache Cassandra software on a Linux machine.
 
+   
    For more information on how to install the software, scroll down on the [Download Now](https://cassandra.apache.org/_/download.html) page of the Apache Cassandra website, and follow the steps of the installation process detailed under *Installation from Debian packages*.
    
    > [!IMPORTANT]
-   > Make sure that the time of all servers in the cluster is in sync. We recommend that you configure an NTP server.
+   >
+   > - Make sure you download a supported Cassandra version as indicated in [Cassandra requirements](https://docs.dataminer.services/user-guide/Advanced_Functionality/Databases/Cassandra_database/Installing_Cassandra.html), paragraph *Cassandra software*.
+   > - Make sure that the time of all servers in the cluster is in sync. We recommend that you configure an NTP server.
 
 1. Ensure the firewall ports are open for Cassandra. See [Firewall ports used with Cassandra](xref:Cassandra_firewall).
 
    - There is a default firewall on Ubuntu, but this is disabled by default. To enable the firewall, use the following command:
 
      `$ sudo ufw enable`
+
+   > [!IMPORTANT]
+   > If you connect to your linux server with SSH, you must immediately exclude port 22.  
+   > If not done, you will be **locked out** of the session.  
+   > You can use the following command for this:
+   >
+   > `$ sudo ufw allow 22/tcp`
 
    - To add the correct ports to the firewall, you can for example use the following commands for a 3-node cluster:
 
@@ -42,12 +52,38 @@ If you want to use a Cassandra cluster as the general database for your DMS, you
 
        `$ sudo ufw allow from [IP node 2] to [IP node 3] proto tcp port 7000,7001,9042`
 
-   > [!IMPORTANT]
-   > If you connect to your linux server with SSH, you also have to add port 22. You can use the following command for this:
-   >
-   > `$ sudo ufw allow 22/tcp`
+   - Also allow all DMAs in the DMS to connect to port 9042:
 
-1. Prepare your data directory: If you are using a dedicated disk for the Cassandra data (which is advised for production environments), make sure that you mount the correct drive to the folder and that the Cassandra user/group is configured on the folder.
+     - Commands DMA 1:
+
+       `$ sudo ufw allow from [IP node DMA 1] to [IP node 1] proto tcp port 9042`  
+
+       `$ sudo ufw allow from [IP node DMA 1] to [IP node 2] proto tcp port 9042`  
+
+       `$ sudo ufw allow from [IP node DMA 1] to [IP node 3] proto tcp port 9042`  
+
+     - Commands DMA 2:
+  
+       `$ sudo ufw allow from [IP node DMA 2] to [IP node 1] proto tcp port 9042`  
+
+       `$ sudo ufw allow from [IP node DMA 2] to [IP node 2] proto tcp port 9042`  
+
+       `$ sudo ufw allow from [IP node DMA 2] to [IP node 3] proto tcp port 9042`  
+
+     - And so forth...
+
+1. Mount the data **folder** to the data **disk**.
+
+>[!TIP]
+>
+> - The folder where the Cassandra data is stored is configured in **cassandra.yaml**, in the property **data_file_directories**.
+> - To verify on which disk the data is mounted, execute the **df** command.
+
+1. Configure the user rights for the Cassandra user/group on the aforementioned data folder.  
+
+You can do this by using the following command:  
+  
+`$ chown -R cassandra:cassandra /directoryname_from_data_file_directories`  
 
 1. If Cassandra is running, stop the service and clean up any files that were already created.
 
@@ -91,9 +127,13 @@ If you want to use a Cassandra cluster as the general database for your DMS, you
 
      - **authenticator**: Set this to *PasswordAuthenticator*.
 
-     - **data_files_directories**: The location(s) where you want to store the data.
+     - **data_file_directories**: The location(s) where you want to store the data.
 
-     - **seeds**: The IP address(es) of all the seeds in your Cassandra cluster. 3 seed nodes are recommended for every data center, preferably in different racks. If this node is being added to an existing cluster, ensure that only existing nodes are configured as seed and that the other nodes are available and reachable (default port is 7000).
+     - **seeds**: The IP address(es) of all the seeds in your Cassandra cluster. Cassandra nodes use this list of hosts to find each other and learn the topology of the ring. 3 seed nodes are recommended for every data center, preferably in different racks. If this node is being added to an existing cluster, ensure that only existing nodes are configured as seed and that the other nodes are available and reachable (default port is 7000).
+
+    >[!TIP]
+    >e.g. In a cluster with IPs **10.11.1.72, 10.11.2.72, 10.11.3.72, 10.11.4.72, 10.11.5.72, 10.11.6.72, 10.11.7.72** and **one data center** you might have the following configuration:  
+    >\- seeds: "10.11.1.72, 10.11.3.72, 10.11.6.72:7000"
 
      - **listen_address**: The IP address of the node.
 
