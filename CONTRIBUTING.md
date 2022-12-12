@@ -361,59 +361,6 @@ To be able to make a local test build, you need to have DocFX installed. DocFX i
 > [!IMPORTANT]
 > If you make test builds often, you may need to occasionally clear the files in the `\dataminer-docs\obj\.cache\build\` folder of your local version of the documentation. In the long run, these can pile up and take up a large amount of memory.
 
-## Troubleshooting
-
-### Build failed because assembly or file could not be loaded
-
-**Symptom**:
-
-```txt
-   Build failed.
-   [22-11-04 12:34:56.248]Warning:[ImportPlugins]Skipping file D:\DocFX\plugins_2xobfivj.yks\plugins\System.Memory.dll due to load failure: Could 
-   not load file or assembly 'System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51' or one of its dependencies. 
-   The located assembly's manifest definition does not match the assembly reference.
-   (Exception from HRESULT: 0x80131040)
-```
-
-**Resolution**: Install [the latest version of DocFX](#installing-and-configuring-docfx) 2.59.4 or higher.
-
-### Build failed because config or content files are missing
-
-**Symptom**:
-
-```txt
-   Build failed.
-   [22-11-04 12:34:56.248]Error:Either provide config file or specify content files to start building documentation.
-           O Warning(s)
-           1 Error(s)
-```
-
-**Resolution**: This issue occurs if you try to make a build of only part of the repository. There are specific files in the root of the repository that are needed to be able to start building documentation.
-
-### Recent changes do not show up in a build
-
-**Resolution**: Make sure your changes are all saved. If the *Explorer* icon in the top-left corner shows a blue circle with a number in it, there are unsaved changes in a number of files corresponding with that number. The files that contain unsaved changes are marked with a white dot in the file header.
-
-![Unsaved changes](~/images/Unsaved_Changes.png)
-
-### GitHub Desktop keeps basing branches on an outdated version of ‘main’
-
-**Symptom**: Newly created branches indicate that they were created a longer time ago.
-
-**Resolution**:
-
-- Make sure [your fork is up to date](#make-sure-your-fork-is-up-to-date).
-
-- If you installed Git after you installed GitHub Desktop, remove the repository in GitHub Desktop and add it again.
-
-### There is a duplicate item in the TOC even though it only occurs once in the toc.yml
-
-**Symptom**: An item shows up twice in the table of contents even though it was only entered once in the *toc.yml*.
-
-**Resolution**: Make sure you did not add a hyphen in front of the topicUID line. Only the name line should be preceded by a hyphen.
-
-![TOC](~/images/TOC.png)
-
 ## Markdown syntax
 
 Markdown is a lightweight markup language with plain text formatting syntax. It exists in different "flavors". We make use of DocFX Flavored Markdown (DFM). The easiest way to learn how to work with this is to look at our existing documentation and imitate what you see. You can also find more information about DFM basics below.
@@ -716,6 +663,61 @@ However, there is one exception to this. Because DocFX cannot handle double quot
 Be careful when you use screenshots of the DataMiner Cube UI, as these can get outdated quickly. For this reason, do not use screenshots if this has no added value.
 
 If you do add a screenshot, ideally there should be some indication of the version of the software displayed in the screenshot, so it is clear if the screenshot is outdated.
+
+## Troubleshooting
+
+### There is a duplicate item in the TOC even though it only occurs once in the toc.yml
+
+**Symptom**: An item shows up twice in the table of contents even though it was only entered once in the *toc.yml*.
+
+**Resolution**: Make sure there is no hyphen in front of the topicUID line. Only the name line should be preceded by a hyphen.
+
+![TOC](~/images/TOC.png)
+
+### Build failed because assembly or file could not be loaded
+
+**Symptom**: When you try to create a test build, this fails with the following error:
+
+```txt
+   Build failed.
+   [22-11-04 12:34:56.248]Warning:[ImportPlugins]Skipping file D:\DocFX\plugins_2xobfivj.yks\plugins\System.Memory.dll due to load failure: Could 
+   not load file or assembly 'System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51' or one of its dependencies. 
+   The located assembly's manifest definition does not match the assembly reference.
+   (Exception from HRESULT: 0x80131040)
+```
+
+**Resolution**: Install [the latest version of DocFX](#installing-and-configuring-docfx).
+
+### Build failed because config or content files are missing
+
+**Symptom**: When you try to create a test build, this fails with the following error:
+
+```txt
+   Build failed.
+   [22-11-04 12:34:56.248]Error:Either provide config file or specify content files to start building documentation.
+           O Warning(s)
+           1 Error(s)
+```
+
+**Resolution**: This issue occurs if you try to make a build of only part of the repository. There are specific files in the root of the repository that are needed to be able to start building documentation, so make sure you always create your test builds based on the complete repository.
+
+### Recent changes do not show up in a build
+
+**Symptom**: When you create a test build, it does not include your recent changes.
+
+**Resolution**: Make sure your changes are all saved. If the *Explorer* icon in the top-left corner shows a blue circle with a number in it, there are unsaved changes in a number of files corresponding with that number. The files that contain unsaved changes are marked with a white dot in the file header.
+
+![Unsaved changes](~/images/Unsaved_Changes.png)
+
+### GitHub Desktop keeps basing branches on an outdated version of ‘main’
+
+**Symptom**: Newly created branches indicate that they were created a longer time ago.
+
+**Resolution**:
+
+- Make sure [your fork is up to date](#make-sure-your-fork-is-up-to-date).
+
+- If you installed Git after you installed GitHub Desktop, remove the repository in GitHub Desktop and add it again.
 
 ## References
 
