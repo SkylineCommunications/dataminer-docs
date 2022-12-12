@@ -30,7 +30,7 @@ As with all software, it is good practice to ensure you are running the latest v
 To update the Cassandra version:
 
 1. Ensure you have a **full backup** of the Cassandra database.
-1. Download the latest Cassandra *3.11.X* binaries from the [official website](https://cassandra.apache.org/_/download.html). This will be a file named like `apache-cassandra-3.11.8-bin.tar.gz`.
+1. Download the latest Cassandra *3.11.X* binaries from the [official website](https://cassandra.apache.org/_/download.html). These will contain a `.tar` file called `apache-cassandra-3.11.8-bin.tar.gz`.
 1. Stop the DataMiner Agent.
 1. Go to the *C:\Program Files\Cassandra\bin* folder and run the following command to push all data from memory to disk and stop processing new requests:
 
@@ -39,15 +39,15 @@ To update the Cassandra version:
 1. Stop the Cassandra service.
 1. Rename the *C:\Program Files\Cassandra* folder to *Cassandra_bak*.
 1. Create a new folder named *Cassandra* in *C:\Program Files*.
-1. Extract the contents of the `apache-cassandra-3.11.8-bin.tar.gz` file into a temporary folder. Note that you will need to extract the file twice. First to get a `.tar` file, next you will end up with an *apache-cassandra-3.11.14* folder with subfolders.
-1. Copy the contents of the *apache-cassandra-3.11.14* folder into *C:\Program Files\Cassandra*. If all goes well you should end up with folders like *C:\Program Files\Cassandra\bin* and *C:\Program Files\Cassandra\lib*.
-2. Delete the temporary folder.
-3. Copy the **old** *Java* folder from *C:\Program Files\Cassandra_bak\Java* to *C:\Program Files\Cassandra*.
-4. Copy the **old** *cassandra.yaml* from *C:\Program Files\Cassandra_bak\conf\cassandra.yaml* to *C:\Program Files\Cassandra\conf*.
-5. Copy the **old** *daemon* folder from *C:\Program Files\Cassandra_bak\bin\daemon* to *C:\Program Files\Cassandra\bin*.
-6. Copy the **old** *DevCenter* folder from *C:\Program Files\Cassandra_bak\DevCenter* to *C:\Program Files\Cassandra*.
-7. Create a new folder named *logs* in *C:\Program Files\Cassandra*.
-8. To enable the use of *nodetool*, set the system-wide environment variables *JAVA_HOME* and *CASSANDRA_HOME* to the correct locations by executing the following PowerShell commands:
+1. Extract the contents of the `apache-cassandra-3.11.8-bin.tar.gz` file into a temporary folder. This can be done, using the free file archiver [7-ZIP](https://www.7-zip.org/download.html). You will need to extract the file twice, first to get a `.tar` file and then to obtain an *apache-cassandra-3.11.14* folder with additional subfolders.
+1. Copy the contents of the *apache-cassandra-3.11.14* folder to *C:\Program Files\Cassandra*. You should now see folders such as *C:\Program Files\Cassandra\bin* and *C:\Program Files\Cassandra\lib*.
+1. Delete the temporary folder.
+1. Copy the **old** *Java* folder from *C:\Program Files\Cassandra_bak\Java* to *C:\Program Files\Cassandra*.
+1. Copy the **old** *cassandra.yaml* file from *C:\Program Files\Cassandra_bak\conf\cassandra.yaml* to *C:\Program Files\Cassandra\conf*.
+1. Copy the **old** *daemon* folder from *C:\Program Files\Cassandra_bak\bin\daemon* to *C:\Program Files\Cassandra\bin*.
+1. Copy the **old** *DevCenter* folder from *C:\Program Files\Cassandra_bak\DevCenter* to *C:\Program Files\Cassandra*.
+1. Create a new folder named *logs* in *C:\Program Files\Cassandra*.
+1. To enable the use of *nodetool*, set the system-wide environment variables *JAVA_HOME* and *CASSANDRA_HOME* to the correct locations by executing the following PowerShell commands:
 
    `[System.Environment]::SetEnvironmentVariable('CASSANDRA_HOME','C:\progra~1\Cassandra\',[System.EnvironmentVariableTarget]::Machine)`
 
