@@ -34,14 +34,12 @@ If you want booking blocks to display information over more than one line, it is
 
      1. In the *Block Info* field, specify the block info (e.g. *\[BOOKINGNAME\]*, or a property name in the format *\[PROPERTY:**Property name**\]*).
 
+        > [!NOTE]
+        > You can also combine the above-mentioned placeholders, e.g. `[PROPERTY:VIRTUAL PLATFORM]_[BOOKINGNAME]`. <!-- RN 28995 -->
+
      1. In the *Order* field, specify in which position on the block the item should be displayed, The lower the number (lowest = 0), the higher the position.
 
    - To remove a row, right-click the row and select *Delete Selected Item(s)*. Alternatively, you can clear all items in the table at the same time by selecting *Clear Table*.
-
-> [!NOTE]
-> Each block info entry can contain one or more placeholders. For example, you could configure the block info as `[PROPERTY:VIRTUAL PLATFORM]_[BOOKINGNAME]`. <!-- RN 28995 -->
-
-<!-- TBD: which placeholders are supported? -->
 
 ## Configuring custom booking block info for a specific service definition
 
