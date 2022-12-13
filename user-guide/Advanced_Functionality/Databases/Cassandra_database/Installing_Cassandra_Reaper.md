@@ -11,8 +11,20 @@ Cassandra Reaper is an application that can manage Cassandra cluster repairs on 
 
 1. Install the Cassandra Reaper software by following the installation steps on the [Cassandra Reaper installation page](http://cassandra-reaper.io/docs/download/install/).
 
-1. Create a keyspace in Cassandra for Reaper to use, by running a CQL command as illustrated below, adjusted to match your network topology:
+1. Create a keyspace in Cassandra for Reaper to use, by running a CQL command as illustrated below, adjusted to match the [Keyspace Replication Strategy](https://docs.datastax.com/en/cassandra-oss/3.x/cassandra/architecture/archDataDistributeReplication.html) of your choice:
 
+   Single datacenter example: (Cassandra Cluster where all nodes reside in a single datacenter)
+   ```txt
+   CREATE KEYSPACE "reaper_db"
+   WITH durable_writes = true
+   AND replication = 
+   {
+    'class' : 'SimpleStrategy',
+    'replication_factor' : 2
+   };
+   ```
+
+   Multi datacenter example: (Cassandra Cluster where nodes have been divided over multiple datacenters)
    ```txt
    CREATE KEYSPACE "reaper_db"
    WITH durable_writes = true
@@ -24,6 +36,11 @@ Cassandra Reaper is an application that can manage Cassandra cluster repairs on 
     'datacenter3' : 3
    };
    ```
+
+    > [!NOTE]
+    > It's advised to always use a replication factor greater than value '1' on the newly created keyspace as that will also provide robustness when data is being requested from nodes in the cassandra cluster. With rf < 2 you are at risk that data request can fail in case the node which is hosting the data, is not available to serve the request. When this is the case, Cassandra Reaper will no longer function properly and will present errors in its logging such as: 
+    > "Caused by: com.datastax.driver.core.exceptions.NoHostAvailableException: All host(s) tried for query failed (tried: /10.66.117.69:9042 (com.datastax.driver.core.exceptions.UnavailableException: Not enough replicas available for query at consistency LOCAL_ONE (1 required but only 0 alive)), /10.66.117.67:9042 (com.datastax.driver.core.exceptions.UnavailableException: Not enough replicas available for query at consistency LOCAL_ONE (1 required but only 0 alive)))"
+
 
 1. Make sure the firewall ports are open for the webpage.
 
