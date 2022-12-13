@@ -34,7 +34,12 @@ One `DomBehaviorDefinition` can inherit from another. However, there are importa
 
 - It can only inherit from the `ModuleDomBehaviorDefinition` (the ID is defined in the *ModuleBehaviorDefinition* property of the `ModuleSettings`).
 
-- The inheriting definition can only contain an ID, parent ID, and extra `DomStatusSectionDefinitionLinks` for `SectionDefinitions` that are not already defined on the module definition. Adding extra statuses or transitions is not allowed.
+- The inheriting definition can only contain an ID, parent ID, and extra:
+  - `DomStatusSectionDefinitionLinks` for `SectionDefinitions` that are not already defined on the module definition
+  - `ButtonDefinitions` (with other IDs that those defined on the parent)
+  - `ActionDefinitions` (with other IDs that those defined on the parent)
+
+Adding extra statuses or transitions on the child definition is not allowed.
 
 This logic makes it possible to define a complete status system that should be used by all `DomDefinitions`. With an inheriting `DomBehaviorDefinition`, you can then define the visibility, requirements etc. for fields of extra `SectionDefinitions`.
 
