@@ -88,4 +88,5 @@ When something goes wrong during the CRUD actions, the `TraceData` can contain o
 | DuplicateActionDefinitionIds | There are `IDomActionDefinition` defined with duplicate IDs. *ActionDefinitionIds* contains the ID(s) of the duplicate definition(s). |
 | InvalidButtonDefinitionIds | There was at least one `IDomButtonDefinition` defined with an invalid ID (should only contain lowercase characters). *ButtonDefinitionIds* contains the ID(s) of the invalid definition(s). |
 | DuplicateButtonDefinitionIds | There are `IDomButtonDefinition` defined with duplicate IDs. *ButtonDefinitionIds* contains the ID(s) of the duplicate definition(s). |
+|InvalidButtonActionCombination | An `IDomButtonDefinition` contains a combination of actions which is not supported. At this time, only a single action is allowed. This error will thus be returned when adding more than one action ID to an `IDomButtonDefinition`. Added since 10.3.2/10.4.0. *ButtonDefinitionIds* contains the ID(s) of the invalid definition(s). |
 
