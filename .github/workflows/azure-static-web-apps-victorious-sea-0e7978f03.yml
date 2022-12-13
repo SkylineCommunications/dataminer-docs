@@ -23,7 +23,7 @@ jobs:
         env:
           CI: true
       - name: Restore NuGet
-        run: nuget restore
+        run: nuget restore "src/Base Class Library"
       - name: build metadata
         run: |
           docfx metadata -f
