@@ -1,4 +1,4 @@
-﻿namespace Skyline.DataMiner.Library.Common.Rates
+﻿namespace Skyline.DataMiner.Library.Common.Interfaces
 {
 	/// <summary>
 	/// Represents the duplex status of the interface. This is needed to calculate the utilization.
@@ -23,6 +23,6 @@
 		/// <summary>
 		/// The duplex status is full duplex. Calculating the utilization will be based on the rate that is the highest: input or output rate.
 		/// </summary>
-		FullDuplex = 3
+		FullDuplex = 3,
 	}
 }
