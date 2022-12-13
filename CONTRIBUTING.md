@@ -667,6 +667,18 @@ Be careful when you use screenshots of the DataMiner Cube UI, as these can get o
 
 If you do add a screenshot, ideally there should be some indication of the version of the software displayed in the screenshot, so it is clear if the screenshot is outdated.
 
+## Address the reader directly
+
+Avoid writing about your reader as "the user", but instead use "you".
+
+The only time when "the user" is appropriate is when whoever you are writing for will create or configure something for another user, and it is that other user you want to indicate.
+
+**Examples:**
+
+- *You can find more information on DataMiner Dojo.* (Instead of *The user can find more information on DataMiner Dojo.*)
+
+- *When you add a feed component to a dashboard, the user of the dashboard will be able to select a feed.*
+
 ## Troubleshooting
 
 ### There is a duplicate item in the TOC even though it only occurs once in the toc.yml
