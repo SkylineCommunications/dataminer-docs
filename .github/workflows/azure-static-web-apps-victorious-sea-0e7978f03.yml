@@ -22,6 +22,8 @@ jobs:
           choco install docfx -y
         env:
           CI: true
+      - name: Restore NuGet
+        run: nuget restore
       - name: build metadata
         run: |
           docfx metadata -f
