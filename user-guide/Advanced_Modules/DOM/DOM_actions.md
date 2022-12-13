@@ -6,7 +6,7 @@ uid: DOM_actions
 
 From DataMiner 10.1.11/10.2.0 onwards, it is possible to define actions on a [DomBehaviorDefinition](xref:DomBehaviorDefinition) that can be triggered via the `DomHelper`. These actions can only be executed when a condition is met.
 
-You can also define buttons to be shown in the UI that will execute one or more of these actions when clicked. A button definition also has a condition to determine when the button is shown. This way you can hide buttons when they are not applicable.
+You can also define buttons to be shown in the UI that will execute one of these actions when clicked. A button definition also has a condition to determine when the button is shown. This way you can hide buttons when they are not applicable.
 
 An action is always executed in a specific context, i.e. for a context object. Currently only DOM instances are supported.
 
@@ -163,7 +163,7 @@ An `ActionDefinition` can only be executed when a pre-defined condition is met. 
 
 ## Defining buttons
 
-The `DomBehaviorDefinition` also contains a list of `IDomButtonDefinitions`. These can be used to have one or more buttons shown in the UI. These buttons can be linked to one or more actions that will be executed when they are clicked.
+The `DomBehaviorDefinition` also contains a list of `IDomButtonDefinitions`. These can be used to have one or more buttons shown in the UI. These buttons can be linked to an action that will be executed when they are clicked.
 
 At present, you can only define buttons to be shown for a `DomInstance` by using the `DomInstanceButtonDefinition`.
 
@@ -176,7 +176,7 @@ The `DomInstanceButtonDefinition` has the following properties:
 | Id | string | The ID of the button. This must be unique to this `DomBehaviorDefinition` and must be lower case. |
 | Layout | DomButtonDefinitionLayout | Contains extra properties to define how the button will be displayed (see properties table below). |
 | VisibilityCondition | IDomInstanceCondition | Condition that defines when the button will be shown. |
-| ActionDefinitionIds | List\<string> | Contains one or more IDs of actions that should be executed. |
+| ActionDefinitionIds | List\<string> | Contains the ID of the action that should be executed. Can contain multiple, but currently, only one is allowed. |
 
 The `DomButtonDefinitionLayout` class has the following properties:
 
