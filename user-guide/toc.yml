@@ -2567,6 +2567,10 @@
                 topicUID: SRM_custom_front_end
               - name: Using custom scripts instead of the default SRM wizards
                 topicUID: SRM_custom_scripts
+              - name: Customizing the columns of the Bookings list
+                topicUID: SRM_custom_bookings_list
+              - name: Customizing the booking blocks on the timeline
+                topicUID: SRM_custom_booking_blocks
           - name: Advanced configuration for Service Orchestration
             items:
               - name: Resources configuration

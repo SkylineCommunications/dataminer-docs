@@ -22,7 +22,7 @@ This tab of the Booking Manager app provides an overview of all configuration pa
 
 - **Refresh Time for Next Quarantined Booking**: Allows you to configure the rate at which the parameter *Time for Next Quarantined Booking* (on the *Bookings* tab) is refreshed, which determines the delay between the current time and the start time of the next booking in quarantine. By default, this is set to 5 minutes. Minimum value: 1 minute.
 
-- **Column Configuration**: The column configuration to be used in the list of bookings on the *Bookings* tab. For more information on how to work with column configurations, see [Bookings list](xref:The_Bookings_module#bookings-list).
+- **Column Configuration**: The column configuration to be used in the list of bookings on the *Bookings* tab. See [Customizing the columns of the Bookings list](xref:SRM_custom_bookings_list).
 
 - **Booking Start Failure Script**: Determines which script will be triggered in case the start actions for a booking instance fail. An example script, *SRM_BookingStartFailureTemplate*, is included for this in the SRM package.
 
@@ -182,19 +182,9 @@ See [Adding custom scripts for additional controls](xref:SRM_custom_scripts#addi
 
 ## Timeline subtab
 
-This subtab displays a toggle button, *Custom*, which determines whether custom information is displayed in the booking blocks on the timeline.
+- **Block Height**: Determines the height of the booking blocks on the timeline (in pixels). See [Configuring a custom booking block height](xref:SRM_custom_booking_blocks#configuring-a-custom-booking-block-height).
 
-If you enable this feature, you should configure the custom information in the *Service Info* table below the toggle button. Each row in this table represents an item that will be displayed in the booking blocks.
-
-To add a row:
-
-1. Right-click the table and select *Add Block Info*.
-
-2. In the *Block Info* field, specify the block info (e.g. *\[BOOKINGNAME\]*, or a property name in the format *\[PROPERTY:**Property name**\]*).
-
-3. In the *Order* field, specify in which position on the block the item should be displayed, The lower the number (lowest = 0), the higher the position.
-
-To remove a row, right-click the row and select *Delete Selected Item(s)*. Alternatively, you can clear all items in the table at the same time by selecting *Clear Table*.
+- **Custom Block Info**: Can be set to *Default* or *Custom*. If you set this to *Custom*, you can configure custom information to display in the booking blocks on the timeline using the **Service Info** table. See [Configuring custom booking block info for the entire system](xref:SRM_custom_booking_blocks#configuring-custom-booking-block-info-for-the-entire-system).
 
 ## Properties subtab
 
