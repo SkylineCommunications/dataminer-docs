@@ -306,8 +306,9 @@ DataMiner supports Okta as identity provider as from version 10.1.11. Use Okta's
        - *Use this for Recipient URL and Destination URL*
        - *Allow this app to request other SSO URLs*
 
-     - Enter the following additional URLs:
+     - Open 'Show Advanced Settings' and enter the following additional URLs to 'Other Requestable SSO URLs'. The indexes here should be the same as the indexes in the `C:\Skyline DataMiner\okta-sp-metadata.xml` which we will create later:
 
+       - ``https://dataminer.example.com/root/``
        - ``https://dataminer.example.com/login/``
        - ``https://dataminer.example.com/dashboard/``
        - ``https://dataminer.example.com/monitoring/``
@@ -332,9 +333,38 @@ DataMiner supports Okta as identity provider as from version 10.1.11. Use Okta's
 
 1. In the *Actions* column of the *Active* certificate, click *View IdP metadata*.
 
-1. Save this IdP metadata XML file to the DataMiner Agent, e.g. `C:\Skyline DataMiner\okta-ip-metadata.xml`.
+1. Save this identity provider’s metadata XML file to the DataMiner Agent, e.g. `C:\Skyline DataMiner\okta-ip-metadata.xml`.
 
-1. Open the *DataMiner.xml* file and fill in the path to the IdP metadata file in the *ipMetadata* attribute of the *&lt;ExternalAuthentication&gt;* node.
+1. Copy the following template into a new XML file named e.g. `C:\Skyline DataMiner\okta-sp-metadata.xml` to create the service provider’s metadata file. You can find the EntityID in the previously created `C:\Skyline DataMiner\okta-ip-metadata.xml`.
+
+   ```xml
+   <?xml version="1.0" encoding="UTF-8"?>
+   <md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" entityID="[ENTITYID]" validUntil="2050-01-04T10:00:00.000Z">
+     <md:SPSSODescriptor AuthnRequestsSigned="false" WantAssertionsSigned="true" protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+       <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://dataminer.example.com/login/" index="0" isDefault="false"/>
+       <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://dataminer.example.com/root/" index="1" isDefault="false"/>
+       <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://dataminer.example.com/dashboard/" index="2" isDefault="false"/>
+       <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://dataminer.example.com/monitoring/" index="3" isDefault="false"/>
+       <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://dataminer.example.com/jobs/" index="4" isDefault="false"/>
+       <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://dataminer.example.com/ticketing/" index="5" isDefault="false"/>
+       <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="[FOR EVERY CUSTOM APP URL, ADD AN ASSERTION LIKE THE ONES ABOVE WITH AN INCREMENTED INDEX. IF YOU DO NOT HAVE CUSTOM APPS, REMOVE THIS EXAMPLE.]" index="6" isDefault="false"/>
+     </md:SPSSODescriptor>
+   </md:EntityDescriptor>
+   ```
+
+1. Open the *DataMiner.xml* file and configure the *\<ExternalAuthentication>* tag as illustrated in the example below:
+
+   ```xml
+   <DataMiner ...>
+     ...
+     <ExternalAuthentication
+       type="SAML"
+       ipMetadata="[Path/URL of the identity provider’s metadata file]"
+       spMetadata="[Path/URL of the service provider’s metadata file]"
+       timeout="300" />
+     ...
+   </DataMiner>
+   ```
 
 ## Error messages
 
