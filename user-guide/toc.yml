@@ -2571,6 +2571,8 @@
                 topicUID: SRM_custom_bookings_list
               - name: Customizing the booking blocks on the timeline
                 topicUID: SRM_custom_booking_blocks
+          - name: Alarm monitoring
+            topicUID: SRM_alarm_monitoring
           - name: Advanced configuration for Service Orchestration
             items:
               - name: Resources configuration

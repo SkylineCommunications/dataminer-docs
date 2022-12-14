@@ -6,7 +6,7 @@ uid: SRM_custom_booking_blocks
 
 On the [Bookings tab](xref:Booking_Manager_Bookings_tab) of the Booking Manager app, a timeline shows when specific bookings are planned.
 
-You can customize the blocks representing bookings on the timeline so that they will show custom information instead of just the booking name. This can be done system-wide, or just for one or more specific service definitions.
+You can customize the blocks representing bookings on the timeline so that they will show custom information instead of just the booking name. This can be done system-wide, but you can also configure overrides for one or more specific service definitions.
 
 ## Configuring a custom booking block height
 
