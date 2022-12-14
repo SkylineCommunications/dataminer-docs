@@ -749,9 +749,9 @@ The only time when "the user" is appropriate is when whoever you are writing for
 
 1. Open Visual Studio.
 
-1. Click *Open a project or solution* and select *C:\...\GitHub\dataminer-docs\src\Base Class Library\Code Library.sln*.
+1. Select to open a project or solution and open *C:\...\GitHub\dataminer-docs\src\Base Class Library\Code Library.sln*.
 
-1. In the *Solution Explorer* field, right-click *Solution 'Code Library'* and select *Restore NuGet packages*.
+1. In the *Solution Explorer* pane, right-click *Solution 'Code Library'* and select *Restore NuGet packages*.
 
    You will get the following output:
 
