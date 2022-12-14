@@ -345,7 +345,9 @@ To be able to make a local test build, you need to have DocFX installed. DocFX i
    1. Enter `docfx metadata -f` to generate the metadata.
 
       > [!NOTE]
-      > At this point, you may get 5 warnings mentioning "Found project reference without a matching metadata reference". These can be ignored.
+      >
+      > - At this point, you may get 5 warnings mentioning "Found project reference without a matching metadata reference". These can be ignored.
+      > - At this point, if you get up to 13 warnings, of which 8 mention "Invalid cref value", follow the steps explained [here](#running-docfx-metadata--f-results-in-warnings-mentioning-an-invalid-cref-value).
 
    1. Enter `docfx build -f` to make a test build.
 
@@ -733,6 +735,36 @@ The only time when "the user" is appropriate is when whoever you are writing for
 - Make sure [your fork is up to date](#make-sure-your-fork-is-up-to-date).
 
 - If you installed Git after you installed GitHub Desktop, remove the repository in GitHub Desktop and add it again.
+
+### Running 'docfx metadata -f' results in warnings mentioning an invalid cref value
+
+**Symptom**: When you enter `docfx metadata -f` in the Terminal pane in Visual Studio Code, you get several warnings that look like this:
+
+```txt
+[22-12-14 07:59:45.600]Warning:[ExtractMetadata]Invalid cref value "!:JsonReaderException" found in triple-slash-comments for FromJsonString defined in src/Base Class Library/Common/Skyline/DataMiner/Library/Common/Rates/RateHelper.cs Line 309, ignored.
+[22-12-14 07:59:45.600]Warning:[ExtractMetadata]Invalid cref value "!:JsonReaderException" found in triple-slash-comments for FromJsonString defined in src/Base Class Library/Common/Skyline/DataMiner/Library/Common/Rates/RateHelper.cs Line 354, ignored.
+```
+
+**Resolution**:
+
+1. Open Visual Studio.
+
+1. Click *Open a project or solution* and select *C:\...\GitHub\dataminer-docs\src\Base Class Library\Code Library.sln*.
+
+1. In the *Solution Explorer* field, right-click *Solution 'Code Library'* and select *Restore NuGet packages*.
+
+   You will get the following output:
+
+   ```txt
+   `Restored C:\...\GitHub\dataminer-docs\src\Base Class Library\Common\Common.csproj (in 340 ms).
+   NuGet package restore finished
+   Time Elapsed: 00:00:00.7119526
+   ========== Finished ==========
+   ```
+
+1. Enter `docfx metadata -f` in Visual Studio Code again.
+
+   You should now get no more than 5 warnings when generating the metadata.
 
 ## References
 
