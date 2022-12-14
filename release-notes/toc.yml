@@ -96,6 +96,8 @@
             topicUid: General_Feature_Release_10.2.12
           - name: General Feature Release 10.2.12 CU1
             topicUid: General_Feature_Release_10.2.12_CU1
+          - name: General Feature Release 10.2.12 CU2
+            topicUid: General_Feature_Release_10.2.12_CU2
         - name: General Feature Release 10.2.11
           items:
           - name: New features and changes
