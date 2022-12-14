@@ -121,3 +121,7 @@ In some cases, it could occur that PIM neighbors data was not correctly retrieve
 #### Hub list in Market visual overview not shown completely [ID_35029]
 
 In the Market visual overview, if there were several hubs under a market, it could occur that the hub list was cut off at the bottom.
+
+#### Incorrect offline RPDs metric on Node Leaf level [ID_35162]
+
+When there were offline RPDs associated with a node leaf, the percentage calculation for offline RPDs in the node leaf visual overview could be incorrect. The relevant aggregation operations have been reviewed to prevent this, and EPM relations have been added on connector level to make the calculations more efficient.
