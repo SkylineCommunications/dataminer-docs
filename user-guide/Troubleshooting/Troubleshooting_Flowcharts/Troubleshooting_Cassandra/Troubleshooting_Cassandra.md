@@ -30,7 +30,7 @@ Check connectivity to Cassandra using DevCenter. On the DMA, go to `C:\Program F
 
 <div class="mermaid">
 flowchart TD
-    bpa[Best Practice Analyser Cassandra]:::LightGray-->|From DataMiner<br> 9.6.0.0 CU23 onwards|B( Run the Cassandra BPA test in <br>System Center on the Agents BPA tab.<br>It is available by default from DataMiner<br>10.1.4 onwards, or else on demand.):::Gray
+    bpa[Best Practice Analyser Cassandra]:::LightGray---|From DataMiner<br> 9.6.0.0 CU23 onwards|B( Run the Cassandra BPA test in <br>System Center on the Agents BPA tab.<br>It is available by default from DataMiner<br>10.1.4 onwards, or else on demand.):::Gray
     click B "https://docs.dataminer.services/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Cassandra/Troubleshooting_Cassandra_Best_Practice_Analyzer.html" "Best Practice Analyser Cassandra"
     box1---bpa
     box1[Check for any issues<br>observed in your system:]:::DarkBlue---box2{{Are there Cassandra health<br>alarms in Cube?}}:::Blue

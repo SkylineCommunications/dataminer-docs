@@ -33,7 +33,7 @@ CheckIssueType --- |Run-time error| Rte
 CheckIssueType --- |Crash| Crash
 %% Define hyperlinks %%
 click LinkRootCause "https://docs.dataminer.services/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Finding_a_Root_Cause.html" "Go to Root Cause Flowchart"
-click LinkProcessList "/troubleshooting-process-identification/" "Go to process identification page"
+click LinkProcessList "https://docs.dataminer.services/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Process_Identification/Troubleshooting_Process_Identification.html" "Go to process identification page"
 click Rte "https://docs.dataminer.services/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Identify_Per_Module/Alarm_Console/Troubleshooting_Run_Time_Errors.html" "RTE investigation diagram"
 click Crash "https://docs.dataminer.services/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Critical_Issues/Troubleshooting_Critical_Issues_Automatic_Restart.html" "Crash investigation diagram"
 %% Define styles %%
