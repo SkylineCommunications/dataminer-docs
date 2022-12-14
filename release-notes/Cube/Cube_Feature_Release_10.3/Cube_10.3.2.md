@@ -114,8 +114,8 @@ When you opened an alarm tab of type "sliding window" with a large number of ala
 
 When you opened the trend graph of a parameter that contained discrete values or exceptions, in some cases, Y-axis values could be missing.
 
-#### DataMiner Cube - Alarm Console: Incorrect error would appear when the DMS had an IDP license but no Resource Manager license [ID_35123]
+#### DataMiner Cube - Alarm Console: Incorrect error would appear when a DataMiner cluster had an IDP license but no Resource Manager license [ID_35123]
 
 <!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
 
-When the DataMiner System had an IDP license but no Resource Manager license, an error would incorrectly appear in the Alarm Console when the agents were synchronized.
+When a DataMiner cluster had an IDP license but no Resource Manager license, an error would incorrectly appear in the Alarm Console when the agents were synchronized.

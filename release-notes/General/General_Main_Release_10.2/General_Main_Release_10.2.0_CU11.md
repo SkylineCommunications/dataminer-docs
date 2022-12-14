@@ -117,8 +117,8 @@ When you ran SLLogCollector via the command line and specified multiple processe
 
 When an engine.AddScriptOutput method was used to pass output data of type string from a script to the application that executed it or from a subscript to the script that executed that subscript, that output data of type string would incorrectly not get cleared from memory.
 
-#### DataMiner Cube - Alarm Console: Incorrect error would appear when the DMS had an IDP license but no Resource Manager license [ID_35123]
+#### DataMiner Cube - Alarm Console: Incorrect error would appear when a DataMiner cluster had an IDP license but no Resource Manager license [ID_35123]
 
 <!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
 
-When the DataMiner System had an IDP license but no Resource Manager license, an error would incorrectly appear in the Alarm Console when the agents were synchronized.
+When a DataMiner cluster had an IDP license but no Resource Manager license, an error would incorrectly appear in the Alarm Console when the agents were synchronized.
