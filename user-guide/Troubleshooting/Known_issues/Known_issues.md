@@ -5,6 +5,7 @@ uid: Known_issues
 
 | Issue | DataMiner version | Date added |
 |--|--|--|
+| [SLNet deadlock on DMA startup](xref:KI_SLNet_deadlock_on_startup) | From DataMiner 10.1.0/10.1.2 onwards | December 14, 2022 |
 | [Stable trend points not kept alive](xref:KI_stable_trend_points_not_kept_alive) | From DataMiner 10.2.0 [CU8]/10.2.10 onwards | December 9, 2022 |
 | [Missing 1-day average trending records](xref:KI_missing_avg_trending) | From DataMiner 10.2.0/10.1.10 onwards | December 9, 2022 |
 | [Memory leak in SLNet threads](xref:KI_SLNet_thread_leak) | DataMiner 10.2.12 [CU0] and [CU1] | December 9, 2022 |

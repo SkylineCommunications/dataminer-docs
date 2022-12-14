@@ -2856,6 +2856,8 @@
     - name: Known issues
       topicUID: Known_issues
       items:
+        - name: SLNet deadlock on DMA startup
+          topicUID: KI_SLNet_deadlock_on_startup
         - name: Stable trend points not kept alive
           topicUID: KI_stable_trend_points_not_kept_alive
         - name: Missing 1-day average trending records
