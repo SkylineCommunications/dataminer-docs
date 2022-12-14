@@ -20,6 +20,12 @@ Up to now, SLLogCollector expected custom collector configuration files named `d
 
 From now on, it will first check the `LogConfig` folder in the same location as `SL_LogCollector.exe`. If that `LogConfig` folder does not exist, if the folder is empty or if the `default.xml` file in that folder cannot be deserialized, it will fall back on the `default.xml` file in the `C:\Skyline DataMiner\Tools\SLLogCollector\LogConfigs` folder.
 
+#### DataMiner Cube - Visual Overview: Enhanced performance when loading sorted tree view controls [ID_34795]
+
+<!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
+
+Because of a number of enhancements, overall performance has increased when loading sorted tree view controls.
+
 #### NAS service will now have a quoted image path [ID_34989]
 
 <!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
@@ -87,6 +93,18 @@ When you selected a measurement point of a spectrum trace, and then played a spe
 
 In some cases, *Card*, *Script*, *Link* and *Popup* actions would no longer work in visual overviews opened in web apps.
 
+#### DataMiner Cube - Alarm Console: Cube freezes when loading a large sliding window [ID_35032]
+
+<!-- Main Release Version 10.1.0 [CU22]/10.2.0 [CU11] - Feature Release Version 10.3.2 -->
+
+When you opened an alarm tab of type "sliding window" with a large number of alarm trees, in some cases, the UI could become unresponsive.
+
+#### DataMiner Cube: Y-axis values could be missing when opening a trend graph [ID_35060]
+
+<!-- Main Release Version 10.1.0 [CU22]/10.2.0 [CU11] - Feature Release Version 10.3.2 -->
+
+When you opened the trend graph of a parameter that contained discrete values or exceptions, in some cases, Y-axis values could be missing.
+
 #### SLLogCollector would only take a dump of the first process when multiple processes were specified in the -d command-line option [ID_35074]
 
 <!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
@@ -98,3 +116,9 @@ When you ran SLLogCollector via the command line and specified multiple processe
 <!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
 
 When an engine.AddScriptOutput method was used to pass output data of type string from a script to the application that executed it or from a subscript to the script that executed that subscript, that output data of type string would incorrectly not get cleared from memory.
+
+#### DataMiner Cube - Alarm Console: Incorrect error would appear when the DMS had an IDP license but no Resource Manager license [ID_35123]
+
+<!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
+
+When the DataMiner System had an IDP license but no Resource Manager license, an error would incorrectly appear in the Alarm Console when the agents were synchronized.

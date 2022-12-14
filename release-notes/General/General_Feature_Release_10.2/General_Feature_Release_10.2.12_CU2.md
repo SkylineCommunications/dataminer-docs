@@ -19,4 +19,4 @@ uid: General_Feature_Release_10.2.12_CU2
 <!-- MR 10.3.0 - FR 10.2.12 [CU2] -->
 <!-- Not added to MR 10.3.0 -->
 
-Since DataMiner feature version 10.2.12, in some cases, SLNet threads would not be cleaned up properly.
+Since DataMiner feature version 10.2.12, SLNet threads would not be cleaned up properly.

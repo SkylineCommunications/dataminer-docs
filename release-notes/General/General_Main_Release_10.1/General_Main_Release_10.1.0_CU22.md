@@ -182,3 +182,15 @@ Also, in some cases, the value in the *Number of columns* input box could incorr
 <!-- Main Release Version 10.1.0 [CU22]/10.2.0 [CU11] - Feature Release Version 10.3.2 -->
 
 When you selected a measurement point of a spectrum trace, and then played a spectrum recording in which other measurement points were used, the measurement point you selected would incorrectly no longer be selected when the spectrum recording stopped playing.
+
+#### DataMiner Cube - Alarm Console: Cube freezes when loading a large sliding window [ID_35032]
+
+<!-- Main Release Version 10.1.0 [CU22]/10.2.0 [CU11] - Feature Release Version 10.3.2 -->
+
+When you opened an alarm tab of type "sliding window" with a large number of alarm trees, in some cases, the UI could become unresponsive.
+
+#### DataMiner Cube: Y-axis values could be missing when opening a trend graph [ID_35060]
+
+<!-- Main Release Version 10.1.0 [CU22]/10.2.0 [CU11] - Feature Release Version 10.3.2 -->
+
+When you opened the trend graph of a parameter that contained discrete values or exceptions, in some cases, Y-axis values could be missing.
