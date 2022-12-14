@@ -306,7 +306,7 @@ DataMiner supports Okta as identity provider as from version 10.1.11. Use Okta's
        - *Use this for Recipient URL and Destination URL*
        - *Allow this app to request other SSO URLs*
 
-     - Open 'Show Advanced Settings' and enter the following additional URLs to 'Other Requestable SSO URLs'. The indexes here should be the same as the indexes in the `C:\Skyline DataMiner\okta-sp-metadata.xml` which we will create later:
+     - Open *Show Advanced Settings* and enter the following additional URLs to *Other Requestable SSO URLs*:
 
        - ``https://dataminer.example.com/root/``
        - ``https://dataminer.example.com/login/``
@@ -314,6 +314,9 @@ DataMiner supports Okta as identity provider as from version 10.1.11. Use Okta's
        - ``https://dataminer.example.com/monitoring/``
        - ``https://dataminer.example.com/jobs/``
        - ``https://dataminer.example.com/ticketing/``
+
+       > [!NOTE]
+       > The indexes here should be the same as the indexes in the `C:\Skyline DataMiner\okta-sp-metadata.xml` which we will create in a further step.
 
    - **Audience URI (SP Entity ID)**: The intended audience of the SAML assertion.
 
@@ -326,7 +329,7 @@ DataMiner supports Okta as identity provider as from version 10.1.11. Use Okta's
    - **Application username**: The default value to use for the username with the application.
 
      Select "Email".
-     
+
    - **Attribute Statements**: Add a new attribute statement with name *Email* (case-sensitive), format *Basic*, and value *user.email*.
 
 1. Open the *Sign On* tab of your Okta application and scroll down to *SAML Signing Certificates*.
@@ -335,7 +338,7 @@ DataMiner supports Okta as identity provider as from version 10.1.11. Use Okta's
 
 1. Save this identity provider’s metadata XML file to the DataMiner Agent, e.g. `C:\Skyline DataMiner\okta-ip-metadata.xml`.
 
-1. Copy the following template into a new XML file named e.g. `C:\Skyline DataMiner\okta-sp-metadata.xml` to create the service provider’s metadata file. You can find the EntityID in the previously created `C:\Skyline DataMiner\okta-ip-metadata.xml`.
+1. Copy the following template to a new XML file named e.g. `C:\Skyline DataMiner\okta-sp-metadata.xml` to create the service provider’s metadata file. You can find the EntityID in the previously created `C:\Skyline DataMiner\okta-ip-metadata.xml`.
 
    ```xml
    <?xml version="1.0" encoding="UTF-8"?>
@@ -347,7 +350,7 @@ DataMiner supports Okta as identity provider as from version 10.1.11. Use Okta's
        <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://dataminer.example.com/monitoring/" index="3" isDefault="false"/>
        <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://dataminer.example.com/jobs/" index="4" isDefault="false"/>
        <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://dataminer.example.com/ticketing/" index="5" isDefault="false"/>
-       <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="[FOR EVERY CUSTOM APP URL, ADD AN ASSERTION LIKE THE ONES ABOVE WITH AN INCREMENTED INDEX. IF YOU DO NOT HAVE CUSTOM APPS, REMOVE THIS EXAMPLE.]" index="6" isDefault="false"/>
+       <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="[For every custom app URL, add an assertion like the ones above with an incremented index. If you do not have custom apps, remove this example.]" index="6" isDefault="false"/>
      </md:SPSSODescriptor>
    </md:EntityDescriptor>
    ```
