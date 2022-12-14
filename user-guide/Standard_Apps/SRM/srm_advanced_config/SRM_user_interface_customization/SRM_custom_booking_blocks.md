@@ -43,3 +43,24 @@ If you want booking blocks to display information over more than one line, it is
 
 ## Configuring custom booking block info for a specific service definition
 
+1. In the Services module in DataMiner Cube, go to the *definitions* tab.
+
+1. Select the service definition for which you want to configure custom booking block info.
+
+1. In the pane on the right, go to the *properties* tab.
+
+1. Click the *Add* button to add a property.
+
+1. In the *new property* field, specify the property name *BlockInfo*.
+
+1. Set the value of the property to a *BlockInfo* array as illustrated in the following example:
+
+   ```json
+   [
+    { "BlockInfo": "FixedString", "Order":3},
+    { "BlockInfo": "Name: [BOOKINGNAME]", "Order": 1},
+    { "BlockInfo": "Friendly Reference: [PROPERTY:FriendlyReference]", "Order": 2}
+   ]
+   ```
+
+   In this array, the order of each item must always be specified, as this will determine the order in which the items are displayed (1 = the highest). There is no limit to how many *BlockInfo* items you can add. You can also combine the [BOOKINGNAME] and [PROPERTY:...] placeholders in the same *BlockInfo* item.
