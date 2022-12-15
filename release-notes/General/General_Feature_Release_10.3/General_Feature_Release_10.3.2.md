@@ -120,11 +120,25 @@ Because of a number of enhancements, overall performance has increased when crea
 
 When an Elasticsearch cluster used by DataMiner was hosted on servers that host IPv6 addresses, the Elasticsearch health monitoring in DataMiner would fail to assess the Elasticsearch cluster state and conclude that the indexing database was unavailable.
 
+#### External authentication via SAML: Problem when using Okta as identity provider [ID_34745]
+
+<!-- MR 10.3.0 - FR 10.3.2 -->
+
+When using external authentication via SAML, a software issue would prevent you from logging in when Okta was set up as identity provider.
+
 #### Problem with SLDataMiner when loading an alarm template schedule failed [ID_34988]
 
 <!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
 
 In some cases, an error could occur in SLDataMiner when loading an alarm template schedule failed.
+
+#### Alarm templates: Parameters exported to DVE child elements could have incorrect alarm limits [ID_34996]
+
+<!-- MR 10.3.0 - FR 10.3.2 -->
+
+When a parameter was exported as a standalone parameter to a DVE child element, in some cases, the alarm limits could be incorrect when the type of alarm monitoring was set to either *Relative* or *Absolute*.
+
+Also, LED bar controls would either not display or not update their alarm limits.
 
 #### Dashboards app: Button to restore the initial view would incorrectly appear on all tables after sorting or filtering a table [ID_35003]
 
@@ -155,6 +169,12 @@ When, in the *Monitoring* app, you selected a view and opened the histogram page
 <!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
 
 When an engine.AddScriptOutput method was used to pass output data of type string from a script to the application that executed it or from a subscript to the script that executed that subscript, that output data of type string would incorrectly not get cleared from memory.
+
+#### Dashboards app: Visual Overview component would not show any content when linked to a feed [ID_35130]
+
+<!-- MR 10.3.0 - FR 10.3.2 -->
+
+When a Visual Overview component was linked to a feed, in some cases, it would not show any content.
 
 #### Protocols: Problem when using the 'partialSNMP' option when polling tables using the 'multipleGetNext' or 'multipleGetBulk' method [ID_35147]
 

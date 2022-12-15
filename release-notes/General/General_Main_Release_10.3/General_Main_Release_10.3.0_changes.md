@@ -826,6 +826,12 @@ Since Cassandra 3.7 was replaced by Cassandra 3.11 in DataMiner Installer 10.2, 
 
 Also, if the *JAVA_HOME* environment variable is not defined, it will be set to the Java version that comes with Cassandra.
 
+#### External authentication via SAML: Problem when using Okta as identity provider [ID_34745]
+
+<!-- MR 10.3.0 - FR 10.3.2 -->
+
+When using external authentication via SAML, a software issue would prevent you from logging in when Okta was set up as identity provider.
+
 #### Skyline Device Simulator: 'no such object' would incorrectly be returned when requesting data from a simulation [ID_34746]
 
 <!-- MR 10.3.0 - FR 10.2.12 -->
@@ -898,6 +904,14 @@ When you sorted or filtered a table fed by e.g. a query filter, the table would 
 
 When a trend graph displaying multiple parameters showed data that was partly in the future, in some cases, an error could occur.
 
+#### Alarm templates: Parameters exported to DVE child elements could have incorrect alarm limits [ID_34996]
+
+<!-- MR 10.3.0 - FR 10.3.2 -->
+
+When a parameter was exported as a standalone parameter to a DVE child element, in some cases, the alarm limits could be incorrect when the type of alarm monitoring was set to either *Relative* or *Absolute*.
+
+Also, LED bar controls would either not display or not update their alarm limits.
+
 #### Dashboards app: Button to restore the initial view would incorrectly appear on all tables after sorting or filtering a table [ID_35003]
 
 <!-- MR 10.3.0 - FR 10.3.2 -->
@@ -925,3 +939,9 @@ When resource data was being migrated to Elasticsearch, the following exception 
 <!-- MR 10.3.0 - FR 10.3.2 -->
 
 When, in the *Monitoring* app, you selected a view and opened the histogram page, in some cases, a `Maximum call stack size exceeded` error would appear.
+
+#### Dashboards app: Visual Overview component would not show any content when linked to a feed [ID_35130]
+
+<!-- MR 10.3.0 - FR 10.3.2 -->
+
+When a Visual Overview component was linked to a feed, in some cases, it would not show any content.
