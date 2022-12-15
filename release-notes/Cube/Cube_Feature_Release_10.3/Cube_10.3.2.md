@@ -134,3 +134,10 @@ When you opened the trend graph of a parameter that contained discrete values or
 <!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
 
 When a DataMiner cluster had an IDP license but no Resource Manager license, an error would incorrectly appear in the Alarm Console when the agents were synchronized.
+
+#### Trending: Light bulb icon would incorrectly not re-appear after removing a suggested parameter of type string from a graph [ID_35133]
+
+<!-- MR 10.3.0 - FR 10.3.2 -->
+<!-- Not added to 10.3.0 -->
+
+When you removed a suggested parameter of type string from a trend graph, the light bulb icon would incorrectly not re-appear in the top-right corner of the graph.
