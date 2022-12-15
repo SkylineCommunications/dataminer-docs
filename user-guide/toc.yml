@@ -2577,6 +2577,8 @@
             items:
               - name: Resources configuration
                 topicUID: Service_Orchestration_resources_advanced
+          - name: SRM logging
+            topicUID: SRM_logging
 - name: DataMiner Cloud Platform
   topicUid: Part51CloudPlatform
   items:
