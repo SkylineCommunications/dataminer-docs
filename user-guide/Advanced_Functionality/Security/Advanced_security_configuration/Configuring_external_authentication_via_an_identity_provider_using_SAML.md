@@ -316,7 +316,7 @@ DataMiner supports Okta as identity provider as from version 10.1.11. Use Okta's
        - ``https://dataminer.example.com/ticketing/``
 
        > [!NOTE]
-       > The indexes here should be the same as the indexes in the `C:\Skyline DataMiner\okta-sp-metadata.xml` which we will create in a further step.
+       > The indexes here should be the same as the indexes in `C:\Skyline DataMiner\okta-sp-metadata.xml`, which we will create in a further step.
 
    - **Audience URI (SP Entity ID)**: The intended audience of the SAML assertion.
 
