@@ -61,6 +61,8 @@ During the migration, each DMA will go through the following stages:
 
 ### Running the migration
 
+#### [Running the migration](#tab/tabid-1)
+
 1. On one of the DMAs in your cluster, go to `C:\Skyline DataMiner\Tools\`, and run *SLCCMigrator.exe*.
 
 1. Initialize all the DMAs in the list. You can initialize all DMAs at once using the *Initialize all agents* button or initialize them one at a time with the *Initialize* button for each DMA.
@@ -105,6 +107,10 @@ During the migration, each DMA will go through the following stages:
 > - During the migration, you can cancel the migration of one particular data type for one particular DMA. This will not undo any changes made to the Cassandra and Elasticsearch clusters.
 > - If you want to cancel the entire migration process for all DMAs, click *Abort migration*. This will undo all changes made to the DMAs.
 > - When you migrate a DataMiner Failover setup, only the data of the active DMA will be migrated. Once the migration has finished, both DMAs will be restarted.
+
+#### [Running a migration with bespoke elastic data](#tab/tabid-2)
+
+***
 
 ### Troubleshooting
 
