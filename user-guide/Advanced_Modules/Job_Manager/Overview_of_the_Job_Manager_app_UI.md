@@ -2,7 +2,7 @@
 uid: Overview_of_the_Job_Manager_app_UI
 ---
 
-# Overview of the Job Manager app UI
+# Overview of the Jobs app UI
 
 The main page of the app consists of a header bar, a side panel and an overview panel. In DataMiner 10.0.0/10.0.2, some changes are implemented in the UI.
 
@@ -18,7 +18,7 @@ The main page of the app consists of a header bar, a side panel and an overview 
 
   - User icon: Click this icon in the top-right corner to open a menu with the following options:
 
-    - *Configuration*: Select this option to access the configuration of the job fields. See [Configuring jobs in the Job Manager app](xref:Configuring_jobs_in_the_Job_Manager_app).
+    - *Configuration*: Select this option to access the configuration of the job fields. See [Configuring jobs in the Jobs app](xref:Configuring_jobs_in_the_Job_Manager_app).
 
      *About*: Select this option to view version information on the app.
 
@@ -79,7 +79,7 @@ The main page of the app consists of a header bar, a side panel and an overview 
 
   - If a job is selected, a number of additional buttons are displayed next to the *New* button, allowing you to check out the details of the job, edit it, export it to PDF or delete it, respectively.
 
-  - A *Configuration* button: Click this button to access the configuration of the job fields. See [Configuring jobs in the Job Manager app](xref:Configuring_jobs_in_the_Job_Manager_app).
+  - A *Configuration* button: Click this button to access the configuration of the job fields. See [Configuring jobs in the Jobs app](xref:Configuring_jobs_in_the_Job_Manager_app).
 
   - The name of the current user: Click the username and select *Log out* to log out of the app.
 

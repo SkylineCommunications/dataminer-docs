@@ -22,6 +22,6 @@ This section consists of the following topics:
 
 - [Sharing DataMiner data with third parties](xref:Sharing_DataMiner_data_with_third_parties)
 
-- [DMS maintenance tools](xref:DMS_maintenance_tools)
+- [DataMiner maintenance tools](xref:DMS_maintenance_tools)
 
 - [Running BPA tests](xref:Running_BPA_tests)
