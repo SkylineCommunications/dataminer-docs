@@ -12,7 +12,7 @@ This is the root tag of the configuration file.
 
 In this mandatory attribute, specify the name (without extension) of the Asset Manager configuration file to which you want to link this data mediation configuration file.
 
-Refer to the AssetManagerConfig.DatabaseConfig tag of the Asset Manager configuration file to find the name. See [Configuring DMS Inventory and Asset Management](xref:Configuring_DMS_Inventory_and_Asset_Management).
+Refer to the *AssetManagerConfig.DatabaseConfig* tag of the Asset Manager configuration file to find the name. See [Configuring DataMiner Inventory and Asset Management](xref:Configuring_DMS_Inventory_and_Asset_Management).
 
 ## AssetMediationConfig.SynchronizeData
 

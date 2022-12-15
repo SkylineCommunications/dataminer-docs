@@ -4,9 +4,9 @@ uid: Using_CSharp_code_in_Automation_scripts
 
 # Using C# code in Automation scripts
 
-Using C# code in Automation scripts offers improved flexibility and extended possibilities for the DMS Automation Engine.
+Using C# code in Automation scripts offers improved flexibility and extended possibilities for the Automation Engine.
 
-The following sections provide more information on using C# code in DMS Automation:
+The following sections provide more information on using C# code in DataMiner Automation:
 
 - [Adding C# code to an Automation script](xref:Adding_CSharp_code_to_an_Automation_script)
 

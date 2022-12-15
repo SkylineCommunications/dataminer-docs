@@ -4,7 +4,7 @@ uid: Spectrum_Simulation_protocol
 
 # Spectrum simulation protocol
 
-To test DMS Spectrum Analysis, a spectrum simulation protocol is available. You can for example use it to verify the “set parameter” commands that SLSpectrum sends to the protocol, or to get a trace on the screen and test the various features of the spectrum user interface and spectrum monitoring without a real device.
+To test DataMiner Spectrum Analysis, a spectrum simulation protocol is available. You can for example use it to verify the “set parameter” commands that SLSpectrum sends to the protocol, or to get a trace on the screen and test the various features of the spectrum user interface and spectrum monitoring without a real device.
 
 > You can download this protocol from [DataMiner Dojo](https://community.dataminer.services/download/spectrum-simulation-driver/).
 
@@ -16,7 +16,7 @@ To use this protocol:
 
 The element has the following data pages:
 
-- *Spectrum Analyzer*: Displays the standard DMS Spectrum Analysis user interface.
+- *Spectrum Analyzer*: Displays the standard Spectrum Analysis user interface.
 
 - *General*: Contains general information, as well as the following parameters:
 

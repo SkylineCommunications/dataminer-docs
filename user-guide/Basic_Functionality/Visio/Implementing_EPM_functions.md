@@ -24,4 +24,4 @@ This section consists of the following topics:
 
 > [!TIP]
 > See also:
-> [DMS Experience and Performance Management](xref:EPM#dms-experience-and-performance-management)
+> [Experience and Performance Management](xref:EPM)

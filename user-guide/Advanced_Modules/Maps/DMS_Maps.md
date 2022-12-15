@@ -2,11 +2,11 @@
 uid: maps
 ---
 
-# DMS Maps
+# DataMiner Maps
 
 This section consists of the following topics:
 
-- [About DMS Maps](xref:About_DMS_Maps)
+- [About DataMiner Maps](xref:About_DMS_Maps)
 
 - [Using DataMiner Maps](xref:Using_DataMiner_Maps)
 
