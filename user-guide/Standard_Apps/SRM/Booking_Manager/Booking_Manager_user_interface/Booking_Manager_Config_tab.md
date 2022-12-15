@@ -36,7 +36,7 @@ This tab of the Booking Manager app provides an overview of all configuration pa
 
 ### History and Logs settings
 
-- **Booking logging location**: The path that indicates where the booking logs will be saved. Click *Settings* to open a window where you can customize this path and configure the logging date/time format, maximum file size, minimum logging level, and logging cleanup.
+- **Booking logging location**: The path that indicates where the booking logs will be saved. Click *Settings* to open a window where you can customize this path and configure the logging date/time format, maximum file size, minimum logging level, and logging cleanup. For more information, see [Configuring SRM logging](xref:SRM_logging_config).
 
 ### Type of Booking settings
 

@@ -2,7 +2,7 @@
 uid: SRM_alarm_monitoring
 ---
 
-# SRM alarm monitoring
+# Configuring SRM alarm monitoring
 
 <!-- RN 21781, 23359 -->
 

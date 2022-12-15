@@ -2571,14 +2571,16 @@
                 topicUID: SRM_custom_bookings_list
               - name: Customizing the booking blocks on the timeline
                 topicUID: SRM_custom_booking_blocks
-          - name: Alarm monitoring
+          - name: Configuring SRM alarm monitoring
             topicUID: SRM_alarm_monitoring
+          - name: Configuring SRM logging
+            topicUID: SRM_logging_config
           - name: Advanced configuration for Service Orchestration
             items:
               - name: Resources configuration
                 topicUID: Service_Orchestration_resources_advanced
-          - name: SRM logging
-            topicUID: SRM_logging
+      - name: SRM logging
+        topicUID: SRM_logging
 - name: DataMiner Cloud Platform
   topicUid: Part51CloudPlatform
   items:
