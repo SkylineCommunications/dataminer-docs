@@ -41,12 +41,6 @@ All DOM objects (DomInstance, DomTemplate, DomDefinition, DomBehaviorDefinition,
 > - In the Elasticsearch database, existing data will not contain values for these new fields (except the *LastModified* field for all but *ModuleSettings*).
 > - All four fields are also available in the GQI data source *Object Manager Instances*. The *Last Modified* and *Created At* columns should show the time in the time zone of the browser.
 
-#### Dashboards app - GQI: New 'Get trend data patterns' data source [ID_35024]
-
-<!-- MR 10.3.0 - FR 10.3.2 -->
-
-In the Generic Query Interface, a new *Get trend data patterns* data source is now available. It will return all trend data patterns in the DMS.
-
 ## Changes
 
 ### Enhancements
@@ -175,6 +169,12 @@ When an engine.AddScriptOutput method was used to pass output data of type strin
 <!-- MR 10.3.0 - FR 10.3.2 -->
 
 When a Visual Overview component was linked to a feed, in some cases, it would not show any content.
+
+#### SLElement would leak memory when an element was frequently receiving timeout values [ID_35131]
+
+<!-- MR 10.3.0 - FR 10.3.2 -->
+
+When an element was frequently receiving timeout values, SLElement would leak memory.
 
 #### Protocols: Problem when using the 'partialSNMP' option when polling tables using the 'multipleGetNext' or 'multipleGetBulk' method [ID_35147]
 

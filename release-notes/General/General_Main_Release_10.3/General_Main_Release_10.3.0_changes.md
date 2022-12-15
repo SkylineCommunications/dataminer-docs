@@ -945,3 +945,9 @@ When, in the *Monitoring* app, you selected a view and opened the histogram page
 <!-- MR 10.3.0 - FR 10.3.2 -->
 
 When a Visual Overview component was linked to a feed, in some cases, it would not show any content.
+
+#### SLElement would leak memory when an element was frequently receiving timeout values [ID_35131]
+
+<!-- MR 10.3.0 - FR 10.3.2 -->
+
+When an element was frequently receiving timeout values, SLElement would leak memory.
