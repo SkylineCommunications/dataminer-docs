@@ -11,7 +11,7 @@ uid: KI_SLNet_deadlock_on_startup
 
 ## Cause
 
-When multiple DataMiner Agents are started at the same time, in some rare cases, a deadlock can occur in the SLNet process.
+In a DMS using a Cassandra cluster setup, when multiple DataMiner Agents are started at the same time, a deadlock can occur in the SLNet process.
 
 ## Fix
 
