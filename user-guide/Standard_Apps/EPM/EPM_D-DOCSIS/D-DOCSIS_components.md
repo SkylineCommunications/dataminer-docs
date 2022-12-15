@@ -31,7 +31,7 @@ These connectors do not ship out with the solution packages. They need to be ins
 
 The following system connectors are supported (but not required):
 
-- [Cox Vexima R-PHY Monitor](https://catalog.dataminer.services/result/driver/7039)
+- [Cox Vecima R-PHY Monitor](https://catalog.dataminer.services/result/driver/7039)
 - [Cox Ceeview Platform](https://catalog.dataminer.services/result/driver/7396)
 - [Cox Smart PHY](https://catalog.dataminer.services/result/driver/6972)
 - [Cox IDP EPM Connectivity](https://catalog.dataminer.services/result/driver/6929)
