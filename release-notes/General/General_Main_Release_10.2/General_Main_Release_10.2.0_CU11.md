@@ -40,6 +40,12 @@ When you want the NAS service on existing setups to have a quoted path, do the f
 
 1. Restart NAS and NATS.
 
+#### DataMiner Cube - Trending: Trend points with value "0" will now also be exported to CSV [ID_35124]
+
+<!-- Main Release Version 10.1.0 [CU22]/10.2.0 [CU11] - Feature Release Version 10.3.2 -->
+
+Up to now, when you exported real-time trend data to a CSV file, trend points with value "0" would not be included. From now on, those values will be exported as well.
+
 ### Fixes
 
 #### DataMiner Cube: Latest script updates would not be shown when opening a script in the Automation app [ID_34738]
@@ -80,6 +86,15 @@ In the trend graph of a monitored parameter that needed to be compared to a rela
 <!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
 
 In some cases, an error could occur in SLDataMiner when loading an alarm template schedule failed.
+
+#### DataMiner Cube: Problem when opening scheduled tasks, Automation scripts or Correlation rules containing actions that include PDF reports [ID_34997]
+
+<!-- MR 10.1.0 [CU22] / 10.2.0 [CU11] - FR 10.3.2 -->
+
+When, in *Scheduler*, *Automation* or *Correlation*, you opened scheduled tasks, Automation scripts or Correlation rules containing actions that include PDF reports, in some rare cases, the data linked to those reports (i.e. the elements and services in view selection) could not be loaded. This data will now be loaded correctly. Also, a "Loading" indicator will now be displayed and the actions will remain disabled while the data is being loaded. When an error occurs while loading the protocols associated with said data, a clear warning entry will also be added to the Cube logging.
+
+> [!NOTE]
+> From now on, in the *Elements and services in view selection* list, it will also be possible to select parameters of enhanced services.
 
 #### DataMiner Cube - Spectrum Analysis: Selected measurement point no longer selected after playing a spectrum recording [ID_35001]
 
