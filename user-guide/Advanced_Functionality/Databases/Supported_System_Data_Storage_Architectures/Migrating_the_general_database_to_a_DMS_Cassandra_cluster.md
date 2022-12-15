@@ -173,8 +173,8 @@ During the migration, each DMA will go through the following stages:
 
        > [!NOTE]
        >
-       > If there are less than 4 nodes, we recommend only entering 1 in most cases.
-       > If there are more than 4 nodes, we recommend setting it to [Quorum](xref:replication_and_consistency_configuration#examples).
+       > - If there are less than 4 nodes, we recommend only entering 1 in most cases.
+       > - If there are more than 4 nodes, we recommend setting it to [Quorum](xref:replication_and_consistency_configuration#examples).
 
      - *Database prefix*: The prefix for the Elasticsearch indices and aliases. Enter: `elastic_prefix_here`.
 
