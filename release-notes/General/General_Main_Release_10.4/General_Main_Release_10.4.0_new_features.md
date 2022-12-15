@@ -22,7 +22,7 @@ For this purpose, three parameters must be configured in the protocol:
 - A dummy parameter, which contains the matrix mappings and determines where the matrix control is displayed.
 
 > [!NOTE]
-> If a matrix control is configured like this, the severity colors of the crosspoints depend on the alarm monitoring configured for the inputs and outputs tables in the alarm template. This is not configured with the matrix alarm level editor like for classic matrix controls. The crosspoint severity color will be the highest severity color for all monitored column parameters of the outputs table for the relevant row.
+> If a matrix control is configured like this, the severity colors of the crosspoints depend on the alarm monitoring configured for the outputs tables in the alarm template. This is not configured with the matrix alarm level editor like for classic matrix controls. The crosspoint severity color will be the highest severity color for all monitored column parameters of the outputs table for the relevant row.
 
 ##### Inputs table parameter
 
