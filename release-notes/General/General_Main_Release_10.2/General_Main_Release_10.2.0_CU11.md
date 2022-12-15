@@ -137,3 +137,11 @@ When an engine.AddScriptOutput method was used to pass output data of type strin
 <!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
 
 When a DataMiner cluster had an IDP license but no Resource Manager license, an error would incorrectly appear in the Alarm Console when the agents were synchronized.
+
+#### Protocols: Problem when using the 'partialSNMP' option when polling tables using the 'multipleGetNext' or 'multipleGetBulk' method [ID_35147]
+
+<!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
+
+When the *partialSNMP* option was used when polling tables using the *multipleGetNext* or *multipleGetBulk* method, up to now, rows and values would be skipped when one or more columns did not contain values for one or more rows. This caused the next partial requests to jump forward by the amount of empty cells, resulting in missing rows and unexpected empty cells.
+
+Also, a problem with the detection of infinite loops for SNMPv3 when receiving end-of-mib-view errors has been fixed.
