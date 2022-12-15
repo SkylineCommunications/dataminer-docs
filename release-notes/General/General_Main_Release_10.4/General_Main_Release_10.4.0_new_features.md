@@ -9,6 +9,294 @@ uid: General_Main_Release_10.4.0_new_features
 
 ### Core functionality
 
+#### New table matrix [ID_34645] [ID_34661] [ID_34839] [ID_34879] [ID_34933]
+
+<!-- MR 10.4.0 - FR 10.3.1 -->
+
+It is now possible to create a matrix control in a protocol in a more intuitive way, based on two tables.
+
+For this purpose, three parameters must be configured in the protocol:
+
+- A table parameter for the inputs of the matrix.
+- A table parameter for the outputs of the matrix.
+- A dummy parameter, which contains the matrix mappings and determines where the matrix control is displayed.
+
+> [!NOTE]
+> If a matrix control is configured like this, the severity colors of the crosspoints depend on the alarm monitoring configured for the outputs tables in the alarm template. This is not configured with the matrix alarm level editor like for classic matrix controls. The crosspoint severity color will be the highest severity color for all monitored column parameters of the outputs table for the relevant row.
+
+##### Inputs table parameter
+
+For a typical inputs table, the following columns are configured:
+
+- Index: String column. Required. Indicates the index of the input.
+- Label: String column. Required. Contains the label of the input.
+- State: Discrete column. Required. Indicates whether the input is enabled.
+- Lock: Discrete column. Required. Indicates whether the input is locked.
+- Page: String column. Optional. Indicates on which page the input is located.
+
+Example:
+
+```xml
+<Param id="1000" trending="false">
+   <Name>tblInputs</Name>
+   <Description>Inputs</Description>
+   <Type>array</Type>
+   <Information>
+      <Subtext>Table representation of the matrix. This table will contain the information of the inputs.</Subtext>
+   </Information>
+   <ArrayOptions index="0" options=";naming=/1002">
+      <ColumnOption idx="0" pid="1001" type="autoincrement" options=";save" />
+      <ColumnOption idx="1" pid="1002" type="retrieved" options=";save" />
+      <ColumnOption idx="2" pid="1003" type="retrieved" options=";save" />
+      <ColumnOption idx="3" pid="1004" type="retrieved" options=";save" />
+      <ColumnOption idx="4" pid="1005" type="retrieved" options=";save" />
+   </ArrayOptions>
+   <Display>
+      <RTDisplay>true</RTDisplay>
+      <Positions>
+         <Position>
+            <Page>Tables</Page>
+            <Row>0</Row>
+            <Column>0</Column>
+         </Position>
+      </Positions>
+   </Display>
+   <Measurement>
+      <Type options="tab=columns:1001|0-1002|1-1003|2-1004|3-1005|4,width:80-200-60-60-100,sort:STRING-STRING-STRING-STRING-STRING,lines:15,filter:true">table</Type>
+   </Measurement>
+</Param>
+```
+
+##### Outputs table parameter
+
+For a typical outputs table, the following columns are configured:
+
+- Index: String column. Required. Indicates the index of the output.
+- Label: String column. Required. Contains the label of the output.
+- State: Discrete column. Required. Indicates whether the output is enabled.
+- Lock: Discrete column. Required. Indicates whether the output is locked.
+- Connected Input: String column. Required. Determines which input is connected to the output. Only one input can be connected.
+- Page: String column. Optional. Indicates on which page the output is located.
+- Tooltip: String column. Optional. The tooltip shown on the connected crosspoint for this output.
+- Lock Override: String column. Optional. Can be used to change a crosspoint while it is locked.
+
+Example:
+
+```xml
+<Param id="2000" trending="false">
+   <Name>tblOutputs</Name>
+   <Description>Outputs</Description>
+   <Type>array</Type>
+   <Information>
+      <Subtext>Table representation of the matrix. This table will contain the information of the outputs.</Subtext>
+   </Information>
+   <ArrayOptions index="0" options=";naming=/2002">
+      <ColumnOption idx="0" pid="2001" type="autoincrement" options=";save" />
+      <ColumnOption idx="1" pid="2002" type="retrieved" options=";save" />
+      <ColumnOption idx="2" pid="2003" type="retrieved" options=";save" />
+      <ColumnOption idx="3" pid="2004" type="retrieved" options=";save" />
+      <ColumnOption idx="4" pid="2005" type="retrieved" options=";save;foreignKey=1000" />
+      <ColumnOption idx="5" pid="2006" type="retrieved" options=";save" />
+      <ColumnOption idx="6" pid="2007" type="retrieved" options=";save" />
+      <ColumnOption idx="7" pid="2008" type="retrieved" options=";save" />
+      <ColumnOption idx="8" pid="2009" type="retrieved" options=";save" />
+      <ColumnOption idx="9" pid="2010" type="retrieved" options=";save" />
+   </ArrayOptions>
+   <Display>
+      <RTDisplay>true</RTDisplay>
+      <Positions>
+         <Position>
+            <Page>Tables</Page>
+            <Row>1</Row>
+            <Column>0</Column>
+         </Position>
+      </Positions>
+   </Display>
+   <Measurement>
+      <Type options="tab=columns:2001|0-2002|1-2003|2-2004|3-2005|4-2006|5-2007|6-2008|7-2009|8-2010|9,width:80-200-60-60-112-80-80-0-112-100,sort:STRING-STRING-STRING-STRING-STRING-STRING-STRING-STRING-STRING-STRING,lines:15,filter:true">table</Type>
+   </Measurement>
+</Param>
+```
+
+##### Dummy parameter
+
+The dummy parameter should have the new parameter type "Matrix".
+
+With this parameter, matrix mappings are configured for each table. This is done in the *Param.Matrix* element, as illustrated in the example below.
+
+The value of each mapping is the parameter ID of the relevant column parameter from the inputs or outputs table.
+
+In the *name* attribute for each mapping, you can specify one of the following values to indicate the function of a column (as detailed above):
+
+- For the inputs: *index*, *label*, *state*, *lock*, and *page*.
+- For the outputs: *index*, *label*, *state*, *lock*, *connectedInput*, *page*, *tooltip*, and *lockOverride*.
+
+In addition to the mappings, matrix options can also be configured, in the *Param.Matrix.MatrixOptions* element:
+
+- *matrixLayout*: This option determines where the inputs and outputs are displayed in the matrix control. The following values are supported: *InputTopOutputLeft* and *InputLeftOutputTop*.
+- *pages*: Set this option to "true" to enable auto-paging for the matrix. You can set custom pages with the *page* column of the tables.
+- *minimumConnectedInputsPerOutput*: Allows you to specify a minimum number of connected inputs for an output. If you set this to "0", there is no minimum.
+- *maximumConnectedInputsPerOutput*: Determines the maximum number of connected inputs for an output. At present, this is always "1".
+- *minimumConnectedOutputsPerInput*: Allows you to specify a minimum number of connected outputs for an input. If you set this to "0", there is no minimum.
+- *maximumConnectedOutputsPerInput*: Allows you to specify the maximum number of connected outputs for an input. If you set this to "auto", there is no maximum, and this scales with the table.
+
+Example:
+
+```xml
+<Param id="3" trending="false">
+   <Name>DummyMatrixParam</Name>
+   <Type>Matrix</Type>
+   <Display>
+      <RTDisplay>true</RTDisplay>
+      <Positions>
+         <Position>
+            <Page>Matrix</Page>
+            <Row>0</Row>
+            <Column>0</Column>
+         </Position>
+      </Positions>
+   </Display>
+   <Matrix>
+      <Inputs tablePid="1000">
+         <!-- This is the table parameter ID of the inputs table of this matrix-->
+         <Mappings>
+            <Mapping type="pid" name="index">1001</Mapping><!-- This is the primary key column parameter ID of the inputs table of this matrix => Indicates the index of the input.-->
+            <Mapping type="pid" name="label">1002</Mapping><!-- This is the label column parameter ID of the inputs table of this matrix => Contains the label of the input.-->
+            <Mapping type="pid" name="state">1003</Mapping><!-- This is the state column parameter ID of the inputs table of this matrix => Indicates whether the input is enabled or not.-->
+            <Mapping type="pid" name="lock">1004</Mapping><!-- This is the lock column parameter ID of the inputs table of this matrix => Indicates whether the input is locked or not.-->
+            <Mapping type="pid" name="page">1005</Mapping><!-- This is the page column parameter ID of the inputs table of this matrix => Indicates on which page the input is located.-->
+         </Mappings>
+      </Inputs>
+      <Outputs tablePid="2000">
+         <!-- This is the table parameter ID of the outputs table of this matrix-->
+         <Mappings>
+            <Mapping type="pid" name="index">2001</Mapping><!-- This is the primary key column parameter ID of the outputs table of this matrix => Indicates the index of the output.-->
+            <Mapping type="pid" name="label">2002</Mapping><!-- This is the label column parameter ID of the outputs table of this matrix => Contains the label of the output.-->
+            <Mapping type="pid" name="state">2003</Mapping><!-- This is the state column parameter ID of the outputs table of this matrix => Indicates whether the output is enabled or not.-->
+            <Mapping type="pid" name="lock">2004</Mapping><!-- This is the lock column parameter ID of the outputs table of this matrix => Indicates whether the output is locked or not.-->
+            <Mapping type="pid" name="connectedInput">2005</Mapping><!-- This is the connectedInput column parameter ID of the inputs table of this matrix => Contains which input is connected to this output. Note: Tables only support one input per output.-->
+            <Mapping type="pid" name="page">2006</Mapping><!-- This is the page column parameter ID of the outputs table of this matrix => Indicates on which page the output is located.-->
+            <Mapping type="pid" name="tooltip">2007</Mapping><!-- This is the tooltip column parameter ID of the outputs table of this matrix => Contains the tooltip shown on the crosspoint of this output.-->
+            <Mapping type="pid" name="lockOverride">2008</Mapping><!-- This is the lockOverride column parameter ID of the outputs table of this matrix => Contains the lock override parameter for this output. This can be used to (un)set a crosspoint while locked.-->
+         </Mappings>
+      </Outputs>
+      <MatrixOptions>
+         <MatrixOption type="value" name="matrixLayout">InputLeftOutputTop</MatrixOption><!--Set this option if you want the matrix UI to position inputs or outputs at the top or on the left. Note: For table matrices, the only supported values are 'InputTopOutputLeft' or 'InputLeftOutputTop'.-->
+         <MatrixOption type="value" name="pages">true</MatrixOption><!-- Set this option if you want to enable auto-paging on this matrix. Note: Custom pages can be set via the page column on the tables.-->
+         <MatrixOption type="value" name="minimumConnectedInputsPerOutput">0</MatrixOption><!-- Set this option if you want to specify a minimum of connected inputs for an output. Note: 0 for no minimum.-->
+         <MatrixOption type="value" name="maximumConnectedInputsPerOutput">1</MatrixOption><!-- Set this option if you want to specify a maximum of connected inputs for an output. Note: Always 1 because of the nature of the table column (table matrix only). -->
+         <MatrixOption type="value" name="minimumConnectedOutputsPerInput">0</MatrixOption><!-- Set this option if you want to specify a minimum of connected outputs for an input. Note: 0 for no minimum.-->
+         <MatrixOption type="value" name="maximumConnectedOutputsPerInput">auto</MatrixOption><!-- Set this option if you want to specify a maximum of connected outputs for an input. Note: auto for no maximum (scales with the table).-->
+      </MatrixOptions>
+   </Matrix>
+   <Information>
+      <Subtext>Matrix representation(dummy parameter)</Subtext>
+   </Information>
+   <Alarm>
+      <Monitored>false</Monitored>
+      <!-- Monitoring on this parameter is not supported, since the monitoring is done on table level.-->
+   </Alarm>
+   <Measurement>
+      <Type>matrix</Type>
+   </Measurement>
+</Param>
+```
+
+##### Matrix helper
+
+To manipulate the inputs and outputs tables, we recommend using the matrix helper, especially for bigger matrices. This is a helper in DataMiner Integration Studio that can you can add to the protocol by running the Matrix macro in DIS. With the helper, you can manipulate the matrix in an easy and consistent manner without having to do the table manipulations yourself.
+
+In the generated macro, use the *TableMatrixHelper* class. This class can read out the mappings of the dummy parameter.
+
+To create an instance of the helper, fill in the following parameters in the constructor:
+
+```csharp
+public TableMatrixHelper(SLProtocol protocol, int matrixDummyParameterId,
+   int matrixTablesVirtualSetsParameterId, int matrixTablesSerializedSetsParameterId,
+   int matrixConnectionsBufferParameterId = -2, int matrixSerializedParameterID = -2,
+   int maxInputCount = 0, int maxOutputCount = 0)
+```
+
+Once an instance has been created, you can manipulate the matrix with the helper instance as follows:
+
+```csharp
+matrix.Inputs[i].Label = "Input " + (i + 1);
+matrix.Inputs[i].IsEnabled = true;
+matrix.Inputs[i].IsLocked = false;
+matrix.Inputs[i].Page = "Page" + (i / 10 +1);
+
+matrix.Outputs[i].Label = "Output " + (i + 1);
+matrix.Outputs[i].IsEnabled = true;
+matrix.Outputs[i].IsLocked = false;
+matrix.Outputs[i].Connect(i);
+matrix.Outputs[i].Page = "Page" + (i / 10 +1);
+matrix.Outputs[i].ToolTip = "Tooltip " + (i + 1);
+
+matrix.ApplyChanges(protocol);
+```
+
+Every time a user makes a change to the matrix in the UI, this will trigger one of the override methods, depending on the action. This way, data can be sent to the device.
+
+Example:
+
+```csharp
+/// <summary>
+/// Gets triggered when crosspoint connections are changed.
+/// </summary>
+/// <param name = "set">Information about the changed crosspoint connections.</param>
+protected virtual void OnCrossPointsSetFromUI(Skyline.DataMiner.Library.Protocol.Matrix.MatrixCrossPointsSetFromUIMessage set)
+{
+}
+
+/// <summary>
+/// Gets triggered when the label of an input or output is changed.
+/// </summary>
+/// <param name = "set">Information about the changed label.</param>
+protected virtual void OnLabelSetFromUI(Skyline.DataMiner.Library.Protocol.Matrix.MatrixLabelSetFromUIMessage set)
+{
+}
+
+/// <summary>
+/// Gets triggered when an input or output is locked or unlocked.
+/// </summary>
+/// <param name = "set">Information about the changed lock.</param>
+protected virtual void OnLockSetFromUI(Skyline.DataMiner.Library.Protocol.Matrix.MatrixLockSetFromUIMessage set)
+{
+}
+
+/// <summary>
+/// Gets triggered when an input or output is enabled or disabled.
+/// </summary>
+/// <param name = "set">Information about the changed state.</param>
+protected virtual void OnStateSetFromUI(Skyline.DataMiner.Library.Protocol.Matrix.MatrixIOStateSetFromUIMessage set)
+{
+}
+
+/// <summary>
+/// Gets triggered when a crosspoint tooltip is changed
+/// </summary>
+/// <param name = "set">Information about the changed tooltip.</param>
+protected virtual void OnToolTipSetFromUI(Skyline.DataMiner.Library.Protocol.Matrix.MatrixToolTipSetFromUIMessage set)
+{
+}
+
+/// <summary>
+/// Gets triggered when an input/output page is changed
+/// </summary>
+/// <param name = "set">Information about the changed page.</param>
+protected virtual void OnPageSetFromUI(Skyline.DataMiner.Library.Protocol.Matrix.MatrixPageSetFromUIMessage set)
+{
+}
+
+/// <summary>
+/// Gets triggered when crosspoint connections are changed via the lockOverride parameter.
+/// </summary>
+/// <param name = "set">Information about the changed crosspoint connections.</param>
+protected virtual void OnCrossPointsSetViaLockOverrideFromUI(Skyline.DataMiner.Library.Protocol.Matrix.MatrixCrossPointsSetFromUIMessage set)
+{
+}
+```
+
 #### All DOM objects now have 'LastModified', 'LastModifiedBy', 'CreatedAt' and 'CreatedBy' properties [ID_34980]
 
 <!-- MR 10.4.0 - FR 10.3.2 -->
