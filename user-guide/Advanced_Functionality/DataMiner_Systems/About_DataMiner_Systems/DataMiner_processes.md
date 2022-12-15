@@ -135,7 +135,7 @@ This process only starts on a DMA that uses a Cassandra database. It supports ad
 The DMS Reporter process.
 
 > [!TIP]
-> See also: [DMS Reporter](xref:reporter#dms-reporter)
+> See also: [DMS Reporter](xref:reporter)
 
 > [!NOTE]
 >
@@ -147,29 +147,29 @@ The DMS Reporter process.
 
 ### SLAutomation
 
-The DMS Automation process.
+The DataMiner Automation process.
 
 > [!NOTE]
 > C# code in Automation scripts is processed by SLAutomation, whereas C# code in protocol QActions is processed by SLScripting.
 
 > [!TIP]
-> See also: [DMS Automation](xref:automation#dms-automation)
+> See also: [DataMiner Automation](xref:automation)
 
 ### SLBrain
 
-The DMS Correlation process.
+The DataMiner Correlation process.
 
 > [!TIP]
-> See also: [DMS Correlation](xref:correlation#dms-correlation)
+> See also: [DataMiner Correlation](xref:correlation)
 
 ### SLGSMGateway
 
-The DMS Mobile Gateway process.
+The DataMiner Mobile Gateway process.
 
 Sends and receives SMS messages (i.e. text messages).
 
 > [!TIP]
-> See also: [DMS Mobile Gateway](xref:MobileGateway#dms-mobile-gateway)
+> See also: [DataMiner Mobile Gateway](xref:MobileGateway)
 
 ### SLHelper
 
@@ -207,12 +207,12 @@ Also sends all outgoing email notifications.
 
 ### SLSpectrum
 
-The DMS Spectrum Analysis process.
+The DataMiner Spectrum Analysis process.
 
 Also manages the time slots assigned to each of the clients that want to use a particular spectrum analyzer.
 
 > [!TIP]
-> See also: [DMS Spectrum Analysis](xref:SpectrumAnalysis#dms-spectrum-analysis)
+> See also: [DataMiner Spectrum Analysis](xref:SpectrumAnalysis)
 
 ### SLTaskBarUtility
 

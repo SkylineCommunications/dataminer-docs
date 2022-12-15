@@ -15,7 +15,7 @@ The DataMiner Monitoring & Control app features a user interface similar to that
 > See also:
 >
 > - [Accessing the legacy Monitoring & Control app](xref:Accessing_the_legacy_Monitoring_Control_app#accessing-the-legacy-monitoring--control-app)
-> - [DMS Mobile Gateway](xref:MobileGateway#dms-mobile-gateway)
+> - [Mobile Gateway](xref:MobileGateway)
 
 ## Monitoring & Control app header bar
 

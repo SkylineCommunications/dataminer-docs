@@ -2,7 +2,7 @@
 uid: About_DMS_Experience_and_Performance_Management
 ---
 
-# About DMS Experience and Performance Management
+# About DataMiner Experience and Performance Management
 
 ### EPM elements
 
@@ -16,18 +16,18 @@ A typical architecture for a DMS used for Experience and Performance Management 
 
 - A front-end DMA with an EPM element:
 
-    - Provides the user interface users connect to for Experience and Performance Management.
+  - Provides the user interface users connect to for Experience and Performance Management.
 
-    - Responsible for aggregation of higher level data.
+  - Responsible for aggregation of higher level data.
 
-    - Responsible for provisioning, i.e. provides a reference of all objects and their topology, the link between the objects.
+  - Responsible for provisioning, i.e. provides a reference of all objects and their topology, the link between the objects.
 
-    - Responsible for interaction with other systems.
+  - Responsible for interaction with other systems.
 
 - Several back-end DMAs:
 
-    - Responsible for aggregation of lower level data.
+  - Responsible for aggregation of lower level data.
 
-    - Several collector elements can be created per DMA and per type of individual object.
+  - Several collector elements can be created per DMA and per type of individual object.
 
-    - Each collector element polls a group of objects, with a refresh period depending on the number of objects.
+  - Each collector element polls a group of objects, with a refresh period depending on the number of objects.

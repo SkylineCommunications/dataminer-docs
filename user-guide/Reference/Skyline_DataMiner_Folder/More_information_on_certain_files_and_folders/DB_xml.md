@@ -15,7 +15,7 @@ In the file *DB.xml*, you can specify the configuration data for several databas
 - [CMDB settings](#cmdb-settings)
 
   > [!TIP]
-  > See also: [DMS Inventory & Asset Management](xref:AssetManagement#dms-inventory--asset-management)
+  > See also: [Inventory & Asset Management](xref:AssetManagement)
 
 This file is located in the folder *C:\\Skyline DataMiner\\*.
 
@@ -647,13 +647,13 @@ To do so:
 
 ## CMDB settings
 
-If you have a CMDB (Configuration Management Database) that you want to manage by means of the DMS Inventory & Asset Management module, then you can specify the configuration data for that CMDB in an additional *\<Database>* tag.
+If you have a CMDB (Configuration Management Database) that you want to manage by means of the DataMiner Inventory & Asset Management module, then you can specify the configuration data for that CMDB in an additional *\<Database>* tag.
 
 > [!NOTE]
 > The *\<Database>* tag containing the configuration data for the CMDB must not have a *local* attribute. However, it must have a *name* attribute of which the value (i.e. the name of the database configuration) must be identical to the value specified in the *\<DatabaseConfig>* tag of the Inventory & Asset Management configuration file.
 
 > [!TIP]
-> See also: [Configuring DMS Inventory and Asset Management](xref:Configuring_DMS_Inventory_and_Asset_Management)
+> See also: [Configuring DataMiner Inventory and Asset Management](xref:Configuring_DMS_Inventory_and_Asset_Management)
 
 Example 1:
 

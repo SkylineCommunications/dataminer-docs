@@ -276,6 +276,9 @@ DataMiner supports Azure B2C as identity provider from version 10.2.6/10.3.0 onw
 
 DataMiner supports Okta as identity provider as from version 10.1.11. Use Okta's App Integration Wizard to create a new app integration and connect Okta with DataMiner.
 
+> [!IMPORTANT]
+> Prior to DataMiner 10.3.0/10.3.2, it may not be possible to log in using Okta because of a software issue. We strongly recommend that you upgrade to DataMiner 10.3.0 or 10.3.2 to use this feature.
+
 1. Launch the App Integration Wizard
 
    1. In the Admin Console, go to *Applications \> Applications*.

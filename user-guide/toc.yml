@@ -942,7 +942,7 @@
           topicUid: Migrating_elements_in_a_DataMiner_System
         - name: Sharing DataMiner data with third parties
           topicUid: Sharing_DataMiner_data_with_third_parties
-        - name: DMS maintenance tools
+        - name: DataMiner maintenance tools
           topicUid: DMS_maintenance_tools
           items:
             - name: Cleaning up unused files on a DMA
@@ -1294,7 +1294,7 @@
 - name: Advanced DataMiner modules
   topicUid: Part4AdvancedModules
   items:
-    - name: DMS Automation
+    - name: Automation
       topicUid: automation
       items:
         - name: Managing Automation scripts
@@ -1371,13 +1371,13 @@
               topicUid: Building_interactive_Automation_scripts_with_CSharp
             - name: Compiling a C# code block as a library
               topicUid: Compiling_a_CSharp_code_block_as_a_library
-        - name: Special parameters available in DMS Automation scripts
+        - name: Special parameters available in Automation scripts
           topicUid: Special_parameters_available_in_DMS_Automation_scripts
         - name: Alarm level IDs for use in Automation scripts
           topicUid: Alarm_level_IDs_for_use_in_Automation_scripts
         - name: Automation scripts triggered from redundancy groups
           topicUid: Automation_scripts_triggered_from_redundancy_groups
-        - name: Frequently asked questions about DMS Automation
+        - name: Frequently asked questions about DataMiner Automation
           topicUid: Frequently_asked_questions_about_DMS_Automation
           items:
             - name: How can I execute an Automation Script on an element in timeout?
@@ -1392,7 +1392,7 @@
               topicUid: How_do_I_parse_Correlation_Alarm_Info_data
             - name: How can I manage permanent memory files?
               topicUid: How_can_I_manage_permanent_memory_files
-    - name: DMS Business Intelligence
+    - name: Business Intelligence
       topicUid: sla
       items:
         - name: Creating an SLA
@@ -1449,10 +1449,10 @@
               topicUid: Excluding_alarms_that_affect_the_SLA
         - name: SLA reporting
           topicUid: SLA_reporting
-    - name: DMS Correlation
+    - name: Correlation
       topicUid: correlation
       items:
-        - name: About DMS Correlation
+        - name: About DataMiner Correlation
           topicUid: About_DMS_Correlation
         - name: Managing Correlation rules
           topicUid: Managing_Correlation_rules
@@ -1541,10 +1541,10 @@
               topicUid: Viewing_aggregation_information
             - name: Managing aggregation rules
               topicUid: Managing_aggregation_rules
-    - name: DMS Experience and Performance Management
+    - name: Experience and Performance Management
       topicUid: EPM
       items:
-        - name: About DMS Experience and Performance Management
+        - name: About DataMiner Experience and Performance Management
           topicUid: About_DMS_Experience_and_Performance_Management
         - name: Working with the Experience and Performance Management interface
           topicUid: Working_with_the_Experience_and_Performance_Management_interface
@@ -1762,14 +1762,14 @@
               topicUid: Configuring_dashboard_access_rights
             - name: Dashboard Gateway troubleshooting
               topicUid: Dashboard_Gateway_troubleshooting
-    - name: DMS Inventory & Asset Management
+    - name: Inventory & Asset Management
       topicUid: AssetManagement
       items:
-        - name: About DMS Inventory & Asset Management
+        - name: About DataMiner Inventory & Asset Management
           topicUid: About_DMS_Inventory_Asset_Management
-        - name: Browsing the database with DMS Inventory and Asset Management
+        - name: Browsing the database with DataMiner Inventory and Asset Management
           topicUid: Browsing_the_database_with_DMS_Inventory_and_Asset_Management
-        - name: Managing data in the database with DMS Inventory and Asset Management
+        - name: Managing data in the database with DataMiner Inventory and Asset Management
           topicUid: Managing_data_in_the_database_with_DMS_Inventory_and_Asset_Management
           items:
             - name: Adding a row to a table
@@ -1786,7 +1786,7 @@
               topicUid: Reloading_the_Asset_Manager_user_interface
             - name: Starting a sync of the DataMiner database and the CMDB
               topicUid: Starting_a_sync_of_the_DataMiner_database_and_the_CMDB
-        - name: Configuring DMS Inventory and Asset Management
+        - name: Configuring DataMiner Inventory and Asset Management
           topicUid: Configuring_DMS_Inventory_and_Asset_Management
           items:
             - name: Tags in the Asset Manager configuration file
@@ -1795,7 +1795,7 @@
               topicUid: Example_of_an_Asset_Manager_configuration_file
             - name: Activating the Asset Management database in Cube
               topicUid: Activating_the_Asset_Management_database_in_Cube
-        - name: Configuring data mediation settings in DMS Inventory and Asset Management
+        - name: Configuring data mediation settings in DataMiner Inventory and Asset Management
           topicUid: Configuring_data_mediation_settings_in_DMS_Inventory_and_Asset_Management
           items:
             - name: Tags in the Asset Manager mediation configuration file
@@ -1804,16 +1804,16 @@
               topicUid: Example_of_an_Asset_Manager_mediation_configuration_file
         - name: Synchronizing a database with elements and views with the Surveyor
           topicUid: Synchronizing_a_database_with_elements_and_views_with_the_Surveyor
-    - name: DMS Job Manager
+    - name: Job Manager
       topicUid: jobs
       items:
         - name: About jobs
           topicUid: About_jobs
         - name: Accessing the Jobs app
           topicUID: Accessing_the_jobs_app
-        - name: Overview of the Job Manager app UI
+        - name: Overview of the Jobs app UI
           topicUid: Overview_of_the_Job_Manager_app_UI
-        - name: Configuring jobs in the Job Manager app
+        - name: Configuring jobs in the Jobs app
           topicUid: Configuring_jobs_in_the_Job_Manager_app
           items:
             - name: Configuring job domains
@@ -1834,10 +1834,10 @@
           topicUid: Manually_removing_a_job
         - name: Working with job templates
           topicUid: Working_with_job_templates
-    - name: DMS Maps
+    - name: Maps
       topicUid: maps
       items:
-        - name: About DMS Maps
+        - name: About DataMiner Maps
           topicUid: About_DMS_Maps
         - name: Using DataMiner Maps
           topicUid: Using_DataMiner_Maps
@@ -1888,7 +1888,7 @@
               topicUid: MarkerDetails
             - name: PopupSkeleton and PopupDetails
               topicUid: PopupSkeleton_and_PopupDetails
-    - name: DMS Mobile Gateway
+    - name: Mobile Gateway
       topicUid: MobileGateway
       items:
         - name: Configuring Mobile Gateway
@@ -1904,7 +1904,7 @@
               topicUid: Overview_of_the_Mobile_Gateway_configuration_settings
             - name: Configuring Mobile Gateway in DataMiner Cube
               topicUid: Configuring_Mobile_Gateway_in_DataMiner_Cube
-            - name: Approved modems for use with DMS Mobile Gateway
+            - name: Approved modems for use with Mobile Gateway
               topicUID: Approved_modems_Mobile_Gateway
         - name: Working with Mobile Gateway in DataMiner Cube
           topicUid: Working_with_Mobile_Gateway_in_DataMiner_Cube
@@ -1986,7 +1986,7 @@
               topicUid: Component_overview
             - name: Constants
               topicUid: Constants
-    - name: DMS Router Control
+    - name: Router Control
       topicUid: RouterControl
       items:
         - name: Working with the default Router Control configuration
@@ -2015,10 +2015,10 @@
               topicUid: Overview_of_user_interface_component_properties
             - name: Creating a dynamic tab page
               topicUid: Creating_a_dynamic_tab_page
-    - name: DMS Scheduler
+    - name: Scheduler
       topicUid: scheduler
       items:
-        - name: About the Scheduler module
+        - name: About DataMiner Scheduler
           topicUid: About_the_Scheduler_module
         - name: Manually adding a scheduled task
           topicUid: Manually_adding_a_scheduled_task
@@ -2073,7 +2073,7 @@
               topicUid: Bookings_Reservations_tab
             - name: Bookings / Reservations component of custom templates
               topicUid: Bookings_Reservations_component_of_custom_templates
-    - name: DMS Spectrum Analysis
+    - name: Spectrum Analysis
       topicUid: SpectrumAnalysis
       items:
         - name: Installation and configuration of a spectrum analyzer
@@ -2130,7 +2130,7 @@
               topicUid: Configuring_a_spectrum_element_to_follow_the_device_settings
             - name: Creating a simulated spectrum element
               topicUid: Creating_a_simulated_spectrum_element
-    - name: DMS Ticketing
+    - name: Ticketing
       topicUid: ticketing
       items:
         - name: Accessing the Ticketing app
@@ -2160,7 +2160,7 @@
               topicUid: About_DataMiner_elements_using_the_Ticketing_Gateway_API
             - name: Overview of the TicketingGatewayHelper class
               topicUid: Overview_of_the_TicketingGatewayHelper_class
-    - name: DataMiner Low-Code Apps
+    - name: Low-Code Apps
       topicUID: Application_framework
       items:
         - name: Accessing the Low-Code Apps module
@@ -2861,6 +2861,8 @@
     - name: Known issues
       topicUID: Known_issues
       items:
+        - name: SLNet deadlock on DMA startup
+          topicUID: KI_SLNet_deadlock_on_startup
         - name: Stable trend points not kept alive
           topicUID: KI_stable_trend_points_not_kept_alive
         - name: Missing 1-day average trending records

@@ -2,11 +2,11 @@
 uid: correlation
 ---
 
-# DMS Correlation
+# DataMiner Correlation
 
 This section consists of the following topics:
 
-- [About DMS Correlation](xref:About_DMS_Correlation)
+- [About DataMiner Correlation](xref:About_DMS_Correlation)
 
 - [Managing Correlation rules](xref:Managing_Correlation_rules)
 

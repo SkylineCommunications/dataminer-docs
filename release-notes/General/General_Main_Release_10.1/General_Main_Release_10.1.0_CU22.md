@@ -77,6 +77,12 @@ Starting the element <x> failed. No element object.
 Creating element-object for <x> failed with <y>.
 ```
 
+#### DataMiner Cube - Trending: Trend points with value "0" will now also be exported to CSV [ID_35124]
+
+<!-- Main Release Version 10.1.0 [CU22]/10.2.0 [CU11] - Feature Release Version 10.3.2 -->
+
+Up to now, when you exported real-time trend data to a CSV file, trend points with value "0" would not be included. From now on, those values will be exported as well.
+
 ### Fixes
 
 #### 'One or more of the following modules are not licensed' error would incorrectly not list the unlicensed modules [ID_34407]
@@ -176,6 +182,15 @@ When the time window of a line chart component showing trend data included a per
 When you were editing a dashboard or a low-code app, and the edit side panel was very narrow, in some cases, the *Number of columns* input box on the *Settings* tab could not be used as it would only be partly visible.
 
 Also, in some cases, the value in the *Number of columns* input box could incorrectly not be reset to the factory default.
+
+#### DataMiner Cube: Problem when opening scheduled tasks, Automation scripts or Correlation rules containing actions that include PDF reports [ID_34997]
+
+<!-- MR 10.1.0 [CU22] / 10.2.0 [CU11] - FR 10.3.2 -->
+
+When, in *Scheduler*, *Automation* or *Correlation*, you opened scheduled tasks, Automation scripts or Correlation rules containing actions that include PDF reports, in some rare cases, the data linked to those reports (i.e. the elements and services in view selection) could not be loaded. This data will now be loaded correctly. Also, a "Loading" indicator will now be displayed and the actions will remain disabled while the data is being loaded. When an error occurs while loading the protocols associated with said data, a clear warning entry will also be added to the Cube logging.
+
+> [!NOTE]
+> From now on, in the *Elements and services in view selection* list, it will also be possible to select parameters of enhanced services.
 
 #### DataMiner Cube - Spectrum Analysis: Selected measurement point no longer selected after playing a spectrum recording [ID_35001]
 
