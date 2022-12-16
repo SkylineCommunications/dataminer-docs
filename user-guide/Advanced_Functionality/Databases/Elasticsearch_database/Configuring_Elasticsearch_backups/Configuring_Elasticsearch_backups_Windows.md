@@ -2,7 +2,7 @@
 uid: Configuring_Elasticsearch_backups_Windows
 ---
 
-# Configuring Elasticsearch backups for Windows
+# Manually specifying a backup path
 
 Keep the following restrictions in mind for the backup path:
 

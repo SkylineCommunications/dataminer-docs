@@ -1045,9 +1045,9 @@
             - name: Configuring Elasticsearch backups
               topicUid: Configuring_Elasticsearch_backups
               items:
-                - name: Configuring Elasticsearch backups - Windows and Linux
+                - name: Taking and restoring snapshots
                   topicUID: Configuring_Elasticsearch_backups_Windows_Linux
-                - name: Configuring Elasticsearch backups - Windows
+                - name: Manually specifying a backup path
                   topicUID: Configuring_Elasticsearch_backups_Windows
             - name: Configuring indexing settings in System Center
               topicUid: Configuring_DataMiner_Indexing
