@@ -152,6 +152,12 @@ In some cases, *Card*, *Script*, *Link* and *Popup* actions would no longer work
 
 When you ran SLLogCollector via the command line and specified multiple processes for which dumps had to be taken (e.g. `SL_LogCollector.exe -c -d=46436,61652`), it would incorrectly only take a dump of the first process.
 
+#### Problem with the generation of TaskCancellationExceptions [ID_35079]
+
+<!-- MR 10.3.0 - FR 10.3.2 -->
+
+Modules using the managed SPI framework (Skyline.DataMiner.Spi) would trigger excessive numbers of TaskCancellationExceptions. Also, for the SLNet process, increasing numbers of these exceptions would be generated for every additional Cube client.
+
 #### Monitoring app: Problem when opening the histogram page of a view [ID_35081]
 
 <!-- MR 10.3.0 - FR 10.3.2 -->

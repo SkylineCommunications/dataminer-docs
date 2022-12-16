@@ -90,6 +90,12 @@ When a parameter had been removed from a profile definition, in the *Profiles* a
 
 When you opened the *Automation* app in DataMiner Cube and selected an unmodified script, the latest updates made to that script by another Cube client or another program (e.g. DataMiner Integration Studio) would not be shown. From now on, when you open a script in the Automation app that has not yet been changed in that same app, the latest version of that script will now automatically be retrieved from the server.
 
+#### Alarm Console: Masking a correlated alarm would incorrectly cause the base alarms to disappear from the 'Active alarms' tab [ID_34815]
+
+<!-- MR 10.3.0 - FR 10.3.2 -->
+
+Up to now, when you masked a correlated alarm, the alarm would not only be moved to the *Masked alarms* tab together with all its sources. The base alarms would also disappear from the *Active alarms* tab. From now on, when you mask a correlated alarm, its base alarms will remain visible in the *Active alarms* tab.
+
 #### DataMiner Cube - Protocols & Templates: Function protocols would incorrectly be listed multiple times [ID_34885]
 
 <!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
