@@ -50,6 +50,19 @@ For example, when a line & area chart component is fed the following timespans..
 
 - *01/01/2022 9:00:00 > 01/01/2022 10:30:00*
 
+#### Web app: More detailed version information in About box [ID_35090]
+
+<!-- MR 10.4.0 - FR 10.3.2 -->
+
+In the *About* box of a web application, you can now find more detailed version information.
+
+| Old name | New name | Description |
+|----------|----------|-------------|
+| - | Server version | Server version and build number of the DataMiner Agent |
+| Client build | Web version | Build number of the web app |
+| Client version | App | Version number of the web app |
+| Server API version | API | Version number of the Web Services API |
+
 ### Fixes
 
 #### Mobile apps: Problem when trying to select an item in a drop-down box [ID_34742]

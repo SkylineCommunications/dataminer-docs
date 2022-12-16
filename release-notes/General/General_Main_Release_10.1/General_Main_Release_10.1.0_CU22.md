@@ -105,6 +105,14 @@ When a time range feed was configured to show quick pick buttons, those buttons 
 
 When a row linked to a DVE child element was deleted, in some cases, standalone parameters belonging to another child of the same DVE parent element could be set to "Not Initialized".
 
+#### DataMiner Cube - Alarm Console: Alarm tab of type 'Active alarms linked to cards' would incorrectly not show any alarms when you opened a function card [ID_34799]
+
+<!-- MR 10.1.0 [CU22] / 10.2.0 [CU11] - FR 10.3.2 -->
+
+When the Alarm Console had an alarm tab of type *Active alarms linked to cards*, that tab would incorrectly not show any alarms when you opened a function card, even when that function had active alarms.
+
+Also, when you added a new alarm tab, clicked *Apply filters*, and added an element filter, then you would incorrectly also be able to select virtual functions from the list of elements. From now on, only when you add a function filter will you be able to select virtual functions from the list of functions.
+
 #### Memory leak in SLDataGateway during a Cassandra Cluster migration [ID_34829]
 
 <!-- MR 10.1.0 [CU22] / 10.2.0 [CU10] - FR 10.3.1 -->
