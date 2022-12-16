@@ -41,12 +41,6 @@ All DOM objects (DomInstance, DomTemplate, DomDefinition, DomBehaviorDefinition,
 > - In the Elasticsearch database, existing data will not contain values for these new fields (except the *LastModified* field for all but *ModuleSettings*).
 > - All four fields are also available in the GQI data source *Object Manager Instances*. The *Last Modified* and *Created At* columns should show the time in the time zone of the browser.
 
-#### Dashboards app - GQI: New 'Get trend data patterns' data source [ID_35024]
-
-<!-- MR 10.3.0 - FR 10.3.2 -->
-
-In the Generic Query Interface, a new *Get trend data patterns* data source is now available. It will return all trend data patterns in the DMS.
-
 ## Changes
 
 ### Enhancements
@@ -112,6 +106,37 @@ For example, when a line & area chart component is fed the following timespans..
 
 Because of a number of enhancements, overall performance has increased when creating and updating bookings.
 
+#### SLAnalytics - Proactive cap detection: Enhanced accuracy when generating alarm predictions [ID_35080]
+
+<!-- MR 10.4.0 - FR 10.3.2 -->
+
+Because of a number of enhancements, overall accuracy has increased when generating alarm predictions.
+
+#### Web app: More detailed version information in About box [ID_35090]
+
+<!-- MR 10.4.0 - FR 10.3.2 -->
+
+In the *About* box of a web application, you can now find more detailed version information.
+
+| Old name | New name | Description |
+|----------|----------|-------------|
+| - | Server version | Server version and build number of the DataMiner Agent |
+| Client build | Web version | Build number of the web app |
+| Client version | App | Version number of the web app |
+| Server API version | API | Version number of the Web Services API |
+
+#### GQI: Enhanced query performance when aggregation operations are followed by a filter [ID_35110]
+
+<!-- MR 10.4.0 - FR 10.3.2 -->
+
+Because of a number of enhancements, overall query performance has increased, especially in cases where aggregation operations are followed by a filter.
+
+#### Dashboards - GQI components: Enhanced behavior when loading data [ID_35148]
+
+<!-- MR 10.4.0 - FR 10.3.2 -->
+
+Up to now, a loading skeleton would be displayed each time data was being loaded into a GQI component (e.g. a node edge graph). From now on, only when the component was empty will a loading skeleton be displayed. When existing data in the component is being refreshed, a loader bar will now be displayed instead.
+
 ### Fixes
 
 #### Problem with Elasticsearch health monitoring [ID_34744]
@@ -120,11 +145,25 @@ Because of a number of enhancements, overall performance has increased when crea
 
 When an Elasticsearch cluster used by DataMiner was hosted on servers that host IPv6 addresses, the Elasticsearch health monitoring in DataMiner would fail to assess the Elasticsearch cluster state and conclude that the indexing database was unavailable.
 
+#### External authentication via SAML: Problem when using Okta as identity provider [ID_34745]
+
+<!-- MR 10.3.0 - FR 10.3.2 -->
+
+When using external authentication via SAML, a software issue would prevent you from logging in when Okta was set up as identity provider.
+
 #### Problem with SLDataMiner when loading an alarm template schedule failed [ID_34988]
 
 <!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
 
 In some cases, an error could occur in SLDataMiner when loading an alarm template schedule failed.
+
+#### Alarm templates: Parameters exported to DVE child elements could have incorrect alarm limits [ID_34996]
+
+<!-- MR 10.3.0 - FR 10.3.2 -->
+
+When a parameter was exported as a standalone parameter to a DVE child element, in some cases, the alarm limits could be incorrect when the type of alarm monitoring was set to either *Relative* or *Absolute*.
+
+Also, LED bar controls would either not display or not update their alarm limits.
 
 #### Dashboards app: Button to restore the initial view would incorrectly appear on all tables after sorting or filtering a table [ID_35003]
 
@@ -144,6 +183,12 @@ In some cases, *Card*, *Script*, *Link* and *Popup* actions would no longer work
 
 When you ran SLLogCollector via the command line and specified multiple processes for which dumps had to be taken (e.g. `SL_LogCollector.exe -c -d=46436,61652`), it would incorrectly only take a dump of the first process.
 
+#### Problem with the generation of TaskCancellationExceptions [ID_35079]
+
+<!-- MR 10.3.0 - FR 10.3.2 -->
+
+Modules using the managed SPI framework (Skyline.DataMiner.Spi) would trigger excessive numbers of TaskCancellationExceptions. Also, for the SLNet process, increasing numbers of these exceptions would be generated for every additional Cube client.
+
 #### Monitoring app: Problem when opening the histogram page of a view [ID_35081]
 
 <!-- MR 10.3.0 - FR 10.3.2 -->
@@ -156,6 +201,18 @@ When, in the *Monitoring* app, you selected a view and opened the histogram page
 
 When an engine.AddScriptOutput method was used to pass output data of type string from a script to the application that executed it or from a subscript to the script that executed that subscript, that output data of type string would incorrectly not get cleared from memory.
 
+#### Dashboards app: Visual Overview component would not show any content when linked to a feed [ID_35130]
+
+<!-- MR 10.3.0 - FR 10.3.2 -->
+
+When a Visual Overview component was linked to a feed, in some cases, it would not show any content.
+
+#### SLElement would leak memory when an element was frequently receiving timeout values [ID_35131]
+
+<!-- MR 10.3.0 - FR 10.3.2 -->
+
+When an element was frequently receiving timeout values, SLElement would leak memory.
+
 #### Protocols: Problem when using the 'partialSNMP' option when polling tables using the 'multipleGetNext' or 'multipleGetBulk' method [ID_35147]
 
 <!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
@@ -163,3 +220,11 @@ When an engine.AddScriptOutput method was used to pass output data of type strin
 When the *partialSNMP* option was used when polling tables using the *multipleGetNext* or *multipleGetBulk* method, up to now, rows and values would be skipped when one or more columns did not contain values for one or more rows. This caused the next partial requests to jump forward by the amount of empty cells, resulting in missing rows and unexpected empty cells.
 
 Also, a problem with the detection of infinite loops for SNMPv3 when receiving end-of-mib-view errors has been fixed.
+
+#### Web apps - Parameter feed: Problem when more than 10,000 items had to be retrieved from the server [ID_35150]
+
+<!-- MR 10.4.0 - FR 10.3.2 -->
+
+Up to now, a parameter feed would only retrieve the first 10,000 items from the server. From now on, it will retrieve all items from the server page by page.
+
+Default number of items per page: 10,000

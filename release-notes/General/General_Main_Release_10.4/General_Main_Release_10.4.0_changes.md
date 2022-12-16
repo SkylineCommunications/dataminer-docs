@@ -50,6 +50,37 @@ For example, when a line & area chart component is fed the following timespans..
 
 - *01/01/2022 9:00:00 > 01/01/2022 10:30:00*
 
+#### SLAnalytics - Proactive cap detection: Enhanced accuracy when generating alarm predictions [ID_35080]
+
+<!-- MR 10.4.0 - FR 10.3.2 -->
+
+Because of a number of enhancements, overall accuracy has increased when generating alarm predictions.
+
+#### Web app: More detailed version information in About box [ID_35090]
+
+<!-- MR 10.4.0 - FR 10.3.2 -->
+
+In the *About* box of a web application, you can now find more detailed version information.
+
+| Old name | New name | Description |
+|----------|----------|-------------|
+| - | Server version | Server version and build number of the DataMiner Agent |
+| Client build | Web version | Build number of the web app |
+| Client version | App | Version number of the web app |
+| Server API version | API | Version number of the Web Services API |
+
+#### GQI: Enhanced query performance when aggregation operations are followed by a filter [ID_35110]
+
+<!-- MR 10.4.0 - FR 10.3.2 -->
+
+Because of a number of enhancements, overall query performance has increased, especially in cases where aggregation operations are followed by a filter.
+
+#### Dashboards - GQI components: Enhanced behavior when loading data [ID_35148]
+
+<!-- MR 10.4.0 - FR 10.3.2 -->
+
+Up to now, a loading skeleton would be displayed each time data was being loaded into a GQI component (e.g. a node edge graph). From now on, only when the component was empty will a loading skeleton be displayed. When existing data in the component is being refreshed, a loader bar will now be displayed instead.
+
 ### Fixes
 
 #### Mobile apps: Problem when trying to select an item in a drop-down box [ID_34742]
@@ -77,3 +108,11 @@ In some cases, Resource Manager could throw a NullReferenceException when *Resou
 <!-- MR 10.4.0 - FR 10.3.1 [CU0] -->
 
 When a column select or a column manipulation operator was applied before an aggregation operator, the column select or column manipulation operator would incorrectly be ignored. As a result, all columns would be visible in the *group by node* or columns created by the column manipulation would not be added to the options of the *group by node*.
+
+#### Web apps - Parameter feed: Problem when more than 10,000 items had to be retrieved from the server [ID_35150]
+
+<!-- MR 10.4.0 - FR 10.3.2 -->
+
+Up to now, a parameter feed would only retrieve the first 10,000 items from the server. From now on, it will retrieve all items from the server page by page.
+
+Default number of items per page: 10,000
