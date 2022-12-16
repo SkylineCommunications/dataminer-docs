@@ -60,6 +60,12 @@ When you opened the *Automation* app in DataMiner Cube and selected an unmodifie
 
 When an Elasticsearch cluster used by DataMiner was hosted on servers that host IPv6 addresses, the Elasticsearch health monitoring in DataMiner would fail to assess the Elasticsearch cluster state and conclude that the indexing database was unavailable.
 
+#### Alarm Console: Masking a correlated alarm would incorrectly cause the base alarms to disappear from the 'Active alarms' tab [ID_34815]
+
+<!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
+
+Up to now, when you masked a correlated alarm, the alarm would not only be moved to the *Masked alarms* tab together with all its sources. The base alarms would also disappear from the *Active alarms* tab. From now on, when you mask a correlated alarm, its base alarms will remain visible in the *Active alarms* tab.
+
 #### DataMiner Cube - Protocols & Templates: Function protocols would incorrectly be listed multiple times [ID_34885]
 
 <!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
