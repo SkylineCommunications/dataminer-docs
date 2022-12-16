@@ -56,6 +56,8 @@ This tab of the Booking Manager app provides an overview of all configuration pa
 
 ### Cluster Calibration settings
 
+When bookings and/or associated objects are created and/or manipulated in a DataMiner System consisting of multiple Agents, scripts included in the SRM framework sometimes have to wait for the DMS synchronization to happen. You can use these *Cluster Calibration* settings to define how long the scripts should wait and how often the framework should check if the synchronization has happened. <!-- RN 25610 -->
+
 - **Retry Timeout**: The retry timeout time for retrieval of SRM data in a DataMiner cluster. Default: *20 s*.
 
 - **Retry Interval**: The retry interval for retrieval of SRM data in a DataMiner cluster. Default: *15 ms*.
@@ -86,7 +88,7 @@ See [Adding custom scripts for additional controls](xref:SRM_custom_scripts#addi
 
 - **Auto Expand Profiles**: Determines whether profile parameters are automatically expanded in the Booking Manager.
 
-- **Use Node Label as Element Alias**: If this option is enabled, a node label is used as service element alias, so that an element in a service will be displayed with the label associated with the corresponding node in the service definition. If this option is disabled, service elements will be displayed with the resource DVE names.
+- **Use Node Label as Element Alias**: If this option is enabled, when the service associated with a booking is created, DataMiner will use the label of the node in the service definition as the alias for the corresponding element in the service. If this option is disabled, service elements will be displayed with the resource DVE names. <!-- RN 25236 -->
 
 ### Contributing Reservations settings
 
@@ -102,7 +104,7 @@ See [Adding custom scripts for additional controls](xref:SRM_custom_scripts#addi
 
 ### Default booking configurations settings
 
-- **DMA IDs to Store Reservations**: Contains the DMA ID(s) of the DMA(s) where bookings will be stored.
+- **DMA IDs to Store Reservations**: Contains the DMA ID(s) of the DMA(s) where bookings will be stored. The SRM framework will store all bookings evenly over the DMAs specified with this setting.
 
 - **Start delay**: The default delay period before a booking starts.
 
