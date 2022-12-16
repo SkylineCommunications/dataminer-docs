@@ -50,6 +50,12 @@ For example, when a line & area chart component is fed the following timespans..
 
 - *01/01/2022 9:00:00 > 01/01/2022 10:30:00*
 
+#### SLAnalytics - Proactive cap detection: Enhanced accuracy when generating alarm predictions [ID_35080]
+
+<!-- MR 10.4.0 - FR 10.3.2 -->
+
+Because of a number of enhancements, overall accuracy has increased when generating alarm predictions.
+
 #### Web app: More detailed version information in About box [ID_35090]
 
 <!-- MR 10.4.0 - FR 10.3.2 -->
@@ -62,6 +68,12 @@ In the *About* box of a web application, you can now find more detailed version 
 | Client build | Web version | Build number of the web app |
 | Client version | App | Version number of the web app |
 | Server API version | API | Version number of the Web Services API |
+
+#### GQI: Enhanced query performance when aggregation operations are followed by a filter [ID_35110]
+
+<!-- MR 10.4.0 - FR 10.3.2 -->
+
+Because of a number of enhancements, overall query performance has increased, especially in cases where aggregation operations are followed by a filter.
 
 ### Fixes
 
