@@ -109,10 +109,10 @@ In some cases, Resource Manager could throw a NullReferenceException when *Resou
 
 When a column select or a column manipulation operator was applied before an aggregation operator, the column select or column manipulation operator would incorrectly be ignored. As a result, all columns would be visible in the *group by node* or columns created by the column manipulation would not be added to the options of the *group by node*.
 
-#### Web apps - Parameter feed: Problem when more than 10,000 items had to be retrieved from the server [ID_35150]
+#### Web apps - Parameter feed: Problem when more than 10,000 elements had to be retrieved from the server [ID_35150]
 
 <!-- MR 10.4.0 - FR 10.3.2 -->
 
-Up to now, a parameter feed would only retrieve the first 10,000 items from the server. From now on, it will retrieve all items from the server page by page.
+Up to now, a parameter feed would only retrieve the first 10,000 elements from the server. From now on, it will retrieve all elements from the server page by page.
 
-Default number of items per page: 10,000
+Default number of elements per page: 10,000

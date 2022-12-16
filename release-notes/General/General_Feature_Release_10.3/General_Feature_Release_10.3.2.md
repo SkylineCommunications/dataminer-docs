@@ -221,10 +221,10 @@ When the *partialSNMP* option was used when polling tables using the *multipleGe
 
 Also, a problem with the detection of infinite loops for SNMPv3 when receiving end-of-mib-view errors has been fixed.
 
-#### Web apps - Parameter feed: Problem when more than 10,000 items had to be retrieved from the server [ID_35150]
+#### Web apps - Parameter feed: Problem when more than 10,000 elements had to be retrieved from the server [ID_35150]
 
 <!-- MR 10.4.0 - FR 10.3.2 -->
 
-Up to now, a parameter feed would only retrieve the first 10,000 items from the server. From now on, it will retrieve all items from the server page by page.
+Up to now, a parameter feed would only retrieve the first 10,000 elements from the server. From now on, it will retrieve all elements from the server page by page.
 
-Default number of items per page: 10,000
+Default number of elements per page: 10,000
