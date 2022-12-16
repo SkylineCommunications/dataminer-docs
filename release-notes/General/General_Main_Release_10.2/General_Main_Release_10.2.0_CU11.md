@@ -159,3 +159,9 @@ When a DataMiner cluster had an IDP license but no Resource Manager license, an 
 When the *partialSNMP* option was used when polling tables using the *multipleGetNext* or *multipleGetBulk* method, up to now, rows and values would be skipped when one or more columns did not contain values for one or more rows. This caused the next partial requests to jump forward by the amount of empty cells, resulting in missing rows and unexpected empty cells.
 
 Also, a problem with the detection of infinite loops for SNMPv3 when receiving end-of-mib-view errors has been fixed.
+
+#### DataMiner Cube - Trending: Trend graph would start to flicker when its data was updated [ID_35181]
+
+<!-- Main Release Version 10.1.0 [CU22]/10.2.0 [CU11] - Feature Release Version 10.3.2 -->
+
+When you opened a trend graph and left it open for a while, it would start to flicker when its data was updated.
