@@ -95,6 +95,9 @@ In case your system contains bespoke Elasticsearch data or SRM data, use the pro
 
    If you find `<DataBase type="Elasticsearch">`, replace the entries in the `<DBServer>` tag with a list of all the nodes in the target Elasticsearch cluster, separated by commas.
 
+   > [!NOTE]
+   > If you do not find `<Database type="Elasticsearch">` in the *C:\Skyline DataMiner\db.xml* file, switch to the tab on [running a regular migration](#running-the-migration).
+
 1. Restart your DataMiner System.
 
 1. Verify whether the snapshot restore worked by confirming that [bookings](xref:The_Bookings_module), [jobs](xref:jobs), and other custom data in Cube are still functional.
