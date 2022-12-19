@@ -4,34 +4,28 @@ uid: Configuring_Elasticsearch_backups_Windows_Linux
 
 # Taking and restoring snapshots
 
-> [!NOTE]
-> This configuration requires advanced knowledge of Elasticsearch. If you are in doubt, ask Skyline for assistance. However, note that this is not covered by the standard DataMiner Support Services.
+> [!CAUTION]
+> This configuration requires advanced knowledge of Elasticsearch. If you have any doubts, ask Skyline for assistance. However, note that this is not covered by the standard [DataMiner Support Services](xref:Overview_Support_DMS_M_and_S).
 
-This method to configure an Elasticsearch backup focuses on setting up and using an Elastic snapshot to back up and restore Elasticsearch data.
+This procedure to configure an Elasticsearch backup focuses on setting up and using an Elasticsearch snapshot to back up and restore Elasticsearch data. It makes use of a source Elasticsearch cluster and a target Elasticsearch cluster and can be used for two purposes:
 
-For more information on version compatibility, see the [Elasticsearch Guide](https://www.elastic.co/guide/en/elasticsearch/reference/6.8/modules-snapshots.html#_version_compatibility).
+- Making a simple backup:
 
-This method makes use of a source Elasticsearch cluster and a target Elasticsearch cluster and can be used for two purposes:
-
-- Making a simple backup
-
-  > [!NOTE]
-  >
-  > - The source and target Elasticsearch cluster may be the same.
-  > - If you want to make a backup, you only need to follow the steps in [Preparing the source Elasticsearch cluster](#preparing-the-source-elasticsearch-cluster), [Taking the snapshot](#taking-the-snapshot), and [Restoring the snapshots](#restoring-the-snapshot) in the order they occur on this page.
+  - In this case, the source and target Elasticsearch cluster can be the same.
+  - For this, follow only the steps in [Preparing the source Elasticsearch cluster](#preparing-the-source-elasticsearch-cluster), [Taking the snapshot](#taking-the-snapshot), and [Restoring the snapshots](#restoring-the-snapshot) in the order they occur on this page.
 
 - Migrating data from an existing Elasticsearch cluster to a new target Elasticsearch cluster
 
-  Examples:
+  - Examples:
 
-  - Migrating data from an older Windows-setup to a better performing Linux-setup
+    - Migrating data from an older Windows setup to a better performing Linux setup
 
-  - Migrating data to different hardware
+    - Migrating data to different hardware
 
-  > [!NOTE]
-  >
-  > - The source and target Elasticsearch cluster will be different.
-  > - This guide provides a step-by-step explanation on how to make a backup for the sake of migrating data. It is important to follow each step listed below in the specific order they occur on this page.
+  - For this migration, follow each of the steps below, in the order they occur on this page.
+
+> [!TIP]
+> For information on version compatibility, refer to the [Elasticsearch Guide](https://www.elastic.co/guide/en/elasticsearch/reference/6.8/modules-snapshots.html#_version_compatibility).
 
 ## Requirements
 
@@ -39,7 +33,7 @@ You will need a client application that is able to communicate with the Elastics
 
 Examples:
 
-- Kibana: [Kibana](https://www.elastic.co/guide/en/kibana/6.8/deb.html#deb-repo) is often used together with Elasticsearch. If you are using Ubuntu or Debian as operating system, this is the preferred client application.
+- Kibana: [Kibana](https://www.elastic.co/guide/en/kibana/6.8/deb.html#deb-repo) is often used together with Elasticsearch. If you are using Ubuntu or Debian as your operating system, this is the preferred client application.
 
 - CURL: [Curl](https://curl.se/) is a simple command line utility that allows messages with payload (e.g POST and PUT messages) and is useful for scripting.
 
@@ -54,12 +48,12 @@ Examples:
 ### Preparing the source Elasticsearch cluster
 
 > [!IMPORTANT]
-> To later restore a snapshot, it is required to go through these steps first. Without a functional repository, you will run into issues that will delay the snapshot restore.
+> To be able to restore a snapshot later, you must go through these steps first. Without a functional repository, you will run into issues that will delay the snapshot restore.
 
-1. Set up a shared folder on the source Elasticsearch cluster to hold the snapshots. This folder must be shared across all machines in the Elasticsearch clusters in all directions.
+1. Set up a shared folder on the source Elasticsearch cluster to contain the snapshots. This folder must be shared across all machines in the Elasticsearch clusters in all directions.
 
    > [!TIP]
-   > If required, contact your IT department to follow the NFS server setup procedure as this step may otherwise be challenging. Further input on networking infrastructure also may be required.
+   > If required, contact your IT department to follow the NFS server setup procedure, as this step may otherwise be challenging. Further input on networking infrastructure may also be required.
 
    To set up the shared folder:
 
@@ -73,7 +67,7 @@ Examples:
 
      > [!NOTE]
      >
-     > - As this setup might be more challenging, we advise you to set it up in advance.
+     > - As this setup might be more challenging, we recommend that you set it up in advance.
      > - Be wary of read, write, and execute rights, firewall configurations, and the state of the NFS server service during the setup.
      > - Make sure the Elasticsearch user has enough rights to the folder to read, write, and execute its contents.
 
@@ -90,12 +84,11 @@ Examples:
            "compress": true
        }
    }
-   '
    ```
 
-   - `my_fs_backup_location`: the path of the shared folder you created
+   - `my_fs_backup_location`: The path of the shared folder you created.
 
-   - `my_fs_backup`: a repository name of your choice.
+   - `my_fs_backup`: A repository name of your choice.
 
    > [!TIP]
    > For more information, see [Shared File System Repository](https://www.elastic.co/guide/en/elasticsearch/reference/6.8/modules-snapshots.html#_shared_file_system_repository).
@@ -122,7 +115,7 @@ Examples:
    > [!TIP]
    > For more information, see [Logging configuration](https://www.elastic.co/guide/en/elasticsearch/reference/6.8/logging.html).
 
-1. Verify whether the repository has been created correctly by entering `http://[IP-address]:9200/_cat/repositories?v` in your browser's address bar or in your chosen client application. Replace "[IP-address]" with your IP-address.
+1. Verify whether the repository has been created correctly by entering `http://[IP address]:9200/_cat/repositories?v` in your browser's address bar or in your chosen client application. Replace "[IP address]" with your IP address.
 
    If the repository was created correctly, the name of your repository should be visible on the page or in the client.
 
@@ -133,7 +126,7 @@ Examples:
 > [!NOTE]
 > If you do not want to migrate data to a target Elasticsearch cluster but want to make a backup, you can skip this section and proceed to [Taking the snapshot](#taking-the-snapshot).
 
-1. Ensure that the target Elasticsearch cluster is of a more recent version than the source Elasticsearch cluster by entering `http://[IP-address]:9200` in your browser's address bar and looking up the version number. Replace "[IP-address]" with your IP-address.
+1. Ensure that the target Elasticsearch cluster is of a more recent version than the source Elasticsearch cluster by entering `http://[IP address]:9200` in your browser's address bar and looking up the version number. Replace "[IP address]" with your IP address.
 
    Example:
 
@@ -157,12 +150,13 @@ Examples:
    }
    ```
 
-   Snapshots can be restored from an older version of Elastic to a more recent version, but not the other way around.
+   > [!NOTE]
+   > Snapshots can be restored from an older version of Elastic to a more recent version, but not the other way around.
 
-1. Set up a shared folder on the target Elasticsearch cluster to hold the snapshots. This folder must be shared across all machines in the Elasticsearch clusters in all directions.
+1. Set up a shared folder on the target Elasticsearch cluster to contain the snapshots. This folder must be shared across all machines in the Elasticsearch clusters in all directions.
 
    > [!TIP]
-   > If required, contact your IT department to follow the NFS server setup procedure as this step may otherwise be challenging. Further input on networking infrastructure also may be required.
+   > If required, contact your IT department to follow the NFS server setup procedure, as this step may otherwise be challenging. Further input on networking infrastructure may also be required.
 
    To set up the shared folder:
 
@@ -176,7 +170,7 @@ Examples:
 
      > [!NOTE]
      >
-     > - As this setup might be more challenging, we advise you to set it up in advance.
+     > - As this setup might be more challenging, we recommend that you set it up in advance.
      > - Be wary of read, write, and execute rights, firewall configurations, and the state of the NFS server service during the setup.
      > - Make sure the Elasticsearch user has enough rights to the folder to read, write, and execute its contents.
 
@@ -193,12 +187,11 @@ Examples:
            "compress": true
        }
    }
-   '
    ```
 
-   - `my_fs_backup_location`: the path of the shared folder you created
+   - `my_fs_backup_location`: The path of the shared folder you created.
 
-   - `my_fs_backup`: a repository name of your choice.
+   - `my_fs_backup`: A repository name of your choice.
 
    > [!TIP]
    > For more information, see [Shared File System Repository](https://www.elastic.co/guide/en/elasticsearch/reference/6.8/modules-snapshots.html#_shared_file_system_repository).
@@ -225,40 +218,39 @@ Examples:
    > [!TIP]
    > For more information, see [Logging configuration](https://www.elastic.co/guide/en/elasticsearch/reference/6.8/logging.html).
 
-1. Verify whether the repository has been created correctly by entering `http://[IP-address]:9200/_cat/repositories?v` in your browser's address bar or in your chosen client application. Replace "[IP-address]" with your IP-address.
+1. Verify whether the repository has been created correctly by entering `http://[IP address]:9200/_cat/repositories?v` in your browser's address bar or in your chosen client application. Replace "[IP address]" with your IP address.
 
    If the repository was created correctly, the name of your repository should be visible on the page or in the client.
 
 ## Taking the snapshot
 
-1. Execute the GET request `http://[IP-address]:9200/_snapshot/repositoryname/snapshotname {“indices”: “dataminerprefix*”}` in your chosen client application.
+1. Execute the GET request `http://[IP address]:9200/_snapshot/repositoryname/snapshotname {“indices”: “dataminerprefix*”}` in your chosen client application.
 
    Example, using Kibana as client application:
 
    ![Example Kibana](~/user-guide/images/Example_Kibana.png)
 
-    - "[IP-address]": your IP-address
+    - "[IP address]": Your IP address.
 
-    - "repositoryname": the repository name you chose in the step on [preparing the source Elasticsearch cluster](#preparing-the-source-elasticsearch-cluster)
+    - "repositoryname": The repository name you chose while [preparing the source Elasticsearch cluster](#preparing-the-source-elasticsearch-cluster).
 
-    - "snapshotname": the name of the chosen backup
+    - "snapshotname": The name of the chosen backup.
 
-    - "dataminerprefix": the prefix DataMiner puts in front of an index name.
+    - "dataminerprefix": The prefix DataMiner puts in front of an index name.
 
-   To find the prefix DataMiner puts in front of an index name, enter `http://[IP-address]:9200/_cat/indices` in your browser's address bar. Replace "[IP-address]" with your IP-address.
+   To find the prefix DataMiner puts in front of an index name, enter `http://[IP address]:9200/_cat/indices` in your browser's address bar. Replace "[IP address]" with your IP address.
 
    Take note of the prefixes used in the indices. The default prefix is "dms".
 
    ![Prefix snapshot](~/user-guide/images/Prefix_Snapshot.png)
 
-1. Verify that the snapshot was created successfully by entering the GET request `http://[IP-address]:9200/_snapshot/repositoryname/snapshotname`in your browser's address bar or in your client application.
+1. Verify that the snapshot was created successfully by entering the GET request `http://[IP address]:9200/_snapshot/repositoryname/snapshotname`in your browser's address bar or in your client application.
 
    The field next to *"state":* should display "SUCCESS".
 
    ![State success](~/user-guide/images/State_Success.png)
 
-> [!NOTE]
-> You have now finished configuring an Elasticsearch backup. If you do not want to migrate data to a new target Elasticsearch cluster, you can move on to [Restoring the snapshot](#restoring-the-snapshot).
+You have now finished configuring an Elasticsearch backup. If you do not want to migrate data to a new target Elasticsearch cluster, you can move on to [Restoring the snapshot](#restoring-the-snapshot).
 
 ## Preparing the target machine
 
@@ -266,9 +258,9 @@ Examples:
 
    You can do this by:
 
-   - using an SFTP client, e.g. WinSCP
+   - using an SFTP client, e.g. WinSCP,
 
-   - setting up an FTP server on the destination Linux
+   - setting up an FTP server on the destination Linux,
 
    - ...
 
@@ -286,9 +278,9 @@ Examples:
    '
    ```
 
-   - `my_fs_backup_location`: the path of the shared folder you created
+   - `my_fs_backup_location`: The path of the shared folder you created.
 
-   - `my_fs_backup`: a repository name of your choice.
+   - `my_fs_backup`: A repository name of your choice.
 
 ## Restoring the snapshot
 
@@ -296,21 +288,21 @@ Examples:
 
 1. In the target Elasticsearch cluster, execute the following POST request:
 
-   `[IP-adress]:9200/_snapshot/repositoryname/snapshotname/_restore?pretty`
+   `[IP adress]:9200/_snapshot/repositoryname/snapshotname/_restore?pretty`
 
-   - "[IP-address]": your IP-address
+   - "[IP address]": Your IP address.
 
-   - "repositoryname": the repository name you chose in the step on [preparing the source Elasticsearch cluster](#preparing-the-source-elasticsearch-cluster)
+   - "repositoryname": The repository name you chose while [preparing the source Elasticsearch cluster](#preparing-the-source-elasticsearch-cluster).
 
-   - "snapshotname": the name of the chosen backup
+   - "snapshotname": The name of the chosen backup.
 
-1. Verify whether the snapshot restore worked by comparing the indices for the local Elastic with those of the target Elastic.
+1. Verify whether the snapshot restore worked by comparing the indices for the local Elasticsearch cluster with those of the target Elasticsearch cluster.
 
-   To do so, enter `http://[IP-address]:9200/_cat/indices` in your browser's address bar. Replace "[IP-address]" with your IP-address.
+   To do so, enter `http://[IP address]:9200/_cat/indices` in your browser's address bar. Replace "[IP address]" with your IP address.
 
    These indices should be identical and take up the same amount of space.
 
    ![Prefix snapshot](~/user-guide/images/Prefix_Snapshot.png)
 
 > [!IMPORTANT]
-> If you followed these steps in preparation of migrating your data from an existing Elasticsearch cluster to a new target Elasticsearch cluster, you can now run the migration as explained in [Running the migration with bespoke elastic data](xref:Migrating_the_general_database_to_a_DMS_Cassandra_cluster#running-the-migration).
+> If you followed these steps in preparation of migrating your data from an existing Elasticsearch cluster to a new target Elasticsearch cluster, you can now run the migration as explained in [Running the migration with bespoke Elasticsearch data](xref:Migrating_the_general_database_to_a_DMS_Cassandra_cluster#running-the-migration).

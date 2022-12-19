@@ -1047,7 +1047,7 @@
               items:
                 - name: Taking and restoring snapshots
                   topicUID: Configuring_Elasticsearch_backups_Windows_Linux
-                - name: Manually specifying a backup path
+                - name: Restoring backups using the Standalone Elastic Backup Tool
                   topicUID: Configuring_Elasticsearch_backups_Windows
             - name: Configuring indexing settings in System Center
               topicUid: Configuring_DataMiner_Indexing

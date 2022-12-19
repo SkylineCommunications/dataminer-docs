@@ -2,7 +2,27 @@
 uid: Configuring_Elasticsearch_backups_Windows
 ---
 
-# Manually specifying a backup path
+# Restoring backups using the Standalone Elastic Backup Tool
+
+If your Elasticsearch database does not contain any remote Elasticsearch nodes, you can use database backups created by DataMiner:
+
+- These will be placed in the backup location specified during [Elasticsearch installation](xref:Installing_Elasticsearch_via_DataMiner). From DataMiner 9.6.11 onwards, you can also modify this location in System Center on the *Backup* page, in the section *Indexing Engine location*.
+
+  > [!NOTE]
+  >
+  > - Restrictions apply for this backup path. See [Restrictions for the backup path](#restrictions-for-the-backup-path).
+  > - After you change the path in System Center, it is possible that the UI is temporarily disabled while the Indexing nodes are restarted to implement the change. As such, we recommend that you only change the backup path if this is absolutely necessary.
+  > - In DataMiner 9.6.10, the backup path may need to be [specified manually](#manually-specifying-the-backup-path).
+
+- To restore such a backup, use the [Standalone Elastic Backup tool](xref:Standalone_Elastic_Backup_Tool).
+
+- At most one backup per day can be created.
+
+- DataMiner will try to remove old backups so that only the number of backups is kept that is configured in the backup policy (see [Configuring the DataMiner backups](xref:Backing_up_a_DataMiner_Agent_in_DataMiner_Cube#configuring-the-dataminer-backups)). However, if the backups are stored on a network path, this may not be possible in case of insufficient permissions.
+
+Backups for remote Elasticsearch nodes are not managed by DataMiner. You will need to manage backups of such nodes yourself outside DataMiner. You can also use the [Standalone Elastic Backup tool](xref:Standalone_Elastic_Backup_Tool) for this.
+
+## Restrictions for the backup path
 
 Keep the following restrictions in mind for the backup path:
 
@@ -23,9 +43,7 @@ Keep the following restrictions in mind for the backup path:
   > [!NOTE]
   > From DataMiner 10.2.0/10.1.8 onwards, it is possible to instead configure specific credentials for the network location via SLNetClientTest tool. See [Specifying credentials for a shared backup path for Elasticsearch](xref:SLNetClientTest_credentials_shared_backup_Elasticsearch).
 
-- At most one backup per day can be taken.
-
-- DataMiner will try to remove old backups so that only the number of backups is kept that is configured in the backup policy (see [Configuring the DataMiner backups](xref:Backing_up_a_DataMiner_Agent_in_DataMiner_Cube#configuring-the-dataminer-backups)). However, if the backups are stored on a network path, this may not be possible in case of insufficient permissions.
+## Manually specifying the backup path
 
 In DataMiner 9.6.10, in case there is an Elasticsearch node in the cluster that does not have a DataMiner Agent installed, or in case Elasticsearch was installed on a DataMiner Agent prior to DataMiner 9.6.9, the backup path must be specified manually.
 
@@ -38,11 +56,3 @@ To do so:
 1. Close the file.
 
 1. Restart the service *elasticsearch-service-x64.exe*.
-
-From DataMiner 9.6.11 onwards, you can modify the backup path in System Center, on the *Backup* page, in the section *Indexing Engine location*.
-
-> [!NOTE]
->
-> - After you change the path in System Center, it is possible that the UI is temporarily disabled while the Indexing nodes are restarted to implement the change. As such, we recommend to only change the backup path if this is absolutely necessary.
-> - From DataMiner 10.0.0 \[CU15\]/10.1.0 \[CU3\]/DataMiner 10.1.6 onwards, the **Elasticsearch database is not included in a DataMiner restore**. To restore it, you should instead use the [Standalone Elastic Backup tool](xref:Standalone_Elastic_Backup_Tool).
-> - Backups for remote Elasticsearch nodes are not managed by DataMiner. You will need to manage backups of such nodes yourself outside DataMiner. You can use the [Standalone Elastic Backup tool](xref:Standalone_Elastic_Backup_Tool) for this.
