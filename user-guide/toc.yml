@@ -2856,6 +2856,8 @@
     - name: Known issues
       topicUID: Known_issues
       items:
+        - name: Vertical text in Visual Overview not displayed correctly
+          topicUID: KI_Visual_Overview_Vertical_Text_no_longer_working
         - name: SLNet deadlock on DMA startup
           topicUID: KI_SLNet_deadlock_on_startup
         - name: Stable trend points not kept alive
