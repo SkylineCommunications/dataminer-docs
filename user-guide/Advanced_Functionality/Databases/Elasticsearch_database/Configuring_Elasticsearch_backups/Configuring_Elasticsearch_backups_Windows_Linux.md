@@ -4,7 +4,7 @@ uid: Configuring_Elasticsearch_backups_Windows_Linux
 
 # Taking and restoring snapshots
 
-> [!CAUTION]
+> [!IMPORTANT]
 > This configuration requires advanced knowledge of Elasticsearch. If you have any doubts, ask Skyline for assistance. However, note that this is not covered by the standard [DataMiner Support Services](xref:Overview_Support_DMS_M_and_S).
 
 This procedure to configure an Elasticsearch backup focuses on setting up and using an Elasticsearch snapshot to back up and restore Elasticsearch data. It makes use of a source Elasticsearch cluster and a target Elasticsearch cluster and can be used for two purposes:
