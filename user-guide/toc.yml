@@ -2861,6 +2861,8 @@
     - name: Known issues
       topicUID: Known_issues
       items:
+        - name: SLProtocol timer thread run-time error
+          topicUID: KI_SLProtocol_timer_thread_RTE
         - name: Vertical text in Visual Overview not displayed correctly
           topicUID: KI_Visual_Overview_Vertical_Text_no_longer_working
         - name: SLNet deadlock on DMA startup
