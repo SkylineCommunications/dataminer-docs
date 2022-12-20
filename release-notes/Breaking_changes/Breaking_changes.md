@@ -8,6 +8,7 @@ The following breaking changes have been introduced in recent DataMiner releases
 
 | Release note ID | Release version(s) | Description |
 |--|--|--|
+| [34895](xref:General_Feature_Release_10.3.1#dashboards-app--low-code-apps---gqi-certain-cell-values-in-a-gqi-query-result-would-incorrect-include-the-object-type-id_34895) | DataMiner 10.2.0 [CU1]/10.3.1 | Previously, cell values of GQI result rows for DomInstanceIds, DomDefinitionIds, ProfileInstanceIds, and ProfileDefinitionIds contained both the display value and the object type. Now the GUID value is used as the cell value. |
 | [33916](xref:General_Feature_Release_10.2.9#azure-active-directory-secret-expiry-noticeserrors-id_33916) | DataMiner 10.3.0/10.2.9 | Improvements have been implemented to the Azure AD configuration that require a manual change to the configuration to be fully functional. Refer to the [release notes](xref:General_Feature_Release_10.2.9#azure-active-directory-secret-expiry-noticeserrors-id_33916) for detailed info. |
 | [33836](xref:General_Feature_Release_10.2.9#breaking-change-removing-a-resource-or-resourcepool-object-will-now-always-require-a-valid-id-id_33836) | DataMiner 10.3.0/10.2.9 | It is no longer possible to delete Resource and ResourcePool objects in a filtered way by passing an incomplete object to the associated remove method of the ResourceManagerHelper. |
 | [33819](xref:SRM_1.2.27#improved-resource-orchestration-wizard-id_33819) | SRM 1.2.27 | The input parameters of the resource orchestration wizard have changed. |
