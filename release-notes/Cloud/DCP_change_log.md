@@ -6,9 +6,23 @@ uid: DCP_change_log
 
 The DataMiner Cloud Platform gets updated continuously. This change log can help you trace when specific features and changes have become available.
 
+#### 19 December 2022 - Fix - SupportAssistant 1.1.1 - Log collection triggered too often [ID_35158]
+
+A problem with the SupportAssistant could cause the Log Collector to be triggered again and again, which could make it use up a lot of disk space.
+
+This fix is included in Cloud Pack 2.8.3.
+
+#### 16 December 2022 - Fix - ArtifactDeployer 1.4.2 - Problem with long-running deployments [ID_35174]
+
+If a large package was deployed from the catalog, which took a relatively long time to deploy, it could occur that this did not work correctly.
+
+This fix is included in Cloud Pack 2.8.3.
+
 #### 9 December 2022 - Enhancement - FieldControl 2.8.2 - Dependencies updated [ID_35140]
 
 Several dependencies were updated. This includes security-related improvements.
+
+This enhancement is included in Cloud Pack 2.8.3.
 
 #### 8 December 2022 - New feature - CloudGateway 2.10.0 / SupportAssistant 1.1.0 - Remote Log Collection [ID_34681] [ID_34875] [ID_34928] [ID_34934] [ID_34954] [ID_34992]
 

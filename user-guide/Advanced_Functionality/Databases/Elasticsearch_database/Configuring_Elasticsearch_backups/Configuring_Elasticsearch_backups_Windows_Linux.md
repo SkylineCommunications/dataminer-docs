@@ -57,11 +57,11 @@ Examples:
 
    To set up the shared folder:
 
-   - for Windows:
+   - For Windows:
 
      Use built-in sharing.
 
-   - for Linux:
+   - For Linux:
 
      Use an NFS server and client as explained in [How to Set Up NFS Server and Client on CentOS 8](https://www.tecmint.com/install-nfs-server-on-centos-8/) and in [Elasticsearch: Snapshot Backups on a Shared NFS](https://octoperf.com/blog/2019/05/02/elasticsearch-snapshot-backup-shared-nfs/#snapshot-repository). Follow this procedure on all machines in the Elasticsearch Cluster.
 

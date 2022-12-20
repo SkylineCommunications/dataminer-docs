@@ -77,3 +77,7 @@ In the Node Segment overview, it could occur that the DS Channel Utilization sho
 #### Percentage Ping OK value above 100% [ID_34726]
 
 When the Number Ping OK parameter had a value larger than the number of CMs, the Percentage Ping OK parameter indicated a value above 100%. The percentage calculation has now been adjusted to prevent this. Exceptional cases like this will now be returned as -1 (N/A). Exception values were added to both the Percentage Ping OK and Percentage Ping Unreachable parameters in the amplifier and node overview tables.
+
+#### Link to dashboard does not apply filter [ID_35207]
+
+When a user clicked the dashboard icon, this opened a dashboard without applying a filter. Now a filter has been included in the dashboard link.
