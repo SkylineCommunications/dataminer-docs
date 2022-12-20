@@ -102,7 +102,7 @@ To configure the connection to an [Amazon Keyspaces database](xref:Amazon_Keyspa
 
    - **Database**: The type of database, i.e. *Amazon Keyspaces*.
 
-   - **Keyspace prefix**: The name all Amazon Keyspaces will be prefixed with. This should be identical for all DMAs in the same cluster.
+   - **Keyspace prefix**: The name all Amazon Keyspaces will be prefixed with. This will be identical for all DMAs in the same cluster.
 
    - **DB Server**: The url of the [global endpoint](https://docs.aws.amazon.com/keyspaces/latest/devguide/programmatic.endpoints.html) of the region your Amazon Keyspaces cluster is in. (e.g. `cassandra.eu-north-1.amazonaws.com`).
 
@@ -112,7 +112,7 @@ To configure the connection to an [Amazon Keyspaces database](xref:Amazon_Keyspa
 
 1. Restart the DMS.
 
-   This can take multiple minutes the first time, as the keyspaces and tables will be created. In case of trouble, you can find the relevant logging in the *sldbconnection.txt* file.
+   This can take multiple minutes the first time, as the keyspaces and tables will be created. In case of trouble, you can find the relevant logging in the *SLDBConnection.txt* file.
 
 ![Cube Database Configuration](~/user-guide/images/aks_cube_config.png)<br>
 *DataMiner 10.3.2 example configuration*
