@@ -95,6 +95,20 @@ In the trend graph of a monitored parameter that needed to be compared to a rela
 > [!NOTE]
 > When both the baseline and the factor are stored in parameters, then the baseline parameter, the factor parameter and the monitored parameter must all have the history set option enabled. Also, all history sets should be executed chronologically.
 
+#### Cassandra cluster: Nullreference exceptions [ID_34964]
+
+<!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
+
+On systems with a Cassandra cluster, in some cases, messages to SLDataGateway could cause `nullreference` exceptions to be thrown.
+
+Example of an exception stored in the `SLDBconnection.txt` log file:
+
+```txt
+SLDBConnection|Skyline.DataMiner.Net.Messages.SLDataGateway.DataRequest`1[Skyline.DataMiner.Net.Messages.SLDataGateway.Alarm]|INF|0|285|System.NullReferenceException: Object reference not set to an instance of an object.
+   at SLCassandraClassLibrary.DBGateway.DBGateway.ExecuteRequest[T](DataRequest`1 request)
+   at SLCassandraClassLibrary.DBGateway.IncomingConnection.$_executor_ExecuteRequest(BaseRequest request)
+```
+
 #### Problem with SLDataMiner when loading an alarm template schedule failed [ID_34988]
 
 <!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
