@@ -115,7 +115,7 @@ To configure the connection to an [Amazon Keyspaces database](xref:Amazon_Keyspa
    This can take multiple minutes the first time, as the keyspaces and tables will be created. In case of trouble, you can find the relevant logging in the *sldbconnection.txt* file.
 
 ![Cube Database Configuration](~/user-guide/images/aks_cube_config.png)<br>
-*DataMiner 10.3.1 example configuration*
+*DataMiner 10.3.2 example configuration*
 
 ## Legacy MySQL or SQL database
 
