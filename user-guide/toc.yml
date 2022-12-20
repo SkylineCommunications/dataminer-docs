@@ -2861,6 +2861,8 @@
     - name: Known issues
       topicUID: Known_issues
       items:
+        - name: Null reference exceptions in SLDBConnection.txt and unhandled exception in Alarm Console
+          topicUID: KI_NullReferenceException_SLDBConnection
         - name: Vertical text in Visual Overview not displayed correctly
           topicUID: KI_Visual_Overview_Vertical_Text_no_longer_working
         - name: SLNet deadlock on DMA startup
