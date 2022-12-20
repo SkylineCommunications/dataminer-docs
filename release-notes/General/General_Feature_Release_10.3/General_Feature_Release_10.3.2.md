@@ -131,6 +131,18 @@ In the *About* box of a web application, you can now find more detailed version 
 
 Because of a number of enhancements, overall query performance has increased, especially in cases where aggregation operations are followed by a filter.
 
+#### SLAnalytics - Behavioral anomaly detection : More accurate change point time ranges [ID_35121]
+
+<!-- MR 10.4.0 - FR 10.3.2 -->
+
+Because of a number of enhancements, behavioral changes of the type "level shift", "trend change" and "variance change" will now have a more accurate time range when the change in behavior is sufficiently clear.
+
+#### Dashboards - GQI components: Enhanced behavior when loading data [ID_35148]
+
+<!-- MR 10.4.0 - FR 10.3.2 -->
+
+Up to now, a loading skeleton would be displayed each time data was being loaded into a GQI component (e.g. a node edge graph). From now on, only when the component was empty will a loading skeleton be displayed. When existing data in the component is being refreshed, a loader bar will now be displayed instead.
+
 ### Fixes
 
 #### Problem with Elasticsearch health monitoring [ID_34744]
@@ -144,6 +156,20 @@ When an Elasticsearch cluster used by DataMiner was hosted on servers that host 
 <!-- MR 10.3.0 - FR 10.3.2 -->
 
 When using external authentication via SAML, a software issue would prevent you from logging in when Okta was set up as identity provider.
+
+#### Cassandra cluster: Nullreference exceptions [ID_34964]
+
+<!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
+
+On systems with a Cassandra cluster, in some cases, messages to SLDataGateway could cause `nullreference` exceptions to be thrown.
+
+Example of an exception stored in the `SLDBconnection.txt` log file:
+
+```txt
+SLDBConnection|Skyline.DataMiner.Net.Messages.SLDataGateway.DataRequest`1[Skyline.DataMiner.Net.Messages.SLDataGateway.Alarm]|INF|0|285|System.NullReferenceException: Object reference not set to an instance of an object.
+   at SLCassandraClassLibrary.DBGateway.DBGateway.ExecuteRequest[T](DataRequest`1 request)
+   at SLCassandraClassLibrary.DBGateway.IncomingConnection.$_executor_ExecuteRequest(BaseRequest request)
+```
 
 #### Problem with SLDataMiner when loading an alarm template schedule failed [ID_34988]
 
@@ -214,3 +240,11 @@ When an element was frequently receiving timeout values, SLElement would leak me
 When the *partialSNMP* option was used when polling tables using the *multipleGetNext* or *multipleGetBulk* method, up to now, rows and values would be skipped when one or more columns did not contain values for one or more rows. This caused the next partial requests to jump forward by the amount of empty cells, resulting in missing rows and unexpected empty cells.
 
 Also, a problem with the detection of infinite loops for SNMPv3 when receiving end-of-mib-view errors has been fixed.
+
+#### Web apps - Parameter feed: Problem when more than 10,000 elements had to be retrieved from the server [ID_35150]
+
+<!-- MR 10.4.0 - FR 10.3.2 -->
+
+Up to now, a parameter feed would only retrieve the first 10,000 elements from the server. From now on, it will retrieve all elements from the server page by page.
+
+Default number of elements per page: 10,000
