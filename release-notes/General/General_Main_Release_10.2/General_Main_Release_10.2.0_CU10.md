@@ -105,6 +105,12 @@ Because of a number of enhancements, overall performance has increased when load
 
 The *Show the DataMiner TV section* setting has been removed from the *User > Cube* section of the *Settings* window.
 
+#### BREAKING CHANGE - Dashboards app & Low-Code Apps - GQI: Certain cell values in a GQI query result will no longer include the object type [ID_34895]
+
+<!-- MR 10.2.0 [CU10] - FR 10.3.1 -->
+
+Previously, cell values of GQI result rows for DomInstanceIds, DomDefinitionIds, ProfileInstanceIds, and ProfileDefinitionIds contained both the display value of the GUID and the object type (e.g. "DomDefinitionId[00000000-0000-0000-0000-000000000000]"). Now the cell value will only contain the display value of the GUID.
+
 #### Port initialization error messages have been improved [ID_34920]
 
 <!-- MR 10.2.0 [CU10] - FR 10.3.1 [CU0] -->
@@ -251,14 +257,6 @@ In some cases, an error could occur in SLElement when a DVE child or a virtual f
 When an HTTP request is sent, in some cases, WinHTTP can incorrectly throw a `SEC_E_BUFFER_TOO_SMALL` error when the server is using TLS 1.2.
 
 From now on, when this error is thrown, DataMiner will retry the HTTP request the number of times specified for the HTTP connection in question.
-
-#### Dashboards app & low-code apps - GQI: Certain cell values in a GQI query result would incorrect include the object type [ID_34895]
-
-<!-- MR 10.2.0 [CU10] - FR 10.3.1 -->
-
-In some cases, cell values in a GQI query result would incorrect include the object type. This was the case for DOM instance IDs, DOM definition IDs, profile instance IDs and profile definition IDs.
-
-For example, a cell value would incorrectly be set to "DomDefinitionId[00000000-0000-0000-0000-000000000000]" while the display value was actually "00000000-0000-0000-0000-000000000000".
 
 #### Problem with SLElement when a parameter update was being processed while an element was starting up [ID_34899]
 
