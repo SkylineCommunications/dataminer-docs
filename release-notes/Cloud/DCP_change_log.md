@@ -12,7 +12,9 @@ A problem with the SupportAssistant could cause the Log Collector to be triggere
 
 This fix is included in Cloud Pack 2.8.3.
 
-#### 16 December 2022 - Fix - ArtifactDeployer 1.4.2 - Deployment events not sent to DCP [ID_35174]
+#### 16 December 2022 - Fix - ArtifactDeployer 1.4.2 - Problem with long-running deployments [ID_35174]
+
+If a large package was deployed from the catalog, which took a relatively long time to deploy, it could occur that this did not work correctly.
 
 This fix is included in Cloud Pack 2.8.3.
 
