@@ -475,6 +475,12 @@ Web apps now support trending of string parameters and exceptions.
 
 Because of a number of enhancements, overall performance has increased when retrieving DomInstances that have a DomBehaviorDefinition.
 
+#### BREAKING CHANGE - Dashboards app & Low-Code Apps - GQI: Certain cell values in a GQI query result will no longer include the object type [ID_34895]
+
+<!-- MR 10.2.0 [CU10] - FR 10.3.1 -->
+
+Previously, cell values of GQI result rows for DomInstanceIds, DomDefinitionIds, ProfileInstanceIds, and ProfileDefinitionIds contained both the display value of the GUID and the object type (e.g. "DomDefinitionId[00000000-0000-0000-0000-000000000000]"). Now the cell value will only contain the display value of the GUID.
+
 #### SLAnalytics: Enhanced automatic evaluation of trend predictions [ID_34901]
 
 <!-- MR 10.3.0 - FR 10.3.1 -->
@@ -639,14 +645,6 @@ From now on, when this error is thrown, DataMiner will retry the HTTP request th
 <!-- MR 10.3.0 - FR 10.3.1 -->
 
 When a *Close a panel* action was configured as a post action on a button component, in some cases, it would incorrectly not cause the panel to close.
-
-#### Dashboards app & low-code apps - GQI: Certain cell values in a GQI query result would incorrect include the object type [ID_34895]
-
-<!-- MR 10.2.0 [CU10] - FR 10.3.1 -->
-
-In some cases, cell values in a GQI query result would incorrect include the object type. This was the case for DOM instance IDs, DOM definition IDs, profile instance IDs and profile definition IDs.
-
-For example, a cell value would incorrectly be set to "DomDefinitionId[00000000-0000-0000-0000-000000000000]" while the display value was actually "00000000-0000-0000-0000-000000000000".
 
 #### Dashboards & low-code apps: Decimal values would incorrectly not be allowed in range filters [ID_34897]
 
