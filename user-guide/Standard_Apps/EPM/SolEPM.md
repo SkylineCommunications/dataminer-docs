@@ -12,4 +12,4 @@ At present, two different versions of the solution are available:
 - [DataMiner EPM D-DOCSIS](xref:EPM_D-DOCSIS)
 
 > [!NOTE]
-> For more information on the core EPM functionality available in DataMiner, see [DMS Experience and Performance Management](xref:EPM)
+> For more information on the core EPM functionality available in DataMiner, see [Experience and Performance Management](xref:EPM)

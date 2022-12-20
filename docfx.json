@@ -38,6 +38,8 @@
         ]
       }
     ],
+	"xrefService": [ "https://xref.docs.microsoft.com/query?uid={uid}" ],
+	"xref" : [ "xref/newtonsoft.yml" ],
     "resource": [
       {
         "files": [

@@ -16,7 +16,7 @@ This section consists of the following topics:
 
 - [Configuring Mobile Gateway in DataMiner Cube](xref:Configuring_Mobile_Gateway_in_DataMiner_Cube)
 
-- [Approved modems for use with DMS Mobile Gateway](xref:Approved_modems_Mobile_Gateway)
+- [Approved modems for use with Mobile Gateway](xref:Approved_modems_Mobile_Gateway)
 
 > [!NOTE]
-> DMS Mobile Gateway is only available on DMAs with a Mobile Gateway Server license. Though the Mobile Gateway options will still be displayed even if you do not have this license, you will not be able to use a Mobile Gateway.
+> Mobile Gateway is only available on DMAs with a Mobile Gateway Server license. Though the Mobile Gateway options will still be displayed even if you do not have this license, you will not be able to use a Mobile Gateway.

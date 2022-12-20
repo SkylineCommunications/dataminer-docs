@@ -99,6 +99,9 @@ For larger contributions, e.g. to add several new pages, we recommend that you i
 
 - [Visual Studio Code](https://code.visualstudio.com/) (with the [Learn Authoring Pack](https://marketplace.visualstudio.com/items?itemName=docsmsft.docs-authoring-pack) extension)
 
+> [!NOTE]
+> Microsoft also provides a zero-install Visual Studio Code for the web. When you are working in GitHub online, you can access this by pressing the "." button on your keyboard. This version offers a complete overview of the repository like in the downloadable version of Visual Studio Code, but it does not offer any extensions, e.g. a spell check.
+
 When you install GitHub Desktop, you will also need to add the correct repository:
 
 1. Install GitHub Desktop and log in with your GitHub account.
@@ -138,7 +141,7 @@ When you install GitHub Desktop, you will also need to add the correct repositor
 
 For more information on how to work with Visual Studio Code, refer to the [Visual Studio Code documentation](https://code.visualstudio.com/docs). As our documentation is written in Markdown, aside from the general functionality of the application, the [Markdown](https://code.visualstudio.com/docs/languages/markdown) section is of specific interest there.
 
-Also keep in mind that we are using **DocFX Flavored Markdown**. Refer to the [Markdown syntax](#markdown-syntax) section above for more information about this. Make sure the Learn Authoring Pack extension is installed in Visual Studio Code to make it easier to work with this Markdown flavor.
+Also keep in mind that we are using **DocFX Flavored Markdown**. Refer to the [Markdown syntax](#markdown-syntax) section below for more information about this. Make sure the Learn Authoring Pack extension is installed in Visual Studio Code to make it easier to work with this Markdown flavor.
 
 ### Things to watch out for
 
@@ -342,7 +345,9 @@ To be able to make a local test build, you need to have DocFX installed. DocFX i
    1. Enter `docfx metadata -f` to generate the metadata.
 
       > [!NOTE]
-      > At this point, you may get 5 warnings mentioning "Found project reference without a matching metadata reference". These can be ignored.
+      >
+      > - At this point, you may get 5 warnings mentioning "Found project reference without a matching metadata reference". These can be ignored.
+      > - At this point, if you get up to 13 warnings, of which 8 mention "Invalid cref value", follow the steps explained [here](#running-docfx-metadata--f-results-in-warnings-mentioning-an-invalid-cref-value).
 
    1. Enter `docfx build -f` to make a test build.
 
@@ -512,6 +517,17 @@ You can align the pipe characters so that the table also looks like a table in t
 
 If table cells contain a lot of text, it can be next to impossible to keep everything neatly aligned in the Markdown source, so in that case this second syntax may be preferable. Just make sure you use the correct number of pipe characters so that your number of columns is the same in each row, otherwise the table will not be generated correctly.
 
+Also note that you can align table columns by using colons. See the following example:
+
+```md
+| Fun                  | With                 | Tables          |
+| :------------------- | -------------------: |:---------------:|
+| left-aligned column  | right-aligned column | centered column |
+| $100                 | $100                 | $100            |
+| $10                  | $10                  | $10             |
+| $1                   | $1                   | $1              |
+```
+
 ### Code blocks
 
 To display code examples in separate code blocks, place three backquotes (```) above and below those blocks. In addition, next to the three backquotes above the blocks, specify the type of code, e.g. *csharp*, *md*, *xml*, etc.
@@ -663,6 +679,103 @@ However, there is one exception to this. Because DocFX cannot handle double quot
 Be careful when you use screenshots of the DataMiner Cube UI, as these can get outdated quickly. For this reason, do not use screenshots if this has no added value.
 
 If you do add a screenshot, ideally there should be some indication of the version of the software displayed in the screenshot, so it is clear if the screenshot is outdated.
+
+## Address the reader directly
+
+Avoid writing about your reader as "the user", but instead use "you".
+
+The only time when "the user" is appropriate is when whoever you are writing for will create or configure something for another user, and it is that other user you want to indicate.
+
+**Examples:**
+
+- *You can find more information on DataMiner Dojo.* (Instead of *The user can find more information on DataMiner Dojo.*)
+
+- *When you add a feed component to a dashboard, the user of the dashboard will be able to select a feed.*
+
+## Troubleshooting
+
+### There is a duplicate item in the TOC even though it only occurs once in the toc.yml
+
+**Symptom**: An item shows up twice in the table of contents even though it was only entered once in the *toc.yml*.
+
+**Resolution**: Make sure there is no hyphen in front of the topicUID line. Only the name line should be preceded by a hyphen.
+
+![TOC](~/images/TOC.png)
+
+### Build failed because assembly or file could not be loaded
+
+**Symptom**: When you try to create a test build, this fails with the following error:
+
+```txt
+   Build failed.
+   [22-11-04 12:34:56.248]Warning:[ImportPlugins]Skipping file D:\DocFX\plugins_2xobfivj.yks\plugins\System.Memory.dll due to load failure: Could 
+   not load file or assembly 'System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51' or one of its dependencies. 
+   The located assembly's manifest definition does not match the assembly reference.
+   (Exception from HRESULT: 0x80131040)
+```
+
+**Resolution**: Install [the latest version of DocFX](#installing-and-configuring-docfx).
+
+### Build failed because config or content files are missing
+
+**Symptom**: When you try to create a test build, this fails with the following error:
+
+```txt
+   Build failed.
+   [22-11-04 12:34:56.248]Error:Either provide config file or specify content files to start building documentation.
+           O Warning(s)
+           1 Error(s)
+```
+
+**Resolution**: This issue occurs if you try to make a build of only part of the repository. There are specific files in the root of the repository that are needed to be able to start building documentation, so make sure you always create your test builds based on the complete repository.
+
+### Recent changes do not show up in a build
+
+**Symptom**: When you create a test build, it does not include your recent changes.
+
+**Resolution**: Make sure your changes are all saved. If the *Explorer* icon in the top-left corner shows a blue circle with a number in it, there are unsaved changes in a number of files corresponding with that number. The files that contain unsaved changes are marked with a white dot in the file header.
+
+![Unsaved changes](~/images/Unsaved_Changes.png)
+
+### GitHub Desktop keeps basing branches on an outdated version of ‘main’
+
+**Symptom**: Newly created branches indicate that they were created a longer time ago.
+
+**Resolution**:
+
+- Make sure [your fork is up to date](#make-sure-your-fork-is-up-to-date).
+
+- If you installed Git after you installed GitHub Desktop, remove the repository in GitHub Desktop and add it again.
+
+### Running 'docfx metadata -f' results in warnings mentioning an invalid cref value
+
+**Symptom**: When you enter `docfx metadata -f` in the Terminal pane in Visual Studio Code, you get several warnings that look like this:
+
+```txt
+[22-12-14 07:59:45.600]Warning:[ExtractMetadata]Invalid cref value "!:JsonReaderException" found in triple-slash-comments for FromJsonString defined in src/Base Class Library/Common/Skyline/DataMiner/Library/Common/Rates/RateHelper.cs Line 309, ignored.
+[22-12-14 07:59:45.600]Warning:[ExtractMetadata]Invalid cref value "!:JsonReaderException" found in triple-slash-comments for FromJsonString defined in src/Base Class Library/Common/Skyline/DataMiner/Library/Common/Rates/RateHelper.cs Line 354, ignored.
+```
+
+**Resolution**:
+
+1. Open Visual Studio.
+
+1. Select to open a project or solution and open *C:\...\GitHub\dataminer-docs\src\Base Class Library\Code Library.sln*.
+
+1. In the *Solution Explorer* pane, right-click *Solution 'Code Library'* and select *Restore NuGet packages*.
+
+   You will get the following output:
+
+   ```txt
+   `Restored C:\...\GitHub\dataminer-docs\src\Base Class Library\Common\Common.csproj (in 340 ms).
+   NuGet package restore finished
+   Time Elapsed: 00:00:00.7119526
+   ========== Finished ==========
+   ```
+
+1. Enter `docfx metadata -f` in Visual Studio Code again.
+
+   You should now get no more than 5 warnings when generating the metadata.
 
 ## References
 

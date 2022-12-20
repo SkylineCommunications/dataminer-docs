@@ -8,7 +8,7 @@ SLLogCollector is a tool that can be used to easily collect log information and 
 
 This tool is available on every DMA from DataMiner 10.0.5 onwards. It is located in the folder `C:\Skyline DataMiner\Tools\SLLogCollector`.
 
-From DataMiner 9.6.0 CU23, 10.0.0 CU13, 10.1.0 CU2 and 10.1.5 onwards, you can also access it from the shortcut menu of the [DataMiner Taskbar Utility](xref:DataMiner_Taskbar_Utility). To do so, right-click the taskbar utility icon and select *Launch* > *Tools* > *Log Collector.*
+From DataMiner 9.6.0 \[CU23\], 10.0.0 \[CU13\], 10.1.0 \[CU2\] and 10.1.5 onwards, you can also access SLLogCollector from the shortcut menu of the [DataMiner Taskbar Utility](xref:DataMiner_Taskbar_Utility). To do so, right-click the taskbar utility icon and select *Launch* > *Tools* > *Log Collector.*
 
 > [!NOTE]
 > This tool requires .Net Framework 4.6 or higher.

@@ -653,12 +653,6 @@ In Visual Overview, it is now possible to retrieve the contributing booking ID o
 
         and the shape text set to `Contributing booking: [Contributing Booking]`
 
-#### Trending: When trending a parameter, related parameters can now be added through light bulb icon [ID_34432]
-
-<!-- MR 10.3.0 - FR 10.2.12 -->
-
-When trending a parameter, you can now add related parameters by clicking the light bulb icon in the top-right corner of the trend. In doing so, you will get an overview of suggested parameters that are related to the currently displayed parameter trend.
-
 #### Visual Overview: Shape data items of type 'NavigatePage' can now have values that include dynamic placeholders [ID_34442]
 
 <!-- MR 10.3.0 - FR 10.2.11 -->
@@ -700,6 +694,17 @@ If you specify the new *includeAllCustomProperties* option, the server-side sear
 For more information on the available search options, see [Setting the indexing options for the server-side search](xref:Setting_the_indexing_options_for_the_server-side_search).
 
 Also, from now on, DataMiner Cube will call the server-side search engine when you enter a numeric search string like "1234". Up to now, when you entered a numeric search string, DataMiner Cube would perform a client-side search that would only return views of which the ID matched the search string.
+
+#### Resources app: 'Resources' tab and 'Occupancy' tab can now be filtered [ID_34973]
+
+<!-- MR 10.3.0 - FR 10.3.2 -->
+
+In the *Resources* app, resource pools will now have a filter box that allow you to filter both the *Resources* tab and the *Occupancy* tab on resource name.
+
+- When you enter text in the filter box, a list with suggestions will appear.
+- When you select another resource pool while text is present in the filter box, the *Resources* tab and the *Occupancy* tab of that newly selected resource pool will automatically be filtered.
+- When an item in either the *Resources* tab or the *Occupancy* tab gets updated while a filter is applied, that item will only be shown if it matches the filter after the update.
+- To clear the filter box, you can either delete the text in the filter box or click the *Clear* button.
 
 ## Changes
 
@@ -847,6 +852,23 @@ Up to now, when you grouped/sorted the alarms in the alarm tab by severity, the 
 
 Also, in case of incident alarms, the alarm duration indicator will now show the highest severity found among the base alarms.
 
+#### Bookings module: Navigation panel has been improved and renamed to 'settings' panel [ID_34840]
+
+<!-- MR 10.3.0 - FR 10.3.1 Also see Fixes for bug fix section-->
+
+The *Navigation* panel has been improved and renamed to *Settings* panel.
+
+#### Alarm Console: A notice will now appear when resources are being migrated from XML to Elasticsearch [ID_34845]
+
+<!-- MR 10.3.0 - FR 10.3.1 -->
+
+When resources are being migrated from XML to Elasticsearch, a `Busy migrating resources to the Elasticsearch database.` notice will now be displayed in the Alarm console. Also, information events will be generated when a migration was started, was canceled or finished. In the latter case, the information event will indicate whether the migration finished with or without errors.
+
+When you start a resource migration in the *SLNetClientTest* tool (by selecting *Advanced > Migration > Resources XML to Elastic > Start Migration*), all ongoing bookings and bookings that are scheduled to start or stop in the next hour will be listed in a table (which can be sorted by clicking the table headers). As the Resource Manager is stopped while a migration is in progress, it is possible that bookings will not be started or stopped during a migration.
+
+> [!CAUTION]
+> Always be extremely careful when using the *SLNetClientTest* tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
+
 ### Fixes
 
 #### Visual Overview: Problem when navigating inside EPM cards [ID_32288]
@@ -967,3 +989,15 @@ Also, in some cases, elements with an index in a service would incorrectly not s
 <!-- MR 10.3.0 - FR 10.2.12 -->
 
 When you opened a trend graph that contained patterns matching existing tags, in some cases, not all detected occurrences of those patterns would initially be indicated. Only after zooming out would all detected patterns be properly indicated.
+
+#### Bookings module: Columns of type 'Date' would not get updated when you changed the time zone [ID_34840]
+
+<!-- MR 10.3.0 - FR 10.3.1 Also see Enhancements-->
+
+When, in the *Navigation* panel of the *Bookings* app, you selected another time zone, columns of type `Date` would incorrectly not get updated.
+
+#### Trending - Pattern matching: Trend graph would no longer show the matches for the displayed parameter after editing a tag [ID_34870]
+
+<!-- MR 10.3.0 - FR 10.3.1 -->
+
+When you edited the properties of a tag (e.g. name, description, etc.), the trend graph would no longer show the pattern matches for the parameter that is currently displayed in the graph. Instead, it would incorrectly show the pattern matches for the parameter for which the tag was defined.

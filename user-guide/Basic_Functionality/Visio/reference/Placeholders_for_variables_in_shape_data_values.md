@@ -4,6 +4,9 @@ uid: Placeholders_for_variables_in_shape_data_values
 
 # Placeholders for variables in shape data values
 
+> [!TIP]
+> For examples, see [Ziine](xref:ZiineDemoSystem) > *Visual Overview Design Examples* view > *Placeholders* page.
+
 ## Info keywords
 
 A number of keywords can be used in **Info** shape data fields to display information about a shape. These keywords, wrapped in square brackets, can also be used as placeholders in the value of shape data fields. For example:
@@ -139,6 +142,17 @@ Average of a list of entries, e.g. X, Y, Z (which will be parsed to numbers).
 Reference to a session variable (scope: current DataMiner Cube card).
 
 As parameters of which the value is an empty string are considered initialized, you can use a \[var:...\] placeholders to refer to a parameter containing an empty string.
+
+### [color:severity=...]
+
+Available from DataMiner 10.1.11/10.2.0 onwards.
+
+The alarm color for a specific severity level.
+
+For example: `[color:severity=minor]`
+
+> [!TIP]
+> See also: [Setting the background color of a static shape](xref:Setting_the_background_color_of_a_static_shape)
 
 ### \[ConnectionLineDisplayIdx\]
 

@@ -587,6 +587,9 @@
           items:
             - name: Embedding a Resource Manager component
               topicUid: Embedding_a_Resource_Manager_component
+              items:
+                - name: YAxisResource session variable examples
+                  topicUID: YAxisResource_Shape_Data_Examples
             - name: Embedding a Service Manager component
               topicUid: Embedding_a_Service_Manager_component
             - name: Embedding a Profile Manager component
@@ -939,7 +942,7 @@
           topicUid: Migrating_elements_in_a_DataMiner_System
         - name: Sharing DataMiner data with third parties
           topicUid: Sharing_DataMiner_data_with_third_parties
-        - name: DMS maintenance tools
+        - name: DataMiner maintenance tools
           topicUid: DMS_maintenance_tools
           items:
             - name: Cleaning up unused files on a DMA
@@ -1032,6 +1035,8 @@
             topicUid: Moving_the_Cassandra_database_to_a_different_disk_drive
           - name: Making Cassandra nodetool accessible remotely
             topicUID: Making_Cassandra_nodetool_accessible_remotely
+          - name: Data replication and consistency configuration
+            topicUid: replication_and_consistency_configuration
         - name: Elasticsearch database
           topicUid: Elasticsearch_database
           items:
@@ -1039,6 +1044,11 @@
               topicUid: Installing_Elasticsearch_via_DataMiner
             - name: Configuring Elasticsearch backups
               topicUid: Configuring_Elasticsearch_backups
+              items:
+                - name: Taking and restoring snapshots
+                  topicUID: Configuring_Elasticsearch_backups_Windows_Linux
+                - name: Restoring backups using the Standalone Elastic Backup Tool
+                  topicUID: Configuring_Elasticsearch_backups_Windows
             - name: Configuring indexing settings in System Center
               topicUid: Configuring_DataMiner_Indexing
             - name: Configuring the Elasticsearch database
@@ -1291,7 +1301,7 @@
 - name: Advanced DataMiner modules
   topicUid: Part4AdvancedModules
   items:
-    - name: DMS Automation
+    - name: Automation
       topicUid: automation
       items:
         - name: Managing Automation scripts
@@ -1368,13 +1378,13 @@
               topicUid: Building_interactive_Automation_scripts_with_CSharp
             - name: Compiling a C# code block as a library
               topicUid: Compiling_a_CSharp_code_block_as_a_library
-        - name: Special parameters available in DMS Automation scripts
+        - name: Special parameters available in Automation scripts
           topicUid: Special_parameters_available_in_DMS_Automation_scripts
         - name: Alarm level IDs for use in Automation scripts
           topicUid: Alarm_level_IDs_for_use_in_Automation_scripts
         - name: Automation scripts triggered from redundancy groups
           topicUid: Automation_scripts_triggered_from_redundancy_groups
-        - name: Frequently asked questions about DMS Automation
+        - name: Frequently asked questions about DataMiner Automation
           topicUid: Frequently_asked_questions_about_DMS_Automation
           items:
             - name: How can I execute an Automation Script on an element in timeout?
@@ -1389,7 +1399,7 @@
               topicUid: How_do_I_parse_Correlation_Alarm_Info_data
             - name: How can I manage permanent memory files?
               topicUid: How_can_I_manage_permanent_memory_files
-    - name: DMS Business Intelligence
+    - name: Business Intelligence
       topicUid: sla
       items:
         - name: Creating an SLA
@@ -1446,10 +1456,10 @@
               topicUid: Excluding_alarms_that_affect_the_SLA
         - name: SLA reporting
           topicUid: SLA_reporting
-    - name: DMS Correlation
+    - name: Correlation
       topicUid: correlation
       items:
-        - name: About DMS Correlation
+        - name: About DataMiner Correlation
           topicUid: About_DMS_Correlation
         - name: Managing Correlation rules
           topicUid: Managing_Correlation_rules
@@ -1538,10 +1548,10 @@
               topicUid: Viewing_aggregation_information
             - name: Managing aggregation rules
               topicUid: Managing_aggregation_rules
-    - name: DMS Experience and Performance Management
+    - name: Experience and Performance Management
       topicUid: EPM
       items:
-        - name: About DMS Experience and Performance Management
+        - name: About DataMiner Experience and Performance Management
           topicUid: About_DMS_Experience_and_Performance_Management
         - name: Working with the Experience and Performance Management interface
           topicUid: Working_with_the_Experience_and_Performance_Management_interface
@@ -1580,8 +1590,6 @@
               topicUid: Duplicating_a_dashboard
             - name: Deleting a dashboard
               topicUid: Deleting_a_dashboard
-            - name: Sharing a dashboard
-              topicUid: Sharing_a_dashboard
             - name: Editing a dashboard
               topicUid: Editing_a_dashboard
             - name: Changing dashboard settings
@@ -1612,6 +1620,8 @@
                 topicUid: DashboardGenericMap
               - name: Group
                 topicUid: DashboardGroup
+              - name: Icon
+                topicUID: DashboardIcon
               - name: Image
                 topicUid: DashboardImage
               - name: Text
@@ -1696,8 +1706,14 @@
               topicUid: Specifying_data_input_in_a_dashboard_URL
             - name: Configuring a dashboard to use a URL feed without a feed component
               topicUid: Configuring_a_dashboard_to_use_a_URL_feed_without_a_feed_component
+        - name: Sharing a dashboard
+          topicUid: Sharing_a_dashboard
         - name: Generating a report based on a dashboard
-          topicUid: Generating_a_report_based_on_a_dashboard
+          items:
+            - name: From DataMiner Cube
+              topicUID: Generating_a_report_based_on_a_dashboard_Cube
+            - name: From the Dashboards app
+              topicUID: Sharing_PDF_report_from_Dashboards_app
         - name: Customizing the Dashboards app
           topicUid: Customizing_the_Dashboards_app
         - name: Dashboard Gateway installation
@@ -1753,14 +1769,14 @@
               topicUid: Configuring_dashboard_access_rights
             - name: Dashboard Gateway troubleshooting
               topicUid: Dashboard_Gateway_troubleshooting
-    - name: DMS Inventory & Asset Management
+    - name: Inventory & Asset Management
       topicUid: AssetManagement
       items:
-        - name: About DMS Inventory & Asset Management
+        - name: About DataMiner Inventory & Asset Management
           topicUid: About_DMS_Inventory_Asset_Management
-        - name: Browsing the database with DMS Inventory and Asset Management
+        - name: Browsing the database with DataMiner Inventory and Asset Management
           topicUid: Browsing_the_database_with_DMS_Inventory_and_Asset_Management
-        - name: Managing data in the database with DMS Inventory and Asset Management
+        - name: Managing data in the database with DataMiner Inventory and Asset Management
           topicUid: Managing_data_in_the_database_with_DMS_Inventory_and_Asset_Management
           items:
             - name: Adding a row to a table
@@ -1777,7 +1793,7 @@
               topicUid: Reloading_the_Asset_Manager_user_interface
             - name: Starting a sync of the DataMiner database and the CMDB
               topicUid: Starting_a_sync_of_the_DataMiner_database_and_the_CMDB
-        - name: Configuring DMS Inventory and Asset Management
+        - name: Configuring DataMiner Inventory and Asset Management
           topicUid: Configuring_DMS_Inventory_and_Asset_Management
           items:
             - name: Tags in the Asset Manager configuration file
@@ -1786,7 +1802,7 @@
               topicUid: Example_of_an_Asset_Manager_configuration_file
             - name: Activating the Asset Management database in Cube
               topicUid: Activating_the_Asset_Management_database_in_Cube
-        - name: Configuring data mediation settings in DMS Inventory and Asset Management
+        - name: Configuring data mediation settings in DataMiner Inventory and Asset Management
           topicUid: Configuring_data_mediation_settings_in_DMS_Inventory_and_Asset_Management
           items:
             - name: Tags in the Asset Manager mediation configuration file
@@ -1795,16 +1811,16 @@
               topicUid: Example_of_an_Asset_Manager_mediation_configuration_file
         - name: Synchronizing a database with elements and views with the Surveyor
           topicUid: Synchronizing_a_database_with_elements_and_views_with_the_Surveyor
-    - name: DMS Job Manager
+    - name: Job Manager
       topicUid: jobs
       items:
         - name: About jobs
           topicUid: About_jobs
         - name: Accessing the Jobs app
           topicUID: Accessing_the_jobs_app
-        - name: Overview of the Job Manager app UI
+        - name: Overview of the Jobs app UI
           topicUid: Overview_of_the_Job_Manager_app_UI
-        - name: Configuring jobs in the Job Manager app
+        - name: Configuring jobs in the Jobs app
           topicUid: Configuring_jobs_in_the_Job_Manager_app
           items:
             - name: Configuring job domains
@@ -1825,10 +1841,10 @@
           topicUid: Manually_removing_a_job
         - name: Working with job templates
           topicUid: Working_with_job_templates
-    - name: DMS Maps
+    - name: Maps
       topicUid: maps
       items:
-        - name: About DMS Maps
+        - name: About DataMiner Maps
           topicUid: About_DMS_Maps
         - name: Using DataMiner Maps
           topicUid: Using_DataMiner_Maps
@@ -1879,7 +1895,7 @@
               topicUid: MarkerDetails
             - name: PopupSkeleton and PopupDetails
               topicUid: PopupSkeleton_and_PopupDetails
-    - name: DMS Mobile Gateway
+    - name: Mobile Gateway
       topicUid: MobileGateway
       items:
         - name: Configuring Mobile Gateway
@@ -1895,7 +1911,7 @@
               topicUid: Overview_of_the_Mobile_Gateway_configuration_settings
             - name: Configuring Mobile Gateway in DataMiner Cube
               topicUid: Configuring_Mobile_Gateway_in_DataMiner_Cube
-            - name: Approved modems for use with DMS Mobile Gateway
+            - name: Approved modems for use with Mobile Gateway
               topicUID: Approved_modems_Mobile_Gateway
         - name: Working with Mobile Gateway in DataMiner Cube
           topicUid: Working_with_Mobile_Gateway_in_DataMiner_Cube
@@ -1977,7 +1993,7 @@
               topicUid: Component_overview
             - name: Constants
               topicUid: Constants
-    - name: DMS Router Control
+    - name: Router Control
       topicUid: RouterControl
       items:
         - name: Working with the default Router Control configuration
@@ -2006,10 +2022,10 @@
               topicUid: Overview_of_user_interface_component_properties
             - name: Creating a dynamic tab page
               topicUid: Creating_a_dynamic_tab_page
-    - name: DMS Scheduler
+    - name: Scheduler
       topicUid: scheduler
       items:
-        - name: About the Scheduler module
+        - name: About DataMiner Scheduler
           topicUid: About_the_Scheduler_module
         - name: Manually adding a scheduled task
           topicUid: Manually_adding_a_scheduled_task
@@ -2064,7 +2080,7 @@
               topicUid: Bookings_Reservations_tab
             - name: Bookings / Reservations component of custom templates
               topicUid: Bookings_Reservations_component_of_custom_templates
-    - name: DMS Spectrum Analysis
+    - name: Spectrum Analysis
       topicUid: SpectrumAnalysis
       items:
         - name: Installation and configuration of a spectrum analyzer
@@ -2121,7 +2137,7 @@
               topicUid: Configuring_a_spectrum_element_to_follow_the_device_settings
             - name: Creating a simulated spectrum element
               topicUid: Creating_a_simulated_spectrum_element
-    - name: DMS Ticketing
+    - name: Ticketing
       topicUid: ticketing
       items:
         - name: Accessing the Ticketing app
@@ -2151,7 +2167,7 @@
               topicUid: About_DataMiner_elements_using_the_Ticketing_Gateway_API
             - name: Overview of the TicketingGatewayHelper class
               topicUid: Overview_of_the_TicketingGatewayHelper_class
-    - name: DataMiner Low-Code Apps
+    - name: Low-Code Apps
       topicUID: Application_framework
       items:
         - name: Accessing the Low-Code Apps module
@@ -2238,6 +2254,8 @@
               topicUID: DOM_Invoice_app_example
             - name: Status system example
               topicUID: DOM_status_system_example
+            - name: Altering values of a DomInstance - examples
+              topicUID: DOM_Altering_values_of_a_DomInstance
 - name: DataMiner Standard Apps, Frameworks & Solutions
   topicUid: Part5StandardApps
   items:
@@ -2407,6 +2425,56 @@
               topicUid: CI_Types1
             - name: Using your IS-04 registry to provision DataMiner with IDP
               topicUID: Using_your_IS04_registry_to_provision_DataMiner_with_IDP
+    - name: Process Automation framework
+      topicUid: PA_index
+      items:
+        - name: Process Automation concepts
+          topicUid: PA_Concepts
+          items:
+            - name: Activities
+              topicUid: PA_Activities
+            - name: Process definition
+              topicUid: PA_Process_Definition
+            - name: Process DOM instance
+              topicUid: PA_Process_DOM_Instance
+            - name: User DOM instance
+              topicUid: PA_User_DOM_Instance
+            - name: Queue element
+              topicUid: PA_Queue_Element
+            - name: Token
+              topicUid: PA_Token
+            - name: Process Automation app
+              topicUid: Process_Automation_App_Concept
+        - name: Process Automation app
+          topicUid: Process_Automation_App
+        - name: Getting started with PA
+          topicUid: Getting_Started_With_PA
+          items:
+            - name: Deploying and configuring the PA framework
+              topicUid: Deploying_and_Configuring_the_PA_Framework
+            - name: Creating activities
+              topicUid: PA_Creating_Activities
+              items:
+                - name: Creating script tasks
+                  topicUid: PA_Creating_script_tasks
+                - name: Creating user tasks
+                  topicUid: PA_Creating_user_tasks
+                - name: Creating resource tasks
+                  topicUid: PA_Creating_resource_tasks
+            - name: Creating and configuring a process definition
+              topicUid: PA_Creating_and_Configuring_a_Process_Definition
+        - name: Advanced configuration
+          items:
+            - name: Logging
+              topicUid: PA_Logging
+            - name: Exchanging process data with external applications
+              topicUid: Exchanging_Process_Data_With_External_Applications
+            - name: DOM instances cleanup
+              topicUid: DOM_Instances_Cleanup
+            - name: Pushing tokens into a process
+              topicUid: Pushing_Tokens_Into_A_Process
+            - name: Integrating gateways
+              topicUid: PA_Integrating_Gateways
     - name: DataMiner PTP app
       topicUid: SolPTP
       items:
@@ -2451,10 +2519,30 @@
           topicUid: provisioning_srm
         - name: Implementing virtual functions
           topicUid: implementing_function_srm
+          items:
+          - name: Creating profile parameters
+            topicUid: creating_profile_parameters
+          - name: Creating profile definitions
+            topicUid: creating_profile_definitions
+          - name: Creating profile instances
+            topicUid: creating_profile_instances
+          - name: Creating virtual functions
+            topicUid: creating_virtual_functions
+          - name: Creating Profile-Load Scripts
+            topicUid: creating_profile_load_scripts
         - name: Provisioning virtual function resources
           topicUid: provisioning_VFRs
         - name: Additional configuration for Service Orchestration
           topicUid: config_service_orchestration
+          items:
+          - name: Creating service definitions
+            topicUid: Service_Orch_creating_service_definitions
+          - name: Configuring resources and resource pools
+            topicUid: Service_Orch_configuring_resource_and_pools
+          - name: Creating LSO scripts
+            topicUid: Service_Orch_creating_LSO_scripts
+          - name: Adding DTR
+            topicUid: Service_Orch_adding_DTR
         - name: Additional configuration for Resource Automation
           topicUid: config_resource_automation
         - name: Additional configuration for Resource Scheduling
@@ -2466,6 +2554,13 @@
         items:
           - name: Booking Manager user interface
             topicUid: Booking_Manager_user_interface
+            items:
+              - name: Bookings tab
+                topicUid: Booking_Manager_Bookings_tab
+              - name: Config tab
+                topicUid: Booking_Manager_Config_tab
+              - name: Admin tab
+                topicUid: Booking_Manager_Admin_tab
           - name: Interacting with the Booking Manager app using custom Automation scripts
             topicUid: Interacting_with_the_Booking_Manager_app_using_custom_Automation_scripts
             items:
@@ -2475,6 +2570,19 @@
                 topicUid: Frequently_asked_questions_related_to_bookings_and_scripting
           - name: SRM properties for use with the Booking Manager app
             topicUid: SRM_properties_Booking_Manager
+      - name: Advanced configuration
+        items:
+          - name: User interface customization
+            topicUID: SRM_user_interface_customization
+            items:
+              - name: Creating a custom front end for the Booking Manager
+                topicUID: SRM_custom_front_end
+              - name: Using custom scripts instead of the default SRM wizards
+                topicUID: SRM_custom_scripts
+          - name: Advanced configuration for Service Orchestration
+            items:
+              - name: Resources configuration
+                topicUID: Service_Orchestration_resources_advanced
 - name: DataMiner Cloud Platform
   topicUid: Part51CloudPlatform
   items:
@@ -2492,6 +2600,8 @@
               topicUID: Connect_to_cloud_with_DMZ
             - name: Connecting with older DataMiner versions
               topicUid: Connecting_with_older_DataMiner_versions
+            - name: DataMiner Cloud Packs
+              topicUid: CloudPackages
         - name: Linking your DataMiner account to your DCP account
           topicUid: Linking_your_DataMiner_and_DCP_account
         - name: Cloud data storage policies
@@ -2605,6 +2715,10 @@
           topicUid: Viewing_info_on_shares
     - name: DataMiner Teams bot
       topicUid: DataMiner_Teams_bot
+    - name: Advanced configuration
+      items:
+        - name: Customizing the cloud endpoint configuration
+          topicUID: Custom_cloud_endpoint_configuration
 - name: DataMiner Professional Services
   topicUid: Part52ProfessionalServices
   items:
@@ -2754,6 +2868,36 @@
     - name: Known issues
       topicUID: Known_issues
       items:
+        - name: Null reference exceptions in SLDBConnection.txt and unhandled exception in Alarm Console
+          topicUID: KI_NullReferenceException_SLDBConnection
+        - name: SLProtocol timer thread run-time error
+          topicUID: KI_SLProtocol_timer_thread_RTE
+        - name: Vertical text in Visual Overview not displayed correctly
+          topicUID: KI_Visual_Overview_Vertical_Text_no_longer_working
+        - name: SLNet deadlock on DMA startup
+          topicUID: KI_SLNet_deadlock_on_startup
+        - name: Stable trend points not kept alive
+          topicUID: KI_stable_trend_points_not_kept_alive
+        - name: Missing 1-day average trending records
+          topicUID: KI_missing_avg_trending
+        - name: Memory leak in SLNet threads
+          topicUID: KI_SLNet_thread_leak
+        - name: SLAutomation memory leak when Engine.AddScriptOutput is used
+          topicUID: KI_SLAutomation_memory_leak_AddScriptOutput
+        - name: SLNet issues due to SPI obfuscation
+          topicUID: KI_SLNet_issue_SPI_obfuscation
+        - name: Various SLElement issues
+          topicUID: KI_SLElement_various_issues
+        - name: SLLog issue when large alarm tree is closed
+          topicUID: KI_SLLog_issue_when_large_alarm_tree_is_closed
+        - name: Element data lost after migrating elements in Cassandra Cluster setup
+          topicUID: KI_element_data_loss_after_migration_in_CC_setup
+        - name: Multiple issues when Failover based on hostnames is used
+          topicUID: KI_Failover_with_hostnames
+        - name: NATS not starting if DMS name contains special characters
+          topicUID: KI_NATS_not_starting_special_chars
+        - name: SLDataGateway memory leak during Cassandra Cluster migration
+          topicUID: KI_SLDataGateway_leak_during_CC_migration
         - name: Excessive SLElement CPU usage during Cassandra Cluster migration
           topicUID: KI_SLElement_CPU_high_during_CC_migration
         - name: SLElement memory leak during Cassandra Cluster migration
@@ -2806,6 +2950,8 @@
           topicUID: KI_Upgrade_error_api-ms-win-crt-stdio-l1-1-0_dll_is_missing
     - name: Customer DataMiner Reporting (CDMR)
       topicUID: CDMR
+    - name: Remote Log Collection
+      topicUID: RemoteLogCollection
 - name: Reference
   topicUid: Part7Reference
   items:
@@ -2883,6 +3029,8 @@
               topicUid: Working_with_Alerter_pop-up_balloons
             - name: Configuring Alerter
               topicUid: Configuring_Alerter
+        - name: Cassandra Cleaner
+          topicUID: Cassandra_Cleaner
         - name: DataMiner Comparison tool
           topicUID: DataMinerComparisonTool
         - name: DataMiner Size tool
@@ -2896,6 +3044,12 @@
               topicUid: Taskbar_Utility_command_line_options
         - name: Factory reset tool
           topicUID: Factory_reset_tool
+        - name: Legacy trend data exporter
+          topicUID: Legacy_Trend_Data_Exporter
+        - name: Multi-threaded timer polling rate calculator
+          topicUID: Multi_Threaded_Timer_Polling_Rate_Calculator
+        - name: Protocol debug tools
+          topicUID: Protocol_Debug_Tools
         - name: SLLogCollector
           topicUid: SLLogCollector
         - name: SLNetClientTest tool
@@ -2908,111 +3062,137 @@
             - name: SLNetClientTest tool diagnostic procedures
               topicUid: SLNetClientTest_tool_diagnostic_procedures
               items:
-                - name: Consulting license information for a DMA
-                  topicUid: SLNetClientTest_consulting_license_info
-                - name: Verifying sync rules
-                  topicUid: SLNetClientTest_verifying_sync_rules
-                - name: Debugging callback timeout errors
-                  topicUid: SLNetClientTest_debugging_callback_timeout_errors
-                - name: Consulting replication information for other DMAs in a DMS
-                  topicUid: SLNetClientTest_consulting_replication_info
-                - name: Inspecting the active replication buffers
-                  topicUid: SLNetClientTest_inspecting_active_replication_buffers
-                - name: Consulting Correlation information
-                  topicUid: SLNetClientTest_consulting_correlation_info
-                - name: Activating verbose Correlation logging
-                  topicUid: SLNetClientTest_activating_verbose_correlation_logging
-                - name: Tracking DMA communication
-                  topicUid: SLNetClientTest_tracking_dma_communication
-                - name: Consulting connection details
-                  topicUid: SLNetClientTest_consulting_connection_details
-                - name: Creating a dump file for a particular process
-                  topicUid: SLNetClientTest_creating_dump_for_process
-                - name: Requesting information about pending incoming events
-                  topicUid: SLNetClientTest_info_pending_incoming_events
-                - name: Exporting data to a CSV file
-                  topicUid: SLNetClientTest_exporting_data_to_csv
-                - name: Retrieving DCF debug information
-                  topicUid: SLNetClientTest_retrieving_dcf_debug_info
-                - name: Checking a hyperlink filter
-                  topicUid: SLNetClientTest_checking_hyperlink_filter
-                - name: Requesting an estimate of the number of rows for a storage type in the database
-                  topicUid: SLNetClientTest_estimate_number_rows_for_storage_type
-                - name: Requesting a list of active merge actions for a protocol
-                  topicUid: SLNetClientTest_active_merge_actions_protocols
-                - name: Retrieving connection info for a particular element
-                  topicUid: SLNetClientTest_retrieving_connection_info
-                - name: Retrieving information on open GQI sessions
-                  topicUid: SLNetClientTest_info_on_open_gqi_sessions
+              - name: Activating verbose Correlation logging
+                topicUID: SLNetClientTest_activating_verbose_correlation_logging
+              - name: Checking a hyperlink filter
+                topicUID: SLNetClientTest_checking_hyperlink_filter
+              - name: Checking whether protocol buffer serialization is enabled
+                topicUID: SLNetClientTest_Checking_whether_protocol_buffer_serialization_is_enabled
+              - name: Consulting connection details
+                topicUID: SLNetClientTest_consulting_connection_details
+              - name: Consulting Correlation information
+                topicUID: SLNetClientTest_consulting_correlation_info
+              - name: Consulting license information for a DMA
+                topicUID: SLNetClientTest_consulting_license_info
+              - name: Consulting replication information for other DMAs in a DMS
+                topicUID: SLNetClientTest_consulting_replication_info
+              - name: Consulting the trend data inspector
+                topicUID: SLNetClientTest_trend_data_inspector
+              - name: Creating a dump file for a particular process
+                topicUID: SLNetClientTest_creating_dump_for_process
+              - name: Debugging callback timeout errors
+                topicUID: SLNetClientTest_debugging_callback_timeout_errors
+              - name: Exporting data to a CSV file
+                topicUID: SLNetClientTest_exporting_data_to_csv
+              - name: Inspecting parameter table rows in SLProtocol and SLElement
+                topicUID: SLNetClientTest_Inspecting_parameter_table_rows
+              - name: Inspecting the active replication buffers
+                topicUID: SLNetClientTest_inspecting_active_replication_buffers
+              - name: Inspecting the contents of a table parameter
+                topicUID: SLNetClientTest_Inspecting_the_contents_of_a_table_parameter
+              - name: Inspecting the parameter notification queue
+                topicUID: SLNetClientTest_Inspecting_the_parameter_notification_queue
+              - name: Inspecting the SLNet event subscriptions
+                topicUID: SLNetClientTest_viewing_connection_details
+              - name: Inspecting the stack sizes in SLNet
+                topicUID: SLNetClientTest_Inspecting_the_stack_sizes_in_SLNet
+              - name: Requesting a list of active merge actions for a protocol
+                topicUID: SLNetClientTest_active_merge_actions_protocols
+              - name: Requesting an estimate of the number of rows for a storage type in the database
+                topicUID: SLNetClientTest_estimate_number_rows_for_storage_type
+              - name: Requesting information about pending incoming events
+                topicUID: SLNetClientTest_info_pending_incoming_events
+              - name: Requesting QAction metrics
+                topicUID: SLNetClientTest_Requesting_QAction_metrics
+              - name: Retrieving connection info for a particular element
+                topicUID: SLNetClientTest_retrieving_connection_info
+              - name: Retrieving DCF debug information
+                topicUID: SLNetClientTest_retrieving_dcf_debug_info
+              - name: Retrieving information on open GQI sessions
+                topicUID: SLNetClientTest_info_on_open_gqi_sessions
+              - name: Tracking DMA communication
+                topicUID: SLNetClientTest_tracking_dma_communication
+              - name: Verifying sync rules
+                topicUID: SLNetClientTest_verifying_sync_rules
+              - name: Viewing SLNet calls being sent
+                topicUID: SLNetClientTest_Viewing_SLNet_calls_being_sent
+              - name: Viewing the connection timeout states of an element
+                topicUID: SLNetClientTest_Viewing_the_connection_timeout_states_of_an_element
             - name: SLNetClientTest tool advanced procedures
               topicUid: SLNetClientTest_tool_advanced_procedures
               items:
-                - name: Editing the connection string between two DataMiner Agents
-                  topicUid: SLNetClientTest_editing_connection_string
-                - name: Configuring SMTP
-                  topicUID: SLNetClientTest_configuring_SMTP
-                - name: Disabling replication buffering
-                  topicUid: SLNetClientTest_disabling_replication_buffering
-                - name: Making DataMiner Cube ignore view updates
-                  topicUid: SLNetClientTest_making_Cube_ignore_view_updates
-                - name: Configuring how long alarm statistics are kept in memory
-                  topicUid: SLNetClientTest_configuring_how_long_alarm_statistics
-                - name: Aborting a running Automation script
-                  topicUid: SLNetClientTest_aborting_running_script
-                - name: Removing references to items that no longer exist
-                  topicUid: SLNetClientTest_removing_references
-                - name: Comparing the views on two Agents in a DMS
-                  topicUid: SLNetClientTest_comparing_views_on_two_dmas
-                - name: Having RCA chains updated by the DCF engine
-                  topicUid: SLNetClientTest_having_rca_chains_updated
-                - name: Increasing the maximum upload size for upgrade packages in a DMS
-                  topicUid: SLNetClientTest_increasing_max_upload
-                - name: Managing base subscriptions
-                  topicUid: SLNetClientTest_managing_base_subscriptions
-                - name: Configuring trend caching
-                  topicUid: SLNetClientTest_configuring_trend_caching
-                - name: Modifying the engine ID of a DMA
-                  topicUid: SLNetClientTest_modifying_engine_id
-                - name: Changing the service template child element and child service limitations
-                  topicUid: SLNetClientTest_changing_service_template_child_limitations
-                - name: Forcing file synchronization between DMAs
-                  topicUid: SLNetClientTest_forcing_file_sync
-                - name: Setting the TTL for database records
-                  topicUid: SLNetClientTest_setting_TTL_database
-                - name: Enabling or disabling protocol buffer serialization
-                  topicUid: SLNetClientTest_protocol_buffer_serialization
-                - name: Managing scheduled tasks for maintenance of a Cassandra database
-                  topicUid: SLNetClientTest_managing_scheduled_tasks_maintenance_Cassandra
-                - name: Creating an enhanced view
-                  topicUid: SLNetClientTest_creating_enhanced_view
-                - name: Generating SMIv2 MIB files
-                  topicUid: SLNetClientTest_generating_mib_files
-                - name: Fine-tuning the CPECollectorHelper API timeout
-                  topicUid: SLNetClientTest_finetuning_CPECollectorHelper
-                - name: Changing the number of records in the protocol cache
-                  topicUid: SLNetClientTest_changing_number_records_protocol_cache
-                - name: Checking or modifying the settings related to a Refused DMA state
-                  topicUid: SLNetClientTest_refused_dma_state
-                - name: Managing trend patterns
-                  topicUid: SLNetClientTest_managing_trend_patterns
-                - name: Fine-tuning NATS settings
-                  topicUid: SLNetClientTest_finetuning_nats_settings
-                - name: Changing the grace period for the SLNetCom Notification thread
-                  topicUid: SLNetClientTest_grace_period_SLNetCom_notification
-                - name: Specifying credentials for a shared backup path for Elasticsearch
-                  topicUid: SLNetClientTest_credentials_shared_backup_Elasticsearch
-                - name: Configuring the frequency of smart baseline calculations
-                  topicUid: SLNetClientTest_configuring_frequency_smart_baseline
-                - name: Disabling automatic NATS configuration
-                  topicUid: SLNetClientTest_disabling_automatic_nats_config
+              - name: Aborting a running Automation script
+                topicUID: SLNetClientTest_aborting_running_script
+              - name: Changing the grace period for the SLNetCom Notification thread
+                topicUID: SLNetClientTest_grace_period_SLNetCom_notification
+              - name: Changing the number of records in the protocol cache
+                topicUID: SLNetClientTest_changing_number_records_protocol_cache
+              - name: Changing the service template child element and child service limitations
+                topicUID: SLNetClientTest_changing_service_template_child_limitations
+              - name: Checking or modifying the settings related to a Refused DMA state
+                topicUID: SLNetClientTest_refused_dma_state
+              - name: Comparing the views on two Agents in a DMS
+                topicUID: SLNetClientTest_comparing_views_on_two_dmas
+              - name: Configuring how long alarm statistics are kept in memory
+                topicUID: SLNetClientTest_configuring_how_long_alarm_statistics
+              - name: Configuring SMTP
+                topicUID: SLNetClientTest_configuring_SMTP
+              - name: Configuring the frequency of smart baseline calculations
+                topicUID: SLNetClientTest_configuring_frequency_smart_baseline
+              - name: Configuring trend caching
+                topicUID: SLNetClientTest_configuring_trend_caching
+              - name: Creating an enhanced view
+                topicUID: SLNetClientTest_creating_enhanced_view
+              - name: Disabling automatic NATS configuration
+                topicUID: SLNetClientTest_disabling_automatic_nats_config
+              - name: Disabling replication buffering
+                topicUID: SLNetClientTest_disabling_replication_buffering
+              - name: Editing the connection string between two DataMiner Agents
+                topicUID: SLNetClientTest_editing_connection_string
+              - name: Enabling or disabling protocol buffer serialization
+                topicUID: SLNetClientTest_protocol_buffer_serialization
+              - name: Fine-tuning NATS settings
+                topicUID: SLNetClientTest_finetuning_nats_settings
+              - name: Fine-tuning the CPECollectorHelper API timeout
+                topicUID: SLNetClientTest_finetuning_CPECollectorHelper
+              - name: Forcing file synchronization between DMAs
+                topicUID: SLNetClientTest_forcing_file_sync
+              - name: Generating SMIv2 MIB files
+                topicUID: SLNetClientTest_generating_mib_files
+              - name: Having RCA chains updated by the DCF engine
+                topicUID: SLNetClientTest_having_rca_chains_updated
+              - name: Increasing the maximum upload size for upgrade packages in a DMS
+                topicUID: SLNetClientTest_increasing_max_upload
+              - name: Making DataMiner Cube ignore view updates
+                topicUID: SLNetClientTest_making_Cube_ignore_view_updates
+              - name: Managing base subscriptions
+                topicUID: SLNetClientTest_managing_base_subscriptions
+              - name: Managing scheduled tasks for maintenance of a Cassandra database
+                topicUID: SLNetClientTest_managing_scheduled_tasks_maintenance_Cassandra
+              - name: Managing trend patterns
+                topicUID: SLNetClientTest_managing_trend_patterns
+              - name: Modifying the engine ID of a DMA
+                topicUID: SLNetClientTest_modifying_engine_id
+              - name: Removing references to items that no longer exist
+                topicUID: SLNetClientTest_removing_references
+              - name: Setting the TTL for database records
+                topicUID: SLNetClientTest_setting_TTL_database
+              - name: Specifying credentials for a shared backup path for Elasticsearch
+                topicUID: SLNetClientTest_credentials_shared_backup_Elasticsearch
         - name: SLOffload tool
           topicUid: SLOffload_tool
         - name: SLSkipAsSourceTool
           topicUID: SLSkipAsSourceTool
+        - name: SNMP bandwidth estimation tool
+          topicUID: SNMP_Bandwidth_Estimation_Tool
+        - name: Spectrum simulation protocol
+          topicUID: Spectrum_Simulation_protocol
         - name: Standalone BPA Executor
           topicUID: Standalone_BPA_Executor
         - name: Standalone Cassandra Backup tool
           topicUID: Standalone_Cassandra_Backup_Tool
+        - name: Standalone Cassandra Cluster Installer
+          topicUID: Standalone_Cassandra_Cluster_Installer
         - name: Standalone Elastic Backup tool
           topicUID: Standalone_Elastic_Backup_Tool
         - name: Standalone Elasticsearch Cluster Installer
@@ -3074,6 +3254,15 @@
           topicUid: Offline_demo_license_for_DMA_to_be_installed_by_user
     - name: Soft-launch options
       topicUID: SoftLaunchOptions
+      items: 
+        - name: Activating soft-launch options
+          topicUID: Activating_Soft_Launch_Options
+        - name: Overview of soft-launch options
+          topicUID: Overview_of_Soft_Launch_Options
+        - name: Activating SLProtocol as a 64-bit process
+          topicUID: Activating_SLProtocol_as_a_64_Bit_Process
+    - name: DataMiner Extension Modules
+      topicUID: DataMinerExtensionModules
     - name: Custom branding
       topicUID: Custom_branding
     - name: DataMiner metrics

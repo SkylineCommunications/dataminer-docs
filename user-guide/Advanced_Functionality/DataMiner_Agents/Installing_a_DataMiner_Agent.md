@@ -16,3 +16,6 @@ uid: Installing_a_DataMiner_Agent
 
 > [!IMPORTANT]
 > The server onto which you plan to install the DataMiner Agent software has to comply with the DataMiner system requirements. See [DataMiner Compute Requirements](https://community.dataminer.services/dataminer-compute-requirements/).
+
+> [!TIP]
+> See also: [Obtaining a DataMiner license](xref:DataminerLicenses)

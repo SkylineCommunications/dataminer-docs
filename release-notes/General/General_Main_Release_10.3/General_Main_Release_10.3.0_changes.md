@@ -14,7 +14,7 @@ uid: General_Main_Release_10.3.0_changes
 
 ### Enhancements
 
-#### Security enhancements [ID_31045] [ID_31054] [ID_31761] [ID_32055] [ID_32566] [ID_33069] [ID_33078] [ID_33218] [ID_33365] [ID_33583]
+#### Security enhancements [ID_31045] [ID_31054] [ID_31761] [ID_32055] [ID_32566] [ID_33069] [ID_33078] [ID_33218] [ID_33365] [ID_33583] [ID_34723]
 
 A number of security enhancements have been made.
 
@@ -409,6 +409,20 @@ Alarm locking in the SLElement process has been enhanced.
 
 Because of a number of enhancements, overall performance has increased when opening selection boxes, especially when they contain a large number of items.
 
+#### Dashboards app: Upload size of PDF files will now be validated [ID_34620]
+
+<!-- MR 10.3.0 - FR 10.2.12 -->
+
+When PDF files are uploaded via the WebAPI (e.g. when a PDF report is generated), an error will now be thrown when the batch size exceeds 10 MB or the total file size exceeds 1 GB.
+
+#### Behavioral change points stored in both Cassandra and Elasticsearch [ID_34621]
+
+<!-- MR 10.3.0 - FR 10.2.12 -->
+
+If an Elasticsearch database is available, the behavioral change points detected in trend data by the Behavioral Anomaly Detection feature will now be stored both in the Cassandra database and the Elasticsearch database. Otherwise, they will be stored in Cassandra only like before.
+
+This will support faster and more flexible change point querying via GQI in future releases.
+
 #### Dashboards app / Low-code apps - Visual Overview component: Enhancements with regard to WebSocket/polling settings and user access to visual overviews [ID_34624]
 
 <!-- MR 10.3.0 - FR 10.2.12 -->
@@ -443,6 +457,24 @@ For example, you can now use the following call to retrieve all resources:
 ```csharp
 var allResources = resourceManagerHelper.GetResources(new TRUEFilterElement<Resource>());
 ```
+
+#### GQI: Enhanced performance when retrieving DomInstances that have a DomBehaviorDefinition [ID_34853]
+
+<!-- MR 10.3.0 - FR 10.3.1 -->
+
+Because of a number of enhancements, overall performance has increased when retrieving DomInstances that have a DomBehaviorDefinition.
+
+#### SLAnalytics: Enhanced automatic evaluation of trend predictions [ID_34901]
+
+<!-- MR 10.3.0 - FR 10.3.1 -->
+
+Because of a number of enhancements, the automatic evaluation of trend predictions has improved.
+
+#### Service & Resource Management: Enhanced performance when adding and updating bookings [ID_35016]
+
+<!-- MR 10.3.0 - FR 10.3.2 -->
+
+Because of a number of enhancements, overall performance has increased when creating and updating bookings.
 
 ### Fixes
 
@@ -768,20 +800,6 @@ when a dashboard, a low-code app page or low-code app panel was initialized, in 
 
 When an interactive Automation script was executed in a web app, it would incorrectly not be possible to clear a selection box by selecting an empty option.
 
-#### 'One or more of the following modules are not licensed' error would incorrectly not list the unlicensed modules [ID_34407]
-
-<!-- MR 10.3.0 - FR 10.2.11 -->
-
-When a required software license cannot be found, a `One or more of the following modules are not licensed: ...` message will appear.
-
-In some cases, instead of listing the unlicensed modules, this message would incorrectly only mention "None".
-
-#### Web apps: Problem with email address boxes [ID_34421]
-
-<!-- MR 10.3.0 - FR 10.2.12 -->
-
-When you entered an address in an email address box and then selected something else on the page without pressing *ENTER* or *TAB*, the email address box would incorrectly expand and show a list of suggestions.
-
 #### Web Services API - CreateServiceTemplate: DataMinerID and ElementID incorrectly set to 0 instead of -1 [ID_34440]
 
 <!-- MR 10.3.0 - FR 10.2.11 -->
@@ -808,6 +826,12 @@ Since Cassandra 3.7 was replaced by Cassandra 3.11 in DataMiner Installer 10.2, 
 
 Also, if the *JAVA_HOME* environment variable is not defined, it will be set to the Java version that comes with Cassandra.
 
+#### External authentication via SAML: Problem when using Okta as identity provider [ID_34745]
+
+<!-- MR 10.3.0 - FR 10.3.2 -->
+
+When using external authentication via SAML, a software issue would prevent you from logging in when Okta was set up as identity provider.
+
 #### Skyline Device Simulator: 'no such object' would incorrectly be returned when requesting data from a simulation [ID_34746]
 
 <!-- MR 10.3.0 - FR 10.2.12 -->
@@ -816,3 +840,120 @@ When you tried to request data from a simulation that was built with AutoBuildVe
 
 > [!CAUTION]
 > This tool is provided "As Is" with no representation or warranty whatsoever. Skyline Communications will not provide any maintenance or support for this tool.
+
+#### Problem with SLElement when a trend template was being assigned [ID_34824]
+
+<!-- MR 10.3.0 - FR 10.3.1 -->
+
+In some cases, an error could occur in SLElement when a trend template was being assigned.
+
+#### Dashboards app: Empty groups would incorrectly not be removed from parameter feeds listing EPM parameters [ID_34884]
+
+<!-- MR 10.3.0 - FR 10.3.1 -->
+
+When, in a parameter feed listing EPM parameters, the parameters were grouped, empty groups would incorrectly not be removed after switching to another EPM object.
+
+#### Low-code apps: Problem with 'Close a panel' action [ID_34892]
+
+<!-- MR 10.3.0 - FR 10.3.1 -->
+
+When a *Close a panel* action was configured as a post action on a button component, in some cases, it would incorrectly not cause the panel to close.
+
+#### Dashboards & low-code apps: Decimal values would incorrectly not be allowed in range filters [ID_34897]
+
+<!-- MR 10.3.0 - FR 10.3.1 -->
+
+In some cases, a range filter in a query filter or a table column filter would incorrectly not allow decimal values.
+
+> [!NOTE]
+> When using a query filter with filter assistance enabled, the statistics will determine the number of decimals that can be used.
+
+#### Dashboards & low-code apps: Feed component selections would incorrectly be lost after applying a built-in theme [ID_34908]
+
+<!-- MR 10.3.0 - FR 10.3.1 -->
+
+When you applied a built-in theme, feed component selections would incorrectly be lost after refetching the data.
+
+#### Dashboards & low-code apps: Not possible to group the data in a timeline populated using a query with a query filter [ID_34932]
+
+<!-- MR 10.3.0 - FR 10.3.1 -->
+
+When a timeline was populated using a query with a query filter, it would incorrectly not be possible to group the data.
+
+#### Low-code apps: Drop-down box containing an 'execute component' action would incorrectly be empty [ID_34953]
+
+<!-- MR 10.3.0 - FR 10.2.12 [CU1] -->
+
+When an *execute component* action had been configured, in some cases, when you tried to update that action, the drop-down box containing the action would incorrectly be empty.
+
+#### Dashboards app & low-code apps: Manually sorted GQI table would no longer feed row values [ID_34969]
+
+<!-- MR 10.3.0 - FR 10.2.12 [CU1] -->
+
+When you had manually changed the sorting order of a GQI table by clicking a column header, in some cases, the table would no longer feed the selected row values.
+
+#### Dashboards app: Tables would lose their conditional coloring after being sorted or filtered [ID_34979]
+
+<!-- MR 10.3.0 - FR 10.3.1 -->
+
+When you sorted or filtered a table fed by e.g. a query filter, the table would incorrectly lose its conditional coloring.
+
+#### Web apps: Problem when a trend graph displaying multiple parameters showed data that was partly in the future [ID_34982]
+
+<!-- MR 10.3.0 - FR 10.3.1 -->
+
+When a trend graph displaying multiple parameters showed data that was partly in the future, in some cases, an error could occur.
+
+#### Alarm templates: Parameters exported to DVE child elements could have incorrect alarm limits [ID_34996]
+
+<!-- MR 10.3.0 - FR 10.3.2 -->
+
+When a parameter was exported as a standalone parameter to a DVE child element, in some cases, the alarm limits could be incorrect when the type of alarm monitoring was set to either *Relative* or *Absolute*.
+
+Also, LED bar controls would either not display or not update their alarm limits.
+
+#### Dashboards app: Button to restore the initial view would incorrectly appear on all tables after sorting or filtering a table [ID_35003]
+
+<!-- MR 10.3.0 - FR 10.3.2 -->
+
+When, on a dashboard, you sorted or filtered a table, a button to restore the initial view would incorrectly appear on all tables on that dashboard. Also, when you clicked one of those buttons, they would all disappear. From now on, when you sort or filter a table on a dashboard, a button to restore the initial view will only appear on that particular table.
+
+#### Skyline Device Simulator: Problem when running a proxy simulation [ID_35059]
+
+<!-- MR 10.3.0 [CU0]/10.2.0 [CU10] - FR 10.3.1 -->
+
+In some cases, an error could occur in the Skyline Device Simulator when a proxy simulation was being run.
+
+#### Service & Resource Management: Problem when migrating resources containing properties with keys or values set to null [ID_35067]
+
+<!-- MR 10.3.0 - FR 10.3.1 [CU0] -->
+
+When resource data was being migrated to Elasticsearch, the following exception could be thrown when a resource or a resource pool contained properties with keys or values that were set to null.
+
+```txt
+2022/12/01 08:53:59.582|SLNet.exe|ResourceManager|ERR|0|6|System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.ArgumentException: value is not serializable to json
+```
+
+#### Problem with the generation of TaskCancellationExceptions [ID_35079]
+
+<!-- MR 10.3.0 - FR 10.3.2 -->
+
+Modules using the managed SPI framework (Skyline.DataMiner.Spi) would trigger excessive numbers of TaskCancellationExceptions. Also, for the SLNet process, increasing numbers of these exceptions would be generated for every additional Cube client.
+
+#### Monitoring app: Problem when opening the histogram page of a view [ID_35081]
+
+<!-- MR 10.3.0 - FR 10.3.2 -->
+
+When, in the *Monitoring* app, you selected a view and opened the histogram page, in some cases, a `Maximum call stack size exceeded` error would appear.
+
+#### Dashboards app: Visual Overview component would not show any content when linked to a feed [ID_35130]
+
+<!-- MR 10.3.0 - FR 10.3.2 -->
+
+When a Visual Overview component was linked to a feed, in some cases, it would not show any content.
+
+#### SLElement would leak memory when an element was frequently receiving timeout values [ID_35131]
+
+<!-- MR 10.3.0 - FR 10.3.2 -->
+
+When an element was frequently receiving timeout values, SLElement would leak memory.
