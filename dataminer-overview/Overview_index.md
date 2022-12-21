@@ -16,5 +16,5 @@ We are working on adding more information to this section soon, so check back fo
 - [Pricing](xref:Pricing)
 - [Support Services](xref:Overview_Support_DMS_M_and_S)
 - [Compliance statements](xref:Overview_Compliance_Statements_intro)
-- [Partner Program](xref:Partner_Program)
+- [DataMiner Partner Program](xref:Partner_Program)
 - [Frequently asked questions](xref:FAQs)
