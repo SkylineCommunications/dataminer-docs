@@ -87,6 +87,12 @@ Because of a number of enhancements, behavioral changes of the type "level shift
 
 Up to now, a loading skeleton would be displayed each time data was being loaded into a GQI component (e.g. a node edge graph). From now on, only when the component was empty will a loading skeleton be displayed. When existing data in the component is being refreshed, a loader bar will now be displayed instead.
 
+#### Dashboards app - Line & area chart component: 'Group by' setting will now by default be set to 'All together' [ID_35160]
+
+<!-- MR 10.4.0 - FR 10.3.2 -->
+
+In case a *Line & area chart* component displays trending for multiple parameters, the *Group by* setting allows you to specify how the graphs should be grouped. From now on, this *Group by* setting will by default be set to "All together".
+
 ### Fixes
 
 #### Mobile apps: Problem when trying to select an item in a drop-down box [ID_34742]

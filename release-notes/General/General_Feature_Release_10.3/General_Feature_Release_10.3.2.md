@@ -143,6 +143,12 @@ Because of a number of enhancements, behavioral changes of the type "level shift
 
 Up to now, a loading skeleton would be displayed each time data was being loaded into a GQI component (e.g. a node edge graph). From now on, only when the component was empty will a loading skeleton be displayed. When existing data in the component is being refreshed, a loader bar will now be displayed instead.
 
+#### Dashboards app - Line & area chart component: 'Group by' setting will now by default be set to 'All together' [ID_35160]
+
+<!-- MR 10.4.0 - FR 10.3.2 -->
+
+In case a *Line & area chart* component displays trending for multiple parameters, the *Group by* setting allows you to specify how the graphs should be grouped. From now on, this *Group by* setting will by default be set to "All together".
+
 ### Fixes
 
 #### Problem with Elasticsearch health monitoring [ID_34744]
@@ -196,6 +202,12 @@ When, on a dashboard, you sorted or filtered a table, a button to restore the in
 <!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
 
 In some cases, *Card*, *Script*, *Link* and *Popup* actions would no longer work in visual overviews opened in web apps.
+
+#### Hosting agent filters would be disregarded when alarm events were retrieved from an Elasticsearch database [ID_35049]
+
+<!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
+
+When alarm events were retrieved from an Elasticsearch database, any hosting agent filters would be disregarded.
 
 #### SLLogCollector would only take a dump of the first process when multiple processes were specified in the -d command-line option [ID_35074]
 

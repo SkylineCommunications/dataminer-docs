@@ -142,6 +142,12 @@ In some cases, *Card*, *Script*, *Link* and *Popup* actions would no longer work
 
 When you opened an alarm tab of type "sliding window" with a large number of alarm trees, in some cases, the UI could become unresponsive.
 
+#### Hosting agent filters would be disregarded when alarm events were retrieved from an Elasticsearch database [ID_35049]
+
+<!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
+
+When alarm events were retrieved from an Elasticsearch database, any hosting agent filters would be disregarded.
+
 #### DataMiner Cube: Y-axis values could be missing when opening a trend graph [ID_35060]
 
 <!-- Main Release Version 10.1.0 [CU22]/10.2.0 [CU11] - Feature Release Version 10.3.2 -->
