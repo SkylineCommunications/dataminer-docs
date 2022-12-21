@@ -2,9 +2,9 @@
 uid: automation
 ---
 
-# DMS Automation
+# DataMiner Automation
 
-DMS Automation allows the user to create scripts that can automatically take care of backup routines, system configuration, channel selection, report generation, notifications via email or SMS, etc. Within the user interface, you can build intricate, nested scripts that can then be scheduled for one-off or repeated execution. They can also be linked to objects shown in Microsoft Visio drawings, so that operators can trigger them with a click of a button.
+DataMiner Automation allows you to create scripts that can automatically take care of backup routines, system configuration, channel selection, report generation, notifications via email or SMS, etc. Within the user interface, you can build intricate, nested scripts that can then be scheduled for one-off or repeated execution. They can also be linked to objects shown in Microsoft Visio drawings, so that operators can trigger them with a click of a button.
 
 This section consists of the following topics:
 
@@ -18,10 +18,10 @@ This section consists of the following topics:
 
 - [Using C# code in Automation scripts](xref:Using_CSharp_code_in_Automation_scripts)
 
-- [Special parameters available in DMS Automation scripts](xref:Special_parameters_available_in_DMS_Automation_scripts)
+- [Special parameters available in Automation scripts](xref:Special_parameters_available_in_DMS_Automation_scripts)
 
 - [Alarm level IDs for use in Automation scripts](xref:Alarm_level_IDs_for_use_in_Automation_scripts)
 
 - [Automation scripts triggered from redundancy groups](xref:Automation_scripts_triggered_from_redundancy_groups)
 
-- [Frequently asked questions about DMS Automation](xref:Frequently_asked_questions_about_DMS_Automation)
+- [Frequently asked questions about DataMiner Automation](xref:Frequently_asked_questions_about_DMS_Automation)

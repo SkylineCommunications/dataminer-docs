@@ -45,7 +45,7 @@ If the property is defined both on instance and on definition level, the instanc
 
 You can find examples of how to implement a data transfer script in the automation scripts *SRM_ServiceProfileDataTransferExample* and *SRM_ServiceProfileDataTransferExampleShared*.
 
-#### Quarantining a contributing booking now affects the main booking \[ID_29095\]
+#### BREAKING CHANGE: Quarantining a contributing booking now affects the main booking \[ID_29095\]
 
 When a contributing booking is quarantined, this will now also affect the main booking.
 
@@ -61,7 +61,7 @@ When resources are assigned, if *SRM_ExposedResourceState* is set to *Quarantine
 
 Custom Create Booking Action scripts will now be executed before a newly created booking is confirmed. This way, if such a custom script fails for some reason, there will be no service state transition.
 
-#### Bookings that failed to start now set to Failed \[ID_28912\]
+#### BREAKING CHANGE: Bookings that failed to start now set to Failed \[ID_28912\]
 
 Previously, when a booking failed to start, a custom script would be called, but the booking would still be in Confirmed state. Now its *Booking Life Cycle* will be set to "Failed" and its *Status* will be set to "Pending".
 

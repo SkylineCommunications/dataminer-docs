@@ -61,6 +61,109 @@ During the migration, each DMA will go through the following stages:
 
 ### Running the migration
 
+#### [Running a migration with bespoke Elasticsearch data](#tab/tabid-1)
+
+In case your system contains bespoke Elasticsearch data or SRM data, use the procedure below.
+
+1. Follow the step-by-step guide on [taking and restoring snapshots](xref:Configuring_Elasticsearch_backups_Windows_Linux).
+
+   Make sure the snapshot has been [restored](xref:Configuring_Elasticsearch_backups_Windows_Linux#taking-the-snapshot) on the target Elasticsearch cluster.
+
+1. Enter `http://[IP address]:9200/_cat/indices` in your browser's address bar. Replace "[IP address]" with your IP address.
+
+   Take note of the prefixes used in the indices. You will need this information later. The default prefix is "dms".
+
+   ![Prefix snapshot](~/user-guide/images/Prefix_Snapshot.png)
+
+1. Stop your DataMiner System.
+
+1. Open the `C:\Skyline DataMiner\db.xml` file and check if `<DataBase type="Elasticsearch">` exists.
+
+   Example:
+
+   ```xml
+   <DataBases xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.skyline.be/config/db">
+      ...
+      <DataBase active="true" search="true" type="Elasticsearch">
+         <DBServer>10.2.1.5</DBServer>
+         <UID/>
+         <PWD/>
+      </DataBase>
+      ...
+   </DataBases>
+   ```
+
+   If you find `<DataBase type="Elasticsearch">`, replace the entries in the `<DBServer>` tag with a list of all the nodes in the target Elasticsearch cluster, separated by commas.
+
+   > [!NOTE]
+   > If you do not find `<Database type="Elasticsearch">` in the `C:\Skyline DataMiner\db.xml` file, switch to the tab on [running a regular migration](#running-the-migration).
+
+1. Restart your DataMiner System.
+
+1. Verify whether the snapshot restore worked by confirming that [bookings](xref:The_Bookings_module), [jobs](xref:jobs), and other custom data in Cube are still functional.
+
+1. Navigate to `C:\Skyline DataMiner\Tools\\`, and run *SLCCMigrator.exe*.
+
+1. Initialize all the DMAs in the list. You can initialize all DMAs at once using the *Initialize all agents* button or initialize them one at a time with the *Initialize* button for each DMA.
+
+   > [!NOTE]
+   > If one or more DMAs fail to be initialized, contact your Skyline Technical Account Manager to resolve this issue, or refer to the [Troubleshooting](#troubleshooting) section below for the solution.
+
+1. In the pop-up window, enter the Cassandra and Elasticsearch settings, and click *Confirm*.
+
+   The following settings are required:
+
+   - Cassandra settings:
+
+     - *Cassandra IP(s)*: The IPs of the Cassandra cluster nodes. For example: `10.11.1.70,10.11.2.70,10.11.3.70` or `10.11.1.70:9042` or `CC-NODE-01,CC-NODE-02`.
+
+     - *Keyspace prefix*: The prefix for the Cassandra keyspaces. Enter `cassandra_prefix_here`.
+
+     - *Cassandra user*: The Cassandra username.
+
+     - *Cassandra password*: The password for the specified username.
+
+     - *Cassandra consistency*: The consistency level. For more information, see [How is the consistency level configured?](https://docs.datastax.com/en/cassandra-oss/3.0/cassandra/dml/dmlConfigConsistency.html)
+
+       > [!NOTE]
+       >
+       > - If there are less than 4 nodes, we recommend setting this to *One*.
+       > - If there are more than 4 nodes, we recommend setting this to [Quorum](xref:replication_and_consistency_configuration#examples).
+
+   - Elasticsearch settings: These are not used in case there already is an Elasticsearch cluster connected to your DMS. In that case, you can just fill in dummy data.
+
+     - *Elastic IP(s)*: The IPs of the Elasticsearch cluster. For example: `10.11.1.70,10.11.2.70,10.11.3.70` or `10.11.1.70:9042` or `https://10.11.1.70:9042` or `ES-NODE-01,ES-NODE-02`.
+
+     - *Database prefix*: The prefix for the Elasticsearch indices and aliases. Enter `elastic_prefix_here`.
+
+       > [!NOTE]
+       > When you enter "elastic_prefix_here", DataMiner will use the same prefix as mentioned in step 2 to identify the data it owns. If a different prefix is entered, it will be impossible to use the migrated data.
+
+     - *Elastic user*: The Elasticsearch username.
+
+     - *Elastic password*: The password for the specified username. This is not mandatory, unless manually specified.
+
+1. Once the DMAs have been initialized, start the migration. You can do this for all DMAs at once with the *Start Migration* button at the top, or for one DMA at a time by clicking the *Details* button for that DMA and selecting *Migrate all storages*.
+
+   > [!IMPORTANT]
+   > Make sure no data is overwritten or removed during the migration.
+
+1. During the migration, you can monitor the progress in the main window of the tool. You can safely close the tool and open it again later. The migration process will continue even when you close *SLCCMigrator.exe*.
+
+1. When the migration has finished, check the main window of *SLCCMigrator.exe* and make sure there are no errors.
+
+1. When no errors are reported, click *Finalize migration* to restart all DMAs.
+
+1. Verify whether all data in Cube is still present and functional.
+
+> [!NOTE]
+>
+> - During the migration, you can cancel the migration of one particular data type for one particular DMA. This will not undo any changes made to the Cassandra and Elasticsearch clusters.
+> - If you want to cancel the entire migration process for all DMAs, click *Abort migration*. This will undo all changes made to the DMAs.
+> - When you migrate a DataMiner Failover setup, only the data of the active DMA will be migrated. Once the migration has finished, both DMAs will be restarted.
+
+#### [Running a regular migration](#tab/tabid-2)
+
 1. On one of the DMAs in your cluster, go to `C:\Skyline DataMiner\Tools\`, and run *SLCCMigrator.exe*.
 
 1. Initialize all the DMAs in the list. You can initialize all DMAs at once using the *Initialize all agents* button or initialize them one at a time with the *Initialize* button for each DMA.
@@ -106,6 +209,8 @@ During the migration, each DMA will go through the following stages:
 > - If you want to cancel the entire migration process for all DMAs, click *Abort migration*. This will undo all changes made to the DMAs.
 > - When you migrate a DataMiner Failover setup, only the data of the active DMA will be migrated. Once the migration has finished, both DMAs will be restarted.
 
+***
+
 ### Troubleshooting
 
 Any errors that occur during a migration process will be displayed in a pop-up window and stored in a log file.
@@ -141,12 +246,14 @@ When the Cassandra cluster feature is used, you can customize the consistency le
 
 1. Open the file *DB.xml* from the directory *C:\\Skyline DataMiner* in a text editor.
 
-1. In the \<Database> tag, add the *consistencyLevel=”x”* attribute, and set it to the consistency level you want, e.g. *two*.
+1. In the `<Database>` tag, add the *consistencyLevel="x"* attribute, and set it to the consistency level you want, e.g. *two*.
 
-    > [!NOTE]
-    >
-    > - The following possible consistency levels are supported: Any, One, Two, Three, Quorum, All, LocalQuorum, EachQuorum, Serial, LocalSerial, LocalOn. For more information, see [https://docs.datastax.com/en/cassandra-oss/3.0/cassandra/dml/dmlConfigConsistency.html](https://docs.datastax.com/en/cassandra-oss/3.0/cassandra/dml/dmlConfigConsistency.html).
-    > - The *consistencyLevel* attribute should only be changed in case the Cassandra cluster feature is used or a remote Cassandra server is used. If one Cassandra cluster per DMA is used, changing this attribute can cause the DMA to fail to start up.
-    > - Together with the replication factor, the consistency level determines the maximum number of nodes that can be down before data unavailability occurs. For example, if a replication factor of 3 and consistency level of 2 are used, Cassandra queries will require an answer from 2 out of 3 replicas to be considered successful. This means that if one node is down, queries will still succeed, but if another node is down, it is possible that queries will no longer succeed.
+   The following consistency levels are supported: Any, One, Two, Three, Quorum, All, LocalQuorum, EachQuorum, Serial, LocalSerial, LocalOne. The default setting is "Quorum".
+
+   > [!NOTE]
+   > Together with the replication factor, the consistency level determines the maximum number of nodes that can be down before data unavailability occurs. For more information, see [Data replication and consistency configuration](xref:replication_and_consistency_configuration).
 
 1. Restart DataMiner.
+
+> [!CAUTION]
+> Only change this attribute for a Cassandra Cluster setup. If you change it for a standard Cassandra setup with one Cassandra cluster per DMA, this can cause DataMiner to fail to start up.

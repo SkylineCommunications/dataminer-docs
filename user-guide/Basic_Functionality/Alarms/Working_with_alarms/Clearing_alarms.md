@@ -44,7 +44,7 @@ Alternatively, if a column with action buttons to clear alarms has been added in
 > [!NOTE]
 >
 > - If the alarm is not yet in a clearable state, the *Clear alarm* option is not shown.
-> - Clearing a clearable correlated alarm also clears the clearable base alarms. For more information on Correlation, see [DMS Correlation](xref:correlation#dms-correlation).
+> - Clearing a clearable correlated alarm also clears the clearable base alarms. For more information on Correlation, see [Correlation](xref:correlation).
 
 ## System-wide AutoClear setting
 

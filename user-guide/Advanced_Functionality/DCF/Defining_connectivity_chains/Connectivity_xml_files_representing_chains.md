@@ -125,6 +125,28 @@ A *\<Link>* tag can have the following attributes:
 
   - “*physicalMatching*”: Physical link between two internal connections of the same element.
 
+  Example:
+
+  ```xml
+  <Links>
+  <Link itemA="ALCALTEL" itemb="ALCALTEL" itemRelation="internalMatching" type="protocol">
+  ...
+  </Link>
+  <Link itemA="ALCALTEL" itemb="ALCALTEL" itemRelation="externalMatching" type="protocol">
+  ...
+  </Link>
+  <Link itemA="ALCALTEL" itemb="ALCALTEL" itemRelation="physicalMatching" type="protocol">
+  ...
+  </Link>
+  <Link itemA="ALCALTEL" itemb="DCM" itemRelation="externalMatching" type="protocol">
+  ...
+  </Link>
+  <Links>
+  ```
+
+  > [!NOTE]
+  > When itemA and itemB are equal, you need to define an itemRelation.
+
 - **type**
 
   This attribute can have the following values:
@@ -134,7 +156,9 @@ A *\<Link>* tag can have the following attributes:
   - “*Service*”
 
   > [!NOTE]
-  > The type of the first link of a chain, i.e. the entry point, should always be “Service”.
+  >
+  > - The type of the first link of a chain, i.e. the entry point, should always be “Service”.
+  > - If itemA and itemB are both specified, always add `type="protocol"`.
 
 - **includeValueInContext**
 

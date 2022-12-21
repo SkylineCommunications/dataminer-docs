@@ -5,6 +5,16 @@ uid: Known_issues
 
 | Issue | DataMiner version | Date added |
 |--|--|--|
+| [Null reference exceptions in SLDBConnection.txt and unhandled exception when retrieving Correlation details](xref:KI_NullReferenceException_SLDBConnection) | DataMiner 10.1.0 up to 10.2.0 [CU10]<br>DataMiner 10.1.2 up to 10.3.1 | December 20,2022 |
+| [SLProtocol timer thread run-time error](xref:KI_SLProtocol_timer_thread_RTE) | DataMiner versions prior to 10.2.0 [CU10]/10.3.1 | December 20, 2022 |
+| [Vertical text in Visual Overview not displayed correctly](xref:KI_Visual_Overview_Vertical_Text_no_longer_working) | From DataMiner 10.2.0 [CU3]/10.2.3 onwards | December 16, 2022 |
+| [SLNet deadlock on DMA startup](xref:KI_SLNet_deadlock_on_startup) | From DataMiner 10.1.0/10.1.2 onwards | December 14, 2022 |
+| [Stable trend points not kept alive](xref:KI_stable_trend_points_not_kept_alive) | From DataMiner 10.2.0 [CU8]/10.2.10 onwards | December 9, 2022 |
+| [Missing 1-day average trending records](xref:KI_missing_avg_trending) | From DataMiner 10.2.0/10.1.10 onwards | December 9, 2022 |
+| [Memory leak in SLNet threads](xref:KI_SLNet_thread_leak) | DataMiner 10.2.12 [CU0] and [CU1] | December 9, 2022 |
+| [SLAutomation memory leak when Engine.AddScriptOutput is used](xref:KI_SLAutomation_memory_leak_AddScriptOutput) | DataMiner 10.1.0 and 10.2.0 (up to [CU10])<br>From DataMiner 10.0.2 up to 10.3.1 | December 8, 2022 |
+| [SLNet issues due to SPI obfuscation](xref:KI_SLNet_issue_SPI_obfuscation) | DataMiner 10.2.0 [CU3] up to 10.2.0 [CU5]<br>DataMiner 10.2.6 up to 10.2.8 | December 7, 2022 |
+| [Various SLElement issues](xref:KI_SLElement_various_issues) | See [detailed page](xref:KI_SLElement_various_issues). | November 25, 2022 |
 | [SLLog issue when large alarm tree is closed](xref:KI_SLLog_issue_when_large_alarm_tree_is_closed) | DataMiner 10.2.0 [CU8] and [CU9]<br>DataMiner 10.2.11 and 10.2.12 | November 16, 2022 |
 | [Element data lost after migrating elements in Cassandra Cluster setup](xref:KI_element_data_loss_after_migration_in_CC_setup) | From DataMiner 10.1.0/10.0.11 <br>onwards | November 15, 2022 |
 | [Multiple issues when Failover based on hostnames is used](xref:KI_Failover_with_hostnames) | From DataMiner 10.2.0/10.1.8 <br>onwards | November 15, 2022 |
