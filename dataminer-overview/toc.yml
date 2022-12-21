@@ -76,7 +76,7 @@
           topicUid: Overview_Compliance_Statements_RvsG_O
         - name: Tender compliancy (licenses / engineering days)
           topicUid: Overview_Compliance_Statements_Tender_Compliancy
-    - name: Partner Program
+    - name: DataMiner Partner Program
       topicUID: Partner_Program
       items:
         - name: Becoming a DataMiner Partner

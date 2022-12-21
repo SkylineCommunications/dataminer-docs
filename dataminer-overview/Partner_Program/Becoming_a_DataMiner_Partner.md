@@ -6,7 +6,7 @@ uid: Becoming_a_DataMiner_Partner
 
 ### Application procedure
 
-You can start the process of becoming a DataMiner Partner by applying online. Your application will be reviewed, and Skyline will contact you if more information or details need to be discussed. If the outcome of your application is positive, they will reach out to arrange the subsequent contracting process.
+You can start the process of becoming a DataMiner Partner by [**applying online**](https://skyline.be/partner#dataminer-partner-program). Your application will be reviewed, and Skyline will contact you if more information or details need to be discussed. If the outcome of your application is positive, they will reach out to arrange the subsequent contracting process.
 
 ### Partner types
 

@@ -2,7 +2,7 @@
 uid: Partner_Program
 ---
 
-# Partner Program
+# DataMiner Partner Program
 
 The world around us is changing fast. The **shift towards transformational technology**, i.e. the virtualized, cloudified, ALL-IP ecosystems, is affecting everything you can think of: the way platforms are designed and deployed, the way companies are organized and operate, the way projects are managed, as well as the entire vendor and user landscape and dynamic.
 
@@ -13,7 +13,7 @@ This all is a massive undertaking as it touches on every imaginable aspect of th
 There's no underestimating [the role of DataMiner](#the-role-of-dataminer) and [the role of our partners](#your-role-as-our-partner) in this changing world with its constantly evolving market landscape.
 
 > [!TIP]
-> See also: [DataMiner Strategic Partner](https://community.dataminer.services/dataminer-partner-program/) on DataMiner Dojo.
+> For more information on the DataMiner Partner Program, see [www.skyline.be](https://skyline.be/partner).
 
 ## The role of DataMiner
 
@@ -39,7 +39,7 @@ Because of the pronounced open architecture and powerful enabling capabilities o
 
 In line with the general trend, your own role in the overall market landscape has evolved considerably. This means you have to realign with the needs and expectations of your customers.
 
-We no longer live in a world where an organization’s engineering team contracts a select number of vendors alongside a system integrator to implement monolithic bespoke ecosystems, which are then handed over to an operational team to be operated in a static mode for five years or longer. Today, the **key objective is to build an agile, data-driven operational ecosystem that can be evolved easily and continuously**.
+We no longer live in a world where an organization’s engineering team contracts a select number of vendors alongside a system integrator to implement monolithic bespoke ecosystems that are then handed over to an operational team to be operated in a static mode for five years or longer. Today, the **key objective is to build an agile, data-driven operational ecosystem that can be evolved easily and continuously**.
 
 Furthermore, in the new world, the qualities, features, and characteristics of an operational platform are no longer exclusively defined by the actual core processing products that have been deployed, whereas this was the case with bespoke monolithic hard-coded ecosystems. The fabric of the connectivity, the functions of the various modular components, are only definitive to some point.
 
@@ -51,7 +51,7 @@ Today, the **quality, features, and characteristics of an operational platform a
 
   The transition to transformational technology is affecting anything imaginable related to an operation and organization, e.g. the way systems are architected, deployed, operated, and evolved.
 
-  It also affects the way companies and teams are organized, how they need to collaborate with you and other actors (such as technology and product vendors), and how services are delivered, which business models are used, and so forth.
+  It also affects the way companies and teams are organized, how they need to collaborate with you and other actors (such as technology and product vendors), how services are delivered, which business models are used, and so forth.
 
   This is the world of Agility, DevOps, CI/CD, continuous learning, data-driven empowerment, being goal-driven rather than task-driven, collaboration, continuous innovation, and so on.
 
@@ -61,7 +61,7 @@ Today, the **quality, features, and characteristics of an operational platform a
 
   Today, the objective is two-fold:
 
-  - Building and designing an ecosystem to support a specific type of business or operation
+  - Building and designing an ecosystem to support a specific type of business or operation.
 
   - Building and designing an ecosystem so that it is an agile, data-driven platform that can evolve easily and continuously: a solution that is driven by open-architecture coding tools, code repositories, and CI/CD infrastructure that enables low-effort and safe continuous evolution, powerful data collection, automation, orchestration, process automation tooling, and much more.
 
@@ -82,3 +82,6 @@ Today, the **quality, features, and characteristics of an operational platform a
   DataMiner enables you to imagine new types of services, new workflows, more optimal or secure ways to leverage products and technology, and much more. DataMiner hands you the tools to capitalize on your ingenuity and skill sets.
 
   You can go to market either with a solution offering or a professional services offering.
+
+> [!NOTE]
+> [Apply online](xref:Becoming_a_DataMiner_Partner#application-procedure) to become a DataMiner Partner now!

@@ -4,7 +4,7 @@ uid: Sales_and_Marketing
 
 # Sales and Marketing
 
-The following tools and means are available for you to support your sales and marketing activities.
+The tools and means mentioned in this section are available for you to support your Sales and Marketing activities.
 
 ### Prepare your staff to excel
 
@@ -16,9 +16,15 @@ Typically, this is achieved with a tailored program of online sessions, adjusted
 
 - **General introduction of DataMiner**: Comprehensive outline of the overall vision of DataMiner, platform architecture, logical architecture, platform functions, features and capabilities, etc.
 
-- **Selling DataMiner solutions**: Overview of the various DataMiner licensing options and pricing structure. Training on how to scope, budget, and sell DataMiner solutions. Explanation of the typical sales process for a DataMiner solution, specific policies that may apply, the dos and don’ts, and the various tools and options available to support the process (e.g. [Dojo Community](https://community.dataminer.services/)).
+- **Selling DataMiner solutions**:
 
-- **Use case specific presentations & demos**: DataMiner supports an unlimited number of use cases, across a broad range of different industry verticals. Depending on your specific business and line of activities, Skyline subject matter experts can host in-depth sessions on all key related use cases and applications.
+  - Overview of the various DataMiner licensing options and pricing structure.
+
+  - Training on how to scope, budget, and sell DataMiner solutions.
+
+  - Explanation of the typical sales process for a DataMiner solution, specific policies that may apply, the dos and don’ts, and the various tools and options available to support the process (e.g. [Dojo Community](https://community.dataminer.services/)).
+
+- **Use case specific presentations & demos**: DataMiner supports an unlimited number of [use cases](https://community.dataminer.services/use-cases/), across a broad range of different industry verticals. Depending on your specific business and line of activities, Skyline subject matter experts can host in-depth sessions on all key related use cases and applications.
 
 - **Sales meet & greet**: As networking and people in general are instrumental in a successful collaboration, it is important for the right people to get introduced to one another so that they can establish a strong ongoing relationship (e.g. it is important for regional sales people to be connected to their peer at Skyline).
 
@@ -28,9 +34,11 @@ DataMiner is one of the biggest brands in the industry and has a powerful presen
 
 These are all organizations that crave added-value DataMiner services and solution offerings. As a partner, you can capitalize on that. It is a quick way to jumpstart your business.
 
-Making yourself and your offering stand out is the foundation for your success. Here are some pointers to maximize your visibility.
+Making yourself and your offering stand out is the foundation for your success.
 
-- **Press releases & other content**: Ensure that you have a steady stream of press releases, news items, blog posts, and updates going your contacts’ way.
+Here are some pointers to maximize your visibility.
+
+- **Press releases and other content**: Ensure that you have a steady stream of press releases, news items, blog posts, and updates going your contacts’ way.
 
   These could revolve around the signing of a partner agreement, successful certification of your staff, new projects that you have secured, highlighting an innovative use case/workflow that you have implemented, your attendance to industry events, opinion pieces showing your leadership and guiding people in the new world paradigms, etc.
 
@@ -41,8 +49,6 @@ Making yourself and your offering stand out is the foundation for your success. 
   For starters, make sure that you have an appealing and up-to-date [Partner Profile](https://community.dataminer.services/partners/) available on Dojo.
 
   Furthermore, through the DataMiner DevOps Professional program, you will also receive plenty of opportunity to further grow your exposure and build up leadership identity (e.g. publication of blog posts, use cases, etc.).
-
-<!-- Comment: xref to DataMiner DevOps Professional program page once added to docs -->
 
 - **Leverage all your channels**: Ensure that you leverage the DataMiner brand across all your channels, including your corporate website, social media, email signatures, etc.
 
@@ -68,7 +74,7 @@ Making yourself and your offering stand out is the foundation for your success. 
 
   However, as a partner, there is also an expectation that you participate in events and that your DataMiner-related offering takes a prominent position in those. You can contact Skyline for extra support with these events.
 
-  This support can range from joint announcements to support through DataMiner demo systems and setups, all the way to support staffing if needed (e.g. technical staff to support your demos and meetings, speakers, etc.). Note that private events these days are also instrumental to engage and empower a user community and that Skyline is available to support those.
+  This support can range from joint announcements, to support through DataMiner demo systems and setups, all the way to support staffing if needed (e.g. technical staff to support your demos and meetings, speakers, etc.). Note that private events these days are also instrumental to engage and empower a user community and that Skyline is available to support those.
 
 - **Show leadership**: Showing leadership and expertise and delivering added value beyond regular product or service marketing is table stakes these days.
 
@@ -102,7 +108,7 @@ Therefore, partners are highly encouraged to align with this collaborative minds
 
 - **F2F sales peer business reviews**: Considering the nature of a platform such as DataMiner, continuous close collaboration is key. Therefore, we typically encourage peers across the operation at both ends of the organizations to align on a regular basis.
 
-- [**Dojo Community**](https://community.dataminer.services/): Dojo is by far the most dynamic open community of its kind.
+- **Dojo Community**: [DataMiner Dojo](https://community.dataminer.services/) is by far the most dynamic open community of its kind.
 
   It provides a wealth of information and tools not only catered to engineering roles, but to anybody else involved with DataMiner (e.g. sales, pre-sales, marketing, etc.). Therefore, it is highly recommended that everyone involved learns how to use this resource.
 
