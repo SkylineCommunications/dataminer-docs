@@ -13,7 +13,7 @@ This all is a massive undertaking as it touches on every imaginable aspect of th
 There's no underestimating [the role of DataMiner](#the-role-of-dataminer) and [the role of our partners](#your-role-as-our-partner) in this changing world with its constantly evolving market landscape.
 
 > [!TIP]
-> For more information on the DataMiner Partner Program, see [www.skyline.be](https://skyline.be/partner).
+> For more information on the DataMiner Partner Program, see [Grow faster as a DataMiner Partner](https://skyline.be/partner).
 
 ## The role of DataMiner
 
