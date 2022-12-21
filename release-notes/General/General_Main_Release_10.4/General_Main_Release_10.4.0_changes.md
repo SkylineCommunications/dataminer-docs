@@ -95,12 +95,6 @@ In case a *Line & area chart* component displays trending for multiple parameter
 
 ### Fixes
 
-#### Mobile apps: Problem when trying to select an item in a drop-down box [ID_34742]
-
-<!-- MR 10.4.0 - FR 10.2.12 [CU0] -->
-
-In some cases, it would incorrectly not be possible to select an item in a drop-down box when the items were grouped or when their actual value was not identical to the value that was displayed.
-
 #### GQI: Problem when retrieving DCF interfaces [ID_34820]
 
 <!-- MR 10.4.0 - FR 10.3.1 -->

@@ -832,6 +832,12 @@ Also, if the *JAVA_HOME* environment variable is not defined, it will be set to 
 
 When using external authentication via SAML, a software issue would prevent you from logging in when Okta was set up as identity provider.
 
+#### Mobile apps: Problem when trying to select an item in a drop-down box [ID_34742]
+
+<!-- MR 10.3.0 - FR 10.2.12 [CU0] -->
+
+In some cases, it would incorrectly not be possible to select an item in a drop-down box when the items were grouped or when their actual value was not identical to the value that was displayed.
+
 #### Skyline Device Simulator: 'no such object' would incorrectly be returned when requesting data from a simulation [ID_34746]
 
 <!-- MR 10.3.0 - FR 10.2.12 -->
