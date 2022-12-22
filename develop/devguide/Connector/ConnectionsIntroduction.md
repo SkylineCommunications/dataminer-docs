@@ -89,7 +89,7 @@ For example, for an HTTP connection, UDP and Serial should be disabled:
 <PortSettings name="HTTP Connection">
    <BusAddress>
       <DefaultValue>bypassProxy</DefaultValue>
-      <Disabled>true</Disabled>
+      <Disabled>false</Disabled>
    </BusAddress>
    <IPport>
       <DefaultValue>80</DefaultValue>
