@@ -93,12 +93,6 @@ Up to now, a loading skeleton would be displayed each time data was being loaded
 
 In case a *Line & area chart* component displays trending for multiple parameters, the *Group by* setting allows you to specify how the graphs should be grouped. From now on, this *Group by* setting will by default be set to "All together".
 
-#### SLAnalytics: Enhanced processing of parameter values 'exception' and 'other' [ID_35214]
-
-<!-- MR 10.4.0 - FR 10.3.2 -->
-
-Because of a number of enhancements, overall processing of "exception" or "other" parameter values by the SLAnalytics process has improved.
-
 ### Fixes
 
 #### GQI: Problem when retrieving DCF interfaces [ID_34820]

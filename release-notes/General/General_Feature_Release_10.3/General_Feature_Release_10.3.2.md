@@ -151,7 +151,7 @@ In case a *Line & area chart* component displays trending for multiple parameter
 
 #### SLAnalytics: Enhanced processing of parameter values 'exception' and 'other' [ID_35214]
 
-<!-- MR 10.4.0 - FR 10.3.2 -->
+<!-- MR 10.3.0 - FR 10.3.2 -->
 
 Because of a number of enhancements, overall processing of "exception" or "other" parameter values by the SLAnalytics process has improved.
 
