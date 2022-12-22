@@ -172,6 +172,12 @@ When an engine.AddScriptOutput method was used to pass output data of type strin
 
 When a DataMiner cluster had an IDP license but no Resource Manager license, an error would incorrectly appear in the Alarm Console when the agents were synchronized.
 
+#### Trending: Stable trend data points would no longer be properly refreshed in the database [ID_35139]
+
+<!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
+
+Since DataMiner 10.2.10/10.2.0 CU8, stable trend data points would no longer be properly refreshed in the database, which could cause them being removed from the database when they expired.
+
 #### Protocols: Problem when using the 'partialSNMP' option when polling tables using the 'multipleGetNext' or 'multipleGetBulk' method [ID_35147]
 
 <!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
