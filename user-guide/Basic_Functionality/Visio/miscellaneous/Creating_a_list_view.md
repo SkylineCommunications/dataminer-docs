@@ -39,9 +39,7 @@ To create a list view, add a shape on the Visio page with the following shape da
 - **Filter**: See [List view filters](#list-view-filters).
 
 > [!NOTE]
->
-> - If a *ListView* component with source *Reservations* or *Bookings* is used together with an embedded Resource Manager component, selecting an item in the list will select the corresponding block on the Resource Manager timeline and vice versa. See [Embedding a Resource Manager component](xref:Embedding_a_Resource_Manager_component).
-> - If colors are defined using the *Visual.Background* property of bookings, from DataMiner 9.6.13 onwards, these can be displayed in the *Visual.Background* property column of a *ListView* component showing bookings, if the column is set to column type *Color*. In DataMiner 10.0.0/10.0.2, this property is renamed to *VisualBackground*. See [Customizing the color of booking blocks](xref:Embedding_a_Resource_Manager_component#customizing-the-color-of-booking-blocks).
+> If a *ListView* component with source *Reservations* or *Bookings* is used together with an embedded Resource Manager component, selecting an item in the list will select the corresponding block on the Resource Manager timeline and vice versa. See [Embedding a Resource Manager component](xref:Embedding_a_Resource_Manager_component).
 
 ## Component options
 
@@ -333,8 +331,6 @@ List view components can be found both in Visual Overview and in the DataMiner B
 
 - To apply a custom column configuration, see [Creating a new column configuration](#creating-a-new-column-configuration) and [Loading the default column configuration](#loading-the-default-column-configuration).
 
-- From DataMiner 9.6.13 onwards, it is possible to have a column display the color configured in the *Visual.Background* property of bookings. For this purpose, add the *Visual.Background* property column and set it to the column type *Color*. In DataMiner 10.0.0/10.0.2, this property is renamed to *VisualBackground*. See [Customizing the color of booking blocks](xref:Embedding_a_Resource_Manager_component#customizing-the-color-of-booking-blocks).
-
 > [!NOTE]
 > When an item is selected in the list, a session variable is populated with the booking ID, which can be of use for Visio drawings.
 
@@ -358,7 +354,7 @@ List view components can be found both in Visual Overview and in the DataMiner B
 
        - Select the *Icon* checkbox of a particular column to have its contents replaced by icons. From DataMiner 9.6.12 onwards, this option is supported for ID columns.
 
-       - Select the *Color* checkbox of a particular column to visualize the cells in that column as colored blocks.
+       - Select the *Color* checkbox of a particular column to visualize the cells in that column as colored blocks. This can for instance be used to show the color configured in the *Visual.Background* property of bookings (which is renamed to *VisualBackground* in DataMiner 10.0.0/10.0.2).
 
      - From DataMiner 10.0.0/10.0.2 onwards, for columns based on custom properties, you can instead select a different [column type](#available-column-types). For the default columns, the column type cannot be changed.
 
@@ -382,7 +378,7 @@ From DataMiner 10.0.0/10.0.2 onwards, when you manage the column configuration, 
 
 - **Custom icon**: Displays a custom icon. This relies on Automation scripts providing an icon library: a script that maps the custom icons, and a script that maps the column values to specific icon names. At present, this column type cannot be used.
 
-- **Color**: Shows the color defined in the cell value.
+- **Color**: Shows the color defined in the cell value. This can for example be used to show the color from the *VisualBackground* property of bookings.
 
 - **Date**: Expects a Date object, or a string representing a date in UTC time, in the culture of the client.
 
