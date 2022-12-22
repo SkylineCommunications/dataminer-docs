@@ -574,6 +574,18 @@ On systems without an Elasticsearch database, the following messages were thrown
 
 From now on, when no Elasticsearch database can be found, only the above-mentioned information event will be thrown.
 
+#### SLAnalytics - Pattern matching: Disabling the monitoring of a pattern would not be applied immediately [ID_32792]
+
+<!-- MR 10.3.0 - FR 10.2.4 -->
+
+When you disabled the monitoring of a pattern that had monitoring enabled, the update would incorrectly only be applied after restarting either SLAnalytics or the DataMiner software.
+
+#### MessageBroker: Timeout value would incorrectly be ignored when using RequestResponse(Async) [ID_32810]
+
+<!-- MR 10.3.0 - FR 10.2.5 -->
+
+When, in the MessageBroker, RequestResponse(Async) was used when NATS was not yet connected, the specified timeout value would incorrectly be ignored. The timeout value would only be applied to the actual NATS communication and not to the potential reconnection logic.
+
 #### Elasticsearch: TTL settings would not be applied correctly [ID_32913]
 
 <!-- MR 10.3.0 - FR 10.2.6 -->
@@ -604,6 +616,16 @@ Up to now, when SLPort received a WebSocket message larger than the WebSocket bu
 
 When you created an element with an alarm template in which anomaly detection alarms were configured for table parameters, in some cases, none of the enabled types of change points would trigger an alarm.
 
+#### SLAnalytics - Automatic incident tracking: Incorrect error message would be generated [ID_33305]
+
+<!-- MR 10.3.0 - FR 10.2.7 -->
+
+In some cases, the following incorrect error message would be generated:
+
+```txt
+Ignoring alarm group update: unknown alarm group tree.
+```
+
 #### CSLCloudBridge library would incorrectly not take into account the connection timeout specified in SLCloud.xml [ID_33322]
 
 <!-- MR 10.3.0 - FR 10.2.6 [CU0]  -->
@@ -631,6 +653,12 @@ On systems with a MySQL database, the ResourceManager module would fail to initi
 <!-- MR 10.3.0 - FR 10.2.7 -->
 
 When, in a DataMiner System, agents were configured to use HTTPS, the SLCloud.xml files of each of those agent would incorrectly refer to the local agent using the IP address instead of the hostname.
+
+#### SLAnalytics: The automatic incident tracking feature would incorrectly not be disabled when the alarm focus feature was disabled [ID_33348]
+
+<!-- MR 10.3.0 - FR 10.2.7 -->
+
+When the alarm focus feature was disabled, up to now, the automatic incident tracking feature would not automatically be disabled as well. From now on, when the alarm focus feature is disabled, the automatic incident tracking feature will also be disabled.
 
 #### Web apps: Only part of the value would be selected when moving the mouse pointer over a selection box that had the focus [ID_33379]
 
