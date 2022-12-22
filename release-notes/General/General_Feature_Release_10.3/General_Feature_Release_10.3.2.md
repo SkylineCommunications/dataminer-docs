@@ -266,3 +266,16 @@ Also, a problem with the detection of infinite loops for SNMPv3 when receiving e
 Up to now, a parameter feed would only retrieve the first 10,000 elements from the server. From now on, it will retrieve all elements from the server page by page.
 
 Default number of elements per page: 10,000
+
+#### Trending: One-day average trend records would no longer be written into the database [ID_35179]
+
+<!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
+
+One-day average trend records would incorrectly only be written into the database if
+
+- a TLL was specified, and
+- the *MaintenanceSettings.xml* file contained an entry specifying the window size (e.g. `<TimeSpan1DayRecords windows="120" />`).
+
+From now on, one-day average trend records will be written into the database as soon as a TTL setting has been configured for *Day records*.
+
+Also, the default window size for the records has been restored to 120 minutes (i.e. 2 hours).

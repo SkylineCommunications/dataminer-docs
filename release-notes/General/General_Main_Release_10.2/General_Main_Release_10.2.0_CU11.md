@@ -180,6 +180,19 @@ When the *partialSNMP* option was used when polling tables using the *multipleGe
 
 Also, a problem with the detection of infinite loops for SNMPv3 when receiving end-of-mib-view errors has been fixed.
 
+#### Trending: One-day average trend records would no longer be written into the database [ID_35179]
+
+<!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
+
+One-day average trend records would incorrectly only be written into the database if
+
+- a TLL was specified, and
+- the *MaintenanceSettings.xml* file contained an entry specifying the window size (e.g. `<TimeSpan1DayRecords windows="120" />`).
+
+From now on, one-day average trend records will be written into the database as soon as a TTL setting has been configured for *Day records*.
+
+Also, the default window size for the records has been restored to 120 minutes (i.e. 2 hours).
+
 #### DataMiner Cube - Trending: Trend graph would start to flicker when its data was updated [ID_35181]
 
 <!-- Main Release Version 10.1.0 [CU22]/10.2.0 [CU11] - Feature Release Version 10.3.2 -->
