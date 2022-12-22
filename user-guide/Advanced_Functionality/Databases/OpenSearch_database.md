@@ -4,7 +4,7 @@ uid: OpenSearch_database
 
 # OpenSearch database
 
-From DataMiner 10.3 [CU0]/10.3.2 onwards, it is possible to install a dedicated OpenSearch indexing database cluster as an alternative for Elasticsearch. This cluster also requires a Cassandra Cluster.
+From DataMiner 10.3 [CU0]/10.3.2 onwards, it is possible to install a dedicated OpenSearch indexing database cluster as an alternative for Elasticsearch. This indexing cluster also requires a Cassandra cluster.
 
 > [!NOTE]
 > If you are looking to use the Amazon OpenSearch Service instead of on-prem hosted OpenSearch nodes, see [Amazon OpenSearch Service](xref:Amazon_OpenSearch_Service)
@@ -13,15 +13,15 @@ From DataMiner 10.3 [CU0]/10.3.2 onwards, it is possible to install a dedicated 
 
 Supported versions:
 
-- 1.X
-- 2.X
+- OpenSearch 1.X
+- OpenSearch 2.X
 
-## Set up the OpenSearch Cluster
+## Setting up the OpenSearch Cluster
 
-See the official [documentation](https://opensearch.org/docs/latest/) on how to set up your OpenSearch Cluster. A lot of configuration is the same as for an Elasticsearch cluster. You can mostly use the same settings if you are more familiar with Elasticsearch.
+See the official [documentation](https://opensearch.org/docs/latest/) on how to set up your OpenSearch cluster. A lot of configuration is the same as for an Elasticsearch cluster.
 
 > [!NOTE]
-> OpenSearch is only support on Linux and not on Windows, as opposed to Elasticsearch
+> OpenSearch is only supported on Linux and not on Windows, as opposed to Elasticsearch
 
 It's also possible to set up OpenSearch Dashboards, this is the equivalent to Kibana for Elasticsearch.
 This is optional and not required for DataMiner to function.
