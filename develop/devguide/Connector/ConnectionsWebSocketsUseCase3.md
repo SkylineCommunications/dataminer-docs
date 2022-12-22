@@ -101,3 +101,7 @@ For this handshake, an extra header is needed. Add the correct header key and pl
 ```
 
 The response status code and content are not necessary in the *Connection* tag. Those can be removed if they are not used.
+
+## See also
+
+- [bypassProxy](xref:ConnectionsHttpElementConfiguration)

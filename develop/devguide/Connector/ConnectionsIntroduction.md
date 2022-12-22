@@ -112,6 +112,8 @@ For several connection types, some port types are already disabled by the client
 
 ## See also
 
+- [bypassProxy](xref:ConnectionsHttpElementConfiguration)
+
 DataMiner Protocol Markup Language:
 
 - [Protocol.Groups.Group@connection](xref:Protocol.Groups.Group-connection)

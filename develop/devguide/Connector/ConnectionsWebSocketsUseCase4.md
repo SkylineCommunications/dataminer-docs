@@ -110,3 +110,7 @@ For information about the dynamic IP configuration, see:
 
 - [Dynamically changing the IP address and port number](xref:ConnectionsWebSocketsDynamicIp)
 - [Dynamic polling](xref:ConnectionsSerialDynamicPolling)
+
+## See also
+
+- [bypassProxy](xref:ConnectionsHttpElementConfiguration)
