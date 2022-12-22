@@ -27,7 +27,7 @@ For a Cassandra cluster database (i.e. one Cassandra cluster that is used as the
 
    - **Database**: The type of database, i.e. *CassandraCluster*.
 
-   - **Name**: The prefix that the DataMiner System will use to create the keyspaces.
+   - **Keyspace prefix** or **Name**: The prefix that the DataMiner System will use to create the keyspaces.
 
    - **DB server**: The IP addresses of the nodes, separated by commas.
 

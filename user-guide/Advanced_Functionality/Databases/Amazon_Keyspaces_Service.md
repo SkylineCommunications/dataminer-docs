@@ -4,7 +4,7 @@ uid: Amazon_Keyspaces_Service
 
 # Amazon Keyspaces Service
 
-From DataMiner 10.3.0 [CU0]/10.3.2 onwards, it is possible to use the Amazon Keyspaces Service on AWS. You can use this as an alternative for a Cassandra Cluster setup (see [Supported system data storage architectures](xref:Supported_system_data_storage_architectures).
+From DataMiner 10.3.0 [CU0]/10.3.2 onwards, it is possible to use the Amazon Keyspaces Service on AWS. You can use this as an alternative for a Cassandra Cluster setup (see [Supported system data storage architectures](xref:Supported_system_data_storage_architectures)).
 
 ## Configuring TLS
 
@@ -40,7 +40,7 @@ For Amazon Keyspaces, the Starfield certificate must be present on the local Win
 
 ## Connecting your DMS to your Amazon Keyspaces database
 
-To configure the connection to an [Amazon Keyspaces database](xref:Amazon_Keyspaces_Service), configure the settings as detailed under [Amazon Keyspaces database](xref:Configuring_the_database_settings_in_Cube#amazon-keyspaces-database)
+To configure the connection to an Amazon Keyspaces database, configure the settings as detailed under [Amazon Keyspaces database](xref:Configuring_the_database_settings_in_Cube#amazon-keyspaces-database)
 
 > [!IMPORTANT]
 > An Amazon Keyspaces database requires a separate indexing database.
