@@ -52,7 +52,7 @@ If you add "ColorRows=True" to the *ComponentOptions* shape data field of a List
 
 The booking color is a summary of the following reserved booking properties: *VisualForeground*, *VisualBackground*, *VisualSelectedForeground* and *VisualSelectedBackground*. Each of those properties can be set to a string value representing a hexadecimal value, an (A)RGB value or a predefined Windows color (the latter is not recommended).
 
-It is not recommended to configure gray-tinted foreground colors as a ListView component uses a gray layer when you hover over its items. In the Skyline themes, that gray layer has the following color:
+Configuring gray-tinted foreground colors is not recommended as a ListView component uses a gray layer when you hover over its items. In the Skyline themes, that gray layer has the following color:
 
 | Theme | Color of gray layer        |
 |-------|----------------------------|
