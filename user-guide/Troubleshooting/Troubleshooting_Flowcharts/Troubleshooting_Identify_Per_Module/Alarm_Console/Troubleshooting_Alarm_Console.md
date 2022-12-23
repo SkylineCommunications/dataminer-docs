@@ -29,21 +29,20 @@ flowchart TD
     TimeOut([Timeout])
     Alarms([Alarms])
     %% Connect blocks %%
-    START --> Error
-    Error --> Rte
-    Error --> dberror
-    START --> Notice
-    START --> InfoEvent
-    START --> TimeOut
-    START --> Alarms
+    START --- Error
+    Error --- Rte
+    Error --- dberror
+    START --- Notice
+    START --- InfoEvent
+    START --- TimeOut
+    START --- Alarms
     %% Define hyperlinks %%
+    click Rte "https://docs.dataminer.services/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Identify_Per_Module/Alarm_Console/Troubleshooting_Run_Time_Errors.html"
     %% Apply styles to blocks %%
     class START classTerminal;
     class Rte,dberror,Notice,InfoEvent,TimeOut,Alarms classExternalRef;
     class Error classActionClickable;
 </div>
-
-<!-- Comment: add link to RTEs -->
 
 | **Flow item** | **Meaning** |
 |--|--|
@@ -72,7 +71,7 @@ flowchart TD
 
 | **Issue** | **Plan of attack** |
 |--|--|
-| Alarm history exceeded 100 alarms. It is advised to revise your alarm threshold definitions. | 1. Preferably: stop toggling of alarm per parameter. <br> 2. If not possible, change [AlarmsPerParameter in Help](xref:MaintenanceSettings_xml). |
+| Alarm history exceeded 100 alarms. It is advised to revise your alarm threshold definitions. | 1. Preferably: stop toggling of alarm per parameter. <br> 2. If not possible, change [AlarmsPerParameter](xref:MaintenanceSettings_xml). |
 
 ## Information Event
 
