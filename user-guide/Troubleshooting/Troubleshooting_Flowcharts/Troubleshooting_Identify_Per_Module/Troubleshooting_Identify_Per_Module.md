@@ -27,8 +27,8 @@ Surveyor([Surveyor])
 AlarmConsole([Alarm Console])
 %% Connect blocks %%
 START --- ModuleDefinition
-ModuleDefinition --- Apps
 ModuleDefinition --- Surveyor
+ModuleDefinition --- Apps
 ModuleDefinition --- AlarmConsole
 %% Define hyperlinks %%
 click Apps "https://docs.dataminer.services/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Identify_Per_Module/Apps/Troubleshooting_Apps.html" "Apps"
