@@ -182,3 +182,9 @@ When you removed a suggested parameter of type string from a trend graph, the li
 <!-- Main Release Version 10.1.0 [CU22]/10.2.0 [CU11] - Feature Release Version 10.3.2 -->
 
 When you opened a trend graph and left it open for a while, it would start to flicker when its data was updated.
+
+#### Visual Overview: Problem with conditional shape manipulation actions [ID_35211]
+
+<!-- MR 10.4.0 - FR 10.3.2 -->
+
+In some rare cases, conditional shape manipulation actions (e.g. Show, Hide, Rotate, Blink, etc.) would not be executed correctly.

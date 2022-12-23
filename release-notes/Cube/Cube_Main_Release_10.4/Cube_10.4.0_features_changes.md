@@ -128,3 +128,9 @@ Failed to save your tag. The defined patterns cannot be linked into the multivar
 <!-- MR 10.4.0 - FR 10.3.2 -->
 
 When a parameter had been removed from a profile definition, in the *Profiles* app, the profile instances referring to the profile definition in question would incorrectly still list the parameter that had been removed.
+
+#### Visual Overview: Problem with conditional shape manipulation actions [ID_35211]
+
+<!-- MR 10.4.0 - FR 10.3.2 -->
+
+In some rare cases, conditional shape manipulation actions (e.g. Show, Hide, Rotate, Blink, etc.) would not be executed correctly.
