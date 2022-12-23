@@ -286,8 +286,16 @@ From now on, one-day average trend records will be written into the database as 
 
 Also, the default window size for the records has been restored to 120 minutes (i.e. 2 hours).
 
-#### Dashboards app & Low-code apps - Node edge component: Segments of bidirectional edges would not always be positioned consistently [ID_35230]
+#### Dashboards app & Low-code apps - Parameter feed: Problem when more than 10,000 elements had to be retrieved from the server [ID_35186]
 
 <!-- MR 10.4.0 - FR 10.3.2 -->
+
+Up to now, the parameter feed used the element cache of the web client to populate its element list. As this cache can only hold up to 10,000 elements, this prevented the parameter feed from retrieving all elements when the cluster contained more than 10,000 elements.
+
+From now on, when the parameter feed has a protocol or view filter, it will fetch all elements matching the filter page by page, even when the total number of elements exceeds 10,000.
+
+#### Dashboards app & Low-code apps - Node edge component: Segments of bidirectional edges would not always be positioned consistently [ID_35230]
+
+<!-- MR 10.3.0 - FR 10.3.2 -->
 
 In a node edge graph, the segments of bidirectional edges would not always be positioned consistently.

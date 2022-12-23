@@ -997,3 +997,9 @@ When a Visual Overview component was linked to a feed, in some cases, it would n
 <!-- MR 10.3.0 - FR 10.3.2 -->
 
 When an element was frequently receiving timeout values, SLElement would leak memory.
+
+#### Dashboards app & Low-code apps - Node edge component: Segments of bidirectional edges would not always be positioned consistently [ID_35230]
+
+<!-- MR 10.3.0 - FR 10.3.2 -->
+
+In a node edge graph, the segments of bidirectional edges would not always be positioned consistently.
