@@ -89,17 +89,17 @@ class Home,SLLogCollector,Investigation LightBlue;
 
 ### Severity: [RTE](xref:Protocol_thread_run_time_errors_use_cases)
 
-- Alarm: Thread problem in *SLProtocol.exe*
+- **Alarm**: Thread problem in *SLProtocol.exe*
 
-  Plan of attack:
+  **Plan of attack**:
 
   1. Check Stream Viewer for groups that are stuck.
 
   1. Check for [protocol pending calls](xref:How_to_retrieve_protocol_pending_calls).
 
-- Alarm: Thread problem in *SLElement.exe*
+- **Alarm**: Thread problem in *SLElement.exe*
 
-  Plan of attack:
+  **Plan of attack**:
 
   1. Check Stream Viewer for groups that are stuck.
 
@@ -109,9 +109,9 @@ class Home,SLLogCollector,Investigation LightBlue;
 
 ### Severity: Timeout
 
-- Alarm: Communication state: Not Responding
+- **Alarm**: Communication state: Not Responding
 
-  Plan of attack:
+  **Plan of attack**:
 
   1. Perform a ping test from the server.
 

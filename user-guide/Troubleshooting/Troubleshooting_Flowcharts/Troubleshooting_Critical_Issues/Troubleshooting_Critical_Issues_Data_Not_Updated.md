@@ -57,9 +57,9 @@ class Surveyor,AlarmConsole,Element Gray;
 
 ## Surveyor
 
-- Issue: Views are not consistent
+- **Issue**: Views are not consistent
 
-  Plan of attack:
+  **Plan of attack**:
 
   1. Check the *Views.xml* file across the cluster to ensure that the most recent file is present on all DMAs.
 
@@ -67,9 +67,9 @@ class Surveyor,AlarmConsole,Element Gray;
 
 ## Alarm Console
 
-- Issue: Alarm not cleared
+- **Issue**: Alarm not cleared
 
-  Plan of attack:
+  **Plan of attack**:
 
   1. Check on the element page what the current value is of the parameter in alarm.
 
@@ -79,9 +79,9 @@ class Surveyor,AlarmConsole,Element Gray;
 
   1. Clear the alarm entry from the database.
 
-- Issue: Alarm not triggered
+- **Issue**: Alarm not triggered
 
-  Plan of attack:
+  **Plan of attack**:
 
   1. Check the alarm template.
 
@@ -93,9 +93,9 @@ class Surveyor,AlarmConsole,Element Gray;
 
 ## Element
 
-- Issue: Element state not updated
+- **Issue**: Element state not updated
 
-  Plan of attack:
+  **Plan of attack**:
 
   1. Restart the element, if possible.
 
@@ -107,9 +107,9 @@ class Surveyor,AlarmConsole,Element Gray;
 
   1. Set the desired element state via SLNetClientTest tool.
 
-- Issue: Element user interface not updated
+- **Issue**: Element user interface not updated
 
-  Plan of attack:
+  **Plan of attack**:
 
   1. Look for protocol thread RTEs.
 
@@ -119,9 +119,9 @@ class Surveyor,AlarmConsole,Element Gray;
 
   1. Check the CPU and memory usage for the SLElement process.
 
-- Issue: Parameter sets not executed
+- **Issue**: Parameter sets not executed
 
-  Plan of attack:
+  **Plan of attack**:
 
   1. Check the element logs for SetParameter thread.
 
@@ -129,9 +129,9 @@ class Surveyor,AlarmConsole,Element Gray;
 
   1. Follow the Cube session with the SLNetClientTest tool.
 
-- Issue: Trending flatlining/not updating
+- **Issue**: Trending flatlining/not updating
 
-  Plan of attack:
+  **Plan of attack**:
 
   1. Check for polling issues from the device.
 
