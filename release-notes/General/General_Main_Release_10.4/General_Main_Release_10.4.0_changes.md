@@ -122,3 +122,9 @@ When a column select or a column manipulation operator was applied before an agg
 Up to now, a parameter feed would only retrieve the first 10,000 elements from the server. From now on, it will retrieve all elements from the server page by page.
 
 Default number of elements per page: 10,000
+
+#### Dashboards app & Low-code apps - Node edge component: Segments of bidirectional edges would not always be positioned consistently [ID_35230]
+
+<!-- MR 10.4.0 - FR 10.3.2 -->
+
+In a node edge graph, the segments of bidirectional edges would not always be positioned consistently.

@@ -285,3 +285,9 @@ One-day average trend records would incorrectly only be written into the databas
 From now on, one-day average trend records will be written into the database as soon as a TTL setting has been configured for *Day records*.
 
 Also, the default window size for the records has been restored to 120 minutes (i.e. 2 hours).
+
+#### Dashboards app & Low-code apps - Node edge component: Segments of bidirectional edges would not always be positioned consistently [ID_35230]
+
+<!-- MR 10.4.0 - FR 10.3.2 -->
+
+In a node edge graph, the segments of bidirectional edges would not always be positioned consistently.
