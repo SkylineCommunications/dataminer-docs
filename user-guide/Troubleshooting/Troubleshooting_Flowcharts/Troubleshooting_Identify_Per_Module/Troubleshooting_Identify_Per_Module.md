@@ -10,8 +10,9 @@ uid: Troubleshooting_Identify_per_Module
 Each module below conforms to one of the main parts of the DataMiner Cube UI. Click the module you are having trouble with in order to continue.
 
 <div class="mermaid">
-graph TD
+flowchart TD
 %% Define styles %%
+linkStyle default stroke:#cccccc
 classDef classTerminal fill:#1e5179,stroke:#1e5179,color:#ffffff,stroke-width:0px;
 classDef classDecision fill:#4baeea,stroke:#4baeea,color:#ffffff,stroke-width:0px;
 classDef classExternalRef fill:#9ddaf5,stroke:#9ddaf5,color:#1E5179,stroke-width:0px;
@@ -25,24 +26,24 @@ Apps([Apps])
 Surveyor([Surveyor])
 AlarmConsole([Alarm Console])
 %% Connect blocks %%
-START --> ModuleDefinition
-ModuleDefinition --> Apps
-ModuleDefinition --> Surveyor
-ModuleDefinition --> AlarmConsole
+START --- ModuleDefinition
+ModuleDefinition --- Apps
+ModuleDefinition --- Surveyor
+ModuleDefinition --- AlarmConsole
 %% Define hyperlinks %%
-click Apps "https://community.dataminer.services/troubleshooting-apps/" "Apps"
-click Surveyor "https://community.dataminer.services/troubleshooting-surveyor/" "Surveyor"
-click AlarmConsole "https://community.dataminer.services/troubleshooting-alarm-console/" "Alarm Console"
-%% Apply styles to blocks %% 
-class START classTerminal; 
+click Apps "https://docs.dataminer.services/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Identify_Per_Module/Apps/Troubleshooting_Apps.html" "Apps"
+click Surveyor "https://docs.dataminer.services/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Identify_Per_Module/Surveyor/Troubleshooting_Surveyor.html/" "Surveyor"
+click AlarmConsole "https://docs.dataminer.services/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Identify_Per_Module/Alarm_Console/Troubleshooting_Alarm_Console.html" "Alarm Console"
+%% Apply styles to blocks %%
+class START classTerminal;
 class AlarmConsole,Surveyor,Apps classExternalRef;
-%%class classActionClickable; 
+%%class classActionClickable;
 class ModuleDefinition classDecision;
 </div>
 
 ### Examples
 
-[Surveyor](xref:Troubleshooting_Surveyor)
+[**Surveyor**](xref:Troubleshooting_Surveyor)
 
 - Elements
 
@@ -54,7 +55,7 @@ class ModuleDefinition classDecision;
 
 - ....
 
-[Alarm Console](xref:Troubleshooting_Alarm_Console)
+[**Alarm Console**](xref:Troubleshooting_Alarm_Console)
 
 - Error
 
@@ -68,7 +69,7 @@ class ModuleDefinition classDecision;
 
 - Responsiveness of alarms
 
-[Apps](xref:Troubleshooting_Apps)
+[**Apps**](xref:Troubleshooting_Apps)
 
 - Automation
 
