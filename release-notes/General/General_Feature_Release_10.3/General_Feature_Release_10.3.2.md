@@ -299,3 +299,9 @@ From now on, when the parameter feed has a protocol or view filter, it will fetc
 <!-- MR 10.3.0 - FR 10.3.2 -->
 
 In a node edge graph, the segments of bidirectional edges would not always be positioned consistently.
+
+#### Problem when a GQI message was sent asynchronously to SLNet [ID_35232]
+
+<!-- MR 10.4.0 - FR 10.3.2 -->
+
+When a client asynchronously sent an GQI message to SLNet, in some cases, an exception could be thrown.
