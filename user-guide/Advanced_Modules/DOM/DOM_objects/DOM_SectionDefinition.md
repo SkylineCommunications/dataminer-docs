@@ -45,7 +45,7 @@ Below is an overview of all other important properties:
 | Name | string | The name of the `FieldDescriptor`. |
 | IsOptional | bool | Determines whether a `FieldValue` must be present for this descriptor or if it is optional. |
 | IsHidden | bool | Determines whether this descriptor is hidden from the UI. |
-| IsReadonly | bool | Determines whether this descriptor can only be manipulated from scripts and not from the UI. |
+| IsReadonly | bool | Determines whether this descriptor can only be manipulated from scripts/API and not from the UI. |
 | DefaultValue | IValueWrapper | The default value that will be used to pre-fill the field in the UI. |
 
 There are also special types of `FieldDescriptors` that are purpose-made to store a special value. These include:

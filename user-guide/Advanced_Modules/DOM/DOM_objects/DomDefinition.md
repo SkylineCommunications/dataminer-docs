@@ -27,6 +27,9 @@ This object is also used in the Jobs app. It is used to store a link to a `Secti
 
 It also has the *IsSoftDeleted* boolean. If this is set to true, `Sections` in a `DomInstance` for this `SectionDefinitionID` are not required, will no longer be validated, but are still allowed to exist on the `DomInstance`. The `SectionDefinition` will also no longer be shown in the UI.
 
+> [!NOTE]
+> From DataMiner version 10.3.3/10.3.0 onwards, the `SectionDefinitionLink` also contains the `AllowMultipleSections` bool that can be used to define whether a `DomInstance` can have multiple `Sections` for that specific `SectionDefinition`. Although it was previously possible to add multiple `Sections`, these were not checked nor was it possible to use them in the UI. Existing `DomDefinitions` created before these versions will have to be updated if they were used with multiple `Sections`.
+
 ### ModuleSettingsOverrides
 
 The object contains settings that override the settings defined in the `ModuleSettings`. See [ModuleSettings](xref:DOM_ModuleSettings) for details about the specific settings.
