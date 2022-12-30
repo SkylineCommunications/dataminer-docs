@@ -319,3 +319,9 @@ In a node edge graph, the segments of bidirectional edges would not always be po
 <!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
 
 When a client asynchronously sent an GQI message to SLNet, in some cases, an exception could be thrown.
+
+#### Problem during DataMiner start-up when an element had its state changed from 'undefined' to 'stopped' [ID_35233]
+
+<!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
+
+When redundancy groups were being initialized during a DataMiner start-up, in some cases, an error could occur when an element had its state changed from "undefined" to "stopped".

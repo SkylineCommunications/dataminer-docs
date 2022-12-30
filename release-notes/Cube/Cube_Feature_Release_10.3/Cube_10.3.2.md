@@ -183,6 +183,21 @@ When you removed a suggested parameter of type string from a trend graph, the li
 
 When you opened a trend graph and left it open for a while, it would start to flicker when its data was updated.
 
+#### DataMiner Cube - Data Display: Tables of which the table parameter had its 'Filter' option set to false would incorrectly have a filter box [ID_35196]
+
+<!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
+
+When you opened an element card, tables of which the table parameter had its `Filter` option set to *false* in the element protocol would incorrectly have a filter box.
+
+From now on, table filter boxes will be shown or hidden depending on the following rules:
+
+| Protocol option    | Filter box |
+|--------------------|------------|
+| Filter:true        | Shown      |
+| Filter:false       | Not shown  |
+| Filter             | Shown      |
+| *No Filter option* | Not shown  |
+
 #### Visual Overview: Problem with conditional shape manipulation actions [ID_35211]
 
 <!-- MR 10.4.0 - FR 10.3.2 -->

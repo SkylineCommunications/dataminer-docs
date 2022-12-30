@@ -205,6 +205,21 @@ Also, the default window size for the records has been restored to 120 minutes (
 
 When you opened a trend graph and left it open for a while, it would start to flicker when its data was updated.
 
+#### DataMiner Cube - Data Display: Tables of which the table parameter had its 'Filter' option set to false would incorrectly have a filter box [ID_35196]
+
+<!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
+
+When you opened an element card, tables of which the table parameter had its `Filter` option set to *false* in the element protocol would incorrectly have a filter box.
+
+From now on, table filter boxes will be shown or hidden depending on the following rules:
+
+| Protocol option    | Filter box |
+|--------------------|------------|
+| Filter:true        | Shown      |
+| Filter:false       | Not shown  |
+| Filter             | Shown      |
+| *No Filter option* | Not shown  |
+
 #### Dashboards app & Low-code apps - Node edge component: Segments of bidirectional edges would not always be positioned consistently [ID_35230]
 
 <!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
@@ -216,3 +231,9 @@ In a node edge graph, the segments of bidirectional edges would not always be po
 <!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
 
 When a client asynchronously sent an GQI message to SLNet, in some cases, an exception could be thrown.
+
+#### Problem during DataMiner start-up when an element had its state changed from 'undefined' to 'stopped' [ID_35233]
+
+<!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
+
+When redundancy groups were being initialized during a DataMiner start-up, in some cases, an error could occur when an element had its state changed from "undefined" to "stopped".
