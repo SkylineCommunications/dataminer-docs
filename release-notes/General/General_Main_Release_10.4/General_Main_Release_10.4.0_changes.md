@@ -115,12 +115,6 @@ This user cache will be cleared each time a change occurs that has security impl
 
 In case a *Line & area chart* component displays trending for multiple parameters, the *Group by* setting allows you to specify how the graphs should be grouped. From now on, this *Group by* setting will by default be set to "All together".
 
-#### ClusterState.xml file removed [ID_35248]
-
-<!-- MR 10.4.0 - FR 10.3.2 -->
-
-The `Clusterstate.xml` file, located in the `C:\Skyline DataMiner` folder, was obsolete and has now been removed.
-
 ### Fixes
 
 #### GQI: Problem when retrieving DCF interfaces [ID_34820]

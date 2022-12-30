@@ -179,7 +179,7 @@ Because of a number of enhancements, overall processing of "exception" or "other
 
 #### ClusterState.xml file removed [ID_35248]
 
-<!-- MR 10.4.0 - FR 10.3.2 -->
+<!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
 
 The `Clusterstate.xml` file, located in the `C:\Skyline DataMiner` folder, was obsolete and has now been removed.
 
