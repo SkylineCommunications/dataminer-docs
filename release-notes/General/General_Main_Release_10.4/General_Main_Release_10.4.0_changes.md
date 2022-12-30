@@ -11,6 +11,20 @@ uid: General_Main_Release_10.4.0_changes
 
 ### Enhancements
 
+#### Security enhancements [ID_35240]
+
+<!-- MR 10.4.0 - FR 10.3.2 -->
+
+A number of security enhancements have been made.
+
+#### More detailed logging when the certificate chain is invalid while connecting to Cassandra [ID_34822]
+
+<!-- MR 10.4.0 - FR 10.3.2 -->
+
+More detailed information will now be added to the `SLDBConnection.txt` log file when the certificate chain is invalid while connecting to Cassandra.
+
+Log entry syntax: `Certificate chain error: {chainStatus.Status}, details: {chainStatus.StatusInformation}`
+
 #### SLAnalytics: Number of 'GetParameterMessages' requests has been optimized [ID_34936]
 
 <!-- MR 10.4.0 - FR 10.3.1 -->

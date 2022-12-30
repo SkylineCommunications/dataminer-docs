@@ -45,6 +45,12 @@ All DOM objects (DomInstance, DomTemplate, DomDefinition, DomBehaviorDefinition,
 
 ### Enhancements
 
+#### Security enhancements [ID_35240]
+
+<!-- MR 10.4.0 - FR 10.3.2 -->
+
+A number of security enhancements have been made.
+
 #### SLLogCollector will now first check for default.xml files in the LogConfig folder in the same location as SL_LogCollector.exe [ID_34739]
 
 <!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
@@ -52,6 +58,14 @@ All DOM objects (DomInstance, DomTemplate, DomDefinition, DomBehaviorDefinition,
 Up to now, SLLogCollector expected custom collector configuration files named `default.xml` to always be placed in the `C:\Skyline DataMiner\Tools\SLLogCollector\LogConfigs` folder.
 
 From now on, it will first check the `LogConfig` folder in the same location as `SL_LogCollector.exe`. If that `LogConfig` folder does not exist, if the folder is empty or if the `default.xml` file in that folder cannot be deserialized, it will fall back on the `default.xml` file in the `C:\Skyline DataMiner\Tools\SLLogCollector\LogConfigs` folder.
+
+#### More detailed logging when the certificate chain is invalid while connecting to Cassandra [ID_34822]
+
+<!-- MR 10.4.0 - FR 10.3.2 -->
+
+More detailed information will now be added to the `SLDBConnection.txt` log file when the certificate chain is invalid while connecting to Cassandra.
+
+Log entry syntax: `Certificate chain error: {chainStatus.Status}, details: {chainStatus.StatusInformation}`
 
 #### Web apps - Interactive Automation scrips: Fields containing invalid values will now be indicated more clearly [ID_34962]
 
