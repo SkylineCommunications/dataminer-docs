@@ -205,6 +205,12 @@ Also, the default window size for the records has been restored to 120 minutes (
 
 When you opened a trend graph and left it open for a while, it would start to flicker when its data was updated.
 
+#### Upgrading DataMiner Agents known by hostname could fail [ID_35192]
+
+<!-- MR 10.2.0 [CU11] - FR TBD -->
+
+When an agent in a cluster was known by its hostname instead of its IP address, in some cases, a DataMiner upgrade of that agent would fail due to the upgrade process not being able to correctly resolve the hostname to the expected IP address.
+
 #### DataMiner Cube - Data Display: Tables of which the table parameter had its 'Filter' option set to false would incorrectly have a filter box [ID_35196]
 
 <!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
