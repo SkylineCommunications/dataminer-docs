@@ -177,6 +177,12 @@ In case a *Line & area chart* component displays trending for multiple parameter
 
 Because of a number of enhancements, overall processing of "exception" or "other" parameter values by the SLAnalytics process has improved.
 
+#### ClusterState.xml file removed [ID_35248]
+
+<!-- MR 10.4.0 - FR 10.3.2 -->
+
+The `Clusterstate.xml` file, located in the `C:\Skyline DataMiner` folder, was obsolete and has now been removed.
+
 ### Fixes
 
 #### Problem with Elasticsearch health monitoring [ID_34744]
