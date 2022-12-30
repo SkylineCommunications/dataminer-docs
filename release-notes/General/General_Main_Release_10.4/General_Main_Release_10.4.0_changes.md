@@ -130,9 +130,3 @@ When a column select or a column manipulation operator was applied before an agg
 Up to now, the parameter feed used the element cache of the web client to populate its element list. As this cache can only hold up to 10,000 elements, this prevented the parameter feed from retrieving all elements when the cluster contained more than 10,000 elements.
 
 From now on, when the parameter feed has a protocol or view filter, it will fetch all elements matching the filter page by page, even when the total number of elements exceeds 10,000.
-
-#### Problem when a GQI message was sent asynchronously to SLNet [ID_35232]
-
-<!-- MR 10.4.0 - FR 10.3.2 -->
-
-When a client asynchronously sent an GQI message to SLNet, in some cases, an exception could be thrown.

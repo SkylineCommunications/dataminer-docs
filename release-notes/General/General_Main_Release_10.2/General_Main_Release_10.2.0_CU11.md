@@ -204,3 +204,15 @@ Also, the default window size for the records has been restored to 120 minutes (
 <!-- Main Release Version 10.1.0 [CU22]/10.2.0 [CU11] - Feature Release Version 10.3.2 -->
 
 When you opened a trend graph and left it open for a while, it would start to flicker when its data was updated.
+
+#### Dashboards app & Low-code apps - Node edge component: Segments of bidirectional edges would not always be positioned consistently [ID_35230]
+
+<!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
+
+In a node edge graph, the segments of bidirectional edges would not always be positioned consistently.
+
+#### Problem when a GQI message was sent asynchronously to SLNet [ID_35232]
+
+<!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
+
+When a client asynchronously sent an GQI message to SLNet, in some cases, an exception could be thrown.
