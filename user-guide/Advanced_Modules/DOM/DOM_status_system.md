@@ -77,9 +77,9 @@ For each status, you can configure the requirements of a specific field. This is
 | AllowMultipleValues | bool | Defines whether a `DomInstance` can have multiple `Sections` for this `SectionDefinition` in this specific status. |
 
 > [!NOTE]
-> From DataMiner version 10.3.3/10.3.0 onwards, the `DomStatusSectionDefinitionLink` also contains the `AllowMultipleSections` bool that can be used to define whether a `DomInstance` can have multiple `Sections` for that specific `SectionDefinition` and status. Although it was previously possible to add multiple `Sections`, these were not checked nor was it possible to use them in the UI. Existing `DomBehaviorDefinitions` created before these versions will have to be updated if they were used with multiple `Sections`.
 >
-> Also note that removing an existing `Section` is not allowed if that `Section` contains a field that is marked as 'ReadOnly' since you would otherwise remove a read only value. If you still want to allow this behavior but would like to avoid users assigning a new field value themselves, use the 'ClientReadOnly' bool available since the same versions. (see below)
+> - From DataMiner version 10.3.0/10.3.3 onwards, the `DomStatusSectionDefinitionLink` also contains the *AllowMultipleSections* boolean, which can be used to define whether a `DomInstance` can have multiple `Sections` for that specific `SectionDefinition` and status. In earlier DataMiner versions, it is possible to add multiple `Sections` already, but these are not checked and cannot be used in the UI. When you upgrade to DataMiner 10.3.0/10.3.3, you will need to update any existing `DomBehaviorDefinitions` with multiple `Sections`.
+> - Removing an existing `Section` is not allowed if that `Section` contains a field that is marked as *ReadOnly*, as you would otherwise remove a read-only value. If you want to allow this behavior, but you would like to avoid users assigning a new field value themselves, use the *ClientReadOnly* boolean, available from DataMiner 10.3.0/10.3.3 onwards (see below).
 
 A `DomStatusFieldDescriptorLink` has the following properties:
 
@@ -89,7 +89,7 @@ A `DomStatusFieldDescriptorLink` has the following properties:
 | Visible | bool | Determines whether this field should be visible in the UI for this status. This is only used by the UI; there is no logic for this property server-side. |
 | RequiredForStatus | bool | Determines whether a value for this field must be present AND valid in this status. If a field is marked as required, at least one value for the `FieldDescriptor` must be present in a `DomInstance`, and all values for this `FieldDescriptor` are valid according to the validators of the `FieldDescriptor` (if any are defined). |
 | ReadOnly | bool | Determines whether values of this field are read-only with this status. When a field is marked as read-only for a specified status, the values cannot be changed when the `DomInstance` has this status. This also means that if no values were present before transitioning to this status, no values can be added as long as the `DomInstance` continues to have this status. |
-| ClientReadOnly | bool | Determines whether a user is allowed to assign a value for this field in the UI. This differs from the 'ReadOnly' bool because with this client variant, you are still allowed to assign a value to this field using the API in e.g. a script. This property is available from DataMiner versions 10.3.3/10.3.0 onwards. |
+| ClientReadOnly | bool | Determines whether a user is allowed to assign a value to this field in the UI. Unlike the *ReadOnly* bool, this does allow users to assign a value to the field using the API, e.g. in a script. This property is available from DataMiner versions 10.3.0/10.3.3 onwards. |
 
 > [!NOTE]
 >
@@ -128,7 +128,7 @@ When something goes wrong while transitioning, a *DomStatusTransitionError* will
 | DomInstanceHasInvalidFieldsForNextStatus | The `DomInstance` contains fields that are required but are not valid according to at least one validator. If there are multiple values for the same `SectionDefinition` and `FieldDescriptor`, only one entry will be included. *AssociatedFields* contains the `SectionDefinitionID` and `FieldDescriptorID` combinations of the invalid fields |
 | DomInstanceHasMissingRequiredFieldsForNextStatus | The `DomInstance` does not contain all fields that are required for the next status. *AssociatedFields* contains the `SectionDefinitionID` and `FieldDescriptorID` combinations of the missing fields |
 | CrudFailedExceptionOccurred | When the `DomInstance` was saved, a `CrudFailedException` occurred. *InnerTraceData* contains the `TraceData` contained in the exception. |
-| DomInstanceContainsInvalidAmountOfSectionsForNextStatus | The DomInstance contains too many Sections for one or more SectionDefinitions according to the configuration of the next status. *SectionDefinitionIds* contains the `SectionDefinitionID(s)` wherefore too many `Sections` are present. |
+| DomInstanceContainsInvalidAmountOfSectionsForNextStatus | The `DomInstance` contains too many `Sections` for one or more `SectionDefinitions` according to the configuration of the next status. *SectionDefinitionIds* contains the `SectionDefinitionID(s)` for which too many `Sections` are present. |
 
 ## ModuleDomBehaviorDefinition and inheritance
 
