@@ -9,8 +9,8 @@ uid: Known_issues
 | [SLProtocol timer thread run-time error](xref:KI_SLProtocol_timer_thread_RTE) | DataMiner versions prior to 10.2.0 [CU10]/10.3.1 | December 20, 2022 |
 | [Vertical text in Visual Overview not displayed correctly](xref:KI_Visual_Overview_Vertical_Text_no_longer_working) | From DataMiner 10.2.0 [CU3]/10.2.3 onwards | December 16, 2022 |
 | [SLNet deadlock on DMA startup](xref:KI_SLNet_deadlock_on_startup) | From DataMiner 10.1.0/10.1.2 onwards | December 14, 2022 |
-| [Stable trend points not kept alive](xref:KI_stable_trend_points_not_kept_alive) | From DataMiner 10.2.0 [CU8]/10.2.10 onwards | December 9, 2022 |
-| [Missing 1-day average trending records](xref:KI_missing_avg_trending) | DataMiner 10.2.0 [CU0] up to 10.2.0 [CU11]<br>DataMiner 10.1.10 up to 10.3.1 | December 9, 2022 |
+| [Stable trend points not kept alive](xref:KI_stable_trend_points_not_kept_alive) | DataMiner 10.2.0 [CU8] up to 10.2.0 [CU10]<br>DataMiner 10.2.10 up to 10.3.1 | December 9, 2022 |
+| [Missing 1-day average trending records](xref:KI_missing_avg_trending) | DataMiner 10.2.0 [CU0] up to 10.2.0 [CU10]<br>DataMiner 10.1.10 up to 10.3.1 | December 9, 2022 |
 | [Memory leak in SLNet threads](xref:KI_SLNet_thread_leak) | DataMiner 10.2.12 [CU0] and [CU1] | December 9, 2022 |
 | [SLAutomation memory leak when Engine.AddScriptOutput is used](xref:KI_SLAutomation_memory_leak_AddScriptOutput) | DataMiner 10.1.0 and 10.2.0 (up to [CU10])<br>From DataMiner 10.0.2 up to 10.3.1 | December 8, 2022 |
 | [SLNet issues due to SPI obfuscation](xref:KI_SLNet_issue_SPI_obfuscation) | DataMiner 10.2.0 [CU3] up to 10.2.0 [CU5]<br>DataMiner 10.2.6 up to 10.2.8 | December 7, 2022 |

@@ -6,7 +6,7 @@ uid: KI_missing_avg_trending
 
 ## Affected versions
 
-- DataMiner 10.2.0 [CU0] up to 10.2.0 [CU11]
+- DataMiner 10.2.0 [CU0] up to 10.2.0 [CU10]
 - DataMiner 10.1.10 up to 10.3.1
 
 ## Cause
