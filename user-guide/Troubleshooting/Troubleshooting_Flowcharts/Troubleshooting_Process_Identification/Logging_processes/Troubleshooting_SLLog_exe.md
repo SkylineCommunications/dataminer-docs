@@ -37,6 +37,7 @@ click LinkProcessList "https://docs.dataminer.services/user-guide/Troubleshootin
 click Rte "https://docs.dataminer.services/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Identify_Per_Module/Alarm_Console/Troubleshooting_Run_Time_Errors.html" "RTE investigation diagram"
 click Crash "https://docs.dataminer.services/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Critical_Issues/Troubleshooting_Critical_Issues_Automatic_Restart.html" "Crash investigation diagram"
 %% Define styles %%
+linkStyle default stroke:#cccccc
 classDef classTerminal fill:#1e5179,stroke:#1e5179,color:#ffffff,stroke-width:0px;
 classDef classDecision fill:#4baeea,stroke:#4baeea,color:#ffffff,stroke-width:0px;
 classDef classExternalRef fill:#9ddaf5,stroke:#9ddaf5,color:#1E5179,stroke-width:0px;
