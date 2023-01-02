@@ -78,7 +78,7 @@ When something goes wrong during the CRUD actions, the `TraceData` can contain o
 | Reason | Description |
 |--|--|
 | InvalidParentId | The `DomBehaviorDefinition.ParentId` property contains an unexpected ID. If a module `DomBehaviorDefinition` is defined, it must contain the ID of that definition. If that is not the case, it should be empty. |
-| InheritingDefinitionContainsInvalidData | This `DomBehaviorDefinition` is inheriting from another `DomBehaviorDefinition`, but it contains data that is not allowed. Only the `DomBehaviorDefinition.StatusSectionDefinitionLinks` can contain extra objects. |
+| InheritingDefinitionContainsInvalidData | This `DomBehaviorDefinition` is inheriting from another `DomBehaviorDefinition`, but it contains data that is not allowed. Only the `StatusSectionDefinitionLinks`, `ButtonDefinitions` and `ActionDefinitions` can contain extra objects. |
 | StatusTransitionsReferenceNonExistingStatuses | There was at least one `DomStatusTransition` that references a status that does not exist. *StatusTransitionsIds* contains the ID(s) of the invalid transition(s). |
 | StatusSectionDefinitionLinksReferenceNonExistingStatuses | There was at least one `DomStatusSectionDefinitionLink` that referenced a status that does not exist. *DomStatusSectionDefinitionLinkIds* contains the ID(s) of the invalid `DomStatusSectionDefinitionLink(s)`. |
 | InvalidStatusIds | There was at least one status defined with an invalid ID (should only contain lowercase characters). *StatusIds* contains the ID(s) of the invalid status(es). |
@@ -94,3 +94,5 @@ When something goes wrong during the CRUD actions, the `TraceData` can contain o
 | InvalidButtonDefinitionIds | There was at least one `IDomButtonDefinition` defined with an invalid ID (should only contain lowercase characters). *ButtonDefinitionIds* contains the ID(s) of the invalid definition(s). |
 | DuplicateButtonDefinitionIds | There are `IDomButtonDefinition` defined with duplicate IDs. *ButtonDefinitionIds* contains the ID(s) of the duplicate definition(s). |
 
+> [!NOTE]
+> When a DomBehaviorDefinition inherits from another definition, make sure that the IDs of the StatusSectionDefinitionLinks, ButtonDefinitions and ActionDefinitions are unique accross both parent & child definition.
