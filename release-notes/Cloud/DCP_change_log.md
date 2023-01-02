@@ -6,7 +6,7 @@ uid: DCP_change_log
 
 The DataMiner Cloud Platform gets updated continuously. This change log can help you trace when specific features and changes have become available.
 
-#### 22 December 2022 - Fix - Connection tester did not take proxy settings into account [ID_35227]
+#### 22 December 2022 - Fix - CloudGateway 2.10.1 - Connection tester did not take proxy settings into account [ID_35227]
 
 If proxy settings were configured in the *appsettings.proxy.json* file, previously these were not taken into account by the connection tester tool.
 
