@@ -40,5 +40,6 @@ The following breaking changes were introduced to features that were still in so
 
 | Release note ID | Release version(s) | Description |
 |--|--|--|
+| 31548 | 10.3.0/10.2.1 | DCF interface properties are no longer available as columns of the DCF interfaces GQI data source. Instead they are now available as a separate GQI data source, which can be joined with the DCF interfaces data source based on the *Interface ID* column. |
 | 30155 | 10.2.0/10.1.8 | Changes to the query filter, which requires the ReportsAndDashboardsPTP soft-launch option, will cause the column order, column sizes, and sorting to be reset to the default values for all GQI tables. |
 | 26152 | 10.1.0/10.0.9 | Dashboards: Generic Query Interface queries can no longer contain a ColumnInfo object. Instead these now contain the name of the column. |
