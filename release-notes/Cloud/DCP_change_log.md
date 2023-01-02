@@ -228,6 +228,10 @@ To create such a DMZ:
 
 1. Restart all DxMs in the DMZ so that they use the new settings.
 
+#### 7 July 2022 - Fix - Orchestrator 1.2.5 - Not possible to deploy DxMs via DCP Admin app [ID_33998]
+
+In some cases, it could occur that the DataMiner Orchestrator got stuck while it was installing a DxM, and it became unable to handle updates. This made it impossible to deploy any more DxMs via the DCP Admin app.
+
 #### 17 June 2022 – Enhancement – DCP Admin app opens to Overview page [ID_33772]
 
 When you open the DCP Admin app, it will now immediately show the *Overview* page of the selected organization. Previously, it showed a page that only contained "Home".
