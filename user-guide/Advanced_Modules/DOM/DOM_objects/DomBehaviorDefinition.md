@@ -95,4 +95,4 @@ When something goes wrong during the CRUD actions, the `TraceData` can contain o
 | DuplicateButtonDefinitionIds | There are `IDomButtonDefinition` defined with duplicate IDs. *ButtonDefinitionIds* contains the ID(s) of the duplicate definition(s). |
 
 > [!NOTE]
-> When a DomBehaviorDefinition inherits from another definition, make sure that the IDs of the `StatusSectionDefinitionLinks`, `ButtonDefinitions` and `ActionDefinitions` are unique accross both parent & child definition.
+> When a `DomBehaviorDefinition` inherits from another definition, make sure that the IDs of the `StatusSectionDefinitionLinks`, `ButtonDefinitions` and `ActionDefinitions` are unique accross both parent & child definition.
