@@ -47,7 +47,7 @@ All DOM objects (DomInstance, DomTemplate, DomDefinition, DomBehaviorDefinition,
 
 #### Security enhancements [ID_35240]
 
-<!-- MR 10.4.0 - FR 10.3.2 -->
+<!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
 
 A number of security enhancements have been made.
 

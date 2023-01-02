@@ -46,6 +46,12 @@ When you want the NAS service on existing setups to have a quoted path, do the f
 
 Up to now, when you exported real-time trend data to a CSV file, trend points with value "0" would not be included. From now on, those values will be exported as well.
 
+#### Security enhancements [ID_35240]
+
+<!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
+
+A number of security enhancements have been made.
+
 #### ClusterState.xml file removed [ID_35248]
 
 <!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
