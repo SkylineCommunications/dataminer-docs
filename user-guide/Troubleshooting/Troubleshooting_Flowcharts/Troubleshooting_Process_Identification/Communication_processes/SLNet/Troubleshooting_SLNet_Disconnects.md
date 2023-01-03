@@ -116,7 +116,7 @@ classDef classAction fill:#dddddd,stroke:#dddddd,color:#1E5179,stroke-width:1px;
  click CheckCPUAndMem "#cpu-and-memory-resources"
  click LackResources "#cpu-and-memory-resources"
  click VerifyCallback "#about-callback-timeouts"
- click DebugCallback "#about-callback-timeouts"
+ click DebugCallback "#how-to-debug-a-callback-timeout-error"
  click RefusedState "https://docs.dataminer.services/user-guide/Reference/DataMiner_Tools/SLNetClientTest_tool/SLNetClientTest_tool_advanced_procedures/SLNetClientTest_refused_dma_state.html"
  click NoMoreConnections "#cannot-set-up-new-connections"
  click StartAgent "https://docs.dataminer.services/user-guide/Advanced_Functionality/DataMiner_Systems/Starting_or_stopping_DataMiner_Agents_in_your_DataMiner_System.html"

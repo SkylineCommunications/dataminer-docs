@@ -81,6 +81,6 @@ To verify if *DB.xml* is configured correctly:
 
    - The DB element within this Database element should be set to SLDMADB: `<DB>SLDMADB</DB>`.
 
-For more information, refer to the [DataMiner Help](xref:DB_xml).
+For more information, see [DB.xml](xref:DB_xml).
 
 Keep in mind that to make any changes to *DB.xml*, you need to first stop DataMiner, and then restart DataMiner when the changes have been saved. As making changes to raw configuration files like *DB.xml* can have far-reaching consequences for your system, always be very careful when you do this.

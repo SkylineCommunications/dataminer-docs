@@ -16,25 +16,25 @@ The steps go from more general, with a larger impact, to more specific. It is im
 
 Open Windows Task Manager, go to the ***Performance tab***, and check if ***CPU*** **or** ***Memory*** **are at 98% or higher**. All sorts of unintended behavior is possible when computing resources are unavailable. If this is the case, check the following:
 
-1. Go to the ***Details*** **tab**, and **enable the columns** ***Working set (memory), Commit size*** **and** ***CPU time***. You can do so via the right-click menu of the column headers (*Select columns option*).
+1. Go to the ***Details*** **tab**, and **enable the columns** ***Working set (memory), Commit size*** **and** ***CPU time***. You can do so via the right-click menu of the column headers (*Select columns* option).
 
 1. Use sorting to **find the processes with the highest** ***CPU, CPU time, Commit size*** **and** ***Working set***. If these are related to DataMiner, note which processes are involved and proceed to the next steps. These processes are not necessarily the root cause of the problem, but they may be closely related to the root cause.
 
    The following processes are used by or related to DataMiner:
 
-   - SL*.exe: The processes starting with SL (e.g. SLProtocol, SLElement) are the core DataMiner services.
+   - *SL\*.exe*: The processes starting with SL (e.g. SLProtocol, SLElement) are the core DataMiner services.
 
-   - DataMinerCube.exe: The DataMiner Cube desktop application.
+   - *DataMinerCube.exe*: The DataMiner Cube desktop application.
 
-   - PresentationHost.exe: The DataMiner Cube browser application.
+   - *PresentationHost.exe*: The DataMiner Cube browser application.
 
-   - mysqld.exe: The MySQL database, if applicable.
+   - *mysqld.exe*: The MySQL database, if applicable.
 
-   - prunsrv.exe: The Cassandra database, if applicable.
+   - *prunsrv.exe*: The Cassandra database, if applicable.
 
-   - elasticsearch-service-x64.exe: The Elasticsearch database, if applicable.
+   - *elasticsearch-service-x64.exe*: The Elasticsearch database, if applicable.
 
-   - w3wp.exe: Windows Web Server, also known as IIS.
+   - *w3wp.exe*: Windows Web Server, also known as IIS.
 
 1. If the processes consuming the most resources are **not related to DataMiner** (e.g. antivirus, Windows updates, or a third-party application), **resolve the issues** outside of DataMiner before proceeding further.
 
@@ -44,7 +44,7 @@ Check if the following processes are running:
 
 - **SLDataMiner.exe and SLNet.exe**: These are the **essential processes** for DataMiner. If one of these is not running, the DMA is considered to also not be running. The steps below may help you identify the problem more accurately. You can also find more details on startup issues in the [DataMiner Startup Issues flowchart](xref:Troubleshooting_Startup_Issues).
 
-- **SLLog.exe and SLWatchDog.exe**: These processes are necessary for DataMiner **self-monitoring and troubleshooting**. If one of these is not running, information necessary for further investigation won’t be available. Follow the [DataMiner Startup Issues flowchart](xref:Troubleshooting_Startup_Issues), and make sure these processes are running correctly before you investigate any further.
+- ***SLLog.exe* and *SLWatchDog.exe***: These processes are necessary for DataMiner **self-monitoring and troubleshooting**. If one of these is not running, information necessary for further investigation won’t be available. Follow the [DataMiner Startup Issues flowchart](xref:Troubleshooting_Startup_Issues), and make sure these processes are running correctly before you investigate any further.
 
 ### Check if there is enough disk space
 
@@ -58,7 +58,7 @@ If there is insufficient disk space, free up disk space, reboot the server, and 
 
 Check if new files are present in the folder ***C:\Skyline DataMiner\logging\CrashDump***. Files are created in this folder when an unexpected disappearance of a DataMiner process occurs.
 
-Note the names of the processes if there are any. If a crash dump is saved correctly, you’ll have details on the exception that occurred in the **ERRORLOG.TXT** file inside the package.
+Note the names of the processes if there are any. If a crash dump is saved correctly, you’ll have details on the exception that occurred in the ***ERRORLOG.TXT*** file inside the package.
 
 Example:
 
@@ -70,7 +70,7 @@ The minidump is a copy of all DataMiner log files saved at the moment a problem 
 
 - In case of a **run-time error**, the file name format is **`<timestamp>_<process name>.zip`**. Note the name of the process and proceed to the next step.
 
-- In case of a **process disappearance**, the file name format is **`<timestamp>_Process disappeared.zip`**. You can find the name of the process in **SLWatchdog2.txt** inside the archive.
+- In case of a **process disappearance**, the file name format is **`<timestamp>_Process disappeared.zip`**. You can find the name of the process in ***SLWatchdog2.txt*** inside the archive.
 
 Example of minidump in case of process disappearance:
 
@@ -78,7 +78,7 @@ Example of minidump in case of process disappearance:
 
 ### Check SLWatchdog2.txt for the initial problem
 
-It is possible that more that one problem is occurring at the same time or that a major problem is caused by a less visible problem that occurred earlier. SLWatchdog2.txt can help you identify the initial problem.
+It is possible that more that one problem is occurring at the same time or that a major problem is caused by a less visible problem that occurred earlier. *SLWatchdog2.txt* can help you identify the initial problem.
 
 Look for the following lines:
 
@@ -102,7 +102,7 @@ Look for the following lines:
 
   This line indicates an unexpected disappearance of a DataMiner process (i.e. a process crash).
 
-Follow these steps to **identify the initial problem in SLWatchdog2.txt** based on these lines:
+Follow these steps to **identify the initial problem in *SLWatchdog2.txt*** based on these lines:
 
 1. Look for the latest occurrence of the string “**(RTE Count = 1 )**”.
 

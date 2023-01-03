@@ -35,11 +35,11 @@ classDef classTerminal fill:#1e5179,stroke:#1e5179,color:#ffffff,stroke-width:1p
 %% -------------------------------------------------------------------------
 HOME([Start page]):::classExternalRef
 START([SLDataGateway]):::classTerminal
-Action_HighMemory[High Memory Consumption]:::classDecision
-Action_DataMinerNotStarting[DataMiner Not Starting up]:::classDecision
-Action_DataMinerCrash[DataMiner crash]:::classDecision
-Action_SLDataGatewayCrash[SLDataGateway crash]:::classDecision
-Action_HighCPUUtilization[High CPU Utilization]:::classDecision
+Action_HighMemory([High Memory Consumption]):::classExternalRef
+Action_DataMinerNotStarting([DataMiner Not Starting up]):::classExternalRef
+Action_DataMinerCrash([DataMiner crash]):::classExternalRef
+Action_SLDataGatewayCrash([SLDataGateway crash]):::classExternalRef
+Action_HighCPUUtilization([High CPU Utilization]):::classExternalRef
     START --- Action_HighMemory
     START --- Action_DataMinerNotStarting
     START --- Action_DataMinerCrash
@@ -81,13 +81,13 @@ classDef classTerminal fill:#1e5179,stroke:#1e5179,color:#ffffff,stroke-width:1p
 %% -------------------------------------------------------------------------
 %% flowchart structure
 %% -------------------------------------------------------------------------
-Action_HighMemory[High Memory Consumption]:::classDecision
-Action_OffloadFolder[Check if Offload folder contains files]:::classDecision
-Action_ElementsBigAlarms[Check for elements using<br> big alarm templates or trend templates]:::classAction
+Action_HighMemory([High Memory Consumption]):::classExternalRef
+Action_OffloadFolder([Check if Offload folder contains files]):::classExternalRef
+Action_ElementsBigAlarms([Check for elements using<br> big alarm templates or trend templates]):::classExternalRef
 Action_AlarmCondition[Lookup for Alarm condition]:::classSolution
-Action_CheckAVGtrending[Check Avg trending on DVE elements<br> while Central Database is enabled]:::classAction
-Action_TimetraceTable["Confirm TimeTrace table <br>creation/modification"]:::classAction
-Action_AlarmTemplates["Check for Alarm templates<br> with smart baselines <br>(enabled) (from QandA)"]:::classAction
+Action_CheckAVGtrending([Check Avg trending on DVE elements<br> while Central Database is enabled]):::classExternalRef
+Action_TimetraceTable(["Confirm TimeTrace table <br>creation/modification"]):::classExternalRef
+Action_AlarmTemplates(["Check for Alarm templates<br> with smart baselines <br>(enabled) (from QandA)"]):::classExternalRef
     Action_HighMemory --- Action_OffloadFolder
     Action_HighMemory --- Action_ElementsBigAlarms --- Action_AlarmCondition
     Action_HighMemory --- Action_CheckAVGtrending
@@ -123,9 +123,9 @@ classDef classTerminal fill:#1e5179,stroke:#1e5179,color:#ffffff,stroke-width:1p
 %% -------------------------------------------------------------------------
 %% flowchart structure
 %% -------------------------------------------------------------------------
-Action_DataMinerNotStarting[DataMiner Not Starting up]:::classDecision
-Action_CentralDB[Confirm Central DB tag is present]:::classAction
-Action_ErrorLogging["Error logging: Check CoCreateInstance SLXML<br> failed with Server execution failed. (hr = 0x80080005)"]:::classAction
+Action_DataMinerNotStarting([DataMiner Not Starting up]):::classExternalRef
+Action_CentralDB([Confirm Central DB tag is present]):::classExternalRef
+Action_ErrorLogging(["Error logging: Check CoCreateInstance SLXML<br> failed with Server execution failed. (hr = 0x80080005)"]):::classExternalRef
     Action_DataMinerNotStarting --- Action_CentralDB
     Action_DataMinerNotStarting --- Action_ErrorLogging
 %% -------------------------------------------------------------------------
@@ -160,14 +160,14 @@ classDef classTerminal fill:#1e5179,stroke:#1e5179,color:#ffffff,stroke-width:1p
 %% -------------------------------------------------------------------------
 %% flowchart structure
 %% -------------------------------------------------------------------------
-Action_DataMinerCrash[DataMiner <br>crash]:::classDecision
-Action_CrashSLDataGateway["Check SLDatagateway <br>memory usage (trending graphs)"]:::classAction
-Action_CrashSLDataGatewayLeakRestartYes[Restart DataMiner]:::classAction
-Action_CrashSLDataGatewayLeakRestartYes2["Set an Alarm Template for DMA MS platform element <br>with 2 thresholds for SLDatagateway <br> memory usage (e.g. major alarm <br> for 3Gb and a critical alarm  for 5Gb )<br>and a correlation rule to send email notification<br> to your squad to get memory dumps <br>before Dataminer chashes and restart is needed"]:::classAction
-Action_CrashSLDataGatewayLeakRestartNo[Run SLLogcollector with SLDGW memory dump.<br>If its possible run it twice with at least <br>500Mb size difference]:::classDecision
+Action_DataMinerCrash([DataMiner <br>crash]):::classExternalRef
+Action_CrashSLDataGateway(["Check SLDatagateway <br>memory usage (trending graphs)"]):::classExternalRef
+Action_CrashSLDataGatewayLeakRestartYes([Restart DataMiner]):::classExternalRef
+Action_CrashSLDataGatewayLeakRestartYes2(["Set an Alarm Template for DMA MS platform element <br>with 2 thresholds for SLDatagateway <br> memory usage (e.g. major alarm <br> for 3Gb and a critical alarm  for 5Gb )<br>and a correlation rule to send email notification<br> to your squad to get memory dumps <br>before Dataminer chashes and restart is needed"]):::classExternalRef
+Action_CrashSLDataGatewayLeakRestartNo([Run SLLogcollector with SLDGW memory dump.<br>If its possible run it twice with at least <br>500Mb size difference]):::classExternalRef
 Action_CrashSLDataGatewaySpider[After both memory dumps <br>are available send it <br>to Spider Squad]:::classSolution
-Decision_CrashSLDataGatewayLeak{{Is there a SLDataGateway <br>memory leak?}}:::classDecision
-Decision_CrashSLDataGatewayLeakRestart{{DataMiner <br>restart needed?}}:::classDecision
+Decision_CrashSLDataGatewayLeak{{Is there a SLDataGateway <br>memory leak?}}:::classExternalRef
+Decision_CrashSLDataGatewayLeakRestart{{DataMiner <br>restart needed?}}:::classExternalRef
     Action_DataMinerCrash --- Action_CrashSLDataGateway --- Decision_CrashSLDataGatewayLeak
     Decision_CrashSLDataGatewayLeak --- |YES| Decision_CrashSLDataGatewayLeakRestart
     Decision_CrashSLDataGatewayLeakRestart --- |YES| Action_CrashSLDataGatewayLeakRestartYes
@@ -203,10 +203,10 @@ classDef classTerminal fill:#1e5179,stroke:#1e5179,color:#ffffff,stroke-width:1p
 %% -------------------------------------------------------------------------
 %% flowchart structure
 %% -------------------------------------------------------------------------
-Action_SLDataGatewayCrash[SLDataGateway crash]:::classDecision
-Action_SLDataGatewayCrashOverflow["Error Type: StackOverflowException -><br> Check for large number of logger tables"]:::classAction
-Action_SLDataGatewayCrashAfterUpgrade[Occurred after a DM upgrade?]:::classDecision
-Action_SLDataGatewayCrashAfterUpgrade2[Compare SLDataGateway files with a working agent or standard package]:::classTerminal
+Action_SLDataGatewayCrash([SLDataGateway crash]):::classExternalRef
+Action_SLDataGatewayCrashOverflow(["Error Type: StackOverflowException -><br> Check for large number of logger tables"]):::classExternalRef
+Action_SLDataGatewayCrashAfterUpgrade([Occurred after a DM upgrade?]):::classExternalRef
+Action_SLDataGatewayCrashAfterUpgrade2[Compare SLDataGateway files with a working agent or standard package]:::classSolution
     Action_SLDataGatewayCrash --- Action_SLDataGatewayCrashAfterUpgrade --- Action_SLDataGatewayCrashAfterUpgrade2
     Action_SLDataGatewayCrash --- Action_SLDataGatewayCrashOverflow
 %% -------------------------------------------------------------------------

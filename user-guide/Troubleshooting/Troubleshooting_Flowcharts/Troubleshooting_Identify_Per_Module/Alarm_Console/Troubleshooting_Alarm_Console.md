@@ -83,13 +83,9 @@ flowchart TD
 
 | **Issue** | **Plan of attack** |
 |--|--|
-| SNMPv1,v2 Element in timeout | Refer to SLSNMPManager flowchart |
-
-<!-- Comment: Flowchart link here when SLSNMPManager troubleshooting flowchart has been added -->
+| SNMPv1,v2 Element in timeout | Refer to [SLSNMPManager flowchart](xref:Troubleshooting_SLSNMPManager_exe) |
 
 ## Alarms
 | **Issue** | **Plan of attack** |
 |--|--|
-| Alarms delayed | Refer to SLElement Flowchart |
-
-<!-- Comment: Flowchart link here when SLElement troubleshooting flowchart has been added -->
+| Alarms delayed | Refer to [SLElement Flowchart](xref:Troubleshooting_SLElement_exe) |

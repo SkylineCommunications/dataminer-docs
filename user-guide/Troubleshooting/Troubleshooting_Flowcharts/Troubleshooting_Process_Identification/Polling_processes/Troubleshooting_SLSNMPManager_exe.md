@@ -46,10 +46,8 @@ classDef InfoAccNoClick fill:#DDDDDD,stroke:#000070,stroke-width:0px, color:#1E5
 classDef External fill:#9DDAF5,stroke:#000070,stroke-width:0px, color:#1E5179;
 </div>
 
-## Notes
-
-- Three SLSNMPManager processes will always run simultaneously, one for each version of SNMP.
-
-- In the *DataMiner.xml* file, you can customize which ports are used. For more information, see [Changing SNMP agent ports](xref:Changing_SNMP_agent_ports).
-
-- Ensure that the data source is **communicating as expected** and that all OIDs respond properly with the **expected data types**.
+> [!NOTE]
+>
+> - Three SLSNMPManager processes will always run simultaneously, one for each version of SNMP.
+> - In the *DataMiner.xml* file, you can customize which ports are used. For more information, see [Changing SNMP agent ports](xref:Changing_SNMP_agent_ports).
+> - Ensure that the data source is **communicating as expected** and that all OIDs respond properly with the **expected data types**.

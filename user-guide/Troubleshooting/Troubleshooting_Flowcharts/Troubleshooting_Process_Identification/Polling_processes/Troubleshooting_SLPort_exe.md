@@ -44,8 +44,7 @@ classDef InfoAccClick fill:#999999,stroke:#000070,stroke-width:0px, color:#FFFFF
 classDef InfoAccNoClick fill:#DDDDDD,stroke:#000070,stroke-width:0px, color:#1E5179;
 </div>
 
-## Notes
-
-- Multiple SLPort processes can run simultaneously. This can be configured in *DataMiner.xml*. (See [Setting the number of simultaneously running SLPort processes](xref:Configuration_of_DataMiner_processes#setting-the-number-of-simultaneously-running-slprotocol-processes) in the DataMiner Help).
-
-- Ensure that the device is **communicating as expected** and that all fields match the **expected data types and structure**.
+> [!NOTE]
+>
+> - Multiple SLPort processes can run simultaneously. This can be configured in *DataMiner.xml*. (See [Setting the number of simultaneously running SLPort processes](xref:Configuration_of_DataMiner_processes#setting-the-number-of-simultaneously-running-slprotocol-processes) in the DataMiner Help).
+> - Ensure that the device is **communicating as expected** and that all fields match the **expected data types and structure**.

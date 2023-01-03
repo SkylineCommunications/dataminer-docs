@@ -58,10 +58,10 @@ Solution_RestartCassandra[Restart Cassandra.]
 %% -------------------------------------------------------------------------
 %% Define hyperlinks %%
 %% -------------------------------------------------------------------------
- click HOME "https://docs.dataminer.services/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Cassandra.html"
+ click HOME "https://docs.dataminer.services/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Cassandra/Troubleshooting_Cassandra.html"
  click ActionClick_GarbageCollection "#checking-cassandra-logging-for-long-or-frequent-garbage-collection-pauses"
  click ActionClick_RunRepair "#ensuring-that-all-data-is-replicated"
- click ActionClick_CheckYamlConfig "https://docs.dataminer.services/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Cassandra.html#cassandrayaml-file"
+ click ActionClick_CheckYamlConfig "https://docs.dataminer.services/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Cassandra/Troubleshooting_Cassandra.html#cassandrayaml-file"
 %% -------------------------------------------------------------------------
 %% Apply styles to blocks
 %% -------------------------------------------------------------------------

@@ -20,9 +20,7 @@ If you encounter an issue related to Cassandra, we recommend that you perform th
 
 - Make a copy of the Cassandra logs folder *C:\Program Files\Cassandra\logs*. Check the Cassandra system and debug logs.
 
-- In a command window or PowerShell window, execute "[*nodetool status*](https://community.dataminer.services/troubleshooting-cassandra-nodetool-status/)" (from the directory *C:\Program Files\Cassandra\bin*). In a Failover setup, execute this command on both Cassandra nodes of the Failover pair.
-
-  <!-- Comment :Add xref when nodetool status flowchart has been added -->
+- In a command window or PowerShell window, execute "[*nodetool status*](xref:Troubleshooting_Cassandra_Nodetool_Status_Check)" (from the directory *C:\Program Files\Cassandra\bin*). In a Failover setup, execute this command on both Cassandra nodes of the Failover pair.
 
 Check connectivity to Cassandra using DevCenter. On the DMA, go to `C:\Program Files\Cassandra\DevCenter\` and double-click *Run DevCenter*.
 
@@ -38,8 +36,8 @@ flowchart TD
     3{{Go to Alarm Console or Failover Status.}}:::Blue
     box2---|No|DiskCheck[Check on which drive database data is stored.<br> DRIVE:\ProgramData\Cassandra\SLDMADB <br>Check the drive size trend graph.]:::LightGray---Disk
     Disk{{Is available space on the drive decreasing?}}:::Blue
-    click Disk "https://docs.dataminer.services/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Cassandra/Troubleshooting_Cassandra.html#option-2-is-available-space-on-the-drive-decreasing" "drive decreasing"
-    click 3 "https://docs.dataminer.services/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Cassandra/Troubleshooting_Cassandra.html#option-1-go-to-alarm-console-or-failover-status" "alarm console or failover status"
+    click Disk "#option-2-is-available-space-on-the-drive-decreasing" "drive decreasing"
+    click 3 "#option-1-go-to-alarm-console-or-failover-status" "alarm console or failover status"
     linkStyle default stroke:#cccccc
     classDef info fill:#11628F,stroke:#000070,stroke-width:0px, color:#FFF;
     classDef clickable fill:#ABDCFF,stroke:#00517E,stroke-width:0.25px, color:#00406D;
@@ -98,7 +96,7 @@ flowchart TD
     Disk---|No|cassRest{{Is Cassandra service restarting or stopped?}}:::Blue
     cassRest---a2[Connection to Cassandra errors]:::LightGray---a3
     a3[Check the Cassandra.yaml file.<br>Click this box for more details.]:::Gray
-    click a3 "https://docs.dataminer.services/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Cassandra.html#cassandrayaml-file" "Cassandra.yaml details"
+    click a3 "https://docs.dataminer.services/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Cassandra/Troubleshooting_Cassandra.html#cassandrayaml-file" "Cassandra.yaml details"
     click nodeT "https://docs.dataminer.services/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Cassandra/Troubleshooting_Cassandra_Nodetool_Checks.html" "nodetool"
     click clean2 "https://docs.dataminer.services/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Cassandra/Troubleshooting_Cassandra_Nodetool_Checks.html" "nodetool"
     a3 ---  a8
@@ -145,13 +143,19 @@ These are the main parameters you should check in this file:
 **For a Failover setup**: Each DMA (main or backup) has its own *distinct .yaml* file.
 
 - *listen_address: [IP of the main or backup DMA]* (depending on the DMA)
+
 - *seeds: [IP of the main DMA],[IP of the backup DMA]* (same for both DMAs)
+
 - *rpc_address: 0.0.0.0* (same for both DMAs)
+
 - *broadcast_rpc_address: [IP of the main or backup DMA]* (depending on the DMA)
 
 **For a single DMA setup:**
 
 - *listen_address: 127.0.0.1*
+
 - *seeds: 127.0.0.1*
+
 - *rpc_address: 0.0.0.0*
+
 - *broadcast_rpc_address: 127.0.0.1*

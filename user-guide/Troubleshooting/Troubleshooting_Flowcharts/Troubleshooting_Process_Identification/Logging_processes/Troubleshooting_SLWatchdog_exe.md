@@ -87,6 +87,7 @@ flowchart TD
     togglingRTE --- CheckSlXml
     CheckSlXml --- XmlFlowchart
  %% Define hyperlinks %%
+click Investigation "https://docs.dataminer.services/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Where_to_Start.html"
 click RteLink "https://docs.dataminer.services/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Identify_Per_Module/Alarm_Console/Troubleshooting_Run_Time_Errors.html" "Go to RTE troubleshooting page"
 click XmlFlowchart "https://docs.dataminer.services/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Process_Identification/Other_processes/Troubleshooting_SLXML_exe.html" "Go to SLXML Flowchart"
 click ConfirmLeak "#how-can-you-confirm-a-memory-leak" "How to identify a memory leak."
@@ -151,6 +152,7 @@ flowchart TD
     CrashdumpIssues---CrashRestart
     CrashRestart--- VerifyRestart
 %% Define hyperlinks %%
+click Investigation "https://docs.dataminer.services/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Where_to_Start.html"
 click InstructionsBitness "#is-watchdog-running-as-a-64-bit-process" "Determine if Watchdog is registered as 32-bit or 64 bit process. "
 click ResolveMismatch "#how-do-you-resolve-a-bitness-mismatch-between-the-dataminer-version-and-slwatchdogexe" "Resolve mismatch between DMA and SLWatchdog bitness"
 click RunLogCollector "https://docs.dataminer.services/user-guide/Reference/DataMiner_Tools/SLLogCollector.html" "How to use the log collector tool."

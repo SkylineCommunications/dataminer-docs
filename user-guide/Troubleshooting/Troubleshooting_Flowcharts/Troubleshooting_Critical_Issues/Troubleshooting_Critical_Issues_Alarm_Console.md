@@ -41,7 +41,7 @@ click DataNotUpdated "https://docs.dataminer.services/user-guide/Troubleshooting
 click Automaticrestart "https://docs.dataminer.services/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Critical_Issues/Troubleshooting_Critical_Issues_Automatic_Restart.html" "Automatic Restart"
 click Start "https://docs.dataminer.services/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Critical_Issues/Troubleshooting_Critical_Issues_Overview.html" "Critical issue suspected"
 click MachineoutofResources "https://docs.dataminer.services/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Critical_Issues/Troubleshooting_Critical_Issues_Resources.html" "Machine Out Of Resources"
-click ErrorAlarmConsole "https://docs.dataminer.services/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Critical_Issues/Troubleshooting_Critical_Issues_Alarm_Console.html#errors-in-alarm-console" "Errors in Alarm Console"
+click ErrorAlarmConsole "#errors-in-alarm-console" "Errors in Alarm Console"
 %% Apply styles to blocks %%
 class Start DarkBlue;
 class Automaticrestart,DataNotUpdated,MachineoutofResources,ErrorAlarmConsole,RTE LightBlue;
@@ -76,7 +76,7 @@ Sticky --- |YES| StickyYes
 Sticky --- |NO| Toggling
 Toggling --- |YES| TogglingYes
 %% Define hyperlinks %%
-click RTE "https://docs.dataminer.services/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Identify_Per_Module/Alarm_Console/Troubleshooting_Run_Time_Errors.html" "How to check for RTE"
+click RTE "https://docs.dataminer.services/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Identify_Per_Module/Alarm_Console/Troubleshooting_Run_Time_Errors.html" "How to check for RTE"
 %% Apply styles to blocks %%
 class Start DarkBlue;
 class Automaticrestart,DataNotUpdated,MachineoutofResources,ErrorAlarmConsole,RTE LightBlue;
@@ -87,9 +87,9 @@ class Home,SLLogCollector,Investigation LightBlue;
 
 ## Typical errors
 
-### Severity: [RTE](xref:Protocol_thread_run_time_errors_use_cases)
+- **Severity**: [RTE](xref:Protocol_thread_run_time_errors_use_cases)
 
-- **Alarm**: Thread problem in *SLProtocol.exe*
+  **Alarm**: Thread problem in *SLProtocol.exe*
 
   **Plan of attack**:
 
@@ -97,7 +97,9 @@ class Home,SLLogCollector,Investigation LightBlue;
 
   1. Check for [protocol pending calls](xref:How_to_retrieve_protocol_pending_calls).
 
-- **Alarm**: Thread problem in *SLElement.exe*
+- **Severity**: RTE
+
+  **Alarm**: Thread problem in *SLElement.exe*
 
   **Plan of attack**:
 
@@ -107,9 +109,9 @@ class Home,SLLogCollector,Investigation LightBlue;
 
   1. Check if there has been a process crash.
 
-### Severity: Timeout
+- **Severity**: Timeout
 
-- **Alarm**: Communication state: Not Responding
+  **Alarm**: Communication state: Not Responding
 
   **Plan of attack**:
 
@@ -121,10 +123,14 @@ class Home,SLLogCollector,Investigation LightBlue;
 
   1. Check element logs for error logging.
 
-### Database not connected
+- **Severity**: Timeout
+
+  **Alarm**: Database not connected
 
 <!-- Comment: plan of attack missing -->
 
-### Process crash
+- **Severity**: Timeout
+
+  **Alarm**: Process crash
 
 <!-- Comment: plan of attack missing -->

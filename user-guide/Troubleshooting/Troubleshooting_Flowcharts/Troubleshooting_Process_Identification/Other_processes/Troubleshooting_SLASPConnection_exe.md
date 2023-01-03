@@ -2,7 +2,7 @@
 uid: Troubleshooting_SLASPConnection_exe
 ---
 
-# Troubleshooting - Reporter - SLASPConnection
+# Troubleshooting - Reporter - SLASPConnection.exe
 
 ## About Reporter
 

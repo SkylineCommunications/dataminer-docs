@@ -2882,7 +2882,7 @@
                   items:
                     - name: Troubleshooting - SLXML.exe
                       topicUID: Troubleshooting_SLXML_exe
-                    - name: Troubleshooting - Reporter - SLASPConnection
+                    - name: Troubleshooting - Reporter - SLASPConnection.exe
                       topicUID: Troubleshooting_SLASPConnection_exe
                     - name: Troubleshooting - SLAnalytics.exe
                       topicUID: Troubleshooting_SLAnalytics_exe
