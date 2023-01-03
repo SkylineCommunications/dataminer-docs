@@ -82,10 +82,10 @@ classDef classTerminal fill:#1e5179,stroke:#1e5179,color:#ffffff,stroke-width:1p
 %% flowchart structure
 %% -------------------------------------------------------------------------
 Action_HighMemory([High Memory Consumption]):::classExternalRef
-Action_OffloadFolder([Check if Offload folder contains files]):::classExternalRef
-Action_ElementsBigAlarms([Check for elements using<br> big alarm templates or trend templates]):::classExternalRef
+Action_OffloadFolder([Check if Offload folder <br>contains files]):::classExternalRef
+Action_ElementsBigAlarms([Check for elements using<br> big alarm templates <br>or trend templates]):::classExternalRef
 Action_AlarmCondition[Lookup for Alarm condition]:::classSolution
-Action_CheckAVGtrending([Check Avg trending on DVE elements<br> while Central Database is enabled]):::classExternalRef
+Action_CheckAVGtrending([Check Avg trending <br>on DVE elements<br> while Central Database <br>is enabled]):::classExternalRef
 Action_TimetraceTable(["Confirm TimeTrace table <br>creation/modification"]):::classExternalRef
 Action_AlarmTemplates(["Check for Alarm templates<br> with smart baselines <br>(enabled) (from QandA)"]):::classExternalRef
     Action_HighMemory --- Action_OffloadFolder

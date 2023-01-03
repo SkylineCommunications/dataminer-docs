@@ -21,19 +21,51 @@ classDef DarkGray fill:#58595B,stroke:#000070,stroke-width:0px, color:#FFFFFF;
 classDef Gray fill:#999999,stroke:#000070,stroke-width:0px, color:#FFFFFF;
 classDef LightGray fill:#DDDDDD,stroke:#000070,stroke-width:0px, color:#1E5179;
 %% Define blocks %%
+StartPage([Start page])
+LogCollector([Log collector <br>usage guide])
 START[SLDMS]
 Rte[RTE]
 Leak[Memory leak]
 Crash[Process crash]
 OI([Other frequent issues])
+%% Connect blocks %%
+START --- Rte
+START --- Leak
+START --- Crash
+START --- OI
+%% Define hyperlinks %%
+click StartPage "https://docs.dataminer.services/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Finding_a_Root_Cause.html" "Go to Start Page"
+click OI "https://docs.dataminer.services/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Process_Identification/Communication_processes/SLDMS/SLDMS_Frequent_Issues.html" "Frequent Issues"
+click LogCollector "https://docs.dataminer.services/user-guide/Reference/DataMiner_Tools/SLLogCollector.html" "SLLogCollector"
+click Rte "#option-1-rte-and-memory-leak"
+click Leak "#option-1-rte-and-memory-leak"
+click Crash "#option-2-process-crash"
+%% Apply styles to blocks %%
+class START,MinidumpNo,ProcessCrashed,N2,N1,Y2 DarkBlue;
+class MinidumpYes,Sol1,Nt3 DarkGray;
+class CrashdumpDetected,Minidump,D1,Ch1 Blue;
+class StartPage,LogCollector,OI LightBlue;
+class Rte,Leak,Crash,Y1,Ch,Nt1,Nt2 LightGray;
+class Nt Gray;
+</div>
+
+### Option 1: RTE and memory leak
+
+<div class="mermaid">
+flowchart TD
+%% Define styles %%
+linkStyle default stroke:#cccccc
+classDef LightBlue fill:#9DDAF5,stroke:#000070,stroke-width:0px, color:#1E5179;
+classDef Blue fill:#4BAEEA,stroke:#000070,stroke-width:0px, color:#FFFFFF;
+classDef DarkBlue fill:#1E5179,stroke:#000070,stroke-width:0px, color:#FFFFFF;
+classDef DarkGray fill:#58595B,stroke:#000070,stroke-width:0px, color:#FFFFFF;
+classDef Gray fill:#999999,stroke:#000070,stroke-width:0px, color:#FFFFFF;
+classDef LightGray fill:#DDDDDD,stroke:#000070,stroke-width:0px, color:#1E5179;
+%% Define blocks %%
 Nt[NotificationThread]
-StartPage([Start page])
-LogCollector([Log collector <br>usage guide])
-CrashdumpDetected{{"Crash dump found <br> at issue time? <br/>  C:\Skyline DataMiner\Logging\CrashDump"}}
-ProcessCrashed(["1. Save .high crashdump  + <br/>note timestamp. <br/>2. Check the ErrorLog.txt file <br/>for possible causes. <br/>3. Send crashdump + logging + <br/>conclusions to Create squads. "])
-Minidump{{"Minidump found <br> at issue time? <br/>  C:\Skyline DataMiner\Logging\MiniDump"}}
-MinidumpNo(["Contact tech <br> support with the <br/> required logging <br> and memory dump."])
-MinidumpYes["Identify the cause <br> in the required log file: <br>SLWatchDog2,<br/>SLDataMiner, <br>SLDMS, etc."]
+Rte[RTE]
+Leak[Memory leak]
+Ml[Memory leak]
 Ch[1. Check Task Manager <br>for high memory.<br/>2. Check MS Platform element <br>for gradual increase in <br> memory over a <br>period of time.]
 D1{{Are the conditions above met?}}
 N1([No memory leak])
@@ -46,16 +78,8 @@ Nt1[In the Alarm Console<br/> or SLWatchdog2 log file.]
 Nt2[Always a notification getting <br/>deadlocked or taking a long time.]
 Nt3[Take logging and restart DMA.]
 %% Connect blocks %%
-START --- Rte
-START ----- Leak
-START --- Crash
-START ----- OI
+Ml -..- Leak
 Rte --- Nt
-Crash --- CrashdumpDetected
-CrashdumpDetected --- |YES| ProcessCrashed
-CrashdumpDetected --- |NO| Minidump
-Minidump --- |YES| MinidumpYes
-Minidump --- |NO| MinidumpNo
 Leak --- Ch
 Ch --- D1
 D1 --- |YES| Y1
@@ -69,16 +93,47 @@ Nt --- |CONSEQUENCE| Leak
 Nt1 --- |CAUSE OF RTE| Nt2
 Nt2 --- |SOLUTION| Nt3
 %% Define hyperlinks %%
-click StartPage "https://docs.dataminer.services/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Finding_a_Root_Cause.html" "Go to Start Page"
-click OI "https://docs.dataminer.services/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Process_Identification/Communication_processes/SLDMS/SLDMS_Frequent_Issues.html" "Frequent Issues"
-click LogCollector "https://docs.dataminer.services/user-guide/Reference/DataMiner_Tools/SLLogCollector.html" "SLLogCollector"
 click Nt "#notificationthread-rte"
 %% Apply styles to blocks %%
-class START,MinidumpNo,ProcessCrashed,N2,N1,Y2 DarkBlue;
+class Rte,Ml,START,MinidumpNo,ProcessCrashed,N2,N1,Y2 DarkBlue;
 class MinidumpYes,Sol1,Nt3 DarkGray;
 class CrashdumpDetected,Minidump,D1,Ch1 Blue;
 class StartPage,LogCollector,OI LightBlue;
-class Rte,Leak,Crash,Y1,Ch,Nt1,Nt2 LightGray;
+class Crash,Y1,Ch,Nt1,Nt2 LightGray;
+class Nt,Leak Gray;
+</div>
+
+### Option 2: Process crash
+
+<div class="mermaid">
+flowchart TD
+%% Define styles %%
+linkStyle default stroke:#cccccc
+classDef LightBlue fill:#9DDAF5,stroke:#000070,stroke-width:0px, color:#1E5179;
+classDef Blue fill:#4BAEEA,stroke:#000070,stroke-width:0px, color:#FFFFFF;
+classDef DarkBlue fill:#1E5179,stroke:#000070,stroke-width:0px, color:#FFFFFF;
+classDef DarkGray fill:#58595B,stroke:#000070,stroke-width:0px, color:#FFFFFF;
+classDef Gray fill:#999999,stroke:#000070,stroke-width:0px, color:#FFFFFF;
+classDef LightGray fill:#DDDDDD,stroke:#000070,stroke-width:0px, color:#1E5179;
+%% Define blocks %%
+CrashdumpDetected{{"Crash dump found <br> at issue time? <br/>  C:\Skyline DataMiner\Logging\CrashDump"}}
+ProcessCrashed(["1. Save .high crashdump  + <br/>note timestamp. <br/>2. Check the ErrorLog.txt file <br/>for possible causes. <br/>3. Send crashdump + logging + <br/>conclusions to Create squads. "])
+Minidump{{"Minidump found <br> at issue time? <br/>  C:\Skyline DataMiner\Logging\MiniDump"}}
+MinidumpNo(["Contact tech <br> support with the <br/> required logging <br> and memory dump."])
+MinidumpYes["Identify the cause <br> in the required log file: <br>SLWatchDog2,<br/>SLDataMiner, <br>SLDMS, etc."]
+Crash[Process crash]
+%% Connect blocks %%
+Crash --- CrashdumpDetected
+CrashdumpDetected --- |YES| ProcessCrashed
+CrashdumpDetected --- |NO| Minidump
+Minidump --- |YES| MinidumpYes
+Minidump --- |NO| MinidumpNo
+%% Apply styles to blocks %%
+class START,Crash,MinidumpNo,ProcessCrashed,N2,N1,Y2 DarkBlue;
+class MinidumpYes,Sol1,Nt3 DarkGray;
+class CrashdumpDetected,Minidump,D1,Ch1 Blue;
+class StartPage,LogCollector,OI LightBlue;
+class Rte,Leak,Y1,Ch,Nt1,Nt2 LightGray;
 class Nt Gray;
 </div>
 

@@ -68,26 +68,26 @@ LinkRootCause([To root cause flowchart])
 LinkProcessList([To process identification])
 Start[SLHelper problem <br />suspected]
 Function{{Which functionality <br/>is failing?}}
-VisioKnown[See notes for known<br/>limitations/problems.]
+VisioKnown[See notes <br>for known<br/>limitations/problems.]
 VisioLogs[Check SLUIProvider.txt<br/>to find the page<br/>causing the problem.]
 VisioCube{{Is the same page shown<br/>correctly in Cube?}}
 VisioSave[Save the .vsdx file and<br/> SLUIProvider.txt log,<br/> and export the element.]
 VisioFix[No issue in SLHelper.<br/>Fix errors in .vsdx file.]
-GqiDevConsole[Check the Developer Console<br/>in your browser.]
-GqiCheckRequest{{Is the API query valid?}}
-GqiCheckResponse{{Is the response from the server valid?}}
+GqiDevConsole[Check the <br>Developer Console<br/>in your browser.]
+GqiCheckRequest{{Is the API query <br>valid?}}
+GqiCheckResponse{{Is the response <br>from the <br>server valid?}}
 GqiServerIssue[No issue in SLHelper.<br/>Check for origin<br/>of invalid data.]
 GqiSave[Save a recording<br/>of the GQI session.]
 GqiClientIssue([Report a client-side<br/>issue.])
-BpaLogs[Check SLBPAManager.txt<br/>for more information.]
-PdfLogs[Check SLASPConnection.txt<br/>to find the report<br/>causing the problem.]
-PdfCheckHtml{{Is the HTML version of<br/>the report correct?}}
-PdfReportsIssue([Check the Reporter<br/>flowchart.])
+BpaLogs[Check <br>SLBPAManager.txt<br/>for more information.]
+PdfLogs[Check <br>SLASPConnection.txt<br/>to find the report<br/>causing the problem.]
+PdfCheckHtml{{Is the HTML <br>version of<br/>the report <br>correct?}}
+PdfReportsIssue([Check the <br>Reporter<br/>flowchart.])
 PdfErrors{{Are there errors<br/>in the output?}}
 PdfModule[Identify the report module<br/>causing the error.<br/>Reproduce the issue with<br/>a simple report.]
 PdfSave[Save the error message<br/>and describe the minimum<br/>report configuration to<br/>reproduce the issue.]
-PdfTimeouts[Report may fail<br/>or time out if a very large<br/>data set is processed.]
-PdfOptimize[Optimize the report to<br/>reduce the volume of data.]
+PdfTimeouts[Report may fail<br/>or time out if <br>a very large<br/>data set is processed.]
+PdfOptimize[Optimize <br>the report to<br/>reduce the <br>volume of data.]
 EndReportIssue([Describe the issue in detail and<br/>contact Software Development.])
 %% Connect blocks %%
 Start --- Function
