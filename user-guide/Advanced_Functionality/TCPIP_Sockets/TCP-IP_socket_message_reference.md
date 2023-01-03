@@ -477,6 +477,8 @@ Each command or response must have a fixed header character and a fixed trailer 
     [Header]Get_User_Info;[1][Trailer]
     ```
 
+    \[1\] Username
+
 - **Response**
 
     ```txt
@@ -498,6 +500,9 @@ Each command or response must have a fixed header character and a fixed trailer 
     ```txt
     \tJohn│John Doe│john.doe@skyline.be│051/313569│101│Administrators│System Engineers\r
     ```
+
+> [!NOTE]
+> When getting user info for a domain user, place the domain name followed by backslash in front of the username.
 
 #### Get_User_Info (list)
 
