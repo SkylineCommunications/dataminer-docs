@@ -88,7 +88,7 @@ See [Adding custom scripts for additional controls](xref:SRM_custom_scripts#addi
 
 - **Auto Expand Profiles**: Determines whether profile parameters are automatically expanded in the Booking Manager.
 
-- **Use Node Label as Element Alias**: If this option is enabled, when the service associated with a booking is created, DataMiner will use the label of the node in the service definition as the alias for the corresponding element in the service. If this option is disabled, service elements will be displayed with the resource DVE names. <!-- RN 25236 -->
+- **Use Node Label as Element Alias**: If this option is enabled, when the service associated with a booking is created, DataMiner will use the label of the node in the service definition as the alias for the corresponding element in the service. If this option is disabled, service elements will be displayed with the resource DVE names. See [Configuring the element alias](xref:Service_Orchestration_bookings_advanced#configuring-the-element-alias)<!-- RN 25236 -->
 
 ### Contributing Reservations settings
 

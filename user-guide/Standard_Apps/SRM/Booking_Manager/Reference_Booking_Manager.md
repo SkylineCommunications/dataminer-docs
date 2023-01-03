@@ -333,6 +333,9 @@ Set this property to an integer value corresponding with the parent system funct
 
 Set this property to *Yes* to filter the available profile instances for a node in the Booking Wizard based on the capabilities of the selected resource.
 
+> [!TIP]
+> See also: [Filtering profile instances based on resource selection](xref:Service_Orchestration_profile_instances#filtering-profile-instances-based-on-resource-selection)
+
 ### HideFromWizard
 
 **Scope**: Service definition
@@ -382,6 +385,9 @@ This property allows you to indicate that profile instance selection is optional
 
 Set this property to *TRUE* to mark profile instance selection as optional.
 
+> [!TIP]
+> See also: [Setting a profile instance as optional](xref:Service_Orchestration_profile_instances#setting-a-profile-instance-as-optional)
+
 ### NoConnectivityCheck
 
 **Scope**: Service definition node interface
@@ -393,6 +399,9 @@ Set this property to *TRUE* to mark profile instance selection as optional.
 This property allows you to configure an interface that is not connected. This is also used in the context of contributing bookings to indicate interfaces that are not connected.
 
 If this property is not configured or set to *FALSE*, a disconnected interface is not handled. If the property is set to *TRUE*, the disconnected interface is loaded and displayed in the Booking Wizard.
+
+> [!TIP]
+> See also: [Allowing profile instance configuration for disconnected interfaces](xref:Service_Orchestration_profile_instances#allowing-profile-instance-configuration-for-disconnected-interfaces)
 
 ### Options
 

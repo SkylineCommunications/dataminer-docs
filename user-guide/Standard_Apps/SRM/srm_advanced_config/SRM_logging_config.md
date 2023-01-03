@@ -4,6 +4,9 @@ uid: SRM_logging_config
 
 # Configuring SRM logging
 
+> [!TIP]
+> See also: [SRM logging](xref:SRM_logging)
+
 ## Standard SRM logging configuration
 
 <!-- RN 31178 -->

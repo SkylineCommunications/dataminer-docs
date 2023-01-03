@@ -50,3 +50,15 @@ You can extend the DataMiner service associated with a booking with a custom enh
 
 > [!NOTE]
 > If you want to change the element alias of the elements that are included in the service based on the service definition, this is possible with the *Use Node Label as Element Alias* setting. See [Booking wizard options settings](xref:Booking_Manager_Config_tab#booking-wizard-options-settings).
+
+## Configuring the element alias
+
+<!-- RN 25236 -->
+
+By default, when the service associated with a booking is created, the service elements have the names of the resource DVEs.
+
+However, you can configure SRM to use the label of the node in the service definition as the element alias instead.
+
+To do so, in the Booking Manager app, go to the *Config* > *Wizard* page, and enable the option Use *Node Label as Element Alias*.
+
+See also: [Wizard subtab](xref:Booking_Manager_Config_tab#wizard-subtab)

@@ -4,7 +4,7 @@ uid: SRM_alarm_monitoring
 
 # Configuring SRM alarm monitoring
 
-<!-- RN 21781, 23359 -->
+<!-- RN 29955 -->
 
 The SRM framework can generate alarms in the following situations:
 
@@ -38,4 +38,4 @@ To configure SRM alarm monitoring:
    > Depending on your configuration, either all active bookings in alarm state or all active bookings will be listed in a dynamic table.>
    >
    > - After a booking ends, the booking record will be kept for the period of time configured with the *Booking Retention Period* parameter in the Skyline Booking Monitoring element.
-   > - Bookings that were not executed because DataMiner was not active will be kept in the table. IF they are canceled, they will be removed from the table after the configured booking retention period.
+   > - Bookings that were not executed because DataMiner was not active will be kept in the table. If they are canceled, they will be removed from the table after the configured booking retention period.

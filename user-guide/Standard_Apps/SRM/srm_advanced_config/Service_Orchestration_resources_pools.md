@@ -168,3 +168,7 @@ By default, a booking can only be confirmed when all mandatory resources and pro
 
 > [!TIP]
 > See also: [Options](xref:SRM_properties_Booking_Manager#options)
+
+## Configuring resource pool inheritance for a profile instance
+
+See [Configuring resource pool inheritance for a profile instance](xref:Service_Orchestration_profile_instances#configuring-resource-pool-inheritance-for-a-profile-instance).

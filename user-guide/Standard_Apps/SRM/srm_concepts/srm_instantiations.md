@@ -44,6 +44,8 @@ As a profile definition is a group of configuration, monitoring, capability, and
 
 For example, an "Encoding HD" instance could contain the values for each of the profile parameters required to orchestrate a resource. As a capability, the instance could contain the "HD" value, so that resources that cannot provide this specific capability are filtered out during the booking creation process.
 
+Profile instances are used in the context of Service Orchestration, Resource Automation, and Resource Orchestration.
+
 ### State profile instance
 
 A state profile instance is a specific kind of profile instance that can be defined to make sure that a specific profile will be **applied when a booking is in the corresponding state** (e.g. "Start" or "Stop"). You can create such a profile instance in the [Profiles module](xref:The_Profiles_module) by specifying the name of the base profile and adding the suffix "_[state]" (e.g. "Encoding_Start").

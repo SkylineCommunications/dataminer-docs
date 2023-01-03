@@ -43,6 +43,8 @@ If you want booking blocks to display information over more than one line, it is
 
 ## Configuring custom booking block info for a specific service definition
 
+<!-- RN 22172 -->
+
 1. In the Services module in DataMiner Cube, go to the *definitions* tab.
 
 1. Select the service definition for which you want to configure custom booking block info.
