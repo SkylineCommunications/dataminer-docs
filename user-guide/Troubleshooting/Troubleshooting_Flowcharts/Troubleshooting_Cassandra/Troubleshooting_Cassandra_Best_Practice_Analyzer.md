@@ -2,7 +2,7 @@
 uid: Troubleshooting_Cassandra_Best_Practice_Analyzer
 ---
 
-# Troubleshooting - Cassandra - Best practice analyzer
+# Troubleshooting - Cassandra - best practice analyzer
 
 ## About the Cassandra BPA
 

@@ -127,10 +127,6 @@ class Home,SLLogCollector,Investigation LightBlue;
 
   **Alarm**: Database not connected
 
-<!-- Comment: plan of attack missing -->
-
 - **Severity**: Timeout
 
   **Alarm**: Process crash
-
-<!-- Comment: plan of attack missing -->

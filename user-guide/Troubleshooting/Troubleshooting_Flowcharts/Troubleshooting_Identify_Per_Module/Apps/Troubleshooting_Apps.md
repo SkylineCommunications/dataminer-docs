@@ -33,5 +33,3 @@ uid: Troubleshooting_Apps
 | About | Info |         |
 | Ticketing | tool |         |
 | Asset Manager | tool |         |
-
-<!-- Comment: app functionality missing -->

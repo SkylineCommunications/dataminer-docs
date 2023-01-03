@@ -31,5 +31,3 @@ If SLAnalytics issues are suspected, proceed with the following checks:
 1. Check if there is an issue with the **SLNet process**. The process should be up, running and operational. Refer to the [SLNet troubleshooting flowchart](xref:Troubleshooting_SLNet_exe).
 
 1. SLAnalytics can affect your DMA resources consumption, especially the DMA CPU usage. Check the trend graph representing the **SLAnalytics CPU usage** in the Microsoft element for your DMA. If there is an observable impact that affects the DMA, check and increase the CPU power.
-
-<!-- Comment: flowchart missing? -->

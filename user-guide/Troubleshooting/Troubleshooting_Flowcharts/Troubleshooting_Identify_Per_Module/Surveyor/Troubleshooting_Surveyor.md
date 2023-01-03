@@ -100,5 +100,3 @@ class etc,Views,RedundancyGroups,Export,Sla,Elements,Services, classExternalRef;
 > For more information on export and import, see [Importing and exporting elements](xref:Importing_and_exporting_elements).
 
 ### Other
-
-<!-- Comment: issues and plans of attack missing-->

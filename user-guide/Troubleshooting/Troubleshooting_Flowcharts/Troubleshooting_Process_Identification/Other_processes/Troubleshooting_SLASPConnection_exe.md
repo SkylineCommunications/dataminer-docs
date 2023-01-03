@@ -92,8 +92,6 @@ class Process classInputOutput;
 class HOME,BACK classExternalRef;
 </div>
 
-<!-- Comment: CRASH? -->
-
 ## How to configure DCOM manually?
 
 1. Go to *Start > Administrative Tools > Component Services*.

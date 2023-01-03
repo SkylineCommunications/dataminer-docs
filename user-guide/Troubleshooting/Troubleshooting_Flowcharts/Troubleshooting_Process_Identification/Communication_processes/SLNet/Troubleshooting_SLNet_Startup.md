@@ -95,5 +95,3 @@ class START,END,TECHSUPPORT classTerminal;
 class HOME,BACK classExternalRef;
 class OpenCube,EventsAndLogs,RegisterDlls,RestartAgent,RestartMachine,ManualStart,SysAdmin classActionNonClickable;
 </div>
-
-<!-- Comment: link to crash troubleshooting flowchart missing -->

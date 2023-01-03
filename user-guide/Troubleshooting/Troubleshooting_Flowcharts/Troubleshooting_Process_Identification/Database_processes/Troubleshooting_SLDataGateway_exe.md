@@ -181,8 +181,6 @@ Decision_CrashSLDataGatewayLeakRestart{{DataMiner <br>restart needed?}}:::classE
 %% -------------------------------------------------------------------------
 </div>
 
-<!-- Comment: Spider Squad? -->
-
 ### Option 4: SLDataGateway crash
 
 <div class="mermaid">

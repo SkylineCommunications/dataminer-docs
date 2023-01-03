@@ -65,8 +65,6 @@ flowchart TD
 | Failed to Initialize Database tables | DMA cannot reach database <br> Refer to Database Flowchart |
 | The Service Manager is licensed, but no Elasticsearch database is active on the system. Therefore, Resource Manager and Service Manager will not initialize. |Elasticsearch has not been installed - verify with Skyline if an Elasticsearch setup is required and install [Elasticsearch](xref:Elasticsearch_database) if necessary. |
 
-<!-- Comment: link to Database Flowchart is missing -->
-
 ## Notice
 
 | **Issue** | **Plan of attack** |
