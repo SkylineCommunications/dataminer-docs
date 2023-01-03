@@ -72,7 +72,7 @@ Here are some pointers to maximize your visibility.
 
   Make sure that you contribute to events Skyline is attending. Your involvement can include the promotion of these events and Skyline’s attendance, but these events can also create the opportunity to schedule joint meetings with your customers and prospects to educate them on the latest and greatest DataMiner has to offer.
 
-  However, as a partner, there is also an expectation that you participate in events and that your DataMiner-related offering takes a prominent position in those. You can contact Skyline for extra support with these events.
+  However, as a partner, there is also an expectation that you participate yourself in public or private events and that your DataMiner-related offering takes a prominent position in those. You can contact Skyline for extra support with these events.
 
   This support can range from joint announcements, to support through DataMiner demo systems and setups, all the way to support staffing if needed (e.g. technical staff to support your demos and meetings, speakers, etc.). Note that private events these days are also instrumental to engage and empower a user community and that Skyline is available to support those.
 
