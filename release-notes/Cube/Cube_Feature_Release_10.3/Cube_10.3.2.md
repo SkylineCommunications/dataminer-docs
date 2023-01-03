@@ -203,3 +203,11 @@ From now on, table filter boxes will be shown or hidden depending on the followi
 <!-- MR 10.4.0 - FR 10.3.2 -->
 
 In some rare cases, conditional shape manipulation actions (e.g. Show, Hide, Rotate, Blink, etc.) would not be executed correctly.
+
+#### Element Connections app: Problems when creating or updating connections [ID_35228]
+
+<!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
+
+When, in the *Element Connections* app, you created a new connection or updated an existing connection, in some cases, duplicate connections would incorrectly be created or existing data would be modified incorrectly.
+
+Also, the *Element Connections* app has now been made fully compatible with the *Skyline Black* theme.

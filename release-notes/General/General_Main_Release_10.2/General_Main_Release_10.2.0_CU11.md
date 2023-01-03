@@ -238,6 +238,14 @@ From now on, table filter boxes will be shown or hidden depending on the followi
 | Filter             | Shown      |
 | *No Filter option* | Not shown  |
 
+#### DataMiner Cube - Element Connections app: Problems when creating or updating connections [ID_35228]
+
+<!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
+
+When, in the *Element Connections* app, you created a new connection or updated an existing connection, in some cases, duplicate connections would incorrectly be created or existing data would be modified incorrectly.
+
+Also, the *Element Connections* app has now been made fully compatible with the *Skyline Black* theme.
+
 #### Dashboards app & Low-code apps - Node edge component: Segments of bidirectional edges would not always be positioned consistently [ID_35230]
 
 <!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
