@@ -326,6 +326,12 @@ From now on, when the parameter feed has a protocol or view filter, it will fetc
 
 In a node edge graph, the segments of bidirectional edges would not always be positioned consistently.
 
+#### DataMiner Object Models: Problem when retrieving a non-existing DomInstance status ID [ID_35231]
+
+<!-- MR 10.3.0 - FR 10.3.2 -->
+
+When a GQI query retrieved the status of a DOM instance that had no status, the status ID of that DOM instance would incorrectly no longer be returned as a null value. Instead, a `Could not find state for statusID ...` error would be thrown.
+
 #### Problem when a GQI message was sent asynchronously to SLNet [ID_35232]
 
 <!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
@@ -337,6 +343,13 @@ When a client asynchronously sent an GQI message to SLNet, in some cases, an exc
 <!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
 
 When redundancy groups were being initialized during a DataMiner start-up, in some cases, an error could occur when an element had its state changed from "undefined" to "stopped".
+
+#### SLAnalytics would incorrectly ignore trend patterns defined for parameters of child DVE elements [ID_35260]
+
+<!-- MR 10.3.0 - FR 10.3.2 -->
+<!-- Not added to MR 10.3.0 -->
+
+In DataMiner feature version 10.3.1, SLAnalytics would incorrectly ignore trend patterns defined for parameters of child DVE elements.
 
 #### Eventing and Polling would incorrectly be used simultaneously [ID_35267]
 

@@ -997,3 +997,9 @@ When a Visual Overview component was linked to a feed, in some cases, it would n
 <!-- MR 10.3.0 - FR 10.3.2 -->
 
 When an element was frequently receiving timeout values, SLElement would leak memory.
+
+#### DataMiner Object Models: Problem when retrieving a non-existing DomInstance status ID [ID_35231]
+
+<!-- MR 10.3.0 - FR 10.3.2 -->
+
+When a GQI query retrieved the status of a DOM instance that had no status, the status ID of that DOM instance would incorrectly no longer be returned as a null value. Instead, a `Could not find state for statusID ...` error would be thrown.
