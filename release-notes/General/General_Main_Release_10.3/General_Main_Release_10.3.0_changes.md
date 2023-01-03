@@ -974,12 +974,6 @@ When resource data was being migrated to Elasticsearch, the following exception 
 2022/12/01 08:53:59.582|SLNet.exe|ResourceManager|ERR|0|6|System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.ArgumentException: value is not serializable to json
 ```
 
-#### Problem with the generation of TaskCancellationExceptions [ID_35079]
-
-<!-- MR 10.3.0 - FR 10.3.2 -->
-
-Modules using the managed SPI framework (Skyline.DataMiner.Spi) would trigger excessive numbers of TaskCancellationExceptions. Also, for the SLNet process, increasing numbers of these exceptions would be generated for every additional Cube client.
-
 #### Monitoring app: Problem when opening the histogram page of a view [ID_35081]
 
 <!-- MR 10.3.0 - FR 10.3.2 -->

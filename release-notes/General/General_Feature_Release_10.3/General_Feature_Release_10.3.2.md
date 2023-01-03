@@ -257,7 +257,7 @@ When you ran SLLogCollector via the command line and specified multiple processe
 
 #### Problem with the generation of TaskCancellationExceptions [ID_35079]
 
-<!-- MR 10.3.0 - FR 10.3.2 -->
+<!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
 
 Modules using the managed SPI framework (Skyline.DataMiner.Spi) would trigger excessive numbers of TaskCancellationExceptions. Also, for the SLNet process, increasing numbers of these exceptions would be generated for every additional Cube client.
 
