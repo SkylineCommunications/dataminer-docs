@@ -1,4 +1,4 @@
 ---
-uid: Deal Registration
+uid: Deal_Registration
 ---
 
