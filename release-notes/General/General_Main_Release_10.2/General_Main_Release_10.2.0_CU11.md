@@ -12,6 +12,12 @@ uid: General_Main_Release_10.2.0_CU11
 
 ### Enhancements
 
+#### Security enhancements [ID_35240]
+
+<!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
+
+A number of security enhancements have been made.
+
 #### SLLogCollector will now first check for default.xml files in the LogConfig folder in the same location as SL_LogCollector.exe [ID_34739]
 
 <!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
@@ -45,12 +51,6 @@ When you want the NAS service on existing setups to have a quoted path, do the f
 <!-- Main Release Version 10.1.0 [CU22]/10.2.0 [CU11] - Feature Release Version 10.3.2 -->
 
 Up to now, when you exported real-time trend data to a CSV file, trend points with value "0" would not be included. From now on, those values will be exported as well.
-
-#### Security enhancements [ID_35240]
-
-<!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
-
-A number of security enhancements have been made.
 
 #### ClusterState.xml file removed [ID_35248]
 
