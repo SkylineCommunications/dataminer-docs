@@ -24,6 +24,12 @@ A number of security enhancements have been made relating, amongst others, to ex
 
 Because of a number of enhancements, overall error handling has improved.
 
+#### Dashboards: An EPM feed can now be used to feed EPM identifiers to a parameter feed [ID_33977]
+
+<!-- MR 10.3.0 - FR 10.2.11 -->
+
+An EPM feed can now be used to feed EPM identifiers to a parameter feed.
+
 #### Performance improvement to update service state more quickly [ID_34165]
 
 <!-- MR 10.1.0 [CU20]/10.2.0 [CU8] - FR 10.2.11 -->

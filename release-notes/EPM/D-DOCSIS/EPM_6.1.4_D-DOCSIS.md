@@ -78,6 +78,10 @@ These changes include:
 - More efficient buffer cleanup logic.
 - Removal of the *Counters History* column in the *CmUpstream* table of the Cox CBR-8 Platform D-DOCSIS connector.
 
+#### MLD status alarm monitoring removed from Core Leaf [ID_35132]
+
+MLD status alarm monitoring is now disabled on Core Leaf level.
+
 ### Fixes
 
 #### Ceeview link on RPD Topology page not working [ID_33612]
@@ -109,3 +113,15 @@ Up to now, the US ATDMA section (previously known as the US QAM section) include
 #### Problem with table-cell navigation in Relation Name column [ID_34715]
 
 In the Interfaces tables for all devices, table-cell navigation in the Relation Name column did not work as desired. Now the System Type and System Name are properly separated in the Visual Overview configuration, so that navigation is possible to all EPM levels.
+
+#### PIM neighbors data not correctly retrieved [ID_35028]
+
+In some cases, it could occur that PIM neighbors data was not correctly retrieved. This happened specifically when the device had been running for less than 24 hours. This caused the PIM Node Leaf table to be empty and the PIM Status to be set to "Fail".
+
+#### Hub list in Market visual overview not shown completely [ID_35029]
+
+In the Market visual overview, if there were several hubs under a market, it could occur that the hub list was cut off at the bottom.
+
+#### Incorrect offline RPDs metric on Node Leaf level [ID_35162]
+
+When there were offline RPDs associated with a node leaf, the percentage calculation for offline RPDs in the node leaf visual overview could be incorrect. The relevant aggregation operations have been reviewed to prevent this, and EPM relations have been added on connector level to make the calculations more efficient.

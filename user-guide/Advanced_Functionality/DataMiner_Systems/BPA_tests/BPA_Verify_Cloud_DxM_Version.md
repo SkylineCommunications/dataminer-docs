@@ -6,7 +6,7 @@ uid: BPA_Verify_Cloud_DxM_Version
 
 This BPA test checks if the minimum required version is installed for all DxMs in the system.
 
-This BPA test is available from DataMiner 10.2.8 and 10.2.0 [CU6] onwards. You can [run it in System Center](xref:Running_BPA_tests) (on the *Agents > BPA* tab), and it also runs automatically when you upgrade to 10.2.0 [CU6]/10.2.8 or higher.
+This BPA test is available from DataMiner 10.2.8 and 10.2.0 [CU6] onwards. It runs automatically when you upgrade to 10.2.0 [CU6]/10.2.8 or higher.
 
 ## Metadata
 

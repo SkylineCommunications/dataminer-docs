@@ -4,7 +4,7 @@ uid: CreateAutomationScript
 
 # CreateAutomationScript
 
-Use this method to create DMS Automation scripts made up of statements that each contain a C# code block.
+Use this method to create DataMiner Automation scripts made up of statements that each contain a C# code block.
 
 ## Input
 

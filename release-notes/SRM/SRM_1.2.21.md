@@ -47,7 +47,7 @@ When it was not possible to adjust the start and finish time of a booking, up to
 
 This message has been improved to be more clear. It will no longer mention "Failed" and will include the time when the booking will start or finish.
 
-#### Breaking change: SRM_CustomProperty deprecated \[ID_31746\]
+#### BREAKING CHANGE: SRM_CustomProperty deprecated \[ID_31746\]
 
 The script *SRM_CustomProperty* is now considered deprecated, as it only allows the updating of one property at a time. For the same reason, the methods *AddOrUpdateCustomProperty* and *TryAddOrUpdateCustomProperty* (available in *Skyline.DataMiner.Library.Solutions.SRM.ReservationInstanceExtensions*) have become obsolete.
 

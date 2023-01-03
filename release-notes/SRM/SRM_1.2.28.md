@@ -99,21 +99,3 @@ When the Try Leave Quarantine action was executed on a booking with multiple unm
 #### Try Leave Quarantine not working correctly if booking had multiple unmapped resources with the same capacities [ID_34579]
 
 When the Try Leave Quarantine action was executed on a booking with multiple unmapped resources with the same capacities, it could occur that the booking could not leave the quarantine correctly.
-
-## Addendum CU1
-
-#### New RenameElement method [ID_34991]
-
-A new method, *RenameElement*, had been added to the *IActionableElement* in the SLSRMLibrary. It will allow you to change the name of a DataMiner element.
-
-```csharp
-/// <summary>
-/// Changes the name of an element.
-/// </summary>
-/// <param name="element">The element to be renamed.</param>
-/// <param name="engine"><see cref="Engine"/> instance used to communicate with DataMiner.</param>
-/// <param name="name">New element name.</param>
-/// <exception cref="ArgumentNullException">In case <paramref name="element"/> or <paramref name="engine"/> are null.</exception>
-/// <exception cref="ArgumentException">In case <paramref name="name"/> is null or white-space.</exception>
-public static void RenameElement(this IActionableElement element, Engine engine, string name)
-```

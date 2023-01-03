@@ -725,6 +725,9 @@ namespace Skyline.DataMiner.Scripting
 		///			<item>
 		///				<description>From DataMiner 10.2.9 onwards (RN 33849), if the DateTime.Kind property of <paramref name="timeInfo"/> is unspecified, the timestamp will be handled as local time.</description>
 		///			</item>
+		///			<item>
+		///				<description>A <see langword="null"/> value will not clear the parameter but keep its current value. To clear a parameter, see <see href="xref:LogicActionClear" />.</description>
+		///			</item>
 		///		</list>
 		///	</remarks>
 		///	<example>
@@ -768,6 +771,9 @@ namespace Skyline.DataMiner.Scripting
 		///			<item>
 		///				<description>In case multiple parameters need to be set, it is preferred to use a single SetParameters method call in order to reduce the inter-process communication between the SLScripting and SLProtocol processes.</description>
 		///			</item>
+		///			<item>
+		///				<description>A <see langword="null"/> value will not clear the parameter but keep its current value. To clear a parameter, see <see href="xref:LogicActionClear" />.</description>
+		///			</item>
 		///		</list>
 		///	</remarks>
 		///	<example>
@@ -792,6 +798,9 @@ namespace Skyline.DataMiner.Scripting
 		///			<item>
 		///				<description>From DataMiner 10.2.9 onwards (RN 33849), if the DateTime.Kind property of an entry in <paramref name="timeInfos"/> is unspecified, the timestamp entry will be handled as local time.</description>
 		///			</item>
+		///			<item>
+		///				<description>A <see langword="null"/> value will not clear the parameter but keep its current value. To clear a parameter, see <see href="xref:LogicActionClear" />.</description>
+		///			</item>
 		///		</list>
 		///	</remarks>
 		///	<example>
@@ -813,6 +822,9 @@ namespace Skyline.DataMiner.Scripting
 		///			<item>
 		///				<description>Introduced in DataMiner version 8.0.3.</description>
 		///			</item>
+		///			<item>
+		///				<description>A <see langword="null"/> value will not clear the parameter but keep its current value. To clear a parameter, see <see href="xref:LogicActionClear" />.</description>
+		///			</item>		
 		///		</list>
 		///	</remarks>
 		///	<example>

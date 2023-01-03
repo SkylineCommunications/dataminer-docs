@@ -89,7 +89,7 @@ For example, for an HTTP connection, UDP and Serial should be disabled:
 <PortSettings name="HTTP Connection">
    <BusAddress>
       <DefaultValue>bypassProxy</DefaultValue>
-      <Disabled>true</Disabled>
+      <Disabled>false</Disabled>
    </BusAddress>
    <IPport>
       <DefaultValue>80</DefaultValue>
@@ -111,6 +111,8 @@ For several connection types, some port types are already disabled by the client
 - HTTP: "Serial" and "UDP/IP" need to be disabled in the protocol
 
 ## See also
+
+- [bypassProxy](xref:ConnectionsHttpElementConfiguration)
 
 DataMiner Protocol Markup Language:
 

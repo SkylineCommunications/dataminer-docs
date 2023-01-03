@@ -464,6 +464,24 @@ var allResources = resourceManagerHelper.GetResources(new TRUEFilterElement<Reso
 
 Because of a number of enhancements, overall performance has increased when retrieving DomInstances that have a DomBehaviorDefinition.
 
+#### SLAnalytics: Enhanced automatic evaluation of trend predictions [ID_34901]
+
+<!-- MR 10.3.0 - FR 10.3.1 -->
+
+Because of a number of enhancements, the automatic evaluation of trend predictions has improved.
+
+#### Service & Resource Management: Enhanced performance when adding and updating bookings [ID_35016]
+
+<!-- MR 10.3.0 - FR 10.3.2 -->
+
+Because of a number of enhancements, overall performance has increased when creating and updating bookings.
+
+#### SLAnalytics: Enhanced processing of parameter values 'exception' and 'other' [ID_35214]
+
+<!-- MR 10.3.0 - FR 10.3.2 -->
+
+Because of a number of enhancements, overall processing of "exception" or "other" parameter values by the SLAnalytics process has improved.
+
 ### Fixes
 
 #### SLAnalytics: Problem with trend prediction [ID_31352]
@@ -562,6 +580,18 @@ On systems without an Elasticsearch database, the following messages were thrown
 
 From now on, when no Elasticsearch database can be found, only the above-mentioned information event will be thrown.
 
+#### SLAnalytics - Pattern matching: Disabling the monitoring of a pattern would not be applied immediately [ID_32792]
+
+<!-- MR 10.3.0 - FR 10.2.4 -->
+
+When you disabled the monitoring of a pattern that had monitoring enabled, the update would incorrectly only be applied after restarting either SLAnalytics or the DataMiner software.
+
+#### MessageBroker: Timeout value would incorrectly be ignored when using RequestResponse(Async) [ID_32810]
+
+<!-- MR 10.3.0 - FR 10.2.5 -->
+
+When, in the MessageBroker, RequestResponse(Async) was used when NATS was not yet connected, the specified timeout value would incorrectly be ignored. The timeout value would only be applied to the actual NATS communication and not to the potential reconnection logic.
+
 #### Elasticsearch: TTL settings would not be applied correctly [ID_32913]
 
 <!-- MR 10.3.0 - FR 10.2.6 -->
@@ -592,6 +622,16 @@ Up to now, when SLPort received a WebSocket message larger than the WebSocket bu
 
 When you created an element with an alarm template in which anomaly detection alarms were configured for table parameters, in some cases, none of the enabled types of change points would trigger an alarm.
 
+#### SLAnalytics - Automatic incident tracking: Incorrect error message would be generated [ID_33305]
+
+<!-- MR 10.3.0 - FR 10.2.7 -->
+
+In some cases, the following incorrect error message would be generated:
+
+```txt
+Ignoring alarm group update: unknown alarm group tree.
+```
+
 #### CSLCloudBridge library would incorrectly not take into account the connection timeout specified in SLCloud.xml [ID_33322]
 
 <!-- MR 10.3.0 - FR 10.2.6 [CU0]  -->
@@ -619,6 +659,12 @@ On systems with a MySQL database, the ResourceManager module would fail to initi
 <!-- MR 10.3.0 - FR 10.2.7 -->
 
 When, in a DataMiner System, agents were configured to use HTTPS, the SLCloud.xml files of each of those agent would incorrectly refer to the local agent using the IP address instead of the hostname.
+
+#### SLAnalytics: The automatic incident tracking feature would incorrectly not be disabled when the alarm focus feature was disabled [ID_33348]
+
+<!-- MR 10.3.0 - FR 10.2.7 -->
+
+When the alarm focus feature was disabled, up to now, the automatic incident tracking feature would not automatically be disabled as well. From now on, when the alarm focus feature is disabled, the automatic incident tracking feature will also be disabled.
 
 #### Web apps: Only part of the value would be selected when moving the mouse pointer over a selection box that had the focus [ID_33379]
 
@@ -814,6 +860,18 @@ Since Cassandra 3.7 was replaced by Cassandra 3.11 in DataMiner Installer 10.2, 
 
 Also, if the *JAVA_HOME* environment variable is not defined, it will be set to the Java version that comes with Cassandra.
 
+#### External authentication via SAML: Problem when using Okta as identity provider [ID_34745]
+
+<!-- MR 10.3.0 - FR 10.3.2 -->
+
+When using external authentication via SAML, a software issue would prevent you from logging in when Okta was set up as identity provider.
+
+#### Mobile apps: Problem when trying to select an item in a drop-down box [ID_34742]
+
+<!-- MR 10.3.0 - FR 10.2.12 [CU0] -->
+
+In some cases, it would incorrectly not be possible to select an item in a drop-down box when the items were grouped or when their actual value was not identical to the value that was displayed.
+
 #### Skyline Device Simulator: 'no such object' would incorrectly be returned when requesting data from a simulation [ID_34746]
 
 <!-- MR 10.3.0 - FR 10.2.12 -->
@@ -873,3 +931,69 @@ When an *execute component* action had been configured, in some cases, when you 
 <!-- MR 10.3.0 - FR 10.2.12 [CU1] -->
 
 When you had manually changed the sorting order of a GQI table by clicking a column header, in some cases, the table would no longer feed the selected row values.
+
+#### Dashboards app: Tables would lose their conditional coloring after being sorted or filtered [ID_34979]
+
+<!-- MR 10.3.0 - FR 10.3.1 -->
+
+When you sorted or filtered a table fed by e.g. a query filter, the table would incorrectly lose its conditional coloring.
+
+#### Web apps: Problem when a trend graph displaying multiple parameters showed data that was partly in the future [ID_34982]
+
+<!-- MR 10.3.0 - FR 10.3.1 -->
+
+When a trend graph displaying multiple parameters showed data that was partly in the future, in some cases, an error could occur.
+
+#### Alarm templates: Parameters exported to DVE child elements could have incorrect alarm limits [ID_34996]
+
+<!-- MR 10.3.0 - FR 10.3.2 -->
+
+When a parameter was exported as a standalone parameter to a DVE child element, in some cases, the alarm limits could be incorrect when the type of alarm monitoring was set to either *Relative* or *Absolute*.
+
+Also, LED bar controls would either not display or not update their alarm limits.
+
+#### Dashboards app: Button to restore the initial view would incorrectly appear on all tables after sorting or filtering a table [ID_35003]
+
+<!-- MR 10.3.0 - FR 10.3.2 -->
+
+When, on a dashboard, you sorted or filtered a table, a button to restore the initial view would incorrectly appear on all tables on that dashboard. Also, when you clicked one of those buttons, they would all disappear. From now on, when you sort or filter a table on a dashboard, a button to restore the initial view will only appear on that particular table.
+
+#### Skyline Device Simulator: Problem when running a proxy simulation [ID_35059]
+
+<!-- MR 10.3.0 [CU0]/10.2.0 [CU10] - FR 10.3.1 -->
+
+In some cases, an error could occur in the Skyline Device Simulator when a proxy simulation was being run.
+
+#### Service & Resource Management: Problem when migrating resources containing properties with keys or values set to null [ID_35067]
+
+<!-- MR 10.3.0 - FR 10.3.1 [CU0] -->
+
+When resource data was being migrated to Elasticsearch, the following exception could be thrown when a resource or a resource pool contained properties with keys or values that were set to null.
+
+```txt
+2022/12/01 08:53:59.582|SLNet.exe|ResourceManager|ERR|0|6|System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.ArgumentException: value is not serializable to json
+```
+
+#### Problem with the generation of TaskCancellationExceptions [ID_35079]
+
+<!-- MR 10.3.0 - FR 10.3.2 -->
+
+Modules using the managed SPI framework (Skyline.DataMiner.Spi) would trigger excessive numbers of TaskCancellationExceptions. Also, for the SLNet process, increasing numbers of these exceptions would be generated for every additional Cube client.
+
+#### Monitoring app: Problem when opening the histogram page of a view [ID_35081]
+
+<!-- MR 10.3.0 - FR 10.3.2 -->
+
+When, in the *Monitoring* app, you selected a view and opened the histogram page, in some cases, a `Maximum call stack size exceeded` error would appear.
+
+#### Dashboards app: Visual Overview component would not show any content when linked to a feed [ID_35130]
+
+<!-- MR 10.3.0 - FR 10.3.2 -->
+
+When a Visual Overview component was linked to a feed, in some cases, it would not show any content.
+
+#### SLElement would leak memory when an element was frequently receiving timeout values [ID_35131]
+
+<!-- MR 10.3.0 - FR 10.3.2 -->
+
+When an element was frequently receiving timeout values, SLElement would leak memory.

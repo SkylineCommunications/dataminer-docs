@@ -217,6 +217,12 @@ The Line & area chart component is now able to visualize GQI query results as a 
 > [!NOTE]
 > If you want the component to show a classic trend chart, make sure the query result is sorted by the X axis column.
 
+#### Dashboards: An EPM feed can now be used to feed EPM identifiers to a parameter feed [ID_33977]
+
+<!-- MR 10.3.0 - FR 10.2.11 -->
+
+An EPM feed can now be used to feed EPM identifiers to a parameter feed.
+
 #### Dashboards / Low-Code Apps: Parameter table component brought in line with Table component [ID_34132]
 
 <!-- MR 10.3.0 - FR 10.2.10 -->
