@@ -75,7 +75,7 @@ Check if you have Correlation rules that trigger Automation scripts. If so, chec
 
 When SLCorrelation triggers an Automation script and that script contains a Sleep function, this can block the SLCorrelation process. If a large number of Correlation rules are triggered, this can cause SLNet issues.
 
-These delays are also visible in the log files. You'll notice that rules or scripts will only get triggered after the delay is finished.
+These delays are also visible in the log files. You will notice that rules or scripts will only get triggered after the delay is finished.
 
 ### Correlation loops
 

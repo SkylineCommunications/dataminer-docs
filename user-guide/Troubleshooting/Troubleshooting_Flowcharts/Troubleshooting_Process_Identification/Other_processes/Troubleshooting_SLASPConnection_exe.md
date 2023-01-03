@@ -53,7 +53,7 @@ End([End])
 %% Connect blocks %%
 Start--- TypeofIssue
 TypeofIssue ---|Error in<br/>Reporter application| ApplicationError
-ApplicationError ---|DMS Reporter couldn't<br/>communicate with the DMS| Dcom
+ApplicationError ---|DMS Reporter could not<br/>communicate with the DMS| Dcom
 Dcom----IssueResolved
 ApplicationError ---|Could not start<br/>the ChartDirector object| ChartDirector
 ChartDirector --- IssueResolved
@@ -118,7 +118,7 @@ To troubleshoot this issue:
 
 1. Register *aspapi.dll* and *comchartdir.dll* (regsvr32).
 
-1. If registration fails with "module could not be found", make sure the following file exists: *C:\windows\System32\msvbvm60.dll*. If it doesn't, copy it from another computer.
+1. If registration fails with "module could not be found", make sure the following file exists: *C:\windows\System32\msvbvm60.dll*. If it does not, copy it from another computer.
 
 1. Check the permissions on these files. Make sure everyone is allowed to "Read" / "Read and Execute" them.
 

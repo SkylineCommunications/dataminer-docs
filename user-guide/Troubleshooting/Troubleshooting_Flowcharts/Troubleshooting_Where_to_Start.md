@@ -4,7 +4,7 @@ uid: Troubleshooting_Where_to_Start
 
 # Troubleshooting: Where to start?
 
-Suppose you see something is wrong with DataMiner, but you don’t know where exactly the problem is… Where do you start the troubleshooting process? This article aims to provide some pointers on where you can start and how you can narrow down the possible causes of a problem.
+Suppose you see something is wrong with DataMiner, but you do not know where exactly the problem is… Where do you start the troubleshooting process? This article aims to provide some pointers on where you can start and how you can narrow down the possible causes of a problem.
 
 ## Troubleshooting steps
 
@@ -44,7 +44,7 @@ Check if the following processes are running:
 
 - **SLDataMiner.exe and SLNet.exe**: These are the **essential processes** for DataMiner. If one of these is not running, the DMA is considered to also not be running. The steps below may help you identify the problem more accurately. You can also find more details on startup issues in the [DataMiner Startup Issues flowchart](xref:Troubleshooting_Startup_Issues).
 
-- ***SLLog.exe* and *SLWatchDog.exe***: These processes are necessary for DataMiner **self-monitoring and troubleshooting**. If one of these is not running, information necessary for further investigation won’t be available. Follow the [DataMiner Startup Issues flowchart](xref:Troubleshooting_Startup_Issues), and make sure these processes are running correctly before you investigate any further.
+- ***SLLog.exe* and *SLWatchDog.exe***: These processes are necessary for DataMiner **self-monitoring and troubleshooting**. If one of these is not running, information necessary for further investigation will not be available. Follow the [DataMiner Startup Issues flowchart](xref:Troubleshooting_Startup_Issues), and make sure these processes are running correctly before you investigate any further.
 
 ### Check if there is enough disk space
 
@@ -58,7 +58,7 @@ If there is insufficient disk space, free up disk space, reboot the server, and 
 
 Check if new files are present in the folder ***C:\Skyline DataMiner\logging\CrashDump***. Files are created in this folder when an unexpected disappearance of a DataMiner process occurs.
 
-Note the names of the processes if there are any. If a crash dump is saved correctly, you’ll have details on the exception that occurred in the ***ERRORLOG.TXT*** file inside the package.
+Note the names of the processes if there are any. If a crash dump is saved correctly, you will have details on the exception that occurred in the ***ERRORLOG.TXT*** file inside the package.
 
 Example:
 
@@ -96,7 +96,7 @@ Look for the following lines:
 
 - `CLEARED RTE: Runtime error cleared in process <process name> …`
 
-  In some cases, run-time errors don’t cause major problems and clear themselves when an operation that occupies a thread is completed. When an RTE clears, the RTE count is reduced.
+  In some cases, run-time errors do not cause major problems and clear themselves when an operation that occupies a thread is completed. When an RTE clears, the RTE count is reduced.
 
 - `Process with PID <process ID> (<process name>) stopped.`
 
@@ -116,7 +116,7 @@ Follow these steps to **identify the initial problem in *SLWatchdog2.txt*** base
 
 ## Identifying a DMA with a problem
 
-If it’s unclear which DataMiner Agent is having a problem, these checks may help you identify it:
+If it is unclear which DataMiner Agent is having a problem, these checks may help you identify it:
 
 - In System Center, go to the *Agents* tab, and check for DataMiner Agents with RTE or Timeout icons:
 
@@ -148,6 +148,6 @@ With the steps above you can identify:
 
 - Which DataMiner process is having a problem.
 
-If you’ve found server-side issues, proceed to [Troubleshooting – Critical Issues](xref:Troubleshooting_Critical_Issues_Overview) or [Troubleshooting – Process Identification](xref:Troubleshooting_Process_Identification).
+If you have found server-side issues, proceed to [Troubleshooting – Critical Issues](xref:Troubleshooting_Critical_Issues_Overview) or [Troubleshooting – Process Identification](xref:Troubleshooting_Process_Identification).
 
-If you can’t find any issues with the steps above, proceed to [Troubleshooting – Identify Per Module](xref:Troubleshooting_Identify_per_Module).
+If you cannot find any issues with the steps above, proceed to [Troubleshooting – Identify Per Module](xref:Troubleshooting_Identify_per_Module).

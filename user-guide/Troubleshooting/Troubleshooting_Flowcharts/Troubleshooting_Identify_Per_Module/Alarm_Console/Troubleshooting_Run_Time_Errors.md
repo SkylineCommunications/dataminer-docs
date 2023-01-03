@@ -6,7 +6,7 @@ uid: Troubleshooting_Run_Time_Errors
 
 ## About run-time errors
 
-RTEs occur when a DataMiner process thread doesn’t respond for 15 minutes. Half-open RTEs occur after 7.5 minutes.
+RTEs occur when a DataMiner process thread does not respond for 15 minutes. Half-open RTEs occur after 7.5 minutes.
 
 These are notable exceptions to the 15-minute window:
 

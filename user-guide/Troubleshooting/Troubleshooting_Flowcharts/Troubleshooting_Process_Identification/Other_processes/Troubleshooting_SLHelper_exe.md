@@ -34,7 +34,7 @@ SLHelper is often updated in new DataMiner builds. Before you report an issue to
 
 ### Logging
 
-The process doesn’t have a dedicated log file. Depending on your use case, you can check the following log files:
+The process does not have a dedicated log file. Depending on your use case, you can check the following log files:
 
 - *SLUIProvider.txt*: Check this log file to check for Visual Overview issues. Search for "Log:" and "visio" for relevant information.
 
