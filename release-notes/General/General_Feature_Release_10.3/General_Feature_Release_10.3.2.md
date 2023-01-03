@@ -120,6 +120,12 @@ For example, when a line & area chart component is fed the following timespans..
 
 Because of a number of enhancements, overall performance has increased when creating and updating bookings.
 
+#### Web apps: Button styles used in interactive Automation script components have been aligned with those used in low-code app components [ID_35076]
+
+<!-- MR 10.4.0 - FR 10.3.2 -->
+
+In the web apps, the button styles used in interactive Automation script components have now been fully aligned with those used in low-code app components.
+
 #### SLAnalytics - Proactive cap detection: Enhanced accuracy when generating alarm predictions [ID_35080]
 
 <!-- MR 10.4.0 - FR 10.3.2 -->
