@@ -337,3 +337,9 @@ When a client asynchronously sent an GQI message to SLNet, in some cases, an exc
 <!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
 
 When redundancy groups were being initialized during a DataMiner start-up, in some cases, an error could occur when an element had its state changed from "undefined" to "stopped".
+
+#### Eventing and Polling would incorrectly be used simultaneously [ID_35267]
+
+<!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
+
+When a client application connects to a DataMiner Agent, it will first try to set up communication via Eventing. If communication via Eventing fails, the DataMiner Agent will fall back to communication via Polling. In some rare cases, both types of communication (i.e. Eventing and Polling) would incorrectly be used simultaneously.
