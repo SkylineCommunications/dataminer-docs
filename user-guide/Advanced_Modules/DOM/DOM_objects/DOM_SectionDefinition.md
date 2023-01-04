@@ -70,7 +70,7 @@ There are also special types of `FieldDescriptors` that are purpose-made to stor
 
 - **GroupFieldDescriptor**: Available from DataMiner 10.3.2/10.4.0 onwards. Can be used to define that a field should contain the name of a DataMiner user group.
 
-- **UserFieldDescriptor**: Available from DataMiner 10.3.2 onwards. Can be used to define that a field should contain the name of a DataMiner user. There is a *GroupId* property that can be used to define which group the user should be a part of. 
+- **UserFieldDescriptor**: Available from DataMiner 10.3.2/10.4.0 onwards. Can be used to define that a field should contain the name of a DataMiner user. There is a *GroupId* property that can be used to define which group the user should be a part of. 
 
 > [!NOTE]
 > From DataMiner 10.2.3/10.3.0 onwards, the following `FieldDescriptors` can have **multiple values**:
