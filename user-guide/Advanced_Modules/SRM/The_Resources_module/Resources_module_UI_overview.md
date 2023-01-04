@@ -43,7 +43,9 @@ The module consist of a pane on the left, listing resource pools, and a pane on 
 From DataMiner 10.3.0/10.3.2 onwards, the *Resources* tab and the *Occupancy* tab have a filter box that allow you to filter on resource name. When you enter text in the filter box, a list with suggestions will appear. When you select another resource pool while text is present in the filter box, the *Resources* tab and the *Occupancy* tab of that newly selected resource pool will automatically be filtered. To clear the filter, click the *Clear* button or delete the text in the filter box.
 
 > [!NOTE]
-> When an item in the *Resources* tab or the *Occupancy* tab gets updated while a filter is applied, it will no longer be shown if it does not match the filter.
+>
+> - It is not possible to add a new resource while a filter is applied.
+> - When an item in the *Resources* tab or the *Occupancy* tab gets updated while a filter is applied, it will no longer be shown if it does not match the filter.
 
 Booking resources can be done via Automation scripts. By means of an embedded Resource Manager component in Visio, you can create an overview of the bookings. See [Embedding a Resource Manager component](xref:Embedding_a_Resource_Manager_component).
 
