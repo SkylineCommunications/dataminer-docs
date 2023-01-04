@@ -163,7 +163,7 @@ An `ActionDefinition` can only be executed when a pre-defined condition is met. 
 
 ## Defining buttons
 
-The `DomBehaviorDefinition` also contains a list of `IDomButtonDefinitions`. These can be used to have one or more buttons shown in the UI. These buttons can be linked to an action that will be executed when they are clicked.
+The `DomBehaviorDefinition` also contains a list of `IDomButtonDefinitions`. These can be used to have one or more buttons shown in the UI. Each button can be linked to one action that will be executed when they are clicked.
 
 At present, you can only define buttons to be shown for a `DomInstance` by using the `DomInstanceButtonDefinition`.
 
