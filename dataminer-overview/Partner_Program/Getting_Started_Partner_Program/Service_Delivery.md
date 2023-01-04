@@ -8,9 +8,9 @@ To get started with the DataMiner Partner Program, it is important to note that 
 
 - **Your champions**: To get started with investing in knowledge and expertise of DataMiner, it is important to pick the right people from the start: People that have the right skills and mindset and have the potential to grow into your first champions, ready to coach and empower more people at a later stage in your journey.
 
-- **DataMiner DevOps Professional**: For the appointed resources, subscribing to the DataMiner DevOps Professionals program is highly recommended.
+- **DataMiner DevOps Professional**: For the appointed resources, subscribing to the DataMiner DevOps Professional program is highly recommended.
 
-  <!-- Comment: xref to DataMiner DevOps Professionals program when added to docs -->
+  <!-- Comment: xref to DataMiner DevOps Professional program when added to docs -->
 
   This program is tailored towards individuals that specialize in specific DataMiner-related skill sets and general associated skills.
 
