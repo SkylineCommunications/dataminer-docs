@@ -78,4 +78,4 @@ The aggregation actions for PNM and cable modem OOS parameters at Service Group,
 
 #### CISCO CMTS CCAP Platform: Incorrect US Port name exported to CM file [ID_35297]
 
-Because the CISCO CMTS CCAP Platform connector exported incorrect US Port names to the cable modem file, it could occur that the US Port IDs in the cable modem table all showed "N/A" and the US Port names in that same table were incorrect.
+Because the CISCO CMTS CCAP Platform connector exported incorrect US Port names to the cable modem file, the US Port IDs in the cable modem table showed "N/A" and the US Port names in that same table were incorrect.
