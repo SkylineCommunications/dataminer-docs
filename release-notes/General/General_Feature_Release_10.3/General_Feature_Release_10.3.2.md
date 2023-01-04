@@ -177,6 +177,12 @@ This user cache will be cleared each time a change occurs that has security impl
 
 In case a *Line & area chart* component displays trending for multiple parameters, the *Group by* setting allows you to specify how the graphs should be grouped. From now on, this *Group by* setting will by default be set to "All together".
 
+#### Enhanced performance when updating a baseline or assigning an alarm template that contains conditional monitoring [ID_35171]
+
+<!-- MR 10.4.0 - FR 10.3.2 -->
+
+Because of a number of enhancements, overall performance has increased when updating a baseline or assigning an alarm template that contains conditional monitoring.
+
 #### SLAnalytics: Enhanced processing of parameter values 'exception' and 'other' [ID_35214]
 
 <!-- MR 10.3.0 - FR 10.3.2 -->
