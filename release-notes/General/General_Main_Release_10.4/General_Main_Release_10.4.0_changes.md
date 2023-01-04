@@ -121,6 +121,12 @@ In case a *Line & area chart* component displays trending for multiple parameter
 
 Because of a number of enhancements, overall performance has increased when updating a baseline or assigning an alarm template that contains conditional monitoring.
 
+#### Low-code apps: URLs of published app versions will no longer contain the app version number [ID_35236]
+
+<!-- MR 10.4.0 - FR 10.3.2 -->
+
+From now on, the URL of a published version of an app will no longer contain the app version number. Only when you open an earlier version of an app will the URL contain the app version number.
+
 ### Fixes
 
 #### GQI: Problem when retrieving DCF interfaces [ID_34820]
