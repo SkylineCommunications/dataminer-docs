@@ -583,6 +583,10 @@ Each command or response must have a fixed header character and a fixed trailer 
   \tGet_User_Info;John\r
   ```
 
+ ```txt
+  \tGet_User_Info;DomainName\John\r
+  ```
+
   It will return:
 
   ```txt
