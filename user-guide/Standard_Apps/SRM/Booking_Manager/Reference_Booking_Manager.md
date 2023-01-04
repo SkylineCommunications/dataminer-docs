@@ -148,6 +148,9 @@ This property determines the order in which resources should be assigned to node
 
 Set the value to an integer indicating the position of the resource for this node in the order, e.g. 2.
 
+> [!TIP]
+> See also: [Defining the resource selection sequence](xref:Service_Orchestration_resources_advanced#defining-the-resource-selection-sequence)
+
 ### Contributing Configuration
 
 **Scope**: Service definition
@@ -452,6 +455,9 @@ Set this property to an integer representing the priority of the resource, e.g. 
 This property allows you to set the resource selection control for a specific node to read-only.
 
 To do so, set the property to *TRUE*.
+
+> [!TIP]
+> See also: [Disabling resource selection in the UI](xref:Service_Orchestration_resources_advanced#disabling-resource-selection-in-the-ui)
 
 ### Resource Assignment
 

@@ -15,5 +15,7 @@ Two types of log files can be generated per booking:
 
 To view the logging for a booking, select the booking in the list or on the timeline in the Booking Manager app, and click the *Debug Log* or *Action Log* button in the lower right corner of the UI.
 
+This can for instance be useful in case a booking cannot be confirmed because not all mandatory items have been configured for it (resources, profile parameters, and profile instances). In that case, a line is added to the Debug log file. <!-- RN 31183 -->
+
 > [!TIP]
 > See also: [Configuring SRM logging](xref:SRM_logging_config)
