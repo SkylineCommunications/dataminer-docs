@@ -268,6 +268,12 @@ When a view of which the name contained one of the below-mentioned characters wa
 
 From now on, when you try to upgrade a view of which the name contains one of these characters, a pop-up window will appear, saying that the view name contains invalid characters. When you then click *OK*, the pop-up window will close and the view will switch to edit mode, allowing you to change its name.
 
+#### DataMiner Cube - Visual Overview: Parameter value displayed on a shape in history mode would not be updated when linked to a session variable [ID_35219]
+
+<!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
+
+When a shape is linked to a parameter via a session variable, the parameter value shown on the shape will be updated when the session variable is updated, and when the shape goes into history mode, the history value of the linked parameter will be shown. However, up to now, when the session variable was updated while the shape was in history mode, the parameter value would incorrectly not be updated.
+
 #### DataMiner Cube - Element Connections app: Problems when creating or updating connections [ID_35228]
 
 <!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
@@ -307,3 +313,9 @@ Up to now, when email addresses and hyperlinks to web pages were retrieved from 
 <!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
 
 When a client application connects to a DataMiner Agent, it will first try to set up communication via eventing. If communication via eventing fails, the DataMiner Agent will fall back to communication via polling. In some rare cases, both types of communication (i.e. eventing and polling) would incorrectly be used simultaneously.
+
+#### Spectrum Analysis: 'Visualize measurement points' setting of a spectrum element would no longer be property saved [ID_35293]
+
+<!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
+
+When you enabled the *Visualize measurement points* setting of a spectrum element, that change would no longer to properly saved in the element's *element.xml* file. This would cause unexpected behavior after restarting the DataMiner Agent or the element in question.

@@ -216,6 +216,12 @@ From now on, when you try to upgrade a view of which the name contains one of th
 
 In some rare cases, conditional shape manipulation actions (e.g. Show, Hide, Rotate, Blink, etc.) would not be executed correctly.
 
+#### DataMiner Cube - Visual Overview: Parameter value displayed on a shape in history mode would not be updated when linked to a session variable [ID_35219]
+
+<!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
+
+When a shape is linked to a parameter via a session variable, the parameter value shown on the shape will be updated when the session variable is updated, and when the shape goes into history mode, the history value of the linked parameter will be shown. However, up to now, when the session variable was updated while the shape was in history mode, the parameter value would incorrectly not be updated.
+
 #### Element Connections app: Problems when creating or updating connections [ID_35228]
 
 <!-- MR 10.2.0 [CU11] - FR 10.3.2 -->

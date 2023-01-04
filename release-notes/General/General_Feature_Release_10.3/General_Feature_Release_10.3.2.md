@@ -376,3 +376,9 @@ Up to now, when email addresses and hyperlinks to web pages were retrieved from 
 <!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
 
 When a client application connects to a DataMiner Agent, it will first try to set up communication via eventing. If communication via eventing fails, the DataMiner Agent will fall back to communication via polling. In some rare cases, both types of communication (i.e. eventing and polling) would incorrectly be used simultaneously.
+
+#### Spectrum Analysis: 'Visualize measurement points' setting of a spectrum element would no longer be property saved [ID_35293]
+
+<!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
+
+When you enabled the *Visualize measurement points* setting of a spectrum element, that change would no longer to properly saved in the element's *element.xml* file. This would cause unexpected behavior after restarting the DataMiner Agent or the element in question.
