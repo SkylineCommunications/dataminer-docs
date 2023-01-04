@@ -256,6 +256,18 @@ From now on, table filter boxes will be shown or hidden depending on the followi
 | Filter             | Shown      |
 | *No Filter option* | Not shown  |
 
+#### DataMiner Cube - Surveyor: Problem when upgrading a view of which the name contains invalid characters [ID_35208]
+
+<!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
+
+When a view of which the name contained one of the below-mentioned characters was upgraded to a service, up to now, the *Upgrade to service* action would fail because those characters are not allowed in service names. The view would disappear, but the service would incorrectly not be created.
+
+```txt
+\ / : * ? " < > | ° ;
+```
+
+From now on, when you try to upgrade a view of which the name contains one of these characters, a pop-up window will appear, saying that the view name contains invalid characters. When you then click *OK*, the pop-up window will close and the view will switch to edit mode, allowing you to change its name.
+
 #### DataMiner Cube - Element Connections app: Problems when creating or updating connections [ID_35228]
 
 <!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
