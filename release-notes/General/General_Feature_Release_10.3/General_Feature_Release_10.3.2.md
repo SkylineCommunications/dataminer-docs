@@ -342,7 +342,7 @@ In a node edge graph, the segments of bidirectional edges would not always be po
 
 <!-- MR 10.3.0 - FR 10.3.2 -->
 
-When a GQI query retrieved the status of a DOM instance that had no status, the status ID of that DOM instance would incorrectly no longer be returned as a null value. Instead, a `Could not find state for statusID ...` error would be thrown.
+When a GQI query retrieved the status of a DOM instance that had no status, the logic would incorrectly detect that a status was present and would try to resolve the display name for that status, causing a `Could not find state for statusID ...` error to be thrown.
 
 #### Problem when a GQI message was sent asynchronously to SLNet [ID_35232]
 
