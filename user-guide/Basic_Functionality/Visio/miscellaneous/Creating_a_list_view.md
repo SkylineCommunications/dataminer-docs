@@ -77,6 +77,8 @@ The following options can be specified in the *ComponentOptions* shape data fiel
   >   | Light | #E5E5E5 (RGB: 229,229,229) |
   >   | Black | #333333 (RGB: 51,51,51)    |
 
+<!-- RN 35157 -->
+
 ## List view filters
 
 In the Filters shape data field, it is possible to filter which information is displayed in the list view.
