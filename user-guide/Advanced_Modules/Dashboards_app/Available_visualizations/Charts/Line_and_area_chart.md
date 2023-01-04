@@ -57,7 +57,7 @@ To configure the component:
 
    - *Show maximum*: Available from DataMiner 10.0.13 onwards, if *Show real-time trend data*/Stack trend lines is not selected. Displays the maximum trend data. By default, this is disabled.
 
-   - *Group by*: In case the component displays trending for multiple parameters, this box allows you to specify how the graphs should be grouped. One graph will be displayed per group. Note that view parameters can only be grouped together with other parameters with the option *All together*, otherwise they are placed in a separate group.
+   - *Group by*: In case the component displays trending for multiple parameters, this box allows you to specify how the graphs should be grouped. One graph will be displayed per group. Note that view parameters can only be grouped together with other parameters with the option *All together*, otherwise they are placed in a separate group. From DataMiner 10.3.2/10.4.0 onwards, the *Group by* setting will be set to *All together* by default. <!-- RN 35160 -->
 
    - *Use percentage based values*: This option is only displayed if the component displays resource capacity information. If you select this option, the chart will display percentage values instead of absolute values.
 
