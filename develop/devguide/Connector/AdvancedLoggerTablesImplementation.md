@@ -61,8 +61,8 @@ To implement a logger table, perform the following steps:
        <Type>read</Type>
        <Interprete>
           <RawType>other</RawType>
-          <LengthType>next param</LengthType>
           <Type>string</Type>
+          <LengthType>next param</LengthType>
        </Interprete>
        <Database>
           <ColumnDefinition>VARCHAR(20)</ColumnDefinition>
@@ -124,16 +124,16 @@ To implement a logger table, perform the following steps:
 
     ```xml
     <Param id="5202" trending="false">
-       <Name>traplogdatabasetimestamp</Name>
+       <Name>ts</Name>
        <Description>Database Timestamp (Trap Log)</Description>
        <Information>
           <Subtext>This is the principal timestamp used in the database.</Subtext>
        </Information>
-          <Type>read</Type>
+       <Type>read</Type>
        <Interprete>
           <RawType>other</RawType>
-          <LengthType>next param</LengthType>
           <Type>string</Type>
+          <LengthType>next param</LengthType>
        </Interprete>
        <Database>
           <ColumnDefinition>DATETIME</ColumnDefinition>
@@ -155,7 +155,7 @@ To implement a logger table, perform the following steps:
     - The expected format is as follows: 'YYYY-MM-DD HH:MM:SS'. In a QAction, you can obtain this format for a given DateTime instance using the following code:
 
       ```csharp
-      string datetime = DateTime.Now.ToString("G", CultureInfo.CreateSpecificCulture("fr-CA"));
+      string datetime = DateTime.UtcNow.ToString("G", CultureInfo.CreateSpecificCulture("fr-CA"));
       ```
 
     - DateTime values should be inserted in UTC.
