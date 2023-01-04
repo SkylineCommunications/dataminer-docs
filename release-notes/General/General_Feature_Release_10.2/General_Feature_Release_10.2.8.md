@@ -416,6 +416,13 @@ In some cases, run-time errors could occur due to MessageBrokerReconnectThread p
 
 When you had paused the replay of a spectrum recording, in some cases, the “next trace” button and the slider would not work correctly.
 
+#### DataMiner Cube: SLAnalytics would start to consume an excessive amount of memory when you opened a card of an element with parameters that had only average trending enabled [ID_33741]
+
+<!-- MR 10.3.0 - FR 10.2.8 -->
+<!-- Not added to MR 10.3.0 -->
+
+When you opened a card of an element with parameters that had only average trending enabled, in some cases, the SLAnalytics process would start to consume an excessive amount of memory.
+
 #### Service & Resource Management: Changes to resource pools would incorrectly not be saved in the Resources.xml file \[ID_33743\]
 
 On standalone DataMiner Agents, changes to resource pools would incorrectly not be saved in the Resources.xml file.

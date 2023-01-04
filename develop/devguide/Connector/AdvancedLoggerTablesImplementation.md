@@ -14,8 +14,8 @@ To implement a logger table, perform the following steps:
        <Description>Traps Logger</Description>
        <Type>array</Type>
        <ArrayOptions index="0" options="database">
-          <ColumnOption idx="0" pid="5201" type="retrieved" value="" options="" />
-          <ColumnOption idx="1" pid="5202" type="retrieved" value="" options="" />
+          <ColumnOption idx="0" pid="5201" type="retrieved" options="" />
+          <ColumnOption idx="1" pid="5202" type="retrieved" options="" />
          ...
        </ArrayOptions>
       ...
@@ -30,8 +30,8 @@ To implement a logger table, perform the following steps:
        <Description>Traps Logger</Description>
        <Type>array</Type>
        <ArrayOptions index="0" options="database">
-          <ColumnOption idx="0" pid="5201" type="retrieved" value="" options="" />
-          <ColumnOption idx="1" pid="5202" type="retrieved" value="" options="" />
+          <ColumnOption idx="0" pid="5201" type="retrieved" options="" />
+          <ColumnOption idx="1" pid="5202" type="retrieved" options="" />
          ...
        </ArrayOptions>
        <Database>
@@ -56,14 +56,7 @@ To implement a logger table, perform the following steps:
        <Name>sip</Name>
        <Description>Source IP (Trap Log)</Description>
        <Information>
-          <Text>Trap Log Source IP</Text>
-          <Subtext></Subtext>
-          <Includes>
-             <Include>range</Include>
-             <Include>steps</Include>
-             <Include>time</Include>
-             <Include>units</Include>
-          </Includes>
+          <Subtext>Trap Log Source IP</Subtext>
        </Information>
        <Type>read</Type>
        <Interprete>
@@ -134,14 +127,7 @@ To implement a logger table, perform the following steps:
        <Name>traplogdatabasetimestamp</Name>
        <Description>Database Timestamp (Trap Log)</Description>
        <Information>
-          <Text>Trap Log Database Timestamp</Text>
           <Subtext>This is the principal timestamp used in the database.</Subtext>
-          <Includes>
-             <Include>range</Include>
-             <Include>steps</Include>
-             <Include>time</Include>
-             <Include>units</Include>
-          </Includes>
        </Information>
           <Type>read</Type>
        <Interprete>

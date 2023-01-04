@@ -1014,3 +1014,9 @@ When a GQI component was embedded in a Visio drawing or a web page, in some case
 #### SLDataGateway: Result set would incorrectly be kept in memory after retrieving alarms from the database \[ID_32788\]
 
 When alarms had been retrieved from the database page by page, in some cases, those pages would be kept in memory indefinitely.
+
+#### SLAnalytics - Pattern matching: Disabling the monitoring of a pattern would not be applied immediately [ID_32792]
+
+<!-- MR 10.3.0 - FR 10.2.4 -->
+
+When you disabled the monitoring of a pattern that had monitoring enabled, the update would incorrectly only be applied after restarting either SLAnalytics or the DataMiner software.

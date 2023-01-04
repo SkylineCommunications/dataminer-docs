@@ -8,7 +8,10 @@ The `DomDefinition` object groups `DomInstance` objects together (as each instan
 
 ## Properties
 
-The table below lists the properties of the `DomDefinition` object. It also indicates whether a property can be used for filtering using the `DomDefinitionExposers`.
+The table below lists the properties of the `DomDefinition` object. It also indicates whether a property can be used for filtering using the `DomDefinitionExposers`. 
+
+> [!NOTE]
+> From DataMiner 10.3.2/10.4.0 onwards, the `DomDefinition` object also has [the *ITrackBase* properties](xref:DOM_objects#itrackbase-properties).
 
 | Property | Type | Filterable | Description |
 |--|--|--|--|

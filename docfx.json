@@ -38,6 +38,8 @@
         ]
       }
     ],
+	"xrefService": [ "https://xref.docs.microsoft.com/query?uid={uid}" ],
+	"xref" : [ "xref/newtonsoft.yml" ],
     "resource": [
       {
         "files": [
@@ -55,7 +57,7 @@
     "dest": "_site",
     "globalMetadata": {
       "_appTitle": "DataMiner Docs",
-      "_appFooter": "© Skyline Communications 2022",
+      "_appFooter": "© Skyline Communications 2023",
       "__global.improveThisDoc": "Propose changes",
       "_enableSearch": false,
       "_enableNewTab": true

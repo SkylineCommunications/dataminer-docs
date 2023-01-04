@@ -276,6 +276,9 @@ DataMiner supports Azure B2C as identity provider from version 10.2.6/10.3.0 onw
 
 DataMiner supports Okta as identity provider as from version 10.1.11. Use Okta's App Integration Wizard to create a new app integration and connect Okta with DataMiner.
 
+> [!IMPORTANT]
+> Prior to DataMiner 10.3.0/10.3.2, it may not be possible to log in using Okta because of a software issue. We strongly recommend that you upgrade to DataMiner 10.3.0 or 10.3.2 to use this feature.
+
 1. Launch the App Integration Wizard
 
    1. In the Admin Console, go to *Applications \> Applications*.
@@ -306,13 +309,17 @@ DataMiner supports Okta as identity provider as from version 10.1.11. Use Okta's
        - *Use this for Recipient URL and Destination URL*
        - *Allow this app to request other SSO URLs*
 
-     - Enter the following additional URLs:
+     - Open *Show Advanced Settings* and enter the following additional URLs to *Other Requestable SSO URLs*:
 
+       - ``https://dataminer.example.com/root/``
        - ``https://dataminer.example.com/login/``
        - ``https://dataminer.example.com/dashboard/``
        - ``https://dataminer.example.com/monitoring/``
        - ``https://dataminer.example.com/jobs/``
        - ``https://dataminer.example.com/ticketing/``
+
+       > [!NOTE]
+       > The indexes here should be the same as the indexes in `C:\Skyline DataMiner\okta-sp-metadata.xml`, which we will create in a further step.
 
    - **Audience URI (SP Entity ID)**: The intended audience of the SAML assertion.
 
@@ -325,16 +332,45 @@ DataMiner supports Okta as identity provider as from version 10.1.11. Use Okta's
    - **Application username**: The default value to use for the username with the application.
 
      Select "Email".
-     
+
    - **Attribute Statements**: Add a new attribute statement with name *Email* (case-sensitive), format *Basic*, and value *user.email*.
 
 1. Open the *Sign On* tab of your Okta application and scroll down to *SAML Signing Certificates*.
 
 1. In the *Actions* column of the *Active* certificate, click *View IdP metadata*.
 
-1. Save this IdP metadata XML file to the DataMiner Agent, e.g. `C:\Skyline DataMiner\okta-ip-metadata.xml`.
+1. Save this identity provider’s metadata XML file to the DataMiner Agent, e.g. `C:\Skyline DataMiner\okta-ip-metadata.xml`.
 
-1. Open the *DataMiner.xml* file and fill in the path to the IdP metadata file in the *ipMetadata* attribute of the *&lt;ExternalAuthentication&gt;* node.
+1. Copy the following template to a new XML file named e.g. `C:\Skyline DataMiner\okta-sp-metadata.xml` to create the service provider’s metadata file. You can find the EntityID in the previously created file `C:\Skyline DataMiner\okta-ip-metadata.xml`.
+
+   ```xml
+   <?xml version="1.0" encoding="UTF-8"?>
+   <md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" entityID="[ENTITYID]" validUntil="2050-01-04T10:00:00.000Z">
+     <md:SPSSODescriptor AuthnRequestsSigned="false" WantAssertionsSigned="true" protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+       <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://dataminer.example.com/login/" index="0" isDefault="false"/>
+       <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://dataminer.example.com/root/" index="1" isDefault="false"/>
+       <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://dataminer.example.com/dashboard/" index="2" isDefault="false"/>
+       <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://dataminer.example.com/monitoring/" index="3" isDefault="false"/>
+       <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://dataminer.example.com/jobs/" index="4" isDefault="false"/>
+       <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://dataminer.example.com/ticketing/" index="5" isDefault="false"/>
+       <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="[For every custom app URL, add an assertion like the ones above with an incremented index. If you do not have custom apps, remove this example.]" index="6" isDefault="false"/>
+     </md:SPSSODescriptor>
+   </md:EntityDescriptor>
+   ```
+
+1. Open the *DataMiner.xml* file and configure the *\<ExternalAuthentication>* tag as illustrated in the example below:
+
+   ```xml
+   <DataMiner ...>
+     ...
+     <ExternalAuthentication
+       type="SAML"
+       ipMetadata="[Path/URL of the identity provider’s metadata file]"
+       spMetadata="[Path/URL of the service provider’s metadata file]"
+       timeout="300" />
+     ...
+   </DataMiner>
+   ```
 
 ## Error messages
 

@@ -491,7 +491,7 @@ As this error was caused by an internal lookup issue that had no effect whatsoev
 
 #### Mobile apps: Problem when trying to select an item in a drop-down box [ID_34742]
 
-<!-- MR 10.4.0 - FR 10.2.12 [CU0] -->
+<!-- MR 10.3.0 - FR 10.2.12 [CU0] -->
 
 In some cases, it would incorrectly not be possible to select an item in a drop-down box when the items were grouped or when their actual value was not identical to the value that was displayed.
 

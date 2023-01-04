@@ -7,6 +7,7 @@ uid: DataminerTools
 This section provides information on the following tools:
 
 - [Alerter](xref:Alerter)
+- [Cassandra Cleaner](xref:Cassandra_Cleaner)
 - [DataMiner Comparison tool](xref:DataMinerComparisonTool)
 - [DataMiner Size tool](xref:DataMinerSizeTool)
 - [DataMiner Taskbar Utility](xref:DataMiner_Taskbar_Utility)
@@ -30,4 +31,8 @@ This section provides information on the following tools:
 - [VerifyClusterPorts.dmupgrade](xref:VerifyClusterPortsdmupgrade)
 
 > [!NOTE]
-> For more information on other DataMiner tools or third-party tools, see [DataMiner Development Tools](xref:TOOLS) and <https://community.dataminer.services/documentation/category/resources/tools/>.
+> For more information on other DataMiner tools or third-party tools, see:
+>
+> - [DataMiner Development Tools](xref:TOOLS)
+> - [DataMiner maintenance tools](xref:DMS_maintenance_tools)
+> - <https://community.dataminer.services/documentation/category/resources/tools/>
