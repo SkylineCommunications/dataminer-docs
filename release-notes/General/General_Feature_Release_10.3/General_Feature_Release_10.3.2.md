@@ -183,6 +183,12 @@ In case a *Line & area chart* component displays trending for multiple parameter
 
 Because of a number of enhancements, overall performance has increased when updating a baseline or assigning an alarm template that contains conditional monitoring.
 
+#### Enhanced performance when deleting a service from an Elasticsearch database [ID_35173]
+
+<!-- MR 10.4.0 - FR 10.3.2 -->
+
+Because of a number of enhancements, overall performance has increased when deleting a service from an Elasticsearch database.
+
 #### SLAnalytics: Enhanced processing of parameter values 'exception' and 'other' [ID_35214]
 
 <!-- MR 10.3.0 - FR 10.3.2 -->
