@@ -38,3 +38,20 @@ It is possible to hide a service definition in the booking UI, so that it is nev
 
 > [!TIP]
 > See also: [HideFromWizard](xref:SRM_properties_Booking_Manager#hidefromwizard)
+
+## Enabling reuse of contributing bookings
+
+<!-- RN 28958 -->
+
+If the Service Profiles wizard is used, by default a new contributing resource is always created. If you want to be able to reuse an existing contributing resource, you can configure this in the relevant service definition.
+
+1. In the Services module, go to the *definitions* tab.
+
+1. Select the service definition and the node for which the contributing resource should be reused.
+
+1. In the *properties* pane below the diagram pane, add the property *Reuse Contributing Resource*.
+
+1. Set the property value to *True*.
+
+> [!TIP]
+> See also: [Reuse Contributing Resource](xref:SRM_properties_Booking_Manager#reuse-contributing-resource)

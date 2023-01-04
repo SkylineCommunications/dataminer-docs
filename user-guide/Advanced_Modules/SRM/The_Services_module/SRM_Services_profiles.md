@@ -24,6 +24,9 @@ To configure a service profile definition, select it in the list on the left. Yo
 
   - Add service definitions with similar nodes, to which the service profile definition will apply.
 
+    > [!NOTE]
+    > Only regular service definitions can be selected, not service definition templates.
+
   - Link the nodes of the added service definitions to the necessary service profile nodes.
 
     To create a new service profile node, select *\<create new>* in the relevant drop-down box. A new service profile node will then immediately be created with the same name as the service definition node.

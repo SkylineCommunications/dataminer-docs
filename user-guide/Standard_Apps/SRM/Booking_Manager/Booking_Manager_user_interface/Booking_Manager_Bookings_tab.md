@@ -30,9 +30,9 @@ This tab of the Booking Manager app displays information about current, past and
 
   The following buttons are always displayed:
 
-  - **New**: Allows you to create a new booking.
+  - **New**: Allows you to create a new booking. By default, the standard Booking Wizard is used for this, but this can be customized (see [Using custom scripts instead of the default SRM wizards](xref:SRM_custom_scripts)).
 
-  - **New (Service Profile)**: Allows you to create a new booking using a service profile. Doing so will require less input during booking creation, as part of the configuration will be determined by the service profile.
+  - **New (Service Profile)**: Allows you to create a new booking using a service profile. Doing so will require less input during booking creation, as the selected service profile will determine which service definition, profile instances, and resources are used. At the end of the booking creation process, you will be able to check which resources have been selected and change them if necessary.
 
     > [!NOTE]
     > The *New (Service Profile)* button is only available if the Service Profile feature is enabled (via [Config > Wizard > Service Profile](xref:Booking_Manager_Config_tab#type-of-wizard-settings)).

@@ -541,6 +541,9 @@ This property allows you to indicate whether the Service Profile Wizard should c
 
 Set this property to *TRUE* to indicate that existing contributing bookings should be reused for the node.
 
+> [!TIP]
+> See also: [Enabling reuse of contributing bookings](xref:Service_Orchestration_service_definition_advanced#enabling-reuse-of-contributing-bookings)
+
 ### Service Profile Data Transfer Configuration
 
 **Scope**: Service profile definition or service profile instance
