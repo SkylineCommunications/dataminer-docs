@@ -346,6 +346,9 @@ Set this property to *Yes* to filter the available profile instances for a node 
 
 Set the value of this property to *TRUE* to hide a service definition from the Booking Wizard.
 
+> [!TIP]
+> See also: [Hiding a service definition in the Booking Manager app](xref:Service_Orchestration_service_definition_advanced#hiding-a-service-definition-in-the-booking-manager-app)
+
 ### HideIfResourceAvailable
 
 **Scope**: Service definition node

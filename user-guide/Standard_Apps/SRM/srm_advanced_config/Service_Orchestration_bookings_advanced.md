@@ -61,4 +61,8 @@ However, you can configure SRM to use the label of the node in the service defin
 
 To do so, in the Booking Manager app, go to the *Config* > *Wizard* page, and enable the option Use *Node Label as Element Alias*.
 
-See also: [Wizard subtab](xref:Booking_Manager_Config_tab#wizard-subtab)
+> [!TIP]
+> See also:
+>
+> - [Wizard subtab](xref:Booking_Manager_Config_tab#wizard-subtab)
+> - [Creating service definitions](xref:Service_Orch_creating_service_definitions)
