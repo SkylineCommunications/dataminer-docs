@@ -107,7 +107,7 @@ In the trend graph of a monitored parameter that needed to be compared to a rela
 > [!NOTE]
 > When both the baseline and the factor are stored in parameters, then the baseline parameter, the factor parameter and the monitored parameter must all have the history set option enabled. Also, all history sets should be executed chronologically.
 
-#### Cassandra cluster: Nullreference exceptions [ID_34964]
+#### Cassandra cluster: Null reference exceptions [ID_34964]
 
 <!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
 
@@ -120,6 +120,9 @@ SLDBConnection|Skyline.DataMiner.Net.Messages.SLDataGateway.DataRequest`1[Skylin
    at SLCassandraClassLibrary.DBGateway.DBGateway.ExecuteRequest[T](DataRequest`1 request)
    at SLCassandraClassLibrary.DBGateway.IncomingConnection.$_executor_ExecuteRequest(BaseRequest request)
 ```
+
+> [!TIP]
+> See [Null reference exceptions in SLDBConnection.txt and unhandled exception when retrieving Correlation details](xref:KI_NullReferenceException_SLDBConnection).
 
 #### Problem with SLDataMiner when loading an alarm template schedule failed [ID_34988]
 
@@ -184,17 +187,23 @@ Modules using the managed SPI framework (Skyline.DataMiner.Spi) would trigger ex
 
 When an engine.AddScriptOutput method was used to pass output data of type string from a script to the application that executed it or from a subscript to the script that executed that subscript, that output data of type string would incorrectly not get cleared from memory.
 
+> [!TIP]
+> See [SLAutomation memory leak when Engine.AddScriptOutput is used](xref:KI_SLAutomation_memory_leak_AddScriptOutput)
+
 #### DataMiner Cube - Alarm Console: Incorrect error would appear when a DataMiner cluster had an IDP license but no Resource Manager license [ID_35123]
 
 <!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
 
 When a DataMiner cluster had an IDP license but no Resource Manager license, an error would incorrectly appear in the Alarm Console when the agents were synchronized.
 
-#### Trending: Stable trend data points would no longer be properly refreshed in the database [ID_35139]
+#### Trending: Stable trend data points no longer properly refreshed in the database [ID_35139]
 
 <!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
 
-Since DataMiner 10.2.10/10.2.0 CU8, stable trend data points would no longer be properly refreshed in the database, which could cause them being removed from the database when they expired.
+Since DataMiner 10.2.10/10.2.0 CU8, stable trend data points were no longer properly refreshed in the database, which could cause them to be removed from the database when they expired.
+
+> [!TIP]
+> See [Stable trend points not kept alive](xref:KI_stable_trend_points_not_kept_alive).
 
 #### Protocols: Problem when using the 'partialSNMP' option when polling tables using the 'multipleGetNext' or 'multipleGetBulk' method [ID_35147]
 
@@ -204,18 +213,21 @@ When the *partialSNMP* option was used when polling tables using the *multipleGe
 
 Also, a problem with the detection of infinite loops for SNMPv3 when receiving end-of-mib-view errors has been fixed.
 
-#### Trending: One-day average trend records would no longer be written into the database [ID_35179]
+#### Trending: Missing one-day average trend records [ID_35179]
 
 <!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
 
 One-day average trend records would incorrectly only be written into the database if
 
-- a TLL was specified, and
+- a TTL was specified, and
 - the *MaintenanceSettings.xml* file contained an entry specifying the window size (e.g. `<TimeSpan1DayRecords windows="120" />`).
 
 From now on, one-day average trend records will be written into the database as soon as a TTL setting has been configured for *Day records*.
 
 Also, the default window size for the records has been restored to 120 minutes (i.e. 2 hours).
+
+> [!TIP]
+> See [Missing 1-day average trending records](xref:KI_missing_avg_trending).
 
 #### DataMiner Cube - Trending: Trend graph would start to flicker when its data was updated [ID_35181]
 
@@ -264,14 +276,22 @@ In a node edge graph, the segments of bidirectional edges would not always be po
 
 When a client asynchronously sent an GQI message to SLNet, in some cases, an exception could be thrown.
 
-#### Problem during DataMiner start-up when an element had its state changed from 'undefined' to 'stopped' [ID_35233]
+#### Problem during DataMiner startup when an element had its state changed from 'undefined' to 'stopped' [ID_35233]
 
 <!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
 
-When redundancy groups were being initialized during a DataMiner start-up, in some cases, an error could occur when an element had its state changed from "undefined" to "stopped".
+When redundancy groups were being initialized during a DataMiner startup, in some cases, an error could occur when an element had its state changed from "undefined" to "stopped".
 
-#### Eventing and Polling would incorrectly be used simultaneously [ID_35267]
+#### Documents module: SLDataMiner would leak memory when email addresses and hyperlinks to web pages were retrieved [ID_35261]
 
 <!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
 
-When a client application connects to a DataMiner Agent, it will first try to set up communication via Eventing. If communication via Eventing fails, the DataMiner Agent will fall back to communication via Polling. In some rare cases, both types of communication (i.e. Eventing and Polling) would incorrectly be used simultaneously.
+The *Documents* module allows you to integrate documents in DataMiner. This way, you can access relevant information about the elements and services in your system at any time. You can store physical files, email addresses and hyperlinks to web pages.
+
+Up to now, when email addresses and hyperlinks to web pages were retrieved from the XML files in which they are stored, SLDataMiner would leak memory due to a problem with the cleanup of temporary data.
+
+#### Eventing and polling would incorrectly be used simultaneously [ID_35267]
+
+<!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
+
+When a client application connects to a DataMiner Agent, it will first try to set up communication via eventing. If communication via eventing fails, the DataMiner Agent will fall back to communication via polling. In some rare cases, both types of communication (i.e. eventing and polling) would incorrectly be used simultaneously.
