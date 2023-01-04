@@ -63,6 +63,20 @@ The following options can be specified in the *ComponentOptions* shape data fiel
   > [!NOTE]
   > If you use the *StartTime* and *EndTime* options for a *ListView* component with source *Reservations* or *Bookings*, the bookings in that time range will be added to the ones already present in the cache. If other bookings were already in the cache, these will be included in the list too. If you only want to include bookings from a specific time range, use a *Filter* shape data field instead.
 
+- **ColorRows=true/false**: Available from DataMiner 10.3.2/10.4.0 onwards. This option can be used to set the highlight color of the list view rows to the booking color. The booking color is a summary of the following reserved booking properties: *VisualForeground*, *VisualBackground*, *VisualSelectedForeground* and *VisualSelectedBackground*. Each of those properties can be set to a string value representing a hexadecimal value, an (A)RGB value, or a predefined Windows color (the latter is not recommended).
+
+  > [!NOTE]
+  >
+  > - The *ColorRows* feature is disabled by default ("ColorRows=False").
+  > - At present, the *ColorRows* feature is only available on Listview components that have Bookings as a source, instead of elements, services, or resources.
+  > - Configuring gray-tinted foreground colors is not recommended as a ListView component uses a gray layer when you hover over its items. In the Skyline themes, that gray layer has the following color:
+  >
+  >   | Theme | Color of gray layer        |
+  >   |-------|----------------------------|
+  >   | Mixed | #E5E5E5 (RGB: 229,229,229) |
+  >   | Light | #E5E5E5 (RGB: 229,229,229) |
+  >   | Black | #333333 (RGB: 51,51,51)    |
+
 ## List view filters
 
 In the Filters shape data field, it is possible to filter which information is displayed in the list view.
