@@ -432,6 +432,12 @@ When a client asynchronously sent an GQI message to SLNet, in some cases, an exc
 
 When redundancy groups were being initialized during a DataMiner startup, in some cases, an error could occur when an element had its state changed from "undefined" to "stopped".
 
+#### Cassandra Cluster: Incorrect db.xml entries could cause db.xml to get corrupted upon synchronization [ID_35237]
+
+<!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
+
+On DataMiner clusters with a Cassandra Cluster database, incorrect *db.xml* entries could cause that file to get corrupted upon synchronization.
+
 #### Dashboards app & low-code apps: Loading indicator would not appear when sorting, filtering or refreshing a table [ID_35238]
 
 <!-- MR 10.3.0 - FR 10.3.2 -->
@@ -501,6 +507,14 @@ Up to now, the following keyboard shortcuts would not work in the dashboard edit
 |----------|---------------------------------|
 | CTRL+a   | Select all components.          |
 | DELETE   | Delete the selected components. |
+
+#### GQI: Metadata would incorrectly be removed when a custom operator was applied [ID_35283]
+
+<!-- MR 10.3.0 - FR 10.3.2 -->
+
+When, in a GQI query, a custom operator was applied, all metadata available on the rows would incorrectly be removed, causing feeds to no longer work as expected.
+
+Also, when a column was renamed via a custom operator, the metadata available on that column would incorrectly be removed.
 
 #### Spectrum Analysis: 'Visualize measurement points' setting of a spectrum element would no longer be property saved [ID_35293]
 

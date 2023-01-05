@@ -338,6 +338,12 @@ When a client asynchronously sent an GQI message to SLNet, in some cases, an exc
 
 When redundancy groups were being initialized during a DataMiner startup, in some cases, an error could occur when an element had its state changed from "undefined" to "stopped".
 
+#### Cassandra Cluster: Incorrect db.xml entries could cause db.xml to get corrupted upon synchronization [ID_35237]
+
+<!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
+
+On DataMiner clusters with a Cassandra Cluster database, incorrect *db.xml* entries could cause that file to get corrupted upon synchronization.
+
 #### Dashboards app & Low-code apps: Enhanced caching of items in query column selection box [ID_35251]
 
 <!-- MR 10.2.0 [CU11] - FR 10.3.2 -->

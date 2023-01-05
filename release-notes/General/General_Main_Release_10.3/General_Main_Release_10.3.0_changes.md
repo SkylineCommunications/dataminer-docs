@@ -1009,3 +1009,11 @@ When a GQI query retrieved the status of a DOM instance that had no status, the 
 <!-- MR 10.3.0 - FR 10.3.2 -->
 
 When you sorted or filtered a table by clicking a table header, or when an action triggered a refresh of the table data, in some cases, no loading indicator would appear.
+
+#### GQI: Metadata would incorrectly be removed when a custom operator was applied [ID_35283]
+
+<!-- MR 10.3.0 - FR 10.3.2 -->
+
+When, in a GQI query, a custom operator was applied, all metadata available on the rows would incorrectly be removed, causing feeds to no longer work as expected.
+
+Also, when a column was renamed via a custom operator, the metadata available on that column would incorrectly be removed.
