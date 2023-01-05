@@ -377,7 +377,7 @@ With the DataMiner Low-Code Apps (also known as the "Application Framework"), yo
 These applications can be created on the root web page of a DataMiner System and can be organized into sections. To place an application in one or more specific sections, open the App.info.json file in the correct application folder (C:\\Skyline DataMiner\\applications\\APP_ID) and add the section names to the Sections array.
 
 > [!NOTE]
-> The “Low-code Apps” license is required to use or access the DataMiner Low-Code Apps.
+> The “Low-Code Apps” license is required to use or access the DataMiner Low-Code Apps.
 
 ##### Pages and panels
 
@@ -438,7 +438,7 @@ Access to the Low-Code Apps is controlled by the following user permissions that
 
 Access to a specific application can be configured in the application itself. Per application, you can define a list of users with view and/or edit permission. By default, no restrictions will be applied, meaning that everyone will be allowed to view and edit the application.
 
-#### Low-code apps: Data input via URL [ID_34261]
+#### Low-Code Apps: Data input via URL [ID_34261]
 
 <!-- MR 10.3.0 - FR 10.2.11 -->
 

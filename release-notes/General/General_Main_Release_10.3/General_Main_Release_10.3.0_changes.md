@@ -391,7 +391,7 @@ When a parameter feed is linked to a *Line & area chart" component, from now on,
 
 When a parameter feed has an EPM identifier feed as source, from now on, the *Auto-select all* setting will no longer be available.
 
-#### Dashboards app / Low-code apps - Line & area chart: Group label will no longer be displayed when grouping is set to 'All together' [ID_34544]
+#### Dashboards app / Low-Code Apps - Line & area chart: Group label will no longer be displayed when grouping is set to 'All together' [ID_34544]
 
 <!-- MR 10.3.0 - FR 10.2.12 -->
 
@@ -403,7 +403,7 @@ In case a *Line & area chart* component displays trending for multiple parameter
 
 Alarm locking in the SLElement process has been enhanced.
 
-#### Dashboards app / Low-code apps: Enhanced performance of selection boxes [ID_34577]
+#### Dashboards app / Low-Code Apps: Enhanced performance of selection boxes [ID_34577]
 
 <!-- MR 10.3.0 - FR 10.2.12 -->
 
@@ -423,7 +423,7 @@ If an Elasticsearch database is available, the behavioral change points detected
 
 This will support faster and more flexible change point querying via GQI in future releases.
 
-#### Dashboards app / Low-code apps - Visual Overview component: Enhancements with regard to WebSocket/polling settings and user access to visual overviews [ID_34624]
+#### Dashboards app / Low-Code Apps - Visual Overview component: Enhancements with regard to WebSocket/polling settings and user access to visual overviews [ID_34624]
 
 <!-- MR 10.3.0 - FR 10.2.12 -->
 
@@ -899,13 +899,13 @@ In some cases, an error could occur in SLElement when a trend template was being
 
 When, in a parameter feed listing EPM parameters, the parameters were grouped, empty groups would incorrectly not be removed after switching to another EPM object.
 
-#### Low-code apps: Problem with 'Close a panel' action [ID_34892]
+#### Low-Code Apps: Problem with 'Close a panel' action [ID_34892]
 
 <!-- MR 10.3.0 - FR 10.3.1 -->
 
 When a *Close a panel* action was configured as a post action on a button component, in some cases, it would incorrectly not cause the panel to close.
 
-#### Dashboards & low-code apps: Decimal values would incorrectly not be allowed in range filters [ID_34897]
+#### Dashboards & Low-Code Apps: Decimal values would incorrectly not be allowed in range filters [ID_34897]
 
 <!-- MR 10.3.0 - FR 10.3.1 -->
 
@@ -914,25 +914,25 @@ In some cases, a range filter in a query filter or a table column filter would i
 > [!NOTE]
 > When using a query filter with filter assistance enabled, the statistics will determine the number of decimals that can be used.
 
-#### Dashboards & low-code apps: Feed component selections would incorrectly be lost after applying a built-in theme [ID_34908]
+#### Dashboards & Low-Code Apps: Feed component selections would incorrectly be lost after applying a built-in theme [ID_34908]
 
 <!-- MR 10.3.0 - FR 10.3.1 -->
 
 When you applied a built-in theme, feed component selections would incorrectly be lost after refetching the data.
 
-#### Dashboards & low-code apps: Not possible to group the data in a timeline populated using a query with a query filter [ID_34932]
+#### Dashboards & Low-Code Apps: Not possible to group the data in a timeline populated using a query with a query filter [ID_34932]
 
 <!-- MR 10.3.0 - FR 10.3.1 -->
 
 When a timeline was populated using a query with a query filter, it would incorrectly not be possible to group the data.
 
-#### Low-code apps: Drop-down box containing an 'execute component' action would incorrectly be empty [ID_34953]
+#### Low-Code Apps: Drop-down box containing an 'execute component' action would incorrectly be empty [ID_34953]
 
 <!-- MR 10.3.0 - FR 10.2.12 [CU1] -->
 
 When an *execute component* action had been configured, in some cases, when you tried to update that action, the drop-down box containing the action would incorrectly be empty.
 
-#### Dashboards app & low-code apps: Manually sorted GQI table would no longer feed row values [ID_34969]
+#### Dashboards app & Low-Code Apps: Manually sorted GQI table would no longer feed row values [ID_34969]
 
 <!-- MR 10.3.0 - FR 10.2.12 [CU1] -->
 

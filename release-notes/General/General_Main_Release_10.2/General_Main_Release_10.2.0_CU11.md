@@ -52,6 +52,12 @@ When you want the NAS service on existing setups to have a quoted path, do the f
 
 Up to now, when you exported real-time trend data to a CSV file, trend points with value "0" would not be included. From now on, those values will be exported as well.
 
+#### Low-Code Apps: URLs of published app versions will no longer contain the app version number [ID_35236]
+
+<!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
+
+From now on, the URL of a published version of an app will no longer contain the app version number. Only when you open an earlier version of an app will the URL contain the app version number.
+
 #### ClusterState.xml file removed [ID_35248]
 
 <!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
@@ -282,7 +288,7 @@ When, in the *Element Connections* app, you created a new connection or updated 
 
 Also, the *Element Connections* app has now been made fully compatible with the *Skyline Black* theme.
 
-#### Dashboards app & Low-code apps - Node edge component: Segments of bidirectional edges would not always be positioned consistently [ID_35230]
+#### Dashboards app & Low-Code Apps - Node edge component: Segments of bidirectional edges would not always be positioned consistently [ID_35230]
 
 <!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
 

@@ -192,7 +192,7 @@ When creating GQI queries, custom view, element, service and alarm properties th
 
 <!-- Main Release Version 10.2.0 [CU6] - Feature Release Version 10.2.9 -->
 
-Because of a number of enhancements, overall performance has increased when retrieving booking information in the Dashboards app and in low-code apps.
+Because of a number of enhancements, overall performance has increased when retrieving booking information in the Dashboards app and in Low-Code Apps.
 
 #### Dashboards app: Enhanced performance when editing a dashboard containing GQI queries [ID_34096]
 

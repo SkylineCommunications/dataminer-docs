@@ -185,7 +185,7 @@ Because of a number of enhancements, overall performance has increased when upda
 
 #### Enhanced performance when deleting a service from an Elasticsearch database [ID_35173]
 
-<!-- MR 10.4.0 - FR 10.3.2 -->
+<!-- MR 10.3.0 - FR 10.3.2 -->
 
 Because of a number of enhancements, overall performance has increased when deleting a service from an Elasticsearch database.
 
@@ -195,9 +195,9 @@ Because of a number of enhancements, overall performance has increased when dele
 
 Because of a number of enhancements, overall processing of "exception" or "other" parameter values by the SLAnalytics process has improved.
 
-#### Low-code apps: URLs of published app versions will no longer contain the app version number [ID_35236]
+#### Low-Code Apps: URLs of published app versions will no longer contain the app version number [ID_35236]
 
-<!-- MR 10.4.0 - FR 10.3.2 -->
+<!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
 
 From now on, the URL of a published version of an app will no longer contain the app version number. Only when you open an earlier version of an app will the URL contain the app version number.
 
@@ -342,7 +342,7 @@ Also, the default window size for the records has been restored to 120 minutes (
 > [!TIP]
 > See [Missing 1-day average trending records](xref:KI_missing_avg_trending).
 
-#### Dashboards app & Low-code apps - Parameter feed: Problem when more than 10,000 elements had to be retrieved from the server [ID_35186]
+#### Dashboards app & Low-Code Apps - Parameter feed: Problem when more than 10,000 elements had to be retrieved from the server [ID_35186]
 
 <!-- MR 10.4.0 - FR 10.3.2 -->
 
@@ -350,7 +350,7 @@ Up to now, the parameter feed used the element cache of the web client to popula
 
 From now on, when the parameter feed has a protocol or view filter, it will fetch all elements matching the filter page by page, even when the total number of elements exceeds 10,000.
 
-#### Dashboards app & Low-code apps - Node edge component: Segments of bidirectional edges would not always be positioned consistently [ID_35230]
+#### Dashboards app & Low-Code Apps - Node edge component: Segments of bidirectional edges would not always be positioned consistently [ID_35230]
 
 <!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
 

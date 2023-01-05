@@ -121,12 +121,6 @@ In case a *Line & area chart* component displays trending for multiple parameter
 
 Because of a number of enhancements, overall performance has increased when updating a baseline or assigning an alarm template that contains conditional monitoring.
 
-#### Low-code apps: URLs of published app versions will no longer contain the app version number [ID_35236]
-
-<!-- MR 10.4.0 - FR 10.3.2 -->
-
-From now on, the URL of a published version of an app will no longer contain the app version number. Only when you open an earlier version of an app will the URL contain the app version number.
-
 ### Fixes
 
 #### GQI: Problem when retrieving DCF interfaces [ID_34820]
@@ -149,7 +143,7 @@ In some cases, Resource Manager could throw a NullReferenceException when *Resou
 
 When a column select or a column manipulation operator was applied before an aggregation operator, the column select or column manipulation operator would incorrectly be ignored. As a result, all columns would be visible in the *group by node* or columns created by the column manipulation would not be added to the options of the *group by node*.
 
-#### Dashboards app & Low-code apps - Parameter feed: Problem when more than 10,000 elements had to be retrieved from the server [ID_35186]
+#### Dashboards app & Low-Code Apps - Parameter feed: Problem when more than 10,000 elements had to be retrieved from the server [ID_35186]
 
 <!-- MR 10.4.0 - FR 10.3.2 -->
 

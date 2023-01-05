@@ -183,7 +183,7 @@ In some cases, an incorrect credential library GUID could get stored in the *Ele
 
 When the time window of a line chart component showing trend data included a period in the future, the chart would incorrectly display non-existing data for that period in the future. From now on, the chart will stop at the current time.
 
-#### Dashboards app & low-code apps: Problem with 'Number of columns' input box [ID_34966]
+#### Dashboards app & Low-Code Apps: Problem with 'Number of columns' input box [ID_34966]
 
 <!-- Main Release Version 10.1.0 [CU22]/10.2.0 [CU10] - Feature Release Version 10.3.1 -->
 
