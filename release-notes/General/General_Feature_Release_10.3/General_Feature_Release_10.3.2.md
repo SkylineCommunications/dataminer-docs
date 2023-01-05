@@ -444,6 +444,12 @@ On DataMiner clusters with a Cassandra Cluster database, incorrect *db.xml* entr
 
 When you sorted or filtered a table by clicking a table header, or when an action triggered a refresh of the table data, in some cases, no loading indicator would appear.
 
+#### Dashboards app & Low-code apps: Issues with regard to data highlighting [ID_35250]
+
+<!-- MR 10.4.0 - FR 10.3.2 -->
+
+A number of issues with regard to data highlighting have been fixed.
+
 #### Dashboards app & Low-code apps: Enhanced caching of items in query column selection box [ID_35251]
 
 <!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
