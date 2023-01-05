@@ -69,7 +69,7 @@ SL_LogCollector.exe -c -h
 From DataMiner 10.1.0 \[CU11]/10.2.2 onwards, you can use a custom CollectorConfig XML file to indicate which resources need to be collected. This file should be placed in the folder `C:\Skyline DataMiner\Tools\SLLogCollector\LogConfigs`. By default, this folder will contain a *Default.xml* file, listing a default list of resources to be collected.
 
 > [!NOTE]
-> From DataMiner 10.2.0 [CU11]/10.3.2 onwards, you are no longer obligated to place custom CollectorConfig XML files in the folder `C:\Skyline DataMiner\Tools\SLLogCollector\LogConfigs`, but can also place them in the `LogConfig` folder, which holds `SL_LogCollector.exe`. <!-- RN 34739 -->
+> From DataMiner 10.2.0 [CU11]/10.3.2 onwards, instead of in the default folder `C:\Skyline DataMiner\Tools\SLLogCollector\LogConfigs`, you can place the custom CollectorConfig XML file in a `LogConfig` folder within the same folder as `SL_LogCollector.exe`. <!-- RN 34739 -->
 
 To customize the collected resources, add your own custom XML file to this folder, specifying the "collectors" that should be used.
 
