@@ -396,6 +396,12 @@ When a client asynchronously sent an GQI message to SLNet, in some cases, an exc
 
 When redundancy groups were being initialized during a DataMiner startup, in some cases, an error could occur when an element had its state changed from "undefined" to "stopped".
 
+#### Dashboards app & low-code apps: Loading indicator would not appear when sorting, filtering or refreshing a table [ID_35238]
+
+<!-- MR 10.3.0 - FR 10.3.2 -->
+
+When you sorted or filtered a table by clicking a table header, or when an action triggered a refresh of the table data, in some cases, no loading indicator would appear.
+
 #### Dashboards app & Low-code apps: Enhanced caching of items in query column selection box [ID_35251]
 
 <!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
