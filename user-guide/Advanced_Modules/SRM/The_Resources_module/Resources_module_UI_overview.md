@@ -40,7 +40,7 @@ The module consist of a pane on the left, listing resource pools, and a pane on 
 
 - From DataMiner 9.5.4 to DataMiner 9.6.3, an additional *Occupancy* tab is available, which shows a timeline that illustrates when particular resources are reserved. Like in the main timeline tab of Scheduler, here too you can activate follow mode or zoom to a particular time span via the right-click menu.
 
-From DataMiner 10.3.0/10.3.2 onwards, the *Resources* tab and the *Occupancy* tab have a filter box that allow you to filter on resource name. When you enter text in the filter box, a list with suggestions will appear. When you select another resource pool while text is present in the filter box, the *Resources* tab and the *Occupancy* tab of that newly selected resource pool will automatically be filtered. To clear the filter, click the *Clear* button or delete the text in the filter box.
+From DataMiner 10.3.0/10.3.2 onwards, the *Resources* tab and the *Occupancy* tab have a filter box that allow you to filter on resource name. When you enter text in the filter box, a list with suggestions will appear. When you select another resource pool while text is present in the filter box, the *Resources* tab and the *Occupancy* tab of that newly selected resource pool will automatically be filtered. To clear the filter, click the *Clear* button or delete the text in the filter box. <!-- RN 34973 -->
 
 > [!NOTE]
 >
