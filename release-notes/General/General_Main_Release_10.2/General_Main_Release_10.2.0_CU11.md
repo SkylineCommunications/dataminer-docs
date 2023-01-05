@@ -64,6 +64,16 @@ From now on, the URL of a published version of an app will no longer contain the
 
 The `Clusterstate.xml` file, located in the `C:\Skyline DataMiner` folder, was obsolete and has now been removed.
 
+#### Low-code apps: Enhanced confirmation message when deleting an app [ID_35269]
+
+<!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
+
+The confirmation message that appears when you delete an app will now indicate more clearly what will be removed:
+
+- When the app has never been published, only one draft exists. In this case, the confirmation message will clearly state that the entire app will be deleted.
+
+- When the app has been published, multiple versions of the app exist. In the confirmation message, you will be able to choose whether to delete only the current draft or the entire app.
+
 ### Fixes
 
 #### DataMiner Cube: Latest script updates would not be shown when opening a script in the Automation app [ID_34738]
