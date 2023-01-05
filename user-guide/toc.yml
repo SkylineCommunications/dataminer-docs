@@ -2364,13 +2364,13 @@
         - name: DataMiner EPM VSAT
           topicUid: EPM_VSAT
           items:
-            - name: VSAT architecture
+            - name: EPM VSAT architecture
               topicUID: VSAT_architecture
-            - name: VSAT components
+            - name: EPM VSAT components
               topicUID: VSAT_components
             - name: Supported technologies for VSAT
               topicUID: VSAT_supported_technologies
-            - name: VSAT deployment
+            - name: EPM VSAT deployment
               topicUID: VSAT_deployment
             - name: Available parameters in VSAT
               topicUID: VSAT_parameters
