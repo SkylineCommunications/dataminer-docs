@@ -217,6 +217,12 @@ The confirmation message that appears when you delete an app will now indicate m
 
 - When the app has been published, multiple versions of the app exist. In the confirmation message, you will be able to choose whether to delete only the current draft or the entire app.
 
+#### Web apps: Date/time picker component will now always show 6 full weeks [ID_35277]
+
+<!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
+
+In all web apps, the date/time picker component will now always show 6 full weeks, regardless of the number of days in the current month. This will prevent the component from having to resize when you switch from one month to another.
+
 ### Fixes
 
 #### Problem with Elasticsearch health monitoring [ID_34744]
@@ -422,6 +428,17 @@ Up to now, when email addresses and hyperlinks to web pages were retrieved from 
 <!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
 
 When a client application connects to a DataMiner Agent, it will first try to set up communication via eventing. If communication via eventing fails, the DataMiner Agent will fall back to communication via polling. In some rare cases, both types of communication (i.e. eventing and polling) would incorrectly be used simultaneously.
+
+#### Low-code apps: Keyboard shortcuts would not work in the dashboard editor [ID_35274]
+
+<!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
+
+Up to now, the following keyboard shortcuts would not work in the dashboard editor:
+
+| Shortcut | Action                          |
+|----------|---------------------------------|
+| CTRL+a   | Select all components.          |
+| DELETE   | Delete the selected components. |
 
 #### Spectrum Analysis: 'Visualize measurement points' setting of a spectrum element would no longer be property saved [ID_35293]
 
