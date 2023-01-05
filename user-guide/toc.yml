@@ -2361,6 +2361,19 @@
                   topicUid: D-DOCSIS_parameters_cin_interface
                 - name: Manufacturer
                   topicUid: D-DOCSIS_parameters_manufacturer
+        - name: DataMiner EPM VSAT
+          topicUid: EPM_VSAT
+          items:
+            - name: VSAT architecture
+              topicUID: VSAT_architecture
+            - name: VSAT components
+              topicUID: VSAT_components
+            - name: Supported technologies for VSAT
+              topicUID: VSAT_supported_technologies
+            - name: VSAT deployment
+              topicUID: VSAT_deployment
+            - name: Available parameters in VSAT
+              topicUID: VSAT_parameters
     - name: DataMiner IDP app
       topicUid: SolIDP
       items:
