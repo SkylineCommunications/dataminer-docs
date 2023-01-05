@@ -476,6 +476,12 @@ Because of a number of enhancements, the automatic evaluation of trend predictio
 
 Because of a number of enhancements, overall performance has increased when creating and updating bookings.
 
+#### Enhanced performance when deleting a service from an Elasticsearch database [ID_35173]
+
+<!-- MR 10.3.0 - FR 10.3.2 -->
+
+Because of a number of enhancements, overall performance has increased when deleting a service from an Elasticsearch database.
+
 #### SLAnalytics: Enhanced processing of parameter values 'exception' and 'other' [ID_35214]
 
 <!-- MR 10.3.0 - FR 10.3.2 -->

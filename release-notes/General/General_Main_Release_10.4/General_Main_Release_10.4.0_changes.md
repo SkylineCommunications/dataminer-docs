@@ -121,12 +121,6 @@ In case a *Line & area chart* component displays trending for multiple parameter
 
 Because of a number of enhancements, overall performance has increased when updating a baseline or assigning an alarm template that contains conditional monitoring.
 
-#### Enhanced performance when deleting a service from an Elasticsearch database [ID_35173]
-
-<!-- MR 10.4.0 - FR 10.3.2 -->
-
-Because of a number of enhancements, overall performance has increased when deleting a service from an Elasticsearch database.
-
 #### Low-code apps: URLs of published app versions will no longer contain the app version number [ID_35236]
 
 <!-- MR 10.4.0 - FR 10.3.2 -->
