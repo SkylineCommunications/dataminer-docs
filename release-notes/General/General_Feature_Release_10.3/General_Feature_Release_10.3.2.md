@@ -374,6 +374,24 @@ When a client asynchronously sent an GQI message to SLNet, in some cases, an exc
 
 When redundancy groups were being initialized during a DataMiner startup, in some cases, an error could occur when an element had its state changed from "undefined" to "stopped".
 
+#### Dashboards app & Low-code apps: Enhanced caching of items in query column selection box [ID_35251]
+
+<!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
+
+When creating or editing a query, you can select the query columns from a selection box. A number of enhancements have now been made with regard to the caching of this list of query columns.
+
+#### Dashboards app & Low-code apps: Selected data would incorrectly not get removed after being deleted [ID_35254]
+
+<!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
+
+When data (e.g. a query) was deleted while it was selected, in some cases, it would incorrectly not be removed from the selection.
+
+#### Dashboards app & Low-code apps: Unknown components would incorrectly no longer be indicated as such [ID_35257]
+
+<!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
+
+In some cases, unknown components would incorrectly no longer be indicated as such.
+
 #### SLAnalytics would incorrectly ignore trend patterns defined for parameters of child DVE elements [ID_35260]
 
 <!-- MR 10.3.0 - FR 10.3.2 -->
