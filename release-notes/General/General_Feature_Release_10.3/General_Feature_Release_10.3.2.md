@@ -67,6 +67,32 @@ More detailed information will now be added to the `SLDBConnection.txt` log file
 
 Log entry syntax: `Certificate chain error: {chainStatus.Status}, details: {chainStatus.StatusInformation}`
 
+#### BREAKING CHANGE: Capacity property will no longer be initialized on new Resources [ID_34856]
+
+<!-- MR 10.3.0 - FR 10.3.2 -->
+
+From now on, the *Capacity* property will no longer be initialized on new Resources.
+
+As a result, in DataMiner Cube, the resources module will no longer require the legacy capacity to be initialized. Newly created resources will no longer have a legacy capacity. The concurrency of a resource will still be stored in *Resource.MaxConcurrency*.
+
+##### Impact of this change
+
+Since *Capacity* is no longer initialized on a new Resource, *GetEffectiveMaxConcurrency* will take into account *MaxConcurrency*. *MaxConcurrency* will now be initialized with 1 as is the case with *Capacity.MaxConcurrency*.
+
+If *GetEffectiveMaxConcurrency* should still use the value of *Capacity.MaxConcurrency*, *MaxConcurrency* should be set to 0.
+
+To restore legacy behavior, a new resource should be initialized as follows:
+
+```csharp
+var resource = new Resource()
+{
+  MaxConcurrency = 0,
+  Capacity = new ResourceCapacity(),
+};
+```
+
+This change in behavior will impact results for both *GetAvailableResources* and *GetResourceUsage* on ResourceManagerHelper, both marked as obsolete since 9.6.5. Newly created resources will now, by default, always be considered unavailable.
+
 #### Web apps - Interactive Automation scrips: Fields containing invalid values will now be indicated more clearly [ID_34962]
 
 <!-- MR 10.4.0 - FR 10.3.2 -->
