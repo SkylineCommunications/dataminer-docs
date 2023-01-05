@@ -8,6 +8,12 @@ From DataMiner 10.0.7 onwards, on systems using a Cassandra and Elasticsearch da
 
 If you are viewing a trend graph for a single parameter, and it contains patterns matching existing tags, these will be highlighted in orange when you hover the mouse pointer over the button representing a tag, or if the option *Expand tags* is selected in the right-click menu. Matches found for the same element/parameter as the one for which a tag was defined will be shown in bright orange, while matches associated with tags created for another element/parameter will be shown in lighter orange.
 
+From DataMiner 10.3.2/10.4.0 onwards, these colors have a different meaning, depending on the method used to detect matches:
+
+- If a tag is highlighted in **lighter orange**, the non-streaming method was used. These matches are detected only when trend data is fetched from the database after you opened a trend graph.
+
+- If a tag is highlighted in **bright orange**, the streaming method was used. These matches are detected while tracking for trend patterns whenever a trended parameter is updated. When such a match is detected, a suggestion event is generated. Matches obtained through the streaming method will be stored in the database.
+
 > [!NOTE]
 >
 > - If a protocol is deleted, all patterns defined for parameters of that protocol will also be deleted the first time the SLAnalytics service restarts.
