@@ -99,6 +99,25 @@ Up to now, when you exported real-time trend data to a CSV file, trend points wi
 
 ### Fixes
 
+#### Service & Resource Management: Problem when Cube tried to retrieve SRM-related data to which the user did not have access [ID_34397]
+
+<!-- MR 10.3.0 - FR 10.3.2 -->
+
+Up to now, an exception could be thrown when DataMiner Cube tried to retrieve SRM-related data to which the user did not have access.
+
+From now on, when DataMiner Cube tries to retrieve SRM-related data to which the user does not have access, a message box will appear, asking the user to contact the DataMiner administrator. Also, each time this type of message box is displayed, an entry of type "warning" will be added to the Cube logging (`User X could not read object Y because the user does not have permission flag Z`).
+
+Overview of the read permissions needed to retrieve SRM-related data:
+
+| SRM-related data | Read permission                    |
+|------------------|------------------------------------|
+| Bookings         | Bookings > UI available            |
+| Functions        | Functions> UI available            |
+| Profiles         | Profiles > UI available            |
+| Resources        | Resources> UI available            |
+| Service profiles | Services > Profiles > UI available |
+| Services         | Services > UI available            |
+
 #### Profiles app: A profile instance would incorrectly list parameters that had been removed from the profile definition [ID_34679] [ID_34771]
 
 <!-- MR 10.4.0 - FR 10.3.2 -->
