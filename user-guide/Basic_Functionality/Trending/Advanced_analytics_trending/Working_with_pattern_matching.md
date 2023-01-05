@@ -14,6 +14,8 @@ From DataMiner 10.3.2/10.4.0 onwards, these colors have a different meaning, dep
 
 - If a tag is highlighted in **bright orange**, the streaming method was used. These matches are detected while tracking for trend patterns whenever a trended parameter is updated. When such a match is detected, a suggestion event is generated. Matches obtained through the streaming method will be stored in the database.
 
+<!-- RN 34947 + RN 34898 -->
+
 > [!NOTE]
 >
 > - If a protocol is deleted, all patterns defined for parameters of that protocol will also be deleted the first time the SLAnalytics service restarts.
