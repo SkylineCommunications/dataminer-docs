@@ -81,8 +81,7 @@ There are also special types of `FieldDescriptors` that are purpose-made to stor
 > - ReservationFieldDescriptor
 > - ServiceDefinitionFieldDescriptor
 >
-> From DataMiner 10.2.5/10.3.0 onwards, this also applies for the *DomInstanceValueFieldDescriptor*.
-> From DataMiner 10.3.2/10.4.0 onwards, this also applies for the *UserFieldDescriptor*
+> From DataMiner 10.2.5/10.3.0 onwards, this also applies for the *DomInstanceValueFieldDescriptor*, and from DataMiner 10.3.2/10.4.0 onwards, this also applies for the *UserFieldDescriptor*.
 >
 > These `FieldDescriptors` therefore also support a list of the type that was already supported before.
 >
