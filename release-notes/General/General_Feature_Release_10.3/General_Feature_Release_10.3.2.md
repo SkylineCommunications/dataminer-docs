@@ -171,6 +171,12 @@ When a web app requests a list of users, the Web Services API will now cache the
 
 This user cache will be cleared each time a change occurs that has security implications (e.g. new users added, user permissions updated, etc.).
 
+#### SAML authentication will now also work with user names instead of email addresses when automatic user creation is not enabled [ID_35159]
+
+<!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
+
+Since DataMiner version 10.2.6 (10.2.0 CU6), SAML authentication would only work when the SAML response claims contained an email address. From now on, SAML authentication will also work with user names instead of email addresses in case automatic user creation is not enabled.
+
 #### Dashboards app - Line & area chart component: 'Group by' setting will now by default be set to 'All together' [ID_35160]
 
 <!-- MR 10.4.0 - FR 10.3.2 -->

@@ -52,6 +52,12 @@ When you want the NAS service on existing setups to have a quoted path, do the f
 
 Up to now, when you exported real-time trend data to a CSV file, trend points with value "0" would not be included. From now on, those values will be exported as well.
 
+#### SAML authentication will now also work with user names instead of email addresses when automatic user creation is not enabled [ID_35159]
+
+<!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
+
+Since DataMiner version 10.2.6 (10.2.0 CU6), SAML authentication would only work when the SAML response claims contained an email address. From now on, SAML authentication will also work with user names instead of email addresses in case automatic user creation is not enabled.
+
 #### Low-Code Apps: URLs of published app versions will no longer contain the app version number [ID_35236]
 
 <!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
