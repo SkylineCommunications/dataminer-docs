@@ -372,6 +372,16 @@ Up to now, the parameter feed used the element cache of the web client to popula
 
 From now on, when the parameter feed has a protocol or view filter, it will fetch all elements matching the filter page by page, even when the total number of elements exceeds 10,000.
 
+#### Problem with wildcard OIDs when specified on a table parameter [ID_35223]
+
+<!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
+
+SNMP table polling would stop working when a wildcard OID was configured on the table parameter. That wildcard OID would always be replaced by 1 instead of the configured parameter value.
+
+Configuring an OID on the table is necessary when using *getNext* (with or without *multipleGet*). In other cases, it is optional. There, a workaround could be to remove the OID configured on the table parameter.
+
+Standalone parameters configured with a wildcard OID were not affected.
+
 #### Dashboards app & Low-Code Apps - Node edge component: Segments of bidirectional edges would not always be positioned consistently [ID_35230]
 
 <!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
@@ -413,6 +423,20 @@ When creating or editing a query, you can select the query columns from a select
 <!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
 
 When data (e.g. a query) was deleted while it was selected, in some cases, it would incorrectly not be removed from the selection.
+
+#### Dashboards app: Two context menus could incorrectly be displayed simultaneously in the side bar [ID_35255]
+
+<!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
+
+When, in the side bar, you right-clicked a folder or a dashboard, and then clicking the ellipsis ("...") in the tab header, two context menus could incorrectly be displayed simultaneously.
+
+#### Dashboards app & Low-code apps - Node edge component: Problem with 'Set as ...' commands in component settings [ID_35256]
+
+<!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
+
+When, in the settings of a node edge component, you had selected a configured edge, it would incorrectly be possible to use the *Set as edge* command. This would clear the existing configuration of the edge in question and cause the settings to be saved incorrectly.
+
+From now on, it will only be possible to set a node as edge and vice versa.
 
 #### Dashboards app & Low-code apps: Unknown components would incorrectly no longer be indicated as such [ID_35257]
 
