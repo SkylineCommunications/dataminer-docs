@@ -68,7 +68,7 @@ The following options can be specified in the *ComponentOptions* shape data fiel
   > [!NOTE]
   >
   > - The *ColorRows* feature is disabled by default ("ColorRows=False").
-  > - At present, the *ColorRows* feature is only available on Listview components that have bookings as a source.
+  > - At present, the *ColorRows* feature is only available on ListView components that have bookings as a source.
   > - Configuring gray-tinted foreground colors is not recommended as a ListView component uses a gray layer when you hover over its items. In the Skyline themes, that gray layer has the following color:
   >
   >   | Theme | Color of gray layer        |

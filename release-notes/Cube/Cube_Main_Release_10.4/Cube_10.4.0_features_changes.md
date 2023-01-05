@@ -87,7 +87,7 @@ Configuring gray-tinted foreground colors is not recommended as a ListView compo
 > [!NOTE]
 >
 > - The *ColorRows* feature is disabled by default ("ColorRows=False").
-> - At present, the *ColorRows* feature only works for source bookings.
+> - At present, the *ColorRows* feature is only available on ListView components that have bookings as a source.
 
 ## Changes
 
