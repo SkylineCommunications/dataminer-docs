@@ -197,6 +197,14 @@ When a web app requests a list of users, the Web Services API will now cache the
 
 This user cache will be cleared each time a change occurs that has security implications (e.g. new users added, user permissions updated, etc.).
 
+#### Enhanced error handling when trying to create resource manager properties with value/key null on Elasticsearch [ID_35155]
+
+<!-- MR 10.3.0 - FR 10.3.2 -->
+
+When an attempt is made to create resource properties, resource definition properties and pool properties with value/key null on a system with an Elasticsearch database, from now on, an `InvalidCharactersInPropertyNames` error listing the names of the properties in question will be added to the Resource Manager log file.
+
+This same fix also fixes the creation and migration of resources of which the property list is null and resource pools of which the property definitions list or properties list is null.
+
 #### SAML authentication will now also work with user names instead of email addresses when automatic user creation is not enabled [ID_35159]
 
 <!-- MR 10.2.0 [CU11] - FR 10.3.2 -->

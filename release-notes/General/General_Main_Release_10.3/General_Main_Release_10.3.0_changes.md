@@ -476,6 +476,14 @@ Because of a number of enhancements, the automatic evaluation of trend predictio
 
 Because of a number of enhancements, overall performance has increased when creating and updating bookings.
 
+#### Enhanced error handling when trying to create resource manager properties with value/key null on Elasticsearch [ID_35155]
+
+<!-- MR 10.3.0 - FR 10.3.2 -->
+
+When an attempt is made to create resource properties, resource definition properties and pool properties with value/key null on a system with an Elasticsearch database, from now on, an `InvalidCharactersInPropertyNames` error listing the names of the properties in question will be added to the Resource Manager log file.
+
+This same fix also fixes the creation and migration of resources of which the property list is null and resource pools of which the property definitions list or properties list is null.
+
 #### Enhanced performance when deleting a service from an Elasticsearch database [ID_35173]
 
 <!-- MR 10.3.0 - FR 10.3.2 -->
