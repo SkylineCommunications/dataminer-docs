@@ -59,27 +59,6 @@ Up to now, SLLogCollector expected custom collector configuration files named `d
 
 From now on, it will first check the `LogConfig` folder in the same location as `SL_LogCollector.exe`. If that `LogConfig` folder does not exist, if the folder is empty or if the `default.xml` file in that folder cannot be deserialized, it will fall back on the `default.xml` file in the `C:\Skyline DataMiner\Tools\SLLogCollector\LogConfigs` folder.
 
-#### APIGateway: Automatic recovery of connections after an APIGateway restart [ID_34797]
-
-<!-- MR 10.4.0 - FR 10.3.2 -->
-
-APIGateway can now restart during operation and automatically recover the connections to clients and SLNet.
-
-However, if a subscription event received from SLNet was not yet passed to the client at the time of the restart, APIGateway will close the connection after receiving 21 additional messages for that same client. This behavior is identical to that of a .NET Remoting connection.
-
-SLNet uses the configuration value `CallbackTimeout` to determine how long a connection to APIGateway can be lost. By default, this is 30s.
-
-New options in APIGateway's `appsettings.json` file:
-
-```json
-"JwtAuthOptions": {
-  "ExpiryTimespan": "00:15:00", //Expiry time of new JWT tokens
-  "ExpiryTimeLeftRefresh": "00:05:00" //Amount of time left on the token before refreshing it
-}
-```
-
-Every `grpc` request towards APIGateway now expects a [JSON Web Token (JWT)](https://en.wikipedia.org/wiki/JSON_Web_Token). An initial token will be issued when a successful authentication has been accomplished towards SLNet.
-
 #### More detailed logging when the certificate chain is invalid while connecting to Cassandra [ID_34822]
 
 <!-- MR 10.4.0 - FR 10.3.2 -->
