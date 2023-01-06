@@ -189,7 +189,7 @@ productsSectionDefinition = domHelper.SectionDefinitions.Create(productsSectionD
 
 ## Adding the DOM definition
 
-To complete the configuration, you need to create a `DomDefinition`. This will define which `SectionDefinitions` must be used by the `DomInstances`. It also creates a logical grouping of all invoices, since all `DomInstances` will have a link to this `DomDefinition`. Since 10.3.3/10.3.0 we also need to set the 'AllowMultipleSections' bool on the link for the products `SectionDefinition`. That way, the clearly define that we want to allow having multiple products on an invoice.
+To complete the configuration, you need to create a `DomDefinition`. This will define which `SectionDefinitions` must be used by the `DomInstances`. It also creates a logical grouping of all invoices, since all `DomInstances` will have a link to this `DomDefinition`. Since 10.3.3/10.3.0 we also need to set the 'AllowMultipleSections' bool on the link for the products `SectionDefinition`. That way, we clearly define that we want to allow having multiple products on an invoice.
 
 ```csharp
 // We create a DomDefinition linked to the two SectionDefinitions
