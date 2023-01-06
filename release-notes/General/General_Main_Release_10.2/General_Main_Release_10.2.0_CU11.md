@@ -358,11 +358,23 @@ When a client asynchronously sent an GQI message to SLNet, in some cases, an exc
 
 When redundancy groups were being initialized during a DataMiner startup, in some cases, an error could occur when an element had its state changed from "undefined" to "stopped".
 
+#### DataMiner Cube - Trending: 'Trending is currently not available ...' error would incorrectly be displayed while viewing the trend graph of an EPM object [ID_35234]
+
+<!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
+
+In some cases, a `Trending is currently not available for this parameter` error would incorrectly be displayed when you were viewing the trend graph of an EPM object.
+
 #### Cassandra Cluster: Incorrect db.xml entries could cause db.xml to get corrupted upon synchronization [ID_35237]
 
 <!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
 
 On DataMiner clusters with a Cassandra Cluster database, incorrect *db.xml* entries could cause that file to get corrupted upon synchronization.
+
+#### DataMiner Cube - Visual Overview: Inline preset of spectrum component would no longer be applied [ID_35244]
+
+<!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
+
+When you had defined an inline preset while configuring an embedded spectrum component, that preset would no longer be applied. Instead, a `Please select at least one of the preset content items before clicking Load.` message would appear.
 
 #### Dashboards app & Low-code apps: Enhanced caching of items in query column selection box [ID_35251]
 
