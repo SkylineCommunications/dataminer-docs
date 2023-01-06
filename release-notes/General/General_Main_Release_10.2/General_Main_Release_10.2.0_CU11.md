@@ -302,6 +302,16 @@ From now on, when you try to upgrade a view of which the name contains one of th
 
 When a shape is linked to a parameter via a session variable, the parameter value shown on the shape will be updated when the session variable is updated, and when the shape goes into history mode, the history value of the linked parameter will be shown. However, up to now, when the session variable was updated while the shape was in history mode, the parameter value would incorrectly not be updated.
 
+#### Problem with wildcard OIDs when specified on a table parameter [ID_35223]
+
+<!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
+
+SNMP table polling would stop working when a wildcard OID was configured on the table parameter. That wildcard OID would always be replaced by 1 instead of the configured parameter value.
+
+Configuring an OID on the table is necessary when using *getNext* (with or without *multipleGet*). In other cases, it is optional. There, a workaround could be to remove the OID configured on the table parameter.
+
+Standalone parameters configured with a wildcard OID were not affected.
+
 #### DataMiner Cube - Element Connections app: Problems when creating or updating connections [ID_35228]
 
 <!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
@@ -328,6 +338,12 @@ When a client asynchronously sent an GQI message to SLNet, in some cases, an exc
 
 When redundancy groups were being initialized during a DataMiner startup, in some cases, an error could occur when an element had its state changed from "undefined" to "stopped".
 
+#### Cassandra Cluster: Incorrect db.xml entries could cause db.xml to get corrupted upon synchronization [ID_35237]
+
+<!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
+
+On DataMiner clusters with a Cassandra Cluster database, incorrect *db.xml* entries could cause that file to get corrupted upon synchronization.
+
 #### Dashboards app & Low-code apps: Enhanced caching of items in query column selection box [ID_35251]
 
 <!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
@@ -339,6 +355,20 @@ When creating or editing a query, you can select the query columns from a select
 <!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
 
 When data (e.g. a query) was deleted while it was selected, in some cases, it would incorrectly not be removed from the selection.
+
+#### Dashboards app: Two context menus could incorrectly be displayed simultaneously in the side bar [ID_35255]
+
+<!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
+
+When, in the side bar, you right-clicked a folder or a dashboard, and then clicking the ellipsis ("...") in the tab header, two context menus could incorrectly be displayed simultaneously.
+
+#### Dashboards app & Low-code apps - Node edge component: Problem with 'Set as ...' commands in component settings [ID_35256]
+
+<!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
+
+When, in the settings of a node edge component, you had selected a configured edge, it would incorrectly be possible to use the *Set as edge* command. This would clear the existing configuration of the edge in question and cause the settings to be saved incorrectly.
+
+From now on, it will only be possible to set a node as edge and vice versa.
 
 #### Dashboards app & Low-code apps: Unknown components would incorrectly no longer be indicated as such [ID_35257]
 

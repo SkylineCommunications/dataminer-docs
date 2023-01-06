@@ -982,7 +982,7 @@ Also, in some cases, after clearing an alarm group, a clearable version of that 
 
 Up to now, an exception could be thrown when DataMiner Cube tried to retrieve SRM-related data to which the user did not have access.
 
-From now on, when DataMiner Cube tries to retrieve SRM-related data to which the user does not have access, a message box will appear, asking the user to contact the DataMiner administrator. Also, each time this type of message box is displayed, an entry of type "warning" will be added to the Cube logging (`User X could not read object Y because the user does not have permission flag Z`).
+From now on, when DataMiner Cube tries to retrieve SRM-related data to which the user does not have access, a message box will appear, asking the user to contact the system administrator. Also, each time this type of message box is displayed, an entry of type "warning" will be added to the Cube logging (`User X could not read object Y because the user does not have permission flag Z`).
 
 Overview of the read permissions needed to retrieve SRM-related data:
 
@@ -994,6 +994,9 @@ Overview of the read permissions needed to retrieve SRM-related data:
 | Resources        | Resources> UI available            |
 | Service profiles | Services > Profiles > UI available |
 | Services         | Services > UI available            |
+
+> [!NOTE]
+> Often, users will need a combination of the above-mentioned read permission for Cube to be able to retrieve the necessary SRM-related data.
 
 #### Visual Overview: Problem when loading a DCF signal path [ID_34630]
 

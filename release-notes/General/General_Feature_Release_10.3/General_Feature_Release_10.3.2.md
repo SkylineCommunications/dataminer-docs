@@ -67,6 +67,32 @@ More detailed information will now be added to the `SLDBConnection.txt` log file
 
 Log entry syntax: `Certificate chain error: {chainStatus.Status}, details: {chainStatus.StatusInformation}`
 
+#### BREAKING CHANGE: Capacity property will no longer be initialized on new Resources [ID_34856]
+
+<!-- MR 10.3.0 - FR 10.3.2 -->
+
+From now on, the *Capacity* property will no longer be initialized on new Resources.
+
+As a result, in DataMiner Cube, the resources module will no longer require the legacy capacity to be initialized. Newly created resources will no longer have a legacy capacity. The concurrency of a resource will still be stored in *Resource.MaxConcurrency*.
+
+##### Impact of this change
+
+Since *Capacity* is no longer initialized on a new Resource, *GetEffectiveMaxConcurrency* will take into account *MaxConcurrency*. *MaxConcurrency* will now be initialized with 1 as is the case with *Capacity.MaxConcurrency*.
+
+If *GetEffectiveMaxConcurrency* should still use the value of *Capacity.MaxConcurrency*, *MaxConcurrency* should be set to 0.
+
+To restore legacy behavior, a new resource should be initialized as follows:
+
+```csharp
+var resource = new Resource()
+{
+  MaxConcurrency = 0,
+  Capacity = new ResourceCapacity(),
+};
+```
+
+This change in behavior will impact results for both *GetAvailableResources* and *GetResourceUsage* on ResourceManagerHelper, both marked as obsolete since 9.6.5. For both methods, newly created resources will now, by default, always be considered unavailable.
+
 #### Web apps - Interactive Automation scrips: Fields containing invalid values will now be indicated more clearly [ID_34962]
 
 <!-- MR 10.4.0 - FR 10.3.2 -->
@@ -170,6 +196,14 @@ Up to now, a loading skeleton would be displayed each time data was being loaded
 When a web app requests a list of users, the Web Services API will now cache the result set it receives from the server. This will increase overall performance, especially in situations where, up to now, the same list of users had to be retrieved frequently.
 
 This user cache will be cleared each time a change occurs that has security implications (e.g. new users added, user permissions updated, etc.).
+
+#### Enhanced error handling when trying to create resource manager properties with value/key null on Elasticsearch [ID_35155]
+
+<!-- MR 10.3.0 - FR 10.3.2 -->
+
+When an attempt is made to create resource properties, resource definition properties and pool properties with value/key null on a system with an Elasticsearch database, from now on, an `InvalidCharactersInPropertyNames` error listing the names of the properties in question will be added to the Resource Manager log file.
+
+This same fix also fixes the creation and migration of resources of which the property list is null and resource pools of which the property definitions list or properties list is null.
 
 #### SAML authentication will now also work with user names instead of email addresses when automatic user creation is not enabled [ID_35159]
 
@@ -372,6 +406,16 @@ Up to now, the parameter feed used the element cache of the web client to popula
 
 From now on, when the parameter feed has a protocol or view filter, it will fetch all elements matching the filter page by page, even when the total number of elements exceeds 10,000.
 
+#### Problem with wildcard OIDs when specified on a table parameter [ID_35223]
+
+<!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
+
+SNMP table polling would stop working when a wildcard OID was configured on the table parameter. That wildcard OID would always be replaced by 1 instead of the configured parameter value.
+
+Configuring an OID on the table is necessary when using *getNext* (with or without *multipleGet*). In other cases, it is optional. There, a workaround could be to remove the OID configured on the table parameter.
+
+Standalone parameters configured with a wildcard OID were not affected.
+
 #### Dashboards app & Low-Code Apps - Node edge component: Segments of bidirectional edges would not always be positioned consistently [ID_35230]
 
 <!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
@@ -396,11 +440,23 @@ When a client asynchronously sent an GQI message to SLNet, in some cases, an exc
 
 When redundancy groups were being initialized during a DataMiner startup, in some cases, an error could occur when an element had its state changed from "undefined" to "stopped".
 
+#### Cassandra Cluster: Incorrect db.xml entries could cause db.xml to get corrupted upon synchronization [ID_35237]
+
+<!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
+
+On DataMiner clusters with a Cassandra Cluster database, incorrect *db.xml* entries could cause that file to get corrupted upon synchronization.
+
 #### Dashboards app & low-code apps: Loading indicator would not appear when sorting, filtering or refreshing a table [ID_35238]
 
 <!-- MR 10.3.0 - FR 10.3.2 -->
 
 When you sorted or filtered a table by clicking a table header, or when an action triggered a refresh of the table data, in some cases, no loading indicator would appear.
+
+#### Dashboards app & Low-code apps: Issues with regard to data highlighting [ID_35250]
+
+<!-- MR 10.4.0 - FR 10.3.2 -->
+
+A number of issues with regard to data highlighting have been fixed.
 
 #### Dashboards app & Low-code apps: Enhanced caching of items in query column selection box [ID_35251]
 
@@ -413,6 +469,20 @@ When creating or editing a query, you can select the query columns from a select
 <!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
 
 When data (e.g. a query) was deleted while it was selected, in some cases, it would incorrectly not be removed from the selection.
+
+#### Dashboards app: Two context menus could incorrectly be displayed simultaneously in the side bar [ID_35255]
+
+<!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
+
+When, in the side bar, you right-clicked a folder or a dashboard, and then clicking the ellipsis ("...") in the tab header, two context menus could incorrectly be displayed simultaneously.
+
+#### Dashboards app & Low-code apps - Node edge component: Problem with 'Set as ...' commands in component settings [ID_35256]
+
+<!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
+
+When, in the settings of a node edge component, you had selected a configured edge, it would incorrectly be possible to use the *Set as edge* command. This would clear the existing configuration of the edge in question and cause the settings to be saved incorrectly.
+
+From now on, it will only be possible to set a node as edge and vice versa.
 
 #### Dashboards app & Low-code apps: Unknown components would incorrectly no longer be indicated as such [ID_35257]
 
@@ -451,6 +521,14 @@ Up to now, the following keyboard shortcuts would not work in the dashboard edit
 |----------|---------------------------------|
 | CTRL+a   | Select all components.          |
 | DELETE   | Delete the selected components. |
+
+#### GQI: Metadata would incorrectly be removed when a custom operator was applied [ID_35283]
+
+<!-- MR 10.3.0 - FR 10.3.2 -->
+
+When, in a GQI query, a custom operator was applied, all metadata available on the rows would incorrectly be removed, causing feeds to no longer work as expected.
+
+Also, when a column was renamed via a custom operator, the metadata available on that column would incorrectly be removed.
 
 #### Spectrum Analysis: 'Visualize measurement points' setting of a spectrum element would no longer be property saved [ID_35293]
 
