@@ -1025,3 +1025,9 @@ When you sorted or filtered a table by clicking a table header, or when an actio
 When, in a GQI query, a custom operator was applied, all metadata available on the rows would incorrectly be removed, causing feeds to no longer work as expected.
 
 Also, when a column was renamed via a custom operator, the metadata available on that column would incorrectly be removed.
+
+#### Dashboards app / Low-Code Apps - Node edge component: Edge overrides would incorrectly no longer be applied [ID_35298]
+
+<!-- MR 10.3.0 - FR 10.3.2 -->
+
+When, in the settings of a node edge graph, you had configured edge overrides, these would incorrectly no longer be applied.

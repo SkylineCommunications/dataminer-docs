@@ -252,11 +252,11 @@ From now on, all custom CollectorConfig XML files will be synchronized across th
 
 Because of a number of enhancements, overall processing of "exception" or "other" parameter values by the SLAnalytics process has improved.
 
-#### NATS: No attempt will be made to cluster NATS at NATS startup when NATSForceManualConfig is enabled [ID_35221]
+#### NATS: No attempt will be made to cluster NATS at DMA startup when NATSForceManualConfig is enabled [ID_35221]
 
 <!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
 
-At NATS startup, from now on, no attempt will be made to automatically cluster the NATS nodes when the *NATSForceManualConfig* option is enabled.
+At DMA startup, from now on, no attempt will be made to automatically cluster the NATS nodes when the *NATSForceManualConfig* option is enabled.
 
 If necessary, *NatsCustodianRequests* can be triggered via the SLNetClientTest tool.
 
@@ -572,3 +572,9 @@ Also, when a column was renamed via a custom operator, the metadata available on
 <!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
 
 When you enabled the *Visualize measurement points* setting of a spectrum element, that change would no longer to properly saved in the element's *element.xml* file. This would cause unexpected behavior after restarting the DataMiner Agent or the element in question.
+
+#### Dashboards app / Low-Code Apps - Node edge component: Edge overrides would incorrectly no longer be applied [ID_35298]
+
+<!-- MR 10.3.0 - FR 10.3.2 -->
+
+When, in the settings of a node edge graph, you had configured edge overrides, these would incorrectly no longer be applied.

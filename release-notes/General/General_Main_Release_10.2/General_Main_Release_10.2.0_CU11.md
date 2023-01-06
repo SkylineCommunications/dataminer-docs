@@ -58,11 +58,11 @@ Up to now, when you exported real-time trend data to a CSV file, trend points wi
 
 Since DataMiner version 10.2.6 (10.2.0 CU6), SAML authentication would only work when the SAML response claims contained an email address. From now on, SAML authentication will also work with user names instead of email addresses in case automatic user creation is not enabled.
 
-#### NATS: No attempt will be made to cluster NATS at NATS startup when NATSForceManualConfig is enabled [ID_35221]
+#### NATS: No attempt will be made to cluster NATS at DMA startup when NATSForceManualConfig is enabled [ID_35221]
 
 <!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
 
-At NATS startup, from now on, no attempt will be made to automatically cluster the NATS nodes when the *NATSForceManualConfig* option is enabled.
+At DMA startup, from now on, no attempt will be made to automatically cluster the NATS nodes when the *NATSForceManualConfig* option is enabled.
 
 If necessary, *NatsCustodianRequests* can be triggered via the SLNetClientTest tool.
 
