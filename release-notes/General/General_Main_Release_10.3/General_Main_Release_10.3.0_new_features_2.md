@@ -514,7 +514,7 @@ var resource = new Resource()
 };
 ```
 
-This change in behavior will impact results for both *GetAvailableResources* and *GetResourceUsage* on ResourceManagerHelper, both marked as obsolete since 9.6.5. Newly created resources will now, by default, always be considered unavailable.
+This change in behavior will impact results for both *GetAvailableResources* and *GetResourceUsage* on ResourceManagerHelper, both marked as obsolete since 9.6.5. For both methods, newly created resources will now, by default, always be considered unavailable.
 
 ### DMS Mobile Gateway
 
