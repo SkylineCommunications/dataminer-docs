@@ -252,6 +252,14 @@ From now on, all custom CollectorConfig XML files will be synchronized across th
 
 Because of a number of enhancements, overall processing of "exception" or "other" parameter values by the SLAnalytics process has improved.
 
+#### NATS: No attempt will be made to cluster NATS at NATS startup when NATSForceManualConfig is enabled [ID_35221]
+
+<!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
+
+At NATS startup, from now on, no attempt will be made to automatically cluster the NATS nodes when the *NATSForceManualConfig* option is enabled.
+
+If necessary, *NatsCustodianRequests* can be triggered via the SLNetClientTest tool.
+
 #### Low-Code Apps: URLs of published app versions will no longer contain the app version number [ID_35236]
 
 <!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
@@ -279,6 +287,18 @@ The confirmation message that appears when you delete an app will now indicate m
 <!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
 
 In all web apps, the date/time picker component will now always show 6 full weeks, regardless of the number of days in the current month. This will prevent the component from having to resize when you switch from one month to another.
+
+#### SLLogCollector now also collects hot threads, node usage and tasks from Elasticsearch [ID_35310]
+
+<!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
+
+SLLogCollector packages will now also include the following additional files containing information retrieved from the Elasticsearch database (if present):
+
+| File | Contents |
+|------|----------|
+| `\Logs\Elastic\<Node address>\_nodes.hot_threads.txt` | The output of an `GET /_nodes/hot_threads` command. |
+| `\Logs\Elastic\<Node address>\_nodes.usage.json`      | The output of a `GET /_nodes/usage` command.        |
+| `\Logs\Elastic\<Node address>\_tasks.json`            | The output of a `GET /_tasks?detailed` command.     |
 
 ### Fixes
 
