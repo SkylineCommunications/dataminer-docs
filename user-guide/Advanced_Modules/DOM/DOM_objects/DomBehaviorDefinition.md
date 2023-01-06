@@ -35,9 +35,12 @@ One `DomBehaviorDefinition` can inherit from another. However, there are importa
 - It can only inherit from the `ModuleDomBehaviorDefinition` (the ID is defined in the *ModuleBehaviorDefinition* property of the `ModuleSettings`).
 
 - The inheriting definition can only contain an ID, parent ID, and extra:
-  - `DomStatusSectionDefinitionLinks` for `SectionDefinitions` that are not already defined on the module definition
-  - `ButtonDefinitions` (with other IDs than those defined on the parent)
-  - `ActionDefinitions` (with other IDs than those defined on the parent)
+
+  - `DomStatusSectionDefinitionLinks` for `SectionDefinitions` that are not already defined on the module definition.
+
+  - `ButtonDefinitions` (with other IDs than those defined on the parent).
+
+  - `ActionDefinitions` (with other IDs than those defined on the parent).
 
 Adding extra statuses or transitions on the child definition is not allowed.
 
@@ -78,7 +81,7 @@ When something goes wrong during the CRUD actions, the `TraceData` can contain o
 | Reason | Description |
 |--|--|
 | InvalidParentId | The `DomBehaviorDefinition.ParentId` property contains an unexpected ID. If a module `DomBehaviorDefinition` is defined, it must contain the ID of that definition. If that is not the case, it should be empty. |
-| InheritingDefinitionContainsInvalidData | This `DomBehaviorDefinition` is inheriting from another `DomBehaviorDefinition`, but it contains data that is not allowed. Only the `StatusSectionDefinitionLinks`, `ButtonDefinitions` and `ActionDefinitions` can contain extra objects. |
+| InheritingDefinitionContainsInvalidData | This `DomBehaviorDefinition` is inheriting from another `DomBehaviorDefinition`, but it contains data that is not allowed. Only the `StatusSectionDefinitionLinks`, `ButtonDefinitions`, and `ActionDefinitions` can contain extra objects. |
 | StatusTransitionsReferenceNonExistingStatuses | There was at least one `DomStatusTransition` that references a status that does not exist. *StatusTransitionsIds* contains the ID(s) of the invalid transition(s). |
 | StatusSectionDefinitionLinksReferenceNonExistingStatuses | There was at least one `DomStatusSectionDefinitionLink` that referenced a status that does not exist. *DomStatusSectionDefinitionLinkIds* contains the ID(s) of the invalid `DomStatusSectionDefinitionLink(s)`. |
 | InvalidStatusIds | There was at least one status defined with an invalid ID (should only contain lowercase characters). *StatusIds* contains the ID(s) of the invalid status(es). |
