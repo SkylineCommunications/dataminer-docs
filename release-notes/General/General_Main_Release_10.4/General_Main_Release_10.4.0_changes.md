@@ -109,6 +109,17 @@ When a web app requests a list of users, the Web Services API will now cache the
 
 This user cache will be cleared each time a change occurs that has security implications (e.g. new users added, user permissions updated, etc.).
 
+#### DataMiner Object Models: DomInstanceButtonDefinitions can only reference a single action [ID_35156]
+
+<!-- MR 10.4.0 - FR 10.3.2 -->
+
+From now on, DomInstanceButtonDefinitions can only reference a single action. If multiple actions are defined, a `DomBehaviorDefinitionError` with reason `InvalidButtonActionCombination` will be returned.
+
+Also, when using the DomBehaviorDefinition inheritance system, the server-side logic will now make sure that there are no buttons or actions with identical IDs on both the parent and child definition.
+
+- If a duplicate action is found, a `DomBehaviorDefinitionError` with reason `DuplicateActionDefinitionIds` will be returned.
+- If a duplicate button is found, a `DomBehaviorDefinitionError` with reason `DuplicateButtonDefinitionIds` will be returned.
+
 #### Dashboards app - Line & area chart component: 'Group by' setting will now by default be set to 'All together' [ID_35160]
 
 <!-- MR 10.4.0 - FR 10.3.2 -->
@@ -120,6 +131,12 @@ In case a *Line & area chart* component displays trending for multiple parameter
 <!-- MR 10.4.0 - FR 10.3.2 -->
 
 Because of a number of enhancements, overall performance has increased when updating a baseline or assigning an alarm template that contains conditional monitoring.
+
+#### SLLogCollector: Custom CollectorConfig XML files will now be synchronized across the DataMiner cluster [ID_35180]
+
+<!-- MR 10.4.0 - FR 10.3.2 -->
+
+From now on, all custom CollectorConfig XML files will be synchronized across the DataMiner cluster.
 
 ### Fixes
 

@@ -205,6 +205,17 @@ When an attempt is made to create resource properties, resource definition prope
 
 This same fix also fixes the creation and migration of resources of which the property list is null and resource pools of which the property definitions list or properties list is null.
 
+#### DataMiner Object Models: DomInstanceButtonDefinitions can only reference a single action [ID_35156]
+
+<!-- MR 10.4.0 - FR 10.3.2 -->
+
+From now on, DomInstanceButtonDefinitions can only reference a single action. If multiple actions are defined, a `DomBehaviorDefinitionError` with reason `InvalidButtonActionCombination` will be returned.
+
+Also, when using the DomBehaviorDefinition inheritance system, the server-side logic will now make sure that there are no buttons or actions with identical IDs on both the parent and child definition.
+
+- If a duplicate action is found, a `DomBehaviorDefinitionError` with reason `DuplicateActionDefinitionIds` will be returned.
+- If a duplicate button is found, a `DomBehaviorDefinitionError` with reason `DuplicateButtonDefinitionIds` will be returned.
+
 #### SAML authentication will now also work with user names instead of email addresses when automatic user creation is not enabled [ID_35159]
 
 <!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
@@ -228,6 +239,12 @@ Because of a number of enhancements, overall performance has increased when upda
 <!-- MR 10.3.0 - FR 10.3.2 -->
 
 Because of a number of enhancements, overall performance has increased when deleting a service from an Elasticsearch database.
+
+#### SLLogCollector: Custom CollectorConfig XML files will now be synchronized across the DataMiner cluster [ID_35180]
+
+<!-- MR 10.4.0 - FR 10.3.2 -->
+
+From now on, all custom CollectorConfig XML files will be synchronized across the DataMiner cluster.
 
 #### SLAnalytics: Enhanced processing of parameter values 'exception' and 'other' [ID_35214]
 
