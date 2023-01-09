@@ -47,6 +47,12 @@ Because of this, a number of other changes have been implemented:
 
 - The Threadpool page has been removed along with all its parameters, as these were associated with the multi-threaded timer.
 
+#### Generic DOCSIS CM Collector: CM QAM Channels tables adjusted + SNMP interval logic removed from multi-threaded timer [ID_35292]
+
+To avoid inconsistencies between the QAM DS/US Channels CM Collector table and CM QAM DS/US Channels CCAP tables, the latter will now contain all available channels per CM, and they will also contain a column indicating whether a channel is currently active or not.
+
+In addition, SNMP interval logic has been removed from the multi-threaded timer, as this did not work as intended.
+
 ### Fixes
 
 #### Issues related to alarm in EPM Platform visual overview [ID_34449]
