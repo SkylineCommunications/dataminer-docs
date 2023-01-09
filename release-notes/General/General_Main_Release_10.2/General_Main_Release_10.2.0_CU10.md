@@ -148,7 +148,7 @@ Starting the element <x> failed. No element object.
 Creating element-object for <x> failed with <y>.
 ```
 
-#### Dashboards app & low-code apps: A table row with a column containing a parameter table index is now capable of feeding a linked parameter [ID_34957]
+#### Dashboards app & Low-Code Apps: A table row with a column containing a parameter table index is now capable of feeding a linked parameter [ID_34957]
 
 <!-- Main Release Version 10.2.0 [CU10] - Feature Release Version 10.3.1 -->
 
@@ -226,7 +226,7 @@ During a Cassandra Cluster migration, SLDataGateway would leak memory due to pag
 
 When you had specified a preset in a shape that contained a Spectrum Analysis component, the preset would incorrectly not be loaded when you opened the visual overview in Cube.
 
-#### Dashboards app & low-code apps: Contents of colored table cells would incorrectly not be visible when conditional coloring was applied and actions had been configured [ID_34842]
+#### Dashboards app & Low-Code Apps: Contents of colored table cells would incorrectly not be visible when conditional coloring was applied and actions had been configured [ID_34842]
 
 <!-- MR 10.2.0 [CU10] - FR 10.3.1 -->
 
@@ -264,7 +264,7 @@ From now on, when this error is thrown, DataMiner will retry the HTTP request th
 
 In some cases, an error could occur in SLElement when a parameter update was being processed while an element was starting up.
 
-#### Low-code apps: 'Fetch the data' action of a table component would resolve too soon [ID_34902]
+#### Low-Code Apps: 'Fetch the data' action of a table component would resolve too soon [ID_34902]
 
 <!-- MR 10.2.0 [CU10] - FR 10.3.1 -->
 
@@ -278,7 +278,7 @@ When the JAVA_HOME variable was not set, SLLogCollector would become unresponsiv
 
 From now on, when SLLogCollector times out after executing a nodetool command, it will log a timeout message in its log file and proceed.
 
-#### Dashboards app & low-code apps - Table component: Data of different types displayed in the same row would not get fed correctly to linked feed components [ID_34915]
+#### Dashboards app & Low-Code Apps - Table component: Data of different types displayed in the same row would not get fed correctly to linked feed components [ID_34915]
 
 <!-- MR 10.2.0 [CU10] - FR 10.3.1 -->
 
@@ -322,7 +322,7 @@ In some cases, an incorrect credential library GUID could get stored in the *Ele
 
 When the time window of a line chart component showing trend data included a period in the future, the chart would incorrectly display non-existing data for that period in the future. From now on, the chart will stop at the current time.
 
-#### Dashboards app & low-code apps: Problem with 'Number of columns' input box [ID_34966]
+#### Dashboards app & Low-Code Apps: Problem with 'Number of columns' input box [ID_34966]
 
 <!-- Main Release Version 10.1.0 [CU22]/10.2.0 [CU10] - Feature Release Version 10.3.1 -->
 

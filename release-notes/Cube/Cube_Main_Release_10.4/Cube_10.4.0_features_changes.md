@@ -87,7 +87,33 @@ Configuring gray-tinted foreground colors is not recommended as a ListView compo
 > [!NOTE]
 >
 > - The *ColorRows* feature is disabled by default ("ColorRows=False").
-> - At present, the *ColorRows* feature only works for source bookings.
+> - At present, the *ColorRows* feature is only available on ListView components that have bookings as a source.
+
+#### Visual Overview: Visualizing EPM object statistics in a shape [ID_35222]
+
+<!-- MR 10.4.0 - FR 10.3.2 -->
+
+It is now possible to display the statistics of an EPM object in a shape linked to that EPM object.
+
+1. Link the shape to the EPM object via the *SystemName* and *SystemType* shape data fields.
+
+1. Add an asterisk character ("\*") in the shape text.
+
+1. Add a shape data field of type *Info* to the shape, and set its value to e.g. `EPM STATISTICS:###[#TotalAlarms]`.
+
+The following information can be displayed:
+
+```txt
+#TotalAlarms
+#CriticalAlarms
+#MajorAlarms
+#MinorAlarms
+#WarningAlarms
+#NormalAlarms
+#TimeoutAlarms
+#NoticeAlarms
+#ErrorAlarms
+```
 
 ## Changes
 
@@ -134,3 +160,9 @@ When a parameter had been removed from a profile definition, in the *Profiles* a
 <!-- MR 10.4.0 - FR 10.3.2 -->
 
 In some rare cases, conditional shape manipulation actions (e.g. Show, Hide, Rotate, Blink, etc.) would not be executed correctly.
+
+#### Visual Overview: Dynamically positioned shapes could no longer be re-arranged using drag-and-drop [ID_35241]
+
+<!-- MR 10.4.0 - FR 10.3.2 -->
+
+When, in a Visio drawing, shapes have been positioned dynamically based on properties, you can re-arrange those shapes manually by switching to *Arrange* mode and re-arranging the shapes using drag-and-drop. In some rare cases, it would no longer be possible to drag shapes to another location.

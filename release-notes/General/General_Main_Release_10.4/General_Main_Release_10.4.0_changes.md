@@ -109,11 +109,34 @@ When a web app requests a list of users, the Web Services API will now cache the
 
 This user cache will be cleared each time a change occurs that has security implications (e.g. new users added, user permissions updated, etc.).
 
+#### DataMiner Object Models: DomInstanceButtonDefinitions can only reference a single action [ID_35156]
+
+<!-- MR 10.4.0 - FR 10.3.2 -->
+
+From now on, DomInstanceButtonDefinitions can only reference a single action. If multiple actions are defined, a `DomBehaviorDefinitionError` with reason `InvalidButtonActionCombination` will be returned.
+
+Also, when using the DomBehaviorDefinition inheritance system, the server-side logic will now make sure that there are no buttons or actions with identical IDs on both the parent and child definition.
+
+- If a duplicate action is found, a `DomBehaviorDefinitionError` with reason `DuplicateActionDefinitionIds` will be returned.
+- If a duplicate button is found, a `DomBehaviorDefinitionError` with reason `DuplicateButtonDefinitionIds` will be returned.
+
 #### Dashboards app - Line & area chart component: 'Group by' setting will now by default be set to 'All together' [ID_35160]
 
 <!-- MR 10.4.0 - FR 10.3.2 -->
 
 In case a *Line & area chart* component displays trending for multiple parameters, the *Group by* setting allows you to specify how the graphs should be grouped. From now on, this *Group by* setting will by default be set to "All together".
+
+#### Enhanced performance when updating a baseline or assigning an alarm template that contains conditional monitoring [ID_35171]
+
+<!-- MR 10.4.0 - FR 10.3.2 -->
+
+Because of a number of enhancements, overall performance has increased when updating a baseline or assigning an alarm template that contains conditional monitoring.
+
+#### SLLogCollector: Custom CollectorConfig XML files will now be synchronized across the DataMiner cluster [ID_35180]
+
+<!-- MR 10.4.0 - FR 10.3.2 -->
+
+From now on, all custom CollectorConfig XML files will be synchronized across the DataMiner cluster.
 
 ### Fixes
 
@@ -137,10 +160,16 @@ In some cases, Resource Manager could throw a NullReferenceException when *Resou
 
 When a column select or a column manipulation operator was applied before an aggregation operator, the column select or column manipulation operator would incorrectly be ignored. As a result, all columns would be visible in the *group by node* or columns created by the column manipulation would not be added to the options of the *group by node*.
 
-#### Dashboards app & Low-code apps - Parameter feed: Problem when more than 10,000 elements had to be retrieved from the server [ID_35186]
+#### Dashboards app & Low-Code Apps - Parameter feed: Problem when more than 10,000 elements had to be retrieved from the server [ID_35186]
 
 <!-- MR 10.4.0 - FR 10.3.2 -->
 
 Up to now, the parameter feed used the element cache of the web client to populate its element list. As this cache can only hold up to 10,000 elements, this prevented the parameter feed from retrieving all elements when the cluster contained more than 10,000 elements.
 
 From now on, when the parameter feed has a protocol or view filter, it will fetch all elements matching the filter page by page, even when the total number of elements exceeds 10,000.
+
+#### Dashboards app & Low-code apps: Issues with regard to data highlighting [ID_35250]
+
+<!-- MR 10.4.0 - FR 10.3.2 -->
+
+A number of issues with regard to data highlighting have been fixed.

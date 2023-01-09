@@ -78,7 +78,7 @@ It is now possible to group parameters in a parameter feed that lists EPM parame
 
 A number of security enhancements have been made.
 
-#### Dashboards app / Low-code apps - Service definition component: Enhancements made with regard to function nodes displaying the number of Process Automation tokens in queue or in progress [ID_33888]
+#### Dashboards app / Low-Code Apps - Service definition component: Enhancements made with regard to function nodes displaying the number of Process Automation tokens in queue or in progress [ID_33888]
 
 <!-- MR 10.3.0 - FR 10.2.12 -->
 <!-- Not added to MR 10.3.0 -->
@@ -153,7 +153,7 @@ Now, an inter-process lock has been added to make sure only one thread and proce
 
 Moreover, when a QAction is being compiled, other elements will wait for 5 minutes. They will then throw an exception and an element restart will be required. This timeout will make sure that, if something unexpectedly would go wrong, there is still a chance to recover from the situation without having to restart DataMiner.
 
-#### Dashboards app / Low-code apps - Line & area chart: Group label will no longer be displayed when grouping is set to 'All together' [ID_34544]
+#### Dashboards app / Low-Code Apps - Line & area chart: Group label will no longer be displayed when grouping is set to 'All together' [ID_34544]
 
 <!-- MR 10.3.0 - FR 10.2.12 -->
 
@@ -179,7 +179,7 @@ The following methods used to add attachments to bookings, jobs and tickets have
 
 Also, the *ContinueAutomationScript* method now has an additional `info` parameter that can be used to provide more information about the variables passed in the `values` parameter (e.g. information to help resolve the file paths).
 
-#### Dashboards app / Low-code apps: Enhanced performance of selection boxes [ID_34577]
+#### Dashboards app / Low-Code Apps: Enhanced performance of selection boxes [ID_34577]
 
 <!-- MR 10.3.0 - FR 10.2.12 -->
 
@@ -217,7 +217,7 @@ If an Elasticsearch database is available, the behavioral change points detected
 
 This will support faster and more flexible change point querying via GQI in future releases.
 
-#### Dashboards app / Low-code apps - Visual Overview component: Enhancements with regard to WebSocket/polling settings and user access to visual overviews [ID_34624]
+#### Dashboards app / Low-Code Apps - Visual Overview component: Enhancements with regard to WebSocket/polling settings and user access to visual overviews [ID_34624]
 
 <!-- MR 10.3.0 - FR 10.2.12 -->
 
@@ -412,7 +412,7 @@ When you had enabled this feature, in some rare cases, an error could occur when
 
 When a DELT element with more than 1,000 Elasticsearch logger table entries was being imported, in some cases, SLDataGateway would end up in an endless loop and start using a large amount of virtual memory.
 
-#### Low-code apps: 'Read mode' setting of a form would incorrectly not be available when the form only contained DOM instance data [ID_34627]
+#### Low-Code Apps: 'Read mode' setting of a form would incorrectly not be available when the form only contained DOM instance data [ID_34627]
 
 <!-- MR 10.2.0 [CU9] - FR 10.2.12 -->
 

@@ -976,6 +976,28 @@ Alarm groups would not get cleared automatically when the *AutoClear* option was
 
 Also, in some cases, after clearing an alarm group, a clearable version of that alarm group would incorrectly remain visible in the Alarm Console, even when the *AutoClear* option was set to true.
 
+#### Service & Resource Management: Problem when Cube tried to retrieve SRM-related data to which the user did not have access [ID_34397]
+
+<!-- MR 10.3.0 - FR 10.3.2 -->
+
+Up to now, an exception could be thrown when DataMiner Cube tried to retrieve SRM-related data to which the user did not have access.
+
+From now on, when DataMiner Cube tries to retrieve SRM-related data to which the user does not have access, a message box will appear, asking the user to contact the system administrator. Also, each time this type of message box is displayed, an entry of type "warning" will be added to the Cube logging (`User X could not read object Y because the user does not have permission flag Z`).
+
+Overview of the read permissions needed to retrieve SRM-related data:
+
+| SRM-related data | Read permission                    |
+|------------------|------------------------------------|
+| Bookings         | Bookings > UI available            |
+| Functions        | Functions> UI available            |
+| Profiles         | Profiles > UI available            |
+| Resources        | Resources> UI available            |
+| Service profiles | Services > Profiles > UI available |
+| Services         | Services > UI available            |
+
+> [!NOTE]
+> Often, users will need a combination of the above-mentioned read permission for Cube to be able to retrieve the necessary SRM-related data.
+
 #### Visual Overview: Problem when loading a DCF signal path [ID_34630]
 
 <!-- MR 10.3.0 - FR 10.2.12 -->
