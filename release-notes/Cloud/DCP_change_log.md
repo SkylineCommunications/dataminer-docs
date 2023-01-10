@@ -6,13 +6,27 @@ uid: DCP_change_log
 
 The DataMiner Cloud Platform gets updated continuously. This change log can help you trace when specific features and changes have become available.
 
+#### 10 January 2023 - Enhancement - DataMiner SupportAssistant 1.2.0 - Various stability improvements [ID_35349]
+
+Various general stability improvements have been implemented. In addition, eventing has been added to DCP, so that the Skyline Support Team can follow up on the status of remote log collection.
+
+This enhancement is included in Cloud Pack 2.8.4.
+
 #### 10 January 2023 - Enhancement - Audit log whenever Skyline's Support team uses Remote Log Collection [ID_35165]
 
 Every time Skyline's Support Team uses the Remote Log Collection feature on a DataMiner Agent, an audit log will now be created on DCP. You can view these logs on the *Audit* page of the [DCP Admin app](https://admin.dataminer.services).
 
+#### 10 January 2023 - Fix - DataMiner CoreGateway 2.12.0 - Problem with CoreGateway after server restart [ID_34961]
+
+After a server restart, a startup race condition could cause issues in the CoreGateway, which could for example cause the DataMiner Teams bot to be unresponsive. The NATS Message Broker dependency has been updated to prevent this issue.
+
+This fix is included in Cloud Pack 2.8.4.
+
 #### 22 December 2022 - Fix - CloudGateway 2.10.1 - Connection tester did not take proxy settings into account [ID_35227]
 
 If proxy settings were configured in the *appsettings.proxy.json* file, previously these were not taken into account by the connection tester tool.
+
+This fix is included in Cloud Pack 2.8.4.
 
 #### 19 December 2022 - Fix - SupportAssistant 1.1.1 - Log collection triggered too often [ID_35158]
 
