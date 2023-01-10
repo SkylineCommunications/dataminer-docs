@@ -222,4 +222,6 @@ Via the right-click menu of this table, you can add a property, duplicate a prop
 
 ## Events subtab
 
+The settings on this subtab are used to configure custom events for Service Orchestration.
+
 See [Service Orchestration custom events configuration](xref:Service_Orchestration_custom_events).

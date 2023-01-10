@@ -1,5 +1,5 @@
 ---
-Service_Orchestration_custom_events
+uid: Service_Orchestration_custom_events
 ---
 
 # Service Orchestration custom events configuration
