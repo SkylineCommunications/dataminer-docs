@@ -5203,8 +5203,8 @@
           topicUid: Consuming_NuGet
         - name: Producing NuGet packages
           topicUid: Producing_NuGet
-        - name: Advanced assembly knowledge
-          topicUid: Advanced_Assembly_Knowledge
+        - name: Assembly binding
+          topicUid: Assembly_Binding
           items:
           - name: Compilation-time assembly binding
             topicUid: Compilation_Time_Assembly_Binding
