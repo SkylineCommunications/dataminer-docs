@@ -17,4 +17,5 @@ This can cause exceptions during serializing and deserializing, for example “C
 Make sure you keep the versions of libraries in sync as much as possible.
 
 To help with debugging, it can be useful to know more about how DLLs are loaded in DataMiner. There are two parts to loading assemblies: [Compilation-time assembly binding](xref:Compilation_Time_Assembly_Binding) and [Run-time assembly binding](xref:Run_Time_Assembly_Binding).
+
 Remember that it is not because compilation succeeds that no issues can occur at run-time.

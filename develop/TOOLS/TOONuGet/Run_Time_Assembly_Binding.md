@@ -18,16 +18,17 @@ Typically, unification is performed (using [BindingRedirect](https://learn.micro
 
 ## Example
 
-Suppose you are creating an API to be used in a connector (releasing your API as a NuGet package) and that the API uses the class library NuGet package version 1.3.0.1.
-As an example, let us assume that the API defines the following method in a public class named Example:
+Suppose you are creating an API to be used in a connector (releasing your API as a NuGet package), and that the API uses the class library NuGet package version 1.3.0.1.
+
+Let us assume that the API defines the following method in a public class named *Example*:
 
 ```csharp
 public void Install(IDms dms);
 ```
 
-Now the Install method has an argument of type IDms, which is defined in the class library package version 1.3.0.1. In other words, the API exposes a type used from the class library v1.3.0.1.
+Now the *Install* method has an argument of type *IDms*, which is defined in the class library package version 1.3.0.1. In other words, the API exposes a type used from the class library v1.3.0.1.
 
-When using this API from a connector that uses the class library NuGet version 1.3.0.1, everything will work fine:
+When this API is used from a connector that uses the class library NuGet version 1.3.0.1, everything will work fine:
 
 ```csharp
 IDms dms = protocol.GetDms();
@@ -40,14 +41,18 @@ However, if the class library version used in the QAction is different, this wil
 ```csharp
 IDms dms = protocol.GetDms(); // An instance of IDms from 1.3.0.2 is created.
 Example example = new Example();
-example.Install(dms); // An instance of IDms v1.3.0.1 is expected but v1.3.0.2 is provided.
+example.Install(dms); // An instance of IDms v1.3.0.1 is expected, but v1.3.0.2 is provided.
 ```
 
-This will result in a MissingMethodException being thrown: `System.MissingMethodException: Method not found: 'Void Example.Install(IDms)'`.
+This will result in a *MissingMethodException* being thrown: `System.MissingMethodException: Method not found: 'Void Example.Install(IDms)'`.
 
-Even though the signature of the method gives the impression that this method is actually present, the exception gets thrown because the versions of the assemblies in which the types are defined are different: The protocol.GetDms method in the connecter constructs a IDms instance from assembly v1.3.0.2, while the Install method expects an instance of assembly v1.3.0.1 and therefore throws a MissingMethodException.
+Even though the signature of the method gives the impression that this method is actually present, the exception gets thrown because the versions of the assemblies in which the types are defined are different: The *protocol.GetDms* method in the connecter constructs an *IDms* instance from assembly v1.3.0.2, while the *Install* method expects an instance of assembly v1.3.0.1 and therefore throws a *MissingMethodException*.
 
-Another type of exception you could observe when mixing different versions is an InvalidCastException. The element log would then contain a message as follows: `System.InvalidCastException: [A]<namespace>.<type> cannot be cast to [B]<namespace>.<type>. Type A originates from '<assemblyName>, Version=<assemblyVersion>, Culture=neutral, PublicKeyToken=null' in the context 'LoadNeither' in a byte array. Type B originates from '<assemblyName>, Version=<assemblyVersion>, Culture=neutral, PublicKeyToken=null' in the context 'LoadNeither' in a byte array.
-   at QAction.Run(SLProtocol protocol)`
+Another type of exception you could observe when mixing different versions is an *InvalidCastException*. The element log would then contain a message as follows:
 
-It is important to be aware of this when developing e.g. APIs as otherwise the exceptions above could occur at run-time.
+```txt
+System.InvalidCastException: [A]<namespace>.<type> cannot be cast to [B]<namespace>.<type>. Type A originates from '<assemblyName>, Version=<assemblyVersion>, Culture=neutral, PublicKeyToken=null' in the context 'LoadNeither' in a byte array. Type B originates from '<assemblyName>, Version=<assemblyVersion>, Culture=neutral, PublicKeyToken=null' in the context 'LoadNeither' in a byte array.
+   at QAction.Run(SLProtocol protocol)
+```
+
+It is important to be aware of this when developing e.g. APIs, as otherwise the exceptions above could occur at run-time.
