@@ -575,6 +575,6 @@ When you enabled the *Visualize measurement points* setting of a spectrum elemen
 
 #### Dashboards app / Low-Code Apps - Node edge component: Edge overrides would incorrectly no longer be applied [ID_35298]
 
-<!-- MR 10.3.0 - FR 10.3.2 -->
+<!-- MR 10.2.0 [CU12] - FR 10.3.2 -->
 
 When, in the settings of a node edge graph, you had configured edge overrides, these would incorrectly no longer be applied.
