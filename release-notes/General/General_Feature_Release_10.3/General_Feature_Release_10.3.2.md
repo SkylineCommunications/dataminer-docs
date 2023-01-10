@@ -246,6 +246,15 @@ Because of a number of enhancements, overall performance has increased when dele
 
 From now on, all custom CollectorConfig XML files will be synchronized across the DataMiner cluster.
 
+#### Exporting and importing DELT packages containing element and alarm data is now supported on DataMiner Systems with a clustered database [ID_35213]
+
+<!-- MR 10.2.0 [CU12] - FR 10.3.2 [CU0] -->
+
+From now on, exporting and importing DELT packages containing element and alarm data is also supported on DataMiner Systems with a clustered database.
+
+> [!NOTE]
+> Exporting and importing DELT packages containing trend data is not yet supported on DataMiner Systems with a clustered database.
+
 #### SLAnalytics: Enhanced processing of parameter values 'exception' and 'other' [ID_35214]
 
 <!-- MR 10.3.0 - FR 10.3.2 -->
