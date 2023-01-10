@@ -36,6 +36,12 @@ Multiple instances of the SLLogCollector tool can now be run simultaneously.
 
 ### Fixes
 
+#### Problem with SLLog when logging large entries regarding failed Elasticsearch query requests/responses [ID_35037]
+
+<!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
+
+Up to now, an error could occur in SLLog when adding large entries regarding failed Elasticsearch query requests/responses.
+
 #### SLDataGateway could end up with an excessive number of HealthMonitor.Refresh threads [ID_35286]
 
 <!-- MR 10.2.0 [CU12] - FR 10.3.3 -->

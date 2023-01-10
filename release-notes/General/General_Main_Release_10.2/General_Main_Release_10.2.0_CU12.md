@@ -35,6 +35,12 @@ From now on, exporting and importing DELT packages containing element and alarm 
 
 ### Fixes
 
+#### Problem with SLLog when logging large entries regarding failed Elasticsearch query requests/responses [ID_35037]
+
+<!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
+
+Up to now, an error could occur in SLLog when adding large entries regarding failed Elasticsearch query requests/responses.
+
 #### DataMiner Cube - Alarm Console: Multiple values in property columns would incorrectly not be separated by any separator [ID_35239]
 
 <!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
