@@ -8,14 +8,18 @@ The `DomDefinition` object groups `DomInstance` objects together (as each instan
 
 ## Properties
 
-The table below lists the properties of the `DomDefinition` object. It also indicates whether a property can be used for filtering using the `DomDefinitionExposers`.
+The table below lists the properties of the `DomDefinition` object. It also indicates whether a property can be used for filtering using the `DomDefinitionExposers`. 
+
+> [!NOTE]
+> From DataMiner 10.3.2/10.4.0 onwards, the `DomDefinition` object also has [the *ITrackBase* properties](xref:DOM_objects#itrackbase-properties).
 
 | Property | Type | Filterable | Description |
 |--|--|--|--|
 | ID | DomDefinitionId | Yes | The ID of the `DomDefinition`. |
 | Name | string | Yes | The name of the `DomDefinition`. |
 | SectionDefinitionLinks | List\<[SectionDefinitionLink](#sectiondefinitionlink)> | Yes | Contains the required/allowed `SectionDefinitions`. |
-| VisualStructure | DomDefinitionVisualStructure | No | Used by the client UI to store info about how things should be visualized. |
+| VisualStructure | DomDefinitionVisualStructure | No | Contains settings related to the client UI. Most of these do not apply for DOM. This property should be ignored since it will be removed in the near future. |
+| DomBehaviorDefinitionId | DomBehaviorDefinitionId | Yes | ID of the `DomBehaviorDefinition` that this `DomDefinition` is linked to. See [DomBehaviorDefinition](xref:DomBehaviorDefinition). |
 | ModuleSettingsOverrides | [ModuleSettingsOverrides](#modulesettingsoverrides) | No | Used to override some `ModuleSettings`. See [DomInstanceNameDefinition](xref:DomInstanceNameDefinition). |
 
 ### SectionDefinitionLink

@@ -19,10 +19,10 @@ uid: Part1GettingStarted
 
 - [DataMiner Cloud Platform](xref:Part51CloudPlatform)
 
-### More on specific DataMiner modules and apps
+### More on specific DataMiner modules, apps, etc.
 
 - [Advanced DataMiner modules](xref:Part4AdvancedModules)
-- [DataMiner Standard Apps](xref:Part5StandardApps)
+- [DataMiner Standard Apps, Frameworks, and Solutions](xref:Part5StandardApps)
 
 ### Are you a DataMiner Administrator?
 

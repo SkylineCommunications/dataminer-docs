@@ -1,5 +1,7 @@
 ﻿namespace Skyline.DataMiner.Library.Common.Rates
 {
+	using Skyline.DataMiner.Library.Common.Interfaces;
+
 	/// <summary>
 	/// Class that contains the data of one interface. This can be seen as an object that contains the data of one row in a table.
 	/// </summary>

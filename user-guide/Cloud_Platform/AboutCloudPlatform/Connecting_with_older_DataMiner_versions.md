@@ -23,6 +23,9 @@ To connect your DMS to the cloud:
 
 1. Download the appropriate DataMiner **Cloud Pack installer** from [DataMiner Dojo](https://community.dataminer.services/downloads/) and install it on one or more DMAs in the cluster. As .NET 5 is required to connect to the DataMiner Cloud, you can choose an installer that includes or downloads .NET 5. If .NET 5 is already installed in your system, choose the installer that does not include .NET 5.
 
+   > [!NOTE]
+   > If your DataMiner System contains a Failover pair, and one of the Agents in the Failover pair is responsible for hosting the connection towards the DataMiner Cloud Platform, install the DataMiner Cloud Pack on both Agents in the Failover pair.
+
 1. In DataMiner Cube, go to System Center \> *Users / Groups* and make sure you have the following **user permissions**. If you need to make changes to the user permissions, reconnect to Cube afterwards to make sure your changes are applied in the UI.
 
    Prior to DataMiner 10.1.4:

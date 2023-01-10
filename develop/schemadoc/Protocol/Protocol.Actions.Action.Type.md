@@ -6,6 +6,9 @@ uid: Protocol.Actions.Action.Type
 
 Defines, together with [On](xref:Protocol.Actions.Action.On), how the action is executed.
 
+> [!NOTE]
+> Not all Protocol.Actions.Action.Type values can be used in combination with the different Protocol.Actions.Action.On types. See [Possible combinations of “On” and “Type”](xref:LogicActionsOverview).
+
 ## Type
 
 [EnumActionType](xref:Protocol-EnumActionType)

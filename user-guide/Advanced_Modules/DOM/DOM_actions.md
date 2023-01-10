@@ -12,7 +12,7 @@ An action is always executed in a specific context, i.e. for a context object. C
 
 ## Defining an action
 
-You can define an action by adding an `IDomActionDefinition` to the `ActionDefinitions` list of a `DomBehaviorDefinition`. Each action definition has an ID (of type string) and a condition (of type `IDomCondition`). Note that the ID must be unique for this `DomBehaviorDefinition` and it can only contain lower-case characters. There is currently only one action type.
+You can define an action by adding an `IDomActionDefinition` to the `ActionDefinitions` list of a `DomBehaviorDefinition`. Each action definition has an ID (of type string) and a condition (of type `IDomCondition`). Note that the ID can only contain lower-case characters and must be unique across this `DomBehaviorDefinition` and its parent or child definitions. There is currently only one action type.
 
 ### ExecuteScriptDomActionDefinition
 

@@ -75,3 +75,7 @@ It could occur that aggregation actions to get the average percentage DS/US util
 #### PNM and cable modem OOS parameters hidden at Service Group level [ID_34279]
 
 The aggregation actions for PNM and cable modem OOS parameters at Service Group, US Service Group, and DS Service Group level have been removed. The parameters that depended on these actions have therefore been hidden and the visual overview has been updated accordingly. It no longer shows the PNM section and maps integration at Service Group level.
+
+#### CISCO CMTS CCAP Platform: Incorrect US Port name exported to CM file [ID_35297]
+
+Because the CISCO CMTS CCAP Platform connector exported incorrect US Port names to the cable modem file, the US Port IDs in the cable modem table showed "N/A" and the US Port names in that same table were incorrect.

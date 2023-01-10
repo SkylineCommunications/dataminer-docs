@@ -2,10 +2,10 @@
 uid: General_Main_Release_10.2.0_CU8
 ---
 
-# General Main Release 10.2.0 CU8 – Preview
+# General Main Release 10.2.0 CU8
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 > For information on how to upgrade DataMiner, see [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent).
@@ -39,12 +39,6 @@ Because of improved internal logic, the performance of the SLDataGateway process
 <!-- MR 10.2.0 [CU8] - FR 10.2.11 -->
 
 In service definition diagrams, function resource icons are now centered.
-
-#### DataMiner Cube - Automation: Changes made to a script by other users will immediately be shown when selecting that script [ID_34277]
-
-<!-- MR 10.2.0 [CU8] - FR 10.2.11 -->
-
-When you select an unmodified Automation script in the Automation app, from now on, changes made to that script by other users (e.g. in another Cube session or in DataMiner Integration Studio) will immediately be shown.
 
 #### Enhanced performance when querying large XML files [ID_34299]
 
@@ -129,7 +123,7 @@ In the *Logging* section of *System Center*, you can now also consult the *SLRAD
 
 The `Repair DB.bat` script, located in the `C:\Skyline DataMiner\Tools` folder, now also supports MySQL Server 5.5.
 
-#### Dashboards app / Low-code apps: Enhanced performance of node-edge components [ID_34517]
+#### Dashboards app / Low-Code Apps: Enhanced performance of node-edge components [ID_34517]
 
 <!-- MR 10.2.0 [CU8] - FR 10.2.11 -->
 
@@ -473,3 +467,9 @@ When, on a Cassandra cluster, real-time trend data was requested via a paged dat
 <!-- MR 10.2.0 [CU8] - FR 10.2.11 -->
 
 When a new alarm tab with a large number of correlated alarms was being loaded, in some cases, an exception could be thrown and the alarm tab would keep on loading.
+
+#### SLProtocol could leak memory when a protocol with HTTP connections sent an HTTP request with a header [ID_34775]
+
+<!-- MR 10.1.0 [CU20] / 10.2.0 [CU8] - FR 10.2.11 [CU1] -->
+
+When a protocol with HTTP connections sent an HTTP request with a header, SLProtocol could leak memory.

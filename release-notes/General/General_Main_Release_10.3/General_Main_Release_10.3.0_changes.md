@@ -14,7 +14,7 @@ uid: General_Main_Release_10.3.0_changes
 
 ### Enhancements
 
-#### Security enhancements [ID_31045] [ID_31054] [ID_31761] [ID_32055] [ID_32566] [ID_33069] [ID_33078] [ID_33218] [ID_33365] [ID_33583]
+#### Security enhancements [ID_31045] [ID_31054] [ID_31761] [ID_32055] [ID_32566] [ID_33069] [ID_33078] [ID_33218] [ID_33365] [ID_33583] [ID_34723]
 
 A number of security enhancements have been made.
 
@@ -250,11 +250,11 @@ When authenticating users using SAML, the following additional debug information
 
 Up to now, components could only produce one feed for each data type. Now support has been added for different categories within a data type, so that components will be able to produce several feeds for the same data type. This will for example make it possible for a component to produce a query row feed with the categories "timeline item" and "timeline band".
 
-#### QA Device Simulator: Enhanced performance [ID_33761]
+#### Skyline Device Simulator: Enhanced performance [ID_33761]
 
 <!-- MR 10.3.0 - FR 10.2.9 -->
 
-Because of a number of enhancements, overall performance of the QA Device Simulator tool has improved.
+Because of a number of enhancements, overall performance of the Skyline Device Simulator tool has improved.
 
 #### Maximum for element timeout setting increased to 24 hours [ID_33862] [ID_33951]
 
@@ -347,15 +347,6 @@ In the conditional coloring layout setting for Table and Node edge components, t
 
 In the conditional coloring layout setting for Table and Node edge components, discrete column values will now be displayed to make it easier to configure a filter.
 
-#### SLReset will no longer remove VersionHistory.txt and the HTTPS configuration [ID_34194]
-
-<!-- MR 10.3.0 - FR 10.2.10 -->
-
-From now on, the factory reset tool *SLReset.exe* will no longer remove the following items:
-
-- the *VersionHistory.txt* file
-- the HTTPS configuration stored in the *MaintenanceSettings.xml* file.
-
 #### GQI table column names will no longer include table names [ID_34302]
 
 <!-- MR 10.3.0 - FR 10.2.10 -->
@@ -382,17 +373,128 @@ Because of a number of enhancements, overall performance has increased when runn
 
 A number of enhancements have been made to the algorithm used by SLNet and SLDataGateway to find the first valid physical address of the DataMiner Agent.
 
+#### GQI: Enhanced performance when retrieving table data [ID_34441]
+
+<!-- MR 10.3.0 - FR 10.2.12 -->
+
+Because of a number of enhancements, overall performance has increased when retrieving table data by means of a GQI query.
+
+#### Dashboards app - Line & area chart: Non-trended parameters will now automatically be removed when the component is linked to a parameter feed [ID_34499]
+
+<!-- MR 10.3.0 - FR 10.2.12 -->
+
+When a parameter feed is linked to a *Line & area chart" component, from now on, non-trended parameters will now automatically be removed from the chart.
+
 #### Dashboards app - Parameter feed: 'Auto-select all' setting no longer available when using an EPM identifier feed as source [ID_34501]
 
 <!-- MR 10.3.0 - FR 10.2.11 -->
 
 When a parameter feed has an EPM identifier feed as source, from now on, the *Auto-select all* setting will no longer be available.
 
+#### Dashboards app / Low-Code Apps - Line & area chart: Group label will no longer be displayed when grouping is set to 'All together' [ID_34544]
+
+<!-- MR 10.3.0 - FR 10.2.12 -->
+
+In case a *Line & area chart* component displays trending for multiple parameters, the *Group by* setting allows you to specify how the graphs should be grouped. From now on, group titles will no longer be displayed when you set *Group by* to "All together".
+
 #### SLElement: Enhanced alarm locking [ID_34561]
 
 <!-- MR 10.3.0 - FR 10.2.12 -->
 
 Alarm locking in the SLElement process has been enhanced.
+
+#### Dashboards app / Low-Code Apps: Enhanced performance of selection boxes [ID_34577]
+
+<!-- MR 10.3.0 - FR 10.2.12 -->
+
+Because of a number of enhancements, overall performance has increased when opening selection boxes, especially when they contain a large number of items.
+
+#### Dashboards app: Upload size of PDF files will now be validated [ID_34620]
+
+<!-- MR 10.3.0 - FR 10.2.12 -->
+
+When PDF files are uploaded via the WebAPI (e.g. when a PDF report is generated), an error will now be thrown when the batch size exceeds 10 MB or the total file size exceeds 1 GB.
+
+#### Behavioral change points stored in both Cassandra and Elasticsearch [ID_34621]
+
+<!-- MR 10.3.0 - FR 10.2.12 -->
+
+If an Elasticsearch database is available, the behavioral change points detected in trend data by the Behavioral Anomaly Detection feature will now be stored both in the Cassandra database and the Elasticsearch database. Otherwise, they will be stored in Cassandra only like before.
+
+This will support faster and more flexible change point querying via GQI in future releases.
+
+#### Dashboards app / Low-Code Apps - Visual Overview component: Enhancements with regard to WebSocket/polling settings and user access to visual overviews [ID_34624]
+
+<!-- MR 10.3.0 - FR 10.2.12 -->
+
+A number of enhancements have been made to the visual overview component, especially with regard to the WebSocket/polling settings and the algorithm that checks whether users have access to the visual overviews retrieved by the component.
+
+#### Enhanced parameter locking in SLElement [ID_34688]
+
+<!-- MR 10.3.0 - FR 10.3.1 [CU0] -->
+
+In SLElement, a number of enhancements have been made with regard to parameter locking.
+
+#### Service & Resource Management: GetResources methods not using filter elements have now been marked as obsolete [ID_34720]
+
+<!-- MR 10.3.0 - FR 10.2.12 -->
+
+In *ResourceManagerHelper* and *IResourceManagerHelper*, the following methods not using filter elements have now been marked as obsolete:
+
+```csharp
+IEnumerable<Resource> GetResources(IEnumerable<Resource> filters);
+Resource[] GetResources(params Resource[] filters);
+```
+
+The following method should now be used instead:
+
+```csharp
+Resource[] GetResources(FilterElement<Resource> filter);
+```
+
+For example, you can now use the following call to retrieve all resources:
+
+```csharp
+var allResources = resourceManagerHelper.GetResources(new TRUEFilterElement<Resource>());
+```
+
+#### GQI: Enhanced performance when retrieving DomInstances that have a DomBehaviorDefinition [ID_34853]
+
+<!-- MR 10.3.0 - FR 10.3.1 -->
+
+Because of a number of enhancements, overall performance has increased when retrieving DomInstances that have a DomBehaviorDefinition.
+
+#### SLAnalytics: Enhanced automatic evaluation of trend predictions [ID_34901]
+
+<!-- MR 10.3.0 - FR 10.3.1 -->
+
+Because of a number of enhancements, the automatic evaluation of trend predictions has improved.
+
+#### Service & Resource Management: Enhanced performance when adding and updating bookings [ID_35016]
+
+<!-- MR 10.3.0 - FR 10.3.2 -->
+
+Because of a number of enhancements, overall performance has increased when creating and updating bookings.
+
+#### Enhanced error handling when trying to create resource manager properties with value/key null on Elasticsearch [ID_35155]
+
+<!-- MR 10.3.0 - FR 10.3.2 -->
+
+When an attempt is made to create resource properties, resource definition properties and pool properties with value/key null on a system with an Elasticsearch database, from now on, an `InvalidCharactersInPropertyNames` error listing the names of the properties in question will be added to the Resource Manager log file.
+
+This same fix also fixes the creation and migration of resources of which the property list is null and resource pools of which the property definitions list or properties list is null.
+
+#### Enhanced performance when deleting a service from an Elasticsearch database [ID_35173]
+
+<!-- MR 10.3.0 - FR 10.3.2 -->
+
+Because of a number of enhancements, overall performance has increased when deleting a service from an Elasticsearch database.
+
+#### SLAnalytics: Enhanced processing of parameter values 'exception' and 'other' [ID_35214]
+
+<!-- MR 10.3.0 - FR 10.3.2 -->
+
+Because of a number of enhancements, overall processing of "exception" or "other" parameter values by the SLAnalytics process has improved.
 
 ### Fixes
 
@@ -492,6 +594,18 @@ On systems without an Elasticsearch database, the following messages were thrown
 
 From now on, when no Elasticsearch database can be found, only the above-mentioned information event will be thrown.
 
+#### SLAnalytics - Pattern matching: Disabling the monitoring of a pattern would not be applied immediately [ID_32792]
+
+<!-- MR 10.3.0 - FR 10.2.4 -->
+
+When you disabled the monitoring of a pattern that had monitoring enabled, the update would incorrectly only be applied after restarting either SLAnalytics or the DataMiner software.
+
+#### MessageBroker: Timeout value would incorrectly be ignored when using RequestResponse(Async) [ID_32810]
+
+<!-- MR 10.3.0 - FR 10.2.5 -->
+
+When, in the MessageBroker, RequestResponse(Async) was used when NATS was not yet connected, the specified timeout value would incorrectly be ignored. The timeout value would only be applied to the actual NATS communication and not to the potential reconnection logic.
+
 #### Elasticsearch: TTL settings would not be applied correctly [ID_32913]
 
 <!-- MR 10.3.0 - FR 10.2.6 -->
@@ -522,6 +636,16 @@ Up to now, when SLPort received a WebSocket message larger than the WebSocket bu
 
 When you created an element with an alarm template in which anomaly detection alarms were configured for table parameters, in some cases, none of the enabled types of change points would trigger an alarm.
 
+#### SLAnalytics - Automatic incident tracking: Incorrect error message would be generated [ID_33305]
+
+<!-- MR 10.3.0 - FR 10.2.7 -->
+
+In some cases, the following incorrect error message would be generated:
+
+```txt
+Ignoring alarm group update: unknown alarm group tree.
+```
+
 #### CSLCloudBridge library would incorrectly not take into account the connection timeout specified in SLCloud.xml [ID_33322]
 
 <!-- MR 10.3.0 - FR 10.2.6 [CU0]  -->
@@ -550,6 +674,12 @@ On systems with a MySQL database, the ResourceManager module would fail to initi
 
 When, in a DataMiner System, agents were configured to use HTTPS, the SLCloud.xml files of each of those agent would incorrectly refer to the local agent using the IP address instead of the hostname.
 
+#### SLAnalytics: The automatic incident tracking feature would incorrectly not be disabled when the alarm focus feature was disabled [ID_33348]
+
+<!-- MR 10.3.0 - FR 10.2.7 -->
+
+When the alarm focus feature was disabled, up to now, the automatic incident tracking feature would not automatically be disabled as well. From now on, when the alarm focus feature is disabled, the automatic incident tracking feature will also be disabled.
+
 #### Web apps: Only part of the value would be selected when moving the mouse pointer over a selection box that had the focus [ID_33379]
 
 <!-- MR 10.3.0 - FR 10.2.7 -->
@@ -567,12 +697,6 @@ Up to now, negative status values in the trend data due to element restarts coul
 <!-- MR 10.3.0 - FR 10.2.7 -->
 
 When a profile parameter of type “number” had no decimals defined, its value would incorrectly be displayed as the maximum value that can be assigned to a parameter of type integer. From now on, when a profile parameter has no decimals defined, its value will be displayed as is, without decimals.
-
-#### Ticketing app: Problem with ticket domains incorrectly marked as masked [ID_33449]
-
-<!-- MR 10.3.0 - FR 10.2.7 -->
-
-If, in the Ticketing app, you tried to edit a ticket of a domain linked to an element, in some cases, that domain would incorrectly be marked as “masked”.
 
 #### Issues with NATS request/response actions [ID_33487]
 
@@ -724,14 +848,6 @@ when a dashboard, a low-code app page or low-code app panel was initialized, in 
 
 When an interactive Automation script was executed in a web app, it would incorrectly not be possible to clear a selection box by selecting an empty option.
 
-#### 'One or more of the following modules are not licensed' error would incorrectly not list the unlicensed modules [ID_34407]
-
-<!-- MR 10.3.0 - FR 10.2.11 -->
-
-When a required software license cannot be found, a `One or more of the following modules are not licensed: ...` message will appear.
-
-In some cases, instead of listing the unlicensed modules, this message would incorrectly only mention "None".
-
 #### Web Services API - CreateServiceTemplate: DataMinerID and ElementID incorrectly set to 0 instead of -1 [ID_34440]
 
 <!-- MR 10.3.0 - FR 10.2.11 -->
@@ -743,3 +859,169 @@ When a service template was created using the *CreateServiceTemplate* method, th
 <!-- MR 10.3.0 - FR 10.2.11 -->
 
 When the GQI query linked to a table component was changed, the table would incorrectly not get updated when column filters were applied. The table would only get updated when you changed the column filters.
+
+#### DataMiner upgrade: 'File already exists' exception could be thrown when multiple actions took a backup of the same file [ID_34601]
+
+<!-- MR 10.3.0 - FR 10.2.12 -->
+
+When, during a DataMiner upgrade, multiple upgrade actions took a backup of the same file within the same second, in some cases, a `file already exists` exception could be thrown.
+
+#### DataMiner installer: Cassandra DevCenter would no longer be extracted [ID_34674]
+
+<!-- MR 10.3.0 - FR 10.2.12 -->
+
+Since Cassandra 3.7 was replaced by Cassandra 3.11 in DataMiner Installer 10.2, DevCenter would incorrectly no longer be extracted. From now on, it will again be extracted and a shortcut to the tool will be automatically created.
+
+Also, if the *JAVA_HOME* environment variable is not defined, it will be set to the Java version that comes with Cassandra.
+
+#### External authentication via SAML: Problem when using Okta as identity provider [ID_34745]
+
+<!-- MR 10.3.0 - FR 10.3.2 -->
+
+When using external authentication via SAML, a software issue would prevent you from logging in when Okta was set up as identity provider.
+
+#### Mobile apps: Problem when trying to select an item in a drop-down box [ID_34742]
+
+<!-- MR 10.3.0 - FR 10.2.12 [CU0] -->
+
+In some cases, it would incorrectly not be possible to select an item in a drop-down box when the items were grouped or when their actual value was not identical to the value that was displayed.
+
+#### Skyline Device Simulator: 'no such object' would incorrectly be returned when requesting data from a simulation [ID_34746]
+
+<!-- MR 10.3.0 - FR 10.2.12 -->
+
+When you tried to request data from a simulation that was built with AutoBuildVersion 1.3, in some cases, "no such object" would incorrectly be returned.
+
+> [!CAUTION]
+> This tool is provided "As Is" with no representation or warranty whatsoever. Skyline Communications will not provide any maintenance or support for this tool.
+
+#### Problem with SLElement when a trend template was being assigned [ID_34824]
+
+<!-- MR 10.3.0 - FR 10.3.1 -->
+
+In some cases, an error could occur in SLElement when a trend template was being assigned.
+
+#### Dashboards app: Empty groups would incorrectly not be removed from parameter feeds listing EPM parameters [ID_34884]
+
+<!-- MR 10.3.0 - FR 10.3.1 -->
+
+When, in a parameter feed listing EPM parameters, the parameters were grouped, empty groups would incorrectly not be removed after switching to another EPM object.
+
+#### Low-Code Apps: Problem with 'Close a panel' action [ID_34892]
+
+<!-- MR 10.3.0 - FR 10.3.1 -->
+
+When a *Close a panel* action was configured as a post action on a button component, in some cases, it would incorrectly not cause the panel to close.
+
+#### Dashboards & Low-Code Apps: Decimal values would incorrectly not be allowed in range filters [ID_34897]
+
+<!-- MR 10.3.0 - FR 10.3.1 -->
+
+In some cases, a range filter in a query filter or a table column filter would incorrectly not allow decimal values.
+
+> [!NOTE]
+> When using a query filter with filter assistance enabled, the statistics will determine the number of decimals that can be used.
+
+#### Dashboards & Low-Code Apps: Feed component selections would incorrectly be lost after applying a built-in theme [ID_34908]
+
+<!-- MR 10.3.0 - FR 10.3.1 -->
+
+When you applied a built-in theme, feed component selections would incorrectly be lost after refetching the data.
+
+#### Dashboards & Low-Code Apps: Not possible to group the data in a timeline populated using a query with a query filter [ID_34932]
+
+<!-- MR 10.3.0 - FR 10.3.1 -->
+
+When a timeline was populated using a query with a query filter, it would incorrectly not be possible to group the data.
+
+#### Low-Code Apps: Drop-down box containing an 'execute component' action would incorrectly be empty [ID_34953]
+
+<!-- MR 10.3.0 - FR 10.2.12 [CU1] -->
+
+When an *execute component* action had been configured, in some cases, when you tried to update that action, the drop-down box containing the action would incorrectly be empty.
+
+#### Dashboards app & Low-Code Apps: Manually sorted GQI table would no longer feed row values [ID_34969]
+
+<!-- MR 10.3.0 - FR 10.2.12 [CU1] -->
+
+When you had manually changed the sorting order of a GQI table by clicking a column header, in some cases, the table would no longer feed the selected row values.
+
+#### Dashboards app: Tables would lose their conditional coloring after being sorted or filtered [ID_34979]
+
+<!-- MR 10.3.0 - FR 10.3.1 -->
+
+When you sorted or filtered a table fed by e.g. a query filter, the table would incorrectly lose its conditional coloring.
+
+#### Web apps: Problem when a trend graph displaying multiple parameters showed data that was partly in the future [ID_34982]
+
+<!-- MR 10.3.0 - FR 10.3.1 -->
+
+When a trend graph displaying multiple parameters showed data that was partly in the future, in some cases, an error could occur.
+
+#### Alarm templates: Parameters exported to DVE child elements could have incorrect alarm limits [ID_34996]
+
+<!-- MR 10.3.0 - FR 10.3.2 -->
+
+When a parameter was exported as a standalone parameter to a DVE child element, in some cases, the alarm limits could be incorrect when the type of alarm monitoring was set to either *Relative* or *Absolute*.
+
+Also, LED bar controls would either not display or not update their alarm limits.
+
+#### Dashboards app: Button to restore the initial view would incorrectly appear on all tables after sorting or filtering a table [ID_35003]
+
+<!-- MR 10.3.0 - FR 10.3.2 -->
+
+When, on a dashboard, you sorted or filtered a table, a button to restore the initial view would incorrectly appear on all tables on that dashboard. Also, when you clicked one of those buttons, they would all disappear. From now on, when you sort or filter a table on a dashboard, a button to restore the initial view will only appear on that particular table.
+
+#### Skyline Device Simulator: Problem when running a proxy simulation [ID_35059]
+
+<!-- MR 10.3.0 [CU0]/10.2.0 [CU10] - FR 10.3.1 -->
+
+In some cases, an error could occur in the Skyline Device Simulator when a proxy simulation was being run.
+
+#### Service & Resource Management: Problem when migrating resources containing properties with keys or values set to null [ID_35067]
+
+<!-- MR 10.3.0 - FR 10.3.1 [CU0] -->
+
+When resource data was being migrated to Elasticsearch, the following exception could be thrown when a resource or a resource pool contained properties with keys or values that were set to null.
+
+```txt
+2022/12/01 08:53:59.582|SLNet.exe|ResourceManager|ERR|0|6|System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.ArgumentException: value is not serializable to json
+```
+
+#### Monitoring app: Problem when opening the histogram page of a view [ID_35081]
+
+<!-- MR 10.3.0 - FR 10.3.2 -->
+
+When, in the *Monitoring* app, you selected a view and opened the histogram page, in some cases, a `Maximum call stack size exceeded` error would appear.
+
+#### Dashboards app: Visual Overview component would not show any content when linked to a feed [ID_35130]
+
+<!-- MR 10.3.0 - FR 10.3.2 -->
+
+When a Visual Overview component was linked to a feed, in some cases, it would not show any content.
+
+#### SLElement would leak memory when an element was frequently receiving timeout values [ID_35131]
+
+<!-- MR 10.3.0 - FR 10.3.2 -->
+
+When an element was frequently receiving timeout values, SLElement would leak memory.
+
+#### DataMiner Object Models: Problem when retrieving a non-existing DomInstance status ID [ID_35231]
+
+<!-- MR 10.3.0 - FR 10.3.2 -->
+
+When a GQI query retrieved the status of a DOM instance that had no status, the logic would incorrectly detect that a status was present and would try to resolve the display name for that status, causing a `Could not find state for statusID ...` error to be thrown.
+
+#### Dashboards app & low-code apps: Loading indicator would not appear when sorting, filtering or refreshing a table [ID_35238]
+
+<!-- MR 10.3.0 - FR 10.3.2 -->
+
+When you sorted or filtered a table by clicking a table header, or when an action triggered a refresh of the table data, in some cases, no loading indicator would appear.
+
+#### GQI: Metadata would incorrectly be removed when a custom operator was applied [ID_35283]
+
+<!-- MR 10.3.0 - FR 10.3.2 -->
+
+When, in a GQI query, a custom operator was applied, all metadata available on the rows would incorrectly be removed, causing feeds to no longer work as expected.
+
+Also, when a column was renamed via a custom operator, the metadata available on that column would incorrectly be removed.

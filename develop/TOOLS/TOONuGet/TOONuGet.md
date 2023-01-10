@@ -16,4 +16,4 @@ Within Skyline, we also use an internal NuGet server: <http://devcore3:81/nuget>
 
 - [Producing NuGet](xref:Producing_NuGet)
 
-- [Advanced Assembly Knowledge](xref:Advanced_Assembly_Knowledge)
+- [Assembly binding](xref:Assembly_Binding)

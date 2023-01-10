@@ -8,7 +8,7 @@ It is possible to embed a router control component in Visual Overview.
 
 > [!TIP]
 > See also:
-> [DMS Router Control](xref:RouterControl#dms-router-control)
+> [Router Control](xref:RouterControl)
 
 ## Configuring the shape data fields
 
@@ -57,5 +57,4 @@ SetVar:SelectedConfig:custom|SelectedMatrix:22x33|SelectedOutputIndex:1| Selecte
 ```
 
 > [!TIP]
-> See also:
-> [Turning a shape into a control to update a session variable](xref:Turning_a_shape_into_a_control_to_update_a_session_variable)
+> See also: [Turning a shape into a control to update a session variable](xref:Turning_a_shape_into_a_control_to_update_a_session_variable)

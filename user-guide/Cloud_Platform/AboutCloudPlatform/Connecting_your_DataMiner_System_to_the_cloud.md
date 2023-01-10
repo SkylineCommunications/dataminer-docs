@@ -12,8 +12,7 @@ To connect your DMS to the cloud:
 
      > [!Note]
      >
-     > - From Cloud Pack version 2.7.0 onwards, [connecting using a DMZ](xref:Connect_to_cloud_with_DMZ) and [connecting via proxy server](xref:Connect_to_cloud_via_proxy) are supported.
-     > - We recommend that you upgrade to version 10.2 to optimally benefit from all the new features and capabilities. You can find the installer on [DataMiner Dojo](https://community.dataminer.services/downloads/).
+     > - We recommend that you upgrade to **DataMiner 10.2.0 or higher** to optimally benefit from all the cloud features and capabilities. You can find the installer on [DataMiner Dojo](https://community.dataminer.services/downloads/).
      > - While this is not recommended, it is possible to [connect to the cloud with DataMiner versions between 10.1.1 and 10.1.12](xref:Connecting_with_older_DataMiner_versions).
 
    - Each DMA that will be connected to the cloud can reach the following endpoints:
@@ -22,12 +21,23 @@ To connect your DMS to the cloud:
 
      - ``wss://tunnel.dataminer.services/``
 
-   > [!TIP]
+   - From [DataMiner CloudGateway](xref:DataMinerExtensionModules#cloudgateway) version 2.10.0 onwards, the internal network must allow [HTTP(S) traffic via port TCP 5100](xref:Configuring_the_IP_network_ports#overview-of-ip-ports-used-in-a-dms). For more information about configuring this endpoint, see [Custom cloud endpoint configuration](xref:Custom_cloud_endpoint_configuration).
+
+   > [!NOTE]
    >
-   > - If Cloud Gateway version v2.9.4 or higher is installed, you can check whether your network complies with the requirements for the cloud platform using the *ConnectionTester.exe* tool from the folder `Program files\Skyline Communications\Dataminer CloudGateway\`.
-   > - For more information about cloud connectivity and security, see [Connecting to the DataMiner Cloud Platform](xref:Cloud_connectivity_and_security#connecting-to-the-dataminer-cloud-platform).
+   > - From Cloud Pack version 2.7.0 onwards, [connecting using a DMZ](xref:Connect_to_cloud_with_DMZ) and [connecting via proxy server](xref:Connect_to_cloud_via_proxy) are supported.
+   > - If [DataMiner CloudGateway](xref:DataMinerExtensionModules#cloudgateway) 2.9.4 or higher is installed, you can check whether your network complies with the requirements for the cloud platform using the *ConnectionTester.exe* tool from the folder `Program files\Skyline Communications\Dataminer CloudGateway\`.
+
+   > [!TIP]
+   > For more information about cloud connectivity and security, see [Connecting to the DataMiner Cloud Platform](xref:Cloud_connectivity_and_security#connecting-to-the-dataminer-cloud-platform).
 
 1. Download the latest DataMiner **Cloud Pack installer** from [DataMiner Dojo](https://community.dataminer.services/downloads/) and install it on one or more DMAs in the cluster. If you are on the Feature Release track, .NET 5 is already included in DataMiner from version 10.1.12 onwards, so select the package without .NET 5. If you are on the Main Release track, .NET 5 is only included from version 10.2.0 \[CU4] onwards, so for earlier 10.2.0 versions, you will need to select the package with .NET 5.
+
+   > [!NOTE]
+   > If your DataMiner System contains a Failover pair, and one of the Agents in the Failover pair is responsible for hosting the connection towards the DataMiner Cloud Platform, install the DataMiner Cloud Pack on both Agents in the Failover pair.
+
+   > [!TIP]
+   > For more information on the Cloud Pack contents, see [DataMiner Cloud Packs](xref:CloudPackages).
 
 1. In DataMiner Cube, go to System Center \> *Users / Groups* and make sure you have the following **user permissions**. If you need to make changes to the user permissions, reconnect to Cube afterwards to make sure your changes are applied in the UI.
 

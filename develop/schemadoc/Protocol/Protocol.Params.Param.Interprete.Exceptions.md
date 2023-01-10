@@ -34,8 +34,8 @@ Contains Exception elements, each representing a different exceptional state.
 ```xml
 <Exceptions>
 	<Exception id="1" value="0">
-	<Display state="disabled">Not Found</Display>
-	<Value>0</Value>
+		<Display state="disabled">Not Found</Display>
+		<Value>0</Value>
 	</Exception>
 </Exceptions>
 ```

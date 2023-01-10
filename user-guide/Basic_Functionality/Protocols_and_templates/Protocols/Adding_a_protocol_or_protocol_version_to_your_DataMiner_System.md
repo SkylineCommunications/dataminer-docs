@@ -18,6 +18,10 @@ You can upload:
 > [!CAUTION]
 > When you replace a protocol version (i.e. when you add a protocol version that was already available on your DataMiner System), all elements using that protocol version will restart automatically.
 
+## Deploying a protocol from the catalog
+
+See [Deploying a DataMiner connector to your system](xref:Deploying_A_DataMiner_Connector_to_your_system).
+
 ## Adding a protocol or protocol version in DataMiner Cube
 
 In DataMiner Cube, you can upload either *Protocol.xml* files or entire protocol packages (extension *.dmprotocol*). In addition, you can also update the protocols in your DMS via the Update Center.

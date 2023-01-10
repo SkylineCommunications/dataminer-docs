@@ -441,7 +441,7 @@ Permission to use the Asset Manager module.
 
 #### Modules \> Automation \> UI available
 
-Permission to access the DMS Automation module.
+Permission to access the Automation module.
 
 #### Modules \> Automation \> Add
 
@@ -488,7 +488,7 @@ Available from DataMiner 9.6.7 onwards. Permission to execute Automation scripts
 
 #### Modules \> Correlation \> UI available
 
-Permission to access the DMS Correlation module.
+Permission to access the Correlation module.
 
 #### Modules \> Correlation \> Add
 
@@ -870,7 +870,7 @@ Permission to use the Router Control module.
 
 #### Modules \> Scheduler \> UI available
 
-Permission to access the DMS Scheduler module.
+Permission to access the Scheduler module.
 
 #### Modules \> Scheduler \> Add
 

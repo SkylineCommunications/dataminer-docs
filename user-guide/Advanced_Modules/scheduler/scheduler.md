@@ -2,9 +2,9 @@
 uid: scheduler
 ---
 
-# DMS Scheduler
+# DataMiner Scheduler
 
-DMS Scheduler allows you to manage a list of scheduled tasks that are to be executed by DataMiner.
+DataMiner Scheduler allows you to manage a list of scheduled tasks that are to be executed by DataMiner.
 
 Find out more in the following topics:
 
@@ -19,5 +19,4 @@ Find out more in the following topics:
 - [Creating a Scheduler template](xref:Creating_a_Scheduler_template)
 
 > [!NOTE]
-> In systems with an appropriate license, from DataMiner 8.5.8 to DataMiner 9.6.3, the Scheduler module contains an additional *resources* tab. This tab is part of the Service & Resource Management module. For more information, see [Service and Resource Management](xref:SRM#service-and-resource-management).
->
+> In systems with an appropriate license, from DataMiner 8.5.8 to DataMiner 9.6.3, the Scheduler module contains an additional *resources* tab. This tab is part of the Service & Resource Management module. For more information, see [Service and Resource Management](xref:SRM).

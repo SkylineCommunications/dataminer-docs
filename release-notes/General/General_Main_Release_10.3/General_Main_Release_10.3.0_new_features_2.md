@@ -10,8 +10,6 @@ uid: General_Main_Release_10.3.0_new_features_2
 > [!TIP]
 > For release notes related to DataMiner Cube, see [DataMiner Cube 10.3.0](xref:Cube_Main_Release_10.3.0).
 
-## Other new features
-
 ### DMS web apps
 
 #### Jobs app: Name, Start Time and End Time fields in default job section can now be set read-only [ID_31485] [ID_31506]
@@ -219,6 +217,12 @@ The Line & area chart component is now able to visualize GQI query results as a 
 > [!NOTE]
 > If you want the component to show a classic trend chart, make sure the query result is sorted by the X axis column.
 
+#### Dashboards: An EPM feed can now be used to feed EPM identifiers to a parameter feed [ID_33977]
+
+<!-- MR 10.3.0 - FR 10.2.11 -->
+
+An EPM feed can now be used to feed EPM identifiers to a parameter feed.
+
 #### Dashboards / Low-Code Apps: Parameter table component brought in line with Table component [ID_34132]
 
 <!-- MR 10.3.0 - FR 10.2.10 -->
@@ -352,6 +356,56 @@ From now on, when you add a protocol filter to a component without specifying an
 
 A new *IsActive* column has been added to *Get alarms* data source. This column will be set to true when the alarm is an active alarm.
 
+#### Dashboards app / Low-Code Apps: Improved multiple sort in the Table component [ID_34526]
+
+<!-- MR 10.3.0 - FR 10.2.12 -->
+
+When, in the Dashboards app or a low-code app, you apply multiple sort orders in a *Table* component, multiple sort operators will now be appended to the GQI query that feeds data to the component. This way sorting is done server-side, which will improve performance.
+
+#### Dashboards app: Parameter feeds that list EPM parameters now allow items to be preselected [ID_34554] [ID_34588]
+
+<!-- MR 10.3.0 - FR 10.2.12 -->
+
+When an EPM feed is used to feed EPM identifiers to a parameter feed, it is now possible to configure filters that will preselect certain items in the parameter feed.
+
+#### Dashboards app: Items selected in a parameter feed listing EPM parameters will now be saved in the URL of the dashboard [ID_34622]
+
+<!-- MR 10.3.0 - FR 10.2.12 -->
+
+The parameters and indices selected in a parameter feed listing EPM parameters will now be saved in the URL of the dashboard.
+
+As a result, the same items will automatically be selected again after you refresh the page.
+
+#### Dashboards app: Parameter indices selected in a parameter feed listing EPM parameters can now be fed to other components [ID_34629]
+
+<!-- MR 10.3.0 - FR 10.2.12 -->
+
+After selecting column parameter indices in a parameter feed listing EPM parameters, you can now feed those selected indices to other components.
+
+#### Dashboards app: Reports will no longer contain visual replacements [ID_34632]
+
+<!-- MR 10.3.0 - FR 10.2.12 -->
+
+Missing information in dashboards is no longer indicated by means of a visual replacement. In PDF reports they are now replaced by a short message.
+
+#### Dashboards app: Jobs and Dashboards app now support PDF module [ID_34634]
+
+<!-- MR 10.3.0 - FR 10.2.12 -->
+
+The PDF module is now available in the Jobs and Dashboards app. From now on, you can e.g. export dashboards to PDF.
+
+#### Dashboards app: PDF and share button will now be hidden in edit mode [ID_34653]
+
+<!-- MR 10.3.0 - FR 10.2.12 -->
+
+The *PDF* and *Share* option in the Dashboards app are now no longer visible in edit mode. Additionally, you can now pin the *Share dashboards* action in the settings menu of the Dashboards app.
+
+#### Dashboards app: Parameter feeds listing EPM parameters now allow parameter grouping [ID_34705]
+
+<!-- MR 10.3.0 - FR 10.2.12 -->
+
+It is now possible to group parameters in a parameter feed that lists EPM parameters.
+
 ### DMS Service & Resource Management
 
 #### Retrieving bookings in a paged way and sorted by property [ID_31982]
@@ -436,6 +490,32 @@ ReservationInstanceType and ServiceDefinitionType can now be set to the followin
 - ResourceScheduling
 - ResourceOrchestration
 
+#### BREAKING CHANGE: Capacity property will no longer be initialized on new Resources [ID_34856]
+
+<!-- MR 10.3.0 - FR 10.3.2 -->
+
+From now on, the *Capacity* property will no longer be initialized on new Resources.
+
+As a result, in DataMiner Cube, the resources module will no longer require the legacy capacity to be initialized. Newly created resources will no longer have a legacy capacity. The concurrency of a resource will still be stored in *Resource.MaxConcurrency*.
+
+##### Impact of this change
+
+Since *Capacity* is no longer initialized on a new Resource, *GetEffectiveMaxConcurrency* will take into account *MaxConcurrency*. *MaxConcurrency* will now be initialized with 1 as is the case with *Capacity.MaxConcurrency*.
+
+If *GetEffectiveMaxConcurrency* should still use the value of *Capacity.MaxConcurrency*, *MaxConcurrency* should be set to 0.
+
+To restore legacy behavior, a new resource should be initialized as follows:
+
+```csharp
+var resource = new Resource()
+{
+  MaxConcurrency = 0,
+  Capacity = new ResourceCapacity(),
+};
+```
+
+This change in behavior will impact results for both *GetAvailableResources* and *GetResourceUsage* on ResourceManagerHelper, both marked as obsolete since 9.6.5. For both methods, newly created resources will now, by default, always be considered unavailable.
+
 ### DMS Mobile Gateway
 
 #### Additional logging after sending a 'send SMS' request to an SMSEagle device [ID_32785] [ID_32911]
@@ -492,8 +572,22 @@ When you run the installer with the “generate” option (run-stand-alone -g), 
 </ElasticConfiguration>
 ```
 
-#### QA Device Simulator: Help link now directs users to the QA Device Simulator help pages on <https://docs.dataminer.services/> [ID_33680]
+#### QA Device Simulator renamed to Skyline Device Simulator [ID_33680] [ID_34530] [ID_34555]
 
-<!-- MR 10.3.0 - FR 10.2.7 -->
+<!-- RN 33680: MR 10.3.0 - FR 10.2.7 -->
+<!-- RN 34530/34555: MR 10.3.0 - FR 10.2.12 -->
 
-In the UI of the QA Device Simulator, the help link now directs users to the QA Device Simulator help pages on <https://docs.dataminer.services/>.
+The *QA Device Simulator* tool has been renamed to *Skyline Device Simulator* and now targets Microsoft .NET Framework 4.8.
+
+Also, the following command-line parameters have been added:
+
+| Parameters | Function |
+|------------|----------|
+| `/packetloss <packet loss %>`<br>`/delayms <delay ms>`<br>`/delaypct <delay % of packets>` | Specifying packet loss and packet delay parameters on startup. |
+| `/dbmaxvaloid <max nbr of entries per OID>` | Configuring the number of entries loaded in memory per OID when working with database simulations. |
+
+> [!NOTE]
+> In the UI of the *Skyline Device Simulator*, the help link now directs you to the *Skyline Device Simulator* help pages on <https://docs.dataminer.services/>.
+
+> [!CAUTION]
+> This tool is provided "As Is" with no representation or warranty whatsoever. Skyline Communications will not provide any maintenance or support for this tool.

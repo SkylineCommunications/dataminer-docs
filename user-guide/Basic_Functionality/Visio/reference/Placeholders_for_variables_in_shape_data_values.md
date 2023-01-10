@@ -4,6 +4,9 @@ uid: Placeholders_for_variables_in_shape_data_values
 
 # Placeholders for variables in shape data values
 
+> [!TIP]
+> For examples, see [Ziine](xref:ZiineDemoSystem) > *Visual Overview Design Examples* view > *Placeholders* page.
+
 ## Info keywords
 
 A number of keywords can be used in **Info** shape data fields to display information about a shape. These keywords, wrapped in square brackets, can also be used as placeholders in the value of shape data fields. For example:
@@ -140,6 +143,17 @@ Reference to a session variable (scope: current DataMiner Cube card).
 
 As parameters of which the value is an empty string are considered initialized, you can use a \[var:...\] placeholders to refer to a parameter containing an empty string.
 
+### [color:severity=...]
+
+Available from DataMiner 10.1.11/10.2.0 onwards.
+
+The alarm color for a specific severity level.
+
+For example: `[color:severity=minor]`
+
+> [!TIP]
+> See also: [Setting the background color of a static shape](xref:Setting_the_background_color_of_a_static_shape)
+
 ### \[ConnectionLineDisplayIdx\]
 
 Display key of the connection that was clicked.
@@ -173,15 +187,20 @@ End point of the connection that was clicked.
 
 Available from DataMiner 9.6.7 onwards.
 
-The current DataMiner time.
+The current DataMiner time, refreshed every second.
 
 By default, the regional date/time format will be used. To use a different format, specify the format in the placeholder. For example:
 
-```txt
-[DataMinerTime:Format=HH:mm:ss]
-```
+| Format | Description |
+|--|--|
+| `[DataMinerTime:Format=HH:mm:ss]` | Custom format. |
+| `[DataMinerTime:Format=f]` | Full date/time pattern (short time). |
+| `[DataMinerTime:Format=g]` | General date/time pattern (short time). |
+| `[DataMinerTime:Format=F]` | Full date/time pattern (long time). |
+| `[DataMinerTime:Format=G]` | General date/time pattern (long time). |
 
-The time in the placeholder is refreshed every second.
+> [!NOTE]
+> For more information on possible formats, refer to <https://learn.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings>.
 
 ### \[DestinationInterfaceElementID\]
 
@@ -475,7 +494,13 @@ value=1005 == alpha;value=1005 == beta;value=1005 == gamma; value=1005 == delta;
 ```
 
 > [!NOTE]
-> \[RegexReplace:x,y,z\] placeholders can be nested.
+>
+> - \[RegexReplace:x,y,z\] placeholders can be nested.
+> - If any of the three input items contains a comma, the separator needs to be replaced (see [About using separator characters](xref:Linking_a_shape_to_a_SET_command#about-using-separator-characters)):
+>
+>   ```txt
+>   [RegexReplace:[Sep:,#]x#y#z]
+>   ```
 
 ### \[Reservation:...\]
 
@@ -685,7 +710,7 @@ Use this placeholder in a shape data item of type **Tooltip** or in shape text. 
 
 Available from DataMiner 9.5.3 onwards.
 
-Use this placeholder in a shape data item of type **Tooltip** or in shape text. The tooltip or shape text will then display one particular service definition property, in the format “\<Property name>: \<Property value>”.
+Use this placeholder in a shape data item of type **Tooltip** or in shape text. The tooltip or shape text will then display the property value of the specified service definition property.
 
 - For a top-level element shape (i.e. not an interface shape), the property has to be one of the properties of the node specified in the service definition.
 

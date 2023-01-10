@@ -2,7 +2,7 @@
 uid: Configuring_jobs_in_the_Job_Manager_app
 ---
 
-# Configuring jobs in the Job Manager app
+# Configuring jobs in the Jobs app
 
 In this section:
 

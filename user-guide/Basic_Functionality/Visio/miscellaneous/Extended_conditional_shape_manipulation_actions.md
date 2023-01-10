@@ -56,7 +56,7 @@ Alias-"Alias"|"Target"|"What"|"Condition"
 
 - **Logical expression**: The expression that combines the defined aliases using "and", "or", "(", ")" or "not". Example: \<A>or\<B>
 
-- **Alias**: \<A>, \<B>, \<C>, ...
+- **Alias**: A, B, C, ...
 
 - **Target**: The object to which the action should be applied. Use the following syntax (optionally using wildcards or placeholders):
 

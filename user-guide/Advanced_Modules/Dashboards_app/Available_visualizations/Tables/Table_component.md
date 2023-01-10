@@ -35,7 +35,7 @@ You can **resize the columns** of the table by dragging the column edges. From D
 
 ## Adding actions to a table
 
-If you add a table component to a custom app using the [DataMiner Low-Code Apps](xref:Application_framework), you can also configure actions for the component. This feature is not available in the Dashboards app.
+If you add a table component to a custom app using the [DataMiner Low-Code Apps](xref:Application_framework), you can also configure actions for the component. This feature is not available in the Dashboards app. <!-- RN 29394 -->
 
 To configure actions:
 
@@ -64,6 +64,9 @@ The export file will be named “Query XXX” (XXX being the name of the query, 
 
 From DataMiner 10.2.7/10.3.0 onwards, users can filter and sort the contents of a table component in a dashboard.
 
+> [!TIP]
+> If you have made changes to the way a table is displayed, and you want to quickly reset your changes and return to the initial table view, click the eye icon in the top-right corner of the component (available from DataMiner 10.2.11/10.3.0 onwards).
+
 To apply a **general filter** across the table, a search box is available:
 
 1. Hover over the table component and click the search icon in the lower right corner.
@@ -81,7 +84,9 @@ To apply a **filter based on a specific column**:
    - For string values or GUIDs:
 
      - To switch between a positive or negative filter, click *does* or *does not*.
+
      - To switch to a different type of filter, click the second filter field. This will toggle between *contain*, *equal*, and *match regex*.
+
      - In the third field of the filter, specify a filter value.
 
    - For numeric or datetime values, specify the range that a value should be in.
@@ -101,7 +106,9 @@ To apply a **filter based on a specific column**:
 To **sort the table**, you can click a column header.
 
 - To toggle between ascending and descending order, click the column header again.
+
 - To apply additional sorting, press Ctrl while clicking one or more additional headers. The first column will then be used for the initial sorting, the next one to sort equal values of the first column, and so on.
+
 - Alternatively, you can also select one of the available sorting options in the column header right-click menu.
 
 To **group by a specific table column**, right-click the column header and click *Group*. To stop grouping, right-click the header again and select *Stop grouping*.

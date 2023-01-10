@@ -343,7 +343,7 @@ Using special characters:
 - If the table index contains a pipe character (“\|”), a backslash character (“\\”) must be put in front of it. For example, the command “SET:MyElement:MyParam\|a\\:b\\\|c:100” will set the value stored in row a:b\|c to value 100.
 
 > [!WARNING]
-> Breaking change: Due to the introduction of this new syntax, it is no longer possible to get and set single-value parameters of which the name contains pipe characters.
+> BREAKING CHANGE: Due to the introduction of this new syntax, it is no longer possible to get and set single-value parameters of which the name contains pipe characters.
 
 ## Changes
 
