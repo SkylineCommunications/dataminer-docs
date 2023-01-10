@@ -138,6 +138,12 @@ Because of a number of enhancements, overall performance has increased when upda
 
 From now on, all custom CollectorConfig XML files will be synchronized across the DataMiner cluster.
 
+#### SLAnalytics - Pattern matching: When a pattern is detected on a DVE child element the suggestion event will now be generated on that same DVE child element [ID_35264]
+
+<!-- MR 10.4.0 - FR 10.3.2 -->
+
+When a trend pattern was detected on a DVE child element, up to now, the suggestion event would be generated on the parent element. From now on, it will be generated on the child element instead.
+
 ### Fixes
 
 #### GQI: Problem when retrieving DCF interfaces [ID_34820]

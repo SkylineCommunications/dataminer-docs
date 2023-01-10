@@ -41,6 +41,14 @@ All DOM objects (DomInstance, DomTemplate, DomDefinition, DomBehaviorDefinition,
 > - In the Elasticsearch database, existing data will not contain values for these new fields (except the *LastModified* field for all but *ModuleSettings*).
 > - All four fields are also available in the GQI data source *Object Manager Instances*. The *Last Modified* and *Created At* columns should show the time in the time zone of the browser.
 
+#### SLAnalytics - Proactive cap detection: Using alarm templates assigned to DVE child elements [ID_35194]
+
+<!-- MR 10.4.0 - FR 10.3.2 -->
+
+When proactive cap detection was enabled, up to now, in case of DVE elements, the alarm template of the parent would always be used.
+
+From now on, if a DVE child element has an alarm template assigned to it, that alarm template will be used. Only when a DVE child element does not have an alarm template assigned to it will the alarm template of the parent be used.
+
 ## Changes
 
 ### Enhancements
@@ -280,6 +288,12 @@ From now on, the URL of a published version of an app will no longer contain the
 <!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
 
 The `Clusterstate.xml` file, located in the `C:\Skyline DataMiner` folder, was obsolete and has now been removed.
+
+#### SLAnalytics - Pattern matching: When a pattern is detected on a DVE child element the suggestion event will now be generated on that same DVE child element [ID_35264]
+
+<!-- MR 10.4.0 - FR 10.3.2 -->
+
+When a trend pattern was detected on a DVE child element, up to now, the suggestion event would be generated on the parent element. From now on, it will be generated on the child element instead.
 
 #### Low-code apps: Enhanced confirmation message when deleting an app [ID_35269]
 

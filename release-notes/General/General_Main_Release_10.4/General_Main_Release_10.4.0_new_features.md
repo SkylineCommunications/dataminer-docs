@@ -320,6 +320,14 @@ All DOM objects (DomInstance, DomTemplate, DomDefinition, DomBehaviorDefinition,
 > - In the Elasticsearch database, existing data will not contain values for these new fields (except the *LastModified* field for all but *ModuleSettings*).
 > - All four fields are also available in the GQI data source *Object Manager Instances*. The *Last Modified* and *Created At* columns should show the time in the time zone of the browser.
 
+#### SLAnalytics - Proactive cap detection: Using alarm templates assigned to DVE child elements [ID_35194]
+
+<!-- MR 10.4.0 - FR 10.3.2 -->
+
+When proactive cap detection was enabled, up to now, in case of DVE elements, the alarm template of the parent would always be used.
+
+From now on, if a DVE child element has an alarm template assigned to it, that alarm template will be used. Only when a DVE child element does not have an alarm template assigned to it will the alarm template of the parent be used.
+
 ### Service & Resource Management
 
 #### Service & Resource Management: Exposers for resource capacities and capabilities [ID_34841]
