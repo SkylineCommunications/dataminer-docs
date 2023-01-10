@@ -2587,6 +2587,8 @@
                 topicUID: Service_Orchestration_service_definition_advanced
               - name: Service profiles configuration
                 topicUID: Service_Orchestration_service_profiles
+              - name: Custom events configuration
+                topicUID: Service_Orchestration_custom_events
       - name: SRM logging
         topicUID: SRM_logging
 - name: DataMiner Cloud Platform
