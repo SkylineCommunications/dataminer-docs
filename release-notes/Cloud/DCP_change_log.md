@@ -26,6 +26,8 @@ This fix is included in Cloud Pack 2.8.4.
 
 If proxy settings were configured in the *appsettings.proxy.json* file, previously these were not taken into account by the connection tester tool.
 
+This fix is included in Cloud Pack 2.8.4.
+
 #### 19 December 2022 - Fix - SupportAssistant 1.1.1 - Log collection triggered too often [ID_35158]
 
 A problem with the SupportAssistant could cause the Log Collector to be triggered again and again, which could make it use up a lot of disk space.
