@@ -1023,3 +1023,9 @@ When, in the *Navigation* panel of the *Bookings* app, you selected another time
 <!-- MR 10.3.0 - FR 10.3.1 -->
 
 When you edited the properties of a tag (e.g. name, description, etc.), the trend graph would no longer show the pattern matches for the parameter that is currently displayed in the graph. Instead, it would incorrectly show the pattern matches for the parameter for which the tag was defined.
+
+#### Trending: Problem when exporting a trend graph containing average trend data [ID_35290]
+
+<!-- MR 10.3.0 - FR 10.3.3 -->
+
+When you exported a trend graph containing average trend data to CSV, in some cases, the exported data would be parsed incorrectly.

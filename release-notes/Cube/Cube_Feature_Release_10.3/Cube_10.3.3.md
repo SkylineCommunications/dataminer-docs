@@ -31,3 +31,9 @@ If, in the Alarm Console, property columns are added for service or view propert
 In the *PropertyConfiguration.xml* file, for each relevant property you can configure a *contentSeparator* tag. The separator specified in that tag will then be used to separate the values of that property.
 
 Up to now, when a *contentSeparator* tag was left empty, the values of the property in question would incorrect not be separated by any separator. From now on, when that tag is empty, the values of the property in question will by default be separated by commas.
+
+#### Trending: Problem when exporting a trend graph containing average trend data [ID_35290]
+
+<!-- MR 10.3.0 - FR 10.3.3 -->
+
+When you exported a trend graph containing average trend data to CSV, in some cases, the exported data would be parsed incorrectly.
