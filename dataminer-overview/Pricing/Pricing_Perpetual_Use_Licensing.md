@@ -46,8 +46,7 @@ In addition to the [standard functions](https://community.dataminer.services/cor
 *Included (x)*
 
 > [!NOTE]
-> Tier-1 is included by default with Volume based licenses - i.e. System Volume Equipment and Experience and Performance Management.
-
+> Tier-1 is included by default with volume-based licenses, i.e. System Volume Equipment and Experience and Performance Management.
 
 ## Data sources
 
@@ -80,10 +79,12 @@ This product is licensed per DataMiner System, based on the maximum number of co
 > For more information, see [Service & Resource Management Framework](xref:srm_index)
 
 ### Spectrum Analysis
-The [Spectrum Analysis App](https://community.dataminer.services/spectrum-analysis/) is licensed per node or per number of managed spectrum analyzers, whichever is lowest. This license is included by default with Volume based licenses - i.e. System Volume Equipment and Experience and Performance Management.
+
+The [Spectrum Analysis app](https://community.dataminer.services/spectrum-analysis/) is licensed per node or per number of managed spectrum analyzers, whichever is lowest. This license is included by default with volume-based licenses, i.e. System Volume Equipment and Experience and Performance Management.
 
 ### SLA Manager App
-The [SLA Manager App](https://community.dataminer.services/business-intelligence-sla/) is licensed as a standalone application for the entire DataMiner System cluster.
+
+The [SLA Manager App](https://community.dataminer.services/business-intelligence-sla/) is licensed as a standalone application for the entire DataMiner System.
 
 ### Custom apps
 
