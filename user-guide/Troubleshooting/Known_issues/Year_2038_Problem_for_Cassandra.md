@@ -6,7 +6,7 @@ uid: Year_2038_Problem_for_Cassandra
 
 ## Affected versions
 
-All DataMiner versions with Cassandra Cluster setup
+All DataMiner versions using the Cassandra database
 
 ## Cause
 
