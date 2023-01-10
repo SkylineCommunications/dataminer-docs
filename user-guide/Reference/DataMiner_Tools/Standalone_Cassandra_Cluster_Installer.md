@@ -21,6 +21,9 @@ The installer includes AdoptOpenJDK 8 as well as DevCenter. It sets up a Cassand
 
 - Server without existing Cassandra installation (i.e. there is no service called “Cassandra”)
 
+  > [!IMPORTANT]
+  > In case the cluster will consist of multiple Cassandra nodes, all nodes must use the same time. Set up NTP on the servers to avoid possible issues caused by a time difference between the nodes.
+
 - [Microsoft Visual C++ 2010 10.0 Service Pack 1](https://support.microsoft.com/en-us/topic/description-of-visual-studio-2010-service-pack-1-1f12811e-3826-6728-9f40-b11ee9ae2a0e)
 
   The installers for this are also included with the Standalone Cassandra Cluster installer in the folder “Visual Studio 2010 (VC++ 10.0) SP1”.
