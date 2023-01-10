@@ -22,4 +22,22 @@ uid: General_Feature_Release_10.3.3
 
 ### Enhancements
 
+#### Security enhancements [ID_34894]
+
+<!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
+
+A number of security enhancements have been made.
+
+#### SLLogCollector: Multiple instances can now be run simultaneously [ID_35204]
+
+<!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
+
+Multiple instances of the SLLogCollector tool can now be run simultaneously.
+
 ### Fixes
+
+#### SLDataGateway could end up with an excessive number of HealthMonitor.Refresh threads [ID_35286]
+
+<!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
+
+In some cases, the SLDataGateway process could end up with an excessive number of *HealthMonitor.Refresh* threads.
