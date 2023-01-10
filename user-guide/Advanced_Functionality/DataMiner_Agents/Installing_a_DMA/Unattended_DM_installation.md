@@ -207,6 +207,8 @@ The *CassandraClusterSettings* tag has the following possible subtags:
 
   The replication factor for the *system_auth* keyspace. This keyspace contains the data required to log in to Cassandra. The replication factor determines how many replicas will exist for each row of this keyspace.
 
+  A general recommendation is to use a replication factor of 3 to 5, depending on the number of nodes. If the cluster has 3 nodes or less, we recommend setting the replication factor to the same number as the number of nodes.
+
 - **DefaultKeyspaceReplicationFactor**
 
   The replication factor of the default keyspace.

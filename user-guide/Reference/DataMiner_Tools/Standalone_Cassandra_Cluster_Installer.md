@@ -71,7 +71,7 @@ The ports defined in this setting will be used to create a firewall rule named *
 
 The replication factor for the *system_auth* keyspace. The *system_auth* keyspace contains the user credentials. This data needs to be available when a connection is made to the cluster.
 
-A general recommendation is to use a replication factor of 3 to 5, depending on the number of nodes.
+A general recommendation is to use a replication factor of 3 to 5, depending on the number of nodes. If the cluster has 3 nodes or less, we recommend setting the replication factor to the same number as the number of nodes.
 
 #### ListenAddress
 
