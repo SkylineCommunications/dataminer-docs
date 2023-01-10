@@ -34,7 +34,7 @@ No fix is available yet.
 
 ## Issue description
 
-When a TTL for Cassandra is set to a duration that exceeds 19 January 2038, the DMA will not start and will show the following exception in the SLDBConnection logging:
+When a TTL for Cassandra is set to a duration that exceeds 19 January 2038, the DMA will not start and will show an exception in the SLDBConnection logging like the following:
 
 ```txt
 Cassandra.InvalidQueryException: Request on table SLDMADB.timetrace with ttl of 474336000 seconds exceeds maximum supported expiration date of 2038-01-19T03:14:06+00:00. In order to avoid this use a lower TTL, change the expiration date overflow policy or upgrade to a version where this limitation is fixed. See CASSANDRA-14092 for more details.
