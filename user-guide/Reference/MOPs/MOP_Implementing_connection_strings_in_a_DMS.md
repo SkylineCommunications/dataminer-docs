@@ -45,7 +45,7 @@ Access to SLNetClientTest tool on the DMA
     1. Click the *Connect* button.
 
 1. In the *Advanced* menu, select *Edit Connection Uris*.
-1. Create the connections for each of the DMAs in the cluster, as detailed in [Editing the connection string between two DataMiner Agents](SLNetClientTest_editing_connection_string).
+1. Create the connections for each of the DMAs in the cluster, as detailed in [Editing the connection string between two DataMiner Agents](xref:SLNetClientTest_editing_connection_string).
 
    You will need to follow the linked procedure for all the DMA connections that need to be made. For example, if there are 9 DMAs in the system, there must be 8 connections from every DMA. From DMA1, for instance, there will need to be a connect to DMA2, DMA3, etc. up to DMA9; from DMA2, there will need to be a connection to DMA1, DMA3, etc. to DMA9; and so on.
 

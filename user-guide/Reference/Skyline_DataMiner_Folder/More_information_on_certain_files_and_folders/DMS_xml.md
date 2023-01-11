@@ -38,7 +38,7 @@ From DataMiner 10.3.0/10.3.2 onwards, this subtag can be used to make the DMAs i
 
 Redirects must be added in *DMS.xml* for each DMA. Failover Agents also need a redirect to each other's IP address.
 
-You can either configure this directly in *DMS.xml*, or configure it by [implementing connection strings via the SLNetClientTest tool](SLNetClientTest_editing_connection_string). If you use SLNetClientTest tool, no DataMiner restart will be needed.
+You can either configure this directly in *DMS.xml*, or configure it by [implementing connection strings via the SLNetClientTest tool](xref:SLNetClientTest_editing_connection_string). If you use SLNetClientTest tool, no DataMiner restart will be needed.
 
 For example, in a cluster with two DMAs, with IPs 10.4.2.92 and 10.4.2.93, DMS.xml can be configured as follows.
 
