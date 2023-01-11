@@ -83,7 +83,7 @@ To do so, before you log on, do the following:
 
    - *Auto*: DataMiner will automatically select the connection settings.
 
-   - *gRPC*: Supported from DataMiner 10.3.0/10.3.2. DataMiner will communicate using HTTPS via the API Gateway, using gRPC GZIP compression. By default, this requires the use of the standard HTTPS port 443.
+   - *gRPC*: Available from DataMiner 10.3.0/10.3.3 onwards. DataMiner will communicate using HTTPS via the API Gateway, using gRPC GZIP compression. By default, this requires the use of the standard HTTPS port 443.
 
    - *Remoting*: This option is used by default. DataMiner will communicate using .Net Remoting. By default, this requires the use of port 8004.
 
