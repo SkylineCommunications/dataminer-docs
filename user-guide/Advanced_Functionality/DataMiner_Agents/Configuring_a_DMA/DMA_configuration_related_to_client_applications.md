@@ -39,7 +39,7 @@ To customize how Cube connects to a DMA for a specific computer:
 
    - *Auto*: DataMiner will automatically select the connection settings.
 
-   <!-- - *gRPC*: Available from DataMiner 10.3.0/10.3.3 onwards. DataMiner will communicate using HTTPS via the API Gateway, using gRPC GZIP compression. By default, this requires the use of the standard HTTPS port 443. -->
+   <!-- - *gRPC*: Available from DataMiner 10.3.0/10.3.x onwards. DataMiner will communicate using HTTPS via the API Gateway, using gRPC GZIP compression. By default, this requires the use of the standard HTTPS port 443. -->
 
    - *Remoting*: DataMiner will communicate using .Net Remoting.
 
