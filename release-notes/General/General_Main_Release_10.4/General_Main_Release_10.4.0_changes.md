@@ -179,3 +179,9 @@ From now on, when the parameter feed has a protocol or view filter, it will fetc
 <!-- MR 10.4.0 - FR 10.3.2 -->
 
 A number of issues with regard to data highlighting have been fixed.
+
+#### Dashboards app & Low-code apps - GQI table component: 'Cannot read properties of undefined (reading 'Guid')' error [ID_35316]
+
+<!-- MR 10.4.0 - FR 10.3.2 [CU0] -->
+
+In some cases, a GQI table component could show a `Cannot read properties of undefined (reading 'Guid')` error.

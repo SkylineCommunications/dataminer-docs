@@ -62,3 +62,9 @@ In some cases, the SLDataGateway process could end up with an excessive number o
 <!-- MR 10.2.0 [CU12] - FR 10.3.2 -->
 
 When, in the settings of a node edge graph, you had configured edge overrides, these would incorrectly no longer be applied.
+
+#### DataMiner Cube - Visual Overview: Problem when making extensive use of the date filter box in a Resource Manager component [ID_35328]
+
+<!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
+
+When, in Visual Overview, you made extensive use of the date filter box in a Resource Manager component, in some cases, performance issues could occur.

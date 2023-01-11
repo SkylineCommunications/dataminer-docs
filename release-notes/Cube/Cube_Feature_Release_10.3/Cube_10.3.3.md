@@ -37,3 +37,9 @@ Up to now, when a *contentSeparator* tag was left empty, the values of the prope
 <!-- MR 10.3.0 - FR 10.3.3 -->
 
 When you exported a trend graph containing average trend data to CSV, in some cases, the exported data would be parsed incorrectly.
+
+#### Visual Overview: Problem when making extensive use of the date filter box in a Resource Manager component [ID_35328]
+
+<!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
+
+When, in Visual Overview, you made extensive use of the date filter box in a Resource Manager component, in some cases, performance issues could occur.

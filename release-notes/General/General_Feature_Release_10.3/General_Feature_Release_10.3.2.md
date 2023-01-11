@@ -654,3 +654,9 @@ When you enabled the *Visualize measurement points* setting of a spectrum elemen
 <!-- MR 10.2.0 [CU12] - FR 10.3.2 -->
 
 When, in the settings of a node edge graph, you had configured edge overrides, these would incorrectly no longer be applied.
+
+#### Dashboards app & Low-code apps - GQI table component: 'Cannot read properties of undefined (reading 'Guid')' error [ID_35316]
+
+<!-- MR 10.4.0 - FR 10.3.2 [CU0] -->
+
+In some cases, a GQI table component could show a `Cannot read properties of undefined (reading 'Guid')` error.
