@@ -20,6 +20,12 @@ uid: Cube_Feature_Release_10.3.3
 
 ### Enhancements
 
+#### DataMiner Cube will now immediately be aware of any changes as to the availability of Cassandra or Elasticsearch [ID_35209]
+
+<!-- MR 10.3.0 - FR 10.3.3 -->
+
+Up to now, Cube would only check at startup whether Cassandra or Elasticsearch were available. From now on, it will immediately be aware of any changes as to the availability of Cassandra or Elasticsearch.
+
 ### Fixes
 
 #### DataMiner Cube - Alarm Console: Multiple values in property columns would incorrectly not be separated by any separator [ID_35239]
@@ -38,8 +44,8 @@ Up to now, when a *contentSeparator* tag was left empty, the values of the prope
 
 When you exported a trend graph containing average trend data to CSV, in some cases, the exported data would be parsed incorrectly.
 
-#### Visual Overview: Problem when making extensive use of the date filter box in a Resource Manager component [ID_35328]
+#### DataMiner Cube - Visual Overview: Problem after filtering bookings using a custom time range in ListView component or Resource Manager component [ID_35328]
 
 <!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
 
-When, in Visual Overview, you made extensive use of the date filter box in a Resource Manager component, in some cases, performance issues could occur.
+When, in a ListView component or a Resource Manager component showing a bookings timeline, you had filtered the bookings using a custom time range, performance issues could start to occur after a period of time.
