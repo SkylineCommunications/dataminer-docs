@@ -381,6 +381,16 @@ When proactive cap detection was enabled, up to now, in case of DVE elements, th
 
 From now on, if a DVE child element has an alarm template assigned to it, that alarm template will be used. Only when a DVE child element does not have an alarm template assigned to it will the alarm template of the parent be used.
 
+#### DataMiner Object Models: New field descriptors [ID_35278]
+
+<!-- MR 10.4.0 - FR 10.3.3 -->
+
+Two new field descriptors have been added to the DataMiner Object Models:
+
+- GroupFieldDescriptor: Can be used to define that a field should contain the name of a DataMiner user group.
+
+- UserFieldDescriptor: Can be used to define that a field should contain the name of a DataMiner user. There is a *GroupNames* property that can be used to define which groups the user can be a part of.
+
 ### Web apps
 
 #### Dashboards app - GQI: New data sources [ID_35027]

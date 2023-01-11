@@ -26,6 +26,16 @@ In the Generic Query Interface, the following new data sources are now available
 - Get trend data pattern events
 - Get behavioral change events
 
+#### DataMiner Object Models: New field descriptors [ID_35278]
+
+<!-- MR 10.4.0 - FR 10.3.3 -->
+
+Two new field descriptors have been added to the DataMiner Object Models:
+
+- GroupFieldDescriptor: Can be used to define that a field should contain the name of a DataMiner user group.
+
+- UserFieldDescriptor: Can be used to define that a field should contain the name of a DataMiner user. There is a *GroupNames* property that can be used to define which groups the user can be a part of.
+
 ## Changes
 
 ### Enhancements
