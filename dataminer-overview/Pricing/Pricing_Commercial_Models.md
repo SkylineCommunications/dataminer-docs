@@ -43,7 +43,7 @@ When ready to scale up, the user can set up a yearly subscription or start with 
 > [!NOTE]
 >
 > - Self-hosted/on-premises free DataMiner Systems are not time-limited. An organization can use the system as long as it remains reachable (with DataMiner Cloud Services enabled).
-> - Skyline-hosted free DataMiner Systems (DataMiner as a Service) are only available for a predetermined trial period. Contact your Account Manager for details.
+> - Skyline-hosted free DataMiner Systems (DataMiner as a Service) are only available for a maximum period of 30 days. Contact your Account Manager for details.
 
 ## DataMiner Perpetual-Use Licenses vs Usage-based services
 
