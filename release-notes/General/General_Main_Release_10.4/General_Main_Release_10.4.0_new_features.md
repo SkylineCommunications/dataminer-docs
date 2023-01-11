@@ -381,6 +381,16 @@ When proactive cap detection was enabled, up to now, in case of DVE elements, th
 
 From now on, if a DVE child element has an alarm template assigned to it, that alarm template will be used. Only when a DVE child element does not have an alarm template assigned to it will the alarm template of the parent be used.
 
+### Web apps
+
+#### Dashboards app - GQI: New data sources [ID_35027]
+
+In the Generic Query Interface, the following new data sources are now available:
+
+- Get trend data patterns
+- Get trend data pattern events
+- Get behavioral change events
+
 ### Service & Resource Management
 
 #### Service & Resource Management: Exposers for resource capacities and capabilities [ID_34841]

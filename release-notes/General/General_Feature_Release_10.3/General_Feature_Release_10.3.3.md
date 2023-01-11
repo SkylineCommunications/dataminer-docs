@@ -18,6 +18,14 @@ uid: General_Feature_Release_10.3.3
 
 ## Other features
 
+#### Dashboards app - GQI: New data sources [ID_35027]
+
+In the Generic Query Interface, the following new data sources are now available:
+
+- Get trend data patterns
+- Get trend data pattern events
+- Get behavioral change events
+
 ## Changes
 
 ### Enhancements
