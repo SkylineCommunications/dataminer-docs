@@ -42,6 +42,12 @@ Multiple instances of the SLLogCollector tool can now be run simultaneously.
 
 Up to now, an error could occur in SLLog when adding large entries regarding failed Elasticsearch query requests/responses.
 
+#### GQI: Problem when fetching two queries using an external data source with a custom argument of which the ID was set to "Type" [ID_35242]
+
+<!-- MR 10.3.0 - FR 10.3.3 -->
+
+When two queries using an external data source with a custom argument of which the ID was set to "Type" had to be fetched, only one of the two queries would get fetched when the only difference between them was the value of the custom argument.
+
 #### SLDataGateway could end up with an excessive number of HealthMonitor.Refresh threads [ID_35286]
 
 <!-- MR 10.2.0 [CU12] - FR 10.3.3 -->

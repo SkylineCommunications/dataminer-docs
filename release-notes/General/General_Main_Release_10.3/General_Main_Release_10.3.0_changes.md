@@ -1018,6 +1018,12 @@ When a GQI query retrieved the status of a DOM instance that had no status, the 
 
 When you sorted or filtered a table by clicking a table header, or when an action triggered a refresh of the table data, in some cases, no loading indicator would appear.
 
+#### GQI: Problem when fetching two queries using an external data source with a custom argument of which the ID was set to "Type" [ID_35242]
+
+<!-- MR 10.3.0 - FR 10.3.3 -->
+
+When two queries using an external data source with a custom argument of which the ID was set to "Type" had to be fetched, only one of the two queries would get fetched when the only difference between them was the value of the custom argument.
+
 #### GQI: Metadata would incorrectly be removed when a custom operator was applied [ID_35283]
 
 <!-- MR 10.3.0 - FR 10.3.2 -->
