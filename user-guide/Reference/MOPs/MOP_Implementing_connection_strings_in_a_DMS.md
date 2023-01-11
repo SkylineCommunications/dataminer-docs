@@ -49,7 +49,7 @@ Access to SLNetClientTest tool on the DMA
 
     1. Right-click the blank space of the *Connection String Configuration* window and select *Add new destination*.
     1. Select the DMA to connect from in the *From* box.
-    1. Specify the IP address of the DMA to connect to in the *To* box.
+    1. Specify the IP address of the DMA to connect to in the *To* box. For a DMA connecting to a failover pair, this will be the virtual IP address of that destination pair. For a Failover Main DMA connecting to its backup or the other way around, this will be the sync IP of that target machine.
     1. Fill in the username and password and click *OK*.
     1. Repeat this for all the DMA connections that need to be made. For example, if there are 9 DMAs in the system, there must be 8 connections from every DMA. From DMA1, for instance, there will need to be a connect to DMA2, DMA3, etc. up to DMA9; from DMA2; there will need to be a connection to DMA1, DMA3, etc. to DMA9; and so on.
 
