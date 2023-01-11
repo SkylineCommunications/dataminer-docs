@@ -341,7 +341,10 @@ List view components can be found both in Visual Overview and in the DataMiner B
 
 - To sort the items in the list by a particular column, click the header of that column. Click the header again to reverse the sort order.
 
-- To filter which items are displayed in the list, click the filter icon for the column you want to apply a filter to and enter a filter in the box below the column header.
+- To filter which items are displayed in the list, click the filter icon for the column you want to apply a filter to and enter a filter in the box below the column header. 
+
+> [!NOTE]
+> When a list view with type Reservations/Bookings is shown and filtering on a GUID or a number, the booking will only be shown when the full and correct GUID/number is entered.
 
 - To apply a custom column configuration, see [Creating a new column configuration](#creating-a-new-column-configuration) and [Loading the default column configuration](#loading-the-default-column-configuration).
 
