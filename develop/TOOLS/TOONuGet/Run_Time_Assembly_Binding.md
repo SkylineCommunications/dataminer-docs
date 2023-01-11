@@ -11,7 +11,7 @@ uid: Run_Time_Assembly_Binding
 > - You also installed NuGet package "B".
 > - NuGet package "A" exposes types from NuGet package "B".
 > - You use types from package "B" through package "A" (e.g. calling a method defined in package "A" that has as argument a type from package "B", or using a method from package "A" that returns a type of package "B").
-
+>
 > Make sure that the version of package "B" you installed is the same version as the version of package "B" that package "A" depends on. Otherwise you could experience run-time issues as explained in more detail below.
 
 This happens when code reaches a method that is present in a different DLL.
