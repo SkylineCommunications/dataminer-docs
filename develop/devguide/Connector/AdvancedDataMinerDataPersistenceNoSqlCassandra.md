@@ -6,14 +6,6 @@ uid: AdvancedDataMinerDataPersistenceNoSqlCassandra
 
 DataMiner uses Cassandra as its NoSQL ("Not only SQL") database (supported since DataMiner version 9.0.0). The Apache Cassandra database is a distributed NoSQL database, designed to provide high availability, scalability and performance, allowing it to handle large amounts of data.
 
-In this section:
-
-- Cassandra architecture
-- Data model
-- Cassandra query language
-- Inner workings
-- Database structure
-
 ## Cassandra architecture
 
 The Cassandra architecture consists of a cluster of nodes that form a masterless ring. This means that all nodes in the ring are equal, i.e. there is no concept of a master node or slave nodes. Because of this architecture and data replication, there is no single point of failure. Additional nodes can easily be added for increased performance (allowing linear scale performance).
@@ -134,12 +126,12 @@ This means that the other replica nodes are requested to respond with a digest o
 
 The following sections describe the main tables of the DataMiner Cassandra general database:
 
-- Element data
-- Information events
-- Alarm data
-- Trend data
-- Ticketing data
-- Analytics data
+- [Element data](#element-data)
+- [Information events](#information-events)
+- [Alarm data](#alarm-data)
+- [Trend data](#trend-data)
+- [Ticketing data](#ticketing-data)
+- [Analytics data](#analytics-data)
 
 > [!WARNING]
 > The tables and their structure are subject to change. Therefore, it is not supported to directly communicate with the database.
@@ -183,8 +175,8 @@ The elementdata table contains the values of persisting parameters (standalone a
 
 Data for information events is kept in the following tables:
 
-- infotrace table (see infotrace table)
-- info table (see info table)
+- [infotrace table](#infotrace-table)
+- [info table](#info-table)
 
 #### infotrace table
 
@@ -291,9 +283,9 @@ An information event will appear three times in this table, allowing it to be qu
 
 Alarm data is kept in the following tables:
 
-- activealarms table (see activealarms table)
-- alarm table (see alarm table)
-- timetrace table (see timetrace table)
+- [activealarms table](#activealarms-table)
+- [alarm table](#alarm-table)
+- [timetrace table](#timetrace-table)
 
 #### activealarms table
 
@@ -468,8 +460,8 @@ An alarm will therefore appear at least three times in this table (one entry usi
 
 Trend data is kept in the following tables:
 
-- data table (see data table)
-- datapoints table (see datapoints table)
+- [data table](#data-table)
+- [datapoints table](#datapoints-table)
 
 #### data table
 
@@ -550,11 +542,11 @@ Window:
 
 Ticketing data is kept in a separate keyspace named "[config]_sldmadb_ticketing" and contains the following tables:
 
-- history (see history)
-- linkertable (see linkertable)
-- maxticketid (see maxticketid)
-- tickets (see tickets)
-- ticketstates (see ticketstates)
+- [history](#history)
+- [linkertable](#linkertable)
+- [maxticketid](#maxticketid)
+- [tickets](#tickets)
+- [ticketstates](#ticketstates)
 
 #### history
 
@@ -615,17 +607,17 @@ This table is defined as follows:
 
 The DataMiner Analytics features store and maintain model data and extracted insights data in the following tables:
 
-- analytics_alarmfocus (see analytics_alarmfocus)
-- analytics_arrowwindows (see analytics_arrowwindows)
-- analytics_changepoints (see analytics_changepoints)
-- analytics_changepointalarmentries (see analytics_changepointalarmentries)
-- analytics_parameterinfo (see analytics_parameterinfo)
-- analytics_trendalarms (see analytics_trendalarms)
-- analytics_wavestream (see analytics_wavestream)
+- [analytics_alarmfocus](#analytics_alarmfocus)
+- [analytics_arrowwindows](#analytics_arrowwindows)
+- [analytics_changepoints](#analytics_changepoints)
+- [analytics_changepointalarmentries](#analytics_changepointalarmentries)
+- [analytics_parameterinfo](#analytics_parameterinfo)
+- [analytics_trendalarms](#analytics_trendalarms)
+- [analytics_wavestream](#analytics_wavestream)
 
 #### analytics_alarmfocus
 
-This table stores one model for [Alarm Focus](xref:ApplyingAlarmFiltersInTheAlarmConsole#filtering-alarms-on-alarm-focus) for each monitored parameter or monitored table cell that had an alarm in the last two weeks. The amount of data in the table should be more or less stable after two weeks.
+This table stores one model for [alarm focus](xref:ApplyingAlarmFiltersInTheAlarmConsole#filtering-alarms-on-alarm-focus) for each monitored parameter or monitored table cell that has had an alarm in the past two weeks. The amount of data in the table should be more or less stable after two weeks.
 
 The table is defined as follows:
 
@@ -640,7 +632,7 @@ The table is defined as follows:
 
 #### analytics_arrowwindows
 
-This table is used by the Trend Icons feature in DataMiner versions before version 10.2.4. See [Accessing trend information from a card](xref:Accessing_trend_information_from_a_card).
+This table is used by the trend icons feature in DataMiner versions prior to DataMiner 10.2.4. See [Accessing trend information from a card](xref:Accessing_trend_information_from_a_card).
 
 The table is defined as follows:
 
@@ -660,9 +652,9 @@ The table is defined as follows:
 
 #### analytics_changepoints
 
-A one-year history of behavioral change points is kept in this table. See [Behavioral anomaly detection](xref:Working_with_behavioral_anomaly_detection).
+This table contains a one-year history of behavioral change points. See [Behavioral anomaly detection](xref:Working_with_behavioral_anomaly_detection).
 
-Since DataMiner version 10.2.12.0, the partitioning of the table has been optimized into table version analytics_changepoints_v2. In earlier versions, large and heavily trended elements can cause larger partition sizes of the version analytics_changepoints_v1 tables.
+From DataMiner 10.2.12 onwards, the partitioning of the table is optimized into table version *analytics_changepoints_v2*. In earlier versions, large and heavily trended elements can cause larger partition sizes of the version *analytics_changepoints_v1* tables.
 
 The analytics_changepoints table is defined as follows:
 
@@ -677,7 +669,7 @@ The analytics_changepoints table is defined as follows:
 |so|int|Yes (Clustering)|Change point source ID|
 |id|int|Yes (Clustering)|Change point ID|
 |a|boolean|No|Anomalous|
-|as|int|No|Alarm Severity ID|
+|as|int|No|Alarm severity ID|
 |dn|text|No|Display key for table parameter|
 |et|timestamp|No|End change point time range|
 |ev|double|No|Change point end value|
@@ -689,7 +681,7 @@ The analytics_changepoints table is defined as follows:
 
 #### analytics_changepointalarmentries
 
-This table is used to keep track of the open suggestion and alarm events created by [Behavioral anomaly detection](xref:Behavioral_anomaly_detection).
+This table is used to keep track of the open suggestion events and alarm events created by [behavioral anomaly detection](xref:Behavioral_anomaly_detection).
 
 This table is defined as follows:
 
@@ -711,7 +703,7 @@ This table is defined as follows:
 
 #### analytics_parameterinfo
 
-This table contains some data for each trended parameter which is tracked by one of the proactive advanced analytics features: Trend Icons, [Behavioral anomaly detection](xref:Working_with_behavioral_anomaly_detection), [Proactive cap detection](xref:Proactive_cap_detection) and [Monitoring of trend patterns](xref:Monitoring_of_trend_patterns). This data is required for the real-time updating of the different model information stored in the other analytics tables upon incoming new data values.
+This table contains data for each trended parameter that is tracked by one of the proactive advanced analytics features: trend icons, [behavioral anomaly detection](xref:Working_with_behavioral_anomaly_detection), [proactive cap detection](xref:Proactive_cap_detection) and [monitoring of trend patterns](xref:Monitoring_of_trend_patterns). This data is required for the real-time updating of the model information stored in the other analytics tables upon incoming new data values.
 
 This table is defined as follows:
 
@@ -731,7 +723,7 @@ This table is defined as follows:
 
 #### analytics_trendalarms
 
-This table is used to keep track of open suggestion and alarm events created by [Proactive cap detection](xref:Proactive_cap_detection).
+This table is used to keep track of open suggestion events and alarm events created by [proactive cap detection](xref:Proactive_cap_detection).
 
 This table is defined as follows:
 
@@ -751,7 +743,7 @@ This table is defined as follows:
 
 #### analytics_wavestream
 
-The table stores a model per trended parameter or table cell for [Proactive cap detection](xref:Proactive_cap_detection) and [Behavioral anomaly detection](xref:Working_with_behavioral_anomaly_detection). The amount of data in the table is related to the number of tracked parameters.
+The table stores a model per trended parameter or table cell for [proactive cap detection](xref:Proactive_cap_detection) and [behavioral anomaly detection](xref:Working_with_behavioral_anomaly_detection). The amount of data in the table is related to the number of tracked parameters.
 
 This table is defined as follows:
 
@@ -761,7 +753,7 @@ This table is defined as follows:
 |ei|int|Yes (Partitioning)|Element ID|
 |pi|int|Yes (Clustering)|Parameter ID|
 |i|text|Yes (Clustering)|Primary key for table parameter|
-|l|int|Yes (Clustering)|Modeling Level (value between 0 and 10)|
+|l|int|Yes (Clustering)|Modeling level (value between 0 and 10)|
 |am|text|No|Behavioral anomaly detection model|
 |aw|list of double|No|Model data|
 |dn|text|No|Display key for table parameter|
