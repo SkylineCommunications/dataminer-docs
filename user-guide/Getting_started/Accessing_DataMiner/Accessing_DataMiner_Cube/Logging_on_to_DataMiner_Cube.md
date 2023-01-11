@@ -83,14 +83,20 @@ To do so, before you log on, do the following:
 
    - *Auto*: DataMiner will automatically select the connection settings.
 
-   - *gRPC*: Available from DataMiner 10.3.0/10.3.3 onwards. DataMiner will communicate using HTTPS via the API Gateway, using gRPC GZIP compression. By default, this requires the use of the standard HTTPS port 443.
+   <!-- - *gRPC*: Available from DataMiner 10.3.0/10.3.x onwards. DataMiner will communicate using HTTPS via the API Gateway, using gRPC GZIP compression. By default, this requires the use of the standard HTTPS port 443. -->
 
-   - *Remoting*: This option is used by default. DataMiner will communicate using .Net Remoting. By default, this requires the use of port 8004.
+   - *Remoting*: DataMiner will communicate using .Net Remoting.
+
+     - This option is used by default.
+
+     - The default port used for Remoting is port 8004.
+
+     - By default, [eventing](xref:Eventing_or_polling) is used, but the client will automatically fall back to polling if the callback port cannot be reached (e.g. if a firewall blocks the requests).
 
    - *Web Services*: Legacy option available prior to DataMiner 10.0.0 \[CU6\]/10.0.11. As WSE is deprecated, this option is no longer available in recent DataMiner versions. Connecting via web services is not possible if WSE is not installed on the DMA.
 
-   > [!NOTE]
-   > The selected connection type will be **used to connect to any DMA from the current computer**. Keep this in mind, for example in case you have selected *gRPC* and you want to connect to DataMiner versions prior to 10.3.0/10.3.2, which do not support gRPC yet.
+<!--    > [!NOTE]
+   > The selected connection type will be **used to connect to any DMA from the current computer**. Keep this in mind, for example in case you have selected *gRPC* and you want to connect to DataMiner versions prior to 10.3.0/10.3.2, which do not support gRPC yet. -->
 
 1. If necessary, adjust the settings for the selected connection type:
 

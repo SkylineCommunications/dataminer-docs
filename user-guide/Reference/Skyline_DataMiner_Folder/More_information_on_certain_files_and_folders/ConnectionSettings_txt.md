@@ -35,11 +35,11 @@ This file contains default connection settings to be used by DataMiner client ap
 
   Possible values:
 
-  - GrpcConnection (supported from DataMiner 10.3.0/10.3.2 onwards)
+  - *GrpcConnection*: Supported from DataMiner 10.3.0/10.3.2 onwards. DataMiner will communicate using HTTPS via the API Gateway, using gRPC GZIP compression. By default, this requires the use of the standard HTTPS port 443.
 
-  - RemotingConnection (.NET Remoting)
+  - *RemotingConnection*: .NET Remoting.
 
-  - WSConnection (Web Services - deprecated from DataMiner 10.0.11 onwards)
+  - *WSConnection*: Web Services - deprecated from DataMiner 10.0.11 onwards.
 
 - **polling=**
 
