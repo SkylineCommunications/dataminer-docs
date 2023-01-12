@@ -82,7 +82,7 @@ Here are some pointers to maximize your visibility.
 
   For this purpose, you can find a [variety of resources](https://community.dataminer.services/documentation/) on the DataMiner Dojo Community. You can take advantage of Skyline’s content and online events, or organize your own events where Skyline can join you.
 
-- **Brand Materials**: A variety of standard off-the-shelf brand materials are available for you to leverage the DataMiner brand (corporate materials, [skylicons](https://skyline.be/skylicons/), etc.).
+- **Brand Materials**: A variety of standard off-the-shelf brand materials are available for you to leverage the DataMiner brand ([corporate materials](https://skyline.be/corporate-images), [skylicons](https://skyline.be/skylicons/), etc.).
 
 ### Day-to-day engagement
 
