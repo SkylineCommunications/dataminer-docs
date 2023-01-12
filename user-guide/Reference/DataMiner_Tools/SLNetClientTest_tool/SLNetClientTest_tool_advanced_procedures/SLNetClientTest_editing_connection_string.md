@@ -17,8 +17,16 @@ To do so:
 1. In the *Edit Connection String* dialog box, configure the following settings.
 
    - *From*: The DataMiner Agent from which will be connected.
-   - *To*: The primary IP address of the DataMiner Agent to which will be connected. From DataMiner 10.0.0 CU15/10.1.0 CU4/10.1.7 onwards, wildcards are supported in this field. If there is no exact match, the connection string will be set for all matching destinations.
+
+   - *To*: The primary IP address of the DataMiner Agent to which will be connected.
+
+     > [!NOTE]
+     >
+     > - For a DMA connecting to a Failover pair, this will be the virtual IP address of that destination pair. For a main Failover DMA connecting to its backup or vice versa, this will be the sync IP of that target machine.
+     > - From DataMiner 10.0.0 CU15/10.1.0 CU4/10.1.7 onwards, wildcards are supported in this field. If there is no exact match, the connection string will be set for all matching destinations.
+
    - *Update All Connections To This Agent*: Select this option if you want to update all connection strings to the DataMiner Agent specified in *To*.
+
    - *New Connection String*: The IP address to be used when connecting to the DataMiner Agent specified in *To*. Syntax example: `http://[IP address to connect]:8004/SLNetService`.
 
      > [!NOTE]
