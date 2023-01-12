@@ -150,6 +150,12 @@ When a trend pattern was detected on a DVE child element, up to now, the suggest
 
 A number of enhancements have been made to the color picker.
 
+#### SLAnalytics - Pattern matching: Manually created tags will now be saved as pattern occurrences [ID_35299]
+
+<!-- MR 10.4.0 - FR 10.3.3 -->
+
+From now on, when you define a tag for pattern matching, the pattern you selected will be saved as a pattern occurrence in the Elasticsearch database and highlighted in bright orange, similar to so-called "streaming matches", which are detected while tracking for trend patterns whenever a trended parameter is updated.
+
 #### Errors received from the web API after sending a GetConnection call will now be logged in SLNet.txt [ID_35313]
 
 <!-- MR 10.4.0 - FR 10.3.3 -->
