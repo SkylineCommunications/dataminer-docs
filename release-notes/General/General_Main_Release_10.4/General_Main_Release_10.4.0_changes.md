@@ -150,6 +150,32 @@ When a trend pattern was detected on a DVE child element, up to now, the suggest
 
 A number of enhancements have been made to the color picker.
 
+#### SLAnalytics - Pattern matching: Manually created tags will now be saved as pattern occurrences [ID_35299]
+
+<!-- MR 10.4.0 - FR 10.3.3 -->
+
+From now on, when you define a tag for pattern matching, the pattern you selected will be saved as a pattern occurrence in the Elasticsearch database and highlighted in bright orange, similar to so-called "streaming matches", which are detected while tracking for trend patterns whenever a trended parameter is updated.
+
+#### Errors received from the web API after sending a GetConnection call will now be logged in SLNet.txt [ID_35313]
+
+<!-- MR 10.4.0 - FR 10.3.3 -->
+
+From now on, when SLNet receives an error from the web API after sending a *GetConnection* call, it will log the request and the response in the *SLNet.txt* log file.
+
+#### SLAnalytics - Behavioral anomaly detection: Suggestion events and alarm events for a DVE child element will now be generated on that same DVE child element [ID_35332]
+
+<!-- MR 10.4.0 - FR 10.3.3 -->
+
+When a behavioral anomaly was detected on a DVE child element, up to now, the suggestion event or the alarm event would be generated on the parent element. From now on, it will be generated on the child element instead.
+
+#### Alarm templates - Smart baseline calculations: NullReferenceException prevented & enhanced exception logging [ID_35348]
+
+<!-- MR 10.4.0 - FR 10.3.3 -->
+
+In some cases, a `Baseline Calculation Failed: System.NullReferenceException: Object reference not set to an instance of an object` error would be added to the *SLSmartBaselineManager.txt* log file. The issue causing that error has now been fixed.
+
+Also, log entries indicating an exception thrown during baseline calculations will now include details regarding the element and parameter associated with the exception.
+
 ### Fixes
 
 #### GQI: Problem when retrieving DCF interfaces [ID_34820]
