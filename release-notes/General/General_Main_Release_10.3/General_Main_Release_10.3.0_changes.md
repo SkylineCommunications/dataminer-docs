@@ -1031,3 +1031,11 @@ When two queries using an external data source with a custom argument of which t
 When, in a GQI query, a custom operator was applied, all metadata available on the rows would incorrectly be removed, causing feeds to no longer work as expected.
 
 Also, when a column was renamed via a custom operator, the metadata available on that column would incorrectly be removed.
+
+#### DataMiner Object Models: Permission checks for DOM modules requiring view permission 'None' were too strict [ID_35305]
+
+<!-- MR 10.3.0 - FR 10.3.3 -->
+
+If a DOM module is created without specifying *SecuritySettings*, the view permission is set to "None".
+
+Up to now, the check to determine whether a user had the view permission set to "None", would only return true for the Administrator or users in the Administrator group. From now on, when the required view permission is "None", permission checks will no longer be performed.

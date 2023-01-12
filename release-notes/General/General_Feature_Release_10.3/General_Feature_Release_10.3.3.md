@@ -60,6 +60,12 @@ Multiple instances of the SLLogCollector tool can now be run simultaneously.
 
 Up to now, an error could occur in SLLog when adding large entries regarding failed Elasticsearch query requests/responses.
 
+#### When a direct view table was updated, the wrong columns could be updated in the source element [ID_35075]
+
+<!-- MR 10.4.0 - FR 10.3.3 -->
+
+When a direct view table was updated while one of the source elements was stopped, due to a column translation issue, the wrong columns could be updated in that source element the moment it was started again.
+
 #### GQI: Problem when fetching two queries using an external data source with a custom argument of which the ID was set to "Type" [ID_35242]
 
 <!-- MR 10.3.0 - FR 10.3.3 -->
@@ -71,3 +77,11 @@ When two queries using an external data source with a custom argument of which t
 <!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
 
 In some cases, the SLDataGateway process could end up with an excessive number of *HealthMonitor.Refresh* threads.
+
+#### DataMiner Object Models: Permission checks for DOM modules requiring view permission 'None' were too strict [ID_35305]
+
+<!-- MR 10.3.0 - FR 10.3.3 -->
+
+If a DOM module is created without specifying *SecuritySettings*, the view permission is set to "None".
+
+Up to now, the check to determine whether a user had the view permission set to "None", would only return true for the Administrator or users in the Administrator group. From now on, when the required view permission is "None", permission checks will no longer be performed.
