@@ -50,8 +50,14 @@ Up to now, when a *contentSeparator* tag was left empty, the values of the prope
 
 When you exported a trend graph containing average trend data to CSV, in some cases, the exported data would be parsed incorrectly.
 
-#### DataMiner Cube - Visual Overview: Problem after filtering bookings using a custom time range in ListView component or Resource Manager component [ID_35328]
+#### Visual Overview: Problem after filtering bookings using a custom time range in ListView component or Resource Manager component [ID_35328]
 
 <!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
 
 When, in a ListView component or a Resource Manager component showing a bookings timeline, you had filtered the bookings using a custom time range, performance issues could start to occur after a period of time.
+
+#### Trending: Pattern matching tags could incorrectly be defined for discrete or string parameters [ID_35368]
+
+<!-- MR 10.4.0 - FR 10.3.3 -->
+
+Pattern matching does not support discrete or string parameters. However, up to now, when viewing a trend graph that showed trend information for either a discrete or a string parameter, it would incorrectly be possible to define tags for pattern matching. From now on, this will no longer be possible.
