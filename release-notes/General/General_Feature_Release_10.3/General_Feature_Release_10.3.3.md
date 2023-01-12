@@ -58,6 +58,12 @@ Multiple instances of the SLLogCollector tool can now be run simultaneously.
 
 A number of enhancements have been made to the color picker.
 
+#### SLAnalytics - Behavioral anomaly detection: Suggestion events and alarm events for a DVE child element will now be generated on that same DVE child element [ID_35332]
+
+<!-- MR 10.4.0 - FR 10.3.3 -->
+
+When a behavioral anomaly was detected on a DVE child element, up to now, the suggestion event or the alarm event would be generated on the parent element. From now on, it will be generated on the child element instead.
+
 ### Fixes
 
 #### Problem with SLLog when logging large entries regarding failed Elasticsearch query requests/responses [ID_35037]
