@@ -22,7 +22,7 @@ To do so:
    - *New Connection String*: The IP address to be used when connecting to the DataMiner Agent specified in *To*. Syntax example: `http://[IP address to connect]:8004/SLNetService`.
 
      > [!NOTE]
-     > If you want to configure gRPC connections, you can do so by adding the IP address followed by `/APIGateway`, e.g. `https://10.4.2.92:APIGateway`. You will need to do so for each DMA in the system.
+     > From DataMiner 10.3.0/10.3.2 onwards, you can configure a gRPC connection string. To do so, provide the full URL including the API Gateway, for example `https://10.4.2.92/APIGateway`. You will need to do so for each DMA in the system.
 
    - *Username* and *password*: The credentials to implement this change, if necessary.
 
