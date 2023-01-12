@@ -680,7 +680,7 @@ or
 - **Command**
 
   ```txt
-  0x09Set_Parameter;[1];[2];[3];[4];[5];[6];[7]0x0D
+  \tSet_Parameter;[1];[2];[3];[4];[5];[6];[7]\r
   ```
 
   \[1\] DMA ID

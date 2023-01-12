@@ -79,10 +79,34 @@ To do so, before you log on, do the following:
 
 1. On the login page, click the cogwheel button in the lower right corner and select *Options* in the menu.
 
-1. In the *Edit Settings* window, set the *Connection Type* to *Auto* or *Remoting*, and modify the different settings if necessary (destination port, polling interval, ...).
+1. In the *Edit Settings* window, set the *Connection Type* to one of the following values:
 
-   > [!NOTE]
-   > Prior to DataMiner 10.0.0 \[CU6\]/10.0.11, you can also select the option *Web Services*. However, as WSE is deprecated, this option is no longer available in recent DataMiner versions. Connecting via web services is not possible if WSE is not installed on the DMA.
+   - *Auto*: DataMiner will automatically select the connection settings.
+
+   <!-- - *gRPC*: Available from DataMiner 10.3.0/10.3.x onwards. DataMiner will communicate using HTTPS via the API Gateway, using gRPC GZIP compression. By default, this requires the use of the standard HTTPS port 443. -->
+
+   - *Remoting*: DataMiner will communicate using .Net Remoting.
+
+     - This option is used by default.
+
+     - The default port used for Remoting is port 8004.
+
+     - By default, [eventing](xref:Eventing_or_polling) is used, but the client will automatically fall back to polling if the callback port cannot be reached (e.g. if a firewall blocks the requests).
+
+   - *Web Services*: Legacy option available prior to DataMiner 10.0.0 \[CU6\]/10.0.11. As WSE is deprecated, this option is no longer available in recent DataMiner versions. Connecting via web services is not possible if WSE is not installed on the DMA.
+
+<!--    > [!NOTE]
+   > The selected connection type will be **used to connect to any DMA from the current computer**. Keep this in mind, for example in case you have selected *gRPC* and you want to connect to DataMiner versions prior to 10.3.0/10.3.2, which do not support gRPC yet. -->
+
+1. If necessary, adjust the settings for the selected connection type:
+
+   - **Destination port**: Select this option to specify a custom destination port number. If you specify “-1”, the port will be detected automatically.
+
+   - **Polling interval**: The frequency at which the client application should poll the DMA, in milliseconds. If you want to use remoting and there are firewalls in your network or NAT is used, make sure this option is selected, to ensure that polling is used instead of eventing. For Web Services, this option is enabled by default.
+
+   - **Use data compression** (Remoting only): Determines whether data are compressed or not. By default, this option is selected, in order to reduce network traffic.
+
+   - **Custom binding IP address** (Remoting only): Only needed in case the server cannot automatically resolve the IP address that it needs to send callback events to the client, which can be the case when a VPN connection is used. The option only applies when eventing has been configured.
 
 1. Click *OK*.
 

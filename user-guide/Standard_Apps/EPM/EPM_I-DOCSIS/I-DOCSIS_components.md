@@ -53,6 +53,11 @@ The I-DOCSIS EPM Solution includes the following dashboards:
 - I-DOCSIS Channel Utilization
 - I-DOCSIS Network
 - I-DOCSIS Service Group [Fiber Node]
+- I-DOCSIS Service Group [Fiber Node] - CM DS SNR OOS
+- I-DOCSIS Customer Diagnosis tool - CM Info
+- I-DOCSIS Customer Diagnosis Tool - Network Performance
+- I-DOCSIS Global System Counts
+- I-DOCSIS Cable Modem
 
 ## Visuals
 

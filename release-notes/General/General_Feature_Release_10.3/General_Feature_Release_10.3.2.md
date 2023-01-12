@@ -41,6 +41,67 @@ All DOM objects (DomInstance, DomTemplate, DomDefinition, DomBehaviorDefinition,
 > - In the Elasticsearch database, existing data will not contain values for these new fields (except the *LastModified* field for all but *ModuleSettings*).
 > - All four fields are also available in the GQI data source *Object Manager Instances*. The *Last Modified* and *Created At* columns should show the time in the time zone of the browser.
 
+#### Client-server communication: gRPC instead of .NET Remoting [ID_34983]
+
+<!-- MR 10.4.0 - FR 10.3.2 -->
+
+Up to now, DataMiner clients and servers communicated with each other using the *.NET Remoting* protocol. From now on, they are also able to communicate with each other via an *API Gateway* module using *gRPC* connections, which are much more secure. For example, as to the use of IP ports, *gRPC* uses the standard port 443, whereas *.NET Remoting* uses the non-standard port 8004.
+
+When you upgrade DataMiner, the *API Gateway* module will automatically be installed in the `C:\Program Files\Skyline Communications\DataMiner APIGateway\` folder. All logging and program-specific data associated with the *API Gateway* module will be stored in the `C:\ProgramData\Skyline Communications\DataMiner APIGateway\`.
+
+> [!IMPORTANT]
+> For now, *gRPC* communication has to be explicitly enabled. If you do not enable it, Cube clients and DMAs will continue to communicate using the *.NET Remoting* protocol.
+
+##### Enabling the use of gRPC connections for communication between Cube and DMA
+
+Do the following on each DMA you want DataMiner Cube instances to connect to via *gRPC* by default.
+
+1. Open the `C:\Skyline DataMiner\Webpages\ConnectionSettings.txt` file.
+1. Set the `type` option to *GRPCConnection*.
+
+##### Enabling the use of gRPC connections for inter-DMA communication
+
+In the `DMS.xml` file, you must add redirects for each DMA that should communicate with the other DMAs in the DMS over *gRPC*. Failover Agents also need a redirect to each other's IP address.
+
+For example, in a cluster with two DMAs, with IPs 10.4.2.92 and 10.4.2.93, `DMS.xml` can be configured as follows.
+
+- On the DMA with IP 10.4.2.92:
+
+    ```xml
+      <DMS errorTime="30000" synchronized="true" xmlns="http://www.skyline.be/config/dms">
+         <Cluster name="pluto"/>
+         <DMA ip="10.4.2.92" timestamp=""/>
+         <DMA ip="10.4.2.93" id="35" timestamp="2023-01-05 01:24:38" contacted_once="TRUE" lostContact="2023-01-06 00:45:01"/>
+         <Redirects>
+            <Redirect to="10.4.2.93" via="https://10.4.2.93/APIGateway" user="MyUser" pwd="MyPassword"/>
+         </Redirects>
+      </DMS>
+    ```
+
+- On the DMA with IP 10.4.2.93:
+
+    ```xml
+      <DMS errorTime="30000" synchronized="true" xmlns="http://www.skyline.be/config/dms">
+         <Cluster name="pluto" synchronize="" timestamp="2022-12-13 12:48:29"/>
+         <DMA ip="10.4.2.93" timestamp="" contacted_once="" lostContact=""/>
+         <DMA ip="10.4.2.92" timestamp="2023-01-03 23:38:42" contacted_once="TRUE" lostContact="2023-01-06 01:02:00" id="69" uri=""/>
+         <Redirects>
+            <Redirect to="10.4.2.92" via="https://10.4.2.92/APIGateway" user="MyUser" pwd="MyPassword"/>
+         </Redirects>
+      </DMS>
+    ```
+
+> [!NOTE]
+> The passwords in the *pwd* attribute are encrypted and replaced with an encryption token when they are first read out by DataMiner.
+
+#### SLAnalytics - Proactive cap detection: Using alarm templates assigned to DVE child elements [ID_35194]
+
+<!-- MR 10.4.0 - FR 10.3.2 -->
+
+When proactive cap detection was enabled, up to now, in case of DVE elements, the alarm template of the parent would always be used.
+
+From now on, if a DVE child element has an alarm template assigned to it, that alarm template will be used. Only when a DVE child element does not have an alarm template assigned to it will the alarm template of the parent be used.
+
 ## Changes
 
 ### Enhancements
@@ -66,6 +127,32 @@ From now on, it will first check the `LogConfig` folder in the same location as 
 More detailed information will now be added to the `SLDBConnection.txt` log file when the certificate chain is invalid while connecting to Cassandra.
 
 Log entry syntax: `Certificate chain error: {chainStatus.Status}, details: {chainStatus.StatusInformation}`
+
+#### BREAKING CHANGE: Capacity property will no longer be initialized on new Resources [ID_34856]
+
+<!-- MR 10.3.0 - FR 10.3.2 -->
+
+From now on, the *Capacity* property will no longer be initialized on new Resources.
+
+As a result, in DataMiner Cube, the resources module will no longer require the legacy capacity to be initialized. Newly created resources will no longer have a legacy capacity. The concurrency of a resource will still be stored in *Resource.MaxConcurrency*.
+
+##### Impact of this change
+
+Since *Capacity* is no longer initialized on a new Resource, *GetEffectiveMaxConcurrency* will take into account *MaxConcurrency*. *MaxConcurrency* will now be initialized with 1 as is the case with *Capacity.MaxConcurrency*.
+
+If *GetEffectiveMaxConcurrency* should still use the value of *Capacity.MaxConcurrency*, *MaxConcurrency* should be set to 0.
+
+To restore legacy behavior, a new resource should be initialized as follows:
+
+```csharp
+var resource = new Resource()
+{
+  MaxConcurrency = 0,
+  Capacity = new ResourceCapacity(),
+};
+```
+
+This change in behavior will impact results for both *GetAvailableResources* and *GetResourceUsage* on ResourceManagerHelper, both marked as obsolete since 9.6.5. For both methods, newly created resources will now, by default, always be considered unavailable.
 
 #### Web apps - Interactive Automation scrips: Fields containing invalid values will now be indicated more clearly [ID_34962]
 
@@ -171,11 +258,63 @@ When a web app requests a list of users, the Web Services API will now cache the
 
 This user cache will be cleared each time a change occurs that has security implications (e.g. new users added, user permissions updated, etc.).
 
+#### Enhanced error handling when trying to create resource manager properties with value/key null on Elasticsearch [ID_35155]
+
+<!-- MR 10.3.0 - FR 10.3.2 -->
+
+When an attempt is made to create resource properties, resource definition properties and pool properties with value/key null on a system with an Elasticsearch database, from now on, an `InvalidCharactersInPropertyNames` error listing the names of the properties in question will be added to the Resource Manager log file.
+
+This same fix also fixes the creation and migration of resources of which the property list is null and resource pools of which the property definitions list or properties list is null.
+
+#### DataMiner Object Models: DomInstanceButtonDefinitions can only reference a single action [ID_35156]
+
+<!-- MR 10.4.0 - FR 10.3.2 -->
+
+From now on, DomInstanceButtonDefinitions can only reference a single action. If multiple actions are defined, a `DomBehaviorDefinitionError` with reason `InvalidButtonActionCombination` will be returned.
+
+Also, when using the DomBehaviorDefinition inheritance system, the server-side logic will now make sure that there are no buttons or actions with identical IDs on both the parent and child definition.
+
+- If a duplicate action is found, a `DomBehaviorDefinitionError` with reason `DuplicateActionDefinitionIds` will be returned.
+- If a duplicate button is found, a `DomBehaviorDefinitionError` with reason `DuplicateButtonDefinitionIds` will be returned.
+
+#### SAML authentication will now also work with user names instead of email addresses when automatic user creation is not enabled [ID_35159]
+
+<!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
+
+Since DataMiner version 10.2.6 (10.2.0 CU6), SAML authentication would only work when the SAML response claims contained an email address. From now on, SAML authentication will also work with user names instead of email addresses in case automatic user creation is not enabled.
+
 #### Dashboards app - Line & area chart component: 'Group by' setting will now by default be set to 'All together' [ID_35160]
 
 <!-- MR 10.4.0 - FR 10.3.2 -->
 
 In case a *Line & area chart* component displays trending for multiple parameters, the *Group by* setting allows you to specify how the graphs should be grouped. From now on, this *Group by* setting will by default be set to "All together".
+
+#### Enhanced performance when updating a baseline or assigning an alarm template that contains conditional monitoring [ID_35171]
+
+<!-- MR 10.4.0 - FR 10.3.2 -->
+
+Because of a number of enhancements, overall performance has increased when updating a baseline or assigning an alarm template that contains conditional monitoring.
+
+#### Enhanced performance when deleting a service from an Elasticsearch database [ID_35173]
+
+<!-- MR 10.3.0 - FR 10.3.2 -->
+
+Because of a number of enhancements, overall performance has increased when deleting a service from an Elasticsearch database.
+
+#### SLLogCollector: Custom CollectorConfig XML files will now be synchronized across the DataMiner cluster [ID_35180]
+
+<!-- MR 10.4.0 - FR 10.3.2 -->
+
+From now on, all custom CollectorConfig XML files will be synchronized across the DataMiner cluster.
+
+#### Exporting and importing DELT packages containing element and alarm data is now supported on DataMiner Systems with a clustered database [ID_35213]
+
+<!-- MR 10.2.0 [CU12] - FR 10.3.2 [CU0] -->
+
+From now on, exporting and importing DELT packages containing element and alarm data is also supported on DataMiner Systems with a clustered database.
+
+> [!NOTE]
+> Exporting and importing DELT packages containing trend data is not yet supported on DataMiner Systems with a clustered database.
 
 #### SLAnalytics: Enhanced processing of parameter values 'exception' and 'other' [ID_35214]
 
@@ -183,11 +322,59 @@ In case a *Line & area chart* component displays trending for multiple parameter
 
 Because of a number of enhancements, overall processing of "exception" or "other" parameter values by the SLAnalytics process has improved.
 
+#### NATS: No attempt will be made to cluster NATS at DMA startup when NATSForceManualConfig is enabled [ID_35221]
+
+<!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
+
+At DMA startup, from now on, no attempt will be made to automatically cluster the NATS nodes when the *NATSForceManualConfig* option is enabled.
+
+If necessary, *NatsCustodianRequests* can be triggered via the SLNetClientTest tool.
+
+#### Low-Code Apps: URLs of published app versions will no longer contain the app version number [ID_35236]
+
+<!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
+
+From now on, the URL of a published version of an app will no longer contain the app version number. Only when you open an earlier version of an app will the URL contain the app version number.
+
 #### ClusterState.xml file removed [ID_35248]
 
 <!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
 
 The `Clusterstate.xml` file, located in the `C:\Skyline DataMiner` folder, was obsolete and has now been removed.
+
+#### SLAnalytics - Pattern matching: When a pattern is detected on a DVE child element the suggestion event will now be generated on that same DVE child element [ID_35264]
+
+<!-- MR 10.4.0 - FR 10.3.2 -->
+
+When a trend pattern was detected on a DVE child element, up to now, the suggestion event would be generated on the parent element. From now on, it will be generated on the child element instead.
+
+#### Low-code apps: Enhanced confirmation message when deleting an app [ID_35269]
+
+<!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
+
+The confirmation message that appears when you delete an app will now indicate more clearly what will be removed:
+
+- When the app has never been published, only one draft exists. In this case, the confirmation message will clearly state that the entire app will be deleted.
+
+- When the app has been published, multiple versions of the app exist. In the confirmation message, you will be able to choose whether to delete only the current draft or the entire app.
+
+#### Web apps: Date/time picker component will now always show 6 full weeks [ID_35277]
+
+<!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
+
+In all web apps, the date/time picker component will now always show 6 full weeks, regardless of the number of days in the current month. This will prevent the component from having to resize when you switch from one month to another.
+
+#### SLLogCollector now also collects hot threads, node usage and tasks from Elasticsearch [ID_35310]
+
+<!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
+
+SLLogCollector packages will now also include the following additional files containing information retrieved from the Elasticsearch database (if present):
+
+| File | Contents |
+|------|----------|
+| `\Logs\Elastic\<Node address>\_nodes.hot_threads.txt` | The output of an `GET /_nodes/hot_threads` command. |
+| `\Logs\Elastic\<Node address>\_nodes.usage.json`      | The output of a `GET /_nodes/usage` command.        |
+| `\Logs\Elastic\<Node address>\_tasks.json`            | The output of a `GET /_tasks?detailed` command.     |
 
 ### Fixes
 
@@ -324,7 +511,7 @@ Also, the default window size for the records has been restored to 120 minutes (
 > [!TIP]
 > See [Missing 1-day average trending records](xref:KI_missing_avg_trending).
 
-#### Dashboards app & Low-code apps - Parameter feed: Problem when more than 10,000 elements had to be retrieved from the server [ID_35186]
+#### Dashboards app & Low-Code Apps - Parameter feed: Problem when more than 10,000 elements had to be retrieved from the server [ID_35186]
 
 <!-- MR 10.4.0 - FR 10.3.2 -->
 
@@ -332,7 +519,17 @@ Up to now, the parameter feed used the element cache of the web client to popula
 
 From now on, when the parameter feed has a protocol or view filter, it will fetch all elements matching the filter page by page, even when the total number of elements exceeds 10,000.
 
-#### Dashboards app & Low-code apps - Node edge component: Segments of bidirectional edges would not always be positioned consistently [ID_35230]
+#### Problem with wildcard OIDs when specified on a table parameter [ID_35223]
+
+<!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
+
+SNMP table polling would stop working when a wildcard OID was configured on the table parameter. That wildcard OID would always be replaced by 1 instead of the configured parameter value.
+
+Configuring an OID on the table is necessary when using *getNext* (with or without *multipleGet*). In other cases, it is optional. There, a workaround could be to remove the OID configured on the table parameter.
+
+Standalone parameters configured with a wildcard OID were not affected.
+
+#### Dashboards app & Low-Code Apps - Node edge component: Segments of bidirectional edges would not always be positioned consistently [ID_35230]
 
 <!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
 
@@ -342,7 +539,7 @@ In a node edge graph, the segments of bidirectional edges would not always be po
 
 <!-- MR 10.3.0 - FR 10.3.2 -->
 
-When a GQI query retrieved the status of a DOM instance that had no status, the status ID of that DOM instance would incorrectly no longer be returned as a null value. Instead, a `Could not find state for statusID ...` error would be thrown.
+When a GQI query retrieved the status of a DOM instance that had no status, the logic would incorrectly detect that a status was present and would try to resolve the display name for that status, causing a `Could not find state for statusID ...` error to be thrown.
 
 #### Problem when a GQI message was sent asynchronously to SLNet [ID_35232]
 
@@ -355,6 +552,56 @@ When a client asynchronously sent an GQI message to SLNet, in some cases, an exc
 <!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
 
 When redundancy groups were being initialized during a DataMiner startup, in some cases, an error could occur when an element had its state changed from "undefined" to "stopped".
+
+#### Cassandra Cluster: Incorrect db.xml entries could cause db.xml to get corrupted upon synchronization [ID_35237]
+
+<!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
+
+On DataMiner clusters with a Cassandra Cluster database, incorrect *db.xml* entries could cause that file to get corrupted upon synchronization.
+
+#### Dashboards app & low-code apps: Loading indicator would not appear when sorting, filtering or refreshing a table [ID_35238]
+
+<!-- MR 10.3.0 - FR 10.3.2 -->
+
+When you sorted or filtered a table by clicking a table header, or when an action triggered a refresh of the table data, in some cases, no loading indicator would appear.
+
+#### Dashboards app & Low-code apps: Issues with regard to data highlighting [ID_35250]
+
+<!-- MR 10.4.0 - FR 10.3.2 -->
+
+A number of issues with regard to data highlighting have been fixed.
+
+#### Dashboards app & Low-code apps: Enhanced caching of items in query column selection box [ID_35251]
+
+<!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
+
+When creating or editing a query, you can select the query columns from a selection box. A number of enhancements have now been made with regard to the caching of this list of query columns.
+
+#### Dashboards app & Low-code apps: Selected data would incorrectly not get removed after being deleted [ID_35254]
+
+<!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
+
+When data (e.g. a query) was deleted while it was selected, in some cases, it would incorrectly not be removed from the selection.
+
+#### Dashboards app: Two context menus could incorrectly be displayed simultaneously in the side bar [ID_35255]
+
+<!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
+
+When, in the side bar, you right-clicked a folder or a dashboard, and then clicking the ellipsis ("...") in the tab header, two context menus could incorrectly be displayed simultaneously.
+
+#### Dashboards app & Low-code apps - Node edge component: Problem with 'Set as ...' commands in component settings [ID_35256]
+
+<!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
+
+When, in the settings of a node edge component, you had selected a configured edge, it would incorrectly be possible to use the *Set as edge* command. This would clear the existing configuration of the edge in question and cause the settings to be saved incorrectly.
+
+From now on, it will only be possible to set a node as edge and vice versa.
+
+#### Dashboards app & Low-code apps: Unknown components would incorrectly no longer be indicated as such [ID_35257]
+
+<!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
+
+In some cases, unknown components would incorrectly no longer be indicated as such.
 
 #### SLAnalytics would incorrectly ignore trend patterns defined for parameters of child DVE elements [ID_35260]
 
@@ -376,3 +623,40 @@ Up to now, when email addresses and hyperlinks to web pages were retrieved from 
 <!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
 
 When a client application connects to a DataMiner Agent, it will first try to set up communication via eventing. If communication via eventing fails, the DataMiner Agent will fall back to communication via polling. In some rare cases, both types of communication (i.e. eventing and polling) would incorrectly be used simultaneously.
+
+#### Low-code apps: Keyboard shortcuts would not work in the dashboard editor [ID_35274]
+
+<!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
+
+Up to now, the following keyboard shortcuts would not work in the dashboard editor:
+
+| Shortcut | Action                          |
+|----------|---------------------------------|
+| CTRL+a   | Select all components.          |
+| DELETE   | Delete the selected components. |
+
+#### GQI: Metadata would incorrectly be removed when a custom operator was applied [ID_35283]
+
+<!-- MR 10.3.0 - FR 10.3.2 -->
+
+When, in a GQI query, a custom operator was applied, all metadata available on the rows would incorrectly be removed, causing feeds to no longer work as expected.
+
+Also, when a column was renamed via a custom operator, the metadata available on that column would incorrectly be removed.
+
+#### Spectrum Analysis: 'Visualize measurement points' setting of a spectrum element would no longer be property saved [ID_35293]
+
+<!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
+
+When you enabled the *Visualize measurement points* setting of a spectrum element, that change would no longer to properly saved in the element's *element.xml* file. This would cause unexpected behavior after restarting the DataMiner Agent or the element in question.
+
+#### Dashboards app / Low-Code Apps - Node edge component: Edge overrides would incorrectly no longer be applied [ID_35298]
+
+<!-- MR 10.2.0 [CU12] - FR 10.3.2 -->
+
+When, in the settings of a node edge graph, you had configured edge overrides, these would incorrectly no longer be applied.
+
+#### Dashboards app & Low-code apps - GQI table component: 'Cannot read properties of undefined (reading 'Guid')' error [ID_35316]
+
+<!-- MR 10.4.0 - FR 10.3.2 [CU0] -->
+
+In some cases, a GQI table component could show a `Cannot read properties of undefined (reading 'Guid')` error.

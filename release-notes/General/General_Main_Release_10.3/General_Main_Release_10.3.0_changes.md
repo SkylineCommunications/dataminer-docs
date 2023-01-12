@@ -391,7 +391,7 @@ When a parameter feed is linked to a *Line & area chart" component, from now on,
 
 When a parameter feed has an EPM identifier feed as source, from now on, the *Auto-select all* setting will no longer be available.
 
-#### Dashboards app / Low-code apps - Line & area chart: Group label will no longer be displayed when grouping is set to 'All together' [ID_34544]
+#### Dashboards app / Low-Code Apps - Line & area chart: Group label will no longer be displayed when grouping is set to 'All together' [ID_34544]
 
 <!-- MR 10.3.0 - FR 10.2.12 -->
 
@@ -403,7 +403,7 @@ In case a *Line & area chart* component displays trending for multiple parameter
 
 Alarm locking in the SLElement process has been enhanced.
 
-#### Dashboards app / Low-code apps: Enhanced performance of selection boxes [ID_34577]
+#### Dashboards app / Low-Code Apps: Enhanced performance of selection boxes [ID_34577]
 
 <!-- MR 10.3.0 - FR 10.2.12 -->
 
@@ -423,7 +423,7 @@ If an Elasticsearch database is available, the behavioral change points detected
 
 This will support faster and more flexible change point querying via GQI in future releases.
 
-#### Dashboards app / Low-code apps - Visual Overview component: Enhancements with regard to WebSocket/polling settings and user access to visual overviews [ID_34624]
+#### Dashboards app / Low-Code Apps - Visual Overview component: Enhancements with regard to WebSocket/polling settings and user access to visual overviews [ID_34624]
 
 <!-- MR 10.3.0 - FR 10.2.12 -->
 
@@ -475,6 +475,20 @@ Because of a number of enhancements, the automatic evaluation of trend predictio
 <!-- MR 10.3.0 - FR 10.3.2 -->
 
 Because of a number of enhancements, overall performance has increased when creating and updating bookings.
+
+#### Enhanced error handling when trying to create resource manager properties with value/key null on Elasticsearch [ID_35155]
+
+<!-- MR 10.3.0 - FR 10.3.2 -->
+
+When an attempt is made to create resource properties, resource definition properties and pool properties with value/key null on a system with an Elasticsearch database, from now on, an `InvalidCharactersInPropertyNames` error listing the names of the properties in question will be added to the Resource Manager log file.
+
+This same fix also fixes the creation and migration of resources of which the property list is null and resource pools of which the property definitions list or properties list is null.
+
+#### Enhanced performance when deleting a service from an Elasticsearch database [ID_35173]
+
+<!-- MR 10.3.0 - FR 10.3.2 -->
+
+Because of a number of enhancements, overall performance has increased when deleting a service from an Elasticsearch database.
 
 #### SLAnalytics: Enhanced processing of parameter values 'exception' and 'other' [ID_35214]
 
@@ -893,13 +907,13 @@ In some cases, an error could occur in SLElement when a trend template was being
 
 When, in a parameter feed listing EPM parameters, the parameters were grouped, empty groups would incorrectly not be removed after switching to another EPM object.
 
-#### Low-code apps: Problem with 'Close a panel' action [ID_34892]
+#### Low-Code Apps: Problem with 'Close a panel' action [ID_34892]
 
 <!-- MR 10.3.0 - FR 10.3.1 -->
 
 When a *Close a panel* action was configured as a post action on a button component, in some cases, it would incorrectly not cause the panel to close.
 
-#### Dashboards & low-code apps: Decimal values would incorrectly not be allowed in range filters [ID_34897]
+#### Dashboards & Low-Code Apps: Decimal values would incorrectly not be allowed in range filters [ID_34897]
 
 <!-- MR 10.3.0 - FR 10.3.1 -->
 
@@ -908,25 +922,25 @@ In some cases, a range filter in a query filter or a table column filter would i
 > [!NOTE]
 > When using a query filter with filter assistance enabled, the statistics will determine the number of decimals that can be used.
 
-#### Dashboards & low-code apps: Feed component selections would incorrectly be lost after applying a built-in theme [ID_34908]
+#### Dashboards & Low-Code Apps: Feed component selections would incorrectly be lost after applying a built-in theme [ID_34908]
 
 <!-- MR 10.3.0 - FR 10.3.1 -->
 
 When you applied a built-in theme, feed component selections would incorrectly be lost after refetching the data.
 
-#### Dashboards & low-code apps: Not possible to group the data in a timeline populated using a query with a query filter [ID_34932]
+#### Dashboards & Low-Code Apps: Not possible to group the data in a timeline populated using a query with a query filter [ID_34932]
 
 <!-- MR 10.3.0 - FR 10.3.1 -->
 
 When a timeline was populated using a query with a query filter, it would incorrectly not be possible to group the data.
 
-#### Low-code apps: Drop-down box containing an 'execute component' action would incorrectly be empty [ID_34953]
+#### Low-Code Apps: Drop-down box containing an 'execute component' action would incorrectly be empty [ID_34953]
 
 <!-- MR 10.3.0 - FR 10.2.12 [CU1] -->
 
 When an *execute component* action had been configured, in some cases, when you tried to update that action, the drop-down box containing the action would incorrectly be empty.
 
-#### Dashboards app & low-code apps: Manually sorted GQI table would no longer feed row values [ID_34969]
+#### Dashboards app & Low-Code Apps: Manually sorted GQI table would no longer feed row values [ID_34969]
 
 <!-- MR 10.3.0 - FR 10.2.12 [CU1] -->
 
@@ -996,4 +1010,32 @@ When an element was frequently receiving timeout values, SLElement would leak me
 
 <!-- MR 10.3.0 - FR 10.3.2 -->
 
-When a GQI query retrieved the status of a DOM instance that had no status, the status ID of that DOM instance would incorrectly no longer be returned as a null value. Instead, a `Could not find state for statusID ...` error would be thrown.
+When a GQI query retrieved the status of a DOM instance that had no status, the logic would incorrectly detect that a status was present and would try to resolve the display name for that status, causing a `Could not find state for statusID ...` error to be thrown.
+
+#### Dashboards app & low-code apps: Loading indicator would not appear when sorting, filtering or refreshing a table [ID_35238]
+
+<!-- MR 10.3.0 - FR 10.3.2 -->
+
+When you sorted or filtered a table by clicking a table header, or when an action triggered a refresh of the table data, in some cases, no loading indicator would appear.
+
+#### GQI: Problem when fetching two queries using an external data source with a custom argument of which the ID was set to "Type" [ID_35242]
+
+<!-- MR 10.3.0 - FR 10.3.3 -->
+
+When two queries using an external data source with a custom argument of which the ID was set to "Type" had to be fetched, only one of the two queries would get fetched when the only difference between them was the value of the custom argument.
+
+#### GQI: Metadata would incorrectly be removed when a custom operator was applied [ID_35283]
+
+<!-- MR 10.3.0 - FR 10.3.2 -->
+
+When, in a GQI query, a custom operator was applied, all metadata available on the rows would incorrectly be removed, causing feeds to no longer work as expected.
+
+Also, when a column was renamed via a custom operator, the metadata available on that column would incorrectly be removed.
+
+#### DataMiner Object Models: Permission checks for DOM modules requiring view permission 'None' were too strict [ID_35305]
+
+<!-- MR 10.3.0 - FR 10.3.3 -->
+
+If a DOM module is created without specifying *SecuritySettings*, the view permission is set to "None".
+
+Up to now, the check to determine whether a user had the view permission set to "None", would only return true for the Administrator or users in the Administrator group. From now on, when the required view permission is "None", permission checks will no longer be performed.

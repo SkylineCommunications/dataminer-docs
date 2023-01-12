@@ -52,11 +52,59 @@ When you want the NAS service on existing setups to have a quoted path, do the f
 
 Up to now, when you exported real-time trend data to a CSV file, trend points with value "0" would not be included. From now on, those values will be exported as well.
 
+#### SAML authentication will now also work with user names instead of email addresses when automatic user creation is not enabled [ID_35159]
+
+<!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
+
+Since DataMiner version 10.2.6 (10.2.0 CU6), SAML authentication would only work when the SAML response claims contained an email address. From now on, SAML authentication will also work with user names instead of email addresses in case automatic user creation is not enabled.
+
+#### NATS: No attempt will be made to cluster NATS at DMA startup when NATSForceManualConfig is enabled [ID_35221]
+
+<!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
+
+At DMA startup, from now on, no attempt will be made to automatically cluster the NATS nodes when the *NATSForceManualConfig* option is enabled.
+
+If necessary, *NatsCustodianRequests* can be triggered via the SLNetClientTest tool.
+
+#### Low-Code Apps: URLs of published app versions will no longer contain the app version number [ID_35236]
+
+<!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
+
+From now on, the URL of a published version of an app will no longer contain the app version number. Only when you open an earlier version of an app will the URL contain the app version number.
+
 #### ClusterState.xml file removed [ID_35248]
 
 <!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
 
 The `Clusterstate.xml` file, located in the `C:\Skyline DataMiner` folder, was obsolete and has now been removed.
+
+#### Low-code apps: Enhanced confirmation message when deleting an app [ID_35269]
+
+<!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
+
+The confirmation message that appears when you delete an app will now indicate more clearly what will be removed:
+
+- When the app has never been published, only one draft exists. In this case, the confirmation message will clearly state that the entire app will be deleted.
+
+- When the app has been published, multiple versions of the app exist. In the confirmation message, you will be able to choose whether to delete only the current draft or the entire app.
+
+#### Web apps: Date/time picker component will now always show 6 full weeks [ID_35277]
+
+<!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
+
+In all web apps, the date/time picker component will now always show 6 full weeks, regardless of the number of days in the current month. This will prevent the component from having to resize when you switch from one month to another.
+
+#### SLLogCollector now also collects hot threads, node usage and tasks from Elasticsearch [ID_35310]
+
+<!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
+
+SLLogCollector packages will now also include the following additional files containing information retrieved from the Elasticsearch database (if present):
+
+| File | Contents |
+|------|----------|
+| `\Logs\Elastic\<Node address>\_nodes.hot_threads.txt` | The output of an `GET /_nodes/hot_threads` command. |
+| `\Logs\Elastic\<Node address>\_nodes.usage.json`      | The output of a `GET /_nodes/usage` command.        |
+| `\Logs\Elastic\<Node address>\_tasks.json`            | The output of a `GET /_tasks?detailed` command.     |
 
 ### Fixes
 
@@ -256,6 +304,34 @@ From now on, table filter boxes will be shown or hidden depending on the followi
 | Filter             | Shown      |
 | *No Filter option* | Not shown  |
 
+#### DataMiner Cube - Surveyor: Problem when upgrading a view of which the name contains invalid characters [ID_35208]
+
+<!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
+
+When a view of which the name contained one of the below-mentioned characters was upgraded to a service, up to now, the *Upgrade to service* action would fail because those characters are not allowed in service names. The view would disappear, but the service would incorrectly not be created.
+
+```txt
+\ / : * ? " < > | ° ;
+```
+
+From now on, when you try to upgrade a view of which the name contains one of these characters, a pop-up window will appear, saying that the view name contains invalid characters. When you then click *OK*, the pop-up window will close and the view will switch to edit mode, allowing you to change its name.
+
+#### DataMiner Cube - Visual Overview: Parameter value displayed on a shape in history mode would not be updated when linked to a session variable [ID_35219]
+
+<!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
+
+When a shape is linked to a parameter via a session variable, the parameter value shown on the shape will be updated when the session variable is updated, and when the shape goes into history mode, the history value of the linked parameter will be shown. However, up to now, when the session variable was updated while the shape was in history mode, the parameter value would incorrectly not be updated.
+
+#### Problem with wildcard OIDs when specified on a table parameter [ID_35223]
+
+<!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
+
+SNMP table polling would stop working when a wildcard OID was configured on the table parameter. That wildcard OID would always be replaced by 1 instead of the configured parameter value.
+
+Configuring an OID on the table is necessary when using *getNext* (with or without *multipleGet*). In other cases, it is optional. There, a workaround could be to remove the OID configured on the table parameter.
+
+Standalone parameters configured with a wildcard OID were not affected.
+
 #### DataMiner Cube - Element Connections app: Problems when creating or updating connections [ID_35228]
 
 <!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
@@ -264,7 +340,7 @@ When, in the *Element Connections* app, you created a new connection or updated 
 
 Also, the *Element Connections* app has now been made fully compatible with the *Skyline Black* theme.
 
-#### Dashboards app & Low-code apps - Node edge component: Segments of bidirectional edges would not always be positioned consistently [ID_35230]
+#### Dashboards app & Low-Code Apps - Node edge component: Segments of bidirectional edges would not always be positioned consistently [ID_35230]
 
 <!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
 
@@ -282,6 +358,56 @@ When a client asynchronously sent an GQI message to SLNet, in some cases, an exc
 
 When redundancy groups were being initialized during a DataMiner startup, in some cases, an error could occur when an element had its state changed from "undefined" to "stopped".
 
+#### DataMiner Cube - Trending: 'Trending is currently not available ...' error would incorrectly be displayed while viewing the trend graph of an EPM object [ID_35234]
+
+<!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
+
+In some cases, a `Trending is currently not available for this parameter` error would incorrectly be displayed when you were viewing the trend graph of an EPM object.
+
+#### Cassandra Cluster: Incorrect db.xml entries could cause db.xml to get corrupted upon synchronization [ID_35237]
+
+<!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
+
+On DataMiner clusters with a Cassandra Cluster database, incorrect *db.xml* entries could cause that file to get corrupted upon synchronization.
+
+#### DataMiner Cube - Visual Overview: Inline preset of spectrum component would no longer be applied [ID_35244]
+
+<!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
+
+When you had defined an inline preset while configuring an embedded spectrum component, that preset would no longer be applied. Instead, a `Please select at least one of the preset content items before clicking Load.` message would appear.
+
+#### Dashboards app & Low-code apps: Enhanced caching of items in query column selection box [ID_35251]
+
+<!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
+
+When creating or editing a query, you can select the query columns from a selection box. A number of enhancements have now been made with regard to the caching of this list of query columns.
+
+#### Dashboards app & Low-code apps: Selected data would incorrectly not get removed after being deleted [ID_35254]
+
+<!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
+
+When data (e.g. a query) was deleted while it was selected, in some cases, it would incorrectly not be removed from the selection.
+
+#### Dashboards app: Two context menus could incorrectly be displayed simultaneously in the side bar [ID_35255]
+
+<!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
+
+When, in the side bar, you right-clicked a folder or a dashboard, and then clicking the ellipsis ("...") in the tab header, two context menus could incorrectly be displayed simultaneously.
+
+#### Dashboards app & Low-code apps - Node edge component: Problem with 'Set as ...' commands in component settings [ID_35256]
+
+<!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
+
+When, in the settings of a node edge component, you had selected a configured edge, it would incorrectly be possible to use the *Set as edge* command. This would clear the existing configuration of the edge in question and cause the settings to be saved incorrectly.
+
+From now on, it will only be possible to set a node as edge and vice versa.
+
+#### Dashboards app & Low-code apps: Unknown components would incorrectly no longer be indicated as such [ID_35257]
+
+<!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
+
+In some cases, unknown components would incorrectly no longer be indicated as such.
+
 #### Documents module: SLDataMiner would leak memory when email addresses and hyperlinks to web pages were retrieved [ID_35261]
 
 <!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
@@ -295,3 +421,20 @@ Up to now, when email addresses and hyperlinks to web pages were retrieved from 
 <!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
 
 When a client application connects to a DataMiner Agent, it will first try to set up communication via eventing. If communication via eventing fails, the DataMiner Agent will fall back to communication via polling. In some rare cases, both types of communication (i.e. eventing and polling) would incorrectly be used simultaneously.
+
+#### Low-code apps: Keyboard shortcuts would not work in the dashboard editor [ID_35274]
+
+<!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
+
+Up to now, the following keyboard shortcuts would not work in the dashboard editor:
+
+| Shortcut | Action                          |
+|----------|---------------------------------|
+| CTRL+a   | Select all components.          |
+| DELETE   | Delete the selected components. |
+
+#### Spectrum Analysis: 'Visualize measurement points' setting of a spectrum element would no longer be property saved [ID_35293]
+
+<!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
+
+When you enabled the *Visualize measurement points* setting of a spectrum element, that change would no longer to properly saved in the element's *element.xml* file. This would cause unexpected behavior after restarting the DataMiner Agent or the element in question.

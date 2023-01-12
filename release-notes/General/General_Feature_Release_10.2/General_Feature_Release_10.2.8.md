@@ -306,7 +306,7 @@ In DataMiner Cube, the following enhancements have been made to the *Failover Co
 
 When a DataMiner Agent could not be reached, in some cases, an “Attempt to use an unauthenticated connection” error would appear in the log files or on the UI. From now on, a clearer error message will appear instead.
 
-#### DataMiner Application Framework: Splash screen of apps now show 'Low-code apps' instead of 'Apps' \[ID_33798\]
+#### DataMiner Application Framework: Splash screen of apps now shows 'Low-code apps' instead of 'Apps' \[ID_33798\]
 
 When you start up a custom low-code application created using the DataMiner Application Framework, its splash screen will now show “Low-code apps” instead of “Apps”.
 

@@ -2861,6 +2861,10 @@
     - name: Known issues
       topicUID: Known_issues
       items:
+        - name: Cassandra cluster node in unexpected state
+          topicUID: KI_Cassandra_cluster_node_unexpected_state
+        - name: Year 2038 problem for Cassandra
+          topicUID: Year_2038_Problem_for_Cassandra
         - name: Null reference exceptions in SLDBConnection.txt and unhandled exception in Alarm Console
           topicUID: KI_NullReferenceException_SLDBConnection
         - name: SLProtocol timer thread run-time error

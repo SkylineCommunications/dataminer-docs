@@ -60,8 +60,22 @@ The following options can be specified in the *ComponentOptions* shape data fiel
 
   Note that *SetVar* controls of type *DateTime* will automatically return a date and time in the correct format. See [Creating a DateTime control](xref:Adding_options_to_a_session_variable_control#creating-a-datetime-control). For more information on date and time format strings, see <https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings>.
 
-> [!NOTE]
-> If you use the *StartTime* and *EndTime* options for a *ListView* component with source *Reservations* or *Bookings*, the bookings in that time range will be added to the ones already present in the cache. If other bookings were already in the cache, these will be included in the list too. If you only want to include bookings from a specific time range, use a *Filter* shape data field instead.
+  > [!NOTE]
+  > If you use the *StartTime* and *EndTime* options for a *ListView* component with source *Reservations* or *Bookings*, the bookings in that time range will be added to the ones already present in the cache. If other bookings were already in the cache, these will be included in the list too. If you only want to include bookings from a specific time range, use a *Filter* shape data field instead.
+
+- **ColorRows=true/false**: Available from DataMiner 10.3.2/10.4.0 onwards. This option can be used to set the highlight color of the list view rows to the booking color. The booking color is a summary of the following reserved booking properties: *VisualForeground*, *VisualBackground*, *VisualSelectedForeground*, and *VisualSelectedBackground*. Each of those properties can be set to a string value representing a hexadecimal value, an (A)RGB value, or a predefined Windows color (the latter is not recommended). <!-- RN 35157 -->
+
+  > [!NOTE]
+  >
+  > - The *ColorRows* feature is disabled by default ("ColorRows=False").
+  > - At present, the *ColorRows* feature is only available on ListView components that have bookings as a source.
+  > - Configuring gray-tinted foreground colors is not recommended as a ListView component uses a gray layer when you hover over its items. In the Skyline themes, that gray layer has the following color:
+  >
+  >   | Theme | Color of gray layer        |
+  >   |-------|----------------------------|
+  >   | Mixed | #E5E5E5 (RGB: 229,229,229) |
+  >   | Light | #E5E5E5 (RGB: 229,229,229) |
+  >   | Black | #333333 (RGB: 51,51,51)    |
 
 ## List view filters
 
@@ -327,7 +341,10 @@ List view components can be found both in Visual Overview and in the DataMiner B
 
 - To sort the items in the list by a particular column, click the header of that column. Click the header again to reverse the sort order.
 
-- To filter which items are displayed in the list, click the filter icon for the column you want to apply a filter to and enter a filter in the box below the column header.
+- To filter which items are displayed in the list, click the filter icon for the column you want to apply a filter to and enter a filter in the box below the column header. 
+
+  > [!NOTE]
+  > When you try to filter a list view with source *Bookings* or *Reservations* on a GUID or a number, the matching booking will only be shown if you enter the full and correct GUID or number.
 
 - To apply a custom column configuration, see [Creating a new column configuration](#creating-a-new-column-configuration) and [Loading the default column configuration](#loading-the-default-column-configuration).
 
