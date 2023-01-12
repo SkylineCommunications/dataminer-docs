@@ -144,6 +144,12 @@ From now on, all custom CollectorConfig XML files will be synchronized across th
 
 When a trend pattern was detected on a DVE child element, up to now, the suggestion event would be generated on the parent element. From now on, it will be generated on the child element instead.
 
+#### Web apps: Enhanced color picker [ID_35276]
+
+<!-- MR 10.4.0 - FR 10.3.3 -->
+
+A number of enhancements have been made to the color picker.
+
 ### Fixes
 
 #### GQI: Problem when retrieving DCF interfaces [ID_34820]
@@ -185,6 +191,14 @@ From now on, when the parameter feed has a protocol or view filter, it will fetc
 <!-- MR 10.4.0 - FR 10.3.2 -->
 
 A number of issues with regard to data highlighting have been fixed.
+
+#### Dashboards app: Problem when trying to open a shared dashboard [ID_35271]
+
+<!-- MR 10.4.0 - FR 10.3.3 -->
+
+When users tried to open a shared dashboard, in some cases, they would unexpectedly be presented with a login screen due to a permission issue.
+
+Workaround: Recreate the faulty shared dashboard.
 
 #### Dashboards app & Low-code apps - GQI table component: 'Cannot read properties of undefined (reading 'Guid')' error [ID_35316]
 
