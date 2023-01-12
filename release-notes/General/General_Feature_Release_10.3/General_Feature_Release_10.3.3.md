@@ -52,6 +52,12 @@ A number of security enhancements have been made.
 
 Multiple instances of the SLLogCollector tool can now be run simultaneously.
 
+#### Web apps: Enhanced color picker [ID_35276]
+
+<!-- MR 10.4.0 - FR 10.3.3 -->
+
+A number of enhancements have been made to the color picker.
+
 ### Fixes
 
 #### Problem with SLLog when logging large entries regarding failed Elasticsearch query requests/responses [ID_35037]
@@ -60,14 +66,36 @@ Multiple instances of the SLLogCollector tool can now be run simultaneously.
 
 Up to now, an error could occur in SLLog when adding large entries regarding failed Elasticsearch query requests/responses.
 
+#### When a direct view table was updated, the wrong columns could be updated in the source element [ID_35075]
+
+<!-- MR 10.4.0 - FR 10.3.3 -->
+
+When a direct view table was updated while one of the source elements was stopped, due to a column translation issue, the wrong columns could be updated in that source element the moment it was started again.
+
 #### GQI: Problem when fetching two queries using an external data source with a custom argument of which the ID was set to "Type" [ID_35242]
 
 <!-- MR 10.3.0 - FR 10.3.3 -->
 
 When two queries using an external data source with a custom argument of which the ID was set to "Type" had to be fetched, only one of the two queries would get fetched when the only difference between them was the value of the custom argument.
 
+#### Dashboards app: Problem when trying to open a shared dashboard [ID_35271]
+
+<!-- MR 10.4.0 - FR 10.3.3 -->
+
+When users tried to open a shared dashboard, in some cases, they would unexpectedly be presented with a login screen due to a permission issue.
+
+Workaround: Recreate the faulty shared dashboard.
+
 #### SLDataGateway could end up with an excessive number of HealthMonitor.Refresh threads [ID_35286]
 
 <!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
 
 In some cases, the SLDataGateway process could end up with an excessive number of *HealthMonitor.Refresh* threads.
+
+#### DataMiner Object Models: Permission checks for DOM modules requiring view permission 'None' were too strict [ID_35305]
+
+<!-- MR 10.3.0 - FR 10.3.3 -->
+
+If a DOM module is created without specifying *SecuritySettings*, the view permission is set to "None".
+
+Up to now, the check to determine whether a user had the view permission set to "None", would only return true for the Administrator or users in the Administrator group. From now on, when the required view permission is "None", permission checks will no longer be performed.

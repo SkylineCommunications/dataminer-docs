@@ -144,6 +144,12 @@ From now on, all custom CollectorConfig XML files will be synchronized across th
 
 When a trend pattern was detected on a DVE child element, up to now, the suggestion event would be generated on the parent element. From now on, it will be generated on the child element instead.
 
+#### Web apps: Enhanced color picker [ID_35276]
+
+<!-- MR 10.4.0 - FR 10.3.3 -->
+
+A number of enhancements have been made to the color picker.
+
 ### Fixes
 
 #### GQI: Problem when retrieving DCF interfaces [ID_34820]
@@ -166,6 +172,12 @@ In some cases, Resource Manager could throw a NullReferenceException when *Resou
 
 When a column select or a column manipulation operator was applied before an aggregation operator, the column select or column manipulation operator would incorrectly be ignored. As a result, all columns would be visible in the *group by node* or columns created by the column manipulation would not be added to the options of the *group by node*.
 
+#### When a direct view table was updated, the wrong columns could be updated in the source element [ID_35075]
+
+<!-- MR 10.4.0 - FR 10.3.3 -->
+
+When a direct view table was updated while one of the source elements was stopped, due to a column translation issue, the wrong columns could be updated in that source element the moment it was started again.
+
 #### Dashboards app & Low-Code Apps - Parameter feed: Problem when more than 10,000 elements had to be retrieved from the server [ID_35186]
 
 <!-- MR 10.4.0 - FR 10.3.2 -->
@@ -179,6 +191,14 @@ From now on, when the parameter feed has a protocol or view filter, it will fetc
 <!-- MR 10.4.0 - FR 10.3.2 -->
 
 A number of issues with regard to data highlighting have been fixed.
+
+#### Dashboards app: Problem when trying to open a shared dashboard [ID_35271]
+
+<!-- MR 10.4.0 - FR 10.3.3 -->
+
+When users tried to open a shared dashboard, in some cases, they would unexpectedly be presented with a login screen due to a permission issue.
+
+Workaround: Recreate the faulty shared dashboard.
 
 #### Dashboards app & Low-code apps - GQI table component: 'Cannot read properties of undefined (reading 'Guid')' error [ID_35316]
 
