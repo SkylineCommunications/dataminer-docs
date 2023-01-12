@@ -76,6 +76,14 @@ From now on, when SLNet receives an error from the web API after sending a *GetC
 
 When a behavioral anomaly was detected on a DVE child element, up to now, the suggestion event or the alarm event would be generated on the parent element. From now on, it will be generated on the child element instead.
 
+#### Alarm templates - Smart baseline calculations: NullReferenceException prevented & enhanced exception logging [ID_35348]
+
+<!-- MR 10.4.0 - FR 10.3.3 -->
+
+In some cases, a `Baseline Calculation Failed: System.NullReferenceException: Object reference not set to an instance of an object` error would be added to the *SLSmartBaselineManager.txt* log file. The issue causing that error has now been fixed.
+
+Also, log entries indicating an exception thrown during baseline calculations will now include details regarding the element and parameter associated with the exception.
+
 ### Fixes
 
 #### Problem with SLLog when logging large entries regarding failed Elasticsearch query requests/responses [ID_35037]
