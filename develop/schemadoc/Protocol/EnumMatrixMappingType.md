@@ -1,0 +1,15 @@
+---
+uid: Protocol-EnumMatrixMappingType
+---
+
+# EnumMatrixMappingType simple type
+
+List of types that can be used as value in the Matrix Mapping.
+
+## Content Type
+
+|Item|Facet value|Description|
+|--- |--- |--- |
+|***string restriction***|||
+|&nbsp;&nbsp;Enumeration|pid|Parameter ID.|
+

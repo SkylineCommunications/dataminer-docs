@@ -2065,6 +2065,49 @@
               items: 
               - name: Param
                 topicUid: Protocol.Params.Param.Length.Content.Param
+          - name: Matrix
+            topicUid: Protocol.Params.Param.Matrix
+            items: 
+            - name: Inputs
+              topicUid: Protocol.Params.Param.Matrix.Inputs
+              items: 
+              - name: '@tablePid'
+                topicUid: Protocol.Params.Param.Matrix.Inputs-tablePid
+              - name: Mappings
+                topicUid: Protocol.Params.Param.Matrix.Inputs.Mappings
+                items: 
+                - name: Mapping
+                  topicUid: Protocol.Params.Param.Matrix.Inputs.Mappings.Mapping
+                  items: 
+                  - name: '@name'
+                    topicUid: Protocol.Params.Param.Matrix.Inputs.Mappings.Mapping-name
+                  - name: '@type'
+                    topicUid: Protocol.Params.Param.Matrix.Inputs.Mappings.Mapping-type
+            - name: MatrixOptions
+              topicUid: Protocol.Params.Param.Matrix.MatrixOptions
+              items: 
+              - name: MatrixOption
+                topicUid: Protocol.Params.Param.Matrix.MatrixOptions.MatrixOption
+                items: 
+                - name: '@name'
+                  topicUid: Protocol.Params.Param.Matrix.MatrixOptions.MatrixOption-name
+                - name: '@type'
+                  topicUid: Protocol.Params.Param.Matrix.MatrixOptions.MatrixOption-type
+            - name: Outputs
+              topicUid: Protocol.Params.Param.Matrix.Outputs
+              items: 
+              - name: '@tablePid'
+                topicUid: Protocol.Params.Param.Matrix.Outputs-tablePid
+              - name: Mappings
+                topicUid: Protocol.Params.Param.Matrix.Outputs.Mappings
+                items: 
+                - name: Mapping
+                  topicUid: Protocol.Params.Param.Matrix.Outputs.Mappings.Mapping
+                  items: 
+                  - name: '@name'
+                    topicUid: Protocol.Params.Param.Matrix.Outputs.Mappings.Mapping-name
+                  - name: '@type'
+                    topicUid: Protocol.Params.Param.Matrix.Outputs.Mappings.Mapping-type
           - name: Measurement
             topicUid: Protocol.Params.Param.Measurement
             items: 
