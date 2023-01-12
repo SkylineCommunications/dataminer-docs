@@ -4,7 +4,7 @@ uid: Protocol-EnumMatrixInputsMappingNameType
 
 # EnumMatrixInputsMappingNameType simple type
 
-List of options that can be used as type in the Matrix Mapping.
+List of options that can be used as type in the matrix mapping.
 
 ## Content Type
 
@@ -16,4 +16,3 @@ List of options that can be used as type in the Matrix Mapping.
 |&nbsp;&nbsp;Enumeration|state|Indicates the state of the input.|
 |&nbsp;&nbsp;Enumeration|lock|Indicates the lock state of the input.|
 |&nbsp;&nbsp;Enumeration|page|Indicates the page on which the input is located.|
-

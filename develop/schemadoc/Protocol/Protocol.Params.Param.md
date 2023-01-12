@@ -49,7 +49,7 @@ Defines a parameter.
 |&nbsp;&nbsp;[Information](xref:Protocol.Params.Param.Information)|[0, 1]|Specifies additional information about the parameter.|
 |&nbsp;&nbsp;[Interprete](xref:Protocol.Params.Param.Interprete)|[0, 1]|Specifies how a parameter value is processed.|
 |&nbsp;&nbsp;[Length](xref:Protocol.Params.Param.Length)|[0, 1]|Specifies the length of the command/response.|
-|&nbsp;&nbsp;[Matrix](xref:Protocol.Params.Param.Matrix)|[0, 1]|If /Protocol/Params/Param/Type is set to "matrix", then this will allow you to define the matrix control. Feature introduced in DataMiner 10.3.1 (RN 34661).|
+|&nbsp;&nbsp;[Matrix](xref:Protocol.Params.Param.Matrix)|[0, 1]|If /Protocol/Params/Param/Type is set to "matrix", this will allow you to define the matrix control. Feature introduced in DataMiner 10.3.1/10.4.0 (RN 34661).|
 |&nbsp;&nbsp;[Measurement](xref:Protocol.Params.Param.Measurement)|[0, 1]|Specifies how the parameter has to be displayed on the user interface (depending on the parameter type).|
 |&nbsp;&nbsp;[Mediation](xref:Protocol.Params.Param.Mediation)|[0, 1]|Contains the links between parameters of a base protocol and parameters of this protocol.|
 |&nbsp;&nbsp;[Message](xref:Protocol.Params.Param.Message)|[0, 1]|Specifies a message to be displayed when users change the parameter on the user interface.|

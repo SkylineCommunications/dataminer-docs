@@ -4,7 +4,7 @@ uid: Protocol-EnumMatrixMatrixOptionType
 
 # EnumMatrixMatrixOptionType simple type
 
-List of types that can be used in the Matrix MatrixOption type.
+List of types that can be used in the matrix option type.
 
 ## Content Type
 
@@ -12,4 +12,3 @@ List of types that can be used in the Matrix MatrixOption type.
 |--- |--- |--- |
 |***string restriction***|||
 |&nbsp;&nbsp;Enumeration|value|A value without a link to components of the protocol.|
-

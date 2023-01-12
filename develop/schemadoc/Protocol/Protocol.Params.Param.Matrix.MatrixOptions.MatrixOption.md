@@ -4,7 +4,7 @@ uid: Protocol.Params.Param.Matrix.MatrixOptions.MatrixOption
 
 # MatrixOption element
 
-Specifies specific options for the look or behaviour of the matrix.
+Specifies specific options for the look or behavior of the matrix.
 
 ## Type
 
