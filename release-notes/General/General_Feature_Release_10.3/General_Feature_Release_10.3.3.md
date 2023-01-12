@@ -58,6 +58,12 @@ Multiple instances of the SLLogCollector tool can now be run simultaneously.
 
 A number of enhancements have been made to the color picker.
 
+#### Errors received from the web API after sending a GetConnection call will now be logged in SLNet.txt [ID_35313]
+
+<!-- MR 10.4.0 - FR 10.3.3 -->
+
+From now on, when SLNet receives an error from the web API after sending a *GetConnection* call, it will log the request and the response in the *SLNet.txt* log file.
+
 #### SLAnalytics - Behavioral anomaly detection: Suggestion events and alarm events for a DVE child element will now be generated on that same DVE child element [ID_35332]
 
 <!-- MR 10.4.0 - FR 10.3.3 -->
