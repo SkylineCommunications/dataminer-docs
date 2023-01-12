@@ -16,6 +16,12 @@ uid: Cube_Feature_Release_10.3.3
 
 ## Other features
 
+#### DataMiner Cube - System Center: New DataMiner log file 'SLSmartBaselineManager.txt' [ID_35352]
+
+<!-- MR 10.2.0 [CU8] - FR 10.2.11 [CU0] -->
+
+In the *Logging* section of *System Center*, you can now also consult the *SLSmartBaselineManager.txt* log file.
+
 ## Changes
 
 ### Enhancements
