@@ -4,12 +4,16 @@ uid: Benefits_DevOps_Professionals_Program
 
 # Benefits attached to the DataMiner DevOps Professional program
 
+## Benefits
+
+By creating value for the DataMiner community, you earn DevOps Reputation Points. Not only do these Points determine your [DevOps Professional level](#accumulating-dojo-reputation-points), they also allow you to enjoy the plentiful benefits attached to the DevOps Professional program.
+
 > [!NOTE]
 > We are continuously working on further evolving this key program, so new benefits or ways of collecting Dojo Reputation Points can be expected.
 
 The benefits of being part of the exclusive DataMiner DevOps Professionals community are very diverse and range from small personal perks to gaining access to exclusive content, all the way up to bumping up your DataMiner Support Plan from the standard Continuity level to the added-value Evolve Plan, which includes premium SLAs and even free credits for you to spend.
 
-A short overview of all unlockable benefits:
+A short overview of all benefits that can be unlocked using Reputation Points:
 
 - Access to the Evolve Support Plan
 
@@ -27,13 +31,16 @@ A short overview of all unlockable benefits:
 
 - Exclusive option to convert your Dojo Reputation Points to DataMiner Cloud Credits or Professional Service Credits
 
-On the [DatMiner Dojo Ranks page](https://community.dataminer.services/dataminer-dojo-ranks/) you can find an in-depth overview of all the benefits you can unlock with Dojo reputation points.
+> [!TIP]
+> You can find a more extensive overview of all benefits on [DatMiner Dojo](https://community.dataminer.services/dataminer-devops-professional-program/#benefits).
 
 ## Accumulating Dojo Reputation Points
 
 To maintain a DataMiner DevOps Professional status and to be an official member of the exclusive DataMiner DevOps Professionals community and unlock the associated benefits, you must accumulate a set quantity of Dojo Reputation Points on an annual basis.
 
 There are three levels available for DataMiner DevOps Professionals, with advocate being the entry level and catalyst being the top tier.
+
+![Reputation Points](~/dataminer-overview/images/DevOps_Timeline.svg)
 
 | **ADVOCATE** | **ENABLER** | **CATALYST** |
 |--|--|--|
@@ -59,4 +66,4 @@ In general, the more active you are in the DataMiner Dojo community and the more
 - **Being an advocate for the DataMiner brand**: Being an advocate is also part of the culture of being a DataMiner DevOps Professional. Therefore, mentioning DataMiner as part of your skill set in your LinkedIn profile will earn you 500 points per year. If DataMiner is mentioned in the job title in your email signature, we will hit you up with another 250 points per year. Each LinkedIn post that mentions @skyline and uses the tag #dataminerdevops will automatically result in 50 points per post.
 
 > [!NOTE]
-> In addition to automatic tracking for most of the aforementioned activities to generate points, our community administrators will track certain activities to the best of their abilities to ensure that everybody is awarded all the points they are eligible for in due time. However, you are always welcome to expedite or facilitate the process by highlighting your activities via devops@skyline.be if Reputation Points were not automatically attributed.
+> In addition to automatic tracking for most of the aforementioned activities to generate points, our community administrators will track certain activities to the best of their abilities to ensure that everybody is awarded all the points they are eligible for in due time. However, you are always welcome to expedite or facilitate the process by highlighting your activities via [devops@skyline.be](mailto:devops@skyline.be) if Reputation Points were not automatically attributed.

@@ -90,7 +90,7 @@
               topicUID: Service_Delivery
             - name: Partnership governance
               topicUID: Partnership_Governance
-    - name: DataMiner Devops Professionals
+    - name: DataMiner DevOps Professional Program
       topicUID: DataMiner_Devops_Professionals
       items:
         - name: What is the DataMiner DevOps Professional program?

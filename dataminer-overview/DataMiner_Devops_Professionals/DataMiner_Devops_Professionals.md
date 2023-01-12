@@ -2,7 +2,7 @@
 uid: DataMiner_Devops_Professionals
 ---
 
-# DataMiner Devops Professionals
+# DataMiner Devops Professional Program
 
 Tomorrow revolves all around **building a powerful, agile, data-driven operation**. This to empower teams with actionable data and insights, and to leverage automation and orchestration across the business to drive efficiency and accelerate innovation. After all, every business needs and wants *better*, *faster*, and *cheaper*.
 
@@ -10,10 +10,12 @@ While DataMiner is a key strategic technology that delivers exactly that, succes
 
 The **DataMiner DevOps Professional program** is centered around empowered people embedded in an operation: People knowledgeable about DataMiner and all its powerful modular functions, but also knowledgeable about the specifics of the overall operation and the goals and ambitions of the business. In other words, the program focuses on people that can iterate quickly and convert their finite time into tangible value for the business.
 
+![DevOps Professionals](~/dataminer-overview/images/DevOpsEnablement.png)
+
 With the DataMiner DevOps Professional program, Skyline can help you achieve all this and grow into an agile data-driven powerhouse.
 
 > [!TIP]
 > Find out more about the [principles](xref:What_is_the_DevOps_Professionals_Program), [benefits](xref:Benefits_DevOps_Professionals_Program), [skill sets](xref:Skill_Sets_DevOps_Professionals_Program) of the DataMiner DevOps Professional program.
 
 > [!NOTE]
-> For more information on the DataMiner DevOps Professional program, check out [DataMiner DevOps Professionals](https://community.dataminer.services/dataminer-devops-professionals/) on DataMiner Dojo.
+> You can find more information on the DataMiner DevOps Professional program on [DataMiner Dojo](https://community.dataminer.services/dataminer-devops-professional-program/) and the [Skyline website](https://skyline.be/dataminer-devops-professional).
