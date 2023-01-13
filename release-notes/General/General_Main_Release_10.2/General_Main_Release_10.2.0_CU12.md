@@ -63,6 +63,14 @@ Up to now, when a *contentSeparator* tag was left empty, the values of the prope
 
 In some cases, the SLDataGateway process could end up with an excessive number of *HealthMonitor.Refresh* threads.
 
+#### DataMiner Cube - ListView component: Column filter boxes incorrectly had autocomplete enabled [ID_35296]
+
+<!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
+
+In a *ListView* component, you can click the filter icon of a particular column and enter a filter in the box below the column header.
+
+Up to now, those column filter boxes incorrectly had *autocomplete* enabled.
+
 #### Dashboards app / Low-Code Apps - Node edge component: Edge overrides would incorrectly no longer be applied [ID_35298]
 
 <!-- MR 10.2.0 [CU12] - FR 10.3.2 -->
