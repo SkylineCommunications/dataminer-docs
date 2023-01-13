@@ -41,6 +41,12 @@ From now on, exporting and importing DELT packages containing element and alarm 
 
 Up to now, an error could occur in SLLog when adding large entries regarding failed Elasticsearch query requests/responses.
 
+#### SLDataGateway would leak memory when offloading average trend data for DVE elements [ID_35167]
+
+<!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
+
+The SLDataGateway process would leak memory when offloading average trend data for DVE elements.
+
 #### DataMiner Cube - Alarm Console: Multiple values in property columns would incorrectly not be separated by any separator [ID_35239]
 
 <!-- MR 10.2.0 [CU12] - FR 10.3.3 -->

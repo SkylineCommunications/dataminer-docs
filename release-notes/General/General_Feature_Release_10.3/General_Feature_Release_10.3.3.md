@@ -20,6 +20,8 @@ uid: General_Feature_Release_10.3.3
 
 #### Dashboards app - GQI: New data sources [ID_35027]
 
+<!-- MR 10.4.0 - FR 10.3.3 -->
+
 In the Generic Query Interface, the following new data sources are now available:
 
 - Get trend data patterns
@@ -35,6 +37,12 @@ Two new field descriptors have been added to the DataMiner Object Models:
 - GroupFieldDescriptor: Can be used to define that a field should contain the name of a DataMiner user group.
 
 - UserFieldDescriptor: Can be used to define that a field should contain the name of a DataMiner user. There is a *GroupNames* property that can be used to define which groups the user can be a part of.
+
+#### GQI: Multiple groupBy operations can now be applied after an aggregation operation [ID_35355]
+
+<!-- MR 10.4.0 - FR 10.3.3 -->
+
+After an aggregation operation, you can now apply multiple groupBy operations.
 
 ## Changes
 
@@ -97,6 +105,12 @@ Up to now, an error could occur in SLLog when adding large entries regarding fai
 <!-- MR 10.4.0 - FR 10.3.3 -->
 
 When a direct view table was updated while one of the source elements was stopped, due to a column translation issue, the wrong columns could be updated in that source element the moment it was started again.
+
+#### SLDataGateway would leak memory when offloading average trend data for DVE elements [ID_35167]
+
+<!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
+
+The SLDataGateway process would leak memory when offloading average trend data for DVE elements.
 
 #### GQI: Problem when fetching two queries using an external data source with a custom argument of which the ID was set to "Type" [ID_35242]
 
