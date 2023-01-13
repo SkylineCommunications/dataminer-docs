@@ -484,6 +484,12 @@ When an attempt is made to create resource properties, resource definition prope
 
 This same fix also fixes the creation and migration of resources of which the property list is null and resource pools of which the property definitions list or properties list is null.
 
+#### Enhanced performance when updating a baseline or assigning an alarm template that contains conditional monitoring [ID_35171]
+
+<!-- MR 10.3.0 - FR 10.3.2 -->
+
+Because of a number of enhancements, overall performance has increased when updating a baseline or assigning an alarm template that contains conditional monitoring.
+
 #### Enhanced performance when deleting a service from an Elasticsearch database [ID_35173]
 
 <!-- MR 10.3.0 - FR 10.3.2 -->

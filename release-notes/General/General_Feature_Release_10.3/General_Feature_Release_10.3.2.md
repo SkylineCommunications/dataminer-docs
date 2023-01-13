@@ -291,7 +291,7 @@ In case a *Line & area chart* component displays trending for multiple parameter
 
 #### Enhanced performance when updating a baseline or assigning an alarm template that contains conditional monitoring [ID_35171]
 
-<!-- MR 10.4.0 - FR 10.3.2 -->
+<!-- MR 10.3.0 - FR 10.3.2 -->
 
 Because of a number of enhancements, overall performance has increased when updating a baseline or assigning an alarm template that contains conditional monitoring.
 
