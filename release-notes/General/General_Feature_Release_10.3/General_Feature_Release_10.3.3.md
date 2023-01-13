@@ -102,7 +102,7 @@ Up to now, an error could occur in SLLog when adding large entries regarding fai
 
 #### When a direct view table was updated, the wrong columns could be updated in the source element [ID_35075]
 
-<!-- MR 10.4.0 - FR 10.3.3 -->
+<!-- MR 10.3.0 - FR 10.3.3 -->
 
 When a direct view table was updated while one of the source elements was stopped, due to a column translation issue, the wrong columns could be updated in that source element the moment it was started again.
 
