@@ -98,6 +98,12 @@ Up to now, an error could occur in SLLog when adding large entries regarding fai
 
 When a direct view table was updated while one of the source elements was stopped, due to a column translation issue, the wrong columns could be updated in that source element the moment it was started again.
 
+#### SLDataGateway would leak memory when offloading average trend data for DVE elements [ID_35167]
+
+<!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
+
+The SLDataGateway process would leak memory when offloading average trend data for DVE elements.
+
 #### GQI: Problem when fetching two queries using an external data source with a custom argument of which the ID was set to "Type" [ID_35242]
 
 <!-- MR 10.3.0 - FR 10.3.3 -->
