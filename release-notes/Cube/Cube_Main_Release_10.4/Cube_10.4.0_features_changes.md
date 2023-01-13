@@ -153,12 +153,6 @@ Failed to save your tag. A tag time range was selected for which not all trend d
 Failed to save your tag. The defined patterns cannot be linked into the multivariate pattern. Consider adjusting its configuration and try again.
 ```
 
-#### Trending: Enhanced performance when retrieving pattern matches after opening a trend graph [ID_35373]
-
-<!-- MR 10.4.0 - FR 10.3.3 -->
-
-Because of a number of enhancements, overall performance has increased when retrieving pattern matches after opening a trend graph.
-
 ### Fixes
 
 #### Profiles app: A profile instance would incorrectly list parameters that had been removed from the profile definition [ID_34679] [ID_34771]

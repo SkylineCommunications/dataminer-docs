@@ -32,12 +32,6 @@ In the *Logging* section of *System Center*, you can now also consult the *SLSma
 
 Up to now, Cube would only check at startup whether Cassandra or Elasticsearch were available. From now on, it will immediately be aware of any changes as to the availability of Cassandra or Elasticsearch.
 
-#### Trending: Enhanced performance when retrieving pattern matches after opening a trend graph [ID_35373]
-
-<!-- MR 10.4.0 - FR 10.3.3 -->
-
-Because of a number of enhancements, overall performance has increased when retrieving pattern matches after opening a trend graph.
-
 ### Fixes
 
 #### Alarm Console: Multiple values in property columns would incorrectly not be separated by any separator [ID_35239]
