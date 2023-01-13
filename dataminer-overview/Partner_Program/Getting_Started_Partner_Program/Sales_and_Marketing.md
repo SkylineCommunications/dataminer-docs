@@ -48,7 +48,7 @@ Here are some pointers to maximize your visibility.
 
   For starters, make sure that you have an appealing and up-to-date [Partner Profile](https://community.dataminer.services/partners/) available on Dojo.
 
-  Furthermore, through the DataMiner DevOps Professional program, you will also receive plenty of opportunity to further grow your exposure and build up leadership identity (e.g. publication of blog posts, use cases, etc.).
+  Furthermore, through the [DataMiner DevOps Professional program](https://community.dataminer.services/dataminer-devops-professional-program/), you will also receive plenty of opportunity to further grow your exposure and build up leadership identity (e.g. publication of blog posts, use cases, etc.).
 
 - **Leverage all your channels**: Ensure that you leverage the DataMiner brand across all your channels, including your corporate website, social media, email signatures, etc.
 
@@ -64,7 +64,7 @@ Here are some pointers to maximize your visibility.
 
   - referring to the DataMiner expertise and brand in your job title(s) and on LinkedIn profiles
 
-  - sharing DataMiner DevOps Professional badges or [DataMiner Certification badges](xref:Overview_Training_certification) on social media
+  - sharing [DataMiner DevOps Professional badges](https://community.dataminer.services/dataminer-devops-professional-program/) or [DataMiner Certification badges](xref:Overview_Training_certification) on social media
 
   - ...
 
