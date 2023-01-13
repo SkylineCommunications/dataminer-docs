@@ -395,11 +395,19 @@ Two new field descriptors have been added to the DataMiner Object Models:
 
 #### Dashboards app - GQI: New data sources [ID_35027]
 
+<!-- MR 10.4.0 - FR 10.3.3 -->
+
 In the Generic Query Interface, the following new data sources are now available:
 
 - Get trend data patterns
 - Get trend data pattern events
 - Get behavioral change events
+
+#### GQI: Multiple groupBy operations can now be applied after an aggregation operation [ID_35355]
+
+<!-- MR 10.4.0 - FR 10.3.3 -->
+
+After an aggregation operation, you can now apply multiple groupBy operations.
 
 ### Service & Resource Management
 
