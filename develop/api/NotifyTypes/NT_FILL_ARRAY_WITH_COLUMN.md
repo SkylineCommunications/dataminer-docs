@@ -59,9 +59,9 @@ protocol.NotifyProtocol(220 /*NT_FILL_ARRAY_WITH_COLUMN*/, columnInfo, values);
     > protocol.NotifyProtocol(220, new object[] { 1000, 1009, new object[] { useClearAndLeave } }, new object[] { fillArray[0], fillArray[8] });
     > ```
 
-- columnValues (object[]):
-  - columnValues[0] (object[]): Primary keys (as string).
-  - columnValues[1] (object[]): Values to set/update.
+- values (object[]):
+  - values[0] (object[]): Primary keys (as string).
+  - values[1] (object[]): Values to set/update.
 
 ## Return Value
 
