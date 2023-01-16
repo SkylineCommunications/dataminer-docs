@@ -47,13 +47,13 @@ But on an equal level, DataMiner DevOps Enablement also encompasses the necessar
 
 Every DevOps Enablement undertaking is tailored to the specific environment and objectives, also considering the specific role, profile, and ambitions of the individuals involved.
 
-Typical initiatives initiated and leveraged throughout the DataMiner DevOps Enablement program include:
+Typical initiatives initiated and leveraged throughout the DataMiner DevOps Enablement Service include:
 
 - **Training**: Skyline already offers your [DataMiner DevOps Professionals](xref:DataMiner_Devops_Professionals) over 60 hours of free professional training conducted by subject-matter experts.
 
   All training is available [online](https://community.dataminer.services/learning/courses/), on demand, to ensure maximum flexibility and to allow trainees to learn at their own pace and in their own time.
 
-  As part of the DataMiner DevOps Enablement Program, depending on the exact objectives and type of DataMiner DevOps activities required for a specific operation, the candidates will be provided with a tailored program schedule and the necessary guidance.
+  As part of the DataMiner DevOps Enablement Service, depending on the exact objectives and type of DataMiner DevOps activities required for a specific operation, the candidates will be provided with a tailored program schedule and the necessary guidance.
 
 - **Self-assessment**: Along with the training, the DataMiner Dojo Community also offers DataMiner DevOps Professionals a variety of [self-assessment tools](https://community.dataminer.services/learning/quizzes/) to test their knowledge and potential readiness for a formal certification by Skyline’s DataMiner SMEs.
 
