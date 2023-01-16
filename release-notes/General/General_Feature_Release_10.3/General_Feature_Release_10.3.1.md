@@ -421,7 +421,7 @@ Please note the following:
 
 #### Enhanced parameter locking in SLElement [ID_34688]
 
-<!-- MR 10.3.0 - FR 10.3.1 [CU0] -->
+<!-- MR 10.2.0 [CU12] - FR 10.3.1 [CU0] -->
 
 In SLElement, a number of enhancements have been made with regard to parameter locking.
 
