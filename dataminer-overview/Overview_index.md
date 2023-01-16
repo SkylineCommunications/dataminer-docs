@@ -17,6 +17,6 @@ We are working on adding more information to this section soon, so check back fo
 - [Support Services](xref:Overview_Support_DMS_M_and_S)
 - [Compliance statements](xref:Overview_Compliance_Statements_intro)
 - [DataMiner Partner Program](xref:Partner_Program)
-- [DataMiner DevOps Professional Program](xref:DataMiner_Devops_Professionals)
+- [DataMiner DevOps Professional program](xref:DataMiner_Devops_Professionals)
 - [DataMiner DevOps Enablement](xref:DataMiner_DevOps_Enablement)
 - [Frequently asked questions](xref:FAQs)
