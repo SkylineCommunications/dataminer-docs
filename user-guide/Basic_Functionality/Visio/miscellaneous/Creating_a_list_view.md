@@ -401,4 +401,4 @@ From DataMiner 10.0.0/10.0.2 onwards, when you manage the column configuration, 
 
 - **Date (invariant)**: Available from DataMiner 10.2.12/10.3.0 onwards. Expects a Date object, or a string representing a date in UTC time, in [invariant culture](https://learn.microsoft.com/en-us/dotnet/api/system.globalization.cultureinfo.invariantculture).
 
-- **Colored text**: This type is specifically intended for the *AlarmCount* column for services and elements. It visualizes the alarm level by means of text preceded by a circle showing the alarm level color.
+- **Colored text**: This type is specifically intended for the *AlarmCount* column for services and elements. It visualizes the alarm count by means of text surrounded by a circle showing the alarm level color.
