@@ -144,12 +144,6 @@ A GROUP parameter contains one or more bytes from which one or more bits will be
 
 Header and trailer parameters can be defined to allow DataMiner to easily detect beginning and end of a frame. If, for example, the first byte of every frame is the hexadecimal symbol 0x02, you can create a header parameter and define it as “0x02”.
 
-### length
-
-Length parameters are used to hold the length of a frame used in a communication session. While often calculated based on the total frame, this length is sometimes also calculated based on a part of the frame.
-
-To hold the correct length, the number of parameters on which the length will be calculated must be defined in the LENGTH parameter.
-
 ### ip
 
 A parameter of type IP will contain the IP address and IP port, separated by ”:”.
@@ -157,6 +151,21 @@ A parameter of type IP will contain the IP address and IP port, separated by ”
 Multiple address/port combination will be separated by semicolons (”;”).
 
 `<Type>IP</Type>` can result in “10.12.230.326:80” or “localhost:80”
+
+### length
+
+Length parameters are used to hold the length of a frame used in a communication session. While often calculated based on the total frame, this length is sometimes also calculated based on a part of the frame.
+
+To hold the correct length, the number of parameters on which the length will be calculated must be defined in the LENGTH parameter.
+
+### matrix
+
+With this parameter, matrix mappings are configured for each table. This is done in the *Param.Matrix* element.
+
+See also:
+
+- [Table-based matrix](xref:UIComponentsTableMatrix)
+- [Matrix element](xref:Protocol.Params.Param.Matrix)
 
 ### pollingip
 

@@ -16,7 +16,7 @@ uid: Cube_Feature_Release_10.3.3
 
 ## Other features
 
-#### DataMiner Cube - System Center: New DataMiner log file 'SLSmartBaselineManager.txt' [ID_35352]
+#### System Center: New DataMiner log file 'SLSmartBaselineManager.txt' [ID_35352]
 
 <!-- MR 10.2.0 [CU8] - FR 10.2.11 [CU0] -->
 
@@ -34,7 +34,7 @@ Up to now, Cube would only check at startup whether Cassandra or Elasticsearch w
 
 ### Fixes
 
-#### DataMiner Cube - Alarm Console: Multiple values in property columns would incorrectly not be separated by any separator [ID_35239]
+#### Alarm Console: Multiple values in property columns would incorrectly not be separated by any separator [ID_35239]
 
 <!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
 
@@ -49,6 +49,15 @@ Up to now, when a *contentSeparator* tag was left empty, the values of the prope
 <!-- MR 10.3.0 - FR 10.3.3 -->
 
 When you exported a trend graph containing average trend data to CSV, in some cases, the exported data would be parsed incorrectly.
+
+#### ListView component: Column filter boxes incorrectly had autocomplete enabled [ID_35296]
+
+<!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
+
+In a *ListView* component, you can click the filter icon of a particular column and enter a filter in the box below the column header.
+
+Up to now, those column filter boxes incorrectly had *autocomplete* enabled.
+
 
 #### Visual Overview: Problem after filtering bookings using a custom time range in ListView component or Resource Manager component [ID_35328]
 
