@@ -397,12 +397,6 @@ When a parameter feed has an EPM identifier feed as source, from now on, the *Au
 
 In case a *Line & area chart* component displays trending for multiple parameters, the *Group by* setting allows you to specify how the graphs should be grouped. From now on, group titles will no longer be displayed when you set *Group by* to "All together".
 
-#### SLElement: Enhanced alarm locking [ID_34561]
-
-<!-- MR 10.3.0 - FR 10.2.12 -->
-
-Alarm locking in the SLElement process has been enhanced.
-
 #### Dashboards app / Low-Code Apps: Enhanced performance of selection boxes [ID_34577]
 
 <!-- MR 10.3.0 - FR 10.2.12 -->

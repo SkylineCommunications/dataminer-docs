@@ -12,6 +12,12 @@ uid: General_Main_Release_10.2.0_CU12
 
 ### Enhancements
 
+#### SLElement: Enhanced alarm locking [ID_34561]
+
+<!-- MR 10.2.0 [CU12] - FR 10.2.12 -->
+
+Alarm locking in the SLElement process has been enhanced.
+
 #### Enhanced parameter locking in SLElement [ID_34688]
 
 <!-- MR 10.2.0 [CU12] - FR 10.3.1 [CU0] -->
