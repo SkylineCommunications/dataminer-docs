@@ -2858,6 +2858,8 @@
           topicUID: Sharing_dashboard_window_does_not_disappear
         - name: Manually removing old alarms from an Elasticsearch cluster
           topicUID: Manually_removing_old_alarms_from_ES
+        - name: Querying MySQL vs Cassandra
+          topicUID: Querying_MySQL_vs_Cassandra
     - name: Known issues
       topicUID: Known_issues
       items:
