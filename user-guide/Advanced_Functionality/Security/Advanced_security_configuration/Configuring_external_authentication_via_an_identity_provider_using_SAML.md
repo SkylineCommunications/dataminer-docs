@@ -338,7 +338,13 @@ DataMiner supports Okta as identity provider as from version 10.1.11. Use Okta's
       - name "Email", value "user.email"
       - name "Firstname", value "user.firstName"
       - name "Lastname", value "user.lastName"
-
+      
+    - **When using group claims:** 
+      - Create groups in DataMiner with the exact same names as on Okta (this is case-sensitive)
+      - Add a group attribute statement
+      - name "userGroups", Basic format
+      - Under Filter: choose which type of filter you want and then add a statement that will match the groups you want to send for that user
+      
       > [!Note] 
       > - The name fields can be anything you want but it's advisable to give them a clear name for the claim they refer to, all of these are case-sensitive.
       > - Make sure whatever you put under "name" for each claim matches exactly to the claim names in DataMiner.xml
@@ -361,7 +367,7 @@ DataMiner supports Okta as identity provider as from version 10.1.11. Use Okta's
          <EmailClaim>[email claim name]</EmailClaim>
          <Givenname>[firstname claim name]</Givenname>
          <Surname>[lastname claim name]</Surname>
-         <Groups claims="false">[group claim name]</Groups>
+         <Groups claims="true">[group claim name]</Groups>
        </AutomaticUserCreation>
      </ExternalAuthentication>
      ...
