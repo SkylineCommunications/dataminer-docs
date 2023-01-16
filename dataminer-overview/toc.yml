@@ -99,7 +99,7 @@
           topicUID: Benefits_DevOps_Professionals_Program
         - name: Continuous learning program -  skill sets
           topicUID: Skill_Sets_DevOps_Professionals_Program
-    - name: DataMiner DevOps Enablement
+    - name: DataMiner DevOps Enablement program
       topicUID: DataMiner_DevOps_Enablement
       items:
         - name: What is the DataMiner DevOps Enablement?
