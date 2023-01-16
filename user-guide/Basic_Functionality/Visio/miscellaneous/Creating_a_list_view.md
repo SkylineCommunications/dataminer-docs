@@ -344,7 +344,7 @@ List view components can be found both in Visual Overview and in the DataMiner B
 - To filter which items are displayed in the list, click the filter icon for the column you want to apply a filter to and enter a filter in the box below the column header.
 
   > [!NOTE]
-  > When you try to filter a list view with source *Bookings* or *Reservations* on a GUID or a number in the Bookings module or on the timeline in Visual Overview, the matching booking will only be shown if you enter the full and correct GUID or number. The matching booking will be shown in the *ListView* as soon as a part of the entry matches the GUID or number.
+  > When you filter a list view with source *Bookings* or *Reservations* on a GUID or a number, the list will show the matching booking as soon as a part of the entry matches the GUID or number. However, note that if you have combined the list view with [a timeline](xref:Embedding_a_Resource_Manager_component), the timeline will only show the matching booking if you enter the full and correct GUID or number.
 
 - To apply a custom column configuration, see [Creating a new column configuration](#creating-a-new-column-configuration) and [Loading the default column configuration](#loading-the-default-column-configuration).
 
