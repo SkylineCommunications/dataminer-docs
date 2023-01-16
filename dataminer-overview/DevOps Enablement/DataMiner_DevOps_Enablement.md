@@ -2,7 +2,7 @@
 uid: DataMiner_DevOps_Enablement
 ---
 
-# DataMiner DevOps Enablement program
+# DataMiner DevOps Enablement
 
 At Skyline, we are laser-focused on our mission to ensure that you can deliver exceptional ICT media and broadband services.
 

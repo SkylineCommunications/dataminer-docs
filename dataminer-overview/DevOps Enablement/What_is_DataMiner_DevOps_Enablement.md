@@ -2,7 +2,7 @@
 uid: What_is_DataMiner_DevOps_Enablement
 ---
 
-# What is the DataMiner DevOps Enablement program?
+# What is DataMiner DevOps Enablement?
 
 ## About DevOps
 
