@@ -2861,6 +2861,8 @@
     - name: Known issues
       topicUID: Known_issues
       items:
+        - name: Contents of state_changes table not migrated after Cassandra Cluster migration
+          topicUID: KI_Contents_of_State_changes_Table_not_Migrated_after_Cassandra_Cluster_Migration
         - name: Cassandra cluster node in unexpected state
           topicUID: KI_Cassandra_cluster_node_unexpected_state
         - name: Year 2038 problem for Cassandra

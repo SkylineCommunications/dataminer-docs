@@ -5,6 +5,7 @@ uid: Known_issues
 
 | Issue | DataMiner version | Date added |
 |--|--|--|
+| [Contents of state_changes table not migrated after Cassandra Cluster migration](xref:KI_Contents_of_State_changes_Table_not_Migrated_after_Cassandra_Cluster_Migration) | Cassandra Cluster setups | January 16, 2023 |
 | [Cassandra cluster node in unexpected state](xref:KI_Cassandra_cluster_node_unexpected_state) | Cassandra Cluster setups | January 10,2023 |
 | [Year 2038 problem for Cassandra](xref:Year_2038_Problem_for_Cassandra) | All DataMiner versions with a Cassandra setup | January 10, 2023 |
 | [Null reference exceptions in SLDBConnection.txt and unhandled exception when retrieving Correlation details](xref:KI_NullReferenceException_SLDBConnection) | DataMiner 10.1.0 up to 10.2.0 [CU10]<br>DataMiner 10.1.2 up to 10.3.1 | December 20,2022 |
