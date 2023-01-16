@@ -584,7 +584,7 @@ From now on, when a GQI query has to retrieve DCF interfaces, it will do so by q
 
 #### Problem with SLElement when a trend template was being assigned [ID_34824]
 
-<!-- MR 10.3.0 - FR 10.3.1 -->
+<!-- MR 10.2.0 [CU12] - FR 10.3.1 -->
 
 In some cases, an error could occur in SLElement when a trend template was being assigned.
 

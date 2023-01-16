@@ -35,6 +35,12 @@ From now on, exporting and importing DELT packages containing element and alarm 
 
 ### Fixes
 
+#### Problem with SLElement when a trend template was being assigned [ID_34824]
+
+<!-- MR 10.2.0 [CU12] - FR 10.3.1 -->
+
+In some cases, an error could occur in SLElement when a trend template was being assigned.
+
 #### Problem with SLLog when logging large entries regarding failed Elasticsearch query requests/responses [ID_35037]
 
 <!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
