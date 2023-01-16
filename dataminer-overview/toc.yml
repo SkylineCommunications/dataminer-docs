@@ -90,6 +90,15 @@
               topicUID: Service_Delivery
             - name: Partnership governance
               topicUID: Partnership_Governance
+    - name: DataMiner DevOps Professional Program
+      topicUID: DataMiner_Devops_Professionals
+      items:
+        - name: What is the DataMiner DevOps Professional program?
+          topicUID: What_is_the_DevOps_Professionals_Program
+        - name: Benefits attached to the DataMiner DevOps Professional program
+          topicUID: Benefits_DevOps_Professionals_Program
+        - name: Continuous learning program -  skill sets
+          topicUID: Skill_Sets_DevOps_Professionals_Program
     - name: Frequently asked questions
       topicUid: FAQs
       items:
