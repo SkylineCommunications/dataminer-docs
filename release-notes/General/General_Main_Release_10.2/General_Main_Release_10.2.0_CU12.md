@@ -41,6 +41,12 @@ From now on, exporting and importing DELT packages containing element and alarm 
 
 Up to now, an error could occur in SLLog when adding large entries regarding failed Elasticsearch query requests/responses.
 
+#### SLDataGateway would leak memory when offloading average trend data for DVE elements [ID_35167]
+
+<!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
+
+The SLDataGateway process would leak memory when offloading average trend data for DVE elements.
+
 #### DataMiner Cube - Alarm Console: Multiple values in property columns would incorrectly not be separated by any separator [ID_35239]
 
 <!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
@@ -56,6 +62,14 @@ Up to now, when a *contentSeparator* tag was left empty, the values of the prope
 <!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
 
 In some cases, the SLDataGateway process could end up with an excessive number of *HealthMonitor.Refresh* threads.
+
+#### DataMiner Cube - ListView component: Column filter boxes incorrectly had autocomplete enabled [ID_35296]
+
+<!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
+
+In a *ListView* component, you can click the filter icon of a particular column and enter a filter in the box below the column header.
+
+Up to now, those column filter boxes incorrectly had *autocomplete* enabled.
 
 #### Dashboards app / Low-Code Apps - Node edge component: Edge overrides would incorrectly no longer be applied [ID_35298]
 

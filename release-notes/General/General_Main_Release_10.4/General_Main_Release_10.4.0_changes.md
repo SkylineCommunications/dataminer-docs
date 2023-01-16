@@ -126,12 +126,6 @@ Also, when using the DomBehaviorDefinition inheritance system, the server-side l
 
 In case a *Line & area chart* component displays trending for multiple parameters, the *Group by* setting allows you to specify how the graphs should be grouped. From now on, this *Group by* setting will by default be set to "All together".
 
-#### Enhanced performance when updating a baseline or assigning an alarm template that contains conditional monitoring [ID_35171]
-
-<!-- MR 10.4.0 - FR 10.3.2 -->
-
-Because of a number of enhancements, overall performance has increased when updating a baseline or assigning an alarm template that contains conditional monitoring.
-
 #### SLLogCollector: Custom CollectorConfig XML files will now be synchronized across the DataMiner cluster [ID_35180]
 
 <!-- MR 10.4.0 - FR 10.3.2 -->
@@ -197,12 +191,6 @@ In some cases, Resource Manager could throw a NullReferenceException when *Resou
 <!-- MR 10.4.0 - FR 10.3.1 [CU0] -->
 
 When a column select or a column manipulation operator was applied before an aggregation operator, the column select or column manipulation operator would incorrectly be ignored. As a result, all columns would be visible in the *group by node* or columns created by the column manipulation would not be added to the options of the *group by node*.
-
-#### When a direct view table was updated, the wrong columns could be updated in the source element [ID_35075]
-
-<!-- MR 10.4.0 - FR 10.3.3 -->
-
-When a direct view table was updated while one of the source elements was stopped, due to a column translation issue, the wrong columns could be updated in that source element the moment it was started again.
 
 #### Dashboards app & Low-Code Apps - Parameter feed: Problem when more than 10,000 elements had to be retrieved from the server [ID_35186]
 
