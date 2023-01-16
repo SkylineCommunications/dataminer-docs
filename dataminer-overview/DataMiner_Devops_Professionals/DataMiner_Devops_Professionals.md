@@ -2,7 +2,7 @@
 uid: DataMiner_Devops_Professionals
 ---
 
-# DataMiner Devops Professional Program
+# DataMiner Devops Professional program
 
 Tomorrow revolves all around **building a powerful, agile, data-driven operation**. This to empower teams with actionable data and insights, and to leverage automation and orchestration across the business to drive efficiency and accelerate innovation. After all, every business needs and wants *better*, *faster*, and *cheaper*.
 
