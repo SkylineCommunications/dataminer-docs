@@ -18,4 +18,4 @@ No fix is available yet.
 
 ## Issue description
 
-After a [Cassandra Single to Cassandra Cluster migration](xref:Migrating_the_general_database_to_a_DMS_Cassandra_cluster), heatmap data from before the migration (e.g. states of alarms thrown) are no longer displayed in heatmaps or timelines in the Reporter or the element card.
+After a migration from a setup with one Cassandra cluster per DMA to a [Cassandra Cluster setup](xref:Migrating_the_general_database_to_a_DMS_Cassandra_cluster), heatmap data from before the migration (e.g. alarm states) are no longer displayed in heatmaps and timelines in the legacy Reporter module and on the *Reports* page of element cards.
