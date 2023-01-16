@@ -228,24 +228,37 @@
       - name: Custom table context menu
         topicUid: UIComponentsCustomTableContextMenu
       - name: Matrix
-        topicUid: UIComponentsMatrix
         items:
-        - name: Matrix parameters
-          topicUid: UIComponentsMatrixParameters
-        - name: Composing crosspoints on matrix parameters
-          topicUid: UIComponentsMatrixComposingCrosspoints
-        - name: Setting crosspoints
-          topicUid: UIComponentsMatrixSettingCrosspoints
-        - name: Dynamically changing matrix configuration
-          topicUid: UIComponentsMatrixChangeConfiguration
-        - name: Setting input/output names via a table
-          topicUid: UIComponentsMatrixSettingNames
-        - name: Discreet info
-          topicUid: UIComponentsMatrixDiscreetInfo
-        - name: Matrix development using DIS
-          topicUid: UIComponentsMatrixDis
-        - name: Exercise
-          topicUid: UIComponentsMatrixExercise
+          - name: Standard matrix
+            topicUid: UIComponentsMatrix
+            items:
+            - name: Matrix parameters
+              topicUid: UIComponentsMatrixParameters
+            - name: Composing crosspoints on matrix parameters
+              topicUid: UIComponentsMatrixComposingCrosspoints
+            - name: Setting crosspoints
+              topicUid: UIComponentsMatrixSettingCrosspoints
+            - name: Dynamically changing matrix configuration
+              topicUid: UIComponentsMatrixChangeConfiguration
+            - name: Setting input/output names via a table
+              topicUid: UIComponentsMatrixSettingNames
+            - name: Discreet info
+              topicUid: UIComponentsMatrixDiscreetInfo
+            - name: Matrix development using DIS
+              topicUid: UIComponentsMatrixDis
+            - name: Exercise
+              topicUid: UIComponentsMatrixExercise
+          - name: Table-based matrix
+            topicUid: UIComponentsTableMatrix
+            items:
+            - name: Matrix parameter
+              topicUid: UIComponentsTableMatrixParameter
+            - name: Matrix Inputs Table parameter
+              topicUid: UIComponentsTableMatrixInputsTableParameter
+            - name: Matrix Outputs Table parameter
+              topicUid: UIComponentsTableMatrixOutputsTableParameter
+            - name: Matrix Helper
+              topicUid: UIComponentsTableMatrixHelper
       - name: Tree control
         topicUid: UIComponentsTreeControl
         items:

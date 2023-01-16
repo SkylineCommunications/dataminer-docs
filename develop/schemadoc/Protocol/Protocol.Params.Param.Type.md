@@ -160,12 +160,12 @@ To hold the correct length, the number of parameters on which the length will be
 
 ### matrix
 
-With this parameter, matrix mappings are configured for each table. This is done in the Param.Matrix element.
+With this parameter, matrix mappings are configured for each table. This is done in the *Param.Matrix* element.
 
 See also:
 
-- [Matrix](xref:UIComponentsTableMatrix)
-- [Matrix Element](xref:Protocol.Params.Param.Matrix)
+- [Table-based matrix](xref:UIComponentsTableMatrix)
+- [Matrix element](xref:Protocol.Params.Param.Matrix)
 
 ### pollingip
 
