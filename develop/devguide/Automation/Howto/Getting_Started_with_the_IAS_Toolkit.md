@@ -13,7 +13,7 @@ The Interactive Automation Script Toolkit ( or “IAS Toolkit” in short) is a 
 
 To choose your version of the IAS Toolkit, the first thing you need to know is the [version of DataMiner](xref:Interactive_Automation_Script_Toolkit#versions) where you want your script to run. As DataMiner keeps improving, so does its support for newer, more advanced IAS components. In this introduction, DataMiner version 10.1.2.0-9866 is used. This means that [version 1.0.5.2](https://community.dataminer.services/download/ias-toolkit-1-0-5-2-10-1-2-0-9815/) of the toolkit can be used.
 
-Just like for protocol and regular Automation script development, our IDE of choice is [Visual Studio](xref:TOOVisualStudio) with the latest version of [DIS](xref:DIS). If you do not have DIS installed, you can find more information on how to do so via the [DIS expert hub](https://community.dataminer.services/exphub-dis/).
+Just like for protocol and regular Automation script development, our IDE of choice is [Visual Studio](xref:TOOVisualStudio) with the latest version of [DIS](xref:DIS). If you do not have DIS installed, you can find more information on how to do so under [Installing and configuring the software](xref:Installing_and_configuring_the_software).
 
 ## Creating a new script
 
@@ -67,7 +67,7 @@ public class Script
 
 ## Building the UI
 
-Now, let’s start developing the first dialog. A dialog is a single page in an IAS that requires user input. For this example, we will make a dialog with the title “Hello World”, a label, a text box, and a button. Whenever this button is clicked, the username of the user who launched the script should be displayed in the text box.
+Now you can start to develop the first dialog. A dialog is a single page in an IAS that requires user input. For this example, we will make a dialog with the title “Hello World”, a label, a text box, and a button. Whenever this button is clicked, the username of the user who launched the script should be displayed in the text box.
 
    ![IAS3](~/develop/images/IAS3.png)
 
@@ -209,7 +209,7 @@ In this single line of code, we have subscribed to the *OnPressed* event of the 
 
 If you update the script on your DMA, your username will be added in the text box whenever you click the button.
 
-   ![IAS5](~/develop/images/IAS5.png)
+![IAS5](~/develop/images/IAS5.png)
 
 ## What is next?
 

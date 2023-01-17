@@ -80,4 +80,4 @@ To install the toolkit:
 
 You are now ready to start using the Interactive Automation Script Toolkit.
 
-For more information on how to get started, see Getting started with the IAS Toolkit.
+For more information on how to get started, see [Getting started with the IAS Toolkit](xref:Getting_Started_with_the_IAS_Toolkit).
