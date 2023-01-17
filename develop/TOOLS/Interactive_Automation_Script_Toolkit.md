@@ -60,7 +60,7 @@ Version 1.0.7.2 of the toolkit adds support for uploading files using the FileSe
 
 Installation of the Interactive Automation Script Toolkit is the same as for any other class library.
 
-You’ll need:
+You will need:
 
 - [Visual Studio](xref:TOOVisualStudio)
 
@@ -70,7 +70,7 @@ You’ll need:
 
 To install the toolkit:
 
-1. Download the version of the toolkit that is compatible with your DataMiner version. You can do so using the links in the version overview above, or via the [overview of the class library packages](https://community.dataminer.services/class-library-packages/). Once you’ve downloaded your version, you don’t need to unzip it. Just place it somewhere where you can easily find it again.
+1. Download the version of the toolkit that is compatible with your DataMiner version. You can do so using the links in the version overview above, or via the [overview of the class library packages](https://community.dataminer.services/class-library-packages/). Once you have downloaded your version, you do not need to unzip it. Just place it somewhere where you can easily find it again.
 
 1. In Visual Studio, navigate to the DIS menu and open the DIS settings.
 

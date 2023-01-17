@@ -662,6 +662,8 @@
       items:
       - name: How to make your Automation scripts debug ready
         topicUID: How_to_make_your_automation_scripts_debug_ready
+      - name: Getting started with the IAS Toolkit
+        topicUID: Getting_Started_with_the_IAS_Toolkit
   - name: Class Library
     items:
     - name: Class library introduction
