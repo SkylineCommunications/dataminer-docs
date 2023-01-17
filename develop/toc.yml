@@ -662,6 +662,8 @@
       items:
       - name: How to make your Automation scripts debug ready
         topicUID: How_to_make_your_automation_scripts_debug_ready
+      - name: Getting started with the IAS Toolkit
+        topicUID: Getting_Started_with_the_IAS_Toolkit
   - name: Class Library
     items:
     - name: Class library introduction
@@ -5418,6 +5420,8 @@
       topicUid: TOODataMinerDevPackages
     - name: Change Element States Offline
       topicUID: Change_Element_States_Offline
+    - name: Interactive Automation Script Toolkit
+      topicUID: Interactive_Automation_Script_Toolkit
 - name: DataMiner Device-Specific Integrations
   topicUid: DSI
   items:
