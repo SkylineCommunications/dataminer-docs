@@ -72,6 +72,18 @@ A number of enhancements have been made to the color picker.
 
 From now on, when you define a tag for pattern matching, the pattern you selected will be saved as a pattern occurrence in the Elasticsearch database and highlighted in bright orange, similar to so-called "streaming matches", which are detected while tracking for trend patterns whenever a trended parameter is updated.
 
+#### Dashboards - Line & area chart component: 'Show average', 'Show minimum' and 'Show maximum' options will now be taken into account when exporting trend data to CSV [ID_35311]
+
+<!-- MR 10.4.0 - FR 10.3.3 -->
+<!-- Timestamp format fix added to Fixes -->
+
+When exporting trend data to CSV, from now on, the *Show average*, *Show minimum* and *Show maximum* options will be taken into account.
+
+> [!NOTE]
+>
+> - When the *Show min/max shading* option is enabled (which it is by default), minimum and maximum values will always be included when you export trend data.
+> - As the *Show min/max shading* option and the *Show average* option are both enabled by default, a CSV export of trend data will by default contain all trend data values.
+
 #### Errors received from the web API after sending a GetConnection call will now be logged in SLNet.txt [ID_35313]
 
 <!-- MR 10.4.0 - FR 10.3.3 -->
@@ -84,6 +96,12 @@ From now on, when SLNet receives an error from the web API after sending a *GetC
 
 When a behavioral anomaly was detected on a DVE child element, up to now, the suggestion event or the alarm event would be generated on the parent element. From now on, it will be generated on the child element instead.
 
+#### Maps: Markers will now move more gradual when zooming [ID_35337]
+
+<!-- MR 10.4.0 - FR 10.3.3 -->
+
+Because of a number of enhancements, markers will now move more gradual when zooming.
+
 #### Alarm templates - Smart baseline calculations: NullReferenceException prevented & enhanced exception logging [ID_35348]
 
 <!-- MR 10.4.0 - FR 10.3.3 -->
@@ -91,6 +109,12 @@ When a behavioral anomaly was detected on a DVE child element, up to now, the su
 In some cases, a `Baseline Calculation Failed: System.NullReferenceException: Object reference not set to an instance of an object` error would be added to the *SLSmartBaselineManager.txt* log file. The issue causing that error has now been fixed.
 
 Also, log entries indicating an exception thrown during baseline calculations will now include details regarding the element and parameter associated with the exception.
+
+#### DataMiner upgrade: Installation of Microsoft .NET 6.0 [ID_35363]
+
+<!-- MR 10.4.0 - FR 10.3.3 -->
+
+During a DataMiner upgrade, Microsoft .NET 6.0 will now be installed if not installed already.
 
 ### Fixes
 
@@ -139,3 +163,10 @@ In some cases, the SLDataGateway process could end up with an excessive number o
 If a DOM module is created without specifying *SecuritySettings*, the view permission is set to "None".
 
 Up to now, the check to determine whether a user had the view permission set to "None", would only return true for the Administrator or users in the Administrator group. From now on, when the required view permission is "None", permission checks will no longer be performed.
+
+#### Dashboards - Line & area chart component: Timestamps could be formatted incorrectly when exporting trend data to CSV [ID_35311]
+
+<!-- MR 10.4.0 - FR 10.3.3 -->
+<!-- See Enhancements for rest of 35311 -->
+
+When trend data was exported to a CSV file, up to now, timestamps could be formatted incorrectly.

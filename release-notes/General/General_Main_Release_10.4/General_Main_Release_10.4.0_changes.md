@@ -161,6 +161,7 @@ From now on, when you define a tag for pattern matching, the pattern you selecte
 #### Dashboards - Line & area chart component: 'Show average', 'Show minimum' and 'Show maximum' options will now be taken into account when exporting trend data to CSV [ID_35311]
 
 <!-- MR 10.4.0 - FR 10.3.3 -->
+<!-- Timestamp format fix added to Fixes -->
 
 When exporting trend data to CSV, from now on, the *Show average*, *Show minimum* and *Show maximum* options will be taken into account.
 
@@ -181,6 +182,12 @@ From now on, when SLNet receives an error from the web API after sending a *GetC
 
 When a behavioral anomaly was detected on a DVE child element, up to now, the suggestion event or the alarm event would be generated on the parent element. From now on, it will be generated on the child element instead.
 
+#### Maps: Markers will now move more gradual when zooming [ID_35337]
+
+<!-- MR 10.4.0 - FR 10.3.3 -->
+
+Because of a number of enhancements, markers will now move more gradual when zooming.
+
 #### Alarm templates - Smart baseline calculations: NullReferenceException prevented & enhanced exception logging [ID_35348]
 
 <!-- MR 10.4.0 - FR 10.3.3 -->
@@ -188,6 +195,12 @@ When a behavioral anomaly was detected on a DVE child element, up to now, the su
 In some cases, a `Baseline Calculation Failed: System.NullReferenceException: Object reference not set to an instance of an object` error would be added to the *SLSmartBaselineManager.txt* log file. The issue causing that error has now been fixed.
 
 Also, log entries indicating an exception thrown during baseline calculations will now include details regarding the element and parameter associated with the exception.
+
+#### DataMiner upgrade: Installation of Microsoft .NET 6.0 [ID_35363]
+
+<!-- MR 10.4.0 - FR 10.3.3 -->
+
+During a DataMiner upgrade, Microsoft .NET 6.0 will now be installed if not installed already.
 
 ### Fixes
 
@@ -232,6 +245,13 @@ A number of issues with regard to data highlighting have been fixed.
 When users tried to open a shared dashboard, in some cases, they would unexpectedly be presented with a login screen due to a permission issue.
 
 Workaround: Recreate the faulty shared dashboard.
+
+#### Dashboards - Line & area chart component: Timestamps could be formatted incorrectly when exporting trend data to CSV [ID_35311]
+
+<!-- MR 10.4.0 - FR 10.3.3 -->
+<!-- See Enhancements for rest of 35311 -->
+
+When trend data was exported to a CSV file, up to now, timestamps could be formatted incorrectly.
 
 #### Dashboards app & Low-code apps - GQI table component: 'Cannot read properties of undefined (reading 'Guid')' error [ID_35316]
 
