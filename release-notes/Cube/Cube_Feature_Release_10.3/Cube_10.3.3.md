@@ -40,6 +40,17 @@ From now on, DataMiner will detect when too much data is being sent in a single 
 
 Up to now, Cube would only check at startup whether Cassandra or Elasticsearch were available. From now on, it will immediately be aware of any changes as to the availability of Cassandra or Elasticsearch.
 
+#### Dashboards - Line & area chart component: 'Show average', 'Show minimum' and 'Show maximum' options will now be taken into account when exporting trend data to CSV [ID_35311]
+
+<!-- MR 10.4.0 - FR 10.3.3 -->
+
+When exporting trend data to CSV, from now on, the *Show average*, *Show minimum* and *Show maximum* options will be taken into account.
+
+> [!NOTE]
+>
+> - When the *Show min/max shading* option is enabled (which it is by default), minimum and maximum values will always be included when you export trend data.
+> - As the *Show min/max shading* option and the *Show average* option are both enabled by default, a CSV export of trend data will by default contain all trend data values.
+
 ### Fixes
 
 #### Alarm Console: Multiple values in property columns would incorrectly not be separated by any separator [ID_35239]

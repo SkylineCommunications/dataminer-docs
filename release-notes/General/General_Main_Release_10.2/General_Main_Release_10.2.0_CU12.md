@@ -53,6 +53,14 @@ From now on, exporting and importing DELT packages containing element and alarm 
 
 In some cases, an error could occur in SLElement when a trend template was being assigned.
 
+#### Alarm templates: Parameters exported to DVE child elements could have incorrect alarm limits [ID_34996]
+
+<!-- MR 10.2.0 [CU12] - FR 10.3.2 -->
+
+When a parameter was exported as a standalone parameter to a DVE child element, in some cases, the alarm limits could be incorrect when the type of alarm monitoring was set to either *Relative* or *Absolute*.
+
+Also, LED bar controls would either not display or not update their alarm limits.
+
 #### Problem with SLLog when logging large entries regarding failed Elasticsearch query requests/responses [ID_35037]
 
 <!-- MR 10.2.0 [CU12] - FR 10.3.3 -->

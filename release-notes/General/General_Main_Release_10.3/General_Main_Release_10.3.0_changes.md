@@ -946,14 +946,6 @@ When you sorted or filtered a table fed by e.g. a query filter, the table would 
 
 When a trend graph displaying multiple parameters showed data that was partly in the future, in some cases, an error could occur.
 
-#### Alarm templates: Parameters exported to DVE child elements could have incorrect alarm limits [ID_34996]
-
-<!-- MR 10.3.0 - FR 10.3.2 -->
-
-When a parameter was exported as a standalone parameter to a DVE child element, in some cases, the alarm limits could be incorrect when the type of alarm monitoring was set to either *Relative* or *Absolute*.
-
-Also, LED bar controls would either not display or not update their alarm limits.
-
 #### Dashboards app: Button to restore the initial view would incorrectly appear on all tables after sorting or filtering a table [ID_35003]
 
 <!-- MR 10.3.0 - FR 10.3.2 -->

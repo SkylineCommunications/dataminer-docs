@@ -415,7 +415,7 @@ In some cases, an error could occur in SLDataMiner when loading an alarm templat
 
 #### Alarm templates: Parameters exported to DVE child elements could have incorrect alarm limits [ID_34996]
 
-<!-- MR 10.3.0 - FR 10.3.2 -->
+<!-- MR 10.2.0 [CU12] - FR 10.3.2 -->
 
 When a parameter was exported as a standalone parameter to a DVE child element, in some cases, the alarm limits could be incorrect when the type of alarm monitoring was set to either *Relative* or *Absolute*.
 

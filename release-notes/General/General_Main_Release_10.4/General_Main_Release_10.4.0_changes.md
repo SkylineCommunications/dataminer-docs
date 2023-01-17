@@ -158,6 +158,17 @@ A number of enhancements have been made to the color picker.
 
 From now on, when you define a tag for pattern matching, the pattern you selected will be saved as a pattern occurrence in the Elasticsearch database and highlighted in bright orange, similar to so-called "streaming matches", which are detected while tracking for trend patterns whenever a trended parameter is updated.
 
+#### Dashboards - Line & area chart component: 'Show average', 'Show minimum' and 'Show maximum' options will now be taken into account when exporting trend data to CSV [ID_35311]
+
+<!-- MR 10.4.0 - FR 10.3.3 -->
+
+When exporting trend data to CSV, from now on, the *Show average*, *Show minimum* and *Show maximum* options will be taken into account.
+
+> [!NOTE]
+>
+> - When the *Show min/max shading* option is enabled (which it is by default), minimum and maximum values will always be included when you export trend data.
+> - As the *Show min/max shading* option and the *Show average* option are both enabled by default, a CSV export of trend data will by default contain all trend data values.
+
 #### Errors received from the web API after sending a GetConnection call will now be logged in SLNet.txt [ID_35313]
 
 <!-- MR 10.4.0 - FR 10.3.3 -->
