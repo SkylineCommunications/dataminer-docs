@@ -10,7 +10,7 @@ The DataMiner Cloud Platform gets updated continuously. This change log can help
 
 The *Audit* page of the DCP Admin app will now also contain records for protocol and script deployments, while previously it only showed records for DxM artifact deployments.
 
-Deploying protocols can be done via the [DataMiner Catalog](https://catalog.dataminer.services/), deploying scripts can be done with the GitHub CI/CD pipeline, and deploying DxMs can be done with the DCP Admin app.
+Deploying protocols can be done via the [DataMiner Catalog](https://catalog.dataminer.services/), deploying scripts can be done with a GitHub or GitLab CI/CD pipeline, and deploying DxMs can be done with the DCP Admin app.
 
 #### 12 January 2023 - Fix - CloudGateway 2.10.2 - CloudGateway not starting if DataMiner uses HTTP [ID_35362]
 
