@@ -136,6 +136,12 @@ When a direct view table was updated while one of the source elements was stoppe
 
 The SLDataGateway process would leak memory when offloading average trend data for DVE elements.
 
+#### Service & Resource Management: Setting a new function file to active would incorrectly not cause the function DVEs of elements using a production version of the protocol to be updated [ID_35178]
+
+<!-- MR 10.4.0 - FR 10.3.3 -->
+
+When a new function file was set to active, up to now, the function DVEs of elements using a production version of the protocol in question would incorrectly not be updated.
+
 #### GQI: Problem when fetching two queries using an external data source with a custom argument of which the ID was set to "Type" [ID_35242]
 
 <!-- MR 10.3.0 - FR 10.3.3 -->
