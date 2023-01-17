@@ -194,7 +194,7 @@ namespace Skyline.DataMiner.Automation
 		/// </code>
 		/// </example>
 		/// <remarks>
-		/// <para>The specified value for the <paramref name="name"/> argument should be the value of the <see href="xref:Protocol.Params.Param.Description" >Desciption</see> tag of the parameter and not the value of the <see href="xref:Protocol.Params.Param.Name" >Name</see> tag.</para>
+		/// <para>The specified value for the <paramref name="name"/> argument should be the value of the <see href="xref:Protocol.Params.Param.Description" >Description</see> tag of the parameter and not the value of the <see href="xref:Protocol.Params.Param.Name" >Name</see> tag.</para>
 		/// </remarks>
 		public virtual void ConnectMatrixCrosspoint(string name, string input, string output) { }
 
@@ -237,7 +237,7 @@ namespace Skyline.DataMiner.Automation
 		/// <paramref name="output"/>  is not in the range 1..nrOfOutputs.
 		/// </exception>
 		/// <remarks>
-		/// <para>The specified value for the <paramref name="name"/> argument should be the value of the <see href="xref:Protocol.Params.Param.Description" >Desciption</see> tag of the parameter and not the value of the <see href="xref:Protocol.Params.Param.Name" >Name</see> tag.</para>
+		/// <para>The specified value for the <paramref name="name"/> argument should be the value of the <see href="xref:Protocol.Params.Param.Description" >Description</see> tag of the parameter and not the value of the <see href="xref:Protocol.Params.Param.Name" >Name</see> tag.</para>
 		/// <para><paramref name="input"/> must be in the range 1..nrOfInputs.</para>
 		/// <para><paramref name="output"/> must be in the range 1..nrOfOutputs.</para>
 		/// </remarks>
@@ -315,7 +315,7 @@ namespace Skyline.DataMiner.Automation
 		/// </code>
 		/// </example>
 		/// <remarks>
-		/// <para>The specified value for the <paramref name="name"/> argument should be the value of the <see href="xref:Protocol.Params.Param.Description" >Desciption</see> tag of the parameter and not the value of the <see href="xref:Protocol.Params.Param.Name" >Name</see> tag.</para>
+		/// <para>The specified value for the <paramref name="name"/> argument should be the value of the <see href="xref:Protocol.Params.Param.Description" >Description</see> tag of the parameter and not the value of the <see href="xref:Protocol.Params.Param.Name" >Name</see> tag.</para>
 		/// </remarks>
 		public virtual void DisconnectMatrixCrosspoint(string name, int input, int output) { }
 
@@ -339,7 +339,7 @@ namespace Skyline.DataMiner.Automation
 		/// </code>
 		/// </example>
 		/// <remarks>
-		/// <para>The specified value for the <paramref name="name"/> argument should be the value of the <see href="xref:Protocol.Params.Param.Description" >Desciption</see> tag of the parameter and not the value of the <see href="xref:Protocol.Params.Param.Name" >Name</see> tag.</para>
+		/// <para>The specified value for the <paramref name="name"/> argument should be the value of the <see href="xref:Protocol.Params.Param.Description" >Description</see> tag of the parameter and not the value of the <see href="xref:Protocol.Params.Param.Name" >Name</see> tag.</para>
 		/// </remarks>
 		public virtual void DisconnectMatrixCrosspoint(string name, string input, string output) { }
 
@@ -370,7 +370,7 @@ namespace Skyline.DataMiner.Automation
 		/// </code>
 		/// </example>
 		/// <remarks>
-		/// <para>The specified value for the <paramref name="parameterName"/> argument should be the value of the <see href="xref:Protocol.Params.Param.Description" >Desciption</see> tag of the parameter and not the value of the <see href="xref:Protocol.Params.Param.Name" >Name</see> tag.</para>
+		/// <para>The specified value for the <paramref name="parameterName"/> argument should be the value of the <see href="xref:Protocol.Params.Param.Description" >Description</see> tag of the parameter and not the value of the <see href="xref:Protocol.Params.Param.Name" >Name</see> tag.</para>
 		/// </remarks>
 		public virtual string FindDisplayKey(string parameterName, string primaryKey) { return ""; }
 
@@ -386,7 +386,7 @@ namespace Skyline.DataMiner.Automation
 		/// </code>
 		/// </example>
 		/// <remarks>
-		/// <para>The specified value for the <paramref name="name"/> argument should be the value of the <see href="xref:Protocol.Params.Param.Description" >Desciption</see> tag of the parameter and not the value of the <see href="xref:Protocol.Params.Param.Name" >Name</see> tag.</para>
+		/// <para>The specified value for the <paramref name="name"/> argument should be the value of the <see href="xref:Protocol.Params.Param.Description" >Description</see> tag of the parameter and not the value of the <see href="xref:Protocol.Params.Param.Name" >Name</see> tag.</para>
 		/// </remarks>
 		public virtual int FindParameterID(string name) { return 0; }
 
@@ -403,7 +403,7 @@ namespace Skyline.DataMiner.Automation
 		/// </code>
 		/// </example>
 		/// <remarks>
-		/// <para>The specified value for the <paramref name="name"/> argument should be the value of the <see href="xref:Protocol.Params.Param.Description" >Desciption</see> tag of the parameter and not the value of the <see href="xref:Protocol.Params.Param.Name" >Name</see> tag.</para>
+		/// <para>The specified value for the <paramref name="name"/> argument should be the value of the <see href="xref:Protocol.Params.Param.Description" >Description</see> tag of the parameter and not the value of the <see href="xref:Protocol.Params.Param.Name" >Name</see> tag.</para>
 		/// </remarks>
 		public virtual int FindParameterID(string name, bool writeParam) { return 0; }
 
@@ -434,7 +434,7 @@ namespace Skyline.DataMiner.Automation
 		/// </code>
 		/// </example>
 		/// <remarks>
-		/// <para>The specified value for the <paramref name="parameterName"/> argument should be the value of the <see href="xref:Protocol.Params.Param.Description" >Desciption</see> tag of the parameter and not the value of the <see href="xref:Protocol.Params.Param.Name" >Name</see> tag.</para>
+		/// <para>The specified value for the <paramref name="parameterName"/> argument should be the value of the <see href="xref:Protocol.Params.Param.Description" >Description</see> tag of the parameter and not the value of the <see href="xref:Protocol.Params.Param.Name" >Name</see> tag.</para>
 		/// </remarks>
 		public virtual string FindPrimaryKey(string parameterName, string displayKey) { return ""; }
 
@@ -475,7 +475,7 @@ namespace Skyline.DataMiner.Automation
 		/// </code>
 		/// </example>
 		/// <remarks>
-		/// <para>The specified value for the <paramref name="name"/> argument should be the value of the <see href="xref:Protocol.Params.Param.Description" >Desciption</see> tag of the parameter and not the value of the <see href="xref:Protocol.Params.Param.Name" >Name</see> tag.</para>
+		/// <para>The specified value for the <paramref name="name"/> argument should be the value of the <see href="xref:Protocol.Params.Param.Description" >Description</see> tag of the parameter and not the value of the <see href="xref:Protocol.Params.Param.Name" >Name</see> tag.</para>
 		/// </remarks>
 		public virtual int FindWriteParameterID(string name) { return 0; }
 
@@ -496,7 +496,7 @@ namespace Skyline.DataMiner.Automation
 		/// </code>
 		/// </example>
 		/// <remarks>
-		/// <para>The specified value for the <paramref name="name"/> argument should be the value of the <see href="xref:Protocol.Params.Param.Description" >Desciption</see> tag of the parameter and not the value of the <see href="xref:Protocol.Params.Param.Name" >Name</see> tag.</para>
+		/// <para>The specified value for the <paramref name="name"/> argument should be the value of the <see href="xref:Protocol.Params.Param.Description" >Description</see> tag of the parameter and not the value of the <see href="xref:Protocol.Params.Param.Name" >Name</see> tag.</para>
 		/// </remarks>
 		public virtual string GetDisplayValue(string name, string rawValue) { return ""; }
 
@@ -603,7 +603,7 @@ namespace Skyline.DataMiner.Automation
 		/// <paramref name="output"/> is not in the range 1..nrOfOutputs.
 		/// </exception>
 		/// <remarks>
-		/// <para>The specified value for the <paramref name="name"/> argument should be the value of the <see href="xref:Protocol.Params.Param.Description" >Desciption</see> tag of the parameter and not the value of the <see href="xref:Protocol.Params.Param.Name" >Name</see> tag.</para>
+		/// <para>The specified value for the <paramref name="name"/> argument should be the value of the <see href="xref:Protocol.Params.Param.Description" >Description</see> tag of the parameter and not the value of the <see href="xref:Protocol.Params.Param.Name" >Name</see> tag.</para>
 		/// <para><paramref name="output"/> must be in the range 1..nrOfOutputs.</para>
 		/// </remarks>
 		/// <example>
@@ -649,7 +649,7 @@ namespace Skyline.DataMiner.Automation
 		/// </code>
 		/// </example>
 		/// <remarks>
-		/// <para>The specified value for the <paramref name="name"/> argument should be the value of the <see href="xref:Protocol.Params.Param.Description" >Desciption</see> tag of the parameter and not the value of the <see href="xref:Protocol.Params.Param.Name" >Name</see> tag.</para>
+		/// <para>The specified value for the <paramref name="name"/> argument should be the value of the <see href="xref:Protocol.Params.Param.Description" >Description</see> tag of the parameter and not the value of the <see href="xref:Protocol.Params.Param.Name" >Name</see> tag.</para>
 		/// </remarks>
 		public virtual int GetMatrixInputForOutput(string name, string output) { return 0; }
 
@@ -703,7 +703,7 @@ namespace Skyline.DataMiner.Automation
 		/// </code>
 		/// </example>
 		/// <remarks>
-		/// <para>The specified value for the <paramref name="name"/> argument should be the value of the <see href="xref:Protocol.Params.Param.Description" >Desciption</see> tag of the parameter and not the value of the <see href="xref:Protocol.Params.Param.Name" >Name</see> tag.</para>
+		/// <para>The specified value for the <paramref name="name"/> argument should be the value of the <see href="xref:Protocol.Params.Param.Description" >Description</see> tag of the parameter and not the value of the <see href="xref:Protocol.Params.Param.Name" >Name</see> tag.</para>
 		/// </remarks>
 		public virtual object GetParameter(string name) { return null; }
 
@@ -740,7 +740,7 @@ namespace Skyline.DataMiner.Automation
 		/// </code>
 		/// </example>
 		/// <remarks>
-		/// <para>The specified value for the <paramref name="name"/> argument should be the value of the <see href="xref:Protocol.Params.Param.Description" >Desciption</see> tag of the parameter and not the value of the <see href="xref:Protocol.Params.Param.Name" >Name</see> tag.</para>
+		/// <para>The specified value for the <paramref name="name"/> argument should be the value of the <see href="xref:Protocol.Params.Param.Description" >Description</see> tag of the parameter and not the value of the <see href="xref:Protocol.Params.Param.Name" >Name</see> tag.</para>
 		/// </remarks>
 		public virtual object GetParameter(string name, string idx) { return null; }
 
@@ -777,7 +777,7 @@ namespace Skyline.DataMiner.Automation
 		/// </code>
 		/// </example>
 		/// <remarks>
-		/// <para>The specified value for the <paramref name="name"/> argument should be the value of the <see href="xref:Protocol.Params.Param.Description" >Desciption</see> tag of the parameter and not the value of the <see href="xref:Protocol.Params.Param.Name" >Name</see> tag.</para>
+		/// <para>The specified value for the <paramref name="name"/> argument should be the value of the <see href="xref:Protocol.Params.Param.Description" >Description</see> tag of the parameter and not the value of the <see href="xref:Protocol.Params.Param.Name" >Name</see> tag.</para>
 		/// </remarks>
 		public virtual object GetParameterByPrimaryKey(string name, string primaryKey) { return null; }
 
@@ -809,7 +809,7 @@ namespace Skyline.DataMiner.Automation
 		/// The specified parameter is incorrect.
 		/// </exception>
 		/// <remarks>
-		/// <para>The specified value for the <paramref name="name"/> argument should be the value of the <see href="xref:Protocol.Params.Param.Description" >Desciption</see> tag of the parameter and not the value of the <see href="xref:Protocol.Params.Param.Name" >Name</see> tag.</para>
+		/// <para>The specified value for the <paramref name="name"/> argument should be the value of the <see href="xref:Protocol.Params.Param.Description" >Description</see> tag of the parameter and not the value of the <see href="xref:Protocol.Params.Param.Name" >Name</see> tag.</para>
 		/// <para>Useful for discrete parameters.</para>
 		/// </remarks>
 		/// <example>
@@ -831,7 +831,7 @@ namespace Skyline.DataMiner.Automation
 		/// The specified parameter is incorrect.
 		/// </exception>
 		/// <remarks>
-		/// <para>The specified value for the <paramref name="name"/> argument should be the value of the <see href="xref:Protocol.Params.Param.Description" >Desciption</see> tag of the parameter and not the value of the <see href="xref:Protocol.Params.Param.Name" >Name</see> tag.</para>
+		/// <para>The specified value for the <paramref name="name"/> argument should be the value of the <see href="xref:Protocol.Params.Param.Description" >Description</see> tag of the parameter and not the value of the <see href="xref:Protocol.Params.Param.Name" >Name</see> tag.</para>
 		/// <para>Useful for discrete parameters.</para>
 		/// </remarks>
 		/// <example>
@@ -872,7 +872,7 @@ namespace Skyline.DataMiner.Automation
 		/// The specified parameter is incorrect.
 		/// </exception>
 		/// <remarks>
-		/// <para>The specified value for the <paramref name="name"/> argument should be the value of the <see href="xref:Protocol.Params.Param.Description" >Desciption</see> tag of the parameter and not the value of the <see href="xref:Protocol.Params.Param.Name" >Name</see> tag.</para>
+		/// <para>The specified value for the <paramref name="name"/> argument should be the value of the <see href="xref:Protocol.Params.Param.Description" >Description</see> tag of the parameter and not the value of the <see href="xref:Protocol.Params.Param.Name" >Name</see> tag.</para>
 		/// <para>Useful for discrete parameters.</para>
 		/// </remarks>
 		/// <example>
@@ -943,7 +943,7 @@ namespace Skyline.DataMiner.Automation
 		/// In case the parameter was found, but the display value is not specified in the parameter, <see langword="null"/> is returned.
 		/// </returns>
 		/// <remarks>
-		/// <para>The specified value for the <paramref name="name"/> argument should be the value of the <see href="xref:Protocol.Params.Param.Description" >Desciption</see> tag of the parameter and not the value of the <see href="xref:Protocol.Params.Param.Name" >Name</see> tag.</para>
+		/// <para>The specified value for the <paramref name="name"/> argument should be the value of the <see href="xref:Protocol.Params.Param.Description" >Description</see> tag of the parameter and not the value of the <see href="xref:Protocol.Params.Param.Name" >Name</see> tag.</para>
 		/// <para>Used with parameters defining discrete entries to retrieve the raw value (e.g. "1") for a specific display value (e.g. “Main”).</para>
 		/// </remarks>
 		/// <example>
@@ -966,7 +966,7 @@ namespace Skyline.DataMiner.Automation
 		/// </code>
 		/// </example>
 		/// <remarks>
-		/// <para>The specified value for the <paramref name="name"/> argument should be the value of the <see href="xref:Protocol.Params.Param.Description" >Desciption</see> tag of the parameter and not the value of the <see href="xref:Protocol.Params.Param.Name" >Name</see> tag.</para>
+		/// <para>The specified value for the <paramref name="name"/> argument should be the value of the <see href="xref:Protocol.Params.Param.Description" >Description</see> tag of the parameter and not the value of the <see href="xref:Protocol.Params.Param.Name" >Name</see> tag.</para>
 		/// </remarks>
 		public virtual int GetReadParameterIDFromWrite(string name) { return 0; }
 
@@ -1025,7 +1025,7 @@ namespace Skyline.DataMiner.Automation
 		/// </code>
 		/// </example>
 		/// <remarks>
-		/// <para>The specified value for the <paramref name="tableParameterName"/> argument should be the value of the <see href="xref:Protocol.Params.Param.Description" >Desciption</see> tag of the parameter and not the value of the <see href="xref:Protocol.Params.Param.Name" >Name</see> tag.</para>
+		/// <para>The specified value for the <paramref name="tableParameterName"/> argument should be the value of the <see href="xref:Protocol.Params.Param.Description" >Description</see> tag of the parameter and not the value of the <see href="xref:Protocol.Params.Param.Name" >Name</see> tag.</para>
 		/// </remarks>
 		public virtual string[] GetTableDisplayKeys(string tableParameterName) { return null; }
 
@@ -1041,7 +1041,7 @@ namespace Skyline.DataMiner.Automation
 		/// </code>
 		/// </example>
 		/// <remarks>
-		/// <para>The specified value for the <paramref name="tableParameterName"/> argument should be the value of the <see href="xref:Protocol.Params.Param.Description" >Desciption</see> tag of the parameter and not the value of the <see href="xref:Protocol.Params.Param.Name" >Name</see> tag.</para>
+		/// <para>The specified value for the <paramref name="tableParameterName"/> argument should be the value of the <see href="xref:Protocol.Params.Param.Description" >Description</see> tag of the parameter and not the value of the <see href="xref:Protocol.Params.Param.Name" >Name</see> tag.</para>
 		/// </remarks>
 		public virtual DynamicTableIndicesResponse GetTableKeyMappings(string tableParameterName) { return null; }
 
@@ -1083,7 +1083,7 @@ namespace Skyline.DataMiner.Automation
 		/// </code>
 		/// </example>
 		/// <remarks>
-		/// <para>The specified value for the <paramref name="tableParameterName"/> argument should be the value of the <see href="xref:Protocol.Params.Param.Description" >Desciption</see> tag of the parameter and not the value of the <see href="xref:Protocol.Params.Param.Name" >Name</see> tag.</para>
+		/// <para>The specified value for the <paramref name="tableParameterName"/> argument should be the value of the <see href="xref:Protocol.Params.Param.Description" >Description</see> tag of the parameter and not the value of the <see href="xref:Protocol.Params.Param.Name" >Name</see> tag.</para>
 		/// </remarks>
 		public virtual string[] GetTablePrimaryKeys(string tableParameterName) { return null; }
 
@@ -1099,7 +1099,7 @@ namespace Skyline.DataMiner.Automation
 		/// </code>
 		/// </example>
 		/// <remarks>
-		/// <para>The specified value for the <paramref name="name"/> argument should be the value of the <see href="xref:Protocol.Params.Param.Description" >Desciption</see> tag of the parameter and not the value of the <see href="xref:Protocol.Params.Param.Name" >Name</see> tag.</para>
+		/// <para>The specified value for the <paramref name="name"/> argument should be the value of the <see href="xref:Protocol.Params.Param.Description" >Description</see> tag of the parameter and not the value of the <see href="xref:Protocol.Params.Param.Name" >Name</see> tag.</para>
 		/// </remarks>
 		public virtual int GetWriteParameterIDFromRead(string name) { return 0; }
 
@@ -1164,7 +1164,7 @@ namespace Skyline.DataMiner.Automation
 		/// <paramref name="output"/> is not in the range 1..nrOfOutputs.
 		/// </exception>
 		/// <remarks>
-		/// <para>The specified value for the <paramref name="name"/> argument should be the value of the <see href="xref:Protocol.Params.Param.Description" >Desciption</see> tag of the parameter and not the value of the <see href="xref:Protocol.Params.Param.Name" >Name</see> tag.</para>
+		/// <para>The specified value for the <paramref name="name"/> argument should be the value of the <see href="xref:Protocol.Params.Param.Description" >Description</see> tag of the parameter and not the value of the <see href="xref:Protocol.Params.Param.Name" >Name</see> tag.</para>
 		/// <para><paramref name="input"/> must be in the range 1..nrOfInputs.</para>
 		/// <para><paramref name="output"/> must be in the range 1..nrOfOutputs.</para>
 		/// </remarks>
@@ -1221,7 +1221,7 @@ namespace Skyline.DataMiner.Automation
 		/// </code>
 		/// </example>
 		/// <remarks>
-		/// <para>The specified value for the <paramref name="name"/> argument should be the value of the <see href="xref:Protocol.Params.Param.Description" >Desciption</see> tag of the parameter and not the value of the <see href="xref:Protocol.Params.Param.Name" >Name</see> tag.</para>
+		/// <para>The specified value for the <paramref name="name"/> argument should be the value of the <see href="xref:Protocol.Params.Param.Description" >Description</see> tag of the parameter and not the value of the <see href="xref:Protocol.Params.Param.Name" >Name</see> tag.</para>
 		/// </remarks>
 		public virtual bool IsMatrixCrosspointConnected(string name, string input, string output) { return false; }
 
@@ -1274,7 +1274,7 @@ namespace Skyline.DataMiner.Automation
 		/// <paramref name="index"/> is not in the range 1..nrOfInputs.
 		/// </exception>
 		/// <remarks>
-		/// <para>The specified value for the <paramref name="parameterName"/> argument should be the value of the <see href="xref:Protocol.Params.Param.Description" >Desciption</see> tag of the parameter and not the value of the <see href="xref:Protocol.Params.Param.Name" >Name</see> tag.</para>
+		/// <para>The specified value for the <paramref name="parameterName"/> argument should be the value of the <see href="xref:Protocol.Params.Param.Description" >Description</see> tag of the parameter and not the value of the <see href="xref:Protocol.Params.Param.Name" >Name</see> tag.</para>
 		/// <para><paramref name="index"/> must be in the range 1..nrOfInputs.</para>
 		/// </remarks>
 		/// <example>
@@ -1302,7 +1302,7 @@ namespace Skyline.DataMiner.Automation
 		/// </code>
 		/// </example>
 		/// <remarks>
-		/// <para>The specified value for the <paramref name="parameterName"/> argument should be the value of the <see href="xref:Protocol.Params.Param.Description" >Desciption</see> tag of the parameter and not the value of the <see href="xref:Protocol.Params.Param.Name" >Name</see> tag.</para>
+		/// <para>The specified value for the <paramref name="parameterName"/> argument should be the value of the <see href="xref:Protocol.Params.Param.Description" >Description</see> tag of the parameter and not the value of the <see href="xref:Protocol.Params.Param.Name" >Name</see> tag.</para>
 		/// </remarks>
 		public virtual void MatrixEnableInputLine(string parameterName, string inputLineLabel, bool state) { }
 
@@ -1352,7 +1352,7 @@ namespace Skyline.DataMiner.Automation
 		/// <param name="index">The index of the input or output.</param>
 		/// <param name="state"><c>true</c> to enable the input or output; otherwise, <c>false</c>.</param>
 		/// <remarks>
-		/// <para>The specified value for the <paramref name="parameterName"/> argument should be the value of the <see href="xref:Protocol.Params.Param.Description" >Desciption</see> tag of the parameter and not the value of the <see href="xref:Protocol.Params.Param.Name" >Name</see> tag.</para>
+		/// <para>The specified value for the <paramref name="parameterName"/> argument should be the value of the <see href="xref:Protocol.Params.Param.Description" >Description</see> tag of the parameter and not the value of the <see href="xref:Protocol.Params.Param.Name" >Name</see> tag.</para>
 		/// <para><paramref name="index"/> must be in the range 1..nrOfInputs if <paramref name="input"/> is <c>true</c>.</para>
 		/// <para><paramref name="index"/> must be in the range 1..nrOfOutputs if <paramref name="input"/> is <c>false</c>.</para>
 		/// </remarks>
@@ -1436,7 +1436,7 @@ namespace Skyline.DataMiner.Automation
 		/// </code>
 		/// </example>
 		/// <remarks>
-		/// <para>The specified value for the <paramref name="parameterName"/> argument should be the value of the <see href="xref:Protocol.Params.Param.Description" >Desciption</see> tag of the parameter and not the value of the <see href="xref:Protocol.Params.Param.Name" >Name</see> tag.</para>
+		/// <para>The specified value for the <paramref name="parameterName"/> argument should be the value of the <see href="xref:Protocol.Params.Param.Description" >Description</see> tag of the parameter and not the value of the <see href="xref:Protocol.Params.Param.Name" >Name</see> tag.</para>
 		/// </remarks>
 		public virtual void MatrixEnableLine(string parameterName, bool input, string lineLabel, bool state) { }
 
@@ -1484,7 +1484,7 @@ namespace Skyline.DataMiner.Automation
 		/// <param name="index">The index of the output.</param>
 		/// <param name="state"><c>true</c> to enable the output; otherwise, <c>false</c>.</param>
 		/// <remarks>
-		/// <para>The specified value for the <paramref name="parameterName"/> argument should be the value of the <see href="xref:Protocol.Params.Param.Description" >Desciption</see> tag of the parameter and not the value of the <see href="xref:Protocol.Params.Param.Name" >Name</see> tag.</para>
+		/// <para>The specified value for the <paramref name="parameterName"/> argument should be the value of the <see href="xref:Protocol.Params.Param.Description" >Description</see> tag of the parameter and not the value of the <see href="xref:Protocol.Params.Param.Name" >Name</see> tag.</para>
 		/// <para><paramref name="index"/> must be in the range 1..nrOfOutputs.</para>
 		/// </remarks>
 		/// <exception cref="DataMinerException">The matrix parameter was not found.<br />
@@ -1516,7 +1516,7 @@ namespace Skyline.DataMiner.Automation
 		/// </code>
 		/// </example>
 		/// <remarks>
-		/// <para>The specified value for the <paramref name="parameterName"/> argument should be the value of the <see href="xref:Protocol.Params.Param.Description" >Desciption</see> tag of the parameter and not the value of the <see href="xref:Protocol.Params.Param.Name" >Name</see> tag.</para>
+		/// <para>The specified value for the <paramref name="parameterName"/> argument should be the value of the <see href="xref:Protocol.Params.Param.Description" >Description</see> tag of the parameter and not the value of the <see href="xref:Protocol.Params.Param.Name" >Name</see> tag.</para>
 		/// </remarks>
 		public virtual void MatrixEnableOutputLine(string parameterName, string outputLineLabel, bool state) { }
 
@@ -1550,7 +1550,7 @@ namespace Skyline.DataMiner.Automation
 		/// <paramref name="index"/> is not in the range 1..nrOfOutputs.
 		/// </exception>
 		/// <remarks>
-		/// <para>The specified value for the <paramref name="parameterName"/> argument should be the value of the <see href="xref:Protocol.Params.Param.Description" >Desciption</see> tag of the parameter and not the value of the <see href="xref:Protocol.Params.Param.Name" >Name</see> tag.</para>
+		/// <para>The specified value for the <paramref name="parameterName"/> argument should be the value of the <see href="xref:Protocol.Params.Param.Description" >Description</see> tag of the parameter and not the value of the <see href="xref:Protocol.Params.Param.Name" >Name</see> tag.</para>
 		/// <para></para><paramref name="index"/> must be in the range 1..nrOfOutputs.
 		/// </remarks>
 		/// <example>
@@ -1578,7 +1578,7 @@ namespace Skyline.DataMiner.Automation
 		/// </code>
 		/// </example>
 		/// <remarks>
-		/// <para>The specified value for the <paramref name="parameterName"/> argument should be the value of the <see href="xref:Protocol.Params.Param.Description" >Desciption</see> tag of the parameter and not the value of the <see href="xref:Protocol.Params.Param.Name" >Name</see> tag.</para>
+		/// <para>The specified value for the <paramref name="parameterName"/> argument should be the value of the <see href="xref:Protocol.Params.Param.Description" >Description</see> tag of the parameter and not the value of the <see href="xref:Protocol.Params.Param.Name" >Name</see> tag.</para>
 		/// </remarks>
 		public virtual bool MatrixGetFollowMode(string parameterName, string outputLabel) { return false; }
 
@@ -1641,7 +1641,7 @@ namespace Skyline.DataMiner.Automation
 		/// </code>
 		/// </example>
 		/// <remarks>
-		/// <para>The specified value for the <paramref name="parameterName"/> argument should be the value of the <see href="xref:Protocol.Params.Param.Description" >Desciption</see> tag of the parameter and not the value of the <see href="xref:Protocol.Params.Param.Name" >Name</see> tag.</para>
+		/// <para>The specified value for the <paramref name="parameterName"/> argument should be the value of the <see href="xref:Protocol.Params.Param.Description" >Description</see> tag of the parameter and not the value of the <see href="xref:Protocol.Params.Param.Name" >Name</see> tag.</para>
 		/// </remarks>
 		public virtual int MatrixGetIndexFromLabel(string parameterName, bool input, string label) { return 0; }
 
@@ -1675,7 +1675,7 @@ namespace Skyline.DataMiner.Automation
 		/// There is no input with the specified input label.<br />
 		/// </exception>
 		/// <remarks>
-		/// <para>The specified value for the <paramref name="parameterName"/> argument should be the value of the <see href="xref:Protocol.Params.Param.Description" >Desciption</see> tag of the parameter and not the value of the <see href="xref:Protocol.Params.Param.Name" >Name</see> tag.</para>
+		/// <para>The specified value for the <paramref name="parameterName"/> argument should be the value of the <see href="xref:Protocol.Params.Param.Description" >Description</see> tag of the parameter and not the value of the <see href="xref:Protocol.Params.Param.Name" >Name</see> tag.</para>
 		/// <para>The returned index is in the range 1..nrOfInputs.</para>
 		/// </remarks>
 		/// <example>
@@ -1716,7 +1716,7 @@ namespace Skyline.DataMiner.Automation
 		/// <paramref name="index"/> is not in the range 1..nrOfInputs.<br />
 		/// </exception>
 		/// <remarks>
-		/// <para>The specified value for the <paramref name="parameterName"/> argument should be the value of the <see href="xref:Protocol.Params.Param.Description" >Desciption</see> tag of the parameter and not the value of the <see href="xref:Protocol.Params.Param.Name" >Name</see> tag.</para>
+		/// <para>The specified value for the <paramref name="parameterName"/> argument should be the value of the <see href="xref:Protocol.Params.Param.Description" >Description</see> tag of the parameter and not the value of the <see href="xref:Protocol.Params.Param.Name" >Name</see> tag.</para>
 		/// <para><paramref name="index"/> must be in the range 1..nrOfInputs.</para>
 		/// </remarks>
 		/// <example>
@@ -1738,7 +1738,7 @@ namespace Skyline.DataMiner.Automation
 		/// <paramref name="index"/> is not in the range 1..nrOfInputs.<br />
 		/// </exception>
 		/// <remarks>
-		/// <para>The specified value for the <paramref name="parameterName"/> argument should be the value of the <see href="xref:Protocol.Params.Param.Description" >Desciption</see> tag of the parameter and not the value of the <see href="xref:Protocol.Params.Param.Name" >Name</see> tag.</para>
+		/// <para>The specified value for the <paramref name="parameterName"/> argument should be the value of the <see href="xref:Protocol.Params.Param.Description" >Description</see> tag of the parameter and not the value of the <see href="xref:Protocol.Params.Param.Name" >Name</see> tag.</para>
 		/// <para><paramref name="index"/> must be in the range 1..nrOfInputs.</para>
 		/// </remarks>
 		/// <example>
@@ -1784,7 +1784,7 @@ namespace Skyline.DataMiner.Automation
 		/// </code>
 		/// </example>
 		/// <remarks>
-		/// <para>The specified value for the <paramref name="parameterName"/> argument should be the value of the <see href="xref:Protocol.Params.Param.Description" >Desciption</see> tag of the parameter and not the value of the <see href="xref:Protocol.Params.Param.Name" >Name</see> tag.</para>
+		/// <para>The specified value for the <paramref name="parameterName"/> argument should be the value of the <see href="xref:Protocol.Params.Param.Description" >Description</see> tag of the parameter and not the value of the <see href="xref:Protocol.Params.Param.Name" >Name</see> tag.</para>
 		/// </remarks>
 		public virtual bool MatrixGetInputLockMode(string parameterName, string inputLabel) { return false; }
 
@@ -1815,7 +1815,7 @@ namespace Skyline.DataMiner.Automation
 		/// <param name="index">The index of the matrix input or output.</param>
 		/// <returns>The label of the specified matrix input or output.</returns>
 		/// <remarks>
-		/// <para>The specified value for the <paramref name="parameterName"/> argument should be the value of the <see href="xref:Protocol.Params.Param.Description" >Desciption</see> tag of the parameter and not the value of the <see href="xref:Protocol.Params.Param.Name" >Name</see> tag.</para>
+		/// <para>The specified value for the <paramref name="parameterName"/> argument should be the value of the <see href="xref:Protocol.Params.Param.Description" >Description</see> tag of the parameter and not the value of the <see href="xref:Protocol.Params.Param.Name" >Name</see> tag.</para>
 		/// <para><paramref name="index"/> must be in the range 1..nrOfInputs if <paramref name="input"/> is <c>true</c>.</para>
 		/// <para><paramref name="index"/> must be in the range 1..nrOfOutputs if <paramref name="input"/> is <c>false</c>.</para>
 		/// </remarks>
@@ -1878,7 +1878,7 @@ namespace Skyline.DataMiner.Automation
 		/// </code>
 		/// </example>
 		/// <remarks>
-		/// <para>The specified value for the <paramref name="parameterName"/> argument should be the value of the <see href="xref:Protocol.Params.Param.Description" >Desciption</see> tag of the parameter and not the value of the <see href="xref:Protocol.Params.Param.Name" >Name</see> tag.</para>
+		/// <para>The specified value for the <paramref name="parameterName"/> argument should be the value of the <see href="xref:Protocol.Params.Param.Description" >Description</see> tag of the parameter and not the value of the <see href="xref:Protocol.Params.Param.Name" >Name</see> tag.</para>
 		/// </remarks>
 		public virtual bool MatrixGetLockMode(string parameterName, bool input, string label) { return false; }
 
@@ -1943,7 +1943,7 @@ namespace Skyline.DataMiner.Automation
 		/// <paramref name="index"/> is not in the range 1..nrOfOutputs and <paramref name="input"/> is <c>false</c>.
 		/// </exception>
 		/// <remarks>
-		/// <para>The specified value for the <paramref name="parameterName"/> argument should be the value of the <see href="xref:Protocol.Params.Param.Description" >Desciption</see> tag of the parameter and not the value of the <see href="xref:Protocol.Params.Param.Name" >Name</see> tag.</para>
+		/// <para>The specified value for the <paramref name="parameterName"/> argument should be the value of the <see href="xref:Protocol.Params.Param.Description" >Description</see> tag of the parameter and not the value of the <see href="xref:Protocol.Params.Param.Name" >Name</see> tag.</para>
 		/// <para><paramref name="index"/> must be in the range 1..nrOfInputs if <paramref name="input"/> is <c>true</c>.</para>
 		/// <para><paramref name="index"/> must be in the range 1..nrOfOutputs if <paramref name="input"/> is <c>false</c>.</para>
 		/// </remarks>
@@ -1966,7 +1966,7 @@ namespace Skyline.DataMiner.Automation
 		/// There is no output with the specified output label.<br />
 		/// </exception>
 		/// <remarks>
-		/// <para>The specified value for the <paramref name="parameterName"/> argument should be the value of the <see href="xref:Protocol.Params.Param.Description" >Desciption</see> tag of the parameter and not the value of the <see href="xref:Protocol.Params.Param.Name" >Name</see> tag.</para>
+		/// <para>The specified value for the <paramref name="parameterName"/> argument should be the value of the <see href="xref:Protocol.Params.Param.Description" >Description</see> tag of the parameter and not the value of the <see href="xref:Protocol.Params.Param.Name" >Name</see> tag.</para>
 		/// <para>The returned output is in the range 1..nrOfOutputs.</para>
 		/// </remarks>
 		/// <example>
@@ -2034,7 +2034,7 @@ namespace Skyline.DataMiner.Automation
 		/// </code>
 		/// </example>
 		/// <remarks>
-		/// <para>The specified value for the <paramref name="parameterName"/> argument should be the value of the <see href="xref:Protocol.Params.Param.Description" >Desciption</see> tag of the parameter and not the value of the <see href="xref:Protocol.Params.Param.Name" >Name</see> tag.</para>
+		/// <para>The specified value for the <paramref name="parameterName"/> argument should be the value of the <see href="xref:Protocol.Params.Param.Description" >Description</see> tag of the parameter and not the value of the <see href="xref:Protocol.Params.Param.Name" >Name</see> tag.</para>
 		/// </remarks>
 		public virtual string MatrixGetOutputLabel(string parameterName, int index) { return ""; }
 
@@ -2055,7 +2055,7 @@ namespace Skyline.DataMiner.Automation
 		/// </code>
 		/// </example>
 		/// <remarks>
-		/// <para>The specified value for the <paramref name="parameterName"/> argument should be the value of the <see href="xref:Protocol.Params.Param.Description" >Desciption</see> tag of the parameter and not the value of the <see href="xref:Protocol.Params.Param.Name" >Name</see> tag.</para>
+		/// <para>The specified value for the <paramref name="parameterName"/> argument should be the value of the <see href="xref:Protocol.Params.Param.Description" >Description</see> tag of the parameter and not the value of the <see href="xref:Protocol.Params.Param.Name" >Name</see> tag.</para>
 		/// </remarks>
 		public virtual bool MatrixGetOutputLockMode(string parameterName, string outputLabel) { return false; }
 
@@ -2077,7 +2077,7 @@ namespace Skyline.DataMiner.Automation
 		/// </code>
 		/// </example>
 		/// <remarks>
-		/// <para>The specified value for the <paramref name="parameterName"/> argument should be the value of the <see href="xref:Protocol.Params.Param.Description" >Desciption</see> tag of the parameter and not the value of the <see href="xref:Protocol.Params.Param.Name" >Name</see> tag.</para>
+		/// <para>The specified value for the <paramref name="parameterName"/> argument should be the value of the <see href="xref:Protocol.Params.Param.Description" >Description</see> tag of the parameter and not the value of the <see href="xref:Protocol.Params.Param.Name" >Name</see> tag.</para>
 		/// </remarks>
 		public virtual bool MatrixGetOutputLockMode(string parameterName, int index) { return false; }
 
@@ -2171,7 +2171,7 @@ namespace Skyline.DataMiner.Automation
 		/// </code>
 		/// </example>
 		/// <remarks>
-		/// <para>The specified value for the <paramref name="parameterName"/> argument should be the value of the <see href="xref:Protocol.Params.Param.Description" >Desciption</see> tag of the parameter and not the value of the <see href="xref:Protocol.Params.Param.Name" >Name</see> tag.</para>
+		/// <para>The specified value for the <paramref name="parameterName"/> argument should be the value of the <see href="xref:Protocol.Params.Param.Description" >Description</see> tag of the parameter and not the value of the <see href="xref:Protocol.Params.Param.Name" >Name</see> tag.</para>
 		/// </remarks>
 		public virtual bool MatrixIsInputLineEnabled(string parameterName, int index) { return false; }
 
@@ -2192,7 +2192,7 @@ namespace Skyline.DataMiner.Automation
 		/// </code>
 		/// </example>
 		/// <remarks>
-		/// <para>The specified value for the <paramref name="parameterName"/> argument should be the value of the <see href="xref:Protocol.Params.Param.Description" >Desciption</see> tag of the parameter and not the value of the <see href="xref:Protocol.Params.Param.Name" >Name</see> tag.</para>
+		/// <para>The specified value for the <paramref name="parameterName"/> argument should be the value of the <see href="xref:Protocol.Params.Param.Description" >Description</see> tag of the parameter and not the value of the <see href="xref:Protocol.Params.Param.Name" >Name</see> tag.</para>
 		/// </remarks>
 		public virtual bool MatrixIsInputLineEnabled(string parameterName, string lineLabel) { return false; }
 
@@ -2231,7 +2231,7 @@ namespace Skyline.DataMiner.Automation
 		/// <paramref name="index"/> is not in the range 1..nrOfOutputs and <paramref name="input"/> is <c>false</c>.
 		/// </exception>
 		/// <remarks>
-		/// <para>The specified value for the <paramref name="parameterName"/> argument should be the value of the <see href="xref:Protocol.Params.Param.Description" >Desciption</see> tag of the parameter and not the value of the <see href="xref:Protocol.Params.Param.Name" >Name</see> tag.</para>
+		/// <para>The specified value for the <paramref name="parameterName"/> argument should be the value of the <see href="xref:Protocol.Params.Param.Description" >Description</see> tag of the parameter and not the value of the <see href="xref:Protocol.Params.Param.Name" >Name</see> tag.</para>
 		/// <para><paramref name="index"/> must be in the range 1..nrOfInputs if <paramref name="input"/> is <c>true</c>.</para>
 		/// <para><paramref name="index"/> must be in the range 1..nrOfOutputs if <paramref name="input"/> is <c>false</c>.</para>
 		/// </remarks>
@@ -2263,7 +2263,7 @@ namespace Skyline.DataMiner.Automation
 		/// </code>
 		/// </example>
 		/// <remarks>
-		/// <para>The specified value for the <paramref name="parameterName"/> argument should be the value of the <see href="xref:Protocol.Params.Param.Description" >Desciption</see> tag of the parameter and not the value of the <see href="xref:Protocol.Params.Param.Name" >Name</see> tag.</para>
+		/// <para>The specified value for the <paramref name="parameterName"/> argument should be the value of the <see href="xref:Protocol.Params.Param.Description" >Description</see> tag of the parameter and not the value of the <see href="xref:Protocol.Params.Param.Name" >Name</see> tag.</para>
 		/// </remarks>
 		public virtual bool MatrixIsLineEnabled(string parameterName, bool input, string lineLabel) { return false; }
 
@@ -2310,7 +2310,7 @@ namespace Skyline.DataMiner.Automation
 		/// </code>
 		/// </example>
 		/// <remarks>
-		/// <para>The specified value for the <paramref name="parameterName"/> argument should be the value of the <see href="xref:Protocol.Params.Param.Description" >Desciption</see> tag of the parameter and not the value of the <see href="xref:Protocol.Params.Param.Name" >Name</see> tag.</para>
+		/// <para>The specified value for the <paramref name="parameterName"/> argument should be the value of the <see href="xref:Protocol.Params.Param.Description" >Description</see> tag of the parameter and not the value of the <see href="xref:Protocol.Params.Param.Name" >Name</see> tag.</para>
 		/// </remarks>
 		public virtual bool MatrixIsOutputLineEnabled(string parameterName, int index) { return false; }
 
@@ -2367,7 +2367,7 @@ namespace Skyline.DataMiner.Automation
 		/// bool isOutputEnabled = element.MatrixIsInputLineEnabled("Example Matrix", "Output 4");
 		/// </code></example>
 		/// <remarks>
-		/// <para>The specified value for the <paramref name="parameterName"/> argument should be the value of the <see href="xref:Protocol.Params.Param.Description" >Desciption</see> tag of the parameter and not the value of the <see href="xref:Protocol.Params.Param.Name" >Name</see> tag.</para>
+		/// <para>The specified value for the <paramref name="parameterName"/> argument should be the value of the <see href="xref:Protocol.Params.Param.Description" >Description</see> tag of the parameter and not the value of the <see href="xref:Protocol.Params.Param.Name" >Name</see> tag.</para>
 		/// </remarks>
 		public virtual bool MatrixIsOutputLineEnabled(string parameterName, string lineLabel) { return false; }
 
@@ -2428,7 +2428,7 @@ namespace Skyline.DataMiner.Automation
 		/// <paramref name="slave"/> is not in the range 1..nrOfOutputs.<br />
 		/// </exception>
 		/// <remarks>
-		/// <para>The specified value for the <paramref name="parameterName"/> argument should be the value of the <see href="xref:Protocol.Params.Param.Description" >Desciption</see> tag of the parameter and not the value of the <see href="xref:Protocol.Params.Param.Name" >Name</see> tag.</para>
+		/// <para>The specified value for the <paramref name="parameterName"/> argument should be the value of the <see href="xref:Protocol.Params.Param.Description" >Description</see> tag of the parameter and not the value of the <see href="xref:Protocol.Params.Param.Name" >Name</see> tag.</para>
 		/// <para><paramref name="master"/> must be in the range 1..nrOfOutputs.</para>
 		/// <para><paramref name="slave"/> must be in the range 1..nrOfOutputs.</para>
 		/// </remarks>
@@ -2459,7 +2459,7 @@ namespace Skyline.DataMiner.Automation
 		/// </code>
 		/// </example>
 		/// <remarks>
-		/// <para>The specified value for the <paramref name="parameterName"/> argument should be the value of the <see href="xref:Protocol.Params.Param.Description" >Desciption</see> tag of the parameter and not the value of the <see href="xref:Protocol.Params.Param.Name" >Name</see> tag.</para>
+		/// <para>The specified value for the <paramref name="parameterName"/> argument should be the value of the <see href="xref:Protocol.Params.Param.Description" >Description</see> tag of the parameter and not the value of the <see href="xref:Protocol.Params.Param.Name" >Name</see> tag.</para>
 		/// </remarks>
 		public virtual void MatrixSetFollowMaster(string parameterName, string masterLabel, string slaveLabel) { }
 
@@ -2518,7 +2518,7 @@ namespace Skyline.DataMiner.Automation
 		/// </code>
 		/// </example>
 		/// <remarks>
-		/// <para>The specified value for the <paramref name="parameterName"/> argument should be the value of the <see href="xref:Protocol.Params.Param.Description" >Desciption</see> tag of the parameter and not the value of the <see href="xref:Protocol.Params.Param.Name" >Name</see> tag.</para>
+		/// <para>The specified value for the <paramref name="parameterName"/> argument should be the value of the <see href="xref:Protocol.Params.Param.Description" >Description</see> tag of the parameter and not the value of the <see href="xref:Protocol.Params.Param.Name" >Name</see> tag.</para>
 		/// </remarks>
 		public virtual void MatrixSetFollowMode(string parameterName, int index, bool mode) { }
 
@@ -2539,7 +2539,7 @@ namespace Skyline.DataMiner.Automation
 		/// </code>
 		/// </example>
 		/// <remarks>
-		/// <para>The specified value for the <paramref name="parameterName"/> argument should be the value of the <see href="xref:Protocol.Params.Param.Description" >Desciption</see> tag of the parameter and not the value of the <see href="xref:Protocol.Params.Param.Name" >Name</see> tag.</para>
+		/// <para>The specified value for the <paramref name="parameterName"/> argument should be the value of the <see href="xref:Protocol.Params.Param.Description" >Description</see> tag of the parameter and not the value of the <see href="xref:Protocol.Params.Param.Name" >Name</see> tag.</para>
 		/// </remarks>
 		public virtual void MatrixSetFollowMode(string parameterName, string outputLabel, bool mode) { }
 
@@ -2554,7 +2554,7 @@ namespace Skyline.DataMiner.Automation
 		/// <paramref name="index"/> is not in the range 1..nrOfInputs.
 		/// </exception>
 		/// <remarks>
-		/// <para>The specified value for the <paramref name="parameterName"/> argument should be the value of the <see href="xref:Protocol.Params.Param.Description" >Desciption</see> tag of the parameter and not the value of the <see href="xref:Protocol.Params.Param.Name" >Name</see> tag.</para>
+		/// <para>The specified value for the <paramref name="parameterName"/> argument should be the value of the <see href="xref:Protocol.Params.Param.Description" >Description</see> tag of the parameter and not the value of the <see href="xref:Protocol.Params.Param.Name" >Name</see> tag.</para>
 		/// <para><paramref name="index"/> must be in the range 1..nrOfInputs.</para>
 		/// </remarks>
 		/// <example>
@@ -2582,7 +2582,7 @@ namespace Skyline.DataMiner.Automation
 		/// </code>
 		/// </example>
 		/// <remarks>
-		/// <para>The specified value for the <paramref name="parameterName"/> argument should be the value of the <see href="xref:Protocol.Params.Param.Description" >Desciption</see> tag of the parameter and not the value of the <see href="xref:Protocol.Params.Param.Name" >Name</see> tag.</para>
+		/// <para>The specified value for the <paramref name="parameterName"/> argument should be the value of the <see href="xref:Protocol.Params.Param.Description" >Description</see> tag of the parameter and not the value of the <see href="xref:Protocol.Params.Param.Name" >Name</see> tag.</para>
 		/// </remarks>
 		public virtual void MatrixSetInputLabel(string parameterName, string oldName, string newName) { }
 
@@ -2661,7 +2661,7 @@ namespace Skyline.DataMiner.Automation
 		/// </code>
 		/// </example>
 		/// <remarks>
-		/// <para>The specified value for the <paramref name="parameterName"/> argument should be the value of the <see href="xref:Protocol.Params.Param.Description" >Desciption</see> tag of the parameter and not the value of the <see href="xref:Protocol.Params.Param.Name" >Name</see> tag.</para>
+		/// <para>The specified value for the <paramref name="parameterName"/> argument should be the value of the <see href="xref:Protocol.Params.Param.Description" >Description</see> tag of the parameter and not the value of the <see href="xref:Protocol.Params.Param.Name" >Name</see> tag.</para>
 		/// </remarks>
 		public virtual void MatrixSetInputLockMode(string parameterName, int index, bool mode) { }
 
@@ -2682,7 +2682,7 @@ namespace Skyline.DataMiner.Automation
 		/// </code>
 		/// </example>
 		/// <remarks>
-		/// <para>The specified value for the <paramref name="parameterName"/> argument should be the value of the <see href="xref:Protocol.Params.Param.Description" >Desciption</see> tag of the parameter and not the value of the <see href="xref:Protocol.Params.Param.Name" >Name</see> tag.</para>
+		/// <para>The specified value for the <paramref name="parameterName"/> argument should be the value of the <see href="xref:Protocol.Params.Param.Description" >Description</see> tag of the parameter and not the value of the <see href="xref:Protocol.Params.Param.Name" >Name</see> tag.</para>
 		/// </remarks>
 		public virtual void MatrixSetInputLockMode(string parameterName, string inputLabel, bool mode) { }
 
@@ -2744,7 +2744,7 @@ namespace Skyline.DataMiner.Automation
 		/// <paramref name="index"/> is not in the range 1..nrOfOutputs and <paramref name="input"/> is <c>false</c>.
 		/// </exception>
 		/// <remarks>
-		/// <para>The specified value for the <paramref name="parameterName"/> argument should be the value of the <see href="xref:Protocol.Params.Param.Description" >Desciption</see> tag of the parameter and not the value of the <see href="xref:Protocol.Params.Param.Name" >Name</see> tag.</para>
+		/// <para>The specified value for the <paramref name="parameterName"/> argument should be the value of the <see href="xref:Protocol.Params.Param.Description" >Description</see> tag of the parameter and not the value of the <see href="xref:Protocol.Params.Param.Name" >Name</see> tag.</para>
 		/// <para><paramref name="index"/> must be in the range 1..nrOfInputs if <paramref name="input"/> is <c>true</c>.</para>
 		/// <para><paramref name="index"/> must be in the range 1..nrOfOutputs if <paramref name="input"/> is <c>false</c>.</para>
 		/// </remarks>
@@ -2776,7 +2776,7 @@ namespace Skyline.DataMiner.Automation
 		/// </code>
 		/// </example>
 		/// <remarks>
-		/// <para>The specified value for the <paramref name="parameterName"/> argument should be the value of the <see href="xref:Protocol.Params.Param.Description" >Desciption</see> tag of the parameter and not the value of the <see href="xref:Protocol.Params.Param.Name" >Name</see> tag.</para>
+		/// <para>The specified value for the <paramref name="parameterName"/> argument should be the value of the <see href="xref:Protocol.Params.Param.Description" >Description</see> tag of the parameter and not the value of the <see href="xref:Protocol.Params.Param.Name" >Name</see> tag.</para>
 		/// </remarks>
 		public virtual void MatrixSetLabel(string parameterName, bool input, string oldName, string newName) { }
 
@@ -2821,7 +2821,7 @@ namespace Skyline.DataMiner.Automation
 		/// </code>
 		/// </example>
 		/// <remarks>
-		/// <para>The specified value for the <paramref name="parameterName"/> argument should be the value of the <see href="xref:Protocol.Params.Param.Description" >Desciption</see> tag of the parameter and not the value of the <see href="xref:Protocol.Params.Param.Name" >Name</see> tag.</para>
+		/// <para>The specified value for the <paramref name="parameterName"/> argument should be the value of the <see href="xref:Protocol.Params.Param.Description" >Description</see> tag of the parameter and not the value of the <see href="xref:Protocol.Params.Param.Name" >Name</see> tag.</para>
 		/// </remarks>
 		public virtual void MatrixSetLockMode(string parameterName, bool input, string label, bool mode) { }
 
@@ -2839,7 +2839,7 @@ namespace Skyline.DataMiner.Automation
 		/// <paramref name="index"/> is not in the range 1..nrOfOutputs and <paramref name="input"/> is <c>false</c>.
 		/// </exception>
 		/// <remarks>
-		/// <para>The specified value for the <paramref name="parameterName"/> argument should be the value of the <see href="xref:Protocol.Params.Param.Description" >Desciption</see> tag of the parameter and not the value of the <see href="xref:Protocol.Params.Param.Name" >Name</see> tag.</para>
+		/// <para>The specified value for the <paramref name="parameterName"/> argument should be the value of the <see href="xref:Protocol.Params.Param.Description" >Description</see> tag of the parameter and not the value of the <see href="xref:Protocol.Params.Param.Name" >Name</see> tag.</para>
 		/// <para><paramref name="index"/> must be in the range 1..nrOfInputs if <paramref name="input"/> is <c>true</c>.</para>
 		/// <para><paramref name="index"/> must be in the range 1..nrOfOutputs if <paramref name="input"/> is <c>false</c>.</para>
 		/// </remarks>
@@ -2915,7 +2915,7 @@ namespace Skyline.DataMiner.Automation
 		/// </code>
 		/// </example>
 		/// <remarks>
-		/// <para>The specified value for the <paramref name="parameterName"/> argument should be the value of the <see href="xref:Protocol.Params.Param.Description" >Desciption</see> tag of the parameter and not the value of the <see href="xref:Protocol.Params.Param.Name" >Name</see> tag.</para>
+		/// <para>The specified value for the <paramref name="parameterName"/> argument should be the value of the <see href="xref:Protocol.Params.Param.Description" >Description</see> tag of the parameter and not the value of the <see href="xref:Protocol.Params.Param.Name" >Name</see> tag.</para>
 		/// </remarks>
 		public virtual void MatrixSetOutputLabel(string parameterName, int index, string newName) { }
 
@@ -2973,7 +2973,7 @@ namespace Skyline.DataMiner.Automation
 		/// </code>
 		/// </example>
 		/// <remarks>
-		/// <para>The specified value for the <paramref name="parameterName"/> argument should be the value of the <see href="xref:Protocol.Params.Param.Description" >Desciption</see> tag of the parameter and not the value of the <see href="xref:Protocol.Params.Param.Name" >Name</see> tag.</para>
+		/// <para>The specified value for the <paramref name="parameterName"/> argument should be the value of the <see href="xref:Protocol.Params.Param.Description" >Description</see> tag of the parameter and not the value of the <see href="xref:Protocol.Params.Param.Name" >Name</see> tag.</para>
 		/// </remarks>
 		public virtual void MatrixSetOutputLabel(string parameterName, string oldName, string newName) { }
 
@@ -2994,7 +2994,7 @@ namespace Skyline.DataMiner.Automation
 		/// </code>
 		/// </example>
 		/// <remarks>
-		/// <para>The specified value for the <paramref name="parameterName"/> argument should be the value of the <see href="xref:Protocol.Params.Param.Description" >Desciption</see> tag of the parameter and not the value of the <see href="xref:Protocol.Params.Param.Name" >Name</see> tag.</para>
+		/// <para>The specified value for the <paramref name="parameterName"/> argument should be the value of the <see href="xref:Protocol.Params.Param.Description" >Description</see> tag of the parameter and not the value of the <see href="xref:Protocol.Params.Param.Name" >Name</see> tag.</para>
 		/// </remarks>
 		public virtual void MatrixSetOutputLockMode(string parameterName, string outputLabel, bool mode) { }
 
@@ -3028,7 +3028,7 @@ namespace Skyline.DataMiner.Automation
 		/// <paramref name="index"/> is not in the range 1..nrOfOutputs.
 		/// </exception>
 		/// <remarks>
-		/// <para>The specified value for the <paramref name="parameterName"/> argument should be the value of the <see href="xref:Protocol.Params.Param.Description" >Desciption</see> tag of the parameter and not the value of the <see href="xref:Protocol.Params.Param.Name" >Name</see> tag.</para>
+		/// <para>The specified value for the <paramref name="parameterName"/> argument should be the value of the <see href="xref:Protocol.Params.Param.Description" >Description</see> tag of the parameter and not the value of the <see href="xref:Protocol.Params.Param.Name" >Name</see> tag.</para>
 		/// <para><paramref name="index"/> must be in the range 1..nrOfOutputs.</para>
 		/// </remarks>
 		/// <example>
@@ -3090,7 +3090,7 @@ namespace Skyline.DataMiner.Automation
 		/// </code>
 		/// </example>
 		/// <remarks>
-		/// <para>The specified value for the <paramref name="parameterName"/> argument should be the value of the <see href="xref:Protocol.Params.Param.Description" >Desciption</see> tag of the parameter and not the value of the <see href="xref:Protocol.Params.Param.Name" >Name</see> tag.</para>
+		/// <para>The specified value for the <paramref name="parameterName"/> argument should be the value of the <see href="xref:Protocol.Params.Param.Description" >Description</see> tag of the parameter and not the value of the <see href="xref:Protocol.Params.Param.Name" >Name</see> tag.</para>
 		/// </remarks>
 		public virtual void MatrixStopBeingMaster(string parameterName, string masterLabel) { }
 
@@ -3111,7 +3111,7 @@ namespace Skyline.DataMiner.Automation
 		/// </code>
 		/// </example>
 		/// <remarks>
-		/// <para>The specified value for the <paramref name="parameterName"/> argument should be the value of the <see href="xref:Protocol.Params.Param.Description" >Desciption</see> tag of the parameter and not the value of the <see href="xref:Protocol.Params.Param.Name" >Name</see> tag.</para>
+		/// <para>The specified value for the <paramref name="parameterName"/> argument should be the value of the <see href="xref:Protocol.Params.Param.Description" >Description</see> tag of the parameter and not the value of the <see href="xref:Protocol.Params.Param.Name" >Name</see> tag.</para>
 		/// </remarks>
 		public virtual void MatrixStopBeingMaster(string parameterName, int master) { }
 
@@ -3203,7 +3203,7 @@ namespace Skyline.DataMiner.Automation
 		/// </code>
 		/// </example>
 		/// <remarks>
-		/// <para>The specified value for the <paramref name="name"/> argument should be the value of the <see href="xref:Protocol.Params.Param.Description" >Desciption</see> tag of the parameter and not the value of the <see href="xref:Protocol.Params.Param.Name" >Name</see> tag.</para>
+		/// <para>The specified value for the <paramref name="name"/> argument should be the value of the <see href="xref:Protocol.Params.Param.Description" >Description</see> tag of the parameter and not the value of the <see href="xref:Protocol.Params.Param.Name" >Name</see> tag.</para>
 		/// </remarks>
 		public virtual void SetParameter(string name, object value) { }
 
@@ -3237,7 +3237,7 @@ namespace Skyline.DataMiner.Automation
 		/// </code>
 		/// </example>
 		/// <remarks>
-		/// <para>The specified value for the <paramref name="name"/> argument should be the value of the <see href="xref:Protocol.Params.Param.Description" >Desciption</see> tag of the parameter and not the value of the <see href="xref:Protocol.Params.Param.Name" >Name</see> tag.</para>
+		/// <para>The specified value for the <paramref name="name"/> argument should be the value of the <see href="xref:Protocol.Params.Param.Description" >Description</see> tag of the parameter and not the value of the <see href="xref:Protocol.Params.Param.Name" >Name</see> tag.</para>
 		/// </remarks>
 		public virtual void SetParameter(string name, string idx, object value) { }
 
@@ -3274,7 +3274,7 @@ namespace Skyline.DataMiner.Automation
 		/// </code>
 		/// </example>
 		/// <remarks>
-		/// <para>The specified value for the <paramref name="name"/> argument should be the value of the <see href="xref:Protocol.Params.Param.Description" >Desciption</see> tag of the parameter and not the value of the <see href="xref:Protocol.Params.Param.Name" >Name</see> tag.</para>
+		/// <para>The specified value for the <paramref name="name"/> argument should be the value of the <see href="xref:Protocol.Params.Param.Description" >Description</see> tag of the parameter and not the value of the <see href="xref:Protocol.Params.Param.Name" >Name</see> tag.</para>
 		/// </remarks>
 		public virtual void SetParameterByPrimaryKey(string name, string primaryKey, object value) { }
 
