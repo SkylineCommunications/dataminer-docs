@@ -73,6 +73,14 @@ Up to now, an error could occur in SLLog when adding large entries regarding fai
 
 The SLDataGateway process would leak memory when offloading average trend data for DVE elements.
 
+#### DataMiner Cube - ListView component: Problem with custom property columns and date columns [ID_35218]
+
+<!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
+
+When, in an *ListView* component, you hovered over a cell value in a custom property column or a date column, no tooltip would appear.
+
+Also, the filter box above a custom property column would incorrectly always be empty.
+
 #### DataMiner Cube - Alarm Console: Multiple values in property columns would incorrectly not be separated by any separator [ID_35239]
 
 <!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
@@ -114,6 +122,12 @@ When, in a ListView component or a Resource Manager component showing a bookings
 <!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
 
 When a discrete parameter with a `<Sequence>` tag was displayed in a lite parameter control, its current value would neither be displayed nor selected while being edited.
+
+#### DataMiner Cube - Data Display: Problem with the alarm bubble-up feature in a tree control containing many-to-many relationships [ID_35367]
+
+<!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
+
+When a tree control contained many-to-many relationships, up to now, the alarm bubble-up feature would not work correctly.
 
 #### Cassandra: TTL setting of spectrum trace data would not be applied correctly [ID_35385]
 
