@@ -6,6 +6,20 @@ uid: DCP_change_log
 
 The DataMiner Cloud Platform gets updated continuously. This change log can help you trace when specific features and changes have become available.
 
+#### 13 January 2023 - Enhancement - Auditing of protocol and script deployments [ID_35392]
+
+The *Audit* page of the DCP Admin app will now also contain records for protocol and script deployments, while previously it only showed records for DxM artifact deployments.
+
+Deploying protocols can be done via the [DataMiner Catalog](https://catalog.dataminer.services/), deploying scripts can be done with a GitHub or GitLab CI/CD pipeline, and deploying DxMs can be done with the DCP Admin app.
+
+#### 12 January 2023 - Fix - CloudGateway 2.10.2 - CloudGateway not starting if DataMiner uses HTTP [ID_35362]
+
+When DataMiner was configured to use HTTP, prior to version 2.10.2, CloudGateway could fail to start up, and it could throw the following exception:
+
+```txt
+Something went wrong while initializing WebApiEndpointService. A url in the (custom.)appsettings.json or maintenancesettings.xml is malformed or empty while a valid value was expected. See exception System.ArgumentNullException: Value cannot be null. (Parameter 'dataMinerWebApiHttpFormat')
+```
+
 #### 10 January 2023 - Enhancement - DataMiner SupportAssistant 1.2.0 - Various stability improvements [ID_35349]
 
 Various general stability improvements have been implemented. In addition, eventing has been added to DCP, so that the Skyline Support Team can follow up on the status of remote log collection.
