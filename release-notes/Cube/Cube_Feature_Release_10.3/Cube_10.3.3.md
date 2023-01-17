@@ -58,12 +58,17 @@ In a *ListView* component, you can click the filter icon of a particular column 
 
 Up to now, those column filter boxes incorrectly had *autocomplete* enabled.
 
-
 #### Visual Overview: Problem after filtering bookings using a custom time range in ListView component or Resource Manager component [ID_35328]
 
 <!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
 
 When, in a ListView component or a Resource Manager component showing a bookings timeline, you had filtered the bookings using a custom time range, performance issues could start to occur after a period of time.
+
+#### DataMiner Cube - Visual Overview: Problem after editing a discrete parameter with a 'Sequence' tag displayed in a lite parameter control [ID_35356]
+
+<!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
+
+When a discrete parameter with a `<Sequence>` tag was displayed in a lite parameter control, its current value would neither be displayed nor selected after being edited.
 
 #### Trending: Pattern matching tags could incorrectly be defined for discrete or string parameters [ID_35368]
 
