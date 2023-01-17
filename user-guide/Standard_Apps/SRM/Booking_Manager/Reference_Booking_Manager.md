@@ -233,6 +233,9 @@ The value of this property should be configured in JSON format. It can contain s
 {"Script":"Script:TESTEDA123||myarg=abcde-[RESERVATIONID]"}
 ```
 
+> [!TIP]
+> See also: [Configuring a custom Created Booking Action](xref:Service_Orchestration_life_cycle_states#configuring-a-custom-created-booking-action)
+
 ### Data Transfer Rules Configuration
 
 **Scope**: Service definition

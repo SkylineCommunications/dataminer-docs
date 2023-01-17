@@ -33,6 +33,43 @@ A booking is always associated with a specific booking life cycle state. The fol
   - Adjusting required capabilities/capacities in the profile instance in such a way that the resource can no longer meet requirements.
   - Adjusting capabilities/capacities on the resource.
 
+> [!TIP]
+> See also: [The Bookings tab](xref:Booking_Manager_Bookings_tab)
+
 ## Configuring a custom Created Booking Action
 
+On a node in a service definition, you can configure that a script should run before the corresponding booking is set to the "Confirmed" state<!-- RN 19447 -->:
+
+1. In the Services module, go to the *definitions* tab.
+
+1. Select the service definition and the node for which you want to run the script.
+
+1. In the *properties* pane in the lower right corner, add the *Created Booking Action* property, and specify a value in the following format (similar to the format used to link a shape to an Automation script in Visio):
+
+   ```json
+   {
+   "Script": "Script:<Script name>||<Parameter name 1>=<Parameter value 1>;
+   <Parameter name 2>=<Parameter value 2>;..."
+   }
+   ```
+
+   In this value, the placeholder `[RESERVATIONID]` can be used, which will be replaced by the booking ID of the created booking when the script is started.
+
+> [!NOTE]
+>
+> - In case the script fails, the booking will be set to the *Partial* booking life cycle state. <!-- RN 28875 -->
+> - To report a custom message to the main booking wizard and inform the user when the custom script fails, the script must exit with the following call (the exception containing the custom message): `AutomationScript.HandleException(Engine, Exception);` <!-- RN 26616 -->
+
+> [!TIP]
+> See also: [Created Booking Action](xref:SRM_properties_Booking_Manager#created-booking-action)
+
 ## Defining custom state colors
+
+You can assign a custom color to each of the booking life cycle states.
+
+1. In the Booking Manager app, go to *Config* > *Lifecycle colors*.
+
+1. Next to the life cycle state for which you want to define a custom color, click the pencil icon, select the custom color, and click the green checkmark icon.
+
+> [!TIP]
+> See also: [Lifecycle colors subtab](xref:Booking_Manager_Config_tab#lifecycle-colors-subtab)

@@ -150,6 +150,9 @@ See [Adding custom scripts for additional controls](xref:SRM_custom_scripts#addi
 
 - **Failed**: The color used in the Booking Manager for bookings in the “Failed” state.
 
+> [!TIP]
+> See also: [Defining custom state colors](xref:Service_Orchestration_life_cycle_states#defining-custom-state-colors)
+
 ## Services and SLA subtab
 
 ### Service states settings
