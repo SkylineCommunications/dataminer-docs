@@ -6,11 +6,11 @@ uid: Querying_MySQL_vs_Cassandra
 
 ## Introduction
 
-When it comes to querying, Cassandra is very different to MySQL. While Cassandra's CQL language syntax often closely resembles that of SQL-queries, the differences will cause issues if you do not understand them. Specifically, copy pasting a MySQL query to Cassandra, will more often than not result in issues. This guide will help you understand what is going on under the hood.
+When it comes to querying, Cassandra is very different from MySQL. While Cassandra's CQL language syntax often closely resembles that of SQL queries, the differences will cause issues if you do not understand them. Specifically, copy-pasting a MySQL query to Cassandra will more often than not result in issues. This guide will help you understand what is going on under the hood.
 
 ## How data is stored in Cassandra
 
-The first thing to understand is that Cassandra works by storing your data in huge rows called "partitions". But what is a partition exactly? Let's deal with an example:
+Cassandra works by storing data in huge rows called "partitions". To understand what exactly these are, take a look at the example below.
 
 ### MySQL ice cream table
 
@@ -23,8 +23,7 @@ The first thing to understand is that Cassandra works by storing your data in hu
 | 4 | Dame Blanche | Cup | 5 |
 | 5 | Cookie Dough | Cup | 2 |
 
-The above is your standard, run-of-the-mill MySQL ice cream table.
-It has a nice primary key, which is just a number here, some flavors linked, as well as a *Type* and *Price* column.
+The above is your standard, run-of-the-mill MySQL table. It has a primary key, which is just a number here, some ice cream flavors, as well as a *Type* and *Price* column.
 
 ### Cassandra ice cream table - partitioning key
 
@@ -34,14 +33,14 @@ It has a nice primary key, which is just a number here, some flavors linked, as 
 | Waffle | Strawberry,2 |
 | Cup | Banana split,5;Dame Blanche,5;Cookie dough,2 |
 
-What is that, I hear you ask? That is what a Cassandra table looks like under the hood.
+This is what a Cassandra table looks like under the hood.
 
 The *partitioning* key divides the data into logical units called *partitions*. Cassandra stores these as a row, and these partitions contain all of the data that correspond to this *partitioning Key*.
 
 > [!NOTE]
 > MySQL's *primary key* is completely different from Cassandra's *partitioning key*. It is not the same type of identifier.
 
-To make Cassandra more flexible, a clustering column exists. The clustering column allows easier querying of parts of a partition. With a clustering column, the table starts to look a whole lot more like an ordinary SQL table with the partitioning key as a primary key. Keep in mind, it isn’t. It’s still stored per partition on the nodes.
+To make Cassandra more flexible, a clustering column exists. The clustering column allows easier querying of parts of a partition. With a clustering column, the table starts to look more like an ordinary SQL table with the partitioning key as a primary key. However, keep in mind that it is not. It is still stored per partition on the nodes.
 
 ### Cassandra ice cream table - partitioning key and clustering column
 
@@ -54,10 +53,9 @@ To make Cassandra more flexible, a clustering column exists. The clustering colu
 | Cup | Dame Blanche | 5 |
 | Cup | Cookie Dough | 2 |
 
-As you can see, this is the Cassandra table's final form. Not only is it logically divided per partition, you can also further filter on the clustering column to identify an unique record.
+This is the final form of the Cassandra table. Not only is it logically divided per partition, but you can also further filter on the clustering column to identify a unique record.
 
-> [!NOTE]
-> Once again the architecture does not resemble that of MySQL. You cannot get records with 'primary key' 1,2,... There is not even such a record in the database.
+Once again the architecture does not resemble that of MySQL. You cannot get records with "primary key" 1, 2, etc. There is not even such a record in the database.
 
 ## How you should query in the Cassandra Query Language (CQL)
 
@@ -67,7 +65,7 @@ As you can see, this is the Cassandra table's final form. Not only is it logical
 select * from ice_cream;
 ```
 
-Getting all data in a table is just like MySQL. Just do not forget the semicolon ';' !
+Getting all data in a table is just like in MySQL. However, remember to use the semicolon (;).
 
 ### Querying for a type (partition)
 
@@ -75,15 +73,13 @@ Getting all data in a table is just like MySQL. Just do not forget the semicolon
 select * from ice_cream where type = 'Cup';
 ```
 
-It is that simple. Cassandra will fetch all records linked to the type 'Cup' faster than lightning!
+With this query, Cassandra will fetch all records linked to the type "Cup".
 
 ### Querying for a specific flavor (clustering column and other cells)
 
 #### Normal to large datasets
 
-Let's say we want to query for a specific flavor. What do we need?
-
-Could we just do it like this?
+If you want to query for a specific flavor, you cannot do it like this:
 
 <strike>
 
@@ -93,11 +89,9 @@ select * from ice_cream where flavor = 'vanilla';
 
 </strike>
 
-No. Cassandra does not work that way.
+Instead, if you want to query on any cell in the database, you need to restrict both the **partitioning key** and the **clustering column**. In this case, you want to query on the **clustering column**. This requires the partitioning key to be restricted first.
 
-If you want to query on any cell in the database, it requires you to restrict both the **partitioning key** and the **clustering column**. In this case, we want to query on the **clustering column**. This requires the partitioning key to be restricted first.
-
-This means you already need to know in which **partition** you have to be looking.
+This means you already need to know in which **partition** you have to look.
 
 ```txt
 select * from ice_cream where type = 'Cone' and flavor = 'vanilla';
@@ -107,20 +101,19 @@ This is a working query.
 
 #### Smaller datasets and ALLOW FILTERING
 
-In smaller datasets, you can use ALLOW FILTERING, in order to not have to restrict the **keys**.
+In smaller datasets, you can use ALLOW FILTERING in order to not have to restrict the **keys**.
 
-This is very inefficient. It takes all data from the table and loops over it one by one (or from the partition if you restricted per partitioning key before that). Therefore, we do not recommend you use this in datasets of bigger or even normal sizes.
+This is **very inefficient**. It takes all data from the table and loops over it one by one (or from the partition if you restricted per partitioning key before that). Therefore, we do not recommend using this in datasets of bigger or even normal sizes.
 
-The rule of thumb is, if you can **avoid** it, please do.
+The rule of thumb is to **avoid** this if possible.
 
 ```txt
 select * from ice cream where flavor = 'vanilla' ALLOW FILTERING;
 ```
 
-This will bring the same result as the above query, but much much slower.
+This will bring the same result as the above query, but much more slowly.
 
 ## Conclusion
 
-Remember you always need to restrict the **partitioning** key first, the **clustering column** second.
+Remember you always need to restrict the **partitioning** key first, and the **clustering column** second.
 
-Then, all should be well.
