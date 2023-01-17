@@ -114,3 +114,9 @@ When, in a ListView component or a Resource Manager component showing a bookings
 <!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
 
 When a discrete parameter with a `<Sequence>` tag was displayed in a lite parameter control, its current value would neither be displayed nor selected while being edited.
+
+#### Cassandra: TTL setting of spectrum trace data would not be applied correctly [ID_35385]
+
+<!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
+
+In a Cassandra database, the "time to live" (TTL) setting of spectrum trace data would not be applied correctly. As a result, this type of data would never be removed.

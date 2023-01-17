@@ -170,3 +170,9 @@ Up to now, the check to determine whether a user had the view permission set to 
 <!-- See Enhancements for rest of 35311 -->
 
 When trend data was exported to a CSV file, up to now, timestamps could be formatted incorrectly.
+
+#### Cassandra: TTL setting of spectrum trace data would not be applied correctly [ID_35385]
+
+<!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
+
+In a Cassandra database, the "time to live" (TTL) setting of spectrum trace data would not be applied correctly. As a result, this type of data would never be removed.
