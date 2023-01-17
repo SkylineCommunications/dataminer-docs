@@ -279,7 +279,7 @@ DataMiner supports Okta as identity provider as from version 10.1.11. Use Okta's
 > [!IMPORTANT]
 >
 > - Prior to DataMiner 10.3.0/10.3.2, it may not be possible to log in using Okta because of a software issue. We strongly recommend that you upgrade to DataMiner 10.3.0 or 10.3.2 to use this feature.
-> - DataMiner only supports the use of automatic user creation with Okta.
+> - When using Okta, automatic user creation must be enabled, it is not possible to import users from Okta.
 
 1. Launch the App Integration Wizard
 
