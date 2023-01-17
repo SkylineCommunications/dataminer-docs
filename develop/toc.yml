@@ -5418,6 +5418,8 @@
       topicUid: TOODataMinerDevPackages
     - name: Change Element States Offline
       topicUID: Change_Element_States_Offline
+    - name: Interactive Automation Script Toolkit
+      topicUID: Interactive_Automation_Script_Toolkit
 - name: DataMiner Device-Specific Integrations
   topicUid: DSI
   items:
