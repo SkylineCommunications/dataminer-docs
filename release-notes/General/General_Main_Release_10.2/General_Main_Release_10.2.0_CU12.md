@@ -101,8 +101,8 @@ When, in the settings of a node edge graph, you had configured edge overrides, t
 
 When, in a ListView component or a Resource Manager component showing a bookings timeline, you had filtered the bookings using a custom time range, performance issues could start to occur after a period of time.
 
-#### DataMiner Cube - Visual Overview: Problem after editing a discrete parameter with a 'Sequence' tag displayed in a lite parameter control [ID_35356]
+#### DataMiner Cube - Visual Overview: Problem when editing a discrete parameter with a 'Sequence' tag displayed in a lite parameter control [ID_35356]
 
 <!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
 
-When a discrete parameter with a `<Sequence>` tag was displayed in a lite parameter control, its current value would neither be displayed nor selected after being edited.
+When a discrete parameter with a `<Sequence>` tag was displayed in a lite parameter control, its current value would neither be displayed nor selected while being edited.

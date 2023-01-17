@@ -26,6 +26,14 @@ In the *Logging* section of *System Center*, you can now also consult the *SLSma
 
 ### Enhancements
 
+#### Elasticsearch: 'Request Entity Too Large (413)' errors will now be prevented when writing data in bulk [ID_34937]
+
+<!-- MR 10.4.0 - FR 10.3.3 -->
+
+When data was written to Elasticsearch in bulk, up to now, DataMiner would throw a `Request Entity Too Large (413)` error when the amount of data exceeded the 100 MB limit.
+
+From now on, DataMiner will detect when too much data is being sent in a single request and will split up the data into smaller parts.
+
 #### DataMiner Cube will now immediately be aware of any changes as to the availability of Cassandra or Elasticsearch [ID_35209]
 
 <!-- MR 10.3.0 - FR 10.3.3 -->
@@ -64,11 +72,11 @@ Up to now, those column filter boxes incorrectly had *autocomplete* enabled.
 
 When, in a ListView component or a Resource Manager component showing a bookings timeline, you had filtered the bookings using a custom time range, performance issues could start to occur after a period of time.
 
-#### DataMiner Cube - Visual Overview: Problem after editing a discrete parameter with a 'Sequence' tag displayed in a lite parameter control [ID_35356]
+#### DataMiner Cube - Visual Overview: Problem when editing a discrete parameter with a 'Sequence' tag displayed in a lite parameter control [ID_35356]
 
 <!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
 
-When a discrete parameter with a `<Sequence>` tag was displayed in a lite parameter control, its current value would neither be displayed nor selected after being edited.
+When a discrete parameter with a `<Sequence>` tag was displayed in a lite parameter control, its current value would neither be displayed nor selected while being edited.
 
 #### Trending: Pattern matching tags could incorrectly be defined for discrete or string parameters [ID_35368]
 

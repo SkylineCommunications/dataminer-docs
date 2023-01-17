@@ -25,6 +25,14 @@ Log entry syntax: `Certificate chain error: {chainStatus.Status}, details: {chai
 
 The number of *GetParameterMessages* sent by SLAnalytics in order to check whether a trended table parameter is still active has been optimized.
 
+#### Elasticsearch: 'Request Entity Too Large (413)' errors will now be prevented when writing data in bulk [ID_34937]
+
+<!-- MR 10.4.0 - FR 10.3.3 -->
+
+When data was written to Elasticsearch in bulk, up to now, DataMiner would throw a `Request Entity Too Large (413)` error when the amount of data exceeded the 100 MB limit.
+
+From now on, DataMiner will detect when too much data is being sent in a single request and will split up the data into smaller parts.
+
 #### Web apps - Interactive Automation scrips: Fields containing invalid values will now be indicated more clearly [ID_34962]
 
 <!-- MR 10.4.0 - FR 10.3.2 -->
