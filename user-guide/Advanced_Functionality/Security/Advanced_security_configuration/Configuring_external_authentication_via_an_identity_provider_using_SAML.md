@@ -277,7 +277,9 @@ DataMiner supports Azure B2C as identity provider from version 10.2.6/10.3.0 onw
 DataMiner supports Okta as identity provider as from version 10.1.11. Use Okta's App Integration Wizard to create a new app integration and connect Okta with DataMiner.
 
 > [!IMPORTANT]
-> Prior to DataMiner 10.3.0/10.3.2, it may not be possible to log in using Okta because of a software issue. We strongly recommend that you upgrade to DataMiner 10.3.0 or 10.3.2 to use this feature.
+>
+> - Prior to DataMiner 10.3.0/10.3.2, it may not be possible to log in using Okta because of a software issue. We strongly recommend that you upgrade to DataMiner 10.3.0 or 10.3.2 to use this feature.
+> - DataMiner only supports the use of automatic user creation with Okta.
 
 1. Launch the App Integration Wizard
 
@@ -333,7 +335,57 @@ DataMiner supports Okta as identity provider as from version 10.1.11. Use Okta's
 
      Select "Email".
 
-   - **Attribute Statements**: Add a new attribute statement with name *Email* (case-sensitive), format *Basic*, and value *user.email*.
+   - **Attribute Statements**: Add the following attribute statements, all with "Basic" format:
+
+      - name "Email", value "user.email"
+      - name "Firstname", value "user.firstName"
+      - name "Lastname", value "user.lastName"
+
+   - **When using group claims:**
+
+      - Create groups in DataMiner with the exact same names as in Okta (this is case-sensitive).
+      - Add a group attribute statement.
+      - Use the name "userGroups", and "Basic" format.
+      - Under *Filter*, select the type of filter you want, and then add a statement that will match the groups you want to send for that user.
+
+      > [!Note]
+      >
+      > - The name fields can be anything you want, but we recommend giving them a name that clearly reflects the claim they refer to. All of these are case-sensitive.
+      > - Make sure that what you put under "name" for each claim matches exactly with the claim names in *DataMiner.xml*.
+
+1. Stop DataMiner.
+
+1. Go to the *C:\\Skyline DataMiner* folder and open the *DataMiner.xml* file.
+
+1. In the *DataMiner.xml* file, configure the *\<ExternalAuthentication>* tag as illustrated in the example below:
+
+   ```xml
+   <DataMiner ...>
+     ...
+     <ExternalAuthentication
+       type="SAML"
+       ipMetadata="[Path/URL of the identity provider’s metadata file]"
+       spMetadata="[Path/URL of the service provider’s metadata file]"
+       timeout="300">
+       <AutomaticUserCreation enabled="true">
+         <EmailClaim>[email claim name]</EmailClaim>
+         <Givenname>[firstname claim name]</Givenname>
+         <Surname>[lastname claim name]</Surname>
+         <Groups claims="true">[group claim name]</Groups>
+       </AutomaticUserCreation>
+     </ExternalAuthentication>
+     ...
+   </DataMiner>
+   ```
+
+   > [!NOTE]
+   > If you set the *claims* attribute of the *Groups* element to "false", no claims will be used to add users to groups. In this case:
+   >
+   > - The name of the group as specified in Cube will be used instead.
+   > - It will only be possible to add a user to a single group.
+   > - The user information that is created will not be updated.
+
+1. Save the *DataMiner.xml* file.
 
 1. Open the *Sign On* tab of your Okta application and scroll down to *SAML Signing Certificates*.
 
@@ -358,19 +410,7 @@ DataMiner supports Okta as identity provider as from version 10.1.11. Use Okta's
    </md:EntityDescriptor>
    ```
 
-1. Open the *DataMiner.xml* file and configure the *\<ExternalAuthentication>* tag as illustrated in the example below:
-
-   ```xml
-   <DataMiner ...>
-     ...
-     <ExternalAuthentication
-       type="SAML"
-       ipMetadata="[Path/URL of the identity provider’s metadata file]"
-       spMetadata="[Path/URL of the service provider’s metadata file]"
-       timeout="300" />
-     ...
-   </DataMiner>
-   ```
+1. Restart DataMiner.
 
 ## Error messages
 
