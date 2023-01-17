@@ -35,7 +35,7 @@ The above is your standard, run-of-the-mill MySQL table. It has a primary key, w
 
 This is what a Cassandra table looks like under the hood.
 
-The *partitioning* key divides the data into logical units called *partitions*. Cassandra stores these as a row, and these partitions contain all of the data that correspond to this *partitioning Key*.
+The *partitioning* key divides the data into logical units called *partitions*. Cassandra stores these as a row, and these partitions contain all of the data that correspond to this *partitioning key*.
 
 > [!NOTE]
 > MySQL's *primary key* is completely different from Cassandra's *partitioning key*. It is not the same type of identifier.
@@ -116,4 +116,3 @@ This will bring the same result as the above query, but much more slowly.
 ## Conclusion
 
 Remember you always need to restrict the **partitioning** key first, and the **clustering column** second.
-
