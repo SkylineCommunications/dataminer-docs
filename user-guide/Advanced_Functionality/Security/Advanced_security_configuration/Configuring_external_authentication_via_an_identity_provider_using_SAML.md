@@ -271,7 +271,7 @@ DataMiner supports Azure B2C as identity provider from version 10.2.6/10.3.0 onw
 1. Configure DataMiner to automatically create users from Azure B2C. You can do this in the same way as for [Azure AD](#configuring-automatic-creation-of-users-authenticated-by-azure-ad-using-saml). For the ipMetadata link, use the link created in the previous step.
 
    > [!NOTE]
-   > To create SAML users in DataMiner using Azure B2C, a domain is required in the usernames. For this reason, email addresses must be used as the usernames. If the default username of the identity provider is not a valid email address, add a \<PreferredLoginClaim> element in *DataMiner.xml* that refers to a claim containing a valid email address.
+   > To create SAML users in DataMiner using Azure B2C, a domain is required in the usernames. For this reason, email addresses must be used as the usernames. If the default username of the identity provider is not a valid email address, add a \<PreferredLoginClaim> element to the \<AutomaticUserCreation> element in *DataMiner.xml* that refers to a claim containing a valid email address.
 
 ### Okta
 
@@ -380,7 +380,7 @@ DataMiner supports Okta as identity provider as from version 10.1.11. Use Okta's
    ```
 
    > [!NOTE]
-   >
+   > - The claim name refers to the attribute statements names we added in Okta.
    > - User groups have to exist in DataMiner both for *Groups* claims set to true and to false. Make sure all the necessary groups have been added earlier, so that it will be possible to add users to them.
    > - If you set the *claims* attribute of the *Groups* element to "false", no claims will be used to add users to groups. In this case:
    >   - Instead of a claim for user groups, replace `[group claim name]` with a security group that exists in DataMiner as described above.
