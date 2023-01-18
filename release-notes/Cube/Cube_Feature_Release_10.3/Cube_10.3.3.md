@@ -63,6 +63,19 @@ From now on, DataMiner will detect when too much data is being sent in a single 
 
 Up to now, Cube would only check at startup whether Cassandra or Elasticsearch were available. From now on, it will immediately be aware of any changes as to the availability of Cassandra or Elasticsearch.
 
+#### Visual Overview: Leading spaces removed from port information fields [ID_35334]
+
+<!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
+
+Leading spaces have been removed from the following port information fields:
+
+- BusAddress
+- ElementTimeoutTime
+- NrOfRetries
+- PollingIP
+- SlowPoll
+- TimeoutTime
+
 #### Trending - pattern matching: A slightly larger number of missing values will now be allowed when you create a trend pattern tag [ID_35376]
 
 <!-- MR 10.4.0 - FR 10.3.3 -->

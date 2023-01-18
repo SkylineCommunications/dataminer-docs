@@ -53,6 +53,19 @@ From now on, exporting and importing DELT packages containing element and alarm 
 > [!NOTE]
 > Exporting and importing DELT packages containing trend data is not yet supported on DataMiner Systems with a clustered database.
 
+#### DataMiner Cube - Visual Overview: Leading spaces removed from port information fields [ID_35334]
+
+<!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
+
+Leading spaces have been removed from the following port information fields:
+
+- BusAddress
+- ElementTimeoutTime
+- NrOfRetries
+- PollingIP
+- SlowPoll
+- TimeoutTime
+
 ### Fixes
 
 #### Problem with SLElement when a trend template was being assigned [ID_34824]
