@@ -48,11 +48,20 @@ After an aggregation operation, you can now apply multiple groupBy operations.
 
 ### Enhancements
 
-#### Security enhancements [ID_34894]
+#### Security enhancements [ID_34894] [ID_35331]
+
+<!-- RN 34894: MR 10.2.0 [CU12] - FR 10.3.3 -->
+<!-- RN 35331: MR 10.4.0 - FR 10.3.3 -->
+
+A number of security enhancements have been made.
+
+#### Elasticsearch: 'Request Entity Too Large (413)' errors will now be prevented when writing data in bulk [ID_34937]
 
 <!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
 
-A number of security enhancements have been made.
+When data was written to Elasticsearch in bulk, up to now, DataMiner would throw a `Request Entity Too Large (413)` error when the amount of data exceeded the 100 MB limit.
+
+From now on, DataMiner will detect when too much data is being sent in a single request and will split up the data into smaller parts.
 
 #### SLLogCollector: Multiple instances can now be run simultaneously [ID_35204]
 
@@ -136,6 +145,12 @@ When a direct view table was updated while one of the source elements was stoppe
 
 The SLDataGateway process would leak memory when offloading average trend data for DVE elements.
 
+#### Service & Resource Management: Setting a new function file to active would incorrectly not cause the function DVEs of elements using a production version of the protocol to be updated [ID_35178]
+
+<!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
+
+When a new function file was set to active, up to now, the function DVEs of elements using a production version of the protocol in question would incorrectly not be updated.
+
 #### GQI: Problem when fetching two queries using an external data source with a custom argument of which the ID was set to "Type" [ID_35242]
 
 <!-- MR 10.3.0 - FR 10.3.3 -->
@@ -176,3 +191,14 @@ When trend data was exported to a CSV file, up to now, timestamps could be forma
 <!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
 
 In a Cassandra database, the "time to live" (TTL) setting of spectrum trace data would not be applied correctly. As a result, this type of data would never be removed.
+
+#### Web apps: Problems with Visual Overview components [ID_35399]
+
+<!-- MR 10.4.0 - FR 10.3.3 -->
+
+A number of issues regarding the Visual Overview component have been fixed.
+
+- In some cases, the Visual Overview component would send an excessive amount of polling requests.
+- When a page was selected in the Visual Overview component, in some cases, an incorrect page would be displayed.
+- In some cases, the dimensions of pop-up windows would be incorrect.
+- When a pop-up window was shown using a *VdxShape* property, in some cases, the default page would be shown instead of the page that was specified.

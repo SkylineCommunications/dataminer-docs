@@ -30,6 +30,14 @@ In SLElement, a number of enhancements have been made with regard to parameter l
 
 A number of security enhancements have been made.
 
+#### Elasticsearch: 'Request Entity Too Large (413)' errors will now be prevented when writing data in bulk [ID_34937]
+
+<!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
+
+When data was written to Elasticsearch in bulk, up to now, DataMiner would throw a `Request Entity Too Large (413)` error when the amount of data exceeded the 100 MB limit.
+
+From now on, DataMiner will detect when too much data is being sent in a single request and will split up the data into smaller parts.
+
 #### SLLogCollector: Multiple instances can now be run simultaneously [ID_35204]
 
 <!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
@@ -44,6 +52,19 @@ From now on, exporting and importing DELT packages containing element and alarm 
 
 > [!NOTE]
 > Exporting and importing DELT packages containing trend data is not yet supported on DataMiner Systems with a clustered database.
+
+#### DataMiner Cube - Visual Overview: Leading spaces removed from port information fields [ID_35334]
+
+<!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
+
+Leading spaces have been removed from the following port information fields:
+
+- BusAddress
+- ElementTimeoutTime
+- NrOfRetries
+- PollingIP
+- SlowPoll
+- TimeoutTime
 
 ### Fixes
 
@@ -72,6 +93,20 @@ Up to now, an error could occur in SLLog when adding large entries regarding fai
 <!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
 
 The SLDataGateway process would leak memory when offloading average trend data for DVE elements.
+
+#### Service & Resource Management: Setting a new function file to active would incorrectly not cause the function DVEs of elements using a production version of the protocol to be updated [ID_35178]
+
+<!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
+
+When a new function file was set to active, up to now, the function DVEs of elements using a production version of the protocol in question would incorrectly not be updated.
+
+#### DataMiner Cube - ListView component: Problem with custom property columns and date columns [ID_35218]
+
+<!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
+
+When, in an *ListView* component, you hovered over a cell value in a custom property column or a date column, no tooltip would appear.
+
+Also, the filter box above a custom property column would incorrectly always be empty.
 
 #### DataMiner Cube - Alarm Console: Multiple values in property columns would incorrectly not be separated by any separator [ID_35239]
 
@@ -114,6 +149,12 @@ When, in a ListView component or a Resource Manager component showing a bookings
 <!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
 
 When a discrete parameter with a `<Sequence>` tag was displayed in a lite parameter control, its current value would neither be displayed nor selected while being edited.
+
+#### DataMiner Cube - Data Display: Problem with the alarm bubble-up feature in a tree control containing many-to-many relationships [ID_35367]
+
+<!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
+
+When a tree control contained many-to-many relationships, up to now, the alarm bubble-up feature would not work correctly.
 
 #### Cassandra: TTL setting of spectrum trace data would not be applied correctly [ID_35385]
 

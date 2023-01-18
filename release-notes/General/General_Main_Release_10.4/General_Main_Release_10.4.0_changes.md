@@ -11,6 +11,12 @@ uid: General_Main_Release_10.4.0_changes
 
 ### Enhancements
 
+#### Security enhancements [ID_35331]
+
+<!-- RN 35331: MR 10.4.0 - FR 10.3.3 -->
+
+A number of security enhancements have been made.
+
 #### More detailed logging when the certificate chain is invalid while connecting to Cassandra [ID_34822]
 
 <!-- MR 10.4.0 - FR 10.3.2 -->
@@ -24,14 +30,6 @@ Log entry syntax: `Certificate chain error: {chainStatus.Status}, details: {chai
 <!-- MR 10.4.0 - FR 10.3.1 -->
 
 The number of *GetParameterMessages* sent by SLAnalytics in order to check whether a trended table parameter is still active has been optimized.
-
-#### Elasticsearch: 'Request Entity Too Large (413)' errors will now be prevented when writing data in bulk [ID_34937]
-
-<!-- MR 10.4.0 - FR 10.3.3 -->
-
-When data was written to Elasticsearch in bulk, up to now, DataMiner would throw a `Request Entity Too Large (413)` error when the amount of data exceeded the 100 MB limit.
-
-From now on, DataMiner will detect when too much data is being sent in a single request and will split up the data into smaller parts.
 
 #### Web apps - Interactive Automation scrips: Fields containing invalid values will now be indicated more clearly [ID_34962]
 
@@ -258,3 +256,14 @@ When trend data was exported to a CSV file, up to now, timestamps could be forma
 <!-- MR 10.4.0 - FR 10.3.2 [CU0] -->
 
 In some cases, a GQI table component could show a `Cannot read properties of undefined (reading 'Guid')` error.
+
+#### Web apps: Problems with Visual Overview components [ID_35399]
+
+<!-- MR 10.4.0 - FR 10.3.3 -->
+
+A number of issues regarding the Visual Overview component have been fixed.
+
+- In some cases, the Visual Overview component would send an excessive amount of polling requests.
+- When a page was selected in the Visual Overview component, in some cases, an incorrect page would be displayed.
+- In some cases, the dimensions of pop-up windows would be incorrect.
+- When a pop-up window was shown using a *VdxShape* property, in some cases, the default page would be shown instead of the page that was specified.

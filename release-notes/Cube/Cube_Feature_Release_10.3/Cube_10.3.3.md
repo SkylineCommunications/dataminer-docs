@@ -16,9 +16,32 @@ uid: Cube_Feature_Release_10.3.3
 
 ## Other features
 
+#### Visual Overview - ListView: Copying list data to the Windows clipboard [ID_35170]
+
+<!-- MR 10.4.0 - FR 10.3.3 -->
+
+The ListView component now allows you to copy data from the list to the Windows clipboard.
+
+To copy the contents of one or more rows:
+
+1. Select the row(s).
+1. Choose *Copy selected row(s)*.
+
+To copy the contents of a single cell:
+
+1. Right-click in the cell.
+1. Choose *Copy \<cell contents\>*.
+
+The data copied to the Windows clipboard is split into a header section and a data section, separated by an empty line. The header section contains the column names, while the data section contains the actual row data.
+
+> [!NOTE]
+>
+> - Only the columns that are visible to the user will be copied to the Windows clipboard. Also, the order of the columns will be identical to the order of the columns in the ListView component. Note that column visibility and column order can be configured using the component's column manager.
+> - When you copy one or more rows, only cells that contain text will be included. For example, cells that only contain a colored rectangle will not be included. Also, when you try to copy the contents of a single cell, the *Copy \<cell contents\>* command will only be available if that cell contains text.
+
 #### System Center: New DataMiner log file 'SLSmartBaselineManager.txt' [ID_35352]
 
-<!-- MR 10.2.0 [CU8] - FR 10.2.11 [CU0] -->
+<!-- MR 10.4.0 - FR 10.3.3 -->
 
 In the *Logging* section of *System Center*, you can now also consult the *SLSmartBaselineManager.txt* log file.
 
@@ -40,7 +63,36 @@ From now on, DataMiner will detect when too much data is being sent in a single 
 
 Up to now, Cube would only check at startup whether Cassandra or Elasticsearch were available. From now on, it will immediately be aware of any changes as to the availability of Cassandra or Elasticsearch.
 
+#### Visual Overview: Leading spaces removed from port information fields [ID_35334]
+
+<!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
+
+Leading spaces have been removed from the following port information fields:
+
+- BusAddress
+- ElementTimeoutTime
+- NrOfRetries
+- PollingIP
+- SlowPoll
+- TimeoutTime
+
+#### Trending - pattern matching: A slightly larger number of missing values will now be allowed when you create a trend pattern tag [ID_35376]
+
+<!-- MR 10.4.0 - FR 10.3.3 -->
+
+When you try to create a trend pattern tag, an error message will appear when there are too many missing values in the selected pattern.
+
+From now on, a slightly larger number of missing values will be allowed will you create a trend pattern tag.
+
 ### Fixes
+
+#### DataMiner Cube - ListView component: Problem with custom property columns and date columns [ID_35218]
+
+<!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
+
+When, in an *ListView* component, you hovered over a cell value in a custom property column or a date column, no tooltip would appear.
+
+Also, the filter box above a custom property column would incorrectly always be empty.
 
 #### Alarm Console: Multiple values in property columns would incorrectly not be separated by any separator [ID_35239]
 
@@ -72,14 +124,28 @@ Up to now, those column filter boxes incorrectly had *autocomplete* enabled.
 
 When, in a ListView component or a Resource Manager component showing a bookings timeline, you had filtered the bookings using a custom time range, performance issues could start to occur after a period of time.
 
-#### DataMiner Cube - Visual Overview: Problem when editing a discrete parameter with a 'Sequence' tag displayed in a lite parameter control [ID_35356]
+#### Visual Overview: Problem when editing a discrete parameter with a 'Sequence' tag displayed in a lite parameter control [ID_35356]
 
 <!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
 
 When a discrete parameter with a `<Sequence>` tag was displayed in a lite parameter control, its current value would neither be displayed nor selected while being edited.
+
+#### Data Display: Problem with the alarm bubble-up feature in a tree control containing many-to-many relationships [ID_35367]
+
+<!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
+
+When a tree control contained many-to-many relationships, up to now, the alarm bubble-up feature would not work correctly.
 
 #### Trending: Pattern matching tags could incorrectly be defined for discrete or string parameters [ID_35368]
 
 <!-- MR 10.4.0 - FR 10.3.3 -->
 
 Pattern matching does not support discrete or string parameters. However, up to now, when viewing a trend graph that showed trend information for either a discrete or a string parameter, it would incorrectly be possible to define tags for pattern matching. From now on, this will no longer be possible.
+
+#### Trending: Tag icon was displayed after you selected a section of a trend graph even though it was not possible to define tags [ID_35378] [ID_35383]
+
+<!-- MR 10.4.0 - FR 10.3.3 -->
+
+In some cases, when the pattern matching feature was not enabled in *System Center* > *System settings* > *analytics config*, the tag icon was displayed after you selected a section of a trend graph even though it was not actually possible to define tags.
+
+From now on, Cube will check whether the pattern matching feature is enabled each time you open a trend graph.
