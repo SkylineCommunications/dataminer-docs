@@ -216,7 +216,7 @@ From DataMiner 10.2.0/10.1.12 onwards, users authenticated by Azure AD using SAM
    > [!NOTE]
    > If you add a group claim, the account name of the group will only be sent via SAML when the groups are synchronized. Otherwise, the ID of the group will be sent instead.
 
-1. User groups have to exist in DataMiner for users to be added to them (both for Groups claims set to true and false). See [Adding a user group] (xref: Adding_a_user_group) for more info on how to do this
+1. In DataMiner Cube, add the groups corresponding with the groups you added in Azure AD. See [Adding a user group](xref:Adding_a_user_group).
 
 1. Stop DataMiner.
 
@@ -242,12 +242,14 @@ From DataMiner 10.2.0/10.1.12 onwards, users authenticated by Azure AD using SAM
      ...
    </DataMiner>
    ```
+
    > [!NOTE]
-   > If you set the *claims* attribute of the *Groups* element to "false", no claims will be used to add users to groups. In this case:
    >
-   > - Instead of a claim for user groups replace [group claim name] with a security group that exists in DataMiner as described above.
-   > - It will only be possible to add a user to a single group.
-   > - The user information that is created will not be updated.
+   > - User groups have to exist in DataMiner both for *Groups* claims set to true and to false. Make sure all the necessary groups have been added earlier, so that it will be possible to add users to them.
+   > - If you set the *claims* attribute of the *Groups* element to "false", no claims will be used to add users to groups. In this case:
+   >   - Instead of a claim for user groups, replace `[group claim name]` with a security group that exists in DataMiner as described above.
+   >   - It will only be possible to add a user to a single group.
+   >   - The user information that is created will not be updated.
 
 1. Save the *DataMiner.xml* file.
 
@@ -342,7 +344,7 @@ DataMiner supports Okta as identity provider as from version 10.1.11. Use Okta's
 
    - **When using group claims:**
 
-      - Create groups in DataMiner with the exact same names as in Okta (this is case-sensitive).
+      - Create groups in DataMiner with the exact same names as in Okta (this is case-sensitive). See [Adding a user group](xref:Adding_a_user_group).
       - Add a group attribute statement.
       - Use the name "userGroups", and "Basic" format.
       - Under *Filter*, select the type of filter you want, and then add a statement that will match the groups you want to send for that user.
@@ -351,8 +353,6 @@ DataMiner supports Okta as identity provider as from version 10.1.11. Use Okta's
       >
       > - The name fields can be anything you want, but we recommend giving them a name that clearly reflects the claim they refer to. All of these are case-sensitive.
       > - Make sure that what you put under "name" for each claim matches exactly with the claim names in *DataMiner.xml*.     
-      
-1. User groups have to exist in DataMiner for users to be added to them (both for Groups claims set to true and false). See [Adding a user group] (xref: Adding_a_user_group) for more info on how to do this
 
 1. Stop DataMiner.
 
@@ -378,13 +378,14 @@ DataMiner supports Okta as identity provider as from version 10.1.11. Use Okta's
      ...
    </DataMiner>
    ```
-   
+
    > [!NOTE]
-   > If you set the *claims* attribute of the *Groups* element to "false", no claims will be used to add users to groups. In this case:
    >
-   > - Instead of a claim for user groups replace [group claim name] with a security group that exists in DataMiner as described above.
-   > - It will only be possible to add a user to a single group.
-   > - The user information that is created will not be updated.
+   > - User groups have to exist in DataMiner both for *Groups* claims set to true and to false. Make sure all the necessary groups have been added earlier, so that it will be possible to add users to them.
+   > - If you set the *claims* attribute of the *Groups* element to "false", no claims will be used to add users to groups. In this case:
+   >   - Instead of a claim for user groups, replace `[group claim name]` with a security group that exists in DataMiner as described above.
+   >   - It will only be possible to add a user to a single group.
+   >   - The user information that is created will not be updated.
 
 1. Save the *DataMiner.xml* file.
 
