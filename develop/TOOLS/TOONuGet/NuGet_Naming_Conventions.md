@@ -80,3 +80,17 @@ When creating NuGets via the [SLC SE Repository Manager](xref:TOOSLCSERepository
 - Skyline.DataMiner.Utils.XXX
     - Holds all the utilities like helpers, parsers, ...
         - E.g.: SNMP trap parsing, rate calculations, table context menu, ...
+
+## Suggestions and reminders
+
+- Take in account the target framework. If you have a dependency to .NET Framework 4.6.2 (e.g.: some DataMiner DLLS) then you need to target that as well.
+    - In general .NET Standard 2.0 is a good choice as that gives the most flexibility to be used somewhere else.
+- Try to make use of the SDK project style. This is more future proof and a lot cleaner.
+    - .NET Framework can still be used, but that is easily done by changing the value to 'net462'.
+    ```xml
+    <PropertyGroup>
+        ...
+        <TargetFramework>netstandard2.0</TargetFramework> => <TargetFramework>net462</TargetFramework>
+        ...
+    </PropertyGroup>
+    ```
