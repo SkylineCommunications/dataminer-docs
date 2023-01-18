@@ -25,12 +25,12 @@ The ListView component now allows you to copy data from the list to the Windows 
 To copy the contents of one or more rows:
 
 1. Select the row(s).
-1. Choose *Copy to clipboard*.
+1. Choose *Copy selected row(s)*.
 
 To copy the contents of a single cell:
 
 1. Right-click in the cell.
-1. Choose *Copy to clipboard*.
+1. Choose *Copy \<cell contents\>*.
 
 The data copied to the Windows clipboard is split into a header section and a data section, separated by an empty line. The header section contains the column names, while the data section contains the actual row data.
 
