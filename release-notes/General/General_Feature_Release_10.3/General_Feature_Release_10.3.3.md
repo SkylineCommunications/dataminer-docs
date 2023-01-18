@@ -24,9 +24,11 @@ uid: General_Feature_Release_10.3.3
 
 In the Generic Query Interface, the following new data sources are now available:
 
-- Get trend data patterns
-- Get trend data pattern events
-- Get behavioral change events
+| Data source                   | Contents                                                   |
+|-------------------------------|------------------------------------------------------------|
+| Get trend data patterns       | All pattern matching tags created in the DataMiner System. |
+| Get trend data pattern events | All pattern occurrences detected in the DataMiner System.  |
+| Get behavioral change events  | All behavioral anomalies detected in the DataMiner System. |
 
 The *Get trend data pattern events* and *Get behavioral change events* data sources contain time range metadata on each row. Each time range holds the start and end time of the event in question. When a table row is selected, the time range will be exposed as a feed.
 
