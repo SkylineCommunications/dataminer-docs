@@ -992,12 +992,6 @@ When a Visual Overview component was linked to a feed, in some cases, it would n
 
 When an element was frequently receiving timeout values, SLElement would leak memory.
 
-#### Service & Resource Management: Setting a new function file to active would incorrectly not cause the function DVEs of elements using a production version of the protocol to be updated [ID_35178]
-
-<!-- MR 10.3.0 - FR 10.3.3 -->
-
-When a new function file was set to active, up to now, the function DVEs of elements using a production version of the protocol in question would incorrectly not be updated.
-
 #### DataMiner Object Models: Problem when retrieving a non-existing DomInstance status ID [ID_35231]
 
 <!-- MR 10.3.0 - FR 10.3.2 -->

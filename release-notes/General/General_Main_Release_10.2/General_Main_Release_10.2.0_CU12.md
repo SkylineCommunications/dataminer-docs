@@ -73,6 +73,12 @@ Up to now, an error could occur in SLLog when adding large entries regarding fai
 
 The SLDataGateway process would leak memory when offloading average trend data for DVE elements.
 
+#### Service & Resource Management: Setting a new function file to active would incorrectly not cause the function DVEs of elements using a production version of the protocol to be updated [ID_35178]
+
+<!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
+
+When a new function file was set to active, up to now, the function DVEs of elements using a production version of the protocol in question would incorrectly not be updated.
+
 #### DataMiner Cube - ListView component: Problem with custom property columns and date columns [ID_35218]
 
 <!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
