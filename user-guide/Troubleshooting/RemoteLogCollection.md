@@ -18,4 +18,4 @@ To use this feature, your system needs to meet the following requirements:
 
 - Cloud Pack version 2.8.1 or later must be installed. You can always find the latest Cloud Pack on [DataMiner Dojo](https://community.dataminer.services/downloads/).
 
-- Port 5100 should be open for traffic from the internal network for the remote log collection to work. More information on this endpoint can be found [here](xref:Custom_cloud_endpoint_configuration).
+- Port 5100 should be open for traffic on the internal network for the remote log collection to work. More information on this endpoint can be found [here](xref:Custom_cloud_endpoint_configuration).
