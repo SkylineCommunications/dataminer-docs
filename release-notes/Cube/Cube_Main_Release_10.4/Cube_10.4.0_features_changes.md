@@ -164,7 +164,7 @@ A number of enhancements have been made to the parameter relationship feature. W
 
 <!-- MR 10.4.0 - FR 10.3.2 -->
 
-Up to now, when the creation of a trend pattern tag failed, the general error message `Consider increasing or decreasing  the tag time range selection and try again.` was displayed. From now, one of the following, more detailed messages will be displayed instead:
+Up to now, when the creation of a trend pattern tag failed, the general error message `Consider increasing or decreasing the tag time range selection and try again.` was displayed. From now, one of the following, more detailed messages will be displayed instead:
 
 ```txt
 Failed to save your tag. Consider reducing the tag time range selection and try again.
@@ -175,6 +175,14 @@ Failed to save your tag. A tag time range was selected for which not all trend d
 
 Failed to save your tag. The defined patterns cannot be linked into the multivariate pattern. Consider adjusting its configuration and try again.
 ```
+
+#### Trending - pattern matching: A slightly larger number of missing values will now be allowed when you create a trend pattern tag [ID_35376]
+
+<!-- MR 10.4.0 - FR 10.3.3 -->
+
+When you try to create a trend pattern tag, an error message will appear when there are too many missing values in the selected pattern.
+
+From now on, a slightly larger number of missing values will be allowed will you create a trend pattern tag.
 
 ### Fixes
 

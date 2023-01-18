@@ -63,6 +63,14 @@ From now on, DataMiner will detect when too much data is being sent in a single 
 
 Up to now, Cube would only check at startup whether Cassandra or Elasticsearch were available. From now on, it will immediately be aware of any changes as to the availability of Cassandra or Elasticsearch.
 
+#### Trending - pattern matching: A slightly larger number of missing values will now be allowed when you create a trend pattern tag [ID_35376]
+
+<!-- MR 10.4.0 - FR 10.3.3 -->
+
+When you try to create a trend pattern tag, an error message will appear when there are too many missing values in the selected pattern.
+
+From now on, a slightly larger number of missing values will be allowed will you create a trend pattern tag.
+
 ### Fixes
 
 #### DataMiner Cube - ListView component: Problem with custom property columns and date columns [ID_35218]
