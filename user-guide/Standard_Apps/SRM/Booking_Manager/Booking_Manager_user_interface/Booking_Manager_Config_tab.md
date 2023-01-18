@@ -104,7 +104,10 @@ See [Adding custom scripts for additional controls](xref:SRM_custom_scripts#addi
 
 ### Default booking configurations settings
 
-- **DMA IDs to Store Reservations**: Contains the DMA ID(s) of the DMA(s) where bookings will be stored. The SRM framework will store all bookings evenly over the DMAs specified with this setting.
+- **Hosting DMA IDs to Orchestrate Reservation**: Contains the DMA ID(s) of the DMA(s) where bookings will be stored. The SRM framework will store all bookings evenly over the DMAs specified with this setting.
+
+  > [!NOTE]
+  > Prior to SRM 1.2.29, this setting is called *DMA IDs to Store Reservations*. <!-- RN 34882 -->
 
 - **Start delay**: The default delay period before a booking starts.
 
@@ -228,3 +231,15 @@ Via the right-click menu of this table, you can add a property, duplicate a prop
 The settings on this subtab are used to configure custom events for Service Orchestration.
 
 See [Service Orchestration custom events configuration](xref:Service_Orchestration_custom_events).
+
+## Backup subtab
+
+The settings on this subtab are used to export and import the configuration for the Booking Manager. <!-- RN 31593 -->
+
+- **Export Settings**: Exports the settings of the Booking Manager to the *Skyline Booking Manager* > *Configurations* documents folder.
+
+- **Import Settings**: Use this option to import settings **from a different DMS**. The button opens a pop-up window where you can select a file to import. The setting *DMA IDs to Store Reservations* or *Hosting DMA IDs to Orchestrate Reservation* is not included in the import.
+
+- **Restore Settings**: Use this option to restore settings **from the same DMS**. The button opens a pop-up window where you can select a file to restore. The setting *DMA IDs to Store Reservations* or *Hosting DMA IDs to Orchestrate Reservation* is included in the restored settings.
+
+- **Full Configuration Export**: Exports the full configuration of the Booking Manager to the *Skyline Booking Manager* > *Full Configurations* documents folder. The result of the export will be displayed in a pop-up window<!--  RN 33452 -->.
