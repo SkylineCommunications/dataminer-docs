@@ -92,6 +92,19 @@ blockItem.Type = UIBlockType.DropDown;
 MyDialogBox.AppendBlock(blockItem);
 ```
 
+## Executable
+
+Allows you to run a program execution.
+
+Example:
+
+```csharp
+UIBlockDefinition blockItem = new UIBlockDefinition();
+blockItem.Type = UIBlockType.Executable;
+...
+MyDialogBox.AppendBlock(blockItem);
+```
+
 ## FileSelector
 
 Allows you to define a newly created dialog box item as a file selector control.
