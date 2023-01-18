@@ -55,6 +55,14 @@ After an aggregation operation, you can now apply multiple groupBy operations.
 
 A number of security enhancements have been made.
 
+#### Elasticsearch: 'Request Entity Too Large (413)' errors will now be prevented when writing data in bulk [ID_34937]
+
+<!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
+
+When data was written to Elasticsearch in bulk, up to now, DataMiner would throw a `Request Entity Too Large (413)` error when the amount of data exceeded the 100 MB limit.
+
+From now on, DataMiner will detect when too much data is being sent in a single request and will split up the data into smaller parts.
+
 #### SLLogCollector: Multiple instances can now be run simultaneously [ID_35204]
 
 <!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
