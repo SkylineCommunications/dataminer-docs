@@ -1,0 +1,66 @@
+---
+uid: VSAT_EPM_Topology
+---
+
+# EPM topology
+
+The EPM topology navigation menu can be used to access the collector elements' main KPIs.
+
+![Topology](~/user-guide/images/VSAT_EPM_Topology.png)
+
+## Topology chain
+
+Below you can find an overview of the different chains the VSAT EPM Solution offers and can be accessed in the *Topology* tree and their subsequent entities available at each branch.
+
+![Topology Tree](~/user-guide/images/Topology_Tree.png)
+
+- **Network**:
+
+  - Network
+  - Teleport
+  - Hub Network
+  - Hub Return
+  - Hub Forward
+  - Circuit
+
+- **Service**:
+
+  - Network
+  - Customer
+  - Customer/NMS
+  - Circuit
+
+- **NMS**:
+
+  - Network
+  - NMS
+  - Hub Network
+  - Hub Return
+  - Hub Forward
+  - Circuit
+
+- **Map**:
+
+  - Network
+  - NMS
+  - Customer
+  - Customer/NMS
+  - Circuit
+
+- **Quick**:
+
+  - Type
+  - Network
+
+- **Infrastructure**:
+
+  - NMS
+  - PP Server
+  - Chassis
+  - Linecards
+
+- **Configuration**
+
+## Data pages
+
+Each entity in the Topology tree has an associated data page where relevant KPI and aggregations can be shown. Below is an example of the Circuit Data page when the arrow to the right of the circuit filter is selected in the topology tree.

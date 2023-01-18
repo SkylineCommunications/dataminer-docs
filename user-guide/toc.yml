@@ -2368,12 +2368,12 @@
               topicUID: VSAT_architecture
             - name: EPM VSAT components
               topicUID: VSAT_components
-            - name: Supported technologies for VSAT
-              topicUID: VSAT_supported_technologies
             - name: EPM VSAT deployment
               topicUID: VSAT_deployment
             - name: Available parameters in VSAT
               topicUID: VSAT_parameters
+            - name: EPM VSAT topology
+              topicUID: VSAT_EPM_Topology
     - name: DataMiner IDP app
       topicUid: SolIDP
       items:

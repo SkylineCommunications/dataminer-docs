@@ -20,7 +20,7 @@ This is the collector connector required for the iDirect Evolution Platform. Thi
 
 For more information, see [Verizon iDirect Evolution Platform Collector](https://catalog.dataminer.services/result/driver/5827).
 
-#### iDirect Dialog
+#### iDirect Dialog Platform VSAT
 
 This is the collector connector required for the iDirect (formerly Newtec) Dialog Platform with Time Series Database (TSDB) integration.
 
@@ -37,8 +37,12 @@ EPM connectors constitute the core of the EPM Solution. They carry out the neces
 These are the required EPM connectors, which are included in the EPM Solution package:
 
 - [Skyline EPM Platform](https://catalog.dataminer.services/result/driver/7207)
+
 - [Skyline EPM Platform DOCSIS](https://catalog.dataminer.services/result/driver/7209)
+
 - [Skyline EPM Platform DOCSIS WM](https://catalog.dataminer.services/result/driver/7212)
+
+EPM connectors ship with the EPM Solution package.
 
 ## Peripherals
 
@@ -58,42 +62,136 @@ During planned maintenance (PLM), DataMiner suppresses any diagnostic and platfo
 
 ## Correlation rules
 
-The I-DOCSIS EPM Solution uses the following Correlation rules:
+The VSAT EPM Solution uses the following Correlation rules:
 
-- **VERSATON REPORT AUTOMATION**
-- **VERSATON SUN OUTAGE AUTOMATION**
+- **VerSatOnReportCorrelation**: Correlation rule (...)
+
+- **VrzVsatEventManager**: Correlation rule in charge of managing events.
 
 ## Automation scripts
 
-The I-DOCSIS EPM Solution uses the following Automation scripts:
+The VSAT EPM Solution uses the following Automation scripts:
 
-- **VERSATON REPORT AUTOMATION**
-- **VERSATON SUN OUTAGE AUTOMATION**
-- **EPM BE MESSAGE HANDLER**
-- **EPM FE TO BE**
-- **EPM MESSAGE HANDLER**
-- 
-- **CCAP to EPM FE**: Operates within the messaging system domain taking care of simple notifications between CCAP elements and the EPM engine.
-- **EPM FE to EPM BE**: Operates within the messaging system domain taking care of simple notifications between the EPM front-end element and the back-end elements.
-- **EPM BE to CCAP Pair**: Operates within the messaging system domain taking care of simple notifications between EPM back-end elements and CCAP collectors.
-- **EPM BE to WM**: Operates within the messaging system domain taking care of simple notifications between EPM back-end elements and Workflow Managers.
-- **WM to BE**: Operates within the messaging system domain taking care of simple notifications between Workflow Managers and EPM back-end elements.
-- **EPM BE to FE Passives**: Operates within the messaging system domain taking care of simple notifications related to the subscriber’s integration between the EPM back-end elements and the front-end element.
-- **EPM FE to BE Passives**: Operates within the messaging system domain taking care of simple notifications related to the subscriber’s integration between the EPM front-end element and the back-end elements.
+- **VerSatOnReportAutomation**: Automation script in charge of updating and triggering the logic to keep RDS tables updated and synchronized across all DMAs.
 
-## Dashboards
+  This Automation script is dependent on the following protocols:
 
-The I-DOCSIS EPM Solution includes the following dashboards:
+  - Verizon Reports and Dashboards Solution: This driver exports and imports data related to different collector elements.
 
-- I-DOCSIS CCAP
-- I-DOCSIS Channel Utilization
-- I-DOCSIS Network
-- I-DOCSIS Service Group [Fiber Node]
+  - Verizon WM RDS: This driver manages the interaction between the Verizon Reports and Dashboards Solution driver and the Profile Manager app. The information stored in the tables of the Verizon Reports and Dashboards Solution is stored in the Profile Manager app.
 
-## Visuals
+- **VerSatOnSunOutageAutomation**: Automation script in charge of handling sun outage protocol events.
 
-The I-DOCSIS EPM Solution includes the following visual overviews:
+  This Automation script is dependent on the following protocols:
 
-- Network
-- CCAP Core
-- Service Group [Fiber Node]
+  - Verizon WM DSM: This system driver allows the Verizon DSM SO driver to communicate with the Profile Manager.
+
+  - Verizon DSM SO: This driver is used to gather information via inter-element communication that will be exported to a location used by the Generic Sun Outage driver. The information gathered consists of key parameters used during the calculation of sun outages. This driver is purely a system driver with this sole responsibility.
+
+  The *VerSatOnSunOutageAutomation* script oversees collecting data from an information event triggered by Verizon DSM SO and passes it to Verizon WM DSM in order for that workflow manager to create, update, or remove a Profile Manager object. The information event is triggered from the context menus on the DSM SO driver.
+
+- **EPM BE Message Handler**: Automation script in charge of handling EPM back-end messages.
+
+  This Automation script is dependent on the following protocols:
+
+  - The [collector](#collector-connectors) that triggered the initial EPM Message handler script:
+
+    - iDirect Evolution
+
+    - iDirect (Newtec) Dialog Platform VSAT
+
+  - Verizon VSAT Platform Manager: This CPE driver allows the aggregation of KPIs from different collector elements deployed in the Verizon infrastructure (e.g. Verizon iDirect Evolution Platform Collector).
+
+  The *EPM BE Messange Handler* script is in charge of communicating to the collector that the ID assignment files from the VSAT Platform Manager are ready for ingestion after the EPM backends are done processing and setting the topology data in their respective tables.
+
+- **EPM FE to BE**: Operates within the messaging system domain taking care of communication about the collector and entity the processed data originated from, between EPM front-end elements and the back-end elements.
+
+  This Automation script is dependent on the following protocols:
+
+  - The [collector](#collector-connectors) that triggered the initial EPM Message handler script:
+
+    - iDirect Evolution
+
+    - iDirect (Newtec) Dialog Platform VSAT
+
+  - Verizon VSAT Platform Manager: This CPE driver allows the aggregation of KPIs from different collector elements deployed in the Verizon infrastructure (e.g. Verizon iDirect Evolution Platform Collector).
+
+- **EPM Message Handler**: Automation script in charge of handling EPM messages.
+
+  This Automation script is dependent on the following protocols:
+
+  - The [collector](#collector-connectors) that triggered the initial EPM Message handler script:
+
+    - iDirect Evolution
+
+    - iDirect (Newtec) Dialog Platform VSAT
+
+  - Verizon VSAT Platform Manager: This CPE driver allows the aggregation of KPIs from different collector elements deployed in the Verizon infrastructure (e.g. Verizon iDirect Evolution Platform Collector).
+
+  The *EPM Message Handler* script is triggered from the collector after exporting the ID request files for the entities. It communicates to the EPM frontend to ingest the request files.
+
+## Dashboards app
+
+The VSAT EPM Solution includes numerous dashboards, spread over the following folders:
+
+- Performance
+
+- Configuration
+
+- Faults
+
+- Other
+
+![Dashboards app](~/user-guide/images/DashboardsApp.png)
+
+### Performance
+
+The *Performance* folder in the Dashboards app includes the following dashboards:
+
+- CIRCUIT PERFORMANCE TABLE
+
+- CIRCUIT PERFORMANCE TREND OTHER
+
+- CIRCUIT PERFORMANCE TREND
+
+- CUSTOMER PERFORMANCE AGGREGATED
+
+- HUB FWD PERFORMANCE AGGREGATED
+
+- HUB NETWORK UTILIZATION INF
+
+- HUB RTN PERFORMANCE AGGREGATED
+
+- HUB RTN UTILIZATION INF
+
+- NMS PERFORMANCE AGGREGATED
+
+### Configuration
+
+The *Configuration* folder in the Dashboards app includes the following dashboards:
+
+- CIRCUIT CONFIG
+
+- HUB FWD CONFIG
+
+- HUB RTN CONFIG
+
+### Faults
+
+The *Faults* folder in the Dashboards app includes the following dashboards:
+
+- CIRCUIT ALARMS
+
+- SYSTEM ALARMS
+
+### Other
+
+The *Other* folder in the Dashboards app includes the following dashboards:
+
+- CIRCUIT PERFORMANCE & CONFIG
+
+- MODCOD
+
+- SUN OUTAGE ALL
+
+- SUN OUTAGE NEXT
