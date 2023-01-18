@@ -110,7 +110,7 @@ The data copied to the Windows clipboard is split into a header section and a da
 > [!NOTE]
 >
 > - Only the columns that are visible to the user will be copied to the Windows clipboard. Also, the order of the columns will be identical to the order of the columns in the ListView component. Note that column visibility and column order can be configured using the component's column manager.
-> - When you copy one or more rows, only cells that contain text will be included. For example, cells that only contain a colored rectangle will not be included. Also, when you try to copy the contents of a single cell, the *Copy to clipboard* command will only be available if that cell contains text.
+> - When you copy one or more rows, only cells that contain text will be included. For example, cells that only contain a colored rectangle will not be included. Also, when you try to copy the contents of a single cell, the *Copy \<cell contents\>* command will only be available if that cell contains text.
 
 #### Visual Overview: Visualizing EPM object statistics in a shape [ID_35222]
 
