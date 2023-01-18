@@ -20,7 +20,7 @@ The main page of the app consists of a header bar, a sidebar, and a details pane
 
   - User button: A button with the initials or an image of the current user is displayed in the top-right corner. Click this button to open a menu that provides access to the following options:
 
-    - *Settings*: Allows you to manage any available [dashboard themes](xref:Configuring_the_dashboard_layout) and configure whether specific actions are pinned to the dashboard header bar.
+    - *Settings*: Allows you to manage any available [dashboard theme](xref:Configuring_the_dashboard_layout) and configure whether specific actions are pinned to the dashboard header bar.
 
     - *About*: Displays information about the app.
 
