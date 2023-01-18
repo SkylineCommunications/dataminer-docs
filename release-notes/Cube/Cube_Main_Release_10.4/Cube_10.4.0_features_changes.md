@@ -89,6 +89,29 @@ Configuring gray-tinted foreground colors is not recommended as a ListView compo
 > - The *ColorRows* feature is disabled by default ("ColorRows=False").
 > - At present, the *ColorRows* feature is only available on ListView components that have bookings as a source.
 
+#### Visual Overview - ListView: Copying list data to the Windows clipboard [ID_35170]
+
+<!-- MR 10.4.0 - FR 10.3.3 -->
+
+The ListView component now allows you to copy data from the list to the Windows clipboard.
+
+To copy the contents of one or more rows:
+
+1. Select the row(s).
+1. Choose *Copy to clipboard*.
+
+To copy the contents of a single cell:
+
+1. Right-click in the cell.
+1. Choose *Copy to clipboard*.
+
+The data copied to the Windows clipboard is split into a header section and a data section, separated by an empty line. The header section contains the column names, while the data section contains the actual row data.
+
+> [!NOTE]
+>
+> - Only the columns that are visible to the user will be copied to the Windows clipboard. Also, the order of the columns will be identical to the order of the columns in the ListView component. Note that column visibility and column order can be configured using the component's column manager.
+> - When you copy one or more rows, only cells that contain text will be included. For example, cells that only contain a colored rectangle will not be included. Also, when you try to copy the contents of a single cell, the *Copy to clipboard* command will only be available if that cell contains text.
+
 #### Visual Overview: Visualizing EPM object statistics in a shape [ID_35222]
 
 <!-- MR 10.4.0 - FR 10.3.2 -->
@@ -115,9 +138,9 @@ The following information can be displayed:
 #ErrorAlarms
 ```
 
-#### DataMiner Cube - System Center: New DataMiner log file 'SLSmartBaselineManager.txt' [ID_35352]
+#### System Center: New DataMiner log file 'SLSmartBaselineManager.txt' [ID_35352]
 
-<!-- MR 10.2.0 [CU8] - FR 10.2.11 [CU0] -->
+<!-- MR 10.4.0 - FR 10.3.3 -->
 
 In the *Logging* section of *System Center*, you can now also consult the *SLSmartBaselineManager.txt* log file.
 
