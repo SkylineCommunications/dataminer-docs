@@ -18,7 +18,7 @@ uid: General_Feature_Release_10.3.3
 
 ## Other features
 
-#### Dashboards app - GQI: New data sources [ID_35027]
+#### Dashboards app - GQI: New data sources [ID_35027] [ID_34965] [ID_35058]
 
 <!-- MR 10.4.0 - FR 10.3.3 -->
 
@@ -27,6 +27,8 @@ In the Generic Query Interface, the following new data sources are now available
 - Get trend data patterns
 - Get trend data pattern events
 - Get behavioral change events
+
+The *Get trend data pattern events* and *Get behavioral change events* data sources contain time range metadata on each row. Each time range holds the start and end time of the event in question. When a table row is selected, the time range will be exposed as a feed.
 
 #### DataMiner Object Models: New field descriptors [ID_35278]
 
