@@ -24,8 +24,6 @@ The [UIBlockType](xref:Skyline.DataMiner.Automation.UIBlockType) enum defines di
 |TextBox     |Text box.         |
 |Time     |Item that displays a time value.         |
 |TreeView     |Tree view control.         |
-|Undefined     |Undefined.         |
-|Variable     |Variable.         |
 
 ## Button
 
