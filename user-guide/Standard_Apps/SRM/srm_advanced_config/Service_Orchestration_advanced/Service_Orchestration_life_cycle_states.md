@@ -33,9 +33,6 @@ A booking is always associated with a specific booking life cycle state. The fol
   - Adjusting required capabilities/capacities in the profile instance in such a way that the resource can no longer meet requirements.
   - Adjusting capabilities/capacities on the resource.
 
-> [!TIP]
-> See also: [The Bookings tab](xref:Booking_Manager_Bookings_tab)
-
 ## Configuring a custom Created Booking Action
 
 On a node in a service definition, you can configure that a script should run before the corresponding booking is set to the "Confirmed" state<!-- RN 19447 -->:

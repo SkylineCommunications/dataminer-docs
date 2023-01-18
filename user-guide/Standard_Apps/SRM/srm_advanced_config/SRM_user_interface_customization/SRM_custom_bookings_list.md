@@ -10,7 +10,7 @@ On the [Bookings tab](xref:Booking_Manager_Bookings_tab) of the Booking Manager 
 
 To customize the list:
 
-1. Right-click the list header and select *Manager column configuration*.
+1. Right-click the list header and select *Manage column configuration*.
 
 1. Configure and save the columns as detailed under [Creating a new column configuration](xref:Creating_a_list_view#creating-a-new-column-configuration).
 
@@ -21,4 +21,4 @@ To customize the list:
 1. Close and reopen the Booking Manager app.
 
 > [!NOTE]
-> The Bookings list in the Booking Manager app is based on a *ListView* Visual Overview component. For more information see, [Creating a list view](xref:Creating_a_list_view).
+> The Bookings list in the Booking Manager app is based on a *ListView* Visual Overview component. For more information, see [Creating a list view](xref:Creating_a_list_view).

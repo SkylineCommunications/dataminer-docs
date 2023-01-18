@@ -8,7 +8,7 @@ Next to the standard events (start of pre-roll, stop of pre-roll, start of post-
 
 To use custom events:
 
-1. On the *Config* > *Events* tab of the Booking Manager app, set the *Custom events* toggle button to enabled.
+1. On the *Config* > *Events* tab of the Booking Manager app, set the *Custom events* toggle button to *Enabled*.
 
 1. In the *Events* table below that, configure the events as detailed below.
 

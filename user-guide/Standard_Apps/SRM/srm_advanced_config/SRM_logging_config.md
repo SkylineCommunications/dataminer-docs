@@ -22,16 +22,23 @@ uid: SRM_logging_config
    Keep the following in mind regarding this path:
 
    - Only a network path is supported.
+
    - The path must end in a backslash character.
+
    - Both the client machine and the DataMiner servers must have access to the network share. If necessary, validate the access to the shared folder using file explorer locally on each server.
 
 1. Optionally, you can also configure the following settings in the *Logging Settings*  window:
 
    - *Booking Logging Date Time Format*: The datetime format for the booking logging. This must be a valid format, e.g. *dd/MM/yyyy HH:mm:ss.ffff*.
+
    - *Booking Logging Max File Size*: The maximum size of booking log files. Minimum: 1 MB. Maximum: 100 MB.
-   - *Booking Minimum Logging Level*: Events must match this log level or a higher log level to be included in the logging. Can be set to *Verbose*, *Debug*, *Information*, *Warning*, or *Error*.
+
+   - *Booking Minimum Logging Level*: Events must match this log level or a higher log level to be included in the logging. Can be set to *Verbose*, *Debug*, *Information*, *Warning*, or *Error*. <!-- RN 34336 -->
+
    - *Booking Logging Cleanup Status*: Determines whether the booking logging is cleaned up automatically or not. If parameter is set to *Enabled*, an automatic cleanup will occur every hour.
+
    - *Logging Files Time to Keep*: Determines how old logging files must be before they can be cleaned up.
+
    - *Cleanup now*: Click this button to manually trigger a cleanup of the log files older than than the configured *Logging Files Time to Keep*.
 
 ## Configuring custom log records

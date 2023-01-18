@@ -14,6 +14,8 @@ This tab of the Booking Manager app provides an overview of all configuration pa
 
 - **Resource Pool**: Deprecated. Defines the Source Resource Pool name, so that Source resources can be identified and displayed on the first page of the Booking Wizard. This setting is no longer available from SRM 1.2.12 onwards. <!-- RN 29276 -->
 
+- **Contributing Booking Type**: Determines whether standard or "lite" contributing resources are used by default. <!-- RN 31488 -->
+
 - **Custom Events**: Determines whether event customization is enabled, which allows the user to add extra events to a booking.
 
 - **Custom Properties**: Determines whether property customization is enabled, which allows the user to add predefined properties to a booking.
@@ -61,6 +63,10 @@ When bookings and/or associated objects are created and/or manipulated in a Data
 - **Retry Timeout**: The retry timeout time for retrieval of SRM data in a DataMiner cluster. Default: *20 s*.
 
 - **Retry Interval**: The retry interval for retrieval of SRM data in a DataMiner cluster. Default: *15 ms*.
+
+### Monitoring settings
+
+See [Configuring SRM alarm monitoring](xref:SRM_alarm_monitoring)
 
 ## Custom Actions subtab
 

@@ -48,9 +48,6 @@ You can extend the DataMiner service associated with a booking with a custom enh
    > [!NOTE]
    > The *AlarmTemplate* and *TrendTemplate* attributes are optional.
 
-> [!NOTE]
-> If you want to change the element alias of the elements that are included in the service based on the service definition, this is possible with the *Use Node Label as Element Alias* setting. See [Booking wizard options settings](xref:Booking_Manager_Config_tab#booking-wizard-options-settings).
-
 ## Configuring the element alias
 
 <!-- RN 25236 -->
@@ -64,5 +61,5 @@ To do so, in the Booking Manager app, go to the *Config* > *Wizard* page, and en
 > [!TIP]
 > See also:
 >
-> - [Wizard subtab](xref:Booking_Manager_Config_tab#wizard-subtab)
+> - [Booking wizard options settings](xref:Booking_Manager_Config_tab#booking-wizard-options-settings)
 > - [Creating service definitions](xref:Service_Orch_creating_service_definitions)
