@@ -259,7 +259,7 @@ When trend data was exported to a CSV file, up to now, timestamps could be forma
 
 In some cases, a GQI table component could show a `Cannot read properties of undefined (reading 'Guid')` error.
 
-#### Web app: Problems with Visual Overview components [ID_35399]
+#### Web apps: Problems with Visual Overview components [ID_35399]
 
 <!-- MR 10.4.0 - FR 10.3.3 -->
 

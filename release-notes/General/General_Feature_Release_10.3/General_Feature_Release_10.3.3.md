@@ -183,7 +183,7 @@ When trend data was exported to a CSV file, up to now, timestamps could be forma
 
 In a Cassandra database, the "time to live" (TTL) setting of spectrum trace data would not be applied correctly. As a result, this type of data would never be removed.
 
-#### Web app: Problems with Visual Overview components [ID_35399]
+#### Web apps: Problems with Visual Overview components [ID_35399]
 
 <!-- MR 10.4.0 - FR 10.3.3 -->
 
