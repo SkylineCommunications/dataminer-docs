@@ -182,3 +182,14 @@ When trend data was exported to a CSV file, up to now, timestamps could be forma
 <!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
 
 In a Cassandra database, the "time to live" (TTL) setting of spectrum trace data would not be applied correctly. As a result, this type of data would never be removed.
+
+#### Web app: Problems with Visual Overview components [ID_35399]
+
+<!-- MR 10.4.0 - FR 10.3.3 -->
+
+A number of issues regarding the Visual Overview component have been fixed.
+
+- In some cases, the Visual Overview component would send an excessive amount of polling requests.
+- When a page was selected in the Visual Overview component, in some cases, an incorrect page would be displayed.
+- In some cases, the dimensions of pop-up windows would be incorrect.
+- When a pop-up window was shown using a *VdxShape* property, in some cases, the default page would be shown instead of the page that was specified.
