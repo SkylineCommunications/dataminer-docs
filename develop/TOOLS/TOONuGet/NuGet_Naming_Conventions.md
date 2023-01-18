@@ -35,7 +35,7 @@ Below rules are mainly focused for NuGets that are published to nuget.org. It is
         - Skyline.DataMiner.CICD.DMApp.Automation (specific code to convert an Automation solution to dmapp package)
         - Skyline.DataMiner.CICD.DMApp.XXX (specific code to convert a XXX solution/repository to dmapp package)
 
-## Mandatory metadata (.csproj file)
+## Mandatory metadata
 
 ```xml
 <PropertyGroup>
