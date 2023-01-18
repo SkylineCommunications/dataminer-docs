@@ -4,13 +4,17 @@ uid: NuGet_Naming_Conventions
 
 # NuGet naming conventions
 
-TODO: Text about these are rules for public stuff, but would be good practice to do it for internal NuGets as well. Less work in the future when needing to go public.
+> [!IMPORTANT]
+> This section might include some information that is only applicable to Skyline employees and/or links that are only accessible to Skyline employees.
+
+Below rules are mainly focused for NuGets that are published to nuget.org. It is adviced to use the same rules for internal NuGets as well as that would make it easy transferable to nuget.org when necessary.
 
 ## Mandatory rules
 
 - NuGet must have a name that starts with 'Skyline.DataMiner'.
 - NuGet must include a license file when published to nuget.org
-- NuGet must be signed otherwise this will be blocked by nuget.org 
+- NuGet must be signed otherwise this will be blocked by nuget.org
+    - When creating the NuGet via [SLC SE Repository Manager](xref:TOOSLCSERepositoryManager), the pipeline will take care of the signing and publishing.
 - [Mandatory metadata](#mandatory-metadata)
 
 <br/>
@@ -31,16 +35,36 @@ TODO: Text about these are rules for public stuff, but would be good practice to
         - Skyline.DataMiner.CICD.DMApp.Automation (specific code to convert an Automation solution to dmapp package)
         - Skyline.DataMiner.CICD.DMApp.XXX (specific code to convert a XXX solution/repository to dmapp package)
 
-## Mandatory metadata
+## Mandatory metadata (.csproj file)
 
-TODO: Add picture
--	Authors is without whitespace
--	License will be provided later (Currently checking with Legal) (NuGets created via SLC SE Repo Manager will have the icon & license added automatically)
--	Icon can be checked with Marketing (We'll check if there can be a generic icon to start with)
--	Tags: Always include Skyline & DataMiner at the minimum.
+```xml
+<PropertyGroup>
+    ...
+    <Authors>SkylineCommunications</Authors>
+    <Company>Skyline Communications</Company>
+    <Descrption>{Short description about the NuGet}</Description>
+    <PackageTags>Skyline;DataMiner</PackageTags>
+    <PackageProjectUrl>https://skyline.be</PackageProjectUrl>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    ...
+</PropertyGroup>
+```
 
-> NuGets (SDK style projects) made via the SLC SE Repo Manager will have some meta data (license, default icon, ...) automatically added or overwritten.
+- Authors has to be without whitespace.
+- PackageTags need to have at least 'Skyline' and 'DataMiner'. Extra tags can be added in wanted.
+- Always include a readme file to explain how to use the NuGet.
 
+When creating NuGets via the [SLC SE Repository Manager](xref:TOOSLCSERepositoryManager), the pipeline will automatically add the default license and icon file. If a different license or icon needs to be used then this can be specified in the metadata.
+
+```xml
+<PropertyGroup>
+    ...
+    <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+    <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+    <PackageIcon>Icon.png</PackageIcon>
+    ...
+</PropertyGroup>
+```
 
 ## Restricted names
 
