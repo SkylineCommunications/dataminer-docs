@@ -88,7 +88,7 @@ In the Booking Manager app, it could occur that the *Rescue* button was also dis
 
 #### AddResource not adding resources to service of active booking [ID_34628]
 
-When a resource was added via the *AddResource* method to a booking that had not started yet and to its service definition, it could occur that the relevant service was added to the service of the booking, but when the booking started, the other assigned resources were not added to the service. This only happened when the service was created in advance or for contributing bookings.
+When a resource was added via the *AddResource* method to a booking that had not started yet, it could occur that when the booking started, the other assigned resources were not added to the service. This only happened when the service was created in advance or for contributing bookings. To resolve this issue, the resource will now only be added when the booking is started.
 
 In addition, it could occur that the *Force Swap* resource action did not update the service.
 
