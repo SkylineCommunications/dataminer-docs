@@ -10,7 +10,42 @@ This configuration is done using a [DomBehaviorDefinition](xref:DomBehaviorDefin
 
 ![DomBehaviorDefinition](~/user-guide/images/DOM_DomBehaviorDefinition_Status_Properties_Overview.jpg)
 
-Using the status system is an alternate way of defining which data must be present in a `DomInstance`. That means that the `SectionDefinitionLinks` on the `DomDefinition` are not used in that case.
+```mermaid
+classDiagram
+DomBehaviorDefinition --> DomStatus
+DomBehaviorDefinition --> DomStatusSectionDefinitionLink
+DomBehaviorDefinition --> DomStatusTransition
+DomStatusSectionDefinitionLink --> DomStatusSectionDefinitionLinkId
+DomStatusSectionDefinitionLink --> DomStatusFieldDescriptorLink
+DomBehaviorDefinition : ID | DomBehaviorDefinitionId
+DomBehaviorDefinition : Name | string
+DomBehaviorDefinition : ParentId | DomBehaviorDefinitionId
+DomBehaviorDefinition : InitialStatusId | string
+DomBehaviorDefinition : Statuses | List~DomStatus~
+DomBehaviorDefinition : SectionDefinitionLinks | List~DomStatusSectionDefinitionLink~
+DomBehaviorDefinition : Transitions | List~DomStatusTransition~
+DomStatus : Id | string
+DomStatus : DisplayName | string
+DomStatusSectionDefinitionLink : Id | DomStatusSectionDefinitionLinkId
+DomStatusSectionDefinitionLink : FieldDescriptorLinks | List~DomStatusFieldDescriptorLink~
+DomStatusTransition : Id | string 
+DomStatusTransition : FromStatusId | string 
+DomStatusTransition : ToStatusId | string 
+DomStatusTransition : FlowLevel | int 
+DomStatusSectionDefinitionLinkId : StatusId | string
+DomStatusSectionDefinitionLinkId : SectionDefinitionId | SectionDefinitionID
+DomStatusFieldDescriptorLink : FieldDescriptorId | FieldDescriptorID
+DomStatusFieldDescriptorLink : Visible | bool
+DomStatusFieldDescriptorLink : RequiredForState | bool
+DomStatusFieldDescriptorLink : ReadOnly | bool
+DomStatusFieldDescriptorLink : ClientReadOnly | bool
+```
+
+Using the status system is an alternate way of defining which data must be present in a `DomInstance`. That means that the `SectionDefinitionLinks` on the `DomDefinition` are not used in that case. Additionally the following properties on the `FieldDescriptor` will be ignored as well:
+
+- IsOptional
+- IsHidden
+- IsReadonly
 
 ![Status system overview](~/user-guide/images/DOM_StatusSystem_Overview.jpg)
 
