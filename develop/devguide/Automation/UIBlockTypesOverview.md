@@ -98,12 +98,13 @@ Allows you to run a program execution.
 
 Examples:
 
-- Open the program Notepad on the client device where the interactive script is running.
+- Open the program Notepad++ on the client device where the interactive script is running.
 
 ```csharp
 UIBlockDefinition blockItem = new UIBlockDefinition();
 blockItem.Type = UIBlockType.Executable;
-blockItem.Extra = "notepad.exe";
+blockItem.Extra = "notepad++.exe";
+...
 MyDialogBox.AppendBlock(blockItem);
 ```
 
