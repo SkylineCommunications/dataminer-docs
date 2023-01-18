@@ -17,3 +17,5 @@ To use this feature, your system needs to meet the following requirements:
 - The DataMiner Cloud Services need to be enabled on your system. For information on how to enable this, see [Connecting your DataMiner System to the cloud](xref:Connecting_your_DataMiner_System_to_the_cloud).
 
 - Cloud Pack version 2.8.1 or later must be installed. You can always find the latest Cloud Pack on [DataMiner Dojo](https://community.dataminer.services/downloads/).
+
+- Port 5100 must be open for traffic on the internal network for the remote log collection to work. For more information on this endpoint, see [Customizing the cloud endpoint configuration](xref:Custom_cloud_endpoint_configuration).
