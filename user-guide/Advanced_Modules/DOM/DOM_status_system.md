@@ -8,40 +8,58 @@ In a DOM manager, you can configure the status system for a [DomDefinition](xref
 
 This configuration is done using a [DomBehaviorDefinition](xref:DomBehaviorDefinition) object that the `DomDefinition` is linked to. This object contains properties to store the statuses, initial status, transitions, and links to the [SectionDefinitions](xref:DOM_SectionDefinition).
 
-![DomBehaviorDefinition](~/user-guide/images/DOM_DomBehaviorDefinition_Status_Properties_Overview.jpg)
-
 ```mermaid
 classDiagram
+direction LR
+class DomBehaviorDefinition {
+   ID : DomBehaviorDefinitionId
+   Name : string
+   ParentId : DomBehaviorDefinitionId
+   InitialStatusId : string
+   Statuses : List~DomStatus~
+   SectionDefinitionLinks : List~DomStatusSectionDefinitionLink~
+   Transitions : List~DomStatusTransition~
+}
+
+class DomStatus {
+   Id : string
+   DisplayName : string
+}
+
+class DomStatusSectionDefinitionLink {
+   Id : DomStatusSectionDefinitionLinkId
+   FieldDescriptorLinks : List~DomStatusFieldDescriptorLink~
+}
+
+class DomStatusTransition {
+   Id : string
+   FromStatusId : string
+   ToStatusId : string
+   FlowLevel : int
+
+}
+
+class DomStatusSectionDefinitionLinkId {
+   StatusId : string
+   SectionDefinitionId : SectionDefinitionID
+}
+
+class DomStatusFieldDescriptorLink {
+   FieldDescriptorId : FieldDescriptorID
+   Visible : bool
+   RequiredForState : bool
+   ReadOnly : bool
+   ClientReadOnly : bool
+}
+
 DomBehaviorDefinition --> DomStatus
 DomBehaviorDefinition --> DomStatusSectionDefinitionLink
 DomBehaviorDefinition --> DomStatusTransition
 DomStatusSectionDefinitionLink --> DomStatusSectionDefinitionLinkId
-DomStatusSectionDefinitionLink --> DomStatusFieldDescriptorLink
-DomBehaviorDefinition : ID | DomBehaviorDefinitionId
-DomBehaviorDefinition : Name | string
-DomBehaviorDefinition : ParentId | DomBehaviorDefinitionId
-DomBehaviorDefinition : InitialStatusId | string
-DomBehaviorDefinition : Statuses | List~DomStatus~
-DomBehaviorDefinition : SectionDefinitionLinks | List~DomStatusSectionDefinitionLink~
-DomBehaviorDefinition : Transitions | List~DomStatusTransition~
-DomStatus : Id | string
-DomStatus : DisplayName | string
-DomStatusSectionDefinitionLink : Id | DomStatusSectionDefinitionLinkId
-DomStatusSectionDefinitionLink : FieldDescriptorLinks | List~DomStatusFieldDescriptorLink~
-DomStatusTransition : Id | string 
-DomStatusTransition : FromStatusId | string 
-DomStatusTransition : ToStatusId | string 
-DomStatusTransition : FlowLevel | int 
-DomStatusSectionDefinitionLinkId : StatusId | string
-DomStatusSectionDefinitionLinkId : SectionDefinitionId | SectionDefinitionID
-DomStatusFieldDescriptorLink : FieldDescriptorId | FieldDescriptorID
-DomStatusFieldDescriptorLink : Visible | bool
-DomStatusFieldDescriptorLink : RequiredForState | bool
-DomStatusFieldDescriptorLink : ReadOnly | bool
-DomStatusFieldDescriptorLink : ClientReadOnly | bool
+DomStatusSectionDefinitionLink --> DomStatusFieldDescriptorLink 
 ```
 
-Using the status system is an alternate way of defining which data must be present in a `DomInstance`. That means that the `SectionDefinitionLinks` on the `DomDefinition` are not used in that case. Additionally the following properties on the `FieldDescriptor` will be ignored as well:
+Using the status system is an alternate way of defining which data must be present in a `DomInstance`. That means that the `SectionDefinitionLinks` on the `DomDefinition` are not used in that case. Additionally, the following properties on the `FieldDescriptor` will be ignored:
 
 - IsOptional
 - IsHidden
@@ -124,7 +142,7 @@ A `DomStatusFieldDescriptorLink` has the following properties:
 | Visible | bool | Determines whether this field should be visible in the UI for this status. This is only used by the UI; there is no logic for this property server-side. |
 | RequiredForStatus | bool | Determines whether a value for this field must be present AND valid in this status. If a field is marked as required, at least one value for the `FieldDescriptor` must be present in a `DomInstance`, and all values for this `FieldDescriptor` are valid according to the validators of the `FieldDescriptor` (if any are defined). |
 | ReadOnly | bool | Determines whether values of this field are read-only with this status. When a field is marked as read-only for a specified status, the values cannot be changed when the `DomInstance` has this status. This also means that if no values were present before transitioning to this status, no values can be added as long as the `DomInstance` continues to have this status. |
-| ClientReadOnly | bool | Determines whether a user is allowed to assign a value to this field in the UI. Unlike the *ReadOnly* bool, this does allow users to assign a value to the field using the API, e.g. in a script. This property is available from DataMiner versions 10.3.0/10.3.3 onwards. |
+| ClientReadOnly | bool | Determines whether a user is allowed to assign a value to this field in the UI. Unlike the *ReadOnly* bool, this does allow users to assign a value to the field using the API, e.g. in a script. This property is available from DataMiner versions 10.3.0/10.3.3 onwards. If the ReadOnly bool is true, the value of ClientReadOnly is ignored. |
 
 > [!NOTE]
 >
