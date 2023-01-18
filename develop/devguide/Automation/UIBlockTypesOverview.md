@@ -96,14 +96,30 @@ MyDialogBox.AppendBlock(blockItem);
 
 Allows you to run a program execution.
 
-Example:
+Examples:
+
+- Open the program Notepad on the client device where the interactive script is running.
 
 ```csharp
 UIBlockDefinition blockItem = new UIBlockDefinition();
 blockItem.Type = UIBlockType.Executable;
+blockItem.Extra = "notepad.exe";
+MyDialogBox.AppendBlock(blockItem);
+```
+
+- Open a file with Notepad on the client device where the interactive script is running.
+
+```csharp
+UIBlockDefinition blockItem = new UIBlockDefinition();
+blockItem.Type = UIBlockType.Executable;
+blockItem.Extra = "notepad.exe";
+blockItem.AddDropDownOption("Arguments", @"C:\Skyline DataMiner\Files\VersionCompatibility.txt");
 ...
 MyDialogBox.AppendBlock(blockItem);
 ```
+> [!NOTE]
+> You can specifiy arguments when launching a program execution.
+> To do this, you have to call method *AddDropDownOption* on the item with key *Arguments* and value the arguments you want to pass on.
 
 ## FileSelector
 
