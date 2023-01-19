@@ -58,7 +58,7 @@ The VSAT EPM Solution uses the following Correlation rules:
 
 - **VerSatOnReportCorrelation**: Correlation rule in charge of the synchronization of RDS subscribers (KPI, Entry, DCAT, etc.) by monitoring for *OnChange* and *OnUpdate* information events.
 
-- **VrzVsatEventManager**: Correlation rule in charge of picking up all the events/alarms that should create a ticket request entry in the WM Ticketing protocol and send it to the correlation that send the requests to the proper ticketing element.
+- **VrzVsatEventManager**: Correlation rule in charge of picking up all the events/alarms that should create a ticket request entry in the WM Ticketing protocol and send it to the Correlation rule that sends the requests to the proper ticketing element.
 
 ## Automation scripts
 
