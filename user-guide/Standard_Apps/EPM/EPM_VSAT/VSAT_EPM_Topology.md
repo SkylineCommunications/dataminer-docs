@@ -63,6 +63,6 @@ Below you can find an overview of the different chains the VSAT EPM Solution off
 
 ## Data pages
 
-Each entity in the Topology tree has an associated data page where relevant KPI and aggregations can be shown. This can be accessed by clicking the arrow to the right of the circuit filter in the Topology tree. Below, you can find an example of a Circuit Data page.
+Each entity in the Topology tree has an associated data page where relevant KPIs and aggregation results can be shown. You can access this by clicking the arrow to the right of the circuit filter in the Topology tree. Below, you can find an example of a Circuit Data page.
 
 ![Data page](~/user-guide/images/Data_Page.png)
