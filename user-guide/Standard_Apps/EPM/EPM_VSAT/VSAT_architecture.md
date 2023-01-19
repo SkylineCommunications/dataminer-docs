@@ -20,7 +20,7 @@ The EPM Solution makes use of the following components:
 
 At the core of the solution are collector connectors capable of interfacing with any physical and/or virtual data source (devices, APIs, etc.).
 
-In a typical VSAT deployment, there are various types of service-delivery entities such as NMS, third-party API, modems, servers, cable modems (CMs), routers, switches, and firewalls.
+In a typical VSAT deployment, there are various types of service-delivery entities such as NMSs, third-party APIs, modems, servers, cable modems (CMs), routers, switches, and firewalls.
 
 The EPM Solution integrates with these entity types, regardless of technology or vendor, via specific or generic connectors. These "collector" connectors operate at the lowest level of the EPM Solution. The connectors are optimized for data gathering and initial processing. Parameters stored at this level typically correspond to direct readings from data sources.
 
