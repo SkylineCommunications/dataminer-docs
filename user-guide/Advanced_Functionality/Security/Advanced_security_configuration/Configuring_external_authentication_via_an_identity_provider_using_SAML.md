@@ -380,7 +380,8 @@ DataMiner supports Okta as identity provider as from version 10.1.11. Use Okta's
    ```
 
    > [!NOTE]
-   > - The claim name refers to the attribute statements names we added in Okta.
+   >
+   > - The claim name refers to the attribute statement names that were added in Okta.
    > - User groups have to exist in DataMiner both for *Groups* claims set to true and to false. Make sure all the necessary groups have been added earlier, so that it will be possible to add users to them.
    > - If you set the *claims* attribute of the *Groups* element to "false", no claims will be used to add users to groups. In this case:
    >   - Instead of a claim for user groups, replace `[group claim name]` with a security group that exists in DataMiner as described above.
