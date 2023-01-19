@@ -149,3 +149,9 @@ Pattern matching does not support discrete or string parameters. However, up to 
 In some cases, when the pattern matching feature was not enabled in *System Center* > *System settings* > *analytics config*, the tag icon was displayed after you selected a section of a trend graph even though it was not actually possible to define tags.
 
 From now on, Cube will check whether the pattern matching feature is enabled each time you open a trend graph.
+
+#### Data Display: Problem with the alarm bubble-up feature in a tree control containing EPM objects [ID_35396]
+
+<!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
+
+When a tree control contained EPM objects, in some cases, the alarm bubble-up feature would not work correctly.

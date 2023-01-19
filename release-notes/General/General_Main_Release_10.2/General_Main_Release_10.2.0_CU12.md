@@ -161,3 +161,9 @@ When a tree control contained many-to-many relationships, up to now, the alarm b
 <!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
 
 In a Cassandra database, the "time to live" (TTL) setting of spectrum trace data would not be applied correctly. As a result, this type of data would never be removed.
+
+#### DataMiner Cube - Data Display: Problem with the alarm bubble-up feature in a tree control containing EPM objects [ID_35396]
+
+<!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
+
+When a tree control contained EPM objects, in some cases, the alarm bubble-up feature would not work correctly.
