@@ -12,19 +12,19 @@ Collector connectors interface with the main data sources (iDirect Evolution, iD
 
 While these connectors ship out with the solution packages, they need to be contracted separately as necessary.
 
-For an overview of the available collector connectors, see [Supported technologies for VSAT](xref:VSAT_supported_technologies).
-
 #### iDirect Evolution
 
 This is the collector connector required for the iDirect Evolution Platform. This collector was primarily tested on version 4.1 or later.
 
-For more information, see [Verizon iDirect Evolution Platform Collector](https://catalog.dataminer.services/result/driver/5827).
+> [!TIP]
+> For more information, see [Verizon iDirect Evolution Platform Collector](https://catalog.dataminer.services/result/driver/5827).
 
 #### iDirect Dialog Platform VSAT
 
 This is the collector connector required for the iDirect (formerly Newtec) Dialog Platform with Time Series Database (TSDB) integration.
 
-For more information, see [Newtec Dialog Platform VSAT](https://catalog.dataminer.services/result/driver/7342).
+> [!TIP]
+> For more information, see [Newtec Dialog Platform VSAT](https://catalog.dataminer.services/result/driver/7342).
 
 #### CMDB
 
@@ -33,14 +33,6 @@ This is the collector connector that helps form relationships between various co
 ### EPM connectors
 
 EPM connectors constitute the core of the EPM Solution. They carry out the necessary logic to aggregate and display the information of the different topology levels. EPM connectors rely on collectors and system connectors to feed information into the EPM engine.
-
-These are the required EPM connectors, which are included in the EPM Solution package:
-
-- [Skyline EPM Platform](https://catalog.dataminer.services/result/driver/7207)
-
-- [Skyline EPM Platform DOCSIS](https://catalog.dataminer.services/result/driver/7209)
-
-- [Skyline EPM Platform DOCSIS WM](https://catalog.dataminer.services/result/driver/7212)
 
 EPM connectors ship with the EPM Solution package.
 
@@ -64,9 +56,9 @@ During planned maintenance (PLM), DataMiner suppresses any diagnostic and platfo
 
 The VSAT EPM Solution uses the following Correlation rules:
 
-- **VerSatOnReportCorrelation**: Correlation rule (...)
+- **VerSatOnReportCorrelation**: Correlation rule in charge of the synchronization of RDS subscribers (KPI, Entry, DCAT, etc.) by monitoring for **OnChange* and *OnUpdate* information events.
 
-- **VrzVsatEventManager**: Correlation rule in charge of managing events.
+- **VrzVsatEventManager**: Correlation rule in charge of picking up all the events/alarms that should create a ticket request entry in the WM Ticketing protocol and send it to the correlation that send the requests to the proper ticketing element.
 
 ## Automation scripts
 
@@ -76,19 +68,19 @@ The VSAT EPM Solution uses the following Automation scripts:
 
   This Automation script is dependent on the following protocols:
 
-  - Verizon Reports and Dashboards Solution: This driver exports and imports data related to different collector elements.
+  - Verizon Reports and Dashboards Solution: This protocol exports and imports data related to different collector elements.
 
-  - Verizon WM RDS: This driver manages the interaction between the Verizon Reports and Dashboards Solution driver and the Profile Manager app. The information stored in the tables of the Verizon Reports and Dashboards Solution is stored in the Profile Manager app.
+  - Verizon WM RDS: This protocol manages the interaction between the Verizon Reports and Dashboards Solution protocol and the Profile Manager app. The information stored in the tables of the Verizon Reports and Dashboards Solution is stored in the Profile Manager app.
 
 - **VerSatOnSunOutageAutomation**: Automation script in charge of handling sun outage protocol events.
 
   This Automation script is dependent on the following protocols:
 
-  - Verizon WM DSM: This system driver allows the Verizon DSM SO driver to communicate with the Profile Manager.
+  - Verizon WM DSM: This system protocol allows the Verizon DSM SO protocol to communicate with the Profile Manager.
 
-  - Verizon DSM SO: This driver is used to gather information via inter-element communication that will be exported to a location used by the Generic Sun Outage driver. The information gathered consists of key parameters used during the calculation of sun outages. This driver is purely a system driver with this sole responsibility.
+  - Verizon DSM SO: This protocol is used to gather information via inter-element communication that will be exported to a location used by the Generic Sun Outage protocol. The information gathered consists of key parameters used during the calculation of sun outages. This protocol is purely a system protocol with this sole responsibility.
 
-  The *VerSatOnSunOutageAutomation* script oversees collecting data from an information event triggered by Verizon DSM SO and passes it to Verizon WM DSM in order for that workflow manager to create, update, or remove a Profile Manager object. The information event is triggered from the context menus on the DSM SO driver.
+  The *VerSatOnSunOutageAutomation* script oversees collecting data from an information event triggered by Verizon DSM SO and passes it to Verizon WM DSM in order for that workflow manager to create, update, or remove a Profile Manager object. The information event is triggered from the context menus on the DSM SO protocol.
 
 - **EPM BE Message Handler**: Automation script in charge of handling EPM back-end messages.
 
@@ -100,7 +92,7 @@ The VSAT EPM Solution uses the following Automation scripts:
 
     - iDirect (Newtec) Dialog Platform VSAT
 
-  - Verizon VSAT Platform Manager: This CPE driver allows the aggregation of KPIs from different collector elements deployed in the Verizon infrastructure (e.g. Verizon iDirect Evolution Platform Collector).
+  - Verizon VSAT Platform Manager: This CPE protocol allows the aggregation of KPIs from different collector elements deployed in the Verizon infrastructure (e.g. Verizon iDirect Evolution Platform Collector).
 
   The *EPM BE Messange Handler* script is in charge of communicating to the collector that the ID assignment files from the VSAT Platform Manager are ready for ingestion after the EPM backends are done processing and setting the topology data in their respective tables.
 
@@ -114,7 +106,7 @@ The VSAT EPM Solution uses the following Automation scripts:
 
     - iDirect (Newtec) Dialog Platform VSAT
 
-  - Verizon VSAT Platform Manager: This CPE driver allows the aggregation of KPIs from different collector elements deployed in the Verizon infrastructure (e.g. Verizon iDirect Evolution Platform Collector).
+  - Verizon VSAT Platform Manager: This CPE protocol allows the aggregation of KPIs from different collector elements deployed in the Verizon infrastructure (e.g. Verizon iDirect Evolution Platform Collector).
 
 - **EPM Message Handler**: Automation script in charge of handling EPM messages.
 
@@ -126,7 +118,7 @@ The VSAT EPM Solution uses the following Automation scripts:
 
     - iDirect (Newtec) Dialog Platform VSAT
 
-  - Verizon VSAT Platform Manager: This CPE driver allows the aggregation of KPIs from different collector elements deployed in the Verizon infrastructure (e.g. Verizon iDirect Evolution Platform Collector).
+  - Verizon VSAT Platform Manager: This CPE protocol allows the aggregation of KPIs from different collector elements deployed in the Verizon infrastructure (e.g. Verizon iDirect Evolution Platform Collector).
 
   The *EPM Message Handler* script is triggered from the collector after exporting the ID request files for the entities. It communicates to the EPM frontend to ingest the request files.
 
