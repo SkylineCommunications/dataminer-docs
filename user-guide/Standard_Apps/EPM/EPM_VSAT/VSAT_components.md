@@ -118,7 +118,7 @@ The VSAT EPM Solution uses the following Automation scripts:
 
     - iDirect (Newtec) Dialog Platform VSAT
 
-  - Verizon VSAT Platform Manager: This CPE protocol allows the aggregation of KPIs from different collector elements deployed in the Verizon infrastructure (e.g. Verizon iDirect Evolution Platform Collector).
+  - Verizon VSAT Platform Manager: This EPM protocol allows the aggregation of KPIs from different collector elements deployed in the Verizon infrastructure (e.g. Verizon iDirect Evolution Platform Collector).
 
   The *EPM Message Handler* script is triggered from the collector after exporting the ID request files for the entities. It communicates to the EPM frontend to ingest the request files.
 
