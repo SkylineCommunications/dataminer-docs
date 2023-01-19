@@ -371,6 +371,17 @@ From now on, when you hide a job field, you will receive a message that it will 
 > [!NOTE]
 > When you unhide a hidden field, it will remain set to “not required”.
 
+#### Web Services API v1: New methods to manage service templates [ID_31612]
+
+<!-- MR 10.3.0 - FR 10.2.1 -->
+
+Using the following methods, it will now be possible to manage service templates via the web services API:
+
+- CreateServiceTemplate
+- DeleteServiceTemplate
+- GetServiceTemplate
+- UpdateServiceTemplate
+
 #### Dashboards app - GQI: Element, service and view data sources now also return an 'In timeout' column [ID_31671]
 
 <!-- MR 10.3.0 - FR 10.2.1 -->

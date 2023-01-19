@@ -407,15 +407,6 @@ When a list of ReservationInstances were retrieved sorted by a property of type 
 
 When migrating a database to a Cassandra cluster, in some cases, an error could be thrown when a NULL value was encountered in a logger table.
 
-#### Web services API: Problem with GetServiceTemplate [ID_32625]
-
-<!-- MR 10.3.0 - FR 10.2.4 -->
-
-The GetServiceTemplate method would throw an exception when requesting a service template with Text inputs that had neither of the following options:
-
-- Require a valid element name
-- Allow 'N/A' to indicate empty value
-
 #### SLAnalytics: Inaccurate short-term trend predictions [ID_32731]
 
 <!-- MR 10.3.0 - FR 10.2.5 -->
@@ -458,12 +449,6 @@ When, in the MessageBroker, RequestResponse(Async) was used when NATS was not ye
 <!-- MR 10.3.0 - FR 10.2.6 -->
 
 In some cases, TTL settings defined in an Elasticsearch database would not be applied correctly. As a result, certain data (e.g. profile instance data) would not get properly cleaned up.
-
-#### Web Services API: Problem when opening the soap.asmx page [ID_32939]
-
-<!-- MR 10.3.0 - FR 10.2.5 -->
-
-In some cases, an exception could be thrown when you tried to open the following page: `http://DmaNameOrIpAddress/API/v1/soap.asmx`
 
 #### SLPort would incorrectly split WebSocket messages larger than 65kB [ID_33182]
 
@@ -628,12 +613,6 @@ This issue will now be prevented. In addition, the element's instance GUID will 
 <!-- MR 10.3.0 - FR 10.2.8 CU2 -->
 
 After a DMS with a Cassandra Cluster setup was upgraded to 10.2.8 (CU1), it could occur that the Alarm Console showed run-time errors related to the SLAnalytics process. This was caused by an upgrade action that was not triggered for such a setup.
-
-#### Web Services API - CreateServiceTemplate: DataMinerID and ElementID incorrectly set to 0 instead of -1 [ID_34440]
-
-<!-- MR 10.3.0 - FR 10.2.11 -->
-
-When a service template was created using the *CreateServiceTemplate* method, the DataMinerID and ElementID of the newly created service template would incorrectly be set to 0 instead of -1.
 
 #### DataMiner upgrade: 'File already exists' exception could be thrown when multiple actions took a backup of the same file [ID_34601]
 

@@ -160,6 +160,21 @@ When new items were added in one client, in some cases, those items would not im
 
 When configuring jobs, no “loading” indication would appear when job sections were being loaded.
 
+#### Web services API: Problem with GetServiceTemplate [ID_32625]
+
+<!-- MR 10.3.0 - FR 10.2.4 -->
+
+The GetServiceTemplate method would throw an exception when requesting a service template with Text inputs that had neither of the following options:
+
+- Require a valid element name
+- Allow 'N/A' to indicate empty value
+
+#### Web Services API: Problem when opening the soap.asmx page [ID_32939]
+
+<!-- MR 10.3.0 - FR 10.2.5 -->
+
+In some cases, an exception could be thrown when you tried to open the following page: `http://DmaNameOrIpAddress/API/v1/soap.asmx`
+
 #### Dashboards app: Selection in parameter feed would incorrectly be cleared whenever the linked EPM feed was updated [ID_33153]
 
 <!-- MR 10.3.0 - FR 10.2.6 -->
@@ -225,6 +240,12 @@ when a dashboard, a low-code app page or low-code app panel was initialized, in 
 <!-- MR 10.3.0 - FR 10.2.11 -->
 
 When an interactive Automation script was executed in a web app, it would incorrectly not be possible to clear a selection box by selecting an empty option.
+
+#### Web Services API - CreateServiceTemplate: DataMinerID and ElementID incorrectly set to 0 instead of -1 [ID_34440]
+
+<!-- MR 10.3.0 - FR 10.2.11 -->
+
+When a service template was created using the *CreateServiceTemplate* method, the DataMinerID and ElementID of the newly created service template would incorrectly be set to 0 instead of -1.
 
 #### Dashboards / Low-Code Apps: Changing a GQI query would not cause a table to get updated when column filters were applied [ID_34520]
 

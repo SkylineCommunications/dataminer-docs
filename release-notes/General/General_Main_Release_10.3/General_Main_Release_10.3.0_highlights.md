@@ -122,19 +122,6 @@ When you configure a timer to automatically send ping requests to a device, you 
 > [!NOTE]
 > These options are only relevant when *amountPackets* or *amountPacketsPID* is used. These are currently only supported in conjunction with the *threadPool* option. When *threadPool* is not used, only one ping request will be sent.
 
-### DMS Web Services
-
-#### Web Services API v1: New methods to manage service templates [ID_31612]
-
-<!-- MR 10.3.0 - FR 10.2.1 -->
-
-Using the following methods, it will now be possible to manage service templates via the web services API:
-
-- CreateServiceTemplate
-- DeleteServiceTemplate
-- GetServiceTemplate
-- UpdateServiceTemplate
-
 ### DMS Service & Resource Management
 
 #### Replacing system functions by uploading an XML file [ID_32264]
