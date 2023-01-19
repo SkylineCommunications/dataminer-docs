@@ -297,10 +297,10 @@ To be able to make a local test build, you need to have DocFX installed. DocFX i
 
 #### Installing and configuring DocFX
 
-1. Go to <https://github.com/dotnet/docfx/releases>, and download the latest version of the `docfx.zip` package (e.g. version 2.59.4).
+1. Go to <https://github.com/dotnet/docfx/releases>, and download version version 2.59.4 of the `docfx.zip` package.
 
     > [!CAUTION]
-    > We recommend that you do not use any of the beta versions.
+    > We recommend that you do not use any of the beta versions. We also do not support version 2.60 yet, as this will require some changes to the way we generate metadata, which we are stil working on at the moment.
 
 1. Extract `docfx.zip` to a folder of your choice (e.g. `C:\DocFX`).
 
@@ -325,7 +325,7 @@ To be able to make a local test build, you need to have DocFX installed. DocFX i
     If information similar to the following text is returned, DocFX was installed correctly:
 
     ```txt
-    docfx 2.58.4.0
+    docfx 2.59.4.0
     Copyright (C) 2022 ¸ Microsoft Corporation. All rights reserved.
     This is open-source software under MIT License.  
     ...
@@ -714,7 +714,7 @@ The only time when "the user" is appropriate is when whoever you are writing for
    (Exception from HRESULT: 0x80131040)
 ```
 
-**Resolution**: Install [the latest version of DocFX](#installing-and-configuring-docfx).
+**Resolution**: Install [the version 2.59.4 of DocFX](#installing-and-configuring-docfx).
 
 ### Build failed because config or content files are missing
 
