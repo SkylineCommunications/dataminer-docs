@@ -390,6 +390,19 @@
           topicUid: Cube_Feature_Release_10.2.10
         - name: DataMiner Cube Feature Release 10.2.9
           topicUid: Cube_Feature_Release_10.2.9
+  - name: DataMiner Web application release notes
+    topicUid: DataMiner_Web_apps_RNs_index
+    items:
+    - name: v10.3
+      items:
+      - name: Main Release
+        items:
+        - name: DataMiner Web Applications Main Release 10.3.0 - Preview
+          topicUid: Web_apps_Main_Release_10.3.0
+      - name: Feature Release
+        items:
+        - name: DataMiner Web Applications Feature Release 10.3.3 - Preview
+          topicUid: Web_apps_Feature_Release_10.3.3
   - name: Cloud Platform release notes
     items:
     - name: DataMiner Cloud Platform change log
