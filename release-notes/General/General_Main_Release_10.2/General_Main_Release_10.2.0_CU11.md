@@ -438,3 +438,11 @@ Up to now, the following keyboard shortcuts would not work in the dashboard edit
 <!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
 
 When you enabled the *Visualize measurement points* setting of a spectrum element, that change would no longer to properly saved in the element's *element.xml* file. This would cause unexpected behavior after restarting the DataMiner Agent or the element in question.
+
+#### Elasticsearch: Problem when fetching metadata referring to stopped elements [ID_35423]
+
+<!-- MR 10.2.0 [CU11] - FR 10.3.2 [CU0] -->
+
+When alarms are being indexed in Elasticsearch, metadata is added. For example, the name of the protocol of the element in question.
+
+Up to now, when SLNet requested that metadata, an error could occur when fetching information regarding a stopped element that had DVE child elements with alarms that had not yet been written to the database.

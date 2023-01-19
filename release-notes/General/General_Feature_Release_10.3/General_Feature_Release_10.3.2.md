@@ -660,3 +660,11 @@ When, in the settings of a node edge graph, you had configured edge overrides, t
 <!-- MR 10.4.0 - FR 10.3.2 [CU0] -->
 
 In some cases, a GQI table component could show a `Cannot read properties of undefined (reading 'Guid')` error.
+
+#### Elasticsearch: Problem when fetching metadata referring to stopped elements [ID_35423]
+
+<!-- MR 10.2.0 [CU11] - FR 10.3.2 [CU0] -->
+
+When alarms are being indexed in Elasticsearch, metadata is added. For example, the name of the protocol of the element in question.
+
+Up to now, when SLNet requested that metadata, an error could occur when fetching information regarding a stopped element that had DVE child elements with alarms that had not yet been written to the database.
