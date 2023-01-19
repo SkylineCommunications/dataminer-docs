@@ -381,6 +381,17 @@ When proactive cap detection was enabled, up to now, in case of DVE elements, th
 
 From now on, if a DVE child element has an alarm template assigned to it, that alarm template will be used. Only when a DVE child element does not have an alarm template assigned to it will the alarm template of the parent be used.
 
+#### DataMiner Object Models: Action buttons can now be configured to launch an interactive Automation script when clicked [ID_35226]
+
+<!-- MR 10.4.0 - FR 10.3.3 -->
+
+An action button can now be configured to launch an interactive Automation script when clicked. To do so, set the *IsInteractive* property of the action to true.
+
+When such a button is clicked in a low-code app, the UI of the interactive Automation script will be displayed in a pop-up window on top of the low-code app.
+
+> [!NOTE]
+> One button can only execute one action. So, one button can only execute one interactive Automation script.
+
 #### DataMiner Object Models: New field descriptors [ID_35278]
 
 <!-- MR 10.4.0 - FR 10.3.3 -->
