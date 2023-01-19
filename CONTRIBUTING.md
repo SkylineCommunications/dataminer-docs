@@ -300,7 +300,7 @@ To be able to make a local test build, you need to have DocFX installed. DocFX i
 1. Go to <https://github.com/dotnet/docfx/releases>, and download version version 2.59.4 of the `docfx.zip` package.
 
     > [!CAUTION]
-    > We recommend that you do not use any of the beta versions. We also do not support version 2.60 yet, as this will require some changes to the way we generate metadata, which we are stil working on at the moment.
+    > We recommend that you do not use any of the beta versions. We also do not support version 2.60 yet, as this will require some changes to the way we generate metadata, which we are still working on at the moment.
 
 1. Extract `docfx.zip` to a folder of your choice (e.g. `C:\DocFX`).
 
