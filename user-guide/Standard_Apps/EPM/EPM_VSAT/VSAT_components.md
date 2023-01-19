@@ -64,7 +64,7 @@ The VSAT EPM Solution uses the following Correlation rules:
 
 The VSAT EPM Solution uses the following Automation scripts:
 
-- **VerSatOnReportAutomation**: Automation script in charge of updating and triggering the logic to keep RDS tables updated and synchronized across all DMAs.
+- **VerSatOnReportAutomation**: Automation script in charge of updating and triggering the logic to keep RDS tables updated and synchronized across all DMAs (*Config Entry Subscribers*, *Entity Subscribers*, *KPI Entry Subscribers*, and *DCAT Profiles*).
 
   This Automation script is dependent on the following protocols:
 
