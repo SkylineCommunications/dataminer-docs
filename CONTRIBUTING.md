@@ -289,6 +289,27 @@ The Skyline documentation team will then need to merge your pull request, so tha
 
 When all the necessary changes have been made and the draft branch is ready for publication, create a pull request as detailed above, but select the main branch instead of the draft branch as the base.
 
+### Working on an existing pull request
+
+After you have made a pull request and before it is merged into the main branch by the Skyline documentation team, it is possible to continue working on that existing pull request.
+
+You can do so as follows:
+
+1. Open GitHub Desktop and select *Current branch*.
+
+1. In the *Pull requests* tab, select the pull request you want to continue working on. Your current branch will now have changed.
+
+   ![Pull Request](~/images/Pull_Request.png)
+
+1. Open the branch in Visual Studio Code. You can do so by clicking the *Open in Visual Studio Code* button in GitHub Desktop.
+
+1. Make your changes in Visual Studio Code and make sure they are saved. Keep the items listed under [Things to watch out for](#things-to-watch-out-for) in mind.
+
+1. In GitHub Desktop, add a short summary of your changes in the box in the lower right corner. Optionally, you can also add a description. Then click the *Commit* button. This commit will now be added to the previous pull request.
+
+> [!TIP]
+> If you still want to make changes before the pull request is merged, you can change it to a draft pull request, as mentioned in [Creating a pull request](#creating-a-pull-request).
+
 ### Making a local test build before pushing changes
 
 Before you push your changes to the repository, it is often a good idea to make a test build on your local machine. This is especially the case if your changes involve adding or removing files, adding cross-references, changing headers, and/or updating a toc.yml file.
