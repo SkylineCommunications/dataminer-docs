@@ -10,7 +10,7 @@ The EPM topology navigation menu can be used to access the collector elements' m
 
 ## Topology chain
 
-Below you can find an overview of the different chains the VSAT EPM Solution offers and can be accessed in the *Topology* tree and their subsequent entities available at each branch.
+Below you can find an overview of the different chains the VSAT EPM Solution offers, which can be accessed in the *Topology* tree, and the subsequent entities available in each branch.
 
 ![Topology Tree](~/user-guide/images/Topology_Tree.png)
 
