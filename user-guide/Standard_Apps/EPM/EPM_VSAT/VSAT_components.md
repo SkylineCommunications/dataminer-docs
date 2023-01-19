@@ -86,7 +86,7 @@ The VSAT EPM Solution uses the following Automation scripts:
 
   This Automation script is dependent on the following protocols:
 
-  - The [collector](#collector-connectors) that triggered the initial EPM Message handler script:
+  - The [collector](#collector-connectors) that triggered the initial *EPM Message Handler* script:
 
     - iDirect Evolution
 
@@ -100,7 +100,7 @@ The VSAT EPM Solution uses the following Automation scripts:
 
   This Automation script is dependent on the following protocols:
 
-  - The [collector](#collector-connectors) that triggered the initial EPM Message handler script:
+  - The [collector](#collector-connectors) that triggered the initial *EPM Message Handler* script:
 
     - iDirect Evolution
 
@@ -112,7 +112,7 @@ The VSAT EPM Solution uses the following Automation scripts:
 
   This Automation script is dependent on the following protocols:
 
-  - The [collector](#collector-connectors) that triggered the initial EPM Message handler script:
+  - The [collector](#collector-connectors) that triggered the initial *EPM Message Handler* script:
 
     - iDirect Evolution
 
