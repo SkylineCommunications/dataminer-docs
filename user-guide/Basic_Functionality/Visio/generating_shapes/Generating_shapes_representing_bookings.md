@@ -87,7 +87,7 @@ The following shape data fields can be added to the group containing the booking
   - WrapVertical
   - WrapHorizontal
 
-- **ChildrenSource**: To add bookings from a specific time range, add a **ChildrenSource** shape data field to the shape group and set its value to that time range (e.g. “StartTime=\<dateTime>; EndTime=\<dateTime>”).
+- **ChildrenSource**: To add bookings from a specific time range, add a **ChildrenSource** shape data field to the shape group and set its value to that time range (e.g. “StartTime=\<dateTime>|EndTime=\<dateTime>”).
 
   > [!NOTE]
   >

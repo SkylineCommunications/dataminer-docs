@@ -41,6 +41,67 @@ All DOM objects (DomInstance, DomTemplate, DomDefinition, DomBehaviorDefinition,
 > - In the Elasticsearch database, existing data will not contain values for these new fields (except the *LastModified* field for all but *ModuleSettings*).
 > - All four fields are also available in the GQI data source *Object Manager Instances*. The *Last Modified* and *Created At* columns should show the time in the time zone of the browser.
 
+#### Client-server communication: gRPC instead of .NET Remoting [ID_34983]
+
+<!-- MR 10.4.0 - FR 10.3.2 -->
+
+Up to now, DataMiner clients and servers communicated with each other using the *.NET Remoting* protocol. From now on, they are also able to communicate with each other via an *API Gateway* module using *gRPC* connections, which are much more secure. For example, as to the use of IP ports, *gRPC* uses the standard port 443, whereas *.NET Remoting* uses the non-standard port 8004.
+
+When you upgrade DataMiner, the *API Gateway* module will automatically be installed in the `C:\Program Files\Skyline Communications\DataMiner APIGateway\` folder. All logging and program-specific data associated with the *API Gateway* module will be stored in the `C:\ProgramData\Skyline Communications\DataMiner APIGateway\`.
+
+> [!IMPORTANT]
+> For now, *gRPC* communication has to be explicitly enabled. If you do not enable it, Cube clients and DMAs will continue to communicate using the *.NET Remoting* protocol.
+
+##### Enabling the use of gRPC connections for communication between Cube and DMA
+
+Do the following on each DMA you want DataMiner Cube instances to connect to via *gRPC* by default.
+
+1. Open the `C:\Skyline DataMiner\Webpages\ConnectionSettings.txt` file.
+1. Set the `type` option to *GRPCConnection*.
+
+##### Enabling the use of gRPC connections for inter-DMA communication
+
+In the `DMS.xml` file, you must add redirects for each DMA that should communicate with the other DMAs in the DMS over *gRPC*. Failover Agents also need a redirect to each other's IP address.
+
+For example, in a cluster with two DMAs, with IPs 10.4.2.92 and 10.4.2.93, `DMS.xml` can be configured as follows.
+
+- On the DMA with IP 10.4.2.92:
+
+    ```xml
+      <DMS errorTime="30000" synchronized="true" xmlns="http://www.skyline.be/config/dms">
+         <Cluster name="pluto"/>
+         <DMA ip="10.4.2.92" timestamp=""/>
+         <DMA ip="10.4.2.93" id="35" timestamp="2023-01-05 01:24:38" contacted_once="TRUE" lostContact="2023-01-06 00:45:01"/>
+         <Redirects>
+            <Redirect to="10.4.2.93" via="https://10.4.2.93/APIGateway" user="MyUser" pwd="MyPassword"/>
+         </Redirects>
+      </DMS>
+    ```
+
+- On the DMA with IP 10.4.2.93:
+
+    ```xml
+      <DMS errorTime="30000" synchronized="true" xmlns="http://www.skyline.be/config/dms">
+         <Cluster name="pluto" synchronize="" timestamp="2022-12-13 12:48:29"/>
+         <DMA ip="10.4.2.93" timestamp="" contacted_once="" lostContact=""/>
+         <DMA ip="10.4.2.92" timestamp="2023-01-03 23:38:42" contacted_once="TRUE" lostContact="2023-01-06 01:02:00" id="69" uri=""/>
+         <Redirects>
+            <Redirect to="10.4.2.92" via="https://10.4.2.92/APIGateway" user="MyUser" pwd="MyPassword"/>
+         </Redirects>
+      </DMS>
+    ```
+
+> [!NOTE]
+> The passwords in the *pwd* attribute are encrypted and replaced with an encryption token when they are first read out by DataMiner.
+
+#### SLAnalytics - Proactive cap detection: Using alarm templates assigned to DVE child elements [ID_35194]
+
+<!-- MR 10.4.0 - FR 10.3.2 -->
+
+When proactive cap detection was enabled, up to now, in case of DVE elements, the alarm template of the parent would always be used.
+
+From now on, if a DVE child element has an alarm template assigned to it, that alarm template will be used. Only when a DVE child element does not have an alarm template assigned to it will the alarm template of the parent be used.
+
 ## Changes
 
 ### Enhancements
@@ -205,6 +266,17 @@ When an attempt is made to create resource properties, resource definition prope
 
 This same fix also fixes the creation and migration of resources of which the property list is null and resource pools of which the property definitions list or properties list is null.
 
+#### DataMiner Object Models: DomInstanceButtonDefinitions can only reference a single action [ID_35156]
+
+<!-- MR 10.4.0 - FR 10.3.2 -->
+
+From now on, DomInstanceButtonDefinitions can only reference a single action. If multiple actions are defined, a `DomBehaviorDefinitionError` with reason `InvalidButtonActionCombination` will be returned.
+
+Also, when using the DomBehaviorDefinition inheritance system, the server-side logic will now make sure that there are no buttons or actions with identical IDs on both the parent and child definition.
+
+- If a duplicate action is found, a `DomBehaviorDefinitionError` with reason `DuplicateActionDefinitionIds` will be returned.
+- If a duplicate button is found, a `DomBehaviorDefinitionError` with reason `DuplicateButtonDefinitionIds` will be returned.
+
 #### SAML authentication will now also work with user names instead of email addresses when automatic user creation is not enabled [ID_35159]
 
 <!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
@@ -219,7 +291,7 @@ In case a *Line & area chart* component displays trending for multiple parameter
 
 #### Enhanced performance when updating a baseline or assigning an alarm template that contains conditional monitoring [ID_35171]
 
-<!-- MR 10.4.0 - FR 10.3.2 -->
+<!-- MR 10.3.0 - FR 10.3.2 -->
 
 Because of a number of enhancements, overall performance has increased when updating a baseline or assigning an alarm template that contains conditional monitoring.
 
@@ -229,11 +301,34 @@ Because of a number of enhancements, overall performance has increased when upda
 
 Because of a number of enhancements, overall performance has increased when deleting a service from an Elasticsearch database.
 
+#### SLLogCollector: Custom CollectorConfig XML files will now be synchronized across the DataMiner cluster [ID_35180]
+
+<!-- MR 10.4.0 - FR 10.3.2 -->
+
+From now on, all custom CollectorConfig XML files will be synchronized across the DataMiner cluster.
+
+#### Exporting and importing DELT packages containing element and alarm data is now supported on DataMiner Systems with a clustered database [ID_35213]
+
+<!-- MR 10.2.0 [CU12] - FR 10.3.2 [CU0] -->
+
+From now on, exporting and importing DELT packages containing element and alarm data is also supported on DataMiner Systems with a clustered database.
+
+> [!NOTE]
+> Exporting and importing DELT packages containing trend data is not yet supported on DataMiner Systems with a clustered database.
+
 #### SLAnalytics: Enhanced processing of parameter values 'exception' and 'other' [ID_35214]
 
 <!-- MR 10.3.0 - FR 10.3.2 -->
 
 Because of a number of enhancements, overall processing of "exception" or "other" parameter values by the SLAnalytics process has improved.
+
+#### NATS: No attempt will be made to cluster NATS at DMA startup when NATSForceManualConfig is enabled [ID_35221]
+
+<!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
+
+At DMA startup, from now on, no attempt will be made to automatically cluster the NATS nodes when the *NATSForceManualConfig* option is enabled.
+
+If necessary, *NatsCustodianRequests* can be triggered via the SLNetClientTest tool.
 
 #### Low-Code Apps: URLs of published app versions will no longer contain the app version number [ID_35236]
 
@@ -246,6 +341,12 @@ From now on, the URL of a published version of an app will no longer contain the
 <!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
 
 The `Clusterstate.xml` file, located in the `C:\Skyline DataMiner` folder, was obsolete and has now been removed.
+
+#### SLAnalytics - Pattern matching: When a pattern is detected on a DVE child element the suggestion event will now be generated on that same DVE child element [ID_35264]
+
+<!-- MR 10.4.0 - FR 10.3.2 -->
+
+When a trend pattern was detected on a DVE child element, up to now, the suggestion event would be generated on the parent element. From now on, it will be generated on the child element instead.
 
 #### Low-code apps: Enhanced confirmation message when deleting an app [ID_35269]
 
@@ -262,6 +363,18 @@ The confirmation message that appears when you delete an app will now indicate m
 <!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
 
 In all web apps, the date/time picker component will now always show 6 full weeks, regardless of the number of days in the current month. This will prevent the component from having to resize when you switch from one month to another.
+
+#### SLLogCollector now also collects hot threads, node usage and tasks from Elasticsearch [ID_35310]
+
+<!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
+
+SLLogCollector packages will now also include the following additional files containing information retrieved from the Elasticsearch database (if present):
+
+| File | Contents |
+|------|----------|
+| `\Logs\Elastic\<Node address>\_nodes.hot_threads.txt` | The output of an `GET /_nodes/hot_threads` command. |
+| `\Logs\Elastic\<Node address>\_nodes.usage.json`      | The output of a `GET /_nodes/usage` command.        |
+| `\Logs\Elastic\<Node address>\_tasks.json`            | The output of a `GET /_tasks?detailed` command.     |
 
 ### Fixes
 
@@ -302,7 +415,7 @@ In some cases, an error could occur in SLDataMiner when loading an alarm templat
 
 #### Alarm templates: Parameters exported to DVE child elements could have incorrect alarm limits [ID_34996]
 
-<!-- MR 10.3.0 - FR 10.3.2 -->
+<!-- MR 10.2.0 [CU12] - FR 10.3.2 -->
 
 When a parameter was exported as a standalone parameter to a DVE child element, in some cases, the alarm limits could be incorrect when the type of alarm monitoring was set to either *Relative* or *Absolute*.
 
@@ -535,3 +648,15 @@ Also, when a column was renamed via a custom operator, the metadata available on
 <!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
 
 When you enabled the *Visualize measurement points* setting of a spectrum element, that change would no longer to properly saved in the element's *element.xml* file. This would cause unexpected behavior after restarting the DataMiner Agent or the element in question.
+
+#### Dashboards app / Low-Code Apps - Node edge component: Edge overrides would incorrectly no longer be applied [ID_35298]
+
+<!-- MR 10.2.0 [CU12] - FR 10.3.2 -->
+
+When, in the settings of a node edge graph, you had configured edge overrides, these would incorrectly no longer be applied.
+
+#### Dashboards app & Low-code apps - GQI table component: 'Cannot read properties of undefined (reading 'Guid')' error [ID_35316]
+
+<!-- MR 10.4.0 - FR 10.3.2 [CU0] -->
+
+In some cases, a GQI table component could show a `Cannot read properties of undefined (reading 'Guid')` error.

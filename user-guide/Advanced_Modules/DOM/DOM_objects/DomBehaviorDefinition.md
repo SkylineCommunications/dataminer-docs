@@ -96,6 +96,7 @@ When something goes wrong during the CRUD actions, the `TraceData` can contain o
 | DuplicateActionDefinitionIds | There are `IDomActionDefinition` defined with duplicate IDs. *ActionDefinitionIds* contains the ID(s) of the duplicate definition(s). |
 | InvalidButtonDefinitionIds | There was at least one `IDomButtonDefinition` defined with an invalid ID (should only contain lowercase characters). *ButtonDefinitionIds* contains the ID(s) of the invalid definition(s). |
 | DuplicateButtonDefinitionIds | There are `IDomButtonDefinition` defined with duplicate IDs. *ButtonDefinitionIds* contains the ID(s) of the duplicate definition(s). |
+|InvalidButtonActionCombination | An `IDomButtonDefinition` contains a combination of actions, which is not supported. At this time, only a single action is allowed. This error is returned from DataMiner 10.3.2/10.4.0 onwards when more than one action ID is added to an `IDomButtonDefinition`. *ButtonDefinitionIds* contains the ID(s) of the invalid definition(s). |
 
 > [!NOTE]
 > When a `DomBehaviorDefinition` inherits from another definition, make sure that the IDs of the `StatusSectionDefinitionLinks`, `ButtonDefinitions` and `ActionDefinitions` are unique accross both parent & child definition.

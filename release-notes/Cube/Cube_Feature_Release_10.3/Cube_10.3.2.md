@@ -65,6 +65,32 @@ Configuring gray-tinted foreground colors is not recommended as a ListView compo
 > - The *ColorRows* feature is disabled by default ("ColorRows=False").
 > - At present, the *ColorRows* feature is only available on ListView components that have bookings as a source.
 
+#### Visual Overview: Visualizing EPM object statistics in a shape [ID_35222]
+
+<!-- MR 10.4.0 - FR 10.3.2 -->
+
+It is now possible to display the statistics of an EPM object in a shape linked to that EPM object.
+
+1. Link the shape to the EPM object via the *SystemName* and *SystemType* shape data fields.
+
+1. Add an asterisk character ("\*") in the shape text.
+
+1. Add a shape data field of type *Info* to the shape, and set its value to e.g. `EPM STATISTICS:###[#TotalAlarms]`.
+
+The following information can be displayed:
+
+```txt
+#TotalAlarms
+#CriticalAlarms
+#MajorAlarms
+#MinorAlarms
+#WarningAlarms
+#NormalAlarms
+#TimeoutAlarms
+#NoticeAlarms
+#ErrorAlarms
+```
+
 ## Changes
 
 ### Enhancements
@@ -251,3 +277,21 @@ When a shape is linked to a parameter via a session variable, the parameter valu
 When, in the *Element Connections* app, you created a new connection or updated an existing connection, in some cases, duplicate connections would incorrectly be created or existing data would be modified incorrectly.
 
 Also, the *Element Connections* app has now been made fully compatible with the *Skyline Black* theme.
+
+#### Trending: 'Trending is currently not available ...' error would incorrectly be displayed while viewing the trend graph of an EPM object [ID_35234]
+
+<!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
+
+In some cases, a `Trending is currently not available for this parameter` error would incorrectly be displayed when you were viewing the trend graph of an EPM object.
+
+#### Visual Overview: Dynamically positioned shapes could no longer be re-arranged using drag-and-drop [ID_35241]
+
+<!-- MR 10.4.0 - FR 10.3.2 -->
+
+When, in a Visio drawing, shapes have been positioned dynamically based on properties, you can re-arrange those shapes manually by switching to *Arrange* mode and re-arranging the shapes using drag-and-drop. In some rare cases, it would no longer be possible to drag shapes to another location.
+
+#### DataMiner Cube - Visual Overview: Inline preset of spectrum component would no longer be applied [ID_35244]
+
+<!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
+
+When you had defined an inline preset while configuring an embedded spectrum component, that preset would no longer be applied. Instead, a `Please select at least one of the preset content items before clicking Load.` message would appear.

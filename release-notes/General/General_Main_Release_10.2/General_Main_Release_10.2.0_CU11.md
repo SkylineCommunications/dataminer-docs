@@ -58,6 +58,14 @@ Up to now, when you exported real-time trend data to a CSV file, trend points wi
 
 Since DataMiner version 10.2.6 (10.2.0 CU6), SAML authentication would only work when the SAML response claims contained an email address. From now on, SAML authentication will also work with user names instead of email addresses in case automatic user creation is not enabled.
 
+#### NATS: No attempt will be made to cluster NATS at DMA startup when NATSForceManualConfig is enabled [ID_35221]
+
+<!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
+
+At DMA startup, from now on, no attempt will be made to automatically cluster the NATS nodes when the *NATSForceManualConfig* option is enabled.
+
+If necessary, *NatsCustodianRequests* can be triggered via the SLNetClientTest tool.
+
 #### Low-Code Apps: URLs of published app versions will no longer contain the app version number [ID_35236]
 
 <!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
@@ -85,6 +93,18 @@ The confirmation message that appears when you delete an app will now indicate m
 <!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
 
 In all web apps, the date/time picker component will now always show 6 full weeks, regardless of the number of days in the current month. This will prevent the component from having to resize when you switch from one month to another.
+
+#### SLLogCollector now also collects hot threads, node usage and tasks from Elasticsearch [ID_35310]
+
+<!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
+
+SLLogCollector packages will now also include the following additional files containing information retrieved from the Elasticsearch database (if present):
+
+| File | Contents |
+|------|----------|
+| `\Logs\Elastic\<Node address>\_nodes.hot_threads.txt` | The output of an `GET /_nodes/hot_threads` command. |
+| `\Logs\Elastic\<Node address>\_nodes.usage.json`      | The output of a `GET /_nodes/usage` command.        |
+| `\Logs\Elastic\<Node address>\_tasks.json`            | The output of a `GET /_tasks?detailed` command.     |
 
 ### Fixes
 
@@ -338,11 +358,23 @@ When a client asynchronously sent an GQI message to SLNet, in some cases, an exc
 
 When redundancy groups were being initialized during a DataMiner startup, in some cases, an error could occur when an element had its state changed from "undefined" to "stopped".
 
+#### DataMiner Cube - Trending: 'Trending is currently not available ...' error would incorrectly be displayed while viewing the trend graph of an EPM object [ID_35234]
+
+<!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
+
+In some cases, a `Trending is currently not available for this parameter` error would incorrectly be displayed when you were viewing the trend graph of an EPM object.
+
 #### Cassandra Cluster: Incorrect db.xml entries could cause db.xml to get corrupted upon synchronization [ID_35237]
 
 <!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
 
 On DataMiner clusters with a Cassandra Cluster database, incorrect *db.xml* entries could cause that file to get corrupted upon synchronization.
+
+#### DataMiner Cube - Visual Overview: Inline preset of spectrum component would no longer be applied [ID_35244]
+
+<!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
+
+When you had defined an inline preset while configuring an embedded spectrum component, that preset would no longer be applied. Instead, a `Please select at least one of the preset content items before clicking Load.` message would appear.
 
 #### Dashboards app & Low-code apps: Enhanced caching of items in query column selection box [ID_35251]
 

@@ -161,7 +161,7 @@ In case a *Line & area chart* component displays trending for multiple parameter
 
 #### SLElement: Enhanced alarm locking [ID_34561]
 
-<!-- MR 10.3.0 - FR 10.2.12 -->
+<!-- MR 10.2.0 [CU12] - FR 10.2.12 -->
 
 Alarm locking in the SLElement process has been enhanced.
 

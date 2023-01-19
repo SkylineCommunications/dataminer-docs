@@ -38,5 +38,7 @@ In this section, you can find information on the following useful tools for syst
 
 - [Change Element States Offline](xref:Change_Element_States_Offline)
 
+- [Interactive Automation Script Toolkit](xref:Interactive_Automation_Script_Toolkit)
+
 > [!NOTE]
 > For more information on other DataMiner tools or third-party tools, refer to the [user guide](xref:DataminerTools) or [DataMiner Dojo](https://community.dataminer.services/documentation/category/resources/tools/).

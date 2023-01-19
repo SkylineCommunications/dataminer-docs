@@ -397,12 +397,6 @@ When a parameter feed has an EPM identifier feed as source, from now on, the *Au
 
 In case a *Line & area chart* component displays trending for multiple parameters, the *Group by* setting allows you to specify how the graphs should be grouped. From now on, group titles will no longer be displayed when you set *Group by* to "All together".
 
-#### SLElement: Enhanced alarm locking [ID_34561]
-
-<!-- MR 10.3.0 - FR 10.2.12 -->
-
-Alarm locking in the SLElement process has been enhanced.
-
 #### Dashboards app / Low-Code Apps: Enhanced performance of selection boxes [ID_34577]
 
 <!-- MR 10.3.0 - FR 10.2.12 -->
@@ -428,12 +422,6 @@ This will support faster and more flexible change point querying via GQI in futu
 <!-- MR 10.3.0 - FR 10.2.12 -->
 
 A number of enhancements have been made to the visual overview component, especially with regard to the WebSocket/polling settings and the algorithm that checks whether users have access to the visual overviews retrieved by the component.
-
-#### Enhanced parameter locking in SLElement [ID_34688]
-
-<!-- MR 10.3.0 - FR 10.3.1 [CU0] -->
-
-In SLElement, a number of enhancements have been made with regard to parameter locking.
 
 #### Service & Resource Management: GetResources methods not using filter elements have now been marked as obsolete [ID_34720]
 
@@ -483,6 +471,12 @@ Because of a number of enhancements, overall performance has increased when crea
 When an attempt is made to create resource properties, resource definition properties and pool properties with value/key null on a system with an Elasticsearch database, from now on, an `InvalidCharactersInPropertyNames` error listing the names of the properties in question will be added to the Resource Manager log file.
 
 This same fix also fixes the creation and migration of resources of which the property list is null and resource pools of which the property definitions list or properties list is null.
+
+#### Enhanced performance when updating a baseline or assigning an alarm template that contains conditional monitoring [ID_35171]
+
+<!-- MR 10.3.0 - FR 10.3.2 -->
+
+Because of a number of enhancements, overall performance has increased when updating a baseline or assigning an alarm template that contains conditional monitoring.
 
 #### Enhanced performance when deleting a service from an Elasticsearch database [ID_35173]
 
@@ -895,12 +889,6 @@ When you tried to request data from a simulation that was built with AutoBuildVe
 > [!CAUTION]
 > This tool is provided "As Is" with no representation or warranty whatsoever. Skyline Communications will not provide any maintenance or support for this tool.
 
-#### Problem with SLElement when a trend template was being assigned [ID_34824]
-
-<!-- MR 10.3.0 - FR 10.3.1 -->
-
-In some cases, an error could occur in SLElement when a trend template was being assigned.
-
 #### Dashboards app: Empty groups would incorrectly not be removed from parameter feeds listing EPM parameters [ID_34884]
 
 <!-- MR 10.3.0 - FR 10.3.1 -->
@@ -958,14 +946,6 @@ When you sorted or filtered a table fed by e.g. a query filter, the table would 
 
 When a trend graph displaying multiple parameters showed data that was partly in the future, in some cases, an error could occur.
 
-#### Alarm templates: Parameters exported to DVE child elements could have incorrect alarm limits [ID_34996]
-
-<!-- MR 10.3.0 - FR 10.3.2 -->
-
-When a parameter was exported as a standalone parameter to a DVE child element, in some cases, the alarm limits could be incorrect when the type of alarm monitoring was set to either *Relative* or *Absolute*.
-
-Also, LED bar controls would either not display or not update their alarm limits.
-
 #### Dashboards app: Button to restore the initial view would incorrectly appear on all tables after sorting or filtering a table [ID_35003]
 
 <!-- MR 10.3.0 - FR 10.3.2 -->
@@ -987,6 +967,12 @@ When resource data was being migrated to Elasticsearch, the following exception 
 ```txt
 2022/12/01 08:53:59.582|SLNet.exe|ResourceManager|ERR|0|6|System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.ArgumentException: value is not serializable to json
 ```
+
+#### When a direct view table was updated, the wrong columns could be updated in the source element [ID_35075]
+
+<!-- MR 10.3.0 - FR 10.3.3 -->
+
+When a direct view table was updated while one of the source elements was stopped, due to a column translation issue, the wrong columns could be updated in that source element the moment it was started again.
 
 #### Monitoring app: Problem when opening the histogram page of a view [ID_35081]
 
@@ -1018,6 +1004,12 @@ When a GQI query retrieved the status of a DOM instance that had no status, the 
 
 When you sorted or filtered a table by clicking a table header, or when an action triggered a refresh of the table data, in some cases, no loading indicator would appear.
 
+#### GQI: Problem when fetching two queries using an external data source with a custom argument of which the ID was set to "Type" [ID_35242]
+
+<!-- MR 10.3.0 - FR 10.3.3 -->
+
+When two queries using an external data source with a custom argument of which the ID was set to "Type" had to be fetched, only one of the two queries would get fetched when the only difference between them was the value of the custom argument.
+
 #### GQI: Metadata would incorrectly be removed when a custom operator was applied [ID_35283]
 
 <!-- MR 10.3.0 - FR 10.3.2 -->
@@ -1025,3 +1017,11 @@ When you sorted or filtered a table by clicking a table header, or when an actio
 When, in a GQI query, a custom operator was applied, all metadata available on the rows would incorrectly be removed, causing feeds to no longer work as expected.
 
 Also, when a column was renamed via a custom operator, the metadata available on that column would incorrectly be removed.
+
+#### DataMiner Object Models: Permission checks for DOM modules requiring view permission 'None' were too strict [ID_35305]
+
+<!-- MR 10.3.0 - FR 10.3.3 -->
+
+If a DOM module is created without specifying *SecuritySettings*, the view permission is set to "None".
+
+Up to now, the check to determine whether a user had the view permission set to "None", would only return true for the Administrator or users in the Administrator group. From now on, when the required view permission is "None", permission checks will no longer be performed.
