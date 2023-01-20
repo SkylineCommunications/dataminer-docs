@@ -402,6 +402,28 @@ Two new field descriptors have been added to the DataMiner Object Models:
 
 - UserFieldDescriptor: Can be used to define that a field should contain the name of a DataMiner user. There is a *GroupNames* property that can be used to define which groups the user can be a part of.
 
+### Web apps
+
+#### Dashboards app - GQI: New data sources [ID_34747] [ID_35027] [ID_34965] [ID_35058]
+
+<!-- MR 10.4.0 - FR 10.3.3 -->
+
+In the Generic Query Interface, the following new data sources are now available:
+
+| Data source                   | Contents                                                   |
+|-------------------------------|------------------------------------------------------------|
+| Get trend data patterns       | All pattern matching tags created in the DataMiner System. |
+| Get trend data pattern events | All pattern occurrences detected in the DataMiner System.  |
+| Get behavioral change events  | All behavioral anomalies detected in the DataMiner System. |
+
+The *Get trend data pattern events* and *Get behavioral change events* data sources contain time range metadata on each row. Each time range holds the start and end time of the event in question. When a table row is selected, the time range will be exposed as a feed.
+
+#### GQI: Multiple groupBy operations can now be applied after an aggregation operation [ID_35355]
+
+<!-- MR 10.4.0 - FR 10.3.3 -->
+
+After an aggregation operation, you can now apply multiple groupBy operations.
+
 ### Service & Resource Management
 
 #### Service & Resource Management: Exposers for resource capacities and capabilities [ID_34841]
