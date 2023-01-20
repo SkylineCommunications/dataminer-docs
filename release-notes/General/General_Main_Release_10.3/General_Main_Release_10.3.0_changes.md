@@ -300,6 +300,12 @@ If an Elasticsearch database is available, the behavioral change points detected
 
 This will support faster and more flexible change point querying via GQI in future releases.
 
+#### SLLogCollector now has a default log configuration that will be used by the SupportAssistant DxM [ID_34709]
+
+<!-- MR 10.3.0 - FR 10.2.12 -->
+
+The SLLogCollector tool now has a default log configuration that will be used by the SupportAssistant DxM.
+
 #### Service & Resource Management: GetResources methods not using filter elements have now been marked as obsolete [ID_34720]
 
 <!-- MR 10.3.0 - FR 10.2.12 -->

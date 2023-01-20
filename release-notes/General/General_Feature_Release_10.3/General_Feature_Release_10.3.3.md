@@ -143,6 +143,14 @@ If a DOM module is created without specifying *SecuritySettings*, the view permi
 
 Up to now, the check to determine whether a user had the view permission set to "None", would only return true for the Administrator or users in the Administrator group. From now on, when the required view permission is "None", permission checks will no longer be performed.
 
+#### External authentication via SAML: Issues fixed when using Okta as identity provider [ID_35374]
+
+<!-- MR 10.4.0 - FR 10.3.3 -->
+
+Using Okta as identity provider, it would incorrectly no longer be possible to read out signed assertions. Also, when the group claim setting is enabled in the *DataMiner.xml* file, the user will now be added to the correct groups.
+
+Up to now, in case of a claim mismatch, an exception would be thrown. From now on, an entry containing a clear message will be added to the *SLNet.txt* log file instead.
+
 #### Cassandra: TTL setting of spectrum trace data would not be applied correctly [ID_35385]
 
 <!-- MR 10.2.0 [CU12] - FR 10.3.3 -->

@@ -111,3 +111,11 @@ During a DataMiner upgrade, Microsoft .NET 6.0 will now be installed if not inst
 <!-- MR 10.4.0 - FR 10.3.1 -->
 
 In some cases, Resource Manager could throw a NullReferenceException when *ResourceStorageType* was not specified in the `C:\Skyline DataMiner\ResourceManager\Config.xml` file.
+
+#### External authentication via SAML: Issues fixed when using Okta as identity provider [ID_35374]
+
+<!-- MR 10.4.0 - FR 10.3.3 -->
+
+Using Okta as identity provider, it would incorrectly no longer be possible to read out signed assertions. Also, when the group claim setting is enabled in the *DataMiner.xml* file, the user will now be added to the correct groups.
+
+Up to now, in case of a claim mismatch, an exception would be thrown. From now on, an entry containing a clear message will be added to the *SLNet.txt* log file instead.
