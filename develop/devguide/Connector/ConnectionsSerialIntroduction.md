@@ -16,4 +16,4 @@ The communication will occur over TCP/IP, UDP, or, less commonly, over a serial 
 > [!NOTE]
 > It is possible to create a serial simulation using an element stream or DataMiner simulation file as input for the serial simulator protocol “Skyline Serial Simulator”.
 
-DataMiner supports serial communication, allowing protocols to define one or more connections of type "serial". DataMiner runs a process called "SLPort" which takes care of all communication to and from devices connected to either a serial port or an IP port.
+DataMiner supports serial communication, allowing protocols to define one or more connections of type "serial". DataMiner runs a process called "SLPort", which takes care of all communication to and from devices connected to either a serial port or an IP port.
