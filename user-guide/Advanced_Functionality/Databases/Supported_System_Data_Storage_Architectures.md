@@ -21,7 +21,7 @@ The **recommended** DataMiner setup involves **one Cassandra cluster and one Ela
 
 ### Single DMA setups
 
-In a development environment with limited load, it is possible to host DataMiner, Cassandra and Elasticsearch on one Windows machine. However, note that this is not recommended for normal production environments.
+In a development environment with limited load, it is possible to host DataMiner, Cassandra, and Elasticsearch on one Windows machine. In this case, Elasticsearch and DataMiner must be installed on a separate disk or partition. However, note that this is not recommended for normal production environments.
 
 ![Development setup: DataMiner, Cassandra, and Elasticsearch hosted on the same machine](~/user-guide/images/Development-setup-DataMiner-Cassandra-and-Elasticsearch.png)<br>
 *Development setup: DataMiner, Cassandra, and Elasticsearch hosted on the same machine*
@@ -106,7 +106,7 @@ This architecture is currently still supported, though it is **not recommended**
 > - For information on how to migrate a legacy setup with MySQL/MS SQL database to Cassandra, see [Migrating the general database to Cassandra](xref:Migrating_the_general_database_to_Cassandra).
 > - Elasticsearch can only be installed if DataMiner already uses Cassandra. For more information, see [Installing Elasticsearch on a DMA via DataMiner](xref:Installing_Elasticsearch_via_DataMiner).
 
-In a development environment with limited load, it is possible to host DataMiner, Cassandra, and Elasticsearch on one Windows machine. However, this is not recommended for normal production environments.
+In a development environment with limited load, it is possible to host DataMiner, Cassandra, and Elasticsearch on one Windows machine. In this case, Elasticsearch and DataMiner must be installed on a separate disk or partition. However, this is not recommended for normal production environments.
 
 ![Development setup: DataMiner, Cassandra, and Elasticsearch hosted on the same machine](~/user-guide/images/Development-setup-DataMiner-Cassandra-and-Elasticsearch.png)<br>
 *Development setup: DataMiner, Cassandra, and Elasticsearch hosted on the same machine*
