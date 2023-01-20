@@ -54,9 +54,19 @@ This page contains an overview of the CM US QAM CH parameters available in the I
 
 - **US QAM Ch MER**: Direct value. Only available for DOCSIS 3.x.
 
-- **US QAM Ch Time Offset**: Direct value. The upstream time offset for the given CM-channel combination as reported by the CMTS.
+- **US QAM Ch Time Offset**: Calculated. The Upstream Time Offset for the given CM-channel combination as calculated by DataMiner.
 
-  OID: 1.3.6.1.4.1.4491.2.1.20.1.4.1.10.
+  Calculated as follows for DOCSIS v3: Time Offset = Upstream ticks * (6.25/(64*256)) * (97.6 / 1000).
+
+  Calculated as follows for other DOCSIS versions: Time Offset = Upstream ticks * (6.25/64) * (97.6 / 1000).
+
+  DOCSIS v3:
+
+  - OID: 1.3.6.1.4.1.4491.2.1.20.1.4.1.10.
+
+  Other DOCSIS versions:
+
+  - OID: 1.3.6.1.2.1.10.127.1.1.2.1.6.
 
 - **US QAM Ch Corrected Packet Ratio**: Calculated. The Upstream Corrected Ratio for the given CM-channel combination as calculated by DataMiner.
 
