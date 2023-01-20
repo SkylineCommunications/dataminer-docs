@@ -17,7 +17,7 @@ The new icon component allows you to display an icon on a dashboard or a low-cod
 
 ## Other new features
 
-#### Dashboards app - GQI: New data sources [ID_35027] [ID_34965] [ID_35058]
+#### Dashboards app - GQI: New data sources [ID_34747] [ID_35027] [ID_34965] [ID_35058]
 
 <!-- MR 10.4.0 - FR 10.3.3 -->
 
