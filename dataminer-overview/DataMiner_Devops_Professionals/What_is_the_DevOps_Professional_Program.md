@@ -2,23 +2,23 @@
 uid: What_is_the_DevOps_Professionals_Program
 ---
 
-# What is the DataMiner DevOps Professional program?
+# What is the DataMiner DevOps Professional Program?
 
 > [!TIP]
-> For a more extensive overview of what the DataMiner DevOps Professional program stands for, see [DataMiner Dojo](https://community.dataminer.services/dataminer-devops-professional-program).
+> For a more extensive overview of what the DataMiner DevOps Professional Program stands for, see [DataMiner Dojo](https://community.dataminer.services/dataminer-devops-professional-program).
 
-The DataMiner DevOps Professional program is catered towards **individuals**, **organizations**, **solution providers**, **technology vendors**, and **co-branding partners**. It is aimed at empowering the community of DataMiner enthusiasts and DevOps experts across different types of organizations and industry verticals and is a valuable offer from [various perspectives](https://community.dataminer.services/dataminer-devops-professional-program/#audience).
+The DataMiner DevOps Professional Program is catered towards **individuals**, **organizations**, **solution providers**, **technology vendors**, and **co-branding partners**. It is aimed at empowering the community of DataMiner enthusiasts and DevOps experts across different types of organizations and industry verticals and is a valuable offer from [various perspectives](https://community.dataminer.services/dataminer-devops-professional-program/#audience).
 
 The program focuses on ensuring that they can achieve the highest possible efficiency in converting their limited time into maximum value towards the set goals.
 
-By entering the DataMiner DevOps Professional program as an organization or as an individual, and by qualifying for formal accreditation as a DataMiner DevOps Professional, you can unlock a **broad range of perks and invaluable [benefits](xref:Benefits_DevOps_Professionals_Program)**, all aimed at boosting your personal value and accelerating your business in the new world.
+By entering the DataMiner DevOps Professional Program as an organization or as an individual, and by qualifying for formal accreditation as a DataMiner DevOps Professional, you can unlock a **broad range of perks and invaluable [benefits](xref:Benefits_DevOps_Professionals_Program)**, all aimed at boosting your personal value and accelerating your business in the new world.
 
 **Applying is free and can be done online at any given time.**
 
 > [!TIP]
-> Click [here](https://community.dataminer.services/dataminer-devops-professional-program-signup/) to sign up for the DataMiner DevOps Professional program.
+> Click [here](https://community.dataminer.services/dataminer-devops-professional-program-signup/) to sign up for the DataMiner DevOps Professional Program.
 
-Upon registration, you will be part of the DataMiner DevOps Professional program, and from then onwards, you simply have to align with the program’s expectations to grow or maintain your status and to become eligible for the benefits offered by the program.
+Upon registration, you will be part of the DataMiner DevOps Professional Program, and from then onwards, you simply have to align with the program’s expectations to grow or maintain your status and to become eligible for the benefits offered by the program.
 
 As a DataMiner DevOps Professional, you are expected to align with important key values and the DataMiner culture, as well as master certain skills related both to DataMiner and to affiliated key technologies and a broader set of related topics.
 

@@ -2,11 +2,11 @@
 uid: Benefits_DevOps_Professionals_Program
 ---
 
-# Benefits attached to the DataMiner DevOps Professional program
+# Benefits attached to the DataMiner DevOps Professional Program
 
 ## Benefits
 
-By creating value for the DataMiner community, you earn DevOps Reputation Points. Not only do these points determine your [DevOps Professional level](#accumulating-dojo-reputation-points), they also allow you to enjoy the plentiful benefits attached to the DevOps Professional program.
+By creating value for the DataMiner community, you earn DevOps Reputation Points. Not only do these points determine your [DevOps Professional level](#accumulating-dojo-reputation-points), they also allow you to enjoy the plentiful benefits attached to the DevOps Professional Program.
 
 > [!NOTE]
 > We are continuously working on further evolving this key program, so new benefits or ways of collecting Dojo Reputation Points can be expected.
