@@ -2,7 +2,7 @@
 uid: DataMiner_Web_apps_RNs_index
 ---
 
-# DataMiner web application release notes
+# DataMiner web apps release notes
 
 These release notes contain all new features, enhancements, and fixes for the DataMiner web applications.
 
