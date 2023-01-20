@@ -100,27 +100,27 @@ Examples:
 
 - Open the program Notepad++ on the client device where the interactive script is running.
 
-```csharp
-UIBlockDefinition blockItem = new UIBlockDefinition();
-blockItem.Type = UIBlockType.Executable;
-blockItem.Extra = "notepad++.exe";
-...
-MyDialogBox.AppendBlock(blockItem);
-```
+  ```csharp
+  UIBlockDefinition blockItem = new UIBlockDefinition();
+  blockItem.Type = UIBlockType.Executable;
+  blockItem.Extra = "notepad++.exe";
+  ...
+  MyDialogBox.AppendBlock(blockItem);
+  ```
 
 - Open a file with Notepad on the client device where the interactive script is running.
 
-```csharp
-UIBlockDefinition blockItem = new UIBlockDefinition();
-blockItem.Type = UIBlockType.Executable;
-blockItem.Extra = "notepad.exe";
-blockItem.AddDropDownOption("Arguments", @"C:\Skyline DataMiner\Files\VersionCompatibility.txt");
-...
-MyDialogBox.AppendBlock(blockItem);
-```
+  ```csharp
+  UIBlockDefinition blockItem = new UIBlockDefinition();
+  blockItem.Type = UIBlockType.Executable;
+  blockItem.Extra = "notepad.exe";
+  blockItem.AddDropDownOption("Arguments", @"C:\Skyline DataMiner\Files\VersionCompatibility.txt");
+  ...
+  MyDialogBox.AppendBlock(blockItem);
+  ```
+
 > [!NOTE]
-> You can specifiy arguments when launching a program execution.
-> To do this, you have to call method *AddDropDownOption* on the item with key *Arguments* and value the arguments you want to pass on.
+> You can specify arguments when launching a program execution. To do so, call the method *AddDropDownOption* on the item with key *Arguments*, using the arguments you want to pass on as the value.
 
 ## FileSelector
 
