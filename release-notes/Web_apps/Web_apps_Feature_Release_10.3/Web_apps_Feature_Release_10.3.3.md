@@ -16,7 +16,7 @@ uid: Web_apps_Feature_Release_10.3.3
 
 ## Other new features
 
-#### Dashboards app - GQI: New data sources [ID_35027] [ID_34965] [ID_35058]
+#### Dashboards app - GQI: New data sources [ID_34747] [ID_35027] [ID_34965] [ID_35058]
 
 <!-- MR 10.4.0 - FR 10.3.3 -->
 
