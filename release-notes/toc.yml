@@ -393,6 +393,17 @@
   - name: DataMiner Web application release notes
     topicUid: DataMiner_Web_apps_RNs_index
     items:
+    - name: v10.4
+      items:
+      - name: Main Release
+        items:
+        - name: DataMiner Web Applications Main Release 10.4.0 - Preview
+          topicUid: Web_apps_Main_Release_10.4.0
+          items:
+          - name: Highlights & other new features
+            topicUID: Web_apps_Main_Release_10.4.0_new_features
+          - name: Changes
+            topicUID: Web_apps_Main_Release_10.4.0_changes
     - name: v10.3
       items:
       - name: Main Release
