@@ -91,6 +91,12 @@ In some cases, a `Baseline Calculation Failed: System.NullReferenceException: Ob
 
 Also, log entries indicating an exception thrown during baseline calculations will now include details regarding the element and parameter associated with the exception.
 
+#### Maps: Enhanced zooming behavior [ID_35351]
+
+<!-- MR 10.4.0 - FR 10.3.3 -->
+
+From now on, when you zoom in or out, the data of the previous zoom level will stay visible until the data of the current zoom level has been loaded.
+
 #### DataMiner upgrade: Installation of Microsoft .NET 6.0 [ID_35363]
 
 <!-- MR 10.4.0 - FR 10.3.3 -->
