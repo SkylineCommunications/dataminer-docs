@@ -71,6 +71,12 @@ Multiple instances of the SLLogCollector tool can now be run simultaneously.
 
 From now on, when you define a tag for pattern matching, the pattern you selected will be saved as a pattern occurrence in the Elasticsearch database and highlighted in bright orange, similar to so-called "streaming matches", which are detected while tracking for trend patterns whenever a trended parameter is updated.
 
+#### SLDataGateway: Memory enhancements with regard to average trending [ID_35312]
+
+<!-- MR 10.4.0 - FR 10.3.3 -->
+
+In the SLDataGateway process, a number of memory enhancements have been made with regard to the management of average trend data.
+
 #### SLAnalytics - Behavioral anomaly detection: Suggestion events and alarm events for a DVE child element will now be generated on that same DVE child element [ID_35332]
 
 <!-- MR 10.4.0 - FR 10.3.3 -->
