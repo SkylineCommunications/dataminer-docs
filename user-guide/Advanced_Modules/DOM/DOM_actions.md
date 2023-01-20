@@ -25,7 +25,7 @@ This action can be used to execute a specified script. This has the following pr
 | Script | string | The name of the script that can be executed. |
 | Async | bool | Determines whether the script will be run synchronously or asynchronously. When this is set to true, no errors or info data from the script will be returned. |
 | ScriptOptions | List\<string> | Option strings that are passed to the SLAutomation process during execution. |
-| Interactive | bool | Determines whether the script should be executed as an interactive script. See [Interactive script](#interactive-script). |
+| IsInteractive | bool | Determines whether the script should be executed as an interactive script. See [Interactive script](#interactive-script). |
 
 > [!NOTE]
 >
