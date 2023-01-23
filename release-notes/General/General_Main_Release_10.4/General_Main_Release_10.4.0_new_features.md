@@ -297,34 +297,11 @@ protected virtual void OnCrossPointsSetViaLockOverrideFromUI(Skyline.DataMiner.L
 }
 ```
 
-#### All DOM objects now have 'LastModified', 'LastModifiedBy', 'CreatedAt' and 'CreatedBy' properties [ID_34980]
+#### Client-server communication: gRPC instead of .NET Remoting [ID_34797] [ID_34983]
 
 <!-- MR 10.4.0 - FR 10.3.2 -->
 
-All DOM objects (DomInstance, DomTemplate, DomDefinition, DomBehaviorDefinition, SectionDefinition and ModuleSettings) will now contain the following additional properties:
-
-- *LastModified*: Date/time (UTC) at which the object was last modified.
-- *LastModifiedBy*: Full username of the user who last modified the object.
-- *CreatedAt*: Date/time (UTC) at which the object was created.
-- *CreatedBy*: Full username of the user who created the object.
-
-> [!NOTE]
->
-> - *CreatedAt* and *CreatedBy* are automatically populated when the object is created. Any value assigned to these two fields by a user will always be discarded.
-> - *LastModified* and *LastModifiedBy* are automatically updated when the object is updated on the server. Any value assigned to these two fields by a user will always be discarded. When an object is created, these fields will contain the same values as *CreatedAt* and *CreatedBy*.
-> - These four fields are not directly accessible on the object. You first need to cast them to either *ITrackBase* or their individual interfaces (*ITrackLastModified*, *ITrackLastModifiedBy*, *ITrackCreatedAt* and *ITrackCreatedBy*).
->
->   `string createdBy = ((ITrackBase) domInstance).CreatedBy;`
->
-> - These four fields can all be used in a filter.
-> - In the Elasticsearch database, existing data will not contain values for these new fields (except the *LastModified* field for all but *ModuleSettings*).
-> - All four fields are also available in the GQI data source *Object Manager Instances*. The *Last Modified* and *Created At* columns should show the time in the time zone of the browser.
-
-#### Client-server communication: gRPC instead of .NET Remoting [ID_34983]
-
-<!-- MR 10.4.0 - FR 10.3.2 -->
-
-Up to now, DataMiner clients and servers communicated with each other using the *.NET Remoting* protocol. From now on, they are also able to communicate with each other via an *API Gateway* module using *gRPC* connections, which are much more secure. For example, as to the use of IP ports, *gRPC* uses the standard port 443, whereas *.NET Remoting* uses the non-standard port 8004.
+Up to now, DataMiner clients and servers communicated with each other using the *.NET Remoting* protocol. From now on, they are also able to communicate with each other via an *API Gateway* module using *gRPC* connections, which are much more secure. For example, as to the use of IP ports, *gRPC* uses the standard port 443, whereas *.NET Remoting* uses the non-standard port 8004. Moreover, the *API Gateway* module is able to restart itself during operation and to automatically recover the connections to clients and SLNet.
 
 When you upgrade DataMiner, the *API Gateway* module will automatically be installed in the `C:\Program Files\Skyline Communications\DataMiner APIGateway\` folder. All logging and program-specific data associated with the *API Gateway* module will be stored in the `C:\ProgramData\Skyline Communications\DataMiner APIGateway\`.
 
@@ -373,6 +350,29 @@ For example, in a cluster with two DMAs, with IPs 10.4.2.92 and 10.4.2.93, `DMS.
 > [!NOTE]
 > The passwords in the *pwd* attribute are encrypted and replaced with an encryption token when they are first read out by DataMiner.
 
+#### All DOM objects now have 'LastModified', 'LastModifiedBy', 'CreatedAt' and 'CreatedBy' properties [ID_34980]
+
+<!-- MR 10.4.0 - FR 10.3.2 -->
+
+All DOM objects (DomInstance, DomTemplate, DomDefinition, DomBehaviorDefinition, SectionDefinition and ModuleSettings) will now contain the following additional properties:
+
+- *LastModified*: Date/time (UTC) at which the object was last modified.
+- *LastModifiedBy*: Full username of the user who last modified the object.
+- *CreatedAt*: Date/time (UTC) at which the object was created.
+- *CreatedBy*: Full username of the user who created the object.
+
+> [!NOTE]
+>
+> - *CreatedAt* and *CreatedBy* are automatically populated when the object is created. Any value assigned to these two fields by a user will always be discarded.
+> - *LastModified* and *LastModifiedBy* are automatically updated when the object is updated on the server. Any value assigned to these two fields by a user will always be discarded. When an object is created, these fields will contain the same values as *CreatedAt* and *CreatedBy*.
+> - These four fields are not directly accessible on the object. You first need to cast them to either *ITrackBase* or their individual interfaces (*ITrackLastModified*, *ITrackLastModifiedBy*, *ITrackCreatedAt* and *ITrackCreatedBy*).
+>
+>   `string createdBy = ((ITrackBase) domInstance).CreatedBy;`
+>
+> - These four fields can all be used in a filter.
+> - In the Elasticsearch database, existing data will not contain values for these new fields (except the *LastModified* field for all but *ModuleSettings*).
+> - All four fields are also available in the GQI data source *Object Manager Instances*. The *Last Modified* and *Created At* columns should show the time in the time zone of the browser.
+
 #### SLAnalytics - Proactive cap detection: Using alarm templates assigned to DVE child elements [ID_35194]
 
 <!-- MR 10.4.0 - FR 10.3.2 -->
@@ -380,6 +380,17 @@ For example, in a cluster with two DMAs, with IPs 10.4.2.92 and 10.4.2.93, `DMS.
 When proactive cap detection was enabled, up to now, in case of DVE elements, the alarm template of the parent would always be used.
 
 From now on, if a DVE child element has an alarm template assigned to it, that alarm template will be used. Only when a DVE child element does not have an alarm template assigned to it will the alarm template of the parent be used.
+
+#### DataMiner Object Models: Action buttons can now be configured to launch an interactive Automation script when clicked [ID_35226]
+
+<!-- MR 10.4.0 - FR 10.3.3 -->
+
+An action button can now be configured to launch an interactive Automation script when clicked. To do so, set the *IsInteractive* property of the action to true.
+
+When such a button is clicked in a low-code app, the UI of the interactive Automation script will be displayed in a pop-up window on top of the low-code app.
+
+> [!NOTE]
+> One button can only execute one action. So, one button can only execute one interactive Automation script.
 
 #### DataMiner Object Models: New field descriptors [ID_35278]
 
@@ -390,28 +401,6 @@ Two new field descriptors have been added to the DataMiner Object Models:
 - GroupFieldDescriptor: Can be used to define that a field should contain the name of a DataMiner user group.
 
 - UserFieldDescriptor: Can be used to define that a field should contain the name of a DataMiner user. There is a *GroupNames* property that can be used to define which groups the user can be a part of.
-
-### Web apps
-
-#### Dashboards app - GQI: New data sources [ID_35027] [ID_34965] [ID_35058]
-
-<!-- MR 10.4.0 - FR 10.3.3 -->
-
-In the Generic Query Interface, the following new data sources are now available:
-
-| Data source                   | Contents                                                   |
-|-------------------------------|------------------------------------------------------------|
-| Get trend data patterns       | All pattern matching tags created in the DataMiner System. |
-| Get trend data pattern events | All pattern occurrences detected in the DataMiner System.  |
-| Get behavioral change events  | All behavioral anomalies detected in the DataMiner System. |
-
-The *Get trend data pattern events* and *Get behavioral change events* data sources contain time range metadata on each row. Each time range holds the start and end time of the event in question. When a table row is selected, the time range will be exposed as a feed.
-
-#### GQI: Multiple groupBy operations can now be applied after an aggregation operation [ID_35355]
-
-<!-- MR 10.4.0 - FR 10.3.3 -->
-
-After an aggregation operation, you can now apply multiple groupBy operations.
 
 ### Service & Resource Management
 

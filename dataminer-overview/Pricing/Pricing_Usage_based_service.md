@@ -21,7 +21,7 @@ This includes:
 - All available DataMiner functions, including the DataMiner Cloud Platform functions.
 - The freedom to deploy as many DataMiner nodes as required, i.e. to scale capacity up or down on demand, or to architect the overall solution in the most optimal way (e.g. considering zoning, geographical locations, continuity, etc.).
 - Using any of the existing 7000+ connectors to interface DataMiner with third-party products from over 700 different vendors, on a flexible per need basis.
-- Requesting new integrations with third-party products, at no additional cost.
+- Requesting new integrations with third-party products, at no additional cost with Continuity or Evolve plans.
 - Continuously benefitting from all DataMiner evolutions available, with regard to the DataMiner functions as well as with regard to the connectors to interface with third-party products.
 - Accessing our professional technical support services to support the operation.
 

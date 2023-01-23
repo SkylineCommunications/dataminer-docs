@@ -39,7 +39,7 @@ It provides a multitude of formal and informal initiatives to work towards the e
 **DataMiner DevOps Professionals are central to the DataMiner DevOps Enablement.** Therefore, one of the key objectives of the DataMiner DevOps Enablement is to ensure that a clear path is set out to empower the user’s operation with knowledgeable and skilled resources.
 
 > [!TIP]
-> For more information on DataMiner DevOps Professionals, see [DataMiner DevOps Professional program](xref:DataMiner_Devops_Professionals).
+> For more information on DataMiner DevOps Professionals, see [DataMiner DevOps Professional Program](xref:DataMiner_Devops_Professionals).
 
 People who are embedded in the operations team leverage their skills towards evolving the DataMiner solution of the user continuously in an agile fashion and with a focus on maximum value delivery toward the business.
 

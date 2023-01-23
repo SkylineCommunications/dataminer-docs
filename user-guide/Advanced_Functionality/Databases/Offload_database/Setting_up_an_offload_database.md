@@ -188,7 +188,7 @@ The final step is the configuration of the DMS.
 
       - **DB server**: The network location of the offload database.
 
-        - For an MS SQL database, this can be an IP address and a port, separated by a comma, e.g. “10.10.18.1,1433”.
+        - For an MSSQL database, this can be an IP address and a port, separated by a comma, e.g. “10.10.18.1,1433”.
 
         - For a MySQL database, only fill in the IP address. If a port needs to be specified, do so in the *Connection string* field (e.g. *PORT=3306*).
 

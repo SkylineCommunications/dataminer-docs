@@ -502,7 +502,3 @@ options.StartScript();
 When multiple selections are made in the EPM topology tree, the possible many-to-many relations between the fields are now taken into account to load further possible selections for other fields. Previously, only the last selected field was taken into account.
 
 For example, if a topology contains a CCAP Core field and a Node Leaf field lower in the topology, and a value is selected for both, previously only the Node Leaf selection was taken into account for the possible selections in the RPD field further down in the topology, whereas now the CCAP Core selection will also be taken into account if the RPD field is related to both fields.
-
-### DMS Web Services
-
-See [General Main Release 10.3.0 – Highlights](xref:General_Main_Release_10.3.0_highlights#dms-web-services)
