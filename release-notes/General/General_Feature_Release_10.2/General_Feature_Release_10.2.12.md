@@ -161,7 +161,7 @@ In case a *Line & area chart* component displays trending for multiple parameter
 
 #### SLElement: Enhanced alarm locking [ID_34561]
 
-<!-- MR 10.3.0 - FR 10.2.12 -->
+<!-- MR 10.2.0 [CU12] - FR 10.2.12 -->
 
 Alarm locking in the SLElement process has been enhanced.
 
@@ -254,6 +254,12 @@ The *PDF* and *Share* option in the Dashboards app are now no longer visible in 
 <!-- MR 10.2.0 [CU9] - FR 10.2.12 -->
 
 Up to now, the *SLReset.exe* option *-cleanclustereddatabases* would remove all keyspaces and indices from the Cassandra cluster and Elasticsearch databases. From now on, this option will only remove the tables, keyspaces and indices defined in the *DB.xml* file from the databases (clusters as well as single-node Cassandra databases on remote machines).
+
+#### SLLogCollector now has a default log configuration that will be used by the SupportAssistant DxM [ID_34709]
+
+<!-- MR 10.3.0 - FR 10.2.12 -->
+
+The SLLogCollector tool now has a default log configuration that will be used by the SupportAssistant DxM.
 
 #### SLMessageBroker log file entries will now mention the NATS server to which the NATS client is connected [ID_34719]
 

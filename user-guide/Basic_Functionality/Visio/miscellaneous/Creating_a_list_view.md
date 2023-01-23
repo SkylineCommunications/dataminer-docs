@@ -343,6 +343,9 @@ List view components can be found both in Visual Overview and in the DataMiner B
 
 - To filter which items are displayed in the list, click the filter icon for the column you want to apply a filter to and enter a filter in the box below the column header.
 
+  > [!NOTE]
+  > When you filter a list view with source *Bookings* or *Reservations* on a GUID or a number, the list will show the matching booking as soon as a part of the entry matches the GUID or number. However, note that if you have combined the list view with [a timeline](xref:Embedding_a_Resource_Manager_component), the timeline will only show the matching booking if you enter the full and correct GUID or number.
+
 - To apply a custom column configuration, see [Creating a new column configuration](#creating-a-new-column-configuration) and [Loading the default column configuration](#loading-the-default-column-configuration).
 
 > [!NOTE]
@@ -398,4 +401,4 @@ From DataMiner 10.0.0/10.0.2 onwards, when you manage the column configuration, 
 
 - **Date (invariant)**: Available from DataMiner 10.2.12/10.3.0 onwards. Expects a Date object, or a string representing a date in UTC time, in [invariant culture](https://learn.microsoft.com/en-us/dotnet/api/system.globalization.cultureinfo.invariantculture).
 
-- **Colored text**: This type is specifically intended for the *AlarmLevel* column for services. It visualizes the alarm level by means of text preceded by a circle showing the alarm level color.
+- **Colored text**: This type is specifically intended for the *AlarmCount* column for services and elements. It visualizes the alarm count by means of text surrounded by a circle showing the alarm level color.

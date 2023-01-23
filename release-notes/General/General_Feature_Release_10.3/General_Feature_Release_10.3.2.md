@@ -2,21 +2,70 @@
 uid: General_Feature_Release_10.3.2
 ---
 
-# General Feature Release 10.3.2 – Preview
+# General Feature Release 10.3.2
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 >
 > - For release notes related to DataMiner Cube, see [DataMiner Cube 10.3.2](xref:Cube_Feature_Release_10.3.2).
 > - For information on how to upgrade DataMiner, see [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent).
 
-## Highlights
+## Features
 
-*No highlights have been selected for this release yet*
+#### Client-server communication: gRPC instead of .NET Remoting [ID_34797] [ID_34983]
 
-## Other features
+<!-- MR 10.4.0 - FR 10.3.2 -->
+
+Up to now, DataMiner clients and servers communicated with each other using the *.NET Remoting* protocol. From now on, they are also able to communicate with each other via an *API Gateway* module using *gRPC* connections, which are much more secure. For example, as to the use of IP ports, *gRPC* uses the standard port 443, whereas *.NET Remoting* uses the non-standard port 8004. Moreover, the *API Gateway* module is able to restart itself during operation and to automatically recover the connections to clients and SLNet.
+
+When you upgrade DataMiner, the *API Gateway* module will automatically be installed in the `C:\Program Files\Skyline Communications\DataMiner APIGateway\` folder. All logging and program-specific data associated with the *API Gateway* module will be stored in the `C:\ProgramData\Skyline Communications\DataMiner APIGateway\`.
+
+> [!IMPORTANT]
+> For now, *gRPC* communication has to be explicitly enabled. If you do not enable it, Cube clients and DMAs will continue to communicate using the *.NET Remoting* protocol.
+
+##### Enabling the use of gRPC connections for communication between Cube and DMA
+
+Do the following on each DMA you want DataMiner Cube instances to connect to via *gRPC* by default.
+
+1. Open the `C:\Skyline DataMiner\Webpages\ConnectionSettings.txt` file.
+1. Set the `type` option to *GRPCConnection*.
+
+##### Enabling the use of gRPC connections for inter-DMA communication
+
+In the `DMS.xml` file, you must add redirects for each DMA that should communicate with the other DMAs in the DMS over *gRPC*. Failover Agents also need a redirect to each other's IP address.
+
+For example, in a cluster with two DMAs, with IPs 10.4.2.92 and 10.4.2.93, `DMS.xml` can be configured as follows.
+
+- On the DMA with IP 10.4.2.92:
+
+    ```xml
+      <DMS errorTime="30000" synchronized="true" xmlns="http://www.skyline.be/config/dms">
+         <Cluster name="pluto"/>
+         <DMA ip="10.4.2.92" timestamp=""/>
+         <DMA ip="10.4.2.93" id="35" timestamp="2023-01-05 01:24:38" contacted_once="TRUE" lostContact="2023-01-06 00:45:01"/>
+         <Redirects>
+            <Redirect to="10.4.2.93" via="https://10.4.2.93/APIGateway" user="MyUser" pwd="MyPassword"/>
+         </Redirects>
+      </DMS>
+    ```
+
+- On the DMA with IP 10.4.2.93:
+
+    ```xml
+      <DMS errorTime="30000" synchronized="true" xmlns="http://www.skyline.be/config/dms">
+         <Cluster name="pluto" synchronize="" timestamp="2022-12-13 12:48:29"/>
+         <DMA ip="10.4.2.93" timestamp="" contacted_once="" lostContact=""/>
+         <DMA ip="10.4.2.92" timestamp="2023-01-03 23:38:42" contacted_once="TRUE" lostContact="2023-01-06 01:02:00" id="69" uri=""/>
+         <Redirects>
+            <Redirect to="10.4.2.92" via="https://10.4.2.92/APIGateway" user="MyUser" pwd="MyPassword"/>
+         </Redirects>
+      </DMS>
+    ```
+
+> [!NOTE]
+> The passwords in the *pwd* attribute are encrypted and replaced with an encryption token when they are first read out by DataMiner.
 
 #### All DOM objects now have 'LastModified', 'LastModifiedBy', 'CreatedAt' and 'CreatedBy' properties [ID_34980]
 
@@ -238,7 +287,7 @@ In case a *Line & area chart* component displays trending for multiple parameter
 
 #### Enhanced performance when updating a baseline or assigning an alarm template that contains conditional monitoring [ID_35171]
 
-<!-- MR 10.4.0 - FR 10.3.2 -->
+<!-- MR 10.3.0 - FR 10.3.2 -->
 
 Because of a number of enhancements, overall performance has increased when updating a baseline or assigning an alarm template that contains conditional monitoring.
 
@@ -362,7 +411,7 @@ In some cases, an error could occur in SLDataMiner when loading an alarm templat
 
 #### Alarm templates: Parameters exported to DVE child elements could have incorrect alarm limits [ID_34996]
 
-<!-- MR 10.3.0 - FR 10.3.2 -->
+<!-- MR 10.2.0 [CU12] - FR 10.3.2 -->
 
 When a parameter was exported as a standalone parameter to a DVE child element, in some cases, the alarm limits could be incorrect when the type of alarm monitoring was set to either *Relative* or *Absolute*.
 
@@ -601,3 +650,17 @@ When you enabled the *Visualize measurement points* setting of a spectrum elemen
 <!-- MR 10.2.0 [CU12] - FR 10.3.2 -->
 
 When, in the settings of a node edge graph, you had configured edge overrides, these would incorrectly no longer be applied.
+
+#### Dashboards app & Low-code apps - GQI table component: 'Cannot read properties of undefined (reading 'Guid')' error [ID_35316]
+
+<!-- MR 10.4.0 - FR 10.3.2 [CU0] -->
+
+In some cases, a GQI table component could show a `Cannot read properties of undefined (reading 'Guid')` error.
+
+#### Elasticsearch: Problem when fetching metadata referring to stopped elements [ID_35423]
+
+<!-- MR 10.2.0 [CU11] - FR 10.3.2 [CU0] -->
+
+When alarms are being indexed in Elasticsearch, metadata is added. For example, the name of the protocol of the element in question.
+
+Up to now, when SLNet requested that metadata, an error could occur when fetching information regarding a stopped element that had DVE child elements with alarms that had not yet been written to the database.

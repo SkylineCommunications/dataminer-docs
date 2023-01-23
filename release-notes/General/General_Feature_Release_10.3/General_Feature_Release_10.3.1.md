@@ -421,7 +421,7 @@ Please note the following:
 
 #### Enhanced parameter locking in SLElement [ID_34688]
 
-<!-- MR 10.3.0 - FR 10.3.1 [CU0] -->
+<!-- MR 10.2.0 [CU12] - FR 10.3.1 [CU0] -->
 
 In SLElement, a number of enhancements have been made with regard to parameter locking.
 
@@ -584,7 +584,7 @@ From now on, when a GQI query has to retrieve DCF interfaces, it will do so by q
 
 #### Problem with SLElement when a trend template was being assigned [ID_34824]
 
-<!-- MR 10.3.0 - FR 10.3.1 -->
+<!-- MR 10.2.0 [CU12] - FR 10.3.1 -->
 
 In some cases, an error could occur in SLElement when a trend template was being assigned.
 
