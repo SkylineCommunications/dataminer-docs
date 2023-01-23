@@ -42,14 +42,14 @@ Peripherals are optional but not required as part of a standard deployment.
 
 ### Sun outage
 
-With DataMiner, a sun outage schedule can be made that predicts sun outages and the impact it may have on the signal and tracking of a VSAT terminal. DataMiner is capable of detecting sun outage events and offering the current state details of each remote in the VSAT system. Sun outages usually occur twice a year during the equinox in March and September.
+With DataMiner, a sun outage schedule can be made that predicts sun outages and the impact these may have on the signal and tracking of a VSAT terminal. DataMiner is capable of detecting sun outage events and offering the current state details of each remote in the VSAT system. Sun outages usually occur twice a year during the equinox in March and September.
 
 > [!TIP]
 > For more information on sun outage events, see [VSAT Sun Outages & Sun Fade Information](https://satoms.com/vsat-sun-outages/).
 
 ### Weather
 
-DataMiner has flexibility of integration with any weather forecast service as it considers this variable a key factor capable of degrading and temporarily interrupting the signal delivery via VSAT. Operators receive automated detailed descriptions of any outages and/or degradation to the service due to weather conditions (e.g. rain fade).
+DataMiner has flexibility of integration with any weather forecast service as it considers this variable a key factor capable of degrading and temporarily interrupting the signal delivery via VSAT. Operators receive automated detailed descriptions of any outages and/or degradation to the service because of weather conditions (e.g. rain fade).
 
 ### PLM
 
