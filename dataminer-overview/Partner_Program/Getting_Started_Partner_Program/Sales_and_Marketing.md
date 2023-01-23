@@ -72,7 +72,7 @@ Here are some pointers to maximize your visibility.
 
   Make sure that you contribute to events Skyline is attending. Your involvement can include the promotion of these events and Skyline’s attendance, but these events can also create the opportunity to schedule joint meetings with your customers and prospects to educate them on the latest and greatest DataMiner has to offer.
 
-  However, as a partner, there is also an expectation that you participate in events and that your DataMiner-related offering takes a prominent position in those. You can contact Skyline for extra support with these events.
+  However, as a partner, there is also an expectation that you participate yourself in public or private events and that your DataMiner-related offering takes a prominent position in those. You can contact Skyline for extra support with these events.
 
   This support can range from joint announcements, to support through DataMiner demo systems and setups, all the way to support staffing if needed (e.g. technical staff to support your demos and meetings, speakers, etc.). Note that private events these days are also instrumental to engage and empower a user community and that Skyline is available to support those.
 
@@ -82,7 +82,7 @@ Here are some pointers to maximize your visibility.
 
   For this purpose, you can find a [variety of resources](https://community.dataminer.services/documentation/) on the DataMiner Dojo Community. You can take advantage of Skyline’s content and online events, or organize your own events where Skyline can join you.
 
-- **Brand Materials**: A variety of standard off-the-shelf brand materials are available for you to leverage the DataMiner brand (corporate materials, [skylicons](https://skyline.be/skylicons/), etc.).
+- **Brand Materials**: A variety of standard off-the-shelf brand materials are available for you to leverage the DataMiner brand ([corporate materials](https://skyline.be/corporate-images), [skylicons](https://skyline.be/skylicons/), etc.).
 
 ### Day-to-day engagement
 
@@ -124,6 +124,6 @@ Therefore, partners are highly encouraged to align with this collaborative minds
 
 - **Deal registration**: Under specific terms and conditions, Skyline also provides the option to register deals, which then provides partners with protection for opportunities that they have developed and that they are working on.
 
-  We recommend that you become familiar with the process of register deals and use them to secure a return on your business development efforts.
+  We recommend that you become familiar with the process of [register deals](xref:Deal_Registration) and use them to secure a return on your business development efforts.
 
 - **Professional services referrals**: Subject to specific terms and conditions related to technical qualifications and certification, Partners can be eligible to get referrals from Skyline to specific DataMiner projects or accounts where professional services are required for the design, development, and deployment of solutions based on DataMiner.
