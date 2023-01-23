@@ -21,7 +21,7 @@ The **recommended** DataMiner setup involves **one Cassandra cluster and one Ela
 
 ### Single DMA setups
 
-In a development environment with limited load, it is possible to host DataMiner, Cassandra and Elasticsearch on one Windows machine. However, note that this is not recommended for normal production environments.
+In a development environment with limited load, it is possible to host DataMiner, Cassandra, and Elasticsearch on one Windows machine. In this case, Elasticsearch and DataMiner must be installed on a separate disk or partition. However, note that this is not recommended for normal production environments.
 
 ![Development setup: DataMiner, Cassandra, and Elasticsearch hosted on the same machine](~/user-guide/images/Development-setup-DataMiner-Cassandra-and-Elasticsearch.png)<br>
 *Development setup: DataMiner, Cassandra, and Elasticsearch hosted on the same machine*
@@ -103,10 +103,10 @@ This architecture is currently still supported, though it is **not recommended**
 
 > [!TIP]
 >
-> - For information on how to migrate a legacy setup with MySQL/MS SQL database to Cassandra, see [Migrating the general database to Cassandra](xref:Migrating_the_general_database_to_Cassandra).
+> - For information on how to migrate a legacy setup with MySQL/MSSQL database to Cassandra, see [Migrating the general database to Cassandra](xref:Migrating_the_general_database_to_Cassandra).
 > - Elasticsearch can only be installed if DataMiner already uses Cassandra. For more information, see [Installing Elasticsearch on a DMA via DataMiner](xref:Installing_Elasticsearch_via_DataMiner).
 
-In a development environment with limited load, it is possible to host DataMiner, Cassandra, and Elasticsearch on one Windows machine. However, this is not recommended for normal production environments.
+In a development environment with limited load, it is possible to host DataMiner, Cassandra, and Elasticsearch on one Windows machine. In this case, Elasticsearch and DataMiner must be installed on a separate disk or partition. However, this is not recommended for normal production environments.
 
 ![Development setup: DataMiner, Cassandra, and Elasticsearch hosted on the same machine](~/user-guide/images/Development-setup-DataMiner-Cassandra-and-Elasticsearch.png)<br>
 *Development setup: DataMiner, Cassandra, and Elasticsearch hosted on the same machine*
@@ -136,7 +136,7 @@ Several possible setups are illustrated below.
 This architecture is currently still supported, though it is **not recommended**. In this case, **each DMA has its own Cassandra database** (which can be a cluster with several nodes). No Elasticsearch database is used, which means that certain DataMiner features will not be available. For more information, see [Data Storage Architecture](https://community.dataminer.services/data-storage-architecture/).
 
 > [!TIP]
-> For information on how to migrate a legacy setup with MySQL/MS SQL database to Cassandra, see [Migrating the general database to Cassandra](xref:Migrating_the_general_database_to_Cassandra).
+> For information on how to migrate a legacy setup with MySQL/MSSQL database to Cassandra, see [Migrating the general database to Cassandra](xref:Migrating_the_general_database_to_Cassandra).
 
 By default, Cassandra is installed on the same machine as DataMiner. However, when your system has a high load, it is strongly recommended to move the Cassandra database towards an external (Windows or Linux) machine. This way, DataMiner and Cassandra do not affect each other during heavy operations. The best way to do so is by adding one or more external nodes to the Cassandra cluster and then decommissioning the original node on the DataMiner machine. See [Scaling a Cassandra cluster database](xref:Scale_Cassandra_Database).
 
@@ -162,8 +162,8 @@ In case of a DataMiner Failover pair, the Cassandra nodes on each of the DMAs ar
 > [!NOTE]
 > If a "Database per Agent" setup is configured, one Cassandra cluster is used per Failover pair. Consequently, if a DMS consists of a single Failover pair, it will use a single Cassandra cluster, even if it is not a "Database per cluster" setup. The main difference with a "Database per cluster" setup (also known as a "Cassandra Cluster setup") in this case is that no Elasticsearch database is required, while this is always required for a "Database per cluster" setup.
 
-## Legacy setup with MySQL or MS SQL database
+## Legacy setup with MySQL or MSSQL database
 
-In legacy DataMiner Systems using DataMiner 9.0 or older, the data storage setup involved a MySQL or MS SQL database. While this legacy setup is still supported with current DataMiner versions, many DataMiner features will not be available if you use this. In addition, support for this legacy setup is expected to end with DataMiner 10.3 (see [Third-Party Software Support Life Cycle](https://community.dataminer.services/3rd-party-software-support-life-cycle/)).
+In legacy DataMiner Systems using DataMiner 9.0 or older, the data storage setup involved a MySQL or MSSQL database. While this legacy setup is still supported with current DataMiner versions, many DataMiner features will not be available if you use this. In addition, support for this legacy setup is expected to end with DataMiner 10.3 (see [Third-Party Software Support Life Cycle](https://community.dataminer.services/3rd-party-software-support-life-cycle/)).
 
 We therefore recommend that you migrate such a legacy setup to one of the recommended setups mentioned above.

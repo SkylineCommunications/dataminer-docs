@@ -8,9 +8,7 @@ To get started with the DataMiner Partner Program, it is important to note that 
 
 - **Your champions**: To get started with investing in knowledge and expertise of DataMiner, it is important to pick the right people from the start: People that have the right skills and mindset and have the potential to grow into your first champions, ready to coach and empower more people at a later stage in your journey.
 
-- **DataMiner DevOps Professional**: For the appointed resources, subscribing to the DataMiner DevOps Professionals program is highly recommended.
-
-  <!-- Comment: xref to DataMiner DevOps Professionals program when added to docs -->
+- **DataMiner DevOps Professional**: For the appointed resources, subscribing to the [DataMiner DevOps Professional Program](https://community.dataminer.services/dataminer-devops-professional-program/) is highly recommended.
 
   This program is tailored towards individuals that specialize in specific DataMiner-related skill sets and general associated skills.
 
@@ -32,7 +30,7 @@ To get started with the DataMiner Partner Program, it is important to note that 
 
   - **DataMiner lab & development licenses**: DataMiner DevOps Professionals are eligible for free DataMiner licenses, limited for use in development and lab environments.
 
-  - **DataMiner IDE & CI/CD services**: DataMiner comes with a full-fledged IDE (Integrated Development Environment) using a combination of MS Visual Studio, [DataMiner Integration Studio](xref:DIS), and [DataMiner CI/CD cloud services](xref:DevelopmentWithCICD), which can be further complemented with industry-standard CI/CD tools, such as code repositories and code analyzers, or be integrated with an existing CI/CD infrastructure and pipeline.
+  - **DataMiner IDE & CI/CD services**: DataMiner comes with a full-fledged IDE (Integrated Development Environment) using a combination of MS Visual Studio, [DataMiner Integration Studio](xref:DIS), and DataMiner CI/CD cloud services, which can be further complemented with industry-standard CI/CD tools, such as code repositories and code analyzers, or be integrated with an existing CI/CD infrastructure and pipeline.
 
   - **Optional services**: Skyline also provides a variety of further optional services to support your journey towards becoming a DataMiner powerhouse and to tap into the vast demand for solution design and development. This includes:
 

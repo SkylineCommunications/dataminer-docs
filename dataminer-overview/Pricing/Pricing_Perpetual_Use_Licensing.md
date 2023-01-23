@@ -33,20 +33,20 @@ Depending on the application, licensing is available as **server-based licenses*
 
 ### Optional functions
 
-In addition to the [standard functions](https://community.dataminer.services/core-features/) included in a DataMiner System, depending on the type of application and/or functional requirements, some advanced functional modules may be required. These functions are licensed together with the corresponding server-based licenses (i.e. per DMA) and volume-based licenses above.
+In addition to the [standard functions](https://community.dataminer.services/core-features/) included in a DataMiner System, depending on the type of application and/or functional requirements, some advanced functional modules may be required. These functions are licensed in bundles together with the corresponding server-based licenses (i.e. per DMA) and volume-based licenses above.
 
-| Function | Standard <br>DataMiner <br>Agents | System <br>Volume <br>Equipment <br>Licenses | Experience & <br>Performance <br>Management <br>Licenses | DataMiner <br>Probes |
-|--|--|--|--|--|
-| Correlation | o | x | x | o |
-| Automation | o | x | x | o |
-| Dashboards App | o | x | x | o |
-| Low-Code Apps | o | o | o | N/A |
-| Process Automation | o | o | o | N/A |
-| DataMiner Object Models (DOM) | o | o | o | N/A |
-| Spectrum Analysis | o | o | o | N/A |
-| Infrastructure Discovery and Provisioning | o | o | o | N/A |
+| Function | Tier-0 | Tier-1 | Tier-2 |
+|--|--|--|--|
+| Correlation | - | x | x |
+| Automation | - | x | x |
+| Dashboards, No-code & Low-code Apps | - | x | x |
+| Process Automation | - | - | x |
+| DataMiner Object Models (DOM) | - | - | x |
 
-*Included (x), optional (o), or not applicable (N/A).*
+*Included (x)*
+
+> [!NOTE]
+> Tier-1 is included by default with volume-based licenses, i.e. System Volume Equipment and Experience and Performance Management.
 
 ## Data sources
 
@@ -77,6 +77,14 @@ This product is licensed per DataMiner System, based on the maximum number of co
 
 > [!TIP]
 > For more information, see [Service & Resource Management Framework](xref:srm_index)
+
+### Spectrum Analysis
+
+The [Spectrum Analysis app](https://community.dataminer.services/spectrum-analysis/) is licensed per node or per number of managed spectrum analyzers, whichever is lowest. This license is included by default with volume-based licenses, i.e. System Volume Equipment and Experience and Performance Management.
+
+### SLA Manager App
+
+The [SLA Manager App](https://community.dataminer.services/business-intelligence-sla/) is licensed as a standalone application for the entire DataMiner System.
 
 ### Custom apps
 

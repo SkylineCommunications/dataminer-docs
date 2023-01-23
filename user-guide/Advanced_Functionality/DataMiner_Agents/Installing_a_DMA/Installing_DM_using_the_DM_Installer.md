@@ -54,7 +54,7 @@ The DataMiner installer allows you to run a default DataMiner installation, whic
 
 1. When DataMiner has successfully restarted, click *Close*.
 
-1. To be able to make full use of all available DataMiner features, [install Elasticsearch](xref:Installing_Elasticsearch_via_DataMiner) and [connect your DataMiner System to the cloud](xref:Connecting_your_DataMiner_System_to_the_cloud). While this is not mandatory, we highly recommend it.
+1. To be able to make full use of all available DataMiner features, [install Elasticsearch](xref:Installing_Elasticsearch_via_DataMiner) and [connect your DataMiner System to the cloud](xref:Connecting_your_DataMiner_System_to_the_cloud).
 
 > [!NOTE]
 >

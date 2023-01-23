@@ -2858,9 +2858,17 @@
           topicUID: Sharing_dashboard_window_does_not_disappear
         - name: Manually removing old alarms from an Elasticsearch cluster
           topicUID: Manually_removing_old_alarms_from_ES
+        - name: Querying MySQL vs Cassandra
+          topicUID: Querying_MySQL_vs_Cassandra
     - name: Known issues
       topicUID: Known_issues
       items:
+        - name: Contents of state_changes table not migrated after Cassandra Cluster migration
+          topicUID: KI_Contents_of_State_changes_Table_not_Migrated_after_Cassandra_Cluster_Migration
+        - name: Cassandra cluster node in unexpected state
+          topicUID: KI_Cassandra_cluster_node_unexpected_state
+        - name: Year 2038 problem for Cassandra
+          topicUID: Year_2038_Problem_for_Cassandra
         - name: Null reference exceptions in SLDBConnection.txt and unhandled exception in Alarm Console
           topicUID: KI_NullReferenceException_SLDBConnection
         - name: SLProtocol timer thread run-time error

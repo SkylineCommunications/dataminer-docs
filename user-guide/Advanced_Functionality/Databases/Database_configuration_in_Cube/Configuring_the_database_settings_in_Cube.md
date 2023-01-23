@@ -4,7 +4,7 @@ uid: Configuring_the_database_settings_in_Cube
 
 # Configuring the general database settings in Cube
 
-The general database is the main database used by a DataMiner Agent to store its data. By default, this is a Cassandra database. In legacy setups, a MySQL or MS SQL database can be used.
+The general database is the main database used by a DataMiner Agent to store its data. By default, this is a Cassandra database. In legacy setups, a MySQL or MSSQL database can be used.
 
 In older DataMiner systems, this database was also known as the "local database", as the MySQL or MSSQL database was typically hosted locally on the same machine as DataMiner.
 
@@ -81,9 +81,9 @@ In case a separate Cassandra cluster is used per DMA, configure the settings as 
 
 1. Click *Save*.
 
-## [Legacy MySQL or SQL database](#tab/tabid-3)
+## [Legacy MySQL or MSSQL database](#tab/tabid-3)
 
-For a legacy MySQL or SQL database, configure the settings as follows:
+For a legacy MySQL or MSSQL database, configure the settings as follows:
 
 1. Go to *Apps* > *System Center* > *Database*.
 

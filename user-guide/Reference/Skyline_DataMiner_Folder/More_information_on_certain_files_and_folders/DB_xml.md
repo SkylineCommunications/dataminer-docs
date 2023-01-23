@@ -27,7 +27,7 @@ The configuration data for the general or “local” database has to be specifi
 
 > [!NOTE]
 >
-> - The *type* attribute of the *\<Database>* tag indicates whether a MySQL, MS SQL or Cassandra (cluster) database is used. If no *type* attribute is specified, MySQL is used as type.
+> - The *type* attribute of the *\<Database>* tag indicates whether a MySQL, MSSQL or Cassandra (cluster) database is used. If no *type* attribute is specified, MySQL is used as type.
 > - If a separate Cassandra cluster (consisting of one or more nodes) is used for each DMA, the *type* attribute for the database is set to *Cassandra*. If an entire DMS uses the same Cassandra cluster, the *type* attribute for the database is set to *CassandraCluster*.
 > - If the *CassandraCluster* type is used, *DB.xml* is synced completely throughout the cluster. With other types, the general database settings are not synced.
 
@@ -323,7 +323,7 @@ The following example illustrates the configuration of a general database of typ
 The configuration data for the offload or “central” database has to be specified in a *\<Database>* tag of which the *local* attribute is set to “false”.
 
 > [!NOTE]
-> - The *type* attribute of the *\<Database>* tag indicates whether a MySQL, MS SQL or Oracle database is used. If no *type* attribute is specified, MySQL is used as type.
+> The *type* attribute of the *\<Database>* tag indicates whether a MySQL, MSSQL or Oracle database is used. If no *type* attribute is specified, MySQL is used as type.
 
 The following configuration is possible for the offload database:
 

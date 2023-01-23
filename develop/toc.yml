@@ -228,24 +228,37 @@
       - name: Custom table context menu
         topicUid: UIComponentsCustomTableContextMenu
       - name: Matrix
-        topicUid: UIComponentsMatrix
         items:
-        - name: Matrix parameters
-          topicUid: UIComponentsMatrixParameters
-        - name: Composing crosspoints on matrix parameters
-          topicUid: UIComponentsMatrixComposingCrosspoints
-        - name: Setting crosspoints
-          topicUid: UIComponentsMatrixSettingCrosspoints
-        - name: Dynamically changing matrix configuration
-          topicUid: UIComponentsMatrixChangeConfiguration
-        - name: Setting input/output names via a table
-          topicUid: UIComponentsMatrixSettingNames
-        - name: Discreet info
-          topicUid: UIComponentsMatrixDiscreetInfo
-        - name: Matrix development using DIS
-          topicUid: UIComponentsMatrixDis
-        - name: Exercise
-          topicUid: UIComponentsMatrixExercise
+          - name: Standard matrix
+            topicUid: UIComponentsMatrix
+            items:
+            - name: Matrix parameters
+              topicUid: UIComponentsMatrixParameters
+            - name: Composing crosspoints on matrix parameters
+              topicUid: UIComponentsMatrixComposingCrosspoints
+            - name: Setting crosspoints
+              topicUid: UIComponentsMatrixSettingCrosspoints
+            - name: Dynamically changing matrix configuration
+              topicUid: UIComponentsMatrixChangeConfiguration
+            - name: Setting input/output names via a table
+              topicUid: UIComponentsMatrixSettingNames
+            - name: Discreet info
+              topicUid: UIComponentsMatrixDiscreetInfo
+            - name: Matrix development using DIS
+              topicUid: UIComponentsMatrixDis
+            - name: Exercise
+              topicUid: UIComponentsMatrixExercise
+          - name: Table-based matrix
+            topicUid: UIComponentsTableMatrix
+            items:
+            - name: Matrix parameter
+              topicUid: UIComponentsTableMatrixParameter
+            - name: Matrix Inputs Table parameter
+              topicUid: UIComponentsTableMatrixInputsTableParameter
+            - name: Matrix Outputs Table parameter
+              topicUid: UIComponentsTableMatrixOutputsTableParameter
+            - name: Matrix Helper
+              topicUid: UIComponentsTableMatrixHelper
       - name: Tree control
         topicUid: UIComponentsTreeControl
         items:
@@ -649,6 +662,8 @@
       items:
       - name: How to make your Automation scripts debug ready
         topicUID: How_to_make_your_automation_scripts_debug_ready
+      - name: Getting started with the IAS Toolkit
+        topicUID: Getting_Started_with_the_IAS_Toolkit
   - name: Class Library
     items:
     - name: Class library introduction
@@ -2065,6 +2080,49 @@
               items: 
               - name: Param
                 topicUid: Protocol.Params.Param.Length.Content.Param
+          - name: Matrix
+            topicUid: Protocol.Params.Param.Matrix
+            items: 
+            - name: Inputs
+              topicUid: Protocol.Params.Param.Matrix.Inputs
+              items: 
+              - name: '@tablePid'
+                topicUid: Protocol.Params.Param.Matrix.Inputs-tablePid
+              - name: Mappings
+                topicUid: Protocol.Params.Param.Matrix.Inputs.Mappings
+                items: 
+                - name: Mapping
+                  topicUid: Protocol.Params.Param.Matrix.Inputs.Mappings.Mapping
+                  items: 
+                  - name: '@name'
+                    topicUid: Protocol.Params.Param.Matrix.Inputs.Mappings.Mapping-name
+                  - name: '@type'
+                    topicUid: Protocol.Params.Param.Matrix.Inputs.Mappings.Mapping-type
+            - name: MatrixOptions
+              topicUid: Protocol.Params.Param.Matrix.MatrixOptions
+              items: 
+              - name: MatrixOption
+                topicUid: Protocol.Params.Param.Matrix.MatrixOptions.MatrixOption
+                items: 
+                - name: '@name'
+                  topicUid: Protocol.Params.Param.Matrix.MatrixOptions.MatrixOption-name
+                - name: '@type'
+                  topicUid: Protocol.Params.Param.Matrix.MatrixOptions.MatrixOption-type
+            - name: Outputs
+              topicUid: Protocol.Params.Param.Matrix.Outputs
+              items: 
+              - name: '@tablePid'
+                topicUid: Protocol.Params.Param.Matrix.Outputs-tablePid
+              - name: Mappings
+                topicUid: Protocol.Params.Param.Matrix.Outputs.Mappings
+                items: 
+                - name: Mapping
+                  topicUid: Protocol.Params.Param.Matrix.Outputs.Mappings.Mapping
+                  items: 
+                  - name: '@name'
+                    topicUid: Protocol.Params.Param.Matrix.Outputs.Mappings.Mapping-name
+                  - name: '@type'
+                    topicUid: Protocol.Params.Param.Matrix.Outputs.Mappings.Mapping-type
           - name: Measurement
             topicUid: Protocol.Params.Param.Measurement
             items: 
@@ -5203,8 +5261,8 @@
           topicUid: Consuming_NuGet
         - name: Producing NuGet packages
           topicUid: Producing_NuGet
-        - name: Advanced assembly knowledge
-          topicUid: Advanced_Assembly_Knowledge
+        - name: Assembly binding
+          topicUid: Assembly_Binding
           items:
           - name: Compilation-time assembly binding
             topicUid: Compilation_Time_Assembly_Binding
@@ -5362,6 +5420,8 @@
       topicUid: TOODataMinerDevPackages
     - name: Change Element States Offline
       topicUID: Change_Element_States_Offline
+    - name: Interactive Automation Script Toolkit
+      topicUID: Interactive_Automation_Script_Toolkit
 - name: DataMiner Device-Specific Integrations
   topicUid: DSI
   items:

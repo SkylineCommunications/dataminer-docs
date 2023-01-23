@@ -2,13 +2,11 @@
 uid: UIComponentsMatrix
 ---
 
-# Matrix
+# Standard matrix
 
 A matrix is a special type of parameter typically used to represent routers and switches.
 
 ![alt text](../../images/uimatrix.png "DataMiner Cube matrix")
-
-In this section:
 
 - [Matrix parameters](xref:UIComponentsMatrixParameters)
 - [Composing crosspoints on matrix parameters](xref:UIComponentsMatrixComposingCrosspoints)
@@ -17,6 +15,9 @@ In this section:
 - [Setting input/output names via a table](xref:UIComponentsMatrixSettingNames)
 - [Discreet info](xref:UIComponentsMatrixDiscreetInfo)
 - [Exercise](xref:UIComponentsMatrixExercise)
+
+> [!TIP]
+> From DataMiner 10.3.1/10.4.0 onwards, a matrix can be configured differently, based on two tables. See [Table-based matrix](xref:UIComponentsTableMatrix).
 
 ## See also
 

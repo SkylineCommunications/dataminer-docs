@@ -35,7 +35,7 @@ You can **resize the columns** of the table by dragging the column edges. From D
 
 ## Adding actions to a table
 
-If you add a table component to a custom app using the [DataMiner Low-Code Apps](xref:Application_framework), you can also configure actions for the component. This feature is not available in the Dashboards app.
+If you add a table component to a custom app using the [DataMiner Low-Code Apps](xref:Application_framework), you can also configure actions for the component. This feature is not available in the Dashboards app. <!-- RN 29394 -->
 
 To configure actions:
 
