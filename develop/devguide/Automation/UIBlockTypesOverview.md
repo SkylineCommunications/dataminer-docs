@@ -94,7 +94,8 @@ MyDialogBox.AppendBlock(blockItem);
 
 ## Executable
 
-Allows you to run a program execution.
+Allows you to run a program execution. To do this, you must fill in the property 'Extra' with the name of the program you want to execute.
+You can also specify arguments when launching a program execution. To do so, call the method *AddDropDownOption* on the item with key *Arguments*, using the arguments you want to pass on as the value.
 
 Examples:
 
@@ -118,9 +119,6 @@ Examples:
   ...
   MyDialogBox.AppendBlock(blockItem);
   ```
-
-> [!NOTE]
-> You can specify arguments when launching a program execution. To do so, call the method *AddDropDownOption* on the item with key *Arguments*, using the arguments you want to pass on as the value.
 
 ## FileSelector
 
