@@ -118,6 +118,12 @@ In the *PropertyConfiguration.xml* file, for each relevant property you can conf
 
 Up to now, when a *contentSeparator* tag was left empty, the values of the property in question would incorrect not be separated by any separator. From now on, when that tag is empty, the values of the property in question will by default be separated by commas.
 
+#### Problem with CassandraBackup.exe when the configuration file of a general database of type 'Cassandra' had a DBServer element that contained multiple host addresses [ID_35253]
+
+<!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
+
+When, in the configuration file of a general database of type "Cassandra", the `<DBServer>` element contained multiple host addresses, up to now, the *CassandraBackup.exe* tool would be unable to parse those host addresses. However, if one of those addresses referred to the local machine, it would take a backup of the local database only.
+
 #### SLDataGateway could end up with an excessive number of HealthMonitor.Refresh threads [ID_35286]
 
 <!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
