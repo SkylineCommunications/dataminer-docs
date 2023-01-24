@@ -158,3 +158,19 @@ To make component that shows a basic trend graph with several DMA KPIs:
 1. In the *Settings* tab, in the *Group by* box, select *Element*. This way all KPIs will be shown in the same graph.
 
 ![Example of a trend graph shown with a Line & area chart component](~/user-guide/images/dashboard_example_linechart1.png)
+
+### Trend graph showing DMA trend data using profile parameters
+
+To make component that shows a basic trend graph using profile parameters:
+
+1. In edit mode, drag the *Line & area chart* visualization to the dashboard.
+
+1. Click the ![Data feed icon](~/user-guide/images/dashboards_data.png) icon to filter the available data in the data pane.
+
+1. Expand the *Profile Parameters* section in the data pane, if you configured it right in Cube, there should be a profile parameter linked with a protocol and a trended parameter of the data you want to see.
+
+1. Select the Profile Parameter you want to display in the graph and drag it to the graph.
+
+1. Expand the *Elements* section in the data pane, select the Element you want to display in the graph and drag it to the graph.
+
+![Example of a trend graph shown with a Line & area chart component](~/user-guide/images/dashboard_example_linechart2.png)
