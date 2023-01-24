@@ -122,7 +122,9 @@ Up to now, when a *contentSeparator* tag was left empty, the values of the prope
 
 <!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
 
-When, in the configuration file of a general database of type "Cassandra", the `<DBServer>` element contained multiple host addresses, up to now, the *CassandraBackup.exe* tool would be unable to parse those host addresses. However, if one of those addresses referred to the local machine, it would take a backup of the local database only.
+When, in the configuration file of a general database of type "Cassandra", the `<DBServer>` element contained multiple host addresses, up to now, the *CassandraBackup.exe* tool would parse those host addresses incorrectly and would not take any database backup.
+
+From now on, when the `<DBServer>` element contains multiple host addresses including that of the local database, the *CassandraBackup.exe* tool will take a backup of the local database.
 
 #### SLDataGateway could end up with an excessive number of HealthMonitor.Refresh threads [ID_35286]
 

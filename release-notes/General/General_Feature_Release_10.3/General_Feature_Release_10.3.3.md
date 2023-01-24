@@ -40,6 +40,14 @@ Two new field descriptors have been added to the DataMiner Object Models:
 
 - UserFieldDescriptor: Can be used to define that a field should contain the name of a DataMiner user. There is a *GroupNames* property that can be used to define which groups the user can be a part of.
 
+#### SLLogCollector will now order the Standalone BPA Executor tool to execute all BPA tests available in the system [ID_35436]
+
+<!-- MR 10.4.0 - FR 10.3.3 -->
+
+Each time the *SLLogCollector* tool is run, it will now order the *Standalone BPA Executor* tool to execute all BPA tests available in the system and store the results in the `C:\Skyline DataMiner\Logging\WatchDog\Reports\Pending Reports` folder.
+
+The names of the files containing the test results will have the following format: `<BPA Name>_<Date(yyyy-MM-dd_HH)>`
+
 ## Changes
 
 ### Enhancements
@@ -139,7 +147,9 @@ When a new function file was set to active, up to now, the function DVEs of elem
 
 <!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
 
-When, in the configuration file of a general database of type "Cassandra", the `<DBServer>` element contained multiple host addresses, up to now, the *CassandraBackup.exe* tool would be unable to parse those host addresses. However, if one of those addresses referred to the local machine, it would take a backup of the local database only.
+When, in the configuration file of a general database of type "Cassandra", the `<DBServer>` element contained multiple host addresses, up to now, the *CassandraBackup.exe* tool would parse those host addresses incorrectly and would not take any database backup.
+
+From now on, when the `<DBServer>` element contains multiple host addresses including that of the local database, the *CassandraBackup.exe* tool will take a backup of the local database.
 
 #### SLDataGateway could end up with an excessive number of HealthMonitor.Refresh threads [ID_35286]
 
