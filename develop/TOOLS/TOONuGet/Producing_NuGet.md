@@ -16,13 +16,13 @@ Every release build will have a signed released package.
 
 ## General
 
-Below rules are mainly focused for NuGets that are published to nuget.org. It is highly adviced to use the same rules for internal NuGets as well as that would make it easy transferable to nuget.org when necessary.
+Below rules are mainly focused for NuGet packages that are published to nuget.org. It is highly advised to use the same rules for internal NuGets as well as that would make it easy transferable to nuget.org when necessary.
 
 ### Mandatory rules for nuget.org
 
 - NuGet needs to include a license file
-- NuGet needs to be signed as it will not be accepted
-  - When creating the NuGet via [SLC SE Repository Manager](xref:TOOSLCSERepositoryManager), the pipeline will take care of the signing and publishing.
+- NuGet needs to be signed as only signed packages can be published on nuget.org
+  - When creating the NuGet via [SLC SE Repository Manager](xref:TOOSLCSERepositoryManager), the pipeline will take care of signing and publishing.
 
 ### Project type
 
@@ -65,7 +65,7 @@ If you have a dependency to .NET Framework (e.g.: DataMiner DLLs) then you need 
 
 ### Mandatory rules
 
-- NuGet must have a name that starts with `Skyline.DataMiner`.
+- NuGet must have a name that starts with `Skyline.DataMiner.`.
 - NuGet must have a name that is unique.
 - NuGet must have a name that is limited to 100 characters in total.
   - The name is dependant on the branch name, so the pipeline will check this.
