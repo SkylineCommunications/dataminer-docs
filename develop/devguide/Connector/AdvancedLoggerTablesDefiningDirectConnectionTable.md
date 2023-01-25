@@ -8,7 +8,7 @@ Starting from DataMiner 10.2.3 (RN 32375), it is possible to define a logger tab
 
 In the [Param](xref:Protocol.Params.Param) element of the logger table, do the following:
 
-- Set [ArrayOptions@index](xref:Protocol.Params.Param.ArrayOptions-index) to `1`.
+- Set [ArrayOptions\@index](xref:Protocol.Params.Param.ArrayOptions-index) to `1`.
 - In [Database](xref:Protocol.Params.Param.Database), Set [IndexingOptions@enabled](xref:Protocol.Params.Param.Database.IndexingOptions-enabled) to `true` and [Connection.Type](xref:Protocol.Params.Param.Database.Connection.Type) to `Directconnection`.
 
 For example:
@@ -27,7 +27,7 @@ For example:
 </Param>
 ```
 
-## Overview of the possible ArrayOptions@index and Connection.Type combinations
+## Overview of the possible ArrayOptions\@index and Connection.Type combinations
 
 - Connection type: DirectConnection
   - No index defined: The data will be pushed via the direct connection and the ID will be assigned by the database. Updating the data will not be possible in this case.
