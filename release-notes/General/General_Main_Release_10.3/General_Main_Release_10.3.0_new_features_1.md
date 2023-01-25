@@ -226,6 +226,55 @@ Process:
 
 If an incident (also known as an alarm group) is cleared manually, any clearable base alarms of that incident will now also be cleared. This way, this behavior is consistent with the standard behavior for Correlation alarms.
 
+#### DataMiner Object Model: New 'ClientReadOnly' and 'AllowMultipleSections' properties [ID_35172]
+
+<!-- MR 10.3.0 - FR 10.3.3 -->
+
+##### ClientReadOnly property added to DomStatusFieldDescriptorLink class
+
+Next to a *ReadOnly* property, the `DomStatusFieldDescriptorLink` class now also has a *ClientReadOnly* property.
+
+- *ReadOnly* determines whether values of the field in question are read-only when the field has a particular status.
+
+  When a field is marked as read-only for a specified status, the values cannot be changed when the `DomInstance` has this status. This also means that if no values were present before transitioning to this status, no values can be added as long as the `DomInstance` continues to have this status.
+
+- *ClientReadOnly* determines whether users are allowed to assign a value to the field in question in the UI.
+
+  Unlike the *ReadOnly* property, this property does allow users to assign a value to the field using the API (e.g. in a script).
+
+If the *ReadOnly* property is true, the value of *ClientReadOnly* is ignored.
+
+##### BREAKING CHANGE: AllowMultipleSections option added to SectionDefinitionLink and DomStatusSectionDefinitionLink classes
+
+An *AllowMultipleSections* property has now been added to the `SectionDefinitionLink` (non-status system) and `DomStatusSectionDefinitionLink` (status system) classes. This property will allow you to define whether a `DomInstance` can have multiple `Sections` for a particular `SectionDefinition`.
+
+When multiple sections are added to a `DomInstance`, and this is not marked as allowed, a `DomInstanceError` will be returned in the TraceData with the `MultipleSectionsNotAllowedForSectionDefinition` error reason. Additionally, in the `InvalidSections` property of the error, you will be able to find the ID(s) of the `SectionDefinition`(s) of which too many sections were found.
+
+Rules that apply with regard to multiple sections:
+
+- Non-status system (`DomDefinition` and `SectionDefinitionLinks`):
+
+  - Multiple `Section`s for the same `SectionDefinition` are allowed on one `DomInstance` if the `SectionDefinition` is linked on the DomDefinition that has its *AllowMultipleSections* property set to true.
+  
+  - When a `Section` is added to an existing `DomInstance` that contains a ReadOnly field (marked as such in the `FieldDescriptor`), then that field cannot be given a value in the UI. It can only be given a value via the API or a script.
+
+  - There are no limitations with regard to removing `Section`s.
+
+- Status system (DomBehaviorDefinition & DomStatusSectionDefinitionLinks):
+
+  - Multiple `Section`s for the same `SectionDefinition` are allowed in a specific status on one `DomInstance` if, for that status, the `SectionDefinition` is linked on the `DomBehaviorDefinition` that has its *AllowMultipleSections* property set to true.
+  
+  - When a `Section` is added, any field marked as *ReadOnly* or *ClientReadOnly* will not be assignable from the UI. However, if they are marked as *ClientReadOnly*, they will be assignable via the API.
+
+  - Removing a `Section` is not possible when a field of the section in question is marked as *ReadOnly* on the link. When this behavior is required, but you still want to prevent users from assigning a value in the UI, use the new *ClientReadOnly* property instead.
+
+> [!IMPORTANT]
+> This is a breaking change. Previously, it was possible to add multiple sections without having to set any property. After upgrading to DataMiner 10.3.3/10.3.0, you will need to update any existing `DomDefinition`s with multiple `Section`s.
+
+##### Each section now has to contain all required fields
+
+Up to now, if there were multiple sections, it was allowed for some of those sections to not contain all the required fields. From now on, every section must contain each and every required field.
+
 ### DMS Security
 
 #### Azure Active Directory: Secret expiry notices/errors [ID_33916]
