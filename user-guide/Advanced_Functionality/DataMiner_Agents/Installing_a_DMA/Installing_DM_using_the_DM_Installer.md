@@ -54,7 +54,11 @@ The DataMiner installer allows you to run a default DataMiner installation, whic
 
 1. When DataMiner has successfully restarted, click *Close*.
 
-1. To be able to make full use of all available DataMiner features, [install Elasticsearch](xref:Installing_Elasticsearch_via_DataMiner) and [connect your DataMiner System to the cloud](xref:Connecting_your_DataMiner_System_to_the_cloud).
+At this point, the basic installation is complete. However, to be able to make full use of all available DataMiner features, you will also need to:
+
+- [Upgrade to the latest feature or main release version](xref:Upgrading_a_DataMiner_Agent)
+- [Install Elasticsearch](xref:Installing_Elasticsearch_via_DataMiner)
+- [Connect your DataMiner System to the cloud](xref:Connecting_your_DataMiner_System_to_the_cloud)
 
 > [!NOTE]
 >
@@ -114,7 +118,11 @@ The DataMiner installer allows you to run a default DataMiner installation, whic
 
 1. When DataMiner has successfully restarted, click *Close*.
 
-1. To be able to make full use of all available DataMiner features, [install Elasticsearch](xref:Installing_Elasticsearch_via_DataMiner) and [connect your DataMiner System to the cloud](xref:Connecting_your_DataMiner_System_to_the_cloud). While this is not mandatory, we highly recommend it.
+At this point, the basic installation is complete. However, to be able to make full use of all available DataMiner features, you will also need to:
+
+- [Upgrade to the latest feature or main release version](xref:Upgrading_a_DataMiner_Agent)
+- [Install Elasticsearch](xref:Installing_Elasticsearch_via_DataMiner)
+- [Connect your DataMiner System to the cloud](xref:Connecting_your_DataMiner_System_to_the_cloud)
 
 > [!NOTE]
 > To view detailed log information on the installation process, in the last step of the installer, click the *open log files* button.
