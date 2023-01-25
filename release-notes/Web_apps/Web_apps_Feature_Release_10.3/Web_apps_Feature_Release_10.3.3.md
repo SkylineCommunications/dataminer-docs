@@ -100,7 +100,7 @@ A number of issues regarding the Visual Overview component have been fixed.
 
 #### Dashboards app: Problem with 'Preserve feed selections' option [ID_35438]
 
-<!-- MR 10.4.0 - FR 10.3.3 -->
+<!-- MR 10.3.0 - FR 10.3.3 -->
 
 When you select the *Preserve feed selections* option for a particular dashboard folder, any feed selection you make in a dashboard in that folder is preserved when you navigate to another dashboard in that same folder.
 
