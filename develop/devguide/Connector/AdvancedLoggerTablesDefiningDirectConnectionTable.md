@@ -21,7 +21,7 @@ For example:
     <Database>
         <IndexingOptions enabled="true" />
         <Connection>
-            <Type>Directconnection</Type>
+            <Type>DirectConnection</Type>
         </Connection>
     </Database>
 </Param>
