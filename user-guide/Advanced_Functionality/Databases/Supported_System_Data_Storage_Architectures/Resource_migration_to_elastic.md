@@ -14,6 +14,10 @@ The migration can be triggered from the client test tool. The migration app can 
 >  
 > The permission to add resources is required to start the migration.
 
+> [!WARNING]
+> 
+> All ResourceManagers in the cluster will restart during the migration.
+
 Clicking the _Start Migration_ button in the _Resources XML to Elastic_ section will start the migration wizard, which has the following steps:
 
 1. The bookings that are currently running or will start in the next hour are shown. The ResourceManager will restart during the migration, which means these bookings can potentially be impacted. No booking events will run when the ResourceManager is down.
@@ -22,19 +26,19 @@ Clicking the _Start Migration_ button in the _Resources XML to Elastic_ section 
 
 1. All ResourceManagers in the cluster will now be stopped. If any ResourceManager is not reachable for some reason the migration will be aborted and all ResourceManagers will be notified to start up again without changing their storage type.
 
-1. A notice will be created in the alarm console stating the migration is in progress.
+1. An alarm of type notice will be created stating the migration is in progress.
 
 1. A ``MigrationStatus`` is created in the table for resources and resource pools.
 
-1. All resources and resource pools are loaded from the Resources.xml file on the agent where the migration was triggered. The Resources.xml files of the other agents in the cluster are not migrated. The properties (for resources and resource pools) and property definitions (for resource pools) are converted if needed and written to Elasticsearch. Empty property names will be discarded at this stage since they cannot be indexed in Elasticsearch. Empty property values will be replaced with an empty string. The ``MigrationStatus`` rows for resources and resource pools will be updated to reflect the migration progress while the migration is ongoing.
+1. All resources and resource pools are loaded from the Resources.xml file on the agent where the migration was triggered. The Resources.xml files of the other agents in the cluster are not migrated. The properties (for resources and resource pools) and property definitions (for resource pools) are converted if needed and written to Elasticsearch. Empty property names will be discarded at this stage since they cannot be indexed in Elasticsearch. Empty property values will be replaced with an empty string. The ``MigrationStatus`` rows for resources and resource pools will be updated to reflect the migration progress while the migration is ongoing. This process can be aborted by clicking the _Cancel Migration_ button in the _Resources XML to Elastic_ section.
 
 1. When both ``MigrationStatus`` objects are completed, the configuration will automatically switch to ``Elasticsearch`` storage and the local ResourceManager (where the migration was triggered) will initialize.
 
-1. The generated notice will be cleared and an information event stating the migration has finished will be generated.
+1. The alarm of type notice will be cleared and an information event will be generated, stating that the migration has finished.
 
 1. All other ResourceManagers in the cluster are notified they should initialize and switch to Elasticsearch storage.
 
-A migration should not take more than a couple of minutes at most. During our testing, migrating an internal system with a Resources.xml file of 1GB took about 13 minutes.  
+A migration should not take more than half an hour. During testing, migrating a system a local Elasticsearch with a Resources.xml file of 1GB took about 13 minutes.  
 
 ### What to do when the migration fails
 
@@ -70,7 +74,7 @@ private ResourceStorageType GetStorageType()
 
 - The storage type is pushed to CDMR for CDMR-connected agents. It can be found in the configurations page of the element.
 
-- The storage type of the ResourceManager is stored in the ResourceManager config file (_C:\Skyline DataMiner\ResourceManager\Config.xml_). If no ``ResourceStorageType`` tag is present, the ``Xml`` storage will be used:
+- The storage type of the ResourceManager is stored in the ResourceManager config file (_C:\Skyline DataMiner\ResourceManager\Config.xml_). The ResourceManager uses this file to determine the storage type on startup. This file should never be modified directly by users. If no ``ResourceStorageType`` tag is present, the ``Xml`` storage will be used:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -109,7 +113,7 @@ When using ``Xml`` as storage, it is not allowed to remove a resource while one 
 
 ### Initial event on subscriptions
 
-When using ``Xml`` as storage, if a client subscribes on the ``ResourceManagerEventMessage``, he will receive an initial event with all resources and resource pools. When using Elasticsearch as storage these events will no longer be sent. This is to prevent sending a message to the client containing thousands of resources.
+If you're using ``Xml`` as storage and subscribe on the ``ResourceManagerEventMessage``, you will receive an initial event with all resources and resource pools. When using Elasticsearch as storage these events will no longer be sent. This is to prevent sending a message to the client containing thousands of resources.
 
 ### Syncing
 
@@ -125,7 +129,9 @@ Below you can find the result of our performance testing for resource add, updat
 ![SRM Resource update performance](~/user-guide/images/SRM_Resource_Update_Performance.png)
 ![SRM Resource delete performance](~/user-guide/images/SRM_Resource_Delete_Performance.png)
 
-__Note__: read performance of resources and resource pools is unchanged, since all reads will go to a cache in SLNet. This was also confirmed during our testing.
+> [!NOTE]
+>  
+> Read performance of resources and resource pools is unchanged, since all reads will go to a cache in SLNet. This was also confirmed during our testing.
 
 ### ResourceManager startup performance
 
