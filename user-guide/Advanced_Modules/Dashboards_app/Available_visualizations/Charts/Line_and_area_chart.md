@@ -142,7 +142,7 @@ From DataMiner 9.6.13 onwards, it is possible to export the trend data to CSV. T
 
 ### Trend graph showing DMA KPIs
 
-To make component that shows a basic trend graph with several DMA KPIs:
+To make a component that shows a basic trend graph with several DMA KPIs:
 
 1. In edit mode, drag the *Line & area chart* visualization to the dashboard.
 
@@ -150,7 +150,7 @@ To make component that shows a basic trend graph with several DMA KPIs:
 
 1. Expand the *Parameters* section in the data pane and specify the element representing the DMA in the *Element* box.
 
-1. Select a parameter you want to display in the graph and drag it to the graph. Repeat this for each parameter that should be displayed in the graph.
+1. Select a parameter you want to display in the graph, and drag it to the graph. Repeat this for each parameter that should be displayed in the graph.
 
    > [!TIP]
    > Select the *Trended* checkbox at the top of the *Parameters* section to only view parameters for which trending is enabled.
@@ -158,3 +158,21 @@ To make component that shows a basic trend graph with several DMA KPIs:
 1. In the *Settings* tab, in the *Group by* box, select *Element*. This way all KPIs will be shown in the same graph.
 
 ![Example of a trend graph shown with a Line & area chart component](~/user-guide/images/dashboard_example_linechart1.png)
+
+### Trend graph showing DMA trend data using profile parameters
+
+To make a component that shows a basic trend graph using profile parameters:
+
+1. In edit mode, drag the *Line & area chart* visualization to the dashboard.
+
+1. Click the ![Data feed icon](~/user-guide/images/dashboards_data.png) icon to filter the available data in the data pane.
+
+1. Expand the *Profile parameters* section in the data pane.
+
+   If you configured it correctly in DataMiner Cube, there should be a profile parameter linked with a protocol and a trended parameter of the data you want to see.
+
+1. Select the profile parameter you want to display in the graph, and drag it to the graph.
+
+1. Expand the *Elements* section in the data pane, select the element you want to display in the graph, and drag it to the graph.
+
+![Example of a trend graph shown with a Line & area chart component](~/user-guide/images/dashboard_example_linechart2.png)
