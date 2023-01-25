@@ -254,7 +254,7 @@ Rules that apply with regard to multiple sections:
 
 - Non-status system (`DomDefinition` and `SectionDefinitionLinks`):
 
-  - Multiple `Section`s for the same `SectionDefinition` are allowed on one `DomInstance` if the `SectionDefinition` is linked on the DomDefinition that has its *AllowMultipleSections* property set to true.
+  - Multiple `Section`s for the same `SectionDefinition` are allowed on a `DomInstance` if the `SectionDefinition` has a link on the DomDefinition that has the *AllowMultipleSections* property set to true.
   
   - When a `Section` is added to an existing `DomInstance` that contains a ReadOnly field (marked as such in the `FieldDescriptor`), then that field cannot be given a value in the UI. It can only be given a value via the API or a script.
 
@@ -262,9 +262,9 @@ Rules that apply with regard to multiple sections:
 
 - Status system (DomBehaviorDefinition & DomStatusSectionDefinitionLinks):
 
-  - Multiple `Section`s for the same `SectionDefinition` are allowed in a specific status on one `DomInstance` if, for that status, the `SectionDefinition` is linked on the `DomBehaviorDefinition` that has its *AllowMultipleSections* property set to true.
-  
-  - When a `Section` is added, any field marked as *ReadOnly* or *ClientReadOnly* will not be assignable from the UI. However, if they are marked as *ClientReadOnly*, they will be assignable via the API.
+  - Multiple `Section`s for the same `SectionDefinition` are allowed in a specific status on one `DomInstance` if, for that status, the `SectionDefinition` has a link on the `DomBehaviorDefinition` that has the *AllowMultipleSections* property set to true.
+
+  - When a `Section` is added, any field marked as *ReadOnly* or *ClientReadOnly* will not be assignable from the UI. However, if they are only marked as *ClientReadOnly*, they will be assignable via the API.
 
   - Removing a `Section` is not possible when a field of the section in question is marked as *ReadOnly* on the link. When this behavior is required, but you still want to prevent users from assigning a value in the UI, use the new *ClientReadOnly* property instead.
 

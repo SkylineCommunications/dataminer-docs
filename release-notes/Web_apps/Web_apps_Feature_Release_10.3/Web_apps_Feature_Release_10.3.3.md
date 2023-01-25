@@ -98,6 +98,14 @@ A number of issues regarding the Visual Overview component have been fixed.
 - In some cases, the dimensions of pop-up windows would be incorrect.
 - When a pop-up window was shown using a *VdxShape* property, in some cases, the default page would be shown instead of the page that was specified.
 
+#### Dashboards app & Low-code apps - Line & area chart component: Problems when visualizing resource availability [ID_35408]
+
+<!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
+
+When, in a dashboard or a low-code app, a *Line & area chart* component was used to visualize the capacity usage over time of a resource, it would incorrectly take into account bookings that had been canceled. Also, when two or more bookings ended at the same, it would not show the capacity usage in a correct way, and when there was no booking in the selected time range, it would show an error.
+
+In the latter case, it will now instead show a flat line indicating that the resource is not being used.
+
 #### Dashboards app: Problem with 'Preserve feed selections' option [ID_35438]
 
 <!-- MR 10.3.0 - FR 10.3.3 -->

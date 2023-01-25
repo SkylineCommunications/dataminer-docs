@@ -68,6 +68,14 @@ Leading spaces have been removed from the following port information fields:
 
 ### Fixes
 
+#### DataMiner Taskbar Utility: Problem when stopping DataMiner [ID_34790]
+
+<!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
+
+Up to now, when you right-clicked the *DataMiner Taskbar Utility* system tray icon and selected *Stop DataMiner* while keeping the SHIFT button pressed, the *SLWatchdog* process would incorrectly also be stopped. In a Failover setup, this would prevent the backup agent from acquiring the virtual IP address.
+
+Also, after DataMiner had been stopped, up to now, the *SLXml*, *SLLog* and *SLDataGateway* processes would incorrectly start up again.
+
 #### Problem with SLElement when a trend template was being assigned [ID_34824]
 
 <!-- MR 10.2.0 [CU12] - FR 10.3.1 -->
@@ -175,3 +183,11 @@ In a Cassandra database, the "time to live" (TTL) setting of spectrum trace data
 <!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
 
 When a tree control contained EPM objects, in some cases, the alarm bubble-up feature would not work correctly.
+
+#### Dashboards app & Low-code apps - Line & area chart component: Problems when visualizing resource availability [ID_35408]
+
+<!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
+
+When, in a dashboard or a low-code app, a *Line & area chart* component was used to visualize the capacity usage over time of a resource, it would incorrectly take into account bookings that had been canceled. Also, when two or more bookings ended at the same, it would not show the capacity usage in a correct way, and when there was no booking in the selected time range, it would show an error.
+
+In the latter case, it will now instead show a flat line indicating that the resource is not being used.
