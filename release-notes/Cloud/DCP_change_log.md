@@ -6,6 +6,12 @@ uid: DCP_change_log
 
 The DataMiner Cloud Platform gets updated continuously. This change log can help you trace when specific features and changes have become available.
 
+#### 24 January 2023 - Fix - SupportAssistant 1.2.1 - Log Collector continuously triggered after failing to generate files [ID_35457]
+
+In some rare cases, if invalid arguments were passed to the Log Collector so that it could not generate files, it could occur that the Log Collector kept getting triggered by the SupportAssistant DxM. Now the SupportAssistant will stop after a specific number of attempts.
+
+This fix is included in Cloud Pack 2.8.5.
+
 #### 13 January 2023 - Enhancement - Auditing of protocol and script deployments [ID_35392]
 
 The *Audit* page of the DCP Admin app will now also contain records for protocol and script deployments, while previously it only showed records for DxM artifact deployments.
@@ -19,6 +25,8 @@ When DataMiner was configured to use HTTP, prior to version 2.10.2, CloudGateway
 ```txt
 Something went wrong while initializing WebApiEndpointService. A url in the (custom.)appsettings.json or maintenancesettings.xml is malformed or empty while a valid value was expected. See exception System.ArgumentNullException: Value cannot be null. (Parameter 'dataMinerWebApiHttpFormat')
 ```
+
+This fix is included in Cloud Pack 2.8.5.
 
 #### 10 January 2023 - Enhancement - DataMiner SupportAssistant 1.2.0 - Various stability improvements [ID_35349]
 
