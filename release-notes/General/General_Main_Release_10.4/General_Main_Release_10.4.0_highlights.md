@@ -9,12 +9,6 @@ uid: General_Main_Release_10.4.0_highlights
 
 ## Highlights
 
-#### Dashboards app & low-code apps: Icon component [ID_34867]
-
-<!-- MR 10.4.0 - FR 10.3.1 -->
-
-The new icon component allows you to display an icon on a dashboard or a low-code app.
-
 #### Interactive Automation scripts: New button style 'CallToAction' [ID_34904]
 
 <!-- MR 10.4.0 - FR 10.3.1 -->

@@ -39,9 +39,7 @@ To create a list view, add a shape on the Visio page with the following shape da
 - **Filter**: See [List view filters](#list-view-filters).
 
 > [!NOTE]
->
-> - If a *ListView* component with source *Reservations* or *Bookings* is used together with an embedded Resource Manager component, selecting an item in the list will select the corresponding block on the Resource Manager timeline and vice versa. See [Embedding a Resource Manager component](xref:Embedding_a_Resource_Manager_component).
-> - If colors are defined using the *Visual.Background* property of bookings, from DataMiner 9.6.13 onwards, these can be displayed in the *Visual.Background* property column of a *ListView* component showing bookings, if the column is set to column type *Color*. In DataMiner 10.0.0/10.0.2, this property is renamed to *VisualBackground*. See [Customizing the color of booking blocks](xref:Embedding_a_Resource_Manager_component#customizing-the-color-of-booking-blocks).
+> If a *ListView* component with source *Reservations* or *Bookings* is used together with an embedded Resource Manager component, selecting an item in the list will select the corresponding block on the Resource Manager timeline and vice versa. See [Embedding a Resource Manager component](xref:Embedding_a_Resource_Manager_component).
 
 ## Component options
 
@@ -62,8 +60,22 @@ The following options can be specified in the *ComponentOptions* shape data fiel
 
   Note that *SetVar* controls of type *DateTime* will automatically return a date and time in the correct format. See [Creating a DateTime control](xref:Adding_options_to_a_session_variable_control#creating-a-datetime-control). For more information on date and time format strings, see <https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings>.
 
-> [!NOTE]
-> If you use the *StartTime* and *EndTime* options for a *ListView* component with source *Reservations* or *Bookings*, the bookings in that time range will be added to the ones already present in the cache. If other bookings were already in the cache, these will be included in the list too. If you only want to include bookings from a specific time range, use a *Filter* shape data field instead.
+  > [!NOTE]
+  > If you use the *StartTime* and *EndTime* options for a *ListView* component with source *Reservations* or *Bookings*, the bookings in that time range will be added to the ones already present in the cache. If other bookings were already in the cache, these will be included in the list too. If you only want to include bookings from a specific time range, use a *Filter* shape data field instead.
+
+- **ColorRows=true/false**: Available from DataMiner 10.3.2/10.4.0 onwards. This option can be used to set the highlight color of the list view rows to the booking color. The booking color is a summary of the following reserved booking properties: *VisualForeground*, *VisualBackground*, *VisualSelectedForeground*, and *VisualSelectedBackground*. Each of those properties can be set to a string value representing a hexadecimal value, an (A)RGB value, or a predefined Windows color (the latter is not recommended). <!-- RN 35157 -->
+
+  > [!NOTE]
+  >
+  > - The *ColorRows* feature is disabled by default ("ColorRows=False").
+  > - At present, the *ColorRows* feature is only available on ListView components that have bookings as a source.
+  > - Configuring gray-tinted foreground colors is not recommended as a ListView component uses a gray layer when you hover over its items. In the Skyline themes, that gray layer has the following color:
+  >
+  >   | Theme | Color of gray layer        |
+  >   |-------|----------------------------|
+  >   | Mixed | #E5E5E5 (RGB: 229,229,229) |
+  >   | Light | #E5E5E5 (RGB: 229,229,229) |
+  >   | Black | #333333 (RGB: 51,51,51)    |
 
 ## List view filters
 
@@ -331,9 +343,10 @@ List view components can be found both in Visual Overview and in the DataMiner B
 
 - To filter which items are displayed in the list, click the filter icon for the column you want to apply a filter to and enter a filter in the box below the column header.
 
-- To apply a custom column configuration, see [Creating a new column configuration](#creating-a-new-column-configuration) and [Loading the default column configuration](#loading-the-default-column-configuration).
+  > [!NOTE]
+  > When you filter a list view with source *Bookings* or *Reservations* on a GUID or a number, the list will show the matching booking as soon as a part of the entry matches the GUID or number. However, note that if you have combined the list view with [a timeline](xref:Embedding_a_Resource_Manager_component), the timeline will only show the matching booking if you enter the full and correct GUID or number.
 
-- From DataMiner 9.6.13 onwards, it is possible to have a column display the color configured in the *Visual.Background* property of bookings. For this purpose, add the *Visual.Background* property column and set it to the column type *Color*. In DataMiner 10.0.0/10.0.2, this property is renamed to *VisualBackground*. See [Customizing the color of booking blocks](xref:Embedding_a_Resource_Manager_component#customizing-the-color-of-booking-blocks).
+- To apply a custom column configuration, see [Creating a new column configuration](#creating-a-new-column-configuration) and [Loading the default column configuration](#loading-the-default-column-configuration).
 
 > [!NOTE]
 > When an item is selected in the list, a session variable is populated with the booking ID, which can be of use for Visio drawings.
@@ -358,7 +371,7 @@ List view components can be found both in Visual Overview and in the DataMiner B
 
        - Select the *Icon* checkbox of a particular column to have its contents replaced by icons. From DataMiner 9.6.12 onwards, this option is supported for ID columns.
 
-       - Select the *Color* checkbox of a particular column to visualize the cells in that column as colored blocks.
+       - Select the *Color* checkbox of a particular column to visualize the cells in that column as colored blocks. This can for instance be used to show the color configured in the *Visual.Background* property of bookings (which is renamed to *VisualBackground* in DataMiner 10.0.0/10.0.2).
 
      - From DataMiner 10.0.0/10.0.2 onwards, for columns based on custom properties, you can instead select a different [column type](#available-column-types). For the default columns, the column type cannot be changed.
 
@@ -382,10 +395,10 @@ From DataMiner 10.0.0/10.0.2 onwards, when you manage the column configuration, 
 
 - **Custom icon**: Displays a custom icon. This relies on Automation scripts providing an icon library: a script that maps the custom icons, and a script that maps the column values to specific icon names. At present, this column type cannot be used.
 
-- **Color**: Shows the color defined in the cell value.
+- **Color**: Shows the color defined in the cell value. This can for example be used to show the color from the *VisualBackground* property of bookings.
 
 - **Date**: Expects a Date object, or a string representing a date in UTC time, in the culture of the client.
 
 - **Date (invariant)**: Available from DataMiner 10.2.12/10.3.0 onwards. Expects a Date object, or a string representing a date in UTC time, in [invariant culture](https://learn.microsoft.com/en-us/dotnet/api/system.globalization.cultureinfo.invariantculture).
 
-- **Colored text**: This type is specifically intended for the *AlarmLevel* column for services. It visualizes the alarm level by means of text preceded by a circle showing the alarm level color.
+- **Colored text**: This type is specifically intended for the *AlarmCount* column for services and elements. It visualizes the alarm count by means of text surrounded by a circle showing the alarm level color.

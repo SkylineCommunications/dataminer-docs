@@ -22,11 +22,11 @@ Questions in this section:
 
 ## How can I manually create the MySQL database?
 
-1. Go to *Start > All Programs > MySQL > MySQL Workbench*.
+1. Go to *Start > All Programs > MySQL > MySQL Workbench*.
 1. In the *SQL Development* section, double-click the "localhost" connection to open SQL Editor.
 1. Optionally, drop the test database. To do so, right-click the "test" schema in the *Object Browser*, and select *Drop Schema*.
 1. Right-click anywhere in the *Object Browser*, and select *Create New Schema*.
-1. In the *new_schema* dialog box, set *Name* to "SLDMADB", and click *Apply*.
+1. In the *new_schema* dialog box, set *Name* to "SLDMADB", and click *Apply*.
 1. Close SQL Editor.
 
 ## How can I boot the computer without a keyboard?
@@ -36,7 +36,7 @@ Depending on the hardware, you may need to allow the computer to be started with
 To do so, when the computer is booting:
 
 1. Enter the BIOS settings, e.g. by pressing *DELETE*.
-1. Select *Boot Settings > Boot Settings Configuration*.
+1. Select *Boot Settings > Boot Settings Configuration*.
 1. Set *Halt On* to "All, but Disk/Key".
 
 ## What do I do if I get the HTTP error 401.3 when trying to browse to the DMA?
@@ -54,8 +54,8 @@ When you get an HTTP error 401.3 ("Unauthorized") when trying to browse to any w
 
 When you get an HTTP error 500.19 ("Internal Server Error"), set the default application pool to .NET Framework Version v2.0.
 
-1. Choose *Start > Administrative Tools > Internet Information Services (IIS) Manager*.
-1. In the *Connections* section, expand the server, and click *Application Pools*.
+1. Choose *Start > Administrative Tools > Internet Information Services (IIS) Manager*.
+1. In the *Connections* section, expand the server, and click *Application Pools*.
 1. Set *DefaultAppPool* to ".NET Framework Version v2.0".
 
 ## What do I do if ASPX pages show text instead of web content?
@@ -63,7 +63,7 @@ When you get an HTTP error 500.19 ("Internal Server Error"), set the default app
 This could be the case if IIS was installed after the .NET framework. If these two components were not installed in the right order, then proceed as follows:
 
 1. Select *Start > Run*.
-1. In the *Open* text box, type `cmd` and press *ENTER*.
+1. In the *Open* text box, type `cmd` and press *ENTER*.
 1. At the command prompt, type the following command, and then press *ENTER*:
 
    ```txt
@@ -89,9 +89,9 @@ If so, do the following:
 1. Check if a *C:\Windows\temp* directory exists. If it does not, create it.
 1. For this directory, grant full permissions to the ASPNET or NETWORK SERVICE user accounts.
 1. Right-click *My Computer*, and click *Properties*.
-1. On the *Advanced* tab, click *Environment Variables*.
+1. On the *Advanced* tab, click *Environment Variables*.
 1. Select the TEMP system variable, and click *Edit*.
-1. Type "C:\Windows\TEMP" in the *Variable Value* box, and click *OK*.
+1. Type "C:\Windows\TEMP" in the *Variable Value* box, and click *OK*.
 1. Repeat steps 5 and 6 to edit the TMP variable. Click *OK* twice.
 1. Select *Start > Run*.
 1. At the command prompt, type "iisreset" to reset Internet Information Services (IIS).
@@ -115,7 +115,7 @@ This error is caused by SLDMS being unable to start or locate the ntbackup proce
 
 To solve this problem, proceed as follows:
 
-- Copy the *ntbackup.exe* file from the *C:\WINDOWS\system32* directory of a 32-bit system to the *C:\Skyline DataMiner\Files* directory of the 64-bit system.
+- Copy the *ntbackup.exe* file from the *C:\WINDOWS\system32* directory of a 32-bit system to the *C:\Skyline DataMiner\Files* directory of the 64-bit system.
 
 ### Problem with DataMiner database dump
 
@@ -165,7 +165,7 @@ If they are, make sure IIS has been correctly configured. See [Correctly configu
 
 To correctly configure IIS, on top of the standard DataMiner Agent installation, do the following:
 
-1. Open a command prompt window, by going to *Start > Run* and entering `cmd`.
+1. Open a command prompt window, by going to *Start > Run* and entering `cmd`.
 
    > [!NOTE]
    > It is advisable to run *cmd.exe* as an Administrator.
@@ -206,11 +206,11 @@ To correctly configure IIS, on top of the standard DataMiner Agent installation,
    1. Right-click > *Properties*
    1. Click *Create Application*.
    1. On the *Documents* tab, make sure that the default document is "default.aspx".
-   1. On the *Directory Security* tab, click *Edit* (next to *Authentication and access control*), and make sure that "Integrated Windows Authentication" is selected.
+   1. On the *Directory Security* tab, click *Edit* (next to *Authentication and access control*), and make sure that "Integrated Windows Authentication" is selected.
 
 1. Restart IIS:
 
-   - In the left pane, right-click COMPUTERNAME and select *All Tasks > Restart IIS*.
+   - In the left pane, right-click COMPUTERNAME and select *All Tasks > Restart IIS*.
    - Alternatively, you can run the `iisreset` command from a command prompt.
 
 ## What do I do if there is an error when the MySQL service is started?
@@ -261,7 +261,7 @@ This is because the IIS_IUSRS group has not been granted "Local Activation" perm
 
 Normally, Windows Firewall is configured automatically when you install DataMiner. However, if you want to configure it manually, do the following:
 
-1. Go to *Start > Control Panel > System and Security > Windows Defender Firewall*.
+1. Go to *Start > Control Panel > System and Security > Windows Defender Firewall*.
 
 1. Click *Advanced Settings*.
 
@@ -279,15 +279,15 @@ Normally, Windows Firewall is configured automatically when you install DataMine
 
    1. Click *New rule*.
    1. In the wizard, select *Port* and click *Next*.
-   1. Select whether the rule applies to *TCP* or *UDP*, add the port and click *Next*.
-   1. Make sure *Allow the connection* is selected and click *Next* until you reach the last step of the wizard.
+   1. Select whether the rule applies to *TCP* or *UDP*, add the port and click *Next*.
+   1. Make sure *Allow the connection* is selected and click *Next* until you reach the last step of the wizard.
    1. Enter the name of the rule, as specified in the table above, and click *Finish*.
 
 If the computer will be polled by a DataMiner element running the Microsoft Platform protocol driver, the following three additional steps have to be executed:
 
-1. Select *Start > Run*.
+1. Select *Start > Run*.
 
-1. In the *Open* text box, type `netsh firewall set service RemoteAdmin`, and press *ENTER*.
+1. In the *Open* text box, type `netsh firewall set service RemoteAdmin`, and press *ENTER*.
 
    A message box will appear, notifying you that the firewall changes have successfully been applied.
 
@@ -301,15 +301,15 @@ Normally, DCOM is configured automatically when you install DataMiner. However, 
 
 1. Enter `dcomcnfg`, and click *OK*.
 
-1. Double-click *Component Services*, and then double-click *Computers* to expand the *Component Services* tree.
+1. Double-click *Component Services*, and then double-click *Computers* to expand the *Component Services* tree.
 
-1. Double-click *My Computer* and *DCOM Config* to expand the *Component Services* tree.
+1. Double-click *My Computer* and *DCOM Config* to expand the *Component Services* tree.
 
-1. In the *Component Services* tree, right-click *SLASPConnection*, and click *Properties*.
+1. In the *Component Services* tree, right-click *SLASPConnection*, and click *Properties*.
 
 1. Click the *Security* tab.
 
-1. In the *Launch and Activations Permissions* pane, click *Customize*, and then click *Edit*.
+1. In the *Launch and Activations Permissions* pane, click *Customize*, and then click *Edit*.
 
 1. Grant an additional permission to the following accounts:
 
@@ -323,13 +323,13 @@ Normally, DCOM is configured automatically when you install DataMiner. However, 
    > [!NOTE]
    > If the above-mentioned accounts do not exist on your system, you do not need to create them.
 
-1. Click *OK* on the open dialog boxes until you are back in the *DCOM Config* node of the *Component Services* tree.
+1. Click *OK* on the open dialog boxes until you are back in the *DCOM Config* node of the *Component Services* tree.
 
-1. In the *Component Services* tree, right-click *SLDMS*, and click *Properties*.
+1. In the *Component Services* tree, right-click *SLDMS*, and click *Properties*.
 
 1. Click the *Security* tab.
 
-1. In the *Launch and Activations Permissions* pane, click *Customize*, and then click *Edit*.
+1. In the *Launch and Activations Permissions* pane, click *Customize*, and then click *Edit*.
 
 1. Grant an additional permission to the following accounts:
 
@@ -350,10 +350,10 @@ Normally, DCOM is configured automatically when you install DataMiner. However, 
 
 ### Adding an account to the Group or User names list
 
-1. On the *Security* tab of the *Launch and Activation Permission* dialog box, click *Add*.
-1. In the *Select Users, Computers, or Groups* dialog box, click *Advanced*.
+1. On the *Security* tab of the *Launch and Activation Permission* dialog box, click *Add*.
+1. In the *Select Users, Computers, or Groups* dialog box, click *Advanced*.
 1. In the *Select Users, Computers, or Groups* dialog box, click *Locations*.
-1. In the *Locations* dialog box, select "\[ComputerName\]", and click *OK*.
-1. Back in the *Select Users, Computers, or Groups* dialog box, click *Find Now*.
+1. In the *Locations* dialog box, select "\[ComputerName\]", and click *OK*.
+1. Back in the *Select Users, Computers, or Groups* dialog box, click *Find Now*.
 1. In the search results, select the required account (e.g. "IUSR_\[ComputerName\]"), and click *OK*.
-1. In the *Select Users, Computers, or Groups* dialog box, click *OK*.
+1. In the *Select Users, Computers, or Groups* dialog box, click *OK*.

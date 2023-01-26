@@ -8,6 +8,9 @@ Welcome to the docs.dataminer.services contributor guide!
 
 Our documentation is open to contributions from any user. Contributions are created, reviewed, and merged via GitHub. This page will explain how you can add and review contributions, ranging from simple changes to a single page, to larger changes where entire sections of the documentation are added or modified.
 
+> [!TIP]
+> Are you a member of the DataMiner DevOps Professional Program? Find out how you can [earn DevOps Points by contributing to the DataMiner docs](xref:Benefits_DevOps_Professionals_Program#accumulating-devops-points)!
+
 ## General guidelines
 
 - Use **US English** spelling when you contribute to the DataMiner documentation.
@@ -115,7 +118,9 @@ When you install GitHub Desktop, you will also need to add the correct repositor
    ![Install GitHub 2](~/images/InstallGithub2.png)
 
    > [!IMPORTANT]
-   > Make sure the local path you clone the repository to is relatively short. Using a long file path will lead to errors, as Windows will be unable to create certain files in the repository.
+   >
+   > - Make sure the local path you clone the repository to is relatively short. Using a long file path will lead to errors, as Windows will be unable to create certain files in the repository.
+   > - Do not clone the repository to a folder that is synced with OneDrive, as this can cause errors.
 
 1. If you do not have write access to the repository, you will find an alert in the lower left corner of the GitHub Desktop UI.
 
@@ -289,6 +294,34 @@ The Skyline documentation team will then need to merge your pull request, so tha
 
 When all the necessary changes have been made and the draft branch is ready for publication, create a pull request as detailed above, but select the main branch instead of the draft branch as the base.
 
+### Working on an existing pull request
+
+After you have made a pull request and before it is merged into the main branch by the Skyline documentation team, it is possible to continue working on that existing pull request.
+
+You can do so as follows:
+
+1. Change the pull request from a full pull request to a draft pull request.
+
+   1. Go to your pull request on GitHub.
+
+   1. In the *Reviewers* tab in the top right, select *Convert to draft*.
+
+      ![Convert to draft](~/images/Convert_To_Draft.png)
+
+1. Open GitHub Desktop and select *Current branch*.
+
+1. In the *Pull requests* tab, select the pull request you want to continue working on. Your current branch will now have changed.
+
+   ![Pull Request](~/images/Pull_Request.png)
+
+1. Open the branch in Visual Studio Code. You can do so by clicking the *Open in Visual Studio Code* button in GitHub Desktop.
+
+1. Make your changes in Visual Studio Code and make sure they are saved. Keep the items listed under [Things to watch out for](#things-to-watch-out-for) in mind.
+
+1. In GitHub Desktop, add a short summary of your changes in the box in the lower right corner. Optionally, you can also add a description. Then click the *Commit* button. This commit will now be added to the previous pull request.
+
+1. When the pull request is ready to be merged, you can click *Ready for review* on the pull request page to change it from a draft into a full pull request.
+
 ### Making a local test build before pushing changes
 
 Before you push your changes to the repository, it is often a good idea to make a test build on your local machine. This is especially the case if your changes involve adding or removing files, adding cross-references, changing headers, and/or updating a toc.yml file.
@@ -297,10 +330,10 @@ To be able to make a local test build, you need to have DocFX installed. DocFX i
 
 #### Installing and configuring DocFX
 
-1. Go to <https://github.com/dotnet/docfx/releases>, and download the latest version of the `docfx.zip` package (e.g. version 2.59.4).
+1. Go to <https://github.com/dotnet/docfx/releases>, and download version version 2.59.4 of the `docfx.zip` package.
 
     > [!CAUTION]
-    > We recommend that you do not use any of the beta versions.
+    > We recommend that you do not use any of the beta versions. We also do not support version 2.60 yet, as this will require some changes to the way we generate metadata, which we are still working on at the moment.
 
 1. Extract `docfx.zip` to a folder of your choice (e.g. `C:\DocFX`).
 
@@ -325,7 +358,7 @@ To be able to make a local test build, you need to have DocFX installed. DocFX i
     If information similar to the following text is returned, DocFX was installed correctly:
 
     ```txt
-    docfx 2.58.4.0
+    docfx 2.59.4.0
     Copyright (C) 2022 ¸ Microsoft Corporation. All rights reserved.
     This is open-source software under MIT License.  
     ...
@@ -714,7 +747,7 @@ The only time when "the user" is appropriate is when whoever you are writing for
    (Exception from HRESULT: 0x80131040)
 ```
 
-**Resolution**: Install [the latest version of DocFX](#installing-and-configuring-docfx).
+**Resolution**: Install [the version 2.59.4 of DocFX](#installing-and-configuring-docfx).
 
 ### Build failed because config or content files are missing
 
