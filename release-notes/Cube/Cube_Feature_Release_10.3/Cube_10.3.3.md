@@ -155,3 +155,9 @@ From now on, Cube will check whether the pattern matching feature is enabled eac
 <!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
 
 When a tree control contained EPM objects, in some cases, the alarm bubble-up feature would not work correctly.
+
+#### Visual Overview: Problem when re-arranging dynamically positioned shapes [ID_35462]
+
+<!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
+
+When, in a Visio drawing, shapes have been positioned dynamically, you can re-arrange those shapes manually by switching to *Arrange* mode and re-arranging the shapes using drag-and-drop. In some cases, after you had re-arranged a number of shapes, a *NullReferenceException* could be thrown.
