@@ -6,6 +6,8 @@ uid: Resources_migration_to_elastic
 
 Starting from DataMiner version 10.3.0/10.3.2, you can migrate the resources and resource pools from the *Resources.xml* file to Elasticsearch. This improves the scalability and performance on systems that have a large number of resources.
 
+Resources are not automatically migrated when you [install Elasticsearch](xref:Installing_Elasticsearch_via_DataMiner) and [migrate booking data](xref:Configuring_DataMiner_Indexing). Based on your specific setup, and keeping in mind the [limitations and differences between XML and Elasticsearch storage](#limitations-and-differences-with-xml-storage), you can decide independently whether or not you want to start this migration.
+
 > [!TIP]
 > For metrics related to resource performance with Elasticsearch or with XML storage, see [Resources benchmarks](xref:resources_benchmarks).
 
@@ -34,15 +36,17 @@ To migrate the resources, you will need to use the SLNetClientTest tool.
 
    - Once the migration starts, all Resource Manager instances in the cluster will be stopped. If DataMiner cannot reach a Resource Manager instance for some reason, the migration will be canceled, and all Resource Manager instances will be notified to start up again without changing their storage type.
 
-   - While the migration is in progress, a notice will be added in the Alarm Console.
+   - While the migration is in progress, a notice will be added in the Alarm Console. Once the migration is completed, the notice will be cleared and an information event will be generated, stating that the migration has finished.
 
-   - A ``MigrationStatus`` will be created in the table for resources and resource pools. <!-- TBD -->
+   - In the *MigrationStatus* table in SLNetClientTest tool, a row will be created for resources and for resource pools. These rows will updated to reflect the migration progress while the migration is ongoing.
 
-   - All resources and resource pools will be loaded from the *Resources.xml* file on the **DataMiner Agent where the migration was triggered**. The *Resources.xml* files of the **other DataMiner Agents** in the cluster are **not migrated**.
+   - All resources and resource pools will be loaded from the *Resources.xml* file on the DataMiner Agent where the migration was triggered. The *Resources.xml* files of the other DataMiner Agents in the cluster are not migrated.
 
-   - The properties (for resources and resource pools) and property definitions (for resource pools) will be converted if needed and written to Elasticsearch. **Empty property names will be discarded** at this stage, since they cannot be indexed in Elasticsearch. **Empty property values will be replaced with an empty string**. The ``MigrationStatus`` rows for resources and resource pools will be updated to reflect the migration progress while the migration is ongoing. This process can be canceled by clicking the *Cancel Migration* button in the *Resources XML to Elastic* section.
+   - The properties (for resources and resource pools) and property definitions (for resource pools) will be converted if needed and written to Elasticsearch. **Empty property names will be discarded** at this stage, since they cannot be indexed in Elasticsearch. **Empty property values will be replaced with an empty string**.
 
-   - When both ``MigrationStatus`` objects are completed, the configuration will automatically switch to ``Elasticsearch`` storage and the local Resource Manager (where the migration was triggered) will be initialized. The notice will be cleared and an information event will be generated, stating that the migration has finished. Then all other Resource Manager instances in the cluster will be notified that they should start up and switch to Elasticsearch storage.<!-- TBD -->
+   - You can **cancel the migration process** by clicking the *Cancel Migration* button in the *Resources XML to Elastic* section.
+
+   - When the migration for both resources and resource pools is completed, the configuration will automatically switch to Elasticsearch storage, and the local Resource Manager (where the migration was triggered) will be initialized. Then all other Resource Manager instances in the cluster will be notified that they should start up and switch to Elasticsearch storage.
 
 > [!NOTE]
 > The migration should not take more than half an hour. During testing, migrating a *Resources.xml* file of 1 GB in a system with a local Elasticsearch database with took about 13 minutes.
@@ -55,11 +59,11 @@ If a ``MigrationStatus`` is stuck in the ``InProgress`` state, you will need to 
 
 ### Behavior in new installations
 
-When a new DataMiner Agent is installed, the used storage type will depend on when Resource Manager starts up for the first time:
+When a new DataMiner Agent is installed, the used storage type will depend on when Resource Manager starts up for the first time.
 
-- If DataMiner is installed with the 10.2.0 installer, and Resource Manager is used, XML storage will be used. Elasticsearch is not yet supported as a storage type for resources and resource pools in DataMiner 10.2.0. After you have upgraded this DataMiner Agent to DataMiner 10.3.0 or later, it will continue to use XML storage until you trigger the migration.
+- If DataMiner is installed with the 10.2.0 installer and Resource Manager is used, XML storage will be used. Elasticsearch is not yet supported as a storage type for resources and resource pools in DataMiner 10.2.0. After you have upgraded this DataMiner Agent to DataMiner 10.3.0 or later, it will continue to use XML storage until you trigger the migration.
 
-- If DataMiner is installed with the 10.2.0. installer, but Resource Manager never starts up while this version is used (for example because Elasticsearch is not installed, which is a requirement for Resource Manager to start), and the DataMiner Agent is then upgraded to 10.3.1, Resource Manager will use Elasticsearch storage when it is initialized.
+- If DataMiner is installed with the 10.2.0. installer but Resource Manager never starts up while this version is used (for example because Elasticsearch is not installed, which is a requirement for Resource Manager to start), and the DataMiner Agent is then upgraded to 10.3.1, Resource Manager will use Elasticsearch storage when it is initialized.
 
 - When you add a new DataMiner Agent to an existing cluster, Resource Manager will use the storage type of the DataMiner Agent that has been in the cluster the longest. If not all DataMiner Agents in the cluster are using the same storage type, during the midnight sync, all DataMiner Agents will switch to the storage type of the DataMiner Agent that has been in the cluster the longest.
 
