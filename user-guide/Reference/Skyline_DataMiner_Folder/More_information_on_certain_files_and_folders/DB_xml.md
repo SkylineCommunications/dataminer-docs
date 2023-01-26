@@ -340,7 +340,7 @@ The following configuration is possible for the offload database:
 
 - [Configuring the collation for an MSSQL database](#configuring-the-collation-for-an-mssql-database)
 
-- [Configuring data offloads to an SQL Server database in another domain](#configuring-data-offloads-to-an-sql-server-database-in-another-domain)
+- [Configuring data offloads to an MSSQL database in another domain](#configuring-data-offloads-to-an-mssql-database-in-another-domain)
 
 - [Configuring data offloads to an Oracle database](#configuring-data-offloads-to-an-oracle-database)
 
@@ -431,7 +431,7 @@ Example:
 </DataBase>
 ```
 
-### Configuring data offloads to an SQL Server database in another domain
+### Configuring data offloads to an MSSQL database in another domain
 
 If the offload database is situated in another domain, you can override the machine name with the IP address. That way, the offload database will be able to access the offload files on the other domain.
 
