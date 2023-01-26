@@ -6,7 +6,7 @@ uid: Benefits_DevOps_Professionals_Program
 
 ## Benefits
 
-By creating value for the DataMiner community, you earn DevOps Points. Not only do these points determine your [DevOps Professional level](#accumulating-dojo-reputation-points), they also allow you to enjoy the plentiful benefits attached to the DevOps Professional Program.
+By creating value for the DataMiner community, you earn DevOps Points. Not only do these points determine your [DevOps Professional level](#accumulating-devops-points), they also allow you to enjoy the plentiful benefits attached to the DevOps Professional Program.
 
 > [!NOTE]
 > We are continuously working on further evolving this key program, so new benefits or ways of collecting DevOps Points can be expected.
@@ -57,6 +57,19 @@ In general, the more active you are in the DataMiner Dojo community and the more
 
 - **Contributing to the DataMiner documentation**: DataMiner Devops Professionals work with a community mindset, and sharing knowledge and information is all about empowering each other. Therefore, you are rewarded if you participate in and [contribute to the documentation](xref:contributing) of the DataMiner platform.
 
+  Point system:
+
+  - **Correct a spelling or grammar mistake**: Spotted a typo while browsing the documentation? Click the "improve this doc" button in the top-right corner and correct it yourself. **50 points**
+  
+  - **Add missing information**: Noticed something missing halfway through reading a page on docs.dataminer.services? Add it yourself and earn up to... **300 points**
+
+  - **Deliver documentation**: Not quite comfortable using GitHub but bursting with inspiration? Send your documentation as a Word file to [Team Documentation](mailto:documentation@skyline.be) at Skyline so they can add it to DataMiner docs. Doing this, you can earn up to... **500 points**
+
+  - **Make a large contribution to docs**: Are you an expert on a DataMiner-related topic? Make a large contribution to the DataMiner docs using GitHub! Earn up to... **1000 points**
+
+  > [!TIP]
+  > Unsure of how to start contributing? Take a look at the [Contributing page](xref:contributing) or at our [video series](https://www.youtube.com/playlist?list=PLFb70A6JV6vj1f0DPcdYXExEbNWVPYMgW) on how to contribute to the DataMiner documentation!
+
 - **Contributing to the DataMiner catalog**: If you have designed a nice add-on for a DataMiner System for a specific use case, and you are willing to share this in the [DataMiner catalog](https://catalog.dataminer.services/) to help empower the larger DataMiner community, you will be eligible for 250 up to 1000 DevOps Points. This could be a custom GQI operator, a custom Teams ChatOps operator, an Object Model, a user-definable API, etc.
 
 - **Writing blog posts**: You can opt to write and submit a [blog post](https://community.dataminer.services/blog/) for the community, and upon acceptance, this will result in 500 up to 1000 points. Blog posts can revolve around any technology or topic relevant to the community or could, for example, describe a solution that you have designed with DataMiner.
@@ -65,5 +78,5 @@ In general, the more active you are in the DataMiner Dojo community and the more
 
 - **Being an advocate for the DataMiner brand**: Being an advocate is also part of the culture of being a DataMiner DevOps Professional. Therefore, mentioning DataMiner as part of your skill set in your LinkedIn profile will earn you 500 points per year. If DataMiner is mentioned in the job title in your email signature, we will hit you up with another 250 points per year. Each LinkedIn post that mentions @skyline and uses the tag #dataminerdevops will automatically result in 50 points per post.
 
-> [!NOTE]
+> [!IMPORTANT]
 > In addition to automatic tracking for most of the aforementioned activities to generate points, our community administrators will track certain activities to the best of their abilities to ensure that everybody is awarded all the points they are eligible for in due time. However, you are always welcome to expedite or facilitate the process by highlighting your activities via [devops@skyline.be](mailto:devops@skyline.be) if DevOps Points were not automatically attributed.
