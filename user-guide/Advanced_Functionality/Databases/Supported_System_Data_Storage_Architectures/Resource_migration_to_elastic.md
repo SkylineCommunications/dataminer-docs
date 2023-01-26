@@ -4,7 +4,7 @@ uid: Resources_migration_to_elastic
 
 # Resource migration to Elasticsearch
 
-Starting from DataMiner version 10.3.1/10.4.0 it is possible to migrate the resources and resource pools from the Resources.xml file to Elasticsearch. This improves the scalability and performance on systems that have a large amount of resources.
+Starting from DataMiner version 10.3.0/10.3.2 it is possible to migrate the resources and resource pools from the Resources.xml file to Elasticsearch. This improves the scalability and performance on systems that have a large amount of resources.
 
 ## Migrating from XML to Elasticsearch
 
@@ -55,8 +55,8 @@ If a ``MigrationStatus`` is stuck in the ``InProgress`` status, it will be neces
 
 When installing a new DataMiner Agent, the used storage type will depend on when the ResourceManager starts up for the first time. The following scenarios are possible:
 
-- The DataMiner is installed with the 10.2.0 installer. Elasticsearch is not supported as a storage type for resources and resource pools on this version. If the ResourceManager starts up in 10.2.0 version it will start using Xml storage. After upgrading this DataMiner Agent to 10.3.1(CU0) or later it will continue to use Xml storage until the migration is triggered.
-- The DataMiner is installed with the 10.2.0. installer. ResourceManager never starts up in this version (for example because Elasticsearch is not installed, which is a requirement for ResourceManager to start). If the DataMiner is then upgraded to 10.3.1(CU0) and ResourceManager initializes for the first time, it will use Elasticsearch storage.
+- The DataMiner is installed with the 10.2.0 installer. Elasticsearch is not supported as a storage type for resources and resource pools on this version. If the ResourceManager starts up in 10.2.0 version it will start using Xml storage. After upgrading this DataMiner Agent to 10.3.0 or later it will continue to use Xml storage until the migration is triggered.
+- The DataMiner is installed with the 10.2.0. installer. ResourceManager never starts up in this version (for example because Elasticsearch is not installed, which is a requirement for ResourceManager to start). If the DataMiner is then upgraded to 10.3.1 and ResourceManager initializes for the first time, it will use Elasticsearch storage.
 
 When adding an DataMiner Agent to a cluster, the ResourceManager will take over the storage type of the DataMiner Agent that has been in the cluster the longest. If not all DataMiner Agents in the cluster are using the same storage type, all DataMiner Agents will take over the storage type of the DataMiner Agent that has been in the cluster the longest during the midnight sync.
 
