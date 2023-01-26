@@ -94,6 +94,52 @@ ReservationInstanceType and ServiceDefinitionType can now be set to the followin
 - ResourceScheduling
 - ResourceOrchestration
 
+#### Resource migration to Elasticsearch [ID_33797] [ID_33946] [ID_34105] [ID_34207] [ID_34296] [ID_34522] [ID_34568] [ID_34784] [ID_35067] [ID_35155]
+
+<!-- MR 10.3.0 - FR 10.3.2 -->
+
+It is now possible to migrate the resources and resource pools from the *Resources.xml* file to Elasticsearch. This improves the scalability and performance on systems that have a large number of resources.
+
+To start the migration, you can use the SLNetClientTest tool. The migration app is available under *Advanced* > *Migration*.
+
+> [!WARNING]
+>
+> - Always be extremely careful when using the SLNetClientTest tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
+> - All Resource Manager instances in the cluster will restart during the migration.
+
+> [!TIP]
+> For detailed information on the migration, refer to [Resource migration to Elasticsearch](xref:Resources_migration_to_elastic).
+
+If for any reason the migration fails, you can find information in the ``SLMigrationManager.txt`` and ``SLResourceManager.txt`` log files. In this case, the existing XML setup will continue to be used and the configuration will not switch to Elasticsearch.
+
+Note that there are differences when resources and resource pools are stored in Elasticsearch, as compared to in XML:
+
+- When XML storage is used, it is not possible to remove a resource when one of the DMAs in the cluster cannot be reached, as this could cause syncing issues. No such restrictions apply when Elasticsearch storage is used.
+
+- The following restrictions apply for the properties stored in Elasticsearch:
+
+  - Property names must not start with the character ``_``.
+
+  - Property names must not contain the characters ``.`` (period), ``#`` (hashtag), ``*`` (star), ``,`` (comma), ``"`` (double quote) or ``'`` (single quote).
+
+  - Property names must not be empty or contain only whitespace characters.
+
+  - Property values must not be ``null``.
+
+  > [!NOTE]
+  > If Elasticsearch storage is enabled, and a resource or resource pool with invalid properties is added or updated, the API will return a ``ResourceManagerErrorData`` in the ``TraceData``, with reason ``InvalidCharactersInPropertyNames``.
+
+- Field names in Elasticsearch have a maximum length of 32766 bytes, which means any field of a resource or resource pool indexed in Elasticsearch can only contain 32766 bytes.
+
+  > [!NOTE]
+  > If there is an attempt to save a resource or resource pool with a field that is too big, the API will return an ``UnknownError``. The ``SLResourceManager.txt`` log file will contain the actual exception, which will mention the field that could not be indexed in Elasticsearch.
+
+- When a resource is indexed in Elasticsearch, all its properties, capacities, and capabilities will be indexed as well. This means that each unique property name and unique capacity and capability ID will become a field mapping in Elasticsearch. If there is an unusually large number of capacities, capabilities, and/or property names, this may lead to reduced performance of Elasticsearch. During testing, this was noticed when more than 300 unique field mappings were present.
+
+- If XML storage is used and you subscribe to the *ResourceManagerEventMessage*, you will receive an initial event with all resources and resource pools. This event is not sent when Elasticsearch storage is used, in order to prevent sending a message to the client containing thousands of resources.
+
+- If XML storage is used, all Resource Manager instances in the cluster will sync the resources in their XML file on startup and during the midnight sync. If Elasticsearch storage is used, DataMiner relies on Elasticsearch to do the syncing, so this does not happen during the midnight sync or on startup. However, Resource Manager will refresh the cached resources during the midnight sync by reading all resources and resource pools again from Elasticsearch.
+
 #### BREAKING CHANGE: Capacity property will no longer be initialized on new Resources [ID_34856]
 
 <!-- MR 10.3.0 - FR 10.3.2 -->

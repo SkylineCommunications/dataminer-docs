@@ -3319,6 +3319,8 @@
           topicUid: view_benchmarks
         - name: Visual Overview benchmarks
           topicUid: visual_overview_benchmarks
+        - name: Resources benchmarks
+          topicUid: resources_benchmarks
     - name: Frequently asked questions
       topicUid: faq
       items:
