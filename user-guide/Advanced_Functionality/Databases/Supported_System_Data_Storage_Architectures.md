@@ -164,6 +164,6 @@ In case of a DataMiner Failover pair, the Cassandra nodes on each of the DMAs ar
 
 ## Legacy setup with MySQL or MSSQL database
 
-In legacy DataMiner Systems using DataMiner 9.0 or older, the data storage setup involved a MySQL or MSSQL database. While this legacy setup is still supported with current DataMiner versions, many DataMiner features will not be available if you use this. In addition, support for legacy setups involving an MSSQL database as general database will end with DataMiner 10.3 (see [Third-Party Software Support Life Cycle](https://community.dataminer.services/3rd-party-software-support-life-cycle/)).
+In legacy DataMiner Systems using DataMiner 9.0 or older, the data storage setup involved a MySQL or MSSQL database. However, to have access to all recent DataMiner features, one of the recommended setups mentioned above should be used instead.
 
-We therefore recommend that you migrate such a legacy setup to one of the recommended setups mentioned above.
+While older features will continue to work with MySQL up to DataMiner 10.4.0, MSSQL is no longer supported as from DataMiner 10.3.0. For more information, see [Third-Party Software Support Life Cycle](https://community.dataminer.services/3rd-party-software-support-life-cycle/).

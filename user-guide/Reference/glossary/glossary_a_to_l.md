@@ -215,7 +215,7 @@ uid: glossary_a_to_l
 | Term | Description |
 |------|-------------|
 | G.fast | DSL (Digital Subscriber Line) protocol standard for local loops shorter than 500 m, with performance targets between 150 Mbit/s and 1 Gbit/s. |
-| General database | Dedicated database for a DataMiner Agent, which contains among others alarm and trend information. By default, a Cassandra database is used. A MySQL database is also supported.<br>MSSQL is no longer supported as general database as from DataMiner 10.3.0. |
+| General database | Dedicated database for a DataMiner Agent, which contains among others alarm and trend information. By default, a Cassandra database is used. A MySQL database is also supported. MSSQL is only supported prior to DataMiner 10.3.0.. |
 | Global constant | Fixed variable used in spectrum scripts.<br>See [Using global constants](xref:Working_with_spectrum_scripts#using-global-constants). |
 | GOTS | Government Off-The-Shelf. Term used for off-the shelf products that are created and owned by a government agency. |
 | GPIB | General Purpose Interface Bus. IEEE-488 interface used to connect sensors and programmable instruments to a computer or to other instruments. |
@@ -294,7 +294,7 @@ uid: glossary_a_to_l
 | Lite mode | A mode in DataMiner Cube that displays parameters in a customizable, more compact way.<br>See [Working with Lite parameters](xref:Working_with_Lite_parameters). |
 | LNA | Low-Noise Amplifier. Electronic device that amplifies a very low-power signal without significantly degrading its signal-to-noise ratio. |
 | LNB | Low-Noise Block downconverter. Device mounted on a satellite dish that receives radio signals from a satellite and converts them to signals that are sent to an indoor receiver via a cable. |
-| Local database | Alternative name for the general database, especially used for older DataMiner versions. This is a dedicated database for one DataMiner Agent, which contains among others alarm and trend information. By default, a Cassandra database is used. A MySQL database is also supported.<br>MSSQL is no longer supported as general database as from DataMiner 10.3.0. |
+| Local database | Alternative name for the general database, especially used for older DataMiner versions. This is a dedicated database for one DataMiner Agent, which contains among others alarm and trend information. By default, a Cassandra database is used. A MySQL database is also supported. MSSQL is only supported prior to DataMiner 10.3.0. |
 | Log level | Degree of detail at which information is logged. The higher the log level, the more information is included in the log file. |
 | Logger table | Table that is not stored in memory, but directly in the database. |
 | LSO | Life cycle Service Orchestration. In the context of DataMiner SRM, this is the service life cycle behavior defined in the service definition. Transitions in the service life cycle are executed by the DataMiner Automation scripts that are referred to in the service definition. |

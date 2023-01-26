@@ -36,9 +36,6 @@ The **general database** is the mandatory storage solution required for a fully 
 
 The **offload database** is an optional second data storage solution that can be added to a DataMiner System for the purpose of exporting the data and making it available for third-party software applications. When the DataMiner System is configured to also offload its data to the offload database, it will translate the data to more human-readable data (e.g. element ID references are replaced with element names), so that it is easier for third-party applications to digest. A DataMiner System will only write data to the offload database but will not read from it. The DataMiner System will also not perform maintenance of the offload database.
 
-> [!IMPORTANT]
-> MSSQL is no longer supported as general database as from DataMiner 10.3.0.
-
 ## DataMiner Probes
 
 A DataMiner Probe (DMP) provides standalone intelligent network management functionality, and typically reports to a central system. It has limited capabilities compared to a full DataMiner Agent, and typically, but not necessarily, runs on a small-form-factor compute instance in remote and unmanned locations where communication channels often have capacity constraints and/or intermittent availability.

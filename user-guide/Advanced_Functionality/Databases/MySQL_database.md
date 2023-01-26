@@ -11,4 +11,4 @@ On legacy DataMiner Systems, typically a MySQL (or MSSQL) database is used as th
 - [Moving MySQL data to another location](xref:Moving_MySQL_data_to_another_location)
 
 > [!IMPORTANT]
-> MSSQL is no longer supported as general database as from DataMiner 10.3.0.
+> MSSQL is no longer supported as the general database as from DataMiner 10.3.0.
