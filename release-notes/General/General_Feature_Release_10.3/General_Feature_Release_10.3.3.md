@@ -238,7 +238,7 @@ In a Cassandra database, the "time to live" (TTL) setting of spectrum trace data
 
 #### SLDataGateway would not correctly return errors when querying SLA logger tables in a Cassandra Cluster [ID_35440]
 
-<!-- MR 10.4.0 - FR 10.3.3 -->
+<!-- MR 10.3.0 - FR 10.3.3 -->
 
 SLDataGateway would not correctly return errors when querying SLA logger tables in a Cassandra Cluster, causing an error to occur in SLProtocol.
 
