@@ -49,7 +49,7 @@ To migrate the resources, you will need to use the SLNetClientTest tool.
    - When the migration for both resources and resource pools is completed, the configuration will automatically switch to Elasticsearch storage, and the local Resource Manager (where the migration was triggered) will be initialized. Then all other Resource Manager instances in the cluster will be notified that they should start up and switch to Elasticsearch storage.
 
 > [!NOTE]
-> The migration should not take more than half an hour. During testing, migrating a *Resources.xml* file of 1 GB in a system with a local Elasticsearch database with took about 13 minutes.
+> The migration should not take more than half an hour. During testing, migrating a *Resources.xml* file of 1 GB in a system with a local Elasticsearch database took about 13 minutes.
 
 ### Troubleshooting
 
