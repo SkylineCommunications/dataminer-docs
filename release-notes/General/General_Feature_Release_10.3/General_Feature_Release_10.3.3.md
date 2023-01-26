@@ -238,4 +238,16 @@ In a Cassandra database, the "time to live" (TTL) setting of spectrum trace data
 
 #### SLDataGateway would not correctly return errors when querying SLA logger tables in a Cassandra Cluster [ID_35440]
 
+<!-- MR 10.4.0 - FR 10.3.3 -->
+
 SLDataGateway would not correctly return errors when querying SLA logger tables in a Cassandra Cluster, causing an error to occur in SLProtocol.
+
+#### Automation: 'engine.RunClientProgram' overload with two parameters would incorrectly always be run synchronously [ID_35476]
+
+<!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
+
+An `engine.RunClientProgram` overload with two parameters, of which the second one controls whether the method is run either synchronously or asynchronously, would incorrectly always be run synchronously.
+
+```csharp
+RunClientProgram(String applicationPath, bool waitForCompletion)
+```

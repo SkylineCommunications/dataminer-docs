@@ -191,3 +191,13 @@ When a tree control contained EPM objects, in some cases, the alarm bubble-up fe
 When, in a dashboard or a low-code app, a *Line & area chart* component was used to visualize the capacity usage over time of a resource, it would incorrectly take into account bookings that had been canceled. Also, when two or more bookings ended at the same, it would not show the capacity usage in a correct way, and when there was no booking in the selected time range, it would show an error.
 
 In the latter case, it will now instead show a flat line indicating that the resource is not being used.
+
+#### Automation: 'engine.RunClientProgram' overload with two parameters would incorrectly always be run synchronously [ID_35476]
+
+<!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
+
+An `engine.RunClientProgram` overload with two parameters, of which the second one controls whether the method is run either synchronously or asynchronously, would incorrectly always be run synchronously.
+
+```csharp
+RunClientProgram(String applicationPath, bool waitForCompletion)
+```

@@ -128,4 +128,6 @@ Up to now, in case of a claim mismatch, an exception would be thrown. From now o
 
 #### SLDataGateway would not correctly return errors when querying SLA logger tables in a Cassandra Cluster [ID_35440]
 
+<!-- MR 10.4.0 - FR 10.3.3 -->
+
 SLDataGateway would not correctly return errors when querying SLA logger tables in a Cassandra Cluster, causing an error to occur in SLProtocol.
