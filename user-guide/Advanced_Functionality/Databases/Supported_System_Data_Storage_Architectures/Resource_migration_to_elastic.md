@@ -31,7 +31,7 @@ The migration can be triggered from the client test tool. The migration app can 
 
 1. All ResourceManagers in the cluster will now be stopped. If any ResourceManager is not reachable for some reason the migration will be canceled and all ResourceManagers will be notified to start up again without changing their storage type.
 
-1. An alarm of type notice will be created stating the migration is in progress.
+1. A notice will be added in the Alarm Console stating the migration is in progress.
 
 1. A ``MigrationStatus`` is created in the table for resources and resource pools.
 
@@ -39,7 +39,7 @@ The migration can be triggered from the client test tool. The migration app can 
 
 1. When both ``MigrationStatus`` objects are completed, the configuration will automatically switch to ``Elasticsearch`` storage and the local ResourceManager (where the migration was triggered) will initialize.
 
-1. The alarm of type notice will be cleared and an information event will be generated, stating that the migration has finished.
+1. The notice will be cleared and an information event will be generated, stating that the migration has finished.
 
 1. All other ResourceManagers in the cluster are notified they should initialize and switch to Elasticsearch storage.
 
@@ -109,7 +109,7 @@ Below you can find the result of our performance testing for resource add, updat
 
 > [!NOTE]
 >  
-> Read performance of resources and resource pools is unchanged, since all reads will go to a cache in SLNet. This was also confirmed during our testing.
+> Read performance of resources and resource pools is unchanged, since all reads will go to a cache in SLNet.
 
 ### ResourceManager startup performance
 
