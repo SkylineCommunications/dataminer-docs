@@ -53,6 +53,9 @@ The following configuration is possible for the general database:
 
 - [Example of a general database configuration](#example-of-a-general-database-configuration)
 
+> [!IMPORTANT]
+> MSSQL is no longer supported as general database as from DataMiner 10.3.0.
+
 ### Configuring the maintenance settings
 
 In the *Maintenance* tag, several attributes are available with which you can determine when records are removed from the table.

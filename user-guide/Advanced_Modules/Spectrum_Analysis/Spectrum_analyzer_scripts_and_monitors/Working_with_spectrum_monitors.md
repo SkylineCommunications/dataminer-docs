@@ -71,7 +71,7 @@ When you create a spectrum monitor, you can configure custom parameters that can
 It is possible to generate trend information for these parameters, and to have them trigger alarms.
 
 > [!NOTE]
-> - Trace trending is only available when the DMA’s general database is a MySQL database of version 5.0.3 or higher. MSSQL is also supported.
+> - Trace trending is only available when the DMA’s general database is a MySQL database of version 5.0.3 or higher. MSSQL is also supported on DataMiner versions prior to 10.3.0.
 > - Trending data for Spectrum Analysis traces is stored in the spectrum_trace table of a DMA’s general database. The data is kept for 12 months (by default) and cleaned up just like average trending data.
 > - Settings regarding storage and cleaning of trending data can be configured in the *Trending.TimeSpanSpectrumRecords* tag of the *MaintenanceSettings.xml* file. It is also possible to override the setting per element using an *\<Element>\<Trending>\<TimeSpanSpectrumRecords>* tag in the file *Element.xml*.
 

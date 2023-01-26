@@ -12,6 +12,7 @@ In older DataMiner systems, this database was also known as the "local database"
 >
 > - Settings related to the Elasticsearch database are configured separately. See [Elasticsearch database](xref:Elasticsearch_database).
 > - If you want to have an external program do queries on a DataMiner database, you will need to use an offload database for this. For information on offload database settings, see [Offload database](xref:Offload_database).
+> - MSSQL is no longer supported as general database as from DataMiner 10.3.0.
 
 ## [Cassandra cluster database](#tab/tabid-1)
 

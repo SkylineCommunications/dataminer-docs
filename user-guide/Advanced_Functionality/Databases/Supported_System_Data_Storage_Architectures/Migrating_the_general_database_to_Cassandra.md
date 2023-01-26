@@ -9,7 +9,9 @@ In legacy DataMiner Systems, a MySQL or MSSQL general database (also known as "l
 The wizard will first check if your system is ready for the migration. It checks both if the DMS is compatible and if the system requirements are met. If the system does not meet the necessary requirements, you can exit the wizard and then open it later to check again, before actually starting the migration.
 
 > [!NOTE]
-> Cassandra is free to use, so no additional license is required for the migration. Though a commercial version of the database software is also available, this is not necessary.
+>
+> - Cassandra is free to use, so no additional license is required for the migration. Though a commercial version of the database software is also available, this is not necessary.
+> - MSSQL is no longer supported as general database as from DataMiner 10.3.0.
 
 > [!TIP]
 > See also: [Cassandra - Migrating to Cassandra](https://community.dataminer.services/video/cassandra-migrating-to-cassandra/) on DataMiner Dojo

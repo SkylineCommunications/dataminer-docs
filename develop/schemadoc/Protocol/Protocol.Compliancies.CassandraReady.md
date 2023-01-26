@@ -22,7 +22,7 @@ Contains:
 
 **true**
 
-The protocol is compatible with a Cassandra database. This means for example that all database calls in the protocol's QActions can be executed against every type of local database currently supported by DataMiner (MySQL, MS SQL, and Cassandra).
+The protocol is compatible with a Cassandra database. This means for example that all database calls in the protocol's QActions can be executed against every type of local database currently supported by DataMiner (MySQL, MSSQL, and Cassandra).
 
 > [!NOTE]
 > A protocol that does not perform any local database queries will always be considered “Cassandra ready”. A protocol containing purely WMI queries will also be considered “Cassandra ready”.
