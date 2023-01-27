@@ -116,6 +116,8 @@ If you have a dependency to .NET Framework (e.g.: Skyline.DataMiner.Dev.*) then 
     <PackageTags>Skyline;DataMiner</PackageTags>
     <PackageProjectUrl>https://skyline.be</PackageProjectUrl>
     <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+    <PackageIcon>Icon.png</PackageIcon>
     ...
 </PropertyGroup>
 ```
@@ -145,15 +147,6 @@ Refer to the readme for more information.
 Always include a readme file to explain the NuGet and how to use it.
 An example can be seen for [DataMinerSystem.Common](https://www.nuget.org/packages/Skyline.DataMiner.Core.DataMinerSystem.Common#readme-body-tab)
 
-### Optional metadata
+### PackageLicenseFile and PackageIcon
 
-When creating NuGets via the [SLC SE Repository Manager](xref:TOOSLCSERepositoryManager), the pipeline will automatically add the default license and icon file. If a different license or icon needs to be used then this can be specified in the metadata.
-
-```xml
-<PropertyGroup>
-    ...
-    <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
-    <PackageIcon>Icon.png</PackageIcon>
-    ...
-</PropertyGroup>
-```
+When creating NuGets via the [SLC SE Repository Manager](xref:TOOSLCSERepositoryManager), the manager will automatically add the default license and icon file.
