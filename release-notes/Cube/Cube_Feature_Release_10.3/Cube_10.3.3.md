@@ -102,7 +102,15 @@ Leading spaces have been removed from the following port information fields:
 - SlowPoll
 - TimeoutTime
 
-#### Trending - pattern matching: A slightly larger number of missing values will now be allowed when you create a trend pattern tag [ID_35376]
+#### EPM: Data retrieved from the collector that was displayed as a table with a single row will now be displayed as single parameters [ID_35371]
+
+<!-- MR 10.4.0 - FR 10.3.3 -->
+
+In an EPM card, in some cases, data retrieved from the collector was displayed as a table with a single row, which often had the system name as primary key.
+
+From now on, data retrieved from the collector that used to be displayed as a table with a single row will now be displayed as single parameters (one for every column).
+
+#### Trending - Pattern matching: A slightly larger number of missing values will now be allowed when you create a trend pattern tag [ID_35376]
 
 <!-- MR 10.4.0 - FR 10.3.3 -->
 
