@@ -30,11 +30,15 @@ To migrate the resources, you will need to use the SLNetClientTest tool.
 
 1. In the *Resources XML to Elastic* section, click the *Start Migration* button to start the migration wizard.
 
-   - The bookings that are currently running or will start in the next hour will be shown. Resource Manager will restart during the migration, which means these bookings can potentially be affected. **No booking events will run while Resource Manager is down**.
+   The bookings that are currently running or will start in the next hour will be shown. Resource Manager will restart during the migration, which means these bookings can potentially be affected. **No booking events will run while Resource Manager is down**.
 
-   - The custom properties of the resources and resource pools that are incompatible with Elasticsearch (see [Allowed property names](#allowed-property-names)) will be shown, along with the conversion that will be automatically applied. If the *Resources.xml* file is corrupt, the properties cannot be collected. In that case, an error will be shown, and the migration will not start. If all found properties are compatible with Elasticsearch, the wizard will show *No properties that need conversion were found*.
+1. Click *Continue Migration*.
 
-   - Once the migration starts, all Resource Manager instances in the cluster will be stopped. If DataMiner cannot reach a Resource Manager instance for some reason, the migration will be canceled, and all Resource Manager instances will be notified to start up again without changing their storage type.
+   The custom properties of the resources and resource pools that are incompatible with Elasticsearch (see [Allowed property names](#allowed-property-names)) will be shown, along with the conversion that will be automatically applied. If the *Resources.xml* file is corrupt, the properties cannot be collected. In that case, an error will be shown, and the migration cannot be started. If all found properties are compatible with Elasticsearch, the wizard will show *No properties that need conversion were found*.
+
+1. If there are no properties that need conversion, click *Continue Migration* to start the actual migration process.
+
+   - All Resource Manager instances in the cluster will be stopped. If DataMiner cannot reach a Resource Manager instance for some reason, the migration will be canceled, and all Resource Manager instances will be notified to start up again without changing their storage type.
 
    - While the migration is in progress, a notice will be added in the Alarm Console. Once the migration is completed, the notice will be cleared and an information event will be generated, stating that the migration has finished.
 
@@ -44,12 +48,12 @@ To migrate the resources, you will need to use the SLNetClientTest tool.
 
    - The properties (for resources and resource pools) and property definitions (for resource pools) will be converted if needed and written to Elasticsearch. **Empty property names will be discarded** at this stage, since they cannot be indexed in Elasticsearch. **Empty property values will be replaced with an empty string**.
 
-   - You can **cancel the migration process** by clicking the *Cancel Migration* button in the *Resources XML to Elastic* section.
-
    - When the migration for both resources and resource pools is completed, the configuration will automatically switch to Elasticsearch storage, and the local Resource Manager (where the migration was triggered) will be initialized. Then all other Resource Manager instances in the cluster will be notified that they should start up and switch to Elasticsearch storage.
 
 > [!NOTE]
-> The migration should not take more than half an hour. During testing, migrating a *Resources.xml* file of 1 GB in a system with a local Elasticsearch database took about 13 minutes.
+>
+> - The migration should not take more than half an hour. During testing, migrating a *Resources.xml* file of 1 GB in a system with a local Elasticsearch database took about 13 minutes.
+> - You can cancel the migration process by clicking the *Cancel Migration* button in the *Resources XML to Elastic* section.
 
 ### Troubleshooting
 
