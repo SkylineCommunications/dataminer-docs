@@ -23,7 +23,7 @@ To migrate the resources, you will need to use the SLNetClientTest tool.
 1. Connect to the DMS using the *SLNetClientTest* tool:
 
     1. In the *SLNetClientTest* tool, go to *Connection* > *Connect*.
-    1. In the *Connect* window, under *Authentication*, select *Explicit credentials* and specify the Administrator credentials.
+    1. In the *Connect* window, under *Authentication*, select *Explicit credentials* and specify the credentials of an administrator user.
     1. Click the *Connect* button.
 
 1. In the *Advanced* menu, select *Migration*.
@@ -36,15 +36,15 @@ To migrate the resources, you will need to use the SLNetClientTest tool.
 
    The custom properties of the resources and resource pools that are incompatible with Elasticsearch (see [Allowed property names](#allowed-property-names)) will be shown, along with the conversion that will be automatically applied. If the *Resources.xml* file is corrupt, the properties cannot be collected. In that case, an error will be shown, and the migration cannot be started. If all found properties are compatible with Elasticsearch, the wizard will show *No properties that need conversion were found*.
 
-1. If you agree with the proposed conversion of the properties or no conversion is necessary, click *Continue Migration* to start the actual migration process.
+1. If you agree with the proposed conversion of the properties or no conversion is necessary, click *Continue Migration* to start the actual migration process. If you do not accept the conversion, click *Cancel Migration*.
+
+   - A window will show the migration actions that have been scheduled. This window can be closed, the migration will continue in the background. The progress of the scheduled actions will be shown in the *MigrationStatus* table in SLNetClientTest tool, where a row will be created for the resources and resource pools migration. These rows will be updated to reflect the progress of the migration.
 
    - All Resource Manager instances in the cluster will be stopped. If DataMiner cannot reach a Resource Manager instance for some reason, the migration will be canceled, and all Resource Manager instances will be notified to start up again without changing their storage type.
 
    - While the migration is in progress, a notice will be added in the Alarm Console. Once the migration is completed, the notice will be cleared and an information event will be generated, stating that the migration has finished.
 
-   - In the *MigrationStatus* table in SLNetClientTest tool, a row will be created for resources and for resource pools. These rows will updated to reflect the migration progress while the migration is ongoing.
-
-   - All resources and resource pools will be loaded from the *Resources.xml* file on the DataMiner Agent where the migration was triggered. The *Resources.xml* files of the other DataMiner Agents in the cluster are not migrated.
+   - All resources and resource pools will be loaded from the *Resources.xml* file on the DataMiner Agent where the migration was triggered. The *Resources.xml* files of the other DataMiner Agents in the cluster are not migrated. This is not a problem since the *Resources.xml* file is synced in the cluster.
 
    - The properties (for resources and resource pools) and property definitions (for resource pools) will be converted if needed and written to Elasticsearch. **Empty property names will be discarded** at this stage, since they cannot be indexed in Elasticsearch. **Empty property values will be replaced with an empty string**.
 
@@ -59,7 +59,7 @@ To migrate the resources, you will need to use the SLNetClientTest tool.
 
 If the migration should fail for any reason, the migration status object in the SLNetClientTest tool window will get a red background color. The ``SLMigrationManager.txt`` and ``SLResourceManager.txt`` log files will contain more information. Resource Manager will not switch the configuration, so XML storage will still be used after a failed migration.
 
-If a ``MigrationStatus`` is stuck in the ``InProgress`` state, you will need to cancel the migration to make all Resource Manager instances start or to trigger the migration again. You can do so with the *Cancel Migration* button in the SLNetClientTest tool window.
+If a ``MigrationStatus`` is stuck in the ``InProgress`` state, you will need to cancel the migration to make all Resource Manager instances start or to trigger the migration again. You can do so with the *Cancel Migration* button in the *Resources XML to Elastic* section of the   in the SLNetClientTest tool window.
 
 ### Behavior in new installations
 
@@ -67,7 +67,7 @@ When a new DataMiner Agent is installed, the used storage type will depend on wh
 
 - If DataMiner is installed with the 10.2.0 installer and Resource Manager is used, XML storage will be used. Elasticsearch is not yet supported as a storage type for resources and resource pools in DataMiner 10.2.0. After you have upgraded this DataMiner Agent to DataMiner 10.3.0 or later, it will continue to use XML storage until you trigger the migration.
 
-- If DataMiner is installed with the 10.2.0. installer but Resource Manager never starts up while this version is used (for example because Elasticsearch is not installed, which is a requirement for Resource Manager to start), and the DataMiner Agent is then upgraded to 10.3.1, Resource Manager will use Elasticsearch storage when it is initialized.
+- If DataMiner is installed with the 10.2.0. installer but Resource Manager never starts up while this version is used (for example because Elasticsearch is not installed, which is a requirement for Resource Manager to start, since Elasticsearch is used to store bookings), and the DataMiner Agent is then upgraded to 10.3.1, Resource Manager will use Elasticsearch storage when it is initialized.
 
 - When you add a new DataMiner Agent to an existing cluster, Resource Manager will use the storage type of the DataMiner Agent that has been in the cluster the longest. If not all DataMiner Agents in the cluster are using the same storage type, during the midnight sync, all DataMiner Agents will switch to the storage type of the DataMiner Agent that has been in the cluster the longest.
 
@@ -102,7 +102,7 @@ Field names in Elasticsearch have a maximum length of 32766 bytes, which means a
 
 ### Number of indices
 
-When a resource is indexed in Elasticsearch, all its properties, capacities, and capabilities will be indexed as well. This means that each unique property name and unique capacity and capability ID will become a field mapping in Elasticsearch. If there is an unusually large number of capacities, capabilities, and/or property names, this may lead to reduced performance of Elasticsearch. During testing, this was noticed when more than 300 unique field mappings were present.
+When a resource is indexed in Elasticsearch, all its properties, capacities, and capabilities will be indexed as well. This means that each unique property name and unique capacity and capability ID will become a field mapping in Elasticsearch. If there is an unusually large number of capacities, capabilities, and/or property names, this may lead to reduced performance of Elasticsearch. During testing, this was noticed when more than 300 unique field mappings were present. It is thus recommended to not have more than 300 unique capacity IDs, capability IDs and property names over all resources in the system.
 
 ### Initial event on subscriptions
 
@@ -110,4 +110,4 @@ If XML storage is used and you subscribe to the *ResourceManagerEventMessage*, y
 
 ### Syncing
 
-If XML storage is used, all Resource Manager instances in the cluster will sync the resources in their XML file on startup and during the midnight sync. If Elasticsearch storage is used, DataMiner relies on Elasticsearch to do the syncing, so this does not happen during the midnight sync or on startup. However, Resource Manager will refresh the cached resources during the midnight sync by reading all resources and resource pools again from Elasticsearch.
+If XML storage is used, all Resource Manager instances in the cluster will sync the resources in their XML file on startup and during the midnight sync. If Elasticsearch storage is used, DataMiner relies on Elasticsearch to do the syncing, so this does not happen during the midnight sync or on startup. However, Resource Manager will refresh the cached resources during the midnight sync by reading all resources and resource pools again from Elasticsearch. There is no functional difference between these approaches, but using Elasticsearch as storage will reduce the communication between Resource Managers in a cluster environment.
