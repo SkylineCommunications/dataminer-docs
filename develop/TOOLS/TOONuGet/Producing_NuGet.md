@@ -51,7 +51,7 @@ If there is a dependency on multiple DataMiner DLLs that are by default included
 
 If possible, try to target .NET Standard 2.0 as that gives the most flexibility to be used somewhere else.
 
-If you have a dependency to .NET Framework (e.g.: DataMiner DLLs) then you need to target .NET Framework as well.
+If you have a dependency to .NET Framework (e.g.: Skyline.DataMiner.Dev.*) then you need to target .NET Framework as well.
 
 > [!IMPORTANT]
 > Prior to DataMiner 10.1.11 (RN 30755) when using a .NET Standard 2.0 NuGet in a QAction or Exe, you need to manually add a reference to .NET Standard.
