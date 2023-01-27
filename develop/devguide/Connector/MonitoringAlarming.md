@@ -70,7 +70,7 @@ For parameters holding discrete values, the discrete value can be used for setti
 > [!NOTE]
 >
 > - In DataMiner, the corresponding display value (as indicated in the Display tag) will be displayed in the alarm template.
-> - For parameters with measurement type set to discreet or string, the low severity levels are not applicable (i.e. only the tags Normal, WaH, MiH, WaH and CH can be used in this case).
+> - For parameters with measurement type set to discreet or string, the low severity levels are not applicable (i.e. only the tags Normal, WaH, MiH, MaH and CH can be used in this case).
 
 ```xml
 <Param id="10" trending="true">
