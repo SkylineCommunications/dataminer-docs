@@ -172,6 +172,18 @@ When a discrete parameter with a `<Sequence>` tag was displayed in a lite parame
 
 When a tree control contained many-to-many relationships, up to now, the alarm bubble-up feature would not work correctly.
 
+#### Problem when connecting to Azure AD via a proxy [ID_35382]
+
+<!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
+
+When a DataMiner Agent connected to Azure Active Directory was sealed off from the internet but had access to a proxy, users would not be able to log in due to SLDataMiner failing to use the proxy to connect to Azure Active Directory.
+
+In case a DataMiner Agent has to connect to Azure AD via a proxy, then that proxy has to be configured by means of the following netsh command:
+
+```txt
+netsh winhttp set proxy <proxyaddress> <bypasslist>
+```
+
 #### Cassandra: TTL setting of spectrum trace data would not be applied correctly [ID_35385]
 
 <!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
