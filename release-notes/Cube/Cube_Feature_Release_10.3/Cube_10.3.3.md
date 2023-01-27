@@ -104,7 +104,7 @@ Leading spaces have been removed from the following port information fields:
 
 #### EPM: Data retrieved from the collector that was displayed as a table with a single row will now be displayed as single parameters [ID_35371]
 
-<!-- MR 10.4.0 - FR 10.3.3 -->
+<!-- MR 10.3.0 - FR 10.3.3 -->
 
 In an EPM card, in some cases, data retrieved from the collector was displayed as a table with a single row, which often had the system name as primary key.
 
