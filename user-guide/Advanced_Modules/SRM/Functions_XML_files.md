@@ -163,5 +163,5 @@ To delete a functions file (from DataMiner 9.5.13 onwards):
 - In the Protocols & Templates module, right-click the functions file you want to remove and select *Delete*.
 
 > [!NOTE]
-> Only inactive functions files can be removed. In addition, in case the functions file is in use in the Service & Resource Management configuration, removing the file will only be possible with the *Modules* > *Services* > *Force Updates* (or prior to DataMiner 9.6.5 *Modules* > *Service Manager* > *Definitions* > *Force updates*) user permission.
+> Only inactive functions files can be removed. In addition, in case the functions file is in use in the Service & Resource Management configuration, removing the file will only be possible with the *Modules* > *Services* > *Definitions* > *Force Updates* (or prior to DataMiner 9.6.5 *Modules* > *Service Manager* > *Force updates*) user permission.
 >
