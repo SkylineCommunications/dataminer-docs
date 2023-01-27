@@ -1035,3 +1035,9 @@ When you edited the properties of a tag (e.g. name, description, etc.), the tren
 <!-- MR 10.3.0 - FR 10.3.3 -->
 
 When you exported a trend graph containing average trend data to CSV, in some cases, the exported data would be parsed incorrectly.
+
+#### DataMiner Cube - Visual Overview: Problem when filtering bookings in a ListView component [ID_35430]
+
+<!-- MR 10.3.0 - FR 10.3.3 -->
+
+When, in Visual Overview, a filter was applied to a *ListView* component that listed bookings, no account would be taken of bookings added after the filter had been applied. As a result, in some cases, the *ListView* component would list bookings that did not match the filter.
