@@ -11,6 +11,9 @@ uid: Part1GettingStarted
 - [Accessing DataMiner](xref:DataminerApplications)
 - [The DataMiner user interface](xref:GettingStarted)
 
+> [!NOTE]
+> For detailed installation information, see [Installing a DataMiner Agent](xref:Installing_a_DataMiner_Agent).
+
 ### Discover DataMiner in detail
 
 - [Basic DataMiner functionality](xref:Part2BasicFunctionalities)
