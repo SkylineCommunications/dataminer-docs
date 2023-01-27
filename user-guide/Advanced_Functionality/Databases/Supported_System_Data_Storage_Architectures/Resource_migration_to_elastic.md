@@ -69,7 +69,7 @@ When a new DataMiner Agent is installed, the used storage type will depend on wh
 
 - If DataMiner is installed with the 10.2.0 installer and Resource Manager is used, XML storage will be used. Elasticsearch is not yet supported as a storage type for resources and resource pools in DataMiner 10.2.0. After you have upgraded this DataMiner Agent to DataMiner 10.3.0 or later, it will continue to use XML storage until you trigger the migration.
 
-- If DataMiner is installed with the 10.2.0. installer but Resource Manager never starts up while this version is used (for example because Elasticsearch is not installed, which is a requirement for Resource Manager to start as Elasticsearch is used to store bookings), and the DataMiner Agent is then upgraded to 10.3.1, Resource Manager will use Elasticsearch storage when it is initialized.
+- If DataMiner is installed with the 10.2.0 installer but Resource Manager never starts up while this version is used (for example because Elasticsearch is not installed, which is a requirement for Resource Manager to start as Elasticsearch is used to store bookings), and the DataMiner Agent is then upgraded to 10.3.1, Resource Manager will use Elasticsearch storage when it is initialized.
 
 - When you add a new DataMiner Agent to an existing cluster, Resource Manager will use the storage type of the DataMiner Agent that has been in the cluster the longest. If not all DataMiner Agents in the cluster are using the same storage type, during the midnight sync, all DataMiner Agents will switch to the storage type of the DataMiner Agent that has been in the cluster the longest.
 
