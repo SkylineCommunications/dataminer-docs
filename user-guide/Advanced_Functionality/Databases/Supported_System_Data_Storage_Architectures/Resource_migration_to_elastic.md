@@ -38,7 +38,7 @@ To migrate the resources, you will need to use the SLNetClientTest tool.
 
 1. If you agree with the proposed conversion of the properties or no conversion is necessary, click *Continue Migration* to start the actual migration process. If you do not accept the conversion, click *Cancel Migration*.
 
-   - A window will show the migration actions that have been scheduled. This window can be closed, the migration will continue in the background. The progress of the scheduled actions will be shown in the *MigrationStatus* table in SLNetClientTest tool, where a row will be created for the resources and resource pools migration. These rows will be updated to reflect the progress of the migration.
+   - A window will show the migration actions that have been scheduled. This window can be closed, the migration will continue in the background. The progress of the scheduled actions will be shown in the *MigrationStatus* table in SLNetClientTest tool, where a row will be created for the migration of resources and resource pools. These rows will be updated to reflect the progress of the migration.
 
    - All Resource Manager instances in the cluster will be stopped. If DataMiner cannot reach a Resource Manager instance for some reason, the migration will be canceled, and all Resource Manager instances will be notified to start up again without changing their storage type.
 
