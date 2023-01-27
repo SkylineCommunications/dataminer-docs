@@ -166,6 +166,9 @@ When you have done so:
 1. Go to *Advanced* and select *This cluster requires SSL*.
 
 1. Point it towards your *rootCA.jks* truststore file and use the password you used to generate it.
+   
+> [!NOTE]
+> Currenly, we only support TLS version 1.0 for the Client-Server encryption. If connecting to cassandra over TLS fails, make sure to check that this version is not disabled on operating system level.
 
 ## Connecting with DataMiner
 
