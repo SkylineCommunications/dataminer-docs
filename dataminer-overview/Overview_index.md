@@ -10,7 +10,7 @@ We are working on adding more information to this section soon, so check back fo
 
 - [General introduction](xref:Overview_General_Introduction)
 - [DataMiner platform – empowering your digital transformation](xref:Overview_Platform_intro)
-- [DataMiner Cloud Platform](xref:Overview_DCP)
+- [dataminer.services](xref:Overview_DCP)
 - [Agile partnership](xref:Overview_Agile_Partnership_intro)
 - [Training courses and certification](xref:Overview_Training_intro)
 - [Pricing](xref:Pricing)
