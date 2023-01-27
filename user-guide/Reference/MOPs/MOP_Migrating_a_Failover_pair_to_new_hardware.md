@@ -38,9 +38,9 @@ Access to the DMAs with administrator rights. This requires a connection dedicat
 1. As an additional safety, copy the `ProgramData/Cassandra` folder of the main DMA and the *Views.xml* file of each server. The latter can be used to resolve issues in case the Surveyor structure is different after the migration.
 1. Modify the DataMiner backup package as follows:
 
-    1. Change the extension from *.dmupgrade* to *.zip*.
+    1. Change the extension from *.dmbackup* to *.zip*.
     1. Open the compressed archive and remove the file *DMS.xml*.
-    1. Change the package extension back to *.dmupgrade*.
+    1. Change the package extension back to *.dmbackup*.
 
 1. Install a fresh copy of DataMiner on the new hardware:
 

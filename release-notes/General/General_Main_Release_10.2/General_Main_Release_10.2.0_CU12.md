@@ -198,6 +198,12 @@ In the latter case, it will now instead show a flat line indicating that the res
 
 SLDataGateway would not correctly return errors when querying SLA logger tables in a Cassandra Cluster, causing an error to occur in SLProtocol.
 
+#### DataMiner Cube - DCF: Problem when trying to delete a DCF connection in the Properties window of an element [ID_35449]
+
+<!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
+
+When you tried to remove a DCF connection in the *Properties* window of an element, an exception would be thrown and the connection would not be removed when the destination element was stopped or paused.
+
 #### DataMiner Cube - Visual Overview: Problem when re-arranging dynamically positioned shapes [ID_35462]
 
 <!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
