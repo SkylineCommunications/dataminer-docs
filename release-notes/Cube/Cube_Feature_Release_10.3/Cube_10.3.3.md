@@ -156,6 +156,12 @@ From now on, Cube will check whether the pattern matching feature is enabled eac
 
 When a tree control contained EPM objects, in some cases, the alarm bubble-up feature would not work correctly.
 
+#### DataMiner Cube - Spectrum analysis: Presets would not be loaded when opening a spectrum element while connected to a heavily loaded DMA [ID_35421]
+
+<!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
+
+When you opened a spectrum element in a DataMiner Cube that was connected to a heavily loaded DataMiner Agent, the presets would not be loaded.
+
 #### DataMiner Cube - DCF: Problem when trying to delete a DCF connection in the Properties window of an element [ID_35449]
 
 <!-- MR 10.2.0 [CU12] - FR 10.3.3 -->

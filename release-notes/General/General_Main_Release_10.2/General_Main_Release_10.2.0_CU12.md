@@ -192,6 +192,12 @@ When, in a dashboard or a low-code app, a *Line & area chart* component was used
 
 In the latter case, it will now instead show a flat line indicating that the resource is not being used.
 
+#### DataMiner Cube - Spectrum analysis: Presets would not be loaded when opening a spectrum element while connected to a heavily loaded DMA [ID_35421]
+
+<!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
+
+When you opened a spectrum element in a DataMiner Cube that was connected to a heavily loaded DataMiner Agent, the presets would not be loaded.
+
 #### SLDataGateway would not correctly return errors when querying SLA logger tables in a Cassandra Cluster [ID_35440]
 
 <!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
