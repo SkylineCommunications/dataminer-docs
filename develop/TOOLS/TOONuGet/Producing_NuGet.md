@@ -37,6 +37,9 @@ Using SDK-style projects, you can still target .NET Framework:
 </PropertyGroup>
 ```
 
+> [!NOTE]
+> When using SDK project style, open your repository jenkins file with a text editor and make sure the master file being used is the 'MasterFiles\Custom Solution\JenkinsSDK'.
+
 ### Dependencies
 
 If there is a dependency on a DataMiner DLL (from the Skyline DataMiner/Files folder), use the corresponding NuGet ([Skyline.DataMiner.Files.XXX](https://www.nuget.org/packages?q=Skyline.DataMiner.Files.)).  
@@ -50,7 +53,7 @@ If possible, try to target .NET Standard 2.0 as that gives the most flexibility 
 
 If you have a dependency to .NET Framework (e.g.: DataMiner DLLs) then you need to target .NET Framework as well.
 
-> [!NOTE]
+> [!IMPORTANT]
 > Prior to DataMiner 10.1.11 (RN 30755) when using a .NET Standard 2.0 NuGet in a QAction or Exe, you need to manually add a reference to .NET Standard.
 >
 > ```xml
