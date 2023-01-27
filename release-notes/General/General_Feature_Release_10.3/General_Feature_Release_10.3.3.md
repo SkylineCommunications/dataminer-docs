@@ -166,6 +166,12 @@ From now on, when you zoom in or out, the data of the previous zoom level will s
 
 During a DataMiner upgrade, Microsoft .NET 6.0 will now be installed if not installed already.
 
+#### Maps: Zoom range can now be set by means of a slider [ID_35381]
+
+<!-- MR 10.4.0 - FR 10.3.3 -->
+
+The zoom range of a map can now be set by means of a slider.
+
 ### Fixes
 
 #### DataMiner Taskbar Utility: Problem when stopping DataMiner [ID_34790]
