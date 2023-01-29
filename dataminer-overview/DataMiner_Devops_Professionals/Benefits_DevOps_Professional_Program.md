@@ -32,7 +32,7 @@ A short overview of all benefits that can be unlocked using DevOps Points:
 - Exclusive option to convert your DevOps Points to DataMiner Cloud Credits or Professional Service Credits
 
 > [!TIP]
-> You can find a more extensive overview of all benefits on [DatMiner Dojo](https://community.dataminer.services/dataminer-devops-professional-program/#benefits).
+> You can find a more extensive overview of all benefits on [DataMiner Dojo](https://community.dataminer.services/dataminer-devops-professional-program/#benefits).
 
 ## Accumulating DevOps Points
 
