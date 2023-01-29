@@ -2,7 +2,7 @@
 uid: Logging_on_to_the_DataMiner_Cloud_Platform
 ---
 
-# Logging on to the DataMiner Cloud Platform
+# Logging on to the DataMiner.Services Platform (Propose replacing DataMiner Cloud" with "DataMiner.Services"
 
 ### Customers and DataMiner Strategic Partners
 
