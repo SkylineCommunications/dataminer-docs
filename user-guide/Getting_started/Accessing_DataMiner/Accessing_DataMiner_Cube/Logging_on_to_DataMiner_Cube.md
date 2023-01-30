@@ -20,9 +20,8 @@ When you open DataMiner Cube, in most cases you will be logged on automatically 
 
 1. Optionally select *Remember me* in order to log in automatically next time.
 
-> [!TIP]
->
-> - You can hold `Shift` key during Cube startup if you don’t want to be automatically logged in.
+   > [!TIP]
+   > If you do not want to log in automatically, hold the `Shift` key during DataMiner Cube startup.
 
 1. Click the blue arrow icon below the user information to log on.
 
