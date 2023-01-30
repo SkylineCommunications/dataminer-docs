@@ -44,8 +44,9 @@ When something goes wrong during the CRUD actions, the `TraceData` can contain o
 | DomInstanceRequiresLinkToValidDomDefinition | The `DomInstance` has no valid and/or existing `DomDefinitionID` configured. Available properties: *DomInstance*. |
 | SectionsUsedInDomInstanceDoNotMatchRequirementsOfDomDefinition | The `DomInstance` does not contain at least one `Section` for each `SectionDefinition` defined on the `DomDefinition` or contains `Sections` for `SectionDefinitions` that are not defined on that `DomDefinition`. Available properties: *DomInstance*, *DomDefinition*, *MissingSections*, *InvalidSections* |
 | DomInstanceDoesNotContainRequiredModuleSections | The `DomInstance` does not contain exactly one `Section` for each required `SectionDefinition` defined for this module. Available properties: *DomInstance*, *MissingSections*, *InvalidSections* |
+| MultipleSectionsNotAllowedForSectionDefinition | The `DomInstance` contains more than one `Section` for a `SectionDefinition` that does not allow multiple `Sections` according to either the `SectionDefinitionLink` or the `DomStatusSectionDefinitionLink`. Available properties: *InvalidSections* |
 
-The errors below are related to the status system. For each error, the *DomInstanceId*, *DomInstanceName*, and *StatusId* properties will be filled in alongside any others that are mentioned in the description.
+The errors below are solely related to the status system. For each error, the *DomInstanceId*, *DomInstanceName*, and *StatusId* properties will be filled in alongside any others that are mentioned in the description.
 
 | Reason | Description |
 |--|--|
