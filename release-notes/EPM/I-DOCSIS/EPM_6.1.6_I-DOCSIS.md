@@ -17,11 +17,23 @@ New aggregation operations were added to the hub, market, network, CCAP, service
 
 Both on the *Configuration* page of the Skyline EPM Platform element and in the front-end EPM visual overview, a toggle button is now available that can be used to show or hide the PNM layers on the Node Segment map.
 
-#### Alarm color for total alarm statistics represented by colored circles in EPM visual overviews [ID_35451]
+#### Alarm color for total alarm statistics represented by colored circles in EPM visual overviews [ID_35451] [ID_35483]
 
 For the total alarm statistics in the EPM visual overviews, colored circles will now be displayed that show the current alarm color. If there are no alarms, a gray color will be displayed, otherwise the color will reflect the alarm severity (critical, major, minor, or warning). This has been implemented by adding conditions to four circle shapes based on the total alarm statistics.
 
-For the Skyline EPM Platform visual overview, the alarm statistics are shown both on the *Service Group [Fiber Node]* page and on the *CCAP* page. For the Skyline EPM Platform DOCSIS visual overview, they are located on the *CCAP* page.
+For the Skyline EPM Platform visual overview, the alarm statistics are shown both on the *Service Group [Fiber Node]* page and on the *CCAP* page. For the Skyline EPM Platform DOCSIS visual overview, they are located on the *CCAP* page. For the I-DOCSIS Network visual overview, they are shown on the *Overview* page.
+
+#### Status parameter for CM QAM US/DS tables added [ID_35369]
+
+The Status parameter present in the CM QAM US/DS tables in the Generic CM Collector has now been added to all CCAPs and to the EPM back end and front end. In the front end, a filter has also been added that only shows the active channels for a cable modem.
+
+#### US QAM Channel Time Offset calculation updated [ID_35505]
+
+The calculation of the Timing Offset for Upstream channels on a CCAP has been updated.
+
+For DOCSIS v3, this is now calculated as follows: Time Offset = Upstream ticks * (6.25/(64*256)) * (97.6 / 1000).
+
+For other DOCSIS versions, it is calculated as follows: Time Offset = Upstream ticks * (6.25/64) * (97.6 / 1000).
 
 ## Changes
 
@@ -96,3 +108,7 @@ When the Number Ping OK parameter had a value larger than the number of CMs, the
 #### Link to dashboard does not apply filter [ID_35207]
 
 When a user clicked the dashboard icon, this opened a dashboard without applying a filter. Now a filter has been included in the dashboard link.
+
+#### ArgumentNullException when CCAP tried to read information from files [ID_35294]
+
+When the CCAP tried to read information from files, an "ArgumentNullException" could be thrown when it encountered a dictionary with null values. This has now been corrected.
