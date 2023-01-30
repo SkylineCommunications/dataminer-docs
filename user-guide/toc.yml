@@ -2376,6 +2376,8 @@
               topicUID: VSAT_parameters
             - name: EPM VSAT topology
               topicUID: VSAT_EPM_Topology
+            - name: EPM VSAT metrics
+              topicUID: VSAT_metrics
     - name: DataMiner IDP app
       topicUid: SolIDP
       items:
