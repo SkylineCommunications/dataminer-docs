@@ -59,7 +59,7 @@ In general, the more active you are in the DataMiner Dojo community and the more
 
   Point system:
 
-  - **Correct a spelling or grammar mistake**: Spotted a typo while browsing the documentation? Click the "improve this doc" button in the top-right corner and correct it yourself. **50 points**
+  - **Correct a spelling or grammar mistake**: Spotted a typo while browsing the documentation? Click the "improve this doc" button in the top-right corner and correct it yourself. **25 points**
   
   - **Add missing information**: Noticed something missing halfway through reading a page on docs.dataminer.services? Add it yourself and earn up to... **300 points**
 
