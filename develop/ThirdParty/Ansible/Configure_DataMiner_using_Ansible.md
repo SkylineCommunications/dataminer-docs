@@ -6,7 +6,7 @@ uid: Configure_DataMiner_using_Ansible
 
 ## Ansible
 
-With Ansible it's possible to enable Infrastructure as a code in your organisation. It's an open-source software tool that runs on a Linux based OS but can control any kind of OS (Windows, Linux and Mac). With the tool you can do provisioning, configuration management and application deployment.
+With Ansible it's possible to enable Infrastructure as a code in your organization. It's an open-source software tool that runs on a Linux based OS but can control any kind of OS (Windows, Linux and Mac). With the tool you can do provisioning, configuration management and application deployment.
 
 This means you can also provision your DataMiner!
 
@@ -16,17 +16,17 @@ Full documentation and how Ansible works can be found [here](https://docs.ansibl
 
 ### Installing Ansible
 
-For the installation of Ansible you can follow the guide created by the Ansible team. There you can find the requirements of the server, but also the exact steps to install it on your prefered OS (Linux). With the following link you will open the [Installation guide](https://docs.ansible.com/ansible/latest/installation_guide/index.html).
+For the installation of Ansible you can follow the guide created by the Ansible team. There you can find the requirements of the server, but also the exact steps to install it on your preferred OS (Linux). With the following link you will open the [Installation guide](https://docs.ansible.com/ansible/latest/installation_guide/index.html).
 
 If you want to control a Windows OS, some additional configuration needs to be done on the server. The steps for this you can find [here](https://docs.ansible.com/ansible/latest/os_guide/windows_usage.html).
 
 ### Configure your inventory
 
 To use Ansible Playbook you have to create your Inventory. This is really easy to do.
-The full documenten can be found [here](https://docs.ansible.com/ansible/latest/inventory_guide/intro_inventory.html#inventory-basics-formats-hosts-and-groups).
+The full document can be found [here](https://docs.ansible.com/ansible/latest/inventory_guide/intro_inventory.html#inventory-basics-formats-hosts-and-groups).
 
 For DataMiner, you have to create a group for each DataMiner you want to provide with data. This because only 1 agent in a cluster needs to receive the provisioning.
-You can offcourse provision different DMA's in the cluster with different data to spread the load.
+You can off course provision different DMAs in the cluster with different data to spread the load.
 
 In the inventory file you can use the IP or the hostname of the server.
 
@@ -49,7 +49,7 @@ By clicking on one of those request, you can see what variables are needed for t
 As you can see you need several parameters for the request:
 
 - host = hostname of server, can be the IP or hostname
-- loging = username to login in the DataMiner system
+- logging = username to login in the DataMiner system
 - password = password of the user
 - ClientAppName = a visual name so you can see in your logs what is connected
 - ClientAppVersion = the version of your App
@@ -59,10 +59,10 @@ You can see you also have a response:
 
 - ConnectAppResult = this key is needed to use in the other requests
 
-![ConnectApp API Request](~/images/Ansible_webapi.png)
+![ConnectApp API Request](~/develop/images/Ansible_webapi.png)
 
 > [!TIP]
-> It can be helpfull to first test the API request with an API platform like Postman to test your requests and see the returned values.
+> It can be helpful to first test the API request with an API platform like Postman to test your requests and see the returned values.
 
 ### Installing DataMiner App Package
 
@@ -74,7 +74,7 @@ For this demo, you can download and install this [DataMiner App Package](https:/
 ### Provision DataMiner
 
 To create the playbook you create a new yaml file. This yaml file has to start with 3 dashes.
-You give your playbook a name and define the hosts to run on. This should be the group name you used in your invetory file from Ansible. In the test case you can see this is called **DataMiner**.
+You give your playbook a name and define the hosts to run on. This should be the group name you used in your inventory file from Ansible. In the test case you can see this is called **DataMiner**.
 
 To be able to reuse some values, you can use vars in your playbook.
 The variables are defined at the top of your playbook under **vars**.
@@ -85,7 +85,7 @@ For the JSON request you also need the endpoints that will be used. This is also
 
 ```yaml
 ---
-- name: DataMiner Provisiong Example
+- name: DataMiner Provisioning Example
   hosts: DataMiner
   vars:
     jsonServer: "https://DataMinerServer/API/v1/json.asmx"
@@ -101,7 +101,7 @@ For the JSON request you also need the endpoints that will be used. This is also
 After defining the variables its time to define the tasks of the Ansible Playbook.
 You can have a lot of different tasks, below you'll only see some that are available in Ansible, but on the help pages of Ansible you can find more types of tasks.
 
-The first tasks is a way to display some text on the screen. This can be usefull to debug, or have a better overview of what is happening. In the example below you'll post a message to the screen to show you have started the playbook.
+The first tasks is a way to display some text on the screen. This can be useful to debug, or have a better overview of what is happening. In the example below you'll post a message to the screen to show you have started the playbook.
 
 ```yaml
     tasks:
@@ -129,7 +129,7 @@ The body part then defines the parameters for the request. These are the paramet
         body: '{
             "host": "{{server}}",
             "login": "[Insert DataMiner User]",
-            "password": "[Inser Password of DataMiner User]",
+            "password": "[Insert Password of DataMiner User]",
             "clientAppName": "[Name for your connection]",
             "clientAppVersion": "1.0",
             "clientComputerName": "[Client Computer Name]]"
@@ -140,7 +140,7 @@ The body part then defines the parameters for the request. These are the paramet
 Now you can use the value of this connectionId to do other requests on DataMiner. You'll first create a View on DataMiner. For this you create again a new task with a name.
 
 The request is again a JSON request as above. But for the **connection** parameter you can see you'll now use a special variable. This is the variable of **connection**, then parsed to JSON and you'll use the value of parameter **d** in this JSON.
-To know the output of a request, it's usefull to first test it in an API tool, so you can easily see the response you get.
+To know the output of a request, it's useful to first test it in an API tool, so you can easily see the response you get.
 
 The **parentViewID** is here configured to have the root view as parent. This root view is defined with **-1**.
 

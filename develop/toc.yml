@@ -5447,8 +5447,7 @@
           topicUid: DMS_protocol
         - name: Viewer
           topicUid: Viewer
-- name: ThirdParty Integrations
-  topicUid: ThirdParty
-  items: 
+- name: Third-party integrations
+  items:
     - name: Ansible
-      topicUid: Ansible
+      topicUid: Configure_DataMiner_using_Ansible
