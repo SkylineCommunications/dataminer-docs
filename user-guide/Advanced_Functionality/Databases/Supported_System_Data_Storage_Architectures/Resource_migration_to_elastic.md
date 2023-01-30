@@ -12,14 +12,14 @@ Resources are not automatically migrated when you [install Elasticsearch](xref:I
 > For metrics related to resource performance with Elasticsearch or with XML storage, see [Resources benchmarks](xref:resources_benchmarks).
 
 > [!NOTE]
-> From 10.4.0 onwards, the use of Elasticsearch to store resources and resource pools will be mandatory. Using the XML storage will not be supported anymore. Upgrading to 10.4.0 will not be possible if the data is still stored in XML.
+> From DataMiner 10.4.0 onwards, the use of Elasticsearch to store resources and resource pools is mandatory. XML storage will no longer be supported. Upgrading to 10.4.0 will not be possible if the resources data is still stored in XML.
 
 ## Migrating from XML to Elasticsearch
 
 To migrate the resources, you will need to use the SLNetClientTest tool.
 
-![SLNetClientTest tool](~/user-guide/images/ClientTestToolMigrationUI_ResourceMigration.jpg)
-*Migration window in SLNetClientTest tool (version 10.3.2)*.
+![SLNetClientTest tool](~/user-guide/images/ClientTestToolMigrationUI_ResourceMigration.jpg)<br>
+*Migration window in SLNetClientTest tool (version 10.3.2)*
 
 > [!WARNING]
 >
