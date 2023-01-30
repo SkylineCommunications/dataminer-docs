@@ -709,7 +709,7 @@ When, in the application framework, you add an action that launches an Automatio
 
 A number of minor issues have been fixed in the DataMiner Application Framework.
 
-#### Problem when filtering a table with a foreign key relation to a remote table using a filter that contained a value from the remote table \[ID_33294\]
+#### BREAKING CHANGE: Problem when filtering a table with a foreign key relation to a remote table using a filter that contained a value from the remote table \[ID_33294\]
 
 When a table with a foreign key relation to a remote table was filtered using a filter that contained a value from the remote table, up to now, all rows would incorrectly be returned when the remote table was empty. From now on, when the remote table is empty, no rows will be returned.
 

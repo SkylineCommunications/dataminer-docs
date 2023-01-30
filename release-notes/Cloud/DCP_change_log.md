@@ -6,9 +6,67 @@ uid: DCP_change_log
 
 The DataMiner Cloud Platform gets updated continuously. This change log can help you trace when specific features and changes have become available.
 
+#### 24 January 2023 - Fix - SupportAssistant 1.2.1 - Log Collector continuously triggered after failing to generate files [ID_35457]
+
+In some rare cases, if invalid arguments were passed to the Log Collector so that it could not generate files, it could occur that the Log Collector kept getting triggered by the SupportAssistant DxM. Now the SupportAssistant will stop after a specific number of attempts.
+
+This fix is included in Cloud Pack 2.8.5.
+
+#### 13 January 2023 - Enhancement - Auditing of protocol and script deployments [ID_35392]
+
+The *Audit* page of the DCP Admin app will now also contain records for protocol and script deployments, while previously it only showed records for DxM artifact deployments.
+
+Deploying protocols can be done via the [DataMiner Catalog](https://catalog.dataminer.services/), deploying scripts can be done with a GitHub or GitLab CI/CD pipeline, and deploying DxMs can be done with the DCP Admin app.
+
+#### 12 January 2023 - Fix - CloudGateway 2.10.2 - CloudGateway not starting if DataMiner uses HTTP [ID_35362]
+
+When DataMiner was configured to use HTTP, prior to version 2.10.2, CloudGateway could fail to start up, and it could throw the following exception:
+
+```txt
+Something went wrong while initializing WebApiEndpointService. A url in the (custom.)appsettings.json or maintenancesettings.xml is malformed or empty while a valid value was expected. See exception System.ArgumentNullException: Value cannot be null. (Parameter 'dataMinerWebApiHttpFormat')
+```
+
+This fix is included in Cloud Pack 2.8.5.
+
+#### 10 January 2023 - Enhancement - DataMiner SupportAssistant 1.2.0 - Various stability improvements [ID_35349]
+
+Various general stability improvements have been implemented. In addition, eventing has been added to DCP, so that the Skyline Support Team can follow up on the status of remote log collection.
+
+This enhancement is included in Cloud Pack 2.8.4.
+
+#### 10 January 2023 - Enhancement - Audit log whenever Skyline's Support team uses Remote Log Collection [ID_35165]
+
+Every time Skyline's Support Team uses the Remote Log Collection feature on a DataMiner Agent, an audit log will now be created on DCP. You can view these logs on the *Audit* page of the [DCP Admin app](https://admin.dataminer.services).
+
+#### 10 January 2023 - Fix - DataMiner CoreGateway 2.12.0 - Problem with CoreGateway after server restart [ID_34961]
+
+After a server restart, a startup race condition could cause issues in the CoreGateway, which could for example cause the DataMiner Teams bot to be unresponsive. The NATS Message Broker dependency has been updated to prevent this issue.
+
+This fix is included in Cloud Pack 2.8.4.
+
+#### 22 December 2022 - Fix - CloudGateway 2.10.1 - Connection tester did not take proxy settings into account [ID_35227]
+
+If proxy settings were configured in the *appsettings.proxy.json* file, previously these were not taken into account by the connection tester tool.
+
+This fix is included in Cloud Pack 2.8.4.
+
+#### 19 December 2022 - Fix - SupportAssistant 1.1.1 - Log collection triggered too often [ID_35158]
+
+A problem with the SupportAssistant could cause the Log Collector to be triggered again and again, which could make it use up a lot of disk space.
+
+This fix is included in Cloud Pack 2.8.3.
+
+#### 16 December 2022 - Fix - ArtifactDeployer 1.4.2 - Problem with long-running deployments [ID_35174]
+
+If a large package was deployed from the catalog, which took a relatively long time to deploy, it could occur that this did not work correctly.
+
+This fix is included in Cloud Pack 2.8.3.
+
 #### 9 December 2022 - Enhancement - FieldControl 2.8.2 - Dependencies updated [ID_35140]
 
 Several dependencies were updated. This includes security-related improvements.
+
+This enhancement is included in Cloud Pack 2.8.3.
 
 #### 8 December 2022 - New feature - CloudGateway 2.10.0 / SupportAssistant 1.1.0 - Remote Log Collection [ID_34681] [ID_34875] [ID_34928] [ID_34934] [ID_34954] [ID_34992]
 
@@ -209,6 +267,10 @@ To create such a DMZ:
 1. On a DataMiner node, copy `C:\Skyline DataMiner\SLCloud.xml` and `C:\Skyline DataMiner\NATS\nsc\.nkeys\creds\DataMinerOperator\DataMinerAccount\DataMinerUser.creds`, and paste these in the `C:\Skyline DataMiner\` folder of the DMZ. Make sure that the credentials entry in *SLCloud.xml* points to the credentials file you copied over.
 
 1. Restart all DxMs in the DMZ so that they use the new settings.
+
+#### 7 July 2022 - Fix - Orchestrator 1.2.5 - Not possible to deploy DxMs via DCP Admin app [ID_33998]
+
+In some cases, it could occur that the DataMiner Orchestrator got stuck while it was installing a DxM, and it became unable to handle updates. This made it impossible to deploy any more DxMs via the DCP Admin app.
 
 #### 17 June 2022 – Enhancement – DCP Admin app opens to Overview page [ID_33772]
 

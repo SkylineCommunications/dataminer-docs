@@ -7,6 +7,7 @@ uid: DataMiner_user_permissions
 In the System Center module, the user permissions have been divided into two main groups: *General* and *Modules*. Below is an overview of the different permissions.
 
 > [!NOTE]
+>
 > - To quickly find a particular user permission in System Center, use the filter box in the top-right corner of the list of permissions.
 > - Some of these user permissions are only available if the DMA has the correct licenses and configuration, so that the user permissions are relevant.
 > - For many permissions, it makes no sense to grant them unless you grant the corresponding *UI Available* permission as well.
@@ -441,7 +442,7 @@ Permission to use the Asset Manager module.
 
 #### Modules \> Automation \> UI available
 
-Permission to access the DMS Automation module.
+Permission to access the Automation module.
 
 #### Modules \> Automation \> Add
 
@@ -488,7 +489,7 @@ Available from DataMiner 9.6.7 onwards. Permission to execute Automation scripts
 
 #### Modules \> Correlation \> UI available
 
-Permission to access the DMS Correlation module.
+Permission to access the Correlation module.
 
 #### Modules \> Correlation \> Add
 
@@ -870,7 +871,7 @@ Permission to use the Router Control module.
 
 #### Modules \> Scheduler \> UI available
 
-Permission to access the DMS Scheduler module.
+Permission to access the Scheduler module.
 
 #### Modules \> Scheduler \> Add
 

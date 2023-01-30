@@ -1,3 +1,7 @@
+---
+uid: docs_dataminer_services
+---
+
 # docs.dataminer.services
 
 Welcome to the home of DataMiner documentation!

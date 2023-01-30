@@ -63,6 +63,7 @@ All specifications are provided based on the assumption that DMAs are running on
 - [Parameter set benchmarks](xref:parameter_set_benchmarks)
 - [Pattern matching benchmarks](xref:pattern_matching_benchmarks)
 - [Profile Manager benchmarks](xref:profile_manager_benchmarks)
+- [Resources benchmarks](xref:resources_benchmarks)
 - [Service benchmarks](xref:service_benchmarks)
 - [Service profile benchmarks](xref:service_profile_benchmarks)
 - [Service & Resource Management benchmarks](xref:service_resource_management_benchmarks)

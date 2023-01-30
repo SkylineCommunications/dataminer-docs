@@ -77,6 +77,12 @@ Starting the element <x> failed. No element object.
 Creating element-object for <x> failed with <y>.
 ```
 
+#### DataMiner Cube - Trending: Trend points with value "0" will now also be exported to CSV [ID_35124]
+
+<!-- Main Release Version 10.1.0 [CU22]/10.2.0 [CU11] - Feature Release Version 10.3.2 -->
+
+Up to now, when you exported real-time trend data to a CSV file, trend points with value "0" would not be included. From now on, those values will be exported as well.
+
 ### Fixes
 
 #### 'One or more of the following modules are not licensed' error would incorrectly not list the unlicensed modules [ID_34407]
@@ -98,6 +104,14 @@ When a time range feed was configured to show quick pick buttons, those buttons 
 <!-- MR 10.1.0 [CU22] / 10.2.0 [CU10] - FR 10.3.1 -->
 
 When a row linked to a DVE child element was deleted, in some cases, standalone parameters belonging to another child of the same DVE parent element could be set to "Not Initialized".
+
+#### DataMiner Cube - Alarm Console: Alarm tab of type 'Active alarms linked to cards' would incorrectly not show any alarms when you opened a function card [ID_34799]
+
+<!-- MR 10.1.0 [CU22] / 10.2.0 [CU11] - FR 10.3.2 -->
+
+When the Alarm Console had an alarm tab of type *Active alarms linked to cards*, that tab would incorrectly not show any alarms when you opened a function card, even when that function had active alarms.
+
+Also, when you added a new alarm tab, clicked *Apply filters*, and added an element filter, then you would incorrectly also be able to select virtual functions from the list of elements. From now on, only when you add a function filter will you be able to select virtual functions from the list of functions.
 
 #### Memory leak in SLDataGateway during a Cassandra Cluster migration [ID_34829]
 
@@ -169,13 +183,22 @@ In some cases, an incorrect credential library GUID could get stored in the *Ele
 
 When the time window of a line chart component showing trend data included a period in the future, the chart would incorrectly display non-existing data for that period in the future. From now on, the chart will stop at the current time.
 
-#### Dashboards app & low-code apps: Problem with 'Number of columns' input box [ID_34966]
+#### Dashboards app & Low-Code Apps: Problem with 'Number of columns' input box [ID_34966]
 
 <!-- Main Release Version 10.1.0 [CU22]/10.2.0 [CU10] - Feature Release Version 10.3.1 -->
 
 When you were editing a dashboard or a low-code app, and the edit side panel was very narrow, in some cases, the *Number of columns* input box on the *Settings* tab could not be used as it would only be partly visible.
 
 Also, in some cases, the value in the *Number of columns* input box could incorrectly not be reset to the factory default.
+
+#### DataMiner Cube: Problem when opening scheduled tasks, Automation scripts or Correlation rules containing actions that include PDF reports [ID_34997]
+
+<!-- MR 10.1.0 [CU22] / 10.2.0 [CU11] - FR 10.3.2 -->
+
+When, in *Scheduler*, *Automation* or *Correlation*, you opened scheduled tasks, Automation scripts or Correlation rules containing actions that include PDF reports, in some rare cases, the data linked to those reports (i.e. the elements and services in view selection) could not be loaded. This data will now be loaded correctly. Also, a "Loading" indicator will now be displayed and the actions will remain disabled while the data is being loaded. When an error occurs while loading the protocols associated with said data, a clear warning entry will also be added to the Cube logging.
+
+> [!NOTE]
+> From now on, in the *Elements and services in view selection* list, it will also be possible to select parameters of enhanced services.
 
 #### DataMiner Cube - Spectrum Analysis: Selected measurement point no longer selected after playing a spectrum recording [ID_35001]
 
@@ -194,3 +217,9 @@ When you opened an alarm tab of type "sliding window" with a large number of ala
 <!-- Main Release Version 10.1.0 [CU22]/10.2.0 [CU11] - Feature Release Version 10.3.2 -->
 
 When you opened the trend graph of a parameter that contained discrete values or exceptions, in some cases, Y-axis values could be missing.
+
+#### DataMiner Cube - Trending: Trend graph would start to flicker when its data was updated [ID_35181]
+
+<!-- Main Release Version 10.1.0 [CU22]/10.2.0 [CU11] - Feature Release Version 10.3.2 -->
+
+When you opened a trend graph and left it open for a while, it would start to flicker when its data was updated.

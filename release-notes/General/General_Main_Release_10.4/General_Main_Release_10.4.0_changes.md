@@ -11,60 +11,112 @@ uid: General_Main_Release_10.4.0_changes
 
 ### Enhancements
 
+#### Security enhancements [ID_35331]
+
+<!-- RN 35331: MR 10.4.0 - FR 10.3.3 -->
+
+A number of security enhancements have been made.
+
+#### More detailed logging when the certificate chain is invalid while connecting to Cassandra [ID_34822]
+
+<!-- MR 10.4.0 - FR 10.3.2 -->
+
+More detailed information will now be added to the `SLDBConnection.txt` log file when the certificate chain is invalid while connecting to Cassandra.
+
+Log entry syntax: `Certificate chain error: {chainStatus.Status}, details: {chainStatus.StatusInformation}`
+
 #### SLAnalytics: Number of 'GetParameterMessages' requests has been optimized [ID_34936]
 
 <!-- MR 10.4.0 - FR 10.3.1 -->
 
 The number of *GetParameterMessages* sent by SLAnalytics in order to check whether a trended table parameter is still active has been optimized.
 
-#### Web apps - Interactive Automation scrips: Fields containing invalid values will now be indicated more clearly [ID_34962]
+#### SLAnalytics - Proactive cap detection: Enhanced accuracy when generating alarm predictions [ID_35080]
 
 <!-- MR 10.4.0 - FR 10.3.2 -->
 
-When, in an Automation script launched from a web app, an input field contains an invalid value, the border of that field will turn red. This red border will now be wider in order to be more visible.
+Because of a number of enhancements, overall accuracy has increased when generating alarm predictions.
 
-#### GQI: Enhanced performance of GQI queries [ID_34977]
-
-<!-- MR 10.4.0 - FR 10.3.2 -->
-
-Because of a number of enhancements, overall performance of GQI queries has increased, especially when those queries contain join operations.
-
-#### GQI: Enhanced performance of GQI queries using the 'Get parameters for elements where' data source [ID_35005]
+#### SLAnalytics - Behavioral anomaly detection : More accurate change point time ranges [ID_35121]
 
 <!-- MR 10.4.0 - FR 10.3.2 -->
 
-Because of a number of enhancements, overall performance of GQI queries using the *Get parameters for elements where* data source has increased.
+Because of a number of enhancements, behavioral changes of the type "level shift", "trend change" and "variance change" will now have a more accurate time range when the change in behavior is sufficiently clear.
 
-#### Dashboards app - Line & area chart: Multiple timespans will now be converted to one single time range [ID_35008]
+#### DataMiner Object Models: DomInstanceButtonDefinitions can only reference a single action [ID_35156]
 
 <!-- MR 10.4.0 - FR 10.3.2 -->
 
-When a line & area chart component is fed a collection of timespans, it will now convert those timespans to one single time range.
+From now on, DomInstanceButtonDefinitions can only reference a single action. If multiple actions are defined, a `DomBehaviorDefinitionError` with reason `InvalidButtonActionCombination` will be returned.
 
-For example, when a line & area chart component is fed the following timespans...
+Also, when using the DomBehaviorDefinition inheritance system, the server-side logic will now make sure that there are no buttons or actions with identical IDs on both the parent and child definition.
 
-- *01/01/2022 9:00:00 > 01/01/2022 10:00:00*
-- *01/01/2022 9:30:00 > 01/01/2022 10:30:00*
+- If a duplicate action is found, a `DomBehaviorDefinitionError` with reason `DuplicateActionDefinitionIds` will be returned.
+- If a duplicate button is found, a `DomBehaviorDefinitionError` with reason `DuplicateButtonDefinitionIds` will be returned.
 
-... it will convert those timespans into the following time range:
+#### SLLogCollector: Custom CollectorConfig XML files will now be synchronized across the DataMiner cluster [ID_35180]
 
-- *01/01/2022 9:00:00 > 01/01/2022 10:30:00*
+<!-- MR 10.4.0 - FR 10.3.2 -->
+
+From now on, all custom CollectorConfig XML files will be synchronized across the DataMiner cluster.
+
+#### SLAnalytics - Pattern matching: When a pattern is detected on a DVE child element the suggestion event will now be generated on that same DVE child element [ID_35264]
+
+<!-- MR 10.4.0 - FR 10.3.2 -->
+
+When a trend pattern was detected on a DVE child element, up to now, the suggestion event would be generated on the parent element. From now on, it will be generated on the child element instead.
+
+#### SLAnalytics - Pattern matching: Manually created tags will now be saved as pattern occurrences [ID_35299]
+
+<!-- MR 10.4.0 - FR 10.3.3 -->
+
+From now on, when you define a tag for pattern matching, the pattern you selected will be saved as a pattern occurrence in the Elasticsearch database and highlighted in bright orange, similar to so-called "streaming matches", which are detected while tracking for trend patterns whenever a trended parameter is updated.
+
+#### SLDataGateway: Memory enhancements with regard to average trending [ID_35312]
+
+<!-- MR 10.4.0 - FR 10.3.3 -->
+
+In the SLDataGateway process, a number of memory enhancements have been made with regard to the management of average trend data.
+
+#### SLAnalytics - Behavioral anomaly detection: Suggestion events and alarm events for a DVE child element will now be generated on that same DVE child element [ID_35332]
+
+<!-- MR 10.4.0 - FR 10.3.3 -->
+
+When a behavioral anomaly was detected on a DVE child element, up to now, the suggestion event or the alarm event would be generated on the parent element. From now on, it will be generated on the child element instead.
+
+#### Maps: Markers will now move more gradual when zooming [ID_35337]
+
+<!-- MR 10.4.0 - FR 10.3.3 -->
+
+Because of a number of enhancements, markers will now move more gradual when zooming.
+
+#### Alarm templates - Smart baseline calculations: NullReferenceException prevented & enhanced exception logging [ID_35348]
+
+<!-- MR 10.4.0 - FR 10.3.3 -->
+
+In some cases, a `Baseline Calculation Failed: System.NullReferenceException: Object reference not set to an instance of an object` error would be added to the *SLSmartBaselineManager.txt* log file. The issue causing that error has now been fixed.
+
+Also, log entries indicating an exception thrown during baseline calculations will now include details regarding the element and parameter associated with the exception.
+
+#### Maps: Enhanced zooming behavior [ID_35351]
+
+<!-- MR 10.4.0 - FR 10.3.3 -->
+
+From now on, when you zoom in or out, the data of the previous zoom level will stay visible until the data of the current zoom level has been loaded.
+
+#### DataMiner upgrade: Installation of Microsoft .NET 6.0 [ID_35363]
+
+<!-- MR 10.4.0 - FR 10.3.3 -->
+
+During a DataMiner upgrade, Microsoft .NET 6.0 will now be installed if not installed already.
+
+#### Maps: Zoom range can now be set by means of a slider [ID_35381]
+
+<!-- MR 10.4.0 - FR 10.3.3 -->
+
+The zoom range of a map can now be set by means of a slider.
 
 ### Fixes
-
-#### Mobile apps: Problem when trying to select an item in a drop-down box [ID_34742]
-
-<!-- MR 10.4.0 - FR 10.2.12 [CU0] -->
-
-In some cases, it would incorrectly not be possible to select an item in a drop-down box when the items were grouped or when their actual value was not identical to the value that was displayed.
-
-#### GQI: Problem when retrieving DCF interfaces [ID_34820]
-
-<!-- MR 10.4.0 - FR 10.3.1 -->
-
-When a GQI query returned all DCF interfaces from all agents in the DataMiner System, the NATS message broker would throw a *MaxPayloadException* when *MaxPayload* exceeded the value configured in `C:\Skyline DataMiner\NATS\nats-streaming-server\nats-server.config`.
-
-From now on, when a GQI query has to retrieve DCF interfaces, it will do so by querying one agent at a time.
 
 #### Problem with Resource Manager when ResourceStorageType was not specified in Resource Manager settings [ID_34981]
 
@@ -72,8 +124,10 @@ From now on, when a GQI query has to retrieve DCF interfaces, it will do so by q
 
 In some cases, Resource Manager could throw a NullReferenceException when *ResourceStorageType* was not specified in the `C:\Skyline DataMiner\ResourceManager\Config.xml` file.
 
-#### GQI: Problem when a column select or a column manipulation operator was applied before an aggregation operator [ID_35009]
+#### External authentication via SAML: Issues fixed when using Okta as identity provider [ID_35374]
 
-<!-- MR 10.4.0 - FR 10.3.1 [CU0] -->
+<!-- MR 10.4.0 - FR 10.3.3 -->
 
-When a column select or a column manipulation operator was applied before an aggregation operator, the column select or column manipulation operator would incorrectly be ignored. As a result, all columns would be visible in the *group by node* or columns created by the column manipulation would not be added to the options of the *group by node*.
+Using Okta as identity provider, it would incorrectly no longer be possible to read out signed assertions. Also, when the group claim setting is enabled in the *DataMiner.xml* file, the user will now be added to the correct groups.
+
+Up to now, in case of a claim mismatch, an exception would be thrown. From now on, an entry containing a clear message will be added to the *SLNet.txt* log file instead.

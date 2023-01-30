@@ -226,6 +226,55 @@ Process:
 
 If an incident (also known as an alarm group) is cleared manually, any clearable base alarms of that incident will now also be cleared. This way, this behavior is consistent with the standard behavior for Correlation alarms.
 
+#### DataMiner Object Model: New 'ClientReadOnly' and 'AllowMultipleSections' properties [ID_35172]
+
+<!-- MR 10.3.0 - FR 10.3.3 -->
+
+##### ClientReadOnly property added to DomStatusFieldDescriptorLink class
+
+Next to a *ReadOnly* property, the `DomStatusFieldDescriptorLink` class now also has a *ClientReadOnly* property.
+
+- *ReadOnly* determines whether values of the field in question are read-only when the field has a particular status.
+
+  When a field is marked as read-only for a specified status, the values cannot be changed when the `DomInstance` has this status. This also means that if no values were present before transitioning to this status, no values can be added as long as the `DomInstance` continues to have this status.
+
+- *ClientReadOnly* determines whether users are allowed to assign a value to the field in question in the UI.
+
+  Unlike the *ReadOnly* property, this property does allow users to assign a value to the field using the API (e.g. in a script).
+
+If the *ReadOnly* property is true, the value of *ClientReadOnly* is ignored.
+
+##### BREAKING CHANGE: AllowMultipleSections option added to SectionDefinitionLink and DomStatusSectionDefinitionLink classes
+
+An *AllowMultipleSections* property has now been added to the `SectionDefinitionLink` (non-status system) and `DomStatusSectionDefinitionLink` (status system) classes. This property will allow you to define whether a `DomInstance` can have multiple `Sections` for a particular `SectionDefinition`.
+
+When multiple sections are added to a `DomInstance`, and this is not marked as allowed, a `DomInstanceError` will be returned in the TraceData with the `MultipleSectionsNotAllowedForSectionDefinition` error reason. Additionally, in the `InvalidSections` property of the error, you will be able to find the ID(s) of the `SectionDefinition`(s) of which too many sections were found.
+
+Rules that apply with regard to multiple sections:
+
+- Non-status system (`DomDefinition` and `SectionDefinitionLinks`):
+
+  - Multiple `Section`s for the same `SectionDefinition` are allowed on a `DomInstance` if the `SectionDefinition` has a link on the DomDefinition that has the *AllowMultipleSections* property set to true.
+  
+  - When a `Section` is added to an existing `DomInstance` that contains a ReadOnly field (marked as such in the `FieldDescriptor`), then that field cannot be given a value in the UI. It can only be given a value via the API or a script.
+
+  - There are no limitations with regard to removing `Section`s.
+
+- Status system (DomBehaviorDefinition & DomStatusSectionDefinitionLinks):
+
+  - Multiple `Section`s for the same `SectionDefinition` are allowed in a specific status on one `DomInstance` if, for that status, the `SectionDefinition` has a link on the `DomBehaviorDefinition` that has the *AllowMultipleSections* property set to true.
+
+  - When a `Section` is added, any field marked as *ReadOnly* or *ClientReadOnly* will not be assignable from the UI. However, if they are only marked as *ClientReadOnly*, they will be assignable via the API.
+
+  - Removing a `Section` is not possible when a field of the section in question is marked as *ReadOnly* on the link. When this behavior is required, but you still want to prevent users from assigning a value in the UI, use the new *ClientReadOnly* property instead.
+
+> [!IMPORTANT]
+> This is a breaking change. Previously, it was possible to add multiple sections without having to set any property. After upgrading to DataMiner 10.3.3/10.3.0, you will need to update any existing `DomDefinition`s with multiple `Section`s.
+
+##### Each section now has to contain all required fields
+
+Up to now, if there were multiple sections, it was allowed for some of those sections to not contain all the required fields. From now on, every section must contain each and every required field.
+
 ### DMS Security
 
 #### Azure Active Directory: Secret expiry notices/errors [ID_33916]
@@ -255,7 +304,7 @@ It is now possible to define a logger table of type DirectConnection with a prim
 
 In the \<Param> element of the logger table, do the following:
 
-- Set ArrayOptions@index to “1”.
+- Set ArrayOptions\@index to “1”.
 - In Database, Set IndexingOptions@enabled to “true” and Connection.Type to “Directconnection”.
 
 See the following example:
@@ -274,7 +323,7 @@ See the following example:
 </Param>
 ```
 
-##### Overview of the possible ArrayOptions@index and Connection.Type combinations
+##### Overview of the possible ArrayOptions\@index and Connection.Type combinations
 
 - Connection type: DirectConnection
 
@@ -502,7 +551,3 @@ options.StartScript();
 When multiple selections are made in the EPM topology tree, the possible many-to-many relations between the fields are now taken into account to load further possible selections for other fields. Previously, only the last selected field was taken into account.
 
 For example, if a topology contains a CCAP Core field and a Node Leaf field lower in the topology, and a value is selected for both, previously only the Node Leaf selection was taken into account for the possible selections in the RPD field further down in the topology, whereas now the CCAP Core selection will also be taken into account if the RPD field is related to both fields.
-
-### DMS Web Services
-
-See [General Main Release 10.3.0 – Highlights](xref:General_Main_Release_10.3.0_highlights#dms-web-services)

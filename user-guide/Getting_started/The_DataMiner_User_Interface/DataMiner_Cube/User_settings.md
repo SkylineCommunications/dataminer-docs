@@ -364,6 +364,7 @@ On the *Sidebar page,* or prior to DataMiner 10.2.0/10.1.3, the *Surveyor* page,
 - **Trend Y-axis mode**: Select *Auto* to automatically optimize the vertical range of a trend graph during pan and zoom operations. Select *Range* to fix the vertical range to the minimum and maximum defined in the protocol.
 
     > [!NOTE]
+    >
     > - If a trend display is already open when you change this setting, you must reload the trend display for the setting to take effect.
     > - When the *Range* setting is selected, the range of the y-axis is determined by the first parameter loaded in the trend graph. After the initial range is determined, it will not be adjusted until all parameters are cleared.
 

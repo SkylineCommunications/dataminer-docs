@@ -4,6 +4,9 @@ uid: EPM_6.1.6_I-DOCSIS
 
 # EPM 6.1.6 I-DOCSIS - Preview
 
+> [!IMPORTANT]
+> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+
 ## New features
 
 #### New 'Other DOCSIS' KPI [ID_34346]
@@ -13,6 +16,12 @@ New aggregation operations were added to the hub, market, network, CCAP, service
 #### Option to show/hide PNM on Node Segment map [ID_34387]
 
 Both on the *Configuration* page of the Skyline EPM Platform element and in the front-end EPM visual overview, a toggle button is now available that can be used to show or hide the PNM layers on the Node Segment map.
+
+#### Alarm color for total alarm statistics represented by colored circles in EPM visual overviews [ID_35451]
+
+For the total alarm statistics in the EPM visual overviews, colored circles will now be displayed that show the current alarm color. If there are no alarms, a gray color will be displayed, otherwise the color will reflect the alarm severity (critical, major, minor, or warning). This has been implemented by adding conditions to four circle shapes based on the total alarm statistics.
+
+For the Skyline EPM Platform visual overview, the alarm statistics are shown both on the *Service Group [Fiber Node]* page and on the *CCAP* page. For the Skyline EPM Platform DOCSIS visual overview, they are located on the *CCAP* page.
 
 ## Changes
 
@@ -43,6 +52,12 @@ Because of this, a number of other changes have been implemented:
 - QAction 7600, associated with the polling of the DOCSIS version of each cable modem available in the system, has been removed.
 
 - The Threadpool page has been removed along with all its parameters, as these were associated with the multi-threaded timer.
+
+#### Generic DOCSIS CM Collector: CM QAM Channels tables adjusted + SNMP interval logic removed from multi-threaded timer [ID_35292]
+
+To avoid inconsistencies between the QAM DS/US Channels CM Collector table and CM QAM DS/US Channels CCAP tables, the latter will now contain all available channels per CM, and they will also contain a column indicating whether a channel is currently active or not.
+
+In addition, SNMP interval logic has been removed from the multi-threaded timer, as this did not work as intended.
 
 ### Fixes
 
@@ -77,3 +92,7 @@ In the Node Segment overview, it could occur that the DS Channel Utilization sho
 #### Percentage Ping OK value above 100% [ID_34726]
 
 When the Number Ping OK parameter had a value larger than the number of CMs, the Percentage Ping OK parameter indicated a value above 100%. The percentage calculation has now been adjusted to prevent this. Exceptional cases like this will now be returned as -1 (N/A). Exception values were added to both the Percentage Ping OK and Percentage Ping Unreachable parameters in the amplifier and node overview tables.
+
+#### Link to dashboard does not apply filter [ID_35207]
+
+When a user clicked the dashboard icon, this opened a dashboard without applying a filter. Now a filter has been included in the dashboard link.

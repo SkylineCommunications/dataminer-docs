@@ -41,11 +41,11 @@ Proceed as follows to upgrade your DataMiner Agent(s) in System Center:
 
     - *Default policy* (selected by default)
 
-    - *Upgrade main and backup Agent simultaneously* (highly recommended; always use this option in case of a major upgrade, unless it is already the default policy).
+    - *Upgrade main and backup Agent simultaneously* (highly recommended; always use this option in case of a major upgrade, unless it is already the default policy)
 
-    - *Upgrade backup Agent first, switch over and upgrade main*
+    - *Upgrade backup Agent first, switch over and upgrade main* (legacy)
 
-    - *Upgrade backup Agent first, switch over, upgrade main, then switch back again*.
+    - *Upgrade backup Agent first, switch over, upgrade main, then switch back again* (legacy)
 
 1. Click *Upgrade* to start the upgrade procedure.
 

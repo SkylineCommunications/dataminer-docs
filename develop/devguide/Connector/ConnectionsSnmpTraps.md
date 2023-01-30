@@ -262,7 +262,7 @@ string bindingValue = binding.Value;
 
 ## Creating and sending traps from a QAction
 
-A DataMiner protocol can send SNMP traps independently from any alarms that are received. For this, the Notify method of the DMS class can be used. (For more information on this method, see NT_GET_PARAMETER (73).) This will send a message to the SLDMS process, which in turn will instruct the SLSNMPAgent process to send the trap.
+A DataMiner protocol can send SNMP traps independently from any alarms that are received. For this, the Notify method of the DMS class can be used. (For more information on this method, see DMS_SNMP_NOTIFICATION (73).) This will send a message to the SLDMS process, which in turn will instruct the SLSNMPAgent process to send the trap.
 
 Note that if you use custom traps in a protocol, you need to update the MIB for that protocol. As it is nearly impossible to auto-generate this custom MIB data, you can add a Mib tag to the protocol. The contents of that tag will then be added to the auto-generated MIB.
 

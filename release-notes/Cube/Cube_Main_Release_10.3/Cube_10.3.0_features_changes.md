@@ -869,6 +869,20 @@ When you start a resource migration in the *SLNetClientTest* tool (by selecting 
 > [!CAUTION]
 > Always be extremely careful when using the *SLNetClientTest* tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
 
+#### DataMiner Cube will now immediately be aware of any changes as to the availability of Cassandra or Elasticsearch [ID_35209]
+
+<!-- MR 10.3.0 - FR 10.3.3 -->
+
+Up to now, Cube would only check at startup whether Cassandra or Elasticsearch were available. From now on, it will immediately be aware of any changes as to the availability of Cassandra or Elasticsearch.
+
+#### EPM: Data retrieved from the collector that was displayed as a table with a single row will now be displayed as single parameters [ID_35371]
+
+<!-- MR 10.3.0 - FR 10.3.3 -->
+
+In an EPM card, in some cases, data retrieved from the collector was displayed as a table with a single row, which often had the system name as primary key.
+
+From now on, data retrieved from the collector that used to be displayed as a table with a single row will now be displayed as single parameters (one for every column).
+
 ### Fixes
 
 #### Visual Overview: Problem when navigating inside EPM cards [ID_32288]
@@ -976,6 +990,28 @@ Alarm groups would not get cleared automatically when the *AutoClear* option was
 
 Also, in some cases, after clearing an alarm group, a clearable version of that alarm group would incorrectly remain visible in the Alarm Console, even when the *AutoClear* option was set to true.
 
+#### Service & Resource Management: Problem when Cube tried to retrieve SRM-related data to which the user did not have access [ID_34397]
+
+<!-- MR 10.3.0 - FR 10.3.2 -->
+
+Up to now, an exception could be thrown when DataMiner Cube tried to retrieve SRM-related data to which the user did not have access.
+
+From now on, when DataMiner Cube tries to retrieve SRM-related data to which the user does not have access, a message box will appear, asking the user to contact the system administrator. Also, each time this type of message box is displayed, an entry of type "warning" will be added to the Cube logging (`User X could not read object Y because the user does not have permission flag Z`).
+
+Overview of the read permissions needed to retrieve SRM-related data:
+
+| SRM-related data | Read permission                    |
+|------------------|------------------------------------|
+| Bookings         | Bookings > UI available            |
+| Functions        | Functions> UI available            |
+| Profiles         | Profiles > UI available            |
+| Resources        | Resources> UI available            |
+| Service profiles | Services > Profiles > UI available |
+| Services         | Services > UI available            |
+
+> [!NOTE]
+> Often, users will need a combination of the above-mentioned read permission for Cube to be able to retrieve the necessary SRM-related data.
+
 #### Visual Overview: Problem when loading a DCF signal path [ID_34630]
 
 <!-- MR 10.3.0 - FR 10.2.12 -->
@@ -1001,3 +1037,15 @@ When, in the *Navigation* panel of the *Bookings* app, you selected another time
 <!-- MR 10.3.0 - FR 10.3.1 -->
 
 When you edited the properties of a tag (e.g. name, description, etc.), the trend graph would no longer show the pattern matches for the parameter that is currently displayed in the graph. Instead, it would incorrectly show the pattern matches for the parameter for which the tag was defined.
+
+#### Trending: Problem when exporting a trend graph containing average trend data [ID_35290]
+
+<!-- MR 10.3.0 - FR 10.3.3 -->
+
+When you exported a trend graph containing average trend data to CSV, in some cases, the exported data would be parsed incorrectly.
+
+#### DataMiner Cube - Visual Overview: Problem when filtering bookings in a ListView component [ID_35430]
+
+<!-- MR 10.3.0 - FR 10.3.3 -->
+
+When, in Visual Overview, a filter was applied to a *ListView* component that listed bookings, no account would be taken of bookings added after the filter had been applied. As a result, in some cases, the *ListView* component would list bookings that did not match the filter.

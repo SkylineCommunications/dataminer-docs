@@ -53,7 +53,7 @@ It is now possible to define a logger table of type DirectConnection with a prim
 
 In the \<Param> element of the logger table, do the following:
 
-- Set ArrayOptions@index to “1”.
+- Set ArrayOptions\@index to “1”.
 - In Database, Set IndexingOptions@enabled to “true” and Connection.Type to “Directconnection”.
 
 See the following example:
@@ -72,7 +72,7 @@ See the following example:
 </Param>
 ```
 
-##### Overview of the possible ArrayOptions@index and Connection.Type combinations
+##### Overview of the possible ArrayOptions\@index and Connection.Type combinations
 
 - Connection type: DirectConnection
 
