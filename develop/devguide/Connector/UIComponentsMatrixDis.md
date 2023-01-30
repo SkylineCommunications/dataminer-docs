@@ -68,7 +68,7 @@ The matrix library provides 3 classes that a developer can inherit from:
 
 See also:
 
-Skyline.DataMiner.Library.Protocol.Matrix namespace
+Skyline.DataMiner.Core.Matrix namespace
 
 Depending on the user requirements, you will likely create your own class inheriting from one of these.
 
