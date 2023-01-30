@@ -17,4 +17,4 @@ Use this method to retrieve all the job templates available in a specific domain
 
 | Item | Format | Description |
 |--|--|--|
-| GetJobTemplatesV2­Result | Array of [DMAJobTemplate](xref:DMAJobTemplate) | The available job templates. |
+| GetJobTemplatesV2Result | Array of [DMAJobTemplate](xref:DMAJobTemplate) | The available job templates. |

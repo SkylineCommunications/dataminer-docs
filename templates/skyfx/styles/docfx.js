@@ -124,6 +124,7 @@ $(function () {
     var query;
     var relHref = $("meta[property='docfx\\:rel']").attr("content");
     if (typeof relHref === 'undefined') {
+      highlightKeywords();
       return;
     }
     try {
@@ -1213,12 +1214,14 @@ $(function () {
 
     $(window).on('load', function () {
         // scroll to the anchor if present, offset by the header
-        scrollToCurrent();
+        // scrollToCurrent(); // Due to a race condition, Chrome is sometimes not correctly positioning anchors, move this to the ready method here below.
     });
 
     $(document).ready(function () {
         // Exclude tabbed content case
         $('a:not([data-tab])').click(function (e) { delegateAnchors(e); });
+        // scroll to the anchor if present, offset by the header
+		    scrollToCurrent();
     });
   }
   

@@ -18,4 +18,4 @@ Available from DataMiner 10.0.7 onwards.
 
 | Item | Format | Description |
 |--|--|--|
-| GetActiveAlarmsV2­Result | Array of [DMAAlarm](xref:DMAAlarm) | The list of active alarms, as well as the alarm cache status. |
+| GetActiveAlarmsV2Result | Array of [DMAAlarm](xref:DMAAlarm) | The list of active alarms, as well as the alarm cache status. |

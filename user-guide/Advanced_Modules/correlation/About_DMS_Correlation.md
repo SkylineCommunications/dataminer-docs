@@ -2,11 +2,11 @@
 uid: About_DMS_Correlation
 ---
 
-# About DMS Correlation
+# About DataMiner Correlation
 
-DMS Correlation automatically analyzes raw alarm information and real-time parameter values, and acts upon that information according to the rule sets you define in its knowledge base. It is not only capable of detecting single events, but also persistent and recurring events.
+DataMiner Correlation automatically analyzes raw alarm information and real-time parameter values, and acts upon that information according to the rule sets you define in its knowledge base. It is not only capable of detecting single events, but also persistent and recurring events.
 
-Based on the rules set by the user, DMS Correlation can create correlated alarms or send notifications via text message or email, so that operators are informed of certain events. It can also trigger Automation scripts, so that automatic countermeasures are possible in case of emergency or preventive actions in case of emerging issues.
+Based on the rules set by the user, DataMiner Correlation can create correlated alarms or send notifications via text message or email, so that operators are informed of certain events. It can also trigger Automation scripts, so that automatic countermeasures are possible in case of emergency or preventive actions in case of emerging issues.
 
 ![Correlation engine concept](~/user-guide/images/correlation_engine_conceptv2.jpg)
 
@@ -36,7 +36,7 @@ The event is a combination of:
 
 ## Correlation in DataMiner Cube vs. System Display
 
-Two different engines are available for DMS Correlation: the deprecated System Display engine and the DataMiner Cube Correlation engine. Rules that were created in the System Display engine are still available in DataMiner Cube, though they are indicated as deprecated. The Cube Correlation Engine offers several functions that were not available in System Display, such as:
+Two different engines are available for DataMiner Correlation: the deprecated System Display engine and the DataMiner Cube Correlation engine. Rules that were created in the System Display engine are still available in DataMiner Cube, though they are indicated as deprecated. The Cube Correlation Engine offers several functions that were not available in System Display, such as:
 
 - Alarm filtering by means of regular expressions
 
@@ -45,8 +45,6 @@ Two different engines are available for DMS Correlation: the deprecated System D
 - Elaborate Correlation rule conditions
 
 ## Correlation in DataMiner clusters
-
-Up to DataMiner version 8.5.5, DMS Correlation only supported generating correlated alarm events on elements that were hosted on the DMA executing the Correlation rule action. From DataMiner 8.5.5 onwards, Correlation alarm events can be created on any element in the cluster.
 
 ### Which DMA handles which rule?
 

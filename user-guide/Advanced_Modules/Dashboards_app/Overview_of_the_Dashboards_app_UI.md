@@ -4,14 +4,6 @@ uid: Overview_of_the_Dashboards_app_UI
 
 # Overview of the Dashboards app UI
 
-You can access the new Dashboards app via the link `https://[MyDataMiner]/dashboard` or `http://[MyDataMiner]/dashboard`, depending on your setup.
-
-> [!NOTE]
-> We recommend to use Google Chrome to access the Dashboards app. Microsoft Edge, Mozilla Firefox and Safari are also supported.
-
-> [!CAUTION]
-> If you use a DataMiner version prior to DataMiner 10.1.7, we strongly advise that you use HTTPS when you use DataMiner client applications over public internet. If you do not do so, all information – including logon credentials – is sent as plain, unencrypted text over the internet. From DataMiner 10.1.7 onwards, client-server communication is encrypted by default. See also: [Setting up HTTPS on a DMA](xref:Setting_up_HTTPS_on_a_DMA).
-
 In DataMiner 10.0.0/10.0.2, the UI of the app has been redesigned. Below, you can find more information:
 
 ## [From DataMiner 10.0.0/10.0.2 onwards](#tab/tabid-1)
@@ -28,7 +20,7 @@ The main page of the app consists of a header bar, a sidebar, and a details pane
 
   - User button: A button with the initials or an image of the current user is displayed in the top-right corner. Click this button to open a menu that provides access to the following options:
 
-    - *Settings*: Allows you to manage any available dashboard themes and configure whether specific actions are pinned to the dashboard header bar.
+    - *Settings*: Allows you to manage any available [dashboard theme](xref:Configuring_the_dashboard_layout) and configure whether specific actions are pinned to the dashboard header bar.
 
     - *About*: Displays information about the app.
 
@@ -83,9 +75,11 @@ The main page of the app consists of a header bar, a sidebar, and a details pane
 
   - **Clear all**: Only displayed if the dashboard contains at least one feed. Clears the selection of all the feeds in the dashboard.
 
-  - **Share** or **Start sharing**: Allows you to share the dashboard using the DataMiner Cloud Platform. See [Sharing a dashboard](xref:Sharing_a_dashboard). This feature is only available if the DataMiner Agent is connected to the cloud. See [Connecting your DataMiner System to the cloud](xref:Connecting_your_DataMiner_System_to_the_cloud).
+  - **PDF**: Available from DataMiner 10.2.12/10.3.0 onwards. Only displayed in read mode. Allows you to export the dashboard as a PDF file.
 
-  In the settings of the Dashboards app, you can configure whether the edit mode and clear feeds buttons are always displayed (i.e. “pinned” to the header bar) or instead accessible via a button in the top-right corner of a dashboard.
+  - **Share** or **Start sharing**: Allows you to share the dashboard using the DataMiner Cloud Platform. See [Sharing a dashboard](xref:Sharing_a_dashboard). This feature is only available in read mode, if the DataMiner Agent is connected to the cloud. See [Connecting your DataMiner System to the cloud](xref:Connecting_your_DataMiner_System_to_the_cloud).
+
+  In the settings of the Dashboards app, you can configure whether the edit mode, clear feeds, export as PDF, and share dashboard buttons are always displayed (i.e. “pinned” to the header bar) or instead accessible via a button in the top-right corner of a dashboard.
 
 > [!NOTE]
 > If the app is viewed on a small screen, no options to edit dashboards or dashboard settings will be available.
@@ -101,7 +95,7 @@ The main page of the app consists of a header bar, a navigation pane, and a deta
     | ![Apps button](~/user-guide/images/NewRD_apps.png) | Apps button, for quick access to other DataMiner web apps. |
     | Dashboards | Click this button to return to the main page of the app at any time. |
     | New dashboard | Only displayed if a folder or dashboard is selected. |
-    | ![Settings button](~/user-guide/images/NewRD_Settings.png) | Click this button to open a window where you can manage any available dashboard themes. |
+    | ![Settings button](~/user-guide/images/NewRD_Settings.png) | Click this button to open a window where you can manage any available [dashboard themes](xref:Configuring_the_dashboard_layout). |
     | ![Info button](~/user-guide/images/NewRD_About.png) | Displays information about the app. |
     | \[Username\] | Click the username and select *Log out* to log out of the app. |
 

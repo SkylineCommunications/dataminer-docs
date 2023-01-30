@@ -30,7 +30,7 @@ You can create a query as follows:
 When you create a query, you can use one or more of the data sources detailed below.
 
 > [!NOTE]
-> Custom properties that are marked as read-only, e.g. the *System Name* and *System Type* alarm properties, can be retrieved with a GQI query from DataMinder 10.2.0 \[CU6]/10.2.9 onwards.
+> Custom properties that are marked as read-only, e.g. the *System Name* and *System Type* alarm properties, can be retrieved with a GQI query from DataMiner 10.2.0 \[CU6]/10.2.9 onwards. In addition, from DataMiner 10.2.10/10.3.0 onwards, the *System Name* and *System Type* data are available as a feed with the *Use feed* option (depending on the data source, as mentioned below).
 
 ### Get alarms
 
@@ -385,7 +385,7 @@ From DataMiner 10.2.0/10.1.3 onwards, instead of specifying an exact filter valu
 
   If *Type* is set to *Query rows*, instead of a property, you can select the columns from the table containing the query rows. However, note that you will only be able to select columns that are compatible with the type of column you are filtering.
 
-From DataMiner 10.1.11 onwards, an additional option, *Return no rows when feed is empty*, is available. When you select this option, in case the feed is empty, an empty table will be returned instead of the entire table.
+From DataMiner 10.2.10/10.3.0 onwards, an additional option, *When feed is empty, show* is available, which allows you to select what should be shown in case the field is empty: nothing, empty values only, or the full table ("*everything*"). Prior to this, from DataMiner 10.1.11 onwards, instead the option *Return no rows when feed is empty* is available. When you select this option, in case the feed is empty, an empty table will be returned instead of the entire table.
 
 > [!NOTE]
 >
@@ -405,6 +405,10 @@ Displays the selected columns only. When you have selected the columns to displa
 From DataMiner 10.1.0\[CU1\]/10.1.3 onwards, up and down arrow buttons in the list of columns allow you to modify the order in which the columns are loaded. Click an arrow button to make a column switch places with the column below or above it in the list. Press Ctrl while clicking an arrow button to make the column switch places with the previous or next selected column instead.
 
 From DataMiner 10.2.0/10.1.5 onwards, a *Use feed* checkbox is available that allows you to add parameters from an existing feed in the dashboard to the selectable items.
+
+### Sort
+
+Available from dataMiner 10.2.11/10.3.0 onwards. Sorts the data based on a specific column. When you select this operator, you will need to select the column to sort by. By default, sorting happens in descending order. To sort in ascending order instead, select the *Ascending* checkbox.
 
 ### Top X
 

@@ -6,19 +6,19 @@ uid: Cassandra_updating
 
 ## Checking the Cassandra version
 
-It is recommended to periodically update your Cassandra database. This will ensure that all known vulnerabilities are fixed.
+We recommend that you periodically update your Cassandra database. This will ensure that all known vulnerabilities are fixed.
 
 To check the Cassandra version, go to *C:\Program Files\Cassandra\bin* and execute the following *nodetool* command:
 
    `.\nodetool version`
 
-With recent DataMiner versions, **Cassandra 3.11** is installed by default. This is also the minimum supported version. Cassandra 4.0 is also supported.
+With recent DataMiner versions, in case a Cassandra database per Agent is used, **Cassandra 3.11** is installed by default, but Cassandra 4.0 is also supported (and even recommended in case the database consists of multiple nodes). If a Cassandra database per cluster is used, Cassandra 3.11 remains supported for existing installations, but 4.0 is highly recommended and is the minimum supported version for new installations.
 
 > [!NOTE]
 > Cassandra 4.0 **no longer supports Windows**. This means that extra Linux servers will be required to host the Cassandra database.
 
 > [!TIP]
-> To limit the impact of a breach through Cassandra, it is recommended to run the Cassandra service as a non-SYSTEM user. For more details, see [Running Cassandra as non-SYSTEM user](xref:Running_Cassandra_as_non-SYSTEM_user).
+> To limit the impact of a breach through Cassandra, we recommended running the Cassandra service as a non-SYSTEM user. For more details, see [Running Cassandra as non-SYSTEM user](xref:Running_Cassandra_as_non-SYSTEM_user).
 
 ## Updating the Cassandra version
 
@@ -30,7 +30,10 @@ As with all software, it is good practice to ensure you are running the latest v
 To update the Cassandra version:
 
 1. Ensure you have a **full backup** of the Cassandra database.
-1. Download the latest Cassandra *3.11.X* binaries from the [official website](https://cassandra.apache.org/_/download.html) and extract the archive.
+1. Download the latest Cassandra *3.11.X* binaries from the [official website](https://cassandra.apache.org/_/download.html).
+
+   These will contain a `.tar` file called `apache-cassandra-3.11.8-bin.tar.gz`.
+
 1. Stop the DataMiner Agent.
 1. Go to the *C:\Program Files\Cassandra\bin* folder and run the following command to push all data from memory to disk and stop processing new requests:
 
@@ -39,9 +42,18 @@ To update the Cassandra version:
 1. Stop the Cassandra service.
 1. Rename the *C:\Program Files\Cassandra* folder to *Cassandra_bak*.
 1. Create a new folder named *Cassandra* in *C:\Program Files*.
-1. Copy the downloaded Cassandra binaries to this new *Cassandra* folder.
+1. Extract the contents of the `apache-cassandra-3.11.8-bin.tar.gz` file into a temporary folder.
+
+   > [!NOTE]
+   > You will need to extract the file twice, first to get a `.tar` file and then to obtain an *apache-cassandra-3.11.14* folder with additional subfolders.
+
+1. Copy the contents of the *apache-cassandra-3.11.14* folder to *C:\Program Files\Cassandra*.
+
+   You should now see folders such as *C:\Program Files\Cassandra\bin* and *C:\Program Files\Cassandra\lib*.
+
+1. Delete the temporary folder.
 1. Copy the **old** *Java* folder from *C:\Program Files\Cassandra_bak\Java* to *C:\Program Files\Cassandra*.
-1. Copy the **old** *cassandra.yaml* from *C:\Program Files\Cassandra_bak\conf\cassandra.yaml* to *C:\Program Files\Cassandra\conf*.
+1. Copy the **old** *cassandra.yaml* file from *C:\Program Files\Cassandra_bak\conf\cassandra.yaml* to *C:\Program Files\Cassandra\conf*.
 1. Copy the **old** *daemon* folder from *C:\Program Files\Cassandra_bak\bin\daemon* to *C:\Program Files\Cassandra\bin*.
 1. Copy the **old** *DevCenter* folder from *C:\Program Files\Cassandra_bak\DevCenter* to *C:\Program Files\Cassandra*.
 1. Create a new folder named *logs* in *C:\Program Files\Cassandra*.
@@ -81,4 +93,4 @@ To update the Cassandra version:
 > [!TIP]
 > After starting the Cassandra service, verify that the expected Cassandra version is logged in *C:\Program Files\Cassandra\Logs\system.log*. For example: *Cassandra version: 3.11.12*
 > If the service does not start and no logs are created, make sure that the *Jvm* registry key refers to the correct location.
-> Execute `nodetool status` to check whether the system is running stable. 
+> Execute `nodetool status` to check whether the system is running stable.

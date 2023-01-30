@@ -19,4 +19,4 @@ Use this method to retrieve the topology fields of a particular chain of a CPE e
 
 | Item | Format | Description |
 |--|--|--|
-| GetTopologyFields­ForCPEChainResult | Array of [DMATopologyChainsField](xref:DMATopologyChainsField) | The topology fields and related information for the specified chain. |
+| GetTopologyFieldsForCPEChainResult | Array of [DMATopologyChainsField](xref:DMATopologyChainsField) | The topology fields and related information for the specified chain. |

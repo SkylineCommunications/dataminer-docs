@@ -13,3 +13,7 @@ uid: Troubleshooting_procedures
 - [Keeping a DMA from running out of disk space](xref:Keeping_a_DMA_from_running_out_of_disk_space)
 
 - ['Sharing dashboard' window does not disappear](xref:Sharing_dashboard_window_does_not_disappear)
+
+- [Manually removing old alarms from an Elasticsearch cluster](xref:Manually_removing_old_alarms_from_ES)
+
+- [Querying MySQL vs Cassandra](xref:Querying_MySQL_vs_Cassandra)

@@ -23,9 +23,9 @@ protocol.NotifyProtocol(220 /*NT_FILL_ARRAY_WITH_COLUMN*/, columnInfo, values);
 - columnInfo (object[]):
   - columnInfo[0]: ID of table parameter.
   - columnInfo[1…n]: ID of column parameter.
-- columnValues (object[]):
-  - columnValues[0] (object[]): Primary keys (as string).
-  - columnValues[1] (object[]): Values to set/update.
+- values (object[]):
+  - values[0] (object[]): Primary keys (as string).
+  - values[1] (object[]): Values to set/update.
 
 In case the column data make use of the protocol.Clear and/or protocol.Leave properties, the columnInfo array must contain an additional Boolean which is set to true indicating that the method call should consider the values corresponding with protocol.Clear and protocol.Leave as special values indicating a cell action to clear or preserve the cell content (respectively) instead of an actual cell value.
 
@@ -59,9 +59,9 @@ protocol.NotifyProtocol(220 /*NT_FILL_ARRAY_WITH_COLUMN*/, columnInfo, values);
     > protocol.NotifyProtocol(220, new object[] { 1000, 1009, new object[] { useClearAndLeave } }, new object[] { fillArray[0], fillArray[8] });
     > ```
 
-- columnValues (object[]):
-  - columnValues[0] (object[]): Primary keys (as string).
-  - columnValues[1] (object[]): Values to set/update.
+- values (object[]):
+  - values[0] (object[]): Primary keys (as string).
+  - values[1] (object[]): Values to set/update.
 
 ## Return Value
 
@@ -97,7 +97,7 @@ protocol.NotifyProtocol(220 /*NT_FILL_ARRAY_WITH_COLUMN*/, columnInfo, values);
 
   protocol.NotifyProtocol(220 /*NT_FILL_ARRAY_WITH_COLUMN*/, columnInfo, values);
   ```
- 
+
 - From DataMiner 9.6.13 onwards (RN 23815), a timestamp can be provided per cell to perform a history set on cell level. This is done by providing an object array containing the value and timestamp.
 
   Note that not all cells require a timestamp. If no timestamp is specified, DateTime.Now will be used.

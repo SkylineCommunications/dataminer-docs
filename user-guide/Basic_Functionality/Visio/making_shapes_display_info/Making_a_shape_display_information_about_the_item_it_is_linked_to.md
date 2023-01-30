@@ -6,15 +6,22 @@ uid: Making_a_shape_display_information_about_the_item_it_is_linked_to
 
 Using a shape data field of type **Info**, you can make shapes display information about the item to which they are linked:
 
-- If a shape is linked to an element, a service or a redundancy group, an **Info** field can be used to display the name or the current alarm state of that item.
-- If a shape is linked to an alarm, an **Info** field can be used to display information about that alarm.
-- If a shape is linked to a view, an **Info** field can be used to display the name of the view as well as statistical data concerning the alarms in that view.
-- If a shape is linked to a DCF Interface, an **Info** field can be used to display the custom name of the DCF interface.
-- If a shape is linked to a view, a service or an element, an **Info** field can be used to display the number of tickets linked to that same view, service or element. See [Element statistics, service statistics, view statistics, etc](#element-statistics-service-statistics-view-statistics-etc).
-- If a shape is linked to a virtual function resource, from DataMiner 9.5.13 onwards, an **Info** field can be used to display the name of the virtual function resource, the name of the main element generating the virtual function resource, the resource name or the name of the virtual function definition.
+- If a shape is [linked to an element, a service or a redundancy group](xref:Linking_a_shape_to_an_element_a_service_or_a_redundancy_group), an **Info** field can be used to display the name or the current alarm state of that item.
+
+- If a shape is [linked to an alarm](xref:Linking_a_shape_to_an_alarm), an **Info** field can be used to display information about that alarm.
+
+- If a shape is [linked to a view](xref:Linking_a_shape_to_a_view), an **Info** field can be used to display the name of the view as well as statistical data concerning the alarms in that view.
+
+- If a shape is [linked to a DCF interface](xref:Automatically_displaying_external_and_internal_connections), an **Info** field can be used to display the custom name of the DCF interface.
 
   > [!TIP]
   > See also: [Generating the connectivity chain for an SRM service instance](xref:Generating_the_connectivity_chain_for_an_SRM_service_instance)
+
+- If a shape is linked to a view, a service or an element, an **Info** field can be used to display the number of tickets linked to that same view, service or element. See [Element statistics, service statistics, view statistics, etc](#element-statistics-service-statistics-view-statistics-etc).
+
+- If a shape is [linked to a virtual function resource](xref:Linking_a_shape_to_a_resource), from DataMiner 9.5.13 onwards, an **Info** field can be used to display the name of the virtual function resource, the name of the main element generating the virtual function resource, the resource name or the name of the virtual function definition.
+
+- If a shape is [linked to an EPM object](xref:Linking_a_shape_to_an_EPM_object), from DataMiner 10.1.0/10.0.4 onwards, an **Info** field can be used to display the system name or system type, and from DataMiner 10.3.2/10.4.0 onwards, it can be used to display statistics related to the EPM object.
 
 > [!TIP]
 > For an example, see [Ziine](xref:ZiineDemoSystem) > *Visual Overview Design Examples* view > *[data > PROPERTIES]* page.
@@ -53,6 +60,7 @@ Add a shape data field of type **Info** to the shape, and set its value to one o
   - *MINIMUM VALUE* (see [Displaying history values for parameters](xref:Linking_a_shape_to_an_element_parameter#displaying-history-values-for-parameters))
   - *MAXIMUM VALUE* (see [Displaying history values for parameters](xref:Linking_a_shape_to_an_element_parameter#displaying-history-values-for-parameters))
   - *IN USE*: Displays "true" or "false" depending on whether the element is being used in a resource, is a DVE parent of a function resource, or represents the physical device corresponding with a virtual function resource (supported from DataMiner 10.3.0/10.2.6 onwards). Note that the [UseResource=true](xref:Linking_a_shape_to_a_resource) option must be specified on the element shape for this to work.
+  - *Contributing Booking*: Displays the contributing booking ID of a resource (supported from DataMiner 10.3.0/10.2.11 onwards). Note that the [UseResource=true](xref:Linking_a_shape_to_a_resource) option must be specified on the element shape for this to work.
 
 - **Services**:
 

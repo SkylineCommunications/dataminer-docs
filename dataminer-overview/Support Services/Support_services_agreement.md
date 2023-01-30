@@ -57,7 +57,9 @@ Updates for Software connectors provided by Skyline are limited to changes relat
 
 Upgrades shall be released in Skyline's discretion and based on the technology innovations that take into account the general interest of all Users and the overall roadmap of the Software and Skyline's business.
 
-Installation of Updates and Upgrades on the User's system by Skyline is not included in the Support Services.
+Installation of Updates and Upgrades on the User's system by Skyline is not included in the Support Services. 
+
+Installation and configuration of hardware and databases (Cassandra, Elasticsearch, etc.) in the User's system by Skyline is not included in the Support Services.
 
 ## Support for software issues
 
@@ -67,7 +69,7 @@ User shall ensure that it has an industry-standard and uninterrupted remote acce
 
 ## Ticket generation
 
-When User encounters an Issue with the Software, or wishes to receive Support for another reason, User can at their choice open a ticket for Support or call Skyline's Support helpdesk.
+When User encounters an Issue with the Software, or wishes to receive Support for another reason, User can at their choice [open a ticket for Support or call Skyline's Support helpdesk](https://skyline.be/contact/tech-support).
 
 Tickets for Support can be generated through Skyline's DataMiner Cloud Platform.
 
@@ -193,11 +195,11 @@ User shall ensure that the certified employees are formally mandated for DataMin
 
 A customer success manager from Skyline shall be at Users disposal to help User with any questions beyond the scope of Support Services and to help User to get the most out of the Software.
 
-#### Service Credits
+#### Professional Services Credits
 
-In each one-year period of Support Services purchased by User, Service Credits are granted to User. Allocated Service Credits are dependent upon amounts spent for Support Services. The exact amount of granted Service Credits will be communicated to User at the renewal time of the Support Services. More information on Service Credits can be found on [DataMiner Dojo](https://community.dataminer.services/service-credits/).
+In each one-year period of Support Services purchased by User, Professional Services Credits are granted to User. Allocated Professional Services Credits are dependent upon amounts spent for Support Services. The exact amount of granted Professional Services Credits will be communicated to User at the renewal time of the Support Services. More information on Professional Services Credits can be found on [DataMiner Dojo](https://community.dataminer.services/service-credits/).
 
-Service Credits are subject to availability and thus not guaranteed. User is advised to timely schedule services that are to be performed using Service Credits. Non-used portions of Service Credits are not transferable to subsequent years.
+Professional Services Credits are subject to availability and thus not guaranteed. User is recommended to timely schedule services that are to be performed using Professional Services Credits. Non-used portions of Professional Services Credits are not transferable to subsequent years.
 
 #### Lab licenses
 

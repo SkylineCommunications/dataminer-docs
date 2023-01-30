@@ -18,7 +18,7 @@ Graph showing the distribution of alarms over a selected time span, with several
 
 ## Alarm List
 
-Overview of an element’s active alarms or historic alarms, with the following options:
+Overview of an element’s active alarms or history alarms, with the following options:
 
 - You can choose between different time spans: *Active*, to show only active alarms, *Last Hour*, *Last 24 Hours*, *Yesterday*, *Week to Date*, *Month to Date*, *Previous Month*, or *Year to Date*.
 
@@ -65,7 +65,7 @@ When you generate a report with this component, you can then:
 - For selected KPIs, determine whether to show the average, minimum, maximum or real-time value.
 
 > [!NOTE]
-> If the report is generated as Excel/CSV, at most 1 million total table rows of a partial table can be displayed. If the report is generated as HTML/MHT, only the first page of a partial table will be displayed, using the page size configured in the protocol.
+> If the report is generated as Excel/CSV, at most 1 million total table rows of a [partial table](xref:Table_parameters#partial-tables) can be displayed. If the report is generated as HTML/MHT, only the first page of a partial table will be displayed, using the page size configured in the protocol.
 
 ## DMS Status
 
@@ -110,7 +110,7 @@ Available from DataMiner 9.5.4 onwards on systems with the appropriate Service &
 
 ## SLA Historic Service Alarm List
 
-Only applicable for SLA elements. This component shows a table with an overview of historic service alarms for the SLA, with above this a summary listing the following items:
+Only applicable for SLA elements. This component shows a table with an overview of history service alarms for the SLA, with above this a summary listing the following items:
 
 - The service monitored by the SLA.
 

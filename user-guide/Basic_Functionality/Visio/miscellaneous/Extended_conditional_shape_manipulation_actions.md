@@ -56,17 +56,21 @@ Alias-"Alias"|"Target"|"What"|"Condition"
 
 - **Logical expression**: The expression that combines the defined aliases using "and", "or", "(", ")" or "not". Example: \<A>or\<B>
 
-- **Alias**: \<A>, \<B>, \<C>, ...
+- **Alias**: A, B, C, ...
 
-- **Target**: The DataMiner object to which the action should be applied. This can be an element, service, view or connection.
+- **Target**: The object to which the action should be applied. Use the following syntax (optionally using wildcards or placeholders):
 
-  Use the following syntax (optionally using wildcards or placeholders):
+  - For an element: *Element:[Element name or ID]*
+  - For a service: *Service:[Service name or ID]*
+  - For a view: *View:[View name or ID]*
+  - For a connection (see [Conditional manipulation of connection shapes](#conditional-manipulation-of-connection-shapes): *Connection*
+  - For an EPM object (supported from DataMiner 10.2.9/10.3.0 onwards), the following are supported:
 
-  - *Element:Element name or ID*
-  - *Service:Service name or ID*
-  - *View:View name or ID*
-  - *Connection*
-  - *Value*
+    - *SystemType=[system type];SystemName=[system name]*
+    - *SystemType=[system type]*
+    - *SystemName=[system name]*
+
+  - Depending on a value: *Value*
 
   The default target is *Element*, so if only a name or ID is specified, without a preceding keyword, this will be considered an element name or ID.
   
@@ -89,6 +93,8 @@ Alias-"Alias"|"Target"|"What"|"Condition"
 - **Condition**: The condition that determines whether the shape manipulation is applied. If you want to check if the specified "What" matches with a regular expression, start the condition with "Regex=", followed by the regular expression.
 
   Multiple conditions can be combined within this part of the condition, using a semicolon. In that case, each condition should include an operator and a value. The complete condition component will only function correctly if all conditions within it are correctly configured.
+
+  For an overview of the supported operators in the condition, see [Condition operators](xref:Basic_conditional_shape_manipulation_actions#condition-operators). However, note that if the target is an EPM object, only the operators =, !=, >, >=, <, and <= are supported.
 
 ### Using an asterisk in a condition
 
@@ -125,36 +131,36 @@ In addition, from DataMiner 9.5.13 onwards, it is possible to use the \[sep:XY\]
 
 From DataMiner 9.0.2 onwards, you can use alarm statistics in the "What" part of the condition. The following table lists the available items, and indicates whether they can be used to retrieve data for a view, a service or an element.
 
-| Statistical data      | View | Service | Element |
-| --------------------- | ---- | ------- | ------- |
-| #CriticalElements     | X    | X       |         |
-| #MajorElements        | X    | X       |         |
-| #MinorElements        | X    | X       |         |
-| #WarningElements      | X    | X       |         |
-| #NormalElements       | X    | X       |         |
-| #TimeoutElements      | X    | X       |         |
-| #NoticeElements       | X    | X       |         |
-| #ErrorElements        | X    | X       |         |
-| #MaskedElements       | X    | X       |         |
-| #TotalElements        | X    | X       |         |
-| #TotalElementsInAlarm | X    | X       |         |
-| #CriticalServices     | X    |         |         |
-| #MajorServices        | X    |         |         |
-| #MinorServices        | X    |         |         |
-| #WarningServices      | X    |         |         |
-| #NormalServices       | X    |         |         |
-| #TotalServices        | X    |         |         |
-| #TotalServicesInAlarm | X    |         |         |
-| #CriticalAlarms       | X    | X       | X       |
-| #MajorAlarms          | X    | X       | X       |
-| #MinorAlarms          | X    | X       | X       |
-| #WarningAlarms        | X    | X       | X       |
-| #NormalAlarms         | X    | X       | X       |
-| #TimeoutAlarms        | X    | X       | X       |
-| #NoticeAlarms         | X    | X       | X       |
-| #ErrorAlarms          | X    | X       | X       |
-| #MaskedAlarms         | X    | X       | X       |
-| #TotalAlarms          | X    | X       | X       |
+| Statistical data      | View | Service | Element | EPM object |
+| --------------------- | ---- | ------- | ------- |------------|
+| #CriticalElements     | X    | X       |         |            |
+| #MajorElements        | X    | X       |         |            |
+| #MinorElements        | X    | X       |         |            |
+| #WarningElements      | X    | X       |         |            |
+| #NormalElements       | X    | X       |         |            |
+| #TimeoutElements      | X    | X       |         |            |
+| #NoticeElements       | X    | X       |         |            |
+| #ErrorElements        | X    | X       |         |            |
+| #MaskedElements       | X    | X       |         |            |
+| #TotalElements        | X    | X       |         |            |
+| #TotalElementsInAlarm | X    | X       |         |            |
+| #CriticalServices     | X    |         |         |            |
+| #MajorServices        | X    |         |         |            |
+| #MinorServices        | X    |         |         |            |
+| #WarningServices      | X    |         |         |            |
+| #NormalServices       | X    |         |         |            |
+| #TotalServices        | X    |         |         |            |
+| #TotalServicesInAlarm | X    |         |         |            |
+| #CriticalAlarms       | X    | X       | X       | X          |
+| #MajorAlarms          | X    | X       | X       | X          |
+| #MinorAlarms          | X    | X       | X       | X          |
+| #WarningAlarms        | X    | X       | X       | X          |
+| #NormalAlarms         | X    | X       | X       | X          |
+| #TimeoutAlarms        | X    | X       | X       | X          |
+| #NoticeAlarms         | X    | X       | X       | X          |
+| #ErrorAlarms          | X    | X       | X       | X          |
+| #MaskedAlarms         | X    | X       | X       |            |
+| #TotalAlarms          | X    | X       | X       | X          |
 
 > [!NOTE]
 >
@@ -268,10 +274,16 @@ Conditions using alarm statistics:
 <A>or<B>-A|View:myView|#MinorServices|>0-B|Element:myElement|Property:Enabled|=true
 ```
 
-Conditions using the target "Value" (available from DataMiner 9.5.4 onwards):
+Conditions using the target "Value":
 
 ```txt
 <A>-A|Value|10|<=20
 <A>-A|Value|5|>2
 <A>-A|Value|[var:MyVar01]|>=[var:MyVar02]
+```
+
+Condition with EPM target (supported from DataMiner 10.2.9/10.3.0 onwards):
+
+```txt
+<A>-A|SystemType= Cable;SystemName=SF Cable1|#TotalAlarms|>0
 ```

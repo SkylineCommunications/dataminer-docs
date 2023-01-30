@@ -20,7 +20,7 @@ Use a wildcard (*) if the rule needs to be applied on all of the tables that gen
 
 ## Examples
 
-In the example below, the first rule will be executed on all the tables, but the second one will only be exe­cuted on table 100:
+In the example below, the first rule will be executed on all the tables, but the second one will only be executed on table 100:
 
 ```xml
 <ExportRule table="*" />

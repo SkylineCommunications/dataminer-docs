@@ -20,4 +20,4 @@ Use this method to retrieve the possible values of a particular topology field o
 
 | Item | Format | Description |
 |--|--|--|
-| GetValuesForCPE­TopologyFieldSorted­Result | [DMATopologyFieldValues](xref:DMATopologyFieldValues) | The topology field values, sorted according to their position, with the total page count of the results and the number of the current page. |
+| GetValuesForCPETopologyFieldSortedResult | [DMATopologyFieldValues](xref:DMATopologyFieldValues) | The topology field values, sorted according to their position, with the total page count of the results and the number of the current page. |

@@ -19,4 +19,4 @@ Use this method to update a specific note for a particular element.
 
 | Item                        | Format  | Description         |
 |-----------------------------|---------|---------------------|
-| UpdateNoteFor­ElementResult | Integer | The ID of the note. |
+| UpdateNoteForElementResult | Integer | The ID of the note. |

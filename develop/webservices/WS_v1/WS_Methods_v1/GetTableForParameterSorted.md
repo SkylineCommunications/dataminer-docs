@@ -26,4 +26,4 @@ Use this method to retrieve a specific number of rows from a table parameter.
 
 | Item | Format | Description |
 |--|--|--|
-| GetTableForParameter­SortedResult | Array of [DMAParameterTableRow](xref:DMAParameterTableRow) | The table rows for the specified parameter, sorted as requested. |
+| GetTableForParameterSortedResult | Array of [DMAParameterTableRow](xref:DMAParameterTableRow) | The table rows for the specified parameter, sorted as requested. |

@@ -16,11 +16,18 @@ The *CI Types* subtab of the *Admin* tab consists of several pages with overview
 
 - **Export all**: Only available on the *Overview* page. Allows you to export the configuration of all CI Types.
 
+  > [!NOTE]
+  > By default, CI Types are exported to the folder `C:\Skyline DataMiner\Documents\Skyline IDP CMDB\CI Types`.
+
 - **Generate**: Only available on the *Overview* page. Starts a wizard that allows you to generate CI Types for the production protocols in the system. You can select to generate CI Types for all protocols, for all protocols that do not have a CI Type yet, or for a custom selection of protocols.
 
   > [!NOTE]
+  >
   > - The wizard also allows you to select "None", so that you can easily clear the selection of all listed protocols in order to make a custom selection afterwards.
   > - By default, CI Types generated based on a protocol with an SNMPv3 connection have SNMPv2 port settings configured on that connection, as there is no way to automatically find out the security levels, algorithms and passwords.
+
+  > [!TIP]
+  > You can for instance use the *Generate* option to have existing DataMiner elements managed by IDP. You will then need to [correctly configure the CI Type](xref:CI_Types#using-the-ci-type-management-wizard), [enable the necessary activities](xref:Admin_activities) for the CI Type, and [add the element to the managed elements](xref:IDP_Inventory_tab#unmanaged).
 
 On each of the pages, different settings are available. These are explained in the sections below.
 

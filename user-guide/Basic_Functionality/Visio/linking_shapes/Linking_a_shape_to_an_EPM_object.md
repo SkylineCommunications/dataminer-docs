@@ -7,7 +7,7 @@ uid: Linking_a_shape_to_an_EPM_object
 From DataMiner 10.1.0/10.0.4 onwards, it is possible to link a shape to an EPM object using its system name and system type. Clicking the shape will then navigate to that EPM object on the current card. The context menu of the shape will allow you to navigate to the object on the current card, on a new card, or on a new undocked card.
 
 > [!IMPORTANT]
-> This feature is currently only available if the *CPEIntegration* soft-launch option is enabled. See [Soft-launch options](https://community.dataminer.services/documentation/soft-launch-options/).
+> This feature is currently only available if the *CPEIntegration* soft-launch option is enabled. See [Soft-launch options](xref:SoftLaunchOptions).
 
 > [!NOTE]
 > A shape linked to an EPM object supports inheritance, which means that child shapes will automatically be linked to the EPM object. You can disable this using the [AllowInheritance=False](xref:Overview_of_page_and_shape_options#allowinheritancefalse) option.
@@ -44,3 +44,25 @@ For example:
 To make the shape text display the system name or system type, add an **Info** shape data field and set it to *System Type* or *System Name*. Then set the shape text to a "*" character. This character will be replaced by the requested information. See [Making a shape display information about the item it is linked to](xref:Making_a_shape_display_information_about_the_item_it_is_linked_to).
 
 Alternatively, you can use the placeholders [System Name] and [System Type] in the text.
+
+## Showing statistics for the EPM object in the shape text
+
+<!-- RN 35222 -->
+
+From DataMiner 10.3.2/10.4.0 onwards, you can make the shape text display statistics for the EPM object:
+
+1. Add an asterisk in the shape text.
+
+1. Add an **Info** shape data field and set its value to `EPM STATISTICS:###[<statistics>]`.
+
+   Instead of `<statistics>`, use one of the values below, depending on the type of statistics you want to display:
+
+    - `#TotalAlarms`
+    - `#CriticalAlarms`
+    - `#MajorAlarms`
+    - `#MinorAlarms`
+    - `#WarningAlarms`
+    - `#NormalAlarms`
+    - `#TimeoutAlarms`
+    - `#NoticeAlarms`
+    - `#ErrorAlarms`

@@ -37,7 +37,9 @@ When you right-click the DataMiner Taskbar Utility system tray icon, a menu appe
     Allows you to upgrade the DataMiner Agents in your DataMiner System.
 
     > [!NOTE]
-    > If an upgrade is started using the DataMiner Taskbar Utility, from DataMiner 9.6.5 onwards, a button is available that allows you to abort the upgrade in progress. However, be very careful with this functionality, as aborting an upgrade can potentially cause a DMA to no longer start up.
+    >
+    > - If an upgrade is started using the DataMiner Taskbar Utility, from DataMiner 9.6.5 onwards, a button is available that allows you to abort the upgrade in progress. However, be very careful with this functionality, as aborting an upgrade can potentially cause a DMA to no longer start up.
+    > - From DataMiner 10.1.0 [CU19]/10.2.0 [CU7]/10.2.10 onwards, this option also allows you to install .dmapp packages. In earlier DataMiner versions, only .dmupgrade packages are supported.
 
     > [!TIP]
     > See also:

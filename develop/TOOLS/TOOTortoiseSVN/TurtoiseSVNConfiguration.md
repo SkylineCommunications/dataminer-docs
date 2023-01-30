@@ -8,5 +8,5 @@ Windows only supports eleven overlays, which causes some SVN icons not to be dis
 
 Therefore, we disable some icons that we will not use. To disable these icons, configure the settings as illustrated below.
 
-![](~/develop/images/SVN_config.png)
-<br>Figure 118: TortoiseSVN Overlay Handlers settings window
+![](~/develop/images/SVN_config.png)<br>
+*TortoiseSVN Overlay Handlers settings window*

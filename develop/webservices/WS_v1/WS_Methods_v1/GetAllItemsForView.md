@@ -18,4 +18,4 @@ Use this method to retrieve all items (elements, services, service templates, re
 
 | Item | Format | Description |
 |--|--|--|
-| GetAllItemsForView­Result | Array of [DMAElement](xref:DMAElement) | The information regarding the items present in the view. For services/service templates or redundancy groups/redundancy group templates, the type property of the DMAElement object is “service” or “redundancy group” respectively. |
+| GetAllItemsForViewResult | Array of [DMAElement](xref:DMAElement) | The information regarding the items present in the view. For services/service templates or redundancy groups/redundancy group templates, the type property of the DMAElement object is “service” or “redundancy group” respectively. |

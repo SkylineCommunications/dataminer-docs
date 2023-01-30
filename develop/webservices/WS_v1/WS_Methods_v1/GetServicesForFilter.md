@@ -17,4 +17,4 @@ Use this method to retrieve the services matching a specific property filter. Av
 
 | Item | Format | Description |
 |--|--|--|
-| GetServicesForFilter­Result | Array of [DMAElement](xref:DMAElement) | The services matching the property filter. |
+| GetServicesForFilterResult | Array of [DMAElement](xref:DMAElement) | The services matching the property filter. |

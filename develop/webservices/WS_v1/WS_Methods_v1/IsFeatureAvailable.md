@@ -16,4 +16,4 @@ Use this method to check whether a particular feature is available on the DMA. A
 
 | Item                     | Format  | Description                                  |
 |--------------------------|---------|----------------------------------------------|
-| IsFeatureAvailable­Result | Boolean | Whether the feature is available on the DMA. |
+| IsFeatureAvailableResult | Boolean | Whether the feature is available on the DMA. |

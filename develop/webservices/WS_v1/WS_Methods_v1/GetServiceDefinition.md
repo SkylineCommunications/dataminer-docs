@@ -17,4 +17,4 @@ Use this method to retrieve a specific service definition. Available from DataMi
 
 | Item | Format | Description |
 |--|--|--|
-| GetServiceDefinition­Result | [DMAServiceDefinition](xref:DMAServiceDefinition) | The requested service definition. |
+| GetServiceDefinitionResult | [DMAServiceDefinition](xref:DMAServiceDefinition) | The requested service definition. |

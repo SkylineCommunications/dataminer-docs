@@ -7,7 +7,9 @@ uid: LineAndAreaChart
 This component can be used to display a trend graph.
 
 > [!NOTE]
-> From DataMiner 10.0.11 onwards, if this type of component is added, the time span displayed by the component is available as a feed in the data pane, so that this can be applied to other components.
+>
+> - From DataMiner 10.0.11 onwards, if this type of component is added, the time span displayed by the component is available as a feed in the data pane, so that this can be applied to other components.
+> - From DataMiner 10.2.0 [CU10]/10.3.1 onwards, this component also supports line graphs for string parameters.
 
 ## Configuration
 
@@ -16,7 +18,9 @@ To configure the component:
 1. Apply one or more parameter data feeds. See [Applying a data feed](xref:Configuring_dashboard_components#applying-a-data-feed).
 
    > [!NOTE]
-   > If a query is used as the data feed, additional configuration is required. See [Configuration with query data feed](#configuration-with-query-data-feed).
+   >
+   > - If a query is used as the data feed, additional configuration is required. See [Configuration with query data feed](#configuration-with-query-data-feed).
+   > - Prior to DataMiner 10.2.0 [CU10]/10.3.1, you can use a table component to feed a line chart by linking the *Parameters* feed and the *Indices* feed. From DataMiner 10.2.0 [CU10]/10.3.1 onwards, you only need to link the *Parameters* feed of the table to the line chart in order to see the data, similar to when you use a [parameter feed component](xref:DashboardParameterFeed).
 
 1. Optionally, apply a filter feed:
 
@@ -53,7 +57,10 @@ To configure the component:
 
    - *Show maximum*: Available from DataMiner 10.0.13 onwards, if *Show real-time trend data*/Stack trend lines is not selected. Displays the maximum trend data. By default, this is disabled.
 
-   - *Group by*: In case the component displays trending for multiple parameters, this box allows you to specify how the graphs should be grouped. One graph will be displayed per group. Note that view parameters can only be grouped together with other parameters with the option *All together*, otherwise they are placed in a separate group.
+   - *Group by*: In case the component displays trending for multiple parameters, this box allows you to specify how the graphs should be grouped. One graph will be displayed per group. The default setting (from DataMiner 10.3.2/10.4.0 onwards<!-- RN 35160 -->) is *All together*.
+
+     > [!NOTE]
+     > View parameters can only be grouped together with other parameters with the option *All together*, otherwise they are placed in a separate group.
 
    - *Use percentage based values*: This option is only displayed if the component displays resource capacity information. If you select this option, the chart will display percentage values instead of absolute values.
 

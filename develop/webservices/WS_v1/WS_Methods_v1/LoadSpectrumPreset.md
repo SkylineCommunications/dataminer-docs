@@ -20,4 +20,4 @@ Use this method to load a spectrum preset for a particular spectrum analyzer. Av
 
 | Item | Format | Description |
 |--|--|--|
-| LoadSpectrumPreset­Result | [DMASpectrumPreset](xref:DMASpectrumPreset) | Array containing the name of the preset, a boolean indicating whether the preset is shared, and the settings of the preset. |
+| LoadSpectrumPresetResult | [DMASpectrumPreset](xref:DMASpectrumPreset) | Array containing the name of the preset, a boolean indicating whether the preset is shared, and the settings of the preset. |

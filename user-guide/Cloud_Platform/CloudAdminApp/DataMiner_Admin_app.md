@@ -10,13 +10,15 @@ The Admin app is intended for the management of your cloud-connected DataMiner S
 
 - [Getting your organization verified](xref:CloudConnectionVerification)
 
-- [Giving users access to cloud features](xref:Giving_users_access_to_cloud_features)
-
-- [Granting admin consent for Teams actions](xref:Granting_admin_consent)
+- [Managing DCP users](xref:Managing_DCP_users)
 
 - [Controlling remote access](xref:Controlling_remote_access)
 
+- [Granting admin consent for Teams actions](xref:Granting_admin_consent)
+
 - [Controlling cloud feed data offloads](xref:Controlling_cloudfeed_data_offloads)
+
+- [Consulting DCP audit logs](xref:DCP_Auditing)
 
 - [Managing the nodes of a cloud-connected DMS](xref:Managing_cloud-connected_nodes)
 

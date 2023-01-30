@@ -18,4 +18,4 @@ Use this method to retrieve the data of all services in a particular view.
 
 | Item | Format | Description |
 |--|--|--|
-| GetServicesFor­ViewResult | Array of [DMAElement](xref:DMAElement) | The data of the services in the specified view. |
+| GetServicesForViewResult | Array of [DMAElement](xref:DMAElement) | The data of the services in the specified view. |

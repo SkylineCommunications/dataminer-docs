@@ -24,6 +24,8 @@ This page contains an overview of the Hub parameters available in the I-DOCSIS b
 
 - **Number CM DOCSIS 3.1**
 
+- **Number CM DOCSIS Other**
+
 - **Number CM Ping OK**
 
 - **Percentage CM Ping OK**

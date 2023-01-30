@@ -28,7 +28,7 @@ A routing rule defines:
 
   - An "IncomingGatewayKeyName" (optional in case of "Any" operation)
   - A Value (optional in case of "Any" operation)
-  - An Operation: Only "Equal" and "Any" are currently supported. "Any" means that the gate­way key and value are ignored, and only the incoming interface ID is matched)
+  - An Operation: Only "Equal" and "Any" are currently supported. "Any" means that the gateway key and value are ignored, and only the incoming interface ID is matched)
   - A list of IDs of incoming interfaces. Alternatively, -1 can be specified to indicate all incoming interfaces.
 
 Token objects will have the following additional fields to support this:
@@ -201,7 +201,7 @@ Parameters:
 public static void ExecuteTokenHandler(Engine engine, ScriptInfo scriptInfo, MessageType messageType, ProcessProfileInstances processProfileInstances, Dictionary<string, string> activityMetadata, Dictionary<string, string> gatewayKeys);
 ```
 
-Executes the token handler script defined in the *ScriptInfo* parameter with new process pro­file instances, gateway keys and activity metadata.
+Executes the token handler script defined in the *ScriptInfo* parameter with new process profile instances, gateway keys and activity metadata.
 
 Parameters:
 

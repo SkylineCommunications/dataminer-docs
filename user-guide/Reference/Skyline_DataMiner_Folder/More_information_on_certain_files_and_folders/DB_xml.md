@@ -15,7 +15,7 @@ In the file *DB.xml*, you can specify the configuration data for several databas
 - [CMDB settings](#cmdb-settings)
 
   > [!TIP]
-  > See also: [DMS Inventory & Asset Management](xref:AssetManagement#dms-inventory--asset-management)
+  > See also: [Inventory & Asset Management](xref:AssetManagement)
 
 This file is located in the folder *C:\\Skyline DataMiner\\*.
 
@@ -27,9 +27,12 @@ The configuration data for the general or “local” database has to be specifi
 
 > [!NOTE]
 >
-> - The *type* attribute of the *\<Database>* tag indicates whether a MySQL, MS SQL or Cassandra (cluster) database is used. If no *type* attribute is specified, MySQL is used as type.
+> - The *type* attribute of the *\<Database>* tag indicates whether a MySQL, MSSQL, or Cassandra (cluster) database is used. If no *type* attribute is specified, MySQL is used as type.
 > - If a separate Cassandra cluster (consisting of one or more nodes) is used for each DMA, the *type* attribute for the database is set to *Cassandra*. If an entire DMS uses the same Cassandra cluster, the *type* attribute for the database is set to *CassandraCluster*.
 > - If the *CassandraCluster* type is used, *DB.xml* is synced completely throughout the cluster. With other types, the general database settings are not synced.
+
+> [!IMPORTANT]
+> MSSQL is no longer supported as the general database as from DataMiner 10.3.0.
 
 The following configuration is possible for the general database:
 
@@ -48,6 +51,8 @@ The following configuration is possible for the general database:
 - [Setting the number of retries to connect to the Cassandra database](#setting-the-number-of-retries-to-connect-to-the-cassandra-database)
 
 - [Enabling TLS on the Cassandra database connection](#enabling-tls-on-the-cassandra-database-connection)
+
+- [Configuring the consistency level of Cassandra in a Cassandra cluster database](#configuring-the-consistency-level-of-cassandra-in-a-cassandra-cluster-database)
 
 - [Example of a general database configuration](#example-of-a-general-database-configuration)
 
@@ -136,7 +141,7 @@ In the above example, the slowquery attribute is set to “5”, so all database
 
 ### Configuring how alarm history slider data are kept in a Cassandra database
 
-In a Cassandra general database, the timetrace table among others contains “snapshots”, which are used to visualize historic alarm information in the DataMiner Cube history slider.
+In a Cassandra general database, the timetrace table among others contains “snapshots”, which are used to visualize history alarm information in the DataMiner Cube history slider.
 
 - By default, timetrace snapshots are saved every 100 rows. To change this setting, set a different value in the *\<SnapshotInterval>* tag for the Cassandra database.
 
@@ -231,6 +236,13 @@ To do so
 > - From DataMiner 10.1.3 onwards TLS 1.0 is supported. From DataMiner 10.2.4/10.2.0-CU1 onwards, TLS 1.0, 1.1 and 1.2 are supported.
 > - When Cassandra is hosted on the local DataMiner server, and DataMiner Failover is active, Cassandra will use TCP port 7001 for TLS encrypted inter-node communication (instead of port 7000). Make sure this port is allowed through the firewall of both Failover agents.
 
+### Configuring the consistency level of Cassandra in a Cassandra Cluster database
+
+If your DMS uses the Cassandra Cluster database type (i.e. one Cassandra cluster for the entire DMS) , you can configure the **consistency level** of the Cassandra database. This is done by means of the **consistencyLevel** attribute. For detailed information, see [Customizing the consistency level of the Cassandra cluster](xref:Migrating_the_general_database_to_a_DMS_Cassandra_cluster#customizing-the-consistency-level-of-the-cassandra-cluster).
+
+> [!TIP]
+> See also: [Data replication and consistency configuration](xref:replication_and_consistency_configuration).
+
 ### Example of a general database configuration
 
 The following example illustrates the configuration of a MySQL general database (prior to DataMiner 9.5.6).
@@ -295,7 +307,7 @@ The following example illustrates the configuration of a general database of typ
 
 ```xml
 <DataBases xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.skyline.be/config/db">
- <DataBase active="true" local="true" type="CassandraCluster">
+ <DataBase active="true" local="true" type="CassandraCluster" consistencyLevel="Quorum">
  <DBServer>localhost,10.3.1.100</DBServer>
  <DB>sldmadb</DB>
  <UID>root</UID>
@@ -314,7 +326,7 @@ The following example illustrates the configuration of a general database of typ
 The configuration data for the offload or “central” database has to be specified in a *\<Database>* tag of which the *local* attribute is set to “false”.
 
 > [!NOTE]
-> - The *type* attribute of the *\<Database>* tag indicates whether a MySQL, MS SQL or Oracle database is used. If no *type* attribute is specified, MySQL is used as type.
+> The *type* attribute of the *\<Database>* tag indicates whether a MySQL, MSSQL or Oracle database is used. If no *type* attribute is specified, MySQL is used as type.
 
 The following configuration is possible for the offload database:
 
@@ -328,7 +340,7 @@ The following configuration is possible for the offload database:
 
 - [Configuring the collation for an MSSQL database](#configuring-the-collation-for-an-mssql-database)
 
-- [Configuring data offloads to an SQL Server database in another domain](#configuring-data-offloads-to-an-sql-server-database-in-another-domain)
+- [Configuring data offloads to an MSSQL database in another domain](#configuring-data-offloads-to-an-mssql-database-in-another-domain)
 
 - [Configuring data offloads to an Oracle database](#configuring-data-offloads-to-an-oracle-database)
 
@@ -419,7 +431,7 @@ Example:
 </DataBase>
 ```
 
-### Configuring data offloads to an SQL Server database in another domain
+### Configuring data offloads to an MSSQL database in another domain
 
 If the offload database is situated in another domain, you can override the machine name with the IP address. That way, the offload database will be able to access the offload files on the other domain.
 
@@ -638,13 +650,13 @@ To do so:
 
 ## CMDB settings
 
-If you have a CMDB (Configuration Management Database) that you want to manage by means of the DMS Inventory & Asset Management module, then you can specify the configuration data for that CMDB in an additional *\<Database>* tag.
+If you have a CMDB (Configuration Management Database) that you want to manage by means of the DataMiner Inventory & Asset Management module, then you can specify the configuration data for that CMDB in an additional *\<Database>* tag.
 
 > [!NOTE]
 > The *\<Database>* tag containing the configuration data for the CMDB must not have a *local* attribute. However, it must have a *name* attribute of which the value (i.e. the name of the database configuration) must be identical to the value specified in the *\<DatabaseConfig>* tag of the Inventory & Asset Management configuration file.
 
 > [!TIP]
-> See also: [Configuring DMS Inventory and Asset Management](xref:Configuring_DMS_Inventory_and_Asset_Management)
+> See also: [Configuring DataMiner Inventory and Asset Management](xref:Configuring_DMS_Inventory_and_Asset_Management)
 
 Example 1:
 

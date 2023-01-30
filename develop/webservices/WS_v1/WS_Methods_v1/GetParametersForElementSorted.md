@@ -24,4 +24,4 @@ Use this method to retrieve a specific number of element parameters.
 
 | Item | Format | Description |
 |--|--|--|
-| GetParametersFor­ElementSortedResult | Array of [DMAParameter](xref:DMAParameter) | The parameters for the specified element, sorted as requested. |
+| GetParametersForElementSortedResult | Array of [DMAParameter](xref:DMAParameter) | The parameters for the specified element, sorted as requested. |

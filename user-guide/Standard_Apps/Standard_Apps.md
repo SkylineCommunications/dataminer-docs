@@ -2,12 +2,14 @@
 uid: Part5StandardApps
 ---
 
-# DataMiner Standard Apps & Solutions
+# DataMiner Standard Apps, Frameworks & Solutions
 
 - [DataMiner EPM Solution](xref:SolEPM)
 
 - [DataMiner IDP app](xref:SolIDP)
 
+- [Process Automation framework](xref:PA_index)
+
 - [DataMiner PTP app](xref:SolPTP)
 
-- [Booking Manager app](xref:SolSRM)
+- [Service & Resource Management Framework](xref:srm_index)

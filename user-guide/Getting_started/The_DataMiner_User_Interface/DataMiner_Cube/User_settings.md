@@ -235,7 +235,9 @@ On the *Cube* page, the following settings are available:
     > [!TIP]
     > See also: [Alarm Console settings](xref:AlarmConsoleSettings)
 
-- **Welcome page** > **Show the ... section**: Available from DataMiner 9.5.14 onwards. These settings determine whether the different optional sections are displayed on the DataMiner Pulse welcome page in Cube.
+- **Show the news section**: Available from DataMiner 9.5.14 onwards. Determines whether the optional news section is displayed on the DataMiner Pulse welcome page in Cube.
+
+- **Show the DataMiner TV section**: Obsolete. Determines whether the optional DataMiner TV section is displayed on the DataMiner Pulse welcome page in Cube. Available from DataMiner 9.5.14 up to DataMiner 10.1.0 [CU22]/10.2.0 [CU10]/10.3.1.
 
 - **Display the workspace buttons in the header**: Available from DataMiner 10.0.0/10.0.2 onwards. Determines whether the four blue squares indicating the Cube workspaces are displayed in the header. This setting can also be enabled or disabled via the header quick menu.
 
@@ -362,6 +364,7 @@ On the *Sidebar page,* or prior to DataMiner 10.2.0/10.1.3, the *Surveyor* page,
 - **Trend Y-axis mode**: Select *Auto* to automatically optimize the vertical range of a trend graph during pan and zoom operations. Select *Range* to fix the vertical range to the minimum and maximum defined in the protocol.
 
     > [!NOTE]
+    >
     > - If a trend display is already open when you change this setting, you must reload the trend display for the setting to take effect.
     > - When the *Range* setting is selected, the range of the y-axis is determined by the first parameter loaded in the trend graph. After the initial range is determined, it will not be adjusted until all parameters are cleared.
 

@@ -60,23 +60,9 @@ This is an example of a *MaintenanceSettings.xml* file:
   <Trending>
     <EDCurves></EDCurves>
     <SDCurves></SDCurves>
-    <TimeSpan1DayRecords window="0" unit="days">
-      730
-    </TimeSpan1DayRecords>
-    <!--2 years-->
-    <TimeSpan1HourRecords window="60" unit="days">
-      365
-    </TimeSpan1HourRecords>
-    <!--1 year--->
-    <TimeSpan5MinRecords window="5" unit="days">
-      30
-    </TimeSpan5MinRecords>
-    <!--1 month-->
-    <TimeSpanSpectrumRecords unit="days">
-      365
-    </TimeSpanSpectrumRecords>
-    <!--1 year-->
-    <TimeSpan unit="hours">24</TimeSpan>
+    <TimeSpan1DayRecords window="0" />
+    <TimeSpan1HourRecords window="60" />
+    <TimeSpan5MinRecords window="5" />
     <WarningLevel></WarningLevel>
   </Trending>
   <WatchDog>
@@ -121,28 +107,28 @@ In this tag, you can add the following attributes to control how timeout alarms 
 
 - **serviceTimeoutMode**, with the following possible values:
 
-    | Value        | Description                                                                                                                                                       |
-    |----------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-    | displayTimeout | Shapes linked to services will only show the timeout color. The current alarm color will not be shown.                                                            |
-    | displayBoth    | Shapes linked to services will show both the current alarm color and the timeout color (default setting). The timeout color will be shown as a hatch pattern. |
+  | Value | Description |
+  |--|--|
+  | displayTimeout | Shapes linked to services will only show the timeout color. The current alarm color will not be shown. |
+  | displayBoth | Shapes linked to services will show both the current alarm color and the timeout color (default setting). The timeout color will be shown as a hatch pattern. |
 
 - **viewTimeoutMode**, with the following possible values:
 
-    | Value        | Description                                                                                                                                                    |
-    |----------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------|
-    | displayTimeout | Shapes linked to views will only show the timeout color. The current alarm color will not be shown.                                                            |
-    | displayBoth    | Shapes linked to views will show both the current alarm color and the timeout color (default setting). The timeout color will be shown as a hatch pattern. |
+  | Value | Description |
+  |--|--|
+  | displayTimeout | Shapes linked to views will only show the timeout color. The current alarm color will not be shown. |
+  | displayBoth | Shapes linked to views will show both the current alarm color and the timeout color (default setting). The timeout color will be shown as a hatch pattern. |
 
 - **elementTimeoutMode** (available from DataMiner 10.2.0/10.1.6 onwards), with the following possible values:
 
-    | Value        | Description                                                                                                                                            |
-    |----------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|
-    | displayTimeout | Shapes linked to elements/parameters will only show the timeout color. The current alarm color will not be shown. This is the default setting.         |
-    | displayBoth    | Shapes linked to elements/parameters will show both the current alarm color and the timeout color. The timeout color will be shown as a hatch pattern. |
+  | Value | Description |
+  |--|--|
+  | displayTimeout | Shapes linked to elements/parameters will only show the timeout color. The current alarm color will not be shown. This is the default setting. |
+  | displayBoth | Shapes linked to elements/parameters will show both the current alarm color and the timeout color. The timeout color will be shown as a hatch pattern. |
 
 ### AlarmSettings.AlarmsPerParameter
 
-In this tag, you can specify the maximum number of alarms that are allowed in an alarm tree. Default: 20 alarms.
+In the *AlarmsPerParameter* tag, you can specify the maximum number of alarms that are allowed in an alarm tree. Default: 20 alarms.
 
 This tag can have the following attributes:
 
@@ -150,11 +136,11 @@ This tag can have the following attributes:
 
 - The *recurring* attribute, which can have the following values:
 
-    | Value  | Description                                                                                                                                                                                                             |
-    |----------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-    | true     | An “Alarm history exceeded XXX alarms” notice will appear in the Alarm Console **every time** the number of alarms in an alarm tree exceeds the AlarmsPerParameter setting. (Default setting.) |
-    | false    | An “Alarm history exceeded XXX alarms” notice will appear in the Alarm Console **the first time** the number of alarms in an alarm tree exceeds the AlarmsPerParameter setting.                |
-    | disabled | An “Alarm history exceeded XXX alarms” notice will **never** appear in the Alarm Console when the number of alarms in an alarm tree exceeds the AlarmsPerParameter setting.                    |
+  | Value | Description |
+  |--|--|
+  | true | An “Alarm history exceeded XXX alarms” notice will appear in the Alarm Console **every time** the number of alarms in an alarm tree exceeds the AlarmsPerParameter setting. (Default setting.) |
+  | false | An “Alarm history exceeded XXX alarms” notice will appear in the Alarm Console **the first time** the number of alarms in an alarm tree exceeds the AlarmsPerParameter setting. |
+  | disabled | An “Alarm history exceeded XXX alarms” notice will **never** appear in the Alarm Console when the number of alarms in an alarm tree exceeds the AlarmsPerParameter setting. |
 
 For example:
 
@@ -167,13 +153,13 @@ For example:
 
 ### AlarmSettings.Blinking
 
-In DataMiner Cube, you can use this tag to make elements, services and views blink if they have an alarm of which nobody has taken ownership.
+The *Blinking* tag can be used to make elements, services and views blink in DataMiner Cube if they have an alarm of which nobody has taken ownership.
 
 It has three required attributes:
 
-| Attribute     | Description                                                                                                       |
-|---------------|-------------------------------------------------------------------------------------------------------------------|
-| enabled       | Whether the Blinking feature is activated or not. Possible values: true/false                          |
+| Attribute | Description |
+|--|--|
+| enabled | Whether the Blinking feature is activated or not. Possible values: true/false |
 | blinkInterval | The number of milliseconds the item (icon, card header, alarm in Alarm Console, etc.) is shown. Default: 1000 |
 | blankInterval | The number of milliseconds the item (icon, card header, alarm in Alarm Console, etc.) is hidden. Default: 200 |
 
@@ -184,17 +170,17 @@ It has three required attributes:
 
 ### AlarmSettings.MaxFreezeAlarms & AlarmSettings.MaxFreezeTime
 
-In the *AlarmSettings* tag, you can specify two Alarm Console freeze settings:
+In the *AlarmSettings* tag, you can specify the following Alarm Console freeze settings:
 
-- In the *MaxFreezeTime* tag, you can specify the maximum period of time the Alarm Console can stay frozen (in milliseconds). Default: 60000000 milliseconds (i.e. 1000 minutes)
+- In the *MaxFreezeTime* subtag, you can specify the maximum period of time the Alarm Console can stay frozen (in milliseconds). Default: 60000000 milliseconds (i.e. 1000 minutes)
 
-- In the *MaxFreezeAlarms* tag, you can specify the maximum number of alarms that will be kept in the alarm buffer when the Alarm Console is frozen. Default: 1000 alarms
+- In the *MaxFreezeAlarms* subtag, you can specify the maximum number of alarms that will be kept in the alarm buffer when the Alarm Console is frozen. Default: 1000 alarms
 
 As soon as either *MaxFreezeTime* or *MaxFreezeAlarms* is reached, the Alarm Console will automatically be unfrozen.
 
 ### AlarmSettings.MustSquashAlarms
 
-Available from DataMiner 10.0.12 onwards. Set the value *true* to enable alarm consolidation by default. In that case, consecutive alarm events without a severity change will be combined into a consolidated event. This may be useful to reduce the load on DataMiner Cube and on the SLNet process.
+The *MustSquashAlarms* tag is available from DataMiner 10.0.12 onwards. Set the value to *true* to enable alarm consolidation by default. In that case, consecutive alarm events without a severity change will be combined into a consolidated event. This may be useful to reduce the load on DataMiner Cube and on the SLNet process.
 
 The following types of alarm events will not be combined in a consolidated alarm event:
 
@@ -224,15 +210,17 @@ The following types of alarm events will not be combined in a consolidated alarm
 
 > [!TIP]
 > See also:
-> [Alarm linking](xref:Alarm_linking)
+>
+> - [Alarm linking](xref:Alarm_linking)
+> - [Declutter your alarm tree](https://community.dataminer.services/declutter-your-alarm-tree/ "Alarm squashing")
 
 ### AlarmSettings.UseCreationTimeAsMainTime
 
-Default: false
+The default value of the *UseCreationTimeAsMainTime* tag is "false".
 
 ### AlarmSettings.AutoClear
 
-If you set this tag to “false”, alarms will not be cleared automatically. Instead, they will get into a “clearable” state, and someone will have to manually clear them.
+If you set *AutoClear* to "false", alarms will not be cleared automatically. Instead, they will get into a "clearable" state, and someone will have to manually clear them.
 
 Default: true
 
@@ -244,7 +232,7 @@ To activate this setting, do the following:
 
 1. Set the value of the AutoElementLock tag to TRUE.
 
-2. Set the automatic unlock delay in the time attribute (default: 5000 ms).
+1. Set the automatic unlock delay in the time attribute (default: 5000 ms).
 
 A locked element will automatically be unlocked
 
@@ -318,12 +306,12 @@ From DataMiner 9.5.1 onwards, this tag allows you to configure the automatic cle
 
 The tag contains a number of *\<Delete>* subtags, which each specify a particular deletion mode with a *mode* attribute and a corresponding value with a *value* attribute.
 
-| mode attribute            | value attribute                                                                                                    |
-|---------------------------|--------------------------------------------------------------------------------------------------------------------|
-| CleanupKeepRecentPackages | The X most recent packages that have to be kept.                                                                   |
-| CleanupLargerThan         | The maximum size (in bytes) of the files that are allowed in the *Upgrades* folder. |
-| CleanupOlderThan          | The oldest timestamp of the files that are allowed in the *Upgrades* folder.        |
-| CleanupAll                | N/A                                                                                                                |
+| mode attribute | value attribute |
+|--|--|
+| CleanupKeepRecentPackages | The X most recent packages that have to be kept. |
+| CleanupLargerThan | The maximum size (in bytes) of the files that are allowed in the *Upgrades* folder. |
+| CleanupOlderThan | The oldest timestamp of the files that are allowed in the *Upgrades* folder. |
+| CleanupAll | N/A |
 
 Example:
 
@@ -344,7 +332,7 @@ Default: Only at 00:00:00
 
 ### Documents.MaxSize
 
-In this tag, you can specify the maximum size of the documents in the Documents module.
+In this *MaxSize* tag, you can specify the maximum size of the documents in the Documents module.
 
 Default: 20 MB
 
@@ -362,11 +350,11 @@ However, in case you encounter issues with such filters because of this new filt
 
 ### HTTPS
 
-See [Configuring HTTPS settings in MaintenanceSettings.xml](xref:Setting_up_HTTPS_on_a_DMA#configuring-https-settings-in-maintenancesettingsxml).
+See [Configuring HTTPS settings in DataMiner](xref:Setting_up_HTTPS_on_a_DMA#configuring-https-in-dataminer).
 
 ### Logging.MaxSize
 
-In this tag, you can specify the maximum log file size.
+In this *MaxSize* tag, you can specify the maximum log file size.
 
 Default: 10 MB
 
@@ -388,7 +376,7 @@ You can overrule the setting in a protocol, by setting the Protocol.ParameterGro
 
 ### ProtocolSettings.ExecutionVerification
 
-In this tag, you can enable or disable the parameter update verification feature.
+With the *ExecutionVerification* tag, you can enable or disable the parameter update verification feature.
 
 If you enable this feature, DataMiner will check all parameter updates that are executed either via DataMiner client applications or SNMP set commands, and return the result of each check in the form of an information event.
 
@@ -445,7 +433,7 @@ Example:
 </MaintenanceSettings>
 ```
 
-When the DMA is started the following line in the SLASPConnection log file mentions this setting:
+When the DMA is started, the following line in the SLASPConnection log file mentions this setting:
 
 ```txt
 2015/02/09 09:01:22.020|SLASPConnection.exe 8.5.1451.1|6828|17292|CServiceModule::ReadMaintenanceSettings|DBG|5|ReportResponseTimeout set to 60 minutes (configurable in maintenance settings).
@@ -456,17 +444,17 @@ When the DMA is started the following line in the SLASPConnection log file menti
 
 ### SLASPConnection.TimeLineCache
 
-In this tag, you can specify options for the caching of timeline data in the SLASPConnection process.
+In the *TimeLineCache* tag, you can specify options for the caching of timeline data in the SLASPConnection process.
 
 The following attributes can be configured:
 
-| Attribute      | Description                                                                                                                                                                                                                                   |
-|----------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| enabled        | Can be set to “true” or “false” in order to enable or disable timeline caching.                                                                                                                                                               |
-| expirationTime | A value in seconds (by default 300 seconds). Determines how long an entry remains in the cache.                                                                                                                                               |
-| gracePeriod    | A value in seconds (by default 60 seconds). When Reporter has detected a change in the timeline data, the cached data will still be removed after this duration.                                                                              |
-| logVerbose     | Can be set to “true” or “false” in order to enable or disable additional logging in the *SLASPConnection.txt* log file indicating whether a timeline request was resolved from the database or from the cache. |
-| maxRecord      | The maximum number of trend records in the cache, by default 1000000. Older entries will be removed to make room for new entries.                                                                                                             |
+| Attribute | Description |
+|--|--|
+| enabled | Can be set to “true” or “false” in order to enable or disable timeline caching. |
+| expirationTime | A value in seconds (by default 300 seconds). Determines how long an entry remains in the cache. |
+| gracePeriod | A value in seconds (by default 60 seconds). When Reporter has detected a change in the timeline data, the cached data will still be removed after this duration. |
+| logVerbose | Can be set to “true” or “false” in order to enable or disable additional logging in the *SLASPConnection.txt* log file indicating whether a timeline request was resolved from the database or from the cache. |
+| maxRecord | The maximum number of trend records in the cache, by default 1000000. Older entries will be removed to make room for new entries. |
 
 > [!NOTE]
 > These settings are not synchronized among the Agents in a DMS.
@@ -479,7 +467,7 @@ For more information, see [Configuring SLNet settings in MaintenanceSettings.xml
 
 ### Spectrum.AlarmRecordings
 
-In this tag, you can specify the maximum size (in MB) of the *C:\\Skyline DataMiner\\Spectrum Alarm Recordings* folder.
+In the *AlarmRecordings* tag, you can specify the maximum size (in MB) of the `C:\Skyline DataMiner\Spectrum Alarm Recordings` folder.
 
 Default: 250 MB
 
@@ -506,89 +494,28 @@ This deprecated tag was used to specify the maximum number of trend graphs that 
 > [!NOTE]
 > The System Display client application is no longer available from DataMiner 9.6.0 onwards.
 
-### Trending.TimeSpan
-
-In this tag, you can specify the period during which the “real-time trending” records have to be kept in the database.
-
-- You can specify integer values (e.g. 1, 2, 12, etc.) or decimal values (1.5, 2.5, etc.).
-
-- The *unit* attribute can be set to “hour”, “hours”, “day”, “days”, “month”, “months”, “year” or “years”.
-
-Default value: 24 - Default unit: hours
-
-> [!NOTE]
->
-> - From DataMiner 9.5.5 onwards, this setting is configured in the files *DBMaintenance.xml* and *DBMaintenanceDMS.xml* for systems with a Cassandra database. From DataMiner 9.5.6 onwards, this setting is configured in those files for SQL databases as well. See [DBMaintenance.xml and DBMaintenanceDMS.xml](xref:DBMaintenance_xml_and_DBMaintenanceDMS_xml#dbmaintenancexml-and-dbmaintenancedmsxml).
-> - This tag can also be specified in an *Element.xml* file. That way, you can overwrite the TimeSpan setting on element level.
-
 ### Trending.TimeSpan1DayRecords
 
-In this tag, you can specify the period during which the daily “average trending” records have to be kept in the database.
-
-- You can specify integer values (e.g. 1, 2, 12, etc.) or decimal values (1.5, 2.5, etc.).
-
-- The *unit* attribute can be set to “day”, “days”, “month”, “months”, “year” or “years”.
-
-- If you want to change the default 1-day interval of these records, add a *window* attribute, and specify a custom interval (in minutes).
+In the *TimeSpan1DayRecords* tag, you can customize the interval of the 1-day "average trending" records. To do so, specify a *window* attribute value in minutes.
 
 Not active by default.
 
 > [!NOTE]
->
-> - From DataMiner 9.5.5 onwards, this setting is configured in the files *DBMaintenance.xml* and *DBMaintenanceDMS.xml* for systems with a Cassandra database. From DataMiner 9.5.6 onwards, this setting is configured in those files for SQL databases as well. See [DBMaintenance.xml and DBMaintenanceDMS.xml](xref:DBMaintenance_xml_and_DBMaintenanceDMS_xml#dbmaintenancexml-and-dbmaintenancedmsxml).
-> - This tag can also be specified in an *Element.xml* file. That way, you can overwrite the TimeSpan1DayRecords setting on element level. The *window* attribute, however, is a system-wide setting that can only be set in the file *MaintenanceSettings.xml*.
-> - If this tag is set to a small interval, or even to 0, trend data will be lost when you migrate the database to Cassandra.
+> If you are looking to configure how long these records need to be stored, see [DBMaintenance.xml and DBMaintenanceDMS.xml](xref:DBMaintenance_xml_and_DBMaintenanceDMS_xml#dbmaintenancexml-and-dbmaintenancedmsxml).
 
 ### Trending.TimeSpan1HourRecords
 
-In this tag, you can specify the period during which the 1-hour “average trending” records have to be kept in the database.
-
-- You can specify integer values (e.g. 1, 2, 12, etc.) or decimal values (1.5, 2.5, etc.).
-
-- The *unit* attribute can be set to “day”, “days”, “month”, “months”, “year” or “years”.
-
-- If you want to change the default 1-hour interval of these records, add a *window* attribute, and specify a custom interval (in minutes).
-
-By default, 1-hour average trend records are stored for one year.
+In the *TimeSpan1HourRecords* tag, you can customize the interval of the 1-hour "average trending" records to be something other than the default 1 hour. To do so, specify a *window* attribute value in minutes.
 
 > [!NOTE]
->
-> - From DataMiner 9.5.5 onwards, this setting is configured in the files *DBMaintenance.xml* and *DBMaintenanceDMS.xml* for systems with a Cassandra database. From DataMiner 9.5.6 onwards, this setting is configured in those files for SQL databases as well. See [DBMaintenance.xml and DBMaintenanceDMS.xml](xref:DBMaintenance_xml_and_DBMaintenanceDMS_xml#dbmaintenancexml-and-dbmaintenancedmsxml).
-> - This tag can also be specified in an *Element.xml* file. That way, you can overwrite the TimeSpan1HourRecords setting on element level. The *window* attribute, however, is a system-wide setting that can only be set in the file *MaintenanceSettings.xml*.
-> - If this tag is set to a small interval, or even to 0, trend data will be lost when you migrate the database to Cassandra.
+> If you are looking to configure how long these records need to be stored, see [DBMaintenance.xml and DBMaintenanceDMS.xml](xref:DBMaintenance_xml_and_DBMaintenanceDMS_xml#dbmaintenancexml-and-dbmaintenancedmsxml).
 
 ### Trending.TimeSpan5MinRecords
 
-In this tag, you can specify the period during which the 5-minute “average trending” records have to be kept in the database.
-
-- You can specify integer values (e.g. 1, 2, 12, etc.) or decimal values (1.5, 2.5, etc.).
-
-- The *unit* attribute can be set to “day”, “days”, “month”, “months”, “year” or “years”.
-
-- If you want to change the default 5-minute interval of these records, add a *window* attribute, and specify a custom interval (in minutes).
-
-By default, 5-minute average trend records are stored for one month.
+In the *TimeSpan5MinRecords* tag, you can customize the interval of the 5-minute "average trending" records to be something other than the default 5 minutes. To do so, specify a *window* attribute value in minutes.
 
 > [!NOTE]
->
-> - From DataMiner 9.5.5 onwards, this setting is configured in the files DBMaintenance.xml and DBMaintenanceDMS.xml instead. From DataMiner 9.5.6 onwards, this setting is configured in those files for SQL databases as well. See [DBMaintenance.xml and DBMaintenanceDMS.xml](xref:DBMaintenance_xml_and_DBMaintenanceDMS_xml#dbmaintenancexml-and-dbmaintenancedmsxml).
-> - This tag can also be specified in an *Element.xml* file. That way, you can overwrite the TimeSpan5MinRecords setting on element level. The *window* attribute, however, is a system-wide setting that can only be set in the file *MaintenanceSettings.xml*.
-> - If this tag is set to a small interval, or even to 0, trend data will be lost when you migrate the database to Cassandra.
-
-### Trending.TimeSpanSpectrumRecords
-
-In this tag, you can specify the period during which spectrum trend data has to be kept in the database.
-
-- You can specify integer values (e.g. 1, 2, 12, etc.) or decimal values (1.5, 2.5, etc.).
-
-- The *unit* attribute can be set to “day”, “days”, “month”, “months”, “year” or “years”.
-
-By default, spectrum trend data will be kept for one year.
-
-> [!NOTE]
->
-> - From DataMiner 9.5.5 onwards, this setting is configured in the files DBMaintenance.xml and DBMaintenanceDMS.xml instead. See [DBMaintenance.xml and DBMaintenanceDMS.xml](xref:DBMaintenance_xml_and_DBMaintenanceDMS_xml#dbmaintenancexml-and-dbmaintenancedmsxml).
-> - The same setting can also be specified in an *Element.xml* file. That way, you can overwrite the TimeSpanSpectrumRecords setting on element level.
+> If you are looking to configure how long these records need to be stored, see [DBMaintenance.xml and DBMaintenanceDMS.xml](xref:DBMaintenance_xml_and_DBMaintenanceDMS_xml#dbmaintenancexml-and-dbmaintenancedmsxml).
 
 ### Trending.WarningLevel
 
@@ -633,7 +560,7 @@ In the *ProcessMonitor.Crashdumps* subtag, you can customize how long crashdump 
 | TempFolders                   | maxDaysToKeep | Maximum number of days a temporary folder (incomplete dump) will be kept. | 7       |
 |                               | minToKeep     | Minimum number of temporary folders (incomplete dumps) kept.              | 0       |
 |                               | maxToKeep     | Maximum number of temporary folders (incomplete dumps) kept.              | 5       |
-| MaxTotalCrashDump­FolderSizeGb | N/A           | Maximum size of the Logging/CrashDump folder.                             | 5       |
+| MaxTotalCrashDumpFolderSizeGb | N/A           | Maximum size of the Logging/CrashDump folder.                             | 5       |
 
 > [!NOTE]
 >

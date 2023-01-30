@@ -20,4 +20,4 @@ Use this method to retrieve the possible values of a particular topology field o
 
 | Item | Format | Description |
 |--|--|--|
-| GetValuesForCPE­TopologyFieldResult | Array of [DMAGenericProperty](xref:DMAGenericProperty) | The possible values of the specified topology field of the CPE element. |
+| GetValuesForCPETopologyFieldResult | Array of [DMAGenericProperty](xref:DMAGenericProperty) | The possible values of the specified topology field of the CPE element. |

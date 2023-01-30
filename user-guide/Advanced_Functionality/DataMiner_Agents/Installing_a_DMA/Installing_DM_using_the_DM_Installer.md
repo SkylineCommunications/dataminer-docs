@@ -4,21 +4,24 @@ uid: Installing_DM_using_the_DM_installer
 
 # Installing DataMiner using the DataMiner Installer
 
-## Prerequisites
-
-Before you run the installer, install the latest .NET Framework version.
-
-- For more information on recommended versions, see [DataMiner Compute Requirements](https://community.dataminer.services/dataminer-compute-requirements/).
-- For installation information, see <https://docs.microsoft.com/en-us/dotnet/framework/install/>
-
-In addition, make sure the Windows setting "fast startup" is not activated.
-
-## Running the installer
-
 The DataMiner installer allows you to run a default DataMiner installation, which includes a Cassandra database on the C drive, or to run a custom installation. A custom installation can for instance be used to install a MySQL database instead of a Cassandra database.
 
+## Before you run the installer
+
+1. Check if the latest .NET Framework is installed. See <https://learn.microsoft.com/en-us/dotnet/framework/migration-guide/how-to-determine-which-versions-are-installed>.
+
+   For more information on recommended versions, see [DataMiner Compute Requirements](https://community.dataminer.services/dataminer-compute-requirements/).
+
+1. If it is not installed, install the latest .NET Framework version.
+
+   For installation information, see <https://docs.microsoft.com/en-us/dotnet/framework/install/>
+
+1. Make sure the Windows setting "fast startup" is not activated.
+
+1. Download the DataMiner Installer from [DataMiner Dojo](https://community.dataminer.services/download/dataminer-installer-v10-2).
+
 > [!NOTE]
-> The default installation requires that WinPcap is installed for systems intended for DataMiner Failover.
+> The default installation requires that WinPcap is installed for systems intended for DataMiner Failover. In a custom DataMiner installation, WinPcap can be included in the DataMiner installation.
 
 ### Default DataMiner installation
 
@@ -31,7 +34,7 @@ The DataMiner installer allows you to run a default DataMiner installation, whic
 1. Enter the DataMiner ID.
 
    > [!IMPORTANT]
-   > To get this DataMiner ID, you must contact Skyline. The DataMiner ID will uniquely identify the DataMiner Agent you are installing.
+   > To get this DataMiner ID, contact <dataminer.licensing@skyline.be>. The DataMiner ID will uniquely identify the DataMiner Agent you are installing.
 
 1. Click next.
 
@@ -51,15 +54,20 @@ The DataMiner installer allows you to run a default DataMiner installation, whic
 
 1. When DataMiner has successfully restarted, click *Close*.
 
+At this point, the basic installation is complete. However, to be able to make full use of all available DataMiner features, you will also need to:
+
+- [Upgrade to the latest feature or main release version](xref:Upgrading_a_DataMiner_Agent)
+- [Install Elasticsearch](xref:Installing_Elasticsearch_via_DataMiner)
+- [Connect your DataMiner System to the cloud](xref:Connecting_your_DataMiner_System_to_the_cloud)
+
 > [!NOTE]
 >
 > - To view detailed log information on the installation process, in the last step of the installer, click the *open log files* button.
 > - If you closed the DataMiner installer before uploading the license files, copy the license files to the *C:\Skyline DataMiner* folder and restart DataMiner.
-> - To be able to make full use of all available DataMiner features, you should also [install Elasticsearch](xref:Installing_Elasticsearch_via_DataMiner) and [connect your DataMiner System to the cloud](xref:Connecting_your_DataMiner_System_to_the_cloud).
 
 ### Custom DataMiner installation
 
-1. Make sure you are logged into Windows with the Administrator account. (Do not use a regular user account with administrative rights.)
+1. Make sure you are logged into Windows as a user account with administrative rights.
 
 1. Double-click *Setup.exe*.
 
@@ -70,18 +78,18 @@ The DataMiner installer allows you to run a default DataMiner installation, whic
    > [!IMPORTANT]
    > To get this DataMiner ID, you must contact Skyline. The DataMiner ID will uniquely identify the DataMiner Agent you are installing.
 
-1. Optionally, customize the database installation:
+1. Customize the installation to match the setup you want:
+
+   - Ideally Cassandra should be installed on a different drive than the C drive. To specify the drive, click *select data drive*, select the drive, and click *OK*.
+
+     > [!NOTE]
+     > By default, a DataMiner Agent uses a single Cassandra node that is hosted on the same physical or virtual server. However, different architectures are also possible. For more information, see [Supported system data storage architectures](xref:Supported_system_data_storage_architectures), or check with your Technical Account Manager.
 
    - To install a MySQL database instead of a Cassandra database, select *MySQL Server*, and optionally *MySQL Workbench*.
 
      > [!NOTE]
      > As MySQL support will go **End of Life** as of DataMiner version 10.3.X (Q4 2022), we recommend the **Cassandra database** for all new installations. MySQL is no longer included in the 10.2.0 DataMiner installer.
      > If a MySQL database is used, certain DataMiner features (e.g. trend predictions, ticketing, jobs, service & resource manager) will **not be available**.
-
-   - If you wish to install Cassandra but use a different drive than the default C drive, keep Cassandra selected and click *select data drive*. Then select the drive and click *OK*.
-
-     > [!NOTE]
-     > By default, a DataMiner Agent uses a single Cassandra node that is hosted on the same physical or virtual server. However, different architectures are also possible. For more information, see [DataMiner Compute Requirements](https://community.dataminer.services/dataminer-compute-requirements/), or check with your Technical Account Manager.
 
    - On systems intended for DataMiner Failover, install WinPcap by clicking *Install WinPcap*. The Setup Wizard of WinPcap is launched. Follow the wizard, select *Automatically start the WinPcap driver at boot time*, and click *Next* when necessary.
 
@@ -103,12 +111,18 @@ The DataMiner installer allows you to run a default DataMiner installation, whic
 
 1. In the *License* tab of the DataMiner Installer, click *browse and upload*, and navigate to the license files.
 
+   > [!NOTE]
+   > If you closed the DataMiner installer before uploading the license files, copy the license files to the *C:\Skyline DataMiner* folder and restart DataMiner.
+
 1. Once all files have been uploaded successfully, click *restart DataMiner*.
 
 1. When DataMiner has successfully restarted, click *Close*.
 
+At this point, the basic installation is complete. However, to be able to make full use of all available DataMiner features, you will also need to:
+
+- [Upgrade to the latest feature or main release version](xref:Upgrading_a_DataMiner_Agent)
+- [Install Elasticsearch](xref:Installing_Elasticsearch_via_DataMiner)
+- [Connect your DataMiner System to the cloud](xref:Connecting_your_DataMiner_System_to_the_cloud)
+
 > [!NOTE]
->
-> - To view detailed log information on the installation process, in the last step of the installer, click the *open log files* button.
-> - If you closed the DataMiner installer before uploading the license files, copy the license files to the *C:\Skyline DataMiner* folder and restart DataMiner.
-> - To be able to make full use of all available DataMiner features, you should also [install Elasticsearch](xref:Installing_Elasticsearch_via_DataMiner) and [connect your DataMiner System to the cloud](xref:Connecting_your_DataMiner_System_to_the_cloud).
+> To view detailed log information on the installation process, in the last step of the installer, click the *open log files* button.

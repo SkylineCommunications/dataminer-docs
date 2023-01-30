@@ -24,7 +24,7 @@ Use this method to retrieve the views in a particular parent view added or chang
 
 | Item | Format | Description |
 |--|--|--|
-| GetViewsForParent­CachedResult | [DMACache](xref:DMACache) | The views added or changed since the specified point in time. |
+| GetViewsForParentCachedResult | [DMACache](xref:DMACache) | The views added or changed since the specified point in time. |
 
 > [!NOTE]
 > In this case, the [DMACache](xref:DMACache) object will contain an array of [DMAView](xref:DMAView) objects.

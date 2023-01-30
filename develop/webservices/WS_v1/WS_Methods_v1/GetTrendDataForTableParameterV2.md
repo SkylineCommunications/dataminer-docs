@@ -27,4 +27,4 @@ Available from DataMiner 9.6.12 onwards.
 
 | Item | Format | Description |
 |--|--|--|
-| GetTrendDataForTable­ParameterV2Result | [DMATrendData](xref:DMATrendData) | The trend data for the specified primary key within the specified timespan. |
+| GetTrendDataForTableParameterV2Result | [DMATrendData](xref:DMATrendData) | The trend data for the specified primary key within the specified timespan. |

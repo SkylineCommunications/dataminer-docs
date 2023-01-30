@@ -7,7 +7,7 @@ uid: DMAServiceTemplateConfigurationTrigger
 | Item | Format | Description |
 |--|--|--|
 | TableIndex | [DMASTString](xref:DMASTString) | The table index of the parameter used in the trigger. This is in *DMASTString* format but will usually consist of empty placeholders and a regular string as the template. |
-| ParameterNameFor­Template | [DMASTString](xref:DMASTString) | The name of the parameter used in the trigger. This is used in case the parameter is not specified by ID, so that the parameter name can change dynamically. |
+| ParameterNameForTemplate | [DMASTString](xref:DMASTString) | The name of the parameter used in the trigger. This is used in case the parameter is not specified by ID, so that the parameter name can change dynamically. |
 | Delay | Integer | The delay before the trigger is activated (in ms), if any. |
 | DataMinerID | Integer | The DataMiner ID of the object used in the trigger. |
 | ElementID | Integer | The ID of the element used in the trigger. |

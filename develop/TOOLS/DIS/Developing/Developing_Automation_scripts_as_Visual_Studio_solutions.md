@@ -56,12 +56,15 @@ To add an existing Automation script to an Automation script solution, do the fo
 
 ## Saving a compiled script to a file
 
-To save a compiled version of an Automation script to a file (with all C# code in its Exe blocks), do the following:
+A compiled Automation script can be saved either as an XML file or as a *.dmapp* package.
+
+To save a compiled Automation script
 
 1. Open the XML file containing the Automation script that you want to compile.
 1. Select *File \> Save Compiled Script As...*
-1. Enter a file name and a folder.
-1. Click *Save*.
+1. In the *Save As* window, select a folder, enter a file name, set *Save as type* to either "Automation script package (\*.dmapp)" or "Automation script file (\*.xml)", and click *Save*.
+
+If you choose to save an Automation script as a package, the package will contain the Automation script as well as all required DLL files (e.g. DLL files of NuGet packages that are used in the Automation script).
 
 ## Saving all compiled scripts in a solution to a zip file
 

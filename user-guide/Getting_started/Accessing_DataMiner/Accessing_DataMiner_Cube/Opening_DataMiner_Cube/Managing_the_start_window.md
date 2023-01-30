@@ -50,15 +50,15 @@ To specify a different DMA in a DMS to connect to:
 
 1. Expand the *Agent* section, select the DMA and click *Save*.
 
-## Connecting to a DMS using URL arguments
+## Connecting to a DMS using arguments
 
-To connect to a DMS using specific URL arguments:
+To connect to a DMS using specific arguments:
 
 1. Hover the mouse over the tile representing this DMS and click “...” in the top-right corner.
 
-1. Expand the *Advanced* section, specify the URL arguments and click *Save*.
+1. Expand the *Advanced* section, specify the arguments and click *Save*.
 
-For more information on the possible URL arguments, see [Options for opening DataMiner Cube](xref:Options_for_opening_DataMiner_Cube).
+For more information on the possible arguments, see [Arguments for DataMiner Cube](xref:Options_for_opening_DataMiner_Cube).
 
 ## Configuring whether to connect with HTTPS only
 

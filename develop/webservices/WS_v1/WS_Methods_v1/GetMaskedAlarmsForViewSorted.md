@@ -23,4 +23,4 @@ Use this method to retrieve a specific number of masked view alarms.
 
 | Item | Format | Description |
 |--|--|--|
-| GetMaskedAlarmsFor­ViewSortedResult | Array of [DMAAlarm](xref:DMAAlarm) | The masked alarms for the specified view, sorted as requested. |
+| GetMaskedAlarmsForViewSortedResult | Array of [DMAAlarm](xref:DMAAlarm) | The masked alarms for the specified view, sorted as requested. |

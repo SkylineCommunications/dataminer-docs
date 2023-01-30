@@ -14,6 +14,9 @@ There are **two options**: you can create a so-called **self-signed certificate*
 
 ## Generating the certificates
 
+> [!TIP]
+> To easily generate certificates on Linux machines, you can use our [generate TLS certificates script](https://github.com/SkylineCommunications/generate-tls-certificates), which is available on GitHub.
+
 To generate the certificates, you will need two tools: *openssl* and the *Java keytool*. Both of these can run on Linux and Windows.
 
 1. Create a certificate configuration file. This will make it easier to generate a root CA certificate later.
@@ -42,7 +45,10 @@ To generate the certificates, you will need two tools: *openssl* and the *Java k
    ```
 
    > [!NOTE]
-   > Make sure the OU is set to the **name** of your Cassandra cluster, typically **DMS**. You can find this *cluster_name* tag in the *cassandra.yaml* file.
+   > The **OU** is only validated when **internode encryption** is turned on in the *server_encryption_options*. Make sure it matches the *cluster_name* **exactly** or Cassandra will fail to start. You can find the *cluster_name* in the *cassandra.yaml* config file.
+   >
+   > We also recommend using only ASCII characters in your Cassandra cluster name. The Cassandra documentation is lacking on this front, but we noticed Cassandra failing to start when the *cluster_name* contained certain special/non-ASCII characters.
+
 
 1. Generate the root CA certificate by executing the following command:
 
@@ -166,6 +172,9 @@ When you have done so:
 1. Go to *Advanced* and select *This cluster requires SSL*.
 
 1. Point it towards your *rootCA.jks* truststore file and use the password you used to generate it.
+
+> [!NOTE]
+> Currently, we only support TLS version 1.0 for the client-server encryption. If connecting to Cassandra over TLS fails, make sure to check that this version is not disabled on operating system level.
 
 ## Connecting with DataMiner
 

@@ -19,10 +19,11 @@ The card pane of the Monitoring app is the large pane on the right side of the a
 - [Spectrum analyzer cards](#spectrum-analyzer-cards)
 
 > [!NOTE]
-> - If the app is used on a mobile device, to make optimal use of the available space on the screen, the app layout may be different from what is described in this section.
-> - If the app is viewed in a browser that supports fullscreen mode, for parameter tables, data pages, CPE/EPM pages and visual pages, a fullscreen button is available:<br>![](~/user-guide/images/CubeMaximize00028.png)
 >
->    Click this button to view the item in fullscreen mode. To leave fullscreen mode using a keyboard, press Esc or F11, depending on the browser.
+> - If the app is used on a mobile device, to make optimal use of the available space on the screen, the app layout may be different from what is described in this section.
+> - If the app is viewed in a browser that supports fullscreen mode, for parameter tables, data pages, CPE/EPM pages and visual pages, a fullscreen button is available: ![Fullscreen button](~/user-guide/images/CubeMaximize00028.png)
+>
+>   Click this button to view the item in fullscreen mode. To leave fullscreen mode using a keyboard, press Esc or F11, depending on the browser.
 
 ## View cards
 
@@ -40,11 +41,11 @@ The following pages are available:
 
 - *Histogram*: Available from DataMiner 10.0.3 onwards. Allows you to display a histogram of a protocol parameter for all elements of this protocol in the view. The parameter can be selected in the sidebar on the right. Once a valid parameter has been selected, you can click *Show histogram* to show or refresh the histogram. The side panel also has a settings tab where you can apply the following options:
 
-    - *Include subviews*: Only displayed in case the view contains other views. Determines whether those subviews should also be taken into account.
+  - *Include subviews*: Only displayed in case the view contains other views. Determines whether those subviews should also be taken into account.
 
-    - *Use relative frequency*: Determines whether the frequency on the Y-axis should be shown in percent.
+  - *Use relative frequency*: Determines whether the frequency on the Y-axis should be shown in percent.
 
-    - *Use custom intervals*: Allows you to specify a custom number of intervals and interval range.
+  - *Use custom intervals*: Allows you to specify a custom number of intervals and interval range.
 
 - *Notes*: Allows you to add and view notes for the view.
 
@@ -87,11 +88,14 @@ The following pages are available:
 
 - *Data*: One or more pages with parameters, as configured in the element protocol. The following icons provide access to additional functionality:
 
-    - ![](~/user-guide/images/MonitoringX_writeparam2.png) : Allows you to modify the value of a parameter.
+  - ![Wrench icon](~/user-guide/images/MonitoringX_writeparam2.png) : Allows you to modify the value of a parameter.
 
-    - ![](~/user-guide/images/MonitoringX_trend2.png) : Allows you to view additional information on a trended parameter. When you click the icon, the parameter description, the parameter ID and the time of the last change to the parameter are displayed. Below this, the *View trending* option provides access to the trending page, where you can view a trend graph or histogram for the parameter. On the left, the time span for the trend graph can be configured.
+  - ![Trend graph icon](~/user-guide/images/MonitoringX_trend2.png) : Allows you to view additional information on a trended parameter. When you click the icon, the parameter description, the parameter ID and the time of the last change to the parameter are displayed. Below this, the *View trending* option provides access to the trending page, where you can view a trend graph or histogram for the parameter. On the left, the time span for the trend graph can be configured.
 
-    - ![](~/user-guide/images/MonitoringX_histogram2.png) : Displays a histogram for a trended table parameter.
+    > [!NOTE]
+    > From DataMiner 10.2.0 [CU10]/10.3.1 onwards, the Monitoring app also supports trend graphs for string parameters.
+
+  - ![Histogram icon](~/user-guide/images/MonitoringX_histogram2.png) : Displays a histogram for a trended table parameter.
 
 - *Alarms*: Displays the active alarms for the element.
 
@@ -99,8 +103,8 @@ The following pages are available:
 
 - *Dashboards*: Displays the legacy dashboards app.
 
-    > [!NOTE]
-    > From DataMiner 10.2.0/10.1.12 onwards, the legacy Dashboards app is no longer available by default in new DataMiner installations. To enable it, set the soft-launch option *LegacyReportsAndDashboards* to true. See [soft-launch options](https://community.dataminer.services/documentation/soft-launch-options/).
+  > [!NOTE]
+  > From DataMiner 10.2.0/10.1.12 onwards, the legacy Dashboards app is no longer available by default in new DataMiner installations. To enable it, set the soft-launch option *LegacyReportsAndDashboards* to true. See [Soft-launch options](xref:SoftLaunchOptions).
 
 - *Notes*: Allows you to add and view notes related to the element.
 
@@ -157,8 +161,8 @@ A spectrum analyzer card is similar to an element card, but has a special "Spect
 
 From DataMiner 10.0.5 onwards, the Spectrum Analyzer page contains buttons to the following tabs:
 
-| Button                                                                                                         | Tab description                                                                                                                                                                                                                                                                        |
-|----------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| ![](~/user-guide/images/MonitoringX_spectruminfo.png)       | Information tab. Contains basic information about the current measurement points, markers, thresholds and parameters. If no markers or thresholds are available for the current preset, these sections are not displayed in the tab.                                                   |
-| ![](~/user-guide/images/MonitoringX_spectrumtraces.png)   | Traces tab. Allows you to select whether the current, minimum, maximum and/or average trace should be displayed. However, if a measurement point is selected, only the current trace can be shown.                                                                                     |
-| ![](~/user-guide/images/MonitoringX_spectrumpresets.png) | Presets tab. This tab shows a list of all available presets. By default, only private presets are shown, i.e. presets that are only available to the current user. To view all presets, select Show shared presets. Select a preset and click Load to display it on the spectrum page. |
+| Button | Tab description |
+|--|--|
+| ![Info button](~/user-guide/images/MonitoringX_spectruminfo.png) | Information tab. Contains basic information about the current measurement points, markers, thresholds and parameters. If no markers or thresholds are available for the current preset, these sections are not displayed in the tab. |
+| ![Traces button](~/user-guide/images/MonitoringX_spectrumtraces.png)   | Traces tab. Allows you to select whether the current, minimum, maximum and/or average trace should be displayed. However, if a measurement point is selected, only the current trace can be shown. |
+| ![Presets button](~/user-guide/images/MonitoringX_spectrumpresets.png) | Presets tab. This tab shows a list of all available presets. By default, only private presets are shown, i.e. presets that are only available to the current user. To view all presets, select Show shared presets. Select a preset and click Load to display it on the spectrum page. |

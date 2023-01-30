@@ -21,7 +21,7 @@ Contains a number of `<Chain>` or `<SearchChain>` children, which are represente
 |Name|Occurrences|Description|
 |--- |--- |--- |
 |***Choice***|||
-|&nbsp;&nbsp;[Chain](xref:Protocol.Chains.Chain)|[0, *]|Represents a different topology view of a CPE manager or Service Over­view Manager (SOM) element.|
+|&nbsp;&nbsp;[Chain](xref:Protocol.Chains.Chain)|[0, *]|Represents a different topology view of a CPE manager or Service Overview Manager (SOM) element.|
 |&nbsp;&nbsp;[SearchChain](xref:Protocol.Chains.SearchChain)|[0, *]|Defines a search chain in a CPE environment.|
 
 ## Constraints

@@ -17,7 +17,7 @@ Use this method to retrieve a snapshot of trend data for a specified protocol pa
 | protocolVersion | String  | The version of the protocol.                                                                                |
 | parameterID     | Integer | The ID of the parameter.                                                                                    |
 | tableIndex      | String  | The table index. This field must be specified for table column parameters; otherwise it must be left empty. |
-| intervalAmount  | Integer | The number of intervals used in the histogram.                                                              |
+| intervalAmount  | Integer | The number of intervals used in the histogram. Obsolete. This field is no longer supported.                 |
 | asPercentages   | Boolean | Indicates whether the histogram should use percentages (= true) or absolute frequencies (= false).          |
 
 ## Output

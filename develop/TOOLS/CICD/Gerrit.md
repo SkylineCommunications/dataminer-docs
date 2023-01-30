@@ -8,8 +8,8 @@ Git repositories are hosted by [Gerrit Code Review](https://www.gerritcodereview
 
 In Gerrit, you can see whether the CI/CD pipeline for your development succeeded. In the *Work in Progress* or *Outgoing Reviews* section of the review dashboard, select the item of which you want to see the status. This will open a new page that shows a Jenkins tag:
 
-![](~/develop/images/GerritReviewDashboard.png)
-<br>Figure 3: Gerrit review dashboard
+![](~/develop/images/GerritReviewDashboard.png)<br>
+*Gerrit review dashboard*
 
 If the pipeline succeeded, Jenkins will provide a +1 vote for the Jenkins tag.
 

@@ -4,85 +4,18 @@
       "src": [
         {
           "files": [
-            "Interop.SLDms.dll"
+            "src/**.csproj"
           ],
-		  "src": "./src/DataMiner/Interop.SLDms/bin/Debug"
-        },
-		{
-          "files": [
-            "ProtocolName.ProtocolVersion.QAction.Helper.dll"
-          ],
-		  "src": "./src/DataMiner/ProtocolName.ProtocolVersion.QAction.Helper/bin/Debug"
-        },
-		{
-          "files": [
-            "QActionHelperBaseClasses.dll"
-          ],
-		  "src": "./src/DataMiner/QActionHelperBaseClasses/bin/Debug"
-        },
-		{
-          "files": [
-            "Skyline.DataMiner.Storage.Types.dll"
-          ],
-		  "src": "./src/DataMiner/Skyline.DataMiner.Storage.Types/bin/Debug"
-        },
-		{
-          "files": [
-            "QActionHelperBaseClasses.dll"
-          ],
-		  "src": "./src/DataMiner/QActionHelperBaseClasses/bin/Debug"
-        },
-		{
-          "files": [
-            "SLLoggerUtil.dll"
-          ],
-		  "src": "./src/DataMiner/SLLoggerUtil/bin/Debug"
-        },
-		{
-          "files": [
-            "SLManagedAutomation.dll"
-          ],
-		  "src": "./src/DataMiner/SLManagedAutomation/bin/Debug"
-        },
-		{
-          "files": [
-            "SLManagedScripting.dll"
-          ],
-		  "src": "./src/DataMiner/SLManagedScripting/bin/Debug"
-        },
-		{
-          "files": [
-            "SLNetTypes.dll"
-          ],
-		  "src": "./src/DataMiner/SLNetTypes/bin/Debug"
-        },
-		{
-          "files": [
-            "SLSSH.dll"
-          ],
-		  "src": "./src/DataMiner/SLSSH/bin/Debug"
-        },
-		{
-          "files": [
-            "Skyline.DataMiner.Library.Common.dll"
-          ],
-		  "src": "./src/Base Class Library/Common/bin/Debug"
-        },
-		{
-          "files": [
-            "Skyline.DataMiner.Library.Automation.dll"
-          ],
-		  "src": "./src/Base Class Library/Automation/bin/Debug"
-        },
-		{
-          "files": [
-            "Skyline.DataMiner.Library.Protocol.dll"
-          ],
-		  "src": "./src/Base Class Library/Protocol/bin/Debug"
+          "exclude": [
+            "**/bin/**",
+            "**/obj/**",
+            "_site/**"
+          ]
         }
-      ],
+	  ],
       "dest": "develop/api/types",
       "disableDefaultFilter": false,
+      "disableGitFeatures": false,
       "filter": "filterConfig.yml"
     }
   ],
@@ -105,6 +38,8 @@
         ]
       }
     ],
+	"xrefService": [ "https://xref.docs.microsoft.com/query?uid={uid}" ],
+	"xref" : [ "xref/newtonsoft.yml" ],
     "resource": [
       {
         "files": [
@@ -122,7 +57,8 @@
     "dest": "_site",
     "globalMetadata": {
       "_appTitle": "DataMiner Docs",
-      "_appFooter": "© Skyline Communications 2022",
+      "_appFooter": "© Skyline Communications 2023",
+      "__global.improveThisDoc": "Propose changes",
       "_enableSearch": false,
       "_enableNewTab": true
     },
@@ -130,6 +66,7 @@
     "fileMetadataFiles": [],
     "template": [
       "default",
+      "plugins/memberpage.2.59.4/content",
       "templates/skyfx"
     ],
     "markdownEngineName": "markdig",

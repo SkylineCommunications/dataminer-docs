@@ -10,8 +10,6 @@ In this section:
 
 - [Securing the web server](xref:Webserver_security)
 
-- [Customizing the layout of notification messages](xref:Customizing_the_layout_of_notification_messages)
-
 - [Configuring LDAP settings](xref:Configuring_LDAP_settings)
 
 - [Configuring Atlassian Crowd settings](xref:Configuring_Atlassian_Crowd_settings)

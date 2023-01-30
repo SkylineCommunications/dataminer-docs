@@ -56,7 +56,7 @@ uid: Configuring_an_SNMP_manager_in_DataMiner_Cube
    > - MD5/SHA128 and AES192
    > - MD5/SHA128/SHA224 and AES256
    >
-   > We recommend to use SHA-512 and AES-256, since this is the most secure combination.
+   > We recommend that you use SHA-512 and AES-256, since this is the most secure combination.
 
 1. Prior to DataMiner 10.0.0 CU11/10.1.3 only: In the *General* section of the *notification* tab, make sure *Support international characters (Unicode)* is selected if the notifications will contain international characters.
 
@@ -64,51 +64,52 @@ uid: Configuring_an_SNMP_manager_in_DataMiner_Cube
 
 1. In the *OID* section of the *notification* tab, specify the following options, depending on the SNMP version selected in the *general* tab:
 
-    - For SNMPv1:
+   - For SNMPv1:
 
-      - **Use device-specific OID**: If you select this option, the enterprise OID of the notification will be different for every type of element (depending on the protocol).
+     - **Use device-specific OID**: If you select this option, the enterprise OID of the notification will be different for every type of element (depending on the protocol).
 
-      - **Use 1.3.6.1.4.1.8813.pid (parameter ID)**: Select this option to send notifications containing the Skyline OID, using the parameter ID as notification-specific ID.
+     - **Use 1.3.6.1.4.1.8813.pid (parameter ID)**: Select this option to send notifications containing the Skyline OID, using the parameter ID as notification-specific ID.
 
-    - For SNMPv2 and SNMPv3:
+   - For SNMPv2 and SNMPv3:
 
-      - **Default (1.3.6.1.4.1.8813.0.3)**: Select this option to use the default OID.
+     - **Default (1.3.6.1.4.1.8813.0.3)**: Select this option to use the default OID.
 
-      - **Use device-specific OID**: If you select this option, the enterprise OID of the notification will be different for every type of element (depending on the protocol).
+     - **Use device-specific OID**: If you select this option, the enterprise OID of the notification will be different for every type of element (depending on the protocol).
 
-      - **Use custom bindings with OID: ...**: Select this option to use custom bindings.
+     - **Use custom bindings with OID: ...**: Select this option to use custom bindings.
 
-      - **Custom bindings**: To configure custom bindings, use the *Add*, *Delete*, *Up* and *Down* buttons in this section.
+     - **Custom bindings**: To configure custom bindings, use the *Add*, *Delete*, *Up* and *Down* buttons in this section.
 
-    > [!NOTE]
-    > - Custom bindings cannot be used if you use the default OID.
-    > - For more information on custom bindings, see [Custom DataMiner notification](xref:Custom_DataMiner_notification).
-    > - If custom bindings are used, it is possible to export a MIB file for the SNMP manager. From DataMiner 10.0.10 onwards, click the *Generate MIB file* button below the custom bindings to do so. In DataMiner 10.0.9, use the SLNetClientTest tool to do so (see [Generating SMIv2 MIB files](xref:SLNetClientTest_tool_advanced_procedures#generating-smiv2-mib-files)).
+   > [!NOTE]
+   >
+   > - Custom bindings cannot be used if you use the default OID.
+   > - For more information on custom bindings, see [Custom DataMiner notification](xref:Custom_DataMiner_notification).
+   > - If custom bindings are used, it is possible to export a MIB file for the SNMP manager. From DataMiner 10.0.10 onwards, click the *Generate MIB file* button below the custom bindings to do so. In DataMiner 10.0.9, use the SLNetClientTest tool to do so (see [Generating SMIv2 MIB files](xref:SLNetClientTest_generating_mib_files)).
 
 1. In the *resend* tab, specify the following options:
 
-    - Regardless of the notification type:
+   - Regardless of the notification type:
 
-      - **Resend all active alarms every ...**: If you want SNMP notifications for active alarms to be resent at regular intervals, select this option, and specify an interval. The default interval is 30 seconds.
+     - **Resend all active alarms every ...**: If you want SNMP notifications for active alarms to be resent at regular intervals, select this option, and specify an interval. The default interval is 30 seconds.
 
-      - **Custom OID during resend**: In this box, you can enter a custom OID to be used when resending notifications to an SNMP manager.
+     - **Custom OID during resend**: In this box, you can enter a custom OID to be used when resending notifications to an SNMP manager.
 
-      - **Custom OID for the ping notifications**: In this box, you can enter a custom OID to be used when sending ping notifications at the beginning and/or at the end of an SNMP manager synchronization/resend process.
+     - **Custom OID for the ping notifications**: In this box, you can enter a custom OID to be used when sending ping notifications at the beginning and/or at the end of an SNMP manager synchronization/resend process.
 
-      - **Send an extra starting ping notification during resend**: Select this option if every resend cycle has to start with a ping notification.
+     - **Send an extra starting ping notification during resend**: Select this option if every resend cycle has to start with a ping notification.
 
-      - **Send an extra ending ping notification during resend**: Select this option if every resend cycle has to end with a ping notification.
+     - **Send an extra ending ping notification during resend**: Select this option if every resend cycle has to end with a ping notification.
 
-      > [!NOTE]
-      > You may need to expand the *Advanced* section to see some of these options.
+     > [!NOTE]
+     > You may need to expand the *Advanced* section to see some of these options.
 
-    - In addition, for notification type “Inform messages” only:
+   - In addition, for notification type “Inform messages” only:
 
-      - **Retry every ...**:** The period of time DataMiner will wait for an acknowledgment after sending an inform message.
+     - **Retry every ...**:** The period of time DataMiner will wait for an acknowledgment after sending an inform message.
 
-      - **Max retries**: The maximum number of times DataMiner will send the same inform if it does not receive an acknowledgment. After a DMA has tried to send an inform message for the specified maximum number of times, a timeout will occur. This will force the DMA to switch to ping mode. As soon as the DMA receives its first acknowledgment from the SNMP manager, it will stop sending ping messages and send an inform message for every active alarm in the DMS. Once that is done, it will resume its normal mode.
+     - **Max retries**: The maximum number of times DataMiner will send the same inform if it does not receive an acknowledgment. After a DMA has tried to send an inform message for the specified maximum number of times, a timeout will occur. This will force the DMA to switch to ping mode. As soon as the DMA receives its first acknowledgment from the SNMP manager, it will stop sending ping messages and send an inform message for every active alarm in the DMS. Once that is done, it will resume its normal mode.
 
-      - **Send in chronological order**: Select this option to have inform messages sent in chronological order. In that case, each time an inform message is sent to a particular SNMP manager, the latter will have to reply with ACK before the next inform message is sent.
+     - **Send in chronological order**: Select this option to have inform messages sent in chronological order. In that case, each time an inform message is sent to a particular SNMP manager, the latter will have to reply with ACK before the next inform message is sent.
 
 1. Click *Next* to go the *filter* tab, and specify any alarm filters if necessary. These alarm filters will limit the alarms for which SNMP notifications will be forwarded to the SNMP manager you are configuring.
 

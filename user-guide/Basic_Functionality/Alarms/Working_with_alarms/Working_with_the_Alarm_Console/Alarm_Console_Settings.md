@@ -14,6 +14,7 @@ The following settings are available:
 
   > [!NOTE]
   > When you create a filtered history tab, in a fixed or sliding window, history tracking is off by default. However, if you explicitly enable history tracking in a history tab, a dialog box appears asking if you want to load the full history:
+  >
   > - Click *All* to include all alarms in the specified time range in the alarm trees, regardless of the filter.
   > - Click *Filtered* to only include alarms matching the current filter settings.
   >
@@ -23,14 +24,15 @@ The following settings are available:
 
   > [!NOTE]
   > In case a filter is applied in the alarm tab, the behavior of this feature is different depending on the type of filter:
+  >
   > - If a filtered alarm tab is created (e.g. by dragging an item onto the Alarm Console or by selecting *Apply filter* in a new tab):
-  >     - If only the base alarm matches the filter, only that alarm is displayed.
-  >     - If only the correlated alarm matches the filter, only that alarm is displayed.
-  >     - If both base and correlated alarm match the filter, only the correlated alarm is displayed.
-  >     - If neither base nor correlated alarm match the filter, neither are displayed.
+  >   - If only the base alarm matches the filter, only that alarm is displayed.
+  >   - If only the correlated alarm matches the filter, only that alarm is displayed.
+  >   - If both base and correlated alarm match the filter, only the correlated alarm is displayed.
+  >   - If neither base nor correlated alarm match the filter, neither are displayed.
   > - If a quick filter is applied with the filter box in the lower right corner, the behavior is similar, except in case both base alarm and correlated alarm match the filter, as then both alarms will be displayed.
 
-- **Automatic incident tracking**: This option is only available in a DMS using Cassandra, and only if automatic incident tracking is enabled in System Center. For more information, see [Automatic incident tracking](xref:Advanced_analytics_features_in_the_Alarm_Console#automatic-incident-tracking).
+- **Automatic incident tracking**: This option is only available in a DMS using Cassandra, and only if automatic incident tracking is enabled in System Center. For more information, see [Automatic incident tracking](xref:Automatic_incident_tracking).
 
 - **Text to speech**: Select to enable Text to speech, so that new alarm events are read out loud.
 

@@ -12,11 +12,11 @@ uid: KI_Incorrect_RTE_counts_in_SLWatchdog2txt_and_Alarm_Console
 
 ## Cause
 
-Improvement of RTE count [[ID_27387](xref:General_Main_Release_10.0.0#multiple-rtes-in-same-process-not-logged-correctly-id_27387)]
+Improvement of RTE count [[ID_27387](xref:General_Main_Release_10.0.0_CU7#multiple-rtes-in-same-process-not-logged-correctly-id_27387)]
 
 ## Fix
 
-Total number of processes of which at least one thread has a run-time error no longer replaced by total number of threads with a run-time error [[ID_28360](xref:General_Main_Release_10.0.0#slwatchdog2txt-total-number-of-processes-of-which-at-least-one-thread-has-a-run-time-error-was-incorrectly-replaced-by-total-number-of-threads-with-a-run-time-error-id_28360)]
+Total number of processes of which at least one thread has a run-time error no longer replaced by total number of threads with a run-time error [[ID_28360](xref:General_Main_Release_10.0.0_CU9#slwatchdog2txt-total-number-of-processes-of-which-at-least-one-thread-has-a-run-time-error-was-incorrectly-replaced-by-total-number-of-threads-with-a-run-time-error-id_28360)]
 
 ## Issue description
 

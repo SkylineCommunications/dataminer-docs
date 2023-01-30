@@ -21,4 +21,4 @@ If this method returns true, you can use the [GetGenericAsyncResponse](xref:GetG
 
 | Item | Format | Description |
 |--|--|--|
-| IsGenericAsyncResponse­AvailableResult | Boolean | Whether the server has finished executing the task associated with the specified ticket. |
+| IsGenericAsyncResponseAvailableResult | Boolean | Whether the server has finished executing the task associated with the specified ticket. |

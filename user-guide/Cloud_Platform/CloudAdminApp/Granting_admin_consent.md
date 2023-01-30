@@ -4,7 +4,7 @@ uid: Granting_admin_consent
 
 # Granting admin consent for Teams actions
 
-When the Microsoft Teams Chat Integration functionality is used, users require admin consent for certain actions, e.g. to create teams or channels, or to add members to a team.
+When the Microsoft Teams Chat Integration functionality is used, admin consent is required for certain actions, e.g. to create teams or channels, or to add members to a team.
 
 After you have granted this consent, you will need to configure the Microsoft tenant for your cloud-connected organization.
 
@@ -12,9 +12,10 @@ To grant admin consent and configure your tenant:
 
 1. In the Admin app, check whether the correct organization is mentioned in the header bar.
 
-1. If a different organization should be selected, click the organization selector in the top-right corner and select the organization in the list.
+   > [!TIP]
+   > See also: [Accessing the Admin app](xref:Accessing_the_Admin_app)
 
-   ![Organization selector](~/user-guide/images/CloudAdmin_Selector.png)
+1. If a different organization should be selected, click the organization selector ![Organization selector](~/user-guide/images/Cloud_Admin_Selector_icon.png) in the top-right corner and select the organization in the list.
 
 1. In the sidebar on the left, go to *Organization* > *Overview*.
 
@@ -25,7 +26,9 @@ To grant admin consent and configure your tenant:
    ![Admin consent](~/user-guide/images/CloudAdmin_Admin_Consent.png)
 
    > [!NOTE]
-   > In order to grant tenant-wide consent, you have to be an administrator for that tenant, e.g. Global Administrator.
+   >
+   > - The displayed permissions may differ from the ones in the example screenshot above. Permissions can change when new features are released or existing features are modified.
+   > - In order to grant tenant-wide consent, you have to be an administrator for that tenant, e.g. Global Administrator.
 
 1. Review the requested permissions, and if you agree, click the *Accept* button.
 
@@ -35,9 +38,12 @@ To grant admin consent and configure your tenant:
 
 1. Click *Confirm*.
 
-1. In the pop-up window, log in to our multi-tenant app with your Microsoft account.
+1. In the pop-up window, log in to our multi-tenant app with your Microsoft account. **Make sure to log in with the same user as you granted consent with**.
 
    After you log in successfully, your tenant is configured.
-
-   > [!NOTE]
-   > Make sure to log in with the same user as you granted consent with.
+   
+> [!NOTE]
+>
+> - If there are changes to the software that cause new or different permissions to be required, you will need to repeat this procedure in order to also provide consent for those permissions.
+> - You can unlink the tenant by clicking the x next to the tenant ID GUID. However, unlinking the tenant from the organization **will not remove the permissions given to Skyline**. Remove the permisions in Azure to revoke access to this tenant. For more information on how to remove permissions, see [Delete a tenant in Azure Active Directory](https://learn.microsoft.com/en-us/azure/active-directory/enterprise-users/directory-delete-howto).
+> - You can remove your consent again at any time. For more information, refer to the [Microsoft documentation](https://docs.microsoft.com/en-us/azure/active-directory/manage-apps/manage-application-permissions?pivots=portal).

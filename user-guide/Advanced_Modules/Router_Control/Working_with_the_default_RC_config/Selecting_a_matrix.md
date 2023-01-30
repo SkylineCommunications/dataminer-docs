@@ -12,6 +12,9 @@ At the top of the *Router Control* module, underneath the gray header area, you 
 
 - At the center:
 
-    - two information panels (the left one showing information about the selected input, and the right one showing information about the selected output), and
+  - two information panels (the left one showing information about the selected input, and the right one showing information about the selected output), and
 
-    - three buttons (Connect, Disconnect, and Lock/Unlock).
+  - three buttons ([Connect](xref:Connecting_an_output_to_an_input), [Disconnect](xref:Disconnecting_an_output_from_an_input), and [Lock](xref:Locking_an_output), [Unlock](xref:Unlocking_an_output) or *N/A*).
+
+> [!NOTE]
+> The *N/A* button is displayed if no input or output is selected. Otherwise, *Lock* or *Unlock* is displayed, depending on whether an input and output are already locked.

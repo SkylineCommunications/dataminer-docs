@@ -4,9 +4,7 @@ uid: I-DOCSIS_parameters_node_segment
 
 # I-DOCSIS parameters – Node Segment
 
-These parameters are currently still under development.
-
-<!-- This page contains an overview of the Node Segment parameters available in the I-DOCSIS branch of the EPM Solution.
+This page contains an overview of the Node Segment parameters available in the I-DOCSIS branch of the EPM Solution from version 6.1.5 onwards.
 
 ## KPIs & KQIs
 
@@ -75,6 +73,18 @@ These parameters are currently still under development.
 - **Number CM Group Delay or Reflection OOS**: Calculated. The number of cable modems associated with the given service group that are affected by NMTER being out of spec (OOS).
 
 - **Percentage CM Group Delay or Reflection OOS**: Calculated. The percentage of cable modems associated with the given service group that are affected by NMTER being out of spec (OOS).
+ 
+- **Reflection Distance**: The average reflection distance for all associated CMs.
+
+- **Average Latency**: The average latency for all CMs associated with the given level.
+
+- **Average jitter**: The average jitter for all CMs associated with the given level.
+
+- **Average Packet Loss Rate**: The average packet loss rate for all CMs associated with the given level.
+
+- **US Utilization**: The percentage US utilization of the channels associated with the port.
+
+- **DS Utilization**: The percentage DS utilization of the channels associated with the port.
 
 ## System parameters
 
@@ -84,4 +94,4 @@ These parameters are currently still under development.
 
 - **DS Port**: Direct value. The DS port associated with the node segment.
 
-- **US Port**: Direct value. The US port associated with the node segment. -->
+- **US Port**: Direct value. The US port associated with the node segment.

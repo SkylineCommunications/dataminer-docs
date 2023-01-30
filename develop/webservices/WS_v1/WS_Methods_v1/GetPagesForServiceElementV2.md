@@ -22,4 +22,4 @@ Available from DataMiner 10.0.7 onwards.
 
 | Item | Format | Description |
 |--|--|--|
-| GetPagesForService­ElementV2Result | Array of [DMAElementPage](xref:DMAElementPage) | All the Data Display pages of the specified element, as well as the alarm cache status. |
+| GetPagesForServiceElementV2Result | Array of [DMAElementPage](xref:DMAElementPage) | All the Data Display pages of the specified element, as well as the alarm cache status. |

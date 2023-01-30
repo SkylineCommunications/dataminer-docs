@@ -19,4 +19,4 @@ Use this method to count the number of child items (elements and/or services) in
 
 | Item                              | Format  | Description                                         |
 |-----------------------------------|---------|-----------------------------------------------------|
-| GetElementsForSer­viceCountResult | Integer | The number of child items in the specified service. |
+| GetElementsForServiceCountResult | Integer | The number of child items in the specified service. |

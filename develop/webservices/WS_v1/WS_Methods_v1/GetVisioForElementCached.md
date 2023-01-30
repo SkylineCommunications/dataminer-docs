@@ -26,4 +26,4 @@ All images are in PNG format, and are base64 encoded.
 
 | Item | Format | Description |
 |--|--|--|
-| GetVisioForElement­CachedResult | [DMACache](xref:DMACache) | The Visio file linked to the specified element, returned as an image. |
+| GetVisioForElementCachedResult | [DMACache](xref:DMACache) | The Visio file linked to the specified element, returned as an image. |

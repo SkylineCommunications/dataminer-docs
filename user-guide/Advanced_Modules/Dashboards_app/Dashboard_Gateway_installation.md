@@ -32,6 +32,9 @@ There are two main reasons to consider a Dashboard Gateway setup:
 
 - The Dashboard Gateway web server(s) should be able to communicate with a DMA using both a .NET Remoting connection and an HTTP(S) connection (using port 80 or 443, depending on the HTTP(S) configuration of the DataMiner Agent)
 
+> [!IMPORTANT]
+> Always make sure your Dashboard Gateway's web application folders are in sync with the DataMiner server. This means that when you upgrade your DataMiner software, you must make sure the folders for the web apps are also up to date.
+
 ## Limitations
 
 - The URL folder structure of the web applications should remain the same as on a DataMiner Agent. The applications have to be accessed using URLs similar to the following examples:
@@ -48,7 +51,7 @@ There are two main reasons to consider a Dashboard Gateway setup:
 
 ## Dashboard Gateway configuration
 
-1. On the Dashboard Gateway web server(s), install IIS and the URL Rewrite module.
+1. On the Dashboard Gateway web server(s), install IIS and the [URL Rewrite](https://www.iis.net/downloads/microsoft/url-rewrite) module.
 
    For IIS, make sure to install Classic ASP, ASP.NET 4.6+, and the WebSocket protocol.
 

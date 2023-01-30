@@ -10,17 +10,19 @@ When you log in to Jenkins, you will see a folder structure that is organized as
 
 1. Protocols: This is the root folder that contains all the protocol-related pipelines.
 
-2. Vendor: The *Protocols* folder contains multiple subfolders, one for each vendor.
+1. Vendor: The *Protocols* folder contains multiple subfolders, one for each vendor.
 
-3. DataSource: Each vendor folder contains multiple subfolders, one for each data source.
+1. DataSource: Each vendor folder contains multiple subfolders, one for each data source.
 
 When you navigate to a data source, an overview of the different available branches is displayed:
-	![](~/develop/images/JenkinsDataSource.png)
-	<br>Figure 4: Overview of the different branches of a data source in Jenkins
+
+   ![](~/develop/images/JenkinsDataSource.png)<br>
+   *Overview of the different branches of a data source in Jenkins*
 
 On the *Tags* tab, an overview of the existing tags is displayed:
-	![](~/develop/images/JenkinsTagsTab.png)
-	<br>Figure 5: Overview of the different tags of a data source in Jenkins
+
+   ![](~/develop/images/JenkinsTagsTab.png)<br>
+   *Overview of the different tags of a data source in Jenkins*
 
 The columns in this overview have the following meaning:
 
@@ -39,18 +41,19 @@ The columns in this overview have the following meaning:
 - Fav: This column allows you to reschedule a build and to mark this as a favorite.
 
 When you select a particular branch or tag, an overview of the most recent builds for this branch or tag is displayed:
-![](~/develop/images/JenkinsBranch.png)
-<br>Figure 6: Branch overview in Jenkins
+
+![](~/develop/images/JenkinsBranch.png)<br>
+*Branch overview in Jenkins*
 
 To get a more modern visual representation, you can click the *Open Blue Ocean* link in the menu on the left-hand side.
 
-![](~/develop/images/JenkinsBranchBlueOcean.png)
-<br>Figure 7: Branch overview in Jenkins
+![](~/develop/images/JenkinsBranchBlueOcean.png)<br>
+*Branch overview in Jenkins*
 
 Here, you can click a specific row to get more information about that build.
 
-![](~/develop/images/JenkinsBuildInfo.png)
-<br>Figure 8: Build information in Jenkins
+![](~/develop/images/JenkinsBuildInfo.png)<br>
+*Build information in Jenkins*
 
 This will include a graphical overview of all the steps that have been executed in this pipeline.
 
@@ -74,27 +77,27 @@ The pipeline also generates the following artifacts upon successful completion:
 
 You can find these by clicking the artifacts button in the top menu for a specific run.
 
-![](~/develop/images/JenkinsArtifacts.png)
-<br>Figure 9: Artifacts in Jenkins
+![](~/develop/images/JenkinsArtifacts.png)<br>
+*Artifacts in Jenkins*
 
 In the Jenkins classic web UI, you can inspect the reported MSBuild errors, DIS Validator issues and Major Change Checker issues, if any.
 
-![](~/develop/images/JenkinsWarnings.png)
-<br>Figure 10: Warnings displayed in Jenkins
+![](~/develop/images/JenkinsWarnings.png)<br>
+*Warnings displayed in Jenkins*
 
 Clicking on the DIS Validator Warnings link, for example, will bring you to a page providing an overview of the detected issues.
 
-![](~/develop/images/JenkinsIssuesOverview.png)
-<br>Figure 11: Overview of detected issues in Jenkins
+![](~/develop/images/JenkinsIssuesOverview.png)<br>
+*Overview of detected issues in Jenkins*
 
 Under *Details*, you can click a specific issue to view more information related to this issue:
 
-![](~/develop/images/JenkinsDetailedIssue.png)
-<br>Figure 12: Detailed information on issue in Jenkins
+![](~/develop/images/JenkinsDetailedIssue.png)<br>
+*Detailed information on issue in Jenkins*
 
 > [!NOTE]
 > In case there are too many reported issues, the publishing step will be skipped. To inspect the results in such a case, consult the XML artifacts.
-> -  In case the DIS Validator reports over 200 issues, the validator results will not be published to the Jenkins Warnings plugin.
-> -  In case the DIS Major Change checker reports over 50 major changes, the validator results will not be published to the Jenkins Warnings plugin.
-> -  In case publishing takes too much time, the results will not be published to the Jenkins Warnings plugin (the timeout has been set to 30s for MSBuild results and 1 minute for DIS Validator and DIS Major Change Checker results).
->
+
+> - In case the DIS Validator reports over 200 issues, the validator results will not be published to the Jenkins Warnings plugin.
+> - In case the DIS Major Change checker reports over 50 major changes, the validator results will not be published to the Jenkins Warnings plugin.
+> - In case publishing takes too much time, the results will not be published to the Jenkins Warnings plugin (the timeout has been set to 30s for MSBuild results and 1 minute for DIS Validator and DIS Major Change Checker results).

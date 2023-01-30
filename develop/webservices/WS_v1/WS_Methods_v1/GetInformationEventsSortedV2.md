@@ -23,4 +23,4 @@ Available from DataMiner 10.0.7 onwards.
 
 | Item | Format | Description |
 |--|--|--|
-| GetInformationEvents­SortedV2Result | Array of [DMAAlarm](xref:DMAAlarm) | The information events for the indicated period, sorted as required, as well as the alarm cache status. |
+| GetInformationEventsSortedV2Result | Array of [DMAAlarm](xref:DMAAlarm) | The information events for the indicated period, sorted as required, as well as the alarm cache status. |

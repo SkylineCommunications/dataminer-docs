@@ -13,7 +13,7 @@ To connect your DMS to the cloud:
 
    - All DataMiner Agents in the DataMiner System are running DataMiner version 10.1.1 or higher.
 
-   - The *CloudConnectedAgents* soft-launch option is enabled on all DMAs in the cluster. For more information, see [soft-launch option](https://community.dataminer.services/documentation/soft-launch-options/).
+   - The *CloudConnectedAgents* soft-launch option is enabled on all DMAs in the cluster. For more information, see [Soft-launch options](xref:SoftLaunchOptions).
 
    - Each DMA that will be connected to the cloud can reach the following endpoints:
 
@@ -22,6 +22,9 @@ To connect your DMS to the cloud:
      - ``wss://tunnel.dataminer.services/``
 
 1. Download the appropriate DataMiner **Cloud Pack installer** from [DataMiner Dojo](https://community.dataminer.services/downloads/) and install it on one or more DMAs in the cluster. As .NET 5 is required to connect to the DataMiner Cloud, you can choose an installer that includes or downloads .NET 5. If .NET 5 is already installed in your system, choose the installer that does not include .NET 5.
+
+   > [!NOTE]
+   > If your DataMiner System contains a Failover pair, and one of the Agents in the Failover pair is responsible for hosting the connection towards the DataMiner Cloud Platform, install the DataMiner Cloud Pack on both Agents in the Failover pair.
 
 1. In DataMiner Cube, go to System Center \> *Users / Groups* and make sure you have the following **user permissions**. If you need to make changes to the user permissions, reconnect to Cube afterwards to make sure your changes are applied in the UI.
 

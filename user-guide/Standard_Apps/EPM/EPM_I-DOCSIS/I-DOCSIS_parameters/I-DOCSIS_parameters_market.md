@@ -26,6 +26,8 @@ This page contains an overview of the Market parameters available in the I-DOCSI
 
 - **Number CM DOCSIS 3.1**
 
+- **Number CM DOCSIS Other**
+
 - **Number CM Ping OK**
 
 - **Percentage CM Ping OK**

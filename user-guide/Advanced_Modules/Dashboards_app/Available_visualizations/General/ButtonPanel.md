@@ -5,7 +5,7 @@ uid: DashboardButtonPanel
 # Button panel
 
 > [!WARNING]
-> This feature is currently still in preview. For more information, see [Soft-launch options](https://community.dataminer.services/documentation/soft-launch-options/).
+> This feature is currently still in preview. For more information, see [Soft-launch options](xref:SoftLaunchOptions).
 
 This dashboard component is available in soft launch from DataMiner 10.0.3 onwards, if the soft-launch option *ReportsAndDashboardsButtonPanel* is enabled.
 
@@ -181,7 +181,7 @@ Within the *Param* tag of the protocol, the following tags can be used to config
 
   - **panelButtonOperation**: Displays the different buttons, which are the same for all rows. The next option, *panelButtonPossibleOperations*, will determine which of these buttons are used.
 
-  - **panelButtonPossible­Operations**: Allows the user to specify which operations are possible with the button. For rotate buttons, four types of increments are possible. By default, at least a small decrease and increase are available, but it is possible to add a large increase and decrease. For example:
+  - **panelButtonPossibleOperations**: Allows the user to specify which operations are possible with the button. For rotate buttons, four types of increments are possible. By default, at least a small decrease and increase are available, but it is possible to add a large increase and decrease. For example:
 
     ```txt
     click,largedecrease;smalldecrease;smallincrease;largeincrease
