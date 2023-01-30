@@ -13,6 +13,12 @@ The following sections provide more information on the DIS menu:
 - [Protocol \> Generate Class Library code](#protocol--generate-class-library-code)
 - [Protocol \> Convert to Solution...](#protocol--convert-to-solution)
 - [Automation script \> Generate Class Library code](#automation-script--generate-class-library-code)
+- [Plugins \> Generate driver help](#plugins--generate-driver-help)
+- [Plugins \> Add After Startup](#plugins--add-after-startup)
+- [Plugins \> Add matrix...](#plugins--add-matrix)
+- [Plugins \> Add SNMP System Info...](#plugins--add-snmp-system-info)
+- [Plugins \> Add SNMP Trap Receiver...](#plugins--add-snmp-trap-receiver)
+- [Plugins \> Add Table Context Menu...](#plugins--add-table-context-menu)
 - [Tool Windows \> DIS Tree View](#tool-windows--dis-tree-view)
 - [Tool Windows \> DIS Mappings View](#tool-windows--dis-mappings-view)
 - [Tool Windows \> DIS Macros](#tool-windows--dis-macros)
@@ -50,6 +56,7 @@ In the *DMA* submenu, you can find the following commands:
     You can import multiple protocols at once (even a combination of main protocols and DVE protocols). Select the protocols you want to import, and click *Import*. Each protocol will be opened in a separate tab.
 
     > [!NOTE]
+    >
     > - Use the filter box in the top-right corner to filter the list of protocols.
     > - In order to prevent users from accidentally publishing a DVE protocol, it is not possible to publish a DVE protocol from inside DIS. When DIS detects that the *Protocol/Name* tag contains a *parentProtocol* attribute and that it is not empty, publishing will fail and a warning message will appear.
     > - When DIS connects to a DataMiner Agent, it always uses polling.
@@ -62,6 +69,7 @@ In the *DMA* submenu, you can find the following commands:
     You can import multiple Automation scripts at once. Select the scripts you want to import, and click *Import*. Each script will be opened in a separate tab.
 
     > [!NOTE]
+    >
     > - Use the filter box in the top-right corner to filter the list of Automation scripts.
     > - When DIS connects to a DataMiner Agent, it always uses polling.
     > - If this *Import Automation script..* command is unavailable, you are not connected to a DMA. In the *DMA* menu, go to *Connect*, and click the DMA to which you want DIS to connect. See [DMA](xref:DIS_settings#dma)
@@ -97,6 +105,48 @@ As from v2.26, DIS offers two distinct ways of developing a DataMiner protocol. 
 ## Automation script \> Generate Class Library code
 
 See [Protocol \> Generate Class Library code](#protocol--generate-class-library-code).
+
+## Plugins \> Generate driver help
+
+This plug allows generating the driver help.
+
+## Plugins \> Add After Startup
+
+This plugin allows adding the after startup logic to a connector. DIS inspects the protocol.xml file and determines whether an after startup trigger is present and adds one if not present.
+From this trigger it adds all remaining items of the after startup flow if not present.
+
+See also [Executing a QAction after startup](xref:LogicExamples#executing-a-qaction-after-startup).
+
+## Plugins \> Add matrix...
+
+This plugin allows adding a matrix to a connector. Has the same functionality as the Create Matrix macro.
+This plugin allows creating a matrix and/or Inputs and Outputs tables.
+
+## Plugins \> Add SNMP System Info...
+
+This plugin allows adding the SNMP System Info parameters to a connector.
+
+The parameters that are added are:
+
+- System Description (1.3.6.1.2.1.1.1)
+- System Object ID (1.3.6.1.2.1.1.2)
+- System Uptime (1.3.6.1.2.1.1.3)
+- System Name (1.3.6.1.2.1.1.5)
+- System Contact (1.3.6.1.2.1.1.4)
+- System Location (1.3.6.1.2.1.1.6)
+
+## Plugins \> Add SNMP Trap Receiver...
+
+This plugin allows adding an SNMP trap receiver to a connector and a QAction with boilerplate code to process traps.
+
+## Plugins \> Add Table Context Menu...
+
+This plugin allows adding a custom context menu to a table in a connector.
+You can choose between the following:
+
+- Rows Manager (User-definable Keys): A default context menu that provides add, duplicate, edit and delete functionality.
+- Rows Manager (Auto-incremented Keys): An extension of the previous type but where the developer can work with an auto-increment key parameter.
+- Custom: Opens a wizard where you can specify the options.
 
 ## Tool Windows \> DIS Tree View
 
