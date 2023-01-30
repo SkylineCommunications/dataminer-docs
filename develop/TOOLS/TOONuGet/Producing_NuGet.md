@@ -29,7 +29,7 @@ The rules below mainly focus on NuGet packages that are published to nuget.org. 
 
 ### Project type
 
-Make use of the SDK project style. This gives the advantage of using dotnet tools in the pipeline and has the latest features. It also cleans up the .csproj, file which reduces potential merge conflicts.
+Make use of the SDK project style. This gives the advantage of using dotnet tools in the pipeline and has the latest features. It also cleans up the .csproj file, which reduces potential merge conflicts.
 
 Using SDK-style projects, you can still target .NET Framework:
 
