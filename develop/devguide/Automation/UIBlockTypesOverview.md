@@ -15,7 +15,6 @@ The [UIBlockType](xref:Skyline.DataMiner.Automation.UIBlockType) enum defines di
 |DropDown     |Drop-down list.         |
 |Executable     |Executable.         |
 |FileSelector     |File selector.         |
-|GlobalSettings     |Global settings.         |
 |Numeric     |Numeric.         |
 |Parameter     |Text displaying the value of a parameter.         |
 |PasswordBox     |Password input box.         |
