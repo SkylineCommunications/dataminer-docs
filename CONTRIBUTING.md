@@ -8,6 +8,9 @@ Welcome to the docs.dataminer.services contributor guide!
 
 Our documentation is open to contributions from any user. Contributions are created, reviewed, and merged via GitHub. This page will explain how you can add and review contributions, ranging from simple changes to a single page, to larger changes where entire sections of the documentation are added or modified.
 
+> [!TIP]
+> Are you a member of the DataMiner DevOps Professional Program? Find out how you can [earn DevOps Points by contributing to the DataMiner docs](xref:Benefits_DevOps_Professionals_Program#accumulating-devops-points)!
+
 ## General guidelines
 
 - Use **US English** spelling when you contribute to the DataMiner documentation.
@@ -115,7 +118,9 @@ When you install GitHub Desktop, you will also need to add the correct repositor
    ![Install GitHub 2](~/images/InstallGithub2.png)
 
    > [!IMPORTANT]
-   > Make sure the local path you clone the repository to is relatively short. Using a long file path will lead to errors, as Windows will be unable to create certain files in the repository.
+   >
+   > - Make sure the local path you clone the repository to is relatively short. Using a long file path will lead to errors, as Windows will be unable to create certain files in the repository.
+   > - Do not clone the repository to a folder that is synced with OneDrive, as this can cause errors.
 
 1. If you do not have write access to the repository, you will find an alert in the lower left corner of the GitHub Desktop UI.
 

@@ -341,14 +341,6 @@ Because of a number of enhancements, the automatic evaluation of trend predictio
 
 Because of a number of enhancements, overall performance has increased when creating and updating bookings.
 
-#### Enhanced error handling when trying to create resource manager properties with value/key null on Elasticsearch [ID_35155]
-
-<!-- MR 10.3.0 - FR 10.3.2 -->
-
-When an attempt is made to create resource properties, resource definition properties and pool properties with value/key null on a system with an Elasticsearch database, from now on, an `InvalidCharactersInPropertyNames` error listing the names of the properties in question will be added to the Resource Manager log file.
-
-This same fix also fixes the creation and migration of resources of which the property list is null and resource pools of which the property definitions list or properties list is null.
-
 #### Enhanced performance when updating a baseline or assigning an alarm template that contains conditional monitoring [ID_35171]
 
 <!-- MR 10.3.0 - FR 10.3.2 -->
@@ -655,15 +647,6 @@ When you tried to request data from a simulation that was built with AutoBuildVe
 
 In some cases, an error could occur in the Skyline Device Simulator when a proxy simulation was being run.
 
-#### Service & Resource Management: Problem when migrating resources containing properties with keys or values set to null [ID_35067]
-
-<!-- MR 10.3.0 - FR 10.3.1 [CU0] -->
-
-When resource data was being migrated to Elasticsearch, the following exception could be thrown when a resource or a resource pool contained properties with keys or values that were set to null.
-
-```txt
-2022/12/01 08:53:59.582|SLNet.exe|ResourceManager|ERR|0|6|System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.ArgumentException: value is not serializable to json
-```
 
 #### When a direct view table was updated, the wrong columns could be updated in the source element [ID_35075]
 

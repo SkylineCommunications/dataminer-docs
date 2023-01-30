@@ -17,6 +17,12 @@ New aggregation operations were added to the hub, market, network, CCAP, service
 
 Both on the *Configuration* page of the Skyline EPM Platform element and in the front-end EPM visual overview, a toggle button is now available that can be used to show or hide the PNM layers on the Node Segment map.
 
+#### Alarm color for total alarm statistics represented by colored circles in EPM visual overviews [ID_35451]
+
+For the total alarm statistics in the EPM visual overviews, colored circles will now be displayed that show the current alarm color. If there are no alarms, a gray color will be displayed, otherwise the color will reflect the alarm severity (critical, major, minor, or warning). This has been implemented by adding conditions to four circle shapes based on the total alarm statistics.
+
+For the Skyline EPM Platform visual overview, the alarm statistics are shown both on the *Service Group [Fiber Node]* page and on the *CCAP* page. For the Skyline EPM Platform DOCSIS visual overview, they are located on the *CCAP* page.
+
 ## Changes
 
 ### Enhancements

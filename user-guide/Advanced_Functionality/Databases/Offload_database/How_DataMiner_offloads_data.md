@@ -24,7 +24,7 @@ If the offload database cannot be reached for some time while it is activated, t
 
    ![Offload database of type MySQL](~/user-guide/images/db_offload_mysql.jpg)
 
-## Offload database of type Microsoft SQL Server
+## Offload database of type MSSQL
 
 1. *SLDatabase.dll* orders *system.data.dll* to load a CSV file into a particular database table by sending it the query to be executed.
 
@@ -34,18 +34,18 @@ If the offload database cannot be reached for some time while it is activated, t
    BULK INSERT ALARM FROM‘\\[DMAIP]\Offload’ WITH (DATAFILETYPE=’wildcard’, FIELDTERMINATOR = ‘\t’)
    ```
 
-1. *system.data.dll* forwards the query to the SQL Server database via IP port 1433.
+1. *system.data.dll* forwards the query to the MSSQL database via IP port 1433.
 
    See also: <https://msdn.microsoft.com/en-us/library/cc646023.aspx>
 
-1. The SQL Server database fetches the CSV file from the shared folder on the DataMiner Agent via IP ports 139 and 445, and inserts the contents of the file into the table in question.
+1. The MSSQL database fetches the CSV file from the shared folder on the DataMiner Agent via IP ports 139 and 445, and inserts the contents of the file into the table in question.
 
    See also: <https://technet.microsoft.com/en-us/library/cc731402(v=ws.11).aspx>
 
-   ![Offload database of type Microsoft SQL Server](~/user-guide/images/db_offload_mssql.jpg)
+   ![Offload database of type MSSQL](~/user-guide/images/db_offload_mssql.jpg)
 
 > [!NOTE]
-> The folder *C:\\Skyline DataMiner\\System Cache\\Offload* has to be shared as “\\\\\[server\]\\Offload” with anonymous access. See also: [Configuring data offloads to an SQL Server database in another domain](xref:DB_xml#configuring-data-offloads-to-an-sql-server-database-in-another-domain).
+> The folder *C:\\Skyline DataMiner\\System Cache\\Offload* has to be shared as “\\\\\[server\]\\Offload” with anonymous access. See also: [Configuring data offloads to an MSSQL database in another domain](xref:DB_xml#configuring-data-offloads-to-an-mssql-database-in-another-domain).
 
 ## Offload database of type Oracle
 

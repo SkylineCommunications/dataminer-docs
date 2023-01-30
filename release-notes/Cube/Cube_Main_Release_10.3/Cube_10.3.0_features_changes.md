@@ -875,6 +875,14 @@ When you start a resource migration in the *SLNetClientTest* tool (by selecting 
 
 Up to now, Cube would only check at startup whether Cassandra or Elasticsearch were available. From now on, it will immediately be aware of any changes as to the availability of Cassandra or Elasticsearch.
 
+#### EPM: Data retrieved from the collector that was displayed as a table with a single row will now be displayed as single parameters [ID_35371]
+
+<!-- MR 10.3.0 - FR 10.3.3 -->
+
+In an EPM card, in some cases, data retrieved from the collector was displayed as a table with a single row, which often had the system name as primary key.
+
+From now on, data retrieved from the collector that used to be displayed as a table with a single row will now be displayed as single parameters (one for every column).
+
 ### Fixes
 
 #### Visual Overview: Problem when navigating inside EPM cards [ID_32288]
@@ -1035,3 +1043,9 @@ When you edited the properties of a tag (e.g. name, description, etc.), the tren
 <!-- MR 10.3.0 - FR 10.3.3 -->
 
 When you exported a trend graph containing average trend data to CSV, in some cases, the exported data would be parsed incorrectly.
+
+#### DataMiner Cube - Visual Overview: Problem when filtering bookings in a ListView component [ID_35430]
+
+<!-- MR 10.3.0 - FR 10.3.3 -->
+
+When, in Visual Overview, a filter was applied to a *ListView* component that listed bookings, no account would be taken of bookings added after the filter had been applied. As a result, in some cases, the *ListView* component would list bookings that did not match the filter.

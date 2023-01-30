@@ -68,6 +68,14 @@ Leading spaces have been removed from the following port information fields:
 
 ### Fixes
 
+#### DataMiner Taskbar Utility: Problem when stopping DataMiner [ID_34790]
+
+<!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
+
+Up to now, when you right-clicked the *DataMiner Taskbar Utility* system tray icon and selected *Stop DataMiner* while keeping the SHIFT button pressed, the *SLWatchdog* process would incorrectly also be stopped. In a Failover setup, this would prevent the backup agent from acquiring the virtual IP address.
+
+Also, after DataMiner had been stopped, up to now, the *SLXml*, *SLLog* and *SLDataGateway* processes would incorrectly start up again.
+
 #### Problem with SLElement when a trend template was being assigned [ID_34824]
 
 <!-- MR 10.2.0 [CU12] - FR 10.3.1 -->
@@ -118,6 +126,14 @@ In the *PropertyConfiguration.xml* file, for each relevant property you can conf
 
 Up to now, when a *contentSeparator* tag was left empty, the values of the property in question would incorrect not be separated by any separator. From now on, when that tag is empty, the values of the property in question will by default be separated by commas.
 
+#### Problem with CassandraBackup.exe when the configuration file of a general database of type 'Cassandra' had a DBServer element that contained multiple host addresses [ID_35253]
+
+<!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
+
+When, in the configuration file of a general database of type "Cassandra", the `<DBServer>` element contained multiple host addresses, up to now, the *CassandraBackup.exe* tool would parse those host addresses incorrectly and would not take any database backup.
+
+From now on, when the `<DBServer>` element contains multiple host addresses including that of the local database, the *CassandraBackup.exe* tool will take a backup of the local database.
+
 #### SLDataGateway could end up with an excessive number of HealthMonitor.Refresh threads [ID_35286]
 
 <!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
@@ -156,6 +172,18 @@ When a discrete parameter with a `<Sequence>` tag was displayed in a lite parame
 
 When a tree control contained many-to-many relationships, up to now, the alarm bubble-up feature would not work correctly.
 
+#### Problem when connecting to Azure AD via a proxy [ID_35382]
+
+<!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
+
+When a DataMiner Agent connected to Azure Active Directory was sealed off from the internet but had access to a proxy, users would not be able to log in due to SLDataMiner failing to use the proxy to connect to Azure Active Directory.
+
+In case a DataMiner Agent has to connect to Azure AD via a proxy, then that proxy has to be configured by means of the following netsh command:
+
+```txt
+netsh winhttp set proxy <proxyaddress> <bypasslist>
+```
+
 #### Cassandra: TTL setting of spectrum trace data would not be applied correctly [ID_35385]
 
 <!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
@@ -167,3 +195,45 @@ In a Cassandra database, the "time to live" (TTL) setting of spectrum trace data
 <!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
 
 When a tree control contained EPM objects, in some cases, the alarm bubble-up feature would not work correctly.
+
+#### Dashboards app & Low-code apps - Line & area chart component: Problems when visualizing resource availability [ID_35408]
+
+<!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
+
+When, in a dashboard or a low-code app, a *Line & area chart* component was used to visualize the capacity usage over time of a resource, it would incorrectly take into account bookings that had been canceled. Also, when two or more bookings ended at the same, it would not show the capacity usage in a correct way, and when there was no booking in the selected time range, it would show an error.
+
+In the latter case, it will now instead show a flat line indicating that the resource is not being used.
+
+#### DataMiner Cube - Spectrum analysis: Presets would not be loaded when opening a spectrum element while connected to a heavily loaded DMA [ID_35421]
+
+<!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
+
+When you opened a spectrum element in a DataMiner Cube that was connected to a heavily loaded DataMiner Agent, the presets would not be loaded.
+
+#### SLDataGateway would not correctly return errors when querying SLA logger tables in a Cassandra Cluster [ID_35440]
+
+<!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
+
+SLDataGateway would not correctly return errors when querying SLA logger tables in a Cassandra Cluster, causing an error to occur in SLProtocol.
+
+#### DataMiner Cube - DCF: Problem when trying to delete a DCF connection in the Properties window of an element [ID_35449]
+
+<!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
+
+When you tried to remove a DCF connection in the *Properties* window of an element, an exception would be thrown and the connection would not be removed when the destination element was stopped or paused.
+
+#### DataMiner Cube - Visual Overview: Problem when re-arranging dynamically positioned shapes [ID_35462]
+
+<!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
+
+When, in a Visio drawing, shapes have been positioned dynamically, you can re-arrange those shapes manually by switching to *Arrange* mode and re-arranging the shapes using drag-and-drop. In some cases, after you had re-arranged a number of shapes, a *NullReferenceException* could be thrown.
+
+#### Automation: 'engine.RunClientProgram' overload with two parameters would incorrectly always be run synchronously [ID_35476]
+
+<!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
+
+An `engine.RunClientProgram` overload with two parameters, of which the second one controls whether the method is run either synchronously or asynchronously, would incorrectly always be run synchronously.
+
+```csharp
+RunClientProgram(String applicationPath, bool waitForCompletion)
+```

@@ -58,7 +58,7 @@ To configure the component:
    - *Show maximum*: Available from DataMiner 10.0.13 onwards, if *Show real-time trend data*/Stack trend lines is not selected. Displays the maximum trend data. By default, this is disabled.
 
    - *Group by*: In case the component displays trending for multiple parameters, this box allows you to specify how the graphs should be grouped. One graph will be displayed per group. The default setting (from DataMiner 10.3.2/10.4.0 onwards<!-- RN 35160 -->) is *All together*.
-   
+
      > [!NOTE]
      > View parameters can only be grouped together with other parameters with the option *All together*, otherwise they are placed in a separate group.
 

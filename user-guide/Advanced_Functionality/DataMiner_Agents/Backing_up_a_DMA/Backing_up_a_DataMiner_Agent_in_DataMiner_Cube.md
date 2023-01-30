@@ -52,7 +52,7 @@ The following steps can be taken to configure the backups for a DMA:
 
      > [!NOTE]
      >
-     > - In case a local Microsoft SQL Server database is used, in the *Options* section, an extra option is available that allows you to back up the transaction log as well. This option can be of use in order to allow Microsoft SQL Server to shrink the log file.
+     > - In case an MSSQL general database is used, in the *Options* section, an extra option is available that allows you to back up the transaction log as well. This option can be of use in order to allow MSSQL to shrink the log file. However, note that MSSQL is no longer supported as the general database as from DataMiner 10.3.0.
      > - While changes are being made to a backup configuration, no backup can be taken.
 
 1. Click the *Save* button to save the settings.

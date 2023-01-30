@@ -45,6 +45,32 @@ The data copied to the Windows clipboard is split into a header section and a da
 
 In the *Logging* section of *System Center*, you can now also consult the *SLSmartBaselineManager.txt* log file.
 
+#### Automation: New user/group setting to specify whether users have to confirm program executions launched from interactive Automation scripts [ID_35418]
+
+<!-- MR 10.4.0 - FR 10.3.3 -->
+
+A new user/group setting named *Do not confirm program executions from scripts*, found in the *User > Cube* tab of the *Settings* window, now allows you to specify whether users will have to explicitly confirm each program execution that is launched from an interactive Automation script.
+
+By default, this option will be disabled, meaning that users will have to give their consent each time an interactive Automation script wants to launch a program. The confirmation box will also allow users to change the setting by selecting the *Don't show this confirmation again. Always launch program executions.* check box.
+
+Each time a program is launched, a start entry and an end entry will be added to the Cube logging as well as to the *SLClient.txt* log file on the DataMiner Agent.
+
+- The start entry will contain the following data:
+
+  - the name of the Automation script
+  - the ID of the Automation script
+  - the user's login data (full name, client machine name, client app name and last login date)
+  - the program that will be launched
+  - the arguments that will be passed to the program (if any)
+
+- The end entry will contain the following data:
+
+  - the user's login data (full name, client machine name, client app name and last login date)
+  - the process ID of the program
+  - the time at which the process ended
+  - the name of the program that ended
+  - the arguments that were passed to the program (if any)
+
 ## Changes
 
 ### Enhancements
@@ -76,7 +102,15 @@ Leading spaces have been removed from the following port information fields:
 - SlowPoll
 - TimeoutTime
 
-#### Trending - pattern matching: A slightly larger number of missing values will now be allowed when you create a trend pattern tag [ID_35376]
+#### EPM: Data retrieved from the collector that was displayed as a table with a single row will now be displayed as single parameters [ID_35371]
+
+<!-- MR 10.3.0 - FR 10.3.3 -->
+
+In an EPM card, in some cases, data retrieved from the collector was displayed as a table with a single row, which often had the system name as primary key.
+
+From now on, data retrieved from the collector that used to be displayed as a table with a single row will now be displayed as single parameters (one for every column).
+
+#### Trending - Pattern matching: A slightly larger number of missing values will now be allowed when you create a trend pattern tag [ID_35376]
 
 <!-- MR 10.4.0 - FR 10.3.3 -->
 
@@ -155,3 +189,27 @@ From now on, Cube will check whether the pattern matching feature is enabled eac
 <!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
 
 When a tree control contained EPM objects, in some cases, the alarm bubble-up feature would not work correctly.
+
+#### DataMiner Cube - Spectrum analysis: Presets would not be loaded when opening a spectrum element while connected to a heavily loaded DMA [ID_35421]
+
+<!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
+
+When you opened a spectrum element in a DataMiner Cube that was connected to a heavily loaded DataMiner Agent, the presets would not be loaded.
+
+#### DataMiner Cube - Visual Overview: Problem when filtering bookings in a ListView component [ID_35430]
+
+<!-- MR 10.3.0 - FR 10.3.3 -->
+
+When, in Visual Overview, a filter was applied to a *ListView* component that listed bookings, no account would be taken of bookings added after the filter had been applied. As a result, in some cases, the *ListView* component would list bookings that did not match the filter.
+
+#### DataMiner Cube - DCF: Problem when trying to delete a DCF connection in the Properties window of an element [ID_35449]
+
+<!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
+
+When you tried to remove a DCF connection in the *Properties* window of an element, an exception would be thrown and the connection would not be removed when the destination element was stopped or paused.
+
+#### Visual Overview: Problem when re-arranging dynamically positioned shapes [ID_35462]
+
+<!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
+
+When, in a Visio drawing, shapes have been positioned dynamically, you can re-arrange those shapes manually by switching to *Arrange* mode and re-arranging the shapes using drag-and-drop. In some cases, after you had re-arranged a number of shapes, a *NullReferenceException* could be thrown.
