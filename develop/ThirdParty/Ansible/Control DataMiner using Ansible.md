@@ -34,11 +34,11 @@ In the inventory file you can use the IP or the hostname of the server.
 
 Below you can find a small Ansible Playbook to provision your DataMiner, however much more is possible using Ansible Playbooks, here you can find the full [information](https://docs.ansible.com/ansible/latest/playbook_guide/index.html).
 
-If you want to follow the steps below, you can find the needed files [here](https://github.com/SkylineCommunications). Here you can find a DataMiner apppackage that will upload the needed protocol and alarm template.
+If you want to follow the steps below, you can find the needed files [here](https://github.com/SkylineCommunications/Ansible-How-To-Files). Here you can find a DataMiner apppackage that will upload the needed protocol and alarm template.
 
 ### DataMiner Web API
 
-To provision your DataMiner system, you'll use the DataMiner Web API. To connect to your DataMiner Web API go to: https://[hostname]]/API/v1/json.asmx or https://[IP of DataMiner]]/API/v1/json.asmx
+To provision your DataMiner system, you'll use the DataMiner Web API. To connect to your DataMiner Web API go to: <https://[hostname]]/API/v1/json.asmx> or <https://[IP]]/API/v1/json.asmx>.
 
 On this page you'll be able to see all the possible request that you can do on the sytem. For the below example you'll need a minimum DataMiner version of 10.2. This because some new options have been added starting from this version.
 
@@ -67,7 +67,7 @@ You can see you also have a response:
 ### Installing DataMiner App Package
 
 This is currently not possible with the API, also upload a protocol is not possible yet.
-For this demo, you can download and install this [DataMiner App Package](https://github.com) from our Skyline Communications github. This will install the Microsoft Platform Protocol that can be used for this demo purpose.
+For this demo, you can download and install this [DataMiner App Package](https://github.com/SkylineCommunications/Ansible-How-To-Files) from our Skyline Communications github. This will install the Microsoft Platform Protocol that can be used for this demo purpose.
 
 ### Creating an Ansible Playbook
 
