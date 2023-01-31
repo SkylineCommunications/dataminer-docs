@@ -2,86 +2,79 @@
 uid: Configure_DataMiner_using_Ansible
 ---
 
-# Configure DataMiner using Ansible
+# Configuring DataMiner using Ansible
 
-## Ansible
+With Ansible, you can enable infrastructure as a code in your organization. Ansible is an open-source software tool that runs on Linux-based operating systems, but that can control any kind of operating system (Windows, Linux, and macOS). With this tool, you can do provisioning, configuration management, and application deployment.
 
-With Ansible it's possible to enable Infrastructure as a code in your organization. It's an open-source software tool that runs on a Linux based OS but can control any kind of OS (Windows, Linux and Mac). With the tool you can do provisioning, configuration management and application deployment.
+This means you can also provision your DataMiner System. This page will help you with the basic steps of installing Ansible and then using it to provision DataMiner using Ansible playbooks.
 
-This means you can also provision your DataMiner!
+> [!TIP]
+> For full documentation on Ansible, refer to [docs.ansible.com](https://docs.ansible.com/ansible/latest/getting_started/index.html).
 
-This page will help you with the basic steps of installing Ansible and then use it to provision DataMiner using Ansible Playbooks.
+## Installing Ansible
 
-Full documentation and how Ansible works can be found [here](https://docs.ansible.com/ansible/latest/getting_started/index.html).
+For the installation of Ansible, you can follow the [guide created by the Ansible team](https://docs.ansible.com/ansible/latest/installation_guide/index.html). It includes the server requirements as well as the exact steps to install the tool on your preferred Linux operating system.
 
-### Installing Ansible
+If you want to control a Windows operating system, [some additional configuration](https://docs.ansible.com/ansible/latest/os_guide/windows_usage.html) needs to be done on the server.
 
-For the installation of Ansible you can follow the guide created by the Ansible team. There you can find the requirements of the server, but also the exact steps to install it on your preferred OS (Linux). With the following link you will open the [Installation guide](https://docs.ansible.com/ansible/latest/installation_guide/index.html).
+## Configuring your inventory
 
-If you want to control a Windows OS, some additional configuration needs to be done on the server. The steps for this you can find [here](https://docs.ansible.com/ansible/latest/os_guide/windows_usage.html).
+To use an Ansible playbook, you have to [create your inventory](https://docs.ansible.com/ansible/latest/inventory_guide/intro_inventory.html#inventory-basics-formats-hosts-and-groups).
 
-### Configure your inventory
+When you do so for DataMiner, you will need to create a **group for each DataMiner Agent** you want to provide with data. You should use the **IP or the hostname** of the server for this. Every IP/hostname in a group will receive the same provisioning, which is why each DMA should be in a group of its own; otherwise, all Agents would get the same commands to execute.
 
-To use Ansible Playbook you have to create your Inventory. This is really easy to do.
-The full document can be found [here](https://docs.ansible.com/ansible/latest/inventory_guide/intro_inventory.html#inventory-basics-formats-hosts-and-groups).
+Strictly speaking, you could only execute the provisioning on one Agent in a cluster, and the DataMiner synchronization would take care of the rest. However, to spread the load, it can be useful to provision different DMAs in the cluster with different data.
 
-For DataMiner, you have to create a group for each DataMiner you want to provide with data. This because only 1 agent in a cluster needs to receive the provisioning.
-You can off course provision different DMAs in the cluster with different data to spread the load.
+## Using the DataMiner Web API
 
-In the inventory file you can use the IP or the hostname of the server.
+To provision your DataMiner System, you will need to use the [DataMiner Web API](xref:Using_the_Web_Services_v1). To connect to the API, go to <https://[DMA hostname]]/API/v1/json.asmx> or <https://[DMA IP]]/API/v1/json.asmx>. This page will show all the possible requests you can execute on the system.
 
-## Create an Ansible Playbook
+For the example under [Creating an Ansible Playbook](#creating-an-ansible-playbook), you will need to use **DataMiner 10.2** or higher, as it makes use of options that are only available starting from this version.
 
-Below you can find a small Ansible Playbook to provision your DataMiner, however much more is possible using Ansible Playbooks, here you can find the full [information](https://docs.ansible.com/ansible/latest/playbook_guide/index.html).
+The example includes several requests so you can get a feeling of how everything works. If you click on such a request on the above-mentioned API page, you will see which variables are needed for it.
 
-If you want to follow the steps below, you can find the needed files [here](https://github.com/SkylineCommunications/Ansible-How-To-Files). Here you can find a DataMiner apppackage that will upload the needed protocol and alarm template.
+For example, for the [ConnectApp](xref:ConnectApp) request, the following input parameters are needed:
 
-### DataMiner Web API
+- *login*: The username to log in to the DataMiner System.
+- *password*: The corresponding password.
+- *ClientAppName*: The name of your client app, so that you can see in the logging what is connected.
+- *ClientAppVersion*: The version of your client app.
+- *ClientComputerName*: The name of the computer you are connecting from.
 
-To provision your DataMiner system, you'll use the DataMiner Web API. To connect to your DataMiner Web API go to: <https://[hostname]]/API/v1/json.asmx> or <https://[IP]]/API/v1/json.asmx>.
+This will return the following response:
 
-On this page you'll be able to see all the possible request that you can do on the sytem. For the below example you'll need a minimum DataMiner version of 10.2. This because some new options have been added starting from this version.
-
-For the demo below you'll use several of the request to get a feeling how evertyhing works.
-
-By clicking on one of those request, you can see what variables are needed for the request. As example, below you can see the request for the ConnectApp request.
-
-As you can see you need several parameters for the request:
-
-- host = hostname of server, can be the IP or hostname
-- logging = username to login in the DataMiner system
-- password = password of the user
-- ClientAppName = a visual name so you can see in your logs what is connected
-- ClientAppVersion = the version of your App
-- ClientComputerName = the name of the Computer you are connecting from
-
-You can see you also have a response:
-
-- ConnectAppResult = this key is needed to use in the other requests
+- *ConnectAppResult*: This key is needed in the other requests.
 
 ![ConnectApp API Request](~/develop/images/Ansible_webapi.png)
 
+> [!NOTE]
+> It can be helpful to first test your API requests with an API platform like Postman and check the returned values.
+
 > [!TIP]
-> It can be helpful to first test the API request with an API platform like Postman to test your requests and see the returned values.
+> For detailed information about each of the available methods, see [Methods (v1)](xref:WS_Methods_v1_overview).
 
-### Installing DataMiner App Package
+## Creating an Ansible playbook
 
-This is currently not possible with the API, also upload a protocol is not possible yet.
-For this demo, you can download and install this [DataMiner App Package](https://github.com/SkylineCommunications/Ansible-How-To-Files) from our Skyline Communications github. This will install the Microsoft Platform Protocol that can be used for this demo purpose.
+Below, you can find a small Ansible playbook to provision your DataMiner System. However, you can do much more using Ansible playbooks. For complete information, refer to [docs.ansible.com](https://docs.ansible.com/ansible/latest/playbook_guide/index.html).
 
-### Creating an Ansible Playbook
+If you want to try out the steps below, you can find the necessary files [on GitHub](https://github.com/SkylineCommunications/Ansible-How-To-Files). This includes a DataMiner app package that will upload the required protocol (i.e the Microsoft Platform protocol) and alarm template.
 
-### Provision DataMiner
+> [!NOTE]
+> At present, it is not possible to install an app package or upload a protocol via the DataMiner API.
 
-To create the playbook you create a new yaml file. This yaml file has to start with 3 dashes.
-You give your playbook a name and define the hosts to run on. This should be the group name you used in your inventory file from Ansible. In the test case you can see this is called **DataMiner**.
+### Provisioning DataMiner
 
-To be able to reuse some values, you can use vars in your playbook.
-The variables are defined at the top of your playbook under **vars**.
-In the demo you'll see JSON and SOAP requests, because of that both are configures, however also using 1 of these is possible.
-In below example the JSON and SOAP connection string together with the content type are configures as variable.
+#### Create the .yaml file
 
-For the JSON request you also need the endpoints that will be used. This is also stored in a variable. These are the same that you'll find on the WEB API page.
+To create the playbook, create a new .yaml file that starts with 3 dashes. Then give your playbook a name and define the hosts it should run on. This should be the group name you used in your Ansible inventory file. In the example below, this is *DataMiner*.
+
+#### Define the variables
+
+To be able to reuse some values, you can use variables in your playbook. These variables are defined at the top of the playbook under *vars*.
+
+The example illustrates the use of both JSON and SOAP requests, but you can also use just one of these. The JSON and SOAP connection string, together with the content type, are configured as variables.
+
+For a JSON request, you need the endpoints that will be used. This is also stored in a variable. These are the same as you will find on the Web API page.
 
 ```yaml
 ---
@@ -98,216 +91,223 @@ For the JSON request you also need the endpoints that will be used. This is also
     assignAlarmTemplate: "/AssignAlarmTemplate"
 ```
 
-After defining the variables its time to define the tasks of the Ansible Playbook.
-You can have a lot of different tasks, below you'll only see some that are available in Ansible, but on the help pages of Ansible you can find more types of tasks.
+#### Define the tasks of the Ansible playbook
 
-The first tasks is a way to display some text on the screen. This can be useful to debug, or have a better overview of what is happening. In the example below you'll post a message to the screen to show you have started the playbook.
+There can be many different tasks. Below, we only show some of the available tasks in Ansible, but you can find more types on [docs.ansible.com](https://docs.ansible.com/ansible/latest/playbook_guide/index.html).
 
-```yaml
-    tasks:
-        - debug:
-            msg: "Ansible Playbook to Provision DataMiner"
-```
+1. The first task is to **display some text on the screen**. This can be useful to debug or to have a better overview of what is happening. In the example below, you post a message to the screen to show you have started the playbook.
 
-The second task is to retrieve the connectionID that is needed to be able to do other API requests.
+   ```yaml
+       tasks:
+           - debug:
+               msg: "Ansible playbook to Provision DataMiner"
+   ```
 
-First you start with the name of the task. And then create your URI request. For the URI request, some parameters are needed to define the type of request.
+1. The second task is to **retrieve the connection ID** that is needed to be able to do other API requests. First you start with the name of the task, then you create your URI request. For the URI request, some parameters are needed to define the type of request:
 
-The url to connect to is our **jsonServer** with the **connect** variable, these 2 variables create our **ConnectApp** url. A variable in a Playbook is defined between **"{{variable_name}}"**.
+   - In this case, the URL to connect to is the *jsonServer* with the *connect* variable. These two variables together form the *ConnectApp* URL.
 
-With the **return_content** set to yes, you tell the request that you'll use the return value. This return value is then stored in the variable you assign in **register** at the bottom of the task.
+     > [!NOTE]
+     > A variable in a playbook is defined in the format *"{{variable_name}}"*.
 
-The body part then defines the parameters for the request. These are the parameters of DataMiner. For the login and password, these values are the values of an account that has access in DataMiner.
+   - Set *return_content* to *yes* to indicate that you will use the return value. This return value is then stored in the variable you assign in *register* at the bottom of the task.
 
-```yaml
-    - name: Connect With DataMiner
-      ansible.windows.win_uri:
-        url: "{{jsonServer}}{{connect}}"
-        return_content: yes
-        content_type: "{{jsonContent}}"
-        url_method: POST
-        body: '{
-            "host": "{{server}}",
-            "login": "[Insert DataMiner User]",
-            "password": "[Insert Password of DataMiner User]",
-            "clientAppName": "[Name for your connection]",
-            "clientAppVersion": "1.0",
-            "clientComputerName": "[Client Computer Name]]"
-            }'
-        register: connectionId
-```
+   - The *body* section defines the parameters for the request. These are the parameters of DataMiner. For the login and password, these values are the values of an account that has access in DataMiner.
 
-Now you can use the value of this connectionId to do other requests on DataMiner. You'll first create a View on DataMiner. For this you create again a new task with a name.
+   ```yaml
+       - name: Connect With DataMiner
+         ansible.windows.win_uri:
+           url: "{{jsonServer}}{{connect}}"
+           return_content: yes
+           content_type: "{{jsonContent}}"
+           url_method: POST
+           body: '{
+               "host": "{{server}}",
+               "login": "[Insert DataMiner User]",
+               "password": "[Insert Password of DataMiner User]",
+               "clientAppName": "[Name for your connection]",
+               "clientAppVersion": "1.0",
+               "clientComputerName": "[Client Computer Name]]"
+               }'
+           register: connectionId
+   ```
 
-The request is again a JSON request as above. But for the **connection** parameter you can see you'll now use a special variable. This is the variable of **connection**, then parsed to JSON and you'll use the value of parameter **d** in this JSON.
-To know the output of a request, it's useful to first test it in an API tool, so you can easily see the response you get.
+   Now you can use the value of *connectionId* to create other requests for DataMiner.
 
-The **parentViewID** is here configured to have the root view as parent. This root view is defined with **-1**.
+1. **Create a view** in DataMiner. For this, you again need to create a new task with a name.
 
-At the end the response is saved again in a variable, this variable will then be used again in a next request.
+   - The request is a **JSON** request like above, but for the *connection* parameter, you will now need to use a special *connection* variable. This variable is then parsed to JSON, and there you will use the value of parameter *d*.
 
-```yaml
-    - name: CreateView
-      ansible.windows.win_uri:
-        url: "{{jsonServer}}{{createView}}"
-        return_content: yes
-        content_type: "{{jsonContent}}"
-        url_method: POST
-        body: '{
-            "connection": "{{connectionId.json.d}}",
-            "parentViewID": -1,
-            "viewName": "AnsibleDemoView"
-            }'
-        register: ansibleView
-```
+     > [!NOTE]
+     > To know the output of a request, it can be useful to first test it in an API tool, so you can easily see the response you get.
 
-The next example is to create an element on the DataMiner. But now you'll use a SOAP request.
+   - The *parentViewID* is here configured to have the root view as its parent. This root view is defined with *-1*.
 
-For this example you'll have to use use the soapServer variable. For SOAP requests you don't need to define the exact request link, as the SOAP body defines this.
-In the request however, you also have to define the soapContent, otherwise the request will not work.
+   - The response is saved in a variable, which will be used in a next request.
 
-You can see you'll use the **connection.json.d** as connection string again, and now you'll also use the variable from the view you created. This variable has to be casted to an integer value, as this is wat the request expects. To cast something to an integer you can use **| int**, see the below example.
+   ```yaml
+       - name: CreateView
+         ansible.windows.win_uri:
+           url: "{{jsonServer}}{{createView}}"
+           return_content: yes
+           content_type: "{{jsonContent}}"
+           url_method: POST
+           body: '{
+               "connection": "{{connectionId.json.d}}",
+               "parentViewID": -1,
+               "viewName": "AnsibleDemoView"
+               }'
+           register: ansibleView
+   ```
 
-The other parameters are basic parameters to create an element on DataMiner.
+1. Next, you can **create an element** in DataMiner. To illustrate this, this time we will use a **SOAP** request.
 
-> [!CAUTION]
-> It's not possible yet to use the returned SOAP XML response as variable in other tasks.
+   - For this example, you will need to use the *soapServer* variable. For SOAP requests, you do not need to define the exact request link, as the SOAP body defines this. However, in the request, you also have to define the *soapContent*, as otherwise the request will not work.
 
-```yaml
-    - name:
-      ansible.windows.win_uri:
-        url: "{{soapServer}}"
-        return_content: yes
-        content_type: "{{soapContent}}"
-        url_method: POST
-        body: '<soap:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
-        <soap:Body>
-        <CreateElement xmlns="http://www.skyline.be/api/v1">
-            <connection>{{connectionid.json.d}}</connection>
-            <dmaID>[DataMiner ID]</dmaID>
-            <viewIDs>
-                <int>{{ansibleView.json.d | int}}</int>
-            </viewIDs>
-            <configuration>
-                <Name>MS Platform</Name>
-                <ProtocolName>Microsoft Platform</ProtocolName>
-                <ProtocolVersion>1.1.0.99</ProtocolVersion>
-                <Ports>
-                    <DMAElementBasePortInfo xsi:type="DMAElementSerialPortInfo">
-                        <IPAddress>localhost</IPAddress>
-                        <TimeoutTime>60</TimeoutTime>
-                        <ElementTimeoutTime>30</ElementTimeoutTime>
-                    </DMAElementBasePortInfo>
-                </Ports>
-            </configuration>
-        </CreateElement>
-        </soap:Body>
-        </soap:Envelope>'
-```
+   - The *connection.json.d* parameter is used as the connection string again.
 
-In order to retrieve the elementID that was created you can do another request: **getElementByName**. You can request this data with JSON.
+   - Now you can also use the variable representing the view you created. This variable has to be cast to an integer value, as this is wat the request expects. To cast something to an integer you can use `| int`, as illustrated below.
 
-```yaml
-    - name: GetElementByName
-      ansible.windows.win_uri:
-        url: "{{jsonServer}}{{elementByName}}"
-        return_content: yes
-        content_type: "{{jsoncontent}}"
-        url_method: POST
-        body: '{
-          "connection": "{{connectionid.json.d}}",
-          "elementName": "MS Platform"
-          }'
-      register: elementInfo
-```
+   - The other parameters are basic parameters to create an element in DataMiner.
 
-From the above example you get a big response back. This response cannot be directly converted to JSON.
+   > [!NOTE]
+   > It is not yet possible to use the returned SOAP XML response as a variable in other tasks.
 
-Because of this you first have to parse the text with **from_json** and **to_json** pipelines. Now you can use **ID** as variable in your playbook.
+   ```yaml
+       - name:
+         ansible.windows.win_uri:
+           url: "{{soapServer}}"
+           return_content: yes
+           content_type: "{{soapContent}}"
+           url_method: POST
+           body: '<soap:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+           <soap:Body>
+           <CreateElement xmlns="http://www.skyline.be/api/v1">
+               <connection>{{connectionid.json.d}}</connection>
+               <dmaID>[DataMiner ID]</dmaID>
+               <viewIDs>
+                   <int>{{ansibleView.json.d | int}}</int>
+               </viewIDs>
+               <configuration>
+                   <Name>MS Platform</Name>
+                   <ProtocolName>Microsoft Platform</ProtocolName>
+                   <ProtocolVersion>1.1.0.99</ProtocolVersion>
+                   <Ports>
+                       <DMAElementBasePortInfo xsi:type="DMAElementSerialPortInfo">
+                           <IPAddress>localhost</IPAddress>
+                           <TimeoutTime>60</TimeoutTime>
+                           <ElementTimeoutTime>30</ElementTimeoutTime>
+                       </DMAElementBasePortInfo>
+                   </Ports>
+               </configuration>
+           </CreateElement>
+           </soap:Body>
+           </soap:Envelope>'
+   ```
 
-```yaml
-    - name: Parse json
-      set_fact:
-        parsed_json: "{{elementInfo.content | from_json}}"
-    - name: Extract ID
-      set_fact:
-        ID: "{{parsed_json.d.ID | to_json}}"
-```
+1. To **retrieve the element ID of the created element**, use a *getElementByName* request. You can request this data with JSON.
 
-With the ID you can now do actions on the Element itself, for example assign an alarm template to it (this alarm template is also in the package with the protocol).
+   ```yaml
+       - name: GetElementByName
+         ansible.windows.win_uri:
+           url: "{{jsonServer}}{{elementByName}}"
+           return_content: yes
+           content_type: "{{jsoncontent}}"
+           url_method: POST
+           body: '{
+             "connection": "{{connectionid.json.d}}",
+             "elementName": "MS Platform"
+             }'
+         register: elementInfo
+   ```
 
-As you can see you'll use the variable **ID** now for the element ID. Like you captured the ID you can also capture the DataMinerID. Also variables as the protocolName and protocolVersion can be collected from the elementInfo if wanted.
+   The example above returns a big response that cannot be directly converted to JSON. Because of this, you first need to parse the text with *from_json* and *to_json* pipelines. Then you can use *ID* as a variable in your playbook.
 
-```yaml
-    - name: AssignAlarmTemplate
-      ansible.windows.win_uri:
-        url: "{{server}}{{assignAlarmTemplate}}"
-        content_type: "{{jsoncontent}}"
-        url_method: POST
-        body: '{
-          "connection": "{{connectionid.json.d}}",
-          "elements": [{
-            "DataMinerID": "{{dataminerID}}",
-            "ID": "{{ID}}"
-            }],
-          "protocolName": "Microsoft Platform",
-          "protocolVersion": "1.1.0.99",
-          "templateName": "AlarmTemplate"
-          }'
-```
+   ```yaml
+       - name: Parse json
+         set_fact:
+           parsed_json: "{{elementInfo.content | from_json}}"
+       - name: Extract ID
+         set_fact:
+           ID: "{{parsed_json.d.ID | to_json}}"
+   ```
 
-The next step you can take is to upload a visio file. This is most easy using the SOAP request. For SOAP you have to encode your file to Base64, for JSON however an array of Bytes is required.
+1. With the ID, you can now execute actions on the element itself, for example **assigning an alarm template** to it. If you downloaded our example package from GitHub, the alarm template is included in the package.
 
-Below you can find the example using SOAP, note that we didn't include the complete encoded text as this would make it to long.
+   Use the variable *ID* for the element ID now. Like you captured the ID, you can also capture the DataMiner ID. You can also collect variables such as the *protocolName* and *protocolVersion* from the element info.
 
-```yaml
-    - name:
-      ansible.windows.win_uri:
-        url: "{{soapServer}}"
-        return_content: yes
-        content_type: "{{soapContent}}"
-        url_method: POST
-        body: '<soap:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
-    <soap:Body>
-        <AddVisioFileToProtocol xmlns="http://www.skyline.be/api/v1">
-            <connection>{{connectionid.json.d}}</connection>
-            <protocolName>Microsoft Platform</protocolName>
-            <visioFileName>Microsoft Platform.vdx</visioFileName>
-            <visio>[Encoded Visio file to Base64]</visio>
-    </AddVisioFileToProtocol>
-    </soap:Body>
-</soap:Envelope>'
-```
+   ```yaml
+       - name: AssignAlarmTemplate
+         ansible.windows.win_uri:
+           url: "{{server}}{{assignAlarmTemplate}}"
+           content_type: "{{jsoncontent}}"
+           url_method: POST
+           body: '{
+             "connection": "{{connectionid.json.d}}",
+             "elements": [{
+               "DataMinerID": "{{dataminerID}}",
+               "ID": "{{ID}}"
+               }],
+             "protocolName": "Microsoft Platform",
+             "protocolVersion": "1.1.0.99",
+             "templateName": "AlarmTemplate"
+             }'
+   ```
 
-After you uploaded the Visio file, you still have to set it active. This is also easily done with the API.
-For this you'll reuse the **visioFileName** from the example above.
+1. Next, you can **upload a Visio file**. This is the easiest using a **SOAP** request. For SOAP, you have to encode your file to Base64, while for JSON an array of bytes is required.
 
-The parameter **defaultPageID** can be used if you have Visio with multiple pages, to configure which page is the default one when opening the Visio file.
+   Below you can find the example using SOAP; however, note that the complete encoded text is not included, as this would make the example too long.
 
-```yaml
-    - name:
-      ansible.windows.win_uri:
-        url: "{{soapServer}}"
-        return_content: yes
-        content_type: "{{soapContent}}"
-        url_method: POST
-        body: '<soap:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
-    <soap:Body>
-        <AssignVisioFileToProtocol xmlns="http://www.skyline.be/api/v1">
-            <connection>{{connectionid.json.d}}</connection>
-            <protocolName>Microsoft Platform</protocolName>
-            <visioFileName>Microsoft Platform.vdx</visioFileName>
-            <defaultPageID>0</defaultPageID>
-    </AssignVisioFileToProtocol>
-    </soap:Body>
-</soap:Envelope>'
-```
+   ```yaml
+       - name:
+         ansible.windows.win_uri:
+           url: "{{soapServer}}"
+           return_content: yes
+           content_type: "{{soapContent}}"
+           url_method: POST
+           body: '<soap:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+       <soap:Body>
+           <AddVisioFileToProtocol xmlns="http://www.skyline.be/api/v1">
+               <connection>{{connectionid.json.d}}</connection>
+               <protocolName>Microsoft Platform</protocolName>
+               <visioFileName>Microsoft Platform.vdx</visioFileName>
+               <visio>[Encoded Visio file to Base64]</visio>
+       </AddVisioFileToProtocol>
+       </soap:Body>
+   </soap:Envelope>'
+   ```
 
-Now you have a DataMiner with a custom view that contains 1 element, with an assigned alarm template and a Visio file assigned to it.
+1. Once it has been uploaded, you need to **set the Visio file active**. You can also use the API for this.
 
-#### Clean DataMiner
+   - Reuse the *visioFileName* from the example above.
 
-In the same way, you can create an Ansible Playbook te delete the view and element from the system.
+   - If the Visio drawing has multiple pages, you can use the parameter *defaultPageID* to configure which page should be the default page in Visual Overview.
+
+   ```yaml
+       - name:
+         ansible.windows.win_uri:
+           url: "{{soapServer}}"
+           return_content: yes
+           content_type: "{{soapContent}}"
+           url_method: POST
+           body: '<soap:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+       <soap:Body>
+           <AssignVisioFileToProtocol xmlns="http://www.skyline.be/api/v1">
+               <connection>{{connectionid.json.d}}</connection>
+               <protocolName>Microsoft Platform</protocolName>
+               <visioFileName>Microsoft Platform.vdx</visioFileName>
+               <defaultPageID>0</defaultPageID>
+       </AssignVisioFileToProtocol>
+       </soap:Body>
+   </soap:Envelope>'
+   ```
+
+Now your DataMiner System has a custom view that contains one element, with an alarm template and a Visio file assigned to it.
+
+### Cleaning DataMiner
+
+You can also create an Ansible playbook te delete the view and element from the system.
+
 For this you can use the same methods as before:
 
 ```yaml
@@ -398,10 +398,11 @@ For this you can use the same methods as before:
           }'
 ```
 
-### Running an Ansible Playbook
+## Running an Ansible playbook
 
-To run an Ansible Playbook you can do this from your server where the yaml file is located.
-You can then easily use following command to run the playbook.
+You can run an Ansible playbook from the server where the .yaml file is located.
+
+You can use following command to run the playbook:
 
 ```cmd
 ansible-playbook nameOfYourFile.yaml

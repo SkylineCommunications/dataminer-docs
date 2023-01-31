@@ -5448,6 +5448,7 @@
         - name: Viewer
           topicUid: Viewer
 - name: Third-party integrations
+  topicUID: ThirdPartyIntegrations
   items:
     - name: Ansible
       topicUid: Configure_DataMiner_using_Ansible
