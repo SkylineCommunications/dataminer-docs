@@ -8,7 +8,23 @@ uid: DIS_2.40
 
 ### IDE
 
+#### [ID_34598]
+
+
+
 ### Validator
+
+#### New feature check: Usage of NuGet packages [ID_34527]
+
+A new feature check now verifies whether the QAction projects in the protocol are using NuGet packages.
+
+This check can return the following error messages:
+
+| Check ID | Error message name | Error message |
+|--|--|--|
+| 1.25.1 | MinVersionTooLow | Minimum required version '{currentMinDmVersion}' too low. Expected value '{expectedMinDmVersion}'. |
+| 1.25.2 | MinVersionTooLow_Sub | '{requiredDmVersion}' : '{usedFeature}' |
+| 1.25.3 | MinVersionFeatureUsedInItemWithId_Sub | Feature used in '{itemKind}' with '{identifierType}' '{itemId}'. |
 
 ### XML Schema
 
