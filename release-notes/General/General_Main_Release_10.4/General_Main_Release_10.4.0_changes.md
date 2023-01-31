@@ -37,12 +37,6 @@ The number of *GetParameterMessages* sent by SLAnalytics in order to check wheth
 
 Because of a number of enhancements, overall accuracy has increased when generating alarm predictions.
 
-#### SLAnalytics - Behavioral anomaly detection : More accurate change point time ranges [ID_35121]
-
-<!-- MR 10.4.0 - FR 10.3.2 -->
-
-Because of a number of enhancements, behavioral changes of the type "level shift", "trend change" and "variance change" will now have a more accurate time range when the change in behavior is sufficiently clear.
-
 #### DataMiner Object Models: DomInstanceButtonDefinitions can only reference a single action [ID_35156]
 
 <!-- MR 10.4.0 - FR 10.3.2 -->

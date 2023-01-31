@@ -341,6 +341,12 @@ Because of a number of enhancements, the automatic evaluation of trend predictio
 
 Because of a number of enhancements, overall performance has increased when creating and updating bookings.
 
+#### SLAnalytics - Behavioral anomaly detection : More accurate change point time ranges [ID_35121]
+
+<!-- MR 10.3.0 - FR 10.3.2 -->
+
+Because of a number of enhancements, behavioral changes of the type "level shift", "trend change" and "variance change" will now have a more accurate time range when the change in behavior is sufficiently clear.
+
 #### Enhanced performance when updating a baseline or assigning an alarm template that contains conditional monitoring [ID_35171]
 
 <!-- MR 10.3.0 - FR 10.3.2 -->
