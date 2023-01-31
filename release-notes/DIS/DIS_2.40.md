@@ -18,6 +18,10 @@ Also, it is now possible to override the path associated with a DLL import. To d
 1. Open its properties.
 1. Locate the *DLL Path* property, and enter in the value that should override the default path.
 
+#### DIS diagram: Third direction option "Both" [ID_34584]
+
+In the *DIS diagram* window, up to now, after selecting the required depth (i.e. the number of levels you want to have displayed starting from the item you selected), you could select *Forward* or *Reverse* as direction. From now on, you can also select a third option: *Both*.
+
 #### XML editor: QAction\@dllImport attribute will now contain the full path to the DLL file [ID_34598]
 
 In the *QAction\@dllImport* attribute, you can now reference a DLL file that is stored in
@@ -46,6 +50,10 @@ This check can return the following error messages:
 ## Changes
 
 ### Enhancements
+
+#### DIS diagram: Enhancements with regard to re-arranging items and zooming in and out [ID_34586]
+
+A number of enhancements have been made to the DIS diagram, especially with regard to re-arranging items and zooming in and out.
 
 ### Fixes
 
