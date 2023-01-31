@@ -8,6 +8,10 @@ Application packages can be uploaded, viewed, installed and configured using the
 
 From DataMiner 10.2.10 (RN 33969) onwards, you can double click on the application package which will start the install procedure.
 
+> [!IMPORTANT]
+>
+> It is currently not supported to install an application package via the System Center in DataMiner.
+
 > [!NOTE]
 >
 > - To be able to install application packages, you must have the following user permission: *Modules > System configuration > Agents > Install App packages*.
