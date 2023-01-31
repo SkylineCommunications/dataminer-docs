@@ -138,7 +138,7 @@ All DOM objects (DomInstance, DomTemplate, DomDefinition, DomBehaviorDefinition,
 
 #### SLAnalytics - Proactive cap detection: Using alarm templates assigned to DVE child elements [ID_35194]
 
-<!-- MR 10.4.0 - FR 10.3.2 -->
+<!-- MR 10.3.0 - FR 10.3.2 -->
 
 When proactive cap detection was enabled, up to now, in case of DVE elements, the alarm template of the parent would always be used.
 
