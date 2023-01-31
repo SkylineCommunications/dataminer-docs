@@ -8,6 +8,30 @@ uid: DIS_2.40
 
 ### IDE
 
+#### Plugins [ID_34190] [ID_34381] [ID_34391] [ID_34428] [ID_34459]
+
+In the *DIS menu*, you can now find the following plugins. These will allow you to easily add ... to the protocol.xml file you are editing.
+
+|  |  |
+|---------|---------|
+| Plugins \> Add After Startup    |         |
+| Plugins \> Add matrix...    |         |
+| Plugins \> Add SNMP System Info...    |         |
+| Plugins \> Add SNMP Trap Receiver...    |         |
+| Plugins \> Add Table Context Menu...    |         |
+
+
+
+
+
+
+
+
+
+
+
+
+
 #### XML editor: Specifying a project reference as DLL import [ID_34565]
 
 When, in the XML editor, you clicked the small *Down* arrow in front of a `<QAction>` tag and select *DLL Imports*, up to now, the submenu would list all QActions of which the `options` attribute contained the "precompile" option, as well as all commonly used system DLL files. From now on, it will also list QActions of which the C# project has a reference to another C# project in the solution that is not QAction_Helper, QAction_ClassLibrary or another QAction.
@@ -20,7 +44,15 @@ Also, it is now possible to override the path associated with a DLL import. To d
 
 #### DIS diagram: Third direction option "Both" [ID_34584]
 
-In the *DIS diagram* window, up to now, after selecting the required depth (i.e. the number of levels you want to have displayed starting from the item you selected), you could select *Forward* or *Reverse* as direction. From now on, you can also select a third option: *Both*.
+In the *DIS diagram* window, up to now, after selecting the required depth (i.e. the number of items you want to have displayed starting from or ending with the item you selected), you could select *Forward* or *Reverse* as direction. From now on, you can also select a third option: *Both*.
+
+| Direction | Description |
+|-----------|-------------|
+| Forward   | Shows the specified\* number of linked items starting from the item you selected. |
+| Reverse   | Shows the specified\* number of linked items ending with the item you selected.   |
+| Both      | Shows the specified\* number of linked items starting from the item you selected, as well as the specified\* number of linked items ending with the item you selected. |
+
+*\* The value entered in the Depth box.*
 
 #### XML editor: QAction\@dllImport attribute will now contain the full path to the DLL file [ID_34598]
 
