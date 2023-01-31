@@ -4,30 +4,32 @@ uid: Overview_DCP
 
 # dataminer.services
 
-With dataminer.services, you gain access to innovative and game-changing solutions that support the transition into the emerging ICT media and broadband landscape and empower digital transformation programs. These services include the following components:
+With dataminer.services, you gain access to innovative and game-changing solutions that support the transition into the emerging ICT media and broadband landscape and empower digital transformation programs.
 
-- [Cloud-connected DataMiner Systems](#cloud-connected-dataminer-systems)
+By connecting your DataMiner System to dataminer.services via a single and secured connection, you gain access to a host of additional capabilities (e.g. ChatOps, dashboard sharing, and custom applications). This opens up a new world of possibilities with respect to how DataMiner integrations are done and how interactions with partners, customers, and technology vendors take place.
+
+Different teams working on private DataMiner Systems, deployed on premises, off premises, or in a hybrid manner, can all use dataminer.services through the dataminer.services connection. At the same time, the Skyline DevOps team can design and deliver solutions through a sophisticated and highly automated CI/CD pipeline. And finally, strategic partnerships and easy integration with platforms such as Azure, AWS, Teams, etc. become easier than ever.
+
+The following components are included:
+
+- [Remote access](#remote-access)
 - [DataMiner Dojo (a.k.a. Community)](#dataminer-dojo-community)
 - [DataMiner Project Collaboration](#dataminer-project-collaboration)
 - [DataMiner Catalog](#dataminer-catalog)
 - [DataMiner Live Sharing Service](#dataminer-live-sharing-service)
 - [Online integration and collaboration through Microsoft Teams](#online-integration-and-collaboration-through-microsoft-teams)
 
-The services are bundled into different tiers to which users can subscribe. Each tier contains a set of functionalities and capacities. For more information, see [dataminer.services tiers](https://community.dataminer.services/dataminer-cloud-platform-services/).
-
 > [!TIP]
 > For more information on how to access dataminer.services, see [DataMiner Services](https://skyline.be/dataminer/cloud-services).
 
-![Cloud services](~/dataminer-overview/images/CC_cloud_services.png)
+## Remote access
 
-## Cloud-connected DataMiner Systems
+Once your DataMiner System has been [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud), you can access the system from anywhere using the Monitoring app, Dashboards app, Low-Code Apps, etc.
 
-By connecting your DataMiner System to the cloud via a single and secured connection, you gain access to dataminer.services and with that to a host of additional capabilities (e.g. ChatOps, dashboard sharing, and custom applications). This opens up a new world of possibilities with respect to how DataMiner integrations are done and how interactions with partners, customers, and technology vendors take place.
-
-Different teams working on private DataMiner Systems, deployed on premises, off premises, or in a hybrid manner, can all use dataminer.services through the cloud connection. At the same time, the Skyline DevOps team can design and deliver solutions through a sophisticated and highly automated CI/CD pipeline. And finally, strategic partnerships and easy integration with platforms such as Azure, AWS, Teams, etc. become easier than ever.
+![Remote access](~/dataminer-overview/images/CC_cloud_services.png)
 
 > [!TIP]
-> See also: [Connecting your DataMiner System to the cloud](xref:Connecting_your_DataMiner_System_to_the_cloud)
+> See also: [Remote access](xref:Cloud_Remote_Access)
 
 ## DataMiner Dojo (Community)
 
