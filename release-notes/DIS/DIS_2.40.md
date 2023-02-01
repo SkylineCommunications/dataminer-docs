@@ -75,6 +75,10 @@ This check can return the following error messages:
 
 A number of enhancements have been made to the DIS diagram, especially with regard to re-arranging items and zooming in and out.
 
+#### Remove regions from QAction_1 in template [ID_35007]
+
+In the DataMiner protocol template, the region preprocessor directives have been removed from QAction_1.
+
 ### Fixes
 
 #### Protocol Schema: Casing of calculateAlarmState attribute was incorrect [ID_34430]
