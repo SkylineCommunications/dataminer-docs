@@ -11,12 +11,6 @@ uid: General_Main_Release_10.4.0_changes
 
 ### Enhancements
 
-#### Security enhancements [ID_35331]
-
-<!-- RN 35331: MR 10.4.0 - FR 10.3.3 -->
-
-A number of security enhancements have been made.
-
 #### More detailed logging when the certificate chain is invalid while connecting to Cassandra [ID_34822]
 
 <!-- MR 10.4.0 - FR 10.3.2 -->

@@ -104,7 +104,7 @@ The names of the files containing the test results will have the following forma
 #### Security enhancements [ID_34894] [ID_35331]
 
 <!-- RN 34894: MR 10.2.0 [CU12] - FR 10.3.3 -->
-<!-- RN 35331: MR 10.4.0 - FR 10.3.3 -->
+<!-- RN 35331: MR 10.3.0 - FR 10.3.3 -->
 
 A number of security enhancements have been made.
 
