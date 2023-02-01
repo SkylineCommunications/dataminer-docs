@@ -4,7 +4,7 @@ uid: Cloud_Remote_Access
 
 # Remote access
 
-When a DMS is cloud-connected, you can use the remote access URL (e.g. ``https://ziine-skyline.on.dataminer.services/``) to access the DataMiner web apps from anywhere.
+When a DMS is [cloud-connected](xref:Connecting_your_DataMiner_System_to_the_cloud), you can use the remote access URL (e.g. ``https://ziine-skyline.on.dataminer.services/``) to access the DataMiner web apps from anywhere.
 
 ## Finding the remote access URL
 

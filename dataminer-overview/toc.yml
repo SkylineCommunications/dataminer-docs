@@ -25,7 +25,7 @@
           topicUid: Overview_Platform_DTS_Suite
         - name: Open software platform for any of your monitoring and orchestration needs
           topicUid: Overview_Platform_Open_Platform
-    - name: DataMiner Cloud Platform
+    - name: dataminer.services
       topicUid: Overview_DCP
     - name: Agile partnership
       topicUid: Overview_Agile_Partnership_intro
@@ -151,5 +151,7 @@
           topicUID: FAQ_SOP_connectors
       - name: Commercial models
         topicUID: FAQs_Pricing
+      - name: Support Services
+        topicUID: FAQs_Support_Services
       - name: Cloud services
         topicUID: FAQ_DCP

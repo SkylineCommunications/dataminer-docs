@@ -8,6 +8,9 @@ Welcome to the docs.dataminer.services contributor guide!
 
 Our documentation is open to contributions from any user. Contributions are created, reviewed, and merged via GitHub. This page will explain how you can add and review contributions, ranging from simple changes to a single page, to larger changes where entire sections of the documentation are added or modified.
 
+> [!TIP]
+> Are you a member of the DataMiner DevOps Professional Program? Find out how you can [earn DevOps Points by contributing to the DataMiner docs](xref:Benefits_DevOps_Professionals_Program#accumulating-devops-points)!
+
 ## General guidelines
 
 - Use **US English** spelling when you contribute to the DataMiner documentation.
@@ -115,7 +118,9 @@ When you install GitHub Desktop, you will also need to add the correct repositor
    ![Install GitHub 2](~/images/InstallGithub2.png)
 
    > [!IMPORTANT]
-   > Make sure the local path you clone the repository to is relatively short. Using a long file path will lead to errors, as Windows will be unable to create certain files in the repository.
+   >
+   > - Make sure the local path you clone the repository to is relatively short. Using a long file path will lead to errors, as Windows will be unable to create certain files in the repository.
+   > - Do not clone the repository to a folder that is synced with OneDrive, as this can cause errors.
 
 1. If you do not have write access to the repository, you will find an alert in the lower left corner of the GitHub Desktop UI.
 
@@ -190,8 +195,8 @@ When you add a page to the documentation:
   For example:
 
   ```yml
-  - name: Connecting your DataMiner System to the cloud
-    topicUid: Connecting_your_DataMiner_System_to_the_cloud
+  - name: Basic concepts
+    topicUid: BasicConcepts
   ```
 
   To add the new page at a lower level in the table of contents, use the following syntax:
@@ -573,7 +578,7 @@ For more detailed info about DFM syntax, see [Docs Markdown reference](https://d
 To add a cross-reference, i.e. a link to another page in the documentation, use the same format, but specify the link in the format "xref:uid". For example:
 
 ```md
-See [Connecting your DataMiner System to the cloud](xref:Connecting_your_DataMiner_System_to_the_cloud).
+See [Basic concepts](xref:BasicConcepts).
 ```
 
 To find this UID, open the page you want to link to in the repository. Each page has a UID specified at the top. For example, for the current page, this looks like this:
@@ -788,7 +793,7 @@ The only time when "the user" is appropriate is when whoever you are writing for
 
 1. Open Visual Studio.
 
-1. Select to open a project or solution and open *C:\...\GitHub\dataminer-docs\src\Base Class Library\Code Library.sln*.
+1. Select to open a project or solution and open *Code Library.sln*, located in the *Base Class Library* folder of your dataminer-docs repository.
 
 1. In the *Solution Explorer* pane, right-click *Solution 'Code Library'* and select *Restore NuGet packages*.
 

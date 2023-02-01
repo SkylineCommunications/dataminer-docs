@@ -1011,6 +1011,8 @@
             topicUid: Migrating_the_general_database_to_Cassandra
           - name: Migrating the general database to a DMS Cassandra cluster
             topicUid: Migrating_the_general_database_to_a_DMS_Cassandra_cluster
+          - name: Migrating SRM resources to Elasticsearch
+            topicUid: Resources_migration_to_elastic
         - name: Database configuration in DataMiner Cube
           topicUID: Configuring_the_database_settings_in_Cube
           items:
@@ -3312,6 +3314,8 @@
           topicUid: pattern_matching_benchmarks
         - name: Profile manager benchmarks
           topicUid: profile_manager_benchmarks
+        - name: Resources benchmarks
+          topicUid: resources_benchmarks
         - name: Service benchmarks
           topicUid: service_benchmarks
         - name: Service profile benchmarks

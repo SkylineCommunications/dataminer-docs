@@ -353,3 +353,11 @@ When two queries using an external data source with a custom argument of which t
 When, in a GQI query, a custom operator was applied, all metadata available on the rows would incorrectly be removed, causing feeds to no longer work as expected.
 
 Also, when a column was renamed via a custom operator, the metadata available on that column would incorrectly be removed.
+
+#### Dashboards app: Problem with 'Preserve feed selections' option [ID_35438]
+
+<!-- MR 10.3.0 - FR 10.3.3 -->
+
+When you select the *Preserve feed selections* option for a particular dashboard folder, any feed selection you make in a dashboard in that folder is preserved when you navigate to another dashboard in that same folder.
+
+Up to now, in some cases, one folder would incorrectly take over feed selections from another folder.

@@ -19,6 +19,55 @@ uid: General_Feature_Release_10.3.3
 
 ## Other features
 
+#### DataMiner Object Model: New 'ClientReadOnly' and 'AllowMultipleSections' properties [ID_35172]
+
+<!-- MR 10.3.0 - FR 10.3.3 -->
+
+##### ClientReadOnly property added to DomStatusFieldDescriptorLink class
+
+Next to a *ReadOnly* property, the `DomStatusFieldDescriptorLink` class now also has a *ClientReadOnly* property.
+
+- *ReadOnly* determines whether values of the field in question are read-only when the field has a particular status.
+
+  When a field is marked as read-only for a specified status, the values cannot be changed when the `DomInstance` has this status. This also means that if no values were present before transitioning to this status, no values can be added as long as the `DomInstance` continues to have this status.
+
+- *ClientReadOnly* determines whether users are allowed to assign a value to the field in question in the UI.
+
+  Unlike the *ReadOnly* property, this property does allow users to assign a value to the field using the API (e.g. in a script).
+
+If the *ReadOnly* property is true, the value of *ClientReadOnly* is ignored.
+
+##### BREAKING CHANGE: AllowMultipleSections option added to SectionDefinitionLink and DomStatusSectionDefinitionLink classes
+
+An *AllowMultipleSections* property has now been added to the `SectionDefinitionLink` (non-status system) and `DomStatusSectionDefinitionLink` (status system) classes. This property will allow you to define whether a `DomInstance` can have multiple `Sections` for a particular `SectionDefinition`.
+
+When multiple sections are added to a `DomInstance`, and this is not marked as allowed, a `DomInstanceError` will be returned in the TraceData with the `MultipleSectionsNotAllowedForSectionDefinition` error reason. Additionally, in the `InvalidSections` property of the error, you will be able to find the ID(s) of the `SectionDefinition`(s) of which too many sections were found.
+
+Rules that apply with regard to multiple sections:
+
+- Non-status system (`DomDefinition` and `SectionDefinitionLinks`):
+
+  - Multiple `Section`s for the same `SectionDefinition` are allowed on a `DomInstance` if the `SectionDefinition` has a link on the DomDefinition that has the *AllowMultipleSections* property set to true.
+  
+  - When a `Section` is added to an existing `DomInstance` that contains a ReadOnly field (marked as such in the `FieldDescriptor`), then that field cannot be given a value in the UI. It can only be given a value via the API or a script.
+
+  - There are no limitations with regard to removing `Section`s.
+
+- Status system (DomBehaviorDefinition & DomStatusSectionDefinitionLinks):
+
+  - Multiple `Section`s for the same `SectionDefinition` are allowed in a specific status on one `DomInstance` if, for that status, the `SectionDefinition` has a link on the `DomBehaviorDefinition` that has the *AllowMultipleSections* property set to true.
+
+  - When a `Section` is added, any field marked as *ReadOnly* or *ClientReadOnly* will not be assignable from the UI. However, if they are only marked as *ClientReadOnly*, they will be assignable via the API.
+
+  - Removing a `Section` is not possible when a field of the section in question is marked as *ReadOnly* on the link. When this behavior is required, but you still want to prevent users from assigning a value in the UI, use the new *ClientReadOnly* property instead.
+
+> [!IMPORTANT]
+> This is a breaking change. Previously, it was possible to add multiple sections without having to set any property. After upgrading to DataMiner 10.3.3/10.3.0, you will need to update any existing `DomDefinition`s with multiple `Section`s.
+
+##### Each section now has to contain all required fields
+
+Up to now, if there were multiple sections, it was allowed for some of those sections to not contain all the required fields. From now on, every section must contain each and every required field.
+
 #### DataMiner Object Models: Action buttons can now be configured to launch an interactive Automation script when clicked [ID_35226]
 
 <!-- MR 10.4.0 - FR 10.3.3 -->
@@ -55,7 +104,7 @@ The names of the files containing the test results will have the following forma
 #### Security enhancements [ID_34894] [ID_35331]
 
 <!-- RN 34894: MR 10.2.0 [CU12] - FR 10.3.3 -->
-<!-- RN 35331: MR 10.4.0 - FR 10.3.3 -->
+<!-- RN 35331: MR 10.3.0 - FR 10.3.3 -->
 
 A number of security enhancements have been made.
 
@@ -117,7 +166,33 @@ From now on, when you zoom in or out, the data of the previous zoom level will s
 
 During a DataMiner upgrade, Microsoft .NET 6.0 will now be installed if not installed already.
 
+#### Maps: Zoom range can now be set by means of a slider [ID_35381]
+
+<!-- MR 10.4.0 - FR 10.3.3 -->
+
+The zoom range of a map can now be set by means of a slider.
+
+#### SLSNMPAgent log entries will now include the alarm ID [ID_35404]
+
+<!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
+
+When an entry is added to the *SLSNMPAgent.txt* log file, in most cases, that entry will now include the alarm ID.
+
+Example:
+
+- Old format: `Received ACK from SNMP Manager SNMP - LFR`
+
+- New format: `Received ACK from SNMP Manager SNMP - LFR for alarm 239/4270232`
+
 ### Fixes
+
+#### DataMiner Taskbar Utility: Problem when stopping DataMiner [ID_34790]
+
+<!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
+
+Up to now, when you right-clicked the *DataMiner Taskbar Utility* system tray icon and selected *Stop DataMiner* while keeping the SHIFT button pressed, the *SLWatchdog* process would incorrectly also be stopped. In a Failover setup, this would prevent the backup agent from acquiring the virtual IP address.
+
+Also, after DataMiner had been stopped, up to now, the *SLXml*, *SLLog* and *SLDataGateway* processes would incorrectly start up again.
 
 #### Problem with SLLog when logging large entries regarding failed Elasticsearch query requests/responses [ID_35037]
 
@@ -173,8 +248,36 @@ Using Okta as identity provider, it would incorrectly no longer be possible to r
 
 Up to now, in case of a claim mismatch, an exception would be thrown. From now on, an entry containing a clear message will be added to the *SLNet.txt* log file instead.
 
+#### Problem when connecting to Azure AD via a proxy [ID_35382]
+
+<!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
+
+When a DataMiner Agent connected to Azure Active Directory was sealed off from the internet but had access to a proxy, users would not be able to log in due to SLDataMiner failing to use the proxy to connect to Azure Active Directory.
+
+In case a DataMiner Agent has to connect to Azure AD via a proxy, then that proxy has to be configured by means of the following netsh command:
+
+```txt
+netsh winhttp set proxy <proxyaddress> <bypasslist>
+```
+
 #### Cassandra: TTL setting of spectrum trace data would not be applied correctly [ID_35385]
 
 <!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
 
 In a Cassandra database, the "time to live" (TTL) setting of spectrum trace data would not be applied correctly. As a result, this type of data would never be removed.
+
+#### SLDataGateway would not correctly return errors when querying SLA logger tables in a Cassandra Cluster [ID_35440]
+
+<!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
+
+SLDataGateway would not correctly return errors when querying SLA logger tables in a Cassandra Cluster, causing an error to occur in SLProtocol.
+
+#### Automation: 'engine.RunClientProgram' overload with two parameters would incorrectly always be run synchronously [ID_35476]
+
+<!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
+
+An `engine.RunClientProgram` overload with two parameters, of which the second one controls whether the method is run either synchronously or asynchronously, would incorrectly always be run synchronously.
+
+```csharp
+RunClientProgram(String applicationPath, bool waitForCompletion)
+```

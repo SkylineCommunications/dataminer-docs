@@ -11,3 +11,4 @@ uid: DevelopIndex
 - <xref:CodingGuidelines>
 - <xref:TOOLS>
 - <xref:DSI>
+- <xref:ThirdPartyIntegrations>

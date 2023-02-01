@@ -31,6 +31,12 @@ In the Generic Query Interface, the following new data sources are now available
 
 The *Get trend data pattern events* and *Get behavioral change events* data sources contain time range metadata on each row. Each time range holds the start and end time of the event in question. When a table row is selected, the time range will be exposed as a feed.
 
+#### GQI: 'State' column added to 'Get views' data source [ID_35333]
+
+<!-- MR 10.4.0 - FR 10.3.3 -->
+
+A `State` column has been added to the *Get views* data source. This column shows the alarm state of the view.
+
 #### GQI: Multiple groupBy operations can now be applied after an aggregation operation [ID_35355]
 
 <!-- MR 10.4.0 - FR 10.3.3 -->

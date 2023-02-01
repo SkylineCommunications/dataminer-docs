@@ -119,7 +119,7 @@
 		/// </example>
 		Time = 9,
 		/// <summary>
-		/// Global settings.
+		/// Global settings. Used internally.
 		/// </summary>
 		GlobalSettings = 10,
 		/// <summary>

@@ -97,6 +97,9 @@ For a legacy MySQL or MSSQL database, configure the settings as follows:
 
    - **Database**: The type of database: *MySQL* or *MSSQL*.
 
+     > [!NOTE]
+     > MSSQL is no longer supported as the general database as from DataMiner 10.3.0.
+
    - **Name**: The name of the database.
 
    - **DB Server**: Name or IP address of the server that hosts the database.
