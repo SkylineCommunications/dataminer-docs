@@ -25,6 +25,7 @@ The user settings can be accessed in different ways:
 The settings window consists of two tabs. The tab with the user settings is opened by default. It consists of different pages that you can navigate between using the table of contents on the left.
 
 > [!NOTE]
+>
 > - For more information on the computer settings, see [Computer settings](xref:Computer_settings).
 > - Depending on the configuration of your user account, it is possible that some settings are not shown.
 
@@ -112,6 +113,7 @@ On the *Alarm Console* page, several settings are available:
 - **Filter the alarms before they enter Cube**: Select this setting and then select one of the existing alarm filters in the drop-down list in order to apply it as a server-side alarm filter. When you do so, the *Active alarms* tab of the Alarm Console will only list alarms that match this filter.
 
   > [!NOTE]
+  >
   > - When you have modified this setting, you will need to reconnect your DataMiner Cube session in order to apply the change.
   > - Applying this setting can lead to inconsistencies between the Alarm Console and element alarm states. In other words, alarms could be present in the DMS that cannot be seen in the Alarm Console, because the server side filter overrides any other filter you set in the Alarm Console.
   > - If this setting is applied, the message *Limited Alarm Access* is shown at the top of the screen. If you hover the mouse pointer over this text, a list of possible inconsistencies will be shown.

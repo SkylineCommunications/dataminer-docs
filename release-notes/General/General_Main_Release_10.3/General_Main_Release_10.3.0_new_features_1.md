@@ -275,6 +275,14 @@ Rules that apply with regard to multiple sections:
 
 Up to now, if there were multiple sections, it was allowed for some of those sections to not contain all the required fields. From now on, every section must contain each and every required field.
 
+#### SLAnalytics - Proactive cap detection: Using alarm templates assigned to DVE child elements [ID_35194]
+
+<!-- MR 10.3.0 - FR 10.3.2 -->
+
+When proactive cap detection was enabled, up to now, in case of DVE elements, the alarm template of the parent would always be used.
+
+From now on, if a DVE child element has an alarm template assigned to it, that alarm template will be used. Only when a DVE child element does not have an alarm template assigned to it will the alarm template of the parent be used.
+
 ### DMS Security
 
 #### Azure Active Directory: Secret expiry notices/errors [ID_33916]
