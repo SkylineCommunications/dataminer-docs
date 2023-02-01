@@ -428,3 +428,5 @@ From DataMiner 10.3.3/10.4.0 onwards, the *ListView* component allows you to cop
   > - The order of the columns will be identical to the order of the columns in the *ListView* component. Column visibility and column order can be configured using the component's column manager.
 
 The data copied to the Windows clipboard is split into a header section and a data section, separated by an empty line. The header section contains the column names, while the data section contains the actual row data.
+
+<!-- RN 35170 -->
