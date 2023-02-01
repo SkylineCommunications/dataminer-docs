@@ -149,9 +149,9 @@ Once you have established a trust relationship between DataMiner (i.e. the servi
    - **Client ID**, **Object ID**, and **Tenant ID**: These GUIDs identify the application (DataMiner) in the Azure AD platform, and identify the users & groups directory on the Azure portal, respectively. You can find these fields on the root page of the application: *Azure Active Directory > App registrations > [your application name]*.
 
      Creating an Enterprise Application will also create an app registration with the same name, but you will not find it under *owned application*.
-     
+
      > [!IMPORTANT]
-     > There is also an **Object ID** under *Azure Active Directory > Enterprise applications > [your application name]* but this is a different one and will not work!
+     > Do not use the *Object ID* under *Azure Active Directory > Enterprise applications > [your application name]*. This is a different Object ID, which will not work.
 
    - **Client Secret**: In the pane on the left, click *Certificates & secrets*.
 
