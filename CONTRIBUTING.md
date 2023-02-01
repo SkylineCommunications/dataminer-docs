@@ -195,8 +195,8 @@ When you add a page to the documentation:
   For example:
 
   ```yml
-  - name: Connecting your DataMiner System to the cloud
-    topicUid: Connecting_your_DataMiner_System_to_the_cloud
+  - name: Basic concepts
+    topicUid: BasicConcepts
   ```
 
   To add the new page at a lower level in the table of contents, use the following syntax:
@@ -578,7 +578,7 @@ For more detailed info about DFM syntax, see [Docs Markdown reference](https://d
 To add a cross-reference, i.e. a link to another page in the documentation, use the same format, but specify the link in the format "xref:uid". For example:
 
 ```md
-See [Connecting your DataMiner System to the cloud](xref:Connecting_your_DataMiner_System_to_the_cloud).
+See [Basic concepts](xref:BasicConcepts).
 ```
 
 To find this UID, open the page you want to link to in the repository. Each page has a UID specified at the top. For example, for the current page, this looks like this:
