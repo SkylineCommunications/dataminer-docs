@@ -71,6 +71,10 @@ To avoid inconsistencies between the QAM DS/US Channels CM Collector table and C
 
 In addition, SNMP interval logic has been removed from the multi-threaded timer, as this did not work as intended.
 
+#### Visio drawings and dashboards included in EPM package [ID_35522]
+
+In addition to the Automation scripts and connectors, the EPM application package now also includes the Visio drawings and dashboards available in the EPM I-DOCSIS Solution. Dashboards are included as companion files.
+
 ### Fixes
 
 #### Issues related to alarm in EPM Platform visual overview [ID_34449]
