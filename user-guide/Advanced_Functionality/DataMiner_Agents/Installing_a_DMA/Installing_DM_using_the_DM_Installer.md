@@ -18,6 +18,8 @@ The DataMiner installer allows you to run a default DataMiner installation, whic
 
 1. Make sure the Windows setting "fast startup" is not activated.
 
+1. Make sure the server is synced to an NTP server.  In case of a DataMiner System, make sure all DataMiner agents are synced to the same NTP server.
+
 1. Download the DataMiner Installer from [DataMiner Dojo](https://community.dataminer.services/download/dataminer-installer-v10-2).
 
 > [!NOTE]
