@@ -153,5 +153,5 @@
         topicUID: FAQs_Pricing
       - name: Support Services
         topicUID: FAQs_Support_Services
-      - name: Cloud services
+      - name: dataminer.services
         topicUID: FAQ_DCP

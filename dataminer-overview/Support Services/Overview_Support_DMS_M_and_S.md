@@ -8,7 +8,7 @@ In addition to the default [Standard Limited Warranty](xref:Overview_Support_war
 
 - All **software updates and upgrades** for core DataMiner software and connectors.
 - **Unlimited remote technical support** during business hours.
-- Free-of-charge DataMiner Cloud Services [essential package](https://community.dataminer.services/dataminer-cloud-platform-services/).
+- Free-of-charge dataminer.services [essential package](https://community.dataminer.services/dataminer-cloud-platform-services/).
 
 > [!TIP]
 > For more information about our regular business hours, refer to our [Support Services Agreement](xref:Support_services_agreement).

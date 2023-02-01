@@ -836,11 +836,11 @@ In dialog boxes of an interactive Automation script, up to now, you were able to
 > [!IMPORTANT]
 > When an interactive Automation script was launched from a web app, then you will have to press ESC instead of ALT+F4 to close a dialog box and abort the script. Pressing ALT+F4 would close the browser, not just the dialog box.
 
-#### System Center: Link to online help now points to 'Connecting your DataMiner System to the cloud' on <https://docs.dataminer.services/> [ID_34683]
+#### System Center: Link to online help now points to cloud connection help on <https://docs.dataminer.services/> [ID_34683]
 
 <!-- MR 10.3.0 - FR 10.2.12 -->
 
-On the *Cloud* page of *System Center*, the *online help* hyperlink now points to the [Connecting your DataMiner System to the cloud](xref:Connecting_your_DataMiner_System_to_the_cloud) page on <https://docs.dataminer.services/>.
+On the *Cloud* page of *System Center*, the *online help* hyperlink now points to the [Connecting your DataMiner System to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud) page on <https://docs.dataminer.services/>.
 
 #### Alarm Console: When grouped, incident alarms will now appear in the group of the highest severity found among the base alarms [ID_34754]
 

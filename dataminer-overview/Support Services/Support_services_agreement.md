@@ -19,7 +19,7 @@ For the purpose of this Agreement, the following terms shall have the meanings i
 - "**Corrective Action**" means a solution, work around or action plan that provides resolution of the User's Issue.
 - "**Corrective time**" means that part of the processing time when the Issue is being handled by Skyline in order to provide a Corrective Action to User.
 - "**DataMiner**" means Skyline's monitoring and orchestration software platform commercialized under the trademark DataMiner.
-- "**DataMiner Cloud Platform**" means Skyline's collaboration platform located at <https://dataminer.services/>.
+- "**dataminer.services**" means Skyline's collaboration platform located at <https://dataminer.services/>.
 - "**Failure**" means the situation where the Response time in [Schedule 1](#schedule-1-support-plan) is not met.
 - "**Issue**" has the meaning given to it in its corresponding priority level in [Schedule 1](#schedule-1-support-plan).
 - "**Party**" means Skyline or the User.
@@ -27,7 +27,7 @@ For the purpose of this Agreement, the following terms shall have the meanings i
 - "**Response time**" means the time given to Skyline to provide a notification of proper receipt and follow-up to the User.
 - "**Skyline**" means Skyline Communications N.V. and any other group company.
 - "**Software**" means Skyline's DataMiner and accompanying software (if any).
-- "**Support**" means Skyline's technical assistance through its DataMiner Cloud Platform and by telephone or remote connection.
+- "**Support**" means Skyline's technical assistance through its dataminer.services platform and by telephone or remote connection.
 - "**Support Services**" means the service of providing of Upgrades, Updates, Support and other assistance services for the Software.
 - "**Updates**" means optimizations and bug fixes for the Software.
 - "**Upgrades**" means the provision of improvements and new functionalities for the Software.
@@ -39,7 +39,7 @@ Skyline offers two levels of Support Services: Continuity and Evolve. An overvie
 
 ## Supported products
 
-Skyline provides Support Services for its Software only, which consists of its core software, connectors and cloud components. Skyline does not provide Support Services for third-party components, except for maintenance on database content for supported databases. An overview of supported databases can be found on [DataMiner Dojo](https://community.dataminer.services/3rd-party-software-support-life-cycle).
+Skyline provides Support Services for its Software only, which consists of its core software, connectors, and cloud components. Skyline does not provide Support Services for third-party components, except for maintenance on database content for supported databases. An overview of supported databases can be found on [DataMiner Dojo](https://community.dataminer.services/3rd-party-software-support-life-cycle).
 
 ## Supported versions
 
@@ -49,7 +49,7 @@ It is User's responsibility to make sure that their Software is updated timely t
 
 ## Upgrades and updates
 
-Upgrades and Updates will be available to download on Skyline's DataMiner Cloud Platform.
+Upgrades and Updates will be available to download via dataminer.services.
 
 By default, new Updates shall be released via cumulative updates only. However, in exceptional situations Skyline and the User may mutually agree to opt for a less tested emergency hotfix instead.
 
@@ -71,17 +71,17 @@ User shall ensure that it has an industry-standard and uninterrupted remote acce
 
 When User encounters an Issue with the Software, or wishes to receive Support for another reason, User can at their choice [open a ticket for Support or call Skyline's Support helpdesk](https://skyline.be/contact/tech-support).
 
-Tickets for Support can be generated through Skyline's DataMiner Cloud Platform.
+Tickets for Support can be generated through dataminer.services.
 
-Support is available during Business Hours only, except if the User has purchased an Out of Business Hours Support plan. If User wishes to create a ticket in follow-up of its telephone support, User needs to generate a ticket through Skyline's DataMiner Cloud Platform.
+Support is available during Business Hours only, except if the User has purchased an Out of Business Hours Support plan. If User wishes to create a ticket in follow-up of its telephone support, User needs to generate a ticket through Skyline's dataminer.services.
 
-User can always consult the status of their tickets on Skyline's DataMiner Cloud Platform. The ticket number will be used by Skyline for the entire life cycle of the specific Issue or question.
+User can always consult the status of their tickets on Skyline's dataminer.services. The ticket number will be used by Skyline for the entire life cycle of the specific Issue or question.
 
 To be able to assist User in an efficient manner, when generating a ticket or calling Skyline's helpdesk, User is required, to provide the following information: (a) a general description of the operating environment, (b) a list of all hardware components, operating systems and networks, (c) a reproducible test case, and (d) any log files, trace and systems files. The User's failure to provide this information may prevent Skyline from identifying and fixing the Issue.
 
 ## Proactive support
 
-Skyline assumes that the Software is always cloud connected and that the Customer DataMiner Reporting tool ("**CDMR**") is permanently enabled. This allows User and Skyline to proactively react to occurrences before they may become critical.
+Skyline assumes that the Software is always connected to dataminer.services and that the Customer DataMiner Reporting tool ("**CDMR**") is permanently enabled. This allows User and Skyline to proactively react to occurrences before they may become critical.
 
 ## Exclusions
 
@@ -93,7 +93,7 @@ Skyline shall have no obligation of any kind to provide Support for Issues cause
 - Software connectors that have not been developed by Skyline;
 - IP network failures or other network issues not caused by, or related to, the Software;
 - versions of the Software that are not supported;
-- when CDMR or cloud connectivity is disabled;
+- when CDMR or dataminer.services connectivity is disabled;
 - Insufficient hardware, data computing or storage resources to run the Software, as compared to the advice provided by Skyline in that respect. Such advice shall take into account the minimum system specifications published by Skyline but shall also consider the exact nature and use of the application at hand, which may justify the need for higher specifications.
 - Any external circumstance out of Skyline's control (e.g., remote access unavailable).
 

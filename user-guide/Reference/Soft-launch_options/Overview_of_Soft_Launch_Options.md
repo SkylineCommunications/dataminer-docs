@@ -78,7 +78,7 @@ Allows you to set up the [Cassandra cluster](xref:Migrating_the_general_database
 
 ### CloudConnectedAgents
 
-Enables cloud-connected Agents and allows you to [connect to the cloud](xref:Connecting_your_DataMiner_System_to_the_cloud).
+Makes it possible to [connect the DataMiner System to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud).
 
 - **Minimum version**: 10.1.2
 - **Release version**: 10.1.9

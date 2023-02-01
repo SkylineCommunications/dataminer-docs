@@ -38,6 +38,6 @@ uid: DMASecurity
 | JobsCreateUpdateDeleteSections | Boolean | Whether or not the user is allowed to create, update or delete job sections. |
 | Collaboration | Boolean | Whether or not the user is allowed to use the collaboration feature. |
 | ViewNotes | Boolean | Whether or not the user is allowed to view notes. |
-| ShareItem | Boolean | Whether or not the user is allowed to share DataMiner items in the cloud. |
-| UnshareItem | Boolean | Whether or not the user is allowed to stop the sharing of DataMiner items in the cloud. |
-| UpdateSharedItems | Boolean | Whether or not the user is allowed to make changes to a share of DataMiner items in the cloud. |
+| ShareItem | Boolean | Whether or not the user is allowed to share DataMiner items via dataminer.services. |
+| UnshareItem | Boolean | Whether or not the user is allowed to stop the sharing of DataMiner items via dataminer.services. |
+| UpdateSharedItems | Boolean | Whether or not the user is allowed to make changes to a share of DataMiner items via dataminer.services. |

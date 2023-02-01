@@ -120,7 +120,7 @@ Therefore, partners are highly encouraged to align with this collaborative minds
 
   - **Use case library**: The [use case library](https://community.dataminer.services/use-cases/) provides bite-sized inspiration on what can be done with the transformational power of DataMiner, for a variety of different market verticals and applications.
 
-- **Ziine DataMiner demo platform**: Everyone with a DataMiner Cloud Platform account (which is available to everyone, free of charge) can not only access the full content available on the DataMiner Dojo Community but can also access the [Ziine DataMiner demo platform](xref:ZiineDemoSystem), where you can find an assortment of demos that can be leveraged to learn more about DataMiner or to provide demos to third parties.
+- **Ziine DataMiner demo platform**: Everyone with a dataminer.services account (which is available to everyone, free of charge) can not only access the full content available on the DataMiner Dojo Community but can also access the [Ziine DataMiner demo platform](xref:ZiineDemoSystem), where you can find an assortment of demos that can be leveraged to learn more about DataMiner or to provide demos to third parties.
 
 - **Deal registration**: Under specific terms and conditions, Skyline also provides the option to register deals, which then provides partners with protection for opportunities that they have developed and that they are working on.
 
