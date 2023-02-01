@@ -3198,6 +3198,11 @@
           topicUID: Standalone_Elastic_Backup_Tool
         - name: Standalone Elasticsearch Cluster Installer
           topicUID: Standalone_Elasticsearch_Cluster_Installer
+          items:
+            - name: Standalone Elasticsearch Cluster Installer
+              topicUID: Standalone_Elasticsearch_Cluster_Installer
+            - name: Connecting DataMiner to an Elasticsearch Cluster
+              topicUID: DataMiner_Configuration_External_Cluster
         - name: Sync Check
           topicUID: Sync_Check
         - name: Verify Cluster Events Tool
