@@ -172,6 +172,18 @@ During a DataMiner upgrade, Microsoft .NET 6.0 will now be installed if not inst
 
 The zoom range of a map can now be set by means of a slider.
 
+#### SLSNMPAgent log entries will now include the alarm ID [ID_35404]
+
+<!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
+
+When an entry is added to the *SLSNMPAgent.txt* log file, in most cases, that entry will now include the alarm ID.
+
+Example:
+
+- Old format: `Received ACK from SNMP Manager SNMP - LFR`
+
+- New format: `Received ACK from SNMP Manager SNMP - LFR for alarm 239/4270232`
+
 ### Fixes
 
 #### DataMiner Taskbar Utility: Problem when stopping DataMiner [ID_34790]
