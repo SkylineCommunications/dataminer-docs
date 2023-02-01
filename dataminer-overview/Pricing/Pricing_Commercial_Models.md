@@ -54,18 +54,18 @@ Usage-based services are charged based on the actual monthly usage of services, 
 |         | Perpetual licensing scheme | Usage-based services |
 |---------|----------------------------|----------------------|
 | System capacity | Server-based licenses, each with fixed capacity tiers of managed objects: 5, 10, 25, 50, 100, 250, 500 , 1000. | Volume-based, per managed object or monitored metric per month. Independent from the number of nodes deployed. |
-| Failover | Server-based license | Included. Users can deploy additional nodes for Failover without paying additional fees since billing is based on the active number of managed objects or monitored metrics in a month. |
-| Optional functions | Licensed per node: Correlation and Automation engines, Dashboard app, No-Code Apps, Low-Code Apps, Process Automation, DataMiner Object Models (DOM), and Spectrum Analysis | Not applicable. All optional modules are included. |
+| Failover | Server-based license. | Included. Users can deploy additional nodes for Failover without paying additional fees since billing is based on the active number of managed objects or monitored metrics in a month. |
+| Optional functions | Licensed per node: Correlation and Automation engines, Dashboard app, No-Code Apps, Low-Code Apps, Process Automation, DataMiner Object Models (DOM), and Spectrum Analysis. | Not applicable. All optional modules are included. |
 | Automation & orchestration | Based on the volume of concurrent services running. | Based on the volume of script runs. |
-| Connectors | Connector license per different, interfaced product | Per connector per month |
-| Custom applications | Licensed per app | Charged as engineering services |
-| Sample applications | Included | Included |
-| Cloud services | [Tier-based](https://community.dataminer.services/dataminer-cloud-platform-services/) | Usage-based |
-| Support services | Optional annual recurring fee, relative to the value of the deployed Perpetual-Use Licenses. | Included (see [DataMiner Support Plans](https://community.dataminer.services/support-services/)) |
-| DataMiner Probes | Server-based licenses, each with fixed capacity tiers of managed objects  | NA |
+| Connectors | Connector license per different, interfaced product. | Per connector per month. |
+| Custom applications | Licensed per app. | Charged as engineering services. |
+| Sample applications | Included. | Included. |
+| Cloud services | [Tier-based](https://community.dataminer.services/dataminer-cloud-platform-services/). | Usage-based. |
+| Support services | Optional annual recurring fee, relative to the value of the deployed Perpetual-Use Licenses. | Included (see [DataMiner Support Plans](https://community.dataminer.services/support-services/)). |
+| DataMiner Probes | Server-based licenses, each with fixed capacity tiers of managed objects.  | N/A. |
 
 > [!NOTE]
-> DataMiner Probes (DMP) are not clustered with a DataMiner System, which means perpetual-licensed DMPs can be used to bring data from remote locations to a DataMiner System running as Usage-based services.
+> DataMiner Probes (DMP) are not clustered with a DataMiner System, which means perpetual-licensed DMPs can be used to bring data from remote locations to a DataMiner System running as a usage-based service.
 
 ## Subscription Plan vs Pay-per-Use Plan
 
