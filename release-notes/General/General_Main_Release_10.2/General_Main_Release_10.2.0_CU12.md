@@ -242,6 +242,12 @@ When you opened a spectrum element in a DataMiner Cube that was connected to a h
 
 SLDataGateway would not correctly return errors when querying SLA logger tables in a Cassandra Cluster, causing an error to occur in SLProtocol.
 
+#### Problem when sending northbound SNMP inform messages in chronological order [ID_35441]
+
+<!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
+
+When northbound SNMP inform messages were being sent in chronological order, an error could occur when sending those messages suddenly stopped.
+
 #### DataMiner Cube - DCF: Problem when trying to delete a DCF connection in the Properties window of an element [ID_35449]
 
 <!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
