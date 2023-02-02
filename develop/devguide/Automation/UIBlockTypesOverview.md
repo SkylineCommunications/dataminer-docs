@@ -116,6 +116,9 @@ Examples:
   ...
   MyDialogBox.AppendBlock(blockItem);
   ```
+  
+> [!NOTE]
+> Automation scripts with an executable component are currently only supported in DataMiner Cube. These are not yet supported in DataMiner web apps.
 
 ## FileSelector
 
