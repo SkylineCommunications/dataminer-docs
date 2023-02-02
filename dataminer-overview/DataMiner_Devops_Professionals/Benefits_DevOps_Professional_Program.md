@@ -2,9 +2,7 @@
 uid: Benefits_DevOps_Professionals_Program
 ---
 
-# Benefits attached to the DataMiner DevOps Professional Program
-
-## Benefits
+# Benefits
 
 By creating value for the DataMiner community, you earn DevOps Points. Not only do these points determine your [DevOps Professional level](#accumulating-devops-points), they also allow you to enjoy the plentiful benefits attached to the DevOps Professional Program.
 
