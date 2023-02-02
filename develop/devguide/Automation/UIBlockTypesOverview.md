@@ -118,7 +118,7 @@ Examples:
   ```
   
 > [!NOTE]
-> Automation scripts with an executable component are currently only supported in DataMiner Cube. These are not yet supported in DataMiner web apps.
+> Automation scripts with an executable component are currently only supported in DataMiner Cube. These are not supported in DataMiner web apps.
 
 ## FileSelector
 
