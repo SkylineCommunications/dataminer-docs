@@ -1742,6 +1742,8 @@
               topicUid: Configuring_dashboard_access_rights
             - name: Dashboard Gateway troubleshooting
               topicUid: Dashboard_Gateway_troubleshooting
+    - name: Data Aggregator
+      topicUID: Data_Aggregator_DxM
     - name: Experience and Performance Management
       topicUid: EPM
       items:

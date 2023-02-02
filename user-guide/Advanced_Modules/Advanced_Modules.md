@@ -14,6 +14,8 @@ uid: Part4AdvancedModules
 
 - [DMS Dashboards](xref:dashboards)
 
+- [Data Aggregator](xref:Data_Aggregator_DxM)
+
 - [Experience and Performance Management](xref:EPM)
 
 - [Inventory & Asset Management](xref:AssetManagement)
