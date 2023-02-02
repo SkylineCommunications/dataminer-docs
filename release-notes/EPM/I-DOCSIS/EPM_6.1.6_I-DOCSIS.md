@@ -75,6 +75,17 @@ In addition, SNMP interval logic has been removed from the multi-threaded timer,
 
 In addition to the Automation scripts and connectors, the EPM application package now also includes the Visio drawings and dashboards available in the EPM I-DOCSIS Solution. Dashboards are included as companion files.
 
+#### Resolving the invalid operation exception when updating connector [ID_35532]
+
+When you update an EPM connector (e.g. the Skyline EPM Platform connector) with the SL.Lib.Common package 1.3.0.2 or above, a *System.InvalidOperationException* can be thrown. For example:
+
+```txt
+System.InvalidOperationException: Deserialization Failed for type: EpmData
+   at Skyline.DataMiner.Library.Common.Serializing.NoTagSerializing.UsingJsonNewtonSoft.KnownTypesBinder.BindToType(String assemblyName, String typeName)
+```
+
+To resolve this, in the IEnumerable\<Type> knownTypes argument of *Skyline.DataMiner.Library.Common.InterAppCalls.CallBulk.InterAppCallFactory* methods, you should now specify all the types of the custom message that are added to the *Skyline.DataMiner.Library.Common.InterAppCalls.CallSingle.Message* class.
+
 ### Fixes
 
 #### Issues related to alarm in EPM Platform visual overview [ID_34449]
