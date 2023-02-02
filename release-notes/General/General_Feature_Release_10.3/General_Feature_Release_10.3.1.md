@@ -333,7 +333,7 @@ protected virtual void OnCrossPointsSetViaLockOverrideFromUI(Skyline.DataMiner.L
 
 #### SLNetClientTest tool - 'Connect' window: Enhanced 'Connection Type' and 'Authentication' sections [ID_34712]
 
-<!-- MR 10.4.0 - FR 10.3.1 -->
+<!-- MR 10.3.0 - FR 10.3.1 -->
 
 In the *SLNetClientTest* tool, to connect to a DataMiner Agent, you select *Connection* > *Connect*, and specify the necessary information in the *Connect* window. That window has now been updated.
 
