@@ -78,6 +78,14 @@ Example:
 
 - New format: `Received ACK from SNMP Manager SNMP - LFR for alarm 239/4270232`
 
+#### Service & Resource Management: Enhanced performance when changing active function files [ID_35424]
+
+<!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
+
+Because of a number of enhancements, overall performance has increased when changing an active function file.
+
+Also, in the Cube UI, users will receive more detailed feedback regarding the impact of the change.
+
 ### Fixes
 
 #### DataMiner Taskbar Utility: Problem when stopping DataMiner [ID_34790]
@@ -151,6 +159,12 @@ From now on, when the `<DBServer>` element contains multiple host addresses incl
 <!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
 
 In some cases, the SLDataGateway process could end up with an excessive number of *HealthMonitor.Refresh* threads.
+
+#### Some agents in the cluster would incorrectly remove the run-time hosting agent info they had stored for another agent [ID_35287]
+
+<!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
+
+When run-time connections were being set up between agents or when a midnight sync was being executed, some agents in the DataMiner cluster would incorrectly remove the run-time hosting agent information they had stored for another agent in the same cluster.
 
 #### DataMiner Cube - ListView component: Column filter boxes incorrectly had autocomplete enabled [ID_35296]
 
