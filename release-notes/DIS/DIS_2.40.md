@@ -42,7 +42,7 @@ In the *DIS diagram* window, up to now, after selecting the required depth (i.e.
 
 *\* The value entered in the Depth box.*
 
-#### XML editor: QAction\@dllImport attribute will now contain the full path to the DLL file [ID_34598]
+#### XML editor: QAction\@dllImport attribute will now include subfolder [ID_34598]
 
 In the *QAction\@dllImport* attribute, you can now reference a DLL file that is stored in
 
