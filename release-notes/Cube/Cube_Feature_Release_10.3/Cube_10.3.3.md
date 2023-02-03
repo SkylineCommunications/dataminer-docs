@@ -190,6 +190,14 @@ From now on, Cube will check whether the pattern matching feature is enabled eac
 
 When a tree control contained EPM objects, in some cases, the alarm bubble-up feature would not work correctly.
 
+#### EPM: Read and write visualization of single-value EPM parameters would incorrectly be displayed both [ID_35416]
+
+<!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
+
+On Data pages, in some cases, the read and write visualization of single-value EPM parameters would incorrectly be displayed both.
+
+From now on, each EPM parameter will only be displayed once. If a write parameter is available, it will be combined with the read parameter.
+
 #### DataMiner Cube - Spectrum analysis: Presets would not be loaded when opening a spectrum element while connected to a heavily loaded DMA [ID_35421]
 
 <!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
