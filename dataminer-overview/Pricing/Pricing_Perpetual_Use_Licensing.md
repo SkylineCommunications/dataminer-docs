@@ -25,8 +25,7 @@ Depending on the application, licensing is available as **server-based licenses*
 | Management of high-volume **service-delivery endpoints**.<br>From 25,000 up to several millions of endpoints. | Experience and Performance Management, Volume-based | 25K, 50K, 100K, 250K, 500K, 1000K service-delivery endpoints. |
 | Local Management of **remote assets**.<br>From 5 to 50 objects per remote location. | DataMiner Probe, Server-based | 5, 10, 25, 50 Managed Objects |
 
-
-> [!WARNING]
+> [!IMPORTANT]
 > All volume-based licenses are cumulative undividable capacity packages. For example, to manage 17,000 objects you can either buy one 20K capacity license or one 15K and two 1K capacity licenses.
 
 > [!NOTE]
@@ -35,7 +34,6 @@ Depending on the application, licensing is available as **server-based licenses*
 ### Optional functions
 
 In addition to the [standard functions](https://community.dataminer.services/core-features/) included in a DataMiner System, depending on the type of application and/or functional requirements, some advanced functional modules may be required. These functions are licensed in bundles together with the corresponding server-based licenses (i.e. per DMA) and volume-based licenses above.
-
 
 | Function | Tier-0 | Tier-1 | Tier-2 |
 |--|--|--|--|
@@ -46,17 +44,14 @@ In addition to the [standard functions](https://community.dataminer.services/cor
 | DataMiner Object Models (DOM) | - | - | x |
 
 *Included (x)*
+
 > [!NOTE]
 > Tier-1 is included by default with volume-based licenses, i.e. System Volume Equipment and Experience and Performance Management.
 
-
 Please note that while some additional functions may be accessible without a license, full functionality may only be achieved when paired with a licensed function. For example, DataMiner Infrastructure Discovery Provisioning ([IDP](https://community.dataminer.services/dataminer-apps/dataminer-infrastructure-discovery-and-provisioning-app/)) requires Automation as a minimum, with Process Automation being highly recommended.
 
-
 > [!WARNING]
-> As of January 2023, the following licenses have been discontinued: SLC-DMS-IDP, SLC-DMS-IAM, SLC-DMS-TCK, SLC-DMS-JBM, SLC-DMS-PLM, SLC-DMS-PCK-2 and SLC-DMS-PCK-1. 
-> DataMiner Systems with an active support including only the SLC-DMS-PCK-1 license have been upgraded to Tier-1, while those with a combination of SLC-DMS-PCK-1 and any other license from the above have been upgraded to Tier-2
-
+> As of January 2023, the following licenses have been discontinued: SLC-DMS-IDP, SLC-DMS-IAM, SLC-DMS-TCK, SLC-DMS-JBM, SLC-DMS-PLM, SLC-DMS-PCK-2, and SLC-DMS-PCK-1. DataMiner Systems with an active support including only the SLC-DMS-PCK-1 license have been upgraded to Tier-1, while those with a combination of SLC-DMS-PCK-1 and any other license from the above have been upgraded to Tier-2.
 
 ## Data sources
 
