@@ -48,7 +48,7 @@ In addition to the [standard functions](https://community.dataminer.services/cor
 > [!NOTE]
 > Tier-1 is included by default with volume-based licenses, i.e. System Volume Equipment and Experience and Performance Management.
 
-Please note that while some additional functions may be accessible without a license, full functionality may only be achieved when paired with a licensed function. For example, DataMiner Infrastructure Discovery Provisioning ([IDP](https://community.dataminer.services/dataminer-apps/dataminer-infrastructure-discovery-and-provisioning-app/)) requires Automation as a minimum, with Process Automation being highly recommended.
+Please note that while some additional functions may be accessible without a license, full functionality may only be achieved when paired with a licensed function. For example, DataMiner Infrastructure Discovery Provisioning ([IDP](xref:SolIDP)) requires Automation as a minimum, with Process Automation being highly recommended.
 
 > [!WARNING]
 > As of January 2023, the following licenses have been discontinued: SLC-DMS-IDP, SLC-DMS-IAM, SLC-DMS-TCK, SLC-DMS-JBM, SLC-DMS-PLM, SLC-DMS-PCK-2, and SLC-DMS-PCK-1. DataMiner Systems with an active support including only the SLC-DMS-PCK-1 license have been upgraded to Tier-1, while those with a combination of SLC-DMS-PCK-1 and any other license from the above have been upgraded to Tier-2.
