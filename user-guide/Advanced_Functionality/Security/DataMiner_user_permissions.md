@@ -1347,9 +1347,6 @@ Permission to configure the backup settings.
 
 ### Modules \> System configuration \> Cloud sharing/gateway
 
-> [!NOTE]
-> These permissions support the cloud connected Agents feature, which is currently still in soft launch. See [Connecting your DataMiner System to the cloud](xref:Connecting_your_DataMiner_System_to_the_cloud).
-
 #### Modules \> System configuration \> Cloud sharing/gateway \> Connect to cloud/DCP
 
 Available from DataMiner 10.1.0/10.0.9 onwards. Permission to connect a DMA to the DataMiner Cloud Platform.

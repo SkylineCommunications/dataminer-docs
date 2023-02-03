@@ -66,6 +66,26 @@ Leading spaces have been removed from the following port information fields:
 - SlowPoll
 - TimeoutTime
 
+#### SLSNMPAgent log entries will now include the alarm ID [ID_35404]
+
+<!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
+
+When an entry is added to the *SLSNMPAgent.txt* log file, in most cases, that entry will now include the alarm ID.
+
+Example:
+
+- Old format: `Received ACK from SNMP Manager SNMP - LFR`
+
+- New format: `Received ACK from SNMP Manager SNMP - LFR for alarm 239/4270232`
+
+#### Service & Resource Management: Enhanced performance when changing active function files [ID_35424]
+
+<!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
+
+Because of a number of enhancements, overall performance has increased when changing an active function file.
+
+Also, in the Cube UI, users will receive more detailed feedback regarding the impact of the change.
+
 ### Fixes
 
 #### DataMiner Taskbar Utility: Problem when stopping DataMiner [ID_34790]
@@ -139,6 +159,12 @@ From now on, when the `<DBServer>` element contains multiple host addresses incl
 <!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
 
 In some cases, the SLDataGateway process could end up with an excessive number of *HealthMonitor.Refresh* threads.
+
+#### Some agents in the cluster would incorrectly remove the run-time hosting agent info they had stored for another agent [ID_35287]
+
+<!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
+
+When run-time connections were being set up between agents or when a midnight sync was being executed, some agents in the DataMiner cluster would incorrectly remove the run-time hosting agent information they had stored for another agent in the same cluster.
 
 #### DataMiner Cube - ListView component: Column filter boxes incorrectly had autocomplete enabled [ID_35296]
 
@@ -215,6 +241,12 @@ When you opened a spectrum element in a DataMiner Cube that was connected to a h
 <!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
 
 SLDataGateway would not correctly return errors when querying SLA logger tables in a Cassandra Cluster, causing an error to occur in SLProtocol.
+
+#### Problem when sending northbound SNMP inform messages in chronological order [ID_35441]
+
+<!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
+
+When northbound SNMP inform messages were being sent in chronological order, an error could occur when sending those messages suddenly stopped.
 
 #### DataMiner Cube - DCF: Problem when trying to delete a DCF connection in the Properties window of an element [ID_35449]
 

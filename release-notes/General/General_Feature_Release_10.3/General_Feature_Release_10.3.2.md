@@ -62,7 +62,7 @@ Note that there are differences when resources and resource pools are stored in 
 
 #### Client-server communication: gRPC instead of .NET Remoting [ID_34797] [ID_34983]
 
-<!-- MR 10.4.0 - FR 10.3.2 -->
+<!-- MR 10.3.0 - FR 10.3.2 -->
 
 Up to now, DataMiner clients and servers communicated with each other using the *.NET Remoting* protocol. From now on, they are also able to communicate with each other via an *API Gateway* module using *gRPC* connections, which are much more secure. For example, as to the use of IP ports, *gRPC* uses the standard port 443, whereas *.NET Remoting* uses the non-standard port 8004. Moreover, the *API Gateway* module is able to restart itself during operation and to automatically recover the connections to clients and SLNet.
 
@@ -138,7 +138,7 @@ All DOM objects (DomInstance, DomTemplate, DomDefinition, DomBehaviorDefinition,
 
 #### SLAnalytics - Proactive cap detection: Using alarm templates assigned to DVE child elements [ID_35194]
 
-<!-- MR 10.4.0 - FR 10.3.2 -->
+<!-- MR 10.3.0 - FR 10.3.2 -->
 
 When proactive cap detection was enabled, up to now, in case of DVE elements, the alarm template of the parent would always be used.
 
@@ -282,7 +282,7 @@ Because of a number of enhancements, overall query performance has increased, es
 
 #### SLAnalytics - Behavioral anomaly detection : More accurate change point time ranges [ID_35121]
 
-<!-- MR 10.4.0 - FR 10.3.2 -->
+<!-- MR 10.3.0 - FR 10.3.2 -->
 
 Because of a number of enhancements, behavioral changes of the type "level shift", "trend change" and "variance change" will now have a more accurate time range when the change in behavior is sufficiently clear.
 
@@ -378,7 +378,7 @@ The `Clusterstate.xml` file, located in the `C:\Skyline DataMiner` folder, was o
 
 #### SLAnalytics - Pattern matching: When a pattern is detected on a DVE child element the suggestion event will now be generated on that same DVE child element [ID_35264]
 
-<!-- MR 10.4.0 - FR 10.3.2 -->
+<!-- MR 10.3.0 - FR 10.3.2 -->
 
 When a trend pattern was detected on a DVE child element, up to now, the suggestion event would be generated on the parent element. From now on, it will be generated on the child element instead.
 

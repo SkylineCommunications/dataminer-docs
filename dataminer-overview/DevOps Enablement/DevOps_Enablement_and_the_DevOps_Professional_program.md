@@ -2,7 +2,7 @@
 uid: DevOps_Enablement_and_the_DevOps_Professional_program
 ---
 
-# DataMiner DevOps Enablement and the DataMiner DevOps Professional Service
+# The DataMiner DevOps Professional Program
 
 As part of the DataMiner DevOps Enablement Service, DataMiner DevOps Professionals are also enrolled in the [DataMiner DevOps Professional Program](xref:DataMiner_Devops_Professionals), which ensures continued engagement with the DataMiner DevOps Professionals even after the DataMiner DevOps Enablement is fulfilled.
 

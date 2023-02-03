@@ -11,12 +11,6 @@ uid: General_Main_Release_10.4.0_changes
 
 ### Enhancements
 
-#### Security enhancements [ID_35331]
-
-<!-- RN 35331: MR 10.4.0 - FR 10.3.3 -->
-
-A number of security enhancements have been made.
-
 #### More detailed logging when the certificate chain is invalid while connecting to Cassandra [ID_34822]
 
 <!-- MR 10.4.0 - FR 10.3.2 -->
@@ -37,12 +31,6 @@ The number of *GetParameterMessages* sent by SLAnalytics in order to check wheth
 
 Because of a number of enhancements, overall accuracy has increased when generating alarm predictions.
 
-#### SLAnalytics - Behavioral anomaly detection : More accurate change point time ranges [ID_35121]
-
-<!-- MR 10.4.0 - FR 10.3.2 -->
-
-Because of a number of enhancements, behavioral changes of the type "level shift", "trend change" and "variance change" will now have a more accurate time range when the change in behavior is sufficiently clear.
-
 #### DataMiner Object Models: DomInstanceButtonDefinitions can only reference a single action [ID_35156]
 
 <!-- MR 10.4.0 - FR 10.3.2 -->
@@ -60,12 +48,6 @@ Also, when using the DomBehaviorDefinition inheritance system, the server-side l
 
 From now on, all custom CollectorConfig XML files will be synchronized across the DataMiner cluster.
 
-#### SLAnalytics - Pattern matching: When a pattern is detected on a DVE child element the suggestion event will now be generated on that same DVE child element [ID_35264]
-
-<!-- MR 10.4.0 - FR 10.3.2 -->
-
-When a trend pattern was detected on a DVE child element, up to now, the suggestion event would be generated on the parent element. From now on, it will be generated on the child element instead.
-
 #### SLAnalytics - Pattern matching: Manually created tags will now be saved as pattern occurrences [ID_35299]
 
 <!-- MR 10.4.0 - FR 10.3.3 -->
@@ -77,12 +59,6 @@ From now on, when you define a tag for pattern matching, the pattern you selecte
 <!-- MR 10.4.0 - FR 10.3.3 -->
 
 In the SLDataGateway process, a number of memory enhancements have been made with regard to the management of average trend data.
-
-#### SLAnalytics - Behavioral anomaly detection: Suggestion events and alarm events for a DVE child element will now be generated on that same DVE child element [ID_35332]
-
-<!-- MR 10.4.0 - FR 10.3.3 -->
-
-When a behavioral anomaly was detected on a DVE child element, up to now, the suggestion event or the alarm event would be generated on the parent element. From now on, it will be generated on the child element instead.
 
 #### Maps: Markers will now move more gradual when zooming [ID_35337]
 

@@ -520,7 +520,15 @@ If you click *Tool Windows \> DIS Diagram*, the *DIS Protocol Diagram* window wi
 
 This window shows a graphical representation of a protocol. It allows you to see how a protocol is built, navigate through its logic and investigate flow issues.
 
-When you open the tool window, you first have to select an item to start from: a parameter, a QAction, a session, a response, a group, a trigger, an action or a timer. You can then set the required depth, i.e. the number of levels you want to have displayed starting from the item you selected, and the type of diagram (BoundedFR, EfficientSugiyama, FR, ISOM, KK, LinLog, LeftRightTree or TopBottomTree).
+When you open the tool window, you first have to select an item to start from: a parameter, a QAction, a session, a response, a group, a trigger, an action or a timer. You can then set the required depth (i.e. the number of items you want to have displayed starting from or ending with the item you selected), the direction (see the table below) and the type of diagram (BoundedFR, EfficientSugiyama, FR, ISOM, KK, LinLog, LeftRightTree or TopBottomTree).
+
+| Direction | Description |
+|-----------|-------------|
+| Forward   | Shows the specified\* number of linked items starting from the item you selected. |
+| Reverse   | Shows the specified\* number of linked items ending with the item you selected.   |
+| Both      | Shows the specified\* number of linked items starting from the item you selected, as well as the specified\* number of linked items ending with the item you selected. |
+
+*\* The value entered in the Depth box.*
 
 In the diagram itself, each item (parameter, QAction, session, response, group, trigger, action, timer) is represented by a box with a particular icon and color, showing the ID and name of the item.
 

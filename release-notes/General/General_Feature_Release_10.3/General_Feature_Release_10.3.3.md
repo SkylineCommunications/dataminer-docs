@@ -104,7 +104,7 @@ The names of the files containing the test results will have the following forma
 #### Security enhancements [ID_34894] [ID_35331]
 
 <!-- RN 34894: MR 10.2.0 [CU12] - FR 10.3.3 -->
-<!-- RN 35331: MR 10.4.0 - FR 10.3.3 -->
+<!-- RN 35331: MR 10.3.0 - FR 10.3.3 -->
 
 A number of security enhancements have been made.
 
@@ -136,7 +136,7 @@ In the SLDataGateway process, a number of memory enhancements have been made wit
 
 #### SLAnalytics - Behavioral anomaly detection: Suggestion events and alarm events for a DVE child element will now be generated on that same DVE child element [ID_35332]
 
-<!-- MR 10.4.0 - FR 10.3.3 -->
+<!-- MR 10.3.0 - FR 10.3.3 -->
 
 When a behavioral anomaly was detected on a DVE child element, up to now, the suggestion event or the alarm event would be generated on the parent element. From now on, it will be generated on the child element instead.
 
@@ -171,6 +171,26 @@ During a DataMiner upgrade, Microsoft .NET 6.0 will now be installed if not inst
 <!-- MR 10.4.0 - FR 10.3.3 -->
 
 The zoom range of a map can now be set by means of a slider.
+
+#### SLSNMPAgent log entries will now include the alarm ID [ID_35404]
+
+<!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
+
+When an entry is added to the *SLSNMPAgent.txt* log file, in most cases, that entry will now include the alarm ID.
+
+Example:
+
+- Old format: `Received ACK from SNMP Manager SNMP - LFR`
+
+- New format: `Received ACK from SNMP Manager SNMP - LFR for alarm 239/4270232`
+
+#### Service & Resource Management: Enhanced performance when changing active function files [ID_35424]
+
+<!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
+
+Because of a number of enhancements, overall performance has increased when changing an active function file.
+
+Also, in the Cube UI, users will receive more detailed feedback regarding the impact of the change.
 
 ### Fixes
 
@@ -220,6 +240,12 @@ From now on, when the `<DBServer>` element contains multiple host addresses incl
 
 In some cases, the SLDataGateway process could end up with an excessive number of *HealthMonitor.Refresh* threads.
 
+#### Some agents in the cluster would incorrectly remove the run-time hosting agent info they had stored for another agent [ID_35287]
+
+<!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
+
+When run-time connections were being set up between agents or when a midnight sync was being executed, some agents in the DataMiner cluster would incorrectly remove the run-time hosting agent information they had stored for another agent in the same cluster.
+
 #### DataMiner Object Models: Permission checks for DOM modules requiring view permission 'None' were too strict [ID_35305]
 
 <!-- MR 10.3.0 - FR 10.3.3 -->
@@ -259,6 +285,12 @@ In a Cassandra database, the "time to live" (TTL) setting of spectrum trace data
 <!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
 
 SLDataGateway would not correctly return errors when querying SLA logger tables in a Cassandra Cluster, causing an error to occur in SLProtocol.
+
+#### Problem when sending northbound SNMP inform messages in chronological order [ID_35441]
+
+<!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
+
+When northbound SNMP inform messages were being sent in chronological order, an error could occur when sending those messages suddenly stopped.
 
 #### Automation: 'engine.RunClientProgram' overload with two parameters would incorrectly always be run synchronously [ID_35476]
 
