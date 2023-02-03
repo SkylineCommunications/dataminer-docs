@@ -4,7 +4,7 @@ uid: Grafana_plugin
 
 # Grafana Data Source Plugin
 
-To visualize data from DataMiner inside Grafana you can make use of our Grafana data source plugin.
+To visualize data from DataMiner inside Grafana you can make use of our data source plugin.
 
 *The Grafana Labs Marks are trademarks of Grafana Labs, and are used with Grafana Labs’ permission. We are not affiliated with, endorsed or sponsored by Grafana Labs or its affiliates.*
 
@@ -30,7 +30,7 @@ To visualize data from DataMiner inside Grafana you can make use of our Grafana 
     ```
 3. Save the configuration file.
 4. [Download](https://github.com/SkylineCommunications/dataminer-grafana-plugin/releases) the zip file of the latest version of the DataMiner data source plugin.
-5. Extract the entire zip file in the `plugins` folder of Grafana, typically `C:\Program Files\GrafanaLabs\grafana\data\plugins` on Windows or `/var/lib/grafana/plugins` on Linux.
+5. Extract the entire zip file in the *plugins* folder of Grafana, typically `C:\Program Files\GrafanaLabs\grafana\data\plugins` on Windows or `/var/lib/grafana/plugins` on Linux.
 6. Restart the Grafana service.
 
 ## Getting started
