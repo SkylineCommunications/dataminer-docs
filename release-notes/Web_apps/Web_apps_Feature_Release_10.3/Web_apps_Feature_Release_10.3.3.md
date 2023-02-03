@@ -125,3 +125,9 @@ Up to now, in some cases, one folder would incorrectly take over feed selections
 <!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
 
 When, in a draft version of a low-code app, you opened the version panel and created a new draft, the previous draft version would incorrectly loaded instead of the published version.
+
+#### Dashboards app: Time range feeds would trigger components more often than required [ID_35460]
+
+<!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
+
+Time range feeds would trigger components more often than required, causing them to send an excessive number of requests.

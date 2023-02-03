@@ -266,6 +266,12 @@ When, in a draft version of a low-code app, you opened the version panel and cre
 
 When you tried to remove a DCF connection in the *Properties* window of an element, an exception would be thrown and the connection would not be removed when the destination element was stopped or paused.
 
+#### Dashboards app: Time range feeds would trigger components more often than required [ID_35460]
+
+<!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
+
+Time range feeds would trigger components more often than required, causing them to send an excessive number of requests.
+
 #### DataMiner Cube - Visual Overview: Problem when re-arranging dynamically positioned shapes [ID_35462]
 
 <!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
