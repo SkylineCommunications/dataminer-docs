@@ -21,6 +21,9 @@ To connect your DMS to the cloud:
 
      - ``wss://tunnel.dataminer.services/``
 
+      > [!NOTE]
+      > There must be at least one DMA who can reach these endpoint. If you install the Cloud Pack on additional DataMiner Agents that **do not allow network traffic** towards `*.dataminer.services`, after the installation, **uninstall DataMiner CloudGateway** on those Agents. See [uninstalling a program in Windows](https://support.microsoft.com/en-us/windows/uninstall-or-remove-apps-and-programs-in-windows-4b55f974-2cc6-2d2b-d092-5905080eaf98).
+
 1. Download the appropriate DataMiner **Cloud Pack installer** from [DataMiner Dojo](https://community.dataminer.services/downloads/) and install it on one or more DMAs in the cluster. As .NET 5 is required to connect to the DataMiner Cloud, you can choose an installer that includes or downloads .NET 5. If .NET 5 is already installed in your system, choose the installer that does not include .NET 5.
 
    > [!NOTE]
