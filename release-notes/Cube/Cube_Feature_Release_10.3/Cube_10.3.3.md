@@ -221,3 +221,9 @@ When you tried to remove a DCF connection in the *Properties* window of an eleme
 <!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
 
 When, in a Visio drawing, shapes have been positioned dynamically, you can re-arrange those shapes manually by switching to *Arrange* mode and re-arranging the shapes using drag-and-drop. In some cases, after you had re-arranged a number of shapes, a *NullReferenceException* could be thrown.
+
+#### DataMiner Cube - Visual Overview: Problem when right-clicking a dynamically positioned shape [ID_35463]
+
+<!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
+
+When, in a Visio drawing, you were re-arranging dynamically positioned shapes, an exception could be thrown when you right-clicked a shape to access its context menu.
