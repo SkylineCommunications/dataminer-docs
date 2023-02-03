@@ -108,25 +108,21 @@ See [Protocol \> Generate Class Library code](#protocol--generate-class-library-
 
 ## Plugins \> Generate driver help
 
-This plug allows generating the driver help.
+Generates the driver help.
 
 ## Plugins \> Add After Startup
 
-This plugin allows adding the after startup logic to a connector. DIS inspects the protocol.xml file and determines whether an after startup trigger is present and adds one if not present.
-From this trigger it adds all remaining items of the after startup flow if not present.
+Adds the after startup logic to the protocol. DIS will check whether the protocol.xml file contains an after startup trigger, and will add one if none was found. Apart from the trigger, it will also add all remaining items of the after startup flow.
 
-See also [Executing a QAction after startup](xref:LogicExamples#executing-a-qaction-after-startup).
+See also [Executing a QAction after startup](xref:LogicExamples#executing-a-qaction-after-startup)
 
 ## Plugins \> Add matrix...
 
-This plugin allows adding a matrix to a connector. Has the same functionality as the Create Matrix macro.
-This plugin allows creating a matrix and/or Inputs and Outputs tables.
+Adds a matrix and/or Inputs and Outputs tables to the protocol.
 
 ## Plugins \> Add SNMP System Info...
 
-This plugin allows adding the SNMP System Info parameters to a connector.
-
-The parameters that are added are:
+Adds the following SNMP System Info parameters to the protocol:
 
 - System Description (1.3.6.1.2.1.1.1)
 - System Object ID (1.3.6.1.2.1.1.2)
@@ -137,16 +133,15 @@ The parameters that are added are:
 
 ## Plugins \> Add SNMP Trap Receiver...
 
-This plugin allows adding an SNMP trap receiver to a connector and a QAction with boilerplate code to process traps.
+Adds an SNMP trap receiver and a QAction with boilerplate code to process received traps.
 
 ## Plugins \> Add Table Context Menu...
 
-This plugin allows adding a custom context menu to a table in a connector.
-You can choose between the following:
+Adds a custom context menu to a table in the protocol. You can choose between the following:
 
 - Rows Manager (User-definable Keys): A default context menu that provides add, duplicate, edit and delete functionality.
-- Rows Manager (Auto-incremented Keys): An extension of the previous type but where the developer can work with an auto-increment key parameter.
-- Custom: Opens a wizard where you can specify the options.
+- Rows Manager (Auto-incremented Keys): An extension of the previous type that allows developers to work with an auto-increment key parameter.
+- Custom: Opens a wizard that allows you to specify the options.
 
 ## Tool Windows \> DIS Tree View
 
