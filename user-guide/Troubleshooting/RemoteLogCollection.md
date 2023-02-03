@@ -18,4 +18,7 @@ To use this feature, your system needs to meet the following requirements:
 
 - Cloud Pack version 2.8.1 or later must be installed **on all DataMiner Agents** where logs need to be taken from. You can always find the latest Cloud Pack on [DataMiner Dojo](https://community.dataminer.services/downloads/).
 
+   > [!NOTE]
+   > Installing the Cloud Pack on additional DataMiner Agents who don't allow network traffic towards `*.dataminer.services` requires one additional step, namely to uninstall the DataMiner CloudGateway, see [uninstalling a program in Windows](https://support.microsoft.com/en-us/windows/uninstall-or-remove-apps-and-programs-in-windows-4b55f974-2cc6-2d2b-d092-5905080eaf98).
+
 - Port 5100 must be open for traffic on the **internal** network for the remote log collection to work. For more information on this endpoint, see [Customizing the cloud endpoint configuration](xref:Custom_cloud_endpoint_configuration).
