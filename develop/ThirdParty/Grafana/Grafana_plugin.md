@@ -32,18 +32,12 @@ To visualize data from DataMiner inside Grafana you can make use of our data sou
 4. [Download](https://github.com/SkylineCommunications/dataminer-grafana-plugin/releases) the zip file of the latest version of the DataMiner data source plugin.
 5. Extract the entire zip file in the *plugins* folder of Grafana, typically `C:\Program Files\GrafanaLabs\grafana\data\plugins` on Windows or `/var/lib/grafana/plugins` on Linux.
 6. Restart the Grafana service.
-
-## Getting started
-
-After installing the DataMiner data source plugin in Grafana, configure the connection with your DataMiner Agent:
-
+7. Open Grafana and go to plugins, click on DataMiner and click *Create a DataMiner data source*. Configure the connection with your DataMiner Agent:
 * User: Specify the username and password that Grafana should use to authenticate on the DMA. These credentials will only provide access to data inside DataMiner as configured in the DataMiner security.
 * HTTP: Specify the URL to connect to your DataMiner Agent, for example `https://mydma.company.com`.
-
-> [!NOTE]
-> **⚠️ Use a secure HTTPS connection** - Without HTTPS, your username and password will be sent unencrypted over the network/internet, which means that others could see them. Refer to the [DataMiner User Guide](https://docs.dataminer.services/user-guide/Advanced_Functionality/DataMiner_Agents/Configuring_a_DMA/Setting_up_HTTPS_on_a_DMA.html) for information on how to configure your DataMiner System to use HTTPS.
-
-Other configuration settings can be ignored.
+    > [!NOTE]
+    > **⚠️ Use a secure HTTPS connection** - Without HTTPS, your username and password will be sent unencrypted over the network/internet, which means that others could see them. Refer to the [DataMiner User Guide](https://docs.dataminer.services/user-guide/Advanced_Functionality/DataMiner_Agents/Configuring_a_DMA/Setting_up_HTTPS_on_a_DMA.html) for information on how to configure your DataMiner System to use HTTPS.
+8. Other configuration settings can be ignored. Clicking on *Save & test* should show *Success*.
 
 ## Features
 
