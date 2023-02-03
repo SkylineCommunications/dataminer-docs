@@ -2,7 +2,7 @@
 uid: Skill_Sets_DevOps_Professionals_Program
 ---
 
-# Continuous learning program: skill sets
+# Required skill sets
 
 Recommended and focus skill sets are not prerequisites. After all, we live in an ever faster evolving technology landscape where **continuous learning is the new normal**. Therefore, passion and the ability to absorb new knowledge prevail over the existing skill sets of a candidate.
 

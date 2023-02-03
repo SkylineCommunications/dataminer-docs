@@ -60,12 +60,6 @@ From now on, when you define a tag for pattern matching, the pattern you selecte
 
 In the SLDataGateway process, a number of memory enhancements have been made with regard to the management of average trend data.
 
-#### SLAnalytics - Behavioral anomaly detection: Suggestion events and alarm events for a DVE child element will now be generated on that same DVE child element [ID_35332]
-
-<!-- MR 10.4.0 - FR 10.3.3 -->
-
-When a behavioral anomaly was detected on a DVE child element, up to now, the suggestion event or the alarm event would be generated on the parent element. From now on, it will be generated on the child element instead.
-
 #### Maps: Markers will now move more gradual when zooming [ID_35337]
 
 <!-- MR 10.4.0 - FR 10.3.3 -->

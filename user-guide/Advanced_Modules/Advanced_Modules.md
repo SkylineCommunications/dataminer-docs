@@ -10,11 +10,11 @@ uid: Part4AdvancedModules
 
 - [Correlation](xref:correlation)
 
-- [Experience and Performance Management](xref:EPM)
-
 - [Dashboards app](xref:newR_D)
 
 - [DMS Dashboards](xref:dashboards)
+
+- [Experience and Performance Management](xref:EPM)
 
 - [Inventory & Asset Management](xref:AssetManagement)
 

@@ -62,7 +62,7 @@ Note that there are differences when resources and resource pools are stored in 
 
 #### Client-server communication: gRPC instead of .NET Remoting [ID_34797] [ID_34983]
 
-<!-- MR 10.4.0 - FR 10.3.2 -->
+<!-- MR 10.3.0 - FR 10.3.2 -->
 
 Up to now, DataMiner clients and servers communicated with each other using the *.NET Remoting* protocol. From now on, they are also able to communicate with each other via an *API Gateway* module using *gRPC* connections, which are much more secure. For example, as to the use of IP ports, *gRPC* uses the standard port 443, whereas *.NET Remoting* uses the non-standard port 8004. Moreover, the *API Gateway* module is able to restart itself during operation and to automatically recover the connections to clients and SLNet.
 

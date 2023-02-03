@@ -2,7 +2,7 @@
 uid: What_is_the_DevOps_Professionals_Program
 ---
 
-# What is the DataMiner DevOps Professional Program?
+# What is it?
 
 > [!TIP]
 > For a more extensive overview of what the DataMiner DevOps Professional Program stands for, see [DataMiner Dojo](https://community.dataminer.services/dataminer-devops-professional-program).
