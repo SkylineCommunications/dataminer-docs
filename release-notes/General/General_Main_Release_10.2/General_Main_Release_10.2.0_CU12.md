@@ -254,6 +254,12 @@ SLDataGateway would not correctly return errors when querying SLA logger tables 
 
 When northbound SNMP inform messages were being sent in chronological order, an error could occur when sending those messages suddenly stopped.
 
+#### Low-code apps: Problem when creating a new draft version [ID_35446]
+
+<!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
+
+When, in a draft version of a low-code app, you opened the version panel and created a new draft, the previous draft version would incorrectly loaded instead of the published version.
+
 #### DataMiner Cube - DCF: Problem when trying to delete a DCF connection in the Properties window of an element [ID_35449]
 
 <!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
