@@ -12,5 +12,3 @@ Data Aggregator is a DxM ([DataMiner Extension Module](xref:DataMinerExtensionMo
 
 - [Configuring GQI queries](xref:Data_Aggregator_queries)
 
-> [!NOTE]
-> Using the REST API, you can also do certain actions like getting the status of the jobs or manually triggering a specific job. More information is available on `/swagger/index.html`. <!-- TBD: where? -->

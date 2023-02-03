@@ -33,6 +33,9 @@ For example:
 > [!NOTE]
 > Make sure the specified port is available and not used by any other process.
 
+> [!NOTE]
+> Using the REST API, you can also do certain actions like getting the status of the jobs or manually triggering a specific job. More information is available via the URL `[Your configured URL]/swagger/index.html`, e.g. `http://127.0.0.1:5000/swagger/index.html`.
+
 ## Multi-DMS connection
 
 For every DataMiner System you want Data Aggregator to connect to, you will need to specify the following fields under *BrokerOptions.Clusters*:

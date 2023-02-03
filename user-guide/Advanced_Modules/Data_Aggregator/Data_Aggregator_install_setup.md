@@ -14,7 +14,7 @@ The Data Aggregator DxM does not necessarily have to be installed on a server ru
 
 ## Installing the Data Aggregator DxM
 
-Download the installation package for the Data Aggregator DxM from the [Dojo Downloads page](https://community.dataminer.services/downloads/) and install it. <!-- TBD: is package available already? -->
+Download the installation package for the Data Aggregator DxM from the [Dojo Downloads page](https://community.dataminer.services/downloads/) and install it.
 
 ## Configuring the Data Aggregator settings
 
