@@ -84,7 +84,13 @@ Example:
 
 Because of a number of enhancements, overall performance has increased when changing an active function file.
 
-Also, in the Cube UI, users will receive more detailed feedback regarding the impact of the change.
+Also, in the Cube UI, users will receive more concise feedback regarding the impact of the change. Up to now, they would receive a list of all items affected by the change. From now on, the list of affected items will only show up to 10 affected items per object type.
+
+#### Automation: Enhanced memory usage [ID_35502]
+
+<!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
+
+Because of a number of enhancements, overall memory usage of the SLAutomation process has improved.
 
 ### Fixes
 
@@ -248,11 +254,23 @@ SLDataGateway would not correctly return errors when querying SLA logger tables 
 
 When northbound SNMP inform messages were being sent in chronological order, an error could occur when sending those messages suddenly stopped.
 
+#### Low-code apps: Problem when creating a new draft version [ID_35446]
+
+<!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
+
+When, in a draft version of a low-code app, you opened the version panel and created a new draft, the previous draft version would incorrectly loaded instead of the published version.
+
 #### DataMiner Cube - DCF: Problem when trying to delete a DCF connection in the Properties window of an element [ID_35449]
 
 <!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
 
 When you tried to remove a DCF connection in the *Properties* window of an element, an exception would be thrown and the connection would not be removed when the destination element was stopped or paused.
+
+#### Dashboards app: Time range feeds would trigger components more often than required [ID_35460]
+
+<!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
+
+Time range feeds would trigger components more often than required, causing them to send an excessive number of requests.
 
 #### DataMiner Cube - Visual Overview: Problem when re-arranging dynamically positioned shapes [ID_35462]
 
@@ -269,3 +287,9 @@ An `engine.RunClientProgram` overload with two parameters, of which the second o
 ```csharp
 RunClientProgram(String applicationPath, bool waitForCompletion)
 ```
+
+#### Business Intelligence: Problem when correcting outages on an SLA with a week-based window [ID_35503]
+
+<!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
+
+When outages on an SLA with a week-based window were corrected, the *History Statistics Table* that started in the first 9 weeks of every year would incorrectly not get updated.

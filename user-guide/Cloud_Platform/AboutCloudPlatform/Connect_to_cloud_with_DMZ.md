@@ -14,7 +14,7 @@ To create such a DMZ:
 
    - Make sure the DMZ can communicate with the DMS through port 80, or through port 443 for a secure connection.
 
-   - Make sure the DMZ can communicate through NATS though port 4222.
+   - Make sure the DMZ can communicate with the DMS through NATS on port 4222.
 
 1. Install the DxMs that need to be in the DMZ. At present, these are *CloudGateway*, *CloudFeed*, *ArtifactDeployer*, and *Orchestrator*.
 
