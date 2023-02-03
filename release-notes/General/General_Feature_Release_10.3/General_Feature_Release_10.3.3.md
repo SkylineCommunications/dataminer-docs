@@ -190,7 +190,13 @@ Example:
 
 Because of a number of enhancements, overall performance has increased when changing an active function file.
 
-Also, in the Cube UI, users will receive more detailed feedback regarding the impact of the change.
+Also, in the Cube UI, users will receive more concise feedback regarding the impact of the change. Up to now, they would receive a list of all items affected by the change. From now on, the list of affected items will only show up to 10 affected items per object type.
+
+#### Automation: Enhanced memory usage [ID_35502]
+
+<!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
+
+Because of a number of enhancements, overall memory usage of the SLAutomation process has improved.
 
 ### Fixes
 
@@ -301,3 +307,9 @@ An `engine.RunClientProgram` overload with two parameters, of which the second o
 ```csharp
 RunClientProgram(String applicationPath, bool waitForCompletion)
 ```
+
+#### Business Intelligence: Problem when correcting outages on an SLA with a week-based window [ID_35503]
+
+<!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
+
+When outages on an SLA with a week-based window were corrected, the *History Statistics Table* that started in the first 9 weeks of every year would incorrectly not get updated.
