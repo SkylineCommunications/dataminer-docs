@@ -49,7 +49,7 @@ In the *QAction\@dllImport* attribute, you can now reference a DLL file that is 
 - a subfolder of the `Dlls` folder of the repository, or
 - a subfolder of the following `C:\Skyline DataMiner` folders: `Files`, `ProtocolScripts` or `ProtocolScripts\DllImport`
 
-Up to now, the *QAction\@dllImport* attribute would only contain the name of the DLL file. From now on, it will contain the full path to that file.
+Up to now, the *QAction\@dllImport* attribute would only contain the name of the DLL file. From now on, it will include the subfolders as well.
 
 ### Validator
 
