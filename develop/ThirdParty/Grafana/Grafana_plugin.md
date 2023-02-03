@@ -32,7 +32,7 @@ To visualize data from DataMiner inside Grafana you can make use of our data sou
 4. [Download](https://github.com/SkylineCommunications/dataminer-grafana-plugin/releases) the zip file of the latest version of the DataMiner data source plugin.
 5. Extract the entire zip file in the *plugins* folder of Grafana, typically `C:\Program Files\GrafanaLabs\grafana\data\plugins` on Windows or `/var/lib/grafana/plugins` on Linux.
 6. Restart the Grafana service.
-7. Open Grafana and go to plugins, click on DataMiner and click *Create a DataMiner data source*. Configure the connection with your DataMiner Agent:
+7. Open Grafana and go to *Configuration*, *Plugins*, click on *DataMiner* and click *Create a DataMiner data source*. Configure the connection with your DataMiner Agent:
 * User: Specify the username and password that Grafana should use to authenticate on the DMA. These credentials will only provide access to data inside DataMiner as configured in the DataMiner security.
 * HTTP: Specify the URL to connect to your DataMiner Agent, for example `https://mydma.company.com`.
     > [!NOTE]
