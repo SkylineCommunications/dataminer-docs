@@ -23,6 +23,8 @@ See the official [documentation](https://opensearch.org/docs/latest/) on how to 
 > [!IMPORTANT]
 > The JVM Heap Space must be set to a value larger than the default on production systems.
 > To configure this, see [Important settings](https://opensearch.org/docs/latest/opensearch/install/important-settings)
+>
+> Another important setting is the `indices.query.bool.max_clause_count` setting should be set to `2147483647` (max int value)
 
 > [!NOTE]
 > OpenSearch is only supported on Linux and not on Windows, as opposed to Elasticsearch
