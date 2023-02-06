@@ -236,6 +236,14 @@ When, in a dashboard or a low-code app, a *Line & area chart* component was used
 
 In the latter case, it will now instead show a flat line indicating that the resource is not being used.
 
+#### DataMiner Cube - EPM: Read and write visualization of single-value EPM parameters would incorrectly be displayed both [ID_35416]
+
+<!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
+
+On Data pages, in some cases, the read and write visualization of single-value EPM parameters would incorrectly be displayed both.
+
+From now on, each EPM parameter will only be displayed once. If a write parameter is available, it will be combined with the read parameter.
+
 #### DataMiner Cube - Spectrum analysis: Presets would not be loaded when opening a spectrum element while connected to a heavily loaded DMA [ID_35421]
 
 <!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
@@ -277,6 +285,12 @@ Time range feeds would trigger components more often than required, causing them
 <!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
 
 When, in a Visio drawing, shapes have been positioned dynamically, you can re-arrange those shapes manually by switching to *Arrange* mode and re-arranging the shapes using drag-and-drop. In some cases, after you had re-arranged a number of shapes, a *NullReferenceException* could be thrown.
+
+#### DataMiner Cube - Visual Overview: Problem when right-clicking a dynamically positioned shape [ID_35463]
+
+<!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
+
+When, in a Visio drawing, you were re-arranging dynamically positioned shapes, an exception could be thrown when you right-clicked a shape to access its context menu.
 
 #### Automation: 'engine.RunClientProgram' overload with two parameters would incorrectly always be run synchronously [ID_35476]
 
