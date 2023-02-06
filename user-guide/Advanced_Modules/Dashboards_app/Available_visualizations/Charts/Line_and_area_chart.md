@@ -51,11 +51,11 @@ To configure the component:
 
    - *Show real-time trend data*: If real-time trending is available, this box allows you to set the chart to display real-time trending instead of average trending.
 
-   - *Show average*: Available from DataMiner 10.0.13 onwards, if *Show real-time trend data* is not selected. Displays the average trend data. By default, this is enabled. From DataMiner 10.3.3/10.4.0 onwards, this setting will also be taken into account when you export the chart to CSV.
+   - *Show average*: Available from DataMiner 10.0.13 onwards, if *Show real-time trend data* is not selected. Displays the average trend data. By default, this is enabled. From DataMiner 10.3.3/10.4.0 onwards, this setting will also be taken into account when you export the chart to CSV. <!-- RN 35311 -->
 
-   - *Show minimum*: Available from DataMiner 10.0.13 onwards, if *Show real-time trend data*/Stack trend lines is not selected. Displays the minimum trend data. By default, this is disabled. From DataMiner 10.3.3/10.4.0 onwards, this setting will also be taken into account when you export the chart to CSV.
+   - *Show minimum*: Available from DataMiner 10.0.13 onwards, if *Show real-time trend data*/Stack trend lines is not selected. Displays the minimum trend data. By default, this is disabled. From DataMiner 10.3.3/10.4.0 onwards, this setting will also be taken into account when you export the chart to CSV. <!-- RN 35311 -->
 
-   - *Show maximum*: Available from DataMiner 10.0.13 onwards, if *Show real-time trend data*/Stack trend lines is not selected. Displays the maximum trend data. By default, this is disabled. From DataMiner 10.3.3/10.4.0 onwards, this setting will also be taken into account when you export the chart to CSV.
+   - *Show maximum*: Available from DataMiner 10.0.13 onwards, if *Show real-time trend data*/Stack trend lines is not selected. Displays the maximum trend data. By default, this is disabled. From DataMiner 10.3.3/10.4.0 onwards, this setting will also be taken into account when you export the chart to CSV. <!-- RN 35311 -->
 
    - *Group by*: In case the component displays trending for multiple parameters, this box allows you to specify how the graphs should be grouped. One graph will be displayed per group. The default setting (from DataMiner 10.3.2/10.4.0 onwards<!-- RN 35160 -->) is *All together*.
 
@@ -103,7 +103,7 @@ To configure the component:
 
    - *Stack trend lines*: Available from DataMiner 10.2.0/10.1.6 onwards. Select this option to stack the lines in the graph on top of each other. This option is not compatible with the *Show min/max shading*, *Show minimum* and *Show maximum* options. When you select the *Stack trend lines* option, those options will therefore be disabled and hidden.
 
-   - *Styling and Information* > *Show min/max shading*: Select this option to display a semi-transparent shade above and below the trend line, showing the minimum and maximum trend values. This option can only be used for parameters with average trending and only in case the Y-axis has no discrete values. From DataMiner 10.3.3/10.4.0 onwards, when this option is enabled, minimum and maximum values will also be taken into account when you export the chart to CSV.
+   - *Styling and Information* > *Show min/max shading*: Select this option to display a semi-transparent shade above and below the trend line, showing the minimum and maximum trend values. This option can only be used for parameters with average trending and only in case the Y-axis has no discrete values. From DataMiner 10.3.3/10.4.0 onwards, when this option is enabled, minimum and maximum values will also be taken into account when you export the chart to CSV. <!-- RN 35311 -->
 
    - *Additional lines* > *Line thickness*: If you select to show any additional lines with the options below, this option becomes available, allowing you to customize the thickness of these lines (in pixels).
 
