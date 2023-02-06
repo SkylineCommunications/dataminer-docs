@@ -12,15 +12,17 @@ A new Data Aggregator DxM is now available. It can be used to schedule GQI queri
 
 ##### Installation and setup
 
+1. Make sure [DataMiner Cloud Pack](xref:CloudPackages) 2.8.4 or higher is installed on the server where you want to install Data Aggregator.
+
 1. Make sure DataMiner 10.2.12 or higher is installed on the DataMiner Agents you want to use Data Aggregator with.
 
-1. Make sure the CoreGateway DxM is installed on the DataMiner Agents you want to use Data Aggregator with.
+1. Make sure CoreGateway 2.12.0 or higher (included in Cloud Pack 2.8.4) is installed on the DataMiner Agents you want to use Data Aggregator with.
 
 1. Download the installation package for the Data Aggregator DxM from the [Dojo Downloads page](https://community.dataminer.services/downloads/) and install it.
 
 1. Open the folder `C:\Program Files\Skyline Communications\DataMiner DataAggregator`.
 
-1. Create a new file named *appsettings.custom.json*.
+1. Create a new file named *appsettings.custom.json* in this folder.
 
    This is the file in which you will be able to customize the default configuration from *appsettings.json*. The settings configured in *appsettings.json* will be merged together with the settings configured in *appsettings.custom.json* and these merged settings will be applied by Data Aggregator.
 
@@ -32,6 +34,8 @@ A new Data Aggregator DxM is now available. It can be used to schedule GQI queri
 1. Restart the *DataAggregator* service (e.g. using Windows Task Manager).
 
 ##### Settings
+
+These settings should be configured in the *appsettings.custom.json* file.
 
 **HTTP listening**
 
