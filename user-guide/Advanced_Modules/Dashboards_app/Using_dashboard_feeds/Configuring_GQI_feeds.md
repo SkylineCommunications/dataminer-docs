@@ -361,7 +361,7 @@ You can then further filter the result by applying another operator. An addition
 > [!NOTE]
 >
 > - From DataMiner 10.3.3/10.4.0 onwards, after an aggregation operation, you can apply multiple *GroupBy* operations.
-> - From DataMiner 10.1.0/10.1.3 onwards, exception values are not taken into account, except for the Count and Distinct Count methods.
+> - From DataMiner 10.1.0/10.1.3 onwards, exception values are not taken into account, except for the Count and Distinct Count methods. <!-- RN35355 -->
 
 ### Column manipulations
 
