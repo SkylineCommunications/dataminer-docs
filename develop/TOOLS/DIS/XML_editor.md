@@ -388,7 +388,14 @@ In the XML editor, you can click a small *Down* arrow in front of certain XML ta
 | Edit All QActions | For each of the available QActions, create a temporary C# project containing the code of that QAction, and open each QAction in a new C# editor tab. |
 | Change ID... | Change the ID of a QAction.<br>Note that when you change the ID of a QAction, the following items will be updated:<br>- The id attribute of the \<QAction> tag<br>- The name of the C# project (“QAction_ID”)<br>- The name of the main C# file (“QAction_ID.cs”)<br>- The name of the default namespace<br>- (“QAction_ID”)<br>- The AssemblyInfo.cs file<br>- The name of the project folder on disk |
 | Delete QAction | Delete the entire QAction element as well as the associated C# project.<br> Note: This action cannot be undone as it will also remove all associated C# project files stored on disk. |
-| DLL Imports | Insert references to pre-compiled QActions into the dllImport attribute of the \<QAction> element.<br>The submenu will list all QActions of which the options attribute contains the “precompile” option, as well as all commonly used system DLL files.<br>Note: In the submenu, all DLL files already inserted into the dllimport attribute of the \<QAction> element will be indicated by a check mark. |
+| DLL Imports | Insert references to pre-compiled QActions into the dllImport attribute of the \<QAction> element.<br>The submenu will list<br>- all QActions of which the options attribute contains the “precompile” option,<br>- all QActions of which the C# project has a reference to another C# project in the solution that is not QAction_Helper, QAction_ClassLibrary or another QAction, and<br>- all commonly used system DLL files.<br>Note:<br>- In the submenu, all DLL files already inserted into the dllimport attribute of the \<QAction> element will be indicated by a check mark.<br>- If you want to override the path associated with a DLL import, see the note below. |
+
+> [!NOTE]
+> To override the path associated with a DLL import, do the following:
+>
+> 1. Right-click the reference (which can be either a reference to a DLL or a reference to a project).
+> 1. Open its properties.
+> 1. Locate the *DLL Path* property, and enter in the value that should override the default path.
 
 #### Exe
 

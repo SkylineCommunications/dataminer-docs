@@ -16,11 +16,15 @@ uid: Part4AdvancedModules
 
 - [Data Aggregator](xref:Data_Aggregator_DxM)
 
+- [DataMiner Object Models (DOM)](xref:DOM)
+
 - [Experience and Performance Management](xref:EPM)
 
 - [Inventory & Asset Management](xref:AssetManagement)
 
 - [Job Manager](xref:jobs)
+
+- [Low-Code Apps](xref:Application_framework)
 
 - [Maps](xref:maps)
 
@@ -37,7 +41,3 @@ uid: Part4AdvancedModules
 - [Spectrum Analysis](xref:SpectrumAnalysis)
 
 - [Ticketing](xref:ticketing)
-
-- [Low-Code Apps](xref:Application_framework)
-
-- [DataMiner Object Models (DOM)](xref:DOM)
