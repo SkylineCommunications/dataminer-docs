@@ -230,7 +230,7 @@ The value of this property should be configured in JSON format. It can contain s
 **Example value**:
 
 ```json
-{"Script":"Script:TESTEDA123||myarg=abcde-[RESERVATIONID]"}
+{"Script":"Script:UpdateJob||BookingId=[RESERVATIONID]"}
 ```
 
 > [!TIP]

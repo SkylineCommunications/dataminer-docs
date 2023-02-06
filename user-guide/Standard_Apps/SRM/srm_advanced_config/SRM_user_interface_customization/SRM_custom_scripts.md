@@ -4,7 +4,7 @@ uid: SRM_custom_scripts
 
 # Using custom scripts instead of the default SRM wizards
 
-The SRM Framework contains standard scripts to perform actions such as creating a booking or canceling a booking:
+The SRM Framework contains standard scripts to perform actions such as creating a booking:
 
 - The standard Booking Wizard allows users to select a resource and one or more profiles for each node.
 - The standard Service Profile Wizard allows users to select a service profile instance, which defines the service definition and all profile instances at once.

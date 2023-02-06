@@ -14,7 +14,7 @@ This tab of the Booking Manager app provides an overview of all configuration pa
 
 - **Resource Pool**: Deprecated. Defines the Source Resource Pool name, so that Source resources can be identified and displayed on the first page of the Booking Wizard. This setting is no longer available from SRM 1.2.12 onwards. <!-- RN 29276 -->
 
-- **Contributing Booking Type**: Determines whether standard or "lite" contributing resources are used by default. <!-- RN 31488 -->
+- **Contributing Booking Type**: Determines whether standard or "lite" contributing resources are used. <!-- RN 31488 -->
 
 - **Custom Events**: Determines whether event customization is enabled, which allows the user to add extra events to a booking.
 
@@ -248,4 +248,4 @@ The settings on this subtab are used to export and import the configuration for 
 
 - **Restore Settings**: Use this option to restore settings **from the same DMS**. The button opens a pop-up window where you can select a file to restore. The setting *DMA IDs to Store Reservations* or *Hosting DMA IDs to Orchestrate Reservation* is included in the restored settings.
 
-- **Full Configuration Export**: Exports the full configuration of the Booking Manager to the *Skyline Booking Manager* > *Full Configurations* documents folder. The result of the export will be displayed in a pop-up window<!--  RN 33452 -->.
+- **Full Configuration Export**: Exports the full configuration of the Booking Manager and all associated SRM components (service definitions, custom scripts, functions, etc.) to the *Skyline Booking Manager* > *Full Configurations* documents folder. The result of the export will be displayed in a pop-up window<!--  RN 33452 -->.
