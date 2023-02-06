@@ -12,3 +12,5 @@ Data Aggregator is a DxM ([DataMiner Extension Module](xref:DataMinerExtensionMo
 
 - [Configuring GQI queries](xref:Data_Aggregator_queries)
 
+> [!IMPORTANT]
+> As no authentication is required to use Data Aggregator (including its REST API and WebSocket interface), in principle anyone could access it. To restrict access, use a firewall.
