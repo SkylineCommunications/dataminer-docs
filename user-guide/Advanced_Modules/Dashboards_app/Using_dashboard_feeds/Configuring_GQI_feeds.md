@@ -42,15 +42,15 @@ Available from DataMiner 10.3.0/10.2.4 onwards. Retrieves external data based on
 
 ### Get trend data patterns
 
-Available from DataMiner 10.3.3/10.4.0 onwards. Retrieves all pattern matching tags created in the DataMiner System.
+Available from DataMiner 10.3.3/10.4.0 onwards. Retrieves all pattern matching tags created in the DataMiner System. <!-- RN 35027 -->
 
 ### Get trend data pattern events
 
-Available from DataMiner 10.3.3/10.4.0 onwards. Retrieves all pattern occurrences detected in the DataMiner System. The data contains time range metadata on each row. Each time range holds the start and end time of the event in question. When a table row is selected, the time range will be exposed as a feed.
+Available from DataMiner 10.3.3/10.4.0 onwards. Retrieves all pattern occurrences detected in the DataMiner System. The data contains time range metadata on each row. Each time range holds the start and end time of the event in question. When a table row is selected, the time range will be exposed as a feed. <!-- RN 35027 -->
 
 ### Get behavioral change events
 
-Available from DataMiner 10.3.3/10.4.0 onwards. Retrieves all behavioral anomalies detected in the DataMiner System. The data contains time range metadata on each row. Each time range holds the start and end time of the event in question. When a table row is selected, the time range will be exposed as a feed.
+Available from DataMiner 10.3.3/10.4.0 onwards. Retrieves all behavioral anomalies detected in the DataMiner System. The data contains time range metadata on each row. Each time range holds the start and end time of the event in question. When a table row is selected, the time range will be exposed as a feed. <!-- RN 35027 -->
 
 #### Configuring an external data source in a query
 
