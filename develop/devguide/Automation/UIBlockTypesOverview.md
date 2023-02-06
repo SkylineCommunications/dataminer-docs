@@ -24,6 +24,27 @@ The [UIBlockType](xref:Skyline.DataMiner.Automation.UIBlockType) enum defines di
 |Time     |Item that displays a time value.         |
 |TreeView     |Tree view control.         |
 
+
+## UIBuilder
+
+To create these UIBlocks, a UIBuilder should be defined with a width, RowDefs and ColumnDefs.
+
+```csharp
+var MyDialogBox = new UIBuilder() { Width = 800, RowDefs = "auto;auto", ColumnDefs = "auto;auto" };
+MyDialogBox.RequireResponse = true;   	
+	
+//UIBlocks  
+            
+var results = engine.ShowUI(MyDialogBox);
+```
+
+## Getting input
+
+Some of these UIBlocks use the "DestVar" property to read out input. To get the input of that DestVar, use GetString(). See [DestVar](xref:Skyline.DataMiner.Automation.UIBlockDefinition#Skyline_DataMiner_Automation_UIBlockDefinition_DestVar).
+```C#
+var input = results.GetString("destVarName")
+```
+
 ## Button
 
 Allows you to define a newly created dialog box item as a button.
@@ -31,22 +52,41 @@ Allows you to define a newly created dialog box item as a button.
 Example:
 
 ```csharp
-UIBlockDefinition blockItem = new UIBlockDefinition();
-blockItem.Type = UIBlockType.Button;
-...
+UIBlockDefinition blockItem = new UIBlockDefinition
+{
+  Type = UIBlockType.Button,
+  Text = "Enter",
+  DestVar = "ButtonVar"
+};
 MyDialogBox.AppendBlock(blockItem);
+
+MyDialogBox.RequireResponse = true;
+
+var results = engine.ShowUI(MyDialogBox);
+
+if (results.WasButtonPressed("ButtonVar"))
+{
+  //Do something
+}
 ```
 
 ## Calendar
 
 Allows you to define a newly created dialog box item as a calendar control.
 
+To have a certain placeholder in the calender, use [InitialValue](xref:Skyline.DataMiner.Automation.UIBlockDefinition#Skyline_DataMiner_Automation_UIBlockDefinition_InitialValue). In the Calender UIBlockType the value is expected to be a string in the "(dd/MM/yyyy HH:mm:ss)" format.
+
 Example:
 
 ```csharp
-UIBlockDefinition blockItem = new UIBlockDefinition();
-blockItem.Type = UIBlockType.Calendar;
-...
+UIBlockDefinition blockItem = new UIBlockDefinition
+{
+  Type = UIBlockType.Calendar,
+  InitialValue = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss"),
+  DestVar = "InputCalendar",
+  Row = 1,
+  Column = 0,
+};
 MyDialogBox.AppendBlock(blockItem);
 ```
 
@@ -54,12 +94,14 @@ MyDialogBox.AppendBlock(blockItem);
 
 Allows you to define a newly created dialog box item as a checkbox.
 
-Example:
-
 ```csharp
-UIBlockDefinition blockItem = new UIBlockDefinition();
-blockItem.Type = UIBlockType.CheckBox;
-...
+UIBlockDefinition blockItem = new UIBlockDefinition
+{
+  Type = UIBlockType.CheckBox,
+  Text = "Option1",	
+  Row = 1,
+  Column = 1
+};
 MyDialogBox.AppendBlock(blockItem);
 ```
 
@@ -70,10 +112,15 @@ Allows you to define a newly created dialog box item as a list of checkboxes.
 Example:
 
 ```csharp
-UIBlockDefinition blockItem = new UIBlockDefinition();
-blockItem.Type = UIBlockType.CheckBoxList;
-...
-MyDialogBox.AppendBlock(blockItem);
+var checkBoxList = new UIBlockDefinition
+{
+  Type = UIBlockType.CheckBoxList,
+  Row = 0,
+  Column = 3
+};
+checkBoxList.AddCheckBoxListOption("Option1");
+checkBoxList.AddCheckBoxListOption("Option2");
+MyDialogBox.AppendBlock(checkBoxList);
 ```
 
 ## DropDown
@@ -83,10 +130,22 @@ Allows you to define a newly created dialog box item as a selection box.
 Example:
 
 ```csharp
-UIBlockDefinition blockItem = new UIBlockDefinition();
-blockItem.Type = UIBlockType.DropDown;
-...
-MyDialogBox.AppendBlock(blockItem);
+var dropDownOptions = new List<string>{ "1", "2", "3", "4", "5" };
+var initialValue = "--Select--";
+UIBlockDefinition blockItem = new UIBlockDefinition
+{
+  Type = UIBlockType.DropDown,
+  Text = "DropDown1",
+  InitialValue = initialValue,
+  Row = 1,
+  Column = 1, 
+  Width = 200
+};		
+
+foreach (string dropDownOption in dropDownOptions)
+  blockItem.AddDropDownOption(dropDownOption);
+
+MyDialogBox.AppendBlock(blockItem);	
 ```
 
 ## Executable
@@ -129,9 +188,14 @@ Available from DataMiner 10.0.0/10.0.2 onwards.
 Example:
 
 ```csharp
-UIBlockDefinition uiBlock = new UIBlockDefinition();
-uiBlock.Type = UIBlockType.FileSelector;
-uiBlock.DestVar = "varUserUploadedFile";
+UIBlockDefinition blockItem = new UIBlockDefinition
+{
+  Type = UIBlockType.FileSelector,
+  DestVar = "varUserUploadedFile",
+  Row = 1,
+  Column = 1
+};
+MyDialogBox.AppendBlock(blockItem);
 ```
 
 When the UI is then shown using *Engine#ShowUI(...)*, *UIResults* will contain the path to the file:
@@ -152,7 +216,24 @@ All files uploaded by users will by default be placed in the *C:\\Skyline DataMi
 
 Allows you to define a newly created dialog box item displaying a numeric value.
 
-The initial value has to have the following format:
+Example of a number range between 0 and 100 with step size of 1 and an intial value of 5:
+
+```csharp
+UIBlockDefinition blockItem = new UIBlockDefinition
+{
+  Type = UIBlockType.Numeric,
+  DestVar = "NumericVariable",
+  InitialValue = "5",
+  RangeHigh = 100,
+  RangeLow = 0,
+  RangeStep = 1,
+  Row = 1,
+  Column = 1
+};
+MyDialogBox.AppendBlock(blockItem);
+```
+
+The initial value has to be a string of an integer or have the following format:
 
 ```csharp
 [DoubleValue];[Boolean];[SelectedDiscreetString]
@@ -202,12 +283,20 @@ uib.AppendBlock(numericBlock);
 
 Allows you to define a newly created dialog box item as a text item displaying the value of a Parameter.
 
+In the *Extra* property we enter the information to find the parameter. See [Extra](xref:Skyline.DataMiner.Automation.UIBlockDefinition#Skyline_DataMiner_Automation_UIBlockDefinition_Extra).
+
 Example:
 
 ```csharp
-UIBlockDefinition blockItem = new UIBlockDefinition();
-blockItem.Type = UIBlockType.Parameter;
-...
+UIBlockDefinition blockItem = new UIBlockDefinition
+{
+  Type = UIBlockType.Parameter,
+  DestVar = "Input",
+  InitialValue = initialValue,
+  WantsOnChange = true,
+  DisplayFilter = true,
+  Extra = $"{dmaID}/{elementID}:{parameterID}"
+};
 MyDialogBox.AppendBlock(blockItem);
 ```
 
@@ -218,8 +307,15 @@ Allows you to define a password box. Available from DataMiner 9.6.6 onwards.
 Example:
 
 ```csharp
-UIBlockDefinition blockPasswordBox = new UIBlockDefinition();
-blockPasswordBox.Type = UIBlockType.PasswordBox;
+UIBlockDefinition blockItem = new UIBlockDefinition
+{
+  Type = UIBlockType.PasswordBox,
+  DestVar = "Password",
+  HasPeekIcon = true,
+  Row = 1,
+  Column = 1
+};
+MyDialogBox.AppendBlock(blockItem);
 ```
 
 Optionally, you can set the *HasPeekIcon* property to display an icon that, when clicked, will allow you to display the value inside the password box. See [HasPeekIcon](xref:Skyline.DataMiner.Automation.UIBlockDefinition#Skyline_DataMiner_Automation_UIBlockDefinition_HasPeekIcon).
@@ -231,14 +327,22 @@ Allows you to define a radio button list. Available from DataMiner 9.6.6 onwards
 Example:
 
 ```csharp
-UIBlockDefinition blockItem = new UIBlockDefinition();
-blockItem.Type = UIBlockType.RadioButtonList;
-...
+var radioButtonListItems = new List<string> { "Option 1", "Option 2", "Option 3" };
+
+UIBlockDefinition blockItem = new UIBlockDefinition
+{
+  Type = UIBlockType.RadioButtonList,
+  DestVar = "ChoiceOption",
+  InitialValue = string.Empty,
+  Row = 1,
+  Column = 1
+};
+
 foreach (string item in radioButtonListItems)
 {
- blockItem.AddRadioButtonListOption(item);
+  blockItem.AddRadioButtonListOption(item);
 }
-...
+
 MyDialogBox.AppendBlock(blockItem);
 ```
 
@@ -252,9 +356,13 @@ Allows you to define a newly created dialog box item as a text item displaying a
 Example:
 
 ```csharp
-UIBlockDefinition blockItem = new UIBlockDefinition();
-blockItem.Type = UIBlockType.StaticText;
-...
+UIBlockDefinition blockItem = new UIBlockDefinition
+{
+  Type = UIBlockType.StaticText,
+  Text = "Static Text",
+  Row = 1,
+  Column = 1
+};
 MyDialogBox.AppendBlock(blockItem);
 ```
 
@@ -265,9 +373,14 @@ Allows you to define a newly created dialog box item as a box into which a user 
 Example:
 
 ```csharp
-UIBlockDefinition blockItem = new UIBlockDefinition();
-blockItem.Type = UIBlockType.TextBox;
-...
+UIBlockDefinition blockItem = new UIBlockDefinition
+{
+  Type = UIBlockType.TextBox,
+  DestVar = "InputText",
+  InitialValue = "Default text",
+  Row = 1,
+  Column = 1
+};
 MyDialogBox.AppendBlock(blockItem);
 ```
 
@@ -278,12 +391,26 @@ MyDialogBox.AppendBlock(blockItem);
 
 Allows you to define a newly created dialog box item as an item displaying a time value.
 
+In the ConfigOptions we define the minimum and maximum time range. See [ConfigOptions](xref:Skyline.DataMiner.Automation.UIBlockDefinition#Skyline_DataMiner_Automation_UIBlockDefinition_ConfigOptions).
+
+In the example we create a timespan block with a minimum of 1 hour and maximum of 2 days.
+
 Example:
 
 ```csharp
-UIBlockDefinition blockItem = new UIBlockDefinition();
-blockItem.Type = UIBlockType.Time;
-...
+UIBlockDefinition blockItem = new UIBlockDefinition
+{
+  Type = UIBlockType.Time,
+  DestVar = "InputText",
+  InitialValue = "",
+  Row = 1,
+  Column = 1,
+  ConfigOptions = new AutomationTimeUpDownOptions()
+  {
+    Minimum = TimeSpan.FromHours(1),
+    Maximum = TimeSpan.FromDays(2)
+  }
+};
 MyDialogBox.AppendBlock(blockItem);
 ```
 
@@ -310,55 +437,36 @@ To retrieve the results:
 Example:
 
 ```csharp
-do
+UIBlockDefinition blockItem = new UIBlockDefinition
 {
-     UIBuilder uib = new UIBuilder();
-     uib.Title = "Treeview - default";
-     uib.RequireResponse = true;
-     uib.RowDefs = "*,*";
-     uib.ColumnDefs = "*";
-    
-     UIBlockDefinition tree = new UIBlockDefinition();
-     tree.Type = UIBlockType.TreeView;
-     tree.Row = 0;
-     tree.Column = 0;
-     tree.DestVar = "treevar";
-     tree.TreeViewItems = new List<TreeViewItem>
-     {
-         new TreeViewItem("Core Teams", "1", new List<TreeViewItem>
-         {
-             new TreeViewItem("Team A", "1/1", new List<TreeViewItem>
-             {
-                 new TreeViewItem("Brian", "1/1/1", true) { ItemType = TreeViewItem.TreeViewItemType.CheckBox },
-                 new TreeViewItem("John", "1/1/2"){ ItemType = TreeViewItem.TreeViewItemType.CheckBox },
-                 new TreeViewItem("Kevin", "1/1/3", true){ ItemType = TreeViewItem.TreeViewItemType.CheckBox },
-                 new TreeViewItem("David", "1/1/4"){ ItemType = TreeViewItem.TreeViewItemType.CheckBox },
-                 new TreeViewItem("Joe", "1/1/5", true){ ItemType = TreeViewItem.TreeViewItemType.CheckBox }
-             }){ ItemType = TreeViewItem.TreeViewItemType.CheckBox },
-             new TreeViewItem("Team B", "1/2", new List<TreeViewItem>
-             {
-                 new TreeViewItem("Jane", "1/2/1"){ ItemType = TreeViewItem.TreeViewItemType.CheckBox },
-                 new TreeViewItem("Sarah", "1/2/2"){ ItemType = TreeViewItem.TreeViewItemType.CheckBox },
-                 new TreeViewItem("Emely", "1/2/3"){ ItemType = TreeViewItem.TreeViewItemType.CheckBox },
-                 new TreeViewItem("Anne", "1/2/4"){ ItemType = TreeViewItem.TreeViewItemType.CheckBox },
-                 new TreeViewItem("Florence", "1/2/5"){ ItemType = TreeViewItem.TreeViewItemType.CheckBox }
-             }) { ItemType = TreeViewItem.TreeViewItemType.CheckBox }
-         }){ ItemType = TreeViewItem.TreeViewItemType.CheckBox },
-         new TreeViewItem("Team C", "2") { ItemType = TreeViewItem.TreeViewItemType.CheckBox }
-     };
-    
-     uib.AppendBlock(tree);
-    
-     UIBlockDefinition next = new UIBlockDefinition();
-     next.Type = UIBlockType.Button;
-     next.Row = 1;
-     next.Column = 0;
-     next.Text = "Next";
-     next.DestVar = "Next";
-     uib.AppendBlock(next);
-    
-     _treeResults = _engine.ShowUI(uib);
-} while (!_treeResults.WasButtonPressed("Next"));
-
-ShowResult();
+  Type = UIBlockType.TreeView,
+  DestVar = "TreeVar",
+  Row = 1,
+  Column = 1,
+  TreeViewItems =
+    new List<TreeViewItem>
+    {
+      new TreeViewItem("Core Teams", "1", new List<TreeViewItem>
+      {
+        new TreeViewItem("Team A", "1/1", new List<TreeViewItem>
+        {
+          new TreeViewItem("Brian", "1/1/1", true) { ItemType = TreeViewItem.TreeViewItemType.CheckBox },
+          new TreeViewItem("John", "1/1/2"){ ItemType = TreeViewItem.TreeViewItemType.CheckBox },
+          new TreeViewItem("Kevin", "1/1/3", true){ ItemType = TreeViewItem.TreeViewItemType.CheckBox },
+          new TreeViewItem("David", "1/1/4"){ ItemType = TreeViewItem.TreeViewItemType.CheckBox },
+          new TreeViewItem("Joe", "1/1/5", true){ ItemType = TreeViewItem.TreeViewItemType.CheckBox }
+        }){ ItemType = TreeViewItem.TreeViewItemType.CheckBox },
+        new TreeViewItem("Team B", "1/2", new List<TreeViewItem>
+        {
+          new TreeViewItem("Jane", "1/2/1"){ ItemType = TreeViewItem.TreeViewItemType.CheckBox },
+          new TreeViewItem("Sarah", "1/2/2"){ ItemType = TreeViewItem.TreeViewItemType.CheckBox },
+          new TreeViewItem("Emely", "1/2/3"){ ItemType = TreeViewItem.TreeViewItemType.CheckBox },
+          new TreeViewItem("Anne", "1/2/4"){ ItemType = TreeViewItem.TreeViewItemType.CheckBox },
+          new TreeViewItem("Florence", "1/2/5"){ ItemType = TreeViewItem.TreeViewItemType.CheckBox }
+        }) { ItemType = TreeViewItem.TreeViewItemType.CheckBox }
+      }){ ItemType = TreeViewItem.TreeViewItemType.CheckBox },
+      new TreeViewItem("Team C", "2") { ItemType = TreeViewItem.TreeViewItemType.CheckBox }
+    }
+};
+MyDialogBox.AppendBlock(blockItem);
 ```
