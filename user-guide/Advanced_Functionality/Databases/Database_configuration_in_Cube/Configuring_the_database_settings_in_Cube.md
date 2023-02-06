@@ -33,7 +33,7 @@ For a Cassandra cluster database (i.e. one Cassandra cluster that is used as the
 
    - **Password**: Password with which the DMA has to log on to Cassandra.
 
-1. From DataMiner Cube 10.3 [CU0]/10.3.2 onwards, you can also specify the database settings for the Elasticsearch nodes:
+1. From DataMiner Cube 10.3 [CU0]/10.3.3 onwards, you can also specify the database settings for the Elasticsearch. Note that if the server supports [OpenSearch](xref:OpenSearch_database), Cube will also provide this option and this can be configured instead of Elastic:
 
    - **Database**: The type of database, i.e. *Elasticsearch*.
 
@@ -41,9 +41,9 @@ For a Cassandra cluster database (i.e. one Cassandra cluster that is used as the
 
    - **DB server**: The IP addresses or hostnames of the Elastic nodes, separated by commas. If TLS is enabled the full url must be specified, e.g. https://elastic.mydomain.local. If no port is provided, port 9200 is used by default.
 
-   - **User**: Username with which the DMA has to log on to Elastic.
+   - **User**: Username with which the DMA has to log in (if applicable).
 
-   - **Password**: Password with which the DMA has to log on to Elastic.
+   - **Password**: Password with which the DMA has to log in (if applicable).
 
    ![Cube Cassandra Cluster Configuration](~/user-guide/images/CassandraCluster_CubeConfig.png)
 
@@ -97,12 +97,16 @@ In case a separate Cassandra cluster is used per DMA, configure the settings as 
 
 ***
 
-## Amazon Keyspaces database
+## Amazon Keyspaces
 
 > [!IMPORTANT]
 > An Amazon Keyspaces database requires a separate indexing database.
 >
 > For information on how to configure an indexing database, see [ElasticSearch database](xref:Elasticsearch_database) or [OpenSearch database](xref:OpenSearch_database).
+
+> [!NOTE]
+> If you don't see the `Amazon Keyspaces` option, it means your server is not compatible because it is not running version 10.3.0 [CU0]/10.3.3 or higher.
+
 To configure the connection to an [Amazon Keyspaces database](xref:Amazon_Keyspaces_Service), configure the settings as follows:
 
 1. In DataMiner Cube, go to *System Center* > *Database*.
@@ -113,7 +117,7 @@ To configure the connection to an [Amazon Keyspaces database](xref:Amazon_Keyspa
 
    - **Database**: The type of database, i.e. *Amazon Keyspaces*.
 
-   - **Keyspace prefix**: The name all Amazon Keyspaces will be prefixed with. This will be identical for all DMAs in the same cluster.
+   - **Keyspace prefix**: The name all Amazon Keyspaces will be prefixed with. This will be identical for all DMAs in the DMS.
 
    - **DB Server**: The url of the [global endpoint](https://docs.aws.amazon.com/keyspaces/latest/devguide/programmatic.endpoints.html) of the region your Amazon Keyspaces cluster is in. (e.g. `cassandra.eu-north-1.amazonaws.com`).
 
@@ -123,15 +127,15 @@ To configure the connection to an [Amazon Keyspaces database](xref:Amazon_Keyspa
 
 1. Restart the DMS.
 
-   This can take multiple minutes the first time, as the keyspaces and tables will be created. In case of trouble, you can find the relevant logging in the *SLDBConnection.txt* file.
+   The first restart after configuring Amazon Keyspaces can take up to 15 minutes extra on top of the normal start up time, as the keyspaces and tables will be created. In case of trouble, you can find the relevant logging in the *SLDBConnection.txt* file.
 
 ![Cube Database Configuration](~/user-guide/images/aks_cube_config.png)<br>
-*DataMiner 10.3.2 example configuration*
+*DataMiner 10.3.3 example configuration*
 
-> [!IMPORTANT]
-> If you don't see the `Amazon Keyspaces` option, it means your server is not compatible with Amazon Keyspaces yet.
+## Amazon OpenSearch Service
 
-## Amazon OpenSearch Service database
+> [!NOTE]
+> Ensure your server version is compatible for OpenSearch. Cube will display `Elasticsearch/OpenSearch` instead of `Elasticsearch` if your server is compatible (10.3 [CU0]/10.3.3).
 
 1. In DataMiner Cube, go to *System Center* > *Database*.
 
@@ -143,14 +147,11 @@ To configure the connection to an [Amazon Keyspaces database](xref:Amazon_Keyspa
 
    - **Database prefix**: The name all indices will be prefixed with. This will be identical for all DMAs in the same cluster.
 
-   - **DB Server**: The full url of your Amazon OpenSearch Service endpoint. THe port is also required, as it is not the default 9200 but 443, for example: `https://search-mydomain-123456798.eu-north-1.es.amazonaws.com:443/`
+   - **DB Server**: The full url of your Amazon OpenSearch Service endpoint, for example: `https://search-mydomain-123456798.eu-north-1.es.amazonaws.com/`
 
-   - **User**: The username of your master user of your domain
+   - **User**: The username of your master user of your domain.
 
-   - **Password**: The password of your master user of your domain
-
-    > [!IMPORTANT]
-    > Ensure your server version is compatible for OpenSearch. Cube will display `Elasticsearch/OpenSearch` instead of `Elasticsearch` if your server is compatible.
+   - **Password**: The password of your master user of your domain.
 
    ![OpenSearch Cube Config](~/user-guide/images/Amazon_OpenSearch_CubeConfig.png)
 

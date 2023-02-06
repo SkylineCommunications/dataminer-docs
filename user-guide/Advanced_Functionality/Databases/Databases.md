@@ -14,7 +14,7 @@ This section consists of the following topics:
 
 - [Elasticsearch database](xref:Elasticsearch_database)
 
-- [Amazon Keyspaces database](xref:Amazon_Keyspaces_Service)
+- [Amazon Keyspaces Service](xref:Amazon_Keyspaces_Service)
 
 - [OpenSearch database](xref:OpenSearch_database)
 

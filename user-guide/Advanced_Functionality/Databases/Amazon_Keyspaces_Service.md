@@ -4,10 +4,17 @@ uid: Amazon_Keyspaces_Service
 
 # Amazon Keyspaces Service
 
-From DataMiner 10.3.0 [CU0]/10.3.2 onwards, it is possible to use the Amazon Keyspaces Service on AWS. You can use this as an alternative for a Cassandra Cluster setup (see [Supported system data storage architectures](xref:Supported_system_data_storage_architectures)).
+From DataMiner 10.3.0 [CU0]/10.3.3 onwards, it is possible to use the Amazon Keyspaces Service on AWS. You can use this as an alternative for a Cassandra Cluster setup (see [Supported system data storage architectures](xref:Supported_system_data_storage_architectures)).
 
 > [!NOTE]
-> Note that Amazon Keyspaces does not support some Cassandra functionality, most notably indices on columns. This causes some queries to be possibly slower for logger tables (including SLAs) on Amazon Keyspaces compared to Cassandra.
+> Note that Amazon Keyspaces does not support all Cassandra functionality, most notably indices on columns. This causes some queries to be possibly slower for logger tables (including SLAs) on Amazon Keyspaces compared to Cassandra.
+>
+> Furthermore, the only consistency level supported is `Local Quorum`, see [docs](https://docs.aws.amazon.com/keyspaces/latest/devguide/consistency.html). This means that no matter the configuration, the consistency level will always be overwritten to `Local Quorum`.
+>
+> Finally the only supported replication strategy is the Amazon Keyspaces specific `Single-Region strategy`. These is not configurable.
+
+> [!NOTE]
+> Migration from existing databases to Amazon Keyspaces is not supported yet.
 
 ## Installing the Starfield certificate
 
@@ -41,9 +48,9 @@ For Amazon Keyspaces, the Starfield certificate must be present on the local Win
 
    ![Add Certificate](~/user-guide/images/aks_add_certificate.png)
 
-## Connecting your DMS to your Amazon Keyspaces database
+## Connecting your DMS to your Amazon Keyspaces
 
-To configure the connection to an Amazon Keyspaces database, configure the settings as detailed under [Amazon Keyspaces database](xref:Configuring_the_database_settings_in_Cube#amazon-keyspaces-database)
+To configure the connection to an Amazon Keyspaces database, configure the settings as detailed under [Amazon Keyspaces](xref:Configuring_the_database_settings_in_Cube#amazon-keyspaces)
 
 > [!IMPORTANT]
 > An Amazon Keyspaces database requires a separate indexing database.
