@@ -1742,6 +1742,64 @@
               topicUid: Configuring_dashboard_access_rights
             - name: Dashboard Gateway troubleshooting
               topicUid: Dashboard_Gateway_troubleshooting
+    - name: DataMiner Object Models (DOM)
+      topicUID: DOM
+      items:
+        - name: DOM objects
+          topicUid: DOM_objects
+          items:
+            - name: SectionDefinition object
+              topicUID: DOM_SectionDefinition
+            - name: DomDefinition object
+              topicUID: DomDefinition
+            - name: DomInstance object
+              topicUID: DomInstance
+            - name: DomTemplate object
+              topicUID: DomTemplate
+            - name: DomBehaviorDefinition object
+              topicUID: DomBehaviorDefinition
+        - name: DOM managers
+          topicUid: DOM_managers
+        - name: DomHelper class
+          topicUid: DomHelper_class
+        - name: DOM events
+          topicUID: DOM_events
+        - name: DOM history
+          topicUID: DOM_history
+        - name: DOM status system
+          topicUID: DOM_status_system
+        - name: DOM actions
+          topicUID: DOM_actions
+        - name: DOM module settings
+          topicUid: DOM_ModuleSettings
+          items:
+            - name: Module ID
+              topicUID: DOM_ModuleId
+            - name: ModuleSections
+              topicUID: DOM_ModuleSections
+            - name: FieldAliases
+              topicUID: DOM_FieldAliases
+            - name: ExecuteScriptOnDomInstanceActionSettings
+              topicUID: ExecuteScriptOnDomInstanceActionSettings
+            - name: DomManagerInformationEventSettings
+              topicUID: DomManagerInformationEventSettings
+            - name: DomInstanceNameDefinition
+              topicUID: DomInstanceNameDefinition
+            - name: ModuleBehaviorDefinition
+              topicUID: DOM_ModuleBehaviorDefinition
+            - name: TtlSettings
+              topicUID: DOM_TtlSettings
+        - name: DOM data storage
+          topicUid: DOM_data_storage
+        - name: DOM examples
+          topicUID: DOM_Invoice_app_example
+          items:
+            - name: Invoice app example
+              topicUID: DOM_Invoice_app_example
+            - name: Status system example
+              topicUID: DOM_status_system_example
+            - name: Altering values of a DomInstance - examples
+              topicUID: DOM_Altering_values_of_a_DomInstance
     - name: Experience and Performance Management
       topicUid: EPM
       items:
@@ -1836,6 +1894,37 @@
           topicUid: Manually_removing_a_job
         - name: Working with job templates
           topicUid: Working_with_job_templates
+    - name: Low-Code Apps
+      topicUID: Application_framework
+      items:
+        - name: Accessing the Low-Code Apps module
+          topicUid: Accessing_custom_apps
+        - name: Creating low-code applications
+          topicUid: Creating_custom_apps
+        - name: Editing a low-code application
+          topicUid: Editing_custom_apps
+        - name: Configuring low-code applications
+          items:
+            - name: Customizing the icon and color of an app
+              topicUid: LowCodeApps_Custom_Icon
+            - name: Configuring a page of a low-code app
+              topicUid: LowCodeApps_page_config
+            - name: Configuring a panel of a low-code app
+              topicUid: LowCodeApps_panel_config
+            - name: Configuring the header bar of a low-code app page
+              topicUid: LowCodeApps_header_config
+            - name: Configuring low-code app events
+              topicUid: LowCodeApps_event_config
+            - name: Configuring security for a low-code app
+              topicUid: LowCodeApps_security_config
+            - name: Retrieving an earlier version of a low-code app
+              topicUid: LowCodeApps_earlier_version
+            - name: 
+              topicUid: LowCodeApps_organizing_landing_page
+        - name: Deleting a low-code application
+          topicUid: Deleting_custom_apps
+        - name: Specifying data input in an app URL
+          topicUID: Specifying_data_input_in_URL
     - name: Maps
       topicUid: maps
       items:
@@ -2162,95 +2251,6 @@
               topicUid: About_DataMiner_elements_using_the_Ticketing_Gateway_API
             - name: Overview of the TicketingGatewayHelper class
               topicUid: Overview_of_the_TicketingGatewayHelper_class
-    - name: Low-Code Apps
-      topicUID: Application_framework
-      items:
-        - name: Accessing the Low-Code Apps module
-          topicUid: Accessing_custom_apps
-        - name: Creating low-code applications
-          topicUid: Creating_custom_apps
-        - name: Editing a low-code application
-          topicUid: Editing_custom_apps
-        - name: Configuring low-code applications
-          items:
-            - name: Customizing the icon and color of an app
-              topicUid: LowCodeApps_Custom_Icon
-            - name: Configuring a page of a low-code app
-              topicUid: LowCodeApps_page_config
-            - name: Configuring a panel of a low-code app
-              topicUid: LowCodeApps_panel_config
-            - name: Configuring the header bar of a low-code app page
-              topicUid: LowCodeApps_header_config
-            - name: Configuring low-code app events
-              topicUid: LowCodeApps_event_config
-            - name: Configuring security for a low-code app
-              topicUid: LowCodeApps_security_config
-            - name: Retrieving an earlier version of a low-code app
-              topicUid: LowCodeApps_earlier_version
-            - name: 
-              topicUid: LowCodeApps_organizing_landing_page
-        - name: Deleting a low-code application
-          topicUid: Deleting_custom_apps
-        - name: Specifying data input in an app URL
-          topicUID: Specifying_data_input_in_URL
-    - name: DataMiner Object Models (DOM)
-      topicUID: DOM
-      items:
-        - name: DOM objects
-          topicUid: DOM_objects
-          items:
-            - name: SectionDefinition object
-              topicUID: DOM_SectionDefinition
-            - name: DomDefinition object
-              topicUID: DomDefinition
-            - name: DomInstance object
-              topicUID: DomInstance
-            - name: DomTemplate object
-              topicUID: DomTemplate
-            - name: DomBehaviorDefinition object
-              topicUID: DomBehaviorDefinition
-        - name: DOM managers
-          topicUid: DOM_managers
-        - name: DomHelper class
-          topicUid: DomHelper_class
-        - name: DOM events
-          topicUID: DOM_events
-        - name: DOM history
-          topicUID: DOM_history
-        - name: DOM status system
-          topicUID: DOM_status_system
-        - name: DOM actions
-          topicUID: DOM_actions
-        - name: DOM module settings
-          topicUid: DOM_ModuleSettings
-          items:
-            - name: Module ID
-              topicUID: DOM_ModuleId
-            - name: ModuleSections
-              topicUID: DOM_ModuleSections
-            - name: FieldAliases
-              topicUID: DOM_FieldAliases
-            - name: ExecuteScriptOnDomInstanceActionSettings
-              topicUID: ExecuteScriptOnDomInstanceActionSettings
-            - name: DomManagerInformationEventSettings
-              topicUID: DomManagerInformationEventSettings
-            - name: DomInstanceNameDefinition
-              topicUID: DomInstanceNameDefinition
-            - name: ModuleBehaviorDefinition
-              topicUID: DOM_ModuleBehaviorDefinition
-            - name: TtlSettings
-              topicUID: DOM_TtlSettings
-        - name: DOM data storage
-          topicUid: DOM_data_storage
-        - name: DOM examples
-          topicUID: DOM_Invoice_app_example
-          items:
-            - name: Invoice app example
-              topicUID: DOM_Invoice_app_example
-            - name: Status system example
-              topicUID: DOM_status_system_example
-            - name: Altering values of a DomInstance - examples
-              topicUID: DOM_Altering_values_of_a_DomInstance
 - name: DataMiner Standard Apps, Frameworks & Solutions
   topicUid: Part5StandardApps
   items:
