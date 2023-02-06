@@ -77,6 +77,8 @@ The following options can be specified in the *ComponentOptions* shape data fiel
   >   | Light | #E5E5E5 (RGB: 229,229,229) |
   >   | Black | #333333 (RGB: 51,51,51)    |
 
+- **SingleSelectionMode**: Available from DataMiner 10.3.4/10.4.0 onwards. This option can be used to set the selection mode of the list view from multiple to single. <!-- RN 35320 -->
+
 ## List view filters
 
 In the Filters shape data field, it is possible to filter which information is displayed in the list view.
