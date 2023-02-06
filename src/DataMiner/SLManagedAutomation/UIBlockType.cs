@@ -194,7 +194,7 @@
 		/// <summary>
 		/// Tree view control.
 		/// </summary>
-		/// <remarks>Available from DataMiner 10.0.10 onwards.</remarks>
+		/// <remarks>Available from DataMiner 10.0.10 onwards. Only supported in web.</remarks>
 		TreeView = 17
 	}
 }

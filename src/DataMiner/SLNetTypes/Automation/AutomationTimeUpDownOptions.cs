@@ -71,14 +71,20 @@ namespace Skyline.DataMiner.Automation
 		/// <value>The default value for the <see cref="AutomationTimeUpDownOptions.ShowSeconds"/> property.</value>
 		public static bool DEFAULT_SHOW_SECONDS { get; protected set; }
 
-		/// <summary>
-		/// Gets or sets the number of digits to be used in order to represent the fractions of seconds.
-		/// </summary>
-		/// <value>The number of digits to be used in order to represent the fractions of seconds.</value>
-		/// <remarks>
-		/// <para>Default: 0.</para>
-		/// </remarks>
-		public int FractionalSecondsDigitsCount { get; set; }
+        /// <summary>
+        /// Gets the default value for the <see cref="AutomationTimeUpDownOptions.ShowTimeUnits"/> property.
+        /// </summary>
+        /// <value>The default value for the <see cref="AutomationTimeUpDownOptions.ShowTimeUnits"/> property.</value>
+        public static Boolean DEFAULT_SHOW_TIMEUNITS { get; protected set; }
+
+        /// <summary>
+        /// Gets or sets the number of digits to be used in order to represent the fractions of seconds.
+        /// </summary>
+        /// <value>The number of digits to be used in order to represent the fractions of seconds.</value>
+        /// <remarks>
+        /// <para>Default: 0.</para>
+        /// </remarks>
+        public int FractionalSecondsDigitsCount { get; set; }
 
 		/// <summary>
 		/// Gets or sets the maximum time span.
@@ -145,9 +151,18 @@ namespace Skyline.DataMiner.Automation
 		public bool ShowSeconds { get; set; }
 
 		/// <summary>
-		/// Initializes a new instance of the <see cref="AutomationTimeUpDownOptions"/> class.
+		/// Gets or sets a value indicating whether to display time labels in web component control.
 		/// </summary>
-		public AutomationTimeUpDownOptions()
+		/// <value><c>true</c> to display time labels in web component control; otherwise, <c>false</c>.</value>
+		/// <remarks>
+		/// <para>Default: <c>false</c>.</para>
+		/// </remarks>
+        public bool ShowTimeUnits { get; set; }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="AutomationTimeUpDownOptions"/> class.
+        /// </summary>
+        public AutomationTimeUpDownOptions()
 		{
 		}
 
