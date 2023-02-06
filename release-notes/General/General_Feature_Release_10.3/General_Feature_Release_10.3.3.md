@@ -184,6 +184,12 @@ Example:
 
 - New format: `Received ACK from SNMP Manager SNMP - LFR for alarm 239/4270232`
 
+#### Support for GQI queries from Data Aggregator with ad hoc data sources [ID_35526]
+
+<!-- MR 10.4.0 - FR 10.3.3 -->
+
+GQI now supports queries from [Data Aggregator](xref:Data_Aggregator_DxM) that use ad hoc data sources.
+
 ### Fixes
 
 #### DataMiner Taskbar Utility: Problem when stopping DataMiner [ID_34790]

@@ -1,24 +1,39 @@
 ---
-uid: Data_Aggregator_settings
+uid: DataAggregator_1.0.0
 ---
 
-# Data Aggregator settings
+# Data Aggregator 1.0.0
 
-Below you can find an overview of the different settings you can configure in the file *appsettings.custom.json*:
+## New features
 
-- [HTTP listening](#http-listening)
+#### New Data Aggregator DxM [ID_34725] [ID_34825] [ID_34914] [ID_34986] [ID_35047] [ID_35072] [ID_35450] [ID_35495]
 
-- [Multi-DMS connection](#multi-dms-connection)
+A new Data Aggregator DxM is now available. It can be used to schedule GQI queries to run periodically at fixed times, dates, or intervals. It can connect to multiple DataMiner Systems and combine the results of the GQI queries executed per DMS into one result. This result can then be exported to a CSV file or made available over a WebSocket connection.
 
-- [Throttling](#throttling)
+##### Installation and setup
 
-- [GQI queries](#gqi-queries)
+1. Make sure DataMiner 10.2.12 or higher is installed on the DataMiner Agents you want to use Data Aggregator with.
 
-- [Jobs](#jobs)
+1. Make sure the CoreGateway DxM is installed on the DataMiner Agents you want to use Data Aggregator with.
 
-- [Export](#export)
+1. Download the installation package for the Data Aggregator DxM from the [Dojo Downloads page](https://community.dataminer.services/downloads/) and install it.
 
-## HTTP listening
+1. Open the folder `C:\Program Files\Skyline Communications\DataMiner DataAggregator`.
+
+1. Create a new file named *appsettings.custom.json*.
+
+   This is the file in which you will be able to customize the default configuration from *appsettings.json*. The settings configured in *appsettings.json* will be merged together with the settings configured in *appsettings.custom.json* and these merged settings will be applied by Data Aggregator.
+
+   > [!NOTE]
+   > Do not make changes to the existing *appsettings.json* file, as this file get overwritten during updates.
+
+1. Configure the necessary settings. See [Settings](#settings).
+
+1. Restart the *DataAggregator* service (e.g. using Windows Task Manager).
+
+##### Settings
+
+**HTTP listening**
 
 Configure which URL or URLs Data Aggregator should listen to. To specify multiple URLs, use semicolons (";") as separators.
 
@@ -35,10 +50,10 @@ For example:
 
 > [!NOTE]
 >
-> - Once the [Data Aggregator setup](xref:Data_Aggregator_install_setup) is complete, if you browse to the configured URL and port, a web UI is displayed where you can start the queries manually, cancel ongoing queries, and check information such as the time it takes to finish a query, the total number of rows, and the number of rows received per second.
+> - Once the Data Aggregator setup is complete, if you browse to the configured URL and port, a web UI is displayed where you can start the queries manually, cancel ongoing queries, and check information such as the time it takes to finish a query, the total number of rows, and the number of rows received per second.
 > - Using the REST API, you can also do certain actions like getting the status of the jobs or manually triggering a specific job. More information is available via the URL `[Your configured URL]/swagger/index.html`, e.g. `http://127.0.0.1:5000/swagger/index.html`.
 
-## Multi-DMS connection
+**Multi-DMS connection**
 
 For every DataMiner System you want Data Aggregator to connect to, you will need to specify the following fields under *BrokerOptions.Clusters*:
 
@@ -88,7 +103,7 @@ For example:
 }
 ```
 
-## Throttling
+**Throttling**
 
 To avoid executing too many queries simultaneously, you can configure throttling. This way you can prevent that your queries take up too many resources from the DataMiner Systems you are querying.
 
@@ -109,9 +124,9 @@ For example:
 }
 ```
 
-## GQI queries
+**GQI queries**
 
-The GQI queries themselves should be configured in separate JSON files. See [Configuring GQI queries for Data Aggregator](xref:Data_Aggregator_queries).
+The GQI queries themselves should be configured in separate JSON files. See [Configuring GQI queries for Data Aggregator](#configuration-of-queries).
 
 In *appsettings.custom.json*, you should then add the files using the **QueryID** and **QueryFile** fields under *QueryReaderOptions.Queries*.
 
@@ -138,7 +153,7 @@ For example:
 }
 ```
 
-## Jobs
+**Jobs**
 
 The configured GQI queries can be used in one or more DataMiner jobs.
 
@@ -146,7 +161,7 @@ Each job can execute an array of queries, each linked to a DataMiner System, so 
 
 The results of each query are added into one table, so that each job results in one table.
 
-Multiple jobs can be configured, each with their own optional [cron trigger](#cron-trigger). You can also overwrite the global export options for a specific job and overwrite the global *QueryExecutorOptions* for a specific query.
+Multiple jobs can be configured, each with their own optional cron trigger (see below). You can also overwrite the global export options for a specific job and overwrite the global *QueryExecutorOptions* for a specific query.
 
 In *appsettings.custom.json*, you can for example configure this as follows:
 
@@ -189,8 +204,6 @@ In *appsettings.custom.json*, you can for example configure this as follows:
 }
 ```
 
-### Cron trigger
-
 Each job can have one or more cron triggers. A cron trigger uses cron expressions to let the job's queries run periodically at fixed times, dates, or intervals. Configuring a cron expression is similar to configuring Unix cron jobs, with slight differences (Data Aggregator makes use of *Quartz.NET*):
 
 - Unix: (minute, hour, day, month, day_of_week, year)
@@ -219,14 +232,12 @@ For example:
 >
 > You can also make use of this [online tool](https://crontab.guru/) to configure your own cron expression. However, note that this uses the **Unix format**, while Data Aggregator uses *Quartz.NET*, which has an additional value for the seconds.
 
-## Export
+**Export**
 
 Data Aggregator can export the data results in different ways, depending on how you configure *appsettings.custom.json*.
 
 > [!NOTE]
 > Instead of the display values, Data Aggregator exports the raw values, so that the values can easily be imported and processed elsewhere.
-
-### Configuring when to export
 
 The export starts when the received data reaches a certain number of rows. You can configure this with the *ExporterOptions.Threshold* field:
 
@@ -239,8 +250,6 @@ For example:
   }
 }
 ```
-
-### Export to CSV files
 
 Under *CSVExporterOptions*, you can enable CSV export and configure the settings for the export:
 
@@ -261,8 +270,6 @@ For example:
   }
 }
 ```
-
-### Export to WebSocket connection
 
 Under *WebSocketExporterOptions*, you can enable the export over the WebSocket connection as follows:
 
@@ -304,3 +311,44 @@ class DataAggregatorTableCell {
     Value: string;
 }
 ```
+
+##### Configuration of queries
+
+Every GQI query you want to execute must be saved in a separate file in JSON format.
+
+To get a correctly configured query, you can make use of the DataMiner Dashboards app:
+
+1. In the DataMiner Dashboards app, [create a dashboard](xref:Creating_a_completely_new_dashboard), and then [create a query](xref:Configuring_GQI_feeds).
+
+1. Visualize this query on the dashboard, for example using the [Table component](xref:DashboardTable).
+
+1. Press F12 to open the developer tools and go to the *Network* tab.
+
+1. Press F5 to refresh the dashboard.
+
+1. In the *Name* column of the *Network* tab, select the *OpenQuerySession* network call.
+
+1. Go to the *Payload* subtab, and copy the value of *query* and *connection* by right-clicking these and selecting *Copy value*.
+
+1. Convert the query using the *ConvertQueryToProtoJson* web method:
+
+   `POST https://dataminer.company.local/API/v1/Internal.asmx/ConvertQueryToProtoJson`
+
+   with payload:
+
+   > ``` json
+   > {
+   >   "connection": "", // copied in previous step
+   >   "query": {} // copied in previous step
+   > }
+   > ```
+
+1. From the received response, copy the value of *d:*.
+
+   The copied value is a JSON-wrapped JSON string.
+
+1. Unwrap the JSON string by replacing all instances of  `\"` with `"`, and all instances of `\\` with `\`.
+
+1. Paste the copied JSON code into a new file and save it as a *.json* file.
+
+1. Add the path to this file to the Data Aggregator configuration file, as mentioned above under [Settings](#settings).

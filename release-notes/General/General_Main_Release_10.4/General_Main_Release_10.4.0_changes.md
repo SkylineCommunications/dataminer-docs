@@ -92,6 +92,12 @@ During a DataMiner upgrade, Microsoft .NET 6.0 will now be installed if not inst
 
 The zoom range of a map can now be set by means of a slider.
 
+#### Support for GQI queries from Data Aggregator with ad hoc data sources [ID_35526]
+
+<!-- MR 10.4.0 - FR 10.3.3 -->
+
+GQI now supports queries from [Data Aggregator](xref:Data_Aggregator_DxM) that use ad hoc data sources.
+
 ### Fixes
 
 #### Problem with Resource Manager when ResourceStorageType was not specified in Resource Manager settings [ID_34981]

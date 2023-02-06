@@ -10,6 +10,9 @@ The Data Aggregator DxM does not necessarily have to be installed on a server ru
 
 - DataMiner 10.2.12 or higher must be installed on the DataMiner Agents you want to use Data Aggregator with.
 
+  > [!NOTE]
+  > If you want to use queries with [ad hoc data sources](xref:Configuring_GQI_feeds#get-ad-hoc-datacustom-data), you will need DataMiner 10.3.3/10.4.0 or higher.
+
 - The CoreGateway DxM must be installed on the DataMiner Agents you want to use Data Aggregator with. To install this DxM, you can use the [DataMiner Cloud Pack](xref:CloudPackages). The DMAs do not have to be connected to dataminer.services.
 
 ## Installing the Data Aggregator DxM
@@ -27,7 +30,7 @@ Download the installation package for the Data Aggregator DxM from the [Dojo Dow
    > [!NOTE]
    > Do not make changes to the existing *appsettings.json* file, as this file get overwritten during updates.
 
-1. Configure the necessary settings. See [Data Aggregator settings]().
+1. Configure the necessary settings. See [Data Aggregator settings](xref:Data_Aggregator_settings).
 
 1. Restart the *DataAggregator* service (e.g. using Windows Task Manager).
 
