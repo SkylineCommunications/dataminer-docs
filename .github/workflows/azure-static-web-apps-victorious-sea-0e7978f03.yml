@@ -24,12 +24,9 @@ jobs:
           CI: true
       - name: Restore NuGet
         run: nuget restore "src/Base Class Library"
-      - name: build metadata
-        run: |
-          docfx metadata -f
       - name: build documentation
         run: |
-          docfx build -f --warningsAsErrors
+          dotnet run --project build
       - name: publish results
         uses: actions/upload-artifact@v3
         with:
