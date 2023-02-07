@@ -97,31 +97,7 @@
 
 		private double CalculateRate(dynamic newCounter, dynamic oldCounter, TimeSpan timeSpan)
 		{
-			unchecked
-			{
-				// Note that the use of "var" without casting only works here because generic type U can currently only be uint or ulong and:
-				// - subtracting 2 uint implicitly returns a uint and handles wraparound nicely.
-				// - subtracting 2 ulong implicitly returns a ulong and handles wraparound nicely.
-				// If generic type U could be of other types, then an explicit casting could be required. Example:
-				// - subtracting 2 ushort implicitly first converts both values to int, subtracts them and returns an int, and does not handle wraparound properly.
-				//   In such a case, an explicit cast to ushort would be required for the wraparound to be properly handled.
-
-				var counterIncrease = newCounter - oldCounter;
-
-				switch (RateBase)
-				{
-					case RateBase.Second:
-						return counterIncrease / timeSpan.TotalSeconds;
-					case RateBase.Minute:
-						return counterIncrease / timeSpan.TotalMinutes;
-					case RateBase.Hour:
-						return counterIncrease / timeSpan.TotalHours;
-					case RateBase.Day:
-						return counterIncrease / timeSpan.TotalDays;
-					default:
-						return counterIncrease / timeSpan.TotalSeconds;
-				}
-			}
+			return 0.0;
 		}
 	}
 
@@ -130,7 +106,7 @@
 	/// This class is meant to be used as base class for more specific RateHelpers depending on the range of counters (<see cref="System.UInt32"/>, <see cref="System.UInt64"/>, etc).
 	/// </summary>
 	[Serializable]
-	public class RateOnDateTime<T, U> : RateHelper<T, U> where U : CounterWithDateTime<T>
+	public class RateOnDateTime<T,U> : RateHelper<T, U> where U : CounterWithDateTime<T>
 	{
 		[JsonConstructor]
 		private protected RateOnDateTime(TimeSpan minDelta, TimeSpan maxDelta, RateBase rateBase) : base(minDelta, maxDelta, rateBase) { }

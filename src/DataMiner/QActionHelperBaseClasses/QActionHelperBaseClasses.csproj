@@ -1,7 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <ProjectGuid>{4C7D2C6E-FD7A-4B3E-960B-D51801F4FE3F}</ProjectGuid>
-    <TargetFramework>net48</TargetFramework>
+    <TargetFramework>netstandard2.0</TargetFramework>
     <AssemblyTitle>QActionHelperBaseClasses</AssemblyTitle>
     <Product>QActionHelperBaseClasses</Product>
     <Copyright>Copyright ©  2022</Copyright>

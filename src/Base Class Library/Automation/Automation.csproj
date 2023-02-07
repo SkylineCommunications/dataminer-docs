@@ -1,8 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <ProjectGuid>{D70FC89C-1D57-49CC-9C28-B9628B12AA16}</ProjectGuid>
     <AssemblyName>Skyline.DataMiner.Library.Automation</AssemblyName>
-    <TargetFramework>net462</TargetFramework>
+    <TargetFramework>netstandard2.0</TargetFramework>
     <AssemblyTitle>Automation</AssemblyTitle>
     <Product>Automation</Product>
     <Copyright>Copyright ©  2018</Copyright>

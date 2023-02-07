@@ -1,7 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <ProjectGuid>{8226E2DC-E6BC-4B07-9468-8046AE6ED5A8}</ProjectGuid>
-    <TargetFramework>net48</TargetFramework>
+    <TargetFramework>netstandard2.0</TargetFramework>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <AssemblyTitle>Skyline.DataMiner.Storage.Types</AssemblyTitle>
     <Product>Skyline.DataMiner.Storage.Types</Product>

@@ -1,7 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <ProjectGuid>{D2D582E9-2B05-4A86-BA19-C619B5E0FDBF}</ProjectGuid>
-    <TargetFramework>net48</TargetFramework>
+    <TargetFramework>netstandard2.0</TargetFramework>
     <AssemblyTitle>Interop.SLDms</AssemblyTitle>
     <Product>Interop.SLDms</Product>
     <Copyright>Copyright ©  2022</Copyright>

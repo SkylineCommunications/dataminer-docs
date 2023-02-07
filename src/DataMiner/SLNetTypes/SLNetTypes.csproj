@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <ProjectGuid>{90D02A1F-5580-4CC6-8E88-43BB53F8D01B}</ProjectGuid>
-    <TargetFramework>net48</TargetFramework>
+    <TargetFramework>netstandard2.0</TargetFramework>
     <AssemblyTitle>SLNetTypes</AssemblyTitle>
     <Product>SLNetTypes</Product>
     <Copyright>Copyright ©  2021</Copyright>
