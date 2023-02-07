@@ -1,7 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <ProjectGuid>{A1E0D82D-F1C4-48BF-A398-DC8B1A965939}</ProjectGuid>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFramework>net48</TargetFramework>
     <AssemblyTitle>SLManagedAutomation</AssemblyTitle>
     <Product>SLManagedAutomation</Product>
     <Copyright>Copyright ©  2022</Copyright>

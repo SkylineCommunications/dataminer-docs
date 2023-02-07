@@ -11,7 +11,7 @@ on:
 
 jobs:
   build_job:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     name: Build Job
     steps:
       - uses: actions/checkout@v3
@@ -23,7 +23,9 @@ jobs:
         env:
           CI: true
       - name: Restore NuGet
-        run: dotnet restore "src/Base Class Library"
+        run: |
+          dotnet restore "src/Base Class Library"
+          dotnet restore "build"
       - name: build documentation
         run: |
           dotnet run --project build

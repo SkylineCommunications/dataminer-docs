@@ -1,7 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <ProjectGuid>{9A0B9116-278C-45E3-99DA-D690E25B3E37}</ProjectGuid>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFramework>net48</TargetFramework>
     <AssemblyTitle>SLManagedScripting</AssemblyTitle>
     <Product>SLManagedScripting</Product>
     <Copyright>Copyright ©  2022</Copyright>

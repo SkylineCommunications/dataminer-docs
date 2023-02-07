@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <AssemblyName>Skyline.DataMiner.Library.Protocol</AssemblyName>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFramework>net462</TargetFramework>
     <AssemblyTitle>Protocol</AssemblyTitle>
     <Product>Protocol</Product>
     <Copyright>Copyright ©  2018</Copyright>

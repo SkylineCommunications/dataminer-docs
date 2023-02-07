@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <ProjectGuid>{D0E8B5C3-F095-4164-A503-572FC93BA075}</ProjectGuid>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFramework>net462</TargetFramework>
     <AssemblyTitle>SLSSH</AssemblyTitle>
     <Product>SLSSH</Product>
     <Copyright>Copyright ©  2022</Copyright>

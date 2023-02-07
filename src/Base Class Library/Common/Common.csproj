@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <AssemblyName>Skyline.DataMiner.Library.Common</AssemblyName>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFramework>net462</TargetFramework>
     <AssemblyTitle>Common</AssemblyTitle>
     <Product>Common</Product>
     <Copyright>Copyright ©  2018</Copyright>

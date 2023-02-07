@@ -1,6 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFramework>net48</TargetFramework>
     <AssemblyTitle>SLLoggerUtil</AssemblyTitle>
     <Product>SLLoggerUtil</Product>
     <Copyright>Copyright ©  2022</Copyright>
