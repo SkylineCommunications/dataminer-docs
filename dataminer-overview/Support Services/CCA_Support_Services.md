@@ -19,7 +19,7 @@ These technical support capabilities include the following:
 
 - If your Agents are cloud connected, your connection to our [CDMR platform](xref:CDMR) (Customer DataMiner Reporting) is automatically enabled. This means daily updates of your system status are sent to us, enabling **proactive support by monitoring the health of your operation**. Also, for existing Agents reporting to CDMR, you will no longer need a mail connection to send the system health information to us.
 
-We are continuing to evolve these remote support features to turn our Operations team into your ultimate DataMiner co-pilot, where you can have peace of mind to get on with running your operation and let us take care of the rest.
+We are continuing to evolve these remote support features to turn our Operations team into your ultimate DataMiner co-pilot, so you can have peace of mind to get on with running your operation and let us take care of the rest.
 
 All this comes at no extra cost for users with a [Perpetual-Use License](xref:Pricing_Perpetual_Use_Licensing). For DataMiner Systems running on the [usage-based services](xref:Pricing_Usage_based_service), this is already the default operational mode.
 
