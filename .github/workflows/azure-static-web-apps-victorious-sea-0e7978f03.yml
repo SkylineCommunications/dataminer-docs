@@ -26,7 +26,7 @@ jobs:
         run: dotnet restore "src/Base Class Library"
       - name: build documentation
         run: |
-          docfx matadata -f
+          docfx metadata -f
           docfx build -f --warningsAsErrors
           dotnet run --project build
       - name: publish results
