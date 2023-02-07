@@ -30,21 +30,15 @@ jobs:
         id: build-documentation
         run: dotnet run --project build | Tee-Object -FilePath log.txt
         shell: powershell
-      - name: 'Upload Artifact'
-        uses: actions/upload-artifact@v3
-        with:
-          name: log
-          path: log.txt
       - name: verify build
         run: |
           with open('log.txt', 'r', encoding='utf-16') as f:
             buildLog = f.read()
-            print(buildLog)
             if not "Build succeeded" in buildLog or not "0 warning(s)" in buildLog:
-              print('warnings detected')
+              print('Warnings detected. See output previous step for details.')
               exit(1)
         shell: python
-      - name: publish results
+      - name: Publish results
         uses: actions/upload-artifact@v3
         with:
           name: _site

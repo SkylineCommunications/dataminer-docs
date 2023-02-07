@@ -31,7 +31,7 @@ In order to keep a logger table from containing too many rows, old entries in a 
 
 In this section:
 
-- <xref:AdvancedLoggerTablesImplementation>
+- <xref:1234AdvancedLoggerTablesImplementation>
 - <xref:AdvancedLoggerTablesQuerying>
 - <xref:AdvancedLoggerTablesExtending>
 - <xref:AdvancedLoggerTablesDefiningDirectConnectionTable>
