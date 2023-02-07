@@ -18,6 +18,8 @@ Certain features introduced from that version of DataMiner onwards, such as the 
 
 - [Configuring multiple Elasticsearch clusters](xref:Configuring_multiple_Elasticsearch_clusters)
 
+- [Manually connecting a DMA to an Elasticsearch cluster](xref:Manually_Connecting_DMA_to_Elasticsearch_Cluster)
+
 > [!NOTE]
 > For information on the system requirements for Elasticsearch, refer to [DataMiner Compute Requirements](https://community.dataminer.services/dataminer-compute-requirements/).
 

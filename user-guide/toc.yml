@@ -1064,6 +1064,8 @@
                 topicUID: Configuring_Elasticsearch_node_remove
             - name: Configuring multiple Elasticsearch clusters
               topicUid: Configuring_multiple_Elasticsearch_clusters
+            - name: Manually connecting a DMA to an Elasticsearch cluster
+              topicUID: Manually_Connecting_DMA_to_Elasticsearch_Cluster
         - name: MySQL database
           topicUID: MySQL_database
           items:
@@ -3200,11 +3202,6 @@
           topicUID: Standalone_Elastic_Backup_Tool
         - name: Standalone Elasticsearch Cluster Installer
           topicUID: Standalone_Elasticsearch_Cluster_Installer
-          items:
-            - name: Standalone Elasticsearch Cluster Installer
-              topicUID: Standalone_Elasticsearch_Cluster_Installer
-            - name: Connecting DataMiner to an Elasticsearch Cluster
-              topicUID: DataMiner_Configuration_External_Cluster
         - name: Sync Check
           topicUID: Sync_Check
         - name: Verify Cluster Events Tool
