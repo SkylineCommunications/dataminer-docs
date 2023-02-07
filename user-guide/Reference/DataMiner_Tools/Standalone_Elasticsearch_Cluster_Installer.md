@@ -14,7 +14,13 @@ You can download this tool from [DataMiner Dojo](https://community.dataminer.ser
 ## Requirements
 
 - Microsoft Windows
+
 - Server without existing Elasticsearch installation
+
+- Every DataMiner Agent in the DataMiner System needs to be connected to the new Elasticsearch cluster
+
+  > [!TIP]
+  > See [Manually connecting a DMA to an Elasticsearch cluster](xref:Manually_Connecting_DMA_to_Elasticsearch_Cluster).
 
 ## Configuration
 
@@ -99,24 +105,25 @@ After installation, Elasticsearch will by default only use 4 GB of heap space. I
 ### Using the Registry Editor
 
 1. Go to `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Apache Software Foundation\Procrun 2.0\elasticsearch-service-x64\Parameters\Java`
-2. Open the *Options* key and locate the `-xmsZg` and `-xmxZg` settings. In both settings, change “Z” to the amount of heap space (in gigabytes) you want Elasticsearch to use (example: -xms16 and -xmx16g). Default: 1
-3. Restart the Elasticsearch service.
+
+1. Open the *Options* key and locate the `-xmsZg` and `-xmxZg` settings. In both settings, change “Z” to the amount of heap space (in gigabytes) you want Elasticsearch to use (example: -xms16 and -xmx16g). Default: 1
+
+1. Restart the Elasticsearch service.
 
 ### Using the Elasticsearch service manager
 
 1. Open a command window and go to the Elasticsearch installation folder. Default: `C:\Program Files\Elasticsearch`.
-2. Go to the bin folder, and run `elasticsearch-service.bat manager`.
-3. In the service manager window, go to the *Java* tab, and locate the `-xmsZg` and `-xmxZg` settings. In both settings, change “Z” to the amount of heap space (in gigabytes) you want Elasticsearch to use (example: -xms16 and -xmx16g). Default: 1
-4. Click *Apply* and then click *OK*.
-5. Restart the Elasticsearch service.
+
+1. Go to the bin folder, and run `elasticsearch-service.bat manager`.
+
+1. In the service manager window, go to the *Java* tab, and locate the `-xmsZg` and `-xmxZg` settings. In both settings, change “Z” to the amount of heap space (in gigabytes) you want Elasticsearch to use (example: -xms16 and -xmx16g). Default: 1
+
+1. Click *Apply* and then click *OK*.
+
+1. Restart the Elasticsearch service.
 
 > [!NOTE]
 >
 > - Make sure the `-xms` and `-xmx` settings always contain the same value. Do not use different values.
 > - We recommend that you set the `-xms` and `-xmx` settings to a value smaller than 26 GB and always make sure that there is enough memory left for the operating system.
 > - For more information, see [https://www.elastic.co/guide/en/elasticsearch/reference/6.8/heap-size.html](https://www.elastic.co/guide/en/elasticsearch/reference/6.8/heap-size.html).
-
-### Connecting a DataMiner agent to an ElasticSearch cluster
-
-Every DataMiner agent on DMS has to be connected to the new Elasticsearch cluster. For more information see
-[Connect a DataMiner agent to an Elasticsearch cluster](xref:DataMiner_Configuration_External_Cluster).
