@@ -752,3 +752,11 @@ The *PDF* and *Share* option in the Dashboards app are now no longer visible in 
 <!-- MR 10.3.0 - FR 10.2.12 -->
 
 It is now possible to group parameters in a parameter feed that lists EPM parameters.
+
+#### Dashboards app - EPM parameter selector: Data retrieved from the collector that was displayed as a table with a single row will now be displayed as single parameters [ID_35412]
+
+<!-- MR 10.3.0 - FR 10.3.3 -->
+
+In an EPM parameter selector, in some cases, data retrieved from the collector was displayed as a table with a single row, which often had the system name as primary key.
+
+From now on, data retrieved from the collector that used to be displayed as a table with a single row will now be displayed as single parameters (one for every column).

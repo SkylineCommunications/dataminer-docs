@@ -70,6 +70,14 @@ When exporting trend data to CSV, from now on, the *Show average*, *Show minimum
 
 From now on, when SLNet receives an error from the web API after sending a *GetConnection* call, it will log the request and the response in the *SLNet.txt* log file.
 
+#### Dashboards app - EPM parameter selector: Data retrieved from the collector that was displayed as a table with a single row will now be displayed as single parameters [ID_35412]
+
+<!-- MR 10.3.0 - FR 10.3.3 -->
+
+In an EPM parameter selector, in some cases, data retrieved from the collector was displayed as a table with a single row, which often had the system name as primary key.
+
+From now on, data retrieved from the collector that used to be displayed as a table with a single row will now be displayed as single parameters (one for every column).
+
 #### Enhanced performance when opening a web app [ID_35549]
 
 <!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
