@@ -6,6 +6,7 @@
     <Product>Skyline.DataMiner.Storage.Types</Product>
     <Copyright>Copyright ©  2022</Copyright>
     <OutputPath>bin\$(Configuration)\</OutputPath>
+	<ProduceReferenceAssembly>True</ProduceReferenceAssembly>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugType>full</DebugType>
