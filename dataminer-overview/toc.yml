@@ -67,6 +67,8 @@
           topicUid: Overview_Support_upgrade_policy
         - name: Out-of-business-hours support
           topicUid: Overview_Out_Of_Business_Hours_Support
+        - name: CCA Support Services
+          topicUid: CCA_Support_Services
         - name: Support services agreement
           topicUid: Support_services_agreement
     - name: Compliance statements
