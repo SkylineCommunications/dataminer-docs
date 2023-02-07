@@ -11,7 +11,7 @@ on:
 
 jobs:
   build_job:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     name: Build Job
     steps:
       - uses: actions/checkout@v3
@@ -23,9 +23,10 @@ jobs:
         env:
           CI: true
       - name: Restore NuGet
-        run: nuget restore "src/Base Class Library"
+        run: dotnet restore "src/Base Class Library"
       - name: build documentation
         run: |
+          docfx build -f --warningsAsErrors
           dotnet run --project build
       - name: publish results
         uses: actions/upload-artifact@v3
