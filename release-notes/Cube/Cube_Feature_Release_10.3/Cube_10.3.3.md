@@ -239,3 +239,9 @@ When, while configuring an alarm template, you opened the baseline editor and se
 <!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
 
 When you updated an re-applied a service template while a card of a service created based on that particular service template was open, the data shown on the open service card would incorrectly not be updated.
+
+#### DataMiner Cube - Alarm Console: Alarm counters would start to show negative values when you enabled the 'Automatic incident tracking' option of an active alarms tab while a quick filter was applied [ID_35547]
+
+<!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
+
+When you enabled the *Automatic incident tracking* option of an active alarms tab while a quick filter was applied, in some cases, the alarm counters in the footer bar would incorrectly start to show negative values.
