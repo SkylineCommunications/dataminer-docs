@@ -64,6 +64,8 @@ The timeline area of the *Bookings* module can be used as follows:
      This panel allows the following actions:
 
      - To make the timeline move along with the current time, in the lower left corner, select *Follow mode*. This option is also available via the timeline context menu.
+       When you navigate away from the line that represents now and the follow mode is activated, then the follow mode will be paused.
+       This will be activated automatically again when you navigate back in view of the line that represents now.
 
      - To change the time zone for the timeline, in the lower right corner, select a different *Time zone*.
 
