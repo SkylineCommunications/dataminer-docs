@@ -37,7 +37,7 @@ jobs:
           path: log.txt
       - name: verify build
         run: |
-          with open('log.txt', 'r') as f:
+          with open('log.txt', 'r', encoding='utf-16-le') as f:
             buildLog = f.read()
             print(buildLog)
             if not "Build succeeded" in buildLog or not "0 warning(s)" in buildLog:
