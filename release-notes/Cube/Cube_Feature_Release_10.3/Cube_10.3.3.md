@@ -227,3 +227,9 @@ When, in a Visio drawing, shapes have been positioned dynamically, you can re-ar
 <!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
 
 When, in a Visio drawing, you were re-arranging dynamically positioned shapes, an exception could be thrown when you right-clicked a shape to access its context menu.
+
+#### DataMiner Cube - Alarm templates: Trending column in baseline editor would no longer show any icons [ID_35488]
+
+<!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
+
+When, while configuring an alarm template, you opened the baseline editor and selected the *Automatically update the baseline values* option, the *Trending* column will would no longer show an icon when average trending was disabled for the parameter in question.

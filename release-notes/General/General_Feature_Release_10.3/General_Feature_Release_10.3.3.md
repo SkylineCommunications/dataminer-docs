@@ -286,6 +286,12 @@ netsh winhttp set proxy <proxyaddress> <bypasslist>
 
 In a Cassandra database, the "time to live" (TTL) setting of spectrum trace data would not be applied correctly. As a result, this type of data would never be removed.
 
+#### Problem with SLElement when stopping an EPM element [ID_35439]
+
+<!-- MR 10.2.0 [CU13]/10.3.0 [CU1]  - FR 10.3.3 -->
+
+When an EPM element was stopped, in some rare cases, an error could occur in SLElement.
+
 #### SLDataGateway would not correctly return errors when querying SLA logger tables in a Cassandra Cluster [ID_35440]
 
 <!-- MR 10.2.0 [CU12] - FR 10.3.3 -->

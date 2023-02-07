@@ -302,6 +302,12 @@ An `engine.RunClientProgram` overload with two parameters, of which the second o
 RunClientProgram(String applicationPath, bool waitForCompletion)
 ```
 
+#### DataMiner Cube - Alarm templates: Trending column in baseline editor would no longer show any icons [ID_35488]
+
+<!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
+
+When, while configuring an alarm template, you opened the baseline editor and selected the *Automatically update the baseline values* option, the *Trending* column will would no longer show an icon when average trending was disabled for the parameter in question.
+
 #### Business Intelligence: Problem when correcting outages on an SLA with a week-based window [ID_35503]
 
 <!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
