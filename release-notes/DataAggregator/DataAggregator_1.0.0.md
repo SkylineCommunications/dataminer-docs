@@ -6,9 +6,9 @@ uid: DataAggregator_1.0.0
 
 ## New features
 
-#### New Data Aggregator DxM [ID_34725] [ID_34825] [ID_34914] [ID_34986] [ID_35047] [ID_35072] [ID_35450] [ID_35495]
+#### New Data Aggregator module [ID_34725] [ID_34825] [ID_34914] [ID_34986] [ID_35047] [ID_35072] [ID_35450] [ID_35495]
 
-A new Data Aggregator DxM is now available. It can be used to schedule GQI queries to run periodically at fixed times, dates, or intervals. It can connect to multiple DataMiner Systems and combine the results of the GQI queries executed per DMS into one result. This result can then be exported to a CSV file or made available over a WebSocket connection.
+A new Data Aggregator module is now available as a DxM (DataMiner Extension Module). It can be used to schedule GQI queries to run periodically at fixed times, dates, or intervals. It can connect to multiple DataMiner Systems and combine the results of the GQI queries executed per DMS into one result. This result can then be exported to a CSV file or made available over a WebSocket connection.
 
 ##### Installation and setup
 
@@ -18,9 +18,9 @@ A new Data Aggregator DxM is now available. It can be used to schedule GQI queri
 
 1. Make sure CoreGateway 2.12.0 or higher (included in Cloud Pack 2.8.4) is installed on the DataMiner Agents you want to use Data Aggregator with.
 
-1. Download the installation package for the Data Aggregator DxM from the [Dojo Downloads page](https://community.dataminer.services/downloads/) and install it.
+1. In the [Admin app](xref:CloudAdminApp), install the *DataAggregator* DxM on the relevant node. See [Managing the nodes of a cloud-connected DMS](xref:Managing_cloud-connected_nodes).
 
-1. Open the folder `C:\Program Files\Skyline Communications\DataMiner DataAggregator`.
+1. On the server where you installed Data Aggregator, open the folder `C:\Program Files\Skyline Communications\DataMiner DataAggregator`.
 
 1. Create a new file named *appsettings.custom.json* in this folder.
 
@@ -31,7 +31,7 @@ A new Data Aggregator DxM is now available. It can be used to schedule GQI queri
 
 1. Configure the necessary settings. See [Settings](#settings).
 
-1. Restart the *DataAggregator* service (e.g. using Windows Task Manager).
+1. Restart the *DataMiner DataAggregator* service (e.g. using Windows Task Manager).
 
 ##### Settings
 
@@ -56,6 +56,7 @@ For example:
 >
 > - Once the Data Aggregator setup is complete, if you browse to the configured URL and port, a web UI is displayed where you can start the queries manually, cancel ongoing queries, and check information such as the time it takes to finish a query, the total number of rows, and the number of rows received per second.
 > - Using the REST API, you can also do certain actions like getting the status of the jobs or manually triggering a specific job. More information is available via the URL `[Your configured URL]/swagger/index.html`, e.g. `http://127.0.0.1:5000/swagger/index.html`.
+> - Keep in mind that **if there is no firewall in place, anyone can use the web UI and the REST API**, as no authentication is required to use Data Aggregator.
 
 **Multi-DMS connection**
 
@@ -161,7 +162,7 @@ For example:
 
 The configured GQI queries can be used in one or more DataMiner jobs.
 
-Each job can execute an array of queries, each linked to a DataMiner System, so that it is possible to have a query can be for a specific DataMiner System.
+Each job can execute an array of queries, each linked to a DataMiner System, so that it is possible to have a query for a specific DataMiner System.
 
 The results of each query are added into one table, so that each job results in one table.
 

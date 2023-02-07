@@ -37,6 +37,7 @@ For example:
 >
 > - Once the [Data Aggregator setup](xref:Data_Aggregator_install_setup) is complete, if you browse to the configured URL and port, a web UI is displayed where you can start the queries manually, cancel ongoing queries, and check information such as the time it takes to finish a query, the total number of rows, and the number of rows received per second.
 > - Using the REST API, you can also do certain actions like getting the status of the jobs or manually triggering a specific job. More information is available via the URL `[Your configured URL]/swagger/index.html`, e.g. `http://127.0.0.1:5000/swagger/index.html`.
+> - Keep in mind that **if there is no firewall in place, anyone can use the web UI and the REST API**, as no authentication is required to use Data Aggregator.
 
 ## Multi-DMS connection
 
@@ -142,7 +143,7 @@ For example:
 
 The configured GQI queries can be used in one or more DataMiner jobs.
 
-Each job can execute an array of queries, each linked to a DataMiner System, so that it is possible to have a query can be for a specific DataMiner System.
+Each job can execute an array of queries, each linked to a DataMiner System, so that it is possible to have a query for a specific DataMiner System.
 
 The results of each query are added into one table, so that each job results in one table.
 
