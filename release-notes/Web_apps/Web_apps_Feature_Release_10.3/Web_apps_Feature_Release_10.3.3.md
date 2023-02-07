@@ -126,6 +126,12 @@ When, in a dashboard or a low-code app, a *Line & area chart* component was used
 
 In the latter case, it will now instead show a flat line indicating that the resource is not being used.
 
+#### Dashboards app: Problem with line & area chart component when dashboard was shared [ID_35422]
+
+<!-- MR 10.3.0 - FR 10.3.3 -->
+
+When, in a dashboard, a line & area chart component had its *Hide non-trended parameters* option selected, errors could start to appear inside that component when the dashboard was shared.
+
 #### Dashboards app: Problem with 'Preserve feed selections' option [ID_35438]
 
 <!-- MR 10.3.0 - FR 10.3.3 -->
