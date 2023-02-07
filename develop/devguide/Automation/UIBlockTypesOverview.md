@@ -27,7 +27,7 @@ The [UIBlockType](xref:Skyline.DataMiner.Automation.UIBlockType) enum defines di
 
 ## UIBuilder
 
-To create these UIBlocks, a UIBuilder should be defined with a width, RowDefs and ColumnDefs.
+To create these UIBlocks, a UIBuilder should be defined with a Width, RowDefs and ColumnDefs.
 
 ```csharp
 var MyDialogBox = new UIBuilder() { Width = 800, RowDefs = "auto;auto", ColumnDefs = "auto;auto" };
@@ -74,7 +74,7 @@ if (results.WasButtonPressed("ButtonVar"))
 
 Allows you to define a newly created dialog box item as a calendar control.
 
-To have a certain placeholder in the calender, use [InitialValue](xref:Skyline.DataMiner.Automation.UIBlockDefinition#Skyline_DataMiner_Automation_UIBlockDefinition_InitialValue). In the Calender UIBlockType the value is expected to be a string in the "(dd/MM/yyyy HH:mm:ss)" format.
+To have a certain initial value in the calender, use the [InitialValue](xref:Skyline.DataMiner.Automation.UIBlockDefinition#Skyline_DataMiner_Automation_UIBlockDefinition_InitialValue) property. In the Calender UIBlockType the value is expected to be a string in the "(dd/MM/yyyy HH:mm:ss)" format.
 
 Example:
 
@@ -105,9 +105,13 @@ UIBlockDefinition blockItem = new UIBlockDefinition
 MyDialogBox.AppendBlock(blockItem);
 ```
 
+To check if the user ticked the checkbox, see [GetChecked](xref:Skyline.DataMiner.Automation.UIBlockDefinition#Skyline_DataMiner_Automation_UIResults_GetChecked).
+
 ## CheckBoxList
 
 Allows you to define a newly created dialog box item as a list of checkboxes.
+
+We can also differentiate between raw value and display value for the options. Display value is the text the UI will show for the option and the raw value is the value used to set some checkboxes default ticked using InitialValue. See [InitialValue](xref:Skyline.DataMiner.Automation.UIBlockDefinition#Skyline_DataMiner_Automation_UIBlockDefinition_InitialValue).
 
 Example:
 
@@ -116,11 +120,22 @@ var checkBoxList = new UIBlockDefinition
 {
   Type = UIBlockType.CheckBoxList,
   Row = 0,
-  Column = 3
+  Column = 3,
+  DestVar = "list"
 };
 checkBoxList.AddCheckBoxListOption("Option1");
-checkBoxList.AddCheckBoxListOption("Option2");
+checkBoxList.AddCheckBoxListOption("2", "Option2");  //(raw value, display value)
+checkBoxList.AddCheckBoxListOption("3", "Option3"); 
+checkBoxList.InitialValue = "2;3";
 MyDialogBox.AppendBlock(checkBoxList);
+```
+
+To read out which boxes are ticked we use *GetChecked* with the DestVar of the CheckBoxList and the raw value of the option. See [GetChecked](xref:Skyline.DataMiner.Automation.UIBlockDefinition#Skyline_DataMiner_Automation_UIResults_GetChecked).
+
+```csharp
+var results = engine.ShowUI(MyDialogBox);
+
+bool ticked = results.GetChecked("list","2");
 ```
 
 ## DropDown
@@ -324,6 +339,8 @@ Optionally, you can set the *HasPeekIcon* property to display an icon that, when
 
 Allows you to define a radio button list. Available from DataMiner 9.6.6 onwards.
 
+We can also differentiate between raw value and display value for the options. Display value is the text the UI will show for the option and the raw value is the value used to select a radio button selected by default using InitialValue. See [InitialValue](xref:Skyline.DataMiner.Automation.UIBlockDefinition#Skyline_DataMiner_Automation_UIBlockDefinition_InitialValue).
+
 Example:
 
 ```csharp
@@ -333,9 +350,10 @@ UIBlockDefinition blockItem = new UIBlockDefinition
 {
   Type = UIBlockType.RadioButtonList,
   DestVar = "ChoiceOption",
-  InitialValue = string.Empty,
   Row = 1,
-  Column = 1
+  Column = 1,
+  WantsOnChange = true,
+  DisplayFilter = true,
 };
 
 foreach (string item in radioButtonListItems)
@@ -343,7 +361,18 @@ foreach (string item in radioButtonListItems)
   blockItem.AddRadioButtonListOption(item);
 }
 
+blockItem.AddRadioButtonListOption("4", "Option4"); //(raw value, display value)
+blockItem.InitialValue = "4";
+
 MyDialogBox.AppendBlock(blockItem);
+```
+
+To read out which option is selected we use *GetChecked* with the DestVar of the RadioButtonList and the raw value of the option. See [GetChecked](xref:Skyline.DataMiner.Automation.UIBlockDefinition#Skyline_DataMiner_Automation_UIResults_GetChecked).
+
+```csharp
+var results = engine.ShowUI(MyDialogBox);
+
+bool ticked = results.GetChecked("ChoiceOption","4");
 ```
 
 > [!NOTE]
