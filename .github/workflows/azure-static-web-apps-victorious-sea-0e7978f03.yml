@@ -28,7 +28,7 @@ jobs:
           dotnet restore "build"
       - name: Build Documentation
         id: build-documentation
-        run: dotnet run --project build | Tee-Object -file log.txt
+        run: dotnet run --project build | Tee-Object -FilePath log.txt -Encoding utf8
         shell: powershell
       - name: verify build
         run: |
