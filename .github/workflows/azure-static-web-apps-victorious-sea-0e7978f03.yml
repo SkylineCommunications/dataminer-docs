@@ -27,8 +27,16 @@ jobs:
           dotnet restore "src/Base Class Library"
           dotnet restore "build"
       - name: build documentation
+        uses: mathiasvr/command-output@v1
+        id: build-documentation
+        with:
+          run: dotnet run --project build
+      - name: verify build
         run: |
-          dotnet run --project build
+          if not "0 warning(s)" in "${{ steps.build-documentation.outputs.stdout }}"
+            print('warnings detected')
+            exit(1)
+        shell: python
       - name: publish results
         uses: actions/upload-artifact@v3
         with:
