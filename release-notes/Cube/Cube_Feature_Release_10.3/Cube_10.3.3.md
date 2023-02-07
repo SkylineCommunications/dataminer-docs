@@ -232,4 +232,10 @@ When, in a Visio drawing, you were re-arranging dynamically positioned shapes, a
 
 <!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
 
-When, while configuring an alarm template, you opened the baseline editor and selected the *Automatically update the baseline values* option, the *Trending* column will would no longer show an icon when average trending was disabled for the parameter in question.
+When, while configuring an alarm template, you opened the baseline editor and selected the *Automatically update the baseline values* option, the *Trending* column would no longer show an icon when average trending was disabled for the parameter in question.
+
+#### DataMiner Cube - Service templates: Open service card would not be updated when the service template was re-applied [ID_35537]
+
+<!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
+
+When you updated an re-applied a service template while a card of a service created based on that particular service template was open, the data shown on the open service card would incorrectly not be updated.

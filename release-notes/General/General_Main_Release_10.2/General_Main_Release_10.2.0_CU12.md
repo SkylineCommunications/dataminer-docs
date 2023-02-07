@@ -306,10 +306,16 @@ RunClientProgram(String applicationPath, bool waitForCompletion)
 
 <!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
 
-When, while configuring an alarm template, you opened the baseline editor and selected the *Automatically update the baseline values* option, the *Trending* column will would no longer show an icon when average trending was disabled for the parameter in question.
+When, while configuring an alarm template, you opened the baseline editor and selected the *Automatically update the baseline values* option, the *Trending* column would no longer show an icon when average trending was disabled for the parameter in question.
 
 #### Business Intelligence: Problem when correcting outages on an SLA with a week-based window [ID_35503]
 
 <!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
 
 When outages on an SLA with a week-based window were corrected, the *History Statistics Table* that started in the first 9 weeks of every year would incorrectly not get updated.
+
+#### DataMiner Cube - Service templates: Open service card would not be updated when the service template was re-applied [ID_35537]
+
+<!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
+
+When you updated an re-applied a service template while a card of a service created based on that particular service template was open, the data shown on the open service card would incorrectly not be updated.
