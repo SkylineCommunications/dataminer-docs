@@ -157,3 +157,9 @@ When, in a draft version of a low-code app, you opened the version panel and cre
 <!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
 
 Time range feeds would trigger components more often than required, causing them to send an excessive number of requests.
+
+#### Low-code apps: Panels of which the 'Fit to view' option was selected would incorrectly switch to mobile mode [ID_35542]
+
+<!-- MR 10.3.0 - FR 10.3.3 -->
+
+Panels of which the *Fit to view* option was selected would incorrectly switch to mobile mode when their width got too small. From now on, panels of which the *Fit to view* option is selected will never switch to mobile mode.

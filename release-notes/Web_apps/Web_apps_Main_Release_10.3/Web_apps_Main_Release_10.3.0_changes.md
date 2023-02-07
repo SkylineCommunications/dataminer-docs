@@ -373,3 +373,9 @@ When, in a dashboard, a line & area chart component had its *Hide non-trended pa
 When you select the *Preserve feed selections* option for a particular dashboard folder, any feed selection you make in a dashboard in that folder is preserved when you navigate to another dashboard in that same folder.
 
 Up to now, in some cases, one folder would incorrectly take over feed selections from another folder.
+
+#### Low-code apps: Panels of which the 'Fit to view' option was selected would incorrectly switch to mobile mode [ID_35542]
+
+<!-- MR 10.3.0 - FR 10.3.3 -->
+
+Panels of which the *Fit to view* option was selected would incorrectly switch to mobile mode when their width got too small. From now on, panels of which the *Fit to view* option is selected will never switch to mobile mode.
