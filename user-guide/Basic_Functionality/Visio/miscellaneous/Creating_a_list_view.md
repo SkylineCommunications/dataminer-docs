@@ -402,3 +402,31 @@ From DataMiner 10.0.0/10.0.2 onwards, when you manage the column configuration, 
 - **Date (invariant)**: Available from DataMiner 10.2.12/10.3.0 onwards. Expects a Date object, or a string representing a date in UTC time, in [invariant culture](https://learn.microsoft.com/en-us/dotnet/api/system.globalization.cultureinfo.invariantculture).
 
 - **Colored text**: This type is specifically intended for the *AlarmCount* column for services and elements. It visualizes the alarm count by means of text surrounded by a circle showing the alarm level color.
+
+## Copying list data to the Windows clipboard
+
+From DataMiner 10.3.3/10.4.0 onwards, the *ListView* component allows you to copy data from the list to the Windows clipboard.
+
+- To copy the contents of a single cell:
+
+  1. Right-click in the cell.
+
+  1. Choose *Copy \<cell contents\>*.
+
+  > [!NOTE]
+  > When you try to copy the contents of a single cell, the *Copy \<cell contents\>* command will only be available if that cell contains text.
+
+- To copy the contents of one or more rows:
+
+  1. Select the row(s).
+
+  1. Choose *Copy selected row(s)*.
+
+  > [!NOTE]
+  >
+  > - When you copy one or more rows, only cells that contain text will be included. For example, cells that only contain a colored rectangle will not be included.
+  > - The order of the columns will be identical to the order of the columns in the *ListView* component. Column visibility and column order can be configured using the component's column manager.
+
+The data copied to the Windows clipboard is split into a header section and a data section, separated by an empty line. The header section contains the column names, while the data section contains the actual row data.
+
+<!-- RN 35170 -->
