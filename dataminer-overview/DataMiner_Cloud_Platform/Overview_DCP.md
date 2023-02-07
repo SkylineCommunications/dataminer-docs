@@ -18,6 +18,7 @@ The following components are included:
 - [DataMiner Catalog](#dataminer-catalog)
 - [DataMiner Live Sharing Service](#dataminer-live-sharing-service)
 - [Online integration and collaboration through Microsoft Teams](#online-integration-and-collaboration-through-microsoft-teams)
+- [CCA Support Services](#cca-support-services)
 
 > [!TIP]
 > For more information on how to access dataminer.services, see [DataMiner Services](https://skyline.be/dataminer/cloud-services).
@@ -108,3 +109,12 @@ This allows intuitive scenario-driven interactive conversations, for example:
 
 > [!TIP]
 > See also: [DataMiner Teams bot](xref:DataMiner_Teams_bot)
+
+## CCA Support Services
+
+The Operations team at Skyline offers powerful technical support capabilities for DataMiner Agents that are connected to dataminer.services.
+
+This service comes at no extra cost for users with a Perpetual-Use License. For DataMiner Systems running on the usage-based services, this is already the default operational mode.
+
+> [!TIP]
+> See also: [CCA Support Services](xref:CCA_Support_Services)
