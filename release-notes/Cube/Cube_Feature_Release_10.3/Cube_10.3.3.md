@@ -118,6 +118,12 @@ When you try to create a trend pattern tag, an error message will appear when th
 
 From now on, a slightly larger number of missing values will be allowed will you create a trend pattern tag.
 
+#### DataMiner Cube - Alarm Console: No longer possible to enable the 'Automatic incident tracking' option for a history tab [ID_35556]
+
+<!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
+
+From now on, it is no longer possible to enable the *Automatic incident tracking* option for a history tab.
+
 ### Fixes
 
 #### DataMiner Cube - ListView component: Problem with custom property columns and date columns [ID_35218]

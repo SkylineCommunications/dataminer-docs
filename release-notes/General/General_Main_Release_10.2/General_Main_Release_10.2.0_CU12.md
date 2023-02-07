@@ -92,6 +92,18 @@ Also, in the Cube UI, users will receive more concise feedback regarding the imp
 
 Because of a number of enhancements, overall memory usage of the SLAutomation process has improved.
 
+#### Web apps: Enhanced performance when opening a web app [ID_35549]
+
+<!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
+
+Because DataMiner web apps will now be passed to client machines as compressed files, overall performance has increased when opening a web app.
+
+#### DataMiner Cube - Alarm Console: No longer possible to enable the 'Automatic incident tracking' option for a history tab [ID_35556]
+
+<!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
+
+From now on, it is no longer possible to enable the *Automatic incident tracking* option for a history tab.
+
 ### Fixes
 
 #### DataMiner Taskbar Utility: Problem when stopping DataMiner [ID_34790]

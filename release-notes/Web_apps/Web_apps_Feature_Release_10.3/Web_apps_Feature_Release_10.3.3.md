@@ -70,6 +70,12 @@ When exporting trend data to CSV, from now on, the *Show average*, *Show minimum
 
 From now on, when SLNet receives an error from the web API after sending a *GetConnection* call, it will log the request and the response in the *SLNet.txt* log file.
 
+#### Enhanced performance when opening a web app [ID_35549]
+
+<!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
+
+Because DataMiner web apps will now be passed to client machines as compressed files, overall performance has increased when opening a web app.
+
 ### Fixes
 
 #### GQI: Problem when fetching two queries using an external data source with a custom argument of which the ID was set to "Type" [ID_35242]
