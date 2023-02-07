@@ -438,7 +438,7 @@ In the sidebar, next to the *All dashboards* and *Recent dashboards* icons, ther
 - *Private dashboards*, and
 - *Shared dashboards*.
 
-The first icon will only be available when there are private dashboards, the second icon will only be available when the DataMiner Agent is connected to the cloud and there are shared dashboards.
+The first icon will only be available when there are private dashboards, the second icon will only be available when the DataMiner Agent is connected to dataminer.services and there are shared dashboards.
 
 #### Dashboards app - Service definition component: Arrows will now automatically be drawn when a Process Automation definition was added [ID_32960]
 

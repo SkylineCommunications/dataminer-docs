@@ -6,4 +6,4 @@ uid: Accessing_the_Community_module
 
 1. Go to <https://dataminer.services/>, and sign in.
 
-1. On the landing page of the DataMiner Cloud Platform, click *Community*.
+1. On the dataminer.services landing page, click *Community*.

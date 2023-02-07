@@ -8,7 +8,7 @@ There are many ways in which you can make your DataMiner System share informatio
 
 ## DataMiner Sharing
 
-DataMiner Sharing allows you to share live data in the cloud. For more information, see [DataMiner Sharing](xref:Sharing).
+DataMiner Sharing allows you to share live data via dataminer.services. For more information, see [DataMiner Sharing](xref:Sharing).
 
 ## DataMiner Cube
 

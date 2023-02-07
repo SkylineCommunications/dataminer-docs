@@ -355,7 +355,7 @@ These new password boxes can be found in the following locations:
 
 A new theme has been added to DataMiner Cube: “Light”.
 
-Also, the Apps list now contains links to the Catalog, the Cloud Admin app and custom web apps.
+Also, the Apps list now contains links to the Catalog, the Admin app, and custom web apps.
 
 #### Trending: Light bulb icon now indicates that related parameters have been found [ID_34432]
 
