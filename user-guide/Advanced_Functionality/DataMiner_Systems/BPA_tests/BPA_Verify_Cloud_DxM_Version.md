@@ -38,7 +38,7 @@ These are the messages that can appear when the test fails to execute for unexpe
 
 ## Impact when issues are detected
 
-- Impact: Operation of the cloud connection features is affected by this problem.
+- Impact: Operation of the dataminer.services connection features is affected by this problem.
 - Corrective Action: Perform the upgrade or contact Skyline for support.
 
 ## Limitations

@@ -423,9 +423,9 @@
         items:
         - name: DataMiner web apps Feature Release 10.3.3 - Preview
           topicUid: Web_apps_Feature_Release_10.3.3
-  - name: Cloud Platform release notes
+  - name: dataminer.services release notes
     items:
-    - name: DataMiner Cloud Platform change log
+    - name: dataminer.services change log
       topicUid: DCP_change_log
     - name: DataMiner Cloud Pack 2.5
       topicUid: DCP_2.5

@@ -71,7 +71,7 @@ To do so:
 
 1. Click the *Check for updates* button.
 
-1. Enter your DCP user name and password, and click *OK*.
+1. Enter your DCP credentials, and click *OK*.
 
 1. In the list of available protocols, select the protocols you want to install or update, and click *Install*.
 

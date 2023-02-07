@@ -71,7 +71,7 @@ While the initial version already offers access to DataMiner’s vast library of
 The DataMiner Live Sharing Service ensures that the right data is readily available for the right people inside and outside your organization. With a click of a button, you can share any live data on your DataMiner platform. The built-in security allows you to decide which data to share, with whom, and for how long.
 
 - **Easy**: Instantly share any data in your DataMiner System with the click of a button.
-- **Secure**: Share data over a single secured connection via the DataMiner Cloud Platform.
+- **Secure**: Share data over a single secured connection via dataminer.services.
 - **Automated**: Automatically share data with your stakeholders upon certain events in DataMiner (e.g. an incident, a new service set up for a customer, etc.).
 
 ![Shared dashboard](~/dataminer-overview/images/CC_sharing.png)
@@ -87,7 +87,7 @@ The Live Sharing Service includes multiple security gates:
 - Sharing recipients need to authenticate with Azure AD B2C in order to access the shared data.
 
   - Microsoft Azure's cloud-based identity and access management service takes care of the safety of the authentication platform and automatically handles threats like DoS, password spray, or brute force attacks.
-  - Users can use their preferred enterprise or social identity for authentication or create a dedicated DataMiner Cloud Platform account.
+  - Users can use their preferred enterprise or social identity for authentication or create a dedicated dataminer.services account.
   - Compliance with a broad range of global, regional, and industry-specific security standards, including ISO 27017 and CSA-STAR (Security Trust Assurance and Risk).
 
 > [!TIP]
