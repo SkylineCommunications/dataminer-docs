@@ -28,8 +28,13 @@ jobs:
           dotnet restore "build"
       - name: Build Documentation
         id: build-documentation
-        run: dotnet run --project build | Tee-Object -FilePath log.txt -Encoding utf8
+        run: dotnet run --project build | Tee-Object -FilePath log.txt
         shell: powershell
+      - name: 'Upload Artifact'
+        uses: actions/upload-artifact@v3
+        with:
+          name: log
+          path: log.txt
       - name: verify build
         run: |
           with open('log.txt', 'r') as f:
