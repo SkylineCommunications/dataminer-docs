@@ -30,12 +30,15 @@ jobs:
         uses: mathiasvr/command-output@v1
         id: build-documentation
         with:
-          run: dotnet run --project build
+          run: dotnet run --project build | Tee-Object -file log.txt
+          shell: powershell
       - name: verify build
         run: |
-          if not "0 warning(s)" in "${{ steps.build-documentation.outputs.stdout }}"
-            print('warnings detected')
-            exit(1)
+          with open('log.txt', 'r') as f:
+            buildLog = f.read()
+            if not "Build succeeded" in buildLog or not "0 warning(s)" in buildLog:
+              print('warnings detected')
+              exit(1)
         shell: python
       - name: publish results
         uses: actions/upload-artifact@v3
