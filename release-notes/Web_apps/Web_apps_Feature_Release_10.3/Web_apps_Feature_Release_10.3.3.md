@@ -70,6 +70,20 @@ When exporting trend data to CSV, from now on, the *Show average*, *Show minimum
 
 From now on, when SLNet receives an error from the web API after sending a *GetConnection* call, it will log the request and the response in the *SLNet.txt* log file.
 
+#### Dashboards app - EPM parameter selector: Data retrieved from the collector that was displayed as a table with a single row will now be displayed as single parameters [ID_35412]
+
+<!-- MR 10.3.0 - FR 10.3.3 -->
+
+In an EPM parameter selector, in some cases, data retrieved from the collector was displayed as a table with a single row, which often had the system name as primary key.
+
+From now on, data retrieved from the collector that used to be displayed as a table with a single row will now be displayed as single parameters (one for every column).
+
+#### Enhanced performance when opening a web app [ID_35549]
+
+<!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
+
+Because DataMiner web apps will now be passed to client machines as compressed files, overall performance has increased when opening a web app.
+
 ### Fixes
 
 #### GQI: Problem when fetching two queries using an external data source with a custom argument of which the ID was set to "Type" [ID_35242]
@@ -111,6 +125,12 @@ A number of issues regarding the Visual Overview component have been fixed.
 When, in a dashboard or a low-code app, a *Line & area chart* component was used to visualize the capacity usage over time of a resource, it would incorrectly take into account bookings that had been canceled. Also, when two or more bookings ended at the same, it would not show the capacity usage in a correct way, and when there was no booking in the selected time range, it would show an error.
 
 In the latter case, it will now instead show a flat line indicating that the resource is not being used.
+
+#### Dashboards app: Problem with line & area chart component when dashboard was shared [ID_35422]
+
+<!-- MR 10.3.0 - FR 10.3.3 -->
+
+When, in a dashboard, a line & area chart component had its *Hide non-trended parameters* option selected, errors could start to appear inside that component when the dashboard was shared.
 
 #### Dashboards app: Problem with 'Preserve feed selections' option [ID_35438]
 
