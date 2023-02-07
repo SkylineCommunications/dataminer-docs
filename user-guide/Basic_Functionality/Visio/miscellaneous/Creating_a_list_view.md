@@ -45,24 +45,6 @@ To create a list view, add a shape on the Visio page with the following shape da
 
 The following options can be specified in the *ComponentOptions* shape data field:
 
-- **DisableInUseItems=true/false**: When a list view is in edit mode, all list items have a checkbox in front of them. If *DisableInUseItems* is set to “true”, the checkboxes that should not be accessible will be shown as disabled. Default: false.
-
-- **EditMode=true/false**: This option can be used to enable or disable the list view’s edit mode. If set to “true”, checkboxes will appear in front of every row.
-
-- **Recursive**: This option can be used to link a list view to another list view. If, for example, a *ListView* component lists the services, and two other *ListView* components list the source and destination resources available and in use for the services in the first *ListView* component, then the *Recursive* option will allow the source and destination resource *ListView* components to link to the service *ListView* component, supporting any type of service hierarchy.
-
-- **SessionVariablePrefix=\[prefix\]**: When you specify this option, a unique prefix is assigned to the session variable names. This option allows you to avoid having multiple *ListView* components using the exact same session variables.
-
-- **StartTime=** and **EndTime=**: Available from DataMiner 9.6.5 onwards. If the list view is configured to list bookings, you can use these shape data to specify a time range, using an invariant format, for example: MM/DD/YYYY HH:MM:SS. These date/time values will always be **interpreted as UTC date/time values**. If these shape data are not specified, the following values are used by default:
-
-  - StartTime = NOW - 1 day
-  - EndTime = NOW + 1 day
-
-  Note that *SetVar* controls of type *DateTime* will automatically return a date and time in the correct format. See [Creating a DateTime control](xref:Adding_options_to_a_session_variable_control#creating-a-datetime-control). For more information on date and time format strings, see <https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings>.
-
-  > [!NOTE]
-  > If you use the *StartTime* and *EndTime* options for a *ListView* component with source *Reservations* or *Bookings*, the bookings in that time range will be added to the ones already present in the cache. If other bookings were already in the cache, these will be included in the list too. If you only want to include bookings from a specific time range, use a *Filter* shape data field instead.
-
 - **ColorRows=true/false**: Available from DataMiner 10.3.2/10.4.0 onwards. This option can be used to set the highlight color of the list view rows to the booking color. The booking color is a summary of the following reserved booking properties: *VisualForeground*, *VisualBackground*, *VisualSelectedForeground*, and *VisualSelectedBackground*. Each of those properties can be set to a string value representing a hexadecimal value, an (A)RGB value, or a predefined Windows color (the latter is not recommended). <!-- RN 35157 -->
 
   > [!NOTE]
@@ -76,6 +58,26 @@ The following options can be specified in the *ComponentOptions* shape data fiel
   >   | Mixed | #E5E5E5 (RGB: 229,229,229) |
   >   | Light | #E5E5E5 (RGB: 229,229,229) |
   >   | Black | #333333 (RGB: 51,51,51)    |
+
+- **DisableInUseItems=true/false**: When a list view is in edit mode, all list items have a checkbox in front of them. If *DisableInUseItems* is set to “true”, the checkboxes that should not be accessible will be shown as disabled. Default: false.
+
+- **EditMode=true/false**: This option can be used to enable or disable the list view’s edit mode. If set to “true”, checkboxes will appear in front of every row.
+
+- **Recursive**: This option can be used to link a list view to another list view. If, for example, a *ListView* component lists the services, and two other *ListView* components list the source and destination resources available and in use for the services in the first *ListView* component, then the *Recursive* option will allow the source and destination resource *ListView* components to link to the service *ListView* component, supporting any type of service hierarchy.
+
+- **SessionVariablePrefix=\[prefix\]**: When you specify this option, a unique prefix is assigned to the session variable names. This option allows you to avoid having multiple *ListView* components using the exact same session variables.
+
+- **SingleSelectionMode**: Available from DataMiner 10.3.4/10.4.0 onwards. By default, multiple rows can be selected in a list view (e.g. using the Ctrl or Shift key). With this option, you can set the selection mode of the list view to single instead, so that only one row can be selected at a time. <!-- RN 35320 -->
+
+- **StartTime=** and **EndTime=**: Available from DataMiner 9.6.5 onwards. If the list view is configured to list bookings, you can use these shape data to specify a time range, using an invariant format, for example: MM/DD/YYYY HH:MM:SS. These date/time values will always be **interpreted as UTC date/time values**. If these shape data are not specified, the following values are used by default:
+
+  - StartTime = NOW - 1 day
+  - EndTime = NOW + 1 day
+
+  Note that *SetVar* controls of type *DateTime* will automatically return a date and time in the correct format. See [Creating a DateTime control](xref:Adding_options_to_a_session_variable_control#creating-a-datetime-control). For more information on date and time format strings, see <https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings>.
+
+  > [!NOTE]
+  > If you use the *StartTime* and *EndTime* options for a *ListView* component with source *Reservations* or *Bookings*, the bookings in that time range will be added to the ones already present in the cache. If other bookings were already in the cache, these will be included in the list too. If you only want to include bookings from a specific time range, use a *Filter* shape data field instead.
 
 ## List view filters
 
