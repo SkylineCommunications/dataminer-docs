@@ -330,7 +330,7 @@ To be able to make a local test build, you need to have DocFX installed. DocFX i
 
 #### Installing and configuring DocFX
 
-1. Go to <https://github.com/dotnet/docfx/releases>, and download version version 2.59.4 of the `docfx.zip` package.
+1. Go to <https://github.com/dotnet/docfx/releases>, and download the latest version of the `docfx.zip` package.
 
     > [!CAUTION]
     > We recommend that you do not use any of the beta versions. We also do not support version 2.60 yet, as this will require some changes to the way we generate metadata, which we are still working on at the moment.
@@ -375,12 +375,12 @@ To be able to make a local test build, you need to have DocFX installed. DocFX i
 
    1. Enter `clear` to clear the terminal.
 
-   1. Enter `docfx metadata -f` to generate the metadata.
+   1. Enter `dotnet run --project build`. This will generate documentation files based on the .csproj file in the build folder.
 
       > [!NOTE]
       >
-      > - At this point, you may get 5 warnings mentioning "Found project reference without a matching metadata reference". These can be ignored.
-      > - At this point, if you get up to 13 warnings, of which 8 mention "Invalid cref value", follow the steps explained [here](#running-docfx-metadata--f-results-in-warnings-mentioning-an-invalid-cref-value).
+      > - This step requires that **.NET 6.0 SDK or higher** is installed on your machine. If this is not installed yet, you will get a build error. You can download the latest version from [dotnet.microsoft.com](https://dotnet.microsoft.com/en-us/download/visual-studio-sdks).
+      > - If you are only making changes to markdown files, you can skip this step for subsequent builds.
 
    1. Enter `docfx build -f` to make a test build.
 
@@ -747,7 +747,7 @@ The only time when "the user" is appropriate is when whoever you are writing for
    (Exception from HRESULT: 0x80131040)
 ```
 
-**Resolution**: Install [the version 2.59.4 of DocFX](#installing-and-configuring-docfx).
+**Resolution**: Install [the latest version of DocFX](#installing-and-configuring-docfx).
 
 ### Build failed because config or content files are missing
 
@@ -779,36 +779,6 @@ The only time when "the user" is appropriate is when whoever you are writing for
 - Make sure [your fork is up to date](#make-sure-your-fork-is-up-to-date).
 
 - If you installed Git after you installed GitHub Desktop, remove the repository in GitHub Desktop and add it again.
-
-### Running 'docfx metadata -f' results in warnings mentioning an invalid cref value
-
-**Symptom**: When you enter `docfx metadata -f` in the Terminal pane in Visual Studio Code, you get several warnings that look like this:
-
-```txt
-[22-12-14 07:59:45.600]Warning:[ExtractMetadata]Invalid cref value "!:JsonReaderException" found in triple-slash-comments for FromJsonString defined in src/Base Class Library/Common/Skyline/DataMiner/Library/Common/Rates/RateHelper.cs Line 309, ignored.
-[22-12-14 07:59:45.600]Warning:[ExtractMetadata]Invalid cref value "!:JsonReaderException" found in triple-slash-comments for FromJsonString defined in src/Base Class Library/Common/Skyline/DataMiner/Library/Common/Rates/RateHelper.cs Line 354, ignored.
-```
-
-**Resolution**:
-
-1. Open Visual Studio.
-
-1. Select to open a project or solution and open *Code Library.sln*, located in the *Base Class Library* folder of your dataminer-docs repository.
-
-1. In the *Solution Explorer* pane, right-click *Solution 'Code Library'* and select *Restore NuGet packages*.
-
-   You will get the following output:
-
-   ```txt
-   `Restored C:\...\GitHub\dataminer-docs\src\Base Class Library\Common\Common.csproj (in 340 ms).
-   NuGet package restore finished
-   Time Elapsed: 00:00:00.7119526
-   ========== Finished ==========
-   ```
-
-1. Enter `docfx metadata -f` in Visual Studio Code again.
-
-   You should now get no more than 5 warnings when generating the metadata.
 
 ## References
 
