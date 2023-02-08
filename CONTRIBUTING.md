@@ -359,9 +359,7 @@ To be able to make a local test build, you need to have DocFX installed. DocFX i
    1. Enter `dotnet run --project build`.
 
       > [!NOTE]
-      >
-      > - This step requires that **.NET 6.0 SDK or higher** is installed on your machine. If this is not installed yet, you will get a build error. You can download the latest version from [dotnet.microsoft.com](https://dotnet.microsoft.com/en-us/download/visual-studio-sdks).
-      > - If you are only making changes to markdown files, you can skip this step for subsequent builds.
+      > This step requires that **.NET 6.0 SDK or higher** is installed on your machine. If this is not installed yet, you will get a build error. You can download the latest version from [dotnet.microsoft.com](https://dotnet.microsoft.com/en-us/download/visual-studio-sdks).
 
    1. Enter `docfx serve _site`.
 
