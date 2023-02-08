@@ -240,6 +240,12 @@ When, in a Visio drawing, shapes have been positioned dynamically, you can re-ar
 
 When, in a Visio drawing, you were re-arranging dynamically positioned shapes, an exception could be thrown when you right-clicked a shape to access its context menu.
 
+#### Visual Overview: Certain context menu commands would incorrectly be disabled [ID_35484]
+
+<!-- MR 10.3.0 - FR 10.3.3 -->
+
+When you right-clicked a shape, certain context menu commands would incorrectly be disabled.
+
 #### DataMiner Cube - Alarm templates: Trending column in baseline editor would no longer show any icons [ID_35488]
 
 <!-- MR 10.2.0 [CU12] - FR 10.3.3 -->

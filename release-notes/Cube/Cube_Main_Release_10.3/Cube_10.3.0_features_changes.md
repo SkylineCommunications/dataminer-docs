@@ -1055,3 +1055,9 @@ When you exported a trend graph containing average trend data to CSV, in some ca
 <!-- MR 10.3.0 - FR 10.3.3 -->
 
 When, in Visual Overview, a filter was applied to a *ListView* component that listed bookings, no account would be taken of bookings added after the filter had been applied. As a result, in some cases, the *ListView* component would list bookings that did not match the filter.
+
+#### Visual Overview: Certain context menu commands would incorrectly be disabled [ID_35484]
+
+<!-- MR 10.3.0 - FR 10.3.3 -->
+
+When you right-clicked a shape, certain context menu commands would incorrectly be disabled.
