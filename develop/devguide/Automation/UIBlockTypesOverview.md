@@ -434,7 +434,7 @@ UIBlockDefinition blockItem = new UIBlockDefinition
 {
   Type = UIBlockType.Time,
   DestVar = "InputText",
-  InitialValue = "",
+  InitialValue = "12:25:30",
   Row = 1,
   Column = 1,
   ConfigOptions = new AutomationTimeUpDownOptions()
