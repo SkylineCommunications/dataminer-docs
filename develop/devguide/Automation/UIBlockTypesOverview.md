@@ -108,7 +108,7 @@ MyDialogBox.AppendBlock(blockItem);
 ```
 
 > [!NOTE]
-> To check if the user selected the checkbox, use [GetChecked](xref:Skyline.DataMiner.Automation.UIBlockDefinition#Skyline_DataMiner_Automation_UIResults_GetChecked).
+> To check if the user selected the checkbox, use [GetChecked](xref:Skyline.DataMiner.Automation.UIResults#Skyline_DataMiner_Automation_UIResults_GetChecked_System_String_).
 
 ## CheckBoxList
 
@@ -134,7 +134,7 @@ MyDialogBox.AppendBlock(checkBoxList);
 ```
 
 > [!NOTE]
-> To read out which boxes are selected, use [GetChecked](xref:Skyline.DataMiner.Automation.UIBlockDefinition#Skyline_DataMiner_Automation_UIResults_GetChecked) with the *DestVar* of the *CheckBoxList* and the raw value of the option
+> To read out which boxes are selected, use [GetChecked](xref:Skyline.DataMiner.Automation.UIResults#Skyline_DataMiner_Automation_UIResults_GetChecked_System_String_) with the *DestVar* of the *CheckBoxList* and the raw value of the option
 >
 > ```csharp
 > var results = engine.ShowUI(MyDialogBox);
@@ -373,7 +373,7 @@ MyDialogBox.AppendBlock(blockItem);
 
 > [!NOTE]
 >
-> - To read out which option is selected, use [GetChecked](xref:Skyline.DataMiner.Automation.UIBlockDefinition#Skyline_DataMiner_Automation_UIResults_GetChecked) with the *DestVar* of the *RadioButtonList* and the raw value of the option.
+> - To read out which option is selected, use [GetChecked](xref:Skyline.DataMiner.Automation.UIResults#Skyline_DataMiner_Automation_UIResults_GetChecked_System_String_) with the *DestVar* of the *RadioButtonList* and the raw value of the option.
 >
 >   ```csharp
 >   var results = engine.ShowUI(MyDialogBox);
