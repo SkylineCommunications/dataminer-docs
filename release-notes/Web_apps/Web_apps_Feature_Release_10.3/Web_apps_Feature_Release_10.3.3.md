@@ -70,6 +70,26 @@ When exporting trend data to CSV, from now on, the *Show average*, *Show minimum
 
 From now on, when SLNet receives an error from the web API after sending a *GetConnection* call, it will log the request and the response in the *SLNet.txt* log file.
 
+#### Dashboards app - EPM parameter selector: Data retrieved from the collector that was displayed as a table with a single row will now be displayed as single parameters [ID_35412]
+
+<!-- MR 10.3.0 - FR 10.3.3 -->
+
+In an EPM parameter selector, in some cases, data retrieved from the collector was displayed as a table with a single row, which often had the system name as primary key.
+
+From now on, data retrieved from the collector that used to be displayed as a table with a single row will now be displayed as single parameters (one for every column).
+
+#### Chart components will now display GQI errors [ID_35445]
+
+<!-- MR 10.3.0 - FR 10.3.3 -->
+
+If a GQI query that retrieves data for a chart component throws an error, from now on, the chart component will display that error.
+
+#### Enhanced performance when opening a web app [ID_35549]
+
+<!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
+
+Because DataMiner web apps will now be passed to client machines as compressed files, overall performance has increased when opening a web app.
+
 ### Fixes
 
 #### GQI: Problem when fetching two queries using an external data source with a custom argument of which the ID was set to "Type" [ID_35242]
@@ -112,6 +132,12 @@ When, in a dashboard or a low-code app, a *Line & area chart* component was used
 
 In the latter case, it will now instead show a flat line indicating that the resource is not being used.
 
+#### Dashboards app: Problem with line & area chart component when dashboard was shared [ID_35422]
+
+<!-- MR 10.3.0 - FR 10.3.3 -->
+
+When, in a dashboard, a line & area chart component had its *Hide non-trended parameters* option selected, errors could start to appear inside that component when the dashboard was shared.
+
 #### Dashboards app: Problem with 'Preserve feed selections' option [ID_35438]
 
 <!-- MR 10.3.0 - FR 10.3.3 -->
@@ -131,3 +157,9 @@ When, in a draft version of a low-code app, you opened the version panel and cre
 <!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
 
 Time range feeds would trigger components more often than required, causing them to send an excessive number of requests.
+
+#### Low-code apps: Panels of which the 'Fit to view' option was selected would incorrectly switch to mobile mode [ID_35542]
+
+<!-- MR 10.3.0 - FR 10.3.3 -->
+
+Panels of which the *Fit to view* option was selected would incorrectly switch to mobile mode when their width got too small. From now on, panels of which the *Fit to view* option is selected will never switch to mobile mode.

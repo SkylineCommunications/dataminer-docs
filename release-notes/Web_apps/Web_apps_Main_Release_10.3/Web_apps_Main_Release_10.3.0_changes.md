@@ -140,6 +140,12 @@ A number of enhancements have been made to the visual overview component, especi
 
 Because of a number of enhancements, overall performance has increased when retrieving DomInstances that have a DomBehaviorDefinition.
 
+#### Chart components will now display GQI errors [ID_35445]
+
+<!-- MR 10.3.0 - FR 10.3.3 -->
+
+If a GQI query that retrieves data for a chart component throws an error, from now on, the chart component will display that error.
+
 ### Fixes
 
 #### Dashboards app: Dashboard names would incorrectly be allowed to contain backslash characters [ID_31735]
@@ -354,6 +360,12 @@ When, in a GQI query, a custom operator was applied, all metadata available on t
 
 Also, when a column was renamed via a custom operator, the metadata available on that column would incorrectly be removed.
 
+#### Dashboards app: Problem with line & area chart component when dashboard was shared [ID_35422]
+
+<!-- MR 10.3.0 - FR 10.3.3 -->
+
+When, in a dashboard, a line & area chart component had its *Hide non-trended parameters* option selected, errors could start to appear inside that component when the dashboard was shared.
+
 #### Dashboards app: Problem with 'Preserve feed selections' option [ID_35438]
 
 <!-- MR 10.3.0 - FR 10.3.3 -->
@@ -361,3 +373,9 @@ Also, when a column was renamed via a custom operator, the metadata available on
 When you select the *Preserve feed selections* option for a particular dashboard folder, any feed selection you make in a dashboard in that folder is preserved when you navigate to another dashboard in that same folder.
 
 Up to now, in some cases, one folder would incorrectly take over feed selections from another folder.
+
+#### Low-code apps: Panels of which the 'Fit to view' option was selected would incorrectly switch to mobile mode [ID_35542]
+
+<!-- MR 10.3.0 - FR 10.3.3 -->
+
+Panels of which the *Fit to view* option was selected would incorrectly switch to mobile mode when their width got too small. From now on, panels of which the *Fit to view* option is selected will never switch to mobile mode.

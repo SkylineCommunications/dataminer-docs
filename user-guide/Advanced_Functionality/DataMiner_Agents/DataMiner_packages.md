@@ -26,7 +26,7 @@ The following types of DataMiner packages are available:
 
 Package containing all files necessary to upgrade a DataMiner Agent to a newer version.
 
-- This type of file is published on DCP by Skyline’s Quality Assurance Department.
+- This type of file is published on dataminer.services by Skyline’s Quality Assurance Department.
 
 - File extension: *.dmupgrade*
 
@@ -40,7 +40,7 @@ Package containing all files necessary to upgrade a DataMiner Agent to a newer v
 
 Package containing minor updates for an existing release. Update packages contain mostly bug fixes, but can also contain new features. The packages are very similar to upgrade packages, but they only contain the files that have changed compared to the base version for which they are an update.
 
-- This type of file is published on DCP by Skyline’s Quality Assurance Department.
+- This type of file is published on dataminer.services by Skyline’s Quality Assurance Department.
 
 - File extension: *.dmupdate*
 
