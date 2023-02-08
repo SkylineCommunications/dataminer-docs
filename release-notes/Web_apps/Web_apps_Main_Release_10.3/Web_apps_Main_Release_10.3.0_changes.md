@@ -140,11 +140,11 @@ A number of enhancements have been made to the visual overview component, especi
 
 Because of a number of enhancements, overall performance has increased when retrieving DomInstances that have a DomBehaviorDefinition.
 
-#### Chart components will now display GQI errors [ID_35445]
+#### Chart components will now display GQI and configuration errors [ID_35445]
 
 <!-- MR 10.3.0 - FR 10.3.3 -->
 
-If a GQI query that retrieves data for a chart component throws an error, from now on, the chart component will display that error.
+From now on, a chart component will display an error when the GQI query that retrieves data for that chart component throws an error, or when the chart component is not configured correctly.
 
 ### Fixes
 
