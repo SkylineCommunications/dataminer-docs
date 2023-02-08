@@ -6,41 +6,41 @@ uid: UIBlockTypesOverview
 
 The [UIBlockType](xref:Skyline.DataMiner.Automation.UIBlockType) enum defines different types of UI components.
 
-|Name  |Description  |
-|---------|---------|
-|Button     |Button.         |
-|Calendar     |Calender control.         |
-|CheckBox     |Checkbox.         |
-|CheckBoxList     |Checkbox list.         |
-|DropDown     |Drop-down list.         |
-|Executable     |Executable.         |
-|FileSelector     |File selector.         |
-|Numeric     |Numeric.         |
-|Parameter     |Text displaying the value of a parameter.         |
-|PasswordBox     |Password input box.         |
-|RadioButtonList     |Radio button list.         |
-|StaticText     |Static text.         |
-|TextBox     |Text box.         |
-|Time     |Item that displays a time value.         |
-|TreeView     |Tree view control.         |
-
+| Name | Description |
+|---|---|
+| [Button](#button) | Button. |
+| [Calendar](#calendar) | Calendar control. |
+| [CheckBox](#checkbox) | Checkbox. |
+| [CheckBoxList](#checkboxlist) | Checkbox list. |
+| [DropDown](#dropdown) | Dropdown list. |
+| [Executable](#executable) | Executable. |
+| [FileSelector](#fileselector) | File selector. |
+| [Numeric](#numeric) | Numeric. |
+| [Parameter](#parameter) | Text displaying the value of a parameter. |
+| [PasswordBox](#passwordbox) | Password input box. |
+| [RadioButtonList](#radiobuttonlist) | Radio button list. |
+| [StaticText](#statictext) | Static text. |
+| [TextBox](#textbox) | Text box. |
+| [Time](#time) | Item that displays a time value. |
+| [TreeView](#treeview) | Tree view control. |
 
 ## UIBuilder
 
-To create these UIBlocks, a UIBuilder should be defined with a Width, RowDefs and ColumnDefs.
+To create these UIBlocks, a UIBuilder should be defined with *Width*, *RowDefs*, and *ColumnDefs*.
 
 ```csharp
 var MyDialogBox = new UIBuilder() { Width = 800, RowDefs = "auto;auto", ColumnDefs = "auto;auto" };
-MyDialogBox.RequireResponse = true;   	
-	
-//UIBlocks  
-            
+MyDialogBox.RequireResponse = true;
+
+//UIBlocks
+
 var results = engine.ShowUI(MyDialogBox);
 ```
 
 ## Getting input
 
-Some of these UIBlocks use the "DestVar" property to read out input. To get the input of that DestVar, use GetString(). See [DestVar](xref:Skyline.DataMiner.Automation.UIBlockDefinition#Skyline_DataMiner_Automation_UIBlockDefinition_DestVar).
+Some of these UIBlocks use the [DestVar](xref:Skyline.DataMiner.Automation.UIBlockDefinition#Skyline_DataMiner_Automation_UIBlockDefinition_DestVar) property to read out input. To get the input of that property, use *GetString()*.
+
 ```C#
 var input = results.GetString("destVarName")
 ```
@@ -74,7 +74,7 @@ if (results.WasButtonPressed("ButtonVar"))
 
 Allows you to define a newly created dialog box item as a calendar control.
 
-To have a certain initial value in the calender, use the [InitialValue](xref:Skyline.DataMiner.Automation.UIBlockDefinition#Skyline_DataMiner_Automation_UIBlockDefinition_InitialValue) property. In the Calender UIBlockType the value is expected to be a string in the "(dd/MM/yyyy HH:mm:ss)" format.
+To have a certain initial value in the calendar, use the [InitialValue](xref:Skyline.DataMiner.Automation.UIBlockDefinition#Skyline_DataMiner_Automation_UIBlockDefinition_InitialValue) property. In the *Calendar* UIBlockType, the value is expected to be a string in the "(dd/MM/yyyy HH:mm:ss)" format.
 
 Example:
 
@@ -94,24 +94,27 @@ MyDialogBox.AppendBlock(blockItem);
 
 Allows you to define a newly created dialog box item as a checkbox.
 
+Example:
+
 ```csharp
 UIBlockDefinition blockItem = new UIBlockDefinition
 {
   Type = UIBlockType.CheckBox,
-  Text = "Option1",	
+  Text = "Option1",
   Row = 1,
   Column = 1
 };
 MyDialogBox.AppendBlock(blockItem);
 ```
 
-To check if the user ticked the checkbox, see [GetChecked](xref:Skyline.DataMiner.Automation.UIBlockDefinition#Skyline_DataMiner_Automation_UIResults_GetChecked).
+> [!NOTE]
+> To check if the user selected the checkbox, use [GetChecked](xref:Skyline.DataMiner.Automation.UIBlockDefinition#Skyline_DataMiner_Automation_UIResults_GetChecked).
 
 ## CheckBoxList
 
 Allows you to define a newly created dialog box item as a list of checkboxes.
 
-We can also differentiate between raw value and display value for the options. Display value is the text the UI will show for the option and the raw value is the value used to set some checkboxes default ticked using InitialValue. See [InitialValue](xref:Skyline.DataMiner.Automation.UIBlockDefinition#Skyline_DataMiner_Automation_UIBlockDefinition_InitialValue).
+It is possible to differentiate between the raw value and display value for the options. The display value is the text the UI will show for the option, and the raw value is the value used to set checkboxes as selected by default using [InitialValue](xref:Skyline.DataMiner.Automation.UIBlockDefinition#Skyline_DataMiner_Automation_UIBlockDefinition_InitialValue).
 
 Example:
 
@@ -130,13 +133,14 @@ checkBoxList.InitialValue = "2;3";
 MyDialogBox.AppendBlock(checkBoxList);
 ```
 
-To read out which boxes are ticked we use *GetChecked* with the DestVar of the CheckBoxList and the raw value of the option. See [GetChecked](xref:Skyline.DataMiner.Automation.UIBlockDefinition#Skyline_DataMiner_Automation_UIResults_GetChecked).
-
-```csharp
-var results = engine.ShowUI(MyDialogBox);
-
-bool ticked = results.GetChecked("list","2");
-```
+> [!NOTE]
+> To read out which boxes are selected, use [GetChecked](xref:Skyline.DataMiner.Automation.UIBlockDefinition#Skyline_DataMiner_Automation_UIResults_GetChecked) with the *DestVar* of the *CheckBoxList* and the raw value of the option
+>
+> ```csharp
+> var results = engine.ShowUI(MyDialogBox);
+> 
+> bool ticked = results.GetChecked("list","2");
+> ```
 
 ## DropDown
 
@@ -155,12 +159,12 @@ UIBlockDefinition blockItem = new UIBlockDefinition
   Row = 1,
   Column = 1, 
   Width = 200
-};		
+};
 
 foreach (string dropDownOption in dropDownOptions)
   blockItem.AddDropDownOption(dropDownOption);
 
-MyDialogBox.AppendBlock(blockItem);	
+MyDialogBox.AppendBlock(blockItem);
 ```
 
 ## Executable
@@ -190,7 +194,7 @@ Examples:
   ...
   MyDialogBox.AppendBlock(blockItem);
   ```
-  
+
 > [!NOTE]
 > Automation scripts with an executable component are currently only supported in DataMiner Cube. These are not supported in DataMiner web apps.
 
@@ -231,7 +235,7 @@ All files uploaded by users will by default be placed in the *C:\\Skyline DataMi
 
 Allows you to define a newly created dialog box item displaying a numeric value.
 
-Example of a number range between 0 and 100 with step size of 1 and an intial value of 5:
+Example of a number range between 0 and 100 with step size of 1 and an initial value of 5:
 
 ```csharp
 UIBlockDefinition blockItem = new UIBlockDefinition
@@ -296,9 +300,9 @@ uib.AppendBlock(numericBlock);
 
 ## Parameter
 
-Allows you to define a newly created dialog box item as a text item displaying the value of a Parameter.
+Allows you to define a newly created dialog box item as a text item displaying the value of a parameter.
 
-In the *Extra* property we enter the information to find the parameter. See [Extra](xref:Skyline.DataMiner.Automation.UIBlockDefinition#Skyline_DataMiner_Automation_UIBlockDefinition_Extra).
+In the [Extra](xref:Skyline.DataMiner.Automation.UIBlockDefinition#Skyline_DataMiner_Automation_UIBlockDefinition_Extra) property, enter the information to find the parameter.
 
 Example:
 
@@ -339,7 +343,7 @@ Optionally, you can set the *HasPeekIcon* property to display an icon that, when
 
 Allows you to define a radio button list. Available from DataMiner 9.6.6 onwards.
 
-We can also differentiate between raw value and display value for the options. Display value is the text the UI will show for the option and the raw value is the value used to select a radio button selected by default using InitialValue. See [InitialValue](xref:Skyline.DataMiner.Automation.UIBlockDefinition#Skyline_DataMiner_Automation_UIBlockDefinition_InitialValue).
+It is possible to differentiate between the raw value and display value for the options. The display value is the text the UI will show for the option, and the raw value is the value used to have a radio button selected by default using [InitialValue](xref:Skyline.DataMiner.Automation.UIBlockDefinition#Skyline_DataMiner_Automation_UIBlockDefinition_InitialValue).
 
 Example:
 
@@ -367,16 +371,17 @@ blockItem.InitialValue = "4";
 MyDialogBox.AppendBlock(blockItem);
 ```
 
-To read out which option is selected we use *GetChecked* with the DestVar of the RadioButtonList and the raw value of the option. See [GetChecked](xref:Skyline.DataMiner.Automation.UIBlockDefinition#Skyline_DataMiner_Automation_UIResults_GetChecked).
-
-```csharp
-var results = engine.ShowUI(MyDialogBox);
-
-bool ticked = results.GetChecked("ChoiceOption","4");
-```
-
 > [!NOTE]
-> If no initial value is passed to this list, no radio button will be selected by default.
+>
+> - To read out which option is selected, use [GetChecked](xref:Skyline.DataMiner.Automation.UIBlockDefinition#Skyline_DataMiner_Automation_UIResults_GetChecked) with the *DestVar* of the *RadioButtonList* and the raw value of the option.
+>
+>   ```csharp
+>   var results = engine.ShowUI(MyDialogBox);
+>   
+>   bool ticked = results.GetChecked("ChoiceOption","4");
+>   ```
+>
+> - If no initial value is passed to this list, no radio button will be selected by default.
 
 ## StaticText
 
@@ -420,11 +425,9 @@ MyDialogBox.AppendBlock(blockItem);
 
 Allows you to define a newly created dialog box item as an item displaying a time value.
 
-In the ConfigOptions we define the minimum and maximum time range. See [ConfigOptions](xref:Skyline.DataMiner.Automation.UIBlockDefinition#Skyline_DataMiner_Automation_UIBlockDefinition_ConfigOptions).
+In the [ConfigOptions](xref:Skyline.DataMiner.Automation.UIBlockDefinition#Skyline_DataMiner_Automation_UIBlockDefinition_ConfigOptions), you can define the minimum and maximum time range.
 
-In the example we create a timespan block with a minimum of 1 hour and maximum of 2 days.
-
-Example:
+In this example, a timespan block is created with a minimum of 1 hour and a maximum of 2 days:
 
 ```csharp
 UIBlockDefinition blockItem = new UIBlockDefinition
