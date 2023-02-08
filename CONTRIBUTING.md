@@ -356,7 +356,7 @@ To be able to make a local test build, you need to have DocFX installed. DocFX i
 
    1. Enter `clear` to clear the terminal.
 
-   1. Enter `dotnet run --project build`. This will generate documentation files based on the .csproj file in the build folder.
+   1. Enter `dotnet run --project build`.
 
       > [!NOTE]
       >
