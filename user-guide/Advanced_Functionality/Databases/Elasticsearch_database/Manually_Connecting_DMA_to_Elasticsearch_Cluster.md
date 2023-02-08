@@ -7,6 +7,7 @@ You can connect a DataMiner Agent to an existing Elasticsearch cluster by manual
 
 > [!IMPORTANT]
 > Make sure the DataMiner Agent has an available connection to each node of the Elasticsearch cluster. To verify this, enter `http://elasticnodeip:9200/` in your browser's address bar to access the general server information.
+> ![Admin consent](~/user-guide/images/ElasticSearch_Connectivity_Check.png)
 
 To establish a connection between your DMA and an existing Elasticsearch cluster, do the following:
 
