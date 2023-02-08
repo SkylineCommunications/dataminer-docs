@@ -124,3 +124,7 @@ When a user clicked the dashboard icon, this opened a dashboard without applying
 #### ArgumentNullException when CCAP tried to read information from files [ID_35294]
 
 When the CCAP tried to read information from files, an "ArgumentNullException" could be thrown when it encountered a dictionary with null values. This has now been corrected.
+
+#### Run-time error caused by CISCO CBR-8 CCAP Platform connector [ID_35599]
+
+In some cases, the CISCO CBR-8 CCAP Platform connector could cause run-time errors. To prevent this, the *partialSNMP* option has been added to all SNMP tables in order to divide the polling over several smaller groups.
