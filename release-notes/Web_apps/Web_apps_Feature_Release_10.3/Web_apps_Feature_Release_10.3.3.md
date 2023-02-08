@@ -78,11 +78,11 @@ In an EPM parameter selector, in some cases, data retrieved from the collector w
 
 From now on, data retrieved from the collector that used to be displayed as a table with a single row will now be displayed as single parameters (one for every column).
 
-#### Chart components will now display GQI errors [ID_35445]
+#### Chart components will now display GQI and configuration errors [ID_35445]
 
 <!-- MR 10.3.0 - FR 10.3.3 -->
 
-If a GQI query that retrieves data for a chart component throws an error, from now on, the chart component will display that error.
+From now on, a chart component will display an error when the GQI query that retrieves data for that chart component throws an error, or when the chart component is not configured correctly.
 
 #### Enhanced performance when opening a web app [ID_35549]
 
