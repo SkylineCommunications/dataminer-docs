@@ -363,8 +363,6 @@ To be able to make a local test build, you need to have DocFX installed. DocFX i
       > - This step requires that **.NET 6.0 SDK or higher** is installed on your machine. If this is not installed yet, you will get a build error. You can download the latest version from [dotnet.microsoft.com](https://dotnet.microsoft.com/en-us/download/visual-studio-sdks).
       > - If you are only making changes to markdown files, you can skip this step for subsequent builds.
 
-   1. Enter `docfx build -f` to make a test build.
-
    1. Enter `docfx serve _site`.
 
    1. In a browser, go to <http://localhost:8080/> to preview the website.
