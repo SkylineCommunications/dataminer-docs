@@ -852,6 +852,12 @@ Up to now, when you grouped/sorted the alarms in the alarm tab by severity, the 
 
 Also, in case of incident alarms, the alarm duration indicator will now show the highest severity found among the base alarms.
 
+#### Tab layout: Click the tab header with the middle mouse button to quickly close a tab [ID_34791]
+
+<!-- MR 10.3.0 - FR 10.3.3 -->
+
+When using the tab layout, up to now, you could quickly close a tab by clicking inside it with the middle mouse button. From now on, to quickly close a tab, instead of clicking inside the tab, you will have to click the tab header with the middle mouse button.
+
 #### Bookings module: Navigation panel has been improved and renamed to 'settings' panel [ID_34840]
 
 <!-- MR 10.3.0 - FR 10.3.1 Also see Fixes for bug fix section-->

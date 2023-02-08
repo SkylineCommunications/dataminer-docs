@@ -75,6 +75,12 @@ Each time a program is launched, a start entry and an end entry will be added to
 
 ### Enhancements
 
+#### Tab layout: Click the tab header with the middle mouse button to quickly close a tab [ID_34791]
+
+<!-- MR 10.3.0 - FR 10.3.3 -->
+
+When using the tab layout, up to now, you could quickly close a tab by clicking inside it with the middle mouse button. From now on, to quickly close a tab, instead of clicking inside the tab, you will have to click the tab header with the middle mouse button.
+
 #### Elasticsearch: 'Request Entity Too Large (413)' errors will now be prevented when writing data in bulk [ID_34937]
 
 <!-- MR 10.4.0 - FR 10.3.3 -->
