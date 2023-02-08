@@ -72,7 +72,7 @@ There are two main reasons to consider a Dashboard Gateway setup:
    - *connectionString*: The hostname or IP address of the DataMiner Agent to which the Dashboard Gateway has to connect.
    - *connectionUser* and *connectionPassword*: The DataMiner user account that the Dashboard Gateway has to use to connect to the DataMiner Agent (username and password).
 
-## Reverse proxy (optional)
+## Reverse proxy
 
 When a dashboard (or Low-code app) contains a web component displaying the [Maps app](xref:maps) or VideoThumbnails web page, then this won't work out of the box when the dashboard (or app) is opened via the Gateway server.
 
