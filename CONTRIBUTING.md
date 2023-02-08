@@ -330,41 +330,23 @@ To be able to make a local test build, you need to have DocFX installed. DocFX i
 
 #### Installing and configuring DocFX
 
-1. Go to <https://github.com/dotnet/docfx/releases>, and download the latest version of the `docfx.zip` package.
+1. Install .NET 6.0 SDK or higher from [dotnet.microsoft.com](https://dotnet.microsoft.com/en-us/download/visual-studio-sdks).
 
-1. Extract `docfx.zip` to a folder of your choice (e.g. `C:\DocFX`).
+1. Open a command prompt and enter the command `dotnet tool update -g docfx`
 
-    > [!NOTE]
-    > Make sure the folder name and path contain no spaces, as this may cause issues. For example, instead of `C:\My docs`, use `C:\My-docs` or some other alternative without a space.
-
-1. Add the folder (e.g. `C:\DocFX`) to the environment variable **Path** (user variable or system variable).
-
-    On Windows 10 or 11 systems, do the following:
-
-    1. In your Windows search box, enter "path".
-    1. Click *Edit the system environment variables*.
-    1. In the *Advanced* tab of the *System Properties* window, click *Environment Variables*.
-    1. In the *Environment Variables* window, select the **Path** variable in either the *User variables for \<user\>* list or the *System variables* list, and click *Edit*.
-    1. In the *Edit environment variable* window, click *New*, enter e.g. `C:\DocFX`, and click *OK*.
-
-1. Test whether DocFX was installed correctly:
-
-    1. Open a command prompt.
-    1. Enter `docfx help`.
+1. Test whether DocFX was installed correctly by entering `docfx help`.
 
     If information similar to the following text is returned, DocFX was installed correctly:
 
     ```txt
-    docfx 2.59.4.0
-    Copyright (C) 2022 ¸ Microsoft Corporation. All rights reserved.
+    docfx 2.61.0+54f1a2f4f25f89435f222c93aa8aab0c0cfea2b5
+    Copyright (C) 2023 © Microsoft Corporation. All rights reserved.
     This is open-source software under MIT License.  
     ...
     ```
 
 > [!TIP]
->
-> - To upgrade your existing DocFX installation, you can use the command `dotnet tool update -g docfx`.
-> - Alternative ways to install DocFX can be found on the [DocFX website](https://dotnet.github.io/docfx/tutorial/docfx_getting_started.html#2-use-docfx-as-a-command-line-tool).
+> Alternative ways to install DocFX can be found on the [DocFX website](https://dotnet.github.io/docfx/tutorial/docfx_getting_started.html#2-use-docfx-as-a-command-line-tool).
 
 #### Making a test build
 
