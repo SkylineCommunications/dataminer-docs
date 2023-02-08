@@ -348,6 +348,9 @@ To be able to make a local test build, you need to have DocFX installed. DocFX i
 > [!TIP]
 > Alternative ways to install DocFX can be found on the [DocFX website](https://dotnet.github.io/docfx/tutorial/docfx_getting_started.html#2-use-docfx-as-a-command-line-tool).
 
+> [!NOTE]
+> If you use this "dotnet" command, it is no longer necessary to add the DocFX folder to the Windows Path variable as was the case in the past. If you configured this earlier, we recommend that you remove this folder from the Path variable again.
+
 #### Making a test build
 
 1. If no Terminal pane is open in Visual Studio Code, go to *Terminal > New Terminal*.
@@ -359,7 +362,9 @@ To be able to make a local test build, you need to have DocFX installed. DocFX i
    1. Enter `dotnet run --project build`.
 
       > [!NOTE]
-      > This step requires that **.NET 6.0 SDK or higher** is installed on your machine. If this is not installed yet, you will get a build error. You can download the latest version from [dotnet.microsoft.com](https://dotnet.microsoft.com/en-us/download/visual-studio-sdks).
+      >
+      > - This step requires that **.NET 6.0 SDK or higher** is installed on your machine. If this is not installed yet, you will get a build error. You can download the latest version from [dotnet.microsoft.com](https://dotnet.microsoft.com/en-us/download/visual-studio-sdks).
+      > - If you only have .NET 7.0 installed, it is possible that you encounter an exception when trying to make a build. See [No instances of MSBuild could be detected](#no-instances-of-msbuild-could-be-detected).
 
    1. Enter `docfx serve _site`.
 
@@ -711,6 +716,12 @@ The only time when "the user" is appropriate is when whoever you are writing for
 **Resolution**: Make sure there is no hyphen in front of the topicUID line. Only the name line should be preceded by a hyphen.
 
 ![TOC](~/images/TOC.png)
+
+### No instances of MSBuild could be detected
+
+**Symptom**: When trying to create a build, you get the exception "No instances of MSBuild could be detected".
+
+**Resolution**: If you only have .NET 7 installed, and not .NET 6, adjust the .csproj file in the build folder of the repository so that it targets "net7.0" instead of "net6.0".
 
 ### Build failed because assembly or file could not be loaded
 
