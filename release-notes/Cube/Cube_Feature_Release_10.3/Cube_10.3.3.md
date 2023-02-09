@@ -270,7 +270,7 @@ When, while configuring an alarm template, you opened the baseline editor and se
 
 <!-- MR 10.3.0 - FR 10.3.3 -->
 
-When you had configured DataMiner Cube to connect using gRPC (by specifying `type=GrpcConnection` in the *ConnectionSettings.txt* file), newly created users would be assigned an invalid full name, description and password.
+When you had configured DataMiner Cube to connect using gRPC (by specifying `type=GRPCConnection` in the *ConnectionSettings.txt* file), newly created users would be assigned an invalid full name, description and password.
 
 #### DataMiner Cube - Service templates: Open service card would not be updated when the service template was re-applied [ID_35537]
 

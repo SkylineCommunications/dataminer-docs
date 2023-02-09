@@ -1079,4 +1079,4 @@ When you right-clicked a shape, certain context menu commands would incorrectly 
 
 <!-- MR 10.3.0 - FR 10.3.3 -->
 
-When you had configured DataMiner Cube to connect using gRPC (by specifying `type=GrpcConnection` in the *ConnectionSettings.txt* file), newly created users would be assigned an invalid full name, description and password.
+When you had configured DataMiner Cube to connect using gRPC (by specifying `type=GRPCConnection` in the *ConnectionSettings.txt* file), newly created users would be assigned an invalid full name, description and password.
