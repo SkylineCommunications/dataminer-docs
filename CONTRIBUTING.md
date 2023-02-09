@@ -349,7 +349,7 @@ To be able to make a local test build, you need to have DocFX installed. DocFX i
 > Alternative ways to install DocFX can be found on the [DocFX website](https://dotnet.github.io/docfx/tutorial/docfx_getting_started.html#2-use-docfx-as-a-command-line-tool).
 
 > [!NOTE]
-> If you use this "dotnet" command, it is no longer necessary to add the DocFX folder to the Windows Path variable as was the case in the past. If you configured this earlier, we recommend that you remove this folder from the Path variable again.
+> If you use this "dotnet" command, it is no longer necessary to add the DocFX folder to the Windows Path variable as was the case in the past. If you configured this earlier, we recommend that you remove this folder from the Path variable again. When the folder was removed from the Windows Path variable a reboot of the pc is needed otherwise it will still reference the previous installed DocFX.
 
 #### Making a test build
 
