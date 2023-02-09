@@ -42,9 +42,9 @@ The Grafana Data Source plugin allows you to visualize data from DataMiner in [G
 
 1. Extract the entire ZIP file in the *plugins* folder of Grafana:
 
-   - **Windows**: Go to `C:\Program Files\GrafanaLabs\grafana\data\plugins`
+   - **Windows**: `C:\Program Files\GrafanaLabs\grafana\data\plugins`
 
-   - **Linux**: Go to `/var/lib/grafana/plugins`
+   - **Linux**: `/var/lib/grafana/plugins`
 
 1. Restart the Grafana service.
 
@@ -85,9 +85,9 @@ A GQI query should be specified in JSON format. To get a correctly configured qu
 
 1. Refresh the dashboard and find the *OpenQuerySession* network call.
 
-1. Under payload, right-click *query:* and select *Copy value*.
+1. Under payload, right-click *query:* and select *Copy value* to save the JSON code to your clipboard.
 
-1. Open Grafana and paste the copied JSON code into Grafana.
+1. Open Grafana and navigate to the panel you want to add the GQI query to. Paste the previously copied JSON code in the *Query* section that is using the DataMiner data source, as configured in [Plugin installation](#plugin-installation).
 
 #### Time range filter
 
@@ -110,9 +110,12 @@ Example:
 
 #### Transformations
 
-You may have to add a transformation to some GQI results. This could be the case when you have a GQI query that gets the latitude and longitude from element properties.
+After configuring a query in Grafana, you may have to add a transformation to some GQI results. This could be the case when you have a GQI query that gets the latitude and longitude from element properties.
 
-Since properties in DataMiner are strings, you will need to add a *Convert field type* transformation to convert the latitude and longitude values to numbers before you can display them on a map visualization.
+Since properties in DataMiner are strings, you will need to add a [*Convert field type* transformation](https://grafana.com/docs/grafana/latest/panels-visualizations/query-transform-data/transform-data/#convert-field-type) to convert the latitude and longitude values to numbers before you can display them on a map visualization.
+
+> [!TIP]
+> For more instructions on how to add a transformation, see [Add a transformation function to data](https://grafana.com/docs/grafana/latest/panels-visualizations/query-transform-data/transform-data/#add-a-transformation-function-to-data).
 
 #### Annotations
 
@@ -123,9 +126,15 @@ You can use data from a GQI result to annotate the data on your dashboard. This 
 
 ### Trend data
 
-To get the trend data of a parameter, specify the parameter using the following format: `dmaID/elementID/parameterID` or `dmaID/elementID/tableColumnParameterID/tableRowIndex`.
+To get the trend data of a parameter, do the following:
 
-This will request the trend data from within the time range specified on the dashboard. If the time range amounts to less than 48 hours, 5-minute interval points will be returned instead of the usual 60-minute interval points.
+1. In Grafana, navigate to the panel you want to extract trend data from.
+
+1. Go to the *Query* section that is using the DataMiner data source and click *Trend*.
+
+1. Specify the parameter using the following format: `dmaID/elementID/parameterID` or `dmaID/elementID/tableColumnParameterID/tableRowIndex`.
+
+Doing this, you request the trend data from within the time range specified on the dashboard. If the time range amounts to less than 48 hours, 5-minute interval points will be returned instead of the usual 60-minute interval points.
 
 > [!NOTE]
 > Only numeric average trending is supported. The Grafana Data Source plugin currently does not support real-time trending, discrete values, or exception values.
