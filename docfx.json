@@ -58,7 +58,6 @@
     "globalMetadata": {
       "_appTitle": "DataMiner Docs",
       "_appFooter": "© Skyline Communications 2023",
-      "__global.improveThisDoc": "Propose changes",
       "_enableSearch": false,
       "_enableNewTab": true
     },
@@ -66,7 +65,7 @@
     "fileMetadataFiles": [],
     "template": [
       "default",
-      "plugins/memberpage.2.59.4/content",
+      "memberpage",
       "templates/skyfx"
     ],
     "markdownEngineName": "markdig",

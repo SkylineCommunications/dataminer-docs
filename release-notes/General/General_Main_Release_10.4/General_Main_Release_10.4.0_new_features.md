@@ -297,59 +297,6 @@ protected virtual void OnCrossPointsSetViaLockOverrideFromUI(Skyline.DataMiner.L
 }
 ```
 
-#### Client-server communication: gRPC instead of .NET Remoting [ID_34797] [ID_34983]
-
-<!-- MR 10.4.0 - FR 10.3.2 -->
-
-Up to now, DataMiner clients and servers communicated with each other using the *.NET Remoting* protocol. From now on, they are also able to communicate with each other via an *API Gateway* module using *gRPC* connections, which are much more secure. For example, as to the use of IP ports, *gRPC* uses the standard port 443, whereas *.NET Remoting* uses the non-standard port 8004. Moreover, the *API Gateway* module is able to restart itself during operation and to automatically recover the connections to clients and SLNet.
-
-When you upgrade DataMiner, the *API Gateway* module will automatically be installed in the `C:\Program Files\Skyline Communications\DataMiner APIGateway\` folder. All logging and program-specific data associated with the *API Gateway* module will be stored in the `C:\ProgramData\Skyline Communications\DataMiner APIGateway\`.
-
-> [!IMPORTANT]
-> For now, *gRPC* communication has to be explicitly enabled. If you do not enable it, Cube clients and DMAs will continue to communicate using the *.NET Remoting* protocol.
-
-##### Enabling the use of gRPC connections for communication between Cube and DMA
-
-Do the following on each DMA you want DataMiner Cube instances to connect to via *gRPC* by default.
-
-1. Open the `C:\Skyline DataMiner\Webpages\ConnectionSettings.txt` file.
-1. Set the `type` option to *GRPCConnection*.
-
-##### Enabling the use of gRPC connections for inter-DMA communication
-
-In the `DMS.xml` file, you must add redirects for each DMA that should communicate with the other DMAs in the DMS over *gRPC*. Failover Agents also need a redirect to each other's IP address.
-
-For example, in a cluster with two DMAs, with IPs 10.4.2.92 and 10.4.2.93, `DMS.xml` can be configured as follows.
-
-- On the DMA with IP 10.4.2.92:
-
-    ```xml
-      <DMS errorTime="30000" synchronized="true" xmlns="http://www.skyline.be/config/dms">
-         <Cluster name="pluto"/>
-         <DMA ip="10.4.2.92" timestamp=""/>
-         <DMA ip="10.4.2.93" id="35" timestamp="2023-01-05 01:24:38" contacted_once="TRUE" lostContact="2023-01-06 00:45:01"/>
-         <Redirects>
-            <Redirect to="10.4.2.93" via="https://10.4.2.93/APIGateway" user="MyUser" pwd="MyPassword"/>
-         </Redirects>
-      </DMS>
-    ```
-
-- On the DMA with IP 10.4.2.93:
-
-    ```xml
-      <DMS errorTime="30000" synchronized="true" xmlns="http://www.skyline.be/config/dms">
-         <Cluster name="pluto" synchronize="" timestamp="2022-12-13 12:48:29"/>
-         <DMA ip="10.4.2.93" timestamp="" contacted_once="" lostContact=""/>
-         <DMA ip="10.4.2.92" timestamp="2023-01-03 23:38:42" contacted_once="TRUE" lostContact="2023-01-06 01:02:00" id="69" uri=""/>
-         <Redirects>
-            <Redirect to="10.4.2.92" via="https://10.4.2.92/APIGateway" user="MyUser" pwd="MyPassword"/>
-         </Redirects>
-      </DMS>
-    ```
-
-> [!NOTE]
-> The passwords in the *pwd* attribute are encrypted and replaced with an encryption token when they are first read out by DataMiner.
-
 #### All DOM objects now have 'LastModified', 'LastModifiedBy', 'CreatedAt' and 'CreatedBy' properties [ID_34980]
 
 <!-- MR 10.4.0 - FR 10.3.2 -->
@@ -452,35 +399,6 @@ Please note the following:
 > See also: [Visual Overview: Session variable YAxisResources now supports filters to pass exposers](xref:Cube_Main_Release_10.4.0_other_features_changes#visual-overview-session-variable-yaxisresources-now-supports-filters-id_34857)
 
 ### Tools
-
-#### SLNetClientTest tool - 'Connect' window: Enhanced 'Connection Type' and 'Authentication' sections [ID_34712]
-
-<!-- MR 10.4.0 - FR 10.3.1 -->
-
-In the *SLNetClientTest* tool, to connect to a DataMiner Agent, you select *Connection* > *Connect*, and specify the necessary information in the *Connect* window. That window has now been updated.
-
-In the *Connection Type* section, you now have to indicate how the connection has to be established:
-
-| Select...              | in order to... |
-|------------------------|----------------|
-| Autodetect             | connect to the local machine or a remote machine using the method that will be detected automatically. |
-| gRPC                   | connect to the local machine or a remote machine via the APIGateway service using the GRPCWeb protocol.<br>When you choose this option, you can specify a custom port (default: `443`) and a custom endpoint (default: `/APIGateway`). |
-| .NET Remoting (legacy) | connect to the local machine or a remote machine using .NET Remoting.<br>When you choose this option, you can specify a custom port (default: `8004`) |
-| IPC (only local)       | connect to the local machine using IPC. |
-
-In the *Authentication* section (formerly known as *User Info* section), you now have the following authentication options:
-
-- Single sign-on
-
-    > [!NOTE]
-    > External authentication not yet supported.
-
-- Explicit credentials (with *Force Authenticate Local User* option)
-
-- Ticket
-
-> [!WARNING]
-> Always be extremely careful when using this tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
 
 #### SLLogCollector will now order the Standalone BPA Executor tool to execute all BPA tests available in the system [ID_35436]
 

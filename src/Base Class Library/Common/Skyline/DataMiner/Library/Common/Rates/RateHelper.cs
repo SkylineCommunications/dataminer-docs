@@ -97,31 +97,7 @@
 
 		private double CalculateRate(dynamic newCounter, dynamic oldCounter, TimeSpan timeSpan)
 		{
-			unchecked
-			{
-				// Note that the use of "var" without casting only works here because generic type U can currently only be uint or ulong and:
-				// - subtracting 2 uint implicitly returns a uint and handles wraparound nicely.
-				// - subtracting 2 ulong implicitly returns a ulong and handles wraparound nicely.
-				// If generic type U could be of other types, then an explicit casting could be required. Example:
-				// - subtracting 2 ushort implicitly first converts both values to int, subtracts them and returns an int, and does not handle wraparound properly.
-				//   In such a case, an explicit cast to ushort would be required for the wraparound to be properly handled.
-
-				var counterIncrease = newCounter - oldCounter;
-
-				switch (RateBase)
-				{
-					case RateBase.Second:
-						return counterIncrease / timeSpan.TotalSeconds;
-					case RateBase.Minute:
-						return counterIncrease / timeSpan.TotalMinutes;
-					case RateBase.Hour:
-						return counterIncrease / timeSpan.TotalHours;
-					case RateBase.Day:
-						return counterIncrease / timeSpan.TotalDays;
-					default:
-						return counterIncrease / timeSpan.TotalSeconds;
-				}
-			}
+			return 0.0;
 		}
 	}
 
@@ -130,7 +106,7 @@
 	/// This class is meant to be used as base class for more specific RateHelpers depending on the range of counters (<see cref="System.UInt32"/>, <see cref="System.UInt64"/>, etc).
 	/// </summary>
 	[Serializable]
-	public class RateOnDateTime<T, U> : RateHelper<T, U> where U : CounterWithDateTime<T>
+	public class RateOnDateTime<T,U> : RateHelper<T, U> where U : CounterWithDateTime<T>
 	{
 		[JsonConstructor]
 		private protected RateOnDateTime(TimeSpan minDelta, TimeSpan maxDelta, RateBase rateBase) : base(minDelta, maxDelta, rateBase) { }
@@ -217,9 +193,9 @@
 		/// Counters will be buffered until this minimum delta is met.</param>
 		/// <param name="maxDelta">Maximum <see cref="System.TimeSpan"/> allowed between 2 counters when calculating a rate.</param>
 		/// <param name="rateBase">Choose whether the rate should be calculated per second, minute, hour, or day.</param>
-		/// <exception cref="JsonReaderException"><paramref name="rateHelperSerialized"/> is an invalid string representation of a <see cref="Rate32OnDateTime"/> instance.</exception>
+		/// <exception xref="Newtonsoft.Json.JsonReaderException"><paramref name="rateHelperSerialized"/> is an invalid string representation of a <see cref="Rate32OnDateTime"/> instance.</exception>
 		/// <returns>If the <paramref name="rateHelperSerialized"/> is valid, a new instance of the <see cref="Rate32OnDateTime"/> class with all data found in <paramref name="rateHelperSerialized"/>.<br/>
-		/// Otherwise, throws a <see cref="JsonReaderException"/>.</returns>
+		/// Otherwise, throws a <see xref="Newtonsoft.Json.JsonReaderException"/>.</returns>
 		public static Rate32OnDateTime FromJsonString(string rateHelperSerialized, TimeSpan minDelta, TimeSpan maxDelta, RateBase rateBase = RateBase.Second)
 		{
 			ValidateMinAndMaxDeltas(minDelta, maxDelta);
@@ -261,9 +237,9 @@
 		/// Counters will be buffered until this minimum delta is met.</param>
 		/// <param name="maxDelta">Maximum <see cref="System.TimeSpan"/> allowed between 2 counters when calculating a rate.</param>
 		/// <param name="rateBase">Choose whether the rate should be calculated per second, minute, hour, or day.</param>
-		/// <exception cref="JsonReaderException"><paramref name="rateHelperSerialized"/> is an invalid string representation of a <see cref="Rate32OnTimeSpan"/> instance.</exception>
+		/// <exception xref="Newtonsoft.Json.JsonReaderException"><paramref name="rateHelperSerialized"/> is an invalid string representation of a <see cref="Rate32OnTimeSpan"/> instance.</exception>
 		/// <returns>If the <paramref name="rateHelperSerialized"/> is valid, a new instance of the <see cref="Rate32OnTimeSpan"/> class with all data found in <paramref name="rateHelperSerialized"/>.<br/>
-		/// Otherwise, throws a <see cref="JsonReaderException"/>.</returns>
+		/// Otherwise, throws a <see xref="Newtonsoft.Json.JsonReaderException"/>.</returns>
 		public static Rate32OnTimeSpan FromJsonString(string rateHelperSerialized, TimeSpan minDelta, TimeSpan maxDelta, RateBase rateBase = RateBase.Second)
 		{
 			ValidateMinAndMaxDeltas(minDelta, maxDelta);
@@ -304,9 +280,9 @@
 		/// Counters will be buffered until this minimum delta is met.</param>
 		/// <param name="maxDelta">Maximum <see cref="System.TimeSpan"/> allowed between 2 counters when calculating a rate.</param>
 		/// <param name="rateBase">Choose whether the rate should be calculated per second, minute, hour, or day.</param>
-		/// <exception cref="JsonReaderException"><paramref name="rateHelperSerialized"/> is an invalid string representation of a <see cref="Rate64OnDateTime"/> instance.</exception>
+		/// <exception xref="Newtonsoft.Json.JsonReaderException"><paramref name="rateHelperSerialized"/> is an invalid string representation of a <see cref="Rate64OnDateTime"/> instance.</exception>
 		/// <returns>If the <paramref name="rateHelperSerialized"/> is valid, a new instance of the <see cref="Rate64OnDateTime"/> class with all data found in <paramref name="rateHelperSerialized"/>.<br/>
-		/// Otherwise, throws a <see cref="JsonReaderException"/>.</returns>
+		/// Otherwise, throws a <see xref="Newtonsoft.Json.JsonReaderException"/>.</returns>
 		public static Rate64OnDateTime FromJsonString(string rateHelperSerialized, TimeSpan minDelta, TimeSpan maxDelta, RateBase rateBase = RateBase.Second)
 		{
 			ValidateMinAndMaxDeltas(minDelta, maxDelta);
@@ -349,9 +325,9 @@
 		/// Counters will be buffered until this minimum delta is met.</param>
 		/// <param name="maxDelta">Maximum <see cref="System.TimeSpan"/> allowed between 2 counters when calculating a rate.</param>
 		/// <param name="rateBase">Choose whether the rate should be calculated per second, minute, hour, or day.</param>
-		/// <exception cref="JsonReaderException"><paramref name="rateHelperSerialized"/> is an invalid string representation of a <see cref="Rate64OnTimeSpan"/> instance.</exception>
+		/// <exception xref="Newtonsoft.Json.JsonReaderException"><paramref name="rateHelperSerialized"/> is an invalid string representation of a <see cref="Rate64OnTimeSpan"/> instance.</exception>
 		/// <returns>If the <paramref name="rateHelperSerialized"/> is valid, a new instance of the <see cref="Rate64OnTimeSpan"/> class with all data found in <paramref name="rateHelperSerialized"/>.<br/>
-		/// Otherwise, throws a <see cref="JsonReaderException"/>.</returns>
+		/// Otherwise, throws a <see xref="Newtonsoft.Json.JsonReaderException"/>.</returns>
 		public static Rate64OnTimeSpan FromJsonString(string rateHelperSerialized, TimeSpan minDelta, TimeSpan maxDelta, RateBase rateBase = RateBase.Second)
 		{
 			ValidateMinAndMaxDeltas(minDelta, maxDelta);

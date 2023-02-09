@@ -6,7 +6,7 @@ uid: DCP_2.2
 
 ## Installing the DataMiner Cloud Pack
 
-For installation information, see [Connecting your DataMiner System to the cloud](xref:Connecting_your_DataMiner_System_to_the_cloud).
+For installation information, see [Connecting your DataMiner System to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud).
 
 ## Upgrading your DataMiner Cloud Pack installation
 
@@ -32,9 +32,9 @@ Install the DataMiner Teams app from the official Microsoft Teams app Store. Dep
 
 #### Managing access to a DMS
 
-Before DCP users can have access to a DataMiner System via the Teams Bot, their account must be added to the right organization and DMS via the Admin app.
+Before dataminer.services users can have access to a DataMiner System via the Teams Bot, their account must be added to the right organization and DMS via the Admin app.
 
-For more information, see [Giving users access to cloud features](xref:Giving_users_access_to_cloud_features).
+For more information, see [Giving users access to dataminer.services features](xref:Giving_users_access_to_cloud_features).
 
 #### Available options
 
@@ -47,7 +47,7 @@ This first version of the Teams Bot will allow you to have one-on-one conversati
 - *show shares*: Shows the dashboards that have been shared with you.
 - *help*: Shows more detailed help information, if available.
 - *cancel*: Cancels the current action.
-- *logout*: Logs out of the DataMiner Cloud Platform.
+- *logout*: Logs out of dataminer.services.
 
 ### Automatic HTTPS detection
 

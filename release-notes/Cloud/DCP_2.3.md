@@ -6,7 +6,7 @@ uid: DCP_2.3
 
 ## Installing the DataMiner Cloud Pack
 
-For installation information, see [Connecting your DataMiner System to the cloud](xref:Connecting_your_DataMiner_System_to_the_cloud).
+For installation information, see [Connecting your DataMiner System to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud).
 
 ## Upgrading your DataMiner Cloud Pack installation
 

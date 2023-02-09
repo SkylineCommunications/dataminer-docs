@@ -136,7 +136,7 @@ In the SLDataGateway process, a number of memory enhancements have been made wit
 
 #### SLAnalytics - Behavioral anomaly detection: Suggestion events and alarm events for a DVE child element will now be generated on that same DVE child element [ID_35332]
 
-<!-- MR 10.4.0 - FR 10.3.3 -->
+<!-- MR 10.3.0 - FR 10.3.3 -->
 
 When a behavioral anomaly was detected on a DVE child element, up to now, the suggestion event or the alarm event would be generated on the parent element. From now on, it will be generated on the child element instead.
 
@@ -183,6 +183,20 @@ Example:
 - Old format: `Received ACK from SNMP Manager SNMP - LFR`
 
 - New format: `Received ACK from SNMP Manager SNMP - LFR for alarm 239/4270232`
+
+#### Service & Resource Management: Enhanced performance when changing active function files [ID_35424]
+
+<!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
+
+Because of a number of enhancements, overall performance has increased when changing an active function file.
+
+Also, in the Cube UI, users will receive more concise feedback regarding the impact of the change. Up to now, they would receive a list of all items affected by the change. From now on, the list of affected items will only show up to 10 affected items per object type.
+
+#### Automation: Enhanced memory usage [ID_35502]
+
+<!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
+
+Because of a number of enhancements, overall memory usage of the SLAutomation process has improved.
 
 ### Fixes
 
@@ -232,6 +246,12 @@ From now on, when the `<DBServer>` element contains multiple host addresses incl
 
 In some cases, the SLDataGateway process could end up with an excessive number of *HealthMonitor.Refresh* threads.
 
+#### Some agents in the cluster would incorrectly remove the run-time hosting agent info they had stored for another agent [ID_35287]
+
+<!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
+
+When run-time connections were being set up between agents or when a midnight sync was being executed, some agents in the DataMiner cluster would incorrectly remove the run-time hosting agent information they had stored for another agent in the same cluster.
+
 #### DataMiner Object Models: Permission checks for DOM modules requiring view permission 'None' were too strict [ID_35305]
 
 <!-- MR 10.3.0 - FR 10.3.3 -->
@@ -239,6 +259,12 @@ In some cases, the SLDataGateway process could end up with an excessive number o
 If a DOM module is created without specifying *SecuritySettings*, the view permission is set to "None".
 
 Up to now, the check to determine whether a user had the view permission set to "None", would only return true for the Administrator or users in the Administrator group. From now on, when the required view permission is "None", permission checks will no longer be performed.
+
+#### NATSMaxPayloadException could be thrown when a client requested large amounts of data [ID_35306]
+
+<!-- MR 10.3.0 - FR 10.3.3 -->
+
+When a client requested large amounts of data, in some cases, a `NATSMaxPayloadException` could be thrown.
 
 #### External authentication via SAML: Issues fixed when using Okta as identity provider [ID_35374]
 
@@ -266,11 +292,23 @@ netsh winhttp set proxy <proxyaddress> <bypasslist>
 
 In a Cassandra database, the "time to live" (TTL) setting of spectrum trace data would not be applied correctly. As a result, this type of data would never be removed.
 
+#### Problem with SLElement when stopping an EPM element [ID_35439]
+
+<!-- MR 10.2.0 [CU13]/10.3.0 [CU1]  - FR 10.3.3 -->
+
+When an EPM element was stopped, in some rare cases, an error could occur in SLElement.
+
 #### SLDataGateway would not correctly return errors when querying SLA logger tables in a Cassandra Cluster [ID_35440]
 
 <!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
 
 SLDataGateway would not correctly return errors when querying SLA logger tables in a Cassandra Cluster, causing an error to occur in SLProtocol.
+
+#### Problem when sending northbound SNMP inform messages in chronological order [ID_35441]
+
+<!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
+
+When northbound SNMP inform messages were being sent in chronological order, an error could occur when sending those messages suddenly stopped.
 
 #### Automation: 'engine.RunClientProgram' overload with two parameters would incorrectly always be run synchronously [ID_35476]
 
@@ -281,3 +319,9 @@ An `engine.RunClientProgram` overload with two parameters, of which the second o
 ```csharp
 RunClientProgram(String applicationPath, bool waitForCompletion)
 ```
+
+#### Business Intelligence: Problem when correcting outages on an SLA with a week-based window [ID_35503]
+
+<!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
+
+When outages on an SLA with a week-based window were corrected, the *History Statistics Table* that started in the first 9 weeks of every year would incorrectly not get updated.
