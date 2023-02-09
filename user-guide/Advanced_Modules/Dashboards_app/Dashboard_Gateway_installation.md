@@ -106,7 +106,7 @@ To add a rewrite rule that will proxy any request to the DataMiner Maps module a
 
 1. Open IIS Manager on the Gateway server.
 
-1. In the tree view on the left, choose a web site node and select the *URL Rewrite* feature.
+1. In the tree view on the left, choose a website node (usually *Default Web Site*) and select the *URL Rewrite* feature.
 
 1. Click *Add Rule(s)*, select *Blank rule*, and specify the following options:
 
@@ -124,7 +124,7 @@ To add a rewrite rule that will proxy any request to the Maps API at `https://my
 
 1. Open IIS Manager on the Gateway server.
 
-1. In the tree view on the left, choose a web site node and select the *URL Rewrite* feature.
+1. In the tree view on the left, choose a website node (usually *Default Web Site*) and select the *URL Rewrite* feature.
 
 1. Click *Add Rule(s)*, select *Blank rule*, and specify the following options:
 
@@ -144,7 +144,7 @@ To add a rewrite rule that will proxy any request to the VideoThumbnails web pag
 
 1. Open IIS Manager on the Gateway server.
 
-1. In the tree view on the left, choose a web site node and select the *URL Rewrite* feature.
+1. In the tree view on the left, choose a website node (usually *Default Web Site*) and select the *URL Rewrite* feature.
 
 1. Click *Add Rule(s)*, select *Blank rule*, and specify the following options:
 
