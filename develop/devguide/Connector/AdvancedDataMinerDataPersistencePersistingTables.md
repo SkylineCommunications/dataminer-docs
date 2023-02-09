@@ -45,3 +45,14 @@ In case you do not want anything to be kept in the database, you can use the vol
 ```
 
 The *volatile* option can also be applied on a specific column in the options attribute of the ColumnOption tag (except for columns using the element option or referred to by the displayColumn attribute).
+
+You should only use this option in the following cases:
+
+- The table is not used for DCF interface.
+- The table is not used for DVEs.
+-
+-
+- Trending is not enabled on the table.
+- Alarm monitoring is not enabled on the table.
+
+In general, make sure to only use it on table that are only displayed in the UI or used in a QAction, but are not used in any other way.
