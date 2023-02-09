@@ -280,6 +280,12 @@ When you opened an EPM card, in some cases, the collector pages would not be loa
 
 From now on, the collector pages will be loaded even when the EPM environment does not include a backend. This will particularly be useful for testing purposes.
 
+#### Trending: Light bulb icon in trend component no longer overlapping [ID_35536]
+
+<!-- MR 10.3.0 - FR 10.3.3 -->
+
+In some cases, the light bulb icon in the top-right corner of a trend graph would incorrectly overlap the full screen or zoom range buttons.
+
 #### DataMiner Cube - Service templates: Open service card would not be updated when the service template was re-applied [ID_35537]
 
 <!-- MR 10.2.0 [CU12] - FR 10.3.3 -->

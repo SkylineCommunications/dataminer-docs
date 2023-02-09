@@ -1088,3 +1088,9 @@ When you had configured DataMiner Cube to connect using gRPC (by specifying `typ
 When you opened an EPM card, in some cases, the collector pages would not be loaded, especially on systems without backend.
 
 From now on, the collector pages will be loaded even when the EPM environment does not include a backend. This will particularly be useful for testing purposes.
+
+#### Trending: Light bulb icon in trend component no longer overlapping [ID_35536]
+
+<!-- MR 10.3.0 - FR 10.3.3 -->
+
+In some cases, the light bulb icon in the top-right corner of a trend graph would incorrectly overlap the full screen or zoom range buttons.
