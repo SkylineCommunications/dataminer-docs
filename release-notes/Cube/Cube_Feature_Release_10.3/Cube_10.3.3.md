@@ -297,3 +297,15 @@ When you updated an re-applied a service template while a card of a service crea
 <!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
 
 When you enabled the *Automatic incident tracking* option of an active alarms tab while a quick filter was applied, in some cases, the alarm counters in the footer bar would incorrectly start to show negative values.
+
+#### Trending - Parameter relationships: No parameters would be listed when you clicked the light bulb icon [ID_35548]
+
+<!-- MR 10.3.0 - FR 10.3.3 -->
+
+When you open a trend graph, a light bulb icon will appear in the top-right corner when DataMiner finds parameters that are related to the parameters shown in the graph. When you click that icon, you get a list of the ten most important parameters, which you can then add to the graph. However, in some cases, when you clicked the light bulb icon, the list with suggested parameters would incorrectly be empty.
+
+#### Trending - Parameter relationships: The same parameter could be added multiple times to the graph when you clicked it repeatedly [ID_35561]
+
+<!-- MR 10.3.0 - FR 10.3.3 -->
+
+When you open a trend graph, a light bulb icon will appear in the top-right corner when DataMiner finds parameters that are related to the parameters shown in the graph. When you click that icon, you get a list of the ten most important parameters, which you can then add to the graph. However, in some cases, when you clicked one of those suggested parameter multiple times, it would incorrectly be added multiple times to the graph.

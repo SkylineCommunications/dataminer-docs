@@ -1094,3 +1094,15 @@ From now on, the collector pages will be loaded even when the EPM environment do
 <!-- MR 10.3.0 - FR 10.3.3 -->
 
 In some cases, the light bulb icon in the top-right corner of a trend graph would incorrectly overlap the full screen or zoom range buttons.
+
+#### Trending - Parameter relationships: No parameters would be listed when you clicked the light bulb icon [ID_35548]
+
+<!-- MR 10.3.0 - FR 10.3.3 -->
+
+When you open a trend graph, a light bulb icon will appear in the top-right corner when DataMiner finds parameters that are related to the parameters shown in the graph. When you click that icon, you get a list of the ten most important parameters, which you can then add to the graph. However, in some cases, when you clicked the light bulb icon, the list with suggested parameters would incorrectly be empty.
+
+#### Trending - Parameter relationships: The same parameter could be added multiple times to the graph when you clicked it repeatedly [ID_35561]
+
+<!-- MR 10.3.0 - FR 10.3.3 -->
+
+When you open a trend graph, a light bulb icon will appear in the top-right corner when DataMiner finds parameters that are related to the parameters shown in the graph. When you click that icon, you get a list of the ten most important parameters, which you can then add to the graph. However, in some cases, when you clicked one of those suggested parameter multiple times, it would incorrectly be added multiple times to the graph.
