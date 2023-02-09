@@ -266,6 +266,12 @@ When you right-clicked a shape, certain context menu commands would incorrectly 
 
 When, while configuring an alarm template, you opened the baseline editor and selected the *Automatically update the baseline values* option, the *Trending* column would no longer show an icon when average trending was disabled for the parameter in question.
 
+#### Newly created users would be assigned an invalid full name, description and password when Cube was configured to connect using gRPC [ID_35493]
+
+<!-- MR 10.3.0 - FR 10.3.3 -->
+
+When you had configured DataMiner Cube to connect using gRPC (by specifying `type=GrpcConnection` in the *ConnectionSettings.txt* file), newly created users would be assigned an invalid full name, description and password.
+
 #### DataMiner Cube - Service templates: Open service card would not be updated when the service template was re-applied [ID_35537]
 
 <!-- MR 10.2.0 [CU12] - FR 10.3.3 -->

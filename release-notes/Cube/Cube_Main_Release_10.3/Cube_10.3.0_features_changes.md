@@ -1074,3 +1074,9 @@ When, in Visual Overview, a filter was applied to a *ListView* component that li
 <!-- MR 10.3.0 - FR 10.3.3 -->
 
 When you right-clicked a shape, certain context menu commands would incorrectly be disabled.
+
+#### Newly created users would be assigned an invalid full name, description and password when Cube was configured to connect using gRPC [ID_35493]
+
+<!-- MR 10.3.0 - FR 10.3.3 -->
+
+When you had configured DataMiner Cube to connect using gRPC (by specifying `type=GrpcConnection` in the *ConnectionSettings.txt* file), newly created users would be assigned an invalid full name, description and password.
