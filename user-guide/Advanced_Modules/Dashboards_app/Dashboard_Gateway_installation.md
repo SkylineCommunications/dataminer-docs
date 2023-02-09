@@ -51,7 +51,7 @@ There are two main reasons to consider a Dashboard Gateway setup:
 
 - The DataMiner user account used by the Dashboard Gateway web server should not have multifactor authentication enabled.
 
-- Only the following web applications are supported: Dashboards app, Low-code apps, Monitoring app, Jobs app, and the Ticketing app. For other web apps, a [reverse proxy](#reverse-proxy) can be configured.
+- Only the following web applications are supported: Dashboards app, Low-Code Apps, Monitoring app, Jobs app, and the Ticketing app. For other web apps, a [reverse proxy](#reverse-proxy) can be configured.
 
 ## Dashboard Gateway configuration
 
@@ -74,69 +74,97 @@ There are two main reasons to consider a Dashboard Gateway setup:
 
 ## Reverse proxy
 
-When a dashboard (or Low-code app) contains a web component displaying the [Maps app](xref:maps) or VideoThumbnails web page, then this won't work out of the box when the dashboard (or app) is opened via the Gateway server.
+Opening a dashboard or low-code app via the Gateway server will not work if they contain a web component displaying the [DataMiner Maps module](xref:maps) or [VideoThumbnails web page](xref:Linking_a_shape_to_a_video_thumbnail).
 
 A reverse proxy can be used to give access to these web pages on the DMA via the Gateway server. The reverse proxy will forward any web requests for these web pages to the DMA.
 
-### Requirements
+### Reverse proxy requirements
 
-* IIS 7 or above with ASP.NET role service enabled and [URL Rewrite](https://www.iis.net/downloads/microsoft/url-rewrite) module installed.
-* [Application Request Routing](https://www.iis.net/downloads/microsoft/application-request-routing) module installed.
+- IIS 7 or higher with ASP.NET role service enabled
+
+- [URL Rewrite](https://www.iis.net/downloads/microsoft/url-rewrite)
+
+- [Application Request Routing](https://www.iis.net/downloads/microsoft/application-request-routing)
 
 ### Configuration
 
 #### Enabling reverse proxy functionality
 
-Reverse proxy functionality is disabled by default, so you must begin by enabling it:
+As the reverse proxy functionality is disabled by default, first enable it by doing the following:
 
 1. Open IIS Manager on the Gateway server.
-1. Select a server node in the tree view on the left hand side and then click on the "Application Request Routing" feature.
-1. Check the "Enable Proxy" check box. Leave the default values for all the other settings on this page.
 
-### Creating rules for the Maps app
+1. In the tree view on the left, choose a server node and select the *Application Request Routing* feature.
 
-The following rewrite rules will be created:
+1. Select the *Enable Proxy* checkbox.
 
-* A rewrite rule that will proxy any request to the Maps app at https://mydma/maps/ as long as the requested URL path starts with "maps".
-* A rewrite rule that will proxy any request to the Maps API at https://mydma/API/v0/maps.asmx as long as the requested URL path starts with "API/v0/maps.asmx".
+1. All the other settings can be left on default.
 
-To add the reverse proxy rewrite rules:
+#### Creating rewrite rules for the Maps module
 
-1. Open IIS Manager
-1. Select a web site node in the tree view on the left hand side and then click on the "URL Rewrite" feature
-1. Click on "Add Rule(s)..." and select "Blank rule"
-1. Give the rule a name, for example "Maps application"
-1. Enter the pattern: `^maps/(.*)`
-1. Enter the rewrite url: `https://mydma/maps/{R:1}`
-1. Enable "Stop processing of subsequent rules"
-1. Click apply
-1. Click again on "Add Rule(s)..." and select "Blank rule"
-1. Give the rule a name, for example "Maps API"
-1. Enter the pattern: `^API/v0/maps.asmx/(.*)`
-1. Enter the rewrite url: `https://mydma/API/v0/maps.asmx/{R:1}`
-1. Enable "Stop processing of subsequent rules"
-1. Click apply
+To add a rewrite rule that will proxy any request to the DataMiner Maps module at `https://mydma/maps/`, as long as the requested URL path starts with "maps", do the following:
 
-### Creating rules for the VideoThumbnails web page
+1. Open IIS Manager on the Gateway server.
 
-The following rewrite rule will be created:
+1. In the tree view on the left, choose a web site node and select the *URL Rewrite* feature.
 
-* A rewrite rule that will proxy any request to the VideoThumbnails web page at https://mydma/videothumbnails/ as long as the requested URL path starts with "videothumbnails".
+1. Click *Add Rule(s)*, select *Blank rule*, and specify the following options:
 
-To add the reverse proxy rewrite rule:
+   - **Name**: e.g. "Maps module"
 
-1. Open IIS Manager
-1. Select a web site node in the tree view on the left hand side and then click on the "URL Rewrite" feature
-1. Click on "Add Rule(s)..." and select "Blank rule"
-1. Give the rule a name, for example "VideoThumbnails"
-1. Enter the pattern: `^videothumbnails/(.*)`
-1. Enter the rewrite url: `https://mydma/videothumbnails/{R:1}`
-1. Enable "Stop processing of subsequent rules"
-1. Click apply
+   - **Pattern**: `^maps/(.*)`
+
+   - **Rewrite URL**: `https://mydma/maps/{R:1}`
+
+   - ***Stop processing of subsequent rules***: enabled
+
+1. Click *apply*.
+
+To add a rewrite rule that will proxy any request to the Maps API at `https://mydma/API/v0/maps.asmx`, as long as the requested URL path starts with "API/v0/maps.asmx", do the following:
+
+1. Open IIS Manager on the Gateway server.
+
+1. In the tree view on the left, choose a web site node and select the *URL Rewrite* feature.
+
+1. Click *Add Rule(s)*, select *Blank rule*, and specify the following options:
+
+   - **Name**: e.g. "Maps API"
+
+   - **Pattern**: `^API/v0/maps.asmx/(.*)`
+
+   - **Rewrite URL**: `https://mydma/API/v0/maps.asmx/{R:1}`
+
+   - ***Stop processing of subsequent rules***: enabled
+
+1. Click *apply*.
+
+#### Creating rewrite rules for the VideoThumbnails web page
+
+To add a rewrite rule that will proxy any request to the VideoThumbnails web page at `https://mydma/videothumbnails/`, as long as the requested URL path starts with "videothumbnails", do the following:
+
+1. Open IIS Manager on the Gateway server.
+
+1. In the tree view on the left, choose a web site node and select the *URL Rewrite* feature.
+
+1. Click *Add Rule(s)*, select *Blank rule*, and specify the following options:
+
+   - **Name**: e.g. "VideoThumbnails"
+
+   - **Pattern**: `^videothumbnails/(.*)`
+
+   - **Rewrite URL**: `https://mydma/videothumbnails/{R:1}`
+
+   - ***Stop processing of subsequent rules***: enabled
+
+1. Click *apply*.
 
 ### Testing the reverse proxy functionality
 
-Open a web browser and make a request to https://gateway/maps/maps.aspx?config=yourmapconfig or https://gateway/videothumbnails/video.htm. You should see the login screen of the Maps app or VideoThumbnails web page. It should be possible to login.
+To test whether the reverse proxy is working properly, do the following:
+
+1. Enter `https://gateway/maps/maps.aspx?config=yourmapconfig` or `https://gateway/videothumbnails/video.htm` in your browser's address bar.
+
+1. If the reverse proxy was configured correctly, you should see the login screen of the DataMiner Maps module or the VideoThumbnails web page. It should be possible to log in.
 
 > [!TIP]
-> When embedding the URLs in Dashboards, make use of relative URLs, for example: ``/maps/maps.aspx?config=yourmapconfig``. This way the content will be shown on the dashboard opened via the Gateway server and also locally via the DMA.
+> When embedding the URLs in dashboards, make use of relative URLs, e.g. ``/maps/maps.aspx?config=yourmapconfig``. This way, the content will both be shown on a dashboard accessed via the Gateway server and a dashboard accessed locally via the DMA.
