@@ -836,11 +836,11 @@ In dialog boxes of an interactive Automation script, up to now, you were able to
 > [!IMPORTANT]
 > When an interactive Automation script was launched from a web app, then you will have to press ESC instead of ALT+F4 to close a dialog box and abort the script. Pressing ALT+F4 would close the browser, not just the dialog box.
 
-#### System Center: Link to online help now points to 'Connecting your DataMiner System to the cloud' on <https://docs.dataminer.services/> [ID_34683]
+#### System Center: Link to online help now points to cloud connection help on <https://docs.dataminer.services/> [ID_34683]
 
 <!-- MR 10.3.0 - FR 10.2.12 -->
 
-On the *Cloud* page of *System Center*, the *online help* hyperlink now points to the [Connecting your DataMiner System to the cloud](xref:Connecting_your_DataMiner_System_to_the_cloud) page on <https://docs.dataminer.services/>.
+On the *Cloud* page of *System Center*, the *online help* hyperlink now points to the [Connecting your DataMiner System to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud) page on <https://docs.dataminer.services/>.
 
 #### Alarm Console: When grouped, incident alarms will now appear in the group of the highest severity found among the base alarms [ID_34754]
 
@@ -851,6 +851,12 @@ When you open an alarm tab that contains incident alarms, the icons in front of 
 Up to now, when you grouped/sorted the alarms in the alarm tab by severity, the incident alarms would all appear in the "suggestion" group. From now on, they will instead appear in the group of the highest severity found among the base alarms.
 
 Also, in case of incident alarms, the alarm duration indicator will now show the highest severity found among the base alarms.
+
+#### Tab layout: Click the tab header with the middle mouse button to quickly close a tab [ID_34791]
+
+<!-- MR 10.3.0 - FR 10.3.3 -->
+
+When using the tab layout, up to now, you could quickly close a tab by clicking inside it with the middle mouse button. From now on, to quickly close a tab, instead of clicking inside the tab, you will have to click the tab header with the middle mouse button.
 
 #### Bookings module: Navigation panel has been improved and renamed to 'settings' panel [ID_34840]
 
@@ -1049,3 +1055,9 @@ When you exported a trend graph containing average trend data to CSV, in some ca
 <!-- MR 10.3.0 - FR 10.3.3 -->
 
 When, in Visual Overview, a filter was applied to a *ListView* component that listed bookings, no account would be taken of bookings added after the filter had been applied. As a result, in some cases, the *ListView* component would list bookings that did not match the filter.
+
+#### Visual Overview: Certain context menu commands would incorrectly be disabled [ID_35484]
+
+<!-- MR 10.3.0 - FR 10.3.3 -->
+
+When you right-clicked a shape, certain context menu commands would incorrectly be disabled.

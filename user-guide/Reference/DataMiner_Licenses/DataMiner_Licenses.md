@@ -21,4 +21,4 @@ There are four procedures to obtain a DataMiner license:
 > - In DataMiner Cube, you can find the license information by clicking the question mark in the header bar, and then selecting the *license* tab in the *About* window. Under *Licensed options* you can find the list of DataMiner applications for which you have a license. Under *Used license counters* you can see the number of items in use compared to the total number of items allowed by the license.
 
 > [!TIP]
-> In the [DCP Admin app](xref:CloudAdminApp), license information for your organization is available on the *Organization* > *Overview* page.
+> In the [Admin app](xref:CloudAdminApp), license information for your organization is available on the *Organization* > *Overview* page.

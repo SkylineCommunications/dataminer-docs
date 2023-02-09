@@ -19,6 +19,24 @@ uid: General_Feature_Release_10.3.3
 
 ## Other features
 
+#### Db.xml: Specifying a custom port in the \<DBServer\> element of a Cassandra database [ID_34590]
+
+<!-- MR 10.3.0 - FR 10.3.3 -->
+
+In `<DataBase>` elements of which the `type` attribute is set to either "Cassandra" or "CassandraCluster", a custom port can now be specified in the `<DBServer>` element. If you specify a hostname or IP address without a port, DataMiner will fall back to the default Cassandra port 9042.
+
+Examples:
+
+```xml
+<DBServer>localhost</DBServer><!-- Will be resolved to localhost:9042 -->
+<DBServer>10.5.100.1:5555</DBServer>
+<DBServer>cassandra.amazonaws.eu.north.com</DBServer>
+<DBServer>cassandra.amazonaws.eu.north.com:9142</DBServer>
+```
+
+> [!NOTE]
+> It is still possible to specify multiple endpoints. To do so, separate them by commas (",").
+
 #### DataMiner Object Model: New 'ClientReadOnly' and 'AllowMultipleSections' properties [ID_35172]
 
 <!-- MR 10.3.0 - FR 10.3.3 -->
@@ -260,6 +278,12 @@ If a DOM module is created without specifying *SecuritySettings*, the view permi
 
 Up to now, the check to determine whether a user had the view permission set to "None", would only return true for the Administrator or users in the Administrator group. From now on, when the required view permission is "None", permission checks will no longer be performed.
 
+#### NATSMaxPayloadException could be thrown when a client requested large amounts of data [ID_35306]
+
+<!-- MR 10.3.0 - FR 10.3.3 -->
+
+When a client requested large amounts of data, in some cases, a `NATSMaxPayloadException` could be thrown.
+
 #### External authentication via SAML: Issues fixed when using Okta as identity provider [ID_35374]
 
 <!-- MR 10.4.0 - FR 10.3.3 -->
@@ -285,6 +309,12 @@ netsh winhttp set proxy <proxyaddress> <bypasslist>
 <!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
 
 In a Cassandra database, the "time to live" (TTL) setting of spectrum trace data would not be applied correctly. As a result, this type of data would never be removed.
+
+#### Problem with SLElement when stopping an EPM element [ID_35439]
+
+<!-- MR 10.2.0 [CU13]/10.3.0 [CU1]  - FR 10.3.3 -->
+
+When an EPM element was stopped, in some rare cases, an error could occur in SLElement.
 
 #### SLDataGateway would not correctly return errors when querying SLA logger tables in a Cassandra Cluster [ID_35440]
 

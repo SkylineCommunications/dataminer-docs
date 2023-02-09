@@ -42,7 +42,7 @@ When ready to scale up, the user can set up a yearly subscription or start with 
 
 > [!NOTE]
 >
-> - Self-hosted/on-premises free DataMiner Systems are not time-limited. An organization can use the system as long as it remains reachable (with DataMiner Cloud Services enabled).
+> - Self-hosted/on-premises free DataMiner Systems are not time-limited. An organization can use the system as long as it remains reachable (connected to dataminer.services).
 > - Skyline-hosted free DataMiner Systems (DataMiner as a Service) are only available for a maximum period of 30 days. Contact your Account Manager for details.
 
 ## DataMiner Perpetual-Use Licenses vs Usage-based services
@@ -90,4 +90,4 @@ In case of a Pay-per-Use plan, user pay for what they use, giving ultimate flexi
 | Professional Services credits included |  100 < MUA < 200: 100 <br> 200 < MUA < 400: 200 <br> MUA >= 400: 600 | 50 for every 1000 pay-per-use credits |
 
 > [!IMPORTANT]
-> The system must have DataMiner Cloud Services enabled in order to enable metering for systems that are hosted by the user (on-premises or private cloud). The system will stop working if disconnected for longer than 24 hours.
+> The system must be connected to dataminer.services in order to enable metering for systems that are hosted by the user (on-premises or private cloud). The system will stop working if disconnected for longer than 24 hours.

@@ -75,6 +75,12 @@ Each time a program is launched, a start entry and an end entry will be added to
 
 ### Enhancements
 
+#### Tab layout: Click the tab header with the middle mouse button to quickly close a tab [ID_34791]
+
+<!-- MR 10.3.0 - FR 10.3.3 -->
+
+When using the tab layout, up to now, you could quickly close a tab by clicking inside it with the middle mouse button. From now on, to quickly close a tab, instead of clicking inside the tab, you will have to click the tab header with the middle mouse button.
+
 #### Elasticsearch: 'Request Entity Too Large (413)' errors will now be prevented when writing data in bulk [ID_34937]
 
 <!-- MR 10.4.0 - FR 10.3.3 -->
@@ -117,6 +123,12 @@ From now on, data retrieved from the collector that used to be displayed as a ta
 When you try to create a trend pattern tag, an error message will appear when there are too many missing values in the selected pattern.
 
 From now on, a slightly larger number of missing values will be allowed will you create a trend pattern tag.
+
+#### DataMiner Cube - Alarm Console: No longer possible to enable the 'Automatic incident tracking' option for a history tab [ID_35556]
+
+<!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
+
+From now on, it is no longer possible to enable the *Automatic incident tracking* option for a history tab.
 
 ### Fixes
 
@@ -221,3 +233,33 @@ When you tried to remove a DCF connection in the *Properties* window of an eleme
 <!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
 
 When, in a Visio drawing, shapes have been positioned dynamically, you can re-arrange those shapes manually by switching to *Arrange* mode and re-arranging the shapes using drag-and-drop. In some cases, after you had re-arranged a number of shapes, a *NullReferenceException* could be thrown.
+
+#### DataMiner Cube - Visual Overview: Problem when right-clicking a dynamically positioned shape [ID_35463]
+
+<!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
+
+When, in a Visio drawing, you were re-arranging dynamically positioned shapes, an exception could be thrown when you right-clicked a shape to access its context menu.
+
+#### Visual Overview: Certain context menu commands would incorrectly be disabled [ID_35484]
+
+<!-- MR 10.3.0 - FR 10.3.3 -->
+
+When you right-clicked a shape, certain context menu commands would incorrectly be disabled.
+
+#### DataMiner Cube - Alarm templates: Trending column in baseline editor would no longer show any icons [ID_35488]
+
+<!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
+
+When, while configuring an alarm template, you opened the baseline editor and selected the *Automatically update the baseline values* option, the *Trending* column would no longer show an icon when average trending was disabled for the parameter in question.
+
+#### DataMiner Cube - Service templates: Open service card would not be updated when the service template was re-applied [ID_35537]
+
+<!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
+
+When you updated an re-applied a service template while a card of a service created based on that particular service template was open, the data shown on the open service card would incorrectly not be updated.
+
+#### DataMiner Cube - Alarm Console: Alarm counters would start to show negative values when you enabled the 'Automatic incident tracking' option of an active alarms tab while a quick filter was applied [ID_35547]
+
+<!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
+
+When you enabled the *Automatic incident tracking* option of an active alarms tab while a quick filter was applied, in some cases, the alarm counters in the footer bar would incorrectly start to show negative values.

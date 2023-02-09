@@ -384,25 +384,25 @@ Permission to end chat sessions of other users.
 
 ### General \> Software updates \> Download software updates from DCP
 
-Permission to download software from the DataMiner Cloud Platform.
+Permission to download software from dataminer.services.
 
 ### General \> Live sharing
 
 #### General \> Live sharing \> UI available
 
-Available from DataMiner 10.2.0/10.1.4 onwards. Permission to view the sharing UI and to view items that have been shared in the cloud. (Available as *Modules* > *System configuration* > *Cloud gateway* > *View shared items* in earlier DataMiner versions.)
+Available from DataMiner 10.2.0/10.1.4 onwards. Permission to view the sharing UI and to view items that have been shared via dataminer.services. (Available as *Modules* > *System configuration* > *Cloud gateway* > *View shared items* in earlier DataMiner versions.)
 
 #### General \> Live sharing \> Share
 
-Available from DataMiner 10.2.0/10.1.4 onwards. Permission to share items in the cloud. (Available as *Modules* > *System configuration* > *Cloud gateway* > *Share item* in earlier DataMiner versions.)
+Available from DataMiner 10.2.0/10.1.4 onwards. Permission to share items via dataminer.services. (Available as *Modules* > *System configuration* > *Cloud gateway* > *Share item* in earlier DataMiner versions.)
 
 #### General \> Live sharing \> Edit
 
-Available from DataMiner 10.2.0/10.1.4 onwards. Permission to make changes to items shared in the cloud. (Available as *Modules* > *System configuration* > *Cloud gateway* > *Update shared items* in earlier DataMiner versions.)
+Available from DataMiner 10.2.0/10.1.4 onwards. Permission to make changes to items shared via dataminer.services. (Available as *Modules* > *System configuration* > *Cloud gateway* > *Update shared items* in earlier DataMiner versions.)
 
 #### General \> Live sharing \> Unshare
 
-Available from DataMiner 10.2.0/10.1.4 onwards. Permission to stop sharing items in the cloud. (Available as *Modules* > *System configuration* > *Cloud gateway* > *Unshare item* in earlier DataMiner versions.)
+Available from DataMiner 10.2.0/10.1.4 onwards. Permission to stop sharing items via dataminer.services. (Available as *Modules* > *System configuration* > *Cloud gateway* > *Unshare item* in earlier DataMiner versions.)
 
 ### General \> Email \> Send via DataMiner System
 
@@ -1349,11 +1349,11 @@ Permission to configure the backup settings.
 
 #### Modules \> System configuration \> Cloud sharing/gateway \> Connect to cloud/DCP
 
-Available from DataMiner 10.1.0/10.0.9 onwards. Permission to connect a DMA to the DataMiner Cloud Platform.
+Available from DataMiner 10.1.0/10.0.9 onwards. Permission to connect a DMA to dataminer.services.
 
 #### Modules \> System configuration \> Cloud sharing/gateway \> Disconnect from cloud/DCP
 
-Available from DataMiner 10.1.0/10.0.9 onwards. Permission to disconnect a DMA from the DataMiner Cloud Platform.
+Available from DataMiner 10.1.0/10.0.9 onwards. Permission to disconnect a DMA from dataminer.services.
 
 #### Modules \> System configuration \> Cloud sharing/gateway \> Configure gateway service
 
@@ -1361,31 +1361,31 @@ Available from DataMiner 10.2.0/10.1.4 onwards. Allows you to configure the gate
 
 #### Modules \> System configuration \> Cloud sharing/gateway \> View shared items
 
-Available from DataMiner 10.1.0/10.0.9 onwards. Permission to view items that have been shared in the cloud.
+Available from DataMiner 10.1.0/10.0.9 onwards. Permission to view items that have been shared via dataminer.services.
 
 From DataMiner 10.2.0/10.1.4 onwards, this permission is instead available under *General* > *Live sharing*.
 
 #### Modules \> System configuration \> Cloud sharing/gateway \> Update shared items
 
-Available from DataMiner 10.1.0/10.0.9 onwards. Permission to make changes to items that have been shared in the cloud.
+Available from DataMiner 10.1.0/10.0.9 onwards. Permission to make changes to items that have been shared via dataminer.services.
 
 From DataMiner 10.2.0/10.1.4 onwards, this permission is instead available under *General* > *Live sharing*. |
 
 #### Modules \> System configuration \> Cloud sharing/gateway \> Share item
 
-Available from DataMiner 10.1.0/10.0.9 onwards. Permission to share items in the cloud.
+Available from DataMiner 10.1.0/10.0.9 onwards. Permission to share items via dataminer.services.
 
 From DataMiner 10.2.0/10.1.4 onwards, this permission is instead available under *General* > *Live sharing*.
 
 #### Modules \> System configuration \> Cloud sharing/gateway \> Unshare item
 
-Available from DataMiner 10.1.0/10.0.9 onwards. Permission to stop sharing items in the cloud.
+Available from DataMiner 10.1.0/10.0.9 onwards. Permission to stop sharing items via dataminer.services.
 
 From DataMiner 10.2.0/10.1.4 onwards, this permission is instead available under *General* > *Live sharing*.
 
 #### Modules \> System configuration \> Cloud sharing/gateway \> Account linking
 
-Only available in DataMiner 10.1.3. Permission to link a DataMiner account to a cloud account, which is necessary to be able to share items in the cloud or stop sharing items in the cloud.
+Only available in DataMiner 10.1.3. Permission to link a DataMiner account to a dataminer.services account, which is necessary to be able to share items via dataminer.services or stop sharing items via dataminer.services.
 
 ### Modules \> System configuration \> Database
 

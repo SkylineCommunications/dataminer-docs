@@ -2,7 +2,6 @@
 #if NETFRAMEWORK
 using System.ComponentModel;
 using System.Drawing.Design;
-using Skyline.DataMiner.Net.Editors;
 #endif
 
 namespace Skyline.DataMiner.Net.Profiles
@@ -11,9 +10,9 @@ namespace Skyline.DataMiner.Net.Profiles
 	/// Represents a Profile Manager parameter value.
 	/// </summary>
 	[Serializable]
-#if NETFRAMEWORK
-    [Editor(typeof(ObjectEditor<ParameterValue>), typeof(UITypeEditor))]
-#endif
+//#if NETFRAMEWORK
+//    [Editor(typeof(ObjectEditor<ParameterValue>), typeof(UITypeEditor))]
+//#endif
     //[DataContract(Name = "ParameterValue")]
     public class ParameterValue : IEquatable<ParameterValue>, IProfileParameterValue
     {

@@ -4,13 +4,13 @@ uid: DataMiner_Teams_bot
 
 # DataMiner Teams bot
 
-If your DataMiner System is connected to the cloud with a recent version of the DataMiner Cloud Pack (2.2 or higher), you can interact with your DataMiner System in Microsoft Teams using the DataMiner Teams bot.
+If your DataMiner System is connected to dataminer.services with a recent version of the DataMiner Cloud Pack (2.2 or higher), you can interact with your DataMiner System in Microsoft Teams using the DataMiner Teams bot.
 
 > [!NOTE]
 > We highly recommend that you install the latest version of the DataMiner Cloud Pack. With older versions, not all DataMiner Teams bot features may be available.
 
 > [!TIP]
-> See also: [DataMiner Cloud Platform](xref:Part51CloudPlatform)
+> See also: [dataminer.services](xref:Part51CloudPlatform)
 
 ## DataMiner Teams bot installation
 
@@ -51,9 +51,9 @@ When you start a conversation with the Teams bot, you will first need to log in:
 
    1. Select a DMS if necessary. If only one DMS is available for the selected organization, it will automatically be selected.
 
-1. It is possible that you will still need to link your DataMiner account to your DataMiner Cloud Platform account. In that case, you will be prompted to do so.
+1. It is possible that you will still need to link your DataMiner account to your dataminer.services account. In that case, you will be prompted to do so.
 
-   1. Click the *Link Account* button. This will open a browser tab showing the DataMiner account and DataMiner Cloud Platform account that will be linked.
+   1. Click the *Link Account* button. This will open a browser tab showing the DataMiner account and dataminer.services account that will be linked.
 
    1. If the displayed accounts are indeed the accounts you want to link, click *Continue to log on*.
 
@@ -64,7 +64,7 @@ When you start a conversation with the Teams bot, you will first need to log in:
 > [!NOTE]
 >
 > - The DataMiner Teams bot can also be used in group chats and channel conversations.
-> - To be able to use the Teams bot, you need to be a member of a cloud-connected DMS. See [Giving a user access to cloud features](xref:Giving_users_access_to_cloud_features).
+> - To be able to use the Teams bot, you need to be a member of a DMS that is connected to dataminer.services. See [Giving a user access to dataminer.services features](xref:Giving_users_access_to_cloud_features).
 
 ## Available options
 
@@ -80,7 +80,7 @@ You can use the following options to interact with the DataMiner Teams bot:
 
 - **show alarms**: Shows the 10 most recent active alarms.
 
-- **show shares**: Shows the dashboards that have been shared with you across the entire DataMiner Cloud Platform.
+- **show shares**: Shows the dashboards that have been shared with you via dataminer.services from any DataMiner System.
 
 - **show outgoing shares**: Shows the dashboards shared by anyone in your active DataMiner System.
 
@@ -96,9 +96,9 @@ You can use the following options to interact with the DataMiner Teams bot:
 
 - **cancel**: Cancels the current action.
 
-- **login**: Logs into the DataMiner Cloud Platform. Note that any other command used while not logged in will have the same result as this command.
+- **login**: Logs into dataminer.services. Note that any other command used while not logged in will have the same result as this command.
 
-- **logout**: Logs out of the DataMiner Cloud Platform.
+- **logout**: Logs out of dataminer.services.
 
 > [!NOTE]
 >
