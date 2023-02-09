@@ -8,13 +8,15 @@ An editor extension that checks the spelling of comments, strings, and plain tex
 
 ## Installation
 
-1. Download the plugin.
+1. Download the plugin:
 
-   - For Visual Studio 2017 or later: from <https://marketplace.visualstudio.com/items?itemName=EWoodruff.VisualStudioSpellCheckerVS2017andLater>
+   - For Visual Studio 2022: In Visual Studio, go to *Extensions* > *Extensions Manager* and search in the online tab for "Visual Studio Spell Checker (VS 2022 and Later)".
 
-   - For Visual Studio 2015, 2013: from <https://visualstudiogallery.msdn.microsoft.com/a23de100-31a1-405c-b4b7-d6be40c3dfff>.
+   - For Visual Studio 2017 and 2019: Download the plugin from <https://marketplace.visualstudio.com/items?itemName=EWoodruff.VisualStudioSpellCheckerVS2017andLater>
 
-   - For Visual Studio 2010: from <https://github.com/EWSoftware/VSSpellChecker/releases>.
+   - For Visual Studio 2015, 2013: Download the plugin from <https://visualstudiogallery.msdn.microsoft.com/a23de100-31a1-405c-b4b7-d6be40c3dfff>.
+
+   - For Visual Studio 2010: Download the plugin from <https://github.com/EWSoftware/VSSpellChecker/releases>.
 
 1. Open the file
 

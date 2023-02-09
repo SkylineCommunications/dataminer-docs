@@ -333,7 +333,7 @@ protected virtual void OnCrossPointsSetViaLockOverrideFromUI(Skyline.DataMiner.L
 
 #### SLNetClientTest tool - 'Connect' window: Enhanced 'Connection Type' and 'Authentication' sections [ID_34712]
 
-<!-- MR 10.4.0 - FR 10.3.1 -->
+<!-- MR 10.3.0 - FR 10.3.1 -->
 
 In the *SLNetClientTest* tool, to connect to a DataMiner Agent, you select *Connection* > *Connect*, and specify the necessary information in the *Connect* window. That window has now been updated.
 
@@ -421,7 +421,7 @@ Please note the following:
 
 #### Enhanced parameter locking in SLElement [ID_34688]
 
-<!-- MR 10.3.0 - FR 10.3.1 [CU0] -->
+<!-- MR 10.2.0 [CU12] - FR 10.3.1 [CU0] -->
 
 In SLElement, a number of enhancements have been made with regard to parameter locking.
 
@@ -584,7 +584,7 @@ From now on, when a GQI query has to retrieve DCF interfaces, it will do so by q
 
 #### Problem with SLElement when a trend template was being assigned [ID_34824]
 
-<!-- MR 10.3.0 - FR 10.3.1 -->
+<!-- MR 10.2.0 [CU12] - FR 10.3.1 -->
 
 In some cases, an error could occur in SLElement when a trend template was being assigned.
 
@@ -765,16 +765,6 @@ When a column select or a column manipulation operator was applied before an agg
 <!-- MR 10.3.0 [CU0]/10.2.0 [CU10] - FR 10.3.1 -->
 
 In some cases, an error could occur in the Skyline Device Simulator when a proxy simulation was being run.
-
-#### Service & Resource Management: Problem when migrating resources containing properties with keys or values set to null [ID_35067]
-
-<!-- MR 10.3.0 - FR 10.3.1 [CU0] -->
-
-When resource data was being migrated to Elasticsearch, the following exception could be thrown when a resource or a resource pool contained properties with keys or values that were set to null.
-
-```txt
-2022/12/01 08:53:59.582|SLNet.exe|ResourceManager|ERR|0|6|System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.ArgumentException: value is not serializable to json
-```
 
 #### Protocols: Problem when working with large timer values and Timerbase [ID_35097]
 

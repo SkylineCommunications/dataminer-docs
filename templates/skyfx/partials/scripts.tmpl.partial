@@ -8,8 +8,9 @@
 <!-- mermaid support -->
 <script type="text/javascript" src="https://unpkg.com/mermaid@9.1.7/dist/mermaid.min.js"></script>
 <script>
-   mermaid.initialize({
-     startOnLoad: false
-   });
-   mermaid.init(undefined, ".lang-mermaid");
+    mermaid.initialize({
+        startOnLoad: false,
+		theme: 'neutral'
+    });
+    mermaid.init(undefined, ".lang-mermaid");
 </script>

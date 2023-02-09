@@ -78,7 +78,7 @@ Allows you to set up the [Cassandra cluster](xref:Migrating_the_general_database
 
 ### CloudConnectedAgents
 
-Enables cloud-connected Agents and allows you to [connect to the cloud](xref:Connecting_your_DataMiner_System_to_the_cloud).
+Makes it possible to [connect the DataMiner System to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud).
 
 - **Minimum version**: 10.1.2
 - **Release version**: 10.1.9
@@ -153,6 +153,7 @@ Provides access to additional data sources and operators for GQI in the Dashboar
 >
 > - The DCF connections GQI data source (available from DataMiner 10.1.6 onwards).
 > - The "Sort" operator (available from DataMiner 10.2.11/10.3.0 onwards).
+> - The trend data patterns, trend data pattern events, and behavioral change events data sources (available from DataMiner 10.3.3/10.4.0 onwards).
 
 - **Minimum version**: 10.0.13
 

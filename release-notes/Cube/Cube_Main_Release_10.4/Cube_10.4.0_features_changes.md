@@ -89,6 +89,29 @@ Configuring gray-tinted foreground colors is not recommended as a ListView compo
 > - The *ColorRows* feature is disabled by default ("ColorRows=False").
 > - At present, the *ColorRows* feature is only available on ListView components that have bookings as a source.
 
+#### Visual Overview - ListView: Copying list data to the Windows clipboard [ID_35170]
+
+<!-- MR 10.4.0 - FR 10.3.3 -->
+
+The ListView component now allows you to copy data from the list to the Windows clipboard.
+
+To copy the contents of one or more rows:
+
+1. Select the row(s).
+1. Choose *Copy selected row(s)*.
+
+To copy the contents of a single cell:
+
+1. Right-click in the cell.
+1. Choose *Copy \<cell contents\>*.
+
+The data copied to the Windows clipboard is split into a header section and a data section, separated by an empty line. The header section contains the column names, while the data section contains the actual row data.
+
+> [!NOTE]
+>
+> - Only the columns that are visible to the user will be copied to the Windows clipboard. Also, the order of the columns will be identical to the order of the columns in the ListView component. Note that column visibility and column order can be configured using the component's column manager.
+> - When you copy one or more rows, only cells that contain text will be included. For example, cells that only contain a colored rectangle will not be included. Also, when you try to copy the contents of a single cell, the *Copy \<cell contents\>* command will only be available if that cell contains text.
+
 #### Visual Overview: Visualizing EPM object statistics in a shape [ID_35222]
 
 <!-- MR 10.4.0 - FR 10.3.2 -->
@@ -115,6 +138,38 @@ The following information can be displayed:
 #ErrorAlarms
 ```
 
+#### System Center: New DataMiner log file 'SLSmartBaselineManager.txt' [ID_35352]
+
+<!-- MR 10.4.0 - FR 10.3.3 -->
+
+In the *Logging* section of *System Center*, you can now also consult the *SLSmartBaselineManager.txt* log file.
+
+#### Automation: New user/group setting to specify whether users have to confirm program executions launched from interactive Automation scripts [ID_35418]
+
+<!-- MR 10.4.0 - FR 10.3.3 -->
+
+A new user/group setting named *Do not confirm program executions from scripts*, found in the *User > Cube* tab of the *Settings* window, now allows you to specify whether users will have to explicitly confirm each program execution that is launched from an interactive Automation script.
+
+By default, this option will be disabled, meaning that users will have to give their consent each time an interactive Automation script wants to launch a program. The confirmation box will also allow users to change the setting by selecting the *Don't show this confirmation again. Always launch program executions.* checkbox.
+
+Each time a program is launched, a start entry and an end entry will be added to the Cube logging as well as to the *SLClient.txt* log file on the DataMiner Agent.
+
+- The start entry will contain the following data:
+
+  - the name of the Automation script
+  - the ID of the Automation script
+  - the user's login data (full name, client machine name, client app name and last login date)
+  - the program that will be launched
+  - the arguments that will be passed to the program (if any)
+
+- The end entry will contain the following data:
+
+  - the user's login data (full name, client machine name, client app name and last login date)
+  - the process ID of the program
+  - the time at which the process ended
+  - the name of the program that ended
+  - the arguments that were passed to the program (if any)
+
 ## Changes
 
 ### Enhancements
@@ -135,7 +190,7 @@ A number of enhancements have been made to the parameter relationship feature. W
 
 <!-- MR 10.4.0 - FR 10.3.2 -->
 
-Up to now, when the creation of a trend pattern tag failed, the general error message `Consider increasing or decreasing  the tag time range selection and try again.` was displayed. From now, one of the following, more detailed messages will be displayed instead:
+Up to now, when the creation of a trend pattern tag failed, the general error message `Consider increasing or decreasing the tag time range selection and try again.` was displayed. From now, one of the following, more detailed messages will be displayed instead:
 
 ```txt
 Failed to save your tag. Consider reducing the tag time range selection and try again.
@@ -146,6 +201,14 @@ Failed to save your tag. A tag time range was selected for which not all trend d
 
 Failed to save your tag. The defined patterns cannot be linked into the multivariate pattern. Consider adjusting its configuration and try again.
 ```
+
+#### Trending - Pattern matching: A slightly larger number of missing values will now be allowed when you create a trend pattern tag [ID_35376]
+
+<!-- MR 10.4.0 - FR 10.3.3 -->
+
+When you try to create a trend pattern tag, an error message will appear when there are too many missing values in the selected pattern.
+
+From now on, a slightly larger number of missing values will be allowed will you create a trend pattern tag.
 
 ### Fixes
 
@@ -166,3 +229,17 @@ In some rare cases, conditional shape manipulation actions (e.g. Show, Hide, Rot
 <!-- MR 10.4.0 - FR 10.3.2 -->
 
 When, in a Visio drawing, shapes have been positioned dynamically based on properties, you can re-arrange those shapes manually by switching to *Arrange* mode and re-arranging the shapes using drag-and-drop. In some rare cases, it would no longer be possible to drag shapes to another location.
+
+#### Trending: Pattern matching tags could incorrectly be defined for discrete or string parameters [ID_35368]
+
+<!-- MR 10.4.0 - FR 10.3.3 -->
+
+Pattern matching does not support discrete or string parameters. However, up to now, when viewing a trend graph that showed trend information for either a discrete or a string parameter, it would incorrectly be possible to define tags for pattern matching. From now on, this will no longer be possible.
+
+#### Trending: Tag icon was displayed after you selected a section of a trend graph even though it was not possible to define tags [ID_35378] [ID_35383]
+
+<!-- MR 10.4.0 - FR 10.3.3 -->
+
+In some cases, when the pattern matching feature was not enabled in *System Center* > *System settings* > *analytics config*, the tag icon was displayed after you selected a section of a trend graph even though it was not actually possible to define tags.
+
+From now on, Cube will check whether the pattern matching feature is enabled each time you open a trend graph.

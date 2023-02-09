@@ -695,6 +695,19 @@ For more information on the available search options, see [Setting the indexing 
 
 Also, from now on, DataMiner Cube will call the server-side search engine when you enter a numeric search string like "1234". Up to now, when you entered a numeric search string, DataMiner Cube would perform a client-side search that would only return views of which the ID matched the search string.
 
+#### System Center - Database: Address specified in the 'DB server' field of a database of type 'Cassandra' or 'CassandraCluster' can now include a custom port [ID_34590]
+
+<!-- MR 10.3.0 - FR 10.3.3 -->
+
+When, in the *Database* section of *System Center*, you are configuring a database of type "Cassandra" or "CassandraCluster", you can now specify an address with a custom port in the *DB server* field.
+
+If you specify a hostname or IP address without a port, DataMiner will fall back to the default Cassandra port 9042.
+
+Examples:
+
+- localhost (Will be resolved to localhost:9042)
+- 10.5.100.1:5555
+
 #### Resources app: 'Resources' tab and 'Occupancy' tab can now be filtered [ID_34973]
 
 <!-- MR 10.3.0 - FR 10.3.2 -->
@@ -836,11 +849,11 @@ In dialog boxes of an interactive Automation script, up to now, you were able to
 > [!IMPORTANT]
 > When an interactive Automation script was launched from a web app, then you will have to press ESC instead of ALT+F4 to close a dialog box and abort the script. Pressing ALT+F4 would close the browser, not just the dialog box.
 
-#### System Center: Link to online help now points to 'Connecting your DataMiner System to the cloud' on <https://docs.dataminer.services/> [ID_34683]
+#### System Center: Link to online help now points to cloud connection help on <https://docs.dataminer.services/> [ID_34683]
 
 <!-- MR 10.3.0 - FR 10.2.12 -->
 
-On the *Cloud* page of *System Center*, the *online help* hyperlink now points to the [Connecting your DataMiner System to the cloud](xref:Connecting_your_DataMiner_System_to_the_cloud) page on <https://docs.dataminer.services/>.
+On the *Cloud* page of *System Center*, the *online help* hyperlink now points to the [Connecting your DataMiner System to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud) page on <https://docs.dataminer.services/>.
 
 #### Alarm Console: When grouped, incident alarms will now appear in the group of the highest severity found among the base alarms [ID_34754]
 
@@ -851,6 +864,12 @@ When you open an alarm tab that contains incident alarms, the icons in front of 
 Up to now, when you grouped/sorted the alarms in the alarm tab by severity, the incident alarms would all appear in the "suggestion" group. From now on, they will instead appear in the group of the highest severity found among the base alarms.
 
 Also, in case of incident alarms, the alarm duration indicator will now show the highest severity found among the base alarms.
+
+#### Tab layout: Click the tab header with the middle mouse button to quickly close a tab [ID_34791]
+
+<!-- MR 10.3.0 - FR 10.3.3 -->
+
+When using the tab layout, up to now, you could quickly close a tab by clicking inside it with the middle mouse button. From now on, to quickly close a tab, instead of clicking inside the tab, you will have to click the tab header with the middle mouse button.
 
 #### Bookings module: Navigation panel has been improved and renamed to 'settings' panel [ID_34840]
 
@@ -868,6 +887,20 @@ When you start a resource migration in the *SLNetClientTest* tool (by selecting 
 
 > [!CAUTION]
 > Always be extremely careful when using the *SLNetClientTest* tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
+
+#### DataMiner Cube will now immediately be aware of any changes as to the availability of Cassandra or Elasticsearch [ID_35209]
+
+<!-- MR 10.3.0 - FR 10.3.3 -->
+
+Up to now, Cube would only check at startup whether Cassandra or Elasticsearch were available. From now on, it will immediately be aware of any changes as to the availability of Cassandra or Elasticsearch.
+
+#### EPM: Data retrieved from the collector that was displayed as a table with a single row will now be displayed as single parameters [ID_35371]
+
+<!-- MR 10.3.0 - FR 10.3.3 -->
+
+In an EPM card, in some cases, data retrieved from the collector was displayed as a table with a single row, which often had the system name as primary key.
+
+From now on, data retrieved from the collector that used to be displayed as a table with a single row will now be displayed as single parameters (one for every column).
 
 ### Fixes
 
@@ -1023,3 +1056,21 @@ When, in the *Navigation* panel of the *Bookings* app, you selected another time
 <!-- MR 10.3.0 - FR 10.3.1 -->
 
 When you edited the properties of a tag (e.g. name, description, etc.), the trend graph would no longer show the pattern matches for the parameter that is currently displayed in the graph. Instead, it would incorrectly show the pattern matches for the parameter for which the tag was defined.
+
+#### Trending: Problem when exporting a trend graph containing average trend data [ID_35290]
+
+<!-- MR 10.3.0 - FR 10.3.3 -->
+
+When you exported a trend graph containing average trend data to CSV, in some cases, the exported data would be parsed incorrectly.
+
+#### DataMiner Cube - Visual Overview: Problem when filtering bookings in a ListView component [ID_35430]
+
+<!-- MR 10.3.0 - FR 10.3.3 -->
+
+When, in Visual Overview, a filter was applied to a *ListView* component that listed bookings, no account would be taken of bookings added after the filter had been applied. As a result, in some cases, the *ListView* component would list bookings that did not match the filter.
+
+#### Visual Overview: Certain context menu commands would incorrectly be disabled [ID_35484]
+
+<!-- MR 10.3.0 - FR 10.3.3 -->
+
+When you right-clicked a shape, certain context menu commands would incorrectly be disabled.

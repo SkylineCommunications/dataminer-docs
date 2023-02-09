@@ -2,21 +2,116 @@
 uid: General_Feature_Release_10.3.2
 ---
 
-# General Feature Release 10.3.2 – Preview
+# General Feature Release 10.3.2
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 >
 > - For release notes related to DataMiner Cube, see [DataMiner Cube 10.3.2](xref:Cube_Feature_Release_10.3.2).
 > - For information on how to upgrade DataMiner, see [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent).
 
-## Highlights
+## Features
 
-*No highlights have been selected for this release yet*
+#### Resource migration to Elasticsearch [ID_33797] [ID_33946] [ID_34105] [ID_34207] [ID_34296] [ID_34522] [ID_34568] [ID_34784] [ID_35067] [ID_35155]
 
-## Other features
+<!-- MR 10.3.0 - FR 10.3.2 -->
+
+It is now possible to migrate the resources and resource pools from the *Resources.xml* file to Elasticsearch. This improves the scalability and performance on systems that have a large number of resources.
+
+To start the migration, you can use the SLNetClientTest tool. The migration app is available under *Advanced* > *Migration*.
+
+> [!WARNING]
+>
+> - Always be extremely careful when using the SLNetClientTest tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
+> - All Resource Manager instances in the cluster will restart during the migration.
+
+> [!TIP]
+> For detailed information on the migration, refer to [Resource migration to Elasticsearch](xref:Resources_migration_to_elastic).
+
+If for any reason the migration fails, you can find information in the ``SLMigrationManager.txt`` and ``SLResourceManager.txt`` log files. In this case, the existing XML setup will continue to be used and the configuration will not switch to Elasticsearch.
+
+Note that there are differences when resources and resource pools are stored in Elasticsearch, as compared to in XML:
+
+- When XML storage is used, it is not possible to remove a resource when one of the DMAs in the cluster cannot be reached, as this could cause syncing issues. No such restrictions apply when Elasticsearch storage is used.
+
+- The following restrictions apply for the properties stored in Elasticsearch:
+
+  - Property names must not start with the character ``_``.
+
+  - Property names must not contain the characters ``.`` (period), ``#`` (hashtag), ``*`` (star), ``,`` (comma), ``"`` (double quote) or ``'`` (single quote).
+
+  - Property names must not be empty or contain only whitespace characters.
+
+  - Property values must not be ``null``.
+
+  > [!NOTE]
+  > If Elasticsearch storage is enabled, and a resource or resource pool with invalid properties is added or updated, the API will return a ``ResourceManagerErrorData`` in the ``TraceData``, with reason ``InvalidCharactersInPropertyNames``.
+
+- Field names in Elasticsearch have a maximum length of 32766 bytes, which means any field of a resource or resource pool indexed in Elasticsearch can only contain 32766 bytes.
+
+  > [!NOTE]
+  > If there is an attempt to save a resource or resource pool with a field that is too big, the API will return an ``UnknownError``. The ``SLResourceManager.txt`` log file will contain the actual exception, which will mention the field that could not be indexed in Elasticsearch.
+
+- When a resource is indexed in Elasticsearch, all its properties, capacities, and capabilities will be indexed as well. This means that each unique property name and unique capacity and capability ID will become a field mapping in Elasticsearch. If there is an unusually large number of capacities, capabilities, and/or property names, this may lead to reduced performance of Elasticsearch. During testing, this was noticed when more than 300 unique field mappings were present.
+
+- If XML storage is used and you subscribe to the *ResourceManagerEventMessage*, you will receive an initial event with all resources and resource pools. This event is not sent when Elasticsearch storage is used, in order to prevent sending a message to the client containing thousands of resources.
+
+- If XML storage is used, all Resource Manager instances in the cluster will sync the resources in their XML file on startup and during the midnight sync. If Elasticsearch storage is used, DataMiner relies on Elasticsearch to do the syncing, so this does not happen during the midnight sync or on startup. However, Resource Manager will refresh the cached resources during the midnight sync by reading all resources and resource pools again from Elasticsearch.
+
+#### Client-server communication: gRPC instead of .NET Remoting [ID_34797] [ID_34983]
+
+<!-- MR 10.3.0 - FR 10.3.2 -->
+
+Up to now, DataMiner clients and servers communicated with each other using the *.NET Remoting* protocol. From now on, they are also able to communicate with each other via an *API Gateway* module using *gRPC* connections, which are much more secure. For example, as to the use of IP ports, *gRPC* uses the standard port 443, whereas *.NET Remoting* uses the non-standard port 8004. Moreover, the *API Gateway* module is able to restart itself during operation and to automatically recover the connections to clients and SLNet.
+
+When you upgrade DataMiner, the *API Gateway* module will automatically be installed in the `C:\Program Files\Skyline Communications\DataMiner APIGateway\` folder. All logging and program-specific data associated with the *API Gateway* module will be stored in the `C:\ProgramData\Skyline Communications\DataMiner APIGateway\`.
+
+> [!IMPORTANT]
+> For now, *gRPC* communication has to be explicitly enabled. If you do not enable it, Cube clients and DMAs will continue to communicate using the *.NET Remoting* protocol.
+
+##### Enabling the use of gRPC connections for communication between Cube and DMA
+
+Do the following on each DMA you want DataMiner Cube instances to connect to via *gRPC* by default.
+
+1. Open the `C:\Skyline DataMiner\Webpages\ConnectionSettings.txt` file.
+1. Set the `type` option to *GRPCConnection*.
+
+##### Enabling the use of gRPC connections for inter-DMA communication
+
+In the `DMS.xml` file, you must add redirects for each DMA that should communicate with the other DMAs in the DMS over *gRPC*. Failover Agents also need a redirect to each other's IP address.
+
+For example, in a cluster with two DMAs, with IPs 10.4.2.92 and 10.4.2.93, `DMS.xml` can be configured as follows.
+
+- On the DMA with IP 10.4.2.92:
+
+    ```xml
+      <DMS errorTime="30000" synchronized="true" xmlns="http://www.skyline.be/config/dms">
+         <Cluster name="pluto"/>
+         <DMA ip="10.4.2.92" timestamp=""/>
+         <DMA ip="10.4.2.93" id="35" timestamp="2023-01-05 01:24:38" contacted_once="TRUE" lostContact="2023-01-06 00:45:01"/>
+         <Redirects>
+            <Redirect to="10.4.2.93" via="https://10.4.2.93/APIGateway" user="MyUser" pwd="MyPassword"/>
+         </Redirects>
+      </DMS>
+    ```
+
+- On the DMA with IP 10.4.2.93:
+
+    ```xml
+      <DMS errorTime="30000" synchronized="true" xmlns="http://www.skyline.be/config/dms">
+         <Cluster name="pluto" synchronize="" timestamp="2022-12-13 12:48:29"/>
+         <DMA ip="10.4.2.93" timestamp="" contacted_once="" lostContact=""/>
+         <DMA ip="10.4.2.92" timestamp="2023-01-03 23:38:42" contacted_once="TRUE" lostContact="2023-01-06 01:02:00" id="69" uri=""/>
+         <Redirects>
+            <Redirect to="10.4.2.92" via="https://10.4.2.92/APIGateway" user="MyUser" pwd="MyPassword"/>
+         </Redirects>
+      </DMS>
+    ```
+
+> [!NOTE]
+> The passwords in the *pwd* attribute are encrypted and replaced with an encryption token when they are first read out by DataMiner.
 
 #### All DOM objects now have 'LastModified', 'LastModifiedBy', 'CreatedAt' and 'CreatedBy' properties [ID_34980]
 
@@ -40,6 +135,14 @@ All DOM objects (DomInstance, DomTemplate, DomDefinition, DomBehaviorDefinition,
 > - These four fields can all be used in a filter.
 > - In the Elasticsearch database, existing data will not contain values for these new fields (except the *LastModified* field for all but *ModuleSettings*).
 > - All four fields are also available in the GQI data source *Object Manager Instances*. The *Last Modified* and *Created At* columns should show the time in the time zone of the browser.
+
+#### SLAnalytics - Proactive cap detection: Using alarm templates assigned to DVE child elements [ID_35194]
+
+<!-- MR 10.3.0 - FR 10.3.2 -->
+
+When proactive cap detection was enabled, up to now, in case of DVE elements, the alarm template of the parent would always be used.
+
+From now on, if a DVE child element has an alarm template assigned to it, that alarm template will be used. Only when a DVE child element does not have an alarm template assigned to it will the alarm template of the parent be used.
 
 ## Changes
 
@@ -179,7 +282,7 @@ Because of a number of enhancements, overall query performance has increased, es
 
 #### SLAnalytics - Behavioral anomaly detection : More accurate change point time ranges [ID_35121]
 
-<!-- MR 10.4.0 - FR 10.3.2 -->
+<!-- MR 10.3.0 - FR 10.3.2 -->
 
 Because of a number of enhancements, behavioral changes of the type "level shift", "trend change" and "variance change" will now have a more accurate time range when the change in behavior is sufficiently clear.
 
@@ -196,14 +299,6 @@ Up to now, a loading skeleton would be displayed each time data was being loaded
 When a web app requests a list of users, the Web Services API will now cache the result set it receives from the server. This will increase overall performance, especially in situations where, up to now, the same list of users had to be retrieved frequently.
 
 This user cache will be cleared each time a change occurs that has security implications (e.g. new users added, user permissions updated, etc.).
-
-#### Enhanced error handling when trying to create resource manager properties with value/key null on Elasticsearch [ID_35155]
-
-<!-- MR 10.3.0 - FR 10.3.2 -->
-
-When an attempt is made to create resource properties, resource definition properties and pool properties with value/key null on a system with an Elasticsearch database, from now on, an `InvalidCharactersInPropertyNames` error listing the names of the properties in question will be added to the Resource Manager log file.
-
-This same fix also fixes the creation and migration of resources of which the property list is null and resource pools of which the property definitions list or properties list is null.
 
 #### DataMiner Object Models: DomInstanceButtonDefinitions can only reference a single action [ID_35156]
 
@@ -230,7 +325,7 @@ In case a *Line & area chart* component displays trending for multiple parameter
 
 #### Enhanced performance when updating a baseline or assigning an alarm template that contains conditional monitoring [ID_35171]
 
-<!-- MR 10.4.0 - FR 10.3.2 -->
+<!-- MR 10.3.0 - FR 10.3.2 -->
 
 Because of a number of enhancements, overall performance has increased when updating a baseline or assigning an alarm template that contains conditional monitoring.
 
@@ -245,6 +340,15 @@ Because of a number of enhancements, overall performance has increased when dele
 <!-- MR 10.4.0 - FR 10.3.2 -->
 
 From now on, all custom CollectorConfig XML files will be synchronized across the DataMiner cluster.
+
+#### Exporting and importing DELT packages containing element and alarm data is now supported on DataMiner Systems with a clustered database [ID_35213]
+
+<!-- MR 10.2.0 [CU12] - FR 10.3.2 [CU0] -->
+
+From now on, exporting and importing DELT packages containing element and alarm data is also supported on DataMiner Systems with a clustered database.
+
+> [!NOTE]
+> Exporting and importing DELT packages containing trend data is not yet supported on DataMiner Systems with a clustered database.
 
 #### SLAnalytics: Enhanced processing of parameter values 'exception' and 'other' [ID_35214]
 
@@ -271,6 +375,12 @@ From now on, the URL of a published version of an app will no longer contain the
 <!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
 
 The `Clusterstate.xml` file, located in the `C:\Skyline DataMiner` folder, was obsolete and has now been removed.
+
+#### SLAnalytics - Pattern matching: When a pattern is detected on a DVE child element the suggestion event will now be generated on that same DVE child element [ID_35264]
+
+<!-- MR 10.3.0 - FR 10.3.2 -->
+
+When a trend pattern was detected on a DVE child element, up to now, the suggestion event would be generated on the parent element. From now on, it will be generated on the child element instead.
 
 #### Low-code apps: Enhanced confirmation message when deleting an app [ID_35269]
 
@@ -339,7 +449,7 @@ In some cases, an error could occur in SLDataMiner when loading an alarm templat
 
 #### Alarm templates: Parameters exported to DVE child elements could have incorrect alarm limits [ID_34996]
 
-<!-- MR 10.3.0 - FR 10.3.2 -->
+<!-- MR 10.2.0 [CU12] - FR 10.3.2 -->
 
 When a parameter was exported as a standalone parameter to a DVE child element, in some cases, the alarm limits could be incorrect when the type of alarm monitoring was set to either *Relative* or *Absolute*.
 
@@ -575,6 +685,20 @@ When you enabled the *Visualize measurement points* setting of a spectrum elemen
 
 #### Dashboards app / Low-Code Apps - Node edge component: Edge overrides would incorrectly no longer be applied [ID_35298]
 
-<!-- MR 10.3.0 - FR 10.3.2 -->
+<!-- MR 10.2.0 [CU12] - FR 10.3.2 -->
 
 When, in the settings of a node edge graph, you had configured edge overrides, these would incorrectly no longer be applied.
+
+#### Dashboards app & Low-code apps - GQI table component: 'Cannot read properties of undefined (reading 'Guid')' error [ID_35316]
+
+<!-- MR 10.4.0 - FR 10.3.2 [CU0] -->
+
+In some cases, a GQI table component could show a `Cannot read properties of undefined (reading 'Guid')` error.
+
+#### Elasticsearch: Problem when fetching metadata referring to stopped elements [ID_35423]
+
+<!-- MR 10.2.0 [CU11] - FR 10.3.2 [CU0] -->
+
+When alarms are being indexed in Elasticsearch, metadata is added. For example, the name of the protocol of the element in question.
+
+Up to now, when SLNet requested that metadata, an error could occur when fetching information regarding a stopped element that had DVE child elements with alarms that had not yet been written to the database.

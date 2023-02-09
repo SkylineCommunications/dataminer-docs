@@ -320,6 +320,27 @@ All DOM objects (DomInstance, DomTemplate, DomDefinition, DomBehaviorDefinition,
 > - In the Elasticsearch database, existing data will not contain values for these new fields (except the *LastModified* field for all but *ModuleSettings*).
 > - All four fields are also available in the GQI data source *Object Manager Instances*. The *Last Modified* and *Created At* columns should show the time in the time zone of the browser.
 
+#### DataMiner Object Models: Action buttons can now be configured to launch an interactive Automation script when clicked [ID_35226]
+
+<!-- MR 10.4.0 - FR 10.3.3 -->
+
+An action button can now be configured to launch an interactive Automation script when clicked. To do so, set the *IsInteractive* property of the action to true.
+
+When such a button is clicked in a low-code app, the UI of the interactive Automation script will be displayed in a pop-up window on top of the low-code app.
+
+> [!NOTE]
+> One button can only execute one action. So, one button can only execute one interactive Automation script.
+
+#### DataMiner Object Models: New field descriptors [ID_35278]
+
+<!-- MR 10.4.0 - FR 10.3.3 -->
+
+Two new field descriptors have been added to the DataMiner Object Models:
+
+- GroupFieldDescriptor: Can be used to define that a field should contain the name of a DataMiner user group.
+
+- UserFieldDescriptor: Can be used to define that a field should contain the name of a DataMiner user. There is a *GroupNames* property that can be used to define which groups the user can be a part of.
+
 ### Service & Resource Management
 
 #### Service & Resource Management: Exposers for resource capacities and capabilities [ID_34841]
@@ -379,31 +400,10 @@ Please note the following:
 
 ### Tools
 
-#### SLNetClientTest tool - 'Connect' window: Enhanced 'Connection Type' and 'Authentication' sections [ID_34712]
+#### SLLogCollector will now order the Standalone BPA Executor tool to execute all BPA tests available in the system [ID_35436]
 
-<!-- MR 10.4.0 - FR 10.3.1 -->
+<!-- MR 10.4.0 - FR 10.3.3 -->
 
-In the *SLNetClientTest* tool, to connect to a DataMiner Agent, you select *Connection* > *Connect*, and specify the necessary information in the *Connect* window. That window has now been updated.
+Each time the *SLLogCollector* tool is run, it will now order the *Standalone BPA Executor* tool to execute all BPA tests available in the system and store the results in the `C:\Skyline DataMiner\Logging\WatchDog\Reports\Pending Reports` folder.
 
-In the *Connection Type* section, you now have to indicate how the connection has to be established:
-
-| Select...              | in order to... |
-|------------------------|----------------|
-| Autodetect             | connect to the local machine or a remote machine using the method that will be detected automatically. |
-| gRPC                   | connect to the local machine or a remote machine via the APIGateway service using the GRPCWeb protocol.<br>When you choose this option, you can specify a custom port (default: `443`) and a custom endpoint (default: `/APIGateway`). |
-| .NET Remoting (legacy) | connect to the local machine or a remote machine using .NET Remoting.<br>When you choose this option, you can specify a custom port (default: `8004`) |
-| IPC (only local)       | connect to the local machine using IPC. |
-
-In the *Authentication* section (formerly known as *User Info* section), you now have the following authentication options:
-
-- Single sign-on
-
-    > [!NOTE]
-    > External authentication not yet supported.
-
-- Explicit credentials (with *Force Authenticate Local User* option)
-
-- Ticket
-
-> [!WARNING]
-> Always be extremely careful when using this tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
+The names of the files containing the test results will have the following format: `<BPA Name>_<Date(yyyy-MM-dd_HH)>`

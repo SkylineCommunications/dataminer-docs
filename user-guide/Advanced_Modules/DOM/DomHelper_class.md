@@ -14,6 +14,9 @@ To do so, first call the constructor of the helper, provide a callback to SLNet,
 var helper = new DomHelper(engine.SendSLNetMessages, "a_module_id");
 ```
 
+> [!NOTE]
+> You will need to add the `using Skyline.DataMiner.Net.Apps.DataMinerObjectModel;` statement to include the helper class.
+
 You can then call the *Create*, *Read*, *Update*, or *Delete* methods on the CRUD helper components of the helper.
 
 For example:

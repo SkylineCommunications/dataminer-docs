@@ -5,7 +5,7 @@ uid: Upgrading_a_DataMiner_Agent
 # Upgrading a DataMiner Agent
 
 > [!TIP]
-> For more information DataMiner upgrades, check out the following videos on Dojo:
+> For more information on DataMiner upgrades, check out the following videos on Dojo:
 >
 > - [Rui's Rapid Recap – DataMiner Upgrade](https://community.dataminer.services/video/ruis-rapid-recap-dataminer-upgrade/)
 > - [Agents – Upgrading a DataMiner System](https://community.dataminer.services/video/agents-upgrading-a-dataminer-system/)
@@ -13,6 +13,9 @@ uid: Upgrading_a_DataMiner_Agent
 ## Before you upgrade
 
 Make sure your system meets the necessary [system requirements](https://community.dataminer.services/dataminer-compute-requirements/). Among others, upgrading to the **latest .NET version** is highly recommended.
+
+> [!NOTE]
+> From DataMiner 10.3.3/10.4.0 onwards, during a DataMiner upgrade, Microsoft .NET 6.0 will be installed if this was not installed on your system already. <!-- RN 35363 -->
 
 Keep in mind that it is strongly recommended that you **use the same version of DataMiner on all Agents in a DMS**.
 

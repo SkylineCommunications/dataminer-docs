@@ -290,12 +290,12 @@ It is now possible to share dashboards with other users via the DataMiner Cloud.
 
 1. Open an internet browser (other than Microsoft Internet Explorer), go to <https://dataminer.services/>, and sign in.
 
-1. On the landing page of the DataMiner Cloud Platform, click *Sharing*.
+1. On the dataminer.services landing page, click *Sharing*.
 
    You will now see all data that others have shared with you.
 
 > [!NOTE]
-> When somebody has shared a dashboard with you, you will receive an email informing you of this. You can then click the link in the email to immediately access the dashboard, provided that you already have a DataMiner Cloud Platform account.
+> When somebody has shared a dashboard with you, you will receive an email informing you of this. You can then click the link in the email to immediately access the dashboard, provided that you already have a dataminer.services account.
 
 ##### Security layers
 
@@ -308,9 +308,9 @@ It is now possible to share dashboards with other users via the DataMiner Cloud.
 - Detailed logging is stored in C:\\Skyline DataMiner\\logging\\Web and Dashboards Sharing SPI metrics are published.
 
 > [!NOTE]
-> In the list of users and groups in System Center, there is a separate section for cloud users and groups. These also have their own icon, so the distinction with regular users and groups is more clear.
+> In the list of users and groups in System Center, there is a separate section for dataminer.services users and groups. These also have their own icon, so the distinction with regular users and groups is more clear.
 >
-> As cloud users and groups are entirely managed by DataMiner, they cannot be modified.
+> As dataminer.services users and groups are entirely managed by DataMiner, they cannot be modified.
 
 ### DMS Automation
 

@@ -15,7 +15,6 @@ The [UIBlockType](xref:Skyline.DataMiner.Automation.UIBlockType) enum defines di
 |DropDown     |Drop-down list.         |
 |Executable     |Executable.         |
 |FileSelector     |File selector.         |
-|GlobalSettings     |Global settings.         |
 |Numeric     |Numeric.         |
 |Parameter     |Text displaying the value of a parameter.         |
 |PasswordBox     |Password input box.         |
@@ -24,8 +23,6 @@ The [UIBlockType](xref:Skyline.DataMiner.Automation.UIBlockType) enum defines di
 |TextBox     |Text box.         |
 |Time     |Item that displays a time value.         |
 |TreeView     |Tree view control.         |
-|Undefined     |Undefined.         |
-|Variable     |Variable.         |
 
 ## Button
 
@@ -91,6 +88,37 @@ blockItem.Type = UIBlockType.DropDown;
 ...
 MyDialogBox.AppendBlock(blockItem);
 ```
+
+## Executable
+
+Allows you to run a program execution. To do this, you must fill in the property *Extra* with the name of the program you want to execute.
+You can also specify arguments when launching a program execution. To do so, call the method *AddDropDownOption* on the item with key *Arguments*, using the arguments you want to pass on as the value.
+
+Examples:
+
+- Open the program Notepad++ on the client device where the interactive script is running.
+
+  ```csharp
+  UIBlockDefinition blockItem = new UIBlockDefinition();
+  blockItem.Type = UIBlockType.Executable;
+  blockItem.Extra = "notepad++.exe";
+  ...
+  MyDialogBox.AppendBlock(blockItem);
+  ```
+
+- Open a file with Notepad on the client device where the interactive script is running.
+
+  ```csharp
+  UIBlockDefinition blockItem = new UIBlockDefinition();
+  blockItem.Type = UIBlockType.Executable;
+  blockItem.Extra = "notepad.exe";
+  blockItem.AddDropDownOption("Arguments", @"C:\Skyline DataMiner\Files\VersionCompatibility.txt");
+  ...
+  MyDialogBox.AppendBlock(blockItem);
+  ```
+  
+> [!NOTE]
+> Automation scripts with an executable component are currently only supported in DataMiner Cube. These are not supported in DataMiner web apps.
 
 ## FileSelector
 
