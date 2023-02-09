@@ -226,24 +226,6 @@ Process:
 
 If an incident (also known as an alarm group) is cleared manually, any clearable base alarms of that incident will now also be cleared. This way, this behavior is consistent with the standard behavior for Correlation alarms.
 
-#### Db.xml: Specifying a custom port in the \<DBServer\> element of a Cassandra database [ID_34590]
-
-<!-- MR 10.3.0 - FR 10.3.3 -->
-
-In `<DataBase>` elements of which the `type` attribute is set to either "Cassandra" or "CassandraCluster", a custom port can now be specified in the `<DBServer>` element. If you specify a hostname or IP address without a port, DataMiner will fall back to the default Cassandra port 9042.
-
-Examples:
-
-```xml
-<DBServer>localhost</DBServer><!-- Will be resolved to localhost:9042 -->
-<DBServer>10.5.100.1:5555</DBServer>
-<DBServer>cassandra.amazonaws.eu.north.com</DBServer>
-<DBServer>cassandra.amazonaws.eu.north.com:9142</DBServer>
-```
-
-> [!NOTE]
-> It is still possible to specify multiple endpoints. To do so, separate them by commas (",").
-
 #### Client-server communication: gRPC instead of .NET Remoting [ID_34797] [ID_34983]
 
 <!-- MR 10.3.0 - FR 10.3.2 -->

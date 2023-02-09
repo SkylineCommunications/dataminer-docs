@@ -16,6 +16,20 @@ uid: Cube_Feature_Release_10.3.3
 
 ## Other features
 
+#### System Center - Database: Address specified in the 'DB server' field of a database of type 'Cassandra' or 'CassandraCluster' can now include a custom port [ID_34590]
+
+<!-- MR 10.3.0 - FR 10.3.3 -->
+
+When, in the *Database* section of *System Center*, you are configuring a database of type "Cassandra" or "CassandraCluster", you can now specify an address with a custom port in the *DB server* field.
+
+If you specify a hostname or IP address without a port, DataMiner will fall back to the default Cassandra port 9042.
+
+Examples:
+
+- localhost (Will be resolved to localhost:9042)
+- 10.5.100.1:5555
+
+
 #### Visual Overview - ListView: Copying list data to the Windows clipboard [ID_35170]
 
 <!-- MR 10.4.0 - FR 10.3.3 -->
