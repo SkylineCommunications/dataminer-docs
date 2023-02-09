@@ -6,6 +6,10 @@ uid: DCP_change_log
 
 The dataminer.services platform gets updated continuously. This change log can help you trace when specific features and changes have become available.
 
+#### 9 February 2023 - Fix - Remote access actions incorrectly blocked [ID_35594]
+
+In some cases, it could occur that requests were incorrectly blocked as unsafe when you used the remote access feature. For example, this could occur when you clicked the Home button in the top-left corner of a web app.
+
 #### 24 January 2023 - Fix - SupportAssistant 1.2.1 - Log Collector continuously triggered after failing to generate files [ID_35457]
 
 In some rare cases, if invalid arguments were passed to the Log Collector so that it could not generate files, it could occur that the Log Collector kept getting triggered by the SupportAssistant DxM. Now the SupportAssistant will stop after a specific number of attempts.
