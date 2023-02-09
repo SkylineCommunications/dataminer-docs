@@ -4,13 +4,13 @@ uid: Grafana_plugin
 
 # Grafana Data Source plugin
 
-The Grafana Data Source plugin allows you to visualize data from DataMiner in [Grafana](https://grafana.com/), where you would normally use the [Dashboards app](xref:newR_D).
+The Grafana Data Source plugin allows you to visualize data from DataMiner in [Grafana](https://grafana.com/), instead of for example in the [Dashboards app](xref:newR_D).
 
 > [!NOTE]
-> The Grafana Labs Marks are trademarked by Grafana Labs and are used with Grafana Labs’ permission. We are not affiliated with, endorsed, or sponsored by Grafana Labs or its affiliates.
+> The Grafana Labs Marks are trademarked by Grafana Labs and are used with Grafana Labs’ permission. We are not affiliated with, endorsed by, or sponsored by Grafana Labs or its affiliates.
 
 > [!CAUTION]
-> The Grafana Data Source plugin is still in the alpha stage, which entails that everything is subject to change. Backwards compatibility is not guaranteed. All changes made with this version, may need to be redone once the plugin is effectively released.
+> The Grafana Data Source plugin is still in the alpha stage, which entails that everything is subject to change. Backwards compatibility is not guaranteed. All changes made with this version may need to be redone once the plugin is effectively released.
 
 ## Prerequisites
 
@@ -20,7 +20,7 @@ The Grafana Data Source plugin allows you to visualize data from DataMiner in [G
 
 - Grafana should be able to connect to a DataMiner Agent over HTTPS.
 
-## Plugin installation
+## Installation
 
 1. Find your Grafana configuration file:
 
@@ -28,7 +28,7 @@ The Grafana Data Source plugin allows you to visualize data from DataMiner in [G
 
    - **Linux**: Go to `$WORKING_DIR/conf`. If you find the `defaults.ini` file, you have located your Grafana configuration file. If there is no `defaults.ini` file, go to `/usr/local/etc/grafana` and find `grafana.ini`. In this case, `grafana.ini` is your configuration file.
 
-1. Open the configuration file and set the ID of our plugin to `allow_loading_unsigned_plugins`:
+1. Open the configuration file and set `allow_loading_unsigned_plugins` to the ID of our plugin:
 
     ```ini
     [plugins]
@@ -40,7 +40,7 @@ The Grafana Data Source plugin allows you to visualize data from DataMiner in [G
 
 1. Download the [latest version of the Data Source plugin](https://github.com/SkylineCommunications/dataminer-grafana-plugin/releases). This will be a ZIP file.
 
-1. Extract the entire ZIP file in the *plugins* folder of Grafana:
+1. Extract the entire ZIP file to the *plugins* folder of Grafana:
 
    - **Windows**: `C:\Program Files\GrafanaLabs\grafana\data\plugins`
 
@@ -50,17 +50,17 @@ The Grafana Data Source plugin allows you to visualize data from DataMiner in [G
 
 1. Open Grafana and go to *Configuration > Plugins*.
 
-1. Click on *DataMiner* and select *Create a DataMiner data source*.
+1. Click *DataMiner* and select *Create a DataMiner data source*.
 
 1. Configure the connection with your DataMiner Agent:
 
-   - User: Specify the username and password that Grafana should use to authenticate on the DMA. These credentials will only provide access to data inside DataMiner as configured in the DataMiner security.
+   - *User*: Specify the username and password that Grafana should use to authenticate on the DMA. These credentials will only provide access to data inside DataMiner as configured in the DataMiner security.
 
-   - HTTP: Specify the URL to connect to your DataMiner Agent, for example `https://mydma.company.com`.
+   - *HTTP*: Specify the URL to connect to your DataMiner Agent, for example `https://mydma.company.com`.
 
-    > [!CAUTION]
-    > Use a secure HTTPS connection. Without an HTTPS connection, your username and password will be sent over the network/internet unencrypted, which means that they may be visible to others.
-    > For more information on how to configure your DataMiner System to use HTTPS, see [Setting up HTTPS on a DMA](xref:Setting_up_HTTPS_on_a_DMA).
+     > [!CAUTION]
+     > Use a secure HTTPS connection. Without an HTTPS connection, your username and password will be sent over the network/internet unencrypted, which means that they may be visible to others.
+     > For more information on how to configure your DataMiner System to use HTTPS, see [Setting up HTTPS on a DMA](xref:Setting_up_HTTPS_on_a_DMA).
 
    - Other configuration settings can be ignored.
 
@@ -83,11 +83,15 @@ A GQI query should be specified in JSON format. To get a correctly configured qu
 
 1. Press F12 to open the developer tools and go to the *Network* tab.
 
-1. Refresh the dashboard and find the *OpenQuerySession* network call.
+1. Press F5 to refresh the dashboard.
 
-1. Under payload, right-click *query:* and select *Copy value* to save the JSON code to your clipboard.
+1. In the *Name* column of the *Network* tab, select the *OpenQuerySession* network call.
 
-1. Open Grafana and navigate to the panel you want to add the GQI query to. Paste the previously copied JSON code in the *Query* section that is using the DataMiner data source, as configured in [Plugin installation](#plugin-installation).
+1. Go to the *Payload* subtab, right-click *query:* and select *Copy value* to save the JSON code to your clipboard.
+
+1. Open Grafana and navigate to the panel you want to add the GQI query to.
+
+1. Paste the previously copied JSON code in the *Query* section that is using the DataMiner data source, as configured during [installation](#installation).
 
 #### Time range filter
 
@@ -134,7 +138,7 @@ To get the trend data of a parameter, do the following:
 
 1. Specify the parameter using the following format: `dmaID/elementID/parameterID` or `dmaID/elementID/tableColumnParameterID/tableRowIndex`.
 
-Doing this, you request the trend data from within the time range specified on the dashboard. If the time range amounts to less than 48 hours, 5-minute interval points will be returned instead of the usual 60-minute interval points.
+This way you request the trend data from within the time range specified on the dashboard. If the time range amounts to less than 48 hours, 5-minute interval points will be returned instead of the usual 60-minute interval points.
 
 > [!NOTE]
 > Only numeric average trending is supported. The Grafana Data Source plugin currently does not support real-time trending, discrete values, or exception values.
