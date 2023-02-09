@@ -374,6 +374,12 @@ When you select the *Preserve feed selections* option for a particular dashboard
 
 Up to now, in some cases, one folder would incorrectly take over feed selections from another folder.
 
+#### Web apps: Problem when executing a GQI query [ID_35539]
+
+<!-- MR 10.3.0 [CU0] - FR 10.3.2 [CU1] -->
+
+When a web app (e.g. Dashboards) tried to execute a GQI query, in some cases, a `Node: 'X' is not supported by the current server version.` error could be thrown (`'X'` being the node that caused the error).
+
 #### Low-code apps: Panels of which the 'Fit to view' option was selected would incorrectly switch to mobile mode [ID_35542]
 
 <!-- MR 10.3.0 - FR 10.3.3 -->

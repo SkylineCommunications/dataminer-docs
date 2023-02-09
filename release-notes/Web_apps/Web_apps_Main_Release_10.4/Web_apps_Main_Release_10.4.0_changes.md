@@ -174,9 +174,3 @@ A number of issues regarding the Visual Overview component have been fixed.
 - When a page was selected in the Visual Overview component, in some cases, an incorrect page would be displayed.
 - In some cases, the dimensions of pop-up windows would be incorrect.
 - When a pop-up window was shown using a *VdxShape* property, in some cases, the default page would be shown instead of the page that was specified.
-
-#### Web apps: Problem when executing a GQI query [ID_35539]
-
-<!-- MR 10.4.0 - FR 10.3.2 [CU1] -->
-
-When a web app (e.g. Dashboards) tried to execute a GQI query, in some cases, a `Node: 'X' is not supported by the current server version.` error could be thrown (`'X'` being the node that caused the error).
