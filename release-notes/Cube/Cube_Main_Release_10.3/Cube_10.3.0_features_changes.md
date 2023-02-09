@@ -1080,3 +1080,11 @@ When you right-clicked a shape, certain context menu commands would incorrectly 
 <!-- MR 10.3.0 - FR 10.3.3 -->
 
 When you had configured DataMiner Cube to connect using gRPC (by specifying `type=GRPCConnection` in the *ConnectionSettings.txt* file), newly created users would be assigned an invalid full name, description and password.
+
+#### EPM cards: Collector pages would not be loaded [ID_35523]
+
+<!-- MR 10.3.0 - FR 10.3.3 -->
+
+When you opened an EPM card, in some cases, the collector pages would not be loaded, especially on systems without backend.
+
+From now on, the collector pages will be loaded even when the EPM environment does not include a backend. This will particularly be useful for testing purposes.
