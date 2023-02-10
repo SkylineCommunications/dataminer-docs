@@ -24,6 +24,11 @@ It is a **collection of functions** that are available when your DataMiner Syste
 
 - The [**Collaboration**](#collaboration) category emphasizes synergy.
 
+In addition to that, dataminer.services also offers a number of tangeable benefits for Support Services. 
+
+> [!TIP]
+> For more information on the benefits for Support Services, see [CCA_Support_Services](xref:CCA_Support_Services).
+
 > [!TIP]
 > For more information on how to access dataminer.services, see [How to access DataMiner Services](https://skyline.be/dataminer/cloud-services).
 
