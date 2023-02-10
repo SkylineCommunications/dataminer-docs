@@ -200,6 +200,14 @@ Because of a number of enhancements, overall memory usage of the SLAutomation pr
 
 ### Fixes
 
+#### Cassandra Cluster: Every DMA would incorrectly try to delete any possible old Cassandra compaction and repair tasks found in the entire DMS [ID_31923]
+
+<!-- MR 10.4.0 - FR 10.3.3 -->
+
+At start-up, every DataMiner Agent with a Cassandra Cluster configuration would incorrectly try to delete any possible old Cassandra compaction and repair tasks found in the entire DMS.
+
+From now on, at start-up, every DataMiner Agent with a Cassandra Cluster configuration will only delete the old Cassandra compaction and repair tasks found locally.
+
 #### DataMiner Taskbar Utility: Problem when stopping DataMiner [ID_34790]
 
 <!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
