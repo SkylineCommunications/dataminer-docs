@@ -5456,3 +5456,5 @@
   items:
     - name: Ansible
       topicUid: Configure_DataMiner_using_Ansible
+    - name: Grafana
+      topicUid: Grafana_plugin

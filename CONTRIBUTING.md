@@ -349,7 +349,7 @@ To be able to make a local test build, you need to have DocFX installed. DocFX i
 > Alternative ways to install DocFX can be found on the [DocFX website](https://dotnet.github.io/docfx/tutorial/docfx_getting_started.html#2-use-docfx-as-a-command-line-tool).
 
 > [!NOTE]
-> If you use this "dotnet" command, it is no longer necessary to add the DocFX folder to the Windows Path variable as was the case in the past. If you configured this earlier, we recommend that you remove this folder from the Path variable again.
+> If you use this "dotnet" command, it is no longer necessary to add the DocFX folder to the Windows Path variable as was the case in the past. If you configured this earlier, we recommend that you remove this folder from the Path variable again and reboot.
 
 #### Making a test build
 
@@ -373,7 +373,7 @@ To be able to make a local test build, you need to have DocFX installed. DocFX i
       > [!TIP]
       > If you are not able to access localhost:8080, you can specify a different port by entering e.g. `docfx serve _site -p 8090`.
 
-      When you have finished previewing the website, in the Terminal pane, press ENTER to exit the preview mode.
+      When you have finished previewing the website, in the Terminal pane, press Ctrl+C to exit the preview mode.
 
       > [!NOTE]
       > Using the search box when viewing the test website on <http://localhost:8080/> will not return any pages from the test website. The search engine only indexes the published content on <https://docs.dataminer.services/> and will, as such, only return pages from that website.
