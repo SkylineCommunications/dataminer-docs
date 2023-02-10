@@ -74,9 +74,12 @@ There are two main reasons to consider a Dashboard Gateway setup:
 
 ## Reverse proxy
 
-Opening a dashboard or low-code app via the Gateway server will not work if they contain a web component displaying the [DataMiner Maps module](xref:maps) or [VideoThumbnails web page](xref:Linking_a_shape_to_a_video_thumbnail).
+Opening a dashboard or low-code app via the Gateway server will cause web components displaying the [DataMiner Maps module](xref:maps) or [VideoThumbnails web page](xref:Linking_a_shape_to_a_video_thumbnail) to fail to load.
 
 A reverse proxy can be used to give access to these web pages on the DMA via the Gateway server. The reverse proxy will forward any web requests for these web pages to the DMA.
+
+> [!TIP]
+> When embedding the URLs in dashboards, make use of relative URLs such as `/maps/maps.aspx?config=yourmapconfig`. This way, the content will both be shown on a dashboard accessed via the Gateway server and a dashboard accessed locally via the DMA.
 
 ### Reverse proxy requirements
 
@@ -165,6 +168,3 @@ To test whether the reverse proxy is working properly, do the following:
 1. Enter `https://gateway/maps/maps.aspx?config=yourmapconfig` or `https://gateway/videothumbnails/video.htm` in your browser's address bar.
 
 1. If the reverse proxy was configured correctly, you should see the login screen of the DataMiner Maps module or the VideoThumbnails web page. It should be possible to log in.
-
-> [!TIP]
-> When embedding the URLs in dashboards, make use of relative URLs, e.g. ``/maps/maps.aspx?config=yourmapconfig``. This way, the content will both be shown on a dashboard accessed via the Gateway server and a dashboard accessed locally via the DMA.
