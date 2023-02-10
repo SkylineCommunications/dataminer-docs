@@ -9,7 +9,7 @@ The general database is the main database used by a DataMiner Agent to store its
 In older DataMiner systems, this database was also known as the "local database", as the MySQL or MSSQL database was typically hosted locally on the same machine as DataMiner.
 
 > [!NOTE]
-> If you want to have an external program do queries on a DataMiner database, you will need to use an offload database for this. For information on offload database settings, see [Offload database](xref:Offload_database).
+> If you want an external program to execute queries agaist a DataMiner database, you will need to use an offload database. For information on offload database settings, see [Offload database](xref:Offload_database).
 
 ## Cassandra database
 
@@ -33,17 +33,17 @@ For a Cassandra cluster database (i.e. one Cassandra cluster that is used as the
 
    - **Password**: Password with which the DMA has to log on to Cassandra.
 
-1. From DataMiner Cube 10.3 [CU0]/10.3.3 onwards, you can also specify the database settings for the Elasticsearch. Note that if the server supports [OpenSearch](xref:OpenSearch_database), Cube will also provide this option and this can be configured instead of Elastic:
+1. From DataMiner Cube 10.3.0/10.3.3 onwards, you can also specify the database settings for Elasticsearch. Note that if the server supports [OpenSearch](xref:OpenSearch_database), Cube will allow you to configure this type of database instead of Elasticsearch.
 
    - **Database**: The type of database, i.e. *Elasticsearch*.
 
    - **Database prefix**: The prefix that the DataMiner System will use to create the indices.
 
-   - **DB server**: The IP addresses or hostnames of the Elastic nodes, separated by commas. If TLS is enabled the full url must be specified, e.g. https://elastic.mydomain.local. If no port is provided, port 9200 is used by default.
+   - **DB server**: The IP addresses or hostnames of the Elasticsearch nodes, separated by commas. If TLS is enabled, the full URL must be specified, e.g. `https://elastic.mydomain.local`. If no port is provided, port 9200 will be used by default.
 
-   - **User**: Username with which the DMA has to log in (if applicable).
+   - **User**: The username with which the DMA has to log in (if applicable).
 
-   - **Password**: Password with which the DMA has to log in (if applicable).
+   - **Password**: The password with which the DMA has to log in (if applicable).
 
    ![Cube Cassandra Cluster Configuration](~/user-guide/images/CassandraCluster_CubeConfig.png)
 
@@ -67,13 +67,13 @@ In case a separate Cassandra cluster is used per DMA, configure the settings as 
 
    - **Name**: The name of the database.
 
-   - **DB Server**: Name or IP address of the server that hosts the database.
+   - **DB Server**: The name or IP address of the server that hosts the database.
 
    - **Connection string**: Can be filled in instead of the other fields, in which case this string will be used to connect to the database.
 
-   - **User**: Username with which the DMA has to log on to Cassandra.
+   - **User**: The username with which the DMA has to log on to Cassandra.
 
-   - **Password**: Password with which the DMA has to log on to Cassandra.
+   - **Password**: The password with which the DMA has to log on to Cassandra.
 
    Earlier DataMiner versions:
 
@@ -81,13 +81,13 @@ In case a separate Cassandra cluster is used per DMA, configure the settings as 
 
    - **DB**: The name of the database.
 
-   - **DB Server**: Name or IP address of the server that hosts the database.
+   - **DB Server**: The name or IP address of the server that hosts the database.
 
    - **Connection string**: Can be filled in instead of the other fields, in which case this string will be used to connect to the database.
 
-   - **User**: Username with which the DMA has to log on to the general database.
+   - **User**: The username with which the DMA has to log on to the general database.
 
-   - **Password**: Password with which the DMA has to log on to the general database.
+   - **Password**: The password with which the DMA has to log on to the general database.
 
    - **Limit alarms by months to keep**: Deprecated from DataMiner 9.6.0/9.6.3 onwards. Use the TTL settings instead. See [Specifying TTL overrides](xref:Specifying_TTL_overrides). In legacy systems, this option limits the total alarm records in the database by date.
 
@@ -101,13 +101,12 @@ In case a separate Cassandra cluster is used per DMA, configure the settings as 
 
 > [!IMPORTANT]
 > An Amazon Keyspaces database requires a separate indexing database.
->
 > For information on how to configure an indexing database, see [ElasticSearch database](xref:Elasticsearch_database) or [OpenSearch database](xref:OpenSearch_database).
 
 > [!NOTE]
-> If you don't see the `Amazon Keyspaces` option, it means your server is not compatible because it is not running version 10.3.0 [CU0]/10.3.3 or higher.
+> If you don't see the `Amazon Keyspaces` option, it means that your server is not compatible because it is not running DataMiner version 10.3.0/10.3.3 or higher.
 
-To configure the connection to an [Amazon Keyspaces database](xref:Amazon_Keyspaces_Service), configure the settings as follows:
+To configure the connection to an [Amazon Keyspaces database](xref:Amazon_Keyspaces_Service), proceed as follows:
 
 1. In DataMiner Cube, go to *System Center* > *Database*.
 
@@ -119,7 +118,7 @@ To configure the connection to an [Amazon Keyspaces database](xref:Amazon_Keyspa
 
    - **Keyspace prefix**: The name all Amazon Keyspaces will be prefixed with. This will be identical for all DMAs in the DMS.
 
-   - **DB Server**: The url of the [global endpoint](https://docs.aws.amazon.com/keyspaces/latest/devguide/programmatic.endpoints.html) of the region your Amazon Keyspaces cluster is in. (e.g. `cassandra.eu-north-1.amazonaws.com`).
+   - **DB Server**: The URL of the [global endpoint](https://docs.aws.amazon.com/keyspaces/latest/devguide/programmatic.endpoints.html) of the region your Amazon Keyspaces cluster is in. (e.g. `cassandra.eu-north-1.amazonaws.com`).
 
    - **User**: The username of your AWS user account.
 
@@ -127,15 +126,14 @@ To configure the connection to an [Amazon Keyspaces database](xref:Amazon_Keyspa
 
 1. Restart the DMS.
 
-   The first restart after configuring Amazon Keyspaces can take up to 15 minutes extra on top of the normal start up time, as the keyspaces and tables will be created. In case of trouble, you can find the relevant logging in the *SLDBConnection.txt* file.
+   The first restart after configuring Amazon Keyspaces can take up to 15 minutes extra on top of the normal start-up time as the keyspaces and tables will be created. In case of trouble, you can find the relevant logging in the *SLDBConnection.txt* file.
 
-![Cube Database Configuration](~/user-guide/images/aks_cube_config.png)<br>
-*DataMiner 10.3.3 example configuration*
+![Cube Database Configuration](~/user-guide/images/aks_cube_config.png)<br>*DataMiner 10.3.3 example configuration*
 
 ## Amazon OpenSearch Service
 
 > [!NOTE]
-> Ensure your server version is compatible for OpenSearch. Cube will display `Elasticsearch/OpenSearch` instead of `Elasticsearch` if your server is compatible (10.3 [CU0]/10.3.3).
+> Ensure your server version is compatible to OpenSearch. Cube will display `Elasticsearch/OpenSearch` instead of `Elasticsearch` if your server is compatible (i.e. running DataMiner 10.3.0/10.3.3 or higher).
 
 1. In DataMiner Cube, go to *System Center* > *Database*.
 
@@ -237,5 +235,3 @@ For a legacy MySQL or MSSQL database, configure the settings as follows:
 >
 > - If you use a MSSQL database, a Microsoft SQL Server Enterprise Edition license is required if partitioned data tables are used. Otherwise, the Express edition is sufficient. To run Microsoft SQL Server 2019, Windows Server 2016 or higher is required.
 > - If you use an MSSQL database, prior to DataMiner v8.5.8, only user accounts of type NT AUTHORITY\\SYSTEM are supported. In more recent DataMiner versions, you can use other domain accounts, either by using a connection string containing “*Integrated Security=true;user id:Domain\\User Name;Password:PWD*”, or by setting the tag *\<IntegratedSecurity>* to true in *DB.xml*.
-
-***
