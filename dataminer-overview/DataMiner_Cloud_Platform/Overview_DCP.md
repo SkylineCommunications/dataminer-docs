@@ -14,7 +14,7 @@ Enabled [in just a few clicks](xref:Linking_your_DataMiner_and_DCP_account), dat
 
 So, what exactly does “dataminer.services” refer to?
 
-![dataminer.services.categories](~/dataminer-overview/images/DS_dataminer_services_3_categories.png)
+![dataminer.services.categories](~/dataminer-overview/images/DMS_dataminer_services_categories.png)
 
 It is a **collection of functions** that are available when your DataMiner System is connected to the cloud, grouped in **three categories**, based on a **shared value**:
 

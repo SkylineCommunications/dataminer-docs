@@ -2,11 +2,13 @@
 uid: Collaboration
 ---
 
-## Collaboration
+# Collaboration
 
 *Collaborate within the entire service supply chain.*
 
-### Dashboard Share
+![dataminer.services.categories](~/dataminer-overview/images/DMS_Collaboration.png)
+
+## Dashboard Share
 
 **Dashboard sharing** is likely a familiar concept to you. This function enables the simple sharing of live data with stakeholders as a single reference point.
 
@@ -19,7 +21,7 @@ uid: Collaboration
 > - [Use Case - Dashboard sharing reducing OPEX while accelerating incident resolution](https://community.dataminer.services/use-case/dashboard-sharing-reducing-opex-while-accelerating-incident-resolution/)
 > - [User Guide - Sharing a Dashboard](xref:Sharing_a_dashboard)
 
-### Remote Access
+## Remote Access
 
 **Remote Access** consisting of **Remote app access** and **Remote Cube access** *(coming soon)* gives you the ability to access your environment from anywhere. Via Remote app access (HTML), accessible on dataminer.services, you can go to all the low-code apps created in your environment. Especially handy is the Monitoring app: a lightweight version of Cube. In addition to this, Remote Cube access *(coming soon)* is also on the horizon and will allow secure and effortless remote access to your entire Cube environment without the need for a VPN connection.
 
@@ -31,7 +33,17 @@ uid: Collaboration
 > - [CCA Support Services](xref:CCA_Support_Services)
 > - [Remote Access User Guide](xref:Cloud_Remote_Access)
 
-### API Share *(coming soon)*
+## ChatOps
+
+**ChatOps** is a feature that enhances the value of **Teams** as you collaborate more effectively using insights and controls from your DataMiner System with generic or custom chat commands. It is especially useful for teams that need to communicate and interact with one another frequently. In the future, we plan to offer support for ChatOps on **Slack** as well, as it is a widely used team messaging platform.
+
+> [!TIP]
+> See also:
+>
+> - [Example Use Case - Custom chat commands](https://community.dataminer.services/use-case/dataminer-chatops-custom-commands/)
+> - [ChatOps User Guide](xref:DataMiner_Teams_bot)
+
+## API Share *(coming soon)*
 
 Share your **user-defined APIs** with anybody who needs the provided data to control and trigger more complex actions in DataMiner.
 
@@ -42,7 +54,7 @@ User-defined API sharing is primarily focused on **machine-to-machine interactio
 >
 > - [Video - DataMiner compute and storage, on-prem and in the cloud](https://community.dataminer.services/video/dataminer-compute-and-storage-on-prem-and-in-the-cloud/)
 
-### App Share *(coming soon)*
+## App Share *(coming soon)*
 
 Share your low-code app along with its underlying data with a defined target audience to control and trigger more complex actions in DataMiner.
 
