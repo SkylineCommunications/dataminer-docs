@@ -2,7 +2,7 @@
 uid: cloud_benchmarks
 ---
 
-# Cloud benchmarks
+# dataMiner.services benchmarks
 
 ## Specifications of the test servers
 

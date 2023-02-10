@@ -330,42 +330,26 @@ To be able to make a local test build, you need to have DocFX installed. DocFX i
 
 #### Installing and configuring DocFX
 
-1. Go to <https://github.com/dotnet/docfx/releases>, and download version version 2.59.4 of the `docfx.zip` package.
+1. Install .NET 6.0 SDK or higher from [dotnet.microsoft.com](https://dotnet.microsoft.com/en-us/download/visual-studio-sdks).
 
-    > [!CAUTION]
-    > We recommend that you do not use any of the beta versions. We also do not support version 2.60 yet, as this will require some changes to the way we generate metadata, which we are still working on at the moment.
+1. Open a command prompt and enter the command `dotnet tool update -g docfx`
 
-1. Extract `docfx.zip` to a folder of your choice (e.g. `C:\DocFX`).
-
-    > [!NOTE]
-    > Make sure the folder name and path contain no spaces, as this may cause issues. For example, instead of `C:\My docs`, use `C:\My-docs` or some other alternative without a space.
-
-1. Add the folder (e.g. `C:\DocFX`) to the environment variable **Path** (user variable or system variable).
-
-    On Windows 10 or 11 systems, do the following:
-
-    1. In your Windows search box, enter "path".
-    1. Click *Edit the system environment variables*.
-    1. In the *Advanced* tab of the *System Properties* window, click *Environment Variables*.
-    1. In the *Environment Variables* window, select the **Path** variable in either the *User variables for \<user\>* list or the *System variables* list, and click *Edit*.
-    1. In the *Edit environment variable* window, click *New*, enter e.g. `C:\DocFX`, and click *OK*.
-
-1. Test whether DocFX was installed correctly:
-
-    1. Open a command prompt.
-    1. Enter `docfx help`.
+1. Test whether DocFX was installed correctly by entering `docfx help`.
 
     If information similar to the following text is returned, DocFX was installed correctly:
 
     ```txt
-    docfx 2.59.4.0
-    Copyright (C) 2022 ¸ Microsoft Corporation. All rights reserved.
+    docfx 2.61.0+54f1a2f4f25f89435f222c93aa8aab0c0cfea2b5
+    Copyright (C) 2023 © Microsoft Corporation. All rights reserved.
     This is open-source software under MIT License.  
     ...
     ```
 
 > [!TIP]
 > Alternative ways to install DocFX can be found on the [DocFX website](https://dotnet.github.io/docfx/tutorial/docfx_getting_started.html#2-use-docfx-as-a-command-line-tool).
+
+> [!NOTE]
+> If you use this "dotnet" command, it is no longer necessary to add the DocFX folder to the Windows Path variable as was the case in the past. If you configured this earlier, we recommend that you remove this folder from the Path variable again and reboot.
 
 #### Making a test build
 
@@ -375,14 +359,12 @@ To be able to make a local test build, you need to have DocFX installed. DocFX i
 
    1. Enter `clear` to clear the terminal.
 
-   1. Enter `docfx metadata -f` to generate the metadata.
+   1. Enter `dotnet run --project build`.
 
       > [!NOTE]
       >
-      > - At this point, you may get 5 warnings mentioning "Found project reference without a matching metadata reference". These can be ignored.
-      > - At this point, if you get up to 13 warnings, of which 8 mention "Invalid cref value", follow the steps explained [here](#running-docfx-metadata--f-results-in-warnings-mentioning-an-invalid-cref-value).
-
-   1. Enter `docfx build -f` to make a test build.
+      > - This step requires that **.NET 6.0 SDK or higher** is installed on your machine. If this is not installed yet, you will get a build error. You can download the latest version from [dotnet.microsoft.com](https://dotnet.microsoft.com/en-us/download/visual-studio-sdks).
+      > - If you only have .NET 7.0 installed, it is possible that you encounter an exception when trying to make a build. See [No instances of MSBuild could be detected](#no-instances-of-msbuild-could-be-detected).
 
    1. Enter `docfx serve _site`.
 
@@ -391,7 +373,7 @@ To be able to make a local test build, you need to have DocFX installed. DocFX i
       > [!TIP]
       > If you are not able to access localhost:8080, you can specify a different port by entering e.g. `docfx serve _site -p 8090`.
 
-      When you have finished previewing the website, in the Terminal pane, press ENTER to exit the preview mode.
+      When you have finished previewing the website, in the Terminal pane, press Ctrl+C to exit the preview mode.
 
       > [!NOTE]
       > Using the search box when viewing the test website on <http://localhost:8080/> will not return any pages from the test website. The search engine only indexes the published content on <https://docs.dataminer.services/> and will, as such, only return pages from that website.
@@ -735,6 +717,12 @@ The only time when "the user" is appropriate is when whoever you are writing for
 
 ![TOC](~/images/TOC.png)
 
+### No instances of MSBuild could be detected
+
+**Symptom**: When trying to create a build, you get the exception "No instances of MSBuild could be detected".
+
+**Resolution**: If you only have .NET 7 installed, and not .NET 6, adjust the .csproj file in the build folder of the repository so that it targets "net7.0" instead of "net6.0".
+
 ### Build failed because assembly or file could not be loaded
 
 **Symptom**: When you try to create a test build, this fails with the following error:
@@ -747,7 +735,7 @@ The only time when "the user" is appropriate is when whoever you are writing for
    (Exception from HRESULT: 0x80131040)
 ```
 
-**Resolution**: Install [the version 2.59.4 of DocFX](#installing-and-configuring-docfx).
+**Resolution**: Install [the latest version of DocFX](#installing-and-configuring-docfx).
 
 ### Build failed because config or content files are missing
 
@@ -779,36 +767,6 @@ The only time when "the user" is appropriate is when whoever you are writing for
 - Make sure [your fork is up to date](#make-sure-your-fork-is-up-to-date).
 
 - If you installed Git after you installed GitHub Desktop, remove the repository in GitHub Desktop and add it again.
-
-### Running 'docfx metadata -f' results in warnings mentioning an invalid cref value
-
-**Symptom**: When you enter `docfx metadata -f` in the Terminal pane in Visual Studio Code, you get several warnings that look like this:
-
-```txt
-[22-12-14 07:59:45.600]Warning:[ExtractMetadata]Invalid cref value "!:JsonReaderException" found in triple-slash-comments for FromJsonString defined in src/Base Class Library/Common/Skyline/DataMiner/Library/Common/Rates/RateHelper.cs Line 309, ignored.
-[22-12-14 07:59:45.600]Warning:[ExtractMetadata]Invalid cref value "!:JsonReaderException" found in triple-slash-comments for FromJsonString defined in src/Base Class Library/Common/Skyline/DataMiner/Library/Common/Rates/RateHelper.cs Line 354, ignored.
-```
-
-**Resolution**:
-
-1. Open Visual Studio.
-
-1. Select to open a project or solution and open *Code Library.sln*, located in the *Base Class Library* folder of your dataminer-docs repository.
-
-1. In the *Solution Explorer* pane, right-click *Solution 'Code Library'* and select *Restore NuGet packages*.
-
-   You will get the following output:
-
-   ```txt
-   `Restored C:\...\GitHub\dataminer-docs\src\Base Class Library\Common\Common.csproj (in 340 ms).
-   NuGet package restore finished
-   Time Elapsed: 00:00:00.7119526
-   ========== Finished ==========
-   ```
-
-1. Enter `docfx metadata -f` in Visual Studio Code again.
-
-   You should now get no more than 5 warnings when generating the metadata.
 
 ## References
 

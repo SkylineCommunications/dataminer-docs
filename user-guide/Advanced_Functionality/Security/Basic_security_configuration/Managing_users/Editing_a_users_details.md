@@ -12,7 +12,7 @@ To edit a user's details:
 
 1. If you are using a version of DataMiner prior to 9.5.4, in the lower right corner of the *details* tab, click the *Edit* button.
 
-1. Fill in the new data in the applicable fields. E.g. if you want to change a user’s DCP login credentials, fill in *DCP Username* and *DCP Password*.
+1. Fill in the new data in the applicable fields.
 
 1. Click the *Apply* button in the lower right corner.
 
