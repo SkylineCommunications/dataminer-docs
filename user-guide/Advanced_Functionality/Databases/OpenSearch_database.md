@@ -22,7 +22,7 @@ See the [official documentation](https://opensearch.org/docs/latest/) on how to 
 
 > [!IMPORTANT]
 >
-> - On production systems, the *JVM Heap Space* must be set to a value larger than the default. To configure this setting, see [Important settings](https://opensearch.org/docs/latest/opensearch/install/important-settings).
+> - On production systems, the *JVM Heap Space* must be set to a value larger than the default. To configure this setting, see [Important settings](https://opensearch.org/docs/latest/install-and-configure/install-opensearch/index/#important-settings).
 > - The `indices.query.bool.max_clause_count` setting should be set to "2147483647" (i.e. the maximum integer value).
 
 > [!NOTE]
