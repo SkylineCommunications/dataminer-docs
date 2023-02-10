@@ -1067,8 +1067,8 @@
         - name: OpenSearch database
           topicUID: OpenSearch_database
           items:
-            - name: Configuring multiple OpenSearch clusters
-              topicUid: Configuring_multiple_OpenSearch_clusters
+          - name: Configuring multiple OpenSearch clusters
+            topicUid: Configuring_multiple_OpenSearch_clusters
         - name: Amazon OpenSearch Service
           topicUID: Amazon_OpenSearch_Service
         - name: Amazon Keyspaces Service
