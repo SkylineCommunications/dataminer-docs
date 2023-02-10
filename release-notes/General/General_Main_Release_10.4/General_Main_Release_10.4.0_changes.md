@@ -42,6 +42,17 @@ Also, when using the DomBehaviorDefinition inheritance system, the server-side l
 
 From now on, all custom CollectorConfig XML files will be synchronized across the DataMiner cluster.
 
+#### Cassandra Cluster: Enhanced query performance [ID_35247]
+
+<!-- MR 10.4.0 - FR 10.3.3 -->
+
+Previously, queries against Cassandra Cluster would always be executed with a page size of 1000, even when the limit defined in the query was smaller than 1000. This resulted in excess data being return. From now on, the page size will be adjusted according to the limit defined in the query if it is lower than the default page size.
+
+This change will considerably improve overall query performance, especially when retrieving trend data.
+
+> [!NOTE]
+> This change will not enhance performance when requesting trend data for an element that has no trend data points before the requested window. In cases like this, the full two-year range of shards will be queried to try and find an initial point.
+
 #### SLAnalytics - Pattern matching: Manually created tags will now be saved as pattern occurrences [ID_35299]
 
 <!-- MR 10.4.0 - FR 10.3.3 -->
@@ -87,6 +98,14 @@ During a DataMiner upgrade, Microsoft .NET 6.0 will now be installed if not inst
 The zoom range of a map can now be set by means of a slider.
 
 ### Fixes
+
+#### Cassandra Cluster: Every DMA would incorrectly try to delete any possible old Cassandra compaction and repair tasks found in the entire DMS [ID_31923]
+
+<!-- MR 10.4.0 - FR 10.3.3 -->
+
+At start-up, every DataMiner Agent with a Cassandra Cluster configuration would incorrectly try to delete any possible old Cassandra compaction and repair tasks found in the entire DMS.
+
+From now on, at start-up, every DataMiner Agent with a Cassandra Cluster configuration will only delete the old Cassandra compaction and repair tasks found locally.
 
 #### Problem with Resource Manager when ResourceStorageType was not specified in Resource Manager settings [ID_34981]
 
