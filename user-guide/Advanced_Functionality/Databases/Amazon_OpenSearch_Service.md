@@ -18,7 +18,7 @@ Supported versions:
 - OpenSearch version 2.X
 
 > [!NOTE]
-> Amazon OpenSearch Service currently does not support Elasticsearch version 7.X setups.
+> DataMiner currently does not support Elasticsearch version 7.X setups.
 
 ## Creating your Amazon OpenSearch Service domain
 
