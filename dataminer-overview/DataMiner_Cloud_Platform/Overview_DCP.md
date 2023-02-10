@@ -141,7 +141,7 @@ To enhance convenience further, our next step is to provide **DataMiner node as 
 
 ### DataMiner as a Service *(coming soon)*
 
-Finally, **DataMiner as a Service** will allow you to spin up your DataMiner System in the cloud in just a few minutes with Skyline-hosted DataMiner nodes (SaaS). While we’re working on the GA of those services, customers can already contact us today!
+Finally, **DataMiner as a Service** will allow you to spin up your DataMiner System in the cloud in just a few minutes with Skyline-hosted DataMiner nodes (SaaS). While we’re working on the general acceptance of those services, customers can already contact us today!
 
 ## Collaboration
 
