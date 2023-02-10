@@ -133,7 +133,7 @@ To configure the connection to an [Amazon Keyspaces database](xref:Amazon_Keyspa
 ## Amazon OpenSearch Service
 
 > [!NOTE]
-> Ensure your server version is compatible to OpenSearch. Cube will display `Elasticsearch/OpenSearch` instead of `Elasticsearch` if your server is compatible (i.e. running DataMiner 10.3.0/10.3.3 or higher).
+> Ensure your server version is compatible with OpenSearch. Cube will display `Elasticsearch/OpenSearch` instead of `Elasticsearch` if your server is compatible (i.e. running DataMiner 10.3.0/10.3.3 or higher).
 
 1. In DataMiner Cube, go to *System Center* > *Database*.
 
@@ -145,26 +145,26 @@ To configure the connection to an [Amazon Keyspaces database](xref:Amazon_Keyspa
 
    - **Database prefix**: The name all indices will be prefixed with. This will be identical for all DMAs in the same cluster.
 
-   - **DB Server**: The full url of your Amazon OpenSearch Service endpoint, for example: `https://search-mydomain-123456798.eu-north-1.es.amazonaws.com/`
+   - **DB Server**: The full URL of your Amazon OpenSearch Service endpoint, for example: `https://search-mydomain-123456798.eu-north-1.es.amazonaws.com/`
 
-   - **User**: The username of your master user of your domain.
+   - **User**: The username of the master user of your domain.
 
-   - **Password**: The password of your master user of your domain.
+   - **Password**: The password of the master user of your domain.
 
    ![OpenSearch Cube Config](~/user-guide/images/Amazon_OpenSearch_CubeConfig.png)
 
-1. (Optional) Verify that the DMS is using the database
+1. (Optional) Verify that the DMS is using the database.
 
-    Open the `OpenSearch Dashboards URL` which will redirect you to your dashboard (equivalent of Kibana for Elasticsearch).
-    
-    If you navigate to *Management* > *Dev Tools* in the hamburger menu, you can execute the query `GET _cat/indices` and you should see that the DMS has created the necessary indices.
-    
-    ![DevTools](~/user-guide/images/Amazon_OpenSearch_DevTools.png)
-    
-    ![CatIndices](~/user-guide/images/Amazon_OpenSearch_CatIndices.png)
-    
-    > [!NOTE]
-    > In the example screenshots, the cluster health is yellow because only 1 node is used and 1 node clusters are always yellow.
+   Open the `OpenSearch Dashboards URL` to be redirected to your dashboard (equivalent of Kibana for Elasticsearch).
+
+   If, in the hamburger menu, you go to *Management* > *Dev Tools*, you can execute the `GET _cat/indices` query to check whether the DMS has created the necessary indices.
+
+   ![DevTools](~/user-guide/images/Amazon_OpenSearch_DevTools.png)
+
+   ![CatIndices](~/user-guide/images/Amazon_OpenSearch_CatIndices.png)
+
+   > [!NOTE]
+   > In the example screenshots, the cluster health is yellow because only one node is used. Single-node clusters are always displayed in yellow.
 
 ## Legacy MySQL or SQL database
 
@@ -187,13 +187,13 @@ For a legacy MySQL or MSSQL database, configure the settings as follows:
 
    - **Name**: The name of the database.
 
-   - **DB Server**: Name or IP address of the server that hosts the database.
+   - **DB Server**: The name or IP address of the server that hosts the database.
 
    - **Connection string**: Can be filled in instead of the other fields, in which case this string will be used to connect to the database.
 
-   - **User**: Username with which the DMA has to log on to Cassandra.
+   - **User**: The username with which the DMA has to log on to Cassandra.
 
-   - **Password**: Password with which the DMA has to log on to Cassandra.
+   - **Password**: The password with which the DMA has to log on to Cassandra.
 
    - **Limit alarms by maximum number**: Select this option to limit the total alarm records in the database by number.
 
@@ -207,7 +207,7 @@ For a legacy MySQL or MSSQL database, configure the settings as follows:
 
    - **DB**: The name of the database.
 
-   - **DB Server**: Name or IP address of the server that hosts the database.
+   - **DB Server**: The name or IP address of the server that hosts the database.
 
    - **DSN**: This setting is no longer used.
 
@@ -215,15 +215,15 @@ For a legacy MySQL or MSSQL database, configure the settings as follows:
 
    - **Connection string**: Can be filled in instead of the other fields, in which case this string will be used to connect to the database.
 
-   - **User**: Username with which the DMA has to log on to the general database.
+   - **User**: The username with which the DMA has to log on to the general database.
 
-   - **Password**: Password with which the DMA has to log on to the general database.
+   - **Password**: The password with which the DMA has to log on to the general database.
 
    - **Limit alarms by maximum number**: Select this option to limit the total alarm records in the database by number.
 
    - **Maximum alarms**: The maximum number of alarms that can be stored in the general database.
 
-   - **Fallback minimum**: If the maximum alarms setting has been reached, the oldest alarms will automatically be deleted until the database contains exactly the number of alarms specified in the *Fallback minimum* box.
+   - **Fallback minimum**: If the *Maximum alarms* setting has been reached, the oldest alarms will automatically be deleted until the database contains exactly the number of alarms specified in the *Fallback minimum* box.
 
    - **Limit alarms by months to keep**: Deprecated from DataMiner 9.6.0/9.6.3 onwards. Use the TTL settings instead. See [Specifying TTL overrides](xref:Specifying_TTL_overrides). In legacy systems, this option limits the total alarm records in the database by date.
 
