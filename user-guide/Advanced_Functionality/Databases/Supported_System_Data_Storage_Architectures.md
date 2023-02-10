@@ -20,7 +20,7 @@ The **recommended** DataMiner setup involves **one Cassandra cluster and one Ela
 > For information on how to implement this setup based on an existing DataMiner setup with SQL or Cassandra databases per DMA, see [Migrating the general database to a DMS Cassandra cluster](xref:Migrating_the_general_database_to_a_DMS_Cassandra_cluster)
 
 > [!IMPORTANT]
-> From DataMiner 10.3.0 [CU0]/10.3.3 onwards, instead of a Cassandra cluster, you can use the [Amazon Keyspaces Service on AWS](xref:Amazon_Keyspaces_Service) and instead of an  on-prem Elasticsearch cluster, you can use an on-prem [OpenSearch cluster](xref:OpenSearch_database) or the [Amazon OpenSearch Service on AWS](xref:Amazon_OpenSearch_Service) (which offers both Elasticsearch as well as OpenSearch).
+> From DataMiner 10.3.0/10.3.3 onwards, instead of a Cassandra cluster, you can use the [Amazon Keyspaces Service on AWS](xref:Amazon_Keyspaces_Service), and instead of an on-prem Elasticsearch cluster, you can use an on-prem [OpenSearch cluster](xref:OpenSearch_database) or the [Amazon OpenSearch Service on AWS](xref:Amazon_OpenSearch_Service) (which offers both Elasticsearch and OpenSearch).
 
 ### Single DMA setups
 
