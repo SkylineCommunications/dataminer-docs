@@ -329,7 +329,7 @@ The following session variables can be used in conjunction with the *ListView* c
   - Interrupted (6)
   - Canceled (7)
 
-- **ViewPort**: This session variable has to contain the time range that will be used when populating a dynamic list with bookings. For more information, see [ViewPort](https://docs.dataminer.services/user-guide/Basic_Functionality/Visio/SRM/Embedding_a_Resource_Manager_component.html#viewport).
+- **ViewPort**: This session variable has to contain the time range that will be used when populating a dynamic list with bookings. For more information, see [ViewPort](xref:Embedding_a_Resource_Manager_component#viewport).
 
 - **YAxisResources**: When the list is configured to show bookings, you can use this session variable to apply a filter. Example:
 
