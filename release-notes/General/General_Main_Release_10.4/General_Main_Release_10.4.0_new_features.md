@@ -341,6 +341,12 @@ Two new field descriptors have been added to the DataMiner Object Models:
 
 - UserFieldDescriptor: Can be used to define that a field should contain the name of a DataMiner user. There is a *GroupNames* property that can be used to define which groups the user can be a part of.
 
+#### DMS Maps: New Maps context menu can be used to copy latitude, longitude, or both [ID_35491]
+
+<!-- MR 10.4.0 - FR 10.3.3 -->
+
+From now on, when you right-click a map, a context menu will appear. In this menu, you have the option to copy the latitude, the longitude, or both.
+
 ### Service & Resource Management
 
 #### Service & Resource Management: Exposers for resource capacities and capabilities [ID_34841]

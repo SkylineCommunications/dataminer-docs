@@ -97,6 +97,12 @@ Each time the *SLLogCollector* tool is run, it will now order the *Standalone BP
 
 The names of the files containing the test results will have the following format: `<BPA Name>_<Date(yyyy-MM-dd_HH)>`
 
+#### Maps: New Maps context menu can be used to copy latitude, longitude, or both [ID_35491]
+
+<!-- MR 10.4.0 - FR 10.3.3 -->
+
+From now on, when you right-click a map, a context menu will appear. In this menu, you have the option to copy the latitude, the longitude, or both.
+
 ## Changes
 
 ### Enhancements
