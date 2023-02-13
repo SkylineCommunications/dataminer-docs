@@ -26,20 +26,20 @@ The [UIBlockType](xref:Skyline.DataMiner.Automation.UIBlockType) enum defines di
 
 ## UIBuilder
 
-To create these UIBlocks, a UIBuilder should be defined with *Width*, *RowDefs*, and *ColumnDefs*.
+To create these UI blocks, a UIBuilder should be defined with *Width*, *RowDefs*, and *ColumnDefs*.
 
 ```csharp
-var MyDialogBox = new UIBuilder() { Width = 800, RowDefs = "auto;auto", ColumnDefs = "auto;auto" };
-MyDialogBox.RequireResponse = true;
+var uiBuilder = new UIBuilder() { Width = 800, RowDefs = "auto;auto", ColumnDefs = "auto;auto" };
+uiBuilder.RequireResponse = true;
 
-//UIBlocks
+//Add UI blocks here
 
-var results = engine.ShowUI(MyDialogBox);
+var results = engine.ShowUI(uiBuilder);
 ```
 
 ## Getting input
 
-Some of these UIBlocks use the [DestVar](xref:Skyline.DataMiner.Automation.UIBlockDefinition#Skyline_DataMiner_Automation_UIBlockDefinition_DestVar) property to read out input. To get the input of that property, use *GetString()*.
+Some of these UI blocks use the [DestVar](xref:Skyline.DataMiner.Automation.UIBlockDefinition#Skyline_DataMiner_Automation_UIBlockDefinition_DestVar) property to read out input. To get the input of that property, use *GetString()*.
 
 ```C#
 var input = results.GetString("destVarName")
@@ -47,7 +47,7 @@ var input = results.GetString("destVarName")
 
 ## Button
 
-Allows you to define a newly created dialog box item as a button.
+Allows you to define a button.
 
 Example:
 
@@ -58,11 +58,11 @@ UIBlockDefinition blockItem = new UIBlockDefinition
   Text = "Enter",
   DestVar = "ButtonVar"
 };
-MyDialogBox.AppendBlock(blockItem);
+uiBuilder.AppendBlock(blockItem);
 
-MyDialogBox.RequireResponse = true;
+uiBuilder.RequireResponse = true;
 
-var results = engine.ShowUI(MyDialogBox);
+var results = engine.ShowUI(uiBuilder);
 
 if (results.WasButtonPressed("ButtonVar"))
 {
@@ -72,7 +72,7 @@ if (results.WasButtonPressed("ButtonVar"))
 
 ## Calendar
 
-Allows you to define a newly created dialog box item as a calendar control.
+Allows you to define a calendar control.
 
 To have a certain initial value in the calendar, use the [InitialValue](xref:Skyline.DataMiner.Automation.UIBlockDefinition#Skyline_DataMiner_Automation_UIBlockDefinition_InitialValue) property. In the *Calendar* UIBlockType, the value is expected to be a string in the "(dd/MM/yyyy HH:mm:ss)" format.
 
@@ -87,12 +87,12 @@ UIBlockDefinition blockItem = new UIBlockDefinition
   Row = 1,
   Column = 0,
 };
-MyDialogBox.AppendBlock(blockItem);
+uiBuilder.AppendBlock(blockItem);
 ```
 
 ## CheckBox
 
-Allows you to define a newly created dialog box item as a checkbox.
+Allows you to define a checkbox.
 
 Example:
 
@@ -104,7 +104,7 @@ UIBlockDefinition blockItem = new UIBlockDefinition
   Row = 1,
   Column = 1
 };
-MyDialogBox.AppendBlock(blockItem);
+uiBuilder.AppendBlock(blockItem);
 ```
 
 > [!NOTE]
@@ -112,7 +112,7 @@ MyDialogBox.AppendBlock(blockItem);
 
 ## CheckBoxList
 
-Allows you to define a newly created dialog box item as a list of checkboxes.
+Allows you to define a list of checkboxes.
 
 It is possible to differentiate between the raw value and display value for the options. The display value is the text the UI will show for the option, and the raw value is the value used to set checkboxes as selected by default using [InitialValue](xref:Skyline.DataMiner.Automation.UIBlockDefinition#Skyline_DataMiner_Automation_UIBlockDefinition_InitialValue).
 
@@ -130,21 +130,21 @@ checkBoxList.AddCheckBoxListOption("Option1");
 checkBoxList.AddCheckBoxListOption("2", "Option2");  //(raw value, display value)
 checkBoxList.AddCheckBoxListOption("3", "Option3"); 
 checkBoxList.InitialValue = "2;3";
-MyDialogBox.AppendBlock(checkBoxList);
+uiBuilder.AppendBlock(checkBoxList);
 ```
 
 > [!NOTE]
 > To read out which boxes are selected, use [GetChecked](xref:Skyline.DataMiner.Automation.UIResults#Skyline_DataMiner_Automation_UIResults_GetChecked_System_String_) with the *DestVar* of the *CheckBoxList* and the raw value of the option
 >
 > ```csharp
-> var results = engine.ShowUI(MyDialogBox);
+> var results = engine.ShowUI(uiBuilder);
 > 
 > bool ticked = results.GetChecked("list","2");
 > ```
 
 ## DropDown
 
-Allows you to define a newly created dialog box item as a selection box.
+Allows you to define a selection box.
 
 Example:
 
@@ -162,9 +162,11 @@ UIBlockDefinition blockItem = new UIBlockDefinition
 };
 
 foreach (string dropDownOption in dropDownOptions)
+{
   blockItem.AddDropDownOption(dropDownOption);
+}
 
-MyDialogBox.AppendBlock(blockItem);
+uiBuilder.AppendBlock(blockItem);
 ```
 
 ## Executable
@@ -181,7 +183,7 @@ Examples:
   blockItem.Type = UIBlockType.Executable;
   blockItem.Extra = "notepad++.exe";
   ...
-  MyDialogBox.AppendBlock(blockItem);
+  uiBuilder.AppendBlock(blockItem);
   ```
 
 - Open a file with Notepad on the client device where the interactive script is running.
@@ -192,7 +194,7 @@ Examples:
   blockItem.Extra = "notepad.exe";
   blockItem.AddDropDownOption("Arguments", @"C:\Skyline DataMiner\Files\VersionCompatibility.txt");
   ...
-  MyDialogBox.AppendBlock(blockItem);
+  uiBuilder.AppendBlock(blockItem);
   ```
 
 > [!NOTE]
@@ -200,7 +202,7 @@ Examples:
 
 ## FileSelector
 
-Allows you to define a newly created dialog box item as a file selector control.
+Allows you to define a file selector control.
 
 Available from DataMiner 10.0.0/10.0.2 onwards.
 
@@ -214,7 +216,7 @@ UIBlockDefinition blockItem = new UIBlockDefinition
   Row = 1,
   Column = 1
 };
-MyDialogBox.AppendBlock(blockItem);
+uiBuilder.AppendBlock(blockItem);
 ```
 
 When the UI is then shown using *Engine#ShowUI(...)*, *UIResults* will contain the path to the file:
@@ -233,7 +235,7 @@ All files uploaded by users will by default be placed in the *C:\\Skyline DataMi
 
 ## Numeric
 
-Allows you to define a newly created dialog box item displaying a numeric value.
+Allows you to define a numeric value.
 
 Example of a number range between 0 and 100 with step size of 1 and an initial value of 5:
 
@@ -249,7 +251,7 @@ UIBlockDefinition blockItem = new UIBlockDefinition
   Row = 1,
   Column = 1
 };
-MyDialogBox.AppendBlock(blockItem);
+uiBuilder.AppendBlock(blockItem);
 ```
 
 The initial value has to be a string of an integer or have the following format:
@@ -300,7 +302,7 @@ uib.AppendBlock(numericBlock);
 
 ## Parameter
 
-Allows you to define a newly created dialog box item as a text item displaying the value of a parameter.
+Allows you to define a text item displaying the value of a parameter.
 
 In the [Extra](xref:Skyline.DataMiner.Automation.UIBlockDefinition#Skyline_DataMiner_Automation_UIBlockDefinition_Extra) property, enter the information to find the parameter.
 
@@ -316,7 +318,7 @@ UIBlockDefinition blockItem = new UIBlockDefinition
   DisplayFilter = true,
   Extra = $"{dmaID}/{elementID}:{parameterID}"
 };
-MyDialogBox.AppendBlock(blockItem);
+uiBuilder.AppendBlock(blockItem);
 ```
 
 ## PasswordBox
@@ -334,7 +336,7 @@ UIBlockDefinition blockItem = new UIBlockDefinition
   Row = 1,
   Column = 1
 };
-MyDialogBox.AppendBlock(blockItem);
+uiBuilder.AppendBlock(blockItem);
 ```
 
 Optionally, you can set the *HasPeekIcon* property to display an icon that, when clicked, will allow you to display the value inside the password box. See [HasPeekIcon](xref:Skyline.DataMiner.Automation.UIBlockDefinition#Skyline_DataMiner_Automation_UIBlockDefinition_HasPeekIcon).
@@ -368,7 +370,7 @@ foreach (string item in radioButtonListItems)
 blockItem.AddRadioButtonListOption("4", "Option4"); //(raw value, display value)
 blockItem.InitialValue = "4";
 
-MyDialogBox.AppendBlock(blockItem);
+uiBuilder.AppendBlock(blockItem);
 ```
 
 > [!NOTE]
@@ -376,7 +378,7 @@ MyDialogBox.AppendBlock(blockItem);
 > - To read out which option is selected, use [GetChecked](xref:Skyline.DataMiner.Automation.UIResults#Skyline_DataMiner_Automation_UIResults_GetChecked_System_String_) with the *DestVar* of the *RadioButtonList* and the raw value of the option.
 >
 >   ```csharp
->   var results = engine.ShowUI(MyDialogBox);
+>   var results = engine.ShowUI(uiBuilder);
 >   
 >   bool ticked = results.GetChecked("ChoiceOption","4");
 >   ```
@@ -385,7 +387,7 @@ MyDialogBox.AppendBlock(blockItem);
 
 ## StaticText
 
-Allows you to define a newly created dialog box item as a text item displaying a piece of fixed text.
+Allows you to define a text item displaying a piece of fixed text.
 
 Example:
 
@@ -397,12 +399,12 @@ UIBlockDefinition blockItem = new UIBlockDefinition
   Row = 1,
   Column = 1
 };
-MyDialogBox.AppendBlock(blockItem);
+uiBuilder.AppendBlock(blockItem);
 ```
 
 ## TextBox
 
-Allows you to define a newly created dialog box item as a box into which a user can enter a piece of text.
+Allows you to define a box into which a user can enter a piece of text.
 
 Example:
 
@@ -415,7 +417,7 @@ UIBlockDefinition blockItem = new UIBlockDefinition
   Row = 1,
   Column = 1
 };
-MyDialogBox.AppendBlock(blockItem);
+uiBuilder.AppendBlock(blockItem);
 ```
 
 > [!NOTE]
@@ -423,7 +425,7 @@ MyDialogBox.AppendBlock(blockItem);
 
 ## Time
 
-Allows you to define a newly created dialog box item as an item displaying a time value.
+Allows you to define an item displaying a time value.
 
 In the [ConfigOptions](xref:Skyline.DataMiner.Automation.UIBlockDefinition#Skyline_DataMiner_Automation_UIBlockDefinition_ConfigOptions), you can define the minimum and maximum time range.
 
@@ -443,7 +445,7 @@ UIBlockDefinition blockItem = new UIBlockDefinition
     Maximum = TimeSpan.FromDays(2)
   }
 };
-MyDialogBox.AppendBlock(blockItem);
+uiBuilder.AppendBlock(blockItem);
 ```
 
 > [!NOTE]
@@ -451,7 +453,7 @@ MyDialogBox.AppendBlock(blockItem);
 
 ## TreeView
 
-Allows you to define a newly created dialog box item as a tree view. Available from DataMiner 10.0.10 onwards.
+Allows you to define a tree view. Available from DataMiner 10.0.10 onwards.
 
 To define a tree view control, create a *UIBlockDefinition* of type *TreeView* and add each item of the tree view as a *TreeViewItem* to the *TreeViewItems* property. It is not required to fill in the *InitialValue* or *Value* of the *UIBlockDefinition*, as that value is determined based on the *TreeViewItem* collection.
 
@@ -462,6 +464,8 @@ To retrieve the results:
 - The *UIResult*, which can be returned using *engine.ShowUI()*, contains the *KeyValue* of the selected items.
 - The *GetString(UIBlockDefinition destvar)* method to retrieve a semicolon-separated string of the *KeyValues*.
 - The *GetChecked(UIBlockDefinition destvar, KeyValue value)* method can be used to check if a specific *KeyValue* was selected.
+
+Make sure to add "using Skyline.DataMiner.Net.AutomationUI.Objects;" at the top of your script, it is required for *TreeViewItem*.
 
 > [!NOTE]
 > Automation scripts with tree view controls are currently only supported in the DataMiner web apps. These are not yet supported in DataMiner Cube.
@@ -500,5 +504,5 @@ UIBlockDefinition blockItem = new UIBlockDefinition
       new TreeViewItem("Team C", "2") { ItemType = TreeViewItem.TreeViewItemType.CheckBox }
     }
 };
-MyDialogBox.AppendBlock(blockItem);
+uiBuilder.AppendBlock(blockItem);
 ```
