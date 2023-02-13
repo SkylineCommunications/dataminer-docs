@@ -294,7 +294,7 @@ numericBlock.RangeLow = 5;
 numericBlock.RangeStep = 5;
 numericBlock.Decimals = 6;
 numericBlock.Extra = "Discreet 1;Discreet 2;Discreet 3";
-uib.AppendBlock(numericBlock);
+uiBuilder.AppendBlock(numericBlock);
 ```
 
 > [!NOTE]
