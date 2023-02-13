@@ -22,13 +22,10 @@ The Grafana Data Source plugin allows you to visualize data from DataMiner in [G
 
 ## Installation
 
-1. Find your Grafana configuration file:
+1. Find your Grafana configuration file.
 
-   - **Windows**: Go to `C:\Program Files\GrafanaLabs\grafana\conf`. If there is no `custom.ini` file yet, copy `sample.ini` and rename it to `custom.ini`. This `custom.ini` file is your configuration file.
-
-   - **Linux**: Go to `/etc/grafana/grafana.ini` if you installed Grafana using the `deb` or `rpm` packages. The `grafana.ini` file is your configuration file.
-
-   - **macOS**: Go to `/usr/local/etc/grafana/grafana.ini`. If you installed your Grafana instance using Homebrew, `grafana.ini` is your configuration file. Otherwise, add a configuration file named `custom.ini` to the *conf* folder.
+   > [!TIP]
+   > For more information on where to find the Grafana configuration file, see [Configuration file location](https://grafana.com/docs/grafana/latest/setup-grafana/configure-grafana/#configuration-file-location).
 
 1. Open the configuration file and set `allow_loading_unsigned_plugins` to the ID of our plugin:
 
