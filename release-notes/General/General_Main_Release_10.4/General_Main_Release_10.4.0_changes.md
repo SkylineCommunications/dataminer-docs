@@ -97,6 +97,12 @@ During a DataMiner upgrade, Microsoft .NET 6.0 will now be installed if not inst
 
 The zoom range of a map can now be set by means of a slider.
 
+#### SLAnalytics - Automatic incident tracking: Enhanced performance when fetching relation information [ID_35414]
+
+<!-- MR 10.4.0 - FR 10.3.3 -->
+
+Because of a number of enhancements, overall performance has increased when fetching relation information for the automatic incident tracking feature.
+
 ### Fixes
 
 #### Cassandra Cluster: Every DMA would incorrectly try to delete any possible old Cassandra compaction and repair tasks found in the entire DMS [ID_31923]
