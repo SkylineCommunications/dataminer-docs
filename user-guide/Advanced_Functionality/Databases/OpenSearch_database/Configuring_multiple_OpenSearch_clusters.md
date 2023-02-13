@@ -61,7 +61,7 @@ To configure this setup, proceed as follows:
    </DatabaseConfiguration>
    ```
 
-1. Add this file in the *C:\\Skyline DataMiner\\Database* folder on each DataMiner Agent in your DMS. Currently, this file is not synchronized automatically.
+1. Add this file in the `C:\\Skyline DataMiner\\Database` folder on each DataMiner Agent in your DMS. Currently, this file is not synchronized automatically.
 
 1. After the file has been added, restart DataMiner. The *DBConfiguration.xml* file will now take precedence over the Elasticsearch configuration defined in the *DB.xml* file.
 

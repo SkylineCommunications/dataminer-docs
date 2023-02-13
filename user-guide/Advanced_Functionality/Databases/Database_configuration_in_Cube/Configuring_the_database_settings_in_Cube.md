@@ -9,7 +9,7 @@ The general database is the main database used by a DataMiner Agent to store its
 In older DataMiner systems, this database was also known as the "local database", as the MySQL or MSSQL database was typically hosted locally on the same machine as DataMiner.
 
 > [!NOTE]
-> If you want an external program to execute queries agaist a DataMiner database, you will need to use an offload database. For information on offload database settings, see [Offload database](xref:Offload_database).
+> If you want an external program to execute queries against a DataMiner database, you will need to use an offload database. For information on offload database settings, see [Offload database](xref:Offload_database).
 
 ## Cassandra database
 
@@ -41,9 +41,9 @@ For a Cassandra cluster database (i.e. one Cassandra cluster that is used as the
 
    - **DB server**: The IP addresses or hostnames of the Elasticsearch nodes, separated by commas. If TLS is enabled, the full URL must be specified, e.g. `https://elastic.mydomain.local`. If no port is provided, port 9200 will be used by default.
 
-   - **User**: The username with which the DMA has to log in (if applicable).
+   - **User**: The username with which the DMA has to log on to Elasticsearch (if applicable).
 
-   - **Password**: The password with which the DMA has to log in (if applicable).
+   - **Password**: The password with which the DMA has to log on to Elasticsearch (if applicable).
 
    ![Cube Cassandra Cluster Configuration](~/user-guide/images/CassandraCluster_CubeConfig.png)
 
@@ -101,10 +101,10 @@ In case a separate Cassandra cluster is used per DMA, configure the settings as 
 
 > [!IMPORTANT]
 > An Amazon Keyspaces database requires a separate indexing database.
-> For information on how to configure an indexing database, see [ElasticSearch database](xref:Elasticsearch_database) or [OpenSearch database](xref:OpenSearch_database).
+> For information on how to configure an indexing database, see [Elasticsearch database](xref:Elasticsearch_database) or [OpenSearch database](xref:OpenSearch_database).
 
 > [!NOTE]
-> If you don't see the `Amazon Keyspaces` option, it means that your server is not compatible because it is not running DataMiner version 10.3.0/10.3.3 or higher.
+> If you do not see the `Amazon Keyspaces` option, it means that your server is not compatible because it is not running DataMiner version 10.3.0/10.3.3 or higher.
 
 To configure the connection to an [Amazon Keyspaces database](xref:Amazon_Keyspaces_Service), proceed as follows:
 
@@ -126,7 +126,7 @@ To configure the connection to an [Amazon Keyspaces database](xref:Amazon_Keyspa
 
 1. Restart the DMS.
 
-   The first restart after configuring Amazon Keyspaces can take up to 15 minutes extra on top of the normal start-up time as the keyspaces and tables will be created. In case of trouble, you can find the relevant logging in the *SLDBConnection.txt* file.
+   The first restart after configuring Amazon Keyspaces can take up to 15 minutes on top of the normal startup time as the keyspaces and tables will be created. In case of trouble, you can find the relevant logging in the *SLDBConnection.txt* file.
 
 ![Cube Database Configuration](~/user-guide/images/aks_cube_config.png)<br>*DataMiner 10.3.3 example configuration*
 
@@ -145,7 +145,7 @@ To configure the connection to an [Amazon Keyspaces database](xref:Amazon_Keyspa
 
    - **Database prefix**: The name all indices will be prefixed with. This will be identical for all DMAs in the same cluster.
 
-   - **DB Server**: The full URL of your Amazon OpenSearch Service endpoint, for example: `https://search-mydomain-123456798.eu-north-1.es.amazonaws.com/`
+   - **DB Server**: The full URL of your Amazon OpenSearch Service endpoint, e.g. `https://search-mydomain-123456798.eu-north-1.es.amazonaws.com/`
 
    - **User**: The username of the master user of your domain.
 
@@ -153,18 +153,20 @@ To configure the connection to an [Amazon Keyspaces database](xref:Amazon_Keyspa
 
    ![OpenSearch Cube Config](~/user-guide/images/Amazon_OpenSearch_CubeConfig.png)
 
-1. (Optional) Verify that the DMS is using the database.
+1. Optionally, you can verify that the DMS is using the database.
 
-   Open the `OpenSearch Dashboards URL` to be redirected to your dashboard (equivalent of Kibana for Elasticsearch).
+   1. Open the `OpenSearch Dashboards URL` to be redirected to your dashboard (equivalent of Kibana for Elasticsearch).
 
-   If, in the hamburger menu, you go to *Management* > *Dev Tools*, you can execute the `GET _cat/indices` query to check whether the DMS has created the necessary indices.
+   1. Select the hamburger button and go to *Management* > *Dev Tools*.
 
-   ![DevTools](~/user-guide/images/Amazon_OpenSearch_DevTools.png)
+      ![DevTools](~/user-guide/images/Amazon_OpenSearch_DevTools.png)
 
-   ![CatIndices](~/user-guide/images/Amazon_OpenSearch_CatIndices.png)
+   1. Execute the `GET _cat/indices` query to check whether the DMS has created the necessary indices.
+
+      ![CatIndices](~/user-guide/images/Amazon_OpenSearch_CatIndices.png)
 
    > [!NOTE]
-   > In the example screenshots, the cluster health is yellow because only one node is used. Single-node clusters are always displayed in yellow.
+   > In the example screenshots, the cluster health is set to yellow because only one node is used. Single-node clusters are always displayed in yellow.
 
 ## Legacy MySQL or SQL database
 

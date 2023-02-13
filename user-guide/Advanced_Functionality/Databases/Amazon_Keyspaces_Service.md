@@ -4,7 +4,7 @@ uid: Amazon_Keyspaces_Service
 
 # Amazon Keyspaces Service
 
-From DataMiner 10.3.0/10.3.3 onwards, it is possible to use the Amazon Keyspaces Service on AWS as an alternative for a Cassandra Cluster setup. See also [Supported system data storage architectures](xref:Supported_system_data_storage_architectures).
+From DataMiner 10.3.0/10.3.3 onwards, it is possible to use the Amazon Keyspaces Service on AWS as an alternative for a Cassandra Cluster setup. See also: [Supported system data storage architectures](xref:Supported_system_data_storage_architectures).
 
 > [!NOTE]
 >
@@ -21,9 +21,9 @@ For Amazon Keyspaces, the Starfield certificate must be present on the local Win
 
 1. Download the [sf-class2-root.crt certificate file](https://certs.secureserver.net/repository/sf-class2-root.crt).
 
-1. On the machine on which you want to import the certificate, press WINDOWS + R and enter the `mmc` command.
+1. To import the certificate to your machine, press WINDOWS + R and enter the `mmc` command.
 
-   This will open a Console window. You may need to confirm that you want to allow the app to make changes to the device before the window is opened.
+    If necessary, confirm that you want to allow the app to make changes to the device. A Console window will be opened.
 
 1. In the Console window, go to *File* > *Add/Remove Snap-in*.
 
@@ -43,7 +43,7 @@ For Amazon Keyspaces, the Starfield certificate must be present on the local Win
 
 1. Keep selecting *Next* or *Finish* until the certificate is successfully imported.
 
-   You should now see the certificate listed as indicated in the example screenshot below.
+   You should now see the certificate listed as shown in the example screenshot below.
 
    ![Add Certificate](~/user-guide/images/aks_add_certificate.png)
 
@@ -54,4 +54,4 @@ To configure the connection to an Amazon Keyspaces database, configure the setti
 > [!IMPORTANT]
 > An Amazon Keyspaces database requires a separate indexing database.
 >
-> For information on how to configure an indexing database, see [ElasticSearch database](xref:Elasticsearch_database) or [OpenSearch database](xref:OpenSearch_database).
+> For information on how to configure an indexing database, see [Elasticsearch database](xref:Elasticsearch_database) or [OpenSearch database](xref:OpenSearch_database).

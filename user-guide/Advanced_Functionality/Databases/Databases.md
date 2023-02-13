@@ -14,11 +14,11 @@ This section consists of the following topics:
 
 - [Elasticsearch database](xref:Elasticsearch_database)
 
-- [Amazon Keyspaces Service](xref:Amazon_Keyspaces_Service)
-
 - [OpenSearch database](xref:OpenSearch_database)
 
 - [Amazon OpenSearch Service](xref:Amazon_OpenSearch_Service)
+
+- [Amazon Keyspaces Service](xref:Amazon_Keyspaces_Service)
 
 - [MySQL database](xref:MySQL_database)
 
