@@ -40,7 +40,7 @@ The grouping of alarms into incidents is updated in real time whenever appropria
 
 > [!NOTE]
 >
-> - Using automatic incident tracking with history sets is supported; however, keep in mind that this may trigger the creation and immediate clearing of a large number of alarm groups.
+> - Using automatic incident tracking with history sets is supported; however, keep in mind that this may trigger the creation and immediate clearing of a large number of alarm groups. From DataMiner 10.2.0 [CU12]/10.3.3 onwards, it is no longer possible to enable automatic incident tracking for history sets.
 > - When an element is stopped or paused, the alarms associated with that element will not be taken into account when grouping alarms. Also, alarms associated with elements that are stopped or paused will be removed from any existing alarm group.
 
 ## Automatic incident tracking configuration in System Center
@@ -62,6 +62,9 @@ The following settings are available in System Center:
 ## Activating automatic incident tracking
 
 When this feature has been enabled in System Center as detailed above, it still needs to be activated in the Alarm Console. To do so, in the Alarm Console hamburger menu, select *Automatic incident tracking*.
+
+> [!NOTE]
+> From DataMiner 10.2.0 [CU12]/10.3.3 onwards, it is not possible to activate the *Automatic incident tracking* option for a history tab in the Alarm Console.
 
 ## Configuration of incident tracking based on properties
 
