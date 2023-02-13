@@ -27,7 +27,7 @@ For a Cassandra cluster database (i.e. one Cassandra cluster that is used as the
 
    - **Keyspace prefix** or **Name**: The prefix that the DataMiner System will use to create the keyspaces.
 
-   - **DB server**: The IP addresses of the nodes, separated by commas.
+   - **DB server**: The IP addresses or hostnames of the nodes, separated by commas. From DataMiner 10.3.0/10.3.3 onwards, you can specify an IP address with a custom port, e.g `10.5.100.1:5555`. If no port is provided, port 9042 will be used by default.
 
    - **User**: Username with which the DMA has to log on to Cassandra.
 
@@ -67,7 +67,7 @@ In case a separate Cassandra cluster is used per DMA, configure the settings as 
 
    - **Name**: The name of the database.
 
-   - **DB Server**: The name or IP address of the server that hosts the database.
+   - **DB Server**: The name or IP address of the server that hosts the database. From DataMiner 10.3.0/10.3.3 onwards, you can specify an IP address with a custom port, e.g `10.5.100.1:5555`. If no port is provided, port 9042 will be used by default.
 
    - **Connection string**: Can be filled in instead of the other fields, in which case this string will be used to connect to the database.
 
