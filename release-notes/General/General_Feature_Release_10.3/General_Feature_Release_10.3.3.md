@@ -195,6 +195,12 @@ Example:
 
 - New format: `Received ACK from SNMP Manager SNMP - LFR for alarm 239/4270232`
 
+#### SLAnalytics - Automatic incident tracking: Enhanced performance when fetching relation information [ID_35414]
+
+<!-- MR 10.4.0 - FR 10.3.3 -->
+
+Because of a number of enhancements, overall performance has increased when fetching relation information for the automatic incident tracking feature.
+
 #### Service & Resource Management: Enhanced performance when changing active function files [ID_35424]
 
 <!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
