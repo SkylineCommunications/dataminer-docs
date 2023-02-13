@@ -6,6 +6,8 @@ uid: About_DMS_Maps
 
 DataMiner Maps is a DataMiner add-on module that allows you to visualize real-time data from the DataMiner System on top of geographical maps provided by online map services. Up to DataMiner 9.5.7, the module allows integration with Google Maps only. From DataMiner 9.5.8 onwards, it is also possible to use MapQuest and OpenStreetMap.
 
+From DataMiner 10.3.3/10.4.0 onwards, right-clicking a map will open a context menu where you have the option to copy the latitude, the longitude, or both.
+
 > [!NOTE]
 >
 > - The DataMiner Maps module requires a special license.
