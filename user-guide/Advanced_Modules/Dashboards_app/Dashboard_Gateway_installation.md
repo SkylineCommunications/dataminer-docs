@@ -52,7 +52,7 @@ There are two main reasons to consider a Dashboard Gateway setup:
 - The DataMiner user account used by the Dashboard Gateway web server should not have multifactor authentication enabled.
 
 > [!IMPORTANT]
-> To be able to use DataMiner Maps and video thumbnails embedded using a [Web component](xref:DashboardWeb), a [reverse proxy](#reverse-proxy) must be configured. This is also needed in case any modules or apps other than the Dashboards app, Low-Code Apps, Monitoring app, Jobs app, and Ticketing app are embedded.
+> To be able to use [DataMiner Maps](xref:DashboardGenericMap) and [video thumbnails embedded using a Web component](xref:DashboardWeb), a [reverse proxy](#reverse-proxy) must be configured. This is also needed in case any modules or apps other than the Dashboards app, Low-Code Apps, Monitoring app, Jobs app, and Ticketing app are embedded.
 
 ## Dashboard Gateway configuration
 
@@ -75,14 +75,14 @@ There are two main reasons to consider a Dashboard Gateway setup:
 
 ## Reverse proxy
 
-Opening a dashboard or low-code app via the Gateway server will cause [Web components](xref:DashboardWeb) displaying a DataMiner Map or video thumbnail to fail to load.
+Opening a dashboard or low-code app via the Gateway server will cause embedded [DataMiner Maps](xref:DashboardGenericMap) or [video thumbnails](xref:DashboardWeb) to fail to load.
 
 A reverse proxy should be used to give access to these web pages on the DMA via the Gateway server. The reverse proxy will forward any web requests for these web pages to the DMA.
 
 > [!NOTE]
 >
 > - When embedding the URLs in dashboards, make use of relative URLs such as `/maps/maps.aspx?config=yourmapconfig`. This way, the content will both be shown on a dashboard accessed via the Gateway server and a dashboard accessed locally via the DMA.
-> - No reverse proxy is needed for DataMiner Maps that are displayed using a [Generic map component](xref:DashboardGenericMap).
+> - No reverse proxy is needed for DataMiner Maps that are displayed using the new Maps component available with the [soft-launch option](xref:SoftLaunchOptions) *ReportsAndDashboardsGQIMaps*.
 
 ### Reverse proxy requirements
 

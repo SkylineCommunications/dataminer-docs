@@ -264,6 +264,12 @@ Enables the export to PDF button within the Dashboards app itself. Creating PDFs
 - **Minimum version**: 9.6.4
 - **Release version**: 10.2.12/10.3.0
 
+### ReportsAndDashboardsGQIMaps
+
+Enables a new Maps component in the Dashboards app and the Low-Code Apps.
+
+- **Minimum version**: 10.3.2
+
 ### ReportsAndDashboardsGuides
 
 Enables the guides in the Dashboards app.
