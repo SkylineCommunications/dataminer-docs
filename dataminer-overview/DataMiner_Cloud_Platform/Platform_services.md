@@ -1,5 +1,5 @@
 ---
-uid: Platform_services
+uid: Overview_Platform_services
 ---
 
 # Platform Services

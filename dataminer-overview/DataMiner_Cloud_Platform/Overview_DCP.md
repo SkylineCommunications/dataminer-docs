@@ -18,15 +18,14 @@ So, what exactly does “dataminer.services” refer to?
 
 It is a **collection of functions** that are available when your DataMiner System is connected to the cloud, grouped in **three categories**, based on a **shared value**:
 
-- The [**DevOps**](xref:DevOps) category focuses on empowering users to create and run solutions.
+- The [**DevOps**](xref:Overview_DevOps) category focuses on empowering users to create and run solutions.
 
-- The [**Platform Services**](xref:Platform_services) category prioritizes convenience.
+- The [**Platform Services**](xref:Overview_Platform_services) category prioritizes convenience.
 
-- The [**Collaboration**](xref:Collaboration) category emphasizes synergy.
+- The [**Collaboration**](xref:Overview_Collaboration) category emphasizes synergy.
 
 > [!TIP]
 > For more information on how to access dataminer.services, see [How to access DataMiner Services](https://skyline.be/dataminer/cloud-services).
 
 > [!TIP]
 > Visit [dataminer.services](https://dataminer.services/) to see the potential benefits these functions can offer.
-

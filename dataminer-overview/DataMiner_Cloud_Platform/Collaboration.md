@@ -1,5 +1,5 @@
 ---
-uid: Collaboration
+uid: Overview_Collaboration
 ---
 
 # Collaboration
