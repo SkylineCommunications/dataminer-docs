@@ -79,23 +79,26 @@ When the WebSocket server closes the connection for some reason, the element goe
 
 ## Timeout
 
-When the WebSocket connection is terminated, the element will enter into timeout according to the timeout time configured in the element wizard. 
-Find below possible reasons for WebSocket connection closure:
+When the WebSocket connection is terminated, the element will enter into timeout according to the timeout time configured in the element editor.
 
-* Normal Closure: The WebSocket connection is closed gracefully and as expected by both the client and server.
+These are possible reasons why the connection might be terminated:
 
-* Abnormal Closure: The WebSocket connection is closed unexpectedly, due to an error or exception. This can be caused by issues such as network connectivity problems, server crashes, or protocol violations.
+- Normal closure: The WebSocket connection is closed gracefully and as expected by both the client and server.
 
-* Endpoint Shutdown: The endpoint (client or server) that initiated the WebSocket connection has shut down, which may be due to a process termination or system reboot.
+- Abnormal closure: The WebSocket connection is closed unexpectedly, because of an error or exception. This can be caused by issues such as network connectivity problems, server crashes, or protocol violations.
 
-* Ping Timeout: The WebSocket connection has timed out due to a lack of activity. This can occur if the client or server does not receive a ping or pong message within a specified time frame.
+- Endpoint shutdown: The endpoint (client or server) that initiated the WebSocket connection has shut down, which may be due to a process termination or system reboot.
 
-* Policy Violation: The WebSocket connection is closed by the server due to a violation of security policies, such as a cross-site scripting attack or unauthorized access attempt.
+- Ping timeout: The WebSocket connection has timed out because of a lack of activity. This can occur if the client or server does not receive a ping or pong message within a specified time frame.
 
-* Network Error: The WebSocket connection is closed due to a network error, such as a dropped packet or a network partition.
-Note that this behavior might vary depending on the other connections of the Connector. 
+- Policy violation: The WebSocket connection is closed by the server because of a violation of security policies, such as a cross-site scripting attack or unauthorized access attempt.
 
-Note that the timeout behavior of the element might vary according to other connections configured at Connector level.
+- Network error: The WebSocket connection is closed because of a network error, such as a dropped packet or a network partition.
+
+> [!NOTE]
+>
+> - This behavior may vary depending on the other connections of the protocol.
+> - The timeout behavior of the element may vary depending on other connections configured on protocol level.
 
 ## Binary vs. Text Data Frames
 
