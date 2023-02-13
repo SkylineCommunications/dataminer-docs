@@ -34,7 +34,7 @@ The *Get trend data pattern events* and *Get behavioral change events* data sour
 
 <!-- MR 10.4.0 - FR 10.3.3 -->
 
-The element name of a parameter has been added to the breadcrumbs at the top of the trend card of that parameter. Clicking this element name allows you to quickly navigate to the element card.
+As of now, the header of a trend card shows a breadcrumb trail with the element name of a parameter as a clickable item. Clicking this element name allows you to quickly navigate back to the element card.
 
 #### GQI: 'State' column added to 'Get views' data source [ID_35333]
 
