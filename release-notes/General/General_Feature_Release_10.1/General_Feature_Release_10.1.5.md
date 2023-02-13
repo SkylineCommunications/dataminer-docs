@@ -367,7 +367,7 @@ If loglevel 6 is enabled, the caches will log any added, updated or removed item
 Overall performance has increased by implementing ISerializable on the ReservationInstance class using protocol buffer serialization.
 
 > [!WARNING]
-> Breaking changes:
+> BREAKING CHANGES:
 >
 > - The Children and Parent property of a ReservationInstance will no longer be serialized between client and server. When the ResourceManagerHelper is used, backwards compatibility is implemented. However, if you use the messages yourself and receive ResourceManagerEventMessages via subscriptions (which is NOT recommended), you will need to call the GetStitched method on the ReservationInstance class. Saving ReservationInstances with a parent or child instance using messages may also cause issues.
 > - When the SetReservationInstances method is called on the ResourceManagerHelper, a random ID will now be assigned before the instances are saved to the server. This could be an issue if scripts expect the ID to be empty and try to reuse the object.

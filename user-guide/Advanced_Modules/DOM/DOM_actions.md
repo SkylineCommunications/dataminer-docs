@@ -6,13 +6,13 @@ uid: DOM_actions
 
 From DataMiner 10.1.11/10.2.0 onwards, it is possible to define actions on a [DomBehaviorDefinition](xref:DomBehaviorDefinition) that can be triggered via the `DomHelper`. These actions can only be executed when a condition is met.
 
-You can also define buttons to be shown in the UI that will execute one or more of these actions when clicked. A button definition also has a condition to determine when the button is shown. This way you can hide buttons when they are not applicable.
+You can also define buttons to be shown in the UI that will execute one of these actions when clicked. A button definition also has a condition to determine when the button is shown. This way you can hide buttons when they are not applicable.
 
 An action is always executed in a specific context, i.e. for a context object. Currently only DOM instances are supported.
 
 ## Defining an action
 
-You can define an action by adding an `IDomActionDefinition` to the `ActionDefinitions` list of a `DomBehaviorDefinition`. Each action definition has an ID (of type string) and a condition (of type `IDomCondition`). Note that the ID must be unique for this `DomBehaviorDefinition` and it can only contain lower-case characters. There is currently only one action type.
+You can define an action by adding an `IDomActionDefinition` to the `ActionDefinitions` list of a `DomBehaviorDefinition`. Each action definition has an ID (of type string) and a condition (of type `IDomCondition`). Note that the ID can only contain lower-case characters and must be unique across this `DomBehaviorDefinition` and its parent or child definitions. There is currently only one action type.
 
 ### ExecuteScriptDomActionDefinition
 
@@ -21,11 +21,11 @@ This action can be used to execute a specified script. This has the following pr
 | Name | Type | Description |
 |--|--|--|
 | Id | string | The ID of the action. |
-| Condition | IDomCondition | The condition that should be met before the actions is allowed to be executed. |
+| Condition | IDomCondition | The condition that should be met before the action is allowed to be executed. |
 | Script | string | The name of the script that can be executed. |
 | Async | bool | Determines whether the script will be run synchronously or asynchronously. When this is set to true, no errors or info data from the script will be returned. |
 | ScriptOptions | List\<string> | Option strings that are passed to the SLAutomation process during execution. |
-| Interactive | bool | Determines whether the script should be executed as an interactive script. See [Interactive script](#interactive-script). |
+| IsInteractive | bool | Determines whether the script should be executed as an interactive script. See [Interactive script](#interactive-script). |
 
 > [!NOTE]
 >
@@ -115,6 +115,7 @@ Flow:
 >
 > - Scripts marked as interactive will always be executed asynchronously. The value of the *Async* property on the `ExecuteScriptDomActionDefinition` will be ignored.
 > - Since the script is executed asynchronously and the execution call therefore returns before the script is actually running, the `TraceData` will not contain the script output or errors that occur during the script.
+> - Executing an IAS by using the DOM actions is supported in the Low-Code Apps from DataMiner 10.3.3/10.4.0 onwards. <!-- RN 35226 -->
 
 ## Executing an action
 
@@ -163,7 +164,7 @@ An `ActionDefinition` can only be executed when a pre-defined condition is met. 
 
 ## Defining buttons
 
-The `DomBehaviorDefinition` also contains a list of `IDomButtonDefinitions`. These can be used to have one or more buttons shown in the UI. These buttons can be linked to one or more actions that will be executed when they are clicked.
+The `DomBehaviorDefinition` also contains a list of `IDomButtonDefinitions`. These can be used to have one or more buttons shown in the UI. Each button can be linked to one action that will be executed when they are clicked.
 
 At present, you can only define buttons to be shown for a `DomInstance` by using the `DomInstanceButtonDefinition`.
 
@@ -176,7 +177,7 @@ The `DomInstanceButtonDefinition` has the following properties:
 | Id | string | The ID of the button. This must be unique to this `DomBehaviorDefinition` and must be lower case. |
 | Layout | DomButtonDefinitionLayout | Contains extra properties to define how the button will be displayed (see properties table below). |
 | VisibilityCondition | IDomInstanceCondition | Condition that defines when the button will be shown. |
-| ActionDefinitionIds | List\<string> | Contains one or more IDs of actions that should be executed. |
+| ActionDefinitionIds | List\<string> | Contains the ID of the action that should be executed. Can contain multiple, but currently, only one is allowed. |
 
 The `DomButtonDefinitionLayout` class has the following properties:
 

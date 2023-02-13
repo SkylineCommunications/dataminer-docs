@@ -106,4 +106,3 @@ for (int i = 0; i < response.Length; i++)
 string data = System.Text.Encoding.UTF8.GetString(response);
 processData(data);
 ```
-

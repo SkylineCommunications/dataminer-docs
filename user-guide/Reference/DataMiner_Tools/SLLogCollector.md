@@ -45,6 +45,9 @@ To use the SLLogCollector tool:
 
 1. To view information on the actions of the tool, expand the *Console* section at the bottom of the window. For more detailed information, click the *Show detailed log* button.
 
+> [!NOTE]
+> From DataMiner 10.3.3/10.4.0 onwards, each time the *SLLogCollector* tool is run, it will order the [*Standalone BPA Executor* tool](xref:Standalone_BPA_Executor) to execute all BPA tests available in the system. The files containing the test results will have names using the `<BPA Name>_<Date(yyyy-MM-dd_HH)>` format and can be found in the `C:\Skyline DataMiner\Logging\WatchDog\Reports\Pending Reports` folder. <!-- RN 35436 -->
+
 ## Running the tool via command line
 
 From DataMiner 10.1.11/10.2.0 onwards, you can also run the tool via command line, using the options listed below.
@@ -64,9 +67,15 @@ SL_LogCollector.exe -c -d=25784,2319
 SL_LogCollector.exe -c -h
 ```
 
+> [!NOTE]
+> From DataMiner 10.3.3/10.4.0 onwards, each time the *SLLogCollector* tool is run, it will order the [*Standalone BPA Executor* tool](xref:Standalone_BPA_Executor) to execute all BPA tests available in the system. The files containing the test results will have names using the `<BPA Name>_<Date(yyyy-MM-dd_HH)>` format and can be found in the `C:\Skyline DataMiner\Logging\WatchDog\Reports\Pending Reports` folder. <!-- RN 35436 -->
+
 ## Using a custom CollectorConfig XML file
 
 From DataMiner 10.1.0 \[CU11]/10.2.2 onwards, you can use a custom CollectorConfig XML file to indicate which resources need to be collected. This file should be placed in the folder `C:\Skyline DataMiner\Tools\SLLogCollector\LogConfigs`. By default, this folder will contain a *Default.xml* file, listing a default list of resources to be collected.
+
+> [!NOTE]
+> From DataMiner 10.2.0 [CU11]/10.3.2 onwards, instead of in the default folder `C:\Skyline DataMiner\Tools\SLLogCollector\LogConfigs`, you can place the custom CollectorConfig XML file in a `LogConfig` folder within the same folder as `SL_LogCollector.exe`. <!-- RN 34739 -->
 
 To customize the collected resources, add your own custom XML file to this folder, specifying the "collectors" that should be used.
 

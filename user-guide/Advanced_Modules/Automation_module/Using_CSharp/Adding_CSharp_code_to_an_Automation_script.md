@@ -70,9 +70,9 @@ To add C# code to a script:
 
 ## Engine object
 
-You can interact with the DMS Automation Engine by interacting with an instance of the Engine class.
+You can interact with the Automation Engine by interacting with an instance of the Engine class.
 
-When you type “engine.” in the code editor, you will be presented with a drop-down list of all statements available in the DMS Automation Engine.
+When you type “engine.” in the code editor, you will be presented with a drop-down list of all statements available in the Automation Engine.
 
 By default, C# code used in an Automation script throws an exception when it encounters an undefined or an empty parameter. However, if you add the following line in an Automation script action of type *C# code*, null will be returned instead.
 
@@ -245,7 +245,7 @@ Restrictions:
 
 When you right-click in the code editor, a shortcut menu will appear. From the *Sample Snippets* submenu, you can select a number of C# sample snippets.
 
-These snippets will prove helpful when learning how to use C# code in DMS Automation scripts, and will also provide a way to quickly add frequently used code.
+These snippets will prove helpful when learning how to use C# code in DataMiner Automation scripts, and will also provide a way to quickly add frequently used code.
 
 ### Syntax check
 

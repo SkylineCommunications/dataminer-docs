@@ -38,6 +38,8 @@
         ]
       }
     ],
+	"xrefService": [ "https://xref.docs.microsoft.com/query?uid={uid}" ],
+	"xref" : [ "xref/newtonsoft.yml" ],
     "resource": [
       {
         "files": [
@@ -55,8 +57,7 @@
     "dest": "_site",
     "globalMetadata": {
       "_appTitle": "DataMiner Docs",
-      "_appFooter": "© Skyline Communications 2022",
-      "__global.improveThisDoc": "Propose changes",
+      "_appFooter": "© Skyline Communications 2023",
       "_enableSearch": false,
       "_enableNewTab": true
     },
@@ -64,7 +65,7 @@
     "fileMetadataFiles": [],
     "template": [
       "default",
-      "plugins/memberpage.2.59.4/content",
+      "memberpage",
       "templates/skyfx"
     ],
     "markdownEngineName": "markdig",

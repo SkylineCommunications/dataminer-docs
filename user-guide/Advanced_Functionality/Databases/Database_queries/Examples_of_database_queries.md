@@ -4,9 +4,9 @@ uid: Examples_of_database_queries
 
 # Examples of database queries
 
-## Microsoft SQL Server queries
+## MSSQL database queries
 
-If the offload database is a Microsoft SQL Server database, then every DMA instructed to offload (some of) its data will copy that data to its local, publicly shared *C:\\Skyline DataMiner\\System Cache\\Offload* folder.
+If the offload database is an MSSQL database, then every DMA instructed to offload (some of) its data will copy that data to its local, publicly shared *C:\\Skyline DataMiner\\System Cache\\Offload* folder.
 
 On the offload database, a query like the following one will then be run to insert that “offloaded” data into the offload database:
 
@@ -15,7 +15,7 @@ BULK INSERT ALARM FROM '\\DataMiner-1\Offload\alarm\file.dat' WITH (FIELDTERMINA
 ```
 
 > [!NOTE]
-> On Microsoft SQL Server, only users who are a member of the sysadmin and bulkadmin fixed server role can execute BULK INSERT statements.
+> On MSSQL, only users who are a member of the sysadmin and bulkadmin fixed server role can execute BULK INSERT statements.
 
 ## Oracle database queries
 

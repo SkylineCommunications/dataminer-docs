@@ -40,6 +40,18 @@ Available from DataMiner 10.2.0/10.1.9 onwards. Retrieves the alarms in the Data
 
 Available from DataMiner 10.3.0/10.2.4 onwards. Retrieves external data based on an Automation script that is compiled as a library. The data can for example be retrieved from a CSV file, a MySQL database, or an API endpoint. If no such Automation script has been configured, this option is not available.
 
+### Get trend data patterns
+
+Available from DataMiner 10.3.3/10.4.0 onwards. Retrieves all pattern matching tags created in the DataMiner System. <!-- RN 35027 -->
+
+### Get trend data pattern events
+
+Available from DataMiner 10.3.3/10.4.0 onwards. Retrieves all pattern occurrences detected in the DataMiner System. The data includes time range metadata on each row, with the start and end time of the event in question. When a table row is selected, the time range will be available as a feed in the *feeds* section of the data pane.<!-- RN 35027 -->
+
+### Get behavioral change events
+
+Available from DataMiner 10.3.3/10.4.0 onwards. Retrieves all behavioral anomalies detected in the DataMiner System. The data includes time range metadata on each row, with the start and end time of the event in question. When a table row is selected, the time range will be available as a feed in the *feeds* section of the data pane. <!-- RN 35027 -->
+
 #### Configuring an external data source in a query
 
 This is the most basic procedure to use an external data source in a query:
@@ -359,7 +371,9 @@ Allows you to aggregate data from the data source. After you have selected this 
 You can then further filter the result by applying another operator. An additional *Group by* operator is available for this, which will display the result of the aggregation operation for each different item in the column selected in the *Group by column* box.
 
 > [!NOTE]
-> From DataMiner 10.1.0/10.1.3 onwards, exception values are not taken into account, except for the Count and Distinct Count methods.
+>
+> - From DataMiner 10.3.3/10.4.0 onwards, after an aggregation operation, you can apply multiple *GroupBy* operations.
+> - From DataMiner 10.1.0/10.1.3 onwards, exception values are not taken into account, except for the Count and Distinct Count methods. <!-- RN35355 -->
 
 ### Column manipulations
 

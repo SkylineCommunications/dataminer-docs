@@ -4,38 +4,38 @@ uid: Part4AdvancedModules
 
 # Advanced DataMiner modules
 
-- [DMS Automation](xref:automation)
+- [Automation](xref:automation)
 
-- [DMS Business Intelligence](xref:sla)
+- [Business Intelligence](xref:sla)
 
-- [DMS Correlation](xref:correlation)
-
-- [DMS Experience and Performance Management](xref:EPM)
+- [Correlation](xref:correlation)
 
 - [Dashboards app](xref:newR_D)
 
 - [DMS Dashboards](xref:dashboards)
 
-- [DMS Inventory & Asset Management](xref:AssetManagement)
+- [DataMiner Object Models (DOM)](xref:DOM)
 
-- [DMS Job Manager](xref:jobs)
+- [Experience and Performance Management](xref:EPM)
 
-- [DMS Maps](xref:maps)
+- [Inventory & Asset Management](xref:AssetManagement)
 
-- [DMS Mobile Gateway](xref:MobileGateway)
+- [Job Manager](xref:jobs)
+
+- [Low-Code Apps](xref:Application_framework)
+
+- [Maps](xref:maps)
+
+- [Mobile Gateway](xref:MobileGateway)
 
 - [DMS Reporter](xref:reporter)
 
-- [DMS Router Control](xref:RouterControl)
+- [Router Control](xref:RouterControl)
 
-- [DMS Scheduler](xref:scheduler)
+- [Scheduler](xref:scheduler)
 
 - [Service and Resource Management](xref:SRM)
 
-- [DMS Spectrum Analysis](xref:SpectrumAnalysis)
+- [Spectrum Analysis](xref:SpectrumAnalysis)
 
-- [DMS Ticketing](xref:ticketing)
-
-- [DataMiner Low-Code Apps](xref:Application_framework)
-
-- [DataMiner Object Models (DOM)](xref:DOM)
+- [Ticketing](xref:ticketing)

@@ -2,7 +2,7 @@
 uid: Approved_modems_Mobile_Gateway
 ---
 
-# Approved modems for use with DMS Mobile Gateway
+# Approved modems for use with DataMiner Mobile Gateway
 
 - Falcom A2D (discontinued)
 - Falcom Tango55 (discontinued)

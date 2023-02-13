@@ -31,4 +31,8 @@ This section provides information on the following tools:
 - [VerifyClusterPorts.dmupgrade](xref:VerifyClusterPortsdmupgrade)
 
 > [!NOTE]
-> For more information on other DataMiner tools or third-party tools, see [DataMiner Development Tools](xref:TOOLS) and <https://community.dataminer.services/documentation/category/resources/tools/>.
+> For more information on other DataMiner tools or third-party tools, see:
+>
+> - [DataMiner Development Tools](xref:TOOLS)
+> - [DataMiner maintenance tools](xref:DMS_maintenance_tools)
+> - <https://community.dataminer.services/documentation/category/resources/tools/>
