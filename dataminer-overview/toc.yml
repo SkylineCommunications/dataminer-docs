@@ -27,6 +27,13 @@
           topicUid: Overview_Platform_Open_Platform
     - name: dataminer.services
       topicUid: Overview_DCP
+      items:
+        - name: DevOps
+          topicUID: Overview_DevOps
+        - name: Platform Services
+          topicUID: Overview_Platform_services
+        - name: Collaboration
+          topicUID: Overview_Collaboration
     - name: Agile partnership
       topicUid: Overview_Agile_Partnership_intro
       items:
