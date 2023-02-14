@@ -1,8 +1,8 @@
 ---
-uid: Support_services_agreement
+uid: Support_services_terms
 ---
 
-# Support services agreement
+# Support services terms
 
 ## Introduction
 
