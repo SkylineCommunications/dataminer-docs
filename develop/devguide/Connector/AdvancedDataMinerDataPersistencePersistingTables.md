@@ -55,7 +55,7 @@ You should only use this option in the following cases:
 - Trending is not enabled on the table.
 - Alarm monitoring is not enabled on the table.
 
-In general, make sure to only use it on table that are only displayed in the UI or used in a QAction, but are not used in any other way.
+In general, make sure to only use it on tables that are only displayed in the UI or used in a QAction, but are not used in any other way.
 
 > [!NOTE]
 > If alarm monitoring is needed even though the data is very volatile, check whether the number of rows added and deleted will remain low enough so that there are at most 7 changes per minute on the same element and at most 10 000 changes per day on the same element. If the number will be higher, this can have a severe impact on the read efficiency of the database, so the *volatile* option must be used. If the number will be low enough, you can remove the *volatile* option for the relevant alarm monitoring, but make sure that you do not add the *save* option to other columns.
