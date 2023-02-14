@@ -9,7 +9,7 @@ uid: Using_GitHub_for_CICD
 
 You can use GitHub to:
 
-- Share generic code or useful tools/libraries with the DataMiner community.
+- Share generic code/scripts or useful tools/libraries with the DataMiner community.
 - Collaborate on code with external users.
 
 > [!NOTE]
