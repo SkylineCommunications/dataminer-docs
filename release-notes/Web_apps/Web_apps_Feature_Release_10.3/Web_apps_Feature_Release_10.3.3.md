@@ -101,11 +101,23 @@ From now on, data retrieved from the collector that used to be displayed as a ta
 
 From now on, a chart component will display an error when the GQI query that retrieves data for that chart component throws an error, or when the chart component is not configured correctly.
 
+#### GQI: data sources 'Get elements' and 'Get services' will now also return alarm states [ID_35464]
+
+<!-- MR 10.4.0 - FR 10.3.3 -->
+
+The GQI data sources *Get elements* and *Get services* will now also return alarm states.
+
 #### Enhanced performance when opening a web app [ID_35549]
 
 <!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
 
 Because DataMiner web apps will now be passed to client machines as compressed files, overall performance has increased when opening a web app.
+
+#### GQI: 'State' column in data sources 'Get services' and 'Get views' renamed to 'Alarm state' [ID_35557]
+
+<!-- MR 10.4.0 - FR 10.3.3 -->
+
+In the GQI data sources *Get services* and *Get views*, the *State* column has now been renamed to *Alarm state*.
 
 ### Fixes
 

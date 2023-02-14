@@ -113,6 +113,18 @@ When exporting trend data to CSV, from now on, the *Show average*, *Show minimum
 
 From now on, when SLNet receives an error from the web API after sending a *GetConnection* call, it will log the request and the response in the *SLNet.txt* log file.
 
+#### GQI: data sources 'Get elements' and 'Get services' will now also return alarm states [ID_35464]
+
+<!-- MR 10.4.0 - FR 10.3.3 -->
+
+The GQI data sources *Get elements* and *Get services* will now also return alarm states.
+
+#### GQI: 'State' column in data sources 'Get services' and 'Get views' renamed to 'Alarm state' [ID_35557]
+
+<!-- MR 10.4.0 - FR 10.3.3 -->
+
+In the GQI data sources *Get services* and *Get views*, the *State* column has now been renamed to *Alarm state*.
+
 ### Fixes
 
 #### GQI: Problem when retrieving DCF interfaces [ID_34820]
