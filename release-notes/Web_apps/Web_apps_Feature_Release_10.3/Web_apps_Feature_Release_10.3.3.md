@@ -30,6 +30,12 @@ In the Generic Query Interface, the following new data sources are now available
 
 The *Get trend data pattern events* and *Get behavioral change events* data sources contain time range metadata on each row. Each time range holds the start and end time of the event in question. When a table row is selected, the time range will be exposed as a feed.
 
+#### Monitoring app: Element name added to breadcrumbs of trend card [ID_35270]
+
+<!-- MR 10.4.0 - FR 10.3.3 -->
+
+As of now, the header of a trend card shows a breadcrumb trail with the element name of a parameter as a clickable item. Clicking this element name allows you to quickly navigate back to the element card.
+
 #### GQI: 'State' column added to 'Get views' data source [ID_35333]
 
 <!-- MR 10.4.0 - FR 10.3.3 -->
