@@ -246,6 +246,8 @@ Because of a number of enhancements, overall memory usage of the SLAutomation pr
 
 #### SLAnalytics - Behavioral anomaly detection: No longer available for discrete parameters [ID_35465]
 
+<!-- MR 10.4.0 - FR 10.3.3 -->
+
 From now on, anomaly detection will no longer be available for discrete parameters.
 
 ### Fixes
@@ -383,3 +385,9 @@ RunClientProgram(String applicationPath, bool waitForCompletion)
 <!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
 
 When outages on an SLA with a week-based window were corrected, the *History Statistics Table* that started in the first 9 weeks of every year would incorrectly not get updated.
+
+#### SLAnalytics - Behavioral anomaly detection: Two identical behavioral anomaly alarms would incorrectly be created [ID_35511]
+
+<!-- MR 10.4.0 - FR 10.3.3 -->
+
+In some cases, two identical behavioral anomaly alarms would incorrectly be created.

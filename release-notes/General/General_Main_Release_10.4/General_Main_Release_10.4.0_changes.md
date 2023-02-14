@@ -105,6 +105,8 @@ Because of a number of enhancements, overall performance has increased when fetc
 
 #### SLAnalytics - Behavioral anomaly detection: No longer available for discrete parameters [ID_35465]
 
+<!-- MR 10.4.0 - FR 10.3.3 -->
+
 From now on, anomaly detection will no longer be available for discrete parameters.
 
 ### Fixes
@@ -130,3 +132,9 @@ In some cases, Resource Manager could throw a NullReferenceException when *Resou
 Using Okta as identity provider, it would incorrectly no longer be possible to read out signed assertions. Also, when the group claim setting is enabled in the *DataMiner.xml* file, the user will now be added to the correct groups.
 
 Up to now, in case of a claim mismatch, an exception would be thrown. From now on, an entry containing a clear message will be added to the *SLNet.txt* log file instead.
+
+#### SLAnalytics - Behavioral anomaly detection: Two identical behavioral anomaly alarms would incorrectly be created [ID_35511]
+
+<!-- MR 10.4.0 - FR 10.3.3 -->
+
+In some cases, two identical behavioral anomaly alarms would incorrectly be created.
