@@ -30,6 +30,21 @@ In the Generic Query Interface, the following new data sources are now available
 
 The *Get trend data pattern events* and *Get behavioral change events* data sources contain time range metadata on each row. Each time range holds the start and end time of the event in question. When a table row is selected, the time range will be exposed as a feed.
 
+#### Dashboards app & Low-Code Apps - GQI: 'Row by row' option [ID_35057] [ID_35565]
+
+<!-- MR 10.4.0 - FR 10.3.3 -->
+
+When configuring a Join operator, you can now select the *Row by row* option.
+
+- When you do not select the *Row by row* option, the join will execute both the left and the right queries once, and directly combine their results (default behavior).
+
+- When you select the *Row by row* option, the join will execute the left query first, and then execute the right query for each row  with a filter derived from the Join condition.
+
+> [!NOTE]
+>
+> - The *Row by row* option will only be visible and configurable when you opened the dashboard or app with `showAdvancedSettings=true` added to the URL.
+> - Currently, the *Row by row" option is only supported for inner and left joins. If you use it for an outer or right join, an exception will be thrown.
+
 #### Monitoring app: Element name added to breadcrumbs of trend card [ID_35270]
 
 <!-- MR 10.4.0 - FR 10.3.3 -->
@@ -186,6 +201,12 @@ When, in a draft version of a low-code app, you opened the version panel and cre
 <!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
 
 Time range feeds would trigger components more often than required, causing them to send an excessive number of requests.
+
+#### Web apps: Text boxes would incorrectly accept invalid values and no error message would appear [ID_35489]
+
+<!-- MR 10.4.0 - FR 10.3.3 -->
+
+When you entered an invalid value into a text box, in some cases, that text box would incorrectly accept the invalid value and no error message would appear.
 
 #### Low-code apps: Panels of which the 'Fit to view' option was selected would incorrectly switch to mobile mode [ID_35542]
 
