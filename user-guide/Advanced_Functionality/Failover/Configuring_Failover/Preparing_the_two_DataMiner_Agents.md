@@ -45,3 +45,12 @@ Name: ResetPlease.FailoverZone
 Addresses: 10.11.5.52
  10.11.4.52
 ```
+
+## HTTPS configuration on failover agents
+
+When connecting with HTTPS, please ensure that the virtual IP or shared hostname also have signed certificates, alongside with the addresses of your DMAs.
+Please see [Setting up HTTPS on a DMA](xref:Setting_up_HTTPS_on_a_DMA) for how to configure HTTPS.
+
+> [!IMPORTANT]
+> The setup of the certificates can be highly situational, especially when proxies,... are involved.
+> Therefore, please consult your IT services when unsure how to generate a TLS/SSL certificate and how to deploy them.
