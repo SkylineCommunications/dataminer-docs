@@ -54,6 +54,22 @@ var moduleSettings = new ModuleSettings("example")
 > [!NOTE]
 > TTL settings are checked every 30 minutes. When you configure a very short TTL (e.g. 15 minutes), keep in mind that the objects in question will only be removed during the next cleanup cycle.
 
+#### OpenSearch & Amazon OpenSearch Service [ID_34651]
+
+<!-- MR 10.3.0 - FR 10.3.3 -->
+
+It is now possible to install a dedicated OpenSearch indexing database cluster as an alternative for Elasticsearch. This indexing cluster also requires a Cassandra cluster.
+
+At present, all OpenSearch versions are supported:
+
+- 1.X
+- 2.X
+
+For more information on setup and configuration, see [OpenSearch database](xref:OpenSearch_database).
+
+> [!NOTE]
+> It is also possible to use Amazon OpenSearch Service on AWS as an alternative to an on-premises hosted Elasticsearch/OpenSearch cluster. For more information on setup and configuration, see [Amazon OpenSearch Service](xref:Amazon_OpenSearch_Service).
+
 ### DMS Security
 
 #### SLSSH: Enhanced HMAC, cypher and key exchange algorithm support [ID_32664] [ID_32786]
