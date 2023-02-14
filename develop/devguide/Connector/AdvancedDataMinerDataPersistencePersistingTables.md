@@ -38,7 +38,7 @@ For example, the following table parameter defines some columns to be saved. Col
 
 ## Volatile tables
 
-In case you do not want anything to be kept in the database, you can use the volatile option (*options* attribute of the *ArrayOptions* tag).
+In case you do not want anything to be kept in the database, you can use the [volatile](xref:Protocol.Params.Param.ArrayOptions-options#volatile) option.
 
 ```xml
 <ArrayOptions index="0" displayColumn="1" options=";volatile;">
