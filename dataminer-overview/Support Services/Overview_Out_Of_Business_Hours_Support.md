@@ -9,7 +9,7 @@ Last-minute and planned work may require interventions outside of business hours
 "Last-minute work" means **level 1 priority** issues with an **impact on the system**. The corrective work done for these issues focuses on minimizing their impact on the software and on the system.
 
 > [!NOTE]
-> Out-of-business-hours support is available for level 1 priority issues and planned intervention work. For more information, see [Support services agreement](xref:Support_services_agreement).
+> Out-of-business-hours support is available for level 1 priority issues and planned intervention work. For more information, see [Support services terms](xref:Support_services_terms).
 
 ## Out-of-business-hours subscription
 
