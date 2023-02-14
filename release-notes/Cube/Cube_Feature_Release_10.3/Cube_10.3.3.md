@@ -272,6 +272,20 @@ When, while configuring an alarm template, you opened the baseline editor and se
 
 When you had configured DataMiner Cube to connect using gRPC (by specifying `type=GRPCConnection` in the *ConnectionSettings.txt* file), newly created users would be assigned an invalid full name, description and password.
 
+#### Alarm Console: When you clicked a suggestion alarm, the change points and patterns would incorrectly not be loaded [ID_35497]
+
+<!-- MR 10.4.0 - FR 10.3.3 -->
+
+When you clicked a suggestion alarm, in some cases, the trend graph would be loaded but the change points and the patterns incorrectly would not.
+
+#### Trending: No check mark would appear in front of a related parameter after adding it to the trend graph [ID_35518]
+
+<!-- MR 10.4.0 - FR 10.3.3 -->
+
+In the top-right corner of a trend graph, a light bulb icon appears when DataMiner finds parameters that are related to the parameters shown in the trend graph. Clicking this light bulb icon allows you to add one or more of those related parameters to the trend graph you are viewing.
+
+However, in some cases, when you clicked one of those related parameters in order to add it to the trend graph, no check mark would appear in front of it.
+
 #### EPM cards: Collector pages would not be loaded [ID_35523]
 
 <!-- MR 10.3.0 - FR 10.3.3 -->

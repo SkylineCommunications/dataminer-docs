@@ -187,8 +187,8 @@ A number of issues regarding the Visual Overview component have been fixed.
 - In some cases, the dimensions of pop-up windows would be incorrect.
 - When a pop-up window was shown using a *VdxShape* property, in some cases, the default page would be shown instead of the page that was specified.
 
-#### Web apps: Text boxes would incorrectly accept invalid values and no error message would appear [ID_35489]
+#### Web apps: An invalid value entered into a text box would incorrectly be replaced by the last valid value that was entered [ID_35489]
 
 <!-- MR 10.4.0 - FR 10.3.3 -->
 
-When you entered an invalid value into a text box, in some cases, that text box would incorrectly accept the invalid value and no error message would appear.
+When you entered an invalid value into a text box, an error message would be displayed for a very short moment, and the invalid value would incorrectly be replaced by the last valid value that was entered.

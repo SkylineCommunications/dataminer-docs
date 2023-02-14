@@ -229,3 +229,17 @@ In some rare cases, conditional shape manipulation actions (e.g. Show, Hide, Rot
 <!-- MR 10.4.0 - FR 10.3.2 -->
 
 When, in a Visio drawing, shapes have been positioned dynamically based on properties, you can re-arrange those shapes manually by switching to *Arrange* mode and re-arranging the shapes using drag-and-drop. In some rare cases, it would no longer be possible to drag shapes to another location.
+
+#### Alarm Console: When you clicked a suggestion alarm, the change points and patterns would incorrectly not be loaded [ID_35497]
+
+<!-- MR 10.4.0 - FR 10.3.3 -->
+
+When you clicked a suggestion alarm, in some cases, the trend graph would be loaded but the change points and the patterns incorrectly would not.
+
+#### Trending: No check mark would appear in front of a related parameter after adding it to the trend graph [ID_35518]
+
+<!-- MR 10.4.0 - FR 10.3.3 -->
+
+In the top-right corner of a trend graph, a light bulb icon appears when DataMiner finds parameters that are related to the parameters shown in the trend graph. Clicking this light bulb icon allows you to add one or more of those related parameters to the trend graph you are viewing.
+
+However, in some cases, when you clicked one of those related parameters in order to add it to the trend graph, no check mark would appear in front of it.

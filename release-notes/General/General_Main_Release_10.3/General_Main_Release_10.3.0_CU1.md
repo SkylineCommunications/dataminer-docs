@@ -25,3 +25,9 @@ The number of *GetParameterMessages* sent by SLAnalytics in order to check wheth
 <!-- MR 10.2.0 [CU13]/10.3.0 [CU1]  - FR 10.3.3 -->
 
 When an EPM element was stopped, in some rare cases, an error could occur in SLElement.
+
+#### SLAnalytics : Problem after a DVE parent element had been deleted [ID_35521]
+
+<!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.3 -->
+
+In some cases, an error could occur in the SLAnalytics process after a DVE parent element had been deleted.

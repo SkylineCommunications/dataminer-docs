@@ -138,9 +138,3 @@ Up to now, in case of a claim mismatch, an exception would be thrown. From now o
 <!-- MR 10.4.0 - FR 10.3.3 -->
 
 In some cases, two identical behavioral anomaly alarms would incorrectly be created.
-
-#### SLAnalytics : Problem after a DVE parent element had been deleted [ID_35521]
-
-<!-- MR 10.4.0 - FR 10.3.3 -->
-
-In some cases, an error could occur in the SLAnalytics process after a DVE parent element had been deleted.

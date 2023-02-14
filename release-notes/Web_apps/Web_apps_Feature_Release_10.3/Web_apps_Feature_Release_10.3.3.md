@@ -202,11 +202,11 @@ When, in a draft version of a low-code app, you opened the version panel and cre
 
 Time range feeds would trigger components more often than required, causing them to send an excessive number of requests.
 
-#### Web apps: Text boxes would incorrectly accept invalid values and no error message would appear [ID_35489]
+#### Web apps: An invalid value entered into a text box would incorrectly be replaced by the last valid value that was entered [ID_35489]
 
 <!-- MR 10.4.0 - FR 10.3.3 -->
 
-When you entered an invalid value into a text box, in some cases, that text box would incorrectly accept the invalid value and no error message would appear.
+When you entered an invalid value into a text box, an error message would be displayed for a very short moment, and the invalid value would incorrectly be replaced by the last valid value that was entered.
 
 #### Low-code apps: Panels of which the 'Fit to view' option was selected would incorrectly switch to mobile mode [ID_35542]
 
