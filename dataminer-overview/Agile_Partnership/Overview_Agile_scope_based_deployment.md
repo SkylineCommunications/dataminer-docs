@@ -8,6 +8,8 @@ An agile partnership needs to detail the deployment methodology. The overview be
 
 ## Principles
 
+- Flexible scope
+
 - Fixed agreed time frame
 
 - Fixed agreed budget
