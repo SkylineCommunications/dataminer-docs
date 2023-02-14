@@ -48,3 +48,14 @@ A `State` column has been added to the *Get views* data source. This column show
 <!-- MR 10.4.0 - FR 10.3.3 -->
 
 After an aggregation operation, you can now apply multiple groupBy operations.
+
+#### Dashboards app - GQI: New 'Get parameter relations' data source [ID_35443]
+
+<!-- MR 10.4.0 - FR 10.3.3 -->
+
+In the Generic Query Interface, the *Get parameter relations* data source is now available.
+
+It can be used to retrieve the parameter relationships that are stored in a model managed by a DataMiner Extension Module named *ModelHost*.
+
+> [!NOTE]
+> This data source will only be available when *ModelHost* is running.
