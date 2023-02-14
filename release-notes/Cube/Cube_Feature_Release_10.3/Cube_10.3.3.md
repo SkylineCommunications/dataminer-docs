@@ -198,7 +198,7 @@ When a tree control contained many-to-many relationships, up to now, the alarm b
 
 #### Trending: Pattern matching tags could incorrectly be defined for discrete or string parameters [ID_35368]
 
-<!-- MR 10.4.0 - FR 10.3.3 -->
+<!-- MR 10.2.0 [CU13]/10.3.0 [CU1]  - FR 10.3.3 -->
 
 Pattern matching does not support discrete or string parameters. However, up to now, when viewing a trend graph that showed trend information for either a discrete or a string parameter, it would incorrectly be possible to define tags for pattern matching. From now on, this will no longer be possible.
 

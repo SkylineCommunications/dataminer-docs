@@ -1,16 +1,22 @@
 ---
-uid: General_Main_Release_10.2.0_CU13
+uid: Cube_Main_Release_10.3.0_CU1
 ---
 
-# General Main Release 10.2.0 CU13 – Preview
+# DataMiner Cube Main Release 10.3.0 CU1 – Preview
 
 > [!IMPORTANT]
 > We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
 
 > [!TIP]
-> For information on how to upgrade DataMiner, see [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent).
+> For release notes for this release that are not related to DataMiner Cube, see [General Main Release 10.3.0 CU1](xref:General_Main_Release_10.3.0_CU1).
 
 ### Enhancements
+
+#### SLAnalytics: Number of 'GetParameterMessages' requests has been optimized [ID_34936]
+
+<!-- MR 10.3.0 [CU1] - FR 10.3.1 -->
+
+The number of *GetParameterMessages* sent by SLAnalytics in order to check whether a trended table parameter is still active has been optimized.
 
 ### Fixes
 
