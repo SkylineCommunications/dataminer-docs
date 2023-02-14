@@ -44,7 +44,7 @@ In case you do not want anything to be kept in the database, you can use the [vo
 <ArrayOptions index="0" displayColumn="1" options=";volatile;">
 ```
 
-The *volatile* option can also be applied on a specific column in the *options* attribute of the *ColumnOption* tag (except for columns using the element option or referred to by the *displayColumn* attribute).
+The *volatile* option can also be applied on a specific column in the [options](xref:Protocol.Params.Param.ArrayOptions.ColumnOption-options) attribute of the [ColumnOption](xref:Protocol.Params.Param.ArrayOptions.ColumnOption) tag (except for columns using the element option or referred to by the [displayColumn](xref:Protocol.Params.Param.ArrayOptions-displayColumn) attribute).
 
 You should only use this option in the following cases:
 
