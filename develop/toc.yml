@@ -5146,9 +5146,7 @@
             - name: Microsoft Visual Studio keyboard shortcuts
               topicUid: Microsoft_Visual_Studio_keyboard_shortcuts
             - name: Class Library packages
-              topicUid: Class_Library_packages
-    - name: Github CI/CD 
-      topicUid: Using_GitHub_for_CICD          
+              topicUid: Class_Library_packages              
     - name: CI/CD
       topicUid: DevelopmentWithCICD
       items:
@@ -5210,6 +5208,8 @@
               topicUid: Creating_a_repository_for_an_install_package
             - name: Pipeline stages for install packages
               topicUid: Pipeline_stages_for_install_packages
+        - name: Github CI/CD 
+          topicUid: Using_GitHub_for_CICD
         - name: FAQ
           topicUid: FAQ        
     - name: DataMiner Application Package Builder

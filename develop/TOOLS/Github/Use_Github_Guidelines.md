@@ -11,7 +11,6 @@ You can use GitHub to:
 
 - Share generic code or useful tools/libraries with the DataMiner community.
 - Collaborate on code with external users.
-- Repositories or for an Automation script solution.
 
 > [!NOTE]
 > At present, **only Automation scripts** have actions available for packaging and deployment.
@@ -62,11 +61,23 @@ The repository name should look like this (using "-" as separator): **{customerA
 
 Topics must be used to help categorize the repositories and help users find them when exploring Github.
 
-Refer to the [guidelines about adding topics](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/classifying-your-repository-with-topics) on docs.github.com.
+Here is a list of topics you should use :
 
-### Searching for repositories
+- dataminer
+- dataminer-connector
+- dataminer-visio
+- dataminer-solution
+- dataminer-function
+- dataminer-automation-script
+- dataminer-dashboards
 
-See [Searching for repositories](https://docs.github.com/en/search-github/searching-on-github/searching-for-repositories) on docs.github.com.
+If you have code for a specific project/customer, you should add a topic with customer's name as well
+
+Example "Skyline-Communications" , always '-' as a separator
+
+> [!NOTE]
+> Refer to the [guidelines about adding topics](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/classifying-your-repository-with-topics)
+> and  [Searching for repositories](https://docs.github.com/en/search-github/searching-on-github/searching-for-repositories) on docs.github.com.
 
 ## Collaborating with external users on code
 
@@ -82,11 +93,11 @@ A list of [reusable workflows](https://github.com/SkylineCommunications/_Reusabl
 
 These workflows will allow you to:
 
-- Build a solution.
-- Run unit tests.
-- Use SonarCloud.
-- Compile to a DataMiner package.
-- Deploy directly to a cloud-connected DataMiner Agent.
+- Build a solution
+- Run unit tests
+- Use SonarCloud
+- Compile to a DataMiner package
+- Deploy directly to a cloud-connected DataMiner Agent
 
 ## Using GitHub actions to publish to a cloud-connected DataMiner Agent
 
