@@ -229,11 +229,3 @@ In some rare cases, conditional shape manipulation actions (e.g. Show, Hide, Rot
 <!-- MR 10.4.0 - FR 10.3.2 -->
 
 When, in a Visio drawing, shapes have been positioned dynamically based on properties, you can re-arrange those shapes manually by switching to *Arrange* mode and re-arranging the shapes using drag-and-drop. In some rare cases, it would no longer be possible to drag shapes to another location.
-
-#### Trending: Tag icon was displayed after you selected a section of a trend graph even though it was not possible to define tags [ID_35378] [ID_35383]
-
-<!-- MR 10.4.0 - FR 10.3.3 -->
-
-In some cases, when the pattern matching feature was not enabled in *System Center* > *System settings* > *analytics config*, the tag icon was displayed after you selected a section of a trend graph even though it was not actually possible to define tags.
-
-From now on, Cube will check whether the pattern matching feature is enabled each time you open a trend graph.
