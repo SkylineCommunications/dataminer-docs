@@ -1120,6 +1120,8 @@
               topicUid: Encryption_in_DataMiner
             - name: Cloud connectivity and security
               topicUID: Cloud_connectivity_and_security
+        - name: DataMiner hardening guide
+          topicUID: DataMiner_hardening_guide
         - name: DataMiner user permissions
           topicUid: DataMiner_user_permissions
         - name: Basic security configuration
