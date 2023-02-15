@@ -1,18 +1,18 @@
 ---
-uid: Support_services_agreement
+uid: Support_services_terms
 ---
 
-# Support services agreement
+# Support services terms
 
 ## Introduction
 
-This document sets out the terms of Skyline's Support Services for its Software (the "**Agreement**").  
+This document sets out the terms of Skyline's Support Services for its Software (the "**Terms**").
 
 These terms apply on all orders for Support Services placed at Skyline by the User. User accepts these terms when placing Support Services orders at Skyline. Any deviations from these terms shall only be valid upon written agreement by Skyline, and any User terms on the same subject matter shall be deemed null and void.
 
 ## Definitions
 
-For the purpose of this Agreement, the following terms shall have the meanings indicated below:  
+For the purpose of these Terms, the following terms shall have the meanings indicated below:
 
 - "**Business Hours**" means 9:00 AM until 4:30 PM, Monday through Friday, in the time zone of the geographically closest [offices](https://skyline.be/contact) of Skyline (Izegem, Lisbon, Miami or Singapore), excluding respective public holidays.
 - "**Service Credit(s)**" means credits that can be utilized by User for one of the following services: optimization services, performance reviews, architecture reviews, design workshops or other consultancy services.
@@ -101,11 +101,11 @@ If Skyline determines that an Issue is a User-Generated Issue, Skyline will noti
 
 ## Pricing - Term
 
-Except if agreed otherwise in writing, this Agreement shall commence on the date indicated on Skyline's proposal for Support Services and shall continue in effect for a period of 1 year.
+Except if agreed otherwise in writing, these Terms are effective on the date indicated on Skyline's proposal for Support Services and shall continue in effect for a period of 1 year.
 
-Skyline will provide User a renewal proposal for the Support Services no later than three (3) months prior to the end- or anniversary date of the Agreement.
+Skyline will provide User a renewal proposal for the Support Services no later than three (3) months prior to the end date or anniversary date of the Terms.
 
-Unless User provides Skyline a written notice no later than thirty (30) days prior to the end- or anniversary date of the Agreement of its wish not to renew the Agreement, this Agreement shall automatically be renewed for successive periods of 1 year, and Skyline shall invoice the amount of the renewal proposal to User.
+Unless User provides Skyline a written notice no later than thirty (30) days prior to the end date or anniversary date of the Terms of its wish not to renew the Terms, these Terms shall automatically be renewed for successive periods of 1 year, and Skyline shall invoice the amount of the renewal proposal to User.
 
 All amounts due to Skyline are payable up front before the provision of any Support Services. Early termination of the Support Services by the User does not entitle User to a refund.
 

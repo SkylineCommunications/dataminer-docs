@@ -22,7 +22,7 @@ uid: FAQs_Support_Services
   
 - **What happens when my renewal of my support plan is overdue (Perpetual-Use plan only)?**
 
-  By default, support plan contracts renew automatically every year, unless they have been stopped by the user in advance of the anniversary date of the agreement (for more details, see [Pricing - Term](xref:Support_services_agreement#pricing---term).
+  By default, support plan contracts renew automatically every year, unless they have been stopped by the user in advance of the anniversary date of the agreement (for more details, see [Pricing - Term](xref:Support_services_terms#pricing---term).
 
   In case the support plan has not been deactivated and the user failed to renew the program in time by sending a valid PO, on the day after the anniversary date of the agreement, the service (i.e. Continuity or Evolve plan) will automatically be stopped along with all related services linked to it. As a user, you can still continue to consult content and resources on the Dojo Community portal.
 
