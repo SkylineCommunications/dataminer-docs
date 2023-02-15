@@ -5146,7 +5146,7 @@
             - name: Microsoft Visual Studio keyboard shortcuts
               topicUid: Microsoft_Visual_Studio_keyboard_shortcuts
             - name: Class Library packages
-              topicUid: Class_Library_packages              
+              topicUid: Class_Library_packages
     - name: CI/CD
       topicUid: DevelopmentWithCICD
       items:
@@ -5211,7 +5211,7 @@
         - name: Github CI/CD 
           topicUid: Using_GitHub_for_CICD
         - name: FAQ
-          topicUid: FAQ        
+          topicUid: FAQ
     - name: DataMiner Application Package Builder
       topicUid: TOODataMinerPackageBuilder
       items:
@@ -5408,7 +5408,7 @@
         - name: Steps taken during an upgrade operation
           topicUid: Steps_taken_during_an_upgrade_operation
         - name: Actions that can be performed during an upgrade operation
-          topicUid: Actions_that_can_be_performed_during_an_upgrade_operation    
+          topicUid: Actions_that_can_be_performed_during_an_upgrade_operation
     - name: Application packages
       topicUid: TOOApplicationPackages
       items:

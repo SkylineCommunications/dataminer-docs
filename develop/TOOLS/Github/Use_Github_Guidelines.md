@@ -61,7 +61,7 @@ The repository name should look like this (using "-" as separator): **{customerA
 
 Topics must be used to help categorize the repositories and help users find them when exploring Github.
 
-Here is a list of topics you should use :
+Here is a list of topics you should use:
 
 - dataminer
 - dataminer-connector
@@ -71,13 +71,10 @@ Here is a list of topics you should use :
 - dataminer-automation-script
 - dataminer-dashboards
 
-If you have code for a specific project/customer, you should add a topic with customer's name as well
+If you have code for a specific project/customer, you should add a topic with the customer's name as well, e.g. `Skyline-Communications`. Always use a hyphen ("-") as a separator.
 
-Example "Skyline-Communications" , always '-' as a separator
-
-> [!NOTE]
-> Refer to the [guidelines about adding topics](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/classifying-your-repository-with-topics)
-> and  [Searching for repositories](https://docs.github.com/en/search-github/searching-on-github/searching-for-repositories) on docs.github.com.
+> [!TIP]
+> Refer to the [guidelines about adding topics](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/classifying-your-repository-with-topics) and [Searching for repositories](https://docs.github.com/en/search-github/searching-on-github/searching-for-repositories) on docs.github.com.
 
 ## Collaborating with external users on code
 
