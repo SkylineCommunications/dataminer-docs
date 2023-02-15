@@ -18,6 +18,18 @@ uid: General_Main_Release_10.3.0_CU1
 
 The number of *GetParameterMessages* sent by SLAnalytics in order to check whether a trended table parameter is still active has been optimized.
 
+#### Enhanced performance when creating or editing services [ID_35366]
+
+<!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
+
+Because of a number of enhancements made with regard to the communication between SLDataMiner and SLDMS, overall performance has increased when creating or editing services, especially in heavily loaded environments.
+
+#### Enhanced SNMP trap distribution [ID_35480]
+
+<!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
+
+A number of enhancements have been made with regard to the distribution of SNMP traps, especially to stopped elements on another DMA.
+
 ### Fixes
 
 #### Problem with SLElement when stopping an EPM element [ID_35439]

@@ -12,6 +12,18 @@ uid: General_Main_Release_10.2.0_CU13
 
 ### Enhancements
 
+#### Enhanced performance when creating or editing services [ID_35366]
+
+<!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
+
+Because of a number of enhancements made with regard to the communication between SLDataMiner and SLDMS, overall performance has increased when creating or editing services, especially in heavily loaded environments.
+
+#### Enhanced SNMP trap distribution [ID_35480]
+
+<!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
+
+A number of enhancements have been made with regard to the distribution of SNMP traps, especially to stopped elements on another DMA.
+
 ### Fixes
 
 #### Trending: Pattern matching tags could incorrectly be defined for discrete or string parameters [ID_35368]
