@@ -103,6 +103,12 @@ The zoom range of a map can now be set by means of a slider.
 
 Because of a number of enhancements, overall performance has increased when fetching relation information for the automatic incident tracking feature.
 
+#### SLAnalytics - Behavioral anomaly detection: No longer available for discrete parameters [ID_35465]
+
+<!-- MR 10.4.0 - FR 10.3.3 -->
+
+From now on, anomaly detection will no longer be available for discrete parameters.
+
 ### Fixes
 
 #### Cassandra Cluster: Every DMA would incorrectly try to delete any possible old Cassandra compaction and repair tasks found in the entire DMS [ID_31923]

@@ -6,13 +6,13 @@ uid: Displaying_a_DataMiner_map_in_a_web_browser
 
 1. Open a web browser.
 
-2. Enter the map’s address in the address bar:
+1. Enter the map’s address in the address bar:
 
     ```txt
     http://[DMA]/maps/map.aspx?config=[configuration file]
     ```
 
-3. Press ENTER.
+1. Press ENTER.
 
 > [!TIP]
 > See also:
@@ -28,7 +28,7 @@ http://MyDma/maps/map.aspx?config=mymap
 
 1. In a Microsoft Visio file, draw the shape in which you want the DataMiner map to be displayed.
 
-2. Add a shape data item of type **Link** to the shape, and set its value to:
+1. Add a shape data item of type **Link** to the shape, and set its value to:
 
     ```txt
     #http://[DMA]/maps/map.aspx?config=[configuration file]

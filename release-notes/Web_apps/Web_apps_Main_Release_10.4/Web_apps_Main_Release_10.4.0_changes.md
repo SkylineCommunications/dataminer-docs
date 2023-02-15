@@ -113,6 +113,18 @@ When exporting trend data to CSV, from now on, the *Show average*, *Show minimum
 
 From now on, when SLNet receives an error from the web API after sending a *GetConnection* call, it will log the request and the response in the *SLNet.txt* log file.
 
+#### GQI: data sources 'Get elements' and 'Get services' will now also return alarm states [ID_35464]
+
+<!-- MR 10.4.0 - FR 10.3.3 -->
+
+The GQI data sources *Get elements* and *Get services* will now also return alarm states.
+
+#### GQI: 'State' column in data sources 'Get services' and 'Get views' renamed to 'Alarm state' [ID_35557]
+
+<!-- MR 10.4.0 - FR 10.3.3 -->
+
+In the GQI data sources *Get services* and *Get views*, the *State* column has now been renamed to *Alarm state*.
+
 ### Fixes
 
 #### GQI: Problem when retrieving DCF interfaces [ID_34820]
@@ -174,3 +186,21 @@ A number of issues regarding the Visual Overview component have been fixed.
 - When a page was selected in the Visual Overview component, in some cases, an incorrect page would be displayed.
 - In some cases, the dimensions of pop-up windows would be incorrect.
 - When a pop-up window was shown using a *VdxShape* property, in some cases, the default page would be shown instead of the page that was specified.
+
+#### Web apps: An invalid value entered into a text box would incorrectly be replaced by the last valid value that was entered [ID_35489]
+
+<!-- MR 10.4.0 - FR 10.3.3 -->
+
+When you entered an invalid value into a text box, an error message would be displayed for a very short moment, and the invalid value would incorrectly be replaced by the last valid value that was entered.
+
+#### Web apps: No longer possible to clear a radio button group [ID_35603]
+
+<!-- MR 10.4.0 - FR 10.3.3 [CU0] -->
+
+It would incorrectly no longer be possible to clear a radio button group.
+
+#### Web apps: Auto-complete control could clear its content while you were entering a value [ID_35623]
+
+<!-- MR 10.4.0 - FR 10.3.3 [CU0] -->
+
+In some cases, an auto-complete control could clear its content while you were entering a value.
