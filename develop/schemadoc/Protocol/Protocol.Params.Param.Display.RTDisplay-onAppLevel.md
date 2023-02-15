@@ -16,7 +16,7 @@ Specifies whether this parameter needs to be accessible on application level.
 
 ## Remarks
 
-Set this attribute to true if the parameter needs to be accessible on application level, i.e. outside the protocol. In a Visio drawing for instance.
+Set this attribute to true if the parameter needs to be accessible on application level, i.e. outside the protocol. This can for instance be in a visual overview, Automation script, or GQI query.
 
 ## Examples
 
