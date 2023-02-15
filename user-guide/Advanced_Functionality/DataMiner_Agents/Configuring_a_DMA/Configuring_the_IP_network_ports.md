@@ -9,6 +9,9 @@ A DataMiner System makes extensive use of TCP/IP communication. Below, you find 
 > [!NOTE]
 > In new DataMiner installations from DataMiner 10.1.11/10.2.0 onwards, only the essential ports are opened by default (80, 8004, as well as 162 from DataMiner 10.1.12 onwards). To make use of DataMiner functionality that requires additional ports, you will need to manually create a firewall rule for those ports.
 
+> [!TIP]
+> See also: [DataMiner hardening guide](xref:DataMiner_hardening_guide)
+
 ## Overview of IP ports used in a DMS
 
 | Protocol | Ports used | Application      |

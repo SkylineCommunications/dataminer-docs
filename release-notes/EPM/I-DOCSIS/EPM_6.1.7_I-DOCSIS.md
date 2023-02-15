@@ -70,3 +70,7 @@ After a CCAP platform element started up, it could occur that an exception simil
 ```
 
 Retry logic has now been added to all CCAP platform connectors to prevent this issue.
+
+#### Run-time error caused by CCAP connector [ID_35599]
+
+In some cases, CCAP connectors could cause run-time errors. To prevent this, the *partialSNMP* option has been added to all SNMP tables in order to divide the polling over several smaller groups.

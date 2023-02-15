@@ -6,6 +6,9 @@ uid: Setting_up_HTTPS_on_a_DMA
 
 To securely host your DataMiner Agent, we recommend that you make sure HTTPS connections are required. To do so, you first have to install an SSL/TLS certificate and set up an HTTPS binding. Using certificates issued by a trusted Certificate Authority (CA) is recommended. Optionally, specify the auto-detection settings for DataMiner to avoid connection issues when traffic between the DataMiner nodes is filtered (e.g. by a firewall).
 
+> [!TIP]
+> See also: [DataMiner hardening guide](xref:DataMiner_hardening_guide)
+
 ## Configuring the HTTPS binding in IIS
 
 1. Open IIS manager. It can be found under *Administrative Tools* in the *Control Panel* of your computer.
