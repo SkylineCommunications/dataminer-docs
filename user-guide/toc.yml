@@ -2383,12 +2383,12 @@
               topicUID: VSAT_components
             - name: EPM VSAT deployment
               topicUID: VSAT_deployment
-            - name: Available parameters in VSAT
-              topicUID: VSAT_parameters
             - name: EPM VSAT topology
               topicUID: VSAT_EPM_Topology
             - name: EPM VSAT metrics
               topicUID: VSAT_metrics
+            - name: Available parameters in VSAT
+              topicUID: VSAT_parameters
     - name: DataMiner IDP app
       topicUid: SolIDP
       items:
