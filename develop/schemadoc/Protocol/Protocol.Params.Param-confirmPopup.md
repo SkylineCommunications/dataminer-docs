@@ -21,5 +21,5 @@ Overrides the "*Never ask for confirmation after setting parameter value*" setti
 ## Examples
 
 ```xml
-<Param id="1" backup="true">
+<Param id="1" confirmPopup="always">
 ```
