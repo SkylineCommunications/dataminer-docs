@@ -6,7 +6,7 @@ uid: Overview_Compliance_Statements_RvsG_O
 
 Harness the ability to change for your competitive advantage.
 
-Trying to predict every eventuality, every  change in the market, every possible change in technology is a waste of time and money.
+Trying to predict every eventuality, every change in the market, or every possible change in technology is a waste of time and money.
 
 Moreover, each individual business or operation has its own specific individual needs, which are affected by many things, such as:
 
