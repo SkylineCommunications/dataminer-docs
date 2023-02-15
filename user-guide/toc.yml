@@ -1064,6 +1064,15 @@
                 topicUID: Configuring_Elasticsearch_node_remove
             - name: Configuring multiple Elasticsearch clusters
               topicUid: Configuring_multiple_Elasticsearch_clusters
+        - name: OpenSearch database
+          topicUID: OpenSearch_database
+          items:
+          - name: Configuring multiple OpenSearch clusters
+            topicUid: Configuring_multiple_OpenSearch_clusters
+        - name: Amazon OpenSearch Service
+          topicUID: Amazon_OpenSearch_Service
+        - name: Amazon Keyspaces Service
+          topicUid: Amazon_Keyspaces_Service
         - name: MySQL database
           topicUID: MySQL_database
           items:
@@ -1111,6 +1120,8 @@
               topicUid: Encryption_in_DataMiner
             - name: Cloud connectivity and security
               topicUID: Cloud_connectivity_and_security
+        - name: DataMiner hardening guide
+          topicUID: DataMiner_hardening_guide
         - name: DataMiner user permissions
           topicUid: DataMiner_user_permissions
         - name: Basic security configuration
@@ -2365,6 +2376,21 @@
                   topicUid: D-DOCSIS_parameters_cin_interface
                 - name: Manufacturer
                   topicUid: D-DOCSIS_parameters_manufacturer
+        - name: DataMiner EPM VSAT
+          topicUid: EPM_VSAT
+          items:
+            - name: EPM VSAT architecture
+              topicUID: VSAT_architecture
+            - name: EPM VSAT components
+              topicUID: VSAT_components
+            - name: EPM VSAT deployment
+              topicUID: VSAT_deployment
+            - name: EPM VSAT topology
+              topicUID: VSAT_EPM_Topology
+            - name: EPM VSAT metrics
+              topicUID: VSAT_metrics
+            - name: Available parameters in VSAT
+              topicUID: VSAT_parameters
     - name: DataMiner IDP app
       topicUid: SolIDP
       items:

@@ -27,6 +27,9 @@ This file contains default connection settings to be used by DataMiner client ap
     | A range of IP addresses               | 10.10.1.1-10.10.1.100 |
     | A single IP address                   | 10.10.7.1             |
 
+> [!TIP]
+> See also: [DataMiner hardening guide](xref:DataMiner_hardening_guide)
+
 ## ConnectionSettings.txt Options
 
 - **type=**

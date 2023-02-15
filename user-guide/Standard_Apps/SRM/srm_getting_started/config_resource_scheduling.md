@@ -56,7 +56,28 @@ A typical use case is to make use of the Resource Manager component in Visual Ov
 
    - When a user selects a time range on the timeline, the *SelectedtimeRange* variable will be populated with that time range.
 
+   > [!TIP]
+   > For example, in case you want to create a Visio drawing that will be assigned to a view, and all resources associated with elements in that view should be presented on the Y-axis of the timeline:
+   >
+   > - Add the following shape data on page level:
+   >
+   >   | Shape data field | Value |
+   >   |--|--|
+   >   | InitVar | `YAxisResources:[This View]` |
+   >   | Options | `CardVariable` |
+   >
+   > - Add the following shape data on the rectangle shape that will be used to embed the timeline:
+   >
+   >   | Shape data field | Value |
+   >   |--|--|
+   >   | Component | `Reservations` |
+   >   | Options | `CardVariable` |
+
 1. Add a shape to the Visio drawing that executes the *SRM_BookResourcesQuickly* script, using the *SelectedResource* and *SelectedTimeRange* variables in the input data.
 
-   > [!NOTE]
-   > A custom conversion script is needed to make sure the format of *SelectedTimeRange* matches what the wizard expects.
+   > [!TIP]
+   > Continuing from the same example as mentioned above, if you have a Booking Manager element named "Resource Scheduling", add a rectangle shape with the following shape data:
+   >
+   >   | Shape data field | Value |
+   >   |--|--|
+   >   | Execute | `script:SRM_BookResourcesQuickly||Input Data={"BookingManagerElement":"Resource Scheduling","TimeRange":"[RegexReplace:;,[cardvar:SelectedTimeRange],$]","ResourceIds":"[cardvar:SelectedResource]","AssignCapacityType":"Request"}|||NoConfirmation,CloseWhenFinished` |
