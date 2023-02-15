@@ -64,3 +64,9 @@ Error parsing SNMPv3 password for port: <port number> on element: <element name>
 ```
 
 Also, an error could occur in SLDataMiner when you tried to re-enter the SNMPv3 port settings.
+
+#### SLAnalytics - Automatic incident tracking: Alarm groups could incorrectly be created without a focus value [ID_35551]
+
+<!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
+
+In some cases, alarm groups could incorrectly be created without a focus value.
