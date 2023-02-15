@@ -39,7 +39,7 @@ For a Cassandra cluster database (i.e. one Cassandra cluster that is used as the
 
    - **Database prefix**: The prefix that the DataMiner System will use to create the indices.
 
-   - **DB server**: The IP addresses or hostnames of the Elasticsearch nodes, separated by commas. If TLS is enabled, the full URL must be specified, e.g. `https://elastic.mydomain.local`. If no port is provided, port 9200 will be used by default.
+   - **DB server**: The IP addresses or hostnames of the Elasticsearch nodes, separated by commas. If TLS is enabled, the full URL must be specified, e.g. `https://elastic.mydomain.local`. If no port is provided, the default Elasticsearch port is used instead (see [Configuring the IP network ports](xref:Configuring_the_IP_network_ports)).
 
    - **User**: The username with which the DMA has to log on to Elasticsearch (if applicable).
 
