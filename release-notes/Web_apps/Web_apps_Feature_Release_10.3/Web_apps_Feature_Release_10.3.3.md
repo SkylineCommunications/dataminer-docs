@@ -213,3 +213,9 @@ When you entered an invalid value into a text box, an error message would be dis
 <!-- MR 10.3.0 - FR 10.3.3 -->
 
 Panels of which the *Fit to view* option was selected would incorrectly switch to mobile mode when their width got too small. From now on, panels of which the *Fit to view* option is selected will never switch to mobile mode.
+
+#### Web apps: Auto-complete control could clear its content while you were entering a value [ID_35623]
+
+<!-- MR 10.4.0 - FR 10.3.3 [CU0] -->
+
+In some cases, an auto-complete control could clear its content while you were entering a value.
