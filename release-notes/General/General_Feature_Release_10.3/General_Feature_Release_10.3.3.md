@@ -388,7 +388,7 @@ When outages on an SLA with a week-based window were corrected, the *History Sta
 
 #### SLAnalytics - Behavioral anomaly detection: Two identical behavioral anomaly alarms would incorrectly be created [ID_35511]
 
-<!-- MR 10.4.0 - FR 10.3.3 -->
+<!-- MR 10.3.0 [CU1] - FR 10.3.3 -->
 
 In some cases, two identical behavioral anomaly alarms would incorrectly be created.
 
