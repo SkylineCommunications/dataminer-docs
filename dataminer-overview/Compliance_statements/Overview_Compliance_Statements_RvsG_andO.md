@@ -4,7 +4,9 @@ uid: Overview_Compliance_Statements_RvsG_O
 
 # Requirements vs. goals and objectives
 
-As with any software and ICT integration project in general, it is impossible for anybody to provide an exact specification of what is needed and expected in relation to all workflows, all UIs, all different target user groups in the organization, and much more.
+Harness the ability to change for your competitive advantage.
+
+Trying to predict every eventuality, every change in the market, or every possible change in technology is a waste of time and money.
 
 Moreover, each individual business or operation has its own specific individual needs, which are affected by many things, such as:
 
@@ -28,7 +30,7 @@ Moreover, each individual business or operation has its own specific individual 
 
 This applies to any type of project, no matter which technology or industry segment is involved. It is in the nature of these types of transformation projects.
 
-Each project therefore typically starts with specific goals and objectives of the organization, which are then translated into a first set of requirements by the internal users, collected throughout the organization. The latter can be limited or quite elaborate.
+Each project therefore typically starts with specific goals and objectives of the organization, which are then translated into a first preliminary set of "requirements" by the internal users, collected throughout the organization. The latter can be limited or quite elaborate.
 
 ![Evolution from goals & objectives to implementation](~/dataminer-overview/images/REQ_G_and_O.png)
 
