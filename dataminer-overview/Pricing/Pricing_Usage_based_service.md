@@ -21,7 +21,7 @@ This includes:
 - All available DataMiner functions, including dataminer.services functions.
 - The freedom to deploy as many DataMiner nodes as required, i.e. to scale capacity up or down on demand, or to architect the overall solution in the most optimal way (e.g. considering zoning, geographical locations, continuity, etc.).
 - Using any of the existing 7000+ connectors to interface DataMiner with third-party products from over 700 different vendors, on a flexible per need basis.
-- Requesting new integrations with third-party products, at no additional cost with Continuity or Evolve plans.
+- Requesting new integrations with third-party products, at no additional cost with [Continuity or Evolve plans](https://community.dataminer.services/support-plans/).
 - Continuously benefitting from all DataMiner evolutions available, with regard to the DataMiner functions as well as with regard to the connectors to interface with third-party products.
 - Accessing our professional technical support services to support the operation.
 
@@ -106,4 +106,4 @@ Initial MUA: 200 credits<br>Start Date: November 1, 2022<br>Renewal Date: Novemb
 MUA increased to 250 credits on August 1, 2023
 
 - Billing on August 1, 2023: 50 credits x original credit rate x 12 months (i.e. paid until August 1, 2024)
-- Billing on November 1, 2023 (i.e. Renewal Date): 200 credits x current credit rate x 12 months  +  50 credits x current credit rate x 4 months
+- Billing on November 1, 2023 (i.e. Renewal Date): 200 credits x current credit rate x 12 months  +  50 credits x current credit rate x 3 months
