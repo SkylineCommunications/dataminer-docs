@@ -214,6 +214,12 @@ When you entered an invalid value into a text box, an error message would be dis
 
 Panels of which the *Fit to view* option was selected would incorrectly switch to mobile mode when their width got too small. From now on, panels of which the *Fit to view* option is selected will never switch to mobile mode.
 
+#### Web apps: No longer possible to clear a radio button group [ID_35603]
+
+<!-- MR 10.4.0 - FR 10.3.3 [CU0] -->
+
+It would incorrectly no longer be possible to clear a radio button group.
+
 #### Web apps: Auto-complete control could clear its content while you were entering a value [ID_35623]
 
 <!-- MR 10.4.0 - FR 10.3.3 [CU0] -->

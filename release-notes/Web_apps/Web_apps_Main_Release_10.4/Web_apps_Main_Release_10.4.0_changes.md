@@ -193,6 +193,12 @@ A number of issues regarding the Visual Overview component have been fixed.
 
 When you entered an invalid value into a text box, an error message would be displayed for a very short moment, and the invalid value would incorrectly be replaced by the last valid value that was entered.
 
+#### Web apps: No longer possible to clear a radio button group [ID_35603]
+
+<!-- MR 10.4.0 - FR 10.3.3 [CU0] -->
+
+It would incorrectly no longer be possible to clear a radio button group.
+
 #### Web apps: Auto-complete control could clear its content while you were entering a value [ID_35623]
 
 <!-- MR 10.4.0 - FR 10.3.3 [CU0] -->
