@@ -256,7 +256,7 @@ When you pan or zoom in on the timeline, this session variable will contain the 
 
 When this session variable is set by an external source, the timeline component will be updated to show the new time range.
 
-The value can be set in serialized form (e.g. “5248098399646517511;5248392353962787511”) or using a “start;stop” format. In the latter case, start and stop must be timestamps that can be parsed by DateTime (e.g. “2017-09-17T09:42:01.9129607Z;2018-08-23T15:05:53.5399607Z” in ISO 8601 format, or “17/09/2017 9:42:01;23/08/2018 15:05:53” in local format).
+The value can be set in serialized form (e.g. “5248098399646517511;5248392353962787511”) or using a “start;stop” format. In the latter case, start and stop must be timestamps that can be parsed by DateTime (e.g. “2017-09-17T09:42:01.9129607Z;2018-08-23T15:05:53.5399607Z” in ISO 8601 format, or “2017-08-07 9:42:01;2017-08-10 15:05:53” in UTC format "yyyy-mm-dd hh:mm:ss").
 
 Available from DataMiner 9.6.3 onwards.
 

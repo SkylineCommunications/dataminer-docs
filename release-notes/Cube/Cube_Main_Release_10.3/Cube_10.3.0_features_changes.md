@@ -1074,3 +1074,35 @@ When, in Visual Overview, a filter was applied to a *ListView* component that li
 <!-- MR 10.3.0 - FR 10.3.3 -->
 
 When you right-clicked a shape, certain context menu commands would incorrectly be disabled.
+
+#### Newly created users would be assigned an invalid full name, description and password when Cube was configured to connect using gRPC [ID_35493]
+
+<!-- MR 10.3.0 - FR 10.3.3 -->
+
+When you had configured DataMiner Cube to connect using gRPC (by specifying `type=GRPCConnection` in the *ConnectionSettings.txt* file), newly created users would be assigned an invalid full name, description and password.
+
+#### EPM cards: Collector pages would not be loaded [ID_35523]
+
+<!-- MR 10.3.0 - FR 10.3.3 -->
+
+When you opened an EPM card, in some cases, the collector pages would not be loaded, especially on systems without backend.
+
+From now on, the collector pages will be loaded even when the EPM environment does not include a backend. This will particularly be useful for testing purposes.
+
+#### Trending: Light bulb icon in trend component no longer overlapping [ID_35536]
+
+<!-- MR 10.3.0 - FR 10.3.3 -->
+
+In some cases, the light bulb icon in the top-right corner of a trend graph would incorrectly overlap the full screen or zoom range buttons.
+
+#### Trending - Parameter relationships: Display keys of suggested parameters would not be correct [ID_35548]
+
+<!-- MR 10.3.0 - FR 10.3.3 -->
+
+When you open a trend graph, a light bulb icon will appear in the top-right corner when DataMiner finds parameters that are related to the parameters shown in the graph. When you click that icon, you get a list of the ten most important parameters, which you can then add to the graph. However, in some cases, the display keys of those listed parameters would not be correct.
+
+#### Trending - Parameter relationships: The same parameter could be added multiple times to the graph when you clicked it repeatedly [ID_35561]
+
+<!-- MR 10.3.0 - FR 10.3.3 -->
+
+When you open a trend graph, a light bulb icon will appear in the top-right corner when DataMiner finds parameters that are related to the parameters shown in the graph. When you click that icon, you get a list of the ten most important parameters, which you can then add to the graph. However, in some cases, when you clicked one of those suggested parameter multiple times, it would incorrectly be added multiple times to the graph.
