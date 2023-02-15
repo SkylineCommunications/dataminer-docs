@@ -57,12 +57,12 @@ Usage-based services are charged based on the actual monthly usage of services, 
 | Failover | Server-based license. | Included. Users can deploy additional nodes for Failover without paying additional fees since billing is based on the active number of managed objects or monitored metrics in a month. |
 | Optional functions | Licensed per node: Correlation and Automation engines, Dashboard app, No-Code Apps, Low-Code Apps, Process Automation, DataMiner Object Models (DOM), and Spectrum Analysis. | Not applicable. All optional modules are included. |
 | Automation & orchestration | Based on the volume of concurrent services running. | Based on the volume of script runs. |
-| Connectors | Connector license per different, interfaced product. | Per connector per month. |
+| Connectors | Single connector license fee for new and existing connectors. One connector license per different, interfaced product. | Charged per connector used per month. |
 | Custom applications (e.g. PTP app) | Licensed per app. | Charged as engineering services. |
 | Sample applications | Included. | Included. |
 | Cloud services | [Tier-based](https://community.dataminer.services/dataminer-cloud-platform-services/). | Usage-based. |
 | Support services | Optional annual recurring fee, relative to the value of the deployed Perpetual-Use Licenses. | Included (see [DataMiner Support Plans](https://community.dataminer.services/support-services/)). |
-| DataMiner Probes | Server-based licenses, each with fixed capacity tiers of managed objects.  | N/A. |
+| DataMiner Probes | Server-based licenses, each with fixed capacity tiers of managed objects.  | N/A |
 
 
 > [!NOTE]
@@ -82,10 +82,11 @@ In case of a Pay-per-Use plan, user pay for what they use, giving ultimate flexi
 |-----------|:-------------------:|:-------------:|
 | Monthly utilization and metering | The user subscribes to a **fixed number of credits** per month (Monthly Utilization Allowance - MUA) that can be used towards any combination of services throughout the month within the contracted MUA. | The user sets an allowance that can be freely used in any combination of services. Usage is metered on a monthly basis and deducted from the allowance, allowing for **variable usage** patterns. |
 | Roll-over credits | Unused credits do not roll to the next month. | Unused credits expire 12 months from the start date. |
-| Minimum contract duration | 12 months | - |
-| Automatic renewal | X | - |
-| Annual subscription fee | X | - |
-| Over-utilization | Charged at a premium fee | - |
+| Minimum contract duration | 12 months | N/A |
+| Annual automatic renewal | Yes | N/A |
+| Annual subscription fee | Yes | N/A |
+| Over-utilization | Charged at a premium fee | N/A |
+| New connector development | MUA < 200: charged as professional services credits <br> MUA >= 200: included with no additional costs, subject to a fair use policy  |  N/A |
 | Support services | MUA < 200: Community Plan <br> MUA >= 200: Continuity/Evolve | Community Plan|
 | Professional Services credits included |  100 < MUA < 200: 100 <br> 200 < MUA < 400: 200 <br> MUA >= 400: 600 | 50 for every 1000 pay-per-use credits |
 
