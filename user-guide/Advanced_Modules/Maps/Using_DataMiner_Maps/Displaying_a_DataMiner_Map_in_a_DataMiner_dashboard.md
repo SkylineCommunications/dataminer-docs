@@ -43,7 +43,7 @@ Using the legacy Reports & Dashboards module (prior to DataMiner 9.6.11):
 
 1. On the newly added DataMiner Map component, click *Configure*.
 
-5. In the *Configure Components* pane, enter the name of the configuration file (without the ”.xml” extension) in the *Configuration box*.
+1. In the *Configure Components* pane, enter the name of the configuration file (without the ”.xml” extension) in the *Configuration box*.
 
    > [!NOTE]
    > For more information on the configuration files, see [Configuring the DataMiner Maps](xref:Configuring_the_DataMiner_Maps).

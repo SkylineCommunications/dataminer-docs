@@ -8,13 +8,27 @@ uid: Cube_Feature_Release_10.3.3
 > We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
 
 > [!TIP]
-> For release notes for this release that are not related to DataMiner Cube, see [General Feature Release 10.3.2](xref:General_Feature_Release_10.3.3).
+> For release notes for this release that are not related to DataMiner Cube, see [General Feature Release 10.3.3](xref:General_Feature_Release_10.3.3).
 
 ## Highlights
 
 *No highlights have been selected for this release yet*
 
 ## Other features
+
+#### System Center - Database: Address specified in the 'DB server' field of a database of type 'Cassandra' or 'CassandraCluster' can now include a custom port [ID_34590]
+
+<!-- MR 10.3.0 - FR 10.3.3 -->
+
+When, in the *Database* section of *System Center*, you are configuring a database of type "Cassandra" or "CassandraCluster", you can now specify an address with a custom port in the *DB server* field.
+
+If you specify a hostname or IP address without a port, DataMiner will fall back to the default Cassandra port 9042.
+
+Examples:
+
+- localhost (Will be resolved to localhost:9042)
+- 10.5.100.1:5555
+
 
 #### Visual Overview - ListView: Copying list data to the Windows clipboard [ID_35170]
 
@@ -124,6 +138,14 @@ When you try to create a trend pattern tag, an error message will appear when th
 
 From now on, a slightly larger number of missing values will be allowed will you create a trend pattern tag.
 
+#### Trending: Check marks will no longer appear in front of related parameters after adding them to the trend graph [ID_35518]
+
+<!-- MR 10.4.0 - FR 10.3.3 -->
+
+In the top-right corner of a trend graph, a light bulb icon appears when DataMiner finds parameters that are related to the parameters shown in the trend graph. Clicking this light bulb icon allows you to add one or more of those related parameters to the trend graph you are viewing.
+
+Up to now, when you clicked one of those related parameters in order to add it to the trend graph, a check mark would appear in front of it. From now on, check marks will no longer appear in front of related parameters after selecting them.
+
 #### DataMiner Cube - Alarm Console: No longer possible to enable the 'Automatic incident tracking' option for a history tab [ID_35556]
 
 <!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
@@ -184,13 +206,13 @@ When a tree control contained many-to-many relationships, up to now, the alarm b
 
 #### Trending: Pattern matching tags could incorrectly be defined for discrete or string parameters [ID_35368]
 
-<!-- MR 10.4.0 - FR 10.3.3 -->
+<!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.3 -->
 
 Pattern matching does not support discrete or string parameters. However, up to now, when viewing a trend graph that showed trend information for either a discrete or a string parameter, it would incorrectly be possible to define tags for pattern matching. From now on, this will no longer be possible.
 
 #### Trending: Tag icon was displayed after you selected a section of a trend graph even though it was not possible to define tags [ID_35378] [ID_35383]
 
-<!-- MR 10.4.0 - FR 10.3.3 -->
+<!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.3 -->
 
 In some cases, when the pattern matching feature was not enabled in *System Center* > *System settings* > *analytics config*, the tag icon was displayed after you selected a section of a trend graph even though it was not actually possible to define tags.
 
@@ -252,6 +274,32 @@ When you right-clicked a shape, certain context menu commands would incorrectly 
 
 When, while configuring an alarm template, you opened the baseline editor and selected the *Automatically update the baseline values* option, the *Trending* column would no longer show an icon when average trending was disabled for the parameter in question.
 
+#### Newly created users would be assigned an invalid full name, description and password when Cube was configured to connect using gRPC [ID_35493]
+
+<!-- MR 10.3.0 - FR 10.3.3 -->
+
+When you had configured DataMiner Cube to connect using gRPC (by specifying `type=GRPCConnection` in the *ConnectionSettings.txt* file), newly created users would be assigned an invalid full name, description and password.
+
+#### Alarm Console: When you clicked a suggestion alarm, the change points and patterns would incorrectly not be loaded [ID_35497]
+
+<!-- MR 10.4.0 - FR 10.3.3 -->
+
+When you clicked a suggestion alarm, in some cases, the trend graph would be loaded but the change points and the patterns incorrectly would not.
+
+#### EPM cards: Collector pages would not be loaded [ID_35523]
+
+<!-- MR 10.3.0 - FR 10.3.3 -->
+
+When you opened an EPM card, in some cases, the collector pages would not be loaded, especially on systems without backend.
+
+From now on, the collector pages will be loaded even when the EPM environment does not include a backend. This will particularly be useful for testing purposes.
+
+#### Trending: Light bulb icon in trend component no longer overlapping [ID_35536]
+
+<!-- MR 10.3.0 - FR 10.3.3 -->
+
+In some cases, the light bulb icon in the top-right corner of a trend graph would incorrectly overlap the full screen or zoom range buttons.
+
 #### DataMiner Cube - Service templates: Open service card would not be updated when the service template was re-applied [ID_35537]
 
 <!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
@@ -263,3 +311,15 @@ When you updated an re-applied a service template while a card of a service crea
 <!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
 
 When you enabled the *Automatic incident tracking* option of an active alarms tab while a quick filter was applied, in some cases, the alarm counters in the footer bar would incorrectly start to show negative values.
+
+#### Trending - Parameter relationships: Display keys of suggested parameters would not be correct [ID_35548]
+
+<!-- MR 10.3.0 - FR 10.3.3 -->
+
+When you open a trend graph, a light bulb icon will appear in the top-right corner when DataMiner finds parameters that are related to the parameters shown in the graph. When you click that icon, you get a list of the ten most important parameters, which you can then add to the graph. However, in some cases, the display keys of those listed parameters would not be correct.
+
+#### Trending - Parameter relationships: The same parameter could be added multiple times to the graph when you clicked it repeatedly [ID_35561]
+
+<!-- MR 10.3.0 - FR 10.3.3 -->
+
+When you open a trend graph, a light bulb icon will appear in the top-right corner when DataMiner finds parameters that are related to the parameters shown in the graph. When you click that icon, you get a list of the ten most important parameters, which you can then add to the graph. However, in some cases, when you clicked one of those suggested parameter multiple times, it would incorrectly be added multiple times to the graph.

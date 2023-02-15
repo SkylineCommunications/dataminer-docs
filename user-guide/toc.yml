@@ -1066,6 +1066,15 @@
               topicUid: Configuring_multiple_Elasticsearch_clusters
             - name: Manually connecting a DMA to an Elasticsearch cluster
               topicUID: Manually_Connecting_DMA_to_Elasticsearch_Cluster
+        - name: OpenSearch database
+          topicUID: OpenSearch_database
+          items:
+          - name: Configuring multiple OpenSearch clusters
+            topicUid: Configuring_multiple_OpenSearch_clusters
+        - name: Amazon OpenSearch Service
+          topicUID: Amazon_OpenSearch_Service
+        - name: Amazon Keyspaces Service
+          topicUid: Amazon_Keyspaces_Service
         - name: MySQL database
           topicUID: MySQL_database
           items:
@@ -1113,6 +1122,8 @@
               topicUid: Encryption_in_DataMiner
             - name: Cloud connectivity and security
               topicUID: Cloud_connectivity_and_security
+        - name: DataMiner hardening guide
+          topicUID: DataMiner_hardening_guide
         - name: DataMiner user permissions
           topicUid: DataMiner_user_permissions
         - name: Basic security configuration

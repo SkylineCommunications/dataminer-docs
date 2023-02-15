@@ -544,6 +544,9 @@ For example:
 
 Specify this option if you do NOT want the column(s) to be saved. This means that automatically saved columns like Primary Key, Foreign Key, … are no longer stored, and assuming that the columnOption 'save' was used on a specific column, this is not stored either.
 
+> [!CAUTION]
+> Be careful about where you use this option, as it cannot be used on every table. For information on the limitations, see [Volatile tables](xref:AdvancedDataMinerDataPersistencePersistingTables#volatile-tables).
+
 ## View
 
 When DVE elements are created from this table, the element will be placed in the view specified in this column.

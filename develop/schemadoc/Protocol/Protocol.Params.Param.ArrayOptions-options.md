@@ -261,3 +261,6 @@ directView=3301;onlyFilteredDirectView;filterChange=11601-9001,11602-9002,11603-
 ### volatile
 
 If you use this option, the primary keys will not be saved.
+
+> [!CAUTION]
+> Be careful about where you use this option, as it cannot be used on every table. For information on the limitations, see [Volatile tables](xref:AdvancedDataMinerDataPersistencePersistingTables#volatile-tables).

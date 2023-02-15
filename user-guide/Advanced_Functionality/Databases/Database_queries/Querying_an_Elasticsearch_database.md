@@ -36,7 +36,7 @@ To enter queries, in the bar on the left, navigate to *Dev Tools* as indicated b
 
 ### Retrieving information on indices (tables)
 
-To get relevant information on *all indices* (i.e. all tables) in the ElasticSearch database, enter the query below. Note that the *GET* is case-sensitive.
+To get relevant information on *all indices* (i.e. all tables) in the Elasticsearch database, enter the query below. Note that the *GET* is case-sensitive.
 
 ```txt
 GET _cat/indices

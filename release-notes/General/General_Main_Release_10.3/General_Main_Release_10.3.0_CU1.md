@@ -12,6 +12,24 @@ uid: General_Main_Release_10.3.0_CU1
 
 ### Enhancements
 
+#### SLAnalytics: Number of 'GetParameterMessages' requests has been optimized [ID_34936]
+
+<!-- MR 10.3.0 [CU1] - FR 10.3.1 -->
+
+The number of *GetParameterMessages* sent by SLAnalytics in order to check whether a trended table parameter is still active has been optimized.
+
+#### Enhanced performance when creating or editing services [ID_35366]
+
+<!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
+
+Because of a number of enhancements made with regard to the communication between SLDataMiner and SLDMS, overall performance has increased when creating or editing services, especially in heavily loaded environments.
+
+#### Enhanced SNMP trap distribution [ID_35480]
+
+<!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
+
+A number of enhancements have been made with regard to the distribution of SNMP traps, especially to stopped elements on another DMA.
+
 ### Fixes
 
 #### Problem with SLElement when stopping an EPM element [ID_35439]
@@ -19,3 +37,15 @@ uid: General_Main_Release_10.3.0_CU1
 <!-- MR 10.2.0 [CU13]/10.3.0 [CU1]  - FR 10.3.3 -->
 
 When an EPM element was stopped, in some rare cases, an error could occur in SLElement.
+
+#### SLAnalytics - Behavioral anomaly detection: Two identical behavioral anomaly alarms would incorrectly be created [ID_35511]
+
+<!-- MR 10.3.0 [CU1] - FR 10.3.3 -->
+
+In some cases, two identical behavioral anomaly alarms would incorrectly be created.
+
+#### SLAnalytics : Problem after a DVE parent element had been deleted [ID_35521]
+
+<!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.3 -->
+
+In some cases, an error could occur in the SLAnalytics process after a DVE parent element had been deleted.
