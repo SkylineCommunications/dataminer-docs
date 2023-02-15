@@ -64,7 +64,7 @@ The following settings are available in System Center:
 When this feature has been enabled in System Center as detailed above, it still needs to be activated in the Alarm Console. To do so, in the Alarm Console hamburger menu, select *Automatic incident tracking*.
 
 > [!NOTE]
-> From DataMiner 10.2.0 [CU12]/10.3.3 onwards, it is not possible to activate the *Automatic incident tracking* option for a history tab in the Alarm Console. <!-- RN 35556 -->
+> Automatic incident tracking is only shown for active alarms, not for history alarms. Consequently, from DataMiner 10.2.0 [CU12]/10.3.3 onwards, the *Automatic incident tracking* option is not available for a history tab in the Alarm Console. <!-- RN 35556 -->
 
 ## Configuration of incident tracking based on properties
 
