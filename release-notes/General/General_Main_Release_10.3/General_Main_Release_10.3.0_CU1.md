@@ -85,3 +85,23 @@ Also, an error could occur in SLDataMiner when you tried to re-enter the SNMPv3 
 <!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
 
 In some cases, alarm groups could incorrectly be created without a focus value.
+
+#### Problem with parameter update throttling when subscribing to column parameters [ID_35578]
+
+<!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
+
+When a client subscribed on a column parameter with a filter as index (e.g. *), the messages would be throttled incorrectly.
+
+From now on, parameter update throttling can be disabled by setting the *MessageThrottlingThreshold* option to -1 in the *MaintenanceSettings.xml* file.
+
+```xml
+<MaintenanceSettings>
+  ...
+  <SLNet>
+    ...
+    <MessageThrottlingThreshold>-1</MessageThrottlingThreshold>
+    ...
+  </SLNet>
+  ...
+</MaintenanceSettings>
+```
