@@ -31,6 +31,30 @@ Because of a number of enhancements made with regard to the communication betwee
 
 <!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
 
-A number of enhancements have been made with regard to the distribution of SNMP traps, especially to stopped elements on another DMA.
+From now on, stopped elements will no longer be taken into account when distributing SNMP traps. When a trap has to be sent to an element on another DataMiner Agent, it will no longer be sent when that element is stopped.
 
 ### Fixes
+
+#### Failover: Profile Manager would incorrectly not be initialized on the agent that was brought online [ID_35534]
+
+<!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
+
+When a failover was triggered, in some rare cases, the Profile Manager would incorrectly not be initialized on the agent that was brought online.
+
+In the Alarm Console, an error would appear with the following message:
+
+```txt
+Unexpected exception while triggering failover for BaseProfileManager: Skyline.DataMiner.Net.ManagerStore.CrudFailedException: Exception of type 'Skyline.DataMiner.Net.ManagerStore.CrudFailedException' was thrown.
+```
+
+#### Problem when modifying the production version of a protocol with an SNMPv3 connection [ID_35538]
+
+<!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
+
+When you modified the production version of a protocol with multiple connections, of which one was an SNMNv3 connection, in some cases, the element could lose its SNMPv3 port settings. As a result, the SLSNMPManager process would fail to initialize the SNMPv3 communication, and the following alarm would appear in the Alarm Console:
+
+```txt
+Error parsing SNMPv3 password for port: <port number> on element: <element name>
+```
+
+Also, an error could occur in SLDataMiner when you tried to re-enter the SNMPv3 port settings.
