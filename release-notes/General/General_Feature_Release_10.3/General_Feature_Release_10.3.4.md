@@ -33,11 +33,11 @@ Because of a number of enhancements made with regard to the communication betwee
 
 From now on, stopped elements will no longer be taken into account when distributing SNMP traps. When a trap has to be sent to an element on another DataMiner Agent, it will no longer be sent when that element is stopped.
 
-#### SLAnalytics - Automatic incident tracking: Focus value updates will no longer be taken into account when determining whether the alarm storm threshold was exceeded [ID_35545]
+#### SLAnalytics - Automatic incident tracking: Focus value updates will no longer be taken into account when determining whether the maximum group event rate was exceeded [ID_35545]
 
 <!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
 
-From now on, focus value updates will no longer be taken into account when determining whether the alarm storm threshold was exceeded.
+From now on, focus value updates will no longer be taken into account when determining whether the *Maximum group event rate* was exceeded.
 
 ### Fixes
 
