@@ -138,6 +138,14 @@ When you try to create a trend pattern tag, an error message will appear when th
 
 From now on, a slightly larger number of missing values will be allowed will you create a trend pattern tag.
 
+#### Trending: Check marks will no longer appear in front of related parameters after adding them to the trend graph [ID_35518]
+
+<!-- MR 10.4.0 - FR 10.3.3 -->
+
+In the top-right corner of a trend graph, a light bulb icon appears when DataMiner finds parameters that are related to the parameters shown in the trend graph. Clicking this light bulb icon allows you to add one or more of those related parameters to the trend graph you are viewing.
+
+Up to now, when you clicked one of those related parameters in order to add it to the trend graph, a check mark would appear in front of it. From now on, check marks will no longer appear in front of related parameters after selecting them.
+
 #### DataMiner Cube - Alarm Console: No longer possible to enable the 'Automatic incident tracking' option for a history tab [ID_35556]
 
 <!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
@@ -277,14 +285,6 @@ When you had configured DataMiner Cube to connect using gRPC (by specifying `typ
 <!-- MR 10.4.0 - FR 10.3.3 -->
 
 When you clicked a suggestion alarm, in some cases, the trend graph would be loaded but the change points and the patterns incorrectly would not.
-
-#### Trending: No check mark would appear in front of a related parameter after adding it to the trend graph [ID_35518]
-
-<!-- MR 10.4.0 - FR 10.3.3 -->
-
-In the top-right corner of a trend graph, a light bulb icon appears when DataMiner finds parameters that are related to the parameters shown in the trend graph. Clicking this light bulb icon allows you to add one or more of those related parameters to the trend graph you are viewing.
-
-However, in some cases, when you clicked one of those related parameters in order to add it to the trend graph, no check mark would appear in front of it.
 
 #### EPM cards: Collector pages would not be loaded [ID_35523]
 
