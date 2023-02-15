@@ -455,6 +455,7 @@ uiBuilder.AppendBlock(blockItem);
 > - The `AutomationTimeUpDownOptions` property `UpdateValueOnEnter` is not supported in Cube.
 > - The `AutomationTimeUpDownOptions` property `FractionalSecondsDigitsCount` is only supported in Cube and should be within a range of 0 to 3.
 > - When the initial value is set to an empty string or null. A default value of one hour will be filled in when displaying the UI in Cube. In low code web apps, this will be zero (00:00:00).
+> - The time span values are returned in the constant invariant format. (E.g. "3.17:25:30.5569124")
 
 ## TreeView
 
