@@ -11,12 +11,6 @@ uid: General_Main_Release_10.4.0_changes
 
 ### Enhancements
 
-#### Security enhancements [ID_35331]
-
-<!-- RN 35331: MR 10.4.0 - FR 10.3.3 -->
-
-A number of security enhancements have been made.
-
 #### More detailed logging when the certificate chain is invalid while connecting to Cassandra [ID_34822]
 
 <!-- MR 10.4.0 - FR 10.3.2 -->
@@ -25,23 +19,11 @@ More detailed information will now be added to the `SLDBConnection.txt` log file
 
 Log entry syntax: `Certificate chain error: {chainStatus.Status}, details: {chainStatus.StatusInformation}`
 
-#### SLAnalytics: Number of 'GetParameterMessages' requests has been optimized [ID_34936]
-
-<!-- MR 10.4.0 - FR 10.3.1 -->
-
-The number of *GetParameterMessages* sent by SLAnalytics in order to check whether a trended table parameter is still active has been optimized.
-
 #### SLAnalytics - Proactive cap detection: Enhanced accuracy when generating alarm predictions [ID_35080]
 
 <!-- MR 10.4.0 - FR 10.3.2 -->
 
 Because of a number of enhancements, overall accuracy has increased when generating alarm predictions.
-
-#### SLAnalytics - Behavioral anomaly detection : More accurate change point time ranges [ID_35121]
-
-<!-- MR 10.4.0 - FR 10.3.2 -->
-
-Because of a number of enhancements, behavioral changes of the type "level shift", "trend change" and "variance change" will now have a more accurate time range when the change in behavior is sufficiently clear.
 
 #### DataMiner Object Models: DomInstanceButtonDefinitions can only reference a single action [ID_35156]
 
@@ -60,11 +42,16 @@ Also, when using the DomBehaviorDefinition inheritance system, the server-side l
 
 From now on, all custom CollectorConfig XML files will be synchronized across the DataMiner cluster.
 
-#### SLAnalytics - Pattern matching: When a pattern is detected on a DVE child element the suggestion event will now be generated on that same DVE child element [ID_35264]
+#### Cassandra Cluster: Enhanced query performance [ID_35247]
 
-<!-- MR 10.4.0 - FR 10.3.2 -->
+<!-- MR 10.4.0 - FR 10.3.3 -->
 
-When a trend pattern was detected on a DVE child element, up to now, the suggestion event would be generated on the parent element. From now on, it will be generated on the child element instead.
+Previously, queries against Cassandra Cluster would always be executed with a page size of 1000, even when the limit defined in the query was smaller than 1000. This resulted in excess data being return. From now on, the page size will be adjusted according to the limit defined in the query if it is lower than the default page size.
+
+This change will considerably improve overall query performance, especially when retrieving trend data.
+
+> [!NOTE]
+> This change will not enhance performance when requesting trend data for an element that has no trend data points before the requested window. In cases like this, the full two-year range of shards will be queried to try and find an initial point.
 
 #### SLAnalytics - Pattern matching: Manually created tags will now be saved as pattern occurrences [ID_35299]
 
@@ -77,12 +64,6 @@ From now on, when you define a tag for pattern matching, the pattern you selecte
 <!-- MR 10.4.0 - FR 10.3.3 -->
 
 In the SLDataGateway process, a number of memory enhancements have been made with regard to the management of average trend data.
-
-#### SLAnalytics - Behavioral anomaly detection: Suggestion events and alarm events for a DVE child element will now be generated on that same DVE child element [ID_35332]
-
-<!-- MR 10.4.0 - FR 10.3.3 -->
-
-When a behavioral anomaly was detected on a DVE child element, up to now, the suggestion event or the alarm event would be generated on the parent element. From now on, it will be generated on the child element instead.
 
 #### Maps: Markers will now move more gradual when zooming [ID_35337]
 
@@ -116,7 +97,27 @@ During a DataMiner upgrade, Microsoft .NET 6.0 will now be installed if not inst
 
 The zoom range of a map can now be set by means of a slider.
 
+#### SLAnalytics - Automatic incident tracking: Enhanced performance when fetching relation information [ID_35414]
+
+<!-- MR 10.4.0 - FR 10.3.3 -->
+
+Because of a number of enhancements, overall performance has increased when fetching relation information for the automatic incident tracking feature.
+
+#### SLAnalytics - Behavioral anomaly detection: No longer available for discrete parameters [ID_35465]
+
+<!-- MR 10.4.0 - FR 10.3.3 -->
+
+From now on, anomaly detection will no longer be available for discrete parameters.
+
 ### Fixes
+
+#### Cassandra Cluster: Every DMA would incorrectly try to delete any possible old Cassandra compaction and repair tasks found in the entire DMS [ID_31923]
+
+<!-- MR 10.4.0 - FR 10.3.3 -->
+
+At start-up, every DataMiner Agent with a Cassandra Cluster configuration would incorrectly try to delete any possible old Cassandra compaction and repair tasks found in the entire DMS.
+
+From now on, at start-up, every DataMiner Agent with a Cassandra Cluster configuration will only delete the old Cassandra compaction and repair tasks found locally.
 
 #### Problem with Resource Manager when ResourceStorageType was not specified in Resource Manager settings [ID_34981]
 
@@ -131,3 +132,9 @@ In some cases, Resource Manager could throw a NullReferenceException when *Resou
 Using Okta as identity provider, it would incorrectly no longer be possible to read out signed assertions. Also, when the group claim setting is enabled in the *DataMiner.xml* file, the user will now be added to the correct groups.
 
 Up to now, in case of a claim mismatch, an exception would be thrown. From now on, an entry containing a clear message will be added to the *SLNet.txt* log file instead.
+
+#### SLAnalytics - Behavioral anomaly detection: Two identical behavioral anomaly alarms would incorrectly be created [ID_35511]
+
+<!-- MR 10.4.0 - FR 10.3.3 -->
+
+In some cases, two identical behavioral anomaly alarms would incorrectly be created.

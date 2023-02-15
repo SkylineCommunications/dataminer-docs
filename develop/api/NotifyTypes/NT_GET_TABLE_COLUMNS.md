@@ -7,23 +7,17 @@ uid: NT_GET_TABLE_COLUMNS
 Retrieves the selected columns of a table.
 
 ```csharp
-int tableID = 1000;
-uint[] columnIndexes = new uint[] { 0, 1 };
-object[] columns = (object[])protocol.NotifyProtocol(321, tableID, columnIndexes);
-
-if (columns != null && columns.Length == 2)
-{
-    object[] primaryKeyColumn = (object[])columns[0];
-    object[] valueColumn = (object[])columns[1];
-    
-    ////....
-}
+int tablePid = 1000;
+uint[] columnsToGetIdx = new uint[] { 0, 1 };
+object[] columns = (object[])protocol.NotifyProtocol(321, tablePid, columnsToGetIdx);
+object[] primaryKeyColumn = (object[])columns[0];
+object[] valueColumn = (object[])columns[1];
 ```
 
 ## Parameters
 
-- tableID (int): ID of the table parameter.
-- columnIndexes (uint[]): Indexes of the columns that need to be retrieved.
+- tablePid (int): ID of the table parameter.
+- columnsToGetIdx (uint[]): IDXs of the columns that need to be retrieved.
 
 ## Return Value
 

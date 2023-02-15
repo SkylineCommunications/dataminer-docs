@@ -2,9 +2,7 @@
 uid: Benefits_DevOps_Professionals_Program
 ---
 
-# Benefits attached to the DataMiner DevOps Professional Program
-
-## Benefits
+# Benefits
 
 By creating value for the DataMiner community, you earn DevOps Points. Not only do these points determine your [DevOps Professional level](#accumulating-devops-points), they also allow you to enjoy the plentiful benefits attached to the DevOps Professional Program.
 
@@ -32,7 +30,7 @@ A short overview of all benefits that can be unlocked using DevOps Points:
 - Exclusive option to convert your DevOps Points to DataMiner Cloud Credits or Professional Service Credits
 
 > [!TIP]
-> You can find a more extensive overview of all benefits on [DatMiner Dojo](https://community.dataminer.services/dataminer-devops-professional-program/#benefits).
+> You can find a more extensive overview of all benefits on [DataMiner Dojo](https://community.dataminer.services/dataminer-devops-professional-program/#benefits).
 
 ## Accumulating DevOps Points
 
@@ -59,7 +57,7 @@ In general, the more active you are in the DataMiner Dojo community and the more
 
   Point system:
 
-  - **Correct a spelling or grammar mistake**: Spotted a typo while browsing the documentation? Click the "improve this doc" button in the top-right corner and correct it yourself. **50 points**
+  - **Correct a spelling or grammar mistake**: Spotted a typo while browsing the documentation? Click the "propose changes" button in the top-right corner and correct it yourself. **25 points**
   
   - **Add missing information**: Noticed something missing halfway through reading a page on docs.dataminer.services? Add it yourself and earn up to... **300 points**
 

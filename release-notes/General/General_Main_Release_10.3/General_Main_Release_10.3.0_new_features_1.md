@@ -226,6 +226,59 @@ Process:
 
 If an incident (also known as an alarm group) is cleared manually, any clearable base alarms of that incident will now also be cleared. This way, this behavior is consistent with the standard behavior for Correlation alarms.
 
+#### Client-server communication: gRPC instead of .NET Remoting [ID_34797] [ID_34983]
+
+<!-- MR 10.3.0 - FR 10.3.2 -->
+
+Up to now, DataMiner clients and servers communicated with each other using the *.NET Remoting* protocol. From now on, they are also able to communicate with each other via an *API Gateway* module using *gRPC* connections, which are much more secure. For example, as to the use of IP ports, *gRPC* uses the standard port 443, whereas *.NET Remoting* uses the non-standard port 8004. Moreover, the *API Gateway* module is able to restart itself during operation and to automatically recover the connections to clients and SLNet.
+
+When you upgrade DataMiner, the *API Gateway* module will automatically be installed in the `C:\Program Files\Skyline Communications\DataMiner APIGateway\` folder. All logging and program-specific data associated with the *API Gateway* module will be stored in the `C:\ProgramData\Skyline Communications\DataMiner APIGateway\`.
+
+> [!IMPORTANT]
+> For now, *gRPC* communication has to be explicitly enabled. If you do not enable it, Cube clients and DMAs will continue to communicate using the *.NET Remoting* protocol.
+
+##### Enabling the use of gRPC connections for communication between Cube and DMA
+
+Do the following on each DMA you want DataMiner Cube instances to connect to via *gRPC* by default.
+
+1. Open the `C:\Skyline DataMiner\Webpages\ConnectionSettings.txt` file.
+1. Set the `type` option to *GRPCConnection*.
+
+##### Enabling the use of gRPC connections for inter-DMA communication
+
+In the `DMS.xml` file, you must add redirects for each DMA that should communicate with the other DMAs in the DMS over *gRPC*. Failover Agents also need a redirect to each other's IP address.
+
+For example, in a cluster with two DMAs, with IPs 10.4.2.92 and 10.4.2.93, `DMS.xml` can be configured as follows.
+
+- On the DMA with IP 10.4.2.92:
+
+    ```xml
+      <DMS errorTime="30000" synchronized="true" xmlns="http://www.skyline.be/config/dms">
+         <Cluster name="pluto"/>
+         <DMA ip="10.4.2.92" timestamp=""/>
+         <DMA ip="10.4.2.93" id="35" timestamp="2023-01-05 01:24:38" contacted_once="TRUE" lostContact="2023-01-06 00:45:01"/>
+         <Redirects>
+            <Redirect to="10.4.2.93" via="https://10.4.2.93/APIGateway" user="MyUser" pwd="MyPassword"/>
+         </Redirects>
+      </DMS>
+    ```
+
+- On the DMA with IP 10.4.2.93:
+
+    ```xml
+      <DMS errorTime="30000" synchronized="true" xmlns="http://www.skyline.be/config/dms">
+         <Cluster name="pluto" synchronize="" timestamp="2022-12-13 12:48:29"/>
+         <DMA ip="10.4.2.93" timestamp="" contacted_once="" lostContact=""/>
+         <DMA ip="10.4.2.92" timestamp="2023-01-03 23:38:42" contacted_once="TRUE" lostContact="2023-01-06 01:02:00" id="69" uri=""/>
+         <Redirects>
+            <Redirect to="10.4.2.92" via="https://10.4.2.92/APIGateway" user="MyUser" pwd="MyPassword"/>
+         </Redirects>
+      </DMS>
+    ```
+
+> [!NOTE]
+> The passwords in the *pwd* attribute are encrypted and replaced with an encryption token when they are first read out by DataMiner.
+
 #### DataMiner Object Model: New 'ClientReadOnly' and 'AllowMultipleSections' properties [ID_35172]
 
 <!-- MR 10.3.0 - FR 10.3.3 -->
@@ -274,6 +327,14 @@ Rules that apply with regard to multiple sections:
 ##### Each section now has to contain all required fields
 
 Up to now, if there were multiple sections, it was allowed for some of those sections to not contain all the required fields. From now on, every section must contain each and every required field.
+
+#### SLAnalytics - Proactive cap detection: Using alarm templates assigned to DVE child elements [ID_35194]
+
+<!-- MR 10.3.0 - FR 10.3.2 -->
+
+When proactive cap detection was enabled, up to now, in case of DVE elements, the alarm template of the parent would always be used.
+
+From now on, if a DVE child element has an alarm template assigned to it, that alarm template will be used. Only when a DVE child element does not have an alarm template assigned to it will the alarm template of the parent be used.
 
 ### DMS Security
 

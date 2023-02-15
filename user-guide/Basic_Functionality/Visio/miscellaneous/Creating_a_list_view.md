@@ -45,24 +45,6 @@ To create a list view, add a shape on the Visio page with the following shape da
 
 The following options can be specified in the *ComponentOptions* shape data field:
 
-- **DisableInUseItems=true/false**: When a list view is in edit mode, all list items have a checkbox in front of them. If *DisableInUseItems* is set to “true”, the checkboxes that should not be accessible will be shown as disabled. Default: false.
-
-- **EditMode=true/false**: This option can be used to enable or disable the list view’s edit mode. If set to “true”, checkboxes will appear in front of every row.
-
-- **Recursive**: This option can be used to link a list view to another list view. If, for example, a *ListView* component lists the services, and two other *ListView* components list the source and destination resources available and in use for the services in the first *ListView* component, then the *Recursive* option will allow the source and destination resource *ListView* components to link to the service *ListView* component, supporting any type of service hierarchy.
-
-- **SessionVariablePrefix=\[prefix\]**: When you specify this option, a unique prefix is assigned to the session variable names. This option allows you to avoid having multiple *ListView* components using the exact same session variables.
-
-- **StartTime=** and **EndTime=**: Available from DataMiner 9.6.5 onwards. If the list view is configured to list bookings, you can use these shape data to specify a time range, using an invariant format, for example: MM/DD/YYYY HH:MM:SS. These date/time values will always be **interpreted as UTC date/time values**. If these shape data are not specified, the following values are used by default:
-
-  - StartTime = NOW - 1 day
-  - EndTime = NOW + 1 day
-
-  Note that *SetVar* controls of type *DateTime* will automatically return a date and time in the correct format. See [Creating a DateTime control](xref:Adding_options_to_a_session_variable_control#creating-a-datetime-control). For more information on date and time format strings, see <https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings>.
-
-  > [!NOTE]
-  > If you use the *StartTime* and *EndTime* options for a *ListView* component with source *Reservations* or *Bookings*, the bookings in that time range will be added to the ones already present in the cache. If other bookings were already in the cache, these will be included in the list too. If you only want to include bookings from a specific time range, use a *Filter* shape data field instead.
-
 - **ColorRows=true/false**: Available from DataMiner 10.3.2/10.4.0 onwards. This option can be used to set the highlight color of the list view rows to the booking color. The booking color is a summary of the following reserved booking properties: *VisualForeground*, *VisualBackground*, *VisualSelectedForeground*, and *VisualSelectedBackground*. Each of those properties can be set to a string value representing a hexadecimal value, an (A)RGB value, or a predefined Windows color (the latter is not recommended). <!-- RN 35157 -->
 
   > [!NOTE]
@@ -76,6 +58,26 @@ The following options can be specified in the *ComponentOptions* shape data fiel
   >   | Mixed | #E5E5E5 (RGB: 229,229,229) |
   >   | Light | #E5E5E5 (RGB: 229,229,229) |
   >   | Black | #333333 (RGB: 51,51,51)    |
+
+- **DisableInUseItems=true/false**: When a list view is in edit mode, all list items have a checkbox in front of them. If *DisableInUseItems* is set to “true”, the checkboxes that should not be accessible will be shown as disabled. Default: false.
+
+- **EditMode=true/false**: This option can be used to enable or disable the list view’s edit mode. If set to “true”, checkboxes will appear in front of every row.
+
+- **Recursive**: This option can be used to link a list view to another list view. If, for example, a *ListView* component lists the services, and two other *ListView* components list the source and destination resources available and in use for the services in the first *ListView* component, then the *Recursive* option will allow the source and destination resource *ListView* components to link to the service *ListView* component, supporting any type of service hierarchy.
+
+- **SessionVariablePrefix=\[prefix\]**: When you specify this option, a unique prefix is assigned to the session variable names. This option allows you to avoid having multiple *ListView* components using the exact same session variables.
+
+- **SingleSelectionMode**: Available from DataMiner 10.3.4/10.4.0 onwards. By default, multiple rows can be selected in a list view (e.g. using the Ctrl or Shift key). With this option, you can set the selection mode of the list view to single instead, so that only one row can be selected at a time. <!-- RN 35320 -->
+
+- **StartTime=** and **EndTime=**: Available from DataMiner 9.6.5 onwards. If the list view is configured to list bookings, you can use these shape data to specify a time range, using an invariant format, for example: MM/DD/YYYY HH:MM:SS. These date/time values will always be **interpreted as UTC date/time values**. If these shape data are not specified, the following values are used by default:
+
+  - StartTime = NOW - 1 day
+  - EndTime = NOW + 1 day
+
+  Note that *SetVar* controls of type *DateTime* will automatically return a date and time in the correct format. See [Creating a DateTime control](xref:Adding_options_to_a_session_variable_control#creating-a-datetime-control). For more information on date and time format strings, see <https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings>.
+
+  > [!NOTE]
+  > If you use the *StartTime* and *EndTime* options for a *ListView* component with source *Reservations* or *Bookings*, the bookings in that time range will be added to the ones already present in the cache. If other bookings were already in the cache, these will be included in the list too. If you only want to include bookings from a specific time range, use a *Filter* shape data field instead.
 
 ## List view filters
 
@@ -327,7 +329,7 @@ The following session variables can be used in conjunction with the *ListView* c
   - Interrupted (6)
   - Canceled (7)
 
-- **ViewPort**: This session variable has to contain the time range that will be used when populating a dynamic list with bookings. Example: *5248460498427387904;5248491602427387904*.
+- **ViewPort**: This session variable has to contain the time range that will be used when populating a dynamic list with bookings. For more information, see [ViewPort](xref:Embedding_a_Resource_Manager_component#viewport).
 
 - **YAxisResources**: When the list is configured to show bookings, you can use this session variable to apply a filter. Example:
 
@@ -402,3 +404,31 @@ From DataMiner 10.0.0/10.0.2 onwards, when you manage the column configuration, 
 - **Date (invariant)**: Available from DataMiner 10.2.12/10.3.0 onwards. Expects a Date object, or a string representing a date in UTC time, in [invariant culture](https://learn.microsoft.com/en-us/dotnet/api/system.globalization.cultureinfo.invariantculture).
 
 - **Colored text**: This type is specifically intended for the *AlarmCount* column for services and elements. It visualizes the alarm count by means of text surrounded by a circle showing the alarm level color.
+
+## Copying list data to the Windows clipboard
+
+From DataMiner 10.3.3/10.4.0 onwards, the *ListView* component allows you to copy data from the list to the Windows clipboard.
+
+- To copy the contents of a single cell:
+
+  1. Right-click in the cell.
+
+  1. Choose *Copy \<cell contents\>*.
+
+  > [!NOTE]
+  > When you try to copy the contents of a single cell, the *Copy \<cell contents\>* command will only be available if that cell contains text.
+
+- To copy the contents of one or more rows:
+
+  1. Select the row(s).
+
+  1. Choose *Copy selected row(s)*.
+
+  > [!NOTE]
+  >
+  > - When you copy one or more rows, only cells that contain text will be included. For example, cells that only contain a colored rectangle will not be included.
+  > - The order of the columns will be identical to the order of the columns in the *ListView* component. Column visibility and column order can be configured using the component's column manager.
+
+The data copied to the Windows clipboard is split into a header section and a data section, separated by an empty line. The header section contains the column names, while the data section contains the actual row data.
+
+<!-- RN 35170 -->

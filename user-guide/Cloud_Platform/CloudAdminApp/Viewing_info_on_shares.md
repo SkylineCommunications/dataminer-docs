@@ -4,7 +4,7 @@ uid: Viewing_info_on_shares
 
 # Viewing information on shares
 
-In the DCP Admin app, you can view information about items that have been shared in the cloud from the selected DMS.
+In the Admin app, you can view information about items that have been shared via dataminer.services from the selected DMS.
 
 To do so:
 
@@ -17,9 +17,9 @@ To do so:
 
 1. In the pane on the left, under *DataMiner Systems*, select your DataMiner System and select the *Outgoing Shares* page.
 
-   This page lists all items that have been shared in the cloud from the selected DMS.
+   This page lists all items that have been shared via dataminer.services from the selected DMS.
 
    Click an item in the list to view more detailed information, including when the share was created and how long it will remain available.
 
 > [!NOTE]
-> Audit information about shares is available on the *Organization* > *Audit* page (see [Consulting DCP audit logs](xref:DCP_Auditing)).
+> Audit information about shares is available on the *Organization* > *Audit* page (see [Consulting dataminer.services audit logs](xref:DCP_Auditing)).

@@ -16,7 +16,6 @@ using Skyline.DataMiner.Net.Ticketing.Objects;
 using Skyline.DataMiner.Net.ToolsSpace.Collections;
 #if NETFRAMEWORK
 using System.Drawing.Design;
-using System.Windows.Forms.Design;
 #endif
 
 namespace Skyline.DataMiner.Net.Ticketing
@@ -508,7 +507,7 @@ namespace Skyline.DataMiner.Net.Ticketing
 
         public override UITypeEditorEditStyle GetEditStyle(ITypeDescriptorContext context)
         {
-            return null;
+            return 0;
         }
 
         public override object EditValue(ITypeDescriptorContext context, IServiceProvider provider, object value)

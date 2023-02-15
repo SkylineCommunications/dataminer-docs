@@ -45,7 +45,8 @@ Below is an overview of all other important properties:
 | Name | string | The name of the `FieldDescriptor`. |
 | IsOptional | bool | Determines whether a `FieldValue` must be present for this descriptor or if it is optional. |
 | IsHidden | bool | Determines whether this descriptor is hidden from the UI. |
-| IsReadonly | bool | Determines whether this descriptor can only be manipulated from scripts and not from the UI. |
+| IsReadonly | bool | Determines whether this descriptor can only be manipulated from scripts/API and not from the UI. |
+| Tooltip | string | Short description of the field that will be available as a tooltip in the UI. |
 | DefaultValue | IValueWrapper | The default value that will be used to pre-fill the field in the UI. |
 
 There are also special types of `FieldDescriptors` that are purpose-made to store a special value. These include:
@@ -121,7 +122,6 @@ The table below lists the properties of the `CustomSectionDefinition` object. (T
 |--|--|--|--|
 | ID | SectionDefinitionID | Yes | The ID of the `SectionDefinition`. |
 | Name | string | Yes | The name of the `SectionDefinition`. |
-| ReservationLinkInfo | ReservationLinkInfo | No | When a `Section` contains links to an SRM `ReservationInstance` object using the `ReservationFieldDescriptor`, this object describes more details about those links. This is currently not supported by any DOM UI. |
 
 > [!NOTE]
 > Adding and removing `FieldDescriptors` must be done using the `AddOrReplaceFieldDescriptor()` and `RemoveFieldDescriptor()` methods. You can also filter on the `FieldDescriptors` using the `FieldDescriptorIDs` or `FieldDescriptorNames` exposers (found on `SectionDefinitionExposers`).
@@ -133,8 +133,6 @@ The table below lists the properties of the `CustomSectionDefinition` object. (T
 - When you **update** a `SectionDefinition`:
 
   - You cannot remove `FieldDescriptors` from a `SectionDefinition` when a `DomInstance` already uses that definition.
-
-  - You cannot update the `BookingElementID` of the *ReservationLinkInfo* property when a `DomInstance` uses the `SectionDefinition`.
 
   - During an update, the properties of the previous and updated version of the `FieldDescriptor` are checked. The behavior of this check depends on the type of `FieldDescriptor`, but by default, the following properties can be changed freely:
 

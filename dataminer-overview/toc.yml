@@ -17,16 +17,23 @@
     - name: DataMiner platform - Empowering your digital transformation
       topicUid: Overview_Platform_intro
       items:
-        - name: Agility - the cornerstone of any successful data-driven media operation
+        - name: Agility
           topicUid: Overview_Platform_Agility
-        - name: Preparing your organization for the new data-driven future
+        - name: Preparing for the new data-driven future
           topicUid: Overview_Platform_Prepare
         - name: DataMiner Digital Transformation Suite
           topicUid: Overview_Platform_DTS_Suite
-        - name: Open software platform for any of your monitoring and orchestration needs
+        - name: Open software platform
           topicUid: Overview_Platform_Open_Platform
-    - name: DataMiner Cloud Platform
+    - name: dataminer.services
       topicUid: Overview_DCP
+      items:
+        - name: DevOps
+          topicUID: Overview_DevOps
+        - name: Platform Services
+          topicUID: Overview_Platform_services
+        - name: Collaboration
+          topicUID: Overview_Collaboration
     - name: Agile partnership
       topicUid: Overview_Agile_Partnership_intro
       items:
@@ -67,6 +74,8 @@
           topicUid: Overview_Support_upgrade_policy
         - name: Out-of-business-hours support
           topicUid: Overview_Out_Of_Business_Hours_Support
+        - name: CCA Support Services
+          topicUid: CCA_Support_Services
         - name: Support services agreement
           topicUid: Support_services_agreement
     - name: Compliance statements
@@ -93,18 +102,18 @@
     - name: DataMiner DevOps Professional Program
       topicUID: DataMiner_Devops_Professionals
       items:
-        - name: What is the DataMiner DevOps Professional Program?
+        - name: What is it?
           topicUID: What_is_the_DevOps_Professionals_Program
-        - name: Benefits attached to the DataMiner DevOps Professional Program
+        - name: Benefits
           topicUID: Benefits_DevOps_Professionals_Program
-        - name: Continuous learning program -  skill sets
+        - name: Required skill sets
           topicUID: Skill_Sets_DevOps_Professionals_Program
     - name: DataMiner DevOps Enablement Service
       topicUID: DataMiner_DevOps_Enablement
       items:
-        - name: What is the DataMiner DevOps Enablement?
+        - name: What is DevOps Enablement?
           topicUID: What_is_DataMiner_DevOps_Enablement
-        - name: DataMiner DevOps Enablement and the DataMiner DevOps Professional Program
+        - name: The DataMiner DevOps Professional Program
           topicUID: DevOps_Enablement_and_the_DevOps_Professional_program
     - name: Frequently asked questions
       topicUid: FAQs
@@ -153,5 +162,5 @@
         topicUID: FAQs_Pricing
       - name: Support Services
         topicUID: FAQs_Support_Services
-      - name: Cloud services
+      - name: dataminer.services
         topicUID: FAQ_DCP

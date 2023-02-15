@@ -2,9 +2,9 @@
 uid: Managing_DCP_keys
 ---
 
-# Managing DCP keys
+# Managing dataminer.services keys
 
-In the DCP Admin app, you can manage keys that can for example be used with the [GitHub action to deploy Automation scripts](xref:Deploying_Automation_scripts_from_a_GitHub_repository) to a cloud-connected DMS.
+In the Admin app, you can manage keys that can for example be used with the [GitHub action to deploy Automation scripts](xref:Deploying_Automation_scripts_from_a_GitHub_repository) to DMS that is connected to dataminer.services.
 
 To do so:
 
@@ -35,4 +35,4 @@ To do so:
 > Regenerating primary or secondary keys can also be done from the side panel.
 
 > [!NOTE]
-> Audit information about DCP keys is available on the *Organization* > *Audit* page (see [Consulting DCP audit logs](xref:DCP_Auditing)).
+> Audit information about dataminer.services keys is available on the *Organization* > *Audit* page (see [Consulting dataminer.services audit logs](xref:DCP_Auditing)).

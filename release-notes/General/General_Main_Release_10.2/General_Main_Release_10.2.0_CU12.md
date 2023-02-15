@@ -66,6 +66,44 @@ Leading spaces have been removed from the following port information fields:
 - SlowPoll
 - TimeoutTime
 
+#### SLSNMPAgent log entries will now include the alarm ID [ID_35404]
+
+<!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
+
+When an entry is added to the *SLSNMPAgent.txt* log file, in most cases, that entry will now include the alarm ID.
+
+Example:
+
+- Old format: `Received ACK from SNMP Manager SNMP - LFR`
+
+- New format: `Received ACK from SNMP Manager SNMP - LFR for alarm 239/4270232`
+
+#### Service & Resource Management: Enhanced performance when changing active function files [ID_35424]
+
+<!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
+
+Because of a number of enhancements, overall performance has increased when changing an active function file.
+
+Also, in the Cube UI, users will receive more concise feedback regarding the impact of the change. Up to now, they would receive a list of all items affected by the change. From now on, the list of affected items will only show up to 10 affected items per object type.
+
+#### Automation: Enhanced memory usage [ID_35502]
+
+<!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
+
+Because of a number of enhancements, overall memory usage of the SLAutomation process has improved.
+
+#### Web apps: Enhanced performance when opening a web app [ID_35549]
+
+<!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
+
+Because DataMiner web apps will now be passed to client machines as compressed files, overall performance has increased when opening a web app.
+
+#### DataMiner Cube - Alarm Console: No longer possible to enable the 'Automatic incident tracking' option for a history tab [ID_35556]
+
+<!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
+
+From now on, it is no longer possible to enable the *Automatic incident tracking* option for a history tab.
+
 ### Fixes
 
 #### DataMiner Taskbar Utility: Problem when stopping DataMiner [ID_34790]
@@ -140,6 +178,12 @@ From now on, when the `<DBServer>` element contains multiple host addresses incl
 
 In some cases, the SLDataGateway process could end up with an excessive number of *HealthMonitor.Refresh* threads.
 
+#### Some agents in the cluster would incorrectly remove the run-time hosting agent info they had stored for another agent [ID_35287]
+
+<!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
+
+When run-time connections were being set up between agents or when a midnight sync was being executed, some agents in the DataMiner cluster would incorrectly remove the run-time hosting agent information they had stored for another agent in the same cluster.
+
 #### DataMiner Cube - ListView component: Column filter boxes incorrectly had autocomplete enabled [ID_35296]
 
 <!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
@@ -204,6 +248,14 @@ When, in a dashboard or a low-code app, a *Line & area chart* component was used
 
 In the latter case, it will now instead show a flat line indicating that the resource is not being used.
 
+#### DataMiner Cube - EPM: Read and write visualization of single-value EPM parameters would incorrectly be displayed both [ID_35416]
+
+<!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
+
+On Data pages, in some cases, the read and write visualization of single-value EPM parameters would incorrectly be displayed both.
+
+From now on, each EPM parameter will only be displayed once. If a write parameter is available, it will be combined with the read parameter.
+
 #### DataMiner Cube - Spectrum analysis: Presets would not be loaded when opening a spectrum element while connected to a heavily loaded DMA [ID_35421]
 
 <!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
@@ -216,17 +268,41 @@ When you opened a spectrum element in a DataMiner Cube that was connected to a h
 
 SLDataGateway would not correctly return errors when querying SLA logger tables in a Cassandra Cluster, causing an error to occur in SLProtocol.
 
+#### Problem when sending northbound SNMP inform messages in chronological order [ID_35441]
+
+<!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
+
+When northbound SNMP inform messages were being sent in chronological order, an error could occur when sending those messages suddenly stopped.
+
+#### Low-code apps: Problem when creating a new draft version [ID_35446]
+
+<!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
+
+When, in a draft version of a low-code app, you opened the version panel and created a new draft, the previous draft version would incorrectly loaded instead of the published version.
+
 #### DataMiner Cube - DCF: Problem when trying to delete a DCF connection in the Properties window of an element [ID_35449]
 
 <!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
 
 When you tried to remove a DCF connection in the *Properties* window of an element, an exception would be thrown and the connection would not be removed when the destination element was stopped or paused.
 
+#### Dashboards app: Time range feeds would trigger components more often than required [ID_35460]
+
+<!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
+
+Time range feeds would trigger components more often than required, causing them to send an excessive number of requests.
+
 #### DataMiner Cube - Visual Overview: Problem when re-arranging dynamically positioned shapes [ID_35462]
 
 <!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
 
 When, in a Visio drawing, shapes have been positioned dynamically, you can re-arrange those shapes manually by switching to *Arrange* mode and re-arranging the shapes using drag-and-drop. In some cases, after you had re-arranged a number of shapes, a *NullReferenceException* could be thrown.
+
+#### DataMiner Cube - Visual Overview: Problem when right-clicking a dynamically positioned shape [ID_35463]
+
+<!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
+
+When, in a Visio drawing, you were re-arranging dynamically positioned shapes, an exception could be thrown when you right-clicked a shape to access its context menu.
 
 #### Automation: 'engine.RunClientProgram' overload with two parameters would incorrectly always be run synchronously [ID_35476]
 
@@ -237,3 +313,27 @@ An `engine.RunClientProgram` overload with two parameters, of which the second o
 ```csharp
 RunClientProgram(String applicationPath, bool waitForCompletion)
 ```
+
+#### DataMiner Cube - Alarm templates: Trending column in baseline editor would no longer show any icons [ID_35488]
+
+<!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
+
+When, while configuring an alarm template, you opened the baseline editor and selected the *Automatically update the baseline values* option, the *Trending* column would no longer show an icon when average trending was disabled for the parameter in question.
+
+#### Business Intelligence: Problem when correcting outages on an SLA with a week-based window [ID_35503]
+
+<!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
+
+When outages on an SLA with a week-based window were corrected, the *History Statistics Table* that started in the first 9 weeks of every year would incorrectly not get updated.
+
+#### DataMiner Cube - Service templates: Open service card would not be updated when the service template was re-applied [ID_35537]
+
+<!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
+
+When you updated an re-applied a service template while a card of a service created based on that particular service template was open, the data shown on the open service card would incorrectly not be updated.
+
+#### DataMiner Cube - Alarm Console: Alarm counters would start to show negative values when you enabled the 'Automatic incident tracking' option of an active alarms tab while a quick filter was applied [ID_35547]
+
+<!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
+
+When you enabled the *Automatic incident tracking* option of an active alarms tab while a quick filter was applied, in some cases, the alarm counters in the footer bar would incorrectly start to show negative values.

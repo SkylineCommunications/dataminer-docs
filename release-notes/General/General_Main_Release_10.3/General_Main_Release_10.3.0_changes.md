@@ -14,7 +14,7 @@ uid: General_Main_Release_10.3.0_changes
 
 ### Enhancements
 
-#### Security enhancements [ID_31045] [ID_31054] [ID_31761] [ID_32055] [ID_32566] [ID_33069] [ID_33078] [ID_33218] [ID_33365] [ID_33583] [ID_34723]
+#### Security enhancements [ID_31045] [ID_31054] [ID_31761] [ID_32055] [ID_32566] [ID_33069] [ID_33078] [ID_33218] [ID_33365] [ID_33583] [ID_34723] [ID_35331]
 
 A number of security enhancements have been made.
 
@@ -341,6 +341,12 @@ Because of a number of enhancements, the automatic evaluation of trend predictio
 
 Because of a number of enhancements, overall performance has increased when creating and updating bookings.
 
+#### SLAnalytics - Behavioral anomaly detection : More accurate change point time ranges [ID_35121]
+
+<!-- MR 10.3.0 - FR 10.3.2 -->
+
+Because of a number of enhancements, behavioral changes of the type "level shift", "trend change" and "variance change" will now have a more accurate time range when the change in behavior is sufficiently clear.
+
 #### Enhanced performance when updating a baseline or assigning an alarm template that contains conditional monitoring [ID_35171]
 
 <!-- MR 10.3.0 - FR 10.3.2 -->
@@ -358,6 +364,18 @@ Because of a number of enhancements, overall performance has increased when dele
 <!-- MR 10.3.0 - FR 10.3.2 -->
 
 Because of a number of enhancements, overall processing of "exception" or "other" parameter values by the SLAnalytics process has improved.
+
+#### SLAnalytics - Pattern matching: When a pattern is detected on a DVE child element the suggestion event will now be generated on that same DVE child element [ID_35264]
+
+<!-- MR 10.3.0 - FR 10.3.2 -->
+
+When a trend pattern was detected on a DVE child element, up to now, the suggestion event would be generated on the parent element. From now on, it will be generated on the child element instead.
+
+#### SLAnalytics - Behavioral anomaly detection: Suggestion events and alarm events for a DVE child element will now be generated on that same DVE child element [ID_35332]
+
+<!-- MR 10.3.0 - FR 10.3.3 -->
+
+When a behavioral anomaly was detected on a DVE child element, up to now, the suggestion event or the alarm event would be generated on the parent element. From now on, it will be generated on the child element instead.
 
 ### Fixes
 
@@ -673,3 +691,9 @@ When a GQI query retrieved the status of a DOM instance that had no status, the 
 If a DOM module is created without specifying *SecuritySettings*, the view permission is set to "None".
 
 Up to now, the check to determine whether a user had the view permission set to "None", would only return true for the Administrator or users in the Administrator group. From now on, when the required view permission is "None", permission checks will no longer be performed.
+
+#### NATSMaxPayloadException could be thrown when a client requested large amounts of data [ID_35306]
+
+<!-- MR 10.3.0 - FR 10.3.3 -->
+
+When a client requested large amounts of data, in some cases, a `NATSMaxPayloadException` could be thrown.
