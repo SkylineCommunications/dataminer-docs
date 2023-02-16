@@ -14,7 +14,7 @@ It shows the errors and warnings per element, listing the errors and warnings se
 This BPA test is available with the SRM Framework. You can [run it in System Center](xref:Running_BPA_tests) on the *Agents > BPA* tab.
 
 > [!NOTE]
-> The BPA can take over 30seconds to run, depending on the scale of the setup.
+> The BPA can take over 30 seconds to run, depending on the scale of the system.
 
 ## Metadata
 
