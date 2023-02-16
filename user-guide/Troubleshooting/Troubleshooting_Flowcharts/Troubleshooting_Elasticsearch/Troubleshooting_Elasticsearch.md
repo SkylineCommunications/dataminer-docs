@@ -32,7 +32,6 @@ RightClick --- |No| Guide
 click HOME "https://docs.dataminer.services/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Finding_a_Root_Cause.html"
 click Investigation "https://docs.dataminer.services/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Where_to_Start.html"
 click Cassandra "https://docs.dataminer.services/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Cassandra/Troubleshooting_Cassandra.html"
-click Elasticsearch "https://docs.dataminer.services/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Elasticsearch/Troubleshooting_Elasticsearch.html"
 click Guide "#elasticsearch-service-x64-has-stopped-working"
 %% Apply styles to blocks %%
 class Start,OK,Guide DarkBlue;

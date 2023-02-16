@@ -45,6 +45,7 @@ flowchart TD
     click ProcessFlowcharts "https://docs.dataminer.services/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Process_Identification/Troubleshooting_Process_Identification.html" "Process identification"
     click WhichDb "#identifying-the-general-database" "Identify the Database"
     click Cassandra "https://docs.dataminer.services/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Cassandra/Troubleshooting_Cassandra.html" "Troubleshooting Cassandra"
+    click Elasticsearch "https://docs.dataminer.services/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Elasticsearch/Troubleshooting_Elasticsearch.html"
     click Investigate "https://docs.dataminer.services/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Where_to_Start.html"
     %% Apply styles to blocks %%
     class START classTerminal;
