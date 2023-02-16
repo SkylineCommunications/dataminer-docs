@@ -291,6 +291,9 @@ When you click in the selection box in the *Condition* column, the following act
 
 From DataMiner 10.0.3 onwards, you can enable alarm monitoring on specific types of anomalies for parameters in an alarm template. If you enable this, an alarm is generated whenever an anomaly of the relevant type is detected for those parameters.
 
+> [!NOTE]
+> From DataMiner 10.3.3/10.4.0 onwards, anomaly detection is not available for discrete parameters.
+
 To enable or disable different types of anomaly alarm monitoring:
 
 1. Click the cogwheel button in the top-right corner of the alarm template editor.
