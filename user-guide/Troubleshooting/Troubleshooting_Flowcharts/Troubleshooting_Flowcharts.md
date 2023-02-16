@@ -12,7 +12,7 @@ uid: Troubleshooting_Flowcharts
 
   - [Critical issues](xref:Troubleshooting_Critical_Issues_Overview)
 
-  - [Cassandra](xref:Troubleshooting_Cassandra)
+  - [Databases](xref:Troubleshooting_Databases_Overview)
 
   - [Process identification](xref:Troubleshooting_Process_Identification)
 

@@ -26,6 +26,7 @@ flowchart TD
     critical([To Critical Issues<br>flowchart])
     ProcessFlowcharts([Process])
     Cassandra([Cassandra])
+    Elasticsearch([Elasticsearch])
     %% Connect blocks %%
     START --- CheckStartup
     CheckStartup ---|Yes| CHECK1
@@ -36,6 +37,7 @@ flowchart TD
     DatabaseFlowcharts ----|No|identify
     identify --- ProcessFlowcharts
     WhichDb --- Cassandra
+    WhichDb --- Elasticsearch
     %% Define hyperlinks %%
     click CHECK1 "#examples-of-critical-issues" "examples of critical issues"
     click critical "https://docs.dataminer.services/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Critical_Issues/Troubleshooting_Critical_Issues_Overview.html" "To critical issues flowchart"
@@ -47,7 +49,7 @@ flowchart TD
     %% Apply styles to blocks %%
     class START classTerminal;
     class WhichDb,DatabaseFlowcharts,CheckStartup,CHECK1,identify classDecision;
-    class Investigate,Cassandra,DMAStartupIssues,critical,ProcessFlowcharts classExternalRef;
+    class Investigate,Cassandra,Elasticsearch,DMAStartupIssues,critical,ProcessFlowcharts classExternalRef;
 </div>
 
 ## Examples of critical issues
