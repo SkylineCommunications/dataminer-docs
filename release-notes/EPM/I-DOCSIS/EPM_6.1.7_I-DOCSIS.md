@@ -77,4 +77,6 @@ In some cases, CCAP connectors could cause run-time errors. To prevent this, the
 
 #### Invalid ID in passive tables [ID_35659]
 
-When there were no passive files to be processed, there could be an empty row with ID -1 in the Tap table. To prevent this, the passive tables are now only filled in when the CCAP/collector pairs in the Registration table are present and CCAP elements are running. This way tables do not get updated with data from inactive elements or invalid CCAP/collector data.
+When there were no passive files to be processed, there could be an empty row with ID -1 in the Tap table. This happened when source elements contained an exception value that was used for grouping during merge actions. To prevent this, the table keys are now added first, and merge action results are limited so that no other keys are added afterwards.
+
+In addition, the passive tables are now only filled in when the CCAP/collector pairs in the Registration table are present and CCAP elements are running. This way tables do not get updated with data from inactive elements or invalid CCAP/collector data.
