@@ -56,10 +56,16 @@ When, in the search box in the middle of the Cube header bar, you enter the name
 
 However, when, in that context menu, you then selected *Protocols & Templates > Assign alarm template* or *Protocols & Templates > Assign trend template*, the available templates would not get loaded.
 
-#### DataMiner Cube: Problem when receiving a client-side notification from SLAnalytics while in alarm storm mode [ID_35596]
+#### DataMiner Cube: Problem when receiving a notification from SLAnalytics while in alarm storm mode [ID_35596]
 
 <!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
 
-When an error occurs in the SLAnalytics process, a client-side notification is sent to DataMiner Cube. However, an error could occur in DataMiner Cube when it received such a notification from SLAnalytics while in alarm storm mode.
+An error could occur in DataMiner Cube when it received a notification from SLAnalytics while in alarm storm mode.
 
 Also, from now on, DataMiner Cube will no longer group incident alarms into summary alarms while in alarm storm mode.
+
+#### DataMiner Cube: Pattern edit menu would incorrectly open when you resized the selected area in a trend graph [ID_35627]
+
+<!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
+
+When you resized the selected area in a trend graph, the pattern edit menu would incorrectly open, even when you were not allowed to create a pattern or when you had no intention of editing a pattern.
