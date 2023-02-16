@@ -44,7 +44,7 @@ There are no inconsistencies detected in the system.
 - `Could not find main element referenced by the following resources: {...}. `
 - `The ElementID is not unique.`
 - `Resource '...' (...):`
-    - `[Generic DVE Table] entry {...} - [DVE Name] has value '{..}', which is different from the linked resource function name '{...}'.`
+    - `[Generic DVE Table] entry {...} - [DVE Name] has value '{...}', which is different from the linked resource function name '{...}'.`
     - `[Generic DVE Table] entry {...} - [DVE Element] has the value '{...}', which is different from the linked resource DVE Element '{...}'.`
     - `[Generic DVE Table] entry {...} - [DVE State] has the value 'Enabled', but [DVE Element] '{...}' was not found in the DataMiner System even though it should be.`
     - `[Generic DVE Table] entry {...} - [DVE State] has the value 'Disabled', but [DVE Element] '{...}' is present in the DataMiner System even though it shouldn't be.`
@@ -75,6 +75,6 @@ In the message above, the exception message is included (e.g. "Access Denied"). 
 
 ## Limitations
 
-* Needs the SRM Framework
-* Needs a SRM license
-* The ResourceManager needs to be initialized
+* Needs the SRM Framework.
+* Needs an SRM license.
+* The ResourceManager needs to be initialized.
