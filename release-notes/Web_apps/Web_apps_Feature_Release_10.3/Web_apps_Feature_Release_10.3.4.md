@@ -20,6 +20,25 @@ uid: Web_apps_Feature_Release_10.3.4
 
 ### Enhancements
 
+#### Web Services API v1: Updated descriptions of GetAlarmHistory and GetAlarmDetails methods [ID_35651]
+
+<!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
+
+In the following interface files, the descriptions of the *GetAlarmHistory* and *GetAlarmDetails* methods have been updated:
+
+```txt
+http://DmaNameOrIpAddress/API/v1/soap.asmx
+http://DmaNameOrIpAddress/API/v1/json.asmx
+```
+
+New description of the *GetAlarmHistory* method:
+
+> Get the alarm history for the specified alarm (optional full tree request). Use root alarm ID with requestFullTree for the details of a cleared non-root alarm.
+
+New description of the *GetAlarmDetails* method:
+
+> Get the alarm details for the specified alarm (use GetAlarmHistory for the details of a cleared non-root alarm).
+
 ### Fixes
 
 #### Dashboards app: Problem with width of PDF reports [ID_35531]
