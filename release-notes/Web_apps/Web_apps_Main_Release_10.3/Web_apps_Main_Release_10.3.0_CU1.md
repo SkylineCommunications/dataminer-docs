@@ -12,6 +12,21 @@ uid: Web_apps_Main_Release_10.3.0_CU1
 
 ### Enhancements
 
+#### GQI - Parameter table: Timestamps will now be displayed using the time zone configured in ClientSettings.json [ID_35515]
+
+<!-- MR 10.3.0 [CU1] - FR 10.3.4 -->
+
+GQI queries against the following data sources will now return all parameter values of type date/time in the timezone configured in the *ClientSettings.json* file.
+
+- Get parameters for element where
+- Get parameter table by alias
+- Get parameter table by ID
+
+Up to now, these values were always displayed in UTC.
+
+> [!TIP]
+> See also: [Setting the default time zone for DataMiner web apps](xref:ClientSettings_json#setting-the-default-time-zone-for-dataminer-web-apps)
+
 #### Web Services API v1: Updated descriptions of GetAlarmHistory and GetAlarmDetails methods [ID_35651]
 
 <!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
