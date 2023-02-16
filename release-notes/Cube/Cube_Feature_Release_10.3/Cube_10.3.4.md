@@ -21,3 +21,11 @@ uid: Cube_Feature_Release_10.3.4
 ### Enhancements
 
 ### Fixes
+
+#### Visual Overview: Problem with EnableFollowMode option of Resource Manager timeline [ID_35528]
+
+<!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
+
+When you had specified the *EnableFollowMode* option in the *ComponentOptions* shape data field of a shape configured to display the Resource Manager timeline, in some cases, that option would incorrectly be disabled.
+
+From now on, when you activate the follow mode by specifying the *EnableFollowMode* option, the timeline will move along with the current time. When you navigate away from the line that represents now while follow mode is enabled, follow mode will temporarily be paused. As soon as you navigate back in view of the line that represents now, follow mode will be activated again.
