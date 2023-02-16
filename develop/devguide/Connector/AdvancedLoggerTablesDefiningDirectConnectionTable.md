@@ -11,7 +11,8 @@ In the [Param](xref:Protocol.Params.Param) element of the logger table, do the f
 - Set [ArrayOptions\@index](xref:Protocol.Params.Param.ArrayOptions-index) to `1`.
 - In [Database](xref:Protocol.Params.Param.Database), Set [IndexingOptions@enabled](xref:Protocol.Params.Param.Database.IndexingOptions-enabled) to `true` and [Connection.Type](xref:Protocol.Params.Param.Database.Connection.Type) to `Directconnection`.
 
-[!NOTE] RTDisplay-tag does not need to be set to true for the functionality of the offloading via DirectConnection. However, if you want to show the offloaded parameters in a Dashboard via GQI, the tag should be true to enable this read mechanism. 
+> [!NOTE]
+> The RTDisplay tag does not need to be set to true to offload via DirectConnection. However, if you want to show the offloaded parameters in a Dashboard via GQI, the tag should be true to enable this read mechanism.
 
 For example:
 
