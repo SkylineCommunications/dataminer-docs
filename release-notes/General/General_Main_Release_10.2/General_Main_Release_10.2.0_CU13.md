@@ -155,6 +155,14 @@ From now on, parameter update throttling can be disabled by setting the *Message
 </MaintenanceSettings>
 ```
 
+#### DataMiner Cube - Search box: Problem when loading templates after right-clicking an element and selecting 'Assign alarm template' or 'Assign trend template' [ID_35582]
+
+<!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
+
+When, in the search box in the middle of the Cube header bar, you enter the name of an element and right-click the suggested element, a context menu will open identical to that which opens when you click an element in the Surveyor.
+
+However, when, in that context menu, you then selected *Protocols & Templates > Assign alarm template* or *Protocols & Templates > Assign trend template*, the available templates would not get loaded.
+
 #### When retrieving the protocol of a DVE parent element, its alarm filter would not get returned correctly for some of its parameters that are exported as standalone parameters [ID_35607]
 
 <!-- MR 10.2.0 [CU13] - FR 10.3.4 -->
