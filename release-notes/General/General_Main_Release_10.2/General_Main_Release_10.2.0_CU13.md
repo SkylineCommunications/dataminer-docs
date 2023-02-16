@@ -163,6 +163,14 @@ When, in the search box in the middle of the Cube header bar, you enter the name
 
 However, when, in that context menu, you then selected *Protocols & Templates > Assign alarm template* or *Protocols & Templates > Assign trend template*, the available templates would not get loaded.
 
+#### DataMiner Cube: Problem when receiving a client-side notification from SLAnalytics while in alarm storm mode [ID_35596]
+
+<!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
+
+When an error occurs in the SLAnalytics process, a client-side notification is sent to DataMiner Cube. However, an error could occur in DataMiner Cube when it received such a notification from SLAnalytics while in alarm storm mode.
+
+Also, from now on, DataMiner Cube will no longer group incident alarms into summary alarms while in alarm storm mode.
+
 #### When retrieving the protocol of a DVE parent element, its alarm filter would not get returned correctly for some of its parameters that are exported as standalone parameters [ID_35607]
 
 <!-- MR 10.2.0 [CU13] - FR 10.3.4 -->
