@@ -14,7 +14,7 @@ It shows the errors and warnings per element, listing the errors and warnings se
 This BPA test is available with the SRM Framework. You can [run it in System Center](xref:Running_BPA_tests) on the *Agents > BPA* tab.
 
 > [!NOTE]
-> With bigger setups, it can take over 30 seconds to run the BPA.
+> The BPA can take over 30seconds to run, depending on the scale of the setup.
 
 ## Metadata
 
@@ -33,30 +33,30 @@ There are no inconsistencies detected in the system.
 
 ### Error
 
-- `[Generic DVE Table] entry {...} is configured with resource ID '{...}', which was not found in Resource Manager.`
-- `[Generic DVE Table] entry {...} is configured with a blank resource ID, so no matching resource could be found in the Resource Manager.`
-- `[Generic DVE Table] entry {...} is configured with the element name - function name combination '{...}.{...}', which is already used as the element name of element '{...}/{...}'.`
-- `[Generic DVE Table] entries [{...}] are configured with a duplicate DVE Name '{...}'.`
-- `The function name '{...}' of resource '{...}' ({...}) with [Generic DVE Table] primary key [{...}] is already used by one or more other function resources on the same parent element, with [Generic DVE Table] primary key(s) [...].`
-- `Resource '{...}' ({...}) has no primary key while it should have one.`
-- `Resource '{...}' ({...}) with [Generic DVE Table] primary key '{...}' could not be found in the [Generic DVE table].`
-- `The [Generic DVE Table] was empty, but the following resources refer to this element: Resource '{...}' ({...}).`
-- `Could not find main element referenced by the following resources: {...}. `
+- `[Generic DVE Table] entry {PK} is configured with resource ID '{ResourceID}', which was not found in Resource Manager.`
+- `[Generic DVE Table] entry {PK} is configured with a blank resource ID, so no matching resource could be found in the Resource Manager.`
+- `[Generic DVE Table] entry {PK} is configured with the element name - function name combination '{Name}.{Name}', which is already used as the element name of element '{DataMinerID}/{ElementID}'.`
+- `[Generic DVE Table] entries [{PKs}] are configured with a duplicate DVE Name '{Name}'.`
+- `The function name '{Name}' of resource '{Name}' ({GUID}) with [Generic DVE Table] primary key [{PK}] is already used by one or more other function resources on the same parent element, with [Generic DVE Table] primary key(s) [{PKs}].`
+- `Resource '{Name}' ({GUID}) has no primary key while it should have one.`
+- `Resource '{Name}' ({GUID}) with [Generic DVE Table] primary key '{PK}' could not be found in the [Generic DVE table].`
+- `The [Generic DVE Table] was empty, but the following resources refer to this element: Resource '{Name}' ({GUID}).`
+- `Could not find main element referenced by the following resources: {Names}. `
 - `The ElementID is not unique.`
-- `Resource '...' (...):`
-    - `[Generic DVE Table] entry {...} - [DVE Name] has value '{...}', which is different from the linked resource function name '{...}'.`
-    - `[Generic DVE Table] entry {...} - [DVE Element] has the value '{...}', which is different from the linked resource DVE Element '{...}'.`
-    - `[Generic DVE Table] entry {...} - [DVE State] has the value 'Enabled', but [DVE Element] '{...}' was not found in the DataMiner System even though it should be.`
-    - `[Generic DVE Table] entry {...} - [DVE State] has the value 'Disabled', but [DVE Element] '{...}' is present in the DataMiner System even though it shouldn't be.`
-    - `[Generic DVE Table] entry {...} - [DVE function GUID] has the value '{...}', which is different from the linked resource function GUID '{...}'.`
-    - `[Generic DVE Table] entry {...} - [DVE Link to Resource Manager] has the value '{...}', which is different from the linked resource ID '{...}'.`
-    - `[Generic DVE Table] entry {...} - The active function files for the protocol were switched, but [DVE function GUID] still matches the GUID of the function in a previous active function file('{...}') instead of the current active function file.`
+- `Resource '{Name}' ({GUID}):`
+    - `[Generic DVE Table] entry {PK} - [DVE Name] has value '{Name}', which is different from the linked resource function name '{Name}'.`
+    - `[Generic DVE Table] entry {PK} - [DVE Element] has the value '{Value}', which is different from the linked resource DVE Element '{DataMinerID}/{ElementID}'.`
+    - `[Generic DVE Table] entry {PK} - [DVE State] has the value 'Enabled', but [DVE Element] '{DataMinerID}/{ElementID}' was not found in the DataMiner System even though it should be.`
+    - `[Generic DVE Table] entry {PK} - [DVE State] has the value 'Disabled', but [DVE Element] '{DataMinerID}/{ElementID}' is present in the DataMiner System even though it shouldn't be.`
+    - `[Generic DVE Table] entry {PK} - [DVE function GUID] has the value '{GUID}', which is different from the linked resource function GUID '{GUID}'.`
+    - `[Generic DVE Table] entry {PK} - [DVE Link to Resource Manager] has the value '{Value}', which is different from the linked resource ID '{GUID}'.`
+    - `[Generic DVE Table] entry {PK} - The active function files for the protocol were switched, but [DVE function GUID] still matches the GUID of the function in a previous active function file('{GUID}') instead of the current active function file.`
 
 ### Warning
 
 - `Could not retrieve all elements.`
 - `Could not check resources of this element because the state is set to stopped.`
-- `No Linker table entry found for resource(s): {...} .`
+- `No Linker table entry found for resource(s): {Names & PKs} .`
 - `The ElementID is not unique.`
 
 
