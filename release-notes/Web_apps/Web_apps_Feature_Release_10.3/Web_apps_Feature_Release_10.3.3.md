@@ -204,7 +204,7 @@ Time range feeds would trigger components more often than required, causing them
 
 #### Web apps: An invalid value entered into a text box would incorrectly be replaced by the last valid value that was entered [ID_35489]
 
-<!-- MR 10.4.0 - FR 10.3.3 -->
+<!-- MR 10.3.0 [CU1] - FR 10.3.3 -->
 
 When you entered an invalid value into a text box, an error message would be displayed for a very short moment, and the invalid value would incorrectly be replaced by the last valid value that was entered.
 
@@ -216,12 +216,12 @@ Panels of which the *Fit to view* option was selected would incorrectly switch t
 
 #### Web apps: No longer possible to clear a radio button group [ID_35603]
 
-<!-- MR 10.4.0 - FR 10.3.3 [CU0] -->
+<!-- MR 10.3.0 [CU1] - FR 10.3.3 [CU0] -->
 
 It would incorrectly no longer be possible to clear a radio button group.
 
 #### Web apps: Auto-complete control could clear its content while you were entering a value [ID_35623]
 
-<!-- MR 10.4.0 - FR 10.3.3 [CU0] -->
+<!-- MR 10.3.0 [CU1] - FR 10.3.3 [CU0] -->
 
 In some cases, an auto-complete control could clear its content while you were entering a value.

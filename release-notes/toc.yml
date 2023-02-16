@@ -429,6 +429,8 @@
             topicUID: Web_apps_Main_Release_10.3.0_new_features
           - name: Changes
             topicUID: Web_apps_Main_Release_10.3.0_changes
+        - name: DataMiner web apps Main Release 10.3.0 CU1 - Preview
+          topicUid: Web_apps_Main_Release_10.3.0_CU1
       - name: Feature Release
         items:
         - name: DataMiner web apps Feature Release 10.3.4 - Preview
