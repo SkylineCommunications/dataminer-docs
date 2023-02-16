@@ -58,6 +58,14 @@ When an EPM element was stopped, in some rare cases, an error could occur in SLE
 
 In some cases, an error could occur in the SLAnalytics process after a DVE parent element had been deleted.
 
+#### Dashboards app: Problem with width of PDF reports [ID_35531]
+
+<!-- MR 10.2.0 [CU13] - FR 10.3.4 -->
+
+When a PDF report was generated via Automation or Scheduler, in some cases, its width would be set incorrectly.
+
+Also, in some cases, the left and right padding of PDF reports generated via Automation, Scheduler and the Dashboards app itself would be missing.
+
 #### Failover: Profile Manager would incorrectly not be initialized on the agent that was brought online [ID_35534]
 
 <!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
@@ -82,11 +90,23 @@ Error parsing SNMPv3 password for port: <port number> on element: <element name>
 
 Also, an error could occur in SLDataMiner when you tried to re-enter the SNMPv3 port settings.
 
+#### Low-code apps: Sidebar would incorrectly be displayed when there was only one visible page [ID_35544]
+
+<!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
+
+Up to now, whether the sidebar was displayed or not would incorrectly depend on the number of pages. From now on, it will depend on the number of visible pages. In other words, the sidebar will only be displayed when there are at least two visible pages.
+
 #### SLAnalytics - Automatic incident tracking: Alarm groups could incorrectly be created without a focus value [ID_35551]
 
 <!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
 
 In some cases, alarm groups could incorrectly be created without a focus value.
+
+#### Low-code apps: Clock components in a published low-code app would incorrectly only update when you moved the mouse [ID_35554]
+
+<!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
+
+Clock components in a published low-code app would incorrectly only update when you moved the mouse.
 
 #### Problem with parameter update throttling when subscribing to column parameters [ID_35578]
 
