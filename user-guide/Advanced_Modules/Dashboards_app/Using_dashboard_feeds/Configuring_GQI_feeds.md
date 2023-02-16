@@ -412,6 +412,11 @@ Joins two tables together. When you select this option, in the *Type* drop-down 
 
 The *Inner* type of join only includes rows if they match the condition. *Left* displays all rows from the first table (i.e. the table on the left) and only the matching rows from the other table. *Right* does the opposite. *Outer* displays first the non-matching rows from the left table, then the matching rows from both tables, then the non-matching rows from the right table.
 
+From DataMiner 10.3.3/10.4.0 onwards, the *Row by row* option allows you to first execute the first table, and then execute the other table for each row that matches the join condition. To do so, first add the `showAdvancedSettings=true` option to the dashboard URL. If the *Row by row* option is not enabled, the join will execute both tables once, and directly combine their results.
+
+> [!NOTE]
+> The *Row by row* option is only supported for *Inner* and *Left* type of joins.
+
 ### Select
 
 Displays the selected columns only. When you have selected the columns to display, you can apply another operator to refine the query.
