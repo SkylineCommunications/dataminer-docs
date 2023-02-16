@@ -15,6 +15,4 @@ Go to [Digital Transformation](https://skyline.be/digital-transformation) to fin
 - Augmented Operation, powered by AI
 
 > [!TIP]
-> See also:
->
-> - [Blog Post - One simple thing that can boost your Digital Transformation](https://skyline.be/skyline/news/one-simple-thing-can-boost-your-digital-transformation)
+> See also: [Blog Post - One simple thing that can boost your Digital Transformation](https://skyline.be/skyline/news/one-simple-thing-can-boost-your-digital-transformation)
