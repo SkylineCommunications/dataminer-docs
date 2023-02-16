@@ -74,59 +74,35 @@ namespace Skyline.DataMiner.Automation
 		/// </example>
 		public int Height { get; set; }
 
-        /// <summary>
-        /// Gets or sets the column with the highest number that has one or more components.
-        /// </summary>
-        /// <value>The column with the highest number that has one or more components.</value>
-        /// <example>
-        /// <code>
-        /// UIBuilder uib = new UIBuilder();
-        /// uib.MaxCol = 2;
-        /// </code>
-        /// </example>
-        public int MaxCol { get; set; }
+		/// <summary>
+		/// Gets or sets the maximum height (in pixels) of the dialog box.
+		/// </summary>
+		/// <value>The minimum height (in pixels) of the dialog box.</value>
+		/// <remarks>
+		/// <note type="note">Interactive Automation scripts resize their width and height depending on which properties of the script are filled in (UIBuilder.Height, .Width, .MinHeight, .MinWidth). If nothing is defined in the script, a default width and height of 650px by 650px will be applied.</note>
+		/// </remarks>
+		/// <example>
+		/// <code>
+		/// UIBuilder uib = new UIBuilder();
+		/// uib.MaxHeight = 400;
+		/// </code>
+		/// </example>
+		public int MaxHeight { get; set; }
 
-        /// <summary>
-        /// Gets or sets the maximum height (in pixels) of the dialog box.
-        /// </summary>
-        /// <value>The minimum height (in pixels) of the dialog box.</value>
-        /// <remarks>
-        /// <note type="note">Interactive Automation scripts resize their width and height depending on which properties of the script are filled in (UIBuilder.Height, .Width, .MinHeight, .MinWidth). If nothing is defined in the script, a default width and height of 650px by 650px will be applied.</note>
-        /// </remarks>
-        /// <example>
-        /// <code>
-        /// UIBuilder uib = new UIBuilder();
-        /// uib.MaxHeight = 400;
-        /// </code>
-        /// </example>
-        public int MaxHeight { get; set; }
-
-        /// <summary>
-        /// Gets or sets the row with the highest number that has one or more components.
-        /// </summary>
-        /// <value>The row with the highest number that has one or more components.</value>
-        /// <example>
-        /// <code>
-        /// UIBuilder uib = new UIBuilder();
-        /// uib.MaxRow = 2;
-        /// </code>
-        /// </example>
-        public int MaxRow { get; set; }
-
-        /// <summary>
-        /// Gets or sets the maximum width (in pixels) of the dialog box.
-        /// </summary>
-        /// <value>The maximum width (in pixels) of the dialog box.</value>
-        /// <remarks>
-        /// <note type="note" >Interactive Automation scripts resize their width and height depending on which properties of the script are filled in (UIBuilder.Height, .Width, .MinHeight, .MinWidth). If nothing is defined in the script, a default width and height of 650px by 650px will be applied.</note>
-        /// </remarks>
-        /// <example>
-        /// <code>
-        /// UIBuilder uib = new UIBuilder();
-        /// uib.MaxWidth = 500;
-        /// </code>
-        /// </example>
-        public int MaxWidth { get; set; }
+		/// <summary>
+		/// Gets or sets the maximum width (in pixels) of the dialog box.
+		/// </summary>
+		/// <value>The maximum width (in pixels) of the dialog box.</value>
+		/// <remarks>
+		/// <note type="note" >Interactive Automation scripts resize their width and height depending on which properties of the script are filled in (UIBuilder.Height, .Width, .MinHeight, .MinWidth). If nothing is defined in the script, a default width and height of 650px by 650px will be applied.</note>
+		/// </remarks>
+		/// <example>
+		/// <code>
+		/// UIBuilder uib = new UIBuilder();
+		/// uib.MaxWidth = 500;
+		/// </code>
+		/// </example>
+		public int MaxWidth { get; set; }
 
 		/// <summary>
 		/// Gets or sets the minimum height (in pixels) of the dialog box.
@@ -158,18 +134,18 @@ namespace Skyline.DataMiner.Automation
 		/// </example>
 		public int MinWidth { get; set; }
 
-        /// <summary>
-        /// Gets or sets a value indicating whether the dialog box expects some action from the user (e.g. clicking a button, selecting a checkbox, selecting an entry in a selection box, etc.).
-        /// </summary>
-        /// <value><c>true</c> if the dialog box expects some action from the user; otherwise, <c>false</c>.</value>
-        /// <example>
-        /// <code>
-        /// UIBuilder uib = new UIBuilder();
-        /// // ...
-        /// uib.RequireResponse = true;
-        /// </code>
-        /// </example>
-        public bool RequireResponse { get; set; }
+		/// <summary>
+		/// Gets or sets a value indicating whether the dialog box expects some action from the user (e.g. clicking a button, selecting a checkbox, selecting an entry in a selection box, etc.).
+		/// </summary>
+		/// <value><c>true</c> if the dialog box expects some action from the user; otherwise, <c>false</c>.</value>
+		/// <example>
+		/// <code>
+		/// UIBuilder uib = new UIBuilder();
+		/// // ...
+		/// uib.RequireResponse = true;
+		/// </code>
+		/// </example>
+		public bool RequireResponse { get; set; }
 
 		/// <summary>
 		/// Gets or sets the height (in pixels) of all rows of the dialog box grid, separated by semicolons.
@@ -215,32 +191,20 @@ namespace Skyline.DataMiner.Automation
 		/// </example>
 		public string Title { get; set; }
 
-        /// <summary>
-        /// Gets or sets the rows and/or columns are defined using grid-row-defs and grid-column-defs.
-        /// </summary>
-        /// <value><c>true</c> if the rows and/or columns are defined using grid-row-defs and grid-column-defs; otherwise, <c>false</c>.</value>
-        /// <example>
-        /// <code>
-        /// UIBuilder uib = new UIBuilder();
-        /// uib.IsGridLayout = true;
-        /// </code>
-        /// </example>
-        public bool IsGridLayout { get; set; }
-
-        /// <summary>
-        /// Gets or sets the fixed width (in pixels) of the dialog box.
-        /// </summary>
-        /// <value>The fixed width (in pixels) of the dialog box.</value>
-        /// <remarks>
-        /// <para>Note: Interactive Automation scripts resize their width and height depending on which properties of the script are filled in (UIBuilder.Height, .Width, .MinHeight, .MinWidth). If nothing is defined in the script, a default width and height of 650px by 650px will be applied.</para>
-        /// </remarks>
-        /// <example>
-        /// <code>
-        /// UIBuilder uib = new UIBuilder();
-        /// uib.Width = 500;
-        /// </code>
-        /// </example>
-        public int Width { get; set; }
+		/// <summary>
+		/// Gets or sets the fixed width (in pixels) of the dialog box.
+		/// </summary>
+		/// <value>The fixed width (in pixels) of the dialog box.</value>
+		/// <remarks>
+		/// <para>Note: Interactive Automation scripts resize their width and height depending on which properties of the script are filled in (UIBuilder.Height, .Width, .MinHeight, .MinWidth). If nothing is defined in the script, a default width and height of 650px by 650px will be applied.</para>
+		/// </remarks>
+		/// <example>
+		/// <code>
+		/// UIBuilder uib = new UIBuilder();
+		/// uib.Width = 500;
+		/// </code>
+		/// </example>
+		public int Width { get; set; }
 
 		/// <summary>
 		/// Adds the specified text to this dialog box.
