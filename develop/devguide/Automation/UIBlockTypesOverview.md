@@ -429,7 +429,7 @@ Allows you to define an item displaying a time value.
 
 In the [ConfigOptions](xref:Skyline.DataMiner.Automation.UIBlockDefinition#Skyline_DataMiner_Automation_UIBlockDefinition_ConfigOptions), you can define the minimum and maximum time range.
 
-In this example, a timespan block is created with a minimum of 1 hour and a maximum of 2 days:
+In this example, a time span block is created with a minimum of 1 hour and a maximum of 2 days:
 
 ```csharp
 UIBlockDefinition blockItem = new UIBlockDefinition
@@ -449,7 +449,14 @@ uiBuilder.AppendBlock(blockItem);
 ```
 
 > [!NOTE]
-> From DataMiner 9.5.3 onwards, additional classes are available to define controls to select the date and/or time. See [AutomationConfigOptions class](xref:Skyline.DataMiner.Automation.AutomationConfigOptions).
+>
+> - From DataMiner 9.5.3 onwards, additional classes are available to define controls to select the date and/or time. See [AutomationConfigOptions class](xref:Skyline.DataMiner.Automation.AutomationConfigOptions).
+> - When the initial value of the time span exceeds 24 hours, an extra digit will be displayed that represents the days. This digit is by default hidden. You can also make it show up by using the up button of the spinner or pressing the Up arrow key on your keyboard when the current time span is 23:59:59.
+> - The `AutomationTimeUpDownOptions` property `AllowSpin` is not supported in the Low-Code Apps.
+> - The `AutomationTimeUpDownOptions` property `UpdateValueOnEnter` is not supported in Cube.
+> - The `AutomationTimeUpDownOptions` property `FractionalSecondsDigitsCount` is only supported in Cube and should be within a range of 0 to 3.
+> - When the initial value is set to an empty string or null, a default value of one hour will be displayed in Cube. In the Low-Code Apps, zero (00:00:00) will be displayed.
+> - The time span values are returned in the constant invariant format (e.g. "3.17:25:30.5569124").
 
 ## TreeView
 
