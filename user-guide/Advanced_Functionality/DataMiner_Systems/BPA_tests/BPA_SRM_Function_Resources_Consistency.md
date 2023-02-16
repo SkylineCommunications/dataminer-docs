@@ -13,6 +13,9 @@ It shows the errors and warnings per element, listing the errors and warnings se
 
 This BPA test is available with the SRM Framework. You can [run it in System Center](xref:Running_BPA_tests) on the *Agents > BPA* tab.
 
+> [!NOTE]
+> With bigger setups, it can take over 30 seconds to run the BPA.
+
 ## Metadata
 
 - Name: SRM Function Resources Consistency
@@ -65,7 +68,13 @@ These are the messages that can appear when the test fails to execute for unexpe
 
 In the message above, the exception message is included (e.g. "Access Denied"). The test result details contain the full exception text, if available.
 
+## Impact when issues detected
+
+* Impact: "Operation of the DataMiner System and SRM could be affected by this problem."
+* Action: "Try to update the resources to resolve the inconsistencies."
+
 ## Limitations
 
-Can take some time if the DMA has a lot of elements that have a lot of resources.
-
+* Needs the SRM Framework
+* Needs a SRM license
+* The ResourceManager needs to be initialized
