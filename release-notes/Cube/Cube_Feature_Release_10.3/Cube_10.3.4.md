@@ -20,6 +20,12 @@ uid: Cube_Feature_Release_10.3.4
 
 ### Enhancements
 
+#### ListView component: Rows with an identical value will additionally be sorted by Name [ID_35500]
+
+<!-- MR 10.3.0 [CU1] - FR 10.3.4 -->
+
+When, in a ListView component, you sort the rows by clicking a particular column header, from now on, all rows with an identical value in the column you sorted by will additionally be sorted by the *Name* column (in ascending order).
+
 ### Fixes
 
 #### Visual Overview: Problem with EnableFollowMode option of Resource Manager timeline [ID_35528]
@@ -50,4 +56,4 @@ Also, from now on, DataMiner Cube will no longer group incident alarms into summ
 
 <!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
 
-When you resized the selected area in a trend graph, the pattern edit menu would incorrectly open, even when you were not allowed to create a pattern or when you had no intention of editing a pattern.
+When you resized the selected area in a trend graph by dragging either the left or right selection boundary, the pattern edit menu would incorrectly open, even when you were not allowed to create a pattern or when you had no intention of editing a pattern.
