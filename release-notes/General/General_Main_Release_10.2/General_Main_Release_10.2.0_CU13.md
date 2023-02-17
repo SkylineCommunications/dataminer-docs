@@ -51,6 +51,12 @@ New description of the *GetAlarmDetails* method:
 
 ### Fixes
 
+#### Memory leak in SLNet after closing a client connection that had been using a "SLDataGateway.API" subscription set [ID_35319]
+
+<!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
+
+When a client connection that had been using a "SLDataGateway.API" subscription set was closed, in some rare cases, the subscription object memory would incorrectly not get cleaned up.
+
 #### Trending: Pattern matching tags could incorrectly be defined for discrete or string parameters [ID_35368]
 
 <!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.3 -->

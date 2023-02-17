@@ -38,6 +38,12 @@ From now on, focus value updates will no longer be taken into account when deter
 
 ### Fixes
 
+#### Memory leak in SLNet after closing a client connection that had been using a "SLDataGateway.API" subscription set [ID_35319]
+
+<!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
+
+When a client connection that had been using a "SLDataGateway.API" subscription set was closed, in some rare cases, the subscription object memory would incorrectly not get cleaned up.
+
 #### Problem with SLElement when stopping an EPM element [ID_35439]
 
 <!-- MR 10.2.0 [CU13]/10.3.0 [CU1]  - FR 10.3.3 -->
