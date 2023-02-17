@@ -329,7 +329,7 @@ From DataMiner 10.2.0/10.2.1 onwards, an *Update data* option is available in th
 
 ### Get parameter relations
 
-Available from DataMiner 10.3.3/10.4.0 onwards. Retrieves the parameter relationships that are stored in a model managed by the DataMiner Extension Module *ModelHost*.
+Available from DataMiner 10.3.3/10.4.0 onwards. Retrieves the parameter relationships that are stored in a model managed by the DataMiner Extension Module *ModelHost*. <!-- RN 35443 -->
 
 > [!NOTE]
 > *Get parameter relations* is only available when the *ModelHost* DxM is running.
