@@ -8,7 +8,7 @@ uid: Working_with_behavioral_anomaly_detection
 >
 > - This feature requires a general database of type "Cassandra".
 > - Anomaly detection is only available for numeric parameters that are not part of [partial tables](xref:Table_parameters#partial-tables). It is also limited to at most 100,000 parameters per DMA.
-> - From DataMiner 10.3.3/10.4.0 onwards, anomaly detection is not available for discrete parameters. <!-- RN 35465 -->
+> - Anomaly detection is not available for discrete parameters. <!-- RN 35465 -->
 > - You can enable or disable this feature via *System Center* > *System settings* > *analytics config*.
 
 > [!TIP]
