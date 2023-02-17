@@ -39,3 +39,7 @@ The ArtifactDeployer module is responsible for allowing users to deploy differen
 ### SupportAssistant
 
 The SupportAssistant module is responsible for features allowing Skyline Communications to provide better and faster support.
+
+### Modelhost
+
+The Modelhost module is responsible for allowing users to retrieve parameter relationship data on DataMiner Agents that are connected to dataminer.services, and have been configured to [offload alarm and change point events to the cloud](xref:Controlling_cloudfeed_data_offloads).
