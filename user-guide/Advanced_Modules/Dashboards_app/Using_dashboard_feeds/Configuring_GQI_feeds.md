@@ -313,7 +313,7 @@ Available from DataMiner 10.2.0/10.1.6 onwards. Retrieves a list of the DCF conn
 
 ### Get elements
 
-Retrieves the elements in the DataMiner System. From DataMiner 10.3.3/10.4.0 onwards, *Get elements* also returns alarm states.
+Retrieves the elements in the DataMiner System. From DataMiner 10.3.3/10.4.0 onwards, *Get elements* also returns alarm states. <!-- RN 35464 -->
 
 ### Get parameter table by alias
 
