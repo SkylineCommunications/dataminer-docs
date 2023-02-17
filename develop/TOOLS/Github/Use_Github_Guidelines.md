@@ -13,9 +13,9 @@ You can use GitHub to:
 - Collaborate on code with external users.
 
 > [!NOTE]
-> At present, **only Automation scripts** have actions available for packaging and deployment.
+> At present, **only Automation scripts** have workflows available for packaging and deployment.
 >
-> Automation scripts that are packaged with other artifacts ( Visio files , connectors, etc.) will not be able to use the GitHub actions, so we do not recommend using GitHub for those yet.
+> Automation scripts that are packaged with other artifacts (Visio files , connectors, etc.) will not be able to use the GitHub actions, so we do not recommend using GitHub for those yet.
 
 ## Creating an account in GitHub's Skyline organization
 
@@ -69,7 +69,7 @@ Here is a list of topics you should use:
 - dataminer-solution
 - dataminer-function
 - dataminer-automation-script
-- dataminer-dashboards
+- dataminer-dashboard
 
 If you have code for a specific project/customer, you should add a topic with the customer's name as well, e.g. `Skyline-Communications`. Always use a hyphen ("-") as a separator.
 
@@ -86,8 +86,6 @@ An invite can then be sent to external users as "outside collaborators".
 
 Both **Skyline employees and external users** can access some workflow templates Skyline has made available.
 
-A list of [reusable workflows](https://github.com/SkylineCommunications/_ReusableWorkflows) in Github is available.
-
 These workflows will allow you to:
 
 - Build a solution
@@ -95,6 +93,14 @@ These workflows will allow you to:
 - Use SonarCloud
 - Compile to a DataMiner package
 - Deploy directly to a cloud-connected DataMiner Agent
+
+Please refer to [Workflows documentation on Github](https://docs.github.com/en/actions/using-workflows/about-workflows) and to our [workflows templates](https://github.com/SkylineCommunications/.github/tree/main/workflow-templates)
+
+For Automation, here is the [starter workflow](https://github.com/SkylineCommunications/.github/blob/main/workflow-templates/DataMiner-CICD-Automation.yml)
+
+First section of the starter workflow is the CI part and is referring to the [reusable workflow](https://github.com/SkylineCommunications/_ReusableWorkflows)
+
+The second section (optional and commented out by default) is referring to the CD part to deploy the Dataminer package to a cloud-connected Dataminer Agent.
 
 ## Using GitHub actions to publish to a cloud-connected DataMiner Agent
 
