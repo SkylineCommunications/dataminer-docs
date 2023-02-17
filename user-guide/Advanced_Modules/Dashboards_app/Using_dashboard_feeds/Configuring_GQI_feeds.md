@@ -335,7 +335,7 @@ From DataMiner 10.2.0/10.1.5 onwards, if a protocol and version have been specif
 
 ### Get services
 
-Retrieves the services in the DataMiner System. From DataMiner 10.3.3/10.4.0 onwards, *Get services* also returns alarm states.
+Retrieves the services in the DataMiner System. From DataMiner 10.3.3/10.4.0 onwards, *Get services* also returns alarm states. <!-- RN 35464 -->
 
 ### Get view relations
 
