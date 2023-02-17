@@ -110,5 +110,5 @@ When a client retrieved the protocol of a DVE parent element, its alarm filter w
 A number of alarm-related issues have been fixed:
 
 - In some cases, the alarm that closed an alarm tree would incorrectly not contain the root GUID.
-- If no comment was passed when an alarm was cleared, in some cases, the comment of the previous alarm would incorrectly be added to the closing alarm.
+- If no comment was passed when an alarm was cleared, in some cases, the comment of the previous alarm would incorrectly not be added to the closing alarm.
 - In some cases, an incorrect `Alarm didn't have the correct format.` error would be logged.

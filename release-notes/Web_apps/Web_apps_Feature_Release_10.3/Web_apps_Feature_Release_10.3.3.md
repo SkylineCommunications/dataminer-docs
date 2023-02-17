@@ -89,9 +89,6 @@ Because of a number of enhancements, overall query performance has increased whe
 - Get trend data patterns
 - Get trend data pattern events
 
-> [!NOTE]
-> Sorting by calculated columns is not supported.
-
 #### Web apps: Enhanced color picker [ID_35276]
 
 <!-- MR 10.4.0 - FR 10.3.3 -->

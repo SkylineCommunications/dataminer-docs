@@ -55,9 +55,6 @@ Because of a number of enhancements, overall query performance has increased whe
 - Get trend data patterns
 - Get trend data pattern events
 
-> [!NOTE]
-> Sorting by calculated columns is not supported.
-
 #### Web apps: Button styles used in interactive Automation script components have been aligned with those used in low-code app components [ID_35076]
 
 <!-- MR 10.4.0 - FR 10.3.2 -->
