@@ -102,3 +102,13 @@ From now on, parameter update throttling can be disabled by setting the *Message
 <!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
 
 When a client retrieved the protocol of a DVE parent element, its alarm filter would not get returned correctly for some of its parameters that are exported as standalone parameters.
+
+#### A number of alarm-related issues have been fixed [ID_35611]
+
+<!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
+
+A number of alarm-related issues have been fixed:
+
+- In some cases, the alarm that closed an alarm tree would incorrectly not contain the root GUID.
+- If no comment was passed when an alarm was cleared, in some cases, the comment of the previous alarm would incorrectly be added to the closing alarm.
+- In some cases, an incorrect `Alarm didn't have the correct format.` error would be logged.
