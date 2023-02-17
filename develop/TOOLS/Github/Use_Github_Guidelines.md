@@ -42,7 +42,7 @@ For a script, the correct license is **MIT**.
 
 The repository name should look like this (using "-" as separator): **{customerAcronym}-{itemType}-{itemName}**
 
-- For a list of **customer acronyms**, refer to [DCP](https://dcp.skyline.be/Lists/Customers/AllItems.aspx). For generic repositories, use Skyline acronym.
+- For a list of **customer acronyms**, refer to [DCP](https://dcp.skyline.be/Lists/Customers/AllItems.aspx). For generic repositories, use Skyline Communications acronym (SLC).
 
 - The following **item types** are currently supported (this list is to be extended):
 
