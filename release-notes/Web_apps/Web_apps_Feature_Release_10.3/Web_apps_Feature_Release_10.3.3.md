@@ -78,6 +78,20 @@ It can be used to retrieve the parameter relationships that are stored in a mode
 
 ### Enhancements
 
+#### GQI: Enhanced performance when using Sort operators in conjunction with alarm, change point, trend pattern and trend pattern occurrence data sources [ID_35031]
+
+<!-- MR 10.4.0 - FR 10.3.3 -->
+
+Because of a number of enhancements, overall query performance has increased when using Sort operators in conjunction with the following data sources:
+
+- Get alarms
+- Get behavioral change events
+- Get trend data patterns
+- Get trend data pattern events
+
+> [!NOTE]
+> Sorting by calculated columns is not supported.
+
 #### Web apps: Enhanced color picker [ID_35276]
 
 <!-- MR 10.4.0 - FR 10.3.3 -->
