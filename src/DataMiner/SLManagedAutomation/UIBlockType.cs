@@ -92,7 +92,7 @@
 		/// </example>
 		CheckBox = 7,
 		/// <summary>
-		/// Calender control.
+		/// Calendar control.
 		/// </summary>
 		/// <example>
 		/// <code>
