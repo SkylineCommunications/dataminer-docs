@@ -104,6 +104,6 @@ For Automation, see [DataMiner CI/CD Automation](https://github.com/SkylineCommu
 
 ## Using GitHub actions to publish to a cloud-connected DataMiner Agent
 
-An action is publicly available on GitHub to deploy from a GitHub repository.
+An action [Skyline-DataMiner-Deploy-Action](https://github.com/SkylineCommunications/Skyline-DataMiner-Deploy-Action) is publicly available on GitHub to deploy from a GitHub repository.
 
 Refer to [Deploying Automation scripts from a GitHub repository](xref:Deploying_Automation_scripts_from_a_GitHub_repository) for more information.
