@@ -119,7 +119,9 @@ To configure the connection to an [Amazon Keyspaces database](xref:Amazon_Keyspa
    - **Keyspace prefix**: The name all Amazon Keyspaces will be prefixed with. This will be identical for all DMAs in the DMS.
 
      - Only alphanumeric characters are supported.
+
      - The prefix cannot start with a number.
+
      - The prefix has a maximum length of 11 characters.
 
    - **DB Server**: The URL of the [global endpoint](https://docs.aws.amazon.com/keyspaces/latest/devguide/programmatic.endpoints.html) of the region your Amazon Keyspaces cluster is in. (e.g. `cassandra.eu-north-1.amazonaws.com`).
