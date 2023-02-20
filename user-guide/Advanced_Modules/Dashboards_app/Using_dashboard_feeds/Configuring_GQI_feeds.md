@@ -327,6 +327,13 @@ From DataMiner 10.2.0/10.1.5 onwards, a *Use feed* checkbox is available that al
 
 From DataMiner 10.2.0/10.2.1 onwards, an *Update data* option is available in the *Settings* pane if you use this data source. When you enable this, the component will automatically refresh the data when changes are detected.
 
+### Get parameter relations
+
+Available from DataMiner 10.3.3/10.4.0 onwards. Retrieves the parameter relationships that are stored in a model managed by the DataMiner Extension Module *ModelHost*. <!-- RN 35443 -->
+
+> [!NOTE]
+> *Get parameter relations* is only available when the *ModelHost* DxM is running. However, at this point, the *ModelHost* DxM is not yet available.
+
 ### Get parameters for element where
 
 Retrieves the selected parameters for the specified protocol or the parameters linked to the specified profile definition. Note that if parameters are displayed based on a specific protocol, it is not possible to combine a table parameter with other parameters, and only column parameters from the same table can be displayed in the same query.
