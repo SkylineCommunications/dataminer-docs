@@ -221,6 +221,9 @@ In the top-right corner of a trend graph, a light bulb icon appears when DataMin
 
 Up to now, when you clicked one of those related parameters in order to add it to the trend graph, a check mark would appear in front of it. From now on, check marks will no longer appear in front of related parameters after selecting them.
 
+> [!NOTE]
+> Currently, the parameter relationship feature is still in preview.
+
 ### Fixes
 
 #### Profiles app: A profile instance would incorrectly list parameters that had been removed from the profile definition [ID_34679] [ID_34771]
