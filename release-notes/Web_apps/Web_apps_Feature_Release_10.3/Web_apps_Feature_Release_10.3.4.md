@@ -56,6 +56,22 @@ New description of the *GetAlarmDetails* method:
 
 ### Fixes
 
+#### Web apps - Interactive Automation scripts: Component of type 'Time' would not be displayed as a time span picker [ID_35435]
+
+<!-- MR 10.3.0 [CU1] - FR 10.3.4 -->
+
+In a web app, an interactive Automation script component of type `Time` with configuration options of type `AutomationTimeUpDownOptions` would incorrectly not be displayed as a time span picker.
+
+Also, a number of enhancements have been made:
+
+- In web app environments, configuration options of type `AutomationTimeUpDownOptions` now have a new `ShowTimeUnits`property. When this property is set to true, the component will display labels indicating the days, hours, minutes and seconds. Default setting: false
+
+- The hours, minutes and seconds of the time span component will get leading zeros after focus is lost.
+
+- In a web app environment, a calendar component will now always show the picker button (as in Cube).
+
+- When an interactive Automation script run in a web app environment contains executable components, a message will now be displayed, saying that executable components are not supported in web apps.
+
 #### Dashboards app: Problem with width of PDF reports [ID_35531]
 
 <!-- MR 10.2.0 [CU13] - FR 10.3.4 -->
