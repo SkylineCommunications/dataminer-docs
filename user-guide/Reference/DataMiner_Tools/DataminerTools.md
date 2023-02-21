@@ -8,6 +8,7 @@ This section provides information on the following tools:
 
 - [Alerter](xref:Alerter)
 - [Cassandra Cleaner](xref:Cassandra_Cleaner)
+- [Connection Check](xref:Connection_Check)
 - [DataMiner Comparison tool](xref:DataMinerComparisonTool)
 - [DataMiner Size tool](xref:DataMinerSizeTool)
 - [DataMiner Taskbar Utility](xref:DataMiner_Taskbar_Utility)
