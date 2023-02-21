@@ -218,3 +218,9 @@ Up to now, when the SLAnalytics process started, the entire focus data cache of 
 Also, when the SLAnalytics processes of different agents in the same cluster were restarted right before a full hour, it was possible to trigger the internal duplication of active alarms hosted on non-leader agents. This could, in turn, lead to an incorrect internal alarm state and incorrect incidents containing copies of the same alarm.
 
 From now on, the focus data cache will no longer be cleared when SLAnalytics process starts up. Instead, only the focus data associated with the alarms that are no longer active will be removed from the cache.
+
+#### DataMiner Cube - Alarm Console: Problem when a session variable was used in an alarm filter [ID_35681]
+
+<!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
+
+When you applied a filter to an alarm tab, no alarms would be shown when you had used a session variable in the filter.

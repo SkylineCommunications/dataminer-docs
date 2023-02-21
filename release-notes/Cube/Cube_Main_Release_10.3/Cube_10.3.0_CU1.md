@@ -24,6 +24,12 @@ The number of *GetParameterMessages* sent by SLAnalytics in order to check wheth
 
 When, in a ListView component, you sort the rows by clicking a particular column header, from now on, all rows with an identical value in the column you sorted by will additionally be sorted by the *Name* column (in ascending order).
 
+#### Bookings app: Default window of timeline area now set to '-8 hours <NOW> +16 hours' [ID_35525]
+
+<!-- MR 10.3.0 [CU1] - FR 10.3.4 -->
+
+In the *Bookings* app, the default window of the timeline area has now been changed from `-1 day <NOW> +1 day` to `-8 hours <NOW> +16 hours`.
+
 ### Fixes
 
 #### Trending: Pattern matching tags could incorrectly be defined for discrete or string parameters [ID_35368]
@@ -75,3 +81,9 @@ Also, from now on, DataMiner Cube will no longer group incident alarms into summ
 <!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
 
 When you resized the selected area in a trend graph by dragging either the left or right selection boundary, the pattern edit menu would incorrectly open, even when you were not allowed to create a pattern or when you had no intention of editing a pattern.
+
+#### DataMiner Cube - Alarm Console: Problem when a session variable was used in an alarm filter [ID_35681]
+
+<!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
+
+When you applied a filter to an alarm tab, no alarms would be shown when you had used a session variable in the filter.
