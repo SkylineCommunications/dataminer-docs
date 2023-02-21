@@ -34,7 +34,7 @@ Usage: DumpSpectrumPresetContent.exe [options]
 
 For example:
 
-```
+```txt
 PS C:\Path> .\DumpSpectrumPresetContent.exe -i '.\1001.3360-after.dat'
 
 Connecting to localhost...
