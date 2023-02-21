@@ -3073,6 +3073,8 @@
               topicUid: Taskbar_Utility_command_line_options
         - name: Factory reset tool
           topicUID: Factory_reset_tool
+        - name: InstallConfiguration XSD
+          topicUID: InstallConfiguration_XSD
         - name: Legacy trend data exporter
           topicUID: Legacy_Trend_Data_Exporter
         - name: Multi-threaded timer polling rate calculator

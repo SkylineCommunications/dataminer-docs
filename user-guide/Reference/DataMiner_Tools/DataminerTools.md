@@ -12,6 +12,7 @@ This section provides information on the following tools:
 - [DataMiner Size tool](xref:DataMinerSizeTool)
 - [DataMiner Taskbar Utility](xref:DataMiner_Taskbar_Utility)
 - [Factory reset tool](xref:Factory_reset_tool)
+- [InstallConfiguration Schema file](xref:InstallConfiguration_XSD)
 - [Legacy trend data exporter](xref:Legacy_Trend_Data_Exporter)
 - [Multi-threaded timer polling rate calculator](xref:Multi_Threaded_Timer_Polling_Rate_Calculator)
 - [Protocol debug tools](xref:Protocol_Debug_Tools)
