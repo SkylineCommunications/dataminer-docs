@@ -3071,6 +3071,8 @@
               topicUid: Taskbar_Utility_shortcut_menu
             - name: Taskbar Utility command line options
               topicUid: Taskbar_Utility_command_line_options
+        - name: Dump Spectrum Preset Contents
+          topicUID: Dump_Spectrum_Preset_Content
         - name: Factory reset tool
           topicUID: Factory_reset_tool
         - name: InstallConfiguration XSD

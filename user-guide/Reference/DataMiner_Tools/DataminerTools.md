@@ -11,6 +11,7 @@ This section provides information on the following tools:
 - [DataMiner Comparison tool](xref:DataMinerComparisonTool)
 - [DataMiner Size tool](xref:DataMinerSizeTool)
 - [DataMiner Taskbar Utility](xref:DataMiner_Taskbar_Utility)
+- [Dump Spectrum Preset Content](xref:Dump_Spectrum_Preset_Content)
 - [Factory reset tool](xref:Factory_reset_tool)
 - [InstallConfiguration Schema file](xref:InstallConfiguration_XSD)
 - [Legacy trend data exporter](xref:Legacy_Trend_Data_Exporter)
