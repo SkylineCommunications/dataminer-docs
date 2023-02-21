@@ -49,6 +49,16 @@ New description of the *GetAlarmDetails* method:
 
 > Get the alarm details for the specified alarm (use GetAlarmHistory for the details of a cleared non-root alarm).
 
+#### SLLogCollector now also collects output of 'netstat -ano' command [ID_35674]
+
+<!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
+
+SLLogCollector packages will now also include the following additional file:
+
+| File | Contents |
+|------|----------|
+| Logs\Network Information\Netstat.exe -ano.txt | The output of an `netstat -ano` command. |
+
 ### Fixes
 
 #### Memory leak in SLNet after closing a client connection that had been using a "SLDataGateway.API" subscription set [ID_35319]
