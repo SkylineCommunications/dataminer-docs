@@ -32,6 +32,8 @@ When, in a ListView component, you sort the rows by clicking a particular column
 
 In the *Bookings* app, the default window of the timeline area has now been changed from `-1 day <NOW> +1 day` to `-8 hours <NOW> +16 hours`.
 
+This also means that a ListView component configured to list bookings will by default have its *StartTime=* and *EndTime=* options set to `NOW - 8 hours` and `NOW + 16 hours` respectively.
+
 ### Fixes
 
 #### Visual Overview: Problem with EnableFollowMode option of Resource Manager timeline [ID_35528]
