@@ -6,6 +6,10 @@ uid: DCP_change_log
 
 The dataminer.services platform gets updated continuously. This change log can help you trace when specific features and changes have become available.
 
+#### 16 February 2013 - Fix - CloudGateway 2.10.3 - Share not created because of mismatch in local culture on hosting server [ID_35654]
+
+Prior to CloudGateway version 2.10.3, a share could not be created because of a mismatch in the local culture on the hosting server.
+
 #### 9 February 2023 - Fix - Remote access actions incorrectly blocked [ID_35594]
 
 In some cases, it could occur that requests were incorrectly blocked as unsafe when you used the remote access feature. For example, this could occur when you clicked the Home button in the top-left corner of a web app.
