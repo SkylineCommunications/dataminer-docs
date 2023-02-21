@@ -10,6 +10,8 @@ In this section, you can find information on the following useful tools for syst
 
 - [CI/CD](xref:DevelopmentWithCICD)
 
+- [Copy Element Data](xref:Copy_Element_Data)
+
 - [DataMiner Application Package Builder](xref:TOODataMinerPackageBuilder)
 
 - [Skyline Driver Passport Platform](xref:TOODriverPassportPlatform)

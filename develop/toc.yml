@@ -5212,6 +5212,8 @@
           topicUid: Using_GitHub_for_CICD
         - name: FAQ
           topicUid: FAQ
+    - name: Copy Element Data
+      topicUID: Copy_Element_Data
     - name: DataMiner Application Package Builder
       topicUid: TOODataMinerPackageBuilder
       items:
