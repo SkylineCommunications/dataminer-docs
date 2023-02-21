@@ -91,3 +91,9 @@ Up to now, whether the sidebar was displayed or not would incorrectly depend on 
 <!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
 
 Clock components in a published low-code app would incorrectly only update when you moved the mouse.
+
+#### Dashboards app: Submenu in subheader bar would incorrectly be displayed when it did not contain any visible items [ID_35570]
+
+<!-- MR 10.3.0 [CU1] - FR 10.3.4 -->
+
+The submenu in the subheader bar of a dashboard would incorrectly be displayed when it did not contain any visible items.

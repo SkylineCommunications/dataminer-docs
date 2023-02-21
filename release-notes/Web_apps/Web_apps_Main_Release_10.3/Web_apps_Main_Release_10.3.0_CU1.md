@@ -82,6 +82,12 @@ Up to now, whether the sidebar was displayed or not would incorrectly depend on 
 
 Clock components in a published low-code app would incorrectly only update when you moved the mouse.
 
+#### Dashboards app: Submenu in subheader bar would incorrectly be displayed when it did not contain any visible items [ID_35570]
+
+<!-- MR 10.3.0 [CU1] - FR 10.3.4 -->
+
+The submenu in the subheader bar of a dashboard would incorrectly be displayed when it did not contain any visible items.
+
 #### Web apps: No longer possible to clear a radio button group [ID_35603]
 
 <!-- MR 10.3.0 [CU1] - FR 10.3.3 [CU0] -->
