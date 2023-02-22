@@ -24,6 +24,10 @@ The [UIBlockType](xref:Skyline.DataMiner.Automation.UIBlockType) enum defines di
 | [Time](#time) | Item that displays a time value. |
 | [TreeView](#treeview) | Tree view control. |
 
+> [!TIP]
+> It is highly recommended to use [Interactive Automation Script Toolkit](xref:Interactive_Automation_Script_Toolkit).
+> For more information on how to get started, see [Getting started with the IAS Toolkit](xref:Getting_Started_with_the_IAS_Toolkit).
+
 ## UIBuilder
 
 To create these UI blocks, a UIBuilder should be defined with *Width*, *RowDefs*, and *ColumnDefs*.
