@@ -224,3 +224,9 @@ From now on, the focus data cache will no longer be cleared when SLAnalytics pro
 <!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
 
 When you applied a filter to an alarm tab, no alarms would be shown when you had used a session variable in the filter.
+
+#### Dashboards app & Low-code apps - Node edge component: An incorrect tooltip would appear when hovering over a segment of an edge [ID_35696]
+
+<!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
+
+When you hovered over a segment of an edge, in some cases, an incorrect tooltip would appear.

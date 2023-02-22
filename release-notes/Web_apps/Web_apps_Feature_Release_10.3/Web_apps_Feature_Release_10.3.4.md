@@ -97,3 +97,29 @@ Clock components in a published low-code app would incorrectly only update when 
 <!-- MR 10.3.0 [CU1] - FR 10.3.4 -->
 
 The submenu in the subheader bar of a dashboard would incorrectly be displayed when it did not contain any visible items.
+
+#### Low-code apps: Feeds used in queries would incorrectly not get updated [ID_35689]
+
+<!-- MR 10.3.0 [CU1] - FR 10.3.4 -->
+
+In some cases, a feed used in a query would incorrectly not get updated when the data inside the feed was updated.
+
+#### Dashboards app & Low-code apps: Not possible to filter a GQI table by a boolean column [ID_35692]
+
+<!-- MR 10.3.0 [CU1] - FR 10.3.4 -->
+
+Up to now, it would incorrectly not be possible to filter a GQI table by a boolean column.
+
+#### Dashboards app & Low-code apps - Node edge component: An incorrect tooltip would appear when hovering over a segment of an edge [ID_35696]
+
+<!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
+
+When you hovered over a segment of an edge, in some cases, an incorrect tooltip would appear.
+
+#### Dashboards app & Low-code apps - Query builder: Problem when linking a data source argument of type string to a query column of type GUID [ID_35700]
+
+<!-- MR 10.3.0 [CU1] - FR 10.3.4 -->
+
+When configuring an ad hoc data source in a GQI query, you can link the arguments of that ad hoc data source to a feed. However, in some cases, it would incorrectly not be possible to link an argument of type string to a query column of type GUID.
+
+Also, in the query builder, the `Link [argument name] to feed for [argument name]` command has been renamed to `Use feed for [argument name]`.
