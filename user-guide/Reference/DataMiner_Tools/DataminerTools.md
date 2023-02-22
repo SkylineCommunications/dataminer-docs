@@ -8,6 +8,7 @@ This section provides information on the following tools:
 
 - [Alerter](xref:Alerter)
 - [Cassandra Cleaner](xref:Cassandra_Cleaner)
+- [Cassandra Clone](xref:Cassandra_Clone)
 - [Cassandra Cluster Validator](xref:Cassandra_Cluster_Validator)
 - [Connection Check](xref:Connection_Check)
 - [DataMiner Comparison tool](xref:DataMinerComparisonTool)
