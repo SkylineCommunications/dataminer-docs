@@ -25,8 +25,8 @@ The [UIBlockType](xref:Skyline.DataMiner.Automation.UIBlockType) enum defines di
 | [TreeView](#treeview) | Tree view control. |
 
 > [!TIP]
-> It is highly recommended to use [Interactive Automation Script Toolkit](xref:Interactive_Automation_Script_Toolkit).
-> For more information on how to get started, see [Getting started with the IAS Toolkit](xref:Getting_Started_with_the_IAS_Toolkit).
+> We highly recommend that you use the [Interactive Automation Script Toolkit](xref:Interactive_Automation_Script_Toolkit).
+> For more information, see [Getting started with the IAS Toolkit](xref:Getting_Started_with_the_IAS_Toolkit).
 
 ## UIBuilder
 
