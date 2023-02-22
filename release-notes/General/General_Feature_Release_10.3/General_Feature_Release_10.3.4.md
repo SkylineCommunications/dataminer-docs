@@ -123,6 +123,12 @@ A number of alarm-related issues have been fixed:
 - If no comment was passed when an alarm was cleared, in some cases, the comment of the previous alarm would incorrectly not be added to the closing alarm.
 - In some cases, an incorrect `Alarm didn't have the correct format.` error would be logged.
 
+#### SLAnalytics - Behavioral anomaly detection: An upward level shift directly followed by a downward level shift would incorrectly get categorized as "unlabeled changes" [ID_35646]
+
+<!-- MR 10.3.0 [CU1] - FR 10.3.4 -->
+
+When an upward level shift was directly followed by a downward level shift, in some cases, those changes would incorrectly get categorized as "unlabeled changes".
+
 #### SLAnalytics - Automatic incident tracking: Problem with duplicate alarms [ID_35664]
 
 <!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
