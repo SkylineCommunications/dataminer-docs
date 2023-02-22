@@ -3060,6 +3060,8 @@
               topicUid: Configuring_Alerter
         - name: Cassandra Cleaner
           topicUID: Cassandra_Cleaner
+        - name: Cassandra Cluster Validator
+          topicUID: Cassandra_Cluster_Validator
         - name: Connection Check
           topicUID: Connection_Check
         - name: DataMiner Comparison tool
