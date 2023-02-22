@@ -203,6 +203,14 @@ A number of alarm-related issues have been fixed:
 - If no comment was passed when an alarm was cleared, in some cases, the comment of the previous alarm would incorrectly not be added to the closing alarm.
 - In some cases, an incorrect `Alarm didn't have the correct format.` error would be logged.
 
+#### Service & Resource Management: ResourceManager module could briefly be uninitialized during a midnight synchronization [ID_35621]
+
+<!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
+
+During a midnight synchronization, in some cases, the ResourceManager module could briefly be uninitialized.
+
+The logging indicating the start and the end of the initialization, synchronization and cache load of the ResourceManager module has now been changed from log level 4 to log level 0.
+
 #### DataMiner Cube: Pattern edit menu would incorrectly open when you resized the selected area in a trend graph [ID_35627]
 
 <!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
