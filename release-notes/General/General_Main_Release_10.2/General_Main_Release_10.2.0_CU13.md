@@ -225,6 +225,12 @@ From now on, the focus data cache will no longer be cleared when SLAnalytics pro
 
 When you applied a filter to an alarm tab, no alarms would be shown when you had used a session variable in the filter.
 
+#### Dashboards app & Low-code apps: Last nodes of a migrated query would incorrectly be cut off [ID_35693]
+
+<!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
+
+When a GQI was migrated, in some cases, the last nodes of the migrated query would incorrectly be cut off.
+
 #### Dashboards app & Low-code apps - Node edge component: An incorrect tooltip would appear when hovering over a segment of an edge [ID_35696]
 
 <!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
