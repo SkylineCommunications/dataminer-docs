@@ -29,6 +29,8 @@ As with all software, it is good practice to ensure you are running the latest v
 
 To update the Cassandra version:
 
+### [On Windows](#tab/tabid-1)
+
 1. Ensure you have a **full backup** of the Cassandra database.
 1. Download the latest Cassandra *3.11.X* binaries from the [official website](https://cassandra.apache.org/_/download.html).
 
@@ -94,3 +96,144 @@ To update the Cassandra version:
 > After starting the Cassandra service, verify that the expected Cassandra version is logged in *C:\Program Files\Cassandra\Logs\system.log*. For example: *Cassandra version: 3.11.12*
 > If the service does not start and no logs are created, make sure that the *Jvm* registry key refers to the correct location.
 > Execute `nodetool status` to check whether the system is running stable.
+
+### [On Linux](#tab/tabid-2)
+
+Below steps were executed on Ubuntu Server. When you have an Cassandra Cluster, each node needs to be updated separately.
+
+#### Backup Cassandra using snapshot
+
+Perform a snapshot using the following command:
+
+```bash
+nodetool snapshot
+```
+
+#### Update the repositories
+
+1. Add the Apache Cassandra repository's GPG key to your system:
+
+   ```bash
+   wget -q -O - https://www.apache.org/dist/cassandra/KEYS | sudo apt-key add -
+   ```
+
+1. Add the Cassandra repository to the sources list:
+
+   In below example we are going to add Cassandra 4.1 to the sources list.
+
+   ```bash
+   echo "deb https://downloads.apache.org/cassandra/debian 41x main" | sudo tee -a /etc/apt/sources.list.d/cassandra.sources.list
+   ```
+
+1. Open the Cassandra.sources.list
+
+   ```bash
+   sudo nano /etc/apt/sources.list.d/cassandra.sources.list
+   ```
+
+1. Remove old installation entries and only leave the following line:
+
+   ![Cassandra Source List File](~/user-guide/images/CassandraUpdate_CassandraSourcesListFile.png)
+   Hit CTRL + X after modifying this file, when the question "Save Modified buffer" comes up, hit **Y** keyboard button.
+   At the bottom, File Name to Write pane will come up, hit the **Enter** keyboard button.
+   ![Nano Editor File Name to Write](~/user-guide/images/CassandraUpdate_NanoFileToWrite.png)
+1. Update the package list with the following command:
+
+   ```bash
+   sudo apt-get update
+   ```
+
+#### Update Cassandra
+
+##### Stop the service daemon
+
+1. Stop the service:
+
+   ```bash
+   sudo service cassandra stop
+   ```
+
+1. Check if the service has stopped using:
+
+   ```bash
+   nodetool status
+   ```
+
+##### Backup the Cassandra and Cassandra YAML
+
+```bash
+sudo cp -R /var/lib/cassandra /var/lib/cassandra_backup
+```
+
+Below command will backup to home directory of the administrator user, in your case this could be another (home)directory.
+
+```bash
+sudo cp /etc/cassandra/cassandra.yaml /home/administrator/cassandra.yaml
+```
+
+##### Update Cassandra and SSTables
+
+Update Cassandra with the following command:
+
+```bash
+sudo apt install cassandra
+```
+
+It could be that bash shell shows the following:
+
+![Cassandra Configuration File Update](~/user-guide/images/CassandraUpdate_ConfigurationFileUpdate.png)
+
+> [!IMPORTANT]
+> Using **Y** will overwrite your current Cassandra.yaml file and take the one from the package. This could lead to a broken set-up, best is to revise the changes using the **D** or **Z** option. When using the **D** option the screen will be replaced with the contents of the cassandra.yaml file, exiting that screen can be done by using the **q** keyboard button.
+As the screenshot explains **N** is the default option, so your existing cassandra.yaml file would be unchanged if this option was used. We recommend using the **N** option.
+The backup we took earlier can also be placed back.
+
+##### Start Cassandra
+
+1. Start the Cassandra daemon using the following bash command:
+
+   ```bash
+   sudo service cassandra start
+   ```
+
+1. Check if the upgrade was successful by running the following command:
+
+   ```bash
+   nodetool version
+   ```
+
+1. Check the status of the Cassandra node:
+
+   ```bash
+   nodetool status
+   ```
+
+   The status column in the output window should report **UN** which stands for "Up/Normal
+
+1. Upgrading the SSTables can be done like this:
+
+```bash
+sudo nodetool upgradesstables
+```
+
+> [!NOTE]
+> When upgrading Cassandra to a new version, it is generally recommended to upgrade the SSTables as well. This is because the new version of Cassandra may have changes to the way data is stored on disk, and using old SSTables with the new version of Cassandra could result in compatibility issues or suboptimal performance. It is always not strict necessary, the decision to upgrade the SSTables should be based on the specifics of your use-case and the trade-offs.
+
+##### Check log files
+
+Cassandra log files can be checked with the following:
+
+- Check the last 100 longlines of system.log:
+
+   ```bash
+   tail -n 100 /var/log/cassandra/system.log
+   ```
+
+- View the complete system.log file:
+
+   ```bash
+   less /var/log/cassandra/system.log
+   ```
+
+> [!TIP]
+> You can also use the Apache Cassandra Cluster Monitor driver described [here](xref:Maintain_Cassandra_Cluster) to verify the status of your Cassandra nodes.
