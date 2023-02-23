@@ -31,6 +31,21 @@ In the Generic Query Interface, the following new data sources are now available
 
 The *Get trend data pattern events* and *Get behavioral change events* data sources contain time range metadata on each row. Each time range holds the start and end time of the event in question. When a table row is selected, the time range will be exposed as a feed.
 
+#### Dashboards app & Low-Code Apps - GQI: 'Row by row' option [ID_35057] [ID_35565]
+
+<!-- MR 10.4.0 - FR 10.3.3 -->
+
+When configuring a Join operator, you can now select the *Row by row* option.
+
+- When you do not select the *Row by row* option, the join will execute both the left and the right queries once, and directly combine their results (default behavior).
+
+- When you select the *Row by row* option, the join will execute the left query first, and then execute the right query for each row  with a filter derived from the Join condition.
+
+> [!NOTE]
+>
+> - The *Row by row* option will only be visible and configurable when you opened the dashboard or app with `showAdvancedSettings=true` added to the URL.
+> - Currently, the *Row by row" option is only supported for inner and left joins. If you use it for an outer or right join, an exception will be thrown.
+
 #### Monitoring app: Element name added to breadcrumbs of trend card [ID_35270]
 
 <!-- MR 10.4.0 - FR 10.3.3 -->
@@ -59,3 +74,16 @@ It can be used to retrieve the parameter relationships that are stored in a mode
 
 > [!NOTE]
 > This data source will only be available when *ModelHost* is running.
+
+#### Dashboards app & Low-code apps: 'Lazy load components' setting [ID_35469] [ID_35486]
+
+<!-- MR 10.4.0 - FR 10.3.4 -->
+
+In the configuration settings of a dashboard or a page/panel of a low-code app, you can now find the *Lazy load components* setting.
+
+When this settings is enabled, the components on the dashboard or the page/panel of the low-code app will only be initialized the first time they appear on the screen. This will considerably shorten the initial load time and enhance overall performance of large dashboards and large pages/panels of low-code apps.
+
+> [!NOTE]
+>
+> - This setting, which is enabled by default for all new dashboards and all new pages/panels of low-code apps, is only available if you add the `showAdvancedSettings=true` option to the dashboard URL.
+> - This setting will automatically be disabled when you switch to edit mode.

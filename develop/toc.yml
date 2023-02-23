@@ -5208,6 +5208,8 @@
               topicUid: Creating_a_repository_for_an_install_package
             - name: Pipeline stages for install packages
               topicUid: Pipeline_stages_for_install_packages
+        - name: Github CI/CD 
+          topicUid: Using_GitHub_for_CICD
         - name: FAQ
           topicUid: FAQ
     - name: DataMiner Application Package Builder

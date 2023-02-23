@@ -20,12 +20,12 @@ It is a **collection of functions** that are available when your DataMiner Syste
 
 - The [**DevOps**](xref:Overview_DevOps) category focuses on empowering users to create and run solutions.
 
-- The [**Platform Services**](xref:Overview_Platform_services) category prioritizes convenience.
+- The [**Platform Services**](xref:Overview_Platform_services) category prioritizes convenience. This includes a number of tangible benefits for Support Services.
 
 - The [**Collaboration**](xref:Overview_Collaboration) category emphasizes synergy.
 
 > [!TIP]
-> For more information on how to access dataminer.services, see [How to access DataMiner Services](https://skyline.be/dataminer/cloud-services).
-
-> [!TIP]
-> Visit [dataminer.services](https://dataminer.services/) to see the potential benefits these functions can offer.
+>
+> - To see the potential benefits these functions can offer, visit [dataminer.services](https://dataminer.services/).
+> - For more information on how to access dataminer.services, see [How to access DataMiner Services](https://skyline.be/dataminer/cloud-services).
+> - For detailed information on the benefits for Support Services, see [CCA_Support_Services](xref:CCA_Support_Services).
