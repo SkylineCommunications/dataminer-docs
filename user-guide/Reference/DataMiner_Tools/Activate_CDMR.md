@@ -2,7 +2,7 @@
 uid: Activate_CDMR
 ---
 
-# Activate CDMR
+# Activate CDMR tool
 
 To activate CDMR on all DMAs in a cluster in one go, two scripts are available. These can be especially useful in DataMiner Systems consisting of many DMAs, so that CDMR does not need to be activated manually on each DMA.
 

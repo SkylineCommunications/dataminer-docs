@@ -3047,7 +3047,7 @@
     - name: Tools
       topicUid: DataminerTools
       items:
-        - name: Activate CDMR
+        - name: Activate CDMR tool
           topicUID: Activate_CDMR
         - name: Alerter
           topicUid: Alerter

@@ -6,7 +6,7 @@ uid: DataminerTools
 
 This section provides information on the following tools:
 
-- [Activate CDMR](xref:Activate_CDMR)
+- [Activate CDMR tool](xref:Activate_CDMR)
 - [Alerter](xref:Alerter)
 - [Analyze startup logs](xref:Analyze_Startup_Logs)
 - [Cassandra Cleaner](xref:Cassandra_Cleaner)
