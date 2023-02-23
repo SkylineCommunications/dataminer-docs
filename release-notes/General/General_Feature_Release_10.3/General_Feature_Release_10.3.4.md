@@ -45,6 +45,12 @@ Because of a number of enhancements made with regard to the communication betwee
 
 A number of security enhancements have been made.
 
+#### SLAnalytics - Pattern matching: Enhanced performance when detecting large patterns [ID_35474]
+
+<!-- MR 10.4.0 - FR 10.3.4 -->
+
+Because of a number of enhancements, overall performance has increased when detecting trend patterns that cover more than 30,000 data points.
+
 #### Enhanced SNMP trap distribution [ID_35480]
 
 <!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->

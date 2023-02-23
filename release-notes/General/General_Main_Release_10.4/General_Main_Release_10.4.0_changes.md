@@ -115,6 +115,12 @@ A number of security enhancements have been made.
 
 From now on, anomaly detection will no longer be available for discrete parameters.
 
+#### SLAnalytics - Pattern matching: Enhanced performance when detecting large patterns [ID_35474]
+
+<!-- MR 10.4.0 - FR 10.3.4 -->
+
+Because of a number of enhancements, overall performance has increased when detecting trend patterns that cover more than 30,000 data points.
+
 ### Fixes
 
 #### Cassandra Cluster: Every DMA would incorrectly try to delete any possible old Cassandra compaction and repair tasks found in the entire DMS [ID_31923]
