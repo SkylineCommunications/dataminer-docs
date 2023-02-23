@@ -5147,6 +5147,10 @@
               topicUid: Microsoft_Visual_Studio_keyboard_shortcuts
             - name: Class Library packages
               topicUid: Class_Library_packages
+    - name: DataStax DevCenter
+      topicUID: DataStax_DevCenter
+    - name: dnSpy
+      topicUID: dnSpy
     - name: CI/CD
       topicUid: DevelopmentWithCICD
       items:
@@ -5240,8 +5244,6 @@
               topicUid: CLI_legacy_packages_only
             - name: Logging
               topicUid: Logging1
-    - name: DataStax DevCenter
-      topicUID: DataStax_DevCenter
     - name: Skyline Driver Passport Platform
       topicUid: TOODriverPassportPlatform
       items:

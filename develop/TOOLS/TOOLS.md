@@ -10,6 +10,8 @@ In this section, you can find information on the following useful tools for syst
 
 - [DataStax DevCenter](xref:DataStax_DevCenter)
 
+- [dnSpy](xref:dnSpy)
+
 - [CI/CD](xref:DevelopmentWithCICD)
 
 - [Copy Element Data](xref:Copy_Element_Data)
