@@ -38,6 +38,13 @@ If you do not want the alarm property value to be added to the correlation alarm
 
 Because of a number of enhancements made with regard to the communication between SLDataMiner and SLDMS, overall performance has increased when creating or editing services, especially in heavily loaded environments.
 
+#### Security enhancements [ID_35434] [ID_35667]
+
+<!-- 35434: MR 10.4.0 - FR 10.3.4 -->
+<!-- 35667: MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
+
+A number of security enhancements have been made.
+
 #### Enhanced SNMP trap distribution [ID_35480]
 
 <!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
@@ -49,12 +56,6 @@ From now on, stopped elements will no longer be taken into account when distribu
 <!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
 
 From now on, focus value updates will no longer be taken into account when determining whether the *Maximum group event rate* was exceeded.
-
-#### Security enhancements [ID_35667]
-
-<!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
-
-A number of security enhancements have been made.
 
 #### SLLogCollector now also collects output of 'netstat -ano' command [ID_35674]
 
