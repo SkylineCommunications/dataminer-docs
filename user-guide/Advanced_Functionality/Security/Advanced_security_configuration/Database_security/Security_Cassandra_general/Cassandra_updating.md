@@ -4,6 +4,15 @@ uid: Cassandra_updating
 
 # Updating Cassandra
 
+It's common practice with Cassandra to do rolling upgrades which means an upgrade can be done without downtime if your settings allows it. Rolling upgrades means basically:
+
+- Upgrade one node.
+- Bring it up again.
+- Move to the next one.
+
+> [!IMPORTANT]
+> When going from one major range to another E.g. from 3.x to 4.x it is best practice to first upgrade to the latest version in the current range before going to the new range.
+
 ## Checking the Cassandra version
 
 We recommend that you periodically update your Cassandra database. This will ensure that all known vulnerabilities are fixed.
