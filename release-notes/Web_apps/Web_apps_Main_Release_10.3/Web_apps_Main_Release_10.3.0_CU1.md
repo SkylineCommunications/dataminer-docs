@@ -106,6 +106,12 @@ It would incorrectly no longer be possible to clear a radio button group.
 
 In some cases, an auto-complete control could clear its content while you were entering a value.
 
+#### Web apps: Problem when retrieving spectrum element parameters [ID_35660]
+
+<!-- MR 10.3.0 [CU1] - FR 10.3.4 -->
+
+When the parameters of a spectrum element were retrieved in a web app, in some cases, an exception could be thrown, causing a `No parameters available` message to appear.
+
 #### Low-code apps: Feeds used in queries would incorrectly not get updated [ID_35689]
 
 <!-- MR 10.3.0 [CU1] - FR 10.3.4 -->

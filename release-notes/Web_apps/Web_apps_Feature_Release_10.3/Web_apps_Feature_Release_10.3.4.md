@@ -104,6 +104,12 @@ Clock components in a published low-code app would incorrectly only update when 
 
 The submenu in the subheader bar of a dashboard would incorrectly be displayed when it did not contain any visible items.
 
+#### Web apps: Problem when retrieving spectrum element parameters [ID_35660]
+
+<!-- MR 10.3.0 [CU1] - FR 10.3.4 -->
+
+When the parameters of a spectrum element were retrieved in a web app, in some cases, an exception could be thrown, causing a `No parameters available` message to appear.
+
 #### Low-code apps: Feeds used in queries would incorrectly not get updated [ID_35689]
 
 <!-- MR 10.3.0 [CU1] - FR 10.3.4 -->
