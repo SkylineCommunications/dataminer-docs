@@ -44,6 +44,17 @@ For example, when a line & area chart component is fed the following timespans..
 
 - *01/01/2022 9:00:00 > 01/01/2022 10:30:00*
 
+#### GQI: Enhanced performance when using Sort operators in conjunction with alarm, change point, trend pattern and trend pattern occurrence data sources [ID_35031]
+
+<!-- MR 10.4.0 - FR 10.3.3 -->
+
+Because of a number of enhancements, overall query performance has increased when using Sort operators in conjunction with the following data sources:
+
+- Get alarms
+- Get behavioral change events
+- Get trend data patterns
+- Get trend data pattern events
+
 #### Web apps: Button styles used in interactive Automation script components have been aligned with those used in low-code app components [ID_35076]
 
 <!-- MR 10.4.0 - FR 10.3.2 -->
@@ -112,6 +123,18 @@ When exporting trend data to CSV, from now on, the *Show average*, *Show minimum
 <!-- MR 10.4.0 - FR 10.3.3 -->
 
 From now on, when SLNet receives an error from the web API after sending a *GetConnection* call, it will log the request and the response in the *SLNet.txt* log file.
+
+#### GQI: data sources 'Get elements' and 'Get services' will now also return alarm states [ID_35464]
+
+<!-- MR 10.4.0 - FR 10.3.3 -->
+
+The GQI data sources *Get elements* and *Get services* will now also return alarm states.
+
+#### GQI: 'State' column in data sources 'Get services' and 'Get views' renamed to 'Alarm state' [ID_35557]
+
+<!-- MR 10.4.0 - FR 10.3.3 -->
+
+In the GQI data sources *Get services* and *Get views*, the *State* column has now been renamed to *Alarm state*.
 
 ### Fixes
 

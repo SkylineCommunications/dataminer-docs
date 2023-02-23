@@ -54,6 +54,37 @@ var moduleSettings = new ModuleSettings("example")
 > [!NOTE]
 > TTL settings are checked every 30 minutes. When you configure a very short TTL (e.g. 15 minutes), keep in mind that the objects in question will only be removed during the next cleanup cycle.
 
+#### OpenSearch & Amazon OpenSearch Service [ID_34651]
+
+<!-- MR 10.3.0 - FR 10.3.3 -->
+
+It is now possible to install a dedicated OpenSearch indexing database cluster as an alternative for Elasticsearch. This indexing cluster also requires a Cassandra cluster.
+
+At present, all OpenSearch versions are supported:
+
+- 1.X
+- 2.X
+
+For more information on setup and configuration, see [OpenSearch database](xref:OpenSearch_database).
+
+> [!NOTE]
+> It is also possible to use Amazon OpenSearch Service on AWS as an alternative to an on-premises hosted Elasticsearch/OpenSearch cluster. For more information on setup and configuration, see [Amazon OpenSearch Service](xref:Amazon_OpenSearch_Service).
+
+#### Amazon Keyspaces [ID_34872]
+
+<!-- MR 10.3.0 - FR 10.3.3 -->
+
+It is now possible to use the Amazon Keyspaces Service on AWS as an alternative for a Cassandra Cluster setup.
+
+> [!NOTE]
+>
+> - Amazon Keyspaces does not support all Cassandra functionality, most notably indices on columns. As a result, some queries against logger tables (including SLAs) may be slower on Amazon Keyspaces compared to Cassandra.
+> - The only consistency level supported is `Local Quorum`. See [Supported Apache Cassandra consistency levels in Amazon Keyspaces](https://docs.aws.amazon.com/keyspaces/latest/devguide/consistency.html). No matter the configuration, the consistency level will always be overwritten to `Local Quorum`.
+> - The only replication strategy supported is the Amazon Keyspaces specific `Single-Region strategy`, which is not configurable.
+> - Migrating existing databases to Amazon Keyspaces is not yet supported.
+
+For more information on setup and configuration, see [Amazon Keyspaces Service](xref:Amazon_Keyspaces_Service).
+
 ### DMS Security
 
 #### SLSSH: Enhanced HMAC, cypher and key exchange algorithm support [ID_32664] [ID_32786]

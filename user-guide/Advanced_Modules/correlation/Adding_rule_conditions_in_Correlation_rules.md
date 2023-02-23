@@ -44,9 +44,9 @@ In the *Rule condition* section of the details pane, specify one or more conditi
 
      This option can for example be used to only trigger the rule action(s) if the average value of the alarms matching the filter during the time span is higher than a value defined in the rule.
 
-1. In the *Sliding window* section, you can also determine an additional trigger mechanism in a sliding window.
+1. If *Immediate evaluation* was selected in the previous step, in the *Sliding window* section you can also determine an additional trigger mechanism in a sliding window.
 
-   1. To trigger the Correlation rule if a situation occurs a particular number of times in a given time span, select *Require situation to occur ... times in ... before acting*, and specify the number of times and the time span. When you select this option, and there is match with the rule conditions, the occurrence will be registered. As soon as there are enough occurrences in the interval, the rule is triggered.
+   1. To trigger the Correlation rule if a situation occurs a particular number of times in a given time span, select *Require situation to occur ... times in ... before acting*, and specify the number of times and the time span. When you select this option, and there is a match with the rule conditions, the occurrence will be registered. As soon as there are enough occurrences in the interval, the rule is triggered.
 
       > [!NOTE]
       > If, for instance, you want to create a rule that is triggered if a certain number of alarms occur within a sliding window, you must also select the option *Trigger on single events. Don’t maintain active tree status* in the *Alarm filter* section. Only the base alarms will be counted, so if you do not select this option, and there are changes in an alarm tree, these will not be counted as separate events.

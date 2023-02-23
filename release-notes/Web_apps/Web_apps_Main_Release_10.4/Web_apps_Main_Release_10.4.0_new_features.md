@@ -31,6 +31,27 @@ In the Generic Query Interface, the following new data sources are now available
 
 The *Get trend data pattern events* and *Get behavioral change events* data sources contain time range metadata on each row. Each time range holds the start and end time of the event in question. When a table row is selected, the time range will be exposed as a feed.
 
+#### Dashboards app & Low-Code Apps - GQI: 'Row by row' option [ID_35057] [ID_35565]
+
+<!-- MR 10.4.0 - FR 10.3.3 -->
+
+When configuring a Join operator, you can now select the *Row by row* option.
+
+- When you do not select the *Row by row* option, the join will execute both the left and the right queries once, and directly combine their results (default behavior).
+
+- When you select the *Row by row* option, the join will execute the left query first, and then execute the right query for each row  with a filter derived from the Join condition.
+
+> [!NOTE]
+>
+> - The *Row by row* option will only be visible and configurable when you opened the dashboard or app with `showAdvancedSettings=true` added to the URL.
+> - Currently, the *Row by row" option is only supported for inner and left joins. If you use it for an outer or right join, an exception will be thrown.
+
+#### Monitoring app: Element name added to breadcrumbs of trend card [ID_35270]
+
+<!-- MR 10.4.0 - FR 10.3.3 -->
+
+As of now, the header of a trend card shows a breadcrumb trail with the element name of a parameter as a clickable item. Clicking this element name allows you to quickly navigate back to the element card.
+
 #### GQI: 'State' column added to 'Get views' data source [ID_35333]
 
 <!-- MR 10.4.0 - FR 10.3.3 -->
@@ -42,3 +63,14 @@ A `State` column has been added to the *Get views* data source. This column show
 <!-- MR 10.4.0 - FR 10.3.3 -->
 
 After an aggregation operation, you can now apply multiple groupBy operations.
+
+#### Dashboards app - GQI: New 'Get parameter relations' data source [ID_35443]
+
+<!-- MR 10.4.0 - FR 10.3.3 -->
+
+In the Generic Query Interface, the *Get parameter relations* data source is now available.
+
+It can be used to retrieve the parameter relationships that are stored in a model managed by a DataMiner Extension Module named *ModelHost*.
+
+> [!NOTE]
+> This data source will only be available when *ModelHost* is running.

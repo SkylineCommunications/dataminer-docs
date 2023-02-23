@@ -69,6 +69,7 @@ A typical use case is to make use of the Resource Manager component in Visual Ov
    > - Add the following shape data on the rectangle shape that will be used to embed the timeline:
    >
    >   | Shape data field | Value |
+   >   |--|--|
    >   | Component | `Reservations` |
    >   | Options | `CardVariable` |
 

@@ -71,6 +71,9 @@ For example, in a cluster with two DMAs, with IPs 10.4.2.92 and 10.4.2.93, DMS.x
 > [!NOTE]
 > The passwords in the *pwd* attribute are encrypted and replaced with an encryption token when they are first read out by DataMiner.
 
+> [!TIP]
+> See also: [DataMiner hardening guide](xref:DataMiner_hardening_guide)
+
 ## Failover subtag
 
 If a Failover setup has been implemented in the DMS, a *Failover* subtag in the *DMS.xml* file contains the Failover configuration. To modify this configuration, go to the System Center in DataMiner Cube. See [Failover configuration in Cube](xref:Failover_configuration_in_Cube).

@@ -34,7 +34,7 @@ How to choose?
 ## Selecting the right license
 
 > [!IMPORTANT]
-> When creating the repository , make sure you select the correct license. Changing the license later can be very challenging. If you want to publish code to a public repository, and you are not sure what license you should use, contact the IT team.
+> When creating the repository, make sure you select the correct license. Changing the license later can be very challenging. If you want to publish code to a public repository, and you are not sure what license you should use, contact the IT team **before creating the repository** or create a private repository in the meantime and turn it into a public one only once the right license is applied.
 
 For a script, the correct license is **MIT**.
 
@@ -42,7 +42,7 @@ For a script, the correct license is **MIT**.
 
 The repository name should look like this (using "-" as separator): **{customerAcronym}-{itemType}-{itemName}**
 
-- For a list of **customer acronyms**, refer to [DCP](https://dcp.skyline.be/Lists/Customers/AllItems.aspx).
+- For a list of **customer acronyms**, refer to [DCP](https://dcp.skyline.be/Lists/Customers/AllItems.aspx). For generic repositories, use the Skyline Communications acronym (SLC).
 
 - The following **item types** are currently supported (this list is to be extended):
 

@@ -138,6 +138,12 @@ The following information can be displayed:
 #ErrorAlarms
 ```
 
+#### Visual Overview - ListView component: New component option 'SingleSelectionMode' [ID_35320]
+
+<!-- MR 10.4.0 - FR 10.3.4 -->
+
+By default, you can select multiple rows in a list view (e.g. using the CTRL or SHIFT key). With the new component option *SingleSelectionMode*, you can now set the selection mode of a list view to single instead, so that only one row can be selected at a time.
+
 #### System Center: New DataMiner log file 'SLSmartBaselineManager.txt' [ID_35352]
 
 <!-- MR 10.4.0 - FR 10.3.3 -->
@@ -210,6 +216,14 @@ When you try to create a trend pattern tag, an error message will appear when th
 
 From now on, a slightly larger number of missing values will be allowed will you create a trend pattern tag.
 
+#### Trending: Check marks will no longer appear in front of related parameters after adding them to the trend graph [ID_35518]
+
+<!-- MR 10.4.0 - FR 10.3.3 -->
+
+In the top-right corner of a trend graph, a light bulb icon appears when DataMiner finds parameters that are related to the parameters shown in the trend graph. Clicking this light bulb icon allows you to add one or more of those related parameters to the trend graph you are viewing.
+
+Up to now, when you clicked one of those related parameters in order to add it to the trend graph, a check mark would appear in front of it. From now on, check marks will no longer appear in front of related parameters after selecting them.
+
 ### Fixes
 
 #### Profiles app: A profile instance would incorrectly list parameters that had been removed from the profile definition [ID_34679] [ID_34771]
@@ -230,16 +244,8 @@ In some rare cases, conditional shape manipulation actions (e.g. Show, Hide, Rot
 
 When, in a Visio drawing, shapes have been positioned dynamically based on properties, you can re-arrange those shapes manually by switching to *Arrange* mode and re-arranging the shapes using drag-and-drop. In some rare cases, it would no longer be possible to drag shapes to another location.
 
-#### Trending: Pattern matching tags could incorrectly be defined for discrete or string parameters [ID_35368]
+#### Alarm Console: When you clicked a suggestion alarm, the change points and patterns would incorrectly not be loaded [ID_35497]
 
 <!-- MR 10.4.0 - FR 10.3.3 -->
 
-Pattern matching does not support discrete or string parameters. However, up to now, when viewing a trend graph that showed trend information for either a discrete or a string parameter, it would incorrectly be possible to define tags for pattern matching. From now on, this will no longer be possible.
-
-#### Trending: Tag icon was displayed after you selected a section of a trend graph even though it was not possible to define tags [ID_35378] [ID_35383]
-
-<!-- MR 10.4.0 - FR 10.3.3 -->
-
-In some cases, when the pattern matching feature was not enabled in *System Center* > *System settings* > *analytics config*, the tag icon was displayed after you selected a section of a trend graph even though it was not actually possible to define tags.
-
-From now on, Cube will check whether the pattern matching feature is enabled each time you open a trend graph.
+When you clicked a suggestion alarm, in some cases, the trend graph would be loaded but the change points and the patterns incorrectly would not.
