@@ -34,6 +34,18 @@ In the *Bookings* app, the default window of the timeline area has now been chan
 
 This also means that a ListView component configured to list bookings will by default have its *StartTime=* and *EndTime=* options set to `NOW - 8 hours` and `NOW + 16 hours` respectively.
 
+#### System Center - Agents: Clearer restart warning before an upgrade is started [ID_35687]
+
+<!-- MR 10.3.0 [CU1] - FR 10.3.4 -->
+
+When you tried to upgrade an agent in System Center, up to now, the following general message would appear:
+
+`Updating DataMiner requires a restart of the DataMiner Agent`
+
+This message has now been changed to provide more details:
+
+`Updating DataMiner using a full upgrade package requires a restart of the DataMiner Agent. A web upgrade package will only restart the web server.`
+
 ### Fixes
 
 #### Visual Overview: Problem with EnableFollowMode option of Resource Manager timeline [ID_35528]
