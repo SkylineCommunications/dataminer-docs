@@ -63,7 +63,7 @@ The repository name should look like this (using "-" as separator): **{customerA
 
 - It is up to the repository creator to choose the **item name**; however, make sure this name clearly indicates the purpose of the repository.
 
-## Adding README File
+## Adding a README file
 
 It is important to add a *README.md* file to to the root folder. The contents of this file should provide users with the necessary information to understand the purpose of the code and learn how to use it.
 
