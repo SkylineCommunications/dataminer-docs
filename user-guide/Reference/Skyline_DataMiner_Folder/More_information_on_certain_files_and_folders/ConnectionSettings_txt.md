@@ -131,5 +131,5 @@ This file contains default connection settings to be used by DataMiner client ap
   ```txt
   10.10.7.1 type=RemotingConnection;polling=1000;zip=true
   10.11.*;168.* type=RemotingConnection;polling=1000;zip=false
-  * type=RemotingConnection;polling=0;zip=true
+  * type=RemotingConnection
   ```
