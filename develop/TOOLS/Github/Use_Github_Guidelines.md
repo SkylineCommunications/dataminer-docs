@@ -52,10 +52,20 @@ The repository name should look like this (using "-" as separator): **{customerA
   - F (Functions)
   - AS (Automation Scripts)
   - PLS (Profile-Load Scripts)
+  - PA (Process Automation)
+  - LSO (Life Service Orchestration)
   - D (Dashboards)
   - CF (Companion Files)
+  - T (Tests)
+
+  > [!NOTE]
+  > If you think an item type should be added, please contact us so we can add it before you create the repository.
 
 - It is up to the repository creator to choose the **item name**; however, make sure this name clearly indicates the purpose of the repository.
+
+## Adding a README file
+
+It is important to add a *README.md* file to to the root folder. The contents of this file should provide users with the necessary information to understand the purpose of the code and learn how to use it.
 
 ## Adding topics to a repository
 
