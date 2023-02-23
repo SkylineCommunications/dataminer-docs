@@ -22,6 +22,12 @@ uid: Cube_Feature_Release_10.3.4
 
 By default, you can select multiple rows in a list view (e.g. using the CTRL or SHIFT key). With the new component option *SingleSelectionMode*, you can now set the selection mode of a list view to single instead, so that only one row can be selected at a time.
 
+#### Visual Overview: Re-arranging grouped shapes [ID_35323]
+
+<!-- MR 10.4.0 - FR 10.3.4 -->
+
+When, in a Visio drawing, shapes had been positioned dynamically based on properties, up to now, it was possible to re-arrange individual shapes manually. From now on, it will also be possible to re-arrange grouped shapes.
+
 ## Changes
 
 ### Enhancements
