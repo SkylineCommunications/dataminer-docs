@@ -76,6 +76,12 @@ When, in the search box in the middle of the Cube header bar, you enter the name
 
 However, when, in that context menu, you then selected *Protocols & Templates > Assign alarm template* or *Protocols & Templates > Assign trend template*, the available templates would not get loaded.
 
+#### DataMiner Cube: Full user name would incorrectly no longer be displayed at the top of the user menu [ID_35584]
+
+<!-- MR 10.3.0 [CU1] - FR 10.3.4 -->
+
+When, in DataMiner Cube, you clicked the user icon in the top-right corner, the full user name would incorrectly no longer be displayed at the top of the user menu.
+
 #### DataMiner Cube: Problem when receiving a notification from SLAnalytics while in alarm storm mode [ID_35596]
 
 <!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
