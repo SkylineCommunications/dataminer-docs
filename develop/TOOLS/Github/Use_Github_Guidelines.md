@@ -57,6 +57,8 @@ The repository name should look like this (using "-" as separator): **{customerA
   - D (Dashboards)
   - CF (Companion Files)
   - T (Tests)
+  - GQIDS (GQI data source)
+  - GQIO (GQI operator)
 
   > [!NOTE]
   > If you think an item type should be added, please contact us so we can add it before you create the repository.
@@ -71,7 +73,7 @@ It is important to add a *README.md* file to to the root folder. The contents of
 
 Topics must be used to help categorize the repositories and help users find them when exploring Github.
 
-Here is a list of topics you should use:
+Here is a list of topics you should use (this list is to be extended):
 
 - dataminer
 - dataminer-connector
@@ -80,6 +82,11 @@ Here is a list of topics you should use:
 - dataminer-function
 - dataminer-automation-script
 - dataminer-dashboard
+- dataminer-profile-load-script
+- dataminer-process-automation-script
+- dataminer-life-service-orchestration
+- dataminer-gqi-data-source
+- dataminer-gqi-operator
 
 If you have code for a specific project/customer, you should add a topic with the customer's name as well, e.g. `Skyline-Communications`. Always use a hyphen ("-") as a separator.
 
