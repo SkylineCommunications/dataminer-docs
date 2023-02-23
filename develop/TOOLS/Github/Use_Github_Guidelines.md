@@ -15,7 +15,7 @@ You can use GitHub to:
 > [!NOTE]
 > At present, **only Automation scripts** have workflows available for packaging and deployment.
 >
-> Automation scripts that are packaged with other artifacts (Visio files , connectors, etc.) will not be able to use the GitHub actions, so we do not recommend using GitHub for those yet.
+> Automation scripts that are packaged with other artifacts (Visio files, connectors, etc.) will not be able to use the GitHub actions, so we do not recommend using GitHub for those yet.
 
 ## Creating an account in GitHub's Skyline organization
 
@@ -103,16 +103,16 @@ These workflows will allow you to:
 - Compile to a DataMiner package
 - Deploy directly to a cloud-connected DataMiner Agent
 
-Please refer to [Workflows documentation on Github](https://docs.github.com/en/actions/using-workflows/about-workflows) and to our [workflows templates](https://github.com/SkylineCommunications/.github/tree/main/workflow-templates)
+Please refer to [GitHub's workflow documentation](https://docs.github.com/en/actions/using-workflows/about-workflows) and to our [workflow templates](https://github.com/SkylineCommunications/.github/tree/main/workflow-templates).
 
-For Automation, here is the [starter workflow](https://github.com/SkylineCommunications/.github/blob/main/workflow-templates/DataMiner-CICD-Automation.yml)
+For Automation, see [DataMiner CI/CD Automation](https://github.com/SkylineCommunications/.github/blob/main/workflow-templates/DataMiner-CICD-Automation.yml):
 
-First section of the starter workflow is the CI part and is referring to the [reusable workflow](https://github.com/SkylineCommunications/_ReusableWorkflows)
+- The first section contains the CI part and makes reference to [reusable workflows](https://github.com/SkylineCommunications/_ReusableWorkflows).
 
-The second section (optional and commented out by default) is referring to the CD part to deploy the Dataminer package to a cloud-connected Dataminer Agent.
+- The second section (optional and commented out by default) contains the CD part to deploy the DataMiner package to a cloud-connected DataMiner Agent.
 
 ## Using GitHub actions to publish to a cloud-connected DataMiner Agent
 
-An action is publicly available on GitHub to deploy from a GitHub repository.
+An action [Skyline-DataMiner-Deploy-Action](https://github.com/SkylineCommunications/Skyline-DataMiner-Deploy-Action) is publicly available on GitHub to deploy from a GitHub repository.
 
 Refer to [Deploying Automation scripts from a GitHub repository](xref:Deploying_Automation_scripts_from_a_GitHub_repository) for more information.
