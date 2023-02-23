@@ -60,6 +60,12 @@ An error could occur in DataMiner Cube when it received a notification from SLAn
 
 Also, from now on, DataMiner Cube will no longer group incident alarms into summary alarms while in alarm storm mode.
 
+#### Resources app: Problem when moving a resource from one resource pool to another [ID_35612]
+
+<!-- MR 10.3.0 [CU1] - FR 10.3.4 -->
+
+When, in the *Resources* app, you moved a resource from one resource pool to another, in some cases, the resource would have missing data after being moved.
+
 #### DataMiner Cube: Pattern edit menu would incorrectly open when you resized the selected area in a trend graph [ID_35627]
 
 <!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
