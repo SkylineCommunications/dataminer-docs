@@ -70,6 +70,12 @@ Also, a number of enhancements have been made:
 
 When you entered an invalid value into a text box, an error message would be displayed for a very short moment, and the invalid value would incorrectly be replaced by the last valid value that was entered.
 
+#### Dashboards app & Low-code apps - GQI: Problem with 'Update data' option when using the 'Get parameter table by ID' data source [ID_35490]
+
+<!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
+
+When a query using the *Get parameter table by ID* data source had the *Update data* option enabled, the component would incorrectly no longer automatically refresh the data when changes were detected.
+
 #### Low-code apps: Sidebar would incorrectly be displayed when there was only one visible page [ID_35544]
 
 <!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->

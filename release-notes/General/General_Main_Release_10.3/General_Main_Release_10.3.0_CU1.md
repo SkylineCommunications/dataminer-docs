@@ -36,6 +36,12 @@ From now on, stopped elements will no longer be taken into account when distribu
 
 From now on, focus value updates will no longer be taken into account when determining whether the *Maximum group event rate* was exceeded.
 
+#### Security enhancements [ID_35667]
+
+<!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
+
+A number of security enhancements have been made.
+
 #### SLLogCollector now also collects output of 'netstat -ano' command [ID_35674]
 
 <!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->

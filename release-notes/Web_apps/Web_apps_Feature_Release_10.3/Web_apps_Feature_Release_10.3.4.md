@@ -72,6 +72,12 @@ Also, a number of enhancements have been made:
 
 - When an interactive Automation script run in a web app environment contains executable components, a message will now be displayed, saying that executable components are not supported in web apps.
 
+#### Dashboards app & Low-code apps - GQI: Problem with 'Update data' option when using the 'Get parameter table by ID' data source [ID_35490]
+
+<!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
+
+When a query using the *Get parameter table by ID* data source had the *Update data* option enabled, the component would incorrectly no longer automatically refresh the data when changes were detected.
+
 #### Dashboards app: Problem with width of PDF reports [ID_35531]
 
 <!-- MR 10.2.0 [CU13] - FR 10.3.4 -->

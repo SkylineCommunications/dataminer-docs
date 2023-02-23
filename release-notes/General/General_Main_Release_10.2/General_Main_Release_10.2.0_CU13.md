@@ -49,6 +49,12 @@ New description of the *GetAlarmDetails* method:
 
 > Get the alarm details for the specified alarm (use GetAlarmHistory for the details of a cleared non-root alarm).
 
+#### Security enhancements [ID_35667]
+
+<!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
+
+A number of security enhancements have been made.
+
 #### SLLogCollector now also collects output of 'netstat -ano' command [ID_35674]
 
 <!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
@@ -86,6 +92,12 @@ From now on, Cube will check whether the pattern matching feature is enabled eac
 <!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.3 -->
 
 When an EPM element was stopped, in some rare cases, an error could occur in SLElement.
+
+#### Dashboards app & Low-code apps - GQI: Problem with 'Update data' option when using the 'Get parameter table by ID' data source [ID_35490]
+
+<!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
+
+When a query using the *Get parameter table by ID* data source had the *Update data* option enabled, the component would incorrectly no longer automatically refresh the data when changes were detected.
 
 #### SLAnalytics : Problem after a DVE parent element had been deleted [ID_35521]
 
