@@ -58,13 +58,14 @@ The repository name should look like this (using "-" as separator): **{customerA
   - CF (Companion Files)
   - T (Tests)
 
-If you think an Item type should be added, please let us know so it is added before you create the repo.
+  > [!NOTE]
+  > If you think an item type should be added, please contact us so we can add it before you create the repository.
 
 - It is up to the repository creator to choose the **item name**; however, make sure this name clearly indicates the purpose of the repository.
 
 ## Adding README File
 
-It is important to add a README.md file to to the root folder. This file should contain all necessary information for users to understand what the code is for and how to use it.
+It is important to add a *README.md* file to to the root folder. The contents of this file should provide users with the necessary information to understand the purpose of the code and learn how to use it.
 
 ## Adding topics to a repository
 
