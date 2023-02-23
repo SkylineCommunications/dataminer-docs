@@ -39,7 +39,7 @@ For a daily report, an additional archive `<timestamp>_All_Reports.zip` is gener
 To activate CDMR, you must configure SMTP so that emails can be sent and configure *MaintenanceSettings.xml* so that emails are sent to the correct address. Once the configuration is complete, Skyline Communications must also be notified.
 
 > [!NOTE]
-> In DataMiner Systems with multiple DMAs, it can be time-consuming to do the manual configuration detailed below. In that case, it can be useful to use the [Activate CDMR](https://community.dataminer.services/documentation/activate-cdmr/) tool instead. Note that the final step below ([Notify Skyline Communications](#notify-skyline-communications)), is still necessary when you use this tool.
+> In DataMiner Systems with multiple DMAs, it can be time-consuming to do the manual configuration detailed below. In that case, it can be useful to use the [Activate CDMR](xref:Activate_CDMR) tool instead. Note that the final step below ([Notify Skyline Communications](#notify-skyline-communications)), is still necessary when you use this tool.
 
 ### SMTP configuration
 
