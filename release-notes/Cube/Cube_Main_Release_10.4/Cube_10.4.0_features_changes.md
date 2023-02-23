@@ -138,6 +138,12 @@ The following information can be displayed:
 #ErrorAlarms
 ```
 
+#### Visual Overview - ListView component: New component option 'SingleSelectionMode' [ID_35320]
+
+<!-- MR 10.4.0 - FR 10.3.4 -->
+
+By default, you can select multiple rows in a list view (e.g. using the CTRL or SHIFT key). With the new component option *SingleSelectionMode*, you can now set the selection mode of a list view to single instead, so that only one row can be selected at a time.
+
 #### System Center: New DataMiner log file 'SLSmartBaselineManager.txt' [ID_35352]
 
 <!-- MR 10.4.0 - FR 10.3.3 -->
