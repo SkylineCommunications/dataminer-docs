@@ -236,6 +236,12 @@ Up to now, when you clicked one of those related parameters in order to add it t
 
 From now on, DataMiner Cube will no longer accept database TTL settings that exceed 10 years.
 
+#### Selecting 'Help' will now open the 'Getting started' page of the online DataMiner user guide [ID_35571]
+
+<!-- MR 10.4.0 - FR 10.3.4 -->
+
+When, in DataMiner Cube, you select *Help* in the user menu or the *Apps* pane, the ['Getting started' page of the online DataMiner user guide](xref:Part1GettingStarted) will open in a browser window.
+
 ### Fixes
 
 #### Profiles app: A profile instance would incorrectly list parameters that had been removed from the profile definition [ID_34679] [ID_34771]
