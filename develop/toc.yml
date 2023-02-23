@@ -5240,6 +5240,8 @@
               topicUid: CLI_legacy_packages_only
             - name: Logging
               topicUid: Logging1
+    - name: DataStax DevCenter
+      topicUID: DataStax_DevCenter
     - name: Skyline Driver Passport Platform
       topicUid: TOODriverPassportPlatform
       items:

@@ -29,7 +29,7 @@ The tool duplicates tables, which is different from taking a snapshot (i.e. a ba
    1. Open DevCenter, by going to `C:\Program Files\Cassandra\DevCenter\Run DevCenter.lnk`.
 
       > [!TIP]
-      > For more information on DevCenter, see [DataStax DevCenter](https://community.dataminer.services/documentation/datastax-devcenter/).
+      > For more information on DevCenter, see [DataStax DevCenter](xref:DataStax_DevCenter).
 
    1. In the *Connections* pane, click the icon to create a new connection.
 

@@ -8,6 +8,8 @@ In this section, you can find information on the following useful tools for syst
 
 - [DataMiner Integration Studio](xref:DIS)
 
+- [DataStax DevCenter](xref:DataStax_DevCenter)
+
 - [CI/CD](xref:DevelopmentWithCICD)
 
 - [Copy Element Data](xref:Copy_Element_Data)
