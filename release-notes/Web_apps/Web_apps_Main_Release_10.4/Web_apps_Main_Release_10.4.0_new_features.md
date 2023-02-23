@@ -74,3 +74,16 @@ It can be used to retrieve the parameter relationships that are stored in a mode
 
 > [!NOTE]
 > This data source will only be available when *ModelHost* is running.
+
+#### Dashboards app & Low-code apps: 'Lazy load components' setting [ID_35469] [ID_35486]
+
+<!-- MR 10.4.0 - FR 10.3.4 -->
+
+In the configuration settings of a dashboard or a page/panel of a low-code app, you can now find the *Lazy load components* setting.
+
+When this settings is enabled, the components on the dashboard or the page/panel of the low-code app will only be initialized the first time they appear on the screen. This will considerably shorten the initial load time and enhance overall performance of large dashboards and large pages/panels of low-code apps.
+
+> [!NOTE]
+>
+> - This setting, which is enabled by default for all new dashboards and all new pages/panels of low-code apps, is only available if you add the `showAdvancedSettings=true` option to the dashboard URL.
+> - This setting will automatically be disabled when you switch to edit mode.
