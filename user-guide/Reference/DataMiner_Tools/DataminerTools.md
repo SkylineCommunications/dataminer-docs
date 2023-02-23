@@ -7,9 +7,10 @@ uid: DataminerTools
 This section provides information on the following tools:
 
 - [Alerter](xref:Alerter)
+- [Analyze startup logs](xref:Analyze_Startup_Logs)
 - [Cassandra Cleaner](xref:Cassandra_Cleaner)
 - [Cassandra Clone](xref:Cassandra_Clone)
-- [Cassandra Cluster Validator](xref:Cassandra_Cluster_Validator)
+- [Cassandra Cluster validator](xref:Cassandra_Cluster_Validator)
 - [Connection Check](xref:Connection_Check)
 - [DataMiner Comparison tool](xref:DataMinerComparisonTool)
 - [DataMiner Size tool](xref:DataMinerSizeTool)

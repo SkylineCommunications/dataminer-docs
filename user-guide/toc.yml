@@ -3058,6 +3058,8 @@
               topicUid: Working_with_Alerter_pop-up_balloons
             - name: Configuring Alerter
               topicUid: Configuring_Alerter
+        - name: Analyze startup logs
+          topicUID: Analyze_Startup_Logs
         - name: Cassandra Cleaner
           topicUID: Cassandra_Cleaner
         - name: Cassandra Clone
