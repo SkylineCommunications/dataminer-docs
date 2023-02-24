@@ -112,6 +112,12 @@ In some cases, an auto-complete control could clear its content while you were e
 
 When the parameters of a spectrum element were retrieved in a web app, in some cases, an exception could be thrown, causing a `No parameters available` message to appear.
 
+#### Dashboards app - Line & area chart component: Trend data could not be retrieved for spectrum parameters [ID_35676]
+
+<!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
+
+When, in a dashboard, you added a trended spectrum parameter to a line & area chart component, the component would not be able to retrieve the trend data of that parameter.
+
 #### Low-code apps: Feeds used in queries would incorrectly not get updated [ID_35689]
 
 <!-- MR 10.3.0 [CU1] - FR 10.3.4 -->
