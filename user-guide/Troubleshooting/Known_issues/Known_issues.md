@@ -5,6 +5,7 @@ uid: Known_issues
 
 | Issue | DataMiner version | Date added |
 |--|--|--|
+| [Local user unable to access DMA after first reboot after installation](xref:KI_Local_user_unable_to_access_DMA_after_first_reboot_after_installation) | DataMiner 10.3.3 | February 24, 2023 |
 | [Node: 'X' is not supported by the current server version](xref:KI_Node_is_not_supported_by_the_current_server_version) | DataMiner 10.3.2 | January 26, 2023 |
 | [Contents of state_changes table not migrated after Cassandra Cluster migration](xref:KI_Contents_of_State_changes_Table_not_Migrated_after_Cassandra_Cluster_Migration) | Cassandra Cluster setups | January 16, 2023 |
 | [Cassandra cluster node in unexpected state](xref:KI_Cassandra_cluster_node_unexpected_state) | Cassandra Cluster setups | January 10,2023 |
