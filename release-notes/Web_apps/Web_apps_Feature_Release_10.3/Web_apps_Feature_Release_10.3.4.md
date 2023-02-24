@@ -97,6 +97,12 @@ Also, a number of enhancements have been made:
 
 When a query using the *Get parameter table by ID* data source had the *Update data* option enabled, the component would incorrectly no longer automatically refresh the data when changes were detected.
 
+#### Dashboards app: Visualization picker would incorrectly resize when you hovered over it [ID_35516]
+
+<!-- MR 10.4.0 - FR 10.3.4 -->
+
+When you tried to select a visualization for a newly added component that did not yet have one, the visualization picker would incorrectly resize the first time you hovered over it.
+
 #### Dashboards app: Problem with width of PDF reports [ID_35531]
 
 <!-- MR 10.2.0 [CU13] - FR 10.3.4 -->
