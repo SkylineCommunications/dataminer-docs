@@ -116,7 +116,7 @@ The following steps were executed on Ubuntu Server. When you have a Cassandra Cl
 
 Perform a snapshot using the following command:
 
-```bash
+```txt
 nodetool snapshot
 ```
 
@@ -124,7 +124,7 @@ nodetool snapshot
 
 1. Add the GPG key of the Apache Cassandra repository to your system:
 
-   ```bash
+   ```txt
    wget -q -O - https://www.apache.org/dist/cassandra/KEYS | sudo apt-key add -
    ```
 
@@ -132,13 +132,13 @@ nodetool snapshot
 
    In the following example we are going to add Cassandra 4.1 to the sources list.
 
-   ```bash
+   ```txt
    echo "deb https://downloads.apache.org/cassandra/debian 41x main" | sudo tee -a /etc/apt/sources.list.d/cassandra.sources.list
    ```
 
 1. Open the Cassandra.sources.list
 
-   ```bash
+   ```txt
    sudo nano /etc/apt/sources.list.d/cassandra.sources.list
    ```
 
@@ -154,7 +154,7 @@ nodetool snapshot
 
 1. Update the package list with the following command:
 
-   ```bash
+   ```txt
    sudo apt-get update
    ```
 
@@ -164,25 +164,25 @@ nodetool snapshot
 
 1. Stop the service:
 
-   ```bash
+   ```txt
    sudo service cassandra stop
    ```
 
 1. Check if the service has stopped using:
 
-   ```bash
+   ```txt
    nodetool status
    ```
 
 ##### Backup the Cassandra and Cassandra YAML
 
-```bash
+```txt
 sudo cp -R /var/lib/cassandra /var/lib/cassandra_backup
 ```
 
 The following command will back up the home directory of the administrator user. In your case, this could be another (home) directory.
 
-```bash
+```txt
 sudo cp /etc/cassandra/cassandra.yaml /home/administrator/cassandra.yaml
 ```
 
@@ -190,7 +190,7 @@ sudo cp /etc/cassandra/cassandra.yaml /home/administrator/cassandra.yaml
 
 Update Cassandra with the following command:
 
-```bash
+```txt
 sudo apt install cassandra
 ```
 
@@ -210,19 +210,19 @@ It could be that bash shell shows the following:
 
 1. Start the Cassandra daemon using the following bash command:
 
-   ```bash
+   ```txt
    sudo service cassandra start
    ```
 
 1. Check if the upgrade was successful by running the following command:
 
-   ```bash
+   ```txt
    nodetool version
    ```
 
 1. Check the status of the Cassandra node:
 
-   ```bash
+   ```txt
    nodetool status
    ```
 
@@ -230,7 +230,7 @@ It could be that bash shell shows the following:
 
 1. Upgrading the SSTables can be done like this:
 
-   ```bash
+   ```txt
    sudo nodetool upgradesstables
    ```
 
@@ -243,13 +243,13 @@ Cassandra log files can be checked as follows:
 
 - Check the last 100 longlines of system.log:
 
-   ```bash
+   ```txt
    tail -n 100 /var/log/cassandra/system.log
    ```
 
 - View the complete system.log file:
 
-   ```bash
+   ```txt
    less /var/log/cassandra/system.log
    ```
 
