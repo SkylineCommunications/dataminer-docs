@@ -4,6 +4,10 @@ uid: UIBlockTypesOverview
 
 # UIBlockType overview
 
+> [!TIP]
+> We highly recommend that you use the [Interactive Automation Script Toolkit](xref:Interactive_Automation_Script_Toolkit).
+> For more information, see [Getting started with the IAS Toolkit](xref:Getting_Started_with_the_IAS_Toolkit).
+
 The [UIBlockType](xref:Skyline.DataMiner.Automation.UIBlockType) enum defines different types of UI components.
 
 | Name | Description |

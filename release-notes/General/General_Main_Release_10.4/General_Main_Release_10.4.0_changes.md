@@ -97,17 +97,33 @@ During a DataMiner upgrade, Microsoft .NET 6.0 will now be installed if not inst
 
 The zoom range of a map can now be set by means of a slider.
 
-#### SLAnalytics - Automatic incident tracking: Enhanced performance when fetching relation information [ID_35414]
+#### SLAnalytics - Automatic incident tracking: Enhanced performance when fetching relation information [ID_35414] [ID_35508]
 
-<!-- MR 10.4.0 - FR 10.3.3 -->
+<!-- 35414:  MR 10.4.0 - FR 10.3.3 -->
+<!-- 35508:  MR 10.4.0 - FR 10.3.4 -->
 
 Because of a number of enhancements, overall performance has increased when fetching relation information for the automatic incident tracking feature.
+
+> [!NOTE]
+> Currently, the parameter relationship feature is still in preview.
+
+#### Security enhancements [ID_35434]
+
+<!-- MR 10.4.0 - FR 10.3.4 -->
+
+A number of security enhancements have been made.
 
 #### SLAnalytics - Behavioral anomaly detection: No longer available for discrete parameters [ID_35465]
 
 <!-- MR 10.4.0 - FR 10.3.3 -->
 
 From now on, anomaly detection will no longer be available for discrete parameters.
+
+#### SLAnalytics - Pattern matching: Enhanced performance when detecting large patterns [ID_35474]
+
+<!-- MR 10.4.0 - FR 10.3.4 -->
+
+Because of a number of enhancements, overall performance has increased when detecting trend patterns that cover more than 30,000 data points.
 
 ### Fixes
 

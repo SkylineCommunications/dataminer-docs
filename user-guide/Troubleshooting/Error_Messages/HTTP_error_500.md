@@ -28,20 +28,14 @@ The problem can have two causes:
 
 ## Resolution
 
-To resolve the problem, do the following:
+To resolve the problem, open IIS and check whether the DataMiner Dashboards application is running in an application pool that is configured to use Microsoft .NET 4.0. If not, proceed as follows to change the Application Pool (AppPool) settings of the DataMiner Dashboards application:
 
-1. Open IIS and check whether the DataMiner Dashboards application is running in an application pool that is configured to use Microsoft .NET 4.0. If not, proceed as follows to change the Application Pool (AppPool) settings of the DataMiner Dashboards application.
+1. In the tree structure on the left, select the application directory.
 
-    1. In the tree structure on the left, select the application directory.
+1. In the *Actions* section, click *Basic Settings...* The application pool will probably be set to “DefaultAppPool”.
 
-    2. In the *Actions* section, click *Basic Settings...* The application pool will probably be set to “DefaultAppPool”.
+1. Click *Select...* and change *Application pool* to “ASP.NET v4.0” (or another .NET 4.0 application pool).
 
-    3. Click *Select...* and change *Application pool* to “ASP.NET v4.0” (or another .NET 4.0 application pool).
+1. Click *OK*.
 
-    4. Click *OK*.
-
-    5. Reconnect to DataMiner Dashboards.
-
-2. If, after having changed the application pool settings, you still get the same error when connecting to DataMiner Dashboards, then (and ONLY then!) install the following Microsoft hotfix:
-
-    - [A hotfix rollup is available for IIS 7.0 to support the .NET Framework 4.0 (958854)](http://support.microsoft.com/kb/958854)
+1. Reconnect to DataMiner Dashboards.

@@ -72,6 +72,12 @@ namespace Skyline.DataMiner.Automation
 		public static bool DEFAULT_SHOW_SECONDS { get; protected set; }
 
 		/// <summary>
+		/// Gets the default value for the <see cref="AutomationTimeUpDownOptions.ShowTimeUnits"/> property.
+		/// </summary>
+		/// <value>The default value for the <see cref="AutomationTimeUpDownOptions.ShowTimeUnits"/> property.</value>
+		public static bool DEFAULT_SHOW_TIMEUNITS { get; protected set; }
+
+		/// <summary>
 		/// Gets or sets the number of digits to be used in order to represent the fractions of seconds.
 		/// </summary>
 		/// <value>The number of digits to be used in order to represent the fractions of seconds.</value>
@@ -143,6 +149,15 @@ namespace Skyline.DataMiner.Automation
 		/// <para>Default: <c>true</c>.</para>
 		/// </remarks>
 		public bool ShowSeconds { get; set; }
+
+		/// <summary>
+		/// Gets or sets a value indicating whether to display time labels in web component control.
+		/// </summary>
+		/// <value><c>true</c> to display time labels in web component control; otherwise, <c>false</c>.</value>
+		/// <remarks>
+		/// <para>Default: <c>false</c>.</para>
+		/// </remarks>
+		public bool ShowTimeUnits { get; set; }
 
 		/// <summary>
 		/// Initializes a new instance of the <see cref="AutomationTimeUpDownOptions"/> class.

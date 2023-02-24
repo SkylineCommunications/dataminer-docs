@@ -138,6 +138,18 @@ The following information can be displayed:
 #ErrorAlarms
 ```
 
+#### Visual Overview - ListView component: New component option 'SingleSelectionMode' [ID_35320]
+
+<!-- MR 10.4.0 - FR 10.3.4 -->
+
+By default, you can select multiple rows in a list view (e.g. using the CTRL or SHIFT key). With the new component option *SingleSelectionMode*, you can now set the selection mode of a list view to single instead, so that only one row can be selected at a time.
+
+#### Visual Overview: Re-arranging grouped shapes [ID_35323]
+
+<!-- MR 10.4.0 - FR 10.3.4 -->
+
+When, in a Visio drawing, shapes had been positioned dynamically based on properties, up to now, it was possible to re-arrange individual shapes manually. From now on, it will also be possible to re-arrange grouped shapes.
+
 #### System Center: New DataMiner log file 'SLSmartBaselineManager.txt' [ID_35352]
 
 <!-- MR 10.4.0 - FR 10.3.3 -->
@@ -223,6 +235,12 @@ Up to now, when you clicked one of those related parameters in order to add it t
 
 > [!NOTE]
 > Currently, the parameter relationship feature is still in preview.
+
+#### Database TTL settings will now be limited to 10 years [ID_35533]
+
+<!-- MR 10.4.0 - FR 10.3.4 -->
+
+From now on, DataMiner Cube will no longer accept database TTL settings that exceed 10 years.
 
 ### Fixes
 

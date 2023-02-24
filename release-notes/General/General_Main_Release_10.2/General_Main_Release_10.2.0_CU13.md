@@ -49,6 +49,22 @@ New description of the *GetAlarmDetails* method:
 
 > Get the alarm details for the specified alarm (use GetAlarmHistory for the details of a cleared non-root alarm).
 
+#### Security enhancements [ID_35667]
+
+<!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
+
+A number of security enhancements have been made.
+
+#### SLLogCollector now also collects output of 'netstat -ano' command [ID_35674]
+
+<!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
+
+SLLogCollector packages will now also include the following additional file:
+
+| File | Contents |
+|------|----------|
+| Logs\Network Information\Netstat.exe -ano.txt | The output of an `netstat -ano` command. |
+
 ### Fixes
 
 #### Memory leak in SLNet after closing a client connection that had been using a "SLDataGateway.API" subscription set [ID_35319]
@@ -76,6 +92,12 @@ From now on, Cube will check whether the pattern matching feature is enabled eac
 <!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.3 -->
 
 When an EPM element was stopped, in some rare cases, an error could occur in SLElement.
+
+#### Dashboards app & Low-code apps - GQI: Problem with 'Update data' option when using the 'Get parameter table by ID' data source [ID_35490]
+
+<!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
+
+When a query using the *Get parameter table by ID* data source had the *Update data* option enabled, the component would incorrectly no longer automatically refresh the data when changes were detected.
 
 #### SLAnalytics : Problem after a DVE parent element had been deleted [ID_35521]
 
@@ -193,8 +215,44 @@ A number of alarm-related issues have been fixed:
 - If no comment was passed when an alarm was cleared, in some cases, the comment of the previous alarm would incorrectly not be added to the closing alarm.
 - In some cases, an incorrect `Alarm didn't have the correct format.` error would be logged.
 
+#### Service & Resource Management: ResourceManager module could briefly be uninitialized during a midnight synchronization [ID_35621]
+
+<!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
+
+During a midnight synchronization, in some cases, the ResourceManager module could briefly be uninitialized.
+
+The logging indicating the start and the end of the initialization, synchronization and cache load of the ResourceManager module has now been changed from log level 4 to log level 0.
+
 #### DataMiner Cube: Pattern edit menu would incorrectly open when you resized the selected area in a trend graph [ID_35627]
 
 <!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
 
 When you resized the selected area in a trend graph by dragging either the left or right selection boundary, the pattern edit menu would incorrectly open, even when you were not allowed to create a pattern or when you had no intention of editing a pattern.
+
+#### SLAnalytics - Automatic incident tracking: Problem with duplicate alarms [ID_35664]
+
+<!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
+
+Up to now, when the SLAnalytics process started, the entire focus data cache of the agent hosting the process was cleared and recreated, causing the automatic incident tracking feature to clear any incident associated with the alarms removed from the focus data cache. When the focus data was then regenerated later on, this could lead to a recreation of the same groups.
+
+Also, when the SLAnalytics processes of different agents in the same cluster were restarted right before a full hour, it was possible to trigger the internal duplication of active alarms hosted on non-leader agents. This could, in turn, lead to an incorrect internal alarm state and incorrect incidents containing copies of the same alarm.
+
+From now on, the focus data cache will no longer be cleared when SLAnalytics process starts up. Instead, only the focus data associated with the alarms that are no longer active will be removed from the cache.
+
+#### DataMiner Cube - Alarm Console: Problem when a session variable was used in an alarm filter [ID_35681]
+
+<!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
+
+When you applied a filter to an alarm tab, no alarms would be shown when you had used a session variable in the filter.
+
+#### Dashboards app & Low-code apps: Last nodes of a migrated query would incorrectly be cut off [ID_35693]
+
+<!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
+
+When a GQI was migrated, in some cases, the last nodes of the migrated query would incorrectly be cut off.
+
+#### Dashboards app & Low-code apps - Node edge component: An incorrect tooltip would appear when hovering over a segment of an edge [ID_35696]
+
+<!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
+
+When you hovered over a segment of an edge, in some cases, an incorrect tooltip would appear.
