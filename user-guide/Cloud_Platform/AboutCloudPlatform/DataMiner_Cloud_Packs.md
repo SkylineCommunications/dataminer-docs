@@ -11,9 +11,9 @@ The DataMiner Cloud Pack is a package that includes the necessary DataMiner Exte
 
 Included modules:
 
-- [CloudGateway](xref:DataMinerExtensionModules#CloudGateway)
-- [CloudFeed](xref:DataMinerExtensionModules#CloudFeed)
-- [ArtifactDeployer](xref:DataMinerExtensionModules#ArtifactDeployer)
+- [CloudGateway](xref:DataMinerExtensionModules#cloudgateway)
+- [CloudFeed](xref:DataMinerExtensionModules#cloudfeed)
+- [ArtifactDeployer](xref:DataMinerExtensionModules#artifactdeployer)
 - [CoreGateway](xref:DataMinerExtensionModules#coregateway)
 - [FieldControl](xref:DataMinerExtensionModules#fieldcontrol)
 - [Orchestrator](xref:DataMinerExtensionModules#orchestrator)
