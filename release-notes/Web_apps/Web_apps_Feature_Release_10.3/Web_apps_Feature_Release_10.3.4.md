@@ -143,7 +143,7 @@ When, in a dashboard, you added a trended spectrum parameter to a line & area ch
 
 #### Dashboards app - Line & area chart component: Duplicate data in exported CSV file [ID_35688]
 
-<!-- MR 10.2.0 [CU13] - FR 10.3.4 -->
+<!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
 
 When you exported the data shown in a line & area chart component to a CSV file, the file could incorrectly contain duplicate data.
 
