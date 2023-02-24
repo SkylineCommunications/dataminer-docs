@@ -2,10 +2,10 @@
 uid: Cube_Main_Release_10.3.0_other_features_changes
 ---
 
-# DataMiner Cube Main Release 10.3.0 – Other new features & changes - Preview
+# DataMiner Cube Main Release 10.3.0 – Other new features & changes
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 ## Other new features
 
