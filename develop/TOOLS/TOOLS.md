@@ -18,6 +18,8 @@ In this section, you can find information on the following useful tools for syst
 
 - [DataMiner Application Package Builder](xref:TOODataMinerPackageBuilder)
 
+- [EBU live IP software toolkit (LIST)](xref:EBU_Live_IP_Software_Toolkit_LIST)
+
 - [Skyline Driver Passport Platform](xref:TOODriverPassportPlatform)
 
 - [Nodetool](xref:TOONodetool)
