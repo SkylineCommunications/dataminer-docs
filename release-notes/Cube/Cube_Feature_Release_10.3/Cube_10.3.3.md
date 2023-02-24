@@ -2,19 +2,15 @@
 uid: Cube_Feature_Release_10.3.3
 ---
 
-# DataMiner Cube Feature Release 10.3.3 – Preview
+# DataMiner Cube Feature Release 10.3.3
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 > For release notes for this release that are not related to DataMiner Cube, see [General Feature Release 10.3.3](xref:General_Feature_Release_10.3.3).
 
-## Highlights
-
-*No highlights have been selected for this release yet*
-
-## Other features
+## Features
 
 #### System Center - Database: Address specified in the 'DB server' field of a database of type 'Cassandra' or 'CassandraCluster' can now include a custom port [ID_34590]
 
@@ -28,7 +24,6 @@ Examples:
 
 - localhost (Will be resolved to localhost:9042)
 - 10.5.100.1:5555
-
 
 #### Visual Overview - ListView: Copying list data to the Windows clipboard [ID_35170]
 
