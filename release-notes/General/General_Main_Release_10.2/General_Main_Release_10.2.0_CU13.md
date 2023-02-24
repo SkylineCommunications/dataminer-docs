@@ -245,6 +245,12 @@ From now on, the focus data cache will no longer be cleared when SLAnalytics pro
 
 When you applied a filter to an alarm tab, no alarms would be shown when you had used a session variable in the filter.
 
+#### Dashboards app - Line & area chart component: Duplicate data in exported CSV file [ID_35688]
+
+<!-- MR 10.2.0 [CU13] - FR 10.3.4 -->
+
+When you exported the data shown in a line & area chart component to a CSV file, the file could incorrectly contain duplicate data.
+
 #### Dashboards app & Low-code apps: Last nodes of a migrated query would incorrectly be cut off [ID_35693]
 
 <!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
