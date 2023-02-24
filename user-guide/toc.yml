@@ -2891,6 +2891,8 @@
     - name: Known issues
       topicUID: Known_issues
       items:
+        - name: Local user unable to access DMA after first reboot after installation
+          topicUID: KI_Local_user_unable_to_access_DMA_after_first_reboot_after_installation
         - name: Contents of state_changes table not migrated after Cassandra Cluster migration
           topicUID: KI_Contents_of_State_changes_Table_not_Migrated_after_Cassandra_Cluster_Migration
         - name: Cassandra cluster node in unexpected state
