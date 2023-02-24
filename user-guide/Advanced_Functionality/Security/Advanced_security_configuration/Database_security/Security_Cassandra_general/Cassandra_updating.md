@@ -4,14 +4,16 @@ uid: Cassandra_updating
 
 # Updating Cassandra
 
-It's common practice with Cassandra to do rolling upgrades which means an upgrade can be done without downtime if your settings allows it. Rolling upgrades means basically:
+It's common practice with Cassandra to do rolling upgrades. If your settings allows it, an upgrade can be done without downtime.
 
-- Upgrade one node.
-- Bring it up again.
-- Move to the next one.
+Doing a rolling upgrade basically means:
+
+1. Upgrade one node.
+1. Bring it up again.
+1. Move to the next one.
 
 > [!IMPORTANT]
-> When going from one major range to another E.g. from 3.x to 4.x it is best practice to first upgrade to the latest version in the current range before going to the new range.
+> When going from one major range to another (e.g. from 3.x to 4.x), it is best practice to first upgrade to the latest version in the current range before going to the new range.
 
 ## Checking the Cassandra version
 
@@ -108,7 +110,7 @@ To update the Cassandra version:
 
 ### [On Linux](#tab/tabid-2)
 
-Below steps were executed on Ubuntu Server. When you have an Cassandra Cluster, each node needs to be updated separately.
+The following steps were executed on Ubuntu Server. When you have a Cassandra Cluster, each node needs to be updated separately.
 
 #### Backup Cassandra using snapshot
 
@@ -120,7 +122,7 @@ nodetool snapshot
 
 #### Update the repositories
 
-1. Add the Apache Cassandra repository's GPG key to your system:
+1. Add the GPG key of the Apache Cassandra repository to your system:
 
    ```bash
    wget -q -O - https://www.apache.org/dist/cassandra/KEYS | sudo apt-key add -
@@ -128,7 +130,7 @@ nodetool snapshot
 
 1. Add the Cassandra repository to the sources list:
 
-   In below example we are going to add Cassandra 4.1 to the sources list.
+   In the following example we are going to add Cassandra 4.1 to the sources list.
 
    ```bash
    echo "deb https://downloads.apache.org/cassandra/debian 41x main" | sudo tee -a /etc/apt/sources.list.d/cassandra.sources.list
@@ -143,9 +145,13 @@ nodetool snapshot
 1. Remove old installation entries and only leave the following line:
 
    ![Cassandra Source List File](~/user-guide/images/CassandraUpdate_CassandraSourcesListFile.png)
+
    Hit CTRL + X after modifying this file, when the question "Save Modified buffer" comes up, hit **Y** keyboard button.
+
    At the bottom, File Name to Write pane will come up, hit the **Enter** keyboard button.
+
    ![Nano Editor File Name to Write](~/user-guide/images/CassandraUpdate_NanoFileToWrite.png)
+
 1. Update the package list with the following command:
 
    ```bash
@@ -174,7 +180,7 @@ nodetool snapshot
 sudo cp -R /var/lib/cassandra /var/lib/cassandra_backup
 ```
 
-Below command will backup to home directory of the administrator user, in your case this could be another (home)directory.
+The following command will back up the home directory of the administrator user. In your case, this could be another (home) directory.
 
 ```bash
 sudo cp /etc/cassandra/cassandra.yaml /home/administrator/cassandra.yaml
@@ -193,9 +199,12 @@ It could be that bash shell shows the following:
 ![Cassandra Configuration File Update](~/user-guide/images/CassandraUpdate_ConfigurationFileUpdate.png)
 
 > [!IMPORTANT]
-> Using **Y** will overwrite your current Cassandra.yaml file and take the one from the package. This could lead to a broken set-up, best is to revise the changes using the **D** or **Z** option. When using the **D** option the screen will be replaced with the contents of the cassandra.yaml file, exiting that screen can be done by using the **q** keyboard button.
-As the screenshot explains **N** is the default option, so your existing cassandra.yaml file would be unchanged if this option was used. We recommend using the **N** option.
-The backup we took earlier can also be placed back.
+>
+> Using **Y** will overwrite your current cassandra.yaml file and take the one from the package. This could lead to a broken setup. It is best to revise the changes using the **D** or **Z** option. When using the **D** option, the screen will be replaced with the contents of the cassandra.yaml file. Exiting that screen can be done by using the **q** keyboard button.
+>
+> As the screenshot explains, **N** is the default option, so your existing cassandra.yaml file would be unchanged if this option was used. We recommend using the **N** option.
+>
+> The backup we took earlier can also be placed back.
 
 ##### Start Cassandra
 
@@ -217,20 +226,20 @@ The backup we took earlier can also be placed back.
    nodetool status
    ```
 
-   The status column in the output window should report **UN** which stands for "Up/Normal
+   The status column in the output window should report **UN** which stands for "Up/Normal".
 
 1. Upgrading the SSTables can be done like this:
 
-```bash
-sudo nodetool upgradesstables
-```
+   ```bash
+   sudo nodetool upgradesstables
+   ```
 
 > [!NOTE]
-> When upgrading Cassandra to a new version, it is generally recommended to upgrade the SSTables as well. This is because the new version of Cassandra may have changes to the way data is stored on disk, and using old SSTables with the new version of Cassandra could result in compatibility issues or suboptimal performance. It is always not strict necessary, the decision to upgrade the SSTables should be based on the specifics of your use-case and the trade-offs.
+> When upgrading Cassandra to a new version, it is generally recommended to upgrade the SSTables as well. This is because the new version of Cassandra may have another way to store data on disk, and using old SSTables with the new version of Cassandra could result in compatibility issues or suboptimal performance. The decision to upgrade the SSTables should be based on the specifics of your use case and the trade-offs.
 
 ##### Check log files
 
-Cassandra log files can be checked with the following:
+Cassandra log files can be checked as follows:
 
 - Check the last 100 longlines of system.log:
 
@@ -246,3 +255,5 @@ Cassandra log files can be checked with the following:
 
 > [!TIP]
 > You can also use the Apache Cassandra Cluster Monitor driver described [here](xref:Maintain_Cassandra_Cluster) to verify the status of your Cassandra nodes.
+
+---
