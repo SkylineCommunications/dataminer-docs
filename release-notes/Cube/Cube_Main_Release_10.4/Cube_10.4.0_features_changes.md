@@ -192,6 +192,9 @@ Each time a program is launched, a start entry and an end entry will be added to
 
 The *automatic incident tracking* feature groups active alarms that are related to the same incident, so that the Alarm Console provides a better overview of the current issues in the system. From now on, on cloud-connected DataMiner Agents that have the DataMiner Extension Module *ModelHost* installed and that have been configured to [offload alarm and change point events to the cloud](xref:Controlling_cloudfeed_data_offloads), this feature will also make use of the parameter relationship data that is stored in a model managed by the *ModelHost* DxM.
 
+> [!NOTE]
+> Currently, the ModelHost DxM is not yet available.
+
 #### Trending - Parameter relationships: Enhancements [ID_34832] [ID_34846] [ID_34863] [ID_34938]
 
 <!-- MR 10.4.0 - FR 10.3.1 -->
@@ -229,6 +232,9 @@ From now on, a slightly larger number of missing values will be allowed will you
 In the top-right corner of a trend graph, a light bulb icon appears when DataMiner finds parameters that are related to the parameters shown in the trend graph. Clicking this light bulb icon allows you to add one or more of those related parameters to the trend graph you are viewing.
 
 Up to now, when you clicked one of those related parameters in order to add it to the trend graph, a check mark would appear in front of it. From now on, check marks will no longer appear in front of related parameters after selecting them.
+
+> [!NOTE]
+> Currently, the parameter relationship feature is still in preview.
 
 #### Database TTL settings will now be limited to 10 years [ID_35533]
 
