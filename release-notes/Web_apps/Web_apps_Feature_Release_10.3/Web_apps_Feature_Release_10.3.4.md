@@ -27,7 +27,13 @@ When this settings is enabled, the components on the dashboard or the page/panel
 > [!NOTE]
 >
 > - This setting, which is enabled by default for all new dashboards and all new pages/panels of low-code apps, is only available if you add the `showAdvancedSettings=true` option to the dashboard URL.
-> - This setting will automatically be disabled when you switch to edit mode.
+> - Even when this setting is enabled, components will not be lazy loaded in edit mode.
+
+#### Monitoring app - Trending: Switching between trend graph and histogram [ID_35501]
+
+<!-- MR 10.4.0 - FR 10.3.4 -->
+
+When viewing a trend graph in the Monitoring app, you can now easily switch between trend graph and histogram by clicking either the trend graph or histogram icon in the top-right corner.
 
 ## Changes
 
@@ -91,6 +97,12 @@ Also, a number of enhancements have been made:
 
 When a query using the *Get parameter table by ID* data source had the *Update data* option enabled, the component would incorrectly no longer automatically refresh the data when changes were detected.
 
+#### Dashboards app: Visualization picker would incorrectly resize when you hovered over it [ID_35516]
+
+<!-- MR 10.4.0 - FR 10.3.4 -->
+
+When you tried to select a visualization for a newly added component that did not yet have one, the visualization picker would incorrectly resize the first time you hovered over it.
+
 #### Dashboards app: Problem with width of PDF reports [ID_35531]
 
 <!-- MR 10.2.0 [CU13] - FR 10.3.4 -->
@@ -122,6 +134,18 @@ The submenu in the subheader bar of a dashboard would incorrectly be displayed w
 <!-- MR 10.3.0 [CU1] - FR 10.3.4 -->
 
 When the parameters of a spectrum element were retrieved in a web app, in some cases, an exception could be thrown, causing a `No parameters available` message to appear.
+
+#### Dashboards app - Line & area chart component: Trend data could not be retrieved for spectrum parameters [ID_35676]
+
+<!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
+
+When, in a dashboard, you added a trended spectrum parameter to a line & area chart component, the component would not be able to retrieve the trend data of that parameter.
+
+#### Dashboards app - Line & area chart component: Duplicate data in exported CSV file [ID_35688]
+
+<!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
+
+When you exported the data shown in a line & area chart component to a CSV file, the file could incorrectly contain duplicate data.
 
 #### Low-code apps: Feeds used in queries would incorrectly not get updated [ID_35689]
 

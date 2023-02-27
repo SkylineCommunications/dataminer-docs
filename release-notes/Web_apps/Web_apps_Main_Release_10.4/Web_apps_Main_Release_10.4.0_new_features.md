@@ -73,7 +73,9 @@ In the Generic Query Interface, the *Get parameter relations* data source is now
 It can be used to retrieve the parameter relationships that are stored in a model managed by a DataMiner Extension Module named *ModelHost*.
 
 > [!NOTE]
-> This data source will only be available when *ModelHost* is running.
+>
+> - This data source will only be available when *ModelHost* is running.
+> - Currently, the ModelHost DxM is not yet available.
 
 #### Dashboards app & Low-code apps: 'Lazy load components' setting [ID_35469] [ID_35486]
 
@@ -86,4 +88,10 @@ When this settings is enabled, the components on the dashboard or the page/panel
 > [!NOTE]
 >
 > - This setting, which is enabled by default for all new dashboards and all new pages/panels of low-code apps, is only available if you add the `showAdvancedSettings=true` option to the dashboard URL.
-> - This setting will automatically be disabled when you switch to edit mode.
+> - Even when this setting is enabled, components will not be lazy loaded in edit mode.
+
+#### Monitoring app - Trending: Switching between trend graph and histogram [ID_35501]
+
+<!-- MR 10.4.0 - FR 10.3.4 -->
+
+When viewing a trend graph in the Monitoring app, you can now easily switch between trend graph and histogram by clicking either the trend graph or histogram icon in the top-right corner.

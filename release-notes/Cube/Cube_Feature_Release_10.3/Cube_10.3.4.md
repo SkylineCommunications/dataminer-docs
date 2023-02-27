@@ -46,6 +46,18 @@ In the *Bookings* app, the default window of the timeline area has now been chan
 
 This also means that a ListView component configured to list bookings will by default have its *StartTime=* and *EndTime=* options set to `NOW - 8 hours` and `NOW + 16 hours` respectively.
 
+#### Database TTL settings will now be limited to 10 years [ID_35533]
+
+<!-- MR 10.4.0 - FR 10.3.4 -->
+
+From now on, DataMiner Cube will no longer accept database TTL settings that exceed 10 years.
+
+#### Selecting 'Help' will now open the 'Getting started' page of the online DataMiner user guide [ID_35571]
+
+<!-- MR 10.3.0 [CU1] - FR 10.3.4 -->
+
+When, in DataMiner Cube, you select *Help* in the user menu or the *Apps* pane, the ['Getting started' page of the online DataMiner user guide](xref:Part1GettingStarted) will open in a browser window.
+
 #### System Center - Agents: Clearer restart warning before an upgrade is started [ID_35687]
 
 <!-- MR 10.3.0 [CU1] - FR 10.3.4 -->

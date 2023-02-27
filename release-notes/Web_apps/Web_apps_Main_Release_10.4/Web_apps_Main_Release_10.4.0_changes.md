@@ -197,3 +197,9 @@ A number of issues regarding the Visual Overview component have been fixed.
 - When a page was selected in the Visual Overview component, in some cases, an incorrect page would be displayed.
 - In some cases, the dimensions of pop-up windows would be incorrect.
 - When a pop-up window was shown using a *VdxShape* property, in some cases, the default page would be shown instead of the page that was specified.
+
+#### Dashboards app: Visualization picker would incorrectly resize when you hovered over it [ID_35516]
+
+<!-- MR 10.4.0 - FR 10.3.4 -->
+
+When you tried to select a visualization for a newly added component that did not yet have one, the visualization picker would incorrectly resize the first time you hovered over it.

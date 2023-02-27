@@ -239,11 +239,23 @@ Also, when the SLAnalytics processes of different agents in the same cluster wer
 
 From now on, the focus data cache will no longer be cleared when SLAnalytics process starts up. Instead, only the focus data associated with the alarms that are no longer active will be removed from the cache.
 
+#### Dashboards app - Line & area chart component: Trend data could not be retrieved for spectrum parameters [ID_35676]
+
+<!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
+
+When, in a dashboard, you added a trended spectrum parameter to a line & area chart component, the component would not be able to retrieve the trend data of that parameter.
+
 #### DataMiner Cube - Alarm Console: Problem when a session variable was used in an alarm filter [ID_35681]
 
 <!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
 
 When you applied a filter to an alarm tab, no alarms would be shown when you had used a session variable in the filter.
+
+#### Dashboards app - Line & area chart component: Duplicate data in exported CSV file [ID_35688]
+
+<!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
+
+When you exported the data shown in a line & area chart component to a CSV file, the file could incorrectly contain duplicate data.
 
 #### Dashboards app & Low-code apps: Last nodes of a migrated query would incorrectly be cut off [ID_35693]
 
