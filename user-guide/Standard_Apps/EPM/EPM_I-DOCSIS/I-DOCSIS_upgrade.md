@@ -4,19 +4,21 @@ uid: I-DOCSIS_upgrade
 
 # EPM I-DOCSIS upgrade
 
-The below procedure is required to be executed once the EPM solution is upgraded: 
+When you have upgraded the EPM solution, execute the following procedure:
 
-1. Go to the path: `C:\Skyline DataMiner\Dashboards\EPM SOLUTION`.
+1. Go to the folder `C:\Skyline DataMiner\Dashboards\EPM SOLUTION`.
 
-1. For all JSON files in the folder, proceed with the following replacements:
-    1. Replace all occurences of `"Value": 738` with `"Value": newDataMinerID`.
-    1. Replace all occurences of `"Value": 1` with `"Value": newElementID`.
-    1. Replace all occurences of `"DataMinerID": 738` with `"DataMinerID": newDataMinerID`.
-    1. Replace all occurences of `"ElementID": 1` with `"ElementID": newElementID`.
-    1. Replace all occurences of `Parameter/738/1` with `Parameter/newDataMinerID/newElementID`.
-    1. Replace all occurences of `Element/738/1` with `Element/newDataMinerID/newElementID`.
+1. In each JSON file in the folder:
+
+   - Replace all occurrences of `"Value": 738` with `"Value": newDataMinerID`.
+   - Replace all occurrences of `"Value": 1` with `"Value": newElementID`.
+   - Replace all occurrences of `"DataMinerID": 738` with `"DataMinerID": newDataMinerID`.
+   - Replace all occurrences of `"ElementID": 1` with `"ElementID": newElementID`.
+   - Replace all occurrences of `Parameter/738/1` with `Parameter/newDataMinerID/newElementID`.
+   - Replace all occurrences of `Element/738/1` with `Element/newDataMinerID/newElementID`.
 
 > [!NOTE]
-> `newElementID` is the EID of the FE element.
-> `newDataMinerID` is the DMA ID where the FE (Front end) element is located.
-> Currently this procedure needs to be executed every time that the EPM solution is upgraded.
+>
+> - `newElementID` is the element ID of the front-end element.
+> - `newDataMinerID` is the DMA ID of the DataMiner Agent where the front-end (FE) element is located.
+> - Currently, this procedure needs to be executed every time the EPM solution is upgraded.
