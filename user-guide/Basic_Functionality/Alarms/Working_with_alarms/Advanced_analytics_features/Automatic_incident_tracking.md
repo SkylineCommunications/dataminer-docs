@@ -12,7 +12,7 @@ Several factors are taken into account for the grouping:
 
 - Service information
 
-- The IDP location (only in case the IDP Solution is deployed)
+- The IDP location (only in case the IDP Solution is deployed and the relevant properties are correctly configured as explained in the note below)
 
 - Element information
 
@@ -42,6 +42,7 @@ The grouping of alarms into incidents is updated in real time whenever appropria
 >
 > - Using automatic incident tracking with history sets is supported; however, keep in mind that this may trigger the creation and immediate clearing of a large number of alarm groups.
 > - When an element is stopped or paused, the alarms associated with that element will not be taken into account when grouping alarms. Also, alarms associated with elements that are stopped or paused will be removed from any existing alarm group.
+> - To group on the IDP location, the option *Update alarms on value changed* must be selected for the element properties 'Location Name', 'Location Building', 'Location Floor', 'Location Room', 'Location Aisle' and 'Location Rack'. See [Adding a custom property to an item](xref:Managing_element_properties#adding-a-custom-property-to-an-item).
 
 ## Automatic incident tracking configuration in System Center
 
@@ -72,9 +73,7 @@ From DataMiner 10.2.0/10.1.4 onwards, automatic incident tracking can also take 
 
 The following basic configuration is needed in Cube:
 
-- For the alarm properties that should be taken into account, the option *Update alarms on value changed* must be selected. See [Adding a custom alarm property](xref:Changing_custom_alarm_properties#adding-a-custom-alarm-property).
-
-- For the element, service and view properties that should be taken into account, the option *Make this property available for alarm filtering* must be selected. See [Adding a custom property to an item](xref:Managing_element_properties#adding-a-custom-property-to-an-item).
+- For the properties that should be taken into account, the option *Update alarms on value changed* must be selected. See [Adding a custom property to an item](xref:Managing_element_properties#adding-a-custom-property-to-an-item).
 
 In addition, the following configuration is needed in the file *C:\\Skyline DataMiner\\analytics\\configuration.xml*:
 
