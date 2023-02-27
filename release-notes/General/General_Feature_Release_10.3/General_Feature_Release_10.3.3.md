@@ -153,9 +153,9 @@ Multiple instances of the SLLogCollector tool can now be run simultaneously.
 
 #### Cassandra Cluster: Enhanced query performance [ID_35247]
 
-<!-- MR 10.4.0 - FR 10.3.3 -->
+<!-- MR 10.3.0 [CU1] - FR 10.3.3 -->
 
-Previously, queries against Cassandra Cluster would always be executed with a page size of 1000, even when the limit defined in the query was smaller than 1000. This resulted in excess data being return. From now on, the page size will be adjusted according to the limit defined in the query if it is lower than the default page size.
+Previously, queries against Cassandra Cluster would always be executed with a page size of 1000, even when the limit defined in the query was smaller than 1000. This resulted in excess data being returned. From now on, the page size will be adjusted according to the limit defined in the query if it is lower than the default page size.
 
 This change will considerably improve overall query performance, especially when retrieving trend data.
 

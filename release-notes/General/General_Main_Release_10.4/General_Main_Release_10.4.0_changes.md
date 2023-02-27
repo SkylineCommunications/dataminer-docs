@@ -42,17 +42,6 @@ Also, when using the DomBehaviorDefinition inheritance system, the server-side l
 
 From now on, all custom CollectorConfig XML files will be synchronized across the DataMiner cluster.
 
-#### Cassandra Cluster: Enhanced query performance [ID_35247]
-
-<!-- MR 10.4.0 - FR 10.3.3 -->
-
-Previously, queries against Cassandra Cluster would always be executed with a page size of 1000, even when the limit defined in the query was smaller than 1000. This resulted in excess data being return. From now on, the page size will be adjusted according to the limit defined in the query if it is lower than the default page size.
-
-This change will considerably improve overall query performance, especially when retrieving trend data.
-
-> [!NOTE]
-> This change will not enhance performance when requesting trend data for an element that has no trend data points before the requested window. In cases like this, the full two-year range of shards will be queried to try and find an initial point.
-
 #### SLAnalytics - Pattern matching: Manually created tags will now be saved as pattern occurrences [ID_35299]
 
 <!-- MR 10.4.0 - FR 10.3.3 -->
