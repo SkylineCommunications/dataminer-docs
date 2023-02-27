@@ -2279,6 +2279,8 @@
               topicUid: I-DOCSIS_supported_technologies
             - name: EPM I-DOCSIS deployment
               topicUid: I-DOCSIS_deployment
+            - name: EPM I-DOCSS upgrade
+              topicUid: I-DOCSIS_upgrade
             - name: Available parameters in I-DOCSIS
               topicUid: I-DOCSIS_parameters
               items:
