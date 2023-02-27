@@ -5261,6 +5261,8 @@
       topicUID: EBU_Live_IP_Software_Toolkit_LIST
     - name: Interactive Automation Script Toolkit
       topicUID: Interactive_Automation_Script_Toolkit
+    - name: MySQL Workbench
+      topicUID: MySQL_Workbench
     - name: Nodetool
       topicUid: TOONodetool
       items:

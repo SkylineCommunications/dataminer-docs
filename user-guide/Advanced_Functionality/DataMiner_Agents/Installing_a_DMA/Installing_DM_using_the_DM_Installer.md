@@ -87,7 +87,7 @@ At this point, the basic installation is complete. However, to be able to make f
      > [!NOTE]
      > By default, a DataMiner Agent uses a single Cassandra node that is hosted on the same physical or virtual server. However, different architectures are also possible. For more information, see [Supported system data storage architectures](xref:Supported_system_data_storage_architectures), or check with your Technical Account Manager.
 
-   - To install a MySQL database instead of a Cassandra database, select *MySQL Server*, and optionally *MySQL Workbench*.
+   - To install a MySQL database instead of a Cassandra database, select *MySQL Server*, and optionally [*MySQL Workbench*](xref:MySQL_Workbench).
 
      > [!NOTE]
      > As MySQL support will go **End of Life** as of DataMiner version 10.3.X (Q4 2022), we recommend the **Cassandra database** for all new installations. MySQL is no longer included in the 10.2.0 DataMiner installer.
