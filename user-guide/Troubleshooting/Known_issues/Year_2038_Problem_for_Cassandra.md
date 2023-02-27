@@ -22,7 +22,7 @@ From Cassandra version 3.11.2 and 4.0 onwards, an exception will be thrown in th
 
 ## Fix
 
-No fix is available yet.
+From DataMiner 10.3.4/10.4.0 onwards, the general TTL for databases is limited to 10 years to prevent this issue.
 
 ## Workaround
 
