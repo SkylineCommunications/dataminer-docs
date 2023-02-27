@@ -5076,6 +5076,112 @@
 - name: DataMiner Development Tools
   topicUid: TOOLS
   items:
+    - name: Application packages
+      topicUid: TOOApplicationPackages
+      items:
+      - name: Creating an application package
+        topicUID: Creating_an_app_package
+      - name: Installing an application package
+        topicUID: Installing_an_app_package
+      - name: Creating application package scripts
+        topicUID: Creating_app_package_scripts
+    - name: Change Element States Offline
+      topicUID: Change_Element_States_Offline
+    - name: CI/CD
+      topicUid: DevelopmentWithCICD
+      items:
+        - name: High-level overview
+          topicUid: High-level_overview
+        - name: Components
+          topicUid: Components
+          items:
+            - name: Gerrit
+              topicUid: Gerrit
+            - name: Jenkins
+              topicUid: Jenkins
+            - name: SonarQube
+              topicUid: SonarQube
+        - name: Protocol development with CI/CD Pipeline
+          topicUid: Protocol_development_with_CI_CD_Pipeline
+          items:
+            - name: Protocols as a Visual Studio solution
+              topicUid: Protocols_as_a_Visual_Studio_solution
+            - name: Git protocol repositories
+              topicUid: Git_protocol_repositories
+            - name: Pipeline stages for protocols
+              topicUid: Pipeline_stages_for_protocols
+        - name: Function development with CI/CD pipeline
+          topicUid: Function_development_with_CI_CD_pipeline
+          items:
+            - name: Pipeline stages for functions
+              topicUid: Pipeline_stages_for_functions
+        - name: Automation script development with CI/CD pipeline
+          topicUid: Automation_script_development_with_CI_CD_pipeline
+          items:
+            - name: Automation scripts as a Visual Studio solution
+              topicUid: Automation_scripts_as_a_Visual_Studio_solution
+            - name: Pipeline stages for Automation scripts
+              topicUid: Pipeline_stages_for_Automation_scripts
+            - name: Deploying Automation scripts from a GitHub repository
+              topicUid: Deploying_Automation_scripts_from_a_GitHub_repository
+            - name: Deploying Automation scripts from a GitLab repository
+              topicUid: Deploying_Automation_scripts_from_a_GitLab_repository
+        - name: Visual overview development with CI/CD pipeline
+          topicUid: Visual_overview_development_with_CI_CD_pipeline
+          items:
+            - name: Pipeline stages for visual overviews
+              topicUid: Pipeline_stages_for_visual_overviews
+        - name: Dashboard Development with CI/CD pipeline
+          topicUid: Dashboard_Development_with_CI_CD_pipeline
+          items:
+            - name: Pipeline stages for dashboards
+              topicUid: Pipeline_stages_for_dashboards
+        - name: Custom solution development with CI/CD pipeline
+          topicUid: Custom_solution_development_with_CI_CD_Pipeline
+          items:
+            - name: Pipeline stages for custom solutions
+              topicUid: Pipeline_stages_for_custom_solutions
+        - name: Install package development with CICD pipeline
+          topicUid: Install_package_development_with_CICD_pipeline
+          items:
+            - name: Creating a repository for an install package
+              topicUid: Creating_a_repository_for_an_install_package
+            - name: Pipeline stages for install packages
+              topicUid: Pipeline_stages_for_install_packages
+        - name: Github CI/CD 
+          topicUid: Using_GitHub_for_CICD
+        - name: FAQ
+          topicUid: FAQ
+    - name: Copy Element Data
+      topicUID: Copy_Element_Data
+    - name: DataMiner Application Package Builder
+      topicUid: TOODataMinerPackageBuilder
+      items:
+        - name: Installation
+          topicUid: Installation
+        - name: Use case
+          topicUid: Use_case
+        - name: Usage
+          topicUid: Usage
+          items:
+            - name: Content tab
+              topicUid: Content_tab
+            - name: DMAPP tab
+              topicUid: DMAPP_tab
+            - name: DMAPP (Legacy) tab
+              topicUid: DMAPP_Legacy_tab
+            - name: DMT tab
+              topicUid: DMT_tab
+            - name: Profiles
+              topicUid: Profiles
+            - name: DMAppBuilderConfig.xml
+              topicUid: DMAppBuilderConfig_xml
+            - name: CLI (legacy packages only)
+              topicUid: CLI_legacy_packages_only
+            - name: Logging
+              topicUid: Logging1
+    - name: DataMiner Development Packages
+      topicUid: TOODataMinerDevPackages
     - name: DataMiner Integration Studio
       topicUid: DIS
       items:
@@ -5147,110 +5253,14 @@
               topicUid: Microsoft_Visual_Studio_keyboard_shortcuts
             - name: Class Library packages
               topicUid: Class_Library_packages
-    - name: CI/CD
-      topicUid: DevelopmentWithCICD
-      items:
-        - name: High-level overview
-          topicUid: High-level_overview
-        - name: Components
-          topicUid: Components
-          items:
-            - name: Gerrit
-              topicUid: Gerrit
-            - name: Jenkins
-              topicUid: Jenkins
-            - name: SonarQube
-              topicUid: SonarQube
-        - name: Protocol development with CI/CD Pipeline
-          topicUid: Protocol_development_with_CI_CD_Pipeline
-          items:
-            - name: Protocols as a Visual Studio solution
-              topicUid: Protocols_as_a_Visual_Studio_solution
-            - name: Git protocol repositories
-              topicUid: Git_protocol_repositories
-            - name: Pipeline stages for protocols
-              topicUid: Pipeline_stages_for_protocols
-        - name: Function development with CI/CD pipeline
-          topicUid: Function_development_with_CI_CD_pipeline
-          items:
-            - name: Pipeline stages for functions
-              topicUid: Pipeline_stages_for_functions
-        - name: Automation script development with CI/CD pipeline
-          topicUid: Automation_script_development_with_CI_CD_pipeline
-          items:
-            - name: Automation scripts as a Visual Studio solution
-              topicUid: Automation_scripts_as_a_Visual_Studio_solution
-            - name: Pipeline stages for Automation scripts
-              topicUid: Pipeline_stages_for_Automation_scripts
-            - name: Deploying Automation scripts from a GitHub repository
-              topicUid: Deploying_Automation_scripts_from_a_GitHub_repository
-            - name: Deploying Automation scripts from a GitLab repository
-              topicUid: Deploying_Automation_scripts_from_a_GitLab_repository
-        - name: Visual overview development with CI/CD pipeline
-          topicUid: Visual_overview_development_with_CI_CD_pipeline
-          items:
-            - name: Pipeline stages for visual overviews
-              topicUid: Pipeline_stages_for_visual_overviews
-        - name: Dashboard Development with CI/CD pipeline
-          topicUid: Dashboard_Development_with_CI_CD_pipeline
-          items:
-            - name: Pipeline stages for dashboards
-              topicUid: Pipeline_stages_for_dashboards
-        - name: Custom solution development with CI/CD pipeline
-          topicUid: Custom_solution_development_with_CI_CD_Pipeline
-          items:
-            - name: Pipeline stages for custom solutions
-              topicUid: Pipeline_stages_for_custom_solutions
-        - name: Install package development with CICD pipeline
-          topicUid: Install_package_development_with_CICD_pipeline
-          items:
-            - name: Creating a repository for an install package
-              topicUid: Creating_a_repository_for_an_install_package
-            - name: Pipeline stages for install packages
-              topicUid: Pipeline_stages_for_install_packages
-        - name: Github CI/CD 
-          topicUid: Using_GitHub_for_CICD
-        - name: FAQ
-          topicUid: FAQ
-    - name: DataMiner Application Package Builder
-      topicUid: TOODataMinerPackageBuilder
-      items:
-        - name: Installation
-          topicUid: Installation
-        - name: Use case
-          topicUid: Use_case
-        - name: Usage
-          topicUid: Usage
-          items:
-            - name: Content tab
-              topicUid: Content_tab
-            - name: DMAPP tab
-              topicUid: DMAPP_tab
-            - name: DMAPP (Legacy) tab
-              topicUid: DMAPP_Legacy_tab
-            - name: DMT tab
-              topicUid: DMT_tab
-            - name: Profiles
-              topicUid: Profiles
-            - name: DMAppBuilderConfig.xml
-              topicUid: DMAppBuilderConfig_xml
-            - name: CLI (legacy packages only)
-              topicUid: CLI_legacy_packages_only
-            - name: Logging
-              topicUid: Logging1
-    - name: Skyline Driver Passport Platform
-      topicUid: TOODriverPassportPlatform
-      items:
-        - name: Platform location
-          topicUid: Platform_location
-        - name: Platform capabilities
-          topicUid: Platform_capabilities
-        - name: Using the Driver Passport Platform
-          topicUid: Using_the_Driver_Passport_Platform
-        - name: Notifications
-          topicUid: Notifications
-        - name: Viewing test results
-          topicUid: Viewing_test_results
+    - name: DataStax DevCenter
+      topicUID: DataStax_DevCenter
+    - name: dnSpy
+      topicUID: dnSpy
+    - name: EBU LIST
+      topicUID: EBU_Live_IP_Software_Toolkit_LIST
+    - name: Interactive Automation Script Toolkit
+      topicUID: Interactive_Automation_Script_Toolkit
     - name: Nodetool
       topicUid: TOONodetool
       items:
@@ -5305,6 +5315,19 @@
               topicUid: Sending
         - name: Trap receiver
           topicUid: Trap_receiver
+    - name: Skyline Driver Passport Platform
+      topicUid: TOODriverPassportPlatform
+      items:
+        - name: Platform location
+          topicUid: Platform_location
+        - name: Platform capabilities
+          topicUid: Platform_capabilities
+        - name: Using the Driver Passport Platform
+          topicUid: Using_the_Driver_Passport_Platform
+        - name: Notifications
+          topicUid: Notifications
+        - name: Viewing test results
+          topicUid: Viewing_test_results
     - name: SLC SE Repository Manager
       topicUid: TOOSLCSERepositoryManager
       items:
@@ -5409,21 +5432,6 @@
           topicUid: Steps_taken_during_an_upgrade_operation
         - name: Actions that can be performed during an upgrade operation
           topicUid: Actions_that_can_be_performed_during_an_upgrade_operation
-    - name: Application packages
-      topicUid: TOOApplicationPackages
-      items:
-      - name: Creating an application package
-        topicUID: Creating_an_app_package
-      - name: Installing an application package
-        topicUID: Installing_an_app_package
-      - name: Creating application package scripts
-        topicUID: Creating_app_package_scripts
-    - name: DataMiner Development Packages
-      topicUid: TOODataMinerDevPackages
-    - name: Change Element States Offline
-      topicUID: Change_Element_States_Offline
-    - name: Interactive Automation Script Toolkit
-      topicUID: Interactive_Automation_Script_Toolkit
 - name: DataMiner Device-Specific Integrations
   topicUid: DSI
   items:
