@@ -9,12 +9,12 @@ uid: MySQL_Workbench
 
 MySQL Workbench is a tool for exploring [MySQL databases](xref:MySQL_database) and performing administrative actions.
 
-> You can download this tool from [the MySQL website](https://www.mysql.com/products/workbench/).
-
 ![MySQL Workbench](~/develop/images/MySQL_Workbench.png)<br>*MySQL Workbench SQL Editor*
 
 > [!TIP]
-> For more information about how to use this tool, see [MySQL Workbench](https://dev.mysql.com/doc/workbench/en/).
+>
+> - You can download this tool from [the MySQL website](https://www.mysql.com/products/workbench/).
+> - For more information about how to use this tool, see [MySQL Workbench](https://dev.mysql.com/doc/workbench/en/).
 
 ## Logging queries
 

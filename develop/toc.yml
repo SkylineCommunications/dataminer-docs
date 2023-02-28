@@ -5286,6 +5286,8 @@
             topicUid: Compilation_Time_Assembly_Binding
           - name: Run-time assembly binding
             topicUid: Run_Time_Assembly_Binding
+    - name: Postman
+      topicUID: Postman
     - name: Skyline Device Simulator
       topicUid: TOOQASNMPSimulator
       items:

@@ -7,9 +7,9 @@ uid: Fiddler
 Fiddler is a free web debugging tool that logs all HTTP(S) traffic between your computer and the Internet. Fiddler can be very useful to develop protocols that implement HTTP connections.
 
 > [!TIP]
-> For more information, see [How to create an HTTP connector](xref:How_to_create_an_HTTP_connector_CoinMarketCap_use_case).
-
-> You can download this tool from the [Telerik website](http://www.telerik.com/fiddler).
+>
+> - For more information, see [How to create an HTTP connector](xref:How_to_create_an_HTTP_connector_CoinMarketCap_use_case).
+> - You can download this tool from the [Telerik website](http://www.telerik.com/fiddler).
 
 ## Configuration
 
