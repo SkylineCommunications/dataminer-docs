@@ -44,7 +44,7 @@ No inconsistencies have been detected in the system.
 - `Resource '{Name}' ({GUID}) with [Generic DVE Table] primary key '{PK}' could not be found in the [Generic DVE table].`
 - `The [Generic DVE Table] was empty, but the following resources refer to this element: Resource '{Name}' ({GUID}).`
 - `Could not find main element referenced by the following resources: {Names}.`
-- `The ElementID is not unique.`
+- `The element ID is not unique.`
 - `Resource '{Name}' ({GUID}):`
   - `[Generic DVE Table] entry {PK} - [DVE Name] has value '{Name}', which is different from the linked resource function name '{Name}'.`
   - `[Generic DVE Table] entry {PK} - [DVE Element] has the value '{Value}', which is different from the linked resource DVE Element '{DataMinerID}/{ElementID}'.`
@@ -59,7 +59,7 @@ No inconsistencies have been detected in the system.
 - `Could not retrieve all elements.`
 - `Could not check resources of this element because the state is set to stopped.`
 - `No Linker table entry found for resource(s): {Names & PKs} .`
-- `The ElementID is not unique.`
+- `The element ID is not unique.`
 
 ### Not Executed
 
