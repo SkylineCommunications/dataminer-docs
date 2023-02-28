@@ -36,6 +36,12 @@ Something went wrong while initializing WebApiEndpointService. A url in the (cus
 
 This fix is included in Cloud Pack 2.8.5.
 
+#### 10 January 2023 - Enhancement - CoreGateway 2.12.0 - Support for new Data Aggregator DxM [ID_34903] [ID_35168] [ID_35217] [ID_35252]
+
+To support the new [Data Aggregator DxM](xref:DataAggregator_1.0.0), CoreGateway has been adjusted to be able to handle requests from Data Aggregator.
+
+This enhancement is included in Cloud Pack 2.8.4.
+
 #### 10 January 2023 - Enhancement - DataMiner SupportAssistant 1.2.0 - Various stability improvements [ID_35349]
 
 Various general stability improvements have been implemented. In addition, eventing has been added to dataminer.services, so that the Skyline Support Team can follow up on the status of remote log collection.

@@ -453,6 +453,10 @@
       topicUid: DCP_2.0
   - name: Other release notes
     items:
+    - name: Data Aggregator release notes
+      items:
+      - name: Data Aggregator 1.0.0
+        topicUID: DataAggregator_1.0.0
     - name: Class Library release notes
       items:
       - name: Class Library Range 1.4

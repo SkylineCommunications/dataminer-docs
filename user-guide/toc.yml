@@ -1753,6 +1753,15 @@
               topicUid: Configuring_dashboard_access_rights
             - name: Dashboard Gateway troubleshooting
               topicUid: Dashboard_Gateway_troubleshooting
+    - name: Data Aggregator
+      topicUID: Data_Aggregator_DxM
+      items:
+        - name: Installation and setup
+          topicUID: Data_Aggregator_install_setup
+        - name: Settings
+          topicUID: Data_Aggregator_settings
+        - name: Configuring GQI queries
+          topicUID: Data_Aggregator_queries
     - name: DataMiner Object Models (DOM)
       topicUID: DOM
       items:

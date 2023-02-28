@@ -241,17 +241,23 @@ Because of a number of enhancements, overall performance has increased when chan
 
 Also, in the Cube UI, users will receive more concise feedback regarding the impact of the change. Up to now, they would receive a list of all items affected by the change. From now on, the list of affected items will only show up to 10 affected items per object type.
 
+#### SLAnalytics - Behavioral anomaly detection: No longer available for discrete parameters [ID_35465]
+
+<!-- MR 10.4.0 - FR 10.3.3 -->
+
+From now on, anomaly detection will no longer be available for discrete parameters.
+
 #### Automation: Enhanced memory usage [ID_35502]
 
 <!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
 
 Because of a number of enhancements, overall memory usage of the SLAutomation process has improved.
 
-#### SLAnalytics - Behavioral anomaly detection: No longer available for discrete parameters [ID_35465]
+#### Support for GQI queries from Data Aggregator with ad hoc data sources [ID_35526]
 
 <!-- MR 10.4.0 - FR 10.3.3 -->
 
-From now on, anomaly detection will no longer be available for discrete parameters.
+GQI now supports queries from [Data Aggregator](xref:Data_Aggregator_DxM) that use ad hoc data sources.
 
 ### Fixes
 

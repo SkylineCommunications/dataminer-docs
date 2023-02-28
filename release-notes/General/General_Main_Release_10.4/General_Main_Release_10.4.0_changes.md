@@ -114,6 +114,12 @@ From now on, anomaly detection will no longer be available for discrete paramete
 
 Because of a number of enhancements, overall performance has increased when detecting trend patterns that cover more than 30,000 data points.
 
+#### Support for GQI queries from Data Aggregator with ad hoc data sources [ID_35526]
+
+<!-- MR 10.4.0 - FR 10.3.3 -->
+
+GQI now supports queries from [Data Aggregator](xref:Data_Aggregator_DxM) that use ad hoc data sources.
+
 ### Fixes
 
 #### Cassandra Cluster: Every DMA would incorrectly try to delete any possible old Cassandra compaction and repair tasks found in the entire DMS [ID_31923]
