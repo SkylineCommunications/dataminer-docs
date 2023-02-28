@@ -15,16 +15,16 @@ There are **two options**: you can create a so-called **self-signed certificate*
 ## Generating the certificates
 
 > [!TIP]
-> To easily generate certificates on Linux machines, you can use our [generate TLS certificates script](https://github.com/SkylineCommunications/generate-tls-certificates), which is available on GitHub.
+> We strongly recommend to use our [scripts for generating TLS certificates](https://github.com/SkylineCommunications/generate-tls-certificates), available on GitHub. There is a version of the script for linux and windows machines.  
 
 To generate the certificates, you will need two tools: *openssl* and the *Java keytool*. Both of these can run on Linux and Windows.
 
 1. Create a certificate configuration file. This will make it easier to generate a root CA certificate later.
 
-   In the example below, a certificate configuration file called *rootCA_cert.conf* is created.
+   In the example below, a certificate configuration file called *rootCa_cert.conf* is created.
 
    ```txt
-   # rootCA_cert.conf
+   # rootCa_cert.conf
    [ req ]
    distinguished_name = req_distinguished_name
    prompt = no
@@ -72,7 +72,7 @@ To generate the certificates, you will need two tools: *openssl* and the *Java k
 1. Now that you have certificates for every node, digitally sign them with the private key of the root CA certificate. To do so, first create a certificate signing request (CSR).
 
    ```txt
-   keytool -certreq -keystore <NODE IP>.jks -alias <NODE IP> -file <NODE IP>.csr -keypass <STRONG PASSWORD> -storepass <STRONG PASSWORD>
+   keytool -certreq -keystore <NODE IP>.jks -alias <NODE IP> -file <NODE IP>.csr -keypass <STRONG PASSWORD> -storepass <STRONG PASSWORD> -ext SAN=DNS:<NODE NAME>,IP:<NODE IP>
    ```
 
 1. Digitally sign the node certificates with the root certificate authority.
@@ -86,13 +86,25 @@ To generate the certificates, you will need two tools: *openssl* and the *Java k
 1. For every node, import the root certificate into the Java KeyStore (JKS) for that node.
 
    ```txt
-   keytool -keystore <NODE IP>.jks -alias rootca_name -importcert -file path/to/rootCa.crt -keypass <STRONG PASSWORD> -storepass <STRONG PASSWORD> -noprompt
+   keytool -keystore <NODE IP>.jks -alias rootCa -importcert -file path/to/rootCa.crt -keypass <STRONG PASSWORD> -storepass <STRONG PASSWORD> -noprompt
    ```
 
 1. Also import the signed certificate.
 
    ```txt
    keytool -keystore <NODE IP>.jks -alias rootca_name -importcert -file <NODE IP ADDRESS>.crt_signed -keypass <STRONG PASSWORD> -storepass <STRONG PASSWORD> -noprompt
+   ```
+
+1. For inter node encryption, you have to add the singed certificate of all other nodes to the keystore of every other node. So first, you have to export the signed certificates of every node.
+
+   ```txt
+   keytool -exportcert -alias <NODE IP> -keystore <NODE IP>.jks -file <NODE IP>-public-key.cer -storepass <STRONG PASSWORD>
+   ```
+
+1. Now, you can import the signed certificates of every other node in each node's truststore.
+
+   ```txt
+   keytool -keystore <NODE IP>.jks -alias <OTHER NODE IP> -importcert -file <OTHER NODE IP>-public-key.cer -keypass <STRONG PASSWORD> -storepass <STRONG PASSWORD> -noprompt
    ```
 
 Now the certificates are all set, and you can configure the Cassandra cluster to use them. This is explained in the next section.
@@ -163,6 +175,11 @@ To enable inter-node TLS encryption:
 
 In order to connect over TLS with DevCenter, you will have to install the Java Cryptography Extensions (JCE). For more information, see [Connecting DevCenter to SSL/TLS-enabled Cassandra](https://www.datastax.com/blog/connecting-datastax-devcenter-ssl-enabled-apache-cassandra-or-datastax-enterprise).
 
+You also have to create a truststore which holds the rootCa.crt certificate. You can do so as following:
+```txt
+keytool -keystore rootCa-truststore.jks -storetype JKS -importcert -file rootCa.crt -keypass <STRONG PASSWORD> -storepass <STRONG PASSWORD> -alias rootCa -noprompt
+```
+
 When you have done so:
 
 1. Start DevCenter by executing `C:\Program Files\Cassandra\DevCenter\Run DevCenter.lnk`.
@@ -171,7 +188,7 @@ When you have done so:
 
 1. Go to *Advanced* and select *This cluster requires SSL*.
 
-1. Point it towards your *rootCA.jks* truststore file and use the password you used to generate it.
+1. Point it towards your *rootCa.jks* truststore file and use the password you used to generate it.
 
 ## Connecting with DataMiner
 
