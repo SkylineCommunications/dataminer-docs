@@ -84,6 +84,11 @@ Alias-"Alias"|"Target"|"What"|"Condition"
 
     Alternatively, you can specify the parameter ID without the prefix, as a reference without prefix will by default be interpreted as a parameter reference.
 
+    Using a column parameter can be done by appending the primary key (or display key) to the parameter ID, separated by either a comma or colon.
+
+    - *[Parameter ID]:[Primary key]*
+    - *[Parameter ID],[Primary key]*
+
   - *PROPERTY:* *\[Property name\]*
   - *Protocol* (from DataMiner 9.6.4 onwards)
   
@@ -238,9 +243,11 @@ Single conditions:
 <D>-D|VIEW:2|PROPERTY:Class|=A
 <E>-E|Service:serv|PROPERTY:Class|=A
 <F>-F|Element:number|ALARMLEVEL|>=MINOR
-<G>-G|VIEW:2|ALARMLEVEL|>=MINOR
-<H>-H|Service:serv|ALARMLEVEL|>=MINOR
-<A>-A|Element:MyElement|Protocol|=MyProtocolName
+<G>-G|Element:MyElement|Protocol|=MyProtocolName
+<H>-H|Element:MyElement|Parameter:1|<0
+<I>-I|Element:MyElement|Parameter:510,1|<0
+<J>-J|VIEW:2|ALARMLEVEL|>=MINOR
+<K>-K|Service:serv|ALARMLEVEL|>=MINOR
 ```
 
 Multiple conditions combined:
