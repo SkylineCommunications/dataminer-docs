@@ -40,7 +40,7 @@ To connect your DMS to dataminer.services:
    > If your DataMiner System contains a Failover pair, and one of the Agents in the Failover pair is responsible for hosting the connection towards dataminer.services, install the DataMiner Cloud Pack on both Agents in the Failover pair.
 
    > [!TIP]
-   > For more information on the Cloud Pack contents, see [DataMiner Cloud Packs](xref:CloudPackages).
+   > For more information on the Cloud Pack contents, see [DataMiner Cloud Pack](xref:CloudPackages).
 
 1. In DataMiner Cube, go to System Center \> *Users / Groups* and make sure you have the following **user permissions**. If you need to make changes to the user permissions, reconnect to Cube afterwards to make sure your changes are applied in the UI.
 

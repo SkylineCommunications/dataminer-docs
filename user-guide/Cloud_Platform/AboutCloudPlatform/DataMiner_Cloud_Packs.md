@@ -18,4 +18,3 @@ Included modules:
 - [FieldControl](xref:DataMinerExtensionModules#fieldcontrol)
 - [Orchestrator](xref:DataMinerExtensionModules#orchestrator)
 - [SupportAssistant](xref:DataMinerExtensionModules#supportassistant)
-
