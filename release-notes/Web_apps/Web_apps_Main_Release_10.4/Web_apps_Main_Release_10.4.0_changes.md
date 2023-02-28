@@ -44,6 +44,17 @@ For example, when a line & area chart component is fed the following timespans..
 
 - *01/01/2022 9:00:00 > 01/01/2022 10:30:00*
 
+#### GQI: Enhanced performance when using Sort operators in conjunction with alarm, change point, trend pattern and trend pattern occurrence data sources [ID_35031]
+
+<!-- MR 10.4.0 - FR 10.3.3 -->
+
+Because of a number of enhancements, overall query performance has increased when using Sort operators in conjunction with the following data sources:
+
+- Get alarms
+- Get behavioral change events
+- Get trend data patterns
+- Get trend data pattern events
+
 #### Web apps: Button styles used in interactive Automation script components have been aligned with those used in low-code app components [ID_35076]
 
 <!-- MR 10.4.0 - FR 10.3.2 -->
@@ -186,3 +197,9 @@ A number of issues regarding the Visual Overview component have been fixed.
 - When a page was selected in the Visual Overview component, in some cases, an incorrect page would be displayed.
 - In some cases, the dimensions of pop-up windows would be incorrect.
 - When a pop-up window was shown using a *VdxShape* property, in some cases, the default page would be shown instead of the page that was specified.
+
+#### Dashboards app: Visualization picker would incorrectly resize when you hovered over it [ID_35516]
+
+<!-- MR 10.4.0 - FR 10.3.4 -->
+
+When you tried to select a visualization for a newly added component that did not yet have one, the visualization picker would incorrectly resize the first time you hovered over it.

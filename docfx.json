@@ -38,9 +38,9 @@
         ]
       }
     ],
-	"xrefService": [ "https://xref.docs.microsoft.com/query?uid={uid}" ],
+ 	"xrefService": [ "https://xref.docs.microsoft.com/query?uid={uid}" ],
 	"xref" : [ "xref/newtonsoft.yml" ],
-    "resource": [
+  "resource": [
       {
         "files": [
           "images/**",
@@ -53,7 +53,7 @@
         ]
       }
     ],
-	"overwrite": "overwrite/*.md",
+  	"overwrite": "overwrite/*.md",
     "dest": "_site",
     "globalMetadata": {
       "_appTitle": "DataMiner Docs",

@@ -2,10 +2,10 @@
 uid: General_Feature_Release_10.3.3
 ---
 
-# General Feature Release 10.3.3 – Preview
+# General Feature Release 10.3.3
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 >
@@ -153,9 +153,9 @@ Multiple instances of the SLLogCollector tool can now be run simultaneously.
 
 #### Cassandra Cluster: Enhanced query performance [ID_35247]
 
-<!-- MR 10.4.0 - FR 10.3.3 -->
+<!-- MR 10.3.0 [CU1] - FR 10.3.3 -->
 
-Previously, queries against Cassandra Cluster would always be executed with a page size of 1000, even when the limit defined in the query was smaller than 1000. This resulted in excess data being return. From now on, the page size will be adjusted according to the limit defined in the query if it is lower than the default page size.
+Previously, queries against Cassandra Cluster would always be executed with a page size of 1000, even when the limit defined in the query was smaller than 1000. This resulted in excess data being returned. From now on, the page size will be adjusted according to the limit defined in the query if it is lower than the default page size.
 
 This change will considerably improve overall query performance, especially when retrieving trend data.
 
@@ -230,6 +230,9 @@ Example:
 
 Because of a number of enhancements, overall performance has increased when fetching relation information for the automatic incident tracking feature.
 
+> [!NOTE]
+> Currently, the parameter relationship feature is still in preview.
+
 #### Service & Resource Management: Enhanced performance when changing active function files [ID_35424]
 
 <!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
@@ -238,17 +241,23 @@ Because of a number of enhancements, overall performance has increased when chan
 
 Also, in the Cube UI, users will receive more concise feedback regarding the impact of the change. Up to now, they would receive a list of all items affected by the change. From now on, the list of affected items will only show up to 10 affected items per object type.
 
+#### SLAnalytics - Behavioral anomaly detection: No longer available for discrete parameters [ID_35465]
+
+<!-- MR 10.4.0 - FR 10.3.3 -->
+
+From now on, anomaly detection will no longer be available for discrete parameters.
+
 #### Automation: Enhanced memory usage [ID_35502]
 
 <!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
 
 Because of a number of enhancements, overall memory usage of the SLAutomation process has improved.
 
-#### SLAnalytics - Behavioral anomaly detection: No longer available for discrete parameters [ID_35465]
+#### Support for GQI queries from Data Aggregator with ad hoc data sources [ID_35526]
 
 <!-- MR 10.4.0 - FR 10.3.3 -->
 
-From now on, anomaly detection will no longer be available for discrete parameters.
+GQI now supports queries from [Data Aggregator](xref:Data_Aggregator_DxM) that use ad hoc data sources.
 
 ### Fixes
 

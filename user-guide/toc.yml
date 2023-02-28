@@ -1064,6 +1064,8 @@
                 topicUID: Configuring_Elasticsearch_node_remove
             - name: Configuring multiple Elasticsearch clusters
               topicUid: Configuring_multiple_Elasticsearch_clusters
+            - name: Manually connecting a DMA to an Elasticsearch cluster
+              topicUID: Manually_Connecting_DMA_to_Elasticsearch_Cluster
         - name: OpenSearch database
           topicUID: OpenSearch_database
           items:
@@ -1753,6 +1755,15 @@
               topicUid: Configuring_dashboard_access_rights
             - name: Dashboard Gateway troubleshooting
               topicUid: Dashboard_Gateway_troubleshooting
+    - name: Data Aggregator
+      topicUID: Data_Aggregator_DxM
+      items:
+        - name: Installation and setup
+          topicUID: Data_Aggregator_install_setup
+        - name: Settings
+          topicUID: Data_Aggregator_settings
+        - name: Configuring GQI queries
+          topicUID: Data_Aggregator_queries
     - name: DataMiner Object Models (DOM)
       topicUID: DOM
       items:
@@ -2279,6 +2290,8 @@
               topicUid: I-DOCSIS_supported_technologies
             - name: EPM I-DOCSIS deployment
               topicUid: I-DOCSIS_deployment
+            - name: EPM I-DOCSS upgrade
+              topicUid: I-DOCSIS_upgrade
             - name: Available parameters in I-DOCSIS
               topicUid: I-DOCSIS_parameters
               items:
@@ -2891,6 +2904,8 @@
     - name: Known issues
       topicUID: Known_issues
       items:
+        - name: Local user unable to access DMA after first reboot after installation
+          topicUID: KI_Local_user_unable_to_access_DMA_after_first_reboot_after_installation
         - name: Contents of state_changes table not migrated after Cassandra Cluster migration
           topicUID: KI_Contents_of_State_changes_Table_not_Migrated_after_Cassandra_Cluster_Migration
         - name: Cassandra cluster node in unexpected state
@@ -3047,6 +3062,8 @@
     - name: Tools
       topicUid: DataminerTools
       items:
+        - name: Activate CDMR tool
+          topicUID: Activate_CDMR
         - name: Alerter
           topicUid: Alerter
           items:
@@ -3058,8 +3075,16 @@
               topicUid: Working_with_Alerter_pop-up_balloons
             - name: Configuring Alerter
               topicUid: Configuring_Alerter
+        - name: Analyze startup logs
+          topicUID: Analyze_Startup_Logs
         - name: Cassandra Cleaner
           topicUID: Cassandra_Cleaner
+        - name: Cassandra Clone
+          topicUID: Cassandra_Clone
+        - name: Cassandra Cluster Validator
+          topicUID: Cassandra_Cluster_Validator
+        - name: Connection Check
+          topicUID: Connection_Check
         - name: DataMiner Comparison tool
           topicUID: DataMinerComparisonTool
         - name: DataMiner Size tool
@@ -3071,8 +3096,12 @@
               topicUid: Taskbar_Utility_shortcut_menu
             - name: Taskbar Utility command line options
               topicUid: Taskbar_Utility_command_line_options
+        - name: Dump Spectrum Preset Contents
+          topicUID: Dump_Spectrum_Preset_Content
         - name: Factory reset tool
           topicUID: Factory_reset_tool
+        - name: InstallConfiguration XSD
+          topicUID: InstallConfiguration_XSD
         - name: Legacy trend data exporter
           topicUID: Legacy_Trend_Data_Exporter
         - name: Multi-threaded timer polling rate calculator
