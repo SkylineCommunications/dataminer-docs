@@ -1064,6 +1064,8 @@
                 topicUID: Configuring_Elasticsearch_node_remove
             - name: Configuring multiple Elasticsearch clusters
               topicUid: Configuring_multiple_Elasticsearch_clusters
+            - name: Manually connecting a DMA to an Elasticsearch cluster
+              topicUID: Manually_Connecting_DMA_to_Elasticsearch_Cluster
         - name: OpenSearch database
           topicUID: OpenSearch_database
           items:
