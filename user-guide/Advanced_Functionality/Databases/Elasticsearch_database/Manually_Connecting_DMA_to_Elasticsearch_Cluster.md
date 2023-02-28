@@ -37,7 +37,7 @@ You can connect a DataMiner Agent to an existing Elasticsearch cluster by manual
    <DataBase active="true" search="true" type="Elasticsearch">
       <DBServer>Node IP1,Node IP1,..,Node IPx</DBServer>
       <UID>elastic</UID>
-      <PWD>{220CCF11-0785-4712-BBAB-E7DD72CFB0D6}</PWD>
+      <PWD></PWD>
    </DataBase>
    ```
 
