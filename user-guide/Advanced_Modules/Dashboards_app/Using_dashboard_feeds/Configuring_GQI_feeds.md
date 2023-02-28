@@ -40,6 +40,18 @@ Available from DataMiner 10.2.0/10.1.9 onwards. Retrieves the alarms in the Data
 
 Available from DataMiner 10.3.0/10.2.4 onwards. Retrieves external data based on an Automation script that is compiled as a library. The data can for example be retrieved from a CSV file, a MySQL database, or an API endpoint. If no such Automation script has been configured, this option is not available.
 
+### Get trend data patterns
+
+Available from DataMiner 10.3.3/10.4.0 onwards. Retrieves all pattern matching tags created in the DataMiner System. <!-- RN 35027 -->
+
+### Get trend data pattern events
+
+Available from DataMiner 10.3.3/10.4.0 onwards. Retrieves all pattern occurrences detected in the DataMiner System. The data includes time range metadata on each row, with the start and end time of the event in question. When a table row is selected, the time range will be available as a feed in the *feeds* section of the data pane.<!-- RN 35027 -->
+
+### Get behavioral change events
+
+Available from DataMiner 10.3.3/10.4.0 onwards. Retrieves all behavioral anomalies detected in the DataMiner System. The data includes time range metadata on each row, with the start and end time of the event in question. When a table row is selected, the time range will be available as a feed in the *feeds* section of the data pane. <!-- RN 35027 -->
+
 #### Configuring an external data source in a query
 
 This is the most basic procedure to use an external data source in a query:
@@ -301,7 +313,7 @@ Available from DataMiner 10.2.0/10.1.6 onwards. Retrieves a list of the DCF conn
 
 ### Get elements
 
-Retrieves the elements in the DataMiner System.
+Retrieves the elements in the DataMiner System. From DataMiner 10.3.3/10.4.0 onwards, *Get elements* also returns alarm states. <!-- RN 35464 -->
 
 ### Get parameter table by alias
 
@@ -315,6 +327,13 @@ From DataMiner 10.2.0/10.1.5 onwards, a *Use feed* checkbox is available that al
 
 From DataMiner 10.2.0/10.2.1 onwards, an *Update data* option is available in the *Settings* pane if you use this data source. When you enable this, the component will automatically refresh the data when changes are detected.
 
+### Get parameter relations
+
+Available from DataMiner 10.3.3/10.4.0 onwards. Retrieves the parameter relationships that are stored in a model managed by the DataMiner Extension Module *ModelHost*. <!-- RN 35443 -->
+
+> [!NOTE]
+> *Get parameter relations* is only available when the *ModelHost* DxM is running. However, at this point, the *ModelHost* DxM is not yet available.
+
 ### Get parameters for element where
 
 Retrieves the selected parameters for the specified protocol or the parameters linked to the specified profile definition. Note that if parameters are displayed based on a specific protocol, it is not possible to combine a table parameter with other parameters, and only column parameters from the same table can be displayed in the same query.
@@ -323,7 +342,7 @@ From DataMiner 10.2.0/10.1.5 onwards, if a protocol and version have been specif
 
 ### Get services
 
-Retrieves the services in the DataMiner System.
+Retrieves the services in the DataMiner System. From DataMiner 10.3.3/10.4.0 onwards, *Get services* also returns alarm states. <!-- RN 35464 -->
 
 ### Get view relations
 
@@ -359,7 +378,9 @@ Allows you to aggregate data from the data source. After you have selected this 
 You can then further filter the result by applying another operator. An additional *Group by* operator is available for this, which will display the result of the aggregation operation for each different item in the column selected in the *Group by column* box.
 
 > [!NOTE]
-> From DataMiner 10.1.0/10.1.3 onwards, exception values are not taken into account, except for the Count and Distinct Count methods.
+>
+> - From DataMiner 10.3.3/10.4.0 onwards, after an aggregation operation, you can apply multiple *GroupBy* operations.
+> - From DataMiner 10.1.0/10.1.3 onwards, exception values are not taken into account, except for the Count and Distinct Count methods. <!-- RN35355 -->
 
 ### Column manipulations
 
@@ -397,6 +418,11 @@ From DataMiner 10.2.10/10.3.0 onwards, an additional option, *When feed is empty
 Joins two tables together. When you select this option, in the *Type* drop-down box, you will first need to select how the tables should be joined. Then you will need to select another data source (optionally refined with one or more operators) in order to specify the table you want the first table to be joined with. Optionally, you can also specify a condition to determine when rows should be joined. For instance, if one table contains elements with a custom property that details a booking ID and the other lists bookings, you could add the condition that the property in the first table must match the ID in the second table.
 
 The *Inner* type of join only includes rows if they match the condition. *Left* displays all rows from the first table (i.e. the table on the left) and only the matching rows from the other table. *Right* does the opposite. *Outer* displays first the non-matching rows from the left table, then the matching rows from both tables, then the non-matching rows from the right table.
+
+From DataMiner 10.3.3/10.4.0 onwards, the *Row by row* option allows you to first execute the query for the first table, and then execute the query for the other table for each row that matches the join condition. This option is only available if you add the `showAdvancedSettings=true` option to the dashboard URL. If the *Row by row* option is not enabled, the join will execute both tables once and directly combine their results. <!-- RN 35565 + 35057 -->
+
+> [!NOTE]
+> The *Row by row* option is only supported for *Inner* and *Left* type of joins.
 
 ### Select
 

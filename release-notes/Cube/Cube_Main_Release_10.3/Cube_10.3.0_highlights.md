@@ -2,10 +2,10 @@
 uid: Cube_Main_Release_10.3.0_highlights
 ---
 
-# DataMiner Cube Main Release 10.3.0 – Highlights - Preview
+# DataMiner Cube Main Release 10.3.0 – Highlights
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 ## Highlights
 
@@ -355,7 +355,7 @@ These new password boxes can be found in the following locations:
 
 A new theme has been added to DataMiner Cube: “Light”.
 
-Also, the Apps list now contains links to the Catalog, the Cloud Admin app and custom web apps.
+Also, the Apps list now contains links to the Catalog, the Admin app, and custom web apps.
 
 #### Trending: Light bulb icon now indicates that related parameters have been found [ID_34432]
 
@@ -369,3 +369,4 @@ Relationships between parameters are found by studying the changes in the behavi
 >
 > - This light bulb feature will only work on cloud-connected DataMiner Agents that have the *ModelHost* DxM installed and that have been configured to [offload alarm and change point events to the cloud](xref:Controlling_cloudfeed_data_offloads).
 > - Relationship models are calculated once per week. When this feature is activated, it can take up to a week before the first results are visible.
+> - Currently, the ModelHost DxM is not yet available.

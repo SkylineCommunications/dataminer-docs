@@ -2,10 +2,10 @@
 uid: General_Main_Release_10.2.0_CU12
 ---
 
-# General Main Release 10.2.0 CU12 – Preview
+# General Main Release 10.2.0 CU12
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 > For information on how to upgrade DataMiner, see [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent).
@@ -91,6 +91,18 @@ Also, in the Cube UI, users will receive more concise feedback regarding the imp
 <!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
 
 Because of a number of enhancements, overall memory usage of the SLAutomation process has improved.
+
+#### Web apps: Enhanced performance when opening a web app [ID_35549]
+
+<!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
+
+Because DataMiner web apps will now be passed to client machines as compressed files, overall performance has increased when opening a web app.
+
+#### DataMiner Cube - Alarm Console: No longer possible to enable the 'Automatic incident tracking' option for a history tab [ID_35556]
+
+<!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
+
+From now on, it is no longer possible to enable the *Automatic incident tracking* option for a history tab.
 
 ### Fixes
 
@@ -302,8 +314,26 @@ An `engine.RunClientProgram` overload with two parameters, of which the second o
 RunClientProgram(String applicationPath, bool waitForCompletion)
 ```
 
+#### DataMiner Cube - Alarm templates: Trending column in baseline editor would no longer show any icons [ID_35488]
+
+<!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
+
+When, while configuring an alarm template, you opened the baseline editor and selected the *Automatically update the baseline values* option, the *Trending* column would no longer show an icon when average trending was disabled for the parameter in question.
+
 #### Business Intelligence: Problem when correcting outages on an SLA with a week-based window [ID_35503]
 
 <!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
 
 When outages on an SLA with a week-based window were corrected, the *History Statistics Table* that started in the first 9 weeks of every year would incorrectly not get updated.
+
+#### DataMiner Cube - Service templates: Open service card would not be updated when the service template was re-applied [ID_35537]
+
+<!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
+
+When you updated an re-applied a service template while a card of a service created based on that particular service template was open, the data shown on the open service card would incorrectly not be updated.
+
+#### DataMiner Cube - Alarm Console: Alarm counters would start to show negative values when you enabled the 'Automatic incident tracking' option of an active alarms tab while a quick filter was applied [ID_35547]
+
+<!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
+
+When you enabled the *Automatic incident tracking* option of an active alarms tab while a quick filter was applied, in some cases, the alarm counters in the footer bar would incorrectly start to show negative values.

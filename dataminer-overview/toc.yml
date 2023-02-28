@@ -27,6 +27,13 @@
           topicUid: Overview_Platform_Open_Platform
     - name: dataminer.services
       topicUid: Overview_DCP
+      items:
+        - name: DevOps
+          topicUID: Overview_DevOps
+        - name: Platform Services
+          topicUID: Overview_Platform_services
+        - name: Collaboration
+          topicUID: Overview_Collaboration
     - name: Agile partnership
       topicUid: Overview_Agile_Partnership_intro
       items:
@@ -36,6 +43,25 @@
           topicUid: Overview_Agile_Partnership_principles
         - name: Agile scope-based deployment
           topicUid: Overview_Agile_Partnership_scope_based_deployment
+    - name: DevOps
+      topicUID: Overview_DevOps_index
+      items:
+        - name: DataMiner DevOps Professional Program
+          topicUID: DataMiner_Devops_Professionals
+          items:
+            - name: What is it?
+              topicUID: What_is_the_DevOps_Professionals_Program
+            - name: Benefits
+              topicUID: Benefits_DevOps_Professionals_Program
+            - name: Required skill sets
+              topicUID: Skill_Sets_DevOps_Professionals_Program
+        - name: DataMiner DevOps Enablement Service
+          topicUID: DataMiner_DevOps_Enablement
+          items:
+            - name: What is DevOps Enablement?
+              topicUID: What_is_DataMiner_DevOps_Enablement
+            - name: The DataMiner DevOps Professional Program
+              topicUID: DevOps_Enablement_and_the_DevOps_Professional_program
     - name: Training courses and certification
       topicUid: Overview_Training_intro
       items:
@@ -67,8 +93,10 @@
           topicUid: Overview_Support_upgrade_policy
         - name: Out-of-business-hours support
           topicUid: Overview_Out_Of_Business_Hours_Support
-        - name: Support services agreement
-          topicUid: Support_services_agreement
+        - name: CCA Support Services
+          topicUid: CCA_Support_Services
+        - name: Support services terms
+          topicUid: Support_services_terms
     - name: Compliance statements
       topicUid: Overview_Compliance_Statements_intro
       items:
@@ -90,22 +118,6 @@
               topicUID: Service_Delivery
             - name: Partnership governance
               topicUID: Partnership_Governance
-    - name: DataMiner DevOps Professional Program
-      topicUID: DataMiner_Devops_Professionals
-      items:
-        - name: What is it?
-          topicUID: What_is_the_DevOps_Professionals_Program
-        - name: Benefits
-          topicUID: Benefits_DevOps_Professionals_Program
-        - name: Required skill sets
-          topicUID: Skill_Sets_DevOps_Professionals_Program
-    - name: DataMiner DevOps Enablement Service
-      topicUID: DataMiner_DevOps_Enablement
-      items:
-        - name: What is DevOps Enablement?
-          topicUID: What_is_DataMiner_DevOps_Enablement
-        - name: The DataMiner DevOps Professional Program
-          topicUID: DevOps_Enablement_and_the_DevOps_Professional_program
     - name: Frequently asked questions
       topicUid: FAQs
       items:
@@ -153,5 +165,5 @@
         topicUID: FAQs_Pricing
       - name: Support Services
         topicUID: FAQs_Support_Services
-      - name: Cloud services
+      - name: dataminer.services
         topicUID: FAQ_DCP

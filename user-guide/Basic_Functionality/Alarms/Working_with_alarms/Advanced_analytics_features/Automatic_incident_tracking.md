@@ -26,7 +26,7 @@ Several factors are taken into account for the grouping:
 
 - Alarm, element, service or view properties, if these have been configured for incident tracking (see [Configuration of incident tracking based on properties](#configuration-of-incident-tracking-based-on-properties)).
 
-- Parameter relationship data, on cloud-connected DataMiner Agents that have the DataMiner Extension Module *ModelHost* installed and that have been configured to [offload alarm and change point events to the cloud](xref:Controlling_cloudfeed_data_offloads) (from DataMiner 10.3.1/10.4.0 onwards).
+- Parameter relationship data, on DataMiner Agents that are connected to dataminer.services, have the DataMiner Extension Module *ModelHost* installed, and have been configured to [offload alarm and change point events to the cloud](xref:Controlling_cloudfeed_data_offloads) (from DataMiner 10.3.1/10.4.0 onwards). However, at this point, the *ModelHost* DxM is not yet available.
 
 If no suitable match is found, alarms will not be grouped. Also, since only alarms with a focus score are taken into account, automatic incident tracking does not apply to information events, suggestion events or notice messages.
 
@@ -62,6 +62,9 @@ The following settings are available in System Center:
 ## Activating automatic incident tracking
 
 When this feature has been enabled in System Center as detailed above, it still needs to be activated in the Alarm Console. To do so, in the Alarm Console hamburger menu, select *Automatic incident tracking*.
+
+> [!NOTE]
+> Automatic incident tracking is only shown for active alarms, not for history alarms. Consequently, from DataMiner 10.2.0 [CU12]/10.3.3 onwards, the *Automatic incident tracking* option is not available for a history tab in the Alarm Console. <!-- RN 35556 -->
 
 ## Configuration of incident tracking based on properties
 

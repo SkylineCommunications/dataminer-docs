@@ -32,7 +32,7 @@ The following settings are available:
   >   - If neither base nor correlated alarm match the filter, neither are displayed.
   > - If a quick filter is applied with the filter box in the lower right corner, the behavior is similar, except in case both base alarm and correlated alarm match the filter, as then both alarms will be displayed.
 
-- **Automatic incident tracking**: This option is only available in a DMS using Cassandra, and only if automatic incident tracking is enabled in System Center. For more information, see [Automatic incident tracking](xref:Automatic_incident_tracking).
+- **Automatic incident tracking**: This option is only available in a DMS using Cassandra, and only if automatic incident tracking is enabled in System Center. It is also only available for active alarms, not for history alarms. For more information, see [Automatic incident tracking](xref:Automatic_incident_tracking).
 
 - **Text to speech**: Select to enable Text to speech, so that new alarm events are read out loud.
 

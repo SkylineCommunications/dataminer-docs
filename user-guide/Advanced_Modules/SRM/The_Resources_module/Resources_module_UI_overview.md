@@ -57,7 +57,7 @@ In the *Properties* tab, properties and resource property definitions can be def
 
 ## Occupancy tab
 
-The *Occupancy* tab shows a timeline that illustrates when particular resources are reserved. Like in the main timeline tab of Scheduler, here too you can activate follow mode or zoom to a particular time span via the right-click menu.
+The *Occupancy* tab shows a timeline that illustrates when particular resources are reserved. Like in the main timeline tab of Scheduler and in the Bookings module, here too you can activate follow mode or zoom to a particular time span via the right-click menu.
 
 From DataMiner 10.3.0/10.3.2 onwards, a filter box is available that allows you to filter on resource name. When you enter text in the filter box, a list with suggestions will be displayed. When you select another resource pool while text is present in the filter box, the tab will automatically be filtered. To clear the filter, click the *Clear* button or delete the text in the filter box. <!-- RN 34973 -->
 

@@ -14,11 +14,11 @@ For ease of installation, DxMs may be packaged together in a pack, such as the [
 
 ### CloudGateway
 
-The CloudGateway module is responsible for connecting a DataMiner System to the DataMiner Cloud Platform (DCP). It manages the identity towards the DCP and ensures a secure connection.
+The CloudGateway module is responsible for connecting a DataMiner System to dataminer.services. It manages the identity towards dataminer.services and ensures a secure connection.
 
 ### FieldControl
 
-The FieldControl module is responsible for handling incoming requests from the DCP. For example, such a request could come from the [DataMiner Teams Bot](xref:DataMiner_Teams_bot) when a user asks it to retrieve the alarms from the system.
+The FieldControl module is responsible for handling incoming requests from dataminer.services. For example, such a request could come from the [DataMiner Teams Bot](xref:DataMiner_Teams_bot) when a user asks it to retrieve the alarms from the system.
 
 ### CoreGateway
 
@@ -26,11 +26,11 @@ The CoreGateway module is responsible for translating requests from other module
 
 ### CloudFeed
 
-The CloudFeed module is responsible for offloading data towards DCP. This setting can be controlled in the [DCP Admin app](xref:Controlling_cloudfeed_data_offloads). Among the data that is offloaded are SPI events and alarm events.
+The CloudFeed module is responsible for offloading data towards dataminer.services. This setting can be controlled in the [Admin app](xref:Controlling_cloudfeed_data_offloads). Among the data that is offloaded are SPI events and alarm events.
 
 ### Orchestrator
 
-The Orchestrator module is responsible for management and upgrades of DxMs through the [DCP Admin app](xref:Managing_cloud-connected_nodes).
+The Orchestrator module is responsible for management and upgrades of DxMs through the [Admin app](xref:Managing_cloud-connected_nodes).
 
 ### ArtifactDeployer
 
@@ -39,3 +39,7 @@ The ArtifactDeployer module is responsible for allowing users to deploy differen
 ### SupportAssistant
 
 The SupportAssistant module is responsible for features allowing Skyline Communications to provide better and faster support.
+
+### ModelHost
+
+The ModelHost module is responsible for allowing users to retrieve parameter relationship data on DataMiner Agents that are connected to dataminer.services, and have been configured to [offload alarm and change point events to the cloud](xref:Controlling_cloudfeed_data_offloads). However, at this point, the ModelHost module is not yet available.

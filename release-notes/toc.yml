@@ -22,7 +22,7 @@
       items:
       - name: Main Release
         items:
-        - name: General Main Release 10.3.0 - Preview
+        - name: General Main Release 10.3.0
           topicUid: General_Main_Release_10.3.0
           items:
           - name: General Main Release 10.3.0 - New features
@@ -35,12 +35,20 @@
               topicUid: General_Main_Release_10.3.0_new_features_2
           - name: General Main Release 10.3.0 - Changes
             topicUid: General_Main_Release_10.3.0_changes
+        - name: General Main Release 10.3.0 CU1
+          topicUid: General_Main_Release_10.3.0_CU1
       - name: Feature Release
         items:
-        - name: General Feature Release 10.3.3 - Preview
+        - name: General Feature Release 10.3.4 - Preview
+          topicUid: General_Feature_Release_10.3.4
+        - name: General Feature Release 10.3.3
           topicUid: General_Feature_Release_10.3.3
         - name: General Feature Release 10.3.2
-          topicUid: General_Feature_Release_10.3.2
+          items:
+          - name: New features and changes
+            topicUid: General_Feature_Release_10.3.2
+          - name: General Feature Release 10.3.2 CU1
+            topicUid: General_Feature_Release_10.3.2_CU1
         - name: General Feature Release 10.3.1
           topicUid: General_Feature_Release_10.3.1
     - name: v10.2
@@ -90,8 +98,10 @@
           topicUid: General_Main_Release_10.2.0_CU10
         - name: General Main Release 10.2.0 CU11
           topicUid: General_Main_Release_10.2.0_CU11
-        - name: General Main Release 10.2.0 CU12 - Preview
+        - name: General Main Release 10.2.0 CU12
           topicUid: General_Main_Release_10.2.0_CU12
+        - name: General Main Release 10.2.0 CU13 - Preview
+          topicUid: General_Main_Release_10.2.0_CU13
       - name: Feature Release
         items:
         - name: General Feature Release 10.2.12
@@ -363,16 +373,20 @@
       items:
       - name: Main Release
         items:
-        - name: DataMiner Cube Main Release 10.3.0 - Preview
+        - name: DataMiner Cube Main Release 10.3.0
           topicUid: Cube_Main_Release_10.3.0
           items:
-          - name: Highlights - Preview
+          - name: Highlights
             topicUid: Cube_Main_Release_10.3.0_highlights
-          - name: Other new features & changes - Preview
+          - name: Other new features & changes
             topicUid: Cube_Main_Release_10.3.0_other_features_changes
+        - name: DataMiner Cube Main Release 10.3.0 CU1 - Preview
+          topicUid: Cube_Main_Release_10.3.0_CU1
       - name: Feature Release
         items:
-        - name: DataMiner Cube Feature Release 10.3.3 - Preview
+        - name: DataMiner Cube Feature Release 10.3.4 - Preview
+          topicUid: Cube_Feature_Release_10.3.4
+        - name: DataMiner Cube Feature Release 10.3.3
           topicUid: Cube_Feature_Release_10.3.3
         - name: DataMiner Cube Feature Release 10.3.2
           topicUid: Cube_Feature_Release_10.3.2
@@ -408,20 +422,24 @@
       items:
       - name: Main Release
         items:
-        - name: DataMiner web apps Main Release 10.3.0 - Preview
+        - name: DataMiner web apps Main Release 10.3.0
           topicUid: Web_apps_Main_Release_10.3.0
           items:
           - name: Highlights & other new features
             topicUID: Web_apps_Main_Release_10.3.0_new_features
           - name: Changes
             topicUID: Web_apps_Main_Release_10.3.0_changes
+        - name: DataMiner web apps Main Release 10.3.0 CU1 - Preview
+          topicUid: Web_apps_Main_Release_10.3.0_CU1
       - name: Feature Release
         items:
-        - name: DataMiner web apps Feature Release 10.3.3 - Preview
+        - name: DataMiner web apps Feature Release 10.3.4 - Preview
+          topicUid: Web_apps_Feature_Release_10.3.4
+        - name: DataMiner web apps Feature Release 10.3.3
           topicUid: Web_apps_Feature_Release_10.3.3
-  - name: Cloud Platform release notes
+  - name: dataminer.services release notes
     items:
-    - name: DataMiner Cloud Platform change log
+    - name: dataminer.services change log
       topicUid: DCP_change_log
     - name: DataMiner Cloud Pack 2.5
       topicUid: DCP_2.5
@@ -565,7 +583,7 @@
         items:
         - name: EPM 6.1.7 I-DOCSIS - Preview
           topicUid: EPM_6.1.7_I-DOCSIS
-        - name: EPM 6.1.6 I-DOCSIS - Preview
+        - name: EPM 6.1.6 I-DOCSIS
           topicUid: EPM_6.1.6_I-DOCSIS
         - name: EPM 6.1.5 I-DOCSIS
           topicUid: EPM_6.1.5_I-DOCSIS

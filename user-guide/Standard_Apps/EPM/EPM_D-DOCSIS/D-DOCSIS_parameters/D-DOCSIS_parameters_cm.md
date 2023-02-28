@@ -6,6 +6,9 @@ uid: D-DOCSIS_parameters_cm
 
 This page contains an overview of the CM parameters available in the D-DOCSIS branch of the EPM Solution.
 
+> [!NOTE]
+> These parameters are only available in the CM Association and CM MAC Search dashboards.
+
 ## KPIs & KQIs
 
 - **IPv4 Address**: Converted. The cable modem (CM) IPv4 address.

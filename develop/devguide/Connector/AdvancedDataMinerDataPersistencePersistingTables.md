@@ -38,10 +38,24 @@ For example, the following table parameter defines some columns to be saved. Col
 
 ## Volatile tables
 
-In case you do not want anything to be kept in the database, you can use the volatile option (options attribute of the ArrayOptions tag).
+In case you do not want anything to be kept in the database, you can use the [volatile](xref:Protocol.Params.Param.ArrayOptions-options#volatile) option.
 
 ```xml
 <ArrayOptions index="0" displayColumn="1" options=";volatile;">
 ```
 
-The *volatile* option can also be applied on a specific column in the options attribute of the ColumnOption tag (except for columns using the element option or referred to by the displayColumn attribute).
+The *volatile* option can also be applied on a specific column in the [options](xref:Protocol.Params.Param.ArrayOptions.ColumnOption-options) attribute of the [ColumnOption](xref:Protocol.Params.Param.ArrayOptions.ColumnOption) tag (except for columns using the element option or referred to by the [displayColumn](xref:Protocol.Params.Param.ArrayOptions-displayColumn) attribute).
+
+You should only use this option in the following cases:
+
+- The table is not used for DCF interface.
+- The table is not used for DVEs.
+- The [save](xref:ColumnOptionOptionsOverview#save) option is not enabled.
+- No [foreign keys](xref:ColumnOptionOptionsOverview#foreignkey) are used in the table.
+- Trending is not enabled on the table.
+- Alarm monitoring is not enabled on the table.
+
+In general, make sure to only use it on tables that are only displayed in the UI or used in a QAction, but are not used in any other way.
+
+> [!NOTE]
+> If alarm monitoring is needed even though the data is very volatile, check whether the number of rows added and deleted will remain low enough so that there are at most 7 changes per minute on the same element and at most 10 000 changes per day on the same element. If the number will be higher, this can have a severe impact on the read efficiency of the database, so the *volatile* option must be used. If the number will be low enough, you can remove the *volatile* option for the relevant alarm monitoring, but make sure that you do not add the *save* option to other columns.

@@ -6,7 +6,7 @@ uid: DCP_2.4
 
 ## Installing the DataMiner Cloud Pack
 
-For installation information, see [Connecting your DataMiner System to the cloud](xref:Connecting_your_DataMiner_System_to_the_cloud).
+For installation information, see [Connecting your DataMiner System to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud).
 
 ## Upgrading your DataMiner Cloud Pack installation
 
@@ -34,15 +34,15 @@ The CloudFeed DxM will handle all cloud feed functionality.
 
 A new ArtifactDeployer DxM is now available. Thanks to this DxM, the 2.4.0 cloud pack will allow you to deploy new protocols from the catalog directly to your DMA.
 
-However, note that in order to have access to this feature, you will first need to verify your DCP organization by sending an email to <licensing@skyline.be>.
+However, note that in order to have access to this feature, you will first need to verify your dataminer.services organization by sending an email to <licensing@skyline.be>.
 
 ### Security enhancements
 
-Behind the scenes, new service principals are now used. These allow any DxM to authenticate towards services on the cloud platform.
+Behind the scenes, new service principals are now used. These allow any DxM to authenticate towards dataminer.services.
 
 ### Remote access: Automatic login
 
-Up to now, when using remote access, you had to log in to both DCP and your DataMiner System. Now logging in to DCP will be sufficient, as you will be automatically logged into the DataMiner System with your linked DataMiner account.
+Up to now, when using remote access, you had to log in to both dataminer.services and your DataMiner System. Now logging in to dataminer.services will be sufficient, as you will be automatically logged into the DataMiner System with your linked DataMiner account.
 
 ## Fixes
 

@@ -4,7 +4,7 @@ uid: CloudPackages
 
 # DataMiner Cloud Packs
 
-DataMiner Cloud Packs are packages that include the necessary DataMiner Extension Modules (DxMs) to enable DataMiner Cloud Platform capabilities.
+DataMiner Cloud Packs are packages that include the necessary DataMiner Extension Modules (DxMs) to enable dataminer.services capabilities.
 
 At the moment, there are two different types of Cloud Packs: packages for DMAs with internet connectivity, and packages for DMAs without internet connectivity. Depending on the type of Cloud Pack, different DataMiner Extension Modules will be installed on the DMA.
 
@@ -17,7 +17,7 @@ At the moment, there are two different types of Cloud Packs: packages for DMAs w
 
 This is the standard DataMiner Cloud Pack that can be downloaded from [DataMiner Dojo](https://community.dataminer.services/downloads/). It includes all DxMs needed to use the DataMiner Cloud Services.
 
-If you install this package on a DMA with internet connectivity in your DMS, you will be able to benefit from the services offered by the DataMiner Cloud Platform.
+If you install this package on a DMA with internet connectivity in your DMS, you will be able to benefit from all features provided by dataminer.services.
 
 ### For DMAs without internet connectivity
 
@@ -34,4 +34,4 @@ Included modules:
 - [SupportAssistant](xref:DataMinerExtensionModules#supportassistant)
 
 > [!NOTE]
-> You will always need to install the standard DataMiner Cloud Pack on at least one DMA with internet connectivity before you can use the services offered by the DataMiner Cloud Platform.
+> You will always need to install the standard DataMiner Cloud Pack on at least one DMA with internet connectivity before you can use the features provided by dataminer.services.

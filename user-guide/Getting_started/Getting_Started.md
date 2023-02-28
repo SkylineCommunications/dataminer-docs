@@ -18,9 +18,9 @@ uid: Part1GettingStarted
 
 - [Basic DataMiner functionality](xref:Part2BasicFunctionalities)
 
-### Find out all about the Cloud Platform
+### Find out all about dataminer.services
 
-- [DataMiner Cloud Platform](xref:Part51CloudPlatform)
+- [dataminer.services](xref:Part51CloudPlatform)
 
 ### More on specific DataMiner modules, apps, etc.
 

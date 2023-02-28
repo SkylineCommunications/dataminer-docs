@@ -6,31 +6,31 @@ uid: Deploying_Automation_scripts_from_a_GitLab_repository
 
 It is possible to deploy an Automation script solution from a GitLab repository by using the Skyline DataMiner Deploy Action in a pipeline.
 
-To do so, you need to [create a DCP key](#creating-a-dcp-key), [add the key as a masked variable in the repository](#adding-the-key-as-a-masked-variable-in-the-repository), and [add the Skyline DataMiner Deploy Action to a pipeline](#adding-the-skyline-dataminer-deploy-action-to-a-pipeline).
+To do so, you need to [create a dataminer.services key](#creating-a-dataminerservices-key), [add the key as a masked variable in the repository](#adding-the-key-as-a-masked-variable-in-the-repository), and [add the Skyline DataMiner Deploy Action to a pipeline](#adding-the-skyline-dataminer-deploy-action-to-a-pipeline).
 
 > [!IMPORTANT]
-> You will only be able to use this feature if your DataMiner System is connected to the cloud. See [Connecting your DataMiner System to the cloud](xref:Connecting_your_DataMiner_System_to_the_cloud).
+> You will only be able to use this feature if your DataMiner System is connected to dataminer.services. See [Connecting your DataMiner System to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud).
 
 A working example for this can be found [here](https://gitlab.com/ziinecorp/paris-ip-flow-management).
 
-## Creating a DCP key
+## Creating a dataminer.services key
 
-A DCP key is scoped to the specific DMS for which it was created and will allow for deployments to that DMS only.
+A dataminer.services key is scoped to the specific DMS for which it was created and will allow for deployments to that DMS only.
 
-For more information on how to create a DCP key, refer to [Managing DCP keys](xref:Managing_DCP_keys).
+For more information on how to create a dataminer.services key, refer to [Managing dataminer.services keys](xref:Managing_DCP_keys).
 
 ## Adding the key as a masked variable in the repository
 
 The (primary or secondary) key should be added as a masked variable in the repository so that it is stored securely in GitLab and not stored in source control. Making the variable masked will prevent the value from being logged accidentally in the pipeline logs.
 
-1. Copy the value from the DCP Admin app using the copy button next to the (primary or secondary) key.
+1. Copy the value from the Admin app using the copy button next to the (primary or secondary) key.
 1. In your GitLab repository, go to *Settings* > *CI/CD*.
 1. Go to the section *Variables* and click on expand.
 1. Click on *Add variable*.
 
     ![Add variable](~/develop/images/GitLab_add_variable.png)
 
-1. Specify a name for your variable (e.g. `DCP_KEY`), paste the key as the value for the variable, select the *Mask variable*, and click *Add variable*. Optionally it is possible to further protect your variable by selecting *Protect variable*.
+1. Specify a name for your variable (e.g. `MY_KEY`), paste the key as the value for the variable, select the *Mask variable*, and click *Add variable*. Optionally it is possible to further protect your variable by selecting *Protect variable*.
 
     ![Create variable](~/develop/images/GitLab_create_variable.png)
 
@@ -59,7 +59,7 @@ The (primary or secondary) key should be added as a masked variable in the repos
         script:
             - docker run -e CI_PROJECT_URL -v $(pwd):/mnt ghcr.io/skylinecommunications/skyline-dataminer-deploy-action:<version>
                 --stage Upload 
-                --api-key $DCP_KEY
+                --api-key $MY_KEY
                 --solution-path ./AutomationScript.sln
                 --base-path ./mnt
                 --package-name Paris-IP-Flow-Management 
@@ -76,7 +76,7 @@ The (primary or secondary) key should be added as a masked variable in the repos
         script:
             - docker run -e CI_PROJECT_URL -v $(pwd):/mnt ghcr.io/skylinecommunications/skyline-dataminer-deploy-action:<version>
                 --stage Deploy 
-                --api-key $DCP_KEY
+                --api-key $MY_KEY
                 --artifact-id $ARTIFACT_ID
                 --timeout 300
         dependencies:

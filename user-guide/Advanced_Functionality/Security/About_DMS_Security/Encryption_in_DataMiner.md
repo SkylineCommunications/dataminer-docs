@@ -17,7 +17,7 @@ Passwords for external users in the DataMiner System are always managed by the U
 
 For local DataMiner users, [Windows will store the (hashed) password](https://docs.microsoft.com/en-us/windows-server/security/kerberos/passwords-technical-overview). The complexity and renewal policies in Windows apply to local DataMiner users.
 
-The only exception to this is DataMiner Cloud users (see [Types of users](xref:Types_of_users)). These users are fully managed by DataMiner. The passwords for these users are randomly generated (17 characters) and encrypted using the Blowfish algorithm (ECB mode, 308-bit key) before being stored.
+The only exception to this is dataminer.services users (see [Types of users](xref:Types_of_users)). These users are fully managed by DataMiner. The passwords for these users are randomly generated (17 characters) and encrypted using the Blowfish algorithm (ECB mode, 308-bit key) before being stored.
 
 ### Device passwords (tokens)
 

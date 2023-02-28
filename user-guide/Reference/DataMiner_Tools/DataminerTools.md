@@ -6,12 +6,19 @@ uid: DataminerTools
 
 This section provides information on the following tools:
 
+- [Activate CDMR tool](xref:Activate_CDMR)
 - [Alerter](xref:Alerter)
+- [Analyze startup logs](xref:Analyze_Startup_Logs)
 - [Cassandra Cleaner](xref:Cassandra_Cleaner)
+- [Cassandra Clone](xref:Cassandra_Clone)
+- [Cassandra Cluster validator](xref:Cassandra_Cluster_Validator)
+- [Connection Check](xref:Connection_Check)
 - [DataMiner Comparison tool](xref:DataMinerComparisonTool)
 - [DataMiner Size tool](xref:DataMinerSizeTool)
 - [DataMiner Taskbar Utility](xref:DataMiner_Taskbar_Utility)
+- [Dump Spectrum Preset Content](xref:Dump_Spectrum_Preset_Content)
 - [Factory reset tool](xref:Factory_reset_tool)
+- [InstallConfiguration Schema file](xref:InstallConfiguration_XSD)
 - [Legacy trend data exporter](xref:Legacy_Trend_Data_Exporter)
 - [Multi-threaded timer polling rate calculator](xref:Multi_Threaded_Timer_Polling_Rate_Calculator)
 - [Protocol debug tools](xref:Protocol_Debug_Tools)

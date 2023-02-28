@@ -46,10 +46,10 @@ The following default values and limitations apply:
 | Real-time trending | 1 day       | 15 minutes       | 1098 days   |
 | Minute trending    | 31 days     | 1 hour           | 1098 days   |
 | Hour trending      | 366 days    | 12 hours         | 1830 days   |
-| Day trending       | 0 seconds   | 15 days 12 hours | 5490 days   |
-| Alarm events       | 366 days    | 1 hour           | 5490 days   |
-| History slider     | 31 days     | 1 hour           | 5490 days   |
-| Spectrum traces    | 366 days    | 1 hour           | 5490 days   |
+| Day trending       | 0 seconds   | 15 days 12 hours | 3660 days   |
+| Alarm events       | 366 days    | 1 hour           | 3660 days   |
+| History slider     | 31 days     | 1 hour           | 3660 days   |
+| Spectrum traces    | 366 days    | 1 hour           | 3660 days   |
 
 ## [Earlier versions (starting from DataMiner 9.6.3)](#tab/tabid-2)
 

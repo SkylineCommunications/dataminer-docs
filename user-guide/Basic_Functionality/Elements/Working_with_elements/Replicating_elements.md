@@ -25,7 +25,7 @@ While creating a new element or editing an existing element:
 
 > [!NOTE]
 >
-> - The source and replication DMA must use the same DataMiner version.
+> - The source and replication DMA must use the same DataMiner version. In addition, the replication DMA has to be able to set up a connection towards the source DMA.
 > - The input and output interfaces of the element will also be replicated; however, any element connections that have been configured for the original element will not be replicated.
 > - If the element uses the Production version of the protocol, and this version is different on the other DMA, only the statuses of the common parameters will be transferred.
 > - Security is defined on the remote DMS. Access to the remote element will therefore depend on the rights granted to the credentials you entered to log on to the remote DMS. In other words, you cannot replicate an element if you do not have access to the view containing that element.

@@ -27,6 +27,9 @@ This file contains default connection settings to be used by DataMiner client ap
     | A range of IP addresses               | 10.10.1.1-10.10.1.100 |
     | A single IP address                   | 10.10.7.1             |
 
+> [!TIP]
+> See also: [DataMiner hardening guide](xref:DataMiner_hardening_guide)
+
 ## ConnectionSettings.txt Options
 
 - **type=**
@@ -35,7 +38,7 @@ This file contains default connection settings to be used by DataMiner client ap
 
   Possible values:
 
-  - *GrpcConnection*: Supported from DataMiner 10.3.0/10.3.2 onwards. DataMiner will communicate using HTTPS via the API Gateway, using gRPC GZIP compression. By default, this requires the use of the standard HTTPS port 443. <!-- RN 34983 -->
+  - *GRPCConnection*: Supported from DataMiner 10.3.0/10.3.2 onwards. DataMiner will communicate using HTTPS via the API Gateway, using gRPC GZIP compression. By default, this requires the use of the standard HTTPS port 443. <!-- RN 34983 -->
 
   - *RemotingConnection*: .NET Remoting.
 

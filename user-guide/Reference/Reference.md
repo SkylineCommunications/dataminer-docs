@@ -12,7 +12,7 @@ uid: Part7Reference
 
 - [Obtaining a DataMiner license](xref:DataminerLicenses)
 
-- [Support services agreement](xref:Support_services_agreement)
+- [Support services terms](xref:Support_services_terms)
 
 - [Soft-launch options](xref:SoftLaunchOptions)
 

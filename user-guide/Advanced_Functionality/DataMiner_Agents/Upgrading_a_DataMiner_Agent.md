@@ -14,6 +14,9 @@ uid: Upgrading_a_DataMiner_Agent
 
 Make sure your system meets the necessary [system requirements](https://community.dataminer.services/dataminer-compute-requirements/). Among others, upgrading to the **latest .NET version** is highly recommended.
 
+> [!NOTE]
+> From DataMiner 10.3.3/10.4.0 onwards, during a DataMiner upgrade, Microsoft .NET 6.0 will be installed if this was not installed on your system already. <!-- RN 35363 -->
+
 Keep in mind that it is strongly recommended that you **use the same version of DataMiner on all Agents in a DMS**.
 
 If you are not upgrading to the DataMiner version that immediately follows your current version, also keep this in mind:

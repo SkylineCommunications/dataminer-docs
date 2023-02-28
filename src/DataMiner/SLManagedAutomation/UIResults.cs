@@ -66,10 +66,10 @@ namespace Skyline.DataMiner.Automation
 		public bool GetChecked(string key, string value) { return false; }
 
 		/// <summary>
-		/// Gets the date/time that was selected in the specified destination variable that is linked to a Calender item.
+		/// Gets the date/time that was selected in the specified destination variable that is linked to a Calendar item.
 		/// </summary>
 		/// <param name="key">The name of the destination variable.</param>
-		/// <returns>The date/time that was selected in the specified destination variable that is linked to a Calender item.</returns>
+		/// <returns>The date/time that was selected in the specified destination variable that is linked to a Calendar item.</returns>
 		/// <example>
 		/// <code>
 		/// UIResults uir = null;

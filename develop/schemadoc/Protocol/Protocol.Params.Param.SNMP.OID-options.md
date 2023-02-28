@@ -34,7 +34,7 @@ If you do not specify this option, the first column (the instance) is not filled
 
 ### instance
 
-Specify this option if you want to retrieve an extra column containing the instance.
+Specify this option if you want to retrieve an extra column containing the instance. Refer to [Instance option](xref:ConnectionsSnmpRetrievingTables#instance-option) for more information about this table retrieval option.
 
 ### multipleGetNext
 

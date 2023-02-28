@@ -6,29 +6,29 @@ uid: Deploying_Automation_scripts_from_a_GitHub_repository
 
 It is possible to deploy an Automation script solution from a GitHub repository by using the Skyline DataMiner Deploy Action in a workflow.
 
-To do so, you need to [create a DCP key](#creating-a-dcp-key), [add the key as a secret in the repository](#adding-the-key-as-a-secret-in-the-repository), and [add the Skyline DataMiner Deploy Action to a workflow](#adding-the-skyline-dataminer-deploy-action-to-a-workflow).
+To do so, you need to [create a dataminer.services key](#creating-a-dataminerservices-key), [add the key as a secret in the repository](#adding-the-key-as-a-secret-in-the-repository), and [add the Skyline DataMiner Deploy Action to a workflow](#adding-the-skyline-dataminer-deploy-action-to-a-workflow).
 
 > [!IMPORTANT]
-> You will only be able to use this feature if your DataMiner System is connected to the cloud. See [Connecting your DataMiner System to the cloud](xref:Connecting_your_DataMiner_System_to_the_cloud).
+> You will only be able to use this feature if your DataMiner System is connected to dataminer.services. See [Connecting your DataMiner System to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud).
 
-## Creating a DCP key
+## Creating a dataminer.services key
 
-A DCP key is scoped to the specific DMS for which it was created and will allow for deployments to that DMS only.
+A dataminer.services key is scoped to the specific DMS for which it was created and will allow for deployments to that DMS only.
 
-For more information on how to create a DCP key, refer to [Managing DCP keys](xref:Managing_DCP_keys).
+For more information on how to create a dataminer.services key, refer to [Managing dataminer.services keys](xref:Managing_DCP_keys).
 
 ## Adding the key as a secret in the repository
 
 The (primary or secondary) key should be added as a secret in the repository, so that it is stored securely in GitHub and not stored in source control.
 
-1. Copy the value from the DCP Admin app using the copy button next to the (primary or secondary) key.
+1. Copy the value from the Admin app using the copy button next to the (primary or secondary) key.
 1. In your GitHub repository, go to *Settings*.
 1. In the pane on the left, under *Security*, select *Secrets* > *Actions*.
 
    ![Actions page](~/develop/images/GitHub_settings_secrets.png)
 
 1. In the top-right corner, click *New repository secret*.
-1. Specify a name for your secret (e.g. `DCP_KEY`), paste the key as the value for the secret, and then save the secret.
+1. Specify a name for your secret (e.g. `MY_KEY`), paste the key as the value for the secret, and then save the secret.
 
    Once it is saved, your secret will be displayed in the *repository secrets*, and you will be able to use it in a workflow.
 

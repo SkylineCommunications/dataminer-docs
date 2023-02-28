@@ -2,15 +2,15 @@
 uid: Connect_to_cloud_with_DMZ
 ---
 
-# Connecting to the cloud with a DMZ setup
+# Connecting to dataminer.services with a DMZ setup
 
-From version 2.7.0 of the CloudGateway DxM onwards, you can connect a DMS to the cloud using a DMZ. This way, the DMS can be cloud-connected without exposing the entire DMS network to the public internet.
+From version 2.7.0 of the CloudGateway DxM onwards, you can connect a DMS to dataminer.services using a DMZ. This way, the DMS can be connected to dataminer.services without exposing the entire DMS network to the public internet.
 
 To create such a DMZ:
 
 1. Configure the firewall of the DMZ:
 
-   - Make sure it allows access to the endpoints mentioned in [Connecting your DataMiner System to the cloud](xref:Connecting_your_DataMiner_System_to_the_cloud).
+   - Make sure it allows access to the endpoints mentioned in [Connecting your DataMiner System to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud).
 
    - Make sure the DMZ can communicate with the DMS through port 80, or through port 443 for a secure connection.
 
@@ -21,7 +21,7 @@ To create such a DMZ:
    > [!NOTE]
    > Currently it is not yet possible to download each DxM individually. As a workaround, you can install the complete Cloud Pack in the DMZ and then uninstall the irrelevant DxMs. For the DMZ, these are *CoreGateway* and *FieldControl*. You can uninstall these like any other program in Windows.
 
-1. On the DataMiner nodes, install the DxMs that need to connect with the DMA or do not require internet access. At present, these are *CoreGateway*, *FieldControl*, and *Orchestrator*. For a Failover setup, you should install these DxMs on both Agents in the Failover pair.
+1. On the DataMiner nodes, install the DxMs that need to connect with the DMA or do not require internet access. At present, these are *CoreGateway*, *FieldControl*, *SupportAssistant*, and *Orchestrator*. For a Failover setup, you should install these DxMs on both Agents in the Failover pair.
 
    > [!NOTE]
    > For all DxMs, it is advised to have multiple instances running at the same time. This will create redundancy in case something goes wrong and allows for upgrades without any downtime.

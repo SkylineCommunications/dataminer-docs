@@ -19,7 +19,7 @@ In addition, you can specify options using various other shape data fields, such
 |--|--|--|
 | ComponentOptions | SessionVariablePrefix=\[prefix\] | When you specify this option, a unique prefix is assigned to the session variable names. This can be used in order to avoid any conflicts. For example, if you specify the value “*SessionVariablePrefix=RM*”, the session variable YaxisResources becomes RMYaxisResources. |
 | ComponentOptions | DefaultBandHeight= | Sets the default height of the timeline bands. This value has to be an integer greater than 10, e.g. *DefaultBandHeight=100*. Any height specified using a JSON object in a *YaxisResources* session variable will override this value. See [YAxisResources](#yaxisresources). |
-| ComponentOptions | EnableFollowMode | Activates the follow mode. This will make the timeline move along with the current time. |
+| ComponentOptions | EnableFollowMode | Activates the follow mode. This will make the timeline move along with the current time. When you navigate away from the line that represents now while follow mode is enabled, follow mode will temporarily be paused. As soon as you navigate back in view of the line that represents now, follow mode will be activated again. |
 | ComponentOptions | AutoReEnableFollowModeTimeout= | Sets the number of seconds after which the follow mode will be reactivated each time a user jumps to another time range. This value has to be an integer greater than 0, e.g. *AutoReEnableFollowModeTimeout=5* |
 | ComponentOptions | UseCommandsForCustomActions | Available from DataMiner 9.5.6 onwards. Allows the timeline to be used in conjunction with command control shapes to select an action mode. See [Configuring command controls for a Resource Manager component](#configuring-command-controls-for-a-resource-manager-component). |
 | ComponentActions | \[{...json...}\] | Custom actions, specified with JSON objects. Available from DataMiner 9.5.4 onwards. For more information, see [Specifying custom actions in a Resource Manager component](#specifying-custom-actions-in-a-resource-manager-component). |
@@ -256,7 +256,7 @@ When you pan or zoom in on the timeline, this session variable will contain the 
 
 When this session variable is set by an external source, the timeline component will be updated to show the new time range.
 
-The value can be set in serialized form (e.g. “5248098399646517511;5248392353962787511”) or using a “start;stop” format. In the latter case, start and stop must be timestamps that can be parsed by DateTime (e.g. “2017-09-17T09:42:01.9129607Z;2018-08-23T15:05:53.5399607Z” in ISO 8601 format, or “17/09/2017 9:42:01;23/08/2018 15:05:53” in local format).
+The value can be set in serialized form (e.g. “5248098399646517511;5248392353962787511”) or using a “start;stop” format. In the latter case, start and stop must be timestamps that can be parsed by DateTime (e.g. “2017-09-17T09:42:01.9129607Z;2018-08-23T15:05:53.5399607Z” in ISO 8601 format, or “2017-08-07 9:42:01;2017-08-10 15:05:53” in UTC format "yyyy-mm-dd hh:mm:ss").
 
 Available from DataMiner 9.6.3 onwards.
 

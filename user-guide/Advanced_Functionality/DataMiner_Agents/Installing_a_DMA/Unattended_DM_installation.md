@@ -62,7 +62,7 @@ The XML configuration is done in the *InstallConfiguration.xml* file. The settin
 The *InstallConfiguration.xml* file must use the syntax detailed below.
 
 > [!NOTE]
-> You can check the validity of an *InstallConfiguration.xml* file using the [InstallConfiguration Schema file](https://community.dataminer.services/documentation/installconfiguration-xsd/) available on Dojo.
+> You can check the validity of an *InstallConfiguration.xml* file using the [InstallConfiguration Schema file](xref:InstallConfiguration_XSD).
 
 ### DMS tag
 

@@ -2,10 +2,10 @@
 uid: General_Feature_Release_10.3.3
 ---
 
-# General Feature Release 10.3.3 – Preview
+# General Feature Release 10.3.3
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 >
@@ -15,7 +15,36 @@ uid: General_Feature_Release_10.3.3
 
 ## Highlights
 
-*No highlights have been selected for this release yet*
+#### OpenSearch & Amazon OpenSearch Service [ID_34651]
+
+<!-- MR 10.3.0 - FR 10.3.3 -->
+
+It is now possible to install a dedicated OpenSearch indexing database cluster as an alternative for Elasticsearch. This indexing cluster also requires a Cassandra cluster.
+
+At present, all OpenSearch versions are supported:
+
+- 1.X
+- 2.X
+
+For more information on setup and configuration, see [OpenSearch database](xref:OpenSearch_database).
+
+> [!NOTE]
+> It is also possible to use Amazon OpenSearch Service on AWS as an alternative to an on-premises hosted Elasticsearch/OpenSearch cluster. For more information on setup and configuration, see [Amazon OpenSearch Service](xref:Amazon_OpenSearch_Service).
+
+#### Amazon Keyspaces [ID_34872]
+
+<!-- MR 10.3.0 - FR 10.3.3 -->
+
+It is now possible to use the Amazon Keyspaces Service on AWS as an alternative for a Cassandra Cluster setup.
+
+> [!NOTE]
+>
+> - Amazon Keyspaces does not support all Cassandra functionality, most notably indices on columns. As a result, some queries against logger tables (including SLAs) may be slower on Amazon Keyspaces compared to Cassandra.
+> - The only consistency level supported is `Local Quorum`. See [Supported Apache Cassandra consistency levels in Amazon Keyspaces](https://docs.aws.amazon.com/keyspaces/latest/devguide/consistency.html). No matter the configuration, the consistency level will always be overwritten to `Local Quorum`.
+> - The only replication strategy supported is the Amazon Keyspaces specific `Single-Region strategy`, which is not configurable.
+> - Migrating existing databases to Amazon Keyspaces is not yet supported.
+
+For more information on setup and configuration, see [Amazon Keyspaces Service](xref:Amazon_Keyspaces_Service).
 
 ## Other features
 
@@ -122,6 +151,17 @@ From now on, DataMiner will detect when too much data is being sent in a single 
 
 Multiple instances of the SLLogCollector tool can now be run simultaneously.
 
+#### Cassandra Cluster: Enhanced query performance [ID_35247]
+
+<!-- MR 10.3.0 [CU1] - FR 10.3.3 -->
+
+Previously, queries against Cassandra Cluster would always be executed with a page size of 1000, even when the limit defined in the query was smaller than 1000. This resulted in excess data being returned. From now on, the page size will be adjusted according to the limit defined in the query if it is lower than the default page size.
+
+This change will considerably improve overall query performance, especially when retrieving trend data.
+
+> [!NOTE]
+> This change will not enhance performance when requesting trend data for an element that has no trend data points before the requested window. In cases like this, the full two-year range of shards will be queried to try and find an initial point.
+
 #### SLAnalytics - Pattern matching: Manually created tags will now be saved as pattern occurrences [ID_35299]
 
 <!-- MR 10.4.0 - FR 10.3.3 -->
@@ -184,6 +224,15 @@ Example:
 
 - New format: `Received ACK from SNMP Manager SNMP - LFR for alarm 239/4270232`
 
+#### SLAnalytics - Automatic incident tracking: Enhanced performance when fetching relation information [ID_35414]
+
+<!-- MR 10.4.0 - FR 10.3.3 -->
+
+Because of a number of enhancements, overall performance has increased when fetching relation information for the automatic incident tracking feature.
+
+> [!NOTE]
+> Currently, the parameter relationship feature is still in preview.
+
 #### Service & Resource Management: Enhanced performance when changing active function files [ID_35424]
 
 <!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
@@ -191,6 +240,12 @@ Example:
 Because of a number of enhancements, overall performance has increased when changing an active function file.
 
 Also, in the Cube UI, users will receive more concise feedback regarding the impact of the change. Up to now, they would receive a list of all items affected by the change. From now on, the list of affected items will only show up to 10 affected items per object type.
+
+#### SLAnalytics - Behavioral anomaly detection: No longer available for discrete parameters [ID_35465]
+
+<!-- MR 10.4.0 - FR 10.3.3 -->
+
+From now on, anomaly detection will no longer be available for discrete parameters.
 
 #### Automation: Enhanced memory usage [ID_35502]
 
@@ -205,6 +260,14 @@ Because of a number of enhancements, overall memory usage of the SLAutomation pr
 GQI now supports queries from [Data Aggregator](xref:Data_Aggregator_DxM) that use ad hoc data sources.
 
 ### Fixes
+
+#### Cassandra Cluster: Every DMA would incorrectly try to delete any possible old Cassandra compaction and repair tasks found in the entire DMS [ID_31923]
+
+<!-- MR 10.4.0 - FR 10.3.3 -->
+
+At start-up, every DataMiner Agent with a Cassandra Cluster configuration would incorrectly try to delete any possible old Cassandra compaction and repair tasks found in the entire DMS.
+
+From now on, at start-up, every DataMiner Agent with a Cassandra Cluster configuration will only delete the old Cassandra compaction and repair tasks found locally.
 
 #### DataMiner Taskbar Utility: Problem when stopping DataMiner [ID_34790]
 
@@ -266,6 +329,12 @@ If a DOM module is created without specifying *SecuritySettings*, the view permi
 
 Up to now, the check to determine whether a user had the view permission set to "None", would only return true for the Administrator or users in the Administrator group. From now on, when the required view permission is "None", permission checks will no longer be performed.
 
+#### NATSMaxPayloadException could be thrown when a client requested large amounts of data [ID_35306]
+
+<!-- MR 10.3.0 - FR 10.3.3 -->
+
+When a client requested large amounts of data, in some cases, a `NATSMaxPayloadException` could be thrown.
+
 #### External authentication via SAML: Issues fixed when using Okta as identity provider [ID_35374]
 
 <!-- MR 10.4.0 - FR 10.3.3 -->
@@ -291,6 +360,12 @@ netsh winhttp set proxy <proxyaddress> <bypasslist>
 <!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
 
 In a Cassandra database, the "time to live" (TTL) setting of spectrum trace data would not be applied correctly. As a result, this type of data would never be removed.
+
+#### Problem with SLElement when stopping an EPM element [ID_35439]
+
+<!-- MR 10.2.0 [CU13]/10.3.0 [CU1]  - FR 10.3.3 -->
+
+When an EPM element was stopped, in some rare cases, an error could occur in SLElement.
 
 #### SLDataGateway would not correctly return errors when querying SLA logger tables in a Cassandra Cluster [ID_35440]
 
@@ -319,3 +394,15 @@ RunClientProgram(String applicationPath, bool waitForCompletion)
 <!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
 
 When outages on an SLA with a week-based window were corrected, the *History Statistics Table* that started in the first 9 weeks of every year would incorrectly not get updated.
+
+#### SLAnalytics - Behavioral anomaly detection: Two identical behavioral anomaly alarms would incorrectly be created [ID_35511]
+
+<!-- MR 10.3.0 [CU1] - FR 10.3.3 -->
+
+In some cases, two identical behavioral anomaly alarms would incorrectly be created.
+
+#### SLAnalytics : Problem after a DVE parent element had been deleted [ID_35521]
+
+<!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.3 -->
+
+In some cases, an error could occur in the SLAnalytics process after a DVE parent element had been deleted.

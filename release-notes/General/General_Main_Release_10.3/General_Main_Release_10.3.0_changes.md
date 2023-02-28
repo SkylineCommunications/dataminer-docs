@@ -2,10 +2,10 @@
 uid: General_Main_Release_10.3.0_changes
 ---
 
-# General Main Release 10.3.0 – Changes (preview)
+# General Main Release 10.3.0 – Changes
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 > For release notes related to DataMiner Cube, see [DataMiner Cube 10.3.0](xref:Cube_Main_Release_10.3.0).
@@ -691,3 +691,9 @@ When a GQI query retrieved the status of a DOM instance that had no status, the 
 If a DOM module is created without specifying *SecuritySettings*, the view permission is set to "None".
 
 Up to now, the check to determine whether a user had the view permission set to "None", would only return true for the Administrator or users in the Administrator group. From now on, when the required view permission is "None", permission checks will no longer be performed.
+
+#### NATSMaxPayloadException could be thrown when a client requested large amounts of data [ID_35306]
+
+<!-- MR 10.3.0 - FR 10.3.3 -->
+
+When a client requested large amounts of data, in some cases, a `NATSMaxPayloadException` could be thrown.
