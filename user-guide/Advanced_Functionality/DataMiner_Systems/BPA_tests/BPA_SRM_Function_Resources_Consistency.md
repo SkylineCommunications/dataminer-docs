@@ -36,7 +36,7 @@ No inconsistencies have been detected in the system.
 ### Error
 
 - `[Generic DVE Table] entry {PK} is configured with resource ID '{ResourceID}', which was not found in Resource Manager.`
-- `[Generic DVE Table] entry {PK} is configured with a blank resource ID, so no matching resource could be found in the Resource Manager.`
+- `[Generic DVE Table] entry {PK} is configured with a blank resource ID, so no matching resource could be found in Resource Manager.`
 - `[Generic DVE Table] entry {PK} is configured with the element name - function name combination '{Name}.{Name}', which is already used as the element name of element '{DataMinerID}/{ElementID}'.`
 - `[Generic DVE Table] entries [{PKs}] are configured with a duplicate DVE Name '{Name}'.`
 - `The function name '{Name}' of resource '{Name}' ({GUID}) with [Generic DVE Table] primary key [{PK}] is already used by one or more other function resources on the same parent element, with [Generic DVE Table] primary key(s) [{PKs}].`
@@ -52,7 +52,7 @@ No inconsistencies have been detected in the system.
   - `[Generic DVE Table] entry {PK} - [DVE State] has the value 'Disabled', but [DVE Element] '{DataMinerID}/{ElementID}' is present in the DataMiner System even though it shouldn't be.`
   - `[Generic DVE Table] entry {PK} - [DVE function GUID] has the value '{GUID}', which is different from the linked resource function GUID '{GUID}'.`
   - `[Generic DVE Table] entry {PK} - [DVE Link to Resource Manager] has the value '{Value}', which is different from the linked resource ID '{GUID}'.`
-  - `[Generic DVE Table] entry {PK} - The active function files for the protocol were switched, but [DVE function GUID] still matches the GUID of the function in a previous active function file('{GUID}') instead of the current active function file.`
+  - `[Generic DVE Table] entry {PK} - The active function files for the protocol were switched, but [DVE function GUID] still matches the GUID of the function in a previous active function file ('{GUID}') instead of the current active function file.`
 
 ### Warning
 
