@@ -313,7 +313,7 @@ Available from DataMiner 10.2.0/10.1.6 onwards. Retrieves a list of the DCF conn
 
 ### Get elements
 
-Retrieves the elements in the DataMiner System.
+Retrieves the elements in the DataMiner System. From DataMiner 10.3.3/10.4.0 onwards, *Get elements* also returns alarm states. <!-- RN 35464 -->
 
 ### Get parameter table by alias
 
@@ -327,6 +327,13 @@ From DataMiner 10.2.0/10.1.5 onwards, a *Use feed* checkbox is available that al
 
 From DataMiner 10.2.0/10.2.1 onwards, an *Update data* option is available in the *Settings* pane if you use this data source. When you enable this, the component will automatically refresh the data when changes are detected.
 
+### Get parameter relations
+
+Available from DataMiner 10.3.3/10.4.0 onwards. Retrieves the parameter relationships that are stored in a model managed by the DataMiner Extension Module *ModelHost*. <!-- RN 35443 -->
+
+> [!NOTE]
+> *Get parameter relations* is only available when the *ModelHost* DxM is running. However, at this point, the *ModelHost* DxM is not yet available.
+
 ### Get parameters for element where
 
 Retrieves the selected parameters for the specified protocol or the parameters linked to the specified profile definition. Note that if parameters are displayed based on a specific protocol, it is not possible to combine a table parameter with other parameters, and only column parameters from the same table can be displayed in the same query.
@@ -335,7 +342,7 @@ From DataMiner 10.2.0/10.1.5 onwards, if a protocol and version have been specif
 
 ### Get services
 
-Retrieves the services in the DataMiner System.
+Retrieves the services in the DataMiner System. From DataMiner 10.3.3/10.4.0 onwards, *Get services* also returns alarm states. <!-- RN 35464 -->
 
 ### Get view relations
 
@@ -411,6 +418,11 @@ From DataMiner 10.2.10/10.3.0 onwards, an additional option, *When feed is empty
 Joins two tables together. When you select this option, in the *Type* drop-down box, you will first need to select how the tables should be joined. Then you will need to select another data source (optionally refined with one or more operators) in order to specify the table you want the first table to be joined with. Optionally, you can also specify a condition to determine when rows should be joined. For instance, if one table contains elements with a custom property that details a booking ID and the other lists bookings, you could add the condition that the property in the first table must match the ID in the second table.
 
 The *Inner* type of join only includes rows if they match the condition. *Left* displays all rows from the first table (i.e. the table on the left) and only the matching rows from the other table. *Right* does the opposite. *Outer* displays first the non-matching rows from the left table, then the matching rows from both tables, then the non-matching rows from the right table.
+
+From DataMiner 10.3.3/10.4.0 onwards, the *Row by row* option allows you to first execute the query for the first table, and then execute the query for the other table for each row that matches the join condition. This option is only available if you add the `showAdvancedSettings=true` option to the dashboard URL. If the *Row by row* option is not enabled, the join will execute both tables once and directly combine their results. <!-- RN 35565 + 35057 -->
+
+> [!NOTE]
+> The *Row by row* option is only supported for *Inner* and *Left* type of joins.
 
 ### Select
 

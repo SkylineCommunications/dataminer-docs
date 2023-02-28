@@ -91,5 +91,5 @@ The following shape data fields can be added to the group containing the booking
 
   > [!NOTE]
   >
-  > - From DataMiner 10.2.0 [CU10]/10.3.1 onwards, if no *ChildrenSource* shape data field is configured, by default the start time is yesterday (now - 1 day) and the end time is tomorrow (now + 1 day).
+  > - From DataMiner 10.2.0 [CU13]/10.3.4 onwards, if no *ChildrenSource* shape data field is configured, by default the start time is NOW - 8 hours and the end time is NOW + 16 hours. Prior to DataMiner 10.2.0 [CU10]/10.3.1, if no *ChildrenSource* shape data field is configured, by default the start time is yesterday (NOW - 1 day) and the end time is tomorrow (NOW + 1 day).
   > - Prior to DataMiner 10.2.0 [CU10]/10.3.1, using a *ChildrenSource* shape data field set to a specific time range will add the bookings in this time range to the ones that are already in the cache. This means that if there were other bookings in the cache already, shapes will be generated for those as well. If you want to filter the bookings to only show shapes in a specific time range, use a *ChildrenFilter* shape data field instead.

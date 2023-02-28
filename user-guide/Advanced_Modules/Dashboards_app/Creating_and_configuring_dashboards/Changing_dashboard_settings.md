@@ -14,29 +14,35 @@ uid: Changing_dashboard_settings
 
 1. Configure the following settings as required:
 
-   - *Use dynamic units*: Available from DataMiner 10.0.11 onwards. This option determines whether parameter units will change dynamically based on their value and protocol definition, in components where this is supported.
+   - **Dashboard configuration**
 
-   - *Allow components to shift*: This option determines whether components will move to make room for a component that is dragged across the dashboard. If the option is not selected, the position of the components becomes fixed.
+     - *Use dynamic units*: Available from DataMiner 10.0.11 onwards. This option determines whether parameter units will change dynamically based on their value and protocol definition, in components where this is supported.
 
-   - *Fit to view*: Available from DataMiner 10.2.7/10.3.0 onwards. Select this option to make sure all components are automatically adjusted to always be fully visible, so the user does not need to scroll.
+     - *Allow components to shift*: This option determines whether components will move to make room for a component that is dragged across the dashboard. If the option is not selected, the position of the components becomes fixed.
 
-   - *Number of columns*: Available from DataMiner 10.0.10 onwards. Allows you to configure in how many columns components can be displayed in the dashboard (maximum: 50). If you change the number of columns to a lower number and the columns currently contain components, these components will be automatically relocated when necessary.
+     - *Fit to view*: Available from DataMiner 10.2.7/10.3.0 onwards. Select this option to make sure all components are automatically adjusted to always be fully visible, so the user does not need to scroll.
 
-   - *Allowed to view the dashboard*: Available from DataMiner 10.2.0/10.1.1 onwards. Allows you to restrict access to the dashboard to specific users only. From DataMiner 10.2.4/10.3.0 onwards, you can also select entire user groups.
+     - *Number of columns*: Available from DataMiner 10.0.10 onwards. Allows you to configure in how many columns components can be displayed in the dashboard (maximum: 50). If you change the number of columns to a lower number and the columns currently contain components, these components will be automatically relocated when necessary.
 
-   - *Allowed to edit the dashboard*: Available from DataMiner 10.2.0/10.1.1 onwards. Allows you to assign edit permission for the dashboard to specific users only. From DataMiner 10.2.4/10.3.0 onwards, you can also select entire user groups.
+   - **User access/Dashboard security**
 
-     > [!NOTE]
-     > The built-in Administrator account always has full access to all dashboards.
+     - *Allowed to view the dashboard*: Available from DataMiner 10.2.0/10.1.1 onwards. Allows you to restrict access to the dashboard to specific users only. From DataMiner 10.2.4/10.3.0 onwards, you can also select entire user groups.
 
-   - *Allow WebSocket communication*: Web socket communication is enabled by default, but can be disabled, e.g. in case this is not allowed by the firewalls in your network.
+     - *Allowed to edit the dashboard*: Available from DataMiner 10.2.0/10.1.1 onwards. Allows you to assign edit permission for the dashboard to specific users only. From DataMiner 10.2.4/10.3.0 onwards, you can also select entire user groups.
 
-     > [!NOTE]
-     > Web socket communication is not supported on DMAs using operating systems prior to Windows Server 2012 or Windows 8.
+       > [!NOTE]
+       > The built-in Administrator account always has full access to all dashboards.
 
-   - *Fast polling timer*: The polling interval (in s) for components that display real-time information.
+     - *Allow WebSocket communication*: Web socket communication is enabled by default, but can be disabled, e.g. in case this is not allowed by the firewalls in your network.
 
-   - *Slow polling timer*: The polling interval (in s) for components that do not display real-time information.
+   - **Dashboard updates**
+
+       > [!NOTE]
+       > Web socket communication is not supported on DMAs using operating systems prior to Windows Server 2012 or Windows 8.
+
+     - *Fast polling timer*: The polling interval (in s) for components that display real-time information.
+
+     - *Slow polling timer*: The polling interval (in s) for components that do not display real-time information.
 
 1. Click the pencil icon again to leave edit mode.
 

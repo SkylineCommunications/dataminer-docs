@@ -20,6 +20,8 @@ The following partner types are available in the DataMiner Partner Program. Each
 
 - **Solution provider**: Imagine, build, and deploy innovative solutions based on DataMiner.
 
+- **Staff Augmentation partner**: Set up your dedicated DataMiner DevOps team to generate value continuously.
+
 - **Technology partner**: Ensure quality integrations and innovative use cases for your products with DataMiner.
 
 - **OEM partner**: Leverage DataMiner as your standard network management and OSS solution.

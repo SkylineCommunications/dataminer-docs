@@ -14,6 +14,8 @@ uid: Part4AdvancedModules
 
 - [DMS Dashboards](xref:dashboards)
 
+- [Data Aggregator](xref:Data_Aggregator_DxM)
+
 - [DataMiner Object Models (DOM)](xref:DOM)
 
 - [Experience and Performance Management](xref:EPM)
