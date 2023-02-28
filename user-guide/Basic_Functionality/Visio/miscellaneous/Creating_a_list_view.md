@@ -74,6 +74,11 @@ The following options can be specified in the *ComponentOptions* shape data fiel
   - StartTime = NOW - 8 hours
   - EndTime = NOW + 16 hours
 
+  Prior to DataMiner 10.2.0 [CU13]/10.3.4, the following default values are used instead:
+
+  - StartTime = NOW - 1 day
+  - EndTime = NOW + 1 day
+
   Note that *SetVar* controls of type *DateTime* will automatically return a date and time in the correct format. See [Creating a DateTime control](xref:Adding_options_to_a_session_variable_control#creating-a-datetime-control). For more information on date and time format strings, see <https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings>.
 
   > [!NOTE]
