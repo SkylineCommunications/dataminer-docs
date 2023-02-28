@@ -13,7 +13,7 @@ This BPA test checks for any inconsistencies between the resource objects and th
 
 It shows the errors and warnings per element, listing the errors and warnings separately.
 
-This BPA test will be included in the SRM Framework. At present, it is available on demand. You can [run it in System Center](xref:Running_BPA_tests) on the *Agents > BPA* tab.
+This BPA test will be included in the SRM Framework. You can [run it in System Center](xref:Running_BPA_tests) on the *Agents > BPA* tab.
 
 > [!NOTE]
 > The BPA can take over 30 seconds to run, depending on the scale of the system.
