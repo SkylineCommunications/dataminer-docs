@@ -12,7 +12,10 @@ Several factors are taken into account for the grouping:
 
 - Service information
 
-- The IDP location (only in case the IDP Solution is deployed and the relevant properties are correctly configured as explained in the note below)
+- The IDP location
+
+  > [!NOTE]
+  > The IDP location will only be taken into account if IDP is deployed and the option *Update alarms on value changed* is selected for the element properties 'Location Name', 'Location Building', 'Location Floor', 'Location Room', 'Location Aisle' and 'Location Rack'. See [Adding a custom property to an item](xref:Managing_element_properties#adding-a-custom-property-to-an-item).
 
 - Element information
 
@@ -42,7 +45,6 @@ The grouping of alarms into incidents is updated in real time whenever appropria
 >
 > - Using automatic incident tracking with history sets is supported; however, keep in mind that this may trigger the creation and immediate clearing of a large number of alarm groups.
 > - When an element is stopped or paused, the alarms associated with that element will not be taken into account when grouping alarms. Also, alarms associated with elements that are stopped or paused will be removed from any existing alarm group.
-> - To group on the IDP location, the option *Update alarms on value changed* must be selected for the element properties 'Location Name', 'Location Building', 'Location Floor', 'Location Room', 'Location Aisle' and 'Location Rack'. See [Adding a custom property to an item](xref:Managing_element_properties#adding-a-custom-property-to-an-item).
 
 ## Automatic incident tracking configuration in System Center
 
