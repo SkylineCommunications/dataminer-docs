@@ -15,7 +15,7 @@ There are **two options**: you can create a so-called **self-signed certificate*
 ## Generating the certificates
 
 > [!TIP]
-> We strongly recommend to use our [scripts for generating TLS certificates](https://github.com/SkylineCommunications/generate-tls-certificates), available on GitHub. There is a version of the script for linux and windows machines.  
+> We strongly recommend that you use our [scripts for generating TLS certificates](https://github.com/SkylineCommunications/generate-tls-certificates), available on GitHub. There is a version of the script for Linux and Windows machines.
 
 To generate the certificates, you will need two tools: *openssl* and the *Java keytool*. Both of these can run on Linux and Windows.
 
@@ -95,13 +95,15 @@ To generate the certificates, you will need two tools: *openssl* and the *Java k
    keytool -keystore <NODE IP>.jks -alias rootca_name -importcert -file <NODE IP ADDRESS>.crt_signed -keypass <STRONG PASSWORD> -storepass <STRONG PASSWORD> -noprompt
    ```
 
-1. For inter node encryption, you have to add the singed certificate of all other nodes to the keystore of every other node. So first, you have to export the signed certificates of every node.
+1. For inter-node encryption, add the signed certificate of all other nodes to the keystore of every other node:
 
-   ```txt
-   keytool -exportcert -alias <NODE IP> -keystore <NODE IP>.jks -file <NODE IP>-public-key.cer -storepass <STRONG PASSWORD>
-   ```
+   1. Export the signed certificates of every node.
 
-1. Now, you can import the signed certificates of every other node in each node's truststore.
+      ```txt
+      keytool -exportcert -alias <NODE IP> -keystore <NODE IP>.jks -file <NODE IP>-public-key.cer -storepass <STRONG PASSWORD>
+      ```
+
+   1. Import the signed certificates of every other node in each node's truststore.
 
    ```txt
    keytool -keystore <NODE IP>.jks -alias <OTHER NODE IP> -importcert -file <OTHER NODE IP>-public-key.cer -keypass <STRONG PASSWORD> -storepass <STRONG PASSWORD> -noprompt
@@ -173,14 +175,13 @@ To enable inter-node TLS encryption:
 
 ## Connecting with DevCenter
 
-In order to connect over TLS with DevCenter, you will have to install the Java Cryptography Extensions (JCE). For more information, see [Connecting DevCenter to SSL/TLS-enabled Cassandra](https://www.datastax.com/blog/connecting-datastax-devcenter-ssl-enabled-apache-cassandra-or-datastax-enterprise).
+1. To be able to connect over TLS with DevCenter, install the Java Cryptography Extensions (JCE). For more information, see [Connecting DevCenter to an SSL/TLS-enabled Cassandra](https://www.datastax.com/blog/connecting-datastax-devcenter-ssl-enabled-apache-cassandra-or-datastax-enterprise).
 
-You also have to create a truststore which holds the rootCa.crt certificate. You can do so as following:
-```txt
-keytool -keystore rootCa-truststore.jks -storetype JKS -importcert -file rootCa.crt -keypass <STRONG PASSWORD> -storepass <STRONG PASSWORD> -alias rootCa -noprompt
-```
+1. Create a truststore that contains the *rootCa.crt* certificate:
 
-When you have done so:
+   ```txt
+   keytool -keystore rootCa-truststore.jks -storetype JKS -importcert -file rootCa.crt -keypass <STRONG PASSWORD> -storepass <STRONG PASSWORD> -alias rootCa -noprompt
+   ```
 
 1. Start DevCenter by executing `C:\Program Files\Cassandra\DevCenter\Run DevCenter.lnk`.
 
