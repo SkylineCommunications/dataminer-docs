@@ -5259,6 +5259,8 @@
       topicUID: dnSpy
     - name: EBU LIST
       topicUID: EBU_Live_IP_Software_Toolkit_LIST
+    - name: Fiddler
+      topicUID: Fiddler
     - name: Interactive Automation Script Toolkit
       topicUID: Interactive_Automation_Script_Toolkit
     - name: MySQL Workbench
