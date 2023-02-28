@@ -40,7 +40,7 @@ When, in a ListView component, you sort the rows by clicking a particular column
 
 #### Bookings app: Default window of timeline area now set to '-8 hours <NOW> +16 hours' [ID_35525]
 
-<!-- MR 10.3.0 [CU1] - FR 10.3.4 -->
+<!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
 
 In the *Bookings* app, the default window of the timeline area has now been changed from `-1 day <NOW> +1 day` to `-8 hours <NOW> +16 hours`.
 
