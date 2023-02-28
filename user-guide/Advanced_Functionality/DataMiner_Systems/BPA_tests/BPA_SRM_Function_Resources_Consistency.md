@@ -4,14 +4,16 @@ uid: BPA_SRM_Function_Resources_Consistency
 
 # SRM Function Resources Consistency
 
+<!-- RN 35662 -->
+
 This BPA test checks for any inconsistencies between the resource objects and the [Generic DVE table] entries on the main element as well as duplicate names:
 
-- It checks for any inconsistencies in the DVE tables: states, names, linked resources & elements.
-- It checks for duplicate names or other configurations that could cause problems.
+- It checks for any inconsistencies in the DVE tables: states, names, linked resources, and elements.
+- It checks for duplicate names or other possible configuration issues.
 
 It shows the errors and warnings per element, listing the errors and warnings separately.
 
-This BPA test is available with the SRM Framework. You can [run it in System Center](xref:Running_BPA_tests) on the *Agents > BPA* tab.
+This BPA test will be included in the SRM Framework. At present, it is available on demand. You can [run it in System Center](xref:Running_BPA_tests) on the *Agents > BPA* tab.
 
 > [!NOTE]
 > The BPA can take over 30 seconds to run, depending on the scale of the system.
@@ -29,7 +31,7 @@ This BPA test is available with the SRM Framework. You can [run it in System Cen
 
 `Test succeeded: No inconsistent function resource configurations detected in the system.`
 
-There are no inconsistencies detected in the system.
+No inconsistencies have been detected in the system.
 
 ### Error
 
@@ -41,16 +43,16 @@ There are no inconsistencies detected in the system.
 - `Resource '{Name}' ({GUID}) has no primary key while it should have one.`
 - `Resource '{Name}' ({GUID}) with [Generic DVE Table] primary key '{PK}' could not be found in the [Generic DVE table].`
 - `The [Generic DVE Table] was empty, but the following resources refer to this element: Resource '{Name}' ({GUID}).`
-- `Could not find main element referenced by the following resources: {Names}. `
+- `Could not find main element referenced by the following resources: {Names}.`
 - `The ElementID is not unique.`
 - `Resource '{Name}' ({GUID}):`
-    - `[Generic DVE Table] entry {PK} - [DVE Name] has value '{Name}', which is different from the linked resource function name '{Name}'.`
-    - `[Generic DVE Table] entry {PK} - [DVE Element] has the value '{Value}', which is different from the linked resource DVE Element '{DataMinerID}/{ElementID}'.`
-    - `[Generic DVE Table] entry {PK} - [DVE State] has the value 'Enabled', but [DVE Element] '{DataMinerID}/{ElementID}' was not found in the DataMiner System even though it should be.`
-    - `[Generic DVE Table] entry {PK} - [DVE State] has the value 'Disabled', but [DVE Element] '{DataMinerID}/{ElementID}' is present in the DataMiner System even though it shouldn't be.`
-    - `[Generic DVE Table] entry {PK} - [DVE function GUID] has the value '{GUID}', which is different from the linked resource function GUID '{GUID}'.`
-    - `[Generic DVE Table] entry {PK} - [DVE Link to Resource Manager] has the value '{Value}', which is different from the linked resource ID '{GUID}'.`
-    - `[Generic DVE Table] entry {PK} - The active function files for the protocol were switched, but [DVE function GUID] still matches the GUID of the function in a previous active function file('{GUID}') instead of the current active function file.`
+  - `[Generic DVE Table] entry {PK} - [DVE Name] has value '{Name}', which is different from the linked resource function name '{Name}'.`
+  - `[Generic DVE Table] entry {PK} - [DVE Element] has the value '{Value}', which is different from the linked resource DVE Element '{DataMinerID}/{ElementID}'.`
+  - `[Generic DVE Table] entry {PK} - [DVE State] has the value 'Enabled', but [DVE Element] '{DataMinerID}/{ElementID}' was not found in the DataMiner System even though it should be.`
+  - `[Generic DVE Table] entry {PK} - [DVE State] has the value 'Disabled', but [DVE Element] '{DataMinerID}/{ElementID}' is present in the DataMiner System even though it shouldn't be.`
+  - `[Generic DVE Table] entry {PK} - [DVE function GUID] has the value '{GUID}', which is different from the linked resource function GUID '{GUID}'.`
+  - `[Generic DVE Table] entry {PK} - [DVE Link to Resource Manager] has the value '{Value}', which is different from the linked resource ID '{GUID}'.`
+  - `[Generic DVE Table] entry {PK} - The active function files for the protocol were switched, but [DVE function GUID] still matches the GUID of the function in a previous active function file('{GUID}') instead of the current active function file.`
 
 ### Warning
 
@@ -59,10 +61,9 @@ There are no inconsistencies detected in the system.
 - `No Linker table entry found for resource(s): {Names & PKs} .`
 - `The ElementID is not unique.`
 
-
 ### Not Executed
 
-These are the messages that can appear when the test fails to execute for unexpected reasons, and cannot provide a conclusive report because of this:
+These are the messages that can appear when the test fails to execute for unexpected reasons, and it cannot provide a conclusive report because of this:
 
 `Could not execute test ([message])` (on unexpected exceptions).
 
@@ -70,11 +71,11 @@ In the message above, the exception message is included (e.g. "Access Denied"). 
 
 ## Impact when issues detected
 
-* Impact: "Operation of the DataMiner System and SRM could be affected by this problem."
-* Action: "Try to update the resources to resolve the inconsistencies."
+- Impact: "Operation of the DataMiner System and SRM could be affected by this problem."
+- Action: "Try to update the resources to resolve the inconsistencies."
 
 ## Limitations
 
-* Needs the SRM Framework.
-* Needs an SRM license.
-* The ResourceManager needs to be initialized.
+- Needs the SRM framework.
+- Needs an SRM license.
+- Resource Manager needs to be initialized.
