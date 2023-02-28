@@ -12,7 +12,10 @@ Several factors are taken into account for the grouping:
 
 - Service information
 
-- The IDP location (only in case the IDP Solution is deployed)
+- The IDP location
+
+  > [!NOTE]
+  > The IDP location will only be taken into account if IDP is deployed and the option *Update alarms on value changed* is selected for the element properties 'Location Name', 'Location Building', 'Location Floor', 'Location Room', 'Location Aisle' and 'Location Rack'. See [Adding a custom property to an item](xref:Managing_element_properties#adding-a-custom-property-to-an-item).
 
 - Element information
 
@@ -72,9 +75,7 @@ From DataMiner 10.2.0/10.1.4 onwards, automatic incident tracking can also take 
 
 The following basic configuration is needed in Cube:
 
-- For the alarm properties that should be taken into account, the option *Update alarms on value changed* must be selected. See [Adding a custom alarm property](xref:Changing_custom_alarm_properties#adding-a-custom-alarm-property).
-
-- For the element, service and view properties that should be taken into account, the option *Make this property available for alarm filtering* must be selected. See [Adding a custom property to an item](xref:Managing_element_properties#adding-a-custom-property-to-an-item).
+- For the properties that should be taken into account, the option *Update alarms on value changed* must be selected. See [Adding a custom property to an item](xref:Managing_element_properties#adding-a-custom-property-to-an-item).
 
 In addition, the following configuration is needed in the file *C:\\Skyline DataMiner\\analytics\\configuration.xml*:
 
