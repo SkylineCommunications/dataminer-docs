@@ -114,6 +114,13 @@ When, in the *Resources* app, you moved a resource from one resource pool to ano
 
 When you resized the selected area in a trend graph by dragging either the left or right selection boundary, the pattern edit menu would incorrectly open, even when you were not allowed to create a pattern or when you had no intention of editing a pattern.
 
+#### DataMiner Cube - Trending: Problem with Y axis alarm coloring [ID_35633]
+
+<!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.3 [CU1] -->
+<!-- Incorrect FR - not added to 10.3.3 [CU1] -->
+
+When a parameter with a relative alarm threshold had its baseline set to a negative value, in the trend graph of that parameter, the alarm coloring on the Y axis could be incorrect.
+
 #### DataMiner Cube - Alarm Console: Problem when a session variable was used in an alarm filter [ID_35681]
 
 <!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
