@@ -84,7 +84,7 @@ Alias-"Alias"|"Target"|"What"|"Condition"
 
     Alternatively, you can specify the parameter ID without the prefix, as a reference without prefix will by default be interpreted as a parameter reference.
 
-    Using a column parameter can be done by appending the primary key (or display key) to the parameter ID, separated by either a comma or colon.
+    To use a column parameter, append the primary key (or display key) to the parameter ID, separated by either a comma or colon.
 
     - *[Parameter ID]:[Primary key]*
     - *[Parameter ID],[Primary key]*
