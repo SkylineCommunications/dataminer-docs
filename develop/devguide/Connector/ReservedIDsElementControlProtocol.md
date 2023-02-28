@@ -29,6 +29,149 @@ General Parameters (DataMiner Element Control Protocol):
 
 |ID|Name|Description and/or possible values|
 |--- |--- |--- |
+|64501|TIMEOUT||
+|64502|STATE||
+|64503|New client registered||
+|64504|New Element connection||
+|64505|Client disconnected||
+|64506|Element disconnection||
+|64507|Parameter descriptions||
+|64508|Link file||
+|64509|Edited||
+|64510|Element created||
+|64511|Deleted||
+|64514|Alarm Template Assigned||
+|64516|Database optimization||
+|64517|Database stack||
+|64518|Mobile gateway||
+|64519|Service path changed||
+|64520|Startup DataMiner Agent||
+|64521|Protocol Added||
+|64522|Protocol Deleted||
+|64523|Protocol Replaced||
+|64524|Alarm Template Added||
+|64525|Alarm Template Deleted||
+|64526|Alarm Template Edited||
+|64527|Script Added||
+|64528|Script Deleted||
+|64529|Script Edited||
+|64530|Information Added||
+|64531|Information Deleted||
+|64532|Information Edited||
+|64533|SMS Received||
+|64534|SMS Sent||
+|64535|GSM Signal Strength||
+|64536|GSM General Information||
+|64537|Trending Template Edited||
+|64538|Trending Template Added||
+|64539|Trending Template Deleted||
+|64540|VDX Deleted||
+|64541|VDX Added||
+|64542|VDX Edited||
+|64543|Trending Template Assigned||
+|64544|Element Connections Edited||
+|64545|Security Edited||
+|64546|Views Edited||
+|64547|Database settings edited||
+|64548|SNMP-Managers edited||
+|64549|Start Element Failed||
+|64550|Load Element Failed||
+|64551|Table Repair||
+|64552|Set Parameter||
+|64553|Import elements||
+|64554|Information.xml assigned||
+|64555|Start synchronization||
+|64556|Synchronization finished||
+|64557|DataMiner Agent found||
+|64558|DataMiner Agent lost||
+|64559|Error during synchronization||
+|64560|No connection with DMA||
+|64561|Connection established with DMA||
+|64562|Automation info||
+|64563|Scheduler info||
+|64564|Script execution failure||
+|64565|Load Protocol Failed||
+|64566|Startup error||
+|64567|Scheduled Task Created||
+|64568|Scheduled Task Updated||
+|64569|Scheduled Task Deleted||
+|64570|Notification||
+|64571|Stop DataMiner||
+|64572|DataMiner run-time||
+|64573|Task started||
+|64574|Client notification||
+|64575|Set as production protocol||
+|64576|Element masked||
+|64577|Element unmasked||
+|64578|DMS Revisioned||
+|64579|Backup status||
+|64580|SNMPAgent||
+|64581|File changed||
+|64582|Filter added||
+|64583|Filter edited||
+|64584|Filter deleted||
+|64585|User settings||
+|64586|Document added||
+|64587|Document edited||
+|64588|Document removed||
+|64589|Script started||
+|64590|Linked to||
+|64591|State change||
+|64592|Service added||
+|64593|Redundancy Group added||
+|64594|Preset Created||
+|64595|Preset Edited||
+|64596|Preset Renamed||
+|64597|Preset Deleted||
+|64598|Real-time TCP Socket||
+|64599|Database||
+|64600|Correlation engine||
+|64601|Alarm colors edited||
+|64602|IP Settings||
+|64603|Spectrum Script Edited||
+|64604|Spectrum Script Deleted||
+|64605|Spectrum Monitor Edited||
+|64606|Spectrum Monitor Deleted||
+|64607|Entered Prioritized Mode||
+|64608|Left Prioritized Mode||
+|64609|Spectrum Script Added||
+|64610|Spectrum Monitor Created||
+|64611|Mobile Gateway lost contact with DataMiner||
+|64612|Spectrum Monitor Failure||
+|64613|Collaboration Message||
+|64614|DataMiner Failover Status||
+|64615|Service Templates||
+|64616|Client Eventing||
+|64617|Latch reset info||
+|64619|Annotations Edited||
+|64620|Asset Manager Configuration||
+|64621|Map Configuration||
+|64622|SNMP Manager||
+|64623|Redundancy Group State||
+|64624|VDX Assigned||
+|64625|Export Progress||
+|64626|Import Progress||
+|64627|Connectivity Engine||
+|64628|Resource Manager info||
+|64629|Tickets||
+|64630|Notes||
+|64631|Profile Manager info||
+|64632|Spectrum trace recording started||
+|64633|Spectrum trace recording stopped||
+|64636|DataMiner Connectivity Framework||
+|64637|Authentication Failure||
+|64638|Sounds||
+|64639|Disk Watcher||
+|64640|Licensing||
+|64641|Protocol Function Manager info||
+|64642|Topology engine||
+|64643|Failed Southbound SNMP Communication||
+|64644|Service Manager info||
+|64645|Property Configuration||
+|64646|DOM Manager info||
+|64647|Clearable Alarm Storm Protection||
+|64648|Redundancy switch||
+|64649|Azure Active Directory||
 |65000|[Lock status]|0/empty = unlocked, 1 = locked, 2 = unlocked with force|
 |65002|[Lock owner]|Username of the user who is locking the element|
 |65003|[Number of active Alarms]||
