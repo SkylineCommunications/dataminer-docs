@@ -302,6 +302,12 @@ When a GQI was migrated, in some cases, the last nodes of the migrated query wou
 
 When you hovered over a segment of an edge, in some cases, an incorrect tooltip would appear.
 
+#### DataMiner Cube: Exception values with decimals would be displayed incorrectly in trend graph [ID_35714]
+
+<!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
+
+Because DataMiner Cube would use the incorrect culture when parsing exception values, in some cases, exception values with decimals would be displayed incorrectly in trend graphs.
+
 #### Web apps: Node edge actions would incorrectly no longer work [ID_35723]
 
 <!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
