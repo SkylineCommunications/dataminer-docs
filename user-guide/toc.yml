@@ -2750,6 +2750,7 @@
     - name: DataMiner Teams bot
       topicUid: DataMiner_Teams_bot
     - name: Advanced configuration
+      topicUID: Custom_cloud_endpoint_configuration
       items:
         - name: Customizing the dataminer.services endpoint configuration
           topicUID: Custom_cloud_endpoint_configuration
