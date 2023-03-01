@@ -15,7 +15,7 @@ When a serial connection was disconnected, it could occur that a new connection 
 
 ## Fix
 
-Install DataMiner 10.2.0 [CU13], 10.3.0 [CU1], or 10.3.4.
+Install DataMiner 10.2.0 [CU13], 10.3.0 [CU1], or 10.3.4. <!-- RN 35773 -->
 
 ## Workaround
 
