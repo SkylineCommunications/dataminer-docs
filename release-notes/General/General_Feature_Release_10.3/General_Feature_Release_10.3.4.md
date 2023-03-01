@@ -195,6 +195,12 @@ The display value of an empty cell of type *double* would incorrectly be set to 
 
 When a large number of groups needed to be created while automatic incident tracking was starting up, the `A timeout of 00:01:00.0 occurred while processing message of type AlarmFloodMessage` error could be thrown, causing automatic incident tracking to not start up correctly.
 
+#### Behavioral anomaly detection: Suggestion alarms would incorrectly be re-evaluated as normal alarms after a DataMiner restart [ID_35744]
+
+<!-- MR 10.3.0 [CU1] - FR 10.3.4 -->
+
+After a DataMiner restart, suggestion alarms would incorrectly be re-evaluated as normal alarms.
+
 #### Problem with SLPort when an element with a serial connection was restarted [ID_35773]
 
 <!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->

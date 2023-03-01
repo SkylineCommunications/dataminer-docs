@@ -191,6 +191,12 @@ From now on, the focus data cache will no longer be cleared when SLAnalytics pro
 
 The display value of an empty cell of type *double* would incorrectly be set to a "0" string. From now on, it will be set to an empty string instead.
 
+#### Behavioral anomaly detection: Suggestion alarms would incorrectly be re-evaluated as normal alarms after a DataMiner restart [ID_35744]
+
+<!-- MR 10.3.0 [CU1] - FR 10.3.4 -->
+
+After a DataMiner restart, suggestion alarms would incorrectly be re-evaluated as normal alarms.
+
 #### Problem with SLPort when an element with a serial connection was restarted [ID_35773]
 
 <!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
