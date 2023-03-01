@@ -174,6 +174,12 @@ When configuring an ad hoc data source in a GQI query, you can link the argument
 
 Also, in the query builder, the `Link [argument name] to feed for [argument name]` command has been renamed to `Use feed for [argument name]`.
 
+#### Dashboards app: 'Data used in dashboard' section would incorrectly not list DOM instances [ID_35717]
+
+<!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
+
+When editing a dashboard, DOM instances used by components on that dashboard would incorrectly not be listed in the *Data used in dashboard* section of the *DATA* tab.
+
 #### Web apps: Node edge actions would incorrectly no longer work [ID_35723]
 
 <!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->

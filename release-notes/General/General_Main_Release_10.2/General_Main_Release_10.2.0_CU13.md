@@ -316,6 +316,12 @@ When you hovered over a segment of an edge, in some cases, an incorrect tooltip 
 
 Because DataMiner Cube would use the incorrect culture when parsing exception values, in some cases, exception values with decimals would be displayed incorrectly in trend graphs.
 
+#### Dashboards app: 'Data used in dashboard' section would incorrectly not list DOM instances [ID_35717]
+
+<!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
+
+When editing a dashboard, DOM instances used by components on that dashboard would incorrectly not be listed in the *Data used in dashboard* section of the *DATA* tab.
+
 #### Web apps: Node edge actions would incorrectly no longer work [ID_35723]
 
 <!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
