@@ -143,6 +143,12 @@ From now on, parameter update throttling can be disabled by setting the *Message
 
 When a client retrieved the protocol of a DVE parent element, its alarm filter would not get returned correctly for some of its parameters that are exported as standalone parameters.
 
+#### GQI: Problem when applying an 'aggregation' or 'group by' operation on a datetime column of an Elasticsearch table [ID_35609]
+
+<!-- MR 10.3.0 [CU1] - FR 10.3.4 -->
+
+When an *aggregation* or *group by* operation was applied on a datetime column of an Elasticsearch table, the datetime values in that column would be parsed incorrectly.
+
 #### A number of alarm-related issues have been fixed [ID_35611]
 
 <!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
