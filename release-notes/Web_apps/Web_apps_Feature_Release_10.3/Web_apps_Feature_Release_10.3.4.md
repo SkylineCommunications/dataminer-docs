@@ -209,6 +209,12 @@ When editing a dashboard, DOM instances used by components on that dashboard wou
 
 Node edge actions would incorrectly no longer work.
 
+#### Web apps - Query builder: Drop-down boxes that only contained one item would incorrectly not be displayed [ID_35735]
+
+<!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
+
+In the query builder, drop-down boxes that only contained one item would incorrectly not be displayed.
+
 #### GQI: Queries containing float or GUID values would not get migrated correctly [ID_35759]
 
 <!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
