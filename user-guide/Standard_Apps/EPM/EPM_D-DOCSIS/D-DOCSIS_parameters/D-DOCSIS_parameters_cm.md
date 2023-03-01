@@ -91,6 +91,54 @@ This page contains an overview of the CM parameters available in the D-DOCSIS br
   - unavailable: The CM has not reported its device class.
 
   Retrieved using the call "show cable modem docsis device-class".
+  
+  - **US ICFR Worst Case**: Calculated. Highest ICFR value from US Channels associated to CM.
+
+Acquired from the "cmIcfr" MetricName in the "UpstreamScQamChannelInfo" MetricGroup from Kafka Topic
+
+- **US Ripples Worst Case**: Calculated. Highest Ripples value from US Channels associated to CM.
+
+Acquired from the "ripples" MetricName in the "UpstreamScQamChannelInfo" MetricGroup from Kafka Topic
+
+- **US TX Power Minimum**: Calculated. Lowest TX Power value from US Channels associated to CM.
+
+Acquired from the "txPower" MetricName in the "UpstreamScQamChannelInfo" MetricGroup from Kafka Topic
+
+- **US TX Power Maximum**: Calculated. Highest TX Power value from US Channels associated to CM.
+
+Acquired from the "txPower" MetricName in the "UpstreamScQamChannelInfo" MetricGroup from Kafka Topic
+
+- **US T3 24 Hour Count**: Calculated. Total number of T3 Timeouts in the last 24 hours from US channels associated to the CM.
+
+Acquired from the "t3" MetricName in the "UpstreamScQamChannelInfo" MetricGroup from Kafka Topic
+
+- **US T4 24 Hour Count**: Calculated. Total number of T4 Timeouts in the last 24 hours from US channels associated to the CM.
+
+Acquired from the "t4" MetricName in the "UpstreamScQamChannelInfo" MetricGroup from Kafka Topic
+
+- **DS RX Minimum**: Calculated. Minimum RX Power from DS channels associated to the CM.
+
+Acquired from the "rxPower" MetricName in the "downstreamScQamChannels" MetricGroup from Kafka Topic
+
+- **DS RX Maximum**: Calculated. Maximum RX Power from DS channels associated to the CM.
+
+Acquired from the "rxPower" MetricName in the "downstreamScQamChannels" MetricGroup from Kafka Topic
+
+- **DS SNR Minimum**: Calculated. Minimum SNR Power from DS channels associated to the CM.
+
+Acquired from the "snr" MetricName in the "downstreamScQamChannels" MetricGroup from Kafka Topic
+
+- **DS SNR Maximum Total**: Calculated. Maximum SNR Power from DS channels associated to the CM.
+
+Acquired from the "snr" MetricName in the "downstreamScQamChannels" MetricGroup from Kafka Topic
+
+- **DS Post-FEC 24 Hour Worst Case**: Calculated. Largest Post-FEC Ratio using Uncorrectalbe 24 hour count from all DS Channels associated to CM.
+
+Acquired from the "unerroreds", "correcteds", and "uncorrectables" MetricNames in the "downstreamScQamChannels" MetricGroup from Kafka Topic
+
+- **OFDM Post-FEC 24 Hour Worst Case**: Calculated. Largest Post-FEC Ratio using Uncorrectalbe 24 hour count from all OFDM Channels associated to CM.
+
+Acquired from the "unerroreds", "correcteds", and "uncorrectables" MetricNames in the "downstreamScQamChannels" MetricGroup from Kafka Topic
 
 ## System parameters
 
