@@ -158,9 +158,6 @@ In the top-right corner of a trend graph, a light bulb icon appears when DataMin
 
 Up to now, when you clicked one of those related parameters in order to add it to the trend graph, a check mark would appear in front of it. From now on, check marks will no longer appear in front of related parameters after selecting them.
 
-> [!NOTE]
-> Currently, the parameter relationship feature is still in preview.
-
 #### DataMiner Cube - Alarm Console: No longer possible to enable the 'Automatic incident tracking' option for a history tab [ID_35556]
 
 <!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
@@ -315,9 +312,6 @@ From now on, the collector pages will be loaded even when the EPM environment do
 
 In some cases, the light bulb icon in the top-right corner of a trend graph would incorrectly overlap the full screen or zoom range buttons.
 
-> [!NOTE]
-> Currently, the parameter relationship feature is still in preview.
-
 #### DataMiner Cube - Service templates: Open service card would not be updated when the service template was re-applied [ID_35537]
 
 <!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
@@ -336,14 +330,8 @@ When you enabled the *Automatic incident tracking* option of an active alarms ta
 
 When you open a trend graph, a light bulb icon will appear in the top-right corner when DataMiner finds parameters that are related to the parameters shown in the graph. When you click that icon, you get a list of the ten most important parameters, which you can then add to the graph. However, in some cases, the display keys of those listed parameters would not be correct.
 
-> [!NOTE]
-> Currently, the parameter relationship feature is still in preview.
-
 #### Trending - Parameter relationships: The same parameter could be added multiple times to the graph when you clicked it repeatedly [ID_35561]
 
 <!-- MR 10.3.0 - FR 10.3.3 -->
 
 When you open a trend graph, a light bulb icon will appear in the top-right corner when DataMiner finds parameters that are related to the parameters shown in the graph. When you click that icon, you get a list of the ten most important parameters, which you can then add to the graph. However, in some cases, when you clicked one of those suggested parameter multiple times, it would incorrectly be added multiple times to the graph.
-
-> [!NOTE]
-> Currently, the parameter relationship feature is still in preview.

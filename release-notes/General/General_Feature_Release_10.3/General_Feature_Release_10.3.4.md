@@ -63,9 +63,6 @@ From now on, stopped elements will no longer be taken into account when distribu
 
 Because of a number of enhancements, overall performance has increased when fetching relation information for the automatic incident tracking feature.
 
-> [!NOTE]
-> Currently, the parameter relationship feature is still in preview.
-
 #### SLAnalytics - Automatic incident tracking: Focus value updates will no longer be taken into account when determining whether the maximum group event rate was exceeded [ID_35545]
 
 <!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->

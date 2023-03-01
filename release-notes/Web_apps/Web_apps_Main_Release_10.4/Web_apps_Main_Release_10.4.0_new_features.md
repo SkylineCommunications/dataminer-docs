@@ -73,9 +73,7 @@ In the Generic Query Interface, the *Get parameter relations* data source is now
 It can be used to retrieve the parameter relationships that are stored in a model managed by a DataMiner Extension Module named *ModelHost*.
 
 > [!NOTE]
->
-> - This data source will only be available when *ModelHost* is running.
-> - Currently, the ModelHost DxM is not yet available.
+> This data source will only be available when *ModelHost* is running.
 
 #### Dashboards app & Low-code apps: 'Lazy load components' setting [ID_35469] [ID_35486]
 

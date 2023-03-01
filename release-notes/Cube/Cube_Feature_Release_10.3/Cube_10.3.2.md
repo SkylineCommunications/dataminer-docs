@@ -221,9 +221,6 @@ When a DataMiner cluster had an IDP license but no Resource Manager license, an 
 
 When you removed a suggested parameter of type string from a trend graph, the light bulb icon would incorrectly not re-appear in the top-right corner of the graph.
 
-> [!NOTE]
-> Currently, the parameter relationship feature is still in preview.
-
 #### DataMiner Cube - Trending: Trend graph would start to flicker when its data was updated [ID_35181]
 
 <!-- Main Release Version 10.1.0 [CU22]/10.2.0 [CU11] - Feature Release Version 10.3.2 -->
