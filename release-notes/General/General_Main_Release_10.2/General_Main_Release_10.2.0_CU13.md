@@ -284,6 +284,12 @@ When you applied a filter to an alarm tab, no alarms would be shown when you had
 
 When you exported the data shown in a line & area chart component to a CSV file, the file could incorrectly contain duplicate data.
 
+#### Dashboards app - Line & area chart: Problem when selecting a new time range [ID_35691]
+
+<!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
+
+When a line & area chart was filtered by means of a time range feed, in some cases, the dashboard would incorrectly keep on loading when a new time range was selected.
+
 #### Dashboards app & Low-code apps: Last nodes of a migrated query would incorrectly be cut off [ID_35693]
 
 <!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->

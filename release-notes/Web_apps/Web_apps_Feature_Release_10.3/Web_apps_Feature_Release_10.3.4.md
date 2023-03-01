@@ -165,6 +165,12 @@ When you exported the data shown in a line & area chart component to a CSV file,
 
 In some cases, a feed used in a query would incorrectly not get updated when the data inside the feed was updated.
 
+#### Dashboards app - Line & area chart: Problem when selecting a new time range [ID_35691]
+
+<!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
+
+When a line & area chart was filtered by means of a time range feed, in some cases, the dashboard would incorrectly keep on loading when a new time range was selected.
+
 #### Dashboards app & Low-code apps: Not possible to filter a GQI table by a boolean column [ID_35692]
 
 <!-- MR 10.3.0 [CU1] - FR 10.3.4 -->
