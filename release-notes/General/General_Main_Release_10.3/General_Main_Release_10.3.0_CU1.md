@@ -185,6 +185,12 @@ Also, when the SLAnalytics processes of different agents in the same cluster wer
 
 From now on, the focus data cache will no longer be cleared when SLAnalytics process starts up. Instead, only the focus data associated with the alarms that are no longer active will be removed from the cache.
 
+#### GQI: Display value of an empty cell of type 'double' would incorrectly be set to a "0" string [ID_35718]
+
+<!-- MR 10.3.0 [CU1] - FR 10.3.4 -->
+
+The display value of an empty cell of type *double* would incorrectly be set to a "0" string. From now on, it will be set to an empty string instead.
+
 #### Problem with SLPort when an element with a serial connection was restarted [ID_35773]
 
 <!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
