@@ -18,6 +18,7 @@ uid: General_Feature_Release_10.3.3
 #### OpenSearch & Amazon OpenSearch Service [ID_34651]
 
 <!-- MR 10.3.0 - FR 10.3.3 -->
+<!-- See Cube RNs for System Center change -->
 
 It is now possible to install a dedicated OpenSearch indexing database cluster as an alternative for Elasticsearch. This indexing cluster also requires a Cassandra cluster.
 

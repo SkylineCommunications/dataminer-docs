@@ -10,7 +10,7 @@ uid: Web_apps_Feature_Release_10.3.3
 > [!TIP]
 > For release notes for this release that are not related to the web applications, see [General Feature Release 10.3.3](xref:General_Feature_Release_10.3.3).
 
-## Features
+## Highlights
 
 #### Dashboards app - GQI: New data sources [ID_34747] [ID_35027] [ID_34965] [ID_35058]
 
@@ -40,6 +40,8 @@ When configuring a Join operator, you can now select the *Row by row* option.
 >
 > - The *Row by row* option will only be visible and configurable when you opened the dashboard or app with `showAdvancedSettings=true` added to the URL.
 > - Currently, the *Row by row" option is only supported for inner and left joins. If you use it for an outer or right join, an exception will be thrown.
+
+## Other features
 
 #### Monitoring app: Element name added to breadcrumbs of trend card [ID_35270]
 
