@@ -107,6 +107,18 @@ When an EPM element was stopped, in some rare cases, an error could occur in SLE
 
 When a query using the *Get parameter table by ID* data source had the *Update data* option enabled, the component would incorrectly no longer automatically refresh the data when changes were detected.
 
+#### Web apps - Interactive Automation scripts: Components in a row following a component with a row span greater than 1 would not be positioned correctly [ID_35504]
+
+<!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
+
+In an interactive Automation script executed in a web app, components positioned in a row following a row that contained a component with a row span greater than 1 would not be positioned correctly.
+
+> [!NOTE]
+> If, in an interactive Automation script executed in a web app, a component is positioned on a cell that is overlapped by a component with a row span greater than 1, it will not be displayed.
+
+> [!IMPORTANT]
+> **BREAKING CHANGE**: If, in an interactive Automation script designed to be executed in a web app, the column property was altered to position a component at a specific spot, because of this fix, the component in question will no longer be displayed. It will be hidden by the component of which the row span is greater than 1. The component can be made visible again by changing the column property.
+
 #### SLAnalytics : Problem after a DVE parent element had been deleted [ID_35521]
 
 <!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.3 -->
@@ -283,3 +295,9 @@ When a GQI was migrated, in some cases, the last nodes of the migrated query wou
 <!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
 
 When you hovered over a segment of an edge, in some cases, an incorrect tooltip would appear.
+
+#### SLAnalytics - Automatic incident tracking: Problem when starting up [ID_35731]
+
+<!-- MR 10.2.0 [CU13] - FR 10.3.4 -->
+
+When a large number of groups needed to be created while automatic incident tracking was starting up, the `A timeout of 00:01:00.0 occurred while processing message of type AlarmFloodMessage` error could be thrown, causing automatic incident tracking to not start up correctly.

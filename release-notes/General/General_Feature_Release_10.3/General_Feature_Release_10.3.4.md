@@ -179,3 +179,9 @@ Up to now, when the SLAnalytics process started, the entire focus data cache of 
 Also, when the SLAnalytics processes of different agents in the same cluster were restarted right before a full hour, it was possible to trigger the internal duplication of active alarms hosted on non-leader agents. This could, in turn, lead to an incorrect internal alarm state and incorrect incidents containing copies of the same alarm.
 
 From now on, the focus data cache will no longer be cleared when SLAnalytics process starts up. Instead, only the focus data associated with the alarms that are no longer active will be removed from the cache.
+
+#### SLAnalytics - Automatic incident tracking: Problem when starting up [ID_35731]
+
+<!-- MR 10.2.0 [CU13] - FR 10.3.4 -->
+
+When a large number of groups needed to be created while automatic incident tracking was starting up, the `A timeout of 00:01:00.0 occurred while processing message of type AlarmFloodMessage` error could be thrown, causing automatic incident tracking to not start up correctly.
