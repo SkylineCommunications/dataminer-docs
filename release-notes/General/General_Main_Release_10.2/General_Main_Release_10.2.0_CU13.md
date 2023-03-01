@@ -334,11 +334,11 @@ Node edge actions would incorrectly no longer work.
 
 When a large number of groups needed to be created while automatic incident tracking was starting up, the `A timeout of 00:01:00.0 occurred while processing message of type AlarmFloodMessage` error could be thrown, causing automatic incident tracking to not start up correctly.
 
-#### Web apps - Query builder: Drop-down boxes that only contained one item would incorrectly not be displayed [ID_35735]
+#### Web apps - Query builder: Query nodes that by default only had a single value would incorrectly not be displayed [ID_35735]
 
 <!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
 
-In the query builder, drop-down boxes that only contained one item would incorrectly not be displayed.
+In the query builder, query nodes that by default only had a single value would incorrectly not be displayed.
 
 #### DataMiner Cube - Asset Manager app: Enum fields would not immediately be updated after clicking 'Apply' [ID_35747]
 
