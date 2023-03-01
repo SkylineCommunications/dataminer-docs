@@ -345,3 +345,9 @@ When, in the *Asset Manager* app, you tried to update an enum field, the value w
 <!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
 
 GQI queries containing float or GUID values would not get migrated correctly.
+
+#### Problem with SLPort when an element with a serial connection was restarted [ID_35773]
+
+<!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
+
+In some cases, an error could occur in SLPort when an element with a serial connection was restarted.

@@ -182,3 +182,9 @@ From now on, the focus data cache will no longer be cleared when SLAnalytics pro
 <!-- MR 10.2.0 [CU13] - FR 10.3.4 -->
 
 When a large number of groups needed to be created while automatic incident tracking was starting up, the `A timeout of 00:01:00.0 occurred while processing message of type AlarmFloodMessage` error could be thrown, causing automatic incident tracking to not start up correctly.
+
+#### Problem with SLPort when an element with a serial connection was restarted [ID_35773]
+
+<!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
+
+In some cases, an error could occur in SLPort when an element with a serial connection was restarted.
