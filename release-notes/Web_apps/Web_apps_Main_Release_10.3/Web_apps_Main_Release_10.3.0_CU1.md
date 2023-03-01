@@ -173,3 +173,15 @@ When you hovered over a segment of an edge, in some cases, an incorrect tooltip 
 When configuring an ad hoc data source in a GQI query, you can link the arguments of that ad hoc data source to a feed. However, in some cases, it would incorrectly not be possible to link an argument of type string to a query column of type GUID.
 
 Also, in the query builder, the `Link [argument name] to feed for [argument name]` command has been renamed to `Use feed for [argument name]`.
+
+#### Web apps: Node edge actions would incorrectly no longer work [ID_35723]
+
+<!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
+
+Node edge actions would incorrectly no longer work.
+
+#### GQI: Queries containing float or GUID values would not get migrated correctly [ID_35759]
+
+<!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
+
+GQI queries containing float or GUID values would not get migrated correctly.
