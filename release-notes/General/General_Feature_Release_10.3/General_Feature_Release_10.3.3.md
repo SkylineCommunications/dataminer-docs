@@ -329,12 +329,6 @@ If a DOM module is created without specifying *SecuritySettings*, the view permi
 
 Up to now, the check to determine whether a user had the view permission set to "None", would only return true for the Administrator or users in the Administrator group. From now on, when the required view permission is "None", permission checks will no longer be performed.
 
-#### NATSMaxPayloadException could be thrown when a client requested large amounts of data [ID_35306]
-
-<!-- MR 10.3.0 - FR 10.3.3 -->
-
-When a client requested large amounts of data, in some cases, a `NATSMaxPayloadException` could be thrown.
-
 #### External authentication via SAML: Issues fixed when using Okta as identity provider [ID_35374]
 
 <!-- MR 10.4.0 - FR 10.3.3 -->
