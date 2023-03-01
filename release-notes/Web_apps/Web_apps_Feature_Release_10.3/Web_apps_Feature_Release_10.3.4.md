@@ -203,6 +203,12 @@ When configuring an ad hoc data source in a GQI query, you can link the argument
 
 Also, in the query builder, the `Link [argument name] to feed for [argument name]` command has been renamed to `Use feed for [argument name]`.
 
+#### Dashboards app: 'Clear all' button would incorrectly also be displayed when the dashboard did not contain any feeds [ID_35709]
+
+<!-- MR 10.3.0 [CU1] - FR 10.3.4 -->
+
+When you selected a dashboard, the *Clear all* button would incorrectly also be displayed when the dashboard did not contain any feeds.
+
 #### Dashboards app: 'Data used in dashboard' section would incorrectly not list DOM instances [ID_35717]
 
 <!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
