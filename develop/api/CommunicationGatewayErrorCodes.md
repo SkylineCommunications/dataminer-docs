@@ -22,7 +22,7 @@ These are the error codes that can be returned when the CommunicationGateway is 
 |PermissionDenied|Permission denied|7|The caller does not have permission to execute the specified operation.|
 |ResourceExhausted|Resources exhausted|8|Some resource has been exhausted. This could be a per-user quota, or the entire file system could be out of space.|
 |FailedPrecondition|Failed precondition|9|The operation was rejected because the system is not in a state required for the operation's execution. E.g. the directory to be deleted is non-empty, an rmdir operation is applied to a non-directory, etc.|
-|Aborted|Aborted|10|The operation was aborted, typically due to a concurrency issue such as a sequencer check failure or transaction abort.|
+|Aborted|Aborted|10|The operation was aborted, typically because of a concurrency issue such as a sequencer check failure or transaction abort.|
 |OutOfRange|Out of range|11|The operation was attempted past the valid range. E.g. seeking or reading past end-of-file.|
 |Unimplemented|Unimplemented|12|The operation is not implemented or is not supported/enabled in this service.|
 |Internal|Internal|13|Reserved for serious errors. This means that some invariants expected by the underlying system have been broken.|
