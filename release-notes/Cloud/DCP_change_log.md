@@ -14,7 +14,7 @@ The following features become availabe as from today:
 - Creating teams
 - Creating channels
 - Adding members or owners to your teams
-- Sending notifications in the created Channels in the name of the DataMiner Teams bot 
+- Sending notifications in the created channels in the name of the DataMiner Teams bot 
 - Creating a private chat between someone and the DataMiner Teams bot
 - Fetching a private chat between someone and the DataMiner Teams bot
 - Sending notifications in those private chats in the name of the DataMiner Teams bot 
