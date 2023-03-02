@@ -8,19 +8,19 @@ The dataminer.services platform gets updated continuously. This change log can h
 
 #### 2 March 2023 - Integrate your DataMiner System with Microsoft Teams using DataMiner Automation [ID_35799]
 
-From now on you can easily integrate your DataMiner System with Microsoft Teams using DataMiner Automation.
+You can now easily integrate your DataMiner System with Microsoft Teams using DataMiner Automation.
 
-The following features become availabe as from today:
+The following features are available:
 
 - Creating teams
 - Creating channels
 - Adding members or owners to your teams
-- Sending notifications in the created channels in the name of the DataMiner Teams bot 
+- Sending notifications in the created channels in the name of the DataMiner Teams bot
 - Creating a private chat between someone and the DataMiner Teams bot
 - Fetching a private chat between someone and the DataMiner Teams bot
-- Sending notifications in those private chats in the name of the DataMiner Teams bot 
+- Sending notifications in those private chats in the name of the DataMiner Teams bot
 
-In an Automation script, you can use [the DcpChatIntegrationHelper NuGet](https://www.nuget.org/packages/Skyline.DataMiner.DcpChatIntegrationHelper) to easily interact with Microsoft Teams. 
+In an Automation script, you can use [the DcpChatIntegrationHelper NuGet](https://www.nuget.org/packages/Skyline.DataMiner.DcpChatIntegrationHelper) to easily interact with Microsoft Teams.
 
 To get started, you can find several example Automation scripts with more information on [GitHub](https://github.com/SkylineCommunications/ChatOps-Extensions/blob/main/ChatIntegrationExamples).
 After you have made sure the [prerequisites](https://github.com/SkylineCommunications/ChatOps-Extensions/blob/main/ChatIntegrationExamples/README.md#usage) are in place, you can download and deploy [the DcpChatIntegrationExamples DMAPP](https://github.com/SkylineCommunications/ChatOps-Extensions/blob/main/ChatIntegrationExamples/README.md#getting-started) to your DataMiner System and immediately try out these examples.
