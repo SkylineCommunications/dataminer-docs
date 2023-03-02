@@ -6,6 +6,25 @@ uid: DCP_change_log
 
 The dataminer.services platform gets updated continuously. This change log can help you trace when specific features and changes have become available.
 
+#### 2 March 2023 - Integrate your DataMiner System with Microsoft Teams using DataMiner Automation [ID_35799]
+
+From now on you can easily integrate your DataMiner System with Microsoft Teams using DataMiner Automation.
+
+The following features become availabe as from today:
+- Creating Teams
+- Creating Channels
+- Add members or owners to your Teams
+- Sending notifications in the created Channels in the name of DataMiner 
+- Creating a private chat between someone and the DataMiner Teams bot
+- Fetching a private chat between someone and the DataMiner Teams bot
+- Sending notifications in those private chats in the name of DataMiner 
+
+In an Automation script you can use [the DcpChatIntegrationHelper NuGet](https://www.nuget.org/packages/Skyline.DataMiner.DcpChatIntegrationHelper) to easily interact with Microsoft Teams. 
+Some example Automation scripts were created and explained on [GitHub](https://github.com/SkylineCommunications/ChatOps-Extensions/blob/main/ChatIntegrationExamples) to get you up to speed. 
+After applying the [prerequisites](https://github.com/SkylineCommunications/ChatOps-Extensions/blob/main/ChatIntegrationExamples/README.md#usage) you can download and deploy [the DcpChatIntegrationExamples DMAPP](https://github.com/SkylineCommunications/ChatOps-Extensions/blob/main/ChatIntegrationExamples/README.md#getting-started) to your DataMiner System and immediatly try them out.
+
+As seen in [the prerequisites](https://github.com/SkylineCommunications/ChatOps-Extensions/blob/main/ChatIntegrationExamples/README.md#usage), you must grant Skyline admin consent to your Microsoft tenant with certain permissions to enable these features, see [granting admin consent](https://docs.dataminer.services/user-guide/Cloud_Platform/CloudAdminApp/Granting_admin_consent.html). These can be revoked at any time.
+
 #### 16 February 2023 - Fix - CloudGateway 2.10.3 - Share not created in case of mismatch in local culture on hosting server [ID_35654]
 
 Prior to CloudGateway version 2.10.3, a share could not be created if there was a mismatch in the local culture on the hosting server.
