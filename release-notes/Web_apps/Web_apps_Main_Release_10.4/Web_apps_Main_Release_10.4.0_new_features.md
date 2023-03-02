@@ -93,3 +93,18 @@ When this settings is enabled, the components on the dashboard or the page/panel
 <!-- MR 10.4.0 - FR 10.3.4 -->
 
 When viewing a trend graph in the Monitoring app, you can now easily switch between trend graph and histogram by clicking either the trend graph or histogram icon in the top-right corner.
+
+#### Monitoring app & Dashboards app - Line & area chart: Time range buttons [ID_35595]
+
+<!-- MR 10.4.0 - FR 10.3.4 -->
+
+A line & area chart component now has a number of time range buttons that allow you to quickly select one of the following preset time ranges:
+
+- 1d (last 24 hours)
+- 1w (last 7 days)
+- 1m (last 30 days)
+- 1y (last year)
+- 5y (last 5 years)
+
+> [!NOTE]
+> In the *Dashboards* app, these time range buttons are disabled by default. When configuring the component, uou can enable them by selecting the *Show time range buttons* option in the *Component > Layout > Styling and Information* tab.
