@@ -75,11 +75,14 @@ From now on, focus value updates will no longer be taken into account when deter
 
 When you start a DataMiner upgrade, the `ValidateConnectors` prerequisite will now scan the system for any connectors that are known to be incompatible with the DataMiner version to which the DataMiner Agent is being upgraded. If such connectors are found, they will have to be removed before you can continue with the upgrade.
 
-#### BREAKING CHANGE - GQI: Raw datetime values will now be converted to UTC [ID_35640]
+#### GQI: Raw datetime values will now be converted to UTC [ID_35640]
 
 <!-- MR 10.4.0 - FR 10.3.4 -->
 
 Up to now, after each step in a GQI query, raw datetime values were always converted to the time zone that was specified in the query options. From now on, raw datetime values will be converted to UTC instead. The time zone specified in the query options will now only be used when converting a raw datetime value to a display value.
+
+> [!IMPORTANT]
+> **BREAKING CHANGE**: When, in an ad hoc data source or a query operation, a datetime value is not in UTC format, an exception will now be thrown.
 
 #### SLLogCollector now also collects output of 'netstat -ano' command [ID_35674]
 
@@ -90,6 +93,18 @@ SLLogCollector packages will now also include the following additional file:
 | File | Contents |
 |------|----------|
 | Logs\Network Information\Netstat.exe -ano.txt | The output of an `netstat -ano` command. |
+
+#### SLAnalytics - Proactive cap detection: Enhanced accuracy [ID_35695]
+
+<!-- MR 10.4.0 - FR 10.3.4 -->
+
+Proactive cap detection predicts future issues based on trend data in the Cassandra database. Because of a number of enhancements, overall prediction accuracy has increased.
+
+#### Service & Resource Management: Bookings of type 'Custom Process Automation' no longer consume license credits [ID_35742]
+
+<!-- MR 10.4.0 - FR 10.3.4 -->
+
+From now on, ReservationInstances of type *Custom Process Automation* will no longer consume SRM credits. This means that, from now on, you can schedule an unlimited number of concurrent bookings of type *Custom Process Automation*.
 
 ### Fixes
 
