@@ -982,6 +982,10 @@
       topicUid: DataMinerErrorCodes
     - name: Error codes table
       topicUid: ErrorCodeTable
+    - name: Extension modules error codes
+      items:
+      - name: CommunicationGateway error codes
+        topicUid: CommunicationGateway_ErrorCodes
 - name: Schema reference
   topicUid: SchemaReference
   items:
