@@ -69,6 +69,16 @@ Up to now, these values were always displayed in UTC.
 > [!TIP]
 > See also: [Setting the default time zone for DataMiner web apps](xref:ClientSettings_json#setting-the-default-time-zone-for-dataminer-web-apps)
 
+#### Dashboards app - GQI: Confidence column of 'Get parameter relations' data source now shows percentages [ID_35589]
+
+<!-- MR 10.4.0 - FR 10.3.4 -->
+<!-- Not added to MR 10.4.0 -->
+
+When you retrieve the parameter relationships by means of the *Get parameter relations* data source, the values in the *Confidence* column will now be displayed as percentages.
+
+> [!NOTE]
+> This data source is only available when the *ModelHost* DxM is running.
+
 #### Web Services API v1: Updated descriptions of GetAlarmHistory and GetAlarmDetails methods [ID_35651]
 
 <!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
