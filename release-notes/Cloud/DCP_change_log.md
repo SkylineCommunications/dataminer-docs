@@ -6,7 +6,7 @@ uid: DCP_change_log
 
 The dataminer.services platform gets updated continuously. This change log can help you trace when specific features and changes have become available.
 
-#### 16 February 2013 - Fix - CloudGateway 2.10.3 - Share not created in case of mismatch in local culture on hosting server [ID_35654]
+#### 16 February 2023 - Fix - CloudGateway 2.10.3 - Share not created in case of mismatch in local culture on hosting server [ID_35654]
 
 Prior to CloudGateway version 2.10.3, a share could not be created if there was a mismatch in the local culture on the hosting server.
 
