@@ -13,7 +13,7 @@ From now on you can easily integrate your DataMiner System with Microsoft Teams 
 The following features become availabe as from today:
 - Creating teams
 - Creating channels
-- Add members or owners to your Teams
+- Adding members or owners to your teams
 - Sending notifications in the created Channels in the name of the DataMiner Teams bot 
 - Creating a private chat between someone and the DataMiner Teams bot
 - Fetching a private chat between someone and the DataMiner Teams bot
