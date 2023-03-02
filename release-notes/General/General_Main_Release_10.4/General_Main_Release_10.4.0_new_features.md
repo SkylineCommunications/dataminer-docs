@@ -341,6 +341,12 @@ Two new field descriptors have been added to the DataMiner Object Models:
 
 - UserFieldDescriptor: Can be used to define that a field should contain the name of a DataMiner user. There is a *GroupNames* property that can be used to define which groups the user can be a part of.
 
+#### DataMiner upgrade: Additional prerequisite will now check for incompatible connectors [ID_35605]
+
+<!-- MR 10.4.0 - FR 10.3.4 -->
+
+When you start a DataMiner upgrade, the `ValidateConnectors` prerequisite will now scan the system for any connectors that are known to be incompatible with the DataMiner version to which the DataMiner Agent is being upgraded. If such connectors are found, they will have to be removed before you can continue with the upgrade.
+
 ### Correlation
 
 #### Correlation alarms will now by default contain the value of the alarm property by which they are grouped [ID_35583]

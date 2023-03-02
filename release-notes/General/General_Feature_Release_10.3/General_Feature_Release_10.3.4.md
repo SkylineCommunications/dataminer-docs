@@ -69,6 +69,18 @@ Because of a number of enhancements, overall performance has increased when fetc
 
 From now on, focus value updates will no longer be taken into account when determining whether the *Maximum group event rate* was exceeded.
 
+#### DataMiner upgrade: Additional prerequisite will now check for incompatible connectors [ID_35605]
+
+<!-- MR 10.4.0 - FR 10.3.4 -->
+
+When you start a DataMiner upgrade, the `ValidateConnectors` prerequisite will now scan the system for any connectors that are known to be incompatible with the DataMiner version to which the DataMiner Agent is being upgraded. If such connectors are found, they will have to be removed before you can continue with the upgrade.
+
+#### BREAKING CHANGE - GQI: Raw datetime values will now be converted to UTC [ID_35640]
+
+<!-- MR 10.4.0 - FR 10.3.4 -->
+
+Up to now, after each step in a GQI query, raw datetime values were always converted to the time zone that was specified in the query options. From now on, raw datetime values will be converted to UTC instead. The time zone specified in the query options will now only be used when converting a raw datetime value to a display value.
+
 #### SLLogCollector now also collects output of 'netstat -ano' command [ID_35674]
 
 <!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
@@ -182,6 +194,12 @@ Up to now, when the SLAnalytics process started, the entire focus data cache of 
 Also, when the SLAnalytics processes of different agents in the same cluster were restarted right before a full hour, it was possible to trigger the internal duplication of active alarms hosted on non-leader agents. This could, in turn, lead to an incorrect internal alarm state and incorrect incidents containing copies of the same alarm.
 
 From now on, the focus data cache will no longer be cleared when SLAnalytics process starts up. Instead, only the focus data associated with the alarms that are no longer active will be removed from the cache.
+
+#### Cassandra Cluster Migrator tool would incorrectly not migrate the state-changes table from a single-node Cassandra to a Cassandra Cluster [ID_35699]
+
+<!-- MR 10.4.0 - FR 10.3.4 -->
+
+When you used the Cassandra Cluster Migrator tool to migrate a single-node Cassandra database to a Cassandra Cluster setup, up to now, the `state-changes` table would incorrectly not be migrated.
 
 #### GQI: Display value of an empty cell of type 'double' would incorrectly be set to a "0" string [ID_35718]
 
