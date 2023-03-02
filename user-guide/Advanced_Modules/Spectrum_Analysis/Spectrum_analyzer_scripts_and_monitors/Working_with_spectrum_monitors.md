@@ -143,7 +143,7 @@ Below are the basic steps you can follow to configure a spectrum monitor. Depend
 1. In the *Alarm Recordings* section, customize the number of *Earlier traces* and *Future traces* to be stored when an alarm recording is created. When an alarm occurs, these may help operators to analyze the nature of the problem.
 
    > [!NOTE]
-   > To view an alarm recording for a spectrum monitor alarm, right-click the alarm in the Alarm Console and select *Open* and then *Spectrum recording*. However, note that trace recordings are not available for cleared alarms.
+   > To view an alarm recording for a spectrum monitor alarm, right-click the alarm in the Alarm Console and select *Open* > *Spectrum recording*. However, note that trace recordings are not available for cleared alarms.
 
 > [!NOTE]
 > To deactivate the monitor, at the top of the pane, clear the selection from *Enable this monitor*.
