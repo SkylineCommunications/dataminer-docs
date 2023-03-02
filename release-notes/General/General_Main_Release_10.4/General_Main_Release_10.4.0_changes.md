@@ -167,3 +167,18 @@ Up to now, in case of a claim mismatch, an exception would be thrown. From now o
 <!-- MR 10.4.0 - FR 10.3.4 -->
 
 When you used the Cassandra Cluster Migrator tool to migrate a single-node Cassandra database to a Cassandra Cluster setup, up to now, the `state-changes` table would incorrectly not be migrated.
+
+#### Automation: DataMiner would incorrectly remove the xmlns attribute when importing or saving an Automation script [ID_35708]
+
+<!-- MR 10.4.0 - FR 10.3.4 -->
+
+When DataMiner imported or saved an Automation script, it would incorrectly remove the `xmlns` attribute specified in the `<DMSScript>` element, even when that attribute had been added by DataMiner Integration Studio. From now on, when DataMiner imports or saves an Automation script, it will no longer remove this attribute. Moreover, if no such attribute is specified, it will automatically add `xmlns="http://www.skyline.be/automation"`.
+
+Example:
+
+```xml
+<DMSScript options="272" xmlns="http://www.skyline.be/automation">
+   <Name>...</Name>
+   ...
+</DMSScript>
+```
