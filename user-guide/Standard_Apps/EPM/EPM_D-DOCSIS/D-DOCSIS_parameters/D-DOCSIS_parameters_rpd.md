@@ -305,7 +305,7 @@ This page contains an overview of the RPD parameters available in the D-DOCSIS b
 
   This value is obtained by counting unique Core MAC associations from the RPD CCAP Cores table (MIB OID: 1.3.6.1.4.1.4491.2.1.30.1.1.4.1.12) and the RPD RPM Cores table (Vecima RPM Apigee: rpd/mac-address;rpd/ccap-cores/ccap-core/state).
   
-- **US ICFR AVG**: Calculated. Total number of ICFR from US channels associated to the CMs connected to the node, divided by the total number of channels.
+- **US ICFR AVG**: Calculated. Total number of ICFR from US channels associated with the CMs connected to the node, divided by the total number of channels.
 
   Acquired from the "cmIcfr" metric name in the "UpstreamScQamChannelInfo" metric group from the Kafka topic.
 
@@ -317,7 +317,7 @@ This page contains an overview of the RPD parameters available in the D-DOCSIS b
 
   Acquired from the "cmIcfr" metric name in the "UpstreamScQamChannelInfo" metric group from the Kafka topic.
 
-- **US Ripples OOS AVG**: Calculated. Total number of ripples from US channels associated to the CMs connected to the node, divided by the total number of channels.
+- **US Ripples OOS AVG**: Calculated. Total number of ripples from US channels associated with the CMs connected to the node, divided by the total number of channels.
 
   Acquired from the "ripples" metric name in the "UpstreamScQamChannelInfo" metric group from the Kafka topic.
 
@@ -329,7 +329,7 @@ This page contains an overview of the RPD parameters available in the D-DOCSIS b
 
   Acquired from the "ripples" metric name in the "UpstreamScQamChannelInfo" metric group from the Kafka topic.
 
-- **US TX Power AVG**: Calculated. Total TX power from US channels associated to the CMs connected to the node, divided by the total number of channels.
+- **US TX Power AVG**: Calculated. Total TX power from US channels associated with the CMs connected to the node, divided by the total number of channels.
 
   Acquired from the "txPower" metric name in the "UpstreamScQamChannelInfo" metric group from the Kafka topic.
 
@@ -341,7 +341,7 @@ This page contains an overview of the RPD parameters available in the D-DOCSIS b
 
   Acquired from the "txPower" metric name in the "UpstreamScQamChannelInfo" metric group from the Kafka topic.
 
-- **US T3 24 Hour AVG**: Calculated. Total number of T3 timeouts in the last 24 hours from US channels associated to the CMs connected to the node, divided by the total number of channels.
+- **US T3 24 Hour AVG**: Calculated. Total number of T3 timeouts in the last 24 hours from US channels associated with the CMs connected to the node, divided by the total number of channels.
 
   Acquired from the "t3" metric name in the "UpstreamScQamChannelInfo" metric group from the Kafka topic.
 
@@ -353,7 +353,7 @@ This page contains an overview of the RPD parameters available in the D-DOCSIS b
 
   Acquired from the "t3" metric name in the "UpstreamScQamChannelInfo" metric group from the Kafka topic.
 
-- **US T4 24 Hour AVG**: Calculated. Total number of T4 timeouts in the last 24 hours from US channels associated to the CMs connected to the node, divided by the total number of channels.
+- **US T4 24 Hour AVG**: Calculated. Total number of T4 timeouts in the last 24 hours from US channels associated with the CMs connected to the node, divided by the total number of channels.
 
   Acquired from the "t4" metric name in the "UpstreamScQamChannelInfo" metric group from the Kafka topic.
 
@@ -365,31 +365,31 @@ This page contains an overview of the RPD parameters available in the D-DOCSIS b
 
   Acquired from the "t4" metric name in the "UpstreamScQamChannelInfo" metric group from the Kafka topic.
 
-- **DS RX AVG**: Calculated. Total RX power from DS channels associated to the CMs connected to the node, divided by the total number of channels.
+- **DS RX AVG**: Calculated. Total RX power from DS channels associated with the CMs connected to the node, divided by the total number of channels.
 
   Acquired from the "rxPower" metric name in the "downstreamScQamChannels" metric group from the Kafka topic.
 
-- **DS RX Minimum**: Calculated. Minimum RX power from DS channels associated to the CMs connected to the node.
+- **DS RX Minimum**: Calculated. Minimum RX power from DS channels associated with the CMs connected to the node.
 
   Acquired from the "rxPower" metric name in the "downstreamScQamChannels" metric group from the Kafka topic.
 
-- **DS RX Maximum**: Calculated. Maximum RX power from DS channels associated to the CMs connected to the node.
+- **DS RX Maximum**: Calculated. Maximum RX power from DS channels associated with the CMs connected to the node.
 
   Acquired from the "rxPower" metric name in the "downstreamScQamChannels" metric group from the Kafka topic.
 
-- **DS SNR AVG**: Calculated. Total SNR power from DS channels associated to the CMs connected to the node, divided by the total number of channels.
+- **DS SNR AVG**: Calculated. Total SNR power from DS channels associated with the CMs connected to the node, divided by the total number of channels.
 
   Acquired from the "snr" metric name in the "downstreamScQamChannels" metric group from the Kafka topic.
 
-- **DS SNR Minimum**: Calculated. Minimum SNR power from DS channels associated to the CMs connected to the node.
+- **DS SNR Minimum**: Calculated. Minimum SNR power from DS channels associated with the CMs connected to the node.
 
   Acquired from the "snr" metric name in the "downstreamScQamChannels" metric group from the Kafka topic.
 
-- **DS SNR Maximum Total**: Calculated. Maximum SNR power from DS channels associated to the CMs connected to the node.
+- **DS SNR Maximum Total**: Calculated. Maximum SNR power from DS channels associated with the CMs connected to the node.
 
   Acquired from the "snr" metric name in the "downstreamScQamChannels" metric group from the Kafka topic.
 
-- **DS Post-FEC 24 Hour AVG**: Calculated. Total uncorrectable packets in 24 hours from DS channels associated to the CMs connected to the node, divided by the total number of packets in 24 hours from the channels.
+- **DS Post-FEC 24 Hour AVG**: Calculated. Total uncorrectable packets in 24 hours from DS channels associated with the CMs connected to the node, divided by the total number of packets in 24 hours from the channels.
 
   Acquired from the "unerroreds", "correcteds", and "uncorrectables" metric names in the "downstreamScQamChannels" metric group from the Kafka topic.
 
@@ -401,7 +401,7 @@ This page contains an overview of the RPD parameters available in the D-DOCSIS b
 
   Acquired from the "unerroreds", "correcteds", and "uncorrectables" metric names in the "downstreamScQamChannels" metric group from the Kafka topic.
 
-- **OFDMA Post-FEC 24 Hour AVG**: Calculated. Total uncorrectable packets in 24 hours from OFDMA channels associated to the CMs connected to the node, divided by the total number of packets in 24 hours from the channels.
+- **OFDMA Post-FEC 24 Hour AVG**: Calculated. Total uncorrectable packets in 24 hours from OFDMA channels associated with the CMs connected to the node, divided by the total number of packets in 24 hours from the channels.
 
   Acquired from the "totalCodeWords" and "unreliable" metric names in the "UpstreamOfdmaChannelInfo" metric group from the Kafka topic.
 
@@ -413,7 +413,7 @@ This page contains an overview of the RPD parameters available in the D-DOCSIS b
 
   Acquired from the "totalCodeWords" and "unreliable" metric names in the "UpstreamOfdmaChannelInfo" metric group from the Kafka topic.
 
-- **OFDMA TX Level AVG**: Calculated. Total TX power from OFDMA channels associated to the CMs connected to the node, divided by the total number of channels.
+- **OFDMA TX Level AVG**: Calculated. Total TX power from OFDMA channels associated with the CMs connected to the node, divided by the total number of channels.
 
   Acquired from the "txPower" metric name in the "UpstreamOfdmaChannelInfo" metric group from the Kafka topic.
 
@@ -425,7 +425,7 @@ This page contains an overview of the RPD parameters available in the D-DOCSIS b
 
   Acquired from the "txPower" metric name in the "UpstreamOfdmaChannelInfo" metric group from the Kafka topic.
 
-- **OFDMA MER AVG**: Calculated. Total MER power from OFDMA channels associated to the CMs connected to the node, divided by the total number of channels.
+- **OFDMA MER AVG**: Calculated. Total MER power from OFDMA channels associated with the CMs connected to the node, divided by the total number of channels.
 
   Acquired from the "rxPower" metric name in the "UpstreamOfdmaChannelInfo" metric group from the Kafka topic.
 
@@ -437,7 +437,7 @@ This page contains an overview of the RPD parameters available in the D-DOCSIS b
 
   Acquired from the "rxPower" metric name in the "UpstreamOfdmaChannelInfo" metric group from the Kafka topic.
 
-- **OFDMA T3 24 Hour AVG**: Calculated. Total number of T3 timeouts in the last 24 hours from OFDMA channels associated to the CMs connected to the node, divided by the total number of channels.
+- **OFDMA T3 24 Hour AVG**: Calculated. Total number of T3 timeouts in the last 24 hours from OFDMA channels associated with the CMs connected to the node, divided by the total number of channels.
 
   Acquired from the "t3TimeoutsUpTm" metric name in the "UpstreamOfdmaChannelInfo" metric group from the Kafka topic.
 
@@ -449,7 +449,7 @@ This page contains an overview of the RPD parameters available in the D-DOCSIS b
 
   Acquired from the "t3TimeoutsUpTm" metric name in the "UpstreamOfdmaChannelInfo" metric group from the Kafka topic.
 
-- **OFDMA T4 24 Hour AVG**: Calculated. Total number of T4 timeouts in the last 24 hours from OFDMA channels associated to the CMs connected to the node, divided by the total number of channels.
+- **OFDMA T4 24 Hour AVG**: Calculated. Total number of T4 timeouts in the last 24 hours from OFDMA channels associated with the CMs connected to the node, divided by the total number of channels.
 
   Acquired from the "t4TimeoutsUpTm" metric name in the "UpstreamOfdmaChannelInfo" metric group from the Kafka topic.
 
@@ -461,7 +461,7 @@ This page contains an overview of the RPD parameters available in the D-DOCSIS b
 
   Acquired from the "t4TimeoutsUpTm" metric name in the "UpstreamOfdmaChannelInfo" metric group from the Kafka topic.
 
-- **OFDM Post-FEC 24 Hour AVG**: Calculated. Total uncorrectable packets in 24 hours from OFDM channels associated to the CMs connected to the node, divided by the total number of packets in 24 hours from the channels.
+- **OFDM Post-FEC 24 Hour AVG**: Calculated. Total uncorrectable packets in 24 hours from OFDM channels associated with the CMs connected to the node, divided by the total number of packets in 24 hours from the channels.
 
   Acquired from the "totalCodeWords" and "uncorrectables" metric names in the "downstreamOfdmChannels" metric group from the Kafka topic.
 
@@ -473,7 +473,7 @@ This page contains an overview of the RPD parameters available in the D-DOCSIS b
 
   Acquired from the "totalCodeWords" and "uncorrectables" metric names in the "downstreamOfdmChannels" metric group from the Kafka topic.
 
-- **OFDM RX Level AVG**: Calculated. Total RX power from OFDM channels associated to the CMs connected to the node, divided by the total number of channels.
+- **OFDM RX Level AVG**: Calculated. Total RX power from OFDM channels associated with the CMs connected to the node, divided by the total number of channels.
 
   Acquired from the "rxPowerLevelAvg" metric name in the "downstreamOfdmChannels" metric group from the Kafka topic.
 
@@ -485,7 +485,7 @@ This page contains an overview of the RPD parameters available in the D-DOCSIS b
 
   Acquired from the "rxPowerLevelAvg" metric name in the "downstreamOfdmChannels" metric group from the Kafka topic.
 
-- **OFDM MER AVG**: Calculated. Total MER power from OFDM channels associated to the CMs connected to the node, divided by the total number of channels.
+- **OFDM MER AVG**: Calculated. Total MER power from OFDM channels associated with the CMs connected to the node, divided by the total number of channels.
 
   Acquired from the "subcarrierMerAvg" metric name in the "downstreamOfdmChannels" metric group from the Kafka topic.
 
