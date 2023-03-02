@@ -403,4 +403,4 @@ In some cases, an error could occur in the SLAnalytics process after a DVE paren
 
 <!-- MR 10.3.0 [CU0] - FR 10.3.3 [CU0] -->
 
-When a row was added to a Cassandra Cluster table, no TTL value would incorrectly be inserted into the TTL column of that row.
+When a row was added to a Cassandra Cluster table, no TTL value would be inserted into the TTL column of that row.
