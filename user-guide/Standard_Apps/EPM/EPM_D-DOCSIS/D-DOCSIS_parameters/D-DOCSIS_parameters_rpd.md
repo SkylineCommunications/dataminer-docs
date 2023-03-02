@@ -345,7 +345,7 @@ This page contains an overview of the RPD parameters available in the D-DOCSIS b
 
   Acquired from the "t3" metric name in the "UpstreamScQamChannelInfo" metric group from the Kafka topic.
 
-- **US T3 24 Hour OOS Count**: Calculated. Total number of CMs where a US channel's T3 timeouts in the last 24 hours metric breach the OOS threshold.
+- **US T3 24 Hour OOS Count**: Calculated. Total number of CMs where a US channel's T3 timeouts in the last 24 hours metric breaches the OOS threshold.
 
   Acquired from the "t3" metric name in the "UpstreamScQamChannelInfo" metric group from the Kafka topic.
 
