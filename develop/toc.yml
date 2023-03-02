@@ -991,6 +991,7 @@
     - name: Error codes table
       topicUid: ErrorCodeTable
     - name: Extension modules error codes
+      topicUid: CommunicationGateway_ErrorCodes
       items:
       - name: CommunicationGateway error codes
         topicUid: CommunicationGateway_ErrorCodes
