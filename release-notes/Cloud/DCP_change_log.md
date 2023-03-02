@@ -6,6 +6,10 @@ uid: DCP_change_log
 
 The dataminer.services platform gets updated continuously. This change log can help you trace when specific features and changes have become available.
 
+#### 2 March 2023 - Creating and fetching private chats and sending messages in them via DataMiner Automation [ID_35790]
+
+It is now possible to create and fetch private chats between users and the DataMiner Teams bot in Microsoft Teams and to send messages in these chats directly from DataMiner Automation. For examples and detailed information, refer to [GitHub](https://github.com/SkylineCommunications/ChatOps-Extensions/tree/main/ChatIntegrationExamples#table-of-contents).
+
 #### 16 February 2023 - Fix - CloudGateway 2.10.3 - Share not created in case of mismatch in local culture on hosting server [ID_35654]
 
 Prior to CloudGateway version 2.10.3, a share could not be created if there was a mismatch in the local culture on the hosting server.
