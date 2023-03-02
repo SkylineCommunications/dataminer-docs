@@ -301,10 +301,6 @@ This page contains an overview of the RPD parameters available in the D-DOCSIS b
 
   This value is obtained by counting unique Core MAC associations from the RPD CCAP Cores table (MIB OID: 1.3.6.1.4.1.4491.2.1.30.1.1.4.1.12) and the RPD RPM Cores table (Vecima RPM Apigee: rpd/mac-address;rpd/ccap-cores/ccap-core/state).
 
-- **Number Cores**: Calculated. The number of cores, including remote, associated with the RPD.
-
-  This value is obtained by counting unique Core MAC associations from the RPD CCAP Cores table (MIB OID: 1.3.6.1.4.1.4491.2.1.30.1.1.4.1.12) and the RPD RPM Cores table (Vecima RPM Apigee: rpd/mac-address;rpd/ccap-cores/ccap-core/state).
-  
 - **US ICFR AVG**: Calculated. Total number of ICFR from US channels associated with the CMs connected to the node, divided by the total number of channels.
 
   Acquired from the "cmIcfr" metric name in the "UpstreamScQamChannelInfo" metric group from the Kafka topic.
