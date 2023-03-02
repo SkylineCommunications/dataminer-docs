@@ -227,6 +227,16 @@ Node edge actions would incorrectly no longer work.
 
 In the query builder, query nodes that by default only had a single value would incorrectly not be displayed.
 
+#### Dashboards app & Low-code apps - Query builder: Problem when trying to create a GQI query with an ad hoc data source that contained an optional DateTime argument [ID_35738]
+
+<!-- MR 10.3.0 [CU1] - FR 10.3.4 -->
+
+When you tried to create a GQI query with an ad hoc data source that contained an optional DateTime argument, in some cases, the following exception could be thrown:
+
+```txt
+Skyline.DataMiner.Web.Common.v1.Utilities.UTCToDateTimeUTC(long)' has some invalid arguments
+```
+
 #### GQI: Queries containing float or GUID values would not get migrated correctly [ID_35759]
 
 <!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
