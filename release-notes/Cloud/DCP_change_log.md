@@ -11,7 +11,7 @@ The dataminer.services platform gets updated continuously. This change log can h
 From now on you can easily integrate your DataMiner System with Microsoft Teams using DataMiner Automation.
 
 The following features become availabe as from today:
-- Creating Teams
+- Creating teams
 - Creating Channels
 - Add members or owners to your Teams
 - Sending notifications in the created Channels in the name of the DataMiner Teams bot 
