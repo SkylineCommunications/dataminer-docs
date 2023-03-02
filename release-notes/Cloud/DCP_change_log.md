@@ -11,6 +11,7 @@ The dataminer.services platform gets updated continuously. This change log can h
 From now on you can easily integrate your DataMiner System with Microsoft Teams using DataMiner Automation.
 
 The following features become availabe as from today:
+
 - Creating teams
 - Creating channels
 - Adding members or owners to your teams
@@ -20,10 +21,12 @@ The following features become availabe as from today:
 - Sending notifications in those private chats in the name of the DataMiner Teams bot 
 
 In an Automation script, you can use [the DcpChatIntegrationHelper NuGet](https://www.nuget.org/packages/Skyline.DataMiner.DcpChatIntegrationHelper) to easily interact with Microsoft Teams. 
+
 Some example Automation scripts were created and explained on [GitHub](https://github.com/SkylineCommunications/ChatOps-Extensions/blob/main/ChatIntegrationExamples) to get you up to speed. 
 After you have made sure the [prerequisites](https://github.com/SkylineCommunications/ChatOps-Extensions/blob/main/ChatIntegrationExamples/README.md#usage) are in place, you can download and deploy [the DcpChatIntegrationExamples DMAPP](https://github.com/SkylineCommunications/ChatOps-Extensions/blob/main/ChatIntegrationExamples/README.md#getting-started) to your DataMiner System and immediately try out these examples.
 
-As seen in [the prerequisites](https://github.com/SkylineCommunications/ChatOps-Extensions/blob/main/ChatIntegrationExamples/README.md#usage), you must grant Skyline admin consent to your Microsoft tenant with certain permissions to enable these features, see [granting admin consent](https://docs.dataminer.services/user-guide/Cloud_Platform/CloudAdminApp/Granting_admin_consent.html). These can be revoked at any time.
+> [!NOTE]
+> You must grant Skyline admin consent to your Microsoft tenant with certain permissions to enable these features. See [granting admin consent](xref:Granting_admin_consent). You can revoke these permissions at any time.
 
 #### 16 February 2023 - Fix - CloudGateway 2.10.3 - Share not created in case of mismatch in local culture on hosting server [ID_35654]
 
