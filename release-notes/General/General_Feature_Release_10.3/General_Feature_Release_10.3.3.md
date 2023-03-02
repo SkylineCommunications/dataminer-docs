@@ -398,3 +398,9 @@ In some cases, two identical behavioral anomaly alarms would incorrectly be crea
 <!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.3 -->
 
 In some cases, an error could occur in the SLAnalytics process after a DVE parent element had been deleted.
+
+#### Cassandra Cluster: Rows would incorrectly be added without TTL value [ID_35789]
+
+<!-- MR 10.3.0 [CU0] - FR 10.3.3 [CU0] -->
+
+When a row was added to a Cassandra Cluster table, no TTL value would incorrectly be inserted into the TTL column of that row.

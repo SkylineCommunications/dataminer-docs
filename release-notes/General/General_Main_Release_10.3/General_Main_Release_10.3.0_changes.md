@@ -691,3 +691,9 @@ When a GQI query retrieved the status of a DOM instance that had no status, the 
 If a DOM module is created without specifying *SecuritySettings*, the view permission is set to "None".
 
 Up to now, the check to determine whether a user had the view permission set to "None", would only return true for the Administrator or users in the Administrator group. From now on, when the required view permission is "None", permission checks will no longer be performed.
+
+#### Cassandra Cluster: Rows would incorrectly be added without TTL value [ID_35789]
+
+<!-- MR 10.3.0 [CU0] - FR 10.3.3 [CU0] -->
+
+When a row was added to a Cassandra Cluster table, no TTL value would incorrectly be inserted into the TTL column of that row.
