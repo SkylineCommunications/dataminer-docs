@@ -5,6 +5,7 @@ uid: Known_issues
 
 | Issue | DataMiner version | Date added |
 |--|--|--|
+| [SLPort deadlock when element with serial connection is restarted](xref:KI_SLPort_deadlock_after_restart_serial_connection) | DataMiner 10.1.0 [CU17] to 10.2.0 [CU12]/10.3.0 [CU0]<br>DataMiner 10.2.8 to 10.3.3 | February 28, 2023 |
 | [Local user unable to access DMA after first reboot after installation](xref:KI_Local_user_unable_to_access_DMA_after_first_reboot_after_installation) | DataMiner 10.3.3 | February 24, 2023 |
 | [Node: 'X' is not supported by the current server version](xref:KI_Node_is_not_supported_by_the_current_server_version) | DataMiner 10.3.2 | January 26, 2023 |
 | [Contents of state_changes table not migrated after Cassandra Cluster migration](xref:KI_Contents_of_State_changes_Table_not_Migrated_after_Cassandra_Cluster_Migration) | Cassandra Cluster setups | January 16, 2023 |

@@ -2866,6 +2866,8 @@
     - name: Known issues
       topicUID: Known_issues
       items:
+        - name: SLPort deadlock when element with serial connection is restarted
+          topicUID: KI_SLPort_deadlock_after_restart_serial_connection
         - name: Local user unable to access DMA after first reboot after installation
           topicUID: KI_Local_user_unable_to_access_DMA_after_first_reboot_after_installation
         - name: Contents of state_changes table not migrated after Cassandra Cluster migration
