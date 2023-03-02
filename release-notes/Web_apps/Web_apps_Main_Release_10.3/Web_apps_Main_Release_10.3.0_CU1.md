@@ -76,6 +76,18 @@ When you entered an invalid value into a text box, an error message would be dis
 
 When a query using the *Get parameter table by ID* data source had the *Update data* option enabled, the component would incorrectly no longer automatically refresh the data when changes were detected.
 
+#### Web apps - Interactive Automation scripts: Components in a row following a component with a row span greater than 1 would not be positioned correctly [ID_35504]
+
+<!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
+
+In an interactive Automation script executed in a web app, components positioned in a row following a row that contained a component with a row span greater than 1 would not be positioned correctly.
+
+> [!NOTE]
+> If, in an interactive Automation script executed in a web app, a component is positioned on a cell that is overlapped by a component with a row span greater than 1, it will not be displayed.
+
+> [!IMPORTANT]
+> **BREAKING CHANGE**: If, in an interactive Automation script designed to be executed in a web app, the column property was altered to position a component at a specific spot, because of this fix, the component in question will no longer be displayed. It will be hidden by the component of which the row span is greater than 1. The component can be made visible again by changing the column property.
+
 #### Low-code apps: Sidebar would incorrectly be displayed when there was only one visible page [ID_35544]
 
 <!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
@@ -130,6 +142,18 @@ When you exported the data shown in a line & area chart component to a CSV file,
 
 In some cases, a feed used in a query would incorrectly not get updated when the data inside the feed was updated.
 
+#### Dashboards app & low-code apps - State component: Changing the query order would incorrectly only be applied when the browser was refreshed [ID_35690]
+
+<!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
+
+When you changed the order of the queries added to a State component, this change would incorrectly only be applied when you refreshed the browser. From now on, the change will be applied immediately.
+
+#### Dashboards app - Line & area chart: Problem when selecting a new time range [ID_35691]
+
+<!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
+
+When a line & area chart was filtered by means of a time range feed, in some cases, the dashboard would incorrectly keep on loading when a new time range was selected.
+
 #### Dashboards app & Low-code apps: Not possible to filter a GQI table by a boolean column [ID_35692]
 
 <!-- MR 10.3.0 [CU1] - FR 10.3.4 -->
@@ -155,3 +179,43 @@ When you hovered over a segment of an edge, in some cases, an incorrect tooltip 
 When configuring an ad hoc data source in a GQI query, you can link the arguments of that ad hoc data source to a feed. However, in some cases, it would incorrectly not be possible to link an argument of type string to a query column of type GUID.
 
 Also, in the query builder, the `Link [argument name] to feed for [argument name]` command has been renamed to `Use feed for [argument name]`.
+
+#### Dashboards app: 'Clear all' button would incorrectly also be displayed when the dashboard did not contain any feeds [ID_35709]
+
+<!-- MR 10.3.0 [CU1] - FR 10.3.4 -->
+
+When you selected a dashboard, the *Clear all* button would incorrectly also be displayed when the dashboard did not contain any feeds.
+
+#### Dashboards app: 'Data used in dashboard' section would incorrectly not list DOM instances [ID_35717]
+
+<!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
+
+When editing a dashboard, DOM instances used by components on that dashboard would incorrectly not be listed in the *Data used in dashboard* section of the *DATA* tab.
+
+#### Web apps: Node edge actions would incorrectly no longer work [ID_35723]
+
+<!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
+
+Node edge actions would incorrectly no longer work.
+
+#### Web apps - Query builder: Query nodes that by default only had a single value would incorrectly not be displayed [ID_35735]
+
+<!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
+
+In the query builder, query nodes that by default only had a single value would incorrectly not be displayed.
+
+#### Dashboards app & Low-code apps - Query builder: Problem when trying to create a GQI query with an ad hoc data source that contained an optional DateTime argument [ID_35738]
+
+<!-- MR 10.3.0 [CU1] - FR 10.3.4 -->
+
+When you tried to create a GQI query with an ad hoc data source that contained an optional DateTime argument, in some cases, the following exception could be thrown:
+
+```txt
+Skyline.DataMiner.Web.Common.v1.Utilities.UTCToDateTimeUTC(long)' has some invalid arguments
+```
+
+#### GQI: Queries containing float or GUID values would not get migrated correctly [ID_35759]
+
+<!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
+
+GQI queries containing float or GUID values would not get migrated correctly.

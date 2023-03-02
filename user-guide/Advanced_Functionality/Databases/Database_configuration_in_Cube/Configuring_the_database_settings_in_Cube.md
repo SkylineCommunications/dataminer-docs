@@ -35,7 +35,7 @@ For a Cassandra cluster database (i.e. one Cassandra cluster that is used as the
 
 1. From DataMiner Cube 10.3.0/10.3.3 onwards, you can also specify the database settings for Elasticsearch. Note that if the server supports [OpenSearch](xref:OpenSearch_database), Cube will allow you to configure this type of database instead of Elasticsearch.
 
-   - **Database**: The type of database, i.e. *Elasticsearch*.
+   - **Database**: The type of database, e.g. *Elasticsearch*.
 
    - **Database prefix**: The prefix that the DataMiner System will use to create the indices.
 

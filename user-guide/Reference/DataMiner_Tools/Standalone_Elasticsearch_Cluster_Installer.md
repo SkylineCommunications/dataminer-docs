@@ -1,7 +1,6 @@
 ---
 uid: Standalone_Elasticsearch_Cluster_Installer
 ---
-
 # Standalone Elasticsearch Cluster Installer
 
 ## About this tool
@@ -17,6 +16,11 @@ You can download this tool from [DataMiner Dojo](https://community.dataminer.ser
 - Microsoft Windows
 
 - Server without existing Elasticsearch installation
+
+- Every DataMiner Agent in the DataMiner System needs to be connected to the new Elasticsearch cluster
+
+  > [!TIP]
+  > See [Manually connecting a DMA to an Elasticsearch cluster](xref:Manually_Connecting_DMA_to_Elasticsearch_Cluster).
 
 ## Configuration
 

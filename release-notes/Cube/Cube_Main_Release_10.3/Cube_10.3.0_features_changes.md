@@ -154,71 +154,6 @@ Up to now, when configuring a parameter shape, it was possible to enable to use 
 >
 > For more information on soft-launch options, see [Soft-launch options](xref:SoftLaunchOptions).
 
-#### Data Display: Support for launching EPM objects by clicking buttons in Data Display table cells [ID_32368] [ID_33295] [ID_33857]
-
-<!-- RN 32368: MR 10.3.0 - FR 10.2.3
-RN 33295: MR 10.3.0 - FR 10.2.6
-RN 33857: MR 10.3.0 - FR 10.2.9 -->
-
-This feature offers a new way of adding links to EPM objects in a Data Display table.
-
-When, in a protocol, you configure a cell button as shown below, the table cell will display the SystemType and SystemName defined in the EPM object. Clicking the link will open a new card for that object.
-
-Example:
-
-```xml
-<Measurement>
-  <Type>button</Type>
-  <Discreets>
-    <Discreet>
-      <Display>{linkedItemName}</Display>
-      <Value type="open">{pid:530}</Value>
-    </Discreet>
-  </Discreets>
-</Measurement>
-```
-
-The discreet value can contain the SystemType and SystemName of the object, or a reference like “{pid:530}”. In the example above, the identifier is stored in the column with parameter ID 530, which can be the read parameter of the same column or a different column.
-
-If you know the type of the EPM object, you can add a type prefix (epm or view), followed by an equal sign and (a reference to) the identifier.
-
-The \<Display> tag of the discreet can contain the same references as the \<Value> tag. One extra keyword is possible (and recommended): {linkedItemName}. This keyword will be replaced with the name of the object referred to in the \<Value> tag.
-
-If you want to specify the page to be selected by default, add a suffix to the identifier in the \<Value> tag containing the root page name and the page name, separated by a colon. See the following examples:
-
-- EPM=Cable/SF Cable1:Topology:Total
-- VIEW=436:BelowThisObject:STB
-- VIEW=436:BelowThisView:Elements
-
-If the SystemName contains colons (e.g. a MAC address), then replace the default separator (i.e. colon) by another one (e.g. a pipe character) by placing a \[sep:XY\] prefix in front of the SystemName. See the following example:
-
-```xml
-<Value type="open">{EPM=[sep::|]CPE/00:01:08:01:08:01|DATA|CPE Frequencies}</Value>
-```
-
-Moreover, you can specify a second custom separator to also replace the existing separator inside the SystemType and/or SystemName. Since the default separator between the SystemType and the SystemName is “/”, this would mean that neither the systemType nor the SystemName would be allowed to contain that character (“/”).
-
-In the following example, a second \[sep:XY\] is used to replace the “/” inside the SystemType (“CPE/CPE”) with another character (“$”).
-
-```xml
-<Value type="open">{EPM=[sep::|][sep:/$]CPE/CPE$00:01:08:01:08:01|DATA|CPE Frequencies}</Value>
-```
-
-In short,
-
-- the first \[sep:XY\] will replace the separator between the arguments, and
-- the second \[sep:XY\] will replace the separator inside the SystemType and/or SystemName.
-
-If you want to replace the separator inside the name, you must specify both the first \[sep:XY\] and the second \[sep:XY\], even if there are no arguments.
-
-> [!NOTE]
->
-> - In each of the examples above, the card will be opened on a particular page:
->   - “Topology:Total” or “t:Total” will open the topology page named “Total”.
->   - “BelowThisObject:STB” or “bto:STB” will open the CPE card page named “STB”.
->   - “BelowThisView:Elements” or “btv:Elements” will open the view card page named “Elements”.
-> - When the card layout is set to “Tab layout”, it is now possible to save EPM cards in workspaces.
-
 #### New 'IN USE' info tag to be used in element shapes linked to resources [ID_32393]
 
 <!-- MR 10.3.0 - FR 10.2.3 -->
@@ -290,24 +225,6 @@ A number of enhancements have been made with regard to selecting bookings in the
 
 From now on, users will be able to manually create incidents even when “Automatic incident tracking” is disabled in System Center.
 
-#### Alarm Console: Manually creating incident alarms even when 'Automatic incident tracking' is disabled [ID_33000]
-
-<!-- MR 10.3.0 - FR 10.2.6 -->
-
-From now on, in the Alarm Console, you will be able to manually create incident alarms (i.e. alarm groups) even when the “Automatic incident tracking” option is disabled.
-
-- When you right-click an alarm that is not part of any alarm group, you will be able to click the “Add to incident” option. If you do so, a window\* will appear, asking you
-
-  - to create a new incident (i.e. a new alarm group) and add the alarm to it, or
-
-  - to add the alarm to an existing alarm group.
-
-These manually created groups will always be visible in active alarm tabs, even when the “Automatic incident tracking” option is disabled.
-
-*\*This window lists all existing incidents. From now on, you will be able to sort this list by clicking a column header. Also, a search box has now been added to allow you to search for a particular incident.*
-
-See also [Alarm Console - Automatic incident tracking: Manually add/remove alarms to/from alarm groups, move alarms from one alarm group to another, and rename alarm groups \[ID_32729\] \[ID_32819\] \[ID_32875\] \[ID_32914\] \[ID_32940\] \[ID_32957\] \[ID_33027\] \[ID_33036\] \[ID_33130\] \[ID_33212\]](xref:Cube_Main_Release_10.3.0_highlights#alarm-console---automatic-incident-tracking-manually-addremove-alarms-tofrom-alarm-groups-move-alarms-from-one-alarm-group-to-another-and-rename-alarm-groups-id_32729-id_32819-id_32875-id_32914-id_32940-id_32957-id_33027-id_33036-id_33130-id_33212)
-
 #### Visual Overview: Resource usage now updated in real time [ID_33001] [ID_33156] [ID_33497]
 
 <!-- MR 10.3.0 - FR 10.2.6 -->
@@ -355,16 +272,6 @@ For example, a hyperlink of type “openelement” could contain the following c
 >
 > - If you want to use a view property, a service property or an element property in a hyperlink, then you must enable its “Make this property available for alarm filtering” setting in DataMiner Cube.
 > - If you want to use a view property on an alarm of an element that has been added to multiple views, the property that will be used in the hyperlink will be the property of the view with the lowest ID that contains the element.
-
-#### Alarm Console: Assigning a ticket to an incident (alarm group) [ID_33199]
-
-<!-- MR 10.3.0 - FR 10.2.6 -->
-
-In the Alarm Console, it is now possible to assign tickets to incidents (alarm groups).
-
-- To assign a ticket to an incident, right-click the incident (alarm group) and select *Ticket \> New*.
-
-- To view a ticket assigned to an incident, right-click the incident (alarm group), select *Ticket*, and then select the ticket you want to view.
 
 #### DataMiner Cube: Start window enhancements [ID_33219]
 
@@ -1095,23 +1002,14 @@ From now on, the collector pages will be loaded even when the EPM environment do
 
 In some cases, the light bulb icon in the top-right corner of a trend graph would incorrectly overlap the full screen or zoom range buttons.
 
-> [!NOTE]
-> Currently, the parameter relationship feature is still in preview.
-
 #### Trending - Parameter relationships: Display keys of suggested parameters would not be correct [ID_35548]
 
 <!-- MR 10.3.0 - FR 10.3.3 -->
 
 When you open a trend graph, a light bulb icon will appear in the top-right corner when DataMiner finds parameters that are related to the parameters shown in the graph. When you click that icon, you get a list of the ten most important parameters, which you can then add to the graph. However, in some cases, the display keys of those listed parameters would not be correct.
 
-> [!NOTE]
-> Currently, the parameter relationship feature is still in preview.
-
 #### Trending - Parameter relationships: The same parameter could be added multiple times to the graph when you clicked it repeatedly [ID_35561]
 
 <!-- MR 10.3.0 - FR 10.3.3 -->
 
 When you open a trend graph, a light bulb icon will appear in the top-right corner when DataMiner finds parameters that are related to the parameters shown in the graph. When you click that icon, you get a list of the ten most important parameters, which you can then add to the graph. However, in some cases, when you clicked one of those suggested parameter multiple times, it would incorrectly be added multiple times to the graph.
-
-> [!NOTE]
-> Currently, the parameter relationship feature is still in preview.

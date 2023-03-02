@@ -72,6 +72,14 @@ This message has now been changed to provide more details:
 
 ### Fixes
 
+#### Bookings app: Initial time window was incorrect [ID_35527]
+
+<!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
+
+When you open the *Bookings* app, Cube adds a small offset to the time window when it requests the list of bookings from the server. Up to now, instead of subtracting 1 minute from the start time, it would incorrectly add 1 minute to it. When the initial time window was e.g. 11h00 to 12h00, it would incorrectly request the bookings from 11h01 to 12h01 instead of from 10h59 to 12h01.
+
+Also, in some cases, the "loading" indicator of the bookings timeline would incorrectly not disappear when all bookings were loaded.
+
 #### Visual Overview: Problem with EnableFollowMode option of Resource Manager timeline [ID_35528]
 
 <!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
@@ -119,3 +127,15 @@ When you resized the selected area in a trend graph by dragging either the left 
 <!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
 
 When you applied a filter to an alarm tab, no alarms would be shown when you had used a session variable in the filter.
+
+#### DataMiner Cube: Exception values with decimals would be displayed incorrectly in trend graph [ID_35714]
+
+<!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
+
+Because DataMiner Cube would use the incorrect culture when parsing exception values, in some cases, exception values with decimals would be displayed incorrectly in trend graphs.
+
+#### DataMiner Cube - Asset Manager app: Enum fields would not immediately be updated after clicking 'Apply' [ID_35747]
+
+<!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
+
+When, in the *Asset Manager* app, you tried to update an enum field, the value would not immediately be updated in the UI after clicking *Apply*.

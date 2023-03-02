@@ -2,6 +2,7 @@
   topicUid: DevelopmentGuide
   items:
   - name: Connectors
+    topicUid: Introduction
     items:
     - name: Introduction
       topicUid: Introduction
@@ -542,6 +543,7 @@
     - name: Questions & Answers
       topicUid: QuestionsAndAnswers
     - name: How-tos
+      topicUID: How_to_aggregate_alarm_severities
       items:
       - name: How to aggregate alarm severities
         topicUID: How_to_aggregate_alarm_severities
@@ -572,6 +574,7 @@
       - name: How to use the element log in connector integrations
         topicUID: How_to_use_the_element_log_in_connector_integrations
     - name: Troubleshooting
+      topicUID: Investigating_a_protocol_thread_RTE
       items:
       - name: Investigating a protocol thread RTE
         topicUID: Investigating_a_protocol_thread_RTE
@@ -591,6 +594,7 @@
         - name: Identifying the source of an exception
           topicUID: Identifying_the_source_of_an_exception
       - name: Use cases
+        topicUID: Debugging_connectors_Element_connections
         items:
         - name: Debugging connectors - element connections
           topicUID: Debugging_connectors_Element_connections
@@ -665,6 +669,7 @@
       - name: Getting started with the IAS Toolkit
         topicUID: Getting_Started_with_the_IAS_Toolkit
   - name: Class Library
+    topicUid: ClassLibraryIntroduction
     items:
     - name: Class library introduction
       topicUid: ClassLibraryIntroduction
@@ -697,6 +702,7 @@
   topicUid: ApiDocumentation
   items:
   - name: Namespaces
+    topicUid: Skyline.DataMiner.Scripting
     items:
     - name: Skyline.DataMiner.Scripting
       topicUid: Skyline.DataMiner.Scripting
@@ -715,6 +721,7 @@
     - name: Tamir.SharpSsh
       topicUid: Tamir.SharpSsh
   - name: Notify types
+    topicUid: NTNotifyTypesOverview
     items:
     - name: NT notify types
       topicUid: NTNotifyTypesOverview
@@ -977,6 +984,7 @@
       - name: DMS_GET_ELEMENTS_USING_PROTOCOL
         topicUid: DMS_GET_ELEMENTS_USING_PROTOCOL
   - name: Error codes
+    topicUid: DataMinerErrorCodes
     items:
     - name: DataMiner error codes
       topicUid: DataMinerErrorCodes
