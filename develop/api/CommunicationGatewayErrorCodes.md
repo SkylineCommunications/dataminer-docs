@@ -64,7 +64,7 @@ These are the error codes that can be returned when asking the gNMI handler in t
 |GnmiHandler_RegisterSubscriptionRequest_InvalidMessage     |gNMI handler invalid RegisterSubscriptionRequest|1002012|The RegisterSubscriptionRequest could not be parsed, this topic should send a Request message containing a RegisterSubscriptionRequest.|
 |GnmiHandler_RegisterSubscriptionRequest_TryAddFailed|gNMI handler Register subscription TryAdd failed|1002013|The RegisterSubscriptionRequest contained a SubscriptionId that could not be added after checking for duplicate IDs. This can happen when the same request is sent in parallel.|
 |GnmiHandler_UnregisterSubscriptionRequest_InvalidMessage|gNMI handler invalid UnregisterSubscriptionRequest|1002014|The UnregisterSubscriptionRequest could not be parsed. This topic should send a Request message containing a GetRequest.|
-|GnmiHandler_SubscriptionRequest_InvalidMessage|gNMI handler invalid SubscriptionRequest|1002015|The SubscriptionRequest could not be parsed, this topic should send a Request message containing a SubscriptionRequest.|
+|GnmiHandler_SubscriptionRequest_InvalidMessage|gNMI handler invalid SubscriptionRequest|1002015|The SubscriptionRequest could not be parsed. This topic should send a Request message containing a SubscriptionRequest.|
 |GnmiHandler_RegisterSubscriptionRequest_MissingSubscriptionId|gNMI handler Register subscription did not receive a subscription ID|1002016|The RegisterSubscriptionRequest contained a SubscriptionId that was null or empty.|
 
 ## gNMI client error codes
