@@ -77,7 +77,7 @@ These are the error codes that can be returned from the OpenConfig Library middl
 |GnmiClient_SubscribeRequest_UnexpectedFail|gNMI client SubscribeRequest failed|1003002|The SubscribeRequest returned a null, the registration failed, or the channel was closed.|
 |GnmiClient_ConnectRequest_Timeout|gNMI client ConnectRequest timed out|1003003|The ConnectRequest timed out. No response was received from the CommunicationGateway.|
 |GnmiClient_ConnectRequest_NullResponse|gNMI client ConnectRequest returned a null response|1003004|The ConnectRequest returned a null response.|
-|GnmiClient_ConnectRequest_NullParsing|gNMI client ConnectRequest returned a response that could not be parsed|1003005|The ConnectRequest returned a response, and when parsing that, it resulted in a null.|
+|GnmiClient_ConnectRequest_NullParsing|gNMI client ConnectRequest returned a response that could not be parsed|1003005|The ConnectRequest returned a response, and when that was parsed, it resulted in a null.|
 |GnmiClient_CapabilityRequest_NullResponse|gNMI client CapabilityRequest returned a null response|1003006|The CapabilityRequest returned a null response.|
 |GnmiClient_GetRequest_NullResponse|gNMI client GetRequest returned a null response|1003007|The GetRequest returned a null response.|
 |GnmiClient_SetRequest_NullResponse|gNMI client SetRequest returned a null response|1003008|The SetRequest returned a null response.|
