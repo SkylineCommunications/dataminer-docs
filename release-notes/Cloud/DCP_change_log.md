@@ -14,10 +14,10 @@ The following features become availabe as from today:
 - Creating Teams
 - Creating Channels
 - Add members or owners to your Teams
-- Sending notifications in the created Channels in the name of DataMiner 
+- Sending notifications in the created Channels in the name of the DataMiner Teams bot 
 - Creating a private chat between someone and the DataMiner Teams bot
 - Fetching a private chat between someone and the DataMiner Teams bot
-- Sending notifications in those private chats in the name of DataMiner 
+- Sending notifications in those private chats in the name of the DataMiner Teams bot 
 
 In an Automation script you can use [the DcpChatIntegrationHelper NuGet](https://www.nuget.org/packages/Skyline.DataMiner.DcpChatIntegrationHelper) to easily interact with Microsoft Teams. 
 Some example Automation scripts were created and explained on [GitHub](https://github.com/SkylineCommunications/ChatOps-Extensions/blob/main/ChatIntegrationExamples) to get you up to speed. 
