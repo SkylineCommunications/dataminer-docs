@@ -169,6 +169,12 @@ During a midnight synchronization, in some cases, the ResourceManager module cou
 
 The logging indicating the start and the end of the initialization, synchronization and cache load of the ResourceManager module has now been changed from log level 4 to log level 0.
 
+#### SLAnalytics - Behavioral anomaly detection: Suggestion events or alarm events for change points of type 'flatline' would not get cleared [ID_35645]
+
+<!-- MR 10.3.0 [CU1] - FR 10.3.4 -->
+
+When SLAnalytics was stopped while suggestion events or alarm events for change points of type *flatline* were still open, these events would stay open until they were cleared manually. From now on, suggestion events or alarm events for change points of type *flatline* will automatically be cleared as soon as SLAnalytics has restarted.
+
 #### SLAnalytics - Behavioral anomaly detection: An upward level shift directly followed by a downward level shift would incorrectly get categorized as an "unlabeled" change event [ID_35646]
 
 <!-- MR 10.3.0 [CU1] - FR 10.3.4 -->
