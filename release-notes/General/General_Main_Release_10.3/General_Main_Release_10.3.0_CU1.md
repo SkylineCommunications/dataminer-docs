@@ -208,3 +208,9 @@ After a DataMiner restart, suggestion alarms would incorrectly be re-evaluated a
 <!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
 
 In some cases, an error could occur in SLPort when an element with a serial connection was restarted.
+
+#### Problem with SLElement when creating an alarm with an 'SLA Affecting' property [ID_35776]
+
+<!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
+
+In some rare cases, an error could occur in SLElement when creating an alarm with an *SLA Affecting* property.

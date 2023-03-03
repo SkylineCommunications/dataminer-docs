@@ -73,6 +73,12 @@ SLLogCollector packages will now also include the following additional file:
 |------|----------|
 | Logs\Network Information\Netstat.exe -ano.txt | The output of an `netstat -ano` command. |
 
+#### Dashboards app & Low-code apps - Line & area chart component: Enhanced performance when exporting trend data to CSV [ID_35727]
+
+<!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
+
+Because of a number of enhancements, overall performance has increased when exporting trend data to a CSV file.
+
 ### Fixes
 
 #### Memory leak in SLNet after closing a client connection that had been using a "SLDataGateway.API" subscription set [ID_35319]
@@ -363,3 +369,9 @@ GQI queries containing float or GUID values would not get migrated correctly.
 <!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
 
 In some cases, an error could occur in SLPort when an element with a serial connection was restarted.
+
+#### Problem with SLElement when creating an alarm with an 'SLA Affecting' property [ID_35776]
+
+<!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
+
+In some rare cases, an error could occur in SLElement when creating an alarm with an *SLA Affecting* property.
