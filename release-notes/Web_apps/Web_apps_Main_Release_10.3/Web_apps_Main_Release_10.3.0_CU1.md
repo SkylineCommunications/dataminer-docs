@@ -52,6 +52,12 @@ New description of the *GetAlarmDetails* method:
 
 A clearer error message will now be returned when you are building a query against a logger table without `RTDisplay=true` settings, neither on table level nor on column level.
 
+#### Web apps: Enhanced feedback after a failed login attempt [ID_35724]
+
+<!-- MR 10.3.0 [CU1] - FR 10.3.4 -->
+
+When a login attempt fails, a clearer error message will now appear.
+
 #### Dashboards app & Low-code apps - Line & area chart component: Enhanced performance when exporting trend data to CSV [ID_35727]
 
 <!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
