@@ -2,7 +2,7 @@
 uid: Microsoft_Teams_Chat_Integration
 ---
 
-# Chat Integration with Microsoft Teams
+# Chat integration with Microsoft Teams
 
 If your DataMiner System is connected to dataminer.services, you can integrate your DataMiner System with Microsoft Teams using [Automation](xref:automation).
 

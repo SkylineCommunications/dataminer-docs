@@ -2771,12 +2771,12 @@
           topicUid: Viewing_info_on_deployments
         - name: Viewing information on shares
           topicUid: Viewing_info_on_shares
-    - name: ChatOps
+    - name: DataMiner ChatOps
       topicUid: ChatOps
       items:
         - name: DataMiner Teams bot
           topicUid: DataMiner_Teams_bot
-        - name: Chat Integration
+        - name: Chat integration
           topicUid: Microsoft_Teams_Chat_Integration
     - name: Advanced configuration
       topicUID: Custom_cloud_endpoint_configuration

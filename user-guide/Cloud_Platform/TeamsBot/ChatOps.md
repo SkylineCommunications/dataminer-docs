@@ -4,16 +4,16 @@ uid: ChatOps
 
 # ChatOps
 
-If your DataMiner System is connected to dataminer.services, you can integrate your DataMiner System into business communication platforms by using the DataMiner Bot and Automation scripts.
+If your DataMiner System is connected to dataminer.services, you can integrate your DataMiner System into business communication platforms by using the DataMiner bot along with Automation scripts.
 
 > [!TIP]
 > See also: [dataminer.services](xref:Part51CloudPlatform)
 
 ## Microsoft Teams
 
-- [DataMiner Teams bot](xref:DataMiner_Teams_bot): interact with your DataMiner System in Microsoft Teams
-   - [Custom commands](xref:DataMiner_Teams_bot#adding-commands-for-the-teams-bot-to-a-dms): create your own commands to interact with your DataMiner System in Microsoft Teams
-- [Chat Integration](xref:Microsoft_Teams_Chat_Integration): interact with Microsoft Teams from your DataMiner System
+- [DataMiner Teams bot](xref:DataMiner_Teams_bot): Interact with your DataMiner System in Microsoft Teams.
+  - [Custom commands](xref:DataMiner_Teams_bot#adding-commands-for-the-teams-bot-to-a-dms): Create your own commands to interact with your DataMiner System in Microsoft Teams.
+- [Chat integration](xref:Microsoft_Teams_Chat_Integration): Interact with Microsoft Teams from your DataMiner System.
 
 ## Slack
 
