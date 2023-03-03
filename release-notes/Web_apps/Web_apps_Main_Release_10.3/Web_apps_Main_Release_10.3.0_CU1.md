@@ -46,6 +46,24 @@ New description of the *GetAlarmDetails* method:
 
 > Get the alarm details for the specified alarm (use GetAlarmHistory for the details of a cleared non-root alarm).
 
+#### GQI: Clearer error message when querying a logger table without `RTDisplay=true` settings [ID_35706]
+
+<!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
+
+A clearer error message will now be returned when you are building a query against a logger table without `RTDisplay=true` settings, neither on table level nor on column level.
+
+#### Web apps: Enhanced feedback after a failed login attempt [ID_35724]
+
+<!-- MR 10.3.0 [CU1] - FR 10.3.4 -->
+
+When a login attempt fails, a clearer error message will now appear.
+
+#### Dashboards app & Low-code apps - Line & area chart component: Enhanced performance when exporting trend data to CSV [ID_35727]
+
+<!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
+
+Because of a number of enhancements, overall performance has increased when exporting trend data to a CSV file.
+
 ### Fixes
 
 #### Web apps - Interactive Automation scripts: Component of type 'Time' would not be displayed as a time span picker [ID_35435]

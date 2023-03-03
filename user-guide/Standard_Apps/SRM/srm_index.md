@@ -4,11 +4,6 @@ uid: srm_index
 
 # Service & Resource Management Framework
 
-This section is intended to become your one source for all information related to setting up and working with the SRM framework.
+This section contains information related to setting up and working with the SRM framework.
 
-We are currently still working on centralizing all SRM information here, so check back for updates frequently.
-
-- [SRM use cases](xref:srm_use_cases)
-- [SRM framework concepts](xref:srm_concepts)
-- [Getting started with SRM](xref:srm_getting_started)
-- [Booking Manager app](xref:SolSRM#booking-manager-app)
+This includes the different [SRM use cases](xref:srm_use_cases) and [SRM framework concepts](xref:srm_concepts), extensive [getting started](xref:srm_getting_started) info, information about the [Booking Manager app](xref:SolSRM#booking-manager-app), and [advanced configuration](xref:SRM_user_interface_customization) info.

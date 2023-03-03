@@ -69,6 +69,21 @@ Because of a number of enhancements, overall performance has increased when fetc
 
 From now on, focus value updates will no longer be taken into account when determining whether the *Maximum group event rate* was exceeded.
 
+#### DataMiner upgrade: Additional prerequisite will now check for incompatible connectors [ID_35605]
+
+<!-- MR 10.4.0 - FR 10.3.4 -->
+
+When you start a DataMiner upgrade, the `ValidateConnectors` prerequisite will now scan the system for any connectors that are known to be incompatible with the DataMiner version to which the DataMiner Agent is being upgraded. If such connectors are found, they will have to be removed before you can continue with the upgrade.
+
+#### GQI: Raw datetime values will now be converted to UTC [ID_35640]
+
+<!-- MR 10.4.0 - FR 10.3.4 -->
+
+Up to now, after each step in a GQI query, raw datetime values were always converted to the time zone that was specified in the query options. From now on, raw datetime values will be converted to UTC instead. The time zone specified in the query options will now only be used when converting a raw datetime value to a display value.
+
+> [!IMPORTANT]
+> **BREAKING CHANGE**: When, in an ad hoc data source or a query operation, a datetime value is not in UTC format, an exception will now be thrown.
+
 #### SLLogCollector now also collects output of 'netstat -ano' command [ID_35674]
 
 <!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
@@ -78,6 +93,18 @@ SLLogCollector packages will now also include the following additional file:
 | File | Contents |
 |------|----------|
 | Logs\Network Information\Netstat.exe -ano.txt | The output of an `netstat -ano` command. |
+
+#### SLAnalytics - Proactive cap detection: Enhanced accuracy [ID_35695]
+
+<!-- MR 10.4.0 - FR 10.3.4 -->
+
+Proactive cap detection predicts future issues based on trend data in the Cassandra database. Because of a number of enhancements, overall prediction accuracy has increased.
+
+#### Service & Resource Management: Bookings of type 'Custom Process Automation' no longer consume license credits [ID_35742]
+
+<!-- MR 10.4.0 - FR 10.3.4 -->
+
+From now on, ReservationInstances of type *Custom Process Automation* will no longer consume SRM credits. This means that, from now on, you can schedule an unlimited number of concurrent bookings of type *Custom Process Automation*.
 
 ### Fixes
 
@@ -167,6 +194,12 @@ During a midnight synchronization, in some cases, the ResourceManager module cou
 
 The logging indicating the start and the end of the initialization, synchronization and cache load of the ResourceManager module has now been changed from log level 4 to log level 0.
 
+#### SLAnalytics - Behavioral anomaly detection: Suggestion events or alarm events for change points of type 'flatline' would not get cleared [ID_35645]
+
+<!-- MR 10.3.0 [CU1] - FR 10.3.4 -->
+
+When SLAnalytics was stopped while suggestion events or alarm events for change points of type *flatline* were still open, these events would stay open until they were cleared manually. From now on, suggestion events or alarm events for change points of type *flatline* will automatically be cleared as soon as SLAnalytics has restarted.
+
 #### SLAnalytics - Behavioral anomaly detection: An upward level shift directly followed by a downward level shift would incorrectly get categorized as an "unlabeled" change event [ID_35646]
 
 <!-- MR 10.3.0 [CU1] - FR 10.3.4 -->
@@ -183,6 +216,27 @@ Also, when the SLAnalytics processes of different agents in the same cluster wer
 
 From now on, the focus data cache will no longer be cleared when SLAnalytics process starts up. Instead, only the focus data associated with the alarms that are no longer active will be removed from the cache.
 
+#### Cassandra Cluster Migrator tool would incorrectly not migrate the state-changes table from a single-node Cassandra to a Cassandra Cluster [ID_35699]
+
+<!-- MR 10.4.0 - FR 10.3.4 -->
+
+When you used the Cassandra Cluster Migrator tool to migrate a single-node Cassandra database to a Cassandra Cluster setup, up to now, the `state-changes` table would incorrectly not be migrated.
+
+#### Automation: DataMiner would incorrectly remove the xmlns attribute when importing or saving an Automation script [ID_35708]
+
+<!-- MR 10.4.0 - FR 10.3.4 -->
+
+When DataMiner imported or saved an Automation script, it would incorrectly remove the `xmlns` attribute specified in the `<DMSScript>` element, even when that attribute had been added by DataMiner Integration Studio. From now on, when DataMiner imports or saves an Automation script, it will no longer remove this attribute. Moreover, if no such attribute is specified, it will automatically add `xmlns="http://www.skyline.be/automation"`.
+
+Example:
+
+```xml
+<DMSScript options="272" xmlns="http://www.skyline.be/automation">
+   <Name>...</Name>
+   ...
+</DMSScript>
+```
+
 #### GQI: Display value of an empty cell of type 'double' would incorrectly be set to a "0" string [ID_35718]
 
 <!-- MR 10.3.0 [CU1] - FR 10.3.4 -->
@@ -191,7 +245,7 @@ The display value of an empty cell of type *double* would incorrectly be set to 
 
 #### SLAnalytics - Automatic incident tracking: Problem when starting up [ID_35731]
 
-<!-- MR 10.2.0 [CU13] - FR 10.3.4 -->
+<!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
 
 When a large number of groups needed to be created while automatic incident tracking was starting up, the `A timeout of 00:01:00.0 occurred while processing message of type AlarmFloodMessage` error could be thrown, causing automatic incident tracking to not start up correctly.
 
@@ -201,8 +255,20 @@ When a large number of groups needed to be created while automatic incident trac
 
 After a DataMiner restart, suggestion alarms would incorrectly be re-evaluated as normal alarms.
 
+#### Memory leak in SLAnalytics [ID_35758]
+
+<!-- MR 10.3.0 [CU1] - FR 10.3.4 -->
+
+In some cases, SLAnalytics kept on waiting on a database call, which eventually led to the process leaking memory.
+
 #### Problem with SLPort when an element with a serial connection was restarted [ID_35773]
 
 <!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
 
 In some cases, an error could occur in SLPort when an element with a serial connection was restarted.
+
+#### Problem with SLElement when creating an alarm with an 'SLA Affecting' property [ID_35776]
+
+<!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
+
+In some rare cases, an error could occur in SLElement when creating an alarm with an *SLA Affecting* property.

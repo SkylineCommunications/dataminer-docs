@@ -6,6 +6,28 @@ uid: DCP_change_log
 
 The dataminer.services platform gets updated continuously. This change log can help you trace when specific features and changes have become available.
 
+#### 2 March 2023 - Integrate your DataMiner System with Microsoft Teams using DataMiner Automation [ID_35799]
+
+You can now easily integrate your DataMiner System with Microsoft Teams using DataMiner Automation.
+
+The following features are available:
+
+- Creating teams
+- Creating channels
+- Adding members or owners to your teams
+- Sending notifications in the created channels in the name of the DataMiner Teams bot
+- Creating a private chat between someone and the DataMiner Teams bot
+- Fetching a private chat between someone and the DataMiner Teams bot
+- Sending notifications in those private chats in the name of the DataMiner Teams bot
+
+In an Automation script, you can use [the DcpChatIntegrationHelper NuGet](https://www.nuget.org/packages/Skyline.DataMiner.DcpChatIntegrationHelper) to easily interact with Microsoft Teams.
+
+To get started, you can find several example Automation scripts with more information on [GitHub](https://github.com/SkylineCommunications/ChatOps-Extensions/blob/main/ChatIntegrationExamples).
+After you have made sure the [prerequisites](https://github.com/SkylineCommunications/ChatOps-Extensions/blob/main/ChatIntegrationExamples/README.md#usage) are in place, you can download and deploy [the DcpChatIntegrationExamples DMAPP](https://github.com/SkylineCommunications/ChatOps-Extensions/blob/main/ChatIntegrationExamples/README.md#getting-started) to your DataMiner System and immediately try out these examples.
+
+> [!NOTE]
+> You must grant Skyline admin consent to your Microsoft tenant with certain permissions to enable these features. See [granting admin consent](xref:Granting_admin_consent). You can revoke these permissions at any time.
+
 #### 16 February 2023 - Fix - CloudGateway 2.10.3 - Share not created in case of mismatch in local culture on hosting server [ID_35654]
 
 Prior to CloudGateway version 2.10.3, a share could not be created if there was a mismatch in the local culture on the hosting server.
