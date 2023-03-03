@@ -42,8 +42,17 @@ To grant admin consent and configure your tenant:
 
    After you log in successfully, your tenant is configured.
 
+
 > [!NOTE]
 >
-> - If there are changes to the software that cause new or different permissions to be required, you will need to repeat this procedure in order to also provide consent for those permissions.
-> - You can unlink the tenant by clicking the x next to the tenant ID GUID. However, unlinking the tenant from the organization **will not remove the permissions given to Skyline**. Remove the permissions in Azure to revoke access to this tenant. For more information on how to remove permissions, see [Delete a tenant in Azure Active Directory](https://learn.microsoft.com/en-us/azure/active-directory/enterprise-users/directory-delete-howto).
-> - You can remove your consent again at any time. For more information, refer to the [Microsoft documentation](https://docs.microsoft.com/en-us/azure/active-directory/manage-apps/manage-application-permissions?pivots=portal).
+> - You can revoke the permissions given to Skyline at any time in the Azure Portal. For more information, refer to the [Microsoft documentation](https://docs.microsoft.com/en-us/azure/active-directory/manage-apps/manage-application-permissions?pivots=portal).
+
+
+> [!NOTE]
+>
+> - You can unlink the tenant by clicking the x next to the tenant ID. However, unlinking the tenant from the organization **will not remove the permissions given to Skyline**. See the note above on how to revoke the given permissions.
+
+
+> [!NOTE]
+>
+> - If there are changes to the software that cause new or different permissions to be required, you will need to repeat the grand admin consent procedure in order to also provide consent for those permissions. You can do this by unlinking your tenant first (see above) .
