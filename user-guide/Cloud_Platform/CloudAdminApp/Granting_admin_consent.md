@@ -50,4 +50,4 @@ To grant admin consent and configure your tenant:
 > You can unlink the tenant by clicking the x next to the tenant ID. However, unlinking the tenant from the organization **will not remove the permissions given to Skyline**. See the note above on how to revoke the given permissions.
 
 > [!NOTE]
-> If there are changes to the software that cause new or different permissions to be required, you will need to repeat the grand admin consent procedure in order to also provide consent for those permissions. You can do this by unlinking your tenant first (see above) .
+> If there are changes to the software that cause new or different permissions to be required, you will need to repeat the grand admin consent procedure in order to also provide consent for those permissions. You can do this by unlinking your tenant first (see above).
