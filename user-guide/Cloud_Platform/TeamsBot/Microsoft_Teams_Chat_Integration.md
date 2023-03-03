@@ -41,7 +41,7 @@ See [Installing DataMiner Integration Studio](xref:Installing_and_configuring_th
 
 - The [DataMiner bot](https://teams.microsoft.com/l/app/9a09d087-5d07-4481-b34f-cd053eab7925) must be allowed in your [Microsoft Teams](https://docs.microsoft.com/en-us/microsoftteams/manage-apps).
 
-- [Admin consent must be granted](xref:Granting_admin_consent) in the [DCP Admin app](https://admin.dataminer.services). This access can be revoked at any time.
+- [Admin consent must be granted](xref:Granting_admin_consent) in the [Admin app](https://admin.dataminer.services). This access can be revoked at any time.
 
 ## Using Chat Integration
 
@@ -55,4 +55,4 @@ See [Installing DataMiner Integration Studio](xref:Installing_and_configuring_th
 
 ## Security
 
-By granting [Admin consent](xref:Granting_admin_consent) from your Microsoft (Teams) Tenant to 'DataMiner', aka Skyline Communications, in the [DCP Admin app](https://admin.dataminer.services), you allow Skyline Communications to do these chat integration actions, in example creating teams, channels, chats, fetching users, chats etc. This access can be revoked at any time as explained in the [Admin consent documentation](xref:Granting_admin_consent).
+By granting [Admin consent](xref:Granting_admin_consent) from your Microsoft (Teams) Tenant to 'DataMiner', aka Skyline Communications, in the [Admin app](https://admin.dataminer.services), you allow Skyline Communications to do these chat integration actions, in example creating teams, channels, chats, fetching users, chats etc. This access can be revoked at any time as explained in the [Admin consent documentation](xref:Granting_admin_consent).
