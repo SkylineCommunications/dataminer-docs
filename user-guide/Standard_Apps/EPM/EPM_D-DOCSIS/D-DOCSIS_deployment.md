@@ -12,10 +12,10 @@ To deploy and upgrade the D-DOCSIS branch of the EPM Solution in an automated fa
 
 1. Download the latest EPM D-DOCSIS upgrade installation package and place it on the server.
 
-1. Run the instllation package. This will automatically upgrade all protocols, templates, automation scripts, assemblies, and dashboards.
+1. Run the installation package. This will automatically upgrade all protocols, templates, Automation scripts, assemblies, and dashboards.
 
-     > [!NOTE]
-     > Visio drawings are currently unsupported by the upgrade package, so these need to be updated by hand.
+   > [!NOTE]
+   > Visio drawings are currently not yet supported in the upgrade package, so you will need to update these manually.
 
 ### Initial Deployment
 
