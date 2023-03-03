@@ -336,7 +336,7 @@ Node edge actions would incorrectly no longer work.
 
 #### SLAnalytics - Automatic incident tracking: Problem when starting up [ID_35731]
 
-<!-- MR 10.2.0 [CU13] - FR 10.3.4 -->
+<!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
 
 When a large number of groups needed to be created while automatic incident tracking was starting up, the `A timeout of 00:01:00.0 occurred while processing message of type AlarmFloodMessage` error could be thrown, causing automatic incident tracking to not start up correctly.
 

@@ -191,6 +191,12 @@ From now on, the focus data cache will no longer be cleared when SLAnalytics pro
 
 The display value of an empty cell of type *double* would incorrectly be set to a "0" string. From now on, it will be set to an empty string instead.
 
+#### SLAnalytics - Automatic incident tracking: Problem when starting up [ID_35731]
+
+<!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
+
+When a large number of groups needed to be created while automatic incident tracking was starting up, the `A timeout of 00:01:00.0 occurred while processing message of type AlarmFloodMessage` error could be thrown, causing automatic incident tracking to not start up correctly.
+
 #### Behavioral anomaly detection: Suggestion alarms would incorrectly be re-evaluated as normal alarms after a DataMiner restart [ID_35744]
 
 <!-- MR 10.3.0 [CU1] - FR 10.3.4 -->
