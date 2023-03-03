@@ -34,7 +34,7 @@ Example:
 
 ## Redirects subtag
 
-From DataMiner 10.3.0/10.3.2 onwards, this subtag can be used to make the DMAs in a DMS communicate with each other over **gRPC** instead of .NET Remoting. Among others, this has the advantage that port 8004 is no longer needed. Instead the standard HTTPS port 443 is used by default. <!-- RN 34983 -->
+From DataMiner 10.3.0/10.3.2 onwards, this subtag can be used to make the DMAs in a DMS communicate with each other over **gRPC** instead of .NET Remoting. This uses the standard HTTPS port 443 by default. <!-- RN 34983 -->
 
 Redirects must be added in *DMS.xml* for each DMA. Failover Agents also need a redirect to each other's IP address.
 
