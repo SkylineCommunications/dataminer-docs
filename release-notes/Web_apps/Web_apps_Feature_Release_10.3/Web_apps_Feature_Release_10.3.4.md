@@ -50,6 +50,15 @@ A line & area chart component now has a number of time range buttons that allow 
 > [!NOTE]
 > In the *Dashboards* app, these time range buttons are disabled by default. When configuring the component, uou can enable them by selecting the *Show time range buttons* option in the *Component > Layout > Styling and Information* tab.
 
+#### Web apps: New action 'Open monitoring card' [ID_35661]
+
+<!-- MR 10.4.0 - FR 10.3.4 -->
+
+In a low-code app, you can now configure a new type of action: *Open monitoring card*. When triggered, this action will open the card of a specific element, service or view in the *Monitoring* app.
+
+> [!NOTE]
+> When a low-code app is embedded in Cube (e.g. in a visual overview), an *Open monitoring card* action will open the specified card in Cube.
+
 ## Changes
 
 ### Enhancements
@@ -200,6 +209,12 @@ When the parameters of a spectrum element were retrieved in a web app, in some c
 <!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
 
 When, in a dashboard, you added a trended spectrum parameter to a line & area chart component, the component would not be able to retrieve the trend data of that parameter.
+
+#### Low-code apps: Problem when opening a low-code app on a mobile device or when resizing the screen to a mobile size [ID_35683]
+
+<!-- MR 10.4.0 - FR 10.3.4 -->
+
+When you opened a low-code app on a mobile device or when you resized the screen to a mobile size, a console error would be thrown.
 
 #### Dashboards app - Line & area chart component: Duplicate data in exported CSV file [ID_35688]
 

@@ -34,6 +34,12 @@ When, in a Visio drawing, shapes had been positioned dynamically based on proper
 
 From now on, when using the Microsoft Edge (WebView2) web browser plugin, embedded web apps can interact with Cube (e.g. open an element card).
 
+#### Users no longer have to log in to embedded low-code apps [ID_35657]
+
+<!-- MR 10.4.0 - FR 10.3.4 -->
+
+When a low-code app was embedded in Cube (e.g. in a visual overview), up to now, users had to explicitly log in to that app. From now on, Cube will automatically pass the authentication ticket to the low-code app, allowing users to access the app without having to log in again.
+
 ## Changes
 
 ### Enhancements
