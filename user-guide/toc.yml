@@ -968,6 +968,8 @@
               topicUID: BPA_Password_Strength
             - name: Report Active RTE
               topicUID: BPA_Report_Active_RTE
+            - name: SRM Function Resources Consistency
+              topicUID: BPA_SRM_Function_Resources_Consistency
             - name: Verify Cloud DxM Version
               topicUID: BPA_Verify_Cloud_DxM_Version
             - name: View Recursion
@@ -1064,6 +1066,17 @@
                 topicUID: Configuring_Elasticsearch_node_remove
             - name: Configuring multiple Elasticsearch clusters
               topicUid: Configuring_multiple_Elasticsearch_clusters
+            - name: Manually connecting a DMA to an Elasticsearch cluster
+              topicUID: Manually_Connecting_DMA_to_Elasticsearch_Cluster
+        - name: OpenSearch database
+          topicUID: OpenSearch_database
+          items:
+          - name: Configuring multiple OpenSearch clusters
+            topicUid: Configuring_multiple_OpenSearch_clusters
+        - name: Amazon OpenSearch Service
+          topicUID: Amazon_OpenSearch_Service
+        - name: Amazon Keyspaces Service
+          topicUid: Amazon_Keyspaces_Service
         - name: MySQL database
           topicUID: MySQL_database
           items:
@@ -1111,6 +1124,8 @@
               topicUid: Encryption_in_DataMiner
             - name: Cloud connectivity and security
               topicUID: Cloud_connectivity_and_security
+        - name: DataMiner hardening guide
+          topicUID: DataMiner_hardening_guide
         - name: DataMiner user permissions
           topicUid: DataMiner_user_permissions
         - name: Basic security configuration
@@ -1742,6 +1757,15 @@
               topicUid: Configuring_dashboard_access_rights
             - name: Dashboard Gateway troubleshooting
               topicUid: Dashboard_Gateway_troubleshooting
+    - name: Data Aggregator
+      topicUID: Data_Aggregator_DxM
+      items:
+        - name: Installation and setup
+          topicUID: Data_Aggregator_install_setup
+        - name: Settings
+          topicUID: Data_Aggregator_settings
+        - name: Configuring GQI queries
+          topicUID: Data_Aggregator_queries
     - name: DataMiner Object Models (DOM)
       topicUID: DOM
       items:
@@ -2268,6 +2292,8 @@
               topicUid: I-DOCSIS_supported_technologies
             - name: EPM I-DOCSIS deployment
               topicUid: I-DOCSIS_deployment
+            - name: EPM I-DOCSS upgrade
+              topicUid: I-DOCSIS_upgrade
             - name: Available parameters in I-DOCSIS
               topicUid: I-DOCSIS_parameters
               items:
@@ -2363,6 +2389,21 @@
                   topicUid: D-DOCSIS_parameters_cin_interface
                 - name: Manufacturer
                   topicUid: D-DOCSIS_parameters_manufacturer
+        - name: DataMiner EPM VSAT
+          topicUid: EPM_VSAT
+          items:
+            - name: EPM VSAT architecture
+              topicUID: VSAT_architecture
+            - name: EPM VSAT components
+              topicUID: VSAT_components
+            - name: EPM VSAT deployment
+              topicUID: VSAT_deployment
+            - name: EPM VSAT topology
+              topicUID: VSAT_EPM_Topology
+            - name: EPM VSAT metrics
+              topicUID: VSAT_metrics
+            - name: Available parameters in VSAT
+              topicUID: VSAT_parameters
     - name: DataMiner IDP app
       topicUid: SolIDP
       items:
@@ -2733,50 +2774,10 @@
     - name: DataMiner Teams bot
       topicUid: DataMiner_Teams_bot
     - name: Advanced configuration
+      topicUID: Custom_cloud_endpoint_configuration
       items:
         - name: Customizing the dataminer.services endpoint configuration
           topicUID: Custom_cloud_endpoint_configuration
-- name: DataMiner Professional Services
-  topicUid: Part52ProfessionalServices
-  items:
-    - name: DataMiner Solution Deployment Methodology
-      topicUid: DeploymentMethodology
-      items:
-        - name: About Digital Transformation
-          topicUid: DeploymentMethodology
-        - name: Managing technology deployments
-          topicUid: Managing_technology_deployments
-          items:
-            - name: Methodology is key to success
-              topicUid: Managing_technology_deployments
-            - name: Methodology is not a choice
-              topicUid: Methodology_is_not_a_choice
-            - name: Methodology needs to be practiced
-              topicUid: Methodology_needs_to_be_practiced
-        - name: Deployment methodologies in summary
-          topicUid: Deployment_methodologies_in_summary
-        - name: Turnkey Methodology
-          topicUid: Turnkey_Methodology
-          items:
-            - name: Typical phases of a Turnkey Project deployment
-              topicUid: Typical_phases_of_a_Turnkey_Project_deployment
-            - name: Terms & Conditions for a Turnkey Project deployment
-              topicUid: Terms_Conditions_for_a_Turnkey_Project_deployment
-            - name: Change Request Procedure
-              topicUid: Change_Request_Procedure
-        - name: Agile Scope-Based Methodology
-          topicUid: Agile_Scope-Based_Methodology
-          items:
-            - name: Key Values & Principles
-              topicUid: Key_Values_Principles
-            - name: Formal roles for Agile Scope-Based deployment
-              topicUid: Formal_roles_for_Agile_Scope-Based_deployment
-            - name: Typical Phases for Agile Scope-Based projects
-              topicUid: Typical_Phases_for_Agile_Scope-Based_projects
-        - name: Agile Time & Materials Methodology
-          topicUid: Agile_Time_Materials_Methodology
-        - name: Some Use Cases & Practical Examples
-          topicUid: Some_Use_Cases_Practical_Examples
 - name: Troubleshooting
   topicUid: Part6Troubleshooting
   items:
@@ -2887,6 +2888,10 @@
     - name: Known issues
       topicUID: Known_issues
       items:
+        - name: SLPort deadlock when element with serial connection is restarted
+          topicUID: KI_SLPort_deadlock_after_restart_serial_connection
+        - name: Local user unable to access DMA after first reboot after installation
+          topicUID: KI_Local_user_unable_to_access_DMA_after_first_reboot_after_installation
         - name: Contents of state_changes table not migrated after Cassandra Cluster migration
           topicUID: KI_Contents_of_State_changes_Table_not_Migrated_after_Cassandra_Cluster_Migration
         - name: Cassandra cluster node in unexpected state
@@ -3043,6 +3048,8 @@
     - name: Tools
       topicUid: DataminerTools
       items:
+        - name: Activate CDMR tool
+          topicUID: Activate_CDMR
         - name: Alerter
           topicUid: Alerter
           items:
@@ -3054,8 +3061,16 @@
               topicUid: Working_with_Alerter_pop-up_balloons
             - name: Configuring Alerter
               topicUid: Configuring_Alerter
+        - name: Analyze startup logs
+          topicUID: Analyze_Startup_Logs
         - name: Cassandra Cleaner
           topicUID: Cassandra_Cleaner
+        - name: Cassandra Clone
+          topicUID: Cassandra_Clone
+        - name: Cassandra Cluster Validator
+          topicUID: Cassandra_Cluster_Validator
+        - name: Connection Check
+          topicUID: Connection_Check
         - name: DataMiner Comparison tool
           topicUID: DataMinerComparisonTool
         - name: DataMiner Size tool
@@ -3067,8 +3082,12 @@
               topicUid: Taskbar_Utility_shortcut_menu
             - name: Taskbar Utility command line options
               topicUid: Taskbar_Utility_command_line_options
+        - name: Dump Spectrum Preset Contents
+          topicUID: Dump_Spectrum_Preset_Content
         - name: Factory reset tool
           topicUID: Factory_reset_tool
+        - name: InstallConfiguration XSD
+          topicUID: InstallConfiguration_XSD
         - name: Legacy trend data exporter
           topicUID: Legacy_Trend_Data_Exporter
         - name: Multi-threaded timer polling rate calculator

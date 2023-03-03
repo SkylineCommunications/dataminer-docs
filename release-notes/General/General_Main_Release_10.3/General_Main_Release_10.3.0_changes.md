@@ -2,10 +2,10 @@
 uid: General_Main_Release_10.3.0_changes
 ---
 
-# General Main Release 10.3.0 – Changes (preview)
+# General Main Release 10.3.0 – Changes
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 > For release notes related to DataMiner Cube, see [DataMiner Cube 10.3.0](xref:Cube_Main_Release_10.3.0).
@@ -692,8 +692,8 @@ If a DOM module is created without specifying *SecuritySettings*, the view permi
 
 Up to now, the check to determine whether a user had the view permission set to "None", would only return true for the Administrator or users in the Administrator group. From now on, when the required view permission is "None", permission checks will no longer be performed.
 
-#### NATSMaxPayloadException could be thrown when a client requested large amounts of data [ID_35306]
+#### Cassandra Cluster: Rows would incorrectly be added without TTL value [ID_35789]
 
-<!-- MR 10.3.0 - FR 10.3.3 -->
+<!-- MR 10.3.0 [CU0] - FR 10.3.3 [CU0] -->
 
-When a client requested large amounts of data, in some cases, a `NATSMaxPayloadException` could be thrown.
+When a row was added to a Cassandra Cluster table, no TTL value would be inserted into the TTL column of that row.

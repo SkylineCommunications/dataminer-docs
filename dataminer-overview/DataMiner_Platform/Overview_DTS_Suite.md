@@ -13,3 +13,6 @@ Go to [Digital Transformation](https://skyline.be/digital-transformation) to fin
 - The powerful and versatile data acquisition and control layer
 - Collaboration across teams, suppliers, and customers to create endless possibilities (ChatOps, Dashboard Sharing, Custom Applications, and dynamic deployment of new APIs)
 - Augmented Operation, powered by AI
+
+> [!TIP]
+> See also: [Blog Post - One simple thing that can boost your Digital Transformation](https://skyline.be/skyline/news/one-simple-thing-can-boost-your-digital-transformation)

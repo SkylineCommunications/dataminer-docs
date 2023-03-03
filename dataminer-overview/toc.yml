@@ -27,6 +27,13 @@
           topicUid: Overview_Platform_Open_Platform
     - name: dataminer.services
       topicUid: Overview_DCP
+      items:
+        - name: DevOps
+          topicUID: Overview_DevOps
+        - name: Platform Services
+          topicUID: Overview_Platform_services
+        - name: Collaboration
+          topicUID: Overview_Collaboration
     - name: Agile partnership
       topicUid: Overview_Agile_Partnership_intro
       items:
@@ -36,6 +43,25 @@
           topicUid: Overview_Agile_Partnership_principles
         - name: Agile scope-based deployment
           topicUid: Overview_Agile_Partnership_scope_based_deployment
+    - name: DevOps
+      topicUID: Overview_DevOps_index
+      items:
+        - name: DataMiner DevOps Professional Program
+          topicUID: DataMiner_Devops_Professionals
+          items:
+            - name: What is it?
+              topicUID: What_is_the_DevOps_Professionals_Program
+            - name: Benefits
+              topicUID: Benefits_DevOps_Professionals_Program
+            - name: Required skill sets
+              topicUID: Skill_Sets_DevOps_Professionals_Program
+        - name: DataMiner DevOps Enablement Service
+          topicUID: DataMiner_DevOps_Enablement
+          items:
+            - name: What is DevOps Enablement?
+              topicUID: What_is_DataMiner_DevOps_Enablement
+            - name: The DataMiner DevOps Professional Program
+              topicUID: DevOps_Enablement_and_the_DevOps_Professional_program
     - name: Training courses and certification
       topicUid: Overview_Training_intro
       items:
@@ -69,8 +95,8 @@
           topicUid: Overview_Out_Of_Business_Hours_Support
         - name: CCA Support Services
           topicUid: CCA_Support_Services
-        - name: Support services agreement
-          topicUid: Support_services_agreement
+        - name: Support services terms
+          topicUid: Support_services_terms
     - name: Compliance statements
       topicUid: Overview_Compliance_Statements_intro
       items:
@@ -92,22 +118,47 @@
               topicUID: Service_Delivery
             - name: Partnership governance
               topicUID: Partnership_Governance
-    - name: DataMiner DevOps Professional Program
-      topicUID: DataMiner_Devops_Professionals
+    - name: DataMiner Professional Services
+      topicUid: Part52ProfessionalServices
       items:
-        - name: What is it?
-          topicUID: What_is_the_DevOps_Professionals_Program
-        - name: Benefits
-          topicUID: Benefits_DevOps_Professionals_Program
-        - name: Required skill sets
-          topicUID: Skill_Sets_DevOps_Professionals_Program
-    - name: DataMiner DevOps Enablement Service
-      topicUID: DataMiner_DevOps_Enablement
-      items:
-        - name: What is DevOps Enablement?
-          topicUID: What_is_DataMiner_DevOps_Enablement
-        - name: The DataMiner DevOps Professional Program
-          topicUID: DevOps_Enablement_and_the_DevOps_Professional_program
+        - name: DataMiner Solution Deployment Methodology
+          topicUid: DeploymentMethodology
+          items:
+            - name: About Digital Transformation
+              topicUid: DeploymentMethodology
+            - name: Managing technology deployments
+              topicUid: Managing_technology_deployments
+              items:
+                - name: Methodology is key to success
+                  topicUid: Managing_technology_deployments
+                - name: Methodology is not a choice
+                  topicUid: Methodology_is_not_a_choice
+                - name: Methodology needs to be practiced
+                  topicUid: Methodology_needs_to_be_practiced
+            - name: Deployment methodologies in summary
+              topicUid: Deployment_methodologies_in_summary
+            - name: Turnkey Methodology
+              topicUid: Turnkey_Methodology
+              items:
+                - name: Typical phases of a Turnkey Project deployment
+                  topicUid: Typical_phases_of_a_Turnkey_Project_deployment
+                - name: Terms & Conditions for a Turnkey Project deployment
+                  topicUid: Terms_Conditions_for_a_Turnkey_Project_deployment
+                - name: Change Request Procedure
+                  topicUid: Change_Request_Procedure
+            - name: Agile Scope-Based Methodology
+              topicUid: Agile_Scope-Based_Methodology
+              items:
+                - name: Key Values & Principles
+                  topicUid: Key_Values_Principles
+                - name: Formal roles for Agile Scope-Based deployment
+                  topicUid: Formal_roles_for_Agile_Scope-Based_deployment
+                - name: Typical Phases for Agile Scope-Based projects
+                  topicUid: Typical_Phases_for_Agile_Scope-Based_projects
+            - name: Agile Time & Materials Methodology
+              topicUid: Agile_Time_Materials_Methodology
+            - name: Some Use Cases & Practical Examples
+              topicUid: Some_Use_Cases_Practical_Examples
     - name: Frequently asked questions
       topicUid: FAQs
       items:

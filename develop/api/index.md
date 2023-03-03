@@ -28,3 +28,7 @@ uid: ApiDocumentation
 
 - [DataMiner error codes](xref:DataMinerErrorCodes)
 - [Error code table](xref:ErrorCodeTable)
+
+### Extension modules error codes
+
+- [CommunicationGateway error codes](xref:CommunicationGateway_ErrorCodes)

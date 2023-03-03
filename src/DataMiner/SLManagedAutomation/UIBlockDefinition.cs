@@ -165,7 +165,7 @@ namespace Skyline.DataMiner.Automation
 		/// </summary>
 		/// <value>The alias that will be used to retrieve the value entered or selected by the user from the <see cref="UIResults"/> object.</value>
 		/// <remarks>
-		/// <para>Applicable only when <see cref="Type"/> is set to either Button, Calender, CheckBox, CheckBoxList, DropDown, TextBox, Time or TreeView.</para>
+		/// <para>Applicable only when <see cref="Type"/> is set to either Button, Calendar, CheckBox, CheckBoxList, DropDown, TextBox, Time or TreeView.</para>
 		/// <para>Note: Unlike a variable, a DestVar alias does not have to be declared.</para>
 		/// </remarks>
 		/// <example>

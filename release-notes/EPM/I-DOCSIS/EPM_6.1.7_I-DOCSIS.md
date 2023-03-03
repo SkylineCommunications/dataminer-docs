@@ -70,3 +70,13 @@ After a CCAP platform element started up, it could occur that an exception simil
 ```
 
 Retry logic has now been added to all CCAP platform connectors to prevent this issue.
+
+#### Run-time error caused by CCAP connector [ID_35599]
+
+In some cases, CCAP connectors could cause run-time errors. To prevent this, the *partialSNMP* option has been added to all SNMP tables in order to divide the polling over several smaller groups.
+
+#### Invalid ID in passive tables [ID_35659]
+
+When there were no passive files to be processed, there could be an empty row with ID -1 in the Tap table. This happened when source elements contained an exception value that was used for grouping during merge actions. To prevent this, the table keys are now added first, and merge action results are limited so that no other keys are added afterwards.
+
+In addition, the passive tables are now only filled in when the CCAP/collector pairs in the Registration table are present and CCAP elements are running. This way tables do not get updated with data from inactive elements or invalid CCAP/collector data.

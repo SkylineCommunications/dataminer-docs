@@ -90,7 +90,11 @@ The following pages are available:
 
   - ![Wrench icon](~/user-guide/images/MonitoringX_writeparam2.png) : Allows you to modify the value of a parameter.
 
-  - ![Trend graph icon](~/user-guide/images/MonitoringX_trend2.png) : Allows you to view additional information on a trended parameter. When you click the icon, the parameter description, the parameter ID and the time of the last change to the parameter are displayed. Below this, the *View trending* option provides access to the trending page, where you can view a trend graph or histogram for the parameter. On the left, the time span for the trend graph can be configured.
+  - ![Trend graph icon](~/user-guide/images/MonitoringX_trend2.png) : Allows you to view additional information on a trended parameter. When you click the icon, the parameter description, the parameter ID, and the time of the last change to the parameter are displayed.
+
+    Below this, the *View trending* option provides access to the trending page, where you can view a trend graph or histogram for the parameter. On the left, the time span for the trend graph can be configured.
+
+    From DataMiner 10.3.3/10.4.0 onwards, the header of a trend card shows a breadcrumb trail. Navigate back to the element card item by clicking it in the breadcrumb trail.
 
     > [!NOTE]
     > From DataMiner 10.2.0 [CU10]/10.3.1 onwards, the Monitoring app also supports trend graphs for string parameters.

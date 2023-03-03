@@ -2,25 +2,64 @@
 uid: Cube_Feature_Release_10.3.3
 ---
 
-# DataMiner Cube Feature Release 10.3.3 – Preview
+# DataMiner Cube Feature Release 10.3.3
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
-> For release notes for this release that are not related to DataMiner Cube, see [General Feature Release 10.3.2](xref:General_Feature_Release_10.3.3).
+> For release notes for this release that are not related to DataMiner Cube, see [General Feature Release 10.3.3](xref:General_Feature_Release_10.3.3).
 
 ## Highlights
 
-*No highlights have been selected for this release yet*
+#### System Center - Database: Elasticsearch/OpenSearch configuration for Cassandra Cluster setup in Cube [ID_34651]
 
-## Other features
+<!-- MR 10.3.0 - FR 10.3.3 -->
+<!-- See General RNs for other change from this RN -->
+
+If a DataMiner System is configured to use a Cassandra Cluster setup (i.e. a setup where one Cassandra cluster is used for the entire DMS), in the *Database* section of System Center, you can now also configure the settings for the Elasticsearch or OpenSearch database:
+
+- Database: *Elasticsearch* or *Elasticsearch/OpenSearch*.
+- Database prefix: The name all indices will be prefixed with.
+- DB server: The IP addresses or hostnames of the Elasticsearch nodes, or the URL of the Amazon OpenSearch Service endpoint.
+- User/Password: The credentials with which the DMA can log on to the database (if applicable).
+
+> [!TIP]
+> See also: [OpenSearch & Amazon OpenSearch Service [ID_34651]](xref:General_Feature_Release_10.3.3#opensearch--amazon-opensearch-service-id_34651)
+
+#### Automation: New user/group setting to specify whether users have to confirm program executions launched from interactive Automation scripts [ID_35418]
+
+<!-- MR 10.4.0 - FR 10.3.3 -->
+
+A new user/group setting named *Do not confirm program executions from scripts*, found in the *User > Cube* tab of the *Settings* window, now allows you to specify whether users will have to explicitly confirm each program execution that is launched from an interactive Automation script.
+
+By default, this option will be disabled, meaning that users will have to give their consent each time an interactive Automation script wants to launch a program. The confirmation box will also allow users to change the setting by selecting the *Don't show this confirmation again. Always launch program executions.* checkbox.
+
+Each time a program is launched, a start entry and an end entry will be added to the Cube logging as well as to the *SLClient.txt* log file on the DataMiner Agent.
+
+- The start entry will contain the following data:
+
+  - the name of the Automation script
+  - the ID of the Automation script
+  - the user's login data (full name, client machine name, client app name and last login date)
+  - the program that will be launched
+  - the arguments that will be passed to the program (if any)
+
+- The end entry will contain the following data:
+
+  - the user's login data (full name, client machine name, client app name and last login date)
+  - the process ID of the program
+  - the time at which the process ended
+  - the name of the program that ended
+  - the arguments that were passed to the program (if any)
+
+## Features
 
 #### System Center - Database: Address specified in the 'DB server' field of a database of type 'Cassandra' or 'CassandraCluster' can now include a custom port [ID_34590]
 
 <!-- MR 10.3.0 - FR 10.3.3 -->
 
-When, in the *Database* section of *System Center*, you are configuring a database of type "Cassandra" or "CassandraCluster", you can now specify an address with a custom port in the *DB server* field.
+When, in the *Database* section of System Center, you are configuring a database of type "Cassandra" or "CassandraCluster", you can now specify an address with a custom port in the *DB server* field.
 
 If you specify a hostname or IP address without a port, DataMiner will fall back to the default Cassandra port 9042.
 
@@ -28,7 +67,6 @@ Examples:
 
 - localhost (Will be resolved to localhost:9042)
 - 10.5.100.1:5555
-
 
 #### Visual Overview - ListView: Copying list data to the Windows clipboard [ID_35170]
 
@@ -58,32 +96,6 @@ The data copied to the Windows clipboard is split into a header section and a da
 <!-- MR 10.4.0 - FR 10.3.3 -->
 
 In the *Logging* section of *System Center*, you can now also consult the *SLSmartBaselineManager.txt* log file.
-
-#### Automation: New user/group setting to specify whether users have to confirm program executions launched from interactive Automation scripts [ID_35418]
-
-<!-- MR 10.4.0 - FR 10.3.3 -->
-
-A new user/group setting named *Do not confirm program executions from scripts*, found in the *User > Cube* tab of the *Settings* window, now allows you to specify whether users will have to explicitly confirm each program execution that is launched from an interactive Automation script.
-
-By default, this option will be disabled, meaning that users will have to give their consent each time an interactive Automation script wants to launch a program. The confirmation box will also allow users to change the setting by selecting the *Don't show this confirmation again. Always launch program executions.* checkbox.
-
-Each time a program is launched, a start entry and an end entry will be added to the Cube logging as well as to the *SLClient.txt* log file on the DataMiner Agent.
-
-- The start entry will contain the following data:
-
-  - the name of the Automation script
-  - the ID of the Automation script
-  - the user's login data (full name, client machine name, client app name and last login date)
-  - the program that will be launched
-  - the arguments that will be passed to the program (if any)
-
-- The end entry will contain the following data:
-
-  - the user's login data (full name, client machine name, client app name and last login date)
-  - the process ID of the program
-  - the time at which the process ended
-  - the name of the program that ended
-  - the arguments that were passed to the program (if any)
 
 ## Changes
 
@@ -137,6 +149,14 @@ From now on, data retrieved from the collector that used to be displayed as a ta
 When you try to create a trend pattern tag, an error message will appear when there are too many missing values in the selected pattern.
 
 From now on, a slightly larger number of missing values will be allowed will you create a trend pattern tag.
+
+#### Trending: Check marks will no longer appear in front of related parameters after adding them to the trend graph [ID_35518]
+
+<!-- MR 10.4.0 - FR 10.3.3 -->
+
+In the top-right corner of a trend graph, a light bulb icon appears when DataMiner finds parameters that are related to the parameters shown in the trend graph. Clicking this light bulb icon allows you to add one or more of those related parameters to the trend graph you are viewing.
+
+Up to now, when you clicked one of those related parameters in order to add it to the trend graph, a check mark would appear in front of it. From now on, check marks will no longer appear in front of related parameters after selecting them.
 
 #### DataMiner Cube - Alarm Console: No longer possible to enable the 'Automatic incident tracking' option for a history tab [ID_35556]
 
@@ -198,13 +218,13 @@ When a tree control contained many-to-many relationships, up to now, the alarm b
 
 #### Trending: Pattern matching tags could incorrectly be defined for discrete or string parameters [ID_35368]
 
-<!-- MR 10.4.0 - FR 10.3.3 -->
+<!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.3 -->
 
 Pattern matching does not support discrete or string parameters. However, up to now, when viewing a trend graph that showed trend information for either a discrete or a string parameter, it would incorrectly be possible to define tags for pattern matching. From now on, this will no longer be possible.
 
 #### Trending: Tag icon was displayed after you selected a section of a trend graph even though it was not possible to define tags [ID_35378] [ID_35383]
 
-<!-- MR 10.4.0 - FR 10.3.3 -->
+<!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.3 -->
 
 In some cases, when the pattern matching feature was not enabled in *System Center* > *System settings* > *analytics config*, the tag icon was displayed after you selected a section of a trend graph even though it was not actually possible to define tags.
 
@@ -271,6 +291,12 @@ When, while configuring an alarm template, you opened the baseline editor and se
 <!-- MR 10.3.0 - FR 10.3.3 -->
 
 When you had configured DataMiner Cube to connect using gRPC (by specifying `type=GRPCConnection` in the *ConnectionSettings.txt* file), newly created users would be assigned an invalid full name, description and password.
+
+#### Alarm Console: When you clicked a suggestion alarm, the change points and patterns would incorrectly not be loaded [ID_35497]
+
+<!-- MR 10.4.0 - FR 10.3.3 -->
+
+When you clicked a suggestion alarm, in some cases, the trend graph would be loaded but the change points and the patterns incorrectly would not.
 
 #### EPM cards: Collector pages would not be loaded [ID_35523]
 

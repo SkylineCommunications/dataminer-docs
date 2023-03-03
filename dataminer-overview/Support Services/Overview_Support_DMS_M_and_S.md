@@ -11,7 +11,7 @@ In addition to the default [Standard Limited Warranty](xref:Overview_Support_war
 - Free-of-charge dataminer.services [essential package](https://community.dataminer.services/dataminer-cloud-platform-services/).
 
 > [!TIP]
-> For more information about our regular business hours, refer to our [Support Services Agreement](xref:Support_services_agreement).
+> For more information about our regular business hours, refer to our [Support Services Terms](xref:Support_services_terms).
 
 DataMiner Support Services are supplied at **no charge commencing the date of delivery and continuing for a period of 6 months**.
 

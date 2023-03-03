@@ -71,6 +71,11 @@ The following options can be specified in the *ComponentOptions* shape data fiel
 
 - **StartTime=** and **EndTime=**: Available from DataMiner 9.6.5 onwards. If the list view is configured to list bookings, you can use these shape data to specify a time range, using an invariant format, for example: MM/DD/YYYY HH:MM:SS. These date/time values will always be **interpreted as UTC date/time values**. If these shape data are not specified, the following values are used by default:
 
+  - StartTime = NOW - 8 hours
+  - EndTime = NOW + 16 hours
+
+  Prior to DataMiner 10.2.0 [CU13]/10.3.4, the following default values are used instead:
+
   - StartTime = NOW - 1 day
   - EndTime = NOW + 1 day
 
@@ -329,7 +334,7 @@ The following session variables can be used in conjunction with the *ListView* c
   - Interrupted (6)
   - Canceled (7)
 
-- **ViewPort**: This session variable has to contain the time range that will be used when populating a dynamic list with bookings. Example: *5248460498427387904;5248491602427387904*.
+- **ViewPort**: This session variable has to contain the time range that will be used when populating a dynamic list with bookings. For more information, see [ViewPort](xref:Embedding_a_Resource_Manager_component#viewport).
 
 - **YAxisResources**: When the list is configured to show bookings, you can use this session variable to apply a filter. Example:
 
