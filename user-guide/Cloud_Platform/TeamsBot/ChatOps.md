@@ -1,8 +1,8 @@
 ---
-uid: Chat_Ops
+uid: ChatOps
 ---
 
-# Chat Ops
+# ChatOps
 
 If your DataMiner System is connected to dataminer.services, you can integrate your DataMiner System into business communication platforms by using the DataMiner Bot and Automation scripts.
 
@@ -17,4 +17,4 @@ If your DataMiner System is connected to dataminer.services, you can integrate y
 
 ## Slack
 
-In the future, we plan to offer support for Chat Ops on Slack as well, as it is a widely used team messaging platform
+In the future, we plan to offer support for ChatOps on Slack as well, as it is a widely used team messaging platform

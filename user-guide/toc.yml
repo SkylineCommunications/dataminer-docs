@@ -2750,7 +2750,7 @@
         - name: Viewing information on shares
           topicUid: Viewing_info_on_shares
     - name: ChatOps
-      topicUid: Chat_Ops
+      topicUid: ChatOps
       items:
         - name: DataMiner Teams bot
           topicUid: DataMiner_Teams_bot
