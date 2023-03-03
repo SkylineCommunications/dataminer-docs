@@ -25,7 +25,7 @@ These are the error codes that can be returned when the CommunicationGateway is 
 |Aborted|Aborted|10|The operation was aborted, typically because of a concurrency issue such as a sequencer check failure or transaction abort.|
 |OutOfRange|Out of range|11|The operation was attempted past the valid range. E.g. seeking or reading past end of file.|
 |Unimplemented|Unimplemented|12|The operation is not implemented or is not supported/enabled in this service.|
-|Internal|Internal|13|Reserved for serious errors. This means that some invariants expected by the underlying system have been broken. This error could be returned when using an HTTPS connection and there is something wrong with the certificate (expired, root authority not trusted,...). Check the CommunicationGateway logging for more detailed error information.|
+|Internal|Internal|13|Reserved for serious errors. This means that some invariants expected by the underlying system have been broken. This error could be returned when an HTTPS connection is used and there is something wrong with the certificate (expired, root authority not trusted, etc.). Check the CommunicationGateway logging for more detailed error information.|
 |Unavailable|Unavailable|14|The service is currently unavailable. This can most likely be corrected by retrying after waiting a little bit. This error can also be returned when the TCP socket with the data source is not available. Is the IP of the data source reachable or is there a firewall blocking the connection? Check the CommunicationGateway logging for more detailed error information.|
 |DataLoss|Data loss|15|Unrecoverable data loss or corruption.|
 |Unauthenticated|Unauthenticated|16|The request does not have valid authentication credentials for the operation.|
