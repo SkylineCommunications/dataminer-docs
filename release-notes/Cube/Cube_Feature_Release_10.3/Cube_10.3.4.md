@@ -28,6 +28,12 @@ By default, you can select multiple rows in a list view (e.g. using the CTRL or 
 
 When, in a Visio drawing, shapes had been positioned dynamically based on properties, up to now, it was possible to re-arrange individual shapes manually. From now on, it will also be possible to re-arrange grouped shapes.
 
+#### Embedded web apps can now interact with Cube when using the Microsoft Edge (WebView2) browser plugin [ID_35655]
+
+<!-- MR 10.4.0 - FR 10.3.4 -->
+
+From now on, when using the Microsoft Edge (WebView2) web browser plugin, embedded web apps can interact with Cube (e.g. open an element card).
+
 ## Changes
 
 ### Enhancements

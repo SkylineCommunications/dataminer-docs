@@ -156,6 +156,12 @@ When, in a Visio drawing, shapes had been positioned dynamically based on proper
 
 In the *Logging* section of *System Center*, you can now also consult the *SLSmartBaselineManager.txt* log file.
 
+#### Embedded web apps can now interact with Cube when using the Microsoft Edge (WebView2) browser plugin [ID_35655]
+
+<!-- MR 10.4.0 - FR 10.3.4 -->
+
+From now on, when using the Microsoft Edge (WebView2) web browser plugin, embedded web apps can interact with Cube (e.g. open an element card).
+
 ## Changes
 
 ### Enhancements
