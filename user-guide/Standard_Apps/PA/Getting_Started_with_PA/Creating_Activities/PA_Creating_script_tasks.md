@@ -141,8 +141,8 @@ uid: PA_Creating_script_tasks
       > [!NOTE]
       > In the C# block, never try to directly retrieve data from the DOM instance, as this can have unexpected results.
 
-      > [!IMPORTANT]
-      > Check that the script has three parameters: *Info*, *ProcessInfo* and *ProfileInstance*.
+   > [!IMPORTANT]
+   > The script must have three parameters: *Info*, *ProcessInfo*, and *ProfileInstance*. Double-check to make sure that this is indeed the case.
 
 1. Link the script with the profile definition you created earlier.
 
