@@ -36,7 +36,7 @@ If you want to create chat integration Automation scripts, you will need to make
 
 #### Microsoft Teams prerequisites
 
-- You must allow the [DataMiner bot](https://teams.microsoft.com/l/app/9a09d087-5d07-4481-b34f-cd053eab7925) in Microsoft Teams. For more information, refer to the [Microsoft documenation](https://docs.microsoft.com/en-us/microsoftteams/manage-apps).
+- You must allow the [DataMiner bot](https://teams.microsoft.com/l/app/9a09d087-5d07-4481-b34f-cd053eab7925) in Microsoft Teams. For more information, refer to the [Microsoft documentation](https://docs.microsoft.com/en-us/microsoftteams/manage-apps).
 
 - [Admin consent must be granted](xref:Granting_admin_consent) in the [Admin app](https://admin.dataminer.services). You can revoke this consent at any time.
 
