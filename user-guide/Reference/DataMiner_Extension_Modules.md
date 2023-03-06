@@ -43,3 +43,15 @@ The SupportAssistant module is responsible for features allowing Skyline Communi
 ### ModelHost
 
 The ModelHost module is responsible for allowing users to retrieve parameter relationship data on DataMiner Agents that are connected to dataminer.services, and have been configured to [offload alarm and change point events to the cloud](xref:Controlling_cloudfeed_data_offloads).
+
+The ModelHost module is not included in the Cloud Pack and must be deployed separately:
+
+1. Open the Admin app. See [Accessing the Admin app](xref:Accessing_the_Admin_app).
+
+1. In the Admin app, check whether the correct organization is mentioned in the header bar.
+
+1. If a different organization should be selected, click the organization selector ![organization selector](~/user-guide/images/Cloud_Admin_Selector_icon.png) in the top-right corner and select the organization in the list.
+
+1. In the pane on the left, under *DataMiner Systems*, select your DataMiner System and select the *Nodes* page.
+
+1. Next to *ModelHost*, select to deploy this DxM.
