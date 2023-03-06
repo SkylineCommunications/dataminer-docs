@@ -34,7 +34,7 @@ No inconsistencies have been detected in the system.
 
 Global errors:
 - `Function definition ID '{FunctionDefinitionId}' is not unique.`
-	`It was found in the active function files of the following protocols: {Protocols}`
+	`It was found in the active function files of the following protocols: {Protocols}.`
 
 Element errors:
 - `[Generic DVE Table] entry {PK} is configured with resource ID '{ResourceID}', which was not found in Resource Manager.`
