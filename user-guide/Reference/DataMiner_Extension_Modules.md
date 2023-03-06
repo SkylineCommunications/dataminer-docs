@@ -28,6 +28,10 @@ The CoreGateway module is responsible for translating requests from other module
 
 The CloudFeed module is responsible for offloading data towards dataminer.services. This setting can be controlled in the [Admin app](xref:Controlling_cloudfeed_data_offloads). Among the data that is offloaded are SPI events and alarm events.
 
+### DataAggregator
+
+See [Data Aggregator](xref:Data_Aggregator_DxM).
+
 ### Orchestrator
 
 The Orchestrator module is responsible for management and upgrades of DxMs through the [Admin app](xref:Managing_cloud-connected_nodes).
