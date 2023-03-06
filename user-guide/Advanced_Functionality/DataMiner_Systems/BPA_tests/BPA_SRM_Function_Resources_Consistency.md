@@ -34,10 +34,11 @@ No inconsistencies have been detected in the system.
 ### Error
 
 Global errors:
-- `Function definition ID '{FunctionDefinitionId}' is not unique.`
-	`It was found in the active function files of the following protocols: {Protocols}.`
+
+- `Function definition ID '{FunctionDefinitionId}' is not unique.`<br>`It was found in the active function files of the following protocols: {Protocols}.`
 
 Element errors:
+
 - `[Generic DVE Table] entry {PK} is configured with resource ID '{ResourceID}', which was not found in Resource Manager.`
 - `[Generic DVE Table] entry {PK} is configured with a blank resource ID, so no matching resource could be found in Resource Manager.`
 - `[Generic DVE Table] entry {PK} is configured with the element name - function name combination '{Name}.{Name}', which is already used as the element name of element '{DataMinerID}/{ElementID}'.`
@@ -60,9 +61,11 @@ Element errors:
 ### Warning
 
 Global warnings:
+
 - `Could not retrieve all elements.`
 
 Element warnings:
+
 - `Could not check resources of this element because the state is set to stopped.`
 - `No Linker table entry found for resource(s): {Names & PKs} .`
 - `The element ID is not unique.`
