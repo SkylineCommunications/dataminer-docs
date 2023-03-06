@@ -43,7 +43,7 @@ uid: Overview_Collaboration
 > - [ChatOps User Guide](xref:ChatOps)
 > - [Example Use Case - Custom chat commands](https://community.dataminer.services/use-case/dataminer-chatops-custom-commands/)
 > - [Examples - Custom chat commands](https://github.com/SkylineCommunications/ChatOps-Extensions/blob/main/CustomCommandExamples)
-> - [Examples - Chat Integration](https://github.com/SkylineCommunications/ChatOps-Extensions/tree/main/ChatIntegrationExamples)
+> - [Examples - Chat integration](https://github.com/SkylineCommunications/ChatOps-Extensions/tree/main/ChatIntegrationExamples)
 
 ## API Share *(coming soon)*
 
