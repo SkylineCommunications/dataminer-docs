@@ -9,16 +9,17 @@ This BPA test checks for any inconsistencies between the resource objects and th
 - It checks for any inconsistencies in the DVE tables: states, names, linked resources, and elements.
 - It checks for duplicate names or IDs and other possible configuration issues.
 
-It shows the global errors and errors and warnings per element, listing the errors and warnings separately.
+It shows the global errors and the errors and warnings per element, listing the errors and warnings separately.
 
 This BPA test is included in the SRM Framework. You can [run it in System Center](xref:Running_BPA_tests) on the *Agents > BPA* tab.
 
 > [!NOTE]
 > The BPA can take over 30 seconds to run, depending on the scale of the system.
+
 ## Metadata
 
 - Name: SRM Function Resources Consistency
-- Description: Detects any inconsistencies between the resource objects and the [Generic DVE table] entries on the main element as well as duplicate names.
+- Description: Detects any inconsistencies between the resource objects and the [Generic DVE table] entries on the main element as well as other configuration issues.
 - Author: Skyline Communications
 - Default schedule: Daily
 
