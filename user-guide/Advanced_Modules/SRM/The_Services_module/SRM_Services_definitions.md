@@ -94,7 +94,7 @@ To do so:
      Nodes that belong to particular groups will be displayed with colors matching these groups. The group colors are shown in a legend below the diagram.
 
      > [!NOTE]
-     > Node grouping is no longer used in recent versions of the SRM Framework. Other than the visual grouping in the Services app, it no longer serves any purpose.
+     > Node grouping is no longer used in recent versions of the SRM framework. Other than the visual grouping in the Services app, it no longer serves any purpose.
 
 ## Properties tab
 

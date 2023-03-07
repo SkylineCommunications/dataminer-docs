@@ -116,4 +116,4 @@ A virtual platform **groups various components into a single domain**, such as a
 - A **booking application** is always linked to a specific virtual platform. As a result, only resource pools and service definitions that are linked to that specific virtual platform will be available for bookings created with that booking application.
 
 > [!NOTE]
-> Within the SRM Framework, the virtual platform needs to be configured in the Booking Manager app (see [Deploying the SRM Framework](xref:deploying_srm)), and in case Service Orchestration is used, in the [service definition](xref:Service_Orch_creating_service_definitions) as well as in each [resource pool](xref:Service_Orch_configuring_resource_and_pools).
+> Within the SRM framework, the virtual platform needs to be configured in the Booking Manager app (see [Deploying the SRM framework](xref:deploying_srm)), and in case Service Orchestration is used, in the [service definition](xref:Service_Orch_creating_service_definitions) as well as in each [resource pool](xref:Service_Orch_configuring_resource_and_pools).

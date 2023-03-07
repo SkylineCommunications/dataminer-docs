@@ -6,7 +6,7 @@ uid: Service_Orch_configuring_resource_and_pools
 
 In the [Resources](xref:The_Resources_module) module, you can define resources and group them into resource pools.
 
-Typically, virtual function resources are generated based on a *functions.xml* file. However, for very specific use cases, the SRM Framework also supports the use of resources that are added manually and not based on a *functions.xml* file.
+Typically, virtual function resources are generated based on a *functions.xml* file. However, for very specific use cases, the SRM framework also supports the use of resources that are added manually and not based on a *functions.xml* file.
 
 Resources can be extended with metadata:
 

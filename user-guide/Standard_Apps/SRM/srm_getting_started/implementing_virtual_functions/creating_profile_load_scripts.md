@@ -48,7 +48,7 @@ A PLS takes the following input arguments:
 
 - Script parameter: *ProfileInstance*
 
-Input arguments will automatically be filled in by the SRM Framework when a profile needs to be applied to a function DVE.
+Input arguments will automatically be filled in by the SRM framework when a profile needs to be applied to a function DVE.
 
 > [!CAUTION]
 > The content and syntax of the script parameters is subject to change. You should therefore never manipulate this yourself when you create or edit a PLS script.
@@ -207,7 +207,7 @@ PLS can be used in an automated way with a script that fully defines the test se
 
 The test sequence can be as simple as applying a profile instance to a single resource, but as it is based on a custom script, it can also support advanced test cases involving many resources and profile instances.
 
-1. Create a custom script defining the test sequence, based on the example script *SRM_ProfileLoadScriptTesterScriptExample* provided with the SRM Framework.
+1. Create a custom script defining the test sequence, based on the example script *SRM_ProfileLoadScriptTesterScriptExample* provided with the SRM framework.
 
    For example:
 
