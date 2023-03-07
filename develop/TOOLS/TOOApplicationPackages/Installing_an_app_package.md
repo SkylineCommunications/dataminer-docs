@@ -4,12 +4,15 @@ uid: Installing_an_app_package
 
 # Installing an application package
 
-Application packages can be uploaded, viewed, installed and configured using the SLNetClientTest tool. All commands related to application packages can be found under *Advanced > Apps > AppPackages*.
+Application packages can be uploaded, viewed, installed, and configured using the [SLNetClientTest tool](xref:SLNetClientTest_tool). All commands related to application packages can be found under *Advanced > Apps > AppPackages*.
 
 > [!NOTE]
->
-> - To be able to install application packages, you must have the following user permission: *Modules > System configuration > Agents > Install App packages*.
-> - It is not possible to execute an application package using the SLTaskbar Upgrade functionality. Double clicking a *.dmapp* will open up the *Upgrade* menu but the upgrade will fail. Only legacy DataMiner application packages or *.dmupgrade* packages can be executed like this.
+> To be able to install application packages, you must have the following user permission: *Modules > System configuration > Agents > Install App packages*.
+
+From DataMiner 10.1.0 [CU19]/10.2.0 [CU7]/10.2.10 onwards (RN 33969), you can double-click the application package to start the installation procedure.
+
+> [!IMPORTANT]
+> We currently do not support installing an application package via the System Center in DataMiner.
 
 Although the above-mentioned method is to be preferred, it is also possible to embed an application package into a *.dmupgrade* package. To do so:
 

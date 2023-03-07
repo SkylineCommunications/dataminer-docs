@@ -68,7 +68,7 @@ To implement a logger table, perform the following steps:
           <ColumnDefinition>VARCHAR(20)</ColumnDefinition>
        </Database>
        <Display>
-          <RTDisplay>false</RTDisplay>
+          <RTDisplay>true</RTDisplay>
        </Display>
        <Measurement>
           <Type>string</Type>
@@ -140,7 +140,7 @@ To implement a logger table, perform the following steps:
           <Partition partitionsToKeep="7">day</Partition>
        </Database>
        <Display>
-          <RTDisplay>false</RTDisplay>
+          <RTDisplay>true</RTDisplay>
        </Display>
        <Measurement>
           <Type>string</Type>

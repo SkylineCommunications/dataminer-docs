@@ -18,8 +18,7 @@ Whether you access a trend graph from a card or do so from the *Trending* module
 
   > [!NOTE]
   >
-  > - The parameter relationship feature is still in preview.
-  > - The parameter relationship feature is only accessible on cloud-connected DataMiner Agents that have the *ModelHost* DxM installed and that have been configured to [offload alarm and change point events to the cloud](xref:Controlling_cloudfeed_data_offloads). However, at this point, the feature is not yet available.
+  > - The parameter relationship feature is only available on DataMiner Agents that are connected to dataminer.services, have the *ModelHost* DxM installed, and have been configured to [offload alarm and change point events to the cloud](xref:Controlling_cloudfeed_data_offloads).
   > - Relationship models are calculated once per week. When this feature is activated, it can take up to a week before the first results are visible.
 
 Depending on the type of data that is displayed, the trend line looks different. For example, take a look at this trend graph in DataMiner 10.2.1:

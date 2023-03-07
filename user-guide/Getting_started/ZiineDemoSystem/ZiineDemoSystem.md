@@ -13,7 +13,7 @@ To connect to the Ziine Demo System:
 1. If you do not have the DataMiner Cube desktop application installed yet:
 
    1. Go to [dataminer.services](https://dataminer.services).
-   1. Log on using your DataMiner Cloud Platform account.
+   1. Log on using your dataminer.services account.
    1. In the top-right corner, select *Install DataMiner Cube > Desktop installation*.
 
    > [!TIP]

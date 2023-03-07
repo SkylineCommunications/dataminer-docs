@@ -2,10 +2,10 @@
 uid: Web_apps_Main_Release_10.3.0_new_features
 ---
 
-# DataMiner web apps Main Release 10.3.0 – New features – Preview
+# DataMiner web apps Main Release 10.3.0 – New features
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 ## Highlights
 
@@ -438,7 +438,7 @@ In the sidebar, next to the *All dashboards* and *Recent dashboards* icons, ther
 - *Private dashboards*, and
 - *Shared dashboards*.
 
-The first icon will only be available when there are private dashboards, the second icon will only be available when the DataMiner Agent is connected to the cloud and there are shared dashboards.
+The first icon will only be available when there are private dashboards, the second icon will only be available when the DataMiner Agent is connected to dataminer.services and there are shared dashboards.
 
 #### Dashboards app - Service definition component: Arrows will now automatically be drawn when a Process Automation definition was added [ID_32960]
 
@@ -752,3 +752,11 @@ The *PDF* and *Share* option in the Dashboards app are now no longer visible in 
 <!-- MR 10.3.0 - FR 10.2.12 -->
 
 It is now possible to group parameters in a parameter feed that lists EPM parameters.
+
+#### Dashboards app - EPM parameter selector: Data retrieved from the collector that was displayed as a table with a single row will now be displayed as single parameters [ID_35412]
+
+<!-- MR 10.3.0 - FR 10.3.3 -->
+
+In an EPM parameter selector, in some cases, data retrieved from the collector was displayed as a table with a single row, which often had the system name as primary key.
+
+From now on, data retrieved from the collector that used to be displayed as a table with a single row will now be displayed as single parameters (one for every column).

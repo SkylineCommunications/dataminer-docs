@@ -11,11 +11,30 @@ uid: General_Main_Release_10.4.0_changes
 
 ### Enhancements
 
-#### Security enhancements [ID_35331]
+#### SLXML no longer used to read out element data [ID_33515] [ID_33616] [ID_33625] [ID_33659]
 
-<!-- RN 35331: MR 10.4.0 - FR 10.3.3 -->
+<!-- MR 10.4.0 - FR 10.3.4 -->
 
-A number of security enhancements have been made.
+From now on, SLXML will no longer be used to read out the following files containing element data:
+
+- *Element.xml* files
+- *ElementData.xml* files
+- *EPMConfig.xml* files
+- *Description.xml* files
+- *Ports.xml* files
+
+> [!IMPORTANT]
+> This is a breaking change. Make sure that none of the protocols in your system is using the following deprecated Notify types:
+>
+> - DMS_GET_INFO
+> - DMS_GET_INFO_ALL
+> - NT_ADD_DESCRIPTION_FILE
+> - NT_GET_ITEM_DATA
+> - NT_GET_PARAMETER_BY_DATA
+> - NT_GET_XML_COOKIE
+> - NT_RELOAD_ELEMENT
+> - NT_SET_ITEM_DATA
+> - NT_SET_PARAMETER_BY_DATA
 
 #### More detailed logging when the certificate chain is invalid while connecting to Cassandra [ID_34822]
 
@@ -25,23 +44,11 @@ More detailed information will now be added to the `SLDBConnection.txt` log file
 
 Log entry syntax: `Certificate chain error: {chainStatus.Status}, details: {chainStatus.StatusInformation}`
 
-#### SLAnalytics: Number of 'GetParameterMessages' requests has been optimized [ID_34936]
-
-<!-- MR 10.4.0 - FR 10.3.1 -->
-
-The number of *GetParameterMessages* sent by SLAnalytics in order to check whether a trended table parameter is still active has been optimized.
-
 #### SLAnalytics - Proactive cap detection: Enhanced accuracy when generating alarm predictions [ID_35080]
 
 <!-- MR 10.4.0 - FR 10.3.2 -->
 
 Because of a number of enhancements, overall accuracy has increased when generating alarm predictions.
-
-#### SLAnalytics - Behavioral anomaly detection : More accurate change point time ranges [ID_35121]
-
-<!-- MR 10.4.0 - FR 10.3.2 -->
-
-Because of a number of enhancements, behavioral changes of the type "level shift", "trend change" and "variance change" will now have a more accurate time range when the change in behavior is sufficiently clear.
 
 #### DataMiner Object Models: DomInstanceButtonDefinitions can only reference a single action [ID_35156]
 
@@ -60,12 +67,6 @@ Also, when using the DomBehaviorDefinition inheritance system, the server-side l
 
 From now on, all custom CollectorConfig XML files will be synchronized across the DataMiner cluster.
 
-#### SLAnalytics - Pattern matching: When a pattern is detected on a DVE child element the suggestion event will now be generated on that same DVE child element [ID_35264]
-
-<!-- MR 10.4.0 - FR 10.3.2 -->
-
-When a trend pattern was detected on a DVE child element, up to now, the suggestion event would be generated on the parent element. From now on, it will be generated on the child element instead.
-
 #### SLAnalytics - Pattern matching: Manually created tags will now be saved as pattern occurrences [ID_35299]
 
 <!-- MR 10.4.0 - FR 10.3.3 -->
@@ -77,12 +78,6 @@ From now on, when you define a tag for pattern matching, the pattern you selecte
 <!-- MR 10.4.0 - FR 10.3.3 -->
 
 In the SLDataGateway process, a number of memory enhancements have been made with regard to the management of average trend data.
-
-#### SLAnalytics - Behavioral anomaly detection: Suggestion events and alarm events for a DVE child element will now be generated on that same DVE child element [ID_35332]
-
-<!-- MR 10.4.0 - FR 10.3.3 -->
-
-When a behavioral anomaly was detected on a DVE child element, up to now, the suggestion event or the alarm event would be generated on the parent element. From now on, it will be generated on the child element instead.
 
 #### Maps: Markers will now move more gradual when zooming [ID_35337]
 
@@ -110,7 +105,73 @@ From now on, when you zoom in or out, the data of the previous zoom level will s
 
 During a DataMiner upgrade, Microsoft .NET 6.0 will now be installed if not installed already.
 
+#### Maps: Zoom range can now be set by means of a slider [ID_35381]
+
+<!-- MR 10.4.0 - FR 10.3.3 -->
+
+The zoom range of a map can now be set by means of a slider.
+
+#### SLAnalytics - Automatic incident tracking: Enhanced performance when fetching relation information [ID_35414] [ID_35508]
+
+<!-- 35414:  MR 10.4.0 - FR 10.3.3 -->
+<!-- 35508:  MR 10.4.0 - FR 10.3.4 -->
+
+Because of a number of enhancements, overall performance has increased when fetching relation information for the automatic incident tracking feature.
+
+#### Security enhancements [ID_35434]
+
+<!-- MR 10.4.0 - FR 10.3.4 -->
+
+A number of security enhancements have been made.
+
+#### SLAnalytics - Behavioral anomaly detection: No longer available for discrete parameters [ID_35465]
+
+<!-- MR 10.4.0 - FR 10.3.3 -->
+
+From now on, anomaly detection will no longer be available for discrete parameters.
+
+#### SLAnalytics - Pattern matching: Enhanced performance when detecting large patterns [ID_35474]
+
+<!-- MR 10.4.0 - FR 10.3.4 -->
+
+Because of a number of enhancements, overall performance has increased when detecting trend patterns that cover more than 30,000 data points.
+
+#### Support for GQI queries from Data Aggregator with ad hoc data sources [ID_35526]
+
+<!-- MR 10.4.0 - FR 10.3.3 -->
+
+GQI now supports queries from [Data Aggregator](xref:Data_Aggregator_DxM) that use ad hoc data sources.
+
+#### GQI: Raw datetime values will now be converted to UTC [ID_35640]
+
+<!-- MR 10.4.0 - FR 10.3.4 -->
+
+Up to now, after each step in a GQI query, raw datetime values were always converted to the time zone that was specified in the query options. From now on, raw datetime values will be converted to UTC instead. The time zone specified in the query options will now only be used when converting a raw datetime value to a display value.
+
+> [!IMPORTANT]
+> **BREAKING CHANGE**: When, in an ad hoc data source or a query operation, a datetime value is not in UTC format, an exception will now be thrown.
+
+#### SLAnalytics - Proactive cap detection: Enhanced accuracy [ID_35695]
+
+<!-- MR 10.4.0 - FR 10.3.4 -->
+
+Proactive cap detection predicts future issues based on trend data in the Cassandra database. Because of a number of enhancements, overall prediction accuracy has increased.
+
+#### Service & Resource Management: Bookings of type 'Custom Process Automation' no longer consume license credits [ID_35742]
+
+<!-- MR 10.4.0 - FR 10.3.4 -->
+
+From now on, ReservationInstances of type *Custom Process Automation* will no longer consume SRM credits. This means that, from now on, you can schedule an unlimited number of concurrent bookings of type *Custom Process Automation*.
+
 ### Fixes
+
+#### Cassandra Cluster: Every DMA would incorrectly try to delete any possible old Cassandra compaction and repair tasks found in the entire DMS [ID_31923]
+
+<!-- MR 10.4.0 - FR 10.3.3 -->
+
+At start-up, every DataMiner Agent with a Cassandra Cluster configuration would incorrectly try to delete any possible old Cassandra compaction and repair tasks found in the entire DMS.
+
+From now on, at start-up, every DataMiner Agent with a Cassandra Cluster configuration will only delete the old Cassandra compaction and repair tasks found locally.
 
 #### Problem with Resource Manager when ResourceStorageType was not specified in Resource Manager settings [ID_34981]
 
@@ -125,3 +186,24 @@ In some cases, Resource Manager could throw a NullReferenceException when *Resou
 Using Okta as identity provider, it would incorrectly no longer be possible to read out signed assertions. Also, when the group claim setting is enabled in the *DataMiner.xml* file, the user will now be added to the correct groups.
 
 Up to now, in case of a claim mismatch, an exception would be thrown. From now on, an entry containing a clear message will be added to the *SLNet.txt* log file instead.
+
+#### Cassandra Cluster Migrator tool would incorrectly not migrate the state-changes table from a single-node Cassandra to a Cassandra Cluster [ID_35699]
+
+<!-- MR 10.4.0 - FR 10.3.4 -->
+
+When you used the Cassandra Cluster Migrator tool to migrate a single-node Cassandra database to a Cassandra Cluster setup, up to now, the `state-changes` table would incorrectly not be migrated.
+
+#### Automation: DataMiner would incorrectly remove the xmlns attribute when importing or saving an Automation script [ID_35708]
+
+<!-- MR 10.4.0 - FR 10.3.4 -->
+
+When DataMiner imported or saved an Automation script, it would incorrectly remove the `xmlns` attribute specified in the `<DMSScript>` element, even when that attribute had been added by DataMiner Integration Studio. From now on, when DataMiner imports or saves an Automation script, it will no longer remove this attribute. Moreover, if no such attribute is specified, it will automatically add `xmlns="http://www.skyline.be/automation"`.
+
+Example:
+
+```xml
+<DMSScript options="272" xmlns="http://www.skyline.be/automation">
+   <Name>...</Name>
+   ...
+</DMSScript>
+```

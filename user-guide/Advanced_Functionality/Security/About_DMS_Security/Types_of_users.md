@@ -25,7 +25,7 @@ DataMiner distinguishes the following types of users:
   > [!NOTE]
   > This type of user will mostly be used in situations where the DMAs have been added to a domain on which the DataMiner administrators have permission to change domain group memberships and update domain user properties (phone numbers, email addresses, etc.).
 
-- **Cloud users**: These users are automatically added when content is shared in the cloud. Cloud-connected users only have the permissions needed to view the shared content. They are entirely managed by DataMiner, which means that you cannot modify them in the Users/Groups module.
+- **dataminer.services users**: These users are automatically added when content is shared via dataminer.services. They only have the permissions needed to view the shared content. They are entirely managed by DataMiner, which means that you cannot modify them in the Users/Groups module.
 
   > [!TIP]
   > See also:

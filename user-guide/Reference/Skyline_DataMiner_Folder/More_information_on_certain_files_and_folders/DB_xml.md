@@ -27,9 +27,12 @@ The configuration data for the general or “local” database has to be specifi
 
 > [!NOTE]
 >
-> - The *type* attribute of the *\<Database>* tag indicates whether a MySQL, MSSQL or Cassandra (cluster) database is used. If no *type* attribute is specified, MySQL is used as type.
+> - The *type* attribute of the *\<Database>* tag indicates whether a MySQL, MSSQL, or Cassandra (cluster) database is used. If no *type* attribute is specified, MySQL is used as type.
 > - If a separate Cassandra cluster (consisting of one or more nodes) is used for each DMA, the *type* attribute for the database is set to *Cassandra*. If an entire DMS uses the same Cassandra cluster, the *type* attribute for the database is set to *CassandraCluster*.
 > - If the *CassandraCluster* type is used, *DB.xml* is synced completely throughout the cluster. With other types, the general database settings are not synced.
+
+> [!IMPORTANT]
+> MSSQL is no longer supported as the general database as from DataMiner 10.3.0.
 
 The following configuration is possible for the general database:
 
@@ -337,7 +340,7 @@ The following configuration is possible for the offload database:
 
 - [Configuring the collation for an MSSQL database](#configuring-the-collation-for-an-mssql-database)
 
-- [Configuring data offloads to an SQL Server database in another domain](#configuring-data-offloads-to-an-sql-server-database-in-another-domain)
+- [Configuring data offloads to an MSSQL database in another domain](#configuring-data-offloads-to-an-mssql-database-in-another-domain)
 
 - [Configuring data offloads to an Oracle database](#configuring-data-offloads-to-an-oracle-database)
 
@@ -428,7 +431,7 @@ Example:
 </DataBase>
 ```
 
-### Configuring data offloads to an SQL Server database in another domain
+### Configuring data offloads to an MSSQL database in another domain
 
 If the offload database is situated in another domain, you can override the machine name with the IP address. That way, the offload database will be able to access the offload files on the other domain.
 

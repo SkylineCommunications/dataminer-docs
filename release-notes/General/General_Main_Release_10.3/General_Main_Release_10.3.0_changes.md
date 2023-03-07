@@ -2,10 +2,10 @@
 uid: General_Main_Release_10.3.0_changes
 ---
 
-# General Main Release 10.3.0 – Changes (preview)
+# General Main Release 10.3.0 – Changes
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 > For release notes related to DataMiner Cube, see [DataMiner Cube 10.3.0](xref:Cube_Main_Release_10.3.0).
@@ -14,7 +14,7 @@ uid: General_Main_Release_10.3.0_changes
 
 ### Enhancements
 
-#### Security enhancements [ID_31045] [ID_31054] [ID_31761] [ID_32055] [ID_32566] [ID_33069] [ID_33078] [ID_33218] [ID_33365] [ID_33583] [ID_34723]
+#### Security enhancements [ID_31045] [ID_31054] [ID_31761] [ID_32055] [ID_32566] [ID_33069] [ID_33078] [ID_33218] [ID_33365] [ID_33583] [ID_34723] [ID_35331]
 
 A number of security enhancements have been made.
 
@@ -341,13 +341,11 @@ Because of a number of enhancements, the automatic evaluation of trend predictio
 
 Because of a number of enhancements, overall performance has increased when creating and updating bookings.
 
-#### Enhanced error handling when trying to create resource manager properties with value/key null on Elasticsearch [ID_35155]
+#### SLAnalytics - Behavioral anomaly detection : More accurate change point time ranges [ID_35121]
 
 <!-- MR 10.3.0 - FR 10.3.2 -->
 
-When an attempt is made to create resource properties, resource definition properties and pool properties with value/key null on a system with an Elasticsearch database, from now on, an `InvalidCharactersInPropertyNames` error listing the names of the properties in question will be added to the Resource Manager log file.
-
-This same fix also fixes the creation and migration of resources of which the property list is null and resource pools of which the property definitions list or properties list is null.
+Because of a number of enhancements, behavioral changes of the type "level shift", "trend change" and "variance change" will now have a more accurate time range when the change in behavior is sufficiently clear.
 
 #### Enhanced performance when updating a baseline or assigning an alarm template that contains conditional monitoring [ID_35171]
 
@@ -366,6 +364,18 @@ Because of a number of enhancements, overall performance has increased when dele
 <!-- MR 10.3.0 - FR 10.3.2 -->
 
 Because of a number of enhancements, overall processing of "exception" or "other" parameter values by the SLAnalytics process has improved.
+
+#### SLAnalytics - Pattern matching: When a pattern is detected on a DVE child element the suggestion event will now be generated on that same DVE child element [ID_35264]
+
+<!-- MR 10.3.0 - FR 10.3.2 -->
+
+When a trend pattern was detected on a DVE child element, up to now, the suggestion event would be generated on the parent element. From now on, it will be generated on the child element instead.
+
+#### SLAnalytics - Behavioral anomaly detection: Suggestion events and alarm events for a DVE child element will now be generated on that same DVE child element [ID_35332]
+
+<!-- MR 10.3.0 - FR 10.3.3 -->
+
+When a behavioral anomaly was detected on a DVE child element, up to now, the suggestion event or the alarm event would be generated on the parent element. From now on, it will be generated on the child element instead.
 
 ### Fixes
 
@@ -655,15 +665,6 @@ When you tried to request data from a simulation that was built with AutoBuildVe
 
 In some cases, an error could occur in the Skyline Device Simulator when a proxy simulation was being run.
 
-#### Service & Resource Management: Problem when migrating resources containing properties with keys or values set to null [ID_35067]
-
-<!-- MR 10.3.0 - FR 10.3.1 [CU0] -->
-
-When resource data was being migrated to Elasticsearch, the following exception could be thrown when a resource or a resource pool contained properties with keys or values that were set to null.
-
-```txt
-2022/12/01 08:53:59.582|SLNet.exe|ResourceManager|ERR|0|6|System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.ArgumentException: value is not serializable to json
-```
 
 #### When a direct view table was updated, the wrong columns could be updated in the source element [ID_35075]
 
@@ -690,3 +691,9 @@ When a GQI query retrieved the status of a DOM instance that had no status, the 
 If a DOM module is created without specifying *SecuritySettings*, the view permission is set to "None".
 
 Up to now, the check to determine whether a user had the view permission set to "None", would only return true for the Administrator or users in the Administrator group. From now on, when the required view permission is "None", permission checks will no longer be performed.
+
+#### Cassandra Cluster: Rows would incorrectly be added without TTL value [ID_35789]
+
+<!-- MR 10.3.0 [CU0] - FR 10.3.3 [CU0] -->
+
+When a row was added to a Cassandra Cluster table, no TTL value would be inserted into the TTL column of that row.

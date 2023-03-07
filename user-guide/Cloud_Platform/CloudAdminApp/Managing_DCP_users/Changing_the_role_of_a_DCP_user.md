@@ -2,15 +2,15 @@
 uid: Changing_the_role_of_a_DCP_user
 ---
 
-# Changing the role of a DCP user
+# Changing the role of a dataminer.services user
 
-Each user that has been added in the DCP Admin app can have the role *Member*, *Admin*, or *Owner*, and this both on the level of the organization and of the DataMiner System. This role determines which permissions the user has on DCP. Several users can have the *Admin* or *Owner* role, and users can have a different role on organization and DMS level.
+Each user that has been added in the Admin app can have the role *Member*, *Admin*, or *Owner*, and this both on the level of the organization and of the DataMiner System. This role determines which permissions the user has on dataminer.services. Several users can have the *Admin* or *Owner* role, and users can have a different role on organization and DMS level.
 
-- The **Owner** role has the most permissions, and there is always at least one owner per organization. When a DataMiner System is connected to the DataMiner Cloud Platform and a new organization is created containing that DataMiner System, the person creating it is automatically considered to be its owner and given the *Owner* role.
+- The **Owner** role has the most permissions, and there is always at least one owner per organization. When a DataMiner System is connected to dataminer.services and a new organization is created containing that DataMiner System, the person creating it is automatically considered to be its owner and given the *Owner* role.
 
-- On organizational level, the **Admin** role is not allowed to delete organizations. On DMS level, they cannot request a token to keep a DMS cloud-connected in case the cloud connection has expired. Aside from that, they have all the permissions the *Owner* role has.
+- On organizational level, the **Admin** role is not allowed to delete organizations. On DMS level, they cannot request a token to keep a DMS connected to dataminer.services in case the connection has expired. Aside from that, they have all the permissions the *Owner* role has.
 
-- On organizational level, the **Member** role is only allowed to view users and connect a DMS to the cloud. On DMS level, they can share data, view users, view information about the cloud configuration, deployments and shares, and unlink their own DataMiner account.
+- On organizational level, the **Member** role is only allowed to view users and connect a DMS to dataminer.services. On DMS level, they can share data, view users, view information about the dataminer.services configuration, deployments and shares, and unlink their own DataMiner account.
 
 If you have the *Owner* or *Admin* role, you can change the role of a user as follows:
 

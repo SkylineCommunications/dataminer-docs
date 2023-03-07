@@ -150,6 +150,9 @@ Once you have established a trust relationship between DataMiner (i.e. the servi
 
      Creating an Enterprise Application will also create an app registration with the same name, but you will not find it under *owned application*.
 
+     > [!IMPORTANT]
+     > Do not use the *Object ID* under *Azure Active Directory > Enterprise applications > [your application name]*. This is a different Object ID, which will not work.
+
    - **Client Secret**: In the pane on the left, click *Certificates & secrets*.
 
      1. In the *Client secrets* section, click *New client secret*.

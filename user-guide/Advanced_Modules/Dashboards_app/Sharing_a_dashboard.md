@@ -7,7 +7,7 @@ uid: Sharing_a_dashboard
 ## Sharing a dashboard using the Live Sharing Service
 
 > [!NOTE]
-> This feature is only available if the DMA is connected to the cloud. See [Connecting your DataMiner System to the cloud](xref:Connecting_your_DataMiner_System_to_the_cloud). Prior to DataMiner 10.1.12, this feature is only available in [soft launch](xref:SoftLaunchOptions).
+> This feature is only available if the DMA is connected to dataminer.services. See [Connecting your DataMiner System to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud). Prior to DataMiner 10.1.12, this feature is only available in [soft launch](xref:SoftLaunchOptions).
 
 1. In the list of dashboards on the left, select the dashboard you want to share.
 
@@ -24,7 +24,7 @@ uid: Sharing_a_dashboard
 
 1. If you are using DataMiner 10.2.0/10.2.2 or higher, in the pop-up window, select *Create cloud share*. Otherwise, skip this step.
 
-1. If it is the first time you are sharing the dashboard, you may be asked to confirm that you want to link your account to the cloud. Select *I want to link the above users* and click *Link accounts*.
+1. If it is the first time you are sharing the dashboard, you may be asked to confirm that you want to link your account to dataminer.services. Select *I want to link the above users* and click *Link accounts*.
 
 1. In the pop-up window, fill in the email address(es) of the person(s) you want to share the dashboard with in the *With* field.
 

@@ -19,6 +19,9 @@ The **recommended** DataMiner setup involves **one Cassandra cluster and one Ela
 > [!TIP]
 > For information on how to implement this setup based on an existing DataMiner setup with SQL or Cassandra databases per DMA, see [Migrating the general database to a DMS Cassandra cluster](xref:Migrating_the_general_database_to_a_DMS_Cassandra_cluster)
 
+> [!IMPORTANT]
+> From DataMiner 10.3.0/10.3.3 onwards, instead of a Cassandra cluster, you can use the [Amazon Keyspaces Service on AWS](xref:Amazon_Keyspaces_Service), and instead of an on-prem Elasticsearch cluster, you can use an on-prem [OpenSearch cluster](xref:OpenSearch_database) or the [Amazon OpenSearch Service on AWS](xref:Amazon_OpenSearch_Service) (which offers both Elasticsearch and OpenSearch).
+
 ### Single DMA setups
 
 In a development environment with limited load, it is possible to host DataMiner, Cassandra, and Elasticsearch on one Windows machine. In this case, Elasticsearch and DataMiner must be installed on a separate disk or partition. However, note that this is not recommended for normal production environments.
@@ -164,6 +167,6 @@ In case of a DataMiner Failover pair, the Cassandra nodes on each of the DMAs ar
 
 ## Legacy setup with MySQL or MSSQL database
 
-In legacy DataMiner Systems using DataMiner 9.0 or older, the data storage setup involved a MySQL or MSSQL database. While this legacy setup is still supported with current DataMiner versions, many DataMiner features will not be available if you use this. In addition, support for this legacy setup is expected to end with DataMiner 10.3 (see [Third-Party Software Support Life Cycle](https://community.dataminer.services/3rd-party-software-support-life-cycle/)).
+In legacy DataMiner Systems using DataMiner 9.0 or older, the data storage setup involved a MySQL or MSSQL database. However, to have access to all recent DataMiner features, one of the recommended setups mentioned above should be used instead.
 
-We therefore recommend that you migrate such a legacy setup to one of the recommended setups mentioned above.
+While older features will continue to work with MySQL up to DataMiner 10.4.0, MSSQL is no longer supported as from DataMiner 10.3.0. For more information, see [Third-Party Software Support Life Cycle](https://community.dataminer.services/3rd-party-software-support-life-cycle/).

@@ -33,8 +33,9 @@ It is possible to define default values for the following alarm levels:
 |Critical low|CL|
 |Major low|MaL|
 |Minor Low|MiL|
+|Warning low|WaL|
 |Normal|Normal|
-|Warning high|WH|
+|Warning high|WaH|
 |Minor high|MiH|
 |Major high|MaH|
 |Critical high|CH|
@@ -69,7 +70,7 @@ For parameters holding discrete values, the discrete value can be used for setti
 > [!NOTE]
 >
 > - In DataMiner, the corresponding display value (as indicated in the Display tag) will be displayed in the alarm template.
-> - For parameters with measurement type set to discreet or string, the low severity levels are not applicable (i.e. only the tags Normal, WH, MiH, WaH and CH can be used in this case).
+> - For parameters with measurement type set to discreet or string, the low severity levels are not applicable (i.e. only the tags Normal, WaH, MiH, MaH and CH can be used in this case).
 
 ```xml
 <Param id="10" trending="true">
