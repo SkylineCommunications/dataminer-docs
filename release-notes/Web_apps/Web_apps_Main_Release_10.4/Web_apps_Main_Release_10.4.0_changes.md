@@ -142,6 +142,12 @@ In the GQI data sources *Get services* and *Get views*, the *State* column has n
 
 When an EPM feed is used to feed EPM identifiers to a parameter feed, it will now also list the parameters of the enhanced elements that are linked to the EPM objects.
 
+#### Monitoring app: Trending page of a parameter no longer has a sidebar [ID_35705]
+
+<!-- MR 10.4.0 - FR 10.3.4 -->
+
+In the *Monitoring* app, the *Trending* page of a parameter no longer has a sidebar.
+
 ### Fixes
 
 #### GQI: Problem when retrieving DCF interfaces [ID_34820]

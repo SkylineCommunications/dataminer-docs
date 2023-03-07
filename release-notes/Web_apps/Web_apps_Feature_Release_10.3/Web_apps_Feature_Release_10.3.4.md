@@ -118,6 +118,12 @@ New description of the *GetAlarmDetails* method:
 
 > Get the alarm details for the specified alarm (use GetAlarmHistory for the details of a cleared non-root alarm).
 
+#### Monitoring app: Trending page of a parameter no longer has a sidebar [ID_35705]
+
+<!-- MR 10.4.0 - FR 10.3.4 -->
+
+In the *Monitoring* app, the *Trending* page of a parameter no longer has a sidebar.
+
 #### GQI: Clearer error message when querying a logger table without `RTDisplay=true` settings [ID_35706]
 
 <!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
