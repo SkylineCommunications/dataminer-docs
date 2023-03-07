@@ -39,7 +39,7 @@ To do so:
 
 1. On a DataMiner Agent, open *C:\\Skyline DataMiner\\MaintenanceSettings.xml*.
 
-1. Add an HTTPS tag with the necessary attributes. For example:
+1. At the top level of the \<MaintenanceSettings> XML tree, add an HTTPS tag with the necessary attributes. For example:
 
     ```xml
     <MaintenanceSettings>
@@ -53,8 +53,6 @@ To do so:
 
     - **enabled**: Enables HTTPS when set to "true".
     - **name**: Must be set to the name matching the *Common Name* (CN) or one of the *Subject Alternative Names* (SAN) of the certificate. If it is a wildcard certificate, the name must match the mask defined in the certificate (e.g. "\*.skyline.local"). For example, "dma01.skyline.be" matches the wildcard certificate for "*.skyline.be".
-    
-      The HTTPS tag must be placed under the top-level <MaintenanceSettings> xml tree or the dataminer agent will not accept the settings.
 
       This name **should also be configured in the DNS server** pointing to the IP address of the DMA, so that the DMA can be reached using the configured name.
 
