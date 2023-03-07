@@ -270,6 +270,12 @@ When a GQI was migrated, in some cases, the last nodes of the migrated query wou
 
 When you hovered over a segment of an edge, in some cases, an incorrect tooltip would appear.
 
+#### GQI: "Loading" indicator of a table would not disappear when that table was fed data from another table  [ID_35698]
+
+<!-- MR 10.4.0 - FR 10.3.4 -->
+
+When data from one table was fed to another table, in some cases, the "loading" indicator of the table to which data was fed would incorrectly not disappear.
+
 #### Dashboards app & Low-code apps - Query builder: Problem when linking a data source argument of type string to a query column of type GUID [ID_35700]
 
 <!-- MR 10.3.0 [CU1] - FR 10.3.4 -->

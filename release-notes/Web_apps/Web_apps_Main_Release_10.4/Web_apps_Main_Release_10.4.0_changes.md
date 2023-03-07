@@ -221,3 +221,9 @@ The color picker would not be positioned correctly.
 <!-- MR 10.4.0 - FR 10.3.4 -->
 
 When you opened a low-code app on a mobile device or when you resized the screen to a mobile size, a console error would be thrown.
+
+#### GQI: "Loading" indicator of a table would not disappear when that table was fed data from another table  [ID_35698]
+
+<!-- MR 10.4.0 - FR 10.3.4 -->
+
+When data from one table was fed to another table, in some cases, the "loading" indicator of the table to which data was fed would incorrectly not disappear.
