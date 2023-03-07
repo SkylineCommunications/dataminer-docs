@@ -5090,7 +5090,7 @@
   topicUid: CICD
   items:
   - name: CI/CD Cross-Organization
-        topicUid: cicdcrossorganization
+    topicUid: cicdcrossorganization
     items:
     - name: CI/CD Cross-Organization GitHub
       topicUid: cicdcrossorganizationgithub
@@ -5116,7 +5116,7 @@
       - name: Deploying from GitLab
         topicUid: Deploying_Automation_scripts_from_a_GitLab_repository
   - name: CI/CD Skyline Communictions
-        topicUid: cicdskylinecommunications
+    topicUid: cicdskylinecommunications
     items:
     - name: CI/CD Skyline Communictions GitHub
       topicUid: cicdskylinecommunicationsgithub
