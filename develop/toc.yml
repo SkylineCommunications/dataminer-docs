@@ -5089,11 +5089,11 @@
 - name: CI/CD
   topicUid: CICD
   items:
-  - name: CI/CD Cross-Organisation
-        topicUid: cicdcrossorganisation
+  - name: CI/CD Cross-Organization
+        topicUid: cicdcrossorganization
     items:
-    - name: CI/CD Cross-Organisation GitHub
-      topicUid: cicdcrossorganisationgithub
+    - name: CI/CD Cross-Organization GitHub
+      topicUid: cicdcrossorganizationgithub
       items:
       - name: GitHub Starter Workflows
         topicUid: github_starter_workflows
@@ -5110,8 +5110,8 @@
           topicUid: github_reusable_workflows_nuget_solution_master_workflow
         - name: Reusable Workflow SRM Function
           topicUid: github_reusable_workflows_srm_function_master_workflow
-    - name: CI/CD Cross-Organisation GitLab
-      topicUid: cicdcrossorganisationGitlab
+    - name: CI/CD Cross-Organization GitLab
+      topicUid: cicdcrossorganizationGitlab
       items:
       - name: Deploying from GitLab
         topicUid: Deploying_Automation_scripts_from_a_GitLab_repository

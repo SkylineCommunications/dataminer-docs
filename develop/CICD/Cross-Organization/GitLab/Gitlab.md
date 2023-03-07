@@ -1,8 +1,8 @@
 ---
-uid: cicdcrossorganisationgitlab
+uid: cicdcrossorganizationgitlab
 ---
 
-# CI/CD cross-organisation: Using Gitlab
+# CI/CD cross-organization: Using Gitlab
 
 In this section:
 

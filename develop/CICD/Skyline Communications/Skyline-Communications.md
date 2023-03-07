@@ -6,5 +6,5 @@ uid: cicdskylinecommunications
 
 In this section:
 
-- [Github](xref:cicd_skylinecommunications_gerritandjenkins)
+- [GitHub](xref:cicd_skylinecommunications_gerritandjenkins)
 - [Gitlab](xref:cicd_skylinecommunications_github)

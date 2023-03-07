@@ -2,7 +2,7 @@
 uid: github_starter_workflows
 ---
 
-# Github starter workflows
+# GitHub starter workflows
 
 We offer a number of starter workflows that can be used as the starting point to create a workflow for your GitHub repository. These .yml files are designed to be small and call both reusable workflows as well as actions from the marketplace that always try to run the latest versions.
 
@@ -70,4 +70,4 @@ If you're looking to provide a Starter Workflow that can be shared across differ
 
 In either case, you can then start making changes and finalize with a pull request.
 
-For any questions concerning a pull request, feel free to contact the [Data Acquisition Domain](mailTo:support.data-acquisition@skyline.be?subject=Pull%20Request%20-%20Github%20Workflow%20Contribution&body=Hello,) within Skyline Communications.
+For any questions concerning a pull request, feel free to contact the [Data Acquisition Domain](mailTo:support.data-acquisition@skyline.be?subject=Pull%20Request%20-%20GitHub%20Workflow%20Contribution&body=Hello,) within Skyline Communications.

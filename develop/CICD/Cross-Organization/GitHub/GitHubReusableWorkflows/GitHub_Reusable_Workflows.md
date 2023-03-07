@@ -2,7 +2,7 @@
 uid: github_reusable_workflows
 ---
 
-# Github reusable workflows
+# GitHub reusable workflows
 
 Where a [GitHub Action](xref:github_actions) can provide an easy access point to a single key action, the reusable workflow takes this up a notch.
 A GitHub reusable workflow allows the re-use of a combination of many different GitHub Actions and other scripts, running across several jobs combined into a single easy call.

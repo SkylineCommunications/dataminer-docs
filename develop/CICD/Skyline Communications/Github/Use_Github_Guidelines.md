@@ -71,7 +71,7 @@ It is important to add a *README.md* file to to the root folder. The contents of
 
 ## Adding topics to a repository
 
-Topics must be used to help categorize the repositories and help users find them when exploring Github.
+Topics must be used to help categorize the repositories and help users find them when exploring GitHub.
 
 Here is a list of topics you should use (this list is to be extended):
 

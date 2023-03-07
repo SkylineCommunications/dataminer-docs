@@ -2,13 +2,13 @@
 uid: cicdskylinecommunicationsgithub
 ---
 
-# CI/CD Skyline Communications: Using Github
+# CI/CD Skyline Communications: Using GitHub
 
 In this section:
 
-- [Migrating from Gerrit to Github](xref:migration_from_gerrit_to_github)
+- [Migrating from Gerrit to GitHub](xref:migration_from_gerrit_to_github)
 - [Naming Guidelines](xref:Using_GitHub_for_CICD)
 
-Also see Cross-Organisation:
+Also see Cross-Organization:
 
-- [Cross-Organisation Github](xref:cicdcrossorganisationgithub)
+- [Cross-Organization GitHub](xref:cicdcrossorganizationgithub)
