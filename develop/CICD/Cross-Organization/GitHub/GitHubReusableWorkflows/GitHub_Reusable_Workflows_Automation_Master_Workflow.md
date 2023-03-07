@@ -12,6 +12,7 @@ This workflow will act as a quality gate and code coverage collection, only crea
 
 The following will be performed:
 
+- [Validate Solution](#validate-solution)
 - [Building](#building)
 - [Unit Tests](#unit-tests)
 - [Analyze](#analyze)
@@ -66,6 +67,10 @@ jobs:
 '''
 
 ## Skyline quality gate
+
+### Validate solution
+
+Checks that the provided Visual Studio solution does not contain NuGets added through packages.config. Our CI/CD Pipelines only work correctly using packagereference.
 
 ### Building
 
