@@ -60,7 +60,7 @@ jobs:
 Most reusable workflows require several arguments and secrets to be passed along.
 You can find which those are by opening the reusable workflow and looking at the 'inputs:' and 'secrets:' sections located at the top of the file.
 
-However, we instead recommended you to use one of the available [Starter workflows](xref:github_starter_workflows) that in turn call one of our reusable workflows and are pre-filled with most of the arguments.
+However, we instead recommended you to use one of the available [Starter workflows](xref:github_starter_workflows) that in turn call one of our reusable workflows and are preconfigured with most of the arguments.
 
 For example:
 '''yaml
@@ -74,7 +74,7 @@ jobs:
       referenceType: ${{ github.ref_type }}
       repository: ${{ github.repository }}
       owner: ${{ github.repository_owner }}
-      sonarCloudProjectName: TODO: Go to 'https://sonarcloud.io/projects/create' and create a project. Then enter the id of the project as mentioned in the sonarcloud project url here.
+      sonarCloudProjectName: TODO: Go to 'https://sonarcloud.io/projects/create' and create a project. Then enter the id of the project as mentioned in the sonarcloud project URL here.
       # The API-key: generated in the DCP Admin app (https://admin.dataminer.services/) as authentication for a certain DataMiner System.
     secrets:
       api-key: ${{ secrets.DATAMINER_DEPLOY_KEY }}
@@ -87,7 +87,7 @@ jobs:
 
 Will validate if the provided solution has all technical requirements for an official Skyline Communications NuGet package.
 All requirements can be found in the GitHub [Validation Requirements](xref:github_validation_requirements) document.
-A lot of requirements are pre-filled when using the [Skyline.DataMiner.VisualStudioTemplates](https://www.nuget.org/packages/Skyline.DataMiner.VisualStudioTemplates#readme-body-tab).
+A lot of requirements are preconfigured when using the [Skyline.DataMiner.VisualStudioTemplates](https://www.nuget.org/packages/Skyline.DataMiner.VisualStudioTemplates#readme-body-tab).
 
 ### Building
 
