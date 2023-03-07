@@ -2,23 +2,23 @@
 uid: github_validation_requirements
 ---
 
-# GitHub Validation Requirements
+# GitHub validation requirements
 
 Some of our workflows will have a validation step. That step will validate technical requirements. This page contains this information. There are also other guidelines that might currently not get checked.
-You can find those guidelines here: [GitHub Guidelines](xref:Using_GitHub_for_CICD).
+You can find those guidelines here: [GitHub guidelines](xref:Using_GitHub_for_CICD).
 
-## NuGet Solution Workflow
+## NuGet solution workflow
 
-The workflow [DataMiner CICD NuGet Solution"](xref:github_reusable_workflows_nuget_solution_master_workflow) has a validation step called: Validate NuGet Metadata.
-It checks if NuGets match all specified conventions as listed on [Producing NuGet packages](xref:Producing_NuGet).
+The workflow [DataMiner CI/CD NuGet solution](xref:github_reusable_workflows_nuget_solution_master_workflow) has a validation step called "Validate NuGet Metadata".
+It checks if NuGet packages match all specified conventions as listed on [Producing NuGet packages](xref:Producing_NuGet).
 
-The Visual Studio solution should also only contain project of SDK Style.
+The Visual Studio solution should also only consist of SDK-style projects.
 
 > [!IMPORTANT]
-> NuGet Solution Workflow is only applicable for Skyline Communications.
+> NuGet solution Workflow is only applicable for Skyline Communications.
 
-## Automation Script Workflow
+## Automation script workflow
 
-The workflow [DataMiner CICD AutomationScript](xref:github_reusable_workflows_automation_master_workflow) has a validation step: Validate NuGet Package Configuration.
-This will check that none of the projects are using NuGets installed through packages.config. All current tools only support NuGets added with packagereference.
-See [Consuming NuGets](xref:Consuming_NuGet) for more information.
+The workflow [DataMiner CI/CD Automation script](xref:github_reusable_workflows_automation_master_workflow) has a validation step "Validate NuGet Package Configuration".
+This will check that none of the projects are using the packages.config package management format. All tools only support the Packagereference package management format.
+See [Consuming NuGet packages](xref:Consuming_NuGet) for more information.

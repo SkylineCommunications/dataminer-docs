@@ -17,80 +17,79 @@ Together, CI/CD allows teams to deliver software more quickly, with higher quali
 ## At Skyline Communications
 
 There are currently several major flows concerning CI/CD within Skyline Communications.
-The topics within the CI/CD Documentation will provide information on several of them.
+The topics within the CI/CD documentation will provide information on several of them.
 
 Here are a few of our flows currently in production:
 
-Internal CI/CD for the Core software: DataMiner
-Internal CI/CD for the creation of CI/CD related Dotnet Tools (dogfooding)
-Internal CI/CD for the creation of DataMiner Artifacts (e.g. Automation Scripts, Connectors, Dashboards, ...)
-Cross-Organisation CI/CD for the collaborative creation of DataMiner Artifacts (e.g. Automation Scripts, Connectors, Dashboards, ...)
+- Internal CI/CD for the core software: DataMiner
+- Internal CI/CD for the creation of CI/CD related dotnet tools
+- Internal CI/CD for the creation of DataMiner artifacts (e.g. Automation scripts, connectors, dashboards, etc.)
+- Cross-Organization CI/CD for the collaborative creation of DataMiner artifacts (e.g. Automation scripts, connectors, dashboards, etc.)
 
-## Cross-Organisation CI/CD
+## Cross-Organization CI/CD
 
-Is an ongoing DevOps migration of our internal CI/CD for DataMiner Artifacts.
-This is part of efforts to improve cross-organisation collaborative efforts while maintaining our high quality and ease-of-life automations from the Internal CI/CD.
-
-Uses a combination of:
-
-- Github as source control
-- Github workflows (reusable, starter) that run on commits done to github repositories to trigger quality control and automated steps.
-- Github Actions for specific popular actions such as Deployment of artifacts.
-- Dotnet tooling within workflows to provide reusable and well-tested scripting.
-- DIS extension within Visual Studio
-- Visual Studio Templates
-
-For more information refer to:
-
-- [CI/CD Starter Workflows](xref:github_starter_workflows)
-- [CI/CD Reusable Workflows](xref:github_reusable_workflows)
-- [Deploy Action](xref:Deploying_Automation_scripts_from_a_GitHub_repository)
-- [Skyline Specific: Migration Efforts](xref:migration_from_gerrit_to_github)
-- [Skyline Specific: Github Naming Conventions](xref:Using_GitHub_for_CICD)
-
-## Internal CI/CD for the creation of DataMiner Artifacts
+Is an ongoing migration of our internal CI/CD for DataMiner artifacts.
+This is part of efforts to improve cross-organization collaboration while maintaining high quality and ease-of-life automation from the internal CI/CD.
 
 Uses a combination of:
 
-- Gerrit for source control. (git-like repository)
-- Jenkins pipelines that run on commits done to gerrit repositories to trigger quality control and automated steps.
-- Automatic Release Cycles, registration and uploading to the catalog
-- Unit Tests for every Artifact as required.
-- Public Re-usable NuGet Libraries with their own Pipelines and Unit Tests
-- Install Package Creation from all other artifacts, with its own CICD pipeline.
+- [GitHub](https://github.com/) as source control
+- GitHub workflows (reusable, starter) that run on commits to GitHub repositories to trigger e.g. quality control
+- GitHub Actions for specific popular actions such as deployment of artifacts
+- Dotnet tooling within workflows to provide reusable and well-tested scripting
 - DIS extension within Visual Studio
-- Visual Studio Templates
+- Visual Studio templates
 
 For more information refer to:
 
-- [Development With CI/CD](xref:DevelopmentWithCICD)
+- [CI/CD starter workflows](xref:github_starter_workflows)
+- [CI/CD reusable workflows](xref:github_reusable_workflows)
+- [Deploy action](xref:Deploying_Automation_scripts_from_a_GitHub_repository)
+- [Skyline specific: migration efforts](xref:migration_from_gerrit_to_github)
+- [Skyline specific: GitHub naming conventions](xref:Using_GitHub_for_CICD)
+
+## Internal CI/CD for the creation of DataMiner artifacts
+
+Uses a combination of:
+
+- [Gerrit](https://www.gerritcodereview.com/) for source control. (git-like repository)
+- [Jenkins](https://www.jenkins.io/) pipelines that run on commits to Gerrit repositories to trigger quality control and automated steps
+- Automatic release cycles, registration and uploading to the catalog
+- Unit Tests for every artifact as required
+- Public re-usable [NuGet](https://www.nuget.org/) libraries with their own pipelines and Unit Tests
+- Install package creation from all other artifacts, with its own CI/CD pipeline.
+- DIS extension within Visual Studio
+- Visual Studio templates
+
+For more information refer to:
+
+- [Development with CI/CD](xref:DevelopmentWithCICD)
 
 ## Internal CI/CD for the Core software: DataMiner
 
 Uses a combination of:
 
 - Gerrit for source control. (git-like repository)
-- Jenkins pipelines that run on commits done to gerrit repositories to trigger quality control and automated steps.
-- Jenkins pipelines that run daily on the last Release Candidate and looks for introduction of compile errors on Connector QActions.
-- Gerrit Code Review blocking commits when pipelines fail.
-- A massive array of DataMiner setups running daily and weekly regression tests.
-- A reporting UI called QA Portal to consolidate all testing results.
+- Jenkins pipelines that run on commits to Gerrit repositories to trigger quality control and automated steps
+- Jenkins pipelines that run daily on the latest Release Candidate (RC) and looks for introduction of compile-time errors on connector QActions
+- Gerrit Code Review blocking commits when pipelines fail
+- A massive array of DataMiner setups running daily and weekly regression tests
+- A reporting UI called QA Portal to consolidate all testing results
 
-## Internal CI/CD for the creation of CI/CD related Dotnet Tools
+## Internal CI/CD for the creation of CI/CD related dotnet tools
 
-To run pipelines you often need additional scripts and code to get the desired results. In the interest of quality, it was decided early on to make sure that code ran through the same pipelines it tries to make.
-A good use-case of the dogfooding concept.
+To run pipelines, you often need additional scripts and code to get the desired results. In the interest of quality, it was decided early on to make sure that code ran through the same pipelines it is part of.
 
 Uses a combination of:
 
-- Gerrit for source control. (git-like repository)
-- Jenkins pipelines that run on commits done to gerrit repositories to trigger quality control and automated steps.
-- Automatic Signing and Publishing of dotnet tools.
+- Gerrit for source control (git-like repository)
+- Jenkins pipelines that run on commits done to Gerrit repositories to trigger quality control and automated steps
+- Automatic signing and publishing of dotnet tools
 - Large battery of Unit Tests
-- Public Re-usable NuGet Libraries with their own Pipelines and Unit Tests
-- Github as source control
-- Github workflows (reusable, starter) that run on commits done to github repositories to trigger quality control and automated steps.
-- Github Actions for specific popular actions such as Deployment of artifacts.
-- Dotnet tooling within workflows to provide reusable and well-tested scripting.
+- Public reusable NuGet libraries with their own pipelines and Unit Tests
+- GitHub as source control
+- GitHub workflows (reusable, starter) that run on commits to GitHub repositories to trigger quality control and automated steps
+- GitHub Actions for specific popular actions such as Deployment of artifacts
+- Dotnet tooling within workflows to provide reusable and well-tested scripting
 - DIS extension within Visual Studio
-- Visual Studio Templates
+- Visual Studio templates

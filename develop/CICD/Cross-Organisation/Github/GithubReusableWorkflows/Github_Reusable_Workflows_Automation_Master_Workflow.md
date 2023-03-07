@@ -2,40 +2,38 @@
 uid: github_reusable_workflows_automation_master_workflow
 ---
 
-# Automation Master Workflow
+# Automation master workflow
 
-The Automation Workflow should run on repositories holding [Automation Script Solutions](xref:Automation_scripts_as_a_Visual_Studio_solution) as provided by the DIS plugin in Visual Studio.
-It's a migration of what was originally [internal jenkins pipelines](xref:Pipeline_stages_for_Automation_scripts) to handle automation and quality assurance within Skyline Communications.
-It will not work on SDK-Style solution and requires a legacy Framework format within Visual Studio. (DIS Provides this automatically)
+The Automation workflow should run on repositories containing an [Automation script solution](xref:Automation_scripts_as_a_Visual_Studio_solution) as provided by the DIS extension in Visual Studio.
+It is a migration of what was originally an [internal Jenkins pipelines](xref:Pipeline_stages_for_Automation_scripts) to handle automation and quality assurance within Skyline Communications.
+It currently will not work on solutions containing SDK-style projects but instead expects the legacy project style (DIS provides this automatically)
 
-This workflow will act as a quality gate and code coverage collection, only creating and uploading an artifact of your Automation Script Solution to the catalog if it passes the Skyline Quality Gate job.
+This workflow will act as a quality gate and code coverage collection, only creating and uploading an artifact of your Automation script solution to the catalog if it passes the Skyline Quality Gate job.
 
-This job will validate in 3 important ways:
+The following will be performed:
 
 - [Building](#building)
 - [Unit Tests](#unit-tests)
 - [Analyze](#analyze)
 - [Quality Gate](#quality-gate)
 
-If passing it will run the Artifact Registration and Upload job:
-
-This job will create an artifact (.dmapp) out of the Automation Script Solution and upload it with the following steps:
+Only when passing the above jobs, the "Artifact Registration and Upload" job will be executed: This job will create an artifact (.dmapp) out of the Automation script solution and upload it with the following steps:
 
 - [NuGet restore solution](#nuget-restore-solution)
 - [Upload artifact Package](#upload-artifact-package)
-- [Set artifact Id](#set-artifact-id)
+- [Set artifact ID](#set-artifact-id)
 
 > [!IMPORTANT]
-> This workflow can run for both development or release cycles.
-> A development cycle is any run that triggered from a change on a branch.
-> A release cycle is any run that triggered from adding a tag with format A.B.C.D
+> This workflow can run for both development or release cycles. > A development cycle is any run that triggered from a change on a branch.
+> A release cycle is any run that triggered from adding a tag with format `A.B.C.D`.
 > During the development cycle, the version of an artifact automatically includes the run number.
-> During the release cycle, the version of the artifact becomes the tag provided.
+> During the release cycle, the version of the artifact is the tag provided.
 
 ## How to use
 
-From within your own workflow yml files you can call a reusable workflow by adding a job that references the location on github of the '.yml' file:
+From within your own workflow .yml files, you can call a reusable workflow by adding a job that references the location on GitHub of the '.yml' file:
 For Example:
+
 '''yaml
 jobs:
 
@@ -46,7 +44,7 @@ jobs:
 Most reusable workflows require several arguments and secrets to be passed along.
 You can find which those are by opening the reusable workflow and looking at the 'inputs:' and 'secrets:' sections located at the top of the file.
 
-Alternatively we recommended you instead use one of the available [Starter Workflows](xref:github_starter_workflows) that in turn call one of our reusable workflows and are pre-filled with most of the arguments.
+However, we instead recommended to use one of the available [Starter Workflows](xref:github_starter_workflows) that in turn call one of our reusable workflows and are preconfigured with most of the arguments.
 
 For example:
 '''yaml
@@ -60,19 +58,19 @@ jobs:
       referenceType: ${{ github.ref_type }}
       repository: ${{ github.repository }}
       owner: ${{ github.repository_owner }}
-      sonarCloudProjectName: TODO: Go to 'https://sonarcloud.io/projects/create' and create a project. Then enter the id of the project as mentioned in the sonarcloud project url here.
+      sonarCloudProjectName: TODO: Go to 'https://sonarcloud.io/projects/create' and create a project. Then enter the id of the project as mentioned in the SonarCloud project URL here.
       # The API-key: generated in the DCP Admin app (https://admin.dataminer.services/) as authentication for a certain DataMiner System.
     secrets:
       api-key: ${{ secrets.DATAMINER_DEPLOY_KEY }}
       sonarCloudToken: ${{ secrets.SONAR_TOKEN }}
 '''
 
-## Skyline Quality Gate
+## Skyline quality gate
 
 ### Building
 
-Attempts to compile the visual studio solution after restoring all NuGets.
-This will check for Compilation Errors.
+Attempts to compile the Visual Studio solution after restoring all NuGet packages.
+This will check for compilation errors.
 
 ### Unit Tests
 
@@ -92,7 +90,7 @@ Will check the results of all previous steps and combine them into a single resu
 
 ### NuGet restore solution
 
-This is required to make sure creation of an application package (.dmapp) includes all assemblies used within NuGet packages in your Automation Script Solution.
+This is required to make sure creation of an application package (.dmapp) includes all assemblies used within NuGet packages in your Automation script solution.
 
 ### Upload artifact Package
 

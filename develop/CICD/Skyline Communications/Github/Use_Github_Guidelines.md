@@ -9,13 +9,13 @@ uid: Using_GitHub_for_CICD
 
 You can use GitHub to:
 
-- Share generic code/scripts or useful tools/libraries with the DataMiner community.
-- Collaborate on code with external users.
+- Share generic code/scripts or useful tools/libraries with the DataMiner community
+- Collaborate on code with external users
 
 > [!NOTE]
 > At present, **only Automation scripts** have workflows available for packaging and deployment.
 >
-> Automation scripts that are packaged with other artifacts (Visio files, connectors, etc.) will not be able to use the GitHub actions, so we do not recommend using GitHub for those yet.
+> Automation scripts that are packaged with other artifacts (Visio files, connectors, etc.) currently will not be able to use the GitHub actions, so we do not recommend using GitHub for those yet.
 
 ## Creating an account in GitHub's Skyline organization
 
