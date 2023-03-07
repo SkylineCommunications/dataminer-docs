@@ -204,6 +204,12 @@ Clock components in a published low-code app would incorrectly only update when 
 
 The submenu in the subheader bar of a dashboard would incorrectly be displayed when it did not contain any visible items.
 
+#### Web apps: Color picker would not be positioned correctly [ID_35649]
+
+<!-- MR 10.4.0 - FR 10.3.4 -->
+
+The color picker would not be positioned correctly.
+
 #### Web apps: Problem when retrieving spectrum element parameters [ID_35660]
 
 <!-- MR 10.3.0 [CU1] - FR 10.3.4 -->

@@ -210,6 +210,12 @@ A number of issues regarding the Visual Overview component have been fixed.
 
 When you tried to select a visualization for a newly added component that did not yet have one, the visualization picker would incorrectly resize the first time you hovered over it.
 
+#### Web apps: Color picker would not be positioned correctly [ID_35649]
+
+<!-- MR 10.4.0 - FR 10.3.4 -->
+
+The color picker would not be positioned correctly.
+
 #### Low-code apps: Problem when opening a low-code app on a mobile device or when resizing the screen to a mobile size [ID_35683]
 
 <!-- MR 10.4.0 - FR 10.3.4 -->
