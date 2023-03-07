@@ -136,6 +136,12 @@ The GQI data sources *Get elements* and *Get services* will now also return alar
 
 In the GQI data sources *Get services* and *Get views*, the *State* column has now been renamed to *Alarm state*.
 
+#### Dashboards app: Feeds listing parameters of EPM objects will now also list the parameters of the enhanced elements linked to those EPM objects [ID_35562]
+
+<!-- MR 10.4.0 - FR 10.3.4 -->
+
+When an EPM feed is used to feed EPM identifiers to a parameter feed, it will now also list the parameters of the enhanced elements that are linked to the EPM objects.
+
 ### Fixes
 
 #### GQI: Problem when retrieving DCF interfaces [ID_34820]
