@@ -266,6 +266,12 @@ When configuring an ad hoc data source in a GQI query, you can link the argument
 
 Also, in the query builder, the `Link [argument name] to feed for [argument name]` command has been renamed to `Use feed for [argument name]`.
 
+#### Dashboards app: Sticky component menus would no longer be fully visible after you had changed the number of dashboard columns [ID_35702]
+
+<!-- MR 10.3.0 [CU2] - FR 10.3.4 -->
+
+Sticky component menus would no longer be fully visible after you had changed the number of dashboard columns.
+
 #### Dashboards app: 'Clear all' button would incorrectly also be displayed when the dashboard did not contain any feeds [ID_35709]
 
 <!-- MR 10.3.0 [CU1] - FR 10.3.4 -->
@@ -305,3 +311,15 @@ Skyline.DataMiner.Web.Common.v1.Utilities.UTCToDateTimeUTC(long)' has some inval
 <!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
 
 GQI queries containing float or GUID values would not get migrated correctly.
+
+#### Dashboards app & low-code apps: GQI components would incorrectly not clear their query row feed when refetching data [ID_35767]
+
+<!-- MR 10.3.0 [CU2] - FR 10.3.4 -->
+
+GQI components would incorrectly not clear their query row feed when refetching data.
+
+#### Dashboards app & Low-code apps - Query builder: Problem when linking a feed component to an ad hoc data source with an optional argument [ID_35808]
+
+<!-- MR 10.3.0 [CU1] - FR 10.3.4 [CU0] -->
+
+When a feed component was linked to an ad hoc data source with an optional argument, in some cases, the feed would not work correctly.
