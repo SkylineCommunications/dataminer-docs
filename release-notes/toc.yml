@@ -820,8 +820,15 @@
       - name: PTP 1.1.0
         topicUid: PTP_1.1.0
     - name: SRM release notes
-      topicUID: SRM_1.2.29
+      topicUID: SRM_1.2.30
       items:
+      - name: SRM 1.2.30
+        topicUID: SRM_1.2.30
+        items:
+        - name: New features and changes
+          topicUid: SRM_1.2.30
+        - name: Addendum CU1
+          topicUid: SRM_1.2.30_CU1
       - name: SRM 1.2.29
         topicUID: SRM_1.2.29
       - name: SRM 1.2.28
