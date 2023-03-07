@@ -34,6 +34,7 @@ uid: deploying_srm
 
    > [!TIP]
    > See also:
+   >
    > - [Creating a view](xref:Managing_views#creating-a-view)
    > - [Naming of elements, services, views, etc.](xref:NamingConventions#naming-of-elements-services-views-etc)
 
@@ -52,4 +53,4 @@ uid: deploying_srm
 
    - Set *Services* > *App. Services View* to the name of the view you created to contain services (e.g. "3 - Services").
 
-   - Set *History and Logs* > *Booking Logging Location* to a shared folder accessible from both the client machine and the DataMiner servers, so that users will be able to view the log files. To do so, click *Settings* and enter the path in the *Booking Logging location* box.
+   - Set *History and Logs* > *Booking Logging Location* to a shared folder accessible from both the client machine and the DataMiner servers, so that users will be able to view the log files. See [Configuring SRM logging](xref:SRM_logging_config).

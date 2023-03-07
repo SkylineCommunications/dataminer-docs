@@ -990,6 +990,11 @@
       topicUid: DataMinerErrorCodes
     - name: Error codes table
       topicUid: ErrorCodeTable
+    - name: Extension modules error codes
+      topicUid: CommunicationGateway_ErrorCodes
+      items:
+      - name: CommunicationGateway error codes
+        topicUid: CommunicationGateway_ErrorCodes
 - name: Schema reference
   topicUid: SchemaReference
   items:
@@ -5081,6 +5086,106 @@
           topicUid: Skyline_Driver_Passport_Platform
         - name: Minimum DMA version
           topicUid: Minimum_DMA_version
+- name: CI/CD
+  topicUid: CICD
+  items:
+  - name: CI/CD Cross-Organisation
+        topicUid: cicdcrossorganisation
+    items:
+    - name: CI/CD Cross-Organisation GitHub
+      topicUid: cicdcrossorganisationgithub
+      items:
+      - name: GitHub Starter Workflows
+        topicUid: github_starter_workflows
+      - name: GitHub Validation Requirements
+        topicUid: github_validation_requirements
+      - name: Deploying from GitHub
+        topicUid: Deploying_Automation_scripts_from_a_GitHub_repository
+      - name: GitHub Reusable Workflows
+        topicUid: github_reusable_workflows
+        items:
+        - name: Reusable Workflow Automation Scripts
+          topicUid: github_reusable_workflows_automation_master_workflow
+        - name: Reusable Workflow NuGet Solutions
+          topicUid: github_reusable_workflows_nuget_solution_master_workflow
+        - name: Reusable Workflow SRM Function
+          topicUid: github_reusable_workflows_srm_function_master_workflow
+    - name: CI/CD Cross-Organisation GitLab
+      topicUid: cicdcrossorganisationGitlab
+      items:
+      - name: Deploying from GitLab
+        topicUid: Deploying_Automation_scripts_from_a_GitLab_repository
+  - name: CI/CD Skyline Communictions
+        topicUid: cicdskylinecommunications
+    items:
+    - name: CI/CD Skyline Communictions GitHub
+      topicUid: cicdskylinecommunicationsgithub
+      items:
+        - name: Migration From Gerrit to GitHub
+          topicUid: migration_from_gerrit_to_github
+        - name: GitHub Guidelines
+          topicUid: Using_GitHub_for_CICD
+    - name: CI/CD Skyline Communictions Gerrit and Jenkins
+      topicUid: cicdskylinecommunicationsgerritandjenkins
+      items:
+      - name: High-level overview
+        topicUid: High-level_overview
+      - name: Components
+        topicUid: Components
+        items:
+        - name: Gerrit
+          topicUid: Gerrit
+        - name: Jenkins
+          topicUid: Jenkins
+        - name: SonarQube
+          topicUid: SonarQube
+      - name: Protocol development with CI/CD Pipeline
+        topicUid: Protocol_development_with_CI_CD_Pipeline
+        items:
+        - name: Git protocol repositories
+          topicUid: Git_protocol_repositories
+        - name: Pipeline stages for protocols
+          topicUid: Pipeline_stages_for_protocols
+      - name: Function development with CI/CD pipeline
+        topicUid: Function_development_with_CI_CD_pipeline
+        items:
+        - name: Pipeline stages for functions
+          topicUid: Pipeline_stages_for_functions
+      - name: Automation script development with CI/CD pipeline
+        topicUid: Automation_script_development_with_CI_CD_pipeline
+        items:
+        - name: Automation scripts as a Visual Studio solution
+          topicUid: Automation_scripts_as_a_Visual_Studio_solution
+        - name: Pipeline stages for Automation scripts
+          topicUid: Pipeline_stages_for_Automation_scripts
+        - name: Deploying Automation scripts from a GitHub repository
+          topicUid: Deploying_Automation_scripts_from_a_GitHub_repository
+        - name: Deploying Automation scripts from a GitLab repository
+          topicUid: Deploying_Automation_scripts_from_a_GitLab_repository
+      - name: Visual overview development with CI/CD pipeline
+        topicUid: Visual_overview_development_with_CI_CD_pipeline
+        items:
+        - name: Pipeline stages for visual overviews
+          topicUid: Pipeline_stages_for_visual_overviews
+      - name: Dashboard Development with CI/CD pipeline
+        topicUid: Dashboard_Development_with_CI_CD_pipeline
+        items:
+        - name: Pipeline stages for dashboards
+          topicUid: Pipeline_stages_for_dashboards
+      - name: Custom solution development with CI/CD pipeline
+        topicUid: Custom_solution_development_with_CI_CD_Pipeline
+        items:
+        - name: Pipeline stages for custom solutions
+          topicUid: Pipeline_stages_for_custom_solutions
+      - name: Install package development with CICD pipeline
+        topicUid: Install_package_development_with_CICD_pipeline
+        items:
+        - name: Creating a repository for an install package
+          topicUid: Creating_a_repository_for_an_install_package
+        - name: Pipeline stages for install packages
+          topicUid: Pipeline_stages_for_install_packages
+      - name: FAQ
+        topicUid: FAQ
 - name: DataMiner Development Tools
   topicUid: TOOLS
   items:
@@ -5095,71 +5200,6 @@
         topicUID: Creating_app_package_scripts
     - name: Change Element States Offline
       topicUID: Change_Element_States_Offline
-    - name: CI/CD
-      topicUid: DevelopmentWithCICD
-      items:
-        - name: High-level overview
-          topicUid: High-level_overview
-        - name: Components
-          topicUid: Components
-          items:
-            - name: Gerrit
-              topicUid: Gerrit
-            - name: Jenkins
-              topicUid: Jenkins
-            - name: SonarQube
-              topicUid: SonarQube
-        - name: Protocol development with CI/CD Pipeline
-          topicUid: Protocol_development_with_CI_CD_Pipeline
-          items:
-            - name: Protocols as a Visual Studio solution
-              topicUid: Protocols_as_a_Visual_Studio_solution
-            - name: Git protocol repositories
-              topicUid: Git_protocol_repositories
-            - name: Pipeline stages for protocols
-              topicUid: Pipeline_stages_for_protocols
-        - name: Function development with CI/CD pipeline
-          topicUid: Function_development_with_CI_CD_pipeline
-          items:
-            - name: Pipeline stages for functions
-              topicUid: Pipeline_stages_for_functions
-        - name: Automation script development with CI/CD pipeline
-          topicUid: Automation_script_development_with_CI_CD_pipeline
-          items:
-            - name: Automation scripts as a Visual Studio solution
-              topicUid: Automation_scripts_as_a_Visual_Studio_solution
-            - name: Pipeline stages for Automation scripts
-              topicUid: Pipeline_stages_for_Automation_scripts
-            - name: Deploying Automation scripts from a GitHub repository
-              topicUid: Deploying_Automation_scripts_from_a_GitHub_repository
-            - name: Deploying Automation scripts from a GitLab repository
-              topicUid: Deploying_Automation_scripts_from_a_GitLab_repository
-        - name: Visual overview development with CI/CD pipeline
-          topicUid: Visual_overview_development_with_CI_CD_pipeline
-          items:
-            - name: Pipeline stages for visual overviews
-              topicUid: Pipeline_stages_for_visual_overviews
-        - name: Dashboard Development with CI/CD pipeline
-          topicUid: Dashboard_Development_with_CI_CD_pipeline
-          items:
-            - name: Pipeline stages for dashboards
-              topicUid: Pipeline_stages_for_dashboards
-        - name: Custom solution development with CI/CD pipeline
-          topicUid: Custom_solution_development_with_CI_CD_Pipeline
-          items:
-            - name: Pipeline stages for custom solutions
-              topicUid: Pipeline_stages_for_custom_solutions
-        - name: Install package development with CICD pipeline
-          topicUid: Install_package_development_with_CICD_pipeline
-          items:
-            - name: Creating a repository for an install package
-              topicUid: Creating_a_repository_for_an_install_package
-            - name: Pipeline stages for install packages
-              topicUid: Pipeline_stages_for_install_packages
-        - name: Github CI/CD 
-          topicUid: Using_GitHub_for_CICD
-        - name: FAQ
-          topicUid: FAQ
     - name: Copy Element Data
       topicUID: Copy_Element_Data
     - name: DataMiner Application Package Builder
@@ -5209,6 +5249,8 @@
               topicUid: Installing_and_configuring_DataMiner_Integration_Studio
             - name: Configuring Microsoft Visual Studio
               topicUid: Configuring_Microsoft_Visual_Studio
+        - name: Protocols as a Visual Studio solution
+          topicUid: Protocols_as_a_Visual_Studio_solution
         - name: DIS menu
           topicUid: DIS_menu
         - name: XML editor

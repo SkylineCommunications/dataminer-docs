@@ -35,14 +35,15 @@ uid: Overview_Collaboration
 
 ## ChatOps
 
-**ChatOps** is a feature that enhances the value of **Microsoft Teams** as you collaborate more effectively using insights and controls from your DataMiner System directly in Microsoft Teams. Users can interact with DataMiner using generic or custom chat commands, and you can even use DataMiner Automation to manage teams and channels and interact with users in a private chat. ChatOps is especially useful for teams that need to communicate and interact with one another frequently. In the future, we plan to offer support for ChatOps on **Slack** as well, as it is a widely used team messaging platform.
+**ChatOps** is a feature that enhances the value of **Microsoft Teams** as you collaborate more effectively using insights and controls from your DataMiner System directly in Microsoft Teams. Users can interact with DataMiner using generic or custom chat commands, and you can even use DataMiner Automation to manage teams and channels and interact with users in chats and channels. ChatOps is especially useful for teams that need to communicate and interact with one another frequently. In the future, we plan to offer support for ChatOps on **Slack** as well, as it is a widely used team messaging platform.
 
 > [!TIP]
 > See also:
 >
+> - [ChatOps User Guide](xref:ChatOps)
 > - [Example Use Case - Custom chat commands](https://community.dataminer.services/use-case/dataminer-chatops-custom-commands/)
-> - [ChatOps User Guide](xref:DataMiner_Teams_bot)
-> - [Examples - Teams Chat Integration](https://github.com/SkylineCommunications/ChatOps-Extensions/tree/main/ChatIntegrationExamples)
+> - [Examples - Custom chat commands](https://github.com/SkylineCommunications/ChatOps-Extensions/blob/main/CustomCommandExamples)
+> - [Examples - Chat integration](https://github.com/SkylineCommunications/ChatOps-Extensions/tree/main/ChatIntegrationExamples)
 
 ## API Share *(coming soon)*
 
