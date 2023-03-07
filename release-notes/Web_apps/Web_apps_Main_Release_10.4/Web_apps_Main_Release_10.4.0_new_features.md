@@ -108,3 +108,12 @@ A line & area chart component now has a number of time range buttons that allow 
 
 > [!NOTE]
 > In the *Dashboards* app, these time range buttons are disabled by default. When configuring the component, uou can enable them by selecting the *Show time range buttons* option in the *Component > Layout > Styling and Information* tab.
+
+#### Web apps: New action 'Open monitoring card' [ID_35661]
+
+<!-- MR 10.4.0 - FR 10.3.4 -->
+
+In a low-code app, you can now configure a new type of action: *Open monitoring card*. When triggered, this action will open the card of a specific element, service or view in the *Monitoring* app.
+
+> [!NOTE]
+> When a low-code app is embedded in Cube (e.g. in a visual overview), an *Open monitoring card* action will open the specified card in Cube.

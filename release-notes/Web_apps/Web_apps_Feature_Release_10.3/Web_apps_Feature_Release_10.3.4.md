@@ -50,6 +50,15 @@ A line & area chart component now has a number of time range buttons that allow 
 > [!NOTE]
 > In the *Dashboards* app, these time range buttons are disabled by default. When configuring the component, uou can enable them by selecting the *Show time range buttons* option in the *Component > Layout > Styling and Information* tab.
 
+#### Web apps: New action 'Open monitoring card' [ID_35661]
+
+<!-- MR 10.4.0 - FR 10.3.4 -->
+
+In a low-code app, you can now configure a new type of action: *Open monitoring card*. When triggered, this action will open the card of a specific element, service or view in the *Monitoring* app.
+
+> [!NOTE]
+> When a low-code app is embedded in Cube (e.g. in a visual overview), an *Open monitoring card* action will open the specified card in Cube.
+
 ## Changes
 
 ### Enhancements
@@ -102,6 +111,24 @@ New description of the *GetAlarmHistory* method:
 New description of the *GetAlarmDetails* method:
 
 > Get the alarm details for the specified alarm (use GetAlarmHistory for the details of a cleared non-root alarm).
+
+#### GQI: Clearer error message when querying a logger table without `RTDisplay=true` settings [ID_35706]
+
+<!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
+
+A clearer error message will now be returned when you are building a query against a logger table without `RTDisplay=true` settings, neither on table level nor on column level.
+
+#### Web apps: Enhanced feedback after a failed login attempt [ID_35724]
+
+<!-- MR 10.3.0 [CU1] - FR 10.3.4 -->
+
+When a login attempt fails, a clearer error message will now appear.
+
+#### Dashboards app & Low-code apps - Line & area chart component: Enhanced performance when exporting trend data to CSV [ID_35727]
+
+<!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
+
+Because of a number of enhancements, overall performance has increased when exporting trend data to a CSV file.
 
 ### Fixes
 
@@ -182,6 +209,12 @@ When the parameters of a spectrum element were retrieved in a web app, in some c
 <!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
 
 When, in a dashboard, you added a trended spectrum parameter to a line & area chart component, the component would not be able to retrieve the trend data of that parameter.
+
+#### Low-code apps: Problem when opening a low-code app on a mobile device or when resizing the screen to a mobile size [ID_35683]
+
+<!-- MR 10.4.0 - FR 10.3.4 -->
+
+When you opened a low-code app on a mobile device or when you resized the screen to a mobile size, a console error would be thrown.
 
 #### Dashboards app - Line & area chart component: Duplicate data in exported CSV file [ID_35688]
 

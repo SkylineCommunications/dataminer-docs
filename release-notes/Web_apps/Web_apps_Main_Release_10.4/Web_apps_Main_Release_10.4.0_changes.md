@@ -203,3 +203,9 @@ A number of issues regarding the Visual Overview component have been fixed.
 <!-- MR 10.4.0 - FR 10.3.4 -->
 
 When you tried to select a visualization for a newly added component that did not yet have one, the visualization picker would incorrectly resize the first time you hovered over it.
+
+#### Low-code apps: Problem when opening a low-code app on a mobile device or when resizing the screen to a mobile size [ID_35683]
+
+<!-- MR 10.4.0 - FR 10.3.4 -->
+
+When you opened a low-code app on a mobile device or when you resized the screen to a mobile size, a console error would be thrown.

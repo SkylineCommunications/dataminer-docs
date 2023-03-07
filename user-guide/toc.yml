@@ -2615,10 +2615,32 @@
                 topicUID: SRM_custom_front_end
               - name: Using custom scripts instead of the default SRM wizards
                 topicUID: SRM_custom_scripts
+              - name: Customizing the columns of the Bookings list
+                topicUID: SRM_custom_bookings_list
+              - name: Customizing the booking blocks on the timeline
+                topicUID: SRM_custom_booking_blocks
+          - name: Configuring SRM alarm monitoring
+            topicUID: SRM_alarm_monitoring
+          - name: Configuring SRM logging
+            topicUID: SRM_logging_config
           - name: Advanced configuration for Service Orchestration
             items:
+              - name: Bookings configuration
+                topicUID: Service_Orchestration_bookings_advanced
               - name: Resources configuration
                 topicUID: Service_Orchestration_resources_advanced
+              - name: Profile instances configuration
+                topicUID: Service_Orchestration_profile_instances
+              - name: Service definitions configuration
+                topicUID: Service_Orchestration_service_definition_advanced
+              - name: Service profiles configuration
+                topicUID: Service_Orchestration_service_profiles
+              - name: Custom events configuration
+                topicUID: Service_Orchestration_custom_events
+              - name: Booking life cycle states configuration
+                topicUID: Service_Orchestration_life_cycle_states
+      - name: SRM logging
+        topicUID: SRM_logging
 - name: dataminer.services
   topicUid: Part51CloudPlatform
   items:
@@ -2749,8 +2771,13 @@
           topicUid: Viewing_info_on_deployments
         - name: Viewing information on shares
           topicUid: Viewing_info_on_shares
-    - name: DataMiner Teams bot
-      topicUid: DataMiner_Teams_bot
+    - name: DataMiner ChatOps
+      topicUid: ChatOps
+      items:
+        - name: DataMiner Teams bot
+          topicUid: DataMiner_Teams_bot
+        - name: Chat integration
+          topicUid: Microsoft_Teams_Chat_Integration
     - name: Advanced configuration
       topicUID: Custom_cloud_endpoint_configuration
       items:
