@@ -138,37 +138,35 @@ The following information can be displayed:
 #ErrorAlarms
 ```
 
+#### Visual Overview - ListView component: New component option 'SingleSelectionMode' [ID_35320]
+
+<!-- MR 10.4.0 - FR 10.3.4 -->
+
+By default, you can select multiple rows in a list view (e.g. using the CTRL or SHIFT key). With the new component option *SingleSelectionMode*, you can now set the selection mode of a list view to single instead, so that only one row can be selected at a time.
+
+#### Visual Overview: Re-arranging grouped shapes [ID_35323]
+
+<!-- MR 10.4.0 - FR 10.3.4 -->
+
+When, in a Visio drawing, shapes had been positioned dynamically based on properties, up to now, it was possible to re-arrange individual shapes manually. From now on, it will also be possible to re-arrange grouped shapes.
+
 #### System Center: New DataMiner log file 'SLSmartBaselineManager.txt' [ID_35352]
 
 <!-- MR 10.4.0 - FR 10.3.3 -->
 
 In the *Logging* section of *System Center*, you can now also consult the *SLSmartBaselineManager.txt* log file.
 
-#### Automation: New user/group setting to specify whether users have to confirm program executions launched from interactive Automation scripts [ID_35418]
+#### Embedded web apps can now interact with Cube when using the Microsoft Edge (WebView2) browser plugin [ID_35655]
 
-<!-- MR 10.4.0 - FR 10.3.3 -->
+<!-- MR 10.4.0 - FR 10.3.4 -->
 
-A new user/group setting named *Do not confirm program executions from scripts*, found in the *User > Cube* tab of the *Settings* window, now allows you to specify whether users will have to explicitly confirm each program execution that is launched from an interactive Automation script.
+From now on, when using the Microsoft Edge (WebView2) web browser plugin, embedded web apps can interact with Cube (e.g. open an element card).
 
-By default, this option will be disabled, meaning that users will have to give their consent each time an interactive Automation script wants to launch a program. The confirmation box will also allow users to change the setting by selecting the *Don't show this confirmation again. Always launch program executions.* checkbox.
+#### Users no longer have to log in to embedded low-code apps [ID_35657]
 
-Each time a program is launched, a start entry and an end entry will be added to the Cube logging as well as to the *SLClient.txt* log file on the DataMiner Agent.
+<!-- MR 10.4.0 - FR 10.3.4 -->
 
-- The start entry will contain the following data:
-
-  - the name of the Automation script
-  - the ID of the Automation script
-  - the user's login data (full name, client machine name, client app name and last login date)
-  - the program that will be launched
-  - the arguments that will be passed to the program (if any)
-
-- The end entry will contain the following data:
-
-  - the user's login data (full name, client machine name, client app name and last login date)
-  - the process ID of the program
-  - the time at which the process ended
-  - the name of the program that ended
-  - the arguments that were passed to the program (if any)
+When a low-code app was embedded in Cube (e.g. in a visual overview), up to now, users had to explicitly log in to that app. From now on, Cube will automatically pass the authentication ticket to the low-code app, allowing users to access the app without having to log in again.
 
 ## Changes
 
@@ -184,7 +182,7 @@ The *automatic incident tracking* feature groups active alarms that are related 
 
 <!-- MR 10.4.0 - FR 10.3.1 -->
 
-A number of enhancements have been made to the parameter relationship feature. When you hover over a light bulb icon in the top-right corner of a trend graph, a tooltip will now appear. This tooltip will suggest you add a number of related parameters and will indicate that the parameter relationship feature is still in preview. Also, when you open a histogram, no light bulb icon will be displayed anymore as parameter relationships are not really relevant when viewing histograms.
+A number of enhancements have been made to the parameter relationship feature. When you hover over a light bulb icon in the top-right corner of a trend graph, a tooltip will now appear. This tooltip will suggest you add a number of related parameters. Also, when you open a histogram, no light bulb icon will be displayed anymore as parameter relationships are not really relevant when viewing histograms.
 
 #### Trending - pattern matching: Enhanced feedback when creating a trend pattern tag failed [ID_34963]
 
@@ -217,6 +215,12 @@ From now on, a slightly larger number of missing values will be allowed will you
 In the top-right corner of a trend graph, a light bulb icon appears when DataMiner finds parameters that are related to the parameters shown in the trend graph. Clicking this light bulb icon allows you to add one or more of those related parameters to the trend graph you are viewing.
 
 Up to now, when you clicked one of those related parameters in order to add it to the trend graph, a check mark would appear in front of it. From now on, check marks will no longer appear in front of related parameters after selecting them.
+
+#### Database TTL settings will now be limited to 10 years [ID_35533]
+
+<!-- MR 10.4.0 - FR 10.3.4 -->
+
+From now on, DataMiner Cube will no longer accept database TTL settings that exceed 10 years.
 
 ### Fixes
 

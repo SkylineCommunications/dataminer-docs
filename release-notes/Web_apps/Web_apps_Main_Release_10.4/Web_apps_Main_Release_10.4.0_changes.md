@@ -44,6 +44,17 @@ For example, when a line & area chart component is fed the following timespans..
 
 - *01/01/2022 9:00:00 > 01/01/2022 10:30:00*
 
+#### GQI: Enhanced performance when using Sort operators in conjunction with alarm, change point, trend pattern and trend pattern occurrence data sources [ID_35031]
+
+<!-- MR 10.4.0 - FR 10.3.3 -->
+
+Because of a number of enhancements, overall query performance has increased when using Sort operators in conjunction with the following data sources:
+
+- Get alarms
+- Get behavioral change events
+- Get trend data patterns
+- Get trend data pattern events
+
 #### Web apps: Button styles used in interactive Automation script components have been aligned with those used in low-code app components [ID_35076]
 
 <!-- MR 10.4.0 - FR 10.3.2 -->
@@ -187,20 +198,14 @@ A number of issues regarding the Visual Overview component have been fixed.
 - In some cases, the dimensions of pop-up windows would be incorrect.
 - When a pop-up window was shown using a *VdxShape* property, in some cases, the default page would be shown instead of the page that was specified.
 
-#### Web apps: An invalid value entered into a text box would incorrectly be replaced by the last valid value that was entered [ID_35489]
+#### Dashboards app: Visualization picker would incorrectly resize when you hovered over it [ID_35516]
 
-<!-- MR 10.4.0 - FR 10.3.3 -->
+<!-- MR 10.4.0 - FR 10.3.4 -->
 
-When you entered an invalid value into a text box, an error message would be displayed for a very short moment, and the invalid value would incorrectly be replaced by the last valid value that was entered.
+When you tried to select a visualization for a newly added component that did not yet have one, the visualization picker would incorrectly resize the first time you hovered over it.
 
-#### Web apps: No longer possible to clear a radio button group [ID_35603]
+#### Low-code apps: Problem when opening a low-code app on a mobile device or when resizing the screen to a mobile size [ID_35683]
 
-<!-- MR 10.4.0 - FR 10.3.3 [CU0] -->
+<!-- MR 10.4.0 - FR 10.3.4 -->
 
-It would incorrectly no longer be possible to clear a radio button group.
-
-#### Web apps: Auto-complete control could clear its content while you were entering a value [ID_35623]
-
-<!-- MR 10.4.0 - FR 10.3.3 [CU0] -->
-
-In some cases, an auto-complete control could clear its content while you were entering a value.
+When you opened a low-code app on a mobile device or when you resized the screen to a mobile size, a console error would be thrown.

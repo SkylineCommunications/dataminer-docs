@@ -301,6 +301,198 @@ This page contains an overview of the RPD parameters available in the D-DOCSIS b
 
   This value is obtained by counting unique Core MAC associations from the RPD CCAP Cores table (MIB OID: 1.3.6.1.4.1.4491.2.1.30.1.1.4.1.12) and the RPD RPM Cores table (Vecima RPM Apigee: rpd/mac-address;rpd/ccap-cores/ccap-core/state).
 
+- **US ICFR AVG**: Calculated. Total number of ICFR from US channels associated with the CMs connected to the node, divided by the total number of channels.
+
+  Acquired from the "cmIcfr" metric name in the "UpstreamScQamChannelInfo" metric group from the Kafka topic.
+
+- **US ICFR OOS Count**: Calculated. Total number of CMs where a US channel's ICFR metric breaches the OOS threshold.
+
+  Acquired from the "cmIcfr" metric name in the "UpstreamScQamChannelInfo" metric group from the Kafka topic.
+
+- **US ICFR OOS Percentage**: Calculated. Percentage of CMs connected to the node that breached the ICFR OOS threshold.
+
+  Acquired from the "cmIcfr" metric name in the "UpstreamScQamChannelInfo" metric group from the Kafka topic.
+
+- **US Ripples OOS AVG**: Calculated. Total number of ripples from US channels associated with the CMs connected to the node, divided by the total number of channels.
+
+  Acquired from the "ripples" metric name in the "UpstreamScQamChannelInfo" metric group from the Kafka topic.
+
+- **US Ripples OOS Count**: Calculated. Total number of CMs where a US channel's ripples metric breaches the OOS threshold.
+
+  Acquired from the "ripples" metric name in the "UpstreamScQamChannelInfo" metric group from the Kafka topic.
+
+- **US Ripples OOS Percentage**: Calculated. Percentage of CMs connected to the node that breached the Ripples OOS threshold.
+
+  Acquired from the "ripples" metric name in the "UpstreamScQamChannelInfo" metric group from the Kafka topic.
+
+- **US TX Power AVG**: Calculated. Total TX power from US channels associated with the CMs connected to the node, divided by the total number of channels.
+
+  Acquired from the "txPower" metric name in the "UpstreamScQamChannelInfo" metric group from the Kafka topic.
+
+- **US TX Power OOS Count**: Calculated. Total number of CMs where a US channel's TX power metric breaches the OOS threshold.
+
+  Acquired from the "txPower" metric name in the "UpstreamScQamChannelInfo" metric group from the Kafka topic.
+
+- **US TX Power OOS Percentage**: Calculated. Percentage of CMs connected to the node that breached the TX Power OOS threshold.
+
+  Acquired from the "txPower" metric name in the "UpstreamScQamChannelInfo" metric group from the Kafka topic.
+
+- **US T3 24 Hour AVG**: Calculated. Total number of T3 timeouts in the last 24 hours from US channels associated with the CMs connected to the node, divided by the total number of channels.
+
+  Acquired from the "t3" metric name in the "UpstreamScQamChannelInfo" metric group from the Kafka topic.
+
+- **US T3 24 Hour OOS Count**: Calculated. Total number of CMs where a US channel's T3 timeouts in the last 24 hours metric breaches the OOS threshold.
+
+  Acquired from the "t3" metric name in the "UpstreamScQamChannelInfo" metric group from the Kafka topic.
+
+- **US T3 24 Hour OOS Percentage**: Calculated. Percentage of CMs connected to the node that breached the T3 timeouts in the last 24 hours OOS threshold.
+
+  Acquired from the "t3" metric name in the "UpstreamScQamChannelInfo" metric group from the Kafka topic.
+
+- **US T4 24 Hour AVG**: Calculated. Total number of T4 timeouts in the last 24 hours from US channels associated with the CMs connected to the node, divided by the total number of channels.
+
+  Acquired from the "t4" metric name in the "UpstreamScQamChannelInfo" metric group from the Kafka topic.
+
+- **US T4 24 Hour OOS Count**: Calculated. Total number of CMs where a US channel's T4 timeouts in the last 24 hours metric breaches the OOS threshold.
+
+  Acquired from the "t4" metric name in the "UpstreamScQamChannelInfo" metric group from the Kafka topic.
+
+- **US T4 24 Hour OOS Percentage**: Calculated. Percentage of CMs connected to the node that breached the T4 timeouts in the last 24 hours OOS threshold.
+
+  Acquired from the "t4" metric name in the "UpstreamScQamChannelInfo" metric group from the Kafka topic.
+
+- **DS RX AVG**: Calculated. Total RX power from DS channels associated with the CMs connected to the node, divided by the total number of channels.
+
+  Acquired from the "rxPower" metric name in the "downstreamScQamChannels" metric group from the Kafka topic.
+
+- **DS RX Minimum**: Calculated. Minimum RX power from DS channels associated with the CMs connected to the node.
+
+  Acquired from the "rxPower" metric name in the "downstreamScQamChannels" metric group from the Kafka topic.
+
+- **DS RX Maximum**: Calculated. Maximum RX power from DS channels associated with the CMs connected to the node.
+
+  Acquired from the "rxPower" metric name in the "downstreamScQamChannels" metric group from the Kafka topic.
+
+- **DS SNR AVG**: Calculated. Total SNR power from DS channels associated with the CMs connected to the node, divided by the total number of channels.
+
+  Acquired from the "snr" metric name in the "downstreamScQamChannels" metric group from the Kafka topic.
+
+- **DS SNR Minimum**: Calculated. Minimum SNR power from DS channels associated with the CMs connected to the node.
+
+  Acquired from the "snr" metric name in the "downstreamScQamChannels" metric group from the Kafka topic.
+
+- **DS SNR Maximum Total**: Calculated. Maximum SNR power from DS channels associated with the CMs connected to the node.
+
+  Acquired from the "snr" metric name in the "downstreamScQamChannels" metric group from the Kafka topic.
+
+- **DS Post-FEC 24 Hour AVG**: Calculated. Total uncorrectable packets in 24 hours from DS channels associated with the CMs connected to the node, divided by the total number of packets in 24 hours from the channels.
+
+  Acquired from the "unerroreds", "correcteds", and "uncorrectables" metric names in the "downstreamScQamChannels" metric group from the Kafka topic.
+
+- **DS Post-FEC 24 Hour OOS Count**: Calculated. Total number of CMs where a DS channel's Post-FEC in the last 24 hours metric breaches the OOS threshold.
+
+  Acquired from the "unerroreds", "correcteds", and "uncorrectables" metric names in the "downstreamScQamChannels" metric group from the Kafka topic.
+
+- **DS Post-FEC 24 Hour OOS Percentage**: Calculated. Percentage of CMs where a DS channel's Post-FEC in the last 24 hours metric breaches the OOS threshold.
+
+  Acquired from the "unerroreds", "correcteds", and "uncorrectables" metric names in the "downstreamScQamChannels" metric group from the Kafka topic.
+
+- **OFDMA Post-FEC 24 Hour AVG**: Calculated. Total uncorrectable packets in 24 hours from OFDMA channels associated with the CMs connected to the node, divided by the total number of packets in 24 hours from the channels.
+
+  Acquired from the "totalCodeWords" and "unreliable" metric names in the "UpstreamOfdmaChannelInfo" metric group from the Kafka topic.
+
+- **OFDMA Post-FEC 24 Hour OOS Count**: Calculated. Total number of CMs where an OFDMA channel's Post-FEC in the last 24 hours metric breaches the OOS threshold.
+
+  Acquired from the "totalCodeWords" and "unreliable" metric names in the "UpstreamOfdmaChannelInfo" metric group from the Kafka topic.
+
+- **OFDMA Post-FEC 24 Hour OOS Percentage**: Calculated. Percentage of CMs where an OFDMA channel's Post-FEC in the last 24 hours metric breaches the OOS threshold.
+
+  Acquired from the "totalCodeWords" and "unreliable" metric names in the "UpstreamOfdmaChannelInfo" metric group from the Kafka topic.
+
+- **OFDMA TX Level AVG**: Calculated. Total TX power from OFDMA channels associated with the CMs connected to the node, divided by the total number of channels.
+
+  Acquired from the "txPower" metric name in the "UpstreamOfdmaChannelInfo" metric group from the Kafka topic.
+
+- **OFDMA TX Level OOS Count**: Calculated. Total number of CMs where an OFDMA channel's TX power metric breaches the OOS threshold.
+
+  Acquired from the "txPower" metric name in the "UpstreamOfdmaChannelInfo" metric group from the Kafka topic.
+
+- **OFDMA TX Level OOS Percentage**: Calculated. Percentage of CMs connected to the node that breached the TX Power OOS threshold.
+
+  Acquired from the "txPower" metric name in the "UpstreamOfdmaChannelInfo" metric group from the Kafka topic.
+
+- **OFDMA MER AVG**: Calculated. Total MER power from OFDMA channels associated with the CMs connected to the node, divided by the total number of channels.
+
+  Acquired from the "rxPower" metric name in the "UpstreamOfdmaChannelInfo" metric group from the Kafka topic.
+
+- **OFDMA MER OOS Count**: Calculated. Total number of CMs where an OFDMA channel's MER power metric breaches the OOS threshold.
+
+  Acquired from the "rxPower" metric name in the "UpstreamOfdmaChannelInfo" metric group from the Kafka topic.
+
+- **OFDMA MER OOS Percentage**: Calculated. Percentage of CMs connected to the node that breached the MER Power OOS threshold.
+
+  Acquired from the "rxPower" metric name in the "UpstreamOfdmaChannelInfo" metric group from the Kafka topic.
+
+- **OFDMA T3 24 Hour AVG**: Calculated. Total number of T3 timeouts in the last 24 hours from OFDMA channels associated with the CMs connected to the node, divided by the total number of channels.
+
+  Acquired from the "t3TimeoutsUpTm" metric name in the "UpstreamOfdmaChannelInfo" metric group from the Kafka topic.
+
+- **OFDMA T3 24 Hour OOS Count**: Calculated. Total number of CMs where an OFDMA channel's T3 timeouts in the last 24 hours metric breaches the OOS threshold.
+
+  Acquired from the "t3TimeoutsUpTm" metric name in the "UpstreamOfdmaChannelInfo" metric group from the Kafka topic.
+
+- **OFDMA T3 24 Hour OOS Percentage**: Calculated. Percentage of CMs connected to the node that breached the T3 timeouts in the last 24 hours OOS threshold.
+
+  Acquired from the "t3TimeoutsUpTm" metric name in the "UpstreamOfdmaChannelInfo" metric group from the Kafka topic.
+
+- **OFDMA T4 24 Hour AVG**: Calculated. Total number of T4 timeouts in the last 24 hours from OFDMA channels associated with the CMs connected to the node, divided by the total number of channels.
+
+  Acquired from the "t4TimeoutsUpTm" metric name in the "UpstreamOfdmaChannelInfo" metric group from the Kafka topic.
+
+- **OFDMA T4 24 Hour OOS Count**: Calculated. Total number of CMs where an OFDMA channel's T4 timeouts in the last 24 hours metric breaches the OOS threshold.
+
+  Acquired from the "t4TimeoutsUpTm" metric name in the "UpstreamOfdmaChannelInfo" metric group from the Kafka topic.
+
+- **OFDMA T4 24 Hour OOS Percentage**: Calculated. Percentage of CMs connected to the node that breached T4 timeouts in the last 24 hours OOS threshold.
+
+  Acquired from the "t4TimeoutsUpTm" metric name in the "UpstreamOfdmaChannelInfo" metric group from the Kafka topic.
+
+- **OFDM Post-FEC 24 Hour AVG**: Calculated. Total uncorrectable packets in 24 hours from OFDM channels associated with the CMs connected to the node, divided by the total number of packets in 24 hours from the channels.
+
+  Acquired from the "totalCodeWords" and "uncorrectables" metric names in the "downstreamOfdmChannels" metric group from the Kafka topic.
+
+- **OFDM Post-FEC 24 Hour OOS Count**: Calculated. Total number of CMs where an OFDM channel's Post-FEC in the last 24 hours metric breaches the OOS threshold.
+
+  Acquired from the "totalCodeWords" and "uncorrectables" metric names in the "downstreamOfdmChannels" metric group from the Kafka topic.
+
+- **OFDM Post-FEC 24 Hour OOS Percentage**: Calculated. Percentage of CMs where an OFDM channel's Post-FEC in the last 24 hours metric breaches the OOS threshold.
+
+  Acquired from the "totalCodeWords" and "uncorrectables" metric names in the "downstreamOfdmChannels" metric group from the Kafka topic.
+
+- **OFDM RX Level AVG**: Calculated. Total RX power from OFDM channels associated with the CMs connected to the node, divided by the total number of channels.
+
+  Acquired from the "rxPowerLevelAvg" metric name in the "downstreamOfdmChannels" metric group from the Kafka topic.
+
+- **OFDM RX Level OOS Count**: Calculated. Total number of CMs where an OFDM channel's RX power metric breaches the OOS threshold.
+
+  Acquired from the "rxPowerLevelAvg" metric name in the "downstreamOfdmChannels" metric group from the Kafka topic.
+
+- **OFDM RX Level OOS Percentage**: Calculated. Percentage of CMs connected to the node that breached the RX Power OOS threshold.
+
+  Acquired from the "rxPowerLevelAvg" metric name in the "downstreamOfdmChannels" metric group from the Kafka topic.
+
+- **OFDM MER AVG**: Calculated. Total MER power from OFDM channels associated with the CMs connected to the node, divided by the total number of channels.
+
+  Acquired from the "subcarrierMerAvg" metric name in the "downstreamOfdmChannels" metric group from the Kafka topic.
+
+- **OFDM MER OOS Count**: Calculated. Total number of CMs where an OFDM channel's MER power metric breaches the OOS threshold.
+
+  Acquired from the "subcarrierMerAvg" metric name in the "downstreamOfdmChannels" metric group from the Kafka topic.
+
+- **OFDM MER OOS Percentage**: Calculated. Percentage of CMs connected to the node that breached the MER Power OOS threshold.
+
+  Acquired from the "subcarrierMerAvg" metric name in the "downstreamOfdmChannels" metric group from the Kafka topic.
+
 ## System parameters
 
 - **Name**: Direct value. The RPD name.

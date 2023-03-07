@@ -74,3 +74,46 @@ It can be used to retrieve the parameter relationships that are stored in a mode
 
 > [!NOTE]
 > This data source will only be available when *ModelHost* is running.
+
+#### Dashboards app & Low-code apps: 'Lazy load components' setting [ID_35469] [ID_35486]
+
+<!-- MR 10.4.0 - FR 10.3.4 -->
+
+In the configuration settings of a dashboard or a page/panel of a low-code app, you can now find the *Lazy load components* setting.
+
+When this settings is enabled, the components on the dashboard or the page/panel of the low-code app will only be initialized the first time they appear on the screen. This will considerably shorten the initial load time and enhance overall performance of large dashboards and large pages/panels of low-code apps.
+
+> [!NOTE]
+>
+> - This setting, which is enabled by default for all new dashboards and all new pages/panels of low-code apps, is only available if you add the `showAdvancedSettings=true` option to the dashboard URL.
+> - Even when this setting is enabled, components will not be lazy loaded in edit mode.
+
+#### Monitoring app - Trending: Switching between trend graph and histogram [ID_35501]
+
+<!-- MR 10.4.0 - FR 10.3.4 -->
+
+When viewing a trend graph in the Monitoring app, you can now easily switch between trend graph and histogram by clicking either the trend graph or histogram icon in the top-right corner.
+
+#### Monitoring app & Dashboards app - Line & area chart: Time range buttons [ID_35595]
+
+<!-- MR 10.4.0 - FR 10.3.4 -->
+
+A line & area chart component now has a number of time range buttons that allow you to quickly select one of the following preset time ranges:
+
+- 1d (last 24 hours)
+- 1w (last 7 days)
+- 1m (last 30 days)
+- 1y (last year)
+- 5y (last 5 years)
+
+> [!NOTE]
+> In the *Dashboards* app, these time range buttons are disabled by default. When configuring the component, uou can enable them by selecting the *Show time range buttons* option in the *Component > Layout > Styling and Information* tab.
+
+#### Web apps: New action 'Open monitoring card' [ID_35661]
+
+<!-- MR 10.4.0 - FR 10.3.4 -->
+
+In a low-code app, you can now configure a new type of action: *Open monitoring card*. When triggered, this action will open the card of a specific element, service or view in the *Monitoring* app.
+
+> [!NOTE]
+> When a low-code app is embedded in Cube (e.g. in a visual overview), an *Open monitoring card* action will open the specified card in Cube.

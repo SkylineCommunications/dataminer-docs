@@ -2,19 +2,15 @@
 uid: Web_apps_Feature_Release_10.3.3
 ---
 
-# DataMiner web apps Feature Release 10.3.3 – Preview
+# DataMiner web apps Feature Release 10.3.3
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 > For release notes for this release that are not related to the web applications, see [General Feature Release 10.3.3](xref:General_Feature_Release_10.3.3).
 
 ## Highlights
-
-*No highlights have been selected for this release yet*
-
-## Other new features
 
 #### Dashboards app - GQI: New data sources [ID_34747] [ID_35027] [ID_34965] [ID_35058]
 
@@ -44,6 +40,8 @@ When configuring a Join operator, you can now select the *Row by row* option.
 >
 > - The *Row by row* option will only be visible and configurable when you opened the dashboard or app with `showAdvancedSettings=true` added to the URL.
 > - Currently, the *Row by row" option is only supported for inner and left joins. If you use it for an outer or right join, an exception will be thrown.
+
+## Other features
 
 #### Monitoring app: Element name added to breadcrumbs of trend card [ID_35270]
 
@@ -77,6 +75,17 @@ It can be used to retrieve the parameter relationships that are stored in a mode
 ## Changes
 
 ### Enhancements
+
+#### GQI: Enhanced performance when using Sort operators in conjunction with alarm, change point, trend pattern and trend pattern occurrence data sources [ID_35031]
+
+<!-- MR 10.4.0 - FR 10.3.3 -->
+
+Because of a number of enhancements, overall query performance has increased when using Sort operators in conjunction with the following data sources:
+
+- Get alarms
+- Get behavioral change events
+- Get trend data patterns
+- Get trend data pattern events
 
 #### Web apps: Enhanced color picker [ID_35276]
 
@@ -204,7 +213,7 @@ Time range feeds would trigger components more often than required, causing them
 
 #### Web apps: An invalid value entered into a text box would incorrectly be replaced by the last valid value that was entered [ID_35489]
 
-<!-- MR 10.4.0 - FR 10.3.3 -->
+<!-- MR 10.3.0 [CU1] - FR 10.3.3 -->
 
 When you entered an invalid value into a text box, an error message would be displayed for a very short moment, and the invalid value would incorrectly be replaced by the last valid value that was entered.
 
@@ -216,12 +225,12 @@ Panels of which the *Fit to view* option was selected would incorrectly switch t
 
 #### Web apps: No longer possible to clear a radio button group [ID_35603]
 
-<!-- MR 10.4.0 - FR 10.3.3 [CU0] -->
+<!-- MR 10.3.0 [CU1] - FR 10.3.3 [CU0] -->
 
 It would incorrectly no longer be possible to clear a radio button group.
 
 #### Web apps: Auto-complete control could clear its content while you were entering a value [ID_35623]
 
-<!-- MR 10.4.0 - FR 10.3.3 [CU0] -->
+<!-- MR 10.3.0 [CU1] - FR 10.3.3 [CU0] -->
 
 In some cases, an auto-complete control could clear its content while you were entering a value.

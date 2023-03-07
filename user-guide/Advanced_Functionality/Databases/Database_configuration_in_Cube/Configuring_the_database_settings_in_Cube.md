@@ -27,7 +27,7 @@ For a Cassandra cluster database (i.e. one Cassandra cluster that is used as the
 
    - **Keyspace prefix** or **Name**: The prefix that the DataMiner System will use to create the keyspaces.
 
-   - **DB server**: The IP addresses of the nodes, separated by commas.
+   - **DB server**: The IP addresses or hostnames of the nodes, separated by commas. From DataMiner 10.3.0/10.3.3 onwards, you can specify an IP address with a custom port, e.g `10.5.100.1:5555`. If no port is provided, the default Cassandra port is used instead (see [Configuring the IP network ports](xref:Configuring_the_IP_network_ports)). <!-- RN 34590 -->
 
    - **User**: Username with which the DMA has to log on to Cassandra.
 
@@ -35,11 +35,11 @@ For a Cassandra cluster database (i.e. one Cassandra cluster that is used as the
 
 1. From DataMiner Cube 10.3.0/10.3.3 onwards, you can also specify the database settings for Elasticsearch. Note that if the server supports [OpenSearch](xref:OpenSearch_database), Cube will allow you to configure this type of database instead of Elasticsearch.
 
-   - **Database**: The type of database, i.e. *Elasticsearch*.
+   - **Database**: The type of database, e.g. *Elasticsearch*.
 
    - **Database prefix**: The prefix that the DataMiner System will use to create the indices.
 
-   - **DB server**: The IP addresses or hostnames of the Elasticsearch nodes, separated by commas. If TLS is enabled, the full URL must be specified, e.g. `https://elastic.mydomain.local`. If no port is provided, port 9200 will be used by default.
+   - **DB server**: The IP addresses or hostnames of the Elasticsearch nodes, separated by commas. If TLS is enabled, the full URL must be specified, e.g. `https://elastic.mydomain.local`. If no port is provided, the default Elasticsearch port is used instead (see [Configuring the IP network ports](xref:Configuring_the_IP_network_ports)).
 
    - **User**: The username with which the DMA has to log on to Elasticsearch (if applicable).
 
@@ -67,7 +67,7 @@ In case a separate Cassandra cluster is used per DMA, configure the settings as 
 
    - **Name**: The name of the database.
 
-   - **DB Server**: The name or IP address of the server that hosts the database.
+   - **DB Server**: The name or IP address of the server that hosts the database. From DataMiner 10.3.0/10.3.3 onwards, you can specify an IP address with a custom port, e.g `10.5.100.1:5555`. If no port is provided, the default Cassandra port is used instead (see [Configuring the IP network ports](xref:Configuring_the_IP_network_ports)). <!-- RN 34590 -->
 
    - **Connection string**: Can be filled in instead of the other fields, in which case this string will be used to connect to the database.
 
@@ -117,6 +117,12 @@ To configure the connection to an [Amazon Keyspaces database](xref:Amazon_Keyspa
    - **Database**: The type of database, i.e. *Amazon Keyspaces*.
 
    - **Keyspace prefix**: The name all Amazon Keyspaces will be prefixed with. This will be identical for all DMAs in the DMS.
+
+     - Only alphanumeric characters are supported.
+
+     - The prefix cannot start with a number.
+
+     - The prefix has a maximum length of 11 characters.
 
    - **DB Server**: The URL of the [global endpoint](https://docs.aws.amazon.com/keyspaces/latest/devguide/programmatic.endpoints.html) of the region your Amazon Keyspaces cluster is in. (e.g. `cassandra.eu-north-1.amazonaws.com`).
 

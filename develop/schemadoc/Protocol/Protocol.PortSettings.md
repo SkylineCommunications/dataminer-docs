@@ -14,7 +14,7 @@ Defines the default port settings of the main device port. It also allows you to
 
 |Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|Type|Required|Description|
 |--- |--- |--- |--- |
-|[name](xref:Protocol.PortSettings-name)|[TypeNonEmptyString](xref:Protocol-TypeNonEmptyString)|Yes|Specifies the name of the additional protocol type as specified in the [Protocol.Type@advanced](xre:Protocol.Type-advanced) attribute.|
+|[name](xref:Protocol.PortSettings-name)|[TypeNonEmptyString](xref:Protocol-TypeNonEmptyString)|Yes|Specifies the name of the additional protocol type as specified in the [Protocol.Type@advanced](xref:Protocol.Type-advanced) attribute.|
 |[visibleInUi](xref:Protocol.Ports.PortSettings-visibleInUi)|[EnumTrueFalse](xref:Protocol-EnumTrueFalse)||If set to “false”, users cannot see or change the port settings for this additional protocol type when creating or editing an element.\*|
 
 \* *Not applicable for the main connection (Protocol.PortSettings), only for additional connections (Protocol.Ports.PortSettings).*

@@ -12,7 +12,7 @@ We are working on adding more information to this section soon, so check back fo
 - [DataMiner platform – empowering your digital transformation](xref:Overview_Platform_intro)
 - [dataminer.services](xref:Overview_DCP)
 - [Agile partnership](xref:Overview_Agile_Partnership_intro)
-- [DevOps](xref:Overview_DevOps)
+- [DevOps](xref:Overview_DevOps_index)
 - [Training courses and certification](xref:Overview_Training_intro)
 - [Pricing](xref:Pricing)
 - [Support Services](xref:Overview_Support_DMS_M_and_S)

@@ -21,4 +21,4 @@ It is possible to install antivirus software on a DMA. However, you need to keep
 - Avoid scheduled virus scans affecting the available resources for the DataMiner software at certain moments in time.
 
 > [!CAUTION]
-> Failing to make these adjustments when using antivirus software may cause undesired operational problems with your DataMiner system, which are not covered under warranty or support. See [Exclusions](xref:Support_services_agreement#exclusions) and [Supported products](xref:Support_services_agreement#supported-products) in the *Support services agreement*.
+> Failing to make these adjustments when using antivirus software may cause undesired operational problems with your DataMiner system, which are not covered under warranty or support. See [Exclusions](xref:Support_services_terms#exclusions) and [Supported products](xref:Support_services_terms#supported-products) in the *Support services terms*.

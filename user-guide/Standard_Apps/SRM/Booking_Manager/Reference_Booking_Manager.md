@@ -148,6 +148,9 @@ This property determines the order in which resources should be assigned to node
 
 Set the value to an integer indicating the position of the resource for this node in the order, e.g. 2.
 
+> [!TIP]
+> See also: [Defining the resource selection sequence](xref:Service_Orchestration_resources_advanced#defining-the-resource-selection-sequence)
+
 ### Contributing Configuration
 
 **Scope**: Service definition
@@ -227,8 +230,11 @@ The value of this property should be configured in JSON format. It can contain s
 **Example value**:
 
 ```json
-{"Script":"Script:TESTEDA123||myarg=abcde-[RESERVATIONID]"}
+{"Script":"Script:UpdateJob||BookingId=[RESERVATIONID]"}
 ```
+
+> [!TIP]
+> See also: [Configuring a custom Created Booking Action](xref:Service_Orchestration_life_cycle_states#configuring-a-custom-created-booking-action)
 
 ### Data Transfer Rules Configuration
 
@@ -333,6 +339,9 @@ Set this property to an integer value corresponding with the parent system funct
 
 Set this property to *Yes* to filter the available profile instances for a node in the Booking Wizard based on the capabilities of the selected resource.
 
+> [!TIP]
+> See also: [Filtering profile instances based on resource selection](xref:Service_Orchestration_profile_instances#filtering-profile-instances-based-on-resource-selection)
+
 ### HideFromWizard
 
 **Scope**: Service definition
@@ -342,6 +351,9 @@ Set this property to *Yes* to filter the available profile instances for a node 
 **Mandatory**: No
 
 Set the value of this property to *TRUE* to hide a service definition from the Booking Wizard.
+
+> [!TIP]
+> See also: [Hiding a service definition in the Booking Manager app](xref:Service_Orchestration_service_definition_advanced#hiding-a-service-definition-in-the-booking-manager-app)
 
 ### HideIfResourceAvailable
 
@@ -382,6 +394,9 @@ This property allows you to indicate that profile instance selection is optional
 
 Set this property to *TRUE* to mark profile instance selection as optional.
 
+> [!TIP]
+> See also: [Setting a profile instance as optional](xref:Service_Orchestration_profile_instances#setting-a-profile-instance-as-optional)
+
 ### NoConnectivityCheck
 
 **Scope**: Service definition node interface
@@ -393,6 +408,9 @@ Set this property to *TRUE* to mark profile instance selection as optional.
 This property allows you to configure an interface that is not connected. This is also used in the context of contributing bookings to indicate interfaces that are not connected.
 
 If this property is not configured or set to *FALSE*, a disconnected interface is not handled. If the property is set to *TRUE*, the disconnected interface is loaded and displayed in the Booking Wizard.
+
+> [!TIP]
+> See also: [Allowing profile instance configuration for disconnected interfaces](xref:Service_Orchestration_profile_instances#allowing-profile-instance-configuration-for-disconnected-interfaces)
 
 ### Options
 
@@ -440,6 +458,9 @@ Set this property to an integer representing the priority of the resource, e.g. 
 This property allows you to set the resource selection control for a specific node to read-only.
 
 To do so, set the property to *TRUE*.
+
+> [!TIP]
+> See also: [Disabling resource selection in the UI](xref:Service_Orchestration_resources_advanced#disabling-resource-selection-in-the-ui)
 
 ### Resource Assignment
 
@@ -522,6 +543,9 @@ To configure this, on the *Config* > *Wizard* tab of the Booking Manager, set *R
 This property allows you to indicate whether the Service Profile Wizard should create a new contributing booking for this node or use an existing contributing booking if available.
 
 Set this property to *TRUE* to indicate that existing contributing bookings should be reused for the node.
+
+> [!TIP]
+> See also: [Enabling reuse of contributing bookings](xref:Service_Orchestration_service_definition_advanced#enabling-reuse-of-contributing-bookings)
 
 ### Service Profile Data Transfer Configuration
 

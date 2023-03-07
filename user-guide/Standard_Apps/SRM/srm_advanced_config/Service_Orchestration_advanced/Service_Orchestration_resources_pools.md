@@ -168,3 +168,39 @@ By default, a booking can only be confirmed when all mandatory resources and pro
 
 > [!TIP]
 > See also: [Options](xref:SRM_properties_Booking_Manager#options)
+
+### Defining the resource selection sequence
+
+If bookings are created based on a service definition, you can define the sequence for resource selection in the service definition.
+
+1. In the Services module, go to the *definitions* tab and select the service definition.
+
+1. For each node of the service definition:
+
+   1. Select the node.
+
+   1. In the *properties* pane below the diagram pane, add the property *ConfigurationOrder*, and set its value to an integer indicating its position in the order. The lowest value will be displayed first.
+
+> [!TIP]
+> See also: [ConfigurationOrder](xref:SRM_properties_Booking_Manager#configurationorder)
+
+### Disabling resource selection in the UI
+
+<!-- RN 28965 -->
+
+In some situations, resources for specific nodes can be selected automatically, without requiring user interaction. In that case, you can disable resource selection for those nodes in the Booking Wizard:
+
+1. In the Services module, go to the *definitions* tab.
+
+1. Select the service definition and the node.
+
+1. In the *properties* pane below the diagram pane, add the property *ReadOnlyResourceSelectionControl*.
+
+1. Set the property value to *True*.
+
+> [!TIP]
+> See also: [ReadOnlyResourceSelectionControl](xref:SRM_properties_Booking_Manager#readonlyresourceselectioncontrol)
+
+## Configuring resource pool inheritance for a profile instance
+
+See [Configuring resource pool inheritance for a profile instance](xref:Service_Orchestration_profile_instances#configuring-resource-pool-inheritance-for-a-profile-instance).

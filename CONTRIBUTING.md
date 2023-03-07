@@ -768,6 +768,34 @@ The only time when "the user" is appropriate is when whoever you are writing for
 
 - If you installed Git after you installed GitHub Desktop, remove the repository in GitHub Desktop and add it again.
 
+### GitHub Desktop throws "Author identity unknown" error
+
+**Symptom**: When you try to push a commit using GitHub Desktop, this fails with the following error:
+
+```txt
+Author identity unknown
+
+*** Please tell me who you are.
+
+Run
+
+    git config --global user.email "you@example.com"
+    git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit ---global to set the identity only in this repository.
+
+fatal: empty ident name (for <>) not allowed
+```
+
+**Resolution**:
+
+1. In GitHub Desktop, select *Repository* in the top-left corner and click *Repository settings*.
+
+1. In the *Git config* tab, select *Use my global Git config* and click *Save*.
+
+   ![Git config](~/images/Git_config.png)
+
 ## References
 
 As our way of working is very similar to the approach used for Microsoft Docs, it can be useful to take a look at the [Microsoft Docs Contributor Guide](https://docs.microsoft.com/en-us/contribute/) for additional information and guidelines.

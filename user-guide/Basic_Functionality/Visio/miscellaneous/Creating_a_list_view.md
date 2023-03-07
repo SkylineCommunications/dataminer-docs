@@ -4,10 +4,7 @@ uid: Creating_a_list_view
 
 # Creating a list view
 
-To create a dynamic, filterable list view containing elements, services or bookings, from DataMiner 9.6.4 onwards, it is possible to configure a *ListView* component.
-
-> [!NOTE]
-> In DataMiner 9.6.4, this component can only be used in the visual overview of view cards. From DataMiner 9.6.5 onwards, element cards are also supported.
+To create a dynamic, filterable list view containing elements, services or bookings, you can configure a *ListView* component.
 
 ## Configuring the shape data field
 
@@ -21,12 +18,6 @@ To create a list view, add a shape on the Visio page with the following shape da
   
   Saving a column configuration is possible via the right-click menu of the list header in DataMiner Cube. This right-click menu also allows you to load a column configuration.
 
-  Prior to DataMiner 9.6.13, the column configuration should be specified in JSON format, for example:
-
-  ```json
-  Columns='{"Name": "SetVar visioshape columnfilters","Version": 1,"Columns": [{"ColumnKey": "AlarmIcon","Position": 1,"PredefinedWidth": 50, "HorizontalAlignment":"center" },{"ColumnKey": "Name", "Position": 2,"PredefinedWidth": 200, },{"ColumnKey": "ID", "Position": 3,"PredefinedWidth": 80, }]}'
-  ```
-
 - **Source**: The type of items to be shown in the list:
 
   - *Elements*
@@ -34,12 +25,13 @@ To create a list view, add a shape on the Visio page with the following shape da
   - *Reservations* or *Bookings*
   - *Resources* (supported from DataMiner 10.1.11/10.2.0 onwards)
 
-  Note that viewing a list of elements will only be possible if you have the user permission *Elements* > *Access*. Viewing a list of bookings will only be possible if the DMS has the necessary licenses. From DataMiner 10.0.0 onwards, [Elasticsearch](xref:Elasticsearch_database) is also required to view a list of bookings.
-
 - **Filter**: See [List view filters](#list-view-filters).
 
 > [!NOTE]
-> If a *ListView* component with source *Reservations* or *Bookings* is used together with an embedded Resource Manager component, selecting an item in the list will select the corresponding block on the Resource Manager timeline and vice versa. See [Embedding a Resource Manager component](xref:Embedding_a_Resource_Manager_component).
+>
+> - Viewing a list of elements will only be possible if you have the user permission *Elements* > *Access*.
+> - Viewing a list of bookings will only be possible if the DMS has the necessary licenses and uses an [Elasticsearch](xref:Elasticsearch_database) database.
+ > - If a *ListView* component with source *Reservations* or *Bookings* is used together with an embedded Resource Manager component, selecting an item in the list will select the corresponding block on the Resource Manager timeline and vice versa. See [Embedding a Resource Manager component](xref:Embedding_a_Resource_Manager_component).
 
 ## Component options
 
@@ -69,7 +61,12 @@ The following options can be specified in the *ComponentOptions* shape data fiel
 
 - **SingleSelectionMode**: Available from DataMiner 10.3.4/10.4.0 onwards. By default, multiple rows can be selected in a list view (e.g. using the Ctrl or Shift key). With this option, you can set the selection mode of the list view to single instead, so that only one row can be selected at a time. <!-- RN 35320 -->
 
-- **StartTime=** and **EndTime=**: Available from DataMiner 9.6.5 onwards. If the list view is configured to list bookings, you can use these shape data to specify a time range, using an invariant format, for example: MM/DD/YYYY HH:MM:SS. These date/time values will always be **interpreted as UTC date/time values**. If these shape data are not specified, the following values are used by default:
+- **StartTime=** and **EndTime=**: If the list view is configured to list bookings, you can use these shape data to specify a time range, using an invariant format, for example: MM/DD/YYYY HH:MM:SS. These date/time values will always be **interpreted as UTC date/time values**. If these shape data are not specified, the following values are used by default:
+
+  - StartTime = NOW - 8 hours
+  - EndTime = NOW + 16 hours
+
+  Prior to DataMiner 10.2.0 [CU13]/10.3.4, the following default values are used instead:
 
   - StartTime = NOW - 1 day
   - EndTime = NOW + 1 day
@@ -153,98 +150,102 @@ ReservationInstance.ReservationInstanceType[Int32] == 1
 
 ### Source: Elements or Services
 
-If you set the *Source* shape data field to “Elements” or “Services”, the *Filter* shape data field can contain a view filter to make the list view only show items from one specific view.
+If you set the *Source* shape data field to “Elements” or “Services”, the *Filter* shape data field can contain different kinds of filters:
 
-- Prior to DataMiner 9.6.8, filtering is only possible on view ID. For example:
+- A **view filter**, to make the list view only show items from one specific view.
+
+  - You can filter on view ID or on view name. In case a specified view name cannot be found, the root view will be retrieved instead.
+
+    For example:
 
     ```txt
     View=1001
     ```
 
-- From DataMiner 9.6.8 onwards, view filters using the view name instead of the view ID are supported. In case the specified view cannot be found, the root view will be retrieved instead. For example:
-
     ```txt
     View=MyView
     ```
 
-    An alternative syntax, *ViewName=\<name>*, can be used from DataMiner 10.0.5 onwards. From this version onwards, you can also use the "==" operator instead of the "=" operator. If the *ViewName* syntax is used, DataMiner will first try to filter by name, and then by ID in case the name cannot be found. If the *View* syntax is used, DataMiner will first try to filter by ID and then by name if the ID cannot be found. The filter can contain only one *View* or *ViewName* part.
+  - An alternative syntax, *ViewName=\<name>*, can be used from DataMiner 10.0.5 onwards. From this version onwards, you can also use the "==" operator instead of the "=" operator. If the *ViewName* syntax is used, DataMiner will first try to filter by name, and then by ID in case the name cannot be found. If the *View* syntax is used, DataMiner will first try to filter by ID and then by name if the ID cannot be found. The filter can contain only one *View* or *ViewName* part.
 
-- From DataMiner 9.6.8 onwards, session variables can be used in the filter. For example:
+  - Session variables can be used in the filter. For example:
 
     ```txt
     View=[var:SRM_SelectedView]
     ```
 
-From DataMiner 9.6.11 onwards, if you set the *Source* shape data field to “Elements” or “Services”, the *Filter* shape data field can be used to apply a filter on the service name. The filter should contain the exposer "Service.Name" and the operator "not Contains" or "contains". The filter can be combined with a view filter, using a pipe (“\|”) character as separator. For example:
+- A **filter on the service name**.
 
-```txt
-View=[var:ViewFilter]|Service.Name notContains '1'|Service.Name notContains 'copy'
-```
-
-From DataMiner 10.0.5 onwards, if you set the *Source* shape data field to “Elements” or “Services”, additional possibilities are available to add an element or service filter in the *Filter* shape data field:
-
-- The following operators are supported: "*==*" (equals), "*!=*" (does not equal), "*contains*", "*notContains*", "*startswith*", "*notStartswith*", "*endsWith*", "*notEndsWith*", "*\<*" (smaller than, only usable with numbers) and "*\>*" (greater than, only usable with numbers). The value that is being compared with should always be included in single quotes.
-
-- The following terms can be used to filter on:
-
-  | Filter term | Description |
-  |--|--|
-  | Element.ID | The ID of an element. |
-  | Element.Name | The name of an element. |
-  | Element.Description | The description of an element. |
-  | Element.DataMiner | The name of the DMA on which an element is located. |
-  | Element.AlarmLevel | The technical alarm level of the element. This is the non-localized, DataMiner-internal equivalent of the alarm state. For example, the alarm level "Undefined" is the same as the alarm state "Not monitored, the alarm level "Normal" is equivalent to the alarm state "Normaal" if the Dutch version of Cube is used. |
-  | Element.AlarmState | The alarm state of the element. For the difference with the alarm level, see "Element.AlarmLevel". |
-  | Element.AlarmCount | The number of alarms of the element. |
-  | Element.Type | The type of element as defined in the protocol. |
-  | Element.DisplayType | The display type of the element as defined in the protocol, e.g. *spectrum analyzer*, *element manager*. |
-  | Element.IP | The IP of the element. |
-  | Element.State | The current state of the element, e.g. Paused, Stopped. |
-  | Element.Protocol | The protocol used by the element. |
-  | Element.ProtocolVersion | The protocol version used by the element. |
-  | Element.ProtocolType | The protocol type used by the element. |
-  | Element.PollingIP | The polling IP used to communicate with the device. |
-  | Element.AlarmTemplate | The alarm template used by the element. |
-  | Element.TrendTemplate | The trend template used by the element. |
-  | Element.Property.*PropertyName* | The property of the element with the specified property name. |
-  | Service.ID | The ID of a service. |
-  | Service.Name | The name of a service. |
-  | Service.Description | The description of a service. |
-  | Service.DataMiner | The name of the DMA on which a service is located. |
-  | Service.AlarmLevel | The technical alarm level of the service. This is the non-localized, DataMiner-internal equivalent of the alarm state. For example, the alarm level "Undefined" is the same as the alarm state "Not monitored, the alarm level "Normal" is equivalent to the alarm state "Normaal" if the Dutch version of Cube is used. |
-  | Service.AlarmState | The alarm state of the service. For the difference with the alarm level, see "Service.AlarmLevel". |
-  | Service.AlarmCount | The number of alarms of the service. |
-  | Service.Property.*PropertyName* | The property of the service with the specified property name. |
-
-- You can combine different search terms with each other and with one view filter, using pipe characters ("\|"). The pipe character is used as an AND operator.
-
-- Session variables can also be used in these filters.
-
-- Examples:
-
-  - To filter on all elements of which the name contains the word "function" and the element property IDP is set to "Source":
+  - The filter should contain the exposer "Service.Name" and the operator "not Contains" or "contains". The filter can be combined with a view filter, using a pipe (“\|”) character as separator. For example:
 
     ```txt
-    Element.Name contains 'function'|Element.Property.IDP == 'Source'
+    View=[var:ViewFilter]|Service.Name notContains '1'|Service.Name notContains 'copy'
     ```
 
-  - To filter on all services of which the name contains the word "\_booking" and that are hosted by the DataMiner Agent "MyDMA":
+- An **element or service filter** (from DataMiner 10.0.5 onwards).
 
-    ```txt
-    Service.DataMiner == 'MyDMA'|Service.Name contains '_booking'
-    ```
+  - The following operators are supported: "*==*" (equals), "*!=*" (does not equal), "*contains*", "*notContains*", "*startswith*", "*notStartswith*", "*endsWith*", "*notEndsWith*", "*\<*" (smaller than, only usable with numbers) and "*\>*" (greater than, only usable with numbers). The value that is being compared with should always be included in single quotes.
 
-  - To filter on all elements using the protocol "MyProtocol" with the protocol type "serial" which are not of element type "Relay":
+    - The following terms can be used to filter on:
 
-    ```txt
-    Element.Protocol == 'MyProtocol'|Element.ProtocolType == 'serial'|Element.Type notContains 'Relay'
-    ```
+    | Filter term | Description |
+    |--|--|
+    | Element.ID | The ID of an element. |
+    | Element.Name | The name of an element. |
+    | Element.Description | The description of an element. |
+    | Element.DataMiner | The name of the DMA on which an element is located. |
+    | Element.AlarmLevel | The technical alarm level of the element. This is the non-localized, DataMiner-internal equivalent of the alarm state. For example, the alarm level "Undefined" is the same as the alarm state "Not monitored, the alarm level "Normal" is equivalent to the alarm state "Normaal" if the Dutch version of Cube is used. |
+    | Element.AlarmState | The alarm state of the element. For the difference with the alarm level, see "Element.AlarmLevel". |
+    | Element.AlarmCount | The number of alarms of the element. |
+    | Element.Type | The type of element as defined in the protocol. |
+    | Element.DisplayType | The display type of the element as defined in the protocol, e.g. *spectrum analyzer*, *element manager*. |
+    | Element.IP | The IP of the element. |
+    | Element.State | The current state of the element, e.g. Paused, Stopped. |
+    | Element.Protocol | The protocol used by the element. |
+    | Element.ProtocolVersion | The protocol version used by the element. |
+    | Element.ProtocolType | The protocol type used by the element. |
+    | Element.PollingIP | The polling IP used to communicate with the device. |
+    | Element.AlarmTemplate | The alarm template used by the element. |
+    | Element.TrendTemplate | The trend template used by the element. |
+    | Element.Property.*PropertyName* | The property of the element with the specified property name. |
+    | Service.ID | The ID of a service. |
+    | Service.Name | The name of a service. |
+    | Service.Description | The description of a service. |
+    | Service.DataMiner | The name of the DMA on which a service is located. |
+    | Service.AlarmLevel | The technical alarm level of the service. This is the non-localized, DataMiner-internal equivalent of the alarm state. For example, the alarm level "Undefined" is the same as the alarm state "Not monitored, the alarm level "Normal" is equivalent to the alarm state "Normaal" if the Dutch version of Cube is used. |
+    | Service.AlarmState | The alarm state of the service. For the difference with the alarm level, see "Service.AlarmLevel". |
+    | Service.AlarmCount | The number of alarms of the service. |
+    | Service.Property.*PropertyName* | The property of the service with the specified property name. |
 
-  - To filter on all element using the property IDP with a property value equal to that of the session variable "MySelectedValue":
+  - You can combine different search terms with each other and with one view filter, using pipe characters ("\|"). The pipe character is used as an AND operator.
 
-    ```txt
-    Element.Property.IDP == [var:MySelectedValue]
-    ```
+  - Session variables can also be used in these filters.
+
+  - Examples:
+
+    - To filter on all elements of which the name contains the word "function" and the element property IDP is set to "Source":
+
+      ```txt
+      Element.Name contains 'function'|Element.Property.IDP == 'Source'
+      ```
+
+    - To filter on all services of which the name contains the word "\_booking" and that are hosted by the DataMiner Agent "MyDMA":
+
+      ```txt
+      Service.DataMiner == 'MyDMA'|Service.Name contains '_booking'
+      ```
+
+    - To filter on all elements using the protocol "MyProtocol" with the protocol type "serial" which are not of element type "Relay":
+
+      ```txt
+      Element.Protocol == 'MyProtocol'|Element.ProtocolType == 'serial'|Element.Type notContains 'Relay'
+      ```
+
+    - To filter on all element using the property IDP with a property value equal to that of the session variable "MySelectedValue":
+
+      ```txt
+      Element.Property.IDP == [var:MySelectedValue]
+      ```
 
 ### Source: Resources
 
@@ -314,11 +315,9 @@ The following session variables can be used in conjunction with the *ListView* c
 
 - **ListViewSelectionChanged**: This session variable will indicate whether an item has been selected in the list view.
 
-- **SelectedReservation** (deprecated from 9.6.8 onwards): When a booking is selected, this session variable will contain the ID of the booking. Use *IDOfSelection* instead from DataMiner 9.6.8 onwards.
+- **IDOfSelection**: This session variable contains a list of the IDs or GUIDs of the selected items, separated by pipe characters.
 
-- **IDOfSelection**: Available from DataMiner 9.6.8 onwards. This session variable contains a list of the IDs or GUIDs of the selected items, separated by pipe characters.
-
-- **StateOfSelection**: Available from DataMiner 9.6.5 onwards. When a booking is selected, this session variable the current state of the booking, which can be one of the following states:
+- **StateOfSelection**: When a booking is selected, this session variable the current state of the booking, which can be one of the following states:
 
   - Undefined (0)
   - Pending (1)
@@ -369,13 +368,7 @@ List view components can be found both in Visual Overview and in the DataMiner B
 
      - Move a column up or down by selecting it and clicking *Move up* or *Move down*.
 
-     - Up to DataMiner 9.6.13, a number of additional checkboxes are available for each possible column:
-
-       - Select the *Icon* checkbox of a particular column to have its contents replaced by icons. From DataMiner 9.6.12 onwards, this option is supported for ID columns.
-
-       - Select the *Color* checkbox of a particular column to visualize the cells in that column as colored blocks. This can for instance be used to show the color configured in the *Visual.Background* property of bookings (which is renamed to *VisualBackground* in DataMiner 10.0.0/10.0.2).
-
-     - From DataMiner 10.0.0/10.0.2 onwards, for columns based on custom properties, you can instead select a different [column type](#available-column-types). For the default columns, the column type cannot be changed.
+     - For columns based on custom properties, select a different [column type](#available-column-types). For the default columns, the column type cannot be changed.
 
      - In the *Filter by type* section, indicate which type of columns you want to choose from: *Bookings* (or *Reservations* in earlier DataMiner versions) or *Properties*.
 
@@ -389,7 +382,7 @@ List view components can be found both in Visual Overview and in the DataMiner B
 
 ### Available column types
 
-From DataMiner 10.0.0/10.0.2 onwards, when you manage the column configuration, you can select different column types. The following types are available:
+When you manage the column configuration, you can select different column types. The following types are available:
 
 - **Text**: Shows the value as text.
 
