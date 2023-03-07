@@ -64,6 +64,8 @@ var configurationInfo = LoadResourceConfigurationInfo(engine);
 var nodeProfileConfiguration = LoadNodeProfileConfiguration(engine);
 var helper = new ProfileParameterEntryHelper(engine, configurationInfo?.OrchestrationLogger);
 ```
+> [!NOTE]
+> When working in Visual Studio, make sure to add a reference to Newtonsoft 13.x if you use SRM 1.2.30 or higher, or Newtonsoft 11.x for older SRM versions. Newer versions of Newtonsoft might not work together with the SRM framework.
 
 ### Retrieving profile parameter values
 
