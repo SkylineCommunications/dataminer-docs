@@ -99,7 +99,7 @@ If you want to retrieve the selected path, you can instead do so by retrieving t
 
 #### Exception when changing booking name with BookingManager.ChangeName via external service management [ID_35669]
 
-If the BookingManager.ChangeName method method was used to change the name of a booking via external service management, an exception could be thrown.
+If the BookingManager.ChangeName method was used to change the name of a booking via external service management, an exception could be thrown.
 
 For example:
 
