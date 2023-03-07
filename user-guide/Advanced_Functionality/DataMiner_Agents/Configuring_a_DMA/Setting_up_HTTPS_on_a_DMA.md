@@ -39,7 +39,7 @@ To do so:
 
 1. On a DataMiner Agent, open *C:\\Skyline DataMiner\\MaintenanceSettings.xml*.
 
-1. Add an HTTPS tag with the necessary attributes. For example:
+1. At the top level of the \<MaintenanceSettings> XML tree, add an HTTPS tag with the necessary attributes. For example:
 
     ```xml
     <MaintenanceSettings>
