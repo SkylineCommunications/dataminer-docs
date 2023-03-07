@@ -11,6 +11,31 @@ uid: General_Main_Release_10.4.0_changes
 
 ### Enhancements
 
+#### SLXML no longer used to read out element data [ID_33515] [ID_33616] [ID_33625] [ID_33659]
+
+<!-- MR 10.4.0 - FR 10.3.4 -->
+
+From now on, SLXML will no longer be used to read out the following files containing element data:
+
+- *Element.xml* files
+- *ElementData.xml* files
+- *EPMConfig.xml* files
+- *Description.xml* files
+- *Ports.xml* files
+
+> [!IMPORTANT]
+> This is a breaking change. Make sure that none of the protocols in your system is using the following deprecated Notify types:
+>
+> - DMS_GET_INFO
+> - DMS_GET_INFO_ALL
+> - NT_ADD_DESCRIPTION_FILE
+> - NT_GET_ITEM_DATA
+> - NT_GET_PARAMETER_BY_DATA
+> - NT_GET_XML_COOKIE
+> - NT_RELOAD_ELEMENT
+> - NT_SET_ITEM_DATA
+> - NT_SET_PARAMETER_BY_DATA
+
 #### More detailed logging when the certificate chain is invalid while connecting to Cassandra [ID_34822]
 
 <!-- MR 10.4.0 - FR 10.3.2 -->
