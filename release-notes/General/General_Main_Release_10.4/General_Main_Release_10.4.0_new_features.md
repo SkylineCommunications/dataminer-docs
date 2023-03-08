@@ -376,6 +376,9 @@ The `GQIDMS` object is only generated when the property is used.
 
 Generally, an ad hoc data source implementation will want to add a private field where it can store the `GQIDMS` object to be used later in other callbacks when columns and rows are created.
 
+> [!IMPORTANT]
+> DMS messages are subject to change without notice. If you can implement an alternative using the DataMiner UI or the automation options provided in DataMiner Automation, we highly recommend that you do so instead.
+
 ### Correlation
 
 #### Correlation alarms will now by default contain the value of the alarm property by which they are grouped [ID_35583]
