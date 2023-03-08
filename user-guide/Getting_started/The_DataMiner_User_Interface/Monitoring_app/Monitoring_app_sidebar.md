@@ -12,3 +12,6 @@ The sidebar on the left side of the Monitoring app UI contains two icons, which 
 - ![Navigation pane](~/user-guide/images/GettingStarted00026.jpg) : Opens the navigation pane, which allows you to navigate through the different views in DataMiner and open the objects they contain. The arrow icon in front of a view allows you to open it and view the underlying objects. Selecting an object in the navigation pane opens the corresponding card in the pane on the right.
 
 - ![Recent](~/user-guide/images/MonitoringX_recent.png) : Displays a list of recent items. Select an item to open the corresponding card in the pane on the right.
+
+> [!NOTE]
+> From DataMiner 10.3.4/10.4.0 onwards, the sidebar is no longer available on the trending page of a parameter. For more information on how to access a trending page, see [Element cards](xref:Monitoring_app_card_pane#element-cards).
