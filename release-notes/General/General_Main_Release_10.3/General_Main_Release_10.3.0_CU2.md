@@ -12,6 +12,12 @@ uid: General_Main_Release_10.3.0_CU2
 
 ### Enhancements
 
+#### Alarms generated when a database goes in offload mode will now have severity 'Notice' instead of 'Critical' [ID_35749]
+
+<!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
+
+When a database went in offload mode, up to now, an alarm with severity *Critical* was generated. From now on, an alarm of severity *Notice* will be generated instead.
+
 ### Fixes
 
 #### SLLogCollector: Problem when collecting multiple memory dumps with the 'Now and when memory increases with X Mb' option [ID_35617]
@@ -27,3 +33,9 @@ From now on, it will collect at least the "now" dump for each of the selected pr
 <!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.4 -->
 
 In some cases, SLElement could leak memory when updating alarm templates containing conditions.
+
+#### SLProtocol would interpret signed numbers incorrectly [ID_35796]
+
+<!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
+
+SLProtocol would interpret signed numbers incorrectly, causing parameters to display incorrect values.
