@@ -48,7 +48,7 @@ A line & area chart component now has a number of time range buttons that allow 
 - 5y (last 5 years)
 
 > [!NOTE]
-> In the *Dashboards* app, these time range buttons are disabled by default. When configuring the component, uou can enable them by selecting the *Show time range buttons* option in the *Component > Layout > Styling and Information* tab.
+> In the *Dashboards* app, these time range buttons are disabled by default. When configuring the component, you can enable them by selecting the *Show time range buttons* option in the *Component > Layout > Styling and Information* tab.
 
 #### Web apps: New action 'Open monitoring card' [ID_35661]
 
