@@ -1004,8 +1004,10 @@
         - name: Frequently asked questions about DMA Failover
           topicUid: Frequently_asked_questions_about_DMA_Failover
     - name: Databases
-      topicUid: databases
+      topicUid: Databases_about
       items:
+        - name: About databases
+          topicUID: Databases_about
         - name: Supported system data storage architectures
           topicUid: Supported_system_data_storage_architectures
           items:
