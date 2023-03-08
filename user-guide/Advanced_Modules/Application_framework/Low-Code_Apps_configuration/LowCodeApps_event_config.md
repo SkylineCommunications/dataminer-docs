@@ -75,11 +75,11 @@ To configure an event to open another low-code app that has been published in yo
 
 Available from DataMiner 10.3.4/10.4.0. To configure an event to open a monitoring card of a specific element, service, or view:
 
-1. Select *Open monitoring card* and select the monitoring card.
+1. Select *Open monitoring card*.
 
 1. In the *Type* box, select a type in the dropdown list: element, service, or view.
 
-1. Based on your chosen type, specify of which element, service, or view the monitoring card should be opened.
+1. Based on your chosen type, select the element, service, or view of which the monitoring card should be opened.
 
 1. Select *Add action*.
 
