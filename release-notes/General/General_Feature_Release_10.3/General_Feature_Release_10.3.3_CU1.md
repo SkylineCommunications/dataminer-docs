@@ -14,3 +14,9 @@ uid: General_Feature_Release_10.3.3_CU1
 > - For information on how to upgrade DataMiner, see [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent).
 
 ### Fixes
+
+#### Problem with SLPort when an element with a serial connection was restarted [ID_35773]
+
+<!-- MR 10.2.0 [CU12]/10.3.0 [CU0] - FR 10.3.3 [CU1] -->
+
+In some cases, an error could occur in SLPort when an element with a serial connection was restarted.

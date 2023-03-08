@@ -692,6 +692,12 @@ If a DOM module is created without specifying *SecuritySettings*, the view permi
 
 Up to now, the check to determine whether a user had the view permission set to "None", would only return true for the Administrator or users in the Administrator group. From now on, when the required view permission is "None", permission checks will no longer be performed.
 
+#### Problem with SLPort when an element with a serial connection was restarted [ID_35773]
+
+<!-- MR 10.2.0 [CU12]/10.3.0 [CU0] - FR 10.3.3 [CU1] -->
+
+In some cases, an error could occur in SLPort when an element with a serial connection was restarted.
+
 #### Cassandra Cluster: Rows would incorrectly be added without TTL value [ID_35789]
 
 <!-- MR 10.3.0 [CU0] - FR 10.3.3 [CU0] -->

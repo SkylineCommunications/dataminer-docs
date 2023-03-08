@@ -215,12 +215,6 @@ After a DataMiner restart, suggestion alarms would incorrectly be re-evaluated a
 
 In some cases, SLAnalytics kept on waiting on a database call, which eventually led to the process leaking memory.
 
-#### Problem with SLPort when an element with a serial connection was restarted [ID_35773]
-
-<!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
-
-In some cases, an error could occur in SLPort when an element with a serial connection was restarted.
-
 #### Problem with SLElement when creating an alarm with an 'SLA Affecting' property [ID_35776]
 
 <!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
