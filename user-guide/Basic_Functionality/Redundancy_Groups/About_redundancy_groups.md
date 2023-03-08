@@ -13,6 +13,9 @@ Redundancy groups have specific context menu options in the Surveyor. They also 
 > [!NOTE]
 > To quickly find a redundancy group in the Surveyor, search with the term “redundancy”, followed by a space and part of the redundancy group name. See [Searching in DataMiner Cube](xref:Searching_in_DataMiner_Cube).
 
+> [!NOTE]
+> Be aware that redundancy groups can't be integrated with Service and Resource Management (SRM).
+
 The following topics explain more about how redundancy groups work:
 
 - [Primary elements, backup elements and virtual primary elements](#primary-elements-backup-elements-and-virtual-primary-elements)
