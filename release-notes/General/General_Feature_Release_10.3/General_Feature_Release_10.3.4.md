@@ -94,6 +94,12 @@ Because of a number of enhancements, overall performance has increased when fetc
 
 From now on, focus value updates will no longer be taken into account when determining whether the *Maximum group event rate* was exceeded.
 
+#### SLAnalytics will now send regular notifications instead of client notifications [ID_35591]
+
+<!-- MR 10.4.0 - FR 10.3.4 -->
+
+Up to now, when SLAnalytics sent a notification, it would generate an event of type *client notification* with parameter ID 64574. From now on, it will instead generate an event of type *notification* with parameter ID 64570.
+
 #### DataMiner upgrade: Additional prerequisite will now check for incompatible connectors [ID_35605]
 
 <!-- MR 10.4.0 - FR 10.3.4 -->
