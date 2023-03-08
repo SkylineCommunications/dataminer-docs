@@ -7,7 +7,7 @@ uid: FAQs_Pricing
 - **Can different commercial models exist in the same organization?**
 
   Yes. Licensing is at DataMiner System level. An organization can have a system based on the perpetual model and another based on usage.
-  
+
 - **Can I transition my perpetual licenses into subscription?**
 
   Yes. Get in touch with [your Account Manager](https://community.dataminer.services/get-in-touch/sales-team/).
