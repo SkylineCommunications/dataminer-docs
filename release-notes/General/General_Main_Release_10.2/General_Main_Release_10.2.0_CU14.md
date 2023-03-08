@@ -25,3 +25,9 @@ Sticky component menus would no longer be fully visible after you had changed th
 <!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.4 -->
 
 In some cases, SLElement could leak memory when updating alarm templates containing conditions.
+
+#### Memory leak in SLAnalytics [ID_35758]
+
+<!-- MR 10.2.0 [CU14]/10.3.0 [CU1] - FR 10.3.4 -->
+
+In some cases, SLAnalytics kept on waiting on a database call, which eventually led to the process leaking memory.

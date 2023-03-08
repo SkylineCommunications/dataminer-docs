@@ -211,7 +211,7 @@ After a DataMiner restart, suggestion alarms would incorrectly be re-evaluated a
 
 #### Memory leak in SLAnalytics [ID_35758]
 
-<!-- MR 10.3.0 [CU1] - FR 10.3.4 -->
+<!-- MR 10.2.0 [CU14]/10.3.0 [CU1] - FR 10.3.4 -->
 
 In some cases, SLAnalytics kept on waiting on a database call, which eventually led to the process leaking memory.
 

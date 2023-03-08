@@ -347,6 +347,35 @@ Two new field descriptors have been added to the DataMiner Object Models:
 
 When you start a DataMiner upgrade, the `ValidateConnectors` prerequisite will now scan the system for any connectors that are known to be incompatible with the DataMiner version to which the DataMiner Agent is being upgraded. If such connectors are found, they will have to be removed before you can continue with the upgrade.
 
+#### GQI - Ad hoc data source: Sending and receiving SLNet messages [ID_35701]
+
+<!-- MR 10.4.0 - FR 10.3.4 -->
+
+Ad hoc data sources can now retrieve data by means of SLNet messages.
+
+To do so, the `IGQIDataSource` must implement the `IGQIOnInit` interface, of which the `OnInit` method can also be used to initialize a data source:
+
+```csharp
+OnInitOutputArgs OnInit(OnInitInputArgs args)
+```
+
+When passed to the `OnInit` method, `OnInitInputArgs` can now contain the following new property:
+
+```csharp
+GQIDMS DMS
+```
+
+This new property has the following methods:
+
+| Method | Function |
+|--------|----------|
+| `DMSMessage SendMessage(DMSMessage message)` | Sends a request that expects a single response. |
+| `DMSMessage[] SendMessages(params DMSMessage[] messages)` | Sends multiple requests at once, or sends a request that expects multiple responses. |
+
+The `GQIDMS` object is only generated when the property is used.
+
+Generally, an ad hoc data source implementation will want to add a private field where it can store the `GQIDMS` object to be used later in other callbacks when columns and rows are created.
+
 ### Correlation
 
 #### Correlation alarms will now by default contain the value of the alarm property by which they are grouped [ID_35583]

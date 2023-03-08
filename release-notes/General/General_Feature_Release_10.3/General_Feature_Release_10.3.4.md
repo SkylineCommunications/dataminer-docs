@@ -28,6 +28,35 @@ If you do not want the alarm property value to be added to the correlation alarm
 > [!WARNING]
 > Always be extremely careful when using the *SLNetClientTest* tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
 
+#### GQI - Ad hoc data source: Sending and receiving SLNet messages [ID_35701]
+
+<!-- MR 10.4.0 - FR 10.3.4 -->
+
+Ad hoc data sources can now retrieve data by means of SLNet messages.
+
+To do so, the `IGQIDataSource` must implement the `IGQIOnInit` interface, of which the `OnInit` method can also be used to initialize a data source:
+
+```csharp
+OnInitOutputArgs OnInit(OnInitInputArgs args)
+```
+
+When passed to the `OnInit` method, `OnInitInputArgs` can now contain the following new property:
+
+```csharp
+GQIDMS DMS
+```
+
+This new property has the following methods:
+
+| Method | Function |
+|--------|----------|
+| `DMSMessage SendMessage(DMSMessage message)` | Sends a request that expects a single response. |
+| `DMSMessage[] SendMessages(params DMSMessage[] messages)` | Sends multiple requests at once, or sends a request that expects multiple responses. |
+
+The `GQIDMS` object is only generated when the property is used.
+
+Generally, an ad hoc data source implementation will want to add a private field where it can store the `GQIDMS` object to be used later in other callbacks when columns and rows are created.
+
 ## Changes
 
 ### Enhancements
@@ -294,7 +323,7 @@ After a DataMiner restart, suggestion alarms would incorrectly be re-evaluated a
 
 #### Memory leak in SLAnalytics [ID_35758]
 
-<!-- MR 10.3.0 [CU1] - FR 10.3.4 -->
+<!-- MR 10.2.0 [CU14]/10.3.0 [CU1] - FR 10.3.4 -->
 
 In some cases, SLAnalytics kept on waiting on a database call, which eventually led to the process leaking memory.
 
