@@ -99,6 +99,22 @@
               topicUid: Monitoring_app_Alarm_Console
             - name: Monitoring app card pane
               topicUid: Monitoring_app_card_pane
+              items:
+                - name: View cards
+                  topicUID: View_Cards
+                - name: Service cards
+                  topicUID: Service_Cards
+                - name: Element cards
+                  topicUID: Element_Cards
+                  items:
+                    - name: Trending page
+                      topicUID: Trending_Page
+                - name: Alarm cards
+                  topicUID: Alarm_Cards
+                - name: CPE cards
+                  topicUID: CPE_Cards
+                - name: Spectrum analyzer cards
+                  topicUID: Spectrum_Analyzer_Cards
         - name: The legacy Monitoring & Control app user interface
           topicUid: The_legacy_Monitoring_Control_app_user_interface
     - name: Ziine Demo System
