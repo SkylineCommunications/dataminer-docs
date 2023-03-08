@@ -5111,7 +5111,7 @@
         - name: Reusable Workflow SRM Function
           topicUid: github_reusable_workflows_srm_function_master_workflow
     - name: CI/CD Cross-Organization GitLab
-      topicUid: cicdcrossorganizationGitlab
+      topicUid: cicdcrossorganizationgitlab
       items:
       - name: Deploying from GitLab
         topicUid: Deploying_Automation_scripts_from_a_GitLab_repository
