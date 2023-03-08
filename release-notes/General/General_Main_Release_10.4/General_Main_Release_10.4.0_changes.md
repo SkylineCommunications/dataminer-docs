@@ -148,7 +148,7 @@ GQI now supports queries from [Data Aggregator](xref:Data_Aggregator_DxM) that u
 
 Up to now, when SLAnalytics sent a notification, it would generate an event of type *client notification* with parameter ID 64574. From now on, it will instead generate an event of type *notification* with parameter ID 64570.
 
-#### GQI: Raw datetime values will now be converted to UTC [ID_35640]
+#### GQI: Raw datetime values will now be converted to UTC [ID_35640] [ID_35762]
 
 <!-- MR 10.4.0 - FR 10.3.4 -->
 

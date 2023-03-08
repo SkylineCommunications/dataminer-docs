@@ -222,6 +222,14 @@ Up to now, when you clicked one of those related parameters in order to add it t
 
 From now on, DataMiner Cube will no longer accept database TTL settings that exceed 10 years.
 
+#### Automation script editor: Intellisense added for timeUpDownConfig.ShowTimeUnits [ID_35672]
+
+<!-- MR 10.4.0 - FR 10.3.4 -->
+
+In the Automation script editor, Intellisense has been added for the new `timeUpDownConfig.ShowTimeUnits` property.
+
+This property is only applied in interactive Automation scripts that are launched from a web app.
+
 ### Fixes
 
 #### Profiles app: A profile instance would incorrectly list parameters that had been removed from the profile definition [ID_34679] [ID_34771]

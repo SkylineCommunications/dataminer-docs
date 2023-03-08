@@ -76,6 +76,14 @@ When, in DataMiner Cube, you select *Help* in the user menu or the *Apps* pane, 
 
 Because of a number of enhancements made with regard to the retrieval of overrides for parameter values, overall performance has increased when opening the *Profiles* tab of the *Services* app.
 
+#### Automation script editor: Intellisense added for timeUpDownConfig.ShowTimeUnits [ID_35672]
+
+<!-- MR 10.4.0 - FR 10.3.4 -->
+
+In the Automation script editor, Intellisense has been added for the new `timeUpDownConfig.ShowTimeUnits` property.
+
+This property is only applied in interactive Automation scripts that are launched from a web app.
+
 #### System Center - Agents: Clearer restart warning before an upgrade is started [ID_35687]
 
 <!-- MR 10.3.0 [CU1] - FR 10.3.4 -->
