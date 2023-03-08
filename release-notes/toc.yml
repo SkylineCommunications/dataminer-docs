@@ -51,7 +51,12 @@
         - name: General Feature Release 10.3.4 - Preview
           topicUid: General_Feature_Release_10.3.4
         - name: General Feature Release 10.3.3
-          topicUid: General_Feature_Release_10.3.3
+          topicUID: General_Feature_Release_10.3.3
+          items:
+          - name: New features and changes
+            topicUid: General_Feature_Release_10.3.3
+          - name: General Feature Release 10.3.3 CU1
+            topicUid: General_Feature_Release_10.3.3_CU1
         - name: General Feature Release 10.3.2
           topicUID: General_Feature_Release_10.3.2
           items:
