@@ -11,7 +11,9 @@ These files are located in the *Database* subfolder. They mainly contain the “
 - *DBMaintenance.xml* is deprecated from DataMiner 9.6.6 onwards. Before this, it was used for Agent-specific TTL overrides.
 
 > [!NOTE]
-> If you make changes to these files, always stop DataMiner first, and restart DataMiner when your changes have been saved.
+>
+> - If you make changes to these files, always stop DataMiner first, and restart DataMiner when your changes have been saved.
+> - To prevent the [year 2038 problem](xref:Year_2038_Problem_for_Cassandra) for Cassandra, from DataMiner 10.3.4/10.4.0 onwards, the maximum allowed TTL for databases is limited to 10 years.
 
 ## Basic syntax of the TTL settings
 
