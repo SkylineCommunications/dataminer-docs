@@ -2,7 +2,7 @@
 uid: cicdcrossorganizationgithub
 ---
 
-# CI/CD cross-organization: Using GitHub
+# CI/CD: Using GitHub
 
 In this section:
 

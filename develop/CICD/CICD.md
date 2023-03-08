@@ -14,21 +14,9 @@ Continuous Deployment is similar to Continuous Delivery, but goes a step further
 
 Together, CI/CD allows teams to deliver software more quickly, with higher quality and reliability, by automating the build, test, and deployment process.
 
-## At Skyline Communications
+## CI/CD at GitHub
 
-There are currently several major flows concerning CI/CD within Skyline Communications.
-The topics within the CI/CD documentation will provide information on several of them.
-
-Here are a few of our flows currently in production:
-
-- Internal CI/CD for the core software: DataMiner
-- Internal CI/CD for the creation of CI/CD related dotnet tools
-- Internal CI/CD for the creation of DataMiner artifacts (e.g. Automation scripts, connectors, dashboards, etc.)
-- Cross-Organization CI/CD for the collaborative creation of DataMiner artifacts (e.g. Automation scripts, connectors, dashboards, etc.)
-
-## Cross-Organization CI/CD
-
-Is an ongoing migration of our internal CI/CD for DataMiner artifacts.
+Skyline has an ongoing migration of our internal CI/CD for DataMiner artifacts to GitHub.
 This is part of efforts to improve cross-organization collaboration while maintaining high quality and ease-of-life automation from the internal CI/CD.
 
 Uses a combination of:
@@ -48,6 +36,17 @@ For more information refer to:
 - [Skyline specific: migration efforts](xref:migration_from_gerrit_to_github)
 - [Skyline specific: GitHub naming conventions](xref:Using_GitHub_for_CICD)
 
+## At Skyline Communications
+
+There are currently several major flows concerning CI/CD within Skyline Communications.
+The topics within the CI/CD documentation will provide information on several of them.
+
+Here are a few of our flows currently in production:
+
+- Internal CI/CD for the core software: DataMiner
+- Internal CI/CD for the creation of CI/CD related dotnet tools
+- Internal CI/CD for the creation of DataMiner artifacts (e.g. Automation scripts, connectors, dashboards, etc.)
+ 
 ## Internal CI/CD for the creation of DataMiner artifacts
 
 Uses a combination of:

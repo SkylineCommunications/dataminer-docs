@@ -2,7 +2,7 @@
 uid: migration_from_gerrit_to_github
 ---
 
-# Migrating from Gerrit to GiHhub
+# Migrating from Gerrit to GitHub
 
 Much of the source code within Skyline is currently stored on Gerrit, an internal Git-based server. In order to collaborate on the same code, a repository with that code must be moved from Gerrit to GitHub. This move is recommended only if there are starter workflows available for your type of repository that runs an equivalent pipeline as we did in Jenkins. This ensures there is no degradation of quality from the move and that all automatic release-cycles can continue to work.
 
