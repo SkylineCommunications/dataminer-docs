@@ -142,6 +142,12 @@ Because of a number of enhancements, overall performance has increased when dete
 
 GQI now supports queries from [Data Aggregator](xref:Data_Aggregator_DxM) that use ad hoc data sources.
 
+#### SLAnalytics will now send regular notifications instead of client notifications [ID_35591]
+
+<!-- MR 10.4.0 - FR 10.3.4 -->
+
+Up to now, when SLAnalytics sent a notification, it would generate an event of type *client notification* with parameter ID 64574. From now on, it will instead generate an event of type *notification* with parameter ID 64570.
+
 #### GQI: Raw datetime values will now be converted to UTC [ID_35640]
 
 <!-- MR 10.4.0 - FR 10.3.4 -->
