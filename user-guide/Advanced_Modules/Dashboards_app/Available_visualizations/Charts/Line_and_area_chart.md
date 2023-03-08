@@ -105,8 +105,6 @@ To configure the component:
 
    - *Styling and Information* > *Show min/max shading*: Select this option to display a semi-transparent shade above and below the trend line, showing the minimum and maximum trend values. This option can only be used for parameters with average trending and only in case the Y-axis has no discrete values.
 
-   - *Styling and Information* > *Show time range buttons*: Available from DataMiner 10.3.4/10.4.0 onwards. Enables a number of time range buttons that allow you to select one of the preset time ranges: 1 day (last 24 hours), 1 week (last 7 days), 1 month (last 30 days), 1 year (last year), and 5 years (last 5 years). By default, this setting is disabled.
-
    - *Additional lines* > *Line thickness*: If you select to show any additional lines with the options below, this option becomes available, allowing you to customize the thickness of these lines (in pixels).
 
    - *Additional lines* > *Show percentile*: Displays a percentile line on the graph. When you select this option, two additional options become available that allow you to configure this percentile line: *Percentile*, which allows you to indicate which percentile should be displayed, and *Percentile line color*.
