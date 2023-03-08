@@ -6,9 +6,11 @@ uid: GetAlarmHistory
 
 Use this method to retrieve:
 
-- one specific alarm, or
+- one specific alarm,
 
-- all alarms in the alarm tree of a specific alarm.
+- all alarms in the alarm tree of a specific alarm, or
+
+- alarm details of a non-root alarm (Available from DataMiner 10.2.0 [CU13]/10.3.0 [CU1]/10.3.4).
 
 ## Input
 
