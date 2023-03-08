@@ -2526,8 +2526,10 @@
             - name: Overview of the DataMiner PTP app UI
               topicUid: Overview_of_the_DataMiner_PTP_app_UI
     - name: Service & Resource Management Framework
-      topicUid: srm_index
+      topicUid: About_SRM
       items:
+      - name: About SRM
+        topicUID: About_SRM
       - name: SRM use cases
         topicUid: srm_use_cases
         items:
