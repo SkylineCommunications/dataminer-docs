@@ -80,7 +80,7 @@ Skyline encourages partners to actively pursue opportunities. To avoid growing a
 
 ### Qualification as a registered opportunity
 
-An opportunity with the status *Engaged* or *Confirmed* becomes a registered opportunity linked to the first partner that entered the opportunity in the SLC CRM system. The registered opportunity status is temporarily granted to a partner who is taking a continuous leading role in developing the DataMiner business opportunity. Failing continuity could result in a
+An opportunity with the status *Engaged* or *Confirmed* becomes a registered opportunity linked to the first partner that entered the opportunity in the SLC CRM system. The registered opportunity status is temporarily granted to a partner who is taking a continuous leading role in developing the DataMiner business opportunity.
 
 In case Skyline products offered are a smaller part of a larger offered ecosystem (Product X,Y,Z + DataMiner), the offered DataMiner System is unique and linked to the offered ecosystem, meaning there is no competing bid in the market and no unique Deal Registration possible.
 
