@@ -347,11 +347,11 @@ Two new field descriptors have been added to the DataMiner Object Models:
 
 When you start a DataMiner upgrade, the `ValidateConnectors` prerequisite will now scan the system for any connectors that are known to be incompatible with the DataMiner version to which the DataMiner Agent is being upgraded. If such connectors are found, they will have to be removed before you can continue with the upgrade.
 
-#### GQI - Ad hoc data source: Sending and receiving SLNet messages [ID_35701]
+#### GQI - Ad hoc data source: Sending and receiving DMS messages [ID_35701]
 
 <!-- MR 10.4.0 - FR 10.3.4 -->
 
-Ad hoc data sources can now retrieve data by means of SLNet messages.
+Ad hoc data sources can now retrieve data by means of DMS messages.
 
 To do so, the `IGQIDataSource` must implement the `IGQIOnInit` interface, of which the `OnInit` method can also be used to initialize a data source:
 
@@ -365,7 +365,7 @@ When passed to the `OnInit` method, `OnInitInputArgs` can now contain the follow
 GQIDMS DMS
 ```
 
-This new property has the following methods:
+The `GQIDMS` class contains the following methods, which can be used to request information in the form of `DMSMessage` objects:
 
 | Method | Function |
 |--------|----------|
