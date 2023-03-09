@@ -46,12 +46,12 @@ Here are a few of our flows currently in production:
 - Internal CI/CD for the core software: DataMiner
 - Internal CI/CD for the creation of CI/CD related dotnet tools
 - Internal CI/CD for the creation of DataMiner artifacts (e.g. Automation scripts, connectors, dashboards, etc.)
- 
+
 ## Internal CI/CD for the creation of DataMiner artifacts
 
 Uses a combination of:
 
-- [Gerrit](https://www.gerritcodereview.com/) for source control. (git-like repository)
+- [Gerrit](https://www.gerritcodereview.com/) for source control (git-like repository).
 - [Jenkins](https://www.jenkins.io/) pipelines that run on commits to Gerrit repositories to trigger quality control and automated steps
 - Automatic release cycles, registration and uploading to the catalog
 - Unit Tests for every artifact as required
@@ -60,9 +60,12 @@ Uses a combination of:
 - DIS extension within Visual Studio
 - Visual Studio templates
 
-For more information refer to:
-
-- [Development with CI/CD](xref:DevelopmentWithCICD)
+> [!TIP]
+> See also:
+>
+> - [Migrating from Gerrit to GitHub](xref:migration_from_gerrit_to_github)
+> - [Using GitHub - Guidelines](xref:Using_GitHub_for_CICD)
+> - [CI/CD Skyline Communications Gerrit and Jenkins](xref:High-level_overview)
 
 ## Internal CI/CD for the Core software: DataMiner
 
