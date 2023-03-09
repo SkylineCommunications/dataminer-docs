@@ -28,7 +28,7 @@ The **recommended** DataMiner setup can be either on premises or in the cloud, o
 
 ### Single DMA setups
 
-We recommend running DataMiner, Cassandra, and Elasticsearch/OpenSearch on **dedicated machines**, or using **managed services from a cloud provider**. At present, we support the Amazon Keyspaces Service and Amazon OpenSearch Service. DataMiner currently still needs to run on premises, but we intend to soon make it possible to deploy a DataMiner node as a service.
+We recommend running DataMiner, Cassandra, and Elasticsearch/OpenSearch on **dedicated machines**, or using **managed services from a cloud provider**. At present, we support the Amazon Keyspaces Service and Amazon OpenSearch Service. We intend to soon make it possible to deploy a DataMiner node as a service as well.
 
 An on-premises **Elasticsearch** cluster should consist of **at least 3 nodes**, running on **Windows or Linux** machines. While it is possible to use one single Elasticsearch node, this means you will miss out on the replication features. An **OpenSearch** cluster is similar but only supports **Linux**.
 
@@ -47,7 +47,7 @@ In a development environment with **limited load**, it is possible to host DataM
 
 ### Multiple DMA (non-Failover) setups
 
-In case you have more than one DataMiner Agent, you can scale both on DataMiner level and on database level. You can also use managed services from a cloud provider. At present, we support the Amazon Keyspaces Service and Amazon OpenSearch Service. DataMiner currently still needs to run on premises, but we intend to soon make it possible to deploy a DataMiner node as a service.
+In case you have more than one DataMiner Agent, you can scale both on DataMiner level and on database level. You can also use managed services from a cloud provider. At present, we support the Amazon Keyspaces Service and Amazon OpenSearch Service. We intend to soon make it possible to deploy a DataMiner node as a service as well.
 
 An on-premises **Elasticsearch** cluster should ideally consist of **at least 3 nodes**, running on **Windows or Linux** machines. While it is possible to use one single Elasticsearch node, this means you will miss out on the replication features. Running two nodes is not supported. An **OpenSearch** cluster is similar but only supports **Linux**.
 
