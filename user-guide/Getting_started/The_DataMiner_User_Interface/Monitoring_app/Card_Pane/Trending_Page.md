@@ -14,7 +14,7 @@ From DataMiner 10.3.4/10.4.0 onwards, you can easily switch between the [trend g
 
 - ![Histogram](~/user-guide/images/Histogram.png) : Displays to the histogram for the parameter.
 
-Prior to DataMiner 10.3.4/10.4.0, you can switch between the trend graph and histogram for the parameter by clicking the check box next to *Trending* or *Histogram*.
+Prior to DataMiner 10.3.4/10.4.0, you can switch between the trend graph and histogram for the parameter by clicking the checkbox next to *Trending* or *Histogram*.
 
 ## Trend graphs
 
