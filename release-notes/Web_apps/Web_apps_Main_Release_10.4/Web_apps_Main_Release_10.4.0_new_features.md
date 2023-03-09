@@ -117,3 +117,15 @@ In a low-code app, you can now configure a new type of action: *Open monitoring 
 
 > [!NOTE]
 > When a low-code app is embedded in Cube (e.g. in a visual overview), an *Open monitoring card* action will open the specified card in Cube.
+
+#### Monitoring app - Histograms: Time range buttons [ID_35733]
+
+<!-- MR 10.4.0 - FR 10.3.5 -->
+
+In the *Monitoring* app, histograms now have a number of time range buttons that allow you to quickly select one of the following preset time ranges:
+
+- 1d (last 24 hours)
+- 1w (last 7 days)
+- 1m (last 30 days)
+- 1y (last year)
+- 5y (last 5 years)
