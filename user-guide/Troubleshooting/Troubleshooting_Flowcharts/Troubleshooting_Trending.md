@@ -5,7 +5,10 @@ uid: Troubleshooting_Trending
 # Troubleshooting - Trending
 
 > [!NOTE]
-> If you need more info on how to execute any of the steps below or you have feedback, feel free to reach out to support.data-insights@skyline.be. We also encourage you to [contribute](https://docs.dataminer.services/CONTRIBUTING.html) to the docs yourself and earn some DevOps points!
+>
+> - This page is currently still being developed. The content is not yet optimized and may not yet be fully accurate.
+> - If you need more information on how to execute any of the steps below, feel free to reach out to [support.data-insights@skyline.be](mailto:support.data-insights@skyline.be).
+> - You can leave feedback using the [*issues* feature](xref:contributing#reporting-an-issue), or [propose a change](xref:contributing).
 
 ## Trending
 
@@ -26,9 +29,9 @@ START([Trend issue])
 GetDELT{{Get a .dmimport package with trend data,\nunzip it and check the 'Database' folder.}}
 TrendDataInspector{{"Check the data with the trend data inspector.\n(Client test tool => Advanced => Test => Trend Data Inspector)"}}
 QueryDatabase{{Query the database directly.}}
-DataPresent{{Is the data there?}}
-ReadIssue{{Read issue}}
-WriteIssue{{Write issue}}
+DataPresent([Is the data there?])
+ReadIssue([Read issue])
+WriteIssue([Write issue])
 %% Connect blocks %%
 START --- GetDELT
 START --- TrendDataInspector
@@ -64,7 +67,7 @@ classDef classActionClickable fill:#999999,stroke:#999999,color:#ffffff,stroke-w
 classDef classAction fill:#dddddd,stroke:#dddddd,color:#1E5179,stroke-width:0px;
 classDef classSolution fill:#58595b,stroke:#58595b,color:#ffffff,stroke-width:0px;
 %% Define blocks %%
-ReadIssue{{Read issue}}
+ReadIssue([Read issue])
 FollowCTT{{Follow your session with the client test tool and open the trend graph.}}
 ClientExport{{1. Turn on computer setting for trend debug\n2. Open trend\n3. On the trend timeline, do CTRL + ALT + SHIFT + Right click}}
 ReadIssueChecks{{"1. Check trend template flags (find your parameter in the element protocol)\n2. Check the export and/or GetTrendDataMessage requests and responses\n3.Check user settings ('show most detailed data', range settings...)"}}
@@ -98,9 +101,9 @@ classDef classActionClickable fill:#999999,stroke:#999999,color:#ffffff,stroke-w
 classDef classAction fill:#dddddd,stroke:#dddddd,color:#1E5179,stroke-width:0px;
 classDef classSolution fill:#58595b,stroke:#58595b,color:#ffffff,stroke-width:0px;
 %% Define blocks %%
-WriteIssue{{Write issue}}
+WriteIssue([Write issue])
 NotFixed{{"If your issue is not fixed,\ncontact support.data-insights@skyline.be,\nincluding all info gathered and steps taken."}}
-WriteIssueActionLogging{{"Check Logging: SLDBConnection, SLNet, NATS, SLMessageBroker_SLNet.\nLook for errors/exceptions/status messages."}}
+WriteIssueActionLogging{{"Check Logging: SLDBConnection, SLNet, <br>NATS, SLMessageBroker_SLNet.\nLook for errors/exceptions/status messages."}}
 WriteIssueActionDBXML{{"Check DB.xml."}}
 WriteIssueActionTrendTemplate{{"Check trend template flags."}}
 WriteIssueActionParameter{{"Check if parameter value is updating."}}

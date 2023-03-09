@@ -2893,6 +2893,11 @@
               topicUid: Elements_logging
             - name: Changing the maximum size of DataMiner log files
               topicUid: Changing_the_maximum_size_of_DataMiner_log_files
+    - name: Troubleshooting flowcharts
+      topicUid: Troubleshooting_Flowcharts
+      items:
+        - name: Troubleshooting - Trending
+          topicUID: Troubleshooting_Trending
     - name: Troubleshooting procedures
       topicUid: Troubleshooting_procedures
       items:
