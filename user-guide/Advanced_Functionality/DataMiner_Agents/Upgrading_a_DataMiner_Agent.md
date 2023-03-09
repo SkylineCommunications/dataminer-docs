@@ -12,6 +12,9 @@ uid: Upgrading_a_DataMiner_Agent
 
 ## Before you upgrade
 
+> [!TIP]
+> See: [Preparing to upgrade a DataMiner Agent](xref:Preparing_to_upgrade_a_DataMiner_Agent)
+
 Make sure your system meets the necessary [system requirements](https://community.dataminer.services/dataminer-compute-requirements/). Among others, upgrading to the **latest .NET version** is highly recommended.
 
 > [!NOTE]
@@ -19,11 +22,10 @@ Make sure your system meets the necessary [system requirements](https://communit
 
 Keep in mind that it is strongly recommended that you **use the same version of DataMiner on all Agents in a DMS**.
 
-If you are not upgrading to the DataMiner version that immediately follows your current version, also keep this in mind:
+> [!IMPORTANT]
+> If you are not upgrading to the DataMiner version that immediately follows your current version, follow the procedure mentioned in [Upgrade paths](xref:Upgrade_Paths).
 
-- To upgrade to a **major DataMiner version that is several versions higher than the current version**, we recommend that you **upload and install a package for each major version change**. Always do so if you are upgrading across more than 2 major versions. For example, to upgrade from 9.6 to 10.2, first upgrade to 10.0, then to 10.1, and then to 10.2. Doing the upgrade like this will not only prevent issues but also make it much easier to find the root cause anything goes wrong.
-- For **cumulative updates of a main release**, if the update applies to the same main release, you can use the smaller cumulative update package. Otherwise, for example, to upgrade from 10.0 CU5 to 10.1 CU1, use the full upgrade package.
-- When you upgrade systems **prior to DataMiner version 8.5.0**, start the upgrade from a client machine rather than from a DataMiner Agent. During the upgrade process, all open Internet Explorer windows on the DataMiner Agent will be closed. As a consequence, if you start the process from a DataMiner Agent, you will not be able to follow the progress of the upgrade being performed.
+For **cumulative updates of a main release**, if the update applies to the same main release, you can use the smaller cumulative update package. Otherwise, for example, to upgrade from 10.2 CU5 to 10.3 CU2, first use the full upgrade package and then use the CU2 cumulative update package.
 
 > [!NOTE]
 >
@@ -58,4 +60,4 @@ From DataMiner 9.6.0 \[CU24\]/10.0.0 \[CU16\]/10.1.0 \[CU5\]/10.1.8 onwards, if 
 Though this is not recommended, you can bypass this check by manually removing the *Prerequisites* folder from *Update.zip* in the upgrade package.
 
 > [!TIP]
-> For more information about BPA tests, see [Running BPA tests](xref:Running_BPA_tests)
+> For more information about BPA tests, see [Running BPA tests](xref:Running_BPA_tests) and [Preparing to upgrade a DataMiner System](xref:Preparing_to_upgrade_a_DataMiner_System).

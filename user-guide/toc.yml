@@ -890,12 +890,16 @@
         - name: Upgrading a DataMiner Agent
           topicUid: Upgrading_a_DataMiner_Agent
           items:
+            - name: Preparing to upgrade a DataMiner Agent
+              topicUID: Preparing_to_upgrade_a_DataMiner_Agent
             - name: Upgrading a DataMiner Agent in the Update Center
               topicUid: Upgrading_a_DataMiner_Agent_in_the_Update_Center
             - name: Upgrading a DataMiner Agent using DataMiner Taskbar Utility
               topicUid: Upgrading_a_DataMiner_Agent_using_DataMiner_Taskbar_Utility
             - name: Upgrading a DataMiner Agent in System Center
               topicUid: Upgrading_a_DataMiner_Agent_in_System_Center
+            - name: Upgrade paths
+              topicUID: Upgrade_Paths
             - name: Checking the upgrade history of a DataMiner Agent
               topicUid: Checking_the_upgrade_history_of_a_DataMiner_Agent
             - name: Rolling back a DataMiner upgrade (deprecated)
