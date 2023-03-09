@@ -84,4 +84,4 @@ SLProtocol would interpret signed numbers incorrectly, causing parameters to dis
 <!-- MR 10.4.0 - FR 10.3.5 -->
 <!-- Not added to MR 10.4.0 -->
 
-In some cases, an error could occur when importing a CSV containing matrix input/output name overrides for an element that already had a *ports.xml* file containing input/output name overrides.
+An error could occur when importing a CSV containing matrix input/output name overrides for an element that already had a *ports.xml* file containing input/output name overrides.
