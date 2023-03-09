@@ -78,3 +78,10 @@ From now on, the NATS installation step will be skipped when NATS is already run
 <!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
 
 SLProtocol would interpret signed numbers incorrectly, causing parameters to display incorrect values.
+
+#### Matrix elements: Problem when trying to import a CSV containing overrides for an element that already had a ports.xml file containing overrides [ID_35821]
+
+<!-- MR 10.4.0 - FR 10.3.5 -->
+<!-- Not added to MR 10.4.0 -->
+
+In some cases, an error could occur when importing a CSV containing matrix input/output name overrides for an element that already had a *ports.xml* file containing input/output name overrides.
