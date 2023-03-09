@@ -24,7 +24,7 @@ uid: FAQs_Support_Services
 
   By default, support plan contracts renew automatically every year, unless they have been stopped by the user in advance of the anniversary date of the agreement (for more details, see [Pricing - Term](xref:Support_services_terms#pricing---term).
 
-  In case the support plan has not been deactivated and the user failed to renew the program in time by sending a valid PO, on the day after the anniversary date of the agreement, the service (i.e. Continuity or Evolve plan) will automatically be stopped along with all related services linked to it. As a user, you can still continue to consult content and resources on the Dojo Community portal.
+  In case the support plan has not been deactivated (closed or put on-hold) and the user failed to renew the program in time by sending a valid PO, on the day after the anniversary date of the agreement, the service (i.e. Continuity or Evolve plan) will automatically be stopped along with all related services linked to it. As a user, you can still continue to consult content and resources on the Dojo Community portal.
 
 - **What happens if I don't have active support on a perpetual support plan?**
 
