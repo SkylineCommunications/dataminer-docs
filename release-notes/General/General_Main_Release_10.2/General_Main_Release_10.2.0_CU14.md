@@ -12,6 +12,12 @@ uid: General_Main_Release_10.2.0_CU14
 
 ### Enhancements
 
+#### DataMiner Cube: Database TTL settings will now be limited to 10 years [ID_35533]
+
+<!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.4 -->
+
+From now on, DataMiner Cube will no longer accept database TTL settings that exceed 10 years.
+
 #### Alarms generated when a database goes in offload mode will now have severity 'Notice' instead of 'Critical' [ID_35749]
 
 <!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->

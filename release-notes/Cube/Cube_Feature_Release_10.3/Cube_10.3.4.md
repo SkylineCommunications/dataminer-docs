@@ -60,7 +60,7 @@ This also means that a ListView component configured to list bookings will by de
 
 #### Database TTL settings will now be limited to 10 years [ID_35533]
 
-<!-- MR 10.4.0 - FR 10.3.4 -->
+<!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.4 -->
 
 From now on, DataMiner Cube will no longer accept database TTL settings that exceed 10 years.
 

@@ -12,6 +12,12 @@ uid: Cube_Main_Release_10.3.0_CU2
 
 ### Enhancements
 
+#### Database TTL settings will now be limited to 10 years [ID_35533]
+
+<!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.4 -->
+
+From now on, DataMiner Cube will no longer accept database TTL settings that exceed 10 years.
+
 ### Fixes
 
 #### Cube could start to consume excessive CPU cycles whenever an operation took a long time or a deadlock occurred [ID_35614]

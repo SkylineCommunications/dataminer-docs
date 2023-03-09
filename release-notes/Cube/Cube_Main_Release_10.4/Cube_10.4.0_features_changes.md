@@ -216,12 +216,6 @@ In the top-right corner of a trend graph, a light bulb icon appears when DataMin
 
 Up to now, when you clicked one of those related parameters in order to add it to the trend graph, a check mark would appear in front of it. From now on, check marks will no longer appear in front of related parameters after selecting them.
 
-#### Database TTL settings will now be limited to 10 years [ID_35533]
-
-<!-- MR 10.4.0 - FR 10.3.4 -->
-
-From now on, DataMiner Cube will no longer accept database TTL settings that exceed 10 years.
-
 #### Automation script editor: Intellisense added for timeUpDownConfig.ShowTimeUnits [ID_35672]
 
 <!-- MR 10.4.0 - FR 10.3.4 -->
