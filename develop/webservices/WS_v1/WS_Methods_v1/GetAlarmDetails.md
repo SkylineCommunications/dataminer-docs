@@ -7,7 +7,7 @@ uid: GetAlarmDetails
 Use this method to retrieve the alarm details for a specified alarm.
 
 > [!NOTE]
-> From DataMiner 10.2.0 [CU13]/10.3.0 [CU1]/10.3.4 onwards, use the [GetAlarmHistory method](xref:GetAlarmHistory) to get the alarm details for a non-root alarm.
+> Use the [GetAlarmHistory method](xref:GetAlarmHistory) to get the alarm details of a cleared non-root alarm.
 
 ## Input
 
