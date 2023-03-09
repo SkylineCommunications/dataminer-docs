@@ -13,7 +13,7 @@ These files are located in the *Database* subfolder. They mainly contain the “
 > [!NOTE]
 >
 > - If you make changes to these files, always stop DataMiner first, and restart DataMiner when your changes have been saved.
-> - To prevent the [year 2038 problem](xref:Year_2038_Problem_for_Cassandra) for Cassandra, from DataMiner 10.3.4/10.4.0 onwards, the maximum allowed TTL for databases is limited to 10 years.
+> - To prevent the [year 2038 problem](xref:Year_2038_Problem_for_Cassandra) for Cassandra, from DataMiner 10.2.0 [CU14]/10.3.0 [CU2]/10.3.4 onwards, the maximum allowed TTL for databases is limited to 10 years.
 
 ## Basic syntax of the TTL settings
 
