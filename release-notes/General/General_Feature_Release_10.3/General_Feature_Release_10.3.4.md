@@ -138,7 +138,7 @@ Up to now, when SLAnalytics sent a notification, it would generate an event of t
 
 When you start a DataMiner upgrade, the `ValidateConnectors` prerequisite will now scan the system for any connectors that are known to be incompatible with the DataMiner version to which the DataMiner Agent is being upgraded. If such connectors are found, they will have to be removed before you can continue with the upgrade.
 
-#### GQI: Raw datetime values will now be converted to UTC [ID_35640] [ID_35762]
+#### GQI: Raw datetime values will now be converted to UTC [ID_35640]
 
 <!-- MR 10.4.0 - FR 10.3.4 -->
 
