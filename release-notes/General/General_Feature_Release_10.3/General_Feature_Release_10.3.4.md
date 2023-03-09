@@ -28,11 +28,11 @@ If you do not want the alarm property value to be added to the correlation alarm
 > [!WARNING]
 > Always be extremely careful when using the *SLNetClientTest* tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
 
-#### GQI - Ad hoc data source: Sending and receiving SLNet messages [ID_35701]
+#### GQI - Ad hoc data source: Sending and receiving DMS messages [ID_35701]
 
 <!-- MR 10.4.0 - FR 10.3.4 -->
 
-Ad hoc data sources can now retrieve data by means of SLNet messages.
+Ad hoc data sources can now retrieve data by means of DMS messages.
 
 To do so, the `IGQIDataSource` must implement the `IGQIOnInit` interface, of which the `OnInit` method can also be used to initialize a data source:
 
@@ -46,7 +46,7 @@ When passed to the `OnInit` method, `OnInitInputArgs` can now contain the follow
 GQIDMS DMS
 ```
 
-This new property has the following methods:
+The `GQIDMS` class contains the following methods, which can be used to request information in the form of `DMSMessage` objects:
 
 | Method | Function |
 |--------|----------|
@@ -56,6 +56,9 @@ This new property has the following methods:
 The `GQIDMS` object is only generated when the property is used.
 
 Generally, an ad hoc data source implementation will want to add a private field where it can store the `GQIDMS` object to be used later in other callbacks when columns and rows are created.
+
+> [!IMPORTANT]
+> DMS messages are subject to change without notice. If you can implement an alternative using the DataMiner UI or the automation options provided in DataMiner Automation, we highly recommend that you do so instead.
 
 ## Changes
 
