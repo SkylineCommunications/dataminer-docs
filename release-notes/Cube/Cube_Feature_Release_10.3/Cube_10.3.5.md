@@ -20,6 +20,12 @@ uid: Cube_Feature_Release_10.3.5
 
 ### Enhancements
 
+#### Cube will now by default connect using gRPC when connecting to a cloud-connected DataMiner Agent with a remote access URL [ID_35779]
+
+<!-- MR 10.4.0 - FR 10.3.5 -->
+
+When you connect to a cloud-connected DataMiner Agent with a remote access URL ending in `*.dataminer.services`, Cube will now by default connect using gRPC.
+
 ### Fixes
 
 #### Cube could start to consume excessive CPU cycles whenever an operation took a long time or a deadlock occurred [ID_35614]
