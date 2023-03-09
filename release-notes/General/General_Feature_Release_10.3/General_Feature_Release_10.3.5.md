@@ -76,10 +76,3 @@ From now on, the execution of the NATS installer at DMA startup will be skipped 
 <!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
 
 SLProtocol would interpret signed numbers incorrectly, causing parameters to display incorrect values.
-
-#### Matrix elements: Problem when trying to import a CSV containing overrides for an element that already had a ports.xml file containing overrides [ID_35821]
-
-<!-- MR 10.4.0 - FR 10.3.5 -->
-<!-- Not added to MR 10.4.0 -->
-
-An error could occur when importing a CSV containing matrix input/output name overrides for an element that already had a *ports.xml* file containing input/output name overrides.
