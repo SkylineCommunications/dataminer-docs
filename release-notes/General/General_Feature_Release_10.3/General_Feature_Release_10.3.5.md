@@ -21,6 +21,14 @@ uid: General_Feature_Release_10.3.5
 
 ### Enhancements
 
+#### SLAnalytics: A message will be added to the SLAnalytics.txt log file when no Cassandra database is present [ID_35748]
+
+<!-- MR 10.4.0 - FR 10.3.5 -->
+
+Up to now, SLAnalytics would stop working without giving any notice whatsoever when it was started on a system without a Cassandra database.
+
+From now on, when no Cassandra database is present, SLAnalytics will be stopped gracefully and a message will be added to the *SLAnalytics.txt* log file.
+
 #### Alarms generated when a database goes in offload mode will now have severity 'Notice' instead of 'Critical' [ID_35749]
 
 <!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->

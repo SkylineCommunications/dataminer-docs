@@ -170,6 +170,14 @@ Proactive cap detection predicts future issues based on trend data in the Cassan
 
 From now on, ReservationInstances of type *Custom Process Automation* will no longer consume SRM credits. This means that, from now on, you can schedule an unlimited number of concurrent bookings of type *Custom Process Automation*.
 
+#### SLAnalytics: A message will be added to the SLAnalytics.txt log file when no Cassandra database is present [ID_35748]
+
+<!-- MR 10.4.0 - FR 10.3.5 -->
+
+Up to now, SLAnalytics would stop working without giving any notice whatsoever when it was started on a system without a Cassandra database.
+
+From now on, when no Cassandra database is present, SLAnalytics will be stopped gracefully and a message will be added to the *SLAnalytics.txt* log file.
+
 ### Fixes
 
 #### Cassandra Cluster: Every DMA would incorrectly try to delete any possible old Cassandra compaction and repair tasks found in the entire DMS [ID_31923]
