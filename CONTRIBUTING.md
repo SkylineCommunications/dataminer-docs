@@ -57,6 +57,22 @@ On every page of the documentation on docs.dataminer.services, a *Propose change
    > [!NOTE]
    > Do not forget to create a pull request! Otherwise, your changes may be lost.
 
+## Reporting an issue
+
+GitHub offers the possibility to report an issue. This feature can be used if you think information is missing or notice a mistake but are unsure of how to change it using the [web editor](#doing-a-quick-edit-to-a-page) or [GitHub Desktop](#making-a-larger-contribution). You can report an issue as follows:
+
+1. Go to the [dataminer-docs repository](https://github.com/SkylineCommunications/dataminer-docs) on GitHub.
+
+1. In the top-left corner, select *Issues*.
+
+1. Select *New issue*.
+
+1. Choose a title for the issue and leave a comment.
+
+1. Select *Submit new issue*.
+
+The Skyline documentation team will review the issue and provide you with feedback.
+
 ## Reviewing a contribution from someone else
 
 Most contributions to the documentation are added in the form of "pull requests", i.e. requests to pull specific changes into the repository. The pull requests are listed under <https://github.com/SkylineCommunications/dataminer-docs/pulls>.
