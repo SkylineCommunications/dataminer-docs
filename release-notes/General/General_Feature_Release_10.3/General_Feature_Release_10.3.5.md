@@ -62,6 +62,17 @@ When the *SLLogCollector* tool had to collect memory dumps of multiple processes
 
 From now on, it will collect at least the "now" dump for each of the selected processes.
 
+#### NATS would incorrectly be re-installed when a WMI query error occurred while connecting a DataMiner Agent to dataminer.services [ID_35647]
+
+<!-- MR 10.4.0 - FR 10.3.5 -->
+
+When a DataMiner Agent was being connected to `dataminer.services`, in some cases, due to an issue with a WMI query, NATS could incorrectly be re-installed, even though NATS and NAS were already running.
+
+From now on, the NATS installation step will be skipped when NATS is already running. Also, when an error occurs when executing a WMI query, a message saying that connecting the agent to `dataminer.services` has failed will be added to the logs.
+
+> [!NOTE]
+> When an error occurs when executing a WMI query, and no NATS/NAS service is running, NATS will not be installed automatically. A manual installation of NATS will be needed.
+
 #### SLProtocol would interpret signed numbers incorrectly [ID_35796]
 
 <!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
