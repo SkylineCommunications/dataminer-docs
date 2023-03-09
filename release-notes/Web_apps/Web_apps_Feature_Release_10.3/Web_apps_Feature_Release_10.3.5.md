@@ -49,3 +49,9 @@ In the *Monitoring* app, a number of enhancements have been made to the sidebar 
 - The width of the sidebar has been reduced.
 
 ### Fixes
+
+#### Dashboards app & Low-code apps: Problem when feeding data from a GQI component to a query used in the same component [ID_35806]
+
+<!-- MR 10.4.0 - FR 10.3.5 -->
+
+An error could occur when feeding data from a GQI component to a query that was used in the same component.
