@@ -38,4 +38,14 @@ In the *Monitoring* app, histograms now have a number of time range buttons that
 
 In the *Monitoring* app, from now on, elements, services and views opened by clicking a Visio shape will open in the same tab instead of a new tab.
 
+#### Monitoring app - Histogram: Sidebar enhancements [ID_35797]
+
+<!-- MR 10.4.0 - FR 10.3.5 -->
+
+In the *Monitoring* app, a number of enhancements have been made to the sidebar of the *Histogram* page of a parameter:
+
+- The icons that allow you to switch between trend graph and histogram have been updated.
+- The *Time span* selection box has been removed.
+- The width of the sidebar has been reduced.
+
 ### Fixes

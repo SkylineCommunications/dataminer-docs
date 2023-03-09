@@ -148,6 +148,16 @@ When an EPM feed is used to feed EPM identifiers to a parameter feed, it will no
 
 In the *Monitoring* app, the *Trending* page of a parameter no longer has a sidebar.
 
+#### Monitoring app - Histogram: Sidebar enhancements [ID_35797]
+
+<!-- MR 10.4.0 - FR 10.3.5 -->
+
+In the *Monitoring* app, a number of enhancements have been made to the sidebar of the *Histogram* page of a parameter:
+
+- The icons that allow you to switch between trend graph and histogram have been updated.
+- The *Time span* selection box has been removed.
+- The width of the sidebar has been reduced.
+
 ### Fixes
 
 #### GQI: Problem when retrieving DCF interfaces [ID_34820]
