@@ -18,6 +18,14 @@ uid: General_Main_Release_10.3.0_CU2
 
 When a database went in offload mode, up to now, an alarm with severity *Critical* was generated. From now on, an alarm of severity *Notice* will be generated instead.
 
+#### SLAnalytics will no longer disregard first-time alarm template assignments [ID_35794]
+
+<!-- MR 10.3.0 [CU2] - FR 10.3.5 -->
+
+Up to now, SLAnalytics only took into account changes to alarm templates that were already assigned to elements and disregarded first-time alarm template assignments.
+
+From now on, SLAnalytics will also take into account first-time alarm template assignments.
+
 ### Fixes
 
 #### SLLogCollector: Problem when collecting multiple memory dumps with the 'Now and when memory increases with X Mb' option [ID_35617]

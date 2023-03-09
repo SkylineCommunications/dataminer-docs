@@ -36,6 +36,14 @@ Up to now, after each step in a GQI query, raw datetime values were always conve
 > [!IMPORTANT]
 > **BREAKING CHANGE**: When, in an ad hoc data source or a query operation, a datetime value is not in UTC format, an exception will now be thrown.
 
+#### SLAnalytics will no longer disregard first-time alarm template assignments [ID_35794]
+
+<!-- MR 10.3.0 [CU2] - FR 10.3.5 -->
+
+Up to now, SLAnalytics only took into account changes to alarm templates that were already assigned to elements and disregarded first-time alarm template assignments.
+
+From now on, SLAnalytics will also take into account first-time alarm template assignments.
+
 ### Fixes
 
 #### SLLogCollector: Problem when collecting multiple memory dumps with the 'Now and when memory increases with X Mb' option [ID_35617]
