@@ -27,6 +27,15 @@ uid: General_Feature_Release_10.3.5
 
 When a database went in offload mode, up to now, an alarm with severity *Critical* was generated. From now on, an alarm of severity *Notice* will be generated instead.
 
+#### GQI: Raw datetime values retrieved from Elasticsearch will now be converted to UTC [ID_35784]
+
+<!-- MR 10.4.0 - FR 10.3.5 -->
+
+Up to now, after each step in a GQI query, raw datetime values were always converted to the time zone that was specified in the query options. From now on, raw datetime values retrieved from Elasticsearch will be converted to UTC instead. The time zone specified in the query options will now only be used when converting a raw datetime value to a display value.
+
+> [!IMPORTANT]
+> **BREAKING CHANGE**: When, in an ad hoc data source or a query operation, a datetime value is not in UTC format, an exception will now be thrown.
+
 ### Fixes
 
 #### SLLogCollector: Problem when collecting multiple memory dumps with the 'Now and when memory increases with X Mb' option [ID_35617]
