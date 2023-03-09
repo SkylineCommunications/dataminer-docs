@@ -5,7 +5,7 @@ uid: github_reusable_workflows
 # GitHub reusable workflows
 
 Where a [GitHub Action](xref:Deploying_Automation_scripts_from_a_GitHub_repository) can provide an easy access point to a single key action, the reusable workflow takes this up a notch.
-A GitHub reusable workflow allows the re-use of a combination of many different GitHub Actions and other scripts, running across several jobs combined into a single easy call.
+A GitHub reusable workflow allows the re-use of a combination of many different GitHub actions and other scripts, running across several jobs combined into a single easy call.
 
 It provides versioning and can be called in such a way to always use the latest stable version.
 This contrary to [Starter workflows](xref:github_starter_workflows) that copy and paste a template workflow without the ability to run the 'latest version'.
