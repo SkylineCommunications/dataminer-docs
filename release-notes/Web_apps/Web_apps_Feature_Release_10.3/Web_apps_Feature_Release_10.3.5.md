@@ -62,6 +62,14 @@ When you duplicated a component, the size of the duplicate would incorrectly be 
 
 An error could occur when feeding data from a GQI component to a query that was used in the same component.
 
+#### Dashboards app: A table component could appear to be empty when you rapidly switched between visualizations [ID_35831]
+
+<!-- MR 10.4.0 - FR 10.3.5 -->
+
+In some cases, a table component could appear to be empty when you rapidly switched between visualizations.
+
+Also, an error could be thrown when you tried to add an invalid query to a component.
+
 #### Dashboards app & Low-code apps: Text boxes in the Layout tab would not update when you selected another component [ID_35851]
 
 <!-- MR 10.3.0 [CU2] - FR 10.3.5 -->

@@ -249,3 +249,11 @@ When data from one table was fed to another table, in some cases, the "loading" 
 <!-- MR 10.4.0 - FR 10.3.5 -->
 
 An error could occur when feeding data from a GQI component to a query that was used in the same component.
+
+#### Dashboards app: A table component could appear to be empty when you rapidly switched between visualizations [ID_35831]
+
+<!-- MR 10.4.0 - FR 10.3.5 -->
+
+In some cases, a table component could appear to be empty when you rapidly switched between visualizations.
+
+Also, an error could be thrown when you tried to add an invalid query to a component.
