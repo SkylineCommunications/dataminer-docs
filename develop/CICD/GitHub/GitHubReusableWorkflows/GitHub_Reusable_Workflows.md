@@ -4,18 +4,16 @@ uid: github_reusable_workflows
 
 # GitHub reusable workflows
 
-Where a [GitHub Action](xref:Deploying_Automation_scripts_from_a_GitHub_repository) can provide an easy access point to a single key action, the reusable workflow takes this up a notch.
-A GitHub reusable workflow allows the re-use of a combination of many different GitHub actions and other scripts, running across several jobs combined into a single easy call.
+Where a [GitHub Action](xref:Deploying_Automation_scripts_from_a_GitHub_repository) can provide an easy access point to a single key action, the reusable workflow takes this up a notch. A GitHub reusable workflow allows the re-use of a combination of many different GitHub actions and other scripts, running across several jobs combined into a single easy call.
 
-It provides versioning and can be called in such a way to always use the latest stable version.
-This contrary to [Starter workflows](xref:github_starter_workflows) that copy and paste a template workflow without the ability to run the 'latest version'.
+It provides versioning and can be called in such a way to always use the latest stable version. This is different from [starter workflows](xref:github_starter_workflows), which copy and paste a template workflow without the ability to run the "latest version".
 
 Skyline Communications provides most quality control and automation through reusable workflows, allowing us to improve and tweak them based on user feedback or corporate changes and immediately apply the changes to any workflow using them on GitHub.
-These reusable workflows are public and can be accessed by any organization. They can also be forked and used as a starting point to be adjusted by other CI/CD engineers to match their organization's quality standards.
+
+These reusable workflows are public and can be accessed by any organization. They can also be forked and used as a starting point for other CI/CD engineers, who can adjust them to match their organization's quality standards.
 
 > [!NOTE]
-> If you are a CI/CD engineer looking to save time when building workflows, consider starting from the source code of a reusable workflow. Do note that reusable workflows are internally complex, often combining multiple tools across several jobs and steps to meet quality standards, automation requirements, and edge cases.
-> Many out-of-the-box actions provided online may be lacking in functionality, requiring additional code to prepare a solution before using these standard actions. We prefer using dotnet tools over scripting code because they allow for clean versioning, reusability, and unit testing of our code. The source code for these tools is currently internal to Skyline Communications, but the dotnet tools themselves are available for use and can be found here:
+> If you are a CI/CD engineer looking to save time when building workflows, consider starting from the source code of a reusable workflow. Do note that reusable workflows are internally complex, often combining multiple tools across several jobs and steps to meet quality standards, automation requirements, and edge cases. Many out-of-the-box actions provided online may be lacking in functionality, requiring additional code to prepare a solution before these standard actions are used. We prefer using dotnet tools over scripting code because they allow for clean versioning, reusability, and unit testing of our code. The source code for these tools is currently internal to Skyline Communications, but the dotnet tools themselves are available for use and can be found here:
 
 ## Available reusable workflows
 
