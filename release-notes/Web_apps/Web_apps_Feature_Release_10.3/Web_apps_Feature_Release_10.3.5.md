@@ -62,6 +62,14 @@ When you duplicated a component, the size of the duplicate would incorrectly be 
 
 An error could occur when feeding data from a GQI component to a query that was used in the same component.
 
+#### Dashboards app & Low-code apps - Form component: Problems with multiple-selection drop-down boxes [ID_35829]
+
+<!-- MR 10.3.0 [CU2] - FR 10.3.5 -->
+
+When a form component contained multiple-selection drop-down boxes, it would load too slowly due to the drop-down box change detection being triggered over and over again. From now on, form components containing multiple-selection drop-down boxes will load considerably quicker.
+
+Also, when a multiple-selection drop-down field of a DOM instance was added to a form component, the current values preloaded into the field as placeholders would incorrectly not get removed once the data was loaded, causing the drop-down field to contain duplicate values.
+
 #### Dashboards app: A table component could appear to be empty when you rapidly switched between visualizations [ID_35831]
 
 <!-- MR 10.4.0 - FR 10.3.5 -->

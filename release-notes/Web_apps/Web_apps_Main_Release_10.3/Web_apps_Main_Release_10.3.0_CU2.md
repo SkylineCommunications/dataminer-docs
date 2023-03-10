@@ -38,6 +38,14 @@ GQI components would incorrectly not clear their query row feed when refetching 
 
 When you duplicated a component, the size of the duplicate would incorrectly be limited to 30 rows. From now on, when you duplicate a component, the duplicate will have the same size as the original.
 
+#### Dashboards app & Low-code apps - Form component: Problems with multiple-selection drop-down boxes [ID_35829]
+
+<!-- MR 10.3.0 [CU2] - FR 10.3.5 -->
+
+When a form component contained multiple-selection drop-down boxes, it would load too slowly due to the drop-down box change detection being triggered over and over again. From now on, form components containing multiple-selection drop-down boxes will load considerably quicker.
+
+Also, when a multiple-selection drop-down field of a DOM instance was added to a form component, the current values preloaded into the field as placeholders would incorrectly not get removed once the data was loaded, causing the drop-down field to contain duplicate values.
+
 #### Dashboards app & Low-code apps: Text boxes in the Layout tab would not update when you selected another component [ID_35851]
 
 <!-- MR 10.3.0 [CU2] - FR 10.3.5 -->
