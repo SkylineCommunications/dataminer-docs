@@ -20,6 +20,13 @@ uid: Changing_dashboard_settings
 
      - *Allow components to shift*: This option determines whether components will move to make room for a component that is dragged across the dashboard. If the option is not selected, the position of the components becomes fixed.
 
+     - *Lazy load components*: Available from DataMiner 10.3.4/10.4.0 onwards. Select this option to make sure components are only initialized the first time they appear on the screen. This will shorten the load time considerably and improve the performance of the dashboard.
+
+       > [!NOTE]
+       >
+       > - This option is only available if you add the `showAdvancedSettings=true` option to the dashboard URL.
+       > - Even when this option is enabled, components will not be lazy loaded in edit mode.
+
      - *Fit to view*: Available from DataMiner 10.2.7/10.3.0 onwards. Select this option to make sure all components are automatically adjusted to always be fully visible, so the user does not need to scroll.
 
      - *Number of columns*: Available from DataMiner 10.0.10 onwards. Allows you to configure in how many columns components can be displayed in the dashboard (maximum: 50). If you change the number of columns to a lower number and the columns currently contain components, these components will be automatically relocated when necessary.
