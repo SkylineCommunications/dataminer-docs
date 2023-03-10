@@ -81,7 +81,7 @@ It can be used to retrieve the parameter relationships that are stored in a mode
 
 In the configuration settings of a dashboard or a page/panel of a low-code app, you can now find the *Lazy load components* setting.
 
-When this settings is enabled, the components on the dashboard or the page/panel of the low-code app will only be initialized the first time they appear on the screen. This will considerably shorten the initial load time and enhance overall performance of large dashboards and large pages/panels of low-code apps.
+When this setting is enabled, the components on the dashboard or the page/panel of the low-code app will only be initialized the first time they appear on the screen. This will considerably shorten the initial load time and enhance overall performance of large dashboards and large pages/panels of low-code apps.
 
 > [!NOTE]
 >
