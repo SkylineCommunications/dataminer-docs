@@ -8,23 +8,24 @@ IN DEVELOPMENT - NOT RELEASED
 
 ## How to use
 
-From within your own workflow .yml files, you can call a reusable workflow by adding a job that references the location on GitHub of the '.yml' file:
-For Example:
+From within your own workflow .yml files, you can call a reusable workflow by adding a job that references the location on GitHub of the .yml file:
 
-'''yaml
+For example:
+
+```yml
 jobs:
 
   CI:
     uses: SkylineCommunications/_ReusableWorkflows/.github/workflows/Automation Master Workflow.yml@main
-'''
+```
 
-Most reusable workflows require several arguments and secrets to be passed along.
-You can find which those are by opening the reusable workflow and looking at the 'inputs:' and 'secrets:' sections located at the top of the file.
+For most reusable workflows, several arguments and secrets need to be provided. You can find out which arguments and secrets by opening the reusable workflow and looking at the "inputs:" and "secrets:" sections located at the top of the file.
 
-However, we instead recommended you to use one of the available [Starter workflows](uid:github_starter_workflows) that in turn call one of our reusable workflows and are preconfigured with most of the arguments.
+However, we recommend that you instead use one of the available [starter workflows](xref:github_starter_workflows) that in turn call one of our reusable workflows and that are preconfigured with most of the arguments.
 
 For example:
-'''yaml
+
+```yml
 jobs:
 
   CI:
@@ -40,7 +41,7 @@ jobs:
     secrets:
       api-key: ${{ secrets.DATAMINER_DEPLOY_KEY }}
       sonarCloudToken: ${{ secrets.SONAR_TOKEN }}
-'''
+```
 
 ## Steps
 
