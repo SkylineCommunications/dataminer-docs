@@ -63,3 +63,9 @@ In some cases, SLAnalytics kept on waiting on a database call, which eventually 
 <!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
 
 SLProtocol would interpret signed numbers incorrectly, causing parameters to display incorrect values.
+
+#### Dashboards app & Low-code apps: Duplicated component would not have the size as the original [ID_35804]
+
+<!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
+
+When you duplicated a component, the size of the duplicate would incorrectly be limited to 30 rows. From now on, when you duplicate a component, the duplicate will have the same size as the original.

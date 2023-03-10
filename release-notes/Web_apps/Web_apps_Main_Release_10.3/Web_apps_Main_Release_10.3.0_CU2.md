@@ -31,3 +31,17 @@ Sticky component menus would no longer be fully visible after you had changed th
 <!-- MR 10.3.0 [CU2] - FR 10.3.4 -->
 
 GQI components would incorrectly not clear their query row feed when refetching data.
+
+#### Dashboards app & Low-code apps: Duplicated component would not have the size as the original [ID_35804]
+
+<!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
+
+When you duplicated a component, the size of the duplicate would incorrectly be limited to 30 rows. From now on, when you duplicate a component, the duplicate will have the same size as the original.
+
+#### Dashboards app & Low-code apps: Parts of a component that had the focus would not get blurred when another component was selected [ID_35851]
+
+<!-- MR 10.3.0 [CU2] - FR 10.3.5 -->
+
+When a part of a component (e.g. its title) had the focus, and you selected another component, the part of the first component that had the focus would incorrect keep the focus.
+
+From now on, when a part of a component (e.g. its title) has the focus, and you selected another component, the part of the first component that had the focus will get blurred.

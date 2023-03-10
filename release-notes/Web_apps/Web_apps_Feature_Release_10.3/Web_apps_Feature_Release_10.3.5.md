@@ -50,8 +50,22 @@ In the *Monitoring* app, a number of enhancements have been made to the sidebar 
 
 ### Fixes
 
+#### Dashboards app & Low-code apps: Duplicated component would not have the size as the original [ID_35804]
+
+<!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
+
+When you duplicated a component, the size of the duplicate would incorrectly be limited to 30 rows. From now on, when you duplicate a component, the duplicate will have the same size as the original.
+
 #### Dashboards app & Low-code apps: Problem when feeding data from a GQI component to a query used in the same component [ID_35806]
 
 <!-- MR 10.4.0 - FR 10.3.5 -->
 
 An error could occur when feeding data from a GQI component to a query that was used in the same component.
+
+#### Dashboards app & Low-code apps: Parts of a component that had the focus would not get blurred when another component was selected [ID_35851]
+
+<!-- MR 10.3.0 [CU2] - FR 10.3.5 -->
+
+When a part of a component (e.g. its title) had the focus, and you selected another component, the part of the first component that had the focus would incorrect keep the focus.
+
+From now on, when a part of a component (e.g. its title) has the focus, and you selected another component, the part of the first component that had the focus will get blurred.
