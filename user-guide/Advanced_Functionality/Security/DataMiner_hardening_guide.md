@@ -78,9 +78,6 @@ On DataMiner versions installed using the **10.0 installer** (or older), the Dat
 
 - TCP 8004: Remoting (client-server & inter-DMS communication)
 
-  > [!NOTE]
-  > If you have configured your Agents to use gRPC for client-server communication and for server-server communication, you can close this port and open port 443 instead.
-
 - TCP **9004**: Web Services (end of life)
 
 - TCP 7000: Cassandra (inter-node communication)
@@ -124,8 +121,6 @@ If you use the **DataMiner 10.1 installer or a more recent installer**, the port
 The **Remote Administration** rule must be enabled when the DataMiner server is monitored by a remote element using the Microsoft Platform protocol. This is for example the case when two DataMiner Agents are used in a Failover setup, and both servers are monitored through the Microsoft Platform protocol.
 
 **ICMP** is only required when Failover heartbeats are active or the *pingCount* attribute in the *DMS* tag in *DMS.xml* is set to a value greater than 0. For more information, see [Attributes of the DMS tag](xref:DMS_xml#attributes-of-the-dms-tag). Allowing ICMP is also useful to debug connectivity issues.
-
-**Port 8004** can be closed if you configured your DataMiner Agents to use gRPC for client-server communication and server-server communication. For gRPC communication, port 443 is used, so if HTTPS is not enabled, you will still need to open this port.
 
 > [!TIP]
 > See also: [Configuring the IP network ports](xref:Configuring_the_IP_network_ports)

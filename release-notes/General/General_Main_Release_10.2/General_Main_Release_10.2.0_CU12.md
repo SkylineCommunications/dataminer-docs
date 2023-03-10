@@ -337,3 +337,9 @@ When you updated an re-applied a service template while a card of a service crea
 <!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
 
 When you enabled the *Automatic incident tracking* option of an active alarms tab while a quick filter was applied, in some cases, the alarm counters in the footer bar would incorrectly start to show negative values.
+
+#### Problem with SLPort when an element with a serial connection was restarted [ID_35773]
+
+<!-- MR 10.2.0 [CU12]/10.3.0 [CU0] - FR 10.3.3 [CU1] -->
+
+In some cases, an error could occur in SLPort when an element with a serial connection was restarted.

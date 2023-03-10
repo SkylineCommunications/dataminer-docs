@@ -57,6 +57,22 @@ On every page of the documentation on docs.dataminer.services, a *Propose change
    > [!NOTE]
    > Do not forget to create a pull request! Otherwise, your changes may be lost.
 
+## Reporting an issue
+
+GitHub offers the possibility to report an issue. This feature can be used if you think information is missing or notice a mistake but are unsure of how to change it using the [web editor](#doing-a-quick-edit-to-a-page) or [GitHub Desktop](#making-a-larger-contribution). You can report an issue as follows:
+
+1. Go to the [dataminer-docs repository](https://github.com/SkylineCommunications/dataminer-docs) on GitHub.
+
+1. In the top-left corner, select *Issues*.
+
+1. Select *New issue*.
+
+1. Choose a title for the issue and leave a comment.
+
+1. Select *Submit new issue*.
+
+The Skyline documentation team will review the issue and provide you with feedback.
+
 ## Reviewing a contribution from someone else
 
 Most contributions to the documentation are added in the form of "pull requests", i.e. requests to pull specific changes into the repository. The pull requests are listed under <https://github.com/SkylineCommunications/dataminer-docs/pulls>.
@@ -767,6 +783,34 @@ The only time when "the user" is appropriate is when whoever you are writing for
 - Make sure [your fork is up to date](#make-sure-your-fork-is-up-to-date).
 
 - If you installed Git after you installed GitHub Desktop, remove the repository in GitHub Desktop and add it again.
+
+### GitHub Desktop throws "Author identity unknown" error
+
+**Symptom**: When you try to push a commit using GitHub Desktop, this fails with the following error:
+
+```txt
+Author identity unknown
+
+*** Please tell me who you are.
+
+Run
+
+    git config --global user.email "you@example.com"
+    git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit ---global to set the identity only in this repository.
+
+fatal: empty ident name (for <>) not allowed
+```
+
+**Resolution**:
+
+1. In GitHub Desktop, select *Repository* in the top-left corner and click *Repository settings*.
+
+1. In the *Git config* tab, select *Use my global Git config* and click *Save*.
+
+   ![Git config](~/images/Git_config.png)
 
 ## References
 

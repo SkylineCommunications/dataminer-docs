@@ -73,6 +73,18 @@ SLLogCollector packages will now also include the following additional file:
 |------|----------|
 | Logs\Network Information\Netstat.exe -ano.txt | The output of an `netstat -ano` command. |
 
+#### GQI: Clearer error message when querying a logger table without `RTDisplay=true` settings [ID_35706]
+
+<!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
+
+A clearer error message will now be returned when you are building a query against a logger table without `RTDisplay=true` settings, neither on table level nor on column level.
+
+#### Dashboards app & Low-code apps - Line & area chart component: Enhanced performance when exporting trend data to CSV [ID_35727]
+
+<!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
+
+Because of a number of enhancements, overall performance has increased when exporting trend data to a CSV file.
+
 ### Fixes
 
 #### Memory leak in SLNet after closing a client connection that had been using a "SLDataGateway.API" subscription set [ID_35319]
@@ -107,11 +119,31 @@ When an EPM element was stopped, in some rare cases, an error could occur in SLE
 
 When a query using the *Get parameter table by ID* data source had the *Update data* option enabled, the component would incorrectly no longer automatically refresh the data when changes were detected.
 
+#### Web apps - Interactive Automation scripts: Components in a row following a component with a row span greater than 1 would not be positioned correctly [ID_35504]
+
+<!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
+
+In an interactive Automation script executed in a web app, components positioned in a row following a row that contained a component with a row span greater than 1 would not be positioned correctly.
+
+> [!NOTE]
+> If, in an interactive Automation script executed in a web app, a component is positioned on a cell that is overlapped by a component with a row span greater than 1, it will not be displayed.
+
+> [!IMPORTANT]
+> **BREAKING CHANGE**: If, in an interactive Automation script designed to be executed in a web app, the column property was altered to position a component at a specific spot, because of this fix, the component in question will no longer be displayed. It will be hidden by the component of which the row span is greater than 1. The component can be made visible again by changing the column property.
+
 #### SLAnalytics : Problem after a DVE parent element had been deleted [ID_35521]
 
 <!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.3 -->
 
 In some cases, an error could occur in the SLAnalytics process after a DVE parent element had been deleted.
+
+#### DataMiner Cube - Bookings app: Initial time window was incorrect [ID_35527]
+
+<!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
+
+When you open the *Bookings* app, Cube adds a small offset to the time window when it requests the list of bookings from the server. Up to now, instead of subtracting 1 minute from the start time, it would incorrectly add 1 minute to it. When the initial time window was e.g. 11h00 to 12h00, it would incorrectly request the bookings from 11h01 to 12h01 instead of from 10h59 to 12h01.
+
+Also, in some cases, the "loading" indicator of the bookings timeline would incorrectly not disappear when all bookings were loaded.
 
 #### DataMiner Cube - Visual Overview: Problem with EnableFollowMode option of Resource Manager timeline [ID_35528]
 
@@ -272,6 +304,18 @@ When you applied a filter to an alarm tab, no alarms would be shown when you had
 
 When you exported the data shown in a line & area chart component to a CSV file, the file could incorrectly contain duplicate data.
 
+#### Dashboards app & low-code apps - State component: Changing the query order would incorrectly only be applied when the browser was refreshed [ID_35690]
+
+<!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
+
+When you changed the order of the queries added to a State component, this change would incorrectly only be applied when you refreshed the browser. From now on, the change will be applied immediately.
+
+#### Dashboards app - Line & area chart: Problem when selecting a new time range [ID_35691]
+
+<!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
+
+When a line & area chart was filtered by means of a time range feed, in some cases, the dashboard would incorrectly keep on loading when a new time range was selected.
+
 #### Dashboards app & Low-code apps: Last nodes of a migrated query would incorrectly be cut off [ID_35693]
 
 <!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
@@ -283,3 +327,51 @@ When a GQI was migrated, in some cases, the last nodes of the migrated query wou
 <!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
 
 When you hovered over a segment of an edge, in some cases, an incorrect tooltip would appear.
+
+#### DataMiner Cube: Exception values with decimals would be displayed incorrectly in trend graph [ID_35714]
+
+<!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
+
+Because DataMiner Cube would use the incorrect culture when parsing exception values, in some cases, exception values with decimals would be displayed incorrectly in trend graphs.
+
+#### Dashboards app: 'Data used in dashboard' section would incorrectly not list DOM instances [ID_35717]
+
+<!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
+
+When editing a dashboard, DOM instances used by components on that dashboard would incorrectly not be listed in the *Data used in dashboard* section of the *DATA* tab.
+
+#### Web apps: Node edge actions would incorrectly no longer work [ID_35723]
+
+<!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
+
+Node edge actions would incorrectly no longer work.
+
+#### SLAnalytics - Automatic incident tracking: Problem when starting up [ID_35731]
+
+<!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
+
+When a large number of groups needed to be created while automatic incident tracking was starting up, the `A timeout of 00:01:00.0 occurred while processing message of type AlarmFloodMessage` error could be thrown, causing automatic incident tracking to not start up correctly.
+
+#### Web apps - Query builder: Query nodes that by default only had a single value would incorrectly not be displayed [ID_35735]
+
+<!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
+
+In the query builder, query nodes that by default only had a single value would incorrectly not be displayed.
+
+#### DataMiner Cube - Asset Manager app: Enum fields would not immediately be updated after clicking 'Apply' [ID_35747]
+
+<!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
+
+When, in the *Asset Manager* app, you tried to update an enum field, the value would not immediately be updated in the UI after clicking *Apply*.
+
+#### GQI: Queries containing float or GUID values would not get migrated correctly [ID_35759]
+
+<!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
+
+GQI queries containing float or GUID values would not get migrated correctly.
+
+#### Problem with SLElement when creating an alarm with an 'SLA Affecting' property [ID_35776]
+
+<!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
+
+In some rare cases, an error could occur in SLElement when creating an alarm with an *SLA Affecting* property.

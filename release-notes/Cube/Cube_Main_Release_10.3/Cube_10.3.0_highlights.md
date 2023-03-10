@@ -17,6 +17,71 @@ At the top of a trend graph, a new “Custom” button has been added next to th
 
 When you click this new button, you will be able to specify a custom X-axis range.
 
+#### Data Display: Support for launching EPM objects by clicking buttons in Data Display table cells [ID_32368] [ID_33295] [ID_33857]
+
+<!-- RN 32368: MR 10.3.0 - FR 10.2.3
+RN 33295: MR 10.3.0 - FR 10.2.6
+RN 33857: MR 10.3.0 - FR 10.2.9 -->
+
+This feature offers a new way of adding links to EPM objects in a Data Display table.
+
+When, in a protocol, you configure a cell button as shown below, the table cell will display the SystemType and SystemName defined in the EPM object. Clicking the link will open a new card for that object.
+
+Example:
+
+```xml
+<Measurement>
+  <Type>button</Type>
+  <Discreets>
+    <Discreet>
+      <Display>{linkedItemName}</Display>
+      <Value type="open">{pid:530}</Value>
+    </Discreet>
+  </Discreets>
+</Measurement>
+```
+
+The discreet value can contain the SystemType and SystemName of the object, or a reference like “{pid:530}”. In the example above, the identifier is stored in the column with parameter ID 530, which can be the read parameter of the same column or a different column.
+
+If you know the type of the EPM object, you can add a type prefix (epm or view), followed by an equal sign and (a reference to) the identifier.
+
+The \<Display> tag of the discreet can contain the same references as the \<Value> tag. One extra keyword is possible (and recommended): {linkedItemName}. This keyword will be replaced with the name of the object referred to in the \<Value> tag.
+
+If you want to specify the page to be selected by default, add a suffix to the identifier in the \<Value> tag containing the root page name and the page name, separated by a colon. See the following examples:
+
+- EPM=Cable/SF Cable1:Topology:Total
+- VIEW=436:BelowThisObject:STB
+- VIEW=436:BelowThisView:Elements
+
+If the SystemName contains colons (e.g. a MAC address), then replace the default separator (i.e. colon) by another one (e.g. a pipe character) by placing a \[sep:XY\] prefix in front of the SystemName. See the following example:
+
+```xml
+<Value type="open">{EPM=[sep::|]CPE/00:01:08:01:08:01|DATA|CPE Frequencies}</Value>
+```
+
+Moreover, you can specify a second custom separator to also replace the existing separator inside the SystemType and/or SystemName. Since the default separator between the SystemType and the SystemName is “/”, this would mean that neither the systemType nor the SystemName would be allowed to contain that character (“/”).
+
+In the following example, a second \[sep:XY\] is used to replace the “/” inside the SystemType (“CPE/CPE”) with another character (“$”).
+
+```xml
+<Value type="open">{EPM=[sep::|][sep:/$]CPE/CPE$00:01:08:01:08:01|DATA|CPE Frequencies}</Value>
+```
+
+In short,
+
+- the first \[sep:XY\] will replace the separator between the arguments, and
+- the second \[sep:XY\] will replace the separator inside the SystemType and/or SystemName.
+
+If you want to replace the separator inside the name, you must specify both the first \[sep:XY\] and the second \[sep:XY\], even if there are no arguments.
+
+> [!NOTE]
+>
+> - In each of the examples above, the card will be opened on a particular page:
+>   - “Topology:Total” or “t:Total” will open the topology page named “Total”.
+>   - “BelowThisObject:STB” or “bto:STB” will open the CPE card page named “STB”.
+>   - “BelowThisView:Elements” or “btv:Elements” will open the view card page named “Elements”.
+> - When the card layout is set to “Tab layout”, it is now possible to save EPM cards in workspaces.
+
 #### Visual Overview: Text wrapping and trimming [ID_32440]
 
 <!-- MR 10.3.0 - FR 10.2.3 -->
@@ -160,7 +225,7 @@ When, in the Alarm Console, you enable the “Automatic incident tracking” opt
 > - From the moment a user manually adds or removes an alarm to or from an alarm group or renames an alarm group, that group will no longer be updated automatically.
 > - Manually created incidents (alarm groups) will have their alarm focus score set to 0.
 > - When Cube is connected to a DataMiner Agent that does not yet support manually creating, updating and renaming incidents (alarm groups), the menu commands to manipulate alarm groups will not be available.
-> - See also [Alarm Console: Manually creating incident alarms even when “Automatic incident tracking” is disabled \[ID_33000\]](xref:Cube_Main_Release_10.3.0_other_features_changes#alarm-console-manually-creating-incident-alarms-even-when-automatic-incident-tracking-is-disabled-id_33000)
+> - See also [Alarm Console: Manually creating incident alarms even when “Automatic incident tracking” is disabled \[ID_33000\]](#alarm-console-manually-creating-incident-alarms-even-when-automatic-incident-tracking-is-disabled-id_33000)
 
 #### Trending - Behavioral anomaly detection: New type of change point 'flatline' [ID_32839] [ID_32856] [ID_32950] [ID_32993] [ID_33559] [ID_33957]
 
@@ -182,6 +247,24 @@ A new flatline trend icon will be used to indicate when a parameter has flatline
 > [!NOTE]
 > Flatline change points can also be detected for history set parameters that are set nearly in real time, i.e. parameters of which the incoming changes never have a delay larger than 10 minutes.
 > Flatline events will be cleared as soon as the flatline ends.
+
+#### Alarm Console: Manually creating incident alarms even when 'Automatic incident tracking' is disabled [ID_33000]
+
+<!-- MR 10.3.0 - FR 10.2.6 -->
+
+From now on, in the Alarm Console, you will be able to manually create incident alarms (i.e. alarm groups) even when the “Automatic incident tracking” option is disabled.
+
+- When you right-click an alarm that is not part of any alarm group, you will be able to click the “Add to incident” option. If you do so, a window\* will appear, asking you
+
+  - to create a new incident (i.e. a new alarm group) and add the alarm to it, or
+
+  - to add the alarm to an existing alarm group.
+
+These manually created groups will always be visible in active alarm tabs, even when the “Automatic incident tracking” option is disabled.
+
+*\*This window lists all existing incidents. From now on, you will be able to sort this list by clicking a column header. Also, a search box has now been added to allow you to search for a particular incident.*
+
+See also [Alarm Console - Automatic incident tracking: Manually add/remove alarms to/from alarm groups, move alarms from one alarm group to another, and rename alarm groups \[ID_32729\] \[ID_32819\] \[ID_32875\] \[ID_32914\] \[ID_32940\] \[ID_32957\] \[ID_33027\] \[ID_33036\] \[ID_33130\] \[ID_33212\]](#alarm-console---automatic-incident-tracking-manually-addremove-alarms-tofrom-alarm-groups-move-alarms-from-one-alarm-group-to-another-and-rename-alarm-groups-id_32729-id_32819-id_32875-id_32914-id_32940-id_32957-id_33027-id_33036-id_33130-id_33212)
 
 #### Visual Overview: ServiceManager component functionality expanded to support Process Automation UI \[ID_33187\]
 
@@ -247,6 +330,16 @@ The following options can now also be specified in the *ComponentOptions* shape 
 - **HideAddButton=**: If this option is set to "true", no options to add a service definition will be displayed.
 
 - **HideDeleteButton=**: If this option is set to "true", no options to delete a service definition will be displayed.
+
+#### Alarm Console: Assigning a ticket to an incident (alarm group) [ID_33199]
+
+<!-- MR 10.3.0 - FR 10.2.6 -->
+
+In the Alarm Console, it is now possible to assign tickets to incidents (alarm groups).
+
+- To assign a ticket to an incident, right-click the incident (alarm group) and select *Ticket \> New*.
+
+- To view a ticket assigned to an incident, right-click the incident (alarm group), select *Ticket*, and then select the ticket you want to view.
 
 #### Desktop app - Start window: New 'HTTP or HTTPS' setting [ID_33289]
 
@@ -369,4 +462,18 @@ Relationships between parameters are found by studying the changes in the behavi
 >
 > - This light bulb feature will only work on cloud-connected DataMiner Agents that have the *ModelHost* DxM installed and that have been configured to [offload alarm and change point events to the cloud](xref:Controlling_cloudfeed_data_offloads).
 > - Relationship models are calculated once per week. When this feature is activated, it can take up to a week before the first results are visible.
-> - Currently, the ModelHost DxM is not yet available.
+
+#### System Center - Database: Elasticsearch/OpenSearch configuration for Cassandra Cluster setup in Cube [ID_34651]
+
+<!-- MR 10.3.0 - FR 10.3.3 -->
+<!-- See General RNs for other change from this RN -->
+
+If a DataMiner System is configured to use a Cassandra Cluster setup (i.e. a setup where one Cassandra cluster is used for the entire DMS), in the *Database* section of System Center, you can now also configure the settings for the Elasticsearch or OpenSearch database:
+
+- Database: *Elasticsearch* or *Elasticsearch/OpenSearch*.
+- Database prefix: The name all indices will be prefixed with.
+- DB server: The IP addresses or hostnames of the Elasticsearch nodes, or the URL of the Amazon OpenSearch Service endpoint.
+- User/Password: The credentials with which the DMA can log on to the database (if applicable).
+
+> [!TIP]
+> See also: [OpenSearch & Amazon OpenSearch Service [ID_34651]](xref:General_Main_Release_10.3.0_highlights#opensearch--amazon-opensearch-service-id_34651)

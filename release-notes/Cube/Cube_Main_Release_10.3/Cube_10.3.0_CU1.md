@@ -38,6 +38,12 @@ This also means that a ListView component configured to list bookings will by de
 
 When, in DataMiner Cube, you select *Help* in the user menu or the *Apps* pane, the ['Getting started' page of the online DataMiner user guide](xref:Part1GettingStarted) will open in a browser window.
 
+#### Services app: Enhanced performance when opening the 'Profiles' tab [ID_35634]
+
+<!-- MR 10.3.0 [CU1] - FR 10.3.4 -->
+
+Because of a number of enhancements made with regard to the retrieval of overrides for parameter values, overall performance has increased when opening the *Profiles* tab of the *Services* app.
+
 #### System Center - Agents: Clearer restart warning before an upgrade is started [ID_35687]
 
 <!-- MR 10.3.0 [CU1] - FR 10.3.4 -->
@@ -72,6 +78,14 @@ From now on, Cube will check whether the pattern matching feature is enabled eac
 
 When an EPM element was stopped, in some rare cases, an error could occur in SLElement.
 
+#### Bookings app: Initial time window was incorrect [ID_35527]
+
+<!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
+
+When you open the *Bookings* app, Cube adds a small offset to the time window when it requests the list of bookings from the server. Up to now, instead of subtracting 1 minute from the start time, it would incorrectly add 1 minute to it. When the initial time window was e.g. 11h00 to 12h00, it would incorrectly request the bookings from 11h01 to 12h01 instead of from 10h59 to 12h01.
+
+Also, in some cases, the "loading" indicator of the bookings timeline would incorrectly not disappear when all bookings were loaded.
+
 #### Visual Overview: Problem with EnableFollowMode option of Resource Manager timeline [ID_35528]
 
 <!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
@@ -102,6 +116,12 @@ An error could occur in DataMiner Cube when it received a notification from SLAn
 
 Also, from now on, DataMiner Cube will no longer group incident alarms into summary alarms while in alarm storm mode.
 
+#### EPM: Number of alarms would incorrectly not be indicated in the navigation pane of an EPM card [ID_35604]
+
+<!-- MR 10.3.0 [CU1] - FR 10.3.4 -->
+
+When you open the card of an element, a view or a service, in the navigation pane on the left, the number of alarms is indicated next to the name of the ALARMS section. Up to now, this was not the case when you opened the card of an EPM object. From now on, the number of alarms that affect the EPM object in question will be indicated next to the name of the ALARMS section.
+
 #### Resources app: Problem when moving a resource from one resource pool to another [ID_35612]
 
 <!-- MR 10.3.0 [CU1] - FR 10.3.4 -->
@@ -126,3 +146,15 @@ When a parameter with a relative alarm threshold had its baseline set to a negat
 <!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
 
 When you applied a filter to an alarm tab, no alarms would be shown when you had used a session variable in the filter.
+
+#### DataMiner Cube: Exception values with decimals would be displayed incorrectly in trend graph [ID_35714]
+
+<!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
+
+Because DataMiner Cube would use the incorrect culture when parsing exception values, in some cases, exception values with decimals would be displayed incorrectly in trend graphs.
+
+#### DataMiner Cube - Asset Manager app: Enum fields would not immediately be updated after clicking 'Apply' [ID_35747]
+
+<!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
+
+When, in the *Asset Manager* app, you tried to update an enum field, the value would not immediately be updated in the UI after clicking *Apply*.

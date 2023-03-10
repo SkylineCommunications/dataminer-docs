@@ -19,6 +19,9 @@ There are **two options**: you can create a so-called **self-signed certificate*
 
 To generate the certificates, you will need two tools: *openssl* and the *Java keytool*. Both of these can run on Linux and Windows.
 
+> [!NOTE]
+> For Windows machines, we recommend using the *Java keytool* included with Cassandra (*Cassandra/java/bin/keytool.exe*). Using the *keytool* from a different Java version will result in Cassandra failing to start.
+
 1. Create a certificate configuration file. This will make it easier to generate a root CA certificate later.
 
    In the example below, a certificate configuration file called *rootCa_cert.conf* is created.

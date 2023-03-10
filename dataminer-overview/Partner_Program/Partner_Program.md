@@ -8,7 +8,7 @@ The world around us is changing fast. The **shift towards transformational techn
 
 Today, companies want modular technology solutions that can be leveraged and used easily and efficiently. They need to build and design ecosystems that enable them to run their operation but simultaneously **evolve continuously** as well. In other words, they need to establish an agile data-driven operation that empowers their people, enables them to create digital relationships with third parties, allows them to optimize continuously, and allows them to leverage the latest and greatest that technology has to offer to innovate their services.
 
-This all is a massive undertaking as it touches on every imaginable aspect of an organization. And there's no underestimating [the role of DataMiner](#the-role-of-dataminer) and [the role of our partners](#your-role-as-our-partner) for companies to be successfull in this new data-driven world.
+This all is a massive undertaking as it touches on every imaginable aspect of an organization. And there's no underestimating [the role of DataMiner](#the-role-of-dataminer) and [the role of our partners](#your-role-as-our-partner) for companies to be successful in this new data-driven world.
 
 > [!TIP]
 > For more information on the DataMiner Partner Program, see [Grow faster as a DataMiner Partner](https://skyline.be/partner).

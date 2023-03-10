@@ -10,13 +10,56 @@ uid: Cube_Feature_Release_10.3.3
 > [!TIP]
 > For release notes for this release that are not related to DataMiner Cube, see [General Feature Release 10.3.3](xref:General_Feature_Release_10.3.3).
 
+## Highlights
+
+#### System Center - Database: Elasticsearch/OpenSearch configuration for Cassandra Cluster setup in Cube [ID_34651]
+
+<!-- MR 10.3.0 - FR 10.3.3 -->
+<!-- See General RNs for other change from this RN -->
+
+If a DataMiner System is configured to use a Cassandra Cluster setup (i.e. a setup where one Cassandra cluster is used for the entire DMS), in the *Database* section of System Center, you can now also configure the settings for the Elasticsearch or OpenSearch database:
+
+- Database: *Elasticsearch* or *Elasticsearch/OpenSearch*.
+- Database prefix: The name all indices will be prefixed with.
+- DB server: The IP addresses or hostnames of the Elasticsearch nodes, or the URL of the Amazon OpenSearch Service endpoint.
+- User/Password: The credentials with which the DMA can log on to the database (if applicable).
+
+> [!TIP]
+> See also: [OpenSearch & Amazon OpenSearch Service [ID_34651]](xref:General_Feature_Release_10.3.3#opensearch--amazon-opensearch-service-id_34651)
+
+#### Automation: New user/group setting to specify whether users have to confirm program executions launched from interactive Automation scripts [ID_35418]
+
+<!-- MR 10.4.0 - FR 10.3.3 -->
+
+A new user/group setting named *Do not confirm program executions from scripts*, found in the *User > Cube* tab of the *Settings* window, now allows you to specify whether users will have to explicitly confirm each program execution that is launched from an interactive Automation script.
+
+By default, this option will be disabled, meaning that users will have to give their consent each time an interactive Automation script wants to launch a program. The confirmation box will also allow users to change the setting by selecting the *Don't show this confirmation again. Always launch program executions.* checkbox.
+
+Each time a program is launched, a start entry and an end entry will be added to the Cube logging as well as to the *SLClient.txt* log file on the DataMiner Agent.
+
+- The start entry will contain the following data:
+
+  - the name of the Automation script
+  - the ID of the Automation script
+  - the user's login data (full name, client machine name, client app name and last login date)
+  - the program that will be launched
+  - the arguments that will be passed to the program (if any)
+
+- The end entry will contain the following data:
+
+  - the user's login data (full name, client machine name, client app name and last login date)
+  - the process ID of the program
+  - the time at which the process ended
+  - the name of the program that ended
+  - the arguments that were passed to the program (if any)
+
 ## Features
 
 #### System Center - Database: Address specified in the 'DB server' field of a database of type 'Cassandra' or 'CassandraCluster' can now include a custom port [ID_34590]
 
 <!-- MR 10.3.0 - FR 10.3.3 -->
 
-When, in the *Database* section of *System Center*, you are configuring a database of type "Cassandra" or "CassandraCluster", you can now specify an address with a custom port in the *DB server* field.
+When, in the *Database* section of System Center, you are configuring a database of type "Cassandra" or "CassandraCluster", you can now specify an address with a custom port in the *DB server* field.
 
 If you specify a hostname or IP address without a port, DataMiner will fall back to the default Cassandra port 9042.
 
@@ -53,32 +96,6 @@ The data copied to the Windows clipboard is split into a header section and a da
 <!-- MR 10.4.0 - FR 10.3.3 -->
 
 In the *Logging* section of *System Center*, you can now also consult the *SLSmartBaselineManager.txt* log file.
-
-#### Automation: New user/group setting to specify whether users have to confirm program executions launched from interactive Automation scripts [ID_35418]
-
-<!-- MR 10.4.0 - FR 10.3.3 -->
-
-A new user/group setting named *Do not confirm program executions from scripts*, found in the *User > Cube* tab of the *Settings* window, now allows you to specify whether users will have to explicitly confirm each program execution that is launched from an interactive Automation script.
-
-By default, this option will be disabled, meaning that users will have to give their consent each time an interactive Automation script wants to launch a program. The confirmation box will also allow users to change the setting by selecting the *Don't show this confirmation again. Always launch program executions.* checkbox.
-
-Each time a program is launched, a start entry and an end entry will be added to the Cube logging as well as to the *SLClient.txt* log file on the DataMiner Agent.
-
-- The start entry will contain the following data:
-
-  - the name of the Automation script
-  - the ID of the Automation script
-  - the user's login data (full name, client machine name, client app name and last login date)
-  - the program that will be launched
-  - the arguments that will be passed to the program (if any)
-
-- The end entry will contain the following data:
-
-  - the user's login data (full name, client machine name, client app name and last login date)
-  - the process ID of the program
-  - the time at which the process ended
-  - the name of the program that ended
-  - the arguments that were passed to the program (if any)
 
 ## Changes
 
@@ -140,9 +157,6 @@ From now on, a slightly larger number of missing values will be allowed will you
 In the top-right corner of a trend graph, a light bulb icon appears when DataMiner finds parameters that are related to the parameters shown in the trend graph. Clicking this light bulb icon allows you to add one or more of those related parameters to the trend graph you are viewing.
 
 Up to now, when you clicked one of those related parameters in order to add it to the trend graph, a check mark would appear in front of it. From now on, check marks will no longer appear in front of related parameters after selecting them.
-
-> [!NOTE]
-> Currently, the parameter relationship feature is still in preview.
 
 #### DataMiner Cube - Alarm Console: No longer possible to enable the 'Automatic incident tracking' option for a history tab [ID_35556]
 
@@ -298,9 +312,6 @@ From now on, the collector pages will be loaded even when the EPM environment do
 
 In some cases, the light bulb icon in the top-right corner of a trend graph would incorrectly overlap the full screen or zoom range buttons.
 
-> [!NOTE]
-> Currently, the parameter relationship feature is still in preview.
-
 #### DataMiner Cube - Service templates: Open service card would not be updated when the service template was re-applied [ID_35537]
 
 <!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
@@ -319,14 +330,8 @@ When you enabled the *Automatic incident tracking* option of an active alarms ta
 
 When you open a trend graph, a light bulb icon will appear in the top-right corner when DataMiner finds parameters that are related to the parameters shown in the graph. When you click that icon, you get a list of the ten most important parameters, which you can then add to the graph. However, in some cases, the display keys of those listed parameters would not be correct.
 
-> [!NOTE]
-> Currently, the parameter relationship feature is still in preview.
-
 #### Trending - Parameter relationships: The same parameter could be added multiple times to the graph when you clicked it repeatedly [ID_35561]
 
 <!-- MR 10.3.0 - FR 10.3.3 -->
 
 When you open a trend graph, a light bulb icon will appear in the top-right corner when DataMiner finds parameters that are related to the parameters shown in the graph. When you click that icon, you get a list of the ten most important parameters, which you can then add to the graph. However, in some cases, when you clicked one of those suggested parameter multiple times, it would incorrectly be added multiple times to the graph.
-
-> [!NOTE]
-> Currently, the parameter relationship feature is still in preview.

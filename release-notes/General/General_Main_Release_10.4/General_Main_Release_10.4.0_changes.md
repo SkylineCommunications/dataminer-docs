@@ -11,6 +11,31 @@ uid: General_Main_Release_10.4.0_changes
 
 ### Enhancements
 
+#### SLXML no longer used to read out element data [ID_33515] [ID_33616] [ID_33625] [ID_33659]
+
+<!-- MR 10.4.0 - FR 10.3.4 -->
+
+From now on, SLXML will no longer be used to read out the following files containing element data:
+
+- *Element.xml* files
+- *ElementData.xml* files
+- *EPMConfig.xml* files
+- *Description.xml* files
+- *Ports.xml* files
+
+> [!IMPORTANT]
+> This is a breaking change. Make sure that none of the protocols in your system is using the following deprecated Notify types:
+>
+> - DMS_GET_INFO
+> - DMS_GET_INFO_ALL
+> - NT_ADD_DESCRIPTION_FILE
+> - NT_GET_ITEM_DATA
+> - NT_GET_PARAMETER_BY_DATA
+> - NT_GET_XML_COOKIE
+> - NT_RELOAD_ELEMENT
+> - NT_SET_ITEM_DATA
+> - NT_SET_PARAMETER_BY_DATA
+
 #### More detailed logging when the certificate chain is invalid while connecting to Cassandra [ID_34822]
 
 <!-- MR 10.4.0 - FR 10.3.2 -->
@@ -93,9 +118,6 @@ The zoom range of a map can now be set by means of a slider.
 
 Because of a number of enhancements, overall performance has increased when fetching relation information for the automatic incident tracking feature.
 
-> [!NOTE]
-> Currently, the parameter relationship feature is still in preview.
-
 #### Security enhancements [ID_35434]
 
 <!-- MR 10.4.0 - FR 10.3.4 -->
@@ -120,6 +142,41 @@ Because of a number of enhancements, overall performance has increased when dete
 
 GQI now supports queries from [Data Aggregator](xref:Data_Aggregator_DxM) that use ad hoc data sources.
 
+#### SLAnalytics will now send regular notifications instead of client notifications [ID_35591]
+
+<!-- MR 10.4.0 - FR 10.3.4 -->
+
+Up to now, when SLAnalytics sent a notification, it would generate an event of type *client notification* with parameter ID 64574. From now on, it will instead generate an event of type *notification* with parameter ID 64570.
+
+#### GQI: Raw datetime values will now be converted to UTC [ID_35640]
+
+<!-- MR 10.4.0 - FR 10.3.4 -->
+
+Up to now, after each step in a GQI query, raw datetime values were always converted to the time zone that was specified in the query options. From now on, raw datetime values will be converted to UTC instead. The time zone specified in the query options will now only be used when converting a raw datetime value to a display value.
+
+> [!IMPORTANT]
+> **BREAKING CHANGE**: When, in an ad hoc data source or a query operation, a datetime value is not in UTC format, an exception will now be thrown.
+
+#### SLAnalytics - Proactive cap detection: Enhanced accuracy [ID_35695]
+
+<!-- MR 10.4.0 - FR 10.3.4 -->
+
+Proactive cap detection predicts future issues based on trend data in the Cassandra database. Because of a number of enhancements, overall prediction accuracy has increased.
+
+#### Service & Resource Management: Bookings of type 'Custom Process Automation' no longer consume license credits [ID_35742]
+
+<!-- MR 10.4.0 - FR 10.3.4 -->
+
+From now on, ReservationInstances of type *Custom Process Automation* will no longer consume SRM credits. This means that, from now on, you can schedule an unlimited number of concurrent bookings of type *Custom Process Automation*.
+
+#### SLAnalytics: A message will be added to the SLAnalytics.txt log file when no Cassandra database is present [ID_35748]
+
+<!-- MR 10.4.0 - FR 10.3.5 -->
+
+Up to now, SLAnalytics would stop working without giving any notice whatsoever when it was started on a system without a Cassandra database.
+
+From now on, when no Cassandra database is present, SLAnalytics will be stopped gracefully and a message will be added to the *SLAnalytics.txt* log file.
+
 ### Fixes
 
 #### Cassandra Cluster: Every DMA would incorrectly try to delete any possible old Cassandra compaction and repair tasks found in the entire DMS [ID_31923]
@@ -143,3 +200,24 @@ In some cases, Resource Manager could throw a NullReferenceException when *Resou
 Using Okta as identity provider, it would incorrectly no longer be possible to read out signed assertions. Also, when the group claim setting is enabled in the *DataMiner.xml* file, the user will now be added to the correct groups.
 
 Up to now, in case of a claim mismatch, an exception would be thrown. From now on, an entry containing a clear message will be added to the *SLNet.txt* log file instead.
+
+#### Cassandra Cluster Migrator tool would incorrectly not migrate the state-changes table from a single-node Cassandra to a Cassandra Cluster [ID_35699]
+
+<!-- MR 10.4.0 - FR 10.3.4 -->
+
+When you used the Cassandra Cluster Migrator tool to migrate a single-node Cassandra database to a Cassandra Cluster setup, up to now, the `state-changes` table would incorrectly not be migrated.
+
+#### Automation: DataMiner would incorrectly remove the xmlns attribute when importing or saving an Automation script [ID_35708]
+
+<!-- MR 10.4.0 - FR 10.3.4 -->
+
+When DataMiner imported or saved an Automation script, it would incorrectly remove the `xmlns` attribute specified in the `<DMSScript>` element, even when that attribute had been added by DataMiner Integration Studio. From now on, when DataMiner imports or saves an Automation script, it will no longer remove this attribute. Moreover, if no such attribute is specified, it will automatically add `xmlns="http://www.skyline.be/automation"`.
+
+Example:
+
+```xml
+<DMSScript options="272" xmlns="http://www.skyline.be/automation">
+   <Name>...</Name>
+   ...
+</DMSScript>
+```

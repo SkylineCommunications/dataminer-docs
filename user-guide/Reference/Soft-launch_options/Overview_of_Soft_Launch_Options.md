@@ -257,6 +257,12 @@ Enables the button panel component in the Dashboards app.
 
 - **Minimum version**: 10.0.3
 
+### ReportsAndDashboardsDynamicVisuals
+
+Enables the grid component in the Dashboards app.
+
+- **Minimum version**: 10.2.12
+
 ### ReportsAndDashboardsExport
 
 Enables the export to PDF button within the Dashboards app itself. Creating PDFs of dashboards is possible outside the app (e.g. via DataMiner Scheduler) without this soft-launch option.

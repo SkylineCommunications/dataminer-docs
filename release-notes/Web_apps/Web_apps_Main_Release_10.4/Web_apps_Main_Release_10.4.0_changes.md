@@ -136,6 +136,28 @@ The GQI data sources *Get elements* and *Get services* will now also return alar
 
 In the GQI data sources *Get services* and *Get views*, the *State* column has now been renamed to *Alarm state*.
 
+#### Dashboards app: Feeds listing parameters of EPM objects will now also list the parameters of the enhanced elements linked to those EPM objects [ID_35562]
+
+<!-- MR 10.4.0 - FR 10.3.4 -->
+
+When an EPM feed is used to feed EPM identifiers to a parameter feed, it will now also list the parameters of the enhanced elements that are linked to the EPM objects.
+
+#### Monitoring app: Trending page of a parameter no longer has a sidebar [ID_35705]
+
+<!-- MR 10.4.0 - FR 10.3.4 -->
+
+In the *Monitoring* app, the *Trending* page of a parameter no longer has a sidebar.
+
+#### Monitoring app - Histogram: Sidebar enhancements [ID_35797]
+
+<!-- MR 10.4.0 - FR 10.3.5 -->
+
+In the *Monitoring* app, a number of enhancements have been made to the sidebar of the *Histogram* page of a parameter:
+
+- The icons that allow you to switch between trend graph and histogram have been updated.
+- The *Time span* selection box has been removed.
+- The width of the sidebar has been reduced.
+
 ### Fixes
 
 #### GQI: Problem when retrieving DCF interfaces [ID_34820]
@@ -203,3 +225,27 @@ A number of issues regarding the Visual Overview component have been fixed.
 <!-- MR 10.4.0 - FR 10.3.4 -->
 
 When you tried to select a visualization for a newly added component that did not yet have one, the visualization picker would incorrectly resize the first time you hovered over it.
+
+#### Web apps: Color picker would not be positioned correctly [ID_35649]
+
+<!-- MR 10.4.0 - FR 10.3.4 -->
+
+The color picker would not be positioned correctly.
+
+#### Low-code apps: Problem when opening a low-code app on a mobile device or when resizing the screen to a mobile size [ID_35683]
+
+<!-- MR 10.4.0 - FR 10.3.4 -->
+
+When you opened a low-code app on a mobile device or when you resized the screen to a mobile size, a console error would be thrown.
+
+#### GQI: "Loading" indicator of a table would not disappear when that table was fed data from another table  [ID_35698]
+
+<!-- MR 10.4.0 - FR 10.3.4 -->
+
+When data from one table was fed to another table, in some cases, the "loading" indicator of the table to which data was fed would incorrectly not disappear.
+
+#### Dashboards app & Low-code apps: Problem when feeding data from a GQI component to a query used in the same component [ID_35806]
+
+<!-- MR 10.4.0 - FR 10.3.5 -->
+
+An error could occur when feeding data from a GQI component to a query that was used in the same component.
