@@ -158,6 +158,14 @@ In the *Monitoring* app, a number of enhancements have been made to the sidebar 
 - The *Time span* selection box has been removed.
 - The width of the sidebar has been reduced.
 
+#### Web Services API: Performance enhancements [ID_35805]
+
+<!-- MR 10.4.0 - FR 10.3.5 -->
+
+A web API event queue will now automatically be removed after 5 minutes if a client did not request the events in that queue during those 5 minutes. As a result, overall web API memory consumption will decrease considerably.
+
+Also, it is now possible for one web API connection to have multiple event queues. As a result, clients will be able to have multiple open websocket connections using the same connection ID.
+
 ### Fixes
 
 #### GQI: Problem when retrieving DCF interfaces [ID_34820]
