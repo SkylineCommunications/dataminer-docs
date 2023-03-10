@@ -17,6 +17,7 @@ The procedures below can be applied to troubleshoot issues. However, be very car
 - [Configuring the frequency of smart baseline calculations](xref:SLNetClientTest_configuring_frequency_smart_baseline)
 - [Configuring trend caching](xref:SLNetClientTest_configuring_trend_caching)
 - [Creating an enhanced view](xref:SLNetClientTest_creating_enhanced_view)
+- [Disabling adding of alarm property value to correlated alarms](xref:SLNetClientTest_disabling_adding_property_value_to_correlated_alarms)
 - [Disabling automatic NATS configuration](xref:SLNetClientTest_disabling_automatic_nats_config)
 - [Disabling replication buffering](xref:SLNetClientTest_disabling_replication_buffering)
 - [Editing the connection string between two DataMiner Agents](xref:SLNetClientTest_editing_connection_string)

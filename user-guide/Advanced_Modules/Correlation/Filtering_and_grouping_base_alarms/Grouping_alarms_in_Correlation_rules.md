@@ -28,6 +28,11 @@ In the Correlation module, the *Alarm Grouping* section of the details pane allo
 
    - by property value
 
+     > [!NOTE]
+     >
+     > - From DataMiner 10.3.4/10.4.0 onwards, when a Correlation rule is configured to use alarm grouping via an alarm property, the value of the alarm property by which the alarms are grouped will by default be added to the correlated alarm.
+     > - If you do not want the alarm property value to be added to the correlation alarm, see [Disabling adding of alarm property value to correlated alarms](xref:SLNetClientTest_disabling_adding_property_value_to_correlated_alarms).
+
    - by service
 
    - by table index
