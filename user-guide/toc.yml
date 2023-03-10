@@ -2289,10 +2289,29 @@
               topicUid: Linking_a_ticket_to_a_DataMiner_item_using_the_Ticketing_Gateway_API
             - name: Retrieving tickets using the Ticketing Gateway API
               topicUid: Retrieving_tickets_using_the_Ticketing_Gateway_API
-            - name: About DataMiner elements using the Ticketing Gateway API
+            - name: About DataMiner elements using the Ticketing Gateway APIDom
               topicUid: About_DataMiner_elements_using_the_Ticketing_Gateway_API
             - name: Overview of the TicketingGatewayHelper class
               topicUid: Overview_of_the_TicketingGatewayHelper_class
+    - name: User Defined APIs (preview)
+      topicUid: UD_APIs
+      items:
+        - name: Defining an API
+          items:
+            - name: "Defining an API"
+              topicUid: "UD_APIs_Define_API"
+            - name: "Using existing scripts"
+              topicUid: "UD_APIs_Using_existing_scripts"
+        - name: "Triggering an API"
+          topicUid: "UD_APIs_Triggering_an_API"
+        - name: "UserDefinableApiEndpoint"
+          topicUid: "UD_APIs_UserDefinableApiEndpoint"
+        - name: "Objects"
+          items:
+            - name: "ApiDefinition"
+              topicUid: "UD_APIs_Objects_ApiDefinition"
+            - name: "ApiToken"
+              topicUid: "UD_APIs_Objects_ApiToken"
 - name: DataMiner Standard Apps, Frameworks & Solutions
   topicUid: Part5StandardApps
   items:

@@ -59,3 +59,7 @@ The ModelHost module is not included in the Cloud Pack and must be deployed sepa
 1. In the pane on the left, under *DataMiner Systems*, select your DataMiner System and select the *Nodes* page.
 
 1. Next to *ModelHost*, select to deploy this DxM.
+
+### UserDefinableApiEndpoint
+
+The UserDefinableApiEndpoint module is responsible for handling API triggers for User Defined APIs. See [User Defined APIs](xref:UD_APIs).
