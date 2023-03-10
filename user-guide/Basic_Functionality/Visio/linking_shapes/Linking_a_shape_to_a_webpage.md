@@ -80,6 +80,7 @@ From DataMiner 10.1.11/10.2.0 onwards, you can use Microsoft Edge (WebView2) to 
 >
 > - The WebView2 Runtime is automatically installed with Office 365 Apps and/or Windows 11. It is not included in DataMiner upgrade packages.
 > - This browser engine has the advantage that web content is rendered directly to the graphics card and proprietary codecs such as H.264 and AAC are supported. In addition, the browser engine automatically receives updates via Windows Update, regardless of the DataMiner or Cube version.
+> - From DataMiner 10.3.4/10.4.0 onwards, when using Microsoft Edge (WebView2), embedded web apps can interact with Cube (e.g. open an element card).
 
 ### UseLoginCredentials
 
