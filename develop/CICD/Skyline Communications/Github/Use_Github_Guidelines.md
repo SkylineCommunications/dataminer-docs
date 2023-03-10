@@ -9,8 +9,8 @@ uid: Using_GitHub_for_CICD
 
 You can use GitHub to:
 
-- Share generic code/scripts or useful tools/libraries with the DataMiner community
-- Collaborate on code with external users
+- Share generic code/scripts or useful tools/libraries with the DataMiner community.
+- Collaborate on code with external users.
 
 > [!NOTE]
 > At present, **only Automation scripts** have workflows available for packaging and deployment.
@@ -67,7 +67,7 @@ The repository name should look like this (using "-" as separator): **{customerA
 
 ## Adding a README file
 
-It is important to add a *README.md* file to to the root folder. The contents of this file should provide users with the necessary information to understand the purpose of the code and learn how to use it.
+It is important to add a *README.md* file to the root folder. The contents of this file should provide users with the necessary information to understand the purpose of the code and learn how to use it.
 
 ## Adding topics to a repository
 

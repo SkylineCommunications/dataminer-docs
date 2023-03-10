@@ -10,7 +10,7 @@ It was migrated from a workflow using an [internal Jenkins pipeline](xref:Pipeli
 
 At present, this workflow will not work on solutions containing SDK-style projects. It instead expects the legacy project style, which DIS provides automatically.
 
-This workflow will act as a quality gate and code coverage collection, only creating and uploading an artifact of your Automation script solution to the catalog if it passes the Skyline Quality Gate job.
+This workflow will act as a quality gate and code coverage collection, only creating and uploading an artifact of your Automation script solution to the catalog if it passes the Skyline quality gate job.
 
 The following actions will be performed:
 
@@ -84,7 +84,7 @@ Searches for any project ending with Tests or UnitTests and will then attempt to
 
 Performs static code analysis using [SonarCloud](https://www.sonarsource.com/products/sonarcloud/). This will check for common errors and bugs found within C# code, track code coverage of your tests, and ensure clean code guidelines.
 
-### Quality Gate
+### Quality gate
 
 Checks the results of all previous steps and combines them into a single result that will either block the workflow from continuing or allow it to continue to the next job.
 

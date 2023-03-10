@@ -11,40 +11,36 @@ The NuGet solution master workflow is designed to run on repositories containing
 
 This workflow is a migration of the original [internal Jenkins pipelines](xref:Pipeline_stages_for_custom_solutions) used for automation and quality assurance within Skyline Communications.
 
-To use this workflow, your Visual Studio solution must consist of SDK-style projects. If you are migrating an existing library, you will need to convert it into an SDK Style. This can for example be done using the following dotnet tool: [Project2015To2017.Migrate2019.Tool](https://www.nuget.org/packages/Project2015To2017.Migrate2019.Tool). Alternatively, you can create a new solution with the template and then move all content from the old solution.
+To use this workflow, your Visual Studio solution must consist of SDK-style projects. If you are migrating an existing library, you will need to convert it to SDK style. You can for example do so using the following dotnet tool: [Project2015To2017.Migrate2019.Tool](https://www.nuget.org/packages/Project2015To2017.Migrate2019.Tool). Alternatively, you can create a new solution with the template and then move all content from the old solution.
 
-The goal of this workflow is to automatically create and upload reusable .NET libraries if they pass certain quality standards. The workflow acts as a quality gate and code coverage collection before attempting to create and publish a NuGet package to nuget.org (publishing only occurs during release cycles).
+The goal of this workflow is to automatically create and upload reusable .NET libraries if they pass certain quality standards. The workflow acts as a quality gate and code coverage collection before attempting to create and publish a NuGet package to nuget.org. Publishing only occurs during release cycles.
 
-Skyline Quality Gate:
+- Skyline quality gate:
 
-- [Validate NuGet Metadata](#validate-nuget-metadata)
-- [Building](#building)
-- [Unit Tests](#unit-tests)
-- [Analyze](#analyze)
-- [Quality Gate](#quality-gate)
+  - [Validate NuGet metadata](#validate-nuget-metadata)
+  - [Building](#building)
+  - [Unit tests](#unit-tests)
+  - [Analyze](#analyze)
+  - [Quality gate](#quality-gate)
 
-If the library passes these checks, the job will archive and provide the created NuGet package as an artifact and attempt to sign it in the next job.
+  If the library passes these checks, the job will archive and provide the created NuGet package as an artifact, which the next job will attempt to sign.
 
-Sign:
-This job will use a provided .pfx certification that was BASE64 encoded as a GitHub secret to sign the created NuGet package. The job consists of the following steps:
+- Sign:
 
-- [Download Unsigned NuGet](#download-unsigned-nuget)
-- [Decrypt Signature File](#decrypt-signature-file)
-- [Sign NuGet Package](#sign-nuget-package)
+  This job will use a provided .pfx certification that was BASE64-encoded as a GitHub secret to sign the created NuGet package. The job consists of the following steps:
 
-If signing is successful, the next job will attempt to push the package to [nuget.org](https://nuget.org).
+  - [Download unsigned NuGet](#download-unsigned-nuget)
+  - [Decrypt signature File](#decrypt-signature-file)
+  - [Sign NuGet package](#sign-nuget-package)
 
-Push:
+  If signing is successful, the next job will attempt to push the package to [nuget.org](https://nuget.org).
 
-- [Push to NuGet.org](#push-to-nugetorg)
+- Push:
+
+  - [Push to nuget.org](#push-to-nugetorg)
 
 > [!IMPORTANT]
-> This workflow can run for both development or release cycles.
-> A development cycle is any run that triggered from a change on a branch.
-> A release cycle is any run that triggered from adding a tag with format A.B.C or A.B.C-text
-> During the development cycle, the version of an artifact automatically includes the run number. The .nupkg is available as artifact on GitHub.
-> During the release cycle, the version of the artifact becomes the tag provided and the .nupkg is published on nuget.org.
-> A release cycle can also release a pre-release version of a NuGet package. To do so, simply tag with format A.B.C-text. (e.g. 1.0.1-AlphaOne).
+> This workflow can run for both development or release cycles. A development cycle is any run that triggered from a change on a branch. A release cycle is any run that triggered from adding a tag with format A.B.C or A.B.C-text. During the development cycle, the version of an artifact automatically includes the run number. The .nupkg is available as artifact on GitHub. During the release cycle, the version of the artifact becomes the tag provided and the .nupkg is published on nuget.org. A release cycle can also release a pre-release version of a NuGet package. To do so, simply tag with format A.B.C-text. (e.g. 1.0.1-AlphaOne).
 
 ## How to use
 
@@ -87,56 +83,58 @@ jobs:
 
 ### Validate NuGet metadata
 
-Will validate if the provided solution has all technical requirements for an official Skyline Communications NuGet package.
-All requirements can be found in the GitHub [Validation Requirements](xref:github_validation_requirements) document.
-A lot of requirements are preconfigured when using the [Skyline.DataMiner.VisualStudioTemplates](https://www.nuget.org/packages/Skyline.DataMiner.VisualStudioTemplates#readme-body-tab).
+Validates if the provided solution has all technical requirements for an official Skyline Communications NuGet package.
+
+You can find all requirements under [GitHub validation requirements](xref:github_validation_requirements).
+
+A lot of requirements are preconfigured when the [Skyline.DataMiner.VisualStudioTemplates](https://www.nuget.org/packages/Skyline.DataMiner.VisualStudioTemplates#readme-body-tab) are used.
 
 ### Building
 
-Attempts to compile the Visual Studio solution after restoring all NuGet packages.
-This will check for compilation errors.
+Attempts to compile the Visual Studio solution after restoring all NuGet packages. This will check for compilation errors.
 
 ### Unit Tests
 
-Searches for any project ending with Tests or UnitTests and will then attempt to run all unit tests found.
-This will handle code regression and check that all content behaves as expected by the developer.
+Searches for any project ending with Tests or UnitTests and will then attempt to run all unit tests found. This will handle code regression and check that all content behaves as expected by the developer.
 
 ### Analyze
 
-Performs static code analysis using [SonarCloud](https://www.sonarsource.com/products/sonarcloud/).
-This will check for common errors and bugs found within C# code, track code coverage of your tests and ensure clean code guidelines.
+Performs static code analysis using [SonarCloud](https://www.sonarsource.com/products/sonarcloud/). This will check for common errors and bugs found within C# code, track code coverage of your tests, and ensure clean code guidelines.
 
 ### Quality gate
 
-Will check the results of all previous steps and combine them into a single result that will either block the workflow from continuing or allow it to continue to the next job.
+Checks the results of all previous steps and combines them into a single result that will either block the workflow from continuing or allow it to continue to the next job.
 
 ## Sign
 
 ### Download unsigned NuGet
 
-Retrieves the artifact .nupkg created during the Skyline Quality Gate job.
+Retrieves the artifact .nupkg created during the Skyline quality gate job.
 
 ### Decrypt signature file
 
-Will download a .pfx file stored as a BASE64 encrypted string, holding the certificate from the Actions Secrets in GitHub and decrypt this for use in signing.
-In order to make such a BASE64 string of a .pfx you can do the following steps on a Windows machine:
+Downloads a .pfx file stored as a BASE64-encrypted string, containing the certificate from the action secrets in GitHub, and decrypt this for use in signing.
 
-1. Open Powershell or CMD.
-1. Use the following code:
+In order to make such a BASE64 string of a .pfx on a Windows machine:
+
+1. Run the following command in a command prompt or PowerShell prompt window:
 
    `certutil -encode infile outfile`
 
-1. Open the outfile with a TXT editor and copy the string content.
-1. Paste that content into an Action Secret on GitHub called PFX.
-1. Add a second Action Secret on GitHub called PFXPASSWORD holding the password of the PFX.
+1. Open the "outfile" with a TXT editor and copy the string content.
+
+1. Paste that content into an action secret on GitHub called *PFX*.
+
+1. Add a second action secret on GitHub called *PFXPASSWORD*, containing the password of the PFX.
 
 ### Sign NuGet package
 
-Will use the previously decrypted signature file and sign your nuget packages.
+Uses the previously decrypted signature file and signs your NuGet packages.
 
 ## Push
 
 ### Push to nuget.org
 
-If this is a release cycle, then the nuget packages are published to nuget.org
-These can be both stable releases (A.B.C) or pre-releases.(A.B.C-text)
+If this is a release cycle, the NuGet packages are published to nuget.org.
+
+These can be both stable releases (A.B.C) or pre-releases.(A.B.C-text).
