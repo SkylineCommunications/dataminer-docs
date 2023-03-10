@@ -62,10 +62,8 @@ When you duplicated a component, the size of the duplicate would incorrectly be 
 
 An error could occur when feeding data from a GQI component to a query that was used in the same component.
 
-#### Dashboards app & Low-code apps: Parts of a component that had the focus would not get blurred when another component was selected [ID_35851]
+#### Dashboards app & Low-code apps: Text boxes in the Layout tab would not update when you selected another component [ID_35851]
 
 <!-- MR 10.3.0 [CU2] - FR 10.3.5 -->
 
-When a part of a component (e.g. its title) had the focus, and you selected another component, the part of the first component that had the focus would incorrect keep the focus.
-
-From now on, when a part of a component (e.g. its title) has the focus, and you selected another component, the part of the first component that had the focus will get blurred.
+When, in the *Layout* tab, a text box (e.g. the box containing the title of the selected component) had the focus, and you selected another component, the text box in the *Layout* tab would incorrectly still contain the value of the previously selected component.
