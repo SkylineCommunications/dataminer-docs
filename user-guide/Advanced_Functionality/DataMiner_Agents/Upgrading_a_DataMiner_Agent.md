@@ -25,8 +25,6 @@ Keep in mind that it is strongly recommended that you **use the same version of 
 > [!IMPORTANT]
 > If you are not upgrading to the DataMiner version that immediately follows your current version, follow the procedure mentioned in [Upgrade paths](xref:Upgrade_Paths).
 
-For **cumulative updates of a main release**, if the update applies to the same main release, you can use the smaller cumulative update package. Otherwise, for example, to upgrade from 10.2 CU5 to 10.3 CU2, first use the full upgrade package and then use the CU2 cumulative update package.
-
 > [!NOTE]
 >
 > - You can [configure the default options](xref:Configuring_the_default_upgrade_options) for upgrades in System Center.
