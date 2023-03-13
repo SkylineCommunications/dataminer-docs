@@ -34,7 +34,7 @@ In the free version of GitHub, you will not see starter workflows in the UI dire
 
 1. Select the workflow template that matches the content of your repository and look at the source code.
 
-1. Copy that and navigate to your own Repository Action tab.
+1. Copy that and navigate to the *Actions* tab of your own repository.
 
 1. Select *New Workflow* and select to set up a workflow yourself.
 

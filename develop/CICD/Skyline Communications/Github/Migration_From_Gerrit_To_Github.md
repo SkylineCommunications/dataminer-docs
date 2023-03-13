@@ -52,6 +52,6 @@ Follow these steps to migrate your repository from Gerrit to GitHub:
    > git remote rename origin2 origin
    > ```
 
-1. Consider the [validation requirements](xref:github_validation_requirements) and add a README.md file and remove the JenkinsFile when you start working on your branch.
+1. Make sure you meet the [validation requirements](xref:github_validation_requirements), add a README.md file, and remove the Jenkinsfile when you start working on your branch.
 
 1. Add a starter workflow to your GitHub repository. See [GitHub starter workflows](xref:github_starter_workflows).

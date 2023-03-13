@@ -7,7 +7,7 @@ uid: github_reusable_workflows_nuget_solution_master_workflow
 > [!IMPORTANT]
 > This workflow is intended for internal use at Skyline Communications as it uses Skyline-specific validation. However, you can use it as a baseline and adjust it for use elsewhere by replacing the validation step with your own.
 
-The NuGet solution master workflow is designed to run on repositories containing the [DataMiner NuGet Package Solution](xref:Automation_scripts_as_a_Visual_Studio_solution) provided by the DIS extension in Visual Studio or from [Skyline.DataMiner.VisualStudioTemplates](https://www.nuget.org/packages/Skyline.DataMiner.VisualStudioTemplates#readme-body-tab).
+The NuGet solution master workflow is designed to run on repositories containing the DataMiner NuGet Package Solution provided by the DIS extension in Visual Studio or from [Skyline.DataMiner.VisualStudioTemplates](https://www.nuget.org/packages/Skyline.DataMiner.VisualStudioTemplates#readme-body-tab).
 
 This workflow is a migration of the original [internal Jenkins pipelines](xref:Pipeline_stages_for_custom_solutions) used for automation and quality assurance within Skyline Communications.
 
@@ -23,7 +23,7 @@ The goal of this workflow is to automatically create and upload reusable .NET li
   - [Analyze](#analyze)
   - [Quality gate](#quality-gate)
 
-  If the library passes these checks, the job will archive and provide the created NuGet package as an artifact, which the next job will attempt to sign.
+  If the library passes these checks, the job will archive the created NuGet package and provide it as an artifact. The next job will attempt to sign the package.
 
 - Sign:
 
