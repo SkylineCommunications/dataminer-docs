@@ -5318,6 +5318,8 @@
           topicUid: Consuming_NuGet
         - name: Producing NuGet packages
           topicUid: Producing_NuGet
+        - name: Middleware packages
+          topicUid: Nuget_communication_Middleware
         - name: Assembly binding
           topicUid: Assembly_Binding
           items:
@@ -5506,6 +5508,11 @@
           topicUid: DMS_protocol
         - name: Viewer
           topicUid: Viewer
+    - name: OpenConfig
+      topicUid: DSI_OpenConfig
+      items:
+        - name: Introduction
+          topicUid: DSI_OpenConfig_Introduction
 - name: Third-party integrations
   topicUID: ThirdPartyIntegrations
   items:
