@@ -4,7 +4,7 @@ uid: Overview_About_DataMiner
 
 # About DataMiner
 
-DataMiner is a standard, proven and very widely adopted and endorsed, modular, open and fully independent software platform, empowering your Digital Transformation.
+DataMiner is a standard, proven and very widely adopted and endorsed, modular, open, and fully independent software platform, empowering your Digital Transformation.
 
 The success of Digital Transformation programs is the result of:
 
@@ -16,13 +16,9 @@ The success of Digital Transformation programs is the result of:
 
 ## People
 
-![People icon](~/dataminer-overview/images/People_picto.png)
-
 As a company, we have broad experience in the different areas that contribute to the success of a Digital Transformation program. With over 300 ICT and DevOps engineers globally, the Skyline Communications team partners with its global customer base on a daily basis to digitize operations and technical workloads. Focus is deeply embedded into our DNA, as is our commitment to continuous growth of expertise working with ICT media & entertainment, data, and broadband companies all the time.
 
 ## Platform
-
-![DataMiner platform icon](~/dataminer-overview/images/DataMiner_picto.png)
 
 In today’s rapidly changing environment, a flexible platform and toolset are essential to **handle the highest-priority workflows first and fast**. Across all complexity, businesses and teams constantly need to adapt and improve.
 
@@ -59,15 +55,13 @@ DataMiner is a **modular platform**: you select your priorities and use cases, a
 
 1. Collaboration and multi-tenant operations across the supply chain are essential to running a digital enabled business. **dataminer.services** (a.k.a. the DataMiner Cloud Platform or DCP) comes with a portfolio of services to facilitate just that: Teams ChatOps, data sharing, Project Collaboration, online DataMiner DevOps services such as the Catalog, etc. Much more is to come, as the vast majority of DataMiner Systems deployed today are all connected to the dataminer.services.
 
-1. Finally, our customers and community deploy the modular DataMiner platforms for a **myriad of different uses**.
+1. Finally, our customers and community deploy the modular DataMiner platforms for a **myriad of different uses**:
 
-   ![Methodology](~/dataminer-overview/images/myriad_of_use_cases.png)
+   production studio – MCR – playouts - multi-screen OTT - video headends - cloud pipelines – SaaS - cloud platforms - ICT data centers - ad insertion - VoD pipelines - Media Asset Management - EPG meta data management - IP L3 networks - IP L2 VLAN networks - CDN networks - optical networks - broadcast SNG - contribution & exchange networks - inter studio networks - core backbones - DTH - DVB-T - ISDB-T - ATSC networks - enterprise VSAT - consumer VSAT - satellite teleports - satellite downlinks - GEO networks - MEO and LEO constellations - DOCSIS networks - DSL access networks - 4G/5G fixed mobile networks - FTTx networks - 5G RAN - 5G broadcast - CDN - IoT - EPG metadata - CPE broadband gate fixed wireless - CPE mobile - WiFi networks - KQI management - ticket and incident management - incident resolution - inventory management - planned maintenance management - facility management - rack management - configuration management - software management - BRM business process management
 
 **DataMiner sample applications** are available for DevOps teams and for the community, to start from real-life examples while creating solutions. Over time, an extensive library of those apps will instantly be accessible from dataminer.services.
 
 ## Methodology
-
-![Methodology icon](~/dataminer-overview/images/Methodology_picto.png)
 
 Our engagement with you follows the **agile principles**. To ensure your success, our teams focus on what brings value to you first.
 
