@@ -4,6 +4,8 @@ uid: Configuring_an_external_data_source_in_a_query
 
 # Configuring an external data source in a query
 
+When you create a query, you can also use an external data source.
+
 This is the most basic procedure to use an external data source in a query:
 
 1. In the Automation app, add a script containing a new class that implements the *IGQIDatasource* interface (see [Interfaces](#interfaces-in-the-ad-hoc-data-script)).
@@ -34,18 +36,18 @@ This is the most basic procedure to use an external data source in a query:
 
 1. In the Dashboards app, configure a query and select the data source *Get ad hoc data* or *Get custom data*, depending on your DataMiner version.
 
-1. In the *Data source* drop-down box, select the name of your ad hoc data source.
+1. In the *Data source* dropdown box, select the name of your ad hoc data source.
 
 Depending on how the script is configured, there can be additional configuration possibilities. You can for instance use the *IGQIInputArguments* interface in the script to define that a specific argument is required, for instance to filter the displayed data. For more information, refer to the sections below.
 
 > [!NOTE]
-> From DataMiner 10.2.5/10.3.0 onwards, you can link the arguments of an ad hoc data source to an existing feed in the Dashboards app. Depending on the linked feed, more information may need to be specified. For example, if you link to an existing query feed with a table listing elements, in the *Type* box, you will then need to select whether you want to use a specific data type (e.g. elements) or query rows. Then you will need to select the property you want to use. In most cases, you can select the property in a drop-down list, except if *Type* is set to *Query rows* or *Script output*, in which case you will have to specify the value yourself. For query rows, when you start typing the value, DataMiner will propose any matching values it can find.
+> From DataMiner 10.2.5/10.3.0 onwards, you can link the arguments of an ad hoc data source to an existing feed in the Dashboards app. Depending on the linked feed, more information may need to be specified. For example, if you link to an existing query feed with a table listing elements, in the *Type* box, you will then need to select whether you want to use a specific data type (e.g. elements) or query rows. Then you will need to select the property you want to use. In most cases, you can select the property in a dropdown list, except if *Type* is set to *Query rows* or *Script output*, in which case you will have to specify the value yourself. For query rows, when you start typing the value, DataMiner will propose any matching values it can find.
 
-#### Interfaces in the ad hoc data script
+## Interfaces in the ad hoc data script
 
 An ad hoc data source is represented as a class that implements predefined interfaces. The interfaces you can use are detailed below.
 
-##### IGQIDataSource
+### IGQIDataSource
 
 This is the only required interface. It must be implemented for the class to be detected by GQI as a data source. This interface has the following methods:
 
@@ -54,7 +56,7 @@ This is the only required interface. It must be implemented for the class to be 
 | GetColumns  | -                    | GQIColumn[]      | The GQI will request the columns. |
 | GetNextPage | GetNextPageInputArgs | GQIPage          | The GQI will request data.        |
 
-##### IGQIInputArguments
+### IGQIInputArguments
 
 This interface can be used to have the user specify an argument, for example the CSV file from which data should be parsed, or a filter that should be applied. This interface has the following methods:
 
@@ -66,7 +68,7 @@ This interface can be used to have the user specify an argument, for example the
 > [!NOTE]
 > The GQI does not validate the input arguments specified by the user. For example, a user can input an SQL query as a string input argument, and the content of the string argument will be forwarded to the ad hoc data source implementation without validation.
 
-##### IGQIOnInit
+### IGQIOnInit
 
 This interface is called when the data source is initialized, for example when the data source is selected in the query builder or when a dashboard using a query with ad hoc data is opened. It can for instance be used to connect to a database. This interface has one method:
 
@@ -74,7 +76,7 @@ This interface is called when the data source is initialized, for example when t
 |--------|-----------------|------------------|-------------|
 | OnInit | OnInitInputArgs | OnInitOutputArgs | Indicates that an instance of the class has been created. |
 
-##### IGQIOnPrepareFetch
+### IGQIOnPrepareFetch
 
 This interface is used to implement optimizations when data is retrieved. This can for instance be used to limit the retrieved data. This interface has one method:
 
@@ -82,7 +84,7 @@ This interface is used to implement optimizations when data is retrieved. This c
 |--------|-----------------|------------------|-------------|
 |OnPrepareFetch | OnPrepareFetchInputArgs | OnPrepareFetchOutputArgs | Indicated that the GQI has processed the query. |
 
-##### IGQIOnDestroy
+### IGQIOnDestroy
 
 This interface is called when the instance object is destroyed, which happens when the session is closed, e.g. in case of inactivity or when all the necessary data has been retrieved. It can for instance be used to end the connection with a database. This interface has one method:
 
@@ -90,7 +92,7 @@ This interface is called when the instance object is destroyed, which happens wh
 |--------|-----------------|------------------|-------------|
 | OnDestroy | OnDestroyInputArgs | OnDestroyOutputArgs | Indicates that the GQI will close the session. |
 
-#### Life cycle of queries with ad hoc data
+## Life cycle of queries with ad hoc data
 
 All methods discussed above are called at some point during the GQI life cycle, depending on whether a query is created or fetched, and depending on whether they have been implemented.
 
@@ -102,11 +104,11 @@ The following flowchart illustrates the GQI life cycle when a query is fetched:
 
 ![GQI query fetching life cycle](~/user-guide/images/GQIFetchQuery.png)
 
-#### Objects in the ad hoc data script
+## Objects in the ad hoc data script
 
 To build the ad hoc data source, you can use the objects detailed below.
 
-##### GQIColumn
+### GQIColumn
 
 This is an abstract class, with the derived types *GQIStringColumn*, *GQIBooleanColumn*, *GQIIntColumn*, *GQIDateTimeColumn* and *GQIDoubleColumn*, and with the following properties:
 
@@ -115,7 +117,7 @@ This is an abstract class, with the derived types *GQIStringColumn*, *GQIBoolean
 | Name     | String        | Yes      | The column name.                                                                                                                       |
 | Type     | GQIColumnType | Yes      | The type of data in the column. *GQIColumnType* is an enum that contains the following values: String, Int, DateTime, Boolean or Double. |
 
-##### GQIPage
+### GQIPage
 
 This object has the following properties:
 
@@ -124,7 +126,7 @@ This object has the following properties:
 | Rows        | GQIRow[] | Yes      | The rows of the page.                                                                  |
 | HasNextPage | Boolean  | No       | True if additional pages can be retrieved, False if the current page is the last page. |
 
-##### GQIRow
+### GQIRow
 
 This object has the following properties:
 
@@ -132,7 +134,7 @@ This object has the following properties:
 | -------- | --------- | -------- | --------------------- |
 | Cells    | GQICell[] | Yes      | The cells of the row. |
 
-##### GQICell
+### GQICell
 
 This object has the following properties:
 
@@ -144,7 +146,7 @@ This object has the following properties:
 > [!NOTE]
 > The type of value of a cell must match the type of the corresponding column.
 
-##### GQIArgument
+### GQIArgument
 
 This is an abstract class with the following properties:
 
@@ -166,7 +168,7 @@ In addition, the following derived types are supported from DataMiner 10.3.0/10.
 - `GQIStringDropdownArgument`
 - `GQIStringListArgument`
 
-#### Example ad hoc data script
+## Example ad hoc data script
 
 Below you can find an example script that forwards dummy data to the GQI. The name of the data source, as defined in the *GQIMetaData* attribute, will be “People”.
 

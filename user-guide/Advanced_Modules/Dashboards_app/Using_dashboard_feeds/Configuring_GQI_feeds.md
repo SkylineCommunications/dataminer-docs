@@ -10,7 +10,7 @@ From DataMiner 10.0.13 onwards, a special type of data feed is available, using 
 
 You can create a query as follows:
 
-1. In edit mode, select the dashboard component for which you want to use a query as a data input. At present, this is support for Bar chart, Pie chart, State and Table components.
+1. In edit mode, select the dashboard component for which you want to use a query as a data input. At present, this is supported for Bar chart, Pie chart, State, and Table components.
 
 1. In the data pane, select *Queries* and click the + icon to add a new query.
 
@@ -19,7 +19,7 @@ You can create a query as follows:
    > [!NOTE]
    > From DataMiner 10.2.0 [CU2]/10.2.5 onwards, a query must have a unique name. If you edit an existing query that has no name, you will need to specify a unique name for it. Prior to this, starting from DataMiner 10.1.0/10.1.1, a query name is optional but highly recommended.
 
-1. In the drop-down box below this, select the data source you want to use. See [Query data sources](xref:Query_data_sources).
+1. In the drop-down box below this, select the data source you want to use. For a detailed overview of all available data sources, see [Query data sources](xref:Query_data_sources).
 
    > [!IMPORTANT]
    > It is also possible to configure an external data source in a query. For more information, see [Configuring an external data source in a query](xref:Configuring_an_external_data_source_in_a_query).
