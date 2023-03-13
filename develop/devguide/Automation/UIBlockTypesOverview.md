@@ -459,6 +459,7 @@ uiBuilder.AppendBlock(blockItem);
 > - The `AutomationTimeUpDownOptions` property `AllowSpin` is not supported in the Low-Code Apps.
 > - The `AutomationTimeUpDownOptions` property `UpdateValueOnEnter` is not supported in Cube.
 > - The `AutomationTimeUpDownOptions` property `FractionalSecondsDigitsCount` is only supported in Cube and should be within a range of 0 to 3.
+> - From DataMiner 10.3.0 [CU1]/10.3.4 onwards, the `ShowTimeUnits` property is available. When this property is set to *true*, the component will display labels indicating the days, hours, minutes and seconds. By default, this property is set to *false*.
 > - When the initial value is set to an empty string or null, a default value of one hour will be displayed in Cube. In the Low-Code Apps, zero (00:00:00) will be displayed.
 > - The time span values are returned in the constant invariant format (e.g. "3.17:25:30.5569124").
 
