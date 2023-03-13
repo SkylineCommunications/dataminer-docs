@@ -38,7 +38,7 @@ The UserDefinableAPIEndpoint uses NATS to communicate with DataMiner. If there a
 
 The extension module has a configuration file with some settings that can be filled in. They contain default values, but it is important to change them to match your API needs. The file can be found at the following location:
 
-`Program Files\Skyline Communications\DataMiner UserDefinableApiEndpoint\appsettings.json`
+`%programfiles%\Skyline Communications\DataMiner UserDefinableApiEndpoint\appsettings.json`
 
 If you want to make changes to the settings, it is advised to follow the recommendation at the top of the config file to not have your settings overwritten when a new update is installed.
 
@@ -139,7 +139,7 @@ To update the rewrite rule, open `Internet Information Services (IIS) Manager` a
 
 ### Serilog
 
-Serilog is the logging service being used for User Definable APIs. Here you can change where the logfiles should be located, how big they can get and how many files should be kept. You can also change the default loglevels.
+Serilog is the logging service being used for UserDefinableApiEndpoint. Here you can change where the logfiles should be located, how big they can get and how many files should be kept. You can also change the default loglevels.
 
 > [!NOTE]
 > The default settings are to roll a file after it reaches a size of 5 MB. It will keep a maximum of 3 files. After reaching 3 files, the oldest file will be deleted to make place for the new file.

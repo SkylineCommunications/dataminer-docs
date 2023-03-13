@@ -7,9 +7,15 @@ uid: UD_APIs
 > [!WARNING]
 > The current feature is in preview and is not fully released yet. This feature should not be used in any staging or production environment.
 
-The User Defined APIs feature allows users to define API calls that will be made available on the DataMiner agents that host the UserDefinableApiEndpoint extension module. These APIs can be secured using API tokens that can be generated on the fly & linked to the API definitions.
+The User Defined APIs feature allows users to define API calls that will be made available on the DataMiner agents that host the [UserDefinableApiEndpoint extension module](xref:UD_APIs_UserDefinableApiEndpoint). These APIs can be secured using API tokens that can be generated on the fly & linked to the API definitions.
 
-TODO: add info about the cube ui
+## Cube
+
+In System Center in Cube, you can manage your APIs and tokens in the User-Defined APIs tab.
+
+> [!WARNING]
+>- This tab will replace the obsolete API deployment tab in the future, so make sure to move your old APIs from API deployment to the new feature. How to create APIs from existing scripts is explained on the [using an existing script page](xref:UD_APIs_Using_existing_scripts).
+>- The UI is not visible by default as the feature is not released yet.
 
 ## What are the different objects?
 
@@ -28,7 +34,7 @@ By selecting an object and clicking the 'View' or 'RawView' buttons, you can see
 
 In the Tokens tab, you can disable or enable an `ApiToken` by right-clicking on the ID field of an `ApiToken`. A context menu will open with a button to 'Disable' or 'Enable' the token.
 
-It is also possible to trigger an API with the Client Test Tool. How to do this is described [here](xref:UD_APIs_Triggering_an_API#client-test-tool).
+It is also possible to trigger an API with the Client Test Tool. How to do this is described in the [triggering an API page](xref:UD_APIs_Triggering_an_API#client-test-tool).
 
 ## DataMiner UserDefinableApiEndpoint extension module
 

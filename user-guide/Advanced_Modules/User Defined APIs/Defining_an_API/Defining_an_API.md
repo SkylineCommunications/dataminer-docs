@@ -7,7 +7,7 @@ uid: UD_APIs_Define_API
 > [!WARNING]
 > The current feature is in preview and is not fully released yet. This feature should not be used in any staging or production environment.
 
-This page describes the steps of creating a new API. This is the recommended workflow when creating new APIs using new scripts. If an existing script needs to be used for the API, checkout the [Using existing scripts page](xref:UD_APIs_Using_existing_scripts).
+This page describes the steps of creating a new API. This is the recommended workflow when creating new APIs using new scripts. If an existing script needs to be used for the API, checkout the [using existing scripts page](xref:UD_APIs_Using_existing_scripts).
 
 ## 1. Creating the API automation script
 
@@ -48,7 +48,7 @@ The entrypoint method has two parameters. The IEngine object can be used to inte
 |RequestMethod  |RequestMethod             |Contains the HTTP method of the request. See [RequestMethod](#requestmethod).|
 |Route          |string                    |The suffix of the URL where this API call is triggered on. See the [ApiDefinition](xref:UD_APIs_Objects_ApiDefinition#route) page. Having this available makes it possible to reuse a script.|
 |RawBody        |string                    |Contains the full body of the HTTP request as a string. This can be deserialized and used in the script.|
-|Parameters     |`Dictionary<string, string>`|Contains the deserialized parameters if the `InputType` property of the `ActionMeta` in the `ApiDefinition` is set to 'Parameters', see [User Input Data](#user-input-data).|
+|Parameters     |`Dictionary<string, string>`|Contains the deserialized parameters if you select 'Parse JSON of raw body to dictionary' when configuring the API. See below.(TODO)|
 
 #### RequestMethod
 
@@ -64,11 +64,11 @@ Having this available makes it possible to define the 4 CRUD actions on a docume
 
 #### User Input Data
 
-There are two ways to pass data to the API script. It should be configured on the `ActionMeta` in the `ApiDefinition`.
+There are two ways to pass data to the API script if you make use of the OnApiTrigger entrypoint method. They depend on whether you select the checkbox to `Parse JSON of raw body to dictionary` when configuring you API.
 
 ##### Parameters
 
-If you choose parameters, the JSON body of the HTTP request will automatically be converted to a `Dictionary<string, string>`. If you have chosen `RawBody`, this will be an empty `Dictionary<string, string>`, so this property will never be `null`. The raw string body will still be available in the `RawBody` property of the `ApiTriggerInput`. Note that only JSON in the form of key-value pairs are accepted as parameters, see the example below:
+If you check the checkbox, the JSON body of the HTTP request will automatically be converted to a `Dictionary<string, string>`. If you have chosen `RawBody`, this will be an empty `Dictionary<string, string>`, so this property will never be `null`. The raw string body will still be available in the `RawBody` property of the `ApiTriggerInput`. Note that only JSON in the form of key-value pairs are accepted as parameters, see the example below:
 
 ```json
 {
@@ -79,7 +79,7 @@ If you choose parameters, the JSON body of the HTTP request will automatically b
 
 ##### RawBody
 
-The `RawBody` property of the `ApiTriggerInput` will be filled in regardless of the type of input data, it contains the raw body of the HTTP request. In case you select `RawBody` as input type, you are responsible for the deserialization in the automation script.
+The `RawBody` property of the `ApiTriggerInput` is always filled in, it contains the raw body of the HTTP request. In case you don't mark previously mentioned checkbox, you are responsible for the deserialization in the automation script.
 
 ### Output
 
@@ -107,13 +107,22 @@ You can reflect the status of the API trigger request with the `ResponseCode` pr
 
 If you want to have deeper insights on what HTTP status code to use in what circumstance, check the following site: [HTTP status codes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status).
 
+## 2. Creating the ApiDefinition(s)
+
+While having your API script opened in the Automation app in Cube, click the `Configure API...` button on the bottom. A screen will pop up that allows you to create an ApiDefinition.
+
+Here you can add a description and [choose the route](xref:UD_APIs_Objects_ApiDefinition#route). Leave the radiobutton with the `Method to be executed` on the default setting and select whether you want to parse the JSON to the [parameters dictionary](#parameters) with the checkbox.
+
+You can also select the tokens that need access or create new tokens on this window.
+
+![Creating an ApiDefinition](~/user-guide/images/UDPAIS_CreateAPI.jpg)
+
+> [!NOTE]
+> You can change your API configuration at any time by opening this windows again and changing the settings.
+
 ## 2. Creating the ApiToken(s)
 
-TODO: UI oriented guide to create tokens.
-
-## 3. Creating the ApiDefinition(s)
-
-TODO: UI oriented guide to create definitions.
+You can create tokens and give access to your API with the UI above.
 
 ## 4. Configuring UserDefinableApiEndpoint extension module
 

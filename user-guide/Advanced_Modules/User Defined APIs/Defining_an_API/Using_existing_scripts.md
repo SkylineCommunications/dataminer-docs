@@ -44,10 +44,9 @@ namespace UDAPIS_Example
 
 ## Option 1: Using the script without the OnApiTrigger entrypoint
 
-TODO: UI Oriented guide to create API without entyrpoint
+To use the above script as an API without doing any changes to it is possible, API triggers will be executed through the `Run()` method as if you were executing the script from e.g. Cube. To do this, define your API exactly as explained on the [defining an API page](xref:UD_APIs_Define_API#2-creating-the-apidefinitions), but select the `Run method` option as 'Method to be executed'.
 
-> [!NOTE]
-> Do note that you do not have access to the `ApiTriggerInput` object and `ApiTriggerOutput` object in the script, meaning you cannot check the route or request method of the API trigger or output specific errors.
+Using this method comes with some disadvantages, note that you do not have access to the `ApiTriggerInput` object and `ApiTriggerOutput` object in the script, meaning you cannot check the route or request method of the API trigger or output specific errors.
 
 When the API is triggered with valid input data, the script will succeed and an empty HTTP response will be returned with status code 200. This is an example of a valid input body for the trigger.
 
@@ -81,6 +80,7 @@ The second option is to define an API the same way as a new API. Instead of crea
 
 > [!NOTE]
 > - With this option, the MissingScriptParameters error will not be returned if there are missing script parameters. The responsibility to verify the parameters is completely for the script.
+> - You can keep the script parameters on your script, as executing the automation script as an API through the OnApiTrigger entrypoint method, will ignore the script parameters.
 > - If the 'Run' method remains in the script, it is still possible to trigger the script via Cube or any other supported DataMiner module. (Scheduler, Correlation, ...)
 
 We have applied this option to the example script which results in the script below. We have:

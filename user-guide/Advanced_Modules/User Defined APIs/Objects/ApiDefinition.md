@@ -8,7 +8,7 @@ uid: UD_APIs_Objects_ApiDefinition
 
 An `ApiDefinition` is an object that defines an API. Including what tokens have access, the URL route and what action should be triggered.
 
-TODO: Add reference/screenshot to UI
+You can manage your ApiDefinitions in the User-defined APIs tab in System Center in Cube.
 
 ## Properties
 
@@ -89,7 +89,7 @@ You'll need to assign an `AutomationScriptNoEntryPointActionMeta` instance to th
 
 ## Errors
 
-When something goes wrong during the CRUD actions, the `TraceData` can contain one or more `ApiDefinitionErrors`. Below is a list of all possible `ErrorReasons`:
+When something goes wrong during the CRUD actions, the `TraceData` can contain one or more `ApiDefinitionErrors`. Below is a list of all possible `ErrorReasons`. The `Id` property of the `ApiDefinitionErrors` object will always contain the ID of the API definition that could not be created or updated.
 
 |Reason      |Description|
 |------------|-----------|

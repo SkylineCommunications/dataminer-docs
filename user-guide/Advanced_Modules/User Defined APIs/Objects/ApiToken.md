@@ -9,7 +9,7 @@ uid: UD_APIs_Objects_ApiToken
 
 An `ApiToken` is an object that defines what secret string can be used to access an API.
 
-TODO: Add reference/screenshot to UI
+You can manage your tokens in the User-defined APIs tab of System Center in Cube.
 
 ## Properties
 
@@ -71,7 +71,7 @@ var secret = ApiTokenSecretGenerator.GenerateSecret();
 
 ## Errors
 
-When something goes wrong during the CRUD actions, the `TraceData` can contain one or more `ApiTokenErrors`. Below is a list of all possible `ErrorReasons`:
+When something goes wrong during the CRUD actions, the `TraceData` can contain one or more `ApiTokenErrors`. Below is a list of all possible `ErrorReasons`. The `Id` property of the `ApiTokenErrors` object will always contain the ID of the API token that could not be created or updated.
 
 |Reason        |Description|
 |--------------|-----------|
