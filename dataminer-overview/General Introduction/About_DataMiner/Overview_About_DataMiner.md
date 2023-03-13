@@ -67,7 +67,7 @@ DataMiner is a **modular platform**: you select your priorities and use cases, a
 
 ## Methodology
 
-![Methodology](~/dataminer-overview/images/Methodology_picto.png)
+![Methodology icon](~/dataminer-overview/images/Methodology_picto.png)
 
 Our engagement with you follows the **agile principles**. To ensure your success, our teams focus on what brings value to you first.
 
