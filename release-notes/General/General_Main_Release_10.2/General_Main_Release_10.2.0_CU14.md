@@ -80,3 +80,11 @@ SLProtocol would interpret signed numbers incorrectly, causing parameters to dis
 <!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
 
 When you duplicated a component, the size of the duplicate would incorrectly be limited to 30 rows. From now on, when you duplicate a component, the duplicate will have the same size as the original.
+
+#### Dashboards app: A table component could appear to be empty when you rapidly switched between visualizations [ID_35831]
+
+<!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
+
+In some cases, a table component could appear to be empty when you rapidly switched between visualizations.
+
+Also, an error could be thrown when you tried to add an invalid query to a component.
