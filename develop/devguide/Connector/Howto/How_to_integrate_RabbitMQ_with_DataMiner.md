@@ -41,7 +41,7 @@ To help you understand how RabbitMQ works, we will explain step by step how a me
 
 You can monitor a RabbitMQ Node using its HTTP API. The API exposes extensive information about the configuration of the system as well as real-time metrics such as the rate of messages arriving in a queue.
 
-Using the built-in HTTP communication of DataMiner, you can easily create a driver monitoring a simple RabbitMQ system. For instance, here is a screenshot of driver listing all the exchanges, queues, bindings, and consumers present in the node:
+Using the built-in HTTP communication of DataMiner, you can easily create a protocol monitoring a simple RabbitMQ system. For instance, here is a screenshot of protocol listing all the exchanges, queues, bindings, and consumers present in the node:
 
 ![RabbitMQ node](~/develop/images/rabbitmq2-1024x779.png)
 
