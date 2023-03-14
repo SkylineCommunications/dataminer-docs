@@ -8,7 +8,7 @@ Where a [GitHub Action](xref:Deploying_Automation_scripts_from_a_GitHub_reposito
 
 It provides versioning and can be called in such a way to always use the latest stable version. This is different from [starter workflows](xref:github_starter_workflows), which copy and paste a template workflow without the ability to run the "latest version".
 
-Skyline Communications provides most quality control and automation through reusable workflows, allowing us to improve and tweak them based on user feedback or corporate changes and immediately apply the changes to any workflow using them on GitHub.
+Skyline Communications provides most quality control and automation through reusable workflows. Any changes we implement when we improve or tweak these workflows, for example based on user feedback, will also immediately be applied to any workflows on GitHub based on them.
 
 These reusable workflows are public and can be accessed by any organization. They can also be forked and used as a starting point for other CI/CD engineers, who can adjust them to match their organization's quality standards.
 
