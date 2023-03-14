@@ -59,6 +59,12 @@ In some cases, SLElement could leak memory when updating alarm templates contain
 
 SLProtocol would interpret signed numbers incorrectly, causing parameters to display incorrect values.
 
+#### Business Intelligence: Enhancements with regard to the retrieval of data from logger tables and to general error handling [ID_35820]
+
+<!-- MR 10.2.0 [CU13]/10.3.0 [CU2] - FR 10.3.5 -->
+
+A number of enhancements have been made to the Business Intelligence module, especially with regard to the retrieval of data from logger tables and to general error handling.
+
 #### DataMiner Maps: Markers could disappear when a layer was enabled or disabled [ID_35838]
 
 <!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->

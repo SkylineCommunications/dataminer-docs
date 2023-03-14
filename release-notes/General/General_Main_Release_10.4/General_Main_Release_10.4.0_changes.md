@@ -177,12 +177,6 @@ Up to now, SLAnalytics would stop working without giving any notice whatsoever w
 
 From now on, when no Cassandra database is present, SLAnalytics will be stopped gracefully and a message will be added to the *SLAnalytics.txt* log file.
 
-#### Business Intelligence: Enhancements with regard to the retrieval of data from logger tables and to general error handling [ID_35820]
-
-<!-- MR 10.4.0 - FR 10.3.5 -->
-
-A number of enhancements have been made to the Business Intelligence module, especially with regard to the retrieval of data from logger tables and to general error handling.
-
 ### Fixes
 
 #### Cassandra Cluster: Every DMA would incorrectly try to delete any possible old Cassandra compaction and repair tasks found in the entire DMS [ID_31923]

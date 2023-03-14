@@ -71,3 +71,9 @@ When, in the *Layout* tab, a text box (e.g. the box containing the title of the 
 <!-- MR 10.3.0 [CU2] - FR 10.3.5 -->
 
 When you generated a PDF of a dashboard that contained multiple parameter feeds, a multiple parameter feed with a "group by" applied would incorrectly have that "group by" reset to the value that was configured in its settings.
+
+#### Web apps: Certain icons would incorrectly not be displayed [ID_35877]
+
+<!-- MR 10.3.0 [CU2] - FR 10.3.5 -->
+
+In web apps, certain icons would incorrectly not be displayed.

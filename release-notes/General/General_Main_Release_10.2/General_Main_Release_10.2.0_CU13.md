@@ -375,3 +375,9 @@ GQI queries containing float or GUID values would not get migrated correctly.
 <!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
 
 In some rare cases, an error could occur in SLElement when creating an alarm with an *SLA Affecting* property.
+
+#### Business Intelligence: Enhancements with regard to the retrieval of data from logger tables and to general error handling [ID_35820]
+
+<!-- MR 10.2.0 [CU13]/10.3.0 [CU2] - FR 10.3.5 -->
+
+A number of enhancements have been made to the Business Intelligence module, especially with regard to the retrieval of data from logger tables and to general error handling.
