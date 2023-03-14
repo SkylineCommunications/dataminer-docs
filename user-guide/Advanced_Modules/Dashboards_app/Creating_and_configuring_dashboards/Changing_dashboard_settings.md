@@ -20,7 +20,7 @@ uid: Changing_dashboard_settings
 
      - *Allow components to shift*: This option determines whether components will move to make room for a component that is dragged across the dashboard. If the option is not selected, the position of the components becomes fixed.
 
-     - *Lazy load components*: Available from DataMiner 10.3.4/10.4.0 onwards. Select this option to make sure components are only initialized the first time they appear on the screen. This will shorten the load time considerably and improve the performance of the dashboard. <!-- RN 35469 -->
+     - *Lazy load components*: Available from DataMiner 10.3.4/10.4.0 onwards. Select this option to make sure components are only initialized when they first appear on the screen. This will shorten the load time considerably and improve the performance of the dashboard. <!-- RN 35469 -->
 
        > [!NOTE]
        >
