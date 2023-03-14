@@ -114,17 +114,3 @@ You can specify the following advanced settings. However, these are not mandator
 - **From**: A custom “From” address that will override the default “From” address specified in the DataMiner Agent interface.
 
   Example: *\<From>address@example.com\</From>*
-
-## Example of how to use GMail as SMTP server
-
-The example below shows how the SMTP element in DataMiner.xml should be configured to use GMail as SMTP server.
-
-```xml
-<SMTP>
-  <Host>smtp.gmail.com</Host>
-  <HostPort>587-starttls</HostPort>
-  <LoginMethod>AuthLoginMethod</LoginMethod>
-  <User>MyGmailName@gmail.com</User>
-  <Password>MyGmailPassword</Password>
-</SMTP>
-```
