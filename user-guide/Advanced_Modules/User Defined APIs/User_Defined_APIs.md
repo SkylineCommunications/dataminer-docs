@@ -55,3 +55,14 @@ It is also possible to trigger an API with the Client Test Tool. How to do this 
 To use the User Definable API functionality, you need the `DataMiner UserdefinableApiEndpoint` extension module. This module should be installed together with a DataMiner upgrade package. Do not uninstall this!
 
 To find how to change the settings and find the logging of this extension module, look at the [UserDefinableApiEndpoint page](xref:UD_APIs_UserDefinableApiEndpoint).
+
+## Information events
+
+Information events are generated for every create, update and delete action for an ApiToken or ApiDefinition.
+
+The information event message includes the user doing the action, the object ID, in case of a token the object name and in case of a definition the route. For example:
+
+```
+ApiDefinition with route 'encoders/status' (c4cc7192-6ff5-4ca5-aae0-57c8615e25c8) was added by John Doe
+ApiToken 'internal' (2faa728c-218d-4139-8aa1-8f033c60dd07) was updated by John Doe
+```
