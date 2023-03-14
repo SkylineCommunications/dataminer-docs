@@ -7,11 +7,12 @@ uid: Preparing_to_upgrade_a_DataMiner_Agent
 ## Prerequisites
 
 > [!IMPORTANT]
-> We highly recommend that you upload the DataMiner upgrade packages well in advance of the actual upgrade. For more information, see [Having a backup at the ready](#having-a-backup-at-the-ready).
+> We highly recommend that you upload the DataMiner upgrade packages well in advance of the actual upgrade. For more information, see [Uploading upgrade packages before the upgrade](#uploading-upgrade-packages-before-the-upgrade).
+> Furthermore, please follow the [best practices](#best-practices).
 
 - [VerifyClusterPorts.dmupgrade](xref:VerifyClusterPortsdmupgrade)
 
-- [Verify NATS is Running]()
+- [Verify NATS is Running](xref:VerifyNatsIsRunning)
 
 - [Verify Cloud DxM Version](xref:BPA_Verify_Cloud_DxM_Version)
 
@@ -25,7 +26,7 @@ Please upload the package before the actual maintenance. Uploading a DataMiner p
 Uploading the packages in advance prevents surprises during the upgrade maintenance itself.
 
 > [!TIP]
-> Upload the package a week before the upgrade.
+> Upload the package at least a week before the upgrade.
 
 ### Having a backup at the ready
 

@@ -23,4 +23,4 @@ See also [Checking the required open ports in a DMS](xref:MOP_Checking_the_requi
 
 ## Upgrade path
 
-DataMiner 10.0/x -> DataMiner 10.2.0/x
+DataMiner 10.0.0/10.0.x -> DataMiner 10.2.0/10.2.x

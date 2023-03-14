@@ -3292,6 +3292,8 @@
           topicUID: Verify_Cluster_Events_Tool
         - name: VerifyClusterPorts.dmupgrade
           topicUID: VerifyClusterPortsdmupgrade
+        - name: VerifyNatsIsRunning
+          topicUID: VerifyNatsIsRunning
     - name: Methods of Procedure
       topicUID: mops
       items:
