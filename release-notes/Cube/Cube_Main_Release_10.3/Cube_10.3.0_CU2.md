@@ -40,7 +40,7 @@ When you had configured DataMiner Cube to connect using gRPC (by specifying `typ
 
 <!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
 
-Due to a caching issue, on a system with a large number of masked alarms, in some cases, it could take a long time for an active alarms tab to load.
+Due to a caching issue, on a system with a large number of masked alarms, it could take a long time for an active alarms tab to load.
 
 #### Alarm Console: Base alarm updates would not be shown when the active alarms tab was filtered [ID_35845]
 
