@@ -8,7 +8,7 @@ This BPA test scans the DataMiner System for any connectors that are known to be
 
 This BPA test is available from DataMiner 10.3.4/10.4.0 onwards. It is available by default and runs automatically when you upgrade. <!-- RN 35605 -->
 
-## Meta data
+## Metadata
 
 - Name: ValidateConnectors
 
@@ -30,4 +30,4 @@ This BPA test is available from DataMiner 10.3.4/10.4.0 onwards. It is available
 
 - Impact: The DataMiner Agent can only be upgraded when there are no non-supported connectors left on the system.
 
-- Corrective Action: Remove non-supported connectors before upgrading DataMiner.
+- Corrective action: Remove non-supported connectors before upgrading DataMiner.
