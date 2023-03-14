@@ -222,6 +222,12 @@ Example:
 </DMSScript>
 ```
 
+#### SLAnalytics: Flatline events on child DVE elements would incorrectly be cleared automatically [ID_35818]
+
+<!-- MR 10.4.0 - FR 10.3.5 -->
+
+Events generated after detecting change points of type "flatline" in trend data of child DVE elements would incorrectly be cleared automatically.
+
 #### Input/output values of a matrix element would incorrectly be overridden due to a caching issue [ID_35857]
 
 <!-- MR 10.4.0 - FR 10.3.4 [CU0] -->
