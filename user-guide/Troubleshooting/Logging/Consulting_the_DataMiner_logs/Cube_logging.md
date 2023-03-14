@@ -8,7 +8,8 @@ The *Cube* page shows internal log information related to DataMiner Cube itself.
 
 Logging is extremely useful in order to detect, investigate, and solve issues.
 
-![Cube logging](~/user-guide/images/Cube_Logging.png)
+![Cube logging](~/user-guide/images/Cube_Logging.png)<br>
+*Cube logging in DataMiner 10.3*
 
 ## Log file locations
 
@@ -35,12 +36,12 @@ This logging is saved on the server. If the default installation path was used, 
 
 ## Log information
 
-The log information is displayed in a list with the following columns:
+The log information in DataMiner Cube is displayed in a list with the following columns:
 
 | Column | Description |
 |---|---|
 | Type | The type of log message, e.g. Debug, Info. |
-| Count  | Displayed from DataMiner 9.6.5 onwards. From this version onwards, if certain conditions are met, log items can be grouped. This column shows how many log items are grouped under this entry. |
+| Count  | If certain conditions are met, log items can be grouped. This column shows how many log items are grouped under this entry. |
 | Time | The time when the message was logged, displayed in the format MM/DD/YYYY HH:MM:SS. |
 | Text | The log message itself. |
 
@@ -85,5 +86,5 @@ DataMiner Cube logging uses different log types to allow users to easily filter 
 >
 > - By default, debug logging is not displayed. To display these log items, select the option *Show debug logging* at the top of the tab.
 > - By default, SPI logging is not displayed. To display these log items, select the option *Show SPI logging* at the top of the tab (Available from DataMiner 10.1.11/10.2.0 onwards).
-> - SPI logging is currently only supported in DataMiner Cube, if your system is connected to dataminer.services. For more information on how to get cloud-connected, see [Connecting your DataMiner System to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud).
+> - SPI logging is currently only supported in DataMiner Cube, if your system is [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud).
 > - When the Cube UI is not responsive, the *Freeze Detection* feature will cause a pop-up message to be displayed after a specific number of seconds of unresponsiveness. The time before this message is displayed depends on the [*Freeze time* settings](xref:ClientSettings_json#configuring-settings-for-cube-ui-freezing).
