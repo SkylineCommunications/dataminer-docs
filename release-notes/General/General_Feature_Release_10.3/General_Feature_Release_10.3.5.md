@@ -76,3 +76,9 @@ From now on, the execution of the NATS installer at DMA startup will be skipped 
 <!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
 
 SLProtocol would interpret signed numbers incorrectly, causing parameters to display incorrect values.
+
+#### DataMiner Maps: Markers could disappear when a layer was enabled or disabled [ID_35838]
+
+<!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
+
+In some cases, markers could disappear when a layer was enabled or disabled.
