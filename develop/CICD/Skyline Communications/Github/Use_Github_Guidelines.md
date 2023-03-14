@@ -15,7 +15,7 @@ You can use GitHub to:
 > [!NOTE]
 > At present, **only Automation scripts** have workflows available for packaging and deployment.
 >
-> Automation scripts that are packaged with other artifacts (Visio files, connectors, etc.) will not be able to use the GitHub actions, so we do not recommend using GitHub for those yet.
+> Automation scripts that are packaged with other artifacts (Visio files, connectors, etc.) currently will not be able to use the GitHub actions, so we do not recommend using GitHub for those yet.
 
 ## Creating an account in GitHub's Skyline organization
 
@@ -67,11 +67,11 @@ The repository name should look like this (using "-" as separator): **{customerA
 
 ## Adding a README file
 
-It is important to add a *README.md* file to to the root folder. The contents of this file should provide users with the necessary information to understand the purpose of the code and learn how to use it.
+It is important to add a *README.md* file to the root folder. The contents of this file should provide users with the necessary information to understand the purpose of the code and learn how to use it.
 
 ## Adding topics to a repository
 
-Topics must be used to help categorize the repositories and help users find them when exploring Github.
+Topics must be used to help categorize the repositories and help users find them when exploring GitHub.
 
 Here is a list of topics you should use (this list is to be extended):
 

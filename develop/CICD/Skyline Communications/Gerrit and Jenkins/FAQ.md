@@ -99,7 +99,7 @@ To start the development of a new protocol (version 1.0.0.1), perform the follow
    > Performing a commit only updates your local repository. In case you want to push your work in progress to Gerrit to have a backup on the server, see [I'm still busy developing but I want to push my work to the remote repository so I have a backup on Gerrit. How do I do this?](#im-still-busy-developing-but-i-want-to-push-my-work-to-the-remote-repository-so-i-have-a-backup-on-gerrit-how-do-i-do-this).
 
 > [!TIP]
-> See also: Learning path "System Dev - CI/CD, GIT, Gerrit" on LinkedIn Learning, Section "Tutorial Protocol Development":  CI/CD HowTo - Start a new Protocol Development.
+> See also: Learning path "System Dev - CI/CD, git, Gerrit" on LinkedIn Learning, Section "Tutorial Protocol Development":  CI/CD HowTo - Start a new Protocol Development.
 
 ### How do I start the development of a new version in an existing range of an existing protocol?
 
@@ -168,7 +168,7 @@ To start the development of a new protocol (version 1.0.0.1), perform the follow
 1. Start development on the new branch.
 
 > [!TIP]
-> See also: Learning path "System Dev - CI/CD, GIT, Gerrit" on LinkedIn Learning, Section "Tutorial Protocol Development":  CI/CD HowTo - Start a protocol from an existing one on SVN
+> See also: Learning path "System Dev - CI/CD, git, Gerrit" on LinkedIn Learning, Section "Tutorial Protocol Development":  CI/CD HowTo - Start a protocol from an existing one on SVN
 
 ### How do I start the development of a new range of an existing protocol?
 
@@ -224,7 +224,7 @@ The protocol development checklist should be included next to the protocol Visua
 1. Push the commit. As the checklist itself does not require any code review, you can push the checklist immediately to the remote Git repository hosted by Gerrit using SourceTree.
 
 > [!TIP]
-> See also: Learning path "System Dev - CI/CD, GIT, Gerrit" on LinkedIn Learning, Section "Tutorial Protocol Development":  CI/CD HowTo - Development Checklist and DriverQA.
+> See also: Learning path "System Dev - CI/CD, git, Gerrit" on LinkedIn Learning, Section "Tutorial Protocol Development":  CI/CD HowTo - Development Checklist and DriverQA.
 
 ### I only have a very small fix to perform and therefore I do not require it to go through code review. Is this possible?
 
@@ -247,7 +247,7 @@ However, be aware that in general a code review phase is required and therefore 
 1. Click *Add Tag*. This will make Jenkins perform a final execution of the pipeline for this newly created protocol version. It will detect that you provided a tag and will therefore publish this version on SVN.
 
 > [!TIP]
-> See also: Learning path "System Dev - CI/CD, GIT, Gerrit" on LinkedIn Learning, Section "Tutorial Protocol Development":  CI/CD HowTo - How to release a new version.
+> See also: Learning path "System Dev - CI/CD, git, Gerrit" on LinkedIn Learning, Section "Tutorial Protocol Development":  CI/CD HowTo - How to release a new version.
 
 ### I started a new minor version but now it appears that my additional changes introduce a major change. How do I fix this?
 
@@ -458,7 +458,7 @@ This means you have some work committed and want this work to be reviewed.
    The reviewer will now be notified by email.
 
 > [!TIP]
-> See also: Learning path "System Dev - CI/CD, GIT, Gerrit" on LinkedIn Learning, Section "Tutorial Gerrit Code Review":  CI/CD HowTo - Assign a Gerrit Code Review.
+> See also: Learning path "System Dev - CI/CD, git, Gerrit" on LinkedIn Learning, Section "Tutorial Gerrit Code Review":  CI/CD HowTo - Assign a Gerrit Code Review.
 
 ### I received an email stating that I should perform a code review. How do I do this?
 
@@ -511,7 +511,7 @@ When someone has assigned a code review to you in Gerrit, you will receive an em
 1. Click *Send*. Now the developer will receive an email about this review.
 
 > [!TIP]
-> See also: Learning path "System Dev - CI/CD, GIT, Gerrit" on LinkedIn Learning, Section "Tutorial Gerrit Code Review":  CI/CD HowTo – Perform a Gerrit Code Review and CI/CD HowTo – Handle fixes sent to Gerrit.
+> See also: Learning path "System Dev - CI/CD, git, Gerrit" on LinkedIn Learning, Section "Tutorial Gerrit Code Review":  CI/CD HowTo – Perform a Gerrit Code Review and CI/CD HowTo – Handle fixes sent to Gerrit.
 
 ### I received an email notifying me that a code review failed. How do I continue?
 
@@ -543,7 +543,7 @@ When someone has assigned a code review to you in Gerrit, you will receive an em
 
 > [!TIP]
 > See also:
-> Learning path "System Dev - CI/CD, GIT, Gerrit" on LinkedIn Learning, Section "Tutorial Gerrit Code Review":  CI/CD HowTo – Fixing an issue reported through Gerrit.
+> Learning path "System Dev - CI/CD, git, Gerrit" on LinkedIn Learning, Section "Tutorial Gerrit Code Review":  CI/CD HowTo – Fixing an issue reported through Gerrit.
 
 ### I received an email notifying me that a code review succeeded. How do I continue?
 
@@ -590,4 +590,4 @@ When someone has assigned a code review to you in Gerrit, you will receive an em
 1. At this point, you will typically will want to create a tag to define a new version of the protocol. For more information on how to do this, refer to [I finished development. How do I create a tag for the new version?](#i-finished-development-how-do-i-create-a-tag-for-the-new-version).
 
 > [!TIP]
-> See also: Learning path "System Dev - CI/CD, GIT, Gerrit" on LinkedIn Learning, Section "Tutorial Gerrit Code Review":  CI/CD HowTo – Finalize a Gerrit Code Review
+> See also: Learning path "System Dev - CI/CD, git, Gerrit" on LinkedIn Learning, Section "Tutorial Gerrit Code Review":  CI/CD HowTo – Finalize a Gerrit Code Review

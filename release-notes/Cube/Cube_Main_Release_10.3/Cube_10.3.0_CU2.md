@@ -36,6 +36,14 @@ When you had configured DataMiner Cube to connect using gRPC (by specifying `typ
 
 - In some cases, Cube would become unresponsive when retrieving the user thumbnail pictures. These will now be retrieved in the background.
 
+#### DataMiner Cube - Alarm Console: Base alarm updates would not be shown when the active alarms tab was filtered [ID_35845]
+
+<!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
+
+In a filtered active alarms tab, in some cases, a base alarm will match the filter while the correlated alarm will not. In that case, the base alarm will be shown while the correlated alarm will not.
+
+However, up to now, when a base alarm was updated, the update would not be reflected in the Alarm Console until the filter was removed.
+
 #### Service & Resource Management: Problem with un-initialized Capacity property on DMAs running version 10.3.1 or 10.2.12 or earlier [ID_35854]
 
 <!-- MR 10.3.0 [CU2] - FR 10.3.2 [CU1] -->

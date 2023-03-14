@@ -24,15 +24,18 @@ For more information on how to create a dataminer.services key, refer to [Managi
 The (primary or secondary) key should be added as a masked variable in the repository so that it is stored securely in GitLab and not stored in source control. Making the variable masked will prevent the value from being logged accidentally in the pipeline logs.
 
 1. Copy the value from the Admin app using the copy button next to the (primary or secondary) key.
-1. In your GitLab repository, go to *Settings* > *CI/CD*.
-1. Go to the section *Variables* and click on expand.
-1. Click on *Add variable*.
 
-    ![Add variable](~/develop/images/GitLab_add_variable.png)
+1. In your GitLab repository, go to *Settings* > *CI/CD*.
+
+1. Go to the section *Variables* and click expand.
+
+1. Click *Add variable*.
+
+   ![Add variable](~/develop/images/GitLab_add_variable.png)
 
 1. Specify a name for your variable (e.g. `MY_KEY`), paste the key as the value for the variable, select the *Mask variable*, and click *Add variable*. Optionally it is possible to further protect your variable by selecting *Protect variable*.
 
-    ![Create variable](~/develop/images/GitLab_create_variable.png)
+   ![Create variable](~/develop/images/GitLab_create_variable.png)
 
    Once it is saved, your variable will be displayed as one of the variables, and you will be able to use it in a workflow.
 
@@ -41,13 +44,13 @@ The (primary or secondary) key should be added as a masked variable in the repos
 
 ## Adding the Skyline DataMiner Deploy Action to a pipeline
 
-1. If you do not have a pipeline yet, you can create one by going to the *CI/CD* > *Editor* in GitLab and clicking *Configure pipeline*. This will create a basic `.gitlab-ci.yml` file.
+1. If you do not have a pipeline yet, you can create one by going to *CI/CD* > *Editor* in GitLab and clicking *Configure pipeline*. This will create a basic `.gitlab-ci.yml` file.
 
    If you already have a pipeline, you can edit it by opening the pipeline editor.
 
-1. To add the deployment action to your pipeline add the following stages to your .yaml file.
+1. To add the deployment action to your pipeline, add the following stages to your .yaml file.
 
-    ```yaml
+    ```yml
     stages:
         - upload
         - deploy
