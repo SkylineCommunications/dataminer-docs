@@ -46,7 +46,7 @@ The entrypoint method has two parameters. The IEngine object can be used to inte
 |Property       |Type                      |Explanation|
 |---------------|--------------------------|-----------|
 |RequestMethod  |RequestMethod             |Contains the HTTP method of the request. See [RequestMethod](#requestmethod).|
-|Route          |string                    |The suffix of the URL where this API call is triggered on. See the [ApiDefinition](xref:UD_APIs_Objects_ApiDefinition#route) page. Having this available makes it possible to reuse a script.|
+|Route          |string                    |The suffix of the URL where this API call is triggered on. Having this available makes it possible to reuse a script.|
 |RawBody        |string                    |Contains the full body of the HTTP request as a string. This can be deserialized and used in the script.|
 |Parameters     |`Dictionary<string, string>`|Contains the deserialized parameters if you select 'Parse JSON of raw body to dictionary' when configuring the API. See [creating the ApiDefinition(s)](#2-creating-the-apidefinitions)|
 
@@ -111,7 +111,9 @@ If you want to have deeper insights on which HTTP status code to use in which ci
 
 While having your API script open in the Automation app in Cube, click the `Configure API...` button on the bottom. A screen will pop up that allows you to create an ApiDefinition.
 
-Here you can add a description and [choose the route](xref:UD_APIs_Objects_ApiDefinition#route). Leave the radiobutton with the `Method to be executed` on the default setting and select whether you want to parse the JSON to the [parameters dictionary](#parameters) with the checkbox.
+Here you can add a description and choose the route.
+
+Leave the radiobutton with the `Method to be executed` on the default setting and select whether you want to parse the JSON to the [parameters dictionary](#parameters) with the checkbox.
 
 You can also select the tokens that need access or create new tokens in this window.
 
@@ -120,9 +122,29 @@ You can also select the tokens that need access or create new tokens in this win
 > [!NOTE]
 > You can change your API configuration at any time by opening this window again and changing the settings.
 
-## 2. Creating the ApiToken(s)
+### Route
+
+The route describes what URL route the API will be available on. It is a suffix that comes after the base URL `{hostname}/api/custom/`. For example, if you want to create an API to retrieve the status of all encoders on your system, a logical route would be `encoders/status`. The full API call wuold then look like this:
+
+```
+HTTP GET mydataminer.customer.local/api/custom/encoders/status
+```
+
+**Requirements:**
+
+- The route should not start or end with a forward slash (`/`).
+- The route should be unique for each `ApiDefinition`. When saving, this will be automatically checked to prevent clashes.
+
+> [!TIP]
+> It is recommended to keep the routes simple and straightforward. The website [restfulapi.net](https://restfulapi.net/resource-naming/) provides some great tips on this.
+
+## 3. Creating the ApiToken(s)
 
 You can create tokens and give access to your API with the UI above.
+You can't delete a token that is in use by an API. You first need to unassign the token from all APIs using it before you can delete it.
+
+> [!WARNING]
+> Once a token is created with a specified secret, **it is not possible to retrieve that secret again**. The value is stored securely in the database with a non-reversible hashing function. Make sure to save it somewhere secure or pass it in a secure way to the API user.
 
 ## 4. Configuring UserDefinableApiEndpoint extension module
 

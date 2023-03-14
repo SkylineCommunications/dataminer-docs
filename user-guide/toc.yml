@@ -2306,12 +2306,6 @@
           topicUid: "UD_APIs_Triggering_an_API"
         - name: "UserDefinableApiEndpoint"
           topicUid: "UD_APIs_UserDefinableApiEndpoint"
-        - name: "Objects"
-          items:
-            - name: "ApiDefinition"
-              topicUid: "UD_APIs_Objects_ApiDefinition"
-            - name: "ApiToken"
-              topicUid: "UD_APIs_Objects_ApiToken"
 - name: DataMiner Standard Apps, Frameworks & Solutions
   topicUid: Part5StandardApps
   items:

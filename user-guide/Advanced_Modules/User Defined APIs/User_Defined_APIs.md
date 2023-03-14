@@ -17,6 +17,20 @@ In System Center in Cube, you can manage your APIs and tokens in the User-Define
 >- This tab will replace the obsolete API deployment tab in the future, so make sure to move your old APIs from API deployment to the new feature. How to create APIs from existing scripts is explained on the [using an existing script page](xref:UD_APIs_Using_existing_scripts).
 >- The UI is not visible by default as the feature is not released yet.
 
+### Permissions
+
+APIs:
+
+- To read or count definitions, the user requires the `PermissionFlags.UserDefinableApiDefinitionRead` permission flag.
+- To create or update definitions, the user requires the `PermissionFlags.UserDefinableApiDefinitionCreateUpdate` **AND** `PermissionFlags.AutomationExecuteScripts` permission flags.
+- To delete definitions, the user requires the `PermissionFlags.UserDefinableApiDefinitionDelete` permission flag.
+
+Tokens:
+
+- To read or count tokens, the user requires the `PermissionFlags.UserDefinableApiTokenRead` permission flag.
+- To create or update tokens, the user requires the `PermissionFlags.UserDefinableApiTokenCreateUpdate` permission flag.
+- To delete tokens, the user requires the `PermissionFlags.UserDefinableApiTokenDelete` permission flag.
+
 ## What are the different objects?
 
 |Name          |Description|

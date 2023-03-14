@@ -37,7 +37,7 @@ https://production-agent-a1/api/custom/encoder/main/status
 
 #### Authentication
 
-To authenticate yourself to the API, you add a `Bearer` Authorization header to your request that contains the [secret](xref:UD_APIs_Objects_ApiToken#secret). See an example of how the header should look like below:
+To authenticate yourself to the API, you add a `Bearer` Authorization header to your request that contains the secret. See an example of how the header should look like below:
 
 ```
 Bearer 24te8bRBOhrDj6TkXkim4qh9GpDXsdGudib57j7C/CU=
@@ -113,9 +113,9 @@ Contains an error code that can be used by the API maintainer to find out what w
 |DefinitionNotFound              |5            |404             |A definition with the passed route could not be found.|
 |ManagerNotInitialized           |7            |503             |The UserDefinableApiManager in DataMiner is not initialized yet (check the C:\Skyline DataMiner\Logging\SLUserDefinableApiManager.txt log file, to see what went wrong).|
 |UnexpectedException             |8            |500             |An unexpected exception occurred (check the C:\Skyline DataMiner\Logging\SLUserDefinableApiManager.txt log file, to see what went wrong).|
-|InvalidActionMeta               |9            |500             |The [ActionMeta](xref:UD_APIs_Objects_ApiDefinition#actions) object does not match the specified `ActionType` in the ApiDefinition.|
+|InvalidActionMeta               |9            |500             |The `ActionMeta` object does not match the specified `ActionType` in the ApiDefinition.|
 |BodyToParametersConversionFailed|10           |400             |Something went wrong while trying to convert the body to a collection of key value parameters. [More info](xref:UD_APIs_Define_API#parameters)|
-|InvalidActionType               |11           |500             |The `ActionType` that is specified in the [ApiDefinition](xref:UD_APIs_Objects_ApiDefinition) is not valid.|
+|InvalidActionType               |11           |500             |The `ActionType` that is specified in the ApiDefinition is not valid.|
 |AutomationActionError           |12           |500             |An error occurred while trying to execute an automation script action.|
 |InvalidAutomationActionResult   |13           |500             |The result returned by the automation script was null or invalid.|
 |FailedToGetScriptInfo           |15           |500             |Could not get the script info required to execute the script.|
