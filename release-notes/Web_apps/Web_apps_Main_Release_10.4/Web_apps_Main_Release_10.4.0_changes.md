@@ -257,3 +257,9 @@ When data from one table was fed to another table, in some cases, the "loading" 
 <!-- MR 10.4.0 - FR 10.3.5 -->
 
 An error could occur when feeding data from a GQI component to a query that was used in the same component.
+
+#### Web apps: Certain icons would incorrectly not be displayed [ID_35877]
+
+<!-- MR 10.4.0 - FR 10.3.5 -->
+
+In web apps, certain icons would incorrectly not be displayed.
