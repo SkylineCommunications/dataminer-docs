@@ -72,7 +72,7 @@ When the API is triggered with input data that does not represent a number, the 
 }
 ```
 
-As you can see, since we do not have a way of returning an `ApiTriggerOutput` instance, the error will be vague. This is why we always recommend spending the little extra time to use the 'OnApiTrigger' entrypoint. (see next option)
+As you can see, since we do not have a way of returning an `ApiTriggerOutput` instance, the error will be vague. This is why we always recommend spending the little extra time to use the 'OnApiTrigger' entrypoint. (See next option)
 
 ## Option 2: Using the script with the OnApiTrigger entrypoint
 
@@ -80,7 +80,7 @@ The second option is to define an API the same way as a new API. Instead of crea
 
 > [!NOTE]
 > - With this option, the MissingScriptParameters error will not be returned if there are missing script parameters. The responsibility to verify the parameters is completely for the script.
-> - You can keep the script parameters on your script, as executing the automation script as an API through the OnApiTrigger entrypoint method, will ignore the script parameters.
+> - You can keep the script parameters on your script, as executing the automation script as an API through the OnApiTrigger entrypoint method will ignore the script parameters.
 > - If the 'Run' method remains in the script, it is still possible to trigger the script via Cube or any other supported DataMiner module. (Scheduler, Correlation, ...)
 
 We have applied this option to the example script which results in the script below. We have:

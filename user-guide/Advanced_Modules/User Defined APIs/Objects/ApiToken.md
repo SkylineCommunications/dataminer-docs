@@ -28,7 +28,7 @@ These are the properties of the `ApiToken` object. The table also defines whethe
 
 ### Secret
 
-When a user wants to call an API, it needs to pass a secret string in the header of their request to authenticate. This secret string should be set on a token that is authorized to use that API.
+When a user wants to call an API, he/she needs to pass a secret string in the header of their request to authenticate. This secret string should be set on a token that is authorized to use that API.
 
 The secret property on an `ApiToken` is only used to set the secret for the token. This is done when creating the token, or when you want to update the secret. In all other cases, the property should be empty. The secret string should be used by the API users when they want to call an API. It has to adhere to the following requirements:
 

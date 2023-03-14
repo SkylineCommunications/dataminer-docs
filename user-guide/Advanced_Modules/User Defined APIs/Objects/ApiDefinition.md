@@ -85,7 +85,7 @@ You'll need to assign an `AutomationScriptNoEntryPointActionMeta` instance to th
     - The `ActionMeta` property must contain an instance of a meta class according to the configured action type. See the [Actions](#actions) section above.
 
 > [!IMPORTANT]
-> To create or update `ApiDefinition` objects that define a `AutomationScript` or `AutomationScriptNoEntryPoint` action, you need the permissions to execute an automation script. (`PermissionFlags.AutomationExecuteScripts`)
+> To create or update `ApiDefinition` objects that define an `AutomationScript` or `AutomationScriptNoEntryPoint` action, you need the permissions to execute an automation script. (`PermissionFlags.AutomationExecuteScripts`)
 
 ## Errors
 

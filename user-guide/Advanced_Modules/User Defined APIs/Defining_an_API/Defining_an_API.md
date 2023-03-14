@@ -64,7 +64,7 @@ Having this available makes it possible to define the 4 CRUD actions on a docume
 
 #### User Input Data
 
-There are two ways to pass data to the API script if you make use of the OnApiTrigger entrypoint method. They depend on whether you select the checkbox to `Parse JSON of raw body to dictionary` when configuring you API.
+There are two ways to pass data to the API script if you make use of the OnApiTrigger entrypoint method. They depend on whether you select the checkbox to `Parse JSON of raw body to dictionary` when configuring your API.
 
 ##### Parameters
 
@@ -92,33 +92,33 @@ The entrypoint method should return an instance of the `ApiTriggerOutput` class.
 
 #### ResponseCode
 
-You can reflect the status of the API trigger request with the `ResponseCode` property on the `ApiTriggerOutput`. This is an integer, so you are free to pass any value that is a valid HTTP status code here. You can also use the `StatusCode` enum that contains suggestions and cast that to an integer, you can see an example of that [here](#1-creating-the-api-automation-script). The values of the enum are:
+You can reflect the status of the API trigger request with the `ResponseCode` property on the `ApiTriggerOutput`. This is an integer, so you are free to pass any value that is a valid HTTP status code here. You can also use the `StatusCode` enum that contains suggestions and cast that to an integer. A simple axample can be found [here](#1-creating-the-api-automation-script). The values of the enum are:
 
 |Name               |Value|Explanation|
 |-------------------|-----|-----------|
 |Ok                 |200  |The request got executed successfully.|
 |Created            |201  |The request succeeded, and a new resource was created as a result.|
-|Accepted           |202  |The request is received, but not executed yet. Could be used for long running async actions.|
+|Accepted           |202  |The request was received, but not executed yet. Could be used for long running async actions.|
 |NoContent          |204  |There is no content to return for the request, but the request did succeed.|
 |BadRequest         |400  |Something went wrong user side e.g. wrong parameters.|
 |NotFound           |404  |The requested document was not found.|
 |MethodNotAllowed   |405  |The HTTP method is not valid for this request. For example `DELETE` is used while `GET` was expected.|
 |InternalServerError|500  |Return this if something went wrong in your automation script, e.g. you try to write to a file, but the file is in use by another application.|
 
-If you want to have deeper insights on what HTTP status code to use in what circumstance, check the following site: [HTTP status codes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status).
+If you want to have deeper insights on which HTTP status code to use in which circumstances, check the following site: [HTTP status codes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status).
 
 ## 2. Creating the ApiDefinition(s)
 
-While having your API script opened in the Automation app in Cube, click the `Configure API...` button on the bottom. A screen will pop up that allows you to create an ApiDefinition.
+While having your API script open in the Automation app in Cube, click the `Configure API...` button on the bottom. A screen will pop up that allows you to create an ApiDefinition.
 
 Here you can add a description and [choose the route](xref:UD_APIs_Objects_ApiDefinition#route). Leave the radiobutton with the `Method to be executed` on the default setting and select whether you want to parse the JSON to the [parameters dictionary](#parameters) with the checkbox.
 
-You can also select the tokens that need access or create new tokens on this window.
+You can also select the tokens that need access or create new tokens in this window.
 
 ![Creating an ApiDefinition](~/user-guide/images/UDPAIS_CreateAPI.jpg)
 
 > [!NOTE]
-> You can change your API configuration at any time by opening this windows again and changing the settings.
+> You can change your API configuration at any time by opening this window again and changing the settings.
 
 ## 2. Creating the ApiToken(s)
 

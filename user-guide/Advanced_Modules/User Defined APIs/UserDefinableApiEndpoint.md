@@ -162,7 +162,7 @@ This contains the path to the credentials used to connect to DataMiner over NATS
 
 #### MessageBrokerTimeOutSeconds
 
-Default is set to 5 minutes (300 seconds). The MessageBroker sending the NATS trigger to SLNet will wait for this long on a response untill it will time out.
+Default is set to 5 minutes (300 seconds). The MessageBroker sending the NATS trigger to SLNet will wait for this long on a response until it will time out.
 
 ## HTTP(S) support
 

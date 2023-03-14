@@ -106,10 +106,10 @@ Contains an error code that can be used by the API maintainer to find out what w
 > [!IMPORTANT]
 > Do not share the explanation of these ErrorCodes with the API consumers. These are for internal use only.
 
-|ErrorCode                       |integer value|HTTP Status Code|Explanation|
+|ErrorCode                       |Integer value|HTTP Status Code|Explanation|
 |--------------------------------|-------------|----------------|-----------|
 |EmptyRoute                      |1            |400             |The passed request route is empty.|
-|InvalidRequestMethod            |3            |405             |The HTTP method is not valid, valid ones are [here](#http-methods)|
+|InvalidRequestMethod            |3            |405             |The HTTP method is not valid, valid ones are [here](#http-methods).|
 |DefinitionNotFound              |5            |404             |A definition with the passed route could not be found.|
 |ManagerNotInitialized           |7            |503             |The UserDefinableApiManager in DataMiner is not initialized yet (check the C:\Skyline DataMiner\Logging\SLUserDefinableApiManager.txt log file, to see what went wrong).|
 |UnexpectedException             |8            |500             |An unexpected exception occurred (check the C:\Skyline DataMiner\Logging\SLUserDefinableApiManager.txt log file, to see what went wrong).|
@@ -124,7 +124,7 @@ Contains an error code that can be used by the API maintainer to find out what w
 |UnknownStatusCode               |1002         |500             |The ResponseCode returned by the automation script was invalid.|
 |InvalidContentType              |1003         |415             |The [Content-Type](#content-type) HTTP header is not supported.|
 |UnspecifiedErrorReason          |1004         |500             |DataMiner returned an 'unspecified' error code.|
-|UnknownErrorReason              |1005         |500             |DataMiner returned an unknown error code.|
+|UnknownErrorReason              |1005         |500             |DataMiner returned an 'unknown' error code.|
 |MessageBrokerNotInitialized     |1006         |503             |The MessageBroker and Session used to connect to NATS are not initialized yet.|
 |FailedToReadBody                |1007         |500             |An exception was thrown while reading the request body.|
 |AuthenticationHeaderInvalid     |1008         |401             |The HTTP [authentication](#authentication) header is not valid, make sure the token is passed as a Bearer Token.|
@@ -171,7 +171,7 @@ Sending the `TriggerUserDefinableApiRequestMessage` returns the `TriggerUserDefi
 |Property    |Type          |Explanation|
 |------------|--------------|-----------|
 |TraceData   |TraceData     |Contains `UserDefinableApiTriggerErrorData` in case something goes wrong. It can contain one of the following [reasons](#error-reasons).|
-|ActionResult|IActionResult |Contains an `ActionResult`, for now, this will always be an [AutomationScriptActionResult](#automationscriptactionresult)|
+|ActionResult|IActionResult |Contains an `ActionResult`, for now, this will always be an [AutomationScriptActionResult](#automationscriptactionresult).|
 
 #### Error Reasons
 
