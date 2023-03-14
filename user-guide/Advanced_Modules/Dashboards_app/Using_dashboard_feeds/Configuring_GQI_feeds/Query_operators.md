@@ -6,6 +6,9 @@ uid: Query_operators
 
 When you create a query, you can use the operators detailed below.
 
+> [!NOTE]
+> Selecting an operator is optional. If you do not select an operator, the data set will be returned untouched.
+
 ## Aggregate
 
 Allows you to aggregate data from the data source. After you have selected this option, first select the aggregation column, and the method that should be used. Depending on the type of data available in the selected column, different methods are available, e.g. Average, Count, Distinct Count, Maximum, Median, Minimum, Percentile 90/95/98 or Standard deviation.

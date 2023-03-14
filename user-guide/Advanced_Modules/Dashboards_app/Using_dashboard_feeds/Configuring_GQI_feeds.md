@@ -24,7 +24,7 @@ You can create a query as follows:
    > [!IMPORTANT]
    > It is also possible to configure an external data source in a query. For more information, see [Configuring an external data source in a query](xref:Configuring_an_external_data_source_in_a_query).
 
-1. Select an operator. This step is optional; if you do not select an operator, the entire data set will be used. See [Query operators](xref:Query_operators).
+1. Select an operator. This step is optional; if you do not select an operator, the data set will be returned untouched. See [Query operators](xref:Query_operators).
 
 1. Drag the configured query to the component in order to use it.
 
