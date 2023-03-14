@@ -10,7 +10,7 @@ For more information on this feature, see [AlarmLevelLink](xref:Protocol.AlarmLe
 
 ## User skills required
 
-- Solid knowledge of drivers (table integration)
+- Solid knowledge of DataMiner protocols (table integration)
 - Basic knowledge of DataMiner Cube
 
 ## The use case
