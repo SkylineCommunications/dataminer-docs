@@ -94,3 +94,11 @@ Also, an error could be thrown when you tried to add an invalid query to a compo
 <!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
 
 In some cases, markers could disappear when a layer was enabled or disabled.
+
+#### DataMiner Cube - Alarm Console: Base alarm updates would not be shown when the active alarms tab was filtered [ID_35845]
+
+<!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
+
+In a filtered active alarms tab, in some cases, a base alarm will match the filter while the correlated alarm will not. In that case, the base alarm will be shown while the correlated alarm will not.
+
+However, up to now, when a base alarm was updated, the update would not be reflected in the Alarm Console until the filter was removed.
