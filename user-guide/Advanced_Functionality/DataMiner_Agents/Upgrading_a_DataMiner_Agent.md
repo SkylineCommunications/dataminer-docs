@@ -58,4 +58,4 @@ From DataMiner 9.6.0 \[CU24\]/10.0.0 \[CU16\]/10.1.0 \[CU5\]/10.1.8 onwards, if 
 Though this is not recommended, you can bypass this check by manually removing the *Prerequisites* folder from *Update.zip* in the upgrade package.
 
 > [!TIP]
-> For more information about BPA tests, see [Running BPA tests](xref:Running_BPA_tests) and [Preparing to upgrade a DataMiner System](xref:Preparing_to_upgrade_a_DataMiner_System).
+> For more information about BPA tests, see [Running BPA tests](xref:Running_BPA_tests) and [Preparing to upgrade a DataMiner Agent](xref:Preparing_to_upgrade_a_DataMiner_Agent).
