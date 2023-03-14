@@ -95,6 +95,12 @@ Also, an error could be thrown when you tried to add an invalid query to a compo
 
 In some cases, markers could disappear when a layer was enabled or disabled.
 
+#### DataMiner Cube - Alarm Console: It could take a long time for an active alarms tab to load on a system with a large number of masked alarms [ID_35843]
+
+<!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
+
+Due to a caching issue, on a system with a large number of masked alarms, in some cases, it could take a long time for an active alarms tab to load.
+
 #### DataMiner Cube - Alarm Console: Base alarm updates would not be shown when the active alarms tab was filtered [ID_35845]
 
 <!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->

@@ -44,7 +44,13 @@ When you had configured DataMiner Cube to connect using gRPC (by specifying `typ
 
 - In some cases, Cube would become unresponsive when retrieving the user thumbnail pictures. These will now be retrieved in the background.
 
-#### DataMiner Cube - Alarm Console: Base alarm updates would not be shown when the active alarms tab was filtered [ID_35845]
+#### Alarm Console: It could take a long time for an active alarms tab to load on a system with a large number of masked alarms [ID_35843]
+
+<!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
+
+Due to a caching issue, on a system with a large number of masked alarms, in some cases, it could take a long time for an active alarms tab to load.
+
+#### Alarm Console: Base alarm updates would not be shown when the active alarms tab was filtered [ID_35845]
 
 <!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
 
