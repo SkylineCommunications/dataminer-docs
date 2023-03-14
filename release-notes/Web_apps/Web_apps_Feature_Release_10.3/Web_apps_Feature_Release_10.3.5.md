@@ -70,6 +70,12 @@ When you duplicated a component, the size of the duplicate would incorrectly be 
 
 An error could occur when feeding data from a GQI component to a query that was used in the same component.
 
+#### Dashboards app: Problem when using the search box on a mobile device [ID_35825]
+
+<!-- MR 10.3.0 [CU2] - FR 10.3.5 -->
+
+When the *Dashboards* app was opened on a mobile device, an error could occur when you entered something in the search box.
+
 #### Dashboards app & Low-code apps - Form component: Problems with multiple-selection drop-down boxes [ID_35829]
 
 <!-- MR 10.3.0 [CU2] - FR 10.3.5 -->

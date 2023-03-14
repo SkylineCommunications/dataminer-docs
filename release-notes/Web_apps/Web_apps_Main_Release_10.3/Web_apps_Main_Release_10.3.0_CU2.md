@@ -38,6 +38,12 @@ GQI components would incorrectly not clear their query row feed when refetching 
 
 When you duplicated a component, the size of the duplicate would incorrectly be limited to 30 rows. From now on, when you duplicate a component, the duplicate will have the same size as the original.
 
+#### Dashboards app: Problem when using the search box on a mobile device [ID_35825]
+
+<!-- MR 10.3.0 [CU2] - FR 10.3.5 -->
+
+When the *Dashboards* app was opened on a mobile device, an error could occur when you entered something in the search box.
+
 #### Dashboards app & Low-code apps - Form component: Problems with multiple-selection drop-down boxes [ID_35829]
 
 <!-- MR 10.3.0 [CU2] - FR 10.3.5 -->
