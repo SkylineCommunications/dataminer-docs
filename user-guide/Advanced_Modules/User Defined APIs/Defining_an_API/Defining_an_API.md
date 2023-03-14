@@ -133,7 +133,7 @@ HTTP GET mydataminer.customer.local/api/custom/encoders/status
 **Requirements:**
 
 - The route should not start or end with a forward slash (`/`).
-- The route should be unique for each `ApiDefinition`. When saving, this will be automatically checked to prevent clashes.
+- The route should be unique for each `ApiDefinition`. When saving, this will be automatically checked to prevent clashes. Routes are case insensitive.
 
 > [!TIP]
 > It is recommended to keep the routes simple and straightforward. The website [restfulapi.net](https://restfulapi.net/resource-naming/) provides some great tips on this.
