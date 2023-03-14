@@ -2,7 +2,7 @@
 uid: DOM_Designer_Excel_config
 ---
 
-# Excel file configuration
+# Configuring the Excel file
 
 In this section, we will illustrate the Excel file configuration by means of an example.
 
@@ -14,9 +14,9 @@ The name of the Excel file to provision the DOM definition and module needs to b
 
 Everything in front of the ^ is the module name, and everything after the ^ is the definition name. Spaces are not allowed in the name.
 
-<!-- For example, in this case, the file name is TBD -->
+For example: `Channels^IPTVchannel.xlsx`
 
-## Fields tab
+## *fields* tab
 
 In the fields tab, you should define all fields with their data type for the object regardless of the state, for example:
 
@@ -55,7 +55,7 @@ These are the columns in this tab:
 
 - **View Filter**: This is an optional column for the element field type. It specifies an optional filter to filter out elements from a specific view.
 
-## form_stateName tab
+## *form_stateName* tab
 
 For each possible state, you should have a corresponding tab titled form_*stateName*. For example, you could make a tab *form_Not active* and a tab *form_Validated*, each describing the following information for the different fields of the object in that state:
 
@@ -82,7 +82,36 @@ For example:
 | Email | yes | read-write | no |
 | Cell phone number | yes | read-write | no |
 
+## *states* tab
 
-## DOM instance naming
+The states tab describes all transitions that are possible between states.
 
-In DOM it is possible to define a name for each record or instance. The Excel tool automatically picks the value of the first field as the name.
+In the example below, it is possible to go from the state *Not active* to *Validated* and from the state *Validated* to *Not active*.
+
+| Transitions | Not active | Validated |
+|--|--|--|
+| Not active | no | yes |
+| Validated | yes | no |
+
+## *buttons* tab
+
+It is possible to add buttons to a DOM form that will trigger an Automation script to add custom logic or automation to your object. These are configured in this tab.
+
+In the example below, two buttons are configured. The first is only shown when an object is in the *Not active* state, and the second is only shown in the *Validated* state. The Automation script gets the context of which button is selected, so you can combine all logic from your buttons in the same script.
+
+| Button | Script Name | Tooltip | Not active | Validated |
+|--|--|--|--|--|
+| Validate | People DOM button script |  | yes | no |
+| Set as not active | People DOM button script |  | no | yes |
+
+## *events* tab
+
+Not only buttons can trigger an Automation script. You can also have a script triggered by each CRUD (Create, Read, Update, and Delete) action for an object. This is defined in the events tab.
+
+For example:
+
+| Action | Script Name|
+|--|--|
+| create | People CRUD script |
+| delete | People CRUD script |
+| update | People CRUD script |

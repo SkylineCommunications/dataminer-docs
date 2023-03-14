@@ -1844,18 +1844,20 @@
               topicUID: DOM_status_system_example
             - name: Altering values of a DomInstance - examples
               topicUID: DOM_Altering_values_of_a_DomInstance
-        - name: DOM Designer
-          topicUID: DOM_Designer
+        - name: DOM DevOps tools
+          topicUID: DOM_DevOps_tools
           items:
-            - name: DOM Designer installation
-              topicUID: DOM_Designer_installation
-            - name: Editing via Excel
+            - name: DOM DevOps tools installation
+              topicUID: DOM_DevOps_installation
+            - name: Using the DOM Designer
               topicUID: DOM_Designer_Excel
               items:
-                - name: Excel file configuration
+                - name: Configuring the Excel file
                   topicUID: DOM_Designer_Excel_config
+                - name: Deploying the Excel file
+                  topicUID: DOM_Designer_Excel_deployment
             - name: Using the DOM Editor
-              topicUID: DOM_Designer_DOM_editor
+              topicUID: DOM_editor
     - name: Experience and Performance Management
       topicUid: EPM
       items:
