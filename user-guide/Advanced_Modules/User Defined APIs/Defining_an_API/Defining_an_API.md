@@ -48,7 +48,7 @@ The entrypoint method has two parameters. The IEngine object can be used to inte
 |RequestMethod  |RequestMethod             |Contains the HTTP method of the request. See [RequestMethod](#requestmethod).|
 |Route          |string                    |The suffix of the URL where this API call is triggered on. See the [ApiDefinition](xref:UD_APIs_Objects_ApiDefinition#route) page. Having this available makes it possible to reuse a script.|
 |RawBody        |string                    |Contains the full body of the HTTP request as a string. This can be deserialized and used in the script.|
-|Parameters     |`Dictionary<string, string>`|Contains the deserialized parameters if you select 'Parse JSON of raw body to dictionary' when configuring the API. See below.(TODO)|
+|Parameters     |`Dictionary<string, string>`|Contains the deserialized parameters if you select 'Parse JSON of raw body to dictionary' when configuring the API. See [creating the ApiDefinition(s)](#2-creating-the-apidefinitions)|
 
 #### RequestMethod
 
@@ -100,7 +100,7 @@ You can reflect the status of the API trigger request with the `ResponseCode` pr
 |Created            |201  |The request succeeded, and a new resource was created as a result.|
 |Accepted           |202  |The request was received, but not executed yet. Could be used for long running async actions.|
 |NoContent          |204  |There is no content to return for the request, but the request did succeed.|
-|BadRequest         |400  |Something went wrong user side e.g. wrong parameters.|
+|BadRequest         |400  |There was a client error e.g. wrong parameters.|
 |NotFound           |404  |The requested document was not found.|
 |MethodNotAllowed   |405  |The HTTP method is not valid for this request. For example `DELETE` is used while `GET` was expected.|
 |InternalServerError|500  |Return this if something went wrong in your automation script, e.g. you try to write to a file, but the file is in use by another application.|

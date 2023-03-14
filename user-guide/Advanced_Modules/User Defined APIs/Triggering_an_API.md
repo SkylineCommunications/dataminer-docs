@@ -69,7 +69,7 @@ An API can expect input. This input is passed in the body. The format of the inp
 
 ### The response
 
-The API returns an HTTP status code indicating the status of the request and a body. In case some input from the user is missing, or the user sends a request with a wrong HTTP method. The API can return an HTTP status code indicating the error and a body with more information. The endpoint itself can also return errors with corresponding status code to indicate something went wrong. See below.
+The API returns an HTTP status code indicating the status of the request and a body. In case some input from the user is missing, or the user sends a request with a wrong HTTP method, the API will return an HTTP status code indicating the error and a json body with more information. The endpoint itself can also return errors with corresponding status code to indicate something went wrong before the script was executed. See below.
 
 The API will always return responses encoded in UTF-8.
 
