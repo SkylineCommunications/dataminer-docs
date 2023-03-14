@@ -114,3 +114,17 @@ You can specify the following advanced settings. However, these are not mandator
 - **From**: A custom “From” address that will override the default “From” address specified in the DataMiner Agent interface.
 
   Example: *\<From>address@example.com\</From>*
+  
+## Example of SMTP server configuration
+
+The example below shows how the SMTP element in DataMiner.xml should be configured.
+
+```xml
+<SMTP>
+  <Host>smtp.mail.com</Host>
+  <HostPort>587-starttls</HostPort>
+  <LoginMethod>AuthLoginMethod</LoginMethod>
+  <User>MyMailName@mail.com</User>
+  <Password>MyMailPassword</Password>
+</SMTP>
+```
