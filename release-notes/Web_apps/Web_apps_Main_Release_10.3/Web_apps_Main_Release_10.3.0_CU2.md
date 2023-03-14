@@ -46,6 +46,14 @@ When a form component contained multiple-selection drop-down boxes, it would loa
 
 Also, when a multiple-selection drop-down field of a DOM instance was added to a form component, the current values preloaded into the field as placeholders would incorrectly not get removed once the data was loaded, causing the drop-down field to contain duplicate values.
 
+#### Dashboards app: A table component could appear to be empty when you rapidly switched between visualizations [ID_35831]
+
+<!-- MR 10.3.0 [CU2] - FR 10.3.5 -->
+
+In some cases, a table component could appear to be empty when you rapidly switched between visualizations.
+
+Also, an error could be thrown when you tried to add an invalid query to a component.
+
 #### Dashboards app & Low-code apps: Text boxes in the Layout tab would not update when you selected another component [ID_35851]
 
 <!-- MR 10.3.0 [CU2] - FR 10.3.5 -->

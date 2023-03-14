@@ -80,7 +80,7 @@ Also, when a multiple-selection drop-down field of a DOM instance was added to a
 
 #### Dashboards app: A table component could appear to be empty when you rapidly switched between visualizations [ID_35831]
 
-<!-- MR 10.4.0 - FR 10.3.5 -->
+<!-- MR 10.3.0 [CU2] - FR 10.3.5 -->
 
 In some cases, a table component could appear to be empty when you rapidly switched between visualizations.
 
