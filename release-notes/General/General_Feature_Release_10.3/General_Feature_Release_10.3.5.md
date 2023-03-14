@@ -50,6 +50,12 @@ Up to now, SLAnalytics only took into account changes to alarm templates that we
 
 From now on, SLAnalytics will also take into account first-time alarm template assignments.
 
+#### Business Intelligence: Enhancements with regard to the retrieval of data from logger tables and to general error handling [ID_35820]
+
+<!-- MR 10.4.0 - FR 10.3.5 -->
+
+A number of enhancements have been made to the Business Intelligence module, especially with regard to the retrieval of data from logger tables and to general error handling.
+
 ### Fixes
 
 #### SLLogCollector: Problem when collecting multiple memory dumps with the 'Now and when memory increases with X Mb' option [ID_35617]
