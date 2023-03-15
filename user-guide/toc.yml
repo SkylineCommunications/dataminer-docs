@@ -3010,7 +3010,7 @@
           topicUID: KI_Unavailable_system_database_after_DataMiner_server_reboot
         - name: Upgrade error - api-ms-win-crt-stdio-l1-1-0.dll is missing
           topicUID: KI_Upgrade_error_api-ms-win-crt-stdio-l1-1-0_dll_is_missing
-        - name: GenIf folder grows in size taking up disk space
+        - name: GenIf folder takes up too much disk space
           topicUID: KI_GenIf_Folder_Growing_In_Size
     - name: Customer DataMiner Reporting (CDMR)
       topicUID: CDMR

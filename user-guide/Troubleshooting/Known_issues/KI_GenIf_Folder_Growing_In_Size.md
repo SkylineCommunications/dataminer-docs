@@ -2,20 +2,22 @@
 uid: KI_GenIf_Folder_Growing_In_Size
 ---
 
-# GenIf folder grows in size taking up disk space
+# GenIf folder takes up too much disk space
 
 ## Affected versions
 
-All DataMiner versions
+From DataMiner 10.1.0/10.0.13 onwards.
 
 ## Cause
 
-GenIf(now called GQI) can have a manually created folder in C:\\Skyline DataMiner\\Logging, called GenIf created for debug purposes.
-
-It makes a recording of each GQI request in this folder so if you open dashboards and low-code apps a lot with GQI queries, this folder will grow in size and so taken up disk space.
+To investigate issues, a `GenIf` folder can be manually added in the folder `C:\Skyline DataMiner\Logging`. A recording of each GQI request is then created in this folder, but these recordings do not get removed over time. This means that folder will keep growing in size and taking up disk space, which will be especially noticeable if you often open dashboards or apps with many GQI queries.
 
 ## Fix
 
-Manually remove this folder to disable recordings, or clean it up automatically(via Automation or another tool). There is also a [task](https://collaboration.dataminer.services/task/207347) to limit it's size.
+As soon as you no longer need the `GenIf` folder for debugging, remove this folder.
 
-We also refer to the following [Dojo question](https://community.dataminer.services/question/logging-can-i-clean-the-content-of-the-genif-folder/?hilite=genif)
+If you do wish to keep the folder, make sure it gets cleaned up automatically using Automation or another tool.
+
+## Issue description
+
+The `C:\Skyline DataMiner\Logging\GenIf` folder keeps on growing in size and takes up a lot of disk space.
