@@ -95,6 +95,12 @@ SLProtocol would interpret signed numbers incorrectly, causing parameters to dis
 
 Events generated after detecting change points of type "flatline" in trend data of child DVE elements would incorrectly be cleared automatically.
 
+#### SLAnalytics - Behavioral anomaly detection: Every parameter included in an alarm template would incorrectly be considered a monitored parameter [ID_35832]
+
+<!-- MR 10.4.0 - FR 10.3.5 -->
+
+SLAnalytics would incorrectly consider every parameter included in an alarm template to be a monitored parameter, even it is was not being monitored.
+
 #### DataMiner Maps: Markers could disappear when a layer was enabled or disabled [ID_35838]
 
 <!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
