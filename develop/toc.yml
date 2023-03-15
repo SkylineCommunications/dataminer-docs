@@ -5092,7 +5092,7 @@
   topicUid: CICD
   items:
   - name: CI/CD using GitHub
-    topicUid: github_starter_workflows
+    topicUid: CICD_on_GitHub
     items:
     - name: GitHub starter workflows
       topicUid: github_starter_workflows
@@ -5115,7 +5115,7 @@
     - name: Deploying from GitLab
       topicUid: Deploying_Automation_scripts_from_a_GitLab_repository
   - name: CI/CD at Skyline Communications
-    topicUid: migration_from_gerrit_to_github
+    topicUid: CICD_at_Skyline
     items:
     - name: CI/CD Skyline Communications GitHub
       topicUid: migration_from_gerrit_to_github
