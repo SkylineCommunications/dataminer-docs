@@ -17,6 +17,35 @@ uid: General_Feature_Release_10.3.5
 
 ## Other features
 
+#### GQI: New 'ThenSort' query node allows sorting by multiple columns [ID_35807]
+
+<!-- MR 10.4.0 - FR 10.3.5 -->
+
+To make sorting more intuitive, the new *ThenSort* node can now be used in combination with the *Sort* node.
+
+Up to now, all sorting had to be configured by means of *Sort* nodes. For example, if you wanted to first sort by column A and then by column B, you had to create a query in the following counter-intuitive way:
+
+1. Data source
+1. Sort by B
+1. Sort by A
+
+or
+
+1. Query X (i.e. Data Source, sorted by B)
+1. Sort by A
+
+From now on, you can create a query in a much more intuitive way. For example, if you want to first sort by column A and then by column B, you can now create a query in the following way:
+
+1. Data source
+1. Sort by A
+1. Then sort by B
+
+Note that, from now on, every *Sort* node will nullify any preceding *Sort node*. For example, in the following query, the *Sort by B* node will be nullified by the *Sort by A* node, meaning that the result set will only be sorted by column A.
+
+1. Data source
+1. Sort by B
+1. Sort by A
+
 ## Changes
 
 ### Enhancements
