@@ -5318,8 +5318,8 @@
           topicUid: Consuming_NuGet
         - name: Producing NuGet packages
           topicUid: Producing_NuGet
-        - name: Middleware packages
-          topicUid: Nuget_communication_Middleware
+        - name: Middleware NuGet packages
+          topicUid: Nuget_Communication_Middleware
         - name: Assembly binding
           topicUid: Assembly_Binding
           items:

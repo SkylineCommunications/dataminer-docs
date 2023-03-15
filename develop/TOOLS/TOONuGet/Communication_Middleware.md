@@ -2,11 +2,11 @@
 uid: Nuget_Communication_Middleware
 ---
 
-# Communication middleware packages
+# Middleware NuGet packages
 
 ## Introduction
 
-DataMiner version 10.2.8 enables consuming packages that use external communication, with fewer limitations. However, connection configuration is currently not part of the element configuration card and transferred data is not visible in streamviewer. Asynchronous data setting is no longer an issue, and connection cleanup when the element is stopped is now possible. With this in mind, we expect to see packages that provide OpenConfig, Prometheus, or Ember+ external communication.
+DataMiner version 10.2.8 enables consuming packages that use external communication, with fewer limitations. However, connection configuration is currently not part of the element configuration card and transferred data is not visible in streamviewer. Asynchronous data setting is no longer an issue, and connection cleanup when the element is stopped is now possible. With this in mind, we expect to see packages that provide OpenConfig, Prometheus, or Ember+ external communication. As these packages bridge the communication api with our scripting environments, we refer to them as middleware packages.
 
 Known packages:
 * Skyline.DataMiner.Core.OpenConfig.Gnmi

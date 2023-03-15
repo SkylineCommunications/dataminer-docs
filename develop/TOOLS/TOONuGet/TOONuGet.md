@@ -16,4 +16,6 @@ Within Skyline, we also use an internal NuGet server: <https://devcore3/nuget>.
 
 - [Producing NuGet](xref:Producing_NuGet)
 
+- [Middleware NuGet packages](xref:Nuget_Communication_Middleware)
+
 - [Assembly binding](xref:Assembly_Binding)
