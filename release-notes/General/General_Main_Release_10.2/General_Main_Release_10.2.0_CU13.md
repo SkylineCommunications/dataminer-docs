@@ -388,6 +388,12 @@ A number of enhancements have been made to the Business Intelligence module, esp
 
 When you opened a visual overview in a web app, in some cases, the web app could become unresponsive.
 
+#### Dashboards app: Multiple parameter feeds would incorrectly have their 'group by' reset when a PDF was generated [ID_35866]
+
+<!-- MR 10.2.0 [CU13]/10.3.0 [CU2] - FR 10.3.5 -->
+
+When you generated a PDF of a dashboard that contained multiple parameter feeds, a multiple parameter feed with a "group by" applied would incorrectly have that "group by" reset to the value that was configured in its settings.
+
 #### Web apps: Certain icons would incorrectly not be displayed [ID_35877]
 
 <!-- MR 10.2.0 [CU13]/10.3.0 [CU2] - FR 10.3.5 -->

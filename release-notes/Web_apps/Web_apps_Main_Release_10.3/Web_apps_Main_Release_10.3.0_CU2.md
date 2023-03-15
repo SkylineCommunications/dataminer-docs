@@ -74,7 +74,7 @@ When, in the *Layout* tab, a text box (e.g. the box containing the title of the 
 
 #### Dashboards app: Multiple parameter feeds would incorrectly have their 'group by' reset when a PDF was generated [ID_35866]
 
-<!-- MR 10.3.0 [CU2] - FR 10.3.5 -->
+<!-- MR 10.2.0 [CU13]/10.3.0 [CU2] - FR 10.3.5 -->
 
 When you generated a PDF of a dashboard that contained multiple parameter feeds, a multiple parameter feed with a "group by" applied would incorrectly have that "group by" reset to the value that was configured in its settings.
 
