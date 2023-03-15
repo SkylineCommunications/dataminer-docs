@@ -92,6 +92,12 @@ In some cases, a table component could appear to be empty when you rapidly switc
 
 Also, an error could be thrown when you tried to add an invalid query to a component.
 
+#### Web apps: Problem when opening a visual overview [ID_35841]
+
+<!-- MR 10.2.0 [CU13]/10.3.0 [CU2] - FR 10.3.5 -->
+
+When you opened a visual overview in a web app, in some cases, the web app could become unresponsive.
+
 #### Dashboards app & Low-code apps: Text boxes in the Layout tab would not update when you selected another component [ID_35851]
 
 <!-- MR 10.3.0 [CU2] - FR 10.3.5 -->
