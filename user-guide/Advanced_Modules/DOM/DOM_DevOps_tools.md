@@ -9,14 +9,14 @@ The DOM DevOps tools allow you to create and update DOM models in a more graphic
 > [!NOTE]
 > These tools have been created by developers for developers. We have made them available in case this could be useful, but they are currently by no means complete tools.
 
-The [**DOM Designer**](xref:DOM_Designer_Excel) allows you to make quick edits by means of an Excel file. It only supports a limited set of actions:
+The [**DOM Designer**](xref:DOM_Designer) allows you to make quick edits by means of an Excel file. It only supports a limited set of actions:
 
 - Adding fields
 - Changing the behavior of fields in a certain state
 - Adding buttons
 - Adding states if no instances exist of the DOM model
 
-For more advanced changes, you will need to use the [**DOM Editor**](xref:DOM_editor) instead. For example:
+For more advanced changes, you will need to use the [**DOM Editor**](xref:DOM_Editor) instead. For example:
 
 - Changing the name of a field
 - Deleting a field

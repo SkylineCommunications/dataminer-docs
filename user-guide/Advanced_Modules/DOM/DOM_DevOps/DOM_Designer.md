@@ -1,5 +1,5 @@
 ---
-uid: DOM_Designer_Excel
+uid: DOM_Designer
 ---
 
 # Using the DOM Designer
