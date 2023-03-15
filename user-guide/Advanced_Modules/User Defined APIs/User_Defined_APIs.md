@@ -58,7 +58,7 @@ To find how to change the settings and find the logging of this extension module
 
 ## Information events
 
-Information events are generated for every create, update and delete action for an ApiToken or ApiDefinition.
+Information events (on parameter 64650 with name "User-defined APIs") are generated for every create, update and delete action for an ApiToken or ApiDefinition.
 
 The information event message includes the user doing the action, the object ID, in case of a token the object name and in case of a definition the route. For example:
 
