@@ -13,7 +13,7 @@ The User Defined APIs feature allows users to define API calls that will be made
 
 In System Center in Cube, you can manage your APIs and tokens in the User-Defined APIs tab.
 
-> [!WARNING]
+> [!IMPORTANT]
 >- This tab will replace the obsolete API deployment tab in the future, so make sure to move your old APIs from API deployment to the new feature. How to create APIs from existing scripts is explained on the [using an existing script page](xref:UD_APIs_Using_existing_scripts).
 >- The UI is not visible by default as the feature is not released yet.
 
