@@ -257,3 +257,9 @@ When data from one table was fed to another table, in some cases, the "loading" 
 <!-- MR 10.4.0 - FR 10.3.5 -->
 
 An error could occur when feeding data from a GQI component to a query that was used in the same component.
+
+#### Dashboards app & Low-code apps - Table component: A collapsed group would incorrectly expand when new data was loaded into the table [ID_35856]
+
+<!-- MR 10.4.0 - FR 10.3.5 -->
+
+When, in a table component, the data was grouped by two different parameters, in some cases, a collapsed group would incorrectly expand when new data was loaded into the table.
