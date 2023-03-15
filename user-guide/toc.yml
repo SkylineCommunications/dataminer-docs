@@ -1867,6 +1867,8 @@
                   topicUID: DOM_editor_changing_field_name
                 - name: Deleting a field
                   topicUID: DOM_editor_deleting_field
+                - name: Deleting a section
+                  topicUID: DOM_editor_deleting_section
                 - name: Adding a button
                   topicUID: DOM_editor_adding_button
                 - name: Naming a DOM instance
