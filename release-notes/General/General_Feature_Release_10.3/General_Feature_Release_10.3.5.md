@@ -46,6 +46,10 @@ Note that, from now on, every *Sort* node will nullify any preceding *Sort node*
 1. Sort by B
 1. Sort by A
 
+> [!NOTE]
+> The behavior of existing queries (using e.g. *Sort by B* followed by *Sort by A*) will not be altered in any way. Their syntax will automatically be adapted when they are migrated to the most recent GQI version.
+> For example, an existing query using *Sort by B* followed by *Sort by A* will use *Sort by A* followed by *Then sort by B* after being migrated.
+
 ## Changes
 
 ### Enhancements

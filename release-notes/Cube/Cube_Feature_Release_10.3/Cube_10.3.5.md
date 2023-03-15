@@ -44,12 +44,6 @@ When you had configured DataMiner Cube to connect using gRPC (by specifying `typ
 
 - In some cases, Cube would become unresponsive when retrieving the user thumbnail pictures. These will now be retrieved in the background.
 
-#### System Center: Upgrade process seemed to hang for a while [ID_35840]
-
-<!-- MR 10.3.0 [CU2] - FR 10.3.5 -->
-
-When upgrading a DataMiner Agent via System Center, in some cases, the upgrade process seemed to hang for a while after having reached step 4/32.
-
 #### Alarm Console: It could take a long time for an active alarms tab to load on a system with a large number of masked alarms [ID_35843]
 
 <!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
