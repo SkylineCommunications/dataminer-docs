@@ -13,7 +13,10 @@ In Gerrit, you can see whether the CI/CD pipeline for your development succeeded
 
 If the pipeline succeeded, Jenkins will provide a +1 vote for the Jenkins tag.
 
-Gerrit is also used to perform a code review. For more information about code reviews, refer to the FAQs:
+Gerrit can also be used to perform a code reviews.
+However, note this is not a must as there are other alternatives for Code Reviews such as using VS Compare Commits feature, etc.
+Using Gerrit for code reviews even has the downside of forcing us to squash all the commits which can, in some cases, cause your GIT client to get confused about unexisting conflicts.
+For more information about Gerrit code reviews, refer to the FAQs:
 
 - [I have finished development of a feature and want this to get reviewed. How do I do this?](xref:FAQ#i-have-finished-development-of-a-feature-and-want-this-to-get-reviewed-how-do-i-do-this)
 
