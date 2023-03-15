@@ -12,4 +12,4 @@ uid: Part5StandardApps
 
 - [DataMiner PTP app](xref:SolPTP)
 
-- [Service & Resource Management Framework](xref:srm_index)
+- [Service & Resource Management Framework](xref:About_SRM)

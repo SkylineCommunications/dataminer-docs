@@ -28,9 +28,66 @@ If you do not want the alarm property value to be added to the correlation alarm
 > [!WARNING]
 > Always be extremely careful when using the *SLNetClientTest* tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
 
+#### GQI - Ad hoc data source: Sending and receiving DMS messages [ID_35701]
+
+<!-- MR 10.4.0 - FR 10.3.4 -->
+
+Ad hoc data sources can now retrieve data by means of DMS messages.
+
+To do so, the `IGQIDataSource` must implement the `IGQIOnInit` interface, of which the `OnInit` method can also be used to initialize a data source:
+
+```csharp
+OnInitOutputArgs OnInit(OnInitInputArgs args)
+```
+
+When passed to the `OnInit` method, `OnInitInputArgs` can now contain the following new property:
+
+```csharp
+GQIDMS DMS
+```
+
+The `GQIDMS` class contains the following methods, which can be used to request information in the form of `DMSMessage` objects:
+
+| Method | Function |
+|--------|----------|
+| `DMSMessage SendMessage(DMSMessage message)` | Sends a request that expects a single response. |
+| `DMSMessage[] SendMessages(params DMSMessage[] messages)` | Sends multiple requests at once, or sends a request that expects multiple responses. |
+
+The `GQIDMS` object is only generated when the property is used.
+
+Generally, an ad hoc data source implementation will want to add a private field where it can store the `GQIDMS` object to be used later in other callbacks when columns and rows are created.
+
+> [!IMPORTANT]
+> DMS messages are subject to change without notice. If you can implement an alternative using the DataMiner UI or the automation options provided in DataMiner Automation, we highly recommend that you do so instead.
+
 ## Changes
 
 ### Enhancements
+
+#### SLXML no longer used to read out element data [ID_33515] [ID_33616] [ID_33625] [ID_33659]
+
+<!-- MR 10.4.0 - FR 10.3.4 -->
+
+From now on, SLXML will no longer be used to read out the following files containing element data:
+
+- *Element.xml* files
+- *ElementData.xml* files
+- *EPMConfig.xml* files
+- *Description.xml* files
+- *Ports.xml* files
+
+> [!IMPORTANT]
+> This is a breaking change. Make sure that none of the protocols in your system is using the following deprecated Notify types:
+>
+> - DMS_GET_INFO
+> - DMS_GET_INFO_ALL
+> - NT_ADD_DESCRIPTION_FILE
+> - NT_GET_ITEM_DATA
+> - NT_GET_PARAMETER_BY_DATA
+> - NT_GET_XML_COOKIE
+> - NT_RELOAD_ELEMENT
+> - NT_SET_ITEM_DATA
+> - NT_SET_PARAMETER_BY_DATA
 
 #### Enhanced performance when creating or editing services [ID_35366]
 
@@ -68,6 +125,12 @@ Because of a number of enhancements, overall performance has increased when fetc
 <!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
 
 From now on, focus value updates will no longer be taken into account when determining whether the *Maximum group event rate* was exceeded.
+
+#### SLAnalytics will now send regular notifications instead of client notifications [ID_35591]
+
+<!-- MR 10.4.0 - FR 10.3.4 -->
+
+Up to now, when SLAnalytics sent a notification, it would generate an event of type *client notification* with parameter ID 64574. From now on, it will instead generate an event of type *notification* with parameter ID 64570.
 
 #### DataMiner upgrade: Additional prerequisite will now check for incompatible connectors [ID_35605]
 
@@ -243,6 +306,12 @@ Example:
 
 The display value of an empty cell of type *double* would incorrectly be set to a "0" string. From now on, it will be set to an empty string instead.
 
+#### SLElement could leak memory when updating alarm templates containing conditions [ID_35728]
+
+<!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.4 -->
+
+In some cases, SLElement could leak memory when updating alarm templates containing conditions.
+
 #### SLAnalytics - Automatic incident tracking: Problem when starting up [ID_35731]
 
 <!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
@@ -257,18 +326,18 @@ After a DataMiner restart, suggestion alarms would incorrectly be re-evaluated a
 
 #### Memory leak in SLAnalytics [ID_35758]
 
-<!-- MR 10.3.0 [CU1] - FR 10.3.4 -->
+<!-- MR 10.2.0 [CU14]/10.3.0 [CU1] - FR 10.3.4 -->
 
 In some cases, SLAnalytics kept on waiting on a database call, which eventually led to the process leaking memory.
-
-#### Problem with SLPort when an element with a serial connection was restarted [ID_35773]
-
-<!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
-
-In some cases, an error could occur in SLPort when an element with a serial connection was restarted.
 
 #### Problem with SLElement when creating an alarm with an 'SLA Affecting' property [ID_35776]
 
 <!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
 
 In some rare cases, an error could occur in SLElement when creating an alarm with an *SLA Affecting* property.
+
+#### Input/output values of a matrix element would incorrectly be overridden due to a caching issue [ID_35857]
+
+<!-- MR 10.4.0 - FR 10.3.4 [CU0] -->
+
+When an ElementProtocol object was being created, due to a caching issue in SLNet, the input/output values stored in the protocol of a matrix element would incorrectly be overridden with the input/output values in the ElementProtocol object that was being created.

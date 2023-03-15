@@ -60,7 +60,7 @@ This also means that a ListView component configured to list bookings will by de
 
 #### Database TTL settings will now be limited to 10 years [ID_35533]
 
-<!-- MR 10.4.0 - FR 10.3.4 -->
+<!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.4 -->
 
 From now on, DataMiner Cube will no longer accept database TTL settings that exceed 10 years.
 
@@ -75,6 +75,14 @@ When, in DataMiner Cube, you select *Help* in the user menu or the *Apps* pane, 
 <!-- MR 10.3.0 [CU1] - FR 10.3.4 -->
 
 Because of a number of enhancements made with regard to the retrieval of overrides for parameter values, overall performance has increased when opening the *Profiles* tab of the *Services* app.
+
+#### Automation script editor: Intellisense added for timeUpDownConfig.ShowTimeUnits [ID_35672]
+
+<!-- MR 10.4.0 - FR 10.3.4 -->
+
+In the Automation script editor, Intellisense has been added for the new `timeUpDownConfig.ShowTimeUnits` property.
+
+This property is only applied in interactive Automation scripts that are launched from a web app.
 
 #### System Center - Agents: Clearer restart warning before an upgrade is started [ID_35687]
 

@@ -237,3 +237,9 @@ Skyline.DataMiner.Web.Common.v1.Utilities.UTCToDateTimeUTC(long)' has some inval
 <!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
 
 GQI queries containing float or GUID values would not get migrated correctly.
+
+#### Dashboards app & Low-code apps - Query builder: Problem when linking a feed component to an argument of an ad hoc data source [ID_35808]
+
+<!-- MR 10.3.0 [CU1] - FR 10.3.4 [CU0] -->
+
+When a feed component was linked to an argument of an ad hoc data source, in some cases, the feed would not work correctly.

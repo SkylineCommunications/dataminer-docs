@@ -67,7 +67,7 @@ Typical initiatives initiated and leveraged throughout the DataMiner DevOps Enab
 
   DIS is designed as a plugin for MS Visual Studio and comes fully integrated with industry-standard code repositories and the DataMiner CI/CD Services to support collaborative, iterative development (terms & conditions apply).
 
-- **DataMiner CI/CD Services**: [DataMiner CI/CD Services](xref:DevelopmentWithCICD) provide a professional industry-standard CI/CD framework, compatible with common source repositories, as well as other common third-party CI solutions, facilitating highly efficient, collaborative continuous development with a team of DataMiner DevOps Professionals (terms & conditions apply).
+- **DataMiner CI/CD Services**: [DataMiner CI/CD Services](xref:CICD) provide a professional industry-standard CI/CD framework, compatible with common source repositories, as well as other common third-party CI solutions, facilitating highly efficient, collaborative continuous development with a team of DataMiner DevOps Professionals (terms & conditions apply).
 
 - **Documentation**: DataMiner comes with comprehensive, continuously updated online documentation, publicly available on [GitHub](https://github.com/SkylineCommunications/dataminer-docs), supporting [collaborative continuous authoring](xref:contributing) by the entire global community of DataMiner DevOps Professionals, resulting in a high-quality, ever-expanding knowledge base.
 

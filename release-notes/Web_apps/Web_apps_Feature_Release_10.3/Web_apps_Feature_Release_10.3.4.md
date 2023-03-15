@@ -22,7 +22,7 @@ uid: Web_apps_Feature_Release_10.3.4
 
 In the configuration settings of a dashboard or a page/panel of a low-code app, you can now find the *Lazy load components* setting.
 
-When this settings is enabled, the components on the dashboard or the page/panel of the low-code app will only be initialized the first time they appear on the screen. This will considerably shorten the initial load time and enhance overall performance of large dashboards and large pages/panels of low-code apps.
+When this setting is enabled, the components on the dashboard or the page/panel of the low-code app will only be initialized the first time they appear on the screen. This will considerably shorten the initial load time and enhance overall performance of large dashboards and large pages/panels of low-code apps.
 
 > [!NOTE]
 >
@@ -48,7 +48,7 @@ A line & area chart component now has a number of time range buttons that allow 
 - 5y (last 5 years)
 
 > [!NOTE]
-> In the *Dashboards* app, these time range buttons are disabled by default. When configuring the component, uou can enable them by selecting the *Show time range buttons* option in the *Component > Layout > Styling and Information* tab.
+> In the *Dashboards* app, these time range buttons are disabled by default. When configuring the component, you can enable them by selecting the *Show time range buttons* option in the *Component > Layout > Styling and Information* tab.
 
 #### Web apps: New action 'Open monitoring card' [ID_35661]
 
@@ -77,6 +77,12 @@ Up to now, these values were always displayed in UTC.
 
 > [!TIP]
 > See also: [Setting the default time zone for DataMiner web apps](xref:ClientSettings_json#setting-the-default-time-zone-for-dataminer-web-apps)
+
+#### Dashboards app: Feeds listing parameters of EPM objects will now also list the parameters of the enhanced elements linked to those EPM objects [ID_35562]
+
+<!-- MR 10.4.0 - FR 10.3.4 -->
+
+When an EPM feed is used to feed EPM identifiers to a parameter feed, it will now also list the parameters of the enhanced elements that are linked to the EPM objects.
 
 #### Dashboards app - GQI: Improvements to 'Get parameter relations' data source [ID_35589] [ID_35602]
 
@@ -111,6 +117,12 @@ New description of the *GetAlarmHistory* method:
 New description of the *GetAlarmDetails* method:
 
 > Get the alarm details for the specified alarm (use GetAlarmHistory for the details of a cleared non-root alarm).
+
+#### Monitoring app: Trending page of a parameter no longer has a sidebar [ID_35705]
+
+<!-- MR 10.4.0 - FR 10.3.4 -->
+
+In the *Monitoring* app, the *Trending* page of a parameter no longer has a sidebar.
 
 #### GQI: Clearer error message when querying a logger table without `RTDisplay=true` settings [ID_35706]
 
@@ -198,6 +210,12 @@ Clock components in a published low-code app would incorrectly only update when 
 
 The submenu in the subheader bar of a dashboard would incorrectly be displayed when it did not contain any visible items.
 
+#### Web apps: Color picker would not be positioned correctly [ID_35649]
+
+<!-- MR 10.4.0 - FR 10.3.4 -->
+
+The color picker would not be positioned correctly.
+
 #### Web apps: Problem when retrieving spectrum element parameters [ID_35660]
 
 <!-- MR 10.3.0 [CU1] - FR 10.3.4 -->
@@ -258,6 +276,12 @@ When a GQI was migrated, in some cases, the last nodes of the migrated query wou
 
 When you hovered over a segment of an edge, in some cases, an incorrect tooltip would appear.
 
+#### GQI: "Loading" indicator of a table would not disappear when that table was fed data from another table  [ID_35698]
+
+<!-- MR 10.4.0 - FR 10.3.4 -->
+
+When data from one table was fed to another table, in some cases, the "loading" indicator of the table to which data was fed would incorrectly not disappear.
+
 #### Dashboards app & Low-code apps - Query builder: Problem when linking a data source argument of type string to a query column of type GUID [ID_35700]
 
 <!-- MR 10.3.0 [CU1] - FR 10.3.4 -->
@@ -265,6 +289,12 @@ When you hovered over a segment of an edge, in some cases, an incorrect tooltip 
 When configuring an ad hoc data source in a GQI query, you can link the arguments of that ad hoc data source to a feed. However, in some cases, it would incorrectly not be possible to link an argument of type string to a query column of type GUID.
 
 Also, in the query builder, the `Link [argument name] to feed for [argument name]` command has been renamed to `Use feed for [argument name]`.
+
+#### Dashboards app: Sticky component menus would no longer be fully visible after you had changed the number of dashboard columns [ID_35702]
+
+<!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.4 -->
+
+Sticky component menus would no longer be fully visible after you had changed the number of dashboard columns.
 
 #### Dashboards app: 'Clear all' button would incorrectly also be displayed when the dashboard did not contain any feeds [ID_35709]
 
@@ -305,3 +335,15 @@ Skyline.DataMiner.Web.Common.v1.Utilities.UTCToDateTimeUTC(long)' has some inval
 <!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
 
 GQI queries containing float or GUID values would not get migrated correctly.
+
+#### Dashboards app & low-code apps: GQI components would incorrectly not clear their query row feed when refetching data [ID_35767]
+
+<!-- MR 10.3.0 [CU2] - FR 10.3.4 -->
+
+GQI components would incorrectly not clear their query row feed when refetching data.
+
+#### Dashboards app & Low-code apps - Query builder: Problem when linking a feed component to an argument of an ad hoc data source [ID_35808]
+
+<!-- MR 10.3.0 [CU1] - FR 10.3.4 [CU0] -->
+
+When a feed component was linked to an argument of an ad hoc data source, in some cases, the feed would not work correctly.

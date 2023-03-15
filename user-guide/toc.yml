@@ -99,6 +99,22 @@
               topicUid: Monitoring_app_Alarm_Console
             - name: Monitoring app card pane
               topicUid: Monitoring_app_card_pane
+              items:
+                - name: View cards
+                  topicUID: View_Cards
+                - name: Service cards
+                  topicUID: Service_Cards
+                - name: Element cards
+                  topicUID: Element_Cards
+                  items:
+                    - name: Trending page
+                      topicUID: Trending_Page
+                - name: Alarm cards
+                  topicUID: Alarm_Cards
+                - name: CPE cards
+                  topicUID: CPE_Cards
+                - name: Spectrum analyzer cards
+                  topicUID: Spectrum_Analyzer_Cards
         - name: The legacy Monitoring & Control app user interface
           topicUid: The_legacy_Monitoring_Control_app_user_interface
     - name: Ziine Demo System
@@ -970,6 +986,8 @@
               topicUID: BPA_Report_Active_RTE
             - name: SRM Function Resources Consistency
               topicUID: BPA_SRM_Function_Resources_Consistency
+            - name: Validate connectors
+              topicUID: BPA_Validate_Connectors
             - name: Verify Cloud DxM Version
               topicUID: BPA_Verify_Cloud_DxM_Version
             - name: View Recursion
@@ -1004,8 +1022,10 @@
         - name: Frequently asked questions about DMA Failover
           topicUid: Frequently_asked_questions_about_DMA_Failover
     - name: Databases
-      topicUid: databases
+      topicUid: Databases_about
       items:
+        - name: About databases
+          topicUID: Databases_about
         - name: Supported system data storage architectures
           topicUid: Supported_system_data_storage_architectures
           items:
@@ -2524,8 +2544,10 @@
             - name: Overview of the DataMiner PTP app UI
               topicUid: Overview_of_the_DataMiner_PTP_app_UI
     - name: Service & Resource Management Framework
-      topicUid: srm_index
+      topicUid: About_SRM
       items:
+      - name: About SRM
+        topicUID: About_SRM
       - name: SRM use cases
         topicUid: srm_use_cases
         items:
@@ -2771,8 +2793,13 @@
           topicUid: Viewing_info_on_deployments
         - name: Viewing information on shares
           topicUid: Viewing_info_on_shares
-    - name: DataMiner Teams bot
-      topicUid: DataMiner_Teams_bot
+    - name: DataMiner ChatOps
+      topicUid: ChatOps
+      items:
+        - name: DataMiner Teams bot
+          topicUid: DataMiner_Teams_bot
+        - name: Chat integration
+          topicUid: Microsoft_Teams_Chat_Integration
     - name: Advanced configuration
       topicUID: Custom_cloud_endpoint_configuration
       items:
@@ -2868,6 +2895,11 @@
               topicUid: Elements_logging
             - name: Changing the maximum size of DataMiner log files
               topicUid: Changing_the_maximum_size_of_DataMiner_log_files
+    - name: Troubleshooting flowcharts
+      topicUid: Troubleshooting_Flowcharts
+      items:
+        - name: Troubleshooting - Trending
+          topicUID: Troubleshooting_Trending
     - name: Troubleshooting procedures
       topicUid: Troubleshooting_procedures
       items:
@@ -2888,6 +2920,8 @@
     - name: Known issues
       topicUID: Known_issues
       items:
+        - name: Problem with booking automation and function DVE deactivation
+          topicUID: KI_SRM_booking_events_issue
         - name: SLPort deadlock when element with serial connection is restarted
           topicUID: KI_SLPort_deadlock_after_restart_serial_connection
         - name: Local user unable to access DMA after first reboot after installation

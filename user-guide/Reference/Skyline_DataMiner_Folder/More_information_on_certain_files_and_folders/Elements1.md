@@ -43,11 +43,6 @@ Several things can be configured in this file:
 
 - SNMP agent community strings are specified on element level with the *\<SNMPAgent>* tag. See [Configuring SNMP agent community strings](xref:Configuring_SNMP_agent_community_strings).
 
-- To customize how long average or real-time trending records have to be kept in the database for a particular element, you can add a *\<Trending>* tag, in the same way as in the file *MaintenanceSettings.xml*. Before you can make this change, you will need to stop DataMiner. After you have saved the changed file, restart DataMiner to implement the changes. For more information on this tag and its subtags, refer to [MaintenanceSettings.xml](xref:MaintenanceSettings_xml).
-
-    > [!NOTE]
-    > From DataMiner 9.6.0 \[CU1\]/9.6.3 onwards, this can be customized in DataMiner Cube instead. See [Specifying TTL overrides](xref:Specifying_TTL_overrides).
-
 ## Description.xml
 
 Every element on a DMA has its own *Description.xml* file. In that file, you can specify aliases for each of the parameters of that element.
@@ -70,4 +65,3 @@ Here is an example of a *Description.xml* file containing aliases for two parame
 
 > [!NOTE]
 > The *nextSpectrumId* attribute of the *\<Params>* tag holds the Parameter ID to be used when the next Monitor parameter has to be created. This ID will be a number in the 50000-59999 range.
->
