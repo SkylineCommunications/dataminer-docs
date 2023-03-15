@@ -70,3 +70,9 @@ A number of enhancements have been made to the Business Intelligence module, esp
 <!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
 
 In some cases, markers could disappear when a layer was enabled or disabled.
+
+#### SLAnalytics could keep on waiting indefinitely for large delete operations to finish [ID_35848]
+
+<!-- MR 10.3.0 [CU2] - FR 10.3.5 -->
+
+In some cases, SLAnalytics could keep on waiting indefinitely for large delete operations to finish.
