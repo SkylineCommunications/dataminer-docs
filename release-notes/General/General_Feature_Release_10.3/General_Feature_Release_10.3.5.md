@@ -21,6 +21,12 @@ uid: General_Feature_Release_10.3.5
 
 ### Enhancements
 
+#### Security enhancements [ID_35668]
+
+<!-- MR 10.4.0 - FR 10.3.5 -->
+
+A number of security enhancements have been made.
+
 #### SLAnalytics: A message will be added to the SLAnalytics.txt log file when no Cassandra database is present [ID_35748]
 
 <!-- MR 10.4.0 - FR 10.3.5 -->
