@@ -106,6 +106,6 @@ When you generated a PDF of a dashboard that contained multiple parameter feeds,
 
 #### Web apps: Certain icons would incorrectly not be displayed [ID_35877]
 
-<!-- MR 10.3.0 [CU2] - FR 10.3.5 -->
+<!-- MR 10.2.0 [CU13]/10.3.0 [CU2] - FR 10.3.5 -->
 
 In web apps, certain icons would incorrectly not be displayed.
