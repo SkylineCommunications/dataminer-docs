@@ -4,8 +4,6 @@ uid: DOM_Designer_Excel_config
 
 # Configuring the Excel file
 
-In this section, we will illustrate the Excel file configuration by means of an example.
-
 ## Name of the Excel file
 
 The name of the Excel file to provision the DOM definition and module needs to be in the following format:
@@ -23,9 +21,9 @@ In the fields tab, you should define all fields with their data type for the obj
 | SectionName | Name | Type | Default | Values | Tooltip | Linked DOM Module Name | Linked DOM Definition Name | ResourcePool Filter | View Filter |
 |---|---|---|---|---|---|---|---|---|---|
 | General information | Name contact | String |  |  |  |  |  |  |  |
-| General information | Role | Enum | Engineer/Operator/Technician/Planner/Technical Director/Cameraman |  |  |  |  |  |  |
-| General information | Experience | Enum | Junior/Senior/Principal |  |  |  |  |  |  |
-| General information | Team | Enum | IT/DOCSIS/Video/IP/General/Production |  |  |  |  |  |  |
+| General information | Role | Enum | Engineer/Operator/<br>Technician/Planner/<br>Technical Director/<br>Cameraman |  |  |  |  |  |  |
+| General information | Experience | Enum | Junior/Senior/<br>Principal |  |  |  |  |  |  |
+| General information | Team | Enum | IT/DOCSIS/Video/<br>IP/General/Production |  |  |  |  |  |  |
 | General information | Street address | String |  |  |  |  |  |  |  |
 | General information | City | String |  |  |  |  |  |  |  |
 | General information | ZIP | Int64 |  |  |  |  |  |  |  |
@@ -39,7 +37,7 @@ These are the columns in this tab:
 
 - **Name**: The name of the field. This is both the display name and the ID of the field.
 
-- **Type**: The data type of the DOM field, e.g. string, int, dateTime, etc.
+- **Type**: The data type of the DOM field, e.g. string, int, datetime, etc.
 
 - **Default**: Optional. This is the value that will be automatically entered in a field when a new record or instance is created. For example, in an address object, you can set the default value for the city field to "New York". When users add a record to the table, they can then either accept this value or enter the name of a different city.
 
@@ -57,7 +55,7 @@ These are the columns in this tab:
 
 ## *form_stateName* tab
 
-For each possible state, you should have a corresponding tab titled form_*stateName*. For example, you could make a tab *form_Not active* and a tab *form_Validated*, each describing the following information for the different fields of the object in that state:
+For each possible state, you should have a corresponding tab titled form_*stateName*. For example, you could make a tab *form_Not active* and a tab *form_Validated*, each describing the following information for the different fields of the object in these respective states:
 
 - **Name**: The name of the field.
 

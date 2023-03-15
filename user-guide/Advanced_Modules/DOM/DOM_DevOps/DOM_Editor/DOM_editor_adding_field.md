@@ -6,9 +6,7 @@ uid: DOM_editor_adding_field
 
 The DOM Editor allows you to add a field to an existing section definition. This is possible even when there are instances of that specific object already.
 
-1. In the Automation app in DataMiner Cube, run the *DOM Editor* script.
-
-   When the DOM designer package has been installed, this script will be included in the folder `DOM\DOM Main scripts`.
+1. In the Automation app in DataMiner Cube, run the *DOM Editor* script. You can find this script in the folder `DOM\DOM Main scripts`.
 
    The script window will show a list of the available modules, as well as several buttons.
 
@@ -32,10 +30,4 @@ The DOM Editor allows you to add a field to an existing section definition. This
 1. Click *Back* again and then click *Apply* and *OK*.
 
 > [!NOTE]
-> You can also add a new section to an existing module and add new fields to that. In that case, after you have added the fields, you will also need to add the section to the definition:
->
-> 1. In the window with the four buttons, click *Definitions*.
-> 1. Next to the definition, click *Edit*.
-> 1. Click *Section Definition Links*.
-> 1. Click the + button.
-> 1. Click *Back* and then click *Apply* to save your update.
+> You can also add a new section to an existing module and add new fields to that. See [Adding a section](xref:DOM_editor_adding_section).

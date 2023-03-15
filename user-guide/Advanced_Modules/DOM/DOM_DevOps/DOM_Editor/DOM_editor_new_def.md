@@ -4,9 +4,7 @@ uid: DOM_editor_new_def
 
 # Creating a new module and definition
 
-1. In the Automation app in DataMiner Cube, run the *DOM Editor* script.
-
-   When the DOM designer package has been installed, this script will be included in the folder `DOM\DOM Main scripts`.
+1. In the Automation app in DataMiner Cube, run the *DOM Editor* script. You can find this script in the folder `DOM\DOM Main scripts`.
 
    The script window will show a list of the available modules, as well as several buttons.
 
@@ -52,6 +50,8 @@ uid: DOM_editor_new_def
       > For more information on the field descriptor configuration, see [FieldDescriptor](xref:DOM_SectionDefinition#fielddescriptor).
 
    1. When you have added all fields, click *Apply* and *OK* to save the section definition.
+
+1. To add another section definition, click *New* again and repeat the steps detailed above.
 
 1. When you have configured and saved all section definitions you wanted to add, click *Back* to return to the window with the four buttons.
 

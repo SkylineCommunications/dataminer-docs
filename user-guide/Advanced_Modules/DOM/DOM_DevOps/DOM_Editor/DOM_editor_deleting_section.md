@@ -2,17 +2,15 @@
 uid: DOM_editor_deleting_section
 ---
 
-# Deleting a section
+# Deleting a section definition
 
-You can only delete a section if it no longer contains any fields. See [Deleting a field](xref:DOM_editor_deleting_field).
+You can only delete a section definition if it no longer contains any fields. See [Deleting a field](xref:DOM_editor_deleting_field).
 
-1. In the Automation app in DataMiner Cube, run the *DOM Editor* script.
-
-   When the DOM designer package has been installed, this script will be included in the folder `DOM\DOM Main scripts`.
+1. In the Automation app in DataMiner Cube, run the *DOM Editor* script. You can find this script in the folder `DOM\DOM Main scripts`.
 
    The script window will show a list of the available modules, as well as several buttons.
 
-1. Next to the module in which you want to delete a field, click *Edit*.
+1. Next to the module in which you want to delete a section definition, click *Edit*.
 
    A window with four buttons will be displayed.
 
@@ -26,7 +24,7 @@ You can only delete a section if it no longer contains any fields. See [Deleting
 
    1. Click *Section Definition Links*.
 
-   1. Click the X button next to the section.
+   1. Click the X button next to the section definition.
 
    1. Click *Back* and then click *Apply* to save your change.
 

@@ -6,9 +6,7 @@ uid: DOM_Designer_Excel_deployment
 
 1. Log in to DataMiner Cube with an account that has administrator rights.
 
-1. In the Automation app in DataMiner Cube, run the *DOM Designer* script.
-
-   When the DOM designer package has been installed, this script will be included in the folder `DOM\DOM Main scripts`.
+1. In the Automation app in DataMiner Cube, run the *DOM Designer* script. You can find this script in the folder `DOM\DOM Main scripts`.
 
 1. Click *Browse*.
 
