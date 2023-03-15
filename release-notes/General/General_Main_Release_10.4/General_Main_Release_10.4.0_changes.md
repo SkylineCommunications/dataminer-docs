@@ -223,6 +223,12 @@ Example:
 </DMSScript>
 ```
 
+#### DateTime instances would not get serialized correctly when an SLNet connection supported protocol buffer serialization [ID_35777]
+
+<!-- MR 10.4.0 - FR 10.3.5 -->
+
+When an SLNet connection supported protocol buffer serialization, DateTime instances would not get serialized correctly.
+
 #### SLAnalytics: Flatline events on child DVE elements would incorrectly be cleared automatically [ID_35818]
 
 <!-- MR 10.4.0 - FR 10.3.5 -->
