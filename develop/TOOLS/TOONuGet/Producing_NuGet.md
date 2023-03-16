@@ -120,6 +120,14 @@ If you have a dependency on .NET Framework (e.g. Skyline.DataMiner.Dev.*), you w
 
     E.g. SNMP trap parsing, rate calculations, table context menu, etc.
 
+## Versioning conventions
+
+We want to adhere to the [Semantic Versioning for NuGet pacakges](https://learn.microsoft.com/en-us/nuget/concepts/package-versioning).
+- Major: Breaking changes (API breaking changes, DataMiner minimum dependency changes, etc)
+- Minor: New features, but backwards compatible
+- Patch: Backwards compatible bug fixes only
+- -Suffix (optional): a hyphen followed by a string denoting a pre-release version.
+
 ## Package Metadata Conventions
 
 ### Mandatory metadata
