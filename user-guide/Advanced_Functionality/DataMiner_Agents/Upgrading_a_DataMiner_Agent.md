@@ -23,7 +23,7 @@ Make sure your system meets the necessary [system requirements](https://communit
 Keep in mind that it is strongly recommended that you **use the same version of DataMiner on all Agents in a DMS**.
 
 > [!IMPORTANT]
-> If you are not upgrading to the DataMiner version that immediately follows your current version, follow the provided [upgrade paths](xref:Upgrade_Paths).
+> In the case you are not upgrading to the DataMiner version that immediately follows your current version, follow the provided [upgrade paths](xref:Upgrade_Paths).
 
 > [!NOTE]
 >
