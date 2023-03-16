@@ -57,7 +57,7 @@ When the API is triggered with valid input data, the script will succeed and an 
 }
 ```
 
-When the API is triggered with input data that does not represent a number, the conversion in the script will fail and trigger the 'ExitFail' method. This causes the script to fail which will result in an HTTP response like this with status code 500:
+When the API is triggered with input data that does not represent a number, the conversion in the script will fail and trigger the 'ExitFail' method. This causes the script to fail which will result in an [HTTP response](xref:UD_APIs_Triggering_an_API#errors) like this with status code 500:
 
 ```json
 {

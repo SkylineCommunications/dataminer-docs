@@ -7,7 +7,7 @@ uid: UD_APIs_UserDefinableApiEndpoint
 > [!WARNING]
 > The current feature is in preview and is not fully released yet. This feature should not be used in any staging or production environment.
 
-UserDefinableApiEndpoint is an extension module that runs an ASP .NET Core 5 web API. It handles the incoming API triggers over HTTP or HTTPS and sends the requests to the DataMiner agent(s) in a round robin-way.
+UserDefinableApiEndpoint is an extension module that runs an ASP.NET Core 5 web API. It handles the incoming API triggers over HTTP or HTTPS and sends the requests to the DataMiner agent(s) in a round robin-way.
 
 ## Install
 
@@ -26,7 +26,7 @@ The logging of the extension module can be found at the following location:
 
 `%ProgramData%\Skyline Communications\DataMiner UserDefinableApiEndpoint\Logs`
 
-Only core functionality errors will be logged. User errors like an empty route will not be logged as the exception passed to the user should give enough info. ASP.Net logging is managed by the Microsoft loglevel in the appsettings.
+Only core functionality errors will be logged. User errors like an empty route will not be logged as the exception passed to the user should give enough info. ASP.NET logging is managed by the Microsoft loglevel in the appsettings.
 
 Also the logging of the installation will be placed in this folder under following name: `UserDefinableApiEndpointInstaller.txt`. Only the logging of the last install is kept.
 
