@@ -151,3 +151,9 @@ In some cases, markers could disappear when a layer was enabled or disabled.
 <!-- MR 10.2.0 [CU13]/10.3.0 [CU2] - FR 10.3.5 -->
 
 In some cases, SLAnalytics could keep on waiting indefinitely for large delete operations to finish.
+
+#### SLAnalytics - Behavioral anomaly detection: Events associated with a DVE child element would incorrectly be linked to the DVE parent element [ID_35901]
+
+<!-- MR 10.4.0 - FR 10.3.5 -->
+
+When an event associated with a DVE child element was generated, internally, that event would incorrectly be linked to the DVE parent element. From now on, it will be linked to the child element instead.

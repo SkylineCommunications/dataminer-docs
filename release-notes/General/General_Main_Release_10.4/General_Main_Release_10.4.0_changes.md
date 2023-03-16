@@ -246,3 +246,9 @@ SLAnalytics would incorrectly consider every parameter included in an alarm temp
 <!-- MR 10.4.0 - FR 10.3.4 [CU0] -->
 
 When an ElementProtocol object was being created, due to a caching issue in SLNet, the input/output values stored in the protocol of a matrix element would incorrectly be overridden with the input/output values in the ElementProtocol object that was being created.
+
+#### SLAnalytics - Behavioral anomaly detection: Events associated with a DVE child element would incorrectly be linked to the DVE parent element [ID_35901]
+
+<!-- MR 10.4.0 - FR 10.3.5 -->
+
+When an event associated with a DVE child element was generated, internally, that event would incorrectly be linked to the DVE parent element. From now on, it will be linked to the child element instead.
