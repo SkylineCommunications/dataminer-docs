@@ -48,13 +48,13 @@ As of now, the following prerequisites are available:
 
 ## Having a backup at the ready
 
-We recommend making a backup of your DataMiner System before executing an upgrade. In case unexpected issues occur after an update, downgrading may be required.
+We recommend making a backup of your DataMiner System before executing an upgrade, in case unexpected issues should occur.
 
 Making a backup can be done with a VM snapshot or DataMiner.
 
 ### VM snapshot
 
-[Take a virtual machine (VM) snapshot](xref:MOP_Downgrading_a_DMS#for-a-downgrade-with-vm-snapshot-restore) of the upgraded machines. This will allow a speedy rollback of the DataMiner system.
+[Take a virtual machine (VM) snapshot](xref:MOP_Downgrading_a_DMS#for-a-downgrade-with-vm-snapshot-restore) of the upgraded machines shortly before the update. This will allow a speedy rollback of the DataMiner System.
 
 > [!TIP]
 > For more information on how to downgrade your DMS using a VM snapshot restore, see [Downgrade with VM snapshot restore](xref:MOP_Downgrading_a_DMS#downgrade-with-vm-snapshot-restore-preferred).
@@ -64,4 +64,4 @@ Making a backup can be done with a VM snapshot or DataMiner.
 
 ### DataMiner backup
 
-To make a backup of a DataMiner Agent using DataMiner Taskbar Utility or DataMiner Cube, see [Backing up a DataMiner Agent](xref:Backing_up_a_DataMiner_Agent).
+Make a backup of your DataMiner Agent using DataMiner Taskbar Utility or DataMiner Cube, as explained in [Backing up a DataMiner Agent](xref:Backing_up_a_DataMiner_Agent). This will allow a speedy rollback of the DataMiner System by installing the upgrade package of the previous DataMiner version.
