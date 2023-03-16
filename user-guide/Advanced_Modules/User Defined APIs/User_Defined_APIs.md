@@ -39,6 +39,11 @@ Tokens:
 |ApiToken      |Defines a secret string and metadata that can be used to access an API.|
 |ApiDefinition |Defines the API. Including what tokens have access, the URL route and what action should be triggered.|
 
+## Backup and restore
+
+Since `ApiToken` and `ApiDefinition` objects are stored in the Elasticsearch database, these are NOT included in DataMine restore packages.
+More information on how to backup and restore this data can be found [here](https://docs.dataminer.services/user-guide/Advanced_Functionality/Databases/Elasticsearch_database/Configuring_Elasticsearch_backups.html)
+
 ## Client Test UI
 
 There is a UI available in the client test tool that makes it possible to easily see all the tokens and definitions. It can be found under `Advanced > Apps > User Definable APIs...`.
