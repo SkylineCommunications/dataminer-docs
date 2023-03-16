@@ -252,6 +252,12 @@ When you opened a low-code app on a mobile device or when you resized the screen
 
 When data from one table was fed to another table, in some cases, the "loading" indicator of the table to which data was fed would incorrectly not disappear.
 
+#### Dashboards app & Low-code apps - GQI components: Problem when executing an empty query [ID_35803]
+
+<!-- MR 10.4.0 - FR 10.3.5 -->
+
+When GQI components tried to execute an empty query, up to now, they would keep on showing a "loading" indicator. From now on, an appropriate message will be displayed instead.
+
 #### Dashboards app & Low-code apps: Problem when feeding data from a GQI component to a query used in the same component [ID_35806]
 
 <!-- MR 10.4.0 - FR 10.3.5 -->
