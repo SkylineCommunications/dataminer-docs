@@ -118,9 +118,10 @@ The zoom range of a map can now be set by means of a slider.
 
 Because of a number of enhancements, overall performance has increased when fetching relation information for the automatic incident tracking feature.
 
-#### Security enhancements [ID_35434]
+#### Security enhancements [ID_35434] [ID_35668]
 
-<!-- MR 10.4.0 - FR 10.3.4 -->
+<!-- 35434: MR 10.4.0 - FR 10.3.4 -->
+<!-- 35668: MR 10.4.0 - FR 10.3.5 -->
 
 A number of security enhancements have been made.
 
@@ -148,10 +149,9 @@ GQI now supports queries from [Data Aggregator](xref:Data_Aggregator_DxM) that u
 
 Up to now, when SLAnalytics sent a notification, it would generate an event of type *client notification* with parameter ID 64574. From now on, it will instead generate an event of type *notification* with parameter ID 64570.
 
-#### GQI: Raw datetime values will now be converted to UTC [ID_35640] [ID_35762] [ID_35784]
+#### GQI: Raw datetime values will now be converted to UTC [ID_35640]
 
-<!-- 35640 & 35762: MR 10.4.0 - FR 10.3.4 -->
-<!-- 35784:         MR 10.4.0 - FR 10.3.5 -->
+<!-- MR 10.4.0 - FR 10.3.4 -->
 
 Up to now, after each step in a GQI query, raw datetime values were always converted to the time zone that was specified in the query options. From now on, raw datetime values will be converted to UTC instead. The time zone specified in the query options will now only be used when converting a raw datetime value to a display value.
 
@@ -222,3 +222,27 @@ Example:
    ...
 </DMSScript>
 ```
+
+#### DateTime instances would not get serialized correctly when an SLNet connection supported protocol buffer serialization [ID_35777]
+
+<!-- MR 10.4.0 - FR 10.3.5 -->
+
+When an SLNet connection supported protocol buffer serialization, DateTime instances would not get serialized correctly.
+
+#### SLAnalytics: Flatline events on child DVE elements would incorrectly be cleared automatically [ID_35818]
+
+<!-- MR 10.4.0 - FR 10.3.5 -->
+
+Events generated after detecting change points of type "flatline" in trend data of child DVE elements would incorrectly be cleared automatically.
+
+#### SLAnalytics - Behavioral anomaly detection: Every parameter included in an alarm template would incorrectly be considered a monitored parameter [ID_35832]
+
+<!-- MR 10.4.0 - FR 10.3.5 -->
+
+SLAnalytics would incorrectly consider every parameter included in an alarm template to be a monitored parameter, even it is was not being monitored.
+
+#### Input/output values of a matrix element would incorrectly be overridden due to a caching issue [ID_35857]
+
+<!-- MR 10.4.0 - FR 10.3.4 [CU0] -->
+
+When an ElementProtocol object was being created, due to a caching issue in SLNet, the input/output values stored in the protocol of a matrix element would incorrectly be overridden with the input/output values in the ElementProtocol object that was being created.

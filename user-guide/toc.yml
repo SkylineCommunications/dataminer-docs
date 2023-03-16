@@ -1001,6 +1001,8 @@
               topicUID: BPA_Report_Active_RTE
             - name: SRM Function Resources Consistency
               topicUID: BPA_SRM_Function_Resources_Consistency
+            - name: Validate connectors
+              topicUID: BPA_Validate_Connectors
             - name: Verify Cloud DxM Version
               topicUID: BPA_Verify_Cloud_DxM_Version
             - name: View Recursion
@@ -1723,6 +1725,15 @@
               topicUid: Configuring_feed_components
             - name: Configuring query (GQI) data feeds
               topicUID: Configuring_GQI_feeds
+              items:
+                - name: Query data sources
+                  topicUID: Query_data_sources
+                - name: Configuring an external data source in a query
+                  topicUID: Configuring_an_external_data_source_in_a_query
+                - name: Query operators
+                  topicUID: Query_operators
+                - name: Importing a query
+                  topicUID: Importing_a_query
             - name: Specifying data input in a dashboard URL
               topicUid: Specifying_data_input_in_a_dashboard_URL
             - name: Configuring a dashboard to use a URL feed without a feed component
@@ -1857,6 +1868,37 @@
               topicUID: DOM_status_system_example
             - name: Altering values of a DomInstance - examples
               topicUID: DOM_Altering_values_of_a_DomInstance
+        - name: DOM DevOps tools
+          topicUID: DOM_DevOps_tools
+          items:
+            - name: DOM DevOps tools installation
+              topicUID: DOM_DevOps_installation
+            - name: Using the DOM Designer
+              topicUID: DOM_Designer
+              items:
+                - name: Configuring the Excel file
+                  topicUID: DOM_Designer_Excel_config
+                - name: Deploying the Excel file
+                  topicUID: DOM_Designer_Excel_deployment
+            - name: Using the DOM Editor
+              topicUID: DOM_Editor
+              items:
+                - name: Creating a new module and definition
+                  topicUID: DOM_editor_new_def
+                - name: Adding a field
+                  topicUID: DOM_editor_adding_field
+                - name: Adding a section definition
+                  topicUID: DOM_editor_adding_section
+                - name: Adding a button
+                  topicUID: DOM_editor_adding_button
+                - name: Changing a field name
+                  topicUID: DOM_editor_changing_field_name
+                - name: Deleting a field
+                  topicUID: DOM_editor_deleting_field
+                - name: Deleting a section
+                  topicUID: DOM_editor_deleting_section
+                - name: Naming a DOM instance
+                  topicUID: DOM_editor_naming_instance
     - name: Experience and Performance Management
       topicUid: EPM
       items:
@@ -2933,6 +2975,8 @@
     - name: Known issues
       topicUID: Known_issues
       items:
+        - name: Problem with booking automation and function DVE deactivation
+          topicUID: KI_SRM_booking_events_issue
         - name: SLPort deadlock when element with serial connection is restarted
           topicUID: KI_SLPort_deadlock_after_restart_serial_connection
         - name: Local user unable to access DMA after first reboot after installation
@@ -3023,6 +3067,8 @@
           topicUID: KI_Unavailable_system_database_after_DataMiner_server_reboot
         - name: Upgrade error - api-ms-win-crt-stdio-l1-1-0.dll is missing
           topicUID: KI_Upgrade_error_api-ms-win-crt-stdio-l1-1-0_dll_is_missing
+        - name: GenIf folder takes up too much disk space
+          topicUID: KI_GenIf_Folder_Growing_In_Size
     - name: Customer DataMiner Reporting (CDMR)
       topicUID: CDMR
     - name: Remote Log Collection

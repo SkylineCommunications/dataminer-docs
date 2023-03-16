@@ -40,6 +40,17 @@ When the *SLLogCollector* tool had to collect memory dumps of multiple processes
 
 From now on, it will collect at least the "now" dump for each of the selected processes.
 
+#### NATS would incorrectly be re-installed when a WMI query error occurred while the NATS installer was being run at DMA startup [ID_35647]
+
+<!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
+
+When the NATS installer was being run at DMA startup, in some cases, due to an issue with a WMI query, NATS could incorrectly be re-installed, even though NATS and NAS were already running.
+
+From now on, the execution of the NATS installer at DMA startup will be skipped when NATS is already running. Also, if an error occurs when running a WMI query during the execution of the NATS installer, a message saying that the re-installation has failed will be added to the *SLUMSEndpointManager.txt* log file.
+
+> [!NOTE]
+> When an error occurs while running a WMI query, and no NATS/NAS service is running, NATS will not be installed automatically. A manual installation of NATS will be needed.
+
 #### Dashboards app: Sticky component menus would no longer be fully visible after you had changed the number of dashboard columns [ID_35702]
 
 <!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.4 -->
@@ -63,3 +74,37 @@ In some cases, SLAnalytics kept on waiting on a database call, which eventually 
 <!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
 
 SLProtocol would interpret signed numbers incorrectly, causing parameters to display incorrect values.
+
+#### Dashboards app & Low-code apps: Duplicated component would not have the size as the original [ID_35804]
+
+<!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
+
+When you duplicated a component, the size of the duplicate would incorrectly be limited to 30 rows. From now on, when you duplicate a component, the duplicate will have the same size as the original.
+
+#### Dashboards app: A table component could appear to be empty when you rapidly switched between visualizations [ID_35831]
+
+<!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
+
+In some cases, a table component could appear to be empty when you rapidly switched between visualizations.
+
+Also, an error could be thrown when you tried to add an invalid query to a component.
+
+#### DataMiner Maps: Markers could disappear when a layer was enabled or disabled [ID_35838]
+
+<!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
+
+In some cases, markers could disappear when a layer was enabled or disabled.
+
+#### DataMiner Cube - Alarm Console: It could take a long time for an active alarms tab to load on a system with a large number of masked alarms [ID_35843]
+
+<!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
+
+Due to a caching issue, on a system with a large number of masked alarms, it could take a long time for an active alarms tab to load.
+
+#### DataMiner Cube - Alarm Console: Base alarm updates would not be shown when the active alarms tab was filtered [ID_35845]
+
+<!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
+
+In a filtered active alarms tab, in some cases, a base alarm will match the filter while the correlated alarm will not. In that case, the base alarm will be shown while the correlated alarm will not.
+
+However, up to now, when a base alarm was updated, the update would not be reflected in the Alarm Console until the filter was removed.

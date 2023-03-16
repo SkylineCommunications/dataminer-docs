@@ -43,3 +43,23 @@ When you had configured DataMiner Cube to connect using gRPC (by specifying `typ
 - The *About* and *Logging* windows would not be available on the login screen if .NET Remoting had been disabled on the DataMiner Agent.
 
 - In some cases, Cube would become unresponsive when retrieving the user thumbnail pictures. These will now be retrieved in the background.
+
+#### Alarm Console: It could take a long time for an active alarms tab to load on a system with a large number of masked alarms [ID_35843]
+
+<!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
+
+Due to a caching issue, on a system with a large number of masked alarms, it could take a long time for an active alarms tab to load.
+
+#### Alarm Console: Base alarm updates would not be shown when the active alarms tab was filtered [ID_35845]
+
+<!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
+
+In a filtered active alarms tab, in some cases, a base alarm will match the filter while the correlated alarm will not. In that case, the base alarm will be shown while the correlated alarm will not.
+
+However, up to now, when a base alarm was updated, the update would not be reflected in the Alarm Console until the filter was removed.
+
+#### No longer possible to configure a PDF report generated based on a dashboard [ID_35874]
+
+<!-- MR 10.4.0 - FR 10.3.5 -->
+
+When, in the *Automation*, *Correlation* and *Scheduler* modules, you generated a PDF report based on a dashboard, it would incorrectly no longer be possible to click the *Configure* button to configure that report.

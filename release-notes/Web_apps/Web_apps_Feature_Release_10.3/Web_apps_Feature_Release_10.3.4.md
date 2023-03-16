@@ -22,7 +22,7 @@ uid: Web_apps_Feature_Release_10.3.4
 
 In the configuration settings of a dashboard or a page/panel of a low-code app, you can now find the *Lazy load components* setting.
 
-When this settings is enabled, the components on the dashboard or the page/panel of the low-code app will only be initialized the first time they appear on the screen. This will considerably shorten the initial load time and enhance overall performance of large dashboards and large pages/panels of low-code apps.
+When this setting is enabled, the components on the dashboard or the page/panel of the low-code app will only be initialized the first time they appear on the screen. This will considerably shorten the initial load time and enhance overall performance of large dashboards and large pages/panels of low-code apps.
 
 > [!NOTE]
 >
@@ -347,3 +347,9 @@ GQI components would incorrectly not clear their query row feed when refetching 
 <!-- MR 10.3.0 [CU1] - FR 10.3.4 [CU0] -->
 
 When a feed component was linked to an argument of an ad hoc data source, in some cases, the feed would not work correctly.
+
+#### Dashboards app & Low-code apps - GQI: Queries linked to feeds would not always apply feed changes [ID_35903]
+
+<!-- MR 10.3.0 [CU2] - FR 10.3.4 [CU0] -->
+
+In some cases, a query that was linked to feeds would not apply the feed changes in the visualizations unless it was opened in edit mode.

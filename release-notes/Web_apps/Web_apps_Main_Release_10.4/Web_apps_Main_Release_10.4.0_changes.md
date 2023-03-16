@@ -158,6 +158,14 @@ In the *Monitoring* app, a number of enhancements have been made to the sidebar 
 - The *Time span* selection box has been removed.
 - The width of the sidebar has been reduced.
 
+#### Web Services API: Performance enhancements [ID_35805]
+
+<!-- MR 10.4.0 - FR 10.3.5 -->
+
+A web API event queue will now automatically be removed after 5 minutes if a client did not request the events in that queue during those 5 minutes. As a result, overall web API memory consumption will decrease considerably.
+
+Also, it is now possible for one web API connection to have multiple event queues. As a result, clients will be able to have multiple open websocket connections using the same connection ID.
+
 ### Fixes
 
 #### GQI: Problem when retrieving DCF interfaces [ID_34820]
@@ -243,3 +251,15 @@ When you opened a low-code app on a mobile device or when you resized the screen
 <!-- MR 10.4.0 - FR 10.3.4 -->
 
 When data from one table was fed to another table, in some cases, the "loading" indicator of the table to which data was fed would incorrectly not disappear.
+
+#### Dashboards app & Low-code apps: Problem when feeding data from a GQI component to a query used in the same component [ID_35806]
+
+<!-- MR 10.4.0 - FR 10.3.5 -->
+
+An error could occur when feeding data from a GQI component to a query that was used in the same component.
+
+#### Dashboards app & Low-code apps - Table component: A collapsed group would incorrectly expand when new data was loaded into the table [ID_35856]
+
+<!-- MR 10.4.0 - FR 10.3.5 -->
+
+When, in a table component, the data was grouped by two different parameters, in some cases, a collapsed group would incorrectly expand when new data was loaded into the table.

@@ -6,7 +6,7 @@ uid: KI_SLPort_deadlock_after_restart_serial_connection
 
 ## Affected versions
 
-- DataMiner Main Release versions 10.1.0 [CU17] to 10.2.0 [CU12]/10.3.0 [CU0].
+- DataMiner Main Release versions 10.1.0 [CU17] to 10.2.0 [CU11]/10.3.0.0 - 12752.
 - DataMiner Feature Release versions 10.2.8 to 10.3.3.
 
 ## Cause
@@ -15,7 +15,7 @@ When a serial connection was disconnected, it could occur that a new connection 
 
 ## Fix
 
-Install DataMiner 10.2.0 [CU13], 10.3.0 [CU1], or 10.3.4. <!-- RN 35773 -->
+Install DataMiner 10.2.0 [CU12], 10.3.0.0 - 12790, or 10.3.3 [CU1]. <!-- RN 35773 -->
 
 ## Workaround
 

@@ -375,3 +375,33 @@ GQI queries containing float or GUID values would not get migrated correctly.
 <!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
 
 In some rare cases, an error could occur in SLElement when creating an alarm with an *SLA Affecting* property.
+
+#### Business Intelligence: Enhancements with regard to the retrieval of data from logger tables and to general error handling [ID_35820]
+
+<!-- MR 10.2.0 [CU13]/10.3.0 [CU2] - FR 10.3.5 -->
+
+A number of enhancements have been made to the Business Intelligence module, especially with regard to the retrieval of data from logger tables and to general error handling.
+
+#### Web apps: Problem when opening a visual overview [ID_35841]
+
+<!-- MR 10.2.0 [CU13]/10.3.0 [CU2] - FR 10.3.5 -->
+
+When you opened a visual overview in a web app, in some cases, the web app could become unresponsive.
+
+#### SLAnalytics could keep on waiting indefinitely for large delete operations to finish [ID_35848]
+
+<!-- MR 10.2.0 [CU13]/10.3.0 [CU2] - FR 10.3.5 -->
+
+In some cases, SLAnalytics could keep on waiting indefinitely for large delete operations to finish.
+
+#### Dashboards app: Multiple parameter feeds would incorrectly have their 'group by' reset when a PDF was generated [ID_35866]
+
+<!-- MR 10.2.0 [CU13]/10.3.0 [CU2] - FR 10.3.5 -->
+
+When you generated a PDF of a dashboard that contained multiple parameter feeds, a multiple parameter feed with a "group by" applied would incorrectly have that "group by" reset to the value that was configured in its settings.
+
+#### Web apps: Certain icons would incorrectly not be displayed [ID_35877]
+
+<!-- MR 10.2.0 [CU13]/10.3.0 [CU2] - FR 10.3.5 -->
+
+In web apps, certain icons would incorrectly not be displayed.

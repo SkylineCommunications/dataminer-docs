@@ -35,3 +35,28 @@ When you had configured DataMiner Cube to connect using gRPC (by specifying `typ
 - The *About* and *Logging* windows would not be available on the login screen if .NET Remoting had been disabled on the DataMiner Agent.
 
 - In some cases, Cube would become unresponsive when retrieving the user thumbnail pictures. These will now be retrieved in the background.
+
+#### Alarm Console: It could take a long time for an active alarms tab to load on a system with a large number of masked alarms [ID_35843]
+
+<!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
+
+Due to a caching issue, on a system with a large number of masked alarms, it could take a long time for an active alarms tab to load.
+
+#### Alarm Console: Base alarm updates would not be shown when the active alarms tab was filtered [ID_35845]
+
+<!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
+
+In a filtered active alarms tab, in some cases, a base alarm will match the filter while the correlated alarm will not. In that case, the base alarm will be shown while the correlated alarm will not.
+
+However, up to now, when a base alarm was updated, the update would not be reflected in the Alarm Console until the filter was removed.
+
+#### Service & Resource Management: Problem with un-initialized Capacity property on DMAs running version 10.3.1 or 10.2.12 or earlier [ID_35854]
+
+<!-- MR 10.3.0 [CU2] - FR 10.3.2 [CU1] -->
+
+As from DataMiner version 10.3.0/10.3.2, the *Capacity* property is no longer initialized on new resources. As a result, resources without this legacy property would cause server-side issues on DataMiner Agents running either version 10.3.1 or version 10.2.12 or earlier.
+
+From now on, Cube will initialize the *Capacity* property if it detects that the DataMiner Agent is running one of the following versions:
+
+- version 10.3.1 or
+- version 10.2.12 or earlier.

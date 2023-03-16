@@ -31,3 +31,61 @@ Sticky component menus would no longer be fully visible after you had changed th
 <!-- MR 10.3.0 [CU2] - FR 10.3.4 -->
 
 GQI components would incorrectly not clear their query row feed when refetching data.
+
+#### Dashboards app & Low-code apps: Duplicated component would not have the size as the original [ID_35804]
+
+<!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
+
+When you duplicated a component, the size of the duplicate would incorrectly be limited to 30 rows. From now on, when you duplicate a component, the duplicate will have the same size as the original.
+
+#### Dashboards app: Problem when using the search box on a mobile device [ID_35825]
+
+<!-- MR 10.3.0 [CU2] - FR 10.3.5 -->
+
+When the *Dashboards* app was opened on a mobile device, an error could occur when you entered something in the search box.
+
+#### Dashboards app & Low-code apps - Form component: Problems with multiple-selection drop-down boxes [ID_35829]
+
+<!-- MR 10.3.0 [CU2] - FR 10.3.5 -->
+
+When a form component contained multiple-selection drop-down boxes, it would load too slowly due to the drop-down box change detection being triggered over and over again. From now on, form components containing multiple-selection drop-down boxes will load considerably quicker.
+
+Also, when a multiple-selection drop-down field of a DOM instance was added to a form component, the current values preloaded into the field as placeholders would incorrectly not get removed once the data was loaded, causing the drop-down field to contain duplicate values.
+
+#### Dashboards app: A table component could appear to be empty when you rapidly switched between visualizations [ID_35831]
+
+<!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
+
+In some cases, a table component could appear to be empty when you rapidly switched between visualizations.
+
+Also, an error could be thrown when you tried to add an invalid query to a component.
+
+#### Web apps: Problem when opening a visual overview [ID_35841]
+
+<!-- MR 10.2.0 [CU13]/10.3.0 [CU2] - FR 10.3.5 -->
+
+When you opened a visual overview in a web app, in some cases, the web app could become unresponsive.
+
+#### Dashboards app & Low-code apps: Text boxes in the Layout tab would not update when you selected another component [ID_35851]
+
+<!-- MR 10.3.0 [CU2] - FR 10.3.5 -->
+
+When, in the *Layout* tab, a text box (e.g. the box containing the title of the selected component) had the focus, and you selected another component, the text box in the *Layout* tab would incorrectly still contain the value of the previously selected component.
+
+#### Dashboards app: Multiple parameter feeds would incorrectly have their 'group by' reset when a PDF was generated [ID_35866]
+
+<!-- MR 10.2.0 [CU13]/10.3.0 [CU2] - FR 10.3.5 -->
+
+When you generated a PDF of a dashboard that contained multiple parameter feeds, a multiple parameter feed with a "group by" applied would incorrectly have that "group by" reset to the value that was configured in its settings.
+
+#### Web apps: Certain icons would incorrectly not be displayed [ID_35877]
+
+<!-- MR 10.2.0 [CU13]/10.3.0 [CU2] - FR 10.3.5 -->
+
+In web apps, certain icons would incorrectly not be displayed.
+
+#### Dashboards app & Low-code apps - GQI: Queries linked to feeds would not always apply feed changes [ID_35903]
+
+<!-- MR 10.3.0 [CU2] - FR 10.3.4 [CU0] -->
+
+In some cases, a query that was linked to feeds would not apply the feed changes in the visualizations unless it was opened in edit mode.

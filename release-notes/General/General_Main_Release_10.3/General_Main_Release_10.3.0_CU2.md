@@ -36,6 +36,17 @@ When the *SLLogCollector* tool had to collect memory dumps of multiple processes
 
 From now on, it will collect at least the "now" dump for each of the selected processes.
 
+#### NATS would incorrectly be re-installed when a WMI query error occurred while the NATS installer was being run at DMA startup [ID_35647]
+
+<!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
+
+When the NATS installer was being run at DMA startup, in some cases, due to an issue with a WMI query, NATS could incorrectly be re-installed, even though NATS and NAS were already running.
+
+From now on, the execution of the NATS installer at DMA startup will be skipped when NATS is already running. Also, if an error occurs when running a WMI query during the execution of the NATS installer, a message saying that the re-installation has failed will be added to the *SLUMSEndpointManager.txt* log file.
+
+> [!NOTE]
+> When an error occurs while running a WMI query, and no NATS/NAS service is running, NATS will not be installed automatically. A manual installation of NATS will be needed.
+
 #### SLElement could leak memory when updating alarm templates containing conditions [ID_35728]
 
 <!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.4 -->
@@ -47,3 +58,21 @@ In some cases, SLElement could leak memory when updating alarm templates contain
 <!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
 
 SLProtocol would interpret signed numbers incorrectly, causing parameters to display incorrect values.
+
+#### Business Intelligence: Enhancements with regard to the retrieval of data from logger tables and to general error handling [ID_35820]
+
+<!-- MR 10.2.0 [CU13]/10.3.0 [CU2] - FR 10.3.5 -->
+
+A number of enhancements have been made to the Business Intelligence module, especially with regard to the retrieval of data from logger tables and to general error handling.
+
+#### DataMiner Maps: Markers could disappear when a layer was enabled or disabled [ID_35838]
+
+<!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
+
+In some cases, markers could disappear when a layer was enabled or disabled.
+
+#### SLAnalytics could keep on waiting indefinitely for large delete operations to finish [ID_35848]
+
+<!-- MR 10.2.0 [CU13]/10.3.0 [CU2] - FR 10.3.5 -->
+
+In some cases, SLAnalytics could keep on waiting indefinitely for large delete operations to finish.

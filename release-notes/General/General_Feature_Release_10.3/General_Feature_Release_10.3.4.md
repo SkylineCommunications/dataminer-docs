@@ -138,7 +138,7 @@ Up to now, when SLAnalytics sent a notification, it would generate an event of t
 
 When you start a DataMiner upgrade, the `ValidateConnectors` prerequisite will now scan the system for any connectors that are known to be incompatible with the DataMiner version to which the DataMiner Agent is being upgraded. If such connectors are found, they will have to be removed before you can continue with the upgrade.
 
-#### GQI: Raw datetime values will now be converted to UTC [ID_35640] [ID_35762]
+#### GQI: Raw datetime values will now be converted to UTC [ID_35640]
 
 <!-- MR 10.4.0 - FR 10.3.4 -->
 
@@ -335,3 +335,9 @@ In some cases, SLAnalytics kept on waiting on a database call, which eventually 
 <!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
 
 In some rare cases, an error could occur in SLElement when creating an alarm with an *SLA Affecting* property.
+
+#### Input/output values of a matrix element would incorrectly be overridden due to a caching issue [ID_35857]
+
+<!-- MR 10.4.0 - FR 10.3.4 [CU0] -->
+
+When an ElementProtocol object was being created, due to a caching issue in SLNet, the input/output values stored in the protocol of a matrix element would incorrectly be overridden with the input/output values in the ElementProtocol object that was being created.

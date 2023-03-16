@@ -28,6 +28,9 @@ In the Correlation module, the *Alarm Grouping* section of the details pane allo
 
    - by property value
 
+     > [!NOTE]
+     > From DataMiner 10.3.4/10.4.0 onwards, when a Correlation rule is configured to use alarm grouping via an alarm property, the value of the alarm property by which the alarms are grouped will by default be added to the correlated alarm. Because of this added functionality, by looking at the correlated alarm, you can easily see based on what shared value the alarms were grouped. If you do not want the alarm property value to be added to the Correlation alarm, contact [support.data-insights@skyline.be](mailto:support.data-insights@skyline.be). <!-- RN 35583 -->
+
    - by service
 
    - by table index
