@@ -28,4 +28,4 @@ Never directly upgrade to a major DataMiner version that is several versions hig
 DataMiner 9.6.0/9.6.x -> DataMiner 10.0.0 [CU19] -> DataMiner 10.2.0/10.2.x
 
 > [!IMPORTANT]
-> If your DMA contains DVE elements when upgrading from DataMiner 9.6.x to DataMiner 10.x or higher, reverting back using an upgrade package will cause data loss in the DVE configuration. Therefore, we recommend you to first take a [VM snapshot](xref:Preparing_to_upgrade_a_DataMiner_Agent#vm-snapshot).
+> If your DMA contains DVE elements when upgrading from DataMiner 9.6.x to DataMiner 10.x or higher, rolling back this upgrade using an upgrade package will cause data loss in the DVE configuration. Therefore, we recommend you to first take a [VM snapshot](xref:Preparing_to_upgrade_a_DataMiner_Agent#vm-snapshot).
