@@ -1710,6 +1710,15 @@
               topicUid: Configuring_feed_components
             - name: Configuring query (GQI) data feeds
               topicUID: Configuring_GQI_feeds
+              items:
+                - name: Query data sources
+                  topicUID: Query_data_sources
+                - name: Configuring an external data source in a query
+                  topicUID: Configuring_an_external_data_source_in_a_query
+                - name: Query operators
+                  topicUID: Query_operators
+                - name: Importing a query
+                  topicUID: Importing_a_query
             - name: Specifying data input in a dashboard URL
               topicUid: Specifying_data_input_in_a_dashboard_URL
             - name: Configuring a dashboard to use a URL feed without a feed component
