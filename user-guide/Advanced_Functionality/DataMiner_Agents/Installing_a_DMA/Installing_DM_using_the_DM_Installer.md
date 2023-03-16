@@ -8,27 +8,20 @@ The DataMiner installer allows you to run a default DataMiner installation, whic
 
 ## Before you run the installer
 
-1. Check if the latest .NET Framework is installed. See <https://learn.microsoft.com/en-us/dotnet/framework/migration-guide/how-to-determine-which-versions-are-installed>.
-
-   For more information on recommended versions, see [DataMiner Compute Requirements](https://community.dataminer.services/dataminer-compute-requirements/).
-
-1. If it is not installed, install the latest .NET Framework version.
-
-   For installation information, see <https://docs.microsoft.com/en-us/dotnet/framework/install/>
+1. Make sure the necessary .NET and .NET Framework versions are installed. See [DataMiner Compute Requirements](https://community.dataminer.services/dataminer-compute-requirements/).
 
    > [!TIP]
-   > If due to server security it is impossible to install .NET Framework via the .NET Framework executable or via Server Manager, you can mount a Windows Server installation ISO if possible, and extract the contents of **[ISO]:\Sources\SxS** to a local path. You can then specify an alternate source path in the **Confirm installation selections**. This is also described in this [blogpost](https://blogs.sap.com/2020/06/25/how-to-install-the-.net-framework-3.5-on-windows-server-2016-and-later/). If it still would not be possible to install the .NET Framework, please consult your IT-department.
-
-   > [!NOTE]
-   > .NET Framework 3.5 will also need to be installed, the DataMiner installer will otherwise make notice of this.
+   >
+   > - For information on how to determine which versions you have installed. See <https://learn.microsoft.com/en-us/dotnet/framework/migration-guide/how-to-determine-which-versions-are-installed>.
+   > - For installation information, see [Installation guide](https://docs.microsoft.com/en-us/dotnet/framework/install/).
 
 1. Make sure the Windows setting "fast startup" is not activated.
 
 1. Make sure the server is synced with an NTP server. If you intend to install multiple DataMiner Agents in a cluster, make sure all servers are synced with the same NTP server.
 
-1. Make sure that no anti-virus software can block the executable of the DataMiner software installer and the DataMiner software once installed. See also [Regarding antivirus software](xref:Regarding_antivirus_software).
+1. Make sure that no anti-virus software will interfere with the DataMiner installer and with the DataMiner software once it is installed. See [Regarding antivirus software](xref:Regarding_antivirus_software).
 
-1. Download the DataMiner Installer from [DataMiner Dojo](https://community.dataminer.services/download/dataminer-installer-v10-2).
+1. Download the DataMiner installer from [DataMiner Dojo](https://community.dataminer.services/download/dataminer-installer-v10-2).
 
 > [!NOTE]
 > The default installation requires that WinPcap is installed for systems intended for DataMiner Failover. In a custom DataMiner installation, WinPcap can be included in the DataMiner installation.
