@@ -388,6 +388,12 @@ A number of enhancements have been made to the Business Intelligence module, esp
 
 When you opened a visual overview in a web app, in some cases, the web app could become unresponsive.
 
+#### SLAnalytics could keep on waiting indefinitely for large delete operations to finish [ID_35848]
+
+<!-- MR 10.2.0 [CU13]/10.3.0 [CU2] - FR 10.3.5 -->
+
+In some cases, SLAnalytics could keep on waiting indefinitely for large delete operations to finish.
+
 #### Dashboards app: Multiple parameter feeds would incorrectly have their 'group by' reset when a PDF was generated [ID_35866]
 
 <!-- MR 10.2.0 [CU13]/10.3.0 [CU2] - FR 10.3.5 -->
