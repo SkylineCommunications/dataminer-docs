@@ -60,7 +60,7 @@ This process includes using **Git for push and pull requests** and utilizing a C
 > - [CI/CD and the Agile Principles](https://community.dataminer.services/ci-cd-and-the-agile-principles/)
 > - [Empower your DevOps engineers with the DataMiner CI/CD infrastructure](https://community.dataminer.services/empower-your-devops-engineers-with-the-dataminer-ci-cd-infrastructure/)
 > - [CI/CD using DIS, the Cloud Platform and GitHub actions](https://community.dataminer.services/video/ci-cd-using-dis-the-cloud-platform-and-github-actions/)
-<!-- > - [CI/CD User Guide]() -->
+> - [CI/CD User Guide](xref:CICD)
 
 ## DataMiner Integration Studio (DIS)
 
