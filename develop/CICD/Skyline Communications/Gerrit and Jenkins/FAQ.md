@@ -428,9 +428,8 @@ Then create a new development branch for your development and push it so other d
 
 ### I have finished development of a feature and want this to get reviewed. How do I do this?
 
-   > [!NOTE]
-   > The below explains how to get you changes code reviewed via Gerrit which is optional.
-   > Today, there are other good alternatives such as simply using Visual Studio GIT Commits compare feature, etc.
+> [!NOTE]
+> The procedure below explains how to get your code changes reviewed via Gerrit, which is **optional**. Today, there are other good alternatives, such as simply using the Visual Studio GIT Commits compare feature, etc.
 
 This means you have some work committed and want this work to be reviewed.
 
