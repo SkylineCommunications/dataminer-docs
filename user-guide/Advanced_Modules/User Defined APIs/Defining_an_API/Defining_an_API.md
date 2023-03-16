@@ -45,7 +45,7 @@ The entrypoint method has two parameters. The IEngine object can be used to inte
 
 |Property       |Type                        |Explanation|
 |---------------|----------------------------|-----------|
-|RequestMethod  |`RequestMethod`             |Contains the HTTP method of the request. See [RequestMethod](#requestmethod).|
+|RequestMethod  |`RequestMethod`             |Contains the HTTP method of the request. See [RequestMethod](#requestmethods).|
 |Route          |`string`                    |The suffix of the URL where this API call is triggered on. Having this available makes it possible to reuse the same script for different routes.|
 |RawBody        |`string`                    |Contains the full body of the HTTP request as a string. This can be deserialized and used in the script.|
 |Parameters     |`Dictionary<string, string>`|Contains the deserialized parameters if you select 'Parse JSON of raw body to dictionary' when configuring the API. See [creating the ApiDefinition(s)](#2-creating-the-apidefinitions)|

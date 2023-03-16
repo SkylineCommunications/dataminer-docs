@@ -14,9 +14,9 @@ The User Defined APIs feature allows users to define API calls that will be made
 In System Center in Cube, you can manage your APIs and tokens in the User-Defined APIs tab.
 
 > [!IMPORTANT]
->- This tab will replace the obsolete API deployment tab in the future, so make sure to move your old APIs from API deployment to the new feature. How to create APIs from existing scripts is explained on the [using an existing script page](xref:UD_APIs_Using_existing_scripts).
+> This tab will replace the obsolete API deployment tab in the future, so make sure to move your old APIs from API deployment to the new feature. How to create APIs from existing scripts is explained on the [using an existing script page](xref:UD_APIs_Using_existing_scripts).
 
-To use the User Defined APIs Cube UI, you need DataMiner version 10.4.0/10.3.6. The Cube UI is not enabled by default. To enable it, set the soft-launch option *UserDefinableAPI* to true. See [soft-launch options](xref:SoftLaunchOptions).
+To use the User Defined APIs Cube UI, you need DataMiner version 10.4.0/10.3.5. The Cube UI is not enabled by default. To enable it, set the soft-launch option *UserDefinableAPI* to true. See [soft-launch options](xref:SoftLaunchOptions).
 
 ### Permissions
 
