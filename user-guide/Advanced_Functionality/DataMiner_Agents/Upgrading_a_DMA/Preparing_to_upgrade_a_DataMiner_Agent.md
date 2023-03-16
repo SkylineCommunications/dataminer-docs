@@ -4,36 +4,64 @@ uid: Preparing_to_upgrade_a_DataMiner_Agent
 
 # Preparing to upgrade a DataMiner Agent
 
+This section of the documentation contains detailed information on how to best prepare to upgrade a DataMiner Agent. We strongly recommend you read through the content of this page to ensure a successful upgrade of your DMA.
+
+## Uploading upgrade packages before an upgrade
+
+We highly recommend you upload the upgrade package before the actual maintenance, as this is low risk and does not require a restart of your system but will indicate whether all conditions and requirements to upgrade your DataMiner Agent are met, vastly reducing the chance of problems occurring during the eventual upgrade.
+
+To upload an upgrade package:
+
+1. Open DataMiner Cube.
+
+1. Follow the upgrade procedure described in [Upgrading a DataMiner Agent in System Center](xref:Upgrading_a_DataMiner_Agent_in_System_Center).
+
+1. During the final step of the upgrade procedure, instead of clicking *Upgrade*, select *Upload only*.
+
+   ![Upload only](~/user-guide/images/Upload_Only.png)
+
+1. If the upload was successful, you should receive the following upload report:
+
+   ```txt
+   Upload report
+   Upload has been completed successfully.
+   ```
+
+> [!TIP]
+> Upload the package at least a week before executing the upgrade.
+
 ## Prerequisites
 
-> [!IMPORTANT]
-> We highly recommend that you upload the DataMiner upgrade packages well in advance of the actual upgrade. For more information, see [Uploading upgrade packages before the upgrade](#uploading-upgrade-packages-before-the-upgrade).
-> Furthermore, please follow the [best practices](#best-practices).
+Prerequisites are small self-contained apps that run during the upload phase of a DataMiner upgrade. Their purpose is to detect whether all necessary conditions for upgrading DataMiner to the selected version and all requirements for the DataMiner Agent to run are met. If the prerequisites detect that this is not the case, the upgrade will be aborted.
 
-- [VerifyClusterPorts.dmupgrade](xref:VerifyClusterPortsdmupgrade)
+As of now, the following prerequisites are available:
 
-- [Verify NATS is Running](xref:VerifyNatsIsRunning)
+- Verify Cluster Ports: Verifies whether the ports used by DataMiner can be reached in between DataMiner Agents. If this check fails, you will need to install the [VerifyClusterPorts.dmupgrade](xref:VerifyClusterPortsdmupgrade) package. From DataMiner 10.2.0 [CU2]/10.2.5 onwards, this prerequisite is available by default and runs automatically when you upgrade.
 
-- [Verify Cloud DxM Version](xref:BPA_Verify_Cloud_DxM_Version)
+- [Verify NATS is Running](xref:VerifyNatsIsRunning): Verifies whether the crucial NATS service used by DataMiner is running on all required DataMiner Agents. From DataMiner 10.2.0 [CU14]/10.2.7 onwards, this prerequisite is available by default and runs automatically when you upgrade.
 
-- [Service Automatic Properties]()
+- [Verify Cloud DxM Version](xref:BPA_Verify_Cloud_DxM_Version): Verifies whether the minimum required version is installed for all DxMs in the system. From DataMiner 10.2.0 [CU6]/10.2.8 onwards, this prerequisite is available by default and runs automatically when you upgrade.
 
-## Best practices
+- Service Automatic Properties
 
-### Uploading upgrade packages before the upgrade
+- [Validate Connectors](xref:BPA_Validate_Connectors): Scans the DataMiner System for any connectors that are known to be incompatible with the DataMiner version to which the DataMiner Agent is being upgraded. From DataMiner 10.3.4/10.4.0 onwards, this prerequisite is available by default and runs automatically when you upgrade.
 
-Please upload the package before the actual maintenance. Uploading a DataMiner package before the maintenance is low risk as it does not restart your system, however, it will already indicate whether the prerequisites for upgrading your DMS are met.
-Uploading the packages in advance prevents surprises during the upgrade maintenance itself.
+## Having a backup at the ready
 
-> [!TIP]
-> Upload the package at least a week before the upgrade.
+We recommend making a backup of your DataMiner System before executing an upgrade. In case unexpected issues occur after an update, downgrading may be required.
 
-### Having a backup at the ready
+Making a backup can be done with a VM snapshot or DataMiner.
 
-We recommend taking a VM snapshot of the upgraded machines.
-This will allow a speedy rollback of the DataMiner system.
-Alternatively, a DataMiner backup as found in [Backing up a DataMiner Agent](xref:Backing_up_a_DataMiner_Agent) should also be sufficient.
+### VM snapshot
+
+[Take a virtual machine (VM) snapshot](xref:MOP_Downgrading_a_DMS#for-a-downgrade-with-vm-snapshot-restore) of the upgraded machines. This will allow a speedy rollback of the DataMiner system.
 
 > [!TIP]
-> Taking a VM snapshot can take a while.
-> Ensure that the snapshot is taken when the maintenance window for the upgrade starts.
+> For more information on how to downgrade your DMS using a VM snapshot restore, see [Downgrade with VM snapshot restore](xref:MOP_Downgrading_a_DMS#downgrade-with-vm-snapshot-restore-preferred).
+
+> [!NOTE]
+> The timing for a VM snapshot restore depends on your specific setup.
+
+### DataMiner backup
+
+To make a backup of a DataMiner Agent using DataMiner Taskbar Utility or DataMiner Cube, see [Backing up a DataMiner Agent](xref:Backing_up_a_DataMiner_Agent).
