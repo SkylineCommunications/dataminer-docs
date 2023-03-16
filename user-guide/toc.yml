@@ -99,6 +99,22 @@
               topicUid: Monitoring_app_Alarm_Console
             - name: Monitoring app card pane
               topicUid: Monitoring_app_card_pane
+              items:
+                - name: View cards
+                  topicUID: View_Cards
+                - name: Service cards
+                  topicUID: Service_Cards
+                - name: Element cards
+                  topicUID: Element_Cards
+                  items:
+                    - name: Trending page
+                      topicUID: Trending_Page
+                - name: Alarm cards
+                  topicUID: Alarm_Cards
+                - name: CPE cards
+                  topicUID: CPE_Cards
+                - name: Spectrum analyzer cards
+                  topicUID: Spectrum_Analyzer_Cards
         - name: The legacy Monitoring & Control app user interface
           topicUid: The_legacy_Monitoring_Control_app_user_interface
     - name: Ziine Demo System
@@ -968,6 +984,10 @@
               topicUID: BPA_Password_Strength
             - name: Report Active RTE
               topicUID: BPA_Report_Active_RTE
+            - name: SRM Function Resources Consistency
+              topicUID: BPA_SRM_Function_Resources_Consistency
+            - name: Validate connectors
+              topicUID: BPA_Validate_Connectors
             - name: Verify Cloud DxM Version
               topicUID: BPA_Verify_Cloud_DxM_Version
             - name: View Recursion
@@ -1002,8 +1022,10 @@
         - name: Frequently asked questions about DMA Failover
           topicUid: Frequently_asked_questions_about_DMA_Failover
     - name: Databases
-      topicUid: databases
+      topicUid: Databases_about
       items:
+        - name: About databases
+          topicUID: Databases_about
         - name: Supported system data storage architectures
           topicUid: Supported_system_data_storage_architectures
           items:
@@ -1064,6 +1086,8 @@
                 topicUID: Configuring_Elasticsearch_node_remove
             - name: Configuring multiple Elasticsearch clusters
               topicUid: Configuring_multiple_Elasticsearch_clusters
+            - name: Manually connecting a DMA to an Elasticsearch cluster
+              topicUID: Manually_Connecting_DMA_to_Elasticsearch_Cluster
         - name: OpenSearch database
           topicUID: OpenSearch_database
           items:
@@ -1753,6 +1777,15 @@
               topicUid: Configuring_dashboard_access_rights
             - name: Dashboard Gateway troubleshooting
               topicUid: Dashboard_Gateway_troubleshooting
+    - name: Data Aggregator
+      topicUID: Data_Aggregator_DxM
+      items:
+        - name: Installation and setup
+          topicUID: Data_Aggregator_install_setup
+        - name: Settings
+          topicUID: Data_Aggregator_settings
+        - name: Configuring GQI queries
+          topicUID: Data_Aggregator_queries
     - name: DataMiner Object Models (DOM)
       topicUID: DOM
       items:
@@ -1811,6 +1844,37 @@
               topicUID: DOM_status_system_example
             - name: Altering values of a DomInstance - examples
               topicUID: DOM_Altering_values_of_a_DomInstance
+        - name: DOM DevOps tools
+          topicUID: DOM_DevOps_tools
+          items:
+            - name: DOM DevOps tools installation
+              topicUID: DOM_DevOps_installation
+            - name: Using the DOM Designer
+              topicUID: DOM_Designer
+              items:
+                - name: Configuring the Excel file
+                  topicUID: DOM_Designer_Excel_config
+                - name: Deploying the Excel file
+                  topicUID: DOM_Designer_Excel_deployment
+            - name: Using the DOM Editor
+              topicUID: DOM_Editor
+              items:
+                - name: Creating a new module and definition
+                  topicUID: DOM_editor_new_def
+                - name: Adding a field
+                  topicUID: DOM_editor_adding_field
+                - name: Adding a section definition
+                  topicUID: DOM_editor_adding_section
+                - name: Adding a button
+                  topicUID: DOM_editor_adding_button
+                - name: Changing a field name
+                  topicUID: DOM_editor_changing_field_name
+                - name: Deleting a field
+                  topicUID: DOM_editor_deleting_field
+                - name: Deleting a section
+                  topicUID: DOM_editor_deleting_section
+                - name: Naming a DOM instance
+                  topicUID: DOM_editor_naming_instance
     - name: Experience and Performance Management
       topicUid: EPM
       items:
@@ -2279,6 +2343,8 @@
               topicUid: I-DOCSIS_supported_technologies
             - name: EPM I-DOCSIS deployment
               topicUid: I-DOCSIS_deployment
+            - name: EPM I-DOCSS upgrade
+              topicUid: I-DOCSIS_upgrade
             - name: Available parameters in I-DOCSIS
               topicUid: I-DOCSIS_parameters
               items:
@@ -2509,8 +2575,10 @@
             - name: Overview of the DataMiner PTP app UI
               topicUid: Overview_of_the_DataMiner_PTP_app_UI
     - name: Service & Resource Management Framework
-      topicUid: srm_index
+      topicUid: About_SRM
       items:
+      - name: About SRM
+        topicUID: About_SRM
       - name: SRM use cases
         topicUid: srm_use_cases
         items:
@@ -2600,10 +2668,32 @@
                 topicUID: SRM_custom_front_end
               - name: Using custom scripts instead of the default SRM wizards
                 topicUID: SRM_custom_scripts
+              - name: Customizing the columns of the Bookings list
+                topicUID: SRM_custom_bookings_list
+              - name: Customizing the booking blocks on the timeline
+                topicUID: SRM_custom_booking_blocks
+          - name: Configuring SRM alarm monitoring
+            topicUID: SRM_alarm_monitoring
+          - name: Configuring SRM logging
+            topicUID: SRM_logging_config
           - name: Advanced configuration for Service Orchestration
             items:
+              - name: Bookings configuration
+                topicUID: Service_Orchestration_bookings_advanced
               - name: Resources configuration
                 topicUID: Service_Orchestration_resources_advanced
+              - name: Profile instances configuration
+                topicUID: Service_Orchestration_profile_instances
+              - name: Service definitions configuration
+                topicUID: Service_Orchestration_service_definition_advanced
+              - name: Service profiles configuration
+                topicUID: Service_Orchestration_service_profiles
+              - name: Custom events configuration
+                topicUID: Service_Orchestration_custom_events
+              - name: Booking life cycle states configuration
+                topicUID: Service_Orchestration_life_cycle_states
+      - name: SRM logging
+        topicUID: SRM_logging
 - name: dataminer.services
   topicUid: Part51CloudPlatform
   items:
@@ -2734,53 +2824,18 @@
           topicUid: Viewing_info_on_deployments
         - name: Viewing information on shares
           topicUid: Viewing_info_on_shares
-    - name: DataMiner Teams bot
-      topicUid: DataMiner_Teams_bot
+    - name: DataMiner ChatOps
+      topicUid: ChatOps
+      items:
+        - name: DataMiner Teams bot
+          topicUid: DataMiner_Teams_bot
+        - name: Chat integration
+          topicUid: Microsoft_Teams_Chat_Integration
     - name: Advanced configuration
+      topicUID: Custom_cloud_endpoint_configuration
       items:
         - name: Customizing the dataminer.services endpoint configuration
           topicUID: Custom_cloud_endpoint_configuration
-- name: DataMiner Professional Services
-  topicUid: Part52ProfessionalServices
-  items:
-    - name: DataMiner Solution Deployment Methodology
-      topicUid: DeploymentMethodology
-      items:
-        - name: About Digital Transformation
-          topicUid: DeploymentMethodology
-        - name: Managing technology deployments
-          topicUid: Managing_technology_deployments
-          items:
-            - name: Methodology is key to success
-              topicUid: Managing_technology_deployments
-            - name: Methodology is not a choice
-              topicUid: Methodology_is_not_a_choice
-            - name: Methodology needs to be practiced
-              topicUid: Methodology_needs_to_be_practiced
-        - name: Deployment methodologies in summary
-          topicUid: Deployment_methodologies_in_summary
-        - name: Turnkey Methodology
-          topicUid: Turnkey_Methodology
-          items:
-            - name: Typical phases of a Turnkey Project deployment
-              topicUid: Typical_phases_of_a_Turnkey_Project_deployment
-            - name: Terms & Conditions for a Turnkey Project deployment
-              topicUid: Terms_Conditions_for_a_Turnkey_Project_deployment
-            - name: Change Request Procedure
-              topicUid: Change_Request_Procedure
-        - name: Agile Scope-Based Methodology
-          topicUid: Agile_Scope-Based_Methodology
-          items:
-            - name: Key Values & Principles
-              topicUid: Key_Values_Principles
-            - name: Formal roles for Agile Scope-Based deployment
-              topicUid: Formal_roles_for_Agile_Scope-Based_deployment
-            - name: Typical Phases for Agile Scope-Based projects
-              topicUid: Typical_Phases_for_Agile_Scope-Based_projects
-        - name: Agile Time & Materials Methodology
-          topicUid: Agile_Time_Materials_Methodology
-        - name: Some Use Cases & Practical Examples
-          topicUid: Some_Use_Cases_Practical_Examples
 - name: Troubleshooting
   topicUid: Part6Troubleshooting
   items:
@@ -2871,6 +2926,11 @@
               topicUid: Elements_logging
             - name: Changing the maximum size of DataMiner log files
               topicUid: Changing_the_maximum_size_of_DataMiner_log_files
+    - name: Troubleshooting flowcharts
+      topicUid: Troubleshooting_Flowcharts
+      items:
+        - name: Troubleshooting - Trending
+          topicUID: Troubleshooting_Trending
     - name: Troubleshooting procedures
       topicUid: Troubleshooting_procedures
       items:
@@ -2891,6 +2951,12 @@
     - name: Known issues
       topicUID: Known_issues
       items:
+        - name: Problem with booking automation and function DVE deactivation
+          topicUID: KI_SRM_booking_events_issue
+        - name: SLPort deadlock when element with serial connection is restarted
+          topicUID: KI_SLPort_deadlock_after_restart_serial_connection
+        - name: Local user unable to access DMA after first reboot after installation
+          topicUID: KI_Local_user_unable_to_access_DMA_after_first_reboot_after_installation
         - name: Contents of state_changes table not migrated after Cassandra Cluster migration
           topicUID: KI_Contents_of_State_changes_Table_not_Migrated_after_Cassandra_Cluster_Migration
         - name: Cassandra cluster node in unexpected state
@@ -2977,6 +3043,8 @@
           topicUID: KI_Unavailable_system_database_after_DataMiner_server_reboot
         - name: Upgrade error - api-ms-win-crt-stdio-l1-1-0.dll is missing
           topicUID: KI_Upgrade_error_api-ms-win-crt-stdio-l1-1-0_dll_is_missing
+        - name: GenIf folder takes up too much disk space
+          topicUID: KI_GenIf_Folder_Growing_In_Size
     - name: Customer DataMiner Reporting (CDMR)
       topicUID: CDMR
     - name: Remote Log Collection
@@ -3047,6 +3115,8 @@
     - name: Tools
       topicUid: DataminerTools
       items:
+        - name: Activate CDMR tool
+          topicUID: Activate_CDMR
         - name: Alerter
           topicUid: Alerter
           items:
@@ -3058,8 +3128,16 @@
               topicUid: Working_with_Alerter_pop-up_balloons
             - name: Configuring Alerter
               topicUid: Configuring_Alerter
+        - name: Analyze startup logs
+          topicUID: Analyze_Startup_Logs
         - name: Cassandra Cleaner
           topicUID: Cassandra_Cleaner
+        - name: Cassandra Clone
+          topicUID: Cassandra_Clone
+        - name: Cassandra Cluster Validator
+          topicUID: Cassandra_Cluster_Validator
+        - name: Connection Check
+          topicUID: Connection_Check
         - name: DataMiner Comparison tool
           topicUID: DataMinerComparisonTool
         - name: DataMiner Size tool
@@ -3071,8 +3149,12 @@
               topicUid: Taskbar_Utility_shortcut_menu
             - name: Taskbar Utility command line options
               topicUid: Taskbar_Utility_command_line_options
+        - name: Dump Spectrum Preset Contents
+          topicUID: Dump_Spectrum_Preset_Content
         - name: Factory reset tool
           topicUID: Factory_reset_tool
+        - name: InstallConfiguration XSD
+          topicUID: InstallConfiguration_XSD
         - name: Legacy trend data exporter
           topicUID: Legacy_Trend_Data_Exporter
         - name: Multi-threaded timer polling rate calculator

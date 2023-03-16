@@ -184,12 +184,13 @@ This Evolve plan section shall only be applicable for Users that comply with the
 
 #### Requirements
 
-To be eligible for the Evolve Support Services plan, the User is at all times required to:
+To be eligible for the Evolve Support Services plan, the User is at all times required to have in their organization:
 
-- engage at least two (2) employees that hold a valid DataMiner Operator and Administrator certification issued by Skyline; and
-- engage at least one (1) employee that holds a valid DataMiner DevOps certification issued by Skyline.
+- a minimum of two active DevOps Professionals, level Enabler, or one DevOps Professional, level Catalyst
 
-The User shall ensure that the certified employees are formally mandated for DataMiner activities within the User's organization to ensure mutually fruitful Support Services.
+- access to [dataminer.services](xref:Overview_DCP)
+
+Do not hesitate to [contact your sales representative](https://community.dataminer.services/get-in-touch/sales-team/).
 
 #### Customer success manager
 

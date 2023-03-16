@@ -2,7 +2,22 @@
 uid: D-DOCSIS_deployment
 ---
 
-# EPM D-DOCSIS deployment
+# EPM D-DOCSIS Deployment
+
+### Upgrade
+
+To deploy and upgrade the D-DOCSIS branch of the EPM Solution in an automated fashion:
+
+1. Make sure the **latest DataMiner feature release** version is installed.
+
+1. Place the latest EPM D-DOCSIS upgrade installation package on the server.
+
+1. Run the installation package. This will automatically upgrade all protocols, templates, Automation scripts, assemblies, and dashboards.
+
+   > [!NOTE]
+   > Visio drawings are currently not yet supported in the upgrade package, so you will need to update these manually.
+
+### Initial Deployment
 
 To deploy the D-DOCSIS branch of the EPM Solution:
 

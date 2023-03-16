@@ -136,10 +136,13 @@ uid: PA_Creating_script_tasks
 
    1. Add a *FunctionDve* script dummy and configure it with following protocol: *Skyline Process Automation.PA Script Task*, version *Production*.
 
-      ![PA_PING_IP](~/user-guide/images/Automation_Script.png)
+      ![PA_PING_IP](~/user-guide/images/AutomationScript_PA_Ping.png)
 
       > [!NOTE]
       > In the C# block, never try to directly retrieve data from the DOM instance, as this can have unexpected results.
+
+   > [!IMPORTANT]
+   > The script must have three parameters: *Info*, *ProcessInfo*, and *ProfileInstance*. Double-check to make sure that this is indeed the case.
 
 1. Link the script with the profile definition you created earlier.
 

@@ -4,10 +4,10 @@ uid: SLNetClientTest_setting_TTL_database
 
 # Setting the TTL for database records
 
-From DataMiner 9.5.6 onwards, it is possible to update the "time to live" or TTL of database records via the SLNetClientTest tool.
+The "time to live" or TTL of database records can be updated via the SLNetClientTest tool.
 
 > [!NOTE]
-> From DataMiner 9.6.0/9.6.3 onwards, this can instead be done within the Cube UI. See [Specifying TTL overrides](xref:Specifying_TTL_overrides).
+> We recommend that you configure this in DataMiner Cube instead. See [Specifying TTL overrides](xref:Specifying_TTL_overrides).
 
 1. [Connect to the DMA using the SLNetClientTest tool](xref:Connecting_to_a_DMA_with_the_SLNetClientTest_tool).
 

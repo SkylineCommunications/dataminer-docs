@@ -4,9 +4,14 @@ uid: SRM_custom_scripts
 
 # Using custom scripts instead of the default SRM wizards
 
-The SRM Framework contains standard scripts to perform actions such as creating a booking or canceling a booking. To execute these "wizards", users can click buttons on the *Bookings* page of the Booking Manager app.
+The SRM framework contains standard scripts to perform actions such as creating a booking:
 
-The default wizards included in the SRM Framework can be used to support basic use cases. However, we highly recommend that you implement custom wizards tailored to the needs of your end users.
+- The standard Booking Wizard allows users to select a resource and one or more profiles for each node.
+- The standard Service Profile Wizard allows users to select a service profile instance, which defines the service definition and all profile instances at once.
+
+To execute these "wizards", users can click buttons on the *Bookings* page of the Booking Manager app.
+
+These default wizards included in the SRM framework can be used to support basic use cases. However, we highly recommend that you implement custom wizards tailored to the needs of your end users.
 
 ## Configuring the Booking Manager app to use custom scripts
 
@@ -18,7 +23,7 @@ To make sure a custom script is executed for specific actions: <!-- RN 26883 -->
 
 1. Select the script you want to use for one or more of the following settings:
 
-   - *Create Booking Script*: The script used to create a new booking, edit a booking or duplicate a booking. By default, this is *SRM_CreateNewBooking*.
+   - *Create Booking Script*: The script used to create a new booking, edit a booking, or duplicate a booking. By default, this is *SRM_CreateNewBooking*.
 
    - *Reservation Action Script*: The script used for various actions such as Adjust Time, Cancel, Finish, Start, Confirm, etc. By default, this is *SRM_ReservationAction*.
 

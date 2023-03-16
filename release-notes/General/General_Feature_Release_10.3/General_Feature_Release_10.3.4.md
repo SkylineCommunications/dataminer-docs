@@ -17,9 +17,77 @@ uid: General_Feature_Release_10.3.4
 
 ## Other features
 
+#### Correlation alarms will now by default contain the value of the alarm property by which they are grouped [ID_35583]
+
+<!-- MR 10.4.0 - FR 10.3.4 -->
+
+When a correlation rule is configured to use alarm grouping via an alarm property, from now on, the value of the alarm property by which the alarms are grouped will now by default be added to the correlated alarm.
+
+If you do not want the alarm property value to be added to the correlation alarm, then you can disable this behavior by adding the `NewAlarmOptions.DisableGroupedProperty` flag to the `NewAlarmActionDefinition.Properties` using the *SLNetClientTest* tool.
+
+> [!WARNING]
+> Always be extremely careful when using the *SLNetClientTest* tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
+
+#### GQI - Ad hoc data source: Sending and receiving DMS messages [ID_35701]
+
+<!-- MR 10.4.0 - FR 10.3.4 -->
+
+Ad hoc data sources can now retrieve data by means of DMS messages.
+
+To do so, the `IGQIDataSource` must implement the `IGQIOnInit` interface, of which the `OnInit` method can also be used to initialize a data source:
+
+```csharp
+OnInitOutputArgs OnInit(OnInitInputArgs args)
+```
+
+When passed to the `OnInit` method, `OnInitInputArgs` can now contain the following new property:
+
+```csharp
+GQIDMS DMS
+```
+
+The `GQIDMS` class contains the following methods, which can be used to request information in the form of `DMSMessage` objects:
+
+| Method | Function |
+|--------|----------|
+| `DMSMessage SendMessage(DMSMessage message)` | Sends a request that expects a single response. |
+| `DMSMessage[] SendMessages(params DMSMessage[] messages)` | Sends multiple requests at once, or sends a request that expects multiple responses. |
+
+The `GQIDMS` object is only generated when the property is used.
+
+Generally, an ad hoc data source implementation will want to add a private field where it can store the `GQIDMS` object to be used later in other callbacks when columns and rows are created.
+
+> [!IMPORTANT]
+> DMS messages are subject to change without notice. If you can implement an alternative using the DataMiner UI or the automation options provided in DataMiner Automation, we highly recommend that you do so instead.
+
 ## Changes
 
 ### Enhancements
+
+#### SLXML no longer used to read out element data [ID_33515] [ID_33616] [ID_33625] [ID_33659]
+
+<!-- MR 10.4.0 - FR 10.3.4 -->
+
+From now on, SLXML will no longer be used to read out the following files containing element data:
+
+- *Element.xml* files
+- *ElementData.xml* files
+- *EPMConfig.xml* files
+- *Description.xml* files
+- *Ports.xml* files
+
+> [!IMPORTANT]
+> This is a breaking change. Make sure that none of the protocols in your system is using the following deprecated Notify types:
+>
+> - DMS_GET_INFO
+> - DMS_GET_INFO_ALL
+> - NT_ADD_DESCRIPTION_FILE
+> - NT_GET_ITEM_DATA
+> - NT_GET_PARAMETER_BY_DATA
+> - NT_GET_XML_COOKIE
+> - NT_RELOAD_ELEMENT
+> - NT_SET_ITEM_DATA
+> - NT_SET_PARAMETER_BY_DATA
 
 #### Enhanced performance when creating or editing services [ID_35366]
 
@@ -27,11 +95,30 @@ uid: General_Feature_Release_10.3.4
 
 Because of a number of enhancements made with regard to the communication between SLDataMiner and SLDMS, overall performance has increased when creating or editing services, especially in heavily loaded environments.
 
+#### Security enhancements [ID_35434] [ID_35667]
+
+<!-- 35434: MR 10.4.0 - FR 10.3.4 -->
+<!-- 35667: MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
+
+A number of security enhancements have been made.
+
+#### SLAnalytics - Pattern matching: Enhanced performance when detecting large patterns [ID_35474]
+
+<!-- MR 10.4.0 - FR 10.3.4 -->
+
+Because of a number of enhancements, overall performance has increased when detecting trend patterns that cover more than 30,000 data points.
+
 #### Enhanced SNMP trap distribution [ID_35480]
 
 <!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
 
 From now on, stopped elements will no longer be taken into account when distributing SNMP traps. When a trap has to be sent to an element on another DataMiner Agent, it will no longer be sent when that element is stopped.
+
+#### SLAnalytics - Automatic incident tracking: Enhanced performance when fetching relation information [ID_35508]
+
+<!-- MR 10.4.0 - FR 10.3.4 -->
+
+Because of a number of enhancements, overall performance has increased when fetching relation information for the automatic incident tracking feature.
 
 #### SLAnalytics - Automatic incident tracking: Focus value updates will no longer be taken into account when determining whether the maximum group event rate was exceeded [ID_35545]
 
@@ -39,11 +126,26 @@ From now on, stopped elements will no longer be taken into account when distribu
 
 From now on, focus value updates will no longer be taken into account when determining whether the *Maximum group event rate* was exceeded.
 
-#### Security enhancements [ID_35667]
+#### SLAnalytics will now send regular notifications instead of client notifications [ID_35591]
 
-<!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
+<!-- MR 10.4.0 - FR 10.3.4 -->
 
-A number of security enhancements have been made.
+Up to now, when SLAnalytics sent a notification, it would generate an event of type *client notification* with parameter ID 64574. From now on, it will instead generate an event of type *notification* with parameter ID 64570.
+
+#### DataMiner upgrade: Additional prerequisite will now check for incompatible connectors [ID_35605]
+
+<!-- MR 10.4.0 - FR 10.3.4 -->
+
+When you start a DataMiner upgrade, the `ValidateConnectors` prerequisite will now scan the system for any connectors that are known to be incompatible with the DataMiner version to which the DataMiner Agent is being upgraded. If such connectors are found, they will have to be removed before you can continue with the upgrade.
+
+#### GQI: Raw datetime values will now be converted to UTC [ID_35640]
+
+<!-- MR 10.4.0 - FR 10.3.4 -->
+
+Up to now, after each step in a GQI query, raw datetime values were always converted to the time zone that was specified in the query options. From now on, raw datetime values will be converted to UTC instead. The time zone specified in the query options will now only be used when converting a raw datetime value to a display value.
+
+> [!IMPORTANT]
+> **BREAKING CHANGE**: When, in an ad hoc data source or a query operation, a datetime value is not in UTC format, an exception will now be thrown.
 
 #### SLLogCollector now also collects output of 'netstat -ano' command [ID_35674]
 
@@ -54,6 +156,18 @@ SLLogCollector packages will now also include the following additional file:
 | File | Contents |
 |------|----------|
 | Logs\Network Information\Netstat.exe -ano.txt | The output of an `netstat -ano` command. |
+
+#### SLAnalytics - Proactive cap detection: Enhanced accuracy [ID_35695]
+
+<!-- MR 10.4.0 - FR 10.3.4 -->
+
+Proactive cap detection predicts future issues based on trend data in the Cassandra database. Because of a number of enhancements, overall prediction accuracy has increased.
+
+#### Service & Resource Management: Bookings of type 'Custom Process Automation' no longer consume license credits [ID_35742]
+
+<!-- MR 10.4.0 - FR 10.3.4 -->
+
+From now on, ReservationInstances of type *Custom Process Automation* will no longer consume SRM credits. This means that, from now on, you can schedule an unlimited number of concurrent bookings of type *Custom Process Automation*.
 
 ### Fixes
 
@@ -119,6 +233,12 @@ From now on, parameter update throttling can be disabled by setting the *Message
 
 When a client retrieved the protocol of a DVE parent element, its alarm filter would not get returned correctly for some of its parameters that are exported as standalone parameters.
 
+#### GQI: Problem when applying an 'aggregation' or 'group by' operation on a datetime column of an Elasticsearch table [ID_35609]
+
+<!-- MR 10.3.0 [CU1] - FR 10.3.4 -->
+
+When an *aggregation* or *group by* operation was applied on a datetime column of an Elasticsearch table, the datetime values in that column would be parsed incorrectly.
+
 #### A number of alarm-related issues have been fixed [ID_35611]
 
 <!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
@@ -137,6 +257,12 @@ During a midnight synchronization, in some cases, the ResourceManager module cou
 
 The logging indicating the start and the end of the initialization, synchronization and cache load of the ResourceManager module has now been changed from log level 4 to log level 0.
 
+#### SLAnalytics - Behavioral anomaly detection: Suggestion events or alarm events for change points of type 'flatline' would not get cleared [ID_35645]
+
+<!-- MR 10.3.0 [CU1] - FR 10.3.4 -->
+
+When SLAnalytics was stopped while suggestion events or alarm events for change points of type *flatline* were still open, these events would stay open until they were cleared manually. From now on, suggestion events or alarm events for change points of type *flatline* will automatically be cleared as soon as SLAnalytics has restarted.
+
 #### SLAnalytics - Behavioral anomaly detection: An upward level shift directly followed by a downward level shift would incorrectly get categorized as an "unlabeled" change event [ID_35646]
 
 <!-- MR 10.3.0 [CU1] - FR 10.3.4 -->
@@ -152,3 +278,66 @@ Up to now, when the SLAnalytics process started, the entire focus data cache of 
 Also, when the SLAnalytics processes of different agents in the same cluster were restarted right before a full hour, it was possible to trigger the internal duplication of active alarms hosted on non-leader agents. This could, in turn, lead to an incorrect internal alarm state and incorrect incidents containing copies of the same alarm.
 
 From now on, the focus data cache will no longer be cleared when SLAnalytics process starts up. Instead, only the focus data associated with the alarms that are no longer active will be removed from the cache.
+
+#### Cassandra Cluster Migrator tool would incorrectly not migrate the state-changes table from a single-node Cassandra to a Cassandra Cluster [ID_35699]
+
+<!-- MR 10.4.0 - FR 10.3.4 -->
+
+When you used the Cassandra Cluster Migrator tool to migrate a single-node Cassandra database to a Cassandra Cluster setup, up to now, the `state-changes` table would incorrectly not be migrated.
+
+#### Automation: DataMiner would incorrectly remove the xmlns attribute when importing or saving an Automation script [ID_35708]
+
+<!-- MR 10.4.0 - FR 10.3.4 -->
+
+When DataMiner imported or saved an Automation script, it would incorrectly remove the `xmlns` attribute specified in the `<DMSScript>` element, even when that attribute had been added by DataMiner Integration Studio. From now on, when DataMiner imports or saves an Automation script, it will no longer remove this attribute. Moreover, if no such attribute is specified, it will automatically add `xmlns="http://www.skyline.be/automation"`.
+
+Example:
+
+```xml
+<DMSScript options="272" xmlns="http://www.skyline.be/automation">
+   <Name>...</Name>
+   ...
+</DMSScript>
+```
+
+#### GQI: Display value of an empty cell of type 'double' would incorrectly be set to a "0" string [ID_35718]
+
+<!-- MR 10.3.0 [CU1] - FR 10.3.4 -->
+
+The display value of an empty cell of type *double* would incorrectly be set to a "0" string. From now on, it will be set to an empty string instead.
+
+#### SLElement could leak memory when updating alarm templates containing conditions [ID_35728]
+
+<!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.4 -->
+
+In some cases, SLElement could leak memory when updating alarm templates containing conditions.
+
+#### SLAnalytics - Automatic incident tracking: Problem when starting up [ID_35731]
+
+<!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
+
+When a large number of groups needed to be created while automatic incident tracking was starting up, the `A timeout of 00:01:00.0 occurred while processing message of type AlarmFloodMessage` error could be thrown, causing automatic incident tracking to not start up correctly.
+
+#### Behavioral anomaly detection: Suggestion alarms would incorrectly be re-evaluated as normal alarms after a DataMiner restart [ID_35744]
+
+<!-- MR 10.3.0 [CU1] - FR 10.3.4 -->
+
+After a DataMiner restart, suggestion alarms would incorrectly be re-evaluated as normal alarms.
+
+#### Memory leak in SLAnalytics [ID_35758]
+
+<!-- MR 10.2.0 [CU14]/10.3.0 [CU1] - FR 10.3.4 -->
+
+In some cases, SLAnalytics kept on waiting on a database call, which eventually led to the process leaking memory.
+
+#### Problem with SLElement when creating an alarm with an 'SLA Affecting' property [ID_35776]
+
+<!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
+
+In some rare cases, an error could occur in SLElement when creating an alarm with an *SLA Affecting* property.
+
+#### Input/output values of a matrix element would incorrectly be overridden due to a caching issue [ID_35857]
+
+<!-- MR 10.4.0 - FR 10.3.4 [CU0] -->
+
+When an ElementProtocol object was being created, due to a caching issue in SLNet, the input/output values stored in the protocol of a matrix element would incorrectly be overridden with the input/output values in the ElementProtocol object that was being created.

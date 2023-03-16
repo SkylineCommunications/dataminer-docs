@@ -6,20 +6,15 @@ uid: About_redundancy_groups
 
 In DataMiner, you can set up redundant device architectures by simply combining primary and backup elements into so-called redundancy groups.
 
-In DataMiner Cube, redundancy groups are listed in the Surveyor with a specific icon: ![](~/user-guide/images/IconRG00054.PNG)
+In DataMiner Cube, redundancy groups are listed in the Surveyor with a specific icon: ![redundancy group icon](~/user-guide/images/IconRG00054.PNG)
 
 Redundancy groups have specific context menu options in the Surveyor. They also have corresponding redundancy group cards, which contain both status information and configuration options.
 
 > [!NOTE]
 > To quickly find a redundancy group in the Surveyor, search with the term “redundancy”, followed by a space and part of the redundancy group name. See [Searching in DataMiner Cube](xref:Searching_in_DataMiner_Cube).
 
-The following topics explain more about how redundancy groups work:
-
-- [Primary elements, backup elements and virtual primary elements](#primary-elements-backup-elements-and-virtual-primary-elements)
-
-- [Software redundancy](#software-redundancy)
-
-- [Priority in a redundancy group](#priority-in-a-redundancy-group)
+> [!IMPORTANT]
+> Redundancy groups cannot be integrated with DataMiner Service and Resource Management (SRM).
 
 ### Primary elements, backup elements and virtual primary elements
 
@@ -36,6 +31,7 @@ In short, when creating a redundancy group, you have to do the following:
 - Specify (for every primary element) when to switch back from backup to primary, i.e. when to link the virtual primary element to the primary element again.
 
 > [!NOTE]
+>
 > - Virtual primary elements “inherit” their parameter values from the primary element or backup element to which they are linked. However, they have their own alarm history and trend data.
 > - Virtual primary elements can be included in services. That way, physical devices in a service can be automatically swapped when necessary without affecting the service itself.
 
@@ -56,5 +52,4 @@ To do so, you have to use an optional extra layer of redundancy logic called “
 - **Priority among backup elements**: When a redundancy group is configured so that any of the backup elements can take over when a primary element fails, the backup element with the highest priority will take over when a primary element fails.
 
 > [!TIP]
-> See also:
-> [Setting the priority of a primary or backup element](xref:Setting_the_priority_of_a_primary_or_backup_element)
+> See also: [Setting the priority of a primary or backup element](xref:Setting_the_priority_of_a_primary_or_backup_element)

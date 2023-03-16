@@ -12,7 +12,7 @@ uid: FAQs_Pricing
 
   Yes. Get in touch with [your Account Manager](https://community.dataminer.services/get-in-touch/sales-team/).
 
-- **Are there any sign-up fees or one-time fees?**
+- **Are there any sign-up fees or one-time fees for usage-based models?**
 
   No.
 
@@ -28,6 +28,6 @@ uid: FAQs_Pricing
 
   Yes, if you have subscribed to that service.
 
-- **Can I use Professional Services credits to pay for usage-based service credits?**
+- **Can I use Professional Services credits in exchange for DataMiner credits?**
 
   No.

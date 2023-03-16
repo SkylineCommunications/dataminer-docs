@@ -200,7 +200,7 @@ When you add a drop-down list, it is possible to show a check box for one entry 
 When a standard drop-down list is configured, the items to choose from are statically defined in the protocol. Alternatively, you can also create a dynamic drop-down list. To do so, create a parameter that holds the dynamic entries in a parameter (by providing a semicolon-separated list of entries) and refer to this parameter using the dependencyId attribute.
 
 ```xml
-<Param id="400">
+<Param id="400" trending="false">
   <Name>DynamicDependencyLinkSpeed</Name>
   <Description>Link Speed</Description>
   <Information>
@@ -229,9 +229,7 @@ When a standard drop-down list is configured, the items to choose from are stati
      </Positions>
   </Display>
   <Measurement>
-     <Type>discreet</Type>
-     <Discreets dependencyId="402">
-     </Discreets>
+     <Type>string</Type>
   </Measurement>
 </Param>
 <Param id="401" setter="true">

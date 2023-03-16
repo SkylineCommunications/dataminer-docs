@@ -15,3 +15,5 @@ uid: Tables1
 - [Integrity constraints](xref:Integrity_constraints)
 
 - [Preserve state option](xref:Preserve_state_option)
+
+- [Clear Table Data on Polling Disable](xref:Clear_Table_Data_on_Polling_Disable)

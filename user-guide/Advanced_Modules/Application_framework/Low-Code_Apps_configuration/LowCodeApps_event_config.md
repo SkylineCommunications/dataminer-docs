@@ -71,6 +71,21 @@ To configure an event to open another low-code app that has been published in yo
   > [!NOTE]
   > *Drafts* apps are included in the list of apps you can select.
 
+## Opening a monitoring card
+
+Available from DataMiner 10.3.4/10.4.0 onwards<!-- RN 35661 -->. To configure an event to open a monitoring card of a specific element, service, or view:
+
+1. Select *Open monitoring card*.
+
+1. In the *Type* box, select a type: element, service, or view.
+
+1. Based on the selected type, select the element, service, or view for which the monitoring card should be opened.
+
+1. Select *Add action*.
+
+> [!NOTE]
+> When a low-code app is embedded in Cube (e.g. in Visual Overview), an *Open monitoring card* action will open the specified card in Cube.
+
 ## Executing a component action
 
 This option is only displayed if there is a component action that can be executed.

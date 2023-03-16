@@ -29,6 +29,149 @@ General Parameters (DataMiner Element Control Protocol):
 
 |ID|Name|Description and/or possible values|
 |--- |--- |--- |
+|64501|TIMEOUT|Communication state (0 = Responding, 1 = Not Responding)|
+|64502|STATE|Element state|
+|64503|New client registered|New client registered|
+|64504|New Element connection|New element connection|
+|64505|Client disconnected|Client disconnected|
+|64506|Element disconnection|Element disconnection|
+|64507|Parameter descriptions|Parameter descriptions|
+|64508|Link file|Link file|
+|64509|Edited|Edited|
+|64510|Element created|Element created|
+|64511|Deleted|Deleted|
+|64514|Alarm Template Assigned|Alarm template assigned|
+|64516|Database optimization|Database optimization|
+|64517|Database stack|Database stack|
+|64518|Mobile gateway|Mobile Gateway|
+|64519|Service path changed|Service path changed|
+|64520|Startup DataMiner Agent|Startup DataMiner Agent|
+|64521|Protocol Added|Protocol added|
+|64522|Protocol Deleted|Protocol deleted|
+|64523|Protocol Replaced|Protocol replaced|
+|64524|Alarm Template Added|Alarm template added|
+|64525|Alarm Template Deleted|Alarm template deleted|
+|64526|Alarm Template Edited|Alarm template edited|
+|64527|Script Added|Script added|
+|64528|Script Deleted|Script deleted|
+|64529|Script Edited|Script edited|
+|64530|Information Added|Information added|
+|64531|Information Deleted|Information deleted|
+|64532|Information Edited|Information edited|
+|64533|SMS Received|SMS received|
+|64534|SMS Sent|SMS sent|
+|64535|GSM Signal Strength|GSM signal strength|
+|64536|GSM General Information|GSM general information|
+|64537|Trending Template Edited|Trending template edited|
+|64538|Trending Template Added|Trending template added|
+|64539|Trending Template Deleted|Trending template deleted|
+|64540|VDX Deleted|VDX deleted|
+|64541|VDX Added|VDX added|
+|64542|VDX Edited|VDX edited|
+|64543|Trending Template Assigned|Trend template assigned|
+|64544|Element Connections Edited|Element connections edited|
+|64545|Security Edited|Security edited|
+|64546|Views Edited|Views edited|
+|64547|Database settings edited|Database settings edited|
+|64548|SNMP-Managers edited|SNMP managers edited|
+|64549|Start Element Failed|Start element failed|
+|64550|Load Element Failed|Load element failed|
+|64551|Table Repair|Table repair|
+|64552|Set Parameter|Set parameter|
+|64553|Import elements|Import elements|
+|64554|Information.xml assigned|Information.xml assigned|
+|64555|Start synchronization|Start synchronization|
+|64556|Synchronization finished|Synchronization finished|
+|64557|DataMiner Agent found|DataMiner Agent found|
+|64558|DataMiner Agent lost|DataMiner Agent lost|
+|64559|Error during synchronization|Error during synchronization|
+|64560|No connection with DMA|Connection lost with DMA|
+|64561|Connection established with DMA|Connection re-established with DMA|
+|64562|Automation info|Automation info|
+|64563|Scheduler info|Scheduler info|
+|64564|Script execution failure|Script execution failure|
+|64565|Load Protocol Failed|Load protocol failed|
+|64566|Startup error|Startup error|
+|64567|Scheduled Task Created|Scheduled task created|
+|64568|Scheduled Task Updated|Scheduled task updated|
+|64569|Scheduled Task Deleted|Scheduled task deleted|
+|64570|Notification|Notification|
+|64571|Stop DataMiner|Stop DataMiner|
+|64572|DataMiner run-time|DataMiner run-time|
+|64573|Task started|Task started|
+|64574|Client notification|Client notification|
+|64575|Set as production protocol|Set as production protocol|
+|64576|Element masked|Element masked|
+|64577|Element unmasked|Element unmasked|
+|64578|DMS Revisioned|DMS revisioned|
+|64579|Backup status|Backup status|
+|64580|SNMPAgent|SNMP agent|
+|64581|File changed|File changed|
+|64582|Filter added|Filter added|
+|64583|Filter edited|Filter edited|
+|64584|Filter deleted|Filter deleted|
+|64585|User settings|User settings|
+|64586|Document added|Document added|
+|64587|Document edited|Document edited|
+|64588|Document removed|Document removed|
+|64589|Script started|Script started|
+|64590|Linked to|Linked to|
+|64591|State change|State change|
+|64592|Service added|Service added|
+|64593|Redundancy Group added|Redundancy group added|
+|64594|Preset Created|Preset created|
+|64595|Preset Edited|Preset edited|
+|64596|Preset Renamed|Preset renamed|
+|64597|Preset Deleted|Preset deleted|
+|64598|Real-time TCP Socket|Real-time TCP socket|
+|64599|Database|Database|
+|64600|Correlation engine|Correlation engine|
+|64601|Alarm colors edited|Alarm colors edited|
+|64602|IP Settings|IP settings|
+|64603|Spectrum Script Edited|Spectrum script edited|
+|64604|Spectrum Script Deleted|Spectrum script deleted|
+|64605|Spectrum Monitor Edited|Spectrum monitor edited|
+|64606|Spectrum Monitor Deleted|Spectrum monitor deleted|
+|64607|Entered Prioritized Mode|Entered prioritized mode|
+|64608|Left Prioritized Mode|Left prioritized mode|
+|64609|Spectrum Script Added|Spectrum script added|
+|64610|Spectrum Monitor Created|Spectrum monitor created|
+|64611|Mobile Gateway lost contact with DataMiner|Mobile Gateway lost contact with DataMiner|
+|64612|Spectrum Monitor Failure|Spectrum monitor failure|
+|64613|Collaboration Message|Collaboration message|
+|64614|DataMiner Failover Status|DataMiner Failover status|
+|64615|Service Templates|Service templates|
+|64616|Client Eventing|Client eventing|
+|64617|Latch reset info|Latch reset info|
+|64619|Annotations Edited|Annotations edited|
+|64620|Asset Manager Configuration|Asset Manager configuration|
+|64621|Map Configuration|Map configuration|
+|64622|SNMP Manager|SNMP manager|
+|64623|Redundancy Group State|Redundancy group state|
+|64624|VDX Assigned|VDX assigned|
+|64625|Export Progress|Export progress|
+|64626|Import Progress|Import progress|
+|64627|Connectivity Engine|Connectivity engine|
+|64628|Resource Manager info|Resource Manager info|
+|64629|Tickets|Tickets|
+|64630|Notes|Notes|
+|64631|Profile Manager info|Profile Manager info|
+|64632|Spectrum trace recording started|Spectrum trace recording started|
+|64633|Spectrum trace recording stopped|Spectrum trace recording stopped|
+|64636|DataMiner Connectivity Framework|DataMiner Connectivity Framework|
+|64637|Authentication Failure|Authentication failure|
+|64638|Sounds|Sounds|
+|64639|Disk Watcher|Disk Watcher|
+|64640|Licensing|Licensing|
+|64641|Protocol Function Manager info|Protocol Function Manager info|
+|64642|Topology engine|Topology engine|
+|64643|Failed Southbound SNMP Communication|Failed southbound SNMP communication|
+|64644|Service Manager info|Service Manager info|
+|64645|Property Configuration|Property configuration|
+|64646|DOM Manager info|DOM Manager info|
+|64647|Clearable Alarm Storm Protection|Clearable alarm storm protection|
+|64648|Redundancy switch|Redundancy switch|
+|64649|Azure Active Directory|Azure Active Directory|
 |65000|[Lock status]|0/empty = unlocked, 1 = locked, 2 = unlocked with force|
 |65002|[Lock owner]|Username of the user who is locking the element|
 |65003|[Number of active Alarms]||

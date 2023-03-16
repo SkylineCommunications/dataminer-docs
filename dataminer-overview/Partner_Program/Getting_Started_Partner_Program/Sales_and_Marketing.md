@@ -122,8 +122,8 @@ Therefore, partners are highly encouraged to align with this collaborative minds
 
 - **Ziine DataMiner demo platform**: Everyone with a dataminer.services account (which is available to everyone, free of charge) can not only access the full content available on the DataMiner Dojo Community but can also access the [Ziine DataMiner demo platform](xref:ZiineDemoSystem), where you can find an assortment of demos that can be leveraged to learn more about DataMiner or to provide demos to third parties.
 
-- **Deal registration**: Under specific terms and conditions, Skyline also provides the option to register deals, which then provides partners with protection for opportunities that they have developed and that they are working on.
+- **Deal registration**: Under specific terms and conditions, Skyline also provides the option to [register deals](xref:Deal_Registration), which then provides partners with protection for opportunities that they have developed and that they are working on.
 
   We recommend that you become familiar with the process of register deals and use them to secure a return on your business development efforts.
 
-- **Professional services referrals**: Subject to specific terms and conditions related to technical qualifications and certification, Partners can be eligible to get referrals from Skyline to specific DataMiner projects or accounts where professional services are required for the design, development, and deployment of solutions based on DataMiner.
+- **Professional services referrals**: Subject to specific terms and conditions related to technical qualifications and certification, partners can be eligible to get referrals from Skyline to specific DataMiner projects or accounts where professional services are required for the design, development, and deployment of solutions based on DataMiner.
