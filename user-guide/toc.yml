@@ -1844,6 +1844,37 @@
               topicUID: DOM_status_system_example
             - name: Altering values of a DomInstance - examples
               topicUID: DOM_Altering_values_of_a_DomInstance
+        - name: DOM DevOps tools
+          topicUID: DOM_DevOps_tools
+          items:
+            - name: DOM DevOps tools installation
+              topicUID: DOM_DevOps_installation
+            - name: Using the DOM Designer
+              topicUID: DOM_Designer
+              items:
+                - name: Configuring the Excel file
+                  topicUID: DOM_Designer_Excel_config
+                - name: Deploying the Excel file
+                  topicUID: DOM_Designer_Excel_deployment
+            - name: Using the DOM Editor
+              topicUID: DOM_Editor
+              items:
+                - name: Creating a new module and definition
+                  topicUID: DOM_editor_new_def
+                - name: Adding a field
+                  topicUID: DOM_editor_adding_field
+                - name: Adding a section definition
+                  topicUID: DOM_editor_adding_section
+                - name: Adding a button
+                  topicUID: DOM_editor_adding_button
+                - name: Changing a field name
+                  topicUID: DOM_editor_changing_field_name
+                - name: Deleting a field
+                  topicUID: DOM_editor_deleting_field
+                - name: Deleting a section
+                  topicUID: DOM_editor_deleting_section
+                - name: Naming a DOM instance
+                  topicUID: DOM_editor_naming_instance
     - name: Experience and Performance Management
       topicUid: EPM
       items:
