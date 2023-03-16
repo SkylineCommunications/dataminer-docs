@@ -15,21 +15,22 @@ In System Center in Cube, you can manage your APIs and tokens in the User-Define
 
 > [!IMPORTANT]
 >- This tab will replace the obsolete API deployment tab in the future, so make sure to move your old APIs from API deployment to the new feature. How to create APIs from existing scripts is explained on the [using an existing script page](xref:UD_APIs_Using_existing_scripts).
->- The UI is not visible by default as the feature is not released yet.
+
+To use the User Defined APIs Cube UI, you need DataMiner version 10.4.0/10.3.6. The Cube UI is not enabled by default. To enable it, set the soft-launch option *UserDefinableAPI* to true. See [soft-launch options](xref:SoftLaunchOptions).
 
 ### Permissions
 
 APIs:
 
-- To read or count definitions, the user requires the `PermissionFlags.UserDefinableApiDefinitionRead` permission flag.
-- To create or update definitions, the user requires the `PermissionFlags.UserDefinableApiDefinitionCreateUpdate` **AND** `PermissionFlags.AutomationExecuteScripts` permission flags.
-- To delete definitions, the user requires the `PermissionFlags.UserDefinableApiDefinitionDelete` permission flag.
+- To read or count definitions, and view the UI, the user needs the `User-defined APIs > Definitions > UI available` permission flag.
+- To create or update definitions, the user needs the `User-defined APIs > Definitions > Add/Edit` permission flag. Also the `Automation > Execute` permission flag is required.
+- To delete the definitions, the user needs the `User-defined APIs > Definitions > Delete` permission flag.
 
 Tokens:
 
-- To read or count tokens, the user requires the `PermissionFlags.UserDefinableApiTokenRead` permission flag.
-- To create or update tokens, the user requires the `PermissionFlags.UserDefinableApiTokenCreateUpdate` permission flag.
-- To delete tokens, the user requires the `PermissionFlags.UserDefinableApiTokenDelete` permission flag.
+- To read or count tokens, and view the UI, the user needs the `User-defined APIs > Tokens > UI available` permission flag.
+- To create or update tokens, the user needs the `User-defined APIs > Tokens > Add/Edit` permission flag.
+- To delete the tokens, the user needs the `User-defined APIs > Tokens > Delete` permission flag.
 
 ## What are the different objects?
 
