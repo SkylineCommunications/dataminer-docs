@@ -18,6 +18,14 @@ uid: Web_apps_Main_Release_10.3.0_CU2
 
 In the *Monitoring* app, from now on, elements, services and views opened by clicking a Visio shape will open in the same tab instead of a new tab.
 
+#### Web apps - Query builder: Query node options with only a single value will no longer be displayed in a selection box [ID_35865]
+
+<!-- MR 10.2.0 [CU13]/10.3.0 [CU2] - FR 10.3.5 -->
+
+In the query builder, from now on, when a query node option only has a single value, that option will no longer be displayed in a selection box.
+
+For example, up to now, when you selected the *Get elements* data source, followed by the *Aggregate* operator, the method selection box would display "Get the". This will no longer be the case.
+
 ### Fixes
 
 #### Dashboards app: Sticky component menus would no longer be fully visible after you had changed the number of dashboard columns [ID_35702]

@@ -56,6 +56,14 @@ A web API event queue will now automatically be removed after 5 minutes if a cli
 
 Also, it is now possible for one web API connection to have multiple event queues. As a result, clients will be able to have multiple open websocket connections using the same connection ID.
 
+#### Web apps - Query builder: Query node options with only a single value will no longer be displayed in a selection box [ID_35865]
+
+<!-- MR 10.2.0 [CU13]/10.3.0 [CU2] - FR 10.3.5 -->
+
+In the query builder, from now on, when a query node option only has a single value, that option will no longer be displayed in a selection box.
+
+For example, up to now, when you selected the *Get elements* data source, followed by the *Aggregate* operator, the method selection box would display "Get the". This will no longer be the case.
+
 ### Fixes
 
 #### Dashboards app & Low-code apps: Duplicated component would not have the size as the original [ID_35804]

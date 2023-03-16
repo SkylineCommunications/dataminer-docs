@@ -85,6 +85,14 @@ A clearer error message will now be returned when you are building a query again
 
 Because of a number of enhancements, overall performance has increased when exporting trend data to a CSV file.
 
+#### Web apps - Query builder: Query node options with only a single value will no longer be displayed in a selection box [ID_35865]
+
+<!-- MR 10.2.0 [CU13]/10.3.0 [CU2] - FR 10.3.5 -->
+
+In the query builder, from now on, when a query node option only has a single value, that option will no longer be displayed in a selection box.
+
+For example, up to now, when you selected the *Get elements* data source, followed by the *Aggregate* operator, the method selection box would display "Get the". This will no longer be the case.
+
 ### Fixes
 
 #### Memory leak in SLNet after closing a client connection that had been using a "SLDataGateway.API" subscription set [ID_35319]
