@@ -95,6 +95,12 @@ From now on, SLAnalytics will also take into account first-time alarm template a
 
 A number of enhancements have been made to the Business Intelligence module, especially with regard to the retrieval of data from logger tables and to general error handling.
 
+#### SLAnalytics - Behavioral anomaly detection: Events associated with a DVE child element will no longer be linked to the DVE parent element [ID_35901]
+
+<!-- MR 10.4.0 - FR 10.3.5 -->
+
+Up to now, when an event associated with a DVE child element was generated, internally, that event would be linked to the DVE parent element. From now on, it will be linked to the child element instead.
+
 ### Fixes
 
 #### SLLogCollector: Problem when collecting multiple memory dumps with the 'Now and when memory increases with X Mb' option [ID_35617]
@@ -151,9 +157,3 @@ In some cases, markers could disappear when a layer was enabled or disabled.
 <!-- MR 10.2.0 [CU13]/10.3.0 [CU2] - FR 10.3.5 -->
 
 In some cases, SLAnalytics could keep on waiting indefinitely for large delete operations to finish.
-
-#### SLAnalytics - Behavioral anomaly detection: Events associated with a DVE child element would incorrectly be linked to the DVE parent element [ID_35901]
-
-<!-- MR 10.4.0 - FR 10.3.5 -->
-
-When an event associated with a DVE child element was generated, internally, that event would incorrectly be linked to the DVE parent element. From now on, it will be linked to the child element instead.

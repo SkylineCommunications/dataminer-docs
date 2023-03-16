@@ -178,6 +178,12 @@ Up to now, SLAnalytics would stop working without giving any notice whatsoever w
 
 From now on, when no Cassandra database is present, SLAnalytics will be stopped gracefully and a message will be added to the *SLAnalytics.txt* log file.
 
+#### SLAnalytics - Behavioral anomaly detection: Events associated with a DVE child element will no longer be linked to the DVE parent element [ID_35901]
+
+<!-- MR 10.4.0 - FR 10.3.5 -->
+
+Up to now, when an event associated with a DVE child element was generated, internally, that event would be linked to the DVE parent element. From now on, it will be linked to the child element instead.
+
 ### Fixes
 
 #### Cassandra Cluster: Every DMA would incorrectly try to delete any possible old Cassandra compaction and repair tasks found in the entire DMS [ID_31923]
@@ -247,8 +253,3 @@ SLAnalytics would incorrectly consider every parameter included in an alarm temp
 
 When an ElementProtocol object was being created, due to a caching issue in SLNet, the input/output values stored in the protocol of a matrix element would incorrectly be overridden with the input/output values in the ElementProtocol object that was being created.
 
-#### SLAnalytics - Behavioral anomaly detection: Events associated with a DVE child element would incorrectly be linked to the DVE parent element [ID_35901]
-
-<!-- MR 10.4.0 - FR 10.3.5 -->
-
-When an event associated with a DVE child element was generated, internally, that event would incorrectly be linked to the DVE parent element. From now on, it will be linked to the child element instead.
