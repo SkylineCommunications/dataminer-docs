@@ -7,7 +7,7 @@ uid: UD_APIs
 > [!WARNING]
 > The current feature is in preview and is not fully released yet. This feature should not be used in any staging or production environment.
 
-The User Defined APIs feature allows users to define API calls that will be made available on the DataMiner agents that host the [UserDefinableApiEndpoint extension module](xref:UD_APIs_UserDefinableApiEndpoint). These APIs can be secured using API tokens that can be generated on the fly & linked to the API definitions.
+The User Defined APIs feature allows users to define API calls that will be made available on the DataMiner agents that host the [UserDefinableApiEndpoint extension module](xref:UD_APIs_UserDefinableApiEndpoint). These APIs can be secured using API tokens that can be generated on the fly and linked to the API definitions.
 
 ## Cube
 
@@ -35,7 +35,7 @@ Tokens:
 
 |Name          |Description|
 |--------------|-----------|
-|ApiToken      |Defines a secret string + metadata that can be used to access an API.|
+|ApiToken      |Defines a secret string and metadata that can be used to access an API.|
 |ApiDefinition |Defines the API. Including what tokens have access, the URL route and what action should be triggered.|
 
 ## Client Test UI
