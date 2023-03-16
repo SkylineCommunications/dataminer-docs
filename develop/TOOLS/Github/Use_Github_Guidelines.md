@@ -99,7 +99,7 @@ In case private repositories have been created for a customer's project, externa
 
 An invite can then be sent to external users as "outside collaborators".
 
-To ensure code is reviewed by repository owner, "outside collaborators" should work on a fork of the repository and send pull request to owner for code review and merging.
+To ensure code is reviewed by the repository owner, "outside collaborators" should work on a fork of the repository and create a pull request for the owner to review and merge.
 
 
 ## Workflows available in GitHub
