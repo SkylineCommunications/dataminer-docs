@@ -34,9 +34,9 @@ The following behavior now applies:
 
 ### Enhancements
 
-#### New NewBookingId property [ID_33950]
+#### New BookingId property [ID_33950]
 
-When the *TryCreateNewBooking* method was used to create a new booking, but the creation failed, up to now there was no way to know which log file was created. To make this possible, the *Booking* class now has a new *NewBookingId* property indicating the ID of a booking that will be created, so that users can know the ID of the booking they are trying to create.
+When the *TryCreateNewBooking* method was used to create a new booking, but the creation failed, up to now there was no way to know which log file was created. To make this possible, the *Booking* class now has a new *BookingId* property indicating the ID of a booking that will be created, so that users can know the ID of the booking they are trying to create.
 
 #### Improved exception in case Booking Manager is in error state [ID_34068]
 
