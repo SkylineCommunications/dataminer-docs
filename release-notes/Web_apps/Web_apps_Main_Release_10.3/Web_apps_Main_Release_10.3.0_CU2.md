@@ -83,3 +83,9 @@ When you generated a PDF of a dashboard that contained multiple parameter feeds,
 <!-- MR 10.2.0 [CU13]/10.3.0 [CU2] - FR 10.3.5 -->
 
 In web apps, certain icons would incorrectly not be displayed.
+
+#### Dashboards app & Low-code apps - GQI: Queries linked to feeds would not always apply feed changes [ID_35903]
+
+<!-- MR 10.3.0 [CU2] - FR 10.3.4 [CU0] -->
+
+In some cases, a query that was linked to feeds would not apply the feed changes in the visualizations unless it was opened in edit mode.

@@ -347,3 +347,9 @@ GQI components would incorrectly not clear their query row feed when refetching 
 <!-- MR 10.3.0 [CU1] - FR 10.3.4 [CU0] -->
 
 When a feed component was linked to an argument of an ad hoc data source, in some cases, the feed would not work correctly.
+
+#### Dashboards app & Low-code apps - GQI: Queries linked to feeds would not always apply feed changes [ID_35903]
+
+<!-- MR 10.3.0 [CU2] - FR 10.3.4 [CU0] -->
+
+In some cases, a query that was linked to feeds would not apply the feed changes in the visualizations unless it was opened in edit mode.
