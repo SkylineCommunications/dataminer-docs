@@ -121,7 +121,7 @@ However, up to now, when a base alarm was updated, the update would not be refle
 
 #### Business Intelligence: At SLA startup, the active alarms would no longer be in sync with the actual alarms affecting the SLA [ID_35862]
 
-<!-- MR 10.2.0 [CU14] - FR 10.3.5 -->
+<!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
 
 At SLA startup, in some cases, the active alarms would no longer be in sync with the actual alarms affecting the SLA.
 

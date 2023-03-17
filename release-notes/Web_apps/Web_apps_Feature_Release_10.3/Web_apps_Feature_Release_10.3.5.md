@@ -20,7 +20,7 @@ Up to now, every web app had its own login screen and its own way of authenticat
 
 A new dedicated authentication app has now been created. This app will be used by all current and future DataMiner web apps.
 
-When using external authentication via SAML, this means that all existing `AssertionConsumerService` elements specified in the `spMetadata.xml` file now have to be replaced by one single element. See the example below.
+When using external authentication via SAML, this means that all existing `AssertionConsumerService` elements specified in the `spMetadata.xml` file can now be replaced by one single element. See the example below.
 
 ```xml
 <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://dataminer.example.com/API/" index="1" isDefault="false"/>

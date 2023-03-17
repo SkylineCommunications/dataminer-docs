@@ -82,3 +82,11 @@ In some cases, markers could disappear when a layer was enabled or disabled.
 <!-- MR 10.2.0 [CU13]/10.3.0 [CU2] - FR 10.3.5 -->
 
 In some cases, SLAnalytics could keep on waiting indefinitely for large delete operations to finish.
+
+#### Business Intelligence: At SLA startup, the active alarms would no longer be in sync with the actual alarms affecting the SLA [ID_35862]
+
+<!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
+
+At SLA startup, in some cases, the active alarms would no longer be in sync with the actual alarms affecting the SLA.
+
+Also, a number of other minor fixes with regard to SLA management have been implemented.
