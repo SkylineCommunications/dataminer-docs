@@ -2,10 +2,10 @@
 uid: General_Feature_Release_10.3.4
 ---
 
-# General Feature Release 10.3.4 – Preview
+# General Feature Release 10.3.4
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 >
@@ -13,9 +13,7 @@ uid: General_Feature_Release_10.3.4
 > - For release notes related to the DataMiner web applications, see [DataMiner web apps Feature Release 10.3.4](xref:Web_apps_Feature_Release_10.3.4).
 > - For information on how to upgrade DataMiner, see [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent).
 
-## Highlights
-
-## Other features
+## New features
 
 #### Correlation alarms will now by default contain the value of the alarm property by which they are grouped [ID_35583]
 
@@ -341,3 +339,9 @@ In some rare cases, an error could occur in SLElement when creating an alarm wit
 <!-- MR 10.4.0 - FR 10.3.4 [CU0] -->
 
 When an ElementProtocol object was being created, due to a caching issue in SLNet, the input/output values stored in the protocol of a matrix element would incorrectly be overridden with the input/output values in the ElementProtocol object that was being created.
+
+#### Message broker: Memory leak [ID_35898]
+
+<!-- MR TBD - FR 10.3.4 [CU0] -->
+
+The native message broker code could leak memory when using the request/response workflow in combination with chunking. The message handlers would not be cleaned up after the response had been received.
