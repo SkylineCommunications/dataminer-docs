@@ -235,12 +235,6 @@ Example:
 
 When an SLNet connection supported protocol buffer serialization, DateTime instances would not get serialized correctly.
 
-#### SLAnalytics: Flatline events on child DVE elements would incorrectly be cleared automatically [ID_35818]
-
-<!-- MR 10.4.0 - FR 10.3.5 -->
-
-Events generated after detecting change points of type "flatline" in trend data of child DVE elements would incorrectly be cleared automatically.
-
 #### SLAnalytics - Behavioral anomaly detection: Every parameter included in an alarm template would incorrectly be considered a monitored parameter [ID_35832]
 
 <!-- MR 10.4.0 - FR 10.3.5 -->

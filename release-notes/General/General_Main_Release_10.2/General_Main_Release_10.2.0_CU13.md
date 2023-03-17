@@ -95,6 +95,13 @@ For example, up to now, when you selected the *Get elements* data source, follow
 
 ### Fixes
 
+#### DataMiner upgrade: VerifyNatsRunning prerequisite could fail due to SLCloudBridge.dll having been renamed [ID_33875]
+
+<!-- MR 10.3.0 - FR 10.2.8 [CU0] -->
+<!-- Also added to MR 10.2.0 [CU13] -->
+
+During a DataMiner upgrade, the VerifyNatsRunning prerequisite could fail due to the SLCloudBridge.dll file having been renamed to SLMessageBroker.dll in DataMiner versions 10.2.0/10.1.5.
+
 #### Memory leak in SLNet after closing a client connection that had been using a "SLDataGateway.API" subscription set [ID_35319]
 
 <!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->

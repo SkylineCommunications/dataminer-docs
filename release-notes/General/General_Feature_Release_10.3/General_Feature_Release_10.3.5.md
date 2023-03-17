@@ -136,7 +136,7 @@ SLProtocol would interpret signed numbers incorrectly, causing parameters to dis
 
 #### SLAnalytics: Flatline events on child DVE elements would incorrectly be cleared automatically [ID_35818]
 
-<!-- MR 10.4.0 - FR 10.3.5 -->
+<!-- MR 10.3.0 [CU2] - FR 10.3.5 -->
 
 Events generated after detecting change points of type "flatline" in trend data of child DVE elements would incorrectly be cleared automatically.
 

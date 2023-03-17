@@ -12,6 +12,16 @@ uid: General_Main_Release_10.2.0_CU14
 
 ### Enhancements
 
+#### DataMiner upgrade will not be performed if NATS is not installed and running [ID_33304]
+
+<!-- MR 10.3.0 - FR 10.2.7 -->
+<!-- Also added to MR 10.2.0 [CU14] -->
+
+When you launch a DataMiner upgrade, from now on, the upgrade process will not be allowed to start if NATS is not installed and running.
+
+> [!NOTE]
+> This check will be skipped if the current DataMiner version is older than version 10.1.0.
+
 #### DataMiner Cube: Database TTL settings will now be limited to 10 years [ID_35533]
 
 <!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.4 -->

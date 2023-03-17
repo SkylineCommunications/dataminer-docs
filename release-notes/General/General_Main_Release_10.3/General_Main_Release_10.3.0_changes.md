@@ -153,6 +153,7 @@ Because of a number of enhancements, overall performance has increased when gene
 #### DataMiner upgrade will not be performed if NATS is not installed and running [ID_33304]
 
 <!-- MR 10.3.0 - FR 10.2.7 -->
+<!-- Also added to MR 10.2.0 [CU14] -->
 
 When you launch a DataMiner upgrade, from now on, the upgrade process will not be allowed to start if NATS is not installed and running.
 
@@ -583,6 +584,7 @@ When a DataMiner Agent was being shut down, in some cases, an error could occur 
 #### DataMiner upgrade: VerifyNatsRunning prerequisite could fail due to SLCloudBridge.dll having been renamed [ID_33875]
 
 <!-- MR 10.3.0 - FR 10.2.8 [CU0] -->
+<!-- Also added to MR 10.2.0 [CU13] -->
 
 During a DataMiner upgrade, the VerifyNatsRunning prerequisite could fail due to the SLCloudBridge.dll file having been renamed to SLMessageBroker.dll in DataMiner versions 10.2.0/10.1.5.
 
