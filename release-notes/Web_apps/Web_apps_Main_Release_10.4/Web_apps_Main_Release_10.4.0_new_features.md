@@ -15,6 +15,35 @@ uid: Web_apps_Main_Release_10.4.0_new_features
 
 The new icon component allows you to display an icon on a dashboard or a low-code app.
 
+#### BREAKING CHANGE: One single authentication app for all web apps [ID_35772]
+
+<!-- MR 10.4.0 - FR 10.3.5 -->
+
+Up to now, every web app had its own login screen and its own way of authenticating users. When using external authentication via SAML, this meant that, for every web app, a separate `AssertionConsumerService` element had to be added to the `spMetadata.xml` file.
+
+A new dedicated authentication app has now been created. This app will be used by all current and future DataMiner web apps.
+
+When using external authentication via SAML, this means that all existing `AssertionConsumerService` elements specified in the `spMetadata.xml` file now have to be replaced by one single element. See the example below.
+
+```xml
+<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://dataminer.example.com/API/" index="1" isDefault="false"/>
+```
+
+`https://dataminer.example.com` has to be replaced with the IP address or the DNS name of your DataMiner System. Make sure the endpoint address in the `Location` attribute match the DataMiner application endpoint you specified when you registered DataMiner with the identity provider. The way you configure this will depend on the identity provider you are using.
+
+Also, when using external authentication via SAML, the `<system.webServer>` element of the `C:\Skyline DataMiner\Webpages\API\Web.config` file has to contain the following:
+
+```xml
+<defaultDocument>
+   <files>
+      <add value="default.aspx" />
+   </files>
+</defaultDocument>
+```
+
+> [!NOTE]
+> When using external authentication via SAML, DataMiner should be configured to use HTTPS.
+
 ## Other new features
 
 #### Dashboards app - GQI: New data sources [ID_34747] [ID_35027] [ID_34965] [ID_35058]

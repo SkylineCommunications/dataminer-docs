@@ -258,6 +258,6 @@ When you clicked a suggestion alarm, in some cases, the trend graph would be loa
 
 #### No longer possible to configure a PDF report generated based on a dashboard [ID_35874]
 
-<!-- MR 10.4.0 - FR 10.3.5 -->
+<!-- MR 10.4.0 - FR 10.3.4 [CU0] -->
 
 When, in the *Automation*, *Correlation* and *Scheduler* modules, you generated a PDF report based on a dashboard, it would incorrectly no longer be possible to click the *Configure* button to configure that report.

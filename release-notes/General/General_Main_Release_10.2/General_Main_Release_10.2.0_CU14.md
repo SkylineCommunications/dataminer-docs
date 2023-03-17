@@ -118,3 +118,11 @@ Due to a caching issue, on a system with a large number of masked alarms, it cou
 In a filtered active alarms tab, in some cases, a base alarm will match the filter while the correlated alarm will not. In that case, the base alarm will be shown while the correlated alarm will not.
 
 However, up to now, when a base alarm was updated, the update would not be reflected in the Alarm Console until the filter was removed.
+
+#### Business Intelligence: At SLA startup, the active alarms would no longer be in sync with the actual alarms affecting the SLA [ID_35862]
+
+<!-- MR 10.2.0 [CU14] - FR 10.3.5 -->
+
+At SLA startup, in some cases, the active alarms would no longer be in sync with the actual alarms affecting the SLA.
+
+Also, a number of other minor fixes with regard to SLA management have been implemented.

@@ -95,6 +95,13 @@ From now on, SLAnalytics will also take into account first-time alarm template a
 
 A number of enhancements have been made to the Business Intelligence module, especially with regard to the retrieval of data from logger tables and to general error handling.
 
+#### DataMiner Storage Module: Installer enhancements [ID_35842]
+
+<!-- MR 10.4.0 - FR 10.3.5 -->
+<!-- Not added to MR 10.4.0 -->
+
+A number of enhancements have been made to the DataMiner Storage Module installer.
+
 #### SLAnalytics - Behavioral anomaly detection: Events associated with a DVE child element will no longer be linked to the DVE parent element [ID_35901]
 
 <!-- MR 10.4.0 - FR 10.3.5 -->
@@ -157,3 +164,11 @@ In some cases, markers could disappear when a layer was enabled or disabled.
 <!-- MR 10.2.0 [CU13]/10.3.0 [CU2] - FR 10.3.5 -->
 
 In some cases, SLAnalytics could keep on waiting indefinitely for large delete operations to finish.
+
+#### Business Intelligence: At SLA startup, the active alarms would no longer be in sync with the actual alarms affecting the SLA [ID_35862]
+
+<!-- MR 10.2.0 [CU14] - FR 10.3.5 -->
+
+At SLA startup, in some cases, the active alarms would no longer be in sync with the actual alarms affecting the SLA.
+
+Also, a number of other minor fixes with regard to SLA management have been implemented.

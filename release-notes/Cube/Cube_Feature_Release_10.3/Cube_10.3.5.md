@@ -57,9 +57,3 @@ Due to a caching issue, on a system with a large number of masked alarms, it cou
 In a filtered active alarms tab, in some cases, a base alarm will match the filter while the correlated alarm will not. In that case, the base alarm will be shown while the correlated alarm will not.
 
 However, up to now, when a base alarm was updated, the update would not be reflected in the Alarm Console until the filter was removed.
-
-#### No longer possible to configure a PDF report generated based on a dashboard [ID_35874]
-
-<!-- MR 10.4.0 - FR 10.3.5 -->
-
-When, in the *Automation*, *Correlation* and *Scheduler* modules, you generated a PDF report based on a dashboard, it would incorrectly no longer be possible to click the *Configure* button to configure that report.
