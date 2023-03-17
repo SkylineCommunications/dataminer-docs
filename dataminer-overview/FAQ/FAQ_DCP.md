@@ -20,10 +20,10 @@ No, this is only required for a single Agent within a private DataMiner System. 
 
 - **Load balancing**: Every time you open a shared dashboard or relay to your DMS, a random Cloud Gateway node is chosen to process your session. This means that the opening of multiple shares is distributed over the various Cloud Gateways. As a Cloud Gateway always forwards the traffic to the same web API service, this also distributes the load across different web API services in the cluster.
 
-> [!NOTE]
-> At this time, we recommend running 1 to 3 Cloud Gateway nodes in a cluster. Running more Cloud Gateway nodes than that in a cluster would only add an unnecessary extra load on dataminer.services.
+  > [!NOTE]
+  > At this time, we recommend running 1 to 3 Cloud Gateway nodes in a cluster. Running more Cloud Gateway nodes than that in a cluster would only add an unnecessary extra load on dataminer.services.
 
-- **Streamlined support services**: The [Support Assistant module](https://docs.dataminer.services/user-guide/Reference/DataMiner_Extension_Modules.html#supportassistant) needs to be installed in all DataMiner Agents and allows our TechSupport team to [remotely collect logs](https://docs.dataminer.services/user-guide/Troubleshooting/RemoteLogCollection.html) and automated other support actions, which definetly speeds up the support process. Even though this doesn't require all DMAs to be cloud connected, it requires all of them to have DxM installed.
+- **Streamlined support services**: The [Support Assistant module](xref:DataMinerExtensionModules#supportassistant) needs to be installed on all DataMiner Agents to allow our Tech Support team to [remotely collect logs](https://docs.dataminer.services/user-guide/Troubleshooting/RemoteLogCollection.html) and to carry out other automated support actions, which definitely speeds up the support process. Even though not all DMAs have to be cloud-connected for this, they do all need to have this DxM installed.
 
 ### How does the live sharing work, and how is it secured?
 
