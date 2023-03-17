@@ -352,6 +352,6 @@ In some cases, a query that was linked to feeds would not apply the feed changes
 
 #### GQI - Parameter table component: Display values of discrete and exception values for DateTime columns would be rendered incorrectly [ID_35910]
 
-<!-- MR 10.4.0 - FR 10.3.4 [CU0] -->
+<!-- MR 10.3.0 [CU1] - FR 10.3.4 [CU0] -->
 
 When discrete values and exception values for DateTime parameters were requested via GQI, their display values would be rendered incorrectly.

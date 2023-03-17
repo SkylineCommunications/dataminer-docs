@@ -281,9 +281,3 @@ When, in a table component, the data was grouped by two different parameters, in
 <!-- MR 10.4.0 - FR 10.3.5 -->
 
 When you selected a parameter in a parameter feed component of a shared dashboard, in some cases, an error could occur.
-
-#### GQI - Parameter table component: Display values of discrete and exception values for DateTime columns would be rendered incorrectly [ID_35910]
-
-<!-- MR 10.4.0 - FR 10.3.4 [CU0] -->
-
-When discrete values and exception values for DateTime parameters were requested via GQI, their display values would be rendered incorrectly.

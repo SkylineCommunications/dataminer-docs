@@ -243,3 +243,9 @@ GQI queries containing float or GUID values would not get migrated correctly.
 <!-- MR 10.3.0 [CU1] - FR 10.3.4 [CU0] -->
 
 When a feed component was linked to an argument of an ad hoc data source, in some cases, the feed would not work correctly.
+
+#### GQI - Parameter table component: Display values of discrete and exception values for DateTime columns would be rendered incorrectly [ID_35910]
+
+<!-- MR 10.3.0 [CU1] - FR 10.3.4 [CU0] -->
+
+When discrete values and exception values for DateTime parameters were requested via GQI, their display values would be rendered incorrectly.
