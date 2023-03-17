@@ -47,6 +47,21 @@ Depending on how the script is configured, there can be additional configuration
 
 An ad hoc data source is represented as a class that implements predefined interfaces. The interfaces you can use are detailed below.
 
+From DataMiner 10.3.4/10.4.0 onwards, ad hoc data sources can retrieve data by means of DMS messages. To do so, the [*IGQIDataSource* interface](#igqidatasource) must implement the [*IGQIOnInit* interface](#igqioninit), of which the `OnInit` method can als be used to initialize a data source:
+
+```csharp
+OnInitOutputArgs OnInit(OnInitInputArgs args)
+```
+
+When passed to the `OnInit` method, `OnInitInputArgs` can contain the following new property:
+
+```csharp
+GQIDMS DMS
+```
+
+> [!IMPORTANT]
+> DMS messages are subject to change without notice. If you can implement an alternative using the DataMiner UI or the automation options provided in DataMiner Automation, we highly recommend that you do so instead.
+
 ### IGQIDataSource
 
 This is the only required interface. It must be implemented for the class to be detected by GQI as a data source. This interface has the following methods:
@@ -167,6 +182,24 @@ In addition, the following derived types are supported from DataMiner 10.3.0/10.
 - `GQIIntArgument`
 - `GQIStringDropdownArgument`
 - `GQIStringListArgument`
+
+### GQIDMS
+
+Available from DataMiner 10.3.4/10.4.0 onwards.
+
+The `GQIDMS` class contains the following methods, which can be used to request information in the form of `DMSMessage` objects:
+
+| Method | Function |
+|--------|----------|
+| `DMSMessage SendMessage(DMSMessage message)` | Sends a request that expects a single response. |
+| `DMSMessage[] SendMessages(params DMSMessage[] messages)` | Sends multiple requests at once, or sends a request that expects multiple responses. |
+
+The `GQIDMS` object is only generated when the property is used.
+
+Generally, an ad hoc data source implementation will want to add a private field where it can store the `GQIDMS` object to be used later in other callbacks when columns and rows are created.
+
+> [!IMPORTANT]
+> DMS messages are subject to change without notice. If you can implement an alternative using the DataMiner UI or the automation options provided in DataMiner Automation, we highly recommend that you do so instead.
 
 ## Example ad hoc data script
 
