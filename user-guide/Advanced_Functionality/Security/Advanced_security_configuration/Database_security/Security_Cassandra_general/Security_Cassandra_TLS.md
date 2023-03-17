@@ -122,16 +122,16 @@ To enable client-server TLS encryption:
 
 1. Copy the Java Keystore (.jks file), or the PKCS12 store (.p12 file) if you used a script to generate the certificates, to the node
 
-2. Open the *cassandra.yaml* file, and locate the *client_encryption_options*.
+1. Open the *cassandra.yaml* file, and locate the *client_encryption_options*.
 
-3. Set *enabled* to **true** to enable TLS.
+1. Set *enabled* to **true** to enable TLS.
 
-4. Set *optional* to **false** to make sure TLS encrypted is required.
+1. Set *optional* to **false** to make sure TLS encrypted is required.
 
    > [!NOTE]
    > In order to test your changes without production impact, you can set *optional* to **true** until you have verified whether you can connect using TLS.
 
-5. Set *keystore* to the path to the .jks file containing the certificates. Set *keystore_password* to the *&lt;STRONG PASSWORD&gt;* you used to generate them.
+1. Set *keystore* to the path to the .jks file containing the certificates. Set *keystore_password* to the *&lt;STRONG PASSWORD&gt;* you used to generate them.
 
    ```txt
    client_encryption_options:
@@ -142,7 +142,7 @@ To enable client-server TLS encryption:
       keystore_password: <STRONG PASSWORD>
    ```
 
-6. Save the changes in the *cassandra.yaml* and **restart** the Cassandra service.
+1. Save the changes in the *cassandra.yaml* and **restart** the Cassandra service.
 
 ## Configuring the server_encryption_options
 
