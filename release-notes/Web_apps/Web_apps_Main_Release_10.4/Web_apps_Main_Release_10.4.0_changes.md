@@ -275,3 +275,9 @@ An error could occur when feeding data from a GQI component to a query that was 
 <!-- MR 10.4.0 - FR 10.3.5 -->
 
 When, in a table component, the data was grouped by two different parameters, in some cases, a collapsed group would incorrectly expand when new data was loaded into the table.
+
+#### Dashboards app: Problem when selecting a parameter in a parameter feed component of a shared dashboard [ID_35863]
+
+<!-- MR 10.4.0 - FR 10.3.5 -->
+
+When you selected a parameter in a parameter feed component of a shared dashboard, in some cases, an error could occur.

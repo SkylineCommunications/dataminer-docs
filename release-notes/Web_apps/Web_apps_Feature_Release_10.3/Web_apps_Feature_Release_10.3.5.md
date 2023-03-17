@@ -144,6 +144,12 @@ When, in the *Layout* tab, a text box (e.g. the box containing the title of the 
 
 When, in a table component, the data was grouped by two different parameters, in some cases, a collapsed group would incorrectly expand when new data was loaded into the table.
 
+#### Dashboards app: Problem when selecting a parameter in a parameter feed component of a shared dashboard [ID_35863]
+
+<!-- MR 10.4.0 - FR 10.3.5 -->
+
+When you selected a parameter in a parameter feed component of a shared dashboard, in some cases, an error could occur.
+
 #### Dashboards app: Multiple parameter feeds would incorrectly have their 'group by' reset when a PDF was generated [ID_35866]
 
 <!-- MR 10.2.0 [CU13]/10.3.0 [CU2] - FR 10.3.5 -->
