@@ -168,6 +168,12 @@ Also, it is now possible for one web API connection to have multiple event queue
 
 ### Fixes
 
+#### Web apps: Problem with external authentication [ID_33405]
+
+<!-- MR 10.4.0 - FR 10.3.5 -->
+
+In some cases, it would not be possible to log in to a web app (e.g. Dashboards, Monitoring, Jobs, etc.) using external authentication.
+
 #### GQI: Problem when retrieving DCF interfaces [ID_34820]
 
 <!-- MR 10.4.0 - FR 10.3.1 -->

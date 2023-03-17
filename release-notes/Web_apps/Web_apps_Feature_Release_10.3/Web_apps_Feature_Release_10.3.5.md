@@ -80,6 +80,12 @@ For example, up to now, when you selected the *Get elements* data source, follow
 
 ### Fixes
 
+#### Web apps: Problem with external authentication [ID_33405]
+
+<!-- MR 10.4.0 - FR 10.3.5 -->
+
+In some cases, it would not be possible to log in to a web app (e.g. Dashboards, Monitoring, Jobs, etc.) using external authentication.
+
 #### Dashboards app & Low-code apps - GQI components: Problem when executing an empty query [ID_35803]
 
 <!-- MR 10.4.0 - FR 10.3.5 -->
