@@ -253,3 +253,8 @@ SLAnalytics would incorrectly consider every parameter included in an alarm temp
 
 When an ElementProtocol object was being created, due to a caching issue in SLNet, the input/output values stored in the protocol of a matrix element would incorrectly be overridden with the input/output values in the ElementProtocol object that was being created.
 
+#### Message broker: Memory leak [ID_35898]
+
+<!-- MR 10.4.0 - FR 10.3.4 [CU0] -->
+
+The native message broker code could leak memory when using the request/response workflow in combination with chunking. The message handlers would not be cleaned up after the response had been received.
