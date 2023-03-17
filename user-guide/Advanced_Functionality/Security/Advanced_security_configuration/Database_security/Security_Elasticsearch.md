@@ -71,7 +71,9 @@ By default all client-server communication with Elasticsearch is unencrypted.
 
 To configure TLS encryption for client-server communication:
 
-1. Request or generate a TLS certificate (the certificates should be in the PKCS#12 format). Make sure the IP address of the node is included in the *Subject Alternative Names* of the certificate. Elasticsearch comes with the `elasticsearch-certutil` tool installed, which can be used to generate certificates. However, we recommend that you use our [scripts for generating TLS certificates](https://github.com/SkylineCommunications/generate-tls-certificates), available on GitHub. There is a version of the script for Linux and Windows machines. The script requires two tools: *openssl* and the *Java keytool*. Both of these can run on Linux and Windows.
+1. Request or generate a TLS certificate (the certificates should be in the PKCS#12 format). Make sure the IP address of the node is included in the *Subject Alternative Names* of the certificate.
+
+   Elasticsearch comes with the `elasticsearch-certutil` tool installed, which can be used to generate certificates. However, we recommend that you **use our [scripts for generating TLS certificates](https://github.com/SkylineCommunications/generate-tls-certificates)**, available on GitHub. There is a version of the script for Linux and Windows machines. The script requires two tools: *openssl* and the *Java keytool*. Both of these can run on Linux and Windows.
 
 1. Add the following lines to the *elasticsearch.yml* file:
 
