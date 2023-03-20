@@ -65,7 +65,7 @@ GQIDMS DMS
 > See also: [GQIDMS](#gqidms)
 
 > [!IMPORTANT]
-> DMS messages are subject to change without notice. If you can implement an alternative using the [built-in data sources](xref:Query_data_sourcess), we highly recommend that you do so instead.
+> DMS messages are subject to change without notice. If you can implement an alternative using the [built-in data sources](xref:Query_data_sources), we highly recommend that you do so instead.
 
 ### IGQIDataSource
 
