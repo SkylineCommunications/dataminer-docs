@@ -49,7 +49,7 @@ An ad hoc data source is represented as a class that implements predefined inter
 
 From DataMiner 10.3.4/10.4.0 onwards, ad hoc data sources can retrieve data by means of DMS messages. <!-- RN 35701 -->
 
-To do so, the [*IGQIDataSource* interface](#igqidatasource) must implement the [*IGQIOnInit* interface](#igqioninit), of which the `OnInit` method can als be used to initialize a data source:
+To do so, the [*IGQIDataSource* interface](#igqidatasource) must implement the [*IGQIOnInit* interface](#igqioninit), of which the `OnInit` method can also be used to initialize a data source:
 
 ```csharp
 OnInitOutputArgs OnInit(OnInitInputArgs args)
