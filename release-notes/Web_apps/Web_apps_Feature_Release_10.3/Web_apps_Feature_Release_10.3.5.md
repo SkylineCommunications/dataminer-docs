@@ -167,7 +167,7 @@ When, in the *Layout* tab, a text box (e.g. the box containing the title of the 
 
 #### Dashboards app & Low-code apps - Table component: A collapsed group would incorrectly expand when new data was loaded into the table [ID_35856]
 
-<!-- MR 10.4.0 - FR 10.3.5 -->
+<!-- MR 10.3.0 [CU2] - FR 10.3.5 -->
 
 When, in a table component, the data was grouped by two different parameters, in some cases, a collapsed group would incorrectly expand when new data was loaded into the table.
 
