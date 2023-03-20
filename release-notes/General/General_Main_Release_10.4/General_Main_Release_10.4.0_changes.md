@@ -235,12 +235,6 @@ Example:
 
 When an SLNet connection supported protocol buffer serialization, DateTime instances would not get serialized correctly.
 
-#### SLAnalytics - Behavioral anomaly detection: Every parameter included in an alarm template would incorrectly be considered a monitored parameter [ID_35832]
-
-<!-- MR 10.4.0 - FR 10.3.5 -->
-
-SLAnalytics would incorrectly consider every parameter included in an alarm template to be a monitored parameter, even it is was not being monitored.
-
 #### Input/output values of a matrix element would incorrectly be overridden due to a caching issue [ID_35857]
 
 <!-- MR 10.4.0 - FR 10.3.4 [CU0] -->
