@@ -47,26 +47,6 @@ Depending on how the script is configured, there can be additional configuration
 
 An ad hoc data source is represented as a class that implements predefined interfaces. The interfaces you can use are detailed below.
 
-From DataMiner 10.3.4/10.4.0 onwards, ad hoc data sources can retrieve data by means of DMS messages. <!-- RN 35701 -->
-
-To do so, the [*IGQIDataSource* interface](#igqidatasource) must implement the [*IGQIOnInit* interface](#igqioninit), of which the `OnInit` method can also be used to initialize a data source:
-
-```csharp
-OnInitOutputArgs OnInit(OnInitInputArgs args)
-```
-
-When passed to the `OnInit` method, `OnInitInputArgs` will contain the following new property:
-
-```csharp
-GQIDMS DMS
-```
-
-> [!TIP]
-> See also: [GQIDMS](#gqidms)
-
-> [!IMPORTANT]
-> DMS messages are subject to change without notice. If you can implement an alternative using the [built-in data sources](xref:Query_data_sources), we highly recommend that you do so instead.
-
 ### IGQIDataSource
 
 This is the only required interface. It must be implemented for the class to be detected by GQI as a data source. This interface has the following methods:
@@ -288,3 +268,25 @@ public class MyDataSource : IGQIDataSource, IGQIInputArguments
     }
 }
 ```
+
+## Retrieving data by means of DMS messages
+
+From DataMiner 10.3.4/10.4.0 onwards, ad hoc data sources can retrieve data by means of DMS messages. <!-- RN 35701 -->
+
+To do so, the [*IGQIDataSource* interface](#igqidatasource) must implement the [*IGQIOnInit* interface](#igqioninit), of which the `OnInit` method can also be used to initialize a data source:
+
+```csharp
+OnInitOutputArgs OnInit(OnInitInputArgs args)
+```
+
+When passed to the `OnInit` method, `OnInitInputArgs` will contain the following new property:
+
+```csharp
+GQIDMS DMS
+```
+
+> [!TIP]
+> See also: [GQIDMS](#gqidms)
+
+> [!IMPORTANT]
+> DMS messages are subject to change without notice. If you can implement an alternative using the [built-in data sources](xref:Query_data_sources), we highly recommend that you do so instead.
