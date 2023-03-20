@@ -62,4 +62,4 @@ The ModelHost module is not included in the Cloud Pack and must be deployed sepa
 
 ### UserDefinableApiEndpoint
 
-The UserDefinableApiEndpoint module is responsible for handling API triggers for User Defined APIs. See [User Defined APIs](xref:UD_APIs).
+The UserDefinableApiEndpoint module is responsible for handling API triggers for User-defined APIs. See [User-defined APIs](xref:UD_APIs).

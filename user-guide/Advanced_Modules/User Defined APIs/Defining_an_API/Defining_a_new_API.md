@@ -1,8 +1,8 @@
 ---
-uid: UD_APIs_Define_API
+uid: UD_APIs_Define_New_API
 ---
 
-# Defining an API
+# Defining a new API
 
 > [!WARNING]
 > The current feature is in preview and is not fully released yet. This feature should not be used in any staging or production environment.
@@ -45,12 +45,12 @@ The entrypoint method has two parameters. The IEngine object can be used to inte
 
 |Property       |Type                        |Explanation|
 |---------------|----------------------------|-----------|
-|RequestMethod  |`RequestMethod`             |Contains the HTTP method of the request. See [RequestMethod](#requestmethods).|
+|RequestMethod  |`RequestMethod`             |Contains the HTTP method of the request. See [RequestMethod](#requestmethod).|
 |Route          |`string`                    |The suffix of the URL where this API call is triggered on. Having this available makes it possible to reuse the same script for different routes.|
 |RawBody        |`string`                    |Contains the full body of the HTTP request as a string. This can be deserialized and used in the script.|
 |Parameters     |`Dictionary<string, string>`|Contains the deserialized parameters if you select 'Parse JSON of raw body to dictionary' when configuring the API. See [creating the ApiDefinition(s)](#2-creating-the-apidefinitions)|
 
-#### RequestMethods
+#### RequestMethod
 
 You can use the RequestMethod to check the HTTP method of the trigger. It can contain the following values:
 
