@@ -44,7 +44,7 @@ namespace UDAPIS_Example
 
 ## Option 1: Using the script without the OnApiTrigger entrypoint
 
-To use the above script as an API without doing any changes to it is possible, API triggers will be executed through the `Run method` as if you were executing the script from e.g. Cube. To do this, define your API exactly as explained on the [defining an API page](xref:UD_APIs_Define_New_API#2-creating-the-apidefinitions), but select the `Run method` option as 'Method to be executed'.
+To use the above script as an API without doing any changes to it is possible, API triggers will be executed through the `Run` method as if you were executing the script from e.g. Cube. To do this, define your API exactly as explained on the [defining an API page](xref:UD_APIs_Define_New_API#2-creating-the-apidefinitions), but select the `Run` method option as 'Method to be executed'.
 
 Using this method comes with some disadvantages, note that you do not have access to the `ApiTriggerInput` object and `ApiTriggerOutput` object in the script, meaning you cannot check the route or request method of the API trigger or output specific errors.
 
@@ -76,17 +76,17 @@ As you can see, since we do not have a way of returning an `ApiTriggerOutput` in
 
 ## Option 2: Using the script with the OnApiTrigger entrypoint
 
-The second option is to define an API the same way as a new API. Instead of creating a new script, you will have to add the `OnApiTrigger` entrypoint method to your existing script, and possibly refactor some things so it can do the same logic as it would in the `Run method`. How the entrypoint method should look like can be found in the [defining an API page](xref:UD_APIs_Define_New_API#1-creating-the-api-automation-script). You can use the `ApiTriggerInput` 'RawBody' or 'Parameters' properties instead of the script parameters.
+The second option is to define an API the same way as a new API. Instead of creating a new script, you will have to add the `OnApiTrigger` entrypoint method to your existing script, and possibly refactor some things so it can do the same logic as it would in the `Run` method. How the entrypoint method should look like can be found in the [defining an API page](xref:UD_APIs_Define_New_API#1-creating-the-api-automation-script). You can use the `ApiTriggerInput` 'RawBody' or 'Parameters' properties instead of the script parameters.
 
 > [!NOTE]
 > - With this option, the MissingScriptParameters error will not be returned if there are missing script parameters. The responsibility to verify the parameters is completely for the script.
 > - You can keep the script parameters on your script, as executing the automation script as an API through the OnApiTrigger entrypoint method, will ignore the script parameters.
-> - If the `Run method` remains in the script, it is still possible to trigger the script via Cube or any other supported DataMiner module. (Scheduler, Correlation, ...)
+> - If the `Run` method remains in the script, it is still possible to trigger the script via Cube or any other supported DataMiner module. (Scheduler, Correlation, ...)
 
 We have applied this option to the example script which results in the script below. We have:
 - Added the 'OnApiTrigger' method with the 'AutomationEntryPoint' attribute.
 - Split of the actual script behavior (stopping an element) to a separate method.
-- Added a call to this separate method in both the entrypoint method and the normal `Run method`.
+- Added a call to this separate method in both the entrypoint method and the normal `Run` method.
 
 ```csharp
 using Skyline.DataMiner.Automation;
@@ -163,4 +163,4 @@ namespace UDAPIS_Example
 }
 ```
 
-Basically both the `Run method` method and the entrypoint method do the same thing, they validate the input parameters and execute the `InnerRun method` that stops the element. The difference is that the `Run method` method uses the script parameters, and the entrypoint method uses the Parameters from the `ApiTriggerInput`. Another big difference is that with the entrypoint method, we can return specific errors and success messages to the API users.
+Basically both the `Run` method and the entrypoint method do the same thing, they validate the input parameters and execute the `InnerRun` method that stops the element. The difference is that the `Run` method uses the script parameters, and the entrypoint method uses the Parameters from the `ApiTriggerInput`. Another big difference is that with the entrypoint method, we can return specific errors and success messages to the API users.
