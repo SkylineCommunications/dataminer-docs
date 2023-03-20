@@ -14,9 +14,12 @@ On the [custom solutions tab](xref:Repository_types#custom-solutions) of the SLC
 The pipeline will automatically create pre-release packages, which can be used during development. Every build will have its own pre-release package.
 Every release build will have a signed released package.
 
+> [!TIP]
+> To create a new solution or project that produces a NuGet package, make use of the Visual Studio templates available at [https://github.com/SkylineCommunications/Skyline.DataMiner.VisualStudioTemplates](https://github.com/SkylineCommunications/Skyline.DataMiner.VisualStudioTemplates).
+
 ## General
 
-The rules below mainly focus on NuGet packages that are published to nuget.org. We highly recommend that you use the same rules for internal NuGets as well, as that will make it easy to transfer them to nuget.org when necessary.
+The rules below mainly focus on NuGet packages that are published to nuget.org. We highly recommend that you use the same rules for internal NuGet packages as well, as that will make it easy to transfer them to nuget.org when necessary.
 
 ### Mandatory rules for nuget.org
 
@@ -185,4 +188,4 @@ For an example, refer to [DataMinerSystem.Common](https://www.nuget.org/packages
 
 ### PackageLicenseFile and PackageIcon
 
-When NuGets are created via the [SLC SE Repository Manager](xref:TOOSLCSERepositoryManager), the manager will automatically add the default license and icon file.
+When NuGet packages are created via the [SLC SE Repository Manager](xref:TOOSLCSERepositoryManager), the manager will automatically add the default license and icon file.
