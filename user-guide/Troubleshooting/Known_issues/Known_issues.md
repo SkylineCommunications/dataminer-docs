@@ -5,6 +5,7 @@ uid: Known_issues
 
 | Issue | DataMiner version | Date added |
 |--|--|--|
+| [IP address in SAN field of TLS certificate ignored in Windows 2012 R2](xref:KI_Win2012R2_ignores_IP_in_SAN_field) | Systems using Windows 2012 R2 | March 20, 2023 |
 | [GenIf folder takes up too much disk space](xref:KI_GenIf_Folder_Growing_In_Size) | From DataMiner 10.1.0/10.0.13 onwards | March 15, 2023 |
 | [Problem with booking automation and function DVE deactivation](xref:KI_SRM_booking_events_issue) | SRM setups with DataMiner version below 10.3.0/10.3.2 | March 10, 2023 |
 | [SLPort deadlock when element with serial connection is restarted](xref:KI_SLPort_deadlock_after_restart_serial_connection) | DataMiner 10.1.0 [CU17] to 10.2.0 [CU11]/10.3.0.0 - 12752<br>DataMiner 10.2.8 to 10.3.3 | February 28, 2023 |

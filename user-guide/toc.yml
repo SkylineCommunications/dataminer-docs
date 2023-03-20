@@ -2960,6 +2960,8 @@
     - name: Known issues
       topicUID: Known_issues
       items:
+        - name: IP address in SAN field of TLS certificate ignored in Windows 2012 R2
+          topicUID: KI_Win2012R2_ignores_IP_in_SAN_field
         - name: Problem with booking automation and function DVE deactivation
           topicUID: KI_SRM_booking_events_issue
         - name: SLPort deadlock when element with serial connection is restarted
