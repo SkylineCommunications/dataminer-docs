@@ -21,7 +21,7 @@ Alternatively, you can also download the bot as follows:
 1. In Microsoft Teams, go to the apps store.
 
    > [!NOTE]
-   > Depending on the configuration of your Microsoft tenant, your IT admin may need to explicitly allow the installation of the app in your organization.
+   > Depending on the configuration of your Microsoft tenant, your IT admin may need to explicitly allow the installation of the [DataMiner bot](https://teams.microsoft.com/l/app/9a09d087-5d07-4481-b34f-cd053eab7925) in your organization. For more information, refer to the [Microsoft documentation](https://docs.microsoft.com/en-us/microsoftteams/manage-apps).
 
 1. Search for DataMiner. You should get the following search result:
 
