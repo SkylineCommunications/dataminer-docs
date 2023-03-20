@@ -206,7 +206,9 @@ GQIDMS DMS
 > [!IMPORTANT]
 > DMS messages are subject to change without notice. If you can implement an alternative using the [built-in data sources](xref:Query_data_sources), we highly recommend that you do so instead.
 
-## Example ad hoc data script
+## Example ad hoc data scripts
+
+### Example of forwarding dummy data to the GQI
 
 Below you can find an example script that forwards dummy data to the GQI. The name of the data source, as defined in the *GQIMetaData* attribute, will be “People”.
 
@@ -287,6 +289,57 @@ public class MyDataSource : IGQIDataSource, IGQIInputArguments
         {
             HasNextPage = false
         };
+    }
+}
+```
+
+### Example of the GQIDMS object
+
+Below you can find an example script that uses the [GQIDMS object](#gqidms) provided in the OnInitPutArgs to create a data source of active client connections. The name of the data source, as defined in the *GQIMetaData* attribute, will be “Client connections”.
+
+```csharp
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using Skyline.DataMiner.Analytics.GenericInterface;
+using Skyline.DataMiner.Net.Messages;
+
+[GQIMetaData(Name = "Client connections")]
+public class ClientConnectionSource : IGQIDataSource, IGQIOnInit
+{
+    private GQIDMS _dms;
+
+    public OnInitOutputArgs OnInit(OnInitInputArgs args)
+    {
+        _dms = args.DMS;
+        return default;
+    }
+
+    public GQIColumn[] GetColumns()
+    {
+        // Return desired columns
+        // Omitted for brevity
+    }
+
+    public GQIPage GetNextPage(GetNextPageInputArgs args)
+    {
+        var connections = GetConnections();
+        var rows = connections.Select(CreateRow).ToArray();
+        return new GQIPage(rows);
+    }
+
+    private IEnumerable<LoginInfoResponseMessage> GetConnections()
+    {
+        // Retrieve client connections from the DMS using a GetInfoMessage request
+        var request = new GetInfoMessage(InfoType.ClientList);
+        var responses = _dms.SendMessages(request);
+        return responses.OfType<LoginInfoResponseMessage>();
+    }
+
+    private GQIRow CreateRow(LoginInfoResponseMessage connection)
+    {
+        // Return a GQIRow representing the client connection
+        // Omitted for brevity
     }
 }
 ```
