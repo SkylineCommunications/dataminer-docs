@@ -47,7 +47,7 @@ Depending on how the script is configured, there can be additional configuration
 
 An ad hoc data source is represented as a class that implements predefined interfaces. The interfaces you can use are detailed below.
 
-From DataMiner 10.3.4/10.4.0 onwards, ad hoc data sources can retrieve data by means of DMS messages.
+From DataMiner 10.3.4/10.4.0 onwards, ad hoc data sources can retrieve data by means of DMS messages. <!-- RN 35701 -->
 
 To do so, the [*IGQIDataSource* interface](#igqidatasource) must implement the [*IGQIOnInit* interface](#igqioninit), of which the `OnInit` method can als be used to initialize a data source:
 
@@ -190,7 +190,7 @@ In addition, the following derived types are supported from DataMiner 10.3.0/10.
 
 ### GQIDMS
 
-Available from DataMiner 10.3.4/10.4.0 onwards.
+Available from DataMiner 10.3.4/10.4.0 onwards. <!-- RN 35701 -->
 
 The `GQIDMS` class contains the following methods, which can be used to request information in the form of `DMSMessage` objects:
 
@@ -202,7 +202,7 @@ The `GQIDMS` class contains the following methods, which can be used to request 
 Generally, an ad hoc data source implementation will want to add a private field where it can store the `GQIDMS` object to be used later in other callbacks when columns and rows are created.
 
 > [!IMPORTANT]
-> DMS messages are subject to change without notice. If you can implement an alternative using the [built-in data sources](xref:Query_data_sourcess), we highly recommend that you do so instead.
+> DMS messages are subject to change without notice. If you can implement an alternative using the [built-in data sources](xref:Query_data_sources), we highly recommend that you do so instead.
 
 ## Example ad hoc data script
 
