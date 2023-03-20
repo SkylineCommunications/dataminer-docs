@@ -184,6 +184,28 @@ Generally, an ad hoc data source implementation will want to add a private field
 > [!IMPORTANT]
 > DMS messages are subject to change without notice. If you can implement an alternative using the [built-in data sources](xref:Query_data_sources), we highly recommend that you do so instead.
 
+## Retrieving data by means of DMS messages
+
+From DataMiner 10.3.4/10.4.0 onwards, ad hoc data sources can retrieve data by means of DMS messages. <!-- RN 35701 -->
+
+To do so, the [*IGQIDataSource* interface](#igqidatasource) must implement the [*IGQIOnInit* interface](#igqioninit), of which the `OnInit` method can also be used to initialize a data source:
+
+```csharp
+OnInitOutputArgs OnInit(OnInitInputArgs args)
+```
+
+When passed to the `OnInit` method, `OnInitInputArgs` will contain the following new property:
+
+```csharp
+GQIDMS DMS
+```
+
+> [!TIP]
+> See also: [GQIDMS](#gqidms)
+
+> [!IMPORTANT]
+> DMS messages are subject to change without notice. If you can implement an alternative using the [built-in data sources](xref:Query_data_sources), we highly recommend that you do so instead.
+
 ## Example ad hoc data script
 
 Below you can find an example script that forwards dummy data to the GQI. The name of the data source, as defined in the *GQIMetaData* attribute, will be “People”.
@@ -268,25 +290,3 @@ public class MyDataSource : IGQIDataSource, IGQIInputArguments
     }
 }
 ```
-
-## Retrieving data by means of DMS messages
-
-From DataMiner 10.3.4/10.4.0 onwards, ad hoc data sources can retrieve data by means of DMS messages. <!-- RN 35701 -->
-
-To do so, the [*IGQIDataSource* interface](#igqidatasource) must implement the [*IGQIOnInit* interface](#igqioninit), of which the `OnInit` method can also be used to initialize a data source:
-
-```csharp
-OnInitOutputArgs OnInit(OnInitInputArgs args)
-```
-
-When passed to the `OnInit` method, `OnInitInputArgs` will contain the following new property:
-
-```csharp
-GQIDMS DMS
-```
-
-> [!TIP]
-> See also: [GQIDMS](#gqidms)
-
-> [!IMPORTANT]
-> DMS messages are subject to change without notice. If you can implement an alternative using the [built-in data sources](xref:Query_data_sources), we highly recommend that you do so instead.
