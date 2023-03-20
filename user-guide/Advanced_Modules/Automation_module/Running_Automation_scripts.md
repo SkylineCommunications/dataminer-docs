@@ -12,4 +12,4 @@ Once a script has been designed, it can be executed in several ways:
 
 - With DataMiner Correlation: scripts can be run automatically whenever user-defined events occur. See [Running an Automation script from a Correlation rule](xref:Running_an_Automation_script_from_a_Correlation_rule).
 
-- You can make an API of your script using [User-defined APIs](xref:UD_APIs). How to make your script into an API is explained on the [Defining a new API page](xref:UD_APIs_Define_New_API#2-creating-the-apidefinitions).
+- You can make an API of your script using [User-defined APIs](xref:UD_APIs). For more information, see [Defining a new API](xref:UD_APIs_Define_New_API#2-creating-the-apidefinitions).
