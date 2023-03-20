@@ -15,7 +15,7 @@ This is the most basic procedure to use an external data source in a query:
 
 1. Above the class, add the *GQIMetaData* attribute in order to configure the name of the data source as displayed in the Dashboards app.
 
-   For example (see [Example ad hoc data script](#example-ad-hoc-data-script) for a full example):
+   For example (see [Example ad hoc data script](#example-ad-hoc-data-scripts) for a full example):
 
    ```csharp
    using Skyline.DataMiner.Analytics.GenericInterface;
@@ -296,6 +296,8 @@ public class MyDataSource : IGQIDataSource, IGQIInputArguments
 ### Example of the GQIDMS object
 
 Below you can find an example script that uses the [GQIDMS object](#gqidms) provided in the OnInitPutArgs to create a data source of active client connections. The name of the data source, as defined in the *GQIMetaData* attribute, will be “Client connections”.
+
+Two interfaces are implemented: *IGQIDataSource* and *IGQIOnInit*. The *GetNextPage* method retrieves client connections using a *GetInfoMessage* request and returns a *GQIPage* containing the data.
 
 ```csharp
 using System;
