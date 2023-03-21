@@ -111,6 +111,12 @@ A number of enhancements have been made to the Business Intelligence module, esp
 
 A number of enhancements have been made to the DataMiner Storage Module installer.
 
+#### SLAnalytics: Enhanced performance when processing large delete operations [ID_35871]
+
+<!-- MR 10.3.0 [CU2] - FR 10.3.5 -->
+
+Because of a number of enhancements made to the caching mechanism of SLAnalytics, overall performance has increased when processing large delete operations.
+
 #### SLAnalytics - Behavioral anomaly detection: Events associated with a DVE child element will no longer be linked to the DVE parent element [ID_35901]
 
 <!-- MR 10.4.0 - FR 10.3.5 -->

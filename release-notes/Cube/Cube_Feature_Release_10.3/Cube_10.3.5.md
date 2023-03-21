@@ -26,6 +26,14 @@ uid: Cube_Feature_Release_10.3.5
 
 When you connect to a cloud-connected DataMiner Agent with a remote access URL ending in `*.dataminer.services`, Cube will now by default connect using gRPC.
 
+#### No longer possible to create pattern matching tags that include predicted trend information [ID_35861]
+
+<!-- MR 10.3.0 [CU2] - FR 10.3.5 -->
+
+When viewing a trend graph with a trend prediction (i.e. predicted trend information beyond the "Now" line), it will no longer be possible to create pattern matching tags that include predicted trend data.
+
+In other words, when you select a section of a trend graph that is either partly or entirely past the "Now" line, you will not be able to save the tag.
+
 ### Fixes
 
 #### Cube could start to consume excessive CPU cycles whenever an operation took a long time or a deadlock occurred [ID_35614]

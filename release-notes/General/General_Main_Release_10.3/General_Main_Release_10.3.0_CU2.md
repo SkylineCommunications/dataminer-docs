@@ -26,6 +26,12 @@ Up to now, SLAnalytics only took into account changes to alarm templates that we
 
 From now on, SLAnalytics will also take into account first-time alarm template assignments.
 
+#### SLAnalytics: Enhanced performance when processing large delete operations [ID_35871]
+
+<!-- MR 10.3.0 [CU2] - FR 10.3.5 -->
+
+Because of a number of enhancements made to the caching mechanism of SLAnalytics, overall performance has increased when processing large delete operations.
+
 ### Fixes
 
 #### SLLogCollector: Problem when collecting multiple memory dumps with the 'Now and when memory increases with X Mb' option [ID_35617]
