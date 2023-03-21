@@ -54,7 +54,7 @@ On every page of the documentation on docs.dataminer.services, a *Propose change
 
    The documentation team will review the request and merge it if it is approved. If changes are needed before it can be merged, you will receive feedback.
 
-   > [!NOTE]
+   > [!IMPORTANT]
    > Do not forget to create a pull request! Otherwise, your changes may be lost.
 
 ## Reporting an issue
