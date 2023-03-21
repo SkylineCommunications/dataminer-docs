@@ -184,6 +184,9 @@ Generally, an ad hoc data source implementation will want to add a private field
 > [!IMPORTANT]
 > DMS messages are subject to change without notice. If you can implement an alternative using the [built-in data sources](xref:Query_data_sources), we highly recommend that you do so instead.
 
+> [!TIP]
+> See also: [Example of the GQIDMS object](#example-of-the-gqidms-object)
+
 ## Retrieving data by means of DMS messages
 
 From DataMiner 10.3.4/10.4.0 onwards, ad hoc data sources can retrieve data by means of DMS messages. <!-- RN 35701 -->
@@ -295,7 +298,7 @@ public class MyDataSource : IGQIDataSource, IGQIInputArguments
 
 ### Example of the GQIDMS object
 
-Below you can find an example script that uses the [GQIDMS object](#gqidms) provided in the OnInitPutArgs to create a data source of active client connections. The name of the data source, as defined in the *GQIMetaData* attribute, will be “Client connections”.
+Below you can find an example script that uses the [GQIDMS object](#gqidms) provided in the OnInitPutArgs to [create a data source of active client connections](#retrieving-data-by-means-of-dms-messages). The name of the data source, as defined in the *GQIMetaData* attribute, will be “Client connections”.
 
 Two interfaces are implemented: *IGQIDataSource* and *IGQIOnInit*. The *GetNextPage* method retrieves client connections using a *GetInfoMessage* request and returns a *GQIPage* containing the data.
 
