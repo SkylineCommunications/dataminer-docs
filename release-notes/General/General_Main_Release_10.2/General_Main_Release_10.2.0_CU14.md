@@ -40,6 +40,12 @@ When a database went in offload mode, up to now, an alarm with severity *Critica
 
 In the *Monitoring* app, from now on, elements, services and views opened by clicking a Visio shape will open in the same tab instead of a new tab.
 
+#### Web apps: Enhanced error handling when executing an interactive Automation script by clicking a DOM button [ID_35909]
+
+<!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
+
+Overall error handling has been improved when executing an interactive Automation script by clicking a DOM button in a web app.
+
 ### Fixes
 
 #### SLLogCollector: Problem when collecting multiple memory dumps with the 'Now and when memory increases with X Mb' option [ID_35617]

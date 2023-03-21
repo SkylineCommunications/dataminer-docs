@@ -26,6 +26,12 @@ In the query builder, from now on, when a query node option only has a single va
 
 For example, up to now, when you selected the *Get elements* data source, followed by the *Aggregate* operator, the method selection box would display "Get the". This will no longer be the case.
 
+#### Web apps: Enhanced error handling when executing an interactive Automation script by clicking a DOM button [ID_35909]
+
+<!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
+
+Overall error handling has been improved when executing an interactive Automation script by clicking a DOM button in a web app.
+
 ### Fixes
 
 #### Dashboards app: Sticky component menus would no longer be fully visible after you had changed the number of dashboard columns [ID_35702]
