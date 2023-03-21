@@ -7,6 +7,9 @@ uid: UD_APIs_Triggering_an_API
 > [!WARNING]
 > The current feature is in preview and is not fully released yet. This feature should not be used in any staging or production environment.
 
+> [!NOTE]
+> You can trigger a user-defined API through the [SLNet Client Test Tool](xref:SLNetClientTest_triggering_api) for testing.
+
 ## HTTP trigger
 
 > [!NOTE]
@@ -65,7 +68,7 @@ The Content-Length header should be calculated and filled in automatically depen
 
 #### Body
 
-An API can expect input. This input is passed in the body. The format of the input is defined in the definition of the API. If the `ApiDefinition` is set to accept parameters, you are expected to pass them as a JSON in a key-value format. More info about that can be found [here](xref:UD_APIs_Define_New_API#parameters). The body is expected to be encoded in UTF-8.
+An API can expect input. This input is passed in the body. The format of the input is defined in the definition of the API. If the API definition is set to accept parameters, you are expected to pass them as a JSON in a key-value format. More info about that can be found [here](xref:UD_APIs_Define_New_API#parameters). The body is expected to be encoded in UTF-8.
 
 ### The response
 
@@ -140,7 +143,3 @@ With some errors, a `faultingNode` will be passed. This is the DataMiner ID of t
 ##### MissingScriptParameters
 
 If an error with reason `MissingScriptParameters` is returned, this array will contain the names of the missing script parameters.
-
-## Client Test Tool
-
-[client test tool](xef:SLNetClientTest_triggering_api)

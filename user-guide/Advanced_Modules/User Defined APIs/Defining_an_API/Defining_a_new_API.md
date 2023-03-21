@@ -48,7 +48,7 @@ The entrypoint method has two parameters. The IEngine object can be used to inte
 |RequestMethod  |`RequestMethod`             |Contains the HTTP method of the request. See [RequestMethod](#requestmethod).|
 |Route          |`string`                    |The suffix of the URL where this API call is triggered on. Having this available makes it possible to reuse the same script for different routes.|
 |RawBody        |`string`                    |Contains the full body of the HTTP request as a string. This can be deserialized and used in the script.|
-|Parameters     |`Dictionary<string, string>`|Contains the deserialized parameters if you select 'Parse JSON of raw body to dictionary' when configuring the API. See [creating the ApiDefinition(s)](#2-creating-the-apidefinitions)|
+|Parameters     |`Dictionary<string, string>`|Contains the deserialized parameters if you select 'Parse JSON of raw body to dictionary' when configuring the API. See [creating the ApiDefinition(s)](#2-creating-the-api-definitions)|
 
 #### RequestMethod
 
@@ -64,7 +64,7 @@ Having this available makes it possible to define the 4 CRUD actions on a docume
 
 #### User Input Data
 
-There are two ways to pass data to the API script if you make use of the OnApiTrigger entrypoint method. They depend on whether you select the checkbox to `Parse JSON of raw body to dictionary` when configuring your API, see [creating the ApiDefinition(s)](#2-creating-the-apidefinitions).
+There are two ways to pass data to the API script if you make use of the OnApiTrigger entrypoint method. They depend on whether you select the checkbox to `Parse JSON of raw body to dictionary` when configuring your API, see [creating the ApiDefinition(s)](#2-creating-the-api-definitions).
 
 ##### Parameters
 
@@ -92,7 +92,7 @@ The entrypoint method should return an instance of the `ApiTriggerOutput` class.
 
 #### ResponseCode
 
-You can reflect the status of the API trigger request with the `ResponseCode` property on the `ApiTriggerOutput`. This is an integer, so you are free to pass any value that is a valid HTTP status code here. You can also use the `StatusCode` enum that contains suggestions and cast that to an integer. A simple axample can be found [here](#1-creating-the-api-automation-script). The values of the enum are:
+You can reflect the status of the API trigger request with the `ResponseCode` property on the `ApiTriggerOutput`. This is an integer, so you are free to pass any value that is a valid HTTP status code here. You can also use the `StatusCode` enum that contains suggestions and cast that to an integer. A simple example can be found [here](#1-creating-the-api-automation-script). The values of the enum are:
 
 |Name               |Value|Explanation|
 |-------------------|-----|-----------|
@@ -107,9 +107,9 @@ You can reflect the status of the API trigger request with the `ResponseCode` pr
 
 If you want to have deeper insights on which HTTP status code to use in which circumstances, check the following site: [HTTP status codes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status).
 
-## 2. Creating the ApiDefinition(s)
+## 2. Creating the API definition(s)
 
-While having your API script open in the Automation app in Cube, click the `Configure API...` button on the bottom. A screen will pop up that allows you to create an ApiDefinition.
+While having your API script open in the Automation app in Cube, click the `Configure API...` button on the bottom. A screen will pop up that allows you to create an API definition.
 
 Here you can add a description and choose the route.
 
@@ -133,12 +133,12 @@ HTTP GET mydataminer.customer.local/api/custom/encoders/status
 **Requirements:**
 
 - The route should not start or end with a forward slash (`/`).
-- The route should be unique for each `ApiDefinition`. When saving, this will be automatically checked to prevent clashes. Routes are case-insensitive.
+- The route should be unique for each API definition. When saving, this will be automatically checked to prevent clashes. Routes are case-insensitive.
 
 > [!TIP]
 > It is recommended to keep the routes simple and straightforward. The website [restfulapi.net](https://restfulapi.net/resource-naming/) provides some great tips on this.
 
-## 3. Creating the ApiToken(s)
+## 3. Creating the token(s)
 
 You can create tokens and give access to your API with the UI above.
 You can't delete a token that is in use by an API. You first need to unassign the token from all APIs using it before you can delete it.

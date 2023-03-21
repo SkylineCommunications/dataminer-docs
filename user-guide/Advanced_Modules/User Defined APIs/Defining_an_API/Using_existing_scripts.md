@@ -44,7 +44,7 @@ namespace UDAPIS_Example
 
 ## Option 1: Using the script without the OnApiTrigger entrypoint
 
-To use the above script as an API without doing any changes to it is possible, API triggers will be executed through the `Run` method as if you were executing the script from e.g. Cube. To do this, define your API exactly as explained on the [defining an API page](xref:UD_APIs_Define_New_API#2-creating-the-apidefinitions), but select the `Run` method option as 'Method to be executed'.
+To use the above script as an API without doing any changes to it is possible, API triggers will be executed through the `Run` method as if you were executing the script from e.g. Cube. To do this, define your API exactly as explained on the [defining an API page](xref:UD_APIs_Define_New_API#2-creating-the-api-definitions), but select the `Run` method option as 'Method to be executed'.
 
 Using this method comes with some disadvantages, note that you do not have access to the `ApiTriggerInput` object and `ApiTriggerOutput` object in the script, meaning you cannot check the route or request method of the API trigger or output specific errors.
 

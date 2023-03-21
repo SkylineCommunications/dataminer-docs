@@ -27,15 +27,15 @@ To use the User-defined APIs Cube UI, you need DataMiner version 10.4.0/10.3.5. 
 
 ## Backup and restore
 
-Since Tokens and API (definition) objects are stored in the Elasticsearch database, these are NOT included in DataMiner restore packages.
+Since tokens and API (definition) objects are stored in the Elasticsearch database, these are NOT included in DataMiner restore packages.
 More information on how to backup and restore this data can be found [here](https://docs.dataminer.services/user-guide/Advanced_Functionality/Databases/Elasticsearch_database/Configuring_Elasticsearch_backups.html)
 
 ## DataMiner UserDefinableApiEndpoint extension module
 
-To use the User-defined API functionality, you need the `DataMiner UserdefinableApiEndpoint` extension module. This module should be installed together with a DataMiner upgrade package. Do not uninstall this!
+To use the User-defined API functionality, you need the `DataMiner UserdefinableApiEndpoint` extension module. This module will be installed together with a DataMiner upgrade package. Do not uninstall this!
 
 To find how to change the settings and find the logging of this extension module, look at the [UserDefinableApiEndpoint page](xref:UD_APIs_UserDefinableApiEndpoint).
 
 ## Information events
 
-Information events (with name "User-defined APIs") are generated for every create, update and delete action for a Token or API (definition).
+Information events (with name "User-defined APIs") are generated for every create, update and delete action for a token or API (definition).
