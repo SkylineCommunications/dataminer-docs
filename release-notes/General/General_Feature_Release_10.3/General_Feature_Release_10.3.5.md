@@ -74,6 +74,15 @@ From now on, when no Cassandra database is present, SLAnalytics will be stopped 
 
 When a database went in offload mode, up to now, an alarm with severity *Critical* was generated. From now on, an alarm of severity *Notice* will be generated instead.
 
+#### SLNetClientTest: More user-friendly pop-up window will now appear when connecting to a DMA that uses external authentication via SAML [ID_35755]
+
+<!-- MR 10.4.0 - FR 10.3.5 -->
+
+When, in the SLNetClientTest tool, you connected to a DataMiner Agent that used external authentication via SAML, up to now, a pop-up window showing the authentication URL would prompt you to enter the SAML response string. From now on, a pop-up window similar to the one used in Cube will appear instead.
+
+> [!CAUTION]
+> Always be extremely careful when using this tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
+
 #### GQI: Raw datetime values retrieved from Elasticsearch will now be converted to UTC [ID_35784]
 
 <!-- MR 10.4.0 - FR 10.3.5 -->
