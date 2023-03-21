@@ -54,7 +54,7 @@ On every page of the documentation on docs.dataminer.services, a *Propose change
 
    The documentation team will review the request and merge it if it is approved. If changes are needed before it can be merged, you will receive feedback.
 
-   > [!NOTE]
+   > [!IMPORTANT]
    > Do not forget to create a pull request! Otherwise, your changes may be lost.
 
 ## Reporting an issue
@@ -247,20 +247,14 @@ When your changes are ready, you can create a pull request to submit them for re
 
    ![Push origin](~/images/Contrib_PushOrigin.png)
 
-1. Go to your fork on GitHub (see [Things to watch out for](#things-to-watch-out-for) for more information on how to get to your fork), and select *Contribute* > *Open pull request*.
+1. Next click *Create Pull Request*. This will open GitHub in a browser.
 
-   ![Open pull request](~/images/Contrib_OpenPullRequest.png)
-
-   This will open another overview of the changes that will be included in the pull request.
-
-1. At the top, click *Create pull request*.
+   ![Create Pull Request](~/images/Contrib_CreatePullRequest.png)
 
    > [!NOTE]
-   > You can also create a draft pull request, for example if you still want to have someone else make changes before the pull request can be merged. In that case, click the triangle button next to *Create pull request* and select *Create draft pull request*.
-   >
-   > ![Create draft pull request](~/images/Contrib_draftPR.png)
-   >
-   > When the pull request is ready to be merged, you can click *Ready for review* on the pull request page to change it from a draft into a full pull request.
+   > You can also select *Preview Pull Request* to get a complete overview of the changes you are about to commit and the base you are merging this to. If necessary, you can select a different base branch here as well. If all changes are OK, select *Create pull request*.
+
+1. In the browser, make sure that the base you are merging to is the main branch. If a different base branch is selected, make sure to select the correct branch. Scroll down for another overview of the changes that will be included in the pull request.
 
 1. Specify a title for the pull request, and optionally add a comment with more information about your changes.
 
@@ -270,6 +264,13 @@ When your changes are ready, you can create a pull request to submit them for re
 1. Click *Create pull request*. Your pull request will now be submitted for review.
 
    The documentation team will review the request and merge it if it is approved. If changes are needed before it can be merged, you will receive feedback.
+
+      > [!NOTE]
+      > You can also create a draft pull request, for example if you still want to have someone else make changes before the pull request can be merged. In that case, click the triangle button next to *Create pull request* and select *Create draft pull request*.
+      >
+      > ![Create draft pull request](~/images/Contrib_draftPR.png)
+      >
+      > When the pull request is ready to be merged, you can click *Ready for review* on the pull request page to change it from a draft into a full pull request.
 
 ### Collaborating with others on a draft branch
 
