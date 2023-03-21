@@ -247,16 +247,14 @@ When your changes are ready, you can create a pull request to submit them for re
 
    ![Push origin](~/images/Contrib_PushOrigin.png)
 
-1. In the central pane of GitHub Desktop, click *Create Pull Request*.
+1. Next click *Create Pull Request*. This will open GitHub in a browser.
 
-   ![Open pull request](~/images/Contrib_OpenPullRequest.png)
+   ![Create Pull Request](~/images/Contrib_CreatePullRequest.png)
 
    > [!NOTE]
-   > You can also select *Preview Pull Request* to get a complete overview of the changes you are about to commit and the base you are merging this to. If a different base branch should be selected, you can select the correct one here as well. Select *Create pull request*.
+   > You can also select *Preview Pull Request* to get a complete overview of the changes you are about to commit and the base you are merging this to. If necessary, you can select a different base branch here as well. If all changes are OK, select *Create pull request*.
 
-1. In the browser, make sure that the base you are merging to is the main branch. If a different base branch is selected, make sure to select the correct branch.
-
-   Scroll down for another overview of the changes that will be included in the pull request.
+1. In the browser, make sure that the base you are merging to is the main branch. If a different base branch is selected, make sure to select the correct branch. Scroll down for another overview of the changes that will be included in the pull request.
 
 1. Specify a title for the pull request, and optionally add a comment with more information about your changes.
 
