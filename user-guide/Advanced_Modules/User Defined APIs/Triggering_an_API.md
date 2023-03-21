@@ -5,7 +5,7 @@ uid: UD_APIs_Triggering_an_API
 # Triggering a user-defined API
 
 > [!WARNING]
-> The current feature is in preview and is not fully released yet. This feature should not be used in any staging or production environment.
+> This feature is in preview and is not fully released yet. For now, it should only be used on a staging platform. It should not be used in a production environment.
 
 > [!NOTE]
 > You can trigger a user-defined API through the [SLNet Client Test Tool](xref:SLNetClientTest_triggering_api) for testing.
@@ -68,7 +68,7 @@ The Content-Length header should be calculated and filled in automatically depen
 
 #### Body
 
-An API can expect input. This input is passed in the body. The format of the input is defined in the definition of the API. If the API definition is set to accept parameters, you are expected to pass them as a JSON in a key-value format. More info about that can be found [here](xref:UD_APIs_Define_New_API#parameters). The body is expected to be encoded in UTF-8.
+An API can expect input. This input is passed in the body. The format of the input is defined in the definition of the API. If the API definition is set to accept parameters, you are expected to pass them as a JSON in a key-value format. More info about that can be found [here](xref:UD_APIs_Define_New_API#user-input-data). The body is expected to be encoded in UTF-8.
 
 ### The response
 
@@ -117,7 +117,7 @@ Contains an error code that can be used by the API maintainer to find out what w
 |ManagerNotInitialized           |7            |503             |The UserDefinableApiManager in DataMiner is not initialized yet (check the C:\Skyline DataMiner\Logging\SLUserDefinableApiManager.txt log file, to see what went wrong).|
 |UnexpectedException             |8            |500             |An unexpected exception occurred (check the C:\Skyline DataMiner\Logging\SLUserDefinableApiManager.txt log file, to see what went wrong).|
 |InvalidActionMeta               |9            |500             |The `ActionMeta` object does not match the specified `ActionType` in the ApiDefinition.|
-|BodyToParametersConversionFailed|10           |400             |Something went wrong while trying to convert the body to a collection of key value parameters. [More info](xref:UD_APIs_Define_New_API#parameters)|
+|BodyToParametersConversionFailed|10           |400             |Something went wrong while trying to convert the body to a collection of key value parameters. [More info](xref:UD_APIs_Define_New_API#user-input-data)|
 |InvalidActionType               |11           |500             |The `ActionType` that is specified in the ApiDefinition is not valid.|
 |AutomationActionError           |12           |500             |An error occurred while trying to execute an automation script action.|
 |InvalidAutomationActionResult   |13           |500             |The result returned by the automation script was null or invalid.|

@@ -46,10 +46,12 @@ Enables behavioral anomaly detection and suggestion events. See [Behavioral anom
 
 ### APIDeployment
 
+> [!NOTE]
+> Deprecated. This feature is replaced by the [UserDefinableAPI](#userdefinableapi) feature.
+
 Enables dynamic API deployment on the SLAPIEndpoint application.
 
-> [!NOTE]
-> Requires the .NET 5.0 hosting bundle.
+Requires the .NET 5.0 hosting bundle.
 
 - **Minimum version**: 10.1.6
 

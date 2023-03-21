@@ -1650,31 +1650,31 @@ Permission to view histograms of parameters that are being trended.
 ### Modules \> User-defined APIs
 
 > [!NOTE]
-> The User-defined APIs feature is in preview and requires the *UserDefinableAPI* [soft-launch flag](xref:SoftLaunchOptions).
+> The User-Defined APIs feature is in preview and requires the *UserDefinableAPI* [soft-launch flag](xref:SoftLaunchOptions).
 
 #### Modules \> User-defined APIs \> Tokens \> UI available
 
-Permission to view tokens for User-defined APIs.
+Permission to view tokens for user-defined APIs.
 
 #### Modules \> User-defined APIs \> Tokens \> Add/Edit
 
-Permission to create and edit tokens for User-defined APIs.
+Permission to create and edit tokens for user-defined APIs.
 
 #### Modules \> User-defined APIs \> Tokens \> Delete
 
-Permission to delete tokens for User-defined APIs.
+Permission to delete tokens for user-defined APIs.
 
 #### Modules \> User-defined APIs \> Definitions \> UI available
 
-Permission to view API (definitions) for User-defined APIs.
+Permission to view API definitions for user-defined APIs.
 
 #### Modules \> User-defined APIs \> Definitions \> Add/Edit
 
-Permission to create and edit API (definitions) for User-defined APIs. In order to create or edit APIs, you also require the [automation > execute](#modules--automation--execute) permission flag.
+Permission to create and edit API definitions for user-defined APIs. In order to create or edit API definitions, you also need the [Automation > execute](#modules--automation--execute) permission.
 
 #### Modules \> User-defined APIs \> Definitions \> Delete
 
-Permission to delete API (definitions) for User-defined APIs.
+Permission to delete API definitions for user-defined APIs.
 
 ### Modules \> User-definable apps
 

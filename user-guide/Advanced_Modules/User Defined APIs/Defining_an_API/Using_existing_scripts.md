@@ -5,11 +5,17 @@ uid: UD_APIs_Using_existing_scripts
 # Using existing scripts
 
 > [!WARNING]
-> The current feature is in preview and is not fully released yet. This feature should not be used in any staging or production environment.
+> This feature is in preview and is not fully released yet. For now, it should only be used on a staging platform. It should not be used in a production environment.
 
-If you want to create an API from an existing automation script that may or may not use script parameters, we provide two ways of defining it.
+There are two possible ways to create an API from an existing Automation script, which may or may not use script parameters.
 
-Imagine we have the following existing script that uses script parameters to pass along the DMA ID and Element ID to stop an element.
+The recommended way is to [use the OnApiTrigger entry point](#using-the-script-with-the-onapitrigger-entry-point).
+
+Alternatively, you can also [use an existing script without the OnApiTrigger entry point](#using-the-script-without-the-onapitrigger-entry-point). However, while this has the advantage that you do not need to make changes to the script, this also has some major disadvantages.
+
+## Example script
+
+To illustrate how you can use an existing script, we will use this example script. It uses script parameters to pass along the DMA ID and element ID to stop an element.
 
 ```csharp
 using Skyline.DataMiner.Automation;
@@ -42,51 +48,29 @@ namespace UDAPIS_Example
 }
 ```
 
-## Option 1: Using the script without the OnApiTrigger entrypoint
+## Using the script with the OnApiTrigger entry point
 
-To use the above script as an API without doing any changes to it is possible, API triggers will be executed through the `Run` method as if you were executing the script from e.g. Cube. To do this, define your API exactly as explained on the [defining an API page](xref:UD_APIs_Define_New_API#2-creating-the-api-definitions), but select the `Run` method option as 'Method to be executed'.
+The **preferred way of using an existing script** to define an API is similar to how you [create a new API](xref:UD_APIs_Define_New_API). To do so, you will need to implement some changes in your script:
 
-Using this method comes with some disadvantages, note that you do not have access to the `ApiTriggerInput` object and `ApiTriggerOutput` object in the script, meaning you cannot check the route or request method of the API trigger or output specific errors.
+- Add the `OnApiTrigger` entry point method.
+- If necessary, refactor the script to make sure that it can use the same logic as it would with the `Run` method.
+- Use the *RawBody* and *Parameters* properties of the `ApiTriggerInput` object instead of the script parameters.
 
-When the API is triggered with valid input data, the script will succeed and an empty HTTP response will be returned with status code 200. This is an example of a valid input body for the trigger.
-
-```json
-{
-    "DMAID" : "837",
-    "ELEMENTID" : "154"
-}
-```
-
-When the API is triggered with input data that does not represent a number, the conversion in the script will fail and trigger the 'ExitFail' method. This causes the script to fail which will result in an [HTTP response](xref:UD_APIs_Triggering_an_API#errors) like this with status code 500:
-
-```json
-{
-    "errors": [
-        {
-            "title": "Error occurred while handling the request, contact your admin with the provided errorCode and faultingNode ID.",
-            "detail": "Something went wrong, contact the system administrator.",
-            "errorCode": 8,
-            "faultingNode": 837
-        }
-    ]
-}
-```
-
-As you can see, since we do not have a way of returning an `ApiTriggerOutput` instance, the error will be vague. This is why we always recommend spending the little extra time to use the 'OnApiTrigger' entrypoint. (See next option)
-
-## Option 2: Using the script with the OnApiTrigger entrypoint
-
-The second option is to define an API the same way as a new API. Instead of creating a new script, you will have to add the `OnApiTrigger` entrypoint method to your existing script, and possibly refactor some things so it can do the same logic as it would in the `Run` method. How the entrypoint method should look like can be found in the [defining an API page](xref:UD_APIs_Define_New_API#1-creating-the-api-automation-script). You can use the `ApiTriggerInput` 'RawBody' or 'Parameters' properties instead of the script parameters.
+For detailed info, refer to [Defining a new API](xref:UD_APIs_Define_New_API).
 
 > [!NOTE]
-> - With this option, the MissingScriptParameters error will not be returned if there are missing script parameters. The responsibility to verify the parameters is completely for the script.
-> - You can keep the script parameters on your script, as executing the automation script as an API through the OnApiTrigger entrypoint method, will ignore the script parameters.
-> - If the `Run` method remains in the script, it is still possible to trigger the script via Cube or any other supported DataMiner module. (Scheduler, Correlation, ...)
+>
+> - If there are missing script parameters, the *MissingScriptParameters* error will not be returned. You will need to make sure the script verifies the parameters.
+> - You can keep the existing script parameters of your script, as these will be ignored when the Automation script is executed as an API through the `OnApiTrigger` entry point method.
+> - If the `Run` method stays in the script, it will still be possible to trigger the script via Cube or any other supported DataMiner module (Scheduler, Correlation, etc.).
 
-We have applied this option to the example script which results in the script below. We have:
-- Added the 'OnApiTrigger' method with the 'AutomationEntryPoint' attribute.
-- Split of the actual script behavior (stopping an element) to a separate method.
-- Added a call to this separate method in both the entrypoint method and the normal `Run` method.
+For example, to prepare the [example script](#example-script) so it can be used to define an API, the following changes are needed:
+
+- Add the `OnApiTrigger` method with the `AutomationEntryPoint` attribute.
+- Move the actual script behavior (stopping an element) to a separate method.
+- Add a call to this separate method in both the entry point method and the normal `Run` method.
+
+This results in the script below, where the `Run` method and the entry point method both validate the input parameters and execute the `InnerRun` method that stops the element. However, the `Run` method uses the script parameters, while the entry point method uses the *Parameters* property from the `ApiTriggerInput`. Note also that with the entry point method, specific errors and success messages can be returned to the API users.
 
 ```csharp
 using Skyline.DataMiner.Automation;
@@ -163,4 +147,37 @@ namespace UDAPIS_Example
 }
 ```
 
-Basically both the `Run` method and the entrypoint method do the same thing, they validate the input parameters and execute the `InnerRun` method that stops the element. The difference is that the `Run` method uses the script parameters, and the entrypoint method uses the Parameters from the `ApiTriggerInput`. Another big difference is that with the entrypoint method, we can return specific errors and success messages to the API users.
+## Using the script without the OnApiTrigger entry point
+
+It is possible to use a script such as the [example script](#example-script) as an API without making any changes to it. API triggers will be executed through the `Run` method as if you were executing the script from e.g. Cube.
+
+To do this, define your API exactly as explained under the [Creating an API definitions and token(s)](xref:UD_APIs_Define_New_API#creating-an-api-definition-and-tokens), but next to *Method to be executed*, select *Run method*.
+
+> [!IMPORTANT]
+> If you use this approach, you will not have access to the `ApiTriggerInput` object and `ApiTriggerOutput` object in the script, and it will therefore not be possible to check the route, request the method of the API trigger, or output specific errors.
+
+When the API is triggered with valid input data, the script will succeed and an empty HTTP response will be returned with status code 200. This is an example of a valid input body for the trigger.
+
+```json
+{
+    "DMAID" : "837",
+    "ELEMENTID" : "154"
+}
+```
+
+When the API is triggered with input data that does not represent a number, the conversion in the script will fail and trigger the *ExitFail* method. This causes the script to fail, which will result in an [HTTP response](xref:UD_APIs_Triggering_an_API#errors) like this with status code 500:
+
+```json
+{
+    "errors": [
+        {
+            "title": "Error occurred while handling the request, contact your admin with the provided errorCode and faultingNode ID.",
+            "detail": "Something went wrong, contact the system administrator.",
+            "errorCode": 8,
+            "faultingNode": 837
+        }
+    ]
+}
+```
+
+As there is no way of returning an `ApiTriggerOutput` instance with this approach, the error will be vague.

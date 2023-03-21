@@ -2,14 +2,14 @@
 uid: UD_APIs_UserDefinableApiEndpoint
 ---
 
-# DataMiner UserDefinableApiEndpoint
+# DataMiner UserDefinableApiEndpoint DxM
 
 > [!WARNING]
-> The current feature is in preview and is not fully released yet. This feature should not be used in any staging or production environment.
+> This feature is in preview and is not fully released yet. For now, it should only be used on a staging platform. It should not be used in a production environment.
 
 UserDefinableApiEndpoint is an extension module that runs an ASP.NET Core 5 web API. It handles the incoming API triggers over HTTP or HTTPS and sends the requests to the DataMiner agent(s) in a round robin-way.
 
-## Install
+## Installation
 
 Even though this is an extension module, it follows the release cycle of DataMiner. Meaning that the module will be installed and updated by a DataMiner upgrade package. Note that uninstalling the extension module will result in the feature being unusable.
 
