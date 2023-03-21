@@ -59,6 +59,15 @@ In some cases, SLElement could leak memory when updating alarm templates contain
 
 SLProtocol would interpret signed numbers incorrectly, causing parameters to display incorrect values.
 
+#### Problem with SLNet when serializing a ModelHost error [ID_35802]
+
+<!-- MR 10.3.0 [CU2] - FR 10.3.5 -->
+
+An SLNet error could occur when serializing a ModelHost error.
+
+> [!IMPORTANT]
+> BREAKING CHANGE: To fix this issue, the `Exception` field had to be removed from the `ManagerStoreError` class.
+
 #### SLAnalytics: Flatline events on child DVE elements would incorrectly be cleared automatically [ID_35818]
 
 <!-- MR 10.3.0 [CU2] - FR 10.3.5 -->
