@@ -60,3 +60,11 @@ From now on, Cube will initialize the *Capacity* property if it detects that the
 
 - version 10.3.1 or
 - version 10.2.12 or earlier.
+
+#### Spectrum analysis: Problem when opening a spectrum element with an empty username [ID_35927]
+
+<!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
+
+An error could occur when you tried to open a spectrum element of which the username was set to NULL.
+
+Also, an exception could be thrown when you tried to copy spectrum settings to the Windows clipboard.

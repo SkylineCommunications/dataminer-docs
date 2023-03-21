@@ -57,3 +57,11 @@ Due to a caching issue, on a system with a large number of masked alarms, it cou
 In a filtered active alarms tab, in some cases, a base alarm will match the filter while the correlated alarm will not. In that case, the base alarm will be shown while the correlated alarm will not.
 
 However, up to now, when a base alarm was updated, the update would not be reflected in the Alarm Console until the filter was removed.
+
+#### Spectrum analysis: Problem when opening a spectrum element with an empty username [ID_35927]
+
+<!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
+
+An error could occur when you tried to open a spectrum element of which the username was set to NULL.
+
+Also, an exception could be thrown when you tried to copy spectrum settings to the Windows clipboard.
