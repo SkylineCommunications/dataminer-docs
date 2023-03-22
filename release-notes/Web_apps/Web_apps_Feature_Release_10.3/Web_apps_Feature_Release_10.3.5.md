@@ -218,6 +218,12 @@ From now on, the initial grouping will no longer be considered a modification. W
 
 A number of issues with regard to the "Loading" indicator have been fixed.
 
+#### Web apps: Login button would incorrectly be disabled on Edge and Chrome [ID_35906]
+
+<!-- MR 10.4.0 - FR 10.3.5 -->
+
+Up to now, in some cases, the login button would incorrectly be disabled when you opened a web app in Microsoft Edge or Google Chrome.
+
 #### Dashboards app & Low-code apps - Clock components: Clock time would not update when set to server time [ID_35912]
 
 <!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
