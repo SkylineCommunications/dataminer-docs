@@ -57,7 +57,7 @@ If there is a dependency on multiple DataMiner DLLs that are by default included
 
 ### Target Framework
 
-If possible, try to target .NET Standard 2.0, as this will give the most flexibility for use somewhere else.
+If possible, try to target .NET Standard 2.0, as this will give the most flexibility for use somewhere else. For more information and guidelines, refer to [Cross-platform targeting](https://learn.microsoft.com/en-us/dotnet/standard/library-guidance/cross-platform-targeting).
 
 If you have a dependency on .NET Framework (e.g. Skyline.DataMiner.Dev.*), you will need to target .NET Framework as well.
 
