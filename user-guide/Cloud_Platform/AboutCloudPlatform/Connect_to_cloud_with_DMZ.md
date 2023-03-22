@@ -6,6 +6,8 @@ uid: Connect_to_cloud_with_DMZ
 
 From version 2.7.0 of the CloudGateway DxM onwards, you can connect a DMS to dataminer.services using a DMZ. This way, the DMS can be connected to dataminer.services without exposing the entire DMS network to the public internet.
 
+![DMZ](~/user-guide/images/DMZ_CloudGateway.png)
+
 To create such a DMZ:
 
 1. Configure the firewall of the DMZ:

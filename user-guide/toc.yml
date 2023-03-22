@@ -2714,6 +2714,8 @@
         - name: Connecting your DataMiner System to dataminer.services
           topicUid: Connecting_your_DataMiner_System_to_the_cloud
           items:
+            - name: Connecting to dataminer.services in System Center
+              topicUID: Connect_to_cloud_in_System_Center
             - name: Connecting to dataminer.services via proxy server
               topicUID: Connect_to_cloud_via_proxy
             - name: Connecting to dataminer.services with a DMZ setup

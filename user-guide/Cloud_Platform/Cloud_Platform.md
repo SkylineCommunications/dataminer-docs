@@ -8,6 +8,8 @@ By connecting to dataminer.services you can augment your DataMiner System with a
 
 The dataminer.services home page is available via <https://dataminer.services>. For more information on how to log on, see [Logging on to dataminer.services](xref:Logging_on_to_the_DataMiner_Cloud_Platform).
 
+For more information on how to connect to dataminer.services, see [Connecting your DataMiner System to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud).
+
 On this home page, you will find links to the different available dataminer.services apps:
 
 - [Project Collaboration](xref:Collaboration)
