@@ -196,6 +196,14 @@ When you generated a PDF of a dashboard that contained multiple parameter feeds,
 
 In web apps, certain icons would incorrectly not be displayed.
 
+#### Dashboards app & Low-code apps - Table component: Initial grouping would incorrectly be considered a modification [ID_35882]
+
+<!-- MR 10.3.0 [CU2] - FR 10.3.5 -->
+
+In a table component, the initial grouping would incorrectly be considered a modification. As a result, the *Restore initial view* button would appear in the component header. When you then clicked that button, the grouping would be removed.
+
+From now on, the initial grouping will no longer be considered a modification. When you modify the table by sorting, filtering, grouping or re-ordering data and then click the *Restore initial view* button, the initial grouping will now be restored.
+
 #### Dashboards app & Low-code apps - Clock components: Clock time would not update when set to server time [ID_35912]
 
 <!-- MR 10.2.0 [CU14] - FR 10.3.5 -->
