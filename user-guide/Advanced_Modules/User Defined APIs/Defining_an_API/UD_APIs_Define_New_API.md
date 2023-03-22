@@ -12,9 +12,9 @@ uid: UD_APIs_Define_New_API
 
 To create a new API, follow these steps as detailed below:
 
-1. [Creating the API Automation script](#creating-the-api-automation-script)
-1. [Creating the API definition(s) and token(s)](#creating-an-api-definition-and-tokens)
-1. [Configuring the UserDefinableApiEndpoint extension module](#configuring-the-userdefinableapiendpoint-extension-module)
+1. [Create the API Automation script](#creating-the-api-automation-script)
+1. [Create the API definition(s) and token(s)](#creating-an-api-definition-and-tokens)
+1. [Configure the UserDefinableApiEndpoint extension module](#configuring-the-userdefinableapiendpoint-extension-module)
 
 > [!NOTE]
 > This is the recommended workflow when creating new APIs using new scripts. If you want to use an existing script for the API, see [Using existing scripts](xref:UD_APIs_Using_existing_scripts).
@@ -157,14 +157,17 @@ You can also use the `StatusCode` enum, which contains suggestions, and cast tha
 
    This will open a window where you can create the API definition.
 
+   ![Creating an ApiDefinition](~/user-guide/images/UDPAIS_CreateAPI.jpg)<br>
+   *Creating an API definition in DataMiner 10.3.5*
+
 1. Add a description.
 
 1. In the *URL* box, specify the [route](#route).
 
 1. If you want to parse the JSON body of the HTTP request to a dictionary, make sure *Parse JSON of raw body to dictionary* is selected. See [User input data](#user-input-data).
 
-  > [!NOTE]
-  > Leave *Method to be executed* set to the default selection. This option should only be changed for legacy scripts without the OnApiTrigger entry point. See [Using existing scripts](xref:UD_APIs_Using_existing_scripts).
+   > [!NOTE]
+   > Leave *Method to be executed* set to the default selection. This option should only be changed for legacy scripts without the `OnApiTrigger` entry point. See [Using existing scripts](xref:UD_APIs_Using_existing_scripts).
 
 1. Under *Access tokens*, select the tokens that need access. You can also create new tokens using the *New token* button.
 
@@ -174,11 +177,6 @@ You can also use the `StatusCode` enum, which contains suggestions, and cast tha
    > [!CAUTION]
    > Once a token is created with a specified secret, **it is not possible to retrieve that secret again**. The value is stored securely in the database with a non-reversible hashing function. Make sure to save it somewhere secure or pass it in a secure way to the API user.
 
-For example:
-
-![Creating an ApiDefinition](~/user-guide/images/UDPAIS_CreateAPI.jpg)<br>
-*Creating an API definition in DataMiner 10.3.5*
-
 > [!NOTE]
 > You can change your API configuration at any time by opening this window again and changing the settings.
 
@@ -186,4 +184,4 @@ For example:
 
 Make sure the UserDefinableApiEndpoint DxM has been configured to match your API needs.
 
-For more information refer to [UserDefinableApiEndpoint configuration](xref:UD_APIs_UserDefinableApiEndpoint#configuration).
+For more information refer to [UserDefinableApiEndpoint configuration](xref:UD_APIs_UserDefinableApiEndpoint#configuring-the-dxm).

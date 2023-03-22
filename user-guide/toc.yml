@@ -2297,7 +2297,7 @@
       topicUid: UD_APIs
       items:
         - name: Viewing APIs and tokens
-          topicUid: Viewing_APIs_and_tokens_in_Cube
+          topicUid: UD_APIs_Viewing_in_Cube
         - name: Defining an API
           topicUid: UD_APIs_Define_New_API
           items:
@@ -3269,7 +3269,7 @@
                 topicUID: SLNetClientTest_setting_TTL_database
               - name: Specifying credentials for a shared backup path for Elasticsearch
                 topicUID: SLNetClientTest_credentials_shared_backup_Elasticsearch
-              - name: Triggering a User-defined API
+              - name: Triggering a user-defined API
                 topicUID: SLNetClientTest_triggering_api
         - name: SLOffload tool
           topicUid: SLOffload_tool

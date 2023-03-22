@@ -348,6 +348,6 @@ Uses an embedded web browser for Automation script execution instead of the nati
 
 ### UserDefinableAPI
 
-Enables the Cube UI for [User-defined APIs](xref:UD_APIs).
+Enables the Cube UI for [User-Defined APIs](xref:UD_APIs).
 
 - **Minimum version**: 10.3.5

@@ -15,7 +15,7 @@ Alternatively, you can also [use an existing script without the OnApiTrigger ent
 
 ## Example script
 
-To illustrate how you can use an existing script, we will use this example script. It uses script parameters to pass along the DMA ID and element ID to stop an element.
+To illustrate how you can use an existing script, we will start from this example script. It uses script parameters to pass along the DMA ID and element ID to stop an element.
 
 ```csharp
 using Skyline.DataMiner.Automation;
@@ -156,7 +156,7 @@ To do this, define your API exactly as explained under the [Creating an API defi
 > [!IMPORTANT]
 > If you use this approach, you will not have access to the `ApiTriggerInput` object and `ApiTriggerOutput` object in the script, and it will therefore not be possible to check the route, request the method of the API trigger, or output specific errors.
 
-When the API is triggered with valid input data, the script will succeed and an empty HTTP response will be returned with status code 200. This is an example of a valid input body for the trigger.
+When the API is triggered with valid input data, the script will succeed, and an empty HTTP response will be returned with status code 200. This is an example of a valid input body for the trigger:
 
 ```json
 {

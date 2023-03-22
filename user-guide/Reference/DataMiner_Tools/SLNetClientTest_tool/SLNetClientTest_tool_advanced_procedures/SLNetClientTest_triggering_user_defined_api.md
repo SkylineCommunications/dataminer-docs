@@ -2,21 +2,43 @@
 uid: SLNetClientTest_triggering_api
 ---
 
-# Triggering a User-defined API through the client test tool
+# Triggering a user-defined API
 
-It is possible to trigger an API through the User Definable API UI in the Client Test Tool. It can be found under `Advanced > Apps > User Definable APIs...` on the `Trigger` tab.
+> [!WARNING]
+> This feature is in preview and is not fully released yet. For now, it should only be used on a staging platform. It should not be used in a production environment.
 
-![Client Test Tool Trigger Screenshot](~/user-guide/images/UDAPIS_ClientTestToolTrigger.jpg)
+With the SLNetClientTest tool, you can trigger a user-defined API in order to test it. This especially handy when you are developing an API, as it allows you to quickly and easily trigger it and get additional information such as the response time along with the result.
 
-To trigger an API, simply select the API Definition in the dropdown. This will automatically fill in the route in the textbox below. Choose the `RequestMethod` from the dropdown and enter your secret in the Secret textbox. Optionally, you can fill in a request body in the large textbox on the bottom. When clicking 'Trigger', your request is sent and the response will appear along with some stats and info about your request. This is a great way to test your API while developing it, as it is easy to trigger.
+1. [Connect to the DMA using the SLNetClientTest tool](xref:Connecting_to_a_DMA_with_the_SLNetClientTest_tool).
 
-There also is a UI available in the client test tool that makes it possible to easily see all the tokens and definitions.
+1. Select *Advanced* > *Apps* > *User Definable APIs*.
 
-![Client Test Tool Screenshot](~/user-guide/images/UDAPIS_ClientTestTool.jpg)
+1. Select the *Trigger* tab.
 
-By selecting an object and clicking the 'View' or 'RawView' buttons, you can see all the properties of that object. It is possible to sort on values by clicking on the column headers.
+   ![Client Test Tool Trigger Screenshot](~/user-guide/images/UDAPIS_ClientTestToolTrigger.jpg)
 
-In the Tokens tab, you can disable or enable an `ApiToken` by right-clicking on the ID field of an `ApiToken`. A context menu will open with a button to 'Disable' or 'Enable' the token.
+1. In the *API Definition* box, select the API you want to trigger.
+
+   This will automatically fill in the route in the box below.
+
+1. In the *Request Method* box, select the method you want to use.
+
+1. In the *Secret* box, specify the secret corresponding with the access token (see [Creating an API definition and token(s)](xref:UD_APIs_Define_New_API#creating-an-api-definition-and-tokens)).
+
+1. Optionally, in the *Request Body* box, fill in a request body.
+
+1. Click the *Trigger* button.
+
+   Your request will be sent, and the response will appear along with some stats and info about your request.
+
+> [!NOTE]
+> On the *Tokens* tab of the *User Definable APIs* window, you can see an overview of all the tokens and definitions.
+>
+> ![Client Test Tool Screenshot](~/user-guide/images/UDAPIS_ClientTestTool.jpg)
+>
+> If you select an object, you can use the *View* and *RawView* buttons to see its properties. You can also sort on values by clicking the column headers.
+>
+> You can also disable or enable an API token here, by right-clicking its ID field and selecting *Disable* or *Enable*.
 
 > [!WARNING]
 > Always be extremely careful when using the SLNetClientTest tool, as it can have far-reaching consequences on the functionality of your DataMiner System.

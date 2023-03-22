@@ -1,5 +1,5 @@
 ---
-uid: Viewing_APIs_and_tokens_in_Cube
+uid: UD_APIs_Viewing_in_Cube
 ---
 
 # Viewing APIs and tokens in DataMiner Cube

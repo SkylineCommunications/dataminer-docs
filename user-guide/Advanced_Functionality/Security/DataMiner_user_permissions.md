@@ -1650,7 +1650,7 @@ Permission to view histograms of parameters that are being trended.
 ### Modules \> User-defined APIs
 
 > [!NOTE]
-> The User-Defined APIs feature is in preview and requires the *UserDefinableAPI* [soft-launch flag](xref:SoftLaunchOptions).
+> The User-Defined APIs feature is in preview and is only available if the *UserDefinableAPI* [soft-launch option](xref:SoftLaunchOptions) is enabled.
 
 #### Modules \> User-defined APIs \> Tokens \> UI available
 

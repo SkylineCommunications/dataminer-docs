@@ -16,7 +16,7 @@ In short, these are the different objects used by this DataMiner module:
 | Token | Defines a secret string and metadata that can be used to access an API. |
 | API definition | Defines the API. Including what tokens have access, the URL route and what action should be triggered. |
 
-To use the User-defined API functionality, you need the [DataMiner UserDefinableApiEndpoint](xref:UD_APIs_UserDefinableApiEndpoint) DxM. This module will be installed together with a DataMiner upgrade package. Do not uninstall this!
+To use this functionality, you need the [DataMiner UserDefinableApiEndpoint](xref:UD_APIs_UserDefinableApiEndpoint) DxM. This module is included in general DataMiner upgrade packages.
 
 > [!TIP]
 > To find how to change the settings and find the logging of the *UserDefinableApiEndpoint* DxM, see [DataMiner UserDefinableApiEndpoint](xref:UD_APIs_UserDefinableApiEndpoint).
