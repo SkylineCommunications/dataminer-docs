@@ -21,10 +21,10 @@ To securely host your DataMiner Agent, we recommend that you make sure HTTPS con
 1. Optionally (though **recommended**), enable *HTTP Strict Transport Security* (*HSTS*) in IIS to prevent SSL stripping attacks:
 
    1. Open *IIS Manager*.
-   1. In the *Connections* pane on the left, right click on *Default Web Site*.
-   1. Under *Manage Website* click on *Advanced settings...*
-   1. Under *Behavior*, expand *HSTS*
-   1. In the pop-up, set *Enabled* to *True*.
+   1. In the *Connections* pane on the left, expand the top node and *Sites* node until you see *Default Web Site*.
+   1. Right click *Default Web Site* and select *Manage Website* > *Advanced settings*.
+   1. Under *Behavior*, expand *HSTS*.
+   1. Set *Enabled* to *True*.
    1. Set *IncludeSubDomains* to *True*.
    1. Set *Max-Age* to *31536000* seconds (i.e. 1 year).
    1. Optionally, set *Preload* to *True*.

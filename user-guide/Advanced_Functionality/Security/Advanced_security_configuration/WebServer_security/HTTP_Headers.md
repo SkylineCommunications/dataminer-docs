@@ -75,13 +75,13 @@ To enable *Strict Transport Security*:
 
 1. Open *IIS Manager*.
 
-1. In the *Connections* pane on the left, right click on *Default Web Site*.
+1. In the *Connections* pane on the left, expand the top node and *Sites* node until you see *Default Web Site*.
 
-1. Under *Manage Website* click on *Advanced settings...*
+1. Right click *Default Web Site* and select *Manage Website* > *Advanced settings*.
 
-1. Under *Behavior*, expand *HSTS*
+1. Under *Behavior*, expand *HSTS*.
 
-1. In the pop-up, set *Enabled* to *True*.
+1. Set *Enabled* to *True*.
 
 1. Set *IncludeSubDomains* to *True*.
 
