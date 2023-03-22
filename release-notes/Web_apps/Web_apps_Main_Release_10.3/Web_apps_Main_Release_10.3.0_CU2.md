@@ -46,6 +46,12 @@ Sticky component menus would no longer be fully visible after you had changed th
 
 GQI components would incorrectly not clear their query row feed when refetching data.
 
+#### Dashboards app & Low-code apps - GQI components: Problem when executing an empty query [ID_35803]
+
+<!-- MR 10.3.0 [CU2] - FR 10.3.5 -->
+
+When GQI components tried to execute an empty query, up to now, they would keep on showing a "loading" indicator. From now on, an appropriate message will be displayed instead.
+
 #### Dashboards app & Low-code apps: Duplicated component would not have the size as the original [ID_35804]
 
 <!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->

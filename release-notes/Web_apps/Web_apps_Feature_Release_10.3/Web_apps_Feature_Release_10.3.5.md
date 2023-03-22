@@ -91,7 +91,7 @@ A default value can be set by means of a URL option:
 
 For more information on how to pass data using a JSON object, see [Specifying data input in an app URL](xref:Specifying_data_input_in_URL).
 
-#### Dashboards app & Low-code apps: New 'Number' feed [ID_35902]
+#### Dashboards app & Low-code apps: New 'Number' feed [ID_35911]
 
 <!-- MR 10.4.0 - FR 10.3.5 -->
 
@@ -168,7 +168,7 @@ In some cases, it would not be possible to log in to a web app (e.g. Dashboards,
 
 #### Dashboards app & Low-code apps - GQI components: Problem when executing an empty query [ID_35803]
 
-<!-- MR 10.4.0 - FR 10.3.5 -->
+<!-- MR 10.3.0 [CU2] - FR 10.3.5 -->
 
 When GQI components tried to execute an empty query, up to now, they would keep on showing a "loading" indicator. From now on, an appropriate message will be displayed instead.
 

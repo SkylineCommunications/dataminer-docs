@@ -195,7 +195,7 @@ A default value can be set by means of a URL option:
 
 For more information on how to pass data using a JSON object, see [Specifying data input in an app URL](xref:Specifying_data_input_in_URL).
 
-#### Dashboards app & Low-code apps: New 'Number' feed [ID_35902]
+#### Dashboards app & Low-code apps: New 'Number' feed [ID_35911]
 
 <!-- MR 10.4.0 - FR 10.3.5 -->
 
