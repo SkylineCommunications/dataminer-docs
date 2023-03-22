@@ -195,3 +195,9 @@ When you generated a PDF of a dashboard that contained multiple parameter feeds,
 <!-- MR 10.2.0 [CU13]/10.3.0 [CU2] - FR 10.3.5 -->
 
 In web apps, certain icons would incorrectly not be displayed.
+
+#### Dashboards app & Low-code apps - Clock components: Clock time would not update when set to server time [ID_35912]
+
+<!-- MR 10.2.0 [CU14] - FR 10.3.5 -->
+
+When a clock component (analog or digital) was set to use server time, the clock time would not update.

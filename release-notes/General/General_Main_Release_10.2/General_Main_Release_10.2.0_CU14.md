@@ -133,6 +133,12 @@ At SLA startup, in some cases, the active alarms would no longer be in sync with
 
 Also, a number of other minor fixes with regard to SLA management have been implemented.
 
+#### Dashboards app & Low-code apps - Clock components: Clock time would not update when set to server time [ID_35912]
+
+<!-- MR 10.2.0 [CU14] - FR 10.3.5 -->
+
+When a clock component (analog or digital) was set to use server time, the clock time would not update.
+
 #### DataMiner Cube - Spectrum analysis: Problem when opening a spectrum element with an empty username [ID_35927]
 
 <!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
