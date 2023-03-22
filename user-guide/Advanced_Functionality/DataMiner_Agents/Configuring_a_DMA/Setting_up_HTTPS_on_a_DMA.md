@@ -20,11 +20,16 @@ To securely host your DataMiner Agent, we recommend that you make sure HTTPS con
 1. Allow *inbound* TCP port **443** through the Windows Firewall.
 1. Optionally (though **recommended**), enable *HTTP Strict Transport Security* (*HSTS*) in IIS to prevent SSL stripping attacks:
 
-   1. In IIS manager, click *Sites* in the *Connections* pane on the left.
-   1. Open *Default Web Site* and click *HSTS* in the *Actions* pane.
-   1. Select the *Enable* checkbox.
-   1. Set the *Max-Age* to **31536000** (seconds). This will ensure recurring connections are using HTTPS for the next year.
-   1. Click *OK* to complete the HSTS setup.
+   1. Open *IIS Manager*.
+   1. In the *Connections* pane on the left, expand the top node and *Sites* node until you see *Default Web Site*.
+   1. Right click *Default Web Site* and select *Manage Website* > *Advanced settings*.
+   1. Under *Behavior*, expand *HSTS*.
+   1. Set *Enabled* to *True*.
+   1. Set *IncludeSubDomains* to *True*.
+   1. Set *Max-Age* to *31536000* seconds (i.e. 1 year).
+   1. Optionally, set *Preload* to *True*.
+   1. Optionally, set *Redirect Http to Https* to *True*
+   1. Click *OK*.
 
 > [!TIP]
 > It is good practice to completely disable **HTTP** by removing the HTTP binding, meaning that only HTTPS traffic will be accepted. Once the binding is removed, you can close port 80 in the Windows Firewall.
