@@ -181,3 +181,41 @@ When configuring this new *Text* feed, you can optionally specify a label, an ic
 - On Value change
 
 Currently, the *On Focus lost* event will also be triggered when you press the ENTER key.
+
+A default value can be set by means of a URL option:
+
+- In a dashboard URL, you can specify a default value in two ways:
+
+  - `?strings=my text value`
+  - `?data=<URL-encoded JSON object>`
+
+- In a URL of a low-code app, you can specify a default value only in the following way:
+
+  - `?data=<URL-encoded JSON object>`
+
+For more information on how to pass data using a JSON object, see [Specifying data input in an app URL](xref:Specifying_data_input_in_URL).
+
+#### Dashboards app & Low-code apps: New 'Number' feed [ID_35902]
+
+<!-- MR 10.4.0 - FR 10.3.5 -->
+
+The new *Number* feed is a text box that exposes the entered numbers as a number feed that can currently be consumed by GQI queries and script parameters in low-code app actions.
+
+When configuring this new *Number* feed, you can optionally specify a label, an icon, a placeholder, a unit, a step size, a number of decimals, a minimum value and a maximum value. You can also indicate whether the text box should feed its value when triggered by the following events:
+
+- On Enter
+- On Focus lost
+- On Value change
+
+A default value can be set by means of a URL option:
+
+- In a dashboard URL, you can specify a default value in two ways:
+
+  - `?numbers=123`
+  - `?data=<URL-encoded JSON object>`
+
+- In a URL of a low-code app, you can specify a default value only in the following way:
+
+  - `?data=<URL-encoded JSON object>`
+
+For more information on how to pass data using a JSON object, see [Specifying data input in an app URL](xref:Specifying_data_input_in_URL).
