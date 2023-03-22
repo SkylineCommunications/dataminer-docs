@@ -4,7 +4,8 @@
       "src": [
         {
           "files": [
-            "src/**.csproj"
+            "src/**.csproj",
+            "src/**.dll"
           ],
           "exclude": [
             "**/bin/**",

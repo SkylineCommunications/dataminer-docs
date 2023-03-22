@@ -547,6 +547,12 @@ apiRules:
       uid: System.ComponentModel.EditorBrowsableAttribute
       ctorArguments:
       - System.ComponentModel.EditorBrowsableState.Never
+- exclude:
+    uidRegex: ^Gnmi$
+    type: Namespace
+- exclude:
+    uidRegex: ^GnmiExt$
+    type: Namespace
 attributeRules:
 - exclude:
     uidRegex: ^System\.ComponentModel\.Design$
