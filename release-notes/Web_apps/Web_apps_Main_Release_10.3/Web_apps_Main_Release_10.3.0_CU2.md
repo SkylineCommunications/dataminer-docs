@@ -112,6 +112,12 @@ In a table component, the initial grouping would incorrectly be considered a mod
 
 From now on, the initial grouping will no longer be considered a modification. When you modify the table by sorting, filtering, grouping or re-ordering data and then click the *Restore initial view* button, the initial grouping will now be restored.
 
+#### Dashboards app & Low-code apps - Table component: Issues with 'Loading' indicator [ID_35894]
+
+<!-- MR 10.3.0 [CU2] - FR 10.3.5 -->
+
+A number of issues with regard to the "Loading" indicator have been fixed.
+
 #### Dashboards app & Low-code apps - GQI: Queries linked to feeds would not always apply feed changes [ID_35903]
 
 <!-- MR 10.3.0 [CU2] - FR 10.3.4 [CU0] -->
