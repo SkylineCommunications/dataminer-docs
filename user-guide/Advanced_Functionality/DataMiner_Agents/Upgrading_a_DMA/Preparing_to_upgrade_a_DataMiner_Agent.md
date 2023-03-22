@@ -4,11 +4,11 @@ uid: Preparing_to_upgrade_a_DataMiner_Agent
 
 # Preparing to upgrade a DataMiner Agent
 
-This section of the documentation contains detailed information on how to best prepare to upgrade a DataMiner Agent. We strongly recommend you read through the content of this page to ensure a successful upgrade of your DMA.
+This section of the documentation contains detailed information on how to best prepare to upgrade a DataMiner Agent. To ensure a successful upgrade of your DMA, we strongly recommend that you read through the content of this page.
 
 ## Uploading upgrade packages before an upgrade
 
-We highly recommend you upload the upgrade package before the actual maintenance, as this is low risk and does not require a restart of your system but will indicate whether all conditions and requirements to upgrade your DataMiner Agent are met, vastly reducing the chance of problems occurring during the eventual upgrade.
+We highly recommend that you upload the upgrade package before the actual maintenance window, as this is low risk and does not require a restart of your system, but it will indicate whether all conditions and requirements to upgrade your DataMiner Agent are met, vastly reducing the chance of problems occurring during the eventual upgrade.
 
 To upload an upgrade package:
 
@@ -28,11 +28,11 @@ To upload an upgrade package:
    ```
 
 > [!TIP]
-> Upload the package at least a week before executing the upgrade.
+> To be safe, upload the package at least a week before executing the upgrade.
 
 ## Prerequisites
 
-Prerequisites are small self-contained apps that run during the upload phase of a DataMiner upgrade. Their purpose is to detect whether all necessary conditions for upgrading DataMiner to the selected version and all requirements for the DataMiner Agent to run are met. If the prerequisites detect that this is not the case, the upgrade will be aborted.
+Prerequisites are small self-contained apps that run during the upload phase of a DataMiner upgrade. Their purpose is to detect whether all the necessary conditions for upgrading DataMiner to the selected version and all requirements for the DataMiner Agent to run are met. If the prerequisites detect that this is not the case, the upgrade will be canceled.
 
 As of now, the following prerequisites are available:
 

@@ -5,11 +5,11 @@ uid: Upgrade_Paths
 # Upgrade paths
 
 > [!IMPORTANT]
-> Before updating a DataMiner Agent, see [Preparing to upgrade a DataMiner Agent](xref:Preparing_to_upgrade_a_DataMiner_Agent).
+> Before upgrading a DataMiner Agent, see [Preparing to upgrade a DataMiner Agent](xref:Preparing_to_upgrade_a_DataMiner_Agent).
 
-In the case you are not upgrading to the DataMiner version that immediately follows your current version, you should follow the upgrade paths listed below, depending on the DataMiner version you are currently on.
+In case you are not upgrading to the DataMiner version that immediately follows your current version, you should follow the upgrade paths listed below, depending on the DataMiner version you are currently on.
 
-If there is no information available for your DataMiner upgrade path, upgrade straight to your preferred version using a [DataMiner .dmupgrade package](xref:Upgrading_a_DataMiner_Agent_using_DataMiner_Taskbar_Utility).
+If there is no information available for your DataMiner upgrade path, and you are using a currently supported DataMiner version, upgrade straight to your preferred version using a [DataMiner .dmupgrade package](xref:Upgrading_a_DataMiner_Agent_using_DataMiner_Taskbar_Utility).
 
 ## Available upgrade paths
 

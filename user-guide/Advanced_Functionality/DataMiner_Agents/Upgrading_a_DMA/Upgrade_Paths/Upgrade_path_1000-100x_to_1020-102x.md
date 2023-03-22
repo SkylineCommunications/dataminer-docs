@@ -12,7 +12,7 @@ Install the following packages:
 - [ASP.NET Core 5.0.11](https://download.visualstudio.microsoft.com/download/pr/df452763-4b7d-490a-bc03-bd1003d3ff4c/665ee1786528809f33e791558b69cf51/dotnet-hosting-5.0.11-win.exe)
 
 > [!IMPORTANT]
-> If you do not install these packages before executing the upgrade, the DataMiner installer will install them for you, but this will require a reboot during the upgrade. As this can make following the upgrade process more difficult, we recommend to install these packages in advance.
+> If you do not install these packages before executing the upgrade, the DataMiner installer will install them for you, but this will require a reboot during the upgrade. As this can make following the upgrade process more difficult, we recommend installing these packages in advance.
 
 ## NATS ports
 
@@ -21,8 +21,6 @@ Make sure the IP network ports 9090, 4222, 6222, and 8222 (NATS monitoring only)
 > [!TIP]
 > See also: [Checking the required open ports in a DMS](xref:MOP_Checking_the_required_open_ports_in_a_DMS)
 
-## Upgrade path
+## Install the upgrade
 
-Follow this upgrade path:
-
-DataMiner 10.0.0/10.0.x -> DataMiner 10.2.0/10.2.x
+Install the DataMiner 10.2.0/10.2.x upgrade package.
