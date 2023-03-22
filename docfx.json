@@ -5,7 +5,7 @@
         {
           "files": [
             "src/**.csproj",
-            "src/**.dll"
+            "assemblies/**.dll"
           ],
           "exclude": [
             "**/bin/**",
