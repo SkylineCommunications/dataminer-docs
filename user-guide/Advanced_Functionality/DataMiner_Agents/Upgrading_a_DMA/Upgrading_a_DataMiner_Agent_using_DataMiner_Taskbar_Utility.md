@@ -19,6 +19,9 @@ If you intend to upgrade your entire DataMiner System (i.e. all DMAs in the clus
 
 Proceed as follows to upgrade your DataMiner Agent(s) to the latest version:
 
+> [!NOTE]
+> You can also double-click an upgrade package that has been saved in a temporary folder on one of your DataMiner Agents, and then proceed with the procedure from step 3.
+
 1. In the Windows taskbar, right-click the DataMiner Taskbar Utility icon and click *Upgrade*.
 
 1. To the right of the *Package* box, click the ellipsis button ("...") and select the DataMiner upgrade package (extension *.dmupgrade*).
@@ -70,6 +73,3 @@ Proceed as follows to upgrade your DataMiner Agent(s) to the latest version:
 1. Wait until the upgrade has finished. This can take several minutes, depending on the network properties, the type of upgrade, and the size and complexity of your DataMiner System.
 
 1. When all DataMiner Agents have successfully been upgraded, click *Finished*.
-
-> [!NOTE]
-> Alternatively, you can also double-click an upgrade package that has been saved in a temporary folder on one of your DataMiner Agents, and then proceed with the procedure above from step 3.
