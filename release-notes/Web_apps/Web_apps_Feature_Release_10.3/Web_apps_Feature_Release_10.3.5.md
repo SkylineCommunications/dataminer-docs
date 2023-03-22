@@ -56,6 +56,14 @@ In the *Monitoring* app, histograms now have a number of time range buttons that
 - 1y (last year)
 - 5y (last 5 years)
 
+#### Web apps: New action 'Pan to view' [ID_35847]
+
+<!-- MR 10.4.0 - FR 10.3.5 -->
+
+In a low-code app, you can now configure a new type of action: *Pan to view*.
+
+When triggered, this action will center the map shown in a specified *Generic map* component on a specified location (defined by a latitude and a longitude).
+
 #### Dashboards app & Low-code apps: New 'Text' feed [ID_35902]
 
 <!-- MR 10.4.0 - FR 10.3.5 -->
@@ -212,6 +220,6 @@ A number of issues with regard to the "Loading" indicator have been fixed.
 
 #### Dashboards app & Low-code apps - Clock components: Clock time would not update when set to server time [ID_35912]
 
-<!-- MR 10.2.0 [CU14] - FR 10.3.5 -->
+<!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
 
 When a clock component (analog or digital) was set to use server time, the clock time would not update.

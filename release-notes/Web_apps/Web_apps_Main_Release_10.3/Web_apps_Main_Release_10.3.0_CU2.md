@@ -123,3 +123,9 @@ A number of issues with regard to the "Loading" indicator have been fixed.
 <!-- MR 10.3.0 [CU2] - FR 10.3.4 [CU0] -->
 
 In some cases, a query that was linked to feeds would not apply the feed changes in the visualizations unless it was opened in edit mode.
+
+#### Dashboards app & Low-code apps - Clock components: Clock time would not update when set to server time [ID_35912]
+
+<!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
+
+When a clock component (analog or digital) was set to use server time, the clock time would not update.
