@@ -2289,7 +2289,7 @@
               topicUid: Linking_a_ticket_to_a_DataMiner_item_using_the_Ticketing_Gateway_API
             - name: Retrieving tickets using the Ticketing Gateway API
               topicUid: Retrieving_tickets_using_the_Ticketing_Gateway_API
-            - name: About DataMiner elements using the Ticketing Gateway APIDom
+            - name: About DataMiner elements using the Ticketing Gateway API
               topicUid: About_DataMiner_elements_using_the_Ticketing_Gateway_API
             - name: Overview of the TicketingGatewayHelper class
               topicUid: Overview_of_the_TicketingGatewayHelper_class
