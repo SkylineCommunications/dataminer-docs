@@ -23,7 +23,7 @@ Make sure the IP network ports 9090, 4222, 6222, and 8222 (NATS monitoring only)
 
 ## Upgrade path
 
-Never directly upgrade to a major DataMiner version that is several versions higher than the current version. To prevent issues and make it easier to find the root cause if anything goes wrong after an upgrade, we highly recommend that you follow this upgrade path:
+Follow this upgrade path:
 
 DataMiner 9.6.0/9.6.x -> DataMiner 10.0.0 [CU19] -> DataMiner 10.2.0/10.2.x
 

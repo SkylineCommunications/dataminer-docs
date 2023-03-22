@@ -25,9 +25,9 @@ Make sure the IP network ports 9090, 4222, 6222, and 8222 (NATS monitoring only)
 
 ## Upgrade path
 
-Never directly upgrade to a major DataMiner version that is several versions higher than the current version. To prevent issues and make it easier to find the root cause if anything goes wrong after an upgrade, we highly recommend that you follow this upgrade path:
+Follow this upgrade path:
 
-DataMiner 9.6.0/9.6.x -> DataMiner 10.0.0 [CU19] -> DataMiner 10.2.0/10.2.x
+DataMiner 9.6.0/9.6.x -> DataMiner 10.0.0 [CU19] -> DataMiner 10.3.0/10.3.x
 
 > [!IMPORTANT]
 > If your DMA contains DVE elements when upgrading from DataMiner 9.6.x to DataMiner 10.x or higher, rolling back this upgrade using an upgrade package will cause data loss in the DVE configuration. Therefore, we recommend you to first take a [VM snapshot](xref:Preparing_to_upgrade_a_DataMiner_Agent#vm-snapshot).
