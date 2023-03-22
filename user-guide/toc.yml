@@ -999,6 +999,8 @@
               topicUID: BPA_Password_Strength
             - name: Report Active RTE
               topicUID: BPA_Report_Active_RTE
+            - name: Service Automatic Properties
+              topicUID: BPA_Service_Automatic_Properties
             - name: SRM Function Resources Consistency
               topicUID: BPA_SRM_Function_Resources_Consistency
             - name: Validate connectors

@@ -42,7 +42,7 @@ As of now, the following prerequisites are available:
 
 - [Verify Cloud DxM Version](xref:BPA_Verify_Cloud_DxM_Version): Verifies whether the minimum required version is installed for all DxMs in the system. From DataMiner 10.2.0 [CU6]/10.2.8 onwards, this prerequisite is available by default and runs automatically when you upgrade.
 
-- Service Automatic Properties
+- [Service Automatic Properties](xref:BPA_Service_Automatic_Properties): Verifies whether the installed SRM solution version is up to date. From DataMiner 10.2.3/10.3.0 onwards, this prerequisite is available by default and runs automatically when you upgrade.
 
 - [Validate Connectors](xref:BPA_Validate_Connectors): Scans the DataMiner System for any connectors that are known to be incompatible with the DataMiner version to which the DataMiner Agent is being upgraded. From DataMiner 10.3.4/10.4.0 onwards, this prerequisite is available by default and runs automatically when you upgrade.
 
