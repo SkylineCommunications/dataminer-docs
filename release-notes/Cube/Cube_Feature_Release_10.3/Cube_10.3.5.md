@@ -66,6 +66,12 @@ In a filtered active alarms tab, in some cases, a base alarm will match the filt
 
 However, up to now, when a base alarm was updated, the update would not be reflected in the Alarm Console until the filter was removed.
 
+#### DataMiner Cube - Visual Overview: [ServiceDefinitionFilter] placeholder would incorrectly not be resolved when used in a shape visualizing a table [ID_35923]
+
+<!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
+
+When, in a shape that was turned into a table using a shape data field of type *ParameterControlOptions* set to "Table", you used a `[ServiceDefinitionFilter]` placeholder, that placeholder would incorrectly not be resolved, causing the table to be empty.
+
 #### Spectrum analysis: Problem when opening a spectrum element with an empty username [ID_35927]
 
 <!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->

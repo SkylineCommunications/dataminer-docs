@@ -139,6 +139,12 @@ Also, a number of other minor fixes with regard to SLA management have been impl
 
 When a clock component (analog or digital) was set to use server time, the clock time would not update.
 
+#### DataMiner Cube - Visual Overview: [ServiceDefinitionFilter] placeholder would incorrectly not be resolved when used in a shape visualizing a table [ID_35923]
+
+<!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
+
+When, in a shape that was turned into a table using a shape data field of type *ParameterControlOptions* set to "Table", you used a `[ServiceDefinitionFilter]` placeholder, that placeholder would incorrectly not be resolved, causing the table to be empty.
+
 #### DataMiner Cube - Spectrum analysis: Problem when opening a spectrum element with an empty username [ID_35927]
 
 <!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->

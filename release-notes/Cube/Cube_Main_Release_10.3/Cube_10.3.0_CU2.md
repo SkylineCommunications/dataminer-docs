@@ -69,6 +69,12 @@ From now on, Cube will initialize the *Capacity* property if it detects that the
 - version 10.3.1 or
 - version 10.2.12 or earlier.
 
+#### DataMiner Cube - Visual Overview: [ServiceDefinitionFilter] placeholder would incorrectly not be resolved when used in a shape visualizing a table [ID_35923]
+
+<!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
+
+When, in a shape that was turned into a table using a shape data field of type *ParameterControlOptions* set to "Table", you used a `[ServiceDefinitionFilter]` placeholder, that placeholder would incorrectly not be resolved, causing the table to be empty.
+
 #### Spectrum analysis: Problem when opening a spectrum element with an empty username [ID_35927]
 
 <!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
