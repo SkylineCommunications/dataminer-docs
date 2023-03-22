@@ -226,7 +226,7 @@ A number of issues with regard to the "Loading" indicator have been fixed.
 
 #### Web apps: Login button would incorrectly be disabled on Edge and Chrome [ID_35906]
 
-<!-- MR 10.4.0 - FR 10.3.5 -->
+<!-- MR 10.3.0 [CU2] - FR 10.3.5 -->
 
 Up to now, in some cases, the login button would incorrectly be disabled when you opened a web app in Microsoft Edge or Google Chrome.
 

@@ -281,9 +281,3 @@ When a GQI component still had a session open when a new query was triggered, in
 <!-- MR 10.4.0 - FR 10.3.5 -->
 
 When you selected a parameter in a parameter feed component of a shared dashboard, in some cases, an error could occur.
-
-#### Web apps: Login button would incorrectly be disabled on Edge and Chrome [ID_35906]
-
-<!-- MR 10.4.0 - FR 10.3.5 -->
-
-Up to now, in some cases, the login button would incorrectly be disabled when you opened a web app in Microsoft Edge or Google Chrome.
