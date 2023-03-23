@@ -16,6 +16,18 @@ uid: Cube_Feature_Release_10.3.5
 
 ## Other features
 
+#### Search box in Cube header can now be hidden [ID_35826]
+
+<!-- MR 10.4.0 - FR 10.3.5 -->
+
+It is now possible to either show or hide the search box in the middle of the Cube header bar.
+
+1. Open the *Settings* app.
+1. Go to *Cube* > *Cube header*.
+1. Select or clear the *Display search box in header* option, and click *Apply*.
+
+Alternatively, you can also open the quick menu in the Cube header, and toggle the *Show search box* option.
+
 ## Changes
 
 ### Enhancements
