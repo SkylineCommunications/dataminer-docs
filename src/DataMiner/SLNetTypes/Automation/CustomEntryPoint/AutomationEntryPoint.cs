@@ -91,6 +91,12 @@ namespace Skyline.DataMiner.Net.Automation
 			OnDomAction = 10,
 
 			/// <summary>
+            /// An OnApiTrigger entry point is defined with:
+            /// [AutomationEntryPoint(AutomationEntryPointType.Types.OnApiTrigger)]
+            /// </summary>
+            OnApiTrigger = 11,
+
+			/// <summary>
 			/// Automation entry point for testing purposes.
 			/// </summary>
 			AutomationEntryPointTest = int.MaxValue

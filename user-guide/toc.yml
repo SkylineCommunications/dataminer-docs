@@ -2350,6 +2350,22 @@
               topicUid: About_DataMiner_elements_using_the_Ticketing_Gateway_API
             - name: Overview of the TicketingGatewayHelper class
               topicUid: Overview_of_the_TicketingGatewayHelper_class
+    - name: User-Defined APIs (preview)
+      topicUid: UD_APIs
+      items:
+        - name: Viewing APIs and tokens
+          topicUid: UD_APIs_Viewing_in_Cube
+        - name: Defining an API
+          topicUid: UD_APIs_Define_New_API
+          items:
+            - name: Defining a new API
+              topicUid: UD_APIs_Define_New_API
+            - name: Using existing scripts
+              topicUid: UD_APIs_Using_existing_scripts
+        - name: Triggering an API
+          topicUid: UD_APIs_Triggering_an_API
+        - name: DataMiner UserDefinableApiEndpoint DxM
+          topicUid: UD_APIs_UserDefinableApiEndpoint
 - name: DataMiner Standard Apps, Frameworks & Solutions
   topicUid: Part5StandardApps
   items:
@@ -3316,6 +3332,8 @@
                 topicUID: SLNetClientTest_setting_TTL_database
               - name: Specifying credentials for a shared backup path for Elasticsearch
                 topicUID: SLNetClientTest_credentials_shared_backup_Elasticsearch
+              - name: Triggering a user-defined API
+                topicUID: SLNetClientTest_triggering_api
         - name: SLOffload tool
           topicUid: SLOffload_tool
         - name: SLSkipAsSourceTool
