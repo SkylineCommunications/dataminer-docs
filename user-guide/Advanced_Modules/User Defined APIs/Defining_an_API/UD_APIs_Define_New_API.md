@@ -182,6 +182,8 @@ You can also use the `StatusCode` enum, which contains suggestions, and cast tha
 
 ## Configuring the UserDefinableApiEndpoint extension module
 
-Make sure the UserDefinableApiEndpoint DxM has been configured to match your API needs.
+Make sure the *UserDefinableApiEndpoint* DxM has been configured to match your API needs.
 
-For more information refer to [UserDefinableApiEndpoint configuration](xref:UD_APIs_UserDefinableApiEndpoint#configuring-the-dxm).
+For more information, refer to [UserDefinableApiEndpoint configuration](xref:UD_APIs_UserDefinableApiEndpoint#configuring-the-dxm).
+
+If you have already configured the DxM, there is no need to repeat this step for each user-defined API you create.

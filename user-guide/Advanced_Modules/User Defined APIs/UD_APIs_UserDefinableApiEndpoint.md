@@ -30,6 +30,14 @@ Logging related to the **installation** is placed in that same folder in the fil
 
 The *UserDefinableAPIEndpoint* DxM uses **NATS** to communicate with DataMiner. If there are issues and the logging contains errors related to NATS, refer to [Investigating NATS issues](xref:Investigating_NATS_Issues).
 
+## Configuring HTTPS
+
+Because API triggers contain a secret token, we **strongly recommend that you only allow HTTPS communication**. Using HTTP could expose these tokens.
+
+You will need to configure bindings in IIS, and the firewall needs to allow incoming requests on port 443 (HTTPS). In the IIS binding, you can choose the IP address to listen to. This can be used to only have requests coming from one network interface. Select *All Unassigned* to allow requests from all interfaces. You can also specify a specific hostname here.
+
+For more information on how to set this up, see [Setting up HTTPs on a DMA](xref:Setting_up_HTTPS_on_a_DMA).
+
 ## Configuring the DxM
 
 The extension module has a configuration file with some settings that are set to default values. It is important that you customize this configuration to match the needs for your API, by creating a custom configuration file of your own.
@@ -44,7 +52,10 @@ In this file, add the setting or settings that you want to override, with your c
 - [Serilog](#serilog)
 - [UserDefinableAPIs](#userdefinableapis)
 
-For example, to change the setting *MessageBrokerTimeOutSeconds* to a higher value, create an *appsettings.custom.json* file with the following content:
+> [!IMPORTANT]
+> When you have customized the settings, you will need to restart the *DataMiner UserDefinableAPIEndpoint* service.
+
+For example, to change the setting *MessageBrokerTimeOutSeconds* to a higher value, create an *appsettings.custom.json* file with the following content and then restart the service:
 
 ```json
 {
@@ -53,9 +64,6 @@ For example, to change the setting *MessageBrokerTimeOutSeconds* to a higher val
   }
 }
 ```
-
-> [!NOTE]
-> To change some of the settings, a restart of the service is required.
 
 ### Kestrel
 
@@ -162,14 +170,3 @@ For example, this is the default configuration:
   }
 }
 ```
-
-## HTTP(S) support
-
-> [!IMPORTANT]
-> Because API triggers contain a secret token, we strongly recommend that you only allow HTTPS communication. Using HTTP could expose these tokens.
-
-In order to allow requests over HTTP or HTTPS, bindings have to be configured in IIS, and the firewall needs to allow incoming requests on port 80 (HTTP) and/or 443 (HTTPS). See [Setting up HTTPs on a DMA](xref:Setting_up_HTTPS_on_a_DMA).
-
-In the IIS binding, you can choose the IP address to listen to. This can be used to only have requests coming from one network interface. Select *All Unassigned* to allow requests from all interfaces.
-
-You can also specify a specific hostname here.

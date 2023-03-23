@@ -62,7 +62,7 @@ The endpoint supports the following content types:
 
 ### Content-Length
 
-The Content-Length header should be calculated and filled in automatically depending on how you send the request. It contains the length of the body in bytes. It is important that this is correct, as *UserDefinableApiEndpoint* will only read the number of bytes of the body specified in the Content-Length header.
+The Content-Length header is calculated and filled in automatically depending on how you send the request. It contains the length of the body in bytes. *UserDefinableApiEndpoint* will only read the number of bytes of the body specified in the Content-Length header.
 
 > [!IMPORTANT]
 > The endpoint limits the size of requests to 30 MB.
@@ -112,9 +112,6 @@ The *detail* field of an error contains a client-safe message explaining what we
 #### errorCode
 
 The *errorCode* field of an error contains an error code that can be used by the API maintainer to find out what went wrong:
-
-> [!IMPORTANT]
-> Do not share the explanation of these ErrorCodes with the API consumers. These are for internal use only.
 
 | ErrorCode | Integer value | HTTP Status Code | Explanation |
 |--|--|--|--|
