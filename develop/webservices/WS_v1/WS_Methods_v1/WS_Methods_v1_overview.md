@@ -3,66 +3,9 @@ uid: WS_Methods_v1_overview
 ---
 
 # Methods (v1)
-The following methods can be used in SOAP, JSON or URL-Encoded requests, requiring always connection string, which is a token identifier received upon authentication, performed via [ConnectApp method](https://docs.dataminer.services/develop/webservices/WS_v1/WS_Methods_v1/ConnectApp.html).
 
-### SOAP
-When using SOAP requests, the URL should have the structure **http(s)://{DMA IP}/api/v1/soap.asmx**, regardless of the chosen method.
-Note that the fields of each method need to be present within the method's name enclosing tag.
-
-Example:
-<pre>
-<code>
-POST https://dma.local/api/v1/soap.asmx HTTP/1.1
-Host: localhost
-Content-Type: text/xml; charset=utf-8
-Content-Length: length
-SOAPAction: "http://www.skyline.be/api/v1/GetElement"
-
-&lt;?xml version="1.0" encoding="utf-8"?&gt;
-&lt;soap:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-               xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-               xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"&gt;
-    &lt;soap:Body&gt;
-        &lt;GetElement xmlns="http://www.skyline.be/api/v1"&gt;
-            &lt;connection&gt;string&lt;/connection&gt;
-            &lt;dmaID&gt;int&lt;/dmaID&gt;
-            &lt;elementID&gt;int&lt;/elementID&gt;
-        &lt;/GetElement&gt;
-    &lt;/soap:Body&gt;
-&lt;/soap:Envelope&gt;
-</code>
-</pre>
-
-### JSON
-For JSON requests, the URL should accomodate the desired method, following the structure **http(s)://{DMA IP}/API/v1/Json.asmx/{Method}**.
-Note that the fields for each method will be serialized in a JSON without root element.
-
-Example:
-<pre>
-<code>
-POST https://dma.local/API/v1/Json.asmx/GetElement
-Content-Type: application/json
-
-{
-  "connection": "string",
-  "dmaID": "string",
-  "elementID": "string"
-}
-</code>
-</pre>
-
-### URL Encoded
-DataMiner's API supports the use of encoded URLs as the content of the body in the HTTP POST request, as demonstrated below:
-
-<pre>
-<code>
-POST https://dma.local/API/v1/Json.asmx/GetElement
-Content-Type: application/x-www-form-urlencoded
-Content-Length: length
-
-connection=string&dmaID=string&elementID=string
-</code>
-</pre>
+> [!TIP]
+> See also: [Using the Web Services (v1)](xref:Using_the_Web_Services_v1)
 
 ## Overview of the methods (v1)
 
