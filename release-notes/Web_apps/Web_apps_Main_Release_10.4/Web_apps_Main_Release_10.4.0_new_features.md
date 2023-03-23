@@ -160,6 +160,22 @@ In the *Monitoring* app, histograms now have a number of time range buttons that
 - 1y (last year)
 - 5y (last 5 years)
 
+#### Dashboards app - Line & area chart component: New 'Interval' option [ID_35774]
+
+<!-- MR 10.4.0 - FR 10.3.5 -->
+
+When configuring a line & area chart component, you can now use the *Interval* option to set the interval between the average trend data points shown in a trend graph to one of the following values:
+
+- Auto (i.e. an interval relative to the specified trend span)
+- Five minutes
+- One hour
+- One day
+
+Up to now, a trend graph with *Trend span* set to "Last 7 days" would always show one-hour trend data. From now on, a trend graph with *Trend span* set to "Last 7 days" will show one-hour trend data when *Interval* is set to "Auto". However, if you set *Interval* to "Five minutes", that same trend graph will now show five-minute trend data instead.
+
+> [!NOTE]
+> The *Interval* option is only available when *Trend points* is set to "Average (changes only)" or "Average (fixed interval)".
+
 #### Web apps: New action 'Pan to view' [ID_35847]
 
 <!-- MR 10.4.0 - FR 10.3.5 -->
