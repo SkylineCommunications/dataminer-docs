@@ -46,6 +46,68 @@ This will return the name of the index, the state of the index, and its size.
 
 Especially the name and state of the index may be interesting for debugging purposes.
 
+### Manually setting the replication counts for indices
+
+To get the relevent information on all indices and set replication count in the Elasticsearch database, enter the query below.
+
+```txt
+GET _cluster/health?level=shards&pretty
+```
+
+This will return the name of the indices, state of the indices and number of replica set as following.
+
+```txt
+ "indices" : {
+    "dms-alarms-2022.06.11.05-000016" : {
+      "status" : "green",
+      "number_of_shards" : 3,
+      "number_of_replicas" : 0,
+      "active_primary_shards" : 3,
+      "active_shards" : 3,
+      "relocating_shards" : 0,
+      "initializing_shards" : 0,
+      "unassigned_shards" : 0,
+      "shards" : {
+        "0" :
+    },
+    "dms-alarms-2023.03.22.10-000063" : {
+      "status" : "green",
+      "number_of_shards" : 3,
+      "number_of_replicas" : 0,
+      "active_primary_shards" : 3,
+      "active_shards" : 3,
+      "relocating_shards" : 0,
+      "initializing_shards" : 0,
+      "unassigned_shards" : 0,
+      "shards" : {
+        "0" :
+    },
+```
+
+To manually set the replica count to 2 use the following query.
+
+```txt
+PUT /<my-index>/_settings
+{
+  "index" :{
+    "number_of_replica" : 2
+  }
+}
+```
+
+To set the replica count to 2 for all of the indices use the following query.
+
+```txt
+PUT /all/_settings
+{
+  "index" :{
+    "number_of_replica" : 2
+  }
+}
+```
+
+
+
 ### Retrieving the number of hits + example records
 
 To query a specific index, use the *_search* functionality:
