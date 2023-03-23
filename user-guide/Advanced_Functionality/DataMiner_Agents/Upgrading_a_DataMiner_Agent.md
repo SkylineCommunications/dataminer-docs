@@ -13,17 +13,11 @@ uid: Upgrading_a_DataMiner_Agent
 ## Before you upgrade
 
 > [!IMPORTANT]
-> To ensure a successful upgrade of your DMA, see [Preparing to upgrade a DataMiner Agent](xref:Preparing_to_upgrade_a_DataMiner_Agent).
-
-Make sure your system meets the necessary [system requirements](https://community.dataminer.services/dataminer-compute-requirements/). Among others, upgrading to the **latest .NET version** is highly recommended.
-
-> [!NOTE]
-> From DataMiner 10.3.3/10.4.0 onwards, during a DataMiner upgrade, Microsoft .NET 6.0 will be installed if this was not installed on your system already. <!-- RN 35363 --> Note that this will require a reboot during the upgrade.
-
-Keep in mind that it is strongly recommended that you **use the same version of DataMiner on all Agents in a DMS**.
-
-> [!IMPORTANT]
-> In the case you are not upgrading to the DataMiner version that immediately follows your current version, follow the provided [upgrade paths](xref:Upgrade_Paths).
+>
+> - Make sure your system meets the necessary [**system requirements**](https://community.dataminer.services/dataminer-compute-requirements/). Among others, upgrading to the **latest .NET version** is highly recommended.
+> - To ensure a successful upgrade of your DMA, see [Preparing to upgrade a DataMiner Agent](xref:Preparing_to_upgrade_a_DataMiner_Agent).
+> - In case you are not upgrading to the DataMiner version that immediately follows your current version, follow the provided [**upgrade paths**](xref:Upgrade_Paths).
+> - It is strongly recommended that you **use the same version of DataMiner on all Agents in a DMS**.
 
 > [!NOTE]
 >
@@ -50,12 +44,3 @@ For detailed steps, go to [Upgrading a DataMiner Agent using DataMiner Taskbar U
 You can also start an upgrade from the Agents page in DataMiner Cube’s System Center. You will need to download the necessary upgrade package(s) from the [DataMiner Software](https://community.dataminer.services/downloads/) page to do so.
 
 For detailed steps, go to [Upgrading a DataMiner Agent in System Center](xref:Upgrading_a_DataMiner_Agent_in_System_Center).
-
-## Upgrade BPA test
-
-From DataMiner 9.6.0 \[CU24\]/10.0.0 \[CU16\]/10.1.0 \[CU5\]/10.1.8 onwards, if a **BPA test** is available to check if the system meets the requirements to upgrade to the target version, this test will run before the upgrade is started. If the test fails, the upgrade will be canceled.
-
-Though this is not recommended, you can bypass this check by manually removing the *Prerequisites* folder from *Update.zip* in the upgrade package.
-
-> [!TIP]
-> For more information about BPA tests, see [Running BPA tests](xref:Running_BPA_tests) and [Preparing to upgrade a DataMiner Agent](xref:Preparing_to_upgrade_a_DataMiner_Agent#prerequisites).

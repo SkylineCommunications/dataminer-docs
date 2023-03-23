@@ -4,7 +4,7 @@ uid: BPA_Service_Automatic_Properties
 
 # Service Automatic Properties
 
-This BPA test verifies whether the installed SRM solution version is compatible with the changes to automatic service properties.
+This BPA test verifies whether the installed SRM framework version is compatible with the changes to automatic service properties.
 
 This BPA test is available from DataMiner 10.2.6/10.3.0 onwards. It is available by default and runs automatically when you upgrade. <!-- RN 33363 -->
 
@@ -30,6 +30,6 @@ This BPA test is available from DataMiner 10.2.6/10.3.0 onwards. It is available
 
 ## Impact when issues detected
 
-- Impact: Bookings created by the SRM Framework will not work correctly.
+- Impact: Bookings created by the SRM framework will not work correctly.
 
-- Corrective action: Upgrade the installed SRM Framework by installing the patched version of the SRM package.
+- Corrective action: Upgrade the installed SRM framework by installing the patched version of the SRM package.

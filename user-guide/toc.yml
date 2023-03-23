@@ -913,8 +913,6 @@
                   topicUid: Upgrade_path_1010-101x_to_1020-102x
             - name: Checking the upgrade history of a DataMiner Agent
               topicUid: Checking_the_upgrade_history_of_a_DataMiner_Agent
-            - name: Rolling back a DataMiner upgrade (deprecated)
-              topicUid: Rolling_back_a_DataMiner_upgrade
             - name: Configuring the default upgrade options
               topicUID: Configuring_the_default_upgrade_options
         - name: Uninstalling a DataMiner Agent

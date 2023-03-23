@@ -21,6 +21,6 @@ Make sure the IP network ports 9090, 4222, 6222, and 8222 (NATS monitoring only)
 > [!TIP]
 > See also: [Checking the required open ports in a DMS](xref:MOP_Checking_the_required_open_ports_in_a_DMS)
 
-## Install the upgrade
+## Installing the DataMiner upgrade
 
-Install the DataMiner 10.2.0/10.2.x upgrade package.
+Install the DataMiner 10.2.0 or 10.2.x upgrade package.

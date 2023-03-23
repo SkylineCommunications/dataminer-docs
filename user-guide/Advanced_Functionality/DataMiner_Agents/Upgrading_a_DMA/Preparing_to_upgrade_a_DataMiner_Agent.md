@@ -34,7 +34,7 @@ To upload an upgrade package:
 
 Prerequisites are small self-contained apps that run during the upload phase of a DataMiner upgrade. Their purpose is to detect whether all the necessary conditions for upgrading DataMiner to the selected version and all requirements for the DataMiner Agent to run are met. If the prerequisites detect that this is not the case, the upgrade will be canceled.
 
-As of now, the following prerequisites are available:
+The following prerequisites are currently available:
 
 - Verify Cluster Ports: Verifies whether the ports used by DataMiner can be reached in between DataMiner Agents. If this check fails, you will need to install the [VerifyClusterPorts.dmupgrade](xref:VerifyClusterPortsdmupgrade) package. From DataMiner 10.2.0 [CU2]/10.2.5 onwards, this prerequisite is available by default and runs automatically when you upgrade.
 
@@ -45,6 +45,9 @@ As of now, the following prerequisites are available:
 - [Service Automatic Properties](xref:BPA_Service_Automatic_Properties): Verifies whether the installed SRM solution version is up to date. From DataMiner 10.2.3/10.3.0 onwards, this prerequisite is available by default and runs automatically when you upgrade.
 
 - [Validate Connectors](xref:BPA_Validate_Connectors): Scans the DataMiner System for any connectors that are known to be incompatible with the DataMiner version to which the DataMiner Agent is being upgraded. From DataMiner 10.3.4/10.4.0 onwards, this prerequisite is available by default and runs automatically when you upgrade.
+
+> [!NOTE]
+> Though this is not recommended, you can bypass these checks by manually removing the *Prerequisites* folder from *Update.zip* in the upgrade package.
 
 ## Having a backup at the ready
 
