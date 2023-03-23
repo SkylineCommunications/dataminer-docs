@@ -1664,15 +1664,15 @@ Permission to create and edit tokens for user-defined APIs.
 
 Permission to delete tokens for user-defined APIs.
 
-#### Modules \> User-defined APIs \> Definitions \> UI available
+#### Modules \> User-defined APIs \> APIs \> UI available
 
 Permission to view API definitions for user-defined APIs.
 
-#### Modules \> User-defined APIs \> Definitions \> Add/Edit
+#### Modules \> User-defined APIs \> APIs \> Add/Edit
 
 Permission to create and edit API definitions for user-defined APIs. In order to create or edit API definitions, you also need the [Automation > execute](#modules--automation--execute) permission.
 
-#### Modules \> User-defined APIs \> Definitions \> Delete
+#### Modules \> User-defined APIs \> APIs \> Delete
 
 Permission to delete API definitions for user-defined APIs.
 
