@@ -8,8 +8,6 @@ In this section:
 
 - [Logging on to dataminer.services](xref:Logging_on_to_the_DataMiner_Cloud_Platform)
 
-- [Connecting your DataMiner System to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud)
-
 - [Linking your DataMiner account to your dataminer.services account](xref:Linking_your_DataMiner_and_DCP_account)
 
 - [Cloud data storage policies](xref:Cloud_data_storage_policies)

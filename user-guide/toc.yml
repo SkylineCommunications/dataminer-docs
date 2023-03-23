@@ -2711,23 +2711,23 @@
       items:
         - name: Logging on to dataminer.services
           topicUid: Logging_on_to_the_DataMiner_Cloud_Platform
-        - name: Connecting your DataMiner System to dataminer.services
-          topicUid: Connecting_your_DataMiner_System_to_the_cloud
-          items:
-            - name: Connecting to dataminer.services in System Center
-              topicUID: Connect_to_cloud_in_System_Center
-            - name: Connecting to dataminer.services via proxy server
-              topicUID: Connect_to_cloud_via_proxy
-            - name: Connecting to dataminer.services with a DMZ setup
-              topicUID: Connect_to_cloud_with_DMZ
-            - name: Connecting with older DataMiner versions
-              topicUid: Connecting_with_older_DataMiner_versions
-            - name: DataMiner Cloud Packs
-              topicUid: CloudPackages
         - name: Linking your DataMiner account to your dataminer.services account
           topicUid: Linking_your_DataMiner_and_DCP_account
         - name: Cloud data storage policies
           topicUID: Cloud_data_storage_policies
+    - name: Connecting your DataMiner System to dataminer.services
+      topicUid: Connecting_your_DataMiner_System_to_the_cloud
+      items:
+        - name: Connecting to dataminer.services in System Center
+          topicUID: Connect_to_cloud_in_System_Center
+        - name: Connecting to dataminer.services via proxy server
+          topicUID: Connect_to_cloud_via_proxy
+        - name: Connecting to dataminer.services with a DMZ setup
+          topicUID: Connect_to_cloud_with_DMZ
+        - name: Connecting with older DataMiner versions
+          topicUid: Connecting_with_older_DataMiner_versions
+        - name: DataMiner Cloud Packs
+          topicUid: CloudPackages
     - name: Project Collaboration
       topicUid: Collaboration
       items:
