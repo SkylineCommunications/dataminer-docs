@@ -289,3 +289,11 @@ Up to now, in some cases, the login button would incorrectly be disabled when yo
 <!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
 
 When a clock component (analog or digital) was set to use server time, the clock time would not update.
+
+#### Low-code apps: Selecting an action with multiple components of which none were selected automatically would cause an error to be thrown [ID_35947]
+
+<!-- MR 10.4.0 - FR 10.3.5 -->
+
+When you selected an action with multiple components, up to now, an error would be thrown because none of the listed components was selected automatically. From now on, that error will no longer be thrown.
+
+Also, when you first selected an action with a single component (which was selected automatically), then selected an action with multiple components, and finally again selected the action with the single component, that single component would incorrectly not be selected automatically.

@@ -275,3 +275,11 @@ When a GQI component still had a session open when a new query was triggered, in
 <!-- MR 10.4.0 - FR 10.3.5 -->
 
 When you selected a parameter in a parameter feed component of a shared dashboard, in some cases, an error could occur.
+
+#### Low-code apps: Selecting an action with multiple components of which none were selected automatically would cause an error to be thrown [ID_35947]
+
+<!-- MR 10.4.0 - FR 10.3.5 -->
+
+When you selected an action with multiple components, up to now, an error would be thrown because none of the listed components was selected automatically. From now on, that error will no longer be thrown.
+
+Also, when you first selected an action with a single component (which was selected automatically), then selected an action with multiple components, and finally again selected the action with the single component, that single component would incorrectly not be selected automatically.
