@@ -54,6 +54,25 @@ Note that, from now on, every *Sort by* node will nullify any preceding *Sort by
 
 ### Enhancements
 
+#### SLNetClientTest: New DOM-related features [ID_35550]
+
+<!-- MR 10.4.0 - FR 10.3.5 -->
+
+In the *SLNetClientTest* tool, the following new DOM-related features have been made available:
+
+- Viewing a JSON representation of a selected ModuleSettings configuration.
+
+- Completely remove a DOM Manager from the system.
+
+  > [!NOTE]
+  >
+  > - When you instruct the *SLNetClientTest* tool to delete a DOM Manager, it will count the number of DOM instances. If the DOM Manager in question contains more than 10,000 DOM instances, an error message will appear, saying that deleting the DOM Manager would take too long.
+
+  > - When you instruct the *SLNetClientTest* tool to delete a DOM Manager, it will not remove the indices from the Elasticsearch database. These indices have to be deleted manually. If you do not delete them manually, we recommend to not re-use the module ID as this could cause configuration conflicts.
+
+> [!CAUTION]
+> Always be extremely careful when using this tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
+
 #### Security enhancements [ID_35668]
 
 <!-- MR 10.4.0 - FR 10.3.5 -->
@@ -125,7 +144,7 @@ Up to now, when an event associated with a DVE child element was generated, inte
 
 #### GQI data sources that require an Elasticsearch database will now use GetInfoMessage(InfoType.Database) to check whether Elasticsearch is available [ID_35907]
 
-<!-- MR 10.3.0 [CU2] - FR 10.3.5 -->
+<!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
 
 Up to now, GQI data sources that require an Elasticsearch database used the `DatabaseStateRequest<ElasticsearchState>` message to check whether Elasticsearch was available. From now on, they will use the `GetInfoMessage(InfoType.Database)` message instead.
 
@@ -212,3 +231,9 @@ The first time a message with an object of a type that inherited from `InfoData`
 ```txt
 Skyline.DataMiner.Net.Exceptions.DataMinerException: Failed to deserialize message (ProtoBuf). Possible version incompatibility between client and server.  ---&gt; System.InvalidOperationException: It was not possible to prepare a serializer for: Skyline.DataMiner.Net.InfoData ---&gt; System.InvalidOperationException: Unable to resolve a suitable Add method for System.Collections.Generic.IReadOnlyList`1[[System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]&#xD;
 ```
+
+#### Business Intelligence: Outage correction would incorrectly be increased when a history alarm affected the outage [ID_35942]
+
+<!-- MR 10.4.0 - FR 10.3.5 -->
+
+When a history alarm affected a closed outage to which a correction had been applied, the correction would incorrectly be increased. From now on, the correction will be left untouched.
