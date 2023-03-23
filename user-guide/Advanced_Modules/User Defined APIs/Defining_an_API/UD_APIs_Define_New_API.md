@@ -158,7 +158,7 @@ You can also use the `StatusCode` enum, which contains suggestions, and cast tha
    This will open a window where you can create the API definition.
 
    ![Creating an ApiDefinition](~/user-guide/images/UDPAIS_CreateAPI.jpg)<br>
-   *Creating an API definition in DataMiner 10.3.5*
+   *Creating an API definition in DataMiner 10.3.6*
 
 1. Add a description.
 
