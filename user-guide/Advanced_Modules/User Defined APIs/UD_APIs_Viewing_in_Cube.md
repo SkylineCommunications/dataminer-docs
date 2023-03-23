@@ -7,7 +7,7 @@ uid: UD_APIs_Viewing_in_Cube
 > [!WARNING]
 > This feature is in preview and is not fully released yet. For now, it should only be used on a staging platform. It should not be used in a production environment.
 
-From DataMiner 10.4.0/10.3.5 onwards, you can view an overview of your APIs and tokens in DataMiner Cube.
+From DataMiner 10.4.0/10.3.6 onwards, you can view an overview of your APIs and tokens in DataMiner Cube.
 
 To do so, go to *System Center* > *User-Defined APIs*.
 
