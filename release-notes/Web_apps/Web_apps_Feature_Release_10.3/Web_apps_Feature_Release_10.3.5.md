@@ -64,13 +64,13 @@ In a low-code app, you can now configure a new type of action: *Pan to view*.
 
 When triggered, this action will center the map shown in a specified *Generic map* component on a specified location (defined by a latitude and a longitude).
 
-#### Dashboards app & Low-code apps: New 'Text' feed [ID_35902]
+#### Dashboards app & Low-code apps: New 'Text input' feed [ID_35902]
 
 <!-- MR 10.4.0 - FR 10.3.5 -->
 
-The new *Text* feed is a text box that exposes the entered text as a string feed that can currently be consumed by GQI queries and script parameters in low-code app actions.
+The new *Text input* feed is a text box that exposes the entered text as a string feed that can currently be consumed by GQI queries and script parameters in low-code app actions.
 
-When configuring this new *Text* feed, you can optionally specify a label, an icon and a placeholder. You can also indicate whether the text box should allow multiple lines of texts and whether it should feed its value when triggered by the following events:
+When configuring this new *Text input* feed, you can optionally specify a label, an icon and a placeholder. You can also indicate whether the text box should allow multiple lines of texts and whether it should feed its value when triggered by the following events:
 
 - On Enter
 - On Focus lost
@@ -91,13 +91,13 @@ A default value can be set by means of a URL option:
 
 For more information on how to pass data using a JSON object, see [Specifying data input in an app URL](xref:Specifying_data_input_in_URL).
 
-#### Dashboards app & Low-code apps: New 'Number' feed [ID_35911]
+#### Dashboards app & Low-code apps: New 'Numeric input' feed [ID_35911]
 
 <!-- MR 10.4.0 - FR 10.3.5 -->
 
-The new *Number* feed is a text box that exposes the entered numbers as a number feed that can currently be consumed by GQI queries and script parameters in low-code app actions.
+The new *Numeric input* feed is a text box that exposes the entered numbers as a number feed that can currently be consumed by GQI queries and script parameters in low-code app actions.
 
-When configuring this new *Number* feed, you can optionally specify a label, an icon, a placeholder, a unit, a step size, a number of decimals, a minimum value and a maximum value. You can also indicate whether the text box should feed its value when triggered by the following events:
+When configuring this new *Numeric input* feed, you can optionally specify a label, an icon, a placeholder, a unit, a step size, a number of decimals, a minimum value and a maximum value. You can also indicate whether the text box should feed its value when triggered by the following events:
 
 - On Enter
 - On Focus lost
