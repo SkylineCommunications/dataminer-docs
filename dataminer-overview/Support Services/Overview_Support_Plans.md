@@ -8,7 +8,7 @@ uid: Overview_Support_Plans
 DataMiner Support Plans are technical support services for the DataMiner core platform, connectors and cloud services. Three support plans are available, providing different levels of support depending on the user's needs and goals. 
 - [Community](#Community)
 - [Continuity](#Continuity)
-- [Evolve](@Evolve)
+- [Evolve](#Evolve)
 
 In addition to Continuity or Evolve, a user can subscribe to the Out-of-business-hours support add-on ([OBH support](https://docs.dataminer.services/dataminer-overview/Support%20Services/Overview_Out_Of_Business_Hours_Support.html)).
 
