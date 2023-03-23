@@ -15,14 +15,13 @@ uid: Upgrading_a_DataMiner_Agent
 > [!IMPORTANT]
 >
 > - Make sure your system meets the necessary [**system requirements**](https://community.dataminer.services/dataminer-compute-requirements/). Among others, upgrading to the **latest .NET version** is highly recommended.
-> - To ensure a successful upgrade of your DMA, see [Preparing to upgrade a DataMiner Agent](xref:Preparing_to_upgrade_a_DataMiner_Agent).
+> - To ensure a successful upgrade of your DMA, see [**Preparing to upgrade a DataMiner Agent**](xref:Preparing_to_upgrade_a_DataMiner_Agent).
 > - In case you are not upgrading to the DataMiner version that immediately follows your current version, follow the provided [**upgrade paths**](xref:Upgrade_Paths).
 > - It is strongly recommended that you **use the same version of DataMiner on all Agents in a DMS**.
 
 > [!NOTE]
 >
 > - You can [configure the default options](xref:Configuring_the_default_upgrade_options) for upgrades in System Center.
-> - Each upgrade creates a folder under *C:\\Skyline DataMiner\\Upgrades\\Packages*, which contains the upgrade package that has been used, together with a log file (progress.log) and (prior to DataMiner 10.0.0/10.0.3) the rollback package. From DataMiner 10.0.3 onwards, a rollback package is no longer included, as it is better to downgrade by using the full installation package of the version you want to go back to instead.
 > - DMPs can be upgraded in System Center like regular DMAs, though additional options will be available in the upgrade window. If the DMP is not ready for an upgrade, or no connection can be established, by default after 10 seconds a warning will appear.
 
 ## Upgrading a DataMiner Agent in the Update Center
