@@ -166,6 +166,15 @@ A web API event queue will now automatically be removed after 5 minutes if a cli
 
 Also, it is now possible for one web API connection to have multiple event queues. As a result, clients will be able to have multiple open websocket connections using the same connection ID.
 
+#### Dashboards app & Low-code apps: New way to link components to feeds [ID_35837]
+
+<!-- MR 10.4.0 - FR 10.3.5 -->
+
+The way in which components are linked to feeds has been improved. Instead of using a *Use feed* or *Link x to feed* checkbox, you will now be able to configure a feed link by means of a picker window.
+
+> [!CAUTION]
+> BREAKING CHANGE: Up to now, when you linked a script parameter to the *From* or *Till* box of a time range feed, the feed would pass a datetime value in string format to the script. That string value was not in an ISO format and did not contain any information about the time zone. From now on, the feed will send a UTC timestamp in milliseconds instead. Scripts that expect to receive a string value will need to be modified.
+
 ### Fixes
 
 #### Web apps: Problem with external authentication [ID_33405]
@@ -276,10 +285,8 @@ When a GQI component still had a session open when a new query was triggered, in
 
 When you selected a parameter in a parameter feed component of a shared dashboard, in some cases, an error could occur.
 
-#### Low-code apps: Selecting an action with multiple components of which none were selected automatically would cause an error to be thrown [ID_35947]
+#### Low-code apps: Problem when selecting an action with multiple components after having selected an action with a single component [ID_35947]
 
 <!-- MR 10.4.0 - FR 10.3.5 -->
 
-When you selected an action with multiple components, up to now, an error would be thrown because none of the listed components was selected automatically. From now on, that error will no longer be thrown.
-
-Also, when you first selected an action with a single component (which was selected automatically), then selected an action with multiple components, and finally again selected the action with the single component, that single component would incorrectly not be selected automatically.
+When you first selected an action with a single component, which was selected automatically, and then selected an action with multiple components, up to now, both the action selection box and the component selection box would incorrectly be cleared.
