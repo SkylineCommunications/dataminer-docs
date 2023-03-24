@@ -77,7 +77,7 @@ catch (Exception ex)
 
 #### Support for configuring Max Time In Queue, Preemptive, and Priority settings for token that gets pushed into process [ID_35814]
 
-A new overload method, *PushToken*, is now available, which allows you to to define the settings Max Time In Queue, Preemptive, and Priority for a token when this token gets pushed into a process. These settings are defined using the class *PushPaTokenSettings*. In case Max Time In Queue or Priority are set to zero, the default values will be used.
+A new overload method, *PushToken*, is now available, which allows you to define the settings Max Time In Queue, Preemptive, and Priority for a token when this token gets pushed into a process. These settings are defined using the class *PushPaTokenSettings*. In case Max Time In Queue or Priority are set to zero, the default values will be used.
 
 In addition, the *PA None Start Event* and the *PA Timer Start Event* functions have been extended to add these parameters to the corresponding profile definition, so that these settings can be defined when an activation window is created.
 
