@@ -60,3 +60,6 @@ To link a group to a thread, set the connection attribute to the connection ID o
   </Content>
 </Group>
 ```
+
+> [!NOTE]
+> When using multiple threads, it is important that each poll group has the [connection](xref:Protocol.Groups.Group-connection) attribute defined to indicate which connection/thread to use. This can avoid unexpected behavior on SLPort when the same group is executed on different threads in a similar time frame.
