@@ -175,6 +175,12 @@ The way in which components are linked to feeds has been improved. Instead of us
 > [!CAUTION]
 > BREAKING CHANGE: Up to now, when you linked a script parameter to the *From* or *Till* box of a time range feed, the feed would pass a datetime value in string format to the script. That string value was not in an ISO format and did not contain any information about the time zone. From now on, the feed will send a UTC timestamp in milliseconds instead. Scripts that expect to receive a string value will need to be modified.
 
+#### Security enhancements [ID_35965]
+
+<!-- MR 10.4.0 - FR 10.3.5 -->
+
+A number of security enhancements have been made.
+
 ### Fixes
 
 #### Web apps: Problem with external authentication [ID_33405]

@@ -187,6 +187,12 @@ For example, up to now, when you selected the *Get elements* data source, follow
 
 Overall error handling has been improved when executing an interactive Automation script by clicking a DOM button in a web app.
 
+#### Security enhancements [ID_35965]
+
+<!-- MR 10.4.0 - FR 10.3.5 -->
+
+A number of security enhancements have been made.
+
 ### Fixes
 
 #### Web apps: Problem with external authentication [ID_33405]
