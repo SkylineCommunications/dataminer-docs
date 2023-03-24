@@ -64,11 +64,8 @@ Usage-based services are charged based on the actual monthly usage of services, 
 | Support services | Optional annual recurring fee, relative to the value of the deployed Perpetual-Use Licenses. | Included (see [DataMiner Support Plans](https://community.dataminer.services/support-services/)). |
 | DataMiner Probes | Server-based licenses, each with fixed capacity tiers of managed objects.  | N/A |
 
-
 > [!NOTE]
 > DataMiner Probes (DMP) are not clustered with a DataMiner System, which means perpetual-licensed DMPs can be used to bring data from remote locations to a DataMiner System running as a usage-based service.
-
-
 
 ## Subscription Plan vs Pay-per-Use Plan
 
