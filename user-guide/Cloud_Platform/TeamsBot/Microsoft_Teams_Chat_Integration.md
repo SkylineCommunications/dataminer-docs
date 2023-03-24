@@ -45,7 +45,9 @@ If you want to create chat integration Automation scripts, you will need to make
 The following features are available:
 
 - Creating teams
+- Fetching all teams
 - Creating channels
+- Fetching all channels of a team
 - Adding members or owners to your teams
 - Sending notifications in the created channels in the name of the DataMiner Teams bot
 - Creating a private chat between someone and the DataMiner Teams bot
@@ -58,8 +60,7 @@ After you have made sure the above-mentioned prerequisites are in place, you can
 
 ## Limitations
 
-- Currently, it is not possible to retrieve the existing teams. You can only create a channel using chat integration if you know the ID of the team, which you will receive when you create the team with chat integration.
-- Currently, it is not possible to retrieve the existing channels. You can only send notifications in a channel using chat integration if you know the ID of the channel, which you will receive when you create the channel with chat integration.
+- Currently, you cannot send messages in fetched channels where the DataMiner Teams bot wasn't installed in the team. This will be indicated in the error when you try to send a channel notification. You can [manually install the DataMiner Teams bot in the team using Microsoft Teams](xref:DataMiner_Teams_bot#dataminer-teams-bot-installation) or use the create team functionality of chat integration to create another team with the DataMiner Teams bot automatically installed.
 
 ## Security
 
