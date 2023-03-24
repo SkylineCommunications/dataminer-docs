@@ -86,6 +86,5 @@ In case of a Pay-per-Use plan, user pay for what they use, giving ultimate flexi
 | New connector development | MUA < 200: charged as professional services credits <br> MUA >= 200: included with no additional costs, subject to a fair use policy  |  N/A |
 | Support services | MUA < 200: Community Plan <br> MUA >= 200: Continuity/Evolve | Community Plan|
 
-
 > [!IMPORTANT]
 > The system must be connected to dataminer.services in order to enable metering for systems that are hosted by the user (on-premises or private cloud). The system will stop working if disconnected for longer than 24 hours.
