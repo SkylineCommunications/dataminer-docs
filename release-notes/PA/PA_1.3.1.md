@@ -9,12 +9,6 @@ uid: PA_1.3.1
 
 ## New features
 
-#### Assigning tasks to a specific user or group [ID_35082]
-
-While up to now Process Automation created user tasks without assigning them to specific users, now you can configure a process definition so that tasks are assigned or reassigned to a user or a group of users when they are created.
-
-During the configuration of a process definition,you can select a Process DOM field for either the group or the user so that the group or user name can be retrieved when the user task gets created. With the *Fixed* option you can already pre-select the exact group and user. However, if a Process DOM field is selected for a group, you cannot pre-select a fixed user. The *Any* option allows you to postpone the selection of the group or user to the time when the task gets created.
-
 #### Support for callback mechanism using DOM to transfer data between activities [ID_35671]
 
 Process Automation now supports the use of DOM to execute an activity task asynchronously by means of a callback mechanism. The new *UpdateDomInstance* method can be used for this. It allows you to update a DOM instance with a Profile-Load Script before exiting the script.
@@ -86,6 +80,15 @@ The *PushToken* method without a DOM instance ID has also been removed, as this 
 ## Changes
 
 ### Enhancements
+
+#### Assigning tasks to a specific user or group [ID_35082]
+
+While up to now Process Automation created user tasks without assigning them to specific users, now you can configure a process definition so that tasks are assigned or reassigned to a user or a group of users when they are created.
+
+During the configuration of a process definition,you can select a Process DOM field for either the group or the user so that the group or user name can be retrieved when the user task gets created. With the *Fixed* option you can already pre-select the exact group and user. However, if a Process DOM field is selected for a group, you cannot pre-select a fixed user. The *Any* option allows you to postpone the selection of the group or user to the time when the task gets created.
+
+> [!NOTE]
+> This is the first step towards being able to assign user tasks to specific users or groups. For now, nothing is done with the user or user group info yet.
 
 #### Improved handling of gateway queue tokens [ID_35403]
 
