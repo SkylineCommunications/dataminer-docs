@@ -284,9 +284,3 @@ When a GQI component still had a session open when a new query was triggered, in
 <!-- MR 10.4.0 - FR 10.3.5 -->
 
 When you selected a parameter in a parameter feed component of a shared dashboard, in some cases, an error could occur.
-
-#### Low-code apps: Problem when selecting an action with multiple components after having selected an action with a single component [ID_35947]
-
-<!-- MR 10.4.0 - FR 10.3.5 -->
-
-When you first selected an action with a single component, which was selected automatically, and then selected an action with multiple components, up to now, both the action selection box and the component selection box would incorrectly be cleared.
