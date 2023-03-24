@@ -3120,6 +3120,8 @@
                 topicUID: SLNetClientTest_changing_service_template_child_limitations
               - name: Checking or modifying the settings related to a Refused DMA state
                 topicUID: SLNetClientTest_refused_dma_state
+              - name: Clear Alarm from SLNet Event Cache
+                topicUID: SLNetClientTest_clear_from_event_cache
               - name: Comparing the views on two Agents in a DMS
                 topicUID: SLNetClientTest_comparing_views_on_two_dmas
               - name: Configuring how long alarm statistics are kept in memory
