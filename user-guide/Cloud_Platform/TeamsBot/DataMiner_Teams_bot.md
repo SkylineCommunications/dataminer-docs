@@ -10,7 +10,7 @@ If your DataMiner System is connected to dataminer.services with a recent versio
 > We highly recommend that you install the latest version of the DataMiner Cloud Pack. With older versions, not all DataMiner Teams bot features may be available.
 
 > [!TIP]
-> See also: [dataminer.services](xref:Part51CloudPlatform)
+> See also: [dataminer.services](xref:AboutCloudPlatform)
 
 ## DataMiner Teams bot installation
 

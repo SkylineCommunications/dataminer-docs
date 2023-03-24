@@ -8,7 +8,7 @@ From version 2.7.0 of the CloudGateway DxM onwards, you can connect a DMS to dat
 
 ![DMZ](~/user-guide/images/DMZ_CloudGateway.png)
 
-To create such a DMZ:
+1. Verify that your DataMiner System meets all [requirements](xref:Connect_to_cloud_requirements).
 
 1. Configure the firewall of the DMZ:
 
@@ -52,6 +52,8 @@ To create such a DMZ:
 1. On a DataMiner node, copy `C:\Skyline DataMiner\SLCloud.xml` and `C:\Skyline DataMiner\NATS\nsc\.nkeys\creds\DataMinerOperator\DataMinerAccount\DataMinerUser.creds`, and paste these in the `C:\Skyline DataMiner\` folder of the DMZ. Make sure that the credentials entry in *SLCloud.xml* points to the credentials file you copied over.
 
 1. Restart all DxMs in the DMZ so that they use the new settings.
+
+1. [Connect to dataminer.services in System Center](xref:Connect_to_dataminer_services#connecting-to-dataminerservices-in-system-center).
 
 > [!CAUTION]
 > Make sure the *NAS* &amp; *NATS* firewall rules (on the DataMiner Agents) apply to the *Public* profile. DataMiner versions prior to 10.2.0 and 10.2.3 incorrectly applied these firewall rules to the *Domain* profile, and this is not automatically adjusted during updates.

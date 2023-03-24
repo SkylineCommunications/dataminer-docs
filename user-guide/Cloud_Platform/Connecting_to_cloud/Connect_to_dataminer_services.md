@@ -1,23 +1,31 @@
 ---
-uid: Connect_to_cloud_in_System_Center
+uid: Connect_to_dataminer_services
 ---
 
-# Connecting to dataminer.services in System Center
+# Connecting to dataminer.services
 
 > [!TIP]
 > For more information about cloud connectivity and security, see [Cloud connectivity and security](xref:Cloud_connectivity_and_security#connecting-to-dataminerservices).
 
-To connect your DMS to dataminer.services:
+## Before you connect
 
-1. Verify that your DataMiner System meets all [requirements](xref:Connecting_your_DataMiner_System_to_the_cloud#requirements).
+Before you connect your DMS to dataminer.services (unless you [connect with a DMZ setup](xref:Connect_to_cloud_with_DMZ)):
 
-1. Download the latest DataMiner **Cloud Pack installer** from [DataMiner Dojo](https://community.dataminer.services/downloads/) and install it on one or more DMAs in the cluster. If you are on the Feature Release track, .NET 5 is already included in DataMiner from version 10.1.12 onwards, so select the package without .NET 5. If you are on the Main Release track, .NET 5 is only included from version 10.2.0 \[CU4] onwards, so for earlier 10.2.0 versions, you will need to select the package with .NET 5.
+1. Verify that your DataMiner System meets all [requirements](xref:Connect_to_cloud_requirements).
+
+1. Download the latest DataMiner **Cloud Pack installer** from [DataMiner Dojo](https://community.dataminer.services/downloads/) and install it on **one or more DMAs** in the cluster.
+
+   If you are on the Feature Release track, .NET 5 is already included in DataMiner from version 10.1.12 onwards, so select the package without .NET 5. If you are on the Main Release track, .NET 5 is included from version 10.2.0 \[CU4] onwards, so for earlier 10.2.0 versions, you will need to select the package with .NET 5.
 
    > [!NOTE]
-   > If your DataMiner System contains a Failover pair, and one of the Agents in the Failover pair is responsible for hosting the connection towards dataminer.services, install the DataMiner Cloud Pack on both Agents in the Failover pair.
+   >
+   > - If your DataMiner System contains a Failover pair, and one of the Agents in the Failover pair is responsible for hosting the connection towards dataminer.services, install the DataMiner Cloud Pack on both Agents in the Failover pair.
+   > - Installing the Cloud Pack on more than one DMA has [several advantages](xref:FAQ_DCP#do-all-agents-in-a-dms-have-to-be-connected-to-dataminerservices). However, at this time we recommend running only 1 to 3 Cloud Gateway nodes in a cluster. Running more Cloud Gateway nodes than that in a cluster would only add an unnecessary extra load on dataminer.services.
 
    > [!TIP]
    > For more information on the Cloud Pack contents, see [DataMiner Cloud Pack](xref:CloudPackages).
+
+## Connecting to dataminer.services in System Center
 
 1. In DataMiner Cube, go to System Center \> *Users / Groups* and make sure you have the following **user permissions**. If you need to make changes to the user permissions, reconnect to Cube afterwards to make sure your changes are applied in the UI.
 
