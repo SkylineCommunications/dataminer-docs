@@ -164,3 +164,16 @@ When, in a shape data field of type *ParameterControlOptions*, you had specified
 An error could occur when you tried to open a spectrum element of which the username was set to NULL.
 
 Also, an exception could be thrown when you tried to copy spectrum settings to the Windows clipboard.
+
+#### DataMiner Cube - Surveyor: Dragging multiple items from a view card onto a view in the Surveyor did not work as expected [ID_35955]
+
+<!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
+
+Dragging several elements or services from a view card onto a view in the Surveyor did not work as expected.
+
+From now on, when you drag several elements or services from a view card onto a view in the Surveyor
+
+- **the items in that view will be moved** to the view in Surveyor, and
+- **the items in any of its sub-views will be copied** to the view in the Surveyor.
+
+If you want to the items in the view to be **copied** to the view in the Surveyor instead of moved, keep the CTRL key pressed while dragging them.
