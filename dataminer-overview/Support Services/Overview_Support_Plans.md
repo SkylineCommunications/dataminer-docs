@@ -41,16 +41,23 @@ The *Evolve* plan goes beyond premium support; it is a partnership between the u
 
 Because its foundation is mutual commitment, the Evolve plan is not sold as a separate commercial product. To upgrade from *Continuity* to *Evolve*, an organization must have a [DataMiner DevOps](https://community.dataminer.services/dataminer-devops-professional-program/) team in place, and they must accumulate [DevOps Points](xref:Benefits_DevOps_Professionals_Program#accumulating-devops-points) attesting to that team's engagement and effort.
 
-> [!IMPORTANT]
-> Evolve plan minimum requirement: **50,000 DevOps Points** across all DataMiner DevOps professionals in the organization in a calendar year.
-
 > [!NOTE]
 > The number of DevOps Points measured at the end of the calendar year is the number used in the next support renewal to determine the support plan, i.e. *Continuity* or *Evolve*.
 
 ## Availability
 
-|  | COMMUNITY | CONTINUITY | EVOLVE |
-|---|:-:|:-:|:-:|
-| Pay-per-use | X | NA | NA |
-| Subscription | X | X | X |
-| Perpetual | NA | X | X |
+## Minimum Requirements  
+
+| Plan | Pay Per Use credits | Subscription Plan | Perpetual-Use Licenses |  
+|---|:-:|:-:|:-:|  
+| Community | Included | Included | - |  
+| Continuity | - | MUA >= 200 credits | Active Support Services Agreement | 
+| Evolve | - | MUA >= 200 credits <br>  **50.000 DevOps Credits** | Active Support Services Agreement <br> **50.000 DevOps Credits**  |  
+
+## Professional Service Credits  
+
+Support Plans may include free [professional service credits](https://community.dataminer.services/professional-service-credits/) based on the Commercial model and the number of licenses or usage.  
+
+| Pay Per Use credits | Subscription Plan | Perpetual-Use Licenses  
+|:-:|:-:|:-:|  
+| 50 for every 1000 credits |  100 < MUA < 200: 100 <br> 200 < MUA < 400: 200 <br> MUA >= 400: 600 | only available with Evolve plan <br> varies with the support's yearly net amount |  
