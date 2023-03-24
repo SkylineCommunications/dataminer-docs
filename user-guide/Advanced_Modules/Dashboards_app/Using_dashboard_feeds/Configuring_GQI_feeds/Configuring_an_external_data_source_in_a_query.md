@@ -185,7 +185,7 @@ Generally, an ad hoc data source implementation will want to add a private field
 > DMS messages are subject to change without notice. If you can implement an alternative using the [built-in data sources](xref:Query_data_sources), we highly recommend that you do so instead.
 
 > [!TIP]
-> See also: [Example of the GQIDMS object](#example-of-the-gqidms-object)
+> See also: [Example of retrieving data by means of DMS messages](#example-of-retrieving-data-by-means-of-dms-messages)
 
 ## Retrieving data by means of DMS messages
 
@@ -204,7 +204,10 @@ GQIDMS DMS
 ```
 
 > [!TIP]
-> See also: [GQIDMS](#gqidms)
+> See also:
+>
+> - [GQIDMS](#gqidms)
+> - [Example of retrieving data by means of DMS messages](#example-of-retrieving-data-by-means-of-dms-messages)
 
 > [!IMPORTANT]
 > DMS messages are subject to change without notice. If you can implement an alternative using the [built-in data sources](xref:Query_data_sources), we highly recommend that you do so instead.
@@ -296,7 +299,7 @@ public class MyDataSource : IGQIDataSource, IGQIInputArguments
 }
 ```
 
-### Example of the GQIDMS object
+### Example of retrieving data by means of DMS messages
 
 Below you can find an example script that uses the [GQIDMS object](#gqidms) provided in the OnInitPutArgs to [create a data source of active client connections](#retrieving-data-by-means-of-dms-messages). The name of the data source, as defined in the *GQIMetaData* attribute, will be “Client connections”.
 
