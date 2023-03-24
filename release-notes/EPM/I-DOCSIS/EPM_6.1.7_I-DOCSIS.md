@@ -38,6 +38,12 @@ string[] scriptOptions = { "OPTIONS:0", "CHECKSETS:TRUE", "EXTENDED_ERROR_INFO",
             };
 ```
 
+#### New trigger in Skyline EPM Platform visual overview improves DataMiner Maps loading time [ID_35952]
+
+A new trigger has been added to the *_epmBE* card variable in the *Skyline EPM Platform* visual overview. It sets the variable to the DMA ID/element ID of the back-end element based on the CCAP name.
+
+With this new trigger, it is no longer necessary to create a card variable for each back-end element in the system and different triggers for each of those card variables. This improves the DataMiner Maps loading time.
+
 ### Fixes
 
 #### EPM front-end element threw 'process cannot access the file because it is being used by another process' exceptions [ID_34658]
@@ -80,3 +86,7 @@ In some cases, CCAP connectors could cause run-time errors. To prevent this, the
 When there were no passive files to be processed, there could be an empty row with ID -1 in the Tap table. This happened when source elements contained an exception value that was used for grouping during merge actions. To prevent this, the table keys are now added first, and merge action results are limited so that no other keys are added afterwards.
 
 In addition, the passive tables are now only filled in when the CCAP/collector pairs in the Registration table are present and CCAP elements are running. This way tables do not get updated with data from inactive elements or invalid CCAP/collector data.
+
+#### CCAP visual pages not loading correctly [ID_35953]
+
+When the name of CCAP elements contained a hyphen, the CCAP page of the *Skyline EPM Platform* and *Skyline EPM Platform DOCSIS* visual overviews did not load correctly, because this character was also used as a separator in those visual overviews. To resolve this issue, a dollar sign is now used as separator instead.
