@@ -15,7 +15,7 @@ uid: Web_apps_Main_Release_10.4.0_new_features
 
 The new icon component allows you to display an icon on a dashboard or a low-code app.
 
-#### BREAKING CHANGE: One single authentication app for all web apps [ID_35772]
+#### BREAKING CHANGE: One single authentication app for all web apps [ID_35772] [ID_35896]
 
 <!-- MR 10.4.0 - FR 10.3.5 -->
 
@@ -43,7 +43,9 @@ Also, when using external authentication via SAML, the `<system.webServer>` elem
 ```
 
 > [!NOTE]
-> When using external authentication via SAML, DataMiner should be configured to use HTTPS.
+>
+> - When using external authentication via SAML, DataMiner should be configured to use HTTPS.
+> - This new authentication app will also be used by DataMiner Cube, but only to authenticate users who want to access a web page stored on a DataMiner Agent, not to authenticate users who log in to Cube itself.
 
 ## Other new features
 
