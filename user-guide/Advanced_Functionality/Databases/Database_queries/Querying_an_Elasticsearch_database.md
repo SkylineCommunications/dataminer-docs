@@ -22,9 +22,9 @@ To connect to Kibana:
 1. On the server with the Elasticsearch database, navigate to `C:\Program Files\Elasticsearch\Kibana\bin` and run *Kibana.bat* as an administrator.
 
     > [!TIP]
-    > We recommend to run *Kibana.bat* using an elevated command line, as it takes a while to start the Kibana server and this will allow you to see when it has started.
+    > We recommend running *Kibana.bat* using an elevated command line, as it takes a while to start the Kibana server and this will allow you to see when it has started.
 
-2. Open any browser window and navigate to <http://ElasticNodeIP:5601> (e.g. <http://127.0.0.1:5601>) to access Kibana.
+1. Open any browser window and navigate to <http://ElasticNodeIP:5601> (e.g. <http://127.0.0.1:5601>) to access Kibana.
 
 ## Basic queries
 
@@ -46,15 +46,15 @@ This will return the name of the index, the state of the index, and its size.
 
 Especially the name and state of the index may be interesting for debugging purposes.
 
-### Manually setting the replication counts for indices
+### Manually setting the replication count for indices
 
-To get the relevent information on all indices and set replication count in the Elasticsearch database, enter the query below.
+To set the replication count for indices in the Elasticsearch database, first enter the query below:
 
 ```txt
 GET _cluster/health?level=shards&pretty
 ```
 
-This will return the name of the indices, state of the indices and number of replica set as following.
+This will return the name of the indices, the state of the indices, and the number of replicas:
 
 ```txt
  "indices" : {
@@ -84,7 +84,7 @@ This will return the name of the indices, state of the indices and number of rep
     },
 ```
 
-To manually set the replica count to 2 use the following query.
+You can then for example set the replica count to 2 for a specific index using the following query:
 
 ```txt
 PUT /<my-index>/_settings
@@ -95,7 +95,7 @@ PUT /<my-index>/_settings
 }
 ```
 
-To set the replica count to 2 for all of the indices use the following query.
+To set the replica count to 2 for all indices, use the following query:
 
 ```txt
 PUT /all/_settings
@@ -105,8 +105,6 @@ PUT /all/_settings
   }
 }
 ```
-
-
 
 ### Retrieving the number of hits + example records
 
