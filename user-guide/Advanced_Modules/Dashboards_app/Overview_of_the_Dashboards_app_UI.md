@@ -20,7 +20,7 @@ The main page of the app consists of a header bar, a sidebar, and a details pane
 
   - User button: A button with the initials or an image of the current user is displayed in the top-right corner. Click this button to open a menu that provides access to the following options:
 
-    - *Settings*: Allows you to manage any available [dashboard themes](xref:Configuring_the_dashboard_layout) and configure whether specific actions are pinned to the dashboard header bar.
+    - *Settings*: Allows you to manage any available [dashboard theme](xref:Configuring_the_dashboard_layout) and configure whether specific actions are pinned to the dashboard header bar.
 
     - *About*: Displays information about the app.
 
@@ -35,7 +35,7 @@ The main page of the app consists of a header bar, a sidebar, and a details pane
   | ![Navigation pane icon](~/user-guide/images/DashboardsX_navigation.png) | Opens the navigation pane, which allows you to navigate through the different dashboard folders in the app. Click a folder or dashboard to view it in the details pane on the right. |
   | ![Recent items icon](~/user-guide/images/DashboardsX_recent.png) | Displays a list of recent items. |
   | ![Private dashboards icon](~/user-guide/images/DashboardsX_private.png) | Displays a list of private dashboards. These are dashboards that can only be accessed by specific users (configured in the [dashboard settings](xref:Changing_dashboard_settings)). This icon is displayed from DataMiner 10.2.7/10.3.0 onwards if there are private dashboards available. |
-  | ![Shared dashboards icon](~/user-guide/images/DashboardsX_shared.png) | Displays a list of dashboards that have been shared in the cloud. This icon is displayed from DataMiner 10.2.7/10.3.0 onwards if there are shared dashboards available. |
+  | ![Shared dashboards icon](~/user-guide/images/DashboardsX_shared.png) | Displays a list of dashboards that have been shared via dataminer.services. This icon is displayed from DataMiner 10.2.7/10.3.0 onwards if there are shared dashboards available. |
 
   Right-click in either of the panes or click the ... button to open a menu with the following options:
 
@@ -77,7 +77,7 @@ The main page of the app consists of a header bar, a sidebar, and a details pane
 
   - **PDF**: Available from DataMiner 10.2.12/10.3.0 onwards. Only displayed in read mode. Allows you to export the dashboard as a PDF file.
 
-  - **Share** or **Start sharing**: Allows you to share the dashboard using the DataMiner Cloud Platform. See [Sharing a dashboard](xref:Sharing_a_dashboard). This feature is only available in read mode, if the DataMiner Agent is connected to the cloud. See [Connecting your DataMiner System to the cloud](xref:Connecting_your_DataMiner_System_to_the_cloud).
+  - **Share** or **Start sharing**: Allows you to share the dashboard using dataminer.services. See [Sharing a dashboard](xref:Sharing_a_dashboard). This feature is only available in read mode, if the DataMiner System is connected to dataminer.services. See [Connecting your DataMiner System to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud).
 
   In the settings of the Dashboards app, you can configure whether the edit mode, clear feeds, export as PDF, and share dashboard buttons are always displayed (i.e. “pinned” to the header bar) or instead accessible via a button in the top-right corner of a dashboard.
 

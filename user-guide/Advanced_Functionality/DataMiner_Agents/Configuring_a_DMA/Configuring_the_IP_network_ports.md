@@ -9,13 +9,16 @@ A DataMiner System makes extensive use of TCP/IP communication. Below, you find 
 > [!NOTE]
 > In new DataMiner installations from DataMiner 10.1.11/10.2.0 onwards, only the essential ports are opened by default (80, 8004, as well as 162 from DataMiner 10.1.12 onwards). To make use of DataMiner functionality that requires additional ports, you will need to manually create a firewall rule for those ports.
 
+> [!TIP]
+> See also: [DataMiner hardening guide](xref:DataMiner_hardening_guide)
+
 ## Overview of IP ports used in a DMS
 
 | Protocol | Ports used | Application      |
 |----------|------------|------------------|
 | SNMP     | 161/udp<br> 162/udp | SNMP    |
-| .Net Remoting  | Configurable port<br> Default port: 8004/tcp | Inter-DMA communication<br> DataMiner Cube<br> Alerter |
-| HTTP(S) | 80/tcp<br> 443/tcp | DataMiner Cube<br> Alerter<br> Web apps (e.g. Monitoring, Jobs)<br> Dashboards, Reporter |
+| .Net Remoting  | Configurable port<br> Default port: 8004/tcp | Inter-DMA communication ([unless gRPC is configured instead](xref:DMS_xml#redirects-subtag))<br> DataMiner Cube ([unless gRPC is configured instead](xref:ConnectionSettings_txt#connectionsettingstxt-options))<br> Alerter |
+| HTTP(S) | 80/tcp<br> 443/tcp | Inter-DMA communication ([if gRPC is configured](xref:DMS_xml#redirects-subtag))<br>DataMiner Cube<br> Alerter<br> Web apps (e.g. Monitoring, Jobs)<br> Dashboards, Reporter |
 | HTTP(S) | 9200/tcp | Indexing Engine (server listening for client requests) |
 | N/A     | 7000/tcp | Cassandra: non-TLS setup (inter-node communication in Failover setups) |
 | N/A     | 7001/tcp | Cassandra: TLS setup (available from DataMiner 10.1.3 onwards) |
@@ -25,7 +28,7 @@ A DataMiner System makes extensive use of TCP/IP communication. Below, you find 
 | N/A     | 9300/tcp | Elasticsearch (inter-node communication) |
 | Multiple protocols | 4222/tcp<br> 6222/tcp | NATS (required from DataMiner 10.1.1 onwards) |
 | NAS    | 9090/tcp  | NATS Account Server (required from DataMiner 10.1.1 onwards) |
-| HTTP(S) | 5100/tcp (internal) | [Cloud endpoint](xref:Custom_cloud_endpoint_configuration) hosted in [DataMiner CloudGateway](xref:DataMinerExtensionModules#cloudgateway) (by default required from DataMiner CloudGateway 2.10.0 onwards) 
+| HTTP(S) | 5100/tcp (internal) | [dataminer.services endpoint](xref:Custom_cloud_endpoint_configuration) hosted in [DataMiner CloudGateway](xref:DataMinerExtensionModules#cloudgateway) (by default required from DataMiner CloudGateway 2.10.0 onwards)
 | Telnet | 23/tcp   | Stream (by default disabled from DataMiner 9.6.5 onwards) |
 
 > [!NOTE]

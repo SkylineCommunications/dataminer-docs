@@ -4,6 +4,9 @@ uid: EPM_6.1.7_I-DOCSIS
 
 # EPM 6.1.7 I-DOCSIS - Preview
 
+> [!IMPORTANT]
+> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+
 ## New features
 
 #### CCAP connector configuration and threshold settings available in visual overview [ID_34805]
@@ -34,6 +37,12 @@ string[] scriptOptions = { "OPTIONS:0", "CHECKSETS:TRUE", "EXTENDED_ERROR_INFO",
                Options = new SLNetMessages.SA(scriptOptions),
             };
 ```
+
+#### New trigger in Skyline EPM Platform visual overview improves DataMiner Maps loading time [ID_35952]
+
+A new trigger has been added to the *_epmBE* card variable in the *Skyline EPM Platform* visual overview. It sets the variable to the DMA ID/element ID of the back-end element based on the CCAP name.
+
+With this new trigger, it is no longer necessary to create a card variable for each back-end element in the system and different triggers for each of those card variables. This improves the DataMiner Maps loading time.
 
 ### Fixes
 
@@ -67,3 +76,17 @@ After a CCAP platform element started up, it could occur that an exception simil
 ```
 
 Retry logic has now been added to all CCAP platform connectors to prevent this issue.
+
+#### Run-time error caused by CCAP connector [ID_35599]
+
+In some cases, CCAP connectors could cause run-time errors. To prevent this, the *partialSNMP* option has been added to all SNMP tables in order to divide the polling over several smaller groups.
+
+#### Invalid ID in passive tables [ID_35659]
+
+When there were no passive files to be processed, there could be an empty row with ID -1 in the Tap table. This happened when source elements contained an exception value that was used for grouping during merge actions. To prevent this, the table keys are now added first, and merge action results are limited so that no other keys are added afterwards.
+
+In addition, the passive tables are now only filled in when the CCAP/collector pairs in the Registration table are present and CCAP elements are running. This way tables do not get updated with data from inactive elements or invalid CCAP/collector data.
+
+#### CCAP visual pages not loading correctly [ID_35953]
+
+When the name of CCAP elements contained a hyphen, the CCAP page of the *Skyline EPM Platform* and *Skyline EPM Platform DOCSIS* visual overviews did not load correctly, because this character was also used as a separator in those visual overviews. To resolve this issue, a dollar sign is now used as separator instead.

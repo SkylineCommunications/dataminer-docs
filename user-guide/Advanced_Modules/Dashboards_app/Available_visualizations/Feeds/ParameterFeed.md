@@ -6,7 +6,10 @@ uid: DashboardParameterFeed
 
 This dashboard feed allows the user to select multiple parameters from a predefined list. At the top of the list, a box is available that allows the user to select or deselect all items in the list at once.
 
-From DataMiner 10.2.4, 10.1.0 [CU13] and 10.2.0 [CU1] onwards, if the component is loaded with an initial selection, the selected items are always displayed at the top. Prior to these DataMiner versions, the *Selected only* toggle button can be used to show or hide items that are not selected.
+> [!NOTE]
+>
+> - From DataMiner 10.2.4, 10.1.0 [CU13] and 10.2.0 [CU1] onwards, if the component is loaded with an initial selection, the selected items are always displayed at the top. Prior to these DataMiner versions, the *Selected only* toggle button can be used to show or hide items that are not selected.
+> - From DataMiner 10.3.4/10.4.0 onwards, when an EPM feed is used to feed EPM identifiers to a parameter feed, it will also list the parameters of the enhanced elements that are linked to the EPM objects. EPM identifiers are System Type and Name data provided by an EPM feed (indicated as *EPM identifiers* in the data pane). <!-- RN 35562 -->
 
 To configure this component:
 
@@ -34,7 +37,7 @@ To configure this component:
    - *Auto-select all*: Available from DataMiner 10.0.13 onwards. Replaced the previous auto-select options. When this option is selected, all items will be selected according to the “Select all behavior” settings below.
 
      > [!NOTE]
-     > From DataMiner 10.2.11/10.3.0 onwards, this option is not available if the component uses EPM identifiers as its data source. These are System Type and Name data provided by an EPM feed (indicated as *EPM identifiers* in the data pane).
+     > From DataMiner 10.2.11/10.3.0 onwards, this option is not available if the component uses EPM identifiers as its data source.
 
    - *Select all behavior* > *Select all items*: Available from 10.0.13 onwards. If this option is selected, "Select all" will select all items. For a [partial table](xref:Table_parameters#partial-tables), only the items from the first page will be selected.
 

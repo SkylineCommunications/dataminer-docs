@@ -2,10 +2,10 @@
 uid: General_Main_Release_10.3.0_highlights
 ---
 
-# General Main Release 10.3.0 – Highlights - Preview
+# General Main Release 10.3.0 – Highlights
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 > For release notes related to DataMiner Cube, see [DataMiner Cube 10.3.0](xref:Cube_Main_Release_10.3.0).
@@ -53,6 +53,37 @@ var moduleSettings = new ModuleSettings("example")
 
 > [!NOTE]
 > TTL settings are checked every 30 minutes. When you configure a very short TTL (e.g. 15 minutes), keep in mind that the objects in question will only be removed during the next cleanup cycle.
+
+#### OpenSearch & Amazon OpenSearch Service [ID_34651]
+
+<!-- MR 10.3.0 - FR 10.3.3 -->
+
+It is now possible to install a dedicated OpenSearch indexing database cluster as an alternative for Elasticsearch. This indexing cluster also requires a Cassandra cluster.
+
+At present, all OpenSearch versions are supported:
+
+- 1.X
+- 2.X
+
+For more information on setup and configuration, see [OpenSearch database](xref:OpenSearch_database).
+
+> [!NOTE]
+> It is also possible to use Amazon OpenSearch Service on AWS as an alternative to an on-premises hosted Elasticsearch/OpenSearch cluster. For more information on setup and configuration, see [Amazon OpenSearch Service](xref:Amazon_OpenSearch_Service).
+
+#### Amazon Keyspaces [ID_34872]
+
+<!-- MR 10.3.0 - FR 10.3.3 -->
+
+It is now possible to use the Amazon Keyspaces Service on AWS as an alternative for a Cassandra Cluster setup.
+
+> [!NOTE]
+>
+> - Amazon Keyspaces does not support all Cassandra functionality, most notably indices on columns. As a result, some queries against logger tables (including SLAs) may be slower on Amazon Keyspaces compared to Cassandra.
+> - The only consistency level supported is `Local Quorum`. See [Supported Apache Cassandra consistency levels in Amazon Keyspaces](https://docs.aws.amazon.com/keyspaces/latest/devguide/consistency.html). No matter the configuration, the consistency level will always be overwritten to `Local Quorum`.
+> - The only replication strategy supported is the Amazon Keyspaces specific `Single-Region strategy`, which is not configurable.
+> - Migrating existing databases to Amazon Keyspaces is not yet supported.
+
+For more information on setup and configuration, see [Amazon Keyspaces Service](xref:Amazon_Keyspaces_Service).
 
 ### DMS Security
 
@@ -121,358 +152,6 @@ When you configure a timer to automatically send ping requests to a device, you 
 
 > [!NOTE]
 > These options are only relevant when *amountPackets* or *amountPacketsPID* is used. These are currently only supported in conjunction with the *threadPool* option. When *threadPool* is not used, only one ping request will be sent.
-
-### DMS Web Services
-
-#### Web Services API v1: New methods to manage service templates [ID_31612]
-
-<!-- MR 10.3.0 - FR 10.2.1 -->
-
-Using the following methods, it will now be possible to manage service templates via the web services API:
-
-- CreateServiceTemplate
-- DeleteServiceTemplate
-- GetServiceTemplate
-- UpdateServiceTemplate
-
-### DMS web apps
-
-#### Dashboards app - Node edge graph: Option to visualize the direction of the edges [ID_32519]
-
-<!-- MR 10.3.0 - FR 10.2.4 -->
-
-When configuring a node edge graph, it is now possible to have the graph visualize the direction of the edges.
-
-To do so, enable the *Visualize directions* setting and select one of the following options:
-
-| Option | Description |
-|--------|-------------|
-| Flow (default) | The direction is visualized by means of animated edges. |
-| Arrows         | The direction is visualized by means of arrows drawn on the edges. If you select this option, you can also specify the exact position of the arrows on the edges. |
-
-#### Dashboards app: GQI now supports external data [ID_32656] [ID_32659] [ID_32930] [ID_33795]
-
-<!-- MR 10.3.0 - FR 10.2.4
-RN 33795: MR 10.3.0 - FR 10.2.8 -->
-
-It is now possible to configure the Generic Query Interface to retrieve external data, so that dashboard users can use a query data source based on data that is for example retrieved from a CSV file, a MySQL database, or an API endpoint. This is configured through a DataMiner Automation script that is compiled as a library. The GQI will make use of this library to load the external data.
-
-##### Configuring an external data source in a query
-
-This is the most basic procedure to use an external data source in a query:
-
-1. In the Automation app, add a script containing a new class that implements the *IGQIDatasource* interface (see below for more detailed info).
-
-1. Above the class, add the *GQIMetaData* attribute in order to configure the name of the data source as displayed in the Dashboards app.
-
-   For example (see [Example script](#example-script) for a full example):
-
-   ```csharp
-   using Skyline.DataMiner.Analytics.GenericInterface;
-
-   [GQIMetaData(Name = "People")]
-   public class MyDataSource : IGQIDataSource
-   {
-   ...
-   }
-   ```
-
-   > [!NOTE]
-   > This is the name that will be shown to the user when they select the data in the Dashboards app. If you do not configure this name, the name of the class is displayed instead, which may not be very user-friendly.
-
-1. [Compile the script as a library](https://docs.dataminer.services/user-guide/Advanced_Modules/Automation/Using_CSharp/Compiling_a_CSharp_code_block_as_a_library.html#compiling-the-library). You can use the same name as defined in the *GQIMetaData* attribute, or a different name. If there are different data sources for which the same name is defined in the *GQIMetaData* attribute, the library name is appended to the metadata name.
-
-1. Validate and save the script. It is important that you do this *after* you have compiled the script as a library, as otherwise the compiler will detect errors.
-
-1. In the Dashboards app, configure a query and select the data source *Get ad hoc data*.
-
-1. In the *Data source* drop-down box, select the name of your ad hoc data source.
-
-Depending on how the script is configured, there can be additional configuration possibilities. You can for instance use the *IGQIInputArguments* interface in the script to define that a specific argument is required, for instance to filter the displayed data. For more information, refer to the sections below.
-
-##### Interfaces
-
-An ad hoc data source is represented as a class that implements predefined interfaces. The interfaces you can use are detailed below.
-
-- **IGQIDataSource**: This is the only **required** interface. It must be implemented for the class to be detected by GQI as a data source. This interface has the following methods:
-
-  | Method | Input arguments | Output arguments | Description |
-  |--|--|--|--|
-  | GetColumns  |  | GQIColumn\[\] | The GQI will request the columns. |
-  | GetNextPage | GetNextPageInputArgs | GQIPage | The GQI will request data. |
-
-- **IGQIInputArguments**: This interface can be used to have the user specify an argument, for example the CSV file from which data should be parsed, or a filter that should be applied. This interface has the following methods:
-
-  | Method | Input arguments | Output arguments | Description |
-  |--|--|--|--|
-  | GetInputArguments    | \- | GQIArgument\[\] | Asks for additional information from the user when the data source is configured. |
-  | OnArgumentsProcessed | OnArgumentsProcessedInputArgs | OnArgumentsProcessedOutputArgs | Event to indicate that the arguments have been processed. |
-
-  > [!NOTE]
-  > The GQI does not validate the input arguments specified by the user. For example, a user can input an SQL query as a string input argument, and the content of the string argument will be forwarded to the ad hoc data source implementation without validation.
-
-- **IGQIOnInit**: This interface is called when the data source is initialized, for example when the data source is selected in the query builder or when a dashboard using a query with ad hoc data is opened. It can for instance be used to connect to a database. This interface has one method:
-
-  | Method | Input arguments | Output arguments | Description |
-  |--|--|--|--|
-  | OnInit | OnInitInputArgs | OnInitOutputArgs | Indicates that an instance of the class has been created. |
-
-- **IGQIOnPrepareFetch**: This interface is used to implement optimizations when data is retrieved. This can for instance be used to limit the retrieved data. This interface has one method:
-
-  | Method | Input arguments | Output arguments | Description |
-  |--|--|--|--|
-  | OnPrepareFetch | OnPrepareFetchInputArgs | OnPrepareFetchOutputArgs | Indicated that the GQI has processed the query. |
-
-- **IGQIOnDestroy**: This interface is called when the instance object is destroyed, which happens when the session is closed, e.g. in case of inactivity or when all the necessary data has been retrieved. It can for instance be used to end the connection with a database. This interface has one method:
-
-  | Method | Input arguments | Output arguments | Description |
-  |--|--|--|--|
-  | OnDestroy | OnDestroyInputArgs | OnDestroyOutputArgs | Indicates that the GQI will close the session. |
-
-##### Life cycle
-
-All methods discussed above are called at some point during the GQI life cycle, depending on whether a query is created or fetched, and depending on whether they have been implemented.
-
-The following flowchart illustrates the GQI life cycle when a query is created:
-
-![GQI query creation life cycle](~/user-guide/images/GQICreateQuery.png)
-
-The following flowchart illustrates the GQI life cycle when a query is fetched:
-
-![GQI query fetching life cycle](~/user-guide/images/GQIFetchQuery.png)
-
-##### Objects
-
-To build the ad hoc data source, you can use the objects detailed below.
-
-- **GQIColumn**: This is an abstract class with the derived types *GQIStringColumn*, *GQIBooleanColumn*, *GQIIntColumn*, *GQIDateTimeColumn* and *GQIDoubleColumn* and with the following properties::
-
-  | Property | Type | Required | Description |
-  |--|--|--|--|
-  | Name | String | Yes | The column name. |
-  | Type | GQIColumnType | Yes | The type of data in the column. *GQIColumnType* is an enum that contains the following values: *String*, *Int*, *DateTime*, *Boolean* or *Double*. |
-
-- **GQIPage**, with the following properties:
-
-  | Property | Type | Required | Description |
-  |--|--|--|--|
-  | Rows | GQIRow\[\] | Yes | The rows of the page. |
-  | HasNextPage | Boolean | No | *True* if additional pages can be retrieved, *False* if the current page is the last page. |
-
-- **GQIRow**, with the following properties:
-
-  | Property | Type | Required | Description |
-  |--|--|--|--|
-  | Cells | GQICell\[\] | Yes | The cells of the row. |
-
-- **GQICell**, with the following properties:
-
-  | Property | Type | Required | Description |
-  |--|--|--|--|
-  | Value | Object | No | The value of the cell. |
-  | DisplayValue | String | No | The display value of the cell. |
-
-  > [!NOTE]
-  > The type of value of a cell must match the type of the corresponding column.
-
-- **GQIArgument**: This is an abstract class, with the derived types *GQIStringArgument* and *GQIDoubleArgument*, and with the following properties:
-
-  | Property | Type | Required | Description |
-  |--|--|--|--|
-  | Name | String | Yes | The name of the input argument. |
-  | IsRequired | Boolean | No | Indicates whether the argument is required. |
-
-##### Example script
-
-Below you can find an example script that forwards dummy data to the GQI. The name of the data source, as defined in the *GQIMetaData* attribute, will be “People”.
-
-First the *IGQIDataSource* interface is implemented, then *GetColumns* is used to define the custom columns for the data source. In this case, there are 5 columns. The *GetNextPage* method then returns the actual data to the GQI. In this case these are 3 rows, defined as an array of cells. For each cell, a display value can also be defined. In this case, this is done for the cells within the *Height* column to indicate the unit of measure. The *HasNextPage* property is set to *False* to indicate that no additional pages need to be fetched.
-
-The optional *IGQIInputArguments* interface is also implemented in the example, in this case to allow the user to add an input argument indicating the minimum age for the records that will be retrieved. The argument is indicated as required, so the user will have to specify it to be able to configure the query. The argument value is retrieved with *OnArgumentsProcessedInputArgs* and used to filter the returned data.
-
-```csharp
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using Skyline.DataMiner.Analytics.GenericInterface;
-
-[GQIMetaData(Name = "People")]
-public class MyDataSource : IGQIDataSource, IGQIInputArguments
-{
-    private GQIDoubleArgument _argument = new GQIDoubleArgument("Age") { IsRequired = true };
-    private double _minimumAge;
-
-    public GQIColumn[] GetColumns()
-    {
-        return new GQIColumn[]
-        {
-            new GQIStringColumn("Name"),
-            new GQIIntColumn("Age"),
-            new GQIDoubleColumn("Height (m)"),
-            new GQIDateTimeColumn("Birthday"),
-            new GQIBooleanColumn("Likes apples")
-        };
-    }
-
-    public GQIArgument[] GetInputArguments()
-    {
-        return new GQIArgument[] { _argument };
-    }
-
-    public OnArgumentsProcessedOutputArgs OnArgumentsProcessed(OnArgumentsProcessedInputArgs args)
-    {
-        _minimumAge = args.GetArgumentValue(_argument);
-        return new OnArgumentsProcessedOutputArgs();
-    }
-
-    public GQIPage GetNextPage(GetNextPageInputArgs args)
-    {
-        var rows = new List<GQIRow>() {
-            new GQIRow(
-                new GQICell[]
-                    {
-                        new GQICell() { Value = "Alice" },
-                        new GQICell() { Value = 32 },
-                        new GQICell() { Value = 1.74, DisplayValue = "1.74 m" },
-                        new GQICell() { Value = new DateTime(1990, 5, 12) },
-                        new GQICell() { Value = true }
-                    }),
-            new GQIRow(
-                new GQICell[]
-                    {
-                        new GQICell() { Value = "Bob" },
-                        new GQICell() { Value = 22 },
-                        new GQICell() { Value = 1.85, DisplayValue = "1.85 m" },
-                        new GQICell() { Value = new DateTime(2000, 1, 22) },
-                        new GQICell() { Value = true }
-                    }),
-            new GQIRow(
-                new GQICell[]
-                    {
-                        new GQICell() { Value = "Carol" },
-                        new GQICell() { Value = 27 },
-                        new GQICell() { Value = 1.67, DisplayValue = "1.67 m" },
-                        new GQICell() { Value = new DateTime(1995, 10, 3) },
-                        new GQICell() { Value = false }
-                    })
-            };
-
-        var filteredRows = rows.Where(row => (int)row.Cells[1].Value > _minimumAge).ToArray();
-
-        return new GQIPage(filteredRows)
-        {
-            HasNextPage = false
-        };
-    }
-}
-```
-
-#### DataMiner Low-Code Apps [ID_33002] [ID_33040] [ID_33208]
-
-<!-- MR 10.3.0 - FR 10.2.5
-RN 33208: MR 10.3.0 - FR 10.2.6 -->
-
-With the DataMiner Low-Code Apps (also known as the "Application Framework"), you can create custom low-code applications that interact with data from a DataMiner System or an external source.
-
-These applications can be created on the root web page of a DataMiner System and can be organized into sections. To place an application in one or more specific sections, open the App.info.json file in the correct application folder (C:\\Skyline DataMiner\\applications\\APP_ID) and add the section names to the Sections array.
-
-> [!NOTE]
-> The “Low-code Apps” license is required to use or access the DataMiner Low-Code Apps.
-
-##### Pages and panels
-
-Pages and panels are the basic building blocks of an application. On a page or a panel, or even between pages and panels, data can be fed between components to create dynamic visualizations. Pages and panels can also each have a header bar with different buttons that are used to execute actions via events. Each button can have a customized icon and label.
-
-The application sidebar allows you to navigate between the different pages, which can each have a label and an icon. It is also possible to hide pages. That way they will not appear in the sidebar and will only be accessible via actions.
-
-Panels are used to group data on a page. They can be displayed on the left side of a page, on the right side of a page or as a popup, and can be shown or hidden via actions that are executed when an event occurs. Panels can be reused on different pages.
-
-##### Events and actions
-
-In an application, you can configure actions that will be executed each time one of the following events occur:
-
-- A new page is loaded.
-- A (header bar) button is clicked.
-
-At present, the following actions can be configured:
-
-| Action | Description |
-|--|--|
-| Launch a script | Launch an Automation script with a specific configuration and a specific number of inputs (which can be linked to feeds like e.g. the Query Row feed). |
-| Navigate to a URL | Navigate to a specific URL (in a new tab). |
-| Open a page | Open a (hidden) page in the same application. |
-| Open a panel | Open a panel on the current page. Panels can appear on the left side of a page, on the right side of the page or as a popup. |
-| Close a panel | Close a panel that was open on the current page. |
-| Open an app | Navigate to another application. |
-| Execute component action | Execute a component action. E.g. select an item in a table, create a new instance, etc. |
-
-By default, actions are executed asynchronously. However, it is also possible to configure chains of actions that should be executed synchronously, i.e. only when the preceding action was executed successfully.
-
-Also, by combining different actions into one, you can create complex behavior. For example, open a page, open a panel and launch an Automation script that updates parameters displayed on that panel while it is being opened. This complex action can then be linked to e.g. a header bar button.
-
-##### Versioning
-
-The DataMiner Low-Code Apps include a versioning system that allows different versions of the same application to exist simultaneously. These different versions can be accessed via the versions panel of the application, which also allows the versions to be edited.
-
-When you create a new application, a first draft version of that application is created. That version can then be published, i.e. made accessible to end users. Each time the published version of an application is edited, a new draft version will be created. Draft versions are meant to be used as prototypes for testing purposes.
-
-Per application, there can be up to 15 versions: 14 draft versions and one published version. When a 16th version is created, the oldest draft version will automatically be deleted. The published version will never be deleted. As there can be only one published version, whenever you publish a version, the previously published version will automatically be demoted to draft version.
-
-##### Security
-
-The Low-Code Apps have two levels of security:
-
-- on DataMiner level, user permissions control access to the Low-Code Apps in general, and
-- on application level, user permissions control access to specific applications.
-
-Access to the Low-Code Apps is controlled by the following user permissions that can be configured per user or user group:
-
-- View applications
-- Add new applications
-- Edit applications
-- Delete applications
-- Publish applications
-
-> [!NOTE]
-> Users without “View applications” permission do not have access to the Low-Code Apps. Even if they have been granted some of the other user permissions, they will not be able to perform any action whatsoever within the Low-Code Apps.
-
-Access to a specific application can be configured in the application itself. Per application, you can define a list of users with view and/or edit permission. By default, no restrictions will be applied, meaning that everyone will be allowed to view and edit the application.
-
-#### Low-code apps: Data input via URL [ID_34261]
-
-<!-- MR 10.3.0 - FR 10.2.11 -->
-
-Low-code apps can now be provided with data (e.g. element data, parameter data, view data, etc.) via URL query parameters.
-
-To do so, add a URL query parameter with key *data*. The value should be a URL-encoded JSON object with the following structure:
-
-- *v*: version number (currently always 1)
-- *components*: an array of component input objects
-
-```json
-{
-   v: <version-number>;
-   components: <component-data>;
-}
-```
-
-The component input objects (component-data) have the following structure:
-
-```json
-{
-   cid: <component-id>,
-   select: <data>
-}
-```
-
-In the following example, the URL selects one default element on the initial page:
-
-- component ID = 1
-- element ID = 1/6
-
-```txt
-https://<dma>/<app-id>?data=%7B%22v%22:1,%22components%22:%5B%7B%22cid%22:1,%22select%22:%7B%22elements%22:%5B%221%2F6%22%5D%7D%5D%7D%7D
-```
 
 ### DMS Service & Resource Management
 

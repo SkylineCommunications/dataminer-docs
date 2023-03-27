@@ -9,7 +9,7 @@ uid: SRM_1.2.23
 
 ## New features
 
-#### Breaking change: Interface profile parameters now set on resource even when no profile instance is set \[ID_32702\]
+#### BREAKING CHANGE: Interface profile parameters now set on resource even when no profile instance is set \[ID_32702\]
 
 When the initial configuration is applied to a resource, parameter values set on an interface will now be included even when no profile instance was set. Previously this only happened on the function itself.
 
@@ -27,7 +27,7 @@ When the initial configuration is applied to a resource, parameter values set on
 
 #### Additional validation of input \[ID_32185\]
 
-Additional validation has been added in the SRM Framework to avoid situations where invalid input is implemented.
+Additional validation has been added in the SRM framework to avoid situations where invalid input is implemented.
 
 #### Default Booking Logging Date Time Format updated \[ID_32405\]
 

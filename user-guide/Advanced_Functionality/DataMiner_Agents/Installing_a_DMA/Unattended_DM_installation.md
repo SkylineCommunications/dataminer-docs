@@ -62,7 +62,7 @@ The XML configuration is done in the *InstallConfiguration.xml* file. The settin
 The *InstallConfiguration.xml* file must use the syntax detailed below.
 
 > [!NOTE]
-> You can check the validity of an *InstallConfiguration.xml* file using the [InstallConfiguration Schema file](https://community.dataminer.services/documentation/installconfiguration-xsd/) available on Dojo.
+> You can check the validity of an *InstallConfiguration.xml* file using the [InstallConfiguration Schema file](xref:InstallConfiguration_XSD).
 
 ### DMS tag
 
@@ -206,6 +206,8 @@ The *CassandraClusterSettings* tag has the following possible subtags:
 - **SystemAuthReplicationFactor**
 
   The replication factor for the *system_auth* keyspace. This keyspace contains the data required to log in to Cassandra. The replication factor determines how many replicas will exist for each row of this keyspace.
+
+  A general recommendation is to use a replication factor of 3 to 5, depending on the number of nodes. If the cluster has 3 nodes or less, we recommend setting the replication factor to the same number as the number of nodes.
 
 - **DefaultKeyspaceReplicationFactor**
 

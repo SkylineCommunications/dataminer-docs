@@ -13,3 +13,6 @@ This section consists of the following topics:
 - [Applying service templates](xref:Applying_service_templates)
 
 - [Managing service templates](xref:Managing_service_templates)
+
+> [!TIP]
+> Watch this video on DataMiner Dojo to learn how to get your first service template up and running in less than 10 minutes: [Service templates](https://community.dataminer.services/video/service-templates/)

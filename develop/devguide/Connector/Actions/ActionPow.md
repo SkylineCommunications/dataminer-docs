@@ -25,6 +25,6 @@ Default: 1.
 ```xml
 <Action id="1">
   <On id="5000">parameter</On>
-  <Type value="1">open</Type>
+  <Type value="1">pow</Type>
 </Action>
 ```

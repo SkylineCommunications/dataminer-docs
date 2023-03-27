@@ -168,7 +168,7 @@ A new method, *ApplyContributingProfile*, has been added to *SrmResourceConfigur
 
 #### Methods to add resources no longer create new service definition if suitable service definition is available \[ID_31396\]
 
-When the *BookingManager.AddResource* or *BookingManager.TryAddResource* method was used, up to now, a new service definition was created whenever the service definition that was being used could not support the new resource. Now the SRM Framework will instead check if a compatible service definition is already available in the system.
+When the *BookingManager.AddResource* or *BookingManager.TryAddResource* method was used, up to now, a new service definition was created whenever the service definition that was being used could not support the new resource. Now the SRM framework will instead check if a compatible service definition is already available in the system.
 
 ### Fixes
 

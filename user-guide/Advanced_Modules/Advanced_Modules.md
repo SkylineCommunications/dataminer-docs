@@ -10,15 +10,21 @@ uid: Part4AdvancedModules
 
 - [Correlation](xref:correlation)
 
-- [Experience and Performance Management](xref:EPM)
-
 - [Dashboards app](xref:newR_D)
 
 - [DMS Dashboards](xref:dashboards)
 
+- [Data Aggregator](xref:Data_Aggregator_DxM)
+
+- [DataMiner Object Models (DOM)](xref:DOM)
+
+- [Experience and Performance Management](xref:EPM)
+
 - [Inventory & Asset Management](xref:AssetManagement)
 
 - [Job Manager](xref:jobs)
+
+- [Low-Code Apps](xref:Application_framework)
 
 - [Maps](xref:maps)
 
@@ -36,6 +42,4 @@ uid: Part4AdvancedModules
 
 - [Ticketing](xref:ticketing)
 
-- [Low-Code Apps](xref:Application_framework)
-
-- [DataMiner Object Models (DOM)](xref:DOM)
+- [User-Defined APIs (preview)](xref:UD_APIs)

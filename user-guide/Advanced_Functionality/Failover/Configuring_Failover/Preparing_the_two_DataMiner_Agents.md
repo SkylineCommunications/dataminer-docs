@@ -45,3 +45,8 @@ Name: ResetPlease.FailoverZone
 Addresses: 10.11.5.52
  10.11.4.52
 ```
+
+> [!IMPORTANT]
+> If your system has been configured to use HTTPS, make sure that the virtual IP addresses or shared hostname also have **signed certificates**. For more information, see [Setting up HTTPS on a DMA](xref:Setting_up_HTTPS_on_a_DMA).
+>
+> As the setup of the certificates can be highly situational, for example in case proxies are involved, check with your IT services if you are not sure how to generate and deploy TLS/SSL certificates.

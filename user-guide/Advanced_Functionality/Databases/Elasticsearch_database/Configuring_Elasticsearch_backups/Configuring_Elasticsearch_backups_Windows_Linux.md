@@ -57,11 +57,11 @@ Examples:
 
    To set up the shared folder:
 
-   - for Windows:
+   - For Windows:
 
      Use built-in sharing.
 
-   - for Linux:
+   - For Linux:
 
      Use an NFS server and client as explained in [How to Set Up NFS Server and Client on CentOS 8](https://www.tecmint.com/install-nfs-server-on-centos-8/) and in [Elasticsearch: Snapshot Backups on a Shared NFS](https://octoperf.com/blog/2019/05/02/elasticsearch-snapshot-backup-shared-nfs/#snapshot-repository). Follow this procedure on all machines in the Elasticsearch Cluster.
 
@@ -97,11 +97,11 @@ Examples:
 
    - For Windows: `C:\Program Files\Elasticsearch\logs\[cluster.name].log`
 
-     You can find the cluster name in `/etc/Elasticsearch/Elasticsearch.yml`.
+     You can find the cluster name in `C:\Program Files\Elasticsearch\config\Elasticsearch.yml`.
 
    - For Linux: `/var/log/elasticsearch/[cluster.name].log`
 
-     You can find the cluster name in `C:\Program Files\Elasticsearch\config\Elasticsearch.yml`.
+     You can find the cluster name in `/etc/Elasticsearch/Elasticsearch.yml`.
 
    If you do not have enough rights to the shared folder, use the `chmod` and `chown` command.
 
@@ -200,11 +200,11 @@ Examples:
 
    - For Windows: `C:\Program Files\Elasticsearch\logs\[cluster.name].log`
 
-     You can find the cluster name in `/etc/Elasticsearch/Elasticsearch.yml`.
+     You can find the cluster name in `C:\Program Files\Elasticsearch\config\Elasticsearch.yml`.
 
    - For Linux: `/var/log/elasticsearch/[cluster.name].log`
 
-     You can find the cluster name in `C:\Program Files\Elasticsearch\config\Elasticsearch.yml`.
+     You can find the cluster name in `/etc/Elasticsearch/Elasticsearch.yml`.
 
    If you do not have enough rights to the shared folder, use the `chmod` and `chown` command.
 

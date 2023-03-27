@@ -480,7 +480,7 @@ For more information, refer to Skyline.DataMiner.Net.Messages.
 
 ## Implementing the IDisposable interface
 
-From DataMiner 10.2.9 onwards (RN 33965), DataMiner detects whether the [IDisposable](https://docs.microsoft.com/en-us/dotnet/api/system.idisposable) interface is implemented on static QAction classes. DataMiner will then call the Dispose method when the QAction instance is released (i.e. when the element is stopped, removed or restarted).
+From DataMiner 10.2.9 onwards (RN 33965), DataMiner detects whether the [IDisposable](https://docs.microsoft.com/en-us/dotnet/api/system.idisposable) interface is implemented on non-static QAction classes. DataMiner will then call the Dispose method when the QAction instance is released (i.e. when the element is stopped, removed or restarted).
 
 > [!NOTE]
 >
@@ -664,7 +664,7 @@ public class QAction
 
 While in the past the Json class (System.Web.Helpers) was used to process JSON (JavaScript Object Notation) data, now the JavaScriptSerializer class (System.Web.Script.Serialization) is preferred (Available since .NET Framework v3.5).
 
-It is not necessary to load additional DDLs into DataMiner when using this approach. However, the QAction does need a reference to "System.Web.Extensions.dll" (using the dllimport attribute).
+It is not necessary to load additional DLLs into DataMiner when using this approach. However, the QAction does need a reference to "System.Web.Extensions.dll" (using the dllimport attribute).
 
 The following code will create a dictionary of all the items in the JSON data:
 
@@ -740,7 +740,7 @@ try
 }
 catch (Exception e)
 {
-	protocol.Log(protocol.QActionID + "|ProcessMime|"Load configuration XML-file failed (Check the correct format of the XML-file):" + Environment.NewLine + filePath + Environment.NewLine + e.ToString(),LogType.Error, LogLevel.NoLogging);
+	protocol.Log(protocol.QActionID + "|ProcessMime|Load configuration XML-file failed (Check the correct format of the XML-file):" + Environment.NewLine + filePath + Environment.NewLine + e.ToString(),LogType.Error, LogLevel.NoLogging);
 }
 ```
 

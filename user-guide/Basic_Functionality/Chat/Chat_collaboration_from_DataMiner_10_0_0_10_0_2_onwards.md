@@ -8,15 +8,15 @@ uid: Chat_collaboration_from_DataMiner_10_0_0_10_0_2_onwards
 
 1. Click the user icon in the top-right corner of the Cube UI.
 
-    A menu will open.
+   A menu will open.
 
-2. In the menu, click *X online contacts* (X being the number of contacts that are currently online).
+1. In the menu, click *X online contacts* (X being the number of contacts that are currently online).
 
-    A panel will be displayed next to the menu, listing the contacts that are currently online.
+   A panel will be displayed next to the menu, listing the contacts that are currently online.
 
-3. In the list, double-click the user you want to chat with, or right-click the user and select *Start chat session*.
+1. In the list, double-click the user you want to chat with, or right-click the user and select *Start chat session*.
 
-4. In the box at the bottom of the panel, enter the chat message and press Enter or click *Send*.
+1. In the box at the bottom of the panel, enter the chat message and press Enter or click *Send*.
 
 ### Responding to a chat message sent by another user
 
@@ -26,12 +26,12 @@ To view the message and respond:
 
 1. Click the user icon in the top-right corner of the Cube UI.
 
-    A menu will open.
+   A menu will open.
 
-2. In the menu, click *X online contacts* (X being the number of contacts that are currently online).
+1. In the menu, click *X online contacts* (X being the number of contacts that are currently online).
 
-    A panel will be displayed next to the menu, with a tab listing the online contacts and a tab with the username of the person who sent you a message.
+   A panel will be displayed next to the menu, with a tab listing the online contacts and a tab with the username of the person who sent you a message.
 
-3. Click the tab with the username. The message that was sent to you will be displayed in the panel.
+1. Click the tab with the username. The message that was sent to you will be displayed in the panel.
 
-4. In the box at the bottom of the panel, enter your reply and press Enter or click *Send*.
+1. In the box at the bottom of the panel, enter your reply and press Enter or click *Send*.

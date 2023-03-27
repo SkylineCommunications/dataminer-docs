@@ -156,3 +156,7 @@ Using the statusCode attribute, you can specify the ID of the parameter in which
 The value of a header can be captured by defining a header (see Protocol.HTTP.Session.Connection.Request.Headers.Header) and specifying the name of the header and the ID of the parameter in which the value should be put.
 
 The message body can be captured by specifying the ID of the parameter in which the body should be put in Content (see Protocol.HTTP.Session.Connection.Response.Content).
+
+## See also
+
+- [Element Wizard](xref:ConnectionsIntroduction#element-wizard) for recommended HTTP(S) PortSettings

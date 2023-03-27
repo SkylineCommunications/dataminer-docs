@@ -1,77 +1,35 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{D70FC89C-1D57-49CC-9C28-B9628B12AA16}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Automation</RootNamespace>
     <AssemblyName>Skyline.DataMiner.Library.Automation</AssemblyName>
-    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
-    <FileAlignment>512</FileAlignment>
-    <TargetFrameworkProfile />
+    <TargetFramework>net462</TargetFramework>
+    <AssemblyTitle>Automation</AssemblyTitle>
+    <Product>Automation</Product>
+    <Copyright>Copyright ©  2018</Copyright>
+    <DocumentationFile>bin\$(Configuration)\Skyline.DataMiner.Library.Automation.xml</DocumentationFile>
+    <OutputPath>bin\$(Configuration)\</OutputPath>
+    <PlatformTarget>x86</PlatformTarget>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <Prefer32Bit>false</Prefer32Bit>
-    <DocumentationFile>bin\Debug\Skyline.DataMiner.Library.Automation.xml</DocumentationFile>
     <CodeAnalysisRuleSet>..\CustomSonarLintRules\SonarLint-QuickActions-Active.ruleset</CodeAnalysisRuleSet>
-    <PlatformTarget>x86</PlatformTarget>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <Prefer32Bit>false</Prefer32Bit>
-    <DocumentationFile>bin\Release\Skyline.DataMiner.Library.Automation.xml</DocumentationFile>
-    <CodeAnalysisRuleSet>
-    </CodeAnalysisRuleSet>
-    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisRuleSet />
   </PropertyGroup>
   <PropertyGroup>
-   <LangVersion>6</LangVersion>
+    <LangVersion>6</LangVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Skyline\DataMiner\Library\Automation\Extensions\ConnectionExtension.cs" />
-    <Compile Include="Skyline\DataMiner\Library\Automation\Extensions\IEngineExtensions.cs" />
+    <ProjectReference Include="..\Common\Common.csproj" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Common\Common.csproj">
-      <Project>{89c74926-47d8-4f38-b33d-7a9ca8cb92cd}</Project>
-      <Name>Common</Name>
-    </ProjectReference>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="Skyline.DataMiner.Dev.Automation" Version="10.2.6.4" />
+    <PackageReference Include="Skyline.DataMiner.Dev.Common" Version="10.2.6.4" />
   </ItemGroup>
-  <ItemGroup>
-    <PackageReference Include="Newtonsoft.Json">
-      <Version>13.0.1</Version>
-    </PackageReference>
-    <PackageReference Include="Skyline.DataMiner.Dev.Automation">
-      <Version>10.2.6.4</Version>
-    </PackageReference>
-    <PackageReference Include="Skyline.DataMiner.Dev.Common">
-      <Version>10.2.6.4</Version>
-    </PackageReference>
-  </ItemGroup>
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

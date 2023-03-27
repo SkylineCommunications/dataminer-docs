@@ -4,13 +4,16 @@ uid: WS_v1_examples
 
 # Examples
 
-## SOAP
+## SOAP examples
 
 ### CreateElement request
 
 ```xml
-POST https://dma.local/API/v1/Soap.asmx
-Content-Type: text/xml
+POST https://dma.local/api/v1/soap.asmx HTTP/1.1
+Host: localhost
+Content-Type: text/xml; charset=utf-8
+Content-Length: length
+SOAPAction: "http://www.skyline.be/api/v1/CreateElement"
 
 <soap:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
     <soap:Body>
@@ -75,8 +78,11 @@ Content-Type: text/xml
 ### GetAlarms request
 
 ```xml
-POST https://dma.local/API/v1/Soap.asmx
-Content-Type: text/xml
+POST https://dma.local/api/v1/soap.asmx HTTP/1.1
+Host: localhost
+Content-Type: text/xml; charset=utf-8
+Content-Length: length
+SOAPAction: "http://www.skyline.be/api/v1/GetAlarms"
 
 <soap:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
     <soap:Body>
@@ -103,7 +109,7 @@ Content-Type: text/xml
 </soap:Envelope>
 ```
 
-## JSON
+## JSON examples
 
 ### CreateElement request
 

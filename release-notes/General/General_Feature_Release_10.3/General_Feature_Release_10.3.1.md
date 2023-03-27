@@ -14,7 +14,7 @@ uid: General_Feature_Release_10.3.1
 
 ## Highlights
 
-#### Dashboards app & low-code apps: Icon component [ID_34867]
+#### Dashboards app & Low-Code Apps: Icon component [ID_34867]
 
 <!-- MR 10.4.0 - FR 10.3.1 -->
 
@@ -333,7 +333,7 @@ protected virtual void OnCrossPointsSetViaLockOverrideFromUI(Skyline.DataMiner.L
 
 #### SLNetClientTest tool - 'Connect' window: Enhanced 'Connection Type' and 'Authentication' sections [ID_34712]
 
-<!-- MR 10.4.0 - FR 10.3.1 -->
+<!-- MR 10.3.0 - FR 10.3.1 -->
 
 In the *SLNetClientTest* tool, to connect to a DataMiner Agent, you select *Connection* > *Connect*, and specify the necessary information in the *Connect* window. That window has now been updated.
 
@@ -421,7 +421,7 @@ Please note the following:
 
 #### Enhanced parameter locking in SLElement [ID_34688]
 
-<!-- MR 10.3.0 - FR 10.3.1 [CU0] -->
+<!-- MR 10.2.0 [CU12] - FR 10.3.1 [CU0] -->
 
 In SLElement, a number of enhancements have been made with regard to parameter locking.
 
@@ -475,6 +475,12 @@ Web apps now support trending of string parameters and exceptions.
 
 Because of a number of enhancements, overall performance has increased when retrieving DomInstances that have a DomBehaviorDefinition.
 
+#### BREAKING CHANGE - Dashboards app & Low-Code Apps - GQI: Certain cell values in a GQI query result will no longer include the object type [ID_34895]
+
+<!-- MR 10.2.0 [CU10] - FR 10.3.1 -->
+
+Previously, cell values of GQI result rows for DomInstanceIds, DomDefinitionIds, ProfileInstanceIds, and ProfileDefinitionIds contained both the display value of the GUID and the object type (e.g. "DomDefinitionId[00000000-0000-0000-0000-000000000000]"). Now the cell value will only contain the display value of the GUID.
+
 #### SLAnalytics: Enhanced automatic evaluation of trend predictions [ID_34901]
 
 <!-- MR 10.3.0 - FR 10.3.1 -->
@@ -520,11 +526,11 @@ Creating element-object for <x> failed with <y>.
 
 #### SLAnalytics: Number of 'GetParameterMessages' requests has been optimized [ID_34936]
 
-<!-- MR 10.4.0 - FR 10.3.1 -->
+<<!-- MR 10.3.0 [CU1] - FR 10.3.1 -->
 
 The number of *GetParameterMessages* sent by SLAnalytics in order to check whether a trended table parameter is still active has been optimized.
 
-#### Dashboards app & low-code apps: A table row with a column containing a parameter table index is now capable of feeding a linked parameter [ID_34957]
+#### Dashboards app & Low-Code Apps: A table row with a column containing a parameter table index is now capable of feeding a linked parameter [ID_34957]
 
 <!-- Main Release Version 10.2.0 [CU10] - Feature Release Version 10.3.1 -->
 
@@ -578,7 +584,7 @@ From now on, when a GQI query has to retrieve DCF interfaces, it will do so by q
 
 #### Problem with SLElement when a trend template was being assigned [ID_34824]
 
-<!-- MR 10.3.0 - FR 10.3.1 -->
+<!-- MR 10.2.0 [CU12] - FR 10.3.1 -->
 
 In some cases, an error could occur in SLElement when a trend template was being assigned.
 
@@ -596,7 +602,7 @@ From now on, only unknown Elasticsearch errors will be logged in the *SLSearch.t
 
 During a Cassandra Cluster migration, SLDataGateway would leak memory due to paging handlers not being cleaned up correctly.
 
-#### Dashboards app & low-code apps: Contents of colored table cells would incorrectly not be visible when conditional coloring was applied and actions had been configured [ID_34842]
+#### Dashboards app & Low-Code Apps: Contents of colored table cells would incorrectly not be visible when conditional coloring was applied and actions had been configured [ID_34842]
 
 <!-- MR 10.2.0 [CU10] - FR 10.3.1 -->
 
@@ -634,21 +640,13 @@ When an HTTP request is sent, in some cases, WinHTTP can incorrectly throw a `SE
 
 From now on, when this error is thrown, DataMiner will retry the HTTP request the number of times specified for the HTTP connection in question.
 
-#### Low-code apps: Problem with 'Close a panel' action [ID_34892]
+#### Low-Code Apps: Problem with 'Close a panel' action [ID_34892]
 
 <!-- MR 10.3.0 - FR 10.3.1 -->
 
 When a *Close a panel* action was configured as a post action on a button component, in some cases, it would incorrectly not cause the panel to close.
 
-#### Dashboards app & low-code apps - GQI: Certain cell values in a GQI query result would incorrect include the object type [ID_34895]
-
-<!-- MR 10.2.0 [CU10] - FR 10.3.1 -->
-
-In some cases, cell values in a GQI query result would incorrect include the object type. This was the case for DOM instance IDs, DOM definition IDs, profile instance IDs and profile definition IDs.
-
-For example, a cell value would incorrectly be set to "DomDefinitionId[00000000-0000-0000-0000-000000000000]" while the display value was actually "00000000-0000-0000-0000-000000000000".
-
-#### Dashboards & low-code apps: Decimal values would incorrectly not be allowed in range filters [ID_34897]
+#### Dashboards & Low-Code Apps: Decimal values would incorrectly not be allowed in range filters [ID_34897]
 
 <!-- MR 10.3.0 - FR 10.3.1 -->
 
@@ -663,13 +661,13 @@ In some cases, a range filter in a query filter or a table column filter would i
 
 In some cases, an error could occur in SLElement when a parameter update was being processed while an element was starting up.
 
-#### Low-code apps: 'Fetch the data' action of a table component would resolve too soon [ID_34902]
+#### Low-Code Apps: 'Fetch the data' action of a table component would resolve too soon [ID_34902]
 
 <!-- MR 10.2.0 [CU10] - FR 10.3.1 -->
 
 In some cases, a *Fetch the data* action of a table component would resolve too soon. This would cause post actions to be executed while the data was still being retrieved. From now on, the *Fetch the data* action will resolve when all data is retrieved.
 
-#### Dashboards & low-code apps: Feed component selections would incorrectly be lost after applying a built-in theme [ID_34908]
+#### Dashboards & Low-Code Apps: Feed component selections would incorrectly be lost after applying a built-in theme [ID_34908]
 
 <!-- MR 10.3.0 - FR 10.3.1 -->
 
@@ -683,7 +681,7 @@ When the JAVA_HOME variable was not set, SLLogCollector would become unresponsiv
 
 From now on, when SLLogCollector times out after executing a nodetool command, it will log a timeout message in its log file and proceed.
 
-#### Dashboards app & low-code apps - Table component: Data of different types displayed in the same row would not get fed correctly to linked feed components [ID_34915]
+#### Dashboards app & Low-Code Apps - Table component: Data of different types displayed in the same row would not get fed correctly to linked feed components [ID_34915]
 
 <!-- MR 10.2.0 [CU10] - FR 10.3.1 -->
 
@@ -697,7 +695,7 @@ Moreover, in some cases, the table would even not be able to feed the data in it
 
 The SLDataGateway process periodically checks the status of the local Cassandra node by executing a `nodetool status` command and parsing the result. When Cassandra was still starting up, some values in the output could not always be parsed, leading to SLDataGateway incorrectly marking the database as unavailable.
 
-#### Dashboards & low-code apps: Not possible to group the data in a timeline populated using a query with a query filter [ID_34932]
+#### Dashboards & Low-Code Apps: Not possible to group the data in a timeline populated using a query with a query filter [ID_34932]
 
 <!-- MR 10.3.0 - FR 10.3.1 -->
 
@@ -730,7 +728,7 @@ In some cases, an incorrect credential library GUID could get stored in the *Ele
 
 When the time window of a line chart component showing trend data included a period in the future, the chart would incorrectly display non-existing data for that period in the future. From now on, the chart will stop at the current time.
 
-#### Dashboards app & low-code apps: Problem with 'Number of columns' input box [ID_34966]
+#### Dashboards app & Low-Code Apps: Problem with 'Number of columns' input box [ID_34966]
 
 <!-- Main Release Version 10.1.0 [CU22]/10.2.0 [CU10] - Feature Release Version 10.3.1 -->
 
@@ -767,16 +765,6 @@ When a column select or a column manipulation operator was applied before an agg
 <!-- MR 10.3.0 [CU0]/10.2.0 [CU10] - FR 10.3.1 -->
 
 In some cases, an error could occur in the Skyline Device Simulator when a proxy simulation was being run.
-
-#### Service & Resource Management: Problem when migrating resources containing properties with keys or values set to null [ID_35067]
-
-<!-- MR 10.3.0 - FR 10.3.1 [CU0] -->
-
-When resource data was being migrated to Elasticsearch, the following exception could be thrown when a resource or a resource pool contained properties with keys or values that were set to null.
-
-```txt
-2022/12/01 08:53:59.582|SLNet.exe|ResourceManager|ERR|0|6|System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.ArgumentException: value is not serializable to json
-```
 
 #### Protocols: Problem when working with large timer values and Timerbase [ID_35097]
 

@@ -2,19 +2,15 @@
 uid: Cube_Feature_Release_10.3.2
 ---
 
-# DataMiner Cube Feature Release 10.3.2 – Preview
+# DataMiner Cube Feature Release 10.3.2
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 > For release notes for this release that are not related to DataMiner Cube, see [General Feature Release 10.3.2](xref:General_Feature_Release_10.3.2).
 
-## Highlights
-
-*No highlights have been selected for this release yet*
-
-## Other features
+## Features
 
 #### Trending - Pattern matching: Colors will now be used to differentiate how matches were detected [ID_34898] [ID_34947]
 
@@ -43,6 +39,53 @@ In the *Resources* app, resource pools will now have a filter box that allow you
 - When you select another resource pool while text is present in the filter box, the *Resources* tab and the *Occupancy* tab of that newly selected resource pool will automatically be filtered.
 - When an item in either the *Resources* tab or the *Occupancy* tab gets updated while a filter is applied, that item will only be shown if it matches the filter after the update.
 - To clear the filter box, you can either delete the text in the filter box or click the *Clear* button.
+
+#### Visual Overview - ListView: Highlighting rows based on booking color [ID_35157]
+
+<!-- MR 10.4.0 - FR 10.3.2 -->
+
+If you add "ColorRows=True" to the *ComponentOptions* shape data field of a ListView component, the highlight color of the list view rows will be set to the booking color.
+
+The booking color is a summary of the following reserved booking properties: *VisualForeground*, *VisualBackground*, *VisualSelectedForeground* and *VisualSelectedBackground*. Each of those properties can be set to a string value representing a hexadecimal value, an (A)RGB value or a predefined Windows color (the latter is not recommended).
+
+Configuring gray-tinted foreground colors is not recommended as a ListView component uses a gray layer when you hover over its items. In the Skyline themes, that gray layer has the following color:
+
+| Theme | Color of gray layer        |
+|-------|----------------------------|
+| Mixed | #E5E5E5 (RGB: 229,229,229) |
+| Light | #E5E5E5 (RGB: 229,229,229) |
+| Black | #333333 (RGB: 51,51,51)    |
+
+> [!NOTE]
+>
+> - The *ColorRows* feature is disabled by default ("ColorRows=False").
+> - At present, the *ColorRows* feature is only available on ListView components that have bookings as a source.
+
+#### Visual Overview: Visualizing EPM object statistics in a shape [ID_35222]
+
+<!-- MR 10.4.0 - FR 10.3.2 -->
+
+It is now possible to display the statistics of an EPM object in a shape linked to that EPM object.
+
+1. Link the shape to the EPM object via the *SystemName* and *SystemType* shape data fields.
+
+1. Add an asterisk character ("\*") in the shape text.
+
+1. Add a shape data field of type *Info* to the shape, and set its value to e.g. `EPM STATISTICS:###[#TotalAlarms]`.
+
+The following information can be displayed:
+
+```txt
+#TotalAlarms
+#CriticalAlarms
+#MajorAlarms
+#MinorAlarms
+#WarningAlarms
+#NormalAlarms
+#TimeoutAlarms
+#NoticeAlarms
+#ErrorAlarms
+```
 
 ## Changes
 
@@ -77,6 +120,28 @@ Failed to save your tag. The defined patterns cannot be linked into the multivar
 Up to now, when you exported real-time trend data to a CSV file, trend points with value "0" would not be included. From now on, those values will be exported as well.
 
 ### Fixes
+
+#### Service & Resource Management: Problem when Cube tried to retrieve SRM-related data to which the user did not have access [ID_34397]
+
+<!-- MR 10.3.0 - FR 10.3.2 -->
+
+Up to now, an exception could be thrown when DataMiner Cube tried to retrieve SRM-related data to which the user did not have access.
+
+From now on, when DataMiner Cube tries to retrieve SRM-related data to which the user does not have access, a message box will appear, asking the user to contact the system administrator. Also, each time this type of message box is displayed, an entry of type "warning" will be added to the Cube logging (`User X could not read object Y because the user does not have permission flag Z`).
+
+Overview of the read permissions needed to retrieve SRM-related data:
+
+| SRM-related data | Read permission                    |
+|------------------|------------------------------------|
+| Bookings         | Bookings > UI available            |
+| Functions        | Functions> UI available            |
+| Profiles         | Profiles > UI available            |
+| Resources        | Resources> UI available            |
+| Service profiles | Services > Profiles > UI available |
+| Services         | Services > UI available            |
+
+> [!NOTE]
+> Often, users will need a combination of the above-mentioned read permission for Cube to be able to retrieve the necessary SRM-related data.
 
 #### Profiles app: A profile instance would incorrectly list parameters that had been removed from the profile definition [ID_34679] [ID_34771]
 
@@ -161,3 +226,68 @@ When you removed a suggested parameter of type string from a trend graph, the li
 <!-- Main Release Version 10.1.0 [CU22]/10.2.0 [CU11] - Feature Release Version 10.3.2 -->
 
 When you opened a trend graph and left it open for a while, it would start to flicker when its data was updated.
+
+#### DataMiner Cube - Data Display: Tables of which the table parameter had its 'Filter' option set to false would incorrectly have a filter box [ID_35196]
+
+<!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
+
+When you opened an element card, tables of which the table parameter had its `Filter` option set to *false* in the element protocol would incorrectly have a filter box.
+
+From now on, table filter boxes will be shown or hidden depending on the following rules:
+
+| Protocol option    | Filter box |
+|--------------------|------------|
+| Filter:true        | Shown      |
+| Filter:false       | Not shown  |
+| Filter             | Shown      |
+| *No Filter option* | Not shown  |
+
+#### Surveyor: Problem when upgrading a view of which the name contains invalid characters [ID_35208]
+
+<!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
+
+When a view of which the name contained one of the below-mentioned characters was upgraded to a service, up to now, the *Upgrade to service* action would fail because those characters are not allowed in service names. The view would disappear, but the service would incorrectly not be created.
+
+```txt
+\ / : * ? " < > | ° ;
+```
+
+From now on, when you try to upgrade a view of which the name contains one of these characters, a pop-up window will appear, saying that the view name contains invalid characters. When you then click *OK*, the pop-up window will close and the view will switch to edit mode, allowing you to change its name.
+
+#### Visual Overview: Problem with conditional shape manipulation actions [ID_35211]
+
+<!-- MR 10.4.0 - FR 10.3.2 -->
+
+In some rare cases, conditional shape manipulation actions (e.g. Show, Hide, Rotate, Blink, etc.) would not be executed correctly.
+
+#### DataMiner Cube - Visual Overview: Parameter value displayed on a shape in history mode would not be updated when linked to a session variable [ID_35219]
+
+<!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
+
+When a shape is linked to a parameter via a session variable, the parameter value shown on the shape will be updated when the session variable is updated, and when the shape goes into history mode, the history value of the linked parameter will be shown. However, up to now, when the session variable was updated while the shape was in history mode, the parameter value would incorrectly not be updated.
+
+#### Element Connections app: Problems when creating or updating connections [ID_35228]
+
+<!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
+
+When, in the *Element Connections* app, you created a new connection or updated an existing connection, in some cases, duplicate connections would incorrectly be created or existing data would be modified incorrectly.
+
+Also, the *Element Connections* app has now been made fully compatible with the *Skyline Black* theme.
+
+#### Trending: 'Trending is currently not available ...' error would incorrectly be displayed while viewing the trend graph of an EPM object [ID_35234]
+
+<!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
+
+In some cases, a `Trending is currently not available for this parameter` error would incorrectly be displayed when you were viewing the trend graph of an EPM object.
+
+#### Visual Overview: Dynamically positioned shapes could no longer be re-arranged using drag-and-drop [ID_35241]
+
+<!-- MR 10.4.0 - FR 10.3.2 -->
+
+When, in a Visio drawing, shapes have been positioned dynamically based on properties, you can re-arrange those shapes manually by switching to *Arrange* mode and re-arranging the shapes using drag-and-drop. In some rare cases, it would no longer be possible to drag shapes to another location.
+
+#### DataMiner Cube - Visual Overview: Inline preset of spectrum component would no longer be applied [ID_35244]
+
+<!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
+
+When you had defined an inline preset while configuring an embedded spectrum component, that preset would no longer be applied. Instead, a `Please select at least one of the preset content items before clicking Load.` message would appear.

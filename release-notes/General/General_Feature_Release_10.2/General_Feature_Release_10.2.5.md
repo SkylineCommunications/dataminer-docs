@@ -464,6 +464,12 @@ Up to now, the GUIDs of the following types of DOM reference fields would be dis
 - DOM instances
 - Resources
 
+#### MessageBroker: Timeout value would incorrectly be ignored when using RequestResponse(Async) [ID_32810]
+
+<!-- MR 10.3.0 - FR 10.2.5 -->
+
+When, in the MessageBroker, RequestResponse(Async) was used when NATS was not yet connected, the specified timeout value would incorrectly be ignored. The timeout value would only be applied to the actual NATS communication and not to the potential reconnection logic.
+
 #### Dashboards app: Problem when sorting a table component populated by means of a GQI query \[ID_32814\]
 
 When you sorted a table component populated by means of a GQI query, in some cases, the sorting would be incorrect.

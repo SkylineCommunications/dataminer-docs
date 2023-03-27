@@ -13,6 +13,12 @@ The following sections provide more information on the DIS menu:
 - [Protocol \> Generate Class Library code](#protocol--generate-class-library-code)
 - [Protocol \> Convert to Solution...](#protocol--convert-to-solution)
 - [Automation script \> Generate Class Library code](#automation-script--generate-class-library-code)
+- [Plugins \> Generate driver help](#plugins--generate-driver-help)
+- [Plugins \> Add After Startup](#plugins--add-after-startup)
+- [Plugins \> Add matrix...](#plugins--add-matrix)
+- [Plugins \> Add SNMP System Info...](#plugins--add-snmp-system-info)
+- [Plugins \> Add SNMP Trap Receiver...](#plugins--add-snmp-trap-receiver)
+- [Plugins \> Add Table Context Menu...](#plugins--add-table-context-menu)
 - [Tool Windows \> DIS Tree View](#tool-windows--dis-tree-view)
 - [Tool Windows \> DIS Mappings View](#tool-windows--dis-mappings-view)
 - [Tool Windows \> DIS Macros](#tool-windows--dis-macros)
@@ -50,6 +56,7 @@ In the *DMA* submenu, you can find the following commands:
     You can import multiple protocols at once (even a combination of main protocols and DVE protocols). Select the protocols you want to import, and click *Import*. Each protocol will be opened in a separate tab.
 
     > [!NOTE]
+    >
     > - Use the filter box in the top-right corner to filter the list of protocols.
     > - In order to prevent users from accidentally publishing a DVE protocol, it is not possible to publish a DVE protocol from inside DIS. When DIS detects that the *Protocol/Name* tag contains a *parentProtocol* attribute and that it is not empty, publishing will fail and a warning message will appear.
     > - When DIS connects to a DataMiner Agent, it always uses polling.
@@ -62,6 +69,7 @@ In the *DMA* submenu, you can find the following commands:
     You can import multiple Automation scripts at once. Select the scripts you want to import, and click *Import*. Each script will be opened in a separate tab.
 
     > [!NOTE]
+    >
     > - Use the filter box in the top-right corner to filter the list of Automation scripts.
     > - When DIS connects to a DataMiner Agent, it always uses polling.
     > - If this *Import Automation script..* command is unavailable, you are not connected to a DMA. In the *DMA* menu, go to *Connect*, and click the DMA to which you want DIS to connect. See [DMA](xref:DIS_settings#dma)
@@ -97,6 +105,43 @@ As from v2.26, DIS offers two distinct ways of developing a DataMiner protocol. 
 ## Automation script \> Generate Class Library code
 
 See [Protocol \> Generate Class Library code](#protocol--generate-class-library-code).
+
+## Plugins \> Generate driver help
+
+Generates the driver help.
+
+## Plugins \> Add After Startup
+
+Adds the after startup logic to the protocol. DIS will check whether the protocol.xml file contains an after startup trigger, and will add one if none was found. Apart from the trigger, it will also add all remaining items of the after startup flow.
+
+See also [Executing a QAction after startup](xref:LogicExamples#executing-a-qaction-after-startup)
+
+## Plugins \> Add matrix...
+
+Adds a matrix and/or Inputs and Outputs tables to the protocol.
+
+## Plugins \> Add SNMP System Info...
+
+Adds the following SNMP System Info parameters to the protocol:
+
+- System Description (1.3.6.1.2.1.1.1)
+- System Object ID (1.3.6.1.2.1.1.2)
+- System Uptime (1.3.6.1.2.1.1.3)
+- System Name (1.3.6.1.2.1.1.5)
+- System Contact (1.3.6.1.2.1.1.4)
+- System Location (1.3.6.1.2.1.1.6)
+
+## Plugins \> Add SNMP Trap Receiver...
+
+Adds an SNMP trap receiver and a QAction with boilerplate code to process received traps.
+
+## Plugins \> Add Table Context Menu...
+
+Adds a custom context menu to a table in the protocol. You can choose between the following:
+
+- Rows Manager (User-definable Keys): A default context menu that provides add, duplicate, edit and delete functionality.
+- Rows Manager (Auto-incremented Keys): An extension of the previous type that allows developers to work with an auto-increment key parameter.
+- Custom: Opens a wizard that allows you to specify the options.
 
 ## Tool Windows \> DIS Tree View
 
@@ -475,7 +520,15 @@ If you click *Tool Windows \> DIS Diagram*, the *DIS Protocol Diagram* window wi
 
 This window shows a graphical representation of a protocol. It allows you to see how a protocol is built, navigate through its logic and investigate flow issues.
 
-When you open the tool window, you first have to select an item to start from: a parameter, a QAction, a session, a response, a group, a trigger, an action or a timer. You can then set the required depth, i.e. the number of levels you want to have displayed starting from the item you selected, and the type of diagram (BoundedFR, EfficientSugiyama, FR, ISOM, KK, LinLog, LeftRightTree or TopBottomTree).
+When you open the tool window, you first have to select an item to start from: a parameter, a QAction, a session, a response, a group, a trigger, an action or a timer. You can then set the required depth (i.e. the number of items you want to have displayed starting from or ending with the item you selected), the direction (see the table below) and the type of diagram (BoundedFR, EfficientSugiyama, FR, ISOM, KK, LinLog, LeftRightTree or TopBottomTree).
+
+| Direction | Description |
+|-----------|-------------|
+| Forward   | Shows the specified\* number of linked items starting from the item you selected. |
+| Reverse   | Shows the specified\* number of linked items ending with the item you selected.   |
+| Both      | Shows the specified\* number of linked items starting from the item you selected, as well as the specified\* number of linked items ending with the item you selected. |
+
+*\* The value entered in the Depth box.*
 
 In the diagram itself, each item (parameter, QAction, session, response, group, trigger, action, timer) is represented by a box with a particular icon and color, showing the ID and name of the item.
 

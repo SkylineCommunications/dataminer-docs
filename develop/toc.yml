@@ -2,6 +2,7 @@
   topicUid: DevelopmentGuide
   items:
   - name: Connectors
+    topicUid: Introduction
     items:
     - name: Introduction
       topicUid: Introduction
@@ -228,24 +229,37 @@
       - name: Custom table context menu
         topicUid: UIComponentsCustomTableContextMenu
       - name: Matrix
-        topicUid: UIComponentsMatrix
         items:
-        - name: Matrix parameters
-          topicUid: UIComponentsMatrixParameters
-        - name: Composing crosspoints on matrix parameters
-          topicUid: UIComponentsMatrixComposingCrosspoints
-        - name: Setting crosspoints
-          topicUid: UIComponentsMatrixSettingCrosspoints
-        - name: Dynamically changing matrix configuration
-          topicUid: UIComponentsMatrixChangeConfiguration
-        - name: Setting input/output names via a table
-          topicUid: UIComponentsMatrixSettingNames
-        - name: Discreet info
-          topicUid: UIComponentsMatrixDiscreetInfo
-        - name: Matrix development using DIS
-          topicUid: UIComponentsMatrixDis
-        - name: Exercise
-          topicUid: UIComponentsMatrixExercise
+          - name: Standard matrix
+            topicUid: UIComponentsMatrix
+            items:
+            - name: Matrix parameters
+              topicUid: UIComponentsMatrixParameters
+            - name: Composing crosspoints on matrix parameters
+              topicUid: UIComponentsMatrixComposingCrosspoints
+            - name: Setting crosspoints
+              topicUid: UIComponentsMatrixSettingCrosspoints
+            - name: Dynamically changing matrix configuration
+              topicUid: UIComponentsMatrixChangeConfiguration
+            - name: Setting input/output names via a table
+              topicUid: UIComponentsMatrixSettingNames
+            - name: Discreet info
+              topicUid: UIComponentsMatrixDiscreetInfo
+            - name: Matrix development using DIS
+              topicUid: UIComponentsMatrixDis
+            - name: Exercise
+              topicUid: UIComponentsMatrixExercise
+          - name: Table-based matrix
+            topicUid: UIComponentsTableMatrix
+            items:
+            - name: Matrix parameter
+              topicUid: UIComponentsTableMatrixParameter
+            - name: Matrix Inputs Table parameter
+              topicUid: UIComponentsTableMatrixInputsTableParameter
+            - name: Matrix Outputs Table parameter
+              topicUid: UIComponentsTableMatrixOutputsTableParameter
+            - name: Matrix Helper
+              topicUid: UIComponentsTableMatrixHelper
       - name: Tree control
         topicUid: UIComponentsTreeControl
         items:
@@ -529,6 +543,7 @@
     - name: Questions & Answers
       topicUid: QuestionsAndAnswers
     - name: How-tos
+      topicUID: How_to_aggregate_alarm_severities
       items:
       - name: How to aggregate alarm severities
         topicUID: How_to_aggregate_alarm_severities
@@ -559,6 +574,7 @@
       - name: How to use the element log in connector integrations
         topicUID: How_to_use_the_element_log_in_connector_integrations
     - name: Troubleshooting
+      topicUID: Investigating_a_protocol_thread_RTE
       items:
       - name: Investigating a protocol thread RTE
         topicUID: Investigating_a_protocol_thread_RTE
@@ -578,6 +594,7 @@
         - name: Identifying the source of an exception
           topicUID: Identifying_the_source_of_an_exception
       - name: Use cases
+        topicUID: Debugging_connectors_Element_connections
         items:
         - name: Debugging connectors - element connections
           topicUID: Debugging_connectors_Element_connections
@@ -649,7 +666,10 @@
       items:
       - name: How to make your Automation scripts debug ready
         topicUID: How_to_make_your_automation_scripts_debug_ready
+      - name: Getting started with the IAS Toolkit
+        topicUID: Getting_Started_with_the_IAS_Toolkit
   - name: Class Library
+    topicUid: ClassLibraryIntroduction
     items:
     - name: Class library introduction
       topicUid: ClassLibraryIntroduction
@@ -682,6 +702,7 @@
   topicUid: ApiDocumentation
   items:
   - name: Namespaces
+    topicUid: Skyline.DataMiner.Scripting
     items:
     - name: Skyline.DataMiner.Scripting
       topicUid: Skyline.DataMiner.Scripting
@@ -700,6 +721,7 @@
     - name: Tamir.SharpSsh
       topicUid: Tamir.SharpSsh
   - name: Notify types
+    topicUid: NTNotifyTypesOverview
     items:
     - name: NT notify types
       topicUid: NTNotifyTypesOverview
@@ -962,11 +984,17 @@
       - name: DMS_GET_ELEMENTS_USING_PROTOCOL
         topicUid: DMS_GET_ELEMENTS_USING_PROTOCOL
   - name: Error codes
+    topicUid: DataMinerErrorCodes
     items:
     - name: DataMiner error codes
       topicUid: DataMinerErrorCodes
     - name: Error codes table
       topicUid: ErrorCodeTable
+    - name: Extension modules error codes
+      topicUid: CommunicationGateway_ErrorCodes
+      items:
+      - name: CommunicationGateway error codes
+        topicUid: CommunicationGateway_ErrorCodes
 - name: Schema reference
   topicUid: SchemaReference
   items:
@@ -2065,6 +2093,49 @@
               items: 
               - name: Param
                 topicUid: Protocol.Params.Param.Length.Content.Param
+          - name: Matrix
+            topicUid: Protocol.Params.Param.Matrix
+            items: 
+            - name: Inputs
+              topicUid: Protocol.Params.Param.Matrix.Inputs
+              items: 
+              - name: '@tablePid'
+                topicUid: Protocol.Params.Param.Matrix.Inputs-tablePid
+              - name: Mappings
+                topicUid: Protocol.Params.Param.Matrix.Inputs.Mappings
+                items: 
+                - name: Mapping
+                  topicUid: Protocol.Params.Param.Matrix.Inputs.Mappings.Mapping
+                  items: 
+                  - name: '@name'
+                    topicUid: Protocol.Params.Param.Matrix.Inputs.Mappings.Mapping-name
+                  - name: '@type'
+                    topicUid: Protocol.Params.Param.Matrix.Inputs.Mappings.Mapping-type
+            - name: MatrixOptions
+              topicUid: Protocol.Params.Param.Matrix.MatrixOptions
+              items: 
+              - name: MatrixOption
+                topicUid: Protocol.Params.Param.Matrix.MatrixOptions.MatrixOption
+                items: 
+                - name: '@name'
+                  topicUid: Protocol.Params.Param.Matrix.MatrixOptions.MatrixOption-name
+                - name: '@type'
+                  topicUid: Protocol.Params.Param.Matrix.MatrixOptions.MatrixOption-type
+            - name: Outputs
+              topicUid: Protocol.Params.Param.Matrix.Outputs
+              items: 
+              - name: '@tablePid'
+                topicUid: Protocol.Params.Param.Matrix.Outputs-tablePid
+              - name: Mappings
+                topicUid: Protocol.Params.Param.Matrix.Outputs.Mappings
+                items: 
+                - name: Mapping
+                  topicUid: Protocol.Params.Param.Matrix.Outputs.Mappings.Mapping
+                  items: 
+                  - name: '@name'
+                    topicUid: Protocol.Params.Param.Matrix.Outputs.Mappings.Mapping-name
+                  - name: '@type'
+                    topicUid: Protocol.Params.Param.Matrix.Outputs.Mappings.Mapping-type
           - name: Measurement
             topicUid: Protocol.Params.Param.Measurement
             items: 
@@ -3444,13 +3515,11 @@
   - name: Web Services (v1)
     topicUid: WS_v1
     items:
-      - name: About the Web Services (v1)
-        topicUid: WS_About_v1
+      - name: Using the Web Services (v1)
+        topicUid: Using_the_Web_Services_v1
         items:
           - name: Using the Web Services (v1)
             topicUid: Using_the_Web_Services_v1
-          - name: Interfaces and WSDL files
-            topicUid: Interfaces_and_WSDL_files
           - name: Examples
             topicUID: WS_v1_examples
       - name: Methods (v1)
@@ -4946,6 +5015,8 @@
               topicUid: Integrity_constraints
             - name: Preserve state option
               topicUid: Preserve_state_option
+            - name: Clear Table Data on Polling Disable
+              topicUID: Clear_Table_Data_on_Polling_Disable
         - name: Parameters
           topicUid: Parameters3
           items:
@@ -5015,9 +5086,145 @@
           topicUid: Skyline_Driver_Passport_Platform
         - name: Minimum DMA version
           topicUid: Minimum_DMA_version
+- name: CI/CD
+  topicUid: CICD
+  items:
+  - name: CI/CD using GitHub
+    topicUid: CICD_on_GitHub
+    items:
+    - name: GitHub starter workflows
+      topicUid: github_starter_workflows
+    - name: GitHub validation requirements
+      topicUid: github_validation_requirements
+    - name: Deploying from GitHub
+      topicUid: Deploying_Automation_scripts_from_a_GitHub_repository
+    - name: GitHub reusable workflows
+      topicUid: github_reusable_workflows
+      items:
+      - name: Reusable workflow Automation scripts
+        topicUid: github_reusable_workflows_automation_master_workflow
+      - name: Reusable workflow NuGet solutions
+        topicUid: github_reusable_workflows_nuget_solution_master_workflow
+      - name: Reusable workflow SRM function
+        topicUid: github_reusable_workflows_srm_function_master_workflow
+  - name: CI/CD using GitLab
+    topicUid: Deploying_Automation_scripts_from_a_GitLab_repository
+    items:
+    - name: Deploying from GitLab
+      topicUid: Deploying_Automation_scripts_from_a_GitLab_repository
+  - name: CI/CD at Skyline Communications
+    topicUid: CICD_at_Skyline
+    items:
+    - name: CI/CD Skyline Communications GitHub
+      topicUid: migration_from_gerrit_to_github
+      items:
+        - name: Migration From Gerrit to GitHub
+          topicUid: migration_from_gerrit_to_github
+        - name: GitHub Guidelines
+          topicUid: Using_GitHub_for_CICD
+    - name: CI/CD Skyline Communications Gerrit and Jenkins
+      topicUid: High-level_overview
+      items:
+      - name: High-level overview
+        topicUid: High-level_overview
+      - name: Components
+        topicUid: Gerrit
+        items:
+        - name: Gerrit
+          topicUid: Gerrit
+        - name: Jenkins
+          topicUid: Jenkins
+        - name: SonarQube
+          topicUid: SonarQube
+      - name: Protocol development with CI/CD Pipeline
+        topicUid: Git_protocol_repositories
+        items:
+        - name: Git protocol repositories
+          topicUid: Git_protocol_repositories
+        - name: Pipeline stages for protocols
+          topicUid: Pipeline_stages_for_protocols
+      - name: Function development with CI/CD pipeline
+        topicUid: Pipeline_stages_for_functions
+        items:
+        - name: Pipeline stages for functions
+          topicUid: Pipeline_stages_for_functions
+      - name: Automation script development with CI/CD pipeline
+        topicUid: Automation_scripts_as_a_Visual_Studio_solution
+        items:
+        - name: Automation scripts as a Visual Studio solution
+          topicUid: Automation_scripts_as_a_Visual_Studio_solution
+        - name: Pipeline stages for Automation scripts
+          topicUid: Pipeline_stages_for_Automation_scripts
+        - name: Deploying Automation scripts from a repository
+          topicUid: Deploying_Automation_scripts_from_a_repository
+      - name: Visual overview development with CI/CD pipeline
+        topicUid: Pipeline_stages_for_visual_overviews
+        items:
+        - name: Pipeline stages for visual overviews
+          topicUid: Pipeline_stages_for_visual_overviews
+      - name: Dashboard Development with CI/CD pipeline
+        topicUid: Pipeline_stages_for_dashboards
+        items:
+        - name: Pipeline stages for dashboards
+          topicUid: Pipeline_stages_for_dashboards
+      - name: Custom solution development with CI/CD pipeline
+        topicUid: Pipeline_stages_for_custom_solutions
+        items:
+        - name: Pipeline stages for custom solutions
+          topicUid: Pipeline_stages_for_custom_solutions
+      - name: Install package development with CICD pipeline
+        topicUid: Creating_a_repository_for_an_install_package
+        items:
+        - name: Creating a repository for an install package
+          topicUid: Creating_a_repository_for_an_install_package
+        - name: Pipeline stages for install packages
+          topicUid: Pipeline_stages_for_install_packages
+      - name: FAQ
+        topicUid: FAQ
 - name: DataMiner Development Tools
   topicUid: TOOLS
   items:
+    - name: Application packages
+      topicUid: TOOApplicationPackages
+      items:
+      - name: Creating an application package
+        topicUID: Creating_an_app_package
+      - name: Installing an application package
+        topicUID: Installing_an_app_package
+      - name: Creating application package scripts
+        topicUID: Creating_app_package_scripts
+    - name: Change Element States Offline
+      topicUID: Change_Element_States_Offline
+    - name: Copy Element Data
+      topicUID: Copy_Element_Data
+    - name: DataMiner Application Package Builder
+      topicUid: TOODataMinerPackageBuilder
+      items:
+        - name: Installation
+          topicUid: Installation
+        - name: Use case
+          topicUid: Use_case
+        - name: Usage
+          topicUid: Usage
+          items:
+            - name: Content tab
+              topicUid: Content_tab
+            - name: DMAPP tab
+              topicUid: DMAPP_tab
+            - name: DMAPP (Legacy) tab
+              topicUid: DMAPP_Legacy_tab
+            - name: DMT tab
+              topicUid: DMT_tab
+            - name: Profiles
+              topicUid: Profiles
+            - name: DMAppBuilderConfig.xml
+              topicUid: DMAppBuilderConfig_xml
+            - name: CLI (legacy packages only)
+              topicUid: CLI_legacy_packages_only
+            - name: Logging
+              topicUid: Logging1
+    - name: DataMiner Development Packages
+      topicUid: TOODataMinerDevPackages
     - name: DataMiner Integration Studio
       topicUid: DIS
       items:
@@ -5037,6 +5244,8 @@
               topicUid: Installing_and_configuring_DataMiner_Integration_Studio
             - name: Configuring Microsoft Visual Studio
               topicUid: Configuring_Microsoft_Visual_Studio
+        - name: Protocols as a Visual Studio solution
+          topicUid: Protocols_as_a_Visual_Studio_solution
         - name: DIS menu
           topicUid: DIS_menu
         - name: XML editor
@@ -5089,108 +5298,14 @@
               topicUid: Microsoft_Visual_Studio_keyboard_shortcuts
             - name: Class Library packages
               topicUid: Class_Library_packages
-    - name: CI/CD
-      topicUid: DevelopmentWithCICD
-      items:
-        - name: High-level overview
-          topicUid: High-level_overview
-        - name: Components
-          topicUid: Components
-          items:
-            - name: Gerrit
-              topicUid: Gerrit
-            - name: Jenkins
-              topicUid: Jenkins
-            - name: SonarQube
-              topicUid: SonarQube
-        - name: Protocol development with CI/CD Pipeline
-          topicUid: Protocol_development_with_CI_CD_Pipeline
-          items:
-            - name: Protocols as a Visual Studio solution
-              topicUid: Protocols_as_a_Visual_Studio_solution
-            - name: Git protocol repositories
-              topicUid: Git_protocol_repositories
-            - name: Pipeline stages for protocols
-              topicUid: Pipeline_stages_for_protocols
-        - name: Function development with CI/CD pipeline
-          topicUid: Function_development_with_CI_CD_pipeline
-          items:
-            - name: Pipeline stages for functions
-              topicUid: Pipeline_stages_for_functions
-        - name: Automation script development with CI/CD pipeline
-          topicUid: Automation_script_development_with_CI_CD_pipeline
-          items:
-            - name: Automation scripts as a Visual Studio solution
-              topicUid: Automation_scripts_as_a_Visual_Studio_solution
-            - name: Pipeline stages for Automation scripts
-              topicUid: Pipeline_stages_for_Automation_scripts
-            - name: Deploying Automation scripts from a GitHub repository
-              topicUid: Deploying_Automation_scripts_from_a_GitHub_repository
-            - name: Deploying Automation scripts from a GitLab repository
-              topicUid: Deploying_Automation_scripts_from_a_GitLab_repository
-        - name: Visual overview development with CI/CD pipeline
-          topicUid: Visual_overview_development_with_CI_CD_pipeline
-          items:
-            - name: Pipeline stages for visual overviews
-              topicUid: Pipeline_stages_for_visual_overviews
-        - name: Dashboard Development with CI/CD pipeline
-          topicUid: Dashboard_Development_with_CI_CD_pipeline
-          items:
-            - name: Pipeline stages for dashboards
-              topicUid: Pipeline_stages_for_dashboards
-        - name: Custom solution development with CI/CD pipeline
-          topicUid: Custom_solution_development_with_CI_CD_Pipeline
-          items:
-            - name: Pipeline stages for custom solutions
-              topicUid: Pipeline_stages_for_custom_solutions
-        - name: Install package development with CICD pipeline
-          topicUid: Install_package_development_with_CICD_pipeline
-          items:
-            - name: Creating a repository for an install package
-              topicUid: Creating_a_repository_for_an_install_package
-            - name: Pipeline stages for install packages
-              topicUid: Pipeline_stages_for_install_packages
-        - name: FAQ
-          topicUid: FAQ
-    - name: DataMiner Application Package Builder
-      topicUid: TOODataMinerPackageBuilder
-      items:
-        - name: Installation
-          topicUid: Installation
-        - name: Use case
-          topicUid: Use_case
-        - name: Usage
-          topicUid: Usage
-          items:
-            - name: Content tab
-              topicUid: Content_tab
-            - name: DMAPP tab
-              topicUid: DMAPP_tab
-            - name: DMAPP (Legacy) tab
-              topicUid: DMAPP_Legacy_tab
-            - name: DMT tab
-              topicUid: DMT_tab
-            - name: Profiles
-              topicUid: Profiles
-            - name: DMAppBuilderConfig.xml
-              topicUid: DMAppBuilderConfig_xml
-            - name: CLI (legacy packages only)
-              topicUid: CLI_legacy_packages_only
-            - name: Logging
-              topicUid: Logging1
-    - name: Skyline Driver Passport Platform
-      topicUid: TOODriverPassportPlatform
-      items:
-        - name: Platform location
-          topicUid: Platform_location
-        - name: Platform capabilities
-          topicUid: Platform_capabilities
-        - name: Using the Driver Passport Platform
-          topicUid: Using_the_Driver_Passport_Platform
-        - name: Notifications
-          topicUid: Notifications
-        - name: Viewing test results
-          topicUid: Viewing_test_results
+    - name: DataStax DevCenter
+      topicUID: DataStax_DevCenter
+    - name: dnSpy
+      topicUID: dnSpy
+    - name: EBU LIST
+      topicUID: EBU_Live_IP_Software_Toolkit_LIST
+    - name: Interactive Automation Script Toolkit
+      topicUID: Interactive_Automation_Script_Toolkit
     - name: Nodetool
       topicUid: TOONodetool
       items:
@@ -5203,8 +5318,8 @@
           topicUid: Consuming_NuGet
         - name: Producing NuGet packages
           topicUid: Producing_NuGet
-        - name: Advanced assembly knowledge
-          topicUid: Advanced_Assembly_Knowledge
+        - name: Assembly binding
+          topicUid: Assembly_Binding
           items:
           - name: Compilation-time assembly binding
             topicUid: Compilation_Time_Assembly_Binding
@@ -5245,6 +5360,19 @@
               topicUid: Sending
         - name: Trap receiver
           topicUid: Trap_receiver
+    - name: Skyline Driver Passport Platform
+      topicUid: TOODriverPassportPlatform
+      items:
+        - name: Platform location
+          topicUid: Platform_location
+        - name: Platform capabilities
+          topicUid: Platform_capabilities
+        - name: Using the Driver Passport Platform
+          topicUid: Using_the_Driver_Passport_Platform
+        - name: Notifications
+          topicUid: Notifications
+        - name: Viewing test results
+          topicUid: Viewing_test_results
     - name: SLC SE Repository Manager
       topicUid: TOOSLCSERepositoryManager
       items:
@@ -5349,19 +5477,6 @@
           topicUid: Steps_taken_during_an_upgrade_operation
         - name: Actions that can be performed during an upgrade operation
           topicUid: Actions_that_can_be_performed_during_an_upgrade_operation
-    - name: Application packages
-      topicUid: TOOApplicationPackages
-      items:
-      - name: Creating an application package
-        topicUID: Creating_an_app_package
-      - name: Installing an application package
-        topicUID: Installing_an_app_package
-      - name: Creating application package scripts
-        topicUID: Creating_app_package_scripts
-    - name: DataMiner Development Packages
-      topicUid: TOODataMinerDevPackages
-    - name: Change Element States Offline
-      topicUID: Change_Element_States_Offline
 - name: DataMiner Device-Specific Integrations
   topicUid: DSI
   items:
@@ -5391,3 +5506,10 @@
           topicUid: DMS_protocol
         - name: Viewer
           topicUid: Viewer
+- name: Third-party integrations
+  topicUID: ThirdPartyIntegrations
+  items:
+    - name: Ansible
+      topicUid: Configure_DataMiner_using_Ansible
+    - name: Grafana
+      topicUid: Grafana_plugin

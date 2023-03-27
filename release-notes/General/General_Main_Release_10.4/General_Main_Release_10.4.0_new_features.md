@@ -320,6 +320,111 @@ All DOM objects (DomInstance, DomTemplate, DomDefinition, DomBehaviorDefinition,
 > - In the Elasticsearch database, existing data will not contain values for these new fields (except the *LastModified* field for all but *ModuleSettings*).
 > - All four fields are also available in the GQI data source *Object Manager Instances*. The *Last Modified* and *Created At* columns should show the time in the time zone of the browser.
 
+#### DataMiner Object Models: Action buttons can now be configured to launch an interactive Automation script when clicked [ID_35226]
+
+<!-- MR 10.4.0 - FR 10.3.3 -->
+
+An action button can now be configured to launch an interactive Automation script when clicked. To do so, set the *IsInteractive* property of the action to true.
+
+When such a button is clicked in a low-code app, the UI of the interactive Automation script will be displayed in a pop-up window on top of the low-code app.
+
+> [!NOTE]
+> One button can only execute one action. So, one button can only execute one interactive Automation script.
+
+#### DataMiner Object Models: New field descriptors [ID_35278]
+
+<!-- MR 10.4.0 - FR 10.3.3 -->
+
+Two new field descriptors have been added to the DataMiner Object Models:
+
+- GroupFieldDescriptor: Can be used to define that a field should contain the name of a DataMiner user group.
+
+- UserFieldDescriptor: Can be used to define that a field should contain the name of a DataMiner user. There is a *GroupNames* property that can be used to define which groups the user can be a part of.
+
+#### DataMiner upgrade: Additional prerequisite will now check for incompatible connectors [ID_35605]
+
+<!-- MR 10.4.0 - FR 10.3.4 -->
+
+When you start a DataMiner upgrade, the `ValidateConnectors` prerequisite will now scan the system for any connectors that are known to be incompatible with the DataMiner version to which the DataMiner Agent is being upgraded. If such connectors are found, they will have to be removed before you can continue with the upgrade.
+
+#### GQI - Ad hoc data source: Sending and receiving DMS messages [ID_35701]
+
+<!-- MR 10.4.0 - FR 10.3.4 -->
+
+Ad hoc data sources can now retrieve data by means of DMS messages.
+
+To do so, the `IGQIDataSource` must implement the `IGQIOnInit` interface, of which the `OnInit` method can also be used to initialize a data source:
+
+```csharp
+OnInitOutputArgs OnInit(OnInitInputArgs args)
+```
+
+When passed to the `OnInit` method, `OnInitInputArgs` can now contain the following new property:
+
+```csharp
+GQIDMS DMS
+```
+
+The `GQIDMS` class contains the following methods, which can be used to request information in the form of `DMSMessage` objects:
+
+| Method | Function |
+|--------|----------|
+| `DMSMessage SendMessage(DMSMessage message)` | Sends a request that expects a single response. |
+| `DMSMessage[] SendMessages(params DMSMessage[] messages)` | Sends multiple requests at once, or sends a request that expects multiple responses. |
+
+The `GQIDMS` object is only generated when the property is used.
+
+Generally, an ad hoc data source implementation will want to add a private field where it can store the `GQIDMS` object to be used later in other callbacks when columns and rows are created.
+
+> [!IMPORTANT]
+> DMS messages are subject to change without notice. If you can implement an alternative using the DataMiner UI or the automation options provided in DataMiner Automation, we highly recommend that you do so instead.
+
+#### GQI: New 'ThenSort by' query node allows sorting by multiple columns [ID_35807] [ID_35834]
+
+<!-- MR 10.4.0 - FR 10.3.5 -->
+
+To make sorting more intuitive, the new *ThenSort by* node can now be used in combination with the *Sort* node, which has now been renamed to *Sort by*.
+
+Up to now, all sorting had to be configured by means of *Sort* nodes. For example, if you wanted to first sort by column A and then by column B, you had to create a query in the following counter-intuitive way:
+
+1. Data source
+1. Sort by B
+1. Sort by A
+
+or
+
+1. Query X (i.e. Data Source, sorted by B)
+1. Sort by A
+
+From now on, you can create a query in a much more intuitive way. For example, if you want to first sort by column A and then by column B, you can now create a query in the following way:
+
+1. Data source
+1. Sort by A
+1. Then sort by B
+
+Note that, from now on, every *Sort by* node will nullify any preceding *Sort by* node. For example, in the following query, the *Sort by B* node will be nullified by the *Sort by A* node, meaning that the result set will only be sorted by column A.
+
+1. Data source
+1. Sort by B
+1. Sort by A
+
+> [!NOTE]
+> The behavior of existing queries (using e.g. *Sort by B* followed by *Sort by A*) will not be altered in any way. Their syntax will automatically be adapted when they are migrated to the most recent GQI version.
+> For example, an existing query using *Sort by B* followed by *Sort by A* will use *Sort by A* followed by *Then sort by B* after being migrated.
+
+### Correlation
+
+#### Correlation alarms will now by default contain the value of the alarm property by which they are grouped [ID_35583]
+
+<!-- MR 10.4.0 - FR 10.3.4 -->
+
+When a correlation rule is configured to use alarm grouping via an alarm property, from now on, the value of the alarm property by which the alarms are grouped will now by default be added to the correlated alarm.
+
+If you do not want the alarm property value to be added to the correlation alarm, then you can disable this behavior by adding the `NewAlarmOptions.DisableGroupedProperty` flag to the `NewAlarmActionDefinition.Properties` using the *SLNetClientTest* tool.
+
+> [!WARNING]
+> Always be extremely careful when using the *SLNetClientTest* tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
+
 ### Service & Resource Management
 
 #### Service & Resource Management: Exposers for resource capacities and capabilities [ID_34841]
@@ -379,31 +484,10 @@ Please note the following:
 
 ### Tools
 
-#### SLNetClientTest tool - 'Connect' window: Enhanced 'Connection Type' and 'Authentication' sections [ID_34712]
+#### SLLogCollector will now order the Standalone BPA Executor tool to execute all BPA tests available in the system [ID_35436]
 
-<!-- MR 10.4.0 - FR 10.3.1 -->
+<!-- MR 10.4.0 - FR 10.3.3 -->
 
-In the *SLNetClientTest* tool, to connect to a DataMiner Agent, you select *Connection* > *Connect*, and specify the necessary information in the *Connect* window. That window has now been updated.
+Each time the *SLLogCollector* tool is run, it will now order the *Standalone BPA Executor* tool to execute all BPA tests available in the system and store the results in the `C:\Skyline DataMiner\Logging\WatchDog\Reports\Pending Reports` folder.
 
-In the *Connection Type* section, you now have to indicate how the connection has to be established:
-
-| Select...              | in order to... |
-|------------------------|----------------|
-| Autodetect             | connect to the local machine or a remote machine using the method that will be detected automatically. |
-| gRPC                   | connect to the local machine or a remote machine via the APIGateway service using the GRPCWeb protocol.<br>When you choose this option, you can specify a custom port (default: `443`) and a custom endpoint (default: `/APIGateway`). |
-| .NET Remoting (legacy) | connect to the local machine or a remote machine using .NET Remoting.<br>When you choose this option, you can specify a custom port (default: `8004`) |
-| IPC (only local)       | connect to the local machine using IPC. |
-
-In the *Authentication* section (formerly known as *User Info* section), you now have the following authentication options:
-
-- Single sign-on
-
-    > [!NOTE]
-    > External authentication not yet supported.
-
-- Explicit credentials (with *Force Authenticate Local User* option)
-
-- Ticket
-
-> [!WARNING]
-> Always be extremely careful when using this tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
+The names of the files containing the test results will have the following format: `<BPA Name>_<Date(yyyy-MM-dd_HH)>`

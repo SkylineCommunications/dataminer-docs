@@ -4,6 +4,9 @@ uid: EPM_6.1.5_D-DOCSIS
 
 # EPM 6.1.5 D-DOCSIS - Preview
 
+> [!IMPORTANT]
+> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+
 ## New features
 
 #### Buttons to refresh and sort view tables [ID_34019]

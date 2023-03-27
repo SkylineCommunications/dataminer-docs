@@ -12,6 +12,12 @@ To go back to a previous version of a low-code app:
 
 1. Click the user icon in the top-right corner and select *Versions*. This will show the version history of the app.
 
+   - The currently published version, if any, is indicated with a green *Published* label. <!-- RN 32200 -->
+
+   - The current draft is indicated with an orange *Draft* label.
+
+   - No label is displayed for old draft versions that were never published.
+
 1. Click the version you want to go back to. You can also click the pencil icon next to that version in the list to immediately start editing it.
 
 > [!NOTE]
