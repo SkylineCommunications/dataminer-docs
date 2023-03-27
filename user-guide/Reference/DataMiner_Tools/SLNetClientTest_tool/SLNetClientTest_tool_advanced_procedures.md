@@ -11,6 +11,7 @@ The procedures below can be applied to troubleshoot issues. However, be very car
 - [Changing the number of records in the protocol cache](xref:SLNetClientTest_changing_number_records_protocol_cache)
 - [Changing the service template child element and child service limitations](xref:SLNetClientTest_changing_service_template_child_limitations)
 - [Checking or modifying the settings related to a Refused DMA state](xref:SLNetClientTest_refused_dma_state)
+- [Clearing alarms from the SLNet event cache](xref:SLNetClientTest_clear_from_event_cache)
 - [Comparing the views on two Agents in a DMS](xref:SLNetClientTest_comparing_views_on_two_dmas)
 - [Configuring how long alarm statistics are kept in memory](xref:SLNetClientTest_configuring_how_long_alarm_statistics)
 - [Configuring SMTP](xref:SLNetClientTest_configuring_SMTP)
