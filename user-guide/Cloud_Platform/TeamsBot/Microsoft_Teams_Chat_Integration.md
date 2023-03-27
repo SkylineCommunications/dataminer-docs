@@ -63,7 +63,7 @@ After you have made sure the above-mentioned prerequisites are in place, you can
 
 ## Limitations
 
-- Currently, you cannot send messages in fetched channels where the DataMiner Teams bot wasn't installed in the team. This will be indicated in the error when you try to send a channel notification. You can [manually install the DataMiner Teams bot in the team using Microsoft Teams](xref:DataMiner_Teams_bot#dataminer-teams-bot-installation) or use the create team functionality of chat integration to create another team with the DataMiner Teams bot automatically installed.
+- Currently, it is not possible to send messages in fetched channels for which the DataMiner Teams bot is not installed in the team. This will be indicated in the error when you try to send a channel notification. You can [manually install the DataMiner Teams bot in the team using Microsoft Teams](xref:DataMiner_Teams_bot#dataminer-teams-bot-installation) or use the create team functionality of chat integration to create another team with the DataMiner Teams bot automatically installed.
 
 ## Security
 
