@@ -87,7 +87,7 @@
     - name: Support Services
       topicUid: Overview_Support_DMS_M_and_S
       items:
-        - name: Support Plans
+        - name: Support plans
           topicUid: Overview_Support_Plans
         - name: Standard limited warranty
           topicUid: Overview_Support_warranty

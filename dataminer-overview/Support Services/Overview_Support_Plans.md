@@ -30,7 +30,7 @@ This is the standard support plan for users with perpetual-use licenses and subs
 
 ### Evolve
 
-The *Evolve* plan goes beyond standard support, adds improved response and corrective times, and offers a more personalized support as well as strategic guidance from our experts, including:
+The *Evolve* plan goes beyond standard support, adds improved response and corrective times, and offers more personalized support as well as strategic guidance from our experts, including:
 
 - A dedicated appointed support contact.
 - Direct message channel access (available on Microsoft Teams).
@@ -44,20 +44,18 @@ Because its foundation is mutual commitment, the Evolve plan is not sold as a se
 > [!NOTE]
 > The number of DevOps Points measured at the end of the calendar year is the number used in the next support renewal to determine the support plan, i.e. *Continuity* or *Evolve*.
 
-## Availability
+## Minimum requirements
 
-## Minimum Requirements  
+| Plan | Pay-per-use credits | Subscription plan | Perpetual-use licenses |
+|---|:-:|:-:|:-:|
+| Community | Included | Included | - |
+| Continuity | - | MUA >= 200 credits | Active Support Services agreement |
+| Evolve | - | MUA >= 200 credits <br>  **50,000 DevOps Credits** | Active Support Services agreement <br> **50,000 DevOps Credits**  |
 
-| Plan | Pay Per Use credits | Subscription Plan | Perpetual-Use Licenses |  
-|---|:-:|:-:|:-:|  
-| Community | Included | Included | - |  
-| Continuity | - | MUA >= 200 credits | Active Support Services Agreement | 
-| Evolve | - | MUA >= 200 credits <br>  **50.000 DevOps Credits** | Active Support Services Agreement <br> **50.000 DevOps Credits**  |  
+## Professional Service Credits
 
-## Professional Service Credits  
+Support plans may include free [Professional Service Credits](https://community.dataminer.services/professional-service-credits/) based on the commercial model and the number of licenses or usage.
 
-Support Plans may include free [professional service credits](https://community.dataminer.services/professional-service-credits/) based on the Commercial model and the number of licenses or usage.  
-
-| Pay Per Use credits | Subscription Plan | Perpetual-Use Licenses  
-|:-:|:-:|:-:|  
-| 50 for every 1000 credits |  100 < MUA < 200: 100 <br> 200 < MUA < 400: 200 <br> MUA >= 400: 600 | only available with Evolve plan <br> varies with the support's yearly net amount |  
+| Pay-per-use credits | Subscription plan | Perpetual-Use Licenses |
+|:-:|:-:|:-:|
+| 50 for every 1000 credits |  100 < MUA < 200: 100 <br> 200 < MUA < 400: 200 <br> MUA >= 400: 600 | Only available with Evolve plan <br> Varies with the support's yearly net amount |
