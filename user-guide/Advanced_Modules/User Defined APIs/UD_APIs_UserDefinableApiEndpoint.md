@@ -151,7 +151,7 @@ This section contains options specific to the DataMiner User-Definable APIs modu
 
 - **NatsSubject**: The subject used for internal NATS messaging. This should not be changed.
 
-- **SessionConfigPath**: The path to the *SLCLoud.xml* file.
+- **SessionConfigPath**: *Optional.* The path to the NATS config file. This will by default point to the `SLCloud.xml` file if not filled in.
 
 - **CredentialsConfigPath**: The path to the credentials used to connect to DataMiner over NATS.
 
@@ -164,7 +164,6 @@ For example, this is the default configuration:
   ...
   "UserDefinableAPIs": {
     "NatsSubject": "Skyline.DataMiner.Protobuf.Apps.UserDefinableApis.Api.v1.UserDefinableApiTriggerRequest",
-    "SessionConfigPath": "C:\\Skyline DataMiner\\SLCloud.xml",
     "CredentialsConfigPath": "C:\\Skyline DataMiner\\NATS\\nsc\\.nkeys\\creds\\DataMinerOperator\\DataMinerAccount\\DataMinerUser.creds",
     "MessageBrokerTimeOutSeconds": 300
   }
