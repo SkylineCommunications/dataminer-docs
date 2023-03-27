@@ -41,7 +41,7 @@ The WSDL files can be found on the following addresses.
 
 When SOAP requests are used, the URL should have the structure `http(s)://{DMA IP}/api/v1/soap.asmx`, regardless of which method is chosen.
 
-Note that the fields of each method need to be present within the method's name enclosing tag.
+Make sure all the input fields for a method are enclosed within the method's name tags.
 
 For examples, see [SOAP examples](xref:WS_v1_examples#soap-examples).
 
