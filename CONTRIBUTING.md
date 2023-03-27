@@ -114,6 +114,14 @@ Until a pull request is merged, everyone can review it and add comments of their
 
 For larger contributions, e.g. to add several new pages, we recommend that you install the following (free) software:
 
+- [Git](https://git-scm.com/downloads)
+
+  > [!NOTE]
+  >
+  > - Download Git **before you install GitHub Desktop** to ensure that GitHub Desktop bases its branches on the most recent version of the main branch. See: [GitHub Desktop keeps basing branches on an outdated version of 'main'](#github-desktop-keeps-basing-branches-on-an-outdated-version-of-main).
+  > - We recommend installing Git to get an overview of the branch and repository you are working on in the lower-left corner.
+      ![Git](~/images/Git.png)
+
 - [GitHub Desktop](https://desktop.github.com/)
 
 - [Visual Studio Code](https://code.visualstudio.com/) (with the [Learn Authoring Pack](https://marketplace.visualstudio.com/items?itemName=docsmsft.docs-authoring-pack) extension)
