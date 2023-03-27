@@ -2,30 +2,45 @@
 uid: SLNetClientTest_clear_from_event_cache
 ---
 
-# Clear Alarm from SLNet Event Cache
+# Clearing alarms from the SLNet event cache
 
-Below procedure avoids DMA restart in the case RTE alarms stayed present in the SLNet alarm event cache.
+In case RTE alarms remain present in the SLNet alarm event cache, you can use the procedure below to clear these without having to restart the DMA.
 
 To do:
 
-1. Get the Alarm ID from the alarm card. 
+1. In DataMiner Cube, get the alarm ID of the alarm you want to clear.
 
-   ![Get alarm id](~/images/Contrib_AlarmId.png)
+   You can do so by [making sure the Alarm ID column is displayed in the Alarm Console](xref:ChangingTheAlarmConsoleLayout#adding-or-removing-columns) and then copying the ID from there.
 
 1. [Connect to the DMA using the SLNetClientTest tool](xref:Connecting_to_a_DMA_with_the_SLNetClientTest_tool).
 
-1. Get the alarm details in order to find the cache key. 
-   
-   ![Get alarm details](~/images/Contrib_GetAlarmDetails.png)
+1. Go to the *Build Message* tab.
 
-1. With the cache key, open the *Clear From Event Cache* tool, in the *Advanced* menu, select *Clear From.* and then select *Event Cache*, to clear the alarm in all the DMAs. 
+1. In the *Message Type* drop-down list, select *GetAlarmDetailsMessage*.
 
-   ![Get alarm details](~/images/Contrib_ClearAlarmFromEventCache.png)
+1. Next to the *Int 32[] Array* for *AlarmIDs*, click the ... button.
 
-1. After execute the command, If you're logged in, you will need to logoff and re-login first before seeing any change.
+1. Click *Add*, fill in the alarm ID you retrieved earlier, and click *OK*.
 
-> [!NOTE]
-> From DataMiner 10.0.0 CU15/10.1.0 CU4/10.1.7 onwards, if DataMiner fails to automatically detect the SLNet target port (via port 80 or 443), the connection attempt will continue on the default port 8004. To skip this auto-detection and immediately use the default port 8004, you can set the connection string to *auto://nodetect*. This can for instance be useful in case port 80 is blocked between the DMAs.
+   ![Getting the alarm details](~/user-guide/images/SLNetClientTest_GetAlarmDetails.png)<br>
+   *Example of getting the alarm details in DataMiner 10.3.3*
+
+1. Click *Send Message*.
+
+1. In the *Properties* tab, select the latest message, and then select the *Grid* tab on the right.
+
+1. Copy the value next to *CacheKey*.
+
+1. In the menu at the top, select *Advanced* > *Clear From* > *Event Cache*.
+
+1. In the pop-up window, make sure *Message Type* is set to *AlarmEventMessage* and *Execute on Multiple Agents* is selected.
+
+1. Paste the value you have copied in the *Cache Key Start* box, and click *GO*.
+
+   ![Clearing alarms from the event cache](~/user-guide/images/SLNetClientTest_ClearAlarmFromEventCache.png)<br>
+   *Example of clearing an alarm from the event cache in DataMiner 10.3.3*
+
+1. If you are still logged in to DataMiner Cube, log out and log in again to see the change.
 
 > [!WARNING]
 > Always be extremely careful when using the SLNetClientTest tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
