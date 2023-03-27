@@ -13,7 +13,7 @@ Our documentation is open to contributions from any user. Contributions are crea
 
 ## General guidelines
 
-- Use **US English** spelling when you contribute to the DataMiner documentation.
+- Use **US English** spelling when you contribute to the DataMiner documentation. TEST 2
 
 - Try to conform to the [Microsoft Style Guide](https://docs.microsoft.com/en-us/style-guide/) as much as possible.
 
