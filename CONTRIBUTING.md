@@ -314,7 +314,12 @@ You can do so as follows:
 
 1. Click *Create pull request*.
 
-The Skyline documentation team will then need to merge your pull request, so that it becomes available in the branch for other people as well. This can take some time. We recommend that you enable notifications in your account settings so that you get a notification when the merge is done. When your pull request has been merged, others can continue to work on your changes as described above.
+The Skyline documentation team will then need to merge your pull request, so that it becomes available in the branch for other people as well. This can take some time. We recommend that you enable notifications in your account settings so that you get a notification when the merge is done.
+
+When your pull request has been merged, others can continue to work on your changes as described above.
+
+> [!IMPORTANT]
+> These changes will not be published on docs.datamminer.services until you make a final pull request where you select the main branch as the base.
 
 When all the necessary changes have been made and the draft branch is ready for publication, create a pull request as detailed above, but select the main branch instead of the draft branch as the base.
 
