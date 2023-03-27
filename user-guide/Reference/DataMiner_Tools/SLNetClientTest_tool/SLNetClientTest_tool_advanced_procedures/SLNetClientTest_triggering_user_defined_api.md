@@ -32,7 +32,7 @@ With the SLNetClientTest tool, you can trigger a user-defined API in order to te
    Your request will be sent, and the response will appear along with some stats and info about your request.
 
 > [!NOTE]
-> On the *Tokens* tab of the *User Defined APIs* window, you can see an overview of all the tokens and definitions.
+> On the *Tokens* tab of the *User-defined APIs* window, you can see an overview of all the tokens and definitions.
 >
 > ![Client Test Tool Screenshot](~/user-guide/images/UDAPIS_ClientTestTool.jpg)
 >
