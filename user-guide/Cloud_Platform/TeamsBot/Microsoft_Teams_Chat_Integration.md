@@ -40,6 +40,9 @@ If you want to create chat integration Automation scripts, you will need to make
 
 - [Admin consent must be granted](xref:Granting_admin_consent) in the [Admin app](https://admin.dataminer.services). You can revoke this consent at any time.
 
+> [!NOTE]
+> Regranting admin consent could be required to enable new released features. This will be indicated in [the dataminer.services change log](xref:DCP_change_log).
+
 ## Using chat integration
 
 The following features are available:
@@ -49,10 +52,10 @@ The following features are available:
 - Creating channels
 - Fetching all channels of a team
 - Adding members or owners to your teams
-- Sending notifications in the created channels in the name of the DataMiner Teams bot
+- Sending notifications in channels in the name of the DataMiner Teams bot
 - Creating a private chat between someone and the DataMiner Teams bot
 - Fetching a private chat between someone and the DataMiner Teams bot
-- Sending notifications in those private chats in the name of the DataMiner Teams bot
+- Sending notifications in private chats in the name of the DataMiner Teams bot
 
 To get started, you can find several example Automation scripts with more information on [GitHub](https://github.com/SkylineCommunications/ChatOps-Extensions/tree/main/ChatIntegrationExamples).
 
@@ -67,3 +70,6 @@ After you have made sure the above-mentioned prerequisites are in place, you can
 By granting [Admin consent](xref:Granting_admin_consent) from your Microsoft (Teams) tenant to "DataMiner" (i.e. Skyline Communications) in the [Admin app](https://admin.dataminer.services), you allow Skyline Communications to execute these chat integration actions. This includes creating teams, channels, and chats, fetching users, chats, etc.
 
 You can revoke this access at any time. See [Granting admin consent for Teams actions](xref:Granting_admin_consent).
+
+> [!NOTE]
+> Regranting admin consent could be required to enable new released features. This will be indicated in [the dataminer.services change log](xref:DCP_change_log).
