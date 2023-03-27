@@ -48,7 +48,11 @@ Especially the name and state of the index may be interesting for debugging purp
 
 ### Manually setting the replication count for indices
 
-With the queries below, you can alter the number of replicas (per shard) for indices matching the specific criteria. This is useful if you want to reduce your per-node shard count, and also if there are more replicas than the number of nodes, which can put an unnecessary strain on the system. You can also use it to customize the availability of your Elasticsearch database.
+The following commands allow you to alter the number of replicas per shard.
+This would typically be used to configure redundancy and availability based on the amount of Elasticsearch nodes you have available.
+
+!TIP
+If the amount of shards you have is too large, decreasing the amount of replicas per shard is one option to decrease the strain on the system.
 
 > [!NOTE]
 > This setting only applies for current data. It does not apply to new data. The newer data added by DataMiner will again have the default number of replicas.
@@ -111,8 +115,6 @@ PUT /all/_settings
 }
 ```
 
-> [!NOTE]
-> For Elasticsearch version 6.8.23, replace `PUT /all/_settings` with `PUT /*/_settings`. The former does not work with that version of Elasticsearch.
 
 ### Retrieving the number of hits + example records
 
