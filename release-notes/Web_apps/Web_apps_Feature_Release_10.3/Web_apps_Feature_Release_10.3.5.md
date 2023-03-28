@@ -189,7 +189,7 @@ Overall error handling has been improved when executing an interactive Automatio
 
 #### Security enhancements [ID_35965]
 
-<!-- MR 10.4.0 - FR 10.3.5 -->
+<!-- MR 10.3.0 [CU2] - FR 10.3.5 -->
 
 A number of security enhancements have been made.
 

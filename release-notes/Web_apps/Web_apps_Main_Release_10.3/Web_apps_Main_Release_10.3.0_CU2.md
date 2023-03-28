@@ -32,6 +32,12 @@ For example, up to now, when you selected the *Get elements* data source, follow
 
 Overall error handling has been improved when executing an interactive Automation script by clicking a DOM button in a web app.
 
+#### Security enhancements [ID_35965]
+
+<!-- MR 10.3.0 [CU2] - FR 10.3.5 -->
+
+A number of security enhancements have been made.
+
 ### Fixes
 
 #### Dashboards app: Sticky component menus would no longer be fully visible after you had changed the number of dashboard columns [ID_35702]
