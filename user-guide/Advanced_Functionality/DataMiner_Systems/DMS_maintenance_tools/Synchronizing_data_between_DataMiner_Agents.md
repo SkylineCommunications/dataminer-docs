@@ -16,15 +16,15 @@ To make a DMA synchronize its changes with other Agents in the cluster, you can 
 
 1. In Cube, go to *Apps* > *System Center.*
 
-2. In the *System Center* module, select the *Tools* page.
+1. In the *System Center* module, select the *Tools* page.
 
-3. In the second column, select *Synchronization*.
+1. In the second column, select *Synchronization*.
 
-4. In the drop-down list next to *Type*, make sure *This DataMiner Agent* is selected.
+1. In the drop-down list next to *Type*, make sure *This DataMiner Agent* is selected.
 
-5. Click the *Sync now* button at the bottom of the card.
+1. Click the *Sync now* button at the bottom of the card.
 
-6. In the confirmation window, click *Yes*.
+1. In the confirmation window, click *Yes*.
 
 > [!NOTE]
 > In a DMS with several Agents, if a sync from one DMA is initiated, it is possible that some Agents in the DMS are not fully synchronized. For example, in a DMS with 3 DMAs, DMA A, B and C, If DMA A is synchronized with the DMS, first DMA A and DMA B will be synchronized, then DMA A and DMA C will be synchronized. However, this means that if DMA C had a more recent file than DMA B, only DMA A and C will have this newest file. As such, in most circumstances, a DMS sync is to be preferred over a DMA sync.
