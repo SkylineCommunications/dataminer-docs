@@ -6,7 +6,7 @@ uid: contributing
 
 Welcome to the docs.dataminer.services contributor guide!
 
-Our documentation is open to contributions from any user. Contributions are created, reviewed, and merged via GitHub. This page will explain how you can add and review contributions, ranging from simple changes to a single page, to larger changes where entire sections of the documentation are added or modified. TEST 
+Our documentation is open to contributions from any user. Contributions are created, reviewed, and merged via GitHub. This page will explain how you can add and review contributions, ranging from simple changes to a single page, to larger changes where entire sections of the documentation are added or modified. TEST TESTING!
 
 > [!TIP]
 > Are you a member of the DataMiner DevOps Professional Program? Find out how you can [earn DevOps Points by contributing to the DataMiner docs](xref:Benefits_DevOps_Professionals_Program#accumulating-devops-points)!
