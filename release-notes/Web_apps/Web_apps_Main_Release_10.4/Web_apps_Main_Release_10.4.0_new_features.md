@@ -237,3 +237,11 @@ A default value can be set by means of a URL option:
   - `?data=<URL-encoded JSON object>`
 
 For more information on how to pass data using a JSON object, see [Specifying data input in an app URL](xref:Specifying_data_input_in_URL).
+
+#### Low-code apps - Line & area chart component: New 'Set timespan' action [ID_35933]
+
+<!-- MR 10.4.0 - FR 10.3.5 -->
+
+A 'Set timespan' action can now be configured for a line & area chart component. On execution, this action will apply a specific timespan to the component.
+
+This action has two numeric arguments: 'To' and 'From'. These can be either set to a static value or linked to a numeric value feed.

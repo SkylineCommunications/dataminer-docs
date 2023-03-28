@@ -187,6 +187,14 @@ For example, up to now, when you selected the *Get elements* data source, follow
 
 Overall error handling has been improved when executing an interactive Automation script by clicking a DOM button in a web app.
 
+#### Low-code apps - Line & area chart component: New 'Set timespan' action [ID_35933]
+
+<!-- MR 10.4.0 - FR 10.3.5 -->
+
+A 'Set timespan' action can now be configured for a line & area chart component. On execution, this action will apply a specific timespan to the component.
+
+This action has two numeric arguments: 'To' and 'From'. These can be either set to a static value or linked to a numeric value feed.
+
 #### Security enhancements [ID_35965]
 
 <!-- MR 10.3.0 [CU2] - FR 10.3.5 -->
@@ -253,6 +261,12 @@ Also, an error could be thrown when you tried to add an invalid query to a compo
 
 When you opened a visual overview in a web app, in some cases, the web app could become unresponsive.
 
+#### Dashboards app: Problem when an extra GetParameterTable call without ValueFilters was sent after sharing a dashboard with a state, ring or gauge component [ID_35844]
+
+<!-- MR 10.4.0 - FR 10.3.5 -->
+
+When a dashboard with a state, ring or gauge component was shared, in some cases, an error could be thrown when an extra `GetParameterTable` call without `ValueFilters` was sent.
+
 #### Dashboards app & Low-code apps: Text boxes in the Layout tab would not update when you selected another component [ID_35851]
 
 <!-- MR 10.3.0 [CU2] - FR 10.3.5 -->
@@ -314,3 +328,9 @@ When a clock component (analog or digital) was set to use server time, the clock
 <!-- MR 10.3.0 [CU2] - FR 10.3.5 -->
 
 When you first selected an action with a single component, which was selected automatically, and then selected an action with multiple components, up to now, both the action selection box and the component selection box would incorrectly be cleared.
+
+#### Low-code apps: Page names and panel names could incorrectly be empty [ID_35960]
+
+<!-- MR 10.4.0 - FR 10.3.5 -->
+
+Up to now, page names and panel names could incorrectly be empty. From now on, this will no longer be allowed.
