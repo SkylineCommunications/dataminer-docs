@@ -252,6 +252,15 @@ At SLA startup, in some cases, the active alarms would no longer be in sync with
 
 Also, a number of other minor fixes with regard to SLA management have been implemented.
 
+#### Problem when processing BPA test output [ID_35891]
+
+<!-- MR 10.4.0 - FR 10.3.5 -->
+<!-- Not added to MR 10.4.0 -->
+
+Each time the *SLLogCollector* tool is run, since DataMiner version 10.3.3, it orders the *Standalone BPA Executor* tool to execute all BPA tests available in the system and store the results in the `C:\Skyline DataMiner\Logging\WatchDog\Reports\Pending Reports` folder.
+
+In some cases, it would not be possible to process the output of some of those tests due to formatting issues.
+
 #### DataMinerException thrown the first time an InfoData message was deserialized [ID_35897]
 
 <!-- MR 10.3.0 [CU2] - FR 10.3.5 -->

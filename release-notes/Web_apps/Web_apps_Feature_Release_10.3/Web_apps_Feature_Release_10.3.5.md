@@ -311,6 +311,12 @@ From now on, the initial grouping will no longer be considered a modification. W
 
 A number of issues with regard to the "Loading" indicator have been fixed.
 
+#### Dashboards app & Low-code apps - GQI components: Problems when a GQI request failed [ID_35904]
+
+<!-- MR 10.2.0 [CU14] - FR 10.3.5 -->
+
+When a GQI request failed, some GQI components would show either an unrelated error or no error at all, while other GQI components would show a correct error but incorrect data.
+
 #### Web apps: Login button would incorrectly be disabled on Edge and Chrome [ID_35906]
 
 <!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
