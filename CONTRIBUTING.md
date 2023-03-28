@@ -31,7 +31,7 @@ On every page of the documentation on docs.dataminer.services, a *Propose change
 ![Propose changes link](~/images/Propose_Changes.png)
 
 1. Make sure you are logged in to GitHub.
-qdfsdf q
+
 1. On the page you intend to edit in GitHub, click the pencil button in the top-right corner.
 
    ![Pencil button](~/images/Contrib_PencilButton.png)
