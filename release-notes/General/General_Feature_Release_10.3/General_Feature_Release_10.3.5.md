@@ -150,7 +150,7 @@ Up to now, GQI data sources that require an Elasticsearch database used the `Dat
 
 #### Improved error handling when elements go into an error state [ID_35944]
 
-<!-- MR 10.3.0 [CU2] - FR 10.3.5 -->
+<!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
 
 When an element goes into an error state after an attempt to activate it failed, from now on, no more calls to SLProtocol, SLElement or SLSpectrum will be made for that element.
 
