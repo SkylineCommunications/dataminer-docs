@@ -169,6 +169,12 @@ From now on, the execution of the NATS installer at DMA startup will be skipped 
 > [!NOTE]
 > When an error occurs while running a WMI query, and no NATS/NAS service is running, NATS will not be installed automatically. A manual installation of NATS will be needed.
 
+#### Existing masked alarms would incorrectly affect the overall alarm severity of an element [ID_35678]
+
+<!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
+
+Existing masked alarms would incorrectly affect the overall alarm severity of an element.
+
 #### DateTime instances would not get serialized correctly when an SLNet connection supported protocol buffer serialization [ID_35777]
 
 <!-- MR 10.4.0 - FR 10.3.5 -->

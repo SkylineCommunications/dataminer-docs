@@ -104,3 +104,15 @@ From now on, when you drag several elements or services from a view card onto a 
 - **the items in any of its sub-views will be copied** to the view in the Surveyor.
 
 If you want to the items in the view to be **copied** to the view in the Surveyor instead of moved, keep the CTRL key pressed while dragging them.
+
+#### Trending - Pattern matching: Miscellaneous issues fixed [ID_35961]
+
+<!-- MR 10.3.0 [CU2] - FR 10.3.5 -->
+
+The following issues have all been fixed:
+
+- When you defined a new pattern while another was selected, no new pattern would be created. Instead, the existing pattern would be updated.
+
+- When you click the button above a pattern, a popup window will appear, allowing you to enter or change the name of the pattern. Up to now, this popup window could not be closed unless you saved the pattern. From now on, clicking the button above the pattern while the popup window is open will close it.
+
+  Up to now, this popup window would open when you hovered the mouse button over the pattern button and close when you moved the mouse button outside of the popup window. From now on, the only way to open the popup window will be to click the button above a pattern.
