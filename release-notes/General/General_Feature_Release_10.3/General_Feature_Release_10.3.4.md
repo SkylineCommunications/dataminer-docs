@@ -345,3 +345,9 @@ When an ElementProtocol object was being created, due to a caching issue in SLNe
 <!-- MR 10.4.0 - FR 10.3.4 [CU0] -->
 
 The native message broker code could leak memory when using the request/response workflow in combination with chunking. The message handlers would not be cleaned up after the response had been received.
+
+#### Handle in the Timer class would not be cleaned correctly [ID_35959]
+
+<!-- MR 10.4.0 - FR 10.3.4 [CU0] -->
+
+In some cases, a handle in the Timer class would not be cleaned correctly, causing handles to leak.

@@ -280,3 +280,9 @@ The native message broker code could leak memory when using the request/response
 <!-- MR 10.4.0 - FR 10.3.5 -->
 
 When a history alarm affected a closed outage to which a correction had been applied, the correction would incorrectly be increased. From now on, the correction will be left untouched.
+
+#### Handle in the Timer class would not be cleaned correctly [ID_35959]
+
+<!-- MR 10.4.0 - FR 10.3.4 [CU0] -->
+
+In some cases, a handle in the Timer class would not be cleaned correctly, causing handles to leak.
