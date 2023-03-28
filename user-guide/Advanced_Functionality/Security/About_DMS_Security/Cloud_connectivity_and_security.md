@@ -10,6 +10,8 @@ In highly secured environments, it is not always possible to set up a direct int
 
 In any case, connecting your DataMiner System to dataminer.services is opt-in, meaning DataMiner will not transfer anything to the cloud without an Administrator explicitly enabling this on the DataMiner System.
 
+This is a change.
+
 ## Connecting to dataminer.services
 
 To connect your DataMiner System to dataminer.services, please refer to [Connecting your DataMiner System to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud).
