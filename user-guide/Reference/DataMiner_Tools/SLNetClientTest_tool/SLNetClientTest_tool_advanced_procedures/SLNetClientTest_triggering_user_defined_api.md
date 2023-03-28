@@ -11,7 +11,7 @@ With the SLNetClientTest tool, you can trigger a user-defined API in order to te
 
 1. [Connect to the DMA using the SLNetClientTest tool](xref:Connecting_to_a_DMA_with_the_SLNetClientTest_tool).
 
-1. Select *Advanced* > *Apps* > *User-defined APIs*.
+1. Select *Advanced* > *Apps* > *User-defined APIs*. <!-- RN 35996 -->
 
 1. Select the *Trigger* tab.
 
