@@ -61,10 +61,6 @@ To get started, you can find several example Automation scripts with more inform
 
 After you have made sure the above-mentioned prerequisites are in place, you can download and deploy [the DcpChatIntegrationExamples DMAPP](https://github.com/SkylineCommunications/ChatOps-Extensions/blob/main/ChatIntegrationExamples/README.md#getting-started) to your DataMiner System and immediately try out these examples.
 
-## Limitations
-
-- Currently, it is not possible to send messages in fetched channels for which the DataMiner Teams bot is not installed in the team. This will be indicated in the error when you try to send a channel notification. You can [manually install the DataMiner Teams bot in the team using Microsoft Teams](xref:DataMiner_Teams_bot#dataminer-teams-bot-installation) or use the create team functionality of chat integration to create another team with the DataMiner Teams bot automatically installed.
-
 ## Security
 
 By granting [Admin consent](xref:Granting_admin_consent) from your Microsoft (Teams) tenant to "DataMiner" (i.e. Skyline Communications) in the [Admin app](https://admin.dataminer.services), you allow Skyline Communications to execute these chat integration actions. This includes creating teams, channels, and chats, fetching users, chats, etc.
