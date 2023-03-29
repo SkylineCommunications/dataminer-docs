@@ -261,6 +261,12 @@ Each time the *SLLogCollector* tool is run, since DataMiner version 10.3.3, it o
 
 In some cases, it would not be possible to process the output of some of those tests due to formatting issues.
 
+#### Problem when an SLA element was stopped or deleted while a parameter that triggered a QAction of the SLA in question was being updated [ID_35892]
+
+<!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
+
+An error could occur when an SLA element was stopped or deleted while a parameter that triggered a QAction of the SLA in question was being updated.
+
 #### DataMinerException thrown the first time an InfoData message was deserialized [ID_35897]
 
 <!-- MR 10.3.0 [CU2] - FR 10.3.5 -->

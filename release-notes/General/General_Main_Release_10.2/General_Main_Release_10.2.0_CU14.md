@@ -159,6 +159,12 @@ At SLA startup, in some cases, the active alarms would no longer be in sync with
 
 Also, a number of other minor fixes with regard to SLA management have been implemented.
 
+#### Problem when an SLA element was stopped or deleted while a parameter that triggered a QAction of the SLA in question was being updated [ID_35892]
+
+<!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
+
+An error could occur when an SLA element was stopped or deleted while a parameter that triggered a QAction of the SLA in question was being updated.
+
 #### Dashboards app & Low-code apps - GQI components: Problems when a GQI request failed [ID_35904]
 
 <!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
