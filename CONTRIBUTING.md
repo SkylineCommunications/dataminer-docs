@@ -283,6 +283,8 @@ When your changes are ready, you can create a pull request to submit them for re
 
 When you work together with several other people to add new information to the documentation, it can be useful to work together on the same draft branch without publishing your changes to the main branch yet. This way, you can add multiple changes that others can then further work on, but nothing will be published on docs.dataminer.services yet.
 
+![Create pull request to draft branch](~/images/Pull_Request_Draft_Branch.png)
+
 You can do so as follows:
 
 1. Select the draft branch you want to use in GitHub Desktop.
@@ -319,11 +321,11 @@ After you have created a pull request, the Skyline documentation team will need 
 > [!TIP]
 > This can take some time. We recommend that you enable notifications in your account settings so that you get a notification when the merge is done.
 
-![Create pull request to draft branch](~/images/Pull_Request_Draft_Branch.png)
-
 #### Making commits available to everyone working on the draft branch
 
 When your pull request has been merged, others can continue to work on your changes. However, to see all recent changes merged to the draft branch in your own fork, you will need to make sure that **the draft branch in your fork is up to date**.
+
+![Sync Branch](~/images/Sync_Branch.png)
 
 1. Go to the [dataminer-docs repository](https://github.com/SkylineCommunications/dataminer-docs) on GitHub.
 
@@ -345,9 +347,9 @@ When your pull request has been merged, others can continue to work on your chan
 
 Now that all commits are available on your machine, you can [continue to make changes](#collaborating-with-others-on-a-draft-branch).
 
-![Sync Branch](~/images/Sync_Branch.png)
-
 #### Merging the draft branch
+
+![Publish to docs](~/images/Publish_to_Docs.png)
 
 When all the necessary changes have been made and the draft branch is ready for publication:
 
@@ -368,8 +370,6 @@ When all the necessary changes have been made and the draft branch is ready for 
 1. Double-check the title and description for the pull request, and modify them if necessary.
 
 1. Click *Create pull request*.
-
-![Publish to docs](~/images/Publish_to_Docs.png)
 
 All changes saved on the draft branch will now be published to docs.dataminer.services.
 
