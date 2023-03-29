@@ -297,6 +297,12 @@ When a dashboard with a state, ring or gauge component was shared, in some cases
 
 When you selected a parameter in a parameter feed component of a shared dashboard, in some cases, an error could occur.
 
+#### Dashboards app & Low-code apps: Performance could decrease when State components had their Design option set to 'Auto size' [ID_35905]
+
+<!-- MR 10.4.0 - FR 10.3.5 -->
+
+Up to now, overall performance of a dashboard or a low-code app could decrease when it contained *State* components of which the *Design* option was set to "Auto size". A number of enhancements have now been made to prevent performance from decreasing in this case.
+
 #### Dashboards app & Low-code apps: Filter box of visualizations panel would not reset [ID_36000]
 
 <!-- MR 10.4.0 - FR 10.3.5 -->
