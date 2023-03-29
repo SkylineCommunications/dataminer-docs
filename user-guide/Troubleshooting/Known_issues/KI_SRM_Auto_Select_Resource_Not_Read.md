@@ -10,7 +10,7 @@ SRM 1.2.30 CU2.
 
 ## Cause
 
-When a booking was created silently, the *Auto Select Resource* node property was not read
+When a booking was created silently, the *Auto Select Resource* node property was not read.
 
 ## Fix
 
