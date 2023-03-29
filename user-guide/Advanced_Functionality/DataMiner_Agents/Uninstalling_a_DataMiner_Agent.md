@@ -4,7 +4,37 @@ uid: Uninstalling_a_DataMiner_Agent
 
 # Uninstalling a DataMiner Agent
 
-You can uninstall the DataMiner Agent software as follows:
+There are two possibilities to uninstall a DataMiner Agent:
+
+    - Using the DataMiner installer
+    - using a manual procedure
+
+## Uninstalling a DataMiner Agent using a the DataMiner Installer
+
+You can uninstall the DataMiner Agent softwareusing the DataMiner Installer as follows:
+
+1. Download the DataMiner installer from [DataMiner Dojo](https://community.dataminer.services/download/dataminer-installer-v10-2).
+
+2. Make sure you are logged into Windows with the Administrator account. (Do not use a regular user account with administrative rights.)
+
+3. Double-click *Setup.exe*.
+
+4. Click *Uninstall*.
+
+        > [!NOTE]
+        > After pressing uninstall button, there's no way to gracefully stop the uninstall of the software.
+
+The progress of the uninstallation will be displayed. A 'open logs' button in the lower right corner allows you to see more detailed logs if necessary.
+
+5. Click *Close*.
+
+6. In case the DataMiner Agent used a **Cassandra** database, please follow step 5 from *Uninstalling a DataMiner Agent using a manual procedure*.
+
+7. In case the DataMiner Agent used an **Elasticsearch** database, please follow step 6 from *Uninstalling a DataMiner Agent using a manual procedure*.
+
+## Uninstalling a DataMiner Agent using a manual procedure
+
+You can uninstall the DataMiner Agent software using a manual procedure as follows:
 
 1. Go to the folder *C:\\Skyline DataMiner\\Tools*.
 
