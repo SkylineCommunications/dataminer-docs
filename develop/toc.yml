@@ -5320,9 +5320,6 @@
           topicUid: Producing_NuGet
         - name: Middleware NuGet packages
           topicUid: Nuget_Communication_Middleware
-          items:
-            - name: OpenConfig Middleware
-              topicUid: DSI_OpenConfig_Middleware
         - name: Assembly binding
           topicUid: Assembly_Binding
           items:
@@ -5516,6 +5513,8 @@
       items:
         - name: Introduction
           topicUid: DSI_OpenConfig_Introduction
+        - name: Middleware package
+          topicUid: DSI_OpenConfig_Middleware
 - name: Third-party integrations
   topicUID: ThirdPartyIntegrations
   items:
