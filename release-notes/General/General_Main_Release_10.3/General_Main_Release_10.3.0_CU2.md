@@ -12,6 +12,12 @@ uid: General_Main_Release_10.3.0_CU2
 
 ### Enhancements
 
+#### Security enhancements [ID_35668]
+
+<!-- MR 10.3.0 [CU2] - FR 10.3.5 -->
+
+A number of security enhancements have been made.
+
 #### Alarms generated when a database goes in offload mode will now have severity 'Notice' instead of 'Critical' [ID_35749]
 
 <!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->

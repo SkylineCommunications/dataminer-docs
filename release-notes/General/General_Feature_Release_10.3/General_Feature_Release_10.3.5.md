@@ -75,7 +75,7 @@ In the *SLNetClientTest* tool, the following new DOM-related features have been 
 
 #### Security enhancements [ID_35668]
 
-<!-- MR 10.4.0 - FR 10.3.5 -->
+<!-- MR 10.3.0 [CU2] - FR 10.3.5 -->
 
 A number of security enhancements have been made.
 
