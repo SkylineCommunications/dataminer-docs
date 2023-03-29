@@ -11,7 +11,7 @@ The purpose of the OpenConfig middleware is to make it possible to **easily cons
 
 In order to use the OpenConfig middleware, you will need to have the following setup:
 
-* A **cloud-connected** DataMiner agent running version 10.3.3 or higher to facilitate the required message broker.
+* A **cloud-connected** DataMiner agent running version 10.3.3 or higher.
 * The [CommunicationGateway DxM](xref:DataMinerExtensionModules#CommunicationGateway) installed on at least one of the DataMiner agents in the cluster.
 * The NuGet *Skyline.DataMiner.Core.OpenConfig.Gnmi* included in your project. See [Consuming NuGet packages](xref:Consuming_NuGet) for more information.
 
@@ -19,6 +19,10 @@ In order to use the OpenConfig middleware, you will need to have the following s
 > You can easily install the CommunicationGateway DxM through the [Admin Cloud Portal](https://admin.dataminer.services).
 
 ## Usage
+
+### Including the middleware package
+
+Include the NuGet package *Skyline.DataMiner.Core.OpenConfig.Gnmi* in your project as explained in [Consuming NuGet packages](xref:Consuming_NuGet). When developing a connector, there's an optional package when you want to use the [DataMapper](#datamapper): *Skyline.DataMiner.Core.OpenConfig.Gnmi.Protocol*
 
 ### Setting up connection with the endpoint
 
