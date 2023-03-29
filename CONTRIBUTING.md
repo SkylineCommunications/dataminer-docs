@@ -321,7 +321,7 @@ After you have created a pull request, the Skyline documentation team will need 
 > [!TIP]
 > This can take some time. We recommend that you enable notifications in your account settings so that you get a notification when the merge is done.
 
-#### Making commits available to everyone working on the draft branch
+#### Keeping the draft branch up to date in your fork
 
 When your pull request has been merged, others can continue to work on your changes. However, to see all recent changes merged to the draft branch in your own fork, you will need to make sure that **the draft branch in your fork is up to date**.
 
@@ -347,7 +347,7 @@ When your pull request has been merged, others can continue to work on your chan
 
 Now that all commits are available on your machine, you can [continue to make changes](#collaborating-with-others-on-a-draft-branch).
 
-#### Merging the draft branch
+#### Creating the final pull request to merge the draft branch
 
 ![Publish to docs](~/images/Publish_to_Docs.png)
 
