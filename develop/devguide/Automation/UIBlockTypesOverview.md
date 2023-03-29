@@ -16,6 +16,7 @@ The [UIBlockType](xref:Skyline.DataMiner.Automation.UIBlockType) enum defines di
 | [Calendar](#calendar) | Calendar control. |
 | [CheckBox](#checkbox) | Checkbox. |
 | [CheckBoxList](#checkboxlist) | Checkbox list. |
+| [DownloadButton](#downloadbutton) | Download button. |
 | [DropDown](#dropdown) | Dropdown list. |
 | [Executable](#executable) | Executable. |
 | [FileSelector](#fileselector) | File selector. |
@@ -145,6 +146,34 @@ uiBuilder.AppendBlock(checkBoxList);
 > 
 > bool ticked = results.GetChecked("list","2");
 > ```
+
+## DownloadButton
+
+Allows you to define a download button.
+
+Example:
+
+```csharp
+var downloadButtonOptions = new AutomationDownloadButtonOptions()
+{
+	URL = @"/Documents/DMA_COMMON_DOCUMENTS/DailyReport.pdf", // The URL  to the file which can be absolure URL or relative URL to the DMA hostname.
+	StartDownloadImmediately = false, // If set to true (the default is false), the download will start immediately when the component is displayed.
+	ReturnWhenDownloadIsStarted = false, // If set to true (the default is false), the engine.ShowUI() method will return as soon as the download is started.
+	FileNameToSave = "Report.PDF", // The filename that will be saved. By default this is the same as the filename of the document.
+};
+UIBlockDefinition blockItem = new UIBlockDefinition
+{
+	Type = UIBlockType.DownloadButton,
+	Width = 125,
+	Text = "Get report of today",
+	ConfigOptions = downloadButtonOptions,
+};
+uiBuilder.AppendBlock(blockItem);
+```
+
+> [!NOTE]
+> When using a relative URL, then it is recommended that the path starts with a slash (= character '/').
+> When using an absolute URL, then it is recommended that the path is public accesible from the web. Example: "https://dataminer.services/install/DataMinerCube.exe" will download the latest Cube from DataMiner Services.
 
 ## DropDown
 
