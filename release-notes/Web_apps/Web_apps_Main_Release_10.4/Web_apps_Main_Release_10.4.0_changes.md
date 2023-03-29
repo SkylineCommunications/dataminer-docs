@@ -290,9 +290,3 @@ When a dashboard with a state, ring or gauge component was shared, in some cases
 <!-- MR 10.4.0 - FR 10.3.5 -->
 
 When you selected a parameter in a parameter feed component of a shared dashboard, in some cases, an error could occur.
-
-#### Low-code apps: Page names and panel names could incorrectly be empty [ID_35960]
-
-<!-- MR 10.4.0 - FR 10.3.5 -->
-
-Up to now, page names and panel names could incorrectly be empty. From now on, this will no longer be allowed.

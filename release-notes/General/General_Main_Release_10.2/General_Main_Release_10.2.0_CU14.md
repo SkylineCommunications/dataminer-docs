@@ -161,7 +161,7 @@ Also, a number of other minor fixes with regard to SLA management have been impl
 
 #### Dashboards app & Low-code apps - GQI components: Problems when a GQI request failed [ID_35904]
 
-<!-- MR 10.2.0 [CU14] - FR 10.3.5 -->
+<!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
 
 When a GQI request failed, some GQI components would show either an unrelated error or no error at all, while other GQI components would show a correct error but incorrect data.
 

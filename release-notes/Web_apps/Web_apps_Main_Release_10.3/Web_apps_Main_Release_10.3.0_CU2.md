@@ -136,6 +136,12 @@ A number of issues with regard to the "Loading" indicator have been fixed.
 
 In some cases, a query that was linked to feeds would not apply the feed changes in the visualizations unless it was opened in edit mode.
 
+#### Dashboards app & Low-code apps - GQI components: Problems when a GQI request failed [ID_35904]
+
+<!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
+
+When a GQI request failed, some GQI components would show either an unrelated error or no error at all, while other GQI components would show a correct error but incorrect data.
+
 #### Web apps: Login button would incorrectly be disabled on Edge and Chrome [ID_35906]
 
 <!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
@@ -153,3 +159,9 @@ When a clock component (analog or digital) was set to use server time, the clock
 <!-- MR 10.3.0 [CU2] - FR 10.3.5 -->
 
 When you first selected an action with a single component, which was selected automatically, and then selected an action with multiple components, up to now, both the action selection box and the component selection box would incorrectly be cleared.
+
+#### Low-code apps: Page names and panel names could incorrectly be empty [ID_35960]
+
+<!-- MR 10.3.0 [CU2] - FR 10.3.5 -->
+
+Up to now, page names and panel names could incorrectly be empty. From now on, this will no longer be allowed.

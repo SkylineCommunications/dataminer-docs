@@ -313,7 +313,7 @@ A number of issues with regard to the "Loading" indicator have been fixed.
 
 #### Dashboards app & Low-code apps - GQI components: Problems when a GQI request failed [ID_35904]
 
-<!-- MR 10.2.0 [CU14] - FR 10.3.5 -->
+<!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
 
 When a GQI request failed, some GQI components would show either an unrelated error or no error at all, while other GQI components would show a correct error but incorrect data.
 
@@ -337,6 +337,6 @@ When you first selected an action with a single component, which was selected au
 
 #### Low-code apps: Page names and panel names could incorrectly be empty [ID_35960]
 
-<!-- MR 10.4.0 - FR 10.3.5 -->
+<!-- MR 10.3.0 [CU2] - FR 10.3.5 -->
 
 Up to now, page names and panel names could incorrectly be empty. From now on, this will no longer be allowed.
