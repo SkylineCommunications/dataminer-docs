@@ -16,6 +16,10 @@ When a booking was created silently, the *Auto Select Resource* node property wa
 
 No fix is available yet.
 
+## Workaround
+
+In the Automation script, pass the function with `ShouldAutoSelectResource=false`.
+
 ## Description
 
 When a booking was created silently, resources were automatically selected even if the *Auto Select Resource* node property was set to *False*.
