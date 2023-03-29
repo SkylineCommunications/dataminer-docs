@@ -13,7 +13,6 @@ In order to use the OpenConfig middleware, you will need to have the following s
 
 * A **cloud-connected** DataMiner agent running version 10.3.3 or higher.
 * The [CommunicationGateway DxM](xref:DataMinerExtensionModules#CommunicationGateway) installed on at least one of the DataMiner agents in the cluster.
-* The NuGet *Skyline.DataMiner.Core.OpenConfig.Gnmi* included in your project. See [Consuming NuGet packages](xref:Consuming_NuGet) for more information.
 
 > [!TIP]
 > You can easily install the CommunicationGateway DxM through the [Admin Cloud Portal](https://admin.dataminer.services).
