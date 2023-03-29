@@ -63,7 +63,7 @@ The DxM exists in tandem with service-specific [middleware](xref:Nuget_Communica
 #### Prerequisites
 
 * The DxM needs to be installed on a Windows system running a DataMiner Agent.
-* DataMiner version 10.3.2 or higher is required for connectors that rely on the DxM. The DataMinerMessageBroker.API.dll is shared with all processes, and version 1.4.2 is required for the NATS communication.
+* DataMiner version 10.3.3 or higher is required for connectors that rely on the DxM. The DataMinerMessageBroker.API.dll is shared with all processes, and version 1.4.2 is required for the NATS communication.
 
 #### Getting started
 
