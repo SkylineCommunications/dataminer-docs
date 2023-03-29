@@ -15,6 +15,7 @@ Known packages:
 
 ## Creating a middleware package
 
+Please follow these steps to create a middleware package:
 1. Create a `Custom Solutions` repository through the Repo Manager.
     * Add it to the folder `Custom Solutions -> Generic -> Skyline.DataMiner.Utils (DataSources)`
     * Use the following namespace in your solution: *Skyline.DataMiner.DataSources.\**
