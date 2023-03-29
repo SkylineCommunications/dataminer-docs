@@ -4,7 +4,7 @@ uid: Activating_one_file_per_table_for_an_existing_MySQL_database
 
 # Activating one file per table for an existing MySQL database
 
-When you set up the general MySQL database of a new DMA, you have to activate the “one file per table” option so that each database table is stored into a separate data file. If you notice that the “one file per table” option of an existing DMA database has not been activated, you cannot simply activate it. In short, you should export the data, then activate the “one file per table” option and import the data back into the altered database.
+When you set up the general MySQL database of a new DMA, you have to activate the TEST "one file per table”TEST option so that each database table is stored into a separate data file. If you notice that the “one file per table” option of an existing DMA database has not been activated, you cannot simply activate it. In short, you should export the data, then activate the “one file per table” option and import the data back into the altered database. TEST
 
 1. Stop DataMiner.
 
