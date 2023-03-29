@@ -2991,6 +2991,8 @@
     - name: Known issues
       topicUID: Known_issues
       items:
+        - name: SRM - Auto Select Resource not read for silent booking
+          topicUID: KI_SRM_Auto_Select_Resource_Not_Read
         - name: IP address in SAN field of TLS certificate ignored in Windows 2012 R2
           topicUID: KI_Win2012R2_ignores_IP_in_SAN_field
         - name: Problem with booking automation and function DVE deactivation
