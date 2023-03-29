@@ -255,6 +255,12 @@ In some cases, a table component could appear to be empty when you rapidly switc
 
 Also, an error could be thrown when you tried to add an invalid query to a component.
 
+#### Dashboards app & Low-code apps: Problem with 'Share' button and subheader items on mobile devices [ID_35839]
+
+<!-- MR 10.3.0 [CU2] - FR 10.3.5 -->
+
+When you opened a dashboard or a low-code app on a mobile device, the *Share* button would not be available and the subheader items would not be hidden correctly.
+
 #### Web apps: Problem when opening a visual overview [ID_35841]
 
 <!-- MR 10.2.0 [CU13]/10.3.0 [CU2] - FR 10.3.5 -->
@@ -337,6 +343,6 @@ When you first selected an action with a single component, which was selected au
 
 #### Low-code apps: Page names and panel names could incorrectly be empty [ID_35960]
 
-<!-- MR 10.3.0 [CU2] - FR 10.3.5 -->
+<!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
 
 Up to now, page names and panel names could incorrectly be empty. From now on, this will no longer be allowed.

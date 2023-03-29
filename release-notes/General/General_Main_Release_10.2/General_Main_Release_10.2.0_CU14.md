@@ -203,3 +203,9 @@ From now on, when you drag several elements or services from a view card onto a 
 - **the items in any of its sub-views will be copied** to the view in the Surveyor.
 
 If you want to the items in the view to be **copied** to the view in the Surveyor instead of moved, keep the CTRL key pressed while dragging them.
+
+#### Low-code apps: Page names and panel names could incorrectly be empty [ID_35960]
+
+<!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
+
+Up to now, page names and panel names could incorrectly be empty. From now on, this will no longer be allowed.
