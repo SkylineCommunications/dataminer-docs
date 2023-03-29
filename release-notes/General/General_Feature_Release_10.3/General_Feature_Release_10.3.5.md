@@ -17,11 +17,11 @@ uid: General_Feature_Release_10.3.5
 
 ## Other features
 
-#### GQI: New 'ThenSort' query node allows sorting by multiple columns [ID_35807]
+#### GQI: New 'ThenSort by' query node allows sorting by multiple columns [ID_35807] [ID_35834]
 
 <!-- MR 10.4.0 - FR 10.3.5 -->
 
-To make sorting more intuitive, the new *ThenSort* node can now be used in combination with the *Sort* node.
+To make sorting more intuitive, the new *ThenSort by* node can now be used in combination with the *Sort* node, which has now been renamed to *Sort by*.
 
 Up to now, all sorting had to be configured by means of *Sort* nodes. For example, if you wanted to first sort by column A and then by column B, you had to create a query in the following counter-intuitive way:
 
@@ -40,7 +40,7 @@ From now on, you can create a query in a much more intuitive way. For example, i
 1. Sort by A
 1. Then sort by B
 
-Note that, from now on, every *Sort* node will nullify any preceding *Sort node*. For example, in the following query, the *Sort by B* node will be nullified by the *Sort by A* node, meaning that the result set will only be sorted by column A.
+Note that, from now on, every *Sort by* node will nullify any preceding *Sort by* node. For example, in the following query, the *Sort by B* node will be nullified by the *Sort by A* node, meaning that the result set will only be sorted by column A.
 
 1. Data source
 1. Sort by B
@@ -54,9 +54,28 @@ Note that, from now on, every *Sort* node will nullify any preceding *Sort node*
 
 ### Enhancements
 
-#### Security enhancements [ID_35668]
+#### SLNetClientTest: New DOM-related features [ID_35550]
 
 <!-- MR 10.4.0 - FR 10.3.5 -->
+
+In the *SLNetClientTest* tool, the following new DOM-related features have been made available:
+
+- Viewing a JSON representation of a selected ModuleSettings configuration.
+
+- Completely remove a DOM Manager from the system.
+
+  > [!NOTE]
+  >
+  > - When you instruct the *SLNetClientTest* tool to delete a DOM Manager, it will count the number of DOM instances. If the DOM Manager in question contains more than 10,000 DOM instances, an error message will appear, saying that deleting the DOM Manager would take too long.
+
+  > - When you instruct the *SLNetClientTest* tool to delete a DOM Manager, it will not remove the indices from the Elasticsearch database. These indices have to be deleted manually. If you do not delete them manually, we recommend to not re-use the module ID as this could cause configuration conflicts.
+
+> [!CAUTION]
+> Always be extremely careful when using this tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
+
+#### Security enhancements [ID_35668]
+
+<!-- MR 10.3.0 [CU2] - FR 10.3.5 -->
 
 A number of security enhancements have been made.
 
@@ -111,11 +130,37 @@ A number of enhancements have been made to the Business Intelligence module, esp
 
 A number of enhancements have been made to the DataMiner Storage Module installer.
 
+#### SLAnalytics: Enhanced performance [ID_35871]
+
+<!-- MR 10.3.0 [CU2] - FR 10.3.5 -->
+
+Overall performance of SLAnalytics has increased because of a number of enhancements made to its caching mechanism.
+
 #### SLAnalytics - Behavioral anomaly detection: Events associated with a DVE child element will no longer be linked to the DVE parent element [ID_35901]
 
 <!-- MR 10.4.0 - FR 10.3.5 -->
 
 Up to now, when an event associated with a DVE child element was generated, internally, that event would be linked to the DVE parent element. From now on, it will be linked to the child element instead.
+
+#### GQI data sources that require an Elasticsearch database will now use GetInfoMessage(InfoType.Database) to check whether Elasticsearch is available [ID_35907]
+
+<!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
+
+Up to now, GQI data sources that require an Elasticsearch database used the `DatabaseStateRequest<ElasticsearchState>` message to check whether Elasticsearch was available. From now on, they will use the `GetInfoMessage(InfoType.Database)` message instead.
+
+#### Improved error handling when elements go into an error state [ID_35944]
+
+<!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
+
+When an element goes into an error state after an attempt to activate it failed, from now on, no more calls to SLProtocol, SLElement or SLSpectrum will be made for that element.
+
+Also, when an element that generates DVE child elements or virtual functions goes into an error state, from now on, the generated DVE child elements or virtual functions will also go into an error state. However, in order to avoid too many alarms to be generated, only one alarm (for the main element) will be generated.
+
+The following issues have also been fixed:
+
+- When a DVE parent element in an error state on DataMiner startup was activated, its DVE child elements or virtual functions would not be properly loaded.
+
+- When a DVE parent element was started, the method that has to make sure that ElementInfo and ElementData are in sync would incorrectly not check all child elements.
 
 ### Fixes
 
@@ -138,11 +183,27 @@ From now on, the execution of the NATS installer at DMA startup will be skipped 
 > [!NOTE]
 > When an error occurs while running a WMI query, and no NATS/NAS service is running, NATS will not be installed automatically. A manual installation of NATS will be needed.
 
+#### Existing masked alarms would incorrectly affect the overall alarm severity of an element [ID_35678]
+
+<!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
+
+Existing masked alarms would incorrectly affect the overall alarm severity of an element.
+
 #### DateTime instances would not get serialized correctly when an SLNet connection supported protocol buffer serialization [ID_35777]
 
 <!-- MR 10.4.0 - FR 10.3.5 -->
 
 When an SLNet connection supported protocol buffer serialization, DateTime instances would not get serialized correctly.
+
+#### GQI: GetArgumentValue method would throw an exception when used to access the value of an optional argument [ID_35783]
+
+<!-- MR 10.4.0 - FR 10.3.5 -->
+
+When the `GetArgumentValue<T>(string name)` method was used in an ad hoc data source or a custom operator script to access the value of an optional argument that had not been passed, the following exception would be thrown:
+
+```txt
+Could not find argument with name '{argument.Name}'.
+```
 
 #### SLProtocol would interpret signed numbers incorrectly [ID_35796]
 
@@ -190,3 +251,40 @@ In some cases, SLAnalytics could keep on waiting indefinitely for large delete o
 At SLA startup, in some cases, the active alarms would no longer be in sync with the actual alarms affecting the SLA.
 
 Also, a number of other minor fixes with regard to SLA management have been implemented.
+
+#### Problem when processing BPA test output [ID_35891]
+
+<!-- MR 10.4.0 - FR 10.3.5 -->
+<!-- Not added to MR 10.4.0 -->
+
+Each time the *SLLogCollector* tool is run, since DataMiner version 10.3.3, it orders the *Standalone BPA Executor* tool to execute all BPA tests available in the system and store the results in the `C:\Skyline DataMiner\Logging\WatchDog\Reports\Pending Reports` folder.
+
+In some cases, it would not be possible to process the output of some of those tests due to formatting issues.
+
+#### Problem when an SLA element was stopped or deleted while a parameter that triggered a QAction of the SLA in question was being updated [ID_35892]
+
+<!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
+
+An error could occur when an SLA element was stopped or deleted while a parameter that triggered a QAction of the SLA in question was being updated.
+
+#### DataMinerException thrown the first time an InfoData message was deserialized [ID_35897]
+
+<!-- MR 10.3.0 [CU2] - FR 10.3.5 -->
+
+The first time a message with an object of a type that inherited from `InfoData` was sent from SLNet to a client, the following DataMinerException was thrown when the message was deserialized:
+
+```txt
+Skyline.DataMiner.Net.Exceptions.DataMinerException: Failed to deserialize message (ProtoBuf). Possible version incompatibility between client and server.  ---&gt; System.InvalidOperationException: It was not possible to prepare a serializer for: Skyline.DataMiner.Net.InfoData ---&gt; System.InvalidOperationException: Unable to resolve a suitable Add method for System.Collections.Generic.IReadOnlyList`1[[System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]&#xD;
+```
+
+#### Business Intelligence: Outage correction would incorrectly be increased when a history alarm affected the outage [ID_35942]
+
+<!-- MR 10.4.0 - FR 10.3.5 -->
+
+When a history alarm affected a closed outage to which a correction had been applied, the correction would incorrectly be increased. From now on, the correction will be left untouched.
+
+#### 'SLA Affecting' property of cleared or re-opened alarm would incorrectly contain 'Y' instead of 'Yes' [ID_35987]
+
+<!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
+
+When an alarm was cleared and re-opened for the same parameter or parameter key combination, its *SLA Affecting* property would incorrectly contain "Y" instead of "Yes".

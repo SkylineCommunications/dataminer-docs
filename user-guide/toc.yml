@@ -890,16 +890,29 @@
         - name: Upgrading a DataMiner Agent
           topicUid: Upgrading_a_DataMiner_Agent
           items:
+            - name: Preparing to upgrade a DataMiner Agent
+              topicUID: Preparing_to_upgrade_a_DataMiner_Agent
             - name: Upgrading a DataMiner Agent in the Update Center
               topicUid: Upgrading_a_DataMiner_Agent_in_the_Update_Center
             - name: Upgrading a DataMiner Agent using DataMiner Taskbar Utility
               topicUid: Upgrading_a_DataMiner_Agent_using_DataMiner_Taskbar_Utility
             - name: Upgrading a DataMiner Agent in System Center
               topicUid: Upgrading_a_DataMiner_Agent_in_System_Center
+            - name: Upgrade paths
+              topicUID: Upgrade_Paths
+              items: 
+                - name: DataMiner 9.6.0/9.6.x to 10.2.0/10.2.x
+                  topicUid: Upgrade_path_960-96x_to_1020-102x
+                - name: DataMiner 9.6.x to 10.3.0/10.3.x
+                  topicUid: Upgrade_path_960-96x_to_1030-103x
+                - name: DataMiner 10.0.0/10.0.x to 10.2.0/10.2.x
+                  topicUid: Upgrade_path_1000-100x_to_1020-102x
+                - name: DataMiner 10.0.0/10.0.x to 10.3.0/10.3.x
+                  topicUid: Upgrade_path_1000-100x_to_1030-103x
+                - name: DataMiner 10.1.0/10.1.x to 10.2.0/10.2.x
+                  topicUid: Upgrade_path_1010-101x_to_1020-102x
             - name: Checking the upgrade history of a DataMiner Agent
               topicUid: Checking_the_upgrade_history_of_a_DataMiner_Agent
-            - name: Rolling back a DataMiner upgrade (deprecated)
-              topicUid: Rolling_back_a_DataMiner_upgrade
             - name: Configuring the default upgrade options
               topicUID: Configuring_the_default_upgrade_options
         - name: Uninstalling a DataMiner Agent
@@ -984,6 +997,8 @@
               topicUID: BPA_Password_Strength
             - name: Report Active RTE
               topicUID: BPA_Report_Active_RTE
+            - name: Service Automatic Properties
+              topicUID: BPA_Service_Automatic_Properties
             - name: SRM Function Resources Consistency
               topicUID: BPA_SRM_Function_Resources_Consistency
             - name: Validate connectors
@@ -2335,6 +2350,22 @@
               topicUid: About_DataMiner_elements_using_the_Ticketing_Gateway_API
             - name: Overview of the TicketingGatewayHelper class
               topicUid: Overview_of_the_TicketingGatewayHelper_class
+    - name: User-Defined APIs (preview)
+      topicUid: UD_APIs
+      items:
+        - name: Viewing APIs and tokens
+          topicUid: UD_APIs_Viewing_in_Cube
+        - name: Defining an API
+          topicUid: UD_APIs_Define_New_API
+          items:
+            - name: Defining a new API
+              topicUid: UD_APIs_Define_New_API
+            - name: Using existing scripts
+              topicUid: UD_APIs_Using_existing_scripts
+        - name: Triggering an API
+          topicUid: UD_APIs_Triggering_an_API
+        - name: DataMiner UserDefinableApiEndpoint DxM
+          topicUid: UD_APIs_UserDefinableApiEndpoint
 - name: DataMiner Standard Apps, Frameworks & Solutions
   topicUid: Part5StandardApps
   items:
@@ -2960,6 +2991,8 @@
     - name: Known issues
       topicUID: Known_issues
       items:
+        - name: SRM - Auto Select Resource not read for silent booking
+          topicUID: KI_SRM_Auto_Select_Resource_Not_Read
         - name: IP address in SAN field of TLS certificate ignored in Windows 2012 R2
           topicUID: KI_Win2012R2_ignores_IP_in_SAN_field
         - name: Problem with booking automation and function DVE deactivation
@@ -3253,6 +3286,8 @@
                 topicUID: SLNetClientTest_changing_service_template_child_limitations
               - name: Checking or modifying the settings related to a Refused DMA state
                 topicUID: SLNetClientTest_refused_dma_state
+              - name: Clearing alarms from the SLNet event cache
+                topicUID: SLNetClientTest_clear_from_event_cache
               - name: Comparing the views on two Agents in a DMS
                 topicUID: SLNetClientTest_comparing_views_on_two_dmas
               - name: Configuring how long alarm statistics are kept in memory
@@ -3301,6 +3336,8 @@
                 topicUID: SLNetClientTest_setting_TTL_database
               - name: Specifying credentials for a shared backup path for Elasticsearch
                 topicUID: SLNetClientTest_credentials_shared_backup_Elasticsearch
+              - name: Triggering a user-defined API
+                topicUID: SLNetClientTest_triggering_api
         - name: SLOffload tool
           topicUid: SLOffload_tool
         - name: SLSkipAsSourceTool
@@ -3325,6 +3362,8 @@
           topicUID: Verify_Cluster_Events_Tool
         - name: VerifyClusterPorts.dmupgrade
           topicUID: VerifyClusterPortsdmupgrade
+        - name: Verify NATS is Running
+          topicUID: VerifyNatsIsRunning
     - name: Methods of Procedure
       topicUID: mops
       items:

@@ -1,6 +1,6 @@
 apiRules:
 - include:
-    uiRegex: ^Skyline\.DataMiner\.Net\.AutomationUI\.Objects
+    uidRegex: ^Skyline\.DataMiner\.Net\.AutomationUI\.Objects
     type: Namespace
 - exclude:
     uidRegex: ^Tamir\.SharpSsh\.jsch\.ChannelSftp$
@@ -520,15 +520,6 @@ apiRules:
     type: Namespace
 - include:
     uidRegex: ^Skyline\.DataMiner\.Net\.Trending$
-    type: Namespace
-- exclude:
-    uidRegex: ^Skyline\.DataMiner\.
-    type: Namespace
-- exclude:
-    uidRegex: ^Skyline\.DataMiner\.*$
-    type: Namespace
-- exclude:
-    uidRegex: ^Skyline\.DataMiner\.Net\.*$
     type: Namespace
 - exclude:
     uidRegex: ^SLDataGateway\.

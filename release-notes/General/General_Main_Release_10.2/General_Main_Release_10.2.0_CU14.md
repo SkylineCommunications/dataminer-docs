@@ -40,6 +40,32 @@ When a database went in offload mode, up to now, an alarm with severity *Critica
 
 In the *Monitoring* app, from now on, elements, services and views opened by clicking a Visio shape will open in the same tab instead of a new tab.
 
+#### GQI data sources that require an Elasticsearch database will now use GetInfoMessage(InfoType.Database) to check whether Elasticsearch is available [ID_35907]
+
+<!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
+
+Up to now, GQI data sources that require an Elasticsearch database used the `DatabaseStateRequest<ElasticsearchState>` message to check whether Elasticsearch was available. From now on, they will use the `GetInfoMessage(InfoType.Database)` message instead.
+
+#### Web apps: Enhanced error handling when executing an interactive Automation script by clicking a DOM button [ID_35909]
+
+<!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
+
+Overall error handling has been improved when executing an interactive Automation script by clicking a DOM button in a web app.
+
+#### Improved error handling when elements go into an error state [ID_35944]
+
+<!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
+
+When an element goes into an error state after an attempt to activate it failed, from now on, no more calls to SLProtocol, SLElement or SLSpectrum will be made for that element.
+
+Also, when an element that generates DVE child elements or virtual functions goes into an error state, from now on, the generated DVE child elements or virtual functions will also go into an error state. However, in order to avoid too many alarms to be generated, only one alarm (for the main element) will be generated.
+
+The following issues have also been fixed:
+
+- When a DVE parent element in an error state on DataMiner startup was activated, its DVE child elements or virtual functions would not be properly loaded.
+
+- When a DVE parent element was started, the method that has to make sure that ElementInfo and ElementData are in sync would incorrectly not check all child elements.
+
 ### Fixes
 
 #### SLLogCollector: Problem when collecting multiple memory dumps with the 'Now and when memory increases with X Mb' option [ID_35617]
@@ -60,6 +86,12 @@ From now on, the execution of the NATS installer at DMA startup will be skipped 
 
 > [!NOTE]
 > When an error occurs while running a WMI query, and no NATS/NAS service is running, NATS will not be installed automatically. A manual installation of NATS will be needed.
+
+#### Existing masked alarms would incorrectly affect the overall alarm severity of an element [ID_35678]
+
+<!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
+
+Existing masked alarms would incorrectly affect the overall alarm severity of an element.
 
 #### Dashboards app: Sticky component menus would no longer be fully visible after you had changed the number of dashboard columns [ID_35702]
 
@@ -126,3 +158,66 @@ However, up to now, when a base alarm was updated, the update would not be refle
 At SLA startup, in some cases, the active alarms would no longer be in sync with the actual alarms affecting the SLA.
 
 Also, a number of other minor fixes with regard to SLA management have been implemented.
+
+#### Problem when an SLA element was stopped or deleted while a parameter that triggered a QAction of the SLA in question was being updated [ID_35892]
+
+<!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
+
+An error could occur when an SLA element was stopped or deleted while a parameter that triggered a QAction of the SLA in question was being updated.
+
+#### Dashboards app & Low-code apps - GQI components: Problems when a GQI request failed [ID_35904]
+
+<!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
+
+When a GQI request failed, some GQI components would show either an unrelated error or no error at all, while other GQI components would show a correct error but incorrect data.
+
+#### Web apps: Login button would incorrectly be disabled on Edge and Chrome [ID_35906]
+
+<!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
+
+Up to now, in some cases, the login button would incorrectly be disabled when you opened a web app in Microsoft Edge or Google Chrome.
+
+#### Dashboards app & Low-code apps - Clock components: Clock time would not update when set to server time [ID_35912]
+
+<!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
+
+When a clock component (analog or digital) was set to use server time, the clock time would not update.
+
+#### DataMiner Cube - Visual Overview: [ServiceDefinitionFilter] placeholder would incorrectly not be resolved when used in a table row filter [ID_35923]
+
+<!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
+
+When, in a shape data field of type *ParameterControlOptions*, you had specified a table row filter that included a `[ServiceDefinitionFilter]` placeholder (e.g. "TableRowFilter:101=[ServiceDefinitionFilter]"), that placeholder would incorrectly not be resolved, causing the linked table control to be empty when filtered.
+
+#### DataMiner Cube - Spectrum analysis: Problem when opening a spectrum element with an empty username [ID_35927]
+
+<!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
+
+An error could occur when you tried to open a spectrum element of which the username was set to NULL.
+
+Also, an exception could be thrown when you tried to copy spectrum settings to the Windows clipboard.
+
+#### DataMiner Cube - Surveyor: Dragging multiple items from a view card onto a view in the Surveyor did not work as expected [ID_35955]
+
+<!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
+
+Dragging several elements or services from a view card onto a view in the Surveyor did not work as expected.
+
+From now on, when you drag several elements or services from a view card onto a view in the Surveyor
+
+- **the items in that view will be moved** to the view in Surveyor, and
+- **the items in any of its sub-views will be copied** to the view in the Surveyor.
+
+If you want to the items in the view to be **copied** to the view in the Surveyor instead of moved, keep the CTRL key pressed while dragging them.
+
+#### Low-code apps: Page names and panel names could incorrectly be empty [ID_35960]
+
+<!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
+
+Up to now, page names and panel names could incorrectly be empty. From now on, this will no longer be allowed.
+
+#### 'SLA Affecting' property of cleared or re-opened alarm would incorrectly contain 'Y' instead of 'Yes' [ID_35987]
+
+<!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
+
+When an alarm was cleared and re-opened for the same parameter or parameter key combination, its *SLA Affecting* property would incorrectly contain "Y" instead of "Yes".

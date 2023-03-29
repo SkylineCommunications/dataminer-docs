@@ -3517,13 +3517,11 @@
   - name: Web Services (v1)
     topicUid: WS_v1
     items:
-      - name: About the Web Services (v1)
-        topicUid: WS_About_v1
+      - name: Using the Web Services (v1)
+        topicUid: Using_the_Web_Services_v1
         items:
           - name: Using the Web Services (v1)
             topicUid: Using_the_Web_Services_v1
-          - name: Interfaces and WSDL files
-            topicUid: Interfaces_and_WSDL_files
           - name: Examples
             topicUID: WS_v1_examples
       - name: Methods (v1)

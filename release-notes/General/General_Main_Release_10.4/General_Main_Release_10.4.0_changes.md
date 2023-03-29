@@ -118,10 +118,9 @@ The zoom range of a map can now be set by means of a slider.
 
 Because of a number of enhancements, overall performance has increased when fetching relation information for the automatic incident tracking feature.
 
-#### Security enhancements [ID_35434] [ID_35668]
+#### Security enhancements [ID_35434]
 
-<!-- 35434: MR 10.4.0 - FR 10.3.4 -->
-<!-- 35668: MR 10.4.0 - FR 10.3.5 -->
+<!-- MR 10.4.0 - FR 10.3.4 -->
 
 A number of security enhancements have been made.
 
@@ -142,6 +141,25 @@ Because of a number of enhancements, overall performance has increased when dete
 <!-- MR 10.4.0 - FR 10.3.3 -->
 
 GQI now supports queries from [Data Aggregator](xref:Data_Aggregator_DxM) that use ad hoc data sources.
+
+#### SLNetClientTest: New DOM-related features [ID_35550]
+
+<!-- MR 10.4.0 - FR 10.3.5 -->
+
+In the *SLNetClientTest* tool, the following new DOM-related features have been made available:
+
+- Viewing a JSON representation of a selected ModuleSettings configuration.
+
+- Completely remove a DOM Manager from the system.
+
+  > [!NOTE]
+  >
+  > - When you instruct the *SLNetClientTest* tool to delete a DOM Manager, it will count the number of DOM instances. If the DOM Manager in question contains more than 10,000 DOM instances, an error message will appear, saying that deleting the DOM Manager would take too long.
+
+  > - When you instruct the *SLNetClientTest* tool to delete a DOM Manager, it will not remove the indices from the Elasticsearch database. These indices have to be deleted manually. If you do not delete them manually, we recommend to not re-use the module ID as this could cause configuration conflicts.
+
+> [!CAUTION]
+> Always be extremely careful when using this tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
 
 #### SLAnalytics will now send regular notifications instead of client notifications [ID_35591]
 
@@ -244,6 +262,16 @@ Example:
 
 When an SLNet connection supported protocol buffer serialization, DateTime instances would not get serialized correctly.
 
+#### GQI: GetArgumentValue method would throw an exception when used to access the value of an optional argument [ID_35783]
+
+<!-- MR 10.4.0 - FR 10.3.5 -->
+
+When the `GetArgumentValue<T>(string name)` method was used in an ad hoc data source or a custom operator script to access the value of an optional argument that had not been passed, the following exception would be thrown:
+
+```txt
+Could not find argument with name '{argument.Name}'.
+```
+
 #### Input/output values of a matrix element would incorrectly be overridden due to a caching issue [ID_35857]
 
 <!-- MR 10.4.0 - FR 10.3.4 [CU0] -->
@@ -255,3 +283,15 @@ When an ElementProtocol object was being created, due to a caching issue in SLNe
 <!-- MR 10.4.0 - FR 10.3.4 [CU0] -->
 
 The native message broker code could leak memory when using the request/response workflow in combination with chunking. The message handlers would not be cleaned up after the response had been received.
+
+#### Business Intelligence: Outage correction would incorrectly be increased when a history alarm affected the outage [ID_35942]
+
+<!-- MR 10.4.0 - FR 10.3.5 -->
+
+When a history alarm affected a closed outage to which a correction had been applied, the correction would incorrectly be increased. From now on, the correction will be left untouched.
+
+#### Handle in the Timer class would not be cleaned correctly [ID_35959]
+
+<!-- MR 10.4.0 - FR 10.3.4 [CU0] -->
+
+In some cases, a handle in the Timer class would not be cleaned correctly, causing handles to leak.

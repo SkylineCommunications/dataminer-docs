@@ -168,6 +168,18 @@ From now on, when using the Microsoft Edge (WebView2) web browser plugin, embedd
 
 When a low-code app was embedded in Cube (e.g. in a visual overview), up to now, users had to explicitly log in to that app. From now on, Cube will automatically pass the authentication ticket to the low-code app, allowing users to access the app without having to log in again.
 
+#### Search box in Cube header can now be hidden [ID_35826]
+
+<!-- MR 10.4.0 - FR 10.3.5 -->
+
+It is now possible to either show or hide the search box in the middle of the Cube header bar.
+
+1. Open the *Settings* app.
+1. Go to *Cube* > *Cube header*.
+1. Select or clear the *Display search box in header* option, and click *Apply*.
+
+Alternatively, you can also open the quick menu in the Cube header, and toggle the *Show search box* option.
+
 ## Changes
 
 ### Enhancements
@@ -223,12 +235,6 @@ Up to now, when you clicked one of those related parameters in order to add it t
 In the Automation script editor, Intellisense has been added for the new `timeUpDownConfig.ShowTimeUnits` property.
 
 This property is only applied in interactive Automation scripts that are launched from a web app.
-
-#### Cube will now by default connect using gRPC when connecting to a cloud-connected DataMiner Agent with a remote access URL [ID_35779]
-
-<!-- MR 10.4.0 - FR 10.3.5 -->
-
-When you connect to a cloud-connected DataMiner Agent with a remote access URL ending in `*.dataminer.services`, Cube will now by default connect using gRPC.
 
 ### Fixes
 
