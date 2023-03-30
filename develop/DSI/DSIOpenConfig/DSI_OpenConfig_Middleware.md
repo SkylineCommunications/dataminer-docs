@@ -21,7 +21,7 @@ In order to use the OpenConfig middleware, you will need to have the following s
 
 ### Including the middleware package
 
-Include the NuGet package *Skyline.DataMiner.Core.OpenConfig.Gnmi* in your project as explained in [Consuming NuGet packages](xref:Consuming_NuGet). When developing a connector, there's an optional package when you want to use the [DataMapper](#datamapper): *Skyline.DataMiner.Core.OpenConfig.Gnmi.Protocol*
+Include the NuGet package *Skyline.DataMiner.DataSources.OpenConfig.Gnmi* in your project as explained in [Consuming NuGet packages](xref:Consuming_NuGet). When developing a connector, there's an optional package when you want to use the [DataMapper](#datamapper): *Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol*
 
 ### Setting up connection with the endpoint
 

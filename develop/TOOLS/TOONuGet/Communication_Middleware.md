@@ -11,7 +11,7 @@ DataMiner version 10.2.9 (RN33965) enables consuming packages that use external 
 When no middleware is available for your project, please read [Creating a middleware package](#creating-a-middleware-package).
 
 Known packages:
-* [Skyline.DataMiner.Core.OpenConfig.Gnmi](xref:DSI_OpenConfig_Middleware)
+* [Skyline.DataMiner.DataSources.OpenConfig.Gnmi](xref:DSI_OpenConfig_Middleware)
 
 ## Creating a middleware package
 
