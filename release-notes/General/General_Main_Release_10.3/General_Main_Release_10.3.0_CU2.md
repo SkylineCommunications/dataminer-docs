@@ -85,6 +85,18 @@ From now on, the execution of the NATS installer at DMA startup will be skipped 
 
 Existing masked alarms would incorrectly affect the overall alarm severity of an element.
 
+#### Failover: Offline agent would incorrectly try to take a backup of the Elasticsearch database [ID_35721]
+
+<!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
+
+When, in case of a Failover setup, you configure a DataMiner backup on the online agent, then the same backup will be also scheduled on the offline agent.
+
+In some rare cases, on Failover setups that included an Elasticsearch database, the online agent would fail to log that it took a backup of that database, causing the offline agent to try to take a backup of that same database while performing the DataMiner backup. From now on, only the online agent will be allowed to take a backup of the Elasticsearch database, and the offline agent will add the following entry to the ... log file in `C:\Skyline DataMiner\Backup`:
+
+```txt
+Elastic backup will not be taken - Only active agents from a failover pair can take the backup.
+```
+
 #### SLElement could leak memory when updating alarm templates containing conditions [ID_35728]
 
 <!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.4 -->
