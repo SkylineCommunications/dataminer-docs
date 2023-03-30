@@ -375,6 +375,6 @@ Up to now, page names and panel names could incorrectly be empty. From now on, t
 
 #### Dashboards app & Low-code apps: Filter box of visualizations panel would not reset [ID_36000]
 
-<!-- MR 10.3.0 [CU2] - FR 10.3.5 -->
+<!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
 
 When you reloaded the editor, by clicking the *Refresh* button while editing a dashboard or by switching pages while editing a low-code app, or when you switched to edit mode after previewing or publishing a low-code app, the filter box of the visualizations panel would incorrectly not be reset.

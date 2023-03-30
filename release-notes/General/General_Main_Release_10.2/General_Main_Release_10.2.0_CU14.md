@@ -245,3 +245,9 @@ In some rare cases, NT Notify type NT_GET_BITRATE_DELTA (269), which retrieves t
 <!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
 
 When an alarm was cleared and re-opened for the same parameter or parameter key combination, its *SLA Affecting* property would incorrectly contain "Y" instead of "Yes".
+
+#### Dashboards app & Low-code apps: Filter box of visualizations panel would not reset [ID_36000]
+
+<!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
+
+When you reloaded the editor, by clicking the *Refresh* button while editing a dashboard or by switching pages while editing a low-code app, or when you switched to edit mode after previewing or publishing a low-code app, the filter box of the visualizations panel would incorrectly not be reset.
