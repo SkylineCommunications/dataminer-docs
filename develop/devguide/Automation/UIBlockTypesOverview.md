@@ -172,11 +172,11 @@ uiBuilder.AppendBlock(blockItem);
 ```
 
 > [!NOTE]
-> The URL is used as the content of the href property in an A-HTML element (after sanitizing for security).
-> See https://www.w3schools.com/html/html_filepaths.asp for more info on the way to build valid URL's.
+> The URL is used as the content of the href property in an A-HTML element (after sanitizing for security).<br>
+> See https://www.w3schools.com/html/html_filepaths.asp for more info on the way to build valid URL's.<br>
 > The most common use cases are: 
-> An absolute URL to a file, for example: "https://dataminer.services/install/DataMinerCube.exe"
-> A relative URL, relative to the DMA hostname: "/Documents/General Documents/myfile.txt"
+>  - An absolute URL to a file, for example: "https://dataminer.services/install/DataMinerCube.exe"
+>  - A relative URL, relative to the DMA hostname: "/Documents/General Documents/myfile.txt"
 
 ## DropDown
 
