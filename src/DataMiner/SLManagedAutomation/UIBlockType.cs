@@ -203,7 +203,7 @@
         /// <code>
         /// var downloadButtonOptions = new AutomationDownloadButtonOptions()
         /// {
-        ///     URL = @"/Documents/DMA_COMMON_DOCUMENTS/DailyReport.pdf", // The URL  to the file which can be absolure URL or relative URL to the DMA hostname.
+        ///     URL = @"/Documents/DMA_COMMON_DOCUMENTS/DailyReport.pdf", // The URL to the file, which can be absolute URL or relative URL to the DMA hostname.
         ///     StartDownloadImmediately = false, // If set to true (the default is false), the download will start immediately when the component is displayed.
         ///     ReturnWhenDownloadIsStarted = false, // If set to true (the default is false), the engine.ShowUI() method will return as soon as the download is started.
         ///     FileNameToSave = "Report.PDF", // The filename that will be saved. By default this is the same as the filename of the document.
