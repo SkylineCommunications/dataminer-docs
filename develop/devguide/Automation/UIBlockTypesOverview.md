@@ -166,6 +166,7 @@ UIBlockDefinition blockItem = new UIBlockDefinition
 	Type = UIBlockType.DownloadButton,
 	Width = 125,
 	Text = "Get report of today",
+	Style = Style.Button.CallToAction,
 	ConfigOptions = downloadButtonOptions,
 };
 uiBuilder.AppendBlock(blockItem);
