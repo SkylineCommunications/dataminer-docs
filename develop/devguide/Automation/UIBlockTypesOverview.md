@@ -172,8 +172,9 @@ uiBuilder.AppendBlock(blockItem);
 ```
 
 > [!NOTE]
-> When using a relative URL, then it is recommended that the path starts with a slash (= character '/').
-> When using an absolute URL, then it is recommended that the path is public accesible from the web. Example: "https://dataminer.services/install/DataMinerCube.exe" will download the latest Cube from DataMiner Services.
+> When using a relative URL, then it is recommended that the path starts with a slash (= character '/'). ./ and ../ are supported as well.
+> When using an absolute URL, then it is recommended that the file is public accesible from the web. 
+Example: "https://dataminer.services/install/DataMinerCube.exe" will download the latest Cube from DataMiner Services.
 
 ## DropDown
 
