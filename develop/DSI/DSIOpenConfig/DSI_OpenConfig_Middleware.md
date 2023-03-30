@@ -12,7 +12,7 @@ The purpose of the OpenConfig middleware is to make it possible to **easily cons
 In order to use the OpenConfig middleware, you will need to have the following setup:
 
 * A **cloud-connected** DataMiner agent running version 10.3.3 or higher.
-* The [CommunicationGateway DxM](xref:DataMinerExtensionModules#CommunicationGateway) installed on at least one of the DataMiner agents in the cluster.
+* The [CommunicationGateway DxM](xref:DataMinerExtensionModules#communicationgateway) installed on at least one of the DataMiner agents in the cluster.
 
 > [!TIP]
 > You can easily install the CommunicationGateway DxM through the [Admin Cloud Portal](https://admin.dataminer.services).
@@ -200,7 +200,7 @@ It is very useful to have this information available to know which models you ca
 
 You can find more info on the `Get` RPC in the [OpenConfig introduction](xref:DSI_OpenConfig_Introduction#get).
 
-[Get](xref:Skyline.DataMiner.Helper.OpenConfig.Api.GnmiClient.Get) allows you to retrieve values from one or more YANG paths.
+[Get](xref:Skyline.DataMiner.Helper.OpenConfig.Api.GnmiClient.Get%2A) allows you to retrieve values from one or more YANG paths.
 
 ```csharp
 var responses = client.Get("system/memory/state/physical");
@@ -238,7 +238,7 @@ It is a common practice that the read-write objects are stored under the */confi
 
 You can find more info on the `Subscribe` RPC in the [OpenConfig introduction](xref:DSI_OpenConfig_Introduction#subscribe).
 
-[Subscribe](xref:Skyline.DataMiner.Helper.OpenConfig.Api.GnmiClient.Subscribe) allows you to create a subscription. It needs a unique name within the client to register itself in the CommunicationGateway DxM and one or more YANG paths that you are interested in. 
+[Subscribe](xref:Skyline.DataMiner.Helper.OpenConfig.Api.GnmiClient.Subscribe%2A) allows you to create a subscription. It needs a unique name within the client to register itself in the CommunicationGateway DxM and one or more YANG paths that you are interested in.
 
 ```csharp
 string subscriptionName = "interfaces";
@@ -266,7 +266,7 @@ public void HandleIncomingResponse(IEnumerable<GnmiResponseValue> response)
 
 This will create a *SAMPLE* subscription where a notification will be sent out by the data source every 10 seconds.
 
-In case you want to do an *ON_CHANGE* subscription, you can leave out the `sampleIntervalMs` from the [Subscribe](xref:Skyline.DataMiner.Helper.OpenConfig.Api.GnmiClient.Subscribe) call.
+In case you want to do an *ON_CHANGE* subscription, you can leave out the `sampleIntervalMs` from the [Subscribe](xref:Skyline.DataMiner.Helper.OpenConfig.Api.GnmiClient.Subscribe%2A) call.
 
 ```csharp
 string subscriptionName = "interfaces";
@@ -330,7 +330,7 @@ IDataMapper dataMapper = new DataMinerConnectorDataMapper(
 You need to create a [DataMinerConnectorDataGrid](xref:Skyline.DataMiner.Helper.OpenConfig.DataMapper.DataMinerConnectorDataGrid) and pass it the root YANG path of the `container` that will be stored. Then it is a matter of mapping the column parameters to the YANG paths of the `leaf` items.
 
 > [!NOTE]
-> After having created the [DataMinerConnectorDataMapper](xref:Skyline.DataMiner.Helper.OpenConfig.DataMapper.DataMinerConnectorDataMapper), do not forget to configure the [GnmiClient](xref:Skyline.DataMiner.Helper.OpenConfig.Api.GnmiClient) to use it by assigning it to the [DataMapper](xref:Skyline.DataMiner.Helper.OpenConfig.Api.GnmiClient.DataMapper) property.
+> After having created the [DataMinerConnectorDataMapper](xref:Skyline.DataMiner.Helper.OpenConfig.DataMapper.DataMinerConnectorDataMapper), do not forget to configure the [GnmiClient](xref:Skyline.DataMiner.Helper.OpenConfig.Api.GnmiClient) to use it with the [SetDataMapper](xref:Skyline.DataMiner.Helper.OpenConfig.Api.GnmiClient.SetDataMapper%2A) method.
 
 #### Configuring a default value
 
