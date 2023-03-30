@@ -92,6 +92,12 @@ An error could occur when you tried to open a spectrum element of which the user
 
 Also, an exception could be thrown when you tried to copy spectrum settings to the Windows clipboard.
 
+#### Alarm Console: Suggestion event would not be moved to the active alarm tab after being promoted to alarm event [ID_35949]
+
+<!-- MR 10.4.0 - FR 10.3.5 -->
+
+When, in an alarm template, a suggestion event was promoted to an alarm event, that event would incorrectly not be moved from the suggestion events tab to the active alarms tab.
+
 #### DataMiner Cube - Surveyor: Dragging multiple items from a view card onto a view in the Surveyor did not work as expected [ID_35955]
 
 <!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->

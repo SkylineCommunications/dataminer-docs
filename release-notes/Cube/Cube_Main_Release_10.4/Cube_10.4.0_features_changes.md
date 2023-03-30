@@ -267,3 +267,9 @@ When you clicked a suggestion alarm, in some cases, the trend graph would be loa
 <!-- MR 10.4.0 - FR 10.3.4 [CU0] -->
 
 When, in the *Automation*, *Correlation* and *Scheduler* modules, you generated a PDF report based on a dashboard, it would incorrectly no longer be possible to click the *Configure* button to configure that report.
+
+#### Alarm Console: Suggestion event would not be moved to the active alarm tab after being promoted to alarm event [ID_35949]
+
+<!-- MR 10.4.0 - FR 10.3.5 -->
+
+When, in an alarm template, a suggestion event was promoted to an alarm event, that event would incorrectly not be moved from the suggestion events tab to the active alarms tab.
