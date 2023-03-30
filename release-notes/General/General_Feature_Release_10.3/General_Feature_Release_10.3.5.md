@@ -194,9 +194,11 @@ Existing masked alarms would incorrectly affect the overall alarm severity of an
 
 <!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
 
-When, in case of a Failover setup, you configure a DataMiner backup on the online agent, then the same backup will be also scheduled on the offline agent.
+When, in Failover setups, you configure a DataMiner backup on the online agent, the same backup will also be scheduled on the offline agent, and if these setups have a clustered Elasticsearch database, a backup of that database cluster will be included in the DataMiner backup.
 
-In some rare cases, on Failover setups that included an Elasticsearch database, the online agent would fail to log that it took a backup of that database, causing the offline agent to try to take a backup of that same database while performing the DataMiner backup. From now on, only the online agent will be allowed to take a backup of the Elasticsearch database, and the offline agent will add the following entry to the ... log file in `C:\Skyline DataMiner\Backup`:
+In Failover setups where both agents included a local Elasticsearch database that was part of an Elasticsearch cluster, the online agent would fail to take a backup of the Elasticsearch databases due to a backup in progress, triggered earlier by the offline agent.
+
+From now on, only the online agent will be allowed to take a backup of the Elasticsearch database, and the offline agent will log the following entry:
 
 ```txt
 Elastic backup will not be taken - Only active agents from a failover pair can take the backup.
