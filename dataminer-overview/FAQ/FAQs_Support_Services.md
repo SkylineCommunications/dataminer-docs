@@ -31,4 +31,4 @@ uid: FAQs_Support_Services
   - You don't have access to the Skyline IOC technical support team.
   - Your platform is exposed to technical & security vulnerabilities.
   - New purchased connectors added to your DataMiner platform are at risk to not be (fully) supported because an outdated DataMiner software version is in use.
-  - You have the option to retrieve support & upgrades (core & connectors). The latter are charged as [professional credit services](https://community.dataminer.services/professional-service-credits/).
+  - You have the option to get support for the DataMiner core & connectors (except for upgrades). This is charged as [professional credit services](https://community.dataminer.services/professional-service-credits/).

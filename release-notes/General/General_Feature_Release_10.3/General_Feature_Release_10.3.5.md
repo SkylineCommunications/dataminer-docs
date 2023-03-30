@@ -73,9 +73,10 @@ In the *SLNetClientTest* tool, the following new DOM-related features have been 
 > [!CAUTION]
 > Always be extremely careful when using this tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
 
-#### Security enhancements [ID_35668]
+#### Security enhancements [ID_35668] [ID_35997]
 
-<!-- MR 10.4.0 - FR 10.3.5 -->
+<!-- 35668: MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
+<!-- 35997: MR 10.4.0 - FR 10.3.5 -->
 
 A number of security enhancements have been made.
 
@@ -261,6 +262,12 @@ Each time the *SLLogCollector* tool is run, since DataMiner version 10.3.3, it o
 
 In some cases, it would not be possible to process the output of some of those tests due to formatting issues.
 
+#### Problem when an SLA element was stopped or deleted while a parameter that triggered a QAction of the SLA in question was being updated [ID_35892]
+
+<!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
+
+An error could occur when an SLA element was stopped or deleted while a parameter that triggered a QAction of the SLA in question was being updated.
+
 #### DataMinerException thrown the first time an InfoData message was deserialized [ID_35897]
 
 <!-- MR 10.3.0 [CU2] - FR 10.3.5 -->
@@ -276,3 +283,15 @@ Skyline.DataMiner.Net.Exceptions.DataMinerException: Failed to deserialize messa
 <!-- MR 10.4.0 - FR 10.3.5 -->
 
 When a history alarm affected a closed outage to which a correction had been applied, the correction would incorrectly be increased. From now on, the correction will be left untouched.
+
+#### NT Notify type NT_GET_BITRATE_DELTA would not return a valid value for a table with a single row [ID_35967]
+
+<!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
+
+In some rare cases, NT Notify type NT_GET_BITRATE_DELTA (269), which retrieves the time between two consecutive executions of the specified SNMP group (in ms), would not return a valid value for a table with a single row.
+
+#### 'SLA Affecting' property of cleared or re-opened alarm would incorrectly contain 'Y' instead of 'Yes' [ID_35987]
+
+<!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
+
+When an alarm was cleared and re-opened for the same parameter or parameter key combination, its *SLA Affecting* property would incorrectly contain "Y" instead of "Yes".

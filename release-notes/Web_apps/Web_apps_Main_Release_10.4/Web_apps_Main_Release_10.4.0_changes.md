@@ -175,6 +175,12 @@ The way in which components are linked to feeds has been improved. Instead of us
 > [!CAUTION]
 > BREAKING CHANGE: Up to now, when you linked a script parameter to the *From* or *Till* box of a time range feed, the feed would pass a datetime value in string format to the script. That string value was not in an ISO format and did not contain any information about the time zone. From now on, the feed will send a UTC timestamp in milliseconds instead. Scripts that expect to receive a string value will need to be modified.
 
+#### Dashboards app & Low-code apps - Table component: Enhanced visibility of rows that are selected or hovered over in dark mode [ID_35993]
+
+<!-- MR 10.4.0 - FR 10.3.5 -->
+
+When a dashboard or a low-code app is in dark mode, from now on, there will be a higher color contrast between rows that are selected or hovered over and rows that are not.
+
 ### Fixes
 
 #### Web apps: Problem with external authentication [ID_33405]

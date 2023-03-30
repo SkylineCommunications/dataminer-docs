@@ -118,10 +118,10 @@ The zoom range of a map can now be set by means of a slider.
 
 Because of a number of enhancements, overall performance has increased when fetching relation information for the automatic incident tracking feature.
 
-#### Security enhancements [ID_35434] [ID_35668]
+#### Security enhancements [ID_35434] [ID_35997]
 
 <!-- 35434: MR 10.4.0 - FR 10.3.4 -->
-<!-- 35668: MR 10.4.0 - FR 10.3.5 -->
+<!-- 35997: MR 10.4.0 - FR 10.3.5 -->
 
 A number of security enhancements have been made.
 
