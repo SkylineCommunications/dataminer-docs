@@ -226,6 +226,8 @@
           topicUid: UIComponentsTableSettingRowTextColor
         - name: Configuring buttons to open DataMiner objects from table cells
           topicUid: UIComponentsTableRowButtons
+        - name: Exercise
+          topicUID: UIComponentsTableExercise
       - name: Custom table context menu
         topicUid: UIComponentsCustomTableContextMenu
       - name: Matrix
