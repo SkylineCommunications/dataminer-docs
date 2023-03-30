@@ -85,6 +85,14 @@ These changes include:
 
 MLD status alarm monitoring is now disabled on Core Leaf level.
 
+#### CM Upstream table no longer displayed [ID_36018]
+
+To improve performance, the CM Upstream table will no longer be displayed.
+
+#### Enhanced EPM messaging [ID_36019]
+
+To increase scalability in systems with a larger number of elements, EPM D-DOCSIS will no longer handle ID requests ad hoc. Instead it will perform this logic based on a timer and using batches of files, so that it can run the logic less frequently and update the entire system more quickly.
+
 ### Fixes
 
 #### Ceeview link on RPD Topology page not working [ID_33612]
