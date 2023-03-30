@@ -373,6 +373,14 @@ When you first selected an action with a single component, which was selected au
 
 Up to now, page names and panel names could incorrectly be empty. From now on, this will no longer be allowed.
 
+#### Dashboards app - Line & area chart: Legend would show an incorrect number of disabled parameters [ID_35970]
+
+<!-- MR 10.4.0 - FR 10.3.5 -->
+
+When configuring a line & area chart, you can use the *Chart limit* setting to specify the maximum number of parameters that can be displayed in the chart. The excess parameters will then be disabled but remain available in the chart legend, so that they can be enabled again manually.
+
+In some cases, the number of disabled parameters shown in the legend would be incorrect.
+
 #### Dashboards app & Low-code apps: Filter box of visualizations panel would not reset [ID_36000]
 
 <!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
