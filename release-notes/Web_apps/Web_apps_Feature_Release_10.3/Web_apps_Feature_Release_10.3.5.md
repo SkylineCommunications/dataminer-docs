@@ -375,7 +375,7 @@ Up to now, page names and panel names could incorrectly be empty. From now on, t
 
 #### Dashboards app - Line & area chart: Legend would show an incorrect number of disabled parameters [ID_35970]
 
-<!-- MR 10.4.0 - FR 10.3.5 -->
+<!-- MR 10.2.0 [CU14] - FR 10.3.5 -->
 
 When configuring a line & area chart, you can use the *Chart limit* setting to specify the maximum number of parameters that can be displayed in the chart. The excess parameters will then be disabled but remain available in the chart legend, so that they can be enabled again manually.
 

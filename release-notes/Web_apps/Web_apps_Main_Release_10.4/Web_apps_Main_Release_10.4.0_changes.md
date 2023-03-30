@@ -296,11 +296,3 @@ When a dashboard with a state, ring or gauge component was shared, in some cases
 <!-- MR 10.4.0 - FR 10.3.5 -->
 
 When you selected a parameter in a parameter feed component of a shared dashboard, in some cases, an error could occur.
-
-#### Dashboards app - Line & area chart: Legend would show an incorrect number of disabled parameters [ID_35970]
-
-<!-- MR 10.4.0 - FR 10.3.5 -->
-
-When configuring a line & area chart, you can use the *Chart limit* setting to specify the maximum number of parameters that can be displayed in the chart. The excess parameters will then be disabled but remain available in the chart legend, so that they can be enabled again manually.
-
-In some cases, the number of disabled parameters shown in the legend would be incorrect.
