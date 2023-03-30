@@ -47,6 +47,35 @@ For Amazon Keyspaces, the Starfield certificate must be present on the local Win
 
    ![Add Certificate](~/user-guide/images/aks_add_certificate.png)
 
+## Generating credentials for Amazon Keyspaces
+
+In the Identity and Access Management (IAM) Service you can generate new credentials that are used to access the Amazon Keyspaces service. Those credentials are then linked to the account that created them.
+In order to do this the right permissions are required.
+
+All of this takes place in the IAM service.
+
+1. Go to *IAM* > *Users*
+
+   ![IAM](~/user-guide/images/Amazon_Keyspaces_IAM.png)
+
+1. Search for the account that should have access
+
+   ![SearchUser](~/user-guide/images/Amazon_Keyspaces_SearchUser.png)
+
+1. Verify this account has the permissions to generate Amazon Keyspaces credentials
+
+   ![Permissions](~/user-guide/images/Amazon_Keyspaces_Permissions.png)
+
+1. Then to generate credentials, go to the ‘Security credentials’ tab
+
+   ![SecurityCredentials](~/user-guide/images/Amazon_Keyspaces_Security_Tab.png)
+
+1. Scroll down to the Amazon Keyspaces part
+
+   ![AmazonKeyspacesSecurityCredentials](~/user-guide/images/Amazon_Keyspaces_Credentials.png)
+
+1. Here you can generate up to 2 sets of Username-Password credentials at a time, which can be deactivated or deleted at any time, separate from your AWS account.
+
 ## Connecting your DMS to your Amazon Keyspaces
 
 To configure the connection to an Amazon Keyspaces database, configure the settings as detailed in [Amazon Keyspaces](xref:Configuring_the_database_settings_in_Cube#amazon-keyspaces).
