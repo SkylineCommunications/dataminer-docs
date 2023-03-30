@@ -43,7 +43,7 @@ namespace SLNetTypes.Automation
         /// <summary>
         /// Gets or sets a value indicating which file must be downloaded. This URL can be either absolute path or relative path.
         /// When using an absolute URL, then it is recommended that the file is public accesible from the web. 
-        /// When using a relative URL, then it is recommended that the path starts with a slash (= character '/'). ./ or ../ are supported as well.
+        /// When using a relative URL, then it is recommended that the path starts with a slash (= character '/'). ./ and ../ are supported as well.
         /// Example absolute: "https://dataminer.services/install/DataMinerCube.exe" will download the latest Cube from DataMiner Services.
         /// Example relative: "/Documents/DMA_COMMON_DOCUMENTS/DailyReport.pdf" will download the file 'DailyReport.PDF' hosted on the connected DMA, which is located in Documents module.
         /// </summary>
