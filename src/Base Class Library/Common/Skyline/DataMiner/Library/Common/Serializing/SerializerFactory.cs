@@ -11,7 +11,6 @@
 		/// <summary>
 		/// Creates a serializer specifically for use by the InterApp module.
 		/// </summary>
-		/// <param name="baseType">The type of the base class to serialize or deserialize.</param>
 		/// <returns>An instance of type ISerializer.</returns>
 		public static ISerializer CreateInterAppSerializer()
 		{
