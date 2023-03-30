@@ -136,6 +136,14 @@ A default value can be set by means of a URL option:
 
 For more information on how to pass data using a JSON object, see [Specifying data input in an app URL](xref:Specifying_data_input_in_URL).
 
+#### Low-code apps: 'Open monitoring card' action can now also be linked to a feed [ID_35986]
+
+<!-- MR 10.4.0 - FR 10.3.5 -->
+
+Since DataMiner feature release version 10.3.4, in a low-code app, you can configure an *Open monitoring card* action. When triggered, this action will open the card of a specific element, service or view in the *Monitoring* app. From now on, instead of specifying a specific element, service or view, it is also possible to link this action to a feed.
+
+Also, up to now, when an *Open monitoring card* action was configured in the header bar or in page events, an `Operation is not valid due to the current state of the object` error could be thrown. This issue has now been fixed.
+
 #### Dashboards app & Low-code apps - Table component: Enhanced visibility of rows that are selected or hovered over in dark mode [ID_35993]
 
 <!-- MR 10.4.0 - FR 10.3.5 -->
