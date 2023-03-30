@@ -106,7 +106,7 @@ PUT /<my-index>/_settings
 To set the replica count to 2 for all indices, use the following query:
 
 ```txt
-PUT /all/_settings
+PUT /_all/_settings
 {
   "index" :{
     "number_of_replicas" : 2
