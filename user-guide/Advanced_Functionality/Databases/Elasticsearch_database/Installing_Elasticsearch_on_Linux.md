@@ -1,5 +1,5 @@
 ---
-UID: Installing_elasticsearch_on_linux
+uid: Installing_Elasticsearch_on_Linux
 ---
 
 # Installing Elasticsearch on a Linux machine
@@ -13,16 +13,16 @@ If you want to use an Elasticsearch cluster for your DMS, you can install Elasti
 1. Ensure the firewall ports are open for Elasticsearch. Elasticsearch operates on TCP port 9200 and TCP port 9300. 
 
    - There is a default firewall on RHEL, but this is disabled by default. To enable the firewall, use the following command:
-   
+
    `$ systemctl start firewalld.service`
-   
+
     > [!IMPORTANT]
     > If you connect to your linux server with SSH, you must immediately exclude port 22 or you will be locked out of the session.
     >
     > For this, use the following command: `$ firewall-cmd --zone=public --add-port=22/tcp`
-    
+
    - To add the correct ports to the firewall, you can for example use the following commands:
-   
+
     `$ firewall-cmd --add-port=9200/tcp --permanent`
     `$ firewall-cmd --add-port=9300/tcp --permanent`
     `$ firewall-cmd --reload`
@@ -45,65 +45,65 @@ If you want to use an Elasticsearch cluster for your DMS, you can install Elasti
    - Make sure Elasticsearch serive is stopped, to stop the Elasticsearch service use the following command:
 
      `$ sudo systemctl stop elasticsearch.service`
-    
+
    - To change elasticsearch.yml files, you can use the following commands:
-     
+
      `$ vi /etc/elasticsearch/elasticsearch.yml`
-   
+
    - Make the following adjustments in the *elasticsearch.yml* file based on your setup:
-   
-    - **cluster.name**: This needs to be the same for all nodes in your Elasticsearch cluster. 
-    
-    - **node.name**: Set the name for Elasticsearch node.
-    
-    - **path.data**: The location(s) where you want to store the data.
-    
-    - **bootstrap.memory_lock**: Set this to *true*.
-    
-    - **network.host**: The IP address of the node.
-    
-    - **http.port**: Set this to *9200*.
-    
-    - **discovery.zen.ping.unicast.hosts**: The IP address(es) of all the nodes in your Elasticsearch cluster. Elasticsearch node uses this list of hosts to find each other and learn the topology of the ring.
-    
-        > [!TIP]
+
+     - **cluster.name**: This needs to be the same for all nodes in your Elasticsearch cluster. 
+
+     - **node.name**: Set the name for Elasticsearch node.
+
+     - **path.data**: The location(s) where you want to store the data.
+
+     - **bootstrap.memory_lock**: Set this to *true*.
+
+     - **network.host**: The IP address of the node.
+
+     - **http.port**: Set this to *9200*.
+
+     - **discovery.zen.ping.unicast.hosts**: The IP address(es) of all the nodes in your Elasticsearch cluster. Elasticsearch node uses this list of hosts to find each other and learn the topology of the ring.
+
+       > [!TIP]
        >
        > - We recommend 3 nodes cluster, preferably in different racks.
        > - To add node to an existing cluster see [Adding an Elasticsearch cluster node](xref:Configuring_Elasticsearch_node_add)
-    
-    - **discovery.zen.minimum_master_nodes**: Set this to *2*, for more information on master node see also [Configuring the master nodes](xref:Configuring_master_Elasticsearch_nodes)
-    
-    - **gateway.recover_after_nodes**: Set this to *1*.
-    
-    - **node.master**: Set this to *true*, for more information on master node see also [Configuring the master nodes](xref:Configuring_master_Elasticsearch_nodes)
-    
+
+     - **discovery.zen.minimum_master_nodes**: Set this to *2*, for more information on master node see also [Configuring the master nodes](xref:Configuring_master_Elasticsearch_nodes)
+
+     - **gateway.recover_after_nodes**: Set this to *1*.
+
+     - **node.master**: Set this to *true*, for more information on master node see also [Configuring the master nodes](xref:Configuring_master_Elasticsearch_nodes)
+
 1. Make the following adjustments in the */etc/sysconfig/elasticsearch*.
 
- - **MAX_LOCKED_MEMORY**: Set this to *unlimited*.
- - **JAVA_HOME**: Set this to *java-11-openjdk-11.0.14.0.9-1.el7_9.x86_64* a custom java path to be used.
- 
+   - **MAX_LOCKED_MEMORY**: Set this to *unlimited*.
+   - **JAVA_HOME**: Set this to *java-11-openjdk-11.0.14.0.9-1.el7_9.x86_64* a custom java path to be used.
+
 1. Make the following adjustments in the */usr/lib/systemd/system/elasticsearch.service*.
 
- - **LimitMEMLOCK**: Set this to *infinity*, this must be set under the *Service* tag.
- 
+   - **LimitMEMLOCK**: Set this to *infinity*, this must be set under the *Service* tag.
+
 1. Set the maximum Java Heap Size under */etc/elasticsearch/jvm.options*, for more information see also see [Setting the heap size](https://www.elastic.co/guide/en/elasticsearch/reference/6.8/heap-size.html)
 
 1. Start Elasticsearch and evaluate if the service is up and running.
 
- - To start Elasticsearch, use the following command:
-  
-  `$ systemctl start elasticsearch.service `
-  
- - To check if the ElasticSearch is running, check the logs under */var/log/elasticsearch/* or send the HTTP request to **NodeIP:9200**. HTTP request response should be as following:
- 
- ![Elasticsearch_example](~/user-guide/images/Elasticsearch_example.png)
- 
- - Connect to one of the node using Web Browser and check the cluster status by going to the address *http://<NodeIP>:9200/_cluster/state?pretty*, response should be as following.
- 
- ![Elasticsearch_example1](~/user-guide/images/Elasticsearch_example1.png)
- 
- - To check the cluster health status go to address *http://<NodeIP>:9200/_cluster/health?pretty*, response should be as following.
- 
- ![Elasticsearch_example2](~/user-guide/images/Elasticsearch_example2.png)
- 
-1. Configuring the Elastic cluster database in System Center. See [Configuring Elasticsearch in System Center](xref:Configuring_DataMiner_Indexing).
+   - To start Elasticsearch, use the following command:
+
+   `$ systemctl start elasticsearch.service `
+
+   - To check if the ElasticSearch is running, check the logs under */var/log/elasticsearch/* or send the HTTP request to **NodeIP:9200**. HTTP request response should be as following:
+
+     ![Elasticsearch example](~/user-guide/images/Elasticsearch_example.png)
+
+   - Connect to one of the node using Web Browser and check the cluster status by going to the address *http://<NodeIP>:9200/_cluster/state?pretty*, response should be as following.
+
+     ![Elasticsearch example1](~/user-guide/images/Elasticsearch_example1.png)
+
+   - To check the cluster health status go to address *http://<NodeIP>:9200/_cluster/health?pretty*, response should be as following.
+
+     ![Elasticsearch example2](~/user-guide/images/Elasticsearch_example2.png)
+
+1. Configure the Elasticsearch cluster database in System Center. See [Configuring Elasticsearch in System Center](xref:Configuring_DataMiner_Indexing).

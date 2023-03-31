@@ -5,7 +5,7 @@ uid: Installing_Elasticsearch_via_DataMiner
 # Installing Elasticsearch on a DMA via DataMiner
 
 > [!NOTE]
-> For information on how to install Elasticsearch on a separate Linux machine, see [Installing Elasticsearch](https://www.elastic.co/guide/en/elasticsearch/reference/6.8/install-elasticsearch.html) in the Elasticsearch reference information. This is recommended in case you use the [Cassandra Cluster](xref:Migrating_the_general_database_to_a_DMS_Cassandra_cluster) feature.
+> In case you use the [Cassandra Cluster](xref:Migrating_the_general_database_to_a_DMS_Cassandra_cluster) feature, we recommend that you do not install Elasticsearch on the DMA via DataMiner, but instead install [Elasticsearch on a separate Linux machine](xref:Installing_Elasticsearch_on_Linux).
 
 To install Elasticsearch on a DataMiner Agent via DataMiner:
 
