@@ -9,8 +9,10 @@ In an Automation script, you can define custom-made dialog boxes in C# code bloc
 In DataMiner Cube, it is also possible to add these dialog boxes using the script action *User interaction*. For more information, see [User interaction](xref:User_interaction).
 
 > [!NOTE]
+>
 > - For detailed information on the classes, methods and properties that can be used in C# code blocks of Automation scripts, see [Skyline.DataMiner.Automation](xref:Skyline.DataMiner.Automation).
 > - For more information on how to abort an interactive Automation script, see [How do I abort a running Automation script?](xref:How_do_I_abort_a_running_Automation_script)
+> - For a high-level API to build interactive Automation scripts, see [Interactive Automation Script Toolkit](xref:Interactive_Automation_Script_Toolkit).
 
 ## Example of a dialog box displaying information
 
