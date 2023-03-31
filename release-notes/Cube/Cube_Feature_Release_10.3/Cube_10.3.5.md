@@ -46,6 +46,12 @@ When viewing a trend graph with a trend prediction (i.e. predicted trend informa
 
 In other words, when you select a section of a trend graph that is either partly or entirely past the "Now" line, you will not be able to save the tag.
 
+#### Alarm templates: 'Condition (Monitoring disabled if condition is true)' column renamed to 'Condition (Parameter excluded if condition is true)' [ID_36007]
+
+<!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
+
+When you were editing an alarm template, one of the many columns on the screen was named `Condition (Monitoring disabled if condition is true)`. This column has now been renamed to `Condition (Parameter excluded if condition is true)`.
+
 ### Fixes
 
 #### Cube could start to consume excessive CPU cycles whenever an operation took a long time or a deadlock occurred [ID_35614]

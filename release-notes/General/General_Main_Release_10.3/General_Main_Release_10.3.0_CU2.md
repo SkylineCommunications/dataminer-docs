@@ -174,11 +174,31 @@ The first time a message with an object of a type that inherited from `InfoData`
 Skyline.DataMiner.Net.Exceptions.DataMinerException: Failed to deserialize message (ProtoBuf). Possible version incompatibility between client and server.  ---&gt; System.InvalidOperationException: It was not possible to prepare a serializer for: Skyline.DataMiner.Net.InfoData ---&gt; System.InvalidOperationException: Unable to resolve a suitable Add method for System.Collections.Generic.IReadOnlyList`1[[System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]&#xD;
 ```
 
+#### Problem with SLElement when a timed action was stopped [ID_35928]
+
+<!-- MR 10.3.0 [CU2] - FR 10.3.5 -->
+
+In some rare cases, an error could occur in SLElement when a timed action was stopped.
+
+#### SNMP: OIDs with a leading dot would incorrectly no longer be allowed [ID_35954]
+
+<!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
+
+OIDs with a leading dot would incorrectly no longer be allowed. From now on, OIDs with a leading dot are allowed again.
+
 #### NT Notify type NT_GET_BITRATE_DELTA would not return a valid value for a table with a single row [ID_35967]
 
 <!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
 
 In some rare cases, NT Notify type NT_GET_BITRATE_DELTA (269), which retrieves the time between two consecutive executions of the specified SNMP group (in ms), would not return a valid value for a table with a single row.
+
+#### Dashboards app - Line & area chart: Legend would show an incorrect number of disabled parameters [ID_35970]
+
+<!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
+
+When configuring a line & area chart, you can use the *Chart limit* setting to specify the maximum number of parameters that can be displayed in the chart. The excess parameters will then be disabled but remain available in the chart legend, so that they can be enabled again manually.
+
+In some cases, the number of disabled parameters shown in the legend would be incorrect.
 
 #### 'SLA Affecting' property of cleared or re-opened alarm would incorrectly contain 'Y' instead of 'Yes' [ID_35987]
 

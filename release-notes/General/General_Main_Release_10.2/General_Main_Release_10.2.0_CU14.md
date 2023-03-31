@@ -72,6 +72,12 @@ The following issues have also been fixed:
 
 - When a DVE parent element was started, the method that has to make sure that ElementInfo and ElementData are in sync would incorrectly not check all child elements.
 
+#### DataMiner Cube - Alarm templates: 'Condition (Monitoring disabled if condition is true)' column renamed to 'Condition (Parameter excluded if condition is true)' [ID_36007]
+
+<!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
+
+When you were editing an alarm template, one of the many columns on the screen was named `Condition (Monitoring disabled if condition is true)`. This column has now been renamed to `Condition (Parameter excluded if condition is true)`.
+
 ### Fixes
 
 #### SLLogCollector: Problem when collecting multiple memory dumps with the 'Now and when memory increases with X Mb' option [ID_35617]
@@ -229,6 +235,12 @@ An error could occur when you tried to open a spectrum element of which the user
 
 Also, an exception could be thrown when you tried to copy spectrum settings to the Windows clipboard.
 
+#### SNMP: OIDs with a leading dot would incorrectly no longer be allowed [ID_35954]
+
+<!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
+
+OIDs with a leading dot would incorrectly no longer be allowed. From now on, OIDs with a leading dot are allowed again.
+
 #### DataMiner Cube - Surveyor: Dragging multiple items from a view card onto a view in the Surveyor did not work as expected [ID_35955]
 
 <!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
@@ -256,7 +268,7 @@ In some rare cases, NT Notify type NT_GET_BITRATE_DELTA (269), which retrieves t
 
 #### Dashboards app - Line & area chart: Legend would show an incorrect number of disabled parameters [ID_35970]
 
-<!-- MR 10.2.0 [CU14] - FR 10.3.5 -->
+<!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
 
 When configuring a line & area chart, you can use the *Chart limit* setting to specify the maximum number of parameters that can be displayed in the chart. The excess parameters will then be disabled but remain available in the chart legend, so that they can be enabled again manually.
 
