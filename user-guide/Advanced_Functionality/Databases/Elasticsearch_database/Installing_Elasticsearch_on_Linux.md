@@ -4,32 +4,32 @@ uid: Installing_Elasticsearch_on_Linux
 
 # Installing Elasticsearch on a Linux machine
 
-If you want to use an Elasticsearch cluster for your DMS, you can install Elasticsearch on a Linux machine as detailed below.
+If you want to use an Elasticsearch cluster for your DMS (which is required to use the [Cassandra Cluster](xref:Migrating_the_general_database_to_a_DMS_Cassandra_cluster) feature), install Elasticsearch on a Linux machine as detailed below.
 
-1. Install the Elasticsearch software on Linux machine.
+1. Install the Elasticsearch software on  the Linux machine as described under [Installing from the RPM repository](https://www.elastic.co/guide/en/elasticsearch/reference/6.8/rpm.html#rpm-repo) in the official Elasticsearch documentation.
 
-   For more information on how to install the software, scroll down on the [install Elasticsearch with RPM](https://www.elastic.co/guide/en/elasticsearch/reference/6.8/rpm.html) page of Elasticsearch website, and follow the steps of the installation process detailed under *installing from the RPM repository*.
-
-1. Ensure the firewall ports are open for Elasticsearch. Elasticsearch operates on TCP port 9200 and TCP port 9300. 
+1. Make sure the firewall ports are open for Elasticsearch. Elasticsearch operates on TCP port 9200 and TCP port 9300.
 
    - There is a default firewall on RHEL, but this is disabled by default. To enable the firewall, use the following command:
 
-   `$ systemctl start firewalld.service`
+     `$ systemctl start firewalld.service`
 
-    > [!IMPORTANT]
-    > If you connect to your linux server with SSH, you must immediately exclude port 22 or you will be locked out of the session.
-    >
-    > For this, use the following command: `$ firewall-cmd --zone=public --add-port=22/tcp`
+     > [!IMPORTANT]
+     > If you connect to your Linux server with SSH, you must immediately exclude port 22, or you will be locked out of the session.
+     >
+     > For this, use the following command: `$ firewall-cmd --zone=public --add-port=22/tcp`
 
    - To add the correct ports to the firewall, you can for example use the following commands:
 
-    `$ firewall-cmd --add-port=9200/tcp --permanent`
-    `$ firewall-cmd --add-port=9300/tcp --permanent`
-    `$ firewall-cmd --reload`
+     - `$ firewall-cmd --add-port=9200/tcp --permanent`
+
+     - `$ firewall-cmd --add-port=9300/tcp --permanent`
+
+     - `$ firewall-cmd --reload`
 
 1. Mount the data folder to the data disk.
 
-   > [!TIP]
+   > [!NOTE]
    >
    > - The folder where the Elasticsearch data is stored is configured in *elasticsearch.yaml*, in the property *path.data*.
    > - To verify on which disk the data is mounted, execute the "df" command.
@@ -42,19 +42,19 @@ If you want to use an Elasticsearch cluster for your DMS, you can install Elasti
 
 1. Configure the *elasticsearch.yml* files.
 
-   - Make sure Elasticsearch serive is stopped, to stop the Elasticsearch service use the following command:
+   - Make sure the Elasticsearch service is stopped. To stop the Elasticsearch service, use the following command:
 
      `$ sudo systemctl stop elasticsearch.service`
 
-   - To change elasticsearch.yml files, you can use the following commands:
+   - To change *elasticsearch.yml* files, you can use the following command:
 
      `$ vi /etc/elasticsearch/elasticsearch.yml`
 
    - Make the following adjustments in the *elasticsearch.yml* file based on your setup:
 
-     - **cluster.name**: This needs to be the same for all nodes in your Elasticsearch cluster. 
+     - **cluster.name**: This needs to be the same for all nodes in your Elasticsearch cluster.
 
-     - **node.name**: Set the name for Elasticsearch node.
+     - **node.name**: The name of the Elasticsearch node.
 
      - **path.data**: The location(s) where you want to store the data.
 
@@ -64,45 +64,52 @@ If you want to use an Elasticsearch cluster for your DMS, you can install Elasti
 
      - **http.port**: Set this to *9200*.
 
-     - **discovery.zen.ping.unicast.hosts**: The IP address(es) of all the nodes in your Elasticsearch cluster. Elasticsearch node uses this list of hosts to find each other and learn the topology of the ring.
+     - **discovery.zen.ping.unicast.hosts**: The IP addresses of all the nodes in your Elasticsearch cluster. Elasticsearch nodes use this list of hosts to find each other and learn the topology of the ring.
 
-       > [!TIP]
+       > [!NOTE]
        >
-       > - We recommend 3 nodes cluster, preferably in different racks.
-       > - To add node to an existing cluster see [Adding an Elasticsearch cluster node](xref:Configuring_Elasticsearch_node_add)
+       > - We recommend a cluster of three nodes, preferably in different racks.
+       > - To add a node to an existing cluster, see [Adding an Elasticsearch cluster node](xref:Configuring_Elasticsearch_node_add).
 
-     - **discovery.zen.minimum_master_nodes**: Set this to *2*, for more information on master node see also [Configuring the master nodes](xref:Configuring_master_Elasticsearch_nodes)
+     - **discovery.zen.minimum_master_nodes**: Set this to *2*. For more information on master nodes, see [Configuring the master nodes](xref:Configuring_master_Elasticsearch_nodes).
 
      - **gateway.recover_after_nodes**: Set this to *1*.
 
-     - **node.master**: Set this to *true*, for more information on master node see also [Configuring the master nodes](xref:Configuring_master_Elasticsearch_nodes)
+     - **node.master**: Set this to *true*. For more information on master nodes, see [Configuring the master nodes](xref:Configuring_master_Elasticsearch_nodes).
 
-1. Make the following adjustments in the */etc/sysconfig/elasticsearch*.
+1. Make the following adjustments in */etc/sysconfig/elasticsearch*:
 
    - **MAX_LOCKED_MEMORY**: Set this to *unlimited*.
+
    - **JAVA_HOME**: Set this to *java-11-openjdk-11.0.14.0.9-1.el7_9.x86_64* a custom java path to be used.
 
-1. Make the following adjustments in the */usr/lib/systemd/system/elasticsearch.service*.
+1. Make the following adjustment in */usr/lib/systemd/system/elasticsearch.service*:
 
-   - **LimitMEMLOCK**: Set this to *infinity*, this must be set under the *Service* tag.
+   - **LimitMEMLOCK**: Set this to *infinity*. This must be set under the *Service* tag.
 
-1. Set the maximum Java Heap Size under */etc/elasticsearch/jvm.options*, for more information see also see [Setting the heap size](https://www.elastic.co/guide/en/elasticsearch/reference/6.8/heap-size.html)
+1. Set the maximum Java Heap Size under */etc/elasticsearch/jvm.options*. For more information, see [Setting the heap size](https://www.elastic.co/guide/en/elasticsearch/reference/6.8/heap-size.html).
 
 1. Start Elasticsearch and evaluate if the service is up and running.
 
    - To start Elasticsearch, use the following command:
 
-   `$ systemctl start elasticsearch.service `
+     `$ systemctl start elasticsearch.service`
 
-   - To check if the ElasticSearch is running, check the logs under */var/log/elasticsearch/* or send the HTTP request to **NodeIP:9200**. HTTP request response should be as following:
+   - To check if the Elasticsearch service is running, check the logs under */var/log/elasticsearch/* or send an HTTP request to **NodeIP:9200**.
+
+     The HTTP request response should be as follows:
 
      ![Elasticsearch example](~/user-guide/images/Elasticsearch_example.png)
 
-   - Connect to one of the node using Web Browser and check the cluster status by going to the address *http://<NodeIP>:9200/_cluster/state?pretty*, response should be as following.
+   - Connect to one of the nodes using a web browser, and check the cluster status by going to `http://<NodeIP>:9200/_cluster/state?pretty`.
+
+     The response should be as follows:
 
      ![Elasticsearch example1](~/user-guide/images/Elasticsearch_example1.png)
 
-   - To check the cluster health status go to address *http://<NodeIP>:9200/_cluster/health?pretty*, response should be as following.
+   - To check the cluster health status, go to `http://<NodeIP>:9200/_cluster/health?pretty`.
+
+     The response should be as follows:
 
      ![Elasticsearch example2](~/user-guide/images/Elasticsearch_example2.png)
 
