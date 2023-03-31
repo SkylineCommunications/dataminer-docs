@@ -31,10 +31,9 @@ The following placeholders can be used in the text displayed on the *Reservation
   Optionally a colon (":") can be added within the placeholder, followed by the format in which the start time should be displayed. By default, this is the standard month format, followed by a space and the standard short time format.
 
   > [!NOTE]
-  > For information on other possible date and time formats, refer to:
   >
-  > - <https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings>
-  > - <https://docs.microsoft.com/en-us/dotnet/standard/base-types/custom-date-and-time-format-strings>
+  > - For information on the standard date and time formats, refer to <https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings>.
+  > - For information on other possible date and time formats, refer to <https://docs.microsoft.com/en-us/dotnet/standard/base-types/custom-date-and-time-format-strings>.
 
 - **\[End Time:format=\<format>\]**
 
@@ -51,10 +50,7 @@ The following placeholders can be used in the text displayed on the *Reservation
   By default, the format is "\[x days\] hh:mm:ss", where the number of days is only displayed if it is 1 or more, and the local language is used.
 
   > [!NOTE]
-  > For information on other possible date and time formats, refer to:
-  >
-  > - <https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings>
-  > - <https://docs.microsoft.com/en-us/dotnet/standard/base-types/custom-date-and-time-format-strings>
+  > For information on other possible time formats, refer to <https://learn.microsoft.com/en-us/dotnet/standard/base-types/custom-timespan-format-strings>.
 
 - **\[Time until start:format=\<format>,default=\<defaultValue>\]**
 

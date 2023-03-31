@@ -410,7 +410,7 @@ Ports currently checked:
 - 6222: NATS (only checked when you are not upgrading a standalone agent, a standalone Failover pair or a two-node agent cluster)
 - 9090: NAS
 
-If this check fails, you will need to execute the VerifyClusterPorts.dmupgrade package ([download](https://community.dataminer.services/documentation/verifyclusterports-dmupgrade/)). VerifyClusterPorts.dmupgrade will run the same tests as the DataMiner upgrade package, but it will make sure that temporary listening ports are open for the required ports and a temporary local firewall rule is configured. This way, if a firewall or other configuration issue is causing the problem, this will become clear. If no failing ports are reported when you run this package, the regular upgrade package will use this stored result to continue with the upgrade.
+If this check fails, you will need to execute the VerifyClusterPorts.dmupgrade package ([download](https://community.dataminer.services/download/verifyclusterports-dmupgrade/)). VerifyClusterPorts.dmupgrade will run the same tests as the DataMiner upgrade package, but it will make sure that temporary listening ports are open for the required ports and a temporary local firewall rule is configured. This way, if a firewall or other configuration issue is causing the problem, this will become clear. If no failing ports are reported when you run this package, the regular upgrade package will use this stored result to continue with the upgrade.
 
 #### Enhanced setup of serial connections with SSL/TLS enabled \[ID_32969\]
 
@@ -463,6 +463,12 @@ Up to now, the GUIDs of the following types of DOM reference fields would be dis
 - Service definitions
 - DOM instances
 - Resources
+
+#### MessageBroker: Timeout value would incorrectly be ignored when using RequestResponse(Async) [ID_32810]
+
+<!-- MR 10.3.0 - FR 10.2.5 -->
+
+When, in the MessageBroker, RequestResponse(Async) was used when NATS was not yet connected, the specified timeout value would incorrectly be ignored. The timeout value would only be applied to the actual NATS communication and not to the potential reconnection logic.
 
 #### Dashboards app: Problem when sorting a table component populated by means of a GQI query \[ID_32814\]
 

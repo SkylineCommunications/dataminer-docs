@@ -17,16 +17,23 @@
     - name: DataMiner platform - Empowering your digital transformation
       topicUid: Overview_Platform_intro
       items:
-        - name: Agility - the cornerstone of any successful data-driven media operation
+        - name: Agility
           topicUid: Overview_Platform_Agility
-        - name: Preparing your organization for the new data-driven future
+        - name: Preparing for the new data-driven future
           topicUid: Overview_Platform_Prepare
         - name: DataMiner Digital Transformation Suite
           topicUid: Overview_Platform_DTS_Suite
-        - name: Open software platform for any of your monitoring and orchestration needs
+        - name: Open software platform
           topicUid: Overview_Platform_Open_Platform
-    - name: DataMiner Cloud Platform
+    - name: dataminer.services
       topicUid: Overview_DCP
+      items:
+        - name: DevOps
+          topicUID: Overview_DevOps
+        - name: Platform Services
+          topicUID: Overview_Platform_services
+        - name: Collaboration
+          topicUID: Overview_Collaboration
     - name: Agile partnership
       topicUid: Overview_Agile_Partnership_intro
       items:
@@ -36,6 +43,27 @@
           topicUid: Overview_Agile_Partnership_principles
         - name: Agile scope-based deployment
           topicUid: Overview_Agile_Partnership_scope_based_deployment
+    - name: DevOps
+      topicUID: Overview_DevOps_index
+      items:
+        - name: DataMiner DevOps Professional Program
+          topicUID: DataMiner_Devops_Professionals
+          items:
+            - name: What is it?
+              topicUID: What_is_the_DevOps_Professionals_Program
+            - name: Benefits
+              topicUID: Benefits_DevOps_Professionals_Program
+            - name: Benefits for business and tech partners
+              topicUID: Benefits_Business_and_Tech_Partners
+            - name: Required skill sets
+              topicUID: Skill_Sets_DevOps_Professionals_Program
+        - name: DataMiner DevOps Enablement Service
+          topicUID: DataMiner_DevOps_Enablement
+          items:
+            - name: What is DevOps Enablement?
+              topicUID: What_is_DataMiner_DevOps_Enablement
+            - name: The DataMiner DevOps Professional Program
+              topicUID: DevOps_Enablement_and_the_DevOps_Professional_program
     - name: Training courses and certification
       topicUid: Overview_Training_intro
       items:
@@ -49,17 +77,30 @@
           topicUid: Overview_Training_videolibrary
         - name: Agile Awareness Training
           topicUid: Overview_Training_agile_aw
+    - name: Pricing
+      topicUID: Pricing
+      items:
+      - name: Commercial models summary
+        topicUID: Pricing_Commercial_Models
+      - name: Usage-based services
+        topicUID: Pricing_Usage_based_service
+      - name: Perpetual-Use Licensing
+        topicUID: Pricing_Perpetual_Use_Licensing
     - name: Support Services
       topicUid: Overview_Support_DMS_M_and_S
       items:
+        - name: Support plans
+          topicUid: Overview_Support_Plans
         - name: Standard limited warranty
           topicUid: Overview_Support_warranty
         - name: Software updates and upgrades
           topicUid: Overview_Support_upgrade_policy
         - name: Out-of-business-hours support
           topicUid: Overview_Out_Of_Business_Hours_Support
-        - name: Support services agreement
-          topicUid: Support_services_agreement
+        - name: CCA Support Services
+          topicUid: CCA_Support_Services
+        - name: Support services terms
+          topicUid: Support_services_terms
     - name: Compliance statements
       topicUid: Overview_Compliance_Statements_intro
       items:
@@ -67,9 +108,69 @@
           topicUid: Overview_Compliance_Statements_RvsG_O
         - name: Tender compliancy (licenses / engineering days)
           topicUid: Overview_Compliance_Statements_Tender_Compliancy
+    - name: DataMiner Partner Program
+      topicUID: Partner_Program
+      items:
+        - name: Becoming a DataMiner Partner
+          topicUID: Becoming_a_DataMiner_Partner
+        - name: Getting started with the Partner Program
+          topicUID: Getting_Started_with_the_Partner_Program
+          items:
+            - name: Sales and Marketing
+              topicUID: Sales_and_Marketing
+            - name: Service delivery
+              topicUID: Service_Delivery
+            - name: Partnership governance
+              topicUID: Partnership_Governance
+            - name: Deal Registration
+              topicUID: Deal_Registration
+    - name: DataMiner Professional Services
+      topicUid: Part52ProfessionalServices
+      items:
+        - name: DataMiner Solution Deployment Methodology
+          topicUid: DeploymentMethodology
+          items:
+            - name: About Digital Transformation
+              topicUid: DeploymentMethodology
+            - name: Managing technology deployments
+              topicUid: Managing_technology_deployments
+              items:
+                - name: Methodology is key to success
+                  topicUid: Managing_technology_deployments
+                - name: Methodology is not a choice
+                  topicUid: Methodology_is_not_a_choice
+                - name: Methodology needs to be practiced
+                  topicUid: Methodology_needs_to_be_practiced
+            - name: Deployment methodologies in summary
+              topicUid: Deployment_methodologies_in_summary
+            - name: Turnkey Methodology
+              topicUid: Turnkey_Methodology
+              items:
+                - name: Typical phases of a Turnkey Project deployment
+                  topicUid: Typical_phases_of_a_Turnkey_Project_deployment
+                - name: Terms & Conditions for a Turnkey Project deployment
+                  topicUid: Terms_Conditions_for_a_Turnkey_Project_deployment
+                - name: Change Request Procedure
+                  topicUid: Change_Request_Procedure
+            - name: Agile Scope-Based Methodology
+              topicUid: Agile_Scope-Based_Methodology
+              items:
+                - name: Key Values & Principles
+                  topicUid: Key_Values_Principles
+                - name: Formal roles for Agile Scope-Based deployment
+                  topicUid: Formal_roles_for_Agile_Scope-Based_deployment
+                - name: Typical Phases for Agile Scope-Based projects
+                  topicUid: Typical_Phases_for_Agile_Scope-Based_projects
+            - name: Agile Time & Materials Methodology
+              topicUid: Agile_Time_Materials_Methodology
+            - name: Some Use Cases & Practical Examples
+              topicUid: Some_Use_Cases_Practical_Examples
     - name: Frequently asked questions
       topicUid: FAQs
       items:
+      - name: General questions
+        topicUID: FAQs_General
+        items:
         - name: What is Skyline's mission and vision
           topicUid: FAQ_MissionVision
         - name: Does DataMiner process personal data in a GDPR-compliant manner
@@ -88,8 +189,6 @@
           topicUid: FAQ_Concurrent_users
         - name: What is the recommended method for southbound integration of an EMS/NMS
           topicUid: FAQ_Southbound_integration_EMS_NMS
-        - name: What is the standard lead time for new connectors
-          topicUid: FAQ_Standard_lead_time_new_connectors
         - name: What are the DataMiner system requirements
           topicUid: FAQ_DataMiner_system_requirements
         - name: What is the DataMiner roadmap
@@ -98,7 +197,20 @@
           topicUid: FAQ_DMA_element_capacity
         - name: How much bandwidth must be provided for data acquisition on data sources
           topicUid: FAQ_Bandwidth_data_acquisition
-        - name: What are the limitations when using the Generic SNMP connector as opposed to a dedicated connector
-          topicUid: FAQ_Limitations_generic_SNMP_connector
         - name: Which languages are available in the DataMiner Cube client
           topicUid: FAQ_DataMiner_Cube_languages
+      - name: Connectors
+        topicUID: FAQs_Connectors
+        items:
+        - name: What is the standard lead time for new connectors
+          topicUid: FAQ_Standard_lead_time_new_connectors
+        - name: What are the limitations when using the Generic SNMP connector as opposed to a dedicated connector
+          topicUid: FAQ_Limitations_generic_SNMP_connector
+        - name: What are the standard operating procedures for connector deployment?
+          topicUID: FAQ_SOP_connectors
+      - name: Commercial models
+        topicUID: FAQs_Pricing
+      - name: Support Services
+        topicUID: FAQs_Support_Services
+      - name: dataminer.services
+        topicUID: FAQ_DCP

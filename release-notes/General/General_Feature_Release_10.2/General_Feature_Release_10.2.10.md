@@ -169,7 +169,7 @@ In the conditional coloring layout setting for Table and Node edge components, d
 
 #### SLReset will no longer remove VersionHistory.txt and the HTTPS configuration [ID_34194]
 
-<!-- MR 10.3.0 - FR 10.2.10 -->
+<!-- MR 10.2.0 [CU9] - FR 10.2.10 -->
 
 From now on, the factory reset tool *SLReset.exe* will no longer remove the following items:
 

@@ -23,7 +23,7 @@ Configure the following shape data fields on the shape that is to contain the Se
 
    - **AutoLoadExternalChanges=** : When set to *true*, external changes are automatically loaded, if there have been no local changes. This keeps an information bar from being displayed at the bottom of the visual overview, asking the user to load or discard the external changes.
    - **AutoIgnoreExternalChanges=** : Available from DataMiner 10.0.13 onwards. When set to *true*, external changes are automatically discarded. This keeps an information bar from being displayed at the bottom of the visual overview, asking the user to load or discard the external changes.
-   - **FunctionTypes=** : Available from DataMiner 10.2.7/10.3.0 onwards. Can be used as a filter to only include specific types of functions. 
+   - **FunctionTypes=** : Available from DataMiner 10.2.7/10.3.0 onwards. Can be used as a filter to only include specific types of functions.
 
      Should be set to a comma-separated list of values. Possible values:
 

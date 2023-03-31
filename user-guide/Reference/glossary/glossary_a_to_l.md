@@ -30,7 +30,7 @@ uid: glossary_a_to_l
 | Alarm template group | Combination of different alarm templates into one grouped template.<br>See [Alarm template groups](xref:Alarm_template_groups). |
 | Alarm threshold | Definition of the value a particular parameter must have to trigger an alarm of a particular level.<br>See [Alarm templates](xref:Alarm_templates). |
 | Alarm tree | Series of linked alarm records, reflecting the life cycle of an alarm.<br>See [Alarm linking](xref:Alarm_linking). |
-| Alerter | System tray application that notifies the user of alarms in the DataMiner System.<br>See [DMS Alerter](xref:DMS_Alerter). |
+| Alerter | System tray application that notifies the user of alarms in the DataMiner System.<br>See [Alerter](xref:Alerter). |
 | Analog parameter | Parameter with a value within a predefined range delimited by a minimum and a maximum.<br>See [Discrete, analog and hybrid parameters](xref:Discrete_analog_and_hybrid_parameters). |
 | API | Application Programming Interface. Software interface that allows two applications to communicate with each other. |
 | Application package | Package containing all files necessary to install a particular DataMiner app on an existing DataMiner System. |
@@ -38,10 +38,10 @@ uid: glossary_a_to_l
 | ASI | Asynchronous serial interface. Streaming data format that often carries an MPEG transport stream. |
 | ASN.1 | Abstract Syntax Notation 1. Standardized notation for data structures. |
 | ASP | Active Server Pages. Server-side Microsoft script engine for dynamically generated web pages. |
-| Asset Manager | DataMiner module that is used for Inventory & Asset Management.<br>See [DMS Inventory & Asset Management](xref:AssetManagement#dms-inventory--asset-management). |
+| Asset Manager | DataMiner module that is used for Inventory & Asset Management.<br>See [Inventory & Asset Management](xref:AssetManagement). |
 | ATM | Asynchronous Transfer Mode. Set of network protocols used to transfer data in fixed-size packets. |
 | ATP | Acceptance Test Plan. Document describing the required testing in order to determine if a software system meets the criteria for acceptability. |
-| Automation | DataMiner module that allows you to create, manage and run scripts to execute tasks automatically.<br>See [DMS Automation](xref:automation#dms-automation). |
+| Automation | DataMiner module that allows you to create, manage and run scripts to execute tasks automatically.<br>See [Automation](xref:automation). |
 | Average trending | Type of trending where average values are kept across a relatively long time period.<br>See [Trending techniques](xref:Trending_techniques). |
 | AVR | Automatic Voltage Regulator. Device that automatically maintains a constant voltage level. |
 
@@ -63,16 +63,17 @@ uid: glossary_a_to_l
 | Boundary clock | Device in a PTP environment that takes the time from a grandmaster clock, recreates it and acts as a clock itself.<br>See [DataMiner PTP app](xref:SolPTP#dataminer-ptp-app). |
 | BSS | Business Support System. Software system used by service providers to run business operations towards their customers. |
 | BUC | Block Upconverter. Converter used in the transmission of satellite signals, which converts signals to a higher frequency. |
-| Business Intelligence | DataMiner module that is used to track the parameters of a Service Level Agreement or SLA.<br>See [DMS Business Intelligence](xref:sla#dms-business-intelligence). |
+| Business Intelligence | DataMiner module that is used to track the parameters of a Service Level Agreement or SLA.<br>See [Business Intelligence](xref:sla). |
 
 ## C
 
 | Term | Description |
 |------|-------------|
-| Capability | Used in the context of DataMiner SRM as the ability of a resource to provide a particular functionality. For example, if a meeting room were available as a resource in the system, a capability of this resource could be that it has a speakerphone.<br>See [Service and Resource Management](xref:SRM#service-and-resource-management). |
-| Capacity | Used in the context of DataMiner SRM as the measurable availability instances of a resource. For example, if the maximum capacity of a resource is 10 units, no more than 10 units can be scheduled at the same time in the system.<br>See [Service and Resource Management](xref:SRM#service-and-resource-management). |
+| Capability | Used in the context of DataMiner SRM as the ability of a resource to provide a particular functionality. For example, if a meeting room were available as a resource in the system, a capability of this resource could be that it has a speakerphone.<br>See [Service and Resource Management](xref:SRM). |
+| Capacity | Used in the context of DataMiner SRM as the measurable availability instances of a resource. For example, if the maximum capacity of a resource is 10 units, no more than 10 units can be scheduled at the same time in the system.<br>See [Service and Resource Management](xref:SRM). |
 | Card | A window within DataMiner Cube and the DataMiner Monitoring app. |
 | Cassandra | Apache Cassandra is an open-source, high-performance, distributed, NoSQL database system designed to handle large amounts of data. It can be used as the general database for a DMA from DataMiner 9.0 onwards. |
+| CCA  | Cloud-Connected Agents. DataMiner Agents connected to [dataminer.services](xref:Part51CloudPlatform). |
 | CCAP | Converged Cable Access Platform. Platform combining the functionality of a CMTS with that of an edge QAM, providing high-density services to cable subscribers. |
 | CCU | Camera Control Unit. Device used to monitor and control camera functions, for example in live video broadcasting. |
 | CDN | Content Delivery Network. Network of servers in different locations that work together to allow fast delivery of internet content. |
@@ -84,20 +85,20 @@ uid: glossary_a_to_l
 | CLI | Command Line Interface. Interface that allows a user to operate software by entering commands in the form of lines of text. |
 | Cluster | Several DMAs integrated into one DataMiner System via an IP network. |
 | CM | Cable Modem. |
-| CMDB | Configuration Management Database. A database containing information about the hardware and software assets of an organization.<br>See [DMS Inventory & Asset Management](xref:AssetManagement#dms-inventory--asset-management). |
+| CMDB | Configuration Management Database. A database containing information about the hardware and software assets of an organization.<br>See [Inventory & Asset Management](xref:AssetManagement). |
 | CMTS | Cable Modem Termination System. Piece of equipment used to provide high-speed data services to cable subscribers. |
-| Concurrency | Used in the context of DataMiner SRM to indicate the number of times a resource can be used at the same time.<br>See [Service and Resource Management](xref:SRM#service-and-resource-management). |
+| Concurrency | Used in the context of DataMiner SRM to indicate the number of times a resource can be used at the same time.<br>See [Service and Resource Management](xref:SRM). |
 | Connectivity chain | Definition of how interfaces are connected on one or more elements, in the context of the DataMiner Connectivity Framework.<br>See [Defining connectivity chains in XML files](xref:Defining_connectivity_chains_in_XML_files). Also used in the context of Root Cause Analysis, as a chain of elements, services or parameters that is configured to make it possible to analyze the distance to the most probable root cause of an alarm.<br>See [Working with the Connectivity Editor](xref:Working_with_the_Connectivity_Editor). |
 | Connectivity editor | Application in DataMiner Cube that allows you to manage topology chains to allow root cause analysis of alarms.<br>See [Working with the Connectivity Editor](xref:Working_with_the_Connectivity_Editor). |
-| Connector | An XML file that allows a DMA to communicate with a data source in the system. Also known as protocol or driver.<br>See [Protocols](xref:Protocols1#protocols). |
+| Connector | An XML file that allows a DMA to communicate with a data source in the system. Also known as protocol or driver.<br>See [Protocols](xref:Protocols1). |
 | Contributing service | In DataMiner SRM, a contributing service is a service that is used by another "main" service. There is no limit to the number of contributing services a service can use. There is also no limit to the number of services that can use one and the same contributing service. The booking schedule of a contributing service can automatically follow the main service schedule (i.e. life cycle locked), or it can function independently (i.e. life cycle unlocked).<br>See [Service and Resource Management](xref:SRM#service-and-resource-management). |
 | CORBA | Common Object Request Broker Architecture. Standard for communication between systems using different operating systems, programming languages and hardware. |
 | Corporate network | Used in the context of DataMiner Failover. The network where the users of the system reside (i.e. the office network).<br>See [About DMA Failover](xref:About_DMA_Failover). |
 | Corrective actions | Actions to undertake in case an alarm is generated. These can be visualized in the user interface using an information template.<br>See [Creating an information template](xref:Creating_an_information_template). |
-| Correlated alarm | Alarm generated by the DataMiner Correlation engine, based on a Correlation rule triggered by one or more other alarms.<br>See [DMS Correlation](xref:correlation#dms-correlation). |
-| Correlation | DataMiner module that can gather information about parameter values and alarms, and trigger specific actions, such as generating a new, correlated alarm, based on triggers defined by the user.<br>See [DMS Correlation](xref:correlation#dms-correlation). |
+| Correlated alarm | Alarm generated by the DataMiner Correlation engine, based on a Correlation rule triggered by one or more other alarms.<br>See [Correlation](xref:correlation). |
+| Correlation | DataMiner module that can gather information about parameter values and alarms, and trigger specific actions, such as generating a new, correlated alarm, based on triggers defined by the user.<br>See [Correlation](xref:correlation). |
 | Correlation analyzer | Analyzer that can propose a Correlation rule based on the alarms occurring over a period of time.<br>See [Using Correlation analyzers](xref:Using_Correlation_analyzers). |
-| Correlation rule | Rule defining when DataMiner Correlation should be triggered and what should happen when it is triggered.<br>See [About DMS Correlation](xref:About_DMS_Correlation). |
+| Correlation rule | Rule defining when DataMiner Correlation should be triggered and what should happen when it is triggered.<br>See [About DataMiner Correlation](xref:About_DMS_Correlation). |
 | COTS | Commercial Off-The-Shelf. Term used for commercially available products that can easily be installed and made to interoperate with existing system components. |
 | CPE | Customer Premises Equipment. Software platform specifically designed to manage very high volumes of CPE devices in cable, telco, terrestrial and satellite environments. From DataMiner 10.0.3 onwards, the term EPM is used instead. |
 | CPU | Central Processing Unit. |
@@ -123,23 +124,24 @@ uid: glossary_a_to_l
 | DataMiner Catalog | Central repository for components that can facilitate and accelerate the use of DataMiner, including the complete connector database.<br>See [DataMiner Catalog](xref:Catalog#dataminer-catalog). |
 | DataMiner Certification Program | Program that allows you to test your DataMiner knowledge and skills and prove your expertise with our official certificates. |
 | DataMiner Client | An entity communicating with a DataMiner Agent. The term is mostly used to denote a client application that allows users to interact with the DataMiner Agent. |
-| DataMiner Cloud Platform | Online platform with information related to the DataMiner software and DataMiner projects. Includes software downloads, release notes, etc. Abbreviated as DCP. See <https://dataminer.services/>. |
+| DataMiner Cloud Platform | Online platform with information related to the DataMiner software and DataMiner projects. Includes software downloads, release notes, etc. Abbreviated as DCP. See [dataminer.services](xref:Part51CloudPlatform). |
 | DataMiner Comparison tool | Web application that allows you to compare the values of two string parameters.<br>See [DataMiner Comparison tool](xref:DataMinerComparisonTool). |
 | DataMiner Connectivity Framework | Framework used to manage element connectivity, e.g. to configure and visualize signal paths within an infrastructure. Abbreviated as DCF.<br>See [DataMiner Connectivity Framework](xref:DCF#dataminer-connectivity-framework). |
 | DataMiner Cube | The main client application used to connect to a DMA. Exists both as a desktop app and a browser app. |
 | DataMiner Dojo | Community website where both people from the Skyline community, and people from the worldwide DataMiner community exchange experiences and knowledge, both about DataMiner and about general hot topics in the ICT, broadband and media industry.<br>See [DataMiner Community](xref:Community#dataminer-community). |
 | DataMiner Driver | An XML file that allows a DMA to communicate with a data source in the system. Also known as connector or protocol.<br>See [Protocols](xref:Protocols1#protocols). |
 | DataMiner ID | The unique ID of a DataMiner Agent. |
-| DataMiner Live Data Sharing Service | Cloud service that allows DataMiner users to share specific live operational data with third parties.<br>See [DataMiner Sharing](xref:Sharing#dataminer-sharing). |
+| DataMiner Live Data Sharing Service | Service included in dataminer.services that allows DataMiner users to share specific live operational data with third parties.<br>See [DataMiner Sharing](xref:Sharing#dataminer-sharing). |
 | DataMiner package | Archive file that contains all the files necessary to make a modification to a DataMiner System, for example to upgrade, downgrade or restore a DataMiner Agent, or to install a DataMiner app or DataMiner protocol.<br>See [DataMiner packages](xref:DataMiner_packages). |
 | DataMiner Project Collaboration | Online platform to manage projects and professional services ordered from Skyline, allowing easy and efficient collaboration with Skyline's deploy and create squads. [Project Collaboration](xref:Collaboration#project-collaboration). |
+| dataMiner.services | Online platform that provides many additional services related to the DataMiner software and DataMiner projects. See [dataminer.services](xref:Part51CloudPlatform). |
 | DataMiner System | One or more DMAs, integrated into one cluster via an IP network. Abbreviated as DMS. |
 | DataMiner Taskbar Utility | System tray application on a DataMiner Agent that can be used to manage the Agent.<br>See [DataMiner Taskbar Utility](xref:DataMiner_Taskbar_Utility). |
 | DB | Database. |
 | DBS | Direct Broadcast Satellite. Broadcasting transmissions where end users receive signals directly from geostationary satellites. |
 | DCF | DataMiner Connectivity Framework. Framework used to manage element connectivity, e.g. to configure and visualize signal paths within an infrastructure.<br>See [DataMiner Connectivity Framework](xref:DCF#dataminer-connectivity-framework). |
 | DCL | DataMiner Class Library. |
-| DCP | DataMiner Cloud Platform. Online platform with information related to the DataMiner software and DataMiner projects. Includes software downloads, release notes, etc. See <https://dataminer.services/>. |
+| DCP | DataMiner Cloud Platform. Online platform with information related to the DataMiner software and DataMiner projects. Includes software downloads, release notes, etc. See [dataminer.services](xref:Part51CloudPlatform). |
 | DELT | DataMiner Element Location Transparency. DataMiner feature that allows the exporting and importing of packages and the migration of elements across DMAs in a cluster. |
 | DIS | DataMiner Integration Studio. Microsoft Visual Studio extension that turns Visual Studio into a DataMiner protocol IDE. |
 | Discovery identifier | Identifier used by DataMiner IDP in order to specify how a CI Type can be identified. Consists of a link to a discovery action, a match condition and a value, e.g. "*sysDescr contains JUNOS*". Multiple discovery identifiers can be combined in a CI Type with AND, OR and NOT statements.<br>See [CI Types](xref:CI_Types) |
@@ -166,7 +168,7 @@ uid: glossary_a_to_l
 | Dummy | Variable within an Automation script that represents a DataMiner element.<br>See [Script variables](xref:Script_variables). |
 | DVB | Digital Video Broadcasting. Set of internationally accepted open standards for digital television. This includes DVB-C (Digital Video Broadcasting - Cable), DVB-H (Digital Video Broadcasting - Handheld), DVB-S (Digital Video Broadcasting - Satellite) and DVB-T (Digital Video Broadcasting - Terrestrial). |
 | DVE | Dynamic Virtual Element. An element from which child elements are dynamically generated. The term DVE is used both for the parent and the child elements.<br>See [Dynamic virtual elements](xref:Dynamic_virtual_elements). |
-| DxM | DataMiner Extension Module. A DataMiner component that can be installed next to an existing DataMiner installation to enable additional functionality. A DxM can be installed and upgraded independently from the DataMiner version and without any downtime of the core DataMiner software. |
+| DxM | DataMiner Extension Module. A DataMiner component that can be installed next to an existing DataMiner installation to enable additional functionality. A DxM can be installed and upgraded independently from the DataMiner version and without any downtime of the core DataMiner software. See [DataMiner Extension Modules](xref:DataMinerExtensionModules). |
 | Dynamic alarm threshold | Alarm threshold that is not based on a fixed value, but defined in comparison with a baseline value.<br>See [Configuring an alarm template with dynamic alarm thresholds](xref:Configuring_alarm_templates#configuring-an-alarm-template-with-dynamic-alarm-thresholds). |
 | Dynamic table parameter | Parameter that visualizes and manages a large data table (e.g. an SNMP table). Every column in the table is also considered to be a parameter.<br>See [Table parameters](xref:Table_parameters). |
 
@@ -177,7 +179,7 @@ uid: glossary_a_to_l
 | Eb/No | Energy per Bit (Eb) to Noise Density (No) ratio. Measure of signal-to-noise ratio for a digital communication system. |
 | Edge QAM | Headend or hub device that receives packets of digital video or data. It repacketizes the video or data into an MPEG transport stream and digitally modulates the digital transport stream onto a downstream RF carrier using quadrature amplitude modulation (QAM). |
 | EIGRP | Enhanced Interior Gateway Routing Protocol. Advanced routing protocol used to automate routing decisions and configuration in a network. |
-| ElasticSearch | Open-source search and analytics engine, used as the DataMiner Indexing database.<br>See [Elasticsearch database](xref:Elasticsearch_database). |
+| Elasticsearch | Open-source search and analytics engine, used as the DataMiner Indexing database.<br>See [Elasticsearch database](xref:Elasticsearch_database). |
 | Element | A DataMiner object that usually represents a device monitored by the DataMiner System.<br>See [Elements](xref:elements). |
 | Element Connections | DataMiner module used to configure virtual elements. Not to be confused with connections in the context of the DataMiner Connectivity Framework.<br>See [Configuring virtual elements with the Element Connections module](xref:Virtual_elements#configuring-virtual-elements-with-the-element-connections-module). |
 | Element Display | Deprecated client application that was used in conjunction with System Display to view element-specific data. |
@@ -215,10 +217,11 @@ uid: glossary_a_to_l
 | Term | Description |
 |------|-------------|
 | G.fast | DSL (Digital Subscriber Line) protocol standard for local loops shorter than 500 m, with performance targets between 150 Mbit/s and 1 Gbit/s. |
-| General database | Dedicated database for a DataMiner Agent, which contains among others alarm and trend information. By default, a Cassandra database is used. A MySQL or MSSQL database is also supported. |
+| General database | Dedicated database for a DataMiner Agent, which contains among others alarm and trend information. By default, a Cassandra database is used. A MySQL database is also supported. MSSQL is only supported prior to DataMiner 10.3.0.. |
 | Global constant | Fixed variable used in spectrum scripts.<br>See [Using global constants](xref:Working_with_spectrum_scripts#using-global-constants). |
 | GOTS | Government Off-The-Shelf. Term used for off-the shelf products that are created and owned by a government agency. |
 | GPIB | General Purpose Interface Bus. IEEE-488 interface used to connect sensors and programmable instruments to a computer or to other instruments. |
+| GQI | Generic Query Interface. A special type of data feed for DataMiner Dashboards and Low-Code Apps. See [Configuring GQI feeds](xref:Configuring_GQI_feeds). |
 | Grandmaster clock | Device from which the time is retrieved in a PTP environment.<br>See [DataMiner PTP app](xref:SolPTP#dataminer-ptp-app). |
 
 ## H
@@ -245,19 +248,19 @@ uid: glossary_a_to_l
 | Term | Description |
 |------|-------------|
 | IaaS | Infrastructure as a Service. Cloud-based service that provides a basic computing infrastructure. |
-| IAM | Inventory & Asset Management. DataMiner module that establishes a link between a DMS and a CMDB.<br>See [DMS Inventory & Asset Management](xref:AssetManagement#dms-inventory--asset-management). |
+| IAM | Inventory & Asset Management. DataMiner module that establishes a link between a DMS and a CMDB.<br>See [Inventory & Asset Management](xref:AssetManagement). |
 | IAS | Interactive Automation script. A DataMiner Automation script that is designed to require user interaction.<br>See [Building interactive Automation scripts with C#](xref:Building_interactive_Automation_scripts_with_CSharp). |
 | IDE | Integrated Development Environment. Software application that provides comprehensive facilities for software development. |
-| IDP | Infrastructure Discovery Provisioning. DataMiner Standard Application that allows you to automatically discover, provision and manage the devices in your network.<br>See [DataMiner IDP app](xref:SolIDP#dataminer-idp-app). |
+| IDP | Infrastructure Discovery Provisioning. DataMiner Standard Application that allows you to automatically discover, provision and manage the devices in your network.<br>See [DataMiner IDP app](xref:SolIDP). |
 | IETF | Internet Engineering Task Force. Organization developing and promoting open internet standards. |
 | Import package | Package based on an export from DataMiner, which can contain, elements, services, views, properties, protocols, Automation scripts, etc.<br>See [Exporting and importing packages on a DMA](xref:Exporting_and_importing_packages_on_a_DMA). |
 | Indexing Engine | Dedicated indexing database, by default Elasticsearch, used to index information from the DataMiner System to allow rapid information retrieval. Required for certain DataMiner features, e.g. for DataMiner Job Manager.<br>See [Elasticsearch database](xref:Elasticsearch_database). |
-| Inform message | An SNMP notification sent by an SNMP agent to an SNMP manager informing the latter that an alarm event occurred on a particular element. Unlike for an SNMP trap, for an inform message the SNMP manager needs to acknowledge receipt.<br>See [SNMP managers](xref:SNMP#snmp-managers). |
+| Inform message | An SNMP notification sent by an SNMP agent to an SNMP manager informing the latter that an alarm event occurred on a particular element. Unlike for an SNMP trap, for an inform message the SNMP manager needs to acknowledge receipt.<br>See [SNMP managers](xref:SNMP). |
 | Information event | A message in the Alarm Console intended to inform DataMiner users without raising an alarm.<br>See [Information event](xref:Alarm_types#information-event). |
 | Information template | A template that is used to override specific parameter data defined in a protocol without making any changes to the protocol itself.<br>See [Information templates](xref:Information_templates). |
 | Input attenuation | Adjusting of the signal strength at the input of a spectrum analyzer to improve measuring accuracy.<br>See [Changing the spectrum analyzer settings](xref:Changing_the_spectrum_analyzer_settings). |
 | IntelliSense | Intelligent code completion, available within DataMiner when configuring C# code in Automation scripts.<br>See [IntelliSense](xref:Adding_CSharp_code_to_an_Automation_script#intellisense). |
-| Inventory & Asset Management | DataMiner module that establishes a link between a DMS and a CMDB. Commonly abbreviated as IAM.<br>See [DMS Inventory & Asset Management](xref:AssetManagement#dms-inventory--asset-management). |
+| Inventory & Asset Management | DataMiner module that establishes a link between a DMS and a CMDB. Commonly abbreviated as IAM.<br>See [Inventory & Asset Management](xref:AssetManagement). |
 | IP | Internet Protocol. |
 | IPDR | Internet Protocol Detail Record. Standardized interface that enables the collection and redistribution of data on service usage and other activities in an IP ecosystem. |
 | IRD | Integrated Receiver/Decoder. Electronic device used to receive and then convert radio frequency signals. |
@@ -267,8 +270,8 @@ uid: glossary_a_to_l
 
 | Term | Description |
 |------|-------------|
-| Job | A description of one or more things that need to be planned in a service provider network, which can be linked to a booking.<br>See [DMS Job Manager](xref:jobs#dms-job-manager). |
-| Job Manager | DataMiner application that allows you to create and manage jobs. Commonly referred to as the “Jobs app”.<br>See [DMS Job Manager](xref:jobs#dms-job-manager). |
+| Job | A description of one or more things that need to be planned in a service provider network, which can be linked to a booking.<br>See [Job Manager](xref:jobs). |
+| Job Manager | DataMiner application that allows you to create and manage jobs. Commonly referred to as the “Jobs app”.<br>See [Job Manager](xref:jobs). |
 | Job template | A job configuration that is already partly filled in, so that only a few fields still need to be completed to have a fully configured job.<br>See [Working with job templates](xref:Working_with_job_templates). |
 | JSON | JavaScript Object Notation. Syntax for storing and exchanging data. |
 
@@ -294,7 +297,7 @@ uid: glossary_a_to_l
 | Lite mode | A mode in DataMiner Cube that displays parameters in a customizable, more compact way.<br>See [Working with Lite parameters](xref:Working_with_Lite_parameters). |
 | LNA | Low-Noise Amplifier. Electronic device that amplifies a very low-power signal without significantly degrading its signal-to-noise ratio. |
 | LNB | Low-Noise Block downconverter. Device mounted on a satellite dish that receives radio signals from a satellite and converts them to signals that are sent to an indoor receiver via a cable. |
-| Local database | Alternative name for the general database, especially used for older DataMiner versions. This is a dedicated database for one DataMiner Agent, which contains among others alarm and trend information. By default, a Cassandra database is used. A MySQL or MSSQL database is also supported. |
+| Local database | Alternative name for the general database, especially used for older DataMiner versions. This is a dedicated database for one DataMiner Agent, which contains among others alarm and trend information. By default, a Cassandra database is used. A MySQL database is also supported. MSSQL is only supported prior to DataMiner 10.3.0. |
 | Log level | Degree of detail at which information is logged. The higher the log level, the more information is included in the log file. |
 | Logger table | Table that is not stored in memory, but directly in the database. |
 | LSO | Life cycle Service Orchestration. In the context of DataMiner SRM, this is the service life cycle behavior defined in the service definition. Transitions in the service life cycle are executed by the DataMiner Automation scripts that are referred to in the service definition. |

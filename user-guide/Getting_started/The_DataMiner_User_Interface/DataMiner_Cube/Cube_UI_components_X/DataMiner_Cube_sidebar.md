@@ -27,6 +27,7 @@ From DataMiner 10.1.11/10.2.0 onwards, you can pin additional buttons to the sid
 To unpin a button again, right-click the button and select *Unpin*. This is not possible for the buttons that are displayed by default.
 
 > [!NOTE]
+>
 > - At most 4 items can be pinned to the sidebar. If the maximum number of items has been added, the button to pin more items is no longer displayed, until an item is unpinned again.
 > - It is possible to move the position of the sidebar to the right-hand side. To do so, press *Ctrl+Alt+Shift+RightArrow*. To move the pane back to the left-hand side, press *Ctrl+Alt+Shift+LeftArrow*. The sidebar position can also be changed in the Cube settings. See [Cube settings](xref:User_settings#cube-settings).
 
@@ -41,6 +42,7 @@ When you click an item in the tree, it opens in a card:
 - If you click the item with the middle mouse button, the new card is opened next to any cards that are already open.
 
 > [!NOTE]
+>
 > - For the right-click menu options in the Surveyor, see [Surveyor right-click menu](xref:Main_Cube_UI_components_prior_to_DataMiner_10#surveyor-right-click-menu).
 > - You can drag an element, service, view, or SLA from a card or from the Surveyor to another application, such as Microsoft Word or Outlook, to copy information about that DataMiner item to the application in question.
 
@@ -74,6 +76,7 @@ The icons that precede an item name in the tree show what kind of item it is and
 
   > [!TIP]
   > See also:
+  >
   > - [Alarm severity levels](xref:Alarm_types#alarm-severity-levels)
   > - [Changing the default alarm colors](xref:Changing_the_default_alarm_colors)
 
@@ -99,7 +102,7 @@ In the Surveyor right-click menu, the following options are available, depending
 | Open | Any | Opens the item in a card. |
 | Open in new card | Any | Opens the item in a new card. |
 | Open in new undocked card | Any | Opens the item in a new, undocked card. |
-| Ticket | Element, service, view | Allows you to create a new ticket related to the right-clicked item. Only available on DMAs with a Ticketing license. See [DMS Ticketing](xref:ticketing#dms-ticketing). |
+| Ticket | Element, service, view | Allows you to create a new ticket related to the right-clicked item. Only available on DMAs with a Ticketing license. See [Ticketing](xref:ticketing). |
 | State | Element only | Opens a shortcut that allows you to change the element state. See [Changing the state of an element](xref:Changing_the_state_of_an_element). |
 | Mask | Element only | Masks the element. See [Masking or unmasking an element](xref:Masking_or_unmasking_an_element) |
 | Unmask | Element only | Unmasks the element. This option is only available for masked elements. |
@@ -117,6 +120,7 @@ In the Surveyor right-click menu, the following options are available, depending
 | Drag and drop editing | Any | Enables drag-and-drop view editing mode. See [Editing a view](xref:Managing_views#editing-a-view). |
 
 > [!NOTE]
+>
 > - For some special items, such as redundancy group templates or service templates, additional options are available.
 > - The *View* option is also available for services using a protocol, with the options to view the protocol, alarm template or trend template of such a service.
 > - When opening an item from the right-click menu, you can hold *Ctrl* while clicking the menu option to open the item in a new card, or hold *Shift* while clicking the option to open the item in a new undocked card.
@@ -132,6 +136,7 @@ The following actions are possible with this list:
 - Pin an item so that it is placed in the *Pinned* section at the top of the list: hover over the item with the mouse pointer until a pin icon appears to the right of it, then click the pin icon.
 
 > [!NOTE]
+>
 > - Regardless of how frequently you view them, pinned items remain in the top section of the list until you click the pin icon again to remove them.
 > - The list of recent and pinned items is kept synchronized between DataMiner Cube client and the Monitoring app.
 > - Recent items can be views, elements, services, redundancy groups, service templates and DataMiner modules.

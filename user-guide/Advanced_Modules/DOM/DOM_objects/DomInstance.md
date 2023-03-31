@@ -12,11 +12,14 @@ A `DomInstance` object contains the `Sections` linked to the `SectionDefinitions
 
 The table below lists the properties of the `DomInstance` object. It also indicates whether a property can be used for filtering using the `DomInstanceExposers`.
 
+> [!NOTE]
+> From DataMiner 10.3.2/10.4.0 onwards, the `DomInstance` object also has [the *ITrackBase* properties](xref:DOM_objects#itrackbase-properties).
+
 | Property | Type | Filterable | Description |
 |--|--|--|--|
 | ID | DomInstanceId | Yes | The ID of the `DomInstance`. |
 | DomDefinitionId | DomDefinitionId | Yes | The ID of the `DomDefinition` that this instance is linked to. |
-| Sections | List\<Section> | SectionIDs, SectionDefinitionIDs and FieldValues | Contains the required or allowed `SectionDefinitions`. |
+| Sections | List\<Section> | Yes | The `Sections` that contain the actual values for the `FieldDescriptors` wrapped in `FieldValues` |
 | Name | string | Yes | The name of the `DomInstance`, which is updated by the `DomManager` on every create or update action using the `DomInstanceNameDefinition` in the `ModuleSettings`. |
 | StatusId | string | Yes | The ID of the current status of this `DomInstance` (if statuses are used). |
 
@@ -41,8 +44,9 @@ When something goes wrong during the CRUD actions, the `TraceData` can contain o
 | DomInstanceRequiresLinkToValidDomDefinition | The `DomInstance` has no valid and/or existing `DomDefinitionID` configured. Available properties: *DomInstance*. |
 | SectionsUsedInDomInstanceDoNotMatchRequirementsOfDomDefinition | The `DomInstance` does not contain at least one `Section` for each `SectionDefinition` defined on the `DomDefinition` or contains `Sections` for `SectionDefinitions` that are not defined on that `DomDefinition`. Available properties: *DomInstance*, *DomDefinition*, *MissingSections*, *InvalidSections* |
 | DomInstanceDoesNotContainRequiredModuleSections | The `DomInstance` does not contain exactly one `Section` for each required `SectionDefinition` defined for this module. Available properties: *DomInstance*, *MissingSections*, *InvalidSections* |
+| MultipleSectionsNotAllowedForSectionDefinition | The `DomInstance` contains more than one `Section` for a `SectionDefinition` that does not allow multiple `Sections` according to either the `SectionDefinitionLink` or the `DomStatusSectionDefinitionLink`. Available properties: *InvalidSections* |
 
-The errors below are related to the status system. For each error, the *DomInstanceId*, *DomInstanceName*, and *StatusId* properties will be filled in alongside any others that are mentioned in the description.
+The errors below are solely related to the status system. For each error, the *DomInstanceId*, *DomInstanceName*, and *StatusId* properties will be filled in alongside any others that are mentioned in the description.
 
 | Reason | Description |
 |--|--|

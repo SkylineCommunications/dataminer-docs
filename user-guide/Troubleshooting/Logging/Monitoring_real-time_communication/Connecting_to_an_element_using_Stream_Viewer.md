@@ -8,11 +8,14 @@ To open Stream Viewer for a particular element:
 
 1. Right-click the element in the Surveyor, or open the element card’s hamburger menu.
 
-2. In the context menu or header menu, select *View* > *Stream Viewer*.
+1. In the context menu or header menu, select *View* > *Stream Viewer*.
 
 The Stream Viewer window consists of two panes:
 
 - On the left is a tree view that can be used to filter the stream per connection, group or pair.
+
+  > [!NOTE]
+  > From DataMiner 10.1.0 [CU22]/10.2.0 [CU10]/10.3.1 onwards, the Stream Viewer tree view supports more levels in case of HTTP communication.
 
 - On the right, the communication stream is displayed for the selected item in the tree view.
 

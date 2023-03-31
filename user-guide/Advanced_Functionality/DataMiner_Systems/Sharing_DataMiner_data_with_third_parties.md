@@ -8,7 +8,7 @@ There are many ways in which you can make your DataMiner System share informatio
 
 ## DataMiner Sharing
 
-DataMiner Sharing allows you to share live data in the cloud. For more information, see [DataMiner Sharing](xref:Sharing).
+DataMiner Sharing allows you to share live data via dataminer.services. For more information, see [DataMiner Sharing](xref:Sharing).
 
 ## DataMiner Cube
 
@@ -44,7 +44,7 @@ DataMiner Sharing allows you to share live data in the cloud. For more informati
 - Set up a time schedule or event trigger to send the report to the third party.
 
 > [!TIP]
-> See also: [DMS Reporter](xref:reporter#dms-reporter)
+> See also: [DMS Reporter](xref:reporter)
 
 > [!NOTE]
 > DataMiner Reports & Dashboards requires an optional license.

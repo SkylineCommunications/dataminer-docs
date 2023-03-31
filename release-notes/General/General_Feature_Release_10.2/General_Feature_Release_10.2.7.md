@@ -288,6 +288,9 @@ From now on, the SetParameterIndexByKey and SetParametersIndexByKey methods can 
 
 #### DataMiner upgrade will not be performed if NATS is not installed and running \[ID_33304\]
 
+<!-- MR 10.3.0 - FR 10.2.7 -->
+<!-- Also added to MR 10.2.0 [CU14] -->
+
 When you launch a DataMiner upgrade, from now on, the upgrade process will not be allowed to start if NATS is not installed and running.
 
 > [!NOTE]
@@ -433,6 +436,16 @@ When, in the Alarm Console, you enable the alarm storm mode, the alarms are grou
 
 When, in a trend graph, you hovered the mouse pointer over an exception value, the legend would not only show the minimum value, the maximum value and the value of the data point, but also incorrectly a unit. From now on, when you hover over an exception value, the legend will no longer show a unit.
 
+#### SLAnalytics - Automatic incident tracking: Incorrect error message would be generated [ID_33305]
+
+<!-- MR 10.3.0 - FR 10.2.7 -->
+
+In some cases, the following incorrect error message would be generated:
+
+```txt
+Ignoring alarm group update: unknown alarm group tree.
+```
+
 #### Values in a decimal logger table column would lose their decimals when the element was restarted or the database was queried \[ID_33315\]
 
 When, in a logger table, a column with \<ColumnDefinition>DECIMAL\</ColumnDefinition> contained a value with decimals, then those decimals would be lost when the element was restarted or the database was queried.
@@ -454,6 +467,12 @@ When the DataMiner software started up on an agent that was not part of a Failov
 #### SLCloud.xml files would incorrectly refer to the local agent using the IP address instead of the hostname when the agents were configured to use HTTPS \[ID_33342\]
 
 When, in a DataMiner System, agents were configured to use HTTPS, the SLCloud.xml files of each of those agent would incorrectly refer to the local agent using the IP address instead of the hostname.
+
+#### SLAnalytics: The automatic incident tracking feature would incorrectly not be disabled when the alarm focus feature was disabled [ID_33348]
+
+<!-- MR 10.3.0 - FR 10.2.7 -->
+
+When the alarm focus feature was disabled, up to now, the automatic incident tracking feature would not automatically be disabled as well. From now on, when the alarm focus feature is disabled, the automatic incident tracking feature will also be disabled.
 
 #### DataMiner Cube: No longer possible to go to the previous or the next frame after pausing a replay of a spectrum recording \[ID_33349\]
 

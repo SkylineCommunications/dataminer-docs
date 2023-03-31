@@ -7,7 +7,7 @@ uid: Protocol.Actions.Action.On
 Defines, together with [Type](xref:Protocol.Actions.Action.Type), how this action is executed.
 
 > [!NOTE]
-> Not all Protocol.Actions.Action.Type values can be used in combination with the different Protocol.Actions.Action.On types. See Possible combinations of “On” and “Type”.
+> Not all Protocol.Actions.Action.Type values can be used in combination with the different Protocol.Actions.Action.On types. See [Possible combinations of “On” and “Type”](xref:LogicActionsOverview).
 
 ## Type
 

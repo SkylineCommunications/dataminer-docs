@@ -1,8 +1,8 @@
 ---
-uid: Generating_a_report_based_on_a_dashboard
+uid: Generating_a_report_based_on_a_dashboard_Cube
 ---
 
-# Generating a report based on a dashboard
+# Generating a PDF report based on a dashboard using DataMiner Cube
 
 In the Automation, Correlation and Scheduler modules, you can generate a report based on a dashboard. See [Sending an email](xref:Sending_an_email) (Correlation), [Email](xref:Email), [Upload report to FTP](xref:Upload_report_to_FTP) and [Upload report to shared folder](xref:Upload_report_to_shared_folder) (Automation), and [Manually adding a scheduled task](xref:Manually_adding_a_scheduled_task).
 
@@ -32,6 +32,6 @@ When you do so, from DataMiner 10.0.13 onwards, a *Configure* button is availabl
 - When the report is fully configured, click *Save & close*.
 
 > [!NOTE]
-> - By design, the following components are not included in reports: button panel (soft launch), map and web components.
-> - If access to a dashboard is limited to some users only, this dashboard will not be available to generate reports from DataMiner Cube.
 >
+> - By design, the following components are not included in reports: button panel ([soft launch](xref:SoftLaunchOptions)), map, and web components.
+> - If access to a dashboard is limited to some users only, this dashboard will not be available to generate reports from DataMiner Cube.

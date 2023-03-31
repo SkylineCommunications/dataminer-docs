@@ -44,25 +44,19 @@ For a standalone DMA, i.e. a DMA that is not combined with other DMAs in a clust
 
       1. Go to *C:\\Skyline DataMiner\\Files* and double-click *SLEndpointTool_Console.exe*.
 
-      1. Press U to confirm that you want to un install NAS and NATS.
+      1. Press U to confirm that you want to uninstall NAS and NATS.
 
       1. Press Enter twice, enter NAS, and press Y.
 
-      1. Repeat the above procedure for NATS.
+   1. Install NAS and NATS again:
 
-1. If your DataMiner Agent is connected to the cloud, restart the following services:
+      1. Go to *C:\\Skyline DataMiner\\Files* and double-click *SLEndpointTool_Console.exe*.
 
-   - DataMiner ArtifactDeployer
+      1. Press I to confirm that you want to install NAS and NATS
 
-   - DataMiner CloudFeed
+      1. Press Enter twice, enter NATS, and press Y.
 
-   - DataMiner CloudGateway
-
-   - DataMiner CoreGateway
-
-   - DataMiner FieldControl
-
-   - DataMiner Orchestrator
+1. If your DataMiner Agent is connected to dataminer.services, restart all [DataMiner Extension Modules](xref:DataMinerExtensionModules).
 
 1. Restart DataMiner.
 
@@ -108,25 +102,21 @@ For a single DMA within a cluster that does not use the Cassandra cluster featur
 
       1. Go to *C:\\Skyline DataMiner\\Files* and double-click *SLEndpointTool_Console.exe*.
 
-      1. Press U to confirm that you want to un install NAS and NATS.
+      1. Press U to confirm that you want to uninstall NAS and NATS.
 
-      1. Press Enter twice, enter NAS, and press Y.
+      1. Press Enter twice, enter NAS, and press Y. (This will uninstall both NATS and NAS)
 
-      1. Repeat the above procedure for NATS.
+   1. Install NAS and NATS again:
 
-1. If your DataMiner Agent is connected to the cloud, restart the following services:
+      1. Go to *C:\\Skyline DataMiner\\Files* and double-click *SLEndpointTool_Console.exe*.
 
-   - DataMiner ArtifactDeployer
+      1. Press I to confirm that you want to install NAS and NATS.
 
-   - DataMiner CloudFeed
+      1. Press Enter twice, enter NATS, and press Y.
 
-   - DataMiner CloudGateway
+         This will install both NAS and NATS.
 
-   - DataMiner CoreGateway
-
-   - DataMiner FieldControl
-
-   - DataMiner Orchestrator
+1. If your DataMiner Agent is connected to dataminer.services, restart all [DataMiner Extension Modules](xref:DataMinerExtensionModules).
 
 1. Restart DataMiner.
 
@@ -186,19 +176,7 @@ For a Failover DMA within a cluster that does not use the Cassandra cluster feat
 
    1. Restart the elasticsearch-service-x64 service.
 
-1. If your DataMiner Agent is connected to the cloud, restart the following services **on both DMAs**:
-
-   - DataMiner ArtifactDeployer
-
-   - DataMiner CloudFeed
-
-   - DataMiner CloudGateway
-
-   - DataMiner CoreGateway
-
-   - DataMiner FieldControl
-
-   - DataMiner Orchestrator
+1. If your DataMiner Agent is connected to dataminer.services, restart all [DataMiner Extension Modules](xref:DataMinerExtensionModules).
 
 1. Restart DataMiner on the DMA with the changed IP address.
 
@@ -275,19 +253,7 @@ If your DataMiner System uses the Cassandra cluster feature for its general data
 
 1. Open the file DB.xml for all other DMAs in the DMS, and replace the old IP address with the new IP address for both Cassandra and Elasticsearch.
 
-1. If your DataMiner Agent is connected to the cloud, restart the following services:
-
-   - DataMiner ArtifactDeployer
-
-   - DataMiner CloudFeed
-
-   - DataMiner CloudGateway
-
-   - DataMiner CoreGateway
-
-   - DataMiner FieldControl
-
-   - DataMiner Orchestrator
+1. If your DataMiner Agent is connected to dataminer.services, restart all [DataMiner Extension Modules](xref:DataMinerExtensionModules).
 
 1. Restart DataMiner.
 

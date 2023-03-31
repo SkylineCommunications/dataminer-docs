@@ -45,5 +45,5 @@ Alarm storm prevention for notifications can be configured on three levels: on s
 6. In the lower right corner, click the *Apply* button.
 
 > [!NOTE]
-> Alarm storm configuration on user level in Alerter is done in the Alerter application itself. For more information, see [Configuring alarm storm prevention in Alerter](xref:Configuring_DMS_Alerter#configuring-alarm-storm-prevention-in-alerter).
+> Alarm storm configuration on user level in Alerter is done in the Alerter application itself. For more information, see [Configuring alarm storm prevention in Alerter](xref:Configuring_Alerter#configuring-alarm-storm-prevention-in-alerter).
 >

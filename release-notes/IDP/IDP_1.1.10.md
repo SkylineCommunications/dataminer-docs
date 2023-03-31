@@ -152,33 +152,3 @@ The following properties are no longer created when IDP is newly installed:
 #### Model and Manufacturer properties in CI type overwritten by update properties script \[ID_27249\]
 
 Previously, when an element was created, it could occur that the *Model* and *Manufacturer* properties in the CI type were overwritten by the *IDP_Default_UpdateProperties* script. Now, if *Model* is not defined in the CI type, the value of this element property will be the name of the CI type. If *Manufacturer* is not defined in the CI type, its value will be *Unknown*. Note that a custom update property script can still overwrite the values of *Model* and *Manufacturer*.
-
-## Addendum CU1
-
-### CU1 fixes
-
-#### Not possible to launch CI Type Management script in DataMiner 9.6.0 \[ID_27732\]
-
-If IDP was used with DataMiner 9.6.0, it could occur that the CI Type Management script could not be launched from the *Admin* > *CI Types* tab.
-
-#### Deleted element not added to Deleted Elements table \[ID_27750\]
-
-When a managed element was deleted by a user, it could occur that it was not added to the *Deleted Elements* table.
-
-## Addendum CU2
-
-### CU2 enhancements
-
-#### Improvements related to provisioning of virtual protocol types \[ID_27719\]
-
-It is now possible to provision more than one device with a virtual protocol type using the same CI type. In addition, when a device is provisioned with a virtual protocol type, if an IP address is available, it is now shown in the *IP Address* column of the *Managed Elements* table.
-
-### CU2 fixes
-
-#### Incorrect exception when provisioning with incomplete CI type \[ID_28397\]
-
-When a user tried to create an element for which the CI type did not have Provisioning.Configuration content, an incorrect exception was thrown.
-
-#### Not possible to create SNMPv3 element on different DMA in the cluster \[ID_28403\]
-
-Provisioning an element with SNMPv3 credentials did not work if the element was created on a different DMA in the cluster than the one containing the IDP Provisioning Manager.

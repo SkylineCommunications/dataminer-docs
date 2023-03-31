@@ -120,11 +120,11 @@ For more information on changing the column layout, see [Changing the column lay
 
 - **Corrective action**: Description of corrective actions that should be taken, which can be customized with the information template.
 
-- **Component info**: Contains more information about the nature of the alarm. Used in DMS Business Intelligence.
+- **Component info**: Contains more information about the nature of the alarm. Used in DataMiner Business Intelligence.
 
-- **Key point**: The exact location in the signal chain where the error has occurred. Used in DMS Business Intelligence.
+- **Key point**: The exact location in the signal chain where the error has occurred. Used in DataMiner Business Intelligence.
 
-- **Offline impact**: Indicates whether the alarm has an impact during the offline window of an SLA. Used in DMS Business Intelligence.
+- **Offline impact**: Indicates whether the alarm has an impact during the offline window of an SLA. Used in DataMiner Business Intelligence.
 
 - **Interface impact**: The number of interfaces on which the alarm has an impact.
 

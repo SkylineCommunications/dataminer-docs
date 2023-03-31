@@ -180,7 +180,7 @@ All DataMiner web apps have been upgraded to use Angular 12 instead of Angular 1
 
 Using *SLCCMigrator.exe*, you can now transform a DataMiner System consisting of Agents with separate databases into a DataMiner System consisting of Agents that are all connected to a shared Cassandra/Elasticsearch cluster.
 
-For more information on this tool, see [Cassandra Cluster Migrator](https://community.dataminer.services/documentation/sql-to-cassandra-cluster-migrator/) on DataMiner Dojo.
+For more information on this tool, see [Cassandra Cluster Migrator](xref:Migrating_the_general_database_to_a_DMS_Cassandra_cluster).
 
 #### SLReset: Hostname can now be passed as an argument \[ID_32002\]
 

@@ -1,30 +1,30 @@
 ---
-uid: Configuring_DMS_Alerter
+uid: Configuring_Alerter
 ---
 
-# Configuring DMS Alerter
+# Configuring Alerter
 
-It is possible to configure DMS Alerter to your personal preferences. These user settings are stored on the server, so that you will always have your personal settings, no matter from which device you log on to Alerter.
+It is possible to configure Alerter to your personal preferences. These user settings are stored on the server, so that you will always have your personal settings, no matter from which device you log on to Alerter.
 
 This section consists of the following topics:
 
-- [Connecting DMS Alerter to another DataMiner System](#connecting-dms-alerter-to-another-dataminer-system)
+- [Connecting Alerter to another DataMiner System](#connecting-alerter-to-another-dataminer-system)
 
-- [Setting your startup preferences for DMS Alerter](#setting-your-startup-preferences-for-dms-alerter)
+- [Setting your startup preferences for Alerter](#setting-your-startup-preferences-for-alerter)
 
-- [Setting an alarm filter in DMS Alerter](#setting-an-alarm-filter-in-dms-alerter)
+- [Setting an alarm filter in Alerter](#setting-an-alarm-filter-in-alerter)
 
 - [Configuring alarm storm prevention in Alerter](#configuring-alarm-storm-prevention-in-alerter)
 
-- [Setting the notification options in DMS Alerter](#setting-the-notification-options-in-dms-alerter)
+- [Setting the notification options in Alerter](#setting-the-notification-options-in-alerter)
 
 - [Configuring Alerter pop-up balloons](#configuring-alerter-pop-up-balloons)
 
 - [Configuring options related to acknowledging alarms](#configuring-options-related-to-acknowledging-alarms)
 
-## Connecting DMS Alerter to another DataMiner System
+## Connecting Alerter to another DataMiner System
 
-Do the following if you want DMS Alerter to connect to another DataMiner System.
+Do the following if you want Alerter to connect to another DataMiner System.
 
 1. Go to *Settings \> DMS Connections*.
 
@@ -47,26 +47,26 @@ Do the following if you want DMS Alerter to connect to another DataMiner System.
 > - In the DMS Connections tab, the option *Show message when SLAlerter loses connection* determines whether users will be notified when the connection to the DMS is lost. By default, this option is enabled.
 > - If the connection to the DMS is lost, this is logged in the Event Viewer with an "SLAlerter lost connection" message. In the Alerter application itself, the user will be redirected to the login screen, in the same manner as when the connection is lost in DataMiner Cube.
 
-## Setting your startup preferences for DMS Alerter
+## Setting your startup preferences for Alerter
 
-Do the following to configure the startup settings of DMS Alerter.
+Do the following to configure the startup settings of Alerter.
 
 1. Go to *Settings \> Preferences*.
 
-1. If you want DMS Alerter to start automatically when you turn on your computer, select the *Run Skyline Alerter when Windows starts* option.
+1. If you want Alerter to start automatically when you turn on your computer, select the *Run Skyline Alerter when Windows starts* option.
 
-1. If you want DMS Alerter to automatically connect to the DataMiner System when it starts, select the *Automatic login* option, and specify the logon account it has to use to do so.
+1. If you want Alerter to automatically connect to the DataMiner System when it starts, select the *Automatic login* option, and specify the logon account it has to use to do so.
 
-    - **As Window user**: If you select this option, DMS Alerter will connect to the DataMiner System using your current Windows account.
+    - **As Window user**: If you select this option, Alerter will connect to the DataMiner System using your current Windows account.
 
-    - **As custom user**: If you select this option, then DMS Alerter will connect to the DataMiner System using the logon credentials you specify.
+    - **As custom user**: If you select this option, then Alerter will connect to the DataMiner System using the logon credentials you specify.
 
     > [!NOTE]
     > When you change the user account with which Alerter logs on to the DataMiner System, Alerter will automatically reconnect.
 
 1. Click *OK*.
 
-## Setting an alarm filter in DMS Alerter
+## Setting an alarm filter in Alerter
 
 It is possible to filter the alarms that will generate alerts, so that your attention is only drawn to a specific subset of alarms. To do so, you can use a combination of client-side filters and server-side filters.
 
@@ -91,7 +91,7 @@ To configure Alerter filters:
 1. Click *OK*.
 
 > [!NOTE]
-> DMS Alerter never shows masked alarms.
+> Alerter never shows masked alarms.
 
 ## Configuring alarm storm prevention in Alerter
 
@@ -114,7 +114,7 @@ To configure alarm storm prevention:
 > [!NOTE]
 > Alerter alarm storm prevention can also be configured on system level, rather than on user level only. For more information, see [Configuring alarm storm prevention for notifications](xref:Configuring_alarm_storm_prevention_for_notifications).
 
-## Setting the notification options in DMS Alerter
+## Setting the notification options in Alerter
 
 Do the following if you want to change settings with regard to alarm sounds and pop-up balloons:
 

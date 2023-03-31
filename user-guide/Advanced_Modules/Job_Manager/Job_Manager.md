@@ -2,15 +2,15 @@
 uid: jobs
 ---
 
-# DMS Job Manager
+# DataMiner Job Manager
 
-The DataMiner Jobs web app, also known as DMS Job Manager, can be used to create and manage jobs, which are then distributed to SRM applications, so that the necessary bookings can be generated.
+The DataMiner Jobs web app, also known as Job Manager, can be used to create and manage jobs, which are then distributed to SRM applications, so that the necessary bookings can be generated.
 
 This app is available from DataMiner 9.6.4 onwards.
 
 > [!NOTE]
 >
-> - A Cassandra database and Elasticsearch database are required in order to run this app. See [Databases](xref:databases).
+> - A [Cassandra database](xref:Cassandra_database) and [Elasticsearch database](xref:Elasticsearch_database) are required in order to run this app.
 > - This app requires a separate Job Manager license.
 > - You can access this app using Google Chrome, Microsoft Edge, Mozilla Firefox or Safari.
 > - If you downgrade from DataMiner 10.0.4 to an earlier DataMiner version, job information may be lost.
@@ -22,9 +22,9 @@ In this section:
 
 - [Accessing the Jobs app](xref:Accessing_the_jobs_app)
 
-- [Overview of the Job Manager app UI](xref:Overview_of_the_Job_Manager_app_UI)
+- [Overview of the Jobs app UI](xref:Overview_of_the_Job_Manager_app_UI)
 
-- [Configuring jobs in the Job Manager app](xref:Configuring_jobs_in_the_Job_Manager_app)
+- [Configuring jobs in the Jobs app](xref:Configuring_jobs_in_the_Job_Manager_app)
 
 - [Working with the jobs timeline](xref:Working_with_the_jobs_timeline)
 

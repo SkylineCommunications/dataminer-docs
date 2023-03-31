@@ -6,7 +6,7 @@ uid: security
 
 This section consists of the following topics:
 
-- [About DMS Security](xref:About_DMS_Security)
+- [About DataMiner Security](xref:About_DMS_Security)
 
 - [DataMiner user permissions](xref:DataMiner_user_permissions)
 

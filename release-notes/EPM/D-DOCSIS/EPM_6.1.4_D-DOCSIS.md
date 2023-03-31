@@ -4,6 +4,9 @@ uid: EPM_6.1.4_D-DOCSIS
 
 # EPM 6.1.4 D-DOCSIS - Preview
 
+> [!IMPORTANT]
+> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+
 ## New features
 
 #### Fan tray and power supply monitoring added to CCAP visual [ID_33649]
@@ -78,6 +81,18 @@ These changes include:
 - More efficient buffer cleanup logic.
 - Removal of the *Counters History* column in the *CmUpstream* table of the Cox CBR-8 Platform D-DOCSIS connector.
 
+#### MLD status alarm monitoring removed from Core Leaf [ID_35132]
+
+MLD status alarm monitoring is now disabled on Core Leaf level.
+
+#### CM Upstream table no longer displayed [ID_36018]
+
+To improve performance, the CM Upstream table will no longer be displayed.
+
+#### Enhanced EPM messaging [ID_36019]
+
+To increase scalability in systems with a larger number of elements, EPM D-DOCSIS will no longer handle ID requests ad hoc. Instead it will perform this logic based on a timer and using batches of files, so that it can run the logic less frequently and update the entire system more quickly.
+
 ### Fixes
 
 #### Ceeview link on RPD Topology page not working [ID_33612]
@@ -101,3 +116,23 @@ In the visual overview of an RPA element, it could occur that the RPA interfaces
 <!-- For enhancement part of RN, see enhancements -->
 
 Up to now, it could occur that the *OFDM Status* was not correct, as the logic did not properly use the *CM Impaired Channels* table to find out if an impaired channel was an OFDM or QAM channel. The logic has been adjusted. As part of this, the "Active" OFDM status no longer exists, and the "OK" and "Partial" status have been introduced to identify CMs without any impaired OFDM channels and CMs with at least one impaired OFDM channel, respectively.
+
+#### Incorrect US ATDMA info in RPD details [ID_34714]
+
+Up to now, the US ATDMA section (previously known as the US QAM section) included calculations of OFDMA upstream channels in the impaired channels table, leading to incorrect counts and percentages. The logic has now been adjusted to only include ATDMA channels, and the information templates have also been updated to reflect this change.
+
+#### Problem with table-cell navigation in Relation Name column [ID_34715]
+
+In the Interfaces tables for all devices, table-cell navigation in the Relation Name column did not work as desired. Now the System Type and System Name are properly separated in the Visual Overview configuration, so that navigation is possible to all EPM levels.
+
+#### PIM neighbors data not correctly retrieved [ID_35028]
+
+In some cases, it could occur that PIM neighbors data was not correctly retrieved. This happened specifically when the device had been running for less than 24 hours. This caused the PIM Node Leaf table to be empty and the PIM Status to be set to "Fail".
+
+#### Hub list in Market visual overview not shown completely [ID_35029]
+
+In the Market visual overview, if there were several hubs under a market, it could occur that the hub list was cut off at the bottom.
+
+#### Incorrect offline RPDs metric on Node Leaf level [ID_35162]
+
+When there were offline RPDs associated with a node leaf, the percentage calculation for offline RPDs in the node leaf visual overview could be incorrect. The relevant aggregation operations have been reviewed to prevent this, and EPM relations have been added on connector level to make the calculations more efficient.

@@ -128,7 +128,7 @@ Time to rinse and repeat: for this second issue, we will need another data sourc
 
 ### SLProtocol RowCount
 
-To check if **too much data** is being handled, you can do an **SLProtocol RowCount** using the [SLNetClientTest tool](xref:TOOSLNetClientTest):
+To check if **too much data** is being handled, you can do an **SLProtocol RowCount** using the [SLNetClientTest tool](xref:SLNetClientTest_tool):
 
 1. Open SLNetClientTest tool from the DataMiner Taskbar Utility by selecting *Launch > Tools > Client Test*.
 

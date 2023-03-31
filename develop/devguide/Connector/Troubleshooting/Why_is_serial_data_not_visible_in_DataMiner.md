@@ -149,7 +149,7 @@ You can configure this with a trigger using the "each" value on the On `id` attr
 </Action>
 ```
 
-For more information, see [How to use "on each" in a protocol trigger?](https://community.dataminer.services/documentation/how-to-use-on-each-in-a-protocol-trigger/) or [Composing responses](xref:ConnectionsSerialCreatingCommandsAndResponses#composing-responses).
+For more information, see [How to use "on each" in a protocol trigger?](xref:How_to_use_on_each_in_a_protocol_trigger) or [Composing responses](xref:ConnectionsSerialCreatingCommandsAndResponses#composing-responses).
 
 > [!NOTE]
 > When the communication option `makeCommandByProtocol` is used, you also have to define a `make command` action that triggers before each command.

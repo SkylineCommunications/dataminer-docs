@@ -6,6 +6,8 @@ uid: Protocol.HTTP.Session-userName
 
 If you set loginMethod to “credentials”, then use this attribute to specify the user name.
 
+It is possible to specify the ID of a parameter that will contain the user name.
+
 ## Content Type
 
 string

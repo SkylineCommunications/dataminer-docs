@@ -52,7 +52,7 @@ In the Alarm Console, you can add and remove tabs as you see fit. However, this 
 
    - **Show current** > **Masked alarms**: Displays the *Masked alarms* tab.
 
-   - **Show history**: Lists history tabs for the past hour, day, week or month.
+   - **Show history**: Lists history tabs for the past hour, day, week, month, etc.
 
    - **Show alarms in a sliding window**: Displays the alarms that have occurred in a certain time frame that moves along with the present time. You can set the size of the sliding window to a minimum of one minute and a maximum of 1440 minutes.
 

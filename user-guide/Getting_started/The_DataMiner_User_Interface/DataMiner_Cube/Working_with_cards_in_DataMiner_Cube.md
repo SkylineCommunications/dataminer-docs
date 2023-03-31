@@ -16,8 +16,6 @@ On this page, you can find:
 
 - News items related to DataMiner. Depending on your user permissions, this may include information about protocol updates or DataMiner software updates.
 
-- A list of recent videos released on DataMiner TV.
-
 - Weather information. Only available up to DataMiner 9.6.0/9.6.4. Up to DataMiner 9.5.11, this is only displayed if a location can be established (e.g. via the *Location* service in Windows 10). From DataMiner 9.5.12 onwards, you can select a location yourself via the location icon next to the *Weather* title.
 
 - A link to the landing page for the DataMiner web apps on the right-hand side.
@@ -53,7 +51,7 @@ There are many different types of cards, such as:
 
 - Spectrum analyzer cards
 
-Depending on the protocol used, many more types of cards are possible, such as Carrier Management cards for carrier monitoring elements, or CPE Manager cards (see [DMS Experience and Performance Management](xref:EPM#dms-experience-and-performance-management)).
+Depending on the protocol used, many more types of cards are possible, such as Carrier Management cards for carrier monitoring elements, or CPE Manager cards (see [Experience and Performance Management](xref:EPM)).
 
 ## Card navigation pane
 
@@ -192,7 +190,7 @@ The following layout options are available:
 | Reset card layout | Resets any manual changes to the card layout, so that the cards again have the size determined by the selected card layout. This option is only available from the Cube header bar. |
 
 > [!TIP]
-> If you use the tab layout, from DataMiner 10.2.9/10.3.0 onwards, you can quickly close a tab by clicking it with the middle mouse button.
+> If you use the tab layout, from DataMiner 10.2.9/10.3.0 onwards, you can quickly close a tab by clicking the tab header with the middle mouse button. <!-- RN 34791  -->
 
 ## Dragging cards
 

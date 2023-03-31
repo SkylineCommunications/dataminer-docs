@@ -20,6 +20,8 @@ This category contains the following visualizations:
 
 - [Group](xref:DashboardGroup)
 
+- [Icon](xref:DashboardIcon)
+
 - [Image](xref:DashboardImage)
 
 - [Text](xref:DashboardText)

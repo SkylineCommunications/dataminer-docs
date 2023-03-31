@@ -109,7 +109,10 @@ Either just use the script name as the property value, or specify the script in 
 
 This property allows you to indicate whether a resource should be assigned to a node automatically or not.
 
-Set this property to *TRUE* or *FALSE*.
+Set this property to *True*, *False*, or *Always*.
+
+> [!TIP]
+> See also: [Customizing automatic resource selection](xref:Service_Orchestration_resources_advanced#customizing-automatic-resource-selection)
 
 ### BlockInfo
 
@@ -145,6 +148,9 @@ This property determines the order in which resources should be assigned to node
 
 Set the value to an integer indicating the position of the resource for this node in the order, e.g. 2.
 
+> [!TIP]
+> See also: [Defining the resource selection sequence](xref:Service_Orchestration_resources_advanced#defining-the-resource-selection-sequence)
+
 ### Contributing Configuration
 
 **Scope**: Service definition
@@ -177,11 +183,11 @@ The JSON value of this property should contain the following fields:
 
 - *ReservationType*: The type of booking, i.e.:
 
-    - *Standalone*
+  - *Standalone*
 
-    - *Permanent*: The contributing booking remains permanently available.
+  - *Permanent*: The contributing booking remains permanently available.
 
-    - *FollowMain*: The contributing booking follows the main booking.
+  - *FollowMain*: The contributing booking follows the main booking.
 
 - *ResourcePool*: The name of the resource pool in which the contributing resource should be included.
 
@@ -224,8 +230,11 @@ The value of this property should be configured in JSON format. It can contain s
 **Example value**:
 
 ```json
-{"Script":"Script:TESTEDA123||myarg=abcde-[RESERVATIONID]"}
+{"Script":"Script:UpdateJob||BookingId=[RESERVATIONID]"}
 ```
+
+> [!TIP]
+> See also: [Configuring a custom Created Booking Action](xref:Service_Orchestration_life_cycle_states#configuring-a-custom-created-booking-action)
 
 ### Data Transfer Rules Configuration
 
@@ -330,6 +339,9 @@ Set this property to an integer value corresponding with the parent system funct
 
 Set this property to *Yes* to filter the available profile instances for a node in the Booking Wizard based on the capabilities of the selected resource.
 
+> [!TIP]
+> See also: [Filtering profile instances based on resource selection](xref:Service_Orchestration_profile_instances#filtering-profile-instances-based-on-resource-selection)
+
 ### HideFromWizard
 
 **Scope**: Service definition
@@ -339,6 +351,9 @@ Set this property to *Yes* to filter the available profile instances for a node 
 **Mandatory**: No
 
 Set the value of this property to *TRUE* to hide a service definition from the Booking Wizard.
+
+> [!TIP]
+> See also: [Hiding a service definition in the Booking Manager app](xref:Service_Orchestration_service_definition_advanced#hiding-a-service-definition-in-the-booking-manager-app)
 
 ### HideIfResourceAvailable
 
@@ -351,6 +366,9 @@ Set the value of this property to *TRUE* to hide a service definition from the B
 This property allows you to hide a service definition node in the Booking Wizard if a valid resource is available that can be assigned to the node. Though the node will not be displayed, the resource will be selected and included in the booking automatically.
 
 Set this property to *Yes* to hide the node if a resource is available.
+
+> [!TIP]
+> See also: [Hiding resource selection if a resource is available](xref:Service_Orchestration_resources_advanced#hiding-resource-selection-if-a-resource-is-available).
 
 ### IsContributing
 
@@ -376,6 +394,9 @@ This property allows you to indicate that profile instance selection is optional
 
 Set this property to *TRUE* to mark profile instance selection as optional.
 
+> [!TIP]
+> See also: [Setting a profile instance as optional](xref:Service_Orchestration_profile_instances#setting-a-profile-instance-as-optional)
+
 ### NoConnectivityCheck
 
 **Scope**: Service definition node interface
@@ -387,6 +408,9 @@ Set this property to *TRUE* to mark profile instance selection as optional.
 This property allows you to configure an interface that is not connected. This is also used in the context of contributing bookings to indicate interfaces that are not connected.
 
 If this property is not configured or set to *FALSE*, a disconnected interface is not handled. If the property is set to *TRUE*, the disconnected interface is loaded and displayed in the Booking Wizard.
+
+> [!TIP]
+> See also: [Allowing profile instance configuration for disconnected interfaces](xref:Service_Orchestration_profile_instances#allowing-profile-instance-configuration-for-disconnected-interfaces)
 
 ### Options
 
@@ -402,6 +426,12 @@ This property can be set to a list of several options, separated by pipe (â€œ\|â
 
 - *Hide*: Hides the node from the Booking Wizard.
 
+> [!TIP]
+> See also:
+>
+> - [Hiding resource selection for a specific node](xref:Service_Orchestration_resources_advanced#hiding-resource-selection-for-a-specific-node)
+> - [Making resource selection optional for a node](xref:Service_Orchestration_resources_advanced#making-resource-selection-optional-for-a-node)
+
 ### Priority
 
 **Scope**: Resource
@@ -414,6 +444,9 @@ This property allows you to define a priority for the resource, which is used to
 
 Set this property to an integer representing the priority of the resource, e.g. 5.
 
+> [!TIP]
+> See also: [Resource sorting configuration](xref:Service_Orchestration_resources_advanced#resource-sorting-configuration)
+
 ### ReadOnlyResourceSelectionControl
 
 **Scope**: Service definition node
@@ -425,6 +458,9 @@ Set this property to an integer representing the priority of the resource, e.g. 
 This property allows you to set the resource selection control for a specific node to read-only.
 
 To do so, set the property to *TRUE*.
+
+> [!TIP]
+> See also: [Disabling resource selection in the UI](xref:Service_Orchestration_resources_advanced#disabling-resource-selection-in-the-ui)
 
 ### Resource Assignment
 
@@ -463,6 +499,9 @@ Specify the conditions in JSON format as illustrated below. Only "AND" combinati
 }
 ```
 
+> [!TIP]
+> See also: [Setting up additional pre-filtering](xref:Service_Orchestration_resources_advanced#setting-up-additional-pre-filtering).
+
 ### Resource Pool
 
 **Scope**: Service definition node
@@ -485,10 +524,13 @@ For example, if you set this property to *Satellites*, and the virtual platform 
 
 This property is used to sort resources for a specific node in the Booking Wizard based on available capacity.
 
-To configure this, on the *General* data page of the Booking Manager, set the *Resources Order Rule* parameter to *Capacity*. Then set the *Resource Sorting Capacity* property to the name of the capacity that should be used for sorting, e.g. *Bandwidth*.
+To configure this, on the *Config* > *Wizard* tab of the Booking Manager, set *Resources Ordering Rule* to *Capacity*. Then set the *Resource Sorting Capacity* property to the name of the capacity that should be used for sorting, e.g. *Bandwidth*.
 
 > [!NOTE]
-> If *Resources Order Rule* is set to *Capacity* but this property is not defined, the first available capacity will be used for sorting.
+> If *Resources Ordering Rule* is set to *Capacity* but this property is not defined, the first available capacity will be used for sorting.
+
+> [!TIP]
+> See also: [Resource sorting configuration](xref:Service_Orchestration_resources_advanced#resource-sorting-configuration).
 
 ### Reuse Contributing Resource
 
@@ -501,6 +543,9 @@ To configure this, on the *General* data page of the Booking Manager, set the *R
 This property allows you to indicate whether the Service Profile Wizard should create a new contributing booking for this node or use an existing contributing booking if available.
 
 Set this property to *TRUE* to indicate that existing contributing bookings should be reused for the node.
+
+> [!TIP]
+> See also: [Enabling reuse of contributing bookings](xref:Service_Orchestration_service_definition_advanced#enabling-reuse-of-contributing-bookings)
 
 ### Service Profile Data Transfer Configuration
 

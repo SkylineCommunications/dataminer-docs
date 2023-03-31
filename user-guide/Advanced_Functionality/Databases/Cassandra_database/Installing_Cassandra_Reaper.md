@@ -11,19 +11,42 @@ Cassandra Reaper is an application that can manage Cassandra cluster repairs on 
 
 1. Install the Cassandra Reaper software by following the installation steps on the [Cassandra Reaper installation page](http://cassandra-reaper.io/docs/download/install/).
 
-1. Create a keyspace in Cassandra for Reaper to use, by running a CQL command as illustrated below, adjusted to match your network topology:
+1. Create a keyspace in Cassandra for Reaper to use by running a CQL command adjusted to match the [keyspace replication strategy](https://docs.datastax.com/en/cassandra-oss/3.x/cassandra/architecture/archDataDistributeReplication.html) of your choice.
 
-   ```txt
-   CREATE KEYSPACE "reaper_db"
-   WITH durable_writes = true
-   AND replication = 
-   {
-    'class' : 'NetworkTopologyStrategy',
-    'datacenter1' : 3,
-    'datacenter2' : 3,
-    'datacenter3' : 3
-   };
-   ```
+   - Example where all nodes in the Cassandra cluster reside in a **single data center**:
+
+     ```txt
+     CREATE KEYSPACE "reaper_db"
+     WITH durable_writes = true
+     AND replication =
+     {
+      'class' : 'SimpleStrategy',
+      'replication_factor' : 2
+     };
+     ```
+
+   - Example where the nodes in the Cassandra cluster have been divided over **multiple data centers**:
+
+     ```txt
+     CREATE KEYSPACE "reaper_db"
+     WITH durable_writes = true
+     AND replication =
+     {
+      'class' : 'NetworkTopologyStrategy',
+      'datacenter1' : 3,
+      'datacenter2' : 3,
+      'datacenter3' : 3
+     };
+     ```
+
+   > [!NOTE]
+   > We advise that you always use a replication factor greater than "1" in the newly created keyspace, as this will provide robustness when data is requested from nodes in the Cassandra cluster.
+   >
+   > If the replication factor is smaller than 2, data requests may fail if the node hosting the data is not available to serve the request. In that case, Cassandra Reaper will no longer function properly, and it will generate errors in its logging such as:
+   >
+   > ```txt
+   > Caused by: com.datastax.driver.core.exceptions.NoHostAvailableException: All host(s) tried for query failed (tried: /10.66.117.69:9042 (com.datastax.driver.core.exceptions.UnavailableException: Not enough replicas available for query at consistency LOCAL_ONE (1 required but only 0 alive)), /10.66.117.67:9042 (com.datastax.driver.core.exceptions.UnavailableException: Not enough replicas available for query at consistency LOCAL_ONE (1 required but only 0 alive)))
+   > ```
 
 1. Make sure the firewall ports are open for the webpage.
 

@@ -592,7 +592,7 @@ If a fixed parameter had a length of zero, a minor memory leak could potentially
 
 When a stopped element was deleted, logger tables associated with that element would incorrectly not be deleted if created with `options="database"`.
 
-#### Low-code apps: No new draft version could be created when trying to edit an app [ID_34075]
+#### Low-Code Apps: No new draft version could be created when trying to edit an app [ID_34075]
 
 <!-- Main Release Version 10.3.0 - Feature Release Version 10.2.9 -->
 <!-- Not added to 10.3.0 -->

@@ -57,6 +57,9 @@ It will always perform the following actions, regardless of whether the DMA is r
 - IISConfig
 - StartSLTaskbarUtility
 - StartDataMiner
+- Cleanclustereddatabases
+
+  Available from DataMiner 10.1.0 \[CU6\]/10.1.9 onwards. Prior to DataMiner 10.2.0 \[CU9\]/10.2.12, this action will remove all keyspaces and indices from the Cassandra cluster and Elasticsearch databases. From DataMiner 10.2.0 \[CU9\]/10.2.12 onwards, this action will remove the tables, keyspaces, and indices defined in the *DB.xml* file from the databases (clusters as well as single-node Cassandra databases on remote machines).
 
 ## SLDataGateway.Tools.Database.exe
 
@@ -70,7 +73,7 @@ This tool can be run with the following arguments:
 
   - *SQL* (i.e. MySQL)
   - *Cassandra*
-  - *Elastic* (i.e. ElasticSearch)
+  - *Elastic* (i.e. Elasticsearch)
 
 - `-i <ip>` or `–ip <ip>`: Mandatory argument. The IP address of the database host.
 
@@ -78,13 +81,13 @@ This tool can be run with the following arguments:
 
   - MySQL: *root* (empty password)
   - Cassandra: *root/root*
-  - ElasticSearch: no security
+  - Elasticsearch: no security
 
 - `-p <password>` or `–password <password>`: Password used for authentication. If no user credentials are specified, the following default credentials will be used:
 
   - MySQL: *root* (empty password)
   - Cassandra: *root/root*
-  - ElasticSearch: no security
+  - Elasticsearch: no security
 
 - `-f` or `–forced`: Skip all prompts. If this argument is not used, the user will be asked for a final confirmation.
 

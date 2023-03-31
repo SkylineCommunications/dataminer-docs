@@ -18,6 +18,7 @@ To enable dynamic zooming on a page, add the following shape data to the page:
 >
 > - When used in combination with grouping overlapping dynamically positioned shapes, several overlapping shapes that were grouped into one shape will be split into separate shapes when you zoom in. See [Enabling grouping of dynamically positioned shapes](xref:Enabling_grouping_of_dynamically_positioned_shapes).
 > - When you use dynamic zooming, shapes will always be displayed using a scale of 100%.
+> - Prior to DataMiner 10.3.4/10.4.0, only individual shapes can be rearranged when you use dynamic zooming. From those DataMiner versions onwards, grouped shapes can be rearranged as well. <!-- RN 35323 -->
 
 ## Disabling rescaling of a particular shape
 

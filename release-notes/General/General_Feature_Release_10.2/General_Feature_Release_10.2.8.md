@@ -306,7 +306,7 @@ In DataMiner Cube, the following enhancements have been made to the *Failover Co
 
 When a DataMiner Agent could not be reached, in some cases, an “Attempt to use an unauthenticated connection” error would appear in the log files or on the UI. From now on, a clearer error message will appear instead.
 
-#### DataMiner Application Framework: Splash screen of apps now show 'Low-code apps' instead of 'Apps' \[ID_33798\]
+#### DataMiner Application Framework: Splash screen of apps now shows 'Low-code apps' instead of 'Apps' \[ID_33798\]
 
 When you start up a custom low-code application created using the DataMiner Application Framework, its splash screen will now show “Low-code apps” instead of “Apps”.
 
@@ -416,6 +416,13 @@ In some cases, run-time errors could occur due to MessageBrokerReconnectThread p
 
 When you had paused the replay of a spectrum recording, in some cases, the “next trace” button and the slider would not work correctly.
 
+#### DataMiner Cube: SLAnalytics would start to consume an excessive amount of memory when you opened a card of an element with parameters that had only average trending enabled [ID_33741]
+
+<!-- MR 10.3.0 - FR 10.2.8 -->
+<!-- Not added to MR 10.3.0 -->
+
+When you opened a card of an element with parameters that had only average trending enabled, in some cases, the SLAnalytics process would start to consume an excessive amount of memory.
+
 #### Service & Resource Management: Changes to resource pools would incorrectly not be saved in the Resources.xml file \[ID_33743\]
 
 On standalone DataMiner Agents, changes to resource pools would incorrectly not be saved in the Resources.xml file.
@@ -486,6 +493,9 @@ When a DataMiner Agent was being shut down, in some cases, an error could occur 
 When a cell in a table with “pollingrate” enabled had been updated, the first time the table was polled after the update, the former value of that cell would incorrectly be returned.
 
 #### DataMiner upgrade: VerifyNatsRunning prerequisite could fail due to SLCloudBridge.dll having been renamed \[ID_33875\]
+
+<!-- MR 10.3.0 - FR 10.2.8 [CU0] -->
+<!-- Also added to MR 10.2.0 [CU13] -->
 
 During a DataMiner upgrade, the *VerifyNatsRunning* prerequisite could fail due to the *SLCloudBridge.dll* file having been renamed to *SLMessageBroker.dll* in DataMiner versions 10.2.0/10.1.5.
 

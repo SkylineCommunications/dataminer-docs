@@ -54,5 +54,5 @@ Then do the following to exclude or include an alarm from the Alarm Console:
 > [!NOTE]
 >
 > - The default value of the *SLA Affecting* property is *Yes*.
-> - Masked alarms do not affect the SLA calculation.
 > - Excluded alarms will also be excluded from SLA reports.
+> - By default, masked alarms affect the SLA calculation. However, you can exclude these automatically by configuring a violation filter that gives them an impact of 0 %. See [Setting a violation filter](xref:Configuring_the_alarm_settings_for_an_SLA#setting-a-violation-filter).

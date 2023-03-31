@@ -19,6 +19,9 @@ When DIS compiles the Automation script or protocol, it will extract the require
 > [!NOTE]
 > For DIS and CI/CD, the PackageReference package management format must be used. The packages.config packages management format is not supported.
 
+> [!IMPORTANT]
+> DIS currently only processes the *lib* folder of NuGet packages. Other folders such as *ref* or *runtimes* are currently not supported.
+
 Within Skyline, we have an internal NuGet store (<https://devcore3/nuget>) where Skyline employees can produce and consume private libraries. You will need to [add this store in Visual Studio](https://learn.microsoft.com/en-us/nuget/consume-packages/install-use-packages-visual-studio#package-sources) to use it.
 
 ## Using the Class Library as a NuGet

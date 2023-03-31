@@ -4,7 +4,7 @@ uid: Spectrum_analyzer_scripts_and_monitors
 
 # Spectrum analyzer scripts and monitors
 
-Apart from real-time remote interaction, DMS Spectrum Analysis also offers around-the-clock performance monitoring. Thanks to extensive, but highly intuitive scripting capabilities, administrators can automate just about every measurement that an operator would perform manually.
+Apart from real-time remote interaction, DataMiner Spectrum Analysis also offers around-the-clock performance monitoring. Thanks to extensive, but highly intuitive scripting capabilities, administrators can automate just about every measurement that an operator would perform manually.
 
 Automated RF performance measuring allows operators to track vital RF parameters (such as Eb/No, carrier levels, C/N, carrier power, average power, ...) and to generate alarms whenever one of those parameters goes out of range. It also allows them to perform a long-term trend analysis on those parameters in order to identify emerging problems before they affect services.
 

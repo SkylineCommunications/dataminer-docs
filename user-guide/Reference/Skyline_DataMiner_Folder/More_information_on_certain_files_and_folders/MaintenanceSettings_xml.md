@@ -60,23 +60,9 @@ This is an example of a *MaintenanceSettings.xml* file:
   <Trending>
     <EDCurves></EDCurves>
     <SDCurves></SDCurves>
-    <TimeSpan1DayRecords window="0" unit="days">
-      730
-    </TimeSpan1DayRecords>
-    <!--2 years-->
-    <TimeSpan1HourRecords window="60" unit="days">
-      365
-    </TimeSpan1HourRecords>
-    <!--1 year--->
-    <TimeSpan5MinRecords window="5" unit="days">
-      30
-    </TimeSpan5MinRecords>
-    <!--1 month-->
-    <TimeSpanSpectrumRecords unit="days">
-      365
-    </TimeSpanSpectrumRecords>
-    <!--1 year-->
-    <TimeSpan unit="hours">24</TimeSpan>
+    <TimeSpan1DayRecords window="0" />
+    <TimeSpan1HourRecords window="60" />
+    <TimeSpan5MinRecords window="5" />
     <WarningLevel></WarningLevel>
   </Trending>
   <WatchDog>
@@ -508,89 +494,28 @@ This deprecated tag was used to specify the maximum number of trend graphs that 
 > [!NOTE]
 > The System Display client application is no longer available from DataMiner 9.6.0 onwards.
 
-### Trending.TimeSpan
-
-In the *TimeSpan* tag, you can specify the period during which the "real-time trending" records have to be kept in the database.
-
-- You can specify integer values (e.g. 1, 2, 12, etc.) or decimal values (1.5, 2.5, etc.).
-
-- The *unit* attribute can be set to “hour”, “hours”, “day”, “days”, “month”, “months”, “year” or “years”.
-
-Default value: 24 - Default unit: hours
-
-> [!NOTE]
->
-> - From DataMiner 9.5.5 onwards, this setting is configured in the files *DBMaintenance.xml* and *DBMaintenanceDMS.xml* for systems with a Cassandra database. From DataMiner 9.5.6 onwards, this setting is configured in those files for SQL databases as well. See [DBMaintenance.xml and DBMaintenanceDMS.xml](xref:DBMaintenance_xml_and_DBMaintenanceDMS_xml#dbmaintenancexml-and-dbmaintenancedmsxml).
-> - This tag can also be specified in an *Element.xml* file. That way, you can overwrite the TimeSpan setting on element level.
-
 ### Trending.TimeSpan1DayRecords
 
-In the *TimeSpan1DayRecords* tag, you can specify the period during which the daily "average trending" records have to be kept in the database.
-
-- You can specify integer values (e.g. 1, 2, 12, etc.) or decimal values (1.5, 2.5, etc.).
-
-- The *unit* attribute can be set to “day”, “days”, “month”, “months”, “year” or “years”.
-
-- If you want to change the default 1-day interval of these records, add a *window* attribute, and specify a custom interval (in minutes).
+In the *TimeSpan1DayRecords* tag, you can customize the interval of the 1-day "average trending" records. To do so, specify a *window* attribute value in minutes.
 
 Not active by default.
 
 > [!NOTE]
->
-> - From DataMiner 9.5.5 onwards, this setting is configured in the files *DBMaintenance.xml* and *DBMaintenanceDMS.xml* for systems with a Cassandra database. From DataMiner 9.5.6 onwards, this setting is configured in those files for SQL databases as well. See [DBMaintenance.xml and DBMaintenanceDMS.xml](xref:DBMaintenance_xml_and_DBMaintenanceDMS_xml#dbmaintenancexml-and-dbmaintenancedmsxml).
-> - This tag can also be specified in an *Element.xml* file. That way, you can overwrite the TimeSpan1DayRecords setting on element level. The *window* attribute, however, is a system-wide setting that can only be set in the file *MaintenanceSettings.xml*.
-> - If this tag is set to a small interval, or even to 0, trend data will be lost when you migrate the database to Cassandra.
+> If you are looking to configure how long these records need to be stored, see [DBMaintenance.xml and DBMaintenanceDMS.xml](xref:DBMaintenance_xml_and_DBMaintenanceDMS_xml#dbmaintenancexml-and-dbmaintenancedmsxml).
 
 ### Trending.TimeSpan1HourRecords
 
-In the *TimeSpan1HourRecords* tag, you can specify the period during which the 1-hour “average trending” records have to be kept in the database.
-
-- You can specify integer values (e.g. 1, 2, 12, etc.) or decimal values (1.5, 2.5, etc.).
-
-- The *unit* attribute can be set to “day”, “days”, “month”, “months”, “year” or “years”.
-
-- If you want to change the default 1-hour interval of these records, add a *window* attribute, and specify a custom interval (in minutes).
-
-By default, 1-hour average trend records are stored for one year.
+In the *TimeSpan1HourRecords* tag, you can customize the interval of the 1-hour "average trending" records to be something other than the default 1 hour. To do so, specify a *window* attribute value in minutes.
 
 > [!NOTE]
->
-> - From DataMiner 9.5.5 onwards, this setting is configured in the files *DBMaintenance.xml* and *DBMaintenanceDMS.xml* for systems with a Cassandra database. From DataMiner 9.5.6 onwards, this setting is configured in those files for SQL databases as well. See [DBMaintenance.xml and DBMaintenanceDMS.xml](xref:DBMaintenance_xml_and_DBMaintenanceDMS_xml#dbmaintenancexml-and-dbmaintenancedmsxml).
-> - This tag can also be specified in an *Element.xml* file. That way, you can overwrite the TimeSpan1HourRecords setting on element level. The *window* attribute, however, is a system-wide setting that can only be set in the file *MaintenanceSettings.xml*.
-> - If this tag is set to a small interval, or even to 0, trend data will be lost when you migrate the database to Cassandra.
+> If you are looking to configure how long these records need to be stored, see [DBMaintenance.xml and DBMaintenanceDMS.xml](xref:DBMaintenance_xml_and_DBMaintenanceDMS_xml#dbmaintenancexml-and-dbmaintenancedmsxml).
 
 ### Trending.TimeSpan5MinRecords
 
-In the *TimeSpan5MinRecords* tag, you can specify the period during which the 5-minute “average trending” records have to be kept in the database.
-
-- You can specify integer values (e.g. 1, 2, 12, etc.) or decimal values (1.5, 2.5, etc.).
-
-- The *unit* attribute can be set to “day”, “days”, “month”, “months”, “year” or “years”.
-
-- If you want to change the default 5-minute interval of these records, add a *window* attribute, and specify a custom interval (in minutes).
-
-By default, 5-minute average trend records are stored for one month.
+In the *TimeSpan5MinRecords* tag, you can customize the interval of the 5-minute "average trending" records to be something other than the default 5 minutes. To do so, specify a *window* attribute value in minutes.
 
 > [!NOTE]
->
-> - From DataMiner 9.5.5 onwards, this setting is configured in the files DBMaintenance.xml and DBMaintenanceDMS.xml instead. From DataMiner 9.5.6 onwards, this setting is configured in those files for SQL databases as well. See [DBMaintenance.xml and DBMaintenanceDMS.xml](xref:DBMaintenance_xml_and_DBMaintenanceDMS_xml#dbmaintenancexml-and-dbmaintenancedmsxml).
-> - This tag can also be specified in an *Element.xml* file. That way, you can overwrite the TimeSpan5MinRecords setting on element level. The *window* attribute, however, is a system-wide setting that can only be set in the file *MaintenanceSettings.xml*.
-> - If this tag is set to a small interval, or even to 0, trend data will be lost when you migrate the database to Cassandra.
-
-### Trending.TimeSpanSpectrumRecords
-
-In the *TimeSpanSpectrumRecords* tag, you can specify the period during which spectrum trend data has to be kept in the database.
-
-- You can specify integer values (e.g. 1, 2, 12, etc.) or decimal values (1.5, 2.5, etc.).
-
-- The *unit* attribute can be set to “day”, “days”, “month”, “months”, “year” or “years”.
-
-By default, spectrum trend data will be kept for one year.
-
-> [!NOTE]
->
-> - From DataMiner 9.5.5 onwards, this setting is configured in the files DBMaintenance.xml and DBMaintenanceDMS.xml instead. See [DBMaintenance.xml and DBMaintenanceDMS.xml](xref:DBMaintenance_xml_and_DBMaintenanceDMS_xml#dbmaintenancexml-and-dbmaintenancedmsxml).
-> - The same setting can also be specified in an *Element.xml* file. That way, you can overwrite the TimeSpanSpectrumRecords setting on element level.
+> If you are looking to configure how long these records need to be stored, see [DBMaintenance.xml and DBMaintenanceDMS.xml](xref:DBMaintenance_xml_and_DBMaintenanceDMS_xml#dbmaintenancexml-and-dbmaintenancedmsxml).
 
 ### Trending.WarningLevel
 

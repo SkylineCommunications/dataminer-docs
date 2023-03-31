@@ -14,13 +14,20 @@ Whether you access a trend graph from a card or do so from the *Trending* module
 
 - A trend groups pane on the left-hand side (see [Working with trend groups](xref:Working_with_trend_groups)).
 
+- A light bulb icon in the top-right corner when DataMiner finds parameters that are related to the parameters shown in the trend graph (from DataMiner 10.2.12/10.3.0 onwards). Clicking this light bulb icon will allow you to add one or more of those related parameters to the trend graph you are viewing. When you open a trend graph, DataMiner Cube will consult the *ModelHost* Extension Module to retrieve all parameters related to those shown in the trend graph. When you click the light bulb icon, you will get a list of the ten most important parameters.
+
+  > [!NOTE]
+  >
+  > - The parameter relationship feature is only available on DataMiner Agents that are connected to dataminer.services, have the *ModelHost* DxM installed, and have been configured to [offload alarm and change point events to the cloud](xref:Controlling_cloudfeed_data_offloads).
+  > - Relationship models are calculated once per week. When this feature is activated, it can take up to a week before the first results are visible.
+
 Depending on the type of data that is displayed, the trend line looks different. For example, take a look at this trend graph in DataMiner 10.2.1:
 
 ![Trend graph in DataMiner Cube](~/user-guide/images/Trend_line.png)
 
 - The dark full line represents trend information retrieved from the database.
 
-- The light full line represents either the most recent real-time parameter change events, or "historic data sets", i.e. parameter change events that are being drawn in the past.
+- The light full line represents either the most recent real-time parameter change events, or "history data sets", i.e. parameter change events that are being drawn in the past.
 
 - The dotted line past "Now" represents trend prediction data (see [Working with trend predictions](xref:Working_with_trend_predictions)).
 
@@ -37,6 +44,7 @@ You can change which data are shown in the graph by directly manipulating the tr
 - [Displaying alarm template colors in trend graphs](xref:Displaying_alarm_template_colors_in_trend_graphs)
 
 > [!NOTE]
+>
 > - Trend graphs are automatically updated with new trend data, so leaving a trend graph open for a longer time always shows the trending up to the current time.
 > - If exceptions occur, these are displayed below the trend graph, while in the graph itself gaps will be displayed.
 > - Gaps are also displayed for zero values or negative values in trend graphs using a logarithmic scale.

@@ -10,7 +10,7 @@ When you right-click an alarm in the Alarm Console, depending on the configurati
 
 - **Set element state**: Allows you to set the element state to *Activate*, *Pause*, *Stop* or *Restart*.
 
-- **Ticket**: Allows you to create a new ticket linked to the alarm you right-clicked. From DataMiner 9.5.7 onwards, you can also view existing tickets related to the alarm via this submenu. (Requires DMS Ticketing.)
+- **Ticket**: Allows you to create a new ticket linked to the alarm you right-clicked. From DataMiner 9.5.7 onwards, you can also view existing tickets related to the alarm via this submenu. (Requires DataMiner Ticketing.)
 
 - **Change**: Allows you to quickly modify the alarm template, trend template or information template for the parameter on which the alarm occurs. See also:
 
@@ -51,7 +51,7 @@ When you right-click an alarm in the Alarm Console, depending on the configurati
 
 - **Add comment**: Allows you to add a comment to the alarm.
 
-- **Send by SMS**: Allows you to forward the selected alarm to other users by text message (requires DMS Mobile Gateway).
+- **Send by SMS**: Allows you to forward the selected alarm to other users by text message (requires DataMiner Mobile Gateway).
 
 - **Set alarm as unread**: Allows you to set an alarm as “unread”.
 

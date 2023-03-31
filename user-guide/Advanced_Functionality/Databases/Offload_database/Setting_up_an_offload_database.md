@@ -160,7 +160,7 @@ The final step is the configuration of the DMS.
 
 1. For MSSQL only, activate TCP/IP:
 
-   1. Open the Sql Server Configuration Manager and go to the SQL Server Network Configuration.
+   1. Open the SQL Server Configuration Manager and go to the SQL Server Network Configuration.
 
    1. Click *Protocols for MSSQLSERVER*.
 
@@ -168,7 +168,7 @@ The final step is the configuration of the DMS.
 
    1. In the panel on the left, go to the SQL Server Services, right-click SQL Server (MSSQLSERVER) and select *Restart*.
 
-   1. Close the Sql Server Configuration Manager.
+   1. Close the SQL Server Configuration Manager.
 
 1. In Cube, configure the offload or “central” database settings for each DMA in the DMS.
 
@@ -188,7 +188,7 @@ The final step is the configuration of the DMS.
 
       - **DB server**: The network location of the offload database.
 
-        - For an MS SQL database, this can be an IP address and a port, separated by a comma, e.g. “10.10.18.1,1433”.
+        - For an MSSQL database, this can be an IP address and a port, separated by a comma, e.g. “10.10.18.1,1433”.
 
         - For a MySQL database, only fill in the IP address. If a port needs to be specified, do so in the *Connection string* field (e.g. *PORT=3306*).
 

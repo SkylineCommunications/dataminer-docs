@@ -28,7 +28,7 @@
 		/// <param name="protocol">The SLProtocol instance.</param>
 		/// <exception cref="ArgumentNullException"><paramref name="protocol"/> is <see langword="null" />.</exception>
 		/// <returns>Object implementing the <see cref="IDms"/> interface.</returns>
-		public static IDms GetDms(this SLProtocol protocol)
+		public static IDms GetDms(this Skyline.DataMiner.Scripting.SLProtocol protocol)
 		{
 			if (protocol == null)
 			{

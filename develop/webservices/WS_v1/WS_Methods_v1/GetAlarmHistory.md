@@ -6,9 +6,11 @@ uid: GetAlarmHistory
 
 Use this method to retrieve:
 
-- one specific alarm, or
+- one specific alarm,
 
-- all alarms in the alarm tree of a specific alarm.
+- all alarms in the alarm tree of a specific alarm, or
+
+- alarm details of a cleared non-root alarm.
 
 ## Input
 

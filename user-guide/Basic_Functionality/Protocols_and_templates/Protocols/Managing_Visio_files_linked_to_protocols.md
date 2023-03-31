@@ -62,7 +62,7 @@ In the Protocols & Templates module, you can upload a custom-made Visio file to 
 
 1. Under *Visio Files*, right-click *General default* and select *Upload custom Visio file*.
 
-1. In the *Open* dialog box, select the Microsoft Visio file (extension: .vdx or .vsdx), and click *Open*.
+1. In the *Open* dialog box, select the desired Visio file (extension: .vdx or .vsdx), and click *Open*.
 
 > [!NOTE]
 >

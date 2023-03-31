@@ -6,7 +6,7 @@ uid: Granting_admin_consent
 
 When the Microsoft Teams Chat Integration functionality is used, admin consent is required for certain actions, e.g. to create teams or channels, or to add members to a team.
 
-After you have granted this consent, you will need to configure the Microsoft tenant for your cloud-connected organization.
+After you have granted this consent, you will need to configure the Microsoft tenant for your dataminer.services organization.
 
 To grant admin consent and configure your tenant:
 
@@ -44,5 +44,6 @@ To grant admin consent and configure your tenant:
 
 > [!NOTE]
 >
-> - If there are changes to the software that cause new or different permissions to be required, you will need to repeat this procedure in order to also provide consent for those permissions.
-> - You can remove your consent again at any time. For more information, refer to the [Microsoft documentation](https://docs.microsoft.com/en-us/azure/active-directory/manage-apps/manage-application-permissions?pivots=portal).
+> - You can **revoke the permissions given to Skyline Communications at any time in the Azure Portal**. For more information, refer to the [Microsoft documentation](https://docs.microsoft.com/en-us/azure/active-directory/manage-apps/manage-application-permissions?pivots=portal).
+> - You can unlink the tenant by clicking the x next to the tenant ID. However, **unlinking the tenant** from the organization **will not remove the permissions given to Skyline**.
+> - If there are **changes to the software** that cause new or different permissions to be required, you will need to **repeat** the grand admin consent procedure in order to also provide consent for those permissions. You can do this by **unlinking** your tenant first.

@@ -26,6 +26,6 @@ To do so:
 
 > [!NOTE]
 >
-> - A production version of a protocol cannot be deleted. If you want to delete a protocol version that is marked “Production”, first promote another version of that same protocol to production version and then try again.
+> - The "Production" entry itself cannot be deleted, but you can delete the protocol version that was promoted to "Production". However, we recommend that you first promote another version of the protocol to "Production".
 > - When you delete a DVE main protocol, all the DVE child protocols are deleted as well. It is not possible to delete a DVE child protocol on its own.
 > - When you delete a protocol for which a function is active, from DataMiner 10.1.0 \[CU18]/10.2.0 \[CU6]/10.2.9 onwards, the corresponding function DVE protocol is also removed from the system.

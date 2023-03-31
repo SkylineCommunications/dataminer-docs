@@ -13,7 +13,7 @@ To configure the component:
 
 ## [In the DataMiner Low-Code Apps](#tab/tabid-1)
 
-1. In the *Settings* tab, click the configuration icon next to *On click* and select the action(s) you want the button to execute. See [Configuring low-code app events](xref:LowCodeApps_event_config).
+1. In the *Component* > *Settings* tab, click the configuration icon next to *On click* and select the action(s) you want the button to execute. See [Configuring low-code app events](xref:LowCodeApps_event_config).
 
 1. Fine-tune the component layout. In the *Component* > *Layout*, tab the following options are available:
 
@@ -45,7 +45,7 @@ In the Dashboards app, the soft-launch button component can be used to execute t
 
    - The *Button text* option allows you to customize the text that should be displayed on the button. By default, the button displays the same text as in Cube.
 
-1. Optionally, configure the following settings in the *Settings* tab:
+1. Optionally, configure the following settings in the *Component* > *Settings* tab:
 
    - To use a custom polling interval for this component, in the *WebSocket settings* section, clear the checkbox and specify a different polling interval (in seconds).
 

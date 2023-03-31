@@ -4,7 +4,10 @@ uid: Setting_up_HTTPS_on_a_DMA
 
 # Setting up HTTPS on a DMA
 
-To securely host your DataMiner Agent, we recommended that you make sure HTTPS connections are required. To do so, you first have to install an SSL/TLS certificate and set up an HTTPS binding. Optionally, specify the auto-detection settings for DataMiner to avoid connection issues when traffic between the DataMiner nodes is filtered (e.g. by a firewall).
+To securely host your DataMiner Agent, we recommend that you make sure HTTPS connections are required. To do so, you first have to install an SSL/TLS certificate and set up an HTTPS binding. Using certificates issued by a trusted Certificate Authority (CA) is recommended. Optionally, specify the auto-detection settings for DataMiner to avoid connection issues when traffic between the DataMiner nodes is filtered (e.g. by a firewall).
+
+> [!TIP]
+> See also: [DataMiner hardening guide](xref:DataMiner_hardening_guide)
 
 ## Configuring the HTTPS binding in IIS
 
@@ -17,11 +20,16 @@ To securely host your DataMiner Agent, we recommended that you make sure HTTPS c
 1. Allow *inbound* TCP port **443** through the Windows Firewall.
 1. Optionally (though **recommended**), enable *HTTP Strict Transport Security* (*HSTS*) in IIS to prevent SSL stripping attacks:
 
-   1. In IIS manager, click *Sites* in the *Connections* pane on the left.
-   1. Open *Default Web Site* and click *HSTS* in the *Actions* pane.
-   1. Select the *Enable* checkbox.
-   1. Set the *Max-Age* to **31536000** (seconds). This will ensure recurring connections are using HTTPS for the next year.
-   1. Click *OK* to complete the HSTS setup.
+   1. Open *IIS Manager*.
+   1. In the *Connections* pane on the left, expand the top node and *Sites* node until you see *Default Web Site*.
+   1. Right click *Default Web Site* and select *Manage Website* > *Advanced settings*.
+   1. Under *Behavior*, expand *HSTS*.
+   1. Set *Enabled* to *True*.
+   1. Set *IncludeSubDomains* to *True*.
+   1. Set *Max-Age* to *31536000* seconds (i.e. 1 year).
+   1. Optionally, set *Preload* to *True*.
+   1. Optionally, set *Redirect Http to Https* to *True*
+   1. Click *OK*.
 
 > [!TIP]
 > It is good practice to completely disable **HTTP** by removing the HTTP binding, meaning that only HTTPS traffic will be accepted. Once the binding is removed, you can close port 80 in the Windows Firewall.
@@ -36,7 +44,7 @@ To do so:
 
 1. On a DataMiner Agent, open *C:\\Skyline DataMiner\\MaintenanceSettings.xml*.
 
-1. Add an HTTPS tag with the necessary attributes. For example:
+1. At the top level of the \<MaintenanceSettings> XML tree, add an HTTPS tag with the necessary attributes. For example:
 
     ```xml
     <MaintenanceSettings>
@@ -52,6 +60,9 @@ To do so:
     - **name**: Must be set to the name matching the *Common Name* (CN) or one of the *Subject Alternative Names* (SAN) of the certificate. If it is a wildcard certificate, the name must match the mask defined in the certificate (e.g. "\*.skyline.local"). For example, "dma01.skyline.be" matches the wildcard certificate for "*.skyline.be".
 
       This name **should also be configured in the DNS server** pointing to the IP address of the DMA, so that the DMA can be reached using the configured name.
+
+      > [!WARNING]
+      > Do not use wildcard configurations if you want to use your DataMiner Agent to connect your system to dataminer.services, as this is not supported. In that case, use the FQDN (e.g. "dma01.skyline.be") instead.
 
 1. Save the file and restart the DMA.
 
@@ -136,6 +147,12 @@ The following auto-detect methods can be specified:
 > It depends on the HTTP/HTTPS configuration in IIS whether the above configuration is required. For a server accepting both HTTP and HTTPS, it is normally not necessary.
 
 ## Common issues after configuring HTTPS
+
+- **ERR_CERT_COMMON_NAME_INVALID error is shown**
+
+   Most likely, your URL does not match the *Subject Alternative Names (SAN)* field of your certificate. Most browsers will reject certificates when the URL matches the *Common Name (CN)* but not the *Subject Alternative Names (SAN)*. The *Common Name (CN)* field of an x.509 certificate is considered deprecated since RFC 2818 because it is ambiguous and untyped.
+
+   To fix this, either create a new certificate that includes your URL in the *Subject Alternative Names (SAN)* field, or change your URL to match the *Subject Alternative Names (SAN)* field of the certificate.
 
 - **My connection times out or the site cannot be reached**
 

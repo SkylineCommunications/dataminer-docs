@@ -2,9 +2,9 @@
 uid: ticketing
 ---
 
-# DMS Ticketing
+# DataMiner Ticketing
 
-The Ticketing app, also known as DMS Ticketing, is an application introduced in DataMiner 9.0.4. It allows you to easily create and manage tickets in DataMiner. The app is available both embedded within DataMiner Cube and as a standalone web app.
+The Ticketing app, also known as DataMiner Ticketing, is an application introduced in DataMiner 9.0.4. It allows you to easily create and manage tickets in DataMiner. The app is available both embedded within DataMiner Cube and as a standalone web app.
 
 > [!NOTE]
 >

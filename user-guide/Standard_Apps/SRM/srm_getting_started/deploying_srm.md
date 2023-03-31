@@ -7,7 +7,7 @@ uid: deploying_srm
 1. Ensure that a DataMiner version is installed that is compatible with the SRM version you want to deploy. Check the SRM release notes to see which minimum DataMiner version is required. Contact Skyline Communications to check if any additional components need to be installed in your system.
 
    > [!NOTE]
-   > The SRM Framework requires an [Elasticsearch database](xref:Elasticsearch_database).
+   > The SRM framework requires an [Elasticsearch database](xref:Elasticsearch_database).
 
 1. Download the SRM package from [DataMiner Dojo](https://community.dataminer.services/downloads/).
 
@@ -34,15 +34,16 @@ uid: deploying_srm
 
    > [!TIP]
    > See also:
+   >
    > - [Creating a view](xref:Managing_views#creating-a-view)
    > - [Naming of elements, services, views, etc.](xref:NamingConventions#naming-of-elements-services-views-etc)
 
-1. If you are using a version of the SRM Framework prior to SRM 1.2.19, create an element with the name *SRM Log Manager*, using the protocol *Generic Bookings Log*.
+1. If you are using a version of the SRM framework prior to SRM 1.2.19, create an element with the name *SRM Log Manager*, using the protocol *Generic Bookings Log*.
 
    > [!TIP]
    > See also: [Adding and deleting elements](xref:Adding_and_deleting_elements)
 
-1. If you are using a version of the SRM Framework prior to SRM 1.2.19, on the *Configuration* page of the *SRM Log Manager* element, set the *Path* parameter to a shared folder accessible from both the client machine and the DataMiner servers.
+1. If you are using a version of the SRM framework prior to SRM 1.2.19, on the *Configuration* page of the *SRM Log Manager* element, set the *Path* parameter to a shared folder accessible from both the client machine and the DataMiner servers.
 
 1. Create an element with the name *SRM Booking Manager*, using the protocol *Skyline Booking Manager* (Production version).
 
@@ -52,4 +53,4 @@ uid: deploying_srm
 
    - Set *Services* > *App. Services View* to the name of the view you created to contain services (e.g. "3 - Services").
 
-   - Set *History and Logs* > *Booking Logging Location* to a shared folder accessible from both the client machine and the DataMiner servers, so that users will be able to view the log files.
+   - Set *History and Logs* > *Booking Logging Location* to a shared folder accessible from both the client machine and the DataMiner servers, so that users will be able to view the log files. See [Configuring SRM logging](xref:SRM_logging_config).

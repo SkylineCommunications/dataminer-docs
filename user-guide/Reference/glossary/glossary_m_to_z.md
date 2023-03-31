@@ -16,14 +16,14 @@ See [Glossary (A to L)](xref:glossary_a_to_l).
 | Main Release | The Main Release of DataMiner is the upgrade track of the DataMiner software that has one major upgrade per year as well as regular Cumulative Updates (CUs) with all the latest fixes. In general, no new features are added in this track, except for specific isolated cases that do not affect existing functionality. Using this upgrade track is recommended for production environments that do not require specific features only available in the Feature Release. |
 | MAM | Media Asset Management. Management of typically large-sized video and media files. |
 | Managed inventory | In the context of DataMiner IDP, this represents the elements in a DMS that are managed by IDP.<br>See [DataMiner IDP app](xref:SolIDP#dataminer-idp-app). |
-| Maps | DataMiner module that allows you to visualize real-time data from the DMS on top of geographical maps provided by online map services.<br>See [DMS Maps](xref:maps#dms-maps). |
+| Maps | DataMiner module that allows you to visualize real-time data from the DMS on top of geographical maps provided by online map services.<br>See [Maps](xref:maps). |
 | Masking | Marking a DataMiner object as to be ignored for alarm monitoring. |
 | Matrix parameter | A parameter that combines a series of inputs and outputs in a matrix, allowing users to connect inputs and outputs using the crosspoints in the matrix.<br>See [Matrix parameters](xref:Matrix_parameters). |
-| MCPC | Multiple Channels Per Carrier. Technology where multiple broadcasting streams are multiplexed together into a single bitstream. |
+| MCPC | Multiple Channels Per Carrier. Technology where multiple broadcasting streams are multiplexed together into a single bit stream. |
 | MCR | Master Control Room. Control center of a broadcast operation. |
 | MCU | Master Control Unit. Central management device. |
 | MD5 | Message Digest 5. Cryptographic hash algorithm. |
-| Measurement point | In the context of spectrum analysis, a measurement point is series of sets that is executed on devices to select an input for a spectrum analyzer device, e.g. to set a switch to the correct position.<br>See [DMS Spectrum Analysis](xref:SpectrumAnalysis#dms-spectrum-analysis). |
+| Measurement point | In the context of spectrum analysis, a measurement point is series of sets that is executed on devices to select an input for a spectrum analyzer device, e.g. to set a switch to the correct position.<br>See [Spectrum Analysis](xref:SpectrumAnalysis). |
 | Mediation protocol | Standardized protocol that forms a mediation layer on top of device-specific protocols, thereby providing a unified view on similar devices that have a different device-specific protocol. Also known as base protocol. |
 | Memory file | Variable within an Automation script that consists of a container of values.<br>See [Script variables](xref:Script_variables). |
 | MER | Modulation Error Ratio. Measurement of the performance of a digital media transmitter or receiver in a communications system using digital modulation. |
@@ -32,7 +32,7 @@ See [Glossary (A to L)](xref:glossary_a_to_l).
 | MHP | Multimedia Home Platform. Open standard for middleware, designed by the DVB project for interactive digital TV. |
 | MIB | Management Information Base. A virtual information store managing objects, which is typically accessed using the Simple Network Management Protocol (SNMP).<br>See [Terminology related to the SNMP protocol](xref:Terminology_related_to_the_SNMP_protocol). |
 | MIME | Multipurpose Internet Mail Extension. Internet standard that extends the format of email messages to support text in character sets other than ASCII, as well as attachments of audio, video, images, and application programs. |
-| Mobile Gateway | DataMiner module that allows two-way communication with a DMS via SMS text messages.<br>See [DMS Mobile Gateway](xref:MobileGateway#dms-mobile-gateway). |
+| Mobile Gateway | DataMiner module that allows two-way communication with a DMS via SMS text messages.<br>See [Mobile Gateway](xref:MobileGateway). |
 | Monitoring app | The main web application to monitor a DataMiner System from DataMiner 10.0.0/10.0.2 onwards. |
 | Monitoring & Control app | HTML5 application to interact with DataMiner using a mobile device prior to DataMiner 10.0.0/10.0.2. |
 | MOTS | Military Off-The-Shelf. Term used for off-the shelf products that have been developed or customized by a commercial vendor to respond to specific military requirements. |
@@ -68,15 +68,15 @@ See [Glossary (A to L)](xref:glossary_a_to_l).
 | OLT | Optical Line Termination. Device that serves as the service provider endpoint of a passive optical network. |
 | ONT | Optical Network Terminal. Device used to terminate a fiber-optic line, demultiplex the signal into its component parts and provide power to customer telephones. Also known as ONU (Optical Network Unit). |
 | OPEX | Operating expense. The ongoing cost to run a product, system or business. |
-| OSM | OpenStreetMap. Free community-built map application, which can be integrated with DataMiner Maps from DataMiner 9.5.8 onwards.<br>See [DMS Maps](xref:maps#dms-maps). |
+| OSM | OpenStreetMap. Free community-built map application, which can be integrated with DataMiner Maps from DataMiner 9.5.8 onwards.<br>See [Maps](xref:maps). |
 | OSPF | Open Shortest Path First. Routing protocol for IP networks used to find the best path between the source and destination router within an autonomous system. |
 | OSS | Operations Support System. Software system that allows service providers to monitor, control, analyze and manage their network. |
 | OTA | Over-The-Air. Refers to wireless transmission, typically in the context of software updates distributed to mobile devices or TV and radio broadcasts transmitted wirelessly. |
 | OTT | Over-The-Top. Refers to media streaming services offered directly to viewers via the internet, rather than through a traditional cable or broadcast provider. |
 | OU | Occasional Use. Refers to services that are not used continuously, for example satellite capacity that is offered to broadcasters for ad hoc and periodic demands. |
-| Outage | In the context of DataMiner Business Intelligence, the temporary unavailability of the service monitored by an SLA.<br>See [DMS Business Intelligence](xref:sla#dms-business-intelligence). |
+| Outage | In the context of DataMiner Business Intelligence, the temporary unavailability of the service monitored by an SLA.<br>See [Business Intelligence](xref:sla). |
 | Outlier | Change in the behavior of a trend, detected by DataMiner Analytics, where the value suddenly spikes upwards or downwards and then returns to its previous, normal behavior.<br>See [Working with behavioral anomaly detection](xref:Working_with_behavioral_anomaly_detection) |
-| OWM | OpenWeatherMap. Online service that provides weather data, which can be integrated in DataMiner Maps from DataMiner 9.5.8 onwards.<br>See [DMS Maps](xref:maps#dms-maps). |
+| OWM | OpenWeatherMap. Online service that provides weather data, which can be integrated in DataMiner Maps from DataMiner 9.5.8 onwards.<br>See [Maps](xref:maps). |
 
 ## P
 
@@ -131,8 +131,8 @@ See [Glossary (A to L)](xref:glossary_a_to_l).
 | Regular expression | Sequence of characters resulting in a pattern that can be used to find and manage matching text. |
 | Relative alarm threshold | Dynamic alarm threshold that is configured as a percentage representing the delta with the baseline value.<br>See [Configuring an alarm template with dynamic alarm thresholds](xref:Configuring_alarm_templates#configuring-an-alarm-template-with-dynamic-alarm-thresholds). |
 | Replicated element/service | An element or service that is shown in a DMS, but managed by a different DMS. It inherits all parameter values from its counterpart in the other DMS. |
-| Report | Document with specific information on the DataMiner System, based on a report template in the DMS Reporter module.<br>See [DMS Reporter](xref:reporter#dms-reporter). |
-| Reporter | DataMiner application that allows you to generate graphical reports showing statistical data and operational metrics of the DMS.<br>See [DMS Reporter](xref:reporter#dms-reporter). |
+| Report | Document with specific information on the DataMiner System, based on a report template in the DMS Reporter module.<br>See [DMS Reporter](xref:reporter). |
+| Reporter | DataMiner application that allows you to generate graphical reports showing statistical data and operational metrics of the DMS.<br>See [DMS Reporter](xref:reporter). |
 | Reservation | Alternative name for booking in earlier DataMiner versions.<br>See [Service and Resource Management](xref:SRM#service-and-resource-management). |
 | Resource | Any thing that can be used and reserved in a booking instance.<br>See [Service and Resource Management](xref:SRM#service-and-resource-management). |
 | Resource Manager | Legacy name for the Resources module in DataMiner Cube.<br>See [The Resources module](xref:The_Resources_module). |
@@ -141,7 +141,7 @@ See [Glossary (A to L)](xref:glossary_a_to_l).
 | RFC | Request For Comments. |
 | RLM | Rack Layout Manager. Component of DataMiner IDP that is used to manage and monitor the location of managed devices.<br>See [DataMiner IDP app](xref:SolIDP#dataminer-idp-app). |
 | RN | Release Note. |
-| Router Control | DataMiner application that allows you to configure the matrices in a DMS using a single, customizable user interface.<br>See [DMS Router Control](xref:RouterControl#dms-router-control). |
+| Router Control | DataMiner application that allows you to configure the matrices in a DMS using a single, customizable user interface.<br>See [Router Control](xref:RouterControl). |
 | RTCP | Real-Time Transport Control Protocol. Network protocol that provides statistics and control information for an RTP session. |
 | RTE | Runtime error. |
 | RTMP | Real-Time Messaging Protocol. Protocol for streaming of audio, video and data over the internet. |
@@ -164,7 +164,7 @@ See [Glossary (A to L)](xref:glossary_a_to_l).
 | Scan range | Definition of how to scan the network as part of DataMiner IDP. This includes the IP address ranges where the scan should occur and the CI Types indicating the types of devices that should be detected.<br>See [DataMiner IDP app](xref:SolIDP#dataminer-idp-app). |
 | Scheduled event | An event consisting of a start and stop task, scheduled to be executed at a specific time in the DMS.<br>See [Scheduling an event based on a Scheduler template](xref:Scheduling_an_event_based_on_a_Scheduler_template). |
 | Scheduled task | An action that is scheduled to be executed at a specific time in the DMS.<br>See [Manually adding a scheduled task](xref:Manually_adding_a_scheduled_task). |
-| Scheduler | DataMiner application that allows you to schedule certain actions in the DataMiner System.<br>See [DMS Scheduler](xref:scheduler#dms-scheduler). |
+| Scheduler | DataMiner application that allows you to schedule certain actions in the DataMiner System.<br>See [Scheduler](xref:scheduler). |
 | SCPC | Single Channel Per Carrier. Technology where a single signal is used at a given frequency and bandwidth. |
 | SCSI | Small Computer System Interface. |
 | SDH | Synchronous Digital Hierarchy. Standard technology in Europe for synchronous data transmission on optical media. Its US counterpart is SONET. |
@@ -180,7 +180,7 @@ See [Glossary (A to L)](xref:glossary_a_to_l).
 | Service definition | Definition of the topology, behavior (LSO) and data exchange ruleset (DTR) of a service, in the context of DataMiner SRM.<br>See [Service and Resource Management](xref:SRM#service-and-resource-management). |
 | Service definition template | Type of service definition that is typically used to define the different types of services that need to be instantiated in the Service & Resource Management module, as opposed to a service definition that is only intended for one use.<br>See [Service and Resource Management](xref:SRM#service-and-resource-management). |
 | Service instance | Instance of a service definition to which the necessary profile instances and resources have been linked.<br>See [Service and Resource Management](xref:SRM#service-and-resource-management). |
-| Service level agreement | In the context of DataMiner Business Intelligence, this refers to a specific type of element that monitors a service level agreement, i.e. an agreement between a service provider and a customer. Abbreviated as SLA.<br>See [DMS Business Intelligence](xref:sla#dms-business-intelligence). |
+| Service level agreement | In the context of DataMiner Business Intelligence, this refers to a specific type of element that monitors a service level agreement, i.e. an agreement between a service provider and a customer. Abbreviated as SLA.<br>See [Business Intelligence](xref:sla). |
 | Service Manager | Legacy name for the Services module in DataMiner Cube.<br>See [The Resources module](xref:The_Resources_module). |
 | Service profile | Profile for one or more service definitions that makes it possible to preconfigure profile instances for the service definitions, so that these no longer need to be selected during booking creation. In DataMiner, this is available in the form of service profile definitions with corresponding service profile instances.<br>See [Using the profiles tab](xref:SRM_Services_profiles). |
 | Service profile definition | Definition of a service profile that includes the service definitions to which the service profile applies and the mapping of the service profile nodes to the service definition nodes.<br>See [Using the profiles tab](xref:SRM_Services_profiles). |
@@ -195,10 +195,10 @@ See [Glossary (A to L)](xref:glossary_a_to_l).
 | Shape data | Custom fields with data assigned to a shape or group of shapes in Visio.<br>See [Working with shape data in Microsoft Visio](xref:Working_with_shape_data_in_Microsoft_Visio). |
 | SHF | Super High Frequency. Indicates radio frequencies in the range between 3 and 30 gigahertz. |
 | Simulated element | An element that displays data from a simulation file instead of communicating with an actual device.<br>See [Simulated elements](xref:Simulated_elements). |
-| SLA | Service Level Agreement. In the context of DataMiner Business Intelligence, this refers to a specific type of element that monitors a service level agreement, i.e. an agreement between a service provider and a customer.<br>See [DMS Business Intelligence](xref:sla#dms-business-intelligence). |
-| SLA offline window | The time interval during which the service that an SLA applies to is considered offline.<br>See [DMS Business Intelligence](xref:sla#dms-business-intelligence). |
-| SLA outage | Alarm on the service an SLA applies to that is considered a violation of the SLA.<br>See [DMS Business Intelligence](xref:sla#dms-business-intelligence). |
-| SLA window | The time interval for which SLA compliance is calculated.<br>See [DMS Business Intelligence](xref:sla#dms-business-intelligence). |
+| SLA | Service Level Agreement. In the context of DataMiner Business Intelligence, this refers to a specific type of element that monitors a service level agreement, i.e. an agreement between a service provider and a customer.<br>See [Business Intelligence](xref:sla). |
+| SLA offline window | The time interval during which the service that an SLA applies to is considered offline.<br>See [Business Intelligence](xref:sla). |
+| SLA outage | Alarm on the service an SLA applies to that is considered a violation of the SLA.<br>See [Business Intelligence](xref:sla). |
+| SLA window | The time interval for which SLA compliance is calculated.<br>See [Business Intelligence](xref:sla). |
 | SLC | Skyline Communications. |
 | Sliding window | Time frame with a fixed size that moves along with the present time. Can for example be used in the Alarm Console.<br>See [Adding and removing alarm tabs in the Alarm Console](xref:ChangingTheAlarmConsoleLayout#adding-and-removing-alarm-tabs-in-the-alarm-console). |
 | SLLogCollector | Tool that allows you to easily collect log information and memory dumps from a DMA.<br>See [SLLogCollector](xref:SLLogCollector). |
@@ -223,7 +223,7 @@ See [Glossary (A to L)](xref:glossary_a_to_l).
 | Software redundancy | Redundancy logic configured in DataMiner Cube, based on Automation scripts.<br>See [Software redundancy](xref:About_redundancy_groups#software-redundancy). |
 | SONET | Synchronous Optical NETworking. Standard technology in the US and Canada for synchronous data transmission on optical media. Its European counterpart is SDH. |
 | SOP | Standard Operating Procedure. Set of step-by-step instructions used to carry out complex routine operations. |
-| Spectrum analysis | DataMiner module that can be used to integrate spectrum analyzers in the DMS, so that they can be used for continuous RF performance monitoring.<br>See [DMS Spectrum Analysis](xref:SpectrumAnalysis#dms-spectrum-analysis). |
+| Spectrum analysis | DataMiner module that can be used to integrate spectrum analyzers in the DMS, so that they can be used for continuous RF performance monitoring.<br>See [Spectrum Analysis](xref:SpectrumAnalysis). |
 | Spectrum buffer | Most recent spectrum trace retrieved during script execution (e.g. with a spectrum monitor), stored in the DataMiner spectrum service.<br>See [Watching spectrum buffers](xref:Working_with_spectrum_monitors#watching-spectrum-buffers). |
 | Spectrum monitor | Spectrum analysis feature where a spectrum script is run, optionally with a combination of measurement points and/or presets, in order to make the spectrum analyzer sweep the input signal at regular intervals to measure particular variables.<br>See [Working with spectrum monitors](xref:Working_with_spectrum_monitors). |
 | Spectrum preset | Spectrum configuration that can be saved and loaded, including spectrum settings, markers, reference lines, etc.<br>See [Using Spectrum Analysis presets](xref:Using_Spectrum_Analysis_presets). |
@@ -263,11 +263,11 @@ See [Glossary (A to L)](xref:glossary_a_to_l).
 | Telnet | Application-layer protocol used for bidirectional interactive text-oriented communication using a virtual terminal connection. |
 | TFTP | Trivial File Transfer Protocol. Simple file transfer protocol that can be used to retrieve a file from or put a file on a remote host. |
 | Third-party DataMiner Connector | DataMiner connector developed by a DataMiner Strategic Partner, which can be a product vendor, a system integrator, a consultancy company or a reseller. |
-| Ticket | A record in the system related to a specific problem, which can contain information such as the affected resource and the severity of the issue.<br>See [DMS Ticketing](xref:ticketing#dms-ticketing). |
-| Ticket domain | Definition of the layout of a collection of tickets, which allows the tickets of a third-party system to sync with DataMiner tickets. Also known as a “ticket field resolver”.<br>See [DMS Ticketing](xref:ticketing#dms-ticketing). |
-| Ticketing | Application used to create and/or manage tickets in DataMiner.<br>See [DMS Ticketing](xref:ticketing#dms-ticketing). |
+| Ticket | A record in the system related to a specific problem, which can contain information such as the affected resource and the severity of the issue.<br>See [Ticketing](xref:ticketing). |
+| Ticket domain | Definition of the layout of a collection of tickets, which allows the tickets of a third-party system to sync with DataMiner tickets. Also known as a “ticket field resolver”.<br>See [Ticketing](xref:ticketing). |
+| Ticketing | Application used to create and/or manage tickets in DataMiner.<br>See [Ticketing](xref:ticketing). |
 | Timer base | General parameter of an element that can be used to adjust the polling speed of the element.<br>See [Changing the polling speed of an element](xref:Changing_the_polling_speed_of_an_element). |
-| Timetrace data | Historic alarm data that is used to list history alarms in alarm tabs and to graphically visualize historic alarm information in the Alarm Console history slider. |
+| Timetrace data | History alarm data used to list history alarms in alarm tabs and to graphically visualize history alarm information in the Alarm Console history slider. |
 | TLS | Transport Layer Security. Cryptographic protocol designed to provide communication security over a network. |
 | Tooltip | Small pop-up window describing an object that is being pointed to, such as a button. |
 | Transparent clock | Device in a PTP environment that passes the time it retrieves from a boundary clock or grandmaster clock on to endpoint devices.<br>See [DataMiner PTP app](xref:SolPTP#dataminer-ptp-app) |

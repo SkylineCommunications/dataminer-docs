@@ -46,9 +46,9 @@ DataMiner 10.0.13 also introduces the following breaking changes:
 
   The open state of a ticket can no longer be linked to the state of an alarm.
 
-- GenericEnumEntry<int> is returned as “long”:
+- GenericEnumEntry\<int> is returned as “long”:
 
-  If GenericEnumEntry<int> is used in VisualData on a TicketFieldResolver, this is now returned as a long integer instead of an integer.
+  If GenericEnumEntry\<int> is used in VisualData on a TicketFieldResolver, this is now returned as a long integer instead of an integer.
 
 - Tickets must now always contain a field for their state if the TicketFieldResolver defines a state TicketFieldDescriptor
 

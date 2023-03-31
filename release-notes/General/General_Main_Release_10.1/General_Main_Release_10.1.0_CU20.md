@@ -2,10 +2,10 @@
 uid: General_Main_Release_10.1.0_CU20
 ---
 
-# General Main Release 10.1.0 CU20 – Preview
+# General Main Release 10.1.0 CU20
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 > For information on how to upgrade DataMiner, see [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent).
@@ -274,3 +274,9 @@ When a trap binding of type "IP Address" came in while the SLSNMPManager SNMPv3 
 After you had launched an upgrade, in some cases, the upgrade process displayed in DataMiner Taskbar Utility would lag behind and DataMiner Taskbar Utility would use a considerable amount of memory.
 
 This fixes a [known issue](xref:KI_Taskbar_Utility_performance_issue_while_agents_are_being_upgraded).
+
+#### SLProtocol could leak memory when a protocol with HTTP connections sent an HTTP request with a header [ID_34775]
+
+<!-- MR 10.1.0 [CU20] / 10.2.0 [CU8] - FR 10.2.11 [CU1] -->
+
+When a protocol with HTTP connections sent an HTTP request with a header, SLProtocol could leak memory.

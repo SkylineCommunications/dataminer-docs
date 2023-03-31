@@ -72,7 +72,7 @@ To take a backup/snapshot, use the following arguments:
   - If none is defined and only one repository is found in the Elasticsearch cluster, then that one will be used.
   - If none is defined and none can be found, no backup will be taken.
 
-- `--snapshotname` or `-n`: The (lowercase) name of the snapshot to be taken.
+- `--SnapshotName` or `-n`: The (lowercase) name of the snapshot to be taken.
 
   Default: `DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss");`
 
@@ -82,7 +82,7 @@ To restore a backup/snapshot, use the following arguments:
 
 - `--repo` or `-r`: The repository containing the backup to be restored. If none is defined and only one repository is found in the Elasticsearch cluster, then that one will be used. If none is defined and none can be found, an error will be thrown.
 
-- `--snapshotname` or `-n`: The name of the snapshot to be restored.
+- `--SnapshotName` or `-n`: The name of the snapshot to be restored.
 
 > [!NOTE]
 >
@@ -90,3 +90,4 @@ To restore a backup/snapshot, use the following arguments:
 > - We recommend that you disable security when restoring a backup with security enabled. To do so, comment the security setting in the *.yaml* file.
 > - It is only possible to restore indices that do not exist yet. Therefore, in most cases, you will have to delete all data from all nodes before restoring a backup.
 > - Do not restore a backup while DataMiner is online.
+> - You can get a list of existing snapshots to help find the right snapshot name by running a query on Kibana DevTools, e.g. `GET /snapshot/my_repository`. For more information, see [Get a list of available snapshots](https://www.elastic.co/guide/en/elasticsearch/reference/current/snapshots-restore-snapshot.html#get-snapshot-list).

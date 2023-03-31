@@ -7,9 +7,7 @@ uid: Compilation_Time_Assembly_Binding
 This happens at the following times:
 
 - During Visual Studio building.
-
-- The first time a QAction runs on DataMiner.
-
+- Right before the first execution of the QAction (if the [precompile](xref:Protocol.QActions.QAction-options#precompile) option is used, the QAction is compiled immediately).
 - When an Automation script is uploaded or its library script changes.
 
 To compile, the compiler only requires the directly referenced assemblies. The compiler does not know about transitive dependencies for that assembly.

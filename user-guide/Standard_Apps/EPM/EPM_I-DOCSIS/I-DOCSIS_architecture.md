@@ -33,7 +33,7 @@ One or more back-end elements, per technology, are placed on a DataMiner Agent (
 
 ## Front-end connector
 
-The front-end collector allows the user to access all information from the EPM Solution from a single pane of glass. It is a lightweight connector that only contains the visual structure of the solution. It is optimized for aggregation at the highest level (Network) of the topology.
+The front-end connector allows the user to access all information from the EPM Solution from a single pane of glass. It is a lightweight connector that only contains the visual structure of the solution. It is optimized for aggregation at the highest level (Network) of the topology.
 
 There is only one front-end element per DataMiner System, and it is aware of the existence of all collectors and back-end elements. To create reports or dashboards, this front-end element should be used.
 

@@ -8,14 +8,18 @@ The `DomDefinition` object groups `DomInstance` objects together (as each instan
 
 ## Properties
 
-The table below lists the properties of the `DomDefinition` object. It also indicates whether a property can be used for filtering using the `DomDefinitionExposers`.
+The table below lists the properties of the `DomDefinition` object. It also indicates whether a property can be used for filtering using the `DomDefinitionExposers`. 
+
+> [!NOTE]
+> From DataMiner 10.3.2/10.4.0 onwards, the `DomDefinition` object also has [the *ITrackBase* properties](xref:DOM_objects#itrackbase-properties).
 
 | Property | Type | Filterable | Description |
 |--|--|--|--|
 | ID | DomDefinitionId | Yes | The ID of the `DomDefinition`. |
 | Name | string | Yes | The name of the `DomDefinition`. |
 | SectionDefinitionLinks | List\<[SectionDefinitionLink](#sectiondefinitionlink)> | Yes | Contains the required/allowed `SectionDefinitions`. |
-| VisualStructure | DomDefinitionVisualStructure | No | Used by the client UI to store info about how things should be visualized. |
+| VisualStructure | DomDefinitionVisualStructure | No | Contains settings related to the client UI. Most of these do not apply for DOM. This property should be ignored since it will be removed in the near future. |
+| DomBehaviorDefinitionId | DomBehaviorDefinitionId | Yes | ID of the `DomBehaviorDefinition` that this `DomDefinition` is linked to. See [DomBehaviorDefinition](xref:DomBehaviorDefinition). |
 | ModuleSettingsOverrides | [ModuleSettingsOverrides](#modulesettingsoverrides) | No | Used to override some `ModuleSettings`. See [DomInstanceNameDefinition](xref:DomInstanceNameDefinition). |
 
 ### SectionDefinitionLink
@@ -23,6 +27,9 @@ The table below lists the properties of the `DomDefinition` object. It also indi
 This object is also used in the Jobs app. It is used to store a link to a `SectionDefinition` object and to define whether the use of this definition is optional or mandatory.
 
 It also has the *IsSoftDeleted* boolean. If this is set to true, `Sections` in a `DomInstance` for this `SectionDefinitionID` are not required, will no longer be validated, but are still allowed to exist on the `DomInstance`. The `SectionDefinition` will also no longer be shown in the UI.
+
+> [!NOTE]
+> From DataMiner version 10.3.0/10.3.3 onwards, the `SectionDefinitionLink` also contains the *AllowMultipleSections* boolean, which can be used to define whether a `DomInstance` can have multiple `Sections` for that specific `SectionDefinition`. In earlier DataMiner versions, it is possible to add multiple `Sections` already, but these are not checked and cannot be used in the UI. When you upgrade to DataMiner 10.3.0/10.3.3, you will need to update any existing `DomDefinitions` with multiple `Sections`.
 
 ### ModuleSettingsOverrides
 

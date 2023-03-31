@@ -8,7 +8,7 @@ The DataMiner Size tool “WhatsTheSize.exe” queries an entire DataMiner Syste
 
 If you run this as a DataMiner user, do not hesitate to forward these results to our technical support team or your contact person. They will then will further process this information.
 
-You can [download this tool from DataMiner Dojo](https://community.dataminer.services/download/whatsthesize-zip/).
+> You can [download this tool from DataMiner Dojo](https://community.dataminer.services/download/whatsthesize-zip/).
 
 ## What’s included in the size check?
 

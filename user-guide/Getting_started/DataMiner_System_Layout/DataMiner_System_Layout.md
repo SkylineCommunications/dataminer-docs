@@ -16,17 +16,23 @@ A DataMiner Agent (DMA) is a physical or virtual compute instance running the Da
 
 The DataMiner Agent software is essentially a collection of services of which most names start with “SL” (e.g. SLNet, SLProtocol, SLLog, etc.).
 
+> [!TIP]
+> See also: [Installing a DataMiner Agent](xref:Installing_a_DataMiner_Agent)
+
 ## DataMiner clients
 
 DataMiner client applications only need to connect to one DMA in the DMS, and this can be any of the DMAs. All DMAs in the DMS have an equivalent status. Through this "single point of contact", users have access to all information in the entire DMS. The only constraints a user can potentially experience in terms of accessing certain information are defined by the DataMiner security configuration.
 
 In other words, a DataMiner client can access the DataMiner System by connecting to any DMA, and it will get a consolidated view of the entire managed operation and all its managed objects across all DMAs in the DMS.
 
+> [!TIP]
+> See also: [Accessing DataMiner](xref:DataminerApplications)
+
 ## DataMiner database
 
 For storage of data, DataMiner comes fully integrated with industry-standard data storage solutions.
 
-The **general database** is the mandatory storage solution required for a fully operational DataMiner System. The DataMiner System uses the general database to store and retrieve data. To do so as efficiently as possible, it relies on references and IDs. This makes the database less readable for a third-party software application without intimate knowledge of the data structures used by DataMiner. The general database is therefore considered to be exclusively used by the DataMiner System. The DataMiner System also includes all the logic required to maintain the good health and optimal performance of the general database, as this database is intended to be zero-maintenance and require no Database Admin. Prior to DataMiner 9.0, the general database is by default a MySQL database. From DataMiner 9.0 onwards, a Cassandra database is used by default. However, an MSSQL database is also supported. Note that in older DataMiner versions, the general database was known as the "local database".
+The **general database** is the mandatory storage solution required for a fully operational DataMiner System. The DataMiner System uses the general database to store and retrieve data. To do so as efficiently as possible, it relies on references and IDs. This makes the database less readable for a third-party software application without intimate knowledge of the data structures used by DataMiner. The general database is therefore considered to be exclusively used by the DataMiner System. The DataMiner System also includes all the logic required to maintain the good health and optimal performance of the general database, as this database is intended to be zero-maintenance and require no Database Admin. Prior to DataMiner 9.0, the general database is by default a MySQL database. From DataMiner 9.0 onwards, a Cassandra database is used by default. Note that in older DataMiner versions, the general database was known as the "local database".
 
 The **offload database** is an optional second data storage solution that can be added to a DataMiner System for the purpose of exporting the data and making it available for third-party software applications. When the DataMiner System is configured to also offload its data to the offload database, it will translate the data to more human-readable data (e.g. element ID references are replaced with element names), so that it is easier for third-party applications to digest. A DataMiner System will only write data to the offload database but will not read from it. The DataMiner System will also not perform maintenance of the offload database.
 

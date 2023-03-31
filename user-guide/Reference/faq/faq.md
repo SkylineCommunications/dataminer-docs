@@ -17,4 +17,4 @@ The frequently asked questions are divided over the following sections:
 >
 > - [Frequently asked questions about DMA Failover](xref:Frequently_asked_questions_about_DMA_Failover)
 > - [Frequently asked questions about user group settings](xref:Frequently_asked_questions_about_user_group_settings)
-> - [Frequently asked questions about DMS Automation](xref:Frequently_asked_questions_about_DMS_Automation)
+> - [Frequently asked questions about DataMiner Automation](xref:Frequently_asked_questions_about_DMS_Automation)

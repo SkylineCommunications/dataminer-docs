@@ -30,7 +30,7 @@ To install Elasticsearch on a DataMiner Agent via DataMiner:
    > [!NOTE]
    > Specific criteria apply for the backup path, as detailed in [Configuring Elasticsearch backups](xref:Configuring_Elasticsearch_backups). Make sure the backup path meets these criteria, as an **incorrect backup configuration can cause the installation to fail**.
 
-1. If your configuration meets the requirements, click *Next*.
+1. If your configuration meets the requirements, click *Validate*, and then *Next*.
 
 1. If you have internet access, click *Download and install*, and then enter your DCP credentials. If you do not have internet access, click *I have no internet access*, and browse to the location of the installation package on your system.
 

@@ -410,7 +410,7 @@ If loglevel 6 is enabled, the caches will log any added, updated or removed item
 Overall performance has increased by implementing ISerializable on the ReservationInstance class using protocol buffer serialization.
 
 > [!WARNING]
-> Breaking changes:
+> BREAKING CHANGES:
 >
 > - The Children and Parent property of a ReservationInstance will no longer be serialized between client and server. When the ResourceManagerHelper is used, backwards compatibility is implemented. However, if you use the messages yourself and receive ResourceManagerEventMessages via subscriptions (which is NOT recommended), you will need to call the GetStitched method on the ReservationInstance class. Saving ReservationInstances with a parent or child instance using messages may also cause issues.
 > - When the SetReservationInstances method is called on the ResourceManagerHelper, a random ID will now be assigned before the instances are saved to the server. This could be an issue if scripts expect the ID to be empty and try to reuse the object.
@@ -782,7 +782,7 @@ Using special characters:
 - If the table index contains a pipe character (“\|”), a backslash character (“\\”) must be put in front of it. For example, the command “SET:MyElement:MyParam\|a\\:b\\\|c:100” will set the value stored in row a:b\|c to value 100.
 
 > [!WARNING]
-> Breaking change: Due to the introduction of this new syntax, it is no longer possible to get and set single-value parameters of which the name contains pipe characters.
+> BREAKING CHANGE: Due to the introduction of this new syntax, it is no longer possible to get and set single-value parameters of which the name contains pipe characters.
 
 ### DMS tools
 
@@ -804,7 +804,7 @@ For more information on this tool, see [Standalone Cassandra Backup Tool](xref:S
 
 Using *SLCCMigrator.exe*, you can now transform a DataMiner System consisting of Agents with separate databases into a DataMiner System consisting of Agents that are all connected to a shared Cassandra/Elasticsearch cluster.
 
-For more information on this tool, see [Cassandra Cluster Migrator](https://community.dataminer.services/documentation/sql-to-cassandra-cluster-migrator/) on DataMiner Dojo.
+For more information on this tool, see [Cassandra Cluster Migrator](xref:Migrating_the_general_database_to_a_DMS_Cassandra_cluster).
 
 #### SLReset: Hostname can now be passed as an argument \[ID_32002\]
 

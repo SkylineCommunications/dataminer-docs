@@ -2,10 +2,10 @@
 uid: General_Feature_Release_10.2.11
 ---
 
-# General Feature Release 10.2.11 – Preview
+# General Feature Release 10.2.11
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 >
@@ -23,6 +23,12 @@ A number of security enhancements have been made relating, amongst others, to ex
 <!-- MR 10.2.0 [CU8] - FR 10.2.11 -->
 
 Because of a number of enhancements, overall error handling has improved.
+
+#### Dashboards: An EPM feed can now be used to feed EPM identifiers to a parameter feed [ID_33977]
+
+<!-- MR 10.3.0 - FR 10.2.11 -->
+
+An EPM feed can now be used to feed EPM identifiers to a parameter feed.
 
 #### Performance improvement to update service state more quickly [ID_34165]
 
@@ -364,7 +370,7 @@ In some cases, an error could occur when invalid parameters were passed to a das
 
 #### 'One or more of the following modules are not licensed' error would incorrectly not list the unlicensed modules [ID_34407]
 
-<!-- MR 10.3.0 - FR 10.2.11 -->
+<!-- MR 10.1.0 [CU22] / 10.2.0 [CU10] - FR 10.2.11 -->
 
 When a required software license cannot be found, a `One or more of the following modules are not licensed: ...` message will appear.
 

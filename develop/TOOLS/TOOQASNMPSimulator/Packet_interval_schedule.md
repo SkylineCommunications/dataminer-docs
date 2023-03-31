@@ -18,7 +18,7 @@ The main options are:
 - *Rate*: Use this option if you want to send a specified number of packets in 1 second, and repeat this after a specified number of seconds.
 
   > [!NOTE]
-  > If you want to use the *Rate* option, make sure that the either *Loop* or *Random loop* is selected, as otherwise this feature will not work.
+  > If you want to use the *Rate* option, make sure that either the *Loop* or *Random loop* option is selected, as otherwise this feature will not work.
 
 Additional options:
 

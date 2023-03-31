@@ -5,9 +5,9 @@ uid: Connecting_with_older_DataMiner_versions
 # Connecting with DataMiner versions between 10.1.1 and 10.1.12
 
 > [!NOTE]
-> If you are using a DataMiner version between DataMiner 10.1.1 and DataMiner 10.1.9, and your system is **already connected** to the cloud, we recommend **installing the DataMiner Cloud Pack** (see step 2 below) on at least one DMA that was already hosting the cloud gateway. After you have done so, clear the selection of the checkboxes in System Center as detailed in the note under step 4 below.
+> If you are using a DataMiner version between DataMiner 10.1.1 and DataMiner 10.1.9, and your system is **already connected** to dataminer.services, we recommend **installing the DataMiner Cloud Pack** (see step 2 below) on at least one DMA that was already hosting the Cloud Gateway. After you have done so, clear the selection of the checkboxes in System Center as detailed in the note under step 4 below.
 
-To connect your DMS to the cloud:
+To connect your DMS to dataminer.services:
 
 1. Verify that the following **requirements** are met:
 
@@ -15,13 +15,19 @@ To connect your DMS to the cloud:
 
    - The *CloudConnectedAgents* soft-launch option is enabled on all DMAs in the cluster. For more information, see [Soft-launch options](xref:SoftLaunchOptions).
 
-   - Each DMA that will be connected to the cloud can reach the following endpoints:
+   - Each DMA that will be connected to dataminer.services can reach the following endpoints:
 
      - ``https://*.dataminer.services/``
 
      - ``wss://tunnel.dataminer.services/``
 
-1. Download the appropriate DataMiner **Cloud Pack installer** from [DataMiner Dojo](https://community.dataminer.services/downloads/) and install it on one or more DMAs in the cluster. As .NET 5 is required to connect to the DataMiner Cloud, you can choose an installer that includes or downloads .NET 5. If .NET 5 is already installed in your system, choose the installer that does not include .NET 5.
+     > [!NOTE]
+     > At least one DMA in the DMS must be able to reach these endpoints. If you install the Cloud Pack on additional DMAs that **do not allow network traffic** towards `*.dataminer.services`, after the installation, **uninstall DataMiner CloudGateway** on those DMAs. See [uninstalling a program in Windows](https://support.microsoft.com/en-us/windows/uninstall-or-remove-apps-and-programs-in-windows-4b55f974-2cc6-2d2b-d092-5905080eaf98).
+
+1. Download the appropriate DataMiner **Cloud Pack installer** from [DataMiner Dojo](https://community.dataminer.services/downloads/) and install it on one or more DMAs in the cluster. As .NET 5 is required to connect to the dataminer.services, you can choose an installer that includes or downloads .NET 5. If .NET 5 is already installed in your system, choose the installer that does not include .NET 5.
+
+   > [!NOTE]
+   > If your DataMiner System contains a Failover pair, and one of the Agents in the Failover pair is responsible for hosting the connection towards dataminer.services, install the DataMiner Cloud Pack on both Agents in the Failover pair.
 
 1. In DataMiner Cube, go to System Center \> *Users / Groups* and make sure you have the following **user permissions**. If you need to make changes to the user permissions, reconnect to Cube afterwards to make sure your changes are applied in the UI.
 
@@ -48,7 +54,7 @@ To connect your DMS to the cloud:
 
    > [!NOTE]
    >
-   > - In DataMiner versions prior to DataMiner 10.1.9, checkboxes are available to select a DMA to connect to the cloud. However, these are no longer used and are unavailable in later DataMiner versions. If you are using an **older DataMiner version**, make sure **none of these checkboxes are selected**.
+   > - In DataMiner versions prior to DataMiner 10.1.9, checkboxes are available to select a DMA to connect to dataminer.services. However, these are no longer used and are unavailable in later DataMiner versions. If you are using an **older DataMiner version**, make sure **none of these checkboxes are selected**.
    > - Internet Explorer is not supported for this. If your default browser is Internet Explorer, we recommend that you change to a different browser in order to continue with this procedure.
 
 1. Specify the following information in the pop-up window:
@@ -63,7 +69,7 @@ To connect your DMS to the cloud:
 
 1. On the System Center \> *Cloud* page, wait until the status under *Cloud info* changes to *Connected*. This can take up to half a minute.
 
-1. To ensure that you can make optimal use of your cloud connection, get your cloud connection verified. See [Getting your DMS cloud connection verified](xref:CloudConnectionVerification).
+1. To ensure that you can make optimal use of your connection to dataminer.services, get your connection verified. See [Getting your organization verified](xref:CloudConnectionVerification).
 
 > [!NOTE]
-> Make sure that all users that should be able to share data with the cloud have the necessary user permissions under [Modules > System configuration > Cloud sharing/gateway](xref:DataMiner_user_permissions#modules--system-configuration--cloud-sharinggateway).
+> Make sure that all users that should be able to share data via dataminer.services have the necessary user permissions under [Modules > System configuration > Cloud sharing/gateway](xref:DataMiner_user_permissions#modules--system-configuration--cloud-sharinggateway).

@@ -13,6 +13,6 @@
 		/// <summary>
 		/// When the rate is calculated, the result will not be multiplied. The result will have units per second as counter. E.g. if counter represents packets, then rate will be packets per second.
 		/// </summary>
-		NoConversion
+		NoConversion,
 	}
 }

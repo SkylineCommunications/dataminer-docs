@@ -184,7 +184,7 @@ Please note the following regarding the alarm focus feature:
 - In case of an alarm storm, the update of focus scores of persistent alarms is postponed until after the alarm storm ends.
 
 > [!NOTE]
-> You can enable or disable the alarm focus feature via *System Center* > *System settings* > *analytics config*. However, note that if you want to use [automatic incident tracking](xref:Automatic_incident_tracking), alarm focus must be enabled.
+> You can enable or disable the alarm focus feature via *System Center* > *System settings* > *analytics config*. However, note that if you disable alarm focus, [automatic incident tracking](xref:Automatic_incident_tracking) is automatically also disabled, and only [manual incident tracking](xref:Automatic_incident_tracking#manually-updating-an-alarm-group) can still be used. <!-- RN 33348 -->
 
 ## Applying an alarm filter by dragging an item onto the Alarm Console
 

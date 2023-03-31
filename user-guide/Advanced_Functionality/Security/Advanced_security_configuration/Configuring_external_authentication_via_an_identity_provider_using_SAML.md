@@ -150,6 +150,9 @@ Once you have established a trust relationship between DataMiner (i.e. the servi
 
      Creating an Enterprise Application will also create an app registration with the same name, but you will not find it under *owned application*.
 
+     > [!IMPORTANT]
+     > Do not use the *Object ID* under *Azure Active Directory > Enterprise applications > [your application name]*. This is a different Object ID, which will not work.
+
    - **Client Secret**: In the pane on the left, click *Certificates & secrets*.
 
      1. In the *Client secrets* section, click *New client secret*.
@@ -216,7 +219,7 @@ From DataMiner 10.2.0/10.1.12 onwards, users authenticated by Azure AD using SAM
    > [!NOTE]
    > If you add a group claim, the account name of the group will only be sent via SAML when the groups are synchronized. Otherwise, the ID of the group will be sent instead.
 
-1. In DataMiner Cube, add the groups corresponding with the groups you added in Azure AD.
+1. In DataMiner Cube, add the groups corresponding with the groups you added in Azure AD. See [Adding a user group](xref:Adding_a_user_group).
 
 1. Stop DataMiner.
 
@@ -244,11 +247,12 @@ From DataMiner 10.2.0/10.1.12 onwards, users authenticated by Azure AD using SAM
    ```
 
    > [!NOTE]
-   > If you set the *claims* attribute of the *Groups* element to "false", no claims will be used to add users to groups. In this case:
    >
-   > - The name of the group as specified in Cube will be used instead.
-   > - It will only be possible to add a user to a single group.
-   > - The user information that is created will not be updated.
+   > - User groups have to exist in DataMiner both for *Groups* claims set to true and to false. Make sure all the necessary groups have been added earlier, so that it will be possible to add users to them.
+   > - If you set the *claims* attribute of the *Groups* element to "false", no claims will be used to add users to groups. In this case:
+   >   - Instead of a claim for user groups, replace `[group claim name]` with a security group that exists in DataMiner as described above.
+   >   - It will only be possible to add a user to a single group.
+   >   - The user information that is created will not be updated.
 
 1. Save the *DataMiner.xml* file.
 
@@ -270,11 +274,16 @@ DataMiner supports Azure B2C as identity provider from version 10.2.6/10.3.0 onw
 1. Configure DataMiner to automatically create users from Azure B2C. You can do this in the same way as for [Azure AD](#configuring-automatic-creation-of-users-authenticated-by-azure-ad-using-saml). For the ipMetadata link, use the link created in the previous step.
 
    > [!NOTE]
-   > To create SAML users in DataMiner using Azure B2C, a domain is required in the usernames. For this reason, email addresses must be used as the usernames. If the default username of the identity provider is not a valid email address, add a \<PreferredLoginClaim> element in *DataMiner.xml* that refers to a claim containing a valid email address.
+   > To create SAML users in DataMiner using Azure B2C, a domain is required in the usernames. For this reason, email addresses must be used as the usernames. If the default username of the identity provider is not a valid email address, add a \<PreferredLoginClaim> element to the \<AutomaticUserCreation> element in *DataMiner.xml* that refers to a claim containing a valid email address.
 
 ### Okta
 
 DataMiner supports Okta as identity provider as from version 10.1.11. Use Okta's App Integration Wizard to create a new app integration and connect Okta with DataMiner.
+
+> [!IMPORTANT]
+>
+> - Prior to DataMiner 10.3.0/10.3.2, it may not be possible to log in using Okta because of a software issue. We strongly recommend that you upgrade to DataMiner 10.3.0 or 10.3.2 to use this feature.
+> - When Okta is used, automatic user creation must be enabled. It is currently not possible to import users and groups from Okta. Alternatively, you can add local or domain users. See [User directories](xref:User_management#user-directories) and [Local users](xref:User_management#local-users). After that, you can have Okta authenticate these users by following the guide below, except that you omit the *AutomaticUserCreation* tag in *DataMiner.xml*.
 
 1. Launch the App Integration Wizard
 
@@ -306,13 +315,17 @@ DataMiner supports Okta as identity provider as from version 10.1.11. Use Okta's
        - *Use this for Recipient URL and Destination URL*
        - *Allow this app to request other SSO URLs*
 
-     - Enter the following additional URLs:
+     - Open *Show Advanced Settings* and enter the following additional URLs to *Other Requestable SSO URLs*:
 
+       - ``https://dataminer.example.com/root/``
        - ``https://dataminer.example.com/login/``
        - ``https://dataminer.example.com/dashboard/``
        - ``https://dataminer.example.com/monitoring/``
        - ``https://dataminer.example.com/jobs/``
        - ``https://dataminer.example.com/ticketing/``
+
+       > [!NOTE]
+       > The indexes here should be the same as the indexes in `C:\Skyline DataMiner\okta-sp-metadata.xml`, which we will create in a further step.
 
    - **Audience URI (SP Entity ID)**: The intended audience of the SAML assertion.
 
@@ -325,16 +338,85 @@ DataMiner supports Okta as identity provider as from version 10.1.11. Use Okta's
    - **Application username**: The default value to use for the username with the application.
 
      Select "Email".
-     
-   - **Attribute Statements**: Add a new attribute statement with name *Email* (case-sensitive), format *Basic*, and value *user.email*.
+
+   - **Attribute Statements**: Add the following attribute statements, all with "Basic" format:
+
+      - name "Email", value "user.email"
+      - name "Firstname", value "user.firstName"
+      - name "Lastname", value "user.lastName"
+
+   - **When using group claims:**
+
+      - Create groups in DataMiner with the exact same names as in Okta (this is case-sensitive). See [Adding a user group](xref:Adding_a_user_group).
+      - Add a group attribute statement.
+      - Use the name "userGroups", and "Basic" format.
+      - Under *Filter*, select the type of filter you want, and then add a statement that will match the groups you want to send for that user.
+
+      > [!Note]
+      >
+      > - The name fields can be anything you want, but we recommend giving them a name that clearly reflects the claim they refer to. All of these are case-sensitive.
+      > - Make sure that what you put under "name" for each claim matches exactly with the claim names in *DataMiner.xml*.     
+
+1. Stop DataMiner.
+
+1. Go to the *C:\\Skyline DataMiner* folder and open the *DataMiner.xml* file.
+
+1. In the *DataMiner.xml* file, configure the *\<ExternalAuthentication>* tag as illustrated in the example below:
+
+   ```xml
+   <DataMiner ...>
+     ...
+     <ExternalAuthentication
+       type="SAML"
+       ipMetadata="[Path/URL of the identity provider’s metadata file]"
+       spMetadata="[Path/URL of the service provider’s metadata file]"
+       timeout="300">
+       <AutomaticUserCreation enabled="true">
+         <EmailClaim>[email claim name]</EmailClaim>
+         <Givenname>[firstname claim name]</Givenname>
+         <Surname>[lastname claim name]</Surname>
+         <Groups claims="true">[group claim name]</Groups>
+       </AutomaticUserCreation>
+     </ExternalAuthentication>
+     ...
+   </DataMiner>
+   ```
+
+   > [!NOTE]
+   >
+   > - The claim name refers to the attribute statement names that were added in Okta.
+   > - User groups have to exist in DataMiner both for *Groups* claims set to true and to false. Make sure all the necessary groups have been added earlier, so that it will be possible to add users to them.
+   > - If you set the *claims* attribute of the *Groups* element to "false", no claims will be used to add users to groups. In this case:
+   >   - Instead of a claim for user groups, replace `[group claim name]` with a security group that exists in DataMiner as described above.
+   >   - It will only be possible to add a user to a single group.
+   >   - The user information that is created will not be updated.
+
+1. Save the *DataMiner.xml* file.
 
 1. Open the *Sign On* tab of your Okta application and scroll down to *SAML Signing Certificates*.
 
 1. In the *Actions* column of the *Active* certificate, click *View IdP metadata*.
 
-1. Save this IdP metadata XML file to the DataMiner Agent, e.g. `C:\Skyline DataMiner\okta-ip-metadata.xml`.
+1. Save this identity provider’s metadata XML file to the DataMiner Agent, e.g. `C:\Skyline DataMiner\okta-ip-metadata.xml`.
 
-1. Open the *DataMiner.xml* file and fill in the path to the IdP metadata file in the *ipMetadata* attribute of the *&lt;ExternalAuthentication&gt;* node.
+1. Copy the following template to a new XML file named e.g. `C:\Skyline DataMiner\okta-sp-metadata.xml` to create the service provider’s metadata file. You can find the EntityID in the previously created file `C:\Skyline DataMiner\okta-ip-metadata.xml`.
+
+   ```xml
+   <?xml version="1.0" encoding="UTF-8"?>
+   <md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" entityID="[ENTITYID]" validUntil="2050-01-04T10:00:00.000Z">
+     <md:SPSSODescriptor AuthnRequestsSigned="false" WantAssertionsSigned="true" protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+       <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://dataminer.example.com/login/" index="0" isDefault="false"/>
+       <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://dataminer.example.com/root/" index="1" isDefault="false"/>
+       <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://dataminer.example.com/dashboard/" index="2" isDefault="false"/>
+       <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://dataminer.example.com/monitoring/" index="3" isDefault="false"/>
+       <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://dataminer.example.com/jobs/" index="4" isDefault="false"/>
+       <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://dataminer.example.com/ticketing/" index="5" isDefault="false"/>
+       <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="[For every custom app URL, add an assertion like the ones above with an incremented index. If you do not have custom apps, remove this example.]" index="6" isDefault="false"/>
+     </md:SPSSODescriptor>
+   </md:EntityDescriptor>
+   ```
+
+1. Restart DataMiner.
 
 ## Error messages
 

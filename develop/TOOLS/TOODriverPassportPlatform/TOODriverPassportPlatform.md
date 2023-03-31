@@ -20,8 +20,9 @@ The Driver Passport Platform protocol uses:
 - The Skyline Device Simulator to simulate behavior of real devices.
 
 > [!NOTE]
+>
 > -  For more information on how to create DMAPP and DMT packages, see [DataMiner Application Package Builder](xref:TOODataMinerPackageBuilder#dataminer-application-package-builder).
-> -  For more information on the QA device simulator, see [QA Device Simulator](xref:TOOQASNMPSimulator).
+> -  For more information on the Skyline device simulator, see [Skyline Device Simulator](xref:TOOQASNMPSimulator).
 
 - [Platform location](xref:Platform_location)
 

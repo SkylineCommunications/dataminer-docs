@@ -22,7 +22,7 @@ A Cassandra cluster is now supported as the general database for a DataMiner Sys
 
 To switch to using one Cassandra cluster for your DMS, follow the procedure below:
 
-1. Make sure the Cassandra cluster software is installed on each DMA. A [standalone installer](https://community.dataminer.services/documentation/standalone-cassandra-cluster-installer/) is available for this on DataMiner Dojo.
+1. Make sure the Cassandra cluster software is installed on each DMA. A [standalone installer](xref:Standalone_Cassandra_Cluster_Installer) is available for this.
 
 1. [Install Elasticsearch](xref:Installing_Elasticsearch_via_DataMiner) on each DMA in the cluster if you have not done so already.
 

@@ -2,7 +2,7 @@
 uid: DMS_maintenance_tools
 ---
 
-# DMS maintenance tools
+# DataMiner maintenance tools
 
 This section consists of the following topics:
 

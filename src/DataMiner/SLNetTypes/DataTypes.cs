@@ -6,7 +6,6 @@ using System.Xml.Serialization;
 #if NETFRAMEWORK
 using System.ComponentModel;
 using System.Drawing.Design;
-using Skyline.DataMiner.Net.Editors;
 #endif
 
 namespace Skyline.DataMiner.Net.Messages
@@ -107,9 +106,9 @@ namespace Skyline.DataMiner.Net.Messages
 	}
 
 	[Serializable]
-#if NETFRAMEWORK
-    [Editor(typeof(PSAEditor), typeof(UITypeEditor))]
-#endif
+//#if NETFRAMEWORK
+//    [Editor(typeof(PSAEditor), typeof(UITypeEditor))]
+//#endif
 	public class PSA
 	{
 		public PSA() : this (null) {}
@@ -237,9 +236,9 @@ namespace Skyline.DataMiner.Net.Messages
     }
 	
 	[Serializable]
-#if NETFRAMEWORK
-    [Editor(typeof(UIAEditor), typeof(UITypeEditor))]
-#endif
+//#if NETFRAMEWORK
+//    [Editor(typeof(UIAEditor), typeof(UITypeEditor))]
+//#endif
 	public class UIA
 	{
 		public UIA() : this(new UInt32[0]) {}
@@ -265,9 +264,9 @@ namespace Skyline.DataMiner.Net.Messages
 	}
 
 	[Serializable]
-#if NETFRAMEWORK
-    [Editor(typeof(PUIAEditor), typeof(UITypeEditor))]
-#endif
+//#if NETFRAMEWORK
+//    [Editor(typeof(PUIAEditor), typeof(UITypeEditor))]
+//#endif
 	public class PUIA
 	{
 		public PUIA() 

@@ -8,7 +8,7 @@ This component displays a block of static text.
 
 To configure this component:
 
-- In the *Settings* tab, add the text in the *Text* box.
+- In the *Component* > *Settings* tab, add the text in the *Text* box.
 
 In the *Component \> Layout* tab, the following options can be configured:
 

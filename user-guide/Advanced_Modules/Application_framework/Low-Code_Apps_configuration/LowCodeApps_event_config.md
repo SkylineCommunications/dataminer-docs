@@ -30,19 +30,21 @@ To configure an event to launch a script:
 
 To configure an event to navigate to a URL:
 
-- Select *Navigate to a URL* and specify the URL.
+1. Select *Navigate to a URL* and specify the URL.
+
+1. Optionally, to open the webpage in a new tab, enable the option *Open in new tab*.
 
 ## Opening a page of the app
 
 To configure an event to open another page of the app:
 
-- Select *Open a page* and specify the page.
+- Select *Open a page* and select the page.
 
 ## Opening a panel of the app
 
 To configure an event to open a panel of the app:
 
-1. select *Open a panel* and specify the panel.
+1. select *Open a panel* and select the panel.
 
 1. In the *Where* box, select where the panel should be opened: in a pop-up window, on the left, or on the right.
 
@@ -56,7 +58,9 @@ To configure an event to open a panel of the app:
 
 To configure an event to close a panel of the app:
 
-- Select *Close a panel* and specify the panel.
+1. Select *Close a panel* and select the panel.
+
+1. In the *Where* box, select where the panel that should be closed is located: in a pop-up window, on the left, or on the right. This is necessary in case the same panel is opened multiple times in different places.
 
 ## Opening an app
 
@@ -64,11 +68,29 @@ To configure an event to open another low-code app that has been published in yo
 
 - Select *Open an app* and select the app.
 
+  > [!NOTE]
+  > *Drafts* apps are included in the list of apps you can select.
+
+## Opening a monitoring card
+
+Available from DataMiner 10.3.4/10.4.0 onwards<!-- RN 35661 -->. To configure an event to open a monitoring card of a specific element, service, or view:
+
+1. Select *Open monitoring card*.
+
+1. In the *Type* box, select a type: element, service, or view.
+
+1. Based on the selected type, select the element, service, or view for which the monitoring card should be opened.
+
+1. Select *Add action*.
+
+> [!NOTE]
+> When a low-code app is embedded in Cube (e.g. in Visual Overview), an *Open monitoring card* action will open the specified card in Cube.
+
 ## Executing a component action
 
 This option is only displayed if there is a component action that can be executed.
 
-To configure an event so execute a component action:
+To configure an event to execute a component action:
 
 1. Select *Execute component action* and specify which action should be executed.
 

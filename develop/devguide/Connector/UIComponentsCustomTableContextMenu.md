@@ -47,7 +47,7 @@ To define a custom context menu, define a parameter with the same name as the ta
             <Value>1</Value>
          </Discreet>
          <Discreet>
-            <Display>Clear tab1e</Display>
+            <Display>Clear table</Display>
             <Value>clear</Value>
          </Discreet>
          <Discreet options="script:Context Menu from a Protocol|d1=[this element]|p1=[value:1001];p2=[value:2002]|||NoConfirmation">

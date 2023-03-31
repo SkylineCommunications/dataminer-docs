@@ -213,7 +213,7 @@ Example:
 > - URLs containing filters must be encoded according to the W3C guidelines. For more information, see [http://www.w3schools.com/tags/ref_urlencode.asp](http://www.w3schools.com/tags/ref_urlencode.asp).
 
 > [!TIP]
-> See also: [DMS Experience and Performance Management](xref:EPM#dms-experience-and-performance-management)
+> See also: [Experience and Performance Management](xref:EPM)
 
 ### element=
 
