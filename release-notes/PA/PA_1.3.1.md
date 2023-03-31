@@ -106,6 +106,4 @@ The *Skyline Queue Manager* connector has been adjusted so that it no longer sen
 
 If a queue had more tokens with the *InQueue* status than the number indicated by the *Concurrent Tasks* parameter, it could occur that no more tokens were processed.
 
-The logic of the *Skyline Queue Manage* connector has now been adjusted so that the queue will be able to process multiple tokens at once, instead of processing them one by one like before.
-
-With this fix, another possible issue has been resolved, where if a pool resource was used and no regular resource was available to swap it with, the first token using the pool resource was not flagged as in error.
+The logic of the *Skyline Queue Manager* connector has now been adjusted so that the queue will be able to process multiple tokens at once, instead of processing them one by one like before.
