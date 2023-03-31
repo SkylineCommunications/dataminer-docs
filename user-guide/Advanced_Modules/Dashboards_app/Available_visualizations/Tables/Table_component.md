@@ -112,3 +112,11 @@ To **sort the table**, you can click a column header.
 - Alternatively, you can also select one of the available sorting options in the column header right-click menu.
 
 To **group by a specific table column**, right-click the column header and click *Group*. To stop grouping, right-click the header again and select *Stop grouping*.
+
+## Component Settings
+
+Within the settings tab of this component, you can customize its behavior to suit your requirements.
+
+### Initial Selection
+
+One of the key settings available is the ability to select an initial entry for the table component. Enabling this setting ensures that the first row is automatically selected upon dashboard and application load, as well as upon retrigger and data refetch.

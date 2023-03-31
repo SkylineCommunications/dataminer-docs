@@ -85,3 +85,11 @@ To configure the component:
         For trended parameters, by default a trend icon is displayed. Clicking this icon will open the corresponding trend graph in the Monitoring app.
 
    - If a parameter was added as a feed, in the *Labels* section, you can select whether the parameter name, element name or index should be displayed in the component.
+
+## Component Settings
+
+Within the settings tab of this component, you can customize its behavior to suit your requirements.
+
+### Initial Selection
+
+One of the key settings available is the ability to make an initial selection for the state component. This feature functions similarly to that of the [table component](./../Tables/Table_component.md#initial-selection).

@@ -25,7 +25,7 @@ To configure this component:
 
    - *WebSocket settings*: Allows you to customize the polling interval for this component. To do so, clear the checkbox in this section and specify the custom polling interval.
 
-   - *Feed defaults*: Allows you to specify a default value. This is the value that will be applied in the feed when the dashboard is opened, unless a custom URL is used specifying a different value.
+   - *Initial Selection*: Allows you to specify a default value. This is the value that will be applied in the feed when the dashboard is opened, unless a custom URL is used specifying a different value.
 
      > [!NOTE]
      > From DataMiner 10.2.12/10.3.0 onwards, parameter feeds that list EPM parameters also allow the configuration of default filters that will preselect certain parameters in the parameter feed.
