@@ -25,3 +25,4 @@ To use this functionality, you need the [DataMiner UserDefinableApiEndpoint](xre
 >
 > - Since tokens and API definition objects are **stored in the Elasticsearch database**, these are NOT included in DataMiner backup packages. For information on how to back up and restore this data, see [Configuring Elasticsearch backups](https://docs.dataminer.services/user-guide/Advanced_Functionality/Databases/Elasticsearch_database/Configuring_Elasticsearch_backups.html)
 > - **Information events** (with name "User-defined APIs") are generated for every create, update, and delete action for a token or API definition.
+> - Logging related to handling triggers and the CRUD actions for tokens and definition is available in the 'SLUserDefinableApiManager.txt' file which can be found in the Skyline DataMiner Logging folder.
