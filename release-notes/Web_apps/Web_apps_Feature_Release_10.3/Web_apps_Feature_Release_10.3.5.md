@@ -243,7 +243,7 @@ An error could occur when feeding data from a GQI component to a query that was 
 
 #### Dashboards app & Low-code apps - GQI components: Open sessions would not be closed when a new query was triggered [ID_35824]
 
-<!-- MR 10.4.0 - FR 10.3.5 -->
+<!-- MR 10.3.0 [CU2] - FR 10.3.5 -->
 
 When a GQI component still had a session open when a new query was triggered, in some cases, the open session would incorrectly not be closed.
 
