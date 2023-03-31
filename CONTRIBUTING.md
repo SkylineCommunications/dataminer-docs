@@ -774,7 +774,7 @@ Be careful when you use screenshots of the DataMiner Cube UI, as these can get o
 
 If you do add a screenshot, ideally there should be some indication of the version of the software displayed in the screenshot, so it is clear if the screenshot is outdated.
 
-## Address the reader directly
+### Address the reader directly
 
 Avoid writing about your reader as "the user", but instead use "you".
 
