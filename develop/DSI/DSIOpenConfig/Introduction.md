@@ -167,17 +167,17 @@ This RPC can be used by clients to obtain more information from a target about i
 > [!NOTE]
 > The list of supported models is not restricted to OpenConfig models. For example, implementors typically also define their own proprietary YANG models.
 
-#### get
+#### Get
 
 The Get RPC can be used by clients to obtain a snapshot of the requested data (the data requested is provided as a number of paths from the data model tree).
 
 Note that a Get RPC should only be used to obtain small amounts of data from the target. To request larger data sets, it is advised to use a subscription.
 
-#### set
+#### Set
 
 The Set RPC can be used to modify the state of a target. A set request supports the deletion, replacement and updating of items. All changes that are defined in a set request are considered as one transaction.
 
-#### subscribe
+#### Subscribe
 
 The Subscribe RPC allows a client to create subscriptions. gNMI supports three different subscription modes:
 

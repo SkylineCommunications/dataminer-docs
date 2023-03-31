@@ -27,12 +27,12 @@ Include the NuGet package *Skyline.DataMiner.DataSources.OpenConfig.Gnmi* in you
 
 #### Creating a GnmiClient
 
-To set up a connection with the endpoint, you will need to create a [GnmiClient](xref:Skyline.DataMiner.Helper.OpenConfig.Api.GnmiClient) and pass along the `dataMinerId` and `elementId` of the element running the connector. This will be used to identify yourself with the CommunicationGateway DxM.
+To set up a connection with the endpoint, you will need to create a [GnmiClient](xref:Skyline.DataMiner.Helper.OpenConfig.Api.GnmiClient) and pass along the `agentId` and `elementId` of the element running the connector. This will be used to identify yourself with the CommunicationGateway DxM.
 
 A friendly name can be passed along in the `elementName` which is used as context for logging purposes.
 
 > [!TIP]
-> There are scenarios in which you do not have an element (*e.g. a DataMiner automation script*). It is fine to pass along different context as well. It is meant to identify yourself and for logging purposes so it is sufficient if the consumer knows what it represents. It doesn't have to be unique, the middleware will make it unique for you by appending a `GUID`.
+> There are scenarios in which you do not have an element (*e.g. a DataMiner Automation script*). It is fine to pass along different context as well. It is meant to identify yourself and for logging purposes so it is sufficient if the consumer knows what it represents. It doesn't have to be unique, the middleware will make it unique for you by appending a `GUID`.
 
 You also need to pass a [DataSourceConfiguration](xref:Skyline.DataMiner.Helper.OpenConfig.Models.DataSourceConfiguration) which specifies the details of the endpoint you want to connect with.
 
@@ -47,7 +47,7 @@ config.Port = 10164;
 
 On top of that there are some additional parameters for authentication. There is support for credentials and client certificates. In case of a self-signed certificate, it's important that the root certificate of the path is part of the *Trusted Root Certification Authorities* certificate store in Windows.
 
-To use a client certificate, configure the path of where it can be found in [ClientCertificate](xref:Skyline.DataMiner.Helper.OpenConfig.Models.DataSourceConfiguration.ClientCertificate). Do note that the client certificate should be stored on the DataMiner agent that has the CommunicationGateway DxM installed.
+To use a client certificate, configure the path of where it can be found in [ClientCertificate](xref:Skyline.DataMiner.Helper.OpenConfig.Models.DataSourceConfiguration.ClientCertificate). Do note that the client certificate should be stored on the DataMiner Agent that has the CommunicationGateway DxM installed.
 
 ```csharp
 config.ClientCertificate = @"C:\Certificates\client-auth-cert.pfx";
@@ -334,7 +334,7 @@ You need to create a [DataMinerConnectorDataGrid](xref:Skyline.DataMiner.Helper.
 
 #### Configuring a default value
 
-In case a gNMI notification does not contain a value for a configured `leaf` it will remain `null` which results in the cell remaining *Not Initialized*. However, there is the possibility to configure a default value to be used instead of `null`.
+In case a gNMI notification does not contain a value for a configured `leaf`, it will remain `null` which results in the cell remaining *Not Initialized*. However, there is the possibility to configure a default value to be used instead of `null`.
 
 This can be configured in the following way:
 

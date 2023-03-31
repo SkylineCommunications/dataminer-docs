@@ -6,7 +6,7 @@ uid: Nuget_Communication_Middleware
 
 ## Introduction
 
-DataMiner version 10.2.9 (RN33965) enables consuming packages that use external communication, with fewer limitations. However, connection configuration is currently not part of the element configuration card and transferred data is not visible in streamviewer. Asynchronous data setting is no longer an issue, and connection cleanup when the element is stopped is now possible. With this in mind, we expect to see packages that provide OpenConfig, Prometheus, or Ember+ external communication. As these packages bridge the communication api with our scripting environments, we refer to them as middleware packages.
+DataMiner version 10.2.9 (RN33965) enables consuming packages that use external communication, with fewer limitations. However, connection configuration is currently not part of the element configuration card and transferred data is not visible in Stream Viewer. Asynchronous data setting is no longer an issue, and connection cleanup when the element is stopped is now possible. With this in mind, we expect to see packages that provide OpenConfig, Prometheus, or Ember+ external communication. As these packages bridge the communication api with our scripting environments, we refer to them as middleware packages.
 
 When no middleware is available for your project, please read [Creating a middleware package](#creating-a-middleware-package).
 
