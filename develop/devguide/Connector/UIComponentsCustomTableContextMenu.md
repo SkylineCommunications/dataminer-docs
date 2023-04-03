@@ -6,6 +6,9 @@ uid: UIComponentsCustomTableContextMenu
 
 It is possible to define a custom context menu for tables.
 
+> [!TIP]
+> DIS provides a plugin (*Extensions > DIS > Plugins > Add Table Context Menu...*) which can be used to create custom context menus which makes use of the [Skyline.DataMiner.Protocol.TableContextMenu](https://www.nuget.org/packages/Skyline.DataMiner.Utils.Table.ContextMenu) NuGet package.
+
 To define a custom context menu, define a parameter with the same name as the table and the suffix "_ContextMenu". Each discrete entry represents a menu item and can be one of the following types:
 
 - Action: This will trigger the QAction.

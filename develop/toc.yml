@@ -710,12 +710,12 @@
       topicUid: Skyline.DataMiner.Scripting
     - name: Skyline.DataMiner.Automation
       topicUid: Skyline.DataMiner.Automation
-    - name: Skyline.DataMiner.Library.Common
-      topicUid: Skyline.DataMiner.Library.Common
-    - name: Skyline.DataMiner.Library.Automation
-      topicUid: Skyline.DataMiner.Library.Automation
-    - name: Skyline.DataMiner.Library.Protocol
-      topicUid: Skyline.DataMiner.Library.Protocol
+    - name: Skyline.DataMiner.Core.DataMinerSystem.Common
+      topicUid: Skyline.DataMiner.Core.DataMinerSystem.Common
+    - name: Skyline.DataMiner.Core.DataMinerSystem.Automation
+      topicUid: Skyline.DataMiner.Core.DataMinerSystem.Automation
+    - name: Skyline.DataMiner.Core.DataMinerSystem.Protocol
+      topicUid: Skyline.DataMiner.Core.DataMinerSystem.Protocol
     - name: Skyline.DataMiner.Net
       topicUid: Skyline.DataMiner.Net
     - name: Skyline.DataMiner.Helper.OpenConfig.Api
