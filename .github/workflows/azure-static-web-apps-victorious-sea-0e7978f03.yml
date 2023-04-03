@@ -25,7 +25,6 @@ jobs:
       - name: Restore NuGet
         run: |
           dotnet restore "src/NuGetPackages"
-          dotnet restore "build"
       - name: Build
         run: |
           dotnet build "src/NuGetPackages"
