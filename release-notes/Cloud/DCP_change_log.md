@@ -23,6 +23,10 @@ After you have made sure that the [prerequisites](https://github.com/SkylineComm
 > [!NOTE]
 > To enable these additional features, you **must grant Skyline admin consent to your Microsoft tenant with certain permissions, even if you have already granted admin consent before.** See [granting admin consent](xref:Granting_admin_consent). You can revoke these permissions at any time.
 
+#### 3 April 2023 - Enhancement - ArtifactDeployer 1.4.3 - Dependencies updated [ID_35990]
+
+Several dependencies have been updated. This includes security-related improvements.
+
 #### 2 March 2023 - Integrate your DataMiner System with Microsoft Teams using DataMiner Automation [ID_35799]
 
 You can now easily integrate your DataMiner System with Microsoft Teams using DataMiner Automation.

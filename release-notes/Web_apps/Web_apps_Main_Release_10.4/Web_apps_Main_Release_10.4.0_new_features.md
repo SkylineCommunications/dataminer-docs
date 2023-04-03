@@ -141,11 +141,14 @@ A line & area chart component now has a number of time range buttons that allow 
 > [!NOTE]
 > In the *Dashboards* app, these time range buttons are disabled by default. When configuring the component, you can enable them by selecting the *Show time range buttons* option in the *Component > Layout > Styling and Information* tab.
 
-#### Web apps: New action 'Open monitoring card' [ID_35661]
+#### Low-code apps: New action 'Open monitoring card' [ID_35661] [ID_35986]
 
-<!-- MR 10.4.0 - FR 10.3.4 -->
+<!-- RN 35661: MR 10.4.0 - FR 10.3.4 -->
+<!-- RN 35986: MR 10.4.0 - FR 10.3.5 -->
 
 In a low-code app, you can now configure a new type of action: *Open monitoring card*. When triggered, this action will open the card of a specific element, service or view in the *Monitoring* app.
+
+This element, service or view can either be provided as a static value or by a feed linked to the action.
 
 > [!NOTE]
 > When a low-code app is embedded in Cube (e.g. in a visual overview), an *Open monitoring card* action will open the specified card in Cube.
@@ -237,3 +240,11 @@ A default value can be set by means of a URL option:
   - `?data=<URL-encoded JSON object>`
 
 For more information on how to pass data using a JSON object, see [Specifying data input in an app URL](xref:Specifying_data_input_in_URL).
+
+#### Low-code apps - Line & area chart component: New 'Set timespan' action [ID_35933]
+
+<!-- MR 10.4.0 - FR 10.3.5 -->
+
+A 'Set timespan' action can now be configured for a line & area chart component. On execution, this action will apply a specific timespan to the component.
+
+This action has two numeric arguments: 'To' and 'From'. These can be either set to a static value or linked to a numeric value feed.

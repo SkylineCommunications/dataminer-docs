@@ -45,6 +45,8 @@
           topicUid: General_Main_Release_10.3.0_CU1
         - name: General Main Release 10.3.0 CU2 - Preview
           topicUid: General_Main_Release_10.3.0_CU2
+        - name: General Main Release 10.3.0 CU3 - Preview
+          topicUid: General_Main_Release_10.3.0_CU3
       - name: Feature Release
         topicUID: General_Feature_Release_10.3.5
         items:
@@ -489,6 +491,8 @@
           topicUid: Web_apps_Main_Release_10.3.0_CU1
         - name: DataMiner web apps Main Release 10.3.0 CU2 - Preview
           topicUid: Web_apps_Main_Release_10.3.0_CU2
+        - name: DataMiner web apps Main Release 10.3.0 CU3 - Preview
+          topicUid: Web_apps_Main_Release_10.3.0_CU3
       - name: Feature Release
         topicUID: Web_apps_Feature_Release_10.3.5
         items:
@@ -790,8 +794,10 @@
       - name: MbgNMS 1.0.1
         topicUid: MbgNMS_1.0.1
     - name: PA release notes
-      topicUID: PA_1.3.0
+      topicUID: PA_1.3.1
       items:
+      - name: PA 1.3.1
+        topicUID: PA_1.3.1
       - name: PA 1.3.0
         topicUID: PA_1.3.0
         items:

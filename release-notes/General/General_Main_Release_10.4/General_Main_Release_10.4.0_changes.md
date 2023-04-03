@@ -118,10 +118,10 @@ The zoom range of a map can now be set by means of a slider.
 
 Because of a number of enhancements, overall performance has increased when fetching relation information for the automatic incident tracking feature.
 
-#### Security enhancements [ID_35434] [ID_35668]
+#### Security enhancements [ID_35434] [ID_35997]
 
 <!-- 35434: MR 10.4.0 - FR 10.3.4 -->
-<!-- 35668: MR 10.4.0 - FR 10.3.5 -->
+<!-- 35997: MR 10.4.0 - FR 10.3.5 -->
 
 A number of security enhancements have been made.
 
@@ -263,6 +263,16 @@ Example:
 
 When an SLNet connection supported protocol buffer serialization, DateTime instances would not get serialized correctly.
 
+#### GQI: GetArgumentValue method would throw an exception when used to access the value of an optional argument [ID_35783]
+
+<!-- MR 10.4.0 - FR 10.3.5 -->
+
+When the `GetArgumentValue<T>(string name)` method was used in an ad hoc data source or a custom operator script to access the value of an optional argument that had not been passed, the following exception would be thrown:
+
+```txt
+Could not find argument with name '{argument.Name}'.
+```
+
 #### Input/output values of a matrix element would incorrectly be overridden due to a caching issue [ID_35857]
 
 <!-- MR 10.4.0 - FR 10.3.4 [CU0] -->
@@ -280,3 +290,9 @@ The native message broker code could leak memory when using the request/response
 <!-- MR 10.4.0 - FR 10.3.5 -->
 
 When a history alarm affected a closed outage to which a correction had been applied, the correction would incorrectly be increased. From now on, the correction will be left untouched.
+
+#### Handle in the Timer class would not be cleaned correctly [ID_35959]
+
+<!-- MR 10.4.0 - FR 10.3.4 [CU0] -->
+
+In some cases, a handle in the Timer class would not be cleaned correctly, causing handles to leak.

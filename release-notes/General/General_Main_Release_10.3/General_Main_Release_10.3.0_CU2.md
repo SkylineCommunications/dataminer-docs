@@ -12,6 +12,12 @@ uid: General_Main_Release_10.3.0_CU2
 
 ### Enhancements
 
+#### Security enhancements [ID_35668]
+
+<!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
+
+A number of security enhancements have been made.
+
 #### Alarms generated when a database goes in offload mode will now have severity 'Notice' instead of 'Critical' [ID_35749]
 
 <!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
@@ -38,6 +44,20 @@ Overall performance of SLAnalytics has increased because of a number of enhancem
 
 Up to now, GQI data sources that require an Elasticsearch database used the `DatabaseStateRequest<ElasticsearchState>` message to check whether Elasticsearch was available. From now on, they will use the `GetInfoMessage(InfoType.Database)` message instead.
 
+#### Improved error handling when elements go into an error state [ID_35944]
+
+<!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
+
+When an element goes into an error state after an attempt to activate it failed, from now on, no more calls to SLProtocol, SLElement or SLSpectrum will be made for that element.
+
+Also, when an element that generates DVE child elements or virtual functions goes into an error state, from now on, the generated DVE child elements or virtual functions will also go into an error state. However, in order to avoid too many alarms to be generated, only one alarm (for the main element) will be generated.
+
+The following issues have also been fixed:
+
+- When a DVE parent element in an error state on DataMiner startup was activated, its DVE child elements or virtual functions would not be properly loaded.
+
+- When a DVE parent element was started, the method that has to make sure that ElementInfo and ElementData are in sync would incorrectly not check all child elements.
+
 ### Fixes
 
 #### SLLogCollector: Problem when collecting multiple memory dumps with the 'Now and when memory increases with X Mb' option [ID_35617]
@@ -58,6 +78,26 @@ From now on, the execution of the NATS installer at DMA startup will be skipped 
 
 > [!NOTE]
 > When an error occurs while running a WMI query, and no NATS/NAS service is running, NATS will not be installed automatically. A manual installation of NATS will be needed.
+
+#### Existing masked alarms would incorrectly affect the overall alarm severity of an element [ID_35678]
+
+<!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
+
+Existing masked alarms would incorrectly affect the overall alarm severity of an element.
+
+#### Failover: Offline agent would incorrectly try to take a backup of the Elasticsearch database [ID_35721]
+
+<!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
+
+When, in Failover setups, you configure a DataMiner backup on the online agent, the same backup will also be scheduled on the offline agent, and if these setups have a clustered Elasticsearch database, a backup of that database cluster will be included in the DataMiner backup.
+
+In Failover setups where both agents included a local Elasticsearch database that was part of an Elasticsearch cluster, the online agent would fail to take a backup of the Elasticsearch databases due to a backup in progress, triggered earlier by the offline agent.
+
+From now on, only the online agent will be allowed to take a backup of the Elasticsearch database, and the offline agent will log the following entry:
+
+```txt
+Elastic backup will not be taken - Only active agents from a failover pair can take the backup.
+```
 
 #### SLElement could leak memory when updating alarm templates containing conditions [ID_35728]
 
@@ -118,6 +158,12 @@ At SLA startup, in some cases, the active alarms would no longer be in sync with
 
 Also, a number of other minor fixes with regard to SLA management have been implemented.
 
+#### Problem when an SLA element was stopped or deleted while a parameter that triggered a QAction of the SLA in question was being updated [ID_35892]
+
+<!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
+
+An error could occur when an SLA element was stopped or deleted while a parameter that triggered a QAction of the SLA in question was being updated.
+
 #### DataMinerException thrown the first time an InfoData message was deserialized [ID_35897]
 
 <!-- MR 10.3.0 [CU2] - FR 10.3.5 -->
@@ -127,3 +173,35 @@ The first time a message with an object of a type that inherited from `InfoData`
 ```txt
 Skyline.DataMiner.Net.Exceptions.DataMinerException: Failed to deserialize message (ProtoBuf). Possible version incompatibility between client and server.  ---&gt; System.InvalidOperationException: It was not possible to prepare a serializer for: Skyline.DataMiner.Net.InfoData ---&gt; System.InvalidOperationException: Unable to resolve a suitable Add method for System.Collections.Generic.IReadOnlyList`1[[System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]&#xD;
 ```
+
+#### Problem with SLElement when a timed action was stopped [ID_35928]
+
+<!-- MR 10.3.0 [CU2] - FR 10.3.5 -->
+
+In some rare cases, an error could occur in SLElement when a timed action was stopped.
+
+#### SNMP: OIDs with a leading dot would incorrectly no longer be allowed [ID_35954]
+
+<!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
+
+OIDs with a leading dot would incorrectly no longer be allowed. From now on, OIDs with a leading dot are allowed again.
+
+#### NT Notify type NT_GET_BITRATE_DELTA would not return a valid value for a table with a single row [ID_35967]
+
+<!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
+
+In some rare cases, NT Notify type NT_GET_BITRATE_DELTA (269), which retrieves the time between two consecutive executions of the specified SNMP group (in ms), would not return a valid value for a table with a single row.
+
+#### Dashboards app - Line & area chart: Legend would show an incorrect number of disabled parameters [ID_35970]
+
+<!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
+
+When configuring a line & area chart, you can use the *Chart limit* setting to specify the maximum number of parameters that can be displayed in the chart. The excess parameters will then be disabled but remain available in the chart legend, so that they can be enabled again manually.
+
+In some cases, the number of disabled parameters shown in the legend would be incorrect.
+
+#### 'SLA Affecting' property of cleared or re-opened alarm would incorrectly contain 'Y' instead of 'Yes' [ID_35987]
+
+<!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
+
+When an alarm was cleared and re-opened for the same parameter or parameter key combination, its *SLA Affecting* property would incorrectly contain "Y" instead of "Yes".
