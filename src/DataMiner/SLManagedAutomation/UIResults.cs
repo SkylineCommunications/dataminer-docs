@@ -299,6 +299,7 @@ namespace Skyline.DataMiner.Automation
 		/// </summary>
 		/// <param name="key">The destination var that is linked to the specific dialog box item.</param>
 		/// <returns><c>true</c> if the dialog box item lost focus; otherwise, <c>false</c>.</returns>
+		/// <remarks>
 		/// <note type="note">
 		/// For this method ever to return true, you have to set .WantsOnFocusLoss to true.
 		/// </note>
@@ -311,6 +312,7 @@ namespace Skyline.DataMiner.Automation
 		/// </summary>
 		/// <param name="key">The destination var that is linked to the specific download button.</param>
 		/// <returns><c>true</c> if the download button has started the download; otherwise, <c>false</c>.</returns>
+		/// <remarks>
 		/// <note type="note">
 		/// For this method ever to return true, you have to set .ReturnWhenDownloadIsStarted to true on the AutomationDownloadButtonOptions, in the ConfigOptions of the UIBlockDefinition.
 		/// </note>
