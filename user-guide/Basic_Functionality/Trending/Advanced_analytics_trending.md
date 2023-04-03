@@ -4,7 +4,7 @@ uid: Advanced_analytics_trending
 
 # Advanced analytics in trend graphs
 
-A number of features in trend graphs make use of the artificial intelligence capabilities provided by DataMiner Analytics. Most of these features are only available on systems with a Cassandra database, and can be activated or deactivated in System Center, via *System Center* > *System settings* > *analytics config*.
+A number of features in trend graphs make use of the artificial intelligence capabilities provided by DataMiner Analytics. Most of these features are only available on systems with a Cassandra database and can be activated or deactivated in System Center, via *System Center* > *System settings* > *analytics config*.
 
 These features are:
 
