@@ -175,6 +175,12 @@ The way in which components are linked to feeds has been improved. Instead of us
 > [!CAUTION]
 > BREAKING CHANGE: Up to now, when you linked a script parameter to the *From* or *Till* box of a time range feed, the feed would pass a datetime value in string format to the script. That string value was not in an ISO format and did not contain any information about the time zone. From now on, the feed will send a UTC timestamp in milliseconds instead. Scripts that expect to receive a string value will need to be modified.
 
+#### Dashboards app & Low-code apps - Table component: Enhanced visibility of rows that are selected or hovered over in dark mode [ID_35993]
+
+<!-- MR 10.4.0 - FR 10.3.5 -->
+
+When a dashboard or a low-code app is in dark mode, from now on, there will be a higher color contrast between rows that are selected or hovered over and rows that are not.
+
 ### Fixes
 
 #### Web apps: Problem with external authentication [ID_33405]
@@ -273,12 +279,6 @@ When data from one table was fed to another table, in some cases, the "loading" 
 
 An error could occur when feeding data from a GQI component to a query that was used in the same component.
 
-#### Dashboards app & Low-code apps - GQI components: Open sessions would not be closed when a new query was triggered [ID_35824]
-
-<!-- MR 10.4.0 - FR 10.3.5 -->
-
-When a GQI component still had a session open when a new query was triggered, in some cases, the open session would incorrectly not be closed.
-
 #### Dashboards app: Problem when an extra GetParameterTable call without ValueFilters was sent after sharing a dashboard with a state, ring or gauge component [ID_35844]
 
 <!-- MR 10.4.0 - FR 10.3.5 -->
@@ -290,9 +290,3 @@ When a dashboard with a state, ring or gauge component was shared, in some cases
 <!-- MR 10.4.0 - FR 10.3.5 -->
 
 When you selected a parameter in a parameter feed component of a shared dashboard, in some cases, an error could occur.
-
-#### Dashboards app & Low-code apps: Filter box of visualizations panel would not reset [ID_36000]
-
-<!-- MR 10.4.0 - FR 10.3.5 -->
-
-When you reloaded the editor, by clicking the *Refresh* button while editing a dashboard or by switching pages while editing a low-code app, or when you switched to edit mode after previewing or publishing a low-code app, the filter box of the visualizations panel would incorrectly not be reset.

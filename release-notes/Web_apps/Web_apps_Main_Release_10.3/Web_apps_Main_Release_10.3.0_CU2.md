@@ -64,6 +64,12 @@ When GQI components tried to execute an empty query, up to now, they would keep 
 
 When you duplicated a component, the size of the duplicate would incorrectly be limited to 30 rows. From now on, when you duplicate a component, the duplicate will have the same size as the original.
 
+#### Dashboards app & Low-code apps - GQI components: Open sessions would not be closed when a new query was triggered [ID_35824]
+
+<<!-- MR 10.3.0 [CU2] - FR 10.3.5 -->
+
+When a GQI component still had a session open when a new query was triggered, in some cases, the open session would incorrectly not be closed.
+
 #### Dashboards app: Problem when using the search box on a mobile device [ID_35825]
 
 <!-- MR 10.3.0 [CU2] - FR 10.3.5 -->
@@ -148,11 +154,23 @@ In some cases, a query that was linked to feeds would not apply the feed changes
 
 When a GQI request failed, some GQI components would show either an unrelated error or no error at all, while other GQI components would show a correct error but incorrect data.
 
+#### Dashboards app & Low-code apps: Performance could decrease when State components had their Design option set to 'Auto size' [ID_35905]
+
+<!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
+
+Up to now, overall performance of a dashboard or a low-code app could decrease when it contained *State* components of which the *Design* option was set to "Auto size". A number of enhancements have now been made to prevent performance from decreasing in this case.
+
 #### Web apps: Login button would incorrectly be disabled on Edge and Chrome [ID_35906]
 
 <!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
 
 Up to now, in some cases, the login button would incorrectly be disabled when you opened a web app in Microsoft Edge or Google Chrome.
+
+#### Monitoring app - Visual Overview: Clicking a region that opened an element, service or view card would incorrectly cause the Monitoring app to reload [ID_35908]
+
+<!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
+
+When, in the Monitoring app, you clicked a region in a visual overview that opened an element, service or view card, up to now, the entire Monitoring app would reload. From now on, when you click a region in a visual overview that opens an element, service or view card, the card in question will open but the Monitoring app will no longer be reloaded.
 
 #### Dashboards app & Low-code apps - Clock components: Clock time would not update when set to server time [ID_35912]
 
@@ -171,3 +189,15 @@ When you first selected an action with a single component, which was selected au
 <!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
 
 Up to now, page names and panel names could incorrectly be empty. From now on, this will no longer be allowed.
+
+#### Dashboards app & Low-code apps: Filter box of visualizations panel would not reset [ID_36000]
+
+<!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
+
+When you reloaded the editor, by clicking the *Refresh* button while editing a dashboard or by switching pages while editing a low-code app, or when you switched to edit mode after previewing or publishing a low-code app, the filter box of the visualizations panel would incorrectly not be reset.
+
+#### Dashboards app & Low-code apps - Table component: 'Restore initial view' button would incorrectly remain visible when switching to an empty query [ID_36010]
+
+<!-- MR 10.3.0 [CU2] - FR 10.3.5 -->
+
+When, in a table component, you switched from a non-empty query to an empty query, the *Restore initial view* button would incorrectly remain visible in the component header.
