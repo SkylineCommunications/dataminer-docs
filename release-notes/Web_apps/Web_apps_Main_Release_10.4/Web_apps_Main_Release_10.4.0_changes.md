@@ -279,12 +279,6 @@ When data from one table was fed to another table, in some cases, the "loading" 
 
 An error could occur when feeding data from a GQI component to a query that was used in the same component.
 
-#### Dashboards app & Low-code apps - GQI components: Open sessions would not be closed when a new query was triggered [ID_35824]
-
-<!-- MR 10.4.0 - FR 10.3.5 -->
-
-When a GQI component still had a session open when a new query was triggered, in some cases, the open session would incorrectly not be closed.
-
 #### Dashboards app: Problem when an extra GetParameterTable call without ValueFilters was sent after sharing a dashboard with a state, ring or gauge component [ID_35844]
 
 <!-- MR 10.4.0 - FR 10.3.5 -->

@@ -6,6 +6,10 @@ uid: DCP_change_log
 
 The dataminer.services platform gets updated continuously. This change log can help you trace when specific features and changes have become available.
 
+#### 3 April 2023 - Enhancement - ArtifactDeployer 1.4.3 - Dependencies updated [ID_35990]
+
+Several dependencies have been updated. This includes security-related improvements.
+
 #### 30 March 2023 - Sharing app: Confirmation pop-up window not visible [36029]
 
 In the Sharing app, depending on the position of the scrollbar, it could occur that the confirmation pop-up window for the deletion of an incoming share was displayed outside the boundaries of the screen, so that it was not possible to confirm the deletion.

@@ -243,7 +243,7 @@ An error could occur when feeding data from a GQI component to a query that was 
 
 #### Dashboards app & Low-code apps - GQI components: Open sessions would not be closed when a new query was triggered [ID_35824]
 
-<!-- MR 10.4.0 - FR 10.3.5 -->
+<!-- MR 10.3.0 [CU2] - FR 10.3.5 -->
 
 When a GQI component still had a session open when a new query was triggered, in some cases, the open session would incorrectly not be closed.
 
@@ -373,8 +373,22 @@ When you first selected an action with a single component, which was selected au
 
 Up to now, page names and panel names could incorrectly be empty. From now on, this will no longer be allowed.
 
+#### Dashboards app - Line & area chart: Legend would show an incorrect number of disabled parameters [ID_35970]
+
+<!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
+
+When configuring a line & area chart, you can use the *Chart limit* setting to specify the maximum number of parameters that can be displayed in the chart. The excess parameters will then be disabled but remain available in the chart legend, so that they can be enabled again manually.
+
+In some cases, the number of disabled parameters shown in the legend would be incorrect.
+
 #### Dashboards app & Low-code apps: Filter box of visualizations panel would not reset [ID_36000]
 
 <!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
 
 When you reloaded the editor, by clicking the *Refresh* button while editing a dashboard or by switching pages while editing a low-code app, or when you switched to edit mode after previewing or publishing a low-code app, the filter box of the visualizations panel would incorrectly not be reset.
+
+#### Dashboards app & Low-code apps - Table component: 'Restore initial view' button would incorrectly remain visible when switching to an empty query [ID_36010]
+
+<!-- MR 10.3.0 [CU2] - FR 10.3.5 -->
+
+When, in a table component, you switched from a non-empty query to an empty query, the *Restore initial view* button would incorrectly remain visible in the component header.
