@@ -24,7 +24,7 @@ jobs:
           CI: true
       - name: Restore NuGet
         run: |
-          dotnet restore "src/NuGetPackages"
+          dotnet restore "src/NuGetPackages" --configuration Release
       - name: Build
         run: |
           dotnet build "src/NuGetPackages"
@@ -32,7 +32,7 @@ jobs:
         id: build-documentation
         run: |
           docfx metadata
-          docfx build --warningsAsErrors --configuration Release
+          docfx build --warningsAsErrors
         shell: powershell
       - name: Publish results
         uses: actions/upload-artifact@v3
