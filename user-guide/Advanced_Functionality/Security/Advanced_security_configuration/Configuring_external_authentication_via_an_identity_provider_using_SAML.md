@@ -39,13 +39,15 @@ Once this has been configured, if users try to log in to the DMA using external 
 
 > [!NOTE]
 >
-> - From DataMiner 10.2.0/10.1.4 onwards, Cube uses the Chromium web browser engine to handle SAML external authentication. That engine supports a wider range of identity providers than the Internet Explorer engine that was used previously.
-> - DataMiner 10.3.5 or higher is required to use external authentication on Low-code Apps.
-> - DataMiner will expect one of the claims provided by the identity provider to be the "name" claim: ``http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name``. This field must contain either the username or the email address.
-> - Any DataMiner Agent configured for SAML external authentication should be accessible via [HTTPS](xref:Setting_up_HTTPS_on_a_DMA).
-> - Cube: Prior to DataMiner 10.1.11/10.2.0, only the Administrator user can bypass the external authentication provider by entering an explicit username/password combination. In later DataMiner versions, this is also allowed for any local DataMiner user account.
-> - Web apps: When external authentication is enabled, it is no longer possible to log in with local accounts. As a workaround, since it is not required to configure external authentication on every DMA of the cluster, it is possible to login on the web apps using external authentication on one DMA and login using a local account on another DMA.
-> - If there are two DataMiner users who share the same email address, both users will not be able to log in. To prevent this from happening, it is recommended to avoid using more than one method to add users. For example, do not add Windows domain users if the Azure AD users use the same email address.
+> - From DataMiner 10.2.0/10.1.4 onwards, Cube uses the **Chromium** web browser engine to handle SAML external authentication. That engine supports a wider range of identity providers than the Internet Explorer engine that was used previously.
+> - DataMiner **10.3.5** or higher is required to use external authentication for DataMiner **Low-Code Apps**.
+> - DataMiner will expect one of the claims provided by the identity provider to be the **"name" claim**: ``http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name``. This field must contain either the username or the email address.
+> - Any DataMiner Agent configured for SAML external authentication should be accessible via [**HTTPS**](xref:Setting_up_HTTPS_on_a_DMA).
+> - For **DataMiner Cube**, prior to DataMiner 10.1.11/10.2.0, only the Administrator user can bypass the external authentication provider by entering an explicit username/password combination. In later DataMiner versions, this is also allowed for any local DataMiner user account.
+> - For the **Web apps**, when external authentication is enabled, it is no longer possible to log in with local accounts. As a workaround, since you do not need to configure external authentication on every DMA of the cluster, you can log in to the web apps using external authentication on one DMA and log in using a local account on another DMA.
+
+> [!CAUTION]
+> If there are two DataMiner users who share the same email address, both users will not be able to log in. To prevent this from happening, we recommended not using more than one method to add users. For example, do not add Windows domain users if the Azure AD users use the same email address.
 
 > [!TIP]
 > See also: [Authenticating Azure AD Users on DataMiner with SAML](https://community.dataminer.services/video/authenticating-azure-ad-users-on-dataminer-with-saml/) in the Dojo video library
