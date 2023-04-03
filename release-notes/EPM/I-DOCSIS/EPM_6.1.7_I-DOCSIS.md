@@ -44,6 +44,17 @@ A new trigger has been added to the *_epmBE* card variable in the *Skyline EPM P
 
 With this new trigger, it is no longer necessary to create a card variable for each back-end element in the system and different triggers for each of those card variables. This improves the DataMiner Maps loading time.
 
+#### Filter box loading time improved by enabling partial table option [ID_36055]
+
+To improve the loading time of the filter box that is displayed when you use the filter sections of the EPM topology chain, the partial table option has now been enabled on the following tables:
+
+- Service group
+- US and DS Service Group
+- US and DS Port
+- US and DS Linecard
+- Node Segment
+- Node, Tap, and Amplifier
+
 ### Fixes
 
 #### EPM front-end element threw 'process cannot access the file because it is being used by another process' exceptions [ID_34658]
