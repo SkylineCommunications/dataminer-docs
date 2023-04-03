@@ -217,14 +217,6 @@ From now on, when the parameter feed has a protocol or view filter, it will fetc
 
 A number of issues with regard to data highlighting have been fixed.
 
-#### Dashboards app: Problem when trying to open a shared dashboard [ID_35271]
-
-<!-- MR 10.4.0 - FR 10.3.3 -->
-
-When users tried to open a shared dashboard, in some cases, they would unexpectedly be presented with a login screen due to a permission issue.
-
-Workaround: Recreate the faulty shared dashboard.
-
 #### Dashboards - Line & area chart component: Timestamps could be formatted incorrectly when exporting trend data to CSV [ID_35311]
 
 <!-- MR 10.4.0 - FR 10.3.3 -->
