@@ -13,7 +13,7 @@ You can now easily integrate your DataMiner System with Microsoft Teams using Da
 The following features have been added:
 
 - Fetching all teams
-- Fetching all channels of a team
+- Fetching all channels of a team, so you can send channel notifications in them
 
 In an Automation script, you can use [the DcpChatIntegrationHelper NuGet](https://www.nuget.org/packages/Skyline.DataMiner.DcpChatIntegrationHelper) to easily interact with Microsoft Teams.
 
