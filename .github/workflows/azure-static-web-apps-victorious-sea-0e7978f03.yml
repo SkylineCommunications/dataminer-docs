@@ -24,10 +24,10 @@ jobs:
           CI: true
       - name: Restore NuGet
         run: |
-          dotnet restore "src/NuGetPackages" --configuration Release
+          dotnet restore "src/NuGetPackages"
       - name: Build
         run: |
-          dotnet build "src/NuGetPackages"
+          dotnet build "src/NuGetPackages" --configuration Release
       - name: Build Documentation
         id: build-documentation
         run: |
