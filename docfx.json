@@ -29,7 +29,8 @@
       "dest": "develop/api/types",
       "disableDefaultFilter": false,
       "disableGitFeatures": false,
-	  "filter": "filterConfig.yml"
+	  "filter": "filterConfig.yml",
+	  "memberLayout": "separatePages"
     }
   ],
   "build": {
@@ -61,8 +62,8 @@
           "user-guide/images/**",
           "release-notes/images/**",
           "develop/images/**",
-		      "develop/schemadoc/Protocol/images/**",
-		      "develop/schemadoc/Automation/images/**"
+		  "develop/schemadoc/Protocol/images/**",
+		  "develop/schemadoc/Automation/images/**"
         ]
       }
     ],
@@ -78,7 +79,6 @@
     "fileMetadataFiles": [],
     "template": [
       "default",
-      "memberpage",
       "templates/skyfx"
     ],
     "markdownEngineName": "markdig",

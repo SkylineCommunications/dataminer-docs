@@ -31,16 +31,10 @@ jobs:
           dotnet build "src/NuGetPackages"
       - name: Build Documentation
         id: build-documentation
-        run: dotnet run --project build | Tee-Object -FilePath log.txt
-        shell: powershell
-      - name: verify build
         run: |
-          with open('log.txt', 'r', encoding='utf-16') as f:
-            buildLog = f.read()
-            if not "Build succeeded" in buildLog or not "0 warning(s)" in buildLog:
-              print('Warnings detected. See output previous step for details.')
-              exit(1)
-        shell: python
+          docfx metadata
+          docfx build --warningsAsErrors
+        shell: powershell
       - name: Publish results
         uses: actions/upload-artifact@v3
         with:
