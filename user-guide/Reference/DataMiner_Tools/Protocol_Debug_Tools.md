@@ -14,6 +14,8 @@ To use this tool:
 
 1. Extract the zip file you downloaded using the button above in a local folder on a DataMiner Agent running the protocol you want to debug.
 
+1. If you are using DataMiner 10.3.4 or higher, go to the folder `C:\Skyline DataMiner\Files`, copy the file *SLNetTypes.dll*, and paste it in the folder containing *ProtocolDebugTools.exe*.
+
 1. Double-click *ProtocolDebugTools.exe*.
 
 1. Specify a user and password and click *Connect*.
