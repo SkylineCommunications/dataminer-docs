@@ -283,7 +283,7 @@ When you opened a visual overview in a web app, in some cases, the web app could
 
 #### Dashboards app: Problem when an extra GetParameterTable call without ValueFilters was sent after sharing a dashboard with a state, ring or gauge component [ID_35844]
 
-<!-- MR 10.4.0 - FR 10.3.5 -->
+<!-- MR 10.3.0 [CU3] - FR 10.3.5 -->
 
 When a dashboard with a state, ring or gauge component was shared, in some cases, an error could be thrown when an extra `GetParameterTable` call without `ValueFilters` was sent.
 
@@ -301,7 +301,7 @@ When, in a table component, the data was grouped by two different parameters, in
 
 #### Dashboards app: Problem when selecting a parameter in a parameter feed component of a shared dashboard [ID_35863]
 
-<!-- MR 10.4.0 - FR 10.3.5 -->
+<!-- MR 10.3.0 [CU3] - FR 10.3.5 -->
 
 When you selected a parameter in a parameter feed component of a shared dashboard, in some cases, an error could occur.
 

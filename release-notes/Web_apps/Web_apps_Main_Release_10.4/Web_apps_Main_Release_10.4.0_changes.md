@@ -271,18 +271,6 @@ When data from one table was fed to another table, in some cases, the "loading" 
 
 An error could occur when feeding data from a GQI component to a query that was used in the same component.
 
-#### Dashboards app: Problem when an extra GetParameterTable call without ValueFilters was sent after sharing a dashboard with a state, ring or gauge component [ID_35844]
-
-<!-- MR 10.4.0 - FR 10.3.5 -->
-
-When a dashboard with a state, ring or gauge component was shared, in some cases, an error could be thrown when an extra `GetParameterTable` call without `ValueFilters` was sent.
-
-#### Dashboards app: Problem when selecting a parameter in a parameter feed component of a shared dashboard [ID_35863]
-
-<!-- MR 10.4.0 - FR 10.3.5 -->
-
-When you selected a parameter in a parameter feed component of a shared dashboard, in some cases, an error could occur.
-
 #### Dashboards app - GQI: No element feed available after selecting a relation between two standalone parameters [ID_36003]
 
 <!-- MR 10.4.0 - FR 10.3.5 -->
