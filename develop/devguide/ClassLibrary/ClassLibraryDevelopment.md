@@ -45,7 +45,7 @@ These are the most important things to keep in mind:
     > [!NOTE]
     > You may find 20 or so code smells that were not fixed, but these can be ignored. All new issues reported in SonarQube from now on will be related to your changes specifically.
 
-1. If your branch introduces a new minimum required DataMiner version, configure the corresponding version of the `Skyline.DataMiner.Dev.*` NuGet packages:
+1. If your branch introduces a new minimum required DataMiner version, configure the corresponding version of the `Skyline.DataMiner.Dev.*` NuGet packages.
 
 1. Start development.
 

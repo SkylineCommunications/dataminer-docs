@@ -115,7 +115,7 @@ currentData[9], currentData[10], currentData[11]
 
 ## Rate calculations in SNMP connectors
 
-We recommend using the [Skyline.DataMiner.Utils.SNMP](https://www.nuget.org/packages/Skyline.DataMiner.Utils.SNMP), [Skyline.DataMiner.Utils.Rates.Protocol](https://www.nuget.org/packages/Skyline.DataMiner.Utils.Rates.Protocol), and [Skyline.DataMiner.Utils.SafeConverters](https://www.nuget.org/packages/Skyline.DataMiner.Utils.SafeConverters) NuGet packages, which support the calculation of rate values in SNMP connectors. For more information on available classes, methods, etc., refer to Skyline.DataMiner.Library.Protocol.Rates namespace.
+We recommend using the [Skyline.DataMiner.Utils.SNMP](https://www.nuget.org/packages/Skyline.DataMiner.Utils.SNMP), [Skyline.DataMiner.Utils.Rates.Protocol](https://www.nuget.org/packages/Skyline.DataMiner.Utils.Rates.Protocol), and [Skyline.DataMiner.Utils.SafeConverters](https://www.nuget.org/packages/Skyline.DataMiner.Utils.SafeConverters) NuGet packages, which support the calculation of rate values in SNMP connectors. For more information on available classes, methods, etc., refer to Skyline.DataMiner.Utils.Rates.Protocol namespace.
 
 - Calculated rate is provided in bps or counter unit per second using the following formula.
   - (current counter value - previous counter value) / delta
