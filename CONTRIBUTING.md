@@ -796,7 +796,7 @@ The only time when "the user" is appropriate is when whoever you are writing for
 
 **Symptom**: An item shows up twice in the table of contents even though it was only entered once in the *toc.yml*.
 
-**Resolution**: Make sure there is no hyphen in front of the topicUID line. Only the name line should be preceded by a hyphen.
+**Resolution**: Make sure there is no hyphen in front of the topicUid line. Only the name line should be preceded by a hyphen.
 
 ![TOC](~/images/TOC.png)
 
