@@ -398,11 +398,11 @@ In some cases, the number of disabled parameters shown in the legend would be in
 
 When you reloaded the editor, by clicking the *Refresh* button while editing a dashboard or by switching pages while editing a low-code app, or when you switched to edit mode after previewing or publishing a low-code app, the filter box of the visualizations panel would incorrectly not be reset.
 
-#### Dashboards app - GQI: No element feed available after selecting a relationship between two standalone parameters [ID_36003]
+#### Dashboards app - GQI: No element feed available after selecting a relation between two standalone parameters [ID_36003]
 
 <!-- MR 10.4.0 - FR 10.3.5 -->
 
-When, in a table with a *Get parameter relations* query, you selected a relationship between two standalone parameters, no element feed would be available.
+When, in a table with a *Get parameter relations* query, you selected a relation between two standalone parameters, no element feed would be available.
 
 #### Dashboards apps & Low-code apps: Components would incorrectly make their own data available as feeds [ID_36008]
 
