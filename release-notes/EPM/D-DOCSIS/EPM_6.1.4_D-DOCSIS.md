@@ -25,6 +25,10 @@ The COX CBR-8 Platform D-DOCSIS connector will now display the Linecard Redundan
 
 On all RPD and Node Segment Overview pages, you can now refresh the data and request all cable modem data related to the selected RPD. There is also a status indicator, and the time when the report was last requested is displayed.
 
+#### Description column added to hub Interfaces pages [ID_36076]
+
+On the *Interfaces* page of any hub, a new *Description* column has been added.
+
 ## Changes
 
 ### Enhancements
