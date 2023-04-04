@@ -126,6 +126,8 @@
           topicUid: General_Main_Release_10.2.0_CU13
         - name: General Main Release 10.2.0 CU14 - Preview
           topicUid: General_Main_Release_10.2.0_CU14
+        - name: General Main Release 10.2.0 CU15 - Preview
+          topicUid: General_Main_Release_10.2.0_CU15
       - name: Feature Release
         topicUID: General_Feature_Release_10.2.12
         items:

@@ -248,3 +248,14 @@ For more information on how to pass data using a JSON object, see [Specifying da
 A 'Set timespan' action can now be configured for a line & area chart component. On execution, this action will apply a specific timespan to the component.
 
 This action has two numeric arguments: 'To' and 'From'. These can be either set to a static value or linked to a numeric value feed.
+
+#### Dashboards app: Shared dashboards can now be edited [ID_35940]
+
+<!-- MR 10.4.0 - FR 10.3.5 -->
+
+From now on, it is possible to edit a shared dashboard.
+
+Also, a *Shared* button will now be displayed in the header bar of a shared dashboard. Clicking this button will open the same pop-up box that opens when you click *Share > Manage share*.
+
+> [!NOTE]
+> It is not possible to rename or to move a shared dashboard.

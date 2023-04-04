@@ -243,7 +243,7 @@ An error could occur when feeding data from a GQI component to a query that was 
 
 #### Dashboards app & Low-code apps - GQI components: Open sessions would not be closed when a new query was triggered [ID_35824]
 
-<!-- MR 10.3.0 [CU2] - FR 10.3.5 -->
+<!-- MR 10.2.0 [CU15]/10.3.0 [CU2] - FR 10.3.5 -->
 
 When a GQI component still had a session open when a new query was triggered, in some cases, the open session would incorrectly not be closed.
 
@@ -360,6 +360,17 @@ When, in the Monitoring app, you clicked a region in a visual overview that open
 <!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
 
 When a clock component (analog or digital) was set to use server time, the clock time would not update.
+
+#### Dashboards app: Shared dashboards can now be edited [ID_35940]
+
+<!-- MR 10.4.0 - FR 10.3.5 -->
+
+From now on, it is possible to edit a shared dashboard.
+
+Also, a *Shared* button will now be displayed in the header bar of a shared dashboard. Clicking this button will open the same pop-up box that opens when you click *Share > Manage share*.
+
+> [!NOTE]
+> It is not possible to rename or to move a shared dashboard.
 
 #### Low-code apps: Problem when selecting an action with multiple components after having selected an action with a single component [ID_35947]
 
