@@ -7,7 +7,7 @@ uid: ClassLibraryElementCreation
 This section provides more information on how to create elements using the class library.
 
 To create an element, use the [CreateElement](xref:Skyline.DataMiner.Core.DataMinerSystem.Common.IDma.CreateElement(Skyline.DataMiner.Core.DataMinerSystem.Common.ElementConfiguration)) method of the [IDma](xref:Skyline.DataMiner.Core.DataMinerSystem.Common.IDma) interface.
-This method takes an [ElementConfiguration](xref:Skyline.DataMiner.Core.DataMinerSystem.Common.ElementConfiguration) object as parameter, where you can configure the  element settings for the element.
+This method takes an [ElementConfiguration](xref:Skyline.DataMiner.Core.DataMinerSystem.Common.ElementConfiguration) object as parameter, where you can configure the element settings for the element.
 
 The ElementConfiguration constructors require the element name and the protocol to be specified.
 Other configuration settings can be specified via the properties of the ElementConfiguration object:

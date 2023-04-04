@@ -86,9 +86,8 @@ C# helper classes are automatically added or updated each time you switch from a
 
 ## Protocol \> Generate Class Library code
 
- [!IMPORTANT]
-> The class library generation feature has been removed from DIS v2.41 onwards in favor of NuGet packages.
-> If you have a connector or Automation script that makes use of the official class library, replace it by the corresponding NuGet package(s). For more information, refer to [Class library introduction](xref:ClassLibraryIntroduction). If you have a connector or Automation script that makes use of a community package, it is advised to turn this into a NuGet package (For more information on how to create a NuGet package, refer to [Producing NuGet packages](xref:Producing_NuGet)). Alternatively, you can put all the code from the community library zip file in a QAction/Exe block.
+> [!IMPORTANT]
+> The class library generation feature has been removed from DIS v2.41 onwards in favor of NuGet packages. If you have a connector or Automation script that makes use of the official class library, replace it with the corresponding NuGet package(s). For more information, refer to [Class library introduction](xref:ClassLibraryIntroduction). If you have a connector or Automation script that makes use of a community package, we recommend turning this into a NuGet package (For more information on how to create a NuGet package, refer to [Producing NuGet packages](xref:Producing_NuGet)). Alternatively, you can put all the code from the community library zip file in a QAction/Exe block.
 
 If you want to force an ad hoc regeneration of the Class Library QAction 63000 and the Class Library EXE blocks, you can click Generate Class Library Code.
 

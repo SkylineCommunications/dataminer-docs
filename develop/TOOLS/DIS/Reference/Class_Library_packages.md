@@ -5,16 +5,15 @@ uid: Class_Library_packages
 # Class Library packages
 
 > [!IMPORTANT]
-> The class library generation feature has been removed from DIS v2.41 onwards in favor of NuGet packages.
-> If you have a connector or Automation script that makes use of the official class library, replace it by the corresponding NuGet package(s). For more information, refer to [Class library introduction](xref:ClassLibraryIntroduction). If you have a connector or Automation script that makes use of a community package, it is advised to turn this into a NuGet package (For more information on how to create a NuGet package, refer to [Producing NuGet packages](xref:Producing_NuGet)). Alternatively, you can put all the code from the community library zip file in a QAction/Exe block.
+> The class library generation feature has been removed from DIS v2.41 onwards in favor of NuGet packages. If you have a connector or Automation script that makes use of the official class library, replace it with the corresponding NuGet package(s). For more information, refer to [Class library introduction](xref:ClassLibraryIntroduction). If you have a connector or Automation script that makes use of a community package, we recommend turning this into a NuGet package (For more information on how to create a NuGet package, refer to [Producing NuGet packages](xref:Producing_NuGet)). Alternatively, you can put all the code from the community library zip file in a QAction/Exe block.
 >
-> Note also that the the class library has been split up into multiple NuGet packages and that the namespaces have been updated:
+> Note also that the class library has been split up into multiple NuGet packages and that the namespaces have been updated:
 >
-> - [Skyline.DataMiner.Core.DataMinerSystem.Common](https://www.nuget.org/packages/Skyline.DataMiner.Core.DataMinerSystem.Common): This NuGet package allows interacting with a DataMiner System.
+> - [Skyline.DataMiner.Core.DataMinerSystem.Common](https://www.nuget.org/packages/Skyline.DataMiner.Core.DataMinerSystem.Common): This NuGet package allows interaction with a DataMiner System.
 > - [Skyline.DataMiner.Core.DataMinerSystem.Automation](https://www.nuget.org/packages/Skyline.DataMiner.Core.DataMinerSystem.Automation): This NuGet package contains extension methods for retrieving an IDms instance via the SLProtocol interface.
 > - [Skyline.DataMiner.Core.DataMinerSystem.Protocol](https://www.nuget.org/packages/Skyline.DataMiner.Core.DataMinerSystem.Protocol): This NuGet package contains extension methods for accessing an IDms instance via the Engine class or IEngine interface.
 > - [Skyline.DataMiner.Core.InterAppCalls.Common](https://www.nuget.org/packages/Skyline.DataMiner.Core.InterAppCalls.Common): This NuGet package contains the InterApp functionality.
-> - [Skyline.DataMiner.Core.Matrix.Protocol](https://www.nuget.org/packages/Skyline.DataMiner.Core.Matrix.Protocol): This NuGet package allows defining a matrix component in a connector.
+> - [Skyline.DataMiner.Core.Matrix.Protocol](https://www.nuget.org/packages/Skyline.DataMiner.Core.Matrix.Protocol): This NuGet package allows you to define a matrix component in a connector.
 > - [Skyline.DataMiner.Utils.SNMP](https://www.nuget.org/packages/Skyline.DataMiner.Utils.SNMP): This NuGet package defines types related to SNMP.
 > - [Skyline.DataMiner.Utils.Rates.Protocol](https://www.nuget.org/packages/Skyline.DataMiner.Utils.Rates.Protocol): This NuGet package defines types for calculation rates in a connector.
 > - [Skyline.DataMiner.Utils.Rates.Common](https://www.nuget.org/packages/Skyline.DataMiner.Utils.Rates.Common): This NuGet package defines types related to calculating rates.
