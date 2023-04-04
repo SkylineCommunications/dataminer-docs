@@ -716,6 +716,8 @@
               topicUid: Working_with_behavioral_anomaly_detection
             - name: Working with pattern matching
               topicUid: Working_with_pattern_matching
+            - name: Adding related parameters to a trend graph
+              topicUid: Adding_related_parameters_to_a_trend_graph
         - name: Working with histograms
           topicUid: Viewing_trend_information_in_a_histogram
           items:
