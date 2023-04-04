@@ -447,7 +447,7 @@ To be able to make a local test build, you need to have DocFX installed. DocFX i
       - `docfx serve _site`
 
       > [!NOTE]
-      > If you make repeated test builds to check changes you have made, it may not be necessary to generate metadata again. In that case, you can already see the results of your changes with the `docfx build` and `docfx serve _site` commands.
+      > The first commands are needed to generate the API docs. If you make repeated test builds to check changes you have made, and you are only making changes to markdown files, you can skip these three commands after your first test build.
 
    1. In a browser, go to <http://localhost:8080/> to preview the website.
 
