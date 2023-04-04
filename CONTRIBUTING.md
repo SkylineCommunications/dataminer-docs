@@ -441,9 +441,13 @@ To be able to make a local test build, you need to have DocFX installed. DocFX i
    1. Enter the following commands:
 
       - `dotnet restore "src/NuGetPackages"`
+
       - `dotnet build "src/NuGetPackages" --configuration Release`
+
       - `docfx metadata`
+
       - `docfx build`
+
       - `docfx serve _site`
 
       > [!NOTE]
