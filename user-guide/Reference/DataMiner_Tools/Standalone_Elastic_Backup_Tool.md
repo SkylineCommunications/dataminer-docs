@@ -6,6 +6,10 @@ uid: Standalone_Elastic_Backup_Tool
 
 From DataMiner 10.0.13 onwards, this tool allows you to back up and restore Elasticsearch database clusters. By default, it is available on a DMA in the folder `C:\Skyline DataMiner\Tools`.
 
+> [!IMPORTANT]
+> The **Standalone Elastic Backup tool** is being deprecated in favor of Elasticsearch's own snapshot functionality.
+> Therefore we recommend that you take a database backup using the [Elasticsearch snapshot functionality](xref: Configuring_Elasticsearch_backups_Windows_Linux)
+
 ## Syntax
 
 Use the following general syntax when you run this tool:
