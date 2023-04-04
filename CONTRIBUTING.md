@@ -447,7 +447,9 @@ To be able to make a local test build, you need to have DocFX installed. DocFX i
       - `docfx serve _site`
 
       > [!NOTE]
-      > The first commands are needed to generate the API docs. If you make repeated test builds to check changes you have made, and you are only making changes to markdown files, you can skip these three commands after your first test build.
+      >
+      > - The first three commands are needed to generate the API docs. If you make repeated test builds to check changes you have made, and you are only making changes to markdown files, you can skip these three commands after your first test build.
+      > - This step requires that **.NET 6.0 SDK or higher** is installed on your machine. If this is not installed yet, you will get a build error. You can download the latest version from [dotnet.microsoft.com](https://dotnet.microsoft.com/en-us/download/visual-studio-sdks).
 
    1. In a browser, go to <http://localhost:8080/> to preview the website.
 
