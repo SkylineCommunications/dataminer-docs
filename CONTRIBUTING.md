@@ -438,14 +438,16 @@ To be able to make a local test build, you need to have DocFX installed. DocFX i
 
    1. Enter `clear` to clear the terminal.
 
-   1. Enter `dotnet run --project build`.
+   1. Enter the following commands:
+
+      - `dotnet restore "src/NuGetPackages"`
+      - `dotnet build "src/NuGetPackages" --configuration Release`
+      - `docfx metadata`
+      - `docfx build`
+      - `docfx serve _site`
 
       > [!NOTE]
-      >
-      > - This step requires that **.NET 6.0 SDK or higher** is installed on your machine. If this is not installed yet, you will get a build error. You can download the latest version from [dotnet.microsoft.com](https://dotnet.microsoft.com/en-us/download/visual-studio-sdks).
-      > - If you only have .NET 7.0 installed, it is possible that you encounter an exception when trying to make a build. See [No instances of MSBuild could be detected](#no-instances-of-msbuild-could-be-detected).
-
-   1. Enter `docfx serve _site`.
+      > If you make repeated test builds to check changes you have made, it may not be necessary to generate metadata again. In that case, you can already see the results of your changes with the `docfx build` and `docfx serve _site` commands.
 
    1. In a browser, go to <http://localhost:8080/> to preview the website.
 
