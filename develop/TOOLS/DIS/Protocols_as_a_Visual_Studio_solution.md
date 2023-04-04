@@ -36,7 +36,7 @@ A DataMiner protocol Visual Studio solution consists of the following folders:
 
 - *Dlls*: Contains the custom DLLs that are used by this protocol (i.e. DLLs that are not part of DataMiner but are required by this protocol). When the protocol gets published on SVN by the CI/CD pipeline, the DLLs provided in this folder will automatically also be published on SVN. This ensures that the required DLLS will be available on SVN next to the protocol XML file.
 
-- *Internal*: This folder contains the C# class library Visual Studio projects for the QAction helper (QAction_Helper) and the class library code (QAction_ClassLibrary). This folder is hidden by default, as this code is generated automatically and therefore should not be touched.
+- *Internal*: This folder contains the C# class library Visual Studio projects for the QAction helper (QAction_Helper) and the class library code (QAction_ClassLibrary). The latter is no longer available as of v2.41. This folder is hidden by default, as this code is generated automatically and therefore should not be touched.
 
 - *QActions*: This folder contains a C# class library Visual Studio project per QAction defined in the protocol XML file. The name of each project is QAction\_\<id>, where \<id> is the ID of the QAction as defined in the protocol XML file (e.g. QAction_2).
 

@@ -17,27 +17,23 @@ jobs:
       - uses: actions/checkout@v3
         with:
           submodules: true
-      - name: install DocFX
+      - name: Install DocFX
         run: |
           dotnet tool update -g docfx
         env:
           CI: true
       - name: Restore NuGet
         run: |
-          dotnet restore "src/Base Class Library"
-          dotnet restore "build"
+          dotnet restore "src/NuGetPackages"
+      - name: Build
+        run: |
+          dotnet build "src/NuGetPackages" --configuration Release
       - name: Build Documentation
         id: build-documentation
-        run: dotnet run --project build | Tee-Object -FilePath log.txt
-        shell: powershell
-      - name: verify build
         run: |
-          with open('log.txt', 'r', encoding='utf-16') as f:
-            buildLog = f.read()
-            if not "Build succeeded" in buildLog or not "0 warning(s)" in buildLog:
-              print('Warnings detected. See output previous step for details.')
-              exit(1)
-        shell: python
+          docfx metadata
+          docfx build --warningsAsErrors
+        shell: powershell
       - name: Publish results
         uses: actions/upload-artifact@v3
         with:
