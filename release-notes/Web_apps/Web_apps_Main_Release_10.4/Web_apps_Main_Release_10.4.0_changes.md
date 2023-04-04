@@ -282,3 +282,9 @@ When a dashboard with a state, ring or gauge component was shared, in some cases
 <!-- MR 10.4.0 - FR 10.3.5 -->
 
 When you selected a parameter in a parameter feed component of a shared dashboard, in some cases, an error could occur.
+
+#### Dashboards app - GQI: No element feed available after selecting a relationship between two standalone parameters [ID_36003]
+
+<!-- MR 10.4.0 - FR 10.3.5 -->
+
+When, in a table with a *Get parameter relations* query, you selected a relationship between two standalone parameters, no element feed would be available.
