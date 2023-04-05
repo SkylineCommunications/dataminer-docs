@@ -17,8 +17,8 @@ uid: Class_Library_packages
 > - [Skyline.DataMiner.Utils.SNMP](https://www.nuget.org/packages/Skyline.DataMiner.Utils.SNMP): This NuGet package defines types related to SNMP.
 > - [Skyline.DataMiner.Utils.Rates.Protocol](https://www.nuget.org/packages/Skyline.DataMiner.Utils.Rates.Protocol): This NuGet package defines types for calculation rates in a connector.
 > - [Skyline.DataMiner.Utils.Rates.Common](https://www.nuget.org/packages/Skyline.DataMiner.Utils.Rates.Common): This NuGet package defines types related to calculating rates.
-> - [Skyline.DataMiner.Utils.Rates.SafeConverters](https://www.nuget.org/packages/Skyline.DataMiner.Utils.SafeConverters): This NuGet package defines types that allow safe converting from double to integers.
-> - [Skyline.DataMiner.Utils.Rates.Interfaces](https://www.nuget.org/packages/Skyline.DataMiner.Utils.Interfaces): This NuGet package defines types for calculation rates of interfaces.
+> - [Skyline.DataMiner.Utils.SafeConverters](https://www.nuget.org/packages/Skyline.DataMiner.Utils.SafeConverters): This NuGet package defines types that allow safe converting from double to integers.
+> - [Skyline.DataMiner.Utils.Interfaces](https://www.nuget.org/packages/Skyline.DataMiner.Utils.Interfaces): This NuGet package defines types for calculation rates of interfaces.
 > - [Skyline.DataMiner.Utils.SNMP.Traps.Protocol](https://www.nuget.org/packages/Skyline.DataMiner.Utils.SNMP.Traps.Protocol): This NuGet package provides functionality to easily parse traps in a connector.
 > - [Skyline.DataMiner.Utils.Table.ContextMenu](https://www.nuget.org/packages/Skyline.DataMiner.Utils.Table.ContextMenu): This NuGet package provides functionality to easily create a custom context menu.
 
