@@ -15,6 +15,7 @@ uid: ApiDocumentation
 |[Skyline.DataMiner.DataMiner.Core.Protocol](xref:Skyline.DataMiner.Core.DataMinerSystem.Protocol)|This namespace contains types used for development of protocols.|
 |[Skyline.DataMiner.Net](xref:Skyline.DataMiner.Net)|This namespace contains SLNet types.|
 |[Skyline.DataMiner.Helper.OpenConfig.Api](xref:Skyline.DataMiner.Helper.OpenConfig.Api)|This namespace contains types to facilitate OpenConfig communication.<br> Available as an internal [NuGet package](xref:TOONuGet) with the name *Skyline.DataMiner.Helper.OpenConfig*.<br> Minimum required DataMiner version: DataMiner 10.3.3|
+|[Skyline.DataMiner.Utils.InteractiveAutomationScript](xref:Skyline.DataMiner.Utils.InteractiveAutomationScript)|This namespace contains types used for developing interactive Automation scripts using the InteractiveAutomationScriptToolkit.|
 |[Interop.SLDms](xref:Interop.SLDms)|***Deprecated*** This namespace contains types for interacting with a DataMiner System.|
 |[Tamir.SharpSsh](xref:Tamir.SharpSsh)|***Deprecated*** This namespace contains classes implementing SSH File Transfer Protocol (SFTP) and Secure Copy (SCP) functionality. **NOTE:** This namespace is obsolete for SCP and SFTP implementations. Please refer to the following page for an alternative for such implementations: <https://github.com/sshnet/SSH.NET>. |
 
