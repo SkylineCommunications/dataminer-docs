@@ -432,6 +432,43 @@ To be able to make a local test build, you need to have DocFX installed. DocFX i
 
 #### Making a test build
 
+##### Making a test build using buildDocs.cmd
+
+1. Make sure **.NET 6.0 SDK or higher** is installed on your machine. You can download the latest version from [dotnet.microsoft.com](https://dotnet.microsoft.com/en-us/download/visual-studio-sdks).
+
+1. Go to the root folder of the repository on your local machine, e.g. `C:\GitHub\dataminer-docs\dataminer-docs`.
+
+1. Double-click the file *buildDocs.cmd*.
+
+   This will open a command window where the following commands will run:
+
+   - `dotnet restore "src/NuGetPackages"`
+
+   - `dotnet build "src/NuGetPackages" --configuration Release`
+
+   - `docfx metadata`
+
+   - `docfx build`
+
+   - `docfx serve _site`
+
+1. In a browser, go to <http://localhost:8080/> to preview the website.
+
+   > [!NOTE]
+   > Using the search box when viewing the test website on <http://localhost:8080/> will not return any pages from the test website. The search engine only indexes the published content on <https://docs.dataminer.services/> and will, as such, only return pages from that website.
+
+1. When you have finished previewing the website, in the Terminal pane, press Ctrl+C to exit the preview mode.
+
+> [!NOTE]
+> If port 8080 is not available, you will need to run *buildDocs.cmd* from a command prompt with the correct port as an argument, e.g. `buildDocs 8081`.
+
+> [!IMPORTANT]
+> If you make test builds often, you may need to occasionally clear the files in the `\dataminer-docs\obj\.cache\build\` folder of your local version of the documentation. In the long run, these can pile up and take up a large amount of memory.
+
+##### Making a test build in the Visual Studio Code terminal
+
+If you make repeated test builds to check changes you have made, and you are only making changes to markdown files, you can also run these commands manually in the Visual Studio Code terminal. This has the advantage that you do not need to run all of the commands every time, so your test builds can be generated more quickly.
+
 1. If no Terminal pane is open in Visual Studio Code, go to *Terminal > New Terminal*.
 
 1. In the Terminal pane, do the following:
@@ -452,7 +489,7 @@ To be able to make a local test build, you need to have DocFX installed. DocFX i
 
       > [!NOTE]
       >
-      > - The first three commands are needed to generate the API docs. If you make repeated test builds to check changes you have made, and you are only making changes to markdown files, you can skip these three commands after your first test build.
+      > - The first three commands are needed to generate the API docs. If you make repeated test builds to check changes you have made, and you are only making changes to markdown files, you can skip these three commands after your first build.
       > - This step requires that **.NET 6.0 SDK or higher** is installed on your machine. If this is not installed yet, you will get a build error. You can download the latest version from [dotnet.microsoft.com](https://dotnet.microsoft.com/en-us/download/visual-studio-sdks).
 
    1. In a browser, go to <http://localhost:8080/> to preview the website.
