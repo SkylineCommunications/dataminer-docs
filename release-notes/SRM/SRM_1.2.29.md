@@ -49,7 +49,7 @@ In addition, in case invalid data is provided to the *EngineExtensionMethods.Syn
 
 #### SRMSettableServiceState objects no longer used [ID_34788]
 
-To improve performance, the SRM Framework no longer creates and updates *SRMSettableServiceState* objects during booking execution. Previously, these objects were only used for logging purposes.
+To improve performance, the SRM framework no longer creates and updates *SRMSettableServiceState* objects during booking execution. Previously, these objects were only used for logging purposes.
 
 #### Superfluous ValidateContributingResource method removed [ID_34826]
 
@@ -73,7 +73,7 @@ When a booking is created, either silently or with the Booking Wizard, it is pos
 
 #### SLA improvements [ID_34976]
 
-To prevent possible issues and add several improvements, the SLA implementation in the SRM Framework has been reviewed.
+To prevent possible issues and add several improvements, the SLA implementation in the SRM framework has been reviewed.
 
 - Problems with an SLA element can now no longer cause orchestration to fail.
 - Logging has been improved.

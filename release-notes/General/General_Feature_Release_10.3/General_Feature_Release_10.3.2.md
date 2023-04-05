@@ -14,9 +14,55 @@ uid: General_Feature_Release_10.3.2
 
 ## Features
 
+#### Resource migration to Elasticsearch [ID_33797] [ID_33946] [ID_34105] [ID_34207] [ID_34296] [ID_34522] [ID_34568] [ID_34784] [ID_35067] [ID_35155]
+
+<!-- MR 10.3.0 - FR 10.3.2 -->
+
+It is now possible to migrate the resources and resource pools from the *Resources.xml* file to Elasticsearch. This improves the scalability and performance on systems that have a large number of resources.
+
+To start the migration, you can use the SLNetClientTest tool. The migration app is available under *Advanced* > *Migration*.
+
+> [!WARNING]
+>
+> - Always be extremely careful when using the SLNetClientTest tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
+> - All Resource Manager instances in the cluster will restart during the migration.
+
+> [!TIP]
+> For detailed information on the migration, refer to [Resource migration to Elasticsearch](xref:Resources_migration_to_elastic).
+
+If for any reason the migration fails, you can find information in the ``SLMigrationManager.txt`` and ``SLResourceManager.txt`` log files. In this case, the existing XML setup will continue to be used and the configuration will not switch to Elasticsearch.
+
+Note that there are differences when resources and resource pools are stored in Elasticsearch, as compared to in XML:
+
+- When XML storage is used, it is not possible to remove a resource when one of the DMAs in the cluster cannot be reached, as this could cause syncing issues. No such restrictions apply when Elasticsearch storage is used.
+
+- The following restrictions apply for the properties stored in Elasticsearch:
+
+  - Property names must not start with the character ``_``.
+
+  - Property names must not contain the characters ``.`` (period), ``#`` (hashtag), ``*`` (star), ``,`` (comma), ``"`` (double quote) or ``'`` (single quote).
+
+  - Property names must not be empty or contain only whitespace characters.
+
+  - Property values must not be ``null``.
+
+  > [!NOTE]
+  > If Elasticsearch storage is enabled, and a resource or resource pool with invalid properties is added or updated, the API will return a ``ResourceManagerErrorData`` in the ``TraceData``, with reason ``InvalidCharactersInPropertyNames``.
+
+- Field names in Elasticsearch have a maximum length of 32766 bytes, which means any field of a resource or resource pool indexed in Elasticsearch can only contain 32766 bytes.
+
+  > [!NOTE]
+  > If there is an attempt to save a resource or resource pool with a field that is too big, the API will return an ``UnknownError``. The ``SLResourceManager.txt`` log file will contain the actual exception, which will mention the field that could not be indexed in Elasticsearch.
+
+- When a resource is indexed in Elasticsearch, all its properties, capacities, and capabilities will be indexed as well. This means that each unique property name and unique capacity and capability ID will become a field mapping in Elasticsearch. If there is an unusually large number of capacities, capabilities, and/or property names, this may lead to reduced performance of Elasticsearch. During testing, this was noticed when more than 300 unique field mappings were present.
+
+- If XML storage is used and you subscribe to the *ResourceManagerEventMessage*, you will receive an initial event with all resources and resource pools. This event is not sent when Elasticsearch storage is used, in order to prevent sending a message to the client containing thousands of resources.
+
+- If XML storage is used, all Resource Manager instances in the cluster will sync the resources in their XML file on startup and during the midnight sync. If Elasticsearch storage is used, DataMiner relies on Elasticsearch to do the syncing, so this does not happen during the midnight sync or on startup. However, Resource Manager will refresh the cached resources during the midnight sync by reading all resources and resource pools again from Elasticsearch.
+
 #### Client-server communication: gRPC instead of .NET Remoting [ID_34797] [ID_34983]
 
-<!-- MR 10.4.0 - FR 10.3.2 -->
+<!-- MR 10.3.0 - FR 10.3.2 -->
 
 Up to now, DataMiner clients and servers communicated with each other using the *.NET Remoting* protocol. From now on, they are also able to communicate with each other via an *API Gateway* module using *gRPC* connections, which are much more secure. For example, as to the use of IP ports, *gRPC* uses the standard port 443, whereas *.NET Remoting* uses the non-standard port 8004. Moreover, the *API Gateway* module is able to restart itself during operation and to automatically recover the connections to clients and SLNet.
 
@@ -92,7 +138,7 @@ All DOM objects (DomInstance, DomTemplate, DomDefinition, DomBehaviorDefinition,
 
 #### SLAnalytics - Proactive cap detection: Using alarm templates assigned to DVE child elements [ID_35194]
 
-<!-- MR 10.4.0 - FR 10.3.2 -->
+<!-- MR 10.3.0 - FR 10.3.2 -->
 
 When proactive cap detection was enabled, up to now, in case of DVE elements, the alarm template of the parent would always be used.
 
@@ -236,7 +282,7 @@ Because of a number of enhancements, overall query performance has increased, es
 
 #### SLAnalytics - Behavioral anomaly detection : More accurate change point time ranges [ID_35121]
 
-<!-- MR 10.4.0 - FR 10.3.2 -->
+<!-- MR 10.3.0 - FR 10.3.2 -->
 
 Because of a number of enhancements, behavioral changes of the type "level shift", "trend change" and "variance change" will now have a more accurate time range when the change in behavior is sufficiently clear.
 
@@ -253,14 +299,6 @@ Up to now, a loading skeleton would be displayed each time data was being loaded
 When a web app requests a list of users, the Web Services API will now cache the result set it receives from the server. This will increase overall performance, especially in situations where, up to now, the same list of users had to be retrieved frequently.
 
 This user cache will be cleared each time a change occurs that has security implications (e.g. new users added, user permissions updated, etc.).
-
-#### Enhanced error handling when trying to create resource manager properties with value/key null on Elasticsearch [ID_35155]
-
-<!-- MR 10.3.0 - FR 10.3.2 -->
-
-When an attempt is made to create resource properties, resource definition properties and pool properties with value/key null on a system with an Elasticsearch database, from now on, an `InvalidCharactersInPropertyNames` error listing the names of the properties in question will be added to the Resource Manager log file.
-
-This same fix also fixes the creation and migration of resources of which the property list is null and resource pools of which the property definitions list or properties list is null.
 
 #### DataMiner Object Models: DomInstanceButtonDefinitions can only reference a single action [ID_35156]
 
@@ -340,7 +378,7 @@ The `Clusterstate.xml` file, located in the `C:\Skyline DataMiner` folder, was o
 
 #### SLAnalytics - Pattern matching: When a pattern is detected on a DVE child element the suggestion event will now be generated on that same DVE child element [ID_35264]
 
-<!-- MR 10.4.0 - FR 10.3.2 -->
+<!-- MR 10.3.0 - FR 10.3.2 -->
 
 When a trend pattern was detected on a DVE child element, up to now, the suggestion event would be generated on the parent element. From now on, it will be generated on the child element instead.
 

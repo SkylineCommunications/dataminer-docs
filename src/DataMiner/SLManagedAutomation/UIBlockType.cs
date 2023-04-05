@@ -9,7 +9,7 @@
 	public enum UIBlockType
 	{
 		/// <summary>
-		/// Undefined.
+		/// Used internally.
 		/// </summary>
 		Undefined = 0,
 		/// <summary>
@@ -64,7 +64,7 @@
 		/// </example>
 		Button = 4,
 		/// <summary>
-		/// Variable.
+		/// Used internally.
 		/// </summary>
 		Variable = 5,
 		/// <summary>
@@ -92,7 +92,7 @@
 		/// </example>
 		CheckBox = 7,
 		/// <summary>
-		/// Calender control.
+		/// Calendar control.
 		/// </summary>
 		/// <example>
 		/// <code>
@@ -119,7 +119,7 @@
 		/// </example>
 		Time = 9,
 		/// <summary>
-		/// Global settings.
+		/// Global settings. Used internally.
 		/// </summary>
 		GlobalSettings = 10,
 		/// <summary>
@@ -173,7 +173,7 @@
 		/// </example>
 		Numeric = 12,
 		/// <summary>
-		/// Executable.
+		/// Run client program.
 		/// </summary>
 		Executable = 13,
 		/// <summary>
@@ -194,7 +194,7 @@
 		/// <summary>
 		/// Tree view control.
 		/// </summary>
-		/// <remarks>Available from DataMiner 10.0.10 onwards.</remarks>
+		/// <remarks>Available from DataMiner 10.0.10 onwards. Only supported in web.</remarks>
 		TreeView = 17
 	}
 }

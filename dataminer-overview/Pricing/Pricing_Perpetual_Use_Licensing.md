@@ -48,6 +48,11 @@ In addition to the [standard functions](https://community.dataminer.services/cor
 > [!NOTE]
 > Tier-1 is included by default with volume-based licenses, i.e. System Volume Equipment and Experience and Performance Management.
 
+Please note that while some additional functions may be accessible without a license, full functionality may only be achieved when paired with a licensed function. For example, DataMiner Infrastructure Discovery Provisioning ([IDP](xref:SolIDP)) requires Automation as a minimum, with Process Automation being highly recommended.
+
+> [!WARNING]
+> As of January 2023, the following licenses have been discontinued: SLC-DMS-IDP, SLC-DMS-IAM, SLC-DMS-TCK, SLC-DMS-JBM, SLC-DMS-PLM, SLC-DMS-PCK-2, and SLC-DMS-PCK-1. DataMiner Systems with an active support including only the SLC-DMS-PCK-1 license have been upgraded to Tier-1, while those with a combination of SLC-DMS-PCK-1 and any other license from the above have been upgraded to Tier-2.
+
 ## Data sources
 
 DataMiner connectors are used to interface a DataMiner System with a specific object, i.e. a product or platform from any vendor. One connector license is required for each object type managed by a DataMiner System.
@@ -76,7 +81,7 @@ This product is licensed per DataMiner System, based on the maximum number of co
 > Not sure if your orchestration use case requires SRM licenses? Consult the [Service & Resource Management](https://community.dataminer.services/service-resource-management/) page on DataMiner Dojo.
 
 > [!TIP]
-> For more information, see [Service & Resource Management Framework](xref:srm_index)
+> For more information, see [Service & Resource Management Framework](xref:About_SRM)
 
 ### Spectrum Analysis
 
@@ -88,7 +93,7 @@ The [SLA Manager App](https://community.dataminer.services/business-intelligence
 
 ### Custom apps
 
-In addition to the standard core DataMiner licenses, which allow anybody to design, build, and deploy comprehensive multi-vendor end-to-end network management and orchestration solutions, you can also opt to license custom, purpose-built DataMiner applications from Skyline Communications.
+In addition to the standard core DataMiner licenses, which allow anybody to design, build, and deploy comprehensive multi-vendor end-to-end network management and orchestration solutions, you can also opt to license custom, purpose-built DataMiner applications from Skyline Communications, such as the [DataMiner PTP app](xref:SolPTP).
 
 ### Staging
 

@@ -11,13 +11,16 @@ uid: Part1GettingStarted
 - [Accessing DataMiner](xref:DataminerApplications)
 - [The DataMiner user interface](xref:GettingStarted)
 
+> [!NOTE]
+> For detailed installation information, see [Installing a DataMiner Agent](xref:Installing_a_DataMiner_Agent).
+
 ### Discover DataMiner in detail
 
 - [Basic DataMiner functionality](xref:Part2BasicFunctionalities)
 
-### Find out all about the Cloud Platform
+### Find out all about dataminer.services
 
-- [DataMiner Cloud Platform](xref:Part51CloudPlatform)
+- [dataminer.services](xref:AboutCloudPlatform)
 
 ### More on specific DataMiner modules, apps, etc.
 

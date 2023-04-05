@@ -46,10 +46,12 @@ Enables behavioral anomaly detection and suggestion events. See [Behavioral anom
 
 ### APIDeployment
 
+> [!NOTE]
+> Deprecated. This feature is replaced by the [UserDefinableAPI](#userdefinableapi) feature.
+
 Enables dynamic API deployment on the SLAPIEndpoint application.
 
-> [!NOTE]
-> Requires the .NET 5.0 hosting bundle.
+Requires the .NET 5.0 hosting bundle.
 
 - **Minimum version**: 10.1.6
 
@@ -78,7 +80,7 @@ Allows you to set up the [Cassandra cluster](xref:Migrating_the_general_database
 
 ### CloudConnectedAgents
 
-Enables cloud-connected Agents and allows you to [connect to the cloud](xref:Connecting_your_DataMiner_System_to_the_cloud).
+Makes it possible to [connect the DataMiner System to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud).
 
 - **Minimum version**: 10.1.2
 - **Release version**: 10.1.9
@@ -153,6 +155,7 @@ Provides access to additional data sources and operators for GQI in the Dashboar
 >
 > - The DCF connections GQI data source (available from DataMiner 10.1.6 onwards).
 > - The "Sort" operator (available from DataMiner 10.2.11/10.3.0 onwards).
+> - The trend data patterns, trend data pattern events, and behavioral change events data sources (available from DataMiner 10.3.3/10.4.0 onwards).
 
 - **Minimum version**: 10.0.13
 
@@ -256,12 +259,24 @@ Enables the button panel component in the Dashboards app.
 
 - **Minimum version**: 10.0.3
 
+### ReportsAndDashboardsDynamicVisuals
+
+Enables the grid component in the Dashboards app.
+
+- **Minimum version**: 10.2.12
+
 ### ReportsAndDashboardsExport
 
 Enables the export to PDF button within the Dashboards app itself. Creating PDFs of dashboards is possible outside the app (e.g. via DataMiner Scheduler) without this soft-launch option.
 
 - **Minimum version**: 9.6.4
 - **Release version**: 10.2.12/10.3.0
+
+### ReportsAndDashboardsGQIMaps
+
+Enables a new Maps component in the Dashboards app and the Low-Code Apps.
+
+- **Minimum version**: 10.3.2
 
 ### ReportsAndDashboardsGuides
 
@@ -330,3 +345,9 @@ Enables the new VisualDataHelper.
 Uses an embedded web browser for Automation script execution instead of the native Cube pop-up window.
 
 - **Minimum version**: 10.1.4
+
+### UserDefinableAPI
+
+Enables the Cube UI for [User-Defined APIs](xref:UD_APIs).
+
+- **Minimum version**: 10.3.5

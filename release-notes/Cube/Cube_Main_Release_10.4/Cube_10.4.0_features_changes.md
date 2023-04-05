@@ -138,11 +138,47 @@ The following information can be displayed:
 #ErrorAlarms
 ```
 
+#### Visual Overview - ListView component: New component option 'SingleSelectionMode' [ID_35320]
+
+<!-- MR 10.4.0 - FR 10.3.4 -->
+
+By default, you can select multiple rows in a list view (e.g. using the CTRL or SHIFT key). With the new component option *SingleSelectionMode*, you can now set the selection mode of a list view to single instead, so that only one row can be selected at a time.
+
+#### Visual Overview: Re-arranging grouped shapes [ID_35323]
+
+<!-- MR 10.4.0 - FR 10.3.4 -->
+
+When, in a Visio drawing, shapes had been positioned dynamically based on properties, up to now, it was possible to re-arrange individual shapes manually. From now on, it will also be possible to re-arrange grouped shapes.
+
 #### System Center: New DataMiner log file 'SLSmartBaselineManager.txt' [ID_35352]
 
 <!-- MR 10.4.0 - FR 10.3.3 -->
 
 In the *Logging* section of *System Center*, you can now also consult the *SLSmartBaselineManager.txt* log file.
+
+#### Embedded web apps can now interact with Cube when using the Microsoft Edge (WebView2) browser plugin [ID_35655]
+
+<!-- MR 10.4.0 - FR 10.3.4 -->
+
+From now on, when using the Microsoft Edge (WebView2) web browser plugin, embedded web apps can interact with Cube (e.g. open an element card).
+
+#### Users no longer have to log in to embedded low-code apps [ID_35657]
+
+<!-- MR 10.4.0 - FR 10.3.4 -->
+
+When a low-code app was embedded in Cube (e.g. in a visual overview), up to now, users had to explicitly log in to that app. From now on, Cube will automatically pass the authentication ticket to the low-code app, allowing users to access the app without having to log in again.
+
+#### Search box in Cube header can now be hidden [ID_35826]
+
+<!-- MR 10.4.0 - FR 10.3.5 -->
+
+It is now possible to either show or hide the search box in the middle of the Cube header bar.
+
+1. Open the *Settings* app.
+1. Go to *Cube* > *Cube header*.
+1. Select or clear the *Display search box in header* option, and click *Apply*.
+
+Alternatively, you can also open the quick menu in the Cube header, and toggle the *Show search box* option.
 
 ## Changes
 
@@ -158,7 +194,7 @@ The *automatic incident tracking* feature groups active alarms that are related 
 
 <!-- MR 10.4.0 - FR 10.3.1 -->
 
-A number of enhancements have been made to the parameter relationship feature. When you hover over a light bulb icon in the top-right corner of a trend graph, a tooltip will now appear. This tooltip will suggest you add a number of related parameters and will indicate that the parameter relationship feature is still in preview. Also, when you open a histogram, no light bulb icon will be displayed anymore as parameter relationships are not really relevant when viewing histograms.
+A number of enhancements have been made to the parameter relationship feature. When you hover over a light bulb icon in the top-right corner of a trend graph, a tooltip will now appear. This tooltip will suggest you add a number of related parameters. Also, when you open a histogram, no light bulb icon will be displayed anymore as parameter relationships are not really relevant when viewing histograms.
 
 #### Trending - pattern matching: Enhanced feedback when creating a trend pattern tag failed [ID_34963]
 
@@ -176,13 +212,29 @@ Failed to save your tag. A tag time range was selected for which not all trend d
 Failed to save your tag. The defined patterns cannot be linked into the multivariate pattern. Consider adjusting its configuration and try again.
 ```
 
-#### Trending - pattern matching: A slightly larger number of missing values will now be allowed when you create a trend pattern tag [ID_35376]
+#### Trending - Pattern matching: A slightly larger number of missing values will now be allowed when you create a trend pattern tag [ID_35376]
 
 <!-- MR 10.4.0 - FR 10.3.3 -->
 
 When you try to create a trend pattern tag, an error message will appear when there are too many missing values in the selected pattern.
 
 From now on, a slightly larger number of missing values will be allowed will you create a trend pattern tag.
+
+#### Trending: Check marks will no longer appear in front of related parameters after adding them to the trend graph [ID_35518]
+
+<!-- MR 10.4.0 - FR 10.3.3 -->
+
+In the top-right corner of a trend graph, a light bulb icon appears when DataMiner finds parameters that are related to the parameters shown in the trend graph. Clicking this light bulb icon allows you to add one or more of those related parameters to the trend graph you are viewing.
+
+Up to now, when you clicked one of those related parameters in order to add it to the trend graph, a check mark would appear in front of it. From now on, check marks will no longer appear in front of related parameters after selecting them.
+
+#### Automation script editor: Intellisense added for timeUpDownConfig.ShowTimeUnits [ID_35672]
+
+<!-- MR 10.4.0 - FR 10.3.4 -->
+
+In the Automation script editor, Intellisense has been added for the new `timeUpDownConfig.ShowTimeUnits` property.
+
+This property is only applied in interactive Automation scripts that are launched from a web app.
 
 ### Fixes
 
@@ -204,16 +256,20 @@ In some rare cases, conditional shape manipulation actions (e.g. Show, Hide, Rot
 
 When, in a Visio drawing, shapes have been positioned dynamically based on properties, you can re-arrange those shapes manually by switching to *Arrange* mode and re-arranging the shapes using drag-and-drop. In some rare cases, it would no longer be possible to drag shapes to another location.
 
-#### Trending: Pattern matching tags could incorrectly be defined for discrete or string parameters [ID_35368]
+#### Alarm Console: When you clicked a suggestion alarm, the change points and patterns would incorrectly not be loaded [ID_35497]
 
 <!-- MR 10.4.0 - FR 10.3.3 -->
 
-Pattern matching does not support discrete or string parameters. However, up to now, when viewing a trend graph that showed trend information for either a discrete or a string parameter, it would incorrectly be possible to define tags for pattern matching. From now on, this will no longer be possible.
+When you clicked a suggestion alarm, in some cases, the trend graph would be loaded but the change points and the patterns incorrectly would not.
 
-#### Trending: Tag icon was displayed after you selected a section of a trend graph even though it was not possible to define tags [ID_35378] [ID_35383]
+#### No longer possible to configure a PDF report generated based on a dashboard [ID_35874]
 
-<!-- MR 10.4.0 - FR 10.3.3 -->
+<!-- MR 10.4.0 - FR 10.3.4 [CU0] -->
 
-In some cases, when the pattern matching feature was not enabled in *System Center* > *System settings* > *analytics config*, the tag icon was displayed after you selected a section of a trend graph even though it was not actually possible to define tags.
+When, in the *Automation*, *Correlation* and *Scheduler* modules, you generated a PDF report based on a dashboard, it would incorrectly no longer be possible to click the *Configure* button to configure that report.
 
-From now on, Cube will check whether the pattern matching feature is enabled each time you open a trend graph.
+#### Alarm Console: Suggestion event would not be removed from the suggestion events tab after being promoted to alarm event [ID_35949]
+
+<!-- MR 10.4.0 - FR 10.3.5 -->
+
+When, in an alarm template, a suggestion event was promoted to an alarm event, it would correctly appear in the active alarms tab but it would incorrectly not be removed from the suggestion events tab.

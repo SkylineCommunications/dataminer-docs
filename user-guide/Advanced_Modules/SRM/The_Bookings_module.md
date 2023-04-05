@@ -49,9 +49,12 @@ The timeline area of the *Bookings* module can be used as follows:
 
      This panel allows the following actions:
 
+     - To change the time zone for the timeline, in the lower right corner, select a different *Time zone*.
+
      - To make the timeline move along with the current time, in the lower left corner, select *Follow mode*. This option is also available via the timeline context menu.
 
-     - To change the time zone for the timeline, in the lower right corner, select a different *Time zone*.
+       > [!NOTE]
+       > When you navigate away from the line that represents now while follow mode is enabled, follow mode will temporarily be paused. As soon as you navigate back in view of the line that represents now, follow mode will be activated again.
 
 #### [Prior to DataMiner 10.3.0/10.3.1](#tab/tabid-2)
 
@@ -63,8 +66,11 @@ The timeline area of the *Bookings* module can be used as follows:
 
      This panel allows the following actions:
 
+     - To change the time zone for the timeline, in the lower right corner, select a different *Time zone*.
+
      - To make the timeline move along with the current time, in the lower left corner, select *Follow mode*. This option is also available via the timeline context menu.
 
-     - To change the time zone for the timeline, in the lower right corner, select a different *Time zone*.
+       > [!NOTE]
+       > When you navigate away from the line that represents now while follow mode is enabled, follow mode will temporarily be paused. As soon as you navigate back in view of the line that represents now, follow mode will be activated again.
 
 ***

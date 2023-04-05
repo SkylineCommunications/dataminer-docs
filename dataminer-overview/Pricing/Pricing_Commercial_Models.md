@@ -42,8 +42,8 @@ When ready to scale up, the user can set up a yearly subscription or start with 
 
 > [!NOTE]
 >
-> - Self-hosted/on-premises free DataMiner Systems are not time-limited. An organization can use the system as long as it remains reachable (with DataMiner Cloud Services enabled).
-> - Skyline-hosted free DataMiner Systems (DataMiner as a Service) are only available for a maximum period of 30 days. Contact your Account Manager for details.
+> - Self-hosted/on-premises free DataMiner Systems are not time-limited. An organization can use the system as long as it remains reachable (connected to dataminer.services).
+> - Free Skyline-hosted DataMiner Systems (SaaS) are limited to a maximum of 30 days. Note that these are not yet publicly available. Contact your Account Manager for details.
 
 ## DataMiner Perpetual-Use Licenses vs Usage-based services
 
@@ -54,13 +54,18 @@ Usage-based services are charged based on the actual monthly usage of services, 
 |         | Perpetual licensing scheme | Usage-based services |
 |---------|----------------------------|----------------------|
 | System capacity | Server-based licenses, each with fixed capacity tiers of managed objects: 5, 10, 25, 50, 100, 250, 500 , 1000. | Volume-based, per managed object or monitored metric per month. Independent from the number of nodes deployed. |
-| Failover | Server-based license | Included. Users can deploy additional nodes for Failover without paying additional fees since billing is based on the active number of managed objects or monitored metrics in a month. |
-| Optional functions | Licensed per node: Correlation and Automation engines, Dashboard app, No-Code Apps, Low-Code Apps, Process Automation, DataMiner Object Models (DOM), and Spectrum Analysis | Not applicable. All optional modules are included. |
+| Failover | Server-based license. | Included. Users can deploy additional nodes for Failover without paying additional fees since billing is based on the active number of managed objects or monitored metrics in a month. |
+| Optional functions | Licensed per node: Correlation and Automation engines, Dashboard app, No-Code Apps, Low-Code Apps, Process Automation, DataMiner Object Models (DOM), and Spectrum Analysis. | Not applicable. All optional modules are included. |
 | Automation & orchestration | Based on the volume of concurrent services running. | Based on the volume of script runs. |
-| Connectors | Connector license per different, interfaced product | Per connector per month |
-| Sample applications | Included | Included |
-| Cloud services | [Tier-based](https://community.dataminer.services/dataminer-cloud-platform-services/) | Usage-based |
-| Support services | Optional annual recurring fee, relative to the value of the deployed Perpetual-Use Licenses. | Included (see [DataMiner Support Plans](https://community.dataminer.services/support-services/)) |
+| Connectors | Single connector license fee for new and existing connectors. One connector license per different, interfaced product, per DataMiner System (DMS). | Charged per connector used per month. |
+| Custom applications (e.g. PTP app) | Licensed per app. | Charged as engineering services. |
+| Sample applications | Included. | Included. |
+| Cloud services | [Tier-based](https://community.dataminer.services/dataminer-cloud-platform-services/). | Usage-based. |
+| Support services | Optional annual recurring fee, relative to the value of the deployed Perpetual-Use Licenses. | Included (see [DataMiner Support Plans](https://community.dataminer.services/support-services/)). |
+| DataMiner Probes | Server-based licenses, each with fixed capacity tiers of managed objects.  | N/A |
+
+> [!NOTE]
+> DataMiner Probes (DMP) are not clustered with a DataMiner System, which means perpetual-licensed DMPs can be used to bring data from remote locations to a DataMiner System running as a usage-based service.
 
 ## Subscription Plan vs Pay-per-Use Plan
 
@@ -74,12 +79,12 @@ In case of a Pay-per-Use plan, user pay for what they use, giving ultimate flexi
 |-----------|:-------------------:|:-------------:|
 | Monthly utilization and metering | The user subscribes to a **fixed number of credits** per month (Monthly Utilization Allowance - MUA) that can be used towards any combination of services throughout the month within the contracted MUA. | The user sets an allowance that can be freely used in any combination of services. Usage is metered on a monthly basis and deducted from the allowance, allowing for **variable usage** patterns. |
 | Roll-over credits | Unused credits do not roll to the next month. | Unused credits expire 12 months from the start date. |
-| Minimum contract duration | 12 months | - |
-| Automatic renewal | X | - |
-| Annual subscription fee | X | - |
-| Over-utilization | Charged at a premium fee | - |
+| Minimum contract duration | 12 months | N/A |
+| Annual automatic renewal | Yes | N/A |
+| Annual subscription fee | Yes | N/A |
+| Over-utilization | Charged at a premium fee | N/A |
+| New connector development | MUA < 200: charged as professional services credits <br> MUA >= 200: included with no additional costs, subject to a fair use policy  |  N/A |
 | Support services | MUA < 200: Community Plan <br> MUA >= 200: Continuity/Evolve | Community Plan|
-| Professional Services credits included |  100 < MUA < 200: 100 <br> 200 < MUA < 400: 200 <br> MUA >= 400: 600 | 50 for every 1000 pay-per-use credits |
 
 > [!IMPORTANT]
-> The system must have DataMiner Cloud Services enabled in order to enable metering for systems that are hosted by the user (on-premises or private cloud). The system will stop working if disconnected for longer than 24 hours.
+> The system must be connected to dataminer.services in order to enable metering for systems that are hosted by the user (on-premises or private cloud). The system will stop working if disconnected for longer than 24 hours.

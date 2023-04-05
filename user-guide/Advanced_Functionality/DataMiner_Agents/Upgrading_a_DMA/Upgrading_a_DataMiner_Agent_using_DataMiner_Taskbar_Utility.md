@@ -19,12 +19,17 @@ If you intend to upgrade your entire DataMiner System (i.e. all DMAs in the clus
 
 Proceed as follows to upgrade your DataMiner Agent(s) to the latest version:
 
+> [!NOTE]
+> You can also double-click an upgrade package that has been saved in a temporary folder on one of your DataMiner Agents, and then proceed with the procedure from step 3.
+
 1. In the Windows taskbar, right-click the DataMiner Taskbar Utility icon and click *Upgrade*.
 
 1. To the right of the *Package* box, click the ellipsis button ("...") and select the DataMiner upgrade package (extension *.dmupgrade*).
 
    > [!NOTE]
-   > From DataMiner 10.0.0 CU20, 10.1.0 CU9, and 10.1.12 onwards, if your system does not meet the prerequisites for a specific upgrade version, the upgrade package will not be accepted as a valid package.
+   >
+   > - From DataMiner 10.0.0 CU20, 10.1.0 CU9, and 10.1.12 onwards, if your system does not meet the prerequisites for a specific upgrade version, the upgrade package will not be accepted as a valid package.
+   > - From DataMiner 10.3.0/10.3.3 onwards, you can upgrade the DataMiner web apps separately from the core software, by means of a package available on the [DataMiner Software](https://community.dataminer.services/downloads/) page. However, note that when you install a full upgrade package, this will replace any previous web apps upgrade.
 
 1. If you want to upgrade a different Agent than suggested next to *Agents to upgrade*, click *Change* and select the DataMiner Agents that have to be upgraded.
 
@@ -68,6 +73,3 @@ Proceed as follows to upgrade your DataMiner Agent(s) to the latest version:
 1. Wait until the upgrade has finished. This can take several minutes, depending on the network properties, the type of upgrade, and the size and complexity of your DataMiner System.
 
 1. When all DataMiner Agents have successfully been upgraded, click *Finished*.
-
-> [!NOTE]
-> Alternatively, you can also double-click an upgrade package that has been saved in a temporary folder on one of your DataMiner Agents, and then proceed with the procedure above from step 3.

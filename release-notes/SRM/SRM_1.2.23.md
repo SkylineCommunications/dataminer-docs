@@ -27,7 +27,7 @@ When the initial configuration is applied to a resource, parameter values set on
 
 #### Additional validation of input \[ID_32185\]
 
-Additional validation has been added in the SRM Framework to avoid situations where invalid input is implemented.
+Additional validation has been added in the SRM framework to avoid situations where invalid input is implemented.
 
 #### Default Booking Logging Date Time Format updated \[ID_32405\]
 

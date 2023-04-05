@@ -73,6 +73,7 @@ uid: glossary_a_to_l
 | Capacity | Used in the context of DataMiner SRM as the measurable availability instances of a resource. For example, if the maximum capacity of a resource is 10 units, no more than 10 units can be scheduled at the same time in the system.<br>See [Service and Resource Management](xref:SRM). |
 | Card | A window within DataMiner Cube and the DataMiner Monitoring app. |
 | Cassandra | Apache Cassandra is an open-source, high-performance, distributed, NoSQL database system designed to handle large amounts of data. It can be used as the general database for a DMA from DataMiner 9.0 onwards. |
+| CCA  | Cloud-Connected Agents. DataMiner Agents connected to [dataminer.services](xref:AboutCloudPlatform). |
 | CCAP | Converged Cable Access Platform. Platform combining the functionality of a CMTS with that of an edge QAM, providing high-density services to cable subscribers. |
 | CCU | Camera Control Unit. Device used to monitor and control camera functions, for example in live video broadcasting. |
 | CDN | Content Delivery Network. Network of servers in different locations that work together to allow fast delivery of internet content. |
@@ -123,23 +124,24 @@ uid: glossary_a_to_l
 | DataMiner Catalog | Central repository for components that can facilitate and accelerate the use of DataMiner, including the complete connector database.<br>See [DataMiner Catalog](xref:Catalog#dataminer-catalog). |
 | DataMiner Certification Program | Program that allows you to test your DataMiner knowledge and skills and prove your expertise with our official certificates. |
 | DataMiner Client | An entity communicating with a DataMiner Agent. The term is mostly used to denote a client application that allows users to interact with the DataMiner Agent. |
-| DataMiner Cloud Platform | Online platform with information related to the DataMiner software and DataMiner projects. Includes software downloads, release notes, etc. Abbreviated as DCP. See <https://dataminer.services/>. |
+| DataMiner Cloud Platform | Online platform with information related to the DataMiner software and DataMiner projects. Includes software downloads, release notes, etc. Abbreviated as DCP. See [dataminer.services](xref:AboutCloudPlatform). |
 | DataMiner Comparison tool | Web application that allows you to compare the values of two string parameters.<br>See [DataMiner Comparison tool](xref:DataMinerComparisonTool). |
 | DataMiner Connectivity Framework | Framework used to manage element connectivity, e.g. to configure and visualize signal paths within an infrastructure. Abbreviated as DCF.<br>See [DataMiner Connectivity Framework](xref:DCF#dataminer-connectivity-framework). |
 | DataMiner Cube | The main client application used to connect to a DMA. Exists both as a desktop app and a browser app. |
 | DataMiner Dojo | Community website where both people from the Skyline community, and people from the worldwide DataMiner community exchange experiences and knowledge, both about DataMiner and about general hot topics in the ICT, broadband and media industry.<br>See [DataMiner Community](xref:Community#dataminer-community). |
 | DataMiner Driver | An XML file that allows a DMA to communicate with a data source in the system. Also known as connector or protocol.<br>See [Protocols](xref:Protocols1#protocols). |
 | DataMiner ID | The unique ID of a DataMiner Agent. |
-| DataMiner Live Data Sharing Service | Cloud service that allows DataMiner users to share specific live operational data with third parties.<br>See [DataMiner Sharing](xref:Sharing#dataminer-sharing). |
+| DataMiner Live Data Sharing Service | Service included in dataminer.services that allows DataMiner users to share specific live operational data with third parties.<br>See [DataMiner Sharing](xref:Sharing#dataminer-sharing). |
 | DataMiner package | Archive file that contains all the files necessary to make a modification to a DataMiner System, for example to upgrade, downgrade or restore a DataMiner Agent, or to install a DataMiner app or DataMiner protocol.<br>See [DataMiner packages](xref:DataMiner_packages). |
 | DataMiner Project Collaboration | Online platform to manage projects and professional services ordered from Skyline, allowing easy and efficient collaboration with Skyline's deploy and create squads. [Project Collaboration](xref:Collaboration#project-collaboration). |
+| dataMiner.services | Online platform that provides many additional services related to the DataMiner software and DataMiner projects. See [dataminer.services](xref:AboutCloudPlatform). |
 | DataMiner System | One or more DMAs, integrated into one cluster via an IP network. Abbreviated as DMS. |
 | DataMiner Taskbar Utility | System tray application on a DataMiner Agent that can be used to manage the Agent.<br>See [DataMiner Taskbar Utility](xref:DataMiner_Taskbar_Utility). |
 | DB | Database. |
 | DBS | Direct Broadcast Satellite. Broadcasting transmissions where end users receive signals directly from geostationary satellites. |
 | DCF | DataMiner Connectivity Framework. Framework used to manage element connectivity, e.g. to configure and visualize signal paths within an infrastructure.<br>See [DataMiner Connectivity Framework](xref:DCF#dataminer-connectivity-framework). |
 | DCL | DataMiner Class Library. |
-| DCP | DataMiner Cloud Platform. Online platform with information related to the DataMiner software and DataMiner projects. Includes software downloads, release notes, etc. See <https://dataminer.services/>. |
+| DCP | DataMiner Cloud Platform. Online platform with information related to the DataMiner software and DataMiner projects. Includes software downloads, release notes, etc. See [dataminer.services](xref:AboutCloudPlatform). |
 | DELT | DataMiner Element Location Transparency. DataMiner feature that allows the exporting and importing of packages and the migration of elements across DMAs in a cluster. |
 | DIS | DataMiner Integration Studio. Microsoft Visual Studio extension that turns Visual Studio into a DataMiner protocol IDE. |
 | Discovery identifier | Identifier used by DataMiner IDP in order to specify how a CI Type can be identified. Consists of a link to a discovery action, a match condition and a value, e.g. "*sysDescr contains JUNOS*". Multiple discovery identifiers can be combined in a CI Type with AND, OR and NOT statements.<br>See [CI Types](xref:CI_Types) |
@@ -177,7 +179,7 @@ uid: glossary_a_to_l
 | Eb/No | Energy per Bit (Eb) to Noise Density (No) ratio. Measure of signal-to-noise ratio for a digital communication system. |
 | Edge QAM | Headend or hub device that receives packets of digital video or data. It repacketizes the video or data into an MPEG transport stream and digitally modulates the digital transport stream onto a downstream RF carrier using quadrature amplitude modulation (QAM). |
 | EIGRP | Enhanced Interior Gateway Routing Protocol. Advanced routing protocol used to automate routing decisions and configuration in a network. |
-| ElasticSearch | Open-source search and analytics engine, used as the DataMiner Indexing database.<br>See [Elasticsearch database](xref:Elasticsearch_database). |
+| Elasticsearch | Open-source search and analytics engine, used as the DataMiner Indexing database.<br>See [Elasticsearch database](xref:Elasticsearch_database). |
 | Element | A DataMiner object that usually represents a device monitored by the DataMiner System.<br>See [Elements](xref:elements). |
 | Element Connections | DataMiner module used to configure virtual elements. Not to be confused with connections in the context of the DataMiner Connectivity Framework.<br>See [Configuring virtual elements with the Element Connections module](xref:Virtual_elements#configuring-virtual-elements-with-the-element-connections-module). |
 | Element Display | Deprecated client application that was used in conjunction with System Display to view element-specific data. |
@@ -215,10 +217,11 @@ uid: glossary_a_to_l
 | Term | Description |
 |------|-------------|
 | G.fast | DSL (Digital Subscriber Line) protocol standard for local loops shorter than 500 m, with performance targets between 150 Mbit/s and 1 Gbit/s. |
-| General database | Dedicated database for a DataMiner Agent, which contains among others alarm and trend information. By default, a Cassandra database is used. A MySQL or MSSQL database is also supported. |
+| General database | Dedicated database for a DataMiner Agent, which contains among others alarm and trend information. By default, a Cassandra database is used. A MySQL database is also supported. MSSQL is only supported prior to DataMiner 10.3.0.. |
 | Global constant | Fixed variable used in spectrum scripts.<br>See [Using global constants](xref:Working_with_spectrum_scripts#using-global-constants). |
 | GOTS | Government Off-The-Shelf. Term used for off-the shelf products that are created and owned by a government agency. |
 | GPIB | General Purpose Interface Bus. IEEE-488 interface used to connect sensors and programmable instruments to a computer or to other instruments. |
+| GQI | Generic Query Interface. A special type of data feed for DataMiner Dashboards and Low-Code Apps. See [Configuring GQI feeds](xref:Configuring_GQI_feeds). |
 | Grandmaster clock | Device from which the time is retrieved in a PTP environment.<br>See [DataMiner PTP app](xref:SolPTP#dataminer-ptp-app). |
 
 ## H
@@ -294,7 +297,7 @@ uid: glossary_a_to_l
 | Lite mode | A mode in DataMiner Cube that displays parameters in a customizable, more compact way.<br>See [Working with Lite parameters](xref:Working_with_Lite_parameters). |
 | LNA | Low-Noise Amplifier. Electronic device that amplifies a very low-power signal without significantly degrading its signal-to-noise ratio. |
 | LNB | Low-Noise Block downconverter. Device mounted on a satellite dish that receives radio signals from a satellite and converts them to signals that are sent to an indoor receiver via a cable. |
-| Local database | Alternative name for the general database, especially used for older DataMiner versions. This is a dedicated database for one DataMiner Agent, which contains among others alarm and trend information. By default, a Cassandra database is used. A MySQL or MSSQL database is also supported. |
+| Local database | Alternative name for the general database, especially used for older DataMiner versions. This is a dedicated database for one DataMiner Agent, which contains among others alarm and trend information. By default, a Cassandra database is used. A MySQL database is also supported. MSSQL is only supported prior to DataMiner 10.3.0. |
 | Log level | Degree of detail at which information is logged. The higher the log level, the more information is included in the log file. |
 | Logger table | Table that is not stored in memory, but directly in the database. |
 | LSO | Life cycle Service Orchestration. In the context of DataMiner SRM, this is the service life cycle behavior defined in the service definition. Transitions in the service life cycle are executed by the DataMiner Automation scripts that are referred to in the service definition. |

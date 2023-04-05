@@ -28,18 +28,18 @@ To configure this setup:
    <DatabaseConfiguration>
     <SearchConfiguration>
     <ElasticConnections>
-    <!- Reads will be handled by the ElasticCluster with the lowest priorityOrder -->
+    <!-- Reads will be handled by the ElasticCluster with the lowest priorityOrder -->
     <ElasticCluster priorityOrder="0">
     <Hosts>localhost</Hosts>
     <Username />
     <Password>root</Password>
-   <!-
+   <!--
     Prefix corresponds with the DB tag in DB.xml.
     The content of the Prefix tag gets prefixed to the names
    of the aliases and indices created by DataMiner.
     -->
     <Prefix>dms</Prefix>
-    <!-
+    <!--
     Used by file offload (i.e. when the connection with the Elastic cluster is not
     available) for tagging the offloaded data with.
    Should be different for each defined Elastic cluster connection.

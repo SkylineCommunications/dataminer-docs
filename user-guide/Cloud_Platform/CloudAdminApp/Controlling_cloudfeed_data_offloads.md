@@ -4,9 +4,9 @@ uid: Controlling_cloudfeed_data_offloads
 
 # Controlling cloud feed data offloads
 
-When a DMS is connected to the DataMiner Cloud Platform, it will start offloading alarm and change point events to the cloud. This data will then be used to improve DataMiner Analytics features.
+When a DMS is connected to dataminer.services, it will start offloading alarm and change point events to the cloud. This data will then be used to improve DataMiner Analytics features.
 
-If you have the Owner or Admin role on DCP, you can enable or disable these offloads.
+If you have the Owner or Admin role on dataminer.services, you can enable or disable these offloads.
 
 To do so:
 

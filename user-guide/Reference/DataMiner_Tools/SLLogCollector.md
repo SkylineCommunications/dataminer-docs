@@ -4,14 +4,16 @@ uid: SLLogCollector
 
 # SLLogCollector
 
-SLLogCollector is a tool that can be used to easily collect log information and memory dumps from a DataMiner Agent. It can be very useful to troubleshoot issues in DataMiner.
+SLLogCollector is a tool that can be used to easily collect log information and memory dumps from a DataMiner Agent. Log collection can be very useful to troubleshoot issues in DataMiner.
 
-This tool is available on every DMA from DataMiner 10.0.5 onwards. It is located in the folder `C:\Skyline DataMiner\Tools\SLLogCollector`.
+This log collector tool is available on every DMA from DataMiner 10.0.5 onwards. It is located in the folder `C:\Skyline DataMiner\Tools\SLLogCollector`.
 
 From DataMiner 9.6.0 \[CU23\], 10.0.0 \[CU13\], 10.1.0 \[CU2\] and 10.1.5 onwards, you can also access SLLogCollector from the shortcut menu of the [DataMiner Taskbar Utility](xref:DataMiner_Taskbar_Utility). To do so, right-click the taskbar utility icon and select *Launch* > *Tools* > *Log Collector.*
 
 > [!NOTE]
-> This tool requires .Net Framework 4.6 or higher.
+>
+> - This tool requires .Net Framework 4.6 or higher.
+> - If our tech support team has requested that you run this tool, they will also provide a link to a secure SharePoint site where you can upload the resulting package. 
 
 ## Running the tool
 
@@ -45,6 +47,9 @@ To use the SLLogCollector tool:
 
 1. To view information on the actions of the tool, expand the *Console* section at the bottom of the window. For more detailed information, click the *Show detailed log* button.
 
+> [!NOTE]
+> From DataMiner 10.3.3/10.4.0 onwards, each time the *SLLogCollector* tool is run, it will order the [*Standalone BPA Executor* tool](xref:Standalone_BPA_Executor) to execute all BPA tests available in the system. The files containing the test results will have names using the `<BPA Name>_<Date(yyyy-MM-dd_HH)>` format and can be found in the `C:\Skyline DataMiner\Logging\WatchDog\Reports\Pending Reports` folder. <!-- RN 35436 -->
+
 ## Running the tool via command line
 
 From DataMiner 10.1.11/10.2.0 onwards, you can also run the tool via command line, using the options listed below.
@@ -63,6 +68,9 @@ For example:
 SL_LogCollector.exe -c -d=25784,2319
 SL_LogCollector.exe -c -h
 ```
+
+> [!NOTE]
+> From DataMiner 10.3.3/10.4.0 onwards, each time the *SLLogCollector* tool is run, it will order the [*Standalone BPA Executor* tool](xref:Standalone_BPA_Executor) to execute all BPA tests available in the system. The files containing the test results will have names using the `<BPA Name>_<Date(yyyy-MM-dd_HH)>` format and can be found in the `C:\Skyline DataMiner\Logging\WatchDog\Reports\Pending Reports` folder. <!-- RN 35436 -->
 
 ## Using a custom CollectorConfig XML file
 

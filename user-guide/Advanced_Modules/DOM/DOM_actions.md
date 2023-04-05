@@ -115,6 +115,7 @@ Flow:
 >
 > - Scripts marked as interactive will always be executed asynchronously. The value of the *Async* property on the `ExecuteScriptDomActionDefinition` will be ignored.
 > - Since the script is executed asynchronously and the execution call therefore returns before the script is actually running, the `TraceData` will not contain the script output or errors that occur during the script.
+> - Executing an IAS by using the DOM actions is supported in the Low-Code Apps from DataMiner 10.3.3/10.4.0 onwards. <!-- RN 35226 -->
 
 ## Executing an action
 

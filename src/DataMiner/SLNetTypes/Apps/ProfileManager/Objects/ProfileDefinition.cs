@@ -5,10 +5,6 @@ using Skyline.DataMiner.Net.Messages.SLDataGateway;
 
 using System;
 using System.Collections.Generic;
-#if NETFRAMEWORK
-using System.Drawing.Design;
-using Skyline.DataMiner.Net.Editors;
-#endif
 using System.Runtime.Serialization;
 using System.Xml.Serialization;
 
@@ -96,9 +92,9 @@ namespace Skyline.DataMiner.Net.Profiles
 	/// </code>
 	/// </example>
 	[Serializable]
-#if NETFRAMEWORK
-    [Editor(typeof(ObjectEditor<ProfileDefinition>), typeof(UITypeEditor))]
-#endif
+//#if NETFRAMEWORK
+//    [Editor(typeof(ObjectEditor<ProfileDefinition>), typeof(UITypeEditor))]
+//#endif
     //[DataContract(Name = "ProfileDefinition")]
     public class ProfileDefinition : DocumentBase, IEquatable<ProfileDefinition>, IEqualityComparer<ProfileDefinition>, CustomDataType, ITrackLastModified
     {

@@ -2,10 +2,10 @@
 uid: Web_apps_Main_Release_10.3.0_changes
 ---
 
-# DataMiner web apps Main Release 10.3.0 – Changes – Preview
+# DataMiner web apps Main Release 10.3.0 – Changes
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 ## Changes
 
@@ -139,6 +139,12 @@ A number of enhancements have been made to the visual overview component, especi
 <!-- MR 10.3.0 - FR 10.3.1 -->
 
 Because of a number of enhancements, overall performance has increased when retrieving DomInstances that have a DomBehaviorDefinition.
+
+#### Chart components will now display GQI and configuration errors [ID_35445]
+
+<!-- MR 10.3.0 - FR 10.3.3 -->
+
+From now on, a chart component will display an error when the GQI query that retrieves data for that chart component throws an error, or when the chart component is not configured correctly.
 
 ### Fixes
 
@@ -353,3 +359,29 @@ When two queries using an external data source with a custom argument of which t
 When, in a GQI query, a custom operator was applied, all metadata available on the rows would incorrectly be removed, causing feeds to no longer work as expected.
 
 Also, when a column was renamed via a custom operator, the metadata available on that column would incorrectly be removed.
+
+#### Dashboards app: Problem with line & area chart component when dashboard was shared [ID_35422]
+
+<!-- MR 10.3.0 - FR 10.3.3 -->
+
+When, in a dashboard, a line & area chart component had its *Hide non-trended parameters* option selected, errors could start to appear inside that component when the dashboard was shared.
+
+#### Dashboards app: Problem with 'Preserve feed selections' option [ID_35438]
+
+<!-- MR 10.3.0 - FR 10.3.3 -->
+
+When you select the *Preserve feed selections* option for a particular dashboard folder, any feed selection you make in a dashboard in that folder is preserved when you navigate to another dashboard in that same folder.
+
+Up to now, in some cases, one folder would incorrectly take over feed selections from another folder.
+
+#### Web apps: Problem when executing a GQI query [ID_35539]
+
+<!-- MR 10.3.0 [CU0] - FR 10.3.2 [CU1] -->
+
+When a web app (e.g. Dashboards) tried to execute a GQI query, in some cases, a `Node: 'X' is not supported by the current server version.` error could be thrown (`'X'` being the node that caused the error).
+
+#### Low-code apps: Panels of which the 'Fit to view' option was selected would incorrectly switch to mobile mode [ID_35542]
+
+<!-- MR 10.3.0 - FR 10.3.3 -->
+
+Panels of which the *Fit to view* option was selected would incorrectly switch to mobile mode when their width got too small. From now on, panels of which the *Fit to view* option is selected will never switch to mobile mode.

@@ -97,11 +97,11 @@ Examples:
 
    - For Windows: `C:\Program Files\Elasticsearch\logs\[cluster.name].log`
 
-     You can find the cluster name in `/etc/Elasticsearch/Elasticsearch.yml`.
+     You can find the cluster name in `C:\Program Files\Elasticsearch\config\Elasticsearch.yml`.
 
    - For Linux: `/var/log/elasticsearch/[cluster.name].log`
 
-     You can find the cluster name in `C:\Program Files\Elasticsearch\config\Elasticsearch.yml`.
+     You can find the cluster name in `/etc/Elasticsearch/Elasticsearch.yml`.
 
    If you do not have enough rights to the shared folder, use the `chmod` and `chown` command.
 
@@ -200,11 +200,11 @@ Examples:
 
    - For Windows: `C:\Program Files\Elasticsearch\logs\[cluster.name].log`
 
-     You can find the cluster name in `/etc/Elasticsearch/Elasticsearch.yml`.
+     You can find the cluster name in `C:\Program Files\Elasticsearch\config\Elasticsearch.yml`.
 
    - For Linux: `/var/log/elasticsearch/[cluster.name].log`
 
-     You can find the cluster name in `C:\Program Files\Elasticsearch\config\Elasticsearch.yml`.
+     You can find the cluster name in `/etc/Elasticsearch/Elasticsearch.yml`.
 
    If you do not have enough rights to the shared folder, use the `chmod` and `chown` command.
 

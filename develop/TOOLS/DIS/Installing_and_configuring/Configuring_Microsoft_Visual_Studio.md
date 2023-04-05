@@ -26,4 +26,4 @@ If any of your existing solutions are using NuGet packages the old way (i.e. usi
 1. Repeat for every project in the current solution.
 
 > [!NOTE]
-> The DataMiner DevPacks can also be used in solutions other than protocol and Automation script solutions, for example in custom solutions such as the Class Library Community Packages, which are meant to be used as an API within protocol or Automation script solutions. If you have any custom solutions, make sure to the projects in those solutions also use the new DataMiner DevPacks.
+> The DataMiner DevPacks (i.e. Skyline;DataMiner.Dev.* NuGet packages) can also be used in solutions other than protocol and Automation script solutions, for example in custom solutions such as the Class Library Community Packages, which are meant to be used as an API within protocol or Automation script solutions. If you have any custom solutions, make sure to the projects in those solutions also use the new DataMiner DevPacks.

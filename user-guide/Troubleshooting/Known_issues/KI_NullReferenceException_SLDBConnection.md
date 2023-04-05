@@ -19,7 +19,7 @@ Install DataMiner 10.2.0 [CU11], 10.3.0, or 10.3.2.
 
 ## Issue description
 
-In systems with a [Cassandra cluster](xref:Supported_system_data_storage_architectures#cassandra-cluster-setup-with-elasticsearch) setup, there could be null reference exceptions in the *SLDBConnection.txt* log file. For example:
+In systems with a [Cassandra cluster](xref:Supported_system_data_storage_architectures) setup, there could be null reference exceptions in the *SLDBConnection.txt* log file. For example:
 
 ```txt
 SLDBConnection|Skyline.DataMiner.Net.Messages.SLDataGateway.DataRequest`1[Skyline.DataMiner.Net.Messages.SLDataGateway.Alarm]|INF|0|285|System.NullReferenceException: Object reference not set to an instance of an object.

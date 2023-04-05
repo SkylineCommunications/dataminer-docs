@@ -10,7 +10,7 @@ This app is available from DataMiner 9.6.4 onwards.
 
 > [!NOTE]
 >
-> - A Cassandra database and Elasticsearch database are required in order to run this app. See [Databases](xref:databases).
+> - A [Cassandra database](xref:Cassandra_database) and [Elasticsearch database](xref:Elasticsearch_database) are required in order to run this app.
 > - This app requires a separate Job Manager license.
 > - You can access this app using Google Chrome, Microsoft Edge, Mozilla Firefox or Safari.
 > - If you downgrade from DataMiner 10.0.4 to an earlier DataMiner version, job information may be lost.

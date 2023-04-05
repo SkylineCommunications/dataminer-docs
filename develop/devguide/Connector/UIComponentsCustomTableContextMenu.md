@@ -6,13 +6,17 @@ uid: UIComponentsCustomTableContextMenu
 
 It is possible to define a custom context menu for tables.
 
+> [!TIP]
+> DIS provides a plugin (*Extensions > DIS > Plugins > Add Table Context Menu*) that can be used to create custom context menus that make use of the [Skyline.DataMiner.Protocol.TableContextMenu](https://www.nuget.org/packages/Skyline.DataMiner.Utils.Table.ContextMenu) NuGet package.
+
 To define a custom context menu, define a parameter with the same name as the table and the suffix "_ContextMenu". Each discrete entry represents a menu item and can be one of the following types:
 
 - Action: This will trigger the QAction.
-- Action with dependencies: The user will be asked to enter a value for each parameter specified in the dependencyValues attribute.
-- Action with rowselection: This is only available if the user has selected one or more rows in the table. The index of each row will be passed to the QAction.
-- Automation script: This will start an automation script instead of triggering a QAction. It uses the same syntax as for Visio and you can use * for dummies to use the current element and specify parameter IDs of columns of the selected row to use as values for script parameters.
-- Separator: This displays a separator line between menu items.
+- Action with dependencies: The user will be asked to enter a value for each parameter specified in the [dependencyValues](xref:Protocol.Params.Param.Measurement.Discreets.Discreet-dependencyValues) attribute.
+- Action with [rowselection](xref:Protocol.Params.Param.Measurement.Discreets.Discreet-options#tableselection): This is only available if the user has selected one or more rows in the table. The index of each row will be passed to the QAction.
+- Action with [confirmation](xref:Protocol.Params.Param.Measurement.Discreets.Discreet-options#confirmabc): This action will only be executed when the user confirms the pop-up.
+- [Automation script](xref:Protocol.Params.Param.Measurement.Discreets.Discreet-options#script): This will start an Automation script instead of triggering a QAction. It uses the same syntax as for Visio and you can use * for dummies to use the current element and specify parameter IDs of columns of the selected row to use as values for script parameters.
+- [Separator](xref:Protocol.Params.Param.Measurement.Discreets.Discreet-options#separator): This displays a separator line between menu items.
 
 ```xml
 <Param id="2099">
@@ -34,7 +38,11 @@ To define a custom context menu, define a parameter with the same name as the ta
             <Display>Add new row...</Display>
             <Value>add</Value>
          </Discreet>
-         <Discreet options="table:selection">
+         <Discreet options="table:singleSelection" dependencyValues="2001;2002?;2003:[value:2003];2004?:[value:2004]">
+            <Display>Duplicate item...</Display>
+            <Value>duplicate</Value>
+         </Discreet>
+         <Discreet options="table:selection;confirm:The selected item(s) will be deleted permanently.">
             <Display>Delete selected row(s)...</Display>
             <Value>delete</Value>
          </Discreet>
@@ -47,9 +55,19 @@ To define a custom context menu, define a parameter with the same name as the ta
             <Value>1</Value>
          </Discreet>
          <Discreet>
-            <Display>Clear tab1e</Display>
+            <Display>Clear table</Display>
             <Value>clear</Value>
          </Discreet>
+         <Discreet options="separator">
+            <Display>Separator 2</Display>
+            <Value>-2</Value>
+         </Discreet>
+         <!-- Level must be first option in the list of options into the Discreet@options attribute -->
+         <Discreet options="level:5">
+            <Display>Depends on Level Access</Display>
+            <Value>access</Value>
+         </Discreet>
+         <!-- Script must be last option in the list of options into the Discreet@options attribute -->
          <Discreet options="script:Context Menu from a Protocol|d1=[this element]|p1=[value:1001];p2=[value:2002]|||NoConfirmation">
             <Display>Start script</Display>
             <Value>script1</Value>
