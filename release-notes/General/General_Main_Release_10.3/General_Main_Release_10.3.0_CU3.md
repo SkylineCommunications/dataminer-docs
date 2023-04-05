@@ -16,6 +16,12 @@ uid: General_Main_Release_10.3.0_CU3
 
 ### Fixes
 
+#### Cassandra Cluster Migrator tool would incorrectly not migrate the state-changes table from a single-node Cassandra to a Cassandra Cluster [ID_35699]
+
+<!-- MR 10.2.0 [CU15]/10.3.0 [CU3] - FR 10.3.4 -->
+
+When you used the Cassandra Cluster Migrator tool to migrate a single-node Cassandra database to a Cassandra Cluster setup, up to now, the `state-changes` table would incorrectly not be migrated.
+
 #### Creating or updating a function resource while its parent element was in an error state would incorrectly be allowed [ID_35963]
 
 <!-- MR 10.2.0 [CU15]/10.3.0 [CU3] - FR 10.3.6 -->

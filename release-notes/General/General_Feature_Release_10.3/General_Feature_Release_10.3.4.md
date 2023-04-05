@@ -279,7 +279,7 @@ From now on, the focus data cache will no longer be cleared when SLAnalytics pro
 
 #### Cassandra Cluster Migrator tool would incorrectly not migrate the state-changes table from a single-node Cassandra to a Cassandra Cluster [ID_35699]
 
-<!-- MR 10.4.0 - FR 10.3.4 -->
+<!-- MR 10.2.0 [CU15]/10.3.0 [CU3] - FR 10.3.4 -->
 
 When you used the Cassandra Cluster Migrator tool to migrate a single-node Cassandra database to a Cassandra Cluster setup, up to now, the `state-changes` table would incorrectly not be migrated.
 

@@ -20,6 +20,12 @@ When a dashboard or a low-code app is in dark mode, from now on, there will be a
 
 ### Fixes
 
+#### Cassandra Cluster Migrator tool would incorrectly not migrate the state-changes table from a single-node Cassandra to a Cassandra Cluster [ID_35699]
+
+<!-- MR 10.2.0 [CU15]/10.3.0 [CU3] - FR 10.3.4 -->
+
+When you used the Cassandra Cluster Migrator tool to migrate a single-node Cassandra database to a Cassandra Cluster setup, up to now, the `state-changes` table would incorrectly not be migrated.
+
 #### Dashboards app & Low-code apps - GQI components: Open sessions would not be closed when a new query was triggered [ID_35824]
 
 <!-- MR 10.2.0 [CU15]/10.3.0 [CU2] - FR 10.3.5 -->
