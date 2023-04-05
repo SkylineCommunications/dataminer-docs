@@ -18,13 +18,17 @@ uid: Cassandra_database
 
 - [Data replication and consistency configuration](xref:replication_and_consistency_configuration)
 
+- [Setting up a Azure Managed Instance for Apache Cassandra cluster](xref:Azure_Managed_Instance_for_Apache_Cassandra)
+
 > [!NOTE]
+
 > - For more information on the possible architecture of your DataMiner infrastructure, see [Supported data storage architectures](xref:Supported_system_data_storage_architectures).
 > - For information on the system requirements for Cassandra, refer to [DataMiner Compute Requirements](https://community.dataminer.services/dataminer-compute-requirements/).
 > - For information on how to configure a Cassandra database in DataMiner Cube, see [Configuring the database settings in Cube](xref:Configuring_the_database_settings_in_Cube).
 
 > [!TIP]
 > See also:
+
 > - [Securing the Cassandra general database](xref:Security_Cassandra_general)
 > - [Cassandra – tips & tricks](https://community.dataminer.services/video/cassandra-tips-tricks/)
 > - [Apache Cassandra documentation](https://cassandra.apache.org/doc/latest/)

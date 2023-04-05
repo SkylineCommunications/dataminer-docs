@@ -8,6 +8,9 @@ uid: Maintain_Cassandra_Cluster
 
 To ensure that your Cassandra database is running fine, we highly recommend that you create an element using the [Apache Cassandra Cluster Monitor](https://catalog.dataminer.services/result/driver/7500) connector.
 
+> [!NOTE]
+> This is currently not possible for the AWS Keyspaces or Azure Managed Instance for Apache Cassandra.
+
 ## Keeping your nodes repaired
 
 When nodes are down for longer periods of time or when there has been a network problem, it may happen that data is no longer in sync between nodes holding copies (in case of replication). To ensure that data is synced again, repairs need to be scheduled.
