@@ -47,7 +47,10 @@ Total estimated time of the procedure: approximately 40 minutes, depending on th
 
     - **Removing old backup files – 5 minutes**
 
-        In the `C:\Skyline DataMiner\Backup` folder, there may be many log files from past backups. Remove the log files that are old enough to be no longer relevant. Only remove old .log files, nothing else!
+        In the `C:\Skyline DataMiner\Backup` folder, there may be many log files from past backups. Remove the log files that are old enough to be no longer relevant.
+
+        > [!CAUTION]
+        > Only remove old .log files. Do not remove anything else in this folder.
 
         > [!NOTE]
         > As a more permanent solution, you can use a symbolic link for your backups. For more information, see [Taking a backup using a symbolic link to another drive](xref:MOP_Taking_a_backup_using_a_symbolic_link_to_another_drive).
@@ -57,11 +60,11 @@ Total estimated time of the procedure: approximately 40 minutes, depending on th
         If you take a backup of a DMA that uses Cassandra, Cassandra takes snapshots of the database, which are then included in the DataMiner backup package. However, the snapshots Cassandra has taken remain on the disk and are not cleaned up automatically. They can eventually take up a lot of disk space. To manage these snapshots, you can use *nodetool*, which is available in the `C:\Program Files\Cassandra\bin\` folder.
 
         - To check the size of the snapshots, run the following command in a command prompt window:
-        
+
             ```txt
             nodetool listsnapshots
             ```
-        
+
         - To clean up the snapshots, run the following command in a command prompt window. This will mark all snapshots as ready for deletion. However, to make sure they are effectively removed, you will then also need to restart the Cassandra service.
 
             ```txt
@@ -78,8 +81,8 @@ Total estimated time of the procedure: approximately 40 minutes, depending on th
 
     - **Cleaning up DELT packages – approx. 2 minutes**
 
-        Check the DELT directory `C:\Skyline DataMiner\System Cache\DELT`, you'll find 2 folders Import and Export. There might be old remnants of DELT packages in there, remove files older than 1 day, as these will have likely failed.
-    
+        Check the DELT directory `C:\Skyline DataMiner\System Cache\DELT`. You will find two folders, *Import* and *Export*. There might be old remnants of DELT packages in these. Remove files older than one day, as these will likely have failed.
+
     - **Cleaning up of the GenIf folder – approx. 2 minutes**
 
-        When debugging GQI, it might have occurred that the GenIf folder got enabled, but never removed again. This is a [known issue](xref:KI_GenIf_Folder_Growing_In_Size). If your system has a `C:\Skyline DataMiner\Logging\GenIf` folder, then feel free to remove it. Please make sure no active investigations are in progress, so please check your Skyline contact before removing this folder. 
+        When debugging GQI, the GenIf folder may have been enabled but never removed again. This is a [known issue](xref:KI_GenIf_Folder_Growing_In_Size). If your system has a `C:\Skyline DataMiner\Logging\GenIf` folder, you can remove this folder, but only if no active investigations are in progress. **Check with your Skyline contact before removing this folder** to make sure that this is the case.
