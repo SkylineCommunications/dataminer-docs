@@ -49,11 +49,11 @@ For Amazon Keyspaces, the Starfield certificate must be present on the local Win
 
 ## Generating credentials for Amazon Keyspaces
 
-In the Identity and Access Management (IAM) Service, you can generate new credentials that are used to access the Amazon Keyspaces service. Those credentials are then linked to the account that created them.
+In the [Identity and Access Management (IAM)](https://console.aws.amazon.com/iam) Service, you can generate new credentials that are used to access the Amazon Keyspaces service. Those credentials are then linked to the account that created them.
 
-In order to do this, the right permissions are required.
+All of this takes place in the [IAM](https://console.aws.amazon.com/iam) Service.
 
-All of this takes place in the IAM service.
+1. Log in with your AWS account and open the [IAM](https://console.aws.amazon.com/iam) Service.
 
 1. Go to *IAM* > *Users*.
 
@@ -63,9 +63,23 @@ All of this takes place in the IAM service.
 
    ![SearchUser](~/user-guide/images/Amazon_Keyspaces_SearchUser.png)
 
-1. Verify that this account has the permissions to generate Amazon Keyspaces credentials.
+1. Verify that this account has full access to Amazon Keyspaces, i.e. the permission *AmazonKeyspacesFullAccess*.
 
    ![Permissions](~/user-guide/images/Amazon_Keyspaces_Permissions.png)
+
+   If the permission is present, move to the next step.
+
+   If this user does not have this permission, it has to be added first.
+
+   ![AddPermissions](~/user-guide/images/Amazon_Keyspaces_AddPermissions.png)
+
+   Go to *Attach policies directly*.
+
+   Search for *AmazonKeyspacesFullAccess*.
+
+   Select the permission and click *Next*.
+
+   ![AddKeyspacesPermission](~/user-guide/images/Amazon_Keyspaces_AddKeyspacesPermission.png)
 
 1. To generate the credentials, go to the *Security credentials* tab.
 
