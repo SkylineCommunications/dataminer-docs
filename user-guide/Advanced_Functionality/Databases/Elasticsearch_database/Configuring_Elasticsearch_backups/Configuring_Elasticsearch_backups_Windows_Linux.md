@@ -86,12 +86,16 @@ Examples:
    }
    ```
 
-   - `my_fs_backup_location`: The path of the shared folder you created.
+   - `/mount/backups/my_fs_backup_location`: The path of the shared folder you created.
 
    - `my_fs_backup`: A repository name of your choice.
 
    > [!TIP]
    > For more information, see [Shared File System Repository](https://www.elastic.co/guide/en/elasticsearch/reference/6.8/modules-snapshots.html#_shared_file_system_repository).
+
+   > [!TIP]
+   > ElasticVue can also be used to create your repository by going to *Snapshots*, *Snapshot Repositories* and click on the *New repository* button.
+   > Fill in the name, repository location, and leave the default settings(*Compress* checkbox is enabled, *Readonly* checkbox is disabled).
 
 1. Search the Elasticsearch logging for exceptions.
 
@@ -189,7 +193,7 @@ Examples:
    }
    ```
 
-   - `my_fs_backup_location`: The path of the shared folder you created.
+   - `/mount/backups/my_fs_backup_location`: The path of the shared folder you created.
 
    - `my_fs_backup`: A repository name of your choice.
 
@@ -278,7 +282,7 @@ You have now finished configuring an Elasticsearch backup. If you do not want to
    '
    ```
 
-   - `my_fs_backup_location`: The path of the shared folder you created.
+   - `/mount/backups/my_fs_backup_location`: The path of the shared folder you created.
 
    - `my_fs_backup`: A repository name of your choice.
 
