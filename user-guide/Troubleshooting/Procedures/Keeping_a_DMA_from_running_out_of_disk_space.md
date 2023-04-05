@@ -47,7 +47,7 @@ Total estimated time of the procedure: approximately 40 minutes, depending on th
 
     - **Removing old backup files – 5 minutes**
 
-        In the `C:\Skyline DataMiner\Backup` folder, there may be many log files from past backups. Remove the log files that are old enough to be no longer relevant.
+        In the `C:\Skyline DataMiner\Backup` folder, there may be many log files from past backups. Remove the log files that are old enough to be no longer relevant. Only remove old .log files, nothing else!
 
         > [!NOTE]
         > As a more permanent solution, you can use a symbolic link for your backups. For more information, see [Taking a backup using a symbolic link to another drive](xref:MOP_Taking_a_backup_using_a_symbolic_link_to_another_drive).
@@ -75,3 +75,11 @@ Total estimated time of the procedure: approximately 40 minutes, depending on th
         - Reduce the number of alarm thresholds defined in the alarm templates, if possible.
         - If a parameter value tends to fluctuate a lot, add hysteresis in the alarm template to avoid frequent and unwanted alarms.
         - If possible, use average trending instead of real-time trending.
+
+    - **Cleaning up DELT packages – approx. 2 minutes**
+
+        Check the DELT directory `C:\Skyline DataMiner\System Cache\DELT`, you'll find 2 folders Import and Export. There might be old remnants of DELT packages in there, remove files older than 1 day, as these will have likely failed.
+    
+    - **Cleaning up of the GenIf folder – approx. 2 minutes**
+
+        When debugging GQI, it might have occurred that the GenIf folder got enabled, but never removed again. This is a [known issue](xref:KI_GenIf_Folder_Growing_In_Size). If your system has a `C:\Skyline DataMiner\Logging\GenIf` folder, then feel free to remove it. Please make sure no active investigations are in progress, so please check your Skyline contact before removing this folder. 
