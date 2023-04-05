@@ -122,8 +122,8 @@
               topicUid: Service_Delivery
             - name: Partnership governance
               topicUid: Partnership_Governance
-            - name: Deal Registration
-              topicUid: Deal_Registration
+         - name: Deal Registration
+           topicUid: Deal_Registration
     - name: DataMiner Professional Services
       topicUid: Part52ProfessionalServices
       items:
