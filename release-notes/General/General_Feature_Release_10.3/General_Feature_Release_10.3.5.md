@@ -57,7 +57,7 @@ Note that, from now on, every *Sort by* node will nullify any preceding *Sort by
 GQI data source rows now have an internal key. This key is unique (per data source) and cannot be null or empty.
 
 > [!NOTE]
-> At present, only [ad hoc data sources](#ad-hoc-data-source-keys) and [custom GQI operators](#custom-gqi-operator-keys) allow access to their keys.
+> At present, you can only interact with these keys in [ad hoc data sources](#ad-hoc-data-source-keys) and [custom GQI operators](#custom-gqi-operator-keys).
 
 ##### Ad hoc data source keys
 
