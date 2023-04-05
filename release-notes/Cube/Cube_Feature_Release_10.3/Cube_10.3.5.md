@@ -32,12 +32,6 @@ Alternatively, you can also open the quick menu in the Cube header, and toggle t
 
 ### Enhancements
 
-#### Cube will now by default connect using gRPC when connecting to a cloud-connected DataMiner Agent with a remote access URL [ID_35779]
-
-<!-- MR 10.3.0 [CU2] - FR 10.3.5 -->
-
-When you connect to a cloud-connected DataMiner Agent with a remote access URL ending in `*.dataminer.services`, Cube will now by default connect using gRPC.
-
 #### No longer possible to create pattern matching tags that include predicted trend information [ID_35861]
 
 <!-- MR 10.3.0 [CU2] - FR 10.3.5 -->
