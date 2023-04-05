@@ -460,7 +460,7 @@ To be able to make a local test build, you need to have DocFX installed. DocFX i
 1. When you have finished previewing the website, in the Terminal pane, press Ctrl+C to exit the preview mode.
 
 > [!NOTE]
-> If port 8080 is not available, you will need to run buildDocs.cmd from a command prompt with the correct port as an argument, e.g. `buildDocs.cmd 8081`.
+> If port 8080 is not available, you will need to run *buildDocs.cmd* from a command prompt with the correct port as an argument, e.g. `buildDocs 8081`.
 
 > [!IMPORTANT]
 > If you make test builds often, you may need to occasionally clear the files in the `\dataminer-docs\obj\.cache\build\` folder of your local version of the documentation. In the long run, these can pile up and take up a large amount of memory.
