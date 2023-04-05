@@ -12,7 +12,11 @@ uid: Web_apps_Main_Release_10.3.0_CU3
 
 ### Enhancements
 
-*No enhancements have been added to this release yet.*
+#### Dashboards app & Low-code apps - Table component: Enhanced visibility of rows that are selected or hovered over in dark mode [ID_35993]
+
+<!-- MR 10.2.0 [CU15]/10.3.0 [CU3] - FR 10.3.5 -->
+
+When a dashboard or a low-code app is in dark mode, from now on, there will be a higher color contrast between rows that are selected or hovered over and rows that are not.
 
 ### Fixes
 
