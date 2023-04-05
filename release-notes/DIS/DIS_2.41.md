@@ -8,11 +8,32 @@ uid: DIS_2.41
 
 ### IDE
 
+#### XML editor: Clicking 'Validate' will now also validate exported DVE protocols [ID_33618]
+
+When, in the XML editor, you open a main DVE protocol and click *Validate*, from now on, DIS will not only validate the main protocol but also all its exported child DVE protocols.
+
+#### Support for Microsoft Visual Studio 2017 has been dropped [ID_35770]
+
+Support for Microsoft Visual Studio 2017 has been dropped. The last DIS version supporting Visual Studio 2017 is DIS v2.40.
+
+> [!NOTE]
+> The minimum supported DataMiner version is now DataMiner v10.1.0.
+
+#### Class Library generation feature has been removed in favor of NuGet packages [ID_35827]
+
+The Class Library generation feature has been removed in favor of NuGet packages.
+
+If you have a connector or Automation script that makes use of the official class library, replace it with the corresponding NuGet package(s). For more information, see [Class library introduction](xref:ClassLibraryIntroduction).
+
+If you have a connector or Automation script that makes use of a community package, we recommend turning this into a NuGet package. For more information on how to create a NuGet package, see [Producing NuGet packages](xref:Producing_NuGet). Alternatively, you can put all the code from the community library zip file in a QAction/Exe block.
+
+<!--
 #### XML editor: New snippet [ID_35991]
 
 In the C# editor, the following snippet allows you to generate the `OnApiTrigger` entrypoint method in an Automation script. This entrypoint method will be used to create an API from an Automation script.
 
-<!-- - DIS \> Protocol \> Param \> SNMP System Params -->
+ - DIS \> Protocol \> Param \> SNMP System Params
+-->
 
 ### Validator
 
