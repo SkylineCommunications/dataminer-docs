@@ -71,6 +71,19 @@ The following units have been added to the UOM Schema:
 
 ### Enhancements
 
+#### Changes made to the Microsoft Visual Studio UI [ID_35566]
+
+The following changes have been made to the Microsoft Visual Studio UI:
+
+- In the *About Microsoft Visual Studio* window (*Help > About Microsoft Visual Studio*), the DIS product version will now show the current DIS version.
+
+- When, in the *Manage Extensions* window, you select the DIS extension, two additional links will now be shown:
+
+  - *Release Notes* (pointing to XXX)
+  - *Getting Started* (pointing to XXX)
+
+  The *More Information* link will now point to XXX.
+
 ### Fixes
 
 #### Validator: False positive thrown when a column was added to a table that contained a column of type displayKey [ID_35266]
