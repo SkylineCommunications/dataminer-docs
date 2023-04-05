@@ -547,8 +547,10 @@
       - name: Class Library Range 1.0
         topicUid: ClassLibrary_Range_1.0
     - name: DIS release notes
-      topicUid: DIS_2.40
+      topicUid: DIS_2.41
       items:
+      - name: DIS 2.41
+        topicUid: DIS_2.41
       - name: DIS 2.40
         topicUid: DIS_2.40
       - name: DIS 2.39
