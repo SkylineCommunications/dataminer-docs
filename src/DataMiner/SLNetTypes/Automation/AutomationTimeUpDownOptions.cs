@@ -151,7 +151,7 @@ namespace Skyline.DataMiner.Automation
 		public bool ShowSeconds { get; set; }
 
 		/// <summary>
-		/// Gets or sets a value indicating whether to display time labels in web component control.
+		/// Gets or sets a value indicating whether to display time labels in web component control. From DataMiner 10.3.0 [CU1]/10.3.4 onwards, the `ShowTimeUnits` property displays labels indicating the days, hours, minutes, and seconds. The `ShowTimeUnits` property is only supported in the DataMiner web apps and not in DataMiner Cube.
 		/// </summary>
 		/// <value><c>true</c> to display time labels in web component control; otherwise, <c>false</c>.</value>
 		/// <remarks>

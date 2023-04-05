@@ -12,15 +12,9 @@ Whether you access a trend graph from a card or do so from the *Trending* module
 
 - A parameter pane at the bottom. This pane displays more information about the parameter for which trending is shown. If the mouse pointer is held over a point of the trend graph, detailed information on this point will be displayed in the parameter pane.
 
-- A trend groups pane on the left-hand side (see [Working with trend groups](xref:Working_with_trend_groups)).
+- A trend groups pane on the left-hand side. See [Working with trend groups](xref:Working_with_trend_groups).
 
-- A light bulb icon in the top-right corner when DataMiner finds parameters that are related to the parameters shown in the trend graph (from DataMiner 10.2.12/10.3.0 onwards). Clicking this light bulb icon will allow you to add one or more of those related parameters to the trend graph you are viewing. When you open a trend graph, DataMiner Cube will consult the *ModelHost* Extension Module to retrieve all parameters related to those shown in the trend graph. When you click the light bulb icon, you will get a list of the ten most important parameters.
-
-  > [!NOTE]
-  >
-  > - The parameter relationship feature is still in preview.
-  > - The parameter relationship feature is only on DataMiner Agents that are connected to dataminer.services, have the *ModelHost* DxM installed, and have been configured to [offload alarm and change point events to the cloud](xref:Controlling_cloudfeed_data_offloads). However, at this point, the feature is not yet available.
-  > - Relationship models are calculated once per week. When this feature is activated, it can take up to a week before the first results are visible.
+- A light bulb icon in the top-right corner to add parameters related to those shown in the trend graph (from DataMiner 10.2.12/10.3.0 onwards). See [Adding related parameters to a trend graph](xref:Adding_related_parameters_to_a_trend_graph).
 
 Depending on the type of data that is displayed, the trend line looks different. For example, take a look at this trend graph in DataMiner 10.2.1:
 

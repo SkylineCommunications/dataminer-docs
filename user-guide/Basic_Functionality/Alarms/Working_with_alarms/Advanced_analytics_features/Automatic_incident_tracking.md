@@ -12,7 +12,10 @@ Several factors are taken into account for the grouping:
 
 - Service information
 
-- The IDP location (only in case the IDP Solution is deployed)
+- The IDP location
+
+  > [!NOTE]
+  > The IDP location will only be taken into account if IDP is deployed and the option *Update alarms on value changed* is selected for the element properties 'Location Name', 'Location Building', 'Location Floor', 'Location Room', 'Location Aisle' and 'Location Rack'. See [Adding a custom property to an item](xref:Managing_element_properties#adding-a-custom-property-to-an-item).
 
 - Element information
 
@@ -26,7 +29,7 @@ Several factors are taken into account for the grouping:
 
 - Alarm, element, service or view properties, if these have been configured for incident tracking (see [Configuration of incident tracking based on properties](#configuration-of-incident-tracking-based-on-properties)).
 
-- Parameter relationship data, on DataMiner Agents that are connected to dataminer.services, have the DataMiner Extension Module *ModelHost* installed, and have been configured to [offload alarm and change point events to the cloud](xref:Controlling_cloudfeed_data_offloads) (from DataMiner 10.3.1/10.4.0 onwards). However, at this point, the *ModelHost* DxM is not yet available.
+- Parameter relationship data, on DataMiner Agents that are connected to dataminer.services, have the DataMiner Extension Module *ModelHost* installed, and have been configured to [offload alarm and change point events to the cloud](xref:Controlling_cloudfeed_data_offloads) (from DataMiner 10.3.1/10.4.0 onwards).
 
 If no suitable match is found, alarms will not be grouped. Also, since only alarms with a focus score are taken into account, automatic incident tracking does not apply to information events, suggestion events or notice messages.
 
@@ -72,9 +75,7 @@ From DataMiner 10.2.0/10.1.4 onwards, automatic incident tracking can also take 
 
 The following basic configuration is needed in Cube:
 
-- For the alarm properties that should be taken into account, the option *Update alarms on value changed* must be selected. See [Adding a custom alarm property](xref:Changing_custom_alarm_properties#adding-a-custom-alarm-property).
-
-- For the element, service and view properties that should be taken into account, the option *Make this property available for alarm filtering* must be selected. See [Adding a custom property to an item](xref:Managing_element_properties#adding-a-custom-property-to-an-item).
+- For the properties that should be taken into account, the option *Update alarms on value changed* must be selected. See [Adding a custom property to an item](xref:Managing_element_properties#adding-a-custom-property-to-an-item).
 
 In addition, the following configuration is needed in the file *C:\\Skyline DataMiner\\analytics\\configuration.xml*:
 

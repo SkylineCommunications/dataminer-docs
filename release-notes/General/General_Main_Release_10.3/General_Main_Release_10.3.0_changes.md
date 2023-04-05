@@ -153,6 +153,7 @@ Because of a number of enhancements, overall performance has increased when gene
 #### DataMiner upgrade will not be performed if NATS is not installed and running [ID_33304]
 
 <!-- MR 10.3.0 - FR 10.2.7 -->
+<!-- Also added to MR 10.2.0 [CU14] -->
 
 When you launch a DataMiner upgrade, from now on, the upgrade process will not be allowed to start if NATS is not installed and running.
 
@@ -583,6 +584,7 @@ When a DataMiner Agent was being shut down, in some cases, an error could occur 
 #### DataMiner upgrade: VerifyNatsRunning prerequisite could fail due to SLCloudBridge.dll having been renamed [ID_33875]
 
 <!-- MR 10.3.0 - FR 10.2.8 [CU0] -->
+<!-- Also added to MR 10.2.0 [CU13] -->
 
 During a DataMiner upgrade, the VerifyNatsRunning prerequisite could fail due to the SLCloudBridge.dll file having been renamed to SLMessageBroker.dll in DataMiner versions 10.2.0/10.1.5.
 
@@ -692,8 +694,14 @@ If a DOM module is created without specifying *SecuritySettings*, the view permi
 
 Up to now, the check to determine whether a user had the view permission set to "None", would only return true for the Administrator or users in the Administrator group. From now on, when the required view permission is "None", permission checks will no longer be performed.
 
-#### NATSMaxPayloadException could be thrown when a client requested large amounts of data [ID_35306]
+#### Problem with SLPort when an element with a serial connection was restarted [ID_35773]
 
-<!-- MR 10.3.0 - FR 10.3.3 -->
+<!-- MR 10.2.0 [CU12]/10.3.0 [CU0] - FR 10.3.3 [CU1] -->
 
-When a client requested large amounts of data, in some cases, a `NATSMaxPayloadException` could be thrown.
+In some cases, an error could occur in SLPort when an element with a serial connection was restarted.
+
+#### Cassandra Cluster: Rows would incorrectly be added without TTL value [ID_35789]
+
+<!-- MR 10.3.0 [CU0] - FR 10.3.3 [CU0] -->
+
+When a row was added to a Cassandra Cluster table, no TTL value would be inserted into the TTL column of that row.

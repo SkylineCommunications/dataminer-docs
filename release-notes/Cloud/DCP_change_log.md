@@ -6,7 +6,50 @@ uid: DCP_change_log
 
 The dataminer.services platform gets updated continuously. This change log can help you trace when specific features and changes have become available.
 
-#### 16 February 2013 - Fix - CloudGateway 2.10.3 - Share not created in case of mismatch in local culture on hosting server [ID_35654]
+#### 3 April 2023 - Chat Integration with Microsoft Teams now includes fetching teams and channels [ID_35983]
+
+The following Chat Integration features have been added:
+
+- Fetching all teams
+- Fetching all channels of a team, so you can send channel notifications in them
+
+In an Automation script, you can use [the DcpChatIntegrationHelper NuGet](https://www.nuget.org/packages/Skyline.DataMiner.DcpChatIntegrationHelper) to easily interact with Microsoft Teams.
+
+To get started, you can find several example Automation scripts with more information on [GitHub](https://github.com/SkylineCommunications/ChatOps-Extensions/blob/main/ChatIntegrationExamples).
+
+After you have made sure that the [prerequisites](https://github.com/SkylineCommunications/ChatOps-Extensions/blob/main/ChatIntegrationExamples/README.md#usage) are in place, you can deploy [the Chat Integration examples](https://github.com/SkylineCommunications/ChatOps-Extensions/blob/main/ChatIntegrationExamples/README.md#getting-started) to your DataMiner System and immediately try out these examples.
+
+> [!NOTE]
+> To enable these additional features, you **must grant Skyline admin consent to your Microsoft tenant with certain permissions, even if you have already granted admin consent before.** See [granting admin consent](xref:Granting_admin_consent). You can revoke these permissions at any time.
+
+#### 3 April 2023 - Enhancement - ArtifactDeployer 1.4.3 - Dependencies updated [ID_35990]
+
+Several dependencies have been updated. This includes security-related improvements.
+
+#### 2 March 2023 - Integrate your DataMiner System with Microsoft Teams using DataMiner Automation [ID_35799]
+
+You can now easily integrate your DataMiner System with Microsoft Teams using DataMiner Automation.
+
+The following features are available:
+
+- Creating teams
+- Creating channels
+- Adding members or owners to your teams
+- Sending notifications in the created channels in the name of the DataMiner Teams bot
+- Creating a private chat between someone and the DataMiner Teams bot
+- Fetching a private chat between someone and the DataMiner Teams bot
+- Sending notifications in those private chats in the name of the DataMiner Teams bot
+
+In an Automation script, you can use [the DcpChatIntegrationHelper NuGet](https://www.nuget.org/packages/Skyline.DataMiner.DcpChatIntegrationHelper) to easily interact with Microsoft Teams.
+
+To get started, you can find several example Automation scripts with more information on [GitHub](https://github.com/SkylineCommunications/ChatOps-Extensions/blob/main/ChatIntegrationExamples).
+
+After you have made sure the [prerequisites](https://github.com/SkylineCommunications/ChatOps-Extensions/blob/main/ChatIntegrationExamples/README.md#usage) are in place, you can deploy [the Chat Integration examples](https://github.com/SkylineCommunications/ChatOps-Extensions/blob/main/ChatIntegrationExamples/README.md#getting-started) to your DataMiner System and immediately try out these examples.
+
+> [!NOTE]
+> You must grant Skyline admin consent to your Microsoft tenant with certain permissions to enable these features. See [granting admin consent](xref:Granting_admin_consent). You can revoke these permissions at any time.
+
+#### 16 February 2023 - Fix - CloudGateway 2.10.3 - Share not created in case of mismatch in local culture on hosting server [ID_35654]
 
 Prior to CloudGateway version 2.10.3, a share could not be created if there was a mismatch in the local culture on the hosting server.
 
@@ -35,6 +78,12 @@ Something went wrong while initializing WebApiEndpointService. A url in the (cus
 ```
 
 This fix is included in Cloud Pack 2.8.5.
+
+#### 10 January 2023 - Enhancement - CoreGateway 2.12.0 - Support for new Data Aggregator DxM [ID_34903] [ID_35168] [ID_35217] [ID_35252]
+
+To support the new [Data Aggregator DxM](xref:DataAggregator_1.0.0), CoreGateway has been adjusted to be able to handle requests from Data Aggregator.
+
+This enhancement is included in Cloud Pack 2.8.4.
 
 #### 10 January 2023 - Enhancement - DataMiner SupportAssistant 1.2.0 - Various stability improvements [ID_35349]
 

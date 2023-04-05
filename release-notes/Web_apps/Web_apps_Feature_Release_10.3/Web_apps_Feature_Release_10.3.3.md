@@ -10,7 +10,7 @@ uid: Web_apps_Feature_Release_10.3.3
 > [!TIP]
 > For release notes for this release that are not related to the web applications, see [General Feature Release 10.3.3](xref:General_Feature_Release_10.3.3).
 
-## Features
+## Highlights
 
 #### Dashboards app - GQI: New data sources [ID_34747] [ID_35027] [ID_34965] [ID_35058]
 
@@ -41,6 +41,8 @@ When configuring a Join operator, you can now select the *Row by row* option.
 > - The *Row by row* option will only be visible and configurable when you opened the dashboard or app with `showAdvancedSettings=true` added to the URL.
 > - Currently, the *Row by row" option is only supported for inner and left joins. If you use it for an outer or right join, an exception will be thrown.
 
+## Other features
+
 #### Monitoring app: Element name added to breadcrumbs of trend card [ID_35270]
 
 <!-- MR 10.4.0 - FR 10.3.3 -->
@@ -68,9 +70,7 @@ In the Generic Query Interface, the *Get parameter relations* data source is now
 It can be used to retrieve the parameter relationships that are stored in a model managed by a DataMiner Extension Module named *ModelHost*.
 
 > [!NOTE]
->
-> - This data source will only be available when *ModelHost* is running.
-> - Currently, the ModelHost DxM is not yet available.
+> This data source will only be available when *ModelHost* is running.
 
 ## Changes
 
@@ -153,9 +153,9 @@ When two queries using an external data source with a custom argument of which t
 
 #### Dashboards app: Problem when trying to open a shared dashboard [ID_35271]
 
-<!-- MR 10.4.0 - FR 10.3.3 -->
+<!-- MR 10.3.0 [CU3] - FR 10.3.3 -->
 
-When users tried to open a shared dashboard, in some cases, they would unexpectedly be presented with a login screen due to a permission issue.
+When users tried to open a shared dashboard, in some cases, they would unexpectedly be presented with a login screen because of a permission issue.
 
 Workaround: Recreate the faulty shared dashboard.
 

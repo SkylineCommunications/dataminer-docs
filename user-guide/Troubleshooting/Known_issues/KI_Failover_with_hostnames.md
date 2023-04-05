@@ -14,7 +14,7 @@ Systems are unable to keep track of which IP and hostname is linked to which DMA
 
 ## Fix
 
-No fix is available yet. We recommend using Failover based on IP instead for now.
+No fix is available yet. We recommend using Failover based on IP instead for now. <!-- RN 32951 -->
 
 ## Issue description
 

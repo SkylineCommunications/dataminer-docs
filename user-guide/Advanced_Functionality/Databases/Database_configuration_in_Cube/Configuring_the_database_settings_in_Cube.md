@@ -35,7 +35,7 @@ For a Cassandra cluster database (i.e. one Cassandra cluster that is used as the
 
 1. From DataMiner Cube 10.3.0/10.3.3 onwards, you can also specify the database settings for Elasticsearch. Note that if the server supports [OpenSearch](xref:OpenSearch_database), Cube will allow you to configure this type of database instead of Elasticsearch.
 
-   - **Database**: The type of database, i.e. *Elasticsearch*.
+   - **Database**: The type of database, e.g. *Elasticsearch*.
 
    - **Database prefix**: The prefix that the DataMiner System will use to create the indices.
 
@@ -88,10 +88,6 @@ In case a separate Cassandra cluster is used per DMA, configure the settings as 
    - **User**: The username with which the DMA has to log on to the general database.
 
    - **Password**: The password with which the DMA has to log on to the general database.
-
-   - **Limit alarms by months to keep**: Deprecated from DataMiner 9.6.0/9.6.3 onwards. Use the TTL settings instead. See [Specifying TTL overrides](xref:Specifying_TTL_overrides). In legacy systems, this option limits the total alarm records in the database by date.
-
-   - **Months to keep**: Deprecated from DataMiner 9.6.0/9.6.3 onwards. Use the TTL settings instead. See [Specifying TTL overrides](xref:Specifying_TTL_overrides). In legacy systems, this option indicates the number of months that the alarms will be kept in the general database. Note that in a Cassandra database, the maximum duration that a record can continue to exist is twenty years.
 
 1. Click *Save*.
 
@@ -232,10 +228,6 @@ For a legacy MySQL or MSSQL database, configure the settings as follows:
    - **Maximum alarms**: The maximum number of alarms that can be stored in the general database.
 
    - **Fallback minimum**: If the *Maximum alarms* setting has been reached, the oldest alarms will automatically be deleted until the database contains exactly the number of alarms specified in the *Fallback minimum* box.
-
-   - **Limit alarms by months to keep**: Deprecated from DataMiner 9.6.0/9.6.3 onwards. Use the TTL settings instead. See [Specifying TTL overrides](xref:Specifying_TTL_overrides). In legacy systems, this option limits the total alarm records in the database by date.
-
-   - **Months to keep**: Deprecated from DataMiner 9.6.0/9.6.3 onwards. Use the TTL settings instead. See [Specifying TTL overrides](xref:Specifying_TTL_overrides). In legacy systems, this option indicates the number of months that the alarms will be kept in the general database.
 
 1. Click *Save*.
 

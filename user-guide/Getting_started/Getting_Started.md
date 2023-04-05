@@ -20,7 +20,7 @@ uid: Part1GettingStarted
 
 ### Find out all about dataminer.services
 
-- [dataminer.services](xref:Part51CloudPlatform)
+- [dataminer.services](xref:AboutCloudPlatform)
 
 ### More on specific DataMiner modules, apps, etc.
 

@@ -27,7 +27,7 @@ Since DataMiner version 8, it is possible to implement recursive linking. The ta
      <ColumnOption idx="2" pid="304" type="retrieved" value=""/>
 ```
 
-Please keep the following guidelines in mind for display keys:
+Please keep the following guidelines in mind for foreign keys:
 
 - Do not add multiple foreign keys on one column. A column needs to be created for each link. Also, do not put a foreign key on the index of a table, or use foreign keys in a table that contains a column of type "index", because the foreign key will not work then.
 - A foreign key must not have leading or trailing whitespace.

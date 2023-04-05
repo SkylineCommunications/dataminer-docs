@@ -46,10 +46,12 @@ Enables behavioral anomaly detection and suggestion events. See [Behavioral anom
 
 ### APIDeployment
 
+> [!NOTE]
+> Deprecated. This feature is replaced by the [UserDefinableAPI](#userdefinableapi) feature.
+
 Enables dynamic API deployment on the SLAPIEndpoint application.
 
-> [!NOTE]
-> Requires the .NET 5.0 hosting bundle.
+Requires the .NET 5.0 hosting bundle.
 
 - **Minimum version**: 10.1.6
 
@@ -257,6 +259,12 @@ Enables the button panel component in the Dashboards app.
 
 - **Minimum version**: 10.0.3
 
+### ReportsAndDashboardsDynamicVisuals
+
+Enables the grid component in the Dashboards app.
+
+- **Minimum version**: 10.2.12
+
 ### ReportsAndDashboardsExport
 
 Enables the export to PDF button within the Dashboards app itself. Creating PDFs of dashboards is possible outside the app (e.g. via DataMiner Scheduler) without this soft-launch option.
@@ -337,3 +345,9 @@ Enables the new VisualDataHelper.
 Uses an embedded web browser for Automation script execution instead of the native Cube pop-up window.
 
 - **Minimum version**: 10.1.4
+
+### UserDefinableAPI
+
+Enables the Cube UI for [User-Defined APIs](xref:UD_APIs).
+
+- **Minimum version**: 10.3.5

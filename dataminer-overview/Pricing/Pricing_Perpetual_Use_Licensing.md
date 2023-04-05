@@ -81,7 +81,7 @@ This product is licensed per DataMiner System, based on the maximum number of co
 > Not sure if your orchestration use case requires SRM licenses? Consult the [Service & Resource Management](https://community.dataminer.services/service-resource-management/) page on DataMiner Dojo.
 
 > [!TIP]
-> For more information, see [Service & Resource Management Framework](xref:srm_index)
+> For more information, see [Service & Resource Management Framework](xref:About_SRM)
 
 ### Spectrum Analysis
 

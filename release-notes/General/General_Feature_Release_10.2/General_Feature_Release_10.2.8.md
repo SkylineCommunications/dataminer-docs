@@ -494,6 +494,9 @@ When a cell in a table with “pollingrate” enabled had been updated, the firs
 
 #### DataMiner upgrade: VerifyNatsRunning prerequisite could fail due to SLCloudBridge.dll having been renamed \[ID_33875\]
 
+<!-- MR 10.3.0 - FR 10.2.8 [CU0] -->
+<!-- Also added to MR 10.2.0 [CU13] -->
+
 During a DataMiner upgrade, the *VerifyNatsRunning* prerequisite could fail due to the *SLCloudBridge.dll* file having been renamed to *SLMessageBroker.dll* in DataMiner versions 10.2.0/10.1.5.
 
 #### Protocols: Additional connections with a 'Type' defined would incorrectly be ignored \[ID_33941\]

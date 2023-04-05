@@ -18,6 +18,7 @@ uid: General_Feature_Release_10.3.3
 #### OpenSearch & Amazon OpenSearch Service [ID_34651]
 
 <!-- MR 10.3.0 - FR 10.3.3 -->
+<!-- See Cube RNs for System Center change -->
 
 It is now possible to install a dedicated OpenSearch indexing database cluster as an alternative for Elasticsearch. This indexing cluster also requires a Cassandra cluster.
 
@@ -230,9 +231,6 @@ Example:
 
 Because of a number of enhancements, overall performance has increased when fetching relation information for the automatic incident tracking feature.
 
-> [!NOTE]
-> Currently, the parameter relationship feature is still in preview.
-
 #### Service & Resource Management: Enhanced performance when changing active function files [ID_35424]
 
 <!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
@@ -241,17 +239,23 @@ Because of a number of enhancements, overall performance has increased when chan
 
 Also, in the Cube UI, users will receive more concise feedback regarding the impact of the change. Up to now, they would receive a list of all items affected by the change. From now on, the list of affected items will only show up to 10 affected items per object type.
 
+#### SLAnalytics - Behavioral anomaly detection: No longer available for discrete parameters [ID_35465]
+
+<!-- MR 10.4.0 - FR 10.3.3 -->
+
+From now on, anomaly detection will no longer be available for discrete parameters.
+
 #### Automation: Enhanced memory usage [ID_35502]
 
 <!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
 
 Because of a number of enhancements, overall memory usage of the SLAutomation process has improved.
 
-#### SLAnalytics - Behavioral anomaly detection: No longer available for discrete parameters [ID_35465]
+#### Support for GQI queries from Data Aggregator with ad hoc data sources [ID_35526]
 
 <!-- MR 10.4.0 - FR 10.3.3 -->
 
-From now on, anomaly detection will no longer be available for discrete parameters.
+GQI now supports queries from [Data Aggregator](xref:Data_Aggregator_DxM) that use ad hoc data sources.
 
 ### Fixes
 
@@ -322,12 +326,6 @@ When run-time connections were being set up between agents or when a midnight sy
 If a DOM module is created without specifying *SecuritySettings*, the view permission is set to "None".
 
 Up to now, the check to determine whether a user had the view permission set to "None", would only return true for the Administrator or users in the Administrator group. From now on, when the required view permission is "None", permission checks will no longer be performed.
-
-#### NATSMaxPayloadException could be thrown when a client requested large amounts of data [ID_35306]
-
-<!-- MR 10.3.0 - FR 10.3.3 -->
-
-When a client requested large amounts of data, in some cases, a `NATSMaxPayloadException` could be thrown.
 
 #### External authentication via SAML: Issues fixed when using Okta as identity provider [ID_35374]
 
@@ -400,3 +398,9 @@ In some cases, two identical behavioral anomaly alarms would incorrectly be crea
 <!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.3 -->
 
 In some cases, an error could occur in the SLAnalytics process after a DVE parent element had been deleted.
+
+#### Cassandra Cluster: Rows would incorrectly be added without TTL value [ID_35789]
+
+<!-- MR 10.3.0 [CU0] - FR 10.3.3 [CU0] -->
+
+When a row was added to a Cassandra Cluster table, no TTL value would be inserted into the TTL column of that row.

@@ -4,13 +4,16 @@
     topicUid: DataMiner_General_RNs_index
     items:
     - name: v10.4
+      topicUid: General_Main_Release_10.4.0
       items:
       - name: Main Release
+        topicUid: General_Main_Release_10.4.0
         items:
         - name: General Main Release 10.4.0 - Preview
           topicUid: General_Main_Release_10.4.0
           items:
           - name: General Main Release 10.4.0 - New features
+            topicUid: General_Main_Release_10.4.0_highlights
             items:
             - name: Highlights
               topicUid: General_Main_Release_10.4.0_highlights
@@ -19,13 +22,16 @@
           - name: General Main Release 10.4.0 - Changes
             topicUid: General_Main_Release_10.4.0_changes
     - name: v10.3
+      topicUid: General_Main_Release_10.3.0
       items:
       - name: Main Release
+        topicUid: General_Main_Release_10.3.0
         items:
         - name: General Main Release 10.3.0
           topicUid: General_Main_Release_10.3.0
           items:
           - name: General Main Release 10.3.0 - New features
+            topicUid: General_Main_Release_10.3.0_highlights
             items:
             - name: Highlights
               topicUid: General_Main_Release_10.3.0_highlights
@@ -37,13 +43,28 @@
             topicUid: General_Main_Release_10.3.0_changes
         - name: General Main Release 10.3.0 CU1
           topicUid: General_Main_Release_10.3.0_CU1
+        - name: General Main Release 10.3.0 CU2 - Preview
+          topicUid: General_Main_Release_10.3.0_CU2
+        - name: General Main Release 10.3.0 CU3 - Preview
+          topicUid: General_Main_Release_10.3.0_CU3
       - name: Feature Release
+        topicUid: General_Feature_Release_10.3.6
         items:
-        - name: General Feature Release 10.3.4 - Preview
+        - name: General Feature Release 10.3.6 - Preview
+          topicUid: General_Feature_Release_10.3.6
+        - name: General Feature Release 10.3.5 - Preview
+          topicUid: General_Feature_Release_10.3.5
+        - name: General Feature Release 10.3.4
           topicUid: General_Feature_Release_10.3.4
         - name: General Feature Release 10.3.3
           topicUid: General_Feature_Release_10.3.3
+          items:
+          - name: New features and changes
+            topicUid: General_Feature_Release_10.3.3
+          - name: General Feature Release 10.3.3 CU1
+            topicUid: General_Feature_Release_10.3.3_CU1
         - name: General Feature Release 10.3.2
+          topicUid: General_Feature_Release_10.3.2
           items:
           - name: New features and changes
             topicUid: General_Feature_Release_10.3.2
@@ -52,13 +73,16 @@
         - name: General Feature Release 10.3.1
           topicUid: General_Feature_Release_10.3.1
     - name: v10.2
+      topicUid: General_Main_Release_10.2.0
       items:
       - name: Main Release
+        topicUid: General_Main_Release_10.2.0
         items:
         - name: General Main Release 10.2.0
           topicUid: General_Main_Release_10.2.0
           items:
           - name: General Main Release 10.2.0 - New features
+            topicUid: General_Main_Release_10.2.0_new_features_1
             items:
             - name: New features (part 1)
               topicUid: General_Main_Release_10.2.0_new_features_1
@@ -100,11 +124,17 @@
           topicUid: General_Main_Release_10.2.0_CU11
         - name: General Main Release 10.2.0 CU12
           topicUid: General_Main_Release_10.2.0_CU12
-        - name: General Main Release 10.2.0 CU13 - Preview
+        - name: General Main Release 10.2.0 CU13
           topicUid: General_Main_Release_10.2.0_CU13
+        - name: General Main Release 10.2.0 CU14 - Preview
+          topicUid: General_Main_Release_10.2.0_CU14
+        - name: General Main Release 10.2.0 CU15 - Preview
+          topicUid: General_Main_Release_10.2.0_CU15
       - name: Feature Release
+        topicUid: General_Feature_Release_10.2.12
         items:
         - name: General Feature Release 10.2.12
+          topicUid: General_Feature_Release_10.2.12
           items:
           - name: New features and changes
             topicUid: General_Feature_Release_10.2.12
@@ -113,6 +143,7 @@
           - name: General Feature Release 10.2.12 CU2
             topicUid: General_Feature_Release_10.2.12_CU2
         - name: General Feature Release 10.2.11
+          topicUid: General_Feature_Release_10.2.11
           items:
           - name: New features and changes
             topicUid: General_Feature_Release_10.2.11
@@ -121,6 +152,7 @@
         - name: General Feature Release 10.2.10
           topicUid: General_Feature_Release_10.2.10
         - name: General Feature Release 10.2.9
+          topicUid: General_Feature_Release_10.2.9
           items:
           - name: New features and changes
             topicUid: General_Feature_Release_10.2.9
@@ -143,13 +175,16 @@
         - name: General Feature Release 10.2.1
           topicUid: General_Feature_Release_10.2.1
     - name: v10.1
+      topicUid: General_Main_Release_10.1.0
       items:
       - name: Main Release
+        topicUid: General_Main_Release_10.1.0
         items:
         - name: General Main Release 10.1.0
           topicUid: General_Main_Release_10.1.0
           items:
           - name: General Main Release 10.1.0 - New features
+            topicUid: General_Main_Release_10.1.0_new_features_1
             items:
             - name: New features (part 1)
               topicUid: General_Main_Release_10.1.0_new_features_1
@@ -168,6 +203,7 @@
           - name: General Main Release 10.1.0 - Enhancements
             topicUid: General_Main_Release_10.1.0_enhancements
           - name: General Main Release 10.1.0 - Fixes
+            topicUid: General_Main_Release_10.1.0_fixes_1
             items:
             - name: Fixes (part 1)
               topicUid: General_Main_Release_10.1.0_fixes_1
@@ -218,6 +254,7 @@
         - name: General Main Release 10.1.0 CU22 - Preview
           topicUid: General_Main_Release_10.1.0_CU22
       - name: Feature Release
+        topicUid: General_Feature_Release_10.1.12
         items:
         - name: General Feature Release 10.1.12
           topicUid: General_Feature_Release_10.1.12
@@ -244,13 +281,16 @@
         - name: General Feature Release 10.1.1
           topicUid: General_Feature_Release_10.1.1
     - name: v10.0
+      topicUid: General_Main_Release_10.0.0
       items:
       - name: Main Release
+        topicUid: General_Main_Release_10.0.0
         items:
         - name: General Main Release 10.0.0
           topicUid: General_Main_Release_10.0.0
           items:
           - name: General Main Release 10.0.0 - New features
+            topicUid: General_Main_Release_10.0.0_new_features_1
             items:
             - name: New features (part 1)
               topicUid: General_Main_Release_10.0.0_new_features_1
@@ -265,6 +305,7 @@
           - name: General Main Release 10.0.0 - Enhancements
             topicUid: General_Main_Release_10.0.0_enhancements
           - name: General Main Release 10.0.0 - Fixes
+            topicUid: General_Main_Release_10.0.0_fixes_1
             items:
             - name: Fixes (part 1)
               topicUid: General_Main_Release_10.0.0_fixes_1
@@ -315,6 +356,7 @@
         - name: General Main Release 10.0.0 CU22 - Preview
           topicUid: General_Main_Release_10.0.0_CU22
       - name: Feature Release
+        topicUid: General_Feature_Release_10.0.13
         items:
         - name: General Feature Release 10.0.13
           topicUid: General_Feature_Release_10.0.13
@@ -359,8 +401,10 @@
     topicUid: DataMiner_Cube_RNs_index
     items:
     - name: v10.4
+      topicUid: Cube_Main_Release_10.4.0
       items:
       - name: Main Release
+        topicUid: Cube_Main_Release_10.4.0
         items:
         - name: DataMiner Cube Main Release 10.4.0 - Preview
           topicUid: Cube_Main_Release_10.4.0
@@ -370,8 +414,10 @@
           - name: Other new features & changes - Preview
             topicUid: Cube_Main_Release_10.4.0_other_features_changes
     - name: v10.3
+      topicUid: Cube_Main_Release_10.3.0
       items:
       - name: Main Release
+        topicUid: Cube_Main_Release_10.3.0
         items:
         - name: DataMiner Cube Main Release 10.3.0
           topicUid: Cube_Main_Release_10.3.0
@@ -380,21 +426,35 @@
             topicUid: Cube_Main_Release_10.3.0_highlights
           - name: Other new features & changes
             topicUid: Cube_Main_Release_10.3.0_other_features_changes
-        - name: DataMiner Cube Main Release 10.3.0 CU1 - Preview
+        - name: DataMiner Cube Main Release 10.3.0 CU1
           topicUid: Cube_Main_Release_10.3.0_CU1
+        - name: DataMiner Cube Main Release 10.3.0 CU2 - Preview
+          topicUid: Cube_Main_Release_10.3.0_CU2
       - name: Feature Release
+        topicUid: Cube_Feature_Release_10.3.6
         items:
-        - name: DataMiner Cube Feature Release 10.3.4 - Preview
+        - name: DataMiner Cube Feature Release 10.3.6 - Preview
+          topicUid: Cube_Feature_Release_10.3.6
+        - name: DataMiner Cube Feature Release 10.3.5 - Preview
+          topicUid: Cube_Feature_Release_10.3.5
+        - name: DataMiner Cube Feature Release 10.3.4
           topicUid: Cube_Feature_Release_10.3.4
         - name: DataMiner Cube Feature Release 10.3.3
           topicUid: Cube_Feature_Release_10.3.3
         - name: DataMiner Cube Feature Release 10.3.2
           topicUid: Cube_Feature_Release_10.3.2
+          items:
+          - name: New features and changes
+            topicUid: Cube_Feature_Release_10.3.2
+          - name: DataMiner Cube Feature Release 10.3.2 CU1
+            topicUid: Cube_Feature_Release_10.3.2_CU1
         - name: DataMiner Cube Feature Release 10.3.1
           topicUid: Cube_Feature_Release_10.3.1
     - name: v10.2
+      topicUid: Cube_Feature_Release_10.2.12
       items:
       - name: Feature Release
+        topicUid: Cube_Feature_Release_10.2.12
         items:
         - name: DataMiner Cube Feature Release 10.2.12
           topicUid: Cube_Feature_Release_10.2.12
@@ -408,36 +468,50 @@
     topicUid: DataMiner_Web_apps_RNs_index
     items:
     - name: v10.4
+      topicUid: Web_apps_Main_Release_10.4.0
       items:
       - name: Main Release
+        topicUid: Web_apps_Main_Release_10.4.0
         items:
         - name: DataMiner web apps Main Release 10.4.0 - Preview
           topicUid: Web_apps_Main_Release_10.4.0
           items:
           - name: Highlights & other new features
-            topicUID: Web_apps_Main_Release_10.4.0_new_features
+            topicUid: Web_apps_Main_Release_10.4.0_new_features
           - name: Changes
-            topicUID: Web_apps_Main_Release_10.4.0_changes
+            topicUid: Web_apps_Main_Release_10.4.0_changes
     - name: v10.3
+      topicUid:  Web_apps_Main_Release_10.3.0
       items:
       - name: Main Release
+        topicUid:  Web_apps_Main_Release_10.3.0
         items:
         - name: DataMiner web apps Main Release 10.3.0
           topicUid: Web_apps_Main_Release_10.3.0
           items:
           - name: Highlights & other new features
-            topicUID: Web_apps_Main_Release_10.3.0_new_features
+            topicUid: Web_apps_Main_Release_10.3.0_new_features
           - name: Changes
-            topicUID: Web_apps_Main_Release_10.3.0_changes
-        - name: DataMiner web apps Main Release 10.3.0 CU1 - Preview
+            topicUid: Web_apps_Main_Release_10.3.0_changes
+        - name: DataMiner web apps Main Release 10.3.0 CU1
           topicUid: Web_apps_Main_Release_10.3.0_CU1
+        - name: DataMiner web apps Main Release 10.3.0 CU2 - Preview
+          topicUid: Web_apps_Main_Release_10.3.0_CU2
+        - name: DataMiner web apps Main Release 10.3.0 CU3 - Preview
+          topicUid: Web_apps_Main_Release_10.3.0_CU3
       - name: Feature Release
+        topicUid: Web_apps_Feature_Release_10.3.6
         items:
-        - name: DataMiner web apps Feature Release 10.3.4 - Preview
+        - name: DataMiner web apps Feature Release 10.3.6 - Preview
+          topicUid: Web_apps_Feature_Release_10.3.6
+        - name: DataMiner web apps Feature Release 10.3.5 - Preview
+          topicUid: Web_apps_Feature_Release_10.3.5
+        - name: DataMiner web apps Feature Release 10.3.4
           topicUid: Web_apps_Feature_Release_10.3.4
         - name: DataMiner web apps Feature Release 10.3.3
           topicUid: Web_apps_Feature_Release_10.3.3
   - name: dataminer.services release notes
+    topicUid: DCP_change_log
     items:
     - name: dataminer.services change log
       topicUid: DCP_change_log
@@ -452,8 +526,15 @@
     - name: DataMiner Cloud Pack 2.0
       topicUid: DCP_2.0
   - name: Other release notes
+    topicUid: DataAggregator_1.0.0
     items:
+    - name: Data Aggregator release notes
+      topicUid: DataAggregator_1.0.0
+      items:
+      - name: Data Aggregator 1.0.0
+        topicUid: DataAggregator_1.0.0
     - name: Class Library release notes
+      topicUid: ClassLibrary_Range_1.4
       items:
       - name: Class Library Range 1.4
         topicUid: ClassLibrary_Range_1.4
@@ -466,6 +547,7 @@
       - name: Class Library Range 1.0
         topicUid: ClassLibrary_Range_1.0
     - name: DIS release notes
+      topicUid: DIS_2.40
       items:
       - name: DIS 2.40
         topicUid: DIS_2.40
@@ -548,8 +630,10 @@
       - name: DIS 2.0.1
         topicUid: DIS_2.0.1
     - name: EPM release notes
+      topicUid: EPM_6.1.6_D-DOCSIS
       items:
       - name: D-DOCSIS
+        topicUid: EPM_6.1.6_D-DOCSIS
         items:
         - name: EPM 6.1.6 D-DOCSIS - Preview
           topicUid: EPM_6.1.6_D-DOCSIS
@@ -576,11 +660,17 @@
         - name: EPM 5.0.0 D-DOCSIS 
           topicUid: EPM_5.0.0_D-DOCSIS
       - name: I-DOCSIS
+        topicUid: EPM_6.1.7_I-DOCSIS
         items:
         - name: EPM 6.1.7 I-DOCSIS - Preview
           topicUid: EPM_6.1.7_I-DOCSIS
         - name: EPM 6.1.6 I-DOCSIS
           topicUid: EPM_6.1.6_I-DOCSIS
+          items:
+          - name: New features and changes
+            topicUid: EPM_6.1.6_I-DOCSIS
+          - name: Addendum CU1
+            topicUid: EPM_6.1.6_I-DOCSIS_CU1
         - name: EPM 6.1.5 I-DOCSIS
           topicUid: EPM_6.1.5_I-DOCSIS
         - name: EPM 6.1.4 I-DOCSIS 
@@ -604,8 +694,10 @@
         - name: EPM 5.0.0 I-DOCSIS 
           topicUid: EPM_5.0.0_I-DOCSIS
     - name: IDP release notes
+      topicUid: IDP_1.2.0
       items:
       - name: IDP 1.2.0
+        topicUid: IDP_1.2.0
         items:
         - name: New features and changes
           topicUid: IDP_1.2.0
@@ -616,6 +708,7 @@
       - name: IDP 1.1.20
         topicUid: IDP_1.1.20
       - name: IDP 1.1.19
+        topicUid: IDP_1.1.19
         items:
         - name: New features and changes
           topicUid: IDP_1.1.19
@@ -630,18 +723,21 @@
       - name: IDP 1.1.15
         topicUid: IDP_1.1.15
       - name: IDP 1.1.14
+        topicUid: IDP_1.1.14
         items:
         - name: New features and changes
           topicUid: IDP_1.1.14
         - name: Addendum CU1
           topicUid: IDP_1.1.14_CU1
       - name: IDP 1.1.13
+        topicUid: IDP_1.1.13
         items:
         - name: New features and changes
           topicUid: IDP_1.1.13
         - name: Addendum CU1
           topicUid: IDP_1.1.13_CU1
       - name: IDP 1.1.12
+        topicUid: IDP_1.1.12
         items:
         - name: New features and changes
           topicUid: IDP_1.1.12
@@ -650,6 +746,7 @@
       - name: IDP 1.1.11
         topicUid: IDP_1.1.11
       - name: IDP 1.1.10
+        topicUid: IDP_1.1.10
         items:
         - name: New features and changes
           topicUid: IDP_1.1.10
@@ -664,12 +761,14 @@
       - name: IDP 1.1.7 
         topicUid: IDP_1.1.7
       - name: IDP 1.1.6
+        topicUid: IDP_1.1.6
         items:
         - name: New features and changes
           topicUid: IDP_1.1.6
         - name: Addendum CU1
           topicUid: IDP_1.1.6_CU1
       - name: IDP 1.1.5
+        topicUid: IDP_1.1.5
         items:
         - name: New features and changes
           topicUid: IDP_1.1.5
@@ -692,9 +791,10 @@
       - name: IDP 1.0.0 
         topicUid: IDP_1.0.0
     - name: MbgNMS release notes
+      topicUid: MbgNMS_1.2.0
       items:
       - name: MbgNMS 1.2.0
-        topicUID: MbgNMS_1.2.0
+        topicUid: MbgNMS_1.2.0
       - name: MbgNMS 1.1.1
         topicUid: MbgNMS_1.1.1
       - name: MbgNMS 1.1.0
@@ -702,14 +802,19 @@
       - name: MbgNMS 1.0.1
         topicUid: MbgNMS_1.0.1
     - name: PA release notes
+      topicUid: PA_1.3.1
       items:
+      - name: PA 1.3.1
+        topicUid: PA_1.3.1
       - name: PA 1.3.0
+        topicUid: PA_1.3.0
         items:
         - name: New features and changes
           topicUid: PA_1.3.0
         - name: Addendum CU1
           topicUid: PA_1.3.0_CU1
       - name: PA 1.2.2
+        topicUid: PA_1.2.2
         items:
         - name: New features and changes
           topicUid: PA_1.2.2
@@ -726,14 +831,17 @@
       - name: PA 1.1.0
         topicUid: PA_1.1.0
     - name: PTP release notes
+      topicUid: PTP_1.1.3
       items:
       - name: PTP 1.1.3
+        topicUid: PTP_1.1.3
         items:
         - name: New features and changes
           topicUid: PTP_1.1.3
         - name: Addendum CU1
           topicUid: PTP_1.1.3_CU1
       - name: PTP 1.1.2
+        topicUid: PTP_1.1.2
         items:
         - name: New features and changes
           topicUid: PTP_1.1.2
@@ -744,10 +852,21 @@
       - name: PTP 1.1.0
         topicUid: PTP_1.1.0
     - name: SRM release notes
+      topicUid: SRM_1.2.30
       items:
+      - name: SRM 1.2.30
+        topicUid: SRM_1.2.30
+        items:
+        - name: New features and changes
+          topicUid: SRM_1.2.30
+        - name: Addendum CU1
+          topicUid: SRM_1.2.30_CU1
+        - name: Addendum CU2
+          topicUid: SRM_1.2.30_CU2
       - name: SRM 1.2.29
-        topicUID: SRM_1.2.29
+        topicUid: SRM_1.2.29
       - name: SRM 1.2.28
+        topicUid: SRM_1.2.28
         items:
         - name: New features and changes
           topicUid: SRM_1.2.28
@@ -768,6 +887,7 @@
       - name: SRM 1.2.21
         topicUid: SRM_1.2.21
       - name: SRM 1.2.20
+        topicUid: SRM_1.2.20
         items:
         - name: New features and changes
           topicUid: SRM_1.2.20
@@ -782,12 +902,14 @@
       - name: SRM 1.2.16
         topicUid: SRM_1.2.16
       - name: SRM 1.2.15
+        topicUid: SRM_1.2.15
         items:
         - name: New features and changes
           topicUid: SRM_1.2.15
         - name: Addendum CU1
           topicUid: SRM_1.2.15_CU1
       - name: SRM 1.2.14
+        topicUid: SRM_1.2.14
         items:
         - name: New features and changes
           topicUid: SRM_1.2.14

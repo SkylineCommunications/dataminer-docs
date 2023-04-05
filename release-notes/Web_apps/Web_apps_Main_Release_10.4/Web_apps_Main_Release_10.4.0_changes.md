@@ -136,7 +136,52 @@ The GQI data sources *Get elements* and *Get services* will now also return alar
 
 In the GQI data sources *Get services* and *Get views*, the *State* column has now been renamed to *Alarm state*.
 
+#### Dashboards app: Feeds listing parameters of EPM objects will now also list the parameters of the enhanced elements linked to those EPM objects [ID_35562]
+
+<!-- MR 10.4.0 - FR 10.3.4 -->
+
+When an EPM feed is used to feed EPM identifiers to a parameter feed, it will now also list the parameters of the enhanced elements that are linked to the EPM objects.
+
+#### Monitoring app: Trending page of a parameter no longer has a sidebar [ID_35705]
+
+<!-- MR 10.4.0 - FR 10.3.4 -->
+
+In the *Monitoring* app, the *Trending* page of a parameter no longer has a sidebar.
+
+#### Monitoring app - Histogram: Sidebar enhancements [ID_35797]
+
+<!-- MR 10.4.0 - FR 10.3.5 -->
+
+In the *Monitoring* app, a number of enhancements have been made to the sidebar of the *Histogram* page of a parameter:
+
+- The icons that allow you to switch between trend graph and histogram have been updated.
+- The *Time span* selection box has been removed.
+- The width of the sidebar has been reduced.
+
+#### Web Services API: Performance enhancements [ID_35805]
+
+<!-- MR 10.4.0 - FR 10.3.5 -->
+
+A web API event queue will now automatically be removed after 5 minutes if a client did not request the events in that queue during those 5 minutes. As a result, overall web API memory consumption will decrease considerably.
+
+Also, it is now possible for one web API connection to have multiple event queues. As a result, clients will be able to have multiple open websocket connections using the same connection ID.
+
+#### Dashboards app & Low-code apps: New way to link components to feeds [ID_35837]
+
+<!-- MR 10.4.0 - FR 10.3.5 -->
+
+The way in which components are linked to feeds has been improved. Instead of using a *Use feed* or *Link x to feed* checkbox, you will now be able to configure a feed link by means of a picker window.
+
+> [!CAUTION]
+> BREAKING CHANGE: Up to now, when you linked a script parameter to the *From* or *Till* box of a time range feed, the feed would pass a datetime value in string format to the script. That string value was not in an ISO format and did not contain any information about the time zone. From now on, the feed will send a UTC timestamp in milliseconds instead. Scripts that expect to receive a string value will need to be modified.
+
 ### Fixes
+
+#### Web apps: Problem with external authentication [ID_33405]
+
+<!-- MR 10.4.0 - FR 10.3.5 -->
+
+In some cases, it would not be possible to log in to a web app (e.g. Dashboards, Monitoring, Jobs, etc.) using external authentication.
 
 #### GQI: Problem when retrieving DCF interfaces [ID_34820]
 
@@ -165,14 +210,6 @@ From now on, when the parameter feed has a protocol or view filter, it will fetc
 <!-- MR 10.4.0 - FR 10.3.2 -->
 
 A number of issues with regard to data highlighting have been fixed.
-
-#### Dashboards app: Problem when trying to open a shared dashboard [ID_35271]
-
-<!-- MR 10.4.0 - FR 10.3.3 -->
-
-When users tried to open a shared dashboard, in some cases, they would unexpectedly be presented with a login screen due to a permission issue.
-
-Workaround: Recreate the faulty shared dashboard.
 
 #### Dashboards - Line & area chart component: Timestamps could be formatted incorrectly when exporting trend data to CSV [ID_35311]
 
@@ -203,3 +240,33 @@ A number of issues regarding the Visual Overview component have been fixed.
 <!-- MR 10.4.0 - FR 10.3.4 -->
 
 When you tried to select a visualization for a newly added component that did not yet have one, the visualization picker would incorrectly resize the first time you hovered over it.
+
+#### Web apps: Color picker would not be positioned correctly [ID_35649]
+
+<!-- MR 10.4.0 - FR 10.3.4 -->
+
+The color picker would not be positioned correctly.
+
+#### Low-code apps: Problem when opening a low-code app on a mobile device or when resizing the screen to a mobile size [ID_35683]
+
+<!-- MR 10.4.0 - FR 10.3.4 -->
+
+When you opened a low-code app on a mobile device or when you resized the screen to a mobile size, a console error would be thrown.
+
+#### GQI: "Loading" indicator of a table would not disappear when that table was fed data from another table  [ID_35698]
+
+<!-- MR 10.4.0 - FR 10.3.4 -->
+
+When data from one table was fed to another table, in some cases, the "loading" indicator of the table to which data was fed would incorrectly not disappear.
+
+#### Dashboards app & Low-code apps: Problem when feeding data from a GQI component to a query used in the same component [ID_35806]
+
+<!-- MR 10.4.0 - FR 10.3.5 -->
+
+An error could occur when feeding data from a GQI component to a query that was used in the same component.
+
+#### Dashboards app - GQI: No element feed available after selecting a relation between two standalone parameters [ID_36003]
+
+<!-- MR 10.4.0 - FR 10.3.5 -->
+
+When, in a table with a *Get parameter relations* query, you selected a relation between two standalone parameters, no element feed would be available.
