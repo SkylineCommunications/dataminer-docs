@@ -12,7 +12,7 @@ uid: Web_apps_Feature_Release_10.3.5
 
 ## Highlights
 
-#### BREAKING CHANGE: One single authentication app for all web apps [ID_35772] [ID_35896]
+#### BREAKING CHANGE: One single authentication app for all web apps [ID_35772] [ID_35896] [ID_36108]
 
 <!-- MR 10.4.0 - FR 10.3.5 -->
 
@@ -34,6 +34,7 @@ Also, when using external authentication via SAML, the `<system.webServer>` elem
 ```xml
 <defaultDocument>
    <files>
+      <clear />
       <add value="default.aspx" />
    </files>
 </defaultDocument>
@@ -43,8 +44,6 @@ Also, when using external authentication via SAML, the `<system.webServer>` elem
 >
 > - When using external authentication via SAML, DataMiner should be configured to use HTTPS.
 > - This new authentication app will also be used by DataMiner Cube, but only to authenticate users who want to access a web page stored on a DataMiner Agent, not to authenticate users who log in to Cube itself.
-
-[](#breaking-change-one-single-authentication-app-for-all-web-apps-id_35772-id_35896)
 
 ## Other new features
 
@@ -146,7 +145,7 @@ Also, up to now, when an *Open monitoring card* action was configured in the hea
 
 #### Dashboards app & Low-code apps - Table component: Enhanced visibility of rows that are selected or hovered over in dark mode [ID_35993]
 
-<!-- MR 10.2.0 [CU15] - FR 10.3.5 -->
+<!-- MR 10.2.0 [CU15]/10.3.0 [CU3] - FR 10.3.5 -->
 
 When a dashboard or a low-code app is in dark mode, from now on, there will be a higher color contrast between rows that are selected or hovered over and rows that are not.
 

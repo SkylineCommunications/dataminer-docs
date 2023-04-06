@@ -15,7 +15,7 @@ uid: Web_apps_Main_Release_10.4.0_new_features
 
 The new icon component allows you to display an icon on a dashboard or a low-code app.
 
-#### BREAKING CHANGE: One single authentication app for all web apps [ID_35772] [ID_35896]
+#### BREAKING CHANGE: One single authentication app for all web apps [ID_35772] [ID_35896] [ID_36108]
 
 <!-- MR 10.4.0 - FR 10.3.5 -->
 
@@ -37,6 +37,7 @@ Also, when using external authentication via SAML, the `<system.webServer>` elem
 ```xml
 <defaultDocument>
    <files>
+      <clear />
       <add value="default.aspx" />
    </files>
 </defaultDocument>
