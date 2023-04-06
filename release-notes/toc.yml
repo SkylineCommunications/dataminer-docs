@@ -430,6 +430,8 @@
           topicUid: Cube_Main_Release_10.3.0_CU1
         - name: DataMiner Cube Main Release 10.3.0 CU2 - Preview
           topicUid: Cube_Main_Release_10.3.0_CU2
+        - name: DataMiner Cube Main Release 10.3.0 CU3 - Preview
+          topicUid: Cube_Main_Release_10.3.0_CU3
       - name: Feature Release
         topicUid: Cube_Feature_Release_10.3.6
         items:

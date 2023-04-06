@@ -33,3 +33,9 @@ When you used the Cassandra Cluster Migrator tool to migrate a single-node Cassa
 When you created or updated a function resource while its parent element was in an error state, up to now, the state of that parent element would not be checked correctly. As a result, adding or updating the function resource would incorrectly be allowed.
 
 From now on, when you create or update a function resource while its parent element is in an error state, an error will be thrown.
+
+#### Spectrum analysis: Measurement points would not be set correctly [ID_36005]
+
+<!-- MR 10.2.0 [CU15]/10.3.0 [CU3] - FR 10.3.6 -->
+
+In some cases, measurement points would not be set correctly when a trace was being displayed.
