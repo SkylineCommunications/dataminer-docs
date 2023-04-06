@@ -224,7 +224,7 @@ Examples:
 
 ## Taking the snapshot
 
-1. Execute the GET request `http://[IP address]:9200/_snapshot/repositoryname/snapshotname {“indices”: “dataminerprefix*”}` in your chosen client application.
+1. Execute the PUT request `http://[IP address]:9200/_snapshot/repositoryname/snapshotname {“indices”: “dataminerprefix*”}` in your chosen client application.
 
    Example, using Kibana as client application:
 
