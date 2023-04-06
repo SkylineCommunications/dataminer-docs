@@ -48,6 +48,8 @@ The following prerequisites are currently available:
 
 > [!NOTE]
 > Though this is not recommended, you can bypass these checks by manually removing the *Prerequisites* folder from *Update.zip* in the upgrade package.
+> Note that this should only ever be done if there is reason to assume the prerequisites do not work because of a bug in software that causes the prerequisite to fail without proper reason.
+> If the checks are bypassed in any other circumstance and it results in a DataMiner issue, this is not covered by support. 
 
 ## Having a backup at the ready
 
