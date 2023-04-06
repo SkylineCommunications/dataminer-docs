@@ -12,7 +12,7 @@ uid: Web_apps_Feature_Release_10.3.5
 
 ## Highlights
 
-#### BREAKING CHANGE: One single authentication app for all web apps [ID_35772] [ID_35896]
+#### BREAKING CHANGE: One single authentication app for all web apps [ID_35772] [ID_35896] [ID_36108]
 
 <!-- MR 10.4.0 - FR 10.3.5 -->
 
@@ -34,6 +34,7 @@ Also, when using external authentication via SAML, the `<system.webServer>` elem
 ```xml
 <defaultDocument>
    <files>
+      <clear />
       <add value="default.aspx" />
    </files>
 </defaultDocument>
@@ -43,8 +44,6 @@ Also, when using external authentication via SAML, the `<system.webServer>` elem
 >
 > - When using external authentication via SAML, DataMiner should be configured to use HTTPS.
 > - This new authentication app will also be used by DataMiner Cube, but only to authenticate users who want to access a web page stored on a DataMiner Agent, not to authenticate users who log in to Cube itself.
-
-[](#breaking-change-one-single-authentication-app-for-all-web-apps-id_35772-id_35896)
 
 ## Other new features
 
