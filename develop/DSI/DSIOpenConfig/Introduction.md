@@ -4,7 +4,7 @@ uid: DSI_OpenConfig_Introduction
 
 # OpenConfig
 
-OpenConfig is an informal working group with members such as Google, Microsoft, AT&T and British Telecom. An important aspect of the OpenConfig initiative is to create a set of vendor-neutral [data models](#data-models). These data models are designed to take actual operator requirements and needs into account. In addition to data models, OpenConfig also defines communication protocols such as [gNMI](#gnmi) and [gNOI](#gnoi).
+OpenConfig is an informal working group with members such as Google, Microsoft, AT&T, and British Telecom. An important aspect of the OpenConfig initiative is to create a set of vendor-neutral [data models](#data-models). These data models are designed to take actual operator requirements and needs into account. In addition to data models, OpenConfig also defines communication protocols such as [gNMI](#gnmi) and [gNOI](#gnoi).
 
 ## Useful links
 

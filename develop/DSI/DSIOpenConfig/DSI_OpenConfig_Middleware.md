@@ -5,36 +5,39 @@ uid: DSI_OpenConfig_Middleware
 
 ## Purpose
 
-The purpose of the OpenConfig middleware is to make it possible to **easily consume data exposed over the gNMI service in a DataMiner connector**. It assists you in **setting up the connection with the endpoint**, provides **easy to use wrappers around the gRPC service calls** and makes it possible to **map specific paths in the YANG model to DataMiner parameters** so the notifications the service is sending out get automatically parsed and the parameters populated with data.
+The purpose of the OpenConfig middleware is to make it possible to **easily consume data exposed over the gNMI service in a DataMiner connector**. It assists you in **setting up the connection with the endpoint**, provides **easy to use wrappers around the gRPC service calls**, and makes it possible to **map specific paths in the YANG model to DataMiner parameters** so the notifications the service sends out get automatically parsed and the parameters are populated with data.
 
 ## Prerequisites
 
 In order to use the OpenConfig middleware, you will need to have the following setup:
 
-* A **cloud-connected** DataMiner agent running version 10.3.3 or higher.
-* The [CommunicationGateway DxM](xref:DataMinerExtensionModules#communicationgateway) installed on at least one of the DataMiner agents in the cluster.
+- A DataMiner Agent that is [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud) and runs DataMiner 10.3.3 or higher.
 
-> [!TIP]
-> You can easily install the CommunicationGateway DxM through the [Admin Cloud Portal](https://admin.dataminer.services).
+- The [CommunicationGateway DxM](xref:DataMinerExtensionModules#communicationgateway) is installed on at least one of the DataMiner Agents in the cluster.
+
+> [!NOTE]
+> You can install the CommunicationGateway DxM with the Admin app. See [Managing the nodes of a DMS connected to dataminer.services](xref:Managing_cloud-connected_nodes).
 
 ## Usage
 
 ### Including the middleware package
 
-Include the NuGet package *Skyline.DataMiner.DataSources.OpenConfig.Gnmi* in your project as explained in [Consuming NuGet packages](xref:Consuming_NuGet). When developing a connector, there's an optional package when you want to use the [DataMapper](#datamapper): *Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol*
+Include the NuGet package *Skyline.DataMiner.DataSources.OpenConfig.Gnmi* in your project, as explained under [Consuming NuGet packages](xref:Consuming_NuGet).
 
-### Setting up connection with the endpoint
+When you are developing a connector, there is an optional package when you want to use the [DataMapper](#datamapper): *Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol*
+
+### Setting up the connection with the endpoint
 
 #### Creating a GnmiClient
 
-To set up a connection with the endpoint, you will need to create a [GnmiClient](xref:Skyline.DataMiner.Helper.OpenConfig.Api.GnmiClient) and pass along the `agentId` and `elementId` of the element running the connector. This will be used to identify yourself with the CommunicationGateway DxM.
+To set up a connection with the endpoint, you will need to create a [GnmiClient](xref:Skyline.DataMiner.Helper.OpenConfig.Api.GnmiClient) and pass along the `agentId` and `elementId` of the element running the connector. This will be used to identify you with the CommunicationGateway DxM.
 
-A friendly name can be passed along in the `elementName` which is used as context for logging purposes.
+A friendly name can be passed along in the `elementName`, which is used as context for logging purposes.
 
-> [!TIP]
-> There are scenarios in which you do not have an element (*e.g. a DataMiner Automation script*). It is fine to pass along different context as well. It is meant to identify yourself and for logging purposes so it is sufficient if the consumer knows what it represents. It doesn't have to be unique, the middleware will make it unique for you by appending a `GUID`.
+> [!NOTE]
+> There are scenarios where you do not have an element (e.g. a DataMiner Automation script). It is fine to pass along a different context as well. This is meant to identify you and for logging purposes, so it is sufficient if the consumer knows what it represents. It does not have to be unique. The middleware will make it unique for you by appending a `GUID`.
 
-You also need to pass a [DataSourceConfiguration](xref:Skyline.DataMiner.Helper.OpenConfig.Models.DataSourceConfiguration) which specifies the details of the endpoint you want to connect with.
+You also need to pass a [DataSourceConfiguration](xref:Skyline.DataMiner.Helper.OpenConfig.Models.DataSourceConfiguration) that specifies the details of the endpoint you want to connect with.
 
 ```csharp
 var config = new DataSourceConfiguration();
@@ -43,20 +46,22 @@ config.Port = 10164;
 ```
 
 > [!IMPORTANT]
-> It is important to specify either `http://` or `https://`  in front of the address as that will decide whether to setup a secure channel or not.
+> It is important to specify either `http://` or `https://`  in front of the address, as that will determine whether a secure channel is set up or not.
 
-On top of that there are some additional parameters for authentication. There is support for credentials and client certificates. In case of a self-signed certificate, it's important that the root certificate of the path is part of the *Trusted Root Certification Authorities* certificate store in Windows.
+On top of that, there are some additional **parameters for authentication**. There is support for credentials and client certificates. In case of a self-signed certificate, it is important that the root certificate of the path is part of the *Trusted Root Certification Authorities* certificate store in Windows.
 
-To use a client certificate, configure the path of where it can be found in [ClientCertificate](xref:Skyline.DataMiner.Helper.OpenConfig.Models.DataSourceConfiguration.ClientCertificate). Do note that the client certificate should be stored on the DataMiner Agent that has the CommunicationGateway DxM installed.
+To use a **client certificate**, configure the path where it can be found in [ClientCertificate](xref:Skyline.DataMiner.Helper.OpenConfig.Models.DataSourceConfiguration.ClientCertificate).
 
 ```csharp
 config.ClientCertificate = @"C:\Certificates\client-auth-cert.pfx";
 ```
 
 > [!IMPORTANT]
-> The client certificate should be in the PKCS#12 format and have the *.pfx* extension.
+>
+> - The client certificate must be in the PKCS#12 format and must have the *.pfx* extension.
+> - The client certificate must be stored on the DataMiner Agent that has the CommunicationGateway DxM installed.
 
-If instead you want to use credentials to authenticate you can pass them along as well.
+If instead you want to use **credentials** to authenticate, you can pass them along as well.
 
 ```csharp
 config.UserName = "admin";
@@ -64,9 +69,9 @@ config.Password = Convert.ToString(protocol.GetParameter(Parameter.datasourcepas
 ```
 
 > [!CAUTION]
-> Never hardcode a password in a QAction for security reasons. It is advised to create a parameter of type password in your DataMiner connector and retrieve the value through a `GetParameter` API call to pass it along.
+> Never hard-code a password in a QAction, for security reasons. We recommend creating a parameter of type password in the DataMiner connector and retrieving the value through a `GetParameter` API call to pass it along.
 
-To be able to log the information about what is being handled by the middleware, you will need to pass an [ILogger](xref:Skyline.DataMiner.Helper.OpenConfig.Utils.ILogger).
+To be able to **log** the information about what is being handled by the middleware, you will need to pass an [ILogger](xref:Skyline.DataMiner.Helper.OpenConfig.Utils.ILogger).
 
 An example of an [ILogger](xref:Skyline.DataMiner.Helper.OpenConfig.Utils.ILogger) implementation for a DataMiner connector could be the following:
 
@@ -121,7 +126,7 @@ namespace QAction_1.Loggers
 
 #### Connecting with the gNMI service
 
-By calling [Connect](xref:Skyline.DataMiner.Helper.OpenConfig.Api.GnmiClient.Connect) you make connection with the endpoint.
+By calling [Connect](xref:Skyline.DataMiner.Helper.OpenConfig.Api.GnmiClient.Connect), you make a connection with the endpoint.
 
 ```csharp
 var client = new GnmiClient((uint)protocol.DataMinerID, (uint)protocol.ElementID, protocol.ElementName, config, logger);
@@ -140,35 +145,35 @@ private void OnConnectionStateChanged(object sender, EventArgs e)
 ```
 
 > [!NOTE]
-> In case you are setting up a secure channel, it is important that the server certificate is issued to the hostname which is configured in the [DataSourceConfiguration](xref:Skyline.DataMiner.Helper.OpenConfig.Models.DataSourceConfiguration). The whole certificate chain needs to be trusted and not be expired. There is no option to disable this. When this is not the desired behavior, you will need to fall back to insecure HTTP.
+> In case you are setting up a secure channel, it is important that the server certificate is issued to the hostname configured in the [DataSourceConfiguration](xref:Skyline.DataMiner.Helper.OpenConfig.Models.DataSourceConfiguration). The whole certificate chain needs to be trusted and must not be expired. There is no option to disable this. When this is not the desired behavior, you will need to fall back to insecure HTTP.
 
 ### Disconnecting
 
-To disconnect from the endpoint, you can call [Disconnect](xref:Skyline.DataMiner.Helper.OpenConfig.Api.GnmiClient.Disconnect). As GnmiClient implements [IDisposable](xref:System.IDisposable) you can call [Dispose](xref:Skyline.DataMiner.Helper.OpenConfig.Api.GnmiClient.Dispose) on the client as well which will call the [Disconnect](xref:Skyline.DataMiner.Helper.OpenConfig.Api.GnmiClient.Disconnect) for you.
+To disconnect from the endpoint, you can call [Disconnect](xref:Skyline.DataMiner.Helper.OpenConfig.Api.GnmiClient.Disconnect). As GnmiClient implements [IDisposable](xref:System.IDisposable) you can call [Dispose](xref:Skyline.DataMiner.Helper.OpenConfig.Api.GnmiClient.Dispose) on the client as well, which will call the [Disconnect](xref:Skyline.DataMiner.Helper.OpenConfig.Api.GnmiClient.Disconnect) for you.
 
-Furthermore, to disconnect when the element has stopped, you can use the QAction's Dispose. 
+To disconnect when the element has stopped, you can use the QAction's Dispose.
 
 ```csharp
 public class QAction : IDisposable
 {
-	private bool disposed;
-	private GnmiClient gnmiClient;
+   private bool disposed;
+   private GnmiClient gnmiClient;
 
-	public void Dispose()
-	{
-		Dispose(true);
-		GC.SuppressFinalize(this);
-	}
+   public void Dispose()
+   {
+      Dispose(true);
+      GC.SuppressFinalize(this);
+   }
 
-	protected virtual void Dispose(bool disposing)
-	{
-		if (disposing && !disposed)
-		{
-			disposed = true;
-			gnmiClient?.Dispose();
-			gnmiClient = null;
-		}
-	}
+   protected virtual void Dispose(bool disposing)
+   {
+      if (disposing && !disposed)
+      {
+         disposed = true;
+         gnmiClient?.Dispose();
+         gnmiClient = null;
+      }
+   }
 }
 ```
 
@@ -206,7 +211,7 @@ You can find more info on the `Get` RPC in the [OpenConfig introduction](xref:DS
 var responses = client.Get("system/memory/state/physical");
 ```
 
-You can either pass along the path as a string or as a `GnmiPath` object. Here's an example of how you can do this:
+You can pass along the path either as a string or as a `GnmiPath` object. For example:
 
 ```csharp
 var interfaceStatePath = new Gnmi.Path();
@@ -215,14 +220,14 @@ interfaceStatePath.Elem.Add(new Gnmi.PathElem { Name = "interface" });
 interfaceStatePath.Elem.Add(new Gnmi.PathElem { Name = "state" });
 ```
 
-This would the equivalent of
+This would the equivalent of this:
 
 ```csharp
 string interfaceStatePath = "interfaces/interface/state";
 ```
 
 > [!IMPORTANT]
-> The [gNMI specification](https://github.com/openconfig/reference/blob/master/rpc/gnmi/gnmi-specification.md#333-considerations-for-using-get) mentions that in case of retrieving larger datasets it's recommended to `Subscribe` on a path instead of doing a `Get` to avoid putting a significant resource burden on the target.
+> The [gNMI specification](https://github.com/openconfig/reference/blob/master/rpc/gnmi/gnmi-specification.md#333-considerations-for-using-get) mentions that when retrieving larger datasets it is recommended to `Subscribe` to a path instead of doing a `Get`, to avoid putting a significant resource burden on the target.
 
 ### Setting a value in the YANG path
 
@@ -232,7 +237,7 @@ You can find more info on the `Set` RPC in the [OpenConfig introduction](xref:DS
 client.Set("system/config/login-banner", "Hello DataMiner!");
 ```
 
-It is a common practice that the read-write objects are stored under the */config* path, while the readable counterpart with the current value is stored under the */state* path.
+The read-write objects are commonly stored under the */config* path, while the readable counterpart with the current value is stored under the */state* path.
 
 ### Subscribing to a YANG path
 
@@ -277,18 +282,19 @@ client.Subscribe("interfaces", new[] { "interfaces/interface/state" }, HandleInc
 Now anytime a `leaf` changes, it will send out a notification with the new value.
 
 > [!NOTE]
-> There might be some limitations on the data source in terms of granularity. For example a switch could send out changes on the counters only once every 5 seconds while they would change multiple times in that time frame.
+> There might be some limitations on the data source in terms of granularity. For example, a switch could send out changes on the counters only once every 5 seconds while they would change multiple times in that time frame.
 
 ### Accessing a specific instance
 
-If you need to access a specific instance in a `container`, you can use [ ] to specify the instance.
-e.g: interfaces/interface[name:Ethernet1]/state
+If you need to access a specific instance in a `container`, you can use [ ] to specify the instance. For example: `interfaces/interface[name:Ethernet1]/state`
 
 Using this path will result in only reading or writing the *Ethernet1* instance of the *interfaces/interface/state* `container`.
 
 ### Troubleshooting
 
-The errors that occur in the middleware will be logged by the `ILogger` object that gets passed along at construction of the [GnmiClient](xref:Skyline.DataMiner.Helper.OpenConfig.Api.GnmiClient). In case of a DataMiner connector, that will be the logging of the element. There's an extensive list of [error codes](xref:CommunicationGateway_ErrorCodes) available to help you troubleshoot.
+The errors that occur in the middleware will be logged by the `ILogger` object that gets passed along at construction of the [GnmiClient](xref:Skyline.DataMiner.Helper.OpenConfig.Api.GnmiClient).
+
+In case of a DataMiner connector, that will be the logging of the element. There is an extensive list of [error codes](xref:CommunicationGateway_ErrorCodes) available to help you troubleshoot.
 
 ### DataMapper
 
@@ -325,16 +331,16 @@ IDataMapper dataMapper = new DataMinerConnectorDataMapper(
 ```
 
 > [!IMPORTANT]
-> When configuring the path for a column, always specify the YANG module name as well. Notifications of type `JSON` do not contain them but notifications of type `JSON_IETF` do. The DataMapper is capable of handling both but for that reason the YANG module name needs to be known.
+> When configuring the path for a column, always specify the YANG module name as well. Notifications of type `JSON` do not contain them but notifications of type `JSON_IETF` do. The DataMapper is capable of handling both, but for that reason the YANG module name needs to be known.
 
 You need to create a [DataMinerConnectorDataGrid](xref:Skyline.DataMiner.Helper.OpenConfig.DataMapper.DataMinerConnectorDataGrid) and pass it the root YANG path of the `container` that will be stored. Then it is a matter of mapping the column parameters to the YANG paths of the `leaf` items.
 
 > [!NOTE]
-> After having created the [DataMinerConnectorDataMapper](xref:Skyline.DataMiner.Helper.OpenConfig.DataMapper.DataMinerConnectorDataMapper), do not forget to configure the [GnmiClient](xref:Skyline.DataMiner.Helper.OpenConfig.Api.GnmiClient) to use it with the [SetDataMapper](xref:Skyline.DataMiner.Helper.OpenConfig.Api.GnmiClient.SetDataMapper%2A) method.
+> After you have created the [DataMinerConnectorDataMapper](xref:Skyline.DataMiner.Helper.OpenConfig.DataMapper.DataMinerConnectorDataMapper), do not forget to configure the [GnmiClient](xref:Skyline.DataMiner.Helper.OpenConfig.Api.GnmiClient) to use it with the [SetDataMapper](xref:Skyline.DataMiner.Helper.OpenConfig.Api.GnmiClient.SetDataMapper%2A) method.
 
 #### Configuring a default value
 
-In case a gNMI notification does not contain a value for a configured `leaf`, it will remain `null` which results in the cell remaining *Not Initialized*. However, there is the possibility to configure a default value to be used instead of `null`.
+In case a gNMI notification does not contain a value for a configured `leaf`, it will remain `null`, which results in the cell remaining *Not Initialized*. However, there is the possibility to configure a default value to be used instead of `null`.
 
 This can be configured in the following way:
 
@@ -356,9 +362,9 @@ IDataMapper dataMapper = new DataMinerConnectorDataMapper(
 
 #### Converting the value before doing the set
 
-Sometimes the data in the notification needs to be converted before being set. A possible example might be a timestamp that comes in as *UNIX time* and needs to be converted to *OLE automation time*.
+Sometimes the data in the notification needs to be converted before it is set. A possible example might be a timestamp that comes in as *UNIX time* and needs to be converted to *OLE automation time*.
 
-This can be achieved by setting the [OnRawValueChange](xref:Skyline.DataMiner.Helper.OpenConfig.DataMapper.DataMinerConnectorDataGridColumn.OnRawValueChange) property of a [DataMinerConnectorDataGridColumn](xref:Skyline.DataMiner.Helper.OpenConfig.DataMapper.DataMinerConnectorDataGridColumn).
+You can achieve this by setting the [OnRawValueChange](xref:Skyline.DataMiner.Helper.OpenConfig.DataMapper.DataMinerConnectorDataGridColumn.OnRawValueChange) property of a [DataMinerConnectorDataGridColumn](xref:Skyline.DataMiner.Helper.OpenConfig.DataMapper.DataMinerConnectorDataGridColumn).
 
 ```csharp
 new DataMinerConnectorDataGrid("interfaces/interface/state", Parameter.Interfacesstate.tablePid, new List<IDataMinerConnectorDataGridColumn>
@@ -390,7 +396,7 @@ public static object ConvertEpochTimeUtcTicksToOleAutomationTime(SLProtocol prot
 
 #### Displaying octets as rates
 
-In case you are retrieving octets, it can be desirable to display those as rates. The [RateCalculator](xref:Skyline.DataMiner.Helper.OpenConfig.DataMapper.DataMinerConnectorDataGridColumn.RateCalculator) property on a [DataMinerConnectorDataGridColumn](xref:Skyline.DataMiner.Helper.OpenConfig.DataMapper.DataMinerConnectorDataGridColumn) makes that very easy to do.
+In case you are retrieving octets, it can be desirable to display those as rates. The [RateCalculator](xref:Skyline.DataMiner.Helper.OpenConfig.DataMapper.DataMinerConnectorDataGridColumn.RateCalculator) property on a [DataMinerConnectorDataGridColumn](xref:Skyline.DataMiner.Helper.OpenConfig.DataMapper.DataMinerConnectorDataGridColumn) can be used for this.
 
 ```csharp
 new DataMinerConnectorDataGrid("interfaces/interface/state", Parameter.Interfacesstate.tablePid, new List<IDataMinerConnectorDataGridColumn>
@@ -412,7 +418,7 @@ public static object CustomRates(SLProtocol protocol, DataValueOriginType origin
 }
 ```
 
-The `CustomRates` method will take care of the rate calculation and will set the calculated value in the parameter which is configured in the [RateColumnParameterId](xref:Skyline.DataMiner.Helper.OpenConfig.DataMapper.DataMinerConnectorDataGridColumn.RateColumnParameterId) property.
+The `CustomRates` method will take care of the rate calculation and will set the calculated value in the parameter that is configured in the [RateColumnParameterId](xref:Skyline.DataMiner.Helper.OpenConfig.DataMapper.DataMinerConnectorDataGridColumn.RateColumnParameterId) property.
 
 > [!TIP]
 > In this scenario, you will typically want to map the `RateColumnParameterId` to a default value so it gets populated when there is insufficient information to calculate the rate.
