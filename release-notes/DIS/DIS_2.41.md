@@ -33,6 +33,10 @@ In the C# editor, the following snippet now allows you to generate an `OnApiTrig
 
 - DIS \> Automation Script \> CreateUserDefinedApi (Automation)
 
+#### XML editor: Protocols will now be allowed to use SLManagedAutomation DLL files [ID_36099]
+
+Up to now, DIS would filter out any development packs or Skyline.DataMiner.Files NuGet packages. From now on, when it detects that a reference to such a SLManagedAutomation DLL file is needed for a particular QAction to run, it will add the reference to the `dllImport` attribute of the QAction. However, the file itself will not be included.
+
 ### Validator
 
 #### New checks and error messages [ID_35384] [ID_35558]
