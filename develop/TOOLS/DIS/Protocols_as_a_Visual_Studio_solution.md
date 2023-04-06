@@ -42,6 +42,10 @@ A DataMiner protocol Visual Studio solution consists of the following folders:
 
 - *Solution items*: This folder contains the protocol XML. The main difference between a solution protocol XML file and a regular protocol XML file is that the former does not contain the QAction C# code (as this is now in the QAction projects in the Visual Studio solution).
 
+> [!NOTE]
+> As from DIS v2.41, an information bar will allow you to convert existing solutions that make use of the Class Library generation feature.
+> This information bar will appear when a Class Library project (i.e. a project named "QAction_ClassLibrary" or "AutomationScript_ClassLibrary") is detected in a protocol or Automation script solution. As soon as you click *Fix*, the Class Library project will be removed and the references to the project will be replaced by references to the automatically generated Class Library project (with ID 63000).
+
 ## Creating an additional QAction
 
 To create an additional QAction in the solution, provide a new QAction element in the protocol XML file and then click the *Edit QAction* icon next to the QAction element. This will then automatically create a new C# class library Visual Studio project for the QAction.

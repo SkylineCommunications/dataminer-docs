@@ -19,13 +19,17 @@ Support for Microsoft Visual Studio 2017 has been dropped. The last DIS version 
 > [!NOTE]
 > The minimum supported DataMiner version is now DataMiner v10.1.0.
 
-#### Class Library generation feature has been removed in favor of NuGet packages [ID_35827]
+#### Class Library generation feature has been removed in favor of NuGet packages [ID_35819] [ID_35827]
 
 The Class Library generation feature has been removed in favor of NuGet packages.
 
-If you have a connector or Automation script that makes use of the official class library, replace it with the corresponding NuGet package(s). For more information, see [Class library introduction](xref:ClassLibraryIntroduction).
+- If you have a connector or Automation script that makes use of the official class library, replace it with the corresponding NuGet package(s). For more information, see [Class library introduction](xref:ClassLibraryIntroduction).
 
-If you have a connector or Automation script that makes use of a community package, we recommend turning this into a NuGet package. For more information on how to create a NuGet package, see [Producing NuGet packages](xref:Producing_NuGet). Alternatively, you can put all the code from the community library zip file in a QAction/Exe block.
+- If you have a connector or Automation script that makes use of a community package, we recommend turning this into a NuGet package. For more information on how to create a NuGet package, see [Producing NuGet packages](xref:Producing_NuGet). Alternatively, you can put all the code from the community library zip file in a QAction/Exe block.
+
+Also, an information bar will allow you to convert existing solutions that make use of the Class Library generation feature.
+
+This information bar will appear when a Class Library project (i.e. a project named "QAction_ClassLibrary" or "AutomationScript_ClassLibrary") is detected in a protocol or Automation script solution. As soon as you click *Fix*, the Class Library project will be removed and the references to the project will be replaced by references to the automatically generated Class Library project (with ID 63000).
 
 #### C# editor: New snippet [ID_35991]
 
