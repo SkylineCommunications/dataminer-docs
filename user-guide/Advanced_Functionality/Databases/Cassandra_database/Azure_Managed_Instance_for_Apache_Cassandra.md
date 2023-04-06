@@ -59,3 +59,13 @@ To do this, some information from the Azure portal is needed.
 
 > [!NOTE]
 > It's best to configure all of the nodes in DataMiner. If a node should go down, DataMiner can still connect to the other nodes.
+
+## Additional configuration in db.xml
+
+The **TLSEnabled** tag is needed in the db.xml configuration file before the connection will work.
+
+```xml
+<TLSEnabled>True</TLSEnabled>
+```
+
+More information on the db.xml file can be found [here](xref:DB_xml).
