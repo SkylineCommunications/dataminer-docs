@@ -15,7 +15,7 @@ uid: Web_apps_Main_Release_10.4.0_new_features
 
 The new icon component allows you to display an icon on a dashboard or a low-code app.
 
-#### BREAKING CHANGE: One single authentication app for all web apps [ID_35772] [ID_35896]
+#### BREAKING CHANGE: One single authentication app for all web apps [ID_35772] [ID_35896] [ID_36108]
 
 <!-- MR 10.4.0 - FR 10.3.5 -->
 
@@ -29,18 +29,7 @@ When using external authentication via SAML, this means that all existing `Asser
 <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://dataminer.example.com/API/" index="1" isDefault="true"/>
 ```
 
-> [!NOTE]
-> In this element, `https://dataminer.example.com` has to be replaced with the IP address or the DNS name of your DataMiner System. Make sure the endpoint address in the `Location` attribute matches the address you specified when you registered DataMiner with the identity provider. The way you configure this will depend on the identity provider you are using (for example, in the case of Azure AD, this address has to be entered in the *Entity ID* field).
-
-Also, when using external authentication via SAML, the `<system.webServer>` element of the `C:\Skyline DataMiner\Webpages\API\Web.config` file has to contain the following:
-
-```xml
-<defaultDocument>
-   <files>
-      <add value="default.aspx" />
-   </files>
-</defaultDocument>
-```
+In this element, `https://dataminer.example.com` has to be replaced with the IP address or the DNS name of your DataMiner System. Make sure the endpoint address in the `Location` attribute matches the address you specified when you registered DataMiner with the identity provider. The way you configure this will depend on the identity provider you are using (for example, in the case of Azure AD, this address has to be entered in the *Entity ID* field).
 
 > [!NOTE]
 >
@@ -181,14 +170,6 @@ Up to now, a trend graph with *Trend span* set to "Last 7 days" would always sho
 > [!NOTE]
 > The *Interval* option is only available when *Trend points* is set to "Average (changes only)" or "Average (fixed interval)".
 
-#### Web apps: New action 'Pan to view' [ID_35847]
-
-<!-- MR 10.4.0 - FR 10.3.5 -->
-
-In a low-code app, you can now configure a new type of action: *Pan to view*.
-
-When triggered, this action will center the map shown in a specified *Generic map* component on a specified location (defined by a latitude and a longitude).
-
 #### Dashboards app & Low-code apps: New 'Text input' feed [ID_35902]
 
 <!-- MR 10.4.0 - FR 10.3.5 -->
@@ -248,3 +229,14 @@ For more information on how to pass data using a JSON object, see [Specifying da
 A 'Set timespan' action can now be configured for a line & area chart component. On execution, this action will apply a specific timespan to the component.
 
 This action has two numeric arguments: 'To' and 'From'. These can be either set to a static value or linked to a numeric value feed.
+
+#### Dashboards app: Shared dashboards can now be edited [ID_35940]
+
+<!-- MR 10.4.0 - FR 10.3.5 -->
+
+From now on, it is possible to edit a shared dashboard.
+
+Also, a *Shared* button will now be displayed in the header bar of a shared dashboard. Clicking this button will open the same pop-up box that opens when you click *Share > Manage share*.
+
+> [!NOTE]
+> It is not possible to rename or to move a shared dashboard.

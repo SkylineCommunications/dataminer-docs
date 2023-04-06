@@ -8,7 +8,7 @@ uid: Cube_Main_Release_10.3.0_CU2
 > We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
 
 > [!TIP]
-> For release notes for this release that are not related to DataMiner Cube, see [General Main Release 10.3.0 CU1](xref:General_Main_Release_10.3.0_CU2).
+> For release notes for this release that are not related to DataMiner Cube, see [General Main Release 10.3.0 CU2](xref:General_Main_Release_10.3.0_CU2).
 
 ### Enhancements
 
@@ -17,12 +17,6 @@ uid: Cube_Main_Release_10.3.0_CU2
 <!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.4 -->
 
 From now on, DataMiner Cube will no longer accept database TTL settings that exceed 10 years.
-
-#### Cube will now by default connect using gRPC when connecting to a cloud-connected DataMiner Agent with a remote access URL [ID_35779]
-
-<!-- MR 10.3.0 [CU2] - FR 10.3.5 -->
-
-When you connect to a cloud-connected DataMiner Agent with a remote access URL ending in `*.dataminer.services`, Cube will now by default connect using gRPC.
 
 #### No longer possible to create pattern matching tags that include predicted trend information [ID_35861]
 

@@ -153,9 +153,9 @@ When two queries using an external data source with a custom argument of which t
 
 #### Dashboards app: Problem when trying to open a shared dashboard [ID_35271]
 
-<!-- MR 10.4.0 - FR 10.3.3 -->
+<!-- MR 10.3.0 [CU3] - FR 10.3.3 -->
 
-When users tried to open a shared dashboard, in some cases, they would unexpectedly be presented with a login screen due to a permission issue.
+When users tried to open a shared dashboard, in some cases, they would unexpectedly be presented with a login screen because of a permission issue.
 
 Workaround: Recreate the faulty shared dashboard.
 
