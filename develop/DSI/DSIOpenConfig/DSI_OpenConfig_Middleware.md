@@ -133,7 +133,7 @@ var client = new GnmiClient((uint)protocol.DataMinerID, (uint)protocol.ElementID
 client.Connect()
 ```
 
-In case you want to get notified when the connection state changes, you can can register on the [ConnectionStateChanged](xref:Skyline.DataMiner.Helper.OpenConfig.Api.GnmiClient.ConnectionStateChanged) event.
+In case you want to get notified when the connection state changes, you can register on the [ConnectionStateChanged](xref:Skyline.DataMiner.Helper.OpenConfig.Api.GnmiClient.ConnectionStateChanged) event.
 
 ```csharp
 client.ConnectionStateChanged += OnConnectionStateChanged
@@ -149,7 +149,7 @@ private void OnConnectionStateChanged(object sender, EventArgs e)
 
 ### Disconnecting
 
-To disconnect from the endpoint, you can call [Disconnect](xref:Skyline.DataMiner.Helper.OpenConfig.Api.GnmiClient.Disconnect). As GnmiClient implements [IDisposable](xref:System.IDisposable) you can call [Dispose](xref:Skyline.DataMiner.Helper.OpenConfig.Api.GnmiClient.Dispose) on the client as well, which will call the [Disconnect](xref:Skyline.DataMiner.Helper.OpenConfig.Api.GnmiClient.Disconnect) for you.
+To disconnect from the endpoint, you can call [Disconnect](xref:Skyline.DataMiner.Helper.OpenConfig.Api.GnmiClient.Disconnect). As GnmiClient implements [IDisposable](xref:System.IDisposable), you can call [Dispose](xref:Skyline.DataMiner.Helper.OpenConfig.Api.GnmiClient.Dispose) on the client as well, which will call the [Disconnect](xref:Skyline.DataMiner.Helper.OpenConfig.Api.GnmiClient.Disconnect) for you.
 
 To disconnect when the element has stopped, you can use the QAction's Dispose.
 
@@ -181,7 +181,7 @@ public class QAction : IDisposable
 > Making a QAction implement IDisposable is only supported in DataMiner version 10.2.9 and up.
 
 > [!IMPORTANT]
-> The Dispose() function on a QAction will only be called when the element is already considered stopped in DataMiner. The SLProtocol object should no longer be used at this point.
+> The Dispose() method on a QAction will only be called when the element is already considered stopped in DataMiner. The SLProtocol object should no longer be used at this point.
 
 ### Retrieving the capabilities
 
@@ -237,7 +237,7 @@ You can find more info on the `Set` RPC in the [OpenConfig introduction](xref:DS
 client.Set("system/config/login-banner", "Hello DataMiner!");
 ```
 
-The read-write objects are commonly stored under the */config* path, while the readable counterpart with the current value is stored under the */state* path.
+In OpenConfig, the read-write objects are commonly stored under the */config* path, while the readable counterpart with the current value is stored under the */state* path.
 
 ### Subscribing to a YANG path
 
