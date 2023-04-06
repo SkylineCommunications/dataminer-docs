@@ -26,6 +26,10 @@ After you have made sure that the [prerequisites](https://github.com/SkylineComm
 
 Several dependencies have been updated. This includes security-related improvements.
 
+#### 30 March 2023 - Fix - Sharing app: Confirmation pop-up window not visible [ID_36029]
+
+In the Sharing app, depending on the position of the scrollbar, it could occur that the confirmation pop-up window for the deletion of an incoming share was displayed outside the boundaries of the screen, so that it was not possible to confirm the deletion.
+
 #### 2 March 2023 - Integrate your DataMiner System with Microsoft Teams using DataMiner Automation [ID_35799]
 
 You can now easily integrate your DataMiner System with Microsoft Teams using DataMiner Automation.
