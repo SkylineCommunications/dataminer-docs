@@ -10,7 +10,7 @@ The dataminer.services platform gets updated continuously. This change log can h
 
 Several dependencies have been updated. This includes security-related improvements.
 
-#### 30 March 2023 - Sharing app: Confirmation pop-up window not visible [36029]
+#### 30 March 2023 - Fix - Sharing app: Confirmation pop-up window not visible [ID_36029]
 
 In the Sharing app, depending on the position of the scrollbar, it could occur that the confirmation pop-up window for the deletion of an incoming share was displayed outside the boundaries of the screen, so that it was not possible to confirm the deletion.
 
