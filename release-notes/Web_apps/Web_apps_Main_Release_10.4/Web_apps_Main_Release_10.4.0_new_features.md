@@ -15,7 +15,7 @@ uid: Web_apps_Main_Release_10.4.0_new_features
 
 The new icon component allows you to display an icon on a dashboard or a low-code app.
 
-#### BREAKING CHANGE: One single authentication app for all web apps [ID_35772] [ID_35896] [ID_36108]
+#### BREAKING CHANGE: One single authentication app for all web apps [ID_35772] [ID_35896]
 
 <!-- MR 10.4.0 - FR 10.3.5 -->
 
