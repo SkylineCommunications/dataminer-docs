@@ -137,12 +137,14 @@ As from DataMiner 10.2.0/10.2.1, it is recommended to create Enterprise Applicat
 
    - Set *Entity ID* to the IP address or DNS name specified in the *spMetadata.xml* file, for example ``https://dataminer.example.com/``.
 
-   - Under *Reply URL*, specify the following URLs, replacing ``dataminer.example.com`` with the IP address or DNS name in the *spMetadata.xml* file (note the trailing "/"):
+   - Under *Reply URL*, specify the following URL(s), replacing ``dataminer.example.com`` with the IP address or DNS name in the *spMetadata.xml* file (note the trailing "/"):
 
      From DataMiner 10.3.5 onwards:
+
      - ``https://dataminer.example.com/API/``
 
      Older DataMiner versions:
+
      - ``https://dataminer.example.com/root/``
      - ``https://dataminer.example.com/ticketing/``
      - ``https://dataminer.example.com/jobs/``
