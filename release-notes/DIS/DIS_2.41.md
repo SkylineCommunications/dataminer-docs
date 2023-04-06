@@ -41,6 +41,18 @@ In the C# editor, the following snippet now allows you to generate an `OnApiTrig
 
 Up to now, DIS would filter out any development packs or Skyline.DataMiner.Files NuGet packages. From now on, when it detects that a reference to such a SLManagedAutomation DLL file is needed for a particular QAction to run, it will add the reference to the `dllImport` attribute of the QAction. However, the file itself will not be included.
 
+#### XML editor: Referring to a library script Exe from another Automation script [ID_36117]
+
+​Up to now, it was only possible to refer to a library script Exe from within the same Automation script. From now on, in a Visual Studio solution, you can also add a reference to a project from another Automation script in the solution. DIS will then automatically add a `scriptRef`.
+
+See the following example, in which `{SCRIPTNAME}` is the name of the other script containing the library and `{LIBRARYNAME}` is the name of the library:
+
+```xml
+<Param type="scriptRef">{SCRIPTNAME}:{LIBRARYNAME}</Param>
+```
+
+As DIS will automatically add a `scriptRef`, developers will only need to add a reference to the project that represents the library.
+
 ### Validator
 
 #### New checks and error messages [ID_35384] [ID_35558]
