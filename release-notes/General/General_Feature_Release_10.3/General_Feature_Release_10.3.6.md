@@ -25,7 +25,11 @@ uid: General_Feature_Release_10.3.6
 
 ### Enhancements
 
-*No enhancements have been added to this release yet.*
+#### SLLogCollector now also collects SyncInfo files [ID_35995]
+
+<!-- MR 10.2.0 [CU15]/10.3.0 [CU3] - FR 10.3.6 -->
+
+SLLogCollector packages will now also include all files found in `C:\Skyline DataMiner\Files\SyncInfo` relevant for troubleshooting.
 
 ### Fixes
 
