@@ -75,14 +75,14 @@ The following units have been added to the UOM Schema:
 
 The following changes have been made to the Microsoft Visual Studio UI:
 
-- In the *About Microsoft Visual Studio* window (*Help > About Microsoft Visual Studio*), the DIS product version will now show the current DIS version.
+- In the *About Microsoft Visual Studio* window (*Help > About Microsoft Visual Studio*), the *Installed products* list will now show the correct version of the installed DIS package.
 
-- When, in the *Manage Extensions* window, you select the DIS extension, two additional links will now be shown:
+- When, in the *Manage Extensions* window, you select the *DataMiner Integration Studio* extension, you will now find two additional links in the details pane on the right:
 
-  - *Release Notes* (pointing to XXX)
-  - *Getting Started* (pointing to XXX)
+  - *Release Notes* (pointing to the release notes of the installed DIS version on <https://docs.dataminer.services/>)
+  - *Getting Started* (pointing to [Installing and configuring the software](xref:Installing_and_configuring_the_software))
 
-  Also, the *More Information* link will now point to XXX.
+  Also, the *More Information* link will now point to [DataMiner Integration Studio](xref:DIS).
 
 ### Fixes
 
