@@ -17,5 +17,7 @@ Within Skyline, we also use an internal NuGet server: <https://devcore3/nuget>.
 - [Producing NuGet](xref:Producing_NuGet)
 
 - [Middleware NuGet packages](xref:Nuget_Communication_Middleware)
-  - [OpenConfig Middleware](xref:DSI_OpenConfig_Middleware): facilitates OpenConfig implementations in a DataMiner environment.  
+
+  - [OpenConfig Middleware](xref:DSI_OpenConfig_Middleware): Facilitates OpenConfig implementations in a DataMiner environment.
+
 - [Assembly binding](xref:Assembly_Binding)

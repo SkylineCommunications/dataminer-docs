@@ -115,7 +115,7 @@ If you have a dependency on .NET Framework (e.g. Skyline.DataMiner.Dev.*), you w
 
   - Holds the packages that have a direct link to DataMiner (AppPackage creation/installation, DataMinerSystem, InterAppCalls, etc.).
 
-  - DxMs also fall under this, except when it's for an external data source.
+  - This also applies for DxMs, except for packages that can communicate with external data sources.
 
 - *Skyline.DataMiner.Utils.XXX*
 

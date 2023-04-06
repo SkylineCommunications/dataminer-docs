@@ -48,7 +48,7 @@ The SupportAssistant module is responsible for features allowing Skyline Communi
 
 The ModelHost module is responsible for allowing users to retrieve parameter relationship data on DataMiner Agents that are connected to dataminer.services, and have been configured to [offload alarm and change point events to the cloud](xref:Controlling_cloudfeed_data_offloads).
 
-The ModelHost module is not included in the Cloud Pack and must be deployed separately. Follow the steps in [deploying modules](#deploying-modules).
+The ModelHost DxM is not included in the Cloud Pack and [must be deployed separately](xref:Managing_cloud-connected_nodes#deploying-a-dxm-on-a-node).
 
 ### UserDefinableApiEndpoint
 
@@ -56,29 +56,18 @@ The UserDefinableApiEndpoint module is responsible for handling API triggers for
 
 ### CommunicationGateway
 
-This module enables connectors or scripts running in the DataMiner environment to communicate with devices that require a gRPC connection. Currently we support the [gNMI](xref:DSI_OpenConfig_Introduction#gnmi) service, but more services and RPC connections may be added.
+The CommunicationGateway module makes it possible for connectors or scripts running in the DataMiner environment to communicate with devices that require a gRPC connection.
+
+At present, we support the [gNMI](xref:DSI_OpenConfig_Introduction#gnmi) service, but more services and RPC connections may be added.
 
 The DxM exists in tandem with service-specific [middleware](xref:Nuget_Communication_Middleware) that facilitates the NATS communication to the DxM. However, not all middleware require the CommunicationGateway to establish a connection with the device. The DxM primarily exists to bridge the gap between different dotNet versions. Namely, gRPC requires dotNet 5 or higher for full functionality, while SLScripting still runs on dotNet 4.6.2.
 
 #### Prerequisites
 
-* The DxM needs to be installed on a Windows system running a DataMiner Agent.
-* DataMiner version 10.3.3 or higher is required for connectors that rely on the DxM. The DataMinerMessageBroker.API.dll is shared with all processes, and version 1.4.2 is required for the NATS communication.
+- The DxM needs to be installed on a Windows system running a DataMiner Agent.
+- DataMiner version 10.3.3 or higher is required for connectors that rely on the DxM. The DataMinerMessageBroker.API.dll is shared with all processes, and version 1.4.2 is required for the NATS communication.
 
 #### Getting started
 
-1. Deploy the CommunicationGateway DxM by following the steps in [deploying modules](#deploying-modules).
+1. [Deploy the CommunicationGateway DxM](xref:Managing_cloud-connected_nodes#deploying-a-dxm-on-a-node).
 1. After the installation, the DxM should run as a service. Logging will be written to `C:\ProgramData\Skyline Communications\DataMiner CommunicationGateway\Logs`.
-
-## Deploying modules
-
-1. Open the Admin app. See [Accessing the Admin app](xref:Accessing_the_Admin_app).
-
-1. In the Admin app, check whether the correct organization is mentioned in the header bar.
-
-1. If a different organization should be selected, click the organization selector ![organization selector](~/user-guide/images/Cloud_Admin_Selector_icon.png) in the top-right corner and select the organization in the list.
-
-1. In the pane on the left, under *DataMiner Systems*, select your DataMiner System and select the *Nodes* page.
-
-1. Next to your module of choice, e.g. *ModelHost*, click *Deploy* to start the automatic installation process.
-
