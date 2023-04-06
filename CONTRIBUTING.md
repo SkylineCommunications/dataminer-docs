@@ -119,7 +119,7 @@ For larger contributions, e.g. to add several new pages, we recommend that you i
   > [!NOTE]
   >
   > - While it is also possible to use the tools below without Git, some features in Visual Studio Code, such as branch and repository information, will not be available.
-  > - If you install Git, it is important that you do so **before you install GitHub Desktop**, as otherwise you may experience [issues](#github-desktop-keeps-basing-branches-on-an-outdated-version-of-main).
+  > - If you install Git, it is important that you do so **before you install GitHub Desktop**, as otherwise you may experience [issues](#github-desktop-keeps-basing-branches-on-an-outdated-version-of-the-main-branch).
 
 - [GitHub Desktop](https://desktop.github.com/)
 
