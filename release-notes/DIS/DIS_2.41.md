@@ -82,7 +82,7 @@ The following changes have been made to the Microsoft Visual Studio UI:
   - *Release Notes* (pointing to XXX)
   - *Getting Started* (pointing to XXX)
 
-  The *More Information* link will now point to XXX.
+  Also, the *More Information* link will now point to XXX.
 
 ### Fixes
 
