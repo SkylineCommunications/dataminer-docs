@@ -8,11 +8,11 @@ uid: Web_apps_Feature_Release_10.3.5
 > We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
 
 > [!TIP]
-> For release notes for this release that are not related to the web applications, see [General Feature Release 10.3.4](xref:General_Feature_Release_10.3.5).
+> For release notes for this release that are not related to the web applications, see [General Feature Release 10.3.5](xref:General_Feature_Release_10.3.5).
 
 ## Highlights
 
-#### BREAKING CHANGE: One single authentication app for all web apps [ID_35772] [ID_35896]
+#### BREAKING CHANGE: One single authentication app for all web apps [ID_35772] [ID_35896] [ID_36108]
 
 <!-- MR 10.4.0 - FR 10.3.5 -->
 
@@ -34,6 +34,7 @@ Also, when using external authentication via SAML, the `<system.webServer>` elem
 ```xml
 <defaultDocument>
    <files>
+      <clear />
       <add value="default.aspx" />
    </files>
 </defaultDocument>
@@ -43,8 +44,6 @@ Also, when using external authentication via SAML, the `<system.webServer>` elem
 >
 > - When using external authentication via SAML, DataMiner should be configured to use HTTPS.
 > - This new authentication app will also be used by DataMiner Cube, but only to authenticate users who want to access a web page stored on a DataMiner Agent, not to authenticate users who log in to Cube itself.
-
-[](#breaking-change-one-single-authentication-app-for-all-web-apps-id_35772-id_35896)
 
 ## Other new features
 
@@ -146,7 +145,7 @@ Also, up to now, when an *Open monitoring card* action was configured in the hea
 
 #### Dashboards app & Low-code apps - Table component: Enhanced visibility of rows that are selected or hovered over in dark mode [ID_35993]
 
-<!-- MR 10.4.0 - FR 10.3.5 -->
+<!-- MR 10.2.0 [CU15]/10.3.0 [CU3] - FR 10.3.5 -->
 
 When a dashboard or a low-code app is in dark mode, from now on, there will be a higher color contrast between rows that are selected or hovered over and rows that are not.
 
@@ -243,7 +242,7 @@ An error could occur when feeding data from a GQI component to a query that was 
 
 #### Dashboards app & Low-code apps - GQI components: Open sessions would not be closed when a new query was triggered [ID_35824]
 
-<!-- MR 10.4.0 - FR 10.3.5 -->
+<!-- MR 10.2.0 [CU15]/10.3.0 [CU2] - FR 10.3.5 -->
 
 When a GQI component still had a session open when a new query was triggered, in some cases, the open session would incorrectly not be closed.
 
@@ -283,7 +282,7 @@ When you opened a visual overview in a web app, in some cases, the web app could
 
 #### Dashboards app: Problem when an extra GetParameterTable call without ValueFilters was sent after sharing a dashboard with a state, ring or gauge component [ID_35844]
 
-<!-- MR 10.4.0 - FR 10.3.5 -->
+<!-- MR 10.3.0 [CU3] - FR 10.3.5 -->
 
 When a dashboard with a state, ring or gauge component was shared, in some cases, an error could be thrown when an extra `GetParameterTable` call without `ValueFilters` was sent.
 
@@ -301,7 +300,7 @@ When, in a table component, the data was grouped by two different parameters, in
 
 #### Dashboards app: Problem when selecting a parameter in a parameter feed component of a shared dashboard [ID_35863]
 
-<!-- MR 10.4.0 - FR 10.3.5 -->
+<!-- MR 10.3.0 [CU3] - FR 10.3.5 -->
 
 When you selected a parameter in a parameter feed component of a shared dashboard, in some cases, an error could occur.
 
@@ -361,6 +360,17 @@ When, in the Monitoring app, you clicked a region in a visual overview that open
 
 When a clock component (analog or digital) was set to use server time, the clock time would not update.
 
+#### Dashboards app: Shared dashboards can now be edited [ID_35940]
+
+<!-- MR 10.4.0 - FR 10.3.5 -->
+
+From now on, it is possible to edit a shared dashboard.
+
+Also, a *Shared* button will now be displayed in the header bar of a shared dashboard. Clicking this button will open the same pop-up box that opens when you click *Share > Manage share*.
+
+> [!NOTE]
+> It is not possible to rename or to move a shared dashboard.
+
 #### Low-code apps: Problem when selecting an action with multiple components after having selected an action with a single component [ID_35947]
 
 <!-- MR 10.3.0 [CU2] - FR 10.3.5 -->
@@ -373,8 +383,34 @@ When you first selected an action with a single component, which was selected au
 
 Up to now, page names and panel names could incorrectly be empty. From now on, this will no longer be allowed.
 
+#### Dashboards app - Line & area chart: Legend would show an incorrect number of disabled parameters [ID_35970]
+
+<!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
+
+When configuring a line & area chart, you can use the *Chart limit* setting to specify the maximum number of parameters that can be displayed in the chart. The excess parameters will then be disabled but remain available in the chart legend, so that they can be enabled again manually.
+
+In some cases, the number of disabled parameters shown in the legend would be incorrect.
+
 #### Dashboards app & Low-code apps: Filter box of visualizations panel would not reset [ID_36000]
+
+<!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
+
+When you reloaded the editor, by clicking the *Refresh* button while editing a dashboard or by switching pages while editing a low-code app, or when you switched to edit mode after previewing or publishing a low-code app, the filter box of the visualizations panel would incorrectly not be reset.
+
+#### Dashboards app - GQI: No element feed available after selecting a relation between two standalone parameters [ID_36003]
+
+<!-- MR 10.4.0 - FR 10.3.5 -->
+
+When, in a table with a *Get parameter relations* query, you selected a relation between two standalone parameters, no element feed would be available.
+
+#### Dashboards apps & Low-code apps: Components would incorrectly make their own data available as feeds [ID_36008]
 
 <!-- MR 10.3.0 [CU2] - FR 10.3.5 -->
 
-When you reloaded the editor, by clicking the *Refresh* button while editing a dashboard or by switching pages while editing a low-code app, or when you switched to edit mode after previewing or publishing a low-code app, the filter box of the visualizations panel would incorrectly not be reset.
+Up to now, components would incorrectly make their own data available as feeds.
+
+#### Dashboards app & Low-code apps - Table component: 'Restore initial view' button would incorrectly remain visible when switching to an empty query [ID_36010]
+
+<!-- MR 10.3.0 [CU2] - FR 10.3.5 -->
+
+When, in a table component, you switched from a non-empty query to an empty query, the *Restore initial view* button would incorrectly remain visible in the component header.

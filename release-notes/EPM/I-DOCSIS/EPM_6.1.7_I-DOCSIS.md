@@ -17,6 +17,12 @@ For each CCAP connector, a *Configuration* and *Threshold Settings* page is now 
 
 For the *Generic DOCSIS CM Collector* connector, a *Configuration* and *Threshold Settings* page is now available in Visual Overview with the settings of the connector.
 
+#### New parameter to configure name Automation script responsible for notifying elements of new data to be ingested [ID_36053]
+
+A new parameter, *Script Name*, has been added to the *Configuration* page of the Skyline EPM Platform, Arris E6000 CCAP Platform, Casa System CCAP Platform, Cisco CBR-8 CCAP Platform, CISCO CMTS CCAP Platform, and Huawei 5688-5800 CCAP Platform connectors. With this parameter, you can specify the Automation script responsible for notifying the back-end elements of new data to be ingested.
+
+Similarly, a *Script Name* parameter has been added to the *Configuration* page of the Skyline EPM Platform DOCSIS connector, so you can specify the Automation script responsible for notifying the CCAPs/CM collector pair of new data to be ingested.
+
 ## Changes
 
 ### Enhancements
@@ -43,6 +49,17 @@ string[] scriptOptions = { "OPTIONS:0", "CHECKSETS:TRUE", "EXTENDED_ERROR_INFO",
 A new trigger has been added to the *_epmBE* card variable in the *Skyline EPM Platform* visual overview. It sets the variable to the DMA ID/element ID of the back-end element based on the CCAP name.
 
 With this new trigger, it is no longer necessary to create a card variable for each back-end element in the system and different triggers for each of those card variables. This improves the DataMiner Maps loading time.
+
+#### Filter box loading time improved by enabling partial table option [ID_36055]
+
+To improve the loading time of the filter box that is displayed when you use the filter sections of the EPM topology chain, the partial table option has now been enabled on the following tables:
+
+- Service group
+- US and DS Service Group
+- US and DS Port
+- US and DS Linecard
+- Node Segment
+- Node, Tap, and Amplifier
 
 ### Fixes
 

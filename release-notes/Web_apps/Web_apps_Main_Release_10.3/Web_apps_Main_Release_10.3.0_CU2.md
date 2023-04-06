@@ -64,6 +64,12 @@ When GQI components tried to execute an empty query, up to now, they would keep 
 
 When you duplicated a component, the size of the duplicate would incorrectly be limited to 30 rows. From now on, when you duplicate a component, the duplicate will have the same size as the original.
 
+#### Dashboards app & Low-code apps - GQI components: Open sessions would not be closed when a new query was triggered [ID_35824]
+
+<!-- MR 10.2.0 [CU15]/10.3.0 [CU2] - FR 10.3.5 -->
+
+When a GQI component still had a session open when a new query was triggered, in some cases, the open session would incorrectly not be closed.
+
 #### Dashboards app: Problem when using the search box on a mobile device [ID_35825]
 
 <!-- MR 10.3.0 [CU2] - FR 10.3.5 -->
@@ -186,6 +192,18 @@ Up to now, page names and panel names could incorrectly be empty. From now on, t
 
 #### Dashboards app & Low-code apps: Filter box of visualizations panel would not reset [ID_36000]
 
-<!-- MR 10.3.0 [CU2] - FR 10.3.5 -->
+<!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
 
 When you reloaded the editor, by clicking the *Refresh* button while editing a dashboard or by switching pages while editing a low-code app, or when you switched to edit mode after previewing or publishing a low-code app, the filter box of the visualizations panel would incorrectly not be reset.
+
+#### Dashboards apps & Low-code apps: Components would incorrectly make their own data available as feeds [ID_36008]
+
+<!-- MR 10.3.0 [CU2] - FR 10.3.5 -->
+
+Up to now, components would incorrectly make their own data available as feeds.
+
+#### Dashboards app & Low-code apps - Table component: 'Restore initial view' button would incorrectly remain visible when switching to an empty query [ID_36010]
+
+<!-- MR 10.3.0 [CU2] - FR 10.3.5 -->
+
+When, in a table component, you switched from a non-empty query to an empty query, the *Restore initial view* button would incorrectly remain visible in the component header.

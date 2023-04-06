@@ -175,12 +175,6 @@ The way in which components are linked to feeds has been improved. Instead of us
 > [!CAUTION]
 > BREAKING CHANGE: Up to now, when you linked a script parameter to the *From* or *Till* box of a time range feed, the feed would pass a datetime value in string format to the script. That string value was not in an ISO format and did not contain any information about the time zone. From now on, the feed will send a UTC timestamp in milliseconds instead. Scripts that expect to receive a string value will need to be modified.
 
-#### Dashboards app & Low-code apps - Table component: Enhanced visibility of rows that are selected or hovered over in dark mode [ID_35993]
-
-<!-- MR 10.4.0 - FR 10.3.5 -->
-
-When a dashboard or a low-code app is in dark mode, from now on, there will be a higher color contrast between rows that are selected or hovered over and rows that are not.
-
 ### Fixes
 
 #### Web apps: Problem with external authentication [ID_33405]
@@ -216,14 +210,6 @@ From now on, when the parameter feed has a protocol or view filter, it will fetc
 <!-- MR 10.4.0 - FR 10.3.2 -->
 
 A number of issues with regard to data highlighting have been fixed.
-
-#### Dashboards app: Problem when trying to open a shared dashboard [ID_35271]
-
-<!-- MR 10.4.0 - FR 10.3.3 -->
-
-When users tried to open a shared dashboard, in some cases, they would unexpectedly be presented with a login screen due to a permission issue.
-
-Workaround: Recreate the faulty shared dashboard.
 
 #### Dashboards - Line & area chart component: Timestamps could be formatted incorrectly when exporting trend data to CSV [ID_35311]
 
@@ -279,20 +265,8 @@ When data from one table was fed to another table, in some cases, the "loading" 
 
 An error could occur when feeding data from a GQI component to a query that was used in the same component.
 
-#### Dashboards app & Low-code apps - GQI components: Open sessions would not be closed when a new query was triggered [ID_35824]
+#### Dashboards app - GQI: No element feed available after selecting a relation between two standalone parameters [ID_36003]
 
 <!-- MR 10.4.0 - FR 10.3.5 -->
 
-When a GQI component still had a session open when a new query was triggered, in some cases, the open session would incorrectly not be closed.
-
-#### Dashboards app: Problem when an extra GetParameterTable call without ValueFilters was sent after sharing a dashboard with a state, ring or gauge component [ID_35844]
-
-<!-- MR 10.4.0 - FR 10.3.5 -->
-
-When a dashboard with a state, ring or gauge component was shared, in some cases, an error could be thrown when an extra `GetParameterTable` call without `ValueFilters` was sent.
-
-#### Dashboards app: Problem when selecting a parameter in a parameter feed component of a shared dashboard [ID_35863]
-
-<!-- MR 10.4.0 - FR 10.3.5 -->
-
-When you selected a parameter in a parameter feed component of a shared dashboard, in some cases, an error could occur.
+When, in a table with a *Get parameter relations* query, you selected a relation between two standalone parameters, no element feed would be available.

@@ -50,6 +50,74 @@ Note that, from now on, every *Sort by* node will nullify any preceding *Sort by
 > The behavior of existing queries (using e.g. *Sort by B* followed by *Sort by A*) will not be altered in any way. Their syntax will automatically be adapted when they are migrated to the most recent GQI version.
 > For example, an existing query using *Sort by B* followed by *Sort by A* will use *Sort by A* followed by *Then sort by B* after being migrated.
 
+#### GQI: Data source rows now have a unique key [ID_35999]
+
+<!-- MR 10.4.0 - FR 10.3.5 -->
+
+GQI data source rows now have an internal key. This key is unique (per data source) and cannot be null or empty.
+
+> [!NOTE]
+> At present, you can only interact with these keys in [ad hoc data sources](#ad-hoc-data-source-keys) and [custom GQI operators](#custom-gqi-operator-keys).
+
+##### Ad hoc data source keys
+
+The `GQIRow` class has a new string property named `Key`. The key of a newly created row in an ad hoc data source can be specified using the following constructor:
+
+```csharp
+GQIRow(string key, GQICell[] cells)
+```
+
+> [!NOTE]
+>
+> - Although this constructor will throw an exception when a key is null or empty, the author of the data source is responsible for making sure that keys are unique.
+> - If you don't pass the `key` argument when creating a row, the row index will be used as key.
+
+##### Custom GQI operator keys
+
+The `GQIEditableRow` class has a new string property named `Key`.
+
+At present, this property can only be used to access the row key of an existing row. Keys of custom GQI operators cannot be modified yet.
+
+##### Built-in data source keys
+
+All rows of built-in data sources will automatically be assigned a unique key based on the row index.
+
+##### Join operator keys
+
+When two rows are joined, the key of the joined row will be a concatenation of the left row key and the right row key, separated by a forward slash:
+
+```txt
+<left-key>/<right-key>
+```
+
+In case of a left, right or outer join, when there is no match, either the left or right key will be an empty string. This is the reason why row keys cannot be empty. By allowing empty row keys we would risk creating duplicate keys each time rows are joined.
+
+> [!NOTE]
+> In keys of joined rows, any forward slashes and backward slashes will be escaped:
+>
+> - Any forward slash within the left or right key will be escaped by a backslash: `/` will become `\/`
+> - Any backslash within the left or right key will be escaped by a second backslash: `\` will become `\\`
+
+##### Aggregation operator keys
+
+When no grouping is involved, the single row resulting from an aggregation operation will have a static row key equal to "0".
+
+When grouping is involved, the single row resulting from an aggregation operation will have a key that is the concatenation of all the group values, separated by forward slashes.
+
+For example, in case of the following query ...
+
+`Data source -> Aggregate -> Group by A -> Group by B -> Group by C`
+
+... the resulting row keys will look like this ...
+
+```txt
+<group-value-a>/<group-value-b>/<group-value-c>
+```
+
+In order to avoid duplicate group keys when there is only a single *Group By* operation, any empty values will be replaced by a single forward slash.
+
+Also, any slashes in the group values will be escaped before they are joined. For more information about escaping slashes, see [Join operator keys](#join-operator-keys).
+
 ## Changes
 
 ### Enhancements
@@ -190,6 +258,20 @@ From now on, the execution of the NATS installer at DMA startup will be skipped 
 
 Existing masked alarms would incorrectly affect the overall alarm severity of an element.
 
+#### Failover: Offline agent would incorrectly try to take a backup of the Elasticsearch database [ID_35721]
+
+<!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
+
+When, in Failover setups, you configure a DataMiner backup on the online agent, the same backup will also be scheduled on the offline agent, and if these setups have a clustered Elasticsearch database, a backup of that database cluster will be included in the DataMiner backup.
+
+In Failover setups where both agents included a local Elasticsearch database that was part of an Elasticsearch cluster, the online agent would fail to take a backup of the Elasticsearch databases due to a backup in progress, triggered earlier by the offline agent.
+
+From now on, only the online agent will be allowed to take a backup of the Elasticsearch database, and the offline agent will log the following entry:
+
+```txt
+Elastic backup will not be taken - Only active agents from a failover pair can take the backup.
+```
+
 #### DateTime instances would not get serialized correctly when an SLNet connection supported protocol buffer serialization [ID_35777]
 
 <!-- MR 10.4.0 - FR 10.3.5 -->
@@ -278,11 +360,23 @@ The first time a message with an object of a type that inherited from `InfoData`
 Skyline.DataMiner.Net.Exceptions.DataMinerException: Failed to deserialize message (ProtoBuf). Possible version incompatibility between client and server.  ---&gt; System.InvalidOperationException: It was not possible to prepare a serializer for: Skyline.DataMiner.Net.InfoData ---&gt; System.InvalidOperationException: Unable to resolve a suitable Add method for System.Collections.Generic.IReadOnlyList`1[[System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]&#xD;
 ```
 
+#### Problem with SLElement when a timed action was stopped [ID_35928]
+
+<!-- MR 10.3.0 [CU2] - FR 10.3.5 -->
+
+In some rare cases, an error could occur in SLElement when a timed action was stopped.
+
 #### Business Intelligence: Outage correction would incorrectly be increased when a history alarm affected the outage [ID_35942]
 
 <!-- MR 10.4.0 - FR 10.3.5 -->
 
 When a history alarm affected a closed outage to which a correction had been applied, the correction would incorrectly be increased. From now on, the correction will be left untouched.
+
+#### SNMP: OIDs with a leading dot would incorrectly no longer be allowed [ID_35954]
+
+<!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
+
+OIDs with a leading dot would incorrectly no longer be allowed. From now on, OIDs with a leading dot are allowed again.
 
 #### NT Notify type NT_GET_BITRATE_DELTA would not return a valid value for a table with a single row [ID_35967]
 
