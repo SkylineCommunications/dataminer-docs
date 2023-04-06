@@ -182,14 +182,6 @@ Up to now, a trend graph with *Trend span* set to "Last 7 days" would always sho
 > [!NOTE]
 > The *Interval* option is only available when *Trend points* is set to "Average (changes only)" or "Average (fixed interval)".
 
-#### Web apps: New action 'Pan to view' [ID_35847]
-
-<!-- MR 10.4.0 - FR 10.3.5 -->
-
-In a low-code app, you can now configure a new type of action: *Pan to view*.
-
-When triggered, this action will center the map shown in a specified *Generic map* component on a specified location (defined by a latitude and a longitude).
-
 #### Dashboards app & Low-code apps: New 'Text input' feed [ID_35902]
 
 <!-- MR 10.4.0 - FR 10.3.5 -->
