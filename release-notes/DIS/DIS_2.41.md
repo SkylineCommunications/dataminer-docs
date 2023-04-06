@@ -27,13 +27,11 @@ If you have a connector or Automation script that makes use of the official clas
 
 If you have a connector or Automation script that makes use of a community package, we recommend turning this into a NuGet package. For more information on how to create a NuGet package, see [Producing NuGet packages](xref:Producing_NuGet). Alternatively, you can put all the code from the community library zip file in a QAction/Exe block.
 
-<!--
-#### XML editor: New snippet [ID_35991]
+#### C# editor: New snippet [ID_35991]
 
-In the C# editor, the following snippet allows you to generate the `OnApiTrigger` entrypoint method in an Automation script. This entrypoint method will be used to create an API from an Automation script.
+In the C# editor, the following snippet now allows you to generate an `OnApiTrigger` entrypoint method in an Automation script. This entrypoint method will be used to create an API from an Automation script.
 
- - DIS \> Protocol \> Param \> SNMP System Params
--->
+- DIS \> Automation Script \> CreateUserDefinedApi (Automation)
 
 ### Validator
 
