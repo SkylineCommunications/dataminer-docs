@@ -33,6 +33,12 @@ SLLogCollector packages will now also include all files found in `C:\Skyline Dat
 
 ### Fixes
 
+#### Updating a Resource or ResourcePool would incorrectly cause the 'CreatedAt' and 'CreatedBy' fields to be overwritten [ID_35913]
+
+<!-- MR 10.3.0 [CU3] - FR 10.3.6 -->
+
+When a Resource or ResourcePool was updated, the *CreatedAt* and *CreatedBy* fields would incorrectly be overwritten.
+
 #### Creating or updating a function resource while its parent element was in an error state would incorrectly be allowed [ID_35963]
 
 <!-- MR 10.2.0 [CU15]/10.3.0 [CU3] - FR 10.3.6 -->
