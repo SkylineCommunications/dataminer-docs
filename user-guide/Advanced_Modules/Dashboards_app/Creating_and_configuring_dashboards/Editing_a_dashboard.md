@@ -33,4 +33,6 @@ To edit an existing dashboard:
 1. When ready, click *Stop editing* in the header bar.
 
 > [!NOTE]
-> It is currently not possible to edit a dashboard that is being shared. To edit such a dashboard, you will need to temporarily stop sharing it and then share it again once you are done editing.
+>
+> - Prior to DataMiner 10.3.5/10.4.0, it is not possible to edit a dashboard that is being shared. To edit such a dashboard in those DataMiner versions, you will need to temporarily stop sharing it and then share it again once you are done editing.
+> - To rename a dashboard, right-click the dashboard in the sidebar on the left and select *Rename*. This is not possible for a dashboard that is being shared.
