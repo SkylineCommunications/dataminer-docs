@@ -3479,6 +3479,8 @@
           topicUid: service_profile_benchmarks
         - name: Service & Resource Management benchmarks
           topicUid: service_resource_management_benchmarks
+        - name: User-defined API benchmarks
+          topicUid: user-defined_API_benchmarks
         - name: View benchmarks
           topicUid: view_benchmarks
         - name: Visual Overview benchmarks
