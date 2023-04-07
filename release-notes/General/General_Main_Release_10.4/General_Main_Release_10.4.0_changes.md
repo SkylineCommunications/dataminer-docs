@@ -137,12 +137,6 @@ From now on, anomaly detection will no longer be available for discrete paramete
 
 Because of a number of enhancements, overall performance has increased when detecting trend patterns that cover more than 30,000 data points.
 
-#### Support for GQI queries from Data Aggregator with ad hoc data sources [ID_35526]
-
-<!-- MR 10.4.0 - FR 10.3.3 -->
-
-GQI now supports queries from [Data Aggregator](xref:Data_Aggregator_DxM) that use ad hoc data sources.
-
 #### SLNetClientTest: New DOM-related features [ID_35550]
 
 <!-- MR 10.4.0 - FR 10.3.5 -->
@@ -167,15 +161,6 @@ In the *SLNetClientTest* tool, the following new DOM-related features have been 
 <!-- MR 10.4.0 - FR 10.3.4 -->
 
 Up to now, when SLAnalytics sent a notification, it would generate an event of type *client notification* with parameter ID 64574. From now on, it will instead generate an event of type *notification* with parameter ID 64570.
-
-#### GQI: Raw datetime values will now be converted to UTC [ID_35640]
-
-<!-- MR 10.4.0 - FR 10.3.4 -->
-
-Up to now, after each step in a GQI query, raw datetime values were always converted to the time zone that was specified in the query options. From now on, raw datetime values will be converted to UTC instead. The time zone specified in the query options will now only be used when converting a raw datetime value to a display value.
-
-> [!IMPORTANT]
-> **BREAKING CHANGE**: When, in an ad hoc data source or a query operation, a datetime value is not in UTC format, an exception will now be thrown.
 
 #### SLAnalytics - Proactive cap detection: Enhanced accuracy [ID_35695]
 
@@ -256,16 +241,6 @@ Example:
 <!-- MR 10.4.0 - FR 10.3.5 -->
 
 When an SLNet connection supported protocol buffer serialization, DateTime instances would not get serialized correctly.
-
-#### GQI: GetArgumentValue method would throw an exception when used to access the value of an optional argument [ID_35783]
-
-<!-- MR 10.4.0 - FR 10.3.5 -->
-
-When the `GetArgumentValue<T>(string name)` method was used in an ad hoc data source or a custom operator script to access the value of an optional argument that had not been passed, the following exception would be thrown:
-
-```txt
-Could not find argument with name '{argument.Name}'.
-```
 
 #### Input/output values of a matrix element would incorrectly be overridden due to a caching issue [ID_35857]
 

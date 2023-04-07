@@ -130,6 +130,12 @@ The submenu in the subheader bar of a dashboard would incorrectly be displayed w
 
 It would incorrectly no longer be possible to clear a radio button group.
 
+#### GQI: Problem when applying an 'aggregation' or 'group by' operation on a datetime column of an Elasticsearch table [ID_35609]
+
+<!-- MR 10.3.0 [CU1] - FR 10.3.4 -->
+
+When an *aggregation* or *group by* operation was applied on a datetime column of an Elasticsearch table, the datetime values in that column would be parsed incorrectly.
+
 #### Web apps: Auto-complete control could clear its content while you were entering a value [ID_35623]
 
 <!-- MR 10.3.0 [CU1] - FR 10.3.3 [CU0] -->
@@ -209,6 +215,12 @@ When you selected a dashboard, the *Clear all* button would incorrectly also be 
 <!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
 
 When editing a dashboard, DOM instances used by components on that dashboard would incorrectly not be listed in the *Data used in dashboard* section of the *DATA* tab.
+
+#### GQI: Display value of an empty cell of type 'double' would incorrectly be set to a "0" string [ID_35718]
+
+<!-- MR 10.3.0 [CU1] - FR 10.3.4 -->
+
+The display value of an empty cell of type *double* would incorrectly be set to a "0" string. From now on, it will be set to an empty string instead.
 
 #### Web apps: Node edge actions would incorrectly no longer work [ID_35723]
 
