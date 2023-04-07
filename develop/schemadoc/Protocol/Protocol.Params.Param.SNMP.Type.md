@@ -6,6 +6,9 @@ uid: Protocol.Params.Param.SNMP.Type
 
 Specifies the SNMP type.
 
+> [!IMPORTANT]
+> We strongly recommend always specifying an SNMP type on a write parameter. Without the SNMP type, it will fall back to default behavior, which could not be as expected. Numbers will be set with the SNMP type *Integer32*. Text will be set with the SNMP type *OctetString*. A parameter with Protocol.Params.Param.Interprete.RawType defined as *numeric text* is considered to be text and will be set with the SNMP type *OctetString*.
+
 ## Type
 
 [EnumSNMPType](xref:Protocol-EnumSNMPType)
