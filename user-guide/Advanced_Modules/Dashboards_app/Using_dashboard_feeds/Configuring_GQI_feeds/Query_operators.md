@@ -7,7 +7,9 @@ uid: Query_operators
 When you create a query, you can use the operators detailed below.
 
 > [!NOTE]
-> Selecting an operator is optional. If you do not select an operator, the data set will be returned untouched.
+>
+> - Selecting an operator is optional. If you do not select an operator, the data set will be returned untouched.
+> - Some operators can make use of a feed. From DataMiner 10.3.5/10.4.0 onwards<!--  RN 35837 -->, a link icon is displayed to the right of a selection box if using a feed is possible. Click this icon to select the feed. In earlier DataMiner versions, a *Use feed* checkbox is available for this instead.
 
 ## Aggregate
 
@@ -34,7 +36,7 @@ For both manipulation methods, you will also need to specify the name for the ne
 
 Filters the data set. When you select this option, select the column to filter, specify the filter method (e.g. equals, greater than, etc.) and the value to use as a filter. The available filter methods depend on the type of data in the selected column. Once the filter has been fully configured, you can refine the results by applying another operator, e.g. an additional filter.
 
-From DataMiner 10.2.0/10.1.3 onwards, instead of specifying an exact filter value, you can select *Use feed* to use one of the available feeds in the dashboard as the column filter. Depending on the type of data in the feed, you will then need to specify the following information:
+From DataMiner 10.2.0/10.1.3 onwards, instead of specifying an exact filter value, use one of the available feeds in the dashboard as the column filter. Prior to DataMiner 10.3.5/10.4.0<!--  RN 35837 -->, you can do so using the *Use feed* checkbox. In more recent DataMiner versions, you can instead click the link icon to the right of the value box. Depending on the type of data in the feed, you will then need to specify the following information:
 
 - *Feed*: The name of the feed that should provide the data. If only one feed is available, it will automatically be selected.
 
@@ -49,7 +51,7 @@ From DataMiner 10.2.10/10.3.0 onwards, an additional option, *When feed is empty
 > [!NOTE]
 >
 > - Index feeds are only supported from DataMiner 10.2.0/10.1.5 onwards.
-> - If the *regex* or *not regex* filter method is used, and *Use feed* is selected, from DataMiner 10.1.2/10.1.5 onwards, if the feed contains multiple values, these are combined with an "or" operator.
+> - If the *regex* or *not regex* filter method is used, and a feed is used, from DataMiner 10.1.2/10.1.5 onwards, if the feed contains multiple values, these are combined with an "or" operator.
 
 ## Join
 
@@ -68,7 +70,7 @@ Displays the selected columns only. When you have selected the columns to displa
 
 From DataMiner 10.1.0\[CU1\]/10.1.3 onwards, up and down arrow buttons in the list of columns allow you to modify the order in which the columns are loaded. Click an arrow button to make a column switch places with the column below or above it in the list. Press Ctrl while clicking an arrow button to make the column switch places with the previous or next selected column instead.
 
-From DataMiner 10.2.0/10.1.5 onwards, a *Use feed* checkbox is available that allows you to add parameters from an existing feed in the dashboard to the selectable items.
+From DataMiner 10.2.0/10.1.5 onwards, you can add parameters from an existing feed in the dashboard to the selectable items. Prior to DataMiner 10.3.5/10.4.0<!--  RN 35837 -->, you can do so using the *Use feed* checkbox. In more recent DataMiner versions, you can instead click the link icon to the right of the relevant selection box.
 
 ## Sort
 

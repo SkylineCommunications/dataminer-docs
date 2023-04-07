@@ -22,7 +22,7 @@ To configure an event to launch a script:
 
 1. If the script requires input such as dummies and parameters, configure these as well.
 
-   When applicable, the *Use feed* checkbox allows you to link a parameter to an existing feed.
+   When applicable, you can link a parameter to an existing feed. To do so, you can use the link icon (from DataMiner 10.3.5/10.4.0 onwards<!--  RN 35837 -->), or the *Use feed* checkbox (in earlier DataMiner versions).
 
 1. Optionally, click the *Show settings* button to configure [script execution options](xref:Script_execution_options).
 

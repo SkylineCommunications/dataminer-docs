@@ -1720,6 +1720,15 @@
                 topicUid: DashboardTreeFeed
               - name: Trigger feed
                 topicUid: DashboardTriggerFeed
+            - name: Basic controls
+              topicUid: 
+              items:
+              - name: Drop-down feed
+                topicUid: DashboardDropdownFeed
+              - name: Numeric input
+                topicUid: DashboardNumericInputFeed
+              - name: Text input
+                topicUid: DashboardTextInputFeed
         - name: Using dashboard feeds
           topicUid: Using_dashboard_feeds
           items:
