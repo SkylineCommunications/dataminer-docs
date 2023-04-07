@@ -28,6 +28,18 @@ When users tried to open a shared dashboard, in some cases, they would unexpecte
 
 Workaround: Recreate the faulty shared dashboard.
 
+#### Interactive Automation scripts: Problems with datetime component [ID_35682]
+
+<!-- MR 10.3.0 [CU3] - FR 10.3.6 -->
+
+When an interactive Automation script was launched from a web app, the following issues could occur. These were all related to the datetime web component (*UIBlockType.Time*):
+
+- When you clicked a date in the datetime picker, a changed value would already be returned to the script. From now on, the selected datetime value will not be returned to the script until you close the picker (either by double-clicking or by clicking *Done*).
+
+- The datetime value that was returned to the script when the component lost focus could be incorrect.
+
+- The focus loss detection would not always be accurate.
+
 #### Dashboards app: Problem when an extra GetParameterTable call without ValueFilters was sent after sharing a dashboard with a state, ring or gauge component [ID_35844]
 
 <!-- MR 10.3.0 [CU3] - FR 10.3.5 -->
