@@ -92,3 +92,9 @@ When a virtual function was linked to a parameter that had a hysteresis timer ru
 When, in the *DB.xml* file, no `<DB>` element was specified for an Elasticsearch database, the factory reset tool *SLReset.exe* would not clean that database when the `cleanclustereddatabases` option had been used.
 
 From now on, when no `<DB>` element is specified for a Elasticsearch database, *SLReset.exe* will use the default database name "dms".
+
+#### DataMiner Cube - Alarm Console: Filtered history tab would incorrectly not show information events [ID_36105]
+
+<!-- MR 10.2.0 [CU15]/10.3.0 [CU3] - FR 10.3.6 -->
+
+When you added a filtered history tab that had to show active alarms, masked alarms and information events, no information events would be shown.
