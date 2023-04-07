@@ -552,6 +552,8 @@ At the top of the tool window, you can find two buttons:
 - Click *Validate* to launch a new protocol validation.
 - Click *Export* to export the results of the latest validation to a CSV file.
 
+As of DIS v2.41, when you open a main DVE protocol and click *Validate*, DIS will not only validate the main protocol but also all its exported child DVE protocols.
+
 ## Tool Windows \> DIS Comparer
 
 If you click *Tool Windows \> DIS Comparer*, the *DIS Comparer* window will appear.
