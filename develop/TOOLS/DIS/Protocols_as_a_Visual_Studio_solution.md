@@ -44,7 +44,7 @@ A DataMiner protocol Visual Studio solution consists of the following folders:
 
 > [!NOTE]
 > As from DIS v2.41, an information bar will allow you to convert existing solutions that make use of the Class Library generation feature.
-> This information bar will appear when a Class Library project (i.e. a project named "QAction_ClassLibrary" or "AutomationScript_ClassLibrary") is detected in a protocol or Automation script solution. As soon as you click *Fix*, the Class Library project will be removed and the references to the project will be replaced by references to the automatically generated Class Library project (with ID 63000).
+> This information bar will appear when a Class Library project (i.e. a project named "QAction_ClassLibrary" or "AutomationScript_ClassLibrary") is detected in a protocol or Automation script solution. As soon as you click *Fix*, the Class Library project will be removed and the references to the project will be replaced by references to the automatically generated Class Library project (which, by default, will have ID 63000).
 
 ## Creating an additional QAction
 
