@@ -34,5 +34,5 @@ To edit an existing dashboard:
 
 > [!NOTE]
 >
-> - Prior to DataMiner 10.3.5/10.4.0, it is not possible to edit a dashboard that is being shared. To edit such a dashboard in those DataMiner versions, you will need to temporarily stop sharing it and then share it again once you are done editing.
+> - Prior to DataMiner 10.3.5/10.4.0<!--  RN 35940 -->, it is not possible to edit a dashboard that is being shared. To edit such a dashboard in those DataMiner versions, you will need to temporarily stop sharing it and then share it again once you are done editing.
 > - To rename a dashboard, right-click the dashboard in the sidebar on the left and select *Rename*. This is not possible for a dashboard that is being shared.
