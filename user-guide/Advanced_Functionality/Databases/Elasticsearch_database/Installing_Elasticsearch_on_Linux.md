@@ -10,11 +10,13 @@ If you want to use an Elasticsearch cluster for your DMS (which is required to u
 
 1. Make sure the firewall ports are open for Elasticsearch. Elasticsearch operates on TCP port 9200 and TCP port 9300.
 
-   - There is a default firewall on RHEL, but this is disabled by default. To enable the firewall, use the following command:
+   - There is a default firewall on Linux, but this is disabled by default. To enable the firewall, use the following command:
 
      `$ systemctl start firewalld.service`
 
      > [!IMPORTANT]
+     > Please note following commands could be different depending on the linux distrubution you are using. To use the correct guide for your preffered linux distribution please visit [Installing Elasticsearch](https://www.elastic.co/guide/en/elasticsearch/reference/current/install-elasticsearch.html).
+     >
      > If you connect to your Linux server with SSH, you must immediately exclude port 22, or you will be locked out of the session.
      >
      > For this, use the following command: `$ firewall-cmd --zone=public --add-port=22/tcp`
@@ -81,7 +83,7 @@ If you want to use an Elasticsearch cluster for your DMS (which is required to u
 
    - **MAX_LOCKED_MEMORY**: Set this to *unlimited*.
 
-   - **JAVA_HOME**: Set this to *java-11-openjdk-11.0.14.0.9-1.el7_9.x86_64* a custom java path to be used.
+   - **JAVA_HOME**: Set this to custom java path to be used for Elasticsearch. As an example you can set this to *java-11-openjdk-11.0.14.0.9-1.el7_9.x86_64*.
 
 1. Make the following adjustment in */usr/lib/systemd/system/elasticsearch.service*:
 
