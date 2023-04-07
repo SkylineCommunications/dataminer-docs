@@ -718,8 +718,8 @@
       topicUid: Skyline.DataMiner.Core.DataMinerSystem.Protocol
     - name: Skyline.DataMiner.Net
       topicUid: Skyline.DataMiner.Net
-    - name: Skyline.DataMiner.Helper.OpenConfig.Api
-      topicUid: Skyline.DataMiner.Helper.OpenConfig.Api
+    - name: Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api
+      topicUid: Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api
     - name: Interop.SLDms
       topicUid: Interop.SLDms
     - name: Tamir.SharpSsh
