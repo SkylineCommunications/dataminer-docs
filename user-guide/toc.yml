@@ -2974,106 +2974,106 @@
       topicUid: Troubleshooting_Flowcharts
       items:
         - name: Troubleshooting - Where to start?
-          topicUID: Troubleshooting_Where_to_Start
+          topicUid: Troubleshooting_Where_to_Start
         - name: Finding a root cause
-          topicUID: Finding_a_Root_Cause
+          topicUid: Finding_a_Root_Cause
           items:
             - name: Troubleshooting - startup issues
-              topicUID: Troubleshooting_Startup_Issues
+              topicUid: Troubleshooting_Startup_Issues
             - name: Troubleshooting - critical issues
-              topicUID: Troubleshooting_Critical_Issues_Overview
+              topicUid: Troubleshooting_Critical_Issues_Overview
               items:
                 - name: Troubleshooting - critical issues - Alarm Console
-                  topicUID: Troubleshooting_Critical_Issues_Alarm_Console
+                  topicUid: Troubleshooting_Critical_Issues_Alarm_Console
                 - name: Troubleshooting - critical issues - data not updated
-                  topicUID: Troubleshooting_Critical_Issues_Data_Not_Updated
+                  topicUid: Troubleshooting_Critical_Issues_Data_Not_Updated
                 - name: Troubleshooting - critical issues - automatic restart
-                  topicUID: Troubleshooting_Critical_Issues_Automatic_Restart
+                  topicUid: Troubleshooting_Critical_Issues_Automatic_Restart
                 - name: Troubleshooting - critical issues - resources
-                  topicUID: Troubleshooting_Critical_Issues_Resources
+                  topicUid: Troubleshooting_Critical_Issues_Resources
             - name: Troubleshooting - databases
               topicUid: Troubleshooting_Databases_Overview
               items:
                 - name: Troubleshooting - Cassandra
-                  topicUID: Troubleshooting_Cassandra
+                  topicUid: Troubleshooting_Cassandra
                   items:
                     - name: Troubleshooting - Cassandra - best practice analyzer
-                      topicUID: Troubleshooting_Cassandra_Best_Practice_Analyzer
+                      topicUid: Troubleshooting_Cassandra_Best_Practice_Analyzer
                     - name: Troubleshooting - Cassandra - nodetool status check
-                      topicUID: Troubleshooting_Cassandra_Nodetool_Status_Check
+                      topicUid: Troubleshooting_Cassandra_Nodetool_Status_Check
                     - name: Troubleshooting - Cassandra - nodetool checks
-                      topicUID: Troubleshooting_Cassandra_Nodetool_Checks
+                      topicUid: Troubleshooting_Cassandra_Nodetool_Checks
                 - name: Troubleshooting - Elasticsearch
-                  topicUID: Troubleshooting_Elasticsearch
+                  topicUid: Troubleshooting_Elasticsearch
             - name: Troubleshooting - Trending
               topicUid: Troubleshooting_Trending
             - name: Troubleshooting - process identification
-              topicUID: Troubleshooting_Process_Identification
+              topicUid: Troubleshooting_Process_Identification
               items:
                 - name: Troubleshooting - main processes
                   items:
                     - name: Troubleshooting - SLElement.exe
-                      topicUID: Troubleshooting_SLElement_exe
+                      topicUid: Troubleshooting_SLElement_exe
                     - name: Troubleshooting - SLDataMiner.exe
-                      topicUID: Troubleshooting_SLDataMiner_exe
+                      topicUid: Troubleshooting_SLDataMiner_exe
                 - name: Troubleshooting - communication processes
                   items:
                     - name: Troubleshooting - SLNet.exe 
-                      topicUID: Troubleshooting_SLNet_exe
+                      topicUid: Troubleshooting_SLNet_exe
                       items:
                         - name: Troubleshooting - SLNet - startup issues
-                          topicUID: Troubleshooting_SLNet_Startup
+                          topicUid: Troubleshooting_SLNet_Startup
                         - name: Troubleshooting - SLNet - correlation engine
-                          topicUID: Troubleshooting_SLNet_Correlation_Engine
+                          topicUid: Troubleshooting_SLNet_Correlation_Engine
                         - name: Troubleshooting - SLNet - disconnects
-                          topicUID: Troubleshooting_SLNet_Disconnects
+                          topicUid: Troubleshooting_SLNet_Disconnects
                         - name: Troubleshooting - SLNet - RTEs
-                          topicUID: Troubleshooting_SLNet_RTEs
+                          topicUid: Troubleshooting_SLNet_RTEs
                     - name: Troubleshooting - SLDMS.exe
-                      topicUID: Troubleshooting_SLDMS_exe
+                      topicUid: Troubleshooting_SLDMS_exe
                       items:
                         - name: Troubleshooting - SLDMS - frequent issues
-                          topicUID: Troubleshooting_SLDMS_Frequent_Issues
+                          topicUid: Troubleshooting_SLDMS_Frequent_Issues
                 - name: Troubleshooting - polling processes
                   items:
                     - name: Troubleshooting - SLPort.exe
-                      topicUID: Troubleshooting_SLPort_exe
+                      topicUid: Troubleshooting_SLPort_exe
                     - name: Troubleshooting - SLSNMPManager.exe
-                      topicUID: Troubleshooting_SLSNMPManager_exe
+                      topicUid: Troubleshooting_SLSNMPManager_exe
                 - name: Troubleshooting - logging processes
                   items:
                     - name: Troubleshooting - SLWatchdog.exe
-                      topicUID: Troubleshooting_SLWatchdog_exe
+                      topicUid: Troubleshooting_SLWatchdog_exe
                     - name: Troubleshooting - SLLog.exe
-                      topicUID: Troubleshooting_SLLog_exe
+                      topicUid: Troubleshooting_SLLog_exe
                 - name: Troubleshooting - database processes
                   items:
                     - name: Troubleshooting - SLDataGateway.exe
-                      topicUID: Troubleshooting_SLDataGateway_exe
+                      topicUid: Troubleshooting_SLDataGateway_exe
                 - name: Troubleshooting - other processes
                   items:
                     - name: Troubleshooting - SLXML.exe
-                      topicUID: Troubleshooting_SLXML_exe
+                      topicUid: Troubleshooting_SLXML_exe
                     - name: Troubleshooting - Reporter - SLASPConnection.exe
-                      topicUID: Troubleshooting_SLASPConnection_exe
+                      topicUid: Troubleshooting_SLASPConnection_exe
                     - name: Troubleshooting - SLAnalytics.exe
-                      topicUID: Troubleshooting_SLAnalytics_exe
+                      topicUid: Troubleshooting_SLAnalytics_exe
                     - name: Troubleshooting - SLHelper.exe
-                      topicUID: Troubleshooting_SLHelper_exe
+                      topicUid: Troubleshooting_SLHelper_exe
                     - name: Troubleshooting - SLScheduler.exe
-                      topicUID: Troubleshooting_SLScheduler_exe
+                      topicUid: Troubleshooting_SLScheduler_exe
             - name: Troubleshooting - identify per module
-              topicUID: Troubleshooting_Identify_per_Module
+              topicUid: Troubleshooting_Identify_per_Module
               items:
                 - name: Troubleshooting - Surveyor
-                  topicUID: Troubleshooting_Surveyor
+                  topicUid: Troubleshooting_Surveyor
                 - name: Troubleshooting - Alarm Console
-                  topicUID: Troubleshooting_Alarm_Console
+                  topicUid: Troubleshooting_Alarm_Console
                   items:
                     - name: Troubleshooting - run-time errors (RTEs)
-                      topicUID: Troubleshooting_Run_Time_Errors
+                      topicUid: Troubleshooting_Run_Time_Errors
                 - name: Troubleshooting - apps
-                  topicUID: Troubleshooting_Apps
+                  topicUid: Troubleshooting_Apps
     - name: Troubleshooting procedures
       topicUid: Troubleshooting_procedures
       items:
