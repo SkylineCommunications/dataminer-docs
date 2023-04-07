@@ -114,7 +114,7 @@ The main page of the app consists of a header bar, a navigation pane, and a deta
 
     - *Delete*: Only available if a dashboard or folder is selected. See [Deleting a dashboard](xref:Deleting_a_dashboard).
 
-    - *Duplicate/Copy*: Only available if a dashboard or folder is selected. See [Duplicating a dashboard](xref:Duplicating_a_dashboard)
+    - *Duplicate/Copy*: Only available if a dashboard or folder is selected. See [Duplicating a dashboard](xref:Duplicating_a_dashboard).
 
     - *Rename*: Only available if a dashboard or a folder is selected.
 

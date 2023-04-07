@@ -2,10 +2,10 @@
 uid: Web_apps_Main_Release_10.3.0_CU1
 ---
 
-# DataMiner web apps Main Release 10.3.0 CU1 – Preview
+# DataMiner web apps Main Release 10.3.0 CU1
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 > For release notes for this release that are not related to the web applications, see [General Main Release 10.3.0 CU1](xref:General_Main_Release_10.3.0_CU1).
@@ -237,3 +237,15 @@ Skyline.DataMiner.Web.Common.v1.Utilities.UTCToDateTimeUTC(long)' has some inval
 <!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
 
 GQI queries containing float or GUID values would not get migrated correctly.
+
+#### Dashboards app & Low-code apps - Query builder: Problem when linking a feed component to an argument of an ad hoc data source [ID_35808]
+
+<!-- MR 10.3.0 [CU1] - FR 10.3.4 [CU0] -->
+
+When a feed component was linked to an argument of an ad hoc data source, in some cases, the feed would not work correctly.
+
+#### GQI - Parameter table component: Display values of discrete and exception values for DateTime columns would be rendered incorrectly [ID_35910]
+
+<!-- MR 10.3.0 [CU1] - FR 10.3.4 [CU0] -->
+
+When discrete values and exception values for DateTime parameters were requested via GQI, their display values would be rendered incorrectly.

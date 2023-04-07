@@ -4,7 +4,7 @@ uid: Regarding_antivirus_software
 
 # Regarding antivirus software
 
-It is possible to install antivirus software on a DMA. However, you need to keep in mind that this is going to consume resources of the server. As such, we recommend not to install such software if the server is in a well-protected environment. If you do install antivirus software, you must:
+It is possible to install antivirus software on a DMA. However, you need to keep in mind that this is going to consume resources of the server. As such, we recommend that you do not install such software if the server is in a well-protected environment. If you do install antivirus software, you must:
 
 - Exclude the following directories:
 
@@ -19,6 +19,9 @@ It is possible to install antivirus software on a DMA. However, you need to keep
   - The process(es) of the database application(s) you are using with DataMiner (Cassandra, MySQL, MSSQL, Elasticsearch).
 
 - Avoid scheduled virus scans affecting the available resources for the DataMiner software at certain moments in time.
+
+> [!NOTE]
+> These restrictions do not apply for Windows Defender.
 
 > [!CAUTION]
 > Failing to make these adjustments when using antivirus software may cause undesired operational problems with your DataMiner system, which are not covered under warranty or support. See [Exclusions](xref:Support_services_terms#exclusions) and [Supported products](xref:Support_services_terms#supported-products) in the *Support services terms*.

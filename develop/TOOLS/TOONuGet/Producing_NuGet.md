@@ -7,16 +7,19 @@ uid: Producing_NuGet
 > [!IMPORTANT]
 > This section might include some information that is only applicable to Skyline employees and/or links that are only accessible to Skyline employees.
 
-Automatic creation and publishing of NuGets from the community class library or from [custom solutions](xref:Custom_solution_development_with_CI_CD_Pipeline) is supported through the Skyline CI/CD pipelines.
+Automatic creation and publishing of NuGets from the community class library or from [custom solutions](xref:Pipeline_stages_for_custom_solutions) is supported through the Skyline CI/CD pipelines.
 
 On the [custom solutions tab](xref:Repository_types#custom-solutions) of the SLC SE RepoManager tool, you can enable the NuGet-related stages by clicking the NuGet button. This will add a *JenkinsNuGetConfiguration.xml* file that allows configuration of these stages (enable/disable creation, signing, publishing of NuGet packages). For more information on the expected content of this file, refer to the [NuGet stages XML schema](xref:SchemaNuGetStagesConfig) documentation.
 
 The pipeline will automatically create pre-release packages, which can be used during development. Every build will have its own pre-release package.
 Every release build will have a signed released package.
 
+> [!TIP]
+> To create a new solution or project that produces a NuGet package, make use of the Visual Studio templates available at [https://github.com/SkylineCommunications/Skyline.DataMiner.VisualStudioTemplates](https://github.com/SkylineCommunications/Skyline.DataMiner.VisualStudioTemplates).
+
 ## General
 
-The rules below mainly focus on NuGet packages that are published to nuget.org. We highly recommend that you use the same rules for internal NuGets as well, as that will make it easy to transfer them to nuget.org when necessary.
+The rules below mainly focus on NuGet packages that are published to nuget.org. We highly recommend that you use the same rules for internal NuGet packages as well, as that will make it easy to transfer them to nuget.org when necessary.
 
 ### Mandatory rules for nuget.org
 
@@ -54,7 +57,7 @@ If there is a dependency on multiple DataMiner DLLs that are by default included
 
 ### Target Framework
 
-If possible, try to target .NET Standard 2.0, as this will give the most flexibility for use somewhere else.
+If possible, try to target .NET Standard 2.0, as this will give the most flexibility for use somewhere else. For more information and guidelines, refer to [Cross-platform targeting](https://learn.microsoft.com/en-us/dotnet/standard/library-guidance/cross-platform-targeting).
 
 If you have a dependency on .NET Framework (e.g. Skyline.DataMiner.Dev.*), you will need to target .NET Framework as well.
 
@@ -120,6 +123,17 @@ If you have a dependency on .NET Framework (e.g. Skyline.DataMiner.Dev.*), you w
 
     E.g. SNMP trap parsing, rate calculations, table context menu, etc.
 
+## Versioning conventions
+
+We want to adhere to the [Semantic Versioning for NuGet packages](https://learn.microsoft.com/en-us/nuget/concepts/package-versioning).
+
+A specific version number is in the form *Major.Minor.Patch[-Suffix]*, where the components have the following meanings:
+
+- *Major*: Breaking changes (API breaking changes, DataMiner minimum dependency changes, etc.)
+- *Minor*: New features, but backwards compatible
+- *Patch*: Backwards compatible bug fixes only
+- *-Suffix* (optional): A hyphen followed by a string denoting a pre-release version.
+
 ## Package Metadata Conventions
 
 ### Mandatory metadata
@@ -174,4 +188,4 @@ For an example, refer to [DataMinerSystem.Common](https://www.nuget.org/packages
 
 ### PackageLicenseFile and PackageIcon
 
-When NuGets are created via the [SLC SE Repository Manager](xref:TOOSLCSERepositoryManager), the manager will automatically add the default license and icon file.
+When NuGet packages are created via the [SLC SE Repository Manager](xref:TOOSLCSERepositoryManager), the manager will automatically add the default license and icon file.

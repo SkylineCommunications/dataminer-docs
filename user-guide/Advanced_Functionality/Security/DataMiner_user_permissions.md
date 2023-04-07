@@ -1647,6 +1647,35 @@ Permission to view trend graphs of parameters that are being trended.
 
 Permission to view histograms of parameters that are being trended.
 
+### Modules \> User-defined APIs
+
+> [!NOTE]
+> The User-Defined APIs feature is in preview and is only available if the *UserDefinableAPI* [soft-launch option](xref:SoftLaunchOptions) is enabled.
+
+#### Modules \> User-defined APIs \> Tokens \> UI available
+
+Permission to view tokens for user-defined APIs.
+
+#### Modules \> User-defined APIs \> Tokens \> Add/Edit
+
+Permission to create and edit tokens for user-defined APIs.
+
+#### Modules \> User-defined APIs \> Tokens \> Delete
+
+Permission to delete tokens for user-defined APIs.
+
+#### Modules \> User-defined APIs \> APIs \> UI available
+
+Permission to view API definitions for user-defined APIs.
+
+#### Modules \> User-defined APIs \> APIs \> Add/Edit
+
+Permission to create and edit API definitions for user-defined APIs. In order to create or edit API definitions, you also need the [Automation > execute](#modules--automation--execute) permission.
+
+#### Modules \> User-defined APIs \> APIs \> Delete
+
+Permission to delete API definitions for user-defined APIs.
+
 ### Modules \> User-definable apps
 
 #### Modules \> User-definable apps \> View apps

@@ -29,7 +29,7 @@ In case additional connector logic is required:
 
 - A new task is to be created and set as billable.
 - It must be clearly communicated to the user that the required hours of work are to be consumed from the available agile scope-based or time & materials engineering buckets.  
-- In case of doubts or in case no time budget is available, contact your System Engineering Manager or Account Manager.
+- In case of doubts or in case no time budget is available, contact your Engineering Manager or Account Manager.
 
 ## Enhancement connector logic
 
@@ -37,7 +37,7 @@ In case additional connector logic is required:
 
 By contrast, adding new parameters (e.g. calculated KQI/KPI) beyond the functionality supported through the remote interface of the third-party asset/device/function is always considered to be "additional connector logic” and consequently billable.
 
-In case of doubt, contact your System Engineering Manager or Account Manager.
+In case of doubt, contact your Engineering Manager or Account Manager.
 
 ## Custom connectors
 
@@ -46,7 +46,7 @@ Custom connectors (Custom-DRV, DRV-APL) serve custom user-specific needs. By def
 In the event extra enhancements or functionalities beyond the initial MVP are required:
 
 - In full agreement with the user, Skyline Communications’ Deploy team can consume available time engineering hours from another available engineering bucket.
-- In case of doubt, get in touch with your System Engineering Manager or Account Manager to seek a solution (e.g. stop, get extra funding, prioritize).
+- In case of doubt, get in touch with your Engineering Manager or Account Manager to seek a solution (e.g. stop, get extra funding, prioritize).
 
 ## Connector modifications covered in the Support Plan
 
@@ -54,4 +54,4 @@ If a Skyline Communications signed connector was developed during the deployment
 
 In case someone other than a Skyline Communications employee enhanced the connector (e.g. a DevOps professional), the connector is no longer considered a Skyline signed connector, and hence it is no longer supported in full under the SLA. For the connector to become supportable again, it needs to be verified by Skyline. The hours required for verification are billable and need to be approved up front with the involved stakeholders.
 
-In case of a request to integrate extra functionalities under the SLA that are not yet part of the connector but that are supported through the remote interface, the modification is part of the SLA solely when it is in line with the original deploy use cases and goals and objectives specified during the design and deployment of the program. However, in case these extra functionalities facilitate new use cases that are not in line with the original objectives, you will need to get in touch with your System Engineering Manager or Account Manager, as this is to be set as billable.
+In case of a request to integrate extra functionalities under the SLA that are not yet part of the connector but that are supported through the remote interface, the modification is part of the SLA solely when it is in line with the original deploy use cases and goals and objectives specified during the design and deployment of the program. However, in case these extra functionalities facilitate new use cases that are not in line with the original objectives, you will need to get in touch with your Engineering Manager or Account Manager, as this is to be set as billable.

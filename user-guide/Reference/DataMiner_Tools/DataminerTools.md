@@ -36,6 +36,7 @@ This section provides information on the following tools:
 - [Sync Check](xref:Sync_Check)
 - [Verify Cluster Events tool](xref:Verify_Cluster_Events_Tool)
 - [VerifyClusterPorts.dmupgrade](xref:VerifyClusterPortsdmupgrade)
+- [Verify NATS is Running](xref:VerifyNatsIsRunning)
 
 > [!NOTE]
 > For more information on other DataMiner tools or third-party tools, see:

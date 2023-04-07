@@ -2,19 +2,15 @@
 uid: Cube_Feature_Release_10.3.4
 ---
 
-# DataMiner Cube Feature Release 10.3.4 – Preview
+# DataMiner Cube Feature Release 10.3.4
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 > For release notes for this release that are not related to DataMiner Cube, see [General Feature Release 10.3.4](xref:General_Feature_Release_10.3.4).
 
-## Highlights
-
-*No highlights have been selected for this release yet*
-
-## Other features
+## New features
 
 #### Visual Overview - ListView component: New component option 'SingleSelectionMode' [ID_35320]
 
@@ -60,7 +56,7 @@ This also means that a ListView component configured to list bookings will by de
 
 #### Database TTL settings will now be limited to 10 years [ID_35533]
 
-<!-- MR 10.4.0 - FR 10.3.4 -->
+<!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.4 -->
 
 From now on, DataMiner Cube will no longer accept database TTL settings that exceed 10 years.
 
@@ -75,6 +71,14 @@ When, in DataMiner Cube, you select *Help* in the user menu or the *Apps* pane, 
 <!-- MR 10.3.0 [CU1] - FR 10.3.4 -->
 
 Because of a number of enhancements made with regard to the retrieval of overrides for parameter values, overall performance has increased when opening the *Profiles* tab of the *Services* app.
+
+#### Automation script editor: Intellisense added for timeUpDownConfig.ShowTimeUnits [ID_35672]
+
+<!-- MR 10.4.0 - FR 10.3.4 -->
+
+In the Automation script editor, Intellisense has been added for the new `timeUpDownConfig.ShowTimeUnits` property.
+
+This property is only applied in interactive Automation scripts that are launched from a web app.
 
 #### System Center - Agents: Clearer restart warning before an upgrade is started [ID_35687]
 
@@ -163,3 +167,9 @@ Because DataMiner Cube would use the incorrect culture when parsing exception va
 <!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
 
 When, in the *Asset Manager* app, you tried to update an enum field, the value would not immediately be updated in the UI after clicking *Apply*.
+
+#### No longer possible to configure a PDF report generated based on a dashboard [ID_35874]
+
+<!-- MR 10.4.0 - FR 10.3.4 [CU0] -->
+
+When, in the *Automation*, *Correlation* and *Scheduler* modules, you generated a PDF report based on a dashboard, it would incorrectly no longer be possible to click the *Configure* button to configure that report.

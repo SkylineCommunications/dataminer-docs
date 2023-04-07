@@ -73,12 +73,14 @@ To configure TLS encryption for client-server communication:
 
 1. Request or generate a TLS certificate (the certificates should be in the PKCS#12 format). Make sure the IP address of the node is included in the *Subject Alternative Names* of the certificate.
 
+   Elasticsearch comes with the `elasticsearch-certutil` tool installed, which can be used to generate certificates. However, we recommend that you **use our [scripts for generating TLS certificates](https://github.com/SkylineCommunications/generate-tls-certificates)**, available on GitHub. There is a version of the script for Linux and Windows machines. The script requires two tools: *openssl* and the *Java keytool*. Both of these can run on Linux and Windows.
+
 1. Add the following lines to the *elasticsearch.yml* file:
 
    ```
    xpack.security.http.ssl.enabled: true
-   xpack.security.http.ssl.keystore.path: path/to/your/certificate
-   xpack.security.http.ssl.truststore.path: path/to/your/certificate
+   xpack.security.http.ssl.keystore.path: path/to/your/<NODE CERT STORE>
+   xpack.security.http.ssl.truststore.path: path/to/your/<NODE CERT STORE>
    ```
 
    If you are using a `.PEM` certificate generated using `openssl` utility, add the following lines to the *elasticsearch.yml* file instead:
@@ -93,7 +95,7 @@ To configure TLS encryption for client-server communication:
     of each node in cluster.
     ```
 
-1. Optionally, **for password-protected certificates**, execute the following commands **as Administrator** and enter the password when prompted:
+1. **For cert stores generated with the script or password-protected certificates**, execute the following commands **as Administrator** and enter the password when prompted:
 
    ```
    bin\elasticsearch-keystore add xpack.security.http.ssl.keystore.secure_password
@@ -143,7 +145,7 @@ To configure TLS encryption for inter-node communication:
     of each node in cluster.
     ```
 
-1. If you secured the node's certificate with a password, add the password to your Elasticsearch keystore by executing the following commands:
+1. For cert stores generated with the script or if you secured the node's certificate with a password, add the password to your Elasticsearch keystore by executing the following commands:
 
    ```
    bin/elasticsearch-keystore add xpack.security.transport.ssl.keystore.secure_password

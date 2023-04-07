@@ -2,10 +2,10 @@
 uid: General_Main_Release_10.3.0_CU1
 ---
 
-# General Main Release 10.3.0 CU1 – Preview
+# General Main Release 10.3.0 CU1
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 > For information on how to upgrade DataMiner, see [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent).
@@ -211,15 +211,9 @@ After a DataMiner restart, suggestion alarms would incorrectly be re-evaluated a
 
 #### Memory leak in SLAnalytics [ID_35758]
 
-<!-- MR 10.3.0 [CU1] - FR 10.3.4 -->
+<!-- MR 10.2.0 [CU14]/10.3.0 [CU1] - FR 10.3.4 -->
 
 In some cases, SLAnalytics kept on waiting on a database call, which eventually led to the process leaking memory.
-
-#### Problem with SLPort when an element with a serial connection was restarted [ID_35773]
-
-<!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
-
-In some cases, an error could occur in SLPort when an element with a serial connection was restarted.
 
 #### Problem with SLElement when creating an alarm with an 'SLA Affecting' property [ID_35776]
 

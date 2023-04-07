@@ -168,6 +168,18 @@ From now on, when using the Microsoft Edge (WebView2) web browser plugin, embedd
 
 When a low-code app was embedded in Cube (e.g. in a visual overview), up to now, users had to explicitly log in to that app. From now on, Cube will automatically pass the authentication ticket to the low-code app, allowing users to access the app without having to log in again.
 
+#### Search box in Cube header can now be hidden [ID_35826]
+
+<!-- MR 10.4.0 - FR 10.3.5 -->
+
+It is now possible to either show or hide the search box in the middle of the Cube header bar.
+
+1. Open the *Settings* app.
+1. Go to *Cube* > *Cube header*.
+1. Select or clear the *Display search box in header* option, and click *Apply*.
+
+Alternatively, you can also open the quick menu in the Cube header, and toggle the *Show search box* option.
+
 ## Changes
 
 ### Enhancements
@@ -216,11 +228,13 @@ In the top-right corner of a trend graph, a light bulb icon appears when DataMin
 
 Up to now, when you clicked one of those related parameters in order to add it to the trend graph, a check mark would appear in front of it. From now on, check marks will no longer appear in front of related parameters after selecting them.
 
-#### Database TTL settings will now be limited to 10 years [ID_35533]
+#### Automation script editor: Intellisense added for timeUpDownConfig.ShowTimeUnits [ID_35672]
 
 <!-- MR 10.4.0 - FR 10.3.4 -->
 
-From now on, DataMiner Cube will no longer accept database TTL settings that exceed 10 years.
+In the Automation script editor, Intellisense has been added for the new `timeUpDownConfig.ShowTimeUnits` property.
+
+This property is only applied in interactive Automation scripts that are launched from a web app.
 
 ### Fixes
 
@@ -247,3 +261,15 @@ When, in a Visio drawing, shapes have been positioned dynamically based on prope
 <!-- MR 10.4.0 - FR 10.3.3 -->
 
 When you clicked a suggestion alarm, in some cases, the trend graph would be loaded but the change points and the patterns incorrectly would not.
+
+#### No longer possible to configure a PDF report generated based on a dashboard [ID_35874]
+
+<!-- MR 10.4.0 - FR 10.3.4 [CU0] -->
+
+When, in the *Automation*, *Correlation* and *Scheduler* modules, you generated a PDF report based on a dashboard, it would incorrectly no longer be possible to click the *Configure* button to configure that report.
+
+#### Alarm Console: Suggestion event would not be removed from the suggestion events tab after being promoted to alarm event [ID_35949]
+
+<!-- MR 10.4.0 - FR 10.3.5 -->
+
+When, in an alarm template, a suggestion event was promoted to an alarm event, it would correctly appear in the active alarms tab but it would incorrectly not be removed from the suggestion events tab.

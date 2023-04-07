@@ -2,10 +2,10 @@
 uid: General_Main_Release_10.2.0_CU13
 ---
 
-# General Main Release 10.2.0 CU13 – Preview
+# General Main Release 10.2.0 CU13
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 > For information on how to upgrade DataMiner, see [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent).
@@ -85,7 +85,22 @@ A clearer error message will now be returned when you are building a query again
 
 Because of a number of enhancements, overall performance has increased when exporting trend data to a CSV file.
 
+#### Web apps - Query builder: Query node options with only a single value will no longer be displayed in a selection box [ID_35865]
+
+<!-- MR 10.2.0 [CU13]/10.3.0 [CU2] - FR 10.3.5 -->
+
+In the query builder, from now on, when a query node option only has a single value, that option will no longer be displayed in a selection box.
+
+For example, up to now, when you selected the *Get elements* data source, followed by the *Aggregate* operator, the method selection box would display "Get the". This will no longer be the case.
+
 ### Fixes
+
+#### DataMiner upgrade: VerifyNatsRunning prerequisite could fail due to SLCloudBridge.dll having been renamed [ID_33875]
+
+<!-- MR 10.3.0 - FR 10.2.8 [CU0] -->
+<!-- Also added to MR 10.2.0 [CU13] -->
+
+During a DataMiner upgrade, the VerifyNatsRunning prerequisite could fail due to the SLCloudBridge.dll file having been renamed to SLMessageBroker.dll in DataMiner versions 10.2.0/10.1.5.
 
 #### Memory leak in SLNet after closing a client connection that had been using a "SLDataGateway.API" subscription set [ID_35319]
 
@@ -370,14 +385,38 @@ When, in the *Asset Manager* app, you tried to update an enum field, the value w
 
 GQI queries containing float or GUID values would not get migrated correctly.
 
-#### Problem with SLPort when an element with a serial connection was restarted [ID_35773]
-
-<!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
-
-In some cases, an error could occur in SLPort when an element with a serial connection was restarted.
-
 #### Problem with SLElement when creating an alarm with an 'SLA Affecting' property [ID_35776]
 
 <!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
 
 In some rare cases, an error could occur in SLElement when creating an alarm with an *SLA Affecting* property.
+
+#### Business Intelligence: Enhancements with regard to the retrieval of data from logger tables and to general error handling [ID_35820]
+
+<!-- MR 10.2.0 [CU13]/10.3.0 [CU2] - FR 10.3.5 -->
+
+A number of enhancements have been made to the Business Intelligence module, especially with regard to the retrieval of data from logger tables and to general error handling.
+
+#### Web apps: Problem when opening a visual overview [ID_35841]
+
+<!-- MR 10.2.0 [CU13]/10.3.0 [CU2] - FR 10.3.5 -->
+
+When you opened a visual overview in a web app, in some cases, the web app could become unresponsive.
+
+#### SLAnalytics could keep on waiting indefinitely for large delete operations to finish [ID_35848]
+
+<!-- MR 10.2.0 [CU13]/10.3.0 [CU2] - FR 10.3.5 -->
+
+In some cases, SLAnalytics could keep on waiting indefinitely for large delete operations to finish.
+
+#### Dashboards app: Multiple parameter feeds would incorrectly have their 'group by' reset when a PDF was generated [ID_35866]
+
+<!-- MR 10.2.0 [CU13]/10.3.0 [CU2] - FR 10.3.5 -->
+
+When you generated a PDF of a dashboard that contained multiple parameter feeds, a multiple parameter feed with a "group by" applied would incorrectly have that "group by" reset to the value that was configured in its settings.
+
+#### Web apps: Certain icons would incorrectly not be displayed [ID_35877]
+
+<!-- MR 10.2.0 [CU13]/10.3.0 [CU2] - FR 10.3.5 -->
+
+In web apps, certain icons would incorrectly not be displayed.

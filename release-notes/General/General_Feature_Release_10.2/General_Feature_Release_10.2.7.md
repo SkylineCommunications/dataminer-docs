@@ -288,6 +288,9 @@ From now on, the SetParameterIndexByKey and SetParametersIndexByKey methods can 
 
 #### DataMiner upgrade will not be performed if NATS is not installed and running \[ID_33304\]
 
+<!-- MR 10.3.0 - FR 10.2.7 -->
+<!-- Also added to MR 10.2.0 [CU14] -->
+
 When you launch a DataMiner upgrade, from now on, the upgrade process will not be allowed to start if NATS is not installed and running.
 
 > [!NOTE]

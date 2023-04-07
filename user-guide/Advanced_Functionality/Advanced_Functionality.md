@@ -10,7 +10,7 @@ uid: Part3AdvancedFunctionalities
 
 - [Failover](xref:failover)
 
-- [Databases](xref:databases)
+- [Databases](xref:Databases_about)
 
 - [Security](xref:security)
 

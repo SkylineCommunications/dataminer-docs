@@ -31,5 +31,5 @@ protocol.NotifyProtocol(/*NT_SET_BITRATE_DELTA_INDEX_TRACKING*/ 448, parameterId
 
 - It is advised to enable this feature at startup using the notify protocol command NT_SET_BITRATE_DELTA_INDEX_TRACKING with either a single parameter ID or multiple parameter IDs. This information will not be saved and will only be kept as long as the element is running.
 - Only supported with the multipleGetNext and multipleGetBulk polling schemes since only these polling schemes retrieve entire rows per request.
-- See also NT_GET_BITRATE_DELTA (269).
+- See also [NT_GET_BITRATE_DELTA (269)](xref:NT_GET_BITRATE_DELTA).
 - Feature introduced in DataMiner 10.1.6 (RN 29445).

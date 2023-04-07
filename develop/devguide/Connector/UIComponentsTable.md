@@ -14,6 +14,7 @@ In this section:
 - <xref:UIComponentsTableRelations>
 - <xref:UIComponentsTableSettingRowTextColor>
 - <xref:UIComponentsTableRowButtons>
+- <xref:UIComponentsTableExercise>
 
 ## See also
 

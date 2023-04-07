@@ -226,6 +226,8 @@
           topicUid: UIComponentsTableSettingRowTextColor
         - name: Configuring buttons to open DataMiner objects from table cells
           topicUid: UIComponentsTableRowButtons
+        - name: Exercise
+          topicUid: UIComponentsTableExercise
       - name: Custom table context menu
         topicUid: UIComponentsCustomTableContextMenu
       - name: Matrix
@@ -391,13 +393,13 @@
           topicUid: ConnectionsWebSocketsUseCases
           items:
           - name: Normal WebSocket connection
-            topicUID: ConnectionsWebSocketsUseCase1
+            topicUid: ConnectionsWebSocketsUseCase1
           - name: WebSocket connection with dynamic IP
-            topicUID: ConnectionsWebSocketsUseCase2
+            topicUid: ConnectionsWebSocketsUseCase2
           - name: WebSocket connection with custom handshake
-            topicUID: ConnectionsWebSocketsUseCase3
+            topicUid: ConnectionsWebSocketsUseCase3
           - name: WebSocket connection with custom handshake and dynamic IP
-            topicUID: ConnectionsWebSocketsUseCase4
+            topicUid: ConnectionsWebSocketsUseCase4
       - name: Ping group
         topicUid: ConnectionsPingGroup
       - name: Service
@@ -543,73 +545,73 @@
     - name: Questions & Answers
       topicUid: QuestionsAndAnswers
     - name: How-tos
-      topicUID: How_to_aggregate_alarm_severities
+      topicUid: How_to_aggregate_alarm_severities
       items:
       - name: How to aggregate alarm severities
-        topicUID: How_to_aggregate_alarm_severities
+        topicUid: How_to_aggregate_alarm_severities
       - name: How to configure multi-threaded timers
-        topicUID: How_to_configure_multi_threaded_timers
+        topicUid: How_to_configure_multi_threaded_timers
       - name: How to create an HTTP connector (CoinMarketCap use case)
-        topicUID: How_to_create_an_HTTP_connector_CoinMarketCap_use_case
+        topicUid: How_to_create_an_HTTP_connector_CoinMarketCap_use_case
       - name: How to define serial and smart-serial responses in one and the same protocol
-        topicUID: How_to_define_serial_and_smart_serial_responses_in_one_and_the_same_protocol
+        topicUid: How_to_define_serial_and_smart_serial_responses_in_one_and_the_same_protocol
       - name: How to handle XML and JSON data in QActions
-        topicUID: How_to_handle_XML_and_JSON_data_in_QActions
+        topicUid: How_to_handle_XML_and_JSON_data_in_QActions
       - name: How to implement the Subtable feature
-        topicUID: How_to_implement_the_subtable_feature
+        topicUid: How_to_implement_the_subtable_feature
       - name: How to integrate RabbitMQ with DataMiner
-        topicUID: How_to_integrate_RabbitMQ_with_DataMiner
+        topicUid: How_to_integrate_RabbitMQ_with_DataMiner
       - name: How to integrate the HTTP Sessions Table in a connector
-        topicUID: How_to_integrate_the_HTTP_sessions_table_in_a_connector
+        topicUid: How_to_integrate_the_HTTP_sessions_table_in_a_connector
       - name: How to retrieve protocol pending calls
-        topicUID: How_to_retrieve_protocol_pending_calls
+        topicUid: How_to_retrieve_protocol_pending_calls
       - name: How to set up an SSH connection within a protocol
-        topicUID: How_to_set_up_an_SSH_connection_within_a_protocol
+        topicUid: How_to_set_up_an_SSH_connection_within_a_protocol
       - name: How to use history sets on a protocol parameter
-        topicUID: How_to_use_history_sets_on_a_protocol_parameter
+        topicUid: How_to_use_history_sets_on_a_protocol_parameter
       - name: How to use multiple protocol threads to split communication and parsing
-        topicUID: How_to_use_multiple_protocol_threads_to_split_communication_and_parsing
+        topicUid: How_to_use_multiple_protocol_threads_to_split_communication_and_parsing
       - name: How to use 'on each' in a protocol trigger
-        topicUID: How_to_use_on_each_in_a_protocol_trigger
+        topicUid: How_to_use_on_each_in_a_protocol_trigger
       - name: How to use the element log in connector integrations
-        topicUID: How_to_use_the_element_log_in_connector_integrations
+        topicUid: How_to_use_the_element_log_in_connector_integrations
     - name: Troubleshooting
-      topicUID: Investigating_a_protocol_thread_RTE
+      topicUid: Investigating_a_protocol_thread_RTE
       items:
       - name: Investigating a protocol thread RTE
-        topicUID: Investigating_a_protocol_thread_RTE
+        topicUid: Investigating_a_protocol_thread_RTE
       - name: Why is serial data not visible in DataMiner?
-        topicUID: Why_is_serial_data_not_visible_in_DataMiner
+        topicUid: Why_is_serial_data_not_visible_in_DataMiner
       - name: QAction exceptions
-        topicUID: QAction_exceptions
+        topicUid: QAction_exceptions
         items:
         - name: System.NullReferenceException
-          topicUID: System_NullReferenceException
+          topicUid: System_NullReferenceException
         - name: System.IndexOutOfRangeException
-          topicUID: System_IndexOutOfRangeException
+          topicUid: System_IndexOutOfRangeException
         - name: System.FormatException
-          topicUID: System_FormatException
+          topicUid: System_FormatException
         - name: System.Collections.Generic.KeyNotFoundException
-          topicUID: System_Collections_Generic_KeyNotFoundException
+          topicUid: System_Collections_Generic_KeyNotFoundException
         - name: Identifying the source of an exception
-          topicUID: Identifying_the_source_of_an_exception
+          topicUid: Identifying_the_source_of_an_exception
       - name: Use cases
-        topicUID: Debugging_connectors_Element_connections
+        topicUid: Debugging_connectors_Element_connections
         items:
         - name: Debugging connectors - element connections
-          topicUID: Debugging_connectors_Element_connections
+          topicUid: Debugging_connectors_Element_connections
         - name: Debugging connectors - RTE caused by non-poll group in timer
-          topicUID: Debugging_connectors_RTE_caused_by_non-poll_group_in_timer
+          topicUid: Debugging_connectors_RTE_caused_by_non-poll_group_in_timer
         - name: Debugging connectors - seeing through the smoke
-          topicUID: Debugging_connectors_seeing_through_the_smoke
+          topicUid: Debugging_connectors_seeing_through_the_smoke
         - name: Debugging connectors - serial communication returning command echoes
-          topicUID: Debugging_connectors_serial_communication_returning_command_echoes
+          topicUid: Debugging_connectors_serial_communication_returning_command_echoes
         - name: Debugging connectors - tracing the stack
-          topicUID: Debugging_connectors_tracing_the_stack
+          topicUid: Debugging_connectors_tracing_the_stack
         - name: Investigating slow device control using dotTrace
-          topicUID: Investigating_slow_device_control_using_dotTrace
+          topicUid: Investigating_slow_device_control_using_dotTrace
         - name: Protocol thread run-time errors - use cases
-          topicUID: Protocol_thread_run_time_errors_use_cases
+          topicUid: Protocol_thread_run_time_errors_use_cases
   - name: Automation scripts
     topicUid: AutomationDevGuideIndex
     items:
@@ -665,9 +667,9 @@
     - name: How-tos
       items:
       - name: How to make your Automation scripts debug ready
-        topicUID: How_to_make_your_automation_scripts_debug_ready
+        topicUid: How_to_make_your_automation_scripts_debug_ready
       - name: Getting started with the IAS Toolkit
-        topicUID: Getting_Started_with_the_IAS_Toolkit
+        topicUid: Getting_Started_with_the_IAS_Toolkit
   - name: Class Library
     topicUid: ClassLibraryIntroduction
     items:
@@ -708,14 +710,16 @@
       topicUid: Skyline.DataMiner.Scripting
     - name: Skyline.DataMiner.Automation
       topicUid: Skyline.DataMiner.Automation
-    - name: Skyline.DataMiner.Library.Common
-      topicUid: Skyline.DataMiner.Library.Common
-    - name: Skyline.DataMiner.Library.Automation
-      topicUid: Skyline.DataMiner.Library.Automation
-    - name: Skyline.DataMiner.Library.Protocol
-      topicUid: Skyline.DataMiner.Library.Protocol
+    - name: Skyline.DataMiner.Core.DataMinerSystem.Common
+      topicUid: Skyline.DataMiner.Core.DataMinerSystem.Common
+    - name: Skyline.DataMiner.Core.DataMinerSystem.Automation
+      topicUid: Skyline.DataMiner.Core.DataMinerSystem.Automation
+    - name: Skyline.DataMiner.Core.DataMinerSystem.Protocol
+      topicUid: Skyline.DataMiner.Core.DataMinerSystem.Protocol
     - name: Skyline.DataMiner.Net
       topicUid: Skyline.DataMiner.Net
+    - name: Skyline.DataMiner.Helper.OpenConfig.Api
+      topicUid: Skyline.DataMiner.Helper.OpenConfig.Api
     - name: Interop.SLDms
       topicUid: Interop.SLDms
     - name: Tamir.SharpSsh
@@ -2538,15 +2542,15 @@
         topicUid: Protocol.ProcessAutomation
         items:
         - name: ProcessAutomationOptions
-          topicUID: Protocol.ProcessAutomation.ProcessAutomationOptions
+          topicUid: Protocol.ProcessAutomation.ProcessAutomationOptions
           items:
           - name: ProcessAutomationOption
-            topicUID: Protocol.ProcessAutomation.ProcessAutomationOptions.ProcessAutomationOption
+            topicUid: Protocol.ProcessAutomation.ProcessAutomationOptions.ProcessAutomationOption
             items:
             - name: '@name'
-              topicUID: Protocol.ProcessAutomation.ProcessAutomationOptions.ProcessAutomationOption-name
+              topicUid: Protocol.ProcessAutomation.ProcessAutomationOptions.ProcessAutomationOption-name
             - name: '@pid'
-              topicUID: Protocol.ProcessAutomation.ProcessAutomationOptions.ProcessAutomationOption-pid
+              topicUid: Protocol.ProcessAutomation.ProcessAutomationOptions.ProcessAutomationOption-pid
       - name: Provider
         topicUid: Protocol.Provider
       - name: QActions
@@ -3499,38 +3503,36 @@
       topicUid: Manifest-TypeAlarmTemplateName
       items:
       - name: TypeAlarmTemplateName
-        topicUID: Manifest-TypeAlarmTemplateName
+        topicUid: Manifest-TypeAlarmTemplateName
       - name: TypeEmptyString
-        topicUID: Manifest-TypeEmptyString
+        topicUid: Manifest-TypeEmptyString
       - name: TypeInformationTemplateName
-        topicUID: Manifest-TypeInformationTemplateName
+        topicUid: Manifest-TypeInformationTemplateName
       - name: TypeNonEmptyString
-        topicUID: Manifest-TypeNonEmptyString
+        topicUid: Manifest-TypeNonEmptyString
       - name: TypePackageVersion
-        topicUID: Manifest-TypePackageVersion
+        topicUid: Manifest-TypePackageVersion
       - name: TypeTrendTemplateName
-        topicUID: Manifest-TypeTrendTemplateName
+        topicUid: Manifest-TypeTrendTemplateName
 - name: Web Services
   items:
   - name: Web Services (v1)
     topicUid: WS_v1
     items:
-      - name: About the Web Services (v1)
-        topicUid: WS_About_v1
+      - name: Using the Web Services (v1)
+        topicUid: Using_the_Web_Services_v1
         items:
           - name: Using the Web Services (v1)
             topicUid: Using_the_Web_Services_v1
-          - name: Interfaces and WSDL files
-            topicUid: Interfaces_and_WSDL_files
           - name: Examples
-            topicUID: WS_v1_examples
+            topicUid: WS_v1_examples
       - name: Methods (v1)
         topicUid: WS_Methods_v1_overview
         items:
           - name: ActivateElement
             topicUid: ActivateElementv1
           - name: AddBookingAttachment
-            topicUID: AddBookingAttachment
+            topicUid: AddBookingAttachment
           - name: AddBookingAttachmentV2
             topicUid: AddBookingAttachmentV2
           - name: AddCommentToAlarm
@@ -3544,7 +3546,7 @@
           - name: AddElementsToRecent
             topicUid: AddElementsToRecent
           - name: AddJobAttachment
-            topicUID: AddJobAttachment
+            topicUid: AddJobAttachment
           - name: AddJobAttachmentV2
             topicUid: AddJobAttachmentV2
           - name: AddOrUpdateJobsSectionDefinitionField
@@ -3556,7 +3558,7 @@
           - name: AddServicesToRecent
             topicUid: AddServicesToRecent
           - name: AddTicketAttachment
-            topicUID: AddTicketAttachment
+            topicUid: AddTicketAttachment
           - name: AddTicketAttachmentV2
             topicUid: AddTicketAttachmentV2
           - name: AddTicketField
@@ -4631,7 +4633,7 @@
           - name: DMAServiceDefinitionEdgeLite
             topicUid: DMAServiceDefinitionEdgeLite
           - name: DMAServiceDefinitionLite
-            topicUID: DMAServiceDefinitionLite
+            topicUid: DMAServiceDefinitionLite
           - name: DMAServiceDefinitionNode
             topicUid: DMAServiceDefinitionNode
           - name: DMAServiceInfoGroupDefinition
@@ -4687,9 +4689,9 @@
           - name: DMATimeZoneInfo
             topicUid: DMATimeZoneInfo
           - name: DMATopAlarmCountData
-            topicUID: DMATopAlarmCountData
+            topicUid: DMATopAlarmCountData
           - name: DMATopAlarmStateData
-            topicUID: DMATopAlarmStateData
+            topicUid: DMATopAlarmStateData
           - name: DMATopologyChainsField
             topicUid: DMATopologyChainsField
           - name: DMATopologyFieldValues
@@ -5017,6 +5019,8 @@
               topicUid: Integrity_constraints
             - name: Preserve state option
               topicUid: Preserve_state_option
+            - name: Clear Table Data on Polling Disable
+              topicUid: Clear_Table_Data_on_Polling_Disable
         - name: Parameters
           topicUid: Parameters3
           items:
@@ -5086,6 +5090,101 @@
           topicUid: Skyline_Driver_Passport_Platform
         - name: Minimum DMA version
           topicUid: Minimum_DMA_version
+- name: CI/CD
+  topicUid: CICD
+  items:
+  - name: CI/CD using GitHub
+    topicUid: CICD_on_GitHub
+    items:
+    - name: GitHub starter workflows
+      topicUid: github_starter_workflows
+    - name: GitHub validation requirements
+      topicUid: github_validation_requirements
+    - name: Deploying from GitHub
+      topicUid: Deploying_Automation_scripts_from_a_GitHub_repository
+    - name: GitHub reusable workflows
+      topicUid: github_reusable_workflows
+      items:
+      - name: Reusable workflow Automation scripts
+        topicUid: github_reusable_workflows_automation_master_workflow
+      - name: Reusable workflow NuGet solutions
+        topicUid: github_reusable_workflows_nuget_solution_master_workflow
+      - name: Reusable workflow SRM function
+        topicUid: github_reusable_workflows_srm_function_master_workflow
+  - name: CI/CD using GitLab
+    topicUid: Deploying_Automation_scripts_from_a_GitLab_repository
+    items:
+    - name: Deploying from GitLab
+      topicUid: Deploying_Automation_scripts_from_a_GitLab_repository
+  - name: CI/CD at Skyline Communications
+    topicUid: CICD_at_Skyline
+    items:
+    - name: CI/CD Skyline Communications GitHub
+      topicUid: migration_from_gerrit_to_github
+      items:
+        - name: Migration From Gerrit to GitHub
+          topicUid: migration_from_gerrit_to_github
+        - name: GitHub Guidelines
+          topicUid: Using_GitHub_for_CICD
+    - name: CI/CD Skyline Communications Gerrit and Jenkins
+      topicUid: High-level_overview
+      items:
+      - name: High-level overview
+        topicUid: High-level_overview
+      - name: Components
+        topicUid: Gerrit
+        items:
+        - name: Gerrit
+          topicUid: Gerrit
+        - name: Jenkins
+          topicUid: Jenkins
+        - name: SonarQube
+          topicUid: SonarQube
+      - name: Protocol development with CI/CD Pipeline
+        topicUid: Git_protocol_repositories
+        items:
+        - name: Git protocol repositories
+          topicUid: Git_protocol_repositories
+        - name: Pipeline stages for protocols
+          topicUid: Pipeline_stages_for_protocols
+      - name: Function development with CI/CD pipeline
+        topicUid: Pipeline_stages_for_functions
+        items:
+        - name: Pipeline stages for functions
+          topicUid: Pipeline_stages_for_functions
+      - name: Automation script development with CI/CD pipeline
+        topicUid: Automation_scripts_as_a_Visual_Studio_solution
+        items:
+        - name: Automation scripts as a Visual Studio solution
+          topicUid: Automation_scripts_as_a_Visual_Studio_solution
+        - name: Pipeline stages for Automation scripts
+          topicUid: Pipeline_stages_for_Automation_scripts
+        - name: Deploying Automation scripts from a repository
+          topicUid: Deploying_Automation_scripts_from_a_repository
+      - name: Visual overview development with CI/CD pipeline
+        topicUid: Pipeline_stages_for_visual_overviews
+        items:
+        - name: Pipeline stages for visual overviews
+          topicUid: Pipeline_stages_for_visual_overviews
+      - name: Dashboard Development with CI/CD pipeline
+        topicUid: Pipeline_stages_for_dashboards
+        items:
+        - name: Pipeline stages for dashboards
+          topicUid: Pipeline_stages_for_dashboards
+      - name: Custom solution development with CI/CD pipeline
+        topicUid: Pipeline_stages_for_custom_solutions
+        items:
+        - name: Pipeline stages for custom solutions
+          topicUid: Pipeline_stages_for_custom_solutions
+      - name: Install package development with CICD pipeline
+        topicUid: Creating_a_repository_for_an_install_package
+        items:
+        - name: Creating a repository for an install package
+          topicUid: Creating_a_repository_for_an_install_package
+        - name: Pipeline stages for install packages
+          topicUid: Pipeline_stages_for_install_packages
+      - name: FAQ
+        topicUid: FAQ
 - name: DataMiner Development Tools
   topicUid: TOOLS
   items:
@@ -5093,80 +5192,15 @@
       topicUid: TOOApplicationPackages
       items:
       - name: Creating an application package
-        topicUID: Creating_an_app_package
+        topicUid: Creating_an_app_package
       - name: Installing an application package
-        topicUID: Installing_an_app_package
+        topicUid: Installing_an_app_package
       - name: Creating application package scripts
-        topicUID: Creating_app_package_scripts
+        topicUid: Creating_app_package_scripts
     - name: Change Element States Offline
-      topicUID: Change_Element_States_Offline
-    - name: CI/CD
-      topicUid: DevelopmentWithCICD
-      items:
-        - name: High-level overview
-          topicUid: High-level_overview
-        - name: Components
-          topicUid: Components
-          items:
-            - name: Gerrit
-              topicUid: Gerrit
-            - name: Jenkins
-              topicUid: Jenkins
-            - name: SonarQube
-              topicUid: SonarQube
-        - name: Protocol development with CI/CD Pipeline
-          topicUid: Protocol_development_with_CI_CD_Pipeline
-          items:
-            - name: Protocols as a Visual Studio solution
-              topicUid: Protocols_as_a_Visual_Studio_solution
-            - name: Git protocol repositories
-              topicUid: Git_protocol_repositories
-            - name: Pipeline stages for protocols
-              topicUid: Pipeline_stages_for_protocols
-        - name: Function development with CI/CD pipeline
-          topicUid: Function_development_with_CI_CD_pipeline
-          items:
-            - name: Pipeline stages for functions
-              topicUid: Pipeline_stages_for_functions
-        - name: Automation script development with CI/CD pipeline
-          topicUid: Automation_script_development_with_CI_CD_pipeline
-          items:
-            - name: Automation scripts as a Visual Studio solution
-              topicUid: Automation_scripts_as_a_Visual_Studio_solution
-            - name: Pipeline stages for Automation scripts
-              topicUid: Pipeline_stages_for_Automation_scripts
-            - name: Deploying Automation scripts from a GitHub repository
-              topicUid: Deploying_Automation_scripts_from_a_GitHub_repository
-            - name: Deploying Automation scripts from a GitLab repository
-              topicUid: Deploying_Automation_scripts_from_a_GitLab_repository
-        - name: Visual overview development with CI/CD pipeline
-          topicUid: Visual_overview_development_with_CI_CD_pipeline
-          items:
-            - name: Pipeline stages for visual overviews
-              topicUid: Pipeline_stages_for_visual_overviews
-        - name: Dashboard Development with CI/CD pipeline
-          topicUid: Dashboard_Development_with_CI_CD_pipeline
-          items:
-            - name: Pipeline stages for dashboards
-              topicUid: Pipeline_stages_for_dashboards
-        - name: Custom solution development with CI/CD pipeline
-          topicUid: Custom_solution_development_with_CI_CD_Pipeline
-          items:
-            - name: Pipeline stages for custom solutions
-              topicUid: Pipeline_stages_for_custom_solutions
-        - name: Install package development with CICD pipeline
-          topicUid: Install_package_development_with_CICD_pipeline
-          items:
-            - name: Creating a repository for an install package
-              topicUid: Creating_a_repository_for_an_install_package
-            - name: Pipeline stages for install packages
-              topicUid: Pipeline_stages_for_install_packages
-        - name: Github CI/CD 
-          topicUid: Using_GitHub_for_CICD
-        - name: FAQ
-          topicUid: FAQ
+      topicUid: Change_Element_States_Offline
     - name: Copy Element Data
-      topicUID: Copy_Element_Data
+      topicUid: Copy_Element_Data
     - name: DataMiner Application Package Builder
       topicUid: TOODataMinerPackageBuilder
       items:
@@ -5214,6 +5248,8 @@
               topicUid: Installing_and_configuring_DataMiner_Integration_Studio
             - name: Configuring Microsoft Visual Studio
               topicUid: Configuring_Microsoft_Visual_Studio
+        - name: Protocols as a Visual Studio solution
+          topicUid: Protocols_as_a_Visual_Studio_solution
         - name: DIS menu
           topicUid: DIS_menu
         - name: XML editor
@@ -5267,13 +5303,13 @@
             - name: Class Library packages
               topicUid: Class_Library_packages
     - name: DataStax DevCenter
-      topicUID: DataStax_DevCenter
+      topicUid: DataStax_DevCenter
     - name: dnSpy
-      topicUID: dnSpy
+      topicUid: dnSpy
     - name: EBU LIST
-      topicUID: EBU_Live_IP_Software_Toolkit_LIST
+      topicUid: EBU_Live_IP_Software_Toolkit_LIST
     - name: Interactive Automation Script Toolkit
-      topicUID: Interactive_Automation_Script_Toolkit
+      topicUid: Interactive_Automation_Script_Toolkit
     - name: Nodetool
       topicUid: TOONodetool
       items:
@@ -5475,7 +5511,7 @@
         - name: Viewer
           topicUid: Viewer
 - name: Third-party integrations
-  topicUID: ThirdPartyIntegrations
+  topicUid: ThirdPartyIntegrations
   items:
     - name: Ansible
       topicUid: Configure_DataMiner_using_Ansible
