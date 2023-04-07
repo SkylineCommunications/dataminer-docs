@@ -6,6 +6,10 @@ uid: DCP_change_log
 
 The dataminer.services platform gets updated continuously. This change log can help you trace when specific features and changes have become available.
 
+#### 7 April 2023 - Fix - Orchestrator DxM uninstalled after attempt to update it on Window Server 2016 [ID_36106]
+
+When the DataMiner Orchestrator DxM was updated via the Admin app on Window Server 2016, it could occur that the service was uninstalled but not updated.
+
 #### 3 April 2023 - Chat Integration with Microsoft Teams now includes fetching teams and channels [ID_35983]
 
 The following Chat Integration features have been added:
@@ -25,6 +29,10 @@ After you have made sure that the [prerequisites](https://github.com/SkylineComm
 #### 3 April 2023 - Enhancement - ArtifactDeployer 1.4.3 - Dependencies updated [ID_35990]
 
 Several dependencies have been updated. This includes security-related improvements.
+
+#### 30 March 2023 - Fix - Sharing app: Confirmation pop-up window not visible [ID_36029]
+
+In the Sharing app, depending on the position of the scrollbar, it could occur that the confirmation pop-up window for the deletion of an incoming share was displayed outside the boundaries of the screen, so that it was not possible to confirm the deletion.
 
 #### 2 March 2023 - Integrate your DataMiner System with Microsoft Teams using DataMiner Automation [ID_35799]
 
