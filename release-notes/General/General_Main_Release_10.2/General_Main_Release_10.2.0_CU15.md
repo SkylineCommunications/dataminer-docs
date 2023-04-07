@@ -78,3 +78,17 @@ In some cases, measurement points would not be set correctly when a trace was be
 In a custom component theme, for some fonts, the font size of the title could be set to a value higher than 36px, causing the component title to be larger than its container. Also, in some cases, the font size could incorrectly be set to 0px.
 
 From now on, font sizes will have to be set to a value between 1px and 36px.
+
+#### Virtual functions linked to a parameter with a hysteresis timer could be assigned an incorrect alarm severity [ID_36024]
+
+<!-- MR 10.2.0 [CU15]/10.3.0 [CU3] - FR 10.3.6 -->
+
+When a virtual function was linked to a parameter that had a hysteresis timer running, in some cases, that virtual function would be assigned an incorrect alarm severity.
+
+#### SLReset.exe would not clean an Elasticsearch database when no <DB> element was specified in DB.xml [ID_36040]
+
+<!-- MR 10.2.0 [CU15]/10.3.0 [CU3] - FR 10.3.6 -->
+
+When, in the *DB.xml* file, no `<DB>` element was specified for an Elasticsearch database, the factory reset tool *SLReset.exe* would not clean that database when the `cleanclustereddatabases` option had been used.
+
+From now on, when no `<DB>` element is specified for a Elasticsearch database, *SLReset.exe* will use the default database name "dms".
