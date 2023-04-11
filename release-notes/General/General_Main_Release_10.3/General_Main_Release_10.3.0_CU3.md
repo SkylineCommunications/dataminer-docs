@@ -24,6 +24,23 @@ Because of a number of enhancements, overall performance has increased when read
 
 SLLogCollector packages will now also include all files found in `C:\Skyline DataMiner\Files\SyncInfo` relevant for troubleshooting.
 
+#### Service & Resource Management: An error will now be thrown when an SRM event has been stuck for more than 15 minutes [ID_36013]
+
+<!-- MR 10.3.0 [CU3] - FR 10.3.6 -->
+
+When an SRM event has been stuck for more than 15 minutes, the following run-time error will now appear in the Alarm Console:
+
+```txt
+Thread problem in SLNet: SRM event thread for booking with id <booking id>
+```
+
+This error will also be added to the *SLWatchDog2.txt* log file.
+
+> [!NOTE]
+>
+> - This run-time error will appear when a custom booking event script that was configured to run synchronously has been running for more than 15 minutes. We highly recommend configuring custom events to run asynchronously. In the standard SRM Framework solution, you can [configure custom booking events](xref:Service_Orchestration_custom_events). In other SRM solutions, you can add booking events to the *ReservationInstance* object.
+> - Half-open run-time errors (which are thrown after an SRM event has been stuck for more than 7.5 minutes) will also be added to the *SLWatchDog2.txt* log file.
+
 ### Fixes
 
 #### Cassandra Cluster Migrator tool would incorrectly not migrate the state-changes table from a single-node Cassandra to a Cassandra Cluster [ID_35699]
