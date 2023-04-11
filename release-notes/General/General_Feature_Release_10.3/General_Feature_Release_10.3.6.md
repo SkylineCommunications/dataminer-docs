@@ -39,6 +39,12 @@ SLLogCollector packages will now also include all files found in `C:\Skyline Dat
 
 ### Fixes
 
+#### DataMiner Agent was not able to connect to the Cassandra database due to a problem with the TLS certificate [ID_35895]
+
+<!-- MR 10.3.0 [CU3] - FR 10.3.6 -->
+
+When a DataMiner Agent was restarted after its database had been configured to use TLS, in some cases, it would not be able to connect to its Cassandra database due to a problem with the TLS certificate validation.
+
 #### Updating a Resource or ResourcePool would incorrectly cause the 'CreatedAt' and 'CreatedBy' fields to be overwritten [ID_35913]
 
 <!-- MR 10.3.0 [CU3] - FR 10.3.6 -->
