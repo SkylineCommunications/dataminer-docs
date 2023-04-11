@@ -16,7 +16,7 @@ In order to use the OpenConfig middleware, you will need to have the following s
 - The [CommunicationGateway DxM](xref:DataMinerExtensionModules#communicationgateway) is installed on at least one of the DataMiner Agents in the cluster.
 
 > [!NOTE]
-> You can install the CommunicationGateway DxM with the Admin app. See [Managing the nodes of a DMS connected to dataminer.services](xref:Managing_cloud-connected_nodes).
+> You can install the CommunicationGateway DxM with the Admin app. See [Deploying a DxM on a node](xref:Managing_cloud-connected_nodes#deploying-a-dxm-on-a-node). The DxM will be installed as a Windows service and will start automatically after installation.
 
 ## Usage
 
@@ -30,12 +30,16 @@ When you are developing a connector, there is an optional package when you want 
 
 #### Creating a GnmiClient
 
+##### Identification
+
 To set up a connection with the endpoint, you will need to create a [GnmiClient](xref:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api.GnmiClient) and pass along the `agentId` and `elementId` of the element running the connector. This will be used to identify you with the CommunicationGateway DxM.
 
 A friendly name can be passed along in the `elementName`, which is used as context for logging purposes.
 
 > [!NOTE]
 > There are scenarios where you do not have an element (e.g. a DataMiner Automation script). It is fine to pass along a different context as well. This is meant to identify you and for logging purposes, so it is sufficient if the consumer knows what it represents. It does not have to be unique. The middleware will make it unique for you by appending a `GUID`.
+
+##### Endpoint details
 
 You also need to pass a [DataSourceConfiguration](xref:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Models.DataSourceConfiguration) that specifies the details of the endpoint you want to connect with.
 
@@ -47,6 +51,8 @@ config.Port = 10164;
 
 > [!IMPORTANT]
 > It is important to specify either `http://` or `https://`  in front of the address, as that will determine whether a secure channel is set up or not.
+
+##### Authentication
 
 On top of that, there are some additional **parameters for authentication**. There is support for credentials and client certificates. In case of a self-signed certificate, it is important that the root certificate of the path is part of the *Trusted Root Certification Authorities* certificate store in Windows.
 
@@ -70,6 +76,8 @@ config.Password = Convert.ToString(protocol.GetParameter(Parameter.datasourcepas
 
 > [!CAUTION]
 > Never hard-code a password in a QAction, for security reasons. We recommend creating a parameter of type password in the DataMiner connector and retrieving the value through a `GetParameter` API call to pass it along.
+
+##### Logging
 
 To be able to **log** the information about what is being handled by the middleware, you will need to pass an [ILogger](xref:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Utils.ILogger).
 
@@ -294,6 +302,8 @@ The errors that occur in the middleware will be logged by the `ILogger` object t
 
 In case of a DataMiner connector, that will be the logging of the element. There is an extensive list of [error codes](xref:CommunicationGateway_ErrorCodes) available to help you troubleshoot.
 
+The logging of the CommunicationGateway DxM can be found under `C:\ProgramData\Skyline Communications\DataMiner CommunicationGateway\Logs`.
+
 ### DataMapper
 
 The [DataMinerConnectorDataMapper](xref:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataMapper) is an object that sits between your device and the DataMiner connector. It will automatically parse the incoming notifications and populate DataMiner parameters or tables with the data.
@@ -310,7 +320,7 @@ IDataMapper dataMapper = new DataMinerConnectorDataMapper(
     });
 ```
 
-Having this configured as soon as a gNMI notification will come in with data for either the *system/memory/state/physical* or the *system/memory/state/reserved* YANG path, it will automatically do the set on the configured parameters. You need to pass it the `SLProtocol` object so it can execute those sets.
+In above configured example, the DataMapper will automatically parse the gNMI notifications that come in and will check if it contains data for either the *system/memory/state/physical* or the *system/memory/state/reserved* YANG path. It will then automatically do the set on the configured parameters with the value that the gNMI notification contains. You need to pass it the `SLProtocol` object so it can execute those sets.
 
 It works perfectly for DataMiner tables as well, but the configuration is slightly different.
 
@@ -329,7 +339,7 @@ IDataMapper dataMapper = new DataMinerConnectorDataMapper(
 ```
 
 > [!IMPORTANT]
-> When configuring the path for a column, always specify the YANG module name as well. Notifications of type `JSON` do not contain them but notifications of type `JSON_IETF` do. The DataMapper is capable of handling both, but for that reason the YANG module name needs to be known.
+> When configuring the path for a column, always specify the YANG module name as well. Notifications of type `JSON` do not contain it but notifications of type `JSON_IETF` do. The DataMapper is capable of handling both, but for that reason the YANG module name needs to be known.
 
 You need to create a [DataMinerConnectorDataGrid](xref:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataGrid) and pass it the root YANG path of the `container` that will be stored. Then it is a matter of mapping the column parameters to the YANG paths of the `leaf` items.
 

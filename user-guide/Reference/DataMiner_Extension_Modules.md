@@ -61,13 +61,3 @@ The CommunicationGateway module makes it possible for connectors or scripts runn
 At present, we support the [gNMI](xref:DSI_OpenConfig_Introduction#gnmi) service, but more services and RPC connections may be added.
 
 The DxM exists in tandem with service-specific [middleware](xref:Nuget_Communication_Middleware) that facilitates the NATS communication to the DxM. However, not all middleware require the CommunicationGateway to establish a connection with the device. The DxM primarily exists to bridge the gap between different dotNet versions. Namely, gRPC requires dotNet 5 or higher for full functionality, while SLScripting still runs on dotNet 4.6.2.
-
-#### Prerequisites
-
-- The DxM needs to be installed on a Windows system running a DataMiner Agent.
-- DataMiner version 10.3.3 or higher is required for connectors that rely on the DxM. The DataMinerMessageBroker.API.dll is shared with all processes, and version 1.4.2 is required for the NATS communication.
-
-#### Getting started
-
-1. [Deploy the CommunicationGateway DxM](xref:Managing_cloud-connected_nodes#deploying-a-dxm-on-a-node).
-1. After the installation, the DxM should run as a service. Logging will be written to `C:\ProgramData\Skyline Communications\DataMiner CommunicationGateway\Logs`.
