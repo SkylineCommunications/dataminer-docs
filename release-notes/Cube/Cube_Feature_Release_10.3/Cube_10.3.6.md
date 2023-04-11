@@ -42,3 +42,9 @@ In *System Center*, a few enhancements have been made to the *Database > Offload
 <!-- MR 10.2.0 [CU15]/10.3.0 [CU3] - FR 10.3.6 -->
 
 When, in a topology chain, you opened a KPI window and clicked the histogram icon, in some cases, the histogram window would be empty.
+
+#### DataMiner Cube - Alarm Console: Filtered history tab would incorrectly not show information events [ID_36105]
+
+<!-- MR 10.2.0 [CU15]/10.3.0 [CU3] - FR 10.3.6 -->
+
+When you added a filtered history tab that had to show active alarms, masked alarms and information events, no information events would be shown.

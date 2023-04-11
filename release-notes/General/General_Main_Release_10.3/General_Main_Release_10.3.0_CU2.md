@@ -38,12 +38,6 @@ From now on, SLAnalytics will also take into account first-time alarm template a
 
 Overall performance of SLAnalytics has increased because of a number of enhancements made to its caching mechanism.
 
-#### GQI data sources that require an Elasticsearch database will now use GetInfoMessage(InfoType.Database) to check whether Elasticsearch is available [ID_35907]
-
-<!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
-
-Up to now, GQI data sources that require an Elasticsearch database used the `DatabaseStateRequest<ElasticsearchState>` message to check whether Elasticsearch was available. From now on, they will use the `GetInfoMessage(InfoType.Database)` message instead.
-
 #### Improved error handling when elements go into an error state [ID_35944]
 
 <!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
