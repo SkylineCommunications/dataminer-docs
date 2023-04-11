@@ -41,6 +41,12 @@ This error will also be added to the *SLWatchDog2.txt* log file.
 > - This run-time error will appear when a custom booking event script that was configured to run synchronously has been running for more than 15 minutes. We highly recommend configuring custom events to run asynchronously. In the standard SRM Framework solution, you can [configure custom booking events](xref:Service_Orchestration_custom_events). In other SRM solutions, you can add booking events to the *ReservationInstance* object.
 > - Half-open run-time errors (which are thrown after an SRM event has been stuck for more than 7.5 minutes) will also be added to the *SLWatchDog2.txt* log file.
 
+#### SLAnalytics: Trend data predictions displayed in trend graphs will be more accurate [ID_36038]
+
+<!-- MR 10.3.0 [CU3] - FR 10.3.6 -->
+
+Because of a number of enhancements with regard to the detection of periodic behavior in trend data, the trend data predictions displayed in trend graphs will be more accurate.
+
 ### Fixes
 
 #### Cassandra Cluster Migrator tool would incorrectly not migrate the state-changes table from a single-node Cassandra to a Cassandra Cluster [ID_35699]
@@ -88,3 +94,9 @@ When a virtual function was linked to a parameter that had a hysteresis timer ru
 When, in the *DB.xml* file, no `<DB>` element was specified for an Elasticsearch database, the factory reset tool *SLReset.exe* would not clean that database when the `cleanclustereddatabases` option had been used.
 
 From now on, when no `<DB>` element is specified for a Elasticsearch database, *SLReset.exe* will use the default database name "dms".
+
+#### SLAnalytics - Behavioral anomaly detection: No flatline stop events would be generated when an element was deleted [ID_36050]
+
+<!-- MR 10.3.0 [CU3] - FR 10.3.6 -->
+
+When an element was deleted, no flatline stop events would be generated for parameters of that element.
