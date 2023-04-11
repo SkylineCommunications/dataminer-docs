@@ -130,6 +130,12 @@ From now on, when SLNet receives an error from the web API after sending a *GetC
 
 The GQI data sources *Get elements* and *Get services* will now also return alarm states.
 
+#### Support for GQI queries from Data Aggregator with ad hoc data sources [ID_35526]
+
+<!-- MR 10.4.0 - FR 10.3.3 -->
+
+GQI now supports queries from [Data Aggregator](xref:Data_Aggregator_DxM) that use ad hoc data sources.
+
 #### GQI: 'State' column in data sources 'Get services' and 'Get views' renamed to 'Alarm state' [ID_35557]
 
 <!-- MR 10.4.0 - FR 10.3.3 -->
@@ -141,6 +147,15 @@ In the GQI data sources *Get services* and *Get views*, the *State* column has n
 <!-- MR 10.4.0 - FR 10.3.4 -->
 
 When an EPM feed is used to feed EPM identifiers to a parameter feed, it will now also list the parameters of the enhanced elements that are linked to the EPM objects.
+
+#### GQI: Raw datetime values will now be converted to UTC [ID_35640]
+
+<!-- MR 10.4.0 - FR 10.3.4 -->
+
+Up to now, after each step in a GQI query, raw datetime values were always converted to the time zone that was specified in the query options. From now on, raw datetime values will be converted to UTC instead. The time zone specified in the query options will now only be used when converting a raw datetime value to a display value.
+
+> [!IMPORTANT]
+> **BREAKING CHANGE**: When, in an ad hoc data source or a query operation, a datetime value is not in UTC format, an exception will now be thrown.
 
 #### Monitoring app: Trending page of a parameter no longer has a sidebar [ID_35705]
 
@@ -174,12 +189,6 @@ The way in which components are linked to feeds has been improved. Instead of us
 
 > [!CAUTION]
 > BREAKING CHANGE: Up to now, when you linked a script parameter to the *From* or *Till* box of a time range feed, the feed would pass a datetime value in string format to the script. That string value was not in an ISO format and did not contain any information about the time zone. From now on, the feed will send a UTC timestamp in milliseconds instead. Scripts that expect to receive a string value will need to be modified.
-
-#### Security enhancements [ID_35965]
-
-<!-- MR 10.4.0 - FR 10.3.5 -->
-
-A number of security enhancements have been made.
 
 ### Fixes
 
@@ -216,14 +225,6 @@ From now on, when the parameter feed has a protocol or view filter, it will fetc
 <!-- MR 10.4.0 - FR 10.3.2 -->
 
 A number of issues with regard to data highlighting have been fixed.
-
-#### Dashboards app: Problem when trying to open a shared dashboard [ID_35271]
-
-<!-- MR 10.4.0 - FR 10.3.3 -->
-
-When users tried to open a shared dashboard, in some cases, they would unexpectedly be presented with a login screen due to a permission issue.
-
-Workaround: Recreate the faulty shared dashboard.
 
 #### Dashboards - Line & area chart component: Timestamps could be formatted incorrectly when exporting trend data to CSV [ID_35311]
 
@@ -273,20 +274,24 @@ When you opened a low-code app on a mobile device or when you resized the screen
 
 When data from one table was fed to another table, in some cases, the "loading" indicator of the table to which data was fed would incorrectly not disappear.
 
+#### GQI: GetArgumentValue method would throw an exception when used to access the value of an optional argument [ID_35783]
+
+<!-- MR 10.4.0 - FR 10.3.5 -->
+
+When the `GetArgumentValue<T>(string name)` method was used in an ad hoc data source or a custom operator script to access the value of an optional argument that had not been passed, the following exception would be thrown:
+
+```txt
+Could not find argument with name '{argument.Name}'.
+```
+
 #### Dashboards app & Low-code apps: Problem when feeding data from a GQI component to a query used in the same component [ID_35806]
 
 <!-- MR 10.4.0 - FR 10.3.5 -->
 
 An error could occur when feeding data from a GQI component to a query that was used in the same component.
 
-#### Dashboards app & Low-code apps - GQI components: Open sessions would not be closed when a new query was triggered [ID_35824]
+#### Dashboards app - GQI: No element feed available after selecting a relation between two standalone parameters [ID_36003]
 
 <!-- MR 10.4.0 - FR 10.3.5 -->
 
-When a GQI component still had a session open when a new query was triggered, in some cases, the open session would incorrectly not be closed.
-
-#### Dashboards app: Problem when selecting a parameter in a parameter feed component of a shared dashboard [ID_35863]
-
-<!-- MR 10.4.0 - FR 10.3.5 -->
-
-When you selected a parameter in a parameter feed component of a shared dashboard, in some cases, an error could occur.
+When, in a table with a *Get parameter relations* query, you selected a relation between two standalone parameters, no element feed would be available.

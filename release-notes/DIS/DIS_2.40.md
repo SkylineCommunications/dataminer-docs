@@ -65,8 +65,6 @@ This check can return the following error messages:
 | 1.25.2 | MinVersionTooLow_Sub | '{requiredDmVersion}' : '{usedFeature}' |
 | 1.25.3 | MinVersionFeatureUsedInItemWithId_Sub | Feature used in '{itemKind}' with '{identifierType}' '{itemId}'. |
 
-### XML Schema
-
 ## Changes
 
 ### Enhancements
