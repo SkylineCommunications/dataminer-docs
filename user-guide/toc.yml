@@ -2995,6 +2995,8 @@
     - name: Known issues
       topicUid: Known_issues
       items:
+        - name: DataMiner keeps trying to restart when Elasticsearch is unavailable
+          topicUid: KI_Restart_loop_when_Elasticsearch_unavailable
         - name: SRM - Auto Select Resource not read for silent booking
           topicUid: KI_SRM_Auto_Select_Resource_Not_Read
         - name: IP address in SAN field of TLS certificate ignored in Windows 2012 R2
