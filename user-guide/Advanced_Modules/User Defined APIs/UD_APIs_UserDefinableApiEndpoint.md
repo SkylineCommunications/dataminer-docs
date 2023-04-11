@@ -44,7 +44,8 @@ The extension module has a configuration file with some settings that are set to
 
 The default configuration file can be found in the following location: `%programfiles%\Skyline Communications\DataMiner UserDefinableApiEndpoint\appsettings.json`
 
-If you want to make changes to the configuration, create an *appsettings.custom.json* file within the same folder. This will prevent your settings from being overwritten by an upgrade.
+> [!IMPORTANT]
+> If you want to make changes to the configuration, create an *appsettings.custom.json* file within the same folder. This will prevent your settings from being overwritten by an upgrade. Changing the settings in *appsettings.json* will work, but these will be overridden during an upgrade.
 
 In this file, add the setting or settings that you want to override, with your custom value. The following main blocks of settings are available:
 
@@ -84,7 +85,8 @@ For example, this is the default configuration:
 }
 ```
 
-IIS also has a rewrite rule (Reroute User Definable APIs) that forwards API requests to the port used by *UserDefinableApiEndpoint* (5002). **When you specify a custom port in *appsettings.custom.json*, you will also have to update this rule**:
+> [!IMPORTANT]
+> IIS also has a rewrite rule (Reroute User Definable APIs) that forwards API requests to the port used by *UserDefinableApiEndpoint* (5002). **When you specify a custom port in *appsettings.custom.json*, you will also have to update this rule**:
 
 1. Open `Internet Information Services (IIS) Manager`.
 
@@ -153,9 +155,12 @@ This section contains options specific to the DataMiner User-Definable APIs modu
 
 - **SessionConfigPath**: *Optional.* The path to the NATS config file. This will by default point to the `SLCloud.xml` file if not filled in.
 
-- **CredentialsConfigPath**: The path to the credentials used to connect to DataMiner over NATS.
+- **CredentialsConfigPath**: *Optional.* The path to the credentials used to connect to DataMiner over NATS. This will point to the default DataMiner credentials file when not filled in.
 
-- **MessageBrokerTimeOutSeconds**: The time the message broker sending the NATS trigger to SLNet will wait for a response before it times out. By default, this is set to 300 seconds (i.e. 5 minutes).
+- **MessageBrokerTimeOutSeconds**: The time the message broker sending the NATS trigger to SLNet will wait for a response before it times out. By default, this is set to 90 seconds (i.e. 1.5 minutes).
+
+> [!WARNING]
+> When changing the **MessageBrokerTimeOutSeconds** to a value higher than 2 minutes (120 seconds). You will also need to increase the time-out set in IIS, see [changing the time-out](#changing-the-time-out).
 
 For example, this is the default configuration:
 
@@ -165,7 +170,31 @@ For example, this is the default configuration:
   "UserDefinableAPIs": {
     "NatsSubject": "Skyline.DataMiner.Protobuf.Apps.UserDefinableApis.Api.v1.UserDefinableApiTriggerRequest",
     "CredentialsConfigPath": "C:\\Skyline DataMiner\\NATS\\nsc\\.nkeys\\creds\\DataMinerOperator\\DataMinerAccount\\DataMinerUser.creds",
-    "MessageBrokerTimeOutSeconds": 300
+    "MessageBrokerTimeOutSeconds": 90
   }
 }
 ```
+
+#### Changing the time-out
+
+IIS has a time-out set to 120 seconds (2 minutes). When increasing the **MessageBrokerTimeOutSeconds** as explained above, this time-out in IIS will also need to be increased.
+> [!NOTE]
+> Make sure there is a margin, put the time-out in IIS higher than than the **MessageBrokerTimeOutSeconds**.
+
+You can change the time-out in IIS with following steps:
+
+1. Open `Internet Information Services (IIS) Manager`.
+
+1. In the *Connections* pane on the left, select the top icon with the server name and click *Application Request Routing*.
+
+   ![IIS time-out 1](~/user-guide/images/UDAPIS_TimeOut1.jpg)
+
+1. Click *Server Proxy Settings* in the pane on the far right.
+
+    ![IIS time-out 2](~/user-guide/images/UDAPIS_TimeOut2.jpg)
+
+1. Change the time-out in the textbox.
+
+    ![IIS time-out 3](~/user-guide/images/UDAPIS_TimeOut3.jpg)
+
+1. Click *Apply*.
