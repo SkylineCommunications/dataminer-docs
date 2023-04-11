@@ -27,6 +27,14 @@ In *System Center*, a few enhancements have been made to the *Database > Offload
 
 ### Fixes
 
+#### Renaming an Automation script would cause its actions to be loaded twice in the UI [ID_35964]
+
+<!-- MR 10.3.0 [CU3] - FR 10.3.6 -->
+
+When, in DataMiner Cube, you renamed an Automation script with at least one action, in some rare cases, those actions could incorrectly get loaded twice in the UI.
+
+Also, when the name of a script folder ended with a slash or a backslash character, up to now, an empty folder would incorrectly be added. This has now been fixed.
+
 #### EPM: KPI histogram would incorrectly not be shown [ID_36004]
 
 <!-- MR 10.2.0 [CU15]/10.3.0 [CU3] - FR 10.3.6 -->
