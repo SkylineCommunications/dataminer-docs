@@ -149,7 +149,7 @@ private void OnConnectionStateChanged(object sender, EventArgs e)
 
 ### Disconnecting
 
-To disconnect from the endpoint, you can call [Disconnect](xref:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api.GnmiClient.Disconnect). As GnmiClient implements [IDisposable](xref:System.IDisposable), you can call [Dispose](xref:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api.GnmiClient.Dispose) on the client as well, which will call the [Disconnect](xref:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api.GnmiClient.Disconnect) for you.
+To disconnect from the endpoint, you can call [Disconnect](xref:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api.GnmiClient.Disconnect). As GnmiClient implements [IDisposable](https://learn.microsoft.com/dotnet/api/system.idisposable), you can call [Dispose](xref:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api.GnmiClient.Dispose) on the client as well, which will call the [Disconnect](xref:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api.GnmiClient.Disconnect) for you.
 
 To disconnect when the element has stopped, you can use the QAction's Dispose.
 
