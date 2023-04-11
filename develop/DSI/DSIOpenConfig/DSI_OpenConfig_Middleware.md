@@ -265,8 +265,6 @@ public void HandleIncomingResponse(IEnumerable<GnmiResponseValue> response)
         Log($"Exception occurred: {ex}");
     }
 }
-
-
 ```
 
 This will create a *SAMPLE* subscription where a notification will be sent out by the data source every 10 seconds.
@@ -305,7 +303,7 @@ The [DataMinerConnectorDataMapper](xref:Skyline.DataMiner.DataSources.OpenConfig
 ```csharp
 IDataMapper dataMapper = new DataMinerConnectorDataMapper(
     protocol,
-    new List<IDataEntity>
+    new List<IDataMinerConnectorDataEntity>
     {
         new DataMinerConnectorParameter("system/memory/state/physical", Parameter.systemmemorystatephysical_400),
         new DataMinerConnectorParameter("system/memory/state/reserved", Parameter.systemmemorystatereserved_404)
@@ -319,7 +317,7 @@ It works perfectly for DataMiner tables as well, but the configuration is slight
 ```csharp
 IDataMapper dataMapper = new DataMinerConnectorDataMapper(
     protocol,
-    new List<IDataEntity>
+    new List<IDataMinerConnectorDataEntity>
     {
         new DataMinerConnectorDataGrid("interfaces/interface/state", Parameter.Interfacesstate.tablePid, new List<IDataMinerConnectorDataGridColumn>
         {
@@ -349,7 +347,7 @@ string defaultValue = "Not Available";
 
 IDataMapper dataMapper = new DataMinerConnectorDataMapper(
     protocol,
-    new List<IDataEntity>
+    new List<IDataMinerConnectorDataEntity>
     {
         new DataMinerConnectorDataGrid("interfaces/interface/state", Parameter.Interfacesstate.tablePid, new List<IDataMinerConnectorDataGridColumn>
         {
@@ -372,9 +370,9 @@ new DataMinerConnectorDataGrid("interfaces/interface/state", Parameter.Interface
     new DataMinerConnectorDataGridColumn("openconfig-interfaces:last-change", Parameter.Interfacesstate.Pid.interfacesstatelastchange) { OnRawValueChange = ConvertEpochTimeUtcTicksToOleAutomationTime }
 };
 
-public static object ConvertEpochTimeUtcTicksToOleAutomationTime(SLProtocol protocol, DataValueOriginType origin, string pk, object value, DateTime timestamp)
+public static object ConvertEpochTimeUtcTicksToOleAutomationTime(DataMinerConnectorRawValueArgs rawValue)
 {
-    if (value is ulong ticks)
+    if (rawValue != null && rawValue.Value is ulong ticks)
     {
         double secondsSinceEpoch;
 
@@ -405,14 +403,19 @@ new DataMinerConnectorDataGrid("interfaces/interface/state", Parameter.Interface
     new DataMinerConnectorDataGridColumn(Parameter.Interfacesstate.Pid.interfacesstateinbitrate, notAvailable
 };
 
-public static object CustomRates(SLProtocol protocol, DataValueOriginType origin, string pk, object newValue, DateTime newTime, object oldValue, DateTime oldTime)
+public static object CustomRates(DataMinerConnectorRateArgs rateValues)
 {
-    if (newTime <= oldTime || !UInt64.TryParse(Convert.ToString(newValue), out ulong uiNewValue) || !UInt64.TryParse(Convert.ToString(oldValue), out ulong uiOldValue))
+    if (rateValues == null)
+    {
+        return NotAvailable;
+    }
+
+    if (rateValues.CurrentTimestampUtc <= rateValues.PreviousTimestampUtc || !UInt64.TryParse(Convert.ToString(rateValues.CurrentValue), out ulong uiNewValue) || !UInt64.TryParse(Convert.ToString(rateValues.PreviousValue), out ulong uiOldValue) || uiOldValue > uiNewValue)
     {
         return -1;
     }
 
-    TimeSpan ts = newTime - oldTime;
+    TimeSpan ts = rateValues.CurrentTimestampUtc - rateValues.PreviousTimestampUtc;
     double rate = 8.0 * Convert.ToDouble(uiNewValue - uiOldValue) / ts.TotalSeconds;
     return rate;
 }
@@ -433,10 +436,10 @@ new DataMinerConnectorDataGrid("interfaces/interface/state", Parameter.Interface
     new DataMinerConnectorDataGridColumn(Parameter.Interfacesstate.Pid.interfacesstatedisplaykey) { OnTriggerValueChange = ValueConverter.CreateDisplayKey, TriggerColumnParameterIds = new List<int> { Parameter.Interfacesstate.Pid.interfacesstatedescription } }
 };
 
-public static object CreateDisplayKey(SLProtocol protocol, DataValueOriginType origin, string pk, Dictionary<int, object> values, DateTime timestamp)
+public static object CreateDisplayKey(DataMinerConnectorTriggerValueArgs triggerValues)
 {
     string description;
-    if (values.TryGetValue(Parameter.Interfacesstate.Pid.interfacesstatedescription, out object descriptionVal))
+    if (triggerValues.Values.TryGetValue(Parameter.Interfacesstate.Pid.interfacesstatedescription, out object descriptionVal))
     {
         description = Convert.ToString(descriptionVal);
     }
