@@ -13,13 +13,7 @@ uid: General_Feature_Release_10.3.5
 > - For release notes related to the DataMiner web applications, see [DataMiner web apps Feature Release 10.3.5](xref:Web_apps_Feature_Release_10.3.5).
 > - For information on how to upgrade DataMiner, see [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent).
 
-## Highlights
-
-## Other features
-
-## Changes
-
-### Enhancements
+## New features
 
 #### SLNetClientTest: New DOM-related features [ID_35550]
 
@@ -39,6 +33,10 @@ In the *SLNetClientTest* tool, the following new DOM-related features have been 
 
 > [!CAUTION]
 > Always be extremely careful when using this tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
+
+## Changes
+
+### Enhancements
 
 #### Security enhancements [ID_35668] [ID_35997]
 
