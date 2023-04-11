@@ -12,6 +12,12 @@ uid: General_Main_Release_10.3.0_CU3
 
 ### Enhancements
 
+#### DataMiner Object Models: Enhanced performance when reading DOM objects and ModuleSettings [ID_35934]
+
+<!-- MR 10.3.0 [CU3] - FR 10.3.6 -->
+
+Because of a number of enhancements, overall performance has increased when reading DOM objects and ModuleSettings.
+
 #### SLLogCollector now also collects SyncInfo files [ID_35995]
 
 <!-- MR 10.2.0 [CU15]/10.3.0 [CU3] - FR 10.3.6 -->
