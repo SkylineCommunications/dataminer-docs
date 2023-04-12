@@ -236,6 +236,33 @@ In the Automation script editor, Intellisense has been added for the new `timeUp
 
 This property is only applied in interactive Automation scripts that are launched from a web app.
 
+#### System Center: Overhaul of LDAP settings [ID_35782]
+
+<!-- MR 10.4.0 - FR 10.3.6 -->
+
+In *System Center > System settings > LDAP*, you can configure a number of LDAP settings. These settings have had an overhaul.
+
+- In the *General* tab, from now on, you will only be able to set *Authentication type* to either "Anonymous" or "Simple".
+
+  > [!NOTE]
+  > When you set *Authentication type* to "Anonymous", the *User name* and *Password* fields will now be disabled. When both fields contain a value, *Authentication type* will by default be set to "Simple".
+
+- In this section, it is now also possible to configure the *nonDomainLDAP* setting. Up to now, this setting could only be configured in the *DataMiner.xml* file.
+
+- When you update LDAP settings, a warning will now appear to notify you that these settings will only be changed on the DataMiner Agent to which you are connected. Changes made to LDAP settings will not be synchronized among the agents in the cluster.
+
+Also, a number of issues have been fixed. Up to now, the value entered in *Use fully qualified domain name (FQDN)* would not be saved to the *DataMiner.xml* file, an incorrect default value would be entered in the *User class name* field, and the value entered in the *Password* field would get lost when the LDAP settings were updated without changing the password.
+
+#### DataMiner Cube desktop app: Unused Cube versions will now automatically be removed [ID_35795]
+
+<!-- MR 10.4.0 - FR 10.3.6 -->
+
+From now on, Cube versions that meet the following conditions will be removed automatically:
+
+- Not marked as the active version for a certain DataMiner Agent.
+- Not downloaded recently.
+- Not used recently.
+
 ### Fixes
 
 #### Profiles app: A profile instance would incorrectly list parameters that had been removed from the profile definition [ID_34679] [ID_34771]
