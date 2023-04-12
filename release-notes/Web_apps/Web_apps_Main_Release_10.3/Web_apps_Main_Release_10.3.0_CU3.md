@@ -28,6 +28,14 @@ When users tried to open a shared dashboard, in some cases, they would unexpecte
 
 Workaround: Recreate the faulty shared dashboard.
 
+#### Dashboards app: Problem with width of PDF reports [ID_35531]
+
+<!-- MR 10.2.0 [CU13]/10.3.0 [CU3] - FR 10.3.4 -->
+
+When a PDF report was generated via Automation or Scheduler, in some cases, its width would be set incorrectly.
+
+Also, in some cases, the left and right padding of PDF reports generated via Automation, Scheduler and the Dashboards app itself would be missing.
+
 #### Interactive Automation scripts: Problems with datetime component [ID_35682]
 
 <!-- MR 10.3.0 [CU3] - FR 10.3.6 -->

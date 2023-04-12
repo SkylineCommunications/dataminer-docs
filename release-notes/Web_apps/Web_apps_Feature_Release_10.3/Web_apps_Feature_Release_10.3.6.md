@@ -22,7 +22,11 @@ uid: Web_apps_Feature_Release_10.3.6
 
 ### Enhancements
 
-*No enhancements have been added to this release yet.*
+#### Legacy reports and dashboards will no longer be prefetched if the soft-launch option 'LegacyReportsAndDashboards' is set to false [ID_35881]
+
+<!-- MR 10.4.0 - FR 10.3.6 -->
+
+From now on, legacy reports and dashboards will no longer be prefetched if the soft-launch option *LegacyReportsAndDashboards* is set to false.
 
 ### Fixes
 
