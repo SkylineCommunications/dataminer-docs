@@ -22,7 +22,8 @@ There are also several dependency packages, each containing a single assembly fr
 
 - Skyline.DataMiner.Files.*
 
-For developments requiring IMediator or unit conversion such as those used working with the SRM Profile Parameters, installation of the following package is required:
+For development requiring IMediator or unit conversion, for example to work with SRM profile parameters, you need to install the following package:
+
 - Skyline.DataMiner.Files.SLMediationSnippets
 
 ### About DataMiner
