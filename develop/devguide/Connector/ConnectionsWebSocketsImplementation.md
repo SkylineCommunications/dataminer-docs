@@ -96,9 +96,7 @@ These are possible reasons why the connection might be terminated:
 - Network error: The WebSocket connection is closed because of a network error, such as a dropped packet or a network partition. Note that if the TCP retranmission time exceeds the WebSocket timeout time, the WebSocket might be closed depending on the implementation, since there was no activity for a period greater than the configured WebSocket timeout time.
 
 > [!NOTE]
->
-> - This behavior may vary depending on the other connections of the protocol.
-> - The timeout behavior of the element may vary depending on other connections configured on protocol level.
+> The timeout behavior of the element may vary depending on other connections configured on protocol level.
 
 ## Binary vs. Text Data Frames
 
