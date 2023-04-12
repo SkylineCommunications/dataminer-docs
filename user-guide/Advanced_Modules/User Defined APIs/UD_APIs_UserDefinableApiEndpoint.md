@@ -13,7 +13,7 @@ uid: UD_APIs_UserDefinableApiEndpoint
 
 Even though this is an extension module, it follows the release cycle of DataMiner. This means that when you install a **general DataMiner upgrade package**, this module will also be installed and updated.
 
-If for some reason this extension module is uninstalled, the User-Defined APIs feature will become unavailable. If this happens, or if the installation somehow becomes corrupted, you can install the extension module using the **MSI installer** located in `C:\Skyline DataMiner\ModuleInstallers\DataMiner UserDefinableApiEndpoint <VERSION>.msi`. You will need Administrator rights for this.
+If for some reason this extension module is uninstalled, the User-Defined APIs feature will become unavailable. If this happens, or if the installation somehow becomes corrupted, you can install the extension module using the **MSI installer** located in `C:\Skyline DataMiner\Tools\ModuleInstallers\DataMiner UserDefinableApiEndpoint <VERSION>.msi`. You will need Administrator rights for this.
 
 > [!IMPORTANT]
 > Downgrading DataMiner will not automatically downgrade the *UserDefinableApiEndpoint* DxM. This means that a **downgrade could result in incompatibility** between DataMiner and the extension module. To downgrade the *UserDefinableApiEndpoint* DxM, first uninstall the installed version, and then install the lower version. Do not just run the installer of the lower version without uninstalling first, as this may corrupt your installation.
