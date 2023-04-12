@@ -68,6 +68,12 @@ An error could occur when you opened a shared dashboard that contained a *Line &
 
 When you generated a PDF of a dashboard that contained a table component showing a *Retry* button (because of an error in the table), then that *Retry* button would incorrectly also be displayed in the PDF file.
 
+#### Dashboards app: Invalid nodes could get added to a GQI query [ID_36045]
+
+<!-- MR 10.4.0 - FR 10.3.6 -->
+
+In some cases, invalid nodes could get added to a GQI query, causing run-time errors to be thrown.
+
 #### Dashboards app: Problem when a 'State' component was fed a parameter value by a drop-down component in a shared dashboard [ID_36075]
 
 <!-- MR 10.3.0 [CU3] - FR 10.3.6 -->

@@ -301,3 +301,9 @@ An error could occur when feeding data from a GQI component to a query that was 
 <!-- MR 10.4.0 - FR 10.3.5 -->
 
 When, in a table with a *Get parameter relations* query, you selected a relation between two standalone parameters, no element feed would be available.
+
+#### Dashboards app: Invalid nodes could get added to a GQI query [ID_36045]
+
+<!-- MR 10.4.0 - FR 10.3.6 -->
+
+In some cases, invalid nodes could get added to a GQI query, causing run-time errors to be thrown.
