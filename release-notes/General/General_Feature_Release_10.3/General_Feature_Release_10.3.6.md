@@ -74,6 +74,16 @@ When a DataMiner Agent was restarted after its database had been configured to u
 
 When a Resource or ResourcePool was updated, the *CreatedAt* and *CreatedBy* fields would incorrectly be overwritten.
 
+#### NATS-related error: 'Failed to copy credentials from [IP address] - corrupt zip file' [ID_35935]
+
+<!-- MR 10.4.0 - FR 10.3.6 -->
+
+In some rare cases, the following NATS-related error would be thrown:
+
+```txt
+Failed to copy credentials from [IP address] - corrupt zip file
+```
+
 #### Creating or updating a function resource while its parent element was in an error state would incorrectly be allowed [ID_35963]
 
 <!-- MR 10.2.0 [CU15]/10.3.0 [CU3] - FR 10.3.6 -->
