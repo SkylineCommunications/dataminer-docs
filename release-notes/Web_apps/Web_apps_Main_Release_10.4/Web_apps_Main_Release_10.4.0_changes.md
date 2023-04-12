@@ -307,3 +307,15 @@ When, in a table with a *Get parameter relations* query, you selected a relation
 <!-- MR 10.4.0 - FR 10.3.6 -->
 
 In some cases, invalid nodes could get added to a GQI query, causing run-time errors to be thrown.
+
+#### Web apps: Problem with single sign-on when embedded in Cube [ID_36049]
+
+<!-- MR 10.4.0 - FR 10.3.6 -->
+
+When the *Dashboards*, *Jobs* or *Ticketing* app was embedded in DataMiner Cube, in some cases, users would incorrectly be prompted to log in to the app.
+
+#### Dashboards app & Low-code apps: GQI query nodes without options would incorrectly be expanded [ID_36064]
+
+<!-- MR 10.4.0 - FR 10.3.6 -->
+
+In some cases, GQI query nodes without options would incorrectly be expanded.
