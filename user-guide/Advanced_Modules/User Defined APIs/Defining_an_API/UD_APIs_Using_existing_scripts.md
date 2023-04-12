@@ -54,7 +54,7 @@ The **preferred way of using an existing script** to define an API is similar to
 
 - Add the `OnApiTrigger` entry point method.
 - If necessary, refactor the script to make sure that it can use the same logic as it would with the `Run` method.
-- Use the *RawBody* and *Parameters* properties of the `ApiTriggerInput` object instead of the script parameters.
+- Use the *RawBody* and/or *Parameters* properties of the `ApiTriggerInput` object instead of the script parameters.
 
 For detailed info, refer to [Defining a new API](xref:UD_APIs_Define_New_API).
 

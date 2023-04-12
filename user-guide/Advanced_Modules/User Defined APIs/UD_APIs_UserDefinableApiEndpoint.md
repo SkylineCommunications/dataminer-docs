@@ -159,8 +159,8 @@ This section contains options specific to the DataMiner User-Definable APIs modu
 
 - **MessageBrokerTimeOutSeconds**: The time the message broker sending the NATS trigger to SLNet will wait for a response before it times out. By default, this is set to 90 seconds (i.e. 1.5 minutes).
 
-> [!WARNING]
-> When changing the **MessageBrokerTimeOutSeconds** to a value higher than 2 minutes (120 seconds). You will also need to increase the time-out set in IIS, see [changing the time-out](#changing-the-time-out).
+   > [!WARNING]
+   > When changing the **MessageBrokerTimeOutSeconds** to a value higher than 2 minutes (120 seconds). You will also need to increase the time-out set in IIS, see [changing the time-out](#changing-the-time-out).
 
 For example, this is the default configuration:
 
@@ -178,6 +178,7 @@ For example, this is the default configuration:
 #### Changing the time-out
 
 IIS has a time-out set to 120 seconds (2 minutes). When increasing the **MessageBrokerTimeOutSeconds** as explained above, this time-out in IIS will also need to be increased.
+
 > [!NOTE]
 > Make sure there is a margin, put the time-out in IIS higher than than the **MessageBrokerTimeOutSeconds**.
 
