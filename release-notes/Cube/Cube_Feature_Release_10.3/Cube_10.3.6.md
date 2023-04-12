@@ -74,7 +74,7 @@ A number of enhancements have been made with regard to URL handling within Visua
 
 <!-- MR 10.4.0 - FR 10.3.6 -->
 
-In some cases, DataMiner Cube would fail to connect to a DataMiner Agent using gRPC, especially when a large number of clients were connected to that same agent.
+In some cases, DataMiner Cube would fail to connect to a DataMiner Agent using gRPC, especially when a large number of clients were connecting to that same agent.
 
 #### Renaming an Automation script would cause its actions to be loaded twice in the UI [ID_35964]
 
