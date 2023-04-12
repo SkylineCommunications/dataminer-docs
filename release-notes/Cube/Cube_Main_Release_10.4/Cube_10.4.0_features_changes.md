@@ -306,3 +306,9 @@ When, in the *Automation*, *Correlation* and *Scheduler* modules, you generated 
 <!-- MR 10.4.0 - FR 10.3.5 -->
 
 When, in an alarm template, a suggestion event was promoted to an alarm event, it would correctly appear in the active alarms tab but it would incorrectly not be removed from the suggestion events tab.
+
+#### Problem when connecting to a DataMiner Agent using gRPC [ID_35950]
+
+<!-- MR 10.4.0 - FR 10.3.6 -->
+
+In some cases, DataMiner Cube would fail to connect to a DataMiner Agent using gRPC, especially when a large number of clients were connected to that same agent.
