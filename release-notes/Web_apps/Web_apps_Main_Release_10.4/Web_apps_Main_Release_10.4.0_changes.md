@@ -319,3 +319,13 @@ When the *Dashboards*, *Jobs* or *Ticketing* app was embedded in DataMiner Cube,
 <!-- MR 10.4.0 - FR 10.3.6 -->
 
 In some cases, GQI query nodes without options would incorrectly be expanded.
+
+#### Dashboards app & Low-code apps: Incorrect error could appear when editing a dashboard or low-code app [ID_36132]
+
+<!-- MR 10.4.0 - FR 10.3.6 -->
+
+When editing a dashboard or a low-code app, in some cases, the following error could incorrectly appear:
+
+```txt
+The dashboard has not been saved: Invalid revision sequence, the dashboard might have been edited by another user.
+```

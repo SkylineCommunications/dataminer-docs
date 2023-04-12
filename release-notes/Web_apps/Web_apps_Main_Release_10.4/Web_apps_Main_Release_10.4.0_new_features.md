@@ -373,3 +373,9 @@ For example, in case of the following query ...
 In order to avoid duplicate group keys when there is only a single *Group By* operation, any empty values will be replaced by a single forward slash.
 
 Also, any slashes in the group values will be escaped before they are joined. For more information about escaping slashes, see [Join operator keys](#join-operator-keys).
+
+#### Dashboards app & Low-code apps: Clearing a State component by means of CTRL+Click [ID_36056]
+
+<!-- MR 10.4.0 - FR 10.3.5 -->
+
+You can now clear a *State* component by clicking it while holding down the CTRL key.

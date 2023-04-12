@@ -80,6 +80,12 @@ In some cases, invalid nodes could get added to a GQI query, causing run-time er
 
 When the *Dashboards*, *Jobs* or *Ticketing* app was embedded in DataMiner Cube, in some cases, users would incorrectly be prompted to log in to the app.
 
+#### Dashboards app & Low-code apps: Clearing a State component by means of CTRL+Click [ID_36056]
+
+<!-- MR 10.4.0 - FR 10.3.5 -->
+
+You can now clear a *State* component by clicking it while holding down the CTRL key.
+
 #### Dashboards app & Low-code apps: GQI query nodes without options would incorrectly be expanded [ID_36064]
 
 <!-- MR 10.4.0 - FR 10.3.6 -->
@@ -109,3 +115,13 @@ From now on, a table session will immediately be closed after the last page has 
 <!-- MR 10.3.0 [CU3] - FR 10.3.6 -->
 
 An error could occur when you opened a shared dashboard that contained a *Parameter Page* component.
+
+#### Dashboards app & Low-code apps: Incorrect error could appear when editing a dashboard or low-code app [ID_36132]
+
+<!-- MR 10.4.0 - FR 10.3.6 -->
+
+When editing a dashboard or a low-code app, in some cases, the following error could incorrectly appear:
+
+```txt
+The dashboard has not been saved: Invalid revision sequence, the dashboard might have been edited by another user.
+```
