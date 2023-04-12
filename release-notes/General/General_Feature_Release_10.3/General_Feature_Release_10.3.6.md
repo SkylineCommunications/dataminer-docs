@@ -92,6 +92,12 @@ When you created or updated a function resource while its parent element was in 
 
 From now on, when you create or update a function resource while its parent element is in an error state, an error will be thrown.
 
+#### Business Intelligence: Problem when a replicated SLA was stopped or deleted [ID_35973]
+
+<!-- MR 10.2.0 [CU15]/10.3.0 [CU3] - FR 10.3.6 -->
+
+In some cases, an error could occur when a replicated SLA was stopped or deleted.
+
 #### Cassandra: Cleared alarms would incorrectly be added to the activealarms table and never removed [ID_36002]
 
 <!-- MR 10.4.0 - FR 10.3.6 -->
@@ -123,3 +129,9 @@ From now on, when no `<DB>` element is specified for a Elasticsearch database, *
 <!-- MR 10.3.0 [CU3] - FR 10.3.6 -->
 
 When an element was deleted, no flatline stop events would be generated for parameters of that element.
+
+#### DataMiner Object Models: Problem when creating a DomInstance with an empty status [ID_36063]
+
+<!-- MR 10.4.0 - FR 10.3.6 -->
+
+When a DomInstance was created with an empty status, a `MultipleSectionsNotAllowedForSectionDefinition` error would be returned, even when the configuration was correct.

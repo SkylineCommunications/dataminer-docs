@@ -59,6 +59,12 @@ When you created or updated a function resource while its parent element was in 
 
 From now on, when you create or update a function resource while its parent element is in an error state, an error will be thrown.
 
+#### Business Intelligence: Problem when a replicated SLA was stopped or deleted [ID_35973]
+
+<!-- MR 10.2.0 [CU15]/10.3.0 [CU3] - FR 10.3.6 -->
+
+In some cases, an error could occur when a replicated SLA was stopped or deleted.
+
 #### DataMiner Cube - EPM: KPI histogram would incorrectly not be shown [ID_36004]
 
 <!-- MR 10.2.0 [CU15]/10.3.0 [CU3] - FR 10.3.6 -->

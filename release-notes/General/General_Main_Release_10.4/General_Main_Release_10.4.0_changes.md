@@ -281,3 +281,9 @@ In some cases, a handle in the Timer class would not be cleaned correctly, causi
 <!-- MR 10.4.0 - FR 10.3.6 -->
 
 Cleared alarms would incorrectly be added to the activealarms table and never removed.
+
+#### DataMiner Object Models: Problem when creating a DomInstance with an empty status [ID_36063]
+
+<!-- MR 10.4.0 - FR 10.3.6 -->
+
+When a DomInstance was created with an empty status, a `MultipleSectionsNotAllowedForSectionDefinition` error would be returned, even when the configuration was correct.
