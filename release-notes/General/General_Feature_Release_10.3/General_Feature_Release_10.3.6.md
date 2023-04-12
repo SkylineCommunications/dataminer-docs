@@ -92,6 +92,12 @@ When you created or updated a function resource while its parent element was in 
 
 From now on, when you create or update a function resource while its parent element is in an error state, an error will be thrown.
 
+#### Cassandra: Cleared alarms would incorrectly be added to the activealarms table and never removed [ID_36002]
+
+<!-- MR 10.4.0 - FR 10.3.6 -->
+
+Cleared alarms would incorrectly be added to the activealarms table and never removed.
+
 #### Spectrum analysis: Measurement points would not be set correctly [ID_36005]
 
 <!-- MR 10.2.0 [CU15]/10.3.0 [CU3] - FR 10.3.6 -->
