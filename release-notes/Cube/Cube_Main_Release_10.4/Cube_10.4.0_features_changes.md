@@ -263,6 +263,12 @@ From now on, Cube versions that meet the following conditions will be removed au
 - Not downloaded recently.
 - Not used recently.
 
+#### Visual Overview: Enhanced URL handling [ID_36044]
+
+<!-- MR 10.4.0 - FR 10.3.6 -->
+
+A number of enhancements have been made with regard to URL handling within Visual Overview.
+
 ### Fixes
 
 #### Profiles app: A profile instance would incorrectly list parameters that had been removed from the profile definition [ID_34679] [ID_34771]

@@ -62,6 +62,12 @@ In *System Center*, a few enhancements have been made to the *Database > Offload
   > [!IMPORTANT]
   > If, before upgrading to this DataMiner version, *Parameter value* was selected and the frequency was set to "permanently", *Parameter value* will no longer be selected after upgrading. As a result, no snapshot will be offloaded until you reconfigure the snapshot offload settings.
 
+#### Visual Overview: Enhanced URL handling [ID_36044]
+
+<!-- MR 10.4.0 - FR 10.3.6 -->
+
+A number of enhancements have been made with regard to URL handling within Visual Overview.
+
 ### Fixes
 
 #### Renaming an Automation script would cause its actions to be loaded twice in the UI [ID_35964]
