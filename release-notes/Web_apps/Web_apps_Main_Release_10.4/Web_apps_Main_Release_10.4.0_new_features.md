@@ -306,6 +306,17 @@ Also, a *Shared* button will now be displayed in the header bar of a shared dash
 > [!NOTE]
 > It is not possible to rename or to move a shared dashboard.
 
+#### Dashboards app & Low-code apps - Table and State components: New 'Initial selection' setting [ID_35984]
+
+<!-- MR 10.4.0 - FR 10.3.6 -->
+
+The *Table* and *State* components now have a new *Initial selection* setting.
+
+When you enable this setting, the first entry will automatically be selected when the dashboard or app is opened or refreshed.
+
+> [!NOTE]
+> This new setting has also been added to the *Grid* component, which is only available if you activate the *ReportsAndDashboardsDynamicVisuals* soft-launch option.
+
 #### GQI: Data source rows now have a unique key [ID_35999]
 
 <!-- MR 10.4.0 - FR 10.3.5 -->

@@ -16,7 +16,16 @@ uid: Web_apps_Feature_Release_10.3.6
 
 ## Other features
 
-*No other features have been added to this release yet.*
+#### Dashboards app & Low-code apps - Table and State components: New 'Initial selection' setting [ID_35984]
+
+<!-- MR 10.4.0 - FR 10.3.6 -->
+
+The *Table* and *State* components now have a new *Initial selection* setting.
+
+When you enable this setting, the first entry will automatically be selected when the dashboard or app is opened or refreshed.
+
+> [!NOTE]
+> This new setting has also been added to the *Grid* component, which is only available if you activate the *ReportsAndDashboardsDynamicVisuals* soft-launch option.
 
 ## Changes
 
@@ -121,6 +130,12 @@ From now on, a table session will immediately be closed after the last page has 
 <!-- MR 10.3.0 [CU3] - FR 10.3.6 -->
 
 An error could occur when you opened a shared dashboard that contained a *Parameter Page* component.
+
+#### Dashboards app & Low-code apps: Problem when searching elements of which the name contained special characters [ID_36128]
+
+<!-- MR 10.4.0 - FR 10.3.6 -->
+
+When, while editing a dashboard, you opened the *ELEMENTS* section in the *DATA* tab, and entered an element name containing special characters in the search box, the result set would always be empty, even if elements with that name existed.
 
 #### Dashboards app & Low-code apps: Incorrect error could appear when editing a dashboard or low-code app [ID_36132]
 

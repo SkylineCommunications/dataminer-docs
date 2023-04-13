@@ -326,6 +326,12 @@ When the *Dashboards*, *Jobs* or *Ticketing* app was embedded in DataMiner Cube,
 
 In some cases, GQI query nodes without options would incorrectly be expanded.
 
+#### Dashboards app & Low-code apps: Problem when searching elements of which the name contained special characters [ID_36128]
+
+<!-- MR 10.4.0 - FR 10.3.6 -->
+
+When, while editing a dashboard, you opened the *ELEMENTS* section in the *DATA* tab, and entered an element name containing special characters in the search box, the result set would always be empty, even if elements with that name existed.
+
 #### Dashboards app & Low-code apps: Incorrect error could appear when editing a dashboard or low-code app [ID_36132]
 
 <!-- MR 10.4.0 - FR 10.3.6 -->
