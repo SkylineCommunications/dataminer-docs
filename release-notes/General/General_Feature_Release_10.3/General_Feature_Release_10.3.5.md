@@ -13,46 +13,7 @@ uid: General_Feature_Release_10.3.5
 > - For release notes related to the DataMiner web applications, see [DataMiner web apps Feature Release 10.3.5](xref:Web_apps_Feature_Release_10.3.5).
 > - For information on how to upgrade DataMiner, see [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent).
 
-## Highlights
-
-## Other features
-
-#### GQI: New 'ThenSort by' query node allows sorting by multiple columns [ID_35807] [ID_35834]
-
-<!-- MR 10.4.0 - FR 10.3.5 -->
-
-To make sorting more intuitive, the new *ThenSort by* node can now be used in combination with the *Sort* node, which has now been renamed to *Sort by*.
-
-Up to now, all sorting had to be configured by means of *Sort* nodes. For example, if you wanted to first sort by column A and then by column B, you had to create a query in the following counter-intuitive way:
-
-1. Data source
-1. Sort by B
-1. Sort by A
-
-or
-
-1. Query X (i.e. Data Source, sorted by B)
-1. Sort by A
-
-From now on, you can create a query in a much more intuitive way. For example, if you want to first sort by column A and then by column B, you can now create a query in the following way:
-
-1. Data source
-1. Sort by A
-1. Then sort by B
-
-Note that, from now on, every *Sort by* node will nullify any preceding *Sort by* node. For example, in the following query, the *Sort by B* node will be nullified by the *Sort by A* node, meaning that the result set will only be sorted by column A.
-
-1. Data source
-1. Sort by B
-1. Sort by A
-
-> [!NOTE]
-> The behavior of existing queries (using e.g. *Sort by B* followed by *Sort by A*) will not be altered in any way. Their syntax will automatically be adapted when they are migrated to the most recent GQI version.
-> For example, an existing query using *Sort by B* followed by *Sort by A* will use *Sort by A* followed by *Then sort by B* after being migrated.
-
-## Changes
-
-### Enhancements
+## New features
 
 #### SLNetClientTest: New DOM-related features [ID_35550]
 
@@ -72,6 +33,10 @@ In the *SLNetClientTest* tool, the following new DOM-related features have been 
 
 > [!CAUTION]
 > Always be extremely careful when using this tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
+
+## Changes
+
+### Enhancements
 
 #### Security enhancements [ID_35668] [ID_35997]
 
@@ -102,13 +67,6 @@ When, in the SLNetClientTest tool, you connected to a DataMiner Agent that used 
 
 > [!CAUTION]
 > Always be extremely careful when using this tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
-
-#### GQI: Raw datetime values retrieved from Elasticsearch will now be converted to UTC [ID_35784]
-
-<!-- MR 10.4.0 - FR 10.3.5 -->
-<!-- Not added to MR 10.4.0 -->
-
-Up to now, after each step in a GQI query, raw datetime values were always converted to the time zone that was specified in the query options. From now on, raw datetime values retrieved from Elasticsearch will be converted to UTC instead. The time zone specified in the query options will now only be used when converting a raw datetime value to a display value.
 
 #### SLAnalytics will no longer disregard first-time alarm template assignments [ID_35794]
 
@@ -142,12 +100,6 @@ Overall performance of SLAnalytics has increased because of a number of enhancem
 <!-- MR 10.4.0 - FR 10.3.5 -->
 
 Up to now, when an event associated with a DVE child element was generated, internally, that event would be linked to the DVE parent element. From now on, it will be linked to the child element instead.
-
-#### GQI data sources that require an Elasticsearch database will now use GetInfoMessage(InfoType.Database) to check whether Elasticsearch is available [ID_35907]
-
-<!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
-
-Up to now, GQI data sources that require an Elasticsearch database used the `DatabaseStateRequest<ElasticsearchState>` message to check whether Elasticsearch was available. From now on, they will use the `GetInfoMessage(InfoType.Database)` message instead.
 
 #### Improved error handling when elements go into an error state [ID_35944]
 
@@ -209,16 +161,6 @@ Elastic backup will not be taken - Only active agents from a failover pair can t
 <!-- MR 10.4.0 - FR 10.3.5 -->
 
 When an SLNet connection supported protocol buffer serialization, DateTime instances would not get serialized correctly.
-
-#### GQI: GetArgumentValue method would throw an exception when used to access the value of an optional argument [ID_35783]
-
-<!-- MR 10.4.0 - FR 10.3.5 -->
-
-When the `GetArgumentValue<T>(string name)` method was used in an ad hoc data source or a custom operator script to access the value of an optional argument that had not been passed, the following exception would be thrown:
-
-```txt
-Could not find argument with name '{argument.Name}'.
-```
 
 #### SLProtocol would interpret signed numbers incorrectly [ID_35796]
 
@@ -292,11 +234,23 @@ The first time a message with an object of a type that inherited from `InfoData`
 Skyline.DataMiner.Net.Exceptions.DataMinerException: Failed to deserialize message (ProtoBuf). Possible version incompatibility between client and server.  ---&gt; System.InvalidOperationException: It was not possible to prepare a serializer for: Skyline.DataMiner.Net.InfoData ---&gt; System.InvalidOperationException: Unable to resolve a suitable Add method for System.Collections.Generic.IReadOnlyList`1[[System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]&#xD;
 ```
 
+#### Problem with SLElement when a timed action was stopped [ID_35928]
+
+<!-- MR 10.3.0 [CU2] - FR 10.3.5 -->
+
+In some rare cases, an error could occur in SLElement when a timed action was stopped.
+
 #### Business Intelligence: Outage correction would incorrectly be increased when a history alarm affected the outage [ID_35942]
 
 <!-- MR 10.4.0 - FR 10.3.5 -->
 
 When a history alarm affected a closed outage to which a correction had been applied, the correction would incorrectly be increased. From now on, the correction will be left untouched.
+
+#### SNMP: OIDs with a leading dot would incorrectly no longer be allowed [ID_35954]
+
+<!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
+
+OIDs with a leading dot would incorrectly no longer be allowed. From now on, OIDs with a leading dot are allowed again.
 
 #### NT Notify type NT_GET_BITRATE_DELTA would not return a valid value for a table with a single row [ID_35967]
 

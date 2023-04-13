@@ -38,12 +38,6 @@ From now on, SLAnalytics will also take into account first-time alarm template a
 
 Overall performance of SLAnalytics has increased because of a number of enhancements made to its caching mechanism.
 
-#### GQI data sources that require an Elasticsearch database will now use GetInfoMessage(InfoType.Database) to check whether Elasticsearch is available [ID_35907]
-
-<!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
-
-Up to now, GQI data sources that require an Elasticsearch database used the `DatabaseStateRequest<ElasticsearchState>` message to check whether Elasticsearch was available. From now on, they will use the `GetInfoMessage(InfoType.Database)` message instead.
-
 #### Improved error handling when elements go into an error state [ID_35944]
 
 <!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
@@ -173,6 +167,18 @@ The first time a message with an object of a type that inherited from `InfoData`
 ```txt
 Skyline.DataMiner.Net.Exceptions.DataMinerException: Failed to deserialize message (ProtoBuf). Possible version incompatibility between client and server.  ---&gt; System.InvalidOperationException: It was not possible to prepare a serializer for: Skyline.DataMiner.Net.InfoData ---&gt; System.InvalidOperationException: Unable to resolve a suitable Add method for System.Collections.Generic.IReadOnlyList`1[[System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]&#xD;
 ```
+
+#### Problem with SLElement when a timed action was stopped [ID_35928]
+
+<!-- MR 10.3.0 [CU2] - FR 10.3.5 -->
+
+In some rare cases, an error could occur in SLElement when a timed action was stopped.
+
+#### SNMP: OIDs with a leading dot would incorrectly no longer be allowed [ID_35954]
+
+<!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
+
+OIDs with a leading dot would incorrectly no longer be allowed. From now on, OIDs with a leading dot are allowed again.
 
 #### NT Notify type NT_GET_BITRATE_DELTA would not return a valid value for a table with a single row [ID_35967]
 
