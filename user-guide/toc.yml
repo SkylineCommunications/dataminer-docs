@@ -3004,6 +3004,8 @@
     - name: Known issues
       topicUid: Known_issues
       items:
+        - name: DataMiner keeps trying to restart when Elasticsearch is unavailable
+          topicUid: KI_Restart_loop_when_Elasticsearch_unavailable
         - name: SRM - Auto Select Resource not read for silent booking
           topicUid: KI_SRM_Auto_Select_Resource_Not_Read
         - name: IP address in SAN field of TLS certificate ignored in Windows 2012 R2
@@ -3343,6 +3345,8 @@
                 topicUid: SLNetClientTest_managing_trend_patterns
               - name: Modifying the engine ID of a DMA
                 topicUid: SLNetClientTest_modifying_engine_id
+              - name: Removing a DOM manager
+                topicUid: SLNetClientTest_removing_DOM_Manager
               - name: Removing references to items that no longer exist
                 topicUid: SLNetClientTest_removing_references
               - name: Setting the TTL for database records
@@ -3488,6 +3492,8 @@
           topicUid: service_profile_benchmarks
         - name: Service & Resource Management benchmarks
           topicUid: service_resource_management_benchmarks
+        - name: User-defined API benchmarks
+          topicUid: user-defined_API_benchmarks
         - name: View benchmarks
           topicUid: view_benchmarks
         - name: Visual Overview benchmarks
