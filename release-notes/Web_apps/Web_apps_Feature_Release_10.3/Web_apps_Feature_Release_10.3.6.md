@@ -16,6 +16,37 @@ uid: Web_apps_Feature_Release_10.3.6
 
 ## Other features
 
+#### Low-code apps: Making an app execute actions by adding action configurations to the app's URL [ID_35979]
+
+<!-- MR 10.4.0 - FR 10.3.6 -->
+
+It is now possible to make an app execute one or more actions by adding action configurations to the app's URL.
+
+To do so, proceed as follows:
+
+1. Configure the action(s) in the action editor.
+1. Click the *Copy actions* button to copy the action configuration to the Windows clipboard as a JSON object.
+1. Add a `#` sign to the URL, and paste the JSON object in the URL.
+
+When you add an action configuration to a URL of an app, the action(s) will immediately be executed. The app doesn't need to be reloaded. This way, even apps that are embedded in a visual overview can easily be forced to execute actions.
+
+As soon as the actions have been executed, the action configuration will be removed from the URL to prevent them from being executed multiple times.
+
+Example of an `Open a panel` action added to the URL of an app:
+
+```txt
+https://myDMA/APP_ID/PAGE_NAME#{"actions":[{"Type":6,"__type":"Skyline.DataMiner.Web.Common.v1.DMAApplicationPagePanelAction","Panel":"4507edc7-fcee-47bd-985c-f40d844e72cb","Position":"Center","Width":30,"AsOverlay":true}]}
+```
+
+> [!NOTE]
+>
+> - Making an app execute actions by adding a configuration to its URL does not work while that app is in edit mode.
+> - Currently, the following actions cannot be executed this way for security reasons:
+>
+>   - `Execute a script`
+>   - `Execute component action: delete current instance/save current changes`
+>   - `Navigate to an URL`
+
 #### Dashboards app & Low-code apps - Table and State components: New 'Initial selection' setting [ID_35984]
 
 <!-- MR 10.4.0 - FR 10.3.6 -->
@@ -25,7 +56,9 @@ The *Table* and *State* components now have a new *Initial selection* setting.
 When you enable this setting, the first entry of the GQI result set will automatically be selected when the dashboard or app is opened or refreshed.
 
 > [!NOTE]
-> This new setting has also been added to the *Grid* component, which is only available if you activate the *ReportsAndDashboardsDynamicVisuals* soft-launch option.
+>
+> - This new setting has also been added to the *Grid* component, which is only available if you activate the *ReportsAndDashboardsDynamicVisuals* soft-launch option.
+> - For reasons of consistency, in the Drop-down feed, List feed, Parameter feed and Tree feed, the *Feed defaults* setting has now also been renamed to *Initial selection*
 
 ## Changes
 
@@ -103,7 +136,7 @@ You can now clear a *State* component by clicking it while holding down the CTRL
 
 #### Dashboards app & Low-code apps: GQI query nodes without options would incorrectly be expanded [ID_36064]
 
-<!-- MR 10.4.0 - FR 10.3.6 -->
+<!-- MR 10.3.0 [CU3] - FR 10.3.6 -->
 
 In some cases, GQI query nodes without options would incorrectly be expanded.
 
@@ -133,7 +166,7 @@ An error could occur when you opened a shared dashboard that contained a *Parame
 
 #### Dashboards app & Low-code apps: Problem when searching elements of which the name contained special characters [ID_36128]
 
-<!-- MR 10.4.0 - FR 10.3.6 -->
+<!-- MR 10.3.0 [CU3] - FR 10.3.6 -->
 
 When, while editing a dashboard, you opened the *ELEMENTS* section in the *DATA* tab, and entered an element name containing special characters in the search box, the result set would always be empty, even if elements with that name existed.
 
@@ -144,13 +177,3 @@ When, while editing a dashboard, you opened the *ELEMENTS* section in the *DATA*
 In some cases, the popup panel showing the PDF preview of a dashboard would incorrectly have a scroll bar.
 
 From now on, a popup panel showing a PDF preview will take the full screen height and will only allow its contents to scroll.
-
-#### Dashboards app & Low-code apps: Incorrect error could appear when editing a dashboard or low-code app [ID_36132]
-
-<!-- MR 10.4.0 - FR 10.3.6 -->
-
-When editing a dashboard or a low-code app, in some cases, the following error could incorrectly appear:
-
-```txt
-The dashboard has not been saved: Invalid revision sequence, the dashboard might have been edited by another user.
-```

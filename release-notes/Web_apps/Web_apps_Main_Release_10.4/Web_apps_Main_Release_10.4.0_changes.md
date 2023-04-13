@@ -320,21 +320,9 @@ In some cases, invalid nodes could get added to a GQI query, causing run-time er
 
 When the *Dashboards*, *Jobs* or *Ticketing* app was embedded in DataMiner Cube, in some cases, users would incorrectly be prompted to log in to the app.
 
-#### Dashboards app & Low-code apps: GQI query nodes without options would incorrectly be expanded [ID_36064]
-
-<!-- MR 10.4.0 - FR 10.3.6 -->
-
-In some cases, GQI query nodes without options would incorrectly be expanded.
-
-#### Dashboards app & Low-code apps: Problem when searching elements of which the name contained special characters [ID_36128]
-
-<!-- MR 10.4.0 - FR 10.3.6 -->
-
-When, while editing a dashboard, you opened the *ELEMENTS* section in the *DATA* tab, and entered an element name containing special characters in the search box, the result set would always be empty, even if elements with that name existed.
-
 #### Dashboards app & Low-code apps: Incorrect error could appear when editing a dashboard or low-code app [ID_36132]
 
-<!-- MR 10.4.0 - FR 10.3.6 -->
+<!-- MR 10.4.0 - FR 10.3.5 [CU0] -->
 
 When editing a dashboard or a low-code app, in some cases, the following error could incorrectly appear:
 
