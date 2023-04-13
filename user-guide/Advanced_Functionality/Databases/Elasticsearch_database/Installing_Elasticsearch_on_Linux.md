@@ -14,13 +14,6 @@ If you want to use an Elasticsearch cluster for your DMS (which is required to u
 
      `$ systemctl start firewalld.service`
 
-     > [!IMPORTANT]
-     > Please note following commands could be different depending on the linux distrubution you are using. To use the correct guide for your preffered linux distribution please visit [Installing Elasticsearch](https://www.elastic.co/guide/en/elasticsearch/reference/current/install-elasticsearch.html).
-     >
-     > If you connect to your Linux server with SSH, you must immediately exclude port 22, or you will be locked out of the session.
-     >
-     > For this, use the following command: `$ firewall-cmd --zone=public --add-port=22/tcp`
-
    - To add the correct ports to the firewall, you can for example use the following commands:
 
      - `$ firewall-cmd --add-port=9200/tcp --permanent`
@@ -28,6 +21,11 @@ If you want to use an Elasticsearch cluster for your DMS (which is required to u
      - `$ firewall-cmd --add-port=9300/tcp --permanent`
 
      - `$ firewall-cmd --reload`
+
+   > [!IMPORTANT]
+   >
+   > - These commands could be **different depending on the Linux distribution** you are using. Refer to [the official Elastic page on installing Elasticsearch](https://www.elastic.co/guide/en/elasticsearch/reference/current/install-elasticsearch.html) for detailed information.
+   > - If you connect to your Linux server with **SSH**, you must **immediately exclude port 22**, or you will be locked out of the session. Use the following command for this: `$ firewall-cmd --zone=public --add-port=22/tcp`
 
 1. Mount the data folder to the data disk.
 
@@ -83,7 +81,7 @@ If you want to use an Elasticsearch cluster for your DMS (which is required to u
 
    - **MAX_LOCKED_MEMORY**: Set this to *unlimited*.
 
-   - **JAVA_HOME**: Set this to custom java path to be used for Elasticsearch. As an example you can set this to *java-11-openjdk-11.0.14.0.9-1.el7_9.x86_64*.
+   - **JAVA_HOME**: Set this to the custom Java path to be used for Elasticsearch, e.g. *java-11-openjdk-11.0.14.0.9-1.el7_9.x86_64*.
 
 1. Make the following adjustment in */usr/lib/systemd/system/elasticsearch.service*:
 
