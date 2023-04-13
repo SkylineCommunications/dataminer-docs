@@ -93,6 +93,12 @@ In some cases, measurement points would not be set correctly when a trace was be
 
 When a virtual function was linked to a parameter that had a hysteresis timer running, in some cases, that virtual function would be assigned an incorrect alarm severity.
 
+#### NT Notify type NT_GET_BITRATE_DELTA would return incorrect values [ID_36025]
+
+<!-- MR 10.2.0 [CU15]/10.3.0 [CU3] - FR 10.3.6 -->
+
+In some cases, NT Notify type NT_GET_BITRATE_DELTA (269) would return incorrect bitrate counter values when an SNMPv3 element was going into or coming out of a timeout state.
+
 #### SLReset.exe would not clean an Elasticsearch database when no <DB> element was specified in DB.xml [ID_36040]
 
 <!-- MR 10.2.0 [CU15]/10.3.0 [CU3] - FR 10.3.6 -->
