@@ -45,7 +45,7 @@ The extension module has a configuration file with some settings that are set to
 The default configuration file can be found in the following location: `%programfiles%\Skyline Communications\DataMiner UserDefinableApiEndpoint\appsettings.json`
 
 > [!IMPORTANT]
-> If you want to make changes to the configuration, create an *appsettings.custom.json* file within the same folder. This will prevent your settings from being overwritten by an upgrade. Changing the settings in *appsettings.json* will work, but these will be overridden during a DataMiner upgrade.
+> If you want to make changes to the configuration, create an *appsettings.custom.json* file within the same folder. This will prevent your settings from being overwritten by an upgrade. Changing the settings in *appsettings.json* will work, but these will be overwritten during a DataMiner upgrade.
 
 In this file, add the setting or settings that you want to override, with your custom value. The following main blocks of settings are available:
 
