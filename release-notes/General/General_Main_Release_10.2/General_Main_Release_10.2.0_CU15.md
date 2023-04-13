@@ -110,3 +110,11 @@ From now on, when no `<DB>` element is specified for a Elasticsearch database, *
 <!-- MR 10.2.0 [CU15]/10.3.0 [CU3] - FR 10.3.6 -->
 
 When you added a filtered history tab that had to show active alarms, masked alarms and information events, no information events would be shown.
+
+#### Dashboards app & Low-code apps: Popup panel showing a PDF preview would incorrectly have a scroll bar [ID_36131]
+
+<!-- MR 10.2.0 [CU15]/10.3.0 [CU3] - FR 10.3.6 -->
+
+In some cases, the popup panel showing the PDF preview of a dashboard would incorrectly have a scroll bar.
+
+From now on, a popup panel showing a PDF preview will take the full screen height and will only allow its contents to scroll.

@@ -137,6 +137,14 @@ An error could occur when you opened a shared dashboard that contained a *Parame
 
 When, while editing a dashboard, you opened the *ELEMENTS* section in the *DATA* tab, and entered an element name containing special characters in the search box, the result set would always be empty, even if elements with that name existed.
 
+#### Dashboards app & Low-code apps: Popup panel showing a PDF preview would incorrectly have a scroll bar [ID_36131]
+
+<!-- MR 10.2.0 [CU15]/10.3.0 [CU3] - FR 10.3.6 -->
+
+In some cases, the popup panel showing the PDF preview of a dashboard would incorrectly have a scroll bar.
+
+From now on, a popup panel showing a PDF preview will take the full screen height and will only allow its contents to scroll.
+
 #### Dashboards app & Low-code apps: Incorrect error could appear when editing a dashboard or low-code app [ID_36132]
 
 <!-- MR 10.4.0 - FR 10.3.6 -->
