@@ -38,7 +38,7 @@ This error will also be added to the *SLWatchDog2.txt* log file.
 
 > [!NOTE]
 >
-> - This run-time error will appear when a custom booking event script that was configured to run synchronously has been running for more than 15 minutes. We highly recommend configuring custom events to run asynchronously. In the standard SRM Framework solution, you can [configure custom booking events](xref:Service_Orchestration_custom_events). In other SRM solutions, you can add booking events to the *ReservationInstance* object.
+> - This run-time error will appear when a custom booking event script that was configured to run synchronously has been running for more than 15 minutes. We highly recommend configuring custom booking events to run asynchronously. For more information, see [Service Orchestration custom events configuration](xref:Service_Orchestration_custom_events).
 > - Half-open run-time errors (which are thrown after an SRM event has been stuck for more than 7.5 minutes) will also be added to the *SLWatchDog2.txt* log file.
 
 #### SLAnalytics: Trend data predictions displayed in trend graphs will be more accurate [ID_36038]
