@@ -28,6 +28,12 @@ uid: Web_apps_Feature_Release_10.3.6
 
 From now on, legacy reports and dashboards will no longer be prefetched if the soft-launch option *LegacyReportsAndDashboards* is set to false.
 
+#### DataMiner web apps: Angular and other dependencies have been upgraded [ID_36100]
+
+<!-- MR 10.4.0 - FR 10.3.6 -->
+
+In all web apps (e.g. Low-code apps, Dashboards, Monitoring, Jobs, Ticketing, etc.), Angular and other dependencies have been upgraded.
+
 ### Fixes
 
 #### Interactive Automation scripts: Problems with datetime component [ID_35682]

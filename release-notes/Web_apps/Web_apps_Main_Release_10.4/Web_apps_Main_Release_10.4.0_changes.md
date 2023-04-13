@@ -196,6 +196,12 @@ The way in which components are linked to feeds has been improved. Instead of us
 
 From now on, legacy reports and dashboards will no longer be prefetched if the soft-launch option *LegacyReportsAndDashboards* is set to false.
 
+#### DataMiner web apps: Angular and other dependencies have been upgraded [ID_36100]
+
+<!-- MR 10.4.0 - FR 10.3.6 -->
+
+In all web apps (e.g. Low-code apps, Dashboards, Monitoring, Jobs, Ticketing, etc.), Angular and other dependencies have been upgraded.
+
 ### Fixes
 
 #### Web apps: Problem with external authentication [ID_33405]
