@@ -45,7 +45,7 @@ The extension module has a configuration file with some settings that are set to
 The default configuration file can be found in the following location: `%programfiles%\Skyline Communications\DataMiner UserDefinableApiEndpoint\appsettings.json`
 
 > [!IMPORTANT]
-> If you want to make changes to the configuration, create an *appsettings.custom.json* file within the same folder. This will prevent your settings from being overwritten by an upgrade. Changing the settings in *appsettings.json* will work, but these will be overridden during an upgrade.
+> If you want to make changes to the configuration, create an *appsettings.custom.json* file within the same folder. This will prevent your settings from being overwritten by an upgrade. Changing the settings in *appsettings.json* will work, but these will be overridden during a DataMiner upgrade.
 
 In this file, add the setting or settings that you want to override, with your custom value. The following main blocks of settings are available:
 
@@ -86,7 +86,8 @@ For example, this is the default configuration:
 ```
 
 > [!IMPORTANT]
-> IIS also has a rewrite rule (Reroute User Definable APIs) that forwards API requests to the port used by *UserDefinableApiEndpoint* (5002). **When you specify a custom port in *appsettings.custom.json*, you will also have to update this rule**:
+> IIS also has a rewrite rule (Reroute User Definable APIs) that forwards API requests to the port used by *UserDefinableApiEndpoint* (5002). **When you specify a custom port in *appsettings.custom.json*, you will also have to update this rule.**
+You can update the rewrite rule by following these steps:
 
 1. Open `Internet Information Services (IIS) Manager`.
 
@@ -157,10 +158,10 @@ This section contains options specific to the DataMiner User-Definable APIs modu
 
 - **CredentialsConfigPath**: *Optional.* The path to the credentials used to connect to DataMiner over NATS. This will point to the default DataMiner credentials file when not filled in.
 
-- **MessageBrokerTimeOutSeconds**: The time the message broker sending the NATS trigger to SLNet will wait for a response before it times out. By default, this is set to 90 seconds (i.e. 1.5 minutes).
+- **MessageBrokerTimeOutSeconds**: The time the message broker (sending the NATS trigger to SLNet) will wait for a response before it times out. By default, this is set to 90 seconds (i.e. 1.5 minutes).
 
    > [!WARNING]
-   > When changing the **MessageBrokerTimeOutSeconds** to a value higher than 2 minutes (120 seconds). You will also need to increase the time-out set in IIS, see [changing the time-out](#changing-the-time-out).
+   > When changing the **MessageBrokerTimeOutSeconds** to a value higher than 2 minutes (120 seconds), you will also need to increase the time-out set in IIS, see [changing the time-out](#changing-the-time-out).
 
 For example, this is the default configuration:
 
@@ -186,7 +187,7 @@ You can change the time-out in IIS with following steps:
 
 1. Open `Internet Information Services (IIS) Manager`.
 
-1. In the *Connections* pane on the left, select the top icon with the server name and click *Application Request Routing*.
+1. In the *Connections* pane on the left, select the top icon with the server name and click *Application Request Routing Cache*.
 
    ![IIS time-out 1](~/user-guide/images/UDAPIS_TimeOut1.jpg)
 
