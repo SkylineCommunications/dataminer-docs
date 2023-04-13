@@ -353,13 +353,16 @@ When you start a DataMiner upgrade, the `ValidateConnectors` prerequisite will n
 
 When you install or upgrade a DataMiner Agent, the following DataMiner Extension Modules (DxMs) will now automatically be installed (if not present yet):
 
-- DataMiner ArtifactDeployer
-- DataMiner CloudFeed
-- DataMiner CloudGateway
-- DataMiner CoreGateway
-- DataMiner FieldControl
-- DataMiner Orchestrator
-- DataMiner SupportAssistant
+- DataMiner ArtifactDeployer (version 1.4.3)
+- DataMiner CloudFeed (version 1.0.8)
+- DataMiner CloudGateway (version 2.10.4)
+- DataMiner CoreGateway (version 2.12.1)
+- DataMiner FieldControl (version 2.8.2)
+- DataMiner Orchestrator (version 1.2.6)
+- DataMiner SupportAssistant (version 1.3.0)
+
+> [!NOTE]
+> For detailed information on the changes included in the different versions of these DxMs, refer to the [dataminer.services change log](xref:DCP_change_log).
 
 ### Correlation
 
