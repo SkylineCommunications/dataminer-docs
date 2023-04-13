@@ -19,7 +19,19 @@ uid: General_Feature_Release_10.3.6
 
 ## Other features
 
-*No other features have been added to this release yet.*
+#### DataMiner installation/upgrade: Automatic installation of DataMiner Extension Modules [ID_36085]
+
+<!-- MR 10.4.0 - FR 10.3.6 -->
+
+When you install or upgrade a DataMiner Agent, the following DataMiner Extension Modules (DxMs) will now automatically be installed (if not present yet):
+
+- DataMiner ArtifactDeployer
+- DataMiner CloudFeed
+- DataMiner CloudGateway
+- DataMiner CoreGateway
+- DataMiner FieldControl
+- DataMiner Orchestrator
+- DataMiner SupportAssistant
 
 ## Changes
 
