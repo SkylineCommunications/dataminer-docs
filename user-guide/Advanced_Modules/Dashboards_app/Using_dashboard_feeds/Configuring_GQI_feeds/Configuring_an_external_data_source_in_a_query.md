@@ -133,12 +133,10 @@ This object has the following properties:
 | Property | Type      | Required | Description           |
 | -------- | --------- | -------- | --------------------- |
 | Cells    | GQICell[] | Yes      | The cells of the row. |
-| Key      | String    | No       | The internal key of the row (introduced in DataMiner 10.3.5/10.4.0). This key must be unique (per data source) and cannot be null or empty. If you do not pass the key argument when creating a row, the row index will be used as key. |
+| Key      | String    | No       | The identifier of the row within its data source (introduced in DataMiner 10.3.5/10.4.0<!-- RN 35999 -->). This key must be unique (per data source) and cannot be null or empty. The same data should always have the same key. |
 
 > [!NOTE]
->
-> - When two rows are **joined**, the key of the joined row will be a concatenation of the left row key and the right row key, separated by a forward slash. In case of a left, right or outer join, when there is no match, either the left or right key will be an empty string. In keys of joined rows, a backslash will be added in front of any forward slashes or backward slashes.
-> - When no grouping is involved, the single row resulting from an **aggregation** operation will have a static row key equal to "0". When grouping is involved, the single row resulting from an aggregation operation will have a key that is the concatenation of all the group values, separated by forward slashes. In order to avoid duplicate group keys when there is only a single grouping operation, any empty values will be replaced by a single forward slash. Also, a backslash will be added in front of any slashes in the group values.
+> From DataMiner 10.3.5/10.4.0 onwards<!-- RN 35999 -->, a row key based on the row index will automatically be assigned when the row appears in a query result. Since this row key depends on the number of rows that came before it, it will not be available in the ad hoc data source. The value of the *Key* property will be `null`.
 
 ### GQICell
 
