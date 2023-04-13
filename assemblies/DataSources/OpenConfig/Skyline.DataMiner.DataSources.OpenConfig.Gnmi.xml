@@ -442,7 +442,7 @@
             <summary>
             Processes the update and changes the necessary values.
             </summary>
-            <param name="pathElems">A collection with all path elements.</param>
+            <param name="pathElems">A collection of all path elements.</param>
             <param name="updateValue">Value that needs to be changed.</param>
             <param name="timestampUtc">UTC time when the value was taken.</param>
             <param name="origin">Indication of where the data originated from.</param>

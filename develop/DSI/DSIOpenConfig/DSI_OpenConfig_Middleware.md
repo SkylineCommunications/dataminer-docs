@@ -320,7 +320,7 @@ IDataMapper dataMapper = new DataMinerConnectorDataMapper(
     });
 ```
 
-In above configured example, the DataMapper will automatically parse the gNMI notifications that come in and will check if it contains data for either the *system/memory/state/physical* or the *system/memory/state/reserved* YANG path. It will then automatically do the set on the configured parameters with the value that the gNMI notification contains. You need to pass it the `SLProtocol` object so it can execute those sets.
+With the example above, the DataMapper will automatically parse the gNMI notifications that come in and check if these contain data for either the *system/memory/state/physical* or the *system/memory/state/reserved* YANG path. It will then automatically do the set on the configured parameters with the value that the gNMI notification contains. You need to pass the `SLProtocol` object to it so it can execute those sets.
 
 It works perfectly for DataMiner tables as well, but the configuration is slightly different.
 
