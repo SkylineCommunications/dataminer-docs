@@ -22,6 +22,8 @@ If you opened a protocol XML file, click *Validate* to check for errors that can
 
 Since DIS v.2.13, a next-generation Validator runs side by side with the legacy Validator, which will be retired at a later stage. The next-generation Validator is extremely modular in design and allows for easy creation of a wide range of code checks and unit tests.
 
+As of DIS v2.41, when you open a main DVE protocol and click *Validate*, DIS will not only validate the main protocol but also all its exported child DVE protocols.
+
 After having validated a protocol, you can ask DIS to automatically fix a number of common errors: replace all invalid characters in a parameter name with an underscore, trimming tag contents, etc. In the *DIS Validator* pane, all errors that can be fixed automatically will be marked by a “wrench and screwdriver” icon.
 
 - To fix an error marked by a “wrench and screwdriver” icon, right-click the error, and select *Fix \> This error*. If the error has successfully been fixed, it will be removed from the *DIS Validator* pane.
