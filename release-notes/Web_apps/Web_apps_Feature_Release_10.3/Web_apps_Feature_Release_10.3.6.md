@@ -22,7 +22,7 @@ uid: Web_apps_Feature_Release_10.3.6
 
 The *Table* and *State* components now have a new *Initial selection* setting.
 
-When you enable this setting, the first entry will automatically be selected when the dashboard or app is opened or refreshed.
+When you enable this setting, the first entry of the GQI result set will automatically be selected when the dashboard or app is opened or refreshed.
 
 > [!NOTE]
 > This new setting has also been added to the *Grid* component, which is only available if you activate the *ReportsAndDashboardsDynamicVisuals* soft-launch option.
