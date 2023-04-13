@@ -134,4 +134,4 @@ When an element was deleted, no flatline stop events would be generated for para
 
 <!-- MR 10.4.0 - FR 10.3.6 -->
 
-When a DomInstance was created with an empty status, a `MultipleSectionsNotAllowedForSectionDefinition` error would be returned, even when the configuration was correct.
+When a DomInstance was created with an empty status, in some cases, a `MultipleSectionsNotAllowedForSectionDefinition` error could be returned, even when the configuration was correct.
