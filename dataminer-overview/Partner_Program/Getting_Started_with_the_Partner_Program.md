@@ -13,5 +13,3 @@ These guidelines include the following sections:
 - [Service delivery](xref:Service_Delivery)
 
 - [Partnership governance](xref:Partnership_Governance)
-
-- [Deal Registration](xref:Deal_Registration)

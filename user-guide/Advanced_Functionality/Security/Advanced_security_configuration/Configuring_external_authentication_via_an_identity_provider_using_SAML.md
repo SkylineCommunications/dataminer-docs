@@ -39,11 +39,15 @@ Once this has been configured, if users try to log in to the DMA using external 
 
 > [!NOTE]
 >
-> - From DataMiner 10.2.0/10.1.4 onwards, Cube uses the Chromium web browser engine to handle SAML external authentication. That engine supports a wider range of identity providers than the Internet Explorer engine that was used previously.
-> - When external authentication is enabled, it is no longer possible to log in with local accounts, except the local Administrator account.
-> - DataMiner will expect one of the claims provided by the identity provider to be the "name" claim: ``http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name``. This field must contain either the username or the email address.
-> - Prior to DataMiner 10.1.11/10.2.0, only the Administrator user can bypass the external authentication provider by entering an explicit username/password combination. In later DataMiner versions, this is also allowed for any local DataMiner user account.
-> - If there are two DataMiner users who share the same email address, both users will not be able to log in. To prevent this from happening, it is recommended to avoid using more than one method to add users. For example, do not add Windows domain users if the Azure AD users use the same email address.
+> - From DataMiner 10.2.0/10.1.4 onwards, Cube uses the **Chromium** web browser engine to handle SAML external authentication. That engine supports a wider range of identity providers than the Internet Explorer engine that was used previously.
+> - DataMiner **10.3.5** or higher is required to use external authentication for DataMiner **Low-Code Apps**.
+> - DataMiner will expect one of the claims provided by the identity provider to be the **"name" claim**: ``http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name``. This field must contain either the username or the email address.
+> - Any DataMiner Agent configured for SAML external authentication should be accessible via [**HTTPS**](xref:Setting_up_HTTPS_on_a_DMA).
+> - For **DataMiner Cube**, prior to DataMiner 10.1.11/10.2.0, only the Administrator user can bypass the external authentication provider by entering an explicit username/password combination. In later DataMiner versions, this is also allowed for any local DataMiner user account.
+> - For the **Web apps**, when external authentication is enabled, it is no longer possible to log in with local accounts. As a workaround, since you do not need to configure external authentication on every DMA of the cluster, you can log in to the web apps using external authentication on one DMA and log in using a local account on another DMA.
+
+> [!CAUTION]
+> If there are two DataMiner users who share the same email address, both users will not be able to log in. To prevent this from happening, we recommended not using more than one method to add users. For example, do not add Windows domain users if the Azure AD users use the same email address.
 
 > [!TIP]
 > See also: [Authenticating Azure AD Users on DataMiner with SAML](https://community.dataminer.services/video/authenticating-azure-ad-users-on-dataminer-with-saml/) in the Dojo video library
@@ -54,18 +58,30 @@ To create a DataMiner metadata file (also referred to as *Service Provider Metad
 
 1. Copy the following template into a new XML file named e.g. *spMetadata.xml*:
 
+   From DataMiner 10.3.5 onwards:
+
+   ```xml
+   <?xml version="1.0" encoding="UTF-8"?>
+   <md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" entityID="[ENTITYID]" validUntil="2050-01-04T10:00:00.000Z">
+     <md:SPSSODescriptor AuthnRequestsSigned="false" WantAssertionsSigned="true" protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+       <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://dataminer.example.com/API/" index="0" isDefault="true"/>
+     </md:SPSSODescriptor>
+   </md:EntityDescriptor>
+   ```
+
+   Older DataMiner versions:
+
    ```xml
    <?xml version="1.0" encoding="UTF-8"?>
    <md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" entityID="[ENTITYID]" validUntil="2050-01-04T10:00:00.000Z">
      <md:SPSSODescriptor AuthnRequestsSigned="false" WantAssertionsSigned="true" protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
        <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://dataminer.example.com/" index="0" isDefault="true"/>
-       <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://dataminer.example.com/login/" index="1" isDefault="false"/>
+       <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://dataminer.example.com/API/" index="1" isDefault="false"/>
        <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://dataminer.example.com/root/" index="2" isDefault="false"/>
        <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://dataminer.example.com/dashboard/" index="3" isDefault="false"/>
        <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://dataminer.example.com/monitoring/" index="4" isDefault="false"/>
        <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://dataminer.example.com/jobs/" index="5" isDefault="false"/>
        <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://dataminer.example.com/ticketing/" index="6" isDefault="false"/>
-       <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="[FOR EVERY CUSTOM APP URL, ADD AN ASSERTION LIKE THE ONES ABOVE WITH AN INCREMENTED INDEX. IF YOU DO NOT HAVE CUSTOM APPS, REMOVE THIS EXAMPLE.]" index="7" isDefault="false"/>
      </md:SPSSODescriptor>
    </md:EntityDescriptor>
    ```
@@ -121,14 +137,20 @@ As from DataMiner 10.2.0/10.2.1, it is recommended to create Enterprise Applicat
 
    - Set *Entity ID* to the IP address or DNS name specified in the *spMetadata.xml* file, for example ``https://dataminer.example.com/``.
 
-   - Under *Reply URL*, specify the following URLs, replacing ``dataminer.example.com`` with the IP address or DNS name in the *spMetadata.xml* file (note the trailing "/"):
+   - Under *Reply URL*, specify the following URL(s), replacing ``dataminer.example.com`` with the IP address or DNS name in the *spMetadata.xml* file (note the trailing "/"):
+
+     From DataMiner 10.3.5 onwards:
+
+     - ``https://dataminer.example.com/API/``
+
+     Older DataMiner versions:
 
      - ``https://dataminer.example.com/root/``
      - ``https://dataminer.example.com/ticketing/``
      - ``https://dataminer.example.com/jobs/``
      - ``https://dataminer.example.com/monitoring/``
      - ``https://dataminer.example.com/dashboard/``
-     - ``https://dataminer.example.com/login/``
+     - ``https://dataminer.example.com/API/``
      - ``https://dataminer.example.com/``
 
    - Set *Sign on URL* to the IP address or DNS name specified in the *spMetadata.xml* file, for example ``https://dataminer.example.com/``.
@@ -317,8 +339,12 @@ DataMiner supports Okta as identity provider as from version 10.1.11. Use Okta's
 
      - Open *Show Advanced Settings* and enter the following additional URLs to *Other Requestable SSO URLs*:
 
+       From DataMiner 10.3.5 onwards:
+       - ``https://dataminer.example.com/API/``
+
+       Older DataMiner versions:
        - ``https://dataminer.example.com/root/``
-       - ``https://dataminer.example.com/login/``
+       - ``https://dataminer.example.com/API/``
        - ``https://dataminer.example.com/dashboard/``
        - ``https://dataminer.example.com/monitoring/``
        - ``https://dataminer.example.com/jobs/``
@@ -355,7 +381,7 @@ DataMiner supports Okta as identity provider as from version 10.1.11. Use Okta's
       > [!Note]
       >
       > - The name fields can be anything you want, but we recommend giving them a name that clearly reflects the claim they refer to. All of these are case-sensitive.
-      > - Make sure that what you put under "name" for each claim matches exactly with the claim names in *DataMiner.xml*.     
+      > - Make sure that what you put under "name" for each claim matches exactly with the claim names in *DataMiner.xml*.
 
 1. Stop DataMiner.
 
@@ -401,17 +427,29 @@ DataMiner supports Okta as identity provider as from version 10.1.11. Use Okta's
 
 1. Copy the following template to a new XML file named e.g. `C:\Skyline DataMiner\okta-sp-metadata.xml` to create the service provider’s metadata file. You can find the EntityID in the previously created file `C:\Skyline DataMiner\okta-ip-metadata.xml`.
 
+   From DataMiner 10.3.5 onwards:
+
    ```xml
    <?xml version="1.0" encoding="UTF-8"?>
    <md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" entityID="[ENTITYID]" validUntil="2050-01-04T10:00:00.000Z">
      <md:SPSSODescriptor AuthnRequestsSigned="false" WantAssertionsSigned="true" protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
-       <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://dataminer.example.com/login/" index="0" isDefault="false"/>
+       <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://dataminer.example.com/API/" index="0" isDefault="false"/>
+     </md:SPSSODescriptor>
+   </md:EntityDescriptor>
+   ```
+
+   Older DataMiner versions:
+
+   ```xml
+   <?xml version="1.0" encoding="UTF-8"?>
+   <md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" entityID="[ENTITYID]" validUntil="2050-01-04T10:00:00.000Z">
+     <md:SPSSODescriptor AuthnRequestsSigned="false" WantAssertionsSigned="true" protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+       <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://dataminer.example.com/API/" index="0" isDefault="false"/>
        <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://dataminer.example.com/root/" index="1" isDefault="false"/>
        <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://dataminer.example.com/dashboard/" index="2" isDefault="false"/>
        <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://dataminer.example.com/monitoring/" index="3" isDefault="false"/>
        <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://dataminer.example.com/jobs/" index="4" isDefault="false"/>
        <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://dataminer.example.com/ticketing/" index="5" isDefault="false"/>
-       <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="[For every custom app URL, add an assertion like the ones above with an incremented index. If you do not have custom apps, remove this example.]" index="6" isDefault="false"/>
      </md:SPSSODescriptor>
    </md:EntityDescriptor>
    ```
