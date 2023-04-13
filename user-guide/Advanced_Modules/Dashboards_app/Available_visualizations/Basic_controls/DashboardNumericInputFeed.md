@@ -16,7 +16,7 @@ The following options are available to fine-tune the component layout:
 
 In the *Settings* tab, you can also configure the following optional settings:
 
-- *Feed value on*: Determines when the value in the box becomes available as a feed. This can be when the user presses Enter ("Enter"), when the focus is no longer on the box ("Focus lost"), or when the value in the box changes ("value change"). If you select *Focus lost*, the value will also become available when the user presses Enter.
+- *Feed value on*: Determines when the value in the box becomes available as a feed. This can be when the user presses Enter ("Enter"), when the focus is no longer on the box ("Focus lost"), or when the value in the box changes ("Value change"). If you select *Focus lost*, the value will also become available when the user presses Enter.
 
 - *Step size*: The value the user specifies will need to be a multiple of the value specified with this option. For example, if the step size is 3, the user can enter 3, 6, 9, etc. but not 2 or 5.
 
