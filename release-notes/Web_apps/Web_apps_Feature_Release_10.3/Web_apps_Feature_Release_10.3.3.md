@@ -131,6 +131,12 @@ From now on, a chart component will display an error when the GQI query that ret
 
 The GQI data sources *Get elements* and *Get services* will now also return alarm states.
 
+#### Support for GQI queries from Data Aggregator with ad hoc data sources [ID_35526]
+
+<!-- MR 10.4.0 - FR 10.3.3 -->
+
+GQI now supports queries from [Data Aggregator](xref:Data_Aggregator_DxM) that use ad hoc data sources.
+
 #### Enhanced performance when opening a web app [ID_35549]
 
 <!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
@@ -153,9 +159,9 @@ When two queries using an external data source with a custom argument of which t
 
 #### Dashboards app: Problem when trying to open a shared dashboard [ID_35271]
 
-<!-- MR 10.4.0 - FR 10.3.3 -->
+<!-- MR 10.3.0 [CU3] - FR 10.3.3 -->
 
-When users tried to open a shared dashboard, in some cases, they would unexpectedly be presented with a login screen due to a permission issue.
+When users tried to open a shared dashboard, in some cases, they would unexpectedly be presented with a login screen because of a permission issue.
 
 Workaround: Recreate the faulty shared dashboard.
 

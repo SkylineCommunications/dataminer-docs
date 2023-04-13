@@ -8,7 +8,7 @@ uid: Cube_Feature_Release_10.3.5
 > We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
 
 > [!TIP]
-> For release notes for this release that are not related to DataMiner Cube, see [General Feature Release 10.3.4](xref:General_Feature_Release_10.3.5).
+> For release notes for this release that are not related to DataMiner Cube, see [General Feature Release 10.3.5](xref:General_Feature_Release_10.3.5).
 
 ## Highlights
 
@@ -32,12 +32,6 @@ Alternatively, you can also open the quick menu in the Cube header, and toggle t
 
 ### Enhancements
 
-#### Cube will now by default connect using gRPC when connecting to a cloud-connected DataMiner Agent with a remote access URL [ID_35779]
-
-<!-- MR 10.3.0 [CU2] - FR 10.3.5 -->
-
-When you connect to a cloud-connected DataMiner Agent with a remote access URL ending in `*.dataminer.services`, Cube will now by default connect using gRPC.
-
 #### No longer possible to create pattern matching tags that include predicted trend information [ID_35861]
 
 <!-- MR 10.3.0 [CU2] - FR 10.3.5 -->
@@ -45,6 +39,12 @@ When you connect to a cloud-connected DataMiner Agent with a remote access URL e
 When viewing a trend graph with a trend prediction (i.e. predicted trend information beyond the "Now" line), it will no longer be possible to create pattern matching tags that include predicted trend data.
 
 In other words, when you select a section of a trend graph that is either partly or entirely past the "Now" line, you will not be able to save the tag.
+
+#### Alarm templates: 'Condition (Monitoring disabled if condition is true)' column renamed to 'Condition (Parameter excluded if condition is true)' [ID_36007]
+
+<!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
+
+When you were editing an alarm template, one of the many columns on the screen was named `Condition (Monitoring disabled if condition is true)`. This column has now been renamed to `Condition (Parameter excluded if condition is true)`.
 
 ### Fixes
 
@@ -91,6 +91,12 @@ When, in a shape data field of type *ParameterControlOptions*, you had specified
 An error could occur when you tried to open a spectrum element of which the username was set to NULL.
 
 Also, an exception could be thrown when you tried to copy spectrum settings to the Windows clipboard.
+
+#### Alarm Console: Suggestion event would not be removed from the suggestion events tab after being promoted to alarm event [ID_35949]
+
+<!-- MR 10.4.0 - FR 10.3.5 -->
+
+When, in an alarm template, a suggestion event was promoted to an alarm event, it would correctly appear in the active alarms tab but it would incorrectly not be removed from the suggestion events tab.
 
 #### DataMiner Cube - Surveyor: Dragging multiple items from a view card onto a view in the Surveyor did not work as expected [ID_35955]
 
