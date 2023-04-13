@@ -170,7 +170,7 @@
         </member>
         <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol.DataMapper.DataMinerConnectorDataGrid.DeleteRow(System.String,System.DateTime)">
             <summary>
-            Deletes the row when the timestamp is most recent.
+            Deletes the row if <paramref name="timestampUtc"/> is more recent than the last received one.
             </summary>
             <param name="primaryKey">Primary key of the row to be deleted.</param>
             <param name="timestampUtc">Timestamp when the row was deleted.</param>
