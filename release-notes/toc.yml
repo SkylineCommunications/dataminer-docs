@@ -430,6 +430,8 @@
           topicUid: Cube_Main_Release_10.3.0_CU1
         - name: DataMiner Cube Main Release 10.3.0 CU2 - Preview
           topicUid: Cube_Main_Release_10.3.0_CU2
+        - name: DataMiner Cube Main Release 10.3.0 CU3 - Preview
+          topicUid: Cube_Main_Release_10.3.0_CU3
       - name: Feature Release
         topicUid: Cube_Feature_Release_10.3.6
         items:
@@ -547,8 +549,10 @@
       - name: Class Library Range 1.0
         topicUid: ClassLibrary_Range_1.0
     - name: DIS release notes
-      topicUid: DIS_2.40
+      topicUid: DIS_2.41
       items:
+      - name: DIS 2.41
+        topicUid: DIS_2.41
       - name: DIS 2.40
         topicUid: DIS_2.40
       - name: DIS 2.39

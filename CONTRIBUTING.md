@@ -119,7 +119,7 @@ For larger contributions, e.g. to add several new pages, we recommend that you i
   > [!NOTE]
   >
   > - While it is also possible to use the tools below without Git, some features in Visual Studio Code, such as branch and repository information, will not be available.
-  > - If you install Git, it is important that you do so **before you install GitHub Desktop**, as otherwise you may experience [issues](#github-desktop-keeps-basing-branches-on-an-outdated-version-of-main).
+  > - If you install Git, it is important that you do so **before you install GitHub Desktop**, as otherwise you may experience [issues](#github-desktop-keeps-basing-branches-on-an-outdated-version-of-the-main-branch).
 
 - [GitHub Desktop](https://desktop.github.com/)
 
@@ -882,7 +882,7 @@ The only time when "the user" is appropriate is when whoever you are writing for
 
 ![Unsaved changes](~/images/Unsaved_Changes.png)
 
-### GitHub Desktop keeps basing branches on an outdated version of ‘main’
+### GitHub Desktop keeps basing branches on an outdated version of the main branch
 
 **Symptom**: Newly created branches indicate that they were created a longer time ago.
 
@@ -919,6 +919,18 @@ fatal: empty ident name (for <>) not allowed
 1. In the *Git config* tab, select *Use my global Git config* and click *Save*.
 
    ![Git config](~/images/Git_config.png)
+
+### The template does not load correctly in the test build
+
+**Symptom**: When you view your test build, it is not displayed correctly. Among others, no search box is available in the top-right corner.
+
+**Resolution**: Install [the latest version of DocFX](#installing-and-configuring-docfx).
+
+> [!TIP]
+> You can use the command `docfx help` to check which version is installed.
+
+> [!NOTE]
+> If you have upgraded DocFX, but this upgrade does not seem to have taken effect, check whether you have a path parameter configured that leads to an older version. Go to *Edit the system environment variables* > *Advanced* > *Environment Variables*, select the *Path* parameter, if available, and click *Edit*. If an entry is listed that goes to a DocFX folder containing an old version of DocFX, delete that entry.
 
 ## References
 

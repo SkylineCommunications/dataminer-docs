@@ -18,9 +18,13 @@ The following packages are available:
 - Skyline.DataMiner.Dev.Protocol
 - Skyline.DataMiner.Dev.Common
 
-There are also several dependency packages, each containing a single assembly from the "Skyline DataMiner/Files" folder of the DMA. These are not intended to be installed individually.
+There are also several dependency packages, each containing a single assembly from the "Skyline DataMiner/Files" folder of the DMA. Most of these are not intended to be installed individually:
 
 - Skyline.DataMiner.Files.*
+
+For development requiring IMediator or unit conversion, for example to work with SRM profile parameters, you need to install the following package:
+
+- Skyline.DataMiner.Files.SLMediationSnippets
 
 ### About DataMiner
 

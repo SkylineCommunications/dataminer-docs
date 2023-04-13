@@ -130,6 +130,12 @@ From now on, when SLNet receives an error from the web API after sending a *GetC
 
 The GQI data sources *Get elements* and *Get services* will now also return alarm states.
 
+#### Support for GQI queries from Data Aggregator with ad hoc data sources [ID_35526]
+
+<!-- MR 10.4.0 - FR 10.3.3 -->
+
+GQI now supports queries from [Data Aggregator](xref:Data_Aggregator_DxM) that use ad hoc data sources.
+
 #### GQI: 'State' column in data sources 'Get services' and 'Get views' renamed to 'Alarm state' [ID_35557]
 
 <!-- MR 10.4.0 - FR 10.3.3 -->
@@ -141,6 +147,15 @@ In the GQI data sources *Get services* and *Get views*, the *State* column has n
 <!-- MR 10.4.0 - FR 10.3.4 -->
 
 When an EPM feed is used to feed EPM identifiers to a parameter feed, it will now also list the parameters of the enhanced elements that are linked to the EPM objects.
+
+#### GQI: Raw datetime values will now be converted to UTC [ID_35640]
+
+<!-- MR 10.4.0 - FR 10.3.4 -->
+
+Up to now, after each step in a GQI query, raw datetime values were always converted to the time zone that was specified in the query options. From now on, raw datetime values will be converted to UTC instead. The time zone specified in the query options will now only be used when converting a raw datetime value to a display value.
+
+> [!IMPORTANT]
+> **BREAKING CHANGE**: When, in an ad hoc data source or a query operation, a datetime value is not in UTC format, an exception will now be thrown.
 
 #### Monitoring app: Trending page of a parameter no longer has a sidebar [ID_35705]
 
@@ -174,6 +189,12 @@ The way in which components are linked to feeds has been improved. Instead of us
 
 > [!CAUTION]
 > BREAKING CHANGE: Up to now, when you linked a script parameter to the *From* or *Till* box of a time range feed, the feed would pass a datetime value in string format to the script. That string value was not in an ISO format and did not contain any information about the time zone. From now on, the feed will send a UTC timestamp in milliseconds instead. Scripts that expect to receive a string value will need to be modified.
+
+#### Legacy reports and dashboards will no longer be prefetched if the soft-launch option 'LegacyReportsAndDashboards' is set to false [ID_35881]
+
+<!-- MR 10.4.0 - FR 10.3.6 -->
+
+From now on, legacy reports and dashboards will no longer be prefetched if the soft-launch option *LegacyReportsAndDashboards* is set to false.
 
 ### Fixes
 
@@ -259,6 +280,16 @@ When you opened a low-code app on a mobile device or when you resized the screen
 
 When data from one table was fed to another table, in some cases, the "loading" indicator of the table to which data was fed would incorrectly not disappear.
 
+#### GQI: GetArgumentValue method would throw an exception when used to access the value of an optional argument [ID_35783]
+
+<!-- MR 10.4.0 - FR 10.3.5 -->
+
+When the `GetArgumentValue<T>(string name)` method was used in an ad hoc data source or a custom operator script to access the value of an optional argument that had not been passed, the following exception would be thrown:
+
+```txt
+Could not find argument with name '{argument.Name}'.
+```
+
 #### Dashboards app & Low-code apps: Problem when feeding data from a GQI component to a query used in the same component [ID_35806]
 
 <!-- MR 10.4.0 - FR 10.3.5 -->
@@ -270,3 +301,31 @@ An error could occur when feeding data from a GQI component to a query that was 
 <!-- MR 10.4.0 - FR 10.3.5 -->
 
 When, in a table with a *Get parameter relations* query, you selected a relation between two standalone parameters, no element feed would be available.
+
+#### Dashboards app: Invalid nodes could get added to a GQI query [ID_36045]
+
+<!-- MR 10.4.0 - FR 10.3.6 -->
+
+In some cases, invalid nodes could get added to a GQI query, causing run-time errors to be thrown.
+
+#### Web apps: Problem with single sign-on when embedded in Cube [ID_36049]
+
+<!-- MR 10.4.0 - FR 10.3.6 -->
+
+When the *Dashboards*, *Jobs* or *Ticketing* app was embedded in DataMiner Cube, in some cases, users would incorrectly be prompted to log in to the app.
+
+#### Dashboards app & Low-code apps: GQI query nodes without options would incorrectly be expanded [ID_36064]
+
+<!-- MR 10.4.0 - FR 10.3.6 -->
+
+In some cases, GQI query nodes without options would incorrectly be expanded.
+
+#### Dashboards app & Low-code apps: Incorrect error could appear when editing a dashboard or low-code app [ID_36132]
+
+<!-- MR 10.4.0 - FR 10.3.6 -->
+
+When editing a dashboard or a low-code app, in some cases, the following error could incorrectly appear:
+
+```txt
+The dashboard has not been saved: Invalid revision sequence, the dashboard might have been edited by another user.
+```
