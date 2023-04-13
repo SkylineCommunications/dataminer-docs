@@ -22,5 +22,5 @@ To configure the component:
 
    - *Initial Selection*: Allows you to specify a default value. This is the value that will be applied in the feed when the dashboard is opened, unless a custom URL is used specifying a different value.
 
-  > [!NOTE]
-  > Up to DataMiner 10.3.6.0, this setting is called *Feed Defaults*.
+     > [!NOTE]
+     > Prior to DataMiner 10.3.6/10.4.0<!--  RN 35984 -->, this setting is called *Feed Defaults* instead.

@@ -27,11 +27,10 @@ To configure this component:
 
    - *Initial Selection*: Allows you to specify a default value. This is the value that will be applied in the feed when the dashboard is opened, unless a custom URL is used specifying a different value.
 
-    > [!NOTE]
-    > Up to DataMiner 10.3.6.0, this setting is called *Feed Defaults*.
-
      > [!NOTE]
-     > From DataMiner 10.2.12/10.3.0 onwards, parameter feeds that list EPM parameters also allow the configuration of default filters that will preselect certain parameters in the parameter feed.
+     >
+     > - Prior to DataMiner 10.3.6/10.4.0<!--  RN 35984 -->, this setting is called *Feed Defaults* instead.
+     > - From DataMiner 10.2.12/10.3.0 onwards, parameter feeds that list EPM parameters also allow the configuration of default filters that will preselect certain parameters in the parameter feed.
 
    - *Auto-select number of indices*: Available up to DataMiner 10.0.12. To automatically include a specific number of indices when at least one element and one parameter have been selected in the component, specify the number in this box. If the number of indices specified is greater than the number of indices that are being displayed, the indices that are not shown will be selected in memory.
 
@@ -57,7 +56,7 @@ To configure this component:
      > [!NOTE]
      > From DataMiner 10.2.12/10.3.0 onwards, it is possible to group parameters in a parameter feed that lists EPM parameters.
 
-2. Optionally, fine-tune the component layout. In the *Component* > *Layout* tab, the following options are available:
+1. Optionally, fine-tune the component layout. In the *Component* > *Layout* tab, the following options are available:
 
    - The default options available for all components. See [Customizing the component layout](xref:Configuring_dashboard_components#customizing-the-component-layout).
 
