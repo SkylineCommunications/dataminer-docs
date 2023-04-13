@@ -93,7 +93,7 @@ These are possible reasons why the connection might be terminated:
 
 - Policy violation: The WebSocket connection is closed by the server because of a violation of security policies, such as a cross-site scripting attack or unauthorized access attempt.
 
-- Network error: The WebSocket connection is closed because of a network error, such as a dropped packet or a network partition. Note that if the TCP retranmission time exceeds the WebSocket timeout time, the WebSocket might be closed depending on the implementation, since there was no activity for a period greater than the configured WebSocket timeout time.
+- Network error: The WebSocket connection is closed because of a network error, such as a dropped packet or a network partition. Note that if the TCP retransmission time exceeds the WebSocket timeout time, depending on the implementation, the WebSocket might be closed, since there is no activity for a period greater than the configured WebSocket timeout time.
 
 > [!NOTE]
 > The timeout behavior of the element may vary depending on other connections configured on protocol level.
