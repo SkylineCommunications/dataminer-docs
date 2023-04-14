@@ -27,6 +27,10 @@ To configure the component:
 
    - In case the component displays more than one item, in the *Settings* tab, select how the items should be grouped: by parameter, by element, by table index (if relevant) or by all the above together. Note that view parameters can only be grouped together with other parameters with the option *All together*, otherwise they are placed in a separate group.
 
+   - In case the component displays a query source and you want the data to be refreshed automatically, Set *Update data* to *On* (available from DataMiner 10.2.0/10.2.1 onwards<!-- RN 31450 -->).
+
+   - If you want the first item in the component to be selected by default, in the *Settings* tab, under *Initial Selection*, set the toggle button to *On* (available from DataMiner 10.3.6/10.4.0 onwards<!-- RN 35984 -->). This way, the first item will be automatically selected whenever the component is loaded or when the data is refreshed.
+
 1. Fine-tune the component layout. In the *Component* > *Layout*, tab the following options are available:
 
    - The default options available for all components. See [Customizing the component layout](xref:Configuring_dashboard_components#customizing-the-component-layout).

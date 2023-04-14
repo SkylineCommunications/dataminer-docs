@@ -243,7 +243,7 @@ trapInfo (object[]):
     - binding[0] (string): Binding OID
     - binding[1] (string): Binding value
 
-Note that the TrapInfo class of the class library (see TrapInfo class) allows the creation of a TrapInfo object from the raw trap info object.
+Note that the [Skyline.DataMiner.Utils.SNMP.Traps.Protocol](https://www.nuget.org/packages/Skyline.DataMiner.Utils.SNMP.Traps.Protocol) NuGet package can be used to parse the trap: The TrapInfo class (see TrapInfo class) allows the creation of a TrapInfo object from the raw trap info object.
 
 ```csharp
 TrapInfo trap = TrapInfo.FromTrapData(trapInfo);

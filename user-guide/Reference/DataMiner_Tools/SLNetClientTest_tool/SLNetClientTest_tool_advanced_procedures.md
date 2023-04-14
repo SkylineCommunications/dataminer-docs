@@ -33,6 +33,7 @@ The procedures below can be applied to troubleshoot issues. However, be very car
 - [Managing scheduled tasks for maintenance of a Cassandra database](xref:SLNetClientTest_managing_scheduled_tasks_maintenance_Cassandra)
 - [Managing trend patterns](xref:SLNetClientTest_managing_trend_patterns)
 - [Modifying the engine ID of a DMA](xref:SLNetClientTest_modifying_engine_id)
+- [Removing a DOM manager](xref:SLNetClientTest_removing_DOM_Manager)
 - [Removing references to items that no longer exist](xref:SLNetClientTest_removing_references)
 - [Setting the TTL for database records](xref:SLNetClientTest_setting_TTL_database)
 - [Specifying credentials for a shared backup path for Elasticsearch](xref:SLNetClientTest_credentials_shared_backup_Elasticsearch)

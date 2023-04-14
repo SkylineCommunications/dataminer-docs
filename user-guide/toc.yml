@@ -15,34 +15,34 @@
               topicUid: Installing_configuring_the_DataMiner_Cube_software
               items:
               - name: Prerequisites
-                topicUID: Prerequisites_Cube
+                topicUid: Prerequisites_Cube
               - name: Installing the DataMiner Cube desktop application
-                topicUID: Installing_the_DataMiner_Cube_desktop_application
+                topicUid: Installing_the_DataMiner_Cube_desktop_application
               - name: Cleaning up the DataMiner Cube desktop app cache
-                topicUID: Cleaning_up_the_DataMiner_Cube_desktop_app_cache
+                topicUid: Cleaning_up_the_DataMiner_Cube_desktop_app_cache
               - name: Uninstalling the DataMiner Cube desktop application
-                topicUID: Uninstalling_the_DataMiner_Cube_desktop_application
+                topicUid: Uninstalling_the_DataMiner_Cube_desktop_application
               - name: Changing the default browser engine used in DataMiner Cube
-                topicUID: Changing_the_default_browser_engine_used_in_DataMiner_Cube
+                topicUid: Changing_the_default_browser_engine_used_in_DataMiner_Cube
               - name: Configuring Microsoft Edge to run DataMiner Cube
-                topicUID: Configuring_Microsoft_edge_to_run_Cube
+                topicUid: Configuring_Microsoft_edge_to_run_Cube
               - name: Installing the Skyline certificates
-                topicUID: Installing_the_Skyline_certificates
+                topicUid: Installing_the_Skyline_certificates
               - name: DataMiner Cube deployment methods
-                topicUID: DataMiner_Cube_deployment_methods
+                topicUid: DataMiner_Cube_deployment_methods
             - name: Opening DataMiner Cube
               topicUid: Opening_DataMiner_Cube
               items:
               - name: Opening the desktop application
-                topicUID: Opening_the_desktop_app
+                topicUid: Opening_the_desktop_app
               - name: Managing the start window of the desktop app
-                topicUID: Managing_the_start_window
+                topicUid: Managing_the_start_window
               - name: Opening the browser application
-                topicUID: Opening_the_browser_app
+                topicUid: Opening_the_browser_app
               - name: Arguments for DataMiner Cube
-                topicUID: Options_for_opening_DataMiner_Cube
+                topicUid: Options_for_opening_DataMiner_Cube
               - name: Desktop application command-line arguments
-                topicUID: Desktop_app_command_line_arguments
+                topicUid: Desktop_app_command_line_arguments
             - name: Logging on to DataMiner Cube
               topicUid: Logging_on_to_DataMiner_Cube
         - name: Accessing the Monitoring app
@@ -63,13 +63,13 @@
               topicUid: Main_Cube_UI_components_from_DataMiner_10_0_0_10_0_2_onwards
               items:
                 - name: DataMiner Cube header bar
-                  topicUID: DataMiner_Cube_header_bar
+                  topicUid: DataMiner_Cube_header_bar
                 - name: DataMiner Cube sidebar
-                  topicUID: DataMiner_Cube_sidebar
+                  topicUid: DataMiner_Cube_sidebar
                 - name: DataMiner Cube card pane
-                  topicUID: DataMiner_Cube_card_pane
+                  topicUid: DataMiner_Cube_card_pane
                 - name: DataMiner Cube Alarm Console
-                  topicUID: DataMiner_Cube_Alarm_Console
+                  topicUid: DataMiner_Cube_Alarm_Console
             - name: Main Cube UI components prior to DataMiner 10
               topicUid: Main_Cube_UI_components_prior_to_DataMiner_10
             - name: Working with cards in DataMiner Cube
@@ -101,20 +101,20 @@
               topicUid: Monitoring_app_card_pane
               items:
                 - name: View cards
-                  topicUID: View_Cards
+                  topicUid: View_Cards
                 - name: Service cards
-                  topicUID: Service_Cards
+                  topicUid: Service_Cards
                 - name: Element cards
-                  topicUID: Element_Cards
+                  topicUid: Element_Cards
                   items:
                     - name: Trending page
-                      topicUID: Trending_Page
+                      topicUid: Trending_Page
                 - name: Alarm cards
-                  topicUID: Alarm_Cards
+                  topicUid: Alarm_Cards
                 - name: CPE cards
-                  topicUID: CPE_Cards
+                  topicUid: CPE_Cards
                 - name: Spectrum analyzer cards
-                  topicUID: Spectrum_Analyzer_Cards
+                  topicUid: Spectrum_Analyzer_Cards
         - name: The legacy Monitoring & Control app user interface
           topicUid: The_legacy_Monitoring_Control_app_user_interface
     - name: Ziine Demo System
@@ -180,13 +180,13 @@
               topicUid: Advanced_analytics_features_in_the_Alarm_Console
               items:
                 - name: Behavioral anomaly detection
-                  topicUID: Behavioral_anomaly_detection
+                  topicUid: Behavioral_anomaly_detection
                 - name: Proactive cap detection
-                  topicUID: Proactive_cap_detection
+                  topicUid: Proactive_cap_detection
                 - name: Automatic incident tracking
-                  topicUID: Automatic_incident_tracking
+                  topicUid: Automatic_incident_tracking
                 - name: Monitoring of trend patterns
-                  topicUID: Monitoring_of_trend_patterns
+                  topicUid: Monitoring_of_trend_patterns
         - name: Advanced alarm functionality
           topicUid: Advanced_alarm_functionality
           items:
@@ -443,7 +443,7 @@
             - name: Linking a shape to a dashboard component
               topicUid: Linking_a_shape_to_a_dashboard_component
             - name: Linking a shape to an EPM object
-              topicUID: Linking_a_shape_to_an_EPM_object
+              topicUid: Linking_a_shape_to_an_EPM_object
             - name: Adding options to shapes linked to elements or services
               topicUid: Adding_options_to_shapes_linked_to_elements_or_services
         - name: Making shapes display information
@@ -605,7 +605,7 @@
               topicUid: Embedding_a_Resource_Manager_component
               items:
                 - name: YAxisResource session variable examples
-                  topicUID: YAxisResource_Shape_Data_Examples
+                  topicUid: YAxisResource_Shape_Data_Examples
             - name: Embedding a Service Manager component
               topicUid: Embedding_a_Service_Manager_component
             - name: Embedding a Profile Manager component
@@ -668,7 +668,7 @@
             - name: Configuring a shape's text wrapping and trimming
               topicUid: Configuring_text_wrapping_and_trimming
             - name: Configuring a page to execute a script automatically
-              topicUID: Configuring_a_page_to_execute_a_script_automatically
+              topicUid: Configuring_a_page_to_execute_a_script_automatically
         - name: Reference
           topicUid: Reference
           items:
@@ -681,7 +681,7 @@
             - name: Dynamic table filter syntax
               topicUid: Dynamic_table_filter_syntax
             - name: Visio style guide
-              topicUID: Visio_style_guide
+              topicUid: Visio_style_guide
     - name: Trending
       topicUid: trending
       items:
@@ -716,6 +716,8 @@
               topicUid: Working_with_behavioral_anomaly_detection
             - name: Working with pattern matching
               topicUid: Working_with_pattern_matching
+            - name: Adding related parameters to a trend graph
+              topicUid: Adding_related_parameters_to_a_trend_graph
         - name: Working with histograms
           topicUid: Viewing_trend_information_in_a_histogram
           items:
@@ -825,17 +827,17 @@
           topicUid: Installing_a_DataMiner_Agent
           items:
             - name: Installing DataMiner using the DataMiner Installer
-              topicUID: Installing_DM_using_the_DM_installer
+              topicUid: Installing_DM_using_the_DM_installer
             - name: Unattended DataMiner installation
-              topicUID: Unattended_DM_installation
+              topicUid: Unattended_DM_installation
             - name: Checking the DataMiner installation
-              topicUID: Checking_the_DM_installation
+              topicUid: Checking_the_DM_installation
             - name: Regarding virtual servers
-              topicUID: Regarding_virtual_servers
+              topicUid: Regarding_virtual_servers
             - name: Regarding antivirus software
-              topicUID: Regarding_antivirus_software
+              topicUid: Regarding_antivirus_software
             - name: Frequently asked questions
-              topicUID: Installing_a_DMA_FAQ
+              topicUid: Installing_a_DMA_FAQ
         - name: Configuring a DataMiner Agent
           topicUid: Configuring_a_DataMiner_Agent
           items:
@@ -854,7 +856,7 @@
             - name: Setting up HTTPS on a DMA
               topicUid: Setting_up_HTTPS_on_a_DMA
             - name: Configuring the landing page of a DMA
-              topicUID: Configuring_the_landing_page
+              topicUid: Configuring_the_landing_page
             - name: DMA configuration related to client applications
               topicUid: DMA_configuration_related_to_client_applications
             - name: Changing the IP of a DMA
@@ -891,7 +893,7 @@
           topicUid: Upgrading_a_DataMiner_Agent
           items:
             - name: Preparing to upgrade a DataMiner Agent
-              topicUID: Preparing_to_upgrade_a_DataMiner_Agent
+              topicUid: Preparing_to_upgrade_a_DataMiner_Agent
             - name: Upgrading a DataMiner Agent in the Update Center
               topicUid: Upgrading_a_DataMiner_Agent_in_the_Update_Center
             - name: Upgrading a DataMiner Agent using DataMiner Taskbar Utility
@@ -899,7 +901,7 @@
             - name: Upgrading a DataMiner Agent in System Center
               topicUid: Upgrading_a_DataMiner_Agent_in_System_Center
             - name: Upgrade paths
-              topicUID: Upgrade_Paths
+              topicUid: Upgrade_Paths
               items: 
                 - name: DataMiner 9.6.0/9.6.x to 10.2.0/10.2.x
                   topicUid: Upgrade_path_960-96x_to_1020-102x
@@ -914,7 +916,7 @@
             - name: Checking the upgrade history of a DataMiner Agent
               topicUid: Checking_the_upgrade_history_of_a_DataMiner_Agent
             - name: Configuring the default upgrade options
-              topicUID: Configuring_the_default_upgrade_options
+              topicUid: Configuring_the_default_upgrade_options
         - name: Uninstalling a DataMiner Agent
           topicUid: Uninstalling_a_DataMiner_Agent
         - name: DataMiner packages
@@ -982,31 +984,31 @@
           topicUid: Running_BPA_tests
           items:
             - name: Cassandra DB Size
-              topicUID: BPA_Cassandra_DB_Size
+              topicUid: BPA_Cassandra_DB_Size
             - name: Check Antivirus DLLs
-              topicUID: BPA_Check_Antivirus_DLLs
+              topicUid: BPA_Check_Antivirus_DLLs
             - name: Database Security
-              topicUID: BPA_Database_Security
+              topicUid: BPA_Database_Security
             - name: Firewall Configuration
-              topicUID: BPA_Firewall_Configuration
+              topicUid: BPA_Firewall_Configuration
             - name: HTTPS Configuration
-              topicUID: BPA_Https_Configuration
+              topicUid: BPA_Https_Configuration
             - name: Minimum Requirements Check
-              topicUID: BPA_Minimum_Requirements_Check
+              topicUid: BPA_Minimum_Requirements_Check
             - name: Password Strength
-              topicUID: BPA_Password_Strength
+              topicUid: BPA_Password_Strength
             - name: Report Active RTE
-              topicUID: BPA_Report_Active_RTE
+              topicUid: BPA_Report_Active_RTE
             - name: Service Automatic Properties
-              topicUID: BPA_Service_Automatic_Properties
+              topicUid: BPA_Service_Automatic_Properties
             - name: SRM Function Resources Consistency
-              topicUID: BPA_SRM_Function_Resources_Consistency
+              topicUid: BPA_SRM_Function_Resources_Consistency
             - name: Validate connectors
-              topicUID: BPA_Validate_Connectors
+              topicUid: BPA_Validate_Connectors
             - name: Verify Cloud DxM Version
-              topicUID: BPA_Verify_Cloud_DxM_Version
+              topicUid: BPA_Verify_Cloud_DxM_Version
             - name: View Recursion
-              topicUID: BPA_View_Recursion
+              topicUid: BPA_View_Recursion
     - name: Failover
       topicUid: failover
       items:
@@ -1040,7 +1042,7 @@
       topicUid: Databases_about
       items:
         - name: About databases
-          topicUID: Databases_about
+          topicUid: Databases_about
         - name: Supported system data storage architectures
           topicUid: Supported_system_data_storage_architectures
           items:
@@ -1051,7 +1053,7 @@
           - name: Migrating SRM resources to Elasticsearch
             topicUid: Resources_migration_to_elastic
         - name: Database configuration in DataMiner Cube
-          topicUID: Configuring_the_database_settings_in_Cube
+          topicUid: Configuring_the_database_settings_in_Cube
           items:
             - name: Configuring the general database settings in Cube
               topicUid: Configuring_the_database_settings_in_Cube
@@ -1060,22 +1062,22 @@
             - name: Configuring an additional database
               topicUid: Configuring_an_additional_database
         - name: Cassandra database
-          topicUID: Cassandra_database
+          topicUid: Cassandra_database
           items:
           - name: Installing Cassandra on a Linux machine
-            topicUID: Installing_Cassandra
-          - name: Azure Managed Instance for Apache Cassandra
-            topicUID: Azure_Managed_Instance_for_Apache_Cassandra
+            topicUid: Installing_Cassandra
+          - name: Setting up an Azure Managed Instance for Apache Cassandra
+            topicUid: Azure_Managed_Instance_for_Apache_Cassandra
           - name: Scaling a Cassandra cluster database
-            topicUID: Scale_Cassandra_Database
+            topicUid: Scale_Cassandra_Database
           - name: Maintaining a Cassandra cluster
-            topicUID: Maintain_Cassandra_Cluster
+            topicUid: Maintain_Cassandra_Cluster
           - name: Installing Cassandra Reaper
-            topicUID: Installing_Cassandra_Reaper
+            topicUid: Installing_Cassandra_Reaper
           - name: Moving the Cassandra database to a different disk drive
             topicUid: Moving_the_Cassandra_database_to_a_different_disk_drive
           - name: Making Cassandra nodetool accessible remotely
-            topicUID: Making_Cassandra_nodetool_accessible_remotely
+            topicUid: Making_Cassandra_nodetool_accessible_remotely
           - name: Data replication and consistency configuration
             topicUid: replication_and_consistency_configuration
         - name: Elasticsearch database
@@ -1087,35 +1089,35 @@
               topicUid: Configuring_Elasticsearch_backups
               items:
                 - name: Taking and restoring snapshots
-                  topicUID: Configuring_Elasticsearch_backups_Windows_Linux
+                  topicUid: Configuring_Elasticsearch_backups_Windows_Linux
                 - name: Restoring backups using the Standalone Elastic Backup Tool
-                  topicUID: Configuring_Elasticsearch_backups_Windows
+                  topicUid: Configuring_Elasticsearch_backups_Windows
             - name: Configuring indexing settings in System Center
               topicUid: Configuring_DataMiner_Indexing
             - name: Configuring the Elasticsearch database
               topicUid: Configuring_Elasticsearch_Database
               items:
               - name: Configuring the master nodes
-                topicUID: Configuring_master_Elasticsearch_nodes
+                topicUid: Configuring_master_Elasticsearch_nodes
               - name: Adding an Elasticsearch cluster node
-                topicUID: Configuring_Elasticsearch_node_add
+                topicUid: Configuring_Elasticsearch_node_add
               - name: Removing an Elasticsearch cluster node
-                topicUID: Configuring_Elasticsearch_node_remove
+                topicUid: Configuring_Elasticsearch_node_remove
             - name: Configuring multiple Elasticsearch clusters
               topicUid: Configuring_multiple_Elasticsearch_clusters
             - name: Manually connecting a DMA to an Elasticsearch cluster
-              topicUID: Manually_Connecting_DMA_to_Elasticsearch_Cluster
+              topicUid: Manually_Connecting_DMA_to_Elasticsearch_Cluster
         - name: OpenSearch database
-          topicUID: OpenSearch_database
+          topicUid: OpenSearch_database
           items:
           - name: Configuring multiple OpenSearch clusters
             topicUid: Configuring_multiple_OpenSearch_clusters
         - name: Amazon OpenSearch Service
-          topicUID: Amazon_OpenSearch_Service
+          topicUid: Amazon_OpenSearch_Service
         - name: Amazon Keyspaces Service
           topicUid: Amazon_Keyspaces_Service
         - name: MySQL database
-          topicUID: MySQL_database
+          topicUid: MySQL_database
           items:
           - name: Activating one file per table for an existing MySQL database
             topicUid: Activating_one_file_per_table_for_an_existing_MySQL_database
@@ -1140,7 +1142,7 @@
             - name: Querying an SQL database
               topicUid: Querying_an_SQL_database
             - name: Querying an Elasticsearch database
-              topicUID: Querying_an_Elasticsearch_database
+              topicUid: Querying_an_Elasticsearch_database
             - name: Examples of database queries
               topicUid: Examples_of_database_queries
     - name: Security
@@ -1160,9 +1162,9 @@
             - name: Encryption in DataMiner
               topicUid: Encryption_in_DataMiner
             - name: Cloud connectivity and security
-              topicUID: Cloud_connectivity_and_security
+              topicUid: Cloud_connectivity_and_security
         - name: DataMiner hardening guide
-          topicUID: DataMiner_hardening_guide
+          topicUid: DataMiner_hardening_guide
         - name: DataMiner user permissions
           topicUid: DataMiner_user_permissions
         - name: Basic security configuration
@@ -1221,7 +1223,7 @@
           topicUid: Advanced_security_configuration
           items:
             - name: Securing the DataMiner Databases
-              topicUID: Database_security
+              topicUid: Database_security
               items:
                 - name: Securing the Cassandra general database
                   topicUid: Security_Cassandra_general
@@ -1243,7 +1245,7 @@
                 - name: Securing the Elasticsearch database
                   topicUid: Security_Elasticsearch
             - name: Securing the web server
-              topicUID: Webserver_security
+              topicUid: Webserver_security
               items:
                 - name: HTTP headers
                   topicUid: HTTP_Headers
@@ -1646,7 +1648,7 @@
               - name: Group
                 topicUid: DashboardGroup
               - name: Icon
-                topicUID: DashboardIcon
+                topicUid: DashboardIcon
               - name: Image
                 topicUid: DashboardImage
               - name: Text
@@ -1720,22 +1722,31 @@
                 topicUid: DashboardTreeFeed
               - name: Trigger feed
                 topicUid: DashboardTriggerFeed
+            - name: Basic controls
+              topicUid: 
+              items:
+              - name: Drop-down feed
+                topicUid: DashboardDropdownFeed
+              - name: Numeric input
+                topicUid: DashboardNumericInputFeed
+              - name: Text input
+                topicUid: DashboardTextInputFeed
         - name: Using dashboard feeds
           topicUid: Using_dashboard_feeds
           items:
             - name: Configuring feed components
               topicUid: Configuring_feed_components
             - name: Configuring query (GQI) data feeds
-              topicUID: Configuring_GQI_feeds
+              topicUid: Configuring_GQI_feeds
               items:
                 - name: Query data sources
-                  topicUID: Query_data_sources
+                  topicUid: Query_data_sources
                 - name: Configuring an external data source in a query
-                  topicUID: Configuring_an_external_data_source_in_a_query
+                  topicUid: Configuring_an_external_data_source_in_a_query
                 - name: Query operators
-                  topicUID: Query_operators
+                  topicUid: Query_operators
                 - name: Importing a query
-                  topicUID: Importing_a_query
+                  topicUid: Importing_a_query
             - name: Specifying data input in a dashboard URL
               topicUid: Specifying_data_input_in_a_dashboard_URL
             - name: Configuring a dashboard to use a URL feed without a feed component
@@ -1745,9 +1756,9 @@
         - name: Generating a report based on a dashboard
           items:
             - name: From DataMiner Cube
-              topicUID: Generating_a_report_based_on_a_dashboard_Cube
+              topicUid: Generating_a_report_based_on_a_dashboard_Cube
             - name: From the Dashboards app
-              topicUID: Sharing_PDF_report_from_Dashboards_app
+              topicUid: Sharing_PDF_report_from_Dashboards_app
         - name: Customizing the Dashboards app
           topicUid: Customizing_the_Dashboards_app
         - name: Dashboard Gateway installation
@@ -1804,103 +1815,103 @@
             - name: Dashboard Gateway troubleshooting
               topicUid: Dashboard_Gateway_troubleshooting
     - name: Data Aggregator
-      topicUID: Data_Aggregator_DxM
+      topicUid: Data_Aggregator_DxM
       items:
         - name: Installation and setup
-          topicUID: Data_Aggregator_install_setup
+          topicUid: Data_Aggregator_install_setup
         - name: Settings
-          topicUID: Data_Aggregator_settings
+          topicUid: Data_Aggregator_settings
         - name: Configuring GQI queries
-          topicUID: Data_Aggregator_queries
+          topicUid: Data_Aggregator_queries
     - name: DataMiner Object Models (DOM)
-      topicUID: DOM
+      topicUid: DOM
       items:
         - name: DOM objects
           topicUid: DOM_objects
           items:
             - name: SectionDefinition object
-              topicUID: DOM_SectionDefinition
+              topicUid: DOM_SectionDefinition
             - name: DomDefinition object
-              topicUID: DomDefinition
+              topicUid: DomDefinition
             - name: DomInstance object
-              topicUID: DomInstance
+              topicUid: DomInstance
             - name: DomTemplate object
-              topicUID: DomTemplate
+              topicUid: DomTemplate
             - name: DomBehaviorDefinition object
-              topicUID: DomBehaviorDefinition
+              topicUid: DomBehaviorDefinition
         - name: DOM managers
           topicUid: DOM_managers
         - name: DomHelper class
           topicUid: DomHelper_class
         - name: DOM events
-          topicUID: DOM_events
+          topicUid: DOM_events
         - name: DOM history
-          topicUID: DOM_history
+          topicUid: DOM_history
         - name: DOM status system
-          topicUID: DOM_status_system
+          topicUid: DOM_status_system
         - name: DOM actions
-          topicUID: DOM_actions
+          topicUid: DOM_actions
         - name: DOM module settings
           topicUid: DOM_ModuleSettings
           items:
             - name: Module ID
-              topicUID: DOM_ModuleId
+              topicUid: DOM_ModuleId
             - name: ModuleSections
-              topicUID: DOM_ModuleSections
+              topicUid: DOM_ModuleSections
             - name: FieldAliases
-              topicUID: DOM_FieldAliases
+              topicUid: DOM_FieldAliases
             - name: ExecuteScriptOnDomInstanceActionSettings
-              topicUID: ExecuteScriptOnDomInstanceActionSettings
+              topicUid: ExecuteScriptOnDomInstanceActionSettings
             - name: DomManagerInformationEventSettings
-              topicUID: DomManagerInformationEventSettings
+              topicUid: DomManagerInformationEventSettings
             - name: DomInstanceNameDefinition
-              topicUID: DomInstanceNameDefinition
+              topicUid: DomInstanceNameDefinition
             - name: ModuleBehaviorDefinition
-              topicUID: DOM_ModuleBehaviorDefinition
+              topicUid: DOM_ModuleBehaviorDefinition
             - name: TtlSettings
-              topicUID: DOM_TtlSettings
+              topicUid: DOM_TtlSettings
         - name: DOM data storage
           topicUid: DOM_data_storage
         - name: DOM examples
-          topicUID: DOM_Invoice_app_example
+          topicUid: DOM_Invoice_app_example
           items:
             - name: Invoice app example
-              topicUID: DOM_Invoice_app_example
+              topicUid: DOM_Invoice_app_example
             - name: Status system example
-              topicUID: DOM_status_system_example
+              topicUid: DOM_status_system_example
             - name: Altering values of a DomInstance - examples
-              topicUID: DOM_Altering_values_of_a_DomInstance
+              topicUid: DOM_Altering_values_of_a_DomInstance
         - name: DOM DevOps tools
-          topicUID: DOM_DevOps_tools
+          topicUid: DOM_DevOps_tools
           items:
             - name: DOM DevOps tools installation
-              topicUID: DOM_DevOps_installation
+              topicUid: DOM_DevOps_installation
             - name: Using the DOM Designer
-              topicUID: DOM_Designer
+              topicUid: DOM_Designer
               items:
                 - name: Configuring the Excel file
-                  topicUID: DOM_Designer_Excel_config
+                  topicUid: DOM_Designer_Excel_config
                 - name: Deploying the Excel file
-                  topicUID: DOM_Designer_Excel_deployment
+                  topicUid: DOM_Designer_Excel_deployment
             - name: Using the DOM Editor
-              topicUID: DOM_Editor
+              topicUid: DOM_Editor
               items:
                 - name: Creating a new module and definition
-                  topicUID: DOM_editor_new_def
+                  topicUid: DOM_editor_new_def
                 - name: Adding a field
-                  topicUID: DOM_editor_adding_field
+                  topicUid: DOM_editor_adding_field
                 - name: Adding a section definition
-                  topicUID: DOM_editor_adding_section
+                  topicUid: DOM_editor_adding_section
                 - name: Adding a button
-                  topicUID: DOM_editor_adding_button
+                  topicUid: DOM_editor_adding_button
                 - name: Changing a field name
-                  topicUID: DOM_editor_changing_field_name
+                  topicUid: DOM_editor_changing_field_name
                 - name: Deleting a field
-                  topicUID: DOM_editor_deleting_field
+                  topicUid: DOM_editor_deleting_field
                 - name: Deleting a section
-                  topicUID: DOM_editor_deleting_section
+                  topicUid: DOM_editor_deleting_section
                 - name: Naming a DOM instance
-                  topicUID: DOM_editor_naming_instance
+                  topicUid: DOM_editor_naming_instance
     - name: Experience and Performance Management
       topicUid: EPM
       items:
@@ -1971,7 +1982,7 @@
         - name: About jobs
           topicUid: About_jobs
         - name: Accessing the Jobs app
-          topicUID: Accessing_the_jobs_app
+          topicUid: Accessing_the_jobs_app
         - name: Overview of the Jobs app UI
           topicUid: Overview_of_the_Job_Manager_app_UI
         - name: Configuring jobs in the Jobs app
@@ -1996,7 +2007,7 @@
         - name: Working with job templates
           topicUid: Working_with_job_templates
     - name: Low-Code Apps
-      topicUID: Application_framework
+      topicUid: Application_framework
       items:
         - name: Accessing the Low-Code Apps module
           topicUid: Accessing_custom_apps
@@ -2025,7 +2036,7 @@
         - name: Deleting a low-code application
           topicUid: Deleting_custom_apps
         - name: Specifying data input in an app URL
-          topicUID: Specifying_data_input_in_URL
+          topicUid: Specifying_data_input_in_URL
     - name: Maps
       topicUid: maps
       items:
@@ -2097,7 +2108,7 @@
             - name: Configuring Mobile Gateway in DataMiner Cube
               topicUid: Configuring_Mobile_Gateway_in_DataMiner_Cube
             - name: Approved modems for use with Mobile Gateway
-              topicUID: Approved_modems_Mobile_Gateway
+              topicUid: Approved_modems_Mobile_Gateway
         - name: Working with Mobile Gateway in DataMiner Cube
           topicUid: Working_with_Mobile_Gateway_in_DataMiner_Cube
         - name: Using Mobile Gateway in a Failover setup
@@ -2249,11 +2260,11 @@
           topicUid: The_Services_module
           items:
             - name: Using the overview tab
-              topicUID: SRM_Services_overview
+              topicUid: SRM_Services_overview
             - name: Using the definitions tab
-              topicUID: SRM_Services_definitions
+              topicUid: SRM_Services_definitions
             - name: Using the profiles tab
-              topicUID: SRM_Services_profiles
+              topicUid: SRM_Services_profiles
         - name: SRM code snippets
           topicUid: SRM_code_snippets
         - name: Advanced SRM settings
@@ -2385,7 +2396,7 @@
               topicUid: I-DOCSIS_supported_technologies
             - name: EPM I-DOCSIS deployment
               topicUid: I-DOCSIS_deployment
-            - name: EPM I-DOCSS upgrade
+            - name: EPM I-DOCSIS upgrade
               topicUid: I-DOCSIS_upgrade
             - name: Available parameters in I-DOCSIS
               topicUid: I-DOCSIS_parameters
@@ -2486,17 +2497,17 @@
           topicUid: EPM_VSAT
           items:
             - name: EPM VSAT architecture
-              topicUID: VSAT_architecture
+              topicUid: VSAT_architecture
             - name: EPM VSAT components
-              topicUID: VSAT_components
+              topicUid: VSAT_components
             - name: EPM VSAT deployment
-              topicUID: VSAT_deployment
+              topicUid: VSAT_deployment
             - name: EPM VSAT topology
-              topicUID: VSAT_EPM_Topology
+              topicUid: VSAT_EPM_Topology
             - name: EPM VSAT metrics
-              topicUID: VSAT_metrics
+              topicUid: VSAT_metrics
             - name: Available parameters in VSAT
-              topicUID: VSAT_parameters
+              topicUid: VSAT_parameters
     - name: DataMiner IDP app
       topicUid: SolIDP
       items:
@@ -2511,17 +2522,17 @@
               topicUid: Overview_of_the_IDP_app_UI
               items:
                 - name: Inventory
-                  topicUID: IDP_Inventory_tab
+                  topicUid: IDP_Inventory_tab
                 - name: Connectivity
-                  topicUID: IDP_Connectivity_tab
+                  topicUid: IDP_Connectivity_tab
                 - name: Configuration
-                  topicUID: IDP_Configuration_tab
+                  topicUid: IDP_Configuration_tab
                 - name: Software
-                  topicUID: IDP_Software_tab
+                  topicUid: IDP_Software_tab
                 - name: Facilities
-                  topicUID: IDP_Facilities_tab
+                  topicUid: IDP_Facilities_tab
                 - name: Processes
-                  topicUID: IDP_Processes_tab
+                  topicUid: IDP_Processes_tab
         - name: Advanced configuration
           items:
             - name: Advanced configuration for Administrators
@@ -2542,9 +2553,9 @@
                 - name: Settings
                   topicUid: Settings
             - name : Implementing the Connectivity Discovery script
-              topicUID: ConnectivityDiscoveryScript
+              topicUid: ConnectivityDiscoveryScript
             - name : Implementing the Configuration Backup script
-              topicUID: ConfigurationBackupScript
+              topicUid: ConfigurationBackupScript
         - name: Reference
           topicUid: Reference1
           items:
@@ -2553,7 +2564,7 @@
             - name: CI Types
               topicUid: CI_Types1
             - name: Using your IS-04 registry to provision DataMiner with IDP
-              topicUID: Using_your_IS04_registry_to_provision_DataMiner_with_IDP
+              topicUid: Using_your_IS04_registry_to_provision_DataMiner_with_IDP
     - name: Process Automation framework
       topicUid: PA_index
       items:
@@ -2620,7 +2631,7 @@
       topicUid: About_SRM
       items:
       - name: About SRM
-        topicUID: About_SRM
+        topicUid: About_SRM
       - name: SRM use cases
         topicUid: srm_use_cases
         items:
@@ -2677,9 +2688,9 @@
         - name: Additional configuration for Resource Automation
           topicUid: config_resource_automation
         - name: Additional configuration for Resource Scheduling
-          topicUID: config_resource_scheduling
+          topicUid: config_resource_scheduling
         - name: Additional configuration for Resource Orchestration
-          topicUID: config_resource_orchestration
+          topicUid: config_resource_orchestration
       - name: Booking Manager app
         topicUid: SolSRM
         items:
@@ -2704,61 +2715,63 @@
       - name: Advanced configuration
         items:
           - name: User interface customization
-            topicUID: SRM_user_interface_customization
+            topicUid: SRM_user_interface_customization
             items:
               - name: Creating a custom front end for the Booking Manager
-                topicUID: SRM_custom_front_end
+                topicUid: SRM_custom_front_end
               - name: Using custom scripts instead of the default SRM wizards
-                topicUID: SRM_custom_scripts
+                topicUid: SRM_custom_scripts
               - name: Customizing the columns of the Bookings list
-                topicUID: SRM_custom_bookings_list
+                topicUid: SRM_custom_bookings_list
               - name: Customizing the booking blocks on the timeline
-                topicUID: SRM_custom_booking_blocks
+                topicUid: SRM_custom_booking_blocks
           - name: Configuring SRM alarm monitoring
-            topicUID: SRM_alarm_monitoring
+            topicUid: SRM_alarm_monitoring
           - name: Configuring SRM logging
-            topicUID: SRM_logging_config
+            topicUid: SRM_logging_config
           - name: Advanced configuration for Service Orchestration
             items:
               - name: Bookings configuration
-                topicUID: Service_Orchestration_bookings_advanced
+                topicUid: Service_Orchestration_bookings_advanced
               - name: Resources configuration
-                topicUID: Service_Orchestration_resources_advanced
+                topicUid: Service_Orchestration_resources_advanced
               - name: Profile instances configuration
-                topicUID: Service_Orchestration_profile_instances
+                topicUid: Service_Orchestration_profile_instances
               - name: Service definitions configuration
-                topicUID: Service_Orchestration_service_definition_advanced
+                topicUid: Service_Orchestration_service_definition_advanced
               - name: Service profiles configuration
-                topicUID: Service_Orchestration_service_profiles
+                topicUid: Service_Orchestration_service_profiles
               - name: Custom events configuration
-                topicUID: Service_Orchestration_custom_events
+                topicUid: Service_Orchestration_custom_events
               - name: Booking life cycle states configuration
-                topicUID: Service_Orchestration_life_cycle_states
+                topicUid: Service_Orchestration_life_cycle_states
       - name: SRM logging
-        topicUID: SRM_logging
+        topicUid: SRM_logging
 - name: dataminer.services
-  topicUid: Part51CloudPlatform
+  topicUid: AboutCloudPlatform
   items:
     - name: About dataminer.services
       topicUid: AboutCloudPlatform
       items:
         - name: Logging on to dataminer.services
           topicUid: Logging_on_to_the_DataMiner_Cloud_Platform
-        - name: Connecting your DataMiner System to dataminer.services
-          topicUid: Connecting_your_DataMiner_System_to_the_cloud
-          items:
-            - name: Connecting to dataminer.services via proxy server
-              topicUID: Connect_to_cloud_via_proxy
-            - name: Connecting to dataminer.services with a DMZ setup
-              topicUID: Connect_to_cloud_with_DMZ
-            - name: Connecting with older DataMiner versions
-              topicUid: Connecting_with_older_DataMiner_versions
-            - name: DataMiner Cloud Packs
-              topicUid: CloudPackages
         - name: Linking your DataMiner account to your dataminer.services account
           topicUid: Linking_your_DataMiner_and_DCP_account
         - name: Cloud data storage policies
-          topicUID: Cloud_data_storage_policies
+          topicUid: Cloud_data_storage_policies
+        - name: DataMiner Cloud Packs
+          topicUid: CloudPackages
+    - name: Connecting your DataMiner System to dataminer.services
+      topicUid: Connecting_your_DataMiner_System_to_the_cloud
+      items:
+        - name: Requirements
+          topicUid: Connect_to_cloud_requirements
+        - name: Connecting to dataminer.services
+          topicUid: Connect_to_dataminer_services
+        - name: Connecting to dataminer.services via proxy server
+          topicUid: Connect_to_cloud_via_proxy
+        - name: Connecting to dataminer.services with a DMZ setup
+          topicUid: Connect_to_cloud_with_DMZ
     - name: Project Collaboration
       topicUid: Collaboration
       items:
@@ -2802,7 +2815,7 @@
         - name: Looking up a DataMiner connector
           topicUid: Looking_up_a_DataMiner_connector
         - name: Deploying a DataMiner connector to your system
-          topicUID: Deploying_A_DataMiner_Connector_to_your_system
+          topicUid: Deploying_A_DataMiner_Connector_to_your_system
     - name: DataMiner Sharing
       topicUid: Sharing
       items:
@@ -2811,7 +2824,7 @@
         - name: Managing your shares
           topicUid: Managing_your_shares
     - name: Remote access
-      topicUID: Cloud_Remote_Access
+      topicUid: Cloud_Remote_Access
     - name: DataMiner Community
       topicUid: Community
       items:
@@ -2844,12 +2857,12 @@
         - name: Getting your organization verified
           topicUid: CloudConnectionVerification
         - name: Managing dataminer.services users
-          topicUID: Managing_DCP_users
+          topicUid: Managing_DCP_users
           items:
           - name: Giving users access to dataminer.services features
             topicUid: Giving_users_access_to_cloud_features
           - name: Changing the role of a dataminer.services user
-            topicUID: Changing_the_role_of_a_DCP_user
+            topicUid: Changing_the_role_of_a_DCP_user
         - name: Controlling remote access
           topicUid: Controlling_remote_access
         - name: Consulting dataminer.services audit logs
@@ -2874,10 +2887,10 @@
         - name: Chat integration
           topicUid: Microsoft_Teams_Chat_Integration
     - name: Advanced configuration
-      topicUID: Custom_cloud_endpoint_configuration
+      topicUid: Custom_cloud_endpoint_configuration
       items:
         - name: Customizing the dataminer.services endpoint configuration
-          topicUID: Custom_cloud_endpoint_configuration
+          topicUid: Custom_cloud_endpoint_configuration
 - name: Troubleshooting
   topicUid: Part6Troubleshooting
   items:
@@ -2885,59 +2898,59 @@
       topicUid: ErrorMessages
       items:
         - name: An error occurred in the application you were using
-          topicUID: An_error_occurred_in_the_application_you_were_using
+          topicUid: An_error_occurred_in_the_application_you_were_using
         - name: Could not load type Maps.DataMinerMap
-          topicUID: Could_not_load_type_Maps_DataMinerMap
+          topicUid: Could_not_load_type_Maps_DataMinerMap
         - name: Could not load Visio file
-          topicUID: Could_not_load_Visio_file
+          topicUid: Could_not_load_Visio_file
         - name: Creating Database tables for x failed. y (hr = z)
-          topicUID: Creating_Database_tables_for_x_failed
+          topicUid: Creating_Database_tables_for_x_failed
         - name: Creating element-object for x failed. y (hr = z)
-          topicUID: Creating_element_object_for_x_failed
+          topicUid: Creating_element_object_for_x_failed
         - name: Creating element-objects for x failed. y (hr = z)
-          topicUID: Creating_element_objects_for_x_failed
+          topicUid: Creating_element_objects_for_x_failed
         - name: Creating log-factory for x failed. y (hr = z)
-          topicUID: Creating_log_factory_for_x_failed
+          topicUid: Creating_log_factory_for_x_failed
         - name: Creating log-file for x failed. y (hr = z)
-          topicUID: Creating_log_file_for_x_failed
+          topicUid: Creating_log_file_for_x_failed
         - name: ElementID (x) Not unique y existing = z
-          topicUID: ElementID_x_not_unique_y_existing_z
+          topicUid: ElementID_x_not_unique_y_existing_z
         - name: HTTP error 500
-          topicUID: HTTP_error_500
+          topicUid: HTTP_error_500
         - name: InitializeIElement for Element x failed. y (hr = z)
-          topicUID: InitializeIElement_for_Element_x_failed
+          topicUid: InitializeIElement_for_Element_x_failed
         - name: Initializing the communication u for x port failed. y (hr = z)
-          topicUID: Initializing_the_communication_u_for_x_port_failed
+          topicUid: Initializing_the_communication_u_for_x_port_failed
         - name: Initializing the IP failed for x. y (hr = z), please check the IP-settings
-          topicUID: Initializing_the_IP_failed_for_x
+          topicUid: Initializing_the_IP_failed_for_x
         - name: Initializing the protocol for x failed. y (hr = z)
-          topicUID: Initializing_the_protocol_for_x_failed
+          topicUid: Initializing_the_protocol_for_x_failed
         - name: Initialize xml for x failed. y (hr = z)
-          topicUID: Initialize_xml_for_x_failed
+          topicUid: Initialize_xml_for_x_failed
         - name: Load protocol x failed with y. (hr = z)
-          topicUID: Load_protocol_x_failed_with_y
+          topicUid: Load_protocol_x_failed_with_y
         - name: Non authorized client applications are running
-          topicUID: Non_authorized_client_applications_are_running
+          topicUid: Non_authorized_client_applications_are_running
         - name: Parsing the settings for x failed. y (hr = z)
-          topicUID: Parsing_the_settings_for_x_failed
+          topicUid: Parsing_the_settings_for_x_failed
         - name: Retrieving the data failed as the request timed out
-          topicUID: Retrieving_the_data_failed_as_the_request_timed_out
+          topicUid: Retrieving_the_data_failed_as_the_request_timed_out
         - name: setsockopt failed for SO_KEEPALIVE
-          topicUID: setsockopt_failed_for_SO_KEEPALIVE
+          topicUid: setsockopt_failed_for_SO_KEEPALIVE
         - name: Starting the DERIVED element x failed. y (hr = z)
-          topicUID: Starting_the_derived_element_x_failed
+          topicUid: Starting_the_derived_element_x_failed
         - name: Starting the element x failed with y. (hr = z)
-          topicUID: Starting_the_element_x_failed_with_y
+          topicUid: Starting_the_element_x_failed_with_y
         - name: Starting the protocol for x failed. y (hr = z)
-          topicUID: Starting_the_protocol_for_x_failed
+          topicUid: Starting_the_protocol_for_x_failed
         - name: The terminal server has exceeded the maximum number of allowed connections
-          topicUID: The_terminal_server_has_exceeded_the_maximum_number_of_allowed_connections
+          topicUid: The_terminal_server_has_exceeded_the_maximum_number_of_allowed_connections
         - name: Thread problem in x. y
-          topicUID: Thread_problem_in_x
+          topicUid: Thread_problem_in_x
         - name: Trust not granted
-          topicUID: Trust_not_granted
+          topicUid: Trust_not_granted
         - name: Unknown Error
-          topicUID: Unknown_Error
+          topicUid: Unknown_Error
     - name: Logging
       topicUid: logging
       items:
@@ -2961,9 +2974,9 @@
               topicUid: DataMiner_logging
               items:
                 - name: Watchdog logging
-                  topicUID: Watchdog_logging
+                  topicUid: Watchdog_logging
                 - name: Element in Protocol logging
-                  topicUID: Element_in_Protocol_logging
+                  topicUid: Element_in_Protocol_logging
             - name: Elements logging
               topicUid: Elements_logging
             - name: Changing the maximum size of DataMiner log files
@@ -2972,127 +2985,131 @@
       topicUid: Troubleshooting_Flowcharts
       items:
         - name: Troubleshooting - Trending
-          topicUID: Troubleshooting_Trending
+          topicUid: Troubleshooting_Trending
     - name: Troubleshooting procedures
       topicUid: Troubleshooting_procedures
       items:
         - name: Cassandra does not start up after a server restart
-          topicUID: Cassandra_not_starting_up_after_server_restart
+          topicUid: Cassandra_not_starting_up_after_server_restart
         - name: Collecting DataMiner Cube memory dumps
-          topicUID: Collecting_DataMiner_Cube_memory_dumps
+          topicUid: Collecting_DataMiner_Cube_memory_dumps
         - name: Investigating NATS issues
           topicUid: Investigating_NATS_Issues
         - name: Keeping a DMA from running out of disk space
-          topicUID: Keeping_a_DMA_from_running_out_of_disk_space
+          topicUid: Keeping_a_DMA_from_running_out_of_disk_space
         - name: Sharing dashboard window does not disappear
-          topicUID: Sharing_dashboard_window_does_not_disappear
+          topicUid: Sharing_dashboard_window_does_not_disappear
         - name: Manually removing old alarms from an Elasticsearch cluster
-          topicUID: Manually_removing_old_alarms_from_ES
+          topicUid: Manually_removing_old_alarms_from_ES
         - name: Querying MySQL vs Cassandra
-          topicUID: Querying_MySQL_vs_Cassandra
+          topicUid: Querying_MySQL_vs_Cassandra
     - name: Known issues
-      topicUID: Known_issues
+      topicUid: Known_issues
       items:
+        - name: DataMiner keeps trying to restart when Elasticsearch is unavailable
+          topicUid: KI_Restart_loop_when_Elasticsearch_unavailable
+        - name: SRM - Auto Select Resource not read for silent booking
+          topicUid: KI_SRM_Auto_Select_Resource_Not_Read
         - name: IP address in SAN field of TLS certificate ignored in Windows 2012 R2
-          topicUID: KI_Win2012R2_ignores_IP_in_SAN_field
+          topicUid: KI_Win2012R2_ignores_IP_in_SAN_field
         - name: Problem with booking automation and function DVE deactivation
-          topicUID: KI_SRM_booking_events_issue
+          topicUid: KI_SRM_booking_events_issue
         - name: SLPort deadlock when element with serial connection is restarted
-          topicUID: KI_SLPort_deadlock_after_restart_serial_connection
+          topicUid: KI_SLPort_deadlock_after_restart_serial_connection
         - name: Local user unable to access DMA after first reboot after installation
-          topicUID: KI_Local_user_unable_to_access_DMA_after_first_reboot_after_installation
+          topicUid: KI_Local_user_unable_to_access_DMA_after_first_reboot_after_installation
         - name: Contents of state_changes table not migrated after Cassandra Cluster migration
-          topicUID: KI_Contents_of_State_changes_Table_not_Migrated_after_Cassandra_Cluster_Migration
+          topicUid: KI_Contents_of_State_changes_Table_not_Migrated_after_Cassandra_Cluster_Migration
         - name: Cassandra cluster node in unexpected state
-          topicUID: KI_Cassandra_cluster_node_unexpected_state
+          topicUid: KI_Cassandra_cluster_node_unexpected_state
         - name: Year 2038 problem for Cassandra
-          topicUID: Year_2038_Problem_for_Cassandra
+          topicUid: Year_2038_Problem_for_Cassandra
         - name: Null reference exceptions in SLDBConnection.txt and unhandled exception in Alarm Console
-          topicUID: KI_NullReferenceException_SLDBConnection
+          topicUid: KI_NullReferenceException_SLDBConnection
         - name: SLProtocol timer thread run-time error
-          topicUID: KI_SLProtocol_timer_thread_RTE
+          topicUid: KI_SLProtocol_timer_thread_RTE
         - name: Vertical text in Visual Overview not displayed correctly
-          topicUID: KI_Visual_Overview_Vertical_Text_no_longer_working
+          topicUid: KI_Visual_Overview_Vertical_Text_no_longer_working
         - name: SLNet deadlock on DMA startup
-          topicUID: KI_SLNet_deadlock_on_startup
+          topicUid: KI_SLNet_deadlock_on_startup
         - name: Stable trend points not kept alive
-          topicUID: KI_stable_trend_points_not_kept_alive
+          topicUid: KI_stable_trend_points_not_kept_alive
         - name: Missing 1-day average trending records
-          topicUID: KI_missing_avg_trending
+          topicUid: KI_missing_avg_trending
         - name: Memory leak in SLNet threads
-          topicUID: KI_SLNet_thread_leak
+          topicUid: KI_SLNet_thread_leak
         - name: SLAutomation memory leak when Engine.AddScriptOutput is used
-          topicUID: KI_SLAutomation_memory_leak_AddScriptOutput
+          topicUid: KI_SLAutomation_memory_leak_AddScriptOutput
         - name: SLNet issues due to SPI obfuscation
-          topicUID: KI_SLNet_issue_SPI_obfuscation
+          topicUid: KI_SLNet_issue_SPI_obfuscation
         - name: Various SLElement issues
-          topicUID: KI_SLElement_various_issues
+          topicUid: KI_SLElement_various_issues
         - name: SLLog issue when large alarm tree is closed
-          topicUID: KI_SLLog_issue_when_large_alarm_tree_is_closed
+          topicUid: KI_SLLog_issue_when_large_alarm_tree_is_closed
         - name: Element data lost after migrating elements in Cassandra Cluster setup
-          topicUID: KI_element_data_loss_after_migration_in_CC_setup
+          topicUid: KI_element_data_loss_after_migration_in_CC_setup
         - name: Multiple issues when Failover based on hostnames is used
-          topicUID: KI_Failover_with_hostnames
+          topicUid: KI_Failover_with_hostnames
         - name: NATS not starting if DMS name contains special characters
-          topicUID: KI_NATS_not_starting_special_chars
+          topicUid: KI_NATS_not_starting_special_chars
         - name: SLDataGateway memory leak during Cassandra Cluster migration
-          topicUID: KI_SLDataGateway_leak_during_CC_migration
+          topicUid: KI_SLDataGateway_leak_during_CC_migration
         - name: Excessive SLElement CPU usage during Cassandra Cluster migration
-          topicUID: KI_SLElement_CPU_high_during_CC_migration
+          topicUid: KI_SLElement_CPU_high_during_CC_migration
         - name: SLElement memory leak during Cassandra Cluster migration
-          topicUID: KI_SLElement_CPU_memory_leak_during_CC_migration
+          topicUid: KI_SLElement_CPU_memory_leak_during_CC_migration
         - name: SLProtocol memory leak when HTTP connectors are used
-          topicUID: KI_SLProtocol_memory_leak_HTTP
+          topicUid: KI_SLProtocol_memory_leak_HTTP
         - name: Data from Elasticsearch cluster with IPv6 addresses offloaded to files
-          topicUID: KI_Elasticsearch_IPv6
+          topicUid: KI_Elasticsearch_IPv6
         - name: Increased CPU load and degraded performance because of excessive number of SPI events
-          topicUID: Excessive_SPI_events_causing_CPU_load
+          topicUid: Excessive_SPI_events_causing_CPU_load
         - name: SLDataGateway memory leak
-          topicUID: KI_SLDataGateway_memory_leak
+          topicUid: KI_SLDataGateway_memory_leak
         - name: Taskbar Utility performance issue while agents are being upgraded
-          topicUID: KI_Taskbar_Utility_performance_issue_while_agents_are_being_upgraded
+          topicUid: KI_Taskbar_Utility_performance_issue_while_agents_are_being_upgraded
         - name: SLDMS Hosting Agent cache issue
-          topicUID: KI_SLDMS_hosting_agent_cache_issue
+          topicUid: KI_SLDMS_hosting_agent_cache_issue
         - name: Closed alarms migrated too slowly from dms-activealarms index in Elasticsearch database
-          topicUID: KI_Closed_alarms_migrated_too_slowly
+          topicUid: KI_Closed_alarms_migrated_too_slowly
         - name: SNMP polling issues in case protocol contains wildcards in parameter OIDs
-          topicUID: KI_SNMP_polling_issues_with_wildcards_in_param_OIDs
+          topicUid: KI_SNMP_polling_issues_with_wildcards_in_param_OIDs
         - name: Upgrade fails because of VerifyClusterPort.dll prerequisite
-          topicUID: KI_Upgrade_fails_VerifyClusterPorts_prerequisite
+          topicUid: KI_Upgrade_fails_VerifyClusterPorts_prerequisite
         - name: SLAnalytics RTEs after upgrading DMS with Cassandra Cluster
-          topicUID: KI_RTE_with_SLAnalytics_when_upgrading
+          topicUid: KI_RTE_with_SLAnalytics_when_upgrading
         - name: Cassandra nodes not configured if current DMA IP is assigned as virtual IP
-          topicUID: KI_Cassandra_nodes_not_configured_if_current_DMA_IP_is_assigned_as_virtual_IP
+          topicUid: KI_Cassandra_nodes_not_configured_if_current_DMA_IP_is_assigned_as_virtual_IP
         - name: DataMiner Cube freeze on startup
-          topicUID: KI_DataMiner_Cube_freeze_on_startup
+          topicUid: KI_DataMiner_Cube_freeze_on_startup
         - name: Incorrect RTE counts in SLWatchdog2.txt and Alarm Console
-          topicUID: KI_Incorrect_RTE_counts_in_SLWatchdog2txt_and_Alarm_Console
+          topicUid: KI_Incorrect_RTE_counts_in_SLWatchdog2txt_and_Alarm_Console
         - name: Migration of Ticketing data from Cassandra to Elasticsearch fails
-          topicUID: KI_Migration_of_Ticketing_data_from_Cassandra_to_Elasticsearch_fails
+          topicUid: KI_Migration_of_Ticketing_data_from_Cassandra_to_Elasticsearch_fails
         - name: NATS error message after 10.1 installation
-          topicUID: KI_NATS_error_message_after_10_1_installation
+          topicUid: KI_NATS_error_message_after_10_1_installation
         - name: Not possible to generate reports on Windows Server 2012 or earlier
-          topicUID: KI_Not_possible_to_generate_reports_on_Windows_Server_2012_or_earlier
+          topicUid: KI_Not_possible_to_generate_reports_on_Windows_Server_2012_or_earlier
         - name: Setting a protocol to production takes a long time
-          topicUID: KI_Setting_a_protocol_to_production_takes_a_long_time
+          topicUid: KI_Setting_a_protocol_to_production_takes_a_long_time
         - name: Shapes in DataMiner stencils not found in Visio search
-          topicUID: KI_Shapes_in_DataMiner_stencils_not_found_in_Visio_search
+          topicUid: KI_Shapes_in_DataMiner_stencils_not_found_in_Visio_search
         - name: SLDataMiner addressChangeThread RTE after DMA startup
-          topicUID: KI_SLDataMiner_addressChangeThread_RTE_after_DMA_startup
+          topicUid: KI_SLDataMiner_addressChangeThread_RTE_after_DMA_startup
         - name: Smart-serial communication no longer working
-          topicUID: KI_Smart-serial_communication_no_longer_working
+          topicUid: KI_Smart-serial_communication_no_longer_working
         - name: SNMP SET returns a 'NO ACCESS' error
-          topicUID: KI_SNMP_SET_returns_a_NO_ACCESS_error
+          topicUid: KI_SNMP_SET_returns_a_NO_ACCESS_error
         - name: Unavailable system database after DataMiner server reboot
-          topicUID: KI_Unavailable_system_database_after_DataMiner_server_reboot
+          topicUid: KI_Unavailable_system_database_after_DataMiner_server_reboot
         - name: Upgrade error - api-ms-win-crt-stdio-l1-1-0.dll is missing
-          topicUID: KI_Upgrade_error_api-ms-win-crt-stdio-l1-1-0_dll_is_missing
+          topicUid: KI_Upgrade_error_api-ms-win-crt-stdio-l1-1-0_dll_is_missing
         - name: GenIf folder takes up too much disk space
-          topicUID: KI_GenIf_Folder_Growing_In_Size
+          topicUid: KI_GenIf_Folder_Growing_In_Size
     - name: Customer DataMiner Reporting (CDMR)
-      topicUID: CDMR
+      topicUid: CDMR
     - name: Remote Log Collection
-      topicUID: RemoteLogCollection
+      topicUid: RemoteLogCollection
 - name: Reference
   topicUid: Part7Reference
   items:
@@ -3160,7 +3177,7 @@
       topicUid: DataminerTools
       items:
         - name: Activate CDMR tool
-          topicUID: Activate_CDMR
+          topicUid: Activate_CDMR
         - name: Alerter
           topicUid: Alerter
           items:
@@ -3173,19 +3190,19 @@
             - name: Configuring Alerter
               topicUid: Configuring_Alerter
         - name: Analyze startup logs
-          topicUID: Analyze_Startup_Logs
+          topicUid: Analyze_Startup_Logs
         - name: Cassandra Cleaner
-          topicUID: Cassandra_Cleaner
+          topicUid: Cassandra_Cleaner
         - name: Cassandra Clone
-          topicUID: Cassandra_Clone
+          topicUid: Cassandra_Clone
         - name: Cassandra Cluster Validator
-          topicUID: Cassandra_Cluster_Validator
+          topicUid: Cassandra_Cluster_Validator
         - name: Connection Check
-          topicUID: Connection_Check
+          topicUid: Connection_Check
         - name: DataMiner Comparison tool
-          topicUID: DataMinerComparisonTool
+          topicUid: DataMinerComparisonTool
         - name: DataMiner Size tool
-          topicUID: DataMinerSizeTool
+          topicUid: DataMinerSizeTool
         - name: DataMiner Taskbar Utility
           topicUid: DataMiner_Taskbar_Utility
           items:
@@ -3194,17 +3211,17 @@
             - name: Taskbar Utility command line options
               topicUid: Taskbar_Utility_command_line_options
         - name: Dump Spectrum Preset Contents
-          topicUID: Dump_Spectrum_Preset_Content
+          topicUid: Dump_Spectrum_Preset_Content
         - name: Factory reset tool
-          topicUID: Factory_reset_tool
+          topicUid: Factory_reset_tool
         - name: InstallConfiguration XSD
-          topicUID: InstallConfiguration_XSD
+          topicUid: InstallConfiguration_XSD
         - name: Legacy trend data exporter
-          topicUID: Legacy_Trend_Data_Exporter
+          topicUid: Legacy_Trend_Data_Exporter
         - name: Multi-threaded timer polling rate calculator
-          topicUID: Multi_Threaded_Timer_Polling_Rate_Calculator
+          topicUid: Multi_Threaded_Timer_Polling_Rate_Calculator
         - name: Protocol debug tools
-          topicUID: Protocol_Debug_Tools
+          topicUid: Protocol_Debug_Tools
         - name: SLLogCollector
           topicUid: SLLogCollector
         - name: SLNetClientTest tool
@@ -3218,183 +3235,185 @@
               topicUid: SLNetClientTest_tool_diagnostic_procedures
               items:
               - name: Activating verbose Correlation logging
-                topicUID: SLNetClientTest_activating_verbose_correlation_logging
+                topicUid: SLNetClientTest_activating_verbose_correlation_logging
               - name: Checking a hyperlink filter
-                topicUID: SLNetClientTest_checking_hyperlink_filter
+                topicUid: SLNetClientTest_checking_hyperlink_filter
               - name: Checking whether protocol buffer serialization is enabled
-                topicUID: SLNetClientTest_Checking_whether_protocol_buffer_serialization_is_enabled
+                topicUid: SLNetClientTest_Checking_whether_protocol_buffer_serialization_is_enabled
               - name: Consulting connection details
-                topicUID: SLNetClientTest_consulting_connection_details
+                topicUid: SLNetClientTest_consulting_connection_details
               - name: Consulting Correlation information
-                topicUID: SLNetClientTest_consulting_correlation_info
+                topicUid: SLNetClientTest_consulting_correlation_info
               - name: Consulting license information for a DMA
-                topicUID: SLNetClientTest_consulting_license_info
+                topicUid: SLNetClientTest_consulting_license_info
               - name: Consulting replication information for other DMAs in a DMS
-                topicUID: SLNetClientTest_consulting_replication_info
+                topicUid: SLNetClientTest_consulting_replication_info
               - name: Consulting the trend data inspector
-                topicUID: SLNetClientTest_trend_data_inspector
+                topicUid: SLNetClientTest_trend_data_inspector
               - name: Creating a dump file for a particular process
-                topicUID: SLNetClientTest_creating_dump_for_process
+                topicUid: SLNetClientTest_creating_dump_for_process
               - name: Debugging callback timeout errors
-                topicUID: SLNetClientTest_debugging_callback_timeout_errors
+                topicUid: SLNetClientTest_debugging_callback_timeout_errors
               - name: Exporting data to a CSV file
-                topicUID: SLNetClientTest_exporting_data_to_csv
+                topicUid: SLNetClientTest_exporting_data_to_csv
               - name: Inspecting parameter table rows in SLProtocol and SLElement
-                topicUID: SLNetClientTest_Inspecting_parameter_table_rows
+                topicUid: SLNetClientTest_Inspecting_parameter_table_rows
               - name: Inspecting the active replication buffers
-                topicUID: SLNetClientTest_inspecting_active_replication_buffers
+                topicUid: SLNetClientTest_inspecting_active_replication_buffers
               - name: Inspecting the contents of a table parameter
-                topicUID: SLNetClientTest_Inspecting_the_contents_of_a_table_parameter
+                topicUid: SLNetClientTest_Inspecting_the_contents_of_a_table_parameter
               - name: Inspecting the parameter notification queue
-                topicUID: SLNetClientTest_Inspecting_the_parameter_notification_queue
+                topicUid: SLNetClientTest_Inspecting_the_parameter_notification_queue
               - name: Inspecting the SLNet event subscriptions
-                topicUID: SLNetClientTest_viewing_connection_details
+                topicUid: SLNetClientTest_viewing_connection_details
               - name: Inspecting the stack sizes in SLNet
-                topicUID: SLNetClientTest_Inspecting_the_stack_sizes_in_SLNet
+                topicUid: SLNetClientTest_Inspecting_the_stack_sizes_in_SLNet
               - name: Requesting a list of active merge actions for a protocol
-                topicUID: SLNetClientTest_active_merge_actions_protocols
+                topicUid: SLNetClientTest_active_merge_actions_protocols
               - name: Requesting an estimate of the number of rows for a storage type in the database
-                topicUID: SLNetClientTest_estimate_number_rows_for_storage_type
+                topicUid: SLNetClientTest_estimate_number_rows_for_storage_type
               - name: Requesting information about pending incoming events
-                topicUID: SLNetClientTest_info_pending_incoming_events
+                topicUid: SLNetClientTest_info_pending_incoming_events
               - name: Requesting QAction metrics
-                topicUID: SLNetClientTest_Requesting_QAction_metrics
+                topicUid: SLNetClientTest_Requesting_QAction_metrics
               - name: Retrieving connection info for a particular element
-                topicUID: SLNetClientTest_retrieving_connection_info
+                topicUid: SLNetClientTest_retrieving_connection_info
               - name: Retrieving DCF debug information
-                topicUID: SLNetClientTest_retrieving_dcf_debug_info
+                topicUid: SLNetClientTest_retrieving_dcf_debug_info
               - name: Retrieving information on open GQI sessions
-                topicUID: SLNetClientTest_info_on_open_gqi_sessions
+                topicUid: SLNetClientTest_info_on_open_gqi_sessions
               - name: Tracking DMA communication
-                topicUID: SLNetClientTest_tracking_dma_communication
+                topicUid: SLNetClientTest_tracking_dma_communication
               - name: Verifying sync rules
-                topicUID: SLNetClientTest_verifying_sync_rules
+                topicUid: SLNetClientTest_verifying_sync_rules
               - name: Viewing SLNet calls being sent
-                topicUID: SLNetClientTest_Viewing_SLNet_calls_being_sent
+                topicUid: SLNetClientTest_Viewing_SLNet_calls_being_sent
               - name: Viewing the connection timeout states of an element
-                topicUID: SLNetClientTest_Viewing_the_connection_timeout_states_of_an_element
+                topicUid: SLNetClientTest_Viewing_the_connection_timeout_states_of_an_element
             - name: SLNetClientTest tool advanced procedures
               topicUid: SLNetClientTest_tool_advanced_procedures
               items:
               - name: Aborting a running Automation script
-                topicUID: SLNetClientTest_aborting_running_script
+                topicUid: SLNetClientTest_aborting_running_script
               - name: Changing the grace period for the SLNetCom Notification thread
-                topicUID: SLNetClientTest_grace_period_SLNetCom_notification
+                topicUid: SLNetClientTest_grace_period_SLNetCom_notification
               - name: Changing the number of records in the protocol cache
-                topicUID: SLNetClientTest_changing_number_records_protocol_cache
+                topicUid: SLNetClientTest_changing_number_records_protocol_cache
               - name: Changing the service template child element and child service limitations
-                topicUID: SLNetClientTest_changing_service_template_child_limitations
+                topicUid: SLNetClientTest_changing_service_template_child_limitations
               - name: Checking or modifying the settings related to a Refused DMA state
-                topicUID: SLNetClientTest_refused_dma_state
+                topicUid: SLNetClientTest_refused_dma_state
               - name: Clearing alarms from the SLNet event cache
-                topicUID: SLNetClientTest_clear_from_event_cache
+                topicUid: SLNetClientTest_clear_from_event_cache
               - name: Comparing the views on two Agents in a DMS
-                topicUID: SLNetClientTest_comparing_views_on_two_dmas
+                topicUid: SLNetClientTest_comparing_views_on_two_dmas
               - name: Configuring how long alarm statistics are kept in memory
-                topicUID: SLNetClientTest_configuring_how_long_alarm_statistics
+                topicUid: SLNetClientTest_configuring_how_long_alarm_statistics
               - name: Configuring SMTP
-                topicUID: SLNetClientTest_configuring_SMTP
+                topicUid: SLNetClientTest_configuring_SMTP
               - name: Configuring the frequency of smart baseline calculations
-                topicUID: SLNetClientTest_configuring_frequency_smart_baseline
+                topicUid: SLNetClientTest_configuring_frequency_smart_baseline
               - name: Configuring trend caching
-                topicUID: SLNetClientTest_configuring_trend_caching
+                topicUid: SLNetClientTest_configuring_trend_caching
               - name: Creating an enhanced view
-                topicUID: SLNetClientTest_creating_enhanced_view
+                topicUid: SLNetClientTest_creating_enhanced_view
               - name: Disabling automatic NATS configuration
-                topicUID: SLNetClientTest_disabling_automatic_nats_config
+                topicUid: SLNetClientTest_disabling_automatic_nats_config
               - name: Disabling replication buffering
-                topicUID: SLNetClientTest_disabling_replication_buffering
+                topicUid: SLNetClientTest_disabling_replication_buffering
               - name: Editing the connection string between two DataMiner Agents
-                topicUID: SLNetClientTest_editing_connection_string
+                topicUid: SLNetClientTest_editing_connection_string
               - name: Enabling or disabling protocol buffer serialization
-                topicUID: SLNetClientTest_protocol_buffer_serialization
+                topicUid: SLNetClientTest_protocol_buffer_serialization
               - name: Fine-tuning NATS settings
-                topicUID: SLNetClientTest_finetuning_nats_settings
+                topicUid: SLNetClientTest_finetuning_nats_settings
               - name: Fine-tuning the CPECollectorHelper API timeout
-                topicUID: SLNetClientTest_finetuning_CPECollectorHelper
+                topicUid: SLNetClientTest_finetuning_CPECollectorHelper
               - name: Forcing file synchronization between DMAs
-                topicUID: SLNetClientTest_forcing_file_sync
+                topicUid: SLNetClientTest_forcing_file_sync
               - name: Generating SMIv2 MIB files
-                topicUID: SLNetClientTest_generating_mib_files
+                topicUid: SLNetClientTest_generating_mib_files
               - name: Having RCA chains updated by the DCF engine
-                topicUID: SLNetClientTest_having_rca_chains_updated
+                topicUid: SLNetClientTest_having_rca_chains_updated
               - name: Increasing the maximum upload size for upgrade packages in a DMS
-                topicUID: SLNetClientTest_increasing_max_upload
+                topicUid: SLNetClientTest_increasing_max_upload
               - name: Making DataMiner Cube ignore view updates
-                topicUID: SLNetClientTest_making_Cube_ignore_view_updates
+                topicUid: SLNetClientTest_making_Cube_ignore_view_updates
               - name: Managing base subscriptions
-                topicUID: SLNetClientTest_managing_base_subscriptions
+                topicUid: SLNetClientTest_managing_base_subscriptions
               - name: Managing scheduled tasks for maintenance of a Cassandra database
-                topicUID: SLNetClientTest_managing_scheduled_tasks_maintenance_Cassandra
+                topicUid: SLNetClientTest_managing_scheduled_tasks_maintenance_Cassandra
               - name: Managing trend patterns
-                topicUID: SLNetClientTest_managing_trend_patterns
+                topicUid: SLNetClientTest_managing_trend_patterns
               - name: Modifying the engine ID of a DMA
-                topicUID: SLNetClientTest_modifying_engine_id
+                topicUid: SLNetClientTest_modifying_engine_id
+              - name: Removing a DOM manager
+                topicUid: SLNetClientTest_removing_DOM_Manager
               - name: Removing references to items that no longer exist
-                topicUID: SLNetClientTest_removing_references
+                topicUid: SLNetClientTest_removing_references
               - name: Setting the TTL for database records
-                topicUID: SLNetClientTest_setting_TTL_database
+                topicUid: SLNetClientTest_setting_TTL_database
               - name: Specifying credentials for a shared backup path for Elasticsearch
-                topicUID: SLNetClientTest_credentials_shared_backup_Elasticsearch
+                topicUid: SLNetClientTest_credentials_shared_backup_Elasticsearch
               - name: Triggering a user-defined API
-                topicUID: SLNetClientTest_triggering_api
+                topicUid: SLNetClientTest_triggering_api
         - name: SLOffload tool
           topicUid: SLOffload_tool
         - name: SLSkipAsSourceTool
-          topicUID: SLSkipAsSourceTool
+          topicUid: SLSkipAsSourceTool
         - name: SNMP bandwidth estimation tool
-          topicUID: SNMP_Bandwidth_Estimation_Tool
+          topicUid: SNMP_Bandwidth_Estimation_Tool
         - name: Spectrum simulation protocol
-          topicUID: Spectrum_Simulation_protocol
+          topicUid: Spectrum_Simulation_protocol
         - name: Standalone BPA Executor
-          topicUID: Standalone_BPA_Executor
+          topicUid: Standalone_BPA_Executor
         - name: Standalone Cassandra Backup tool
-          topicUID: Standalone_Cassandra_Backup_Tool
+          topicUid: Standalone_Cassandra_Backup_Tool
         - name: Standalone Cassandra Cluster Installer
-          topicUID: Standalone_Cassandra_Cluster_Installer
+          topicUid: Standalone_Cassandra_Cluster_Installer
         - name: Standalone Elastic Backup tool
-          topicUID: Standalone_Elastic_Backup_Tool
+          topicUid: Standalone_Elastic_Backup_Tool
         - name: Standalone Elasticsearch Cluster Installer
-          topicUID: Standalone_Elasticsearch_Cluster_Installer
+          topicUid: Standalone_Elasticsearch_Cluster_Installer
         - name: Sync Check
-          topicUID: Sync_Check
+          topicUid: Sync_Check
         - name: Verify Cluster Events Tool
-          topicUID: Verify_Cluster_Events_Tool
+          topicUid: Verify_Cluster_Events_Tool
         - name: VerifyClusterPorts.dmupgrade
-          topicUID: VerifyClusterPortsdmupgrade
+          topicUid: VerifyClusterPortsdmupgrade
         - name: Verify NATS is Running
-          topicUID: VerifyNatsIsRunning
+          topicUid: VerifyNatsIsRunning
     - name: Methods of Procedure
-      topicUID: mops
+      topicUid: mops
       items:
         - name: Changing the default password for Cassandra
-          topicUID: MOP_Changing_the_default_password_for_Cassandra
+          topicUid: MOP_Changing_the_default_password_for_Cassandra
         - name: Changing the password for Elasticsearch
-          topicUID: MOP_Changing_the_password_for_Elasticsearch
+          topicUid: MOP_Changing_the_password_for_Elasticsearch
         - name: Checking the required open ports in a DMS
-          topicUID: MOP_Checking_the_required_open_ports_in_a_DMS
+          topicUid: MOP_Checking_the_required_open_ports_in_a_DMS
         - name: DataMiner Agent sanity check
-          topicUID: MOP_DataMiner_Agent_sanity_check
+          topicUid: MOP_DataMiner_Agent_sanity_check
         - name: Downgrading a DMS
-          topicUID: MOP_Downgrading_a_DMS
+          topicUid: MOP_Downgrading_a_DMS
         - name: Implementing connection strings in a DataMiner System
-          topicUID: MOP_Implementing_connection_strings_in_a_DMS
+          topicUid: MOP_Implementing_connection_strings_in_a_DMS
         - name: Migrating a Failover pair to new hardware
-          topicUID: MOP_Migrating_a_Failover_pair_to_new_hardware
+          topicUid: MOP_Migrating_a_Failover_pair_to_new_hardware
         - name: Replacing a dead Cassandra node (Linux)
-          topicUID: MOP_Replacing_a_dead_Cassandra_node_Linux
+          topicUid: MOP_Replacing_a_dead_Cassandra_node_Linux
         - name: Restoring a MySQL table structure or table data
-          topicUID: MOP_Restoring_a_MySQL_table_structure_or_table_data
+          topicUid: MOP_Restoring_a_MySQL_table_structure_or_table_data
         - name: Restoring a single table in a MySQL database
-          topicUID: MOP_Restoring_a_single_table_in_a_MySQL_database
+          topicUid: MOP_Restoring_a_single_table_in_a_MySQL_database
         - name: Taking a backup using a symbolic link to another drive
-          topicUID: MOP_Taking_a_backup_using_a_symbolic_link_to_another_drive
+          topicUid: MOP_Taking_a_backup_using_a_symbolic_link_to_another_drive
         - name: Tracking the health of a DataMiner System
-          topicUID: MOP_Tracking_the_health_of_a_DMS
+          topicUid: MOP_Tracking_the_health_of_a_DMS
         - name: Upgrading a DMA/DMS
-          topicUID: MOP_Upgrading_a_DMA_DMS
+          topicUid: MOP_Upgrading_a_DMA_DMS
         - name: Upgrading Elasticsearch from one minor version to another
-          topicUID: MOP_Upgrading_Elasticsearch_from_one_minor_version_to_another
+          topicUid: MOP_Upgrading_Elasticsearch_from_one_minor_version_to_another
     - name: Naming of elements, services, views, etc.
       topicUid: NamingConventions
       items:
@@ -3414,18 +3433,18 @@
         - name: Offline demo license for DMA to be installed by user
           topicUid: Offline_demo_license_for_DMA_to_be_installed_by_user
     - name: Soft-launch options
-      topicUID: SoftLaunchOptions
+      topicUid: SoftLaunchOptions
       items: 
         - name: Activating soft-launch options
-          topicUID: Activating_Soft_Launch_Options
+          topicUid: Activating_Soft_Launch_Options
         - name: Overview of soft-launch options
-          topicUID: Overview_of_Soft_Launch_Options
+          topicUid: Overview_of_Soft_Launch_Options
         - name: Activating SLProtocol as a 64-bit process
-          topicUID: Activating_SLProtocol_as_a_64_Bit_Process
+          topicUid: Activating_SLProtocol_as_a_64_Bit_Process
     - name: DataMiner Extension Modules
-      topicUID: DataMinerExtensionModules
+      topicUid: DataMinerExtensionModules
     - name: Custom branding
-      topicUID: Custom_branding
+      topicUid: Custom_branding
     - name: DataMiner metrics
       topicUid: dataminer_metrics
       items:
@@ -3475,6 +3494,8 @@
           topicUid: service_profile_benchmarks
         - name: Service & Resource Management benchmarks
           topicUid: service_resource_management_benchmarks
+        - name: User-defined API benchmarks
+          topicUid: user-defined_API_benchmarks
         - name: View benchmarks
           topicUid: view_benchmarks
         - name: Visual Overview benchmarks

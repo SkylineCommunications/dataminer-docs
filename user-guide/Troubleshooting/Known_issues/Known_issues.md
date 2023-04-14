@@ -5,6 +5,8 @@ uid: Known_issues
 
 | Issue | DataMiner version | Date added |
 |--|--|--|
+| [DataMiner keeps trying to restart when Elasticsearch is unavailable](xref:KI_Restart_loop_when_Elasticsearch_unavailable) | DataMiner 10.3 main and feature releases | April 11, 2023 |
+| [SRM - Auto Select Resource not read for silent booking](xref:KI_SRM_Auto_Select_Resource_Not_Read) | SRM 1.2.30 CU2 | March 29, 2023 |
 | [IP address in SAN field of TLS certificate ignored in Windows 2012 R2](xref:KI_Win2012R2_ignores_IP_in_SAN_field) | Systems using Windows 2012 R2 | March 20, 2023 |
 | [GenIf folder takes up too much disk space](xref:KI_GenIf_Folder_Growing_In_Size) | From DataMiner 10.1.0/10.0.13 onwards | March 15, 2023 |
 | [Problem with booking automation and function DVE deactivation](xref:KI_SRM_booking_events_issue) | SRM setups with DataMiner version below 10.3.0/10.3.2 | March 10, 2023 |

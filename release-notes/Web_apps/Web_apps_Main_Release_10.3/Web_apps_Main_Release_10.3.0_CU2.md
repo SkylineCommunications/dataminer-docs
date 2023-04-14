@@ -2,10 +2,10 @@
 uid: Web_apps_Main_Release_10.3.0_CU2
 ---
 
-# DataMiner web apps Main Release 10.3.0 CU2 – Preview
+# DataMiner web apps Main Release 10.3.0 CU2
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 > For release notes for this release that are not related to the web applications, see [General Main Release 10.3.0 CU2](xref:General_Main_Release_10.3.0_CU2).
@@ -25,6 +25,12 @@ In the *Monitoring* app, from now on, elements, services and views opened by cli
 In the query builder, from now on, when a query node option only has a single value, that option will no longer be displayed in a selection box.
 
 For example, up to now, when you selected the *Get elements* data source, followed by the *Aggregate* operator, the method selection box would display "Get the". This will no longer be the case.
+
+#### GQI data sources that require an Elasticsearch database will now use GetInfoMessage(InfoType.Database) to check whether Elasticsearch is available [ID_35907]
+
+<!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
+
+Up to now, GQI data sources that require an Elasticsearch database used the `DatabaseStateRequest<ElasticsearchState>` message to check whether Elasticsearch was available. From now on, they will use the `GetInfoMessage(InfoType.Database)` message instead.
 
 #### Web apps: Enhanced error handling when executing an interactive Automation script by clicking a DOM button [ID_35909]
 
@@ -64,6 +70,12 @@ When GQI components tried to execute an empty query, up to now, they would keep 
 
 When you duplicated a component, the size of the duplicate would incorrectly be limited to 30 rows. From now on, when you duplicate a component, the duplicate will have the same size as the original.
 
+#### Dashboards app & Low-code apps - GQI components: Open sessions would not be closed when a new query was triggered [ID_35824]
+
+<!-- MR 10.2.0 [CU15]/10.3.0 [CU2] - FR 10.3.5 -->
+
+When a GQI component still had a session open when a new query was triggered, in some cases, the open session would incorrectly not be closed.
+
 #### Dashboards app: Problem when using the search box on a mobile device [ID_35825]
 
 <!-- MR 10.3.0 [CU2] - FR 10.3.5 -->
@@ -85,6 +97,12 @@ Also, when a multiple-selection drop-down field of a DOM instance was added to a
 In some cases, a table component could appear to be empty when you rapidly switched between visualizations.
 
 Also, an error could be thrown when you tried to add an invalid query to a component.
+
+#### Dashboards app & Low-code apps: Problem with 'Share' button and subheader items on mobile devices [ID_35839]
+
+<!-- MR 10.3.0 [CU2] - FR 10.3.5 -->
+
+When you opened a dashboard or a low-code app on a mobile device, the *Share* button would not be available and the subheader items would not be hidden correctly.
 
 #### Web apps: Problem when opening a visual overview [ID_35841]
 
@@ -136,11 +154,29 @@ A number of issues with regard to the "Loading" indicator have been fixed.
 
 In some cases, a query that was linked to feeds would not apply the feed changes in the visualizations unless it was opened in edit mode.
 
+#### Dashboards app & Low-code apps - GQI components: Problems when a GQI request failed [ID_35904]
+
+<!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
+
+When a GQI request failed, some GQI components would show either an unrelated error or no error at all, while other GQI components would show a correct error but incorrect data.
+
+#### Dashboards app & Low-code apps: Performance could decrease when State components had their Design option set to 'Auto size' [ID_35905]
+
+<!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
+
+Up to now, overall performance of a dashboard or a low-code app could decrease when it contained *State* components of which the *Design* option was set to "Auto size". A number of enhancements have now been made to prevent performance from decreasing in this case.
+
 #### Web apps: Login button would incorrectly be disabled on Edge and Chrome [ID_35906]
 
 <!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
 
 Up to now, in some cases, the login button would incorrectly be disabled when you opened a web app in Microsoft Edge or Google Chrome.
+
+#### Monitoring app - Visual Overview: Clicking a region that opened an element, service or view card would incorrectly cause the Monitoring app to reload [ID_35908]
+
+<!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
+
+When, in the Monitoring app, you clicked a region in a visual overview that opened an element, service or view card, up to now, the entire Monitoring app would reload. From now on, when you click a region in a visual overview that opens an element, service or view card, the card in question will open but the Monitoring app will no longer be reloaded.
 
 #### Dashboards app & Low-code apps - Clock components: Clock time would not update when set to server time [ID_35912]
 
@@ -153,3 +189,27 @@ When a clock component (analog or digital) was set to use server time, the clock
 <!-- MR 10.3.0 [CU2] - FR 10.3.5 -->
 
 When you first selected an action with a single component, which was selected automatically, and then selected an action with multiple components, up to now, both the action selection box and the component selection box would incorrectly be cleared.
+
+#### Low-code apps: Page names and panel names could incorrectly be empty [ID_35960]
+
+<!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
+
+Up to now, page names and panel names could incorrectly be empty. From now on, this will no longer be allowed.
+
+#### Dashboards app & Low-code apps: Filter box of visualizations panel would not reset [ID_36000]
+
+<!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
+
+When you reloaded the editor, by clicking the *Refresh* button while editing a dashboard or by switching pages while editing a low-code app, or when you switched to edit mode after previewing or publishing a low-code app, the filter box of the visualizations panel would incorrectly not be reset.
+
+#### Dashboards apps & Low-code apps: Components would incorrectly make their own data available as feeds [ID_36008]
+
+<!-- MR 10.3.0 [CU2] - FR 10.3.5 -->
+
+Up to now, components would incorrectly make their own data available as feeds.
+
+#### Dashboards app & Low-code apps - Table component: 'Restore initial view' button would incorrectly remain visible when switching to an empty query [ID_36010]
+
+<!-- MR 10.3.0 [CU2] - FR 10.3.5 -->
+
+When, in a table component, you switched from a non-empty query to an empty query, the *Restore initial view* button would incorrectly remain visible in the component header.

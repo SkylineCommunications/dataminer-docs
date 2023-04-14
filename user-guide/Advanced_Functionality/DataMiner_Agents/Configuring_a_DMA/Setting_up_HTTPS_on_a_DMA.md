@@ -101,6 +101,9 @@ Redirecting HTTP traffic to HTTPS is recommended when external systems (or clien
 
    1. Under *Pattern*, fill in the following pattern: *(.\*)*
 
+      > [!NOTE]
+      > Make sure to include the parentheses.
+
    1. Under *Conditions*, click *Add*, and add the following condition:
 
       - **Input**: {HTTPS}

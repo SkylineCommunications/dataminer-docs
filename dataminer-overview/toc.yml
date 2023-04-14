@@ -29,11 +29,11 @@
       topicUid: Overview_DCP
       items:
         - name: DevOps
-          topicUID: Overview_DevOps
+          topicUid: Overview_DevOps
         - name: Platform Services
-          topicUID: Overview_Platform_services
+          topicUid: Overview_Platform_services
         - name: Collaboration
-          topicUID: Overview_Collaboration
+          topicUid: Overview_Collaboration
     - name: Agile partnership
       topicUid: Overview_Agile_Partnership_intro
       items:
@@ -44,24 +44,26 @@
         - name: Agile scope-based deployment
           topicUid: Overview_Agile_Partnership_scope_based_deployment
     - name: DevOps
-      topicUID: Overview_DevOps_index
+      topicUid: Overview_DevOps_index
       items:
         - name: DataMiner DevOps Professional Program
-          topicUID: DataMiner_Devops_Professionals
+          topicUid: DataMiner_Devops_Professionals
           items:
             - name: What is it?
-              topicUID: What_is_the_DevOps_Professionals_Program
+              topicUid: What_is_the_DevOps_Professionals_Program
             - name: Benefits
-              topicUID: Benefits_DevOps_Professionals_Program
+              topicUid: Benefits_DevOps_Professionals_Program
+            - name: Benefits for business and tech partners
+              topicUid: Benefits_Business_and_Tech_Partners
             - name: Required skill sets
-              topicUID: Skill_Sets_DevOps_Professionals_Program
+              topicUid: Skill_Sets_DevOps_Professionals_Program
         - name: DataMiner DevOps Enablement Service
-          topicUID: DataMiner_DevOps_Enablement
+          topicUid: DataMiner_DevOps_Enablement
           items:
             - name: What is DevOps Enablement?
-              topicUID: What_is_DataMiner_DevOps_Enablement
+              topicUid: What_is_DataMiner_DevOps_Enablement
             - name: The DataMiner DevOps Professional Program
-              topicUID: DevOps_Enablement_and_the_DevOps_Professional_program
+              topicUid: DevOps_Enablement_and_the_DevOps_Professional_program
     - name: Training courses and certification
       topicUid: Overview_Training_intro
       items:
@@ -76,14 +78,14 @@
         - name: Agile Awareness Training
           topicUid: Overview_Training_agile_aw
     - name: Pricing
-      topicUID: Pricing
+      topicUid: Pricing
       items:
       - name: Commercial models summary
-        topicUID: Pricing_Commercial_Models
+        topicUid: Pricing_Commercial_Models
       - name: Usage-based services
-        topicUID: Pricing_Usage_based_service
+        topicUid: Pricing_Usage_based_service
       - name: Perpetual-Use Licensing
-        topicUID: Pricing_Perpetual_Use_Licensing
+        topicUid: Pricing_Perpetual_Use_Licensing
     - name: Support Services
       topicUid: Overview_Support_DMS_M_and_S
       items:
@@ -107,21 +109,21 @@
         - name: Tender compliancy (licenses / engineering days)
           topicUid: Overview_Compliance_Statements_Tender_Compliancy
     - name: DataMiner Partner Program
-      topicUID: Partner_Program
+      topicUid: Partner_Program
       items:
         - name: Becoming a DataMiner Partner
-          topicUID: Becoming_a_DataMiner_Partner
+          topicUid: Becoming_a_DataMiner_Partner
         - name: Getting started with the Partner Program
-          topicUID: Getting_Started_with_the_Partner_Program
+          topicUid: Getting_Started_with_the_Partner_Program
           items:
             - name: Sales and Marketing
-              topicUID: Sales_and_Marketing
+              topicUid: Sales_and_Marketing
             - name: Service delivery
-              topicUID: Service_Delivery
+              topicUid: Service_Delivery
             - name: Partnership governance
-              topicUID: Partnership_Governance
-            - name: Deal Registration
-              topicUID: Deal_Registration
+              topicUid: Partnership_Governance
+        - name: Deal Registration
+          topicUid: Deal_Registration
     - name: DataMiner Professional Services
       topicUid: Part52ProfessionalServices
       items:
@@ -167,7 +169,7 @@
       topicUid: FAQs
       items:
       - name: General questions
-        topicUID: FAQs_General
+        topicUid: FAQs_General
         items:
         - name: What is Skyline's mission and vision
           topicUid: FAQ_MissionVision
@@ -198,17 +200,17 @@
         - name: Which languages are available in the DataMiner Cube client
           topicUid: FAQ_DataMiner_Cube_languages
       - name: Connectors
-        topicUID: FAQs_Connectors
+        topicUid: FAQs_Connectors
         items:
         - name: What is the standard lead time for new connectors
           topicUid: FAQ_Standard_lead_time_new_connectors
         - name: What are the limitations when using the Generic SNMP connector as opposed to a dedicated connector
           topicUid: FAQ_Limitations_generic_SNMP_connector
         - name: What are the standard operating procedures for connector deployment?
-          topicUID: FAQ_SOP_connectors
+          topicUid: FAQ_SOP_connectors
       - name: Commercial models
-        topicUID: FAQs_Pricing
+        topicUid: FAQs_Pricing
       - name: Support Services
-        topicUID: FAQs_Support_Services
+        topicUid: FAQs_Support_Services
       - name: dataminer.services
-        topicUID: FAQ_DCP
+        topicUid: FAQ_DCP
