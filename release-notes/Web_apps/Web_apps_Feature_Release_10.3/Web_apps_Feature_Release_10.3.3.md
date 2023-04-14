@@ -131,6 +131,12 @@ From now on, a chart component will display an error when the GQI query that ret
 
 The GQI data sources *Get elements* and *Get services* will now also return alarm states.
 
+#### Support for GQI queries from Data Aggregator with ad hoc data sources [ID_35526]
+
+<!-- MR 10.4.0 - FR 10.3.3 -->
+
+GQI now supports queries from [Data Aggregator](xref:Data_Aggregator_DxM) that use ad hoc data sources.
+
 #### Enhanced performance when opening a web app [ID_35549]
 
 <!-- MR 10.2.0 [CU12] - FR 10.3.3 -->

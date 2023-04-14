@@ -72,3 +72,5 @@ The current settings structure (with regards to `DomManager`) is as follows:
 - There are no license checks when module settings are added.
 
 - From DataMiner 10.3.2/10.4.0 onwards, the `ModuleSettings` object also has [the *ITrackBase* properties](xref:DOM_objects#itrackbase-properties).
+
+- From DataMiner 10.3.5/10.4.0 onwards, you can remove a DOM manager from your system using [the SLNetClientTest tool](xref:SLNetClientTest_removing_DOM_Manager).

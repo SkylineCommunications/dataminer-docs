@@ -26,25 +26,12 @@ When using external authentication via SAML, this means that all existing `Asser
 <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://dataminer.example.com/API/" index="1" isDefault="true"/>
 ```
 
-> [!NOTE]
-> In this element, `https://dataminer.example.com` has to be replaced with the IP address or the DNS name of your DataMiner System. Make sure the endpoint address in the `Location` attribute matches the address you specified when you registered DataMiner with the identity provider. The way you configure this will depend on the identity provider you are using (for example, in the case of Azure AD, this address has to be entered in the *Entity ID* field).
-
-Also, when using external authentication via SAML, the `<system.webServer>` element of the `C:\Skyline DataMiner\Webpages\API\Web.config` file has to contain the following:
-
-```xml
-<defaultDocument>
-   <files>
-      <add value="default.aspx" />
-   </files>
-</defaultDocument>
-```
+In this element, `https://dataminer.example.com` has to be replaced with the IP address or the DNS name of your DataMiner System. Make sure the endpoint address in the `Location` attribute matches the address you specified when you registered DataMiner with the identity provider. The way you configure this will depend on the identity provider you are using (for example, in the case of Azure AD, this address has to be entered in the *Entity ID* field).
 
 > [!NOTE]
 >
 > - When using external authentication via SAML, DataMiner should be configured to use HTTPS.
 > - This new authentication app will also be used by DataMiner Cube, but only to authenticate users who want to access a web page stored on a DataMiner Agent, not to authenticate users who log in to Cube itself.
-
-[](#breaking-change-one-single-authentication-app-for-all-web-apps-id_35772-id_35896)
 
 ## Other new features
 
@@ -76,13 +63,38 @@ Up to now, a trend graph with *Trend span* set to "Last 7 days" would always sho
 > [!NOTE]
 > The *Interval* option is only available when *Trend points* is set to "Average (changes only)" or "Average (fixed interval)".
 
-#### Web apps: New action 'Pan to view' [ID_35847]
+#### GQI: New 'Then sort by' query node allows sorting by multiple columns [ID_35807] [ID_35834]
 
 <!-- MR 10.4.0 - FR 10.3.5 -->
 
-In a low-code app, you can now configure a new type of action: *Pan to view*.
+To make sorting more intuitive, the new *Then sort by* node can now be used in combination with the *Sort* node, which has now been renamed to *Sort by*.
 
-When triggered, this action will center the map shown in a specified *Generic map* component on a specified location (defined by a latitude and a longitude).
+Up to now, all sorting had to be configured by means of *Sort* nodes. For example, if you wanted to first sort by column A and then by column B, you had to create a query in the following counter-intuitive way:
+
+1. Data source
+1. Sort by B
+1. Sort by A
+
+or
+
+1. Query X (i.e. Data Source, sorted by B)
+1. Sort by A
+
+From now on, you can create a query in a much more intuitive way. For example, if you want to first sort by column A and then by column B, you can now create a query in the following way:
+
+1. Data source
+1. Sort by A
+1. Then sort by B
+
+Note that, from now on, every *Sort by* node will nullify any preceding *Sort by* node. For example, in the following query, the *Sort by B* node will be nullified by the *Sort by A* node, meaning that the result set will only be sorted by column A.
+
+1. Data source
+1. Sort by B
+1. Sort by A
+
+> [!NOTE]
+> The behavior of existing queries (using e.g. *Sort by B* followed by *Sort by A*) will not be altered in any way. Their syntax will automatically be adapted when they are migrated to the most recent GQI version.
+> For example, an existing query using *Sort by B* followed by *Sort by A* will use *Sort by A* followed by *Then sort by B* after being migrated.
 
 #### Dashboards app & Low-code apps: New 'Text input' feed [ID_35902]
 
@@ -150,6 +162,74 @@ Also, up to now, when an *Open monitoring card* action was configured in the hea
 
 When a dashboard or a low-code app is in dark mode, from now on, there will be a higher color contrast between rows that are selected or hovered over and rows that are not.
 
+#### GQI: Data source rows now have a unique key [ID_35999]
+
+<!-- MR 10.4.0 - FR 10.3.5 -->
+
+GQI data source rows now have an internal key. This key is unique (per data source) and cannot be null or empty.
+
+> [!NOTE]
+> At present, you can only interact with these keys in [ad hoc data sources](#ad-hoc-data-source-keys) and [custom GQI operators](#custom-gqi-operator-keys).
+
+##### Ad hoc data source keys
+
+The `GQIRow` class has a new string property named `Key`. The key of a newly created row in an ad hoc data source can be specified using the following constructor:
+
+```csharp
+GQIRow(string key, GQICell[] cells)
+```
+
+> [!NOTE]
+>
+> - Although this constructor will throw an exception when a key is null or empty, the author of the data source is responsible for making sure that keys are unique.
+> - If you don't pass the `key` argument when creating a row, the row index will be used as key.
+
+##### Custom GQI operator keys
+
+The `GQIEditableRow` class has a new string property named `Key`.
+
+At present, this property can only be used to access the row key of an existing row. Keys of custom GQI operators cannot be modified yet.
+
+##### Built-in data source keys
+
+All rows of built-in data sources will automatically be assigned a unique key based on the row index.
+
+##### Join operator keys
+
+When two rows are joined, the key of the joined row will be a concatenation of the left row key and the right row key, separated by a forward slash:
+
+```txt
+<left-key>/<right-key>
+```
+
+In case of a left, right or outer join, when there is no match, either the left or right key will be an empty string. This is the reason why row keys cannot be empty. By allowing empty row keys we would risk creating duplicate keys each time rows are joined.
+
+> [!NOTE]
+> In keys of joined rows, any forward slashes and backward slashes will be escaped:
+>
+> - Any forward slash within the left or right key will be escaped by a backslash: `/` will become `\/`
+> - Any backslash within the left or right key will be escaped by a second backslash: `\` will become `\\`
+
+##### Aggregation operator keys
+
+When no grouping is involved, the single row resulting from an aggregation operation will have a static row key equal to "0".
+
+When grouping is involved, the single row resulting from an aggregation operation will have a key that is the concatenation of all the group values, separated by forward slashes.
+
+For example, in case of the following query ...
+
+`Data source -> Aggregate -> Group by A -> Group by B -> Group by C`
+
+... the resulting row keys will look like this ...
+
+```txt
+<group-value-a>/<group-value-b>/<group-value-c>
+```
+
+In order to avoid duplicate group keys when there is only a single *Group By* operation, any empty values will be replaced by a single forward slash.
+
+Also, any slashes in the group values will be escaped before they are joined. For more information about escaping slashes, see [Join operator keys](#join-operator-keys).
+
 ## Changes
 
 ### Enhancements
@@ -159,6 +239,13 @@ When a dashboard or a low-code app is in dark mode, from now on, there will be a
 <!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
 
 In the *Monitoring* app, from now on, elements, services and views opened by clicking a Visio shape will open in the same tab instead of a new tab.
+
+#### GQI: Raw datetime values retrieved from Elasticsearch will now be converted to UTC [ID_35784]
+
+<!-- MR 10.4.0 - FR 10.3.5 -->
+<!-- Not added to MR 10.4.0 -->
+
+Up to now, after each step in a GQI query, raw datetime values were always converted to the time zone that was specified in the query options. From now on, raw datetime values retrieved from Elasticsearch will be converted to UTC instead. The time zone specified in the query options will now only be used when converting a raw datetime value to a display value.
 
 #### Monitoring app - Histogram: Sidebar enhancements [ID_35797]
 
@@ -195,6 +282,12 @@ In the query builder, from now on, when a query node option only has a single va
 
 For example, up to now, when you selected the *Get elements* data source, followed by the *Aggregate* operator, the method selection box would display "Get the". This will no longer be the case.
 
+#### GQI data sources that require an Elasticsearch database will now use GetInfoMessage(InfoType.Database) to check whether Elasticsearch is available [ID_35907]
+
+<!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
+
+Up to now, GQI data sources that require an Elasticsearch database used the `DatabaseStateRequest<ElasticsearchState>` message to check whether Elasticsearch was available. From now on, they will use the `GetInfoMessage(InfoType.Database)` message instead.
+
 #### Web apps: Enhanced error handling when executing an interactive Automation script by clicking a DOM button [ID_35909]
 
 <!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
@@ -222,6 +315,16 @@ A number of security enhancements have been made.
 <!-- MR 10.4.0 - FR 10.3.5 -->
 
 In some cases, it would not be possible to log in to a web app (e.g. Dashboards, Monitoring, Jobs, etc.) using external authentication.
+
+#### GQI: GetArgumentValue method would throw an exception when used to access the value of an optional argument [ID_35783]
+
+<!-- MR 10.4.0 - FR 10.3.5 -->
+
+When the `GetArgumentValue<T>(string name)` method was used in an ad hoc data source or a custom operator script to access the value of an optional argument that had not been passed, the following exception would be thrown:
+
+```txt
+Could not find argument with name '{argument.Name}'.
+```
 
 #### Dashboards app & Low-code apps - GQI components: Problem when executing an empty query [ID_35803]
 
@@ -415,3 +518,13 @@ Up to now, components would incorrectly make their own data available as feeds.
 <!-- MR 10.3.0 [CU2] - FR 10.3.5 -->
 
 When, in a table component, you switched from a non-empty query to an empty query, the *Restore initial view* button would incorrectly remain visible in the component header.
+
+#### Dashboards app & Low-code apps: Incorrect error could appear when editing a dashboard or low-code app [ID_36132]
+
+<!-- MR 10.4.0 - FR 10.3.5 [CU0] -->
+
+When editing a dashboard or a low-code app, in some cases, the following error could incorrectly appear:
+
+```txt
+The dashboard has not been saved: Invalid revision sequence, the dashboard might have been edited by another user.
+```

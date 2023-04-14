@@ -170,7 +170,7 @@ From now on, when you activate the follow mode by specifying the *EnableFollowMo
 
 #### Dashboards app: Problem with width of PDF reports [ID_35531]
 
-<!-- MR 10.2.0 [CU13] - FR 10.3.4 -->
+<!-- MR 10.2.0 [CU13]/10.3.0 [CU3] - FR 10.3.4 -->
 
 When a PDF report was generated via Automation or Scheduler, in some cases, its width would be set incorrectly.
 
