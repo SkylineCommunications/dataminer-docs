@@ -1066,6 +1066,8 @@
           items:
           - name: Installing Cassandra on a Linux machine
             topicUid: Installing_Cassandra
+          - name: Setting up an Azure Managed Instance for Apache Cassandra
+            topicUid: Azure_Managed_Instance_for_Apache_Cassandra
           - name: Scaling a Cassandra cluster database
             topicUid: Scale_Cassandra_Database
           - name: Maintaining a Cassandra cluster
