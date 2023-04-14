@@ -2,10 +2,10 @@
 uid: Web_apps_Main_Release_10.3.0_CU2
 ---
 
-# DataMiner web apps Main Release 10.3.0 CU2 – Preview
+# DataMiner web apps Main Release 10.3.0 CU2
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 > For release notes for this release that are not related to the web applications, see [General Main Release 10.3.0 CU2](xref:General_Main_Release_10.3.0_CU2).
@@ -25,6 +25,12 @@ In the *Monitoring* app, from now on, elements, services and views opened by cli
 In the query builder, from now on, when a query node option only has a single value, that option will no longer be displayed in a selection box.
 
 For example, up to now, when you selected the *Get elements* data source, followed by the *Aggregate* operator, the method selection box would display "Get the". This will no longer be the case.
+
+#### GQI data sources that require an Elasticsearch database will now use GetInfoMessage(InfoType.Database) to check whether Elasticsearch is available [ID_35907]
+
+<!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
+
+Up to now, GQI data sources that require an Elasticsearch database used the `DatabaseStateRequest<ElasticsearchState>` message to check whether Elasticsearch was available. From now on, they will use the `GetInfoMessage(InfoType.Database)` message instead.
 
 #### Web apps: Enhanced error handling when executing an interactive Automation script by clicking a DOM button [ID_35909]
 

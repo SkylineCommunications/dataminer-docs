@@ -176,3 +176,15 @@ When the Skyline CCAP Platform WM element was restarted while it was writing a f
 #### Generic Kafka Consumer: Incorrect timestamp in file name caused files to be ignored by Workflow Manager [ID_36071]
 
 If not much data was retrieved during a polling cycle, it could occur that the timestamp in a file name was older than the actual file creation time. This could cause the Workflow Manager to ignore certain files in some circumstances. To prevent this, the timestamps will now align with the file creation time.
+
+#### Negative longitude/latitude value not shown for Cox CBR 8 on Node Segments page [ID_36079]
+
+Previously, if a longitude or latitude value for a CBR 8 was negative, this was displayed as N/A on the Node Segments page. Now all values will be shown, even negative ones.
+
+#### Smart PHY issue causing outdated data to be displayed [ID_36080]
+
+In some cases, a problem with Smart PHY could cause no new file to be exported, so that outdated data were displayed in the system.
+
+#### CBR 8 data retrieved through CLI command not visualized correctly [ID_36081]
+
+It could occur that the information in the CBR 8 that was retrieved through the CLI command was not visualized correctly, so that users had to manually update the data in order to see the correct information.

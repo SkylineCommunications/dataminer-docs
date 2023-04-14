@@ -2,10 +2,10 @@
 uid: General_Main_Release_10.3.0_CU2
 ---
 
-# General Main Release 10.3.0 CU2 – Preview
+# General Main Release 10.3.0 CU2
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 > For information on how to upgrade DataMiner, see [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent).
@@ -37,12 +37,6 @@ From now on, SLAnalytics will also take into account first-time alarm template a
 <!-- MR 10.3.0 [CU2] - FR 10.3.5 -->
 
 Overall performance of SLAnalytics has increased because of a number of enhancements made to its caching mechanism.
-
-#### GQI data sources that require an Elasticsearch database will now use GetInfoMessage(InfoType.Database) to check whether Elasticsearch is available [ID_35907]
-
-<!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
-
-Up to now, GQI data sources that require an Elasticsearch database used the `DatabaseStateRequest<ElasticsearchState>` message to check whether Elasticsearch was available. From now on, they will use the `GetInfoMessage(InfoType.Database)` message instead.
 
 #### Improved error handling when elements go into an error state [ID_35944]
 

@@ -7,7 +7,9 @@ uid: Query_data_sources
 When you create a query, you can use one or more of the data sources detailed below.
 
 > [!NOTE]
-> Custom properties that are marked as read-only, e.g. the *System Name* and *System Type* alarm properties, can be retrieved with a GQI query from DataMiner 10.2.0 \[CU6]/10.2.9 onwards. In addition, from DataMiner 10.2.10/10.3.0 onwards, the *System Name* and *System Type* data are available as a feed with the *Use feed* option (depending on the data source, as mentioned below).
+>
+> - Some data sources can be linked to a feed. From DataMiner 10.3.5/10.4.0 onwards<!--  RN 35837 -->, a link icon is displayed to the right of a selection box if using a feed is possible. Click this icon to select the feed. In earlier DataMiner versions, a *Use feed* checkbox is available for this instead.
+> - Custom properties that are marked as read-only, e.g. the *System Name* and *System Type* alarm properties, can be retrieved with a GQI query from DataMiner 10.2.0 \[CU6]/10.2.9 onwards. In addition, from DataMiner 10.2.10/10.3.0 onwards, the *System Name* and *System Type* data are available as a feed (depending on the data source, as mentioned below).
 
 ## Get alarms
 
@@ -54,7 +56,7 @@ Retrieves a parameter table from the Elasticsearch database using the specified 
 
 Retrieves the selected parameter table from the element with the specified DataMiner ID and element ID.
 
-From DataMiner 10.2.0/10.1.5 onwards, a *Use feed* checkbox is available that allows you to retrieve a parameter table from an existing feed in the dashboard.
+From DataMiner 10.2.0/10.1.5 onwards, you can retrieve a parameter table from an existing feed in the dashboard. Prior to DataMiner 10.3.5/10.4.0<!--  RN 35837 -->, you can do so using the *Use feed* checkbox. In more recent DataMiner versions, you can instead click the link icon to the right of the relevant selection box.
 
 From DataMiner 10.2.0/10.2.1 onwards, an *Update data* option is available in the *Settings* pane if you use this data source. When you enable this, the component will automatically refresh the data when changes are detected.
 
@@ -69,7 +71,7 @@ Available from DataMiner 10.3.3/10.4.0 onwards. Retrieves the parameter relation
 
 Retrieves the selected parameters for the specified protocol or the parameters linked to the specified profile definition. Note that if parameters are displayed based on a specific protocol, it is not possible to combine a table parameter with other parameters, and only column parameters from the same table can be displayed in the same query.
 
-From DataMiner 10.2.0/10.1.5 onwards, if a protocol and version have been specified, a *Use feed* checkbox is available that allows you to also retrieve parameters from an existing feed in the dashboard.
+From DataMiner 10.2.0/10.1.5 onwards, if a protocol and version have been specified, you can retrieve parameters from an existing feed in the dashboard. Prior to DataMiner 10.3.5/10.4.0<!--  RN 35837 -->, you can do so using the *Use feed* checkbox. In more recent DataMiner versions, you can instead click the link icon to the right of the relevant selection box.
 
 ## Get services
 
