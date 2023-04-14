@@ -2,10 +2,10 @@
 uid: Web_apps_Feature_Release_10.3.5
 ---
 
-# DataMiner web apps Feature Release 10.3.5 – Preview
+# DataMiner web apps Feature Release 10.3.5
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 > For release notes for this release that are not related to the web applications, see [General Feature Release 10.3.5](xref:General_Feature_Release_10.3.5).
@@ -518,3 +518,13 @@ Up to now, components would incorrectly make their own data available as feeds.
 <!-- MR 10.3.0 [CU2] - FR 10.3.5 -->
 
 When, in a table component, you switched from a non-empty query to an empty query, the *Restore initial view* button would incorrectly remain visible in the component header.
+
+#### Dashboards app & Low-code apps: Incorrect error could appear when editing a dashboard or low-code app [ID_36132]
+
+<!-- MR 10.4.0 - FR 10.3.5 [CU0] -->
+
+When editing a dashboard or a low-code app, in some cases, the following error could incorrectly appear:
+
+```txt
+The dashboard has not been saved: Invalid revision sequence, the dashboard might have been edited by another user.
+```
