@@ -967,7 +967,7 @@ namespace Skyline.DataMiner.Automation
 
 
 		/// <summary>
-		/// Resets the timeout timer, extending the time the automation script is allowed to execute.
+		/// Resets the timeout timer, extending the time the Automation script is allowed to execute.
 		/// The time can be specified via the <see cref="Timeout"/> property.
 		/// </summary>
 		/// <remarks>When a script reaches the timeout, a <see cref="ScriptTimeoutException"/> will be thrown to stop the execution.</remarks>
