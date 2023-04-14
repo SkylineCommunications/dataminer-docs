@@ -111,7 +111,7 @@ From now on, when no `<DB>` element is specified for a Elasticsearch database, *
 
 When you opened an EPM card by clicking an alarm in the Alarm Console or switched between two EPM cards while the *Topology* pane was open in the sidebar, the topology filters would incorrectly not be updated.
 
-Also, when, on a system where the *Topology* pane was open when you connected to it, you opened a new card or selected an open card, the topology filters would incorrectly not be updated until you navigated to the *Topology* pane and back.
+Also, when, on a system where the *Topology* pane was open when you connected to it, you opened a new card or selected an open card, the topology filters would incorrectly not be updated until you navigated away from the *Topology* pane and back.
 
 #### DataMiner Cube - Alarm Console: Filtered history tab would incorrectly not show information events [ID_36105]
 
