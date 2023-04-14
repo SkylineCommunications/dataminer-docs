@@ -2,10 +2,10 @@
 uid: General_Feature_Release_10.3.5
 ---
 
-# General Feature Release 10.3.5 – Preview
+# General Feature Release 10.3.5
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 >
