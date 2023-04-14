@@ -53,6 +53,14 @@ Server Error in '/Dashboards' Application.
 Could not load file or assembly 'ICSharpCode.SharpZipLib' or one of its dependencies. The located assembly's manifest definition does not match the assembly reference. (Exception from HRESULT: 0x80131040)
 ```
 
+#### DataMiner Cube - EPM: Navigation issues [ID_36089]
+
+<!-- MR 10.2.0 [CU15]/10.3.0 [CU3] - FR 10.3.6 -->
+
+When you opened an EPM card by clicking an alarm in the Alarm Console or switched between two EPM cards while the *Topology* pane was open in the sidebar, the topology filters would incorrectly not be updated.
+
+Also, when, on a system where the *Topology* pane was open when you connected to it, you opened a new card or selected an open card, the topology filters would incorrectly not be updated until you navigated to the *Topology* pane and back.
+
 #### DataMiner Cube - Alarm Console: Filtered history tab would incorrectly not show information events [ID_36105]
 
 <!-- MR 10.2.0 [CU15]/10.3.0 [CU3] - FR 10.3.6 -->
