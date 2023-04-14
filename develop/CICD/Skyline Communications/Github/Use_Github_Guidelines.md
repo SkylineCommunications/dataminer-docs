@@ -56,7 +56,7 @@ The repository name should look like this (using "-" as separator): **{customerA
   - LSO (Life Service Orchestration)
   - D (Dashboards)
   - CF (Companion Files)
-  - T (Tests)
+  - RT (Regression Tests)
   - GQIDS (GQI data source)
   - GQIO (GQI operator)
 
