@@ -248,7 +248,7 @@ When the Cassandra cluster feature is used, you can customize the consistency le
 
 1. In the `<Database>` tag, add the *consistencyLevel="x"* attribute, and set it to the consistency level you want, e.g. *two*.
 
-   The following consistency levels are supported: Any, One, Two, Three, Quorum, All, LocalQuorum, EachQuorum, Serial, LocalSerial, LocalOne. The default setting is "Quorum".
+   The following consistency levels are supported: One, Two, Three, Quorum, All, LocalQuorum, EachQuorum, Serial, LocalSerial, LocalOne. The default setting is "Quorum".
 
    > [!NOTE]
    > Together with the replication factor, the consistency level determines the maximum number of nodes that can be down before data unavailability occurs. For more information, see [Data replication and consistency configuration](xref:replication_and_consistency_configuration).
