@@ -627,7 +627,7 @@ Contains one of the following values:
 |nPa|nanopascal|
 |ns|nanosecond|
 |ns/s|nanoseconds per second (drift)|
-|nt|Nit, non-SI name for candela per square meter|
+|nt|nit (non-SI name for candela per square meter)|
 |nT|nanotesla|
 |nV|nanovolt|
 |nV/Cell|nanovolts per Cell|
