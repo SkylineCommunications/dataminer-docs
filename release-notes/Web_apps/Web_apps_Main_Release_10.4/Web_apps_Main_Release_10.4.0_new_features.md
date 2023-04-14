@@ -303,8 +303,7 @@ From now on, it is possible to edit a shared dashboard.
 
 Also, a *Shared* button will now be displayed in the header bar of a shared dashboard. Clicking this button will open the same pop-up box that opens when you click *Share > Manage share*.
 
-> [!NOTE]
-> It is not possible to rename or to move a shared dashboard.
+> [!NOTE> It is not possible to rename or to move a shared dashboard.
 
 #### Low-code apps: Making an app execute actions by adding action configurations to the app's URL [ID_35979]
 
@@ -316,7 +315,7 @@ To do so, proceed as follows:
 
 1. Configure the action(s) in the action editor.
 1. Click the *Copy actions* button to copy the action configuration to the Windows clipboard as a JSON object.
-1. Add a `#` sign to the URL, and paste the JSON object in the URL.
+1. Add `#{"actions": }` to the URL, and paste the JSON object between the colon (`:`) and the closing bracket (`}`).
 
 When you add an action configuration to a URL of an app, the action(s) will immediately be executed. The app doesn't need to be reloaded. This way, even apps that are embedded in a visual overview can easily be forced to execute actions.
 
