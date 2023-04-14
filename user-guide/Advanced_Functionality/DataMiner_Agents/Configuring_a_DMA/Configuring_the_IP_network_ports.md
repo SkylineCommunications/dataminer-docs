@@ -36,7 +36,7 @@ A DataMiner System makes extensive use of TCP/IP communication. Below, you find 
 >
 > - When viewing Stream via DataMiner Cube, access to port 23/tcp is not required. Access is only required when using a Telnet client. However, note that Telnet is by default disabled from DataMiner 9.6.5 onwards. For more information on how to enable this, see [DataMiner.xml](xref:DataMiner_xml)
 > - Prior to DataMiner 10.0.8, ports 7001, 7199, 9142 and 9160 are also opened during Cassandra installation. However, from DataMiner 10.0.8 onwards, only the essential ports 7000 and 9042 are opened.
-> - Prior to DataMiner 10.1.0 CU10 and 10.2.1, port 8222 is also opened for NATS monitoring. After those versions, we recommend opening the port manually in order to be able to debug NATS. With port 8222 you can extract metrics and performance indicators from the NATS message broker, which in turn may allow you to debug if required.  
+> - Prior to DataMiner 10.1.0 CU10 and 10.2.1, port 8222 is also opened for NATS monitoring. In later DataMiner versions, we recommend opening the port manually in order to be able to debug NATS. With port 8222, you can extract metrics and performance indicators from the NATS message broker, which in turn may allow you to debug if required.
 
 ## Graphical representation of IP communication within a DMS
 
