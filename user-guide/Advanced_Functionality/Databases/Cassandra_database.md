@@ -18,7 +18,7 @@ uid: Cassandra_database
 
 - [Data replication and consistency configuration](xref:replication_and_consistency_configuration)
 
-- [Setting up a Azure Managed Instance for Apache Cassandra cluster](xref:Azure_Managed_Instance_for_Apache_Cassandra)
+- [Setting up an Azure Managed Instance for Apache Cassandra](xref:Azure_Managed_Instance_for_Apache_Cassandra)
 
 > [!NOTE]
 

@@ -9,7 +9,7 @@ uid: Maintain_Cassandra_Cluster
 To ensure that your Cassandra database is running fine, we highly recommend that you create an element using the [Apache Cassandra Cluster Monitor](https://catalog.dataminer.services/result/driver/7500) connector.
 
 > [!NOTE]
-> This is currently not possible for the AWS Keyspaces or Azure Managed Instance for Apache Cassandra.
+> This is currently not supported for AWS Keyspaces or an Azure Managed Instance for Apache Cassandra.
 
 ## Keeping your nodes repaired
 

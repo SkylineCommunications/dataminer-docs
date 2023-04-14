@@ -2,19 +2,21 @@
 uid: Azure_Managed_Instance_for_Apache_Cassandra
 ---
 
-# Azure Managed Instance for Apache Cassandra
+# Setting up an Azure Managed Instance for Apache Cassandra
 
-From DataMiner 10.3.5 onwards, it is possible to use Azure Managed Instance for Apache Cassandra on Azure as an alternative to an on-prem hosted Cassandra cluster.
+From DataMiner 10.3.5/10.4.0 onwards<!-- RN 35830 -->, it is possible to use an Azure Managed Instance for Apache Cassandra as an alternative to a Cassandra cluster hosted on premises.
+
+You will first need to [create your Azure Managed Instance for Apache Cassandra](#creating-your-azure-managed-instance-for-apache-cassandra), and then [connect your DataMiner System to the created instance](#connecting-your-dataminer-system-to-the-azure-managed-instance).
 
 > [!NOTE]
-> Microsoft uses Cassandra Reaper to do automatically repairs of your system. No need to set this up seperatly.
+> Microsoft uses Cassandra Reaper to do automatic repairs of your system. You do not need to set this up separately.
 
 > [!TIP]
-> Full informationon Azure Managed Instance for Apache Cassandra can be found on the website of [Microsoft](https://learn.microsoft.com/en-us/azure/managed-instance-apache-cassandra/).
+> For detailed information on Azure Managed Instance for Apache Cassandra, refer to the [Microsoft documentation](https://learn.microsoft.com/en-us/azure/managed-instance-apache-cassandra/).
 
-## Compatibility
+## Supported Cassandra versions
 
-We support the same versions as we do for Cassandra Cluster on-prem, however versions are limited on Azure.
+DataMiner supports the same Cassandra versions as for an on-premises cluster. However, only the following versions are available on Azure:
 
 - Cassandra 3.11
 - Cassandra 4.0
@@ -23,49 +25,59 @@ We support the same versions as we do for Cassandra Cluster on-prem, however ver
 
 1. Go to [Azure Portal](https://portal.azure.com) and log in.
 
-1. Search for Azure Managed Instance for Apache Cassandra.
+1. Search for *Azure Managed Instance for Apache Cassandra*.
 
-1. At the top of the screen click on **Create**.
+1. At the top of the window, click *Create*.
 
-1. On the **Basics** page, give in the needed information that is required. In order to have low latency, it's best to select a region near your, or the region where your Azure VM's are running. The password that you configure is for the **Cassandra** user in the system.
+1. On the *Basics* page, specify the required information.
 
-1. Continue by clicking **Next: Data center** and configure the kind of servers you want to use for your Cassandra cluster. The **Sku Size** defines what VM will be used, the more resources the more expensive. You can then also select the amount of disks and nodes that you want. The minimal amount of nodes is 3.
+   To have low latency, you should select a region near your own or the region where your Azure VMs are running. The password that you configure is for the *Cassandra* user in the system.
 
-1. If you want to configure a client certificate, you can click on **Advanced** at the top. If you don't need to do this, you can add some **Tags** to the setup so you can easily find it again, or go directly to **Review + Create**.
+1. Click *Next: Data center* and configure the kind of servers you want to use for your Cassandra cluster.
 
-1. On the **Review + Create** page, Azure will do some checks to see if everything is valid. If everything is valid, you'll be able to click on the button **Create**.
+   The *Sku Size* defines which VM will be used (the more resources, the more expensive). You can then also select the number of disks and nodes that you want. The minimum number of nodes is 3.
 
-1. You'll now receive a popup on the Azure website that your cluster is being created, note that this can take a while.
+1. If you want to configure a client certificate, click *Advanced* at the top.
 
-1. Once the creation is finished you'll see your newly created cluster on the page of **Azure Managed Instance for Apache Cassandra**.
+   If you do not need to do this, you can add some tags to the setup so you can easily find it again, or go to the next step.
 
-## Connect to the cluster using DataMiner
+1. Go to the *Review + Create* page.
 
-You are now able to Configure the Cassandra cluster database in System Center. See [Configuring the database settings in Cube](xref:Configuring_the_database_settings_in_Cube).
+   Here, Azure will do some checks to see if everything has been configured correctly.
 
-To do this, some information from the Azure portal is needed.
+1. If everything is valid, click *Create*. Otherwise, adjust your configuration until Azure indicates that it is valid, and then click *Create*.
 
-### Get IP-addressess of the Cassandra Cluster
+A pop-up window on the Azure website will now indicate that your cluster is being created. This can take a while.
 
-1. Go to Azure Managed Instance for Apache Cassandra.
+Once the creation is finished, you will see your newly created cluster on the *Azure Managed Instance for Apache Cassandra* page.
 
-1. Select your cluster you want to configure in DataMiner.
+## Connecting your DataMiner System to the Azure Managed Instance
 
-1. In the **Settings** menu, choose **Data Center**.
+1. Retrieve the necessary information from the Azure portal:
 
-1. Click on the arrow to open the Data Center.
+   1. Go to [Azure Portal](https://portal.azure.com) and log in.
 
-1. Here you can see the IP Addressess to connect to.
+   1. Go to *Azure Managed Instance for Apache Cassandra*.
 
-> [!NOTE]
-> It's best to configure all of the nodes in DataMiner. If a node should go down, DataMiner can still connect to the other nodes.
+   1. Select the cluster you want to connect your DataMiner System to.
 
-## Additional configuration in db.xml
+   1. In the *Settings* menu, select *Data Center*.
 
-The **TLSEnabled** tag is needed in the db.xml configuration file before the connection will work.
+   1. Click the arrow to open the data center, and copy the IP addresses DataMiner will need to connect to.
 
-```xml
-<TLSEnabled>True</TLSEnabled>
-```
+   > [!NOTE]
+   > We recommend configuring all of the nodes in DataMiner. If a node should go down, DataMiner can then still connect to the other nodes.
 
-More information on the db.xml file can be found [here](xref:DB_xml).
+1. Using the copied IP addresses, configure the [Cassandra cluster database in System Center](xref:Configuring_the_database_settings_in_Cube).
+
+1. Stop DataMiner.
+
+1. Open the [DB.xml](xref:DB_xml) configuration file.
+
+1. Set the *TLSEnabled* tag to true in the file and save your changes:
+
+   ```xml
+   <TLSEnabled>True</TLSEnabled>
+   ```
+
+1. Restart DataMiner.
