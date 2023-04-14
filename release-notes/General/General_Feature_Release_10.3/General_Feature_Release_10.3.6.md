@@ -156,3 +156,9 @@ When an element was deleted, no flatline stop events would be generated for para
 <!-- MR 10.4.0 - FR 10.3.6 -->
 
 When a DomInstance was created with an empty status, in some cases, a `MultipleSectionsNotAllowedForSectionDefinition` error could be returned, even when the configuration was correct.
+
+#### Errors would incorrectly state that OpenSearch 2.4 and 2.5 were not supported [ID_36137]
+
+<!-- MR 10.3.0 [CU3] - FR 10.3.6 -->
+
+Although DataMiner supports all OpenSearch 1.x and 2.x versions, in some cases, errors stating that OpenSearch 2.4 and 2.5 were not officially supported would incorrectly be added to the *SLDBConnection.txt* and *SLSearch.txt* log files.

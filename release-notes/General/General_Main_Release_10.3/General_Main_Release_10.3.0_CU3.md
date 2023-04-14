@@ -112,3 +112,9 @@ From now on, when no `<DB>` element is specified for a Elasticsearch database, *
 <!-- MR 10.3.0 [CU3] - FR 10.3.6 -->
 
 When an element was deleted, no flatline stop events would be generated for parameters of that element.
+
+#### Errors would incorrectly state that OpenSearch 2.4 and 2.5 were not supported [ID_36137]
+
+<!-- MR 10.3.0 [CU3] - FR 10.3.6 -->
+
+Although DataMiner supports all OpenSearch 1.x and 2.x versions, in some cases, errors stating that OpenSearch 2.4 and 2.5 were not officially supported would incorrectly be added to the *SLDBConnection.txt* and *SLSearch.txt* log files.
