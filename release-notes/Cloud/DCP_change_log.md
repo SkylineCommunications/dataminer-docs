@@ -8,6 +8,8 @@ The dataminer.services platform gets updated continuously. This change log can h
 
 #### 17 April 2023 - Enhancements - CloudGateway 2.10.6 - General improvements [ID_36136] [ID_36167] [ID_35793] [ID_36158] [ID_35873] [ID_35812]
 
+Changes have been implemented in DataMiner CloudGateway to improve its general stability and to prevent generating exception logs upon shutdown.
+
 #### 7 April 2023 - Fix - CoreGateway 2.12.1 - Long-running deployment fails [ID_36121]
 
 When a user deployed a package on a DataMiner Agent using dataminer.services, and the deployment took more than 3 minutes, it could occur that this failed. In the Admin app, an exception like the following example could be displayed:
