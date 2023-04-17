@@ -316,9 +316,9 @@ In some cases, invalid nodes could get added to a GQI query, causing run-time er
 
 #### Web apps: Problem with single sign-on when embedded in Cube [ID_36049]
 
-<!-- MR 10.4.0 - FR 10.3.6 -->
+<!-- MR 10.4.0 - FR 10.3.5 [CU0] -->
 
-When the *Dashboards*, *Jobs* or *Ticketing* app was embedded in DataMiner Cube, in some cases, users would incorrectly be prompted to log in to the app.
+When the *Dashboards*, *Jobs*, or *Ticketing* app was embedded in DataMiner Cube, in some cases, users would incorrectly be prompted to log in to the app.
 
 #### Dashboards app & Low-Code Apps: Incorrect error could appear when editing a dashboard or low-code app [ID_36132]
 

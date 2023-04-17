@@ -122,12 +122,6 @@ When you generated a PDF of a dashboard that contained a table component showing
 
 In some cases, invalid nodes could get added to a GQI query, causing run-time errors to be thrown.
 
-#### Web apps: Problem with single sign-on when embedded in Cube [ID_36049]
-
-<!-- MR 10.4.0 - FR 10.3.6 -->
-
-When the *Dashboards*, *Jobs* or *Ticketing* app was embedded in DataMiner Cube, in some cases, users would incorrectly be prompted to log in to the app.
-
 #### Dashboards app & Low-Code Apps: Clearing a State component by means of CTRL+Click [ID_36056]
 
 <!-- MR 10.4.0 - FR 10.3.5 -->

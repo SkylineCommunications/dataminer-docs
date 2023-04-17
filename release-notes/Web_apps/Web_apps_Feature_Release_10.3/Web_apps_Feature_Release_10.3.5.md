@@ -519,6 +519,12 @@ Up to now, components would incorrectly make their own data available as feeds.
 
 When, in a table component, you switched from a non-empty query to an empty query, the *Restore initial view* button would incorrectly remain visible in the component header.
 
+#### Web apps: Problem with single sign-on when embedded in Cube [ID_36049]
+
+<!-- MR 10.4.0 - FR 10.3.5 [CU0] -->
+
+When the *Dashboards*, *Jobs*, or *Ticketing* app was embedded in DataMiner Cube, in some cases, users would incorrectly be prompted to log in to the app.
+
 #### Dashboards app & Low-Code Apps: Incorrect error could appear when editing a dashboard or low-code app [ID_36132]
 
 <!-- MR 10.4.0 - FR 10.3.5 [CU0] -->
