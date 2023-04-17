@@ -6,7 +6,7 @@ uid: DCP_change_log
 
 The dataminer.services platform gets updated continuously. This change log can help you trace when specific features and changes have become available.
 
-#### 17 April 2023 - Enhancements - CloudGateway 2.10.6 - General improvements [ID_36136] [ID_36167] [ID_35793] [ID_36158] [ID_36136] [ID_35873] [ID_35812]
+#### 17 April 2023 - Enhancements - CloudGateway 2.10.6 - General improvements [ID_36136] [ID_36167] [ID_35793] [ID_36158] [ID_35873] [ID_35812]
 
 #### 7 April 2023 - Fix - CoreGateway 2.12.1 - Long-running deployment fails [ID_36121]
 
