@@ -12,7 +12,7 @@ uid: General_Main_Release_10.2.0_CU15
 
 ### Enhancements
 
-#### Dashboards app & Low-code apps - Table component: Enhanced visibility of rows that are selected or hovered over in dark mode [ID_35993]
+#### Dashboards app & Low-Code Apps - Table component: Enhanced visibility of rows that are selected or hovered over in dark mode [ID_35993]
 
 <!-- MR 10.2.0 [CU15]/10.3.0 [CU3] - FR 10.3.5 -->
 
@@ -45,7 +45,7 @@ In *System Center*, a few enhancements have been made to the *Database > Offload
 
 When you used the Cassandra Cluster Migrator tool to migrate a single-node Cassandra database to a Cassandra Cluster setup, up to now, the `state-changes` table would incorrectly not be migrated.
 
-#### Dashboards app & Low-code apps - GQI components: Open sessions would not be closed when a new query was triggered [ID_35824]
+#### Dashboards app & Low-Code Apps - GQI components: Open sessions would not be closed when a new query was triggered [ID_35824]
 
 <!-- MR 10.2.0 [CU15]/10.3.0 [CU2] - FR 10.3.5 -->
 
@@ -77,7 +77,7 @@ When, in a topology chain, you opened a KPI window and clicked the histogram ico
 
 In some cases, measurement points would not be set correctly when a trace was being displayed.
 
-#### Dashboards app & Low-code apps: Component title could be made too large [ID_36021]
+#### Dashboards app & Low-Code Apps: Component title could be made too large [ID_36021]
 
 <!-- MR 10.2.0 [CU15]/10.3.0 [CU3] - FR 10.3.6 -->
 
@@ -119,7 +119,7 @@ Also, when, on a system where the *Topology* pane was open when you connected to
 
 When you added a filtered history tab that had to show active alarms, masked alarms and information events, no information events would be shown.
 
-#### Dashboards app & Low-code apps: Popup panel showing a PDF preview would incorrectly have a scroll bar [ID_36131]
+#### Dashboards app & Low-Code Apps: Popup panel showing a PDF preview would incorrectly have a scroll bar [ID_36131]
 
 <!-- MR 10.2.0 [CU15]/10.3.0 [CU3] - FR 10.3.6 -->
 

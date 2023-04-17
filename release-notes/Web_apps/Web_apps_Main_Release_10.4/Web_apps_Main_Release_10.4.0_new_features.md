@@ -96,7 +96,7 @@ It can be used to retrieve the parameter relationships that are stored in a mode
 > [!NOTE]
 > This data source will only be available when *ModelHost* is running.
 
-#### Dashboards app & Low-code apps: 'Lazy load components' setting [ID_35469] [ID_35486]
+#### Dashboards app & Low-Code Apps: 'Lazy load components' setting [ID_35469] [ID_35486]
 
 <!-- MR 10.4.0 - FR 10.3.4 -->
 
@@ -130,7 +130,7 @@ A line & area chart component now has a number of time range buttons that allow 
 > [!NOTE]
 > In the *Dashboards* app, these time range buttons are disabled by default. When configuring the component, you can enable them by selecting the *Show time range buttons* option in the *Component > Layout > Styling and Information* tab.
 
-#### Low-code apps: New action 'Open monitoring card' [ID_35661] [ID_35986]
+#### Low-Code Apps: New action 'Open monitoring card' [ID_35661] [ID_35986]
 
 <!-- RN 35661: MR 10.4.0 - FR 10.3.4 -->
 <!-- RN 35986: MR 10.4.0 - FR 10.3.5 -->
@@ -235,7 +235,7 @@ Note that, from now on, every *Sort by* node will nullify any preceding *Sort by
 > The behavior of existing queries (using e.g. *Sort by B* followed by *Sort by A*) will not be altered in any way. Their syntax will automatically be adapted when they are migrated to the most recent GQI version.
 > For example, an existing query using *Sort by B* followed by *Sort by A* will use *Sort by A* followed by *Then sort by B* after being migrated.
 
-#### Dashboards app & Low-code apps: New 'Text input' feed [ID_35902]
+#### Dashboards app & Low-Code Apps: New 'Text input' feed [ID_35902]
 
 <!-- MR 10.4.0 - FR 10.3.5 -->
 
@@ -262,7 +262,7 @@ A default value can be set by means of a URL option:
 
 For more information on how to pass data using a JSON object, see [Specifying data input in an app URL](xref:Specifying_data_input_in_URL).
 
-#### Dashboards app & Low-code apps: New 'Numeric input' feed [ID_35911]
+#### Dashboards app & Low-Code Apps: New 'Numeric input' feed [ID_35911]
 
 <!-- MR 10.4.0 - FR 10.3.5 -->
 
@@ -287,7 +287,7 @@ A default value can be set by means of a URL option:
 
 For more information on how to pass data using a JSON object, see [Specifying data input in an app URL](xref:Specifying_data_input_in_URL).
 
-#### Low-code apps - Line & area chart component: New 'Set timespan' action [ID_35933]
+#### Low-Code Apps - Line & area chart component: New 'Set timespan' action [ID_35933]
 
 <!-- MR 10.4.0 - FR 10.3.5 -->
 
@@ -305,7 +305,7 @@ Also, a *Shared* button will now be displayed in the header bar of a shared dash
 
 > [!NOTE> It is not possible to rename or to move a shared dashboard.
 
-#### Low-code apps: Making an app execute actions by adding action configurations to the app's URL [ID_35979]
+#### Low-Code Apps: Making an app execute actions by adding action configurations to the app's URL [ID_35979]
 
 <!-- MR 10.4.0 - FR 10.3.6 -->
 
@@ -336,7 +336,7 @@ https://myDMA/APP_ID/PAGE_NAME#{"actions":[{"Type":6,"__type":"Skyline.DataMiner
 >   - `Execute component action: delete current instance/save current changes`
 >   - `Navigate to an URL`
 
-#### Dashboards app & Low-code apps - Table and State components: New 'Initial selection' setting [ID_35984]
+#### Dashboards app & Low-Code Apps - Table and State components: New 'Initial selection' setting [ID_35984]
 
 <!-- MR 10.4.0 - FR 10.3.6 -->
 
@@ -417,7 +417,7 @@ In order to avoid duplicate group keys when there is only a single *Group By* op
 
 Also, any slashes in the group values will be escaped before they are joined. For more information about escaping slashes, see [Join operator keys](#join-operator-keys).
 
-#### Dashboards app & Low-code apps: Clearing a State component by means of CTRL+Click [ID_36056]
+#### Dashboards app & Low-Code Apps: Clearing a State component by means of CTRL+Click [ID_36056]
 
 <!-- MR 10.4.0 - FR 10.3.5 -->
 

@@ -181,7 +181,7 @@ A web API event queue will now automatically be removed after 5 minutes if a cli
 
 Also, it is now possible for one web API connection to have multiple event queues. As a result, clients will be able to have multiple open websocket connections using the same connection ID.
 
-#### Dashboards app & Low-code apps: New way to link components to feeds [ID_35837]
+#### Dashboards app & Low-Code Apps: New way to link components to feeds [ID_35837]
 
 <!-- MR 10.4.0 - FR 10.3.5 -->
 
@@ -200,7 +200,7 @@ From now on, legacy reports and dashboards will no longer be prefetched if the s
 
 <!-- MR 10.4.0 - FR 10.3.6 -->
 
-In all web apps (e.g. Low-code apps, Dashboards, Monitoring, Jobs, Ticketing, etc.), Angular and other dependencies have been upgraded.
+In all web apps (e.g. Low-Code Apps, Dashboards, Monitoring, Jobs, Ticketing, etc.), Angular and other dependencies have been upgraded.
 
 ### Fixes
 
@@ -232,7 +232,7 @@ Up to now, the parameter feed used the element cache of the web client to popula
 
 From now on, when the parameter feed has a protocol or view filter, it will fetch all elements matching the filter page by page, even when the total number of elements exceeds 10,000.
 
-#### Dashboards app & Low-code apps: Issues with regard to data highlighting [ID_35250]
+#### Dashboards app & Low-Code Apps: Issues with regard to data highlighting [ID_35250]
 
 <!-- MR 10.4.0 - FR 10.3.2 -->
 
@@ -245,7 +245,7 @@ A number of issues with regard to data highlighting have been fixed.
 
 When trend data was exported to a CSV file, up to now, timestamps could be formatted incorrectly.
 
-#### Dashboards app & Low-code apps - GQI table component: 'Cannot read properties of undefined (reading 'Guid')' error [ID_35316]
+#### Dashboards app & Low-Code Apps - GQI table component: 'Cannot read properties of undefined (reading 'Guid')' error [ID_35316]
 
 <!-- MR 10.4.0 - FR 10.3.2 [CU0] -->
 
@@ -274,7 +274,7 @@ When you tried to select a visualization for a newly added component that did no
 
 The color picker would not be positioned correctly.
 
-#### Low-code apps: Problem when opening a low-code app on a mobile device or when resizing the screen to a mobile size [ID_35683]
+#### Low-Code Apps: Problem when opening a low-code app on a mobile device or when resizing the screen to a mobile size [ID_35683]
 
 <!-- MR 10.4.0 - FR 10.3.4 -->
 
@@ -296,7 +296,7 @@ When the `GetArgumentValue<T>(string name)` method was used in an ad hoc data so
 Could not find argument with name '{argument.Name}'.
 ```
 
-#### Dashboards app & Low-code apps: Problem when feeding data from a GQI component to a query used in the same component [ID_35806]
+#### Dashboards app & Low-Code Apps: Problem when feeding data from a GQI component to a query used in the same component [ID_35806]
 
 <!-- MR 10.4.0 - FR 10.3.5 -->
 
@@ -320,7 +320,7 @@ In some cases, invalid nodes could get added to a GQI query, causing run-time er
 
 When the *Dashboards*, *Jobs* or *Ticketing* app was embedded in DataMiner Cube, in some cases, users would incorrectly be prompted to log in to the app.
 
-#### Dashboards app & Low-code apps: Incorrect error could appear when editing a dashboard or low-code app [ID_36132]
+#### Dashboards app & Low-Code Apps: Incorrect error could appear when editing a dashboard or low-code app [ID_36132]
 
 <!-- MR 10.4.0 - FR 10.3.5 [CU0] -->
 

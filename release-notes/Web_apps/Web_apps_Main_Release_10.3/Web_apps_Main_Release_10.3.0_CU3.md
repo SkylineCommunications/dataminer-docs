@@ -12,7 +12,7 @@ uid: Web_apps_Main_Release_10.3.0_CU3
 
 ### Enhancements
 
-#### Dashboards app & Low-code apps - Table component: Enhanced visibility of rows that are selected or hovered over in dark mode [ID_35993]
+#### Dashboards app & Low-Code Apps - Table component: Enhanced visibility of rows that are selected or hovered over in dark mode [ID_35993]
 
 <!-- MR 10.2.0 [CU15]/10.3.0 [CU3] - FR 10.3.5 -->
 
@@ -60,13 +60,13 @@ When a dashboard with a state, ring or gauge component was shared, in some cases
 
 When you selected a parameter in a parameter feed component of a shared dashboard, in some cases, an error could occur.
 
-#### Dashboards app & Low-code apps - Table component: Minimum pagesize would be used when exporting to a CSV file [ID_36012]
+#### Dashboards app & Low-Code Apps - Table component: Minimum pagesize would be used when exporting to a CSV file [ID_36012]
 
 <!-- MR 10.3.0 [CU3] - FR 10.3.6 -->
 
 When exporting data from a table component to a CSV file, the minimum pagesize would be used. From now, the largest possible pagesize is used when exporting data from a table component to a CSV file.
 
-#### Dashboards app & Low-code apps: Component title could be made too large [ID_36021]
+#### Dashboards app & Low-Code Apps: Component title could be made too large [ID_36021]
 
 <!-- MR 10.2.0 [CU15]/10.3.0 [CU3] - FR 10.3.6 -->
 
@@ -86,7 +86,7 @@ An error could occur when you opened a shared dashboard that contained a *Line &
 
 When you generated a PDF of a dashboard that contained a table component showing a *Retry* button (because of an error in the table), then that *Retry* button would incorrectly also be displayed in the PDF file.
 
-#### Dashboards app & Low-code apps: GQI query nodes without options would incorrectly be expanded [ID_36064]
+#### Dashboards app & Low-Code Apps: GQI query nodes without options would incorrectly be expanded [ID_36064]
 
 <!-- MR 10.3.0 [CU3] - FR 10.3.6 -->
 
@@ -98,7 +98,7 @@ In some cases, GQI query nodes without options would incorrectly be expanded.
 
 In a shared dashboard, an error could occur when a *State* component was fed a parameter value by a drop-down component.
 
-#### Dashboards app & Low-code apps: GQI table component could throw 'Paged table session not found' error [ID_36101]
+#### Dashboards app & Low-Code Apps: GQI table component could throw 'Paged table session not found' error [ID_36101]
 
 <!-- MR 10.3.0 [CU3] - FR 10.3.6 -->
 
@@ -116,13 +116,13 @@ From now on, a table session will immediately be closed after the last page has 
 
 An error could occur when you opened a shared dashboard that contained a *Parameter Page* component.
 
-#### Dashboards app & Low-code apps: Problem when searching elements of which the name contained special characters [ID_36128]
+#### Dashboards app & Low-Code Apps: Problem when searching elements of which the name contained special characters [ID_36128]
 
 <!-- MR 10.3.0 [CU3] - FR 10.3.6 -->
 
 When, while editing a dashboard, you opened the *ELEMENTS* section in the *DATA* tab, and entered an element name containing special characters in the search box, the result set would always be empty, even if elements with that name existed.
 
-#### Dashboards app & Low-code apps: Popup panel showing a PDF preview would incorrectly have a scroll bar [ID_36131]
+#### Dashboards app & Low-Code Apps: Popup panel showing a PDF preview would incorrectly have a scroll bar [ID_36131]
 
 <!-- MR 10.2.0 [CU15]/10.3.0 [CU3] - FR 10.3.6 -->
 
