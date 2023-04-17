@@ -27,12 +27,14 @@ Before you connect your DMS to dataminer.services (unless you [connect with a DM
 
 ## Connecting to dataminer.services in System Center
 
-1. In DataMiner Cube, go to System Center \> *Users / Groups* and make sure you have the following **user permissions**. If you need to make changes to the user permissions, reconnect to Cube afterwards to make sure your changes are applied in the UI.
+1. In DataMiner Cube, go to System Center \> *Users / Groups* and make sure you have the following **user permissions**:
 
    - [System configuration > Cloud gateway > Connect to DCP](xref:DataMiner_user_permissions#modules--system-configuration--cloud-sharinggateway--connect-to-clouddcp)
 
    - [System configuration > Cloud gateway > Disconnect from DCP](xref:DataMiner_user_permissions#modules--system-configuration--cloud-sharinggateway--disconnect-from-clouddcp)
 
+   If you need to make changes to the user permissions, reconnect to Cube afterwards to make sure your changes are applied in the UI.
+   
    > [!TIP]
    > See also: [User rights](xref:User_rights)
 
