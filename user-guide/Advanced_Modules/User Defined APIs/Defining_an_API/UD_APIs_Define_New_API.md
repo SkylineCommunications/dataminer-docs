@@ -174,7 +174,7 @@ You can also use the `StatusCode` enum, which contains suggestions, and cast tha
    > [!NOTE]
    > Leave *Method to be executed* set to the default selection. This option should only be changed for legacy scripts without the `OnApiTrigger` entry point. See [Using existing scripts](xref:UD_APIs_Using_existing_scripts).
 
-1. Under *Tokens*, select the tokens that need access. You can also create new tokens using the *New token* button.
+1. Under *Tokens*, select the tokens that need access. You can also create new tokens using the *New token...* button.
 
    > [!NOTE]
    > It is not possible to delete a token that is in use by an API. You first need to unassign the token from all APIs using it before you can delete it.
