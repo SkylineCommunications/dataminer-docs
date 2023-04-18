@@ -23,7 +23,7 @@ With the SLNetClientTest tool, you can trigger a user-defined API in order to te
 
 1. In the *Request Method* box, select the method you want to use.
 
-1. In the *Secret* box, specify the secret corresponding with the access token (see [Creating an API definition and token(s)](xref:UD_APIs_Define_New_API#creating-an-api-definition-and-tokens)).
+1. In the *Secret* box, specify the secret corresponding with the access token (see [Creating an API definition and token(s)](xref:UD_APIs_Define_New_API#creating-an-api-and-tokens-in-automation)).
 
 1. Optionally, in the *Request Body* box, fill in a request body.
 
