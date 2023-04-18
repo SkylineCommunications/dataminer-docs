@@ -2713,6 +2713,7 @@
           - name: SRM properties for use with the Booking Manager app
             topicUid: SRM_properties_Booking_Manager
       - name: Advanced configuration
+        topicUid: SRM_user_interface_customization
         items:
           - name: User interface customization
             topicUid: SRM_user_interface_customization
@@ -2730,6 +2731,7 @@
           - name: Configuring SRM logging
             topicUid: SRM_logging_config
           - name: Advanced configuration for Service Orchestration
+            topicUid: Service_Orchestration_bookings_advanced
             items:
               - name: Bookings configuration
                 topicUid: Service_Orchestration_bookings_advanced
