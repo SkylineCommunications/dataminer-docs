@@ -22,7 +22,9 @@ uid: user-defined_API_benchmarks
 
 ## Benchmarks
 
-| \# | Specification | Scope | Metric | Configuration |
-| -- | ------------- | ----- | ------ | ------------- |
+| \# | Specification | Scope | Metric | Configuration | Comments
+| -- | ------------- | ----- | ------ | ------------- | --------
 | 1 | Time for the client to retrieve 2500 API tokens and 2500 API definitions from the server | DMA | 2s - 2.5s | Clean DMA without other data |
 | 2 | Time for the client to show 2500 API tokens and 2500 API definitions in DataMiner Cube (including the time to retrieve these from the server) | Cube | 3s - 3.5s | Clean DMA without other data |
+| 3 | Request duration, up to 40 requests per second | DMS | Average: 45ms<br/>p(90): 60ms<br/>p(95): 67ms | Script that receives 100 bytes and immediately returns it | In this case with a trivial script, the endpoint is the bottleneck, so the number of agents in the cluster has no impact. For scripts with a longer run time, the number of agents in the cluster will have a big impact, as the load will be spread over these agents.
+| 4 | Max request rate | DMS | 120 requests/second, with a request duration of 350 ms | Script that receives 100 bytes and immediately returns it | Starting from 50 requests/second the average response time increases. The maximum is reached around 120 requests/second, at a request duration of 350 ms.
