@@ -6,6 +6,10 @@ uid: DCP_change_log
 
 The dataminer.services platform gets updated continuously. This change log can help you trace when specific features and changes have become available.
 
+#### 18 April 2023 - Fix - CloudGateway 2.10.7 - Remote Access Auto Login [ID_36191]
+
+Since DataMiner CloudGateway 2.10.6 users were not automatically logged in with their linked DataMiner account when accessing the web apps from the cloud with Remote Access. This issue has been resolved.
+
 #### 17 April 2023 - Enhancements - CloudGateway 2.10.6 - General improvements [ID_35793] [ID_35812] [ID_35873] [ID_36136] [ID_36158] [ID_36167]
 
 Changes have been implemented in DataMiner CloudGateway to improve its general stability and to prevent generating exception logs upon shutdown.
