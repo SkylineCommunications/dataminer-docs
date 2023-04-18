@@ -120,7 +120,7 @@ Updates the values of direct view tables.
 Enables the use of DOM data in dashboards and applications.
 
 - **Minimum version**: 10.1.7
-- **Release version**: 10.3.6
+- **Release version**: 10.3.6<!-- RN 36124 -->
 
 ### DynamicUnits
 
