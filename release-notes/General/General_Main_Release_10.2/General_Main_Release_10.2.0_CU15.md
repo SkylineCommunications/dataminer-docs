@@ -105,6 +105,17 @@ When, in the *DB.xml* file, no `<DB>` element was specified for an Elasticsearch
 
 From now on, when no `<DB>` element is specified for a Elasticsearch database, *SLReset.exe* will use the default database name "dms".
 
+#### Business Intelligence: Alarms that had to be replayed would incorrectly have their weight recalculated [ID_36051]
+
+<!-- MR 10.2.0 [CU15]/10.3.0 [CU3] - FR 10.3.6 -->
+
+When an SLA has to process alarms generated due to history sets or alarms generated with hysteresis enabled, those alarms are replayed to ensure that the outages contain the correct information.
+
+Up to now, when an alarm was fetched from a logger table in order to be replayed, the system would incorrectly recalculate its weight instead of taking into account its previously calculated weight stored in the logger table.
+
+> [!NOTE]
+> When you change an SLA's violation settings, offline windows, etc., we recommend resetting that SLA as the alarm weights of previously processed alarms will not be recalculated retroactively.
+
 #### DataMiner Cube - EPM: Navigation issues [ID_36089]
 
 <!-- MR 10.2.0 [CU15]/10.3.0 [CU3] - FR 10.3.6 -->
