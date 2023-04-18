@@ -70,7 +70,7 @@ The entry point method has two parameters.
 
 You can use the *RequestMethod* property to check the HTTP method of the trigger. It can contain the following values:
 
-- *Unspecified* (should never occur)
+- *Unspecified* (must never occur)
 - *Get*
 - *Put*
 - *Post*
@@ -151,25 +151,30 @@ You can also use the `StatusCode` enum, which contains suggestions, and cast tha
 > - A simple example is included in the [Automation script example](#creating-the-api-automation-script).
 > - For more insight into which HTTP status codes to use in which circumstances, see [HTTP status codes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status).
 
-## Creating an API definition and token(s)
+## Creating an API and token(s) in Automation
 
-1. Open your API script in the Automation app in DataMiner Cube and click *Configure API* at the bottom of the window.
+1. Open your API script in the Automation app in DataMiner Cube and click *Configure API...* at the bottom of the window.
 
-   This will open a window where you can create the API definition.
+   This will open a window where you can create the API.
 
-   ![Creating an ApiDefinition](~/user-guide/images/UDPAIS_CreateAPI.jpg)<br>
-   *Creating an API definition in DataMiner 10.3.6*
+   ![Creating an ApiDefinition](~/user-guide/images/UDPAIS_CreateAPI.png)<br>
+   *Creating an API in DataMiner 10.3.6*
+   
+   > [!NOTE]
+   > - The button will be shown in the UI when the the system does support user-defined API (DataMiner 10.3.6.0 onwards) and when the system has an active Indexing Engine.
+   > - The user must at least have the permission to read API definitions. It is recommended that the user should have all user-defined API permissions. This can be configured in *System Center* > *Users/Groups*  in Permissions *Modules* > *User-Defined APIs*.
+   > - In DataMiner 10.3.5, the UI is only available if the soft-launch option *UserDefinableAPI* is set to true. See [soft-launch options](xref:SoftLaunchOptions).
 
 1. Add a description.
 
-1. In the *URL* box, specify the [route](#route).
+1. In the *URL* box, specify the unique [route](#route).
 
 1. If you want to parse the JSON body of the HTTP request to a dictionary, make sure *Parse JSON of raw body to dictionary* is selected. See [User input data](#user-input-data).
 
    > [!NOTE]
    > Leave *Method to be executed* set to the default selection. This option should only be changed for legacy scripts without the `OnApiTrigger` entry point. See [Using existing scripts](xref:UD_APIs_Using_existing_scripts).
 
-1. Under *Access tokens*, select the tokens that need access. You can also create new tokens using the *New token* button.
+1. Under *Tokens*, select the tokens that need access. You can also create new tokens using the *New token* button.
 
    > [!NOTE]
    > It is not possible to delete a token that is in use by an API. You first need to unassign the token from all APIs using it before you can delete it.
@@ -179,6 +184,7 @@ You can also use the `StatusCode` enum, which contains suggestions, and cast tha
 
 > [!NOTE]
 > You can change your API configuration at any time by opening this window again and changing the settings.
+> You can also navigate to the [API overview in DataMiner Cube](xref:UD_APIs_Viewing_in_Cube).
 
 ## Configuring the UserDefinableApiEndpoint extension module
 
