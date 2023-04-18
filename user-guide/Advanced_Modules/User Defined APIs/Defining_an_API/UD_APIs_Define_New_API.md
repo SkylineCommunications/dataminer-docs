@@ -161,7 +161,7 @@ You can also use the `StatusCode` enum, which contains suggestions, and cast tha
    *Creating an API in DataMiner 10.3.6*
    
    > [!NOTE]
-   > - The button will be shown in the UI when the the system does support user-defined API (DataMiner 10.3.6.0 onwards) and when the system has an active Indexing Engine.
+   > - The button will be shown in the UI when the system supports user-defined API (DataMiner 10.3.6.0 onwards) and when the system has an active Indexing Engine.
    > - The user must at least have the permission to read API definitions. It is recommended that the user should have all user-defined API permissions. This can be configured in *System Center* > *Users/Groups*  in Permissions *Modules* > *User-Defined APIs*.
    > - In DataMiner 10.3.5, the UI is only available if the soft-launch option *UserDefinableAPI* is set to true. See [soft-launch options](xref:SoftLaunchOptions).
 
