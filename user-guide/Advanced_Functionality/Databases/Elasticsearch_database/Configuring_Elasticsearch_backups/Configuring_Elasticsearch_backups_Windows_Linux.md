@@ -64,11 +64,12 @@ Examples:
    - For Linux:
 
      Use an NFS server and client as explained in [How to Set Up NFS Server and Client on CentOS 8](https://www.tecmint.com/install-nfs-server-on-centos-8/) and in [Elasticsearch: Snapshot Backups on a Shared NFS](https://octoperf.com/blog/2019/05/02/elasticsearch-snapshot-backup-shared-nfs/#snapshot-repository). Follow this procedure on all machines in the Elasticsearch Cluster.
-
+   
      > [!NOTE]
      >
      > - As this setup might be more challenging, we recommend that you set it up in advance.
      > - Be wary of read, write, and execute rights, firewall configurations, and the state of the NFS server service during the setup.
+     > - In addition to [Elasticsearch: Snapshot Backups on a Shared NFS](https://octoperf.com/blog/2019/05/02/elasticsearch-snapshot-backup-shared-nfs/#snapshot-repository), it is needed on the machines that will act as nfs servers that the firewall needs to allow nfs traffic using: *sudo ufw allow nfs*. After this you can mount the folder on the NFS Ubuntu clients referencing towards it for example: *sudo mount ip-address:pathofyoursharedserverfolder pathofyourclientfolder*.
      > - Make sure the Elasticsearch user has enough rights to the folder to read, write, and execute its contents.
 
 1. On the source Elasticsearch cluster, navigate to the *Elasticsearch.yml* file. Open the file and set *path.repo* as your previously created shared folder.
