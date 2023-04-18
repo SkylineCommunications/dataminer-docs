@@ -20,7 +20,7 @@ To do so, go to *System Center* > *User-Defined APIs*. There, you can create, ed
    *API module in DataMiner Cube 10.3.6*
 
 > [!NOTE]
-> Fore more information, you can go to the [Creating an API and token(s) in Automation](xref:UD_APIs_Define_New_API#Creating-an-API-and-token(s)-in-Automation).
+> Fore more information, you can go to the [Creating an API and token(s) in Automation](xref:UD_APIs_Define_New_API#creating-an-api-and-tokens-in-automation).
 
 ## Enable or disable API tokens
 
