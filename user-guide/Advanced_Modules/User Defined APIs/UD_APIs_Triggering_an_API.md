@@ -148,3 +148,6 @@ Some errors will mention an ID in the *faultingNode* field. This is the DataMine
 #### missingScriptParameters
 
 If an error with reason *MissingScriptParameters* is returned, the *missingScriptParameters* array will contain the names of the missing script parameters.
+
+## Benchmarks
+See [User-defined API benchmarks](https://docs.dataminer.services/user-guide/Reference/Metrics/user-defined_API_benchmarks.html).
