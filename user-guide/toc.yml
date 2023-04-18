@@ -2747,6 +2747,8 @@
                 topicUid: Service_Orchestration_custom_events
               - name: Booking life cycle states configuration
                 topicUid: Service_Orchestration_life_cycle_states
+              - name: Service states configuration
+                topicUid: Service_Orchestration_service_states
       - name: SRM logging
         topicUid: SRM_logging
 - name: dataminer.services
