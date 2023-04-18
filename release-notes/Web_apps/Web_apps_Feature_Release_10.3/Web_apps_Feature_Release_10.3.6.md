@@ -185,3 +185,12 @@ When, while editing a dashboard, you opened the *ELEMENTS* section in the *DATA*
 In some cases, the popup panel showing the PDF preview of a dashboard would incorrectly have a scroll bar.
 
 From now on, a popup panel showing a PDF preview will take the full screen height and will only allow its contents to scroll.
+
+#### Dashboards app & Low-Code Apps - 'Numeric input' feed: Setting renamed [ID_36166]
+
+<!-- MR 10.4.0 - FR 10.3.6 -->
+<!-- Not added to MR 10.4.0 -->
+
+The *Numeric input* feed, which was introduced in DataMiner feature release 10.3.5, had a setting named *Amount of decimals*.
+
+This setting has now been renamed to *Number of decimals*.
