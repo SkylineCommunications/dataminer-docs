@@ -1066,6 +1066,8 @@
           items:
           - name: Installing Cassandra on a Linux machine
             topicUid: Installing_Cassandra
+          - name: Setting up an Azure Managed Instance for Apache Cassandra
+            topicUid: Azure_Managed_Instance_for_Apache_Cassandra
           - name: Scaling a Cassandra cluster database
             topicUid: Scale_Cassandra_Database
           - name: Maintaining a Cassandra cluster
@@ -2718,6 +2720,7 @@
           - name: SRM properties for use with the Booking Manager app
             topicUid: SRM_properties_Booking_Manager
       - name: Advanced configuration
+        topicUid: SRM_user_interface_customization
         items:
           - name: User interface customization
             topicUid: SRM_user_interface_customization
@@ -2735,6 +2738,7 @@
           - name: Configuring SRM logging
             topicUid: SRM_logging_config
           - name: Advanced configuration for Service Orchestration
+            topicUid: Service_Orchestration_bookings_advanced
             items:
               - name: Bookings configuration
                 topicUid: Service_Orchestration_bookings_advanced

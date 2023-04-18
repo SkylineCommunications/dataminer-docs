@@ -90,6 +90,14 @@ Also, when the name of a script folder ended with a slash or a backslash charact
 
 When, in a topology chain, you opened a KPI window and clicked the histogram icon, in some cases, the histogram window would be empty.
 
+#### DataMiner Cube - EPM: Navigation issues [ID_36089]
+
+<!-- MR 10.2.0 [CU15]/10.3.0 [CU3] - FR 10.3.6 -->
+
+When you opened an EPM card by clicking an alarm in the Alarm Console or switched between two EPM cards while the *Topology* pane was open in the sidebar, the topology filters would incorrectly not be updated.
+
+Also, when, on a system where the *Topology* pane was open when you connected to it, you opened a new card or selected an open card, the topology filters would incorrectly not be updated until you navigated away from the *Topology* pane and back.
+
 #### DataMiner Cube - Alarm Console: Filtered history tab would incorrectly not show information events [ID_36105]
 
 <!-- MR 10.2.0 [CU15]/10.3.0 [CU3] - FR 10.3.6 -->

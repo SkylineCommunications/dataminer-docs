@@ -12,7 +12,7 @@ uid: General_Main_Release_10.2.0_CU15
 
 ### Enhancements
 
-#### Dashboards app & Low-code apps - Table component: Enhanced visibility of rows that are selected or hovered over in dark mode [ID_35993]
+#### Dashboards app & Low-Code Apps - Table component: Enhanced visibility of rows that are selected or hovered over in dark mode [ID_35993]
 
 <!-- MR 10.2.0 [CU15]/10.3.0 [CU3] - FR 10.3.5 -->
 
@@ -45,7 +45,7 @@ In *System Center*, a few enhancements have been made to the *Database > Offload
 
 When you used the Cassandra Cluster Migrator tool to migrate a single-node Cassandra database to a Cassandra Cluster setup, up to now, the `state-changes` table would incorrectly not be migrated.
 
-#### Dashboards app & Low-code apps - GQI components: Open sessions would not be closed when a new query was triggered [ID_35824]
+#### Dashboards app & Low-Code Apps - GQI components: Open sessions would not be closed when a new query was triggered [ID_35824]
 
 <!-- MR 10.2.0 [CU15]/10.3.0 [CU2] - FR 10.3.5 -->
 
@@ -77,7 +77,7 @@ When, in a topology chain, you opened a KPI window and clicked the histogram ico
 
 In some cases, measurement points would not be set correctly when a trace was being displayed.
 
-#### Dashboards app & Low-code apps: Component title could be made too large [ID_36021]
+#### Dashboards app & Low-Code Apps: Component title could be made too large [ID_36021]
 
 <!-- MR 10.2.0 [CU15]/10.3.0 [CU3] - FR 10.3.6 -->
 
@@ -105,13 +105,32 @@ When, in the *DB.xml* file, no `<DB>` element was specified for an Elasticsearch
 
 From now on, when no `<DB>` element is specified for a Elasticsearch database, *SLReset.exe* will use the default database name "dms".
 
+#### Business Intelligence: Alarms that had to be replayed would incorrectly have their weight recalculated [ID_36051]
+
+<!-- MR 10.2.0 [CU15]/10.3.0 [CU3] - FR 10.3.6 -->
+
+When an SLA has to process alarms generated due to history sets or alarms generated with hysteresis enabled, those alarms are replayed to ensure that the outages contain the correct information.
+
+Up to now, when an alarm was fetched from a logger table in order to be replayed, the system would incorrectly recalculate its weight instead of taking into account its previously calculated weight stored in the logger table.
+
+> [!NOTE]
+> When you change an SLA's violation settings, offline windows, etc., we recommend resetting that SLA as the alarm weights of previously processed alarms will not be recalculated retroactively.
+
+#### DataMiner Cube - EPM: Navigation issues [ID_36089]
+
+<!-- MR 10.2.0 [CU15]/10.3.0 [CU3] - FR 10.3.6 -->
+
+When you opened an EPM card by clicking an alarm in the Alarm Console or switched between two EPM cards while the *Topology* pane was open in the sidebar, the topology filters would incorrectly not be updated.
+
+Also, when, on a system where the *Topology* pane was open when you connected to it, you opened a new card or selected an open card, the topology filters would incorrectly not be updated until you navigated away from the *Topology* pane and back.
+
 #### DataMiner Cube - Alarm Console: Filtered history tab would incorrectly not show information events [ID_36105]
 
 <!-- MR 10.2.0 [CU15]/10.3.0 [CU3] - FR 10.3.6 -->
 
 When you added a filtered history tab that had to show active alarms, masked alarms and information events, no information events would be shown.
 
-#### Dashboards app & Low-code apps: Popup panel showing a PDF preview would incorrectly have a scroll bar [ID_36131]
+#### Dashboards app & Low-Code Apps: Popup panel showing a PDF preview would incorrectly have a scroll bar [ID_36131]
 
 <!-- MR 10.2.0 [CU15]/10.3.0 [CU3] - FR 10.3.6 -->
 

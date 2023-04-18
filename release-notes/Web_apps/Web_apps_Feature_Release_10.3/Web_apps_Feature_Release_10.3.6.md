@@ -16,7 +16,7 @@ uid: Web_apps_Feature_Release_10.3.6
 
 ## Other features
 
-#### Low-code apps: Making an app execute actions by adding action configurations to the app's URL [ID_35979]
+#### Low-Code Apps: Making an app execute actions by adding action configurations to the app's URL [ID_35979]
 
 <!-- MR 10.4.0 - FR 10.3.6 -->
 
@@ -47,7 +47,7 @@ https://myDMA/APP_ID/PAGE_NAME#{"actions":[{"Type":6,"__type":"Skyline.DataMiner
 >   - `Execute component action: delete current instance/save current changes`
 >   - `Navigate to an URL`
 
-#### Dashboards app & Low-code apps - Table and State components: New 'Initial selection' setting [ID_35984]
+#### Dashboards app & Low-Code Apps - Table and State components: New 'Initial selection' setting [ID_35984]
 
 <!-- MR 10.4.0 - FR 10.3.6 -->
 
@@ -74,7 +74,7 @@ From now on, legacy reports and dashboards will no longer be prefetched if the s
 
 <!-- MR 10.4.0 - FR 10.3.6 -->
 
-In all web apps (e.g. Low-code apps, Dashboards, Monitoring, Jobs, Ticketing, etc.), Angular and other dependencies have been upgraded.
+In all web apps (e.g. Low-Code Apps, Dashboards, Monitoring, Jobs, Ticketing, etc.), Angular and other dependencies have been upgraded.
 
 ### Fixes
 
@@ -90,13 +90,27 @@ When an interactive Automation script was launched from a web app, the following
 
 - The focus loss detection would not always be accurate.
 
-#### Dashboards app & Low-code apps - Table component: Minimum pagesize would be used when exporting to a CSV file [ID_36012]
+#### Dashboards app & Low-Code Apps - Table component: Selection issues [ID_35968]
+
+<!-- MR 10.4.0 - FR 10.3.6 -->
+
+When a GQI table was configured to feed the selected rows to another component, the following issues could occur:
+
+- When you selected a row above a row that had been selected earlier, that row would not get fed.
+
+- When you tried to select multiple rows using SHIFT+Click, this would not work when you selected the rows bottom to top.
+
+- When you selected a single row that was already selected as part of a multiple select, the feed would not be updated.
+
+- When you exported the selected rows to a CSV file, the CSV file would incorrectly contain all rows instead of only the ones you had selected.
+
+#### Dashboards app & Low-Code Apps - Table component: Minimum pagesize would be used when exporting to a CSV file [ID_36012]
 
 <!-- MR 10.3.0 [CU3] - FR 10.3.6 -->
 
 When exporting data from a table component to a CSV file, the minimum pagesize would be used. From now, the largest possible pagesize is used when exporting data from a table component to a CSV file.
 
-#### Dashboards app & Low-code apps: Component title could be made too large [ID_36021]
+#### Dashboards app & Low-Code Apps: Component title could be made too large [ID_36021]
 
 <!-- MR 10.2.0 [CU15]/10.3.0 [CU3] - FR 10.3.6 -->
 
@@ -122,19 +136,13 @@ When you generated a PDF of a dashboard that contained a table component showing
 
 In some cases, invalid nodes could get added to a GQI query, causing run-time errors to be thrown.
 
-#### Web apps: Problem with single sign-on when embedded in Cube [ID_36049]
-
-<!-- MR 10.4.0 - FR 10.3.6 -->
-
-When the *Dashboards*, *Jobs* or *Ticketing* app was embedded in DataMiner Cube, in some cases, users would incorrectly be prompted to log in to the app.
-
-#### Dashboards app & Low-code apps: Clearing a State component by means of CTRL+Click [ID_36056]
+#### Dashboards app & Low-Code Apps: Clearing a State component by means of CTRL+Click [ID_36056]
 
 <!-- MR 10.4.0 - FR 10.3.5 -->
 
 You can now clear a *State* component by clicking it while holding down the CTRL key.
 
-#### Dashboards app & Low-code apps: GQI query nodes without options would incorrectly be expanded [ID_36064]
+#### Dashboards app & Low-Code Apps: GQI query nodes without options would incorrectly be expanded [ID_36064]
 
 <!-- MR 10.3.0 [CU3] - FR 10.3.6 -->
 
@@ -146,7 +154,7 @@ In some cases, GQI query nodes without options would incorrectly be expanded.
 
 In a shared dashboard, an error could occur when a *State* component was fed a parameter value by a drop-down component.
 
-#### Dashboards app & Low-code apps: GQI table component could throw 'Paged table session not found' error [ID_36101]
+#### Dashboards app & Low-Code Apps: GQI table component could throw 'Paged table session not found' error [ID_36101]
 
 <!-- MR 10.3.0 [CU3] - FR 10.3.6 -->
 
@@ -164,13 +172,13 @@ From now on, a table session will immediately be closed after the last page has 
 
 An error could occur when you opened a shared dashboard that contained a *Parameter Page* component.
 
-#### Dashboards app & Low-code apps: Problem when searching elements of which the name contained special characters [ID_36128]
+#### Dashboards app & Low-Code Apps: Problem when searching elements of which the name contained special characters [ID_36128]
 
 <!-- MR 10.3.0 [CU3] - FR 10.3.6 -->
 
 When, while editing a dashboard, you opened the *ELEMENTS* section in the *DATA* tab, and entered an element name containing special characters in the search box, the result set would always be empty, even if elements with that name existed.
 
-#### Dashboards app & Low-code apps: Popup panel showing a PDF preview would incorrectly have a scroll bar [ID_36131]
+#### Dashboards app & Low-Code Apps: Popup panel showing a PDF preview would incorrectly have a scroll bar [ID_36131]
 
 <!-- MR 10.2.0 [CU15]/10.3.0 [CU3] - FR 10.3.6 -->
 

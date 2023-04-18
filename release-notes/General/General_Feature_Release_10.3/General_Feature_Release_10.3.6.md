@@ -151,8 +151,31 @@ From now on, when no `<DB>` element is specified for a Elasticsearch database, *
 
 When an element was deleted, no flatline stop events would be generated for parameters of that element.
 
+#### Business Intelligence: Alarms that had to be replayed would incorrectly have their weight recalculated [ID_36051]
+
+<!-- MR 10.2.0 [CU15]/10.3.0 [CU3] - FR 10.3.6 -->
+
+When an SLA has to process alarms generated due to history sets or alarms generated with hysteresis enabled, those alarms are replayed to ensure that the outages contain the correct information.
+
+Up to now, when an alarm was fetched from a logger table in order to be replayed, the system would incorrectly recalculate its weight instead of taking into account its previously calculated weight stored in the logger table.
+
+> [!NOTE]
+> When you change an SLA's violation settings, offline windows, etc., we recommend resetting that SLA as the alarm weights of previously processed alarms will not be recalculated retroactively.
+
 #### DataMiner Object Models: Problem when creating a DomInstance with an empty status [ID_36063]
 
 <!-- MR 10.4.0 - FR 10.3.6 -->
 
 When a DomInstance was created with an empty status, in some cases, a `MultipleSectionsNotAllowedForSectionDefinition` error could be returned, even when the configuration was correct.
+
+#### New SLScripting processes would incorrectly be created when using 'SeparateProcesses' [ID_36133]
+
+<!-- MR 10.3.0 [CU3] - FR 10.3.6 -->
+
+When the *DataMiner.xml* file contained `<ProcessOptions protocolProcesses="5" scriptingProcesses="protocol">` either in combination with `<SeparateProcesses>` or with `<RunInSeparateInstance>true</RunInSeparateInstance>` specified in the *protocol.xml* file, every time an element of a separate protocol restarted, a new SLScripting process would be created and the previous SLScripting process would not be stopped.
+
+#### Errors would incorrectly state that OpenSearch 2.4 and 2.5 were not supported [ID_36137]
+
+<!-- MR 10.3.0 [CU3] - FR 10.3.6 -->
+
+Although DataMiner supports all OpenSearch 1.x and 2.x versions, in some cases, errors stating that OpenSearch 2.4 and 2.5 were not officially supported would incorrectly be added to the *SLDBConnection.txt* and *SLSearch.txt* log files.
