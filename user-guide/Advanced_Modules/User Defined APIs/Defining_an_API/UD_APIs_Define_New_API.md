@@ -184,7 +184,7 @@ You can also use the `StatusCode` enum, which contains suggestions, and cast tha
 
 > [!NOTE]
 > You can change your API configuration at any time by opening this window again and changing the settings.
-> You can also navigate to the [API overview in DataMiner Cube](xref:UD_APIs_Viewing_in_Cube).
+> You can also navigate to the [API overview in DataMiner Cube](xref:UD_APIs_Viewing_in_Cube#apis-and-tokens-in-dataminer-cube).
 
 ## Configuring the UserDefinableApiEndpoint extension module
 
