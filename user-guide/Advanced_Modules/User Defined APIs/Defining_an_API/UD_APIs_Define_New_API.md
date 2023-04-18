@@ -13,7 +13,7 @@ uid: UD_APIs_Define_New_API
 To create a new API, follow these steps as detailed below:
 
 1. [Create the API Automation script](#creating-the-api-automation-script)
-1. [Create the API definition(s) and token(s)](#creating-an-api-definition-and-tokens)
+1. [Create the API definition(s) and token(s)](#creating-an-api-and-tokens-in-automation)
 1. [Configure the UserDefinableApiEndpoint extension module](#configuring-the-userdefinableapiendpoint-extension-module)
 
 > [!NOTE]
@@ -80,7 +80,7 @@ This makes it possible to define the 4 CRUD (create, read, update, delete) actio
 
 #### User input data
 
-There are two ways to pass data to the API script if you make use of the *OnApiTrigger* entry point method. Which way is used depends on whether the checkbox to `Parse JSON of raw body to dictionary` is selected when the API is configured. See [Creating the API definition(s)](#creating-an-api-definition-and-tokens).
+There are two ways to pass data to the API script if you make use of the *OnApiTrigger* entry point method. Which way is used depends on whether the checkbox to `Parse JSON of raw body to dictionary` is selected when the API is configured. See [Creating the API definition(s)](#creating-an-api-and-tokens-in-automation).
 
 - If the checkbox is selected, the JSON body of the HTTP request will automatically be converted to a `Dictionary<string, string>` in the *Parameters* property of the `ApiTriggerInput` object. In the *RawBody* property, the raw string body will remain available.
 
