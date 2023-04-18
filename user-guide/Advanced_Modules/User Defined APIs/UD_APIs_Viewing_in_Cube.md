@@ -20,18 +20,18 @@ To do so, go to *System Center* > *User-Defined APIs*. There, you can create, ed
    *API module in DataMiner Cube 10.3.6*
 
 > [!NOTE]
-> Fore more information, you can go to the [Creating an API and token(s) in Automation](xref:UD_APIs_Define_New_API#creating-an-api-and-tokens-in-automation).
+> For more information, you can go to the [Creating an API and token(s) in Automation](xref:UD_APIs_Define_New_API#creating-an-api-and-tokens-in-automation).
 
 ## Enable or disable API tokens
 
-It is possible to either enable or disable an API token when right-clcking on it in the token table.
+It is possible to either enable or disable an API token when right-clcking it in the token table.
 
    ![Enable or disable API token in DataMiner Cube](~/user-guide/images/UDPAIS_DisableToken.png)<br>
    *Enable or disable API token in DataMiner Cube*
    
 ## Get API URL blueprint
 
-It is possible to copy the URL blueprint of an API when right-clcking on it in the API table.
+It is possible to copy the URL blueprint of an API when right-clcking it in the API table.
 
    ![Copy API URL in DataMiner Cube](~/user-guide/images/UDPAIS_CopyAPIURL.png)<br>
    *Copy API URL in DataMiner Cube*
