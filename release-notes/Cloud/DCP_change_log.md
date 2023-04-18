@@ -8,7 +8,7 @@ The dataminer.services platform gets updated continuously. This change log can h
 
 #### 18 April 2023 - Fix - CloudGateway 2.10.7 - Remote Access Auto Login [ID_36191]
 
-Since DataMiner CloudGateway 2.10.6 users were not automatically logged in with their linked DataMiner account when accessing the web apps from the cloud with Remote Access. This issue has been resolved.
+If DataMiner CloudGateway 2.10.6 was installed, users were not automatically logged in with their linked DataMiner account when they used the dataminer.services remote access URL to access DataMiner web apps. This issue has been resolved.
 
 #### 17 April 2023 - Enhancements - CloudGateway 2.10.6 - General improvements [ID_35793] [ID_35812] [ID_35873] [ID_36136] [ID_36158] [ID_36167]
 
