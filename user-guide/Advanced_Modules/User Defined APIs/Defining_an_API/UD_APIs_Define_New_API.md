@@ -157,7 +157,7 @@ You can also use the `StatusCode` enum, which contains suggestions, and cast tha
 
    This will open a window where you can create the API.
 
-   ![Creating an ApiDefinition](~/user-guide/images/UDPAIS_CreateAPI.png)<br>
+   ![Creating an ApiDefinition](~/user-guide/images/UDAPIS_CreateAPI.png)<br>
    *Creating an API in DataMiner 10.3.6*
    
    > [!NOTE]

@@ -26,12 +26,12 @@ To do so, go to *System Center* > *User-Defined APIs*. There, you can create, ed
 
 It is possible to either enable or disable an API token when right-clcking it in the token table.
 
-   ![Enable or disable API token in DataMiner Cube](~/user-guide/images/UDPAIS_DisableToken.png)<br>
+   ![Enable or disable API token in DataMiner Cube](~/user-guide/images/UDAPIS_DisableToken.png)<br>
    *Enable or disable API token in DataMiner Cube*
    
 ## Get API URL blueprint
 
 It is possible to copy the URL blueprint of an API when right-clcking it in the API table.
 
-   ![Copy API URL in DataMiner Cube](~/user-guide/images/UDPAIS_CopyAPIURL.png)<br>
+   ![Copy API URL in DataMiner Cube](~/user-guide/images/UDAPIS_CopyAPIURL.png)<br>
    *Copy API URL in DataMiner Cube*
