@@ -38,7 +38,8 @@ The DataMiner installer allows you to run a default DataMiner installation, whic
 
    > [!IMPORTANT]
    > To get this DataMiner ID, contact <dataminer.licensing@skyline.be>. The DataMiner ID will uniquely identify the DataMiner Agent you are installing.
-   > For Skyline internal servers, use procedure described [here](https://internaldocs.skyline.be/Corporate/OperatingProcedures/OP_RequestDecommissionMaintainInternalServer/Requesting_a_DMA_ID_or_a_DataMiner_license_for_an_internal_DataMiner_Agent.html) instead.
+   >
+   > If you are a Skyline employee, use the procedure from the [Skyline internal documentation](https://internaldocs.skyline.be/Corporate/OperatingProcedures/OP_RequestDecommissionMaintainInternalServer/Requesting_a_DMA_ID_or_a_DataMiner_license_for_an_internal_DataMiner_Agent.html) instead.
 
 1. Click next.
 
@@ -51,8 +52,7 @@ The DataMiner installer allows you to run a default DataMiner installation, whic
 1. Send the *Request.lic* file to <dataminer.licensing@skyline.be>, and wait until you receive the reply.
 
    > [!NOTE]
-   > For Skyline internal servers, use procedure described [here](https://internaldocs.skyline.be/Corporate/OperatingProcedures/OP_RequestDecommissionMaintainInternalServer/Requesting_a_DMA_ID_or_a_DataMiner_license_for_an_internal_DataMiner_Agent.html) instead.
-
+   > If you are a Skyline employee, use the procedure from the [Skyline internal documentation](https://internaldocs.skyline.be/Corporate/OperatingProcedures/OP_RequestDecommissionMaintainInternalServer/Requesting_a_DMA_ID_or_a_DataMiner_license_for_an_internal_DataMiner_Agent.html) instead.
 
 1. Once you have received the license files, save these somewhere on the computer; however, not in the "Skyline DataMiner" folder.
 
