@@ -6,6 +6,10 @@ uid: DCP_change_log
 
 The dataminer.services platform gets updated continuously. This change log can help you trace when specific features and changes have become available.
 
+#### 19 April 2023 - Enhancements -  FieldControl 2.8.3 - General improvements [ID_36162]
+
+Changes have been implemented in DataMiner FieldControl to improve its general stability.
+
 #### 18 April 2023 - Fix - CloudGateway 2.10.7 - Remote Access Auto Login [ID_36191]
 
 If DataMiner CloudGateway 2.10.6 was installed, users were not automatically logged in with their linked DataMiner account when they used the dataminer.services remote access URL to access DataMiner web apps. This issue has been resolved.
