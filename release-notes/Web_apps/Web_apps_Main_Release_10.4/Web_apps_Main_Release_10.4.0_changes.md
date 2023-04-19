@@ -302,20 +302,6 @@ Could not find argument with name '{argument.Name}'.
 
 An error could occur when feeding data from a GQI component to a query that was used in the same component.
 
-#### Dashboards app & Low-Code Apps - Table component: Selection issues [ID_35968]
-
-<!-- MR 10.4.0 - FR 10.3.6 -->
-
-When a GQI table was configured to feed the selected rows to another component, the following issues could occur:
-
-- When you selected a row above a row that had been selected earlier, that row would not get fed.
-
-- When you tried to select multiple rows using SHIFT+Click, this would not work when you selected the rows bottom to top.
-
-- When you selected a single row that was already selected as part of a multiple select, the feed would not be updated.
-
-- When you exported the selected rows to a CSV file, the CSV file would incorrectly contain all rows instead of only the ones you had selected.
-
 #### Dashboards app - GQI: No element feed available after selecting a relation between two standalone parameters [ID_36003]
 
 <!-- MR 10.4.0 - FR 10.3.5 -->

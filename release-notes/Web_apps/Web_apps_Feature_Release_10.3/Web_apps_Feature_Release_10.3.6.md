@@ -92,7 +92,7 @@ When an interactive Automation script was launched from a web app, the following
 
 #### Dashboards app & Low-Code Apps - Table component: Selection issues [ID_35968]
 
-<!-- MR 10.4.0 - FR 10.3.6 -->
+<!-- MR 10.2.0 [CU15]/10.3.0 [CU3] - FR 10.3.6 -->
 
 When a GQI table was configured to feed the selected rows to another component, the following issues could occur:
 

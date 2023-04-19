@@ -59,6 +59,20 @@ When you created or updated a function resource while its parent element was in 
 
 From now on, when you create or update a function resource while its parent element is in an error state, an error will be thrown.
 
+#### Dashboards app & Low-Code Apps - Table component: Selection issues [ID_35968]
+
+<!-- MR 10.2.0 [CU15]/10.3.0 [CU3] - FR 10.3.6 -->
+
+When a GQI table was configured to feed the selected rows to another component, the following issues could occur:
+
+- When you selected a row above a row that had been selected earlier, that row would not get fed.
+
+- When you tried to select multiple rows using SHIFT+Click, this would not work when you selected the rows bottom to top.
+
+- When you selected a single row that was already selected as part of a multiple select, the feed would not be updated.
+
+- When you exported the selected rows to a CSV file, the CSV file would incorrectly contain all rows instead of only the ones you had selected.
+
 #### Business Intelligence: Problem when a replicated SLA was stopped or deleted [ID_35973]
 
 <!-- MR 10.2.0 [CU15]/10.3.0 [CU3] - FR 10.3.6 -->
