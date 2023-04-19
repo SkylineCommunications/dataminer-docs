@@ -6,6 +6,14 @@ uid: DCP_change_log
 
 The dataminer.services platform gets updated continuously. This change log can help you trace when specific features and changes have become available.
 
+#### 19 April 2023 - Enhancements - ArtifactDeployer 1.4.4 - General improvements [ID_36058]
+
+Changes have been implemented in DataMiner ArtifactDeployer to improve its general stability.
+
+#### 19 April 2023 - Enhancements - Orchestrator 1.3.3 - General improvements [ID_36031]
+
+Changes have been implemented in DataMiner Orchestrator to improve its general stability.
+
 #### 19 April 2023 - Enhancements - CoreGateway 2.12.2 - General improvements [ID_35918]
 
 Changes have been implemented in DataMiner CoreGateway to improve its general stability.
