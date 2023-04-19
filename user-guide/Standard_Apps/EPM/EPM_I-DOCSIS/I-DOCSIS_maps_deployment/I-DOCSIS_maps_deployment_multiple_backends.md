@@ -5,11 +5,10 @@ uid: I-DOCSIS_maps_deployment_multiple_backends
 # Systems with multiple back-end elements
 
 > [!IMPORTANT]
-> Several example map configuration files are available for a system with two back-end elements: [EPM Maps - Multiple BEs](https://skylinebe.sharepoint.com/:f:/s/DataMinerSolutions-DAA/EmQ3x6z4ssVAmmew81qf9BEBgqNwzKHSuU23jNUG8fLnCw?e=Z55chX). We recommend using these example files to follow this procedure.
+> All the map configuration files are located on the following path: `C:\Skyline DataMiner\Maps\Configs`. These path must be accessed on the DMA where the front-end element is located.
+> All the necessary configuration files will be uploaded automatically uploaded to the above path, when the latest EPM I-DOCSIS package is installed on the DataMiner system.
 
 To deploy the I-DOCSIS EPM maps to a DataMiner System with multiple elements using the [Skyline EPM Platform DOCSIS](https://catalog.dataminer.services/result/driver/7209) protocol:
-
-1. Upload the latest version of the [Skyline EPM Platform Visio drawing](https://svn.skyline.be/!/#SystemEngineering/view/head/Visios/Generic/Protocols/Skyline/EPM%20Platform) to the DMS.
 
 1. Get the configuration file for the node segment maps (*EPM_MAPS_NODE_SEGMENT.xml*).
 
@@ -92,7 +91,3 @@ To deploy the I-DOCSIS EPM maps to a DataMiner System with multiple elements usi
    1. Create a relation layer per backend element, as detailed above.
 
    1. Verify for each relation layer that the *DataMinerID* and *ElementID* tags contain the DataMiner ID and element ID of a back-end element, as detailed above.
-
-1. Add all map configuration files to the folder `C:\Skyline DataMiner\Maps\Configs` on the DMA where the front-end element is located. If this folder does not exist yet, you can create it.
-
-1. Add the files from the [Icons folder](https://skylinebe.sharepoint.com/:f:/s/DataMinerSolutions-DAA/Er0-2xHloyJAtijNn5fD2SoBZs87yrqVmZW-dZCToJGO5w?e=ODoCr9) to the folder `C:\Skyline DataMiner\Webpages\Maps\v1\images\icons` on the DMA where the front-end element is located.
