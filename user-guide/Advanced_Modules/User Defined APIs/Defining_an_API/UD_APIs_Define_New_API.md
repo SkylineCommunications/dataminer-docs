@@ -153,17 +153,23 @@ You can also use the `StatusCode` enum, which contains suggestions, and cast tha
 
 ## Creating an API and token(s) in DataMiner Automation
 
+> [!NOTE]
+> Before you try to execute this procedure, make sure you have the user permissions available under [Modules > User-Defined APIs](xref:DataMiner_user_permissions#modules--user-defined-apis).
+
 1. Open your API script in the Automation module in DataMiner Cube and click *Configure API* at the bottom of the window.
 
    This will open a window where you can create the API.
 
-   ![Creating an ApiDefinition](~/user-guide/images/UDAPIS_CreateAPI.png)<br>
+   ![Creating an API](~/user-guide/images/UDAPIS_CreateAPI.png)<br>
    *Creating an API in DataMiner 10.3.6*
-   
+
    > [!NOTE]
-   > - The button will be shown in the UI when the system supports user-defined API (DataMiner 10.3.6.0 onwards) and when the system has an active Indexing Engine.
-   > - The user must at least have the permission to read API definitions. It is recommended that the user should have all user-defined API permissions. This can be configured in *System Center* > *Users/Groups*  in Permissions *Modules* > *User-Defined APIs*.
-   > - In DataMiner 10.3.5, the UI is only available if the soft-launch option *UserDefinableAPI* is set to true. See [soft-launch options](xref:SoftLaunchOptions).
+   > You will only be able to see the button *Configure API*  in the UI if the following conditions are met:
+   >
+   > - The [soft-launch option](xref:SoftLaunchOptions) *UserDefinableAPI* is enabled.
+   > - You are using DataMiner 10.3.6 or higher.
+   > - The DataMiner System has an active Indexing Engine (e.g. Elasticsearch).
+   > - You have the permission to read API definitions.
 
 1. Add a description.
 
@@ -183,8 +189,7 @@ You can also use the `StatusCode` enum, which contains suggestions, and cast tha
    > Once a token is created with a specified secret, **it is not possible to retrieve that secret again**. The value is stored securely in the database with a non-reversible hashing function. Make sure to save it somewhere secure or pass it in a secure way to the API user.
 
 > [!NOTE]
-> You can change your API configuration at any time by opening this window again and changing the settings.
-> You can also navigate to the [API overview in DataMiner Cube](xref:UD_APIs_Viewing_in_Cube#configure-apis-and-tokens).
+> You can change your API configuration at any time on the [User-Defined APIs page in System Center](xref:UD_APIs_Viewing_in_Cube#configuring-apis-and-tokens). Alternatively, you can also open this window in the Automation module again to change the settings.
 
 ## Configuring the UserDefinableApiEndpoint extension module
 

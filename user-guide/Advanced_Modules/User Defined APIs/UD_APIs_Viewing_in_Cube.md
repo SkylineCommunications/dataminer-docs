@@ -2,7 +2,10 @@
 uid: UD_APIs_Viewing_in_Cube
 ---
 
-# Manage APIs and tokens in DataMiner Cube
+# Managing APIs and tokens in DataMiner Cube
+
+> [!NOTE]
+> The User-Defined APIs feature is available in DataMiner Cube from DataMiner 10.4.0/10.3.6 onwards, if the soft-launch option *UserDefinableAPI* is set enabled. See [soft-launch options](xref:SoftLaunchOptions).
 
 > [!IMPORTANT]
 > If you were previously using the *APIDeployment* soft-launch option, keep in mind that the *User-Defined APIs* tab will replace the obsolete *API deployment* tab in the future. Make sure to move your old APIs from API deployment to the new feature. For information on how to create APIs from existing scripts, see [using an existing script page](xref:UD_APIs_Using_existing_scripts).
@@ -10,28 +13,32 @@ uid: UD_APIs_Viewing_in_Cube
 > [!WARNING]
 > This feature is in preview and is not fully released yet. For now, it should only be used on a staging platform. It should not be used in a production environment.
 
-## Configure APIs and tokens
+## Configuring APIs and tokens
 
-From DataMiner 10.4.0/10.3.6 onwards, you can manage the APIs and tokens of your system in DataMiner Cube.
+1. Go to *System Center* > *User-Defined APIs*.
 
-To do so, go to *System Center* > *User-Defined APIs*. There, you can create, edit or delete your APIs and tokens.
+1. Use the buttons below the table to create an API or token, or to edit or delete the selected API or token.
 
-   ![API module in DataMiner Cube](~/user-guide/images/UDAPIS_Client_API_Module.png)<br>
-   *API module in DataMiner Cube 10.3.6*
+![API module in DataMiner Cube](~/user-guide/images/UDAPIS_Client_API_Module.png)<br>
+*User-Defined APIs page in DataMiner 10.3.6*
 
-> [!NOTE]
-> For more information, you can go to the [Creating an API and token(s) in Automation](xref:UD_APIs_Define_New_API#creating-an-api-and-tokens-in-dataminer-automation).
+> [!TIP]
+> See also: [Creating an API and token(s) in DataMiner Automation](xref:UD_APIs_Define_New_API#creating-an-api-and-tokens-in-dataminer-automation).
 
-## Enable or disable API tokens
+## Enabling or disabling API tokens
 
-It is possible to either enable or disable an API token when right-clcking it in the token table.
+1. Go to *System Center* > *User-Defined APIs*.
 
-   ![Enable or disable API token in DataMiner Cube](~/user-guide/images/UDAPIS_DisableToken.png)<br>
-   *Enable or disable API token in DataMiner Cube*
-   
-## Get API URL blueprint
+1. Right-click the token in the *Tokens* table and select *Enable* or *Disable*.
 
-It is possible to copy the URL blueprint of an API when right-clcking it in the API table.
+![Enabling or disabling an API token in DataMiner Cube](~/user-guide/images/UDAPIS_DisableToken.png)<br>
+*Enabling or disabling an API token in DataMiner 10.3.6*
 
-   ![Copy API URL in DataMiner Cube](~/user-guide/images/UDAPIS_CopyAPIURL.png)<br>
-   *Copy API URL in DataMiner Cube*
+## Getting the API URL blueprint
+
+1. Go to *System Center* > *User-Defined APIs*.
+
+1. Right-click the API in the APIs table and select *Copy URL*.
+
+![Copying an API URL in DataMiner Cube](~/user-guide/images/UDAPIS_CopyAPIURL.png)<br>
+*Copying an API URL in DataMiner 10.3.6*
