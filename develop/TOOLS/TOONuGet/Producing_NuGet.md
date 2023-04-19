@@ -113,7 +113,7 @@ If you have a dependency on .NET Framework (e.g. Skyline.DataMiner.Dev.*), you w
 
 - *Skyline.DataMiner.Core.XXX*
 
-  - Holds the packages that have a direct link to DataMiner (AppPackage creation/installation, DataMinerSystem, InterAppCalls, etc.).
+  - Holds the packages dealing with direct (usually very generic) DataMiner features (AppPackage creation/installation, DataMinerSystem, InterAppCalls, etc.).
 
   - This also applies for DxMs, except for packages that can communicate with external data sources.
 
@@ -122,6 +122,10 @@ If you have a dependency on .NET Framework (e.g. Skyline.DataMiner.Dev.*), you w
   - Holds all the utilities like helpers, parsers, etc.
 
     E.g. SNMP trap parsing, rate calculations, table context menu, etc.
+
+- *Skyline.DataMiner.ConnectorAPI.XXX*
+
+  - Holds InterAppCall messages that are specific to a Connector, giving a given DM Connector some functions that can be called/triggered/consumed by other DM components (other Connectors, Automation Scripts…)
 
 - *Skyline.DataMiner.DataSources.XXX*
 
