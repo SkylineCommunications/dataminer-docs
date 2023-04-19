@@ -70,7 +70,7 @@ The entry point method has two parameters.
 
 You can use the *RequestMethod* property to check the HTTP method of the trigger. It can contain the following values:
 
-- *Unspecified* (must never occur)
+- *Unspecified* (should never occur)
 - *Get*
 - *Put*
 - *Post*
