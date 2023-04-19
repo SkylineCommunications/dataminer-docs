@@ -14,6 +14,22 @@ New functionality has been added to the DataMiner SupportAssistant to make it ta
 
 Remind that traffic via port 5100 must be allowed on the internal network and that at least DataMiner CloudGateway 2.10.0 must be installed.
 
+#### 19 April 2023 - Enhancements -  FieldControl 2.8.3 - General improvements [ID_36162]
+
+Changes have been implemented in DataMiner FieldControl to improve its general stability.
+
+#### 19 April 2023 - Enhancements - ArtifactDeployer 1.4.4 - General improvements [ID_36058]
+
+Changes have been implemented in DataMiner ArtifactDeployer to improve its general stability.
+
+#### 19 April 2023 - Enhancements - Orchestrator 1.3.3 - General improvements [ID_36031]
+
+Changes have been implemented in DataMiner Orchestrator to improve its general stability.
+
+#### 19 April 2023 - Enhancements - CoreGateway 2.12.2 - General improvements [ID_35918]
+
+Changes have been implemented in DataMiner CoreGateway to improve its general stability.
+
 #### 18 April 2023 - Fix - CloudGateway 2.10.7 - Remote Access Auto Login [ID_36191]
 
 If DataMiner CloudGateway 2.10.6 was installed, users were not automatically logged in with their linked DataMiner account when they used the dataminer.services remote access URL to access DataMiner web apps. This issue has been resolved.
