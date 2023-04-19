@@ -5,8 +5,7 @@ uid: I-DOCSIS_maps_deployment_one_backend
 # Systems with one back-end element
 
 > [!IMPORTANT]
-> All the map configuration files are located on the following path: `C:\Skyline DataMiner\Maps\Configs`. These path must be accessed on the DMA where the front-end element is located.
-> All the necessary configuration files will be automatically uploaded to the above path, when the latest EPM I-DOCSIS package is installed on the DataMiner system.
+> The configuration files mentioned in the procedure below are automatically installed when you upgrade to the latest EPM I-DOCSIS version. You can find them in the following folder on the DMA where the front-end element is located: `C:\Skyline DataMiner\Maps\Configs`.
 
 To deploy the I-DOCSIS EPM maps to a DataMiner System with one element using the [Skyline EPM Platform DOCSIS](https://catalog.dataminer.services/result/driver/7209) protocol:
 
