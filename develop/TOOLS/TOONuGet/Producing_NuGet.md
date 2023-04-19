@@ -125,7 +125,7 @@ If you have a dependency on .NET Framework (e.g. Skyline.DataMiner.Dev.*), you w
 
 - *Skyline.DataMiner.ConnectorAPI.XXX*
 
-  - Holds InterAppCall messages that are specific to a Connector, giving a given DM Connector some functions that can be called/triggered/consumed by other DM components (other Connectors, Automation Scripts…)
+  - Holds InterAppCall messages that are specific to a connector, giving a given DataMiner connector some functions that can be called/triggered/consumed by other DataMiner components (other connectors, Automation scripts, etc.).
 
 - *Skyline.DataMiner.DataSources.XXX*
 
