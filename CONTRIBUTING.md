@@ -457,13 +457,13 @@ To be able to make a local test build, you need to have DocFX installed. DocFX i
    > [!NOTE]
    > Using the search box when viewing the test website on <http://localhost:8080/> will not return any pages from the test website. The search engine only indexes the published content on <https://docs.dataminer.services/> and will, as such, only return pages from that website.
 
-1. When you have finished previewing the website, in the Terminal pane, press Ctrl+C to exit the preview mode.
+1. When you have finished previewing the website, close the command window.
 
 > [!NOTE]
 > If port 8080 is not available, you will need to run *buildDocs.cmd* from a command prompt with the correct port as an argument, e.g. `buildDocs 8081`.
 
 > [!IMPORTANT]
-> If you make test builds often, you may need to occasionally clear the files in the `\dataminer-docs\obj\.cache\build\` folder of your local version of the documentation. In the long run, these can pile up and take up a large amount of memory.
+> If you make test builds often, you may need to occasionally clear the files in the `\dataminer-docs\obj\.cache\build\` folder of your local version of the documentation. Depending on your DocFX version, these can pile up and take up a large amount of memory in the long run.
 
 ##### Making a test build in the Visual Studio Code terminal
 
@@ -503,7 +503,7 @@ If you make repeated test builds to check changes you have made, and you are onl
       > Using the search box when viewing the test website on <http://localhost:8080/> will not return any pages from the test website. The search engine only indexes the published content on <https://docs.dataminer.services/> and will, as such, only return pages from that website.
 
 > [!IMPORTANT]
-> If you make test builds often, you may need to occasionally clear the files in the `\dataminer-docs\obj\.cache\build\` folder of your local version of the documentation. In the long run, these can pile up and take up a large amount of memory.
+> If you make test builds often, you may need to occasionally clear the files in the `\dataminer-docs\obj\.cache\build\` folder of your local version of the documentation. Depending on your DocFX version, these can pile up and take up a large amount of memory in the long run.
 
 ## Markdown syntax
 
