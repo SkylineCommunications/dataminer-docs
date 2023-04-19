@@ -2366,7 +2366,7 @@
     - name: User-Defined APIs (preview)
       topicUid: UD_APIs
       items:
-        - name: Viewing APIs and tokens
+        - name: Manage APIs and tokens
           topicUid: UD_APIs_Viewing_in_Cube
         - name: Defining an API
           topicUid: UD_APIs_Define_New_API

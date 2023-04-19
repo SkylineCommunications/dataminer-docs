@@ -2,7 +2,7 @@
 uid: UD_APIs_Viewing_in_Cube
 ---
 
-# APIs and tokens in DataMiner Cube
+# Manage APIs and tokens in DataMiner Cube
 
 > [!IMPORTANT]
 > If you were previously using the *APIDeployment* soft-launch option, keep in mind that the *User-Defined APIs* tab will replace the obsolete *API deployment* tab in the future. Make sure to move your old APIs from API deployment to the new feature. For information on how to create APIs from existing scripts, see [using an existing script page](xref:UD_APIs_Using_existing_scripts).
@@ -10,7 +10,7 @@ uid: UD_APIs_Viewing_in_Cube
 > [!WARNING]
 > This feature is in preview and is not fully released yet. For now, it should only be used on a staging platform. It should not be used in a production environment.
 
-## Manage APIs and tokens
+## Configure APIs and tokens
 
 From DataMiner 10.4.0/10.3.6 onwards, you can manage the APIs and tokens of your system in DataMiner Cube.
 
@@ -20,7 +20,7 @@ To do so, go to *System Center* > *User-Defined APIs*. There, you can create, ed
    *API module in DataMiner Cube 10.3.6*
 
 > [!NOTE]
-> For more information, you can go to the [Creating an API and token(s) in Automation](xref:UD_APIs_Define_New_API#creating-an-api-and-tokens-in-automation).
+> For more information, you can go to the [Creating an API and token(s) in Automation](xref:UD_APIs_Define_New_API#creating-an-api-and-tokens-in-dataminer-automation).
 
 ## Enable or disable API tokens
 

@@ -13,7 +13,7 @@ uid: UD_APIs_Define_New_API
 To create a new API, follow these steps as detailed below:
 
 1. [Create the API Automation script](#creating-the-api-automation-script)
-1. [Create the API definition(s) and token(s)](#creating-an-api-and-tokens-in-automation)
+1. [Create the API definition(s) and token(s)](#creating-an-api-and-tokens-in-dataminer-automation)
 1. [Configure the UserDefinableApiEndpoint extension module](#configuring-the-userdefinableapiendpoint-extension-module)
 
 > [!NOTE]
@@ -80,7 +80,7 @@ This makes it possible to define the 4 CRUD (create, read, update, delete) actio
 
 #### User input data
 
-There are two ways to pass data to the API script if you make use of the *OnApiTrigger* entry point method. Which way is used depends on whether the checkbox to `Parse JSON of raw body to dictionary` is selected when the API is configured. See [Creating the API definition(s)](#creating-an-api-and-tokens-in-automation).
+There are two ways to pass data to the API script if you make use of the *OnApiTrigger* entry point method. Which way is used depends on whether the checkbox to `Parse JSON of raw body to dictionary` is selected when the API is configured. See [Creating the API definition(s)](#creating-an-api-and-tokens-in-dataminer-automation).
 
 - If the checkbox is selected, the JSON body of the HTTP request will automatically be converted to a `Dictionary<string, string>` in the *Parameters* property of the `ApiTriggerInput` object. In the *RawBody* property, the raw string body will remain available.
 
@@ -151,9 +151,9 @@ You can also use the `StatusCode` enum, which contains suggestions, and cast tha
 > - A simple example is included in the [Automation script example](#creating-the-api-automation-script).
 > - For more insight into which HTTP status codes to use in which circumstances, see [HTTP status codes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status).
 
-## Creating an API and token(s) in Automation
+## Creating an API and token(s) in DataMiner Automation
 
-1. Open your API script in the Automation app in DataMiner Cube and click *Configure API...* at the bottom of the window.
+1. Open your API script in the Automation module in DataMiner Cube and click *Configure API* at the bottom of the window.
 
    This will open a window where you can create the API.
 
@@ -174,7 +174,7 @@ You can also use the `StatusCode` enum, which contains suggestions, and cast tha
    > [!NOTE]
    > Leave *Method to be executed* set to the default selection. This option should only be changed for legacy scripts without the `OnApiTrigger` entry point. See [Using existing scripts](xref:UD_APIs_Using_existing_scripts).
 
-1. Under *Tokens*, select the tokens that need access. You can also create new tokens using the *New token...* button.
+1. Under *Tokens*, select the tokens that need access. You can also create new tokens using the *New token* button.
 
    > [!NOTE]
    > It is not possible to delete a token that is in use by an API. You first need to unassign the token from all APIs using it before you can delete it.
@@ -184,7 +184,7 @@ You can also use the `StatusCode` enum, which contains suggestions, and cast tha
 
 > [!NOTE]
 > You can change your API configuration at any time by opening this window again and changing the settings.
-> You can also navigate to the [API overview in DataMiner Cube](xref:UD_APIs_Viewing_in_Cube#apis-and-tokens-in-dataminer-cube).
+> You can also navigate to the [API overview in DataMiner Cube](xref:UD_APIs_Viewing_in_Cube#configure-apis-and-tokens).
 
 ## Configuring the UserDefinableApiEndpoint extension module
 
