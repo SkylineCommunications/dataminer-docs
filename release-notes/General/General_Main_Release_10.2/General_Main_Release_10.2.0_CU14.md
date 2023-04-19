@@ -58,20 +58,6 @@ Up to now, GQI data sources that require an Elasticsearch database used the `Dat
 
 Overall error handling has been improved when executing an interactive Automation script by clicking a DOM button in a web app.
 
-#### Improved error handling when elements go into an error state [ID_35944]
-
-<!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
-
-When an element goes into an error state after an attempt to activate it failed, from now on, no more calls to SLProtocol, SLElement or SLSpectrum will be made for that element.
-
-Also, when an element that generates DVE child elements or virtual functions goes into an error state, from now on, the generated DVE child elements or virtual functions will also go into an error state. However, in order to avoid too many alarms to be generated, only one alarm (for the main element) will be generated.
-
-The following issues have also been fixed:
-
-- When a DVE parent element in an error state on DataMiner startup was activated, its DVE child elements or virtual functions would not be properly loaded.
-
-- When a DVE parent element was started, the method that has to make sure that ElementInfo and ElementData are in sync would incorrectly not check all child elements.
-
 #### DataMiner Cube - Alarm templates: 'Condition (Monitoring disabled if condition is true)' column renamed to 'Condition (Parameter excluded if condition is true)' [ID_36007]
 
 <!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
