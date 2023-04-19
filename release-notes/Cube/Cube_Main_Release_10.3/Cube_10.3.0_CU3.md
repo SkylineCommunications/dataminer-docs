@@ -41,18 +41,6 @@ Also, when the name of a script folder ended with a slash or a backslash charact
 
 When, in a topology chain, you opened a KPI window and clicked the histogram icon, in some cases, the histogram window would be empty.
 
-#### Problem when trying to open the 'DASHBOARDS' page of an element, service or view card [ID_36006]
-
-<!-- MR 10.3.0 [CU3] - FR 10.3.6 -->
-<!-- Not added to FR 10.3.6 -->
-
-When you tried to open the *DASHBOARDS* page of an element, service or view card, the following error would be thrown:
-
-```txt
-Server Error in '/Dashboards' Application.
-Could not load file or assembly 'ICSharpCode.SharpZipLib' or one of its dependencies. The located assembly's manifest definition does not match the assembly reference. (Exception from HRESULT: 0x80131040)
-```
-
 #### DataMiner Cube - EPM: Navigation issues [ID_36089]
 
 <!-- MR 10.2.0 [CU15]/10.3.0 [CU3] - FR 10.3.6 -->
