@@ -149,3 +149,9 @@ When the *DataMiner.xml* file contained `<ProcessOptions protocolProcesses="5" s
 <!-- MR 10.3.0 [CU3] - FR 10.3.6 -->
 
 Although DataMiner supports all OpenSearch 1.x and 2.x versions, in some cases, errors stating that OpenSearch 2.4 and 2.5 were not officially supported would incorrectly be added to the *SLDBConnection.txt* and *SLSearch.txt* log files.
+
+#### DataMiner Backup: Low-code apps would incorrectly not be restored [ID_36139]
+
+<!-- MR 10.3.0 [CU3] - FR 10.3.6 -->
+
+When you restored a DataMiner backup that included low-code apps, those apps would incorrectly not be restored.
