@@ -2984,6 +2984,8 @@
       items:
         - name: Troubleshooting - Trending
           topicUid: Troubleshooting_Trending
+        - name: Troubleshooting - Alarms
+          topicUid: Troubleshooting_Alarms
     - name: Troubleshooting procedures
       topicUid: Troubleshooting_procedures
       items:
