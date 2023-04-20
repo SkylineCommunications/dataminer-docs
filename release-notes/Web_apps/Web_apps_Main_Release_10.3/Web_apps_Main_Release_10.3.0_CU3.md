@@ -143,3 +143,15 @@ When, while editing a dashboard, you opened the *ELEMENTS* section in the *DATA*
 In some cases, the popup panel showing the PDF preview of a dashboard would incorrectly have a scroll bar.
 
 From now on, a popup panel showing a PDF preview will take the full screen height and will only allow its contents to scroll.
+
+#### Dashboards app: Problem when pressing an arrow key in the 'Create dashboard' window [ID_36146]
+
+<!-- MR 10.2.0 [CU15]/10.3.0 [CU3] - FR 10.3.6 -->
+
+In the *Create dashboard* window, pressing an arrow key while one of the text boxes had the focus would incorrectly cause the *OK* or *Cancel* button to become selected.
+
+#### GQI: Web services API would not be able to correctly translate a server query to a web query [ID_36173]
+
+<!-- MR 10.2.0 [CU15]/10.3.0 [CU3] - FR 10.3.5 [CU0] -->
+
+In some cases, the web services API would not be able to correctly translate a server query to a web query.
