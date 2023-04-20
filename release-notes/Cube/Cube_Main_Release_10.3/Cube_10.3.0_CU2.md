@@ -116,7 +116,7 @@ The following issues have all been fixed:
 
 #### Problem when trying to open the 'DASHBOARDS' page of an element, service or view card [ID_36006]
 
-<!-- MR 10.3.0 [CU3] - FR 10.3.6 -->
+<!-- MR 10.3.0 [CU2] - FR 10.3.6 -->
 <!-- Not added to FR 10.3.6 -->
 
 When you tried to open the *DASHBOARDS* page of an element, service or view card, the following error would be thrown:
