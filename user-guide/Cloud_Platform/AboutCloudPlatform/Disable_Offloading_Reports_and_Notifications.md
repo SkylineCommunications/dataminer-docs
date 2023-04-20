@@ -23,5 +23,5 @@ You can **remove** entries from that array for each DataMiner SupportAssistant b
 1. Restart DataMiner SupportAssistant on each server for the changes to take effect.
 
 > [!IMPORTANT]
-> - At this moment in time the feature runs in parallel with the old way of offloading via an SMTP server and thus there is no possiblity yet to eliminate those.
+> - At this moment in time the feature runs in parallel with the old way of offloading via an SMTP server and thus there is no possiblity yet to eliminate those until further notice.
 > - Disabling the offload of Reports and Notifications will also eliminate Skyline to provide maintenance and support.
