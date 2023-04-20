@@ -9,11 +9,14 @@ uid: UD_APIs_UserDefinableApiEndpoint
 
 *DataMiner UserDefinableApiEndpoint* is an extension module that runs an ASP.NET Core 5 web API. It handles the incoming API triggers over HTTP or HTTPS and sends the requests to the DataMiner Agent(s) in a round-robin way.
 
+> [!CAUTION]
+> There is currently no rate limiting or protection in place that would prevent malicious users from spamming the endpoint. We recommend to only expose the DMA using a firewall or network protection that prevents unknown IP addresses from sending requests. If required, you can also disable the rewrite rule in IIS that forwards these requests from port 80/443 and provide port forwarding to the DxM with additional protection.
+
 ## Installing the DxM
 
-Even though this is an extension module, it follows the release cycle of DataMiner. This means that when you install a **general DataMiner upgrade package**, this module will also be installed and updated.
+Even though this is an extension module, it follows the release cycle of DataMiner. This means that when you install a **general DataMiner upgrade package**, this module will also be automatically installed and updated on each DMA in your DMS.
 
-If for some reason this extension module is uninstalled, the User-Defined APIs feature will become unavailable. If this happens, or if the installation somehow becomes corrupted, you can install the extension module using the **MSI installer** located in `C:\Skyline DataMiner\ModuleInstallers\DataMiner UserDefinableApiEndpoint <VERSION>.msi`. You will need Administrator rights for this.
+If for some reason this extension module is uninstalled, the User-Defined APIs feature will become unavailable. If this happens, or if the installation somehow becomes corrupted, you can install the extension module using the **MSI installer** located in `C:\Skyline DataMiner\Tools\ModuleInstallers\DataMiner UserDefinableApiEndpoint <VERSION>.msi`. You will need Administrator rights for this.
 
 > [!IMPORTANT]
 > Downgrading DataMiner will not automatically downgrade the *UserDefinableApiEndpoint* DxM. This means that a **downgrade could result in incompatibility** between DataMiner and the extension module. To downgrade the *UserDefinableApiEndpoint* DxM, first uninstall the installed version, and then install the lower version. Do not just run the installer of the lower version without uninstalling first, as this may corrupt your installation.
@@ -44,7 +47,8 @@ The extension module has a configuration file with some settings that are set to
 
 The default configuration file can be found in the following location: `%programfiles%\Skyline Communications\DataMiner UserDefinableApiEndpoint\appsettings.json`
 
-If you want to make changes to the configuration, create an *appsettings.custom.json* file within the same folder. This will prevent your settings from being overwritten by an upgrade.
+> [!IMPORTANT]
+> If you want to make changes to the configuration, create an *appsettings.custom.json* file within the same folder. This will prevent your settings from being overwritten by an upgrade. Changing the settings in *appsettings.json* will work, but these will be overwritten during a DataMiner upgrade.
 
 In this file, add the setting or settings that you want to override, with your custom value. The following main blocks of settings are available:
 
@@ -53,7 +57,7 @@ In this file, add the setting or settings that you want to override, with your c
 - [UserDefinableAPIs](#userdefinableapis)
 
 > [!IMPORTANT]
-> When you have customized the settings, you will need to restart the *DataMiner UserDefinableAPIEndpoint* service.
+> When you have customized the settings, you will need to restart the *DataMiner UserDefinableApiEndpoint* service.
 
 For example, to change the setting *MessageBrokerTimeOutSeconds* to a higher value, create an *appsettings.custom.json* file with the following content and then restart the service:
 
@@ -92,15 +96,15 @@ IIS also has a rewrite rule (Reroute User Definable APIs) that forwards API requ
 
 1. Select *Default Web Site* and then double-click *URL Rewrite* on the right.
 
-   ![IIS Manager 1](~/user-guide/images/UDAPIS_IIS1.jpg)
+   ![IIS Manager 1](~/user-guide/images/UDAPIS_IIS_RewriteRule_1.jpg)
 
 1. Select the *Reroute User Definable APIs* rewrite rule and click *Edit* in the pane on the right.
 
-   ![IIS Manager 2](~/user-guide/images/UDAPIS_IIS2.jpg)
+   ![IIS Manager 2](~/user-guide/images/UDAPIS_IIS_RewriteRule_2.jpg)
 
 1. Under *Action*, in the *Rewrite URL* box, change the default port (5002) to the port you want to use.
 
-   ![IIS Manager 3](~/user-guide/images/UDAPIS_IIS3.jpg)
+   ![IIS Manager 3](~/user-guide/images/UDAPIS_IIS_RewriteRule_3.jpg)
 
 1. Click *Apply*.
 
@@ -147,15 +151,12 @@ For example, this is the default configuration:
 
 ### UserDefinableAPIs
 
-This section contains options specific to the DataMiner User-Definable APIs module:
+This section contains options specific to this DxM module:
 
 - **NatsSubject**: The subject used for internal NATS messaging. This should not be changed.
-
-- **SessionConfigPath**: The path to the *SLCLoud.xml* file.
-
-- **CredentialsConfigPath**: The path to the credentials used to connect to DataMiner over NATS.
-
-- **MessageBrokerTimeOutSeconds**: The time the message broker sending the NATS trigger to SLNet will wait for a response before it times out. By default, this is set to 300 seconds (i.e. 5 minutes).
+- **MessageBrokerTimeOutSeconds**: The time the message broker (sending the NATS trigger to SLNet) will wait for a response before it times out. By default, this is set to 90 seconds (i.e. 1.5 minutes).
+- **SessionConfigPath**: *Optional.* The path to the NATS config file. The default configuration will be used when this is not filled in.
+- **CredentialsConfigPath**: *Optional.* The path to the credentials file (.creds) used to connect to the NATS message bus. The default credentials will be used when this is not filled in.
 
 For example, this is the default configuration:
 
@@ -164,9 +165,31 @@ For example, this is the default configuration:
   ...
   "UserDefinableAPIs": {
     "NatsSubject": "Skyline.DataMiner.Protobuf.Apps.UserDefinableApis.Api.v1.UserDefinableApiTriggerRequest",
-    "SessionConfigPath": "C:\\Skyline DataMiner\\SLCloud.xml",
-    "CredentialsConfigPath": "C:\\Skyline DataMiner\\NATS\\nsc\\.nkeys\\creds\\DataMinerOperator\\DataMinerAccount\\DataMinerUser.creds",
-    "MessageBrokerTimeOutSeconds": 300
+    "MessageBrokerTimeOutSeconds": 90
   }
 }
 ```
+
+#### Changing the time-out
+
+IIS has a time-out set to 120 seconds (2 minutes). When increasing the **MessageBrokerTimeOutSeconds** as explained above, this time-out in IIS will also need to be increased.
+
+> [!NOTE]
+> Make sure there is a margin, put the time-out in IIS higher than than the **MessageBrokerTimeOutSeconds**.
+You can change the time-out in IIS with following steps:
+
+1. Open `Internet Information Services (IIS) Manager`.
+
+1. In the *Connections* pane on the left, select the top icon with the server name and click *Application Request Routing Cache*.
+
+   ![IIS time-out 1](~/user-guide/images/UDAPIS_IIS_TimeOut_1.jpg)
+
+1. Click *Server Proxy Settings* in the pane on the far right.
+
+    ![IIS time-out 2](~/user-guide/images/UDAPIS_IIS_TimeOut_2.jpg)
+
+1. Change the time-out in the textbox.
+
+    ![IIS time-out 3](~/user-guide/images/UDAPIS_IIS_TimeOut_3.jpg)
+
+1. Click *Apply*.

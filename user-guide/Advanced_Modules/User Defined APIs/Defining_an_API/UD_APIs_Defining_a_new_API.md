@@ -21,9 +21,7 @@ To create a new API, follow these steps as detailed below:
 
 ## Creating the API Automation script
 
-To define a custom API, create an Automation script that contains the logic of your API.
-
-Your Automation script needs the `OnApiTrigger` entry point method, which will be executed when the API is triggered. The entry point should look like this:
+To define an API, you'll need an Automation script that contains the logic of the API. This Automation script needs the `OnApiTrigger` entry point method, which will be executed when the API is triggered. The entry point should look like this:
 
 ```csharp
 using Skyline.DataMiner.Automation;
@@ -49,7 +47,9 @@ public class Script
 ```
 
 > [!NOTE]
-> The `Run` method is not required in the script, but the entry point method must reside in the `Script` class, just like in other DataMiner scripts.
+>
+> - When developing the API script in DIS, make sure to update the 'Common' and 'Automation' NuGet packages to their latest version so the types of the User-Defined APIs feature are available.
+> - The `Run` method is not required in the script, but the entry point method must reside in the `Script` class, just like any other DataMiner scripts.
 
 ### Input
 
@@ -57,32 +57,31 @@ The entry point method has two parameters.
 
 - The `IEngine` object can be used to interact with the DataMiner Automation engine.
 
-- The `ApiTriggerInput` is an object that contains information about the trigger. It has the following properties:
+- The `ApiTriggerInput` is an object that contains information about the API trigger. It has the following properties:
 
   | Property | Type | Explanation |
   |--|--|--|
   | RequestMethod | `RequestMethod` | The HTTP method of the request. See [RequestMethod](#requestmethod). |
   | Route | `string` | The suffix of the URL that this API call is triggered with. Having this available makes it possible to reuse the same script for different routes. See [Route](#route).|
   | RawBody | `string` | The full body of the HTTP request as a string. This can be deserialized and used in the script. See [User input data](#user-input-data). |
-  | Parameters | `Dictionary<string, string>` | Contains the deserialized parameters if you select *Parse JSON of raw body to dictionary* when configuring the API. See [User input data](#user-input-data). |
+  | Parameters | `Dictionary<string, string>` | Contains the deserialized parameters if you select *Dictionary (parsed from JSON)* when configuring the API. See [User input data](#user-input-data). |
 
 #### RequestMethod
 
 You can use the *RequestMethod* property to check the HTTP method of the trigger. It can contain the following values:
 
-- *Unspecified* (should never occur)
 - *Get*
 - *Put*
 - *Post*
 - *Delete*
 
-This makes it possible to define the 4 CRUD (create, read, update, delete) actions in one script. If one or more methods should not be used, you can return a status code 405 (see [ResponseCode](#responsecode)).
+This makes it possible to define the four CRUD (create, read, update, delete) actions in one script. If one or more methods should not be used, you can return a status code 405 (see [ResponseCode](#responsecode)).
 
 #### User input data
 
-There are two ways to pass data to the API script if you make use of the *OnApiTrigger* entry point method. Which way is used depends on whether the checkbox to `Parse JSON of raw body to dictionary` is selected when the API is configured. See [Creating the API definition(s)](#creating-an-api-and-tokens-in-dataminer-automation).
+There are two ways to pass data to the API script if you make use of the *OnApiTrigger* entry point method. Which way is used depends on the selected option in the dropdown when you define the API in Cube. See [Creating the API definition(s)](#creating-an-api-and-tokens-in-dataminer-automation).
 
-- If the checkbox is selected, the JSON body of the HTTP request will automatically be converted to a `Dictionary<string, string>` in the *Parameters* property of the `ApiTriggerInput` object. In the *RawBody* property, the raw string body will remain available.
+- If 'Dictionary (parsed from JSON)' is selected, the JSON body of the HTTP request will automatically be converted to a `Dictionary<string, string>` in the `Parameters` property of the `ApiTriggerInput` object. In the `RawBody` property, the raw string body will remain available.
 
   > [!NOTE]
   > Note that only JSON in the form of key-value pairs is accepted as parameters. For example:
@@ -94,7 +93,9 @@ There are two ways to pass data to the API script if you make use of the *OnApiT
   > }
   > ```
 
-- If the checkbox is not selected, *Parameters* will contain an empty `Dictionary<string, string>`. In this, case, you will need to take care of the deserialization of the raw string body in the *RawBody* property in your Automation script.
+- If the default 'Raw body' option is selected, the `Parameters` property will contain an empty `Dictionary<string, string>`. In this case, you will need to take care of the deserialization of the raw body string which can be found in the `RawBody` property.
+
+See the [API script examples](xref:UD_APIs_API_script_examples) page to see how these two options are used in an API script.
 
 #### Route
 
@@ -106,7 +107,7 @@ The route describes the URL route where the API will be available. It is a suffi
 
 For example, if you want to create an API to retrieve the status of all encoders in your system, a logical route would be `encoders/status`. The full API call would then look like this:
 
-```
+```text
 HTTP GET mydataminer.customer.local/api/custom/encoders/status
 ```
 
@@ -125,13 +126,11 @@ The `ApiTriggerOutput` object has the following properties:
 | ResponseBody | string | Contains the response body as a string. |
 
 > [!NOTE]
-> A valid instance always has to be returned.
+> A valid output instance always has to be returned.
 
 #### ResponseCode
 
-The status of the API trigger request is reflected in the *ResponseCode* property of the `ApiTriggerOutput`.
-
-This is an integer, so any valid HTTP status code can be passed here.
+The status of the API trigger request is reflected in the `ResponseCode` property of the `ApiTriggerOutput`. This is an integer, so any valid HTTP status code can be passed here.
 
 You can also use the `StatusCode` enum, which contains suggestions, and cast that to an integer. The values of the enum are:
 
@@ -147,9 +146,7 @@ You can also use the `StatusCode` enum, which contains suggestions, and cast tha
 | InternalServerError | 500 | Return this if something went wrong in your Automation script, e.g. you try to write to a file, but the file is in use by another application. |
 
 > [!TIP]
->
-> - A simple example is included in the [Automation script example](#creating-the-api-automation-script).
-> - For more insight into which HTTP status codes to use in which circumstances, see [HTTP status codes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status).
+> For more insight into which HTTP status codes to use in which circumstances, see [HTTP status codes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status).
 
 ## Creating an API and token(s) in DataMiner Automation
 
@@ -180,10 +177,7 @@ You can also use the `StatusCode` enum, which contains suggestions, and cast tha
    > [!NOTE]
    > Leave *Method to be executed* set to the default selection. This option should only be changed for legacy scripts without the `OnApiTrigger` entry point. See [Using existing scripts](xref:UD_APIs_Using_existing_scripts).
 
-1. Under *Tokens*, select the tokens that need access. You can also create new tokens using the *New token* button.
-
-   > [!NOTE]
-   > It is not possible to delete a token that is in use by an API. You first need to unassign the token from all APIs using it before you can delete it.
+1. Under *Tokens*, select the tokens that need access. You can also create new tokens using the *New token* button. At least one token has to be linked before this API will be usable.
 
    > [!CAUTION]
    > Once a token is created with a specified secret, **it is not possible to retrieve that secret again**. The value is stored securely in the database with a non-reversible hashing function. Make sure to save it somewhere secure or pass it in a secure way to the API user.
@@ -193,8 +187,6 @@ You can also use the `StatusCode` enum, which contains suggestions, and cast tha
 
 ## Configuring the UserDefinableApiEndpoint extension module
 
-Make sure the *UserDefinableApiEndpoint* DxM has been configured to match your API needs.
-
-For more information, refer to [UserDefinableApiEndpoint configuration](xref:UD_APIs_UserDefinableApiEndpoint#configuring-the-dxm).
+Make sure the *UserDefinableApiEndpoint* DxM has been configured to match your API needs. For more information, refer to [UserDefinableApiEndpoint configuration](xref:UD_APIs_UserDefinableApiEndpoint#configuring-the-dxm).
 
 If you have already configured the DxM, there is no need to repeat this step for each user-defined API you create.

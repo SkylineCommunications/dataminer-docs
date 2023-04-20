@@ -23,7 +23,10 @@ uid: UD_APIs_Viewing_in_Cube
 *User-Defined APIs page in DataMiner 10.3.6*
 
 > [!TIP]
-> See also: [Creating an API and token(s) in DataMiner Automation](xref:UD_APIs_Define_New_API#creating-an-api-and-tokens-in-dataminer-automation).
+> See the [Creating an API and token(s) in DataMiner Automation](xref:UD_APIs_Define_New_API#creating-an-api-and-tokens-in-dataminer-automation) section for more info on the open and create UI. The difference between opening it via *System Center* and *Automation* is that for the former, you can select any automation script on your DMS.
+
+> [!NOTE]
+> It is not possible to delete a token that is in use by an API. You first need to unassign the token from all APIs using it before you can delete it. You can however disable this token if access should be blocked rapidly.
 
 ## Enabling or disabling API tokens
 

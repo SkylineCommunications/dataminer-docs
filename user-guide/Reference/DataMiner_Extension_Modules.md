@@ -52,7 +52,7 @@ The ModelHost DxM is not included in the Cloud Pack and [must be deployed separa
 
 ### UserDefinableApiEndpoint
 
-The UserDefinableApiEndpoint module is responsible for handling API triggers for user-defined APIs. See [DataMiner UserDefinableApiEndpoint DxM](xref:UD_APIs_UserDefinableApiEndpoint).
+The UserDefinableApiEndpoint module is responsible for handling API triggers for User-Defined APIs. See [DataMiner UserDefinableApiEndpoint DxM](xref:UD_APIs_UserDefinableApiEndpoint).
 
 ### CommunicationGateway
 

@@ -2378,10 +2378,22 @@
               topicUid: UD_APIs_Define_New_API
             - name: Using existing scripts
               topicUid: UD_APIs_Using_existing_scripts
+            - name: Creating APIs and tokens in code
+              topicUid: UD_APIs_Creating_in_code
+            - name: Objects
+              items:
+                - name: ApiToken
+                  topicUid: UD_APIs_Objects_ApiToken
+                - name: ApiDefinition
+                  topicUid: UD_APIs_Objects_ApiDefinition
+            - name: API script examples
+              topicUid: UD_APIs_API_script_examples
         - name: Triggering an API
           topicUid: UD_APIs_Triggering_an_API
         - name: DataMiner UserDefinableApiEndpoint DxM
           topicUid: UD_APIs_UserDefinableApiEndpoint
+        - name: Troubleshooting
+          topicUid: UD_APIs_Troubleshooting
 - name: DataMiner Standard Apps, Frameworks & Solutions
   topicUid: Part5StandardApps
   items:
@@ -3518,7 +3530,7 @@
           topicUid: service_profile_benchmarks
         - name: Service & Resource Management benchmarks
           topicUid: service_resource_management_benchmarks
-        - name: User-defined API benchmarks
+        - name: User-Defined APIs benchmarks
           topicUid: user-defined_API_benchmarks
         - name: View benchmarks
           topicUid: view_benchmarks
