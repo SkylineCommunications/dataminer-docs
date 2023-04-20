@@ -2893,7 +2893,7 @@
       items:
         - name: Customizing the dataminer.services endpoint configuration
           topicUid: Custom_cloud_endpoint_configuration
-        - name: Disable Offloading Reports and Notifications
+        - name: Disabling reports and notifications offloading
           topicUid: Disable_Offloading_Reports_and_Notifications
 - name: Troubleshooting
   topicUid: Part6Troubleshooting
