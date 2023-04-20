@@ -151,7 +151,7 @@ namespace UDAPIS_Example
 
 It is possible to use a script such as the [example script](#example-script) as an API without making any changes to it. API triggers will be executed through the `Run` method as if you were executing the script from e.g. Cube.
 
-To do this, define your API exactly as explained under the [Creating an API definitions and token(s)](xref:UD_APIs_Define_New_API#creating-an-api-definition-and-tokens), but next to *Method to be executed*, select *Run method*.
+To do this, define your API exactly as explained under the [Creating an API definitions and token(s)](xref:UD_APIs_Define_New_API#creating-an-api-and-tokens-in-dataminer-automation), but next to *Method to be executed*, select *Run method*.
 
 > [!IMPORTANT]
 > If you use this approach, you will not have access to the `ApiTriggerInput` object and `ApiTriggerOutput` object in the script, and it will therefore not be possible to check the route, request the method of the API trigger, or output specific errors.
