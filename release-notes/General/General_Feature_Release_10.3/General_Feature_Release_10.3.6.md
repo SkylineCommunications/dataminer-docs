@@ -75,6 +75,12 @@ This error will also be added to the *SLWatchDog2.txt* log file.
 
 Because of a number of enhancements with regard to the detection of periodic behavior in trend data, the trend data predictions displayed in trend graphs will be more accurate.
 
+#### SLAnalytics - Trend prediction: Enhanced trend prediction verification [ID_36102]
+
+<!-- MR 10.4.0 - FR 10.3.6 -->
+
+The verification of trend predictions has been enhanced.
+
 ### Fixes
 
 #### DataMiner Agent was not able to connect to the Cassandra database due to a problem with the TLS certificate [ID_35895]

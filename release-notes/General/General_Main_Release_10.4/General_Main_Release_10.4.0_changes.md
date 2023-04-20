@@ -197,6 +197,12 @@ When, in the SLNetClientTest tool, you connected to a DataMiner Agent that used 
 
 Up to now, when an event associated with a DVE child element was generated, internally, that event would be linked to the DVE parent element. From now on, it will be linked to the child element instead.
 
+#### SLAnalytics - Trend prediction: Enhanced trend prediction verification [ID_36102]
+
+<!-- MR 10.4.0 - FR 10.3.6 -->
+
+The verification of trend predictions has been enhanced.
+
 ### Fixes
 
 #### Cassandra Cluster: Every DMA would incorrectly try to delete any possible old Cassandra compaction and repair tasks found in the entire DMS [ID_31923]
