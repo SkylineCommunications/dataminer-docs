@@ -3008,6 +3008,8 @@
     - name: Known issues
       topicUid: Known_issues
       items:
+        - name: Elasticsearch not initialized when DataMiner starts up
+          topicUid: KI_Elasticsearch_not_initialized_on_DMA_startup
         - name: DataMiner keeps trying to restart when Elasticsearch is unavailable
           topicUid: KI_Restart_loop_when_Elasticsearch_unavailable
         - name: SRM - Auto Select Resource not read for silent booking
