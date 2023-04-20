@@ -158,6 +158,7 @@ Provides access to additional data sources and operators for GQI in the Dashboar
 > - The trend data patterns, trend data pattern events, and behavioral change events data sources (available from DataMiner 10.3.3/10.4.0 onwards).
 
 - **Minimum version**: 10.0.13
+- **Estimated release version for the custom operator**: 10.3.11
 
 ### GenericOwnership
 
@@ -239,6 +240,9 @@ Enables the alarm list component in the Dashboards app.
 
 Enables alpha components in the Dashboards app.
 
+> [!NOTE]
+> Deprecated: Alpha components will not be released in the core. Instead, the GQI visualizations will be extended to achieve the same functionality.
+
 - **Minimum version**: 9.6.6
 
 ### ReportsAndDashboardsAutomationScript
@@ -246,24 +250,28 @@ Enables alpha components in the Dashboards app.
 Enables the Automation script component in the Dashboards app.
 
 - **Minimum version**: 9.6.8
+- **Estimated release version**: 10.4.2
 
 ### ReportsAndDashboardsButton
 
 Enables the button component in the Dashboards app.
 
 - **Minimum version**: 10.0.3
+- **Estimated release version**: 10.4.2
 
 ### ReportsAndDashboardsButtonPanel
 
 Enables the button panel component in the Dashboards app.
 
 - **Minimum version**: 10.0.3
+- **Estimated release version**: 10.3.8
 
 ### ReportsAndDashboardsDynamicVisuals
 
 Enables the grid component in the Dashboards app.
 
 - **Minimum version**: 10.2.12
+- **Estimated release version**: 10.3.11
 
 ### ReportsAndDashboardsExport
 
@@ -277,12 +285,14 @@ Enables the export to PDF button within the Dashboards app itself. Creating PDFs
 Enables a new Maps component in the Dashboards app and the Low-Code Apps.
 
 - **Minimum version**: 10.3.2
+- **Estimated release version**: 10.3.11
 
 ### ReportsAndDashboardsGuides
 
 Enables the guides in the Dashboards app.
 
 - **Minimum version**: 9.6.8
+- **Estimated release version**: 10.4.5
 
 ### ReportsAndDashboardsPTP
 
@@ -294,12 +304,14 @@ Enables the Query Filter component in the Dashboards app.
 > - Prior to DataMiner 10.1.5, this option also enables the Node Edge component, which becomes available by default from DataMiner 10.1.5 onwards.
 
 - **Minimum version**: 10.0.4
+- **Estimated release version**: 10.3.8
 
 ### ReportsAndDashboardsScheduler
 
 Enables the Timeline component in the Dashboards app.
 
 - **Minimum version**: 10.1.10
+- **Estimated release version**: 10.3.11
 
 ### ResourceList
 
