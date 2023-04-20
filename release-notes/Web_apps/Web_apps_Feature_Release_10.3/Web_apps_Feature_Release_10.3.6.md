@@ -202,3 +202,9 @@ From now on, a popup panel showing a PDF preview will take the full screen heigh
 The *Numeric input* feed, which was introduced in DataMiner feature release 10.3.5, had a setting named *Amount of decimals*.
 
 This setting has now been renamed to *Number of decimals*.
+
+#### Dashboards app: Problem when sharing a dashboard that contained an alarm table component [ID_36178]
+
+<!-- MR 10.4.0 - FR 10.3.6 -->
+
+When you shared a dashboard that contained an alarm table component, in some cases, a `Not Authorized` error could be thrown.
