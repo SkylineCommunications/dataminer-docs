@@ -37,6 +37,14 @@ In *System Center*, a few enhancements have been made to the *Database > Offload
   > [!IMPORTANT]
   > If, before upgrading to this DataMiner version, *Parameter value* was selected and the frequency was set to "permanently", *Parameter value* will no longer be selected after upgrading. As a result, no snapshot will be offloaded until you reconfigure the snapshot offload settings.
 
+#### Dashboards app & Low-Code Apps: Web component now supports hyperlinks with a target attribute [ID_36159]
+
+<!-- MR 10.2.0 [CU15]/10.3.0 [CU3] - FR 10.3.6 -->
+
+A web component now supports hyperlinks with a target attribute.
+
+Example: `<a href="http://www.skyline.be" target="_blank">Skyline Communications</a>`
+
 ### Fixes
 
 #### Cassandra Cluster Migrator tool would incorrectly not migrate the state-changes table from a single-node Cassandra to a Cassandra Cluster [ID_35699]

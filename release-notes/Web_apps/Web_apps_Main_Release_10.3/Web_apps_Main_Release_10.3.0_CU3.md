@@ -18,6 +18,14 @@ uid: Web_apps_Main_Release_10.3.0_CU3
 
 When a dashboard or a low-code app is in dark mode, from now on, there will be a higher color contrast between rows that are selected or hovered over and rows that are not.
 
+#### Dashboards app & Low-Code Apps: Web component now supports hyperlinks with a target attribute [ID_36159]
+
+<!-- MR 10.2.0 [CU15]/10.3.0 [CU3] - FR 10.3.6 -->
+
+A web component now supports hyperlinks with a target attribute.
+
+Example: `<a href="http://www.skyline.be" target="_blank">Skyline Communications</a>`
+
 ### Fixes
 
 #### Dashboards app: Problem when trying to open a shared dashboard [ID_35271]
