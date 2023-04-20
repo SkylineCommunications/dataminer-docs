@@ -20,6 +20,9 @@ This can for example occur in case excessively large indices were deleted manual
 
 Stop DataMiner, delete the affected indices in Elasticsearch, and restart DataMiner.
 
+> [!WARNING]
+> The data in the deleted indices will be lost. Contact Skyline Communications if you have any doubts.
+
 ## Fix
 
 No fix is available yet.
