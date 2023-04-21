@@ -140,7 +140,7 @@ An error could occur when you opened a shared dashboard that contained a *Parame
 
 #### Low-Code Apps: Problem when updating header titles [ID_36116]
 
-<!-- MR 10.3.0 [CU3] - FR 10.3.6 -->
+<!-- MR 10.2.0 [CU15]/10.3.0 [CU3] - FR 10.3.6 -->
 
 When, while editing a low-code app with more than one header bar option, you selected another header bar option, the label of the previously selected header bar option would incorrectly still be displayed in the side panel.
 
