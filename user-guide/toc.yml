@@ -1046,96 +1046,139 @@
         - name: Supported system data storage architectures
           topicUid: Supported_system_data_storage_architectures
           items:
-          - name: Migrating the general database to Cassandra
-            topicUid: Migrating_the_general_database_to_Cassandra
-          - name: Migrating the general database to a DMS Cassandra cluster
-            topicUid: Migrating_the_general_database_to_a_DMS_Cassandra_cluster
-          - name: Migrating SRM resources to Elasticsearch
-            topicUid: Resources_migration_to_elastic
-        - name: Database configuration in DataMiner Cube
-          topicUid: Configuring_the_database_settings_in_Cube
+        - name: Configuring dedicated clustered storage
+          topicUid: Configuring_dedicated_clustered_storage
           items:
-            - name: Configuring the general database settings in Cube
-              topicUid: Configuring_the_database_settings_in_Cube
-            - name: Specifying TTL overrides
-              topicUid: Specifying_TTL_overrides
-            - name: Configuring an additional database
-              topicUid: Configuring_an_additional_database
-        - name: Cassandra database
-          topicUid: Cassandra_database
-          items:
-          - name: Installing Cassandra on a Linux machine
-            topicUid: Installing_Cassandra
-          - name: Setting up an Azure Managed Instance for Apache Cassandra
-            topicUid: Azure_Managed_Instance_for_Apache_Cassandra
-          - name: Scaling a Cassandra cluster database
-            topicUid: Scale_Cassandra_Database
-          - name: Maintaining a Cassandra cluster
-            topicUid: Maintain_Cassandra_Cluster
-          - name: Installing Cassandra Reaper
-            topicUid: Installing_Cassandra_Reaper
-          - name: Moving the Cassandra database to a different disk drive
-            topicUid: Moving_the_Cassandra_database_to_a_different_disk_drive
-          - name: Making Cassandra nodetool accessible remotely
-            topicUid: Making_Cassandra_nodetool_accessible_remotely
-          - name: Data replication and consistency configuration
-            topicUid: replication_and_consistency_configuration
-        - name: Elasticsearch database
-          topicUid: Elasticsearch_database
-          items:
-            - name: Installing Elasticsearch on a DMA via DataMiner
-              topicUid: Installing_Elasticsearch_via_DataMiner
-            - name: Configuring Elasticsearch backups
-              topicUid: Configuring_Elasticsearch_backups
+            - name: Cassandra Cluster
+              topicUid: Databases_new_systems
               items:
-                - name: Taking and restoring snapshots
-                  topicUid: Configuring_Elasticsearch_backups_Windows_Linux
-                - name: Restoring backups using the Standalone Elastic Backup Tool
-                  topicUid: Configuring_Elasticsearch_backups_Windows
-            - name: Configuring indexing settings in System Center
-              topicUid: Configuring_DataMiner_Indexing
-            - name: Configuring the Elasticsearch database
-              topicUid: Configuring_Elasticsearch_Database
+                - name: Deployment
+                  topicUid: Cassandra_database
+                  items:
+                    - name: New systems
+                      topicUid: Cassandra_database
+                      items:
+                        - name: Installing Cassandra on a Linux machine
+                          topicUid: Installing_Cassandra
+                        - name: Setting up an Azure Managed Instance for Apache Cassandra
+                          topicUid: Azure_Managed_Instance_for_Apache_Cassandra
+                        - name: Scaling a Cassandra cluster database
+                          topicUid: Scale_Cassandra_Database
+                        - name: Installing Cassandra Reaper
+                          topicUid: Installing_Cassandra_Reaper
+                    - name: Existing systems
+                      topicUid: Migrating_the_general_database_to_Cassandra
+                      items:
+                        - name: Moving to dedicated clustered storage
+                          topicUid: Migrating_the_general_database_to_Cassandra
+                          items:
+                            - name: Migrating the general database to Cassandra
+                              topicUid: Migrating_the_general_database_to_Cassandra
+                            - name: Migrating the general database to a DMS Cassandra cluster
+                              topicUid: Migrating_the_general_database_to_a_DMS_Cassandra_cluster
+                            - name: Migrating SRM resources to Elasticsearch
+                              topicUid: Resources_migration_to_elastic
+                - name: Configuring the general database settings
+                  topicUid: Configuring_the_database_settings_in_Cube
+                  items:
+                    - name: Configuring the general database settings in Cube
+                      topicUid: Configuring_the_database_settings_in_Cube
+                    - name: Configuring the general database settings in DB.xml
+                      topicUid:
+                - name: Maintenance
+                  topicUid: Maintain_Cassandra_Cluster
+            - name: Search Cluster
+              topicUid:
               items:
-              - name: Configuring the master nodes
-                topicUid: Configuring_master_Elasticsearch_nodes
-              - name: Adding an Elasticsearch cluster node
-                topicUid: Configuring_Elasticsearch_node_add
-              - name: Removing an Elasticsearch cluster node
-                topicUid: Configuring_Elasticsearch_node_remove
-            - name: Configuring multiple Elasticsearch clusters
-              topicUid: Configuring_multiple_Elasticsearch_clusters
-            - name: Manually connecting a DMA to an Elasticsearch cluster
-              topicUid: Manually_Connecting_DMA_to_Elasticsearch_Cluster
-        - name: OpenSearch database
-          topicUid: OpenSearch_database
-          items:
-          - name: Configuring multiple OpenSearch clusters
-            topicUid: Configuring_multiple_OpenSearch_clusters
-        - name: Amazon OpenSearch Service
-          topicUid: Amazon_OpenSearch_Service
-        - name: Amazon Keyspaces Service
-          topicUid: Amazon_Keyspaces_Service
-        - name: MySQL database
-          topicUid: MySQL_database
-          items:
-          - name: Activating one file per table for an existing MySQL database
-            topicUid: Activating_one_file_per_table_for_an_existing_MySQL_database
-          - name: Deleting element data from a MySQL database
-            topicUid: Deleting_element_data_from_a_MySQL_database
-          - name: Moving MySQL data to another location
-            topicUid: Moving_MySQL_data_to_another_location
-        - name: Offload database
+                - name: Elasticsearch
+                  topicUid:
+                  items:
+                    - name: Deployment
+                      topicUid: Elasticsearch_database
+                      items:
+                        - name: New systems
+                          topicUid: Elasticsearch_database
+                          items:
+                            - name: Installing Elasticsearch on a DMA via DataMiner
+                              topicUid: Installing_Elasticsearch_via_DataMiner
+                            - name: Configuring Elasticsearch backups
+                              topicUid: Configuring_Elasticsearch_backups
+                            - name: Taking and restoring snapshots
+                              topicUid: Configuring_Elasticsearch_backups_Windows_Linux
+                            - name: Restoring backups using the Standalone Elastic Backup Tool
+                              topicUid: Configuring_Elasticsearch_backups_Windows
+                        - name: Existing systems
+                          topicUid: Migrating_the_general_database_to_Cassandra
+                          items:
+                            - name: Moving to dedicated clustered storage
+                              topicUid: Migrating_the_general_database_to_Cassandra
+                              items:
+                            - name: Moving the Cassandra database to a different disk drive
+                              topicUid: Moving_the_Cassandra_database_to_a_different_disk_drive
+                            - name: Migrating the general database to Cassandra
+                              topicUid: Migrating_the_general_database_to_Cassandra
+                            - name: Migrating the general database to a DMS Cassandra cluster
+                              topicUid: Migrating_the_general_database_to_a_DMS_Cassandra_cluster
+                            - name: Migrating SRM resources to Elasticsearch
+                              topicUid: Resources_migration_to_elastic
+
+                                                          - name: Making Cassandra nodetool accessible remotely
+                                                            topicUid: Making_Cassandra_nodetool_accessible_remotely
+                                                          - name: Data replication and consistency configuration
+                                                            topicUid: replication_and_consistency_configuration
+                                                        - name: Elasticsearch database
+                                                          topicUid: 
+                                                          items:
+
+                                                            - name: Configuring indexing settings in System Center
+                                                              topicUid: Configuring_DataMiner_Indexing
+                                                            - name: Configuring the Elasticsearch database
+                                                              topicUid: Configuring_Elasticsearch_Database
+                                                              items:
+                                                              - name: Configuring the master nodes
+                                                                topicUid: Configuring_master_Elasticsearch_nodes
+                                                              - name: Adding an Elasticsearch cluster node
+                                                                topicUid: Configuring_Elasticsearch_node_add
+                                                              - name: Removing an Elasticsearch cluster node
+                                                                topicUid: Configuring_Elasticsearch_node_remove
+                                                            - name: Configuring multiple Elasticsearch clusters
+                                                              topicUid: Configuring_multiple_Elasticsearch_clusters
+                                                            - name: Manually connecting a DMA to an Elasticsearch cluster
+                                                              topicUid: Manually_Connecting_DMA_to_Elasticsearch_Cluster
+                                                        - name: OpenSearch database
+                                                          topicUid: OpenSearch_database
+                                                          items:
+                                                          - name: Configuring multiple OpenSearch clusters
+                                                            topicUid: Configuring_multiple_OpenSearch_clusters
+                                                        - name: Amazon OpenSearch Service
+                                                          topicUid: Amazon_OpenSearch_Service
+                                                        - name: Amazon Keyspaces Service
+                                                          topicUid: Amazon_Keyspaces_Service
+                                                        - name: MySQL database
+                                                          topicUid: MySQL_database
+                                                          items:
+                                                          - name: Activating one file per table for an existing MySQL database
+                                                            topicUid: Activating_one_file_per_table_for_an_existing_MySQL_database
+                                                          - name: Deleting element data from a MySQL database
+                                                            topicUid: Deleting_element_data_from_a_MySQL_database
+                                                          - name: Moving MySQL data to another location
+                                                            topicUid: Moving_MySQL_data_to_another_location
+        - name: Optional database configurations
           topicUid: Offload_database
           items:
-            - name: Setting up an offload database
-              topicUid: Setting_up_an_offload_database
-            - name: Structure of the offload database
-              topicUid: Structure_of_the_offload_database
-            - name: Configuring data offloads
-              topicUid: Configuring_data_offloads
-            - name: How DataMiner offloads data
-              topicUid: How_DataMiner_offloads_data
+            - name: Offload database
+              topicUid: Offload_database
+              items:
+                - name: Setting up an offload database
+                  topicUid: Setting_up_an_offload_database
+                - name: Structure of the offload database
+                  topicUid: Structure_of_the_offload_database
+                - name: Configuring data offloads
+                  topicUid: Configuring_data_offloads
+                - name: How DataMiner offloads data
+                  topicUid: How_DataMiner_offloads_data
+            - name: Configuring an additional database
+              topicUid: Configuring_an_additional_database
         - name: Database queries
           topicUid: Database_queries
           items:
@@ -1145,6 +1188,8 @@
               topicUid: Querying_an_Elasticsearch_database
             - name: Examples of database queries
               topicUid: Examples_of_database_queries
+        - name: Specifying TTL overrides
+          topicUid: Specifying_TTL_overrides
     - name: Security
       topicUid: security
       items:
