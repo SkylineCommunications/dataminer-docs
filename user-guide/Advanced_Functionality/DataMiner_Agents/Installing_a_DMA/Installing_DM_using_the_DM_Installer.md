@@ -30,7 +30,7 @@ The DataMiner installer allows you to run a default DataMiner installation, whic
 
 1. Make sure you are logged into Windows with the Administrator account. (Do not use a regular user account with administrative rights.)
 
-1. Double-click *Setup_20220622092235919.exe*.
+1. Double-click the setup executable.
 
 1. Click *Install*.
 
