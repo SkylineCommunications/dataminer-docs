@@ -196,6 +196,12 @@ The way in which components are linked to feeds has been improved. Instead of us
 
 From now on, legacy reports and dashboards will no longer be prefetched if the soft-launch option *LegacyReportsAndDashboards* is set to false.
 
+#### Clearer error will be thrown when an inter-element query failed to retrieve a parameter value of a specific element [ID_35972]
+
+<!-- MR 10.4.0 - FR 10.3.6 -->
+
+When an inter-element query failed to retrieve a parameter value of a specific element, up to now, a generic `Unknown element` error would be thrown. From now on, a clearer error mentioning the element that caused the issue will be thrown instead.
+
 #### DataMiner web apps: Angular and other dependencies have been upgraded [ID_36100]
 
 <!-- MR 10.4.0 - FR 10.3.6 -->

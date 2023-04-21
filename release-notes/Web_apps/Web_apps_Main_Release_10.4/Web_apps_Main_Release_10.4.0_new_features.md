@@ -422,3 +422,9 @@ Also, any slashes in the group values will be escaped before they are joined. Fo
 <!-- MR 10.4.0 - FR 10.3.5 -->
 
 You can now clear a *State* component by clicking it while holding down the CTRL key.
+
+#### Low-Code Apps: Duplicating pages and panels [ID_36097]
+
+<!-- MR 10.4.0 - FR 10.3.6 -->
+
+When editing a low-code app, it is now possible to duplicate an entire page or panel.

@@ -60,6 +60,12 @@ When you enable this setting, the first entry of the GQI result set will automat
 > - This new setting has also been added to the *Grid* component, which is only available if you activate the *ReportsAndDashboardsDynamicVisuals* soft-launch option.
 > - For reasons of consistency, in the Drop-down feed, List feed, Parameter feed and Tree feed, the *Feed defaults* setting has now also been renamed to *Initial selection*
 
+#### Low-Code Apps: Duplicating pages and panels [ID_36097]
+
+<!-- MR 10.4.0 - FR 10.3.6 -->
+
+When editing a low-code app, it is now possible to duplicate an entire page or panel.
+
 ## Changes
 
 ### Enhancements
@@ -69,6 +75,12 @@ When you enable this setting, the first entry of the GQI result set will automat
 <!-- MR 10.4.0 - FR 10.3.6 -->
 
 From now on, legacy reports and dashboards will no longer be prefetched if the soft-launch option *LegacyReportsAndDashboards* is set to false.
+
+#### Clearer error will be thrown when an inter-element query failed to retrieve a parameter value of a specific element [ID_35972]
+
+<!-- MR 10.4.0 - FR 10.3.6 -->
+
+When an inter-element query failed to retrieve a parameter value of a specific element, up to now, a generic `Unknown element` error would be thrown. From now on, a clearer error mentioning the element that caused the issue will be thrown instead.
 
 #### DataMiner web apps: Angular and other dependencies have been upgraded [ID_36100]
 
