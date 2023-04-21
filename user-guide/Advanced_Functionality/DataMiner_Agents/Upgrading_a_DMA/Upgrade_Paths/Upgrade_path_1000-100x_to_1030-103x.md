@@ -23,6 +23,12 @@ Make sure the IP network ports 9090, 4222, 6222, and 8222 (NATS monitoring only)
 > [!TIP]
 > See also: [Checking the required open ports in a DMS](xref:MOP_Checking_the_required_open_ports_in_a_DMS)
 
+## Before installing the upgrade package, run VerifyClusterPorts
+
+- [VerifyClusterPorts.dmupgrade](https://community.dataminer.services/download/verifyclusterports-dmupgrade/)
+> [!IMPORTANT]
+> If you do not run this package before executing the upgrade, the upgrade will fail because version 10.3 assumes that NAS/NATS services are running and they are not in version 10.0
+
 ## Installing the DataMiner upgrade
 
 Install the DataMiner 10.3.0 or 10.3.x upgrade package.
