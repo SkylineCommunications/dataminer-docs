@@ -47,10 +47,11 @@ class DataPresent classDecision;
 </div>
 
 > [!NOTE]
-> 
-> At each step of this flowchart...
-> - it's possible your investigation is complete.
-> - you may need to check SLErrors.txt / SLWatchDog2.txt / SLDBConnection.txt / Element logging.
+>
+> At any step of this flowchart:
+>
+> - your investigation may be complete.
+> - you may need to check the log information in *SLErrors.txt*, *SLWatchDog2.txt*, *SLDBConnection.txt*, or the element logging.
 
 ### Retrieval Issue
 
@@ -71,7 +72,7 @@ RetrievalIssueChecks{{"Do you get valid AlarmEventMessages?"}}
 ClientSide{{"Check Cube Logging for exceptions.\nLook for AlarmEventMessage in stacktrace."}}
 ServerSide{{"Check SLDBConnection / SLNet / Database logging.\nCheck if database can be reached."}}
 AlarmTTL{{"Check the Time to Live of your Alarm.\nIn MySQL & Cassandra: table 'Alarm'.\nIn Cassandra Cluster & Elastic: table 'Alarms'."}}
-NotFixed{{"If your issue is not fixed,\ncontact support.data-insights@skyline.be,\nincluding all info gathered and steps taken."}}
+NotFixed{{"If your issue is not fixed,\ncontact support.data-insights@skyline.be.\nInclude all gathered information and steps taken."}}
 %% Connect blocks %%
 RetrievalIssue --- FollowCTT
 FollowCTT --- RetrievalIssueChecks
@@ -109,8 +110,8 @@ ProtocolDebug{{"Use the protocol debug tool to simulate.\nClick the node to go t
 CanSimulate{{"Managed to simulate?"}}
 ReduceFeatures{{"Reduce the amount of features used to\nnarrow down the issue.\n(e.g. Hysteresis, conditional monitoring...)\nClick the node to go a relevant docs page."}}
 VerifyConfiguration{{"Verify if you have a clear issue,\nincorrect configuration or undefined behavior."}}
-NotFixedCOPS{{"Contact techsupport@skyline.be,\nincluding all info gathered and steps taken."}}
-ExtraInfoNotFixed{{"1. Check if the behavior is the same on a\nstandalone parameter, column parameter, matrix parameter...\n2. Check the element logging.\n3. Contact support.data-insights@skyline.be,\nincluding all info gathered and steps taken."}}
+NotFixedCOPS{{"Contact techsupport@skyline.be.\nInclude all gathered information and steps taken."}}
+ExtraInfoNotFixed{{"1. Check if the behavior is the same on a\nstandalone parameter, column parameter, matrix parameter...\n2. Check the element logging.\n3. Contact support.data-insights@skyline.be.\nInclude all gathered information and steps taken."}}
 %% Connect blocks %%
 CreationIssue --- AlarmTemplate
 AlarmTemplate --- ProtocolDebug
