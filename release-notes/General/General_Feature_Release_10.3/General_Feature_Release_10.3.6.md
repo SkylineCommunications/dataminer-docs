@@ -171,6 +171,12 @@ When, in the *DB.xml* file, no `<DB>` element was specified for an Elasticsearch
 
 From now on, when no `<DB>` element is specified for a Elasticsearch database, *SLReset.exe* will use the default database name "dms".
 
+#### Memory leak in SLSPIHost [ID_36041]
+
+<!-- MR 10.3.0 [CU3] - FR 10.3.6 -->
+
+In some cases, the SLSpiHost process could leak memory.
+
 #### SLAnalytics - Behavioral anomaly detection: No flatline stop events would be generated when an element was deleted [ID_36050]
 
 <!-- MR 10.3.0 [CU3] - FR 10.3.6 -->
