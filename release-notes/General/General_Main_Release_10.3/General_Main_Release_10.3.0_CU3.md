@@ -81,6 +81,12 @@ When a DataMiner Agent was restarted after its database had been configured to u
 
 When a Resource or ResourcePool was updated, the *CreatedAt* and *CreatedBy* fields would incorrectly be overwritten.
 
+#### Problem after offloading element data to Elasticsearch [ID_35962]
+
+<!-- MR 10.3.0 [CU3] - FR 10.3.6 -->
+
+When element data had been offloaded to Elasticsearch via a logger table, after restarting the element, the Elasticsearch table could not be found.
+
 #### Creating or updating a function resource while its parent element was in an error state would incorrectly be allowed [ID_35963]
 
 <!-- MR 10.2.0 [CU15]/10.3.0 [CU3] - FR 10.3.6 -->
