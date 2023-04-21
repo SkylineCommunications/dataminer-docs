@@ -332,12 +332,6 @@ In some cases, invalid nodes could get added to a GQI query, causing run-time er
 
 When the *Dashboards*, *Jobs*, or *Ticketing* app was embedded in DataMiner Cube, in some cases, users would incorrectly be prompted to log in to the app.
 
-#### Low-Code Apps: Problem when updating header titles [ID_36116]
-
-<!-- MR 10.4.0 - FR 10.3.6 -->
-
-When, while editing a low-code app with more than one header bar option, you selected another header bar option, the label of the previously selected header bar option would incorrectly still be displayed in the side panel.
-
 #### Dashboards app & Low-Code Apps: Incorrect error could appear when editing a dashboard or low-code app [ID_36132]
 
 <!-- MR 10.4.0 - FR 10.3.5 [CU0] -->
