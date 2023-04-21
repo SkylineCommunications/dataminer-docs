@@ -76,6 +76,12 @@ From now on, legacy reports and dashboards will no longer be prefetched if the s
 
 In all web apps (e.g. Low-Code Apps, Dashboards, Monitoring, Jobs, Ticketing, etc.), Angular and other dependencies have been upgraded.
 
+#### Dashboards app - GQI: Clearer error message will now appear when ModelHost is not running [ID_36155]
+
+<!-- MR 10.4.0 - FR 10.3.6 -->
+
+When the *Get parameter relations* data source is queried while the *ModelHost* DxM is not running, an error message will appear. That error message has now been made clearer.
+
 #### Dashboards app & Low-Code Apps: Web component now supports hyperlinks with a target attribute [ID_36159]
 
 <!-- MR 10.2.0 [CU15]/10.3.0 [CU3] - FR 10.3.6 -->
