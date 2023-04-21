@@ -68,6 +68,18 @@ In *System Center*, a few enhancements have been made to the *Database > Offload
 
 A number of enhancements have been made with regard to URL handling within Visual Overview.
 
+#### Visual Overview: Browser shapes will no longer be reloaded when their URL only had a fragment change [ID_36104]
+
+<!-- MR 10.4.0 - FR 10.3.6 -->
+
+Up to now, a browser shape would always be reloaded whenever its URL was changed. From now on, this will no longer be the case when the URL only had a fragment change.
+
+Examples:
+
+- When `#https://company.be/#/app/Map` changes to `#https://company.be/#/app/Map#urlfragment`, the browser shape will not be reloaded because the URL only had its fragment changed.
+
+- When `#https://company.be/#/app/Map` changes to `#https://company.be/#/app/Map?embed=true#urlfragment`, the browser shape will be reloaded because the URL not only had its fragment changed but also its query parameter.
+
 ### Fixes
 
 #### Problem when connecting to a DataMiner Agent using gRPC [ID_35950]
