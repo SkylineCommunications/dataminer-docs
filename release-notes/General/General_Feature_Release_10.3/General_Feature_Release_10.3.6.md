@@ -123,7 +123,7 @@ The following issues have also been fixed:
 
 <!-- MR 10.3.0 [CU3] - FR 10.3.6 -->
 
-When element data had been offloaded to Elasticsearch via a logger table, after restarting the element, the Elasticsearch table could not be found.
+When element data had been offloaded to Elasticsearch via a logger table, after restarting the element, the Elasticsearch table could not be populated.
 
 #### Creating or updating a function resource while its parent element was in an error state would incorrectly be allowed [ID_35963]
 
