@@ -329,9 +329,3 @@ When editing a dashboard or a low-code app, in some cases, the following error c
 ```txt
 The dashboard has not been saved: Invalid revision sequence, the dashboard might have been edited by another user.
 ```
-
-#### Dashboards app: Problem when sharing a dashboard that contained an alarm table component [ID_36178]
-
-<!-- MR 10.4.0 - FR 10.3.6 -->
-
-When you shared a dashboard that contained an alarm table component, in some cases, a `Not Authorized` error could be thrown.

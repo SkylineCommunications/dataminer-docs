@@ -205,6 +205,6 @@ This setting has now been renamed to *Number of decimals*.
 
 #### Dashboards app: Problem when sharing a dashboard that contained an alarm table component [ID_36178]
 
-<!-- MR 10.4.0 - FR 10.3.6 -->
+<!-- MR 10.3.0 [CU3] - FR 10.3.6 -->
 
 When you shared a dashboard that contained an alarm table component, in some cases, a `Not Authorized` error could be thrown.

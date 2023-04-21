@@ -163,3 +163,9 @@ In the *Create dashboard* window, pressing an arrow key while one of the text bo
 <!-- MR 10.2.0 [CU15]/10.3.0 [CU3] - FR 10.3.5 [CU0] -->
 
 In some cases, the web services API would not be able to correctly translate a server query to a web query.
+
+#### Dashboards app: Problem when sharing a dashboard that contained an alarm table component [ID_36178]
+
+<!-- MR 10.3.0 [CU3] - FR 10.3.6 -->
+
+When you shared a dashboard that contained an alarm table component, in some cases, a `Not Authorized` error could be thrown.
