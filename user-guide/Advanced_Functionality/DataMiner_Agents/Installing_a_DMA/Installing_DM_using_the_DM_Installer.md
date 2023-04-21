@@ -77,7 +77,7 @@ At this point, the basic installation is complete. However, to be able to make f
 
 1. Make sure you are logged into Windows as a user account with administrative rights.
 
-1. Double-click *Setup_20220622092235919.exe*.
+1. Double-click the setup executable.
 
 1. Click *Customize*.
 
