@@ -124,6 +124,8 @@
               topicUid: Partnership_Governance
         - name: Deal Registration
           topicUid: Deal_Registration
+        - name: Bidding DataMiner
+          topicUid: Bidding_DataMiner
     - name: DataMiner Professional Services
       topicUid: Part52ProfessionalServices
       items:
