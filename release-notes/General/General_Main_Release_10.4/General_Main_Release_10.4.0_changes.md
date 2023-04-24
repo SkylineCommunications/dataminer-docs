@@ -276,12 +276,6 @@ When a history alarm affected a closed outage to which a correction had been app
 
 In some cases, a handle in the Timer class would not be cleaned correctly, causing handles to leak.
 
-#### Cassandra: Cleared alarms would incorrectly be added to the activealarms table and never removed [ID_36002]
-
-<!-- MR 10.4.0 - FR 10.3.6 -->
-
-Cleared alarms would incorrectly be added to the activealarms table and never removed.
-
 #### DataMiner Object Models: Problem when creating a DomInstance with an empty status [ID_36063]
 
 <!-- MR 10.4.0 - FR 10.3.6 -->
