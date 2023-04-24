@@ -61,6 +61,12 @@ This error will also be added to the *SLWatchDog2.txt* log file.
 
 Because of a number of enhancements with regard to the detection of periodic behavior in trend data, the trend data predictions displayed in trend graphs will be more accurate.
 
+#### SLAnalytics - Trend prediction: Enhanced trend prediction verification [ID_36102]
+
+<!-- MR 10.3.0 [CU3] - FR 10.3.6 -->
+
+The verification of trend predictions has been enhanced.
+
 ### Fixes
 
 #### Cassandra Cluster Migrator tool would incorrectly not migrate the state-changes table from a single-node Cassandra to a Cassandra Cluster [ID_35699]

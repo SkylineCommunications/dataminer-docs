@@ -77,7 +77,7 @@ Because of a number of enhancements with regard to the detection of periodic beh
 
 #### SLAnalytics - Trend prediction: Enhanced trend prediction verification [ID_36102]
 
-<!-- MR 10.4.0 - FR 10.3.6 -->
+<!-- MR 10.3.0 [CU3] - FR 10.3.6 -->
 
 The verification of trend predictions has been enhanced.
 
