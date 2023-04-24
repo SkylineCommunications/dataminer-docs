@@ -101,6 +101,12 @@ When a GQI table was configured to feed the selected rows to another component, 
 
 In some cases, an error could occur when a replicated SLA was stopped or deleted.
 
+#### Cassandra: Cleared alarms would incorrectly be added to the activealarms table and never removed [ID_36002]
+
+<!-- MR 10.2.0 [CU15]/10.3.0 [CU3] - FR 10.3.6 -->
+
+Cleared alarms would incorrectly be added to the activealarms table and never removed.
+
 #### DataMiner Cube - EPM: KPI histogram would incorrectly not be shown [ID_36004]
 
 <!-- MR 10.2.0 [CU15]/10.3.0 [CU3] - FR 10.3.6 -->

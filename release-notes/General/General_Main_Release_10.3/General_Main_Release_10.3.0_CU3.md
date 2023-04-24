@@ -109,7 +109,7 @@ In some cases, an error could occur when a replicated SLA was stopped or deleted
 
 #### Cassandra: Cleared alarms would incorrectly be added to the activealarms table and never removed [ID_36002]
 
-<!-- MR 10.3.0 [CU3] - FR 10.3.6 -->
+<!-- MR 10.2.0 [CU15]/10.3.0 [CU3] - FR 10.3.6 -->
 
 Cleared alarms would incorrectly be added to the activealarms table and never removed.
 
