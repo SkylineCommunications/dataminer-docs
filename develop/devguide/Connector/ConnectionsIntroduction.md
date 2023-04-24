@@ -81,7 +81,7 @@ The following table provides an overview of the port types DataMiner supports fo
 |opc|&#10004;|||
 |sla||||
 
-Port types that are not supported can be hidden from the "Type of port" drop-down box in the element edit wizard using the Disabled child tag of the PortTypeIP, PortTypeUDP and PortTypeSerial tag for TCP, UDP and serial, respectively.
+Port types that are not supported can be hidden from the "Type of port" box in the element editor using the *Disabled* child tag of the *PortTypeIP*, *PortTypeUDP*, and *PortTypeSerial* tag for TCP, UDP, and serial, respectively.
 
 For example, for an HTTP connection, UDP and Serial should be disabled:
 
