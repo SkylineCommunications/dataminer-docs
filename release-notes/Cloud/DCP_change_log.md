@@ -6,7 +6,7 @@ uid: DCP_change_log
 
 The dataminer.services platform gets updated continuously. This change log can help you trace when specific features and changes have become available.
 
-#### 21 April 2023 - Enhancements -  CloudGateway 2.10.8 - General improvements [ID_36162]
+#### 24 April 2023 - Enhancements -  CloudGateway 2.10.8 - General improvements [ID_36162]
 
 Changes have been implemented in DataMiner CloudGateway to make the service ignore requests when it can't access dataminer.services, so another CloudGateway service who does could pick them up and handle them successfully. This was most commonly occuring when the CloudGateway was installed on a firewalled or offline server by accident. In such a scenarious you could have errors at random, for example when creating or renewing your cloud connection in cube, or when creating or managing shares from the dashboard app.
 
