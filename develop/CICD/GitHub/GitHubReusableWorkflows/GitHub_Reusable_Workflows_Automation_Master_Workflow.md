@@ -10,7 +10,10 @@ It was migrated from a workflow using an [internal Jenkins pipeline](xref:Pipeli
 
 At present, this workflow will not work on solutions containing SDK-style projects. It instead expects the legacy project style, which DIS provides automatically.
 
-This workflow will act as a quality gate and code coverage collection, only creating and uploading an artifact of your Automation script solution to the catalog if it passes the Skyline quality gate job.
+This workflow will act as a quality gate and code coverage collection, only creating and uploading an artifact of your Automation script solution to your private storage in the catalog if it passes the Skyline quality gate job.
+
+> [!NOTE]
+> This private storage is not yet accessible from within the Catalog UI.
 
 The following actions will be performed:
 

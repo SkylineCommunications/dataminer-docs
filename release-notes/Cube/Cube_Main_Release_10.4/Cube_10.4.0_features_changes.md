@@ -236,6 +236,62 @@ In the Automation script editor, Intellisense has been added for the new `timeUp
 
 This property is only applied in interactive Automation scripts that are launched from a web app.
 
+#### System Center: Overhaul of LDAP settings [ID_35782]
+
+<!-- MR 10.4.0 - FR 10.3.6 -->
+
+In *System Center > System settings > LDAP*, you can configure a number of LDAP settings. These settings have had an overhaul.
+
+- In the *General* tab, from now on, you will only be able to set *Authentication type* to either "Anonymous" or "Simple".
+
+  > [!NOTE]
+  > When you set *Authentication type* to "Anonymous", the *User name* and *Password* fields will now be disabled. When both fields contain a value, *Authentication type* will by default be set to "Simple".
+
+- In this section, it is now also possible to configure the *nonDomainLDAP* setting. Up to now, this setting could only be configured in the *DataMiner.xml* file.
+
+- When you update LDAP settings, a warning will now appear to notify you that these settings will only be changed on the DataMiner Agent to which you are connected. Changes made to LDAP settings will not be synchronized among the agents in the cluster.
+
+Also, a number of issues have been fixed. Up to now, the value entered in *Use fully qualified domain name (FQDN)* would not be saved to the *DataMiner.xml* file, an incorrect default value would be entered in the *User class name* field, and the value entered in the *Password* field would get lost when the LDAP settings were updated without changing the password.
+
+#### DataMiner Cube desktop app: Unused Cube versions will now automatically be removed [ID_35795]
+
+<!-- MR 10.4.0 - FR 10.3.6 -->
+
+From now on, Cube versions that meet the following conditions will be removed automatically:
+
+- Not marked as the active version for a certain DataMiner Agent.
+- Not downloaded recently.
+- Not used recently.
+
+#### Visual Overview: Enhanced URL handling [ID_36044]
+
+<!-- MR 10.4.0 - FR 10.3.6 -->
+
+A number of enhancements have been made with regard to URL handling within Visual Overview.
+
+#### Visual Overview: Browser shapes will no longer be reloaded when their URL only had a fragment change [ID_36104]
+
+<!-- MR 10.4.0 - FR 10.3.6 -->
+
+Up to now, a browser shape would always be reloaded whenever its URL was changed. From now on, this will no longer be the case when the URL only had a fragment change.
+
+Examples:
+
+- When `#https://company.be/#/app/Map` changes to `#https://company.be/#/app/Map#urlfragment`, the browser shape will not be reloaded because the URL only had its fragment changed.
+
+- When `#https://company.be/#/app/Map` changes to `#https://company.be/#/app/Map?embed=true#urlfragment`, the browser shape will be reloaded because the URL not only had its fragment changed but also its query parameter.
+
+#### System Center - Database: Warning when a DataMiner Agent in the cluster is offline [ID_36184]
+
+<!-- MR 10.4.0 - FR 10.3.6 -->
+
+In the *Database* section of *System Center*, a warning will now appear whenever a DataMiner Agent in the cluster is offline.
+
+Also, when you click *Save* after changing any of the settings in this *Database* section, a popup message will now appear, saying that the Agents need to be restarted for the changes to take effect.
+
+> [!IMPORTANT]
+> No warning will appear to point out that the backup Agent in a Failover setup is offline.
+
 ### Fixes
 
 #### Profiles app: A profile instance would incorrectly list parameters that had been removed from the profile definition [ID_34679] [ID_34771]
@@ -267,3 +323,15 @@ When you clicked a suggestion alarm, in some cases, the trend graph would be loa
 <!-- MR 10.4.0 - FR 10.3.4 [CU0] -->
 
 When, in the *Automation*, *Correlation* and *Scheduler* modules, you generated a PDF report based on a dashboard, it would incorrectly no longer be possible to click the *Configure* button to configure that report.
+
+#### Alarm Console: Suggestion event would not be removed from the suggestion events tab after being promoted to alarm event [ID_35949]
+
+<!-- MR 10.4.0 - FR 10.3.5 -->
+
+When, in an alarm template, a suggestion event was promoted to an alarm event, it would correctly appear in the active alarms tab but it would incorrectly not be removed from the suggestion events tab.
+
+#### Problem when connecting to a DataMiner Agent using gRPC [ID_35950]
+
+<!-- MR 10.4.0 - FR 10.3.6 -->
+
+In some cases, DataMiner Cube would fail to connect to a DataMiner Agent using gRPC, especially when a large number of clients were connecting to that same agent.

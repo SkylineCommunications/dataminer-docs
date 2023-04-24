@@ -130,6 +130,12 @@ From now on, when SLNet receives an error from the web API after sending a *GetC
 
 The GQI data sources *Get elements* and *Get services* will now also return alarm states.
 
+#### Support for GQI queries from Data Aggregator with ad hoc data sources [ID_35526]
+
+<!-- MR 10.4.0 - FR 10.3.3 -->
+
+GQI now supports queries from [Data Aggregator](xref:Data_Aggregator_DxM) that use ad hoc data sources.
+
 #### GQI: 'State' column in data sources 'Get services' and 'Get views' renamed to 'Alarm state' [ID_35557]
 
 <!-- MR 10.4.0 - FR 10.3.3 -->
@@ -141,6 +147,15 @@ In the GQI data sources *Get services* and *Get views*, the *State* column has n
 <!-- MR 10.4.0 - FR 10.3.4 -->
 
 When an EPM feed is used to feed EPM identifiers to a parameter feed, it will now also list the parameters of the enhanced elements that are linked to the EPM objects.
+
+#### GQI: Raw datetime values will now be converted to UTC [ID_35640]
+
+<!-- MR 10.4.0 - FR 10.3.4 -->
+
+Up to now, after each step in a GQI query, raw datetime values were always converted to the time zone that was specified in the query options. From now on, raw datetime values will be converted to UTC instead. The time zone specified in the query options will now only be used when converting a raw datetime value to a display value.
+
+> [!IMPORTANT]
+> **BREAKING CHANGE**: When, in an ad hoc data source or a query operation, a datetime value is not in UTC format, an exception will now be thrown.
 
 #### Monitoring app: Trending page of a parameter no longer has a sidebar [ID_35705]
 
@@ -166,7 +181,7 @@ A web API event queue will now automatically be removed after 5 minutes if a cli
 
 Also, it is now possible for one web API connection to have multiple event queues. As a result, clients will be able to have multiple open websocket connections using the same connection ID.
 
-#### Dashboards app & Low-code apps: New way to link components to feeds [ID_35837]
+#### Dashboards app & Low-Code Apps: New way to link components to feeds [ID_35837]
 
 <!-- MR 10.4.0 - FR 10.3.5 -->
 
@@ -175,11 +190,29 @@ The way in which components are linked to feeds has been improved. Instead of us
 > [!CAUTION]
 > BREAKING CHANGE: Up to now, when you linked a script parameter to the *From* or *Till* box of a time range feed, the feed would pass a datetime value in string format to the script. That string value was not in an ISO format and did not contain any information about the time zone. From now on, the feed will send a UTC timestamp in milliseconds instead. Scripts that expect to receive a string value will need to be modified.
 
-#### Security enhancements [ID_35965]
+#### Legacy reports and dashboards will no longer be prefetched if the soft-launch option 'LegacyReportsAndDashboards' is set to false [ID_35881]
 
-<!-- MR 10.4.0 - FR 10.3.5 -->
+<!-- MR 10.4.0 - FR 10.3.6 -->
 
-A number of security enhancements have been made.
+From now on, legacy reports and dashboards will no longer be prefetched if the soft-launch option *LegacyReportsAndDashboards* is set to false.
+
+#### Clearer error will be thrown when an inter-element query failed to retrieve a parameter value of a specific element [ID_35972]
+
+<!-- MR 10.4.0 - FR 10.3.6 -->
+
+When an inter-element query failed to retrieve a parameter value of a specific element, up to now, a generic `Unknown element` error would be thrown. From now on, a clearer error mentioning the element that caused the issue will be thrown instead.
+
+#### DataMiner web apps: Angular and other dependencies have been upgraded [ID_36100]
+
+<!-- MR 10.4.0 - FR 10.3.6 -->
+
+In all web apps (e.g. Low-Code Apps, Dashboards, Monitoring, Jobs, Ticketing, etc.), Angular and other dependencies have been upgraded.
+
+#### Dashboards app - GQI: Clearer error message will now appear when ModelHost is not running [ID_36155]
+
+<!-- MR 10.4.0 - FR 10.3.6 -->
+
+When the *Get parameter relations* data source is queried while the *ModelHost* DxM is not running, an error message will appear. That error message has now been made clearer.
 
 ### Fixes
 
@@ -211,19 +244,11 @@ Up to now, the parameter feed used the element cache of the web client to popula
 
 From now on, when the parameter feed has a protocol or view filter, it will fetch all elements matching the filter page by page, even when the total number of elements exceeds 10,000.
 
-#### Dashboards app & Low-code apps: Issues with regard to data highlighting [ID_35250]
+#### Dashboards app & Low-Code Apps: Issues with regard to data highlighting [ID_35250]
 
 <!-- MR 10.4.0 - FR 10.3.2 -->
 
 A number of issues with regard to data highlighting have been fixed.
-
-#### Dashboards app: Problem when trying to open a shared dashboard [ID_35271]
-
-<!-- MR 10.4.0 - FR 10.3.3 -->
-
-When users tried to open a shared dashboard, in some cases, they would unexpectedly be presented with a login screen due to a permission issue.
-
-Workaround: Recreate the faulty shared dashboard.
 
 #### Dashboards - Line & area chart component: Timestamps could be formatted incorrectly when exporting trend data to CSV [ID_35311]
 
@@ -232,7 +257,7 @@ Workaround: Recreate the faulty shared dashboard.
 
 When trend data was exported to a CSV file, up to now, timestamps could be formatted incorrectly.
 
-#### Dashboards app & Low-code apps - GQI table component: 'Cannot read properties of undefined (reading 'Guid')' error [ID_35316]
+#### Dashboards app & Low-Code Apps - GQI table component: 'Cannot read properties of undefined (reading 'Guid')' error [ID_35316]
 
 <!-- MR 10.4.0 - FR 10.3.2 [CU0] -->
 
@@ -261,7 +286,7 @@ When you tried to select a visualization for a newly added component that did no
 
 The color picker would not be positioned correctly.
 
-#### Low-code apps: Problem when opening a low-code app on a mobile device or when resizing the screen to a mobile size [ID_35683]
+#### Low-Code Apps: Problem when opening a low-code app on a mobile device or when resizing the screen to a mobile size [ID_35683]
 
 <!-- MR 10.4.0 - FR 10.3.4 -->
 
@@ -273,20 +298,46 @@ When you opened a low-code app on a mobile device or when you resized the screen
 
 When data from one table was fed to another table, in some cases, the "loading" indicator of the table to which data was fed would incorrectly not disappear.
 
-#### Dashboards app & Low-code apps: Problem when feeding data from a GQI component to a query used in the same component [ID_35806]
+#### GQI: GetArgumentValue method would throw an exception when used to access the value of an optional argument [ID_35783]
+
+<!-- MR 10.4.0 - FR 10.3.5 -->
+
+When the `GetArgumentValue<T>(string name)` method was used in an ad hoc data source or a custom operator script to access the value of an optional argument that had not been passed, the following exception would be thrown:
+
+```txt
+Could not find argument with name '{argument.Name}'.
+```
+
+#### Dashboards app & Low-Code Apps: Problem when feeding data from a GQI component to a query used in the same component [ID_35806]
 
 <!-- MR 10.4.0 - FR 10.3.5 -->
 
 An error could occur when feeding data from a GQI component to a query that was used in the same component.
 
-#### Dashboards app & Low-code apps - GQI components: Open sessions would not be closed when a new query was triggered [ID_35824]
+#### Dashboards app - GQI: No element feed available after selecting a relation between two standalone parameters [ID_36003]
 
 <!-- MR 10.4.0 - FR 10.3.5 -->
 
-When a GQI component still had a session open when a new query was triggered, in some cases, the open session would incorrectly not be closed.
+When, in a table with a *Get parameter relations* query, you selected a relation between two standalone parameters, no element feed would be available.
 
-#### Dashboards app: Problem when selecting a parameter in a parameter feed component of a shared dashboard [ID_35863]
+#### Dashboards app: Invalid nodes could get added to a GQI query [ID_36045]
 
-<!-- MR 10.4.0 - FR 10.3.5 -->
+<!-- MR 10.4.0 - FR 10.3.6 -->
 
-When you selected a parameter in a parameter feed component of a shared dashboard, in some cases, an error could occur.
+In some cases, invalid nodes could get added to a GQI query, causing run-time errors to be thrown.
+
+#### Web apps: Problem with single sign-on when embedded in Cube [ID_36049]
+
+<!-- MR 10.4.0 - FR 10.3.5 [CU0] -->
+
+When the *Dashboards*, *Jobs*, or *Ticketing* app was embedded in DataMiner Cube, in some cases, users would incorrectly be prompted to log in to the app.
+
+#### Dashboards app & Low-Code Apps: Incorrect error could appear when editing a dashboard or low-code app [ID_36132]
+
+<!-- MR 10.4.0 - FR 10.3.5 [CU0] -->
+
+When editing a dashboard or a low-code app, in some cases, the following error could incorrectly appear:
+
+```txt
+The dashboard has not been saved: Invalid revision sequence, the dashboard might have been edited by another user.
+```

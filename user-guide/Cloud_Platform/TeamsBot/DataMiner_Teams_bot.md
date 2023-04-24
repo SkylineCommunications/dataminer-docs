@@ -10,7 +10,7 @@ If your DataMiner System is connected to dataminer.services with a recent versio
 > We highly recommend that you install the latest version of the DataMiner Cloud Pack. With older versions, not all DataMiner Teams bot features may be available.
 
 > [!TIP]
-> See also: [dataminer.services](xref:Part51CloudPlatform)
+> See also: [dataminer.services](xref:AboutCloudPlatform)
 
 ## DataMiner Teams bot installation
 
@@ -88,9 +88,9 @@ You can use the following options to interact with the DataMiner Teams bot:
 
 - **show command *command name***: Displays the matching command with its description and a button to run the command. See [Adding commands for the Teams bot to a DMS](#adding-commands-for-the-teams-bot-to-a-dms).
 
-- **show command**: Displays the first 10 commands found in the active DataMiner System with their description and buttons to run each command. See [Adding commands for the Teams bot to a DMS](#adding-commands-for-the-teams-bot-to-a-dms).
+- **show commands**: Displays the first 10 commands found in the active DataMiner System with their description and buttons to run each command. See [Adding commands for the Teams bot to a DMS](#adding-commands-for-the-teams-bot-to-a-dms).
 
-- **run command *command name***: Runs the matching command on the active DataMiner System. When necessary, the user will be asked for input and/or confirmation. See [Adding commands for the Teams bot to a DMS](#adding-commands-for-the-teams-bot-to-a-dms).
+- **run *command name***: Runs the matching command on the active DataMiner System. When necessary, the user will be asked for input and/or confirmation. See [Adding commands for the Teams bot to a DMS](#adding-commands-for-the-teams-bot-to-a-dms).
 
 - **help**: Shows more detailed help information, if available.
 

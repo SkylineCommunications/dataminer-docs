@@ -118,10 +118,10 @@ The zoom range of a map can now be set by means of a slider.
 
 Because of a number of enhancements, overall performance has increased when fetching relation information for the automatic incident tracking feature.
 
-#### Security enhancements [ID_35434] [ID_35668]
+#### Security enhancements [ID_35434] [ID_35997]
 
 <!-- 35434: MR 10.4.0 - FR 10.3.4 -->
-<!-- 35668: MR 10.4.0 - FR 10.3.5 -->
+<!-- 35997: MR 10.4.0 - FR 10.3.5 -->
 
 A number of security enhancements have been made.
 
@@ -136,12 +136,6 @@ From now on, anomaly detection will no longer be available for discrete paramete
 <!-- MR 10.4.0 - FR 10.3.4 -->
 
 Because of a number of enhancements, overall performance has increased when detecting trend patterns that cover more than 30,000 data points.
-
-#### Support for GQI queries from Data Aggregator with ad hoc data sources [ID_35526]
-
-<!-- MR 10.4.0 - FR 10.3.3 -->
-
-GQI now supports queries from [Data Aggregator](xref:Data_Aggregator_DxM) that use ad hoc data sources.
 
 #### SLNetClientTest: New DOM-related features [ID_35550]
 
@@ -167,15 +161,6 @@ In the *SLNetClientTest* tool, the following new DOM-related features have been 
 <!-- MR 10.4.0 - FR 10.3.4 -->
 
 Up to now, when SLAnalytics sent a notification, it would generate an event of type *client notification* with parameter ID 64574. From now on, it will instead generate an event of type *notification* with parameter ID 64570.
-
-#### GQI: Raw datetime values will now be converted to UTC [ID_35640]
-
-<!-- MR 10.4.0 - FR 10.3.4 -->
-
-Up to now, after each step in a GQI query, raw datetime values were always converted to the time zone that was specified in the query options. From now on, raw datetime values will be converted to UTC instead. The time zone specified in the query options will now only be used when converting a raw datetime value to a display value.
-
-> [!IMPORTANT]
-> **BREAKING CHANGE**: When, in an ad hoc data source or a query operation, a datetime value is not in UTC format, an exception will now be thrown.
 
 #### SLAnalytics - Proactive cap detection: Enhanced accuracy [ID_35695]
 
@@ -212,6 +197,12 @@ When, in the SLNetClientTest tool, you connected to a DataMiner Agent that used 
 
 Up to now, when an event associated with a DVE child element was generated, internally, that event would be linked to the DVE parent element. From now on, it will be linked to the child element instead.
 
+#### SLAnalytics - Trend prediction: Enhanced trend prediction verification [ID_36102]
+
+<!-- MR 10.4.0 - FR 10.3.6 -->
+
+The verification of trend predictions has been enhanced.
+
 ### Fixes
 
 #### Cassandra Cluster: Every DMA would incorrectly try to delete any possible old Cassandra compaction and repair tasks found in the entire DMS [ID_31923]
@@ -235,12 +226,6 @@ In some cases, Resource Manager could throw a NullReferenceException when *Resou
 Using Okta as identity provider, it would incorrectly no longer be possible to read out signed assertions. Also, when the group claim setting is enabled in the *DataMiner.xml* file, the user will now be added to the correct groups.
 
 Up to now, in case of a claim mismatch, an exception would be thrown. From now on, an entry containing a clear message will be added to the *SLNet.txt* log file instead.
-
-#### Cassandra Cluster Migrator tool would incorrectly not migrate the state-changes table from a single-node Cassandra to a Cassandra Cluster [ID_35699]
-
-<!-- MR 10.4.0 - FR 10.3.4 -->
-
-When you used the Cassandra Cluster Migrator tool to migrate a single-node Cassandra database to a Cassandra Cluster setup, up to now, the `state-changes` table would incorrectly not be migrated.
 
 #### Automation: DataMiner would incorrectly remove the xmlns attribute when importing or saving an Automation script [ID_35708]
 
@@ -275,8 +260,36 @@ When an ElementProtocol object was being created, due to a caching issue in SLNe
 
 The native message broker code could leak memory when using the request/response workflow in combination with chunking. The message handlers would not be cleaned up after the response had been received.
 
+#### NATS-related error: 'Failed to copy credentials from [IP address] - corrupt zip file' [ID_35935]
+
+<!-- MR 10.4.0 - FR 10.3.6 -->
+
+In some rare cases, the following NATS-related error would be thrown:
+
+```txt
+Failed to copy credentials from [IP address] - corrupt zip file
+```
+
 #### Business Intelligence: Outage correction would incorrectly be increased when a history alarm affected the outage [ID_35942]
 
 <!-- MR 10.4.0 - FR 10.3.5 -->
 
 When a history alarm affected a closed outage to which a correction had been applied, the correction would incorrectly be increased. From now on, the correction will be left untouched.
+
+#### Handle in the Timer class would not be cleaned correctly [ID_35959]
+
+<!-- MR 10.4.0 - FR 10.3.4 [CU0] -->
+
+In some cases, a handle in the Timer class would not be cleaned correctly, causing handles to leak.
+
+#### Cassandra: Cleared alarms would incorrectly be added to the activealarms table and never removed [ID_36002]
+
+<!-- MR 10.4.0 - FR 10.3.6 -->
+
+Cleared alarms would incorrectly be added to the activealarms table and never removed.
+
+#### DataMiner Object Models: Problem when creating a DomInstance with an empty status [ID_36063]
+
+<!-- MR 10.4.0 - FR 10.3.6 -->
+
+When a DomInstance was created with an empty status, in some cases, a `MultipleSectionsNotAllowedForSectionDefinition` error could be returned, even when the configuration was correct.

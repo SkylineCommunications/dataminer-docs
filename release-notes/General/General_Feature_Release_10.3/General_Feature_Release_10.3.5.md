@@ -2,10 +2,10 @@
 uid: General_Feature_Release_10.3.5
 ---
 
-# General Feature Release 10.3.5 – Preview
+# General Feature Release 10.3.5
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 >
@@ -13,46 +13,7 @@ uid: General_Feature_Release_10.3.5
 > - For release notes related to the DataMiner web applications, see [DataMiner web apps Feature Release 10.3.5](xref:Web_apps_Feature_Release_10.3.5).
 > - For information on how to upgrade DataMiner, see [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent).
 
-## Highlights
-
-## Other features
-
-#### GQI: New 'ThenSort by' query node allows sorting by multiple columns [ID_35807] [ID_35834]
-
-<!-- MR 10.4.0 - FR 10.3.5 -->
-
-To make sorting more intuitive, the new *ThenSort by* node can now be used in combination with the *Sort* node, which has now been renamed to *Sort by*.
-
-Up to now, all sorting had to be configured by means of *Sort* nodes. For example, if you wanted to first sort by column A and then by column B, you had to create a query in the following counter-intuitive way:
-
-1. Data source
-1. Sort by B
-1. Sort by A
-
-or
-
-1. Query X (i.e. Data Source, sorted by B)
-1. Sort by A
-
-From now on, you can create a query in a much more intuitive way. For example, if you want to first sort by column A and then by column B, you can now create a query in the following way:
-
-1. Data source
-1. Sort by A
-1. Then sort by B
-
-Note that, from now on, every *Sort by* node will nullify any preceding *Sort by* node. For example, in the following query, the *Sort by B* node will be nullified by the *Sort by A* node, meaning that the result set will only be sorted by column A.
-
-1. Data source
-1. Sort by B
-1. Sort by A
-
-> [!NOTE]
-> The behavior of existing queries (using e.g. *Sort by B* followed by *Sort by A*) will not be altered in any way. Their syntax will automatically be adapted when they are migrated to the most recent GQI version.
-> For example, an existing query using *Sort by B* followed by *Sort by A* will use *Sort by A* followed by *Then sort by B* after being migrated.
-
-## Changes
-
-### Enhancements
+## New features
 
 #### SLNetClientTest: New DOM-related features [ID_35550]
 
@@ -73,9 +34,86 @@ In the *SLNetClientTest* tool, the following new DOM-related features have been 
 > [!CAUTION]
 > Always be extremely careful when using this tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
 
-#### Security enhancements [ID_35668]
+#### Support for Azure Managed Instance for Apache Cassandra [ID_35830]
 
 <!-- MR 10.4.0 - FR 10.3.5 -->
+
+It is possible to use an Azure Managed Instance for Apache Cassandra as an alternative to a Cassandra cluster hosted on premises.
+
+You will first need to [create your Azure Managed Instance for Apache Cassandra](#creating-your-azure-managed-instance-for-apache-cassandra), and then [connect your DataMiner System to the created instance](#connecting-your-dataminer-system-to-the-azure-managed-instance).
+
+> [!TIP]
+> For detailed information on Azure Managed Instance for Apache Cassandra, refer to the [Microsoft documentation](https://learn.microsoft.com/en-us/azure/managed-instance-apache-cassandra/).
+
+##### Creating your Azure Managed Instance for Apache Cassandra
+
+1. Go to [Azure Portal](https://portal.azure.com) and log in.
+
+1. Search for *Azure Managed Instance for Apache Cassandra*.
+
+1. At the top of the window, click *Create*.
+
+1. On the *Basics* page, specify the required information.
+
+   To have low latency, you should select a region near your own or the region where your Azure VMs are running. The password that you configure is for the *Cassandra* user in the system.
+
+1. Click *Next: Data center* and configure the kind of servers you want to use for your Cassandra cluster.
+
+   The *Sku Size* defines which VM will be used (the more resources, the more expensive). You can then also select the number of disks and nodes that you want. The minimum number of nodes is 3.
+
+1. If you want to configure a client certificate, click *Advanced* at the top.
+
+   If you do not need to do this, you can add some tags to the setup so you can easily find it again, or go to the next step.
+
+1. Go to the *Review + Create* page.
+
+   Here, Azure will do some checks to see if everything has been configured correctly.
+
+1. If everything is valid, click *Create*. Otherwise, adjust your configuration until Azure indicates that it is valid, and then click *Create*.
+
+A pop-up window on the Azure website will now indicate that your cluster is being created. This can take a while.
+
+Once the creation is finished, you will see your newly created cluster on the *Azure Managed Instance for Apache Cassandra* page.
+
+##### Connecting your DataMiner System to the Azure Managed Instance
+
+1. Retrieve the necessary information from the Azure portal:
+
+   1. Go to [Azure Portal](https://portal.azure.com) and log in.
+
+   1. Go to *Azure Managed Instance for Apache Cassandra*.
+
+   1. Select the cluster you want to connect your DataMiner System to.
+
+   1. In the *Settings* menu, select *Data Center*.
+
+   1. Click the arrow to open the data center, and copy the IP addresses DataMiner will need to connect to.
+
+   > [!NOTE]
+   > We recommend configuring all of the nodes in DataMiner. If a node should go down, DataMiner can then still connect to the other nodes.
+
+1. Using the copied IP addresses, configure the [Cassandra cluster database in System Center](xref:Configuring_the_database_settings_in_Cube).
+
+1. Stop DataMiner.
+
+1. Open the [DB.xml](xref:DB_xml) configuration file.
+
+1. Set the *TLSEnabled* tag to true in the file and save your changes:
+
+   ```xml
+   <TLSEnabled>True</TLSEnabled>
+   ```
+
+1. Restart DataMiner.
+
+## Changes
+
+### Enhancements
+
+#### Security enhancements [ID_35668] [ID_35997]
+
+<!-- 35668: MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
+<!-- 35997: MR 10.4.0 - FR 10.3.5 -->
 
 A number of security enhancements have been made.
 
@@ -101,13 +139,6 @@ When, in the SLNetClientTest tool, you connected to a DataMiner Agent that used 
 
 > [!CAUTION]
 > Always be extremely careful when using this tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
-
-#### GQI: Raw datetime values retrieved from Elasticsearch will now be converted to UTC [ID_35784]
-
-<!-- MR 10.4.0 - FR 10.3.5 -->
-<!-- Not added to MR 10.4.0 -->
-
-Up to now, after each step in a GQI query, raw datetime values were always converted to the time zone that was specified in the query options. From now on, raw datetime values retrieved from Elasticsearch will be converted to UTC instead. The time zone specified in the query options will now only be used when converting a raw datetime value to a display value.
 
 #### SLAnalytics will no longer disregard first-time alarm template assignments [ID_35794]
 
@@ -142,12 +173,6 @@ Overall performance of SLAnalytics has increased because of a number of enhancem
 
 Up to now, when an event associated with a DVE child element was generated, internally, that event would be linked to the DVE parent element. From now on, it will be linked to the child element instead.
 
-#### GQI data sources that require an Elasticsearch database will now use GetInfoMessage(InfoType.Database) to check whether Elasticsearch is available [ID_35907]
-
-<!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
-
-Up to now, GQI data sources that require an Elasticsearch database used the `DatabaseStateRequest<ElasticsearchState>` message to check whether Elasticsearch was available. From now on, they will use the `GetInfoMessage(InfoType.Database)` message instead.
-
 ### Fixes
 
 #### SLLogCollector: Problem when collecting multiple memory dumps with the 'Now and when memory increases with X Mb' option [ID_35617]
@@ -168,6 +193,26 @@ From now on, the execution of the NATS installer at DMA startup will be skipped 
 
 > [!NOTE]
 > When an error occurs while running a WMI query, and no NATS/NAS service is running, NATS will not be installed automatically. A manual installation of NATS will be needed.
+
+#### Existing masked alarms would incorrectly affect the overall alarm severity of an element [ID_35678]
+
+<!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
+
+Existing masked alarms would incorrectly affect the overall alarm severity of an element.
+
+#### Failover: Offline agent would incorrectly try to take a backup of the Elasticsearch database [ID_35721]
+
+<!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
+
+When, in Failover setups, you configure a DataMiner backup on the online agent, the same backup will also be scheduled on the offline agent, and if these setups have a clustered Elasticsearch database, a backup of that database cluster will be included in the DataMiner backup.
+
+In Failover setups where both agents included a local Elasticsearch database that was part of an Elasticsearch cluster, the online agent would fail to take a backup of the Elasticsearch databases due to a backup in progress, triggered earlier by the offline agent.
+
+From now on, only the online agent will be allowed to take a backup of the Elasticsearch database, and the offline agent will log the following entry:
+
+```txt
+Elastic backup will not be taken - Only active agents from a failover pair can take the backup.
+```
 
 #### DateTime instances would not get serialized correctly when an SLNet connection supported protocol buffer serialization [ID_35777]
 
@@ -222,6 +267,21 @@ At SLA startup, in some cases, the active alarms would no longer be in sync with
 
 Also, a number of other minor fixes with regard to SLA management have been implemented.
 
+#### Problem when processing BPA test output [ID_35891]
+
+<!-- MR 10.4.0 - FR 10.3.5 -->
+<!-- Not added to MR 10.4.0 -->
+
+Each time the *SLLogCollector* tool is run, since DataMiner version 10.3.3, it orders the *Standalone BPA Executor* tool to execute all BPA tests available in the system and store the results in the `C:\Skyline DataMiner\Logging\WatchDog\Reports\Pending Reports` folder.
+
+In some cases, it would not be possible to process the output of some of those tests due to formatting issues.
+
+#### Problem when an SLA element was stopped or deleted while a parameter that triggered a QAction of the SLA in question was being updated [ID_35892]
+
+<!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
+
+An error could occur when an SLA element was stopped or deleted while a parameter that triggered a QAction of the SLA in question was being updated.
+
 #### DataMinerException thrown the first time an InfoData message was deserialized [ID_35897]
 
 <!-- MR 10.3.0 [CU2] - FR 10.3.5 -->
@@ -232,8 +292,32 @@ The first time a message with an object of a type that inherited from `InfoData`
 Skyline.DataMiner.Net.Exceptions.DataMinerException: Failed to deserialize message (ProtoBuf). Possible version incompatibility between client and server.  ---&gt; System.InvalidOperationException: It was not possible to prepare a serializer for: Skyline.DataMiner.Net.InfoData ---&gt; System.InvalidOperationException: Unable to resolve a suitable Add method for System.Collections.Generic.IReadOnlyList`1[[System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]&#xD;
 ```
 
+#### Problem with SLElement when a timed action was stopped [ID_35928]
+
+<!-- MR 10.3.0 [CU2] - FR 10.3.5 -->
+
+In some rare cases, an error could occur in SLElement when a timed action was stopped.
+
 #### Business Intelligence: Outage correction would incorrectly be increased when a history alarm affected the outage [ID_35942]
 
 <!-- MR 10.4.0 - FR 10.3.5 -->
 
 When a history alarm affected a closed outage to which a correction had been applied, the correction would incorrectly be increased. From now on, the correction will be left untouched.
+
+#### SNMP: OIDs with a leading dot would incorrectly no longer be allowed [ID_35954]
+
+<!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
+
+OIDs with a leading dot would incorrectly no longer be allowed. From now on, OIDs with a leading dot are allowed again.
+
+#### NT Notify type NT_GET_BITRATE_DELTA would not return a valid value for a table with a single row [ID_35967]
+
+<!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
+
+In some rare cases, NT Notify type NT_GET_BITRATE_DELTA (269), which retrieves the time between two consecutive executions of the specified SNMP group (in ms), would not return a valid value for a table with a single row.
+
+#### 'SLA Affecting' property of cleared or re-opened alarm would incorrectly contain 'Y' instead of 'Yes' [ID_35987]
+
+<!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
+
+When an alarm was cleared and re-opened for the same parameter or parameter key combination, its *SLA Affecting* property would incorrectly contain "Y" instead of "Yes".
