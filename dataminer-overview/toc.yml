@@ -121,11 +121,11 @@
             - name: Service delivery
               topicUid: Service_Delivery
             - name: Partnership governance
-              topicUID: Partnership_Governance
+              topicUid: Partnership_Governance
         - name: Deal Registration
-          topicUID: Deal_Registration
+          topicUid: Deal_Registration
         - name: Bidding DataMiner
-          topicUID: Bidding_DataMiner
+          topicUid: Bidding_DataMiner
     - name: DataMiner Professional Services
       topicUid: Part52ProfessionalServices
       items:
