@@ -1,8 +1,8 @@
 ---
-uid: Migrating_the_general_database_to_Cassandra
+uid: Migrating_the_general_database_to_clustered_storage
 ---
 
-# Migrating the general database to Cassandra
+# Migrating the MySQL general database to dedicated clustered storage
 
 In legacy DataMiner Systems, a MySQL or MSSQL general database (also known as "local" database) can be used. However, to have access to all recent DataMiner features, a Cassandra database should be used instead. While older features will continue to work with MySQL up to DataMiner 10.4.0, MSSQL is no longer supported as from DataMiner 10.3.0.
 

@@ -2,17 +2,13 @@
 uid: Cassandra_database
 ---
 
-# Cassandra database
+# Installing new systems: Cassandra database
 
 - [Installing Cassandra on a Linux machine](xref:Installing_Cassandra)
 
 - [Scaling a Cassandra cluster database](xref:Scale_Cassandra_Database)
 
-- [Maintaining a Cassandra cluster](xref:Maintain_Cassandra_Cluster)
-
 - [Installing Cassandra Reaper](xref:Installing_Cassandra_Reaper)
-
-- [Moving the Cassandra database to a different disk drive](xref:Moving_the_Cassandra_database_to_a_different_disk_drive)
 
 - [Making Cassandra nodetool accessible remotely](xref:Making_Cassandra_nodetool_accessible_remotely)
 
