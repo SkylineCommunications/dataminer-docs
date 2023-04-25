@@ -197,21 +197,7 @@ When, in the SLNetClientTest tool, you connected to a DataMiner Agent that used 
 
 Up to now, when an event associated with a DVE child element was generated, internally, that event would be linked to the DVE parent element. From now on, it will be linked to the child element instead.
 
-#### SLAnalytics - Trend prediction: Enhanced trend prediction verification [ID_36102]
-
-<!-- MR 10.4.0 - FR 10.3.6 -->
-
-The verification of trend predictions has been enhanced.
-
 ### Fixes
-
-#### Cassandra Cluster: Every DMA would incorrectly try to delete any possible old Cassandra compaction and repair tasks found in the entire DMS [ID_31923]
-
-<!-- MR 10.4.0 - FR 10.3.3 -->
-
-At start-up, every DataMiner Agent with a Cassandra Cluster configuration would incorrectly try to delete any possible old Cassandra compaction and repair tasks found in the entire DMS.
-
-From now on, at start-up, every DataMiner Agent with a Cassandra Cluster configuration will only delete the old Cassandra compaction and repair tasks found locally.
 
 #### Problem with Resource Manager when ResourceStorageType was not specified in Resource Manager settings [ID_34981]
 
@@ -282,14 +268,14 @@ When a history alarm affected a closed outage to which a correction had been app
 
 In some cases, a handle in the Timer class would not be cleaned correctly, causing handles to leak.
 
-#### Cassandra: Cleared alarms would incorrectly be added to the activealarms table and never removed [ID_36002]
-
-<!-- MR 10.4.0 - FR 10.3.6 -->
-
-Cleared alarms would incorrectly be added to the activealarms table and never removed.
-
 #### DataMiner Object Models: Problem when creating a DomInstance with an empty status [ID_36063]
 
 <!-- MR 10.4.0 - FR 10.3.6 -->
 
 When a DomInstance was created with an empty status, in some cases, a `MultipleSectionsNotAllowedForSectionDefinition` error could be returned, even when the configuration was correct.
+
+#### External authentication via SAML: Removal of whitespace characters from signatures would cause validation to fail [ID_36181]
+
+<!-- MR 10.4.0 - FR 10.3.6 -->
+
+In some cases, whitespace characters would incorrectly be removed from signatures, causing validation to fail.

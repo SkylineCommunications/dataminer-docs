@@ -29,7 +29,7 @@ The LSO script is called at the following stages of the booking:
 - When post-roll starts
 - When post-roll ends
 
-For each of these stages, a "Service State" can be defined in the Booking Manager. The LSO script will execute all PLSs with the relevant service state and update the booking to this specific state.
+For each of these stages, [a "Service State" can be defined](xref:Service_Orchestration_service_states) in the Booking Manager. The LSO script will execute all PLSs with the relevant service state and update the booking to this specific state.
 
 ## Data Transfer Rules (DTR)
 

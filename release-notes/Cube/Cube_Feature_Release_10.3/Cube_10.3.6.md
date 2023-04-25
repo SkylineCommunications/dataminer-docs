@@ -80,6 +80,23 @@ Examples:
 
 - When `#https://company.be/#/app/Map` changes to `#https://company.be/#/app/Map?embed=true#urlfragment`, the browser shape will be reloaded because the URL not only had its fragment changed but also its query parameter.
 
+#### Alarm Console: Enhanced performance when loading active alarms [ID_36144]
+
+<!-- MR 10.3.0 [CU3] - FR 10.3.6 -->
+
+Because of a number of enhancements, overall performance has increased when loading active alarms.
+
+#### System Center - Database: Warning when a DataMiner Agent in the cluster is offline [ID_36184]
+
+<!-- MR 10.4.0 - FR 10.3.6 -->
+
+In the *Database* section of *System Center*, a warning will now appear whenever a DataMiner Agent in the cluster is offline.
+
+Also, when you click *Save* after changing any of the settings in this *Database* section, a popup message will now appear, saying that the Agents need to be restarted for the changes to take effect.
+
+> [!IMPORTANT]
+> No warning will appear to point out that the backup Agent in a Failover setup is offline.
+
 ### Fixes
 
 #### Problem when connecting to a DataMiner Agent using gRPC [ID_35950]

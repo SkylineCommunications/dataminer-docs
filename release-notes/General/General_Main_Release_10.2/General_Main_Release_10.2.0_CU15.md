@@ -101,6 +101,12 @@ When a GQI table was configured to feed the selected rows to another component, 
 
 In some cases, an error could occur when a replicated SLA was stopped or deleted.
 
+#### Cassandra: Cleared alarms would incorrectly be added to the activealarms table and never removed [ID_36002]
+
+<!-- MR 10.2.0 [CU15]/10.3.0 [CU3] - FR 10.3.6 -->
+
+Cleared alarms would incorrectly be added to the activealarms table and never removed.
+
 #### DataMiner Cube - EPM: KPI histogram would incorrectly not be shown [ID_36004]
 
 <!-- MR 10.2.0 [CU15]/10.3.0 [CU3] - FR 10.3.6 -->
@@ -166,6 +172,12 @@ Also, when, on a system where the *Topology* pane was open when you connected to
 
 When you added a filtered history tab that had to show active alarms, masked alarms and information events, no information events would be shown.
 
+#### Low-Code Apps: Problem when updating header titles [ID_36116]
+
+<!-- MR 10.2.0 [CU15]/10.3.0 [CU3] - FR 10.3.6 -->
+
+When, while editing a low-code app with more than one header bar option, you selected another header bar option, the label of the previously selected header bar option would incorrectly still be displayed in the side panel.
+
 #### Dashboards app & Low-Code Apps: Popup panel showing a PDF preview would incorrectly have a scroll bar [ID_36131]
 
 <!-- MR 10.2.0 [CU15]/10.3.0 [CU3] - FR 10.3.6 -->
@@ -179,6 +191,12 @@ From now on, a popup panel showing a PDF preview will take the full screen heigh
 <!-- MR 10.2.0 [CU15]/10.3.0 [CU3] - FR 10.3.6 -->
 
 In the *Create dashboard* window, pressing an arrow key while one of the text boxes had the focus would incorrectly cause the *OK* or *Cancel* button to become selected.
+
+#### Problem when multiple clients had subscribed to a cell of a partial table [ID_36148]
+
+<!-- MR 10.2.0 [CU15]/10.3.0 [CU3] - FR 10.3.6 -->
+
+When multiple clients had subscribed to a cell of a partial table, in some cases, deleting the row or renaming the row via a display key would not trigger a deletion of the cell in the subscription.
 
 #### GQI: Web services API would not be able to correctly translate a server query to a web query [ID_36173]
 

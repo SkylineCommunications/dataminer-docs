@@ -196,6 +196,12 @@ The way in which components are linked to feeds has been improved. Instead of us
 
 From now on, legacy reports and dashboards will no longer be prefetched if the soft-launch option *LegacyReportsAndDashboards* is set to false.
 
+#### Clearer error will be thrown when an inter-element query failed to retrieve a parameter value of a specific element [ID_35972]
+
+<!-- MR 10.4.0 - FR 10.3.6 -->
+
+When an inter-element query failed to retrieve a parameter value of a specific element, up to now, a generic `Unknown element` error would be thrown. From now on, a clearer error mentioning the element that caused the issue will be thrown instead.
+
 #### DataMiner web apps: Angular and other dependencies have been upgraded [ID_36100]
 
 <!-- MR 10.4.0 - FR 10.3.6 -->
@@ -207,6 +213,15 @@ In all web apps (e.g. Low-Code Apps, Dashboards, Monitoring, Jobs, Ticketing, et
 <!-- MR 10.4.0 - FR 10.3.6 -->
 
 When the *Get parameter relations* data source is queried while the *ModelHost* DxM is not running, an error message will appear. That error message has now been made clearer.
+
+#### Web services API: Multi-value DOM fields will now list all their values [ID_36190]
+
+<!-- MR 10.4.0 - FR 10.3.6 -->
+
+Up to now, in e.g. low-code apps, multi-value DOM fields would only show a summary of the values they contained. From now on, they will list all values instead.
+
+> [!NOTE]
+> When a multi-value DOM field contains invalid values, it will no longer list them. Instead, they will be added to the error message.
 
 ### Fixes
 
@@ -325,12 +340,6 @@ In some cases, invalid nodes could get added to a GQI query, causing run-time er
 <!-- MR 10.4.0 - FR 10.3.5 [CU0] -->
 
 When the *Dashboards*, *Jobs*, or *Ticketing* app was embedded in DataMiner Cube, in some cases, users would incorrectly be prompted to log in to the app.
-
-#### Low-Code Apps: Problem when updating header titles [ID_36116]
-
-<!-- MR 10.4.0 - FR 10.3.6 -->
-
-When, while editing a low-code app with more than one header bar option, you selected another header bar option, the label of the previously selected header bar option would incorrectly still be displayed in the side panel.
 
 #### Dashboards app & Low-Code Apps: Incorrect error could appear when editing a dashboard or low-code app [ID_36132]
 

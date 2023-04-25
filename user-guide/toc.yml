@@ -2134,6 +2134,7 @@
         - name: Editing a low-code application
           topicUid: Editing_custom_apps
         - name: Configuring low-code applications
+          topicUid: LowCodeApps_Custom_Icon
           items:
             - name: Customizing the icon and color of an app
               topicUid: LowCodeApps_Custom_Icon
@@ -2149,7 +2150,7 @@
               topicUid: LowCodeApps_security_config
             - name: Retrieving an earlier version of a low-code app
               topicUid: LowCodeApps_earlier_version
-            - name: 
+            - name: Organizing the apps on the landing page in sections
               topicUid: LowCodeApps_organizing_landing_page
         - name: Deleting a low-code application
           topicUid: Deleting_custom_apps
@@ -2514,6 +2515,13 @@
               topicUid: I-DOCSIS_supported_technologies
             - name: EPM I-DOCSIS deployment
               topicUid: I-DOCSIS_deployment
+            - name: EPM I-DOCSIS maps deployment
+              topicUid: I-DOCSIS_maps_deployment
+              items:
+                - name: Systems with one back-end element
+                  topicUid: I-DOCSIS_maps_deployment_one_backend
+                - name: Systems with multiple back-end elements
+                  topicUid: I-DOCSIS_maps_deployment_multiple_backends
             - name: EPM I-DOCSIS upgrade
               topicUid: I-DOCSIS_upgrade
             - name: Available parameters in I-DOCSIS
@@ -2865,6 +2873,8 @@
                 topicUid: Service_Orchestration_custom_events
               - name: Booking life cycle states configuration
                 topicUid: Service_Orchestration_life_cycle_states
+              - name: Service states configuration
+                topicUid: Service_Orchestration_service_states
       - name: SRM logging
         topicUid: SRM_logging
 - name: dataminer.services

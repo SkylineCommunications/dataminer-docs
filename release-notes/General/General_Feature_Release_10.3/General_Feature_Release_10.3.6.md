@@ -77,9 +77,17 @@ Because of a number of enhancements with regard to the detection of periodic beh
 
 #### SLAnalytics - Trend prediction: Enhanced trend prediction verification [ID_36102]
 
-<!-- MR 10.4.0 - FR 10.3.6 -->
+<!-- MR 10.3.0 [CU3] - FR 10.3.6 -->
 
 The verification of trend predictions has been enhanced.
+
+#### SLAnalytics - Behavioral anomaly detection: Enhanced detection of behavioral changes after a gap in the trend data [ID_36186]
+
+<!-- MR 10.3.0 [CU3] - FR 10.3.6 -->
+
+A number of enhancements have been made with regard to the automatic detection of behavioral changes in trend data of trended parameters.
+
+Up to now, in some cases, level shifts and trend changes would remain unlabeled when they occurred immediately after a gap in the trend data.
 
 ### Fixes
 
@@ -119,6 +127,12 @@ The following issues have also been fixed:
 
 - When a DVE parent element was started, the method that has to make sure that ElementInfo and ElementData are in sync would incorrectly not check all child elements.
 
+#### Problem after offloading element data to Elasticsearch [ID_35962]
+
+<!-- MR 10.3.0 [CU3] - FR 10.3.6 -->
+
+When element data had been offloaded to Elasticsearch via a logger table, after restarting the element, the Elasticsearch table could not be populated.
+
 #### Creating or updating a function resource while its parent element was in an error state would incorrectly be allowed [ID_35963]
 
 <!-- MR 10.2.0 [CU15]/10.3.0 [CU3] - FR 10.3.6 -->
@@ -135,7 +149,7 @@ In some cases, an error could occur when a replicated SLA was stopped or deleted
 
 #### Cassandra: Cleared alarms would incorrectly be added to the activealarms table and never removed [ID_36002]
 
-<!-- MR 10.4.0 - FR 10.3.6 -->
+<!-- MR 10.2.0 [CU15]/10.3.0 [CU3] - FR 10.3.6 -->
 
 Cleared alarms would incorrectly be added to the activealarms table and never removed.
 
@@ -164,6 +178,12 @@ In some cases, NT Notify type NT_GET_BITRATE_DELTA (269) would return incorrect 
 When, in the *DB.xml* file, no `<DB>` element was specified for an Elasticsearch database, the factory reset tool *SLReset.exe* would not clean that database when the `cleanclustereddatabases` option had been used.
 
 From now on, when no `<DB>` element is specified for a Elasticsearch database, *SLReset.exe* will use the default database name "dms".
+
+#### Memory leak in SLSPIHost [ID_36041]
+
+<!-- MR 10.3.0 [CU3] - FR 10.3.6 -->
+
+In some cases, the SLSpiHost process could leak memory.
 
 #### SLAnalytics - Behavioral anomaly detection: No flatline stop events would be generated when an element was deleted [ID_36050]
 
@@ -205,3 +225,15 @@ Although DataMiner supports all OpenSearch 1.x and 2.x versions, in some cases, 
 <!-- MR 10.3.0 [CU3] - FR 10.3.6 -->
 
 When you restored a DataMiner backup that included low-code apps, those apps would incorrectly not be restored.
+
+#### Problem when multiple clients had subscribed to a cell of a partial table [ID_36148]
+
+<!-- MR 10.2.0 [CU15]/10.3.0 [CU3] - FR 10.3.6 -->
+
+When multiple clients had subscribed to a cell of a partial table, in some cases, deleting the row or renaming the row via a display key would not trigger a deletion of the cell in the subscription.
+
+#### External authentication via SAML: Removal of whitespace characters from signatures would cause validation to fail [ID_36181]
+
+<!-- MR 10.4.0 - FR 10.3.6 -->
+
+In some cases, whitespace characters would incorrectly be removed from signatures, causing validation to fail.
