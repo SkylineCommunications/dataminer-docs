@@ -77,6 +77,14 @@ Up to now, in some cases, level shifts and trend changes would remain unlabeled 
 
 ### Fixes
 
+#### Cassandra Cluster: Every DMA would incorrectly try to delete any possible old Cassandra compaction and repair tasks found in the entire DMS [ID_31923]
+
+<!-- MR 10.3.0 [CU3] - FR 10.3.3 -->
+
+At start-up, every DataMiner Agent with a Cassandra Cluster configuration would incorrectly try to delete any possible old Cassandra compaction and repair tasks found in the entire DMS.
+
+From now on, at start-up, every DataMiner Agent with a Cassandra Cluster configuration will only delete the old Cassandra compaction and repair tasks found locally.
+
 #### Cassandra Cluster Migrator tool would incorrectly not migrate the state-changes table from a single-node Cassandra to a Cassandra Cluster [ID_35699]
 
 <!-- MR 10.2.0 [CU15]/10.3.0 [CU3] - FR 10.3.4 -->
