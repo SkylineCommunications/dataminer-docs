@@ -225,3 +225,9 @@ Although DataMiner supports all OpenSearch 1.x and 2.x versions, in some cases, 
 <!-- MR 10.3.0 [CU3] - FR 10.3.6 -->
 
 When you restored a DataMiner backup that included low-code apps, those apps would incorrectly not be restored.
+
+#### External authentication via SAML: Removal of whitespace characters from signatures would cause validation to fail [ID_36181]
+
+<!-- MR 10.4.0 - FR 10.3.6 -->
+
+In some cases, whitespace characters would incorrectly be removed from signatures, causing validation to fail.

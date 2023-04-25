@@ -281,3 +281,9 @@ In some cases, a handle in the Timer class would not be cleaned correctly, causi
 <!-- MR 10.4.0 - FR 10.3.6 -->
 
 When a DomInstance was created with an empty status, in some cases, a `MultipleSectionsNotAllowedForSectionDefinition` error could be returned, even when the configuration was correct.
+
+#### External authentication via SAML: Removal of whitespace characters from signatures would cause validation to fail [ID_36181]
+
+<!-- MR 10.4.0 - FR 10.3.6 -->
+
+In some cases, whitespace characters would incorrectly be removed from signatures, causing validation to fail.
