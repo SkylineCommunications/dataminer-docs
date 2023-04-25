@@ -214,6 +214,15 @@ In all web apps (e.g. Low-Code Apps, Dashboards, Monitoring, Jobs, Ticketing, et
 
 When the *Get parameter relations* data source is queried while the *ModelHost* DxM is not running, an error message will appear. That error message has now been made clearer.
 
+#### Web services API: Multi-value DOM fields will now list all their values [ID_36190]
+
+<!-- MR 10.4.0 - FR 10.3.6 -->
+
+Up to now, in e.g. low-code apps, multi-value DOM fields would only show a summary of the values they contained. From now on, they will list all values instead.
+
+> [!NOTE]
+> When a multi-value DOM field contains invalid values, it will no longer list them. Instead, they will be added to the error message.
+
 ### Fixes
 
 #### Web apps: Problem with external authentication [ID_33405]

@@ -102,6 +102,15 @@ A web component now supports hyperlinks with a target attribute.
 
 Example: `<a href="http://www.skyline.be" target="_blank">Skyline Communications</a>`
 
+#### Web services API: Multi-value DOM fields will now list all their values [ID_36190]
+
+<!-- MR 10.4.0 - FR 10.3.6 -->
+
+Up to now, in e.g. low-code apps, multi-value DOM fields would only show a summary of the values they contained. From now on, they will list all values instead.
+
+> [!NOTE]
+> When a multi-value DOM field contains invalid values, it will no longer list them. Instead, they will be added to the error message.
+
 ### Fixes
 
 #### Interactive Automation scripts: Problems with datetime component [ID_35682]
