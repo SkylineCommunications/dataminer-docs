@@ -81,6 +81,14 @@ Because of a number of enhancements with regard to the detection of periodic beh
 
 The verification of trend predictions has been enhanced.
 
+#### SLAnalytics - Behavioral anomaly detection: Enhanced detection of behavioral changes after a gap in the trend data [ID_36186]
+
+<!-- MR 10.3.0 [CU3] - FR 10.3.6 -->
+
+A number of enhancements have been made with regard to the automatic detection of behavioral changes in trend data of trended parameters.
+
+Up to now, in some cases, level shifts and trend changes would remain unlabeled when they occurred immediately after a gap in the trend data.
+
 ### Fixes
 
 #### DataMiner Agent was not able to connect to the Cassandra database due to a problem with the TLS certificate [ID_35895]
