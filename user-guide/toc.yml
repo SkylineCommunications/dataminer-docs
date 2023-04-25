@@ -1048,144 +1048,125 @@
         - name: Configuring a dedicated clustered storage
           topicUid: Cassandra_database
           items:
-            - name: Cassandra Cluster
+            - name: Configuring a dedicated Cassandra and Elasticsearch cluster
               topicUid: Cassandra_database
               items:
-                - name: Cassandra
+                - name: Cassandra Cluster
                   topicUid: Cassandra_database
                   items:
-                    - name: Deploying a Cassandra database
+                    - name: Cassandra
                       topicUid: Cassandra_database
                       items:
-                        - name: Installing new systems
+                        - name: Deploying a Cassandra database
                           topicUid: Cassandra_database
                           items:
-                            - name: Installing Cassandra on a Linux machine
-                              topicUid: Installing_Cassandra
-                            - name: Scaling a Cassandra cluster database
-                              topicUid: Scale_Cassandra_Database
-                            - name: Installing Cassandra Reaper
-                              topicUid: Installing_Cassandra_Reaper
-                            - name: Making Cassandra nodetool accessible remotely
-                              topicUid: Making_Cassandra_nodetool_accessible_remotely
-                            - name: Configuring the replication factor and consistency level
-                              topicUid: replication_and_consistency_configuration
-                            - name: Setting up an Azure Managed Instance for Apache Cassandra
-                              topicUid: Azure_Managed_Instance_for_Apache_Cassandra
-                        - name: Moving existing systems
-                          topicUid: Migrating_the_general_database_to_clustered_storage
-                          items:
-                            - name: Moving to dedicated clustered storage
+                            - name: Installing new systems
+                              topicUid: Cassandra_database
+                              items:
+                                - name: Installing Cassandra on a Linux machine
+                                  topicUid: Installing_Cassandra
+                                - name: Scaling a Cassandra cluster database
+                                  topicUid: Scale_Cassandra_Database
+                                - name: Installing Cassandra Reaper
+                                  topicUid: Installing_Cassandra_Reaper
+                                - name: Making Cassandra nodetool accessible remotely
+                                  topicUid: Making_Cassandra_nodetool_accessible_remotely
+                                - name: Configuring the replication factor and consistency level
+                                  topicUid: replication_and_consistency_configuration
+                                - name: Setting up an Azure Managed Instance for Apache Cassandra
+                                  topicUid: Azure_Managed_Instance_for_Apache_Cassandra
+                            - name: Moving existing systems
                               topicUid: Migrating_the_general_database_to_clustered_storage
                               items:
                                 - name: Migrating a MySQL general database to dedicated clustered storage
                                   topicUid: Migrating_the_general_database_to_clustered_storage
                                 - name: Migrating a Cassandra database to dedicated clustered storage
-                                  topicUid: Moving_the_Cassandra_database_to_a_different_disk_drive
+                                  topicUid: 
                                 - name: Migrating a Cassandra and Elasticsearch database to dedicated clustered storage
                                   topicUid: Migrating_the_general_database_to_a_DMS_Cassandra_cluster
-                    - name: Configuring the Cassandra cluster database settings
-                      topicUid: Configuring_the_database_settings_in_Cube
+                        - name: Maintaining a Cassandra cluster
+                          topicUid: Maintain_Cassandra_Cluster
+                    - name: Amazon Keyspaces Service
+                      topicUid: Amazon_Keyspaces_Service
                       items:
-                        - name: Configuring the Cassandra cluster database settings in Cube
-                          topicUid: Configuring_the_Cassandra_Cluster_database_settings_in_Cube
-                        - name: Configuring the general database settings in DB.xml
-                          topicUid: Configuring_the_Cassandra_Cluster_database_settings_in_DBxml
-                    - name: Maintaining a Cassandra cluster
-                      topicUid: Maintain_Cassandra_Cluster
-                - name: Amazon Keyspaces Service
-                  topicUid: Amazon_Keyspaces_Service
-                  items:
-                    - name: Deploying the Amazon Keyspaces Service
-                      topicUid: Deploying_Amazon_Keyspaces_Service
-                    - name: Configuring the Amazon Keyspaces Service
-                      topicUid: Configuring_AKS_in_Cube
-                      items:
-                        - name: Configuring the Amazon Keyspaces Service in Cube
-                          topicUid: Configuring_AKS_in_Cube
-                        - name: Configuring the Amazon Keyspaces Service in DB.xml
-                          topicUid: Configuring_AKS_in_DBxml
-                    - name: Maintaining the Amazon Keyspaces Service
-                      topicUid: Maintenance_AKS
-            - name: Search Cluster
-              topicUid: Installing_Elasticsearch_database
-              items:
-                - name: Elasticsearch
+                        - name: Deploying the Amazon Keyspaces Service
+                          topicUid: Deploying_Amazon_Keyspaces_Service
+                        - name: Maintaining the Amazon Keyspaces Service
+                          topicUid: Maintenance_AKS
+                - name: Search Cluster
                   topicUid: Elasticsearch_database
                   items:
-                    - name: Deploying an Elasticsearch database
+                    - name: Elasticsearch
                       topicUid: Elasticsearch_database
                       items:
-                        - name: Installing new systems
+                        - name: Deploying an Elasticsearch database
                           topicUid: Elasticsearch_database
                           items:
-                            - name: Installing Elasticsearch on a DMA via DataMiner
-                              topicUid: Installing_Elasticsearch_via_DataMiner
-                            - name: Manually connecting a DMA to an Elasticsearch cluster
-                              topicUid: Manually_Connecting_DMA_to_Elasticsearch_Cluster
-                        - name: Moving existing systems
-                          topicUid: Migrating_the_general_database_to_Cassandra
-                          items:
+                            - name: Installing new Elasticsearch
+                              topicUid: Elasticsearch_database
+                              items:
+                                - name: Configuring the Elasticsearch database
+                                  topicUid: Elasticsearch_database
+                                  items:
+                                    - name: Configuring the master nodes
+                                      topicUid: Configuring_master_Elasticsearch_nodes
+                                    - name: Adding an Elasticsearch cluster node
+                                      topicUid: Configuring_Elasticsearch_node_add
+                                - name: Configuring multiple Elasticsearch clusters
+                                  topicUid: Configuring_multiple_Elasticsearch_clusters
+                                - name: Manually connecting a DMA to an Elasticsearch cluster
+                                  topicUid: Manually_Connecting_DMA_to_Elasticsearch_Clusters
                             - name: Moving existing systems to dedicated clustered storage
                               topicUid: Migrating_the_general_database_to_Cassandra
                               items:
-                                - name: Moving the Cassandra database to a different disk drive
-                                  topicUid: Moving_the_Cassandra_database_to_a_different_disk_drive
-                                - name: Migrating the general database to Cassandra
-                                  topicUid: Migrating_the_general_database_to_Cassandra
                                 - name: Migrating the general database to a DMS Cassandra cluster
                                   topicUid: Migrating_the_general_database_to_a_DMS_Cassandra_cluster
-                                - name: Migrating SRM resources to Elasticsearch
-                                  topicUid: Resources_migration_to_elastic
-                    - name: Configuring an Elasticsearch database
-                      topicUid: Configuring_Elasticsearch_Database
-                      items:
-                        - name: Configuring the master nodes
-                          topicUid: Configuring_master_Elasticsearch_nodes
-                        - name: Adding an Elasticsearch cluster node
-                          topicUid: Configuring_Elasticsearch_node_add
-                        - name: Removing an Elasticsearch cluster node
-                          topicUid: Configuring_Elasticsearch_node_remove
-                        - name: Configuring multiple Elasticsearch clusters
-                          topicUid: Configuring_multiple_Elasticsearch_clusters
-                    - name: Maintaining an Elasticsearch database
-                      topicUid: Maintenance_Elasticsearch_database
-                - name: Amazon Opensearch Service
-                  topicUid: Deploying_Amazon_Opensearch_Service
-                  items:
-                    - name: Deploying the Amazon Opensearch Service
+                        - name: Maintaining an Elasticsearch database
+                          topicUid: Configuring_Elasticsearch_backups
+                          items:
+                            - name: Configuring Elasticsearch backups
+                              topicUid: Configuring_Elasticsearch_backups
+                              items:
+                                - name: Taking and restoring snapshots
+                                  topicUid: Configuring_Elasticsearch_backups_Windows_Linux
+                                - name: Restoring backups using the Standalone Elastic Backup Tool
+                                  topicUid: Configuring_Elasticsearch_backups_Windows
+                            - name: Removing an Elasticsearch cluster node
+                              topicUid: Configuring_Elasticsearch_node_remove
+                    - name: Amazon Opensearch Service
                       topicUid: Deploying_Amazon_Opensearch_Service
-                    - name: Configuring the Amazon Opensearch Service
-                      topicUid: Configuring_AOS_in_Cube
                       items:
-                        - name: Configuring the Amazon Opensearch Service in Cube
-                          topicUid: Configuring_AOS_in_Cube
-                        - name: Configuring the Amazon Opensearch Service in DB.xml
-                          topicUid: Configuring_AOS_in_DBxml
-                    - name: Maintaining the Amazon Opensearch Service
-                      topicUid: Maintenance_AOS
-                - name: OpenSearch database
+                        - name: Deploying the Amazon Opensearch Service
+                          topicUid: Deploying_Amazon_Opensearch_Service
+                        - name: Maintaining the Amazon Opensearch Service
+                          topicUid: Maintenance_AOS
+                    - name: OpenSearch database
+                      topicUid:
+                      items:
+                        - name: Deploying an OpenSearch database
+                          topicUid: Deploying_OpenSearch_database
+                        - name: Maintaining an OpenSearch database
+                          topicUid: Maintenance_OpenSearch_database
+                - name: Database configuration
                   topicUid:
                   items:
-                    - name: Deploying an OpenSearch database
-                      topicUid: Deploying_OpenSearch_database
-                    - name: Configuring an OpenSearch database
-                      topicUid: Configuring_OpenSearch_database_in_Cube
-                      items:
-                        - name: Configuring an OpenSearch database in Cube
-                          topicUid: Configuring_OpenSearch_database_in_Cube
-                        - name: Configuring an OpenSearch database in DB.xml
-                          topicUid: Configuring_OpenSearch_database_in_DBxml
-                    - name: Maintaining an OpenSearch database
-                      topicUid: Maintenance_OpenSearch_database
-        - name: Configuring storage on DMA and dedicated search
+                    - name: Configuring the general database settings in Cube
+                      topicUid: Configuring_the_database_settings_in_Cube
+                    - name: Configuring the general database settings in DB.xml
+                      topicUid: Configuring_the_database_settings_in_DBxml
+        - name: Configuring storage on DMA with indexing database
           topicUid: 
           items:
-            - name: Cassandra on DMA with Elasticsearch
+            - name: Cassandra with Elasticserch as indexing database
               topicUid: 
               items: 
-                - name: Deploying Cassandra on DMA
+                - name: Deploying Cassandra on DMA with Elasticsearch
                   topicUid:
+                  items:
+                    - name: Installing Elasticsearch on a DMA via DataMiner
+                      topicUid: Installing_Elasticsearch_via_DataMiner
+                    - name: Migrating SRM resources to Elasticsearch
+                      topicUid: Resources_migration_to_elastic
                 - name: Configuring indexing settings
                   topicUid: Configuring_indexing_settings_in_Cube
                   items:
@@ -1193,11 +1174,16 @@
                       topicUid: Configuring_indexing_settings_in_Cube
                     - name: Configuring indexing settings in DB.xml
                       topicUid: Configuring_indexing_settings_in_DBxml
-                - name: Maintaining a Cassandra database
-                  topicUid: Configuring_Cassandra_Backups
+                - name: Maintaining an indexing database
+                  topicUid: Configuring_Elasticsearch_backups
                   items:
-                    - name: Configuring Cassandra backups
-                      topicUid: Configuring_Cassandra_Backups
+                    - name: Configuring Elasticsearch backups
+                      topicUid: Configuring_Elasticsearch_backups
+                      items:
+                        - name: Taking and restoring snapshots
+                          topicUid: Configuring_Elasticsearch_backups_Windows_Linux
+                        - name: Restoring backups using the Standalone Elastic Backup Tool
+                          topicUid: Configuring_Elasticsearch_backups_Windows
         - name: Configuring storage on DMA
           topicUid:
           items:
@@ -1216,9 +1202,12 @@
                 - name: Maintaining a Cassandra database on DMA
                   topicUid: Configuring_Cassandra_on_DMA_backups
                   items:
-                    - name: Configuring Cassandra on DMA backups
-                      topicUid: Configuring_Cassandra_on_DMA_backups
-                - name: Migrating ...
+                    - name: Configuring Cassandra backups
+                      topicUid: Configuring_Cassandra_Backups
+                    - name: Moving the Cassandra database to a different disk drive
+                      topicUid: Moving_the_Cassandra_database_to_a_different_disk_drive
+                - name: Migrating a MySQL or MSSQL general database to Cassandra
+                  topicUid: Migrating_the_general_database_to_Cassandra
             - name: MySQL on DMA
               topicUid: Deploying_MySQL_database_on_DMA
               items:
@@ -1226,16 +1215,6 @@
                   topicUid: Deploying_MySQL_database_on_DMA
                 - name: Configuring a MySQL database on your DMA
                   topicUid: Configuring_MySQL_database_on_DMA_in_Cube
-                  items:
-                    - name: Configuring a MySQL database on your DMA in Cube
-                      topicUid: Configuring_MySQL_database_on_DMA_in_Cube
-                    - name: Configuring a MySQL database on your DMA in DB.xml
-                      topicUid: Configuring_MySQL_database_on_DMA_in_DBxml
-                - name: Maintaining a MySQL database
-                  topicUid:
-                  items:
-                    - name: Configuring MySQL backups
-                      topicUid: Configuring_MySQL_backups
         - name: Optional database configurations
           topicUid: Offload_database
           items:
