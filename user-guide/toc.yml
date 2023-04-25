@@ -2016,6 +2016,7 @@
         - name: Editing a low-code application
           topicUid: Editing_custom_apps
         - name: Configuring low-code applications
+          topicUid: LowCodeApps_Custom_Icon
           items:
             - name: Customizing the icon and color of an app
               topicUid: LowCodeApps_Custom_Icon
@@ -2031,7 +2032,7 @@
               topicUid: LowCodeApps_security_config
             - name: Retrieving an earlier version of a low-code app
               topicUid: LowCodeApps_earlier_version
-            - name: 
+            - name: Organizing the apps on the landing page in sections
               topicUid: LowCodeApps_organizing_landing_page
         - name: Deleting a low-code application
           topicUid: Deleting_custom_apps
