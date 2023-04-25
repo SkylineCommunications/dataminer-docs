@@ -25,6 +25,12 @@ In *System Center*, a few enhancements have been made to the *Database > Offload
   > [!IMPORTANT]
   > If, before upgrading to this DataMiner version, *Parameter value* was selected and the frequency was set to "permanently", *Parameter value* will no longer be selected after upgrading. As a result, no snapshot will be offloaded until you reconfigure the snapshot offload settings.
 
+#### Alarm Console: Enhanced performance when loading active alarms [ID_36144]
+
+<!-- MR 10.3.0 [CU3] - FR 10.3.6 -->
+
+Because of a number of enhancements, overall performance has increased when loading active alarms.
+
 ### Fixes
 
 #### Renaming an Automation script would cause its actions to be loaded twice in the UI [ID_35964]
