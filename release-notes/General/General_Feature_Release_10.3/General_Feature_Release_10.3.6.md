@@ -226,6 +226,12 @@ Although DataMiner supports all OpenSearch 1.x and 2.x versions, in some cases, 
 
 When you restored a DataMiner backup that included low-code apps, those apps would incorrectly not be restored.
 
+#### Problem when multiple clients had subscribed to a cell of a partial table [ID_36148]
+
+<!-- MR 10.2.0 [CU15]/10.3.0 [CU3] - FR 10.3.6 -->
+
+When multiple clients had subscribed to a cell of a partial table, in some cases, deleting the row or renaming the row via a display key would not trigger a deletion of the cell in the subscription.
+
 #### External authentication via SAML: Removal of whitespace characters from signatures would cause validation to fail [ID_36181]
 
 <!-- MR 10.4.0 - FR 10.3.6 -->
