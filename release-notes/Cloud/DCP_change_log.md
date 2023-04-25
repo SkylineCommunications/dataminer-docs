@@ -10,6 +10,8 @@ The dataminer.services platform gets updated continuously. This change log can h
 
 Changes have been implemented in DataMiner CloudGateway to make the service ignore requests when it can't access dataminer.services, so another CloudGateway service who does could pick them up and handle them successfully. This was most commonly occuring when the CloudGateway was installed on a firewalled or offline server by accident. In such a scenarious you could have errors at random, for example when creating or renewing your cloud connection in cube, or when creating or managing shares from the dashboard app.
 
+An issue has been resolved where CloudGateway didn't sync the DMA online state with dataminer.services, causing features like sharing or remote access to stop working until the CloudGateway or DMA was restarted or the secure cloud connection dropped and reconnected.
+
 #### 21 April 2023 - Enhancements - SupportAssistant 1.3.1 - General improvements and offloading of reports and notifications [ID_35482] [ID_35485] [ID_35492] [ID_35559] [ID_35756] [ID_36152] [ID_36201]
 
 Changes have been implemented in DataMiner SupportAssistant to improve its general stability.
