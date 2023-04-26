@@ -70,7 +70,7 @@ Enables the [Low-Code Apps module](xref:Application_framework).
 Enables the “BookingData” Visual Overview component.
 
 - **Minimum version**: 10.2.7
-- **Release version**: 10.3.11
+- **Estimated release version**: 10.3.11
 
 ### CassandraCluster
 
