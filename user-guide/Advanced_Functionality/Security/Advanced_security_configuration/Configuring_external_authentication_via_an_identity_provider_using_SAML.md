@@ -468,7 +468,7 @@ Object reference not set to an instance of an object.
 Failed to build External Authentication for SAML. System.ArgumentException: An entry with the same key already exists.
 
 - Application: Cube/Alarm Console
-- Cause: In *spMetadata.xml*, the index attribute per AssertionConsumerService endpoint must be unique. Verify that all index-values are unique.
+- Cause: In *spMetadata.xml*, the index attribute per AssertionConsumerService endpoint must be unique. Make sure all index values are unique.
 
 Cannot connect to the DMA; exception trapped: Failed getting the user info (empty response).
 
