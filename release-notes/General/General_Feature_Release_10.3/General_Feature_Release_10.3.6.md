@@ -69,6 +69,32 @@ This error will also be added to the *SLWatchDog2.txt* log file.
 > - This run-time error will appear when a custom booking event script that was configured to run synchronously has been running for more than 15 minutes. We highly recommend configuring custom booking events to run asynchronously. For more information, see [Service Orchestration custom events configuration](xref:Service_Orchestration_custom_events).
 > - Half-open run-time errors (which are thrown after an SRM event has been stuck for more than 7.5 minutes) will also be added to the *SLWatchDog2.txt* log file.
 
+#### DataMiner upgrades and downgrades can now be performed over gRPC [ID_36023]
+
+<!-- MR 10.3.0 [CU3] - FR 10.3.6 -->
+
+DataMiner upgrades and downgrades can now be performed over gRPC.
+
+To make gRPC the default communication method, do the following on every DataMiner Agent in the cluster:
+
+- To make gRPC the default communication method for **client-server communication**, modify [ConnectionSettings.txt](xref:ConnectionSettings_txt).
+
+- To make gRPC the default communication method for **server-server communication**, do one of the following:
+
+  - Disable *.NET Remoting* in [MaintenanceSettings.xml](xref:MaintenanceSettings_xml) by adding `<EnableDotNetRemoting>false</EnableDotNetRemoting>` to the `<SLNet>` section.
+  
+  OR
+  
+  - Add explicit `<Redirect>` tags in [DMS.xml](xref:DMS_xml).
+
+> [!NOTE]
+>
+> - *.NET Remoting* remains the default communication method for both client-server and server-server communication.
+> - Apart from certain connectors and Automation scripts, the following features still rely on having the *.NET Remoting* port 8004 open:
+>
+>   - Automatic Failover switch on run-time error
+>   - Element replication
+
 #### SLAnalytics: Trend data predictions displayed in trend graphs will be more accurate [ID_36038]
 
 <!-- MR 10.3.0 [CU3] - FR 10.3.6 -->
