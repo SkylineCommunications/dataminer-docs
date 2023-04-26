@@ -2,11 +2,9 @@
 uid: Elasticsearch_database
 ---
 
-# Elasticsearch database
+# Deploying an Elasticsearch database
 
-From DataMiner 9.6.4 onwards, on DataMiner Agents with a Cassandra database, it is possible to install a dedicated Elasticsearch indexing database, which is used to store specific data that can for instance be used in the Jobs app and the new Dashboards app.
-
-Certain features introduced from that version of DataMiner onwards, such as the Jobs app, can only be used in DataMiner Systems with Elasticsearch database.
+From DataMiner 9.6.4 onwards, an Elasticsearch database can be deployed to complete the configuration of a dedicated clustered storage, which consists of a Cassandra-compatible database service and a Search Cluster.
 
 - [Configuring the Elasticsearch database](xref:Configuring_Elasticsearch_Database)
 

@@ -2,7 +2,9 @@
 uid: Cassandra_database
 ---
 
-# Installing new systems: Cassandra database
+# Deploying a Cassandra database
+
+## Installing new systems
 
 - [Installing Cassandra on a Linux machine](xref:Installing_Cassandra)
 
@@ -12,9 +14,15 @@ uid: Cassandra_database
 
 - [Making Cassandra nodetool accessible remotely](xref:Making_Cassandra_nodetool_accessible_remotely)
 
-- [Data replication and consistency configuration](xref:replication_and_consistency_configuration)
+- [Configuring the replication factor and consistency level](xref:replication_and_consistency_configuration)
 
 - [Setting up an Azure Managed Instance for Apache Cassandra](xref:Azure_Managed_Instance_for_Apache_Cassandra)
+
+## Moving existing systems
+
+- [Migrating a MySQL general database to dedicated clustered storage](xref:Migrating_the_general_database_to_clustered_storage)
+
+- [Migrating a Cassandra and Elasticsearch database to dedicated clustered storage](xref:Migrating_the_general_database_to_a_DMS_Cassandra_cluster)
 
 > [!NOTE]
 
