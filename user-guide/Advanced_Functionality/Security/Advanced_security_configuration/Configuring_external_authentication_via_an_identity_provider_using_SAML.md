@@ -45,6 +45,16 @@ Once this has been configured, if users try to log in to the DMA using external 
 > - Any DataMiner Agent configured for SAML external authentication should be accessible via [**HTTPS**](xref:Setting_up_HTTPS_on_a_DMA).
 > - For **DataMiner Cube**, prior to DataMiner 10.1.11/10.2.0, only the Administrator user can bypass the external authentication provider by entering an explicit username/password combination. In later DataMiner versions, this is also allowed for any local DataMiner user account.
 > - For the **Web apps**, when external authentication is enabled, it is no longer possible to log in with local accounts. As a workaround, since you do not need to configure external authentication on every DMA of the cluster, you can log in to the web apps using external authentication on one DMA and log in using a local account on another DMA.
+> - For SAML, in C:\Skyline DataMiner\Webpages\API folder and Web.config file the following needs to be added within the <system.webServer> tag if it's not already configured, see below example.
+
+```xml
+<defaultDocument>
+      <files>
+        <clear />
+        <add value="default.aspx" />
+      </files>
+    </defaultDocument>
+```
 
 > [!CAUTION]
 > If there are two DataMiner users who share the same email address, both users will not be able to log in. To prevent this from happening, we recommended not using more than one method to add users. For example, do not add Windows domain users if the Azure AD users use the same email address.
