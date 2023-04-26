@@ -12,6 +12,12 @@ uid: General_Main_Release_10.3.0_CU3
 
 ### Enhancements
 
+#### DataMiner upgrade: Installation of Microsoft .NET 6.0 [ID_35363]
+
+<!-- MR 10.3.0 [CU3] - FR 10.3.3 -->
+
+During a DataMiner upgrade, Microsoft .NET 6.0 will now be installed if not installed already.
+
 #### DataMiner Object Models: Enhanced performance when reading DOM objects and ModuleSettings [ID_35934]
 
 <!-- MR 10.3.0 [CU3] - FR 10.3.6 -->

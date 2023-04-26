@@ -203,7 +203,7 @@ From now on, when you zoom in or out, the data of the previous zoom level will s
 
 #### DataMiner upgrade: Installation of Microsoft .NET 6.0 [ID_35363]
 
-<!-- MR 10.4.0 - FR 10.3.3 -->
+<!-- MR 10.3.0 [CU3] - FR 10.3.3 -->
 
 During a DataMiner upgrade, Microsoft .NET 6.0 will now be installed if not installed already.
 
