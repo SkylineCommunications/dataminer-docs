@@ -152,6 +152,7 @@ Provides access to additional data sources and operators for GQI in the Dashboar
 
 - **Minimum version**: 10.0.13
 - **Estimated release version for the custom operator**: 10.3.11
+- **Estimated release version for other data sources and operators**: To be determined
 
 ### GenericOwnership
 
@@ -226,24 +227,22 @@ Enables the alarm list component in the Dashboards app.
 
 Enables alpha components in the Dashboards app.
 
-> [!NOTE]
-> Deprecated: Alpha components will not be released in the core. Instead, the GQI visualizations will be extended to achieve the same functionality.
-
 - **Minimum version**: 9.6.6
+- **Estimated release version**: Will not be released
 
 ### ReportsAndDashboardsAutomationScript
 
 Enables the Automation script component in the Dashboards app.
 
 - **Minimum version**: 9.6.8
-- **Estimated release version**: 10.4.2
+- **Estimated release version**: To be determined
 
 ### ReportsAndDashboardsButton
 
 Enables the button component in the Dashboards app.
 
 - **Minimum version**: 10.0.3
-- **Estimated release version**: 10.4.2
+- **Estimated release version**: To be determined
 
 ### ReportsAndDashboardsButtonPanel
 
@@ -278,7 +277,7 @@ Enables a new Maps component in the Dashboards app and the Low-Code Apps.
 Enables the guides in the Dashboards app.
 
 - **Minimum version**: 9.6.8
-- **Estimated release version**: 10.4.5
+- **Estimated release version**: To be determined
 
 ### ReportsAndDashboardsPTP
 
