@@ -7,8 +7,6 @@ The table below contains an overview of all available soft-launch options. Unles
 
 The table also details the minimum DataMiner version to start using each option and, in case the feature has already been officially released in a later DataMiner version, the “Release version” when it becomes available. From that “Release version” onwards, the feature is active by default and any soft-launch configuration for the feature is ignored. As such, it is not necessary to remove a tag from *SoftLaunchOptions.xml* when the corresponding feature is officially released.
 
-Note that some features never make it to an official release. These are tagged as “Deprecated”.
-
 ### AlarmFocus
 
 See [Filtering alarms on alarm focus](xref:ApplyingAlarmFiltersInTheAlarmConsole#filtering-alarms-on-alarm-focus).
@@ -139,7 +137,7 @@ Allows the offloading of specific DataMiner Analytics features to a specific Dat
 Enables the Virtual Functions module in Cube. This is a Cube-only feature that can only be activated per session with the argument `ENABLEFEATURE=FUNCTIONS`.
 
 - **Minimum version**: 10.0.10
-- **Release version**: unknown
+- **Release version**: To be determined
 
 ### GenericInterface
 
@@ -313,7 +311,7 @@ Enables support for the source type “Resources” in list view components. Thi
 Enables the service profiles export and import in the DataMiner Cube Services app. This is a Cube-only feature that can only be activated per session with the argument `ENABLEFEATURE=ServiceProfilesMigration`.
 
 - **Minimum version**: 10.1.7
-- **Release version**: unknown
+- **Release version**: To be determined
 
 ### SLProtocolAsX64
 
