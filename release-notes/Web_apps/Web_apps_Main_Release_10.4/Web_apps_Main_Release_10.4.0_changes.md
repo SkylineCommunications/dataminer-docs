@@ -350,3 +350,9 @@ When editing a dashboard or a low-code app, in some cases, the following error c
 ```txt
 The dashboard has not been saved: Invalid revision sequence, the dashboard might have been edited by another user.
 ```
+
+#### Dashboards app: Order of parameters in State component of shared dashboard was incorrect [ID_36206]
+
+<!-- MR 10.4.0 - FR 10.3.6 -->
+
+When you viewed a shared dashboard that contained a *State* component, in some cases, the order of the parameters in that *State* component would be incorrectly.
