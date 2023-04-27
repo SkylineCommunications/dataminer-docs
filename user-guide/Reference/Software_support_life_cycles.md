@@ -44,9 +44,6 @@ Status overview:
 - **End of Support**: Feature will no longer be updated and no longer be supported.
 - **End of Life**: Feature or compatibility will be removed.
 
-> [!NOTE]
-> From DataMiner 10.0.12 onwards, **alarm squashing** can change the behavior of the Alarm Console and help you gain more clarity on your operations. For more information, see [Declutter your alarm tree](https://community.dataminer.services/declutter-your-alarm-tree/).
-
 ## Third-party software support life cycle
 
 | Item | Current status | Detail | Future status |
