@@ -350,3 +350,9 @@ When editing a dashboard or a low-code app, in some cases, the following error c
 ```txt
 The dashboard has not been saved: Invalid revision sequence, the dashboard might have been edited by another user.
 ```
+
+#### Low-Code Apps: Action buttons could have an incorrect background color [ID_36258]
+
+<!-- MR 10.4.0 - FR 10.3.6 -->
+
+In some cases, action buttons could have an incorrect background color.
