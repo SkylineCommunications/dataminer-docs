@@ -892,6 +892,8 @@
         - name: Upgrading a DataMiner Agent
           topicUid: Upgrading_a_DataMiner_Agent
           items:
+            - name: DataMiner Main Release vs. Feature Release
+              topicUid: DataMiner_MR_vs_FR
             - name: Preparing to upgrade a DataMiner Agent
               topicUid: Preparing_to_upgrade_a_DataMiner_Agent
             - name: Upgrading a DataMiner Agent in the Update Center

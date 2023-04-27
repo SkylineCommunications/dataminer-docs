@@ -17,14 +17,14 @@ uid: Skyline_support_life_cycles
 
 Legend:
 
-- **New features**: Monthly feature release track with all the latest new features, fixes and security updates (main release cumulative updates also available without new features as part of main release track).
+- **New features**: Monthly feature release track with all the latest new features, fixes, and security updates (main release cumulative updates also available without new features as part of main release track).
 - **Regular updates**: Monthly cumulative updates containing all fixes and security updates as part of main release track.
 - **Supported**: Security updates and critical bug fixes only (as required).
 - **Limited support**: Online technical help without software updates for fixes, security updates or features.
 - **Not supported**: No more support is available.
 
 > [!TIP]
-> See also [DataMiner Main Release vs. Feature Release](https://community.dataminer.services/dataminer-main-release-vs-feature-release/).
+> See also [DataMiner Main Release vs. Feature Release](xref:DataMiner_MR_vs_FR).
 
 ## DataMiner functionality evolution and retirement
 
