@@ -36,6 +36,22 @@ When you install or upgrade a DataMiner Agent, the following DataMiner Extension
 > [!NOTE]
 > For detailed information on the changes included in the different versions of these DxMs, refer to the [dataminer.services change log](xref:DCP_change_log).
 
+#### Service & Resource Management: A number of checks will no longer be performed when an ongoing booking has finished [ID_36255]
+
+<!-- MR 10.4.0 - FR 10.3.6 -->
+
+From now on, when an ongoing booking has finished, a number of checks will no longer be performed, provided that the resources and elements used by the booking are still the same and that, if the booking is a *ServiceReservationInstance*, it still uses the same service:
+
+- Element usage will no longer be checked or generated. Neither the resources nor the elements have changed.
+
+- Quarantine checks will no longer be performed. The resources have not changed and the time range (which is now in the past) was shrunk.
+
+  If the booking used legacy capacities, the resource availability will not be checked either.
+
+- Volume license checks will no longer be performed. The booking was ongoing, which means that the volume license was checked earlier.
+
+- No checks will be performed to find out whether there are any conflicts with overlapping bookings that might use the same service name or service ID. The booking was ongoing, which means that no conflicts were found earlier.
+
 ## Changes
 
 ### Enhancements
