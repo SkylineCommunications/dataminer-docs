@@ -233,3 +233,9 @@ When you restored a DataMiner backup that included low-code apps, those apps wou
 <!-- MR 10.2.0 [CU15]/10.3.0 [CU3] - FR 10.3.6 -->
 
 When multiple clients had subscribed to a cell of a partial table, in some cases, deleting the row or renaming the row via a display key would not trigger a deletion of the cell in the subscription.
+
+#### Problem when retrieving alarm events from Cassandra Cluster after an element restart [ID_36177]
+
+<!-- MR 10.3.0 [CU3] - FR 10.3.6 -->
+
+When an element that had more than 10,000 alarm events stored on a Cassandra cluster was restarted, those alarm events would not all get retrieved from the database. As a result, SLElement would generate additional alarm events, causing the alarm trees to become incorrect.

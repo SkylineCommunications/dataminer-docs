@@ -247,3 +247,9 @@ When you shared a dashboard that contained an alarm table component, in some cas
 <!-- MR 10.3.0 [CU3] - FR 10.3.6 -->
 
 When you viewed a shared dashboard that contained a *State* component, in some cases, the order of the parameters in that *State* component would be incorrectly.
+
+#### Low-Code Apps: Action buttons could have an incorrect background color [ID_36258]
+
+<!-- MR 10.4.0 - FR 10.3.6 -->
+
+In some cases, action buttons could have an incorrect background color.

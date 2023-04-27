@@ -869,6 +869,10 @@
           topicUid: SRM_1.2.30_CU1
         - name: Addendum CU2
           topicUid: SRM_1.2.30_CU2
+        - name: Addendum CU3
+          topicUid: SRM_1.2.30_CU3
+        - name: Addendum CU4
+          topicUid: SRM_1.2.30_CU4
       - name: SRM 1.2.29
         topicUid: SRM_1.2.29
       - name: SRM 1.2.28

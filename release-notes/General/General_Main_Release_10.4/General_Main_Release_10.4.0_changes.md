@@ -191,6 +191,12 @@ When, in the SLNetClientTest tool, you connected to a DataMiner Agent that used 
 
 Up to now, when an event associated with a DVE child element was generated, internally, that event would be linked to the DVE parent element. From now on, it will be linked to the child element instead.
 
+#### Service & Resource Management: Enhanced performance when stopping an ongoing booking [ID_36255]
+
+<!-- MR 10.4.0 - FR 10.3.6 -->
+
+Because of a number of enhancements, overall performance has increased when stopping an ongoing booking.
+
 ### Fixes
 
 #### Problem with Resource Manager when ResourceStorageType was not specified in Resource Manager settings [ID_34981]
