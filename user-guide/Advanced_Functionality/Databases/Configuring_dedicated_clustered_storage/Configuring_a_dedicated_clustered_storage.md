@@ -8,7 +8,7 @@ To properly configure a dedicated clustered storage setup, both a Cassandra-comp
 
 First install the Cassandra Cluster or equivalent database service, as this is a prerequisite for installing a Search Cluster afterwards. From DataMiner 10.3.0/10.3.3 onwards, it is possible to use Amazon Keyspaces Service on AWS as an alternative for the Cassandra Cluster setup.
 
-From DataMiner 10.3.0/10.3.3 onwards, it is possible to use Amazon OpenSearch Service on AWS and an on-prem hosted OpenSearch cluster as an alternative to the on-prem Elasticsearch cluster that has been available from DataMiner 9.6.4 onwards.
+From DataMiner 10.3.0/10.3.3 onwards, it is possible to use Amazon OpenSearch Service on AWS and an on-premises hosted OpenSearch cluster as an alternative to the on-premises Elasticsearch cluster that has been available from DataMiner 9.6.4 onwards.
 
 - **Cassandra-compatible database service**
 
