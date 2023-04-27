@@ -43,7 +43,7 @@ If both optional requirements are met, DataMiner can study the system more effic
 
 > [!NOTE]
 >
-> - You can check if any of these (optional) requirements are still missing in your system by checking the logs via *System Center* > *Logging*.
+> - You can check if any of these (optional) requirements are still missing in your system by checking the logs via *System Center* > *Logging* > *cube*. Filter the logs on "requirements" to quickly find the relevant entries.
 > - When you have activated this feature, it may take up to a week before the first results are available. During this time, DataMiner will analyze your system in order to learn which parameters are related.
 
 ## Adding a related parameter to a trend graph
