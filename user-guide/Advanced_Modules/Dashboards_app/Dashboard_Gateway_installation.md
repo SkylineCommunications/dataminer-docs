@@ -66,12 +66,16 @@ There are two main reasons to consider a Dashboard Gateway setup:
 
 1. From a DataMiner Agent, copy the folder *C:\\Skyline DataMiner\\Webpages\\API* to the web root folder of the Dashboard Gateway web server (default: *C:\\inetpub\\wwwroot*) and, in IIS Manager, convert the API into an application.
 
-1. From a DataMiner Agent, copy the web application(s) (e.g. *C:\\Skyline DataMiner\\Webpages\\Dashboard*, *C:\\Skyline DataMiner\\Webpages\\Monitoring*, *C:\\Skyline DataMiner\\Webpages\\Jobs*, *C:\\Skyline DataMiner\\Webpages\\SharedComponents*, *C:\\Skyline DataMiner\\Webpages\\Ticketing*, etc.) to the web root folder of the Dashboard Gateway web server.
+1. From a DataMiner Agent, copy the web application(s) (e.g. *C:\\Skyline DataMiner\\Webpages\\Dashboard*, *C:\\Skyline DataMiner\\Webpages\\App*, *C:\\Skyline DataMiner\\Webpages\\Monitoring*, *C:\\Skyline DataMiner\\Webpages\\Jobs*, *C:\\Skyline DataMiner\\Webpages\\Ticketing*, etc.) to the web root folder of the Dashboard Gateway web server. Also copy over *C:\\Skyline DataMiner\\Webpages\\SharedComponents*.
+
+1. From DataMiner 10.3.5 onwards: also copy the Authentication app (*C:\\Skyline DataMiner\\Webpages\\Auth*) to the web root folder of the Dashboard Gateway web server.
 
 1. On the Dashboard Gateway web server, edit the *web.config* in the API folder, and specify the following settings:
 
    - *connectionString*: The hostname or IP address of the DataMiner Agent to which the Dashboard Gateway has to connect.
    - *connectionUser* and *connectionPassword*: The DataMiner user account that the Dashboard Gateway has to use to connect to the DataMiner Agent (username and password).
+
+1. When using [external authentication via SAML](xref:Configuring_external_authentication_via_an_identity_provider_using_SAML), also configure the URL of the API of the Dashboard Gateway (``https://gateway.mycompany.com/API/``) as an *AssertionConsumerService* in the metadata XML file and on the identity provider.
 
 ## Reverse proxy
 
