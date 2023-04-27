@@ -1,8 +1,8 @@
 ---
-uid: Skyline_support_life_cycles
+uid: Software_support_life_cycles
 ---
 
-# Skyline support life cycles
+# Software support life cycles
 
 ## DataMiner support life cycle policy
 

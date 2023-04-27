@@ -12,7 +12,7 @@ uid: Part7Reference
 
 - [Obtaining a DataMiner license](xref:DataminerLicenses)
 
-- [Skyline support life cycles](xref:Skyline_support_life_cycles)
+- [Software support life cycles](xref:Software_support_life_cycles)
 
 - [Support services terms](xref:Support_services_terms)
 

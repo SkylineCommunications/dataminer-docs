@@ -3452,8 +3452,8 @@
           topicUid: Online_demo_license_for_DMA_to_be_installed_by_user
         - name: Offline demo license for DMA to be installed by user
           topicUid: Offline_demo_license_for_DMA_to_be_installed_by_user
-    - name: Skyline support life cycles
-      topicUid: Skyline_support_life_cycles
+    - name: Software support life cycles
+      topicUid: Software_support_life_cycles
     - name: Soft-launch options
       topicUid: SoftLaunchOptions
       items: 
