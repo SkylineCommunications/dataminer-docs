@@ -506,22 +506,6 @@ Please note the following:
 > [!TIP]
 > See also: [Visual Overview: Session variable YAxisResources now supports filters to pass exposers](xref:Cube_Main_Release_10.4.0_other_features_changes#visual-overview-session-variable-yaxisresources-now-supports-filters-id_34857)
 
-#### Service & Resource Management: A number of checks will no longer be performed when an ongoing booking has finished [ID_36255]
-
-<!-- MR 10.4.0 - FR 10.3.6 -->
-
-From now on, when an ongoing booking has finished, a number of checks will no longer be performed, provided that the resources and elements used by the booking are still the same and that, if the booking is a *ServiceReservationInstance*, it still uses the same service:
-
-- Element usage will no longer be checked or generated. Neither the resources nor the elements have changed.
-
-- Quarantine checks will no longer be performed. The resources have not changed and the time range (which is now in the past) was shrunk.
-
-  If the booking used legacy capacities, the resource availability will not be checked either.
-
-- Volume license checks will no longer be performed. The booking was ongoing, which means that the volume license was checked earlier.
-
-- No checks will be performed to find out whether there are any conflicts with overlapping bookings that might use the same service name or service ID. The booking was ongoing, which means that no conflicts were found earlier.
-
 ### Tools
 
 #### SLLogCollector will now order the Standalone BPA Executor tool to execute all BPA tests available in the system [ID_35436]
