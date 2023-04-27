@@ -32,7 +32,7 @@ It is also possible to set up OpenSearch Dashboards, which is the equivalent of 
 
 ## Connecting your DMS to an OpenSearch cluster
 
-To configure the connection to an OpenSearch database, configure the settings as detailed in [Cassandra database](xref:Configuring_the_database_settings_in_Cube#cassandra-database).
+To configure the connection to an OpenSearch database, configure the settings as detailed in [Cassandra database](xref:Configuring_the_database_settings_in_Cube#cassandra-cluster-database).
 
 > [!IMPORTANT]
 > An OpenSearch database requires a separate Cassandra cluster or Amazon Keyspaces.

@@ -6,7 +6,7 @@ uid: Manually_Connecting_DMA_to_Elasticsearch_Cluster
 You can connect a DataMiner Agent to an existing Elasticsearch cluster by manually adding a *DataBase* tag to the *DB.xml* file, as detailed below.
 
 > [!IMPORTANT]
-> From DataMiner 10.3.0/10.3.3 onwards, for a Cassandra cluster database, we recommend connecting your DMA to an Elasticsearch cluster in DataMiner Cube instead of in the *DB.xml* file. For more information, see [Configuring the general database settings in Cube](xref:Configuring_the_database_settings_in_Cube#cassandra-database).
+> From DataMiner 10.3.0/10.3.3 onwards, for a Cassandra cluster database, we recommend connecting your DMA to an Elasticsearch cluster in DataMiner Cube instead of in the *DB.xml* file. For more information, see [Configuring the general database settings in Cube](xref:Configuring_the_database_settings_in_Cube#cassandra-cluster-database).
 > For a Cassandra database per DMA, follow the steps below.
 
 > [!CAUTION]

@@ -31,9 +31,9 @@ To configure the connection to an [Amazon Keyspaces database](xref:Amazon_Keyspa
 
    - **DB Server**: The URL of the [global endpoint](https://docs.aws.amazon.com/keyspaces/latest/devguide/programmatic.endpoints.html) of the region your Amazon Keyspaces cluster is in. (e.g. `cassandra.eu-north-1.amazonaws.com`).
 
-   - **User**: The username of your [Amazon Keyspaces credentials](xref:Amazon_Keyspaces_Service#generating-credentials-for-amazon-keyspaces).
+   - **User**: The username of your [Amazon Keyspaces credentials](xref:Deploying_Amazon_Keyspaces_Service#generating-credentials-for-amazon-keyspaces).
 
-   - **Password**: The password of your [Amazon Keyspaces credentials](xref:Amazon_Keyspaces_Service#generating-credentials-for-amazon-keyspaces).
+   - **Password**: The password of your [Amazon Keyspaces credentials](xref:Deploying_Amazon_Keyspaces_Service#generating-credentials-for-amazon-keyspaces).
 
 1. Restart the DMS.
 
