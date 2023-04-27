@@ -42,6 +42,9 @@ The following prerequisites are **optional** but highly recommended, as they wil
 If both optional requirements are met, DataMiner can study the system more efficiently, leading to even more valuable insights.
 
 > [!NOTE]
+> You can see which (optional) requirements you are missing to use this feature by checking the logs in *System Center* > *Logging*.
+
+> [!NOTE]
 > When you have activated this feature, it may take up to a week before the first results are available. During this time, DataMiner will analyze your system in order to learn which parameters are related.
 
 ## Adding a related parameter to a trend graph
