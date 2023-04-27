@@ -3002,6 +3002,8 @@
           topicUid: Troubleshooting_Trending
         - name: Troubleshooting - Alarms
           topicUid: Troubleshooting_Alarms
+        - name: Troubleshooting - Services
+          topicUid: Troubleshooting_Services
     - name: Troubleshooting procedures
       topicUid: Troubleshooting_procedures
       items:
