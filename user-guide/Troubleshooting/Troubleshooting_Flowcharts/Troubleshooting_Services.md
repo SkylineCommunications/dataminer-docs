@@ -10,8 +10,6 @@ uid: Troubleshooting_Services
 > - If you need more information on how to execute any of the steps below, feel free to reach out to [support.data-insights@skyline.be](mailto:support.data-insights@skyline.be).
 > - You can leave feedback using the [*issues* feature](xref:contributing#reporting-an-issue), or [propose a change](xref:contributing).
 
-## Services
-
 <div class="mermaid">
 flowchart TD
 %% Define styles %%
@@ -25,17 +23,17 @@ classDef classSolution fill:#58595b,stroke:#58595b,color:#ffffff,stroke-width:0p
 %% Define blocks %%
 START([Service issue])
 GetDELT{{Get a .dmimport package.\nCheck the service configuration.}}
-HostInfo{{Is the host of the service the same or different from the element?\nFind this by editing the service/element, where you can find the 'DMA:' setting.}}
+HostInfo{{Is the host of the service \nthe same or different \nfrom the element?\nFind this by editing \nthe service/element, \nwhere you can find \nthe 'DMA:' setting.}}
 DifferentHost([Check the service folder.\nCheck the RemoteService folder.])
-SameHost{{"Compare the service impact (alarm property) \nvs\nthe service state (surveyor/card)."}}
+SameHost{{"Compare the service impact \n(alarm property) \nvs\nthe service state \n(surveyor/card)."}}
 DMAsDisconnected{{Are the DMAs disconnected?}}
-SyncCheck{{Run Sync Check tool.\nClick node to see how.\nInvestigate why the DMAs are disconnected.}}
-NotFixed{{"If your issue is not fixed,\ncontact support.data-insights@skyline.be.\nInclude all gathered information and steps taken."}}
-ImpactOrStateIssue{{Service impact or state issue?}}
+SyncCheck{{Run Sync Check tool.\nClick node to see how.\nInvestigate why the \nDMAs are disconnected.}}
+NotFixed{{"If your issue is not fixed,\ncontact support.data-insights@skyline.be.\nInclude all gathered information \nand steps taken."}}
+ImpactOrStateIssue{{Service impact \nor \nstate issue?}}
 StateIssue{{Check SLElement service states in\nClient Test Tool => Diagnostics => DMA.\nCheck __service_'serviceName'.txt logging.}}
-ImpactIssue{{Are there duplicate display keys\nfrom partially included elements?}}
-NotFixedProtocolIssue{{Rows should have unique display keys.\nContact the author of your element's connector.}}
-IsolateIssue{{Try to isolate and simulate the actual issue.\ne.g. if the elements are partially included\ncheck if it also happens with full inclusion.\ne.g. does the issue occur on \nstandalone or column parameters?}}
+ImpactIssue{{Are there duplicate \ndisplay keys\nfrom partially \nincluded elements?}}
+NotFixedProtocolIssue{{Rows should have \nunique display keys.\nContact the author \nof your \nelement's connector.}}
+IsolateIssue{{Try to isolate and \nsimulate the actual issue.\ne.g. if the elements \nare partially included\ncheck if it also happens \nwith full inclusion.\ne.g. does the issue \noccur on standalone \nor column parameters?}}
 Alarms{{If your issue is not resolved,\nclick this node to go to the alarm flow.}}
 %% Connect blocks %%
 START --- GetDELT
@@ -70,4 +68,4 @@ class NotFixed,NotFixedProtocolIssue classSolution;
 > At any step of this flowchart:
 >
 > - your investigation may be complete.
-> - you may need to check the log information in *SLErrors.txt*, *SLWatchDog2.txt*, *SLDBConnection.txt*, the element logging or the *\_\_service\_\<serviceName\>.txt* logging on each DMA.
+> - you may need to check the log information in *SLErrors.txt*, *SLWatchDog2.txt*, *SLDBConnection.txt*, the element logging, or the *\_\_service\_\<serviceName\>.txt* logging on each DMA.
