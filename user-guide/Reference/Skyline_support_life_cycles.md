@@ -45,15 +45,7 @@ Status overview:
 - **End of Life**: Feature or compatibility will be removed.
 
 > [!NOTE]
->
-> - From DataMiner 10.0.12 onwards, **alarm squashing** can change the behavior of the Alarm Console and help you gain more clarity on your operations. For more information, see [Declutter your alarm tree](https://community.dataminer.services/declutter-your-alarm-tree/).
-> - As of DataMiner 10.1.9, the **new average trending calculation** feature is enabled by default. This results in the following breaking changes:
->
->   - Some special status trend points are no longer used.
->   - In some specific cases, intervals between two average trend points are no longer guaranteed to be constant.
->   - The exception values of continuous (non-discrete) parameters are now averaged in a discrete manner.
->
->   For more information, see [Average trending calculation](https://community.dataminer.services/documentation/average-trending-calculation/).
+> From DataMiner 10.0.12 onwards, **alarm squashing** can change the behavior of the Alarm Console and help you gain more clarity on your operations. For more information, see [Declutter your alarm tree](https://community.dataminer.services/declutter-your-alarm-tree/).
 
 ## Third-party software support life cycle
 
