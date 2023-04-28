@@ -129,6 +129,12 @@ One of its values, "RemotingConnection", is now obsolete. If you continue to use
 
 Because of a number of enhancements, overall performance has increased when stopping an ongoing booking.
 
+#### Element replication is now able to use gRPC [ID_36262]
+
+<!-- MR 10.3.0 [CU3] - FR 10.3.6 -->
+
+Element replication will now automatically detect the connection settings of the target DMA and will use gRPC when the connection type is set to "GPRCConnection".
+
 ### Fixes
 
 #### DataMiner Agent was not able to connect to the Cassandra database due to a problem with the TLS certificate [ID_35895]

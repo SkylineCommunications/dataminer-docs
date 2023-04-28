@@ -115,6 +115,12 @@ In the *ConnectionSettings.txt* file, the **type=** setting defines the default 
 
 One of its values, "RemotingConnection", is now obsolete. If you continue to use this value, we are planning to soon have DataMiner automatically switch to *GRPCConnection* when you upgrade. If you do not want to use *GRPCConnection*, use *LegacyRemotingConnection* to avoid getting automatically switched. However, note that we strongly recommend using *GRPCConnection*.
 
+#### Element replication is now able to use gRPC [ID_36262]
+
+<!-- MR 10.3.0 [CU3] - FR 10.3.6 -->
+
+Element replication will now automatically detect the connection settings of the target DMA and will use gRPC when the connection type is set to "GPRCConnection".
+
 ### Fixes
 
 #### Cassandra Cluster: Every DMA would incorrectly try to delete any possible old Cassandra compaction and repair tasks found in the entire DMS [ID_31923]
