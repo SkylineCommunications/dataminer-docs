@@ -415,7 +415,7 @@ Available from DataMiner 10.2.0/10.1.10 onwards. Permission to send emails via t
 These user permissions are used for the API deployment feature, which is in [soft launch](xref:SoftLaunchOptions).
 
 >[!NOTE]
-> This feature has been replaced by User-Defined APIs and will be removed in the future.
+> This feature has been marked obsolete from DataMiner version 10.3.6. It is being replaced by User-Defined APIs and will be removed in the future.
 
 #### Modules \> API \> Deploy script API
 

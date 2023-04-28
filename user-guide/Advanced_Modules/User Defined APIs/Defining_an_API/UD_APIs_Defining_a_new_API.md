@@ -48,7 +48,7 @@ public class Script
 
 > [!NOTE]
 >
-> - When developing the API script in DIS, make sure to update the 'Common' and 'Automation' NuGet packages to their latest version so the types of the User-Defined APIs feature are available.
+> - When developing the API script in DIS, make sure to update the 'Skyline.DataMiner.Dev.Automation' NuGet package to its latest version so the types of the User-Defined APIs feature are available.
 > - The `Run` method is not required in the script, but the entry point method must reside in the `Script` class, just like any other DataMiner scripts.
 
 ### Input
@@ -59,7 +59,7 @@ The entry point method has two parameters.
 
 - The `ApiTriggerInput` is an object that contains information about the API trigger. It has the following properties:
 
-  | Property | Type | Explanation |
+  | Property | Type | Description |
   |--|--|--|
   | RequestMethod | `RequestMethod` | The HTTP method of the request. See [RequestMethod](#requestmethod). |
   | Route | `string` | The suffix of the URL that this API call is triggered with. Having this available makes it possible to reuse the same script for different routes. See [Route](#route).|
@@ -120,7 +120,7 @@ The entry point method returns an instance of the `ApiTriggerOutput` class. This
 
 The `ApiTriggerOutput` object has the following properties:
 
-| Property | Type | Explanation |
+| Property | Type | Description |
 |--|--|--|
 | ResponseCode | int | The HTTP status code. See [ResponseCode](#responsecode). |
 | ResponseBody | string | Contains the response body as a string. |
@@ -134,7 +134,7 @@ The status of the API trigger request is reflected in the `ResponseCode` propert
 
 You can also use the `StatusCode` enum, which contains suggestions, and cast that to an integer. The values of the enum are:
 
-| Name | Value | Explanation |
+| Name | Value | Description |
 |--|--|--|
 | Ok | 200 | The request got executed successfully. |
 | Created | 201 | The request succeeded, and a new resource was created as a result. |
@@ -148,7 +148,7 @@ You can also use the `StatusCode` enum, which contains suggestions, and cast tha
 > [!TIP]
 > For more insight into which HTTP status codes to use in which circumstances, see [HTTP status codes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status).
 
-## Creating an API and token(s) in DataMiner Automation
+## Creating an API and tokens in DataMiner Automation
 
 > [!NOTE]
 > Before you try to execute this procedure, make sure you have the user permissions available under [Modules > User-Defined APIs](xref:DataMiner_user_permissions#modules--user-defined-apis).

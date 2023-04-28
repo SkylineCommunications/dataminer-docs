@@ -2381,6 +2381,7 @@
             - name: Creating APIs and tokens in code
               topicUid: UD_APIs_Creating_in_code
             - name: Objects
+              topicUid: UD_APIs_Objects
               items:
                 - name: ApiToken
                   topicUid: UD_APIs_Objects_ApiToken

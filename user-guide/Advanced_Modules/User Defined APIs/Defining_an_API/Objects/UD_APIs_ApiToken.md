@@ -9,7 +9,7 @@ An `ApiToken` is an object that defines what secret string can be used to access
 
 These are the properties of the `ApiToken` object. The table also defines whether the property can be used for filtering using the `ApiTokenExposers`.
 
-|Property       |Type       |Filterable |Explanation|
+|Property       |Type       |Filterable |Description|
 |---------------|-----------|-----------|-----------|
 |ID             |ApiTokenId |Yes        |The ID of the `ApiToken`.|
 |Name           |string     |Yes        |A name that makes the token recognizable. Must be filled in.|

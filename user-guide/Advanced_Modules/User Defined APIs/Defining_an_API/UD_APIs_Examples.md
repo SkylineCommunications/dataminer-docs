@@ -214,7 +214,7 @@ namespace UserDefinableApiScripts.Examples.RequestMethodAndRoute
 
 When you would want to trigger the execution of a long running action or script, it is recommended to execute this asynchronously and not block the HTTP trigger until the action is completed. The example below shows how you can start an asynchronous subscript in your entry point method. It will thus not be possible to return any result of this subscript since the HTTP call will immediately return after we started it.
 
-If you would want to know whether the action is completed, you could implement a second API that polls a part of your solution which was altered by this long running action to see if the that action was finished. This could for example be the status of a DOM instance, status of a booking or a value of a parameter on a specific element. There is currently no reliable built in way of knowing whether the subscript was finished.
+If you would want to know whether the action is completed, you could implement a second API that polls a part of your solution which was altered by this long running action to see if that action was finished. This could for example be the status of a DOM instance, status of a booking or a value of a parameter on a specific element. There is currently no reliable built in way of knowing whether the subscript was finished.
 
 ```csharp
 using Skyline.DataMiner.Automation;

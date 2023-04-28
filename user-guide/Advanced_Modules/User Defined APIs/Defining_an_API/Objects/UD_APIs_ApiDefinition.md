@@ -44,7 +44,7 @@ HTTP GET mydataminer.customer.local/api/custom/encoders/status
 
 The `SecuritySettings` property can be used to describe what tokens can be used to access the API. It has the following property:
 
-|Property         |Type                      |Explanation|
+|Property         |Type                      |Description|
 |-----------------|--------------------------|-----------|
 |AllowedTokens    |HashSet&lt;ApiTokenId&gt; |Collection of token IDs that have access to the API.|
 
@@ -56,10 +56,10 @@ Using the `ActionType` and `ActionMeta` properties, you can define what action s
 
 This is the default value of the `ActionType`, it will execute an automation script through the `OnApiTrigger` entry point method. To define which script should be executed and how the input data should be handled, you will need to assign an `AutomationScriptActionMeta` instance to the `ActionMeta` property. This has the following fields:
 
-|Property   |Type      |Explanation|
+|Property   |Type      |Description|
 |-----------|----------|-----------|
 |ScriptName |string    |Name of the script that should be executed. Cannot be null or empty.|
-|InputType  |InputType |Determines how the input data from the request will be handled. The options are 'Parameters' or 'RawBody'. See [Defining a new API](xref:UD_APIs_Define_New_API) for more info.|
+|InputType  |InputType |Determines how the input data from the request will be handled. The options are 'Parameters' or 'RawBody'. See [Defining a new API](xref:UD_APIs_Define_New_API#input) for more info.|
 
 #### AutomationScriptNoEntryPoint
 
@@ -69,7 +69,7 @@ This action will always convert the request body to a `Dictionary<string, string
 
 You'll need to assign an `AutomationScriptNoEntryPointActionMeta` instance to the `ActionMeta` property. This has the following fields:
 
-|Property   |Type      |Explanation|
+|Property   |Type      |Description|
 |-----------|----------|-----------|
 |ScriptName |string    |Name of the script that should be executed. Cannot be null or empty.|
 
@@ -100,4 +100,4 @@ There are permission flags that secure the CRUD actions for this type.
 - To delete definitions, the user requires the `PermissionFlags.UserDefinableApiDefinitionDelete` permission flag.
 
 > [!IMPORTANT]
-> To create or update `ApiDefinition` objects that define a `AutomationScript` or `AutomationScriptNoEntryPoint` action, you need the permissions to execute an automation script. (`PermissionFlags.AutomationExecuteScripts`)
+> To create or update `ApiDefinition` objects, you need the permissions to execute an automation script. (`PermissionFlags.AutomationExecuteScripts`)

@@ -10,7 +10,7 @@ uid: UD_APIs_UserDefinableApiEndpoint
 *DataMiner UserDefinableApiEndpoint* is an extension module that runs an ASP.NET Core 5 web API. It handles the incoming API triggers over HTTP or HTTPS and sends the requests to the DataMiner Agent(s) in a round-robin way.
 
 > [!CAUTION]
-> There is currently no rate limiting or protection in place that would prevent malicious users from spamming the endpoint. We recommend to only expose the DMA using a firewall or network protection that prevents unknown IP addresses from sending requests. If required, you can also disable the rewrite rule in IIS that forwards these requests from port 80/443 and provide port forwarding to the DxM with additional protection.
+> There is currently no rate limiting or protection in place that would prevent malicious users from spamming the endpoint. We recommend to only expose the DMA using a firewall or network protection that prevents unknown IP addresses from sending requests.
 
 ## Installing the DxM
 

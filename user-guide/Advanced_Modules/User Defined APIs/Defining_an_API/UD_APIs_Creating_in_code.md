@@ -54,7 +54,7 @@ namespace UserDefinableApiScripts.CreateToken
             File.WriteAllText(@"C:\Token.txt", token.Secret);
 
             // Create the token
-            helper.ApiTokens.Create(token);
+            token = helper.ApiTokens.Create(token);
         }
     }
 }
@@ -119,7 +119,7 @@ namespace UserDefinableApiScripts.CrudActions
 
             // Update the name
             token.Name = "Updated Test Token A";
-            helper.ApiTokens.Update(token);
+            token = helper.ApiTokens.Update(token);
 
             // Delete the token
             helper.ApiTokens.Delete(token);
@@ -150,7 +150,7 @@ namespace UserDefinableApiScripts.Exceptions
             // Try to create the token
             try
             {
-                CreateToken(helper);
+                var token = CreateToken(helper);
             }
             catch (CrudFailedException ce)
             {
@@ -162,10 +162,10 @@ namespace UserDefinableApiScripts.Exceptions
             }
         }
 
-        public void CreateToken(UserDefinableApiHelper helper)
+        public ApiToken CreateToken(UserDefinableApiHelper helper)
         {
             var token = new ApiToken("Test Token") { Secret = string.Empty };
-            helper.ApiTokens.Create(token);
+            return helper.ApiTokens.Create(token);
         }
     }
 }
@@ -181,7 +181,7 @@ A CrudFailedException was thrown: TraceData: (amount = 1)
 
 These validation errors are contained in the `TraceData` property of the `CrudFailedException`. It has multiple collections, but the `ErrorData` is the most important. This collection can contain instances like `ApiTokenError` or `ApiDefinitionError`. Each of these then contains a reason and some additional metadata depending on that reason. See the 'Errors' section on the [ApiDefinition](xref:UD_APIs_Objects_ApiDefinition#errors) and [ApiToken](xref:UD_APIs_Objects_ApiToken#errors) pages for more info on what kind of errors you can expect.
 
-It is also possible to disable the `CrudFailedExceptions` and instead check for errors in the `TraceData` yourself. To do this, set the `ThrowExceptionsOnErrorData` properties to false for all helper components. Then, after a CRUD action, call the `GetTraceDataLastCall()` method on the respective helper component. You can then either check the error collection or use the existing `HasSucceeded()` method to see whether the `TraceData` contains errors.
+It is also possible to disable the `CrudFailedException` from being thrown and instead check for errors in the `TraceData` yourself. To do this, set the `ThrowExceptionsOnErrorData` properties to false for all helper components. Then, after a CRUD action, call the `GetTraceDataLastCall()` method on the respective helper component. You can then either check the error collection or use the existing `HasSucceeded()` method to see whether the `TraceData` contains errors.
 
 ```csharp
 using Skyline.DataMiner.Automation;
@@ -202,7 +202,7 @@ namespace UserDefinableApiScripts.NoExceptions
 
             // Try to create the token
             var token = new ApiToken("Test Token") { Secret = string.Empty };
-            helper.ApiTokens.Create(token);
+            token = helper.ApiTokens.Create(token);
 
             // Check the TraceData
             var traceData = helper.ApiTokens.GetTraceDataLastCall();

@@ -116,7 +116,7 @@ The *detail* field of an error contains a client-safe message explaining what we
 
 The *errorCode* field of an error contains an error code that can be used by the API maintainer to find out what went wrong:
 
-| ErrorCode | Integer value | HTTP Status Code | Explanation |
+| ErrorCode | Integer value | HTTP Status Code | Description |
 |--|--|--|--|
 | EmptyRoute | 1 | 400 | The passed request route is empty. |
 | InvalidRequestMethod | 3 | 405 | The HTTP method is not valid. For the valid methods, see [HTTP methods](#http-methods). |
