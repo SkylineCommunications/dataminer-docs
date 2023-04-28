@@ -20,7 +20,7 @@ From DataMiner 10.3.0/10.3.3 onwards, it is possible to use Amazon OpenSearch Se
 
   - [Elasticsearch](xref:Elasticsearch_database): Available from DataMiner 9.6.4 onwards.
 
-  - [Amazon OpenSearch Service](xref:Deploying_Amazon_Opensearch_Service): Available from DataMiner 10.3.0/10.3.3 onwards.
+  - [Amazon OpenSearch Service](xref:Amazon_OpenSearch_Service): Available from DataMiner 10.3.0/10.3.3 onwards.
 
   - [OpenSearch database](xref:Deploying_OpenSearch_database): Available from DataMiner 10.3.0/10.3.3 onwards.
 

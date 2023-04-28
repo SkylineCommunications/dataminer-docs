@@ -1055,30 +1055,20 @@
                   topicUid: Cassandra_database
                   items:
                     - name: Deploying a Cassandra database
-                      topicUid: Cassandra_database
+                      topicUid: Installing_Cassandra
                       items:
-                        - name: Installing new systems
+                        - name: Installing Cassandra on a Linux machine
                           topicUid: Installing_Cassandra
-                          items:
-                            - name: Installing Cassandra on a Linux machine
-                              topicUid: Installing_Cassandra
-                            - name: Scaling a Cassandra cluster database
-                              topicUid: Scale_Cassandra_Database
-                            - name: Installing Cassandra Reaper
-                              topicUid: Installing_Cassandra_Reaper
-                            - name: Making Cassandra nodetool accessible remotely
-                              topicUid: Making_Cassandra_nodetool_accessible_remotely
-                            - name: Configuring the replication factor and consistency level
-                              topicUid: replication_and_consistency_configuration
-                            - name: Setting up an Azure Managed Instance for Apache Cassandra
-                              topicUid: Azure_Managed_Instance_for_Apache_Cassandra
-                        - name: Migrating existing systems
-                          topicUid: Migrating_the_general_database_to_clustered_storage
-                          items:
-                            - name: Migrating the MySQL general database to dedicated clustered storage
-                              topicUid: Migrating_the_general_database_to_clustered_storage
-                            - name: Migrating a Cassandra and Elasticsearch database to dedicated clustered storage
-                              topicUid: Migrating_the_general_database_to_a_DMS_Cassandra_cluster
+                        - name: Scaling a Cassandra cluster database
+                          topicUid: Scale_Cassandra_Database
+                        - name: Installing Cassandra Reaper
+                          topicUid: Installing_Cassandra_Reaper
+                        - name: Making Cassandra nodetool accessible remotely
+                          topicUid: Making_Cassandra_nodetool_accessible_remotely
+                        - name: Configuring the replication factor and consistency level
+                          topicUid: replication_and_consistency_configuration
+                        - name: Setting up an Azure Managed Instance for Apache Cassandra
+                          topicUid: Azure_Managed_Instance_for_Apache_Cassandra
                     - name: Maintaining a Cassandra cluster
                       topicUid: Maintain_Cassandra_Cluster
                 - name: Amazon Keyspaces Service
@@ -1087,41 +1077,31 @@
                     - name: Deploying the Amazon Keyspaces Service
                       topicUid: Deploying_Amazon_Keyspaces_Service
             - name: Search Cluster
-              topicUid: Elasticsearch_database
+              topicUid: Deploying_the_Elasticsearch_database
               items:
                 - name: Elasticsearch
-                  topicUid: Elasticsearch_database
+                  topicUid: Deploying_the_Elasticsearch_database
                   items:
-                    - name: Deploying an Elasticsearch database
-                      topicUid: Elasticsearch_database
+                    - name: Deploying the Elasticsearch database
+                      topicUid: Deploying_the_Elasticsearch_database
                       items:
-                        - name: Installing a new Elasticsearch database
-                          topicUid: Elasticsearch_database
+                        - name: Configuring the Elasticsearch database
+                          topicUid: Configuring_master_Elasticsearch_nodes
                           items:
-                            - name: Configuring the Elasticsearch database
-                              topicUid: Elasticsearch_database
-                              items:
-                                - name: Configuring the master nodes
-                                  topicUid: Configuring_master_Elasticsearch_nodes
-                                - name: Adding an Elasticsearch cluster node
-                                  topicUid: Configuring_Elasticsearch_node_add
-                            - name: Configuring multiple Elasticsearch clusters
-                              topicUid: Configuring_multiple_Elasticsearch_clusters
-                              items:
-                                - name: Taking a snapshot of one Elasticsearch cluster and restoring it to a different Elasticsearch cluster
-                                  topicUid: Taking_snapshot_Elasticsearch_cluster_and_restoring_to_different_cluster
-                                - name: Verify Elasticsearch synchronization
-                                  topicUid: Verify_Elasticsearch_synchronization
-                            - name: Manually connecting a DMA to an Elasticsearch cluster
-                              topicUid: Manually_Connecting_DMA_to_Elasticsearch_Cluster
-                        - name: Migrating existing systems to dedicated clustered storage
-                          topicUid: 
+                            - name: Configuring the master nodes
+                              topicUid: Configuring_master_Elasticsearch_nodes
+                            - name: Adding an Elasticsearch cluster node
+                              topicUid: Configuring_Elasticsearch_node_add
+                        - name: Configuring multiple Elasticsearch clusters
+                          topicUid: Configuring_multiple_Elasticsearch_clusters
                           items:
-                            - name: Migrating the MySQL general database to dedicated clustered storage
-                              topicUid: Migrating_the_general_database_to_clustered_storage
-                            - name: Migrating the general database to dedicated clustered storage
-                              topicUid: Migrating_the_general_database_to_a_DMS_Cassandra_cluster
-                    - name: Maintaining an Elasticsearch database
+                            - name: Taking a snapshot of one Elasticsearch cluster and restoring it to a different Elasticsearch cluster
+                              topicUid: Taking_snapshot_Elasticsearch_cluster_and_restoring_to_different_cluster
+                            - name: Verify Elasticsearch synchronization
+                              topicUid: Verifying_Elasticsearch_Synchronization
+                        - name: Manually connecting a DMA to an Elasticsearch cluster
+                          topicUid: Manually_Connecting_DMA_to_Elasticsearch_Cluster
+                    - name: Maintaining the Elasticsearch database
                       topicUid: Configuring_Elasticsearch_backups
                       items:
                         - name: Configuring Elasticsearch backups
@@ -1136,12 +1116,12 @@
                 - name: Amazon Opensearch Service
                   topicUid: Amazon_OpenSearch_Service
                   items:
-                    - name: Deploying Amazon Opensearch Service
-                      topicUid: Amazon_Opensearch_Service
+                    - name: Deploying the Amazon Opensearch Service
+                      topicUid: Amazon_OpenSearch_Service
                 - name: OpenSearch database
-                  topicUid: Deploying_OpenSearch_database
+                  topicUid: OpenSearch_database
                   items:
-                    - name: Deploying an OpenSearch database
+                    - name: Deploying the OpenSearch database
                       topicUid: Deploying_OpenSearch_database
                     - name: Configuring multiple OpenSearch clusters
                       topicUid: Configuring_multiple_OpenSearch_clusters
@@ -1152,11 +1132,18 @@
                   topicUid: Configuring_the_database_settings_in_Cube
                 - name: Configuring the general database settings in DB.xml
                   topicUid: Configuring_the_database_settings_in_DBxml
-        - name: Configuring storage on DMA with indexing database
-          topicUid: Deploying_dedicated_Elasticsearch_indexing_database
+            - name: Migrating existing systems to dedicated clustered storage
+              topicUid: Migrating_the_general_database_to_Cassandra
+              items:
+                - name: Migrating the SQL general database to dedicated clustered storage
+                  topicUid: Migrating_the_general_database_to_Cassandra
+                - name: Migrating the general database to a DMS Cassandra cluster
+                  topicUid: Migrating_the_general_database_to_a_DMS_Cassandra_cluster
+        - name: Configuring a dedicated indexing database
+          topicUid: Configuring_Dedicated_Indexing_Database
           items:
-            - name: Deploying a dedicated Elasticsearch indexing database
-              topicUid: Deploying_dedicated_Elasticsearch_indexing_database
+            - name: Deploying the dedicated Elasticsearch indexing database
+              topicUid: Installing_Elasticsearch_via_DataMiner
               items:
                 - name: Installing Elasticsearch on a DMA via DataMiner
                   topicUid: Installing_Elasticsearch_via_DataMiner
@@ -1175,32 +1162,36 @@
                 - name: Configuring Elasticsearch indexing database backups
                   topicUid: Configuring_Elasticsearch_indexing_database_backups
         - name: Configuring storage per DMA
-          topicUid:
+          topicUid: Configuring_storage_per_DMA
           items:
             - name: Cassandra per DMA
-              topicUid:
+              topicUid: Migrating_the_general_database_to_Cassandra
               items:
                 - name: Migrating a legacy setup to Cassandra
                   topicUid: Migrating_the_general_database_to_Cassandra
-                - name: Configuring a Cassandra database on DMA
+                - name: Configuring a Cassandra database per DMA
                   topicUid: Configuring_Cassandra_on_DMA_in_Cube
                   items:
-                    - name: Configuring a Cassandra database on DMA in Cube
+                    - name: Configuring a Cassandra database per DMA in Cube
                       topicUid: Configuring_Cassandra_on_DMA_in_Cube
-                    - name: Configuring a Cassandra database on DMA in DB.xml
+                    - name: Configuring a Cassandra database per DMA in DB.xml
                       topicUid: Configuring_Cassandra_on_DMA_in_DBxml
                 - name: Maintaining a Cassandra database on DMA
-                  topicUid: Configuring_Cassandra_on_DMA_backups
+                  topicUid: Configuring_Cassandra_Backups
                   items:
                     - name: Configuring Cassandra backups
                       topicUid: Configuring_Cassandra_Backups
                     - name: Moving the Cassandra database to a different disk drive
                       topicUid: Moving_the_Cassandra_database_to_a_different_disk_drive
-            - name: MySQL on DMA
-              topicUid: Deploying_MySQL_database_on_DMA
+            - name: MySQL database
+              topicUid: MySQL_database
               items:
-                - name: Deploying a MySQL database on your DMA
-                  topicUid: Deploying_MySQL_database_on_DMA
+                - name: Activating one file per table for an existing MySQL database
+                  topicUid: Activating_one_file_per_table_for_an_existing_MySQL_database
+                - name: Deleting element data from a MySQL database
+                  topicUid: Deleting_element_data_from_a_MySQL_database
+                - name: Moving MySQL data to another location
+                  topicUid: Moving_MySQL_data_to_another_location
                 - name: Configuring a MySQL database on your DMA
                   topicUid: Configuring_MySQL_database_on_DMA_in_Cube
         - name: Optional database configurations
