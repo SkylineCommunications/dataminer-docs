@@ -94,6 +94,9 @@ To update the Cassandra version:
 
 1. Verify that the *Cassandra* service has been created and that it can be started from the Task Manager (or the Services Manager).
 
+> [!TIP]
+> If you are unable to start the Cassandra service and receive Error 1067 for your user, you will need to add the 'Modify' permission for your user to the folder C:\Program Files\Cassandra. For more info, check https://community.dataminer.services/question/error-1067-in-starting-cassandra-service/.
+
 1. After a Cassandra upgrade, it is (sometimes) necessary to execute *nodetool upgradesstables* on your nodes to convert sstables to the new Cassandra version. Go to the *C:\Program Files\Cassandra\bin* folder and run the following command:
 
    `.\nodetool upgradesstables`
