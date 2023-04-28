@@ -67,6 +67,12 @@ When you added a filtered history tab that had to show active alarms, masked ala
 
 When Cube lost its connection to the DataMiner Agent while a list view was loading its data, in some cases, a warning message could appear, saying that the list view did not have permission to read service definitions.
 
+#### Visual Overview - DataMiner Connectivity Framework: Active path would incorrectly not be highlighted [ID_36204]
+
+<!-- MR 10.3.0 [CU3] - FR 10.3.6 -->
+
+When a visual overview had been configured to highlight the active path, in some rare cases, the active path would incorrectly not be highlighted.
+
 #### DataMiner Cube was no longer able to download the CefSharp package [ID_36243]
 
 <!-- MR 10.3.0 [CU3] - FR 10.3.6 -->
