@@ -135,7 +135,6 @@ For example, this is the default configuration:
 
 ```json
 {
-  ...
   "Serilog": {
     "Using": [ "Serilog.Sinks.Console", "Serilog.Sinks.File" ],
     "MinimumLevel": {
@@ -162,7 +161,6 @@ For example, this is the default configuration:
     ],
     "Enrich": [ "FromLogContext" ]
   },
-  ...
 }
 ```
 
@@ -179,7 +177,6 @@ For example, this is the default configuration:
 
 ```json
 {
-  ...
   "UserDefinableAPIs": {
     "NatsSubject": "Skyline.DataMiner.Protobuf.Apps.UserDefinableApis.Api.v1.UserDefinableApiTriggerRequest",
     "MessageBrokerTimeOutSeconds": 90
