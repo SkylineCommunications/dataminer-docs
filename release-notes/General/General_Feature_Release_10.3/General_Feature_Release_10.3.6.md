@@ -115,6 +115,14 @@ A number of enhancements have been made with regard to the automatic detection o
 
 Up to now, in some cases, level shifts and trend changes would remain unlabeled when they occurred immediately after a gap in the trend data.
 
+#### ConnectionSettings.txt: type=RemotingConnection now obsolete [ID_36196]
+
+<!-- MR 10.3.0 [CU3] - FR 10.3.6 -->
+
+In the *ConnectionSettings.txt* file, the **type=** setting defines the default connection method to be used by DataMiner client applications.
+
+One of its values, "RemotingConnection", is now obsolete. If you continue to use this value, we are planning to soon have DataMiner automatically switch to *GRPCConnection* when you upgrade. If you do not want to use *GRPCConnection*, use *LegacyRemotingConnection* to avoid getting automatically switched. However, note that we strongly recommend using *GRPCConnection*.
+
 #### Service & Resource Management: Enhanced performance when stopping an ongoing booking [ID_36255]
 
 <!-- MR 10.4.0 - FR 10.3.6 -->
