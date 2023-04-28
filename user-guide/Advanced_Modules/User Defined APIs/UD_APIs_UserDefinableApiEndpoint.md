@@ -71,7 +71,7 @@ For example, to change the setting *MessageBrokerTimeOutSeconds* to a higher val
 
 ### Kestrel
 
-#### EndPoint
+#### EndPoints
 
 This contains the endpoint where the *UserDefinableApiEndpoint* DxM will be run. You can change the port here.
 
@@ -86,7 +86,6 @@ For example, this is the default configuration:
       }
     }
   }
-  ...
 }
 ```
 
@@ -110,7 +109,7 @@ IIS also has a rewrite rule (Reroute User Definable APIs) that forwards API requ
 
 1. Click *Apply*.
 
-#### Limitations
+#### Limits
 
 It's possible to restrict the number of open connections. By default the DxM will allow 100 concurrent connections, but the amount can be changed here.
 
@@ -119,12 +118,10 @@ For example, this is the default configuration:
 ```json
 {
   "Kestrel": {
-    ...
     "Limits": {
       "MaxConcurrentConnections": 100
     }
   }
-  ...
 }
 ```
 
