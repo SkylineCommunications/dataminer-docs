@@ -44,6 +44,9 @@ Status overview:
 - **End of Support**: Feature will no longer be updated and no longer be supported.
 - **End of Life**: Feature or compatibility will be removed.
 
+> [!NOTE]
+> For information about functionality in soft launch that is retired, refer to [Overview of soft-launch options](xref:Overview_of_Soft_Launch_Options).
+
 ## Third-party software support life cycle
 
 | Item | Current status | Detail | Future status |
