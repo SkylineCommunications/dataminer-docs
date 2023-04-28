@@ -73,6 +73,12 @@ When Cube lost its connection to the DataMiner Agent while a list view was loadi
 
 When a visual overview had been configured to highlight the active path, in some rare cases, the active path would incorrectly not be highlighted.
 
+#### Visual Overview: Problem when using placeholders in shape data fields of type 'ChildrenFilter' [ID_36227]
+
+<!-- MR 10.2.0 [CU15]/10.3.0 [CU3] - FR 10.3.6 -->
+
+Up to now, using placeholders in shape data fields of type *ChildrenFilter* could, in some cases, cause incorrect filtering behavior. From now on, when placeholders are used in shape data fields of type *ChildrenFilter*, filtering will be applied correctly.
+
 #### DataMiner Cube was no longer able to download the CefSharp package [ID_36243]
 
 <!-- MR 10.3.0 [CU3] - FR 10.3.6 -->

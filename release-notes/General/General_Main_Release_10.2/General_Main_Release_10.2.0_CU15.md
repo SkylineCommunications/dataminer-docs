@@ -203,3 +203,9 @@ When multiple clients had subscribed to a cell of a partial table, in some cases
 <!-- MR 10.2.0 [CU15]/10.3.0 [CU3] - FR 10.3.5 [CU0] -->
 
 In some cases, the web services API would not be able to correctly translate a server query to a web query.
+
+#### DataMiner Cube - Visual Overview: Problem when using placeholders in shape data fields of type 'ChildrenFilter' [ID_36227]
+
+<!-- MR 10.2.0 [CU15]/10.3.0 [CU3] - FR 10.3.6 -->
+
+Up to now, using placeholders in shape data fields of type *ChildrenFilter* could, in some cases, cause incorrect filtering behavior. From now on, when placeholders are used in shape data fields of type *ChildrenFilter*, filtering will be applied correctly.
