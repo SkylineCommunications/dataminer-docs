@@ -69,7 +69,7 @@ When Cube lost its connection to the DataMiner Agent while a list view was loadi
 
 #### Visual Overview - DataMiner Connectivity Framework: Active path would incorrectly not be highlighted [ID_36204]
 
-<!-- MR 10.3.0 [CU3] - FR 10.3.6 -->
+<!-- MR 10.2.0 [CU15]/10.3.0 [CU3] - FR 10.3.6 -->
 
 When a visual overview had been configured to highlight the active path, in some rare cases, the active path would incorrectly not be highlighted.
 
