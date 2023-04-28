@@ -138,3 +138,9 @@ When you added a filtered history tab that had to show active alarms, masked ala
 <!-- MR 10.3.0 [CU3] - FR 10.3.6 -->
 
 When Cube lost its connection to the DataMiner Agent while a list view was loading its data, in some cases, a warning message could appear, saying that the list view did not have permission to read service definitions.
+
+#### DataMiner Cube was no longer able to download the CefSharp package [ID_36243]
+
+<!-- MR 10.3.0 [CU3] - FR 10.3.6 -->
+
+DataMiner Cube was no longer be able to download the CefSharp package from an agent.
