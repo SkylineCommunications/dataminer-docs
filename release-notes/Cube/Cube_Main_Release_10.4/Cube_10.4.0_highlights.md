@@ -41,11 +41,9 @@ Each time a program is launched, a start entry and an end entry will be added to
 
 <!-- MR 10.4.0 - FR 10.3.6 -->
 
--->
-
-<!-- 
-
 With the DataMiner User-Defined APIs, you can define API calls that will be made available on DataMiner Agents hosting the *UserDefinableApiEndpoint* DxM. These APIs can be secured using API tokens, which can be generated on the fly and linked to the API definitions.
+
+<!--
 
 ##### Configuring APIs and tokens
 
