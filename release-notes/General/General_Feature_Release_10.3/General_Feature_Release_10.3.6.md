@@ -90,10 +90,7 @@ To make gRPC the default communication method, do the following on every DataMin
 > [!NOTE]
 >
 > - *.NET Remoting* remains the default communication method for both client-server and server-server communication.
-> - Apart from certain connectors and Automation scripts, the following features still rely on having the *.NET Remoting* port 8004 open:
->
->   - Automatic Failover switch on run-time error
->   - Element replication
+> - Certain connectors and Automation scripts still rely on having the *.NET Remoting* port 8004 open.
 
 #### SLAnalytics: Trend data predictions displayed in trend graphs will be more accurate [ID_36038]
 
@@ -134,6 +131,21 @@ Because of a number of enhancements, overall performance has increased when stop
 <!-- MR 10.3.0 [CU3] - FR 10.3.6 -->
 
 Element replication will now automatically detect the connection settings of the target DMA and will use gRPC when the connection type is set to "GPRCConnection".
+
+#### Failover on RTE now also supports DMAs that communicate using gRPC [ID_36267]
+
+<!-- MR 10.3.0 [CU3] - FR 10.3.6 -->
+
+In the *MaintenanceSettings.xml* file, SLWatchDog can be configured to trigger a Failover switch when it detects a run-time error in a critical process on the active Agent of a Failover pair. From now on, this *Failover on RTE* feature will also support Agents that communicate using gRPC.
+
+#### SLNetClientTest tool now supports gRPC when it needs to establish additional connections [ID_36279]
+
+<!-- MR 10.3.0 [CU3] - FR 10.3.6 -->
+
+The *SLNetClientTest* tool now supports gRPC when it needs to establish additional connections to remote DataMiner Agents.
+
+> [!WARNING]
+> Always be extremely careful when using this tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
 
 ### Fixes
 
