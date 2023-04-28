@@ -3026,6 +3026,8 @@
     - name: Known issues
       topicUid: Known_issues
       items:
+        - name: Activities and scripts delayed because of CheckVIPs thread
+          topicUid: KI_CheckVIPs_delays_activities
         - name: Elasticsearch not initialized when DataMiner starts up
           topicUid: KI_Elasticsearch_not_initialized_on_DMA_startup
         - name: DataMiner keeps trying to restart when Elasticsearch is unavailable
