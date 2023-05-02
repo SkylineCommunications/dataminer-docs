@@ -247,7 +247,7 @@ namespace Skyline.DataMiner.Net
 		public const string BaseNameSpace = "Skyline.DataMiner.Net.Messages.";
 
 		/// <summary>
-		/// Message type of which all messages must derive.
+		/// Message type from which all messages must derive.
 		/// </summary>
 		public static readonly Type BaseMessageType = typeof(DMSMessage);
 	}
