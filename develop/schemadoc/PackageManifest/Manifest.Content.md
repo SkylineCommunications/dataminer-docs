@@ -15,6 +15,7 @@ Specifies the content of the package.
 |Name|Occurrences|Description|
 |--- |--- |--- |
 |***All***|||
+|&nbsp;&nbsp;[AppPackages](xref:Manifest.Content.AppPackages)|[0, 1]|Specifies the app packages to be included in the package.|
 |&nbsp;&nbsp;[AutomationScripts](xref:Manifest.Content.AutomationScripts)|[0, 1]|Specifies the Automation scripts to be included in the package.|
 |&nbsp;&nbsp;[CompanionFiles](xref:Manifest.Content.CompanionFiles)|[0, 1]|Specifies the companion files to be included in the package.|
 |&nbsp;&nbsp;[CustomSolutions](xref:Manifest.Content.CustomSolutions)|[0, 1]|Specifies the custom solutions to be included in the package.|
