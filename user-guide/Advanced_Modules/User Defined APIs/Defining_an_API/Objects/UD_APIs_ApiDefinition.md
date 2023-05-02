@@ -3,37 +3,39 @@ uid: UD_APIs_Objects_ApiDefinition
 ---
 # ApiDefinition
 
-An `ApiDefinition` is an object that defines an API. Including what tokens have access, the URL route and what action should be triggered.
+An `ApiDefinition` is an object that defines an API, including which tokens have access, the URL route, and which action should be triggered.
 
 ## Properties
 
-These are the properties of the `ApiDefinition` object. The table also defines whether the property can be used for filtering using the `ApiDefinitionExposers`.
+The table below lists the properties of the `ApiDefinition` object. For each property, it also indicates whether the property can be used for filtering using the `ApiDefinitionExposers`.
 
 |Property         |Type             |Filterable          |Explanation|
 |-----------------|-----------------|--------------------|-----------|
 |ID               |ApiDefinitionId  |Yes                 |The ID of the `ApiDefinition`.|
 |Name             |string           |Yes                 |Optional name that makes the definition recognizable.|
 |Description      |string           |No                  |Optional description.|
-|Route            |string           |Yes                 |The suffix of the URL where this API call will be available on. See the [Route](#route) section below.|
-|SecuritySettings |SecuritySettings |Yes (AllowedTokens) |Contains the info on who can call this API. See the [SecuritySettings](#securitysettings) section below.|
-|ActionType       |ActionType       |Yes                 |Type of action that will be triggered when calling the API. See the [Actions](#actions) section below.|
+|Route            |string           |Yes                 |The suffix of the URL where this API call will be available. See the [Route](#route) section below.|
+|SecuritySettings |SecuritySettings |Yes (AllowedTokens) |Info on who can call this API. See the [SecuritySettings](#securitysettings) section below.|
+|ActionType       |ActionType       |Yes                 |The type of action that will be triggered when the API is called. See the [Actions](#actions) section below.|
 |ActionMeta       |IActionMeta      |No                  |Additional data for the action. See the [Actions](#actions) section below.|
-|CreatedBy        |string           |Yes                 |Name of the user that created the definition.|
-|CreatedAt        |DateTime         |Yes                 |UTC date and time of when the definition was created.|
-|LastModifiedBy   |string           |Yes                 |Name of the last user that modified the definition.|
-|LastModified     |DateTime         |Yes                 |UTC date and time of when the definition was last modified.|
+|CreatedBy        |string           |Yes                 |The name of the user who created the definition.|
+|CreatedAt        |DateTime         |Yes                 |The UTC date and time when the definition was created.|
+|LastModifiedBy   |string           |Yes                 |The name of the last user who modified the definition.|
+|LastModified     |DateTime         |Yes                 |The UTC date and time when the definition was last modified.|
 
 ### Route
 
 The route describes the URL route where the API will be available. It is a suffix that comes after the base URL `{hostname}/api/custom/`.
 
 - The route must **not start or end with a forward slash** (`/`).
+
 - The route must be **unique** for each API definition. When it is saved, DataMiner will automatically check this to prevent conflicts.
+
 - Routes are **case-insensitive**.
 
 For example, if you want to create an API to retrieve the status of all encoders in your system, a logical route would be `encoders/status`. The full API call would then look like this:
 
-```text
+```txt
 HTTP GET mydataminer.customer.local/api/custom/encoders/status
 ```
 
@@ -42,7 +44,7 @@ HTTP GET mydataminer.customer.local/api/custom/encoders/status
 
 ### SecuritySettings
 
-The `SecuritySettings` property can be used to describe what tokens can be used to access the API. It has the following property:
+The `SecuritySettings` property can be used to describe which tokens can be used to access the API. It has the following property:
 
 |Property         |Type                      |Description|
 |-----------------|--------------------------|-----------|
@@ -50,28 +52,33 @@ The `SecuritySettings` property can be used to describe what tokens can be used 
 
 ### Actions
 
-Using the `ActionType` and `ActionMeta` properties, you can define what action should be executed when the API is triggered.
+Using the `ActionType` and `ActionMeta` properties, you can define which action should be executed when the API is triggered.
 
 #### AutomationScript
 
-This is the default value of the `ActionType`, it will execute an automation script through the `OnApiTrigger` entry point method. To define which script should be executed and how the input data should be handled, you will need to assign an `AutomationScriptActionMeta` instance to the `ActionMeta` property. This has the following fields:
+This is the default value of the `ActionType` property. It will execute an Automation script through the `OnApiTrigger` entry point method.
+
+To define which script should be executed and how the input data should be handled, you will need to assign an `AutomationScriptActionMeta` instance to the `ActionMeta` property. This has the following fields:
 
 |Property   |Type      |Description|
 |-----------|----------|-----------|
-|ScriptName |string    |Name of the script that should be executed. Cannot be null or empty.|
-|InputType  |InputType |Determines how the input data from the request will be handled. The options are 'Parameters' or 'RawBody'. See [Defining a new API](xref:UD_APIs_Define_New_API#input) for more info.|
+|ScriptName |string    |The name of the script that should be executed. Cannot be null or empty.|
+|InputType  |InputType |Determines how the input data from the request will be handled. The options are *Parameters* or *RawBody*. See [Defining a new API](xref:UD_APIs_Define_New_API#input).|
 
 #### AutomationScriptNoEntryPoint
 
-This `ActionType` is the same as the previous one, with the difference that there is no need to define a special entry point method in your automation script. The script will be executed through the default Run() method. This means that the `ApiTriggerInput` object is not available, and it is also not possible to return the `ApiTriggerOutput` to the API user. It will return 200 OK with an empty response body in case the script succeeded, and an `AutomationActionError` response error when the script fails. An example of how to use this action can be found [here](xref:UD_APIs_Using_existing_scripts#using-the-script-without-the-onapitrigger-entry-point).
+This `ActionType` is similar to the *AutomationScript* action type, except that there is no need to define a special entry point method in the Automation script. The script will be executed through the default Run() method. This means that the `ApiTriggerInput` object is not available, and it is also not possible to return the `ApiTriggerOutput` to the API user. The action will return 200 OK with an empty response body in case the script succeeded, and an `AutomationActionError` response error when the script fails.
 
-This action will always convert the request body to a `Dictionary<string, string>`. It will verify that there is a value for each of the script parameters defined on the script, in the parsed dictionary. More info [here](xref:UD_APIs_Define_New_API#user-input-data).
+This action will always convert the request body to a `Dictionary<string, string>`. It will verify that there is a value in the parsed dictionary for each of the script parameters defined in the script. For more information, see [User input data](xref:UD_APIs_Define_New_API#user-input-data).
 
-You'll need to assign an `AutomationScriptNoEntryPointActionMeta` instance to the `ActionMeta` property. This has the following fields:
+You will need to assign an `AutomationScriptNoEntryPointActionMeta` instance to the `ActionMeta` property. This has the following fields:
 
 |Property   |Type      |Description|
 |-----------|----------|-----------|
 |ScriptName |string    |Name of the script that should be executed. Cannot be null or empty.|
+
+> [!TIP]
+> For an example of how to use this action, see [Using the script without the OnApiTrigger entry point](xref:UD_APIs_Using_existing_scripts#using-the-script-without-the-onapitrigger-entry-point).
 
 ## Requirements
 
@@ -86,18 +93,15 @@ When something goes wrong during the CRUD actions, the `TraceData` can contain o
 
 |Reason      |Description|
 |------------|-----------|
-|InvalidName |The given name only contained white space characters.|
-|RouteInUse |The given route is already used by another `ApiDefinition`. *ConflictingDefinitionId* contains the ID of the definition that is already using the route. *Route* contains the invalid route.|
+|InvalidName |The specified name only contained white space characters.|
+|RouteInUse |The specified route is already used by another `ApiDefinition`. *ConflictingDefinitionId* contains the ID of the definition that is already using the route. *Route* contains the invalid route.|
 |InvalidRoute |The route did not meet the criteria. See the [Route](#route) section above. *Route* contains the invalid route.|
-|InvalidActionMeta |The defined `ActionMeta` was empty, did not match the type or contained invalid configuration.|
+|InvalidActionMeta |The defined `ActionMeta` was empty, did not match the type, or contained an invalid configuration.|
 
 ## Security
 
-There are permission flags that secure the CRUD actions for this type.
+To create, read, update, or delete API definitions, specific user permissions are needed:
 
-- To read or count definitions, the user requires the `PermissionFlags.UserDefinableApiDefinitionRead` permission flag.
-- To create or update definitions, the user requires the `PermissionFlags.UserDefinableApiDefinitionCreateUpdate` permission flag.
-- To delete definitions, the user requires the `PermissionFlags.UserDefinableApiDefinitionDelete` permission flag.
-
-> [!IMPORTANT]
-> To create or update `ApiDefinition` objects, you need the permissions to execute an automation script. (`PermissionFlags.AutomationExecuteScripts`)
+- To read or count definitions, you need the user permission [Modules > User-Defined APIs > APIs > UI available](xref:DataMiner_user_permissions#modules--user-defined-apis--apis--ui-available).
+- To create or update definitions, you need the user permissions [Modules > User-Defined APIs > APIs > Add/Edit](xref:DataMiner_user_permissions#modules--user-defined-apis--apis--addedit) and [Modules > Automation > execute](xref:DataMiner_user_permissions#modules--automation--execute).
+- To delete definitions, you need the user permission [Modules > User-Defined APIs > APIs > Delete](xref:DataMiner_user_permissions#modules--user-defined-apis--apis--delete).

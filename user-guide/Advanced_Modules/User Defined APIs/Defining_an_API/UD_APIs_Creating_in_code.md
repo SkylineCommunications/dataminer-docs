@@ -4,11 +4,11 @@ uid: UD_APIs_Creating_in_code
 
 # Creating APIs and tokens in code
 
-Alongside Cube, it is also possible to create API definitions and tokens in code. This can be useful if an API setup should be deployed in the install script of an application package.
+Instead of creating API definitions and tokens in Cube, you can also create them in code. This can for example be useful if an API setup needs to be deployed in the install script of an application package.
 
 ## UserDefinableApiHelper
 
-The create, read, update and delete (CRUD) actions on tokens and definitions can be done in code using the `UserDefinableApiHelper`. This class accepts a message callback and will construct the required SLNet messages to create, read, update and delete these objects.
+The create, read, update, and delete (CRUD) actions on tokens and definitions can be done in code using the `UserDefinableApiHelper`. This class accepts a message callback and will construct the required SLNet messages to create, read, update, and delete these objects.
 
 ```csharp
 using Skyline.DataMiner.Automation;
@@ -26,7 +26,11 @@ public class Script
 
 ## Creating a token
 
-To create an API token, you can simply instantiate a new instance of the `ApiToken` class. You need to provide a name and a secret where the latter can be generated using the `ApiTokenSecretGenerator` helper class. The token can then be passed to the `Create` method on the helper. Make sure to output the generated secret somewhere so this can be used to trigger the APIs. See the [ApiToken](xref:UD_APIs_Objects_ApiToken) page for more info on the possible configuration.
+To create an API token, instantiate a new instance of the `ApiToken` class.
+
+You will need to provide a name and a secret. The secret can be generated using the `ApiTokenSecretGenerator` helper class.
+
+The token can then be passed to the `Create` method of the helper. Make sure to output the generated secret somewhere so this can be used to trigger the APIs.
 
 ```csharp
 using System.IO;
@@ -61,11 +65,18 @@ namespace UserDefinableApiScripts.CreateToken
 ```
 
 > [!CAUTION]
-> If the secret for the token is pre-determined and has to be set during creation, make sure that these hardcoded values are not part of code that is publicly available. (e.g. GitHub)
+> If the secret for the token is pre-determined and has to be set during creation, make sure that these hard-coded values are not part of code that is publicly available (e.g. on GitHub).
+
+> [!TIP]
+> For more information on the token configuration, see [ApiToken](xref:UD_APIs_Objects_ApiToken).
 
 ## Creating an API definition
 
-To create an API definition, you can simply instantiate a new instance of the `ApiDefinition` class. You need to provide a route, action type and action meta alongside a collection of the token IDs that have access to this API. The definition can then be passed to the `Create` method on the helper. See the [ApiDefinition](xref:UD_APIs_Objects_ApiDefinition) page for more info on the possible configuration.
+To create an API definition, instantiate a new instance of the `ApiDefinition` class.
+
+You will need to provide a route, action type, and action meta alongside a collection of the token IDs that have access to this API.
+
+The definition can then be passed to the `Create` method of the helper.
 
 ```csharp
 // Define the API
@@ -90,9 +101,14 @@ var definition = new ApiDefinition()
 helper.ApiDefinitions.Create(definition);
 ```
 
-## Other CRUD actions
+> [!TIP]
+> For more information on the API definition configuration, see [ApiDefinition](xref:UD_APIs_Objects_ApiDefinition).
 
-Using the helper, it is also possible to read, update and delete these objects. Below you can find examples for an API token but remember that the exact same can be done for the definitions.
+## Doing other CRUD actions
+
+Using the helper, you can also read, update, and delete these objects.
+
+Below, you can find examples for an API token. For a definition, you can do this in the same way.
 
 ```csharp
 using System.Linq;
@@ -128,9 +144,11 @@ namespace UserDefinableApiScripts.CrudActions
 }
 ```
 
-## Failed CRUD actions
+## Handling failed CRUD actions
 
-When doing these CRUD actions with the helper, it can happen that errors are returned when something goes wrong or the data that was passed to the helper method was not fully valid. Errors coming from the validation logic will cause a `CrudFailedException` to be thrown. Other, more unexpected errors will most likely throw another type of exception. This is why it is recommended to catch these exceptions like shown below.
+When something goes wrong during the CRUD actions, or when the data that was passed to a helper method was not fully valid, errors can be returned.
+
+Errors that result from the validation logic will cause a `CrudFailedException` to be thrown. Other, more unexpected errors will most likely throw another type of exception. Because of this, we recommend catching these exceptions as shown in the example below.
 
 ```csharp
 using System;
@@ -171,17 +189,17 @@ namespace UserDefinableApiScripts.Exceptions
 }
 ```
 
-As you can see in the example, the token creation should fail because we assign an empty string as the secret. When this script is run via Cube, a pop-up and information event will contain a human-readable version of the validation error. In this case, the 'InvalidSecret' error was returned alongside the ID of the invalid token.
+In this example, the token creation will fail because an empty string was assigned as the secret. When this script is run via Cube, a pop-up message and information event will contain a human-readable version of the validation error. In this case, the *InvalidSecret* error is returned alongside the ID of the invalid token.
 
-```text
+```txt
 A CrudFailedException was thrown: TraceData: (amount = 1)
   - ErrorData: (amount = 1)
       - ErrorReason: InvalidSecret, Id: ApiTokenId[60e5a541-cc35-4f3d-a1c6-c0506fc698e0],
 ```
 
-These validation errors are contained in the `TraceData` property of the `CrudFailedException`. It has multiple collections, but the `ErrorData` is the most important. This collection can contain instances like `ApiTokenError` or `ApiDefinitionError`. Each of these then contains a reason and some additional metadata depending on that reason. See the 'Errors' section on the [ApiDefinition](xref:UD_APIs_Objects_ApiDefinition#errors) and [ApiToken](xref:UD_APIs_Objects_ApiToken#errors) pages for more info on what kind of errors you can expect.
+These validation errors are contained in the `TraceData` property of the `CrudFailedException`. It has multiple collections, but the `ErrorData` is the most important. This collection can contain instances like `ApiTokenError` or `ApiDefinitionError`. Each of these then contains a reason and some additional metadata depending on that reason. For more information on the kind of errors you can expect, refer to [ApiDefinition errors](xref:UD_APIs_Objects_ApiDefinition#errors) and [ApiToken errors](xref:UD_APIs_Objects_ApiToken#errors).
 
-It is also possible to disable the `CrudFailedException` from being thrown and instead check for errors in the `TraceData` yourself. To do this, set the `ThrowExceptionsOnErrorData` properties to false for all helper components. Then, after a CRUD action, call the `GetTraceDataLastCall()` method on the respective helper component. You can then either check the error collection or use the existing `HasSucceeded()` method to see whether the `TraceData` contains errors.
+You can also prevent the `CrudFailedException` from being thrown and instead check for errors in the `TraceData` yourself. To do so, set the `ThrowExceptionsOnErrorData` properties to false for all helper components. Then, after a CRUD action, call the `GetTraceDataLastCall()` method on the respective helper component. You can then either check the error collection or use the existing `HasSucceeded()` method to see whether the `TraceData` contains errors.
 
 ```csharp
 using Skyline.DataMiner.Automation;

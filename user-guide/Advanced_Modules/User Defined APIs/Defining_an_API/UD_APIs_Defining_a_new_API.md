@@ -21,7 +21,7 @@ To create a new API, follow these steps as detailed below:
 
 ## Creating the API Automation script
 
-To define an API, you'll need an Automation script that contains the logic of the API. This Automation script needs the `OnApiTrigger` entry point method, which will be executed when the API is triggered. The entry point should look like this:
+To define an API, you will need an Automation script that contains the logic of the API. This Automation script needs the `OnApiTrigger` entry point method, which will be executed when the API is triggered. The entry point should look like this:
 
 ```csharp
 using Skyline.DataMiner.Automation;
@@ -48,8 +48,8 @@ public class Script
 
 > [!NOTE]
 >
-> - When developing the API script in DIS, make sure to update the 'Skyline.DataMiner.Dev.Automation' NuGet package to its latest version so the types of the User-Defined APIs feature are available.
-> - The `Run` method is not required in the script, but the entry point method must reside in the `Script` class, just like any other DataMiner scripts.
+> - When developing the API script in DIS, make sure to update the *Skyline.DataMiner.Dev.Automation* NuGet package to its latest version so the types of the User-Defined APIs feature are available.
+> - The `Run` method is not required in the script, but the entry point method must reside in the `Script` class, just like in any other DataMiner scripts.
 
 ### Input
 
@@ -81,7 +81,7 @@ This makes it possible to define the four CRUD (create, read, update, delete) ac
 
 There are two ways to pass data to the API script if you make use of the *OnApiTrigger* entry point method. Which way is used depends on the selected option in the dropdown when you define the API in Cube. See [Creating the API definition(s)](#creating-an-api-and-tokens-in-dataminer-automation).
 
-- If 'Dictionary (parsed from JSON)' is selected, the JSON body of the HTTP request will automatically be converted to a `Dictionary<string, string>` in the `Parameters` property of the `ApiTriggerInput` object. In the `RawBody` property, the raw string body will remain available.
+- If *Dictionary (parsed from JSON)* is selected, the JSON body of the HTTP request will automatically be converted to a `Dictionary<string, string>` in the `Parameters` property of the `ApiTriggerInput` object. In the `RawBody` property, the raw string body will remain available.
 
   > [!NOTE]
   > Note that only JSON in the form of key-value pairs is accepted as parameters. For example:
@@ -93,9 +93,10 @@ There are two ways to pass data to the API script if you make use of the *OnApiT
   > }
   > ```
 
-- If the default 'Raw body' option is selected, the `Parameters` property will contain an empty `Dictionary<string, string>`. In this case, you will need to take care of the deserialization of the raw body string which can be found in the `RawBody` property.
+- If the default option *Raw body* is selected, the `Parameters` property will contain an empty `Dictionary<string, string>`. In this case, you will need to take care of the deserialization of the raw body string which can be found in the `RawBody` property.
 
-See the [API script examples](xref:UD_APIs_API_script_examples) page to see how these two options are used in an API script.
+> [!TIP]
+> To see how these two options are used in an API script, see [API script examples](xref:UD_APIs_API_script_examples).
 
 #### Route
 
@@ -107,7 +108,7 @@ The route describes the URL route where the API will be available. It is a suffi
 
 For example, if you want to create an API to retrieve the status of all encoders in your system, a logical route would be `encoders/status`. The full API call would then look like this:
 
-```text
+```txt
 HTTP GET mydataminer.customer.local/api/custom/encoders/status
 ```
 
@@ -132,7 +133,7 @@ The `ApiTriggerOutput` object has the following properties:
 
 The status of the API trigger request is reflected in the `ResponseCode` property of the `ApiTriggerOutput`. This is an integer, so any valid HTTP status code can be passed here.
 
-You can also use the `StatusCode` enum, which contains suggestions, and cast that to an integer. The values of the enum are:
+You can also use the `StatusCode` enum, which contains suggestions, and cast that to an integer. These are the values of the enum:
 
 | Name | Value | Description |
 |--|--|--|
@@ -177,7 +178,10 @@ You can also use the `StatusCode` enum, which contains suggestions, and cast tha
    > [!NOTE]
    > Leave *Method to be executed* set to the default selection. This option should only be changed for legacy scripts without the `OnApiTrigger` entry point. See [Using existing scripts](xref:UD_APIs_Using_existing_scripts).
 
-1. Under *Tokens*, select the tokens that need access. You can also create new tokens using the *New token* button. At least one token has to be linked before this API will be usable.
+1. Under *Tokens*, select the tokens that need access. You can also create new tokens using the *New token* button.
+
+   > [!NOTE]
+   > At least one token has to be linked before the API will be usable.
 
    > [!CAUTION]
    > Once a token is created with a specified secret, **it is not possible to retrieve that secret again**. The value is stored securely in the database with a non-reversible hashing function. Make sure to save it somewhere secure or pass it in a secure way to the API user.

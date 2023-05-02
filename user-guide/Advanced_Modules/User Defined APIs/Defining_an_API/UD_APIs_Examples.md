@@ -4,13 +4,16 @@ uid: UD_APIs_API_script_examples
 
 # API script examples
 
-This page contains some basic examples which can be used to better understand the various ways of defining API scripts. Do note that these have been simplified and do not include input validation or error handling. These scripts are functional, but are not robust enough to be used in a production environment. These can however be used as a starting point.
+This page contains basic examples that can be used to better understand the various ways you can define API scripts.
 
-## Input Examples
+> [!NOTE]
+> These examples have been simplified and do not include input validation or error handling. While these scripts are functional, they are not robust enough to be used in a production environment. However, you can use them as a starting point to create your own scripts.
 
-This section contains a few API script examples of the same use case that shows you the various ways of getting input from the API trigger and what configuration is required for this. As a demonstration, this data is then used to do a parameter set on a certain element.
+## Input examples
 
-For all three cases, the input JSON could look like this. The difference is that this JSON is either parsed by our script, automatically parsed to a dictionary in our input or automatically parsed to automation script parameter values. You can test these examples yourself by adjusting the input to an element and parameter that exists in your DMS. Make sure that the values which will be set won't harm your setup.
+This section contains API script examples of the same use case, demonstrating the various ways of getting input from the API trigger and the configuration required for this. This data is then used to do a parameter set on a certain element by way of example.
+
+For each of these examples, the input JSON could look like this:
 
 ```json
 {
@@ -20,17 +23,21 @@ For all three cases, the input JSON could look like this. The difference is that
 }
 ```
 
+The difference is that this JSON is either parsed by the script, automatically parsed to a dictionary in the input, or automatically parsed to Automation script parameter values.
+
+You can test these examples yourself by adjusting the input to an element and parameter that exist in your DMS. However, make sure that the values that will be set will not harm your setup.
+
 ### OnApiTrigger method with raw body
 
-This is the most powerful option of defining your API scripts. This gives you the most flexibility since it allows you to parse the input from any format that you like. The example uses Newtonsoft's Json.NET library to deserialize the input body, but you could use almost anything you prefer (XML, other JSON serializers, no input...).
+This is the most powerful way of defining API scripts. It provides the most flexibility, as it allows you to parse the input from any format you like. The example uses Newtonsoft's Json.NET library to deserialize the input body, but you could use almost anything you prefer (XML, other JSON serializers, no input, etc.).
 
 **Configuration:**
 
-- **API definition in Cube**: "OnApiTrigger method with argument Raw body"
+- **API definition in Cube**: Select the method *OnApiTrigger method with argument Raw body*.
 - **API definition in code**:
-  - Property `ActionType` should contain the default value of `AutomationScript`.
-  - Property `ActionMeta` should contain an `AutomationScriptActionMeta` instance where the `ScriptName` property is filled in and the `InputType` property is set to the default value of `RawBody`.
-- **Automation Script DLL References:** Since we use an external DLL to parse the JSON, we need to reference this in the Automation script by adding the path to the 'DLL references' text box in Cube. In this case, it is "C:\Skyline DataMiner\Files\Newtonsoft.Json.dll".
+  - Property `ActionType` should contain the default value [AutomationScript](xref:UD_APIs_Objects_ApiDefinition#automationscript).
+  - Property `ActionMeta` should contain an `AutomationScriptActionMeta` instance with the `ScriptName` property filled in and the `InputType` property set to the default value `RawBody`.
+- **Automation script DLL references:** As an external DLL is used to parse the JSON, when you configure the Automation script in Cube, expand the *Advanced* section at the bottom of the C# block and add the path to the DLL in the *DLL references* box. In this case, this is `C:\Skyline DataMiner\Files\Newtonsoft.Json.dll`.
 
 **Example:**
 
