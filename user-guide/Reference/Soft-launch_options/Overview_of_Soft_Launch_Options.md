@@ -89,7 +89,7 @@ Makes it possible to [connect the DataMiner System to dataminer.services](xref:C
   Takes exception values into account for display key generation.
 
 - **Minimum version**: 10.0.11/9.6.0 [CU18]/10.0.0 [CU6]
-- **Estimated Release version**: to be determined
+- **Estimated Release version**: To be determined
 
 ### CorrelationTicketAction
 
@@ -103,7 +103,7 @@ Allows you to [create a ticket](xref:Creating_a_ticket) as a Correlation action.
 This is a Cube-only feature that can only be activated with the argument `ENABLEFEATURE=CPEINTEGRATION`. Note that you also need specific protocol changes in order to benefit from this.
 
 - **Minimum version**: 9.6.7
-- **Estimated Release version**: to be determined
+- **Estimated Release version**: To be determined
 
 ### Diagnostics
 
@@ -116,7 +116,7 @@ Enable functionality to retrieve diagnostics from several DataMiner core process
 Updates the values of direct view tables.
 
 - **Minimum version**: 10.0.11
-- **Estimated release version**: to be determined
+- **Estimated release version**: To be determined
 
 ### DOMManager
 
@@ -136,7 +136,7 @@ Enables dynamic units in Data Display in DataMiner Cube and the Monitoring app. 
 Allows the offloading of specific DataMiner Analytics features to a specific DataMiner Node.
 
 - **Minimum version**: 10.0.9
-- **Estimated release version**: will not be released (deprecated)
+- **Estimated release version**: Will not be released (deprecated)
 
 ### Functions
 
