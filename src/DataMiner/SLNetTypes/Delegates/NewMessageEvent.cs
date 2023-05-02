@@ -57,11 +57,11 @@ namespace Skyline.DataMiner.Net
 		}
 
 		/// <summary>
-		/// Returns a value indicating whether the message was sent to the client because of a subscription in the set with given ID.
+		/// Returns a value indicating whether the message was sent to the client because of a subscription in the set with the given ID.
 		/// </summary>
 		/// <param name="setID"></param>
 		/// <returns>
-		/// <c>true</c> if the message was sent to the client because of a subscription in the set with given ID; otherwise, <c>false</c>.
+		/// <c>true</c> if the message was sent to the client because of a subscription in the set with the given ID; otherwise, <c>false</c>.
 		/// </returns>
 		public bool FromSet(string setID)
 		{

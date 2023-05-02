@@ -14,7 +14,7 @@ namespace Skyline.DataMiner.Net
 		ITrackedSubscriptionUpdate OnStage(SubscriptionStage stage, Action action);
 
 		/// <summary>
-		/// Before updating subscription. Any events received via OnNewMessage up to this point are for the previous set of subscriptions..
+		/// Before updating subscription. Any events received via OnNewMessage up to this point are for the previous set of subscriptions.
 		/// </summary>
 		/// <param name="action">The action.</param>
 		/// <returns>Tracked subscription update.</returns>

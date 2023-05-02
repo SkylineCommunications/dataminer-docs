@@ -13,19 +13,19 @@ namespace Skyline.DataMiner.Net
 	/// to subscribe with a certain level of granularity:</para>
 	/// <list type="bullet">
 	///		<item><description>
-	///			<see cref="SubscriptionFilter"/>: subscribes to all messages of a given type (DMS)
+	///			<see cref="SubscriptionFilter"/>: Subscribes to all messages of a given type (DMS).
 	///		</description></item>
 	///		<item><description>
-	///			SubscriptionFilterCluster: limits subscription to one particular cluster 
+	///			SubscriptionFilterCluster: Limits subscription to one particular cluster.
 	///		</description></item>
 	///		<item><description>
-	///			SubscriptionFilterDMA: limits messages to one particular DataMiner Agent
+	///			SubscriptionFilterDMA: Limits messages to one particular DataMiner Agent.
 	///		</description></item>
 	///		<item><description>
-	///			SubscriptionFilterElement: limits messages to one particular element
+	///			SubscriptionFilterElement: Limits messages to one particular element.
 	///		</description></item>
 	///		<item><description>
-	///			SubscriptionFilterParameter: limits messages to one particular parameter of a given parameter
+	///			SubscriptionFilterParameter: Limits messages to one particular parameter of a given parameter.
 	///		</description></item>
 	/// </list>
 	/// </summary>
@@ -113,7 +113,7 @@ namespace Skyline.DataMiner.Net
 
 		/// <summary>
 		/// Same as <see cref="MessageType"/>, but if filters are specified, also contains the list
-		/// of filters in the string. Used by <see cref="ToString"/>
+		/// of filters in the string. Used by <see cref="ToString"/>.
 		/// </summary>
 		protected virtual string MessageTypeWithFilterInfo
 		{
@@ -124,7 +124,7 @@ namespace Skyline.DataMiner.Net
 		}
 
 		/// <summary>
-		/// Checks if two <see cref="SubscriptionFilter"/> object are identical. 
+		/// Checks if two <see cref="SubscriptionFilter"/> objects are identical. 
 		/// </summary>
 		/// <remarks>
 		/// Two SubscriptionFilters are equal if they have the same type and have the same 
@@ -197,13 +197,13 @@ namespace Skyline.DataMiner.Net
 		}
 
 		/// <summary>
-		/// Returns the <c>Type</c> object which corresponds to the <c>MessageType</c> that 
+		/// Returns the <c>Type</c> object that corresponds to the <c>MessageType</c> that 
 		/// is specified in the SubscriptionFilter.
 		/// </summary>
 		/// <remarks>
-		/// This method returns <c>null</c> for non-built in types (any type not
+		/// This method returns <c>null</c> for non-built-in types (any type not
 		/// defined in SLNetTypes.dll or part of the Skyline.DataMiner.Net.Messages
-		/// namespace)
+		/// namespace).
 		/// </remarks>
 		/// <returns></returns>
 		public Type ToTypeObject()
@@ -228,9 +228,9 @@ namespace Skyline.DataMiner.Net
 		/// </summary>
 		/// <param name="messageType">Message type.</param>
 		/// <remarks>
-		/// This method returns <c>null</c> for non-built in types (any type not
+		/// This method returns <c>null</c> for non-built-in types (any type not
 		/// defined in SLNetTypes.dll or part of the Skyline.DataMiner.Net.Messages
-		/// namespace)
+		/// namespace).
 		/// </remarks>
 		/// <returns></returns>
 		public static Type ToType(string messageType)

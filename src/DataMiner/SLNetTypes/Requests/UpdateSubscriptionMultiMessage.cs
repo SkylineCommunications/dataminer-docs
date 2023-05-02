@@ -6,7 +6,7 @@ using System.Text;
 namespace Skyline.DataMiner.Net.Messages
 {
     /// <summary>
-    /// Updates multiple subscription sets in one go
+    /// Updates multiple subscription sets in one go.
     /// </summary>
     [Serializable]
     public class UpdateSubscriptionMultiMessage : ClientRequestMessage

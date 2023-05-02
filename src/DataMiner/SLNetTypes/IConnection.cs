@@ -20,8 +20,8 @@ namespace Skyline.DataMiner.Net
 	public interface IConnection : IDisposable
 	{
 		/// <summary>
-		/// Event that is raised when the connection gets closed. Useful when passing the connection to other threads which should be made aware when
-		/// the connection is closed such that pending operations can be aborted.
+		/// Event that is raised when the connection gets closed. Useful when passing the connection to other threads that should be made aware when
+		/// the connection is closed so that pending operations can be aborted.
 		/// </summary>
 		event ConnectionClosedHandler OnClose;
 
@@ -142,17 +142,17 @@ namespace Skyline.DataMiner.Net
 		event AbnormalCloseEventHandler OnAbnormalClose;
 
 		/// <summary>
-		/// Called when the server has dropped a series of events for a client. This happens when the server is unable to get the events to the client fast enough and typically indicates a problem on the server. The dropping of events does not close the connection. Instead, the Connection object is still valid. When this event has been fired on a connection, Cube will show a popup indicating that the state is incomplete.
+		/// Called when the server has dropped a series of events for a client. This happens when the server is unable to get the events to the client fast enough and typically indicates a problem on the server. The dropping of events does not close the connection. Instead, the Connection object is still valid. When this event has been fired on a connection, Cube will show a pop-up indicating that the state is incomplete.
 		/// </summary>
 		event EventsDroppedEventHandler OnEventsDropped;
 
 		/// <summary>
-		/// Fired after the server has completed applying a subscription update. If the client has launched multiple subscription updates after each other, there's no reference to which update has completed. Receiving this event also doesn't mean that all initial events from the cluster have been received by the client. It mainly means that the DataMiner agent to which the client is directly connected to is now aware of the subscription.
+		/// Fired after the server has completed applying a subscription update. If the client has launched multiple subscription updates after each other, there is no reference to which update is completed. Receiving this event also does not mean that all initial events from the cluster have been received by the client. It mainly means that the DataMiner Agent to which the client is directly connected is now aware of the subscription.
 		/// </summary>
 		event SubscriptionCompleteEventHandler OnSubscriptionComplete;
 
 		/// <summary>
-		/// Used internally for the Subscription Stages functionality. Prefer using the TrackSubscribe API instead of using this event.
+		/// Used internally for the Subscription Stages functionality. Using the TrackSubscribe API is preferred to using this event.
 		/// </summary>
 		event EventHandler<SubscriptionStateEventArgs> OnSubscriptionState;
 
@@ -194,7 +194,7 @@ namespace Skyline.DataMiner.Net
 		/// </summary>
 		/// <value>The server details.</value>
 		/// <remarks>Once authenticated, contains some details about the DataMiner Agent to which
-		/// this object is connected (name, cluster, etc.)</remarks>
+		/// this object is connected (name, cluster, etc.).</remarks>
 		ServerDetails ServerDetails { get; }
 
 		///// <summary>

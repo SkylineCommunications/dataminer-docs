@@ -117,7 +117,7 @@ namespace Skyline.DataMiner.Net.Messages
 		/// <summary>
 		/// Gets or sets the type of update operation to execute (default: replace all existing subscriptions).
 		/// </summary>
-		/// <value>The type of update operation to execute (default: replace all existing subscriptions)</value>
+		/// <value>The type of update operation to execute (default: replace all existing subscriptions).</value>
 		public SubscriptionUpdateType UpdateType
 		{
 			get;
@@ -157,17 +157,17 @@ namespace Skyline.DataMiner.Net.Messages
 	}
 
 	/// <summary>
-	/// Describes the type of update to be executed by a <see cref="UpdateSubscriptionMessage"/>
+	/// Describes the type of update to be executed by a <see cref="UpdateSubscriptionMessage"/>.
 	/// </summary>
 	public enum SubscriptionUpdateType
 	{
 		/// <summary>
-		/// Replaces the entire set of sbscriptions
+		/// Replaces the entire set of subscriptions.
 		/// </summary>
 		Replace,
 
 		/// <summary>
-		/// Adds a set of subscriptions to the existing subscription set
+		/// Adds a set of subscriptions to the existing subscription set.
 		/// </summary>
 		Add,
 

@@ -50,14 +50,14 @@ namespace Skyline.DataMiner.Net
 		public string SLNetTypesVersion { get; set; }
 
 		/// <summary>
-		/// Gets or sets the name of the domain to which the DataMiner agent belongs.
+		/// Gets or sets the name of the domain to which the DataMiner Agent belongs.
 		/// </summary>
-		/// <value>he name of the domain to which the DataMiner agent belongs.</value>
+		/// <value>The name of the domain to which the DataMiner Agent belongs.</value>
 		public string AgentDomainName { get; set; }
 
 		///// <summary>
 		///// Allowed caching modes (objects, events, ...)
-		///// (when "Undefined", the server doesn't specify any rules)
+		///// (when "Undefined", the server does not specify any rules).
 		///// </summary>
 		//public CachingMode AllowedCacheModes { get; set; }
 
@@ -95,7 +95,7 @@ namespace Skyline.DataMiner.Net
         /// Client should not listen in
         /// on view updates. Corresponds to the
         /// "ClientSkipViewUpdates" SLNet option
-        /// in maintenancesettings.xml
+        /// in MaintenanceSettings.xml
         /// </summary>
         SkipViewUpdates = 0x00000001,
     }

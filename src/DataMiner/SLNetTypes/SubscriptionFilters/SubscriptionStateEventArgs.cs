@@ -29,10 +29,10 @@ namespace Skyline.DataMiner.Net
 		public SubscriptionStage Stage { get { return RawEvent.Stage; } }
 
 		/// <summary>
-		/// Gets the marker i ds.
+		/// Gets the marker IDs.
 		/// </summary>
 		/// <value>
-		/// The marker i ds.
+		/// The marker IDs.
 		/// </value>
 		public int[] MarkerIDs {  get { return RawEvent.MarkerIDs; } }
 

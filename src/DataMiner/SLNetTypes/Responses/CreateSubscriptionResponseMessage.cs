@@ -10,7 +10,7 @@ namespace Skyline.DataMiner.Net.Messages
 	/// <summary>
 	/// This message contains information about a subscriber. It gets returned in this case:
 	/// - After sending a CreateSubscriptionMessage or UpdateSubscriptionMessage, a CreateSubscriptionResponse 
-	///   with info on the subscription is returned
+	///   with info on the subscription is returned.
 	/// </summary>
 	[Serializable]
 	public class CreateSubscriptionResponseMessage : ResponseMessage
