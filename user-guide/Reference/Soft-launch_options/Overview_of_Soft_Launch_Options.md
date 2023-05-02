@@ -123,6 +123,7 @@ Updates the values of direct view tables.
 Enables the use of DOM data in dashboards and applications.
 
 - **Minimum version**: 10.1.7
+- **Release version**: 10.3.6<!-- RN 36124 -->
 
 ### DynamicUnits
 
@@ -155,6 +156,7 @@ Provides access to additional data sources and operators for GQI in the Dashboar
 > - The DCF connections GQI data source (available from DataMiner 10.1.6 onwards).
 > - The "Sort" operator (available from DataMiner 10.2.11/10.3.0 onwards).
 > - The trend data patterns, trend data pattern events, and behavioral change events data sources (available from DataMiner 10.3.3/10.4.0 onwards).
+> - The object manager instances data source (available from DataMiner 10.3.6 onwards).<!-- RN 36124 -->
 
 - **Minimum version**: 10.0.13
 - **Estimated release version for the custom operator**: 10.3.11
