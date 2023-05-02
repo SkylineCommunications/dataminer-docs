@@ -45,7 +45,7 @@ Enables behavioral anomaly detection and suggestion events. See [Behavioral anom
 ### APIDeployment
 
 > [!NOTE]
-> Deprecated. This feature is replaced by the [UserDefinableAPI](#userdefinableapi) feature.
+> Deprecated from DataMiner 10.3.6 onwards. No longer supported from DataMiner 10.4.1 onwards. This feature is replaced by the [UserDefinableAPI](#userdefinableapi) feature.
 
 Enables dynamic API deployment on the SLAPIEndpoint application.
 
@@ -89,18 +89,21 @@ Makes it possible to [connect the DataMiner System to dataminer.services](xref:C
   Takes exception values into account for display key generation.
 
 - **Minimum version**: 10.0.11/9.6.0 [CU18]/10.0.0 [CU6]
+- **Estimated Release version**: To be determined
 
 ### CorrelationTicketAction
 
 Allows you to [create a ticket](xref:Creating_a_ticket) as a Correlation action.
 
 - **Minimum version**: 9.6.5
+- **Estimated Release version**: Will not be released (deprecated)
 
 ### CPEIntegration
 
 This is a Cube-only feature that can only be activated with the argument `ENABLEFEATURE=CPEINTEGRATION`. Note that you also need specific protocol changes in order to benefit from this.
 
 - **Minimum version**: 9.6.7
+- **Estimated Release version**: To be determined
 
 ### Diagnostics
 
@@ -113,6 +116,7 @@ Enable functionality to retrieve diagnostics from several DataMiner core process
 Updates the values of direct view tables.
 
 - **Minimum version**: 10.0.11
+- **Estimated release version**: To be determined
 
 ### DOMManager
 
@@ -125,12 +129,14 @@ Enables the use of DOM data in dashboards and applications.
 Enables dynamic units in Data Display in DataMiner Cube and the Monitoring app. If you want to test this feature for one DataMiner Cube session only, use the argument `SOFTLAUNCH_DYNAMICUNITS=Enabled`.
 
 - **Minimum version**: 10.0.12
+- **Estimated release version**: 10.3.12
 
 ### FeatureOffload
 
 Allows the offloading of specific DataMiner Analytics features to a specific DataMiner Node.
 
 - **Minimum version**: 10.0.9
+- **Estimated release version**: Will not be released (deprecated)
 
 ### Functions
 

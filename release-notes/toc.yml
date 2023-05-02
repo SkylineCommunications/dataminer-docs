@@ -47,6 +47,8 @@
           topicUid: General_Main_Release_10.3.0_CU2
         - name: General Main Release 10.3.0 CU3 - Preview
           topicUid: General_Main_Release_10.3.0_CU3
+        - name: General Main Release 10.3.0 CU4 - Preview
+          topicUid: General_Main_Release_10.3.0_CU4
       - name: Feature Release
         topicUid: General_Feature_Release_10.3.6
         items:
@@ -501,6 +503,8 @@
           topicUid: Web_apps_Main_Release_10.3.0_CU2
         - name: DataMiner web apps Main Release 10.3.0 CU3 - Preview
           topicUid: Web_apps_Main_Release_10.3.0_CU3
+        - name: DataMiner web apps Main Release 10.3.0 CU4 - Preview
+          topicUid: Web_apps_Main_Release_10.3.0_CU4
       - name: Feature Release
         topicUid: Web_apps_Feature_Release_10.3.6
         items:
@@ -700,8 +704,10 @@
         - name: EPM 5.0.0 I-DOCSIS 
           topicUid: EPM_5.0.0_I-DOCSIS
     - name: IDP release notes
-      topicUid: IDP_1.2.0
+      topicUid: IDP_1.2.1
       items:
+      - name: IDP 1.2.1
+        topicUid: IDP_1.2.1
       - name: IDP 1.2.0
         topicUid: IDP_1.2.0
         items:

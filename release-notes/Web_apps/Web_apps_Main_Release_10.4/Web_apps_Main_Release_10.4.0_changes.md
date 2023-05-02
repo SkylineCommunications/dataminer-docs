@@ -190,12 +190,6 @@ The way in which components are linked to feeds has been improved. Instead of us
 > [!CAUTION]
 > BREAKING CHANGE: Up to now, when you linked a script parameter to the *From* or *Till* box of a time range feed, the feed would pass a datetime value in string format to the script. That string value was not in an ISO format and did not contain any information about the time zone. From now on, the feed will send a UTC timestamp in milliseconds instead. Scripts that expect to receive a string value will need to be modified.
 
-#### Legacy reports and dashboards will no longer be prefetched if the soft-launch option 'LegacyReportsAndDashboards' is set to false [ID_35881]
-
-<!-- MR 10.4.0 - FR 10.3.6 -->
-
-From now on, legacy reports and dashboards will no longer be prefetched if the soft-launch option *LegacyReportsAndDashboards* is set to false.
-
 #### Clearer error will be thrown when an inter-element query failed to retrieve a parameter value of a specific element [ID_35972]
 
 <!-- MR 10.4.0 - FR 10.3.6 -->

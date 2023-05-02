@@ -72,7 +72,7 @@ When editing a low-code app, it is now possible to duplicate an entire page or p
 
 #### Legacy reports and dashboards will no longer be prefetched if the soft-launch option 'LegacyReportsAndDashboards' is set to false [ID_35881]
 
-<!-- MR 10.4.0 - FR 10.3.6 -->
+<!-- MR 10.3.0 [CU4] - FR 10.3.6 -->
 
 From now on, legacy reports and dashboards will no longer be prefetched if the soft-launch option *LegacyReportsAndDashboards* is set to false.
 

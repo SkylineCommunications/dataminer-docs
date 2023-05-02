@@ -203,3 +203,21 @@ When multiple clients had subscribed to a cell of a partial table, in some cases
 <!-- MR 10.2.0 [CU15]/10.3.0 [CU3] - FR 10.3.5 [CU0] -->
 
 In some cases, the web services API would not be able to correctly translate a server query to a web query.
+
+#### Visual Overview - DataMiner Connectivity Framework: Active path would incorrectly not be highlighted [ID_36204]
+
+<!-- MR 10.2.0 [CU15]/10.3.0 [CU3] - FR 10.3.6 -->
+
+When a visual overview had been configured to highlight the active path, in some rare cases, the active path would incorrectly not be highlighted.
+
+#### DataMiner Cube - Visual Overview: Problem when using placeholders in shape data fields of type 'ChildrenFilter' [ID_36227]
+
+<!-- MR 10.2.0 [CU15]/10.3.0 [CU3] - FR 10.3.6 -->
+
+Up to now, using placeholders in shape data fields of type *ChildrenFilter* could, in some cases, cause incorrect filtering behavior. From now on, when placeholders are used in shape data fields of type *ChildrenFilter*, filtering will be applied correctly.
+
+#### DataMiner Cube - Alarm Console: First underscore would incorrectly be omitted from element, service and view names in 'Open' submenu [ID_36266]
+
+<!-- MR 10.2.0 [CU15]/10.3.0 [CU3] - FR 10.3.6 -->
+
+When you right-click an alarm and hover over *Open*, the submenu that appears will list the names of the elements, the services and the views associated with that alarm. Up to now, when those names contained underscores, the first underscore would incorrectly be omitted.
