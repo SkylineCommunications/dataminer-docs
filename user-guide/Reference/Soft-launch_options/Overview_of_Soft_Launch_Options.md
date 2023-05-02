@@ -7,6 +7,8 @@ The table below contains an overview of all available soft-launch options. Unles
 
 The table also details the minimum DataMiner version to start using each option and, in case the feature has already been officially released in a later DataMiner version, the “Release version” when it becomes available. From that “Release version” onwards, the feature is active by default and any soft-launch configuration for the feature is ignored. As such, it is not necessary to remove a tag from *SoftLaunchOptions.xml* when the corresponding feature is officially released.
 
+Note that some features never make it to an official release. These are tagged as “Deprecated”.
+
 ### AlarmFocus
 
 See [Filtering alarms on alarm focus](xref:ApplyingAlarmFiltersInTheAlarmConsole#filtering-alarms-on-alarm-focus).
@@ -45,7 +47,7 @@ Enables behavioral anomaly detection and suggestion events. See [Behavioral anom
 ### APIDeployment
 
 > [!NOTE]
-> Deprecated from DataMiner 10.3.6 onwards. No longer supported from DataMiner 10.4.1 onwards. This feature is replaced by the [UserDefinableAPI](#userdefinableapi) feature.
+> Deprecated. This feature is replaced by the [UserDefinableAPI](#userdefinableapi) feature.
 
 Enables dynamic API deployment on the SLAPIEndpoint application.
 
@@ -68,7 +70,6 @@ Enables the [Low-Code Apps module](xref:Application_framework).
 Enables the “BookingData” Visual Overview component.
 
 - **Minimum version**: 10.2.7
-- **Estimated release version**: 10.3.11
 
 ### CassandraCluster
 
@@ -89,19 +90,22 @@ Makes it possible to [connect the DataMiner System to dataminer.services](xref:C
   Takes exception values into account for display key generation.
 
 - **Minimum version**: 10.0.11/9.6.0 [CU18]/10.0.0 [CU6]
-
+- **Estimated Release version**: to be determined
+ 
 ### CorrelationTicketAction
 
 Allows you to [create a ticket](xref:Creating_a_ticket) as a Correlation action.
 
 - **Minimum version**: 9.6.5
+- **Estimated Release version**: Will not be released (deprecated)
 
 ### CPEIntegration
 
 This is a Cube-only feature that can only be activated with the argument `ENABLEFEATURE=CPEINTEGRATION`. Note that you also need specific protocol changes in order to benefit from this.
 
 - **Minimum version**: 9.6.7
-
+- **Estimated Release version**: to be determined
+ 
 ### Diagnostics
 
 Enable functionality to retrieve diagnostics from several DataMiner core processes.
@@ -113,6 +117,7 @@ Enable functionality to retrieve diagnostics from several DataMiner core process
 Updates the values of direct view tables.
 
 - **Minimum version**: 10.0.11
+- **Estimated version**: to be determined
 
 ### DOMManager
 
@@ -125,19 +130,27 @@ Enables the use of DOM data in dashboards and applications.
 Enables dynamic units in Data Display in DataMiner Cube and the Monitoring app. If you want to test this feature for one DataMiner Cube session only, use the argument `SOFTLAUNCH_DYNAMICUNITS=Enabled`.
 
 - **Minimum version**: 10.0.12
+- **Estimated release version**: 10.3.12
+
+### ElasticTicketing
+
+Allows you to store tickets in the Elasticsearch database.
+
+- **Minimum version**: 9.6.4
+- **Release version**: 10.0.13
 
 ### FeatureOffload
 
 Allows the offloading of specific DataMiner Analytics features to a specific DataMiner Node.
 
 - **Minimum version**: 10.0.9
+- **Estimated release version**: will not be released (deprecated)
 
 ### Functions
 
 Enables the Virtual Functions module in Cube. This is a Cube-only feature that can only be activated per session with the argument `ENABLEFEATURE=FUNCTIONS`.
 
 - **Minimum version**: 10.0.10
-- **Release version**: To be determined
 
 ### GenericInterface
 
@@ -152,7 +165,6 @@ Provides access to additional data sources and operators for GQI in the Dashboar
 
 - **Minimum version**: 10.0.13
 - **Estimated release version for the custom operator**: 10.3.11
-- **Estimated release version for other data sources and operators**: To be determined
 
 ### GenericOwnership
 
@@ -166,6 +178,13 @@ Enables the use of Elasticsearch for alarm indexing and other applications. To p
 
 - **Minimum version**: 9.5.0
 - **Release version**: 10.0.8
+
+### JobManager
+
+Enables the [Jobs app](xref:jobs).
+
+- **Minimum version**: 9.6.2
+- **Release version**: 9.6.4
 
 ### LegacyAnnotations
 
@@ -227,22 +246,24 @@ Enables the alarm list component in the Dashboards app.
 
 Enables alpha components in the Dashboards app.
 
+> [!NOTE]
+> Deprecated: Alpha components will not be released in the core. Instead, the GQI visualizations will be extended to achieve the same functionality.
+
 - **Minimum version**: 9.6.6
-- **Estimated release version**: Will not be released
 
 ### ReportsAndDashboardsAutomationScript
 
 Enables the Automation script component in the Dashboards app.
 
 - **Minimum version**: 9.6.8
-- **Estimated release version**: To be determined
+- **Estimated release version**: 10.4.2
 
 ### ReportsAndDashboardsButton
 
 Enables the button component in the Dashboards app.
 
 - **Minimum version**: 10.0.3
-- **Estimated release version**: To be determined
+- **Estimated release version**: 10.4.2
 
 ### ReportsAndDashboardsButtonPanel
 
@@ -277,7 +298,7 @@ Enables a new Maps component in the Dashboards app and the Low-Code Apps.
 Enables the guides in the Dashboards app.
 
 - **Minimum version**: 9.6.8
-- **Estimated release version**: To be determined
+- **Estimated release version**: 10.4.5
 
 ### ReportsAndDashboardsPTP
 
@@ -310,7 +331,6 @@ Enables support for the source type “Resources” in list view components. Thi
 Enables the service profiles export and import in the DataMiner Cube Services app. This is a Cube-only feature that can only be activated per session with the argument `ENABLEFEATURE=ServiceProfilesMigration`.
 
 - **Minimum version**: 10.1.7
-- **Release version**: To be determined
 
 ### SLProtocolAsX64
 
@@ -323,6 +343,13 @@ Enables SLProtocol as a 64-bit process. This option is not configured in *SoftLa
 Enables ownership support for SRM services.
 
 - **Minimum version**: 9.6.1
+
+### SrmProtocolGeneration
+
+Enables contributing service protocol generation.
+
+- **Minimum version**: 9.6.1
+- **Release version**: 9.6.11
 
 ### VisualDataManager
 
@@ -342,4 +369,3 @@ Uses an embedded web browser for Automation script execution instead of the nati
 Enables the Cube UI for [User-Defined APIs](xref:UD_APIs).
 
 - **Minimum version**: 10.3.5
-- **Estimated release version**: 10.3.6
