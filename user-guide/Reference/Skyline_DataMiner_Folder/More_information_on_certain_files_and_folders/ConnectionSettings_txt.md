@@ -56,8 +56,8 @@ This file contains default connection settings to be used by DataMiner client ap
 
   - 0 (no polling)
 
-> [!NOTE]
-> Has no effect when using *GRPCConnection*
+  > [!NOTE]
+  > This option has no effect when the *GRPCConnection* type is used.
 
 - **serverport=**
 
