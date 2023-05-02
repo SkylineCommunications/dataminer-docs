@@ -79,7 +79,7 @@ To update the Cassandra version:
 
    `[System.Environment]::SetEnvironmentVariable('JAVA_HOME','C:\progra~1\Cassandra\Java\',[System.EnvironmentVariableTarget]::Machine)`
 
-1. Open a PowerShell prompt (as Administrator) and execute the following command to register the Cassandra service:
+1. Open a **new PowerShell prompt** (as Administrator) and execute the following command to register the Cassandra service:
 
    `cd 'C:\Program Files\Cassandra\bin\'; .\cassandra.ps1 -install`
 
