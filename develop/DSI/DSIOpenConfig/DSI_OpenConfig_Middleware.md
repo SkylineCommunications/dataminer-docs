@@ -257,7 +257,7 @@ You can find more info on the `Subscribe` RPC in the [OpenConfig introduction](x
 string subscriptionName = "interfaces";
 uint sampleIntervalMs = 10000;
 
-client.Subscribe("interfaces", sampleIntervalMs, new[] { "interfaces/interface/state" }, HandleIncomingResponse);
+client.Subscribe(subscriptionName, sampleIntervalMs, new[] { "interfaces/interface/state" }, HandleIncomingResponse);
 
 public void HandleIncomingResponse(IEnumerable<GnmiResponseValue> response)
 {
@@ -282,7 +282,7 @@ In case you want to do an *ON_CHANGE* subscription, you can leave out the `sampl
 ```csharp
 string subscriptionName = "interfaces";
 
-client.Subscribe("interfaces", new[] { "interfaces/interface/state" }, HandleIncomingResponse);
+client.Subscribe(subscriptionName, new[] { "interfaces/interface/state" }, HandleIncomingResponse);
 ```
 
 Now anytime a `leaf` changes, it will send out a notification with the new value.
