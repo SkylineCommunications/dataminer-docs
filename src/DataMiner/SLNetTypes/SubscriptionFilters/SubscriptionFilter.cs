@@ -25,7 +25,7 @@ namespace Skyline.DataMiner.Net
 	///			SubscriptionFilterElement: Limits messages to one particular element.
 	///		</description></item>
 	///		<item><description>
-	///			SubscriptionFilterParameter: Limits messages to one particular parameter of a given parameter.
+	///			SubscriptionFilterParameter: Limits messages to one particular parameter.
 	///		</description></item>
 	/// </list>
 	/// </summary>
@@ -87,7 +87,7 @@ namespace Skyline.DataMiner.Net
 		}
 
 		/// <summary>
-		/// The message type about which the <see cref="SubscriptionFilter"/> handles.
+		/// The type of messages this <see cref="SubscriptionFilter"/> handles.
 		/// </summary>
 		public string MessageType;
 
@@ -180,7 +180,7 @@ namespace Skyline.DataMiner.Net
 		/// </summary>
 		/// <param name="option">The option.</param>
 		/// <returns>
-		///   <c>true</c> if the specified option has option; otherwise, <c>false</c>.
+		///   <c>true</c> if the specified option is set; otherwise, <c>false</c>.
 		/// </returns>
 		public bool HasOption(SubscriptionFilterOptions option)
 		{

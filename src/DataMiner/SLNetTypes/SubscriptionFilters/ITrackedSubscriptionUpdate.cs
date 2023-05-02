@@ -48,7 +48,7 @@ namespace Skyline.DataMiner.Net
 		DMSMessage[] Execute();
 
 		/// <summary>
-		/// Executes the and wait.
+		/// Executes this instance and waits.
 		/// </summary>
 		/// <param name="timeout">The timeout.</param>
 		/// <returns>DMS messages.</returns>
