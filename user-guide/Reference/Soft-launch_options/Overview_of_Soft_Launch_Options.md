@@ -116,7 +116,7 @@ Enable functionality to retrieve diagnostics from several DataMiner core process
 Updates the values of direct view tables.
 
 - **Minimum version**: 10.0.11
-- **Estimated version**: to be determined
+- **Estimated release version**: to be determined
 
 ### DOMManager
 
