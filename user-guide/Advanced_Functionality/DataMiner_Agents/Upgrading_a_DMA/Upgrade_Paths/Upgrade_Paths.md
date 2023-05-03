@@ -24,4 +24,4 @@ If there is no information available for your DataMiner upgrade path, and you ar
 - [DataMiner 10.1.0/10.1.x to DataMiner 10.2.0/10.2.x](xref:Upgrade_path_1010-101x_to_1020-102x)
 
 > [!TIP]
-> For more information on the different release tracks, see [DataMiner Main Release vs. Feature Release](https://community.dataminer.services/dataminer-main-release-vs-feature-release/).
+> For more information on the different release tracks, see [DataMiner Main Release vs. Feature Release](xref:DataMiner_MR_vs_FR).

@@ -45,7 +45,7 @@ Enables behavioral anomaly detection and suggestion events. See [Behavioral anom
 ### APIDeployment
 
 > [!NOTE]
-> Deprecated. This feature is replaced by the [UserDefinableAPI](#userdefinableapi) feature.
+> Deprecated from DataMiner 10.3.6 onwards. No longer supported from DataMiner 10.4.1 onwards. This feature is replaced by the [UserDefinableAPI](#userdefinableapi) feature.
 
 Enables dynamic API deployment on the SLAPIEndpoint application.
 
@@ -89,18 +89,21 @@ Makes it possible to [connect the DataMiner System to dataminer.services](xref:C
   Takes exception values into account for display key generation.
 
 - **Minimum version**: 10.0.11/9.6.0 [CU18]/10.0.0 [CU6]
+- **Estimated Release version**: To be determined
 
 ### CorrelationTicketAction
 
 Allows you to [create a ticket](xref:Creating_a_ticket) as a Correlation action.
 
 - **Minimum version**: 9.6.5
+- **Estimated Release version**: Will not be released (deprecated)
 
 ### CPEIntegration
 
 This is a Cube-only feature that can only be activated with the argument `ENABLEFEATURE=CPEINTEGRATION`. Note that you also need specific protocol changes in order to benefit from this.
 
 - **Minimum version**: 9.6.7
+- **Estimated Release version**: To be determined
 
 ### Diagnostics
 
@@ -113,24 +116,35 @@ Enable functionality to retrieve diagnostics from several DataMiner core process
 Updates the values of direct view tables.
 
 - **Minimum version**: 10.0.11
+- **Estimated release version**: To be determined
 
 ### DOMManager
 
 Enables the use of DOM data in dashboards and applications.
 
 - **Minimum version**: 10.1.7
+- **Release version**: 10.3.6<!-- RN 36124 -->
 
 ### DynamicUnits
 
 Enables dynamic units in Data Display in DataMiner Cube and the Monitoring app. If you want to test this feature for one DataMiner Cube session only, use the argument `SOFTLAUNCH_DYNAMICUNITS=Enabled`.
 
 - **Minimum version**: 10.0.12
+- **Estimated release version**: 10.3.12
+
+### ElasticTicketing
+
+Allows you to store tickets in the Elasticsearch database.
+
+- **Minimum version**: 9.6.4
+- **Release version**: 10.0.13
 
 ### FeatureOffload
 
 Allows the offloading of specific DataMiner Analytics features to a specific DataMiner Node.
 
 - **Minimum version**: 10.0.9
+- **Estimated release version**: Will not be released (deprecated)
 
 ### Functions
 
@@ -149,6 +163,7 @@ Provides access to additional data sources and operators for GQI in the Dashboar
 > - The DCF connections GQI data source (available from DataMiner 10.1.6 onwards).
 > - The "Sort" operator (available from DataMiner 10.2.11/10.3.0 onwards).
 > - The trend data patterns, trend data pattern events, and behavioral change events data sources (available from DataMiner 10.3.3/10.4.0 onwards).
+> - The object manager instances data source (available from DataMiner 10.3.6 onwards).<!-- RN 36124 -->
 
 - **Minimum version**: 10.0.13
 - **Estimated release version for the custom operator**: 10.3.11
@@ -166,6 +181,13 @@ Enables the use of Elasticsearch for alarm indexing and other applications. To p
 
 - **Minimum version**: 9.5.0
 - **Release version**: 10.0.8
+
+### JobManager
+
+Enables the [Jobs app](xref:jobs).
+
+- **Minimum version**: 9.6.2
+- **Release version**: 9.6.4
 
 ### LegacyAnnotations
 
@@ -323,6 +345,13 @@ Enables SLProtocol as a 64-bit process. This option is not configured in *SoftLa
 Enables ownership support for SRM services.
 
 - **Minimum version**: 9.6.1
+
+### SrmProtocolGeneration
+
+Enables contributing service protocol generation.
+
+- **Minimum version**: 9.6.1
+- **Release version**: 9.6.11
 
 ### VisualDataManager
 

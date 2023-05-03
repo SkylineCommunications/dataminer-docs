@@ -5,6 +5,7 @@ uid: Known_issues
 
 | Issue | DataMiner version | Date added |
 |--|--|--|
+| [Activities and scripts delayed because of CheckVIPs thread](xref:KI_CheckVIPs_delays_activities) | From DataMiner 10.1.12/10.2.0 onwards | April 28, 2023 |
 | [Elasticsearch not initialized when DataMiner starts up](xref:KI_Elasticsearch_not_initialized_on_DMA_startup) | Any version using Elasticsearch | April 20, 2023 |
 | [DataMiner keeps trying to restart when Elasticsearch is unavailable](xref:KI_Restart_loop_when_Elasticsearch_unavailable) | DataMiner 10.3 main and feature releases | April 11, 2023 |
 | [SRM - Auto Select Resource not read for silent booking](xref:KI_SRM_Auto_Select_Resource_Not_Read) | SRM 1.2.30 CU2 | March 29, 2023 |

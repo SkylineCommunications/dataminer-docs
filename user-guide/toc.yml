@@ -892,6 +892,8 @@
         - name: Upgrading a DataMiner Agent
           topicUid: Upgrading_a_DataMiner_Agent
           items:
+            - name: DataMiner Main Release vs. Feature Release
+              topicUid: DataMiner_MR_vs_FR
             - name: Preparing to upgrade a DataMiner Agent
               topicUid: Preparing_to_upgrade_a_DataMiner_Agent
             - name: Upgrading a DataMiner Agent in the Update Center
@@ -3002,6 +3004,8 @@
           topicUid: Troubleshooting_Trending
         - name: Troubleshooting - Alarms
           topicUid: Troubleshooting_Alarms
+        - name: Troubleshooting - Services
+          topicUid: Troubleshooting_Services
     - name: Troubleshooting procedures
       topicUid: Troubleshooting_procedures
       items:
@@ -3022,6 +3026,8 @@
     - name: Known issues
       topicUid: Known_issues
       items:
+        - name: Activities and scripts delayed because of CheckVIPs thread
+          topicUid: KI_CheckVIPs_delays_activities
         - name: Elasticsearch not initialized when DataMiner starts up
           topicUid: KI_Elasticsearch_not_initialized_on_DMA_startup
         - name: DataMiner keeps trying to restart when Elasticsearch is unavailable
@@ -3450,6 +3456,8 @@
           topicUid: Online_demo_license_for_DMA_to_be_installed_by_user
         - name: Offline demo license for DMA to be installed by user
           topicUid: Offline_demo_license_for_DMA_to_be_installed_by_user
+    - name: Software support life cycles
+      topicUid: Software_support_life_cycles
     - name: Soft-launch options
       topicUid: SoftLaunchOptions
       items: 

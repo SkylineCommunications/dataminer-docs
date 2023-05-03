@@ -34,3 +34,40 @@ Each time a program is launched, a start entry and an end entry will be added to
   - the time at which the process ended
   - the name of the program that ended
   - the arguments that were passed to the program (if any)
+
+<!-- 
+
+#### DataMiner User-Defined APIs: Official release [ID_36273]
+
+<!-- MR 10.4.0 - FR 10.3.6 -->
+
+With the DataMiner User-Defined APIs, you can define API calls that will be made available on DataMiner Agents hosting the *UserDefinableApiEndpoint* DxM. These APIs can be secured using API tokens, which can be generated on the fly and linked to the API definitions.
+
+<!--
+
+##### Configuring APIs and tokens
+
+in System Center
+
+##### Defining new APIs
+
+"Configure API" button in Automation module
+
+##### Granting User-Defined API permissions
+
+In *System Center > Users/Groups*, you can grant users a number of permissions related to User-Defined APIs.
+
+In the *Modules > User-Defined APIs* section, you can find the following user permissions:
+
+- *Tokens > UI available*: Permission to view API tokens
+- *Tokens > Add/Edit*: Permission to create and update API tokens
+- *Tokens > Delete*: Permission to delete API tokens
+- *APIs > UI available*: Permission to view API definitions
+- *APIs > Add/Edit*: Permission to create and update API definitions. Note that users will also need to be granted the *Automation > Execute* permission.
+- *APIs > Delete*: Permission to delete API definitions
+
+##### Consult logging regarding User-Defined APIs
+
+- User-defined API server logging in Logging module
+
+-->
