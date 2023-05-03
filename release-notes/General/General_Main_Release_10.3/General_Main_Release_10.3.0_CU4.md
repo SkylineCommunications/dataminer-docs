@@ -12,7 +12,11 @@ uid: General_Main_Release_10.3.0_CU4
 
 ### Enhancements
 
-*No enhancements yet*
+#### Enhanced performance when retrieving resources [ID_36129]
+
+<!-- MR 10.3.0 [CU4] - FR 10.3.7 -->
+
+Because of a number of enhancements, overall performance has increased when retrieving resources.
 
 ### Fixes
 
