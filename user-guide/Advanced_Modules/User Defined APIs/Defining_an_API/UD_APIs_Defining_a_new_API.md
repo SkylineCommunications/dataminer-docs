@@ -146,7 +146,9 @@ You can also use the `StatusCode` enum, which contains suggestions, and cast tha
 ## Creating an API and tokens in DataMiner Automation
 
 > [!NOTE]
-> Before you try to execute this procedure, make sure you have the user permissions available under [Modules > User-Defined APIs](xref:DataMiner_user_permissions#modules--user-defined-apis).
+>
+> - Before you try to execute this procedure, make sure you have the user permissions available under [Modules > User-Defined APIs](xref:DataMiner_user_permissions#modules--user-defined-apis).
+> - You can also create an API and tokens directly in code, for example if an API setup needs to be deployed in the install script of an application package. See [Creating APIs and tokens in code](xref:UD_APIs_Creating_in_code).
 
 1. Open your API script in the Automation module in DataMiner Cube and click *Configure API* at the bottom of the window.
 

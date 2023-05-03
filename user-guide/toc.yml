@@ -2369,7 +2369,7 @@
     - name: User-Defined APIs
       topicUid: UD_APIs
       items:
-        - name: Managing APIs and tokens
+        - name: Managing APIs and tokens in Cube
           topicUid: UD_APIs_Viewing_in_Cube
         - name: Defining an API
           topicUid: UD_APIs_Define_New_API
@@ -2380,12 +2380,10 @@
               topicUid: UD_APIs_Using_existing_scripts
             - name: Creating APIs and tokens in code
               topicUid: UD_APIs_Creating_in_code
-            - name: Objects
-              topicUid: UD_APIs_Objects
               items:
-                - name: ApiToken
+                - name: ApiToken object
                   topicUid: UD_APIs_Objects_ApiToken
-                - name: ApiDefinition
+                - name: ApiDefinition object
                   topicUid: UD_APIs_Objects_ApiDefinition
             - name: API script examples
               topicUid: UD_APIs_API_script_examples
@@ -3392,7 +3390,7 @@
                 topicUid: SLNetClientTest_setting_TTL_database
               - name: Specifying credentials for a shared backup path for Elasticsearch
                 topicUid: SLNetClientTest_credentials_shared_backup_Elasticsearch
-              - name: Triggering a user-defined API
+              - name: Triggering and managing user-defined APIs
                 topicUid: SLNetClientTest_triggering_api
         - name: SLOffload tool
           topicUid: SLOffload_tool

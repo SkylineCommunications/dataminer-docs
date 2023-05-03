@@ -1,7 +1,7 @@
 ---
 uid: UD_APIs_Objects_ApiDefinition
 ---
-# ApiDefinition
+# ApiDefinition object
 
 An `ApiDefinition` is an object that defines an API, including which tokens have access, the URL route, and which action should be triggered.
 
@@ -14,10 +14,10 @@ The table below lists the properties of the `ApiDefinition` object. For each pro
 |ID               |ApiDefinitionId  |Yes                 |The ID of the `ApiDefinition`.|
 |Name             |string           |Yes                 |Optional name that makes the definition recognizable.|
 |Description      |string           |No                  |Optional description.|
-|Route            |string           |Yes                 |The suffix of the URL where this API call will be available. See the [Route](#route) section below.|
-|SecuritySettings |SecuritySettings |Yes (AllowedTokens) |Info on who can call this API. See the [SecuritySettings](#securitysettings) section below.|
-|ActionType       |ActionType       |Yes                 |The type of action that will be triggered when the API is called. See the [Actions](#actions) section below.|
-|ActionMeta       |IActionMeta      |No                  |Additional data for the action. See the [Actions](#actions) section below.|
+|Route            |string           |Yes                 |The suffix of the URL where this API call will be available. See [Route](#route).|
+|SecuritySettings |SecuritySettings |Yes (AllowedTokens) |Info on who can call this API. See [SecuritySettings](#securitysettings).|
+|ActionType       |ActionType       |Yes                 |The type of action that will be triggered when the API is called. See [Actions](#actions).|
+|ActionMeta       |IActionMeta      |No                  |Additional data for the action. See [Actions](#actions).|
 |CreatedBy        |string           |Yes                 |The name of the user who created the definition.|
 |CreatedAt        |DateTime         |Yes                 |The UTC date and time when the definition was created.|
 |LastModifiedBy   |string           |Yes                 |The name of the last user who modified the definition.|
@@ -84,8 +84,8 @@ You will need to assign an `AutomationScriptNoEntryPointActionMeta` instance to 
 
 - **Create & Update**
   - The `Name` property must not contain only white space characters. It must either contain visible characters or be empty/null.
-  - The `Route` property must meet the requirements mentioned in the [Route](#route) section above.
-  - The `ActionMeta` property must contain an instance of a meta class according to the configured action type. See the [Actions](#actions) section above.
+  - The `Route` property must meet the requirements mentioned under [Route](#route).
+  - The `ActionMeta` property must contain an instance of a meta class according to the configured action type. See [Actions](#actions).
 
 ## Errors
 
@@ -95,7 +95,7 @@ When something goes wrong during the CRUD actions, the `TraceData` can contain o
 |------------|-----------|
 |InvalidName |The specified name only contained white space characters.|
 |RouteInUse |The specified route is already used by another `ApiDefinition`. *ConflictingDefinitionId* contains the ID of the definition that is already using the route. *Route* contains the invalid route.|
-|InvalidRoute |The route did not meet the criteria. See the [Route](#route) section above. *Route* contains the invalid route.|
+|InvalidRoute |The route did not meet the criteria. See [Route](#route). *Route* contains the invalid route.|
 |InvalidActionMeta |The defined `ActionMeta` was empty, did not match the type, or contained an invalid configuration.|
 
 ## Security

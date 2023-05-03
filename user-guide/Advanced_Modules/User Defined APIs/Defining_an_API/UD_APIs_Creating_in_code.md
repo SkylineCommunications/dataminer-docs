@@ -4,7 +4,7 @@ uid: UD_APIs_Creating_in_code
 
 # Creating APIs and tokens in code
 
-Instead of creating API definitions and tokens in Cube, you can also create them in code. This can for example be useful if an API setup needs to be deployed in the install script of an application package.
+Instead of creating API definitions and tokens in Cube, you can also create them in code, using the [ApiDefinition](xref:UD_APIs_Objects_ApiDefinition) and [ApiToken](xref:UD_APIs_Objects_ApiToken) classes available in the SLNetTypes.dll. This can for example be useful if an API setup needs to be deployed in the install script of an application package.
 
 ## UserDefinableApiHelper
 
@@ -68,7 +68,7 @@ namespace UserDefinableApiScripts.CreateToken
 > If the secret for the token is pre-determined and has to be set during creation, make sure that these hard-coded values are not part of code that is publicly available (e.g. on GitHub).
 
 > [!TIP]
-> For more information on the token configuration, see [ApiToken](xref:UD_APIs_Objects_ApiToken).
+> For more information on the token configuration, see [ApiToken object](xref:UD_APIs_Objects_ApiToken).
 
 ## Creating an API definition
 
@@ -102,7 +102,7 @@ helper.ApiDefinitions.Create(definition);
 ```
 
 > [!TIP]
-> For more information on the API definition configuration, see [ApiDefinition](xref:UD_APIs_Objects_ApiDefinition).
+> For more information on the API definition configuration, see [ApiDefinition object](xref:UD_APIs_Objects_ApiDefinition).
 
 ## Doing other CRUD actions
 

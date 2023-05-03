@@ -4,13 +4,10 @@ uid: UD_APIs_UserDefinableApiEndpoint
 
 # DataMiner UserDefinableApiEndpoint DxM
 
-> [!WARNING]
-> This feature is in preview and is not fully released yet. For now, it should only be used on a staging platform. It should not be used in a production environment.
-
 *DataMiner UserDefinableApiEndpoint* is an extension module that runs an ASP.NET Core 5 web API. It handles the incoming API triggers over HTTP or HTTPS and sends the requests to the DataMiner Agent(s) in a round-robin way.
 
 > [!CAUTION]
-> There is currently no rate limiting or protection in place that would prevent malicious users from spamming the endpoint. We recommend to only expose the DMA using a firewall or network protection that prevents unknown IP addresses from sending requests.
+> There is currently no rate limiting or protection in place to prevent malicious users from spamming the endpoint. We recommend only exposing the DMA using a firewall or network protection that prevents unknown IP addresses from sending requests.
 
 ## Installing the DxM
 
@@ -48,7 +45,7 @@ The extension module has a configuration file with some settings that are set to
 The default configuration file can be found in the following location: `%programfiles%\Skyline Communications\DataMiner UserDefinableApiEndpoint\appsettings.json`
 
 > [!IMPORTANT]
-> If you want to make changes to the configuration, create an *appsettings.custom.json* file within the same folder. This will prevent your settings from being overwritten by an upgrade. Changing the settings in *appsettings.json* will work, but these will be overwritten during a DataMiner upgrade.
+> If you want to make changes to the configuration, create an *appsettings.custom.json* file within the same folder. This will prevent your settings from being overwritten by an upgrade. If you change the settings in *appsettings.json*, this will work, but your changes will be overwritten as soon as you upgrade DataMiner.
 
 In this file, add the setting or settings that you want to override, with your custom value. The following main blocks of settings are available:
 
@@ -111,7 +108,7 @@ IIS also has a rewrite rule (Reroute User Definable APIs) that forwards API requ
 
 #### Limits
 
-It's possible to restrict the number of open connections. By default the DxM will allow 100 concurrent connections, but the amount can be changed here.
+It is possible to restrict the number of open connections. By default, the DxM will allow 100 concurrent connections, but you can customize this number here.
 
 For example, this is the default configuration:
 
@@ -169,9 +166,9 @@ For example, this is the default configuration:
 This section contains options specific to this DxM module:
 
 - **NatsSubject**: The subject used for internal NATS messaging. This should not be changed.
-- **MessageBrokerTimeOutSeconds**: The time the message broker (sending the NATS trigger to SLNet) will wait for a response before it times out. By default, this is set to 90 seconds (i.e. 1.5 minutes).
-- **SessionConfigPath**: *Optional.* The path to the NATS config file. The default configuration will be used when this is not filled in.
-- **CredentialsConfigPath**: *Optional.* The path to the credentials file (.creds) used to connect to the NATS message bus. The default credentials will be used when this is not filled in.
+- **MessageBrokerTimeOutSeconds**: The time the message broker (sending the NATS trigger to SLNet) will wait for a response before it times out. By default, this is set to 90 seconds (i.e. 1.5 minutes). If you increase the timeout value, you will also need to [increase the timeout in IIS](#changing-the-timeout).
+- **SessionConfigPath**: Optional. The path to the NATS config file. The default configuration will be used when this is not filled in.
+- **CredentialsConfigPath**: Optional. The path to the credentials file (.creds) used to connect to the NATS message bus. The default credentials will be used when this is not filled in.
 
 For example, this is the default configuration:
 
@@ -184,26 +181,29 @@ For example, this is the default configuration:
 }
 ```
 
-#### Changing the time-out
+#### Changing the timeout
 
-IIS has a time-out set to 120 seconds (2 minutes). When increasing the **MessageBrokerTimeOutSeconds** as explained above, this time-out in IIS will also need to be increased.
+IIS has a timeout set to 120 seconds (2 minutes). When you increase the **MessageBrokerTimeOutSeconds** as mentioned above, you will also need to increase this timeout in IIS.
 
 > [!NOTE]
-> Make sure there is a margin, put the time-out in IIS higher than than the **MessageBrokerTimeOutSeconds**.
-You can change the time-out in IIS with following steps:
+> The timeout in IIS should be longer than the **MessageBrokerTimeOutSeconds**, so that there is a margin.
 
-1. Open `Internet Information Services (IIS) Manager`.
+You can change the time-out in IIS as follows:
+
+1. Open the *Internet Information Services (IIS) Manager* app in Windows.
+
+1. In the pane on the left, select the server. This should be the top item in the tree.
+
+1. In the center pane, double-click *Application Request Routing Cache*.
+
+1. In the pane on the right, under *Proxy*, click *Server Proxy Settings*.
 
 1. In the *Connections* pane on the left, select the top icon with the server name and click *Application Request Routing Cache*.
 
-   ![IIS time-out 1](~/user-guide/images/UDAPIS_IIS_TimeOut_1.jpg)
-
 1. Click *Server Proxy Settings* in the pane on the far right.
 
-    ![IIS time-out 2](~/user-guide/images/UDAPIS_IIS_TimeOut_2.jpg)
+1. Specify the timeout value in seconds in the *Time-out (seconds)* box.
 
-1. Change the time-out in the textbox.
-
-    ![IIS time-out 3](~/user-guide/images/UDAPIS_IIS_TimeOut_3.jpg)
+   ![IIS time-out 3](~/user-guide/images/UDAPIS_IIS_TimeOut.jpg)
 
 1. Click *Apply*.

@@ -4,9 +4,6 @@ uid: UD_APIs_Using_existing_scripts
 
 # Using existing scripts
 
-> [!WARNING]
-> This feature is in preview and is not fully released yet. For now, it should only be used on a staging platform. It should not be used in a production environment.
-
 There are two possible ways to create an API from an existing Automation script, which may or may not use script parameters.
 
 - The recommended way is to [use the OnApiTrigger entry point](#using-the-script-with-the-onapitrigger-entry-point).
@@ -150,7 +147,7 @@ namespace UserDefinableApiScripts.Examples.ExistingWithEntryPoint
 
 It is possible to use a script such as the [example script](#example-script) as an API without making any changes to it. API triggers will be executed through the `Run` method as if you were executing the script from e.g. Cube.
 
-To do this, define your API exactly as explained under the [Creating an API definitions and token(s)](xref:UD_APIs_Define_New_API#creating-an-api-and-tokens-in-dataminer-automation) section, but next to *Method to be executed*, select *Run method*.
+To do this, define your API exactly as explained under [Creating an API and tokens](xref:UD_APIs_Define_New_API#creating-an-api-and-tokens-in-dataminer-automation), but next to *Method to be executed*, select *Run method*.
 
 > [!IMPORTANT]
 > If you use this approach, you will not have access to the `ApiTriggerInput` object and `ApiTriggerOutput` object in the script, and it will therefore not be possible to check the route, request the method of the API trigger, or output anything back to the API caller.

@@ -4,18 +4,12 @@ uid: UD_APIs_Triggering_an_API
 
 # Triggering a user-defined API
 
-> [!WARNING]
-> This feature is in preview and is not fully released yet. For now, it should only be used on a staging platform. It should not be used in a production environment.
-
 To trigger an API, you can send an HTTP or HTTPS request to the *UserDefinableApiEndpoint* DxM.
 
 > [!NOTE]
 >
-> - You can also trigger a user-defined API through the [SLNetClientTest Tool](xref:SLNetClientTest_triggering_api) for testing. However, note that you should always be extremely careful when using this tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
+> - You can also trigger a user-defined API through the [SLNetClientTest Tool](xref:SLNetClientTest_triggering_api) for testing. This will bypass the endpoint DxM and go directly to the API manager in SLNet, which can be useful to efficiently test and verify API scripts without the need to send an HTTP request. However, note that you should always be extremely careful when using this tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
 > - API triggers are handled asynchronously. To protect DataMiner, there is a limit to the number of concurrent triggers. As soon as that limit is reached, new triggers are added to a queue, to be handled as soon as another trigger is finished. It is not possible to adjust this limit, as it is automatically set based on the number of logical processors in the system (with a minimal concurrency of 4). The exact limit is logged in the file `C:\Skyline DataMiner\Logging\SLUserDefinableApiManager.txt`. Apart from this limit implemented by DataMiner, IIS for Windows 10 also has a concurrency limit of 10. IIS for Windows Server has no limits.
-
-> [!TIP]
-> See also: [User-Defined APIs benchmarks](xref:user-defined_API_benchmarks)
 
 ## Building the HTTP request
 
@@ -151,7 +145,3 @@ Some errors will mention an ID in the *faultingNode* field. This is the DataMine
 #### missingScriptParameters
 
 If an error with reason *MissingScriptParameters* is returned, the *missingScriptParameters* array will contain the names of the missing script parameters.
-
-## SLNetClientTest tool
-
-It is possible to trigger an API through the User-Definable API UI in the [SLNetClientTest tool](xref:SLNetClientTest_tool). This trigger will go directly to the API manager in SLNet and thus bypass the endpoint DxM. This can be useful to more efficiently test and verify API scripts without having to send an HTTP request. This can also be used to help you detect whether the API script is faulty or something else is the cause when experiencing problems with API triggers. More info can be found on the [Triggering a user-defined API](xref:SLNetClientTest_triggering_api) page.

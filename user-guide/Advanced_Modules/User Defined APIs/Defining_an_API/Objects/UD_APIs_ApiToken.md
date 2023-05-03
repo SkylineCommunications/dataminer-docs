@@ -1,7 +1,7 @@
 ---
 uid: UD_APIs_Objects_ApiToken
 ---
-# ApiToken
+# ApiToken object
 
 An `ApiToken` is an object that defines which secret string can be used to access an API.
 
@@ -13,7 +13,7 @@ The table below lists the properties of the `ApiToken` object. For each property
 |---------------|-----------|-----------|-----------|
 |ID             |ApiTokenId |Yes        |The ID of the `ApiToken`.|
 |Name           |string     |Yes        |A name that makes the token recognizable. Must be filled in.|
-|Secret         |string     |No         |The secret string that will be linked to the token. See the [Secret](#secret) section below.|
+|Secret         |string     |No         |The secret string that will be linked to the token. See [Secret](#secret).|
 |IsDisabled     |bool       |Yes        |You can set this property to true to revoke the token and disable the access. Setting this back to false will re-enable the token.|
 |CreatedBy      |string     |Yes        |The name of the user who created the token.|
 |CreatedAt      |DateTime   |Yes        |The UTC date and time when the token was created.|
@@ -54,11 +54,8 @@ var secret = ApiTokenSecretGenerator.GenerateSecret();
 ## Requirements
 
 - **Create**: The `Secret` property must contain a secret that meets the requirements mentioned under [Secret](#secret).
-
 - **Update**: When the `Secret` property is updated (non-empty value), the secret must meet the requirements mentioned under [Secret](#secret).
-
 - **Create & Update**: The `Name` property must contain a name (which must not be null or whitespace).
-
 - **Delete**: The `ApiToken` must not be in use by an `ApiDefinition`. This means that there must be no `ApiDefinition` that has the ID of the token that is to be deleted in the `AllowedTokens` property. Before you delete a token, make sure it has been removed from all definitions. If you want to quickly block access, disable the token instead.
 
 ## Errors
