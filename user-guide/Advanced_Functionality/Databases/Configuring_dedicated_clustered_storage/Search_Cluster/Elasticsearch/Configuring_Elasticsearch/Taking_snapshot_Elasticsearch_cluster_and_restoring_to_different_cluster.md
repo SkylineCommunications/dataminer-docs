@@ -2,7 +2,7 @@
 uid: Taking_snapshot_Elasticsearch_cluster_and_restoring_to_different_cluster
 ---
 
-# Taking a snapshot of one Elasticsearch cluster and restoring it to a different Elasticsearch cluster
+# Taking a snapshot of one Elasticsearch cluster and restoring it to another
 
 1. Prepare the source and target Elasticsearch clusters by following the steps under [Preparing and configuring the repositories](xref:Configuring_Elasticsearch_backups_Windows_Linux#preparing-and-configuring-the-repositories).
 

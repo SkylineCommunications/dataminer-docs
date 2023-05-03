@@ -6,7 +6,7 @@ uid: Databases_about
 
 DataMiner supports multiple different [system data storage architectures](xref:Supported_system_data_storage_architectures).
 
-- Often an **on-premises** [Cassandra database](xref:Cassandra_database) and [Elasticsearch](xref:Elasticsearch_database) or [OpenSearch](xref:OpenSearch_database) database are used.
+- Often an **on-premises** [Cassandra database](xref:Cassandra_database) and [Elasticsearch](xref:Deploying_the_Elasticsearch_database) or [OpenSearch](xref:OpenSearch_database) database are used.
 - Instead of on-premises databases, you can use **managed services from a cloud provider**, e.g. the [Amazon Keyspaces Service](xref:Amazon_Keyspaces_Service), [Amazon OpenSearch Service](xref:Amazon_OpenSearch_Service) or [Azure Managed Instance for Apache Cassandra](xref:Cassandra_database).
 - As a third alternative, soon it will be possible to use **Storage As A Service** on dataminer.services, so you no longer have to maintain the databases yourself, and all the scaling and complexity is taken care of for you.
 

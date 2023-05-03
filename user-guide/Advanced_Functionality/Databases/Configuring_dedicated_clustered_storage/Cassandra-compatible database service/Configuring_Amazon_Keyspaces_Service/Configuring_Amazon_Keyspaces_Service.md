@@ -6,7 +6,7 @@ uid: Configuring_AKS_in_Cube
 
 > [!IMPORTANT]
 > An Amazon Keyspaces database requires a separate indexing database.
-> For information on how to configure an indexing database, see [Elasticsearch database](xref:Elasticsearch_database) or [OpenSearch database](xref:OpenSearch_database).
+> For information on how to configure an indexing database, see [Elasticsearch database](xref:Deploying_the_Elasticsearch_database) or [OpenSearch database](xref:OpenSearch_database).
 
 > [!NOTE]
 > If you do not see the `Amazon Keyspaces` option, it means that your server is not compatible because it is not running DataMiner version 10.3.0/10.3.3 or higher.

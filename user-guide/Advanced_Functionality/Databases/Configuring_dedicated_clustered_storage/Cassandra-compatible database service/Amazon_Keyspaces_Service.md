@@ -6,6 +6,8 @@ uid: Amazon_Keyspaces_Service
 
 From DataMiner 10.3.0/10.3.3 onwards, it is possible to use the Amazon Keyspaces Service on AWS as an alternative for a Cassandra Cluster setup. See also: [Supported system data storage architectures](xref:Supported_system_data_storage_architectures).
 
+In this section of the documentation, you can find instructions on [how to deploy the Amazon Keyspaces Service](xref:Deploying_Amazon_Keyspaces_Service) as the first step in configuring a dedicated clustered storage.
+
 > [!NOTE]
 >
 > - Amazon Keyspaces does not support all Cassandra functionality, most notably indices on columns. As a result, some queries against logger tables (including SLAs) may be slower on Amazon Keyspaces compared to Cassandra.

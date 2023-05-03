@@ -8,7 +8,7 @@ uid: Deploying_and_Configuring_the_PA_Framework
 
 Before you move on to the PA development and deployment, make sure your DataMiner platform has the necessary resources and specifications for a smooth execution of SRM workflows, as SRM is an essential prerequisite for the PA framework. You can find the expected requirements on the [DataMiner Compute Requirements page](https://community.dataminer.services/dataminer-compute-requirements/).
 
-Your DataMiner System will also need to use an [Elasticsearch database](xref:Elasticsearch_database).
+Your DataMiner System will also need to use an [Elasticsearch database](xref:Deploying_the_Elasticsearch_database).
 
 > [!TIP]
 > For more information on how to install Elasticsearch on your DMA, click [here](xref:Installing_Elasticsearch_via_DataMiner).

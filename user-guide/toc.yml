@@ -1095,7 +1095,7 @@
                         - name: Configuring multiple Elasticsearch clusters
                           topicUid: Configuring_multiple_Elasticsearch_clusters
                           items:
-                            - name: Taking a snapshot of one Elasticsearch cluster and restoring it to a different Elasticsearch cluster
+                            - name: Taking a snapshot of one Elasticsearch cluster and restoring it to another
                               topicUid: Taking_snapshot_Elasticsearch_cluster_and_restoring_to_different_cluster
                             - name: Verify Elasticsearch synchronization
                               topicUid: Verifying_Elasticsearch_Synchronization
@@ -3502,12 +3502,16 @@
           topicUid: MOP_Restoring_a_single_table_in_a_MySQL_database
         - name: Taking a backup using a symbolic link to another drive
           topicUid: MOP_Taking_a_backup_using_a_symbolic_link_to_another_drive
+        - name: Taking a snapshot of one Elasticsearch cluster and restoring it to another
+          topicUid: MOP_Taking_snapshot_Elasticsearch_cluster_and_restoring_to_different_cluster
         - name: Tracking the health of a DataMiner System
           topicUid: MOP_Tracking_the_health_of_a_DMS
         - name: Upgrading a DMA/DMS
           topicUid: MOP_Upgrading_a_DMA_DMS
         - name: Upgrading Elasticsearch from one minor version to another
           topicUid: MOP_Upgrading_Elasticsearch_from_one_minor_version_to_another
+        - name: Verifying Elasticsearch synchronization
+          topicUid: MOP_Verifying_Elasticsearch_Synchronization
     - name: Naming of elements, services, views, etc.
       topicUid: NamingConventions
       items:
