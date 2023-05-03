@@ -12,7 +12,22 @@ uid: Cube_Main_Release_10.3.0_CU4
 
 ### Enhancements
 
-*No enhancements yet*
+#### Visual Overview - ListView component: Columns and options removed [ID_35530]
+
+<!-- MR 10.3.0 [CU4] - FR 10.3.7 -->
+
+The following columns can no longer be added to a ListView component:
+
+| Source   | Columns |
+|----------|---------|
+| Elements | Contributing Service<br>ElementID<br>ReservationInstances<br>Service properties |
+| Services | Booking properties<br>ReservationInstance<br>Resource state<br>UsedResources    |
+
+Also, the following component options can no longer be used:
+
+- DisableInUseItems
+- EditMode
+- Recursive
 
 ### Fixes
 
