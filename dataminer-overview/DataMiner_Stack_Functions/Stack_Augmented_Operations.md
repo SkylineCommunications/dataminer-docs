@@ -131,3 +131,13 @@ By continuously monitoring and modelling the trend of the metrics, proactive cap
 >
 > - Video about [Intelligent Fault Detection](https://community.dataminer.services/video/intelligent-fault-detection-in-action) (covering Proactive Cap Detection, amongst others)
 > - User Guide: [Advanced Analytics in the Alarm Console](xref:Advanced_analytics_features_in_the_Alarm_Console)
+
+## Relationship Learning
+
+Providing you with insights based on learned relations between the numerous integrated metrics/parameters.
+
+> [!TIP]
+> See also:
+>
+> - Blog post about [The power of insights](https://community.dataminer.services/dataminer-10-3-gives-you-the-power-of-insights/)
+> - User Guide: [Adding related parameters to a trend graph](xref:Adding_related_parameters_to_a_trend_graph)
