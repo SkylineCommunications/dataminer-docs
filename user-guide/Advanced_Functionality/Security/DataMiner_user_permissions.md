@@ -1653,7 +1653,7 @@ Permission to view histograms of parameters that are being trended.
 ### Modules \> User-Defined APIs
 
 > [!NOTE]
-> Prior to DataMiner 10.3.6/10.4.0, the User-Defined APIs feature is only available if the *UserDefinableAPI* [soft-launch option](xref:SoftLaunchOptions) is enabled.
+> This feature is available from DataMiner 10.3.6/10.4.0 onwards. In DataMiner 10.3.5, it is available in preview if the soft-launch option *UserDefinableAPI* is enabled. See [soft-launch options](xref:SoftLaunchOptions).
 
 #### Modules \> User-Defined APIs \> Tokens \> UI available
 

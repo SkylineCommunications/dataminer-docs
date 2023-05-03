@@ -4,12 +4,6 @@ uid: UD_APIs_Define_New_API
 
 # Defining a new API
 
-> [!WARNING]
-> This feature is in preview and is not fully released yet. For now, it should only be used on a staging platform. It should not be used in a production environment.
-
-> [!NOTE]
-> The User-Defined APIs feature is only available in DataMiner Cube if the soft-launch option *UserDefinableAPI* is set to true. See [soft-launch options](xref:SoftLaunchOptions).
-
 To create a new API, follow these steps as detailed below:
 
 1. [Create the API Automation script](#creating-the-api-automation-script)
@@ -164,7 +158,6 @@ You can also use the `StatusCode` enum, which contains suggestions, and cast tha
    > [!NOTE]
    > You will only be able to see the button *Configure API*  in the UI if the following conditions are met:
    >
-   > - The [soft-launch option](xref:SoftLaunchOptions) *UserDefinableAPI* is enabled.
    > - You are using DataMiner 10.3.6 or higher.
    > - The DataMiner System has an active Indexing Engine (e.g. Elasticsearch).
    > - You have the permission to read API definitions.

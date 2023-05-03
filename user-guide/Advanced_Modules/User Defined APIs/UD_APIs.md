@@ -4,8 +4,8 @@ uid: UD_APIs
 
 # User-Defined APIs
 
-> [!WARNING]
-> This feature is in preview and is not fully released yet. For now, it should only be used on a staging platform. It should not be used in a production environment.
+> [!NOTE]
+> This feature is available from DataMiner 10.3.6/10.4.0 onwards. In DataMiner 10.3.5, it is available in preview if the soft-launch option *UserDefinableAPI* is enabled. See [soft-launch options](xref:SoftLaunchOptions).
 
 With the DataMiner User-Defined APIs feature, you can define API calls that will be made available on DataMiner Agents hosting the [UserDefinableApiEndpoint DxM](xref:UD_APIs_UserDefinableApiEndpoint). These APIs can be secured using API tokens, which can be generated on the fly and linked to the API definitions.
 

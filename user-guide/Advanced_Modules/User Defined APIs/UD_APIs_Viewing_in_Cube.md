@@ -4,9 +4,6 @@ uid: UD_APIs_Viewing_in_Cube
 
 # Managing APIs and tokens in DataMiner Cube
 
-> [!NOTE]
-> The User-Defined APIs feature is available in DataMiner Cube from DataMiner 10.4.0/10.3.6 onwards, if the soft-launch option *UserDefinableAPI* is set enabled. See [soft-launch options](xref:SoftLaunchOptions).
-
 > [!IMPORTANT]
 > If you were previously using the *APIDeployment* soft-launch option, keep in mind that the *User-Defined APIs* tab will replace the obsolete *API deployment* tab in the future. Make sure to move your old APIs from API deployment to the new feature. For information on how to create APIs from existing scripts, see [using an existing script page](xref:UD_APIs_Using_existing_scripts).
 
