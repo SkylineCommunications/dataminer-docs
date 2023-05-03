@@ -8,7 +8,7 @@ The dataminer.services platform gets updated continuously. This change log can h
 
 #### 3 May 2023 - Fix - SupportAssistant 1.3.2 - Fixed incorrect timeout for Remote Log Collection uploads [ID_36311]
 
-An issue has been resolved where Remote Log Collections could incorrectly timeout after 100 seconds of uploading.
+An issue has been resolved where Remote Log Collection could incorrectly time out after 100 seconds of uploading.
 
 #### 26 April 2023 - Enhancement/fix -  CloudGateway 2.10.8 - General improvements [ID_36014] [ID_36259]
 
