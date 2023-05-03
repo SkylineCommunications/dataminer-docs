@@ -16,4 +16,8 @@ uid: General_Main_Release_10.2.0_CU16
 
 ### Fixes
 
-*No fixes yet*
+#### DataMiner Cube - Resources app: Problem when opening the element list in the 'device' tab [ID_36239]
+
+<!-- MR 10.2.0 [CU16]/10.3.0 [CU4] - FR 10.3.7 -->
+
+When, in the *Resources* app, you created a resource and then opened the element list in the *device* tab in order to link a device to that newly created resource, in some cases, DataMiner Cube could become unresponsive, especially when the element list contained a large number of elements.
