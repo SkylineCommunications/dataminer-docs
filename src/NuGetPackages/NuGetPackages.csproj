@@ -9,7 +9,7 @@
 
   <ItemGroup>
     <PackageReference Include="Skyline.DataMiner.Core.DataMinerSystem.Automation" Version="1.1.0.3" />
-    <PackageReference Include="Skyline.DataMiner.Core.DataMinerSystem.Protocol" Version="1.1.0.3" />
+    <PackageReference Include="Skyline.DataMiner.Core.DataMinerSystem.Protocol" Version="1.1.0.4" />
     <PackageReference Include="Skyline.DataMiner.Core.InterAppCalls.Common" Version="1.0.0.1" />
     <PackageReference Include="Skyline.DataMiner.Core.Matrix.Protocol" Version="1.1.0.2" />
     <PackageReference Include="Skyline.DataMiner.Utils.InteractiveAutomationScriptToolkit" Version="6.1.0" />
