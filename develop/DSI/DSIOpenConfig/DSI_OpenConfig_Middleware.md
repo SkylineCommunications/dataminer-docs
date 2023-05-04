@@ -26,6 +26,9 @@ Include the NuGet package *Skyline.DataMiner.DataSources.OpenConfig.Gnmi* in you
 
 When you are developing a connector, there is an optional package when you want to use the [DataMapper](#datamapper): *Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol*
 
+> [!NOTE]
+> At present, these NuGet packages are not yet publicly available. They are currently only available for use during in-house connector development at Skyline Communications.
+
 ### Setting up the connection with the endpoint
 
 #### Creating a GnmiClient
