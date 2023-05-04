@@ -18,7 +18,7 @@ Before connecting your DataMiner System to dataminer.services, verify that the f
   - ``wss://tunnel.dataminer.services/``
 
   > [!NOTE]
-  > At least one DMA in the DMS must be able to reach these endpoints. Do not install the *full* Cloud Pack on additional DMAs that **do not allow network traffic** towards `*.dataminer.services`, there is a *no internet access* Cloud Pack availble that can be installed on those DMAs.
+  > At least one DMA in the DMS must be able to reach these endpoints. Do not install the Cloud Pack on additional DMAs that **do not allow network traffic** towards `*.dataminer.services`, there is a *no internet access* Cloud Pack available that can be installed on those DMAs.
 
 - From [DataMiner CloudGateway](xref:DataMinerExtensionModules#cloudgateway) version 2.10.0 onwards, the internal network must allow [HTTP(S) traffic via port TCP 5100](xref:Configuring_the_IP_network_ports#overview-of-ip-ports-used-in-a-dms). For more information about configuring this endpoint, see [Custom dataminer.services endpoint configuration](xref:Custom_cloud_endpoint_configuration).
 
