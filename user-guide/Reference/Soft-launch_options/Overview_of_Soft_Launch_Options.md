@@ -132,6 +132,13 @@ Enables dynamic units in Data Display in DataMiner Cube and the Monitoring app. 
 - **Minimum version**: 10.0.12
 - **Estimated release version**: 10.3.12
 
+### ElasticTicketing
+
+Allows you to store tickets in the Elasticsearch database.
+
+- **Minimum version**: 9.6.4
+- **Release version**: 10.0.13
+
 ### FeatureOffload
 
 Allows the offloading of specific DataMiner Analytics features to a specific DataMiner Node.
@@ -174,6 +181,13 @@ Enables the use of Elasticsearch for alarm indexing and other applications. To p
 
 - **Minimum version**: 9.5.0
 - **Release version**: 10.0.8
+
+### JobManager
+
+Enables the [Jobs app](xref:jobs).
+
+- **Minimum version**: 9.6.2
+- **Release version**: 9.6.4
 
 ### LegacyAnnotations
 
@@ -331,6 +345,13 @@ Enables SLProtocol as a 64-bit process. This option is not configured in *SoftLa
 Enables ownership support for SRM services.
 
 - **Minimum version**: 9.6.1
+
+### SrmProtocolGeneration
+
+Enables contributing service protocol generation.
+
+- **Minimum version**: 9.6.1
+- **Release version**: 9.6.11
 
 ### VisualDataManager
 

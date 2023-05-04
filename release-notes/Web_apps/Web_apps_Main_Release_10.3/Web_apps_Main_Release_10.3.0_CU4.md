@@ -20,4 +20,8 @@ From now on, legacy reports and dashboards will no longer be prefetched if the s
 
 ### Fixes
 
-*No fixes yet*
+#### Low-Code Apps: Action buttons could have an incorrect background color [ID_36258]
+
+<!-- MR 10.3.0 [CU4] - FR 10.3.6 -->
+
+In some cases, action buttons could have an incorrect background color.
