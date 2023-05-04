@@ -1,8 +1,8 @@
 ---
-uid: Configuring_Cassandra_on_DMA_in_Cube
+uid: Configuring_Cassandra_per_DMA_in_Cube
 ---
 
-# Configuring a Cassandra database per DMA
+# Configuring a Cassandra database per DMA in Cube
 
 In case a separate Cassandra cluster is used per DMA, configure the settings as follows:
 

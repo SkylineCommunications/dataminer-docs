@@ -8,7 +8,7 @@ uid: Configuring_storage_per_DMA
 
 - [Migrating a legacy setup to Cassandra](xref:Migrating_the_general_database_to_Cassandra)
 
-- [Configuring a Cassandra database per DMA](xref:Configuring_Cassandra_on_DMA_in_Cube)
+- [Configuring a Cassandra database per DMA](xref:Configuring_Cassandra_per_DMA_in_Cube)
 
 - [Maintaining a Cassandra database per DMA](xref:Configuring_Cassandra_Backups)
 
@@ -22,7 +22,7 @@ On legacy DataMiner Systems, typically a MySQL (or MSSQL) database is used as th
 
 - [Moving MySQL data to another location](xref:Moving_MySQL_data_to_another_location)
 
-- [Configuring a MySQL database on your DMA](xref:Configuring_MySQL_database_on_DMA_in_Cube)
+- [Configuring a MySQL database on your DMA](xref:Configuring_MySQL_database_in_Cube)
 
 > [!IMPORTANT]
 > MSSQL is no longer supported as the general database as from DataMiner 10.3.0.

@@ -22,7 +22,7 @@ From DataMiner 10.3.0/10.3.3 onwards, it is possible to use Amazon OpenSearch Se
 
   - [Amazon OpenSearch Service](xref:Amazon_OpenSearch_Service): Available from DataMiner 10.3.0/10.3.3 onwards.
 
-  - [OpenSearch database](xref:Deploying_OpenSearch_database): Available from DataMiner 10.3.0/10.3.3 onwards.
+  - [OpenSearch database](xref:OpenSearch_database): Available from DataMiner 10.3.0/10.3.3 onwards.
 
 After the installation is complete, you can [configure the database settings in Cube](xref:Configuring_the_database_settings_in_Cube) or [specify the configuration data in the *DB.xml* file](xref:DB_xml).
 

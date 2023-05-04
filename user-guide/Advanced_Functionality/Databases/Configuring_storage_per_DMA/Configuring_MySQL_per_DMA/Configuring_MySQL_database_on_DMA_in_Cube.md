@@ -1,5 +1,5 @@
 ---
-uid: Configuring_MySQL_database_on_DMA_in_Cube
+uid: Configuring_MySQL_database_in_Cube
 ---
 
 # Configuring the MySQL or MSSQL database settings

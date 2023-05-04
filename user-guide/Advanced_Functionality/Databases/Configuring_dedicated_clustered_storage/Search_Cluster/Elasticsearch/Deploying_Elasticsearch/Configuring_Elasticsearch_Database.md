@@ -12,7 +12,7 @@ The most important of these settings can be found on the page [Important Elastic
 
 > [!IMPORTANT]
 > The JVM Heap Space must be set to a value larger than the default 1 GB on production systems.
-> To configure this, see [Setting the heap size](https://www.elastic.co/guide/en/elasticsearch/reference/6.8/heap-size.html)
+> To configure this, see [Setting the heap size](https://www.elastic.co/guide/en/elasticsearch/reference/6.8/heap-size.html).
 
 ## Configuring Elasticsearch cluster nodes
 

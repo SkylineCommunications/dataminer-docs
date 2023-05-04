@@ -1086,7 +1086,7 @@
                       topicUid: Deploying_the_Elasticsearch_database
                       items:
                         - name: Configuring the Elasticsearch database
-                          topicUid: Configuring_master_Elasticsearch_nodes
+                          topicUid: Configuring_Elasticsearch_Database
                           items:
                             - name: Configuring the master nodes
                               topicUid: Configuring_master_Elasticsearch_nodes
@@ -1115,23 +1115,13 @@
                           topicUid: Configuring_Elasticsearch_node_remove
                 - name: Amazon Opensearch Service
                   topicUid: Amazon_OpenSearch_Service
-                  items:
-                    - name: Deploying the Amazon Opensearch Service
-                      topicUid: Amazon_OpenSearch_Service
                 - name: OpenSearch database
                   topicUid: OpenSearch_database
                   items:
-                    - name: Deploying the OpenSearch database
-                      topicUid: Deploying_OpenSearch_database
                     - name: Configuring multiple OpenSearch clusters
                       topicUid: Configuring_multiple_OpenSearch_clusters
-            - name: Database configuration
+            - name: Configuring the general database settings
               topicUid: Configuring_the_database_settings_in_Cube
-              items:
-                - name: Configuring the general database settings in Cube
-                  topicUid: Configuring_the_database_settings_in_Cube
-                - name: Configuring the general database settings in DB.xml
-                  topicUid: Configuring_the_database_settings_in_DBxml
             - name: Migrating existing systems to dedicated clustered storage
               topicUid: Migrating_the_general_database_to_Cassandra
               items:
@@ -1170,10 +1160,10 @@
                 - name: Migrating a legacy setup to Cassandra
                   topicUid: Migrating_the_general_database_to_Cassandra
                 - name: Configuring a Cassandra database per DMA
-                  topicUid: Configuring_Cassandra_on_DMA_in_Cube
+                  topicUid: Configuring_Cassandra_per_DMA_in_Cube
                   items:
                     - name: Configuring a Cassandra database per DMA in Cube
-                      topicUid: Configuring_Cassandra_on_DMA_in_Cube
+                      topicUid: Configuring_Cassandra_per_DMA_in_Cube
                     - name: Configuring a Cassandra database per DMA in DB.xml
                       topicUid: Configuring_Cassandra_on_DMA_in_DBxml
                 - name: Maintaining a Cassandra database on DMA
@@ -1192,8 +1182,8 @@
                   topicUid: Deleting_element_data_from_a_MySQL_database
                 - name: Moving MySQL data to another location
                   topicUid: Moving_MySQL_data_to_another_location
-                - name: Configuring a MySQL database on your DMA
-                  topicUid: Configuring_MySQL_database_on_DMA_in_Cube
+                - name: Configuring the SQL database settings
+                  topicUid: Configuring_MySQL_database_in_Cube
         - name: Optional database configurations
           topicUid: Offload_database
           items:

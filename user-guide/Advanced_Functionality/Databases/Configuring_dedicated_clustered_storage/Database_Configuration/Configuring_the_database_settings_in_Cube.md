@@ -2,7 +2,7 @@
 uid: Configuring_the_database_settings_in_Cube
 ---
 
-# Configuring the general database settings in Cube
+# Configuring the general database settings
 
 The general database is the main database used by a DataMiner Agent to store its data. By default, this is a Cassandra database. In legacy setups, a MySQL or MSSQL database can be used.
 
@@ -10,6 +10,9 @@ In older DataMiner systems, this database was also known as the "local database"
 
 > [!NOTE]
 > If you want an external program to execute queries against a DataMiner database, you will need to use an offload database. For information on offload database settings, see [Offload database](xref:Offload_database).
+
+> [!TIP]
+> In the DB.xml file, you can specify the configuration data for several databases as well. See [General database settings](xref:DB_xml#general-database-settings).
 
 ## Cassandra cluster database
 
@@ -123,3 +126,6 @@ To configure the connection to an [Amazon Keyspaces database](xref:Amazon_Keyspa
 
    > [!NOTE]
    > In the example screenshots, the cluster health is set to yellow because only one node is used. Single-node clusters are always displayed in yellow.
+
+> [!TIP]
+> See also: [Configuring a Cassandra database per DMA](xref:Configuring_Cassandra_per_DMA_in_Cube) and [Configuring the SQL database settings](xref:Configuring_MySQL_database_in_Cube).
