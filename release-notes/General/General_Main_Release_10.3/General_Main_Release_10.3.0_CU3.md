@@ -137,7 +137,7 @@ The *SLNetClientTest* tool now supports gRPC when it needs to establish addition
 
 #### Cassandra Cluster: Every DMA would incorrectly try to delete any possible old Cassandra compaction and repair tasks found in the entire DMS [ID_31923]
 
-<!-- MR 10.3.0 [CU3] - FR 10.3.3 -->
+<!-- MR 10.2.0 [CU16]/10.3.0 [CU3] - FR 10.3.3 -->
 
 At start-up, every DataMiner Agent with a Cassandra Cluster configuration would incorrectly try to delete any possible old Cassandra compaction and repair tasks found in the entire DMS.
 

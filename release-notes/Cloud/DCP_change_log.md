@@ -6,6 +6,10 @@ uid: DCP_change_log
 
 The dataminer.services platform gets updated continuously. This change log can help you trace when specific features and changes have become available.
 
+#### 3 May 2023 - Fix - SupportAssistant 1.3.2 - Fixed incorrect timeout for Remote Log Collection uploads [ID_36311]
+
+An issue has been resolved where Remote Log Collection could incorrectly time out after 100 seconds of uploading.
+
 #### 26 April 2023 - Enhancement - ArtifactDeployer 1.4.5 - ArtifactDeployer no longer requires direct internet access [ID_36284]
 
 By using the cloud endpoint available since DataMiner CloudGateway 2.10.0 (included in the Cloud Pack 2.8.2), the DataMiner ArtifactDeployer can be installed on servers without internet access. As such, internet access is now no longer required for this DxM.
@@ -282,7 +286,7 @@ The following limitations also apply:
 - Commands that run longer than 30 seconds are currently not supported.
 - Issues with the adaptive card output will not result in proper error feedback.
 
-For more detailed information, refer to [Adding commands for the Teams bot to a DMS](xref:DataMiner_Teams_bot#adding-commands-for-the-teams-bot-to-a-dms)
+For more detailed information, refer to [Adding commands for the Teams bot to a DMS](xref:DataMiner_Teams_bot#adding-custom-commands-for-the-teams-bot-to-a-dms)
 
 #### 19 September 2022 – Enhancement – Improvements on Audit page in Admin app [ID_34457]
 

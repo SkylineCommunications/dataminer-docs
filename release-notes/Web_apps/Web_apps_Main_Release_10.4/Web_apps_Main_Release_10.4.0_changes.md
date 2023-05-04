@@ -317,6 +317,12 @@ Could not find argument with name '{argument.Name}'.
 
 An error could occur when feeding data from a GQI component to a query that was used in the same component.
 
+#### Dashboards app & Low-Code Apps - Line chart: X and Y axis labels would not show the correct text [ID_35943]
+
+<!-- MR 10.4.0 - FR 10.3.7 -->
+
+The X and Y axis labels of a line chart would not show the correct text when the data was grouped.
+
 #### Dashboards app - GQI: No element feed available after selecting a relation between two standalone parameters [ID_36003]
 
 <!-- MR 10.4.0 - FR 10.3.5 -->
@@ -344,9 +350,3 @@ When editing a dashboard or a low-code app, in some cases, the following error c
 ```txt
 The dashboard has not been saved: Invalid revision sequence, the dashboard might have been edited by another user.
 ```
-
-#### Low-Code Apps: Action buttons could have an incorrect background color [ID_36258]
-
-<!-- MR 10.4.0 - FR 10.3.6 -->
-
-In some cases, action buttons could have an incorrect background color.
