@@ -80,8 +80,30 @@ When the script is ready, you will then need to **create an API and tokens**. Th
 
 To trigger an API, you can send an HTTP or HTTPS request to the UserDefinableApiEndpoint DxM, using a URL in the format `http(s)://{hostname}/api/custom/{URL route}`. You can for instance use Postman for this. The following HTTP methods are supported: GET, PUT, POST, DELETE. You are free to choose which of these methods your API will support.
 
-To authenticate yourself to the API, you will need to add a Bearer authorization header to your request containing the secret.
+To authenticate yourself to the API, you will need to add a *Bearer* authorization header to your request containing the secret. In case the API needs input from the user using the HTTP body, you need to specify a *Content-Type* header. The *Content-Length* header is calculated and filled in automatically depending on how you send the request. The format of input in the body is defined in the API definition. If the API definition is set to accept parameters, these are expected to be passed as JSON in a key-value format.
+
+The API will return an HTTP status code indicating the status of the request and a body. The response is encoded in UTF-8. In case some input from the user is missing, or the user sends a request with a wrong HTTP method, the API will return an HTTP status code indicating the error and a JSON body with more information. The endpoint itself can also return errors with corresponding status code to indicate something went wrong before the script was executed.
+
+> [!TIP]
+> For detailed information and examples, see [Triggering a user-defined API](xref:UD_APIs_Triggering_an_API).
 
 ##### Managing APIs and tokens in System Center
 
 In DataMiner Cube, System Center now features a new *User-Defined APIs* page, where you can see an overview of all configured APIs and tokens. Buttons are available on the page that allow you to create or delete APIs or tokens, open an API, or rename a token. Via the right-click menu, you can also enable or disable a token and copy the URL for an API.
+
+##### User permissions
+
+On the *Users/Groups* in System Center, several new user permissions are available related to DataMiner User-Defined APIs in the *Modules > User-Defined APIs* section:
+
+- *Tokens > UI available*: Permission to view API tokens.
+- *Tokens > Add/Edit*: Permission to create and update API tokens.
+- *Tokens > Delete*: Permission to delete API tokens.
+- *APIs > UI available*: Permission to view API definitions.
+- *APIs > Add/Edit*: Permission to create and update API definitions. Note that users will also need to be granted the *Automation > Execute* permission.
+- *APIs > Delete*: Permission to delete API definitions.
+
+##### Logging
+
+The main log files for this feature are included in the folder `C:\ProgramData\Skyline Communications\DataMiner UserDefinableApiEndpoint\Logs\`.
+
+In addition, the file *SLUserDefinableApiManager.txt* in the `C:\Skyline DataMiner\Logging\` folder contains logging related to the CRUD actions on API tokens and definitions and related to API triggers.
