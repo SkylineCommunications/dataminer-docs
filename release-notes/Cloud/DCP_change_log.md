@@ -279,7 +279,7 @@ The following limitations also apply:
 - Commands that run longer than 30 seconds are currently not supported.
 - Issues with the adaptive card output will not result in proper error feedback.
 
-For more detailed information, refer to [Adding commands for the Teams bot to a DMS](xref:DataMiner_Teams_bot#adding-commands-for-the-teams-bot-to-a-dms)
+For more detailed information, refer to [Adding commands for the Teams bot to a DMS](xref:DataMiner_Teams_bot#adding-custom-commands-for-the-teams-bot-to-a-dms)
 
 #### 19 September 2022 – Enhancement – Improvements on Audit page in Admin app [ID_34457]
 
