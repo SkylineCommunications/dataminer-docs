@@ -25,7 +25,19 @@ uid: General_Feature_Release_10.3.7
 
 ### Enhancements
 
-*No enhancements yet*
+#### Enhanced performance when retrieving resources [ID_36129]
+
+<!-- MR 10.3.0 [CU4] - FR 10.3.7 -->
+
+Because of a number of enhancements, overall performance has increased when retrieving resources.
+
+#### Failover: Obsolete CheckVIPs thread has been removed [ID_36253]
+
+<!-- MR 10.2.0 [CU16]/10.3.0 [CU4] - FR 10.3.7 -->
+
+In Failover setups using virtual IP addresses, once every minute the CheckVIPs thread would check whether the online Agent holds the correct IP addresses. However, due to the many locks it claimed to verify the current state of the IP addresses, it would delay other actions being executed in the system.
+
+This obsolete thread has now been removed.
 
 ### Fixes
 
