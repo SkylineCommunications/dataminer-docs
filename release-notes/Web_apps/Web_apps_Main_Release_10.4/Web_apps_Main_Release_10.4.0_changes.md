@@ -350,3 +350,9 @@ When editing a dashboard or a low-code app, in some cases, the following error c
 ```txt
 The dashboard has not been saved: Invalid revision sequence, the dashboard might have been edited by another user.
 ```
+
+#### Dashboards app & Low-Code Apps - Query builder: Select nodes would incorrectly not show the selected columns [ID_36251]
+
+<!-- MR 10.4.0 - FR 10.3.7 -->
+
+In the query builder, when a *Select* node was not in edit mode, its description would incorrectly not show the selected columns.
