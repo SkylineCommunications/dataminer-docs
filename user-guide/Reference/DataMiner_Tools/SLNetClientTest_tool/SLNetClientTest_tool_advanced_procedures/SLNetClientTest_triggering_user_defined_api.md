@@ -40,7 +40,7 @@ With the SLNetClientTest tool, you can trigger a user-defined API in order to te
 
 The SLNetClientTest tool can also provide an overview of all API tokens and definitions, where you can look up specific tokens or definitions and remove them. You can also enable or disable specific tokens.
 
-![Client Test Tool Screenshot](~/user-guide/images/UDAPIS_ClientTestTool.jpg)
+![Client Test Tool Screenshot](~/user-guide/images/UDAPIS_ClientTestTool.png)
 
 To go to the overview:
 
