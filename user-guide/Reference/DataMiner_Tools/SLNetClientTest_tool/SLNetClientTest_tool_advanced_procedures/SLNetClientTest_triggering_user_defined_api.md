@@ -12,7 +12,7 @@ uid: SLNetClientTest_triggering_api
 
 ## Triggering a user-defined API
 
-With the SLNetClientTest tool, you can trigger a user-defined API in order to test it. This will bypass the endpoint DxM and go directly to the API manager in SLNet, which can be useful to efficiently test and verify API scripts without the need to send an HTTP request. This especially handy when you are developing an API, as it allows you to quickly and easily trigger it and get additional information such as the response time along with the result. It can also be used to help detect whether an API script is faulty or if something else is the cause when problems occur with API triggers.
+With the SLNetClientTest tool, you can trigger a user-defined API in order to test it. This will bypass the endpoint DxM and go directly to the API manager in SLNet, which can be useful to efficiently test and verify API scripts without the need to send an HTTP request. This is especially handy when you are developing an API, as it allows you to quickly and easily trigger it and get additional information such as the response time along with the result. It can also be used to help detect whether an API script is faulty or if something else is the cause when problems occur with API triggers.
 
 1. [Connect to the DMA using the SLNetClientTest tool](xref:Connecting_to_a_DMA_with_the_SLNetClientTest_tool).
 
