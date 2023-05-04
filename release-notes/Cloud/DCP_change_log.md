@@ -10,6 +10,10 @@ The dataminer.services platform gets updated continuously. This change log can h
 
 By using the cloud endpoint available since DataMiner CloudGateway 2.10.0 onwards (included in the Cloud Pack 2.8.2) the DataMiner ArtifactDeployer can be installed on  servers without internet access as this is no longer required.
 
+> [!NOTE]
+>
+> - For this feature to work, traffic must be allowed via port 5100 on the internal network, and DataMiner CloudGateway 2.10.0 or higher must be installed.
+
 #### 26 April 2023 - Enhancement/fix -  CloudGateway 2.10.8 - General improvements [ID_36014] [ID_36259]
 
 Changes have been implemented in DataMiner CloudGateway to make the service ignore requests when it is unable to access dataminer.services. This way, another CloudGateway service that does have access can pick them up and handle them successfully. This is most commonly needed when the CloudGateway is installed on a firewalled or offline server by accident. Previously, this could lead to seemingly random errors, for example when creating or renewing your cloud connection in Cube, or when creating or managing shares from the Dashboards app.
