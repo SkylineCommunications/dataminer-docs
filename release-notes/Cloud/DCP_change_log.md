@@ -6,6 +6,10 @@ uid: DCP_change_log
 
 The dataminer.services platform gets updated continuously. This change log can help you trace when specific features and changes have become available.
 
+#### 5 May 2023 - Enhancement -  CloudGateway 2.10.9 - ConnectionTester tool output [ID_36260]
+
+The ConnectionTester tool, which included in the CloudGateway installation, has been improved and will have a more clear and understandable logging output. 
+
 #### 3 May 2023 - Fix - SupportAssistant 1.3.2 - Fixed incorrect timeout for Remote Log Collection uploads [ID_36311]
 
 An issue has been resolved where Remote Log Collection could incorrectly time out after 100 seconds of uploading.
