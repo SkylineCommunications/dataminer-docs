@@ -118,4 +118,4 @@ To resolve this, a number of changes were implemented to the Generic CM Collecto
 - Exception values have been added to several columns in the cable modem table.
 - Instead of the previous table cleanup method, the cable modem table is now cleaned up when the element starts up.
 
-In addition, for the Skyline EPM Platform connector, the *SetEmptyColumns* method will now set exception values for the latitude and longitude parameters.
+In addition, for the Skyline EPM Platform DOCSIS connector, the *SetEmptyColumns* method will now set exception values for the latitude and longitude parameters.
