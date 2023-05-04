@@ -164,7 +164,7 @@ You can also use the `StatusCode` enum, which contains suggestions, and cast tha
    > - The DataMiner System has an active Indexing Engine (e.g. Elasticsearch).
    > - You have the permission to read API definitions.
 
-1. Add a description.
+1. Add a description (optional).
 
 1. In the *URL* box, specify the unique [route](#route).
 
