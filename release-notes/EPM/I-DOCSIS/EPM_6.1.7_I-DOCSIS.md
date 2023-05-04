@@ -107,3 +107,15 @@ In addition, the passive tables are now only filled in when the CCAP/collector p
 #### CCAP visual pages not loading correctly [ID_35953]
 
 When the name of CCAP elements contained a hyphen, the CCAP page of the *Skyline EPM Platform* and *Skyline EPM Platform DOCSIS* visual overviews did not load correctly, because this character was also used as a separator in those visual overviews. To resolve this issue, a dollar sign is now used as separator instead.
+
+#### Too many cable modems report to have other DOCSIS version [ID_36317]
+
+A problem with the aggregating actions used to count the number of CMS with other DOCSIS versions could cause some CCAPs to incorrectly report a high number of cable modems with other DOCSIS versions.
+
+To resolve this, a number of changes were implemented to the Generic CM Collector connector:
+
+- CMs that have DOCSIS version 1.0, 1.1, or "Not initialized" will now be considered to have an unknown DOCSIS version.
+- Exception values have been added to several columns in the cable modem table.
+- Instead of the previous table cleanup method, the cable modem table is now cleaned up when the element starts up.
+
+In addition, for the Skyline EPM Platform connector, the *SetEmptyColumns* method will now set exception values for the latitude and longitude parameters.
