@@ -26,4 +26,14 @@ uid: Web_apps_Feature_Release_10.3.7
 
 ### Fixes
 
-*No fixes yet*
+#### Dashboards app & Low-Code Apps - Line chart: X and Y axis labels would not show the correct text [ID_35943]
+
+<!-- MR 10.4.0 - FR 10.3.7 -->
+
+The X and Y axis labels of a line chart would not show the correct text when the data was grouped.
+
+#### Dashboards app & Low-Code Apps - Query builder: Select nodes would incorrectly not show the selected columns [ID_36251]
+
+<!-- MR 10.4.0 - FR 10.3.7 -->
+
+In the query builder, when a *Select* node was not in edit mode, its description would incorrectly not show the selected columns.
