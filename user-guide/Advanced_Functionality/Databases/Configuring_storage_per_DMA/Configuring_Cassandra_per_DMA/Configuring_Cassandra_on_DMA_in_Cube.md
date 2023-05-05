@@ -2,7 +2,7 @@
 uid: Configuring_Cassandra_per_DMA_in_Cube
 ---
 
-# Configuring a Cassandra database per DMA
+# Configuring the Cassandra database per DMA settings
 
 In case a separate Cassandra cluster is used per DMA, configure the settings as follows:
 
@@ -45,4 +45,4 @@ In case a separate Cassandra cluster is used per DMA, configure the settings as 
 1. Click *Save*.
 
 > [!TIP]
-> In the *DB.xml* file, you can specify the configuration data for several databases as well. See [indexing database settings](xref:DB_xml#indexing-database-settings).
+> In the *DB.xml* file, you can specify the configuration data for several databases as well. See [indexing database settings](xref:DB_xml#general-database-settings).

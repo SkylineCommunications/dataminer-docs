@@ -2,7 +2,7 @@
 uid: Configuring_MySQL_database_in_Cube
 ---
 
-# Configuring the MySQL or MSSQL database settings
+# Configuring the SQL database settings
 
 For a legacy MySQL or MSSQL database, configure the settings as follows:
 

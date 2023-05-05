@@ -1156,7 +1156,7 @@
               items:
                 - name: Migrating a legacy setup to Cassandra
                   topicUid: Migrating_the_general_database_to_Cassandra
-                - name: Configuring a Cassandra database per DMA
+                - name: Configuring the Cassandra database per DMA settings
                   topicUid: Configuring_Cassandra_per_DMA_in_Cube
                 - name: Maintaining a Cassandra database on DMA
                   topicUid: Configuring_Cassandra_Backups

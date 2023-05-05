@@ -51,15 +51,13 @@ uid: Verifying_Elasticsearch_Synchronization
   1. Make sure that the strings are identical across the databases.
 
   > [!NOTE]
-  > If one of the databases was added later than the first database, you can no longer rely on the index counter as indices may have different sequence numbers because of the newest node missing certain Elasticsearch rollovers. Even though the Elasticsearch rollover API is called at the same time, it can produce a different sequence number. While most of the data will be synchronized, we do not support the situation. If you find yourself in this situation, the best course of action is to restore the data to the oldest Elasticsearch node by following the [Taking a snapshot of one Elasticsearch cluster and restoring it to another](xref:MOP_Taking_snapshot_Elasticsearch_cluster_and_restoring_to_different_cluster) Method of Procedure.
+  > If one of the databases was added later than the first database, you can no longer rely on the index counter as indices may have different sequence numbers because of the newest node missing certain Elasticsearch rollovers. Even though the Elasticsearch rollover API is called at the same time, it can produce a different sequence number. While most of the data will be synchronized, we do not support the situation. If you find yourself in this situation, the best course of action is to restore the data to the oldest Elasticsearch node by following the [*Taking a snapshot of one Elasticsearch cluster and restoring it to another*](xref:MOP_Taking_snapshot_Elasticsearch_cluster_and_restoring_to_different_cluster) Method of Procedure.
 
 ## Ensuring matching index sizes
 
-It is always possible that data gets lost because of e.g. packet loss while being transported toward the database. This could give rise to minute differences in the document count. Therefore, it is important to not expect this number to be 100% equal.
+Data loss can occur because of factors like packet loss while being transported toward the database. This can cause slight differences in the document count. Therefore, it is important to not expect the document count to be 100% identical.
 
-The number of differences that is allowed depends on several things.
-
-E.g. The place where these differences occur. A suggest index can be absent and not pose a significant threat to the system. However, an active-alarms index or an index that holds data for your SRM app may not be expendable. See [Index types](#index-types).
+The number of differences that is allowed depends on several things, e.g. the place where these differences occur. A suggest index can be absent and not pose a significant threat to the system. However, an active-alarms index or an index that holds data for your SRM app may not be expendable. See [Index types](#index-types).
 
 ### Index types
 
@@ -125,9 +123,9 @@ This is an overview of the different indices and the functionalities they are re
 
 ### Elasticsearch Cluster Monitor
 
-1. Go to the *Index Overview* page on both Elasticsearch elements.
+1. Go to the element card of both Elasticsearch elements and select the *Index Overview* page under *DATA* in the tree view in the navigation pane on the left.
 
-1. Check whether the *Store Size* and *Documents Count* have a similar number. As mentioned above, these numbers might not match up entirely and small differences may be tolerated.
+1. Check whether the *Store Size* and *Documents Count* have a similar number. As mentioned above, these numbers might not be completely identical and small differences may be tolerated.
 
    >[!TIP]
    > To compare the *Store Size* and *Documents Count* more quickly, adjust the *Documents Count* column so it is sorted in descending order.
