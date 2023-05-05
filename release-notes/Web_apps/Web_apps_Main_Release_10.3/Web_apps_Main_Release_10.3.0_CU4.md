@@ -20,8 +20,20 @@ From now on, legacy reports and dashboards will no longer be prefetched if the s
 
 ### Fixes
 
+#### Dashboards app & Low-Code Apps - Line chart: X and Y axis labels would not show the correct text [ID_35943]
+
+<!-- MR 10.3.0 [CU4] - FR 10.3.7 -->
+
+The X and Y axis labels of a line chart would not show the correct text when the data was grouped.
+
 #### Low-Code Apps: Action buttons could have an incorrect background color [ID_36258]
 
 <!-- MR 10.3.0 [CU4] - FR 10.3.6 -->
 
 In some cases, action buttons could have an incorrect background color.
+
+#### Dashboards app & Low-Code Apps: State component would incorrectly not be cleared when its input feed was cleared [ID_36261]
+
+<!-- MR 10.2.0 [CU16]/10.3.0 [CU4] - FR 10.3.7 -->
+
+In some cases, a *State* component would incorrectly not be cleared when its input feed was cleared.

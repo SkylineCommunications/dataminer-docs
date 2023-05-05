@@ -317,12 +317,6 @@ Could not find argument with name '{argument.Name}'.
 
 An error could occur when feeding data from a GQI component to a query that was used in the same component.
 
-#### Dashboards app & Low-Code Apps - Line chart: X and Y axis labels would not show the correct text [ID_35943]
-
-<!-- MR 10.4.0 - FR 10.3.7 -->
-
-The X and Y axis labels of a line chart would not show the correct text when the data was grouped.
-
 #### Dashboards app - GQI: No element feed available after selecting a relation between two standalone parameters [ID_36003]
 
 <!-- MR 10.4.0 - FR 10.3.5 -->
