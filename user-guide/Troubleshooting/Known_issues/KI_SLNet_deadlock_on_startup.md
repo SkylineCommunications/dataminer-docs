@@ -15,7 +15,7 @@ In a DMS using a Cassandra cluster setup, when multiple DataMiner Agents are sta
 
 ## Fix
 
-Install DataMiner DataMiner 10.2.0 [CU16], 10.3.0 [CU3], or 10.3.3.
+Install DataMiner 10.2.0 [CU16], 10.3.0 [CU3], or 10.3.3.
 
 ## Workaround
 
