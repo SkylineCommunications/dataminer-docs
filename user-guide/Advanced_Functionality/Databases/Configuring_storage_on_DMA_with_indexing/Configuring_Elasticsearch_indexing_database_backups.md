@@ -2,23 +2,11 @@
 uid: Configuring_Elasticsearch_indexing_database_backups
 ---
 
-# Configuring 
+# Configuring indexing database backups
 
-Configuring an Elasticsearch indexing database backup is done in the same way as configuring Elasticsearch database backups. See [Configuring Elasticsearch backups](xref:Configuring_Elasticsearch_backups). For additional information on backing up a DataMiner Agent, refer to [Backing up a DataMiner Agent](xref:Backing_up_a_DataMiner_Agent).
+Configuring an Elasticsearch indexing database backup is done in the same way as configuring regular Elasticsearch database backups, by taking a snapshot of the Elasticsearch database and later restoring it to a different Elasticsearch database. See [Configuring Elasticsearch backups](xref:Configuring_Elasticsearch_backups).
 
+It is also possible to make a backup using the [Standalone Elastic backup tool](xref:Standalone_Elastic_Backup_Tool). However, as this tool is being deprecated in favor of the snapshot functionality, we strongly recommend that you take database backups using the Elasticsearch snapshot functionality.
 
-> [!NOTE]
->
-> To allow users to open a panel, you will need to configure an event with the action [Open a panel](xref:LowCodeApps_event_config#opening-a-panel-of-the-app).
-> To delete a panel, click the garbage can icon next to the panel name in the page configuration pane, and then click the confirmation icon.
-
-                - name: Maintaining an indexing database
-                  topicUid: Configuring_Elasticsearch_backups
-                  items:
-                    - name: Configuring Elasticsearch backups
-                      topicUid: Configuring_Elasticsearch_backups
-                      items:
-                        - name: Taking and restoring snapshots
-                          topicUid: Configuring_Elasticsearch_backups_Windows_Linux
-                        - name: Restoring backups using the Standalone Elastic Backup Tool
-                          topicUid: Configuring_Elasticsearch_backups_Windows
+> [!TIP]
+> See also: [Backing up a DataMiner Agent](xref:Backing_up_a_DataMiner_Agent).
