@@ -317,12 +317,6 @@ Could not find argument with name '{argument.Name}'.
 
 An error could occur when feeding data from a GQI component to a query that was used in the same component.
 
-#### Dashboards app & Low-Code Apps - Line chart: X and Y axis labels would not show the correct text [ID_35943]
-
-<!-- MR 10.4.0 - FR 10.3.7 -->
-
-The X and Y axis labels of a line chart would not show the correct text when the data was grouped.
-
 #### Dashboards app - GQI: No element feed available after selecting a relation between two standalone parameters [ID_36003]
 
 <!-- MR 10.4.0 - FR 10.3.5 -->
@@ -356,3 +350,9 @@ The dashboard has not been saved: Invalid revision sequence, the dashboard might
 <!-- MR 10.4.0 - FR 10.3.7 -->
 
 In the query builder, when a *Select* node was not in edit mode, its description would incorrectly not show the selected columns.
+
+#### Low-Code Apps: Custom icon of a low-code app without a draft version would not be displayed on the DataMiner landing page [ID_36277]
+
+<!-- MR 10.4.0 - FR 10.3.7 -->
+
+When a low-code app with a custom icon did not have a draft version, the DataMiner landing page would incorrectly not display the icon of that app.
