@@ -4,7 +4,7 @@ uid: Manifest.Content.AppPackages.AppPackage
 
 # AppPackage element
 
-Specifies an app package to be included in the package.
+Specifies an app package to include in the package.
 
 ## Parent
 

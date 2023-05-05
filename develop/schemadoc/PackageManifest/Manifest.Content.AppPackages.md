@@ -4,7 +4,7 @@ uid: Manifest.Content.AppPackages
 
 # AppPackages element
 
-Specifies the app packages to be included in the package.
+Specifies the app packages to include in the package.
 
 ## Parent
 
@@ -14,4 +14,4 @@ Specifies the app packages to be included in the package.
 
 |Name|Occurrences|Description|
 |--- |--- |--- |
-|&nbsp;&nbsp;[AppPackage](xref:Manifest.Content.AppPackages.AppPackage)|[1, *]|Specifies an app package to be included in the package.|
+|&nbsp;&nbsp;[AppPackage](xref:Manifest.Content.AppPackages.AppPackage)|[1, *]|Specifies an app package to include in the package.|
