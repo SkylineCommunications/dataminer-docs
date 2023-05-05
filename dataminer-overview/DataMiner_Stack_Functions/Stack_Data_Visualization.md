@@ -6,7 +6,7 @@ uid: Stack_Data_Visualization
 
 ***Convert bits and bytes into uncluttered dashboards and easy control panels***
 
-![stack.functions.categories](~/dataminer-overview/images/stack_data_visualisation.png)
+![stack.functions.categories](~/dataminer-overview/images/stack_data_visualization.png)
 
 ## Spectral Data Processing
 

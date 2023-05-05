@@ -6,7 +6,7 @@ uid: Stack_Third_Party_Integrations
 
 ***Work more efficiently by using the tools you already know and love.***
 
-![stack.functions.categories](~/dataminer-overview/images/stack_3rd_party_integrations.png)
+![stack.functions.categories](~/dataminer-overview/images/stack_third_party_integrations.png)
 
 ## Ticketing Gateway
 
