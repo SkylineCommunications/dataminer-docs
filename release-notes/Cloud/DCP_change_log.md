@@ -10,7 +10,7 @@ The dataminer.services platform gets updated continuously. This change log can h
 
 Resolved an issue that was introduced since CloudGateway 2.10.8 where the connection to the cloud could become broken. The CloudGateway log file would periodically contain the next exception:
 
-```
+```txt
 Unable to connect to the TunnelService[SLCcaGatewayService.Services.TunnelService.TunnelConnection.Impl.TunnelConnection]
 System.NullReferenceException: Object reference not set to an instance of an object.
 ```
